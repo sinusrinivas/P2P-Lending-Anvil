@@ -14,7 +14,7 @@ class performance_tracker(performance_trackerTemplate):
     self.init_components(**properties)
 
     # Any code you write here will run before the form opens.
-    self.data = tables.app_tables.loan_details.search()
+    self.data = tables.app_tables.fin_loan_details.search()
 
     self.name_list = []
     

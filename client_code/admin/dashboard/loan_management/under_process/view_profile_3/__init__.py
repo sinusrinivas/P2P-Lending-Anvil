@@ -14,7 +14,7 @@ class view_profile_3(view_profile_3Template):
         self.init_components(**properties)
 
         # Any code you write here will run before the form opens.
-        self.loan_data = app_tables.loan_details.get(loan_id=loan_id_to_display)
+        self.loan_data = app_tables.fin_loan_details.get(loan_id=loan_id_to_display)
         if self.loan_data:
             # Fetch user type from user_profile based on borrower_customer_id
             user_profile_data = app_tables.user_profile.get(customer_id=self.loan_data['borrower_customer_id'])

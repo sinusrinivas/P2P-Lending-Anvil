@@ -15,7 +15,7 @@ class borrower_view_loans(borrower_view_loansTemplate):
     self.init_components(**properties)
     self.user_id=main_form_module.userId
     # self.repeating_panel_1.items = app_tables.loan_details.search()
-    self.repeating_panel_1.items = app_tables.loan_details.search(
+    self.repeating_panel_1.items = app_tables.fin_loan_details.search(
             loan_updated_status=q.any_of(
                 q.like('accept%'),
                 q.like('Approved%'),
@@ -31,10 +31,10 @@ class borrower_view_loans(borrower_view_loansTemplate):
             )
         )
     # self.repeating_panel_1.items=app_tables.loan_details.search(loan_updated_status=q.like('Approved%' or 'approved%' or 'Close%' or 'close%' or 'Closed Loans%' or 'closed loans%' or 'closed loan%' or 'closed loan%' or 'Closed Loan%' or 'Disbursed loan%' or 'disbursed loan%' or 'Under Process%' or 'under process%' or 'underprocess%' or 'Under process%'),borrower_customer_id=self.user_id)
-    self.repeating_panel_2.items=app_tables.loan_details.search(loan_updated_status=q.like('close%'),borrower_customer_id=self.user_id)
-    self.repeating_panel_3.items=app_tables.loan_details.search(loan_updated_status=q.like('reject%'),borrower_customer_id=self.user_id)
-    self.repeating_panel_4.items=app_tables.loan_details.search(loan_updated_status=q.like('under process%'),borrower_customer_id=self.user_id)
-    self.repeating_panel_5.items=app_tables.loan_details.search(loan_updated_status=q.like('foreclosure%'),borrower_customer_id=self.user_id)
+    self.repeating_panel_2.items=app_tables.fin_loan_details.search(loan_updated_status=q.like('close%'),borrower_customer_id=self.user_id)
+    self.repeating_panel_3.items=app_tables.fin_loan_details.search(loan_updated_status=q.like('reject%'),borrower_customer_id=self.user_id)
+    self.repeating_panel_4.items=app_tables.fin_loan_details.search(loan_updated_status=q.like('under process%'),borrower_customer_id=self.user_id)
+    self.repeating_panel_5.items=app_tables.fin_loan_details.search(loan_updated_status=q.like('foreclosure%'),borrower_customer_id=self.user_id)
     self.label_5.text = str(len(self.repeating_panel_1.items))
     self.label_6.text=str(len(self.repeating_panel_2.items))
     self.label_7.text=str(len(self.repeating_panel_3.items))

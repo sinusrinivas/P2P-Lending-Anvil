@@ -15,7 +15,7 @@ class default_loans(default_loansTemplate):
     self.init_components(**properties)
 
     # Any code you write here will run before the form opens.
-    self.loan = tables.app_tables.loan_details.search()
+    self.loan = tables.app_tables.fin_loan_details.search()
     self.fourcloser = tables.app_tables.foreclosure.search()
     self.today = datetime.now().date()
     print(self.today)

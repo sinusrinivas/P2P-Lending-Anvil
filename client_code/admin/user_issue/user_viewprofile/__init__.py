@@ -29,7 +29,7 @@ class user_viewprofile(user_viewprofileTemplate):
       self.label_8.text = self.email_user[a]
 
 
-    self.data = tables.app_tables.user_issues_bugreports.search()
+    self.data = tables.app_tables.fin_user_issues_bugreports.search()
     
     self.user_issues = []
     self.specific_issue = []

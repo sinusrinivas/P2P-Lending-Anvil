@@ -14,7 +14,7 @@ class user_buganalysis(user_buganalysisTemplate):
     self.init_components(**properties)
 
     # Any code you write here will run before the form opens.
-    self.data = tables.app_tables.user_issues_bugreports.search()
+    self.data = tables.app_tables.fin_user_issues_bugreports.search()
 
     a = -1
     self.list_1 = []
