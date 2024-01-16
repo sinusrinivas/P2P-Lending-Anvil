@@ -676,7 +676,11 @@ db_schema:
     - name: wallet_id
       admin_ui: {order: 12, width: 200}
       type: string
-  fin_wallet_notification: {title: fin_wallet_notification}
+  fin_wallet_notification:
+    client: none
+    server: full
+    columns: []
+    title: fin_wallet_notification
   fin_wallet_transactions:
     title: fin_wallet_transactions
     client: full
