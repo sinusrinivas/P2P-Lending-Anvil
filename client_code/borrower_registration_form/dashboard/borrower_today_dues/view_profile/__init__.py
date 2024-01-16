@@ -29,8 +29,8 @@ class view_profile(view_profileTemplate):
     self.days_left_label.text = f"{days_left} days left"
     
   def button_1_copy_click(self, **event_args):
-    open_form('bank_users.borrower_dashboard')
+    open_form('borrower_registration_form.dashboard')
 
   def button_1_click(self, **event_args):
     """This method is called when the button is clicked"""
-    open_form('bank_users.borrower_dashboard.borrower_today_dues')
+    open_form('borrower_registration_form.dashboard.borrower_today_dues')

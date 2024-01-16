@@ -18,4 +18,4 @@ class RowTemplate15(RowTemplate15Template):
   def view_profile_link_click(self, **event_args):
     """This method is called when the link is clicked"""
     selcted_row=self.item
-    open_form('bank_users.borrower_dashboard.borrower_view_loans.view_profile',selected_row=selcted_row)
+    open_form('borrower_registration_form.dashboard.borrower_view_loans.view_profile',selected_row=selcted_row)

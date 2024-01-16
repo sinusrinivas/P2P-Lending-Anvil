@@ -127,10 +127,10 @@ class borrower_foreclosure(borrower_foreclosureTemplate):
         loan_id = selected_row['loan_id']
         total_payments_made = self.loan_details_row['total_payments_made']
         if total_payments_made >= self.min_months:
-            open_form('bank_users.borrower_dashboard.borrower_foreclosure_request.borrower_foreclosure.foreclose',  selected_row=selected_row, total_payments_made=total_payments_made)
+            open_form('borrower_registration_form.dashboard.borrower_foreclosure_request.borrower_foreclosure.foreclose',  selected_row=selected_row, total_payments_made=total_payments_made)
         else:
             alert('You are not eligible for foreclosure! You have to pay at least 12 months.')
-            open_form('bank_users.borrower_dashboard.borrower_foreclosure_request')
+            open_form('borrower_registration_form.dashboard.borrower_foreclosure_request')
 
     # Rest of the button_foreclose_click code...
 
@@ -141,16 +141,16 @@ class borrower_foreclosure(borrower_foreclosureTemplate):
 
     def button_2_click(self, **event_args):
         """This method is called when the button is clicked"""
-        open_form('bank_users.borrower_dashboard.borrower_foreclosure_request')
+        open_form('borrower_registration_form.dashboard.borrower_foreclosure_request')
 
     def button_1_click(self, **event_args):
         """This method is called when the button is clicked"""
-        open_form('bank_users.borrower_dashboard')
+        open_form('borrower_registration_form.dashboard')
 
     def button_4_click(self, **event_args):
         """This method is called when the button is clicked"""
-        open_form('bank_users.borrower_dashboard.borrower_foreclosure_request')
+        open_form('borrower_registration_form.dashboard.borrower_foreclosure_request')
 
     def button_5_click(self, **event_args):
         """This method is called when the button is clicked"""
-        open_form('bank_users.borrower_dashboard.borrower_foreclosure_request')
+        open_form('borrower_registration_form.dashboard.borrower_foreclosure_request')

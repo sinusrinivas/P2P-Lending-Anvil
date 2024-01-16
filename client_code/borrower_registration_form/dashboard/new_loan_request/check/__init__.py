@@ -96,10 +96,10 @@ class check(checkTemplate):
 
         # Show alert and navigate to the borrower dashboard
         alert("Request Submitted")
-        open_form('bank_users.borrower_dashboard')
+        open_form('borrower_registration_form.dashboard')
 
     def button_2_click(self, **event_args):
-        open_form('bank_users.borrower_dashboard.new_loan_request.loan_type',
+        open_form('borrower_registration_form.dashboard.new_loan_request.loan_type',
                   self.product_group,
                   self.product_cat,
                   entered_values={
@@ -109,4 +109,4 @@ class check(checkTemplate):
                   })
 
     def button_1_click(self, **event_args):
-        open_form('bank_users.borrower_dashboard')
+        open_form('borrower_registration_form.dashboard')

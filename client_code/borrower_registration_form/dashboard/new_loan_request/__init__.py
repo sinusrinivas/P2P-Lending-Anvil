@@ -42,7 +42,7 @@ class new_loan_request(new_loan_requestTemplate):
                 self.drop_down_2.selected_value = None
 
     def button_2_click(self, **event_args):
-        open_form('bank_users.borrower_dashboard')
+        open_form('borrower_registration_form.dashboard')
 
     def button_1_copy_click(self, **event_args):
         name = self.name.selected_value
@@ -61,7 +61,7 @@ class new_loan_request(new_loan_requestTemplate):
             self.label_4.text = ""
 
         if name and category:
-            open_form('bank_users.borrower_dashboard.new_loan_request.loan_type', name, category,self.max_amount_lb.text)
+            open_form('borrower_registration_form.dashboard.new_loan_request.loan_type', name, category,self.max_amount_lb.text)
 
     def max_amount_lb_show(self, **event_args):
         data = app_tables.product_details.search()

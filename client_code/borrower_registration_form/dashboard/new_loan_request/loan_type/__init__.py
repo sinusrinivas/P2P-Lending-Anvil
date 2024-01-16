@@ -65,10 +65,10 @@ class loan_type(loan_typeTemplate):
             radio_button.x = 20 + i * 150  # Adjust the value (20 and 150) according to your layout preference
 
     def button_1_click(self, **event_args):
-        open_form('bank_users.borrower_dashboard')
+        open_form('borrower_registration_form.dashboard')
 
     def button_2_click(self, **event_args):
-        open_form('bank_users.borrower_dashboard.new_loan_request')
+        open_form('borrower_registration_form.dashboard.new_loan_request')
 
     def button_3_click(self, **event_args):
         loan_amount = self.loan_amount_tb.text
@@ -84,7 +84,7 @@ class loan_type(loan_typeTemplate):
         # Validate loan_amount and tenure (similar to your existing validation code)
         if not any([self.label_22.text, self.label_23.text]):
             # If validations pass, open the 'check' form and pass the values
-            open_form('bank_users.borrower_dashboard.new_loan_request.check',
+            open_form('borrower_registration_form.dashboard.new_loan_request.check',
                       self.proctct_g, self.prodct_cate, str(loan_amount), tenure,
                       self.user_id, self.roi, self.processing_fee,
                       self.membership_type, self.product_id,

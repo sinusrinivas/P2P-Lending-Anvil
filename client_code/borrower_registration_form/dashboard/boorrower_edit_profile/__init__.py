@@ -39,8 +39,8 @@ class boorrower_edit_profile(boorrower_edit_profileTemplate):
      user_profile['mouther_tounge']=self.mother_label.text
      user_profile.update()
     alert('saved sucessfully')
-    open_form('bank_users.borrower_dashboard')
+    open_form('borrower_registration_form.dashboard')
 
   def home_borrower_registration_form_click(self, **event_args):
     """This method is called when the button is clicked"""
-    open_form('bank_users.borrower_dashboard')
+    open_form('borrower_registration_form.dashboard')
