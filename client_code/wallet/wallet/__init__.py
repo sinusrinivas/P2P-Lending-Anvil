@@ -25,7 +25,7 @@ class wallet(walletTemplate):
     email = self.email
 
 
-    wallet_row =app_tables.wallet.get(user_email=email)
+    wallet_row =app_tables.fin_wallet.get(user_email=email)
     if wallet_row:
       self.balance_lable.text = wallet_row['wallet_amount']
   
@@ -106,10 +106,10 @@ class wallet(walletTemplate):
     customer_id = 1000
     email = self.email  
     
-    wallet_row = app_tables.wallet.get(user_email=email)  # Retrieve the wallet row for the user
+    wallet_row = app_tables.fin_wallet.get(user_email=email)  # Retrieve the wallet row for the user
     
     if wallet_row is None:
-        wallet_row = app_tables.wallet.add_row(user_email=email, wallet_amount=0)
+        wallet_row = app_tables.fin_wallet.add_row(user_email=email, wallet_amount=0)
     
     if anvil.server.call('withdraw_money', email=email, withdraw_amount=withdraw_amount, customer_id=customer_id):
         alert("Withdrawal successful!")

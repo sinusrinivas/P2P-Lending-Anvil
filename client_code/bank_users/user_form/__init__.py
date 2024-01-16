@@ -8,7 +8,7 @@ import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 from ..user_form import user_module
-from ..borrower_dashboard import borrower_main_form_module
+# from ..borrower_dashboard import borrower_main_form_module
 from ..main_form import main_form_module
 
 class user_form(user_formTemplate):

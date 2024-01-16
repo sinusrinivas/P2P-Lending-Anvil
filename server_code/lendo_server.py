@@ -433,18 +433,20 @@ def get_user_data(user_id):
 #         return "wallet_not_found"
 
 
+
 @anvil.server.callable
 def loan_disbursement_action(selected_row, email):
     # Assuming 'selected_row' is the row from the loan_details table
     loan_amount = selected_row['loan_amount']
     lender_accepted_timestamp = selected_row['lender_accepted_timestamp']
+    print("lender_accepted_timestamp timezone:", lender_accepted_timestamp.tzinfo)
     
     # Convert lender_accepted_timestamp to UTC if it's not already
     if lender_accepted_timestamp.tzinfo is None:
         lender_accepted_timestamp = lender_accepted_timestamp.replace(tzinfo=timezone.utc)
     
     # Retrieve the rows from the wallet table based on the user's email
-    wallet_rows = app_tables.wallet.search(user_email=email)
+    wallet_rows = app_tables.fin_wallet.search(user_email=email)
     
     if wallet_rows and len(wallet_rows) > 0:
         # Assuming you want to use the first matching row
@@ -454,28 +456,32 @@ def loan_disbursement_action(selected_row, email):
       
         # Get the current time in UTC
         current_time = datetime.now(timezone.utc)
+        print("current_time:", current_time)
       
         if loan_amount > wallet_amount:
-            # Check if 5 minutes have passed since lender_accepted_timestamp
-            time_difference = current_time - lender_accepted_timestamp
-            if time_difference.total_seconds() > 120:  # 300 seconds = 5 minutes # 120 seconds = 2 minutes
-                # Update loan status based on the comparison of wallet_amount and loan_amount
-                if loan_amount > wallet_amount:
-                    # Update loan status to 'lost opportunities'
-                    selected_row['loan_updated_status'] = 'lost opportunities'
-                else:
-                    # Update loan status to 'under process'
-                    selected_row['loan_updated_status'] = 'under process'
-                
-                selected_row.update()
-
-                # Signal the client to handle insufficient balance
-                return "insufficient_balance"
+           # Update loan status based on the comparison of wallet_amount and loan_amount
+            if loan_amount > wallet_amount:
+              # Check if 2 minutes have passed since lender_accepted_timestamp
+              time_difference = current_time - lender_accepted_timestamp
+              print("time_difference:", time_difference)
+              if time_difference.total_seconds() > 60:
+                 # Update loan status to 'lost opportunities'
+                 selected_row['loan_updated_status'] = 'lost opportunities'
+                 selected_row.update()
+                 return "Time_out"
+              else:
+                 print("2 minutes have not passed yet")
+                 # 5 minutes have not passed yet
+                 return "insufficient_balance"    
             else:
-                # 5 minutes have not passed yet
+                # Update loan status to 'under process'
+                selected_row['loan_updated_status'] = 'under process'
+                selected_row.update()
                 return "insufficient_balance"
-       
         else:
+           wallet_amount -= loan_amount
+           wallet_row['wallet_amount'] = wallet_amount
+           wallet_row.update()
            # Signal the client to pay to the borrower
            return "pay_to_borrower"
     else:
