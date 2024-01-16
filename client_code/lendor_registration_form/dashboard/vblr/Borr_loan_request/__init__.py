@@ -49,7 +49,7 @@ class Borr_loan_request(Borr_loan_requestTemplate):
                 # Fetch additional details from the 'loan_details' table
                 try:
                     #loan_details = app_tables.loan_details.get(loan_id=int(selected_row['loan_id']))
-                    loan_details = app_tables.loan_details.get(loan_id=str(selected_row['loan_id']))
+                    loan_details = app_tables.fin_loan_details.get(loan_id=str(selected_row['loan_id']))
                     if loan_details is not None:
                         # Assuming 'interest_rate' and 'min_amount' are valid column names in the 'loan_details' table
                         interest_rate = loan_details['interest_rate']

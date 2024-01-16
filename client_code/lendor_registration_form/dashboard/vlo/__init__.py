@@ -15,7 +15,7 @@ class vlo(vloTemplate):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
     self.user_id = main_form_module.userId
-    self.repeating_panel_2.items = app_tables.loan_details.search(loan_updated_status=q.like('lost oppurtunities%'))
+    self.repeating_panel_2.items = app_tables.fin_loan_details.search(loan_updated_status=q.like('lost oppurtunities%'))
 
   def link_1_click(self, **event_args):
     """This method is called when the link is clicked"""

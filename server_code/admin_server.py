@@ -46,7 +46,7 @@ def manage_products(groups,category):
 
 @anvil.server.callable
 def user_issues_bugreports(user_issues, specific_issue, user_discription, image, feedback_form, email_user,coustmer_id):
- row = app_tables.user_issues_bugreports.add_row(user_issues=user_issues,
+ row = app_tables.fin_user_issues_bugreports.add_row(user_issues=user_issues,
                                                  user_discription=user_discription,
                                                  specific_issue=specific_issue,
                                                  image=image,

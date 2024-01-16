@@ -51,7 +51,7 @@ class user_bugreports(user_bugreportsTemplate):
       coustmer_id.append(i['customer_id'])
 
     
-    data = tables.app_tables.user_issues_bugreports.search()
+    data = tables.app_tables.fin_user_issues_bugreports.search()
     b = -1
     for i in data:
       b+=1

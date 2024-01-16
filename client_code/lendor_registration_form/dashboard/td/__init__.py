@@ -17,7 +17,7 @@ class td(tdTemplate):
         self.init_components(**properties)
         
         # Fetch all loan details
-        all_loans = app_tables.loan_details.search()
+        all_loans = app_tables.fin_loan_details.search()
         
         # Calculate days left and days gone for each loan
         for loan in all_loans:
