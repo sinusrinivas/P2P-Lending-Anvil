@@ -634,7 +634,6 @@ db_schema:
       admin_ui: {order: 1.5, width: 200}
       type: string
     title: Users
-  wallet_transactions: {title: wallet_transactions}
   lender:
     title: lender
     client: full
