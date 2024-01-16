@@ -1,4 +1,4 @@
-from ._anvil_designer import borrower_dashboardTemplate
+from ._anvil_designer import dashboardTemplate
 from anvil import *
 import anvil.server
 import anvil.google.auth, anvil.google.drive
@@ -7,12 +7,10 @@ import anvil.users
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
-# from ..main_form import main_form_module
-from ...bank_users.main_form import main_form_module
-# from ..user_form import user_module
-from ...bank_users.user_form import user_module
+from ..main_form import main_form_module
+from ..user_form import user_module
 
-class borrower_dashboard(borrower_dashboardTemplate):
+class dashboard(dashboardTemplate):
   def __init__(self, **properties):
     email= main_form_module.email
     # Set Form properties and Data Bindings.
@@ -25,7 +23,7 @@ class borrower_dashboard(borrower_dashboardTemplate):
 
   def home_main_form_link_click(self, **event_args):
     """This method is called when the link is clicked"""
-    open_form("bank_users.borrower_dashboard")
+    open_form("borrower_registration_form.dashboard")
 
   def login_signup_button_click(self, **event_args):
     """This method is called when the button is clicked"""
@@ -35,31 +33,31 @@ class borrower_dashboard(borrower_dashboardTemplate):
 
   def button_3_click(self, **event_args):
     """This method is called when the button is clicked"""
-    open_form('bank_users.borrower_dashboard.borrower_profile')
+    open_form('borrower_registration_form.dashboard.borrower_profile')
 
   def button_4_click(self, **event_args):
     """This method is called when the button is clicked"""
-    open_form('bank_users.borrower_dashboard.new_loan_request')
+    open_form('borrower_registration_form.dashboard.new_loan_request')
 
   def button_6_click(self, **event_args):
     """This method is called when the button is clicked"""
-    open_form('bank_users.borrower_dashboard.borrower_view_loans')
+    open_form('borrower_registration_form.dashboard.borrower_view_loans')
 
   def outlined_button_1_click(self, **event_args):
     """This method is called when the button is clicked"""
-    open_form('bank_users.borrower_dashboard.borrower_today_dues')
+    open_form('borrower_registration_form.dashboard.borrower_today_dues')
 
   def outlined_button_3_click(self, **event_args):
     """This method is called when the button is clicked"""
-    open_form('bank_users.borrower_dashboard.application_tracker')
+    open_form('borrower_registration_form.dashboard.application_tracker')
 
   def outlined_button_2_click(self, **event_args):
     """This method is called when the button is clicked"""
-    open_form('bank_users.borrower_dashboard.borrower_foreclosure_request')
+    open_form('borrower_registration_form.dashboard.borrower_foreclosure_request')
 
   def outlined_button_6_click(self, **event_args):
     """This method is called when the button is clicked"""
-    open_form('bank_users.borrower_dashboard.borrower_discount_coupons')
+    open_form('borrower_registration_form.dashboard.borrower_discount_coupons')
 
   def outlined_button_7_click(self, **event_args):
     """This method is called when the button is clicked"""

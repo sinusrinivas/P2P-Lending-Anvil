@@ -53,7 +53,7 @@ components:
     layout_properties: {grid_position: 'QDNFAP,KLCDSF'}
     components:
     - type: RepeatingPanel
-      properties: {spacing_above: none, spacing_below: none, item_template: borrower_registration_form.borrower_dashboard.borrower_foreclosure_request.RowTemplate6}
+      properties: {spacing_above: none, spacing_below: none, item_template: borrower_registration_form.dashboard.borrower_foreclosure_request.RowTemplate6}
       name: repeating_panel_1
       layout_properties: {}
 is_package: true

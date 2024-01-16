@@ -25,4 +25,4 @@ class application_tracker(application_trackerTemplate):
     #self.label_2.text = str(len(approved_items))      
   
   def home_borrower_registration_button_click(self, **event_args):
-    open_form('bank_users.borrower_dashboard')
+    open_form('borrower_registration_form.dashboard')
