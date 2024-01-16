@@ -593,13 +593,13 @@ db_schema:
     - name: membership_type
       admin_ui: {order: 9.75, width: 200}
       type: string
-    - name: loan_amount
-      admin_ui: {order: 9.5, width: 200}
-      type: number
     - name: lender_accepted_timestamp
       admin_ui: {width: 223}
       type: date
     - name: tenure
+      admin_ui: {width: 200}
+      type: string
+    - name: loan_amount
       admin_ui: {width: 200}
       type: string
     title: loan_details
