@@ -205,8 +205,11 @@ class Borr_loan_request(Borr_loan_requestTemplate):
 
         # Check the signal and perform actions accordingly
         if signal == "insufficient_balance":
-            alert("Insufficient balance. Please add the amount in the wallet. If not added within 30 min, it will go to lost opportunities.")
-            open_form("wallet.wallet")
+            alert("Warning: Your account balance is insufficient. Please deposit amount into your wallet. If not done within the next 2 minutes, the opportunity may be lost")
+            # open_form("wallet.wallet")
+        elif signal == "Time_out":
+            alert("The designated time has passed. The loan has moved to the 'Lost Opportunities' status.")
+            open_form("wallet.wallet") 
         elif signal == "pay_to_borrower":
             alert("Pay to Borrower")
             open_form("wallet.wallet")
