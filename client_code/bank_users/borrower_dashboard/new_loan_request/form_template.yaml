@@ -1,0 +1,131 @@
+container:
+  type: ColumnPanel
+  properties: {col_widths: '{"JLWSFC":30,"JNFGNN":30}'}
+components:
+- name: image_1_copy_1_copy_1_copy_1_copy_1_copy_1
+  properties: {role: null, vertical_align: center, height: 48, tooltip: '', border: '',
+    foreground: '', visible: true, display_mode: shrink_to_fit, spacing_above: small,
+    source: _/theme/kotackpng.png, spacing_below: small, background: '', horizontal_align: left}
+  type: Image
+  layout_properties: {grid_position: 'NEAHIU,OYXVAL'}
+- name: button_1
+  properties: {role: tonal-button, align: right, tooltip: '', border: '', enabled: true,
+    foreground: black, visible: true, text: Home, font_size: null, font: '', spacing_above: small,
+    icon_align: left, spacing_below: small, italic: false, background: '#0876E8',
+    bold: true, underline: false, icon: 'fa:home'}
+  type: Button
+  layout_properties: {grid_position: 'NEAHIU,IWBTBX'}
+  event_bindings: {click: button_1_click}
+- type: Spacer
+  properties: {height: 48}
+  name: spacer_1
+  layout_properties: {grid_position: 'GAQDQF,NOUIYL'}
+- type: Label
+  properties: {role: headline, align: center, tooltip: '', border: '', foreground: '',
+    visible: true, text: Credit Limit, font_size: null, font: '', spacing_above: small,
+    icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+    underline: false, icon: ''}
+  name: label_5
+  layout_properties:
+    col_widths: {}
+    grid_position: RIFDPA,FXDAEC
+- name: max_amount_lb
+  properties: {role: headline, align: left, tooltip: '', border: '', foreground: green,
+    visible: true, text: '', font_size: null, font: '', spacing_above: small, icon_align: left,
+    spacing_below: small, italic: false, background: white, bold: false, underline: false,
+    icon: ''}
+  type: Label
+  layout_properties: {grid_position: 'RIFDPA,WXMQBR'}
+  event_bindings: {show: max_amount_lb_show}
+- type: Spacer
+  properties: {height: 32}
+  name: spacer_2
+  layout_properties: {grid_position: 'NJMYBL,OMVYHI'}
+- type: Label
+  properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
+    visible: true, text: Product Group, font_size: 20, font: '', spacing_above: small,
+    icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+    underline: false, icon: ''}
+  name: label_1
+  layout_properties: {grid_position: 'ADFVSS,JLWSFC'}
+- type: DropDown
+  properties:
+    role: null
+    align: full
+    tooltip: ''
+    placeholder: Select product group
+    border: ''
+    enabled: true
+    foreground: ''
+    items: ['']
+    visible: true
+    font_size: null
+    font: ''
+    spacing_above: small
+    spacing_below: none
+    italic: false
+    background: white
+    bold: false
+    underline: false
+    include_placeholder: true
+  name: name
+  layout_properties: {grid_position: 'ADFVSS,JNFGNN GDAPSK,LTBWCT'}
+  data_bindings: []
+  event_bindings: {change: name_change}
+- type: Label
+  properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
+    text: '', font_size: null, font: '', spacing_above: none, icon_align: left, spacing_below: small,
+    italic: false, background: '', bold: false, underline: false, icon: ''}
+  name: label_3
+  layout_properties: {grid_position: 'ADFVSS,JNFGNN IUDENR,DWXZPJ'}
+- type: Label
+  properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
+    visible: false, text: Product Categories, font_size: 20, font: '', spacing_above: small,
+    icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+    underline: false, icon: ''}
+  name: label_2
+  layout_properties: {grid_position: 'LNCQEK,HSNNKG'}
+- type: DropDown
+  properties:
+    role: null
+    align: full
+    tooltip: ''
+    placeholder: Select product categories
+    border: ''
+    enabled: true
+    foreground: ''
+    items: []
+    visible: false
+    font_size: null
+    font: ''
+    spacing_above: small
+    spacing_below: none
+    italic: false
+    background: white
+    bold: false
+    underline: false
+    include_placeholder: true
+  name: drop_down_2
+  layout_properties: {grid_position: 'LNCQEK,AQSEPS IGISWJ,OIEUHQ'}
+  event_bindings: {change: drop_down_2_change}
+- type: Label
+  properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: false,
+    text: '', font_size: null, font: '', spacing_above: none, icon_align: left, spacing_below: small,
+    italic: false, background: '', bold: false, underline: false, icon: ''}
+  name: label_4
+  layout_properties: {grid_position: 'LNCQEK,AQSEPS YCGANG,DJYAVH'}
+- type: Spacer
+  properties: {height: 24}
+  name: spacer_3
+  layout_properties: {grid_position: 'BWNJEM,UWWRKW'}
+- type: Button
+  properties: {role: elevated-button, align: center, tooltip: '', border: '', enabled: true,
+    foreground: black, visible: true, text: Next, font_size: null, font: '', spacing_above: small,
+    icon_align: left, spacing_below: small, italic: false, background: '#0876E8',
+    bold: true, underline: false, icon: 'fa:angle-double-right'}
+  name: button_1_copy
+  layout_properties:
+    col_widths: {}
+    grid_position: DUFTTD,RERXNC
+  event_bindings: {click: button_1_copy_click}
+is_package: true

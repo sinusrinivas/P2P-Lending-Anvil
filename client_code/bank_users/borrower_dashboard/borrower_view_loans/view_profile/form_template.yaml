@@ -1,0 +1,143 @@
+container:
+  type: ColumnPanel
+  properties: {col_widths: '{}'}
+components:
+- name: image_1_copy_1_copy_1_copy_1_copy_1_copy_1
+  properties: {role: null, vertical_align: center, height: 48, tooltip: '', border: '',
+    foreground: '', visible: true, display_mode: shrink_to_fit, spacing_above: small,
+    source: _/theme/kotackpng.png, spacing_below: small, background: '', horizontal_align: left}
+  type: Image
+  layout_properties:
+    col_widths: {}
+    grid_position: EZDSIT,KNTKMN
+- name: button_1_copy
+  properties: {role: tonal-button, align: right, tooltip: '', border: '', enabled: true,
+    foreground: black, visible: true, text: Home, font_size: null, font: '', spacing_above: small,
+    icon_align: left, spacing_below: small, italic: false, background: '#0876E8',
+    bold: true, underline: false, icon: 'fa:home'}
+  type: Button
+  layout_properties:
+    col_widths: {}
+    grid_position: EZDSIT,ZRQUHL
+  event_bindings: {click: button_1_copy_click}
+- name: spacer_1
+  properties: {height: 32}
+  type: Spacer
+  layout_properties:
+    col_widths: {}
+    grid_position: PNDNDM,TKYEBB
+- type: GridPanel
+  properties: {spacing_above: small, spacing_below: small, background: '', foreground: '',
+    border: '', visible: true, role: outlined-card, tooltip: ''}
+  name: grid_panel_1
+  layout_properties: {grid_position: 'DPRKZW,JMTJHW'}
+  components:
+  - name: label_1_copy_1_copy_1
+    properties: {role: outlined-card, align: center, tooltip: '', border: '', foreground: white,
+      visible: true, text: Closed Profile, font_size: null, font: '25', spacing_above: medium,
+      icon_align: left, spacing_below: medium, italic: false, background: darkblue,
+      bold: true, underline: false, icon: ''}
+    type: Label
+    layout_properties:
+      col_widths: {}
+      grid_position: KDHAAT,CKVRJM
+      row: CEDYQW
+      width_xs: 12
+      col_xs: 0
+      width: 686.8
+  - name: label_7
+    properties: {role: null, align: right, tooltip: '', border: '', foreground: '#000337',
+      visible: true, text: Loan Id, font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+      underline: false, icon: ''}
+    type: Label
+    layout_properties: {grid_position: 'FDIETG,BLPAKG', row: BUAPCP, width_xs: 4,
+      col_xs: 2, width: 219.462}
+  - name: loan_id_label
+    properties: {}
+    type: Label
+    layout_properties: {grid_position: 'FDIETG,ZKHZFF', row: BUAPCP, width_xs: 4,
+      col_xs: 6}
+  - name: label_8
+    properties: {role: null, align: right, tooltip: '', border: '', foreground: '#000337',
+      visible: true, text: Loan Amount, font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+      underline: false, icon: ''}
+    type: Label
+    layout_properties: {grid_position: 'PTPWQV,CUOMKR', row: WXLWSH, width_xs: 4,
+      col_xs: 2, width: 219.462}
+  - name: loan_amount_label
+    properties: {}
+    type: Label
+    layout_properties: {grid_position: 'PTPWQV,CHJNQI', row: WXLWSH, width_xs: 4,
+      col_xs: 6}
+  - name: label_11
+    properties: {role: null, align: right, tooltip: '', border: '', foreground: '#000337',
+      visible: true, text: Intrest Rate, font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+      underline: false, icon: ''}
+    type: Label
+    layout_properties: {grid_position: 'DRPWYS,KHMDWY', row: QSOSST, width_xs: 4,
+      col_xs: 2, width: 219.462}
+  - name: intrest_rate_label
+    properties: {}
+    type: Label
+    layout_properties: {grid_position: 'DRPWYS,QYSBQC', row: QSOSST, width_xs: 4,
+      col_xs: 6}
+  - name: label_10
+    properties: {role: null, align: right, tooltip: '', border: '', foreground: '#000337',
+      visible: true, text: Tenure, font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+      underline: false, icon: ''}
+    type: Label
+    layout_properties: {grid_position: 'SGEVJA,NLZWBH', row: QOJXWT, width_xs: 4,
+      col_xs: 2, width: 219.462}
+  - name: tenure_label
+    properties: {}
+    type: Label
+    layout_properties: {grid_position: 'SGEVJA,UGWBFV', row: QOJXWT, width_xs: 4,
+      col_xs: 6}
+  - name: label_12
+    properties: {role: null, align: right, tooltip: '', border: '', foreground: '#000337',
+      visible: true, text: Date Of Apply, font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+      underline: false, icon: ''}
+    type: Label
+    layout_properties: {grid_position: 'SZRCOX,ONHLCB', row: UQBGUB, width_xs: 4,
+      col_xs: 2, width: 219.462}
+  - name: date_of_apply_label
+    properties: {}
+    type: Label
+    layout_properties: {grid_position: 'SZRCOX,UWUPHU', row: UQBGUB, width_xs: 4,
+      col_xs: 6}
+  - name: label_2
+    properties: {role: null, align: right, tooltip: '', border: '', foreground: '#000337',
+      visible: true, text: Loan Updated Status, font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+      underline: false, icon: ''}
+    type: Label
+    layout_properties: {grid_position: 'FGTQBR,TOEHRF', row: SHWXPT, width_xs: 4,
+      col_xs: 2, width: 219.462}
+  - name: loan_updated_status_label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: green,
+      visible: true, text: '', font_size: null, font: '', spacing_above: small, icon_align: left,
+      spacing_below: small, italic: false, background: '', bold: false, underline: false,
+      icon: ''}
+    type: Label
+    layout_properties: {grid_position: 'FGTQBR,DMKNMB', row: SHWXPT, width_xs: 4,
+      col_xs: 6, width: 221.188}
+    data_bindings:
+    - {property: text, code: 'self.item[''loan_updated_status'']', writeback: false}
+- type: Spacer
+  properties: {height: 19.00000762939453}
+  name: spacer_2
+  layout_properties: {grid_position: 'YZWVDJ,XOLGSO'}
+- name: button_1
+  properties: {role: elevated-button, align: center, tooltip: '', border: '', enabled: true,
+    foreground: black, visible: true, text: Back, font_size: null, font: '', spacing_above: small,
+    icon_align: left, spacing_below: small, italic: false, background: '#0876E8',
+    bold: true, underline: false, icon: 'fa:angle-double-left'}
+  type: Button
+  layout_properties: {grid_position: 'CUQCPK,AESIBY'}
+  event_bindings: {click: button_1_click}
+is_package: true

@@ -1,0 +1,42 @@
+container:
+  type: ColumnPanel
+  properties: {col_widths: '{"BGFFDO":10,"OCVNZN":10,"WDGFCF":10,"CTPDWB":10,"DYDBHQ":10,"KLAZAW":10}',
+    wrap_on: mobile, col_spacing: large}
+components:
+- name: label_1
+  properties: {align: center, icon_align: left, spacing_above: small}
+  type: Label
+  layout_properties: {grid_position: 'FCOXPE,BGFFDO', full_width_row: false}
+  data_bindings:
+  - {property: text, code: 'self.item[''transaction_id'']'}
+- name: label_2
+  properties: {align: left}
+  type: Label
+  layout_properties: {grid_position: 'FCOXPE,OCVNZN'}
+  data_bindings:
+  - {property: text, code: 'self.item[''wallet_id'']'}
+- name: label_3
+  properties: {align: left}
+  type: Label
+  layout_properties: {grid_position: 'FCOXPE,WDGFCF'}
+  data_bindings:
+  - {property: text, code: 'self.item[''transaction_type'']'}
+- name: label_4
+  properties: {align: left}
+  type: Label
+  layout_properties: {grid_position: 'FCOXPE,CTPDWB'}
+  data_bindings:
+  - {property: text, code: 'self.item[''amount'']'}
+- name: label_5
+  properties: {align: left}
+  type: Label
+  layout_properties: {grid_position: 'FCOXPE,DYDBHQ'}
+  data_bindings:
+  - {property: text, code: 'self.item[''transaction_time_stamp'']'}
+- name: label_6
+  properties: {align: center}
+  type: Label
+  layout_properties: {grid_position: 'FCOXPE,KLAZAW'}
+  data_bindings:
+  - {property: text, code: 'self.item[''status'']'}
+is_package: true

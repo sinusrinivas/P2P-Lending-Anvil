@@ -1,0 +1,57 @@
+container: {type: DataRowPanel}
+components:
+- type: Label
+  properties: {}
+  name: label_1
+  layout_properties: {column: QPDXZX}
+  data_bindings:
+  - {property: text, code: 'self.item[''PaymentNumber'']'}
+- type: Label
+  properties: {}
+  name: label_2
+  layout_properties: {column: LXWBJM}
+  data_bindings:
+  - {property: text, code: 'self.item[''PaymentDate'']'}
+- type: Label
+  properties: {}
+  name: label_3
+  layout_properties: {column: OTDGIS}
+  data_bindings:
+  - {property: text, code: 'self.item[''BeginningBalance'']'}
+- type: Label
+  properties: {}
+  name: label_4
+  layout_properties: {column: WYDOBL}
+  data_bindings:
+  - {property: text, code: 'self.item[''ScheduledPayment'']'}
+- type: Label
+  properties: {}
+  name: label_5
+  layout_properties: {column: JMBQWG}
+  data_bindings:
+  - {property: text, code: 'self.item[''ExtraPayment'']'}
+- type: Label
+  properties: {}
+  name: label_6
+  layout_properties: {column: HQIWTE}
+  data_bindings:
+  - {property: text, code: 'self.item[''TotalPayment'']'}
+- type: Label
+  properties: {}
+  name: label_7
+  layout_properties: {column: QIPARM}
+  data_bindings:
+  - {property: text, code: 'self.item[''Principal'']'}
+- type: Label
+  properties: {}
+  name: label_8
+  layout_properties: {column: HTKSSU}
+  data_bindings:
+  - {property: text, code: 'self.item[''Interest'']'}
+- type: Label
+  properties: {}
+  name: label_9
+  layout_properties: {column: RRMPAR}
+  data_bindings:
+  - {property: text, code: 'self.item[''EndingBalance'']'}
+is_package: true
