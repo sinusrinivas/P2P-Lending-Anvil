@@ -55,9 +55,18 @@ def generate_wallet_id():
 
     if existing_wallets and len(existing_wallets) > 0:
         new_wallet_id = existing_wallets[0]['wallet_id']
-        counter = int(new_wallet_id[2:]) + 1
+        if new_wallet_id:
+            try:
+                counter = int(new_wallet_id[2:]) + 1
+            except Exception as e:
+                print(f"Error converting counter: {e}")
+                counter = 1
+        else:
+            counter = 1
     else:
         counter = 1  # Start the counter from 1 if no existing wallets
+
+    return f"WA{counter:04d}"
 
     return f"WA{counter:04d}"
 
@@ -66,11 +75,18 @@ def generate_account_id():
 
     if existing_accounts and len(existing_accounts) > 0:
         new_account_id = existing_accounts[0]['account_id']
-        counter = int(new_account_id[1:]) + 1
+        if new_account_id:
+            try:
+                counter = int(new_account_id[1:]) + 1
+            except Exception as e:
+                print(f"Error converting counter: {e}")
+                counter = 1
+        else:
+            counter = 1
     else:
-        counter = 1  
+        counter = 1  # Start the counter from 1 if no existing accounts
 
-    return f"A{counter:04d}" 
+    return f"A{counter:04d}"
 
 
 # code for wallet_transactions
