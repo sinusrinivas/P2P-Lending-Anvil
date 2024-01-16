@@ -489,23 +489,23 @@ db_schema:
     - name: loan_amount
       admin_ui: {width: 200, order: 4}
       type: number
-    - name: outstanding_amount
-      admin_ui: {width: 200, order: 0}
-      type: number
     - name: penalty_amount
       admin_ui: {width: 200, order: 1}
       type: number
-    - name: foreclose_amount
-      admin_ui: {width: 200, order: 7}
-      type: number
-    - name: emi_amount
-      admin_ui: {width: 200, order: 7.5}
-      type: number
-    - name: paid_amount
-      admin_ui: {width: 200, order: 9.5}
-      type: number
     - name: total_due_amount
       admin_ui: {width: 200, order: 8.75}
+      type: number
+    - name: foreclose_amount
+      admin_ui: {width: 200, order: 2.5}
+      type: number
+    - name: emi_amount
+      admin_ui: {width: 200, order: 4}
+      type: number
+    - name: outstanding_amount
+      admin_ui: {width: 200, order: 1}
+      type: number
+    - name: paid_amount
+      admin_ui: {width: 200, order: 4.5}
       type: number
     title: foreclosure
   loan_details:

@@ -2,7 +2,6 @@ from anvil import open_form, alert
 from ... import borrower_main_form_module as main_form_module
 from ... import app_tables
 from ._anvil_designer import loan_typeTemplate
-
 class loan_type(loan_typeTemplate):
     def __init__(self, product_group, product_cat, max_amount_lb, entered_values=None, **properties):
         self.user_id = main_form_module.userId
