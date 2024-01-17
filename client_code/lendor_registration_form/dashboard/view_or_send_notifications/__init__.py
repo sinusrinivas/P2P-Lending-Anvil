@@ -1,4 +1,4 @@
-from ._anvil_designer import vsnTemplate
+from ._anvil_designer import view_or_send_notificationsTemplate
 from anvil import *
 import anvil.server
 import anvil.google.auth, anvil.google.drive
@@ -8,7 +8,7 @@ import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 
-class vsn(vsnTemplate):
+class view_or_send_notifications(view_or_send_notificationsTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)

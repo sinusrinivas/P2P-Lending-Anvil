@@ -1,4 +1,4 @@
-from ._anvil_designer import opbalTemplate
+from ._anvil_designer import view_opening_balanceTemplate
 from anvil import *
 import anvil.server
 import anvil.google.auth, anvil.google.drive
@@ -8,7 +8,7 @@ import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 
-class opbal(opbalTemplate):
+class view_opening_balance(view_opening_balanceTemplate):
   def __init__(self, **properties):
         # Set Form properties and Data Bindings.
         self.init_components(**properties)
@@ -26,7 +26,7 @@ class opbal(opbalTemplate):
           
   def link_1_click(self, **event_args):
     """This method is called when the link is clicked"""
-    open_form("lendor_registration_form.dashboard.avlbal")
+    open_form("lendor_registration_form.dashboard.view_available_balance")
 
   def button_1_click(self, **event_args):
     """This method is called when the button is clicked"""
@@ -34,19 +34,19 @@ class opbal(opbalTemplate):
 
   def link_2_click(self, **event_args):
     """This method is called when the link is clicked"""
-    open_form("lendor_registration_form.dashboard.vblr")
+    open_form("lendor_registration_form.dashboard.view_borrower_loan_request")
 
   def link_3_click(self, **event_args):
     """This method is called when the link is clicked"""
-    open_form("lendor_registration_form.dashboard.ld")
+    open_form("lendor_registration_form.dashboard.loan_disbursement")
 
   def link_4_click(self, **event_args):
     """This method is called when the link is clicked"""
-    open_form("lendor_registration_form.dashboard.vlo")
+    open_form("lendor_registration_form.dashboard.view_lost_oppurtunities")
 
   def link_5_click(self, **event_args):
     """This method is called when the link is clicked"""
-    open_form("lendor_registration_form.dashboard.td")
+    open_form("lendor_registration_form.dashboard.today_dues")
 
   def link_6_click(self, **event_args):
     """This method is called when the link is clicked"""
@@ -54,35 +54,35 @@ class opbal(opbalTemplate):
 
   def link_7_click(self, **event_args):
     """This method is called when the link is clicked"""
-    open_form("lendor_registration_form.dashboard.vler")
+    open_form("lendor_registration_form.dashboard.view_loan_extension_requests")
 
   def link_8_click(self, **event_args):
     """This method is called when the link is clicked"""
-    open_form("lendor_registration_form.dashboard.vlfr")
+    open_form("lendor_registration_form.dashboard.view_loan_foreclosure_Requests")
 
   def link_9_click(self, **event_args):
     """This method is called when the link is clicked"""
-    open_form("lendor_registration_form.dashboard.rta")
+    open_form("lendor_registration_form.dashboard.top_up_amount")
 
   def link_10_click(self, **event_args):
     """This method is called when the link is clicked"""
-    open_form("lendor_registration_form.dashboard.vdp")
+    open_form("lendor_registration_form.dashboard.view_or_download_portfolio")
 
   def link_11_click(self, **event_args):
     """This method is called when the link is clicked"""
-    open_form("lendor_registration_form.dashboard.vep")
+    open_form("lendor_registration_form.dashboard.view_profile")
 
   def link_12_click(self, **event_args):
     """This method is called when the link is clicked"""
-    open_form("lendor_registration_form.dashboard.vsn")
+    open_form("lendor_registration_form.dashboard.view_or_send_notifications")
 
   def link_13_click(self, **event_args):
     """This method is called when the link is clicked"""
-    open_form("lendor_registration_form.dashboard.cp")
+    open_form("lendor_registration_form.dashboard.change_password")
 
   def outlined_button_1_click(self, **event_args):
     """This method is called when the button is clicked"""
-    open_form("lendor_registration_form.dashboard.rta")
+    open_form("lendor_registration_form.dashboard.top_up_amount")
 
 
 
@@ -90,4 +90,4 @@ class opbal(opbalTemplate):
 
   def button_2_click(self, **event_args):
     """This method is called when the button is clicked"""
-    open_form("lendor_registration_form.dashboard.rta")
+    open_form("lendor_registration_form.dashboard.top_up_amount")
