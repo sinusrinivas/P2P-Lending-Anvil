@@ -221,6 +221,47 @@ db_schema:
       admin_ui: {order: 1.5, width: 200}
       type: string
     title: Users
+  fin_borrower:
+    title: fin_borrower
+    client: full
+    server: full
+    columns:
+    - name: email_id
+      admin_ui: {order: 1.75, width: 200}
+      type: string
+    - name: customer_id
+      admin_ui: {order: 0.5, width: 200}
+      type: string
+    - name: user_name
+      admin_ui: {width: 200, order: 2}
+      type: string
+    - name: admin_approve
+      admin_ui: {width: 200, order: 6}
+      type: bool
+    - name: borrowing_status
+      admin_ui: {order: 5.5, width: 200}
+      type: bool
+    - name: bank_acc_details
+      admin_ui: {order: 7, width: 200}
+      type: string
+    - name: credit_limit
+      admin_ui: {order: 2.375, width: 200}
+      type: number
+    - name: borrower_approve_date
+      admin_ui: {order: 7.5, width: 200}
+      type: date
+    - name: beseem_score
+      admin_ui: {width: 200, order: 3.5}
+      type: number
+    - name: total_loan_amount
+      admin_ui: {width: 200, order: 9}
+      type: number
+    - name: borrower_amount
+      admin_ui: {order: 6, width: 200}
+      type: number
+    - name: wallet_id
+      admin_ui: {width: 200, order: 11}
+      type: string
   fin_users_device:
     client: none
     server: full
@@ -762,47 +803,6 @@ db_schema:
       admin_ui: {width: 200, order: 16}
       type: number
     title: fin_loan_details
-  borrower:
-    title: borrower
-    client: full
-    server: full
-    columns:
-    - name: email_id
-      admin_ui: {order: 1.75, width: 200}
-      type: string
-    - name: customer_id
-      admin_ui: {order: 0.5, width: 200}
-      type: string
-    - name: user_name
-      admin_ui: {width: 200, order: 2}
-      type: string
-    - name: admin_approve
-      admin_ui: {width: 200, order: 6}
-      type: bool
-    - name: borrowing_status
-      admin_ui: {order: 5.5, width: 200}
-      type: bool
-    - name: bank_acc_details
-      admin_ui: {order: 7, width: 200}
-      type: string
-    - name: credit_limit
-      admin_ui: {order: 2.375, width: 200}
-      type: number
-    - name: borrower_approve_date
-      admin_ui: {order: 7.5, width: 200}
-      type: date
-    - name: beseem_score
-      admin_ui: {width: 200, order: 3.5}
-      type: number
-    - name: total_loan_amount
-      admin_ui: {width: 200, order: 9}
-      type: number
-    - name: borrower_amount
-      admin_ui: {order: 6, width: 200}
-      type: number
-    - name: wallet_id
-      admin_ui: {width: 200, order: 11}
-      type: string
   fin_user_issues_bugreports:
     title: fin_user_issues_bugreports
     client: full
