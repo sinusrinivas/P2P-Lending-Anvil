@@ -100,7 +100,130 @@ db_schema:
     - name: min_months
       admin_ui: {order: 23, width: 200}
       type: number
-  user_profile:
+  wallet_notification:
+    client: none
+    server: full
+    columns: []
+    title: fin_wallet_notification
+  fin_wallet:
+    client: full
+    server: full
+    columns:
+    - name: wallet_id
+      admin_ui: {width: 200, order: 0}
+      type: string
+    - name: user_email
+      admin_ui: {width: 200, order: 1}
+      type: string
+    - name: user_name
+      admin_ui: {width: 200, order: 3}
+      type: string
+    - name: wallet_amount
+      admin_ui: {width: 200, order: 4}
+      type: number
+    - name: user_type
+      admin_ui: {width: 200, order: 5}
+      type: string
+    - name: account_id
+      admin_ui: {width: 200, order: 6}
+      type: string
+    - name: upi_id
+      admin_ui: {width: 200, order: 7}
+      type: string
+    - name: customer_id
+      admin_ui: {width: 200, order: 0.5}
+      type: number
+    title: fin_wallet
+  foreclosure:
+    client: full
+    server: full
+    columns:
+    - name: borrower_name
+      admin_ui: {width: 200, order: 1}
+      type: string
+    - name: reason
+      admin_ui: {width: 200, order: 1.5}
+      type: string
+    - name: requested_on
+      admin_ui: {width: 200, order: 7}
+      type: datetime
+    - name: loan_id
+      admin_ui: {width: 200, order: 1}
+      type: string
+    - name: status
+      admin_ui: {width: 200, order: 11}
+      type: string
+    - name: foreclose_fee
+      admin_ui: {width: 200}
+      type: number
+    - name: interest_rate
+      admin_ui: {width: 200}
+      type: number
+    - name: loan_amount
+      admin_ui: {width: 200, order: 4}
+      type: number
+    - name: penalty_amount
+      admin_ui: {width: 200, order: 1}
+      type: number
+    - name: total_due_amount
+      admin_ui: {width: 200, order: 8.75}
+      type: number
+    - name: foreclose_amount
+      admin_ui: {width: 200, order: 2.5}
+      type: number
+    - name: emi_amount
+      admin_ui: {width: 200, order: 4}
+      type: number
+    - name: outstanding_amount
+      admin_ui: {width: 200, order: 1}
+      type: number
+    - name: paid_amount
+      admin_ui: {width: 200, order: 4.5}
+      type: number
+    title: foreclosure
+  product_group:
+    title: product_group
+    client: full
+    server: full
+    columns:
+    - name: name
+      admin_ui: {width: 200}
+      type: string
+  users:
+    client: full
+    server: full
+    columns:
+    - name: email
+      admin_ui: {order: 0.5, width: 200}
+      type: string
+    - name: enabled
+      admin_ui: {order: 1, width: 200}
+      type: bool
+    - name: last_login
+      admin_ui: {order: 2, width: 200}
+      type: datetime
+    - name: password_hash
+      admin_ui: {order: 3, width: 200}
+      type: string
+    - name: n_password_failures
+      admin_ui: {order: 4, width: 200}
+      type: number
+    - name: confirmed_email
+      admin_ui: {order: 5, width: 200}
+      type: bool
+    - name: signed_up
+      admin_ui: {order: 6, width: 200}
+      type: datetime
+    - name: email_confirmation_key
+      admin_ui: {order: 1.5, width: 200}
+      type: string
+    title: Users
+  fin_users_device:
+    client: none
+    server: full
+    columns: []
+    title: fin_users_device
+  fin_user_profile:
     client: full
     server: full
     columns:
@@ -389,171 +512,7 @@ db_schema:
     - name: bessem_value
       admin_ui: {width: 200}
       type: number
-    title: user_profile
-  wallet_notification:
-    client: none
-    server: full
-    columns: []
-    title: fin_wallet_notification
-  fin_wallet:
-    client: full
-    server: full
-    columns:
-    - name: wallet_id
-      admin_ui: {width: 200, order: 0}
-      type: string
-    - name: user_email
-      admin_ui: {width: 200, order: 1}
-      type: string
-    - name: user_name
-      admin_ui: {width: 200, order: 3}
-      type: string
-    - name: wallet_amount
-      admin_ui: {width: 200, order: 4}
-      type: number
-    - name: user_type
-      admin_ui: {width: 200, order: 5}
-      type: string
-    - name: account_id
-      admin_ui: {width: 200, order: 6}
-      type: string
-    - name: upi_id
-      admin_ui: {width: 200, order: 7}
-      type: string
-    - name: customer_id
-      admin_ui: {width: 200, order: 0.5}
-      type: number
-    title: fin_wallet
-  foreclosure:
-    client: full
-    server: full
-    columns:
-    - name: borrower_name
-      admin_ui: {width: 200, order: 1}
-      type: string
-    - name: reason
-      admin_ui: {width: 200, order: 1.5}
-      type: string
-    - name: requested_on
-      admin_ui: {width: 200, order: 7}
-      type: datetime
-    - name: loan_id
-      admin_ui: {width: 200, order: 1}
-      type: string
-    - name: status
-      admin_ui: {width: 200, order: 11}
-      type: string
-    - name: foreclose_fee
-      admin_ui: {width: 200}
-      type: number
-    - name: interest_rate
-      admin_ui: {width: 200}
-      type: number
-    - name: loan_amount
-      admin_ui: {width: 200, order: 4}
-      type: number
-    - name: penalty_amount
-      admin_ui: {width: 200, order: 1}
-      type: number
-    - name: total_due_amount
-      admin_ui: {width: 200, order: 8.75}
-      type: number
-    - name: foreclose_amount
-      admin_ui: {width: 200, order: 2.5}
-      type: number
-    - name: emi_amount
-      admin_ui: {width: 200, order: 4}
-      type: number
-    - name: outstanding_amount
-      admin_ui: {width: 200, order: 1}
-      type: number
-    - name: paid_amount
-      admin_ui: {width: 200, order: 4.5}
-      type: number
-    title: foreclosure
-  product_group:
-    title: product_group
-    client: full
-    server: full
-    columns:
-    - name: name
-      admin_ui: {width: 200}
-      type: string
-  users:
-    client: full
-    server: full
-    columns:
-    - name: email
-      admin_ui: {order: 0.5, width: 200}
-      type: string
-    - name: enabled
-      admin_ui: {order: 1, width: 200}
-      type: bool
-    - name: last_login
-      admin_ui: {order: 2, width: 200}
-      type: datetime
-    - name: password_hash
-      admin_ui: {order: 3, width: 200}
-      type: string
-    - name: n_password_failures
-      admin_ui: {order: 4, width: 200}
-      type: number
-    - name: confirmed_email
-      admin_ui: {order: 5, width: 200}
-      type: bool
-    - name: signed_up
-      admin_ui: {order: 6, width: 200}
-      type: datetime
-    - name: email_confirmation_key
-      admin_ui: {order: 1.5, width: 200}
-      type: string
-    title: Users
-  lender:
-    title: lender
-    client: full
-    server: full
-    columns:
-    - name: email_id
-      admin_ui: {width: 200}
-      type: string
-    - name: lending_period
-      admin_ui: {width: 200}
-      type: string
-    - name: customer_id
-      admin_ui: {order: -1, width: 200}
-      type: number
-    - name: lending_type
-      admin_ui: {width: 200, order: 17}
-      type: string
-    - name: final_rta
-      admin_ui: {width: 200, order: 15}
-      type: number
-    - name: membership
-      admin_ui: {width: 200, order: 10}
-      type: string
-    - name: make_visibility
-      admin_ui: {width: 200, order: 11}
-      type: bool
-    - name: investment
-      admin_ui: {order: 0.5, width: 200}
-      type: number
-    - name: user_name
-      admin_ui: {order: -0.5, width: 200}
-      type: string
-    - name: admin_approved_date_time
-      admin_ui: {order: 6, width: 234}
-      type: date
-    - name: lender_accepted_timestamp
-      admin_ui: {order: 8, width: 228}
-      type: date
-    - name: wallet_id
-      admin_ui: {order: 12, width: 200}
-      type: string
-  fin_users_device:
-    client: none
-    server: full
-    columns: []
-    title: fin_users_device
+    title: fin_user_profile
   fin_wallet_transactions:
     title: fin_wallet_transactions
     client: full
@@ -624,6 +583,47 @@ db_schema:
     - name: emi_status
       admin_ui: {width: 200, order: 9}
       type: bool
+  fin_lender:
+    title: fin_lender
+    client: full
+    server: full
+    columns:
+    - name: email_id
+      admin_ui: {width: 200}
+      type: string
+    - name: lending_period
+      admin_ui: {width: 200}
+      type: string
+    - name: customer_id
+      admin_ui: {order: -1, width: 200}
+      type: number
+    - name: lending_type
+      admin_ui: {width: 200, order: 17}
+      type: string
+    - name: final_rta
+      admin_ui: {width: 200, order: 15}
+      type: number
+    - name: membership
+      admin_ui: {width: 200, order: 10}
+      type: string
+    - name: make_visibility
+      admin_ui: {width: 200, order: 11}
+      type: bool
+    - name: investment
+      admin_ui: {order: 0.5, width: 200}
+      type: number
+    - name: user_name
+      admin_ui: {order: -0.5, width: 200}
+      type: string
+    - name: admin_approved_date_time
+      admin_ui: {order: 6, width: 234}
+      type: date
+    - name: lender_accepted_timestamp
+      admin_ui: {order: 8, width: 228}
+      type: date
+    - name: wallet_id
+      admin_ui: {order: 12, width: 200}
+      type: string
   wallet_bank_account_table:
     title: fin_wallet_bank_account_table
     client: none
