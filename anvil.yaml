@@ -145,7 +145,6 @@ db_schema:
       admin_ui: {width: 200, order: 23}
       type: number
     title: fin_product_details
-  foreclosure: {title: foreclosure}
   fin_foreclosure:
     title: fin_foreclosure
     client: full
