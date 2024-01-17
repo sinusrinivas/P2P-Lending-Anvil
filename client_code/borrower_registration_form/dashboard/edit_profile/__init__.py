@@ -1,4 +1,4 @@
-from ._anvil_designer import boorrower_edit_profileTemplate
+from ._anvil_designer import edit_profileTemplate
 from anvil import *
 import anvil.server
 import anvil.google.auth, anvil.google.drive
@@ -8,7 +8,7 @@ import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 from .. import borrower_main_form_module as main_form_module
-class boorrower_edit_profile(boorrower_edit_profileTemplate):
+class edit_profile(edit_profileTemplate):
   def __init__(self, **properties):
     self.user_id=main_form_module.userId
     #self.user_id=1000  
