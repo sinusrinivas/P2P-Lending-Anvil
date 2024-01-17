@@ -7,8 +7,8 @@ import anvil.users
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
-from ..main_form import main_form_module
-from ..user_form import user_module
+from ...bank_users.main_form import main_form_module
+from ...bank_users.user_form import user_module
 
 class dashboard(dashboardTemplate):
   def __init__(self, **properties):

@@ -37,7 +37,7 @@ class user_form(user_formTemplate):
 
   def borrower_button_click(self, **event_args):
     userid = self.user_id
-    user_data=app_tables.user_profile.get(customer_id=userid)
+    user_data=app_tables.fin_user_profile.get(customer_id=userid)
     if user_data:
       actual_count=user_data['form_count']
       print(actual_count)
