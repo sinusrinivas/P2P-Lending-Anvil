@@ -199,7 +199,7 @@ class foreclose(forecloseTemplate):
 
   def button_2_click(self, **event_args):
     """This method is called when the button is clicked"""
-    open_form('borrower_registration_form.dashboard.borrower_foreclosure_request.borrower_foreclosure', selected_row= self.selected_row)
+    open_form('borrower_registration_form.dashboard.foreclosure_request.borrower_foreclosure', selected_row= self.selected_row)
 
   def link_1_click(self, **event_args):
     """This method is called when the link is clicked"""
@@ -231,7 +231,7 @@ class foreclose(forecloseTemplate):
 
                 alert("The Foreclosure Statement will be processed within 15 working days from the date of request. Please place this request to know the principal amount outstanding for closure of loan and applicable charges. If you have provided your mobile number or email, we will inform you about the closure of your request by SMS or email respectively. Providing the mobile number or email here will not result in an update of your mobile number or email as recorded with us. KOTAK Bank does not take any responsibility, and will also not be liable, for your claims if the details provided by you are incorrect/incomplete.")
 
-                open_form('borrower_registration_form.dashboard.borrower_foreclosure_request')
+                open_form('borrower_registration_form.dashboard.foreclosure_request')
         else:
             alert('Please enter a reason for foreclosure.')
     else:
