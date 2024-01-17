@@ -1,4 +1,4 @@
-from ._anvil_designer import borrower_today_duesTemplate
+from ._anvil_designer import today_duesTemplate
 from anvil import *
 import anvil.server
 import anvil.google.auth, anvil.google.drive
@@ -10,7 +10,7 @@ from anvil.tables import app_tables
 from datetime import datetime, timedelta, timezone
 from .. import borrower_main_form_module as main_form_module 
 
-class borrower_today_dues(borrower_today_duesTemplate):
+class today_dues(today_duesTemplate):
     def __init__(self, **properties):
         self.user_id = main_form_module.userId
         # Set Form properties and Data Bindings.

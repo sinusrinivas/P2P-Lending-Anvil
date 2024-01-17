@@ -1,4 +1,4 @@
-from ._anvil_designer import borrower_foreclosure_requestTemplate
+from ._anvil_designer import foreclosure_requestTemplate
 from anvil import *
 import anvil.server
 import anvil.google.auth, anvil.google.drive
@@ -8,7 +8,7 @@ import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 
-class borrower_foreclosure_request(borrower_foreclosure_requestTemplate):
+class foreclosure_request(foreclosure_requestTemplate):
     def __init__(self, **properties):
         # Set Form properties and Data Bindings.
         self.init_components(**properties)
