@@ -11,7 +11,7 @@ def add_bessem():
   users = anvil.users.get_user()
   if users:
     email = users['email']
-    data = app_tables.user_profile.search(email_user=email)
+    data = app_tables.fin_user_profile.search(email_user=email)
     if data:
       data[0]['bessem_value']=final_value
 

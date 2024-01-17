@@ -40,7 +40,7 @@ class main_form(main_formTemplate):
         check_user_registration = user_module.check_user_registration_form_done_or_not_engine(user_email)
         print("main else statement was executed")
         if check_user_registration:
-          user_profile_e = app_tables.user_profile.get(email_user=user_email)
+          user_profile_e = app_tables.fin_user_profile.get(email_user=user_email)
           main_form_module.email = user_email
           borrower_main_form_module.userId = user_module.find_user_id(user_email)
           if user_profile_e is not  None:
@@ -48,7 +48,7 @@ class main_form(main_formTemplate):
             if user_type == 'lender':
               open_form('lendor_registration_form.dashboard')
             elif user_type == 'borrower':
-              open_form('bank_users.borrower_dashboard')
+              open_form('borrower_registration_form.dashboard')
             elif user_type == 'admin':
               open_form('admin.dashboard')
             else:
