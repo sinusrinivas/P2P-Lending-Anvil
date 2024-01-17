@@ -1,4 +1,4 @@
-from ._anvil_designer import avlbalTemplate
+from ._anvil_designer import view_available_balanceTemplate
 from anvil import *
 import anvil.server
 import anvil.google.auth, anvil.google.drive
@@ -8,7 +8,7 @@ import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 
-class avlbal(avlbalTemplate):
+class view_available_balance(view_available_balanceTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)

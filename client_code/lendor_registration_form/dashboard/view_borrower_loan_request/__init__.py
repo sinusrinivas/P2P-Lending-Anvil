@@ -1,54 +1,53 @@
-from ._anvil_designer import rtaTemplate
+from ._anvil_designer import view_borrower_loan_requestTemplate
 from anvil import *
-import anvil.tables as tables
-import anvil.tables.query as q
-from anvil.tables import app_tables
 import anvil.server
 import anvil.google.auth, anvil.google.drive
 from anvil.google.drive import app_files
 import anvil.users
+import anvil.tables as tables
+import anvil.tables.query as q
+from anvil.tables import app_tables
+from .. import lendor_main_form_module as main_form_module
 
-class rta(rtaTemplate):
+class view_borrower_loan_request(view_borrower_loan_requestTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
-
-    # Any code you write here will run before the form opens.
-  def button_2_click(self, **event_args):
+    self.user_id=main_form_module.userId
     
+    self.repeating_panel_1.items=app_tables.loan_details.search(loan_updated_status=q.like('under process%'))
 
-    all_requests = app_tables.top_up.search()
-    top_up = self.tp_tb.text
-    
-    all_requests = app_tables.lender.search(
-            tables.order_by("lender_accepted_timestamp", ascending=False)
-        )
-    final_rta = self.final_rta
-    
-    if all_requests:
-        latest_request = all_requests[0]
-        available_balance = latest_request['available_balance']
-        final_rta = int(latest_request['available_balance']) + int(top_up)
-        #user_name = self.user_name
-        self.final_rta.text = f"Total Available Amount: {final_rta}"
+    # self.fetch_loan_data()
+    # loan_details = server.call('fetch_loan_details')
+    # self.repeating_panel_1.items = loan_details
+    # try:
+    #         # Fetch loan details from the server
+    #         loan_details_result = anvil.server.call('fetch_loan_details')
 
-        # Call the server function with the correct name and parameter
-        anvil.server.call('add_rtr_form', final_rta, available_balance)
-        anvil.server.call('add_top_up_amount', top_up)
-      
-        Notification("Topup added successfully").show()
+    #         # Convert the SearchIterator to a list for printing
+    #         loan_details_list = list(loan_details_result)
+
+    #         # Print fetched loan details for debugging
+    #         print("Fetched loan details:", loan_details_list)
+
+    #         # Display fetched loan details
+    #         self.repeating_panel_1.items = loan_details_list
+    # except Exception as e:
+    #         # Print any exceptions for debugging
+    #         print("Error in client code:", str(e))
+
+    
+  def link_1_click(self, **event_args):
+    """This method is called when the link is clicked"""
+    open_form("lendor_registration_form.dashboard.opbal")
 
   def button_1_click(self, **event_args):
     """This method is called when the button is clicked"""
     open_form("lendor_registration_form.dashboard")
 
-  def link_1_click(self, **event_args):
-    """This method is called when the link is clicked"""
-    open_form("lendor_registration_form.dashboard.avlbal")
-
   def link_2_click(self, **event_args):
     """This method is called when the link is clicked"""
-    open_form("lendor_registration_form.dashboard.vblr")
+    open_form("lendor_registration_form.dashboard.avlbal")
 
   def link_3_click(self, **event_args):
     """This method is called when the link is clicked"""
@@ -76,7 +75,7 @@ class rta(rtaTemplate):
 
   def link_9_click(self, **event_args):
     """This method is called when the link is clicked"""
-    open_form("lendor_registration_form.dashboard.opbal")
+    open_form("lendor_registration_form.dashboard.rta")
 
   def link_10_click(self, **event_args):
     """This method is called when the link is clicked"""
@@ -84,17 +83,18 @@ class rta(rtaTemplate):
 
   def link_11_click(self, **event_args):
     """This method is called when the link is clicked"""
-    open_form("lendor_registration_form.dashboard.opbal")
+    open_form("lendor_registration_form.dashboard.vep")
 
   def link_12_click(self, **event_args):
     """This method is called when the link is clicked"""
     open_form("lendor_registration_form.dashboard.vsn")
 
   def link_13_click(self, **event_args):
+    """This method is called when the link is clicked"""
     open_form("lendor_registration_form.dashboard.cp")
 
 
 
 
 
-
+    # Any code you write here will run before the form opens.
