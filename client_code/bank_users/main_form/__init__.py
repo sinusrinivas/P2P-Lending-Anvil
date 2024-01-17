@@ -11,7 +11,7 @@ from anvil.js.window import navigator
 from ..user_form import user_module
 from . import main_form_module
 # from ..borrower_dashboard import borrower_main_form_module
-from ...borrower_registration_form.dashboard import borrower_main_form_module
+from ...borrower_registration_form.dashboard import main_form_module
 
 class main_form(main_formTemplate):
   def __init__(self, **properties):
@@ -42,7 +42,7 @@ class main_form(main_formTemplate):
         if check_user_registration:
           user_profile_e = app_tables.fin_user_profile.get(email_user=user_email)
           main_form_module.email = user_email
-          borrower_main_form_module.userId = user_module.find_user_id(user_email)
+          main_form_module.userId = user_module.find_user_id(user_email)
           if user_profile_e is not  None:
             user_type = user_profile_e['usertype']
             if user_type == 'lender':
