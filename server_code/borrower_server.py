@@ -162,7 +162,7 @@ def add_loan_details(loan_amount, tenure,user_id,interest_rate, total_repayment_
     loan_created_timestamp = datetime.now().date()
 
     # Search for the user profile
-    user_profiles = app_tables.user_profile.search(customer_id=user_id)
+    user_profiles = app_tables.fin_user_profile.search(customer_id=user_id)
     
     if user_profiles and len(user_profiles) > 0:
         # If there is a user profile, get the first one
@@ -173,7 +173,7 @@ def add_loan_details(loan_amount, tenure,user_id,interest_rate, total_repayment_
         borrower_email_id = user_profile['email_user']
 
  
-        app_tables.loan_details.add_row(
+        app_tables.fin_loan_details.add_row(
           loan_amount=loan_amount,
           tenure=tenure,
           borrower_customer_id=user_id,
@@ -199,7 +199,7 @@ def add_loan_details(loan_amount, tenure,user_id,interest_rate, total_repayment_
 
 def generate_loan_id():
     # Query the latest loan ID from the data table
-    latest_loan = app_tables.loan_details.search(tables.order_by("loan_id", ascending=False))
+    latest_loan = app_tables.fin_loan_details.search(tables.order_by("loan_id", ascending=False))
 
     if latest_loan and len(latest_loan) > 0:
         # If there are existing loans, increment the last loan ID

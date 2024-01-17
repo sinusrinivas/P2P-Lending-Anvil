@@ -176,7 +176,7 @@ def add_lendor_bank_details_form_2(ifsc,salary_type,branch_name, user_id):
 @anvil.server.callable
 def add_rtr_form(final_rta, available_balance):
   #row = app_tables.lender.search()
-  row = app_tables.lender.search(tables.order_by("lender_accepted_timestamp", ascending=False))
+  row = app_tables.fin_lender.search(tables.order_by("lender_accepted_timestamp", ascending=False))
   if row:
     row[0]['final_rta'] = final_rta
     row[0]['available_balance'] = available_balance
@@ -194,7 +194,7 @@ def add_top_up_amount(top_up):
 
 @anvil.server.callable
 def search_user(query):
-  result=app_tables.foreclose.search()
+  result=app_tables.fin_foreclose.search()
   if query:
     result=[
     x for x in result
