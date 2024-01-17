@@ -10,7 +10,7 @@ from anvil.tables import app_tables
 # this is the method for user_id generate ----> start hear
 
 def generate_user_id():
-    full_table = app_tables.user_profile.search()
+    full_table = app_tables.fin_user_profile.search()
     if full_table:
         highest_coustmer_id = find_highest_amigos_id()
         return highest_coustmer_id + 1
@@ -35,7 +35,7 @@ def add_email_and_user_id(email_id):
 
 # The method check for new user or existing user using email from current user ---> start hear
 def check_user_profile(email_id):
-    user_check = app_tables.user_profile.search(email_user=email_id)
+    user_check = app_tables.fin_user_profile.search(email_user=email_id)
     if user_check:
       for user in user_check:
         if user['email_user'] == email_id:
@@ -57,7 +57,7 @@ def get_name(email):
 
 # -- this method is used to find the user id based on current email --> start hear -->
 def find_user_id(email):
-  user_true = app_tables.user_profile.search(email_user=email)
+  user_true = app_tables.fin_user_profile.search(email_user=email)
   if user_true:
     coustmer_id = user_true[0]['customer_id']
     return coustmer_id
@@ -90,7 +90,7 @@ def registration_engine():
 def check_user_registration_form_done_or_not_engine(email):
   userId = find_user_id(email)
   print(userId)
-  user_talble = app_tables.user_profile.get(customer_id=userId)
+  user_talble = app_tables.fin_user_profile.get(customer_id=userId)
   print(user_talble)
   if user_talble == None:
     print("if statement was executed ")

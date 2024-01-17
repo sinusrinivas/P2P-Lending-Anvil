@@ -12,7 +12,7 @@ import re
 class star_1_borrower_registration_form_begin(star_1_borrower_registration_form_beginTemplate):
     def __init__(self, user_id, **properties):
         self.userId = user_id
-        user_data=app_tables.user_profile.get(customer_id=user_id)
+        user_data=app_tables.fin_user_profile.get(customer_id=user_id)
         if user_data:
           self.borrower_full_name_test.text=user_data['full_name']
           self.gender_dd.selected_value=user_data['gender']
