@@ -1,4 +1,4 @@
-from ._anvil_designer import edit_profileTemplate
+from ._anvil_designer import view_opening_balanceTemplate
 from anvil import *
 import anvil.server
 import anvil.google.auth, anvil.google.drive
@@ -7,22 +7,23 @@ import anvil.users
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
-from ....bank_users.main_form import main_form_module
-class edit_profile(edit_profileTemplate):
+
+class view_opening_balance(view_opening_balanceTemplate):
   def __init__(self, **properties):
-    # Set Form properties and Data Bindings.
-    self.init_components(**properties)
-    self.email=main_form_module.email
-    user_profile=app_tables.user_profile.get(email_user=self.email)
-    if user_profile:
-      self.text_box_1.text=user_profile['full_name']
-      self.text_box_2.text=user_profile['email_user']
-      self.text_box_3.text=user_profile['mobile']
-      self.drop_down_1.selected_value=user_profile['gender']
-      self.label_9.text=user_profile['date_of_birth']
-      self.ad_number.text=user_profile['aadhaar_no']
-      self.pan_number.text=user_profile['pan_number']
-      
+        # Set Form properties and Data Bindings.
+        self.init_components(**properties)
+
+        # Fetch all rows from the table and get the latest one based on timestamp
+        all_requests = app_tables.lender.search(
+            tables.order_by("lender_accepted_timestamp", ascending=False)
+        )
+
+        if all_requests:
+            # Extract the necessary information from the latest row
+            latest_request = all_requests[0]
+            final_rta = latest_request['final_rta']
+            self.output_lbl.text = f" {final_rta}"
+          
   def link_1_click(self, **event_args):
     """This method is called when the link is clicked"""
     open_form("lendor_registration_form.dashboard.view_available_balance")
@@ -37,27 +38,27 @@ class edit_profile(edit_profileTemplate):
 
   def link_3_click(self, **event_args):
     """This method is called when the link is clicked"""
-    open_form("lendor_registration_form.dashboard.view_opening_balance")
+    open_form("lendor_registration_form.dashboard.loan_disbursement")
 
   def link_4_click(self, **event_args):
     """This method is called when the link is clicked"""
-    open_form("lendor_registration_form.dashboard.loan_disbursement")
+    open_form("lendor_registration_form.dashboard.view_lost_oppurtunities")
 
   def link_5_click(self, **event_args):
     """This method is called when the link is clicked"""
-    open_form("lendor_registration_form.dashboard.view_lost_oppurtunities")
+    open_form("lendor_registration_form.dashboard.today_dues")
 
   def link_6_click(self, **event_args):
     """This method is called when the link is clicked"""
-    open_form("lendor_registration_form.dashboard.today_dues")
+    open_form("lendor_registration_form.dashboard.vcl")
 
   def link_7_click(self, **event_args):
     """This method is called when the link is clicked"""
-    open_form("lendor_registration_form.dashboard.vcl")
+    open_form("lendor_registration_form.dashboard.view_loan_extension_requests")
 
   def link_8_click(self, **event_args):
     """This method is called when the link is clicked"""
-    open_form("lendor_registration_form.dashboard.view_loan_extension_requests")
+    open_form("lendor_registration_form.dashboard.view_loan_foreclosure_Requests")
 
   def link_9_click(self, **event_args):
     """This method is called when the link is clicked"""
@@ -65,11 +66,11 @@ class edit_profile(edit_profileTemplate):
 
   def link_10_click(self, **event_args):
     """This method is called when the link is clicked"""
-    open_form("lendor_registration_form.dashboard.view_loan_foreclosure_Requests")
+    open_form("lendor_registration_form.dashboard.view_or_download_portfolio")
 
   def link_11_click(self, **event_args):
     """This method is called when the link is clicked"""
-    open_form("lendor_registration_form.dashboard.view_or_download_portfolio")
+    open_form("lendor_registration_form.dashboard.view_profile")
 
   def link_12_click(self, **event_args):
     """This method is called when the link is clicked"""
@@ -79,17 +80,14 @@ class edit_profile(edit_profileTemplate):
     """This method is called when the link is clicked"""
     open_form("lendor_registration_form.dashboard.change_password")
 
-  def button_1_copy_click(self, **event_args):
+  def outlined_button_1_click(self, **event_args):
     """This method is called when the button is clicked"""
-    user_profile=app_tables.user_profile.get(email_user=self.email)
-    if user_profile:
-      user_profile['full_name']= self.text_box_1.text
-      user_profile['email_user']=self.text_box_2.text
-      user_profile['mobile']=self.text_box_3.text
-      user_profile['gender']=self.drop_down_1.selected_value
-      user_profile['date_of_birth']=self.label_9.text
-      user_profile['aadhaar_no']=self.ad_number.text
-      user_profile['pan_number']=self.pan_number.text
-      user_profile.update()
-      alert('saved sucessfully')
-      open_form('lendor_registration_form.dashboard')
+    open_form("lendor_registration_form.dashboard.top_up_amount")
+
+
+
+    # Any code you write here will run before the form opens.
+
+  def button_2_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    open_form("lendor_registration_form.dashboard.top_up_amount")
