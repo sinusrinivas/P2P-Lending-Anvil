@@ -1,5 +1,5 @@
 from anvil import open_form, alert
-from ... import borrower_main_form_module as main_form_module
+from ... import main_form_module as main_form_module
 from ... import app_tables
 from ._anvil_designer import loan_typeTemplate
 class loan_type(loan_typeTemplate):
@@ -18,7 +18,7 @@ class loan_type(loan_typeTemplate):
         # Load previously entered values when form is initialized
         self.load_entered_values(entered_values)
 
-        user_request = app_tables.product_details.get(product_categories=self.prodct_cate)
+        user_request = app_tables.fin_p.get(product_categories=self.prodct_cate)
         if user_request:
             self.roi = user_request['roi']
             self.processing_fee = user_request['processing_fee']
@@ -96,7 +96,7 @@ class loan_type(loan_typeTemplate):
                       })
 
     def fetch_product_data(self):
-        return app_tables.product_details.search(
+        return app_tables.fin_product_details.search(
             product_group=self.proctct_g,
             product_categories=self.prodct_cate
         )

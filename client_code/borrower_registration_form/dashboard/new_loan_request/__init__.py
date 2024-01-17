@@ -32,7 +32,7 @@ class new_loan_request(new_loan_requestTemplate):
             self.label_4.visible = True
 
             # Fetch product categories based on the selected loan type
-            product_categories = app_tables.product_categories.search(
+            product_categories = app_tables.fin_product_categories.search(
                 name_group=self.name.selected_value
             )
 
@@ -63,11 +63,17 @@ class new_loan_request(new_loan_requestTemplate):
         if name and category:
             open_form('borrower_registration_form.dashboard.new_loan_request.loan_type', name, category,self.max_amount_lb.text)
 
+    # def max_amount_lb_show(self, **event_args):
+    #     data = app_tables.fin_product_details.search()
+    #     # Exclude empty strings from the max_amount values
+    #     data1_strings = [str(data['max_amount']) for data in data if str(data['max_amount']).strip()]
+    #     self.max_amount_lb.text = data1_strings[0] if data1_strings else None
+    #     # user_request = app_tables.product_details.get(product_categories=self.prodct_cate)
+    #     # if user_request:
+    #     #     self.credit_limit = user_request['max_amount']
     def max_amount_lb_show(self, **event_args):
-        data = app_tables.product_details.search()
-        # Exclude empty strings from the max_amount values
-        data1_strings = [str(data['max_amount']) for data in data if str(data['max_amount']).strip()]
-        self.max_amount_lb.text = data1_strings[0] if data1_strings else None
-        # user_request = app_tables.product_details.get(product_categories=self.prodct_cate)
-        # if user_request:
-        #     self.credit_limit = user_request['max_amount']
+        # Call the server function to get the max amount
+        max_amount = anvil.server.call('get_max_amount')
+        
+        # Update the UI with the received max amount
+        self.max_amount_lb.text = max_amount
