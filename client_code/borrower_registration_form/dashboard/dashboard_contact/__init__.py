@@ -1,4 +1,4 @@
-from ._anvil_designer import borrower_dashboard_contactTemplate
+from ._anvil_designer import dashboard_contactTemplate
 from anvil import *
 import anvil.server
 import anvil.google.auth, anvil.google.drive
@@ -8,7 +8,7 @@ import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 
-class borrower_dashboard_contact(borrower_dashboard_contactTemplate):
+class dashboard_contact(dashboard_contactTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
