@@ -4,14 +4,14 @@ import anvil.server
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
-from .. import borrower_main_form_module as main_form_module
+from .. import main_form_module as main_form_module
 
 class new_loan_request(new_loan_requestTemplate):
     def __init__(self, **properties):
         self.user_id = main_form_module.userId
         self.init_components(**properties)
 
-        options = app_tables.product_group.search()
+        options = app_tables.fin_product_group.search()
         # Exclude empty strings from the drop-down options
         option_strings = [option['name'] for option in options if option['name'].strip()]
         self.name.items = option_strings
