@@ -42,7 +42,7 @@ class main_form(main_formTemplate):
         if check_user_registration:
           user_profile_e = app_tables.fin_user_profile.get(email_user=user_email)
           main_form_module.email = user_email
-          borrower_main_form_module.userId = user_module.find_user_id(user_email)
+          main_form_module.userId = user_module.find_user_id(user_email)
           if user_profile_e is not  None:
             user_type = user_profile_e['usertype']
             if user_type == 'lender':
