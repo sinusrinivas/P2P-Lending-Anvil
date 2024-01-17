@@ -15,5 +15,5 @@ class RowTemplate6(RowTemplate6Template):
   def link_1_click(self, **event_args):
     """This method is called when the link is clicked"""
     selected_row = self.item
-    open_form('borrower_registration_form.dashboard.borrower_foreclosure_request.borrower_foreclosure', selected_row=selected_row)
+    open_form('borrower_registration_form.dashboard.foreclosure_request.borrower_foreclosure', selected_row=selected_row)
 
