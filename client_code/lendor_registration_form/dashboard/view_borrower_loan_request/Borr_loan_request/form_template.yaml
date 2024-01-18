@@ -206,6 +206,22 @@ components:
           underline: false, icon: ''}
         name: label_bank_acc_details
         layout_properties: {row: SUHGPG, width_xs: 3, col_xs: 6, width: 157.197}
+      - type: Label
+        properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+          visible: true, text: 'Payment Details ', font_size: null, font: '', spacing_above: small,
+          icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+          underline: false, icon: ''}
+        name: label_12
+        layout_properties: {row: SUVWIQ, width_xs: 3, col_xs: 3, width: 149.75}
+      - type: Link
+        properties: {role: null, url: '', align: left, tooltip: '', border: '', foreground: blue,
+          visible: true, text: View Payment Details Here, font_size: null, wrap_on: mobile,
+          font: '', col_spacing: medium, spacing_above: small, icon_align: left, col_widths: '',
+          spacing_below: small, italic: false, background: '', bold: true, underline: false,
+          icon: ''}
+        name: link_1
+        layout_properties: {row: SUVWIQ, width_xs: 3, col_xs: 6, width: 149.75}
+        event_bindings: {click: link_1_click}
     - name: spacer_2
       properties: {height: 32}
       type: Spacer

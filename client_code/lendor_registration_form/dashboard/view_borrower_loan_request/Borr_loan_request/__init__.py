@@ -211,4 +211,7 @@ class Borr_loan_request(Borr_loan_requestTemplate):
             alert("Pay to Borrower")
             open_form("wallet.wallet")
 
+    def link_1_click(self, **event_args):
+      open_form('lendor_registration_form.dashboard.vblr.payment_details_view_loan_request', selected_row=self.selected_row)
+
   
