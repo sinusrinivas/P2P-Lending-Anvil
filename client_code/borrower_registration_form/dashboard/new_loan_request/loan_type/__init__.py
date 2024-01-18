@@ -19,8 +19,7 @@ class loan_type(loan_typeTemplate):
         # Load previously entered values when form is initialized
         self.load_entered_values(entered_values)
 
-        # user_request = app_tables.fin_product_details.get(product_categories=self.prodct_cate)
-        user_request = app_tables.fin_product_details.get(product_categories=self.product_cat)
+        user_request = app_tables.fin_product_details.get(product_categories=self.prodct_cate)
         if user_request:
             self.roi = user_request['roi']
             self.processing_fee = user_request['processing_fee']
