@@ -7,7 +7,8 @@ import anvil.users
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
-from ... import borrower_main_form_module as main_form_module
+from .. import main_form_module as main_form_module
+
 class RowTemplate15(RowTemplate15Template):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
@@ -18,4 +19,4 @@ class RowTemplate15(RowTemplate15Template):
   def view_profile_link_click(self, **event_args):
     """This method is called when the link is clicked"""
     selcted_row=self.item
-    open_form('borrower_registration_form.dashboard.borrower_view_loans.view_profile',selected_row=selcted_row)
+    open_form('borrower_registration_form.dashboard.view_loans.view_profile',selected_row=selcted_row)
