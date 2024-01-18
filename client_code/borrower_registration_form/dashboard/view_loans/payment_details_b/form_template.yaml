@@ -78,7 +78,7 @@ components:
       components:
       - type: RepeatingPanel
         properties: {spacing_above: none, spacing_below: none, item_template: borrower_registration_form.dashboard.view_loans.payment_details_b.RowTemplate36}
-        name: repeating_panel_1
+        name: repeating_panel_2
         layout_properties: {}
   - type: Spacer
     properties: {height: 32}
