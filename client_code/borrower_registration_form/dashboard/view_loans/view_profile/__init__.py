@@ -42,5 +42,5 @@ class view_profile(view_profileTemplate):
         open_form('borrower_registration_form.dashboard.borrower_view_loans')
 
     def link_1_click(self, **event_args):
-      """This method is called when the link is clicked"""
+     
       open_form('bank_users.borrower_dashboard.borrower_view_loans.payment_details_l_copy', selected_row=self.selected_row)
