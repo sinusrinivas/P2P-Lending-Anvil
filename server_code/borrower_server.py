@@ -181,12 +181,13 @@ def add_loan_details(loan_amount, tenure,user_id,interest_rate, total_repayment_
           total_repayment_amount = total_repayment_amount,
           loan_id = loan_id,
           membership_type = membership_type,
-          credit_limit = credit_limit,
+          credit_limit=int(credit_limit),
           borrower_full_name = borrower_full_name,
           borrower_email_id = borrower_email_id,
           loan_updated_status = "under process",
           borrower_loan_created_timestamp=loan_created_timestamp,
-          product_id = product_id,beseem_score=bessem.fetch_bessem(borrower_email_id)
+          product_id = product_id,
+          beseem_score=bessem.fetch_bessem(borrower_email_id)
           
           # borrower_loan_created_timestamp = datetime.now()
          )
@@ -255,8 +256,16 @@ def generate_emi_id():
     # Return the new EMI ID
     return f"EMI{counter}"
 
-@anvil.server.callable
-def get_max_amount():
-    data = app_tables.fin_product_details.search()
-    data1_strings = [str(row['max_amount']) for row in data if str(row['max_amount']).strip()]
-    return data1_strings[0] if data1_strings else None
+# @anvil.server.callable
+# def get_max_amount():
+#     data = app_tables.fin_product_details.search()
+#     data1_strings = [str(row['max_amount']) for row in data if str(row['max_amount']).strip()]
+#     return data1_strings[0] if data1_strings else None
+
+# In borrower_registration_form.dashboard.new_loan_request module
+# @anvil.server.callable
+# def get_fin_product_details(product_categories):
+#     # Perform the search on the server side
+#     user_request = app_tables.fin_product_details.search(product_categories=product_categories)
+#     return user_request
+

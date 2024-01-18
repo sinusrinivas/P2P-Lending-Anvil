@@ -20,6 +20,11 @@ class new_loan_request(new_loan_requestTemplate):
         # Add a placeholder to drop_down_2
         self.drop_down_2.items = ['']  # Add your placeholder text here
         self.drop_down_2.selected_value = None
+    # In borrower_registration_form.dashboard.new_loan_request module (client-side code)
+    # def loan_type():
+    #     # Call the server-side function to get product details
+    #     product_details = anvil.server.call('get_fin_product_details', 'desired_category')
+    #     # Process the product_details as needed
 
     def name_change(self, **event_args):
         self.selected_value = self.name.selected_value
@@ -63,17 +68,11 @@ class new_loan_request(new_loan_requestTemplate):
         if name and category:
             open_form('borrower_registration_form.dashboard.new_loan_request.loan_type', name, category,self.max_amount_lb.text)
 
-    # def max_amount_lb_show(self, **event_args):
-    #     data = app_tables.fin_product_details.search()
-    #     # Exclude empty strings from the max_amount values
-    #     data1_strings = [str(data['max_amount']) for data in data if str(data['max_amount']).strip()]
-    #     self.max_amount_lb.text = data1_strings[0] if data1_strings else None
-    #     # user_request = app_tables.product_details.get(product_categories=self.prodct_cate)
-    #     # if user_request:
-    #     #     self.credit_limit = user_request['max_amount']
     def max_amount_lb_show(self, **event_args):
-        # Call the server function to get the max amount
-        max_amount = anvil.server.call('get_max_amount')
-        
-        # Update the UI with the received max amount
-        self.max_amount_lb.text = max_amount
+        data = app_tables.fin_product_details.search()
+        # Exclude empty strings from the max_amount values
+        data1_strings = [str(data['max_amount']) for data in data if str(data['max_amount']).strip()]
+        self.max_amount_lb.text = data1_strings[0] if data1_strings else None
+        # user_request = app_tables.product_details.get(product_categories=self.prodct_cate)
+        # if user_request:
+        #     self.credit_limit = user_request['max_amount']
