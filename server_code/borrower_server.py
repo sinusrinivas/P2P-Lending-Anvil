@@ -263,8 +263,9 @@ def generate_emi_id():
 #     return data1_strings[0] if data1_strings else None
 
 # In borrower_registration_form.dashboard.new_loan_request module
-@anvil.server.callable
-def get_fin_product_details(product_categories):
-    # Perform the search on the server side
-    user_request = app_tables.fin_product_details.search(product_categories=product_categories)
-    return user_request
+# @anvil.server.callable
+# def get_fin_product_details(product_categories):
+#     # Perform the search on the server side
+#     user_request = app_tables.fin_product_details.search(product_categories=product_categories)
+#     return user_request
+
