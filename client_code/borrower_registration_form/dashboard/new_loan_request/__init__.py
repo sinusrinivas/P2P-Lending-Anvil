@@ -20,6 +20,11 @@ class new_loan_request(new_loan_requestTemplate):
         # Add a placeholder to drop_down_2
         self.drop_down_2.items = ['']  # Add your placeholder text here
         self.drop_down_2.selected_value = None
+    # In borrower_registration_form.dashboard.new_loan_request module (client-side code)
+    def loan_type():
+        # Call the server-side function to get product details
+        product_details = anvil.server.call('get_fin_product_details', 'desired_category')
+        # Process the product_details as needed
 
     def name_change(self, **event_args):
         self.selected_value = self.name.selected_value
