@@ -681,15 +681,6 @@ db_schema:
     - name: lender_email_id
       admin_ui: {width: 200, order: 4}
       type: string
-    - name: finial_repayment_amount
-      admin_ui: {width: 200, order: 5}
-      type: number
-    - name: finial_repayment_date
-      admin_ui: {width: 200, order: 6}
-      type: date
-    - name: finial_emi
-      admin_ui: {width: 200, order: 7}
-      type: number
     - name: description
       admin_ui: {width: 200, order: 8}
       type: string
