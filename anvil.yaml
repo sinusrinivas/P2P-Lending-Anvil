@@ -28,6 +28,17 @@ db_schema:
     server: full
     columns: []
     title: fin_wallet_notification
+  fin_product_categories:
+    title: fin_product_categories
+    client: full
+    server: full
+    columns:
+    - name: name_categories
+      admin_ui: {width: 200}
+      type: string
+    - name: name_group
+      admin_ui: {width: 200}
+      type: string
   fin_wallet:
     client: full
     server: full
@@ -134,11 +145,6 @@ db_schema:
       admin_ui: {width: 200, order: 23}
       type: number
     title: fin_product_details
-  users_device:
-    client: none
-    server: full
-    columns: []
-    title: fin_users_device
   fin_beseem_score:
     client: none
     server: full
@@ -291,6 +297,11 @@ db_schema:
     - name: wallet_id
       admin_ui: {width: 200, order: 11}
       type: string
+  fin_users_device:
+    client: none
+    server: full
+    columns: []
+    title: fin_users_device
   fin_user_profile:
     client: full
     server: full
@@ -865,17 +876,6 @@ db_schema:
       admin_ui: {width: 200, order: 16}
       type: number
     title: fin_loan_details
-  product_categories:
-    title: fin_product_categories
-    client: full
-    server: full
-    columns:
-    - name: name_categories
-      admin_ui: {width: 200}
-      type: string
-    - name: name_group
-      admin_ui: {width: 200}
-      type: string
   fin_user_issues_bugreports:
     title: fin_user_issues_bugreports
     client: full
