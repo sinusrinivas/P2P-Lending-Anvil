@@ -139,6 +139,41 @@ db_schema:
     server: full
     columns: []
     title: fin_users_device
+  fin_beseem_score:
+    client: none
+    server: full
+    columns:
+    - name: borrower_email_id
+      admin_ui: {width: 200, order: 1}
+      type: string
+    - name: loan_point
+      admin_ui: {width: 200, order: 4}
+      type: number
+    - name: occupation_point
+      admin_ui: {width: 200, order: 0.5}
+      type: number
+    - name: borrower_customer_id
+      admin_ui: {width: 200, order: -0.5}
+      type: number
+    - name: relationship_point
+      admin_ui: {width: 200, order: 0.75}
+      type: number
+    - name: total_point
+      admin_ui: {width: 200, order: 5}
+      type: number
+    - name: educational_point
+      admin_ui: {width: 200, order: 6}
+      type: number
+    - name: language_point
+      admin_ui: {width: 200, order: 7}
+      type: number
+    - name: region_point
+      admin_ui: {width: 200, order: 8}
+      type: number
+    - name: documentation_point
+      admin_ui: {width: 200, order: 9}
+      type: number
+    title: fin_beseem_score
   fin_foreclosure:
     title: fin_foreclosure
     client: full
