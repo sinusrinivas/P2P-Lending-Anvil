@@ -1,0 +1,39 @@
+container: {type: DataRowPanel}
+components:
+- type: Label
+  properties: {}
+  name: label_1
+  layout_properties: {column: HNDXMO}
+- type: Label
+  properties: {}
+  name: label_2
+  layout_properties: {column: UIVQZK}
+- type: Label
+  properties: {}
+  name: label_3
+  layout_properties: {column: XBGVMQ}
+- type: Label
+  properties: {}
+  name: label_4
+  layout_properties: {column: WNDFRF}
+- type: Label
+  properties: {}
+  name: label_5
+  layout_properties: {column: UAHJDF}
+- type: Label
+  properties: {}
+  name: label_6
+  layout_properties: {column: ITJKMG}
+- type: Label
+  properties: {}
+  name: label_7
+  layout_properties: {column: QQKWIO}
+- type: Label
+  properties: {}
+  name: label_8
+  layout_properties: {column: HGKINV}
+- type: Label
+  properties: {}
+  name: label_9
+  layout_properties: {column: UNAPZX}
+is_package: true
