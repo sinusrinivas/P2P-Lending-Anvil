@@ -76,3 +76,6 @@ class new_loan_request(new_loan_requestTemplate):
         # user_request = app_tables.product_details.get(product_categories=self.prodct_cate)
         # if user_request:
         #     self.credit_limit = user_request['max_amount']
+
+    def button_1_click(self, **event_args):
+      open_form("borrower_registration_form.dashboard")
