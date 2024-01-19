@@ -13,7 +13,7 @@ class edit_profile(edit_profileTemplate):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
     self.email=main_form_module.email
-    user_profile=app_tables.user_profile.get(email_user=self.email)
+    user_profile=app_tables.fin_user_profile.get(email_user=self.email)
     if user_profile:
       self.text_box_1.text=user_profile['full_name']
       self.text_box_2.text=user_profile['email_user']
@@ -81,7 +81,7 @@ class edit_profile(edit_profileTemplate):
 
   def button_1_copy_click(self, **event_args):
     """This method is called when the button is clicked"""
-    user_profile=app_tables.user_profile.get(email_user=self.email)
+    user_profile=app_tables.fin_user_profile.get(email_user=self.email)
     if user_profile:
       user_profile['full_name']= self.text_box_1.text
       user_profile['email_user']=self.text_box_2.text
