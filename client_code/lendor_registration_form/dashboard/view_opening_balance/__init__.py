@@ -14,7 +14,7 @@ class view_opening_balance(view_opening_balanceTemplate):
         self.init_components(**properties)
 
         # Fetch all rows from the table and get the latest one based on timestamp
-        all_requests = app_tables.lender.search(
+        all_requests = app_tables.fin_lender.search(
             tables.order_by("lender_accepted_timestamp", ascending=False)
         )
 
