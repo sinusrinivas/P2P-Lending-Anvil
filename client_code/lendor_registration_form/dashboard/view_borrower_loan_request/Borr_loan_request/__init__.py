@@ -38,7 +38,7 @@ class Borr_loan_request(Borr_loan_requestTemplate):
 
         # Fetch additional details from the 'borrower' table
         try:
-            user_request = app_tables.borrower.get(customer_id=str(selected_row['borrower_customer_id']))
+            user_request = app_tables.fin_borrower.get(customer_id=str(selected_row['borrower_customer_id']))
             if user_request is not None:
                 # Assuming 'bank_acc_details' is a valid column name in the 'borrower' table
                 bank_acc_details = user_request['bank_acc_details']
@@ -49,7 +49,7 @@ class Borr_loan_request(Borr_loan_requestTemplate):
                 # Fetch additional details from the 'loan_details' table
                 try:
                     #loan_details = app_tables.loan_details.get(loan_id=int(selected_row['loan_id']))
-                    loan_details = app_tables.loan_details.get(loan_id=str(selected_row['loan_id']))
+                    loan_details = app_tables.fin_loan_details.get(loan_id=str(selected_row['loan_id']))
                     if loan_details is not None:
                         # Assuming 'interest_rate' and 'min_amount' are valid column names in the 'loan_details' table
                         interest_rate = loan_details['interest_rate']
@@ -85,7 +85,7 @@ class Borr_loan_request(Borr_loan_requestTemplate):
 
     def button_1_click(self, **event_args):
       """This method is called when the button is clicked"""
-      open_form('lendor_registration_form.dashboard.vblr')
+      open_form('lendor_registration_form.dashboard.view_borrower_loan_request')
    
   
     def update_ui_based_on_status(self):
@@ -187,7 +187,7 @@ class Borr_loan_request(Borr_loan_requestTemplate):
         
 
         # Close the form after deletion
-        open_form("lendor_registration_form.dashboard.vblr")
+        open_form("lendor_registration_form.dashboard.view_borrower_loan_request")
 
     def open_wallet_form(self):
         # Call the server-side function to get the signal
@@ -212,6 +212,6 @@ class Borr_loan_request(Borr_loan_requestTemplate):
             open_form("wallet.wallet")
 
     def link_1_click(self, **event_args):
-      open_form('lendor_registration_form.dashboard.vblr.payment_details_view_loan_request', selected_row=self.selected_row)
+      open_form('lendor_registration_form.dashboard.view_borrower_loan_request.payment_details_view_loan_request', selected_row=self.selected_row)
 
   
