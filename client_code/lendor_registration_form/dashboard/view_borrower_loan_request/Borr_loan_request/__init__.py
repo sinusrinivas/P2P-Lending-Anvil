@@ -85,7 +85,7 @@ class Borr_loan_request(Borr_loan_requestTemplate):
 
     def button_1_click(self, **event_args):
       """This method is called when the button is clicked"""
-      open_form('lendor_registration_form.dashboard.vblr')
+      open_form('lendor_registration_form.dashboard.view_borrower_loan_request')
    
   
     def update_ui_based_on_status(self):
@@ -187,7 +187,7 @@ class Borr_loan_request(Borr_loan_requestTemplate):
         
 
         # Close the form after deletion
-        open_form("lendor_registration_form.dashboard.vblr")
+        open_form("lendor_registration_form.dashboard.view_borrower_loan_request")
 
     def open_wallet_form(self):
         # Call the server-side function to get the signal
@@ -212,6 +212,6 @@ class Borr_loan_request(Borr_loan_requestTemplate):
             open_form("wallet.wallet")
 
     def link_1_click(self, **event_args):
-      open_form('lendor_registration_form.dashboard.vblr.payment_details_view_loan_request', selected_row=self.selected_row)
+      open_form('lendor_registration_form.dashboard.view_borrower_loan_request.payment_details_view_loan_request', selected_row=self.selected_row)
 
   
