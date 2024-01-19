@@ -43,4 +43,4 @@ class view_profile(view_profileTemplate):
 
     def link_1_click(self, **event_args):
      
-      open_form('borrower_registration_form.dashboard.view_loans.payment_details_l_copy', selected_row=self.selected_row)
+      open_form('borrower_registration_form.dashboard.view_loans.payment_details_b', selected_row=self.selected_row)
