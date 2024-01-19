@@ -7,7 +7,7 @@ import anvil.users
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
-from ...import borrower_main_form_module as main_form_module
+from .. import main_form_module as main_form_module
 from datetime import datetime, date
 
 class view_profile(view_profileTemplate):
@@ -39,8 +39,8 @@ class view_profile(view_profileTemplate):
         open_form('borrower_registration_form.dashboard')
 
     def button_1_click(self, **event_args):
-        open_form('borrower_registration_form.dashboard.borrower_view_loans')
+        open_form('borrower_registration_form.dashboard.view_loans')
 
     def link_1_click(self, **event_args):
      
-      open_form('bank_users.borrower_dashboard.borrower_view_loans.payment_details_l_copy', selected_row=self.selected_row)
+      open_form('borrower_registration_form.dashboard.view_loans.payment_details_l_copy', selected_row=self.selected_row)

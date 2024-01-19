@@ -46,7 +46,7 @@ def create_wallet_entry(email, customer_id, full_name, user_type):
 
 @anvil.server.callable
 def fetch_user_profiles():
-    user_profiles = app_tables.user_profile.search()
+    user_profiles = app_tables.fin_user_profile.search()
     print(user_profiles)
     return user_profiles
 

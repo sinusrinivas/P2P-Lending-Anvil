@@ -95,7 +95,7 @@ class borrower_foreclosure(borrower_foreclosureTemplate):
         borrower_last_payment_done = selected_row['borrower_last_payment_done']
         borrower_first_payment_done = loan_details_row['borrower_first_payment_done']
         product_id = selected_row['product_id']
-        product_details_row = app_tables.product_details.get(product_id=product_id)
+        product_details_row = app_tables.fin_product_details.get(product_id=product_id)
         self.min_months = product_details_row['min_months']
         self.min_months = int(self.min_months)
 

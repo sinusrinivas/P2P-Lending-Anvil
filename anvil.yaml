@@ -58,7 +58,7 @@ db_schema:
       type: number
     title: fin_wallet
   fin_product_details:
-    client: none
+    client: full
     server: full
     columns:
     - name: product_categories
@@ -670,15 +670,6 @@ db_schema:
     - name: lender_email_id
       admin_ui: {width: 200, order: 4}
       type: string
-    - name: finial_repayment_amount
-      admin_ui: {width: 200, order: 5}
-      type: number
-    - name: finial_repayment_date
-      admin_ui: {width: 200, order: 6}
-      type: date
-    - name: finial_emi
-      admin_ui: {width: 200, order: 7}
-      type: number
     - name: description
       admin_ui: {width: 200, order: 8}
       type: string
@@ -688,6 +679,15 @@ db_schema:
     - name: extend_fee
       admin_ui: {width: 200, order: 10}
       type: number
+    - name: final_emi
+      admin_ui: {width: 200}
+      type: number
+    - name: final_repayment_amount
+      admin_ui: {width: 200}
+      type: number
+    - name: final_repayment_date
+      admin_ui: {width: 200}
+      type: date
     title: fin_extends_loan
   fin_lender:
     title: fin_lender
