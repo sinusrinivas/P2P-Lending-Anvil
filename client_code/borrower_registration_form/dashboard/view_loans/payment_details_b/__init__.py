@@ -24,42 +24,41 @@ class payment_details_b(payment_details_bTemplate):
         payment_details = []
 
         # Monthly interest rate
-        monthly_interest_rate = (selected_row['interest_rate'] / 100) / 12
+        monthly_interest_rate = (self.selected_row['interest_rate'] / 100) / 12
 
         # Extra payment amount (initialized with 0 for all months)
         extra_payment = 0
 
         # Calculate EMI (monthly installment)
-        emi = (selected_row['loan_amount'] * monthly_interest_rate * ((1 + monthly_interest_rate) ** selected_row['tenure'])) / (
-                ((1 + monthly_interest_rate) ** selected_row['tenure']) - 1)
+        emi = (self.selected_row['loan_amount'] * monthly_interest_rate * ((1 + monthly_interest_rate) ** self.selected_row['tenure'])) / (
+                ((1 + monthly_interest_rate) ** self.selected_row['tenure']) - 1)
 
         # Initialize the first beginning balance with the initial loan amount
-        beginning_balance = selected_row['loan_amount']
+        beginning_balance = self.selected_row['loan_amount']
 
         # Calculate payment details for each month up to the tenure
-        for month in range(1, selected_row['tenure'] + 1):
+        for month in range(1, self.selected_row['tenure'] + 1):
             # Calculate payment date for the current month
             payment_date = self.calculate_payment_date(selected_row, month)
 
-            # Calculate interest amount for the month
+            # Handle the case when payment_date is None
+            formatted_payment_date = f"{payment_date:%Y-%m-%d}" if payment_date else "Awaiting Update"
+
+            # Calculate other payment details
             interest_amount = beginning_balance * monthly_interest_rate
-
-            # Calculate principal amount for the month
             principal_amount = emi - interest_amount
-
-            # Update ending balance for the current iteration
             ending_balance = beginning_balance - principal_amount
 
             # Add payment details to the list
             payment_details.append({
                 'PaymentNumber': month,
-                'PaymentDate': f"{payment_date:%Y-%m-%d}" if payment_date else "N/A",  # Format the date
+                'PaymentDate': formatted_payment_date,
                 'ScheduledPayment': f"₹ {emi:.2f}",
                 'Principal': f"₹ {principal_amount:.2f}",
                 'Interest': f"₹ {interest_amount:.2f}",
                 'BeginningBalance': f"₹ {beginning_balance:.2f}",
-                'ExtraPayment': f"₹ {extra_payment:.2f}",  # Extra payment column
-                'TotalPayment': f"₹ {emi + extra_payment:.2f}",  # Include extra payment in the total payment
+                'ExtraPayment': f"₹ {extra_payment:.2f}",
+                'TotalPayment': f"₹ {emi + extra_payment:.2f}",
                 'EndingBalance': f"₹ {ending_balance:.2f}"
             })
 
@@ -78,17 +77,17 @@ class payment_details_b(payment_details_bTemplate):
 
     def calculate_payment_date(self, selected_row, current_month):
         loan_updated_status = selected_row['loan_updated_status'].lower()
-
+    
         if loan_updated_status in ['close', 'closed loans', 'disbursed loan', 'foreclosure']:
             try:
                 loan_disbursed_timestamp = selected_row['loan_disbursed_timestamp']
-
+    
                 if loan_disbursed_timestamp:
-                    product_details_row = app_tables.product_details.get(
+                    fin_product_details_row = app_tables.fin_product_details.get(
                         product_id=selected_row['product_id']
                     )
-                    first_emi_payment = product_details_row['first_emi_payment']
-
+                    first_emi_payment = fin_product_details_row['first_emi_payment']
+    
                     # Calculate payment date based on loan_disbursed_timestamp and first_emi_payment
                     if current_month == 1:
                         payment_date = loan_disbursed_timestamp + timedelta(
@@ -98,7 +97,7 @@ class payment_details_b(payment_details_bTemplate):
                         payment_date = loan_disbursed_timestamp + timedelta(
                             days=int(first_emi_payment * 30.44) + (current_month - 1) * 30  # Assuming an average of 30 days in a month
                         )
-
+    
                     return payment_date
                 else:
                     return None

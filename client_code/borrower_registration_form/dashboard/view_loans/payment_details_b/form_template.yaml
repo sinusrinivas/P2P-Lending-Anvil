@@ -53,7 +53,8 @@ components:
       properties:
         role: null
         columns:
-        - {id: HNDXMO, title: Payment Number, data_key: column_1, $$hashKey: 'object:8226'}
+        - {id: HNDXMO, title: Payment Number, data_key: column_1, $$hashKey: 'object:8226',
+          width: 75, expand: false}
         - {id: UIVQZK, title: Payment Date, data_key: column_2, $$hashKey: 'object:8227'}
         - {id: XBGVMQ, title: Beginning Balance, data_key: column_3, $$hashKey: 'object:8228'}
         - {id: WNDFRF, title: Scheduled  Payment, data_key: column_4, $$hashKey: 'object:8300'}
