@@ -14,7 +14,7 @@ services:
 - source: /runtime/services/anvil/email.yml
   client_config: {}
   server_config: {}
-startup: {type: form, module: bank_users.main_form}
+startup: {type: form, module: admin.dashboard.manage_products.add_product_categories_and_groups}
 package_name: bank_client
 allow_embedding: false
 name: P2P Lending App
@@ -681,15 +681,6 @@ db_schema:
     - name: lender_email_id
       admin_ui: {width: 200, order: 4}
       type: string
-    - name: finial_repayment_amount
-      admin_ui: {width: 200, order: 5}
-      type: number
-    - name: finial_repayment_date
-      admin_ui: {width: 200, order: 6}
-      type: date
-    - name: finial_emi
-      admin_ui: {width: 200, order: 7}
-      type: number
     - name: description
       admin_ui: {width: 200, order: 8}
       type: string
@@ -699,6 +690,15 @@ db_schema:
     - name: extend_fee
       admin_ui: {width: 200, order: 10}
       type: number
+    - name: final_emi
+      admin_ui: {width: 200}
+      type: number
+    - name: final_repayment_amount
+      admin_ui: {width: 200}
+      type: number
+    - name: final_repayment_date
+      admin_ui: {width: 200}
+      type: date
     title: fin_extends_loan
   fin_lender:
     title: fin_lender
