@@ -80,4 +80,4 @@ class payment_details_b(payment_details_bTemplate):
 
   def button_2_click(self, **event_args):
     # Pass the selected_row to view_details_1 form
-    open_form('bank_users.borrower_dashboard.borrower_view_loans.view_profile', selected_row=self.selected_row)
+    open_form('borrower_registration_form.dashboard.view_loans.view_profile', selected_row=self.selected_row)
