@@ -18,47 +18,27 @@ class payment_details_l(payment_details_lTemplate):
             self.load_payment_details(selected_row, entered_values)
 
     def load_payment_details(self, selected_row, entered_values):
-        # Load previously entered values when the form is initialized
         self.load_entered_values(entered_values)
-
-        # Create an empty list to store payment details
         payment_details = []
-
-        # Monthly interest rate
         monthly_interest_rate = (self.selected_row['interest_rate'] / 100) / 12
-
-        # Extra payment amount (initialized with 0 for all months)
         extra_payment = 0
-
-        # Calculate EMI (monthly installment)
         emi = (self.selected_row['loan_amount'] * monthly_interest_rate * ((1 + monthly_interest_rate) ** self.selected_row['tenure'])) / (
                 ((1 + monthly_interest_rate) ** self.selected_row['tenure']) - 1)
-
-        # Initialize the first beginning balance with the initial loan amount
         beginning_balance = self.selected_row['loan_amount']
-
-        # Calculate payment details for each month up to the tenure
         for month in range(1, self.selected_row['tenure'] + 1):
-            # Calculate payment date for the current month
             payment_date = self.calculate_payment_date(selected_row, month)
-
-            # Handle the case when payment_date is None
             formatted_payment_date = f"{payment_date:%Y-%m-%d}" if payment_date else "Awaiting Update"
             if payment_date is None:
-                # Enable label_1 and display a message
                 self.label_1.enabled = True
                 self.label_1.text = "Payment Date will be updated after loan disbursed"
             else:
-                # Disable label_1 and clear the text
                 self.label_1.enabled = False
                 self.label_1.text = ""
 
-            # Calculate other payment details
             interest_amount = beginning_balance * monthly_interest_rate
             principal_amount = emi - interest_amount
             ending_balance = beginning_balance - principal_amount
 
-            # Add payment details to the list
             payment_details.append({
                 'PaymentNumber': month,
                 'PaymentDate': formatted_payment_date,
@@ -71,10 +51,8 @@ class payment_details_l(payment_details_lTemplate):
                 'EndingBalance': f"₹ {ending_balance:.2f}"
             })
 
-            # Update beginning balance for the next iteration
             beginning_balance = ending_balance
 
-        # Set the Data Grid's items property to the list of payment details
         self.repeating_panel_1.items = payment_details
 
     def load_entered_values(self, entered_values):
