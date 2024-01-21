@@ -43,6 +43,14 @@ class payment_details_b(payment_details_bTemplate):
 
             # Handle the case when payment_date is None
             formatted_payment_date = f"{payment_date:%Y-%m-%d}" if payment_date else "Awaiting Update"
+            if payment_date is None:
+                # Enable label_1 and display a message
+                self.label_1.enabled = True
+                self.label_1.text = "Payment Date will be updated after loan disbursed"
+            else:
+                # Disable label_1 and clear the text
+                self.label_1.enabled = False
+                self.label_1.text = ""
 
             # Calculate other payment details
             interest_amount = beginning_balance * monthly_interest_rate
