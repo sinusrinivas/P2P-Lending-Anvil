@@ -130,7 +130,8 @@ components:
   type: Label
   layout_properties: {grid_position: 'LXWAQB,RZQDBA'}
 - name: grid_panel_3
-  properties: {background: '#a51622'}
+  properties: {spacing_above: small, spacing_below: small, background: '#0b2547',
+    foreground: '', border: '', visible: true, role: null, tooltip: ''}
   type: GridPanel
   layout_properties: {grid_position: 'UHGPTF,UAUDOX', full_width_row: true}
   components:
@@ -185,7 +186,10 @@ components:
   type: Spacer
   layout_properties: {grid_position: 'OKJICO,TFMUVT'}
 - name: borrower_button
-  properties: {text: Continue As a Borrower, role: filled-button, bold: true, background: '#a51622'}
+  properties: {role: filled-button, align: center, tooltip: '', border: '', enabled: true,
+    foreground: '', visible: true, text: Continue As a Borrower, font_size: null,
+    font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+    background: '#00008B', bold: true, underline: false, icon: ''}
   type: Button
   layout_properties: {grid_position: 'LKQMGQ,ZSLDRN'}
   event_bindings: {click: borrower_button_click}
@@ -255,8 +259,10 @@ components:
   type: Spacer
   layout_properties: {grid_position: 'DFBTLU,KCKCAL'}
 - name: lendor_button
-  properties: {text: 'Continue As  a Lendor         ', role: outlined-button, background: '#081a32',
-    foreground: white}
+  properties: {role: outlined-button, align: center, tooltip: '', border: '', enabled: true,
+    foreground: white, visible: true, text: 'Continue As  a Lendor         ', font_size: null,
+    font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+    background: '#00008B', bold: false, underline: false, icon: ''}
   type: Button
   layout_properties: {grid_position: 'GLHMGS,KKQAXZ'}
   event_bindings: {click: lendor_button_click}

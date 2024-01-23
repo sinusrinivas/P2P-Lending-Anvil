@@ -71,8 +71,10 @@ components:
   layout_properties: {grid_position: 'AOTSES,HURNTB', full_width_row: true}
   components:
   - name: label_1
-    properties: {role: title, align: center, foreground: white, text: About Us, font_size: 24,
-      font: a, background: '#db2332', bold: true, underline: true}
+    properties: {role: title, align: center, tooltip: '', border: '', foreground: white,
+      visible: true, text: About Us, font_size: 24, font: a, spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '#0b2547',
+      bold: true, underline: true, icon: ''}
     type: Label
     layout_properties: {grid_position: 'LTJKUA,UAZQOO', full_width_row: true}
   - name: label_3
@@ -116,10 +118,12 @@ components:
       type: Label
       layout_properties: {row: KGWDWG, width_xs: 7, col_xs: 5}
     - name: label_9
-      properties: {text: Low Intrest Rates, align: center, bold: true, foreground: '#ac1120',
-        visible: false}
+      properties: {role: null, align: center, tooltip: '', border: '', foreground: '#030852',
+        visible: false, text: Low Intrest Rates, font_size: null, font: '', spacing_above: small,
+        icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+        underline: false, icon: ''}
       type: Label
-      layout_properties: {row: KHJLXU, width_xs: 5, col_xs: 0}
+      layout_properties: {row: KHJLXU, width_xs: 5, col_xs: 0, width: 242.078}
     - name: label_6
       properties: {text: 'provides a seamless user experience in terms of ease of
           transaction, ability to view detailed account statements, transaction analysis,
@@ -134,10 +138,12 @@ components:
       layout_properties: {row: ADSGEK, width_xs: 6, col_xs: 6}
       event_bindings: {mouse_enter: image_2_copy_mouse_enter, mouse_leave: image_2_copy_mouse_leave}
     - name: label_10
-      properties: {text: Quick and Hassle Free, align: center, bold: true, foreground: '#ac1120',
-        visible: false}
+      properties: {role: null, align: center, tooltip: '', border: '', foreground: '#030852',
+        visible: false, text: Quick and Hassle Free, font_size: null, font: '', spacing_above: small,
+        icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+        underline: false, icon: ''}
       type: Label
-      layout_properties: {row: WZQUXY, width_xs: 6, col_xs: 6}
+      layout_properties: {row: WZQUXY, width_xs: 6, col_xs: 6, width: 296.5}
     - name: image_2_copy_copy
       properties: {source: 'https://californiahealthline.org/wp-content/uploads/sites/3/2022/11/GettyImages-1281246367_3840x2560web.jpg',
         height: 155.79998779296875}
@@ -150,10 +156,12 @@ components:
       type: Label
       layout_properties: {row: MCHLAL, width_xs: 6, col_xs: 6}
     - name: label_11
-      properties: {text: No Prepayment Penalty, align: center, bold: true, foreground: '#ac1120',
-        visible: false}
+      properties: {role: null, align: center, tooltip: '', border: '', foreground: '#030852',
+        visible: false, text: No Prepayment Penalty, font_size: null, font: '', spacing_above: small,
+        icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+        underline: false, icon: ''}
       type: Label
-      layout_properties: {row: QTVHAM, width_xs: 6, col_xs: 0}
+      layout_properties: {row: QTVHAM, width_xs: 6, col_xs: 0, width: 296.5}
     - name: label_8
       properties: {text: 'We have a large pool of investors who are looking to invest
           in individual projects approved by us. Once your loan project is listed
@@ -168,10 +176,12 @@ components:
       layout_properties: {row: HUVAMZ, width_xs: 4, col_xs: 7}
       event_bindings: {mouse_enter: image_2_copy_copy_copy_mouse_enter, mouse_leave: image_2_copy_copy_copy_mouse_leave}
     - name: label_12
-      properties: {align: center, text: Funding in Few Days, bold: true, foreground: '#ac1120',
-        visible: false}
+      properties: {role: null, align: center, tooltip: '', border: '', foreground: '#030852',
+        visible: false, text: Funding in Few Days, font_size: null, font: '', spacing_above: small,
+        icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+        underline: false, icon: ''}
       type: Label
-      layout_properties: {row: IJKTWS, width_xs: 6, col_xs: 6}
+      layout_properties: {row: IJKTWS, width_xs: 6, col_xs: 6, width: 296.5}
   - name: spacer_3
     properties: {height: 11}
     type: Spacer

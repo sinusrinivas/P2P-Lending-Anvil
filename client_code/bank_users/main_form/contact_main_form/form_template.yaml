@@ -87,8 +87,10 @@ components:
   layout_properties: {grid_position: 'XZXLZN,WXPCAM'}
   components:
   - name: label_1
-    properties: {role: title, align: center, foreground: white, text: Contact us,
-      font_size: 24, font: a, background: '#db2332', bold: true, underline: true}
+    properties: {role: title, align: center, tooltip: '', border: '', foreground: white,
+      visible: true, text: Contact us, font_size: 24, font: a, spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '#0b2547',
+      bold: true, underline: true, icon: ''}
     type: Label
     layout_properties: {grid_position: 'SJACAW,FILMEW'}
   - name: label_2
@@ -153,7 +155,8 @@ components:
   layout_properties: {grid_position: 'YELVKG,AVJXAU', full_width_row: true}
   components: []
 - name: grid_panel_2
-  properties: {border: '', background: '#a51622'}
+  properties: {spacing_above: small, spacing_below: small, background: '#0b2547',
+    foreground: '', border: '', visible: true, role: null, tooltip: ''}
   type: GridPanel
   layout_properties:
     col_widths: {}
@@ -161,16 +164,17 @@ components:
     full_width_row: true
   components:
   - name: flow_panel_3_copy_2
-    properties: {spacing_above: none, background: '#a51622', spacing_below: none,
-      spacing: medium}
+    properties: {role: null, vertical_align: full, spacing: medium, align: left, tooltip: '',
+      border: '', foreground: '', visible: true, spacing_above: none, spacing_below: none,
+      background: '#0b2547'}
     type: FlowPanel
-    layout_properties: {row: JUWDTC, width_xs: 4, col_xs: 0}
+    layout_properties: {row: JUWDTC, width_xs: 4, col_xs: 0, width: 198.328}
     components:
     - type: Label
       properties: {role: null, align: left, tooltip: '', border: '', foreground: white,
         visible: true, text: '© 2023 - 2024, GTPL - All Rights Reserved', font_size: null,
         font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
-        background: '', bold: true, underline: false, icon: ''}
+        background: '#0b2547', bold: true, underline: false, icon: ''}
       name: label_4
       layout_properties: {}
   - name: link_5
