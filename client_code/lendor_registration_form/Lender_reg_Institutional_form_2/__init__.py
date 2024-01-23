@@ -46,6 +46,8 @@ class Lender_reg_Institutional_form_2(Lender_reg_Institutional_form_2Template):
     options = app_tables.fin_lendor_manage_dropdown.search()
     options_string = [str(option['no_of_employees']) for option in options]
     self.drop_down_2.items = options_string
+
+
     # Any code you write here will run before the form opens.
 
   def button_2_click(self, **event_args):
