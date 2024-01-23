@@ -87,10 +87,12 @@ components:
   layout_properties: {grid_position: 'LWKVNS,ALLPWL', full_width_row: false}
   components:
   - name: label_1_copy
-    properties: {text: Highly Trusted Peer to Peer Lending Platform in India, bold: true,
-      font_size: 30, foreground: '#ec2030', font: a, align: left}
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '#030852',
+      visible: true, text: Highly Trusted Peer to Peer Lending Platform in India,
+      font_size: 30, font: a, spacing_above: small, icon_align: left, spacing_below: small,
+      italic: false, background: '', bold: true, underline: false, icon: ''}
     type: Label
-    layout_properties: {row: DBCFQN, width_xs: 10, col_xs: 0}
+    layout_properties: {row: DBCFQN, width_xs: 10, col_xs: 0, width: 262.5}
   - type: Label
     properties: {role: null, align: left, tooltip: '', border: '', foreground: '#0d1625',
       visible: true, text: Get online personal loans at attractive interest rates through P2P Lending,

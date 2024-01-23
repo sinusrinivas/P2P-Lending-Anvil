@@ -16,7 +16,7 @@ components:
       grid_position: RRUJCC,VUCDFT
     components:
     - type: Link
-      properties: {role: null, url: '', align: right, tooltip: '', border: '', foreground: '#0876E8',
+      properties: {role: null, url: '', align: right, tooltip: '', border: '', foreground: '#030852',
         visible: true, text: 'Back  ', font_size: null, wrap_on: mobile, font: '',
         col_spacing: medium, spacing_above: small, icon_align: left, col_widths: '{}',
         spacing_below: small, italic: false, background: '', bold: true, underline: false,
@@ -202,11 +202,11 @@ components:
         layout_properties: {x: 0, y: 251.79165649414062, width: 160}
       - type: Button
         properties: {role: outlined-button, align: center, tooltip: '', border: '',
-          enabled: true, foreground: black, visible: true, text: Edit, font_size: null,
-          font: '', spacing_above: small, icon_align: left, spacing_below: small,
-          italic: false, background: '#0876E8', bold: false, underline: false, icon: 'fa:edit'}
+          enabled: true, foreground: 'theme:On Primary', visible: true, text: Edit,
+          font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small,
+          italic: false, background: '#00008B', bold: false, underline: false, icon: 'fa:edit'}
         name: button_1
-        layout_properties: {x: 248.99999237060547, y: 1122.3733, width: 320}
+        layout_properties: {x: 248.984375, y: 1122.359375, width: 320}
         event_bindings: {click: button_1_click}
       - type: Label
         properties: {}
