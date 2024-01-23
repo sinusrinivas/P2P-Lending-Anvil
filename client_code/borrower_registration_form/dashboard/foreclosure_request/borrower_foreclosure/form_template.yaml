@@ -17,9 +17,9 @@ components:
     layout_properties: {grid_position: 'MHNJJG,ZTQGME'}
   - type: Button
     properties: {role: null, align: right, tooltip: '', border: '', enabled: true,
-      foreground: black, visible: true, text: Home, font_size: null, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '#0876E6',
-      bold: true, underline: false, icon: 'fa:home'}
+      foreground: 'theme:On Primary', visible: true, text: Home, font_size: null,
+      font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+      background: '#00008B', bold: true, underline: false, icon: 'fa:home'}
     name: button_1
     layout_properties: {grid_position: 'MHNJJG,OERREO'}
     event_bindings: {click: button_1_click}
@@ -171,39 +171,41 @@ components:
         col_xs: 0}
   - type: Button
     properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
-      foreground: black, visible: true, text: Back, font_size: null, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '#0876E6',
-      bold: true, underline: false, icon: 'fa:angle-double-left'}
+      foreground: 'theme:On Primary', visible: true, text: Back, font_size: null,
+      font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+      background: '#00008B', bold: true, underline: false, icon: 'fa:angle-double-left'}
     name: button_2
     layout_properties: {grid_position: 'CHDHVA,GQDNXD'}
     event_bindings: {click: button_2_click}
   - type: Button
     properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
-      foreground: black, visible: true, text: FORECLOSURE, font_size: null, font: '',
-      spacing_above: small, icon_align: left, spacing_below: small, italic: false,
-      background: '#0876E8', bold: true, underline: false, icon: ''}
+      foreground: 'theme:On Primary', visible: true, text: FORECLOSURE, font_size: null,
+      font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+      background: '#00008B', bold: true, underline: false, icon: ''}
     name: button_foreclose
     layout_properties: {grid_position: 'CHDHVA,SXRXZB'}
     event_bindings: {click: button_foreclose_click}
   - type: Button
     properties: {role: elevated-button, align: center, tooltip: '', border: '', enabled: true,
-      foreground: black, visible: false, text: Back, font_size: null, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '#0876E8',
-      bold: true, underline: false, icon: 'fa:angle-double-left'}
+      foreground: 'theme:On Primary', visible: false, text: Back, font_size: null,
+      font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+      background: '#00008B', bold: true, underline: false, icon: 'fa:angle-double-left'}
     name: button_4
     layout_properties: {grid_position: 'EPMBBH,NVLHOW'}
     event_bindings: {click: button_4_click}
   - name: button_5
-    properties: {text: Back, foreground: black, background: '#0876E8', icon: 'fa:angle-double-left',
-      visible: false}
+    properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
+      foreground: 'theme:On Primary', visible: false, text: Back, font_size: null,
+      font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+      background: '#00008B', bold: false, underline: false, icon: 'fa:angle-double-left'}
     type: Button
     layout_properties: {grid_position: 'EPMBBH,IOQAHG'}
     event_bindings: {click: button_5_click}
   - type: Button
     properties: {role: elevated-button, align: center, tooltip: '', border: '', enabled: true,
-      foreground: black, visible: false, text: Pay Now, font_size: null, font: '',
-      spacing_above: small, icon_align: left, spacing_below: small, italic: false,
-      background: '#0876E8', bold: true, underline: false, icon: ''}
+      foreground: 'theme:On Primary', visible: false, text: Pay Now, font_size: null,
+      font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+      background: '#00008B', bold: true, underline: false, icon: ''}
     name: button_3
     layout_properties: {grid_position: 'EPMBBH,THMKIF'}
     event_bindings: {click: button_3_click}
