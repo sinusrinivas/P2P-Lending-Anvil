@@ -743,7 +743,7 @@ db_schema:
       type: string
   fin_wallet_bank_account_table:
     title: fin_wallet_bank_account_table
-    client: none
+    client: full
     server: full
     columns:
     - name: account_id
