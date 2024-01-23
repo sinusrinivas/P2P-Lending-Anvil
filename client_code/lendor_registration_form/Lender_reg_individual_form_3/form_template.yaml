@@ -18,8 +18,8 @@ components:
       width: 268
 - type: Button
   properties: {role: filled-button, align: right, tooltip: '', border: '', enabled: true,
-    foreground: black, visible: true, text: Home, font_size: 13, font: '', spacing_above: small,
-    icon_align: left, spacing_below: small, italic: false, background: '#0876e8',
+    foreground: 'theme:On Primary', visible: true, text: Home, font_size: 13, font: '',
+    spacing_above: small, icon_align: left, spacing_below: small, italic: false, background: '#00008B',
     bold: true, underline: false, icon: 'fa:home'}
   name: button_3
   layout_properties: {grid_position: 'GCTUEC,GEZZSE'}
@@ -94,17 +94,17 @@ components:
   layout_properties: {grid_position: 'FGKBFF,QISVDQ'}
 - name: button_2
   properties: {role: elevated-button, align: right, tooltip: '', border: '', enabled: true,
-    foreground: 'theme:On Primary Container', visible: true, text: Prev, font_size: null,
-    font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
-    background: '#0876E8', bold: true, underline: false, icon: 'fa:angle-double-left'}
+    foreground: 'theme:On Primary', visible: true, text: Prev, font_size: null, font: '',
+    spacing_above: small, icon_align: left, spacing_below: small, italic: false, background: '#00008B',
+    bold: true, underline: false, icon: 'fa:angle-double-left'}
   type: Button
   layout_properties: {grid_position: 'WWICGT,DQXBRJ'}
   event_bindings: {click: button_2_click}
 - name: button_1
   properties: {role: elevated-button, align: left, tooltip: '', border: '', enabled: true,
-    foreground: 'theme:On Primary Container', visible: true, text: Next, font_size: null,
-    font: '', spacing_above: small, icon_align: right, spacing_below: small, italic: false,
-    background: '#0876E8', bold: true, underline: false, icon: 'fa:angle-double-right'}
+    foreground: 'theme:On Primary', visible: true, text: Next, font_size: null, font: '',
+    spacing_above: small, icon_align: right, spacing_below: small, italic: false,
+    background: '#00008B', bold: true, underline: false, icon: 'fa:angle-double-right'}
   type: Button
   layout_properties: {grid_position: 'WWICGT,FUXGUH'}
   event_bindings: {click: button_1_click}

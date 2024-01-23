@@ -106,9 +106,10 @@ components:
     components:
     - name: button_3
       properties: {role: outlined-button, align: center, tooltip: '', border: '',
-        enabled: true, foreground: black, visible: true, text: 'View Opening Balance       ',
-        font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small,
-        italic: false, background: '#0876e8', bold: false, underline: false, icon: ''}
+        enabled: true, foreground: 'theme:On Primary', visible: true, text: 'View
+          Opening Balance       ', font_size: null, font: '', spacing_above: small,
+        icon_align: left, spacing_below: small, italic: false, background: '#00008B',
+        bold: false, underline: false, icon: ''}
       type: Button
       layout_properties: {grid_position: 'FFRNUM,BQWTYF'}
       event_bindings: {click: button_3_click}
@@ -119,9 +120,10 @@ components:
     components:
     - name: button_4
       properties: {role: outlined-button, align: center, tooltip: '', border: '',
-        enabled: true, foreground: black, visible: true, text: 'View Available Balance        ',
-        font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small,
-        italic: false, background: '#0876e8', bold: false, underline: false, icon: ''}
+        enabled: true, foreground: 'theme:On Primary', visible: true, text: 'View
+          Available Balance        ', font_size: null, font: '', spacing_above: small,
+        icon_align: left, spacing_below: small, italic: false, background: '#00008B',
+        bold: false, underline: false, icon: ''}
       type: Button
       layout_properties: {grid_position: 'FFRNUM,YUGGPU'}
       event_bindings: {click: button_4_click}
@@ -132,9 +134,10 @@ components:
     components:
     - name: button_5
       properties: {role: outlined-button, align: center, tooltip: '', border: '',
-        enabled: true, foreground: black, visible: true, text: 'View Loan Requests             ',
-        font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small,
-        italic: false, background: '#0876e8', bold: false, underline: false, icon: ''}
+        enabled: true, foreground: 'theme:On Primary', visible: true, text: 'View
+          Loan Requests             ', font_size: null, font: '', spacing_above: small,
+        icon_align: left, spacing_below: small, italic: false, background: '#00008B',
+        bold: false, underline: false, icon: ''}
       type: Button
       layout_properties: {grid_position: 'FFRNUM,RQFISK'}
       event_bindings: {click: button_5_click}
@@ -145,9 +148,10 @@ components:
     components:
     - name: outlined_button_1
       properties: {role: outlined-button, align: center, tooltip: '', border: '',
-        enabled: true, foreground: black, visible: true, text: 'Today''s Due                                        ',
-        font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small,
-        italic: false, background: '#0876e8', bold: false, underline: false, icon: ''}
+        enabled: true, foreground: 'theme:On Primary', visible: true, text: 'Today''s
+          Due                                        ', font_size: null, font: '',
+        spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+        background: '#00008B', bold: false, underline: false, icon: ''}
       type: Button
       layout_properties: {grid_position: 'FFRNUM,QDDEAN'}
       event_bindings: {click: outlined_button_1_click}
@@ -158,9 +162,9 @@ components:
     components:
     - name: outlined_button_3
       properties: {role: outlined-button, align: center, tooltip: '', border: '',
-        enabled: true, foreground: black, visible: true, text: '  View  Loans           ',
+        enabled: true, foreground: 'theme:On Primary', visible: true, text: '  View  Loans           ',
         font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small,
-        italic: false, background: '#0876e8', bold: false, underline: false, icon: ''}
+        italic: false, background: '#00008B', bold: false, underline: false, icon: ''}
       type: Button
       layout_properties: {grid_position: 'OOVWBY,LHNMKW'}
       event_bindings: {click: outlined_button_3_click}
@@ -171,9 +175,10 @@ components:
     components:
     - name: outlined_button_2
       properties: {role: outlined-button, align: center, tooltip: '', border: '',
-        enabled: true, foreground: black, visible: true, text: 'View Lost Opportunities     ',
-        font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small,
-        italic: false, background: '#0876e8', bold: false, underline: false, icon: ''}
+        enabled: true, foreground: 'theme:On Primary', visible: true, text: 'View
+          Lost Opportunities     ', font_size: null, font: '', spacing_above: small,
+        icon_align: left, spacing_below: small, italic: false, background: '#00008B',
+        bold: false, underline: false, icon: ''}
       type: Button
       layout_properties: {grid_position: 'OOVWBY,XCINXZ'}
       event_bindings: {click: outlined_button_2_click}
@@ -184,9 +189,10 @@ components:
     components:
     - name: outlined_button_6
       properties: {role: outlined-button, align: center, tooltip: '', border: '',
-        enabled: true, foreground: black, visible: true, text: 'Request Top-up Amount     ',
-        font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small,
-        italic: false, background: '#0876e8', bold: false, underline: false, icon: ''}
+        enabled: true, foreground: 'theme:On Primary', visible: true, text: 'Request
+          Top-up Amount     ', font_size: null, font: '', spacing_above: small, icon_align: left,
+        spacing_below: small, italic: false, background: '#00008B', bold: false, underline: false,
+        icon: ''}
       type: Button
       layout_properties: {grid_position: 'OOVWBY,OVGQFM'}
       event_bindings: {click: outlined_button_6_click}
@@ -197,9 +203,10 @@ components:
     components:
     - name: outlined_button_7
       properties: {role: outlined-button, align: center, tooltip: '', border: '',
-        enabled: true, foreground: black, visible: true, text: 'View/Download Portfolio      ',
-        font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small,
-        italic: false, background: '#0876e8', bold: false, underline: false, icon: ''}
+        enabled: true, foreground: 'theme:On Primary', visible: true, text: 'View/Download
+          Portfolio      ', font_size: null, font: '', spacing_above: small, icon_align: left,
+        spacing_below: small, italic: false, background: '#00008B', bold: false, underline: false,
+        icon: ''}
       type: Button
       layout_properties: {grid_position: 'OOVWBY,MQPFTP'}
       event_bindings: {click: outlined_button_7_click}
@@ -210,9 +217,10 @@ components:
     components:
     - name: button_6
       properties: {role: outlined-button, align: center, tooltip: '', border: '',
-        enabled: true, foreground: black, visible: true, text: 'Loan Disbursement              ',
-        font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small,
-        italic: false, background: '#0876e8', bold: false, underline: false, icon: ''}
+        enabled: true, foreground: 'theme:On Primary', visible: true, text: 'Loan
+          Disbursement              ', font_size: null, font: '', spacing_above: small,
+        icon_align: left, spacing_below: small, italic: false, background: '#00008B',
+        bold: false, underline: false, icon: ''}
       type: Button
       layout_properties: {grid_position: 'WKLSTO,NFLNFH'}
       event_bindings: {click: button_6_click}
@@ -223,9 +231,10 @@ components:
     components:
     - name: outlined_button_8
       properties: {role: outlined-button, align: center, tooltip: '', border: '',
-        enabled: true, foreground: black, visible: true, text: 'View/Edit Profile                      ',
-        font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small,
-        italic: false, background: '#0876e8', bold: false, underline: false, icon: ''}
+        enabled: true, foreground: 'theme:On Primary', visible: true, text: 'View/Edit
+          Profile                      ', font_size: null, font: '', spacing_above: small,
+        icon_align: left, spacing_below: small, italic: false, background: '#00008B',
+        bold: false, underline: false, icon: ''}
       type: Button
       layout_properties: {grid_position: 'WKLSTO,NJIISR'}
       event_bindings: {click: outlined_button_8_click}
@@ -236,9 +245,10 @@ components:
     components:
     - name: outlined_button_9
       properties: {role: outlined-button, align: center, tooltip: '', border: '',
-        enabled: true, foreground: black, visible: true, text: ' View/Send Notifications     ',
-        font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small,
-        italic: false, background: '#0876e8', bold: false, underline: false, icon: ''}
+        enabled: true, foreground: 'theme:On Primary', visible: true, text: ' View/Send
+          Notifications     ', font_size: null, font: '', spacing_above: small, icon_align: left,
+        spacing_below: small, italic: false, background: '#00008B', bold: false, underline: false,
+        icon: ''}
       type: Button
       layout_properties: {grid_position: 'WKLSTO,OADNKX'}
       event_bindings: {click: outlined_button_9_click}
@@ -249,9 +259,10 @@ components:
     components:
     - name: outlined_button_10
       properties: {role: outlined-button, align: center, tooltip: '', border: '',
-        enabled: true, foreground: black, visible: true, text: 'Change Password                       ',
-        font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small,
-        italic: false, background: '#0876e8', bold: false, underline: false, icon: ''}
+        enabled: true, foreground: 'theme:On Primary', visible: true, text: 'Change
+          Password                       ', font_size: null, font: '', spacing_above: small,
+        icon_align: left, spacing_below: small, italic: false, background: '#00008B',
+        bold: false, underline: false, icon: ''}
       type: Button
       layout_properties: {grid_position: 'WKLSTO,JDEXLX'}
       event_bindings: {click: outlined_button_10_click}
@@ -262,9 +273,9 @@ components:
     components:
     - name: outlined_button_4
       properties: {role: outlined-button, align: center, tooltip: '', border: '',
-        enabled: true, foreground: black, visible: true, text: "  View Loan\n Extension\
-          \ Requests             ", font_size: null, font: '', spacing_above: small,
-        icon_align: left, spacing_below: small, italic: false, background: '#0876e8',
+        enabled: true, foreground: 'theme:On Primary', visible: true, text: "  View\
+          \ Loan\n Extension Requests             ", font_size: null, font: '', spacing_above: small,
+        icon_align: left, spacing_below: small, italic: false, background: '#00008B',
         bold: false, underline: false, icon: ''}
       type: Button
       layout_properties: {grid_position: 'SPNLTZ,GGCOHO'}
@@ -276,10 +287,10 @@ components:
     components:
     - name: outlined_button_5
       properties: {role: outlined-button, align: center, tooltip: '', border: '',
-        enabled: true, foreground: black, visible: true, text: "  View Loan \nForeclosure\
-          \ Requests              ", font_size: null, font: '', spacing_above: small,
-        icon_align: left, spacing_below: small, italic: false, background: '#0876e8',
-        bold: false, underline: false, icon: ''}
+        enabled: true, foreground: 'theme:On Primary', visible: true, text: "  View\
+          \ Loan \nForeclosure Requests              ", font_size: null, font: '',
+        spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+        background: '#00008B', bold: false, underline: false, icon: ''}
       type: Button
       layout_properties: {grid_position: 'SPNLTZ,TRGJPZ'}
       event_bindings: {click: outlined_button_5_click}
