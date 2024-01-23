@@ -34,6 +34,38 @@ db_schema:
     - name: name_group
       admin_ui: {width: 200}
       type: string
+  fin_borrower_manage_dropdown:
+    client: none
+    server: full
+    columns:
+    - name: gender
+      admin_ui: {width: 200, order: 0}
+      type: string
+    - name: business_type
+      admin_ui: {width: 200, order: 1}
+      type: string
+    - name: no_of_employees
+      admin_ui: {width: 200, order: 2}
+      type: string
+    - name: profession
+      admin_ui: {width: 200, order: 3}
+      type: string
+    - name: employee_type
+      admin_ui: {width: 200, order: 4}
+      type: string
+    - name: organization_type
+      admin_ui: {width: 200, order: 5}
+      type: string
+    - name: marital_status
+      admin_ui: {width: 200, order: 6}
+      type: string
+    - name: account_type
+      admin_ui: {width: 200, order: 7}
+      type: string
+    - name: salary_type
+      admin_ui: {width: 200, order: 8}
+      type: string
+    title: fin_borrower_manage_dropdown
   fin_wallet:
     client: full
     server: full
@@ -63,6 +95,41 @@ db_schema:
       admin_ui: {width: 200, order: 0.5}
       type: number
     title: fin_wallet
+  fin_lendor_manage_dropdown:
+    client: none
+    server: full
+    columns:
+    - name: gender
+      admin_ui: {width: 200, order: 0}
+      type: string
+    - name: business_type
+      admin_ui: {width: 200, order: 1}
+      type: string
+    - name: no_of_employees
+      admin_ui: {width: 200, order: 2}
+      type: string
+    - name: organization_type
+      admin_ui: {width: 200, order: 3}
+      type: string
+    - name: employment_type
+      admin_ui: {width: 200, order: 4}
+      type: string
+    - name: salary_type
+      admin_ui: {width: 200, order: 5}
+      type: string
+    - name: account_type
+      admin_ui: {width: 200, order: 6}
+      type: string
+    - name: qualification
+      admin_ui: {width: 200, order: 7}
+      type: string
+    - name: lending_type
+      admin_ui: {width: 200, order: 8}
+      type: string
+    - name: lending_period
+      admin_ui: {width: 200, order: 9}
+      type: string
+    title: fin_lendor_manage_dropdown
   fin_product_details:
     client: full
     server: full

@@ -33,6 +33,9 @@ class Lender_reg_form_1(Lender_reg_form_1Template):
             self.drop_down_1_copy_1.selected_value = self.gender
             self.date_picker_1.date = self.date_of_birth
 
+        options = app_tables.fin_lendor_manage_dropdown.search()
+        options_string = [str(option['gender']) for option in options]
+        self.drop_down_1_copy_1.items = options_string
     # next page form 2
     def button_2_click(self, **event_args):
         full_name = self.text_box_1.text

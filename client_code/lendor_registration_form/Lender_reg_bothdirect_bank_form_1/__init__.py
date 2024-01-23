@@ -38,6 +38,9 @@ class Lender_reg_bothdirect_bank_form_1(Lender_reg_bothdirect_bank_form_1Templat
     if self.bank_name:
            self.text_box_3.text = self.bank_name
 
+    options = app_tables.fin_lendor_manage_dropdown.search()
+    options_string =[str(option['account_type']) for option in options]
+    self.drop_down_1.items = options_string
     # Any code you write here will run before the form opens.
 
   def button_2_click(self, **event_args):
