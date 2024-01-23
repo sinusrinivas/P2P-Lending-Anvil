@@ -8,30 +8,38 @@ components:
   layout_properties: {grid_position: 'EEEWTD,ZVZADT'}
 - name: home_borrower_registration_button_copy_1
   properties: {role: tonal-button, align: right, tooltip: '', border: '', enabled: true,
-    foreground: black, visible: true, text: Home, font_size: null, font: '', spacing_above: small,
-    icon_align: left, spacing_below: small, italic: false, background: '#0876E8',
+    foreground: 'theme:On Primary', visible: true, text: Home, font_size: null, font: '',
+    spacing_above: small, icon_align: left, spacing_below: small, italic: false, background: '#00008B',
     bold: true, underline: false, icon: 'fa:home'}
   type: Button
   layout_properties: {grid_position: 'EEEWTD,FJAJCH'}
   event_bindings: {click: home_borrower_registration_button_click}
 - name: outlined_card_1
-  properties: {role: outlined-card, background: '#0876E8', col_widths: '{"SIADQG":44,"OFTKKD":3,"JWNWTM":6}'}
+  properties: {role: outlined-card, tooltip: '', border: '', foreground: '', visible: true,
+    wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{"SIADQG":44,"OFTKKD":3,"JWNWTM":6}',
+    spacing_below: small, background: darkblue}
   type: ColumnPanel
   layout_properties: {grid_position: 'WQZLDT,XJUHFW'}
   components:
   - name: label_1_copy_1_copy_1
-    properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
-      visible: true, text: Application Tracker, font_size: null, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-      underline: false, icon: ''}
+    properties: {role: null, align: center, tooltip: '', border: '', foreground: 'theme:On
+        Primary', visible: true, text: Application Tracker, font_size: null, font: '',
+      spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+      background: '', bold: true, underline: false, icon: ''}
     type: Label
     layout_properties: {grid_position: 'YVGBZD,SIADQG'}
   - type: Label
-    properties: {}
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: 'theme:On
+        Primary', visible: true, text: '', font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+      underline: false, icon: ''}
     name: label_2
     layout_properties: {grid_position: 'YVGBZD,OFTKKD'}
   - name: label_1
-    properties: {align: left}
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: 'theme:On
+        Primary', visible: true, text: '', font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+      underline: false, icon: ''}
     type: Label
     layout_properties: {grid_position: 'YVGBZD,JWNWTM'}
 - name: data_grid_1

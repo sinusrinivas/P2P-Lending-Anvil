@@ -181,9 +181,9 @@ components:
       layout_properties: {grid_position: 'KOZWEA,BGFRPT'}
     - type: Button
       properties: {role: outlined-button, align: center, tooltip: '', border: '',
-        enabled: true, foreground: black, visible: true, text: 'SUBMIT ', font_size: null,
-        font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
-        background: '#0876E8', bold: false, underline: false, icon: ''}
+        enabled: true, foreground: 'theme:On Primary', visible: true, text: 'SUBMIT ',
+        font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small,
+        italic: false, background: '#00008B', bold: false, underline: false, icon: ''}
       name: button_1
       layout_properties: {grid_position: 'OWUSCJ,FLSDIY'}
       event_bindings: {click: button_1_click}

@@ -19,7 +19,7 @@ components:
 - type: Button
   properties: {role: filled-button, align: right, tooltip: '', border: '', enabled: true,
     foreground: '', visible: true, text: Logout, font_size: null, font: '', spacing_above: small,
-    icon_align: left, spacing_below: small, italic: false, background: '#a51622',
+    icon_align: left, spacing_below: small, italic: false, background: '#00008B',
     bold: true, underline: false, icon: ''}
   name: button_1
   layout_properties: {grid_position: 'UUQTZX,SPGDVH', full_width_row: true}
@@ -83,10 +83,12 @@ components:
   layout_properties: {grid_position: 'LWKVNS,ALLPWL', full_width_row: false}
   components:
   - name: label_1_copy
-    properties: {text: Highly Trusted Peer to Peer Lending Platform in India, bold: true,
-      font_size: 30, foreground: '#ec2030', font: a, align: left}
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '#030852',
+      visible: true, text: Highly Trusted Peer to Peer Lending Platform in India,
+      font_size: 30, font: a, spacing_above: small, icon_align: left, spacing_below: small,
+      italic: false, background: '', bold: true, underline: false, icon: ''}
     type: Label
-    layout_properties: {row: DBCFQN, width_xs: 10, col_xs: 0}
+    layout_properties: {row: DBCFQN, width_xs: 10, col_xs: 0, width: 262.5}
   - type: Label
     properties: {role: null, align: left, tooltip: '', border: '', foreground: '#0d1625',
       visible: true, text: Get online personal loans at attractive interest rates through P2P Lending,
@@ -115,14 +117,18 @@ components:
   name: label_2
   layout_properties: {grid_position: 'TBBKSE,SRXRQZ', full_width_row: true}
 - name: button_3
-  properties: {text: Borrower, align: right, bold: true, foreground: White, background: '#9b1b26',
-    role: filled-button, font_size: 20}
+  properties: {role: filled-button, align: right, tooltip: '', border: '', enabled: true,
+    foreground: White, visible: true, text: Borrower, font_size: 20, font: '', spacing_above: small,
+    icon_align: left, spacing_below: small, italic: false, background: '#00008B',
+    bold: true, underline: false, icon: ''}
   type: Button
   layout_properties: {grid_position: 'HWGPHQ,JZJJYZ'}
   event_bindings: {click: button_3_click}
 - name: button_2
-  properties: {text: 'Lendor    ', bold: true, align: left, foreground: white, background: '#081a32',
-    font_size: 20}
+  properties: {role: null, align: left, tooltip: '', border: '', enabled: true, foreground: white,
+    visible: true, text: 'Lendor    ', font_size: 20, font: '', spacing_above: small,
+    icon_align: left, spacing_below: small, italic: false, background: '#00008B',
+    bold: true, underline: false, icon: ''}
   type: Button
   layout_properties: {grid_position: 'HWGPHQ,BNMTBH'}
   event_bindings: {click: button_2_click}
@@ -131,7 +137,8 @@ components:
   name: spacer_2
   layout_properties: {grid_position: 'ZMBEDP,GXCQQH'}
 - name: grid_panel_3
-  properties: {background: '#a51622', visible: false, foreground: white}
+  properties: {spacing_above: small, spacing_below: small, background: '#030852',
+    foreground: white, border: '', visible: false, role: null, tooltip: ''}
   type: GridPanel
   layout_properties: {grid_position: 'UHGPTF,UAUDOX', full_width_row: true}
   components:
@@ -255,26 +262,33 @@ components:
     layout_properties: {row: XJXWAL, width_xs: 3, col_xs: 8}
     event_bindings: {mouse_enter: image_3_copy_2_mouse_enter, mouse_leave: image_3_copy_2_mouse_leave}
   - name: label_9
-    properties: {text: 'Post registration; open an investor account by filling a simple
-        online form and uploading your Pan Card copy and address proof to adhere to
-        KYC criteria as set by the RBI. Your wallet will be credited with the notional
-        money of Rs. 50,000 after registration.', italic: true, align: center, foreground: white,
-      background: '#9b1b26', visible: false}
+    properties: {role: null, align: center, tooltip: '', border: '', foreground: white,
+      visible: false, text: 'Post registration; open an investor account by filling
+        a simple online form and uploading your Pan Card copy and address proof to
+        adhere to KYC criteria as set by the RBI. Your wallet will be credited with
+        the notional money of Rs. 50,000 after registration.', font_size: null, font: '',
+      spacing_above: small, icon_align: left, spacing_below: small, italic: true,
+      background: '#030852', bold: false, underline: false, icon: ''}
     type: Label
-    layout_properties: {row: QXVJZJ, width_xs: 3, col_xs: 1}
+    layout_properties: {row: QXVJZJ, width_xs: 3, col_xs: 1, width: 141.25}
   - name: label_10
-    properties: {background: '#9b1b26', text: Once registered you can review different P2P loans requested by borrowers. our platform has already assessed these loans using its proprietary credit score model recommends interest rates and assigns a risk category to each of the loans to make your investment decision simple.,
-      italic: true, align: center, visible: false}
+    properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
+      visible: false, text: Once registered you can review different P2P loans requested by borrowers. our platform has already assessed these loans using its proprietary credit score model recommends interest rates and assigns a risk category to each of the loans to make your investment decision simple.,
+      font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small,
+      italic: true, background: '#030852', bold: false, underline: false, icon: ''}
     type: Label
-    layout_properties: {row: QXVJZJ, width_xs: 4, col_xs: 4}
+    layout_properties: {row: QXVJZJ, width_xs: 4, col_xs: 4, width: 198.328}
   - name: label_11
-    properties: {text: 'Select and fund the loan projects as per your preference using
-        money available in your wallet. You can start investing from just Rs. 5,000,
-        however, you can fund a maximum of up to 20% of the loan amount requested
+    properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
+      visible: false, text: 'Select and fund the loan projects as per your preference
+        using money available in your wallet. You can start investing from just Rs.
+        5,000, however, you can fund a maximum of up to 20% of the loan amount requested
         by the Borrower. You will have to recharge your wallet for investments after
-        Rs. 50,000.', italic: true, align: center, background: '#9b1b26', visible: false}
+        Rs. 50,000.', font_size: null, font: '', spacing_above: small, icon_align: left,
+      spacing_below: small, italic: true, background: '#030852', bold: false, underline: false,
+      icon: ''}
     type: Label
-    layout_properties: {row: QXVJZJ, width_xs: 3, col_xs: 8}
+    layout_properties: {row: QXVJZJ, width_xs: 3, col_xs: 8, width: 141.25}
   - name: image_3_copy_3
     properties: {height: 67.20001220703125, source: _/theme/Screenshot 2023-11-26 225206.png}
     type: Image
@@ -291,30 +305,36 @@ components:
     layout_properties: {row: VUXTZB, width_xs: 3, col_xs: 8}
     event_bindings: {mouse_enter: image_3_copy_5_mouse_enter, mouse_leave: image_3_copy_5_mouse_leave}
   - name: label_12
-    properties: {text: 'Post a loan has been accepted by the Borrower, our app conducts
-        physical verification of the borrower. On successful completion of physical
-        verification, the borrower signs a legal agreement and provides undated cheques
-        equal to the EMI amount for each investor. we send the digital copy of these
-        documents to all the investors.', italic: true, align: center, background: '#9b1b26',
-      visible: false}
+    properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
+      visible: false, text: 'Post a loan has been accepted by the Borrower, our app
+        conducts physical verification of the borrower. On successful completion of
+        physical verification, the borrower signs a legal agreement and provides undated
+        cheques equal to the EMI amount for each investor. we send the digital copy
+        of these documents to all the investors.', font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: true, background: '#030852',
+      bold: false, underline: false, icon: ''}
     type: Label
-    layout_properties: {row: SVNNKV, width_xs: 3, col_xs: 1}
+    layout_properties: {row: SVNNKV, width_xs: 3, col_xs: 1, width: 141.25}
   - name: label_13
-    properties: {text: 'Once all legal formalities have been completed, investors
+    properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
+      visible: false, text: 'Once all legal formalities have been completed, investors
         need to transfer funds to the Unique Escrow account assigned to each investor
         for disbursal. You will start receiving monthly repayments in your bank account
-        from next month onwards.', italic: true, align: center, background: '#9b1b26',
-      visible: false}
+        from next month onwards.', font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: true, background: '#030852',
+      bold: false, underline: false, icon: ''}
     type: Label
-    layout_properties: {row: SVNNKV, width_xs: 4, col_xs: 4}
+    layout_properties: {row: SVNNKV, width_xs: 4, col_xs: 4, width: 198.328}
   - name: label_14
-    properties: {text: 'Once all legal formalities have been completed, investors
+    properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
+      visible: false, text: 'Once all legal formalities have been completed, investors
         need to transfer funds to the Unique Escrow account assigned to each investor
         for disbursal. You will start receiving monthly repayments in your bank account
-        from next month onwards.', italic: true, align: center, background: '#9b1b26',
-      visible: false}
+        from next month onwards.', font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: true, background: '#030852',
+      bold: false, underline: false, icon: ''}
     type: Label
-    layout_properties: {row: SVNNKV, width_xs: 3, col_xs: 8}
+    layout_properties: {row: SVNNKV, width_xs: 3, col_xs: 8, width: 141.25}
   - name: lendor_button
     properties: {text: 'Continue As  a Lendor         ', role: outlined-button, background: white,
       foreground: Black, bold: true, font_size: 16}
