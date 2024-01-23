@@ -12,10 +12,14 @@ import re
 class star_1_borrower_registration_form_begin_3c(star_1_borrower_registration_form_begin_3cTemplate):
   def __init__(self,user_id, **properties):
     self.userId = user_id
-    user_data=app_tables.fin_user_profile.get(customer_id=user_id)
+    user_data=app_tables.user_profile.get(customer_id=user_id)
     if user_data:
      self.Profesion_borrower_registration_form_drop_down.selected_value=user_data['profficen']
      user_data.update()
+
+    options = app_tables.fin_borrower_manage_dropdown.search()
+    option_strings = [str(option['profession']) for option in options]
+    self.Profesion_borrower_registration_form_drop_down.items = option_strings
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
 

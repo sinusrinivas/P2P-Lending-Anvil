@@ -12,16 +12,21 @@ import re
 class star_1_borrower_registration_form_begin_8(star_1_borrower_registration_form_begin_8Template):
   def __init__(self,user_id, **properties):
     self.userId = user_id
-    user_data=app_tables.fin_user_profile.get(customer_id=user_id)
+    user_data=app_tables.user_profile.get(customer_id=user_id)
     if user_data:
       self.text_box_1.text=user_data['account_name']
-      self.drop_down_1.selected_value=user_data['account_type']
+      #self.drop_down_1.selected_value=user_data['account_type']
       self.text_box_3.text=user_data['account_number']
       self.text_box_4.text=user_data['branch_name']
       user_data.update()
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
+    options = app_tables.fin_borrower_manage_dropdown.search()
+    options_string = [str(option['account_type']) for option in options]
+    self.drop_down_1.items = options_string
 
+    if 'account_type' in user_data:
+        self.drop_down_1.selected_value = user_data['account_type']
     # Any code you write here will run before the form opens.
 
   def button_2_click(self, **event_args):

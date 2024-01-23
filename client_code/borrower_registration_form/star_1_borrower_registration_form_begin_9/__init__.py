@@ -11,16 +11,21 @@ from anvil.tables import app_tables
 class star_1_borrower_registration_form_begin_9(star_1_borrower_registration_form_begin_9Template):
   def __init__(self,user_id, **properties):
     self.userId = user_id
-    user_data=app_tables.fin_user_profile.get(customer_id=user_id)
+    user_data=app_tables.user_profile.get(customer_id=user_id)
     if user_data:
       self.text_box_1.text=user_data['ifsc_code']
-      self.drop_down_1.selected_value=user_data['salary_type']
+      #self.drop_down_1.selected_value=user_data['salary_type']
       self.text_box_2.text=user_data['select_bank']
       # Set Form properties and Data Bindings.
       self.init_components(**properties)
       self.accepted_terms = False
       self.button_2.enabled = False
+      options = app_tables.fin_borrower_manage_dropdown.search()
+      options_string = [str(option['salary_type']) for option in options]
+      self.drop_down_1.items = options_string
 
+      if 'salary_type' in user_data:
+        self.drop_down_1.selected_value = user_data['salary_type']
     # Any code you write here will run before the form opens.
 
   def button_2_click(self, **event_args):
@@ -33,7 +38,7 @@ class star_1_borrower_registration_form_begin_9(star_1_borrower_registration_for
       Notification("please fill all required fields").show()
     else:
       anvil.server.call('add_borrower_step9', ifsc,salary_type,select_bank, user_id)
-      open_form('borrower_registration_form.dashboard')
+      open_form('bank_users.borrower_dashboard')
 
   def button_1_click(self, **event_args):
     open_form('borrower_registration_form.star_1_borrower_registration_form_begin_8',user_id=self.userId)
