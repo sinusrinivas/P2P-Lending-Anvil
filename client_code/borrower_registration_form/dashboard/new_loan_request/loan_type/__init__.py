@@ -16,7 +16,7 @@ class loan_type(loan_typeTemplate):
         self.entered_tenure = None
         self.entered_payment_type = None
 
-        # Load previously entered values when form is initialized
+        # Load previously entered values when the form is initialized
         self.load_entered_values(entered_values)
 
         user_request = app_tables.fin_product_details.get(product_categories=self.prodct_cate)
@@ -89,7 +89,7 @@ class loan_type(loan_typeTemplate):
                       self.proctct_g, self.prodct_cate, str(loan_amount), tenure,
                       self.user_id, self.roi, self.processing_fee,
                       self.membership_type, self.product_id,
-                      self.Total_Repayment_Amount,self.credit_limt,
+                      self.Total_Repayment_Amount, self.credit_limt,
                       entered_values={
                           'loan_amount': self.entered_loan_amount,
                           'tenure': self.entered_tenure,
@@ -101,8 +101,6 @@ class loan_type(loan_typeTemplate):
             product_group=self.proctct_g,
             product_categories=self.prodct_cate
         )
-
-
 
     def get_min_max_amount(self):
         product_data = self.fetch_product_data()
@@ -198,34 +196,38 @@ class loan_type(loan_typeTemplate):
         else:
             self.label_24.text = ""
 
-        # Proceed to the next form only if all validations pass
-        if not any([self.label_22.text, self.label_23.text, self.label_24.text]):
-            self.grid_panel_2.visible = True
-            self.button_2.visible = True
-            self.button_3.visible = True
-            self.button_5.visible = True
-            self.button_4.visible = False
+            # Proceed to the next form only if all validations pass
+            if not any([self.label_22.text, self.label_23.text, self.label_24.text]):
+                self.grid_panel_2.visible = True
+                self.button_2.visible = True
+                self.button_3.visible = True
+                self.button_5.visible = True
+                self.button_4.visible = False
 
-            self.label_28.text = f"₹ {loan_amount}"
-            p = float(loan_amount)
-            t = int(tenure)
-            r = float(int(self.roi)/100)
-            interest_amount = p * r
-            self.label_30.text = f"₹ {int(interest_amount)}"
-            processing_fee_amount = float((self.processing_fee/100) * p)
-            self.label_32.text = f"₹ {int(processing_fee_amount)}"
-            self.Total_Repayment_Amount = float(p + interest_amount + processing_fee_amount)
-            Monthly_EMI = int(self.Total_Repayment_Amount / float(t))
-            self.label_36.text = f"₹ {int(Monthly_EMI)}"
-            self.label_34.text = f"₹ {int(self.Total_Repayment_Amount)}"
+                self.label_28.text = f"₹ {loan_amount}"
+                p = loan_amount
+                t = tenure
+                monthly_interest_rate = float(int(self.roi) / 100) / 12
+                emi_denominator = ((1 + monthly_interest_rate) ** t) - 1
+                emi_numerator = p * monthly_interest_rate * ((1 + monthly_interest_rate) ** t)
+                Monthly_EMI = emi_numerator / emi_denominator
+                self.label_36.text = f"₹ {Monthly_EMI:.2f}"
+                interest_amount = Monthly_EMI * t - p
+                self.label_30.text = f"₹ {interest_amount:.2f}"
+                processing_fee_amount = (self.processing_fee / 100) * p
+                self.label_32.text = f"₹ {processing_fee_amount:.2f}"
+                self.Total_Repayment_Amount = p + interest_amount + processing_fee_amount
+                self.label_34.text = f"₹ {self.Total_Repayment_Amount:.2f}"
 
-            # Disable editing after clicking button_4
-            self.loan_amount_tb.enabled = False
-            self.text_box_1.enabled = False
-            self.radio_button_1.enabled = False
-            self.radio_button_2.enabled = False
-            self.radio_button_3.enabled = False
-            self.radio_button_4.enabled = False
+                # Disable editing after clicking button_4
+                self.loan_amount_tb.enabled = False
+                self.text_box_1.enabled = False
+                self.radio_button_1.enabled = False
+                self.radio_button_2.enabled = False
+                self.radio_button_3.enabled = False
+                self.radio_button_4.enabled = False
+
+
 
     def button_5_click(self, **event_args):
         self.loan_amount_tb.enabled = True
@@ -254,8 +256,7 @@ class loan_type(loan_typeTemplate):
             return None
 
 # Instantiate the form
-loan_type_1 = loan_type('product_group_value', 'product_cat_value','self.credit_limt')
+loan_type_1 = loan_type('product_group_value', 'product_cat_value', 'self.credit_limt')
 
 # Open the form
 open_form(loan_type_1)
-
