@@ -14,7 +14,7 @@ services:
 - source: /runtime/services/anvil/email.yml
   client_config: {}
   server_config: {}
-startup: {type: form, module: bank_users.main_form}
+startup: {type: form, module: admin.dashboard}
 package_name: bank_client
 allow_embedding: false
 name: P2P Lending App
@@ -23,6 +23,11 @@ runtime_options: {version: 2, client_version: '3', server_version: python3-sandb
 metadata: {title: 'P2P Bank ', description: this app provide services to person who are ready to invest and ready to give loan}
 startup_form: null
 db_schema:
+  wallet_notification:
+    client: full
+    server: full
+    columns: []
+    title: fin_wallet_notification
   fin_product_categories:
     title: fin_product_categories
     client: full
@@ -587,11 +592,6 @@ db_schema:
       admin_ui: {width: 200}
       type: number
     title: fin_user_profile
-  fin_wallet_notification:
-    client: full
-    server: full
-    columns: []
-    title: fin_wallet_notification
   fin_wallet_transactions:
     title: fin_wallet_transactions
     client: full
@@ -741,9 +741,17 @@ db_schema:
     - name: wallet_id
       admin_ui: {order: 12, width: 200}
       type: string
-  fin_wallet_bank_account_table:
-    title: fin_wallet_bank_account_table
+  fin_product_group:
     client: full
+    server: full
+    columns:
+    - name: name
+      admin_ui: {width: 200, order: 0}
+      type: string
+    title: fin_product_group
+  wallet_bank_account_table:
+    title: fin_wallet_bank_account_table
+    client: none
     server: full
     columns:
     - name: account_id
@@ -773,14 +781,6 @@ db_schema:
     - name: account_type
       admin_ui: {width: 200}
       type: string
-  fin_product_group:
-    client: full
-    server: full
-    columns:
-    - name: name
-      admin_ui: {width: 200, order: 0}
-      type: string
-    title: fin_product_group
   fin_loan_details:
     client: full
     server: full

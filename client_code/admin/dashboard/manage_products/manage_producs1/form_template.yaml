@@ -382,7 +382,7 @@ components:
           layout_properties: {x: 5.0416717529296875, y: 1021.388916015625, width: 160}
         - type: Label
           properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-            visible: true, text: 'Min Months For Foreclosure
+            visible: false, text: 'Min Months For Foreclosure
 
               (min months need to be paid before applying for foreclosure)', font_size: null,
             font: '', spacing_above: small, icon_align: left, spacing_below: small,
@@ -489,7 +489,7 @@ components:
         - type: TextBox
           properties: {role: outlined, align: left, hide_text: false, tooltip: '',
             placeholder: Enter min months, border: '', enabled: true, foreground: '',
-            visible: true, text: '', font_size: null, font: '', spacing_above: small,
+            visible: false, text: '', font_size: null, font: '', spacing_above: small,
             type: text, spacing_below: small, italic: false, background: '', bold: false,
             underline: false}
           name: min_months
