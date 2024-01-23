@@ -27,9 +27,9 @@ components:
   type: Spacer
   layout_properties: {grid_position: 'LJUJZR,KQTFQR'}
 - name: column_panel_1
-  properties: {col_widths: '{"XJQPAP":10,"NFQIDA":35,"CKUOKU":15,"GJKCBP":10,"JWUMWE":35,"OYFIZP":15,"QDKQHW":10,"PVKIYA":50,"DKOIHS":10,"XICZMQ":50,"RBFTQT":10,"GXXOOG":35,"PIRPFM":15,"DLMDAZ":10,"WFZIGE":50,"OLUYAB":10,"TPGRUK":35,"ZWDCOK":15,"ZYDBFG":10,"PEXUWW":35,"OXQFEB":15,"TUQUYP":10,"TYGCHD":50,"KPFLCP":10,"SNYZFA":35,"AKLMPL":15,"TJZXOS":10,"XBVOXM":50,"EMNGBX":10,"OPCPLH":50,"ASQNNS":10,"JGXJKI":35,"MRNHOE":15,"CRCJKJ":10,"VWODXB":50,"UNBRWV":10,"TPYTDJ":35,"MNQJUW":15,"FOKZEC":10,"CRJHAR":50,"BQBXVK":10,"CIUJSO":35,"XPJCEB":15,"ECVLWK":10,"GZHSOV":50}'}
+  properties: {col_widths: '{"XJQPAP":10,"NFQIDA":35,"CKUOKU":15,"OYFIZP":14,"RBFTQT":10,"GXXOOG":35,"PIRPFM":15,"DLMDAZ":10,"OLUYAB":10,"TPGRUK":35,"ZWDCOK":15,"ZYDBFG":10,"PEXUWW":35,"OXQFEB":15,"TUQUYP":10,"KPFLCP":10,"SNYZFA":35,"AKLMPL":15,"TJZXOS":10,"EMNGBX":10,"ASQNNS":10,"JGXJKI":35,"MRNHOE":15,"CRCJKJ":10,"UNBRWV":10,"TPYTDJ":35,"MNQJUW":15,"FOKZEC":10,"BQBXVK":10,"CIUJSO":35,"XPJCEB":15,"ECVLWK":10,"ZDVEAZ":37,"EVTQJC":10,"ICUCLA":56,"MASWBL":49,"GSIMFN":32,"IMIAGK":15,"JYTEHE":15}'}
   type: ColumnPanel
-  layout_properties: {grid_position: 'CMYOZM,LVAWMN'}
+  layout_properties: {grid_position: 'MUVPXL,TQYSPE'}
   components:
   - name: label_1
     properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
@@ -57,11 +57,11 @@ components:
   - name: spacer_2
     properties: {height: 139}
     type: Spacer
-    layout_properties: {grid_position: 'GINDDT,DKOIHS'}
-  - name: repeating_panel_1
-    properties: {item_template: admin.dashboard.manage_dropdown.add_borrower_dropdown_details.ItemTemplate6}
-    type: RepeatingPanel
-    layout_properties: {grid_position: 'GINDDT,XICZMQ'}
+    layout_properties: {grid_position: 'GINDDT,JYTEHE'}
+  - type: RepeatingPanel
+    properties: {item_template: admin.dashboard.manage_dropdown.add_borrower_dropdown_details.ItemTemplate15}
+    name: repeating_panel_1
+    layout_properties: {grid_position: 'GINDDT,ICUCLA'}
   - name: label_2
     properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
       visible: true, text: Merrital status, font_size: null, font: '', spacing_above: small,
@@ -70,11 +70,11 @@ components:
     type: Label
     layout_properties:
       col_widths: {}
-      grid_position: OLKTXM,GJKCBP
+      grid_position: OLKTXM,EVTQJC
   - name: text_box_2
     properties: {}
     type: TextBox
-    layout_properties: {grid_position: 'OLKTXM,JWUMWE'}
+    layout_properties: {grid_position: 'OLKTXM,ZDVEAZ'}
     event_bindings: {pressed_enter: text_box_2_pressed_enter}
   - name: marital_button
     properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
@@ -89,11 +89,11 @@ components:
   - name: spacer_3
     properties: {height: 138.42856979370117}
     type: Spacer
-    layout_properties: {grid_position: 'UVJCWK,QDKQHW'}
-  - name: repeating_panel_2
-    properties: {item_template: admin.dashboard.manage_dropdown.add_borrower_dropdown_details.ItemTemplate8}
-    type: RepeatingPanel
-    layout_properties: {grid_position: 'UVJCWK,PVKIYA'}
+    layout_properties: {grid_position: 'UVJCWK,IMIAGK'}
+  - type: RepeatingPanel
+    properties: {item_template: admin.dashboard.manage_dropdown.add_borrower_dropdown_details.ItemTemplate16}
+    name: repeating_panel_2
+    layout_properties: {grid_position: 'UVJCWK,MASWBL'}
   - name: label_3
     properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
       visible: true, text: Business Type, font_size: null, font: '', spacing_above: small,
@@ -119,10 +119,10 @@ components:
     properties: {height: 147.42855834960938}
     type: Spacer
     layout_properties: {grid_position: 'EYLKOQ,DLMDAZ'}
-  - name: repeating_panel_3
-    properties: {item_template: admin.dashboard.manage_dropdown.add_borrower_dropdown_details.ItemTemplate9}
-    type: RepeatingPanel
-    layout_properties: {grid_position: 'EYLKOQ,WFZIGE'}
+  - type: RepeatingPanel
+    properties: {item_template: admin.dashboard.manage_dropdown.add_borrower_dropdown_details.ItemTemplate17}
+    name: repeating_panel_3
+    layout_properties: {grid_position: 'EYLKOQ,GSIMFN'}
   - name: label_4
     properties: {text: No of Employees, align: center}
     type: Label
@@ -146,10 +146,10 @@ components:
     properties: {height: 141}
     type: Spacer
     layout_properties: {grid_position: 'DKRLSE,TUQUYP'}
-  - name: repeating_panel_4
-    properties: {item_template: admin.dashboard.manage_dropdown.add_borrower_dropdown_details.ItemTemplate10}
-    type: RepeatingPanel
-    layout_properties: {grid_position: 'DKRLSE,TYGCHD'}
+  - type: RepeatingPanel
+    properties: {item_template: admin.dashboard.manage_dropdown.add_borrower_dropdown_details.ItemTemplate18}
+    name: repeating_panel_4
+    layout_properties: {grid_position: 'DKRLSE,FMATDW'}
   - name: label_5
     properties: {text: profession, align: center}
     type: Label
@@ -171,10 +171,10 @@ components:
     properties: {height: 122}
     type: Spacer
     layout_properties: {grid_position: 'RHLBYI,TJZXOS'}
-  - name: repeating_panel_5
-    properties: {item_template: admin.dashboard.manage_dropdown.add_borrower_dropdown_details.ItemTemplate11}
-    type: RepeatingPanel
-    layout_properties: {grid_position: 'RHLBYI,XBVOXM'}
+  - type: RepeatingPanel
+    properties: {item_template: admin.dashboard.manage_dropdown.add_borrower_dropdown_details.ItemTemplate19}
+    name: repeating_panel_5
+    layout_properties: {grid_position: 'RHLBYI,VNUBTA'}
   - name: label_6
     properties: {text: Employee Type, align: center}
     type: Label
@@ -196,10 +196,10 @@ components:
     properties: {height: 130}
     type: Spacer
     layout_properties: {grid_position: 'MLDPNQ,EMNGBX'}
-  - name: repeating_panel_6
-    properties: {item_template: admin.dashboard.manage_dropdown.add_borrower_dropdown_details.ItemTemplate12}
-    type: RepeatingPanel
-    layout_properties: {grid_position: 'MLDPNQ,OPCPLH'}
+  - type: RepeatingPanel
+    properties: {item_template: admin.dashboard.manage_dropdown.add_borrower_dropdown_details.ItemTemplate20}
+    name: repeating_panel_6
+    layout_properties: {grid_position: 'MLDPNQ,VFZWJD'}
   - name: label_7
     properties: {text: Organization Type, align: center}
     type: Label
@@ -221,10 +221,10 @@ components:
     properties: {height: 133.5714111328125}
     type: Spacer
     layout_properties: {grid_position: 'BYZRVY,CRCJKJ'}
-  - name: repeating_panel_7
-    properties: {item_template: admin.dashboard.manage_dropdown.add_borrower_dropdown_details.ItemTemplate15}
-    type: RepeatingPanel
-    layout_properties: {grid_position: 'BYZRVY,VWODXB'}
+  - type: RepeatingPanel
+    properties: {item_template: admin.dashboard.manage_dropdown.add_borrower_dropdown_details.ItemTemplate21}
+    name: repeating_panel_7
+    layout_properties: {grid_position: 'BYZRVY,CAFVFK'}
   - name: label_8
     properties: {text: Account Type, align: center}
     type: Label
@@ -246,10 +246,10 @@ components:
     properties: {height: 137}
     type: Spacer
     layout_properties: {grid_position: 'OPFEAH,FOKZEC'}
-  - name: repeating_panel_8
-    properties: {item_template: admin.dashboard.manage_dropdown.add_borrower_dropdown_details.ItemTemplate16}
-    type: RepeatingPanel
-    layout_properties: {grid_position: 'OPFEAH,CRJHAR'}
+  - type: RepeatingPanel
+    properties: {item_template: admin.dashboard.manage_dropdown.add_borrower_dropdown_details.ItemTemplate22}
+    name: repeating_panel_8
+    layout_properties: {grid_position: 'OPFEAH,DNSEAP'}
   - name: label_9
     properties: {text: Salary Type, align: center}
     type: Label
@@ -271,8 +271,8 @@ components:
     properties: {height: 139.5714111328125}
     type: Spacer
     layout_properties: {grid_position: 'VNWQOL,ECVLWK'}
-  - name: repeating_panel_9
-    properties: {item_template: admin.dashboard.manage_dropdown.add_borrower_dropdown_details.ItemTemplate17}
-    type: RepeatingPanel
-    layout_properties: {grid_position: 'VNWQOL,GZHSOV'}
+  - type: RepeatingPanel
+    properties: {item_template: admin.dashboard.manage_dropdown.add_borrower_dropdown_details.ItemTemplate23}
+    name: repeating_panel_9
+    layout_properties: {grid_position: 'VNWQOL,WUUVIN'}
 is_package: true

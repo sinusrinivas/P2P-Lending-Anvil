@@ -27,7 +27,7 @@ components:
   type: Spacer
   layout_properties: {grid_position: 'TQFZDX,SLABEX'}
 - name: column_panel_1
-  properties: {col_widths: '{"XJQPAP":10,"NFQIDA":35,"CKUOKU":15,"GJKCBP":10,"JWUMWE":35,"OYFIZP":15,"QDKQHW":10,"PVKIYA":50,"DKOIHS":10,"XICZMQ":50,"RBFTQT":10,"GXXOOG":35,"PIRPFM":15,"DLMDAZ":10,"WFZIGE":50,"OLUYAB":10,"TPGRUK":35,"ZWDCOK":15,"ZYDBFG":10,"PEXUWW":35,"OXQFEB":15,"TUQUYP":10,"TYGCHD":50,"KPFLCP":10,"SNYZFA":35,"AKLMPL":15,"TJZXOS":10,"XBVOXM":50,"EMNGBX":10,"OPCPLH":50,"ASQNNS":10,"JGXJKI":35,"MRNHOE":15,"CRCJKJ":10,"VWODXB":50,"UNBRWV":10,"TPYTDJ":35,"MNQJUW":15,"FOKZEC":10,"CRJHAR":50,"BQBXVK":10,"CIUJSO":35,"XPJCEB":15,"ECVLWK":10,"GZHSOV":50,"JFTJEZ":10,"BWEPCL":35,"OLMVMO":15,"MOHWFJ":10,"QOBDTQ":50}'}
+  properties: {col_widths: '{"XJQPAP":10,"NFQIDA":35,"CKUOKU":15,"GJKCBP":10,"JWUMWE":35,"OYFIZP":15,"QDKQHW":10,"DKOIHS":10,"RBFTQT":10,"GXXOOG":35,"PIRPFM":15,"DLMDAZ":10,"OLUYAB":10,"TPGRUK":35,"ZWDCOK":15,"ZYDBFG":10,"PEXUWW":35,"OXQFEB":15,"TUQUYP":10,"KPFLCP":10,"SNYZFA":35,"AKLMPL":15,"TJZXOS":10,"EMNGBX":10,"ASQNNS":10,"JGXJKI":35,"MRNHOE":15,"CRCJKJ":10,"UNBRWV":10,"TPYTDJ":35,"MNQJUW":15,"FOKZEC":10,"BQBXVK":10,"CIUJSO":35,"XPJCEB":15,"ECVLWK":10,"JFTJEZ":10,"BWEPCL":35,"OLMVMO":15,"MOHWFJ":10}'}
   type: ColumnPanel
   layout_properties: {grid_position: 'UMWDPQ,QEALPE'}
   components:
@@ -58,10 +58,10 @@ components:
     properties: {height: 139}
     type: Spacer
     layout_properties: {grid_position: 'GINDDT,DKOIHS'}
-  - name: repeating_panel_1
-    properties: {item_template: admin.dashboard.manage_dropdown.add_borrower_dropdown_details.ItemTemplate6}
-    type: RepeatingPanel
-    layout_properties: {grid_position: 'GINDDT,XICZMQ'}
+  - type: RepeatingPanel
+    properties: {item_template: admin.dashboard.manage_dropdown.add_lender_dropdown_details.ItemTemplate3}
+    name: repeating_panel_1
+    layout_properties: {grid_position: 'GINDDT,RHMNQA'}
   - name: label_2
     properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
       visible: true, text: Business Type, font_size: null, font: '', spacing_above: small,
@@ -90,10 +90,10 @@ components:
     properties: {height: 138.42856979370117}
     type: Spacer
     layout_properties: {grid_position: 'UVJCWK,QDKQHW'}
-  - name: repeating_panel_2
-    properties: {item_template: admin.dashboard.manage_dropdown.add_borrower_dropdown_details.ItemTemplate8}
-    type: RepeatingPanel
-    layout_properties: {grid_position: 'UVJCWK,PVKIYA'}
+  - type: RepeatingPanel
+    properties: {item_template: admin.dashboard.manage_dropdown.add_lender_dropdown_details.ItemTemplate4}
+    name: repeating_panel_2
+    layout_properties: {grid_position: 'UVJCWK,RNOJYF'}
   - name: label_3
     properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
       visible: true, text: No of Employees, font_size: null, font: '', spacing_above: small,
@@ -118,10 +118,10 @@ components:
     properties: {height: 147.42855834960938}
     type: Spacer
     layout_properties: {grid_position: 'EYLKOQ,DLMDAZ'}
-  - name: repeating_panel_3
-    properties: {item_template: admin.dashboard.manage_dropdown.add_borrower_dropdown_details.ItemTemplate9}
-    type: RepeatingPanel
-    layout_properties: {grid_position: 'EYLKOQ,WFZIGE'}
+  - type: RepeatingPanel
+    properties: {item_template: admin.dashboard.manage_dropdown.add_lender_dropdown_details.ItemTemplate5}
+    name: repeating_panel_3
+    layout_properties: {grid_position: 'EYLKOQ,NADOCS'}
   - name: label_4
     properties: {text: Organization  Type}
     type: Label
@@ -144,10 +144,10 @@ components:
     properties: {height: 141}
     type: Spacer
     layout_properties: {grid_position: 'DKRLSE,TUQUYP'}
-  - name: repeating_panel_4
-    properties: {item_template: admin.dashboard.manage_dropdown.add_borrower_dropdown_details.ItemTemplate10}
-    type: RepeatingPanel
-    layout_properties: {grid_position: 'DKRLSE,TYGCHD'}
+  - type: RepeatingPanel
+    properties: {item_template: admin.dashboard.manage_dropdown.add_lender_dropdown_details.ItemTemplate6}
+    name: repeating_panel_4
+    layout_properties: {grid_position: 'DKRLSE,RQTCAI'}
   - name: label_5
     properties: {text: Employment Type}
     type: Label
@@ -169,10 +169,10 @@ components:
     properties: {height: 122}
     type: Spacer
     layout_properties: {grid_position: 'RHLBYI,TJZXOS'}
-  - name: repeating_panel_5
-    properties: {item_template: admin.dashboard.manage_dropdown.add_borrower_dropdown_details.ItemTemplate11}
-    type: RepeatingPanel
-    layout_properties: {grid_position: 'RHLBYI,XBVOXM'}
+  - type: RepeatingPanel
+    properties: {item_template: admin.dashboard.manage_dropdown.add_lender_dropdown_details.ItemTemplate7}
+    name: repeating_panel_5
+    layout_properties: {grid_position: 'RHLBYI,NIVLCH'}
   - name: label_6
     properties: {text: Salary Type}
     type: Label
@@ -194,10 +194,10 @@ components:
     properties: {height: 130}
     type: Spacer
     layout_properties: {grid_position: 'MLDPNQ,EMNGBX'}
-  - name: repeating_panel_6
-    properties: {item_template: admin.dashboard.manage_dropdown.add_borrower_dropdown_details.ItemTemplate12}
-    type: RepeatingPanel
-    layout_properties: {grid_position: 'MLDPNQ,OPCPLH'}
+  - type: RepeatingPanel
+    properties: {item_template: admin.dashboard.manage_dropdown.add_lender_dropdown_details.ItemTemplate10}
+    name: repeating_panel_6
+    layout_properties: {grid_position: 'MLDPNQ,YWURCH'}
   - name: label_7
     properties: {text: Account Type}
     type: Label
@@ -219,10 +219,10 @@ components:
     properties: {height: 133.5714111328125}
     type: Spacer
     layout_properties: {grid_position: 'BYZRVY,CRCJKJ'}
-  - name: repeating_panel_7
-    properties: {item_template: admin.dashboard.manage_dropdown.add_borrower_dropdown_details.ItemTemplate15}
-    type: RepeatingPanel
-    layout_properties: {grid_position: 'BYZRVY,VWODXB'}
+  - type: RepeatingPanel
+    properties: {item_template: admin.dashboard.manage_dropdown.add_lender_dropdown_details.ItemTemplate11}
+    name: repeating_panel_7
+    layout_properties: {grid_position: 'BYZRVY,CLVFCL'}
   - name: label_8
     properties: {text: Qualificatons}
     type: Label
@@ -244,10 +244,10 @@ components:
     properties: {height: 137}
     type: Spacer
     layout_properties: {grid_position: 'OPFEAH,FOKZEC'}
-  - name: repeating_panel_8
-    properties: {item_template: admin.dashboard.manage_dropdown.add_borrower_dropdown_details.ItemTemplate16}
-    type: RepeatingPanel
-    layout_properties: {grid_position: 'OPFEAH,CRJHAR'}
+  - type: RepeatingPanel
+    properties: {item_template: admin.dashboard.manage_dropdown.add_lender_dropdown_details.ItemTemplate12}
+    name: repeating_panel_8
+    layout_properties: {grid_position: 'OPFEAH,OVFMXY'}
   - name: label_9
     properties: {text: Lending Type}
     type: Label
@@ -269,10 +269,10 @@ components:
     properties: {height: 139.5714111328125}
     type: Spacer
     layout_properties: {grid_position: 'VNWQOL,ECVLWK'}
-  - name: repeating_panel_9
-    properties: {item_template: admin.dashboard.manage_dropdown.add_borrower_dropdown_details.ItemTemplate17}
-    type: RepeatingPanel
-    layout_properties: {grid_position: 'VNWQOL,GZHSOV ICBNWG,AZQECA'}
+  - type: RepeatingPanel
+    properties: {item_template: admin.dashboard.manage_dropdown.add_lender_dropdown_details.ItemTemplate13}
+    name: repeating_panel_9
+    layout_properties: {grid_position: 'VNWQOL,QQJLRY'}
   - name: label_10
     properties: {text: Lending Period}
     type: Label
@@ -292,8 +292,8 @@ components:
     properties: {height: 147.78570556640625}
     type: Spacer
     layout_properties: {grid_position: 'ARFKWE,MOHWFJ'}
-  - name: repeating_panel_10
-    properties: {item_template: admin.dashboard.manage_dropdown.add_lender_dropdown_details.ItemTemplate3}
-    type: RepeatingPanel
-    layout_properties: {grid_position: 'ARFKWE,QOBDTQ'}
+  - type: RepeatingPanel
+    properties: {item_template: admin.dashboard.manage_dropdown.add_lender_dropdown_details.ItemTemplate14}
+    name: repeating_panel_10
+    layout_properties: {grid_position: 'ARFKWE,GHAIQA'}
 is_package: true
