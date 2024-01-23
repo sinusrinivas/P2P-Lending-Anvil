@@ -104,6 +104,7 @@ class check(checkTemplate):
         open_form('borrower_registration_form.dashboard.new_loan_request.loan_type',
                   self.product_group,
                   self.product_cat,
+                  self.credit_limt,
                   entered_values={
                       'loan_amount': self.entered_loan_amount,
                       'tenure': self.entered_tenure,
