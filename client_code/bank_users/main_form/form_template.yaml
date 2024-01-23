@@ -75,12 +75,12 @@ components:
   layout_properties: {grid_position: 'DEOCAR,VGRCXP'}
   components:
   - name: label_4_copy_1
-    properties: {role: null, align: left, tooltip: '', border: '', foreground: '#ec2030',
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '#030852',
       visible: true, text: RBI Registered NBFC-P2P, font_size: 30, font: '', spacing_above: small,
       icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
       underline: false, icon: ''}
     type: Label
-    layout_properties: {row: OOXUPD, width_xs: 12, col_xs: 0}
+    layout_properties: {row: OOXUPD, width_xs: 12, col_xs: 0, width: 313.5}
   - name: label_5_copy_1
     properties: {role: headline, align: left, tooltip: '', border: '', foreground: '',
       visible: true, text: Kotak Mahindra Bank is a Reserve Bank of India (RBI) registered Non-Banking Financial Company - Peer to Peer LendingPlatform (NBFC-P2P).,
@@ -189,9 +189,11 @@ components:
   layout_properties: {grid_position: 'UUAAMD,PNSHYI'}
   components:
   - name: label_2
-    properties: {align: center, text: 'What is Peer to Peer Lending?
+    properties: {role: null, align: center, tooltip: '', border: '', foreground: '#030852',
+      visible: true, text: 'What is Peer to Peer Lending?
 
-        ', bold: true, font_size: 20, foreground: '#a51622'}
+        ', font_size: 20, font: '', spacing_above: small, icon_align: left, spacing_below: small,
+      italic: false, background: '', bold: true, underline: false, icon: ''}
     type: Label
     layout_properties: {grid_position: 'NBSKAT,OIPHSQ'}
   - name: image_1
