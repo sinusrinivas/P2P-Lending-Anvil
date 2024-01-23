@@ -25,8 +25,8 @@ class view_details_1(view_details_1Template):
         self.loan_amount_label.text = f"{selected_row['loan_amount']}"
         self.interest_rate_label.text = f"{selected_row['interest_rate']}"
         self.tenure_label.text = f"{selected_row['tenure']}"
-        lender_accepted_timestamp = selected_row['lender_accepted_timestamp']
-        date_of_apply = lender_accepted_timestamp.strftime("%Y-%m-%d")
+        borrower_loan_created_timestamp = selected_row['borrower_loan_created_timestamp']
+        date_of_apply = borrower_loan_created_timestamp.strftime("%Y-%m-%d")
         self.date_of_apply_label.text = f"{date_of_apply}"
         self.loan_updated_status_label.text = f"{selected_row['loan_updated_status']}"
 

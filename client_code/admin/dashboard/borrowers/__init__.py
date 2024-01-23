@@ -14,7 +14,7 @@ class borrowers(borrowersTemplate):
     self.init_components(**properties)
 
     # Any code you write here will run before the form opens.
-    self.data = tables.app_tables.user_profile.search()
+    self.data = tables.app_tables.fin_user_profile.search()
 
     a = -1
     self.list_1 = []
