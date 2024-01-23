@@ -17,4 +17,4 @@ class RowTemplate37(RowTemplate37Template):
   def link_1_click(self, **event_args):
     """This method is called when the link is clicked"""
     selected_row = self.item
-    open_form('borrower_registration')
+    open_form('borrower_registration_form.dashboard.Extension_loan_request.borrower_extension', selected_row = selected_row)
