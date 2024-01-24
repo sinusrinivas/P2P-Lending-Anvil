@@ -18,3 +18,11 @@ class manage_cms(manage_cmsTemplate):
   def link_1_click(self, **event_args):
     """This method is called when the link is clicked"""
     open_form('admin.dashboard')
+
+  def button_2_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    open_form('admin.dashboard.manage_cms.add_borrower_dropdown_details')
+
+  def button_2_copy_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    open_form('admin.dashboard.manage_cms.add_lender_dropdown_details')
