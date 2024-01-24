@@ -57,8 +57,8 @@ def user_issues_bugreports(user_issues, specific_issue, user_discription, image,
 
 
 
-# @anvil.server.callable
-# def add_product_group_to_table(group_name):
-#     # Add the group_name to the "product_group" data table
-#     app_tables.product_group.add_row(name=group_name)
-
+@anvil.server.callable
+def add_to_database(value1, value2):
+  row = app_tables.fin_borrower_manage_dropdown.add_row(gender=value1,marital_status=value2)
+  row_number = row.get_id()
+  print(f"values added to row {row_number}")

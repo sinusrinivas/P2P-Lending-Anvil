@@ -86,3 +86,7 @@ class dashboard(dashboardTemplate):
   def button_13_click(self, **event_args):
     """This method is called when the button is clicked"""
     open_form('admin.dashboard.performance_tracker')
+
+  def button_1_copy_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    open_form('admin.dashboard.manage_dropdown')

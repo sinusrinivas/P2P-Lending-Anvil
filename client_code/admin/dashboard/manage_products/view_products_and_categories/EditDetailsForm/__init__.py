@@ -27,12 +27,21 @@ class EditDetailsForm(EditDetailsFormTemplate):
         # Check if the updated value is the same as the existing value
         if updated_group != self.selected_row['name'].lower():
             # Convert the existing group names to lowercase for case-insensitive comparison
-            existing_names_lower = [row['name'].lower() for row in app_tables.fin_product_group.search()]
+            existing_names_lower = [row['name'].lower() for row in app_tables.product_group.search()]
             
             if updated_group in existing_names_lower:
                 alert(f'Group "{self.text_box_1.text}" already exists. Please choose a different name.')
             else:
                 # Update the existing row in the product_categories table
+                group_name = self.selected_row['name'].lower()
+
+                # Update the corresponding rows in the product_categories table
+                categories_to_update = app_tables.product_categories.search(q.any_of(name_group=group_name))
+                for category_row in categories_to_update:
+                    category_row['name_group'] = updated_group
+                    category_row.update()
+
+                # Update the existing row in the product_group table
                 self.selected_row['name'] = updated_group
 
                 # Save changes to the database
@@ -45,7 +54,6 @@ class EditDetailsForm(EditDetailsFormTemplate):
             # No changes were made
             alert("No changes made.")
             open_form('admin.dashboard.manage_products.view_products_and_categories')
-          
     def button_2_click(self, **event_args):
         """Cancel button click event"""
         # Close the form without saving changes
@@ -68,7 +76,7 @@ class EditDetailsForm(EditDetailsFormTemplate):
             self.selected_row.delete()
 
             # Delete the corresponding rows from the product_categories table
-            categories_to_delete = app_tables.fin_product_categories.search(q.any_of(name_group=group_name))
+            categories_to_delete = app_tables.product_categories.search(q.any_of(name_group=group_name))
             for category_row in categories_to_delete:
                 category_row.delete()
 

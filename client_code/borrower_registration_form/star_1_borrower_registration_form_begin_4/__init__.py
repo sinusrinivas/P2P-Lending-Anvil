@@ -16,6 +16,10 @@ class star_1_borrower_registration_form_begin_4(star_1_borrower_registration_for
     if user_data:
       self.marital_status_borrower_registration_dropdown.selected_value=user_data['marital_status']
       user_data.update()
+
+    options = app_tables.fin_borrower_manage_dropdown.search()
+    options_string = [str(option['marital_status']) for option in options]
+    self.marital_status_borrower_registration_dropdown.items = options_string
     self.init_components(**properties)
 
     # Any code you write here will run before the form opens.
