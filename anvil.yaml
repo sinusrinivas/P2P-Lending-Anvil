@@ -741,9 +741,17 @@ db_schema:
     - name: wallet_id
       admin_ui: {order: 12, width: 200}
       type: string
-  fin_wallet_bank_account_table:
-    title: fin_wallet_bank_account_table
+  fin_product_group:
     client: full
+    server: full
+    columns:
+    - name: name
+      admin_ui: {width: 200, order: 0}
+      type: string
+    title: fin_product_group
+  wallet_bank_account_table:
+    title: fin_wallet_bank_account_table
+    client: none
     server: full
     columns:
     - name: account_id
@@ -773,14 +781,6 @@ db_schema:
     - name: account_type
       admin_ui: {width: 200}
       type: string
-  fin_product_group:
-    client: full
-    server: full
-    columns:
-    - name: name
-      admin_ui: {width: 200, order: 0}
-      type: string
-    title: fin_product_group
   fin_loan_details:
     client: full
     server: full
