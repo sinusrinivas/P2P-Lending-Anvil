@@ -23,9 +23,9 @@ class view_loans(view_loansTemplate):
                 q.like('approved%'),
                 q.like('under process%'),
                 q.like('foreclosure%'),
-                #q.like('close%'),
-                #q.like('Close%'),
-                #q.like('closed loans%'),
+                q.like('close%'),
+                q.like('Close%'),
+                q.like('closed loans%'),
                 q.like('disbursed loan%'),
                 q.like('Disbursed loan%'),
                 q.like('Under Process%')
