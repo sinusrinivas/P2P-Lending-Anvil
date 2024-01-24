@@ -36,14 +36,14 @@ class Extension_Loan_request(Extension_Loan_requestTemplate):
         # Check if a user is logged in
         if user:
             # Fetch the user profile record based on the current user's email
-            user_profile = app_tables.user_profile.get(email_user=user['email'])
+            user_profile = app_tables.fin_user_profile.get(email_user=user['email'])
             # Check if the user profile record is found
             if user_profile:
                 # Access the user ID from the user profile record
                 user_id = user_profile['customer_id']
                 # Filter loan_details table based on the current user's ID
                 try:
-                    customer_loans = app_tables.loan_details.search(borrower_customer_id=user_id)
+                    customer_loans = app_tables.fin_loan_details.search(borrower_customer_id=user_id)
 
                     # Filter loans based on 'extension_allowed' from product_details
                     eligible_loans = [loan for loan in customer_loans if self.is_loan_eligible(loan)]
@@ -61,7 +61,7 @@ class Extension_Loan_request(Extension_Loan_requestTemplate):
 
     def is_loan_eligible(self, loan):
         # Check eligibility based on 'extension_allowed' from product_details
-        product_details_record = app_tables.product_details.get(product_id=loan['product_id'])
+        product_details_record = app_tables.fin_product_details.get(product_id=loan['product_id'])
         return product_details_record['extension_allowed'] == 'Yes'
 
     def button_1_click(self, **event_args):
