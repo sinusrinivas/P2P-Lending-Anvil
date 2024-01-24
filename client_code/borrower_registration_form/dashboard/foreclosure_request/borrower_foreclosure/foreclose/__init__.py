@@ -178,7 +178,6 @@ class foreclose(forecloseTemplate):
     foreclose_amount = float(foreclose_amount)
     total_due_amount = outstanding_amount + foreclose_amount
     #total_due_amount = float(total_due_amount)
-    total_due_amount = int(total_due_amount)
     
 
     self.ra_label.text = f"{outstanding_amount}"
