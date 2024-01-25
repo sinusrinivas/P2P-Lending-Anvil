@@ -72,4 +72,3 @@ class view_loan_extension_requests(view_loan_extension_requestsTemplate):
 
 
 
-    # Any code you write here will run before the form opens.

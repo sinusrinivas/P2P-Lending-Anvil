@@ -30,13 +30,182 @@ components:
     name: button_1
     layout_properties: {grid_position: 'AUUAZJ,FQVZON'}
     event_bindings: {click: button_1_click}
+  - name: outlined_card_1_copy
+    properties: {role: outlined-card, background: 'theme:Tertiary Container', visible: true,
+      col_widths: '{}'}
+    type: ColumnPanel
+    layout_properties:
+      col_widths: {}
+      grid_position: OXGTLI,SGPUGO
+    components:
+    - type: Button
+      properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
+        foreground: '', visible: true, text: Approved, font_size: null, font: '',
+        spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+        background: '', bold: false, underline: false, icon: ''}
+      name: button_3
+      layout_properties: {grid_position: 'FJZSQF,LSBGEG'}
+      event_bindings: {click: button_3_click}
+    - name: label_5
+      properties: {align: center}
+      type: Label
+      layout_properties: {grid_position: 'LCASWG,YDGEKT'}
+  - name: outlined_card_2
+    properties: {role: outlined-card, background: 'theme:Tertiary Container', col_widths: '{}'}
+    type: ColumnPanel
+    layout_properties:
+      col_widths: {}
+      grid_position: OXGTLI,TUJNZD
+    components:
+    - name: button_2
+      properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
+        foreground: '', visible: true, text: Rejected, font_size: null, font: '',
+        spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+        background: '', bold: false, underline: false, icon: ''}
+      type: Button
+      layout_properties: {grid_position: 'FNHLVB,HDEYKB'}
+      event_bindings: {click: button_2_click}
+    - name: label_6
+      properties: {align: center}
+      type: Label
+      layout_properties: {grid_position: 'UZVEOM,KGCRHE'}
+  - name: outlined_card_1_copy_3
+    properties: {role: outlined-card, background: 'theme:Tertiary Container', visible: true,
+      col_widths: '{}'}
+    type: ColumnPanel
+    layout_properties:
+      col_widths: {}
+      grid_position: OXGTLI,IVWYTR
+    components:
+    - type: Button
+      properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
+        foreground: '', visible: true, text: New Request, font_size: null, font: '',
+        spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+        background: '', bold: false, underline: false, icon: ''}
+      name: button_5
+      layout_properties: {grid_position: 'MOULNU,LEUJAU'}
+      event_bindings: {click: button_5_click}
+    - name: new_request
+      properties: {align: center}
+      type: Label
+      layout_properties: {grid_position: 'NZNCOP,SKGMZB'}
+  - name: outlined_card_1_copy_4
+    properties: {role: outlined-card, background: 'theme:Tertiary Container', visible: true,
+      col_widths: '{}'}
+    type: ColumnPanel
+    layout_properties:
+      col_widths: {}
+      grid_position: OXGTLI,MDPFGW
+      full_width_row: true
+    components:
+    - type: Button
+      properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
+        foreground: '', visible: true, text: All, font_size: null, font: '', spacing_above: small,
+        icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+        underline: false, icon: ''}
+      name: button_6
+      layout_properties: {grid_position: 'LKUHOB,XESJNJ'}
+      event_bindings: {click: button_6_click}
+    - name: all
+      properties: {align: center}
+      type: Label
+      layout_properties: {grid_position: 'NZNCOP,SKGMZB'}
+  - name: outlined_card_1_copy_2
+    properties: {role: outlined-card, background: 'theme:Tertiary Container', visible: true,
+      col_widths: '{}'}
+    type: ColumnPanel
+    layout_properties:
+      col_widths: {}
+      grid_position: OXGTLI,NTQSVE
+    components:
+    - type: Button
+      properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
+        foreground: '', visible: true, text: Under Process, font_size: null, font: '',
+        spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+        background: '', bold: false, underline: false, icon: ''}
+      name: button_4
+      layout_properties: {grid_position: 'ASNEUQ,FZFEWO'}
+      event_bindings: {click: button_4_click}
+    - name: label_5_copy
+      properties: {align: center}
+      type: Label
+      layout_properties: {grid_position: 'NZNCOP,SKGMZB'}
   - type: Label
-    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-      visible: true, text: View Loan Extension Requests, font_size: null, font: '',
+    properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
+      visible: false, text: Approved Loan Extension Requests, font_size: 18, font: '',
       spacing_above: small, icon_align: left, spacing_below: small, italic: false,
-      background: '', bold: false, underline: false, icon: ''}
-    name: label_1
-    layout_properties: {grid_position: 'JICCEY,UEHAQW'}
+      background: '', bold: true, underline: true, icon: ''}
+    name: label_2
+    layout_properties:
+      col_widths: {}
+      grid_position: JPZZFE,GNTMZE
+  - name: data_grid_2
+    properties:
+      role: tonal-data-grid
+      columns:
+      - {id: JKSDUP, title: Loan Id, data_key: column_1, $$hashKey: 'object:2857'}
+      - {id: VJQQOR, title: Loan Amount, data_key: column_2, $$hashKey: 'object:2858'}
+      - {id: OJLQEN, title: Foreclosure Status, data_key: column_3, $$hashKey: 'object:2859'}
+      auto_header: true
+      tooltip: ''
+      border: ''
+      foreground: ''
+      rows_per_page: 20
+      visible: false
+      wrap_on: never
+      show_page_controls: true
+      spacing_above: small
+      spacing_below: small
+      background: ''
+    type: DataGrid
+    components:
+    - type: RepeatingPanel
+      properties: {role: null, tooltip: '', border: '', foreground: '', items: null,
+        visible: true, spacing_above: none, spacing_below: none, item_template: lendor_registration_form.dashboard.view_loan_foreclosure_Requests.RowTemplate7,
+        background: ''}
+      name: repeating_panel_1
+      layout_properties: {}
+    layout_properties:
+      col_widths: {}
+      grid_position: YNAFML,RFFPBA
+  - type: Label
+    properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
+      visible: false, text: Rejected Loan Extension  Requests, font_size: 18, font: '',
+      spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+      background: '', bold: true, underline: true, icon: ''}
+    name: label_3
+    layout_properties:
+      col_widths: {}
+      grid_position: FBABJK,OCKETI
+  - name: data_grid_2_copy
+    properties:
+      role: tonal-data-grid
+      columns:
+      - {id: JKSDUP, title: Loan Id, data_key: column_1, $$hashKey: 'object:2857'}
+      - {id: VJQQOR, title: Loan Amount, data_key: column_2, $$hashKey: 'object:2858'}
+      - {id: OJLQEN, title: Foreclosure Status, data_key: column_3, $$hashKey: 'object:2859'}
+      auto_header: true
+      tooltip: ''
+      border: ''
+      foreground: ''
+      rows_per_page: 20
+      visible: false
+      wrap_on: never
+      show_page_controls: true
+      spacing_above: small
+      spacing_below: small
+      background: ''
+    type: DataGrid
+    components:
+    - type: RepeatingPanel
+      properties: {role: null, tooltip: '', border: '', foreground: '', items: null,
+        visible: true, spacing_above: none, spacing_below: none, item_template: lendor_registration_form.dashboard.view_loan_foreclosure_Requests.RowTemplate7,
+        background: ''}
+      name: repeating_panel_2
+      layout_properties: {}
+    layout_properties:
+      col_widths: {}
+      grid_position: EEVBHJ,BCYNZD
 - type: FlowPanel
   properties: {}
   name: navbar_links
