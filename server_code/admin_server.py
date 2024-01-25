@@ -55,10 +55,3 @@ def user_issues_bugreports(user_issues, specific_issue, user_discription, image,
                                                  customer_id=coustmer_id)
 
 
-
-
-@anvil.server.callable
-def add_to_database(value1, value2):
-  row = app_tables.fin_borrower_manage_dropdown.add_row(gender=value1,marital_status=value2)
-  row_number = row.get_id()
-  print(f"values added to row {row_number}")
