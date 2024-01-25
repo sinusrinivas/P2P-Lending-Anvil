@@ -247,6 +247,11 @@ db_schema:
       admin_ui: {width: 200, order: 9}
       type: number
     title: fin_beseem_score
+  fin_borrower_account_type:
+    client: none
+    server: full
+    columns: []
+    title: fin_borrower_account_type
   fin_foreclosure:
     title: fin_foreclosure
     client: full
@@ -294,6 +299,11 @@ db_schema:
     - name: status
       admin_ui: {width: 200}
       type: string
+  fin_borrower_employee_type:
+    client: none
+    server: full
+    columns: []
+    title: fin_borrower_employee_type
   users:
     client: full
     server: full
@@ -729,6 +739,11 @@ db_schema:
     - name: emi_status
       admin_ui: {width: 200, order: 9}
       type: bool
+  fin_borrower_business_type:
+    client: none
+    server: full
+    columns: []
+    title: fin_borrower_business_type
   fin_extends_loan:
     client: full
     server: full
@@ -984,5 +999,10 @@ db_schema:
     - name: customer_id
       admin_ui: {order: 5, width: 200}
       type: string
+  fin_borrower_gender:
+    client: none
+    server: full
+    columns: []
+    title: fin_borrower_gender
 uplink_visible: true
 renamed: true
