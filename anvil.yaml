@@ -23,6 +23,11 @@ runtime_options: {version: 2, client_version: '3', server_version: python3-sandb
 metadata: {title: 'P2P Bank ', description: this app provide services to person who are ready to invest and ready to give loan}
 startup_form: null
 db_schema:
+  wallet_notification:
+    client: full
+    server: full
+    columns: []
+    title: fin_wallet_notification
   fin_product_categories:
     title: fin_product_categories
     client: full
@@ -654,11 +659,6 @@ db_schema:
       admin_ui: {width: 200}
       type: number
     title: fin_user_profile
-  fin_wallet_notification:
-    client: full
-    server: full
-    columns: []
-    title: fin_wallet_notification
   fin_wallet_transactions:
     title: fin_wallet_transactions
     client: full
@@ -817,7 +817,6 @@ db_schema:
     - name: wallet_id
       admin_ui: {order: 12, width: 200}
       type: string
-  fin_wallet_bank_account_table: {}
   fin_product_group:
     client: full
     server: full
@@ -923,6 +922,9 @@ db_schema:
     - name: loan_disbursed_timestamp
       admin_ui: {width: 200, order: 30}
       type: datetime
+    - name: loan_extension_months
+      admin_ui: {width: 200, order: 31}
+      type: number
     title: fin_loan_details
   fin_user_issues_bugreports:
     title: fin_user_issues_bugreports
