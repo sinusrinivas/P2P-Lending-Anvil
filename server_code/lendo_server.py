@@ -266,8 +266,54 @@ def get_user_data(user_id):
     else:
         return None
 
+# code for view borr loan
+@anvil.server.callable
+def transfer_user_profile_to_loan_details(email):
+    print(f"Fetching data for email: {email}")
 
-# # code for view borr loan
+    # Fetch distinct loan_id values for the given email from the loan_details table
+    distinct_loan_ids = app_tables.fin_loan_details.search(
+        loan_updated_status=q.like('under process%')
+    )
+
+    # Fetch lender data from user_profile table
+    lender_row = app_tables.fin_user_profile.get(email_user=email)
+    if lender_row:
+        lender_customer_id = lender_row['customer_id']
+        lender_email_id = lender_row['email_user']
+        lender_full_name = lender_row['full_name']
+
+        # Iterate over each distinct loan_id and call the server function
+        for row in distinct_loan_ids:
+            unique_loan_id = row['loan_id']
+
+            # Call the server function to transfer data to loan_details table
+            add_loan_details_data(unique_loan_id, lender_customer_id, lender_email_id, lender_full_name)
+
+
+@anvil.server.callable
+def add_loan_details_data(loan_id, lender_customer_id, lender_email_id, lender_full_name):
+
+    # Check if a row with the given loan_id already exists
+    existing_row = app_tables.fin_loan_details.get(loan_id=loan_id)
+
+    if existing_row:
+        print("Row already exists. Updating existing row.")
+        # Update the existing row with new data
+        existing_row.update(
+            lender_customer_id=lender_customer_id,
+            lender_email_id=lender_email_id,
+            lender_full_name=lender_full_name
+        )
+    else:
+        print("No row exists. Adding a new row.")
+        # Add a new row to the loan_details table
+        app_tables.fin_loan_details.add_row(
+            loan_id=loan_id,
+            lender_customer_id=lender_customer_id,
+            lender_email_id=lender_email_id,
+            lender_full_name=lender_full_name
+        )
 
 # # Function to determine membership type based on investment
 # def determine_membership_type(investment):
@@ -348,103 +394,19 @@ def get_user_data(user_id):
 #         return []
 
 ## Code for loan disbusement
-        
-# @anvil.server.callable
-# def loan_disbursement_action(selected_row, email):
-#     # Assuming 'selected_row' is the row from the loan_details table
-#     loan_amount = selected_row['loan_amount']
-#     lender_accepted_timestamp = selected_row['lender_accepted_timestamp']
-    
-#     # Convert lender_accepted_timestamp to UTC if it's not already
-#     if lender_accepted_timestamp.tzinfo is None:
-#         lender_accepted_timestamp = lender_accepted_timestamp.replace(tzinfo=timezone.utc)
-    
-#     # Retrieve the rows from the wallet table based on the user's email
-#     wallet_rows = app_tables.wallet.search(user_email=email)
-    
-#     if wallet_rows and len(wallet_rows) > 0:
-#         # Assuming you want to use the first matching row
-#         wallet_row = wallet_rows[0]
-        
-#         wallet_amount = wallet_row['wallet_amount']
-      
-#         # Get the current time in UTC
-#         current_time = datetime.now(timezone.utc)
-      
-#         if loan_amount > wallet_amount:
-#             # Check if 30 minutes have passed since lender_accepted_timestamp
-#             time_difference = current_time - lender_accepted_timestamp
-#             if time_difference.total_seconds() > 300:  # 1800 seconds = 30 minutes  # 500 seconds = 5 minutes
-#                 # Update loan status to 'lost opportunities'
-#                 selected_row['loan_updated_status'] = 'lost opportunities'
-#                 selected_row.update()
-
-#                 # Signal the client to handle insufficient balance
-#                 return "insufficient_balance"
-#     else:
-#         # Signal the client to pay to the borrower
-#         return "pay_to_borrower"
-
-
-# @anvil.server.callable
-# def loan_disbursement_action(selected_row, email):
-#     # Assuming 'selected_row' is the row from the loan_details table
-#     loan_amount = selected_row['loan_amount']
-#     lender_accepted_timestamp = selected_row['lender_accepted_timestamp']
-    
-#     # Convert lender_accepted_timestamp to UTC if it's not already
-#     if lender_accepted_timestamp.tzinfo is None:
-#         lender_accepted_timestamp = lender_accepted_timestamp.replace(tzinfo=timezone.utc)
-    
-#     # Retrieve the rows from the wallet table based on the user's email
-#     wallet_rows = app_tables.wallet.search(user_email=email)
-    
-#     if wallet_rows and len(wallet_rows) > 0:
-#         # Assuming you want to use the first matching row
-#         wallet_row = wallet_rows[0]
-        
-#         wallet_amount = wallet_row['wallet_amount']
-      
-#         # Get the current time in UTC
-#         current_time = datetime.now(timezone.utc)
-      
-#         if loan_amount > wallet_amount:
-#             # Check if 5 minutes have passed since lender_accepted_timestamp
-#             # time_difference = current_time - lender_accepted_timestamp
-#             # if time_difference.total_seconds() > 300:  # 300 seconds = 5 minutes
-#             #     # Update loan status based on the comparison of wallet_amount and loan_amount
-#             #     if loan_amount > wallet_amount:
-#             #         # Update loan status to 'lost opportunities'
-#             #         selected_row['loan_updated_status'] = 'lost opportunities'
-#             #     else:
-#             #         # Update loan status to 'under process'
-#             #         selected_row['loan_updated_status'] = 'under process'
-                
-#             #     selected_row.update()
-
-#                 # Signal the client to handle insufficient balance
-#                 return "insufficient_balance"
-       
-#         else:
-#            # Signal the client to pay to the borrower
-#            return "pay_to_borrower"
-#     else:
-#         # Handle the case where the wallet row is not found
-#         return "wallet_not_found"
-
-
-
 @anvil.server.callable
 def loan_disbursement_action(selected_row, email):
     # Assuming 'selected_row' is the row from the loan_details table
     loan_amount = selected_row['loan_amount']
+    print("Loan amount:", loan_amount)
     lender_accepted_timestamp = selected_row['lender_accepted_timestamp']
     print("lender_accepted_timestamp timezone:", lender_accepted_timestamp.tzinfo)
-    
+
     # Convert lender_accepted_timestamp to UTC if it's not already
     if lender_accepted_timestamp.tzinfo is None:
         lender_accepted_timestamp = lender_accepted_timestamp.replace(tzinfo=timezone.utc)
-    
+        print("lender_accepted_timestamp converted to UTC")
+  
     # Retrieve the rows from the wallet table based on the user's email
     wallet_rows = app_tables.fin_wallet.search(user_email=email)
     
@@ -453,30 +415,33 @@ def loan_disbursement_action(selected_row, email):
         wallet_row = wallet_rows[0]
         
         wallet_amount = wallet_row['wallet_amount']
+        print("Wallet amount:", wallet_amount)
       
-        # Get the current time in UTC
+        # Get the current time in the same timezone as lender_accepted_timestamp
         current_time = datetime.now(timezone.utc)
         print("current_time:", current_time)
       
+      
         if loan_amount > wallet_amount:
-           # Update loan status based on the comparison of wallet_amount and loan_amount
-            if loan_amount > wallet_amount:
-              # Check if 2 minutes have passed since lender_accepted_timestamp
-              time_difference = current_time - lender_accepted_timestamp
-              print("time_difference:", time_difference)
-              if time_difference.total_seconds() > 60:
+            # Check if 5 minutes have passed since lender_accepted_timestamp
+            time_difference = current_time - lender_accepted_timestamp
+            print("time_difference:", time_difference)
+            if time_difference.total_seconds() > 120:  # 300 seconds = 5 minutes # 120 seconds = 2 minutes
+                # Update loan status based on the comparison of wallet_amount and loan_amount
+                if loan_amount > wallet_amount:
                  # Update loan status to 'lost opportunities'
                  selected_row['loan_updated_status'] = 'lost opportunities'
                  selected_row.update()
+                 print("loan_updated_status as lost opportunities")
                  return "Time_out"
-              else:
-                 print("2 minutes have not passed yet")
-                 # 5 minutes have not passed yet
-                 return "insufficient_balance"    
+                else:
+                  print("2 minutes have not passed yet")
+                  # 2 minutes have not passed yet
+                  return "insufficient_balance"    
             else:
                 # Update loan status to 'under process'
-                selected_row['loan_updated_status'] = 'under process'
-                selected_row.update()
+                # selected_row['loan_updated_status'] = 'under process'
+                # selected_row.update()
                 return "insufficient_balance"
         else:
            wallet_amount -= loan_amount
@@ -486,4 +451,27 @@ def loan_disbursement_action(selected_row, email):
            return "pay_to_borrower"
     else:
         # Handle the case where the wallet row is not found
+        print("wallet_not_found")
         return "wallet_not_found" 
+
+
+@anvil.server.background_task
+def check_loan_timeout(selected_row, lender_accepted_timestamp, email):
+    # Record the start time
+    start_time = datetime.now()
+
+    # Wait for 2 minutes
+    while datetime.now() < start_time + timedelta(minutes=2):
+        anvil.server.sleep(10)  # Sleep for 10 seconds
+
+    # After 2 minutes, check wallet_amount again
+    wallet_rows = app_tables.fin_wallet.search(user_email=email)
+    if wallet_rows and len(wallet_rows) > 0:
+        wallet_row = wallet_rows[0]
+        wallet_amount = wallet_row['wallet_amount']
+        
+        if loan_amount > wallet_amount:
+            # Update loan status to 'lost opportunities'
+            selected_row['loan_updated_status'] = 'lost opportunities'
+            selected_row.update()
+            return "Time_out"

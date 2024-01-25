@@ -17,28 +17,8 @@ class view_borrower_loan_request(view_borrower_loan_requestTemplate):
     
     self.repeating_panel_1.items=app_tables.fin_loan_details.search(loan_updated_status=q.like('under process%'))
 
-    
+    anvil.server.call('transfer_user_profile_to_loan_details', email) 
 
-    # self.fetch_loan_data()
-    # loan_details = server.call('fetch_loan_details')
-    # self.repeating_panel_1.items = loan_details
-    # try:
-    #         # Fetch loan details from the server
-    #         loan_details_result = anvil.server.call('fetch_loan_details')
-
-    #         # Convert the SearchIterator to a list for printing
-    #         loan_details_list = list(loan_details_result)
-
-    #         # Print fetched loan details for debugging
-    #         print("Fetched loan details:", loan_details_list)
-
-    #         # Display fetched loan details
-    #         self.repeating_panel_1.items = loan_details_list
-    # except Exception as e:
-    #         # Print any exceptions for debugging
-    #         print("Error in client code:", str(e))
-
-    
   def link_1_click(self, **event_args):
     """This method is called when the link is clicked"""
     open_form("lendor_registration_form.dashboard.opbal")
