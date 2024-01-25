@@ -17,6 +17,8 @@ class view_borrower_loan_request(view_borrower_loan_requestTemplate):
     
     self.repeating_panel_1.items=app_tables.fin_loan_details.search(loan_updated_status=q.like('under process%'))
 
+    
+
     # self.fetch_loan_data()
     # loan_details = server.call('fetch_loan_details')
     # self.repeating_panel_1.items = loan_details
