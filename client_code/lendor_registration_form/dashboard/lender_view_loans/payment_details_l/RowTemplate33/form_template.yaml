@@ -54,4 +54,22 @@ components:
   layout_properties: {column: RRMPAR}
   data_bindings:
   - {property: text, code: 'self.item[''EndingBalance'']'}
+- type: Label
+  properties: {}
+  name: label_10
+  layout_properties: {column: XPOTUW}
+  data_bindings:
+  - {property: text, code: 'self.item[''EMIDate'']'}
+- type: Label
+  properties: {}
+  name: label_11
+  layout_properties: {column: PXXVZE}
+  data_bindings:
+  - {property: text, code: 'self.item[''EMITime'']'}
+- type: Label
+  properties: {}
+  name: label_12
+  layout_properties: {column: ABUADN}
+  data_bindings:
+  - {property: text, code: 'self.item[''AccountNumber'']'}
 is_package: true
