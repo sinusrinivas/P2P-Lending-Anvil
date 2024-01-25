@@ -1,4 +1,6 @@
-container: {type: ColumnPanel}
+container:
+  type: ColumnPanel
+  properties: {col_widths: '{}'}
 components:
 - name: image_1_copy_1
   properties: {role: null, vertical_align: center, height: 40.33333206176758, tooltip: '',
@@ -15,6 +17,14 @@ components:
   type: Button
   layout_properties: {grid_position: 'EJZZKH,DPCHWH'}
   event_bindings: {click: home_borrower_registration_form_home_button_click}
+- type: form:borrower_registration_form.logout
+  properties: {}
+  name: logout_1
+  layout_properties: {grid_position: 'EJZZKH,KDQTGH'}
+- type: form:borrower_registration_form.navigation_bar_main
+  properties: {}
+  name: navigation_bar_1
+  layout_properties: {grid_position: 'YOPVKJ,GZYOCJ'}
 - name: label_1_copy_1
   properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
     visible: true, text: Spouse Details, font_size: null, font: '', spacing_above: small,

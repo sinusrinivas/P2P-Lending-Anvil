@@ -26,6 +26,14 @@ components:
     layout_properties:
       col_widths: {}
       grid_position: WAETRN,CLOGCD
+  - type: form:borrower_registration_form.logout
+    properties: {}
+    name: logout_1
+    layout_properties: {grid_position: 'WAETRN,RWGZNJ'}
+  - type: form:borrower_registration_form.navigation_bar_main
+    properties: {}
+    name: navigation_bar_1
+    layout_properties: {grid_position: 'PVJKYH,RSBGIN'}
   - type: GridPanel
     properties: {spacing_above: small, spacing_below: small, background: '', foreground: '',
       border: '', visible: true, role: outlined-card, tooltip: ''}

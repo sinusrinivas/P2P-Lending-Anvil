@@ -17,6 +17,14 @@ components:
   type: Button
   layout_properties: {grid_position: 'NEAHIU,IWBTBX'}
   event_bindings: {click: button_1_click}
+- type: form:borrower_registration_form.logout
+  properties: {}
+  name: logout_1
+  layout_properties: {grid_position: 'NEAHIU,FAZZIE'}
+- type: form:borrower_registration_form.navigation_bar_main
+  properties: {}
+  name: navigation_bar_1
+  layout_properties: {grid_position: 'MURZMY,MUSUTU'}
 - type: Spacer
   properties: {height: 48}
   name: spacer_1

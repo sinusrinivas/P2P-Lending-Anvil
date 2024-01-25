@@ -17,6 +17,15 @@ components:
   name: button_1
   layout_properties: {grid_position: 'UUKQMJ,ATZQVN'}
   event_bindings: {click: button_1_click}
+- type: form:borrower_registration_form.logout
+  properties: {}
+  name: logout_1
+  layout_properties: {grid_position: 'UUKQMJ,CCJTAL'}
+- type: form:borrower_registration_form.navigation_bar_main
+  properties: {}
+  name: navigation_bar_1
+  layout_properties: {grid_position: 'CZGBQQ,PNDQBE'}
+  event_bindings: {event: navigation_bar_1_event}
 - type: Label
   properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
     visible: true, text: Active Loans, font_size: 20, font: '', spacing_above: small,
