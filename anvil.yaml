@@ -74,7 +74,10 @@ db_schema:
   fin_borrower_no_of_employees:
     client: none
     server: full
-    columns: []
+    columns:
+    - name: borrower_no_of_employees
+      admin_ui: {width: 200, order: 0}
+      type: string
     title: fin_borrower_no_of_employees
   fin_wallet:
     client: full
@@ -220,7 +223,10 @@ db_schema:
   fin_borrower_organization_type:
     client: none
     server: full
-    columns: []
+    columns:
+    - name: borrower_organization_type
+      admin_ui: {width: 200, order: 0}
+      type: string
     title: fin_borrower_organization_type
   fin_beseem_score:
     client: full
@@ -260,7 +266,10 @@ db_schema:
   fin_borrower_account_type:
     client: none
     server: full
-    columns: []
+    columns:
+    - name: borrower_account_type
+      admin_ui: {width: 200, order: 0}
+      type: string
     title: fin_borrower_account_type
   fin_foreclosure:
     title: fin_foreclosure
@@ -312,7 +321,10 @@ db_schema:
   fin_borrower_employee_type:
     client: none
     server: full
-    columns: []
+    columns:
+    - name: borrower_employee_type
+      admin_ui: {width: 200, order: 0}
+      type: string
     title: fin_borrower_employee_type
   users:
     client: full
@@ -387,12 +399,18 @@ db_schema:
   fin_borrower_salary_type:
     client: none
     server: full
-    columns: []
+    columns:
+    - name: borrower_salary_type
+      admin_ui: {width: 200, order: 0}
+      type: string
     title: fin_borrower_salary_type
   fin_borrower_profession:
     client: none
     server: full
-    columns: []
+    columns:
+    - name: borrower_profession
+      admin_ui: {width: 200, order: 0}
+      type: string
     title: fin_borrower_profession
   fin_users_device:
     client: full
@@ -762,7 +780,10 @@ db_schema:
   fin_borrower_business_type:
     client: none
     server: full
-    columns: []
+    columns:
+    - name: borrower_business_type
+      admin_ui: {width: 200, order: 0}
+      type: string
     title: fin_borrower_business_type
   fin_extends_loan:
     client: full
@@ -814,7 +835,10 @@ db_schema:
   fin_borrower_marrital_status:
     client: none
     server: full
-    columns: []
+    columns:
+    - name: borrower_marrital_status
+      admin_ui: {width: 200, order: 0}
+      type: string
     title: fin_borrower_marrital_status
   fin_lender:
     title: fin_lender
@@ -1027,7 +1051,10 @@ db_schema:
   fin_borrower_gender:
     client: none
     server: full
-    columns: []
+    columns:
+    - name: borrower_gender
+      admin_ui: {width: 200, order: 0}
+      type: string
     title: fin_borrower_gender
 uplink_visible: true
 renamed: true
