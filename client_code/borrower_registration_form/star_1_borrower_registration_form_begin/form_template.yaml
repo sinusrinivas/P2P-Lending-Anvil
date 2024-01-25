@@ -1,6 +1,6 @@
 container:
   type: ColumnPanel
-  properties: {col_widths: '{"KGCBHM":40,"TMBSRJ":20}'}
+  properties: {col_widths: '{"KGCBHM":40}'}
 components:
 - name: image_1_copy_1_copy_1
   properties: {role: null, vertical_align: center, height: 48, tooltip: '', border: '',
@@ -9,14 +9,15 @@ components:
     spacing_below: small, background: '', horizontal_align: left}
   type: Image
   layout_properties: {grid_position: 'KMPOOI,KGCBHM'}
-- name: home_borrower_registration_form
-  properties: {role: elevated-button, align: right, tooltip: '', border: '', enabled: true,
-    foreground: 'theme:On Primary', visible: true, text: Home, font_size: null, font: '',
-    spacing_above: small, icon_align: left, spacing_below: small, italic: false, background: '#00008B',
-    bold: true, underline: false, icon: 'fa:home'}
-  type: Button
-  layout_properties: {grid_position: 'KMPOOI,TMBSRJ'}
-  event_bindings: {click: home_borrower_registration_form_click}
+- type: form:borrower_registration_form.logout
+  properties: {}
+  name: logout_1
+  layout_properties: {grid_position: 'KMPOOI,GAZTVB'}
+- type: form:borrower_registration_form.navigation_bar_main
+  properties: {}
+  name: navigation_bar_1
+  layout_properties: {grid_position: 'WUMMUU,TNTHLZ'}
+  event_bindings: {event: navigation_bar_1_event}
 - name: label_1_copy_1_copy_1
   properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
     visible: true, text: 'Borrower  Registration Form  ', font_size: 27, font: '',

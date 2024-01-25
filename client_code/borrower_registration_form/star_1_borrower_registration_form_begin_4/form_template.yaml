@@ -1,4 +1,6 @@
-container: {type: ColumnPanel}
+container:
+  type: ColumnPanel
+  properties: {col_widths: '{}'}
 components:
 - name: image_1_copy_1_copy_1_copy_1
   properties: {role: null, vertical_align: center, height: 48, tooltip: '', border: '',
@@ -7,14 +9,14 @@ components:
     spacing_below: small, background: '', horizontal_align: left}
   type: Image
   layout_properties: {grid_position: 'XZHWKK,WXLVDS'}
-- name: home_borrower_registration_form_copy_1
-  properties: {role: elevated-button, align: right, tooltip: '', border: '', enabled: true,
-    foreground: 'theme:On Primary', visible: true, text: Home, font_size: null, font: '',
-    spacing_above: small, icon_align: left, spacing_below: small, italic: false, background: '#00008B',
-    bold: true, underline: false, icon: 'fa:home'}
-  type: Button
-  layout_properties: {grid_position: 'XZHWKK,SMXOSF'}
-  event_bindings: {click: home_borrower_registration_form_copy_1_click}
+- type: form:borrower_registration_form.logout
+  properties: {}
+  name: logout_1
+  layout_properties: {grid_position: 'XZHWKK,UXVXZZ'}
+- type: form:borrower_registration_form.navigation_bar_main
+  properties: {}
+  name: navigation_bar_1
+  layout_properties: {grid_position: 'JDVTZC,XUHYWO'}
 - name: label_1_copy_1
   properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
     visible: true, text: Marital Details, font_size: null, font: '', spacing_above: small,

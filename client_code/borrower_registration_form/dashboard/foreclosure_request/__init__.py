@@ -40,3 +40,4 @@ class foreclosure_request(foreclosure_requestTemplate):
     def button_1_click(self, **event_args):
         """This method is called when the button is clicked"""
         open_form('borrower_registration_form.dashboard')
+
