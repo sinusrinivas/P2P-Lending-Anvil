@@ -739,17 +739,8 @@ db_schema:
     - name: borrower_customer_id
       admin_ui: {width: 200, order: 1}
       type: string
-    - name: borrower_email_id
-      admin_ui: {width: 200, order: 2}
-      type: string
     - name: lender_customer_id
       admin_ui: {width: 200, order: 3}
-      type: string
-    - name: lender_email_id
-      admin_ui: {width: 200, order: 4}
-      type: string
-    - name: description
-      admin_ui: {width: 200, order: 8}
       type: string
     - name: repayment_starting_date
       admin_ui: {width: 200, order: 9}
@@ -757,15 +748,33 @@ db_schema:
     - name: extend_fee
       admin_ui: {width: 200, order: 10}
       type: number
-    - name: final_emi
-      admin_ui: {width: 200}
-      type: number
     - name: final_repayment_amount
       admin_ui: {width: 200}
       type: number
     - name: final_repayment_date
       admin_ui: {width: 200}
       type: date
+    - name: status
+      admin_ui: {width: 200}
+      type: string
+    - name: total_extension_months
+      admin_ui: {width: 200}
+      type: number
+    - name: reason
+      admin_ui: {width: 200}
+      type: string
+    - name: new_emi
+      admin_ui: {width: 200}
+      type: number
+    - name: loan_amount
+      admin_ui: {width: 200}
+      type: number
+    - name: extension_amount
+      admin_ui: {width: 200}
+      type: number
+    - name: borrower_full_name
+      admin_ui: {width: 200}
+      type: string
     title: fin_extends_loan
   fin_lender:
     title: fin_lender
@@ -808,7 +817,6 @@ db_schema:
     - name: wallet_id
       admin_ui: {order: 12, width: 200}
       type: string
-  fin_wallet_bank_account_table: {}
   fin_product_group:
     client: full
     server: full
@@ -914,6 +922,9 @@ db_schema:
     - name: loan_disbursed_timestamp
       admin_ui: {width: 200, order: 30}
       type: datetime
+    - name: loan_extension_months
+      admin_ui: {width: 200, order: 31}
+      type: number
     title: fin_loan_details
   fin_user_issues_bugreports:
     title: fin_user_issues_bugreports
