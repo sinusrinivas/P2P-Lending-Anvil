@@ -74,3 +74,5 @@ class star_1_borrower_registration_form_begin(star_1_borrower_registration_form_
         if not dob or dob > datetime.now().date():
             self.dob_label.text = ''
 
+
+

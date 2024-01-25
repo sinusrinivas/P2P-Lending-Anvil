@@ -15,14 +15,14 @@ components:
       spacing_below: small, background: '', horizontal_align: left}
     name: image_1
     layout_properties: {grid_position: 'MHNJJG,ZTQGME'}
-  - type: Button
-    properties: {role: null, align: right, tooltip: '', border: '', enabled: true,
-      foreground: 'theme:On Primary', visible: true, text: Home, font_size: null,
-      font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
-      background: '#00008B', bold: true, underline: false, icon: 'fa:home'}
-    name: button_1
-    layout_properties: {grid_position: 'MHNJJG,OERREO'}
-    event_bindings: {click: button_1_click}
+  - type: form:borrower_registration_form.logout
+    properties: {}
+    name: logout_1
+    layout_properties: {grid_position: 'MHNJJG,UIEIFW'}
+  - type: form:borrower_registration_form.dashboard.Navigation_form_dashboard
+    properties: {}
+    name: navigation_form_dashboard_1
+    layout_properties: {grid_position: 'LKQTLI,ZHDDBU'}
   - type: Label
     properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
       visible: true, text: Loan Details, font_size: 20, font: '', spacing_above: small,

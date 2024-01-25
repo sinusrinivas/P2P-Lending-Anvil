@@ -26,3 +26,8 @@ class application_tracker(application_trackerTemplate):
   
   def home_borrower_registration_button_click(self, **event_args):
     open_form('borrower_registration_form.dashboard')
+
+  def borrower_dashboard_home_linkhome_borrower_registration_button_copy_1_click(self, **event_args):
+    """This method is called when the link is clicked"""
+    pass
+
