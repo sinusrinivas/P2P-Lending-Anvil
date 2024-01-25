@@ -831,6 +831,9 @@ db_schema:
     - name: account_number
       admin_ui: {width: 200, order: 11}
       type: string
+    - name: emi_status
+      admin_ui: {width: 200}
+      type: bool
   fin_borrower_business_type:
     client: full
     server: full
