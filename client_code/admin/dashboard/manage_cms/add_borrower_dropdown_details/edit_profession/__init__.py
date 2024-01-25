@@ -1,4 +1,4 @@
-from ._anvil_designer import edit_businessTemplate
+from ._anvil_designer import edit_professionTemplate
 from anvil import *
 import anvil.server
 import anvil.google.auth, anvil.google.drive
@@ -8,11 +8,11 @@ import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 
-class edit_business(edit_businessTemplate):
+class edit_profession(edit_professionTemplate):
   def __init__(self,selected_row, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
-    self.text_box_1.text = selected_row['borrower_business_type']
+    self.text_box_1.text = selected_row['borrower_profession']
         # Store the selected row for later use
     self.selected_row = selected_row
     # Any code you write here will run before the form opens.
@@ -20,9 +20,12 @@ class edit_business(edit_businessTemplate):
   def button_1_click(self, **event_args):
     """This method is called when the button is clicked"""
     update = self.text_box_1.text
-
+    valid_statuses = ['Student', 'Employee', 'Business']
+    if update not in valid_statuses:
+        alert("Please enter a valid marital status: 'Student', 'Employee', 'Business'.")
+        return
         # Update the 'borrower_gender' field in the database
-    self.selected_row['borrower_business_type'] = update
+    self.selected_row['borrower_profession'] = update
     self.selected_row.update()
         # Close the form
     alert("Changes saved successfully!")
@@ -37,7 +40,7 @@ class edit_business(edit_businessTemplate):
         )
     if confirmation:
             # Get the name of the group to be deleted
-            name = self.selected_row['borrower_business_type']
+            name = self.selected_row['borrower_profession']
 
             # Delete the rows from the product_group table
             self.selected_row.delete()
@@ -50,5 +53,4 @@ class edit_business(edit_businessTemplate):
   def home_button(self, **event_args):
     """This method is called when the button is clicked"""
     open_form('admin.dashboard')
-
 
