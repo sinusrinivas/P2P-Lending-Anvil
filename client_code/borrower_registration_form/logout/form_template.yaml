@@ -1,0 +1,17 @@
+properties:
+- {name: prop, type: string, default_value: '', important: true, default_binding_prop: true}
+- {name: prop_2, type: string, default_value: '', important: true}
+is_package: true
+toolbox_item: {title: Logout}
+custom_component: true
+components:
+- name: login_signup_button
+  properties: {text: Logout, background: '#db2332', foreground: white, bold: true,
+    align: right}
+  type: Button
+  layout_properties:
+    col_widths: {}
+    grid_position: LFJMRH,LWMNOU
+    full_width_row: true
+  event_bindings: {click: login_signup_button_click}
+container: {type: ColumnPanel}

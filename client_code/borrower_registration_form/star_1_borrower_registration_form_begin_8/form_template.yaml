@@ -9,21 +9,21 @@ components:
     spacing_below: small, background: '', horizontal_align: left}
   type: Image
   layout_properties: {grid_position: 'WLJBKQ,UXJYDL'}
-- name: button_3
-  properties: {role: filled-button, align: right, tooltip: '', border: '', enabled: true,
-    foreground: 'theme:On Primary', visible: true, text: Home, font_size: 13, font: '',
-    spacing_above: small, icon_align: left, spacing_below: small, italic: false, background: '#00008B',
-    bold: true, underline: false, icon: 'fa:home'}
-  type: Button
-  layout_properties: {grid_position: 'WLJBKQ,PQWQQX'}
-  event_bindings: {click: button_3_click}
+- type: form:borrower_registration_form.logout
+  properties: {}
+  name: logout_1
+  layout_properties: {grid_position: 'WLJBKQ,JZPJIT'}
+- type: form:borrower_registration_form.navigation_bar_main
+  properties: {}
+  name: navigation_bar_1
+  layout_properties: {grid_position: 'GJLMKG,ZNSMLH'}
 - name: label_1_copy_1
   properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
     visible: true, text: Applicant Bank Details, font_size: null, font: '', spacing_above: small,
     icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
     underline: false, icon: ''}
   type: Label
-  layout_properties: {grid_position: ''}
+  layout_properties: {grid_position: ',undefined'}
 - name: label_2_copy_1
   properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
     text: Account Name, font_size: null, font: '', spacing_above: small, icon_align: left,
