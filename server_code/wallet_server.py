@@ -68,8 +68,6 @@ def generate_wallet_id():
 
     return f"WA{counter:04d}"
 
-    return f"WA{counter:04d}"
-
 def generate_account_id():
     existing_accounts = app_tables.fin_wallet.search(tables.order_by("account_id", ascending=False))
 
@@ -183,7 +181,7 @@ def withdraw_money(email, withdraw_amount, customer_id):
                 wallet_id=str(wallet_id),
                 customer_id=customer_id,
                 transaction_id=transaction_id,
-                amount=withdraw_amount,  # Change to withdraw_amount
+                amount=withdraw_amount,  
                 transaction_type='withdraw',
                 transaction_time_stamp=datetime.now(),
                 status='success'
@@ -222,36 +220,39 @@ def withdraw_money(email, withdraw_amount, customer_id):
 def fetch_profile_data_and_insert(email, customer_id):
     try:
         # Fetch user profile based on customer_id
-        profile = app_tables.user_profile.get(email_user=email)
-
+        profile = app_tables.fin_user_profile.get(email_user=email)
+        
         if profile is not None:
             # Fetch wallet data based on customer_id
             wallet_data = app_tables.fin_wallet.get(user_email=email)
-
+            
             if wallet_data is not None:
                 wallet_id = wallet_data['wallet_id']
                 account_id = wallet_data['account_id']
-
+                
                 # Check if account_number is a string before converting to number
                 account_number_value = int(profile['account_number']) if isinstance(profile['account_number'], str) else profile['account_number']
-
-                # Check if the email is already in the fin_wallet_bank_account_table
-                if not app_tables.fin_wallet_bank_account_table.search(user_email=email):
-                    # Add a row to wallet_bank_account_table
+                
+                # Check if a row with the same user_email already exists in wallet_bank_account_table
+                existing_row = app_tables.fin_wallet_bank_account_table.get(user_email=profile['email_user'])
+                
+                if existing_row is None:
+                    # Add a new row to wallet_bank_account_table
                     app_tables.fin_wallet_bank_account_table.add_row(
-                        user_email=profile['email_user'],
+                        user_email=profile['email_user'], 
                         account_name=profile['account_name'],
                         account_number=account_number_value,
-                        bank_name=profile['select_bank'],
-                        branch_name=profile['account_bank_branch'],
+                        bank_name=profile['select_bank'],  
+                        branch_name=profile['account_bank_branch'],  
                         ifsc_code=profile['ifsc_code'],
                         account_type=profile['account_type'],
                         wallet_id=wallet_id,
                         account_id=account_id
                     )
+                    
                     return True
                 else:
-                    print("A row with the provided email already exists in fin_wallet_bank_account_table.")
+                    print("Row with the same user_email already exists in wallet_bank_account_table.")
                     return False
             else:
                 print("Wallet data not found for the provided customer_id.")

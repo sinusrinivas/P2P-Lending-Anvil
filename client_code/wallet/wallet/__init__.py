@@ -10,8 +10,7 @@ from anvil.tables import app_tables
 from anvil import open_form, server
 # from ...lendor_registration_form.dashboard import lendor_main_form_module as main_form_module
 from ...bank_users.main_form import main_form_module
-
-
+from datetime import datetime
 
 class wallet(walletTemplate):
   def __init__(self, **properties):
@@ -57,9 +56,7 @@ class wallet(walletTemplate):
 
   def deposit_btn_click(self, **event_args):
     """This method is called when the button is clicked"""
-    # self.label_9.visible = False
-    # self.text_box_5.visible = False
-    # self.icon1.visible = False
+    
     self.amount_text_box.placeholder = self.deposit_placeholder
     self.deposit_money_btn.visible = True
     self.withdraw_money_btn.visible = False
@@ -67,9 +64,6 @@ class wallet(walletTemplate):
 
   def withdraw_btn_click(self, **event_args):
     """This method is called when the button is clicked"""
-    # self.label_9.visible = True
-    # self.text_box_5.visible = True
-    # self.icon1.visible = True
     self.amount_text_box.placeholder = self.withdraw_placeholder
     self.deposit_money_btn.visible = False
     self.withdraw_money_btn.visible = True
@@ -81,38 +75,54 @@ class wallet(walletTemplate):
 
   def deposit_money_btn_click(self, **event_args):
     amount_entered = self.amount_text_box.text
-    
+
+    # Check if amount_entered is not empty and is a valid number
+    if not amount_entered or not str(amount_entered).isdigit():
+        alert("Please enter a valid amount.")
+        return
+
     try:
-        deposit_amount = float(amount_entered)
+        deposit_amount = int(amount_entered)
     except ValueError:
-        return  # Handle invalid input
-    
+        alert("Please enter a valid amount.")
+        return
+
     customer_id = 1000
     email = self.email
-    
+
     if anvil.server.call('deposit_money', email=email, deposit_amount=deposit_amount, customer_id=customer_id):
         alert("Deposit successful!")
-    else:
-        alert("Deposit failed!")
+
+        # Update the balance label with the new balance value
+        wallet_row = app_tables.fin_wallet.get(user_email=email)
+        if wallet_row:
+            self.balance_lable.text = f"{wallet_row['wallet_amount']}"  
+    else:  
+      alert("Deposit failed!")  
+ 
 
   def withdraw_money_btn_click(self, **event_args):
     amount_entered = self.amount_text_box.text
     
     try:
-        withdraw_amount = float(amount_entered)
+        withdraw_amount = int(amount_entered)
     except ValueError:
-        return  # Handle invalid input
+        return  
     
     customer_id = 1000
     email = self.email  
     
-    wallet_row = app_tables.fin_wallet.get(user_email=email)  # Retrieve the wallet row for the user
+    wallet_row = app_tables.fin_wallet.get(user_email=email)  
     
     if wallet_row is None:
         wallet_row = app_tables.fin_wallet.add_row(user_email=email, wallet_amount=0)
     
     if anvil.server.call('withdraw_money', email=email, withdraw_amount=withdraw_amount, customer_id=customer_id):
         alert("Withdrawal successful!")
+        # Update the balance label with the new balance value
+        wallet_row = app_tables.fin_wallet.get(user_email=email)
+        if wallet_row:
+            self.balance_lable.text = f"{wallet_row['wallet_amount']}"
     elif wallet_row is not None and withdraw_amount > wallet_row['wallet_amount']:
         alert("Insufficient funds for withdrawal.")
     else:

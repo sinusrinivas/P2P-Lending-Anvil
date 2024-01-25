@@ -110,35 +110,6 @@ class Borr_loan_request(Borr_loan_requestTemplate):
             self.rejected_btn.enabled = False
             self.accepted_btn.visible = False
             self.rejected_btn.visible = False
-
-    # def accepted_btn_click(self, **event_args):
-    #   """This method is called when the button is clicked"""
-    #   # self.accepted_btn_click(selected_row=self.selected_row)
-    #   loan_amount_applied = self.selected_row['loan_amount']
-    
-    #   lender = app_tables.lender.get(customer_id=int(self.selected_row['lender_customer_id']))
-    
-    #   if int(lender['investment']) >= int(loan_amount_applied):
-    #       # Sufficient balance available, proceed with accepting the loan
-    #       self.accepted_btn.visible = False
-    #       self.output_label1.text = "This Borrower Loan is Accepted"
-    #       self.output_label1.foreground = '#0000FF'  # Blue color
-    #       self.output_label1.visible = True
-    #       self.selected_row['loan_updated_status'] = 'accepted'
-    #       self.selected_row.update()
-    #       self.update_ui_based_on_status()
-    #       Notification("Borrower will get notified").show()
-    #       open_form("lendor_registration_form.dashboard.vblr")
-    #   else:
-    #       # Insufficient balance, prompt the user to top-up the amount
-    #       alert("You don't have enough balance. Please add the amount in wallet.", buttons=[("OK")])
-    # #       self.open_opbal_form()
-                                                                                     
-    # # def open_opbal_form(self):
-    # #   try:
-    # #       open_form("wallet.wallet")
-    # #   except Exception as e:
-    # #       print(f"Error opening wallet form: {e}")
         
     def accepted_btn_click(self, **event_args):
         """This method is called when the button is clicked"""
@@ -205,8 +176,11 @@ class Borr_loan_request(Borr_loan_requestTemplate):
 
         # Check the signal and perform actions accordingly
         if signal == "insufficient_balance":
-            alert("Insufficient balance. Please add the amount in the wallet. If not added within 30 min, it will go to lost opportunities.")
+            alert("Warning: Your account balance is insufficient. Please deposit amount into your wallet. If not done within the next 2 minutes, the opportunity may be lost")
             open_form("wallet.wallet")
+        elif signal == "Time_out":
+            alert("The designated time has passed. The loan has moved to the 'Lost Opportunities' status.")
+            open_form("wallet.wallet") 
         elif signal == "pay_to_borrower":
             alert("Pay to Borrower")
             open_form("wallet.wallet")
