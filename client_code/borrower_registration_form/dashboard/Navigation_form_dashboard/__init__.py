@@ -21,13 +21,9 @@ class Navigation_form_dashboard(Navigation_form_dashboardTemplate):
   def contact_main_form_link_click(self, **event_args):
     open_form("borrower_registration_form.dashboard.dashboard_contact")
 
-  def notification_link_click(self, **event_args):
-    """This method is called when the link is clicked"""
-    pass
 
   def wallet_dashboard_link_click(self, **event_args):
-    """This method is called when the link is clicked"""
-    pass
+    open_form("wallet.wallet")
 
   def help_link_click(self, **event_args):
     """This method is called when the link is clicked"""

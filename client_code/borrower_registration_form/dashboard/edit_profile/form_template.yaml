@@ -9,24 +9,14 @@ components:
     spacing_below: small, background: '', horizontal_align: left}
   type: Image
   layout_properties: {grid_position: 'SIKYXE,UKKXTI'}
-- name: home_borrower_registration_form
-  properties: {role: tonal-button, align: right, tooltip: '', border: '', enabled: true,
-    foreground: 'theme:On Primary', visible: true, text: Home, font_size: null, font: '',
-    spacing_above: small, icon_align: left, spacing_below: small, italic: false, background: '#00008B',
-    bold: true, underline: false, icon: 'fa:home'}
-  type: Button
-  layout_properties:
-    col_widths: {}
-    grid_position: SIKYXE,BBRSAR
-  event_bindings: {click: home_borrower_registration_form_click}
 - type: form:borrower_registration_form.logout
   properties: {}
   name: logout_1
   layout_properties: {grid_position: 'SIKYXE,EBGNBO'}
-- type: form:borrower_registration_form.navigation_bar_main
+- type: form:borrower_registration_form.dashboard.Navigation_form_dashboard
   properties: {}
-  name: navigation_bar_1
-  layout_properties: {grid_position: 'VXRKSY,GBFDSC'}
+  name: navigation_form_dashboard_1
+  layout_properties: {grid_position: 'QGLXEE,PLIJYB'}
 - name: label_1_copy_1_copy_1
   properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
     visible: true, text: Edit Profile, font_size: null, font: '', spacing_above: small,

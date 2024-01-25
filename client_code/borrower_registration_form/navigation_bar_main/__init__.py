@@ -26,5 +26,4 @@ class navigation_bar_main(navigation_bar_mainTemplate):
     pass
 
   def wallet_dashboard_link_click(self, **event_args):
-    """This method is called when the link is clicked"""
-    pass
+    open_form("w")
