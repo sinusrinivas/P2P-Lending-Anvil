@@ -39,6 +39,14 @@ class Lender_reg_Institutional_form_2(Lender_reg_Institutional_form_2Template):
     if self.year:
            self.date_picker_1.date = self.year
 
+    options = app_tables.fin_lendor_manage_dropdown.search()
+    options_string = [str(option['business_type']) for option in options]
+    self.drop_down_1.items = options_string
+
+    options = app_tables.fin_lendor_manage_dropdown.search()
+    options_string = [str(option['no_of_employees']) for option in options]
+    self.drop_down_2.items = options_string
+
 
     # Any code you write here will run before the form opens.
 
