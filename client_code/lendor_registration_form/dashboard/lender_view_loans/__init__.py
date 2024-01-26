@@ -22,7 +22,7 @@ class lender_view_loans(lender_view_loansTemplate):
                 q.like('accept%'),
                 q.like('under process%'),
                 q.like('foreclosure%'),
-                q.like('close%')
+                #q.like('close%')
             )
         )
         self.label_5.text = str(len(self.repeating_panel_1.items))

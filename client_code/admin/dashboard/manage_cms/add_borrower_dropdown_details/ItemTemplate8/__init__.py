@@ -14,3 +14,8 @@ class ItemTemplate8(ItemTemplate8Template):
     self.init_components(**properties)
 
     # Any code you write here will run before the form opens.
+  def link_1_click(self, **event_args):
+    """This method is called when the link is clicked"""
+    item_data = self.item
+    open_form('admin.dashboard.manage_cms.add_borrower_dropdown_details.edit_emp_type', selected_row=item_data)
+    
