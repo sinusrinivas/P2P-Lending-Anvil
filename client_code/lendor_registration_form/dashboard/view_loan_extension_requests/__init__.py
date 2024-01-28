@@ -12,21 +12,21 @@ class view_loan_extension_requests(view_loan_extension_requestsTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
-    self.repeating_panel_4_copy.items=app_tables.extends_loan.search()
+    self.repeating_panel.items=app_tables.fin_extends_loan.search()
 
-    self.repeating_panel_1.items = app_tables.extends_loan.search(status=q.like('approved%'))
+    self.repeating_panel_1.items = app_tables.fin_extends_loan.search(status=q.like('approved%'))
     self.label_5.text = str(len(self.repeating_panel_1.items))
 
-    self.repeating_panel_2.items = app_tables.extends_loan.search(status=q.like('rejected%'))
+    self.repeating_panel_2.items = app_tables.fin_extends_loan.search(status=q.like('rejected%'))
     self.label_6.text = str(len(self.repeating_panel_2.items))
 
-    self.repeating_panel_3.items = app_tables.extends_loan.search(status=q.like('under process%'))
+    self.repeating_panel_3.items = app_tables.fin_extends_loan.search(status=q.like('under process%'))
     self.label_5_copy.text = str(len(self.repeating_panel_3.items))
 
-    self.repeating_panel_4.items = app_tables.extends_loan.search(status=q.like('under process%'))
+    self.repeating_panel_4.items = app_tables.fin_extends_loan.search(status=q.like('under process%'))
     self.new_request.text = str(len(self.repeating_panel_4.items))
 
-    self.all.text = str(len(self.repeating_panel_4_copy.items))
+    self.all.text = str(len(self.repeating_panel.items))
   def link_1_click(self, **event_args):
     """This method is called when the link is clicked"""
     open_form("lendor_registration_form.dashboard.avlbal")
@@ -93,9 +93,9 @@ class view_loan_extension_requests(view_loan_extension_requestsTemplate):
     self.label_4.visible = False
     self.data_grid_3.visible = False
     self.new.visible = False
-    self.data_grid_1.visible = False
+    self.data_grid_4.visible = False
     self.label_1.visible = False
-    self.data_grid_1_copy.visible = False
+    self.data_grid_1.visible = False
 
   def button_2_click(self, **event_args):
     """This method is called when the button is clicked"""
@@ -106,9 +106,9 @@ class view_loan_extension_requests(view_loan_extension_requestsTemplate):
     self.label_2.visible = False
     self.data_grid_2.visible = False
     self.new.visible = False
-    self.data_grid_1.visible = False
+    self.data_grid_4.visible = False
     self.label_1.visible = False
-    self.data_grid_1_copy.visible = False
+    self.data_grid_1.visible = False
 
   def button_4_click(self, **event_args):
     """This method is called when the button is clicked"""
@@ -119,9 +119,9 @@ class view_loan_extension_requests(view_loan_extension_requestsTemplate):
     self.label_3.visible = False
     self.data_grid_2_copy.visible = False
     self.new.visible = False
-    self.data_grid_1.visible = False
+    self.data_grid_4.visible = False
     self.label_1.visible = False
-    self.data_grid_1_copy.visible = False
+    self.data_grid_1.visible = False
 
   def button_5_click(self, **event_args):
     """This method is called when the button is clicked"""
@@ -135,11 +135,11 @@ class view_loan_extension_requests(view_loan_extension_requestsTemplate):
     self.label_3.visible = False
     self.data_grid_2_copy.visible = False
     self.label_1.visible = False
-    self.data_grid_1_copy.visible = False
+    self.data_grid_1.visible = False
 
   def button_6_click(self, **event_args):
     """This method is called when the button is clicked"""
-    self.data_grid_1_copy.visible = True
+    self.data_grid_1.visible = True
     self.label_1.visible = True
     self.label_4.visible = False
     self.data_grid_3.visible = False
@@ -148,4 +148,4 @@ class view_loan_extension_requests(view_loan_extension_requestsTemplate):
     self.label_3.visible = False
     self.data_grid_2_copy.visible = False
     self.new.visible = False
-    self.data_grid_1.visible = False
+    self.data_grid_4.visible = False
