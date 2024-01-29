@@ -1,10 +1,4 @@
-properties:
-- {name: prop, type: string, default_value: '', important: true, default_binding_prop: true}
-is_package: true
-events:
-- {name: event, default_event: true}
-toolbox_item: {title: Navigation_bar}
-custom_component: true
+container: {type: ColumnPanel}
 components:
 - name: navbar_links_copy_1
   properties: {role: null, vertical_align: top, spacing: huge, align: center, tooltip: '',
@@ -13,7 +7,7 @@ components:
   type: FlowPanel
   layout_properties:
     col_widths: {}
-    grid_position: SAULTU,EBHUIF
+    grid_position: SAFTFD,NMJLEA
   components:
   - name: borrower_dashboard_home_linkhome_borrower_registration_button_copy_1
     properties: {role: null, url: '', align: center, tooltip: Home, border: '', foreground: white,
@@ -47,4 +41,6 @@ components:
       italic: false, background: '', bold: true, underline: false, icon: 'fa:question-circle'}
     type: Link
     event_bindings: {click: notification_link_click}
-container: {type: ColumnPanel}
+is_package: true
+custom_component: true
+toolbox_item: {title: Lender Navigation bar}
