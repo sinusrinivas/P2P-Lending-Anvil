@@ -352,6 +352,13 @@ components:
     type: ColumnPanel
     layout_properties: {grid_position: 'JKERIG,RKCXYO'}
     components:
+    - type: Label
+      properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
+        visible: true, text: Add No of Employees details, font_size: 18, font: '',
+        spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+        background: '', bold: true, underline: false, icon: ''}
+      name: label_13
+      layout_properties: {grid_position: 'MOHBLA,AZUZDZ'}
     - name: label_4
       properties: {text: No of Employees, align: center}
       type: Label
@@ -389,6 +396,13 @@ components:
     type: ColumnPanel
     layout_properties: {grid_position: 'PJFWVO,VJSTFE'}
     components:
+    - type: Label
+      properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
+        visible: true, text: Add Profession details, font_size: 18, font: '', spacing_above: small,
+        icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+        underline: false, icon: ''}
+      name: label_15
+      layout_properties: {grid_position: 'YJMPEW,WMXJPX'}
     - name: label_5
       properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
         visible: true, text: Profession, font_size: null, font: '', spacing_above: small,
@@ -428,6 +442,13 @@ components:
     type: ColumnPanel
     layout_properties: {grid_position: 'AVTHQO,EJXJOA'}
     components:
+    - type: Label
+      properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
+        visible: true, text: Add Employee type details, font_size: 18, font: '', spacing_above: small,
+        icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+        underline: false, icon: ''}
+      name: label_16
+      layout_properties: {grid_position: 'YHDDSO,TZQSUK'}
     - name: label_6
       properties: {text: Employee Type, align: center}
       type: Label
@@ -464,6 +485,13 @@ components:
     type: ColumnPanel
     layout_properties: {grid_position: 'BQORIN,LCGKRO'}
     components:
+    - type: Label
+      properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
+        visible: true, text: Add Organization Type details, font_size: 18, font: '',
+        spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+        background: '', bold: true, underline: false, icon: ''}
+      name: label_17
+      layout_properties: {grid_position: 'HTBTDP,UDQZHL'}
     - name: label_7
       properties: {text: Organization Type, align: center}
       type: Label
@@ -500,6 +528,13 @@ components:
     type: ColumnPanel
     layout_properties: {grid_position: 'XYTGID,EKUAGS'}
     components:
+    - type: Label
+      properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
+        visible: true, text: Add Account Type details, font_size: 18, font: '', spacing_above: small,
+        icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+        underline: false, icon: ''}
+      name: label_18
+      layout_properties: {grid_position: 'PRGTZM,XPICGQ'}
     - name: label_8
       properties: {text: Account Type, align: center}
       type: Label
@@ -536,6 +571,13 @@ components:
     type: ColumnPanel
     layout_properties: {grid_position: 'IWWPLX,ZWDXQB'}
     components:
+    - type: Label
+      properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
+        visible: true, text: Add Salary Type details, font_size: 18, font: '', spacing_above: small,
+        icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+        underline: false, icon: ''}
+      name: label_14
+      layout_properties: {grid_position: 'TPHGGJ,ZEPRGQ'}
     - name: label_9
       properties: {text: Salary Type, align: center}
       type: Label
