@@ -8,12 +8,14 @@ import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 from anvil import open_form, server
+# from .. import bmain_form_module as main_form_module
 # from ...lendor_registration_form.dashboard import lendor_main_form_module as main_form_module
-from ...bank_users.main_form import main_form_module
+from ...borrower_registration_form.dashboard import main_form_module
 from datetime import datetime
 
 class wallet(walletTemplate):
   def __init__(self, **properties):
+    self.user_id = main_form_module.userId
     
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
@@ -33,10 +35,33 @@ class wallet(walletTemplate):
 
     # self.user_id = main_form_module.userId
     # user_id = self.user_id
-
   def home_main_form_link_click(self, **event_args):
     """This method is called when the link is clicked"""
-    open_form("lendor_registration_form.dashboard")
+    user_request = app_tables.fin_user_profile.get(customer_id=self.user_id)
+    if user_request:
+      self.user_type = user_request['usertype']
+
+    if self.user_type == "lender":
+        open_form("lendor_registration_form.dashboard")
+    else:
+        open_form("borrower_registration_form.dashboard")
+
+  # def home_main_form_link_click(self, **event_args):
+  #   """This method is called when the link is clicked"""
+  #   print("Before getting user_type - user_id:", self.user_id)
+    
+  #   user_request = app_tables.fin_user_profile.get(customer_id=self.user_id)
+    
+  #   if user_request:
+  #       self.user_type = user_request['usertype']
+  #       print("User type retrieved:", self.user_type)
+  #   else:
+  #       print("No user request found for user_id:", self.user_id)
+    
+  #   if self.user_type == "lendor":
+  #       open_form("lendor_registration_form.dashboard")
+  #   else:
+  #       open_form("borrower_registration_form.dashboard")
 
   def about_main_form_link_click(self, **event_args):
     """This method is called when the link is clicked"""

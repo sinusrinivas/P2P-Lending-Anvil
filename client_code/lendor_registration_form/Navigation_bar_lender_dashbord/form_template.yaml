@@ -49,3 +49,5 @@ components:
     type: Link
     event_bindings: {click: wallet_dashboard_link_click}
 is_package: true
+custom_component: true
+toolbox_item: {title: Navigation_bar_lender}

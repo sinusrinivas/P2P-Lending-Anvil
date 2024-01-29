@@ -20,6 +20,14 @@ components:
     name: column_panel_1
     layout_properties: {grid_position: 'LRGVLZ,YDSHFK'}
     components: []
+  - type: form:borrower_registration_form.logout
+    properties: {}
+    name: logout_1
+    layout_properties: {grid_position: 'LRGVLZ,ZYXJOY'}
+  - type: form:lendor_registration_form.Navigation_bar_lender_dashbord
+    properties: {}
+    name: navigation_bar_lender_dashbord_1
+    layout_properties: {grid_position: 'HJDAXH,PJRKZZ'}
   - type: Button
     properties: {role: filled-button, align: right, tooltip: '', border: '', enabled: true,
       foreground: 'theme:On Primary', visible: true, text: Back, font_size: 15, font: '',

@@ -46,5 +46,5 @@ components:
       spacing_above: small, icon_align: left, col_widths: '', spacing_below: small,
       italic: false, background: '', bold: true, underline: false, icon: 'fa:question-circle'}
     type: Link
-    event_bindings: {click: notification_link_click}
+    event_bindings: {click: help_link_click}
 container: {type: ColumnPanel}
