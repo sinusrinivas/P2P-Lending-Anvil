@@ -17,7 +17,7 @@ class edit_gender(edit_genderTemplate):
     self.text_box_1.text = selected_row['borrower_gender']
         # Store the selected row for later use
     self.selected_row = selected_row
-
+    
   def button_1_click(self, **event_args):
     """This method is called when the button is clicked"""
     # Get the updated gender from the textbox

@@ -38,7 +38,7 @@ components:
     event_bindings: {click: button_1_click}
   - name: label_5
     properties: {role: null, align: center, tooltip: '', border: '', foreground: 'theme:On
-        Primary', visible: true, text: '', font_size: null, font: '', spacing_above: small,
+        Primary', visible: true, text: '', font_size: 20, font: '', spacing_above: small,
       icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
       underline: false, icon: ''}
     type: Label
@@ -62,7 +62,7 @@ components:
     event_bindings: {click: button_2_click}
   - name: label_6
     properties: {role: null, align: center, tooltip: '', border: '', foreground: 'theme:On
-        Primary', visible: true, text: '', font_size: null, font: '', spacing_above: small,
+        Primary', visible: true, text: '', font_size: 20, font: '', spacing_above: small,
       icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
       underline: false, icon: ''}
     type: Label
@@ -84,7 +84,7 @@ components:
     event_bindings: {click: button_3_click}
   - name: label_7
     properties: {role: null, align: center, tooltip: '', border: '', foreground: 'theme:On
-        Primary', visible: true, text: '', font_size: null, font: '', spacing_above: small,
+        Primary', visible: true, text: '', font_size: 20, font: '', spacing_above: small,
       icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
       underline: false, icon: ''}
     type: Label
@@ -106,7 +106,7 @@ components:
     event_bindings: {click: button_4_click}
   - name: label_8
     properties: {role: null, align: center, tooltip: '', border: '', foreground: 'theme:On
-        Primary', visible: true, text: '', font_size: null, font: '', spacing_above: small,
+        Primary', visible: true, text: '', font_size: 20, font: '', spacing_above: small,
       icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
       underline: false, icon: ''}
     type: Label
@@ -128,7 +128,7 @@ components:
     event_bindings: {click: button_5_click}
   - name: label_9
     properties: {role: null, align: center, tooltip: '', border: '', foreground: 'theme:On
-        Primary', visible: true, text: '', font_size: null, font: '', spacing_above: small,
+        Primary', visible: true, text: '', font_size: 20, font: '', spacing_above: small,
       icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
       underline: false, icon: ''}
     type: Label
