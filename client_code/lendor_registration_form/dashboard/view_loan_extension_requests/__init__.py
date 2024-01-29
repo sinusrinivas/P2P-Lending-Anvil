@@ -29,7 +29,7 @@ class view_loan_extension_requests(view_loan_extension_requestsTemplate):
     self.all.text = str(len(self.repeating_panel.items))
   def link_1_click(self, **event_args):
     """This method is called when the link is clicked"""
-    open_form("lendor_registration_form.dashboard.avlbal")
+    open_form("lendor_registration_form.dashboard.veiw_available_balance")
 
   def button_1_click(self, **event_args):
     """This method is called when the button is clicked"""
@@ -37,7 +37,7 @@ class view_loan_extension_requests(view_loan_extension_requestsTemplate):
 
   def link_2_click(self, **event_args):
     """This method is called when the link is clicked"""
-    open_form("lendor_registration_form.dashboard.vblr")
+    open_form("lendor_registration_form.dashboard.veiw_borrower_loan_request")
 
   def link_3_click(self, **event_args):
     """This method is called when the link is clicked"""
