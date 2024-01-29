@@ -17,14 +17,14 @@ components:
     layout_properties:
       col_widths: {}
       grid_position: TSKOMM,QRBVPB
-  - name: button_1
-    properties: {role: tonal-button, align: right, tooltip: '', border: '', enabled: true,
-      foreground: 'theme:On Primary', visible: true, text: Home, font_size: null,
-      font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
-      background: '#00008B', bold: true, underline: false, icon: 'fa:home'}
-    type: Button
-    layout_properties: {grid_position: 'TSKOMM,ZHRVJP'}
-    event_bindings: {click: button_1_click}
+  - type: form:borrower_registration_form.logout
+    properties: {}
+    name: logout_1
+    layout_properties: {grid_position: 'TSKOMM,DBEDBZ'}
+  - type: form:lendor_registration_form.Navigation_bar_lender_dashbord
+    properties: {}
+    name: navigation_bar_lender_dashbord_1
+    layout_properties: {grid_position: 'FPUBVR,JTNUTE'}
   - type: Spacer
     properties: {height: 32}
     name: spacer_3

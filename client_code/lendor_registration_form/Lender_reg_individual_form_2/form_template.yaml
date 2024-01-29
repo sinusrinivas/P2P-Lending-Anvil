@@ -17,14 +17,14 @@ components:
       col_widths: {}
       grid_position: ',RHCVUB'
       width: 268
-- type: Button
-  properties: {role: filled-button, align: right, tooltip: '', border: '', enabled: true,
-    foreground: 'theme:On Primary', visible: true, text: Home, font_size: 13, font: '',
-    spacing_above: small, icon_align: left, spacing_below: small, italic: false, background: '#00008B',
-    bold: true, underline: false, icon: 'fa:home'}
-  name: button_3
-  layout_properties: {grid_position: 'DERIWJ,VGKXZP'}
-  event_bindings: {click: button_3_click}
+- type: form:borrower_registration_form.logout
+  properties: {}
+  name: logout_1
+  layout_properties: {grid_position: 'DERIWJ,VGLSQP'}
+- type: form:lendor_registration_form.navigation_bar_main_lender
+  properties: {}
+  name: navigation_bar_main_lender_1
+  layout_properties: {grid_position: 'OOFYWQ,THDGDU'}
 - name: label_5_copy_1
   properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
     visible: true, text: 'Empolyment  Details ', font_size: null, font: '', spacing_above: small,
