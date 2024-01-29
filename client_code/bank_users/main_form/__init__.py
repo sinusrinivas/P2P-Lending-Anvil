@@ -35,7 +35,7 @@ class main_form(main_formTemplate):
         user_module.add_email_and_user_id(user_email)
         main_form_module.email = user_email
         main_form_module.flag = True
-        open_form('bank_users.user_form')
+        open_form('bank_users.basic_registration_form')
       else:
         check_user_registration = user_module.check_user_registration_form_done_or_not_engine(user_email)
         print("main else statement was executed")
@@ -56,7 +56,7 @@ class main_form(main_formTemplate):
         else:
           main_form_module.email = user_email
           main_form_module.flag = False
-          open_form('bank_users.user_form')
+          open_form('bank_users.basic_registration_form')
 
 #-- imp logic dont go up--#
 
@@ -71,8 +71,6 @@ class main_form(main_formTemplate):
   def contact_main_form_link_click(self, **event_args):
     """This method is called when the link is clicked"""
     open_form("bank_users.main_form.contact_main_form")
-
-
 
   def location_main_form_link_click(self, **event_args):
     """This method is called when the link is clicked"""
