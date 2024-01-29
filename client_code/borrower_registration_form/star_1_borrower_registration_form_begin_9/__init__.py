@@ -22,7 +22,7 @@ class star_1_borrower_registration_form_begin_9(star_1_borrower_registration_for
       self.button_2.enabled = False
 
       options = app_tables.fin_borrower_salary_type.search()
-      options_string = [str(option['bo']) for option in options]
+      options_string = [str(option['borrower_salary_type']) for option in options]
       self.drop_down_1.items = options_string
     # Any code you write here will run before the form opens.
 
