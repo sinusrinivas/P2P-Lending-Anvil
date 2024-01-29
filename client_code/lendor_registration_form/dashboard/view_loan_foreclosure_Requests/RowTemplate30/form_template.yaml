@@ -1,13 +1,5 @@
 container: {type: DataRowPanel}
 components:
-- type: Link
-  properties: {role: null, url: '', align: center, tooltip: '', border: '', foreground: '',
-    visible: true, text: View Details, font_size: null, wrap_on: mobile, font: '',
-    col_spacing: medium, spacing_above: small, icon_align: left, col_widths: '', spacing_below: small,
-    italic: false, background: '', bold: true, underline: true, icon: ''}
-  name: link_1
-  layout_properties: {column: NKUDSE}
-  event_bindings: {click: link_1_click}
 - type: Label
   properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
     visible: true, text: '', font_size: null, font: '', spacing_above: small, icon_align: left,
@@ -25,7 +17,7 @@ components:
   name: label_2
   layout_properties: {column: BXHZZF}
   data_bindings:
-  - {property: text, code: 'self.item[''borrower_name'']'}
+  - {property: text, code: 'self.item[''borrower_full_name'']'}
 - type: Label
   properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
     visible: true, text: '', font_size: null, font: '', spacing_above: small, icon_align: left,
@@ -35,4 +27,9 @@ components:
   layout_properties: {column: RRQQLR}
   data_bindings:
   - {property: text, code: 'self.item[''loan_amount'']'}
+- type: Link
+  properties: {}
+  name: link_1
+  layout_properties: {column: NKUDSE}
+  event_bindings: {click: link_1_click}
 is_package: true
