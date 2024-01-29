@@ -7,7 +7,7 @@ import anvil.tables.query as q
 from anvil.tables import app_tables
 import anvil.server
 from datetime import datetime
-from . import bessem
+
 
 @anvil.server.callable
 def add_borrower_step1(full_name,gender,dob,user_id):
@@ -134,7 +134,6 @@ def add_borrower_step9(ifsc,salary_type,select_bank, user_id):
     row[0]['usertype'] = 'borrower'
     row[0]['last_confirm'] = True
     row[0]['form_count']=9
-    row[0]['bessem_value'] = bessem.add_bessem()
 
 
 
