@@ -1,6 +1,6 @@
 container:
   type: ColumnPanel
-  properties: {col_widths: '{}'}
+  properties: {col_widths: '{"NHVYRZ":35,"NYLJOW":25}'}
 components:
 - type: Label
   properties: {}

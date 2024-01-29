@@ -3,7 +3,7 @@ components:
 - name: content_panel_copy
   properties: {col_widths: '{}'}
   type: ColumnPanel
-  layout_properties: {grid_position: 'VKDLWW,SMXOON'}
+  layout_properties: {grid_position: 'AVKZRU,BHOTDK'}
   components:
   - name: image_1
     properties: {role: null, vertical_align: center, height: 32, tooltip: '', border: '',
@@ -22,274 +22,589 @@ components:
     type: Link
     layout_properties: {grid_position: 'JJMMBB,TXJQMK'}
     event_bindings: {click: link_1_click}
-- name: column_panel_1
-  properties: {col_widths: '{"XJQPAP":10,"NFQIDA":35,"CKUOKU":15,"GJKCBP":10,"JWUMWE":35,"OYFIZP":15,"DKOIHS":5,"RBFTQT":10,"GXXOOG":35,"PIRPFM":15,"DLMDAZ":5,"OLUYAB":10,"TPGRUK":35,"ZWDCOK":15,"ZYDBFG":10,"PEXUWW":35,"OXQFEB":15,"TUQUYP":10,"KPFLCP":10,"SNYZFA":35,"AKLMPL":15,"TJZXOS":10,"EMNGBX":12,"ASQNNS":10,"JGXJKI":35,"MRNHOE":15,"CRCJKJ":12,"UNBRWV":10,"TPYTDJ":35,"MNQJUW":15,"FOKZEC":10,"BQBXVK":10,"CIUJSO":35,"XPJCEB":15,"ECVLWK":10,"JFTJEZ":10,"BWEPCL":35,"OLMVMO":15,"MOHWFJ":10,"AMTSDS":24}'}
-  type: ColumnPanel
-  layout_properties: {grid_position: 'TSDZJU,KMNUUI'}
+- name: xy_panel_1
+  properties: {height: 289.9285888671875}
+  type: XYPanel
+  layout_properties: {grid_position: 'IUDNUE,IYPWFL'}
   components:
-  - name: label_1
-    properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
-      visible: true, text: Gender, font_size: null, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
-      underline: false, icon: ''}
-    type: Label
-    layout_properties:
-      col_widths: {}
-      grid_position: DZGFNP,XJQPAP
-  - name: text_box_1
-    properties: {}
-    type: TextBox
-    layout_properties: {grid_position: 'DZGFNP,NFQIDA'}
-  - name: gender_button
+  - name: button_1_copy_2
     properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
-      foreground: black, visible: true, text: ADD, font_size: null, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '#0876E8',
-      bold: true, underline: false, icon: ''}
+      foreground: 'theme:On Primary', visible: true, text: "Gender\n  ", font_size: null,
+      font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+      background: '', bold: false, underline: false, icon: ''}
     type: Button
-    layout_properties:
-      col_widths: {}
-      grid_position: DZGFNP,CKUOKU
+    layout_properties: {grid_position: 'JHFMCI,HYXZID', x: 346.8482131958008, y: 23.607131958007812,
+      width: 95.2634}
     event_bindings: {click: button_1_click}
-  - name: spacer_2
-    properties: {height: 139}
-    type: Spacer
-    layout_properties: {grid_position: 'GINDDT,DKOIHS'}
-  - type: RepeatingPanel
-    properties: {item_template: admin.dashboard.manage_cms.add_lender_dropdown_details.ItemTemplate14}
-    name: repeating_panel_1
-    layout_properties: {grid_position: 'GINDDT,CIZVNB'}
-  - name: label_2
-    properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
-      visible: true, text: Business Type, font_size: null, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
-      underline: false, icon: ''}
-    type: Label
+  - name: outlined_card_2
+    properties: {role: outlined-card, tooltip: '', border: '', foreground: '', visible: true,
+      wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
+      spacing_below: small, background: '#00008B'}
+    type: ColumnPanel
+    layout_properties: {x: 564.5937042236328, y: 20.348158349609378, width: 151.152}
+    components:
+    - name: button_2
+      properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
+        foreground: 'theme:On Primary', visible: true, text: "No of \nemployees",
+        font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small,
+        italic: false, background: '', bold: false, underline: false, icon: ''}
+      type: Button
+      layout_properties: {grid_position: 'FNHLVB,MEZQLN'}
+      event_bindings: {click: No_of_emp_click}
+  - name: outlined_card_1_copy_5
+    properties: {role: outlined-card, tooltip: '', border: '', foreground: '', visible: true,
+      wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
+      spacing_below: small, background: '#00008B'}
+    type: ColumnPanel
     layout_properties:
       col_widths: {}
-      grid_position: OLKTXM,GJKCBP
-  - name: text_box_2
-    properties: {}
-    type: TextBox
-    layout_properties: {grid_position: 'OLKTXM,JWUMWE'}
-    event_bindings: {pressed_enter: text_box_2_pressed_enter}
-  - name: business_button
-    properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
-      foreground: black, visible: true, text: ADD, font_size: null, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '#0876E8',
-      bold: true, underline: false, icon: ''}
-    type: Button
-    layout_properties:
-      col_widths: {}
-      grid_position: OLKTXM,OYFIZP
-    event_bindings: {click: button_1_copy_click}
-  - name: spacer_3
-    properties: {height: 138.42856979370117}
-    type: Spacer
-    layout_properties: {grid_position: 'BCPLJQ,QGLBNY'}
-  - type: RepeatingPanel
-    properties: {item_template: admin.dashboard.manage_cms.add_lender_dropdown_details.ItemTemplate15}
-    name: repeating_panel_2
-    layout_properties: {grid_position: 'BCPLJQ,XWUAIG'}
-  - name: label_3
-    properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
-      visible: true, text: No of Employees, font_size: null, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
-      underline: false, icon: ''}
-    type: Label
-    layout_properties: {grid_position: 'KTOREO,RBFTQT'}
-  - name: text_box_3
-    properties: {}
-    type: TextBox
-    layout_properties: {grid_position: 'KTOREO,GXXOOG'}
-  - name: no_of_emp_button
-    properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
-      foreground: black, visible: true, text: ADD, font_size: null, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '#0876E8',
-      bold: true, underline: false, icon: ''}
-    type: Button
-    layout_properties:
-      col_widths: {}
-      grid_position: KTOREO,PIRPFM
-  - name: spacer_4
-    properties: {height: 147.42855834960938}
-    type: Spacer
-    layout_properties: {grid_position: 'EYLKOQ,DLMDAZ'}
-  - type: RepeatingPanel
-    properties: {item_template: admin.dashboard.manage_cms.add_lender_dropdown_details.ItemTemplate16}
-    name: repeating_panel_3
-    layout_properties: {grid_position: 'EYLKOQ,EAVSUW'}
-  - name: label_4
-    properties: {text: Organization  Type}
-    type: Label
-    layout_properties: {grid_position: 'TOIVWF,OLUYAB'}
-  - name: text_box_4
-    properties: {}
-    type: TextBox
-    layout_properties: {grid_position: 'TOIVWF,TPGRUK'}
-    event_bindings: {pressed_enter: text_box_4_pressed_enter}
-  - name: organization_button
-    properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
-      foreground: black, visible: true, text: ADD, font_size: null, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '#0876E8',
-      bold: true, underline: false, icon: ''}
-    type: Button
-    layout_properties:
-      col_widths: {}
-      grid_position: TOIVWF,ZWDCOK
-  - name: spacer_5
-    properties: {height: 141}
-    type: Spacer
-    layout_properties: {grid_position: 'DKRLSE,TUQUYP'}
-  - type: RepeatingPanel
-    properties: {item_template: admin.dashboard.manage_cms.add_lender_dropdown_details.ItemTemplate17}
-    name: repeating_panel_4
-    layout_properties: {grid_position: 'DKRLSE,SJAXPY'}
-  - name: label_5
-    properties: {text: Employment Type}
-    type: Label
-    layout_properties: {grid_position: 'XMSACT,ZYDBFG'}
-  - name: text_box_5
-    properties: {}
-    type: TextBox
-    layout_properties: {grid_position: 'XMSACT,PEXUWW'}
-  - name: emp_type_button
-    properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
-      foreground: black, visible: true, text: ADD, font_size: null, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '#0876E8',
-      bold: true, underline: false, icon: ''}
-    type: Button
-    layout_properties:
-      col_widths: {}
-      grid_position: XMSACT,OXQFEB
-  - name: spacer_6
-    properties: {height: 122}
-    type: Spacer
-    layout_properties: {grid_position: 'RHLBYI,TJZXOS'}
-  - type: RepeatingPanel
-    properties: {item_template: admin.dashboard.manage_cms.add_lender_dropdown_details.ItemTemplate18}
-    name: repeating_panel_5
-    layout_properties: {grid_position: 'RHLBYI,QBSKEJ'}
-  - name: label_6
-    properties: {text: Salary Type}
-    type: Label
-    layout_properties: {grid_position: 'KOSNSF,KPFLCP'}
-  - name: text_box_6
-    properties: {}
-    type: TextBox
-    layout_properties: {grid_position: 'KOSNSF,SNYZFA'}
-  - name: salary_button
-    properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
-      foreground: black, visible: true, text: ADD, font_size: null, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '#0876E8',
-      bold: true, underline: false, icon: ''}
-    type: Button
-    layout_properties:
-      col_widths: {}
-      grid_position: KOSNSF,AKLMPL
-  - name: spacer_7
-    properties: {height: 130}
-    type: Spacer
-    layout_properties: {grid_position: 'MLDPNQ,EMNGBX'}
-  - type: RepeatingPanel
-    properties: {item_template: admin.dashboard.manage_cms.add_lender_dropdown_details.ItemTemplate20}
-    name: repeating_panel_6
-    layout_properties: {grid_position: 'MLDPNQ,AMTSDS'}
-  - name: label_7
-    properties: {text: Account Type}
-    type: Label
-    layout_properties: {grid_position: 'HNDABQ,ASQNNS'}
-  - name: text_box_7
-    properties: {}
-    type: TextBox
-    layout_properties: {grid_position: 'HNDABQ,JGXJKI'}
-  - name: account_button
-    properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
-      foreground: black, visible: true, text: ADD, font_size: null, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '#0876E8',
-      bold: true, underline: false, icon: ''}
-    type: Button
-    layout_properties:
-      col_widths: {}
-      grid_position: HNDABQ,MRNHOE
-  - name: spacer_8
-    properties: {height: 133.5714111328125}
-    type: Spacer
-    layout_properties: {grid_position: 'BYZRVY,CRCJKJ'}
-  - type: RepeatingPanel
-    properties: {item_template: admin.dashboard.manage_cms.add_lender_dropdown_details.ItemTemplate25}
-    name: repeating_panel_7
-    layout_properties: {grid_position: 'BYZRVY,LPAEGO'}
-  - name: label_8
-    properties: {text: Qualificatons}
-    type: Label
-    layout_properties: {grid_position: 'HPZQPO,UNBRWV'}
-  - name: text_box_8
-    properties: {}
-    type: TextBox
-    layout_properties: {grid_position: 'HPZQPO,TPYTDJ'}
-  - name: qualification_button
-    properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
-      foreground: black, visible: true, text: ADD, font_size: null, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '#0876E8',
-      bold: true, underline: false, icon: ''}
-    type: Button
-    layout_properties:
-      col_widths: {}
-      grid_position: HPZQPO,MNQJUW
-  - name: spacer_9
-    properties: {height: 137}
-    type: Spacer
-    layout_properties: {grid_position: 'OPFEAH,FOKZEC'}
-  - type: RepeatingPanel
-    properties: {item_template: admin.dashboard.manage_cms.add_lender_dropdown_details.ItemTemplate26}
-    name: repeating_panel_8
-    layout_properties: {grid_position: 'OPFEAH,QKEUHA'}
-  - name: label_9
-    properties: {text: Lending Type}
-    type: Label
-    layout_properties: {grid_position: 'DMVMOX,BQBXVK'}
-  - name: text_box_9
-    properties: {}
-    type: TextBox
-    layout_properties: {grid_position: 'DMVMOX,CIUJSO'}
-  - name: lending_type_button
-    properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
-      foreground: black, visible: true, text: ADD, font_size: null, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '#0876E8',
-      bold: true, underline: false, icon: ''}
-    type: Button
-    layout_properties:
-      col_widths: {}
-      grid_position: DMVMOX,XPJCEB
-  - name: spacer_10
-    properties: {height: 139.5714111328125}
-    type: Spacer
-    layout_properties: {grid_position: 'VNWQOL,ECVLWK'}
-  - type: RepeatingPanel
-    properties: {item_template: admin.dashboard.manage_cms.add_lender_dropdown_details.ItemTemplate27}
-    name: repeating_panel_9
-    layout_properties: {grid_position: 'VNWQOL,OCXXSF'}
-  - name: label_10
-    properties: {text: Lending Period}
-    type: Label
-    layout_properties: {grid_position: 'EDXGVK,JFTJEZ'}
-  - name: text_box_10
-    properties: {}
-    type: TextBox
-    layout_properties: {grid_position: 'EDXGVK,BWEPCL'}
-  - name: lending_period_button
-    properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
-      foreground: black, visible: true, text: ADD, font_size: null, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '#0876E8',
-      bold: true, underline: false, icon: ''}
-    type: Button
-    layout_properties: {grid_position: 'EDXGVK,OLMVMO'}
-  - name: spacer_11
-    properties: {height: 147.78570556640625}
-    type: Spacer
-    layout_properties: {grid_position: 'ARFKWE,MOHWFJ'}
-  - type: RepeatingPanel
-    properties: {item_template: admin.dashboard.manage_cms.add_lender_dropdown_details.ItemTemplate28}
-    name: repeating_panel_10
-    layout_properties: {grid_position: 'ARFKWE,GLIDWH'}
+      grid_position: REVWPJ,XJEEVK
+      x: 375.8303375244141
+      y: 23.59821319580078
+      width: 161.978
+    components:
+    - name: button_1_copy_4
+      properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
+        foreground: 'theme:On Primary', visible: true, text: 'Business
+
+          Type', font_size: null, font: '', spacing_above: small, icon_align: left,
+        spacing_below: small, italic: false, background: '', bold: false, underline: false,
+        icon: ''}
+      type: Button
+      layout_properties: {grid_position: 'JHOYUM,RXDVOZ'}
+      event_bindings: {click: business_click}
+  - name: outlined_card_1_copy_4
+    properties: {role: outlined-card, tooltip: '', border: '', foreground: '', visible: true,
+      wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
+      spacing_below: small, background: '#00008B'}
+    type: ColumnPanel
+    layout_properties: {grid_position: 'NLMVZE,NDTUKL', x: 199.21873474121094, y: 23.59821319580078,
+      width: 154.6288666992188}
+    components:
+    - name: marrital_button
+      properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
+        foreground: 'theme:On Primary', visible: true, text: 'Marrital
+
+          status', font_size: null, font: '', spacing_above: small, icon_align: left,
+        spacing_below: small, italic: false, background: '', bold: false, underline: false,
+        icon: ''}
+      type: Button
+      layout_properties: {grid_position: 'ZFWKHG,FNBPFP'}
+      event_bindings: {click: marrital_button_click}
+  - name: outlined_card_1_copy_2
+    properties: {role: outlined-card, tooltip: '', border: '', foreground: '', visible: true,
+      wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '',
+      spacing_below: small, background: '#00008B'}
+    type: ColumnPanel
+    layout_properties: {grid_position: 'NLMVZE,NDTUKL', x: 25.982139587402344, y: 23.59821319580078,
+      width: 151.27238958740233}
+    components:
+    - name: button_1_copy
+      properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
+        foreground: 'theme:On Primary', visible: true, text: 'Gender
+
+
+          ', font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small,
+        italic: false, background: '', bold: false, underline: false, icon: ''}
+      type: Button
+      layout_properties: {grid_position: 'YUTUEO,ZDKIXA'}
+      event_bindings: {click: gender_click}
+  - name: outlined_card_1_copy_3
+    properties: {role: outlined-card, tooltip: '', border: '', foreground: '', visible: true,
+      wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '',
+      spacing_below: small, background: '#00008B'}
+    type: ColumnPanel
+    layout_properties: {x: 22.687502175569534, y: 140.12945774197578, width: 154.6205291748047}
+    components:
+    - name: button_1_copy_6
+      properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
+        foreground: 'theme:On Primary', visible: true, text: 'Employee
+
+          Type', font_size: null, font: '', spacing_above: small, icon_align: left,
+        spacing_below: small, italic: false, background: '', bold: false, underline: false,
+        icon: ''}
+      type: Button
+      layout_properties: {grid_position: 'YUTUEO,ZDKIXA'}
+      event_bindings: {click: emp_type_button}
+  - name: outlined_card_1_copy_6
+    properties: {role: outlined-card, tooltip: '', border: '', foreground: '', visible: true,
+      wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
+      spacing_below: small, background: '#00008B'}
+    type: ColumnPanel
+    layout_properties: {x: 203.9598105251789, y: 139.45979526638985, width: 160.72767639160156}
+    components:
+    - name: button_1_copy_7
+      properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
+        foreground: 'theme:On Primary', visible: true, text: 'Organization
+
+          Type', font_size: null, font: '', spacing_above: small, icon_align: left,
+        spacing_below: small, italic: false, background: '', bold: false, underline: false,
+        icon: ''}
+      type: Button
+      layout_properties: {grid_position: 'YUTUEO,HTHJEB'}
+      event_bindings: {click: organization_click}
+  - name: outlined_card_1_copy
+    properties: {role: outlined-card, tooltip: '', border: '', foreground: '', visible: true,
+      wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
+      spacing_below: small, background: '#00008B'}
+    type: ColumnPanel
+    layout_properties: {x: 393.20083835721016, y: 138.58929660916328, width: 146.34373474121094}
+    components:
+    - name: button_1_copy_5
+      properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
+        foreground: 'theme:On Primary', visible: true, text: 'Account
+
+          Type', font_size: null, font: '', spacing_above: small, icon_align: left,
+        spacing_below: small, italic: false, background: '', bold: false, underline: false,
+        icon: ''}
+      type: Button
+      layout_properties: {grid_position: 'YUTUEO,ZDKIXA'}
+      event_bindings: {click: account_click}
+  - name: outlined_card_1_copy_7
+    properties: {role: outlined-card, tooltip: '', border: '', foreground: '', visible: true,
+      wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '',
+      spacing_below: small, background: '#00008B'}
+    type: ColumnPanel
+    layout_properties: {x: 568.8616659939289, y: 132.8035605251789, width: 145.2455291748047}
+    components:
+    - name: button_1_copy_8
+      properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
+        foreground: 'theme:On Primary', visible: true, text: 'Salary
+
+          Type', font_size: null, font: '', spacing_above: small, icon_align: left,
+        spacing_below: small, italic: false, background: '', bold: false, underline: false,
+        icon: ''}
+      type: Button
+      layout_properties: {grid_position: 'YUTUEO,ZDKIXA'}
+      event_bindings: {click: salary_click}
+  - name: outlined_card_1
+    properties: {role: outlined-card, tooltip: '', border: '', foreground: '', visible: true,
+      wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '',
+      spacing_below: small, background: '#00008B'}
+    type: ColumnPanel
+    layout_properties: {x: 747.7632162868977, y: 21.883936196565628, width: 151.2455291748047}
+    components:
+    - name: button_1
+      properties: {role: null, align: left, tooltip: '', border: '', enabled: true,
+        foreground: 'theme:On Primary', visible: true, text: 'Profession
+
+
+          ', font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small,
+        italic: false, background: '', bold: false, underline: false, icon: ''}
+      type: Button
+      layout_properties: {grid_position: 'YUTUEO,ZDKIXA'}
+      event_bindings: {click: professioon_click}
+- name: column_panel_1
+  properties: {role: null, tooltip: '', border: '', foreground: '', visible: true,
+    wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
+    spacing_below: small, background: ''}
+  type: ColumnPanel
+  layout_properties: {grid_position: 'BQTUSU,ESNBFQ'}
+  components:
+  - name: column_panel_2
+    properties: {role: null, tooltip: '', border: '', foreground: '', visible: false,
+      wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{"ZHKMCK":10,"MRIUZB":50,"ZVWPOF":10,"SUKCJD":35,"CSNNJQ":15}',
+      spacing_below: small, background: ''}
+    type: ColumnPanel
+    layout_properties: {grid_position: 'ELNWPR,IMWSYW'}
+    components:
+    - name: label_10
+      properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
+        visible: true, text: Add Gender details, font_size: 18, font: '', spacing_above: small,
+        icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+        underline: false, icon: ''}
+      type: Label
+      layout_properties: {grid_position: 'HDLRVE,NMTFRV'}
+    - name: label_1
+      properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
+        visible: true, text: Gender, font_size: null, font: '', spacing_above: small,
+        icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+        underline: false, icon: ''}
+      type: Label
+      layout_properties:
+        col_widths: {}
+        grid_position: JDKCYC,ZVWPOF
+    - name: text_box_1
+      properties: {role: outlined, align: left, hide_text: false, tooltip: '', placeholder: '',
+        border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
+        font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
+        background: '', bold: false, underline: false}
+      type: TextBox
+      layout_properties: {grid_position: 'JDKCYC,SUKCJD'}
+      event_bindings: {pressed_enter: text_box_1_pressed_enter}
+    - name: gender_button
+      properties: {role: null, align: left, tooltip: '', border: '', enabled: true,
+        foreground: 'theme:Tertiary Container', visible: true, text: ADD, font_size: null,
+        font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+        background: '#00008B', bold: true, underline: false, icon: ''}
+      type: Button
+      layout_properties:
+        col_widths: {}
+        grid_position: JDKCYC,CSNNJQ
+      event_bindings: {click: gender_button_click}
+    - name: spacer_2
+      properties: {height: 160}
+      type: Spacer
+      layout_properties: {grid_position: 'YHLACU,ZHKMCK'}
+    - name: repeating_panel_1
+      properties: {item_template: admin.dashboard.manage_cms.add_borrower_dropdown_details.ItemTemplate3}
+      type: RepeatingPanel
+      layout_properties: {grid_position: 'YHLACU,MRIUZB'}
+  - name: column_panel_3
+    properties: {role: null, tooltip: '', border: '', foreground: '', visible: false,
+      wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{"MYRYSU":10,"FMAEVI":35,"RJJXSS":15,"PXEDFC":10,"MDMWRX":50}',
+      spacing_below: small, background: ''}
+    type: ColumnPanel
+    layout_properties: {grid_position: 'BPEWPA,GPNRMI'}
+    components:
+    - name: label_11
+      properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
+        visible: true, text: Add Qualification details, font_size: 18, font: '', spacing_above: small,
+        icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+        underline: false, icon: ''}
+      type: Label
+      layout_properties: {grid_position: 'SZCQOZ,KOOONE'}
+    - name: label_2
+      properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
+        visible: true, text: Marrital status, font_size: null, font: '', spacing_above: small,
+        icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+        underline: false, icon: ''}
+      type: Label
+      layout_properties:
+        col_widths: {}
+        grid_position: TCPJKI,MYRYSU
+    - name: text_box_2
+      properties: {role: outlined, align: left, hide_text: false, tooltip: '', placeholder: '',
+        border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
+        font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
+        background: '', bold: false, underline: false}
+      type: TextBox
+      layout_properties: {grid_position: 'TCPJKI,FMAEVI'}
+      event_bindings: {}
+    - name: marital_button
+      properties: {role: null, align: left, tooltip: '', border: '', enabled: true,
+        foreground: 'theme:Tertiary Container', visible: true, text: ADD, font_size: null,
+        font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+        background: '#00008B', bold: true, underline: false, icon: ''}
+      type: Button
+      layout_properties:
+        col_widths: {}
+        grid_position: TCPJKI,RJJXSS
+      event_bindings: {click: marital_button_click}
+    - name: spacer_3
+      properties: {height: 138.42856979370117}
+      type: Spacer
+      layout_properties: {grid_position: 'THVHBG,PXEDFC'}
+    - name: repeating_panel_2
+      properties: {item_template: admin.dashboard.manage_cms.add_borrower_dropdown_details.ItemTemplate4}
+      type: RepeatingPanel
+      layout_properties: {grid_position: 'THVHBG,MDMWRX'}
+  - name: column_panel_4
+    properties: {role: null, tooltip: '', border: '', foreground: '', visible: false,
+      wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{"YEWRHI":10,"OTDEUJ":50,"VNCDQW":10,"KGGDXI":35,"WUQBKZ":15}',
+      spacing_below: small, background: ''}
+    type: ColumnPanel
+    layout_properties: {grid_position: 'HUAZTL,ASIZQH'}
+    components:
+    - name: label_12
+      properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
+        visible: true, text: Add Business Type details, font_size: 18, font: '', spacing_above: small,
+        icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+        underline: false, icon: ''}
+      type: Label
+      layout_properties: {grid_position: 'ZXISOC,XHRAXA'}
+    - name: label_3
+      properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
+        visible: true, text: Business Type, font_size: null, font: '', spacing_above: small,
+        icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+        underline: false, icon: ''}
+      type: Label
+      layout_properties: {grid_position: 'VUQPZH,VNCDQW'}
+    - name: text_box_3
+      properties: {role: outlined, align: left, hide_text: false, tooltip: '', placeholder: '',
+        border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
+        font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
+        background: '', bold: false, underline: false}
+      type: TextBox
+      layout_properties: {grid_position: 'VUQPZH,KGGDXI'}
+    - name: business_button
+      properties: {role: null, align: left, tooltip: '', border: '', enabled: true,
+        foreground: 'theme:Tertiary Container', visible: true, text: ADD, font_size: null,
+        font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+        background: '#00008B', bold: true, underline: false, icon: ''}
+      type: Button
+      layout_properties:
+        col_widths: {}
+        grid_position: VUQPZH,WUQBKZ
+      event_bindings: {click: business_button_click}
+    - name: spacer_4
+      properties: {height: 147.42855834960938}
+      type: Spacer
+      layout_properties: {grid_position: 'XGLXMB,YEWRHI'}
+    - name: repeating_panel_3
+      properties: {item_template: admin.dashboard.manage_cms.add_borrower_dropdown_details.ItemTemplate5}
+      type: RepeatingPanel
+      layout_properties: {grid_position: 'XGLXMB,OTDEUJ'}
+  - name: column_panel_5
+    properties: {role: null, tooltip: '', border: '', foreground: '', visible: false,
+      wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{"QDXMWC":10,"IKBKAY":50,"PNKEXG":10,"ETJZIO":35,"ZMUOEV":15}',
+      spacing_below: small, background: ''}
+    type: ColumnPanel
+    layout_properties: {grid_position: 'JKERIG,RKCXYO'}
+    components:
+    - name: label_13
+      properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
+        visible: true, text: Add No of Employees details, font_size: 18, font: '',
+        spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+        background: '', bold: true, underline: false, icon: ''}
+      type: Label
+      layout_properties: {grid_position: 'MOHBLA,AZUZDZ'}
+    - name: label_4
+      properties: {text: No of Employees, align: center}
+      type: Label
+      layout_properties: {grid_position: 'QMFQUJ,PNKEXG'}
+    - name: text_box_4
+      properties: {role: outlined, align: left, hide_text: false, tooltip: '', placeholder: '',
+        border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
+        font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
+        background: '', bold: false, underline: false}
+      type: TextBox
+      layout_properties: {grid_position: 'QMFQUJ,ETJZIO'}
+      event_bindings: {pressed_enter: text_box_4_pressed_enter}
+    - name: no_of_employee_button
+      properties: {role: null, align: left, tooltip: '', border: '', enabled: true,
+        foreground: 'theme:Tertiary Container', visible: true, text: ADD, font_size: null,
+        font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+        background: '#00008B', bold: true, underline: false, icon: ''}
+      type: Button
+      layout_properties:
+        col_widths: {}
+        grid_position: QMFQUJ,ZMUOEV
+      event_bindings: {click: no_of_emp_click}
+    - name: spacer_5
+      properties: {height: 141}
+      type: Spacer
+      layout_properties: {grid_position: 'WYXHCY,QDXMWC'}
+    - name: repeating_panel_4
+      properties: {item_template: admin.dashboard.manage_cms.add_borrower_dropdown_details.ItemTemplate6}
+      type: RepeatingPanel
+      layout_properties: {grid_position: 'WYXHCY,IKBKAY'}
+  - name: column_panel_6
+    properties: {role: null, tooltip: '', border: '', foreground: '', visible: false,
+      wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{"DRKQUU":10,"EYVNEL":35,"ZLWYDP":15,"BIBMFR":10,"ZFHNOV":50}',
+      spacing_below: small, background: ''}
+    type: ColumnPanel
+    layout_properties: {grid_position: 'PJFWVO,VJSTFE'}
+    components:
+    - name: label_15
+      properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
+        visible: true, text: Add Lending Type details, font_size: 18, font: '', spacing_above: small,
+        icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+        underline: false, icon: ''}
+      type: Label
+      layout_properties: {grid_position: 'YJMPEW,WMXJPX'}
+    - name: label_5
+      properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
+        visible: true, text: Profession, font_size: null, font: '', spacing_above: small,
+        icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+        underline: false, icon: ''}
+      type: Label
+      layout_properties: {grid_position: 'KBWQKY,DRKQUU'}
+    - name: text_box_5
+      properties: {role: outlined, align: left, hide_text: false, tooltip: '', placeholder: '',
+        border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
+        font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
+        background: '', bold: false, underline: false}
+      type: TextBox
+      layout_properties: {grid_position: 'KBWQKY,EYVNEL'}
+    - name: profession_button
+      properties: {role: null, align: left, tooltip: '', border: '', enabled: true,
+        foreground: 'theme:Tertiary Container', visible: true, text: ADD, font_size: null,
+        font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+        background: '#00008B', bold: true, underline: false, icon: ''}
+      type: Button
+      layout_properties:
+        col_widths: {}
+        grid_position: KBWQKY,ZLWYDP
+      event_bindings: {click: profession_click}
+    - name: spacer_6
+      properties: {height: 122}
+      type: Spacer
+      layout_properties: {grid_position: 'JBRVUS,BIBMFR'}
+    - name: repeating_panel_5
+      properties: {item_template: admin.dashboard.manage_cms.add_borrower_dropdown_details.ItemTemplate7}
+      type: RepeatingPanel
+      layout_properties: {grid_position: 'JBRVUS,ZFHNOV'}
+  - name: column_panel_7
+    properties: {role: null, tooltip: '', border: '', foreground: '', visible: false,
+      wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{"YGSFMU":10,"PRNBCJ":50,"INOOVX":10,"UVMZPY":35,"LVNQVQ":15}',
+      spacing_below: small, background: ''}
+    type: ColumnPanel
+    layout_properties: {grid_position: 'AVTHQO,EJXJOA'}
+    components:
+    - name: label_16
+      properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
+        visible: true, text: Add Employee type details, font_size: 18, font: '', spacing_above: small,
+        icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+        underline: false, icon: ''}
+      type: Label
+      layout_properties: {grid_position: 'YHDDSO,TZQSUK'}
+    - name: label_6
+      properties: {text: Employee Type, align: center}
+      type: Label
+      layout_properties: {grid_position: 'AKZUJT,INOOVX'}
+    - name: text_box_6
+      properties: {role: outlined, align: left, hide_text: false, tooltip: '', placeholder: '',
+        border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
+        font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
+        background: '', bold: false, underline: false}
+      type: TextBox
+      layout_properties: {grid_position: 'AKZUJT,UVMZPY'}
+    - name: emp_type_button
+      properties: {role: null, align: left, tooltip: '', border: '', enabled: true,
+        foreground: 'theme:Tertiary Container', visible: true, text: ADD, font_size: null,
+        font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+        background: '#00008B', bold: true, underline: false, icon: ''}
+      type: Button
+      layout_properties:
+        col_widths: {}
+        grid_position: AKZUJT,LVNQVQ
+      event_bindings: {click: emp_type_click}
+    - name: spacer_7
+      properties: {height: 130}
+      type: Spacer
+      layout_properties: {grid_position: 'EVZQPH,YGSFMU'}
+    - name: repeating_panel_6
+      properties: {item_template: admin.dashboard.manage_cms.add_borrower_dropdown_details.ItemTemplate8}
+      type: RepeatingPanel
+      layout_properties: {grid_position: 'EVZQPH,PRNBCJ'}
+  - name: column_panel_8
+    properties: {role: null, tooltip: '', border: '', foreground: '', visible: false,
+      wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{"CJZWDN":10,"YRGFHG":50,"VQAEKD":10,"YKSZRZ":35,"WULNCN":15}',
+      spacing_below: small, background: ''}
+    type: ColumnPanel
+    layout_properties: {grid_position: 'BQORIN,LCGKRO'}
+    components:
+    - name: label_17
+      properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
+        visible: true, text: Add Organization Type details, font_size: 18, font: '',
+        spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+        background: '', bold: true, underline: false, icon: ''}
+      type: Label
+      layout_properties: {grid_position: 'HTBTDP,UDQZHL'}
+    - name: label_7
+      properties: {text: Organization Type, align: center}
+      type: Label
+      layout_properties: {grid_position: 'PZTFHW,VQAEKD'}
+    - name: text_box_7
+      properties: {role: outlined, align: left, hide_text: false, tooltip: '', placeholder: '',
+        border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
+        font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
+        background: '', bold: false, underline: false}
+      type: TextBox
+      layout_properties: {grid_position: 'PZTFHW,YKSZRZ'}
+    - name: organization_button
+      properties: {role: null, align: left, tooltip: '', border: '', enabled: true,
+        foreground: 'theme:Tertiary Container', visible: true, text: ADD, font_size: null,
+        font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+        background: '#00008B', bold: true, underline: false, icon: ''}
+      type: Button
+      layout_properties:
+        col_widths: {}
+        grid_position: PZTFHW,WULNCN
+      event_bindings: {click: organization_button_click}
+    - name: spacer_8
+      properties: {height: 133.5714111328125}
+      type: Spacer
+      layout_properties: {grid_position: 'GGHQIC,CJZWDN'}
+    - name: repeating_panel_7
+      properties: {item_template: admin.dashboard.manage_cms.add_borrower_dropdown_details.ItemTemplate9}
+      type: RepeatingPanel
+      layout_properties: {grid_position: 'GGHQIC,YRGFHG'}
+  - name: column_panel_9
+    properties: {role: null, tooltip: '', border: '', foreground: '', visible: false,
+      wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{"GLARMC":10,"RBXEQX":50,"JJAESS":10,"SIQPBN":35,"SGYFIH":15}',
+      spacing_below: small, background: ''}
+    type: ColumnPanel
+    layout_properties: {grid_position: 'XYTGID,EKUAGS'}
+    components:
+    - name: label_18
+      properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
+        visible: true, text: Add Account Type details, font_size: 18, font: '', spacing_above: small,
+        icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+        underline: false, icon: ''}
+      type: Label
+      layout_properties: {grid_position: 'PRGTZM,XPICGQ'}
+    - name: label_8
+      properties: {text: Account Type, align: center}
+      type: Label
+      layout_properties: {grid_position: 'NZLWLF,JJAESS'}
+    - name: text_box_8
+      properties: {role: outlined, align: left, hide_text: false, tooltip: '', placeholder: '',
+        border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
+        font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
+        background: '', bold: false, underline: false}
+      type: TextBox
+      layout_properties: {grid_position: 'NZLWLF,SIQPBN'}
+    - name: accountbutton
+      properties: {role: null, align: left, tooltip: '', border: '', enabled: true,
+        foreground: 'theme:Tertiary Container', visible: true, text: ADD, font_size: null,
+        font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+        background: '#00008B', bold: true, underline: false, icon: ''}
+      type: Button
+      layout_properties:
+        col_widths: {}
+        grid_position: NZLWLF,SGYFIH
+      event_bindings: {click: account_Type_click}
+    - name: spacer_9
+      properties: {height: 137}
+      type: Spacer
+      layout_properties: {grid_position: 'TGGETL,GLARMC'}
+    - name: repeating_panel_8
+      properties: {item_template: admin.dashboard.manage_cms.add_borrower_dropdown_details.ItemTemplate10}
+      type: RepeatingPanel
+      layout_properties: {grid_position: 'TGGETL,RBXEQX'}
+  - name: column_panel_10
+    properties: {role: null, tooltip: '', border: '', foreground: '', visible: false,
+      wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{"ACRDSD":10,"OXEFAE":35,"OZGSCX":15,"XOPJRZ":10,"FYGSMJ":50}',
+      spacing_below: small, background: ''}
+    type: ColumnPanel
+    layout_properties: {grid_position: 'IWWPLX,ZWDXQB'}
+    components:
+    - name: label_14
+      properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
+        visible: true, text: Add Salary Type details, font_size: 18, font: '', spacing_above: small,
+        icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+        underline: false, icon: ''}
+      type: Label
+      layout_properties: {grid_position: 'TPHGGJ,ZEPRGQ'}
+    - name: label_9
+      properties: {text: Salary Type, align: center}
+      type: Label
+      layout_properties: {grid_position: 'LOSRQA,ACRDSD'}
+    - name: text_box_9
+      properties: {role: outlined, align: left, hide_text: false, tooltip: '', placeholder: '',
+        border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
+        font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
+        background: '', bold: false, underline: false}
+      type: TextBox
+      layout_properties: {grid_position: 'LOSRQA,OXEFAE'}
+    - name: salary_button
+      properties: {role: null, align: left, tooltip: '', border: '', enabled: true,
+        foreground: 'theme:Tertiary Container', visible: true, text: ADD, font_size: null,
+        font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+        background: '#00008B', bold: true, underline: false, icon: ''}
+      type: Button
+      layout_properties:
+        col_widths: {}
+        grid_position: LOSRQA,OZGSCX
+      event_bindings: {click: salary_type_click}
+    - name: spacer_10
+      properties: {height: 139.5714111328125}
+      type: Spacer
+      layout_properties: {grid_position: 'VRTHOW,XOPJRZ'}
+    - name: repeating_panel_9
+      properties: {item_template: admin.dashboard.manage_cms.add_borrower_dropdown_details.ItemTemplate11}
+      type: RepeatingPanel
+      layout_properties: {grid_position: 'VRTHOW,FYGSMJ'}
 is_package: true
