@@ -54,4 +54,25 @@ def user_issues_bugreports(user_issues, specific_issue, user_discription, image,
                                                  email_user=email_user,
                                                  customer_id=coustmer_id)
 
-
+# code for basic details
+@anvil.server.callable
+def add_basic_details(full_name, gender, dob, mobile_no, user_photo, alternate_email, aadhar, aadhar_card, pan, pan_card, street_adress_1, street_address_2, city, pincode, state, country, user_id):
+  row = app_tables.fin_user_profile.search(customer_id=user_id)
+  if row:
+    row[0]['full_name'] = full_name
+    row[0]['gender'] = gender
+    row[0]['date_of_birth'] = dob
+    row[0]['mobile']=mobile_no
+    row[0]['user_photo']=user_photo
+    row[0]['another_email']= alternate_email
+    row[0]['aadhaar_no']=aadhar
+    row[0]['aadhaar_photo']=aadhar_card
+    row[0]['pan_number']=pan
+    row[0]['pan_photo']=pan_card
+    row[0]['street_adress_1'] = street_adress_1
+    row[0]['street_address_2'] = street_address_2
+    row[0]['city'] = city
+    row[0]['state'] = state
+    row[0]['country'] = country
+    row[0]['pincode'] = pincode
+    

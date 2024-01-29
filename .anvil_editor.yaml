@@ -183,6 +183,7 @@ unique_ids:
     borrower_registration_form.dashboard.application_tracker.RowTemplate1: '1698928474442141604886683.00064'
     borrower_registration_form.dashboard.new_loan_request.loan_type: '1698663480920279749801604.1442'
     admin.dashboard.manage_cms.add_borrower_dropdown_details.ItemTemplate9: '1706093219174862056427246.7545'
+    bank_users.basic_registration_form: '1706530260736283711618019.2678'
     admin.dashboard.manage_products.view_product.RowTemplate5: '1700713251863745364072386.9193'
     borrower_registration_form.dashboard.Extension_loan_request.borrower_extension: '1706012495351626694585918.8735'
     borrower_registration_form.dashboard.view_loans.RowTemplate15: '1701149147768679142681951.7627'
