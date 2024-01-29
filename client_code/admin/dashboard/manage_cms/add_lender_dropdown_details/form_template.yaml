@@ -3,7 +3,7 @@ components:
 - name: content_panel_copy
   properties: {col_widths: '{}'}
   type: ColumnPanel
-  layout_properties: {grid_position: 'AVKZRU,BHOTDK'}
+  layout_properties: {grid_position: 'ESYJAK,QOXVRT'}
   components:
   - name: image_1
     properties: {role: null, vertical_align: center, height: 32, tooltip: '', border: '',
@@ -25,7 +25,7 @@ components:
 - name: xy_panel_1
   properties: {height: 289.9285888671875}
   type: XYPanel
-  layout_properties: {grid_position: 'IUDNUE,IYPWFL'}
+  layout_properties: {grid_position: 'MUZPPA,FHHRAL'}
   components:
   - name: button_1_copy_2
     properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
@@ -79,18 +79,18 @@ components:
       spacing_below: small, background: '#00008B'}
     type: ColumnPanel
     layout_properties: {grid_position: 'NLMVZE,NDTUKL', x: 199.21873474121094, y: 23.59821319580078,
-      width: 154.6288666992188}
+      width: 158.6288666992188}
     components:
     - name: marrital_button
       properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
-        foreground: 'theme:On Primary', visible: true, text: 'Marrital
+        foreground: 'theme:On Primary', visible: true, text: 'Qualification
 
-          status', font_size: null, font: '', spacing_above: small, icon_align: left,
-        spacing_below: small, italic: false, background: '', bold: false, underline: false,
-        icon: ''}
+
+          ', font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small,
+        italic: false, background: '', bold: false, underline: false, icon: ''}
       type: Button
       layout_properties: {grid_position: 'ZFWKHG,FNBPFP'}
-      event_bindings: {click: marrital_button_click}
+      event_bindings: {click: qualification_click}
   - name: outlined_card_1_copy_2
     properties: {role: outlined-card, tooltip: '', border: '', foreground: '', visible: true,
       wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '',
@@ -186,24 +186,39 @@ components:
     components:
     - name: button_1
       properties: {role: null, align: left, tooltip: '', border: '', enabled: true,
-        foreground: 'theme:On Primary', visible: true, text: 'Profession
-
-
-          ', font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small,
-        italic: false, background: '', bold: false, underline: false, icon: ''}
+        foreground: 'theme:On Primary', visible: true, text: "Lending \nType", font_size: null,
+        font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+        background: '', bold: false, underline: false, icon: ''}
       type: Button
       layout_properties: {grid_position: 'YUTUEO,ZDKIXA'}
       event_bindings: {click: professioon_click}
+  - name: outlined_card_1_copy_3_copy
+    properties: {role: outlined-card, tooltip: '', border: '', foreground: '', visible: true,
+      wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '',
+      spacing_below: small, background: '#00008B'}
+    type: ColumnPanel
+    layout_properties: {x: 746.8527548611164, y: 133.16514804959297, width: 162.46873474121094}
+    components:
+    - name: button_1_copy_6_copy
+      properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
+        foreground: 'theme:On Primary', visible: true, text: 'Lending
+
+          Period', font_size: null, font: '', spacing_above: small, icon_align: left,
+        spacing_below: small, italic: false, background: '', bold: false, underline: false,
+        icon: ''}
+      type: Button
+      layout_properties: {grid_position: 'EHJCRU,GOZINO'}
+      event_bindings: {click: lending_period_button}
 - name: column_panel_1
   properties: {role: null, tooltip: '', border: '', foreground: '', visible: true,
     wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
     spacing_below: small, background: ''}
   type: ColumnPanel
-  layout_properties: {grid_position: 'BQTUSU,ESNBFQ'}
+  layout_properties: {grid_position: 'RZKPKS,JTWTHB'}
   components:
   - name: column_panel_2
     properties: {role: null, tooltip: '', border: '', foreground: '', visible: false,
-      wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{"ZHKMCK":10,"MRIUZB":50,"ZVWPOF":10,"SUKCJD":35,"CSNNJQ":15}',
+      wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{"ZHKMCK":10,"ZVWPOF":10,"SUKCJD":35,"CSNNJQ":15}',
       spacing_below: small, background: ''}
     type: ColumnPanel
     layout_properties: {grid_position: 'ELNWPR,IMWSYW'}
@@ -246,13 +261,13 @@ components:
       properties: {height: 160}
       type: Spacer
       layout_properties: {grid_position: 'YHLACU,ZHKMCK'}
-    - name: repeating_panel_1
-      properties: {item_template: admin.dashboard.manage_cms.add_borrower_dropdown_details.ItemTemplate3}
-      type: RepeatingPanel
-      layout_properties: {grid_position: 'YHLACU,MRIUZB'}
+    - type: RepeatingPanel
+      properties: {item_template: admin.dashboard.manage_cms.add_lender_dropdown_details.ItemTemplate12}
+      name: repeating_panel_1
+      layout_properties: {grid_position: 'YHLACU,IZIAQS'}
   - name: column_panel_3
     properties: {role: null, tooltip: '', border: '', foreground: '', visible: false,
-      wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{"MYRYSU":10,"FMAEVI":35,"RJJXSS":15,"PXEDFC":10,"MDMWRX":50}',
+      wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{"MYRYSU":10,"FMAEVI":35,"RJJXSS":15,"PXEDFC":10}',
       spacing_below: small, background: ''}
     type: ColumnPanel
     layout_properties: {grid_position: 'BPEWPA,GPNRMI'}
@@ -266,7 +281,7 @@ components:
       layout_properties: {grid_position: 'SZCQOZ,KOOONE'}
     - name: label_2
       properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
-        visible: true, text: Marrital status, font_size: null, font: '', spacing_above: small,
+        visible: true, text: Qualification, font_size: null, font: '', spacing_above: small,
         icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
         underline: false, icon: ''}
       type: Label
@@ -290,18 +305,18 @@ components:
       layout_properties:
         col_widths: {}
         grid_position: TCPJKI,RJJXSS
-      event_bindings: {click: marital_button_click}
+      event_bindings: {click: qualification}
     - name: spacer_3
       properties: {height: 138.42856979370117}
       type: Spacer
       layout_properties: {grid_position: 'THVHBG,PXEDFC'}
-    - name: repeating_panel_2
-      properties: {item_template: admin.dashboard.manage_cms.add_borrower_dropdown_details.ItemTemplate4}
-      type: RepeatingPanel
-      layout_properties: {grid_position: 'THVHBG,MDMWRX'}
+    - type: RepeatingPanel
+      properties: {item_template: admin.dashboard.manage_cms.add_lender_dropdown_details.ItemTemplate13}
+      name: repeating_panel_2
+      layout_properties: {grid_position: 'THVHBG,OWGXRL'}
   - name: column_panel_4
     properties: {role: null, tooltip: '', border: '', foreground: '', visible: false,
-      wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{"YEWRHI":10,"OTDEUJ":50,"VNCDQW":10,"KGGDXI":35,"WUQBKZ":15}',
+      wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{"YEWRHI":10,"VNCDQW":10,"KGGDXI":35,"WUQBKZ":15}',
       spacing_below: small, background: ''}
     type: ColumnPanel
     layout_properties: {grid_position: 'HUAZTL,ASIZQH'}
@@ -341,13 +356,13 @@ components:
       properties: {height: 147.42855834960938}
       type: Spacer
       layout_properties: {grid_position: 'XGLXMB,YEWRHI'}
-    - name: repeating_panel_3
-      properties: {item_template: admin.dashboard.manage_cms.add_borrower_dropdown_details.ItemTemplate5}
-      type: RepeatingPanel
-      layout_properties: {grid_position: 'XGLXMB,OTDEUJ'}
+    - type: RepeatingPanel
+      properties: {item_template: admin.dashboard.manage_cms.add_lender_dropdown_details.ItemTemplate14}
+      name: repeating_panel_3
+      layout_properties: {grid_position: 'XGLXMB,UOXWES'}
   - name: column_panel_5
     properties: {role: null, tooltip: '', border: '', foreground: '', visible: false,
-      wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{"QDXMWC":10,"IKBKAY":50,"PNKEXG":10,"ETJZIO":35,"ZMUOEV":15}',
+      wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{"QDXMWC":10,"PNKEXG":10,"ETJZIO":35,"ZMUOEV":15}',
       spacing_below: small, background: ''}
     type: ColumnPanel
     layout_properties: {grid_position: 'JKERIG,RKCXYO'}
@@ -385,13 +400,13 @@ components:
       properties: {height: 141}
       type: Spacer
       layout_properties: {grid_position: 'WYXHCY,QDXMWC'}
-    - name: repeating_panel_4
-      properties: {item_template: admin.dashboard.manage_cms.add_borrower_dropdown_details.ItemTemplate6}
-      type: RepeatingPanel
-      layout_properties: {grid_position: 'WYXHCY,IKBKAY'}
+    - type: RepeatingPanel
+      properties: {item_template: admin.dashboard.manage_cms.add_lender_dropdown_details.ItemTemplate15}
+      name: repeating_panel_9
+      layout_properties: {grid_position: 'WYXHCY,BXCAWH'}
   - name: column_panel_6
     properties: {role: null, tooltip: '', border: '', foreground: '', visible: false,
-      wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{"DRKQUU":10,"EYVNEL":35,"ZLWYDP":15,"BIBMFR":10,"ZFHNOV":50}',
+      wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{"DRKQUU":10,"EYVNEL":35,"ZLWYDP":15,"BIBMFR":10}',
       spacing_below: small, background: ''}
     type: ColumnPanel
     layout_properties: {grid_position: 'PJFWVO,VJSTFE'}
@@ -405,7 +420,7 @@ components:
       layout_properties: {grid_position: 'YJMPEW,WMXJPX'}
     - name: label_5
       properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
-        visible: true, text: Profession, font_size: null, font: '', spacing_above: small,
+        visible: true, text: Lending Type, font_size: null, font: '', spacing_above: small,
         icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
         underline: false, icon: ''}
       type: Label
@@ -426,18 +441,18 @@ components:
       layout_properties:
         col_widths: {}
         grid_position: KBWQKY,ZLWYDP
-      event_bindings: {click: profession_click}
+      event_bindings: {click: lending_type}
     - name: spacer_6
       properties: {height: 122}
       type: Spacer
       layout_properties: {grid_position: 'JBRVUS,BIBMFR'}
-    - name: repeating_panel_5
-      properties: {item_template: admin.dashboard.manage_cms.add_borrower_dropdown_details.ItemTemplate7}
-      type: RepeatingPanel
-      layout_properties: {grid_position: 'JBRVUS,ZFHNOV'}
+    - type: RepeatingPanel
+      properties: {item_template: admin.dashboard.manage_cms.add_lender_dropdown_details.ItemTemplate16}
+      name: repeating_panel_4
+      layout_properties: {grid_position: 'JBRVUS,YHTKQT'}
   - name: column_panel_7
     properties: {role: null, tooltip: '', border: '', foreground: '', visible: false,
-      wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{"YGSFMU":10,"PRNBCJ":50,"INOOVX":10,"UVMZPY":35,"LVNQVQ":15}',
+      wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{"YGSFMU":10,"INOOVX":10,"UVMZPY":35,"LVNQVQ":15}',
       spacing_below: small, background: ''}
     type: ColumnPanel
     layout_properties: {grid_position: 'AVTHQO,EJXJOA'}
@@ -474,13 +489,13 @@ components:
       properties: {height: 130}
       type: Spacer
       layout_properties: {grid_position: 'EVZQPH,YGSFMU'}
-    - name: repeating_panel_6
-      properties: {item_template: admin.dashboard.manage_cms.add_borrower_dropdown_details.ItemTemplate8}
-      type: RepeatingPanel
-      layout_properties: {grid_position: 'EVZQPH,PRNBCJ'}
+    - type: RepeatingPanel
+      properties: {item_template: admin.dashboard.manage_cms.add_lender_dropdown_details.ItemTemplate17}
+      name: repeating_panel_5
+      layout_properties: {grid_position: 'EVZQPH,UDFWCG'}
   - name: column_panel_8
     properties: {role: null, tooltip: '', border: '', foreground: '', visible: false,
-      wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{"CJZWDN":10,"YRGFHG":50,"VQAEKD":10,"YKSZRZ":35,"WULNCN":15}',
+      wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{"CJZWDN":10,"VQAEKD":10,"YKSZRZ":35,"WULNCN":15}',
       spacing_below: small, background: ''}
     type: ColumnPanel
     layout_properties: {grid_position: 'BQORIN,LCGKRO'}
@@ -517,13 +532,13 @@ components:
       properties: {height: 133.5714111328125}
       type: Spacer
       layout_properties: {grid_position: 'GGHQIC,CJZWDN'}
-    - name: repeating_panel_7
-      properties: {item_template: admin.dashboard.manage_cms.add_borrower_dropdown_details.ItemTemplate9}
-      type: RepeatingPanel
-      layout_properties: {grid_position: 'GGHQIC,YRGFHG'}
+    - type: RepeatingPanel
+      properties: {item_template: admin.dashboard.manage_cms.add_lender_dropdown_details.ItemTemplate18}
+      name: repeating_panel_6
+      layout_properties: {grid_position: 'GGHQIC,UIRJEU'}
   - name: column_panel_9
     properties: {role: null, tooltip: '', border: '', foreground: '', visible: false,
-      wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{"GLARMC":10,"RBXEQX":50,"JJAESS":10,"SIQPBN":35,"SGYFIH":15}',
+      wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{"GLARMC":10,"JJAESS":10,"SIQPBN":35,"SGYFIH":15}',
       spacing_below: small, background: ''}
     type: ColumnPanel
     layout_properties: {grid_position: 'XYTGID,EKUAGS'}
@@ -560,13 +575,13 @@ components:
       properties: {height: 137}
       type: Spacer
       layout_properties: {grid_position: 'TGGETL,GLARMC'}
-    - name: repeating_panel_8
-      properties: {item_template: admin.dashboard.manage_cms.add_borrower_dropdown_details.ItemTemplate10}
-      type: RepeatingPanel
-      layout_properties: {grid_position: 'TGGETL,RBXEQX'}
+    - type: RepeatingPanel
+      properties: {item_template: admin.dashboard.manage_cms.add_lender_dropdown_details.ItemTemplate19}
+      name: repeating_panel_7
+      layout_properties: {grid_position: 'TGGETL,MHDKTV'}
   - name: column_panel_10
     properties: {role: null, tooltip: '', border: '', foreground: '', visible: false,
-      wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{"ACRDSD":10,"OXEFAE":35,"OZGSCX":15,"XOPJRZ":10,"FYGSMJ":50}',
+      wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{"ACRDSD":10,"OXEFAE":35,"OZGSCX":15,"XOPJRZ":10}',
       spacing_below: small, background: ''}
     type: ColumnPanel
     layout_properties: {grid_position: 'IWWPLX,ZWDXQB'}
@@ -603,8 +618,55 @@ components:
       properties: {height: 139.5714111328125}
       type: Spacer
       layout_properties: {grid_position: 'VRTHOW,XOPJRZ'}
-    - name: repeating_panel_9
-      properties: {item_template: admin.dashboard.manage_cms.add_borrower_dropdown_details.ItemTemplate11}
-      type: RepeatingPanel
-      layout_properties: {grid_position: 'VRTHOW,FYGSMJ'}
+    - type: RepeatingPanel
+      properties: {item_template: admin.dashboard.manage_cms.add_lender_dropdown_details.ItemTemplate20}
+      name: repeating_panel_8
+      layout_properties: {grid_position: 'VRTHOW,RDCGMI'}
+  - name: column_panel_11
+    properties: {role: null, tooltip: '', border: '', foreground: '', visible: false,
+      wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{"QYTXCD":15,"PPQIGT":37}',
+      spacing_below: small, background: ''}
+    type: ColumnPanel
+    layout_properties: {grid_position: 'FNLPBP,QCENAC'}
+    components:
+    - name: label_20
+      properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
+        visible: true, text: Add Lending Period details, font_size: 18, font: '',
+        spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+        background: '', bold: true, underline: false, icon: ''}
+      type: Label
+      layout_properties: {grid_position: 'QUNYMA,ZQFMLM'}
+    - name: label_19
+      properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
+        visible: true, text: 'Lending Period
+
+          ', font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small,
+        italic: false, background: '', bold: false, underline: false, icon: ''}
+      type: Label
+      layout_properties: {grid_position: 'ZQLBHW,MJSVRD'}
+    - name: text_box_10
+      properties: {role: outlined, align: left, hide_text: false, tooltip: '', placeholder: '',
+        border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
+        font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
+        background: '', bold: false, underline: false}
+      type: TextBox
+      layout_properties: {grid_position: 'ZQLBHW,JXNKQC'}
+    - name: salary_button_copy
+      properties: {role: null, align: left, tooltip: '', border: '', enabled: true,
+        foreground: 'theme:Tertiary Container', visible: true, text: ADD, font_size: null,
+        font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+        background: '#00008B', bold: true, underline: false, icon: ''}
+      type: Button
+      layout_properties:
+        col_widths: {}
+        grid_position: ZQLBHW,GNIDVN
+      event_bindings: {click: lending_period_button_click}
+    - name: spacer_1
+      properties: {height: 111.4287109375}
+      type: Spacer
+      layout_properties: {grid_position: 'QZEXCE,QYTXCD'}
+    - type: RepeatingPanel
+      properties: {item_template: admin.dashboard.manage_cms.add_lender_dropdown_details.ItemTemplate21}
+      name: repeating_panel_10
+      layout_properties: {grid_position: 'QZEXCE,PPQIGT'}
 is_package: true
