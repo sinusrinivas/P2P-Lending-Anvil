@@ -1,0 +1,8 @@
+container: {type: DataRowPanel}
+components:
+- type: Link
+  properties: {}
+  name: link_1
+  layout_properties: {column: FVKZOT}
+  event_bindings: {click: link_1_click}
+is_package: true
