@@ -15,6 +15,9 @@ class edit_form(edit_formTemplate):
 
     # Any code you write here will run before the form opens.
 
-  def link_1_click(self, **event_args):
-    """This method is called when the link is clicked"""
+  # def link_1_click(self, **event_args):
+  #   """This method is called when the link is clicked"""
+  #   open_form('admin.dashboard.admin_teams.view_profile')
+
+  def button_1_copy_click(self, **event_args):
     open_form('admin.dashboard.admin_teams.view_profile')

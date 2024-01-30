@@ -27,9 +27,9 @@ class add_lender_dropdown_details(add_lender_dropdown_detailsTemplate):
         self.repeating_panel_9.items = app_tables.fin_lendor_no_of_employees.search()
         self.repeating_panel_10.items = app_tables.fin_lendor_lending_period.search()
   
-  def link_1_click(self, **event_args):
-    """This method is called when the link is clicked"""
-    open_form('admin.dashboard.manage_cms.manage_dropdowns')
+  # def link_1_click(self, **event_args):
+  #   """This method is called when the link is clicked"""
+  #   open_form('admin.dashboard.manage_cms.manage_dropdowns')
 
 
   def gender_click(self, **event_args):
@@ -234,6 +234,10 @@ class add_lender_dropdown_details(add_lender_dropdown_detailsTemplate):
     new_row = app_tables.fin_lendor_lending_period.add_row(lendor_lending_period=entered_data)
     self.text_box_10.text = ' '
     self.refresh()
+
+  def button_1_copy_3_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    open_form('admin.dashboard.manage_cms.manage_dropdowns')
 
 
 

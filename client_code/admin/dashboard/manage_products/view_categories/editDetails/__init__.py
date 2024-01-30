@@ -39,10 +39,10 @@ class editDetails(editDetailsTemplate):
             alert("Changes saved successfully!")
             open_form('admin.dashboard.manage_products.view_categories')
       
-    def button_2_click(self, **event_args):
-        """Cancel button click event"""
-        # Close the form without saving changes
-        open_form('admin.dashboard.manage_products.view_categories')
+    # def button_2_click(self, **event_args):
+    #     """Cancel button click event"""
+    #     # Close the form without saving changes
+    #     open_form('admin.dashboard.manage_products.view_categories')
 
 
     def delete_click(self, **event_args):
@@ -58,3 +58,9 @@ class editDetails(editDetailsTemplate):
     def home_button(self, **event_args):
       """This method is called when the button is clicked"""
       open_form('admin.dashboard')
+
+    def button_1_copy_3_click(self, **event_args):
+        """Cancel button click event"""
+        # Close the form without saving changes
+        open_form('admin.dashboard.manage_products.view_categories')
+

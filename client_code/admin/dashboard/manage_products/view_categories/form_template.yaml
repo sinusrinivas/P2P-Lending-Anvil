@@ -14,14 +14,10 @@ components:
     layout_properties:
       col_widths: {}
       grid_position: KFCHQL,LVDSRW
-  - name: button_1_copy_5
-    properties: {role: tonal-button, align: right, tooltip: '', border: '', enabled: true,
-      foreground: 'theme:On Primary', visible: true, text: Home, font_size: null,
-      font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
-      background: '#00008B', bold: false, underline: false, icon: 'fa:home'}
-    type: Button
-    layout_properties: {grid_position: 'KFCHQL,KIERUT'}
-    event_bindings: {click: button_1_copy_5_click}
+  - type: form:admin.dashboard.home_button_admin
+    properties: {}
+    name: home_button_admin_1
+    layout_properties: {grid_position: 'KFCHQL,PBVGXS'}
   - name: data_grid_1
     properties:
       role: null
@@ -41,17 +37,19 @@ components:
       spacing_below: small
       background: ''
     type: DataGrid
-    layout_properties: {grid_position: 'SXIKSY,ZIWMBZ'}
+    layout_properties: {grid_position: 'SXIKSY,LQQROZ'}
     components:
     - name: repeating_panel_1
       properties: {item_template: admin.dashboard.manage_products.view_categories.ItemTemplate2}
       type: RepeatingPanel
-    - name: button_1_copy_2
-      properties: {role: null, align: right, tooltip: '', border: '', enabled: true,
-        foreground: 'theme:On Primary', visible: true, text: Back, font_size: null,
-        font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
-        background: '#00008B', bold: false, underline: false, icon: 'fa:angle-double-left'}
-      type: Button
-      event_bindings: {click: button_1_copy_2_click}
-      layout_properties: {}
+  - type: Button
+    properties: {role: elevated-button, align: center, tooltip: '', border: '', enabled: true,
+      foreground: white, visible: true, text: Back, font_size: null, font: '16', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '#0b2547',
+      bold: true, underline: false, icon: 'fa:backward'}
+    name: button_1_copy_3
+    layout_properties:
+      col_widths: {}
+      grid_position: XYFGGF,WKBBTF
+    event_bindings: {click: button_1_copy_3_click}
 is_package: true

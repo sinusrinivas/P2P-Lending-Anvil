@@ -38,6 +38,10 @@ class view_profile(view_profileTemplate):
             self.label_30.text = self.loan_data['tenure']
             self.label_32.text = self.loan_data['loan_updated_status']
 
-    def link_1_click(self, **event_args):
-        """This method is called when the link is clicked"""
-        open_form('admin.dashboard.loan_management.approved_loans')
+    # def link_1_click(self, **event_args):
+    #     """This method is called when the link is clicked"""
+    #     open_form('admin.dashboard.loan_management.approved_loans')
+
+    def button_1_copy_click(self, **event_args):
+      """This method is called when the button is clicked"""
+      open_form('admin.dashboard.loan_management.approved_loans')

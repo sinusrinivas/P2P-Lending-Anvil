@@ -1,4 +1,4 @@
-from ._anvil_designer import update_formTemplate
+from ._anvil_designer import home_button_adminTemplate
 from anvil import *
 import anvil.server
 import anvil.google.auth, anvil.google.drive
@@ -8,16 +8,12 @@ import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 
-class update_form(update_formTemplate):
+class home_button_admin(home_button_adminTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
 
     # Any code you write here will run before the form opens.
 
-  # def link_1_click(self, **event_args):
-  #   """This method is called when the link is clicked"""
-  #   open_form('admin.dashboard.admin_teams.view_profile')
-
-  def button_1_copy_click(self, **event_args):
-    open_form('admin.dashboard.admin_teams.view_profile')
+  def button_1_click(self, **event_args):
+    open_form('admin.dashboard')

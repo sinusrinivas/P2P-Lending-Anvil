@@ -82,6 +82,10 @@ class lapsed_loans(lapsed_loansTemplate):
 
     self.repeating_panel_1.items = self.final
 
-  def link_1_click(self, **event_args):
-    """This method is called when the link is clicked"""
+  # def link_1_click(self, **event_args):
+  #   """This method is called when the link is clicked"""
+  #   open_form('admin.dashboard.loan_management')
+
+  def button_1_copy_click(self, **event_args):
+    """This method is called when the button is clicked"""
     open_form('admin.dashboard.loan_management')
