@@ -27,9 +27,9 @@ class add_borrower_dropdown_details(add_borrower_dropdown_detailsTemplate):
         self.repeating_panel_9.items = app_tables.fin_borrower_salary_type.search()
 
   
-  def link_1_click(self, **event_args):
-    """This method is called when the link is clicked"""
-    open_form('admin.dashboard.manage_cms')
+  # def link_1_click(self, **event_args):
+  #   """This method is called when the link is clicked"""
+  #   open_form('admin.dashboard.manage_cms')
 
 
   def gender_click(self, **event_args):
@@ -212,6 +212,10 @@ class add_borrower_dropdown_details(add_borrower_dropdown_detailsTemplate):
     new_row = app_tables.fin_borrower_salary_type.add_row(borrower_salary_type=entered_data)
     self.text_box_9.text = ' '
     self.refresh()
+
+  def button_1_copy_3_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    open_form('admin.dashboard.manage_cms')
 
 
 

@@ -1,7 +1,9 @@
-container: {type: ColumnPanel}
+container:
+  type: ColumnPanel
+  properties: {col_widths: '{}'}
 components:
 - name: content_panel
-  properties: {}
+  properties: {col_widths: '{"MOJCMF":30,"GZBKOW":30}'}
   type: ColumnPanel
   layout_properties: {grid_position: 'DJYJED,TOVCEJ'}
   components:
@@ -21,21 +23,12 @@ components:
       layout_properties:
         col_widths: {}
         grid_position: DNHCMV,DTAQMT
-    - name: link_1
-      properties: {role: null, url: '', align: right, tooltip: '', border: '', foreground: '#030852',
-        visible: true, text: Back, font_size: 15, wrap_on: mobile, font: '', col_spacing: medium,
-        spacing_above: small, icon_align: left, col_widths: '{}', spacing_below: small,
-        italic: false, background: '', bold: true, underline: false, icon: 'fa:chevron-circle-left'}
-      type: Link
-      layout_properties: {grid_position: 'DNHCMV,PBHZJU'}
-      event_bindings: {click: link_1_click}
-      components:
-      - type: form:admin.dashboard.home_button_admin
-        properties: {}
-        name: home_button_admin_1
-        layout_properties: {grid_position: 'YTOHCD,VJRAWK'}
+    - type: form:admin.dashboard.home_button_admin
+      properties: {}
+      name: home_button_admin_1
+      layout_properties: {grid_position: 'DNHCMV,TYSUHC'}
   - name: spacer_1
-    properties: {height: 108.21429443359375}
+    properties: {height: 56.21429443359375}
     type: Spacer
     layout_properties: {grid_position: 'PUMNIW,XYKKGR'}
   - name: button_2
@@ -54,4 +47,18 @@ components:
     type: Button
     layout_properties: {grid_position: 'EJHNGX,GZBKOW'}
     event_bindings: {click: button_2_copy_click}
+- type: Spacer
+  properties: {height: 38}
+  name: spacer_2
+  layout_properties: {grid_position: 'UJEWHI,WEIVGI'}
+- type: Button
+  properties: {role: elevated-button, align: center, tooltip: '', border: '', enabled: true,
+    foreground: white, visible: true, text: Back, font_size: null, font: '16', spacing_above: small,
+    icon_align: left, spacing_below: small, italic: false, background: '#0b2547',
+    bold: true, underline: false, icon: 'fa:backward'}
+  name: button_1_copy_3
+  layout_properties:
+    col_widths: {}
+    grid_position: QUSTSE,ZQCIVI
+  event_bindings: {click: button_1_copy_3_click}
 is_package: true

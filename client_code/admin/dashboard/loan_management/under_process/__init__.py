@@ -47,10 +47,14 @@ class under_process(under_processTemplate):
 
       self.repeating_panel_1.items = self.result
 
-  def link_1_click(self, **event_args):
-    """This method is called when the link is clicked"""
-    open_form('admin.dashboard.loan_management')
+  # def link_1_click(self, **event_args):
+  #   """This method is called when the link is clicked"""
+  #   open_form('admin.dashboard.loan_management')
 
   def link_2_click(self, **event_args):
     """This method is called when the link is clicked"""
     open_form('admin.dashboard.performance_tracker')
+
+  def button_1_copy_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    open_form('admin.dashboard.loan_management')

@@ -85,7 +85,10 @@ class update_form(update_formTemplate):
         print(a)
         open_form('admin.dashboard.borrowers.view_profile', self.get)
 
-  def button_1_click(self, **event_args):
+  # def button_1_click(self, **event_args):
+  #   """This method is called when the button is clicked"""
+  #   open_form('admin.dashboard.borrowers.view_profile', self.get)
+
+  def button_1_copy_click(self, **event_args):
     """This method is called when the button is clicked"""
     open_form('admin.dashboard.borrowers.view_profile', self.get)
-  

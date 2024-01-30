@@ -273,8 +273,5 @@ class edit_form(edit_formTemplate):
       print(a)
       open_form('admin.dashboard.borrowers.view_profile', self.get)
 
-  def button_1_click(self, **event_args):
-
   def button_1_copy_click(self, **event_args):
     open_form('admin.dashboard.borrowers.view_profile', self.get)
-
