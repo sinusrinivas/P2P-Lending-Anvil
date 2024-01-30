@@ -1,4 +1,4 @@
-from ._anvil_designer import star_1_borrower_registration_form_begin_8Template
+from ._anvil_designer import star_1_borrower_registration_form_bank_form_1Template
 from anvil import *
 import anvil.server
 import anvil.google.auth, anvil.google.drive
@@ -9,7 +9,7 @@ import anvil.tables.query as q
 from anvil.tables import app_tables
 import re
 
-class star_1_borrower_registration_form_begin_8(star_1_borrower_registration_form_begin_8Template):
+class star_1_borrower_registration_form_bank_form_1(star_1_borrower_registration_form_bank_form_1Template):
   def __init__(self,user_id, **properties):
     self.userId = user_id
     user_data=app_tables.fin_user_profile.get(customer_id=user_id)
@@ -17,7 +17,7 @@ class star_1_borrower_registration_form_begin_8(star_1_borrower_registration_for
       self.text_box_1.text=user_data['account_name']
       self.drop_down_1.selected_value=user_data['account_type']
       self.text_box_3.text=user_data['account_number']
-      self.text_box_4.text=user_data['branch_name']
+      self.text_box_4.text=user_data['bank_name']
       user_data.update()
       
     options = app_tables.fin_borrower_account_type.search()
@@ -32,16 +32,16 @@ class star_1_borrower_registration_form_begin_8(star_1_borrower_registration_for
     account_name = self.text_box_1.text
     account_type = self.drop_down_1.selected_value
     account_number = self.text_box_3.text
-    bank_branch = self.text_box_4.text
+    bank_name = self.text_box_4.text
     user_id = self.userId
-    if not account_name or not account_type or not account_number or not bank_branch:
+    if not account_name or not account_type or not account_number or not bank_name:
         Notification("Please fill all the required fields").show()
     elif not re.match(r'^[A-Za-z\s]+$', account_name):
         Notification("Account name should be valid").show()
     elif not account_number.isdigit():
         Notification("Account number should be valid").show()
     else:
-        anvil.server.call('add_borrower_step8', account_name, account_type, account_number, bank_branch, user_id)
+        anvil.server.call('add_borrower_step8', account_name, account_type, account_number, bank_name, user_id)
         open_form('borrower_registration_form.star_1_borrower_registration_form_begin_9', user_id=self.userId)
 
   def button_1_click(self, **event_args):

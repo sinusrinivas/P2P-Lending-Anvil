@@ -1,4 +1,4 @@
-from ._anvil_designer import star_1_borrower_registration_form_begin_9Template
+from ._anvil_designer import star_1_borrower_registration_form_bank_form_2Template
 from anvil import *
 import anvil.server
 import anvil.google.auth, anvil.google.drive
@@ -8,14 +8,14 @@ import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 
-class star_1_borrower_registration_form_begin_9(star_1_borrower_registration_form_begin_9Template):
+class star_1_borrower_registration_form_bank_form_2(star_1_borrower_registration_form_bank_form_2Template):
   def __init__(self,user_id, **properties):
     self.userId = user_id
     user_data=app_tables.fin_user_profile.get(customer_id=user_id)
     if user_data:
       self.text_box_1.text=user_data['ifsc_code']
       self.drop_down_1.selected_value=user_data['salary_type']
-      self.text_box_2.text=user_data['select_bank']
+      self.text_box_2.text=user_data['bank_branch_name']
       # Set Form properties and Data Bindings.
       self.init_components(**properties)
       self.accepted_terms = False
@@ -29,13 +29,13 @@ class star_1_borrower_registration_form_begin_9(star_1_borrower_registration_for
   def button_2_click(self, **event_args):
     ifsc = self.text_box_1.text
     salary_type = self.drop_down_1.selected_value
-    select_bank = self.text_box_2.text
+    bank_branch = self.text_box_2.text
     # net_bank = self.text_box_3.text
     user_id = self.userId
-    if not ifsc or not salary_type or not select_bank:
+    if not ifsc or not salary_type or not bank_branch:
       Notification("please fill all required fields").show()
     else:
-      anvil.server.call('add_borrower_step9', ifsc,salary_type,select_bank, user_id)
+      anvil.server.call('add_borrower_step9', ifsc,salary_type,bank_branch, user_id)
       open_form('borrower_registration_form.dashboard')
 
   def button_1_click(self, **event_args):

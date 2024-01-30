@@ -59,4 +59,11 @@ class Lender_reg_bankdirect_bank_form_2(Lender_reg_bankdirect_bank_form_2Templat
   def button_3_click(self, **event_args):
     open_form("bank_users.user_form")
     
-    
+  def link_1_copy_3_click(self, **event_args):
+    """This method is called when the link is clicked"""
+    alert('Agreements, Privacy Policy and Applicant should accept following:Please note that any information concealed (as what we ask for), would be construed as illegitimate action on your part and an intentional attempt to hide material information which if found in future, would attract necessary action (s) at your sole cost. Hence, request to be truthful to your best knowledge while sharing your details)')
+
+  def check_box_1_copy_3_change(self, **event_args):
+    """This method is called when this checkbox is checked or unchecked"""
+    self.accepted_terms = self.check_box_1_copy_3.checked
+    self.button_2.enabled = self.accepted_terms
