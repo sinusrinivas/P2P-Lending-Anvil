@@ -18,3 +18,7 @@ class fee_edit_form(fee_edit_formTemplate):
   def link_1_click(self, **event_args):
     """This method is called when the link is clicked"""
     open_form('admin.dashboard.manage_settings.manage_fee')
+
+  def button_1_copy_3_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    open_form('admin.dashboard.manage_settings.manage_fee')

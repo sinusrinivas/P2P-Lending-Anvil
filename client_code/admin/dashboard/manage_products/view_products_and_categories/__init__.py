@@ -25,6 +25,8 @@ class view_products_and_categories(view_products_and_categoriesTemplate):
     """This method is called when the button is clicked"""
     open_form('admin.dashboard.manage_products')
 
+  def button_1_copy_3_click(self, **event_args):
+    open_form('admin.dashboard.manage_products')
 
 
   
