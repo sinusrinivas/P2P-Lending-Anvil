@@ -14,7 +14,7 @@ services:
 - source: /runtime/services/anvil/email.yml
   client_config: {}
   server_config: {}
-startup: {type: form, module: admin.dashboard}
+startup: {type: form, module: bank_users.main_form}
 package_name: bank_client
 allow_embedding: false
 name: P2P Lending App
@@ -29,7 +29,7 @@ db_schema:
     columns: []
     title: fin_wallet_notification
   fin_lendor_business_type:
-    client: full
+    client: none
     server: full
     columns:
     - name: lendor_business_type
@@ -37,7 +37,7 @@ db_schema:
       type: string
     title: fin_lendor_business_type
   fin_lendor_salary_type:
-    client: full
+    client: none
     server: full
     columns:
     - name: lendor_salary_type
@@ -101,7 +101,7 @@ db_schema:
       type: number
     title: fin_wallet
   fin_lendor_lending_type:
-    client: full
+    client: none
     server: full
     columns:
     - name: lendor_lending_type
@@ -332,7 +332,7 @@ db_schema:
       type: string
     title: Users
   fin_lendor_employee_type:
-    client: full
+    client: none
     server: full
     columns:
     - name: lendor_employee_type
@@ -1070,7 +1070,7 @@ db_schema:
       type: string
     title: fin_borrower_gender
   fin_lendor_qualification:
-    client: full
+    client: none
     server: full
     columns:
     - name: lendor_qualification
