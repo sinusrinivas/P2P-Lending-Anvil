@@ -182,6 +182,7 @@ components:
     layout_properties:
       col_widths: {}
       grid_position: SPVYVP,IQVDEL
+    event_bindings: {click: button_1_copy_click}
   - type: Button
     properties: {role: filled-button, align: center, tooltip: '', border: '', enabled: true,
       foreground: '', visible: false, text: Back, font_size: null, font: '', spacing_above: small,
@@ -191,8 +192,9 @@ components:
     layout_properties:
       col_widths: {}
       grid_position: SPVYVP,PDJQCO
+    event_bindings: {click: button_1_click}
   - type: Button
-    properties: {role: filled-button, align: right, tooltip: '', border: '', enabled: true,
+    properties: {role: filled-button, align: center, tooltip: '', border: '', enabled: true,
       foreground: '', visible: false, text: Extension Request, font_size: null, font: '',
       spacing_above: small, icon_align: left, spacing_below: small, italic: false,
       background: '', bold: false, underline: false, icon: ''}
