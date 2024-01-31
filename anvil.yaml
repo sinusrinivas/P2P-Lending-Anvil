@@ -870,9 +870,6 @@ db_schema:
     - name: borrower_email_id
       admin_ui: {width: 200}
       type: string
-    - name: description
-      admin_ui: {width: 200}
-      type: string
     - name: final_emi
       admin_ui: {width: 200}
       type: number
