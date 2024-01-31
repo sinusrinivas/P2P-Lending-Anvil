@@ -733,6 +733,9 @@ db_schema:
     - name: bessem_value
       admin_ui: {width: 200}
       type: number
+    - name: another_person
+      admin_ui: {width: 200, order: 95}
+      type: string
     title: fin_user_profile
   fin_wallet_transactions:
     title: fin_wallet_transactions

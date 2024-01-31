@@ -9,24 +9,24 @@ import anvil.server
 from datetime import datetime
 from datetime import datetime, timezone
 
-@anvil.server.callable
-def add_lendor_frist_form(name,gender,date_of_birth,user_id):
-  row = app_tables.fin_user_profile.search(customer_id = user_id)
-  if row:
-    row[0]['full_name'] = name
-    row[0]['gender'] = gender
-    row[0]['date_of_birth'] = date_of_birth
-    row[0]['form_count'] = 0
+# @anvil.server.callable
+# def add_lendor_frist_form(name,gender,date_of_birth,user_id):
+#   row = app_tables.fin_user_profile.search(customer_id = user_id)
+#   if row:
+#     row[0]['full_name'] = name
+#     row[0]['gender'] = gender
+#     row[0]['date_of_birth'] = date_of_birth
+#     row[0]['form_count'] = 0
 
-@anvil.server.callable
-def add_lendor_second_form(mobile,email,photo,user_id):
-  row = app_tables.fin_user_profile.search(customer_id = user_id)
-  if row:
-    #row[0]['investment'] = investment
-    row[0]['mobile'] = mobile
-    row[0]['another_email'] = email
-    row[0]['user_photo'] = photo
-    row[0]['form_count'] = 1
+# @anvil.server.callable
+# def add_lendor_second_form(mobile,email,photo,user_id):
+#   row = app_tables.fin_user_profile.search(customer_id = user_id)
+#   if row:
+#     #row[0]['investment'] = investment
+#     row[0]['mobile'] = mobile
+#     row[0]['another_email'] = email
+#     row[0]['user_photo'] = photo
+#     row[0]['form_count'] = 1
 
 @anvil.server.callable
 def add_lendor_education_form(qualification,certificate,user_id):
@@ -37,34 +37,30 @@ def add_lendor_education_form(qualification,certificate,user_id):
     row[0]['education_certificate'] = certificate
     
 
-@anvil.server.callable
-def add_lendor_third_form(aadhaar_photo, pan_card, pan_id,aadhaar_card,user_id):
-  row = app_tables.fin_user_profile.search(customer_id = user_id)
-  if row:
-    row[0]['pan_photo'] = pan_id
-    row[0]['pan_number'] = pan_card
-    row[0]['aadhaar_no'] = aadhaar_card
-    row[0]['aadhaar_photo'] = aadhaar_photo
+# @anvil.server.callable
+# def add_lendor_third_form(aadhaar_photo, pan_card, pan_id,aadhaar_card,user_id):
+#   row = app_tables.fin_user_profile.search(customer_id = user_id)
+#   if row:
+#     row[0]['pan_photo'] = pan_id
+#     row[0]['pan_number'] = pan_card
+#     row[0]['aadhaar_no'] = aadhaar_card
+#     row[0]['aadhaar_photo'] = aadhaar_photo
 
-
-
-@anvil.server.callable
-def add_lendor_four_form(street_adress_1,street_address_2,city,user_id):
-  row = app_tables.fin_user_profile.search(customer_id = user_id)
-  if row:
-    row[0]['street_adress_1'] = street_adress_1
-    row[0]['street_address_2'] = street_address_2
-    row[0]['city'] = city
-
-
+# @anvil.server.callable
+# def add_lendor_four_form(street_adress_1,street_address_2,city,user_id):
+#   row = app_tables.fin_user_profile.search(customer_id = user_id)
+#   if row:
+#     row[0]['street_adress_1'] = street_adress_1
+#     row[0]['street_address_2'] = street_address_2
+#     row[0]['city'] = city
                           
-@anvil.server.callable
-def add_lendor_five_form(pincode,state,country,user_id):
-  row = app_tables.fin_user_profile.search(customer_id = user_id)
-  if row:
-    row[0]['state'] = state
-    row[0]['country'] = country
-    row[0]['pincode'] = pincode
+# @anvil.server.callable
+# def add_lendor_five_form(pincode,state,country,user_id):
+#   row = app_tables.fin_user_profile.search(customer_id = user_id)
+#   if row:
+#     row[0]['state'] = state
+#     row[0]['country'] = country
+#     row[0]['pincode'] = pincode
 
 
 
@@ -72,7 +68,13 @@ def add_lendor_five_form(pincode,state,country,user_id):
 def add_lendor_six_form(lending_type, investment,lending_period, user_id):
   row = app_tables.fin_lender.add_row(investment=investment, lending_type=lending_type,lending_period=lending_period,customer_id = user_id)
     
-    
+@anvil.server.callable
+def update_another_person(user_profile_id, selected_person):
+
+  user_profile = app_tables.fin_user_profile.get(user_profile_id=user_profile_id)
+  user_profile['another_person'] = selected_person
+  user_profile.save()
+
 @anvil.server.callable
 def add_lendor_individual_form_1(company_name,org_type,emp_type,user_id):
   row = app_tables.fin_user_profile.search(customer_id = user_id)
