@@ -80,10 +80,10 @@ class borrower_extension(borrower_extensionTemplate):
             else:
                 loan_details_row = loan_details_row['loan_extension_months']
                 self.text_box_1.text = str(loan_details_row)
+                self.button_1.visible = True
                 self.button_2.visible = False 
                 self.label_5_copy.visible = True
-                self.button_1.visible = False
-                self.button_1_copy.visible = True
+                self.button_1_copy.visible = False
             
             # Fetch scheduled payments from fin_emi_table
             loan_id = selected_row['loan_id']
