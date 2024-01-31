@@ -15,11 +15,11 @@ def generate_user_id():
         highest_coustmer_id = find_highest_amigos_id()
         return highest_coustmer_id + 1
     else:
-        return 1000000
+        return 100000
 
 def find_highest_amigos_id():
     table_data = app_tables.fin_user_profile.search()
-    highest_id = 999
+    highest_id = 99999
     for row in table_data:
         coustmer_id = row['customer_id']
         if coustmer_id > highest_id:
@@ -75,18 +75,7 @@ def registration_engine():
   pass
 
 
-# def check_user_registration_form_done_or_not_engine(email):
-#   userId = find_user_id(email)
-#   user_talble = app_tables.user_profile.get_by_id(userId)
-#   print(user_talble)
-#   if user_talble == None:
-#     print("else statement was executed ")
-#     return False
-#   else:
-#     check_one = user_talble['last_confirm']
-#     print("check one form last check  ", check_one)
-#     return check_one
-  
+
 
 def check_user_registration_form_done_or_not_engine(email):
   userId = find_user_id(email)
