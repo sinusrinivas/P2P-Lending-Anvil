@@ -25,7 +25,7 @@ class borrower_extension(borrower_extensionTemplate):
         self.label_5_copy_2.text = "Loan Extension Request is Accepted"
         self.label_5_copy_3.text = "Loan Extension Request is Rejected"
         product_id_to_search = selected_row['product_id']
-        data = tables.app_tables.product_details.search(product_id=product_id_to_search)
+        data = tables.app_tables.fin_product_details.search(product_id=product_id_to_search)
         self.foreclosure_type_lst = [] 
         self.extension_fee_lst = []
         for i in data:
@@ -36,7 +36,7 @@ class borrower_extension(borrower_extensionTemplate):
         self.extension_fee.text = self.extension_fee_lst[0]
 
         loan_id = selected_row['loan_id']
-        loan_details_row = app_tables.loan_details.get(loan_id=loan_id)
+        loan_details_row = app_tables.fin_loan_details.get(loan_id=loan_id)
       
         # Check status for the selected loan ID
         loan_id = selected_row['loan_id']
@@ -106,11 +106,11 @@ class borrower_extension(borrower_extensionTemplate):
 
     def button_1_click(self, **event_args):
         """This method is called when the Back button is clicked"""
-        open_form('b.Extension_Loan_request')
+        open_form('borrower_registration_form.dashboard.Extension_loan_request')
 
     def button_3_click(self, **event_args):
         """This method is called when the Close button is clicked"""
-        open_form('bank_users.borrower_dashboard')
+        open_form('borrower_registration_form.dashboard')
 
     def button_2_click(self, **event_args):
         """This method is called when the Submit Extension Request button is clicked"""
@@ -121,7 +121,7 @@ class borrower_extension(borrower_extensionTemplate):
             loan_extension_months = int(self.text_box_1.text.strip())
 
             # Check if a row with the specified loan_id already exists in loan_details
-            existing_row = app_tables.loan_details.get(loan_id=loan_id)
+            existing_row = app_tables.fin_loan_details.get(loan_id=loan_id)
 
             if existing_row is not None:
                 # Update the existing row
@@ -134,7 +134,7 @@ class borrower_extension(borrower_extensionTemplate):
                 )
 
             # Close the current form or navigate to another form if needed
-            open_form('bank_users.borrower_dashboard.Extension_Loan_request.borrower_extension.extension2', selected_row = self.selected_row, loan_extension_months = loan_extension_months)
+            open_form('borrower_registration_form.dashboard.Extension_loan_request.borrower_extension.extension2', selected_row = self.selected_row, loan_extension_months = loan_extension_months)
 
     def validate_extension_months(self):
         """Validate the extension months entered by the borrower"""
@@ -153,4 +153,4 @@ class borrower_extension(borrower_extensionTemplate):
 
     def button_1_copy_click(self, **event_args):
       """This method is called when the button is clicked"""
-      open_form('bank_users.borrower_dashboard.Extension_Loan_request')
+      open_form('borrower_registration_form.dashboard.Extension_loan_request')
