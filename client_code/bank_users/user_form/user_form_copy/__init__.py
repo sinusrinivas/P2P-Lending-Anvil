@@ -40,8 +40,8 @@ class user_form_copy(user_form_copyTemplate):
 
   def borrower_button_click(self, **event_args):
     userid = self.user_id
-    open_form('borrower_registration_form.star_1_borrower_registration_form_begin',user_id=userid)
+    open_form('borrower_registration_form.borrower_registration_form_1_education',user_id=userid)
 
   def lendor_button_click(self, **event_args):
     userid = self.user_id
-    open_form('lendor_registration_form.Lender_reg_form_1',user_id=userid)
+    open_form('lendor_registration_form.lender_reg_form_1_education_form',user_id=userid)

@@ -9,43 +9,43 @@ import anvil.server
 from datetime import datetime
 
 
-@anvil.server.callable
-def add_borrower_step1(full_name,gender,dob,user_id):
-  row = app_tables.fin_user_profile.search(customer_id=user_id)
-  if row:
-    row[0]['full_name'] = full_name
-    row[0]['gender'] = gender
-    row[0]['date_of_birth'] = dob
-    row[0]['form_count']=0
+# @anvil.server.callable
+# def add_borrower_step1(full_name,gender,dob,user_id):
+#   row = app_tables.fin_user_profile.search(customer_id=user_id)
+#   if row:
+#     row[0]['full_name'] = full_name
+#     row[0]['gender'] = gender
+#     row[0]['date_of_birth'] = dob
+#     row[0]['form_count']=0
 
-@anvil.server.callable
-def add_borrower_3a1_form(street_adress_1,street_address_2,city,user_id):
-  row = app_tables.fin_user_profile.search(customer_id=user_id)
-  if row:
-    row[0]['street_adress_1'] = street_adress_1
-    row[0]['street_address_2'] = street_address_2
-    row[0]['city'] = city    
-    row[0]['form_count']=3
-@anvil.server.callable
-def add_borrower_step2(mobile_no,user_photo,alternate_email,user_id):
-  row=app_tables.fin_user_profile.search(customer_id=user_id)
-  if row:
-    row[0]['mobile']=mobile_no
-    row[0]['user_photo']=user_photo
-    row[0]['another_email']= alternate_email
-    row[0]['form_count']=1
+# @anvil.server.callable
+# def add_borrower_3a1_form(street_adress_1,street_address_2,city,user_id):
+#   row = app_tables.fin_user_profile.search(customer_id=user_id)
+#   if row:
+#     row[0]['street_adress_1'] = street_adress_1
+#     row[0]['street_address_2'] = street_address_2
+#     row[0]['city'] = city    
+#     row[0]['form_count']=3
+# @anvil.server.callable
+# def add_borrower_step2(mobile_no,user_photo,alternate_email,user_id):
+#   row=app_tables.fin_user_profile.search(customer_id=user_id)
+#   if row:
+#     row[0]['mobile']=mobile_no
+#     row[0]['user_photo']=user_photo
+#     row[0]['another_email']= alternate_email
+#     row[0]['form_count']=1
 
 
 
-@anvil.server.callable
-def add_borrower_step3(aadhar,aadhar_card,pan,pan_card,user_id):
-  row=app_tables.fin_user_profile.search(customer_id=user_id)
-  if row:
-    row[0]['aadhaar_no']=aadhar
-    row[0]['aadhaar_photo']=aadhar_card
-    row[0]['pan_number']=pan
-    row[0]['pan_photo']=pan_card
-    row[0]['form_count']=2
+# @anvil.server.callable
+# def add_borrower_step3(aadhar,aadhar_card,pan,pan_card,user_id):
+#   row=app_tables.fin_user_profile.search(customer_id=user_id)
+#   if row:
+#     row[0]['aadhaar_no']=aadhar
+#     row[0]['aadhaar_photo']=aadhar_card
+#     row[0]['pan_number']=pan
+#     row[0]['pan_photo']=pan_card
+#     row[0]['form_count']=2
 
 
 @anvil.server.callable
