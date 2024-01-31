@@ -1,4 +1,4 @@
-from ._anvil_designer import star_1_borrower_registration_form_begin_7Template
+from ._anvil_designer import star_1_borrower_registration_form_begin_loanTemplate
 from anvil import *
 import anvil.server
 import anvil.google.auth, anvil.google.drive
@@ -8,7 +8,7 @@ import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 
-class star_1_borrower_registration_form_begin_7(star_1_borrower_registration_form_begin_7Template):
+class star_1_borrower_registration_form_begin_loan(star_1_borrower_registration_form_begin_loanTemplate):
   def __init__(self,user_id, **properties):
     self.init_components(**properties)
     self.userId = user_id

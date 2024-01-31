@@ -30,7 +30,7 @@ class star_1_borrower_registration_form_bank_form_2(star_1_borrower_registration
     ifsc = self.text_box_1.text
     salary_type = self.drop_down_1.selected_value
     bank_branch = self.text_box_2.text
-    # net_bank = self.text_box_3.text
+    
     user_id = self.userId
     if not ifsc or not salary_type or not bank_branch:
       Notification("please fill all required fields").show()
