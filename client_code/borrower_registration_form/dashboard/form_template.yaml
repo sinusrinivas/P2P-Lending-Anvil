@@ -140,9 +140,10 @@ components:
     event_bindings: {click: outlined_button_2_click}
   - name: extended_loans
     properties: {role: outlined-button, align: center, tooltip: '', border: '', enabled: true,
-      foreground: 'theme:On Primary', visible: true, text: 'Extended Loan Request                      ',
+      foreground: 'theme:On Primary', visible: false, text: 'Extended Loan Request                      ',
       font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small,
       italic: false, background: '#00008B', bold: false, underline: false, icon: ''}
     type: Button
-    layout_properties: {row: YYBOUA, width_xs: 3, col_xs: 0, width: 117.056}
+    layout_properties: {row: YYBOUA, width_xs: 3, col_xs: 0, width: 89.7222}
+    event_bindings: {click: extended_loans_click}
 is_package: true

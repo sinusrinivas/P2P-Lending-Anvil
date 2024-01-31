@@ -783,9 +783,6 @@ db_schema:
     - name: borrower_email
       admin_ui: {width: 200, order: 2}
       type: string
-    - name: scheduled_payment
-      admin_ui: {width: 200, order: 3}
-      type: number
     - name: payment_number
       admin_ui: {width: 200, order: 4}
       type: number
@@ -813,6 +810,15 @@ db_schema:
     - name: emi_status
       admin_ui: {width: 200}
       type: bool
+    - name: scheduled_payment
+      admin_ui: {order: 13, width: 200}
+      type: date
+    - name: actual_payment_made
+      admin_ui: {width: 200, order: 14}
+      type: date
+    - name: next_payment
+      admin_ui: {width: 200, order: 15}
+      type: date
   fin_borrower_business_type:
     client: full
     server: full
@@ -870,15 +876,15 @@ db_schema:
     - name: borrower_email_id
       admin_ui: {width: 200}
       type: string
-    - name: description
-      admin_ui: {width: 200}
-      type: string
     - name: final_emi
       admin_ui: {width: 200}
       type: number
     - name: lender_email_id
       admin_ui: {width: 200}
       type: string
+    - name: extension_request_date
+      admin_ui: {width: 200, order: 18}
+      type: datetime
     title: fin_extends_loan
   fin_lendor_gender_2:
     title: fin_lendor_gender

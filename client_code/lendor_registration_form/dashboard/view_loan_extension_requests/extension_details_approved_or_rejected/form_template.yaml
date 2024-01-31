@@ -159,15 +159,6 @@ components:
       layout_properties:
         col_widths: {}
         grid_position: REUUJN,YJRARP
-  - type: Button
-    properties: {role: filled-button, align: center, tooltip: '', border: '', enabled: true,
-      foreground: '', visible: true, text: Back, font_size: null, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
-      underline: false, icon: ''}
-    name: button_1
-    layout_properties:
-      col_widths: {}
-      grid_position: HKRHTB,XLZWSN
 - type: FlowPanel
   properties: {}
   name: navbar_links

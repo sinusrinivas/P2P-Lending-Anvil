@@ -7,6 +7,7 @@ import anvil.users
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
+from datetime import datetime, timedelta
 
 class extension2(extension2Template):
     def __init__(self, selected_row,loan_extension_months, **properties):
@@ -84,10 +85,11 @@ class extension2(extension2Template):
                     new_emi = self.new_emi_amount,
                     total_extension_months = self.total_extension_months,
                     reason=reason,
-                    status='under process'
+                    status='under process',
+                    extension_request_date = datetime.now()
                 )
                 alert("Extension request submitted successfully!", title="Success")
-                open_form('bank_users.borrower_dashboard.Extension_Loan_request')
+                open_form('borrower_registration_form.dashboard.Extension_loan_request')
             else:
                 alert('Please enter a reason for extension.')
         else:
@@ -95,8 +97,8 @@ class extension2(extension2Template):
 
     def button_1_click(self, **event_args):
       """This method is called when the button is clicked"""
-      open_form('bank_users.borrower_dashboard')
+      open_form('borrower_registration_form.dashboard')
 
     def button_2_click(self, **event_args):
       """This method is called when the button is clicked"""
-      open_form('bank_users.borrower_dashboard.Extension_Loan_request.borrower_extension', selected_row = self.selected_row)
+      open_form('borrower_registration_form.dashboard.Extension_loan_request.borrower_extension', selected_row = self.selected_row)
