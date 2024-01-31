@@ -272,7 +272,7 @@ components:
       grid_position: QHWSYK,HARUDK
   - type: DataGrid
     properties:
-      role: tonal-data-grid
+      role: null
       columns:
       - {id: EKEVNE, title: Loan ID, data_key: column_1, $$hashKey: 'object:27405'}
       - {id: AAUTON, title: Borrower Name, data_key: column_2, $$hashKey: 'object:27406'}
@@ -283,7 +283,7 @@ components:
       border: ''
       foreground: ''
       rows_per_page: 20
-      visible: false
+      visible: true
       wrap_on: never
       show_page_controls: true
       spacing_above: small
@@ -307,7 +307,7 @@ components:
       grid_position: YGGCZE,VOBKGG
   - type: DataGrid
     properties:
-      role: tonal-data-grid
+      role: null
       columns:
       - {id: EKEVNE, title: Loan ID, data_key: column_1, $$hashKey: 'object:27405'}
       - {id: AAUTON, title: Borrower Name, data_key: column_2, $$hashKey: 'object:27406'}
@@ -318,7 +318,7 @@ components:
       border: ''
       foreground: ''
       rows_per_page: 20
-      visible: false
+      visible: true
       wrap_on: never
       show_page_controls: true
       spacing_above: small

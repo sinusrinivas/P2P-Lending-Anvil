@@ -32,7 +32,7 @@ class extension_details_approved_or_rejected(extension_details_approved_or_rejec
 
   def button_1_click(self, **event_args):
     """This method is called when the button is clicked"""
-    open_form('lendor_registration_form.dashboard.view_loan_extension_requests.extension_details',  selected_row = self.selected_row)
+    open_form('lendor_registration_form.dashboard.vler.extension_details',  selected_row = self.selected_row)
 
   def button_1_copy_click(self, **event_args):
     """This method is called when the button is clicked"""

@@ -1,4 +1,22 @@
-from ._anvil_designer import Extension_loan_requestTemplate
+# from ._anvil_designer import Extension_loan_requestTemplate
+# from anvil import *
+# import anvil.server
+# import anvil.google.auth, anvil.google.drive
+# from anvil.google.drive import app_files
+# import anvil.users
+# import anvil.tables as tables
+# import anvil.tables.query as q
+# from anvil.tables import app_tables
+
+# class Extension_loan_request(Extension_loan_requestTemplate):
+#   def __init__(self, **properties):
+#     # Set Form properties and Data Bindings.
+#     self.init_components(**properties)
+
+#     # Any code you write here will run before the form opens.
+
+
+from ._anvil_designer import Extension_Loan_requestTemplate
 from anvil import *
 import anvil.server
 import anvil.google.auth, anvil.google.drive
@@ -8,8 +26,7 @@ import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 
-
-class Extension_loan_request(Extension_loan_requestTemplate):
+class Extension_Loan_request(Extension_Loan_requestTemplate):
     def __init__(self, **properties):
         # Set Form properties and Data Bindings.
         self.init_components(**properties)
