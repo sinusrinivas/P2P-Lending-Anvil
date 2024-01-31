@@ -94,3 +94,7 @@ class dashboard(dashboardTemplate):
     customer_id = 1000
     email = self.email
     anvil.server.call('fetch_profile_data_and_insert', email, customer_id)
+
+  def extended_loans_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    open_form('borrower_registration_form.dashboard.Extension_loan_request')
