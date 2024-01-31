@@ -83,7 +83,7 @@ class borrower_extension(borrower_extensionTemplate):
                 self.button_1.visible = True
                 self.button_2.visible = False 
                 self.label_5_copy.visible = True
-                self.button_1_copy.visible = False
+                self.button_1_copy.visible = True
             
             # Fetch scheduled payments from fin_emi_table
             loan_id = selected_row['loan_id']
@@ -98,7 +98,7 @@ class borrower_extension(borrower_extensionTemplate):
             
             # Update visibility based on scheduled payments
             self.button_2.visible = self.button_2.visible and not scheduled_payment_found
-            self.button_1.visible = self.button_1.visible and scheduled_payment_found
+            self.button_1_copy.visible = self.button_1_copy.visible and scheduled_payment_found
             
             # Additional condition to make button_1 visible if there are no existing requests
             if len(existing_requests) == 0:
