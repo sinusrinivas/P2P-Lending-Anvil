@@ -53,12 +53,12 @@ class lender_registration_individual_form_1(lender_registration_individual_form_
       Notification("please fill the required fields ").show()
     else:
       anvil.server.call('add_lendor_individual_form_1', company_name,org_type,emp_type,user_id)
-    open_form('lendor_registration_form.lender_registration_form_3.lender_registration_individual_form_2',user_id=self.userId)
+    open_form('lendor_registration_form.lender_registration_form_2.lender_registration_individual_form_2',user_id=self.userId)
 
   
   def button_1_click(self, **event_args):
      user_id = self.userId
-     open_form('lendor_registration_form.lender_registration_form_3',user_id=self.userId)
+     open_form('lendor_registration_form.lender_registration_form_2',user_id=self.userId)
 
   def drop_down_1_change(self, **event_args):
     """This method is called when an item is selected"""

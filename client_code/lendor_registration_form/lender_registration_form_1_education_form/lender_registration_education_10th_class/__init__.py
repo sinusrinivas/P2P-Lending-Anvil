@@ -13,9 +13,6 @@ class lender_registration_education_10th_class(lender_registration_education_10t
     self.userId = user_id
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
-    
-
-
 
     # Any code you write here will run before the form opens.
 
@@ -27,7 +24,13 @@ class lender_registration_education_10th_class(lender_registration_education_10t
   def button_2_click(self, **event_args):
     """This method is called when the button is clicked"""
     user_id = self.userId
-    open_form('lendor_registration_form.lender_registration_form_2_marital_details',user_id=user_id)
+    tenth_class = self.file_loader_1.file
+    
+    if not tenth_class:
+      Notification('Please fill all details').show()
+    else:
+      anvil.server.call('add_education_tenth',tenth_class,user_id)
+      open_form('lendor_registration_form.lender_registration_form_2',user_id=user_id)
 
   def button_3_click(self, **event_args):
     """This method is called when the button is clicked"""

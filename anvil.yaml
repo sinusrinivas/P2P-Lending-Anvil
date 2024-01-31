@@ -115,7 +115,7 @@ db_schema:
       admin_ui: {width: 200}
       type: string
     - name: organization_type
-      admin_ui: {width: 200}
+      admin_ui: {order: 3, width: 230}
       type: string
     - name: employment_type
       admin_ui: {width: 200}
@@ -736,6 +736,21 @@ db_schema:
     - name: another_person
       admin_ui: {width: 200, order: 95}
       type: string
+    - name: tenth_class
+      admin_ui: {width: 200, order: 96}
+      type: media
+    - name: intermediate
+      admin_ui: {width: 200, order: 97}
+      type: media
+    - name: btech
+      admin_ui: {width: 200, order: 98}
+      type: media
+    - name: mtech
+      admin_ui: {width: 200, order: 99}
+      type: media
+    - name: phd
+      admin_ui: {width: 200, order: 100}
+      type: media
     title: fin_user_profile
   fin_wallet_transactions:
     title: fin_wallet_transactions

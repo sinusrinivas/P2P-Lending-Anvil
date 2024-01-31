@@ -54,7 +54,7 @@ class lender_registration_form_4_bank_form_2(lender_registration_form_4_bank_for
 
   def button_1_click(self, **event_args):
     user_id = self.userId
-    open_form('lendor_registration_form.Lender_reg_bothdirect_bank_form_1',user_id=self.userId)
+    open_form('lendor_registration_form.lender_registration_form_4_bank_form_1',user_id=self.userId)
 
   def button_3_click(self, **event_args):
     open_form("bank_users.user_form")

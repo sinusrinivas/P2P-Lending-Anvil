@@ -34,23 +34,24 @@ class lender_registration_form_3_marital_married(lender_registration_form_3_mari
   def button_next_click(self, **event_args):
     another_person = self.choose_person_drop_down_1.selected_value
     user_id = self.userId
-    if not another_person or another_person not in ['Father', 'Mother', 'Spouse', 'Other']:
-      Notification("Please select a valid marital status").show()
-    else:
-      anvil.server.call('add_lendor_married',another_person,user_id)
-      if another_person == 'Father':
-        open_form('borrower_registration_form.star_1_borrower_registration_form_begin_7',user_id = user_id)
-      elif another_person == 'Mother':
-        open_form('',user_id = user_id)
-      elif another_person == 'Spouse':
-        open_form('',user_id = user_id)
-      elif another_person == 'Other':
-        open_form('',user_id = user_id)
-      else:
-        open_form('',user_id = user_id)
+    open_form('lendor_registration_form.lender_registration_form_4_bank_form_1')
+    # if not another_person or another_person not in ['Father', 'Mother', 'Spouse', 'Other']:
+    #   Notification("Please select a valid marital status").show()
+    # else:
+    #   anvil.server.call('add_lendor_married',another_person,user_id)
+    #   if another_person == 'Father':
+    #     open_form('borrower_registration_form.star_1_borrower_registration_form_begin_7',user_id = user_id)
+    #   elif another_person == 'Mother':
+    #     open_form('',user_id = user_id)
+    #   elif another_person == 'Spouse':
+    #     open_form('',user_id = user_id)
+    #   elif another_person == 'Other':
+    #     open_form('',user_id = user_id)
+    #   else:
+    #     open_form('',user_id = user_id)
 
 
   def button_1_click(self, **event_args):
-    open_form('borrower_registration_form.star_1_borrower_registration_form_begin_3.star_1_borrower_registration_form_begin_3c',user_id=self.userId)
+    open_form('lendor_registration_form.lender_registration_form_3_marital_details',user_id=self.userId)
 
     # Any code you write here will run before the form opens.

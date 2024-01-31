@@ -9,7 +9,7 @@ import anvil.tables.query as q
 from anvil.tables import app_tables
 
 class lender_registration_form_3_marital_details(lender_registration_form_3_marital_detailsTemplate):
-  def __init__(self, **properties):
+  def __init__(self,user_id, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
 
@@ -21,7 +21,7 @@ class lender_registration_form_3_marital_details(lender_registration_form_3_mari
 
     options = app_tables.fin_borrower_marrital_status.search()
     options_string = [str(option['borrower_marrital_status']) for option in options]
-    self.marital_status_borrower_registration_dropdown.items = options_string
+    self.marital_status_lender_registration_dropdown.items = options_string
     self.init_components(**properties)
 
     # Any code you write here will run before the form opens.
@@ -37,13 +37,13 @@ class lender_registration_form_3_marital_details(lender_registration_form_3_mari
     else:
       anvil.server.call('add_lendor_marital',marital_status,user_id)
       if marital_status == 'Not Married':
-        open_form('lendor_registration_form.lender_registration_form_3',user_id = user_id)
+        open_form('lendor_registration_form.lender_registration_form_4_bank_form_1',user_id = user_id)
       elif marital_status == 'Married':
-        open_form('lendor_registration_form.lender_registration_form_2_marital_details.lender_registration_form_2_married',user_id = user_id)
+        open_form('lendor_registration_form.lender_registration_form_3_marital_details.lender_registration_form_3_marital_married',user_id = user_id)
       else:
-        open_form('lendor_registration_form.lender_registration_form_3',user_id = user_id)
+        open_form('lendor_registration_form.lender_registration_form_4_bank_form_1',user_id = user_id)
 
 
   def button_1_click(self, **event_args):
-    open_form('lendor_registration_form.lender_registration_form_1_education_form',user_id=self.userId)
+    open_form('lendor_registration_form.lender_registration_form_2',user_id=self.userId)
     # Any code you write here will run before the form opens.

@@ -22,26 +22,21 @@ class lender_registration_form_1_education_form(lender_registration_form_1_educa
 
     # Any code you write here will run before the form opens.
 
-  def button_1_click(self, **event_args):
-    user_id = self.userId
-    open_form('lendor_registration_form.Lender_reg_form_2',user_id=user_id)
-    """This method is called when the button is clicked"""
-
   def button_2_click(self, **event_args):
     """This method is called when the button is clicked"""
     qualification = self.drop_down_1.selected_value
     user_id = self.userId
     if qualification == '10th class':
-      open_form('lendor_registration_form.Lender_reg_education_10th_class',user_id=user_id)
+      open_form('lendor_registration_form.lender_registration_form_1_education_form.lender_registration_education_10th_class',user_id=user_id)
     elif qualification == 'Intermediate / PUC':
-      open_form('lendor_registration_form.Lender_reg_education_Intermediate',user_id = user_id)
+      open_form('lendor_registration_form.lender_registration_form_1_education_form.lender_registration_education_Intermediate',user_id = user_id)
     elif qualification == 'Btech / B.E':
-      open_form('lendor_registration_form.Lender_reg_education_Btech',user_id=user_id)
+      open_form('lendor_registration_form.lender_registration_form_1_education_form.lender_registration_education_Btech',user_id=user_id)
     elif qualification == 'Mtech':
-      open_form('lendor_registration_form.Lender_reg_education_Mtech',user_id = user_id)
+      open_form('lendor_registration_form.lender_registration_form_1_education_form.lender_registration_education_Mtech',user_id = user_id)
     else:
       qualification == 'Phd'
-      open_form('lendor_registration_form.Lender_reg_education_Phd',user_id=user_id)
+      open_form('lendor_registration_form.lender_registration_form_1_education_form.lender_registration_education_Phd',user_id=user_id)
 
   def button_3_click(self, **event_args):
     """This method is called when the button is clicked"""

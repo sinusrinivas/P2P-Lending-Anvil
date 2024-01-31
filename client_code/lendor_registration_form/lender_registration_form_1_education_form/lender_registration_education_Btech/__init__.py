@@ -22,12 +22,20 @@ class lender_registration_education_Btech(lender_registration_education_BtechTem
   def button_1_click(self, **event_args):
     """This method is called when the button is clicked"""
     user_id = self.userId
-    open_form('lendor_registration_form.lender_registration_form_1_education_form',user_id=user_id)
+    tenth_class = self.file_loader_1.file
+    intermediate = self.file_loader_2.file
+    btech = self.file_loader_3.file
+    
+    if not tenth_class or not intermediate or not btech:
+      Notification('Please fill all details').show()
+    else:
+      anvil.server.call('add_education_btech',tenth_class,intermediate,btech,user_id)
+      open_form('lendor_registration_form.lender_registration_form_2',user_id=user_id)
     
   def button_2_click(self, **event_args):
     """This method is called when the button is clicked"""
     user_id = self.userId
-    open_form('lendor_registration_form.lender_registration_form_2_marital_details',user_id=user_id)
+    open_form('lendor_registration_form.lender_registration_form_2',user_id=user_id)
 
   def button_3_click(self, **event_args):
     """This method is called when the button is clicked"""

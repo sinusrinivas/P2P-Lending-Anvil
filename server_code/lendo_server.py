@@ -147,6 +147,60 @@ def add_lendor_institutional_form_5(reg_office_add,off_add_proof,proof_verificat
     row[0]['proof_verification'] = proof_verification
 
 @anvil.server.callable
+def add_lendor_marital(marital_status,user_id):
+  row = app_tables.fin_user_profile.search(customer_id=user_id)
+  if row:
+    row[0]['marital_status']=marital_status
+    # row[0]['form_count']=6
+
+@anvil.server.callable
+def add_education_tenth(tenth_class,user_id):
+  row = app_tables.fin_user_profile.search(customer_id=user_id)
+  if row:
+    row[0]['tenth_class']=tenth_class
+
+@anvil.server.callable
+def add_education_int(tenth_class,intermediate,user_id):
+  row = app_tables.fin_user_profile.search(customer_id=user_id)
+  if row:
+    row[0]['tenth_class']=tenth_class
+    row[0]['intermediate']=intermediate
+
+@anvil.server.callable
+def add_education_btech(tenth_class,intermediate,user_id):
+  row = app_tables.fin_user_profile.search(customer_id=user_id)
+  if row:
+    row[0]['tenth_class']=tenth_class
+    row[0]['intermediate']=intermediate
+    row[0]['btech']=btech
+
+@anvil.server.callable
+def add_education_mtech(tenth_class,intermediate,btech,mtech,user_id):
+  row = app_tables.fin_user_profile.search(customer_id=user_id)
+  if row:
+    row[0]['tenth_class']=tenth_class
+    row[0]['intermediate']=intermediate
+    row[0]['btech']=btech
+    row[0]['mtech']=mtech
+
+@anvil.server.callable
+def add_education_phd(tenth_class,intermediate,btech,mtech,phd,user_id):
+  row = app_tables.fin_user_profile.search(customer_id=user_id)
+  if row:
+    row[0]['tenth_class']=tenth_class
+    row[0]['intermediate']=intermediate
+    row[0]['btech']=btech
+    row[0]['mtech']=mtech
+    row[0]['phd']=phd
+
+@anvil.server.callable
+def add_lendor_married(another_person,user_id):
+  row = app_tables.fin_user_profile.search(customer_id=user_id)
+  if row:
+    row[0]['another_person']=another_person
+    # row[0]['form_count']=6
+
+@anvil.server.callable
 def add_lendor_bank_details_form_1(account_name, account_type,account_number,bank_name, user_id):
   row = app_tables.fin_user_profile.search(customer_id = user_id)
   if row:

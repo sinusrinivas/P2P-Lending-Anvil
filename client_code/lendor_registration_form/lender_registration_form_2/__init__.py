@@ -45,7 +45,7 @@ class lender_registration_form_2(lender_registration_form_2Template):
         # Any code you write here will run before the form opens.
 
     def button_1_click(self, **event_args):
-        open_form('lendor_registration_form.Lender_reg_form_5', user_id=self.userId)
+        open_form('lendor_registration_form.lender_registration_form_1_education_form', user_id=self.userId)
 
     def button_2_click(self, **event_args):
         lending_type = self.lending_type_dropdown.selected_value
@@ -71,9 +71,9 @@ class lender_registration_form_2(lender_registration_form_2Template):
                 app_tables.fin_lender.add_row(customer_id = user_id, lending_type=lending_type, investment=int(investment), lending_period=lending_period, membership=self.calculate_membership(float(investment)))
 
             if lending_type == 'Individual':
-                open_form('lendor_registration_form.Lender_reg_individual_form_1', user_id=user_id)
+                open_form('lendor_registration_form.lender_registration_form_2.lender_registration_individual_form_1', user_id=user_id)
             elif lending_type == 'Institutional':
-                open_form('lendor_registration_form.Lender_reg_Institutional_form_1', user_id=user_id)
+                open_form('lendor_registration_form.lender_registration_form_2.lender_registration_Institutional_form_1', user_id=user_id)
 
     def button_3_click(self, **event_args):
         open_form("bank_users.user_form")

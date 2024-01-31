@@ -40,12 +40,12 @@ class lender_registration_Institutional_form_5(lender_registration_Institutional
       Notification("Please all the fields")
     else:
      anvil.server.call('add_lendor_institutional_form_5',reg_off_add,off_add_proof,proof_verification,user_id)
-     open_form('lendor_registration_form.lender_registration_form_4_bank_form_1',user_id=user_id)
+     open_form('lendor_registration_form.lender_registration_form_3_marital_details',user_id=user_id)
     """This method is called when the button is clicked"""
 
   def button_1_click(self, **event_args):
     user_id = self.userId
-    open_form('lendor_registration_form.lender_registration_form_3.lender_registration_individual_form_4',user_id=user_id)
+    open_form('lendor_registration_form.lender_registration_form_2.lender_registration_Institutional_form_4',user_id=user_id)
     """This method is called when the button is clicked"""
 
   def button_3_click(self, **event_args):
