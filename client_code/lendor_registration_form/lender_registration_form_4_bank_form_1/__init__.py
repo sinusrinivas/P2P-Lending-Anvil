@@ -18,8 +18,7 @@ class lender_registration_form_4_bank_form_1(lender_registration_form_4_bank_for
             self.account_name = user_data.get('account_name', '')
             self.account_type = user_data.get('account_type', '')
             self.account_number = user_data.get('account_number', '')
-            self.bank_name = user_data.get('select_bank', '')
-            
+            self.bank_name = user_data.get('bank_name', '')
             
     else:
         self.account_name = ''

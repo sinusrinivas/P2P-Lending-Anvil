@@ -19,16 +19,13 @@ class lender_registration_Institutional_form_1(lender_registration_Institutional
             self.business_name = user_data.get('business_name', '')
             self.business_add = user_data.get('business_add', '')
             self.business_location = user_data.get('business_location', '')
-            self.branch_name = user_data.get('branch_name', '')
-            
-            
-            
+            # self.branch_name = user_data.get('branch_name', '')
             
     else:
         self.business_name = ''
         self.business_add = ''
         self.business_location= ''
-        self.branch_name = ''
+        # self.branch_name = ''
         
         
 
@@ -39,8 +36,6 @@ class lender_registration_Institutional_form_1(lender_registration_Institutional
             self.text_box_2.text= self.business_add
     if self.business_location:
             self.text_box_3.text= self.business_location
-    if self.branch_name:
-            self.text_box_4.text= self.branch_name
 
     # Any code you write here will run before the form opens.
 
@@ -48,14 +43,12 @@ class lender_registration_Institutional_form_1(lender_registration_Institutional
     business_name = self.text_box_1.text
     business_add = self.text_box_2.text
     business_location = self.text_box_3.text
-    branch_name = self.text_box_4.text
     user_id = self.userId
-    if not business_name or not business_add or not business_location or not branch_name:
+    if not business_name or not business_add or not business_location:
       Notification("Please fill all the fields")
     else:
-      anvil.server.call('add_lendor_institutional_form_1',business_name,business_add,business_location,branch_name,user_id)
+      anvil.server.call('add_lendor_institutional_form_1',business_name,business_add,business_location,user_id)
       open_form('lendor_registration_form.lender_registration_form_2.lender_registration_Institutional_form_2',user_id=self.userId)
-    
 
   def button_1_click(self, **event_args):
     user_id = self.userId

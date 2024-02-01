@@ -15,41 +15,38 @@ class lender_registration_form_4_bank_form_2(lender_registration_form_4_bank_for
     self.init_components(**properties)
     user_data = anvil.server.call('get_user_data', user_id)
     if user_data:
-            self.ifsc = user_data.get('ifsc_code', '')
-            self.salary_type = user_data.get('salary_type', '')
-            self.branch_name = user_data.get('branch_name', '')
-            
-            
+            self.bank_id = user_data.get('bank_id', '')
+            # self.salary_type = user_data.get('salary_type', '')
+            self.branch_name = user_data.get('account_bank_branch', '')
             
     else:
-        self.ifsc = ''
-        self.salary_type = ''
+        self.bank_id = ''
+        # self.salary_type = ''
         self.branch_name = ''
 
        #Restore previously entered data if available
-    if self.ifsc:
-            self.text_box_1.text= self.ifsc
-    if self.salary_type:
-            self.drop_down_1.selected_value = self.salary_type
+    if self.bank_id:
+            self.text_box_1.text= self.bank_id
+    # if self.salary_type:
+    #         self.drop_down_1.selected_value = self.salary_type
     if self.branch_name:
           self.text_box_2.text = self.branch_name
 
-    options = app_tables.fin_lendor_manage_dropdown.search()
-    options_string =[str(option['salary_type']) for option in options]
-    self.drop_down_1.items = options_string
+    # options = app_tables.fin_lendor_manage_dropdown.search()
+    # options_string =[str(option['salary_type']) for option in options]
+    # self.drop_down_1.items = options_string
 
     # Any code you write here will run before the form opens.
 
   def button_2_click(self, **event_args):
     user_id = self.userId
-    ifsc = self.text_box_1.text
-    salary_type = self.drop_down_1.selected_value
+    bank_id = self.text_box_1.text
     branch_name = self.text_box_2.text
-    user_id = self.userId
-    if not ifsc or not salary_type or not branch_name:
+    
+    if not bank_id  or not branch_name:
       Notification("please fill all required fields").show()
     else:
-      anvil.server.call('add_lendor_bank_details_form_2', ifsc,salary_type,branch_name, user_id)
+      anvil.server.call('add_lendor_bank_details_form_2', bank_id,branch_name, user_id)
       open_form('lendor_registration_form.dashboard')
 
   def button_1_click(self, **event_args):

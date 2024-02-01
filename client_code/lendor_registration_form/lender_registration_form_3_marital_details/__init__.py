@@ -26,8 +26,8 @@ class lender_registration_form_3_marital_details(lender_registration_form_3_mari
 
     # Any code you write here will run before the form opens.
 
-  def home_borrower_registration_form_copy_1_click(self, **event_args):
-    open_form('bank_users.user_form')
+  # def home_borrower_registration_form_copy_1_click(self, **event_args):
+  #   open_form('bank_users.user_form')
 
   def button_next_click(self, **event_args):
     marital_status = self.marital_status_lender_registration_dropdown.selected_value
@@ -43,7 +43,10 @@ class lender_registration_form_3_marital_details(lender_registration_form_3_mari
       else:
         open_form('lendor_registration_form.lender_registration_form_4_bank_form_1',user_id = user_id)
 
-
   def button_1_click(self, **event_args):
     open_form('lendor_registration_form.lender_registration_form_2',user_id=self.userId)
     # Any code you write here will run before the form opens.
+
+  def marital_status_borrower_registration_dropdown_change(self, **event_args):
+    """This method is called when an item is selected"""
+    pass

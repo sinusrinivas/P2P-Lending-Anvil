@@ -18,21 +18,16 @@ class lender_registration_individual_form_3(lender_registration_individual_form_
     if user_data:
             self.annual_salary = user_data.get('annual_salary', '')
             self.designation = user_data.get('designation', '')
-            
-            
-            
+     
     else:
         self.annual_salary = ''
         self.designation = ''
-        
-        
 
        #Restore previously entered data if available
     if self.annual_salary:
-            self.text_box_1.text= self.annual_salary
+       self.text_box_1.text= self.annual_salary
     if self.designation:
-            self.text_box_2.text= self.designation
-    
+       self.text_box_2.text= self.designation
 
     # Any code you write here will run before the form opens.
 
