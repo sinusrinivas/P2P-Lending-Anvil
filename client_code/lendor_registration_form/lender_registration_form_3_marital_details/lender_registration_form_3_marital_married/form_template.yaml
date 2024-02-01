@@ -105,7 +105,7 @@ components:
     layout_properties: {row: HALEXB, width_xs: 3, col_xs: 6}
   - name: label_3_copy_1_copy_1_copy_1
     properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-      visible: true, text: 'Father''s DOB :', font_size: null, font: '', spacing_above: small,
+      visible: true, text: 'Father DOB :', font_size: null, font: '', spacing_above: small,
       icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
       underline: false, icon: ''}
     type: Label
@@ -119,9 +119,9 @@ components:
     layout_properties: {row: LEIWZK, width_xs: 3, col_xs: 6}
   - name: label_2_copy_1_copy_1
     properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-      visible: true, text: 'Father''s mobile Number :', font_size: null, font: '',
-      spacing_above: small, icon_align: left, spacing_below: small, italic: false,
-      background: '', bold: true, underline: false, icon: ''}
+      visible: true, text: 'Father mobile Number :', font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+      underline: false, icon: ''}
     type: Label
     layout_properties: {row: CEITXX, width_xs: 4, col_xs: 2}
   - name: father_mbl_no_text
@@ -140,7 +140,7 @@ components:
     layout_properties: {row: VXAUDA, width_xs: 3, col_xs: 6}
   - name: label_3_copy_1
     properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-      visible: true, text: 'Father''s Profession :', font_size: null, font: '', spacing_above: small,
+      visible: true, text: 'Father Profession :', font_size: null, font: '', spacing_above: small,
       icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
       underline: false, icon: ''}
     type: Label
@@ -154,7 +154,7 @@ components:
     layout_properties: {row: HBHHFF, width_xs: 5, col_xs: 6}
   - name: label_3_copy_1_copy_2
     properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-      visible: true, text: 'Father''s Address :', font_size: null, font: '', spacing_above: small,
+      visible: true, text: 'Father Address :', font_size: null, font: '', spacing_above: small,
       icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
       underline: false, icon: ''}
     type: Label
@@ -252,7 +252,7 @@ components:
     layout_properties: {row: HBHHFF, width_xs: 5, col_xs: 6}
   - name: label_3_copy_1_copy_2_copy
     properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-      visible: true, text: 'Mother''s Address :', font_size: null, font: '', spacing_above: small,
+      visible: true, text: 'Mother Address :', font_size: null, font: '', spacing_above: small,
       icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
       underline: false, icon: ''}
     type: Label
@@ -265,7 +265,105 @@ components:
     type: TextBox
     layout_properties: {row: WPPSLK, width_xs: 3, col_xs: 6}
 - name: spacer_1_copy_1_copy_copy
-  properties: {height: 51.666656494140625}
+  properties: {height: 16.22222900390625}
   type: Spacer
-  layout_properties: {grid_position: 'DYEXDL,OLNYKV'}
+  layout_properties: {grid_position: 'EEKIEM,FRDQPL'}
+- name: grid_panel_1_copy_copy
+  properties: {spacing_above: small, spacing_below: small, background: '', foreground: '',
+    border: '', visible: true, role: outlined-card, tooltip: ''}
+  type: GridPanel
+  layout_properties: {grid_position: 'FHPXPN,JQSDDW'}
+  components:
+  - name: label_25_copy_copy
+    properties: {role: null, align: center, tooltip: '', border: '', foreground: 'theme:On
+        Primary', visible: true, text: Spouse Details, font_size: 17, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: darkblue,
+      bold: true, underline: false, icon: ''}
+    type: Label
+    layout_properties: {row: AUFPKE, width_xs: 12, col_xs: 0, width: 626}
+  - name: label_3_copy_1_copy_1_copy_copy
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: 'Full Spouse Name :', font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+      underline: false, icon: ''}
+    type: Label
+    layout_properties: {row: ORTIVE, width_xs: 4, col_xs: 2}
+  - name: mother_name_text_copy_copy
+    properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: '',
+      border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
+      font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
+      background: 'theme:On Primary', bold: false, underline: false}
+    type: TextBox
+    layout_properties: {row: ORTIVE, width_xs: 4, col_xs: 6}
+  - name: label_1_copy_copy_copy
+    properties: {foreground: red}
+    type: Label
+    layout_properties: {row: HALEXB, width_xs: 3, col_xs: 6}
+  - name: label_3_copy_1_copy_1_copy_1_copy_copy
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: 'Marriage Date :', font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+      underline: false, icon: ''}
+    type: Label
+    layout_properties: {row: LEIWZK, width_xs: 4, col_xs: 2}
+  - name: mother_dob_text_copy_copy
+    properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: '',
+      border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
+      font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
+      background: 'theme:On Primary', bold: false, underline: false}
+    type: TextBox
+    layout_properties: {row: LEIWZK, width_xs: 3, col_xs: 6}
+  - name: label_2_copy_1_copy_1_copy_copy
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: 'Spouse mobile Number :', font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+      underline: false, icon: ''}
+    type: Label
+    layout_properties: {row: CEITXX, width_xs: 4, col_xs: 2}
+  - name: mother_mbl_no_text_copy_copy
+    properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: '',
+      border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
+      font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
+      background: 'theme:On Primary', bold: false, underline: false}
+    type: TextBox
+    layout_properties: {row: CEITXX, width_xs: 5, col_xs: 6}
+  - name: label_22_copy_copy_copy
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: '', font_size: 12, font: '', spacing_above: none, icon_align: left,
+      spacing_below: small, italic: false, background: '', bold: false, underline: false,
+      icon: ''}
+    type: Label
+    layout_properties: {row: VXAUDA, width_xs: 3, col_xs: 6}
+  - name: label_3_copy_1_copy_copy
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: 'Spouse Profession :', font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+      underline: false, icon: ''}
+    type: Label
+    layout_properties: {row: HBHHFF, width_xs: 4, col_xs: 2}
+  - name: mother_profession_text_copy_copy_2
+    properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: '',
+      border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
+      font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
+      background: 'theme:On Primary', bold: false, underline: false}
+    type: TextBox
+    layout_properties: {row: HBHHFF, width_xs: 5, col_xs: 6}
+  - name: label_3_copy_1_copy_2_copy_copy
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: 'Spouse Address :', font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+      underline: false, icon: ''}
+    type: Label
+    layout_properties: {row: WPPSLK, width_xs: 3, col_xs: 2}
+  - name: mother_profession_text_copy_copy_copy
+    properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: '',
+      border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
+      font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
+      background: 'theme:On Primary', bold: false, underline: false}
+    type: TextBox
+    layout_properties: {row: WPPSLK, width_xs: 3, col_xs: 6}
+- name: spacer_1_copy_1_copy_copy_copy_2
+  properties: {height: 16.22222900390625}
+  type: Spacer
+  layout_properties: {grid_position: 'FOAGHW,BAASHM'}
 is_package: true
