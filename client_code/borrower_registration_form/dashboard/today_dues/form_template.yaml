@@ -35,7 +35,7 @@ components:
     - {id: QMIVSR, title: loan_id, data_key: loan_id, $$hashKey: 'object:2221'}
     - {id: TXOKUE, title: loan_amount, data_key: loan_amount, $$hashKey: 'object:2222'}
     - {id: EBPKTL, title: Schedule payment, data_key: column_3, $$hashKey: 'object:2223'}
-    - {id: NLFHNO, title: How many days left, data_key: column_1, $$hashKey: 'object:1146'}
+    - {id: NLFHNO, title: Days passed due date, data_key: column_1, $$hashKey: 'object:1146'}
     - {id: ECOVFV, title: '', data_key: column_2, $$hashKey: 'object:393'}
     - {id: EOQVZT, title: '', data_key: column_4, $$hashKey: 'object:9434'}
     auto_header: true
