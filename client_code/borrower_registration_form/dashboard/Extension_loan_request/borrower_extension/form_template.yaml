@@ -173,6 +173,36 @@ components:
         icon: ''}
       type: Label
       layout_properties: {grid_position: 'QIFWHK,RDTIWZ', width: 938.222}
+  - type: Button
+    properties: {role: filled-button, align: center, tooltip: '', border: '', enabled: true,
+      foreground: '', visible: false, text: Back, font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+      underline: false, icon: 'fa:angle-double-left'}
+    name: button_1
+    layout_properties:
+      col_widths: {}
+      grid_position: EWQSXE,WREPLD
+    event_bindings: {click: button_1_click}
+  - type: Button
+    properties: {role: filled-button, align: center, tooltip: '', border: '', enabled: true,
+      foreground: '', visible: false, text: Back, font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+      underline: false, icon: 'fa:angle-double-left'}
+    name: button_1_copy
+    layout_properties:
+      col_widths: {}
+      grid_position: EWQSXE,DPKMXO
+    event_bindings: {click: button_1_copy_click}
+  - type: Button
+    properties: {role: filled-button, align: center, tooltip: '', border: '', enabled: true,
+      foreground: '', visible: false, text: Extension Request, font_size: null, font: '',
+      spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+      background: '', bold: false, underline: false, icon: ''}
+    name: button_2
+    layout_properties:
+      col_widths: {}
+      grid_position: EWQSXE,SOWOUY
+    event_bindings: {click: button_2_click}
 - type: FlowPanel
   properties: {}
   name: navbar_links
