@@ -219,6 +219,15 @@ db_schema:
     - name: min_months
       admin_ui: {width: 200, order: 23}
       type: number
+    - name: lapsed_fee
+      admin_ui: {width: 200, order: 24}
+      type: number
+    - name: default_fee
+      admin_ui: {width: 200, order: 25}
+      type: number
+    - name: npa
+      admin_ui: {width: 200, order: 26}
+      type: number
     title: fin_product_details
   fin_lendor_gender:
     client: full
