@@ -6,7 +6,7 @@ services:
   server_config: {}
 - source: /runtime/services/anvil/users.yml
   client_config: {allow_signup: true, enable_automatically: true, use_email: true,
-    confirm_email: true, use_google: false, require_secure_passwords: true}
+    confirm_email: false, use_google: false, require_secure_passwords: true}
   server_config: {user_table: users}
 - source: /runtime/services/google.yml
   client_config: {}
@@ -29,7 +29,7 @@ db_schema:
     columns: []
     title: fin_wallet_notification
   fin_lendor_business_type:
-    client: full
+    client: none
     server: full
     columns:
     - name: lendor_business_type
@@ -37,7 +37,7 @@ db_schema:
       type: string
     title: fin_lendor_business_type
   fin_lendor_salary_type:
-    client: full
+    client: none
     server: full
     columns:
     - name: lendor_salary_type
@@ -100,8 +100,43 @@ db_schema:
       admin_ui: {width: 200, order: 0.5}
       type: number
     title: fin_wallet
-  fin_lendor_lending_type:
+  fin_lendor_manage_dropdown:
+    title: fin_lendor_manage_dropdown
     client: full
+    server: full
+    columns:
+    - name: gender
+      admin_ui: {width: 200}
+      type: string
+    - name: business_type
+      admin_ui: {width: 200}
+      type: string
+    - name: no_of_employees
+      admin_ui: {width: 200}
+      type: string
+    - name: organization_type
+      admin_ui: {order: 3, width: 230}
+      type: string
+    - name: employment_type
+      admin_ui: {width: 200}
+      type: string
+    - name: salary_type
+      admin_ui: {width: 200}
+      type: string
+    - name: account_type
+      admin_ui: {width: 200}
+      type: string
+    - name: qualification
+      admin_ui: {width: 200}
+      type: string
+    - name: lending_type
+      admin_ui: {width: 200}
+      type: string
+    - name: lending_period
+      admin_ui: {width: 200}
+      type: string
+  fin_lendor_lending_type:
+    client: none
     server: full
     columns:
     - name: lendor_lending_type
@@ -332,7 +367,7 @@ db_schema:
       type: string
     title: Users
   fin_lendor_employee_type:
-    client: full
+    client: none
     server: full
     columns:
     - name: lendor_employee_type
@@ -698,6 +733,24 @@ db_schema:
     - name: bessem_value
       admin_ui: {width: 200}
       type: number
+    - name: another_person
+      admin_ui: {width: 200, order: 95}
+      type: string
+    - name: tenth_class
+      admin_ui: {width: 200, order: 96}
+      type: media
+    - name: intermediate
+      admin_ui: {width: 200, order: 97}
+      type: media
+    - name: btech
+      admin_ui: {width: 200, order: 98}
+      type: media
+    - name: mtech
+      admin_ui: {width: 200, order: 99}
+      type: media
+    - name: phd
+      admin_ui: {width: 200, order: 100}
+      type: media
     title: fin_user_profile
   fin_wallet_transactions:
     title: fin_wallet_transactions
@@ -845,6 +898,14 @@ db_schema:
       admin_ui: {width: 200}
       type: string
     title: fin_extends_loan
+  fin_lendor_gender_2:
+    title: fin_lendor_gender
+    client: none
+    server: full
+    columns:
+    - name: lendor_gender
+      admin_ui: {width: 200}
+      type: string
   fin_borrower_marrital_status:
     client: full
     server: full
@@ -1070,7 +1131,7 @@ db_schema:
       type: string
     title: fin_borrower_gender
   fin_lendor_qualification:
-    client: full
+    client: none
     server: full
     columns:
     - name: lendor_qualification
