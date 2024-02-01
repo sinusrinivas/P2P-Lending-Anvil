@@ -19,8 +19,7 @@ class lender_registration_individual_form_2(lender_registration_individual_form_
             self.business_phone_number = user_data.get('business_no', '')
             self.landmark = user_data.get('company_landmark', '')
             self.comp_address = user_data.get('company_address', '')
-            
-            
+       
     else:
         self.business_phone_number = ''
         self.landmark = ''
@@ -39,13 +38,13 @@ class lender_registration_individual_form_2(lender_registration_individual_form_
 
   def button_2_click(self, **event_args):
     comp_address = self.text_box_1.text
-    landmark = self.text_box_1.text
+    landmark = self.text_box_2.text
     business_phone_number = self.text_box_3.text
     user_id = self.userId
     if not comp_address or not landmark or not business_phone_number:
       Notification("please fill the required fields").show()
     else:
-      anvil.server.call('add_lendor_individual_form_2',business_phone_number, landmark,comp_address,user_id)
+      anvil.server.call('add_lendor_individual_form_2',comp_address,landmark,business_phone_number,user_id)
       open_form('lendor_registration_form.lender_registration_form_2.lender_registration_individual_form_3',user_id=self.userId)
     
 
