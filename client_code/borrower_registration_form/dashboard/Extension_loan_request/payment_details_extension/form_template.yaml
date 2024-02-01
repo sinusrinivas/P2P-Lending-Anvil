@@ -48,7 +48,22 @@ components:
     layout_properties: {grid_position: 'BJKURK,JOABDV', full_width_row: true}
     components:
     - type: DataGrid
-      properties: {rows_per_page: 20000}
+      properties:
+        role: null
+        columns:
+        - {id: LPLDMY, title: '', data_key: column_1, $$hashKey: 'object:1289'}
+        - {id: KSAYKG, title: Column 2, data_key: column_2, $$hashKey: 'object:1291'}
+        auto_header: true
+        tooltip: ''
+        border: ''
+        foreground: ''
+        rows_per_page: 20000
+        visible: true
+        wrap_on: never
+        show_page_controls: true
+        spacing_above: small
+        spacing_below: small
+        background: ''
       name: data_grid_1
       layout_properties: {grid_position: 'ZIROQE,DHFWHG', full_width_row: true}
       components:
