@@ -70,7 +70,6 @@ def add_lendor_six_form(lending_type, investment,lending_period, user_id):
     
 @anvil.server.callable
 def update_another_person(user_id, selected_person):
-
   user_profile = app_tables.fin_user_profile.get(customer_id=user_id)
   user_profile['another_person'] = selected_person
   user_profile.save()
@@ -86,12 +85,14 @@ def add_lendor_individual_form_1(company_name,org_type,emp_type,user_id):
     
 
 @anvil.server.callable
-def add_lendor_individual_form_2(business_phone_number, landmark,comp_address,user_id):
+def add_lendor_individual_form_2(comp_address,landmark,business_phone_number,user_id):
   row = app_tables.fin_user_profile.search(customer_id = user_id)
   if row:
-    row[0]['business_no']=business_phone_number
+    row[0]['company_address']=comp_address
     row[0]['company_landmark']=landmark
-    row[0]['company_address']=comp_address      
+    row[0]['business_no']=business_phone_number
+    
+          
 
 
 @anvil.server.callable

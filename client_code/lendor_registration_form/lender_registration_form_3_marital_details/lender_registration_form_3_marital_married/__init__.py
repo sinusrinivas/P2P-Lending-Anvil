@@ -13,16 +13,18 @@ class lender_registration_form_3_marital_married(lender_registration_form_3_mari
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
     self.userId = user_id
-    self.another_person = none
+    self.another_person = None
 
     # Any code you write here will run before the form opens.
 
-  def home_borrower_registration_form_copy_1_click(self, **event_args):
-    open_form('bank_users.user_form')
+  # def home_borrower_registration_form_copy_1_click(self, **event_args):
+  #   open_form('bank_users.user_form')
 
   def radio_button_change(self, **event_args):
+    self.userId = user_id
     selected_button = self.radio_buttons.selected_button
-    self.another_person = selected_button.text.lower()
+    selected_button = selected_button.text.lower()
+    self.another_person = selected_button
     # Hide other radio buttons
     for button in self.radio_buttons.components:
       if button != selected_button:
@@ -31,8 +33,7 @@ class lender_registration_form_3_marital_married(lender_registration_form_3_mari
     # Call the server function to update the database
         anvil.server.call('update_another_person', user_id, selected_person)
   
-  def button_next_click(self, **event_args):
-    user_id = self.userId
+  def button_submit_click(self, **event_args):
     # Check the selected radio button and show the corresponding grid panel
     if self.another_person == 'father':
       self.grid_panel_1.visible = True

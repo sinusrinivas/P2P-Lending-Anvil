@@ -37,13 +37,16 @@ class lender_registration_form_3_marital_details(lender_registration_form_3_mari
     else:
       anvil.server.call('add_lendor_marital',marital_status,user_id)
       if marital_status == 'Not Married':
-        open_form('lendor_registration_form.lender_registration_form_4_bank_form_1',user_id = user_id)
+        open_form('lendor_registration_form.lender_registration_form_3_marital_details.lender_registration_form_3_marital_married',user_id = user_id)
       elif marital_status == 'Married':
         open_form('lendor_registration_form.lender_registration_form_3_marital_details.lender_registration_form_3_marital_married',user_id = user_id)
       else:
         open_form('lendor_registration_form.lender_registration_form_4_bank_form_1',user_id = user_id)
 
-
   def button_1_click(self, **event_args):
     open_form('lendor_registration_form.lender_registration_form_2',user_id=self.userId)
     # Any code you write here will run before the form opens.
+
+  def marital_status_borrower_registration_dropdown_change(self, **event_args):
+    """This method is called when an item is selected"""
+    pass
