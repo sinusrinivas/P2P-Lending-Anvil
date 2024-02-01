@@ -32,12 +32,6 @@ components:
       properties: {}
       name: navigation_bar_lender_dashbord_1
       layout_properties: {grid_position: 'QTEMHS,TNIUXR'}
-    - name: button_1
-      properties: {text: 'Back   ', icon_align: right_edge, align: right, bold: true,
-        background: '#d62531', foreground: white}
-      type: Button
-      layout_properties: {grid_position: 'PVLVVC,KTDSMW'}
-      event_bindings: {click: button_1_click}
     - name: label_6
       properties: {align: center, background: '#083973', text: Foreclosure details,
         bold: false, foreground: White, underline: true, font_size: 18}
@@ -168,3 +162,10 @@ components:
     type: Button
     layout_properties: {grid_position: 'BDOFIL,JJIDRT'}
     event_bindings: {click: decline_click}
+- name: button_1
+  properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
+    foreground: white, visible: true, text: 'Back   ', font_size: null, font: '',
+    spacing_above: small, icon_align: right_edge, spacing_below: small, italic: false,
+    background: '#d62531', bold: true, underline: false, icon: ''}
+  type: Button
+  layout_properties: {grid_position: 'PVLVVC,KTDSMW'}
