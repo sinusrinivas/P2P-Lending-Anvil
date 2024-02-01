@@ -840,6 +840,9 @@ db_schema:
     - name: scheduled_payment
       admin_ui: {width: 200}
       type: date
+    - name: next_payment_2
+      admin_ui: {width: 200, order: 13}
+      type: date
   fin_borrower_business_type:
     client: full
     server: full

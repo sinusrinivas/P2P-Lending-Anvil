@@ -119,6 +119,7 @@ unique_ids:
     wallet.wallet.RowTemplate25: '1703498985331318465098761.16345'
     admin.dashboard.borrowers: '1699528468358308523806957.0701'
     lendor_registration_form.dashboard.lender_view_loans.payment_details_l: '1705114698618284262521664.65704'
+    borrower_registration_form.dashboard.today_dues.check_out: '1706717389664204748262715.70047'
     admin.dashboard.loan_management: '1699528569921998135077477.3452'
     borrower_registration_form.star_1_borrower_registration_form_3_marital: '1698915218509837779485275.2188'
     admin.dashboard.manage_cms.add_borrower_dropdown_details.ItemTemplate5: '1706093183750571249667783.6285'
@@ -218,7 +219,6 @@ unique_ids:
     lendor_registration_form.dashboard.lender_view_loans.view_details_1: '1703138294370237056127607.49118'
     borrower_registration_form.star_1_borrower_registration_form_1_education.star_1_borrower_registration_form_education_phd: '17066742790462903583176.3175592'
     admin.user_issue.user_buganalysis: '170118773598944323523917.26369'
-    borrower_registration_form.dashboard.today_dues.RowTemplate17: '1701228481896128428300127.09094'
     admin.dashboard.manage_settings.manage_fee.fee_edit_form: '1699529229635822611582898.5063'
     ? borrower_registration_form.star_1_borrower_registration_form_2_employment.star_1_borrower_registration_form_2_employment_emp_detail_2
     : '1700037622301754064674185.6132'
@@ -263,6 +263,7 @@ unique_ids:
     borrower_registration_form.star_1_borrower_registration_form_1_education: '1706674209284259079855206.07712'
     admin.dashboard.loan_management.approved_loans: '1699528799869373096001113.10925'
     lendor_registration_form.dashboard.view_profile: '1699967210041830030429676.4268'
+    borrower_registration_form.dashboard.today_dues.ItemTemplate22: '1706717092294394749212131.0225'
     admin.dashboard.loan_management.approved_loans.RowTemplate2: '1700739710762570959395619.5336'
     admin.dashboard.manage_cms.add_borrower_dropdown_details.ItemTemplate7: '170609320608262841511563.98132'
     bank_users.main_form.location_main_form: '1700563664830830087586865.7502'
