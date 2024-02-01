@@ -6,7 +6,6 @@ unique_ids:
     admin.dashboard.manage_cms.add_borrower_dropdown_details.ItemTemplate4: '1706093176660451392535162.64197'
     borrower_registration_form.star_1_borrower_registration_form_1_education.star_1_borrower_registration_form_education_btech: '1706674259391248612457294.9111'
     admin.dashboard.loan_management.default_loans.RowTemplate19: '1701349303616984574618128.7532'
-    lendor_registration_form.dashboard.view_loan_extension_requests.RowTemplate39: '1706502570615849697269151.527'
     lendor_registration_form.dashboard.change_password: '1699967346365452645084641.901'
     ? borrower_registration_form.star_1_borrower_registration_form_2_employment.star_1_borrower_registration_form_2_employment_student
     : '1700126702884606423685481.6467'
@@ -50,7 +49,6 @@ unique_ids:
     admin.dashboard.manage_cms.add_borrower_dropdown_details.ItemTemplate11: '1706093228261598885466552.9293'
     wallet.wallet.ItemTemplate1: '1703492569011195703115231.62308'
     lendor_registration_form.lender_registration_form_2.lender_registration_individual_form_3: '1699429299471944361321501.9009'
-    lendor_registration_form.dashboard.view_loan_extension_requests.RowTemplate40: '1706502585897858139255678.4071'
     admin.dashboard.loan_management.loan_disbursed.RowTemplate16: '1701160112605363272029232.90436'
     ? borrower_registration_form.star_1_borrower_registration_form_2_employment.star_1_borrower_registration_form_2_employment_emp_detail_1
     : '1700037370196273229157101.42648'
