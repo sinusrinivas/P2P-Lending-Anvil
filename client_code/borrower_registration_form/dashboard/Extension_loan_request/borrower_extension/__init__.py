@@ -7,6 +7,7 @@ import anvil.users
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
+from datetime import datetime, timedelta
 
 class borrower_extension(borrower_extensionTemplate):
     def __init__(self, selected_row, **properties):
@@ -34,47 +35,82 @@ class borrower_extension(borrower_extensionTemplate):
         self.extension_allow.text = self.foreclosure_type_lst[0]
         self.extension_fee.text = self.extension_fee_lst[0]
 
-        # # Check status for the selected loan ID
-        # loan_id = selected_row['loan_id']
-        # extend_rows = app_tables.extends_loan.search(loan_id=loan_id)
+        loan_id = selected_row['loan_id']
+        loan_details_row = app_tables.fin_loan_details.get(loan_id=loan_id)
+      
+        # Check status for the selected loan ID
+        loan_id = selected_row['loan_id']
+        extend_rows = app_tables.fin_extends_loan.search(loan_id=loan_id)
 
-        # approved_status = False
-        # rejected_status = False
+        approved_status = False
+        rejected_status = False
 
-        # for row in extend_rows:
-        #     if row['status'] == 'approved':
-        #         approved_status = True
-        #         break
-        #     elif row['status'] == 'rejected':
-        #         rejected_status = True
-        #         break
+        for row in extend_rows:
+            if row['status'] == 'approved':
+                approved_status = True
+                break
+            elif row['status'] == 'rejected':
+                rejected_status = True
+                break
 
-        # if approved_status:
-        #     # If there is an approved status, make "Pay" button visible
-        #     self.label_5_copy_2.visible = True
-        #     Notification("Your request has been accepted.").show()
-        # elif rejected_status:
-        #     # If there is a reject status, show an alert
-        #     Notification('Your request has been rejected.').show()
-        #     self.label_5_copy_3.visible = True
-        # else:
-        #     # If there is no approved or reject status, check if the loan ID is in foreclosure table
-        #     existing_requests = app_tables.extends_loan.search(loan_id=loan_id)
-        #     if len(existing_requests) == 0 :
-        #         # If the loan ID is not in the foreclosure table, make "Foreclose" button and button2 visible                
-        #         self.button_2.visible = True               
-        #     else:
-                
-        #         self.button_2.visible = False 
-                
+        if approved_status:
+            # If there is an approved status, make "Pay" button visible
+            self.label_5_copy_2.visible = True
+            self.button_1_copy.visible = True
+            self.button_1.visible = False
+            self.button_2.visible = False
+            loan_details_row = loan_details_row['loan_extension_months']
+            self.text_box_1.text = str(loan_details_row)
+            Notification("Your request has been accepted.").show()
+        elif rejected_status:
+            # If there is a reject status, show an alert            
+            self.label_5_copy_3.visible = True
+            self.button_1_copy.visible = True
+            self.button_1.visible = False
+            self.button_2.visible = False
+            loan_details_row = loan_details_row['loan_extension_months']
+            self.text_box_1.text = str(loan_details_row)
+            Notification('Your request has been rejected.').show()
+        else:
+            # If there is no approved or reject status, check if the loan ID is in extend loan table
+            existing_requests = app_tables.fin_extends_loan.search(loan_id=loan_id)
+            if len(existing_requests) == 0:
+                # If the loan ID is not in the foreclosure table, make "Foreclose" button and button2 visible                
+                self.button_2.visible = True
+            else:
+                loan_details_row = loan_details_row['loan_extension_months']
+                self.text_box_1.text = str(loan_details_row)
+                self.button_2.visible = False 
+                self.label_5_copy.visible = True
+                self.button_1_copy.visible = True
+                self.button_1.visible = False
+            
+            # Fetch scheduled payments from fin_emi_table
+            loan_id = selected_row['loan_id']
+            emi_rows = app_tables.fin_emi_table.search(loan_id=loan_id)
+            
+            # Check if there are scheduled payments within 2 days before the due date
+            today = datetime.now().date()
+            scheduled_payment_found = any(
+                (emi_row['scheduled_payment'] - today).days <= 2
+                for emi_row in emi_rows if emi_row['scheduled_payment'] is not None
+            )
+            
+            # Update visibility based on scheduled payments
+            self.button_2.visible = self.button_2.visible and not scheduled_payment_found
+            self.button_1.visible = self.button_1.visible and scheduled_payment_found
+            
+            # Additional condition to make button_1 visible if there are no existing requests
+            if len(existing_requests) == 0:
+                self.button_1_copy.visible = True
 
     def button_1_click(self, **event_args):
         """This method is called when the Back button is clicked"""
-        open_form('bank_users.borrower_dashboard.Extension_Loan_request')
+        open_form('borrower_registration_form.dashboard.Extension_loan_request')
 
     def button_3_click(self, **event_args):
         """This method is called when the Close button is clicked"""
-        open_form('bank_users.borrower_dashboard')
+        open_form('borrower_registration_form.dashboard')
 
     def button_2_click(self, **event_args):
         """This method is called when the Submit Extension Request button is clicked"""
@@ -98,7 +134,7 @@ class borrower_extension(borrower_extensionTemplate):
                 )
 
             # Close the current form or navigate to another form if needed
-            open_form('bank_users.borrower_dashboard.Extension_Loan_request.borrower_extension.extension2', selected_row = self.selected_row, loan_extension_months = loan_extension_months)
+            open_form('borrower_registration_form.dashboard.Extension_loan_request.borrower_extension.extension2', selected_row = self.selected_row, loan_extension_months = loan_extension_months)
 
     def validate_extension_months(self):
         """Validate the extension months entered by the borrower"""
@@ -114,3 +150,7 @@ class borrower_extension(borrower_extensionTemplate):
             alert("Please enter a valid number of extension months.", title="Validation Error")
         
         return False
+
+    def button_1_copy_click(self, **event_args):
+      """This method is called when the button is clicked"""
+      open_form('borrower_registration_form.dashboard.Extension_loan_request')
