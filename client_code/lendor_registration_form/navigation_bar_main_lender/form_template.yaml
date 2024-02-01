@@ -8,6 +8,7 @@ components:
   layout_properties:
     col_widths: {}
     grid_position: SAFTFD,NMJLEA
+    full_width_row: true
   components:
   - name: borrower_dashboard_home_linkhome_borrower_registration_button_copy_1
     properties: {role: null, url: '', align: center, tooltip: Home, border: '', foreground: white,
