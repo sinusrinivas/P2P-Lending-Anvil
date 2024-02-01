@@ -69,9 +69,9 @@ def add_lendor_six_form(lending_type, investment,lending_period, user_id):
   row = app_tables.fin_lender.add_row(investment=investment, lending_type=lending_type,lending_period=lending_period,customer_id = user_id)
     
 @anvil.server.callable
-def update_another_person(user_profile_id, selected_person):
+def update_another_person(user_id, selected_person):
 
-  user_profile = app_tables.fin_user_profile.get(user_profile_id=user_profile_id)
+  user_profile = app_tables.fin_user_profile.get(customer_id=user_id)
   user_profile['another_person'] = selected_person
   user_profile.save()
 
