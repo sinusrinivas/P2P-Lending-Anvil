@@ -29,7 +29,7 @@ db_schema:
     columns: []
     title: fin_wallet_notification
   fin_lendor_business_type:
-    client: none
+    client: full
     server: full
     columns:
     - name: lendor_business_type
@@ -37,7 +37,7 @@ db_schema:
       type: string
     title: fin_lendor_business_type
   fin_lendor_salary_type:
-    client: none
+    client: full
     server: full
     columns:
     - name: lendor_salary_type
@@ -136,7 +136,7 @@ db_schema:
       admin_ui: {width: 200}
       type: string
   fin_lendor_lending_type:
-    client: none
+    client: full
     server: full
     columns:
     - name: lendor_lending_type
@@ -367,7 +367,7 @@ db_schema:
       type: string
     title: Users
   fin_lendor_employee_type:
-    client: none
+    client: full
     server: full
     columns:
     - name: lendor_employee_type
@@ -801,9 +801,6 @@ db_schema:
     - name: borrower_email
       admin_ui: {width: 200, order: 2}
       type: string
-    - name: scheduled_payment
-      admin_ui: {width: 200, order: 3}
-      type: number
     - name: payment_number
       admin_ui: {width: 200, order: 4}
       type: number
@@ -831,6 +828,15 @@ db_schema:
     - name: emi_status
       admin_ui: {width: 200}
       type: bool
+    - name: actual_payment_made
+      admin_ui: {width: 200}
+      type: date
+    - name: next_payment
+      admin_ui: {width: 200}
+      type: date
+    - name: scheduled_payment
+      admin_ui: {width: 200}
+      type: date
   fin_borrower_business_type:
     client: full
     server: full
@@ -888,15 +894,15 @@ db_schema:
     - name: borrower_email_id
       admin_ui: {width: 200}
       type: string
-    - name: description
-      admin_ui: {width: 200}
-      type: string
     - name: final_emi
       admin_ui: {width: 200}
       type: number
     - name: lender_email_id
       admin_ui: {width: 200}
       type: string
+    - name: extension_request_date
+      admin_ui: {width: 200}
+      type: datetime
     title: fin_extends_loan
   fin_lendor_gender_2:
     title: fin_lendor_gender
@@ -1131,7 +1137,7 @@ db_schema:
       type: string
     title: fin_borrower_gender
   fin_lendor_qualification:
-    client: none
+    client: full
     server: full
     columns:
     - name: lendor_qualification
