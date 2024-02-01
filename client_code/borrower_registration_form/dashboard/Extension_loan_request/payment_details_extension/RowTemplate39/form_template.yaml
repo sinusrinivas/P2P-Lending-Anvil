@@ -1,0 +1,75 @@
+container: {type: DataRowPanel}
+components:
+- type: Label
+  properties: {}
+  name: label_1
+  layout_properties: {column: JQXVVR}
+  data_bindings:
+  - {property: text, code: 'self.item[''PaymentNumber'']'}
+- type: Label
+  properties: {}
+  name: label_2
+  layout_properties: {column: CYIBUA}
+  data_bindings:
+  - {property: text, code: 'self.item[''PaymentDate'']'}
+- type: Label
+  properties: {}
+  name: label_3
+  layout_properties: {column: BJGQJP}
+  data_bindings:
+  - {property: text, code: 'self.item[''BeginningBalance'']'}
+- type: Label
+  properties: {}
+  name: label_4
+  layout_properties: {column: WNECVM}
+  data_bindings:
+  - {property: text, code: 'self.item[''ScheduledPayment'']'}
+- type: Label
+  properties: {}
+  name: label_5
+  layout_properties: {column: YZYMCY}
+  data_bindings:
+  - {property: text, code: 'self.item[''ExtensionFee'']'}
+- type: Label
+  properties: {}
+  name: label_6
+  layout_properties: {column: MDDOBW}
+  data_bindings:
+  - {property: text, code: 'self.item[''TotalPayment'']'}
+- type: Label
+  properties: {}
+  name: label_7
+  layout_properties: {column: XVOTMV}
+  data_bindings:
+  - {property: text, code: 'self.item[''Principal'']'}
+- type: Label
+  properties: {}
+  name: label_8
+  layout_properties: {column: SZCWPG}
+  data_bindings:
+  - {property: text, code: 'self.item[''Interest'']'}
+- type: Label
+  properties: {}
+  name: label_9
+  layout_properties: {column: RMPUHJ}
+  data_bindings:
+  - {property: text, code: 'self.item[''EndingBalance'']'}
+- type: Label
+  properties: {}
+  name: label_10
+  layout_properties: {column: XVAEKL}
+  data_bindings:
+  - {property: text, code: 'self.item[''EMIDate'']'}
+- type: Label
+  properties: {}
+  name: label_11
+  layout_properties: {column: WHASKQ}
+  data_bindings:
+  - {property: text, code: 'self.item[''EMITime'']'}
+- type: Label
+  properties: {}
+  name: label_12
+  layout_properties: {column: IOSSPA}
+  data_bindings:
+  - {property: text, code: 'self.item[''AccountNumber'']'}
+is_package: true
