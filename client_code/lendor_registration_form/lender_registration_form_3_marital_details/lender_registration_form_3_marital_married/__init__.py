@@ -21,36 +21,35 @@ class lender_registration_form_3_marital_married(lender_registration_form_3_mari
   #   open_form('bank_users.user_form')
 
   def radio_button_change(self, **event_args):
-    self.userId = user_id
     selected_button = self.radio_buttons.selected_button
-    selected_button = selected_button.text.lower()
-    self.another_person = selected_button
+    self.another_person = selected_button.text.lower()
+    
     # Hide other radio buttons
     for button in self.radio_buttons.components:
       if button != selected_button:
         button.visible = False
 
     # Call the server function to update the database
-        anvil.server.call('update_another_person', user_id, selected_person)
+        anvil.server.call('update_another_person', self.userId, self.another_person)
   
   def button_submit_click(self, **event_args):
     # Check the selected radio button and show the corresponding grid panel
-    if self.another_person == 'father':
+    if self.another_person == 'Father':
       self.grid_panel_1.visible = True
       self.grid_panel_2.visible = False
       self.grid_panel_3.visible = False
       self.grid_panel_4.visible = False
-    elif self.another_person == 'mother':
+    elif self.another_person == 'Mother':
       self.grid_panel_1.visible = False
       self.grid_panel_2.visible = True
       self.grid_panel_3.visible = False
       self.grid_panel_4.visible = False
-    elif self.another_person == 'spouse':
+    elif self.another_person == 'Spouse':
       self.grid_panel_1.visible = False
       self.grid_panel_2.visible = False
       self.grid_panel_3.visible = True
       self.grid_panel_4.visible = False
-    elif self.another_person == 'other':
+    elif self.another_person == 'Other':
       self.grid_panel_1.visible = False
       self.grid_panel_2.visible = False
       self.grid_panel_3.visible = False
@@ -60,3 +59,5 @@ class lender_registration_form_3_marital_married(lender_registration_form_3_mari
     open_form('lendor_registration_form.lender_registration_form_3_marital_details',user_id=self.userId)
 
     # Any code you write here will run before the form opens.
+
+  

@@ -26,8 +26,8 @@ class lender_registration_form_3_marital_details(lender_registration_form_3_mari
 
     # Any code you write here will run before the form opens.
 
-  def home_borrower_registration_form_copy_1_click(self, **event_args):
-    open_form('bank_users.user_form')
+  # def home_borrower_registration_form_copy_1_click(self, **event_args):
+  #   open_form('bank_users.user_form')
 
   def button_next_click(self, **event_args):
     marital_status = self.marital_status_lender_registration_dropdown.selected_value
@@ -37,7 +37,7 @@ class lender_registration_form_3_marital_details(lender_registration_form_3_mari
     else:
       anvil.server.call('add_lendor_marital',marital_status,user_id)
       if marital_status == 'Not Married':
-        open_form('lendor_registration_form.lender_registration_form_3_marital_details.lender_registration_form_3_marital_married',user_id = user_id)
+        open_form('lendor_registration_form.lender_registration_form_4_bank_form_1',user_id = user_id)
       elif marital_status == 'Married':
         open_form('lendor_registration_form.lender_registration_form_3_marital_details.lender_registration_form_3_marital_married',user_id = user_id)
       else:

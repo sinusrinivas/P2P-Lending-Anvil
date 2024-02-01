@@ -105,13 +105,12 @@ def add_lendor_individual_form_3(annual_salary, designation,emp_id_proof,last_si
     row[0]['last_six_month_bank_proof']=last_six_month
 
 @anvil.server.callable
-def add_lendor_institutional_form_1(business_name,business_location,business_add,branch_name,user_id):
+def add_lendor_institutional_form_1(business_name,business_location,business_add,user_id):
   row = app_tables.fin_user_profile.search(customer_id = user_id)
   if row:
     row[0]['business_name'] = branch_name
     row[0]['business_location'] = business_location
     row[0]['business_add'] = business_add
-    row[0]['branch_name'] = branch_name
 
 @anvil.server.callable
 def add_lendor_institutional_form_2(nearest_loc,business_type,empolyees_working,year_estd,user_id):
@@ -313,10 +312,10 @@ def get_user_data(user_id):
             'account_type': user['account_type'],
             'account_number': user['account_number'],
             'select_bank': user['select_bank'],
-            'ifsc_code': user['ifsc_code'],
-            'salary_type': user['salary_type'],
+            'bank_id': user['bank_id'],
+            # 'salary_type': user['salary_type'],
             'branch_name': user['branch_name'],
-            'net_bank': user['net_bank']
+            # 'net_bank': user['net_bank']
           
             
         }

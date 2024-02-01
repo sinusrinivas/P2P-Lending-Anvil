@@ -40,6 +40,7 @@ components:
     properties: {text: Father, selected: false}
     type: RadioButton
     layout_properties: {}
+    event_bindings: {clicked: radio_button_1_clicked}
   - name: radio_button_2
     properties: {text: Mother}
     type: RadioButton
