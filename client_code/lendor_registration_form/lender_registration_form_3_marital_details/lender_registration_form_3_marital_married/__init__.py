@@ -9,7 +9,7 @@ import anvil.tables.query as q
 from anvil.tables import app_tables
 
 class lender_registration_form_3_marital_married(lender_registration_form_3_marital_marriedTemplate):
-  def __init__(self,user_id **properties):
+  def __init__(self,user_id, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
     self.userId = user_id
