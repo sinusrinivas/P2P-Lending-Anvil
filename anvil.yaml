@@ -473,7 +473,7 @@ db_schema:
       admin_ui: {width: 200, order: 8}
       type: date
     - name: aadhaar_photo
-      admin_ui: {width: 200, order: 12}
+      admin_ui: {order: 13, width: 200}
       type: media
     - name: pan_photo
       admin_ui: {width: 200, order: 13}
