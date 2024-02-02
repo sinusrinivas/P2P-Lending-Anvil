@@ -28,10 +28,11 @@ components:
   components:
   - name: label_1
     properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-      visible: true, text: Provide another person detail, font_size: null, font: '',
-      spacing_above: small, icon_align: left, spacing_below: small, italic: false,
-      background: '', bold: true, underline: false, icon: ''}
+      visible: true, text: Provide guarantor detail, font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+      underline: false, icon: ''}
     type: Label
+    layout_properties: {}
   - name: spacer_1
     properties: {height: 32}
     type: Spacer
@@ -81,7 +82,7 @@ components:
   layout_properties: {grid_position: 'TFZSFP,LABOCT'}
 - name: grid_panel_1
   properties: {spacing_above: small, spacing_below: small, background: '', foreground: '',
-    border: '', visible: false, role: outlined-card, tooltip: ''}
+    border: '', visible: true, role: outlined-card, tooltip: ''}
   type: GridPanel
   layout_properties: {grid_position: 'RQTCLW,LTWFKS'}
   components:
@@ -138,6 +139,20 @@ components:
       icon: ''}
     type: Label
     layout_properties: {row: VXAUDA, width_xs: 3, col_xs: 6}
+  - name: label_3_copy_1_copy_2
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: 'Father Address :', font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+      underline: false, icon: ''}
+    type: Label
+    layout_properties: {row: QHZIUD, width_xs: 3, col_xs: 2}
+  - name: father_address_text
+    properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: '',
+      border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
+      font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
+      background: 'theme:On Primary', bold: false, underline: false}
+    type: TextBox
+    layout_properties: {row: QHZIUD, width_xs: 5, col_xs: 6}
   - name: label_3_copy_1
     properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
       visible: true, text: 'Father Profession :', font_size: null, font: '', spacing_above: small,
@@ -152,27 +167,41 @@ components:
       background: 'theme:On Primary', bold: false, underline: false}
     type: TextBox
     layout_properties: {row: HBHHFF, width_xs: 5, col_xs: 6}
-  - name: label_3_copy_1_copy_2
+  - name: label_3_copy_1_copy_3
     properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-      visible: true, text: 'Father Address :', font_size: null, font: '', spacing_above: small,
+      visible: true, text: 'Father company name :', font_size: null, font: '', spacing_above: small,
       icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
       underline: false, icon: ''}
     type: Label
-    layout_properties: {row: CTDQTO, width_xs: 3, col_xs: 2}
-  - name: father_address_text
+    layout_properties: {row: THPRJI, width_xs: 3, col_xs: 2}
+  - name: father_company_name_text
     properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: '',
       border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
       font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
       background: 'theme:On Primary', bold: false, underline: false}
     type: TextBox
-    layout_properties: {row: CTDQTO, width_xs: 5, col_xs: 6}
+    layout_properties: {row: THPRJI, width_xs: 5, col_xs: 6}
+  - name: label_3_copy_1_copy_3_copy
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: 'Father Annual Earnings :', font_size: null, font: '',
+      spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+      background: '', bold: true, underline: false, icon: ''}
+    type: Label
+    layout_properties: {row: LXOCUU, width_xs: 3, col_xs: 2}
+  - name: father_profession_text_copy
+    properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: '',
+      border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
+      font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
+      background: 'theme:On Primary', bold: false, underline: false}
+    type: TextBox
+    layout_properties: {row: LXOCUU, width_xs: 5, col_xs: 6}
 - name: spacer_1_copy_1_copy_copy_copy
   properties: {height: 11.22222900390625}
   type: Spacer
   layout_properties: {grid_position: 'REPVXT,QUUABK'}
 - name: grid_panel_2
   properties: {spacing_above: small, spacing_below: small, background: '', foreground: '',
-    border: '', visible: false, role: outlined-card, tooltip: ''}
+    border: '', visible: true, role: outlined-card, tooltip: ''}
   type: GridPanel
   layout_properties: {grid_position: 'QUOEES,LISRCW'}
   components:
@@ -229,6 +258,20 @@ components:
       icon: ''}
     type: Label
     layout_properties: {row: VXAUDA, width_xs: 3, col_xs: 6}
+  - name: label_3_copy_1_copy_2_copy
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: 'Mother Address :', font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+      underline: false, icon: ''}
+    type: Label
+    layout_properties: {row: OMSLAP, width_xs: 3, col_xs: 2}
+  - name: mother_address_text
+    properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: '',
+      border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
+      font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
+      background: 'theme:On Primary', bold: false, underline: false}
+    type: TextBox
+    layout_properties: {row: OMSLAP, width_xs: 5, col_xs: 6}
   - name: label_3_copy_1_copy
     properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
       visible: true, text: 'Mother Profession :', font_size: null, font: '', spacing_above: small,
@@ -243,27 +286,45 @@ components:
       background: 'theme:On Primary', bold: false, underline: false}
     type: TextBox
     layout_properties: {row: HBHHFF, width_xs: 5, col_xs: 6}
-  - name: label_3_copy_1_copy_2_copy
+  - name: label_3_copy_1_copy_3_copy_2
     properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-      visible: true, text: 'Mother Address :', font_size: null, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-      underline: false, icon: ''}
+      visible: true, text: 'Mother company name :
+
+        (If working)', font_size: null, font: '', spacing_above: small, icon_align: left,
+      spacing_below: small, italic: false, background: '', bold: true, underline: false,
+      icon: ''}
     type: Label
-    layout_properties: {row: WPPSLK, width_xs: 3, col_xs: 2}
-  - name: mother_address_text
+    layout_properties: {row: DWZGRE, width_xs: 3, col_xs: 2}
+  - name: mother_company_name_text
     properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: '',
       border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
       font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
       background: 'theme:On Primary', bold: false, underline: false}
     type: TextBox
-    layout_properties: {row: WPPSLK, width_xs: 5, col_xs: 6}
+    layout_properties: {row: DWZGRE, width_xs: 5, col_xs: 6}
+  - name: label_3_copy_1_copy_3_copy_copy
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: 'Mother Annual Earnings :
+
+        (If working)', font_size: null, font: '', spacing_above: small, icon_align: left,
+      spacing_below: small, italic: false, background: '', bold: true, underline: false,
+      icon: ''}
+    type: Label
+    layout_properties: {row: RTVADP, width_xs: 3, col_xs: 2}
+  - name: mother_annual_earning_text
+    properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: '',
+      border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
+      font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
+      background: 'theme:On Primary', bold: false, underline: false}
+    type: TextBox
+    layout_properties: {row: RTVADP, width_xs: 5, col_xs: 6}
 - name: spacer_1_copy_1_copy_copy
   properties: {height: 16.22222900390625}
   type: Spacer
   layout_properties: {grid_position: 'EEKIEM,FRDQPL'}
 - name: grid_panel_3
   properties: {spacing_above: small, spacing_below: small, background: '', foreground: '',
-    border: '', visible: false, role: outlined-card, tooltip: ''}
+    border: '', visible: true, role: outlined-card, tooltip: ''}
   type: GridPanel
   layout_properties: {grid_position: 'FHPXPN,JQSDDW'}
   components:
@@ -276,7 +337,7 @@ components:
     layout_properties: {row: AUFPKE, width_xs: 12, col_xs: 0, width: 626}
   - name: label_3_copy_1_copy_1_copy_copy
     properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-      visible: true, text: 'Full Spouse Name :', font_size: null, font: '', spacing_above: small,
+      visible: true, text: 'Full Name :', font_size: null, font: '', spacing_above: small,
       icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
       underline: false, icon: ''}
     type: Label
@@ -301,7 +362,7 @@ components:
     layout_properties: {row: LEIWZK, width_xs: 5, col_xs: 6}
   - name: label_2_copy_1_copy_1_copy_copy
     properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-      visible: true, text: 'Spouse mobile Number :', font_size: null, font: '', spacing_above: small,
+      visible: true, text: 'mobile Number :', font_size: null, font: '', spacing_above: small,
       icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
       underline: false, icon: ''}
     type: Label
@@ -322,7 +383,7 @@ components:
     layout_properties: {row: VXAUDA, width_xs: 3, col_xs: 6}
   - name: label_3_copy_1_copy_copy
     properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-      visible: true, text: 'Spouse Profession :', font_size: null, font: '', spacing_above: small,
+      visible: true, text: 'Profession :', font_size: null, font: '', spacing_above: small,
       icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
       underline: false, icon: ''}
     type: Label
@@ -336,7 +397,7 @@ components:
     layout_properties: {row: HBHHFF, width_xs: 5, col_xs: 6}
   - name: label_3_copy_1_copy_2_copy_copy
     properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-      visible: true, text: 'Spouse Company Name :
+      visible: true, text: 'Company Name :
 
         (If working)', font_size: null, font: '', spacing_above: small, icon_align: left,
       spacing_below: small, italic: false, background: '', bold: true, underline: false,
@@ -370,7 +431,7 @@ components:
   layout_properties: {grid_position: 'BTWKPO,TNFIIN'}
 - name: grid_panel_4
   properties: {spacing_above: small, spacing_below: small, background: '', foreground: '',
-    border: '', visible: false, role: outlined-card, tooltip: ''}
+    border: '', visible: true, role: outlined-card, tooltip: ''}
   type: GridPanel
   layout_properties: {grid_position: 'EGFEKN,QRWTEP'}
   components:
@@ -455,4 +516,34 @@ components:
       background: 'theme:On Primary', bold: false, underline: false}
     type: TextBox
     layout_properties: {row: HBHHFF, width_xs: 5, col_xs: 6}
+  - name: label_3_copy_1_copy_2_copy_copy_copy_2
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: 'Company Name :
+
+        (If working)', font_size: null, font: '', spacing_above: small, icon_align: left,
+      spacing_below: small, italic: false, background: '', bold: true, underline: false,
+      icon: ''}
+    type: Label
+    layout_properties: {row: HGQMGX, width_xs: 3, col_xs: 2}
+  - name: companyname_text
+    properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: '',
+      border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
+      font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
+      background: 'theme:On Primary', bold: false, underline: false}
+    type: TextBox
+    layout_properties: {row: HGQMGX, width_xs: 5, col_xs: 6}
+  - name: label_3_copy_1_copy_copy_copy_copy_2
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: 'Annual Earnings (CTC) :', font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+      underline: false, icon: ''}
+    type: Label
+    layout_properties: {row: FIWZBG, width_xs: 3, col_xs: 2}
+  - name: annual_earning_text_1
+    properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: '',
+      border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
+      font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
+      background: 'theme:On Primary', bold: false, underline: false}
+    type: TextBox
+    layout_properties: {row: FIWZBG, width_xs: 5, col_xs: 6}
 is_package: true

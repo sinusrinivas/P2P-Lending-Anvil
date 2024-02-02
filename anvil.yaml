@@ -959,6 +959,32 @@ db_schema:
       admin_ui: {width: 200, order: 0}
       type: string
     title: fin_product_group
+  fin_guarantor_details:
+    client: full
+    server: full
+    columns:
+    - name: guarantor_name
+      admin_ui: {order: 0, width: 200}
+      type: string
+    - name: guarantor_date_of_birth
+      admin_ui: {order: 1, width: 200}
+      type: date
+    - name: guarantor_mobile_no
+      admin_ui: {width: 200, order: 2}
+      type: number
+    - name: guarantor_profession
+      admin_ui: {width: 200, order: 3}
+      type: string
+    - name: guarantor_address
+      admin_ui: {order: 2.5, width: 200}
+      type: string
+    - name: guarantor_company_name
+      admin_ui: {width: 200, order: 5}
+      type: string
+    - name: guarantor_annual_earning
+      admin_ui: {width: 200, order: 6}
+      type: string
+    title: fin_guarantor_details
   fin_loan_details:
     client: full
     server: full

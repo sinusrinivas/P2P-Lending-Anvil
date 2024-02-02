@@ -15,7 +15,6 @@ from anvil import server
 from ...bank_users.main_form import main_form_module
 
 
-
 class dashboard(dashboardTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
