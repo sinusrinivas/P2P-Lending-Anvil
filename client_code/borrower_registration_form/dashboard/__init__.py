@@ -119,5 +119,5 @@ class dashboard(dashboardTemplate):
 
     def extended_loans_click(self, **event_args):
       """This method is called when the button is clicked"""
-      open_form('borrower_registration_form.dashboard.Extension_loan_request')
+      open_form('borrower_registration_form.dashboard.extension_loan_request')
 

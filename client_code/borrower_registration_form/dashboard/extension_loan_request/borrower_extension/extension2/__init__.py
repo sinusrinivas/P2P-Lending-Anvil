@@ -90,7 +90,7 @@ class extension2(extension2Template):
                     extension_request_date = datetime.now()
                 )
                 alert("Extension request submitted successfully!", title="Success")
-                open_form('borrower_registration_form.dashboard.Extension_loan_request')
+                open_form('borrower_registration_form.dashboard.extension_loan_request')
             else:
                 alert('Please enter a reason for extension.')
         else:
@@ -102,5 +102,5 @@ class extension2(extension2Template):
 
     def button_2_click(self, **event_args):
       """This method is called when the button is clicked"""
-      open_form('borrower_registration_form.dashboard.Extension_loan_request.borrower_extension', selected_row = self.selected_row)
+      open_form('borrower_registration_form.dashboard.extension_loan_request.borrower_extension', selected_row = self.selected_row)
 

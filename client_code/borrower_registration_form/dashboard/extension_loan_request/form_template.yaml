@@ -63,7 +63,7 @@ components:
     layout_properties: {grid_position: 'FQLNTP,HCIUQQ'}
     components:
     - type: RepeatingPanel
-      properties: {spacing_above: none, spacing_below: none, item_template: borrower_registration_form.dashboard.Extension_loan_request.RowTemplate37}
+      properties: {spacing_above: none, spacing_below: none, item_template: borrower_registration_form.dashboard.extension_loan_request.RowTemplate37}
       name: repeating_panel_1
       layout_properties: {}
 - type: FlowPanel

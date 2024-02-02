@@ -130,6 +130,10 @@ class payment_details_extension(payment_details_extensionTemplate):
         open_form('borrower_registration_form.dashboard.extension_loan_request.borrower_extension.extension2',
                   selected_row=self.selected_row, loan_extension_months=self.loan_extension_months)
 
+    def button_2_click(self, **event_args):
+      """This method is called when the button is clicked"""
+      open_form('borrower_registration_form.dashboard.extension_loan_request.borrower_extension', selected_row = self.selected_row)
+
     
 
    
