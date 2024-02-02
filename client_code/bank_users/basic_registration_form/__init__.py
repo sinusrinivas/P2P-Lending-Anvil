@@ -29,8 +29,8 @@ class basic_registration_form(basic_registration_formTemplate):
           self.date_picker_1.date=user_data['date_of_birth']
           self.mobile_number_box.text=user_data['mobile']
           self.alternate_email_text_box.text=user_data['another_email']
-          self.aadhar_card_text_box.text=user_data['aadhaar_no']
-          self.pan_number_text_box.text=user_data['pan_number']
+          self.govt_id1_text_box.text=user_data['aadhaar_no']
+          self.govt_id2_text_box.text=user_data['pan_number']
           self.text_box_1.text=user_data['street_adress_1']
           self.text_box_2.text=user_data['street_address_2']
           self.text_box_3.text=user_data['city']
@@ -38,6 +38,7 @@ class basic_registration_form(basic_registration_formTemplate):
           self.text_box_5.text=user_data['state']
           self.text_box_6.text=user_data['country']
           user_data.update()
+      
           options = app_tables.fin_borrower_gender.search()
           option_strings = [str(option['borrower_gender']) for option in options]
           self.gender_dd.items = option_strings
@@ -53,9 +54,9 @@ class basic_registration_form(basic_registration_formTemplate):
     mobile_no = self.mobile_number_box.text
     user_photo = self.registration_img_file_loader.file
     alternate_email = self.alternate_email_text_box.text
-    aadhar = self.aadhar_card_text_box.text
+    aadhar = self.govt_id1_text_box.text
     aadhar_card = self.registration_img_aadhar_file_loader.file
-    pan = self.pan_number_text_box.text
+    pan = self.govt_id2_text_box.text
     pan_card = self.registration_img_pan_file_loader.file
     street_adress_1 = self.text_box_1.text
     street_address_2 = self.text_box_2.text
@@ -89,12 +90,12 @@ class basic_registration_form(basic_registration_formTemplate):
       self.label_1.text='enter valid aadhar no'
     elif not re.match(r'^[A-Z]{5}[0-9]{4}[A-Z]$', pan):
       self.label_2.text='enter valid pan no'
-    elif not full_name or not gender or not dob or not mobile_no or not alternate_email or not user_photo or not aadhar or not aadhar_card or not pan or not pan_card or not street_adress_1 or not street_address_2 or not city or not pincode or not state or not state or not country:
-            Notification('Please fill all details').show()
+    elif not full_name or not gender or not dob or not mobile_no or not alternate_email or not user_photo or not aadhar or not aadhar_card or not pan or not pan_card or not street_adress_1 and not street_address_2 or not city or not pincode or not state or not state or not country:
+      Notification('Please fill all details').show()
     else:
-            anvil.server.call('add_basic_details', full_name, gender, dob, mobile_no, user_photo, alternate_email, aadhar, aadhar_card, pan, pan_card, street_adress_1, street_address_2, city, pincode, state, country, user_id)
-            Notification("basic details form fill up submitted successfully")
-            open_form('bank_users.user_form')
+      anvil.server.call('add_basic_details', full_name, gender, dob, mobile_no, user_photo, alternate_email, aadhar, aadhar_card, pan, pan_card, street_adress_1, street_address_2, city, pincode, state, country, user_id)
+      Notification("basic details form fill up submitted successfully")
+      open_form('bank_users.user_form')
             
 
   def full_name_text_box_change(self, **event_args):
@@ -110,6 +111,3 @@ class basic_registration_form(basic_registration_formTemplate):
         dob = self.date_picker_1.date
         if not dob or dob > datetime.now().date():
             self.dob_label.text = ''
-
-  
-    

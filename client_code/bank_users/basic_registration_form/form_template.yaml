@@ -17,7 +17,7 @@ components:
   layout_properties: {grid_position: 'YEZPMH,ZBTJQA'}
 - name: label_01
   properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
-    visible: true, text: Basic Details, font_size: null, font: '', spacing_above: small,
+    visible: true, text: Basic Details, font_size: 18, font: '', spacing_above: small,
     icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
     underline: false, icon: ''}
   type: Label
@@ -64,7 +64,7 @@ components:
   type: Label
   layout_properties: {grid_position: 'ZQPBSI,JQBMOP'}
 - name: date_picker_1
-  properties: {background: white}
+  properties: {background: white, placeholder: select_your_dob}
   type: DatePicker
   layout_properties: {grid_position: 'ZQPBSI,UXBJOC WFLUST,FWRCRR'}
 - name: dob_label
@@ -122,10 +122,10 @@ components:
   type: FileLoader
   layout_properties: {grid_position: 'GAQQXD,OGRIDF'}
 - name: label_06
-  properties: {text: Enter your aadhar card number, bold: true}
+  properties: {text: Enter your Government ID1, bold: true}
   type: Label
   layout_properties: {grid_position: 'FUKIAQ,FHUQHO'}
-- name: aadhar_card_text_box
+- name: govt_id1_text_box
   properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: '',
     border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
     font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
@@ -139,7 +139,7 @@ components:
   layout_properties: {grid_position: 'FUKIAQ,NACRVB TKHUVQ,EKZMAN'}
 - name: label_3_copy_1_copy_2
   properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
-    text: 'Upload your aadhar card
+    text: 'Upload your Govt ID1
 
       (Size less than 2MB)', font_size: null, font: '', spacing_above: small, icon_align: left,
     spacing_below: small, italic: false, background: '', bold: true, underline: false,
@@ -152,12 +152,12 @@ components:
   layout_properties: {grid_position: 'MCCGKZ,ZYIAJQ'}
 - name: label_08
   properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
-    text: Enter your pan number, font_size: null, font: '', spacing_above: small,
+    text: Enter your Government ID2, font_size: null, font: '', spacing_above: small,
     icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
     underline: false, icon: ''}
   type: Label
   layout_properties: {grid_position: 'YICHJM,MVXDLC'}
-- name: pan_number_text_box
+- name: govt_id2_text_box
   properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: '',
     border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
     font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
@@ -170,7 +170,7 @@ components:
   layout_properties: {grid_position: 'YICHJM,RKWAOY JIPPJW,PHGLAV'}
 - name: label_3_copy_1_copy_4
   properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
-    text: 'Upload pan photo
+    text: 'Upload your Govt ID2
 
       (Size less than 2MB)', font_size: null, font: '', spacing_above: small, icon_align: left,
     spacing_below: small, italic: false, background: '', bold: true, underline: false,
@@ -187,9 +187,9 @@ components:
   layout_properties: {grid_position: 'ECTRLG,NVNZEZ'}
 - name: label_1_copy_1_copy_1
   properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
-    visible: true, text: 'Address ', font_size: null, font: '', spacing_above: small,
-    icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-    underline: false, icon: ''}
+    visible: true, text: Address, font_size: 18, font: '', spacing_above: small, icon_align: left,
+    spacing_below: small, italic: false, background: '', bold: true, underline: false,
+    icon: ''}
   type: Label
   layout_properties: {grid_position: 'ZOOVBO,RRBJJI'}
 - name: spacer_1_copy
