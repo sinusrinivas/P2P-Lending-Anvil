@@ -33,27 +33,7 @@ class lender_registration_form_3_marital_married(lender_registration_form_3_mari
     anvil.server.call('update_another_person', self.userId, self.another_person)
   
   def button_submit_click(self, **event_args):
-    # Check the selected radio button and show the corresponding grid panel
-    if self.another_person == 'Father':
-      self.grid_panel_1.visible = True
-      self.grid_panel_2.visible = False
-      self.grid_panel_3.visible = False
-      self.grid_panel_4.visible = False
-    elif self.another_person == 'Mother':
-      self.grid_panel_1.visible = False
-      self.grid_panel_2.visible = True
-      self.grid_panel_3.visible = False
-      self.grid_panel_4.visible = False
-    elif self.another_person == 'Spouse':
-      self.grid_panel_1.visible = False
-      self.grid_panel_2.visible = False
-      self.grid_panel_3.visible = True
-      self.grid_panel_4.visible = False
-    elif self.another_person == 'Other':
-      self.grid_panel_1.visible = False
-      self.grid_panel_2.visible = False
-      self.grid_panel_3.visible = False
-      self.grid_panel_4.visible = True   
+    open_form('lendor_registration_form.lender_registration_form_4_bank_form_1')   
 
   def button_1_click(self, **event_args):
     open_form('lendor_registration_form.lender_registration_form_3_marital_details',user_id=self.userId)
@@ -65,18 +45,29 @@ class lender_registration_form_3_marital_married(lender_registration_form_3_mari
     self.grid_panel_1.visible = True
     self.grid_panel_2.visible = False
     self.grid_panel_3.visible = False
-   self.grid_panel_4.visible = False
+    self.grid_panel_4.visible = False
+    self.button_submit.visible = True
 
   def radio_button_2_clicked(self, **event_args):
     """This method is called when this radio button is selected"""
-    pass
+    self.grid_panel_1.visible = False
+    self.grid_panel_2.visible = True
+    self.grid_panel_3.visible = False
+    self.grid_panel_4.visible = False
+    self.button_submit.visible = True
 
   def radio_button_3_clicked(self, **event_args):
     """This method is called when this radio button is selected"""
-    pass
+    self.grid_panel_1.visible = False
+    self.grid_panel_2.visible = False
+    self.grid_panel_3.visible = True
+    self.grid_panel_4.visible = False
+    self.button_submit.visible = True
 
   def radio_button_4_clicked(self, **event_args):
     """This method is called when this radio button is selected"""
-    pass
-
-  
+    self.grid_panel_1.visible = False
+    self.grid_panel_2.visible = False
+    self.grid_panel_3.visible = False
+    self.grid_panel_4.visible = True
+    self.button_submit.visible = True
