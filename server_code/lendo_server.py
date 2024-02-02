@@ -446,6 +446,7 @@ def add_loan_details_data(loan_id, lender_customer_id, lender_email_id, lender_f
 #         print("Error fetching loan details:", str(e))
 #         return []
 
+
 ## Code for loan disbusement
 @anvil.server.callable
 def loan_disbursement_action(selected_row, email):
@@ -474,7 +475,6 @@ def loan_disbursement_action(selected_row, email):
         current_time = datetime.now(timezone.utc)
         print("current_time:", current_time)
       
-      
         if loan_amount > wallet_amount:
             # Check if 5 minutes have passed since lender_accepted_timestamp
             time_difference = current_time - lender_accepted_timestamp
@@ -490,11 +490,13 @@ def loan_disbursement_action(selected_row, email):
                 else:
                   print("2 minutes have not passed yet")
                   # 2 minutes have not passed yet
+                  selected_row['loan_updated_status'] = 'under process'
+                  selected_row.update()
                   return "insufficient_balance"    
             else:
                 # Update loan status to 'under process'
-                # selected_row['loan_updated_status'] = 'under process'
-                # selected_row.update()
+                selected_row['loan_updated_status'] = 'under process'
+                selected_row.update()
                 return "insufficient_balance"
         else:
            wallet_amount -= loan_amount
@@ -506,7 +508,6 @@ def loan_disbursement_action(selected_row, email):
         # Handle the case where the wallet row is not found
         print("wallet_not_found")
         return "wallet_not_found" 
-
 
 @anvil.server.background_task
 def check_loan_timeout(selected_row, lender_accepted_timestamp, email):
@@ -528,3 +529,4 @@ def check_loan_timeout(selected_row, lender_accepted_timestamp, email):
             selected_row['loan_updated_status'] = 'lost opportunities'
             selected_row.update()
             return "Time_out"
+          

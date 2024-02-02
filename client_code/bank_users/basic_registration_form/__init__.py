@@ -86,10 +86,10 @@ class basic_registration_form(basic_registration_formTemplate):
       self.mobile_label.text = 'Enter valid mobile no'
     elif not re.match(r'^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$', alternate_email):
       self.email_label.text = 'Enter a valid email address'
-    elif not re.match(r'^\d{12}$', aadhar):
-      self.label_1.text='enter valid aadhar no'
-    elif not re.match(r'^[A-Z]{5}[0-9]{4}[A-Z]$', pan):
-      self.label_2.text='enter valid pan no'
+    # elif not re.match(r'^\d{12}$', aadhar):
+    #   self.label_1.text='enter valid aadhar no'
+    # elif not re.match(r'^[A-Z]{5}[0-9]{4}[A-Z]$', pan):
+    #   self.label_2.text='enter valid pan no'
     elif not full_name or not gender or not dob or not mobile_no or not alternate_email or not user_photo or not aadhar or not aadhar_card or not pan or not pan_card or not street_adress_1 and not street_address_2 or not city or not pincode or not state or not state or not country:
       Notification('Please fill all details').show()
     else:
