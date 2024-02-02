@@ -60,7 +60,7 @@ class payment_details_extension(payment_details_extensionTemplate):
                 # Unpaid months: Calculate scheduled payment based on tenure plus extension months
                 emi = self.calculate_scheduled_payment(last_paid_emi_ending_balance, monthly_interest_rate, total_tenure - (month - 1))
                 total_payment = emi + extension_fee_amount if month == last_paid_emi_number + 1 else emi
-
+            self.emi = emi
             interest_amount = last_paid_emi_ending_balance * monthly_interest_rate
             principal_amount = emi - interest_amount
             ending_balance = last_paid_emi_ending_balance - principal_amount
@@ -128,7 +128,7 @@ class payment_details_extension(payment_details_extensionTemplate):
 
     def button_1_click(self, **event_args):
         open_form('borrower_registration_form.dashboard.extension_loan_request.borrower_extension.extension2',
-                  selected_row=self.selected_row, loan_extension_months=self.loan_extension_months)
+                  selected_row=self.selected_row, loan_extension_months=self.loan_extension_months, new_emi = self.emi)
 
     def button_2_click(self, **event_args):
       """This method is called when the button is clicked"""
