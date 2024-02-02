@@ -267,3 +267,7 @@ def generate_emi_id():
 #     user_request = app_tables.fin_product_details.search(product_categories=product_categories)
 #     return user_request
 
+
+
+
+# bessem code
