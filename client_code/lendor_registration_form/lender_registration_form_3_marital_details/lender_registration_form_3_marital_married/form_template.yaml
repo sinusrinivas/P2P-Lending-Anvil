@@ -45,10 +45,12 @@ components:
     properties: {text: Mother}
     type: RadioButton
     layout_properties: {}
+    event_bindings: {clicked: radio_button_2_clicked}
   - name: radio_button_3
     properties: {text: Spouse}
     type: RadioButton
     layout_properties: {}
+    event_bindings: {clicked: radio_button_3_clicked}
   - name: radio_button_4
     properties: {role: null, selected: false, align: left, tooltip: '', border: '',
       enabled: true, foreground: '', value: '', visible: true, text: Other, font_size: null,
@@ -56,6 +58,7 @@ components:
       bold: false, group_name: radioGroup1, underline: false}
     type: RadioButton
     layout_properties: {}
+    event_bindings: {clicked: radio_button_4_clicked}
 - name: button_1
   properties: {role: elevated-button, align: right, tooltip: '', border: '', enabled: true,
     foreground: 'theme:On Primary', visible: true, text: prev, font_size: null, font: '',
@@ -66,7 +69,7 @@ components:
   event_bindings: {click: button_1_click}
 - name: button_submit
   properties: {role: elevated-button, align: left, tooltip: '', border: '', enabled: true,
-    foreground: 'theme:On Primary', visible: true, text: Submit, font_size: null,
+    foreground: 'theme:On Primary', visible: false, text: Submit, font_size: null,
     font: '', spacing_above: small, icon_align: right, spacing_below: small, italic: false,
     background: '#00008B', bold: true, underline: false, icon: 'fa:angle-double-right'}
   type: Button
