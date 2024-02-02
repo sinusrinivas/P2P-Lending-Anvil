@@ -505,21 +505,6 @@ db_schema:
     - name: marital_status
       admin_ui: {width: 200, order: 22}
       type: string
-    - name: Date_mariage
-      admin_ui: {width: 200, order: 23}
-      type: date
-    - name: spouse_name
-      admin_ui: {width: 200, order: 24}
-      type: string
-    - name: spouse_mobile
-      admin_ui: {width: 200, order: 25}
-      type: string
-    - name: spouse_company_name
-      admin_ui: {width: 200, order: 26}
-      type: string
-    - name: spouse_company_address
-      admin_ui: {width: 200, order: 27}
-      type: string
     - name: profficen
       admin_ui: {order: 40, width: 200}
       type: string
@@ -625,26 +610,8 @@ db_schema:
     - name: bank_id
       admin_ui: {order: 60, width: 200}
       type: string
-    - name: salary_type
-      admin_ui: {width: 200, order: 53}
-      type: string
-    - name: select_bank
-      admin_ui: {width: 200, order: 54}
-      type: string
     - name: net_bank
       admin_ui: {width: 200, order: 55}
-      type: string
-    - name: father_name
-      admin_ui: {width: 200, order: 56}
-      type: string
-    - name: father_age
-      admin_ui: {width: 200, order: 57}
-      type: string
-    - name: mother_name
-      admin_ui: {width: 200, order: 58}
-      type: string
-    - name: mother_age
-      admin_ui: {width: 200, order: 59}
       type: string
     - name: mail_id
       admin_ui: {width: 200}
@@ -725,26 +692,14 @@ db_schema:
       admin_ui: {width: 200, order: 29.5}
       type: media
     - name: bank_name
-      admin_ui: {width: 200, order: 75.5}
+      admin_ui: {order: 58.5, width: 200}
       type: string
     - name: form_count
       admin_ui: {width: 200, order: 88.5}
       type: number
-    - name: spouse_designation
-      admin_ui: {width: 200, order: 91}
-      type: string
-    - name: spouse_annual_ctc
-      admin_ui: {width: 200, order: 92}
-      type: string
-    - name: spouse_office_number
-      admin_ui: {width: 200, order: 93}
-      type: string
     - name: bessem_value
       admin_ui: {width: 200}
       type: number
-    - name: another_person
-      admin_ui: {width: 200, order: 95}
-      type: string
     - name: tenth_class
       admin_ui: {width: 200, order: 96}
       type: media
@@ -1004,6 +959,32 @@ db_schema:
       admin_ui: {width: 200, order: 0}
       type: string
     title: fin_product_group
+  fin_guarantor_details:
+    client: full
+    server: full
+    columns:
+    - name: guarantor_name
+      admin_ui: {order: 0, width: 200}
+      type: string
+    - name: guarantor_date_of_birth
+      admin_ui: {order: 1, width: 200}
+      type: date
+    - name: guarantor_mobile_no
+      admin_ui: {width: 200, order: 2}
+      type: number
+    - name: guarantor_profession
+      admin_ui: {width: 200, order: 3}
+      type: string
+    - name: guarantor_address
+      admin_ui: {order: 2.5, width: 200}
+      type: string
+    - name: guarantor_company_name
+      admin_ui: {width: 200, order: 5}
+      type: string
+    - name: guarantor_annual_earning
+      admin_ui: {width: 200, order: 6}
+      type: string
+    title: fin_guarantor_details
   fin_loan_details:
     client: full
     server: full
@@ -1084,7 +1065,7 @@ db_schema:
       admin_ui: {width: 200, order: 29}
       type: number
     - name: membership_type
-      admin_ui: {order: 9.75, width: 200}
+      admin_ui: {order: 15.5, width: 200}
       type: string
     - name: tenure
       admin_ui: {width: 200, order: 1}
@@ -1099,11 +1080,17 @@ db_schema:
       admin_ui: {width: 200, order: 16}
       type: number
     - name: loan_disbursed_timestamp
-      admin_ui: {width: 200, order: 30}
+      admin_ui: {order: 17.5, width: 200}
       type: datetime
     - name: loan_extension_months
       admin_ui: {width: 200, order: 31}
       type: number
+    - name: first emi_payment due date
+      admin_ui: {order: 18.5, width: 200}
+      type: date
+    - name: emi_payment_type
+      admin_ui: {width: 200}
+      type: string
     title: fin_loan_details
   fin_user_issues_bugreports:
     title: fin_user_issues_bugreports
