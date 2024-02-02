@@ -12,7 +12,7 @@ from anvil import open_form, server
 from anvil import server
 #from anvil import get_current_user
 #from ....bank_users.main_form import main_form_module
-#from ...bank_users.main_form import main_form_module
+from ...bank_users.main_form import main_form_module
 
 
 
@@ -21,8 +21,8 @@ class dashboard(dashboardTemplate):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
    
-    #self.email = main_form_module.email
-    #email = self.email
+    self.email = main_form_module.email
+    email = self.email
     # Any code you write here will run before the form opens.
 
 
