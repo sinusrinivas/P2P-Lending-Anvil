@@ -121,22 +121,18 @@ def add_borrower_step8(account_name, account_type,account_number,bank_name, user
     row[0]['account_name'] = account_name
     row[0]['account_type'] = account_type
     row[0]['account_number'] = account_number
-    row[0]['select_bank'] = bank_name  
+    row[0]['bank_name'] = bank_name  
     row[0]['form_count']=8
 
 @anvil.server.callable
-def add_borrower_step9(bank_id,select_bank, user_id):
+def add_borrower_step9(bank_id,bank_branch, user_id):
   row = app_tables.fin_user_profile.search(customer_id=user_id)
   if row:
     row[0]['bank_id'] = bank_id
-    # row[0]['salary_type'] = salary_type
-    row[0]['select_bank'] = select_bank
+    row[0]['account_bank_branch'] = bank_branch
     row[0]['usertype'] = 'borrower'
     row[0]['last_confirm'] = True
     row[0]['form_count']=9
-
-
-
 
 @anvil.server.callable
 def update_loan_details(loan_id, emi, total_repayment_amount, interest_rate):
@@ -271,3 +267,4 @@ def generate_emi_id():
 
 
 # bessem code
+

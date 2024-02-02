@@ -14,7 +14,6 @@ class star_1_borrower_registration_form_5_bank_2(star_1_borrower_registration_fo
     user_data=app_tables.fin_user_profile.get(customer_id=user_id)
     if user_data:
       self.text_box_1.text=user_data['bank_id']
-      # self.drop_down_1.selected_value=user_data['salary_type']
       self.text_box_2.text=user_data['account_bank_branch']
       
       # Set Form properties and Data Bindings.

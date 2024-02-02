@@ -505,21 +505,6 @@ db_schema:
     - name: marital_status
       admin_ui: {width: 200, order: 22}
       type: string
-    - name: Date_mariage
-      admin_ui: {width: 200, order: 23}
-      type: date
-    - name: spouse_name
-      admin_ui: {width: 200, order: 24}
-      type: string
-    - name: spouse_mobile
-      admin_ui: {width: 200, order: 25}
-      type: string
-    - name: spouse_company_name
-      admin_ui: {width: 200, order: 26}
-      type: string
-    - name: spouse_company_address
-      admin_ui: {width: 200, order: 27}
-      type: string
     - name: profficen
       admin_ui: {order: 40, width: 200}
       type: string
@@ -625,26 +610,8 @@ db_schema:
     - name: bank_id
       admin_ui: {order: 60, width: 200}
       type: string
-    - name: salary_type
-      admin_ui: {width: 200, order: 53}
-      type: string
-    - name: select_bank
-      admin_ui: {width: 200, order: 54}
-      type: string
     - name: net_bank
       admin_ui: {width: 200, order: 55}
-      type: string
-    - name: father_name
-      admin_ui: {width: 200, order: 56}
-      type: string
-    - name: father_age
-      admin_ui: {width: 200, order: 57}
-      type: string
-    - name: mother_name
-      admin_ui: {width: 200, order: 58}
-      type: string
-    - name: mother_age
-      admin_ui: {width: 200, order: 59}
       type: string
     - name: mail_id
       admin_ui: {width: 200}
@@ -725,26 +692,14 @@ db_schema:
       admin_ui: {width: 200, order: 29.5}
       type: media
     - name: bank_name
-      admin_ui: {width: 200, order: 75.5}
+      admin_ui: {order: 58.5, width: 200}
       type: string
     - name: form_count
       admin_ui: {width: 200, order: 88.5}
       type: number
-    - name: spouse_designation
-      admin_ui: {width: 200, order: 91}
-      type: string
-    - name: spouse_annual_ctc
-      admin_ui: {width: 200, order: 92}
-      type: string
-    - name: spouse_office_number
-      admin_ui: {width: 200, order: 93}
-      type: string
     - name: bessem_value
       admin_ui: {width: 200}
       type: number
-    - name: another_person
-      admin_ui: {width: 200, order: 95}
-      type: string
     - name: tenth_class
       admin_ui: {width: 200, order: 96}
       type: media
