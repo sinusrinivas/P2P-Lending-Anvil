@@ -50,7 +50,10 @@ components:
     type: RadioButton
     layout_properties: {}
   - name: radio_button_4
-    properties: {text: Other}
+    properties: {role: null, selected: false, align: left, tooltip: '', border: '',
+      enabled: true, foreground: '', value: '', visible: true, text: Other, font_size: null,
+      font: '', spacing_above: small, spacing_below: small, italic: false, background: '',
+      bold: false, group_name: radioGroup1, underline: false}
     type: RadioButton
     layout_properties: {}
 - name: button_1

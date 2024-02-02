@@ -36,6 +36,7 @@ class lender_registration_form_4_bank_form_1(lender_registration_form_4_bank_for
           self.text_box_2.text = self.account_number
     if self.bank_name:
            self.text_box_3.text = self.bank_name
+      
     options = app_tables.fin_lendor_manage_dropdown.search()
     options_string =[str(option['account_type']) for option in options]
     self.drop_down_1.items = options_string
