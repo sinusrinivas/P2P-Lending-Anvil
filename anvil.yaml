@@ -1039,7 +1039,7 @@ db_schema:
       admin_ui: {width: 200, order: 29}
       type: number
     - name: membership_type
-      admin_ui: {order: 9.75, width: 200}
+      admin_ui: {order: 15.5, width: 200}
       type: string
     - name: tenure
       admin_ui: {width: 200, order: 1}
@@ -1054,11 +1054,14 @@ db_schema:
       admin_ui: {width: 200, order: 16}
       type: number
     - name: loan_disbursed_timestamp
-      admin_ui: {width: 200, order: 30}
+      admin_ui: {order: 17.5, width: 200}
       type: datetime
     - name: loan_extension_months
       admin_ui: {width: 200, order: 31}
       type: number
+    - name: first emi_payment due date
+      admin_ui: {order: 18.5, width: 200}
+      type: date
     title: fin_loan_details
   fin_user_issues_bugreports:
     title: fin_user_issues_bugreports
