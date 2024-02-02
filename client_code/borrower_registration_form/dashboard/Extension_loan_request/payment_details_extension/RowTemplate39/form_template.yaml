@@ -3,73 +3,73 @@ components:
 - type: Label
   properties: {}
   name: label_1
-  layout_properties: {column: JQXVVR}
+  layout_properties: {column: BRPDJV}
   data_bindings:
   - {property: text, code: 'self.item[''PaymentNumber'']'}
 - type: Label
   properties: {}
   name: label_2
-  layout_properties: {column: CYIBUA}
+  layout_properties: {column: JUNDSP}
   data_bindings:
   - {property: text, code: 'self.item[''PaymentDate'']'}
 - type: Label
   properties: {}
   name: label_3
-  layout_properties: {column: BJGQJP}
+  layout_properties: {column: QJNTUE}
   data_bindings:
   - {property: text, code: 'self.item[''BeginningBalance'']'}
 - type: Label
   properties: {}
   name: label_4
-  layout_properties: {column: WNECVM}
+  layout_properties: {column: NBBFQW}
   data_bindings:
   - {property: text, code: 'self.item[''ScheduledPayment'']'}
 - type: Label
   properties: {}
   name: label_5
-  layout_properties: {column: YZYMCY}
+  layout_properties: {column: VSQOWI}
   data_bindings:
   - {property: text, code: 'self.item[''ExtensionFee'']'}
 - type: Label
   properties: {}
   name: label_6
-  layout_properties: {column: MDDOBW}
+  layout_properties: {column: PQWTEP}
   data_bindings:
   - {property: text, code: 'self.item[''TotalPayment'']'}
 - type: Label
   properties: {}
   name: label_7
-  layout_properties: {column: XVOTMV}
+  layout_properties: {column: HFNVUA}
   data_bindings:
   - {property: text, code: 'self.item[''Principal'']'}
 - type: Label
   properties: {}
   name: label_8
-  layout_properties: {column: SZCWPG}
+  layout_properties: {column: LNBEYW}
   data_bindings:
   - {property: text, code: 'self.item[''Interest'']'}
 - type: Label
   properties: {}
   name: label_9
-  layout_properties: {column: RMPUHJ}
+  layout_properties: {column: WJRULN}
   data_bindings:
   - {property: text, code: 'self.item[''EndingBalance'']'}
 - type: Label
   properties: {}
   name: label_10
-  layout_properties: {column: XVAEKL}
+  layout_properties: {column: YWRBQW}
   data_bindings:
   - {property: text, code: 'self.item[''EMIDate'']'}
 - type: Label
   properties: {}
   name: label_11
-  layout_properties: {column: WHASKQ}
+  layout_properties: {column: KQUJKL}
   data_bindings:
   - {property: text, code: 'self.item[''EMITime'']'}
 - type: Label
   properties: {}
   name: label_12
-  layout_properties: {column: IOSSPA}
+  layout_properties: {column: GKXTPQ}
   data_bindings:
   - {property: text, code: 'self.item[''AccountNumber'']'}
 is_package: true
