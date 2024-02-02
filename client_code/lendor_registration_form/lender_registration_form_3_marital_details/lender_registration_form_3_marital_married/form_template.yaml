@@ -40,6 +40,7 @@ components:
     properties: {text: Father, selected: false}
     type: RadioButton
     layout_properties: {}
+    event_bindings: {clicked: radio_button_1_clicked}
   - name: radio_button_2
     properties: {text: Mother}
     type: RadioButton
@@ -60,14 +61,14 @@ components:
   type: Button
   layout_properties: {grid_position: 'YWNRYR,GXKLRF'}
   event_bindings: {click: button_1_click}
-- name: button_next
+- name: button_submit
   properties: {role: elevated-button, align: left, tooltip: '', border: '', enabled: true,
     foreground: 'theme:On Primary', visible: true, text: Submit, font_size: null,
     font: '', spacing_above: small, icon_align: right, spacing_below: small, italic: false,
     background: '#00008B', bold: true, underline: false, icon: 'fa:angle-double-right'}
   type: Button
   layout_properties: {grid_position: 'YWNRYR,MEICZB'}
-  event_bindings: {click: button_next_click}
+  event_bindings: {click: button_submit_click}
 - name: spacer_1_copy_1_copy
   properties: {height: 51.666656494140625}
   type: Spacer
@@ -98,33 +99,18 @@ components:
       font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
       background: 'theme:On Primary', bold: false, underline: false}
     type: TextBox
-    layout_properties: {row: ORTIVE, width_xs: 4, col_xs: 6}
-  - name: label_1_copy
-    properties: {foreground: red}
-    type: Label
-    layout_properties: {row: HALEXB, width_xs: 3, col_xs: 6}
+    layout_properties: {row: ORTIVE, width_xs: 5, col_xs: 6}
   - name: label_3_copy_1_copy_1_copy_1
     properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-      visible: true, text: 'Father Age :', font_size: null, font: '', spacing_above: small,
+      visible: true, text: 'Father DOB :', font_size: null, font: '', spacing_above: small,
       icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
       underline: false, icon: ''}
     type: Label
     layout_properties: {row: LEIWZK, width_xs: 4, col_xs: 2}
-  - name: father_age_text
-    properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: '',
-      border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
-      font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
-      background: 'theme:On Primary', bold: false, underline: false}
-    type: TextBox
-    layout_properties: {row: LEIWZK, width_xs: 3, col_xs: 6}
-  - name: label_22
-    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-      visible: true, text: '', font_size: 12, font: '', spacing_above: none, icon_align: left,
-      spacing_below: small, italic: false, background: '', bold: false, underline: false,
-      icon: ''}
-    type: Label
-    layout_properties: {grid_position: 'TKDJYE,KYSGJQ', row: QBXVRJ, width_xs: 4,
-      col_xs: 6, width: 219.462}
+  - name: date_picker_1
+    properties: {background: white, placeholder: pick the date}
+    type: DatePicker
+    layout_properties: {row: LEIWZK, width_xs: 5, col_xs: 6}
   - name: label_2_copy_1_copy_1
     properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
       visible: true, text: 'Father mobile Number :', font_size: null, font: '', spacing_above: small,
@@ -139,7 +125,7 @@ components:
       background: 'theme:On Primary', bold: false, underline: false}
     type: TextBox
     layout_properties: {row: CEITXX, width_xs: 5, col_xs: 6}
-  - name: label_22_copy
+  - name: mbl_label_1
     properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
       visible: true, text: '', font_size: 12, font: '', spacing_above: none, icon_align: left,
       spacing_below: small, italic: false, background: '', bold: false, underline: false,
@@ -160,11 +146,25 @@ components:
       background: 'theme:On Primary', bold: false, underline: false}
     type: TextBox
     layout_properties: {row: HBHHFF, width_xs: 5, col_xs: 6}
+  - name: label_3_copy_1_copy_2
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: 'Father Address :', font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+      underline: false, icon: ''}
+    type: Label
+    layout_properties: {row: CTDQTO, width_xs: 3, col_xs: 2}
+  - name: father_address_text
+    properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: '',
+      border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
+      font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
+      background: 'theme:On Primary', bold: false, underline: false}
+    type: TextBox
+    layout_properties: {row: CTDQTO, width_xs: 5, col_xs: 6}
 - name: spacer_1_copy_1_copy_copy_copy
   properties: {height: 11.22222900390625}
   type: Spacer
   layout_properties: {grid_position: 'REPVXT,QUUABK'}
-- name: grid_panel_1_copy
+- name: grid_panel_2
   properties: {spacing_above: small, spacing_below: small, background: '', foreground: '',
     border: '', visible: false, role: outlined-card, tooltip: ''}
   type: GridPanel
@@ -190,33 +190,18 @@ components:
       font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
       background: 'theme:On Primary', bold: false, underline: false}
     type: TextBox
-    layout_properties: {row: ORTIVE, width_xs: 4, col_xs: 6}
-  - name: label_1_copy_copy
-    properties: {foreground: red}
-    type: Label
-    layout_properties: {row: HALEXB, width_xs: 3, col_xs: 6}
+    layout_properties: {row: ORTIVE, width_xs: 5, col_xs: 6}
   - name: label_3_copy_1_copy_1_copy_1_copy
     properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-      visible: true, text: 'Mother Age :', font_size: null, font: '', spacing_above: small,
+      visible: true, text: 'Mother DOB:', font_size: null, font: '', spacing_above: small,
       icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
       underline: false, icon: ''}
     type: Label
     layout_properties: {row: LEIWZK, width_xs: 4, col_xs: 2}
-  - name: mother_age_text_copy
-    properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: '',
-      border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
-      font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
-      background: 'theme:On Primary', bold: false, underline: false}
-    type: TextBox
-    layout_properties: {row: LEIWZK, width_xs: 3, col_xs: 6}
-  - name: label_22_copy_2
-    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-      visible: true, text: '', font_size: 12, font: '', spacing_above: none, icon_align: left,
-      spacing_below: small, italic: false, background: '', bold: false, underline: false,
-      icon: ''}
-    type: Label
-    layout_properties: {grid_position: 'TKDJYE,KYSGJQ', row: QBXVRJ, width_xs: 4,
-      col_xs: 6, width: 219.462}
+  - name: date_picker_2
+    properties: {background: white, placeholder: pick the date}
+    type: DatePicker
+    layout_properties: {row: LEIWZK, width_xs: 5, col_xs: 6}
   - name: label_2_copy_1_copy_1_copy
     properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
       visible: true, text: 'Mother mobile Number :', font_size: null, font: '', spacing_above: small,
@@ -224,14 +209,14 @@ components:
       underline: false, icon: ''}
     type: Label
     layout_properties: {row: CEITXX, width_xs: 4, col_xs: 2}
-  - name: mother_mbl_no_text_copy
+  - name: mother_mbl_no_text
     properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: '',
       border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
       font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
       background: 'theme:On Primary', bold: false, underline: false}
     type: TextBox
     layout_properties: {row: CEITXX, width_xs: 5, col_xs: 6}
-  - name: label_22_copy_copy
+  - name: mbl_label_2
     properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
       visible: true, text: '', font_size: 12, font: '', spacing_above: none, icon_align: left,
       spacing_below: small, italic: false, background: '', bold: false, underline: false,
@@ -245,15 +230,223 @@ components:
       underline: false, icon: ''}
     type: Label
     layout_properties: {row: HBHHFF, width_xs: 4, col_xs: 2}
-  - name: mother_profession_text_copy
+  - name: mother_profession_text
     properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: '',
       border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
       font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
       background: 'theme:On Primary', bold: false, underline: false}
     type: TextBox
     layout_properties: {row: HBHHFF, width_xs: 5, col_xs: 6}
+  - name: label_3_copy_1_copy_2_copy
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: 'Mother Address :', font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+      underline: false, icon: ''}
+    type: Label
+    layout_properties: {row: WPPSLK, width_xs: 3, col_xs: 2}
+  - name: mother_address_text
+    properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: '',
+      border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
+      font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
+      background: 'theme:On Primary', bold: false, underline: false}
+    type: TextBox
+    layout_properties: {row: WPPSLK, width_xs: 5, col_xs: 6}
 - name: spacer_1_copy_1_copy_copy
-  properties: {height: 51.666656494140625}
+  properties: {height: 16.22222900390625}
   type: Spacer
-  layout_properties: {grid_position: 'DYEXDL,OLNYKV'}
+  layout_properties: {grid_position: 'EEKIEM,FRDQPL'}
+- name: grid_panel_3
+  properties: {spacing_above: small, spacing_below: small, background: '', foreground: '',
+    border: '', visible: false, role: outlined-card, tooltip: ''}
+  type: GridPanel
+  layout_properties: {grid_position: 'FHPXPN,JQSDDW'}
+  components:
+  - name: label_25_copy_copy
+    properties: {role: null, align: center, tooltip: '', border: '', foreground: 'theme:On
+        Primary', visible: true, text: Spouse Details, font_size: 17, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: darkblue,
+      bold: true, underline: false, icon: ''}
+    type: Label
+    layout_properties: {row: AUFPKE, width_xs: 12, col_xs: 0, width: 626}
+  - name: label_3_copy_1_copy_1_copy_copy
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: 'Full Spouse Name :', font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+      underline: false, icon: ''}
+    type: Label
+    layout_properties: {row: ORTIVE, width_xs: 4, col_xs: 2}
+  - name: spouse_name_text
+    properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: '',
+      border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
+      font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
+      background: 'theme:On Primary', bold: false, underline: false}
+    type: TextBox
+    layout_properties: {row: ORTIVE, width_xs: 5, col_xs: 6}
+  - name: label_3_copy_1_copy_1_copy_1_copy_copy
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: 'Marriage Date :', font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+      underline: false, icon: ''}
+    type: Label
+    layout_properties: {row: LEIWZK, width_xs: 4, col_xs: 2}
+  - name: date_picker_3
+    properties: {background: white, placeholder: pick the date}
+    type: DatePicker
+    layout_properties: {row: LEIWZK, width_xs: 5, col_xs: 6}
+  - name: label_2_copy_1_copy_1_copy_copy
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: 'Spouse mobile Number :', font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+      underline: false, icon: ''}
+    type: Label
+    layout_properties: {row: CEITXX, width_xs: 4, col_xs: 2}
+  - name: spouse_mbl_no_text
+    properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: '',
+      border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
+      font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
+      background: 'theme:On Primary', bold: false, underline: false}
+    type: TextBox
+    layout_properties: {row: CEITXX, width_xs: 5, col_xs: 6}
+  - name: mbl_label_3
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: '', font_size: 12, font: '', spacing_above: none, icon_align: left,
+      spacing_below: small, italic: false, background: '', bold: false, underline: false,
+      icon: ''}
+    type: Label
+    layout_properties: {row: VXAUDA, width_xs: 3, col_xs: 6}
+  - name: label_3_copy_1_copy_copy
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: 'Spouse Profession :', font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+      underline: false, icon: ''}
+    type: Label
+    layout_properties: {row: HBHHFF, width_xs: 4, col_xs: 2}
+  - name: spouse_profession_text
+    properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: '',
+      border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
+      font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
+      background: 'theme:On Primary', bold: false, underline: false}
+    type: TextBox
+    layout_properties: {row: HBHHFF, width_xs: 5, col_xs: 6}
+  - name: label_3_copy_1_copy_2_copy_copy
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: 'Spouse Company Name :
+
+        (If working)', font_size: null, font: '', spacing_above: small, icon_align: left,
+      spacing_below: small, italic: false, background: '', bold: true, underline: false,
+      icon: ''}
+    type: Label
+    layout_properties: {row: WPPSLK, width_xs: 3, col_xs: 2}
+  - name: spouse_companyname_text
+    properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: '',
+      border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
+      font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
+      background: 'theme:On Primary', bold: false, underline: false}
+    type: TextBox
+    layout_properties: {row: WPPSLK, width_xs: 5, col_xs: 6}
+  - name: label_3_copy_1_copy_copy_copy
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: 'Annual Earnings (CTC) :', font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+      underline: false, icon: ''}
+    type: Label
+    layout_properties: {row: HXYACP, width_xs: 4, col_xs: 2}
+  - name: annual_earning_text
+    properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: '',
+      border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
+      font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
+      background: 'theme:On Primary', bold: false, underline: false}
+    type: TextBox
+    layout_properties: {row: HXYACP, width_xs: 5, col_xs: 6}
+- name: spacer_1_copy_1_copy_copy_copy_2
+  properties: {height: 16.22222900390625}
+  type: Spacer
+  layout_properties: {grid_position: 'BTWKPO,TNFIIN'}
+- name: grid_panel_4
+  properties: {spacing_above: small, spacing_below: small, background: '', foreground: '',
+    border: '', visible: false, role: outlined-card, tooltip: ''}
+  type: GridPanel
+  layout_properties: {grid_position: 'EGFEKN,QRWTEP'}
+  components:
+  - name: label_25_copy_copy_copy
+    properties: {role: null, align: center, tooltip: '', border: '', foreground: 'theme:On
+        Primary', visible: true, text: Other Details, font_size: 17, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: darkblue,
+      bold: true, underline: false, icon: ''}
+    type: Label
+    layout_properties: {row: AUFPKE, width_xs: 12, col_xs: 0, width: 626}
+  - name: label_3_copy_1_copy_1_copy_copy_copy_copy
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: 'How is the person related to you :', font_size: null,
+      font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+      background: '', bold: true, underline: false, icon: ''}
+    type: Label
+    layout_properties: {row: VVKEHH, width_xs: 4, col_xs: 2}
+  - name: related_person_text
+    properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: '',
+      border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
+      font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
+      background: 'theme:On Primary', bold: false, underline: false}
+    type: TextBox
+    layout_properties: {row: VVKEHH, width_xs: 5, col_xs: 6}
+  - name: label_3_copy_1_copy_1_copy_copy_copy
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: 'Name :', font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+      underline: false, icon: ''}
+    type: Label
+    layout_properties: {row: ORTIVE, width_xs: 4, col_xs: 2}
+  - name: name_text_copy
+    properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: '',
+      border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
+      font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
+      background: 'theme:On Primary', bold: false, underline: false}
+    type: TextBox
+    layout_properties: {row: ORTIVE, width_xs: 5, col_xs: 6}
+  - name: label_3_copy_1_copy_1_copy_1_copy_copy_copy
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: 'DOB :', font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+      underline: false, icon: ''}
+    type: Label
+    layout_properties: {row: LEIWZK, width_xs: 4, col_xs: 2}
+  - name: date_picker_3_copy
+    properties: {background: white, placeholder: pick the date}
+    type: DatePicker
+    layout_properties: {row: LEIWZK, width_xs: 5, col_xs: 6}
+  - name: label_2_copy_1_copy_1_copy_copy_copy
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: 'Mobile Number :', font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+      underline: false, icon: ''}
+    type: Label
+    layout_properties: {row: CEITXX, width_xs: 4, col_xs: 2}
+  - name: mbl_no_text_copy
+    properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: '',
+      border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
+      font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
+      background: 'theme:On Primary', bold: false, underline: false}
+    type: TextBox
+    layout_properties: {row: CEITXX, width_xs: 5, col_xs: 6}
+  - name: mbl_label_3_copy
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: '', font_size: 12, font: '', spacing_above: none, icon_align: left,
+      spacing_below: small, italic: false, background: '', bold: false, underline: false,
+      icon: ''}
+    type: Label
+    layout_properties: {row: VXAUDA, width_xs: 3, col_xs: 6}
+  - name: label_3_copy_1_copy_copy_copy_2
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: 'Profession :', font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+      underline: false, icon: ''}
+    type: Label
+    layout_properties: {row: HBHHFF, width_xs: 4, col_xs: 2}
+  - name: profession_text_copy
+    properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: '',
+      border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
+      font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
+      background: 'theme:On Primary', bold: false, underline: false}
+    type: TextBox
+    layout_properties: {row: HBHHFF, width_xs: 5, col_xs: 6}
 is_package: true

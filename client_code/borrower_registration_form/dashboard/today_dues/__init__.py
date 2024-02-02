@@ -7,40 +7,67 @@ import anvil.users
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
-from datetime import datetime, timedelta, timezone
+from datetime import datetime, timezone
 from .. import main_form_module as main_form_module
 
 class today_dues(today_duesTemplate):
     def __init__(self, **properties):
-        self.user_id = main_form_module.userId
         # Set Form properties and Data Bindings.
+        self.user_id=main_form_module.userId
+
         self.init_components(**properties)
-        
-        # Fetch all loan details
-        all_loans = app_tables.fin_loan_details.search(
-            loan_updated_status=q.like('%accept%')
+        today_date = datetime.now(timezone.utc).date()
+
+        # Fetch all loan details from fin_emi_table where scheduled_payment matches today's date
+        all_loans = app_tables.fin_emi_table.search(
+            next_payment=today_date
         )
+
+        # Create a list to store loan details
+        loan_details = []
         
-        # Calculate days left and days gone for each loan
+        # Populate loan details with loan amounts from fin_loan_details table
         for loan in all_loans:
-            due_date = loan['emi_due_date']
+            loan_id = loan['loan_id']
+            loan_amount = app_tables.fin_loan_details.get(loan_id=loan_id)['loan_amount']
+            scheduled_payment = loan['scheduled_payment']
 
-            # Check if due_date is not None before processing
-            if due_date is not None:
-                now = datetime.now(timezone.utc)
-                due_date_aware = datetime.combine(due_date, datetime.min.time()).replace(tzinfo=timezone.utc)
+            days_left = (today_date - scheduled_payment).days
+            emi_number = loan['emi_number']
+            account_number = loan['account_number']
+          
+            loan_details_row = app_tables.fin_loan_details.get(loan_id=loan_id)
+            if loan_details_row is not None:
+                tenure = loan_details_row['tenure']
+                interest_rate = loan_details_row['interest_rate']
+                borrower_loan_created_timestamp = loan_details_row['borrower_loan_created_timestamp']
+                loan_updated_status = loan_details_row['loan_updated_status']
+                loan_disbursed_timestamp = loan_details_row['loan_disbursed_timestamp']
+            else:
+                # Set default values if loan details are not found
+                tenure = 'N/A'
+                interest_rate = 'N/A'
+                borrower_loan_created_timestamp = 'N/A'
+                loan_updated_status = 'N/A'
+                loan_disbursed_timestamp = 'N/A'
                 
-                days_left = (due_date_aware - now).days
-                days_gone = (now - due_date_aware).days
-
-                # Update the 'days_positive' and 'days_negative' columns in the database
-                loan['days_left'] = max(0, days_left) 
-                loan['days_gone'] = max(0, days_gone) * -1 
-                loan.update()
-
-        # Display loans with the calculated values in the repeating panel
-        self.repeating_panel_1.items = all_loans
-
+            days_left = (today_date - scheduled_payment).days
+          
+            loan_details.append({
+                'loan_id': loan_id,
+                'loan_amount': loan_amount,
+                'scheduled_payment': scheduled_payment,
+                'days_left': days_left,
+                'tenure': tenure,
+                'interest_rate': interest_rate,
+                'borrower_loan_created_timestamp': borrower_loan_created_timestamp,
+                'emi_number': emi_number,
+                'account_number': account_number,
+                'loan_updated_status': loan_updated_status,
+                'loan_disbursed_timestamp': loan_disbursed_timestamp
+            })
+        self.repeating_panel_1.items = loan_details
+      
     def home_borrower_registration_form_copy_1_click(self, **event_args):
         """This method is called when the button is clicked"""
         open_form('borrower_registration_form.dashboard')

@@ -13,29 +13,30 @@ class star_1_borrower_registration_form_5_bank_2(star_1_borrower_registration_fo
     self.userId = user_id
     user_data=app_tables.fin_user_profile.get(customer_id=user_id)
     if user_data:
-      self.text_box_1.text=user_data['ifsc_code']
-      self.drop_down_1.selected_value=user_data['salary_type']
-      self.text_box_2.text=user_data['bank_branch_name']
+      self.text_box_1.text=user_data['bank_id']
+      # self.drop_down_1.selected_value=user_data['salary_type']
+      self.text_box_2.text=user_data['account_bank_branch']
+      
       # Set Form properties and Data Bindings.
       self.init_components(**properties)
       self.accepted_terms = False
       self.button_2.enabled = False
 
-      options = app_tables.fin_borrower_salary_type.search()
-      options_string = [str(option['borrower_salary_type']) for option in options]
-      self.drop_down_1.items = options_string
+      # options = app_tables.fin_borrower_salary_type.search()
+      # options_string = [str(option['borrower_salary_type']) for option in options]
+      # self.drop_down_1.items = options_string
     # Any code you write here will run before the form opens.
 
   def button_2_click(self, **event_args):
-    ifsc = self.text_box_1.text
-    salary_type = self.drop_down_1.selected_value
+    bank_id = self.text_box_1.text
+    # salary_type = self.drop_down_1.selected_value
     bank_branch = self.text_box_2.text
     
     user_id = self.userId
-    if not ifsc or not salary_type or not bank_branch:
+    if not bank_id or not bank_branch:
       Notification("please fill all required fields").show()
     else:
-      anvil.server.call('add_borrower_step9', ifsc,salary_type,bank_branch, user_id)
+      anvil.server.call('add_borrower_step9', bank_id,bank_branch, user_id)
       open_form('borrower_registration_form.dashboard')
 
   def button_1_click(self, **event_args):
