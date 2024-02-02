@@ -150,7 +150,7 @@ def update_loan_details(loan_id, emi, total_repayment_amount, interest_rate):
 
 
 @anvil.server.callable
-def add_loan_details(loan_amount, tenure,user_id,interest_rate, total_repayment_amount,product_id,membership_type,credit_limit):
+def add_loan_details(loan_amount, tenure,user_id,interest_rate, total_repayment_amount,product_id,membership_type,credit_limit,emi_payment_type):
     
     # Generate a unique loan ID and get the updated counter
     loan_id = generate_loan_id()
@@ -181,8 +181,8 @@ def add_loan_details(loan_amount, tenure,user_id,interest_rate, total_repayment_
           borrower_email_id = borrower_email_id,
           loan_updated_status = "under process",
           borrower_loan_created_timestamp=loan_created_timestamp,
-          product_id = product_id
-          
+          product_id = product_id,
+          emi_payment_type = emi_payment_type
           # borrower_loan_created_timestamp = datetime.now()
          )
 
