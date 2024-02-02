@@ -90,7 +90,7 @@ class loan_type(loan_typeTemplate):
                       self.proctct_g, self.prodct_cate, str(loan_amount), tenure,
                       self.user_id, self.roi, self.processing_fee,
                       self.membership_type, self.product_id,
-                      self.Total_Repayment_Amount, self.credit_limt,
+                      self.Total_Repayment_Amount, self.credit_limt,self.entered_payment_type
                       entered_values={
                           'loan_amount': self.entered_loan_amount,
                           'tenure': self.entered_tenure,
