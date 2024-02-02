@@ -58,7 +58,7 @@ class extension2(extension2Template):
         # extension_months = selected_row['loan_extension_months']
 
         # Calculate the new EMI amount for the extended period
-        total_extension_months = outstanding_months + self.extension_months   # Including the current month
+        total_extension_months = tenure + self.extension_months   # Including the current month
         # new_emi_amount = (remaining_loan_amount ) / total_extension_months
         # new_emi_amount += extension_amount
 
