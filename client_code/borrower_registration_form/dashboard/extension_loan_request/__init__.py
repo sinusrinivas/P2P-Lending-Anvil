@@ -1,4 +1,4 @@
-from ._anvil_designer import Extension_loan_requestTemplate
+from ._anvil_designer import extension_loan_requestTemplate
 from anvil import *
 import anvil.server
 import anvil.google.auth, anvil.google.drive
@@ -8,7 +8,7 @@ import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 
-class Extension_loan_request(Extension_loan_requestTemplate):
+class extension_loan_request(extension_loan_requestTemplate):
     def __init__(self, **properties):
         # Set Form properties and Data Bindings.
         self.init_components(**properties)
