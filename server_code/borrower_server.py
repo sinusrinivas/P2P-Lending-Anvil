@@ -185,8 +185,7 @@ def add_loan_details(loan_amount, tenure,user_id,interest_rate, total_repayment_
           borrower_email_id = borrower_email_id,
           loan_updated_status = "under process",
           borrower_loan_created_timestamp=loan_created_timestamp,
-          product_id = product_id,
-          beseem_score=bessem.fetch_bessem(borrower_email_id)
+          product_id = product_id
           
           # borrower_loan_created_timestamp = datetime.now()
          )
@@ -268,3 +267,7 @@ def generate_emi_id():
 #     user_request = app_tables.fin_product_details.search(product_categories=product_categories)
 #     return user_request
 
+
+
+
+# bessem code
