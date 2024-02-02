@@ -25,12 +25,12 @@ class lender_registration_form_3_marital_married(lender_registration_form_3_mari
     self.another_person = selected_button.text.lower()
     
     # Hide other radio buttons
-    for button in self.radio_buttons.components:
-      if button != selected_button:
-        button.visible = False
+    # for button in self.radio_buttons.components:
+    #   if button != selected_button:
+    #     button.visible = False
 
     # Call the server function to update the database
-        anvil.server.call('update_another_person', self.userId, self.another_person)
+    anvil.server.call('update_another_person', self.userId, self.another_person)
   
   def button_submit_click(self, **event_args):
     # Check the selected radio button and show the corresponding grid panel
