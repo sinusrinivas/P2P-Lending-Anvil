@@ -906,6 +906,9 @@ db_schema:
     - name: extension_request_date
       admin_ui: {width: 200}
       type: datetime
+    - name: emi_number
+      admin_ui: {width: 200}
+      type: number
     title: fin_extends_loan
   fin_lendor_gender_2:
     title: fin_lendor_gender
