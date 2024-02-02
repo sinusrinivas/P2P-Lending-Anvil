@@ -60,10 +60,6 @@ class lender_registration_individual_form_1(lender_registration_individual_form_
      user_id = self.userId
      open_form('lendor_registration_form.lender_registration_form_2',user_id=self.userId)
 
-  def drop_down_1_change(self, **event_args):
-    """This method is called when an item is selected"""
-    pass
-
   def button_3_click(self, **event_args):
     """This method is called when the button is clicked"""
     open_form("bank_users.user_form")

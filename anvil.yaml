@@ -56,7 +56,7 @@ db_schema:
       admin_ui: {width: 200}
       type: string
   fin_lendor_no_of_employees:
-    client: full
+    client: none
     server: full
     columns:
     - name: lendor_no_of_employees
@@ -218,6 +218,15 @@ db_schema:
       type: string
     - name: min_months
       admin_ui: {width: 200, order: 23}
+      type: number
+    - name: lapsed_fee
+      admin_ui: {width: 200, order: 24}
+      type: number
+    - name: default_fee
+      admin_ui: {width: 200, order: 25}
+      type: number
+    - name: npa
+      admin_ui: {width: 200, order: 26}
       type: number
     title: fin_product_details
   fin_lendor_gender:
@@ -613,8 +622,8 @@ db_schema:
     - name: account_bank_branch
       admin_ui: {width: 200, order: 51}
       type: string
-    - name: ifsc_code
-      admin_ui: {width: 200, order: 52}
+    - name: bank_id
+      admin_ui: {order: 60, width: 200}
       type: string
     - name: salary_type
       admin_ui: {width: 200, order: 53}
@@ -801,9 +810,6 @@ db_schema:
     - name: borrower_email
       admin_ui: {width: 200, order: 2}
       type: string
-    - name: scheduled_payment
-      admin_ui: {width: 200, order: 3}
-      type: number
     - name: payment_number
       admin_ui: {width: 200, order: 4}
       type: number
@@ -828,9 +834,15 @@ db_schema:
     - name: account_number
       admin_ui: {width: 200, order: 11}
       type: string
-    - name: emi_status
+    - name: next_payment
       admin_ui: {width: 200}
-      type: bool
+      type: date
+    - name: scheduled_payment
+      admin_ui: {width: 200}
+      type: date
+    - name: next_payment_2
+      admin_ui: {width: 200, order: 13}
+      type: date
   fin_borrower_business_type:
     client: full
     server: full
@@ -888,15 +900,15 @@ db_schema:
     - name: borrower_email_id
       admin_ui: {width: 200}
       type: string
-    - name: description
-      admin_ui: {width: 200}
-      type: string
     - name: final_emi
       admin_ui: {width: 200}
       type: number
     - name: lender_email_id
       admin_ui: {width: 200}
       type: string
+    - name: extension_request_date
+      admin_ui: {width: 200}
+      type: datetime
     title: fin_extends_loan
   fin_lendor_gender_2:
     title: fin_lendor_gender
@@ -1139,7 +1151,7 @@ db_schema:
       type: string
     title: fin_lendor_qualification
   fin_lendor_lending_period:
-    client: full
+    client: none
     server: full
     columns:
     - name: lendor_lending_period

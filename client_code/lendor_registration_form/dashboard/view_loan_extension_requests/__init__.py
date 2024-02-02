@@ -95,7 +95,7 @@ class view_loan_extension_requests(view_loan_extension_requestsTemplate):
     self.new.visible = False
     self.data_grid_4.visible = False
     self.label_1.visible = False
-    self.data_grid_1.visible = False
+    self.data_grid_4_copy.visible = False
 
   def button_2_click(self, **event_args):
     """This method is called when the button is clicked"""
@@ -108,7 +108,7 @@ class view_loan_extension_requests(view_loan_extension_requestsTemplate):
     self.new.visible = False
     self.data_grid_4.visible = False
     self.label_1.visible = False
-    self.data_grid_1.visible = False
+    self.data_grid_4_copy.visible = False
 
   def button_4_click(self, **event_args):
     """This method is called when the button is clicked"""
@@ -121,13 +121,13 @@ class view_loan_extension_requests(view_loan_extension_requestsTemplate):
     self.new.visible = False
     self.data_grid_4.visible = False
     self.label_1.visible = False
-    self.data_grid_1.visible = False
+    self.data_grid_4_copy.visible = False
 
   def button_5_click(self, **event_args):
     """This method is called when the button is clicked"""
     # self.data_grid_1.visible = not self.data_grid_1.visible
     self.new.visible = True
-    self.data_grid_1.visible = True
+    self.data_grid_4.visible = True
     self.label_4.visible = False
     self.data_grid_3.visible = False
     self.label_2.visible = False
@@ -135,11 +135,11 @@ class view_loan_extension_requests(view_loan_extension_requestsTemplate):
     self.label_3.visible = False
     self.data_grid_2_copy.visible = False
     self.label_1.visible = False
-    self.data_grid_1.visible = False
+    self.data_grid_4_copy.visible = False
 
   def button_6_click(self, **event_args):
     """This method is called when the button is clicked"""
-    self.data_grid_1.visible = True
+    self.data_grid_4_copy.visible = True
     self.label_1.visible = True
     self.label_4.visible = False
     self.data_grid_3.visible = False
