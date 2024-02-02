@@ -10,11 +10,12 @@ from anvil.tables import app_tables
 from datetime import datetime, timedelta
 
 class extension2(extension2Template):
-    def __init__(self, selected_row,loan_extension_months, **properties):
+    def __init__(self, selected_row,loan_extension_months, new_emi, **properties):
         # Set Form properties and Data Bindings.
         self.init_components(**properties)
         self.selected_row = selected_row
         self.extension_months = loan_extension_months
+        self.new_emi = new_emi
         self.label_23.text = f"{selected_row['loan_id']}"
         self.mi_label.text = f"{selected_row['loan_amount']}"
         total_payments_made = selected_row['total_payments_made']
@@ -58,16 +59,16 @@ class extension2(extension2Template):
 
         # Calculate the new EMI amount for the extended period
         total_extension_months = outstanding_months + self.extension_months   # Including the current month
-        new_emi_amount = (remaining_loan_amount ) / total_extension_months
-        new_emi_amount += extension_amount
+        # new_emi_amount = (remaining_loan_amount ) / total_extension_months
+        # new_emi_amount += extension_amount
 
         # Save the calculated values as instance variables for later use
         self.total_extension_months = total_extension_months
-        self.new_emi_amount = new_emi_amount
+        # self.new_emi_amount = new_emi_amount
         self.extension_fee_comp_value = extension_fee
         self.remaining_loan_amount = remaining_loan_amount
         self.total_extension_months = total_extension_months
-        self.final_repayment.text = self.remaining_loan_amount
+        self.final_repayment.text = f"₹ {remaining_loan_amount:.2f}"
 
     def button_3_click(self, **event_args):
         """This method is called when the button is clicked"""
@@ -83,7 +84,7 @@ class extension2(extension2Template):
                     extend_fee = self.extension_fee_comp_value,
                     final_repayment_amount = self.remaining_loan_amount,
                     extension_amount = self.extension_amountt.text,
-                    new_emi = self.new_emi_amount,
+                    new_emi = self.new_emi,
                     total_extension_months = self.total_extension_months,
                     reason=reason,
                     status='under process',
