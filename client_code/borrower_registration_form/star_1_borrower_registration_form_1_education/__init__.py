@@ -38,10 +38,10 @@ class star_1_borrower_registration_form_1_education(star_1_borrower_registration
     elif qualification == 'Btech / B.E':
       open_form('borrower_registration_form.star_1_borrower_registration_form_1_education.star_1_borrower_registration_form_education_btech',user_id=user_id)
     elif qualification == 'Mtech':
-      open_form('borrower_registration_form.star_1_borrower_registration_form_education.star_1_borrower_registration_form_education_mtech',user_id = user_id)
+      open_form('borrower_registration_form.star_1_borrower_registration_form_1_education.star_1_borrower_registration_form_education_mtech',user_id = user_id)
     else:
       qualification == 'Phd'
-      open_form('borrower_registration_form.star_1_borrower_registration_form_education.star_1_borrower_registration_form_education_phd',user_id=user_id)
+      open_form('borrower_registration_form.star_1_borrower_registration_form_1_education.star_1_borrower_registration_form_education_phd',user_id=user_id)
 
   def button_3_click(self, **event_args):
     """This method is called when the button is clicked"""

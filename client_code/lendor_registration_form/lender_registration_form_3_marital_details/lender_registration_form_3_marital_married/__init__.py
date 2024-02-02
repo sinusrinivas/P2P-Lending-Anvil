@@ -60,4 +60,23 @@ class lender_registration_form_3_marital_married(lender_registration_form_3_mari
 
     # Any code you write here will run before the form opens.
 
+  def radio_button_1_clicked(self, **event_args):
+    """This method is called when this radio button is selected"""
+    self.grid_panel_1.visible = True
+    self.grid_panel_2.visible = False
+    self.grid_panel_3.visible = False
+   self.grid_panel_4.visible = False
+
+  def radio_button_2_clicked(self, **event_args):
+    """This method is called when this radio button is selected"""
+    pass
+
+  def radio_button_3_clicked(self, **event_args):
+    """This method is called when this radio button is selected"""
+    pass
+
+  def radio_button_4_clicked(self, **event_args):
+    """This method is called when this radio button is selected"""
+    pass
+
   
