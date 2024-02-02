@@ -84,5 +84,6 @@ class view_product(view_productTemplate):
         open_form('admin.dashboard.manage_products.update_form')
 
     def button_1_copy_3_click(self, **event_args):
-      """This method is called when the button is clicked"""
-        open_form('admin.dashboard.manage_products')
+      open_form('admin.dashboard.manage_products')
+      
+        
