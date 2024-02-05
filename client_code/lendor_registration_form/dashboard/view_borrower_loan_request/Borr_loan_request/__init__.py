@@ -191,6 +191,8 @@ class Borr_loan_request(Borr_loan_requestTemplate):
         # Assuming 'selected_row' is the selected row from the loan_details table
         selected_row = self.selected_row  
         email = main_form_module.email
+
+        tenure = selected_row['tenure']
       
         # Call the server-side function
         signal = anvil.server.call('loan_disbursement_action', selected_row, email)
@@ -209,16 +211,15 @@ class Borr_loan_request(Borr_loan_requestTemplate):
 
             # Calculate and set the first EMI payment due date (only date portion)
             loan_disbursed_timestamp = self.selected_row['loan_disbursed_timestamp']
-            first_emi_due_date = self.calculate_first_emi_due_date(emi_payment_type, loan_disbursed_timestamp)
-        
-            # # Extract only the date part from the datetime object
-            # if first_emi_due_date:
-            #   first_emi_due_date = first_emi_due_date.strftime('%Y-%m-%d')
+            first_emi_due_date = self.calculate_first_emi_due_date(emi_payment_type, loan_disbursed_timestamp, tenure)
             
             self.selected_row['first_emi_payment_due_date'] = first_emi_due_date
+
+            # Update 'loan_updated_status' column
+            selected_row['loan_updated_status'] = 'disbursed loan'
+            selected_row.update()
+
             open_form("wallet.wallet")
 
     def link_1_click(self, **event_args):
       open_form('lendor_registration_form.dashboard.view_borrower_loan_request.payment_details_view_loan_request', selected_row=self.selected_row)
-
-  
