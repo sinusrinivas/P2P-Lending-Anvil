@@ -90,7 +90,7 @@ class loan_type(loan_typeTemplate):
                       self.proctct_g, self.prodct_cate, str(loan_amount), tenure,
                       self.user_id, self.roi, self.processing_fee,
                       self.membership_type, self.product_id,
-                      self.Total_Repayment_Amount, self.credit_limt,self.entered_payment_type
+                      self.Total_Repayment_Amount, self.credit_limt,self.entered_payment_type,
                       entered_values={
                           'loan_amount': self.entered_loan_amount,
                           'tenure': self.entered_tenure,
@@ -257,6 +257,11 @@ class loan_type(loan_typeTemplate):
             return None
 
 # Instantiate the form
+
+    def radio_button_4_clicked(self, **event_args):
+      """This method is called when this radio button is selected"""
+      pass
+      
 loan_type_1 = loan_type('product_group_value', 'product_cat_value', 'self.credit_limt')
 
 # Open the form
