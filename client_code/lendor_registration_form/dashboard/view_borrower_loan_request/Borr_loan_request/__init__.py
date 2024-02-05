@@ -165,17 +165,24 @@ class Borr_loan_request(Borr_loan_requestTemplate):
         # Call the server-side function to get the signal
         signal = anvil.server.call('open_wallet_form')
 
-    def calculate_first_emi_due_date(self, emi_payment_type, loan_disbursed_timestamp):
+    def calculate_first_emi_due_date(self, emi_payment_type, loan_disbursed_timestamp, tenure):
       if emi_payment_type == "Monthly":
         first_emi_due_date = (loan_disbursed_timestamp + timedelta(days=30)).date()
       elif emi_payment_type == "Three Month":
         first_emi_due_date = (loan_disbursed_timestamp + timedelta(days=90)).date()
       elif emi_payment_type == "Six Month":
         first_emi_due_date = (loan_disbursed_timestamp + timedelta(days=180)).date()
+      elif emi_payment_type == "One Time":
+        if tenure:
+            # Add the tenure in months to the loan_disbursed_timestamp
+            first_emi_due_date = (loan_disbursed_timestamp + timedelta(days=30 * tenure)).date()
+        else:
+            # Handle the case where tenure is not provided (raise an exception or set to None)
+            first_emi_due_date = None
       else:
         # Handle other cases or raise an exception as needed
         first_emi_due_date = None
-    
+
       return first_emi_due_date
 
     def loan_disbursment_btn_click(self, **event_args):
