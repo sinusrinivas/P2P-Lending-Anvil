@@ -257,6 +257,10 @@ class loan_type(loan_typeTemplate):
             return None
 
 # Instantiate the form
+
+    def radio_button_4_clicked(self, **event_args):
+      """This method is called when this radio button is selected"""
+      pass
 loan_type_1 = loan_type('product_group_value', 'product_cat_value', 'self.credit_limt')
 
 # Open the form
