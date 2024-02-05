@@ -183,6 +183,7 @@ class Borr_loan_request(Borr_loan_requestTemplate):
             open_form("wallet.wallet") 
         elif signal == "pay_to_borrower":
             alert("Pay to Borrower")
+            self.selected_row['loan_disbursed_timestamp'] = datetime.now()
             open_form("wallet.wallet")
 
     def link_1_click(self, **event_args):

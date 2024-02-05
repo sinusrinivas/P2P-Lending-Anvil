@@ -20,7 +20,7 @@ class today_dues(today_duesTemplate):
 
         # Fetch all loan details from fin_emi_table where scheduled_payment matches today's date
         all_loans = app_tables.fin_emi_table.search(
-            next_payment=today_date
+            next_payment=q.greater_than_or_equal_to(today_date)
         )
 
         # Create a list to store loan details
@@ -30,11 +30,12 @@ class today_dues(today_duesTemplate):
         for loan in all_loans:
             loan_id = loan['loan_id']
             loan_amount = app_tables.fin_loan_details.get(loan_id=loan_id)['loan_amount']
-            scheduled_payment = loan['scheduled_payment']
+            next_payment = loan['next_payment']
 
-            days_left = (today_date - scheduled_payment).days
+            days_left = (next_payment - today_date).days
             emi_number = loan['emi_number']
             account_number = loan['account_number']
+            scheduled_payment = loan['scheduled_payment']
           
             loan_details_row = app_tables.fin_loan_details.get(loan_id=loan_id)
             if loan_details_row is not None:
@@ -51,7 +52,7 @@ class today_dues(today_duesTemplate):
                 loan_updated_status = 'N/A'
                 loan_disbursed_timestamp = 'N/A'
                 
-            days_left = (today_date - scheduled_payment).days
+            days_left = (next_payment - today_date).days
           
             loan_details.append({
                 'loan_id': loan_id,
@@ -64,10 +65,25 @@ class today_dues(today_duesTemplate):
                 'emi_number': emi_number,
                 'account_number': account_number,
                 'loan_updated_status': loan_updated_status,
-                'loan_disbursed_timestamp': loan_disbursed_timestamp
+                'loan_disbursed_timestamp': loan_disbursed_timestamp,
+                'next_payment': next_payment
             })
         self.repeating_panel_1.items = loan_details
-      
+        for loan_detail in loan_details:
+            if loan_detail['days_left'] >= 6 and loan_detail['days_left'] < 8:
+                loan_detail['loan_updated_status'] = 'lapsed loan'
+                loan_row = app_tables.fin_loan_details.get(loan_id=loan_detail['loan_id'])
+                if loan_row is not None:
+                    loan_row['loan_updated_status'] = 'lapsed loan'
+                    loan_row.update()
+            elif loan_detail['days_left'] >= 8:
+                loan_detail['loan_updated_status'] = 'default loan'
+                loan_row = app_tables.fin_loan_details.get(loan_id=loan_detail['loan_id'])
+                if loan_row is not None:
+                    loan_row['loan_updated_status'] = 'default loan'
+                    loan_row.update()
+
+  
     def home_borrower_registration_form_copy_1_click(self, **event_args):
         """This method is called when the button is clicked"""
         open_form('borrower_registration_form.dashboard')

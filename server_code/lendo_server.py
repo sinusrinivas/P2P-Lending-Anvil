@@ -509,6 +509,7 @@ def loan_disbursement_action(selected_row, email):
         print("wallet_not_found")
         return "wallet_not_found" 
 
+
 @anvil.server.background_task
 def check_loan_timeout(selected_row, lender_accepted_timestamp, email):
     # Record the start time
