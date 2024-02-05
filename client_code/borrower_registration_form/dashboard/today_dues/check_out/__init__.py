@@ -7,52 +7,71 @@ import anvil.users
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
+from datetime import datetime, timedelta
 from .. import main_form_module as main_form_module
-from datetime import datetime ,timedelta
 
 class check_out(check_outTemplate):
     def __init__(self, selected_row, **properties):
-        self.selected_row = selected_row
-        self.user_id = main_form_module.userId
-        self.init_components(**properties)
-
-        loan_id = selected_row['loan_id']
-        extension_amount = self.get_extension_amount(loan_id, selected_row['emi_number'])
-
-        loan_amount = selected_row['loan_amount']
-        tenure = selected_row['tenure']
-        interest_rate = selected_row['interest_rate']
-
-        monthly_interest_rate = interest_rate / 12 / 100
-        total_payments = tenure * 12
-        emi = (loan_amount * monthly_interest_rate * (1 + monthly_interest_rate) ** total_payments) / ((1 + monthly_interest_rate) ** total_payments - 1)
-        total_emi = emi + extension_amount  # Add extension amount to EMI
-        self.emi_amount_label.text = "{:.2f}".format(emi)
+      self.selected_row = selected_row
+      self.user_id = main_form_module.userId
+      self.init_components(**properties)
+  
+      loan_id = selected_row['loan_id']
+      extension_amount = self.get_extension_amount(loan_id, selected_row['emi_number'])
+  
+      loan_amount = selected_row['loan_amount']
+      tenure = selected_row['tenure']
+      interest_rate = selected_row['interest_rate']
+      emi_payment_type = selected_row['emi_payment_type']
+  
+      monthly_interest_rate = interest_rate / 12 / 100
+      total_payments = tenure * 12
+  
+      if emi_payment_type == 'One Time':
+            emi = (loan_amount * monthly_interest_rate * (1 + monthly_interest_rate) ** 12) / ((1 + monthly_interest_rate) ** 12 - 1)
+            total_emi = emi + extension_amount  # Add extension amount to 12-month EMI total
+      elif emi_payment_type == 'Monthly':
+          # Calculate monthly EMI amount
+          emi = (loan_amount * monthly_interest_rate * (1 + monthly_interest_rate) ** total_payments) / ((1 + monthly_interest_rate) ** total_payments - 1)
+          total_emi = emi + extension_amount  # Add extension amount to monthly EMI
+      elif emi_payment_type == 'Three Month':
+          # Calculate EMI amount for 3 months
+          emi = (loan_amount * monthly_interest_rate * (1 + monthly_interest_rate) ** 3) / ((1 + monthly_interest_rate) ** 3 - 1)
+          total_emi = emi + extension_amount  # Add extension amount to 3-month EMI
+      elif emi_payment_type == 'Six Month':
+          # Calculate EMI amount for 6 months
+          emi = (loan_amount * monthly_interest_rate * (1 + monthly_interest_rate) ** 6) / ((1 + monthly_interest_rate) ** 6 - 1)
+          total_emi = emi + extension_amount  # Add extension amount to 6-month EMI
+      else:
+          # Default to monthly calculation
+          emi = (loan_amount * monthly_interest_rate * (1 + monthly_interest_rate) ** total_payments) / ((1 + monthly_interest_rate) ** total_payments - 1)
+          total_emi = emi + extension_amount  # Add extension amount to monthly EMI
+  
+      # Display the calculated EMI amount in the EMI amount label
+      self.emi_amount_label.text = "{:.2f}".format(emi)  # Show only the EMI amount without extension
+  
+      # Update labels based on the presence of extension amount
+      if extension_amount > 0:
+          self.total_emi_amount_label.text = "{:.2f}".format(total_emi)
+          self.extension_amount_label.text = "{:.2f}".format(extension_amount)
+          self.total_emi_amount_label.visible = True
+          self.extension_amount_label.visible = True
+      else:
+          self.total_emi_amount_label.visible = False
+          self.extension_amount_label.visible = False
+          self.label_6.visible = False
+          self.label_3.visible = False
+  
+      # Update other labels
+      self.loan_id_label.text = str(selected_row['loan_id'])
+      self.loan_amount_label.text = str(loan_amount)
+      self.interest_label.text = str(interest_rate)
+      self.tenure_label.text = str(tenure)
+      self.account_no_label.text = str(selected_row['account_number'])
+  
+      # Display total EMI amount including extension amount
+      self.update_total_emi_amount(total_emi)
       
-        total_emi = emi
-
-        # Update labels based on the presence of extension amount
-        if extension_amount > 0:
-            total_emi += extension_amount
-            self.total_emi_amount_label.text = "{:.2f}".format(total_emi)
-            self.extension_amount_label.text = "{:.2f}".format(extension_amount)
-            self.total_emi_amount_label.visible = True
-            self.extension_amount_label.visible = True
-            
-        else:
-            self.total_emi_amount_label.visible = False
-            self.extension_amount_label.visible = False
-            self.label_6.visible = False
-            self.label_3.visible = False
-        self.loan_id_label.text = str(selected_row['loan_id'])
-        self.loan_amount_label.text = str(loan_amount)
-        self.interest_label.text = str(interest_rate)
-        self.tenure_label.text = str(tenure)
-        self.account_no_label.text = str(selected_row['account_number'])
-
-        # Display total EMI amount including extension amount
-        self.update_total_emi_amount(total_emi)
-
     def get_extension_amount(self, loan_id, emi_number):
       extension_row = app_tables.fin_extends_loan.get(
           loan_id=loan_id,
@@ -68,56 +87,66 @@ class check_out(check_outTemplate):
         self.total_emi_amount_label.text = "{:.2f}".format(total_emi)
 
     def pay_now_click(self, **event_args):
-        total_emi_amount = float(self.total_emi_amount_label.text)  # Fetch total EMI amount including extra payment
-        borrower_wallet = app_tables.fin_wallet.get(customer_id=self.user_id)
+      total_emi_amount = float(self.total_emi_amount_label.text)  # Fetch total EMI amount including extra payment
+      borrower_wallet = app_tables.fin_wallet.get(customer_id=self.user_id)
+  
+      if borrower_wallet is not None:
+          wallet_balance = borrower_wallet['wallet_amount']
+          
+          if wallet_balance >= total_emi_amount:
+              updated_balance = wallet_balance - total_emi_amount
+              borrower_wallet['wallet_amount'] = updated_balance
+              borrower_wallet.update()
+                              
+              loan_id = self.selected_row['loan_id']
+              current_emi_number = int(self.selected_row['emi_number'])
+              account_number = self.selected_row['account_number']
+              emi_payment_type = self.selected_row['emi_payment_type']
 
-        if borrower_wallet is not None:
-            wallet_balance = borrower_wallet['wallet_amount']
-            
-            if wallet_balance >= total_emi_amount:
-                updated_balance = wallet_balance - total_emi_amount
-                borrower_wallet['wallet_amount'] = updated_balance
-                borrower_wallet.update()
-                                
-                loan_id = self.selected_row['loan_id']
-                current_emi_number = int(self.selected_row['emi_number'])
-                account_number = self.selected_row['account_number']
-                next_emi_number = current_emi_number + 1
-                
-                prev_scheduled_payment = self.selected_row['scheduled_payment']
-                
-                # Calculate the next scheduled payment date (one month ahead)
-                next_scheduled_payment = prev_scheduled_payment + timedelta(days=30)
-                
-                # Get the previous next payment date
-                prev_next_payment = self.selected_row['next_payment']
-                
-                # Calculate the next next payment date (one month ahead)
-                next_next_payment = prev_next_payment + timedelta(days=30)
-
-                new_emi_row = app_tables.fin_emi_table.add_row(
-                    loan_id=loan_id,
-                    emi_number=next_emi_number,
-                    account_number=account_number,
-                    scheduled_payment_made=datetime.now(),
-                    scheduled_payment=next_scheduled_payment,
-                    next_payment=next_next_payment            
-                )
-                
-                # Update the emi_number in the selected_row
-                self.selected_row['emi_number'] = next_emi_number
-                self.selected_row['scheduled_payment'] = next_scheduled_payment
-                self.selected_row['next_payment'] = next_next_payment
-                self.selected_row.update()
-                
-                self.status_label.text = "Payment successfully done..."
-            else:
-                #self.status_label.text = "Insufficient funds to complete payment."
-                alert("Insufficient funds in wallet. Please deposit more funds to continue.")
-                open_form('wallet.wallet')
-        else:
-            self.status_label.text = "Wallet record not found."
-
+              prev_scheduled_payment = self.selected_row['scheduled_payment']
+              prev_next_payment = self.selected_row['next_payment']
+              
+              if emi_payment_type == 'One Time':
+                  next_scheduled_payment = prev_scheduled_payment + timedelta(days=365)
+                  next_next_payment = self.selected_row['next_payment'] + timedelta(days=365)
+              else:
+                  if emi_payment_type == 'Monthly':
+                      next_scheduled_payment = prev_scheduled_payment + timedelta(days=30)
+                      next_next_payment = prev_next_payment + timedelta(days=30)
+                  elif emi_payment_type == 'Three Month':
+                      next_scheduled_payment = prev_scheduled_payment + timedelta(days=90)
+                      next_next_payment = prev_next_payment + timedelta(days=90)
+                  elif emi_payment_type == 'Six Month':
+                      next_scheduled_payment = prev_scheduled_payment + timedelta(days=180)
+                      next_next_payment = prev_next_payment + timedelta(days=180)
+                  else:
+                      # Default to monthly calculation
+                      next_scheduled_payment = prev_scheduled_payment + timedelta(days=30)
+                      next_next_payment = prev_next_payment + timedelta(days=30)
+  
+              # Add a new row to fin_emi_table
+              new_emi_row = app_tables.fin_emi_table.add_row(
+                  loan_id=loan_id,
+                  emi_number=current_emi_number + 1,
+                  account_number=account_number,
+                  scheduled_payment_made=datetime.now(),
+                  scheduled_payment=next_scheduled_payment,
+                  next_payment=next_next_payment            
+              )
+              
+              # Update the emi_number, scheduled_payment, and next_payment in the selected_row
+              self.selected_row['emi_number'] = current_emi_number + 1
+              self.selected_row['scheduled_payment'] = next_scheduled_payment
+              self.selected_row['next_payment'] = next_next_payment
+              self.selected_row.update()
+              
+              self.status_label.text = "Payment successfully done..."
+          else:
+              alert("Insufficient funds in wallet. Please deposit more funds to continue.")
+              open_form('wallet.wallet')
+      else:
+          self.status_label.text = "Wallet record not found."
+  
     def button_1_copy_2_click(self, **event_args):
-      """This method is called when the button is clicked"""
-      open_form('borrower_registration_form.dashboard.today_dues')
+        """This method is called when the button is clicked"""
+        open_form('borrower_registration_form.dashboard.today_dues')
