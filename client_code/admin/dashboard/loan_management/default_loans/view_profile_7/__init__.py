@@ -45,7 +45,9 @@ class view_profile_7(view_profile_7Template):
 
 
 
-  def button_1_copy_click(self, **event_args):
-      open_form("admin.dashboard.loan_management.default_loans")
+  # def button_1_copy_click(self, **event_args):
+  #     open_form("admin.dashboard.loan_management.default_loans")
 
+  def button_1_click(self, **event_args):
+    open_form('admin.dashboard.loan_management.default_loans')
   

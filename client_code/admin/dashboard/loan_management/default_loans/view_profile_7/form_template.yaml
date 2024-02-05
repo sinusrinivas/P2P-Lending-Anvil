@@ -215,12 +215,10 @@ components:
       col_xs: 6}
 - type: Button
   properties: {role: elevated-button, align: center, tooltip: '', border: '', enabled: true,
-    foreground: white, visible: true, text: Back, font_size: null, font: '16', spacing_above: small,
+    foreground: white, visible: true, text: Back, font_size: 16, font: '', spacing_above: small,
     icon_align: left, spacing_below: small, italic: false, background: '#0b2547',
     bold: true, underline: false, icon: 'fa:backward'}
-  name: button_1_copy
-  layout_properties:
-    col_widths: {}
-    grid_position: UPUDYM,RNXRHI
-  event_bindings: {click: button_1_copy_click}
+  name: button_1
+  layout_properties: {grid_position: 'JTZCEJ,BOJOMY'}
+  event_bindings: {click: button_1_click}
 is_package: true

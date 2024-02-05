@@ -14,11 +14,9 @@ class view_profile_8(view_profile_8Template):
         self.init_components(**properties)
         self.loan_data = app_tables.fin_loan_details.get(loan_id=loan_id_to_display)
         if self.loan_data:
-            # Fetch user type from user_profile based on borrower_customer_id
             user_profile_data = app_tables.fin_user_profile.get(customer_id=self.loan_data['borrower_customer_id'])
             if user_profile_data:
-                self.label_34.text = user_profile_data['usertype']
-
+              self.label_34.text = user_profile_data['usertype']
             self.label_2.text = self.loan_data['loan_id']
             self.label_4.text = self.loan_data['borrower_customer_id']
             self.label_6.text = self.loan_data['borrower_full_name']
@@ -36,12 +34,6 @@ class view_profile_8(view_profile_8Template):
             self.label_30.text = self.loan_data['tenure']
             self.label_32.text = self.loan_data['loan_updated_status']
 
-    # Any code you write here will run before the form opens.
 
-
-  def button_11_copy_click(self, **event_args):
-      open_form('admin.dashboard.loan_management.lapsed_loans')
-
-  def button_1_copy_click(self, **event_args):
-    open_form("admin.dashboard.loan_management.lapsed_loans")
-
+  def button_1_click(self, **event_args):
+    open_form('admin.dashboard.loan_management.lapsed_loans')
