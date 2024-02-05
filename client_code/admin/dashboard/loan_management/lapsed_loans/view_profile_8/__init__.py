@@ -9,9 +9,10 @@ import anvil.tables.query as q
 from anvil.tables import app_tables
 
 class view_profile_8(view_profile_8Template):
-  def __init__(self, loan_id_to_display, **properties):
-    # Set Form properties and Data Bindings.
+    def __init__(self, loan_id_to_display, **properties):
+        # Set Form properties and Data Bindings.
         self.init_components(**properties)
+    
         self.loan_data = app_tables.fin_loan_details.get(loan_id=loan_id_to_display)
         if self.loan_data:
             user_profile_data = app_tables.fin_user_profile.get(customer_id=self.loan_data['borrower_customer_id'])
@@ -37,6 +38,6 @@ class view_profile_8(view_profile_8Template):
 
 
 
-  def back_click(self, **event_args):
-    open_form('admin.dashboard.loan_management.lapsed_loans')
+    def back_click(self, **event_args):
+      open_form('admin.dashboard.loan_management.lapsed_loans')
     

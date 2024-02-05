@@ -50,12 +50,12 @@ components:
     type: DataGrid
     layout_properties:
       col_widths: {}
-      grid_position: IHNLWR,ORCPMV
+      grid_position: IHNLWR,ADKTOR
     components:
-    - name: repeating_panel_1
-      properties: {spacing_above: none, spacing_below: none, item_template: admin.dashboard.loan_management.closed_loans.RowTemplate14}
-      type: RepeatingPanel
-      layout_properties: {}
+    - type: RepeatingPanel
+      properties: {item_template: admin.dashboard.loan_management.default_loans.ItemTemplate24}
+      name: repeating_panel_2
+      layout_properties: {grid_position: 'JERDZD,COLYEP'}
     - name: link_2
       properties: {role: null, url: '', align: right, tooltip: '', border: '', foreground: '',
         visible: true, text: '', font_size: null, wrap_on: mobile, font: '', col_spacing: medium,

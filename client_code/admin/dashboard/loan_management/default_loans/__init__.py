@@ -45,7 +45,7 @@ class default_loans(default_loansTemplate):
       for i in self.index:
         self.result.append({'loan_id' : self.list_1[i], 'coustmer_id' : self.list_2[i], 'full_name' : self.list_3[i], 'loan_status' : self.list_4[i]})
 
-      self.repeating_panel_1.items = self.result
+      self.repeating_panel_2.items = self.result
 
   #   # Any code you write here will run before the form opens.
   #   self.loan = tables.app_tables.fin_loan_details.search()
