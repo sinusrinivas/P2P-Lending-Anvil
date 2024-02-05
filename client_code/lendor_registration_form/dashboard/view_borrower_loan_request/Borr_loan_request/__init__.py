@@ -8,6 +8,7 @@ from anvil import open_form
 from datetime import datetime
 from ... import lendor_main_form_module as main_form_1
 from .....bank_users.main_form import main_form_module
+from datetime import timedelta
 
 
 # In Borr_loan_request class
@@ -164,12 +165,34 @@ class Borr_loan_request(Borr_loan_requestTemplate):
         # Call the server-side function to get the signal
         signal = anvil.server.call('open_wallet_form')
 
+    def calculate_first_emi_due_date(self, emi_payment_type, loan_disbursed_timestamp, tenure):
+      if emi_payment_type == "Monthly":
+        first_emi_due_date = (loan_disbursed_timestamp + timedelta(days=30)).date()
+      elif emi_payment_type == "Three Month":
+        first_emi_due_date = (loan_disbursed_timestamp + timedelta(days=90)).date()
+      elif emi_payment_type == "Six Month":
+        first_emi_due_date = (loan_disbursed_timestamp + timedelta(days=180)).date()
+      elif emi_payment_type == "One Time":
+        if tenure:
+            # Add the tenure in months to the loan_disbursed_timestamp
+            first_emi_due_date = (loan_disbursed_timestamp + timedelta(days=30 * tenure)).date()
+        else:
+            # Handle the case where tenure is not provided (raise an exception or set to None)
+            first_emi_due_date = None
+      else:
+        # Handle other cases or raise an exception as needed
+        first_emi_due_date = None
+
+      return first_emi_due_date
+
     def loan_disbursment_btn_click(self, **event_args):
         """This method is called when the button is clicked"""
         
         # Assuming 'selected_row' is the selected row from the loan_details table
         selected_row = self.selected_row  
         email = main_form_module.email
+
+        tenure = selected_row['tenure']
       
         # Call the server-side function
         signal = anvil.server.call('loan_disbursement_action', selected_row, email)
@@ -184,9 +207,20 @@ class Borr_loan_request(Borr_loan_requestTemplate):
         elif signal == "pay_to_borrower":
             alert("Pay to Borrower")
             self.selected_row['loan_disbursed_timestamp'] = datetime.now()
+            emi_payment_type = self.selected_row['emi_payment_type']
+
+            # Calculate and set the first EMI payment due date (only date portion)
+            loan_disbursed_timestamp = self.selected_row['loan_disbursed_timestamp']
+            first_emi_due_date = self.calculate_first_emi_due_date(emi_payment_type, loan_disbursed_timestamp, tenure)
+            
+            self.selected_row['first_emi_payment_due_date'] = first_emi_due_date
+
+            # Update 'loan_updated_status' column
+            selected_row['loan_updated_status'] = 'disbursed loan'
+            selected_row.update()
+
             open_form("wallet.wallet")
 
     def link_1_click(self, **event_args):
       open_form('lendor_registration_form.dashboard.view_borrower_loan_request.payment_details_view_loan_request', selected_row=self.selected_row)
 
-  

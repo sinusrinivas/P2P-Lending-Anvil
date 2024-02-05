@@ -178,6 +178,7 @@ components:
   name: radio_button_4
   layout_properties: {grid_position: 'BQXUFN,BQQTMC'}
   data_bindings: []
+  event_bindings: {clicked: radio_button_4_clicked}
 - type: Label
   properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
     text: '', font_size: null, font: '', spacing_above: none, icon_align: left, spacing_below: small,

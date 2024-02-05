@@ -715,45 +715,6 @@ db_schema:
     - name: phd
       admin_ui: {width: 200, order: 100}
       type: media
-    - name: father_age
-      admin_ui: {width: 200}
-      type: string
-    - name: father_name
-      admin_ui: {width: 200}
-      type: string
-    - name: mother_age
-      admin_ui: {width: 200}
-      type: string
-    - name: mother_name
-      admin_ui: {width: 200}
-      type: string
-    - name: salary_type
-      admin_ui: {width: 200}
-      type: string
-    - name: select_bank
-      admin_ui: {width: 200}
-      type: string
-    - name: spouse_annual_ctc
-      admin_ui: {width: 200}
-      type: string
-    - name: spouse_company_address
-      admin_ui: {width: 200}
-      type: string
-    - name: spouse_company_name
-      admin_ui: {width: 200}
-      type: string
-    - name: spouse_designation
-      admin_ui: {width: 200}
-      type: string
-    - name: spouse_mobile
-      admin_ui: {width: 200}
-      type: string
-    - name: spouse_name
-      admin_ui: {width: 200}
-      type: string
-    - name: spouse_office_number
-      admin_ui: {width: 200}
-      type: string
     title: fin_user_profile
   fin_wallet_transactions:
     title: fin_wallet_transactions
@@ -1113,7 +1074,7 @@ db_schema:
       admin_ui: {width: 200, order: 2}
       type: number
     - name: lender_accepted_timestamp
-      admin_ui: {width: 200, order: 0}
+      admin_ui: {order: 8, width: 241}
       type: datetime
     - name: credit_limit
       admin_ui: {width: 200, order: 16}
@@ -1124,8 +1085,8 @@ db_schema:
     - name: loan_extension_months
       admin_ui: {width: 200, order: 31}
       type: number
-    - name: first emi_payment due date
-      admin_ui: {order: 18.5, width: 200}
+    - name: first_emi_payment_due_date
+      admin_ui: {order: 18.875, width: 280}
       type: date
     - name: emi_payment_type
       admin_ui: {width: 200}
