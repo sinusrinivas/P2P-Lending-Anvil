@@ -8,6 +8,7 @@ from anvil import open_form
 from datetime import datetime
 from ... import lendor_main_form_module as main_form_1
 from .....bank_users.main_form import main_form_module
+from datetime import timedelta
 
 
 # In Borr_loan_request class
@@ -164,6 +165,19 @@ class Borr_loan_request(Borr_loan_requestTemplate):
         # Call the server-side function to get the signal
         signal = anvil.server.call('open_wallet_form')
 
+    def calculate_first_emi_due_date(self, emi_payment_type, loan_disbursed_timestamp):
+      if emi_payment_type == "Monthly":
+        first_emi_due_date = (loan_disbursed_timestamp + timedelta(days=30)).date()
+      elif emi_payment_type == "Three Month":
+        first_emi_due_date = (loan_disbursed_timestamp + timedelta(days=90)).date()
+      elif emi_payment_type == "Six Month":
+        first_emi_due_date = (loan_disbursed_timestamp + timedelta(days=180)).date()
+      else:
+        # Handle other cases or raise an exception as needed
+        first_emi_due_date = None
+    
+      return first_emi_due_date
+
     def loan_disbursment_btn_click(self, **event_args):
         """This method is called when the button is clicked"""
         
@@ -184,6 +198,17 @@ class Borr_loan_request(Borr_loan_requestTemplate):
         elif signal == "pay_to_borrower":
             alert("Pay to Borrower")
             self.selected_row['loan_disbursed_timestamp'] = datetime.now()
+            emi_payment_type = self.selected_row['emi_payment_type']
+
+            # Calculate and set the first EMI payment due date (only date portion)
+            loan_disbursed_timestamp = self.selected_row['loan_disbursed_timestamp']
+            first_emi_due_date = self.calculate_first_emi_due_date(emi_payment_type, loan_disbursed_timestamp)
+        
+            # # Extract only the date part from the datetime object
+            # if first_emi_due_date:
+            #   first_emi_due_date = first_emi_due_date.strftime('%Y-%m-%d')
+            
+            self.selected_row['first_emi_payment_due_date'] = first_emi_due_date
             open_form("wallet.wallet")
 
     def link_1_click(self, **event_args):

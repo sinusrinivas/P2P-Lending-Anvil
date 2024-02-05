@@ -1074,7 +1074,7 @@ db_schema:
       admin_ui: {width: 200, order: 2}
       type: number
     - name: lender_accepted_timestamp
-      admin_ui: {width: 200, order: 0}
+      admin_ui: {order: 8, width: 241}
       type: datetime
     - name: credit_limit
       admin_ui: {width: 200, order: 16}
