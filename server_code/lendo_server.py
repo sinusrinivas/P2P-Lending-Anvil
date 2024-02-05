@@ -502,6 +502,8 @@ def loan_disbursement_action(selected_row, email):
            wallet_amount -= loan_amount
            wallet_row['wallet_amount'] = wallet_amount
            wallet_row.update()
+           selected_row['loan_updated_status'] = 'disbursed loan'
+           selected_row.update()
            # Signal the client to pay to the borrower
            return "pay_to_borrower"
     else:
