@@ -17,7 +17,7 @@ class view_profile(view_profileTemplate):
         self.loan_data = app_tables.fin_loan_details.get(loan_id=loan_id_to_display)
         if self.loan_data:
             # Fetch user type from user_profile based on borrower_customer_id
-            user_profile_data = app_tables.user_profile.get(customer_id=self.loan_data['borrower_customer_id'])
+            user_profile_data = app_tables.fin_user_profile.get(customer_id=self.loan_data['borrower_customer_id'])
             if user_profile_data:
                 self.label_34.text = user_profile_data['usertype']
 
