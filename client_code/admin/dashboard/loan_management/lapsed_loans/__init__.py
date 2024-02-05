@@ -55,3 +55,7 @@ class lapsed_loans(lapsed_loansTemplate):
   def repeating_panel_1_show(self, **event_args):
     """This method is called when the RepeatingPanel is shown on the screen"""
     pass
+
+  def link_2_click(self, **event_args):
+    """This method is called when the link is clicked"""
+    pass
