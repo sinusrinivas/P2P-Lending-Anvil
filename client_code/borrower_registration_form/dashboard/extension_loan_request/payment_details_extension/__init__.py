@@ -243,8 +243,6 @@ class payment_details_extension(payment_details_extensionTemplate):
         self.entered_tenure = self.selected_row['tenure']
         self.entered_extension_months = self.loan_extension_months
 
-   
-
     def calculate_payment_date(self, selected_row, current_month):
         loan_updated_status = selected_row['loan_updated_status'].lower()
     
@@ -277,7 +275,6 @@ class payment_details_extension(payment_details_extensionTemplate):
                 return None
         else:
             return None
-
 
 
 
