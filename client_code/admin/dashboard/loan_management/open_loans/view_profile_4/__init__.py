@@ -17,7 +17,7 @@ class view_profile_4(view_profile_4Template):
         self.loan_data = app_tables.fin_loan_details.get(loan_id=loan_id_to_display)
         if self.loan_data:
             # Fetch user type from user_profile based on borrower_customer_id
-            user_profile_data = app_tables.user_profile.get(customer_id=self.loan_data['borrower_customer_id'])
+            user_profile_data = app_tables.fin_user_profile.get(customer_id=self.loan_data['borrower_customer_id'])
             if user_profile_data:
                 self.label_34.text = user_profile_data['usertype']
 
@@ -43,5 +43,4 @@ class view_profile_4(view_profile_4Template):
     #     open_form('admin.dashboard.loan_management.open_loans')
 
     def button_1_copy_click(self, **event_args):
-      """This method is called when the button is clicked"""
-        open_form('admin.dashboard.loan_management.open_loans')
+      open_form('admin.dashboard.loan_management.open_loans')
