@@ -99,7 +99,7 @@ class payment_details_t(payment_details_tTemplate):
       beginning_balance = ending_balance
 
     # Set the Data Grid's items property to the list of payment details
-    self.repeating_panel_2.items = payment_details
+    self.repeating_panel_1.items = payment_details
 
   def load_entered_values(self, entered_values):
     if entered_values:
