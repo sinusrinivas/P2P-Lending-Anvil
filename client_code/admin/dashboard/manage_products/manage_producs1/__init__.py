@@ -136,7 +136,7 @@ class manage_producs1(manage_producs1Template):
             "Six Month" if self.six_month.checked else "",
         ]
         emi_payment = json.dumps(emi_payment)
-        
+
         if self.radio_button_3.selected:
             # Code to execute when radio_button_3 is selected
             discount_coupons = self.radio_button_3.text
@@ -164,12 +164,17 @@ class manage_producs1(manage_producs1Template):
                           min_amount, min_tenure, max_tenure, roi, foreclose_type, foreclosure_fee, extension_allowed,
                           emi_payment, min_months, discount_coupons, lapsed_fee, default_fee, npa)
         product_id = self.label_1.text
-        # open_form('admin.dashboard.manage_products.add_group',product_id )
         Notification("Products added successfully").show()
         open_form('admin.dashboard.manage_products')
+
+    # def link_1_copy_click(self, **event_args):
+    #     """This method is called when the link is clicked"""
+    #     open_form('admin.dashboard.manage_products')
 
     def button_1_copy_3_click(self, **event_args):
       """This method is called when the button is clicked"""
       open_form('admin.dashboard.manage_products')
 
-   
+    def text_box_1_copy_pressed_enter(self, **event_args):
+      """This method is called when the user presses Enter in this text box"""
+      pass
