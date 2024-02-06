@@ -42,8 +42,7 @@ class view_profile_9(view_profile_9Template):
       open_form('admin.dashboard.loan_management.not_payable_amount')
 
     def button_2_click(self, **event_args):
-        for loan_detail in loan_details:
-            loan_row = app_tables.fin_loan_details.get(loan_id=loan_detail['loan_id'])
-            if loan_row is not None:
-                loan_row['loan_updated_status'] = 'OTS'
-                loan_row.update()
+        if self.loan_data:
+            self.loan_data['loan_updated_status'] = 'OTS'
+            self.loan_data.update()
+            alert('Request Submited')

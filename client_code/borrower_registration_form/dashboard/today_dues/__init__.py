@@ -132,12 +132,19 @@ class today_dues(today_duesTemplate):
                 if loan_row is not None:
                     loan_row['loan_updated_status'] = 'lapsed loan'
                     loan_row.update()
-            elif loan_detail['days_left'] >= 8:
+            elif loan_detail['days_left'] >= 8 and loan_detail['days_left'] < 90:
                 print("Updating status to 'default loan'")
                 loan_detail['loan_updated_status'] = 'default loan'
                 loan_row = app_tables.fin_loan_details.get(loan_id=loan_detail['loan_id'])
                 if loan_row is not None:
                     loan_row['loan_updated_status'] = 'default loan'
+                    loan_row.update()
+            elif loan_detail['days_left'] >= 90:
+                print("Updating status to 'default loan'")
+                loan_detail['loan_updated_status'] = 'Not Payable Amount'
+                loan_row = app_tables.fin_loan_details.get(loan_id=loan_detail['loan_id'])
+                if loan_row is not None:
+                    loan_row['loan_updated_status'] = 'Not Payable Amount'
                     loan_row.update()
 
         # for loan_detail in loan_details:
