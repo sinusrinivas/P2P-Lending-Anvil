@@ -195,6 +195,23 @@ class payment_details_extension(payment_details_extensionTemplate):
                 total_payment = emi
             else:
                 # Unpaid months: Calculate scheduled payment based on tenure plus extension months
+                if selected_row['emi_payment_type'] == 'Monthly':
+                    pass  # No adjustment needed for monthly payments
+                elif selected_row['emi_payment_type'] == 'One Time':
+                    # For one-time payments, keep the EMI unchanged since it's paid at once
+                    pass
+                elif selected_row['emi_payment_type'] == 'Three Month':
+                    # For every three-month payment, divide total emi by 3 and only consider every 3rd month
+                    if month % 3 != 1:
+                        emi = 0  # No payment for months other than the first of every 3 months
+                    else:
+                        emi /= 3
+                elif selected_row['emi_payment_type'] == 'Six Month':
+                    # For every six-month payment, divide total emi by 6 and only consider every 6th month
+                    if month % 6 != 1:
+                        emi = 0  # No payment for months other than the first of every 6 months
+                    else:
+                        emi /= 6
                 emi = self.calculate_scheduled_payment(last_paid_emi_ending_balance, monthly_interest_rate, total_tenure - (month - 1))
                 total_payment = emi + extension_fee_amount if month == last_paid_emi_number + 1 else emi
             self.emi = emi
@@ -226,41 +243,42 @@ class payment_details_extension(payment_details_extensionTemplate):
         self.entered_tenure = self.selected_row['tenure']
         self.entered_extension_months = self.loan_extension_months
 
+   
+
     def calculate_payment_date(self, selected_row, current_month):
         loan_updated_status = selected_row['loan_updated_status'].lower()
     
         if loan_updated_status in ['close', 'closed loans', 'disbursed loan', 'foreclosure']:
-            try:
-                loan_disbursed_timestamp = selected_row['loan_disbursed_timestamp']
-                loan_details_row = app_tables.fin_loan_details.get(loan_id=selected_row['loan_id'])
+            loan_disbursed_timestamp = selected_row['loan_disbursed_timestamp']
+            loan_details_row = app_tables.fin_loan_details.get(loan_id=selected_row['loan_id'])
     
-                if loan_disbursed_timestamp and loan_details_row:
-                    emi_payment_type = loan_details_row['emi_payment_type']
-                    print("emi_payment_type", emi_payment_type)
+            if loan_disbursed_timestamp and loan_details_row:
+                emi_payment_type = loan_details_row['emi_payment_type']
     
-                    if emi_payment_type == 'Monthly':
-                        payment_date = loan_disbursed_timestamp + timedelta(days=int(emi_payment * 30.44) * current_month)
-                    elif emi_payment_type == 'Three Month':
-                        if current_month % 3 == 1:  # Payment for every 3 months starting from the first month
-                            payment_date = loan_disbursed_timestamp + timedelta(days=int(emi_payment * 30.44) * (current_month // 3))
-                        else:
-                            payment_date = None
-                    elif emi_payment_type == 'Six Month':
-                        if current_month % 6 == 1:  # Payment for every 6 months starting from the first month
-                            payment_date = loan_disbursed_timestamp + timedelta(days=int(emi_payment * 30.44) * (current_month // 6))
-                        else:
-                            payment_date = None
+                if emi_payment_type == 'Monthly':
+                    payment_date = loan_disbursed_timestamp + timedelta(days=30 * current_month)
+                elif emi_payment_type == 'Three Month':
+                    if current_month % 3 == 1:
+                        # Calculate payment date after three months
+                        payment_date = loan_disbursed_timestamp + timedelta(days=30 * (current_month // 3))
                     else:
-                        payment_date = None  # Handle other types if necessary
-    
-                    return payment_date
+                        payment_date = None
+                elif emi_payment_type == 'Six Month':
+                    if current_month % 6 == 1:
+                        # Calculate payment date after six months
+                        payment_date = loan_disbursed_timestamp + timedelta(days=30 * (current_month // 6))
+                    else:
+                        payment_date = None
                 else:
-                    return None
-            except Exception as e:
-                print(f"Error in calculate_payment_date: {e}")
+                    payment_date = None
+    
+                return payment_date
+            else:
                 return None
         else:
             return None
+
+
 
 
     def calculate_scheduled_payment(self, loan_amount, monthly_interest_rate, remaining_tenure):
