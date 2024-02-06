@@ -156,3 +156,7 @@ class wallet_deposit(wallet_depositTemplate):
   def all_transaction_btn_click(self, **event_args):
     """This method is called when the button is clicked"""
     open_form("wallet.wallet.all_transaction")
+
+  def timer_1_tick(self, **event_args):
+    """This method is called Every [interval] seconds. Does not trigger if [interval] is 0."""
+    pass
