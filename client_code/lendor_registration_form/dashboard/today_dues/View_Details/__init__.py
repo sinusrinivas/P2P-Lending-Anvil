@@ -7,40 +7,85 @@ import anvil.users
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
-from ...import lendor_main_form_module as main_form_module
-from datetime import datetime
-from datetime import datetime, timezone
-
+from datetime import datetime, timedelta
+from .. import main_form_module as main_form_module
 
 class View_Details(View_DetailsTemplate):
-  def __init__(self,selected_row, **properties):
-    # Set Form properties and Data Bindings.
-    self.init_components(**properties)
+    def __init__(self, selected_row, **properties):
+      self.selected_row = selected_row
+      self.user_id = main_form_module.userId
+      self.init_components(**properties)
+  
+      loan_id = selected_row['loan_id']
+      extension_amount = self.get_extension_amount(loan_id, selected_row['emi_number'])
+  
+      loan_amount = selected_row['loan_amount']
+      tenure = selected_row['tenure']
+      interest_rate = selected_row['interest_rate']
+      emi_payment_type = selected_row['emi_payment_type']
+  
+      monthly_interest_rate = interest_rate / 12 / 100
+      total_payments = tenure * 12
+  
+      if emi_payment_type == 'One Time':
+            emi = (loan_amount * monthly_interest_rate * (1 + monthly_interest_rate) ** 12) / ((1 + monthly_interest_rate) ** 12 - 1)
+            total_emi = emi + extension_amount  # Add extension amount to 12-month EMI total
+      elif emi_payment_type == 'Monthly':
+          # Calculate monthly EMI amount
+          emi = (loan_amount * monthly_interest_rate * (1 + monthly_interest_rate) ** total_payments) / ((1 + monthly_interest_rate) ** total_payments - 1)
+          total_emi = emi + extension_amount  # Add extension amount to monthly EMI
+      elif emi_payment_type == 'Three Month':
+          # Calculate EMI amount for 3 months
+          emi = (loan_amount * monthly_interest_rate * (1 + monthly_interest_rate) ** 3) / ((1 + monthly_interest_rate) ** 3 - 1)
+          total_emi = emi + extension_amount  # Add extension amount to 3-month EMI
+      elif emi_payment_type == 'Six Month':
+          # Calculate EMI amount for 6 months
+          emi = (loan_amount * monthly_interest_rate * (1 + monthly_interest_rate) ** 6) / ((1 + monthly_interest_rate) ** 6 - 1)
+          total_emi = emi + extension_amount  # Add extension amount to 6-month EMI
+      else:
+          # Default to monthly calculation
+          emi = (loan_amount * monthly_interest_rate * (1 + monthly_interest_rate) ** total_payments) / ((1 + monthly_interest_rate) ** total_payments - 1)
+          total_emi = emi + extension_amount  # Add extension amount to monthly EMI
+  
+      # Display the calculated EMI amount in the EMI amount label
+      self.emi_amount_label.text = "{:.2f}".format(emi)  # Show only the EMI amount without extension
+  
+      # Update labels based on the presence of extension amount
+      if extension_amount > 0:
+          self.total_emi_amount_label.text = "{:.2f}".format(total_emi)
+          self.extension_amount_label.text = "{:.2f}".format(extension_amount)
+          self.total_emi_amount_label.visible = True
+          self.extension_amount_label.visible = True
+      else:
+          self.total_emi_amount_label.visible = False
+          self.extension_amount_label.visible = False
+          self.label_6.visible = False
+          self.label_3.visible = False
+  
+      # Update other labels
+      self.loan_id_label.text = str(selected_row['loan_id'])
+      self.loan_amount_label.text = str(loan_amount)
+      self.interest_label.text = str(interest_rate)
+      self.tenure_label.text = str(tenure)
+      self.account_no_label.text = str(selected_row['account_number'])
+  
+      # Display total EMI amount including extension amount
+      self.update_total_emi_amount(total_emi)
+      
+    def get_extension_amount(self, loan_id, emi_number):
+      extension_row = app_tables.fin_extends_loan.get(
+          loan_id=loan_id,
+          emi_number=emi_number
+      )
+      if extension_row is not None:
+          extension_amount = extension_row['extension_amount']
+          if extension_amount is not None:
+              return extension_amount
+      return 0
 
-    # Any code you write here will run before the form opens.
-    # Display loan details
-    self.loan_id_label.text = f"{selected_row['loan_id']}"
-    self.loan_amount_label.text=f"{selected_row['credit_limit']}"
-    self.intrest_rate_label.text=f"{selected_row['interest_rate']}"
-    self.tenure_label.text=f"{selected_row['tenure']}"
-    self.date_of_apply_label.text=f"{selected_row['lender_accepted_timestamp']}"
-    self.due_amount_label.text=f"{selected_row['loan_amount']}"
-    self.due_date_label.text=f"{selected_row['emi_due_date']}"
-    
-    due_date = selected_row['emi_due_date']
-# Check if due_date is not None before processing
-    if due_date is not None:
-    # Convert due_date to datetime with a fixed time (e.g., midnight) and set the time zone
-      due_date_aware = datetime.combine(due_date, datetime.min.time()).replace(tzinfo=timezone.utc)
+    def update_total_emi_amount(self, total_emi):
+        self.total_emi_amount_label.text = "{:.2f}".format(total_emi)
 
-      days_left = (due_date_aware - datetime.now(timezone.utc)).days
-      self.days_left_label.text = f"{days_left} days left"
-    else:
-      self.days_left_label.text = "N/A"
-    
-  def button_1_copy_click(self, **event_args):
-    open_form('lendor_registration_form.dashboard')
-
-  def button_1_click(self, **event_args):
-    """This method is called when the button is clicked"""
-    open_form('lendor_registration_form.dashboard.today_dues')
+    def button_1_copy_2_click(self, **event_args):
+      """This method is called when the button is clicked"""
+      open_form('lendor_registration_form.dashboard.today_dues')
