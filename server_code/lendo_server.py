@@ -328,7 +328,7 @@ def transfer_user_profile_to_loan_details(email,user_id):
     print(f"Fetching data for email: {email}")
 
     # Fetch distinct loan_id values for the given email from the loan_details table
-    distinct_loan_ids = app_tables.fin_loan_details.search(customer_id=user_id)
+    distinct_loan_ids = app_tables.fin_loan_details.search()
 
     # Fetch lender data from user_profile table
     lender_row = app_tables.fin_user_profile.get(email_user=email)
