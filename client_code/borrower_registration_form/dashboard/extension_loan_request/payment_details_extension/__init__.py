@@ -236,7 +236,7 @@ class payment_details_extension(payment_details_extensionTemplate):
     
                 if loan_disbursed_timestamp and loan_details_row:
                     emi_payment_type = loan_details_row['emi_payment_type']
-                    print("emi_payment_type', emi_payment_type)
+                    print("emi_payment_type", emi_payment_type)
     
                     if emi_payment_type == 'Monthly':
                         payment_date = loan_disbursed_timestamp + timedelta(days=int(emi_payment * 30.44) * current_month)
