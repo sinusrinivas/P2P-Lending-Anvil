@@ -155,6 +155,7 @@ unique_ids:
     borrower_registration_form.dashboard.application_tracker.view_profile: '1701144654092613273531448.6368'
     lendor_registration_form.dashboard.view_borrower_loan_request.Borr_loan_request: '1700542763128106365112272.9714'
     admin.dashboard.manage_products.view_product: '1700713112442254456792559.71744'
+    borrower_registration_form.dashboard.today_dues.payment_details_t: '1707196716516415361380278.654'
     lendor_registration_form.dashboard.view_lost_oppurtunities.RowTemplate34: '1704968592298956121945816.4596'
     admin.dashboard.loan_management.closed_loans: '1699528886441906086843573.9337'
     lendor_registration_form.dashboard.today_dues: '1699961512859170838739966.79565'
@@ -237,6 +238,7 @@ unique_ids:
     admin.dashboard.manage_products.add_group: '1703758557054939760657519.5975'
     ? borrower_registration_form.star_1_borrower_registration_form_1_education.star_1_borrower_registration_form_education_10th_class
     : '1706674255415664927025189.0149'
+    borrower_registration_form.dashboard.today_dues.payment_details_t.RowTemplate18: '1707196839130599444440347.0878'
     borrower_registration_form.dashboard.application_tracker.RowTemplate26: '1704699099052678345492761.1499'
     lendor_registration_form.dashboard.lender_view_loans.RowTemplate22: '1703141013007184309847389.77017'
     lendor_registration_form.lender_registration_form_2.lender_registration_Institutional_form_4: '1699430255086443143380907.82135'
