@@ -488,7 +488,7 @@ db_schema:
       admin_ui: {width: 200, order: 16}
       type: string
     - name: last_confirm
-      admin_ui: {order: 21, width: 200}
+      admin_ui: {order: 22, width: 200}
       type: bool
     - name: mobile_check
       admin_ui: {width: 200, order: 19}
@@ -509,7 +509,7 @@ db_schema:
       admin_ui: {order: 40, width: 200}
       type: string
     - name: usertype
-      admin_ui: {order: 15, width: 200}
+      admin_ui: {order: 3.5, width: 200}
       type: string
     - name: aadhaar_no
       admin_ui: {order: 14, width: 200}
@@ -716,7 +716,6 @@ db_schema:
       admin_ui: {width: 200, order: 100}
       type: media
     title: fin_user_profile
-  fin_wallet_notification: {}
   fin_wallet_transactions:
     title: fin_wallet_transactions
     client: full
