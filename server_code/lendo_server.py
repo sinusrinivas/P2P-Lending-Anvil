@@ -310,7 +310,7 @@ def get_user_data(user_id):
             'account_name': user['account_name'],
             'account_type': user['account_type'],
             'account_number': user['account_number'],
-            'select_bank': user['select_bank'],
+            'bank_name': user['bank_name'],
             'bank_id': user['bank_id'],
             # 'salary_type': user['salary_type'],
             'branch_name': user['branch_name'],
