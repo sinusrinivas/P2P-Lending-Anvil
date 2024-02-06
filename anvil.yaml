@@ -14,7 +14,7 @@ services:
 - source: /runtime/services/anvil/email.yml
   client_config: {}
   server_config: {}
-startup: {type: form, module: admin.dashboard}
+startup: {type: form, module: bank_users.main_form}
 package_name: bank_client
 allow_embedding: false
 name: P2P Lending App
@@ -488,7 +488,7 @@ db_schema:
       admin_ui: {width: 200, order: 16}
       type: string
     - name: last_confirm
-      admin_ui: {order: 21, width: 200}
+      admin_ui: {order: 22, width: 200}
       type: bool
     - name: mobile_check
       admin_ui: {width: 200, order: 19}
@@ -509,7 +509,7 @@ db_schema:
       admin_ui: {order: 40, width: 200}
       type: string
     - name: usertype
-      admin_ui: {order: 15, width: 200}
+      admin_ui: {order: 3.5, width: 200}
       type: string
     - name: aadhaar_no
       admin_ui: {order: 14, width: 200}
