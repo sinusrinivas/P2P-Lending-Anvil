@@ -330,67 +330,6 @@ components:
           event_bindings: {click: button_1_click}
         - type: Label
           properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-            visible: true, text: 'First EMI Payment
-
-              (after dispersment in months)', font_size: null, font: '', spacing_above: small,
-            icon_align: left, spacing_below: small, italic: false, background: '',
-            bold: false, underline: false, icon: ''}
-          name: label_9
-          layout_properties: {x: 5.069450378417969, y: 870.388916015625, width: 190}
-        - type: TextBox
-          properties: {role: outlined, align: left, hide_text: false, tooltip: '',
-            placeholder: Enter first emi payment, border: '', enabled: true, foreground: '',
-            visible: true, text: '', font_size: null, font: '', spacing_above: small,
-            type: text, spacing_below: small, italic: false, background: '', bold: false,
-            underline: false}
-          name: first_emi_payment
-          layout_properties: {x: 205.06945037841797, y: 875.5555419921875, width: 230.13899999999998}
-        - type: DropDown
-          properties:
-            role: outlined
-            align: full
-            tooltip: ''
-            placeholder: Select foreclosure
-            border: ''
-            enabled: true
-            foreground: ''
-            items: [Eligible, Not Eligible]
-            visible: true
-            font_size: null
-            font: ''
-            spacing_above: small
-            spacing_below: small
-            italic: false
-            background: white
-            bold: false
-            underline: false
-            include_placeholder: true
-          name: foreclose_type
-          layout_properties: {x: 205.06945037841797, y: 934.9583740234375, width: 230.139}
-        - type: TextBox
-          properties: {role: outlined, align: left, hide_text: false, tooltip: '',
-            placeholder: Enter foreclosure fee, border: '', enabled: true, foreground: '',
-            visible: true, text: '', font_size: null, font: '', spacing_above: small,
-            type: text, spacing_below: small, italic: false, background: '', bold: false,
-            underline: false}
-          name: foreclosure_fee
-          layout_properties: {x: 205.06945037841797, y: 985.9583740234375, width: 230.139}
-        - type: Label
-          properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-            visible: true, text: ' Foreclosure_fee(%)', font_size: null, font: '',
-            spacing_above: small, icon_align: left, spacing_below: small, italic: false,
-            background: '', bold: false, underline: false, icon: ''}
-          name: label_6
-          layout_properties: {x: 5.082999999999998, y: 991.736083984375, width: 160}
-        - type: Label
-          properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-            visible: true, text: ' Foreclosure Type', font_size: null, font: '', spacing_above: small,
-            icon_align: left, spacing_below: small, italic: false, background: '',
-            bold: false, underline: false, icon: ''}
-          name: label_6_copy_2
-          layout_properties: {x: 5.151999999999987, y: 936.388916015625, width: 159.931}
-        - type: Label
-          properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
             visible: true, text: ' Discount  Coupons', font_size: null, font: '',
             spacing_above: small, icon_align: left, spacing_below: small, italic: false,
             background: '', bold: false, underline: false, icon: ''}
@@ -515,6 +454,50 @@ components:
             italic: false, background: '', bold: false, checked: false, underline: false}
           name: check_box_3
           layout_properties: {x: 425, y: 818, width: 132}
+        - type: Label
+          properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+            visible: true, text: ' Foreclosure Type', font_size: null, font: '', spacing_above: small,
+            icon_align: left, spacing_below: small, italic: false, background: '',
+            bold: false, underline: false, icon: ''}
+          name: label_6_copy_2
+          layout_properties: {x: 3.1944427490234375, y: 881.3888549804688, width: 159.931}
+        - type: DropDown
+          properties:
+            role: outlined
+            align: full
+            tooltip: ''
+            placeholder: Select foreclosure
+            border: ''
+            enabled: true
+            foreground: ''
+            items: [Eligible, Not Eligible]
+            visible: true
+            font_size: null
+            font: ''
+            spacing_above: small
+            spacing_below: small
+            italic: false
+            background: white
+            bold: false
+            underline: false
+            include_placeholder: true
+          name: foreclose_type
+          layout_properties: {x: 169.9163282470703, y: 876.3750610351562, width: 230.139}
+        - type: Label
+          properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+            visible: true, text: ' Foreclosure_fee(%)', font_size: null, font: '',
+            spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+            background: '', bold: false, underline: false, icon: ''}
+          name: label_6
+          layout_properties: {x: 3.111557250976574, y: 939.9583129882812, width: 160}
+        - type: TextBox
+          properties: {role: outlined, align: left, hide_text: false, tooltip: '',
+            placeholder: Enter foreclosure fee, border: '', enabled: true, foreground: '',
+            visible: true, text: '', font_size: null, font: '', spacing_above: small,
+            type: text, spacing_below: small, italic: false, background: '', bold: false,
+            underline: false}
+          name: foreclosure_fee
+          layout_properties: {x: 170, y: 934.1805129882812, width: 230.139}
 - type: FlowPanel
   properties: {}
   name: navbar_links
