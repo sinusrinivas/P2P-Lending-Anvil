@@ -65,14 +65,14 @@ class today_dues(today_duesTemplate):
         # fetch the loan details based on the first_payment_due_date
         if not loan_details:
           all_loans_due = app_tables.fin_loan_details.search(
-              first_payment_due_date=q.greater_than_or_equal_to(today_date)
+              first_emi_payment_due_date=q.greater_than_or_equal_to(today_date)
           )
       
           for loan_due in all_loans_due:
               loan_id = loan_due['loan_id']
               loan_amount = loan_due['loan_amount']
-              first_payment_due_date = loan_due['first_payment_due_date']
-              days_left = (first_payment_due_date - today_date).days
+              first_emi_payment_due_date = loan_due['first_emi_payment_due_date']
+              days_left = (first_emi_payment_due_date - today_date).days
               # Fetch account number from user profile table based on customer_id
               user_profile = app_tables.fin_user_profile.get(customer_id=self.user_id)
               if user_profile is not None:
@@ -93,24 +93,24 @@ class today_dues(today_duesTemplate):
               # Calculate next_payment based on first_payment_due_date
               if emi_payment_type == 'One Time':
             # For one-time payment, set next_payment to a year after first_payment_due_date
-                  next_payment = first_payment_due_date + timedelta(days=365)
+                  next_payment = first_emi_payment_due_date + timedelta(days=365)
               elif emi_payment_type == 'Monthly':
                   # For monthly payment, set next_payment to a month after first_payment_due_date
-                  next_payment = first_payment_due_date + timedelta(days=30)
+                  next_payment = first_emi_payment_due_date + timedelta(days=30)
               elif emi_payment_type == 'Three Month':
                   # For three-month payment, set next_payment to three months after first_payment_due_date
-                  next_payment = first_payment_due_date + timedelta(days=90)
+                  next_payment = first_emi_payment_due_date + timedelta(days=90)
               elif emi_payment_type == 'Six Month':
                   # For six-month payment, set next_payment to six months after first_payment_due_date
-                  next_payment = first_payment_due_date + timedelta(days=180)
+                  next_payment = first_emi_payment_due_date + timedelta(days=180)
               else:
                   # Default to monthly calculation if emi_payment_type is not recognized
-                  next_payment = first_payment_due_date + timedelta(days=30)
+                  next_payment = first_emi_payment_due_date + timedelta(days=30)
               
               loan_details.append({
                   'loan_id': loan_id,
                   'loan_amount': loan_amount,
-                  'scheduled_payment': first_payment_due_date,  # Set scheduled_payment to first_payment_due_date
+                  'scheduled_payment': first_emi_payment_due_date,  # Set scheduled_payment to first_payment_due_date
                   'next_payment': next_payment,
                   'days_left': days_left,
                   'tenure': tenure,
