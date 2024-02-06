@@ -20,3 +20,4 @@ class RowTemplate14(RowTemplate14Template):
     value_to_pass = self.label_1.text
     open_form('admin.dashboard.loan_management.closed_loans.view_profile_5', value_to_pass)
 
+

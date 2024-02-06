@@ -1,24 +1,29 @@
-container: {type: DataRowPanel}
+container:
+  type: ColumnPanel
+  properties: {col_widths: '{"PHZJTM":12,"YCUIVI":12,"PUTIHG":12,"QNDHRS":12,"ZXMIQM":12}'}
 components:
 - type: Label
   properties: {}
-  name: label_2
-  layout_properties: {column: WMIWXU}
+  name: label_1
+  layout_properties: {grid_position: 'PNONTE,PHZJTM'}
   data_bindings:
-  - {property: text, code: 'self.item[''coustmer_id'']'}
+  - {property: text, code: 'self.item[''loan_id'']'}
+- type: Label
+  properties: {}
+  name: label_2
+  layout_properties: {grid_position: 'PNONTE,YCUIVI'}
+  data_bindings:
+  - {property: text, code: 'self.item[''customer'']', writeback: false}
 - type: Label
   properties: {}
   name: label_3
-  layout_properties: {column: PVBYZX}
+  layout_properties: {grid_position: 'PNONTE,PUTIHG'}
   data_bindings:
   - {property: text, code: 'self.item[''full_name'']'}
 - type: Label
-  properties: {role: null, align: left, tooltip: '', border: '', foreground: green,
-    visible: true, text: '', font_size: null, font: '', spacing_above: small, icon_align: left,
-    spacing_below: small, italic: false, background: '', bold: false, underline: false,
-    icon: ''}
+  properties: {}
   name: label_4
-  layout_properties: {column: HCAQYD}
+  layout_properties: {grid_position: 'PNONTE,QNDHRS'}
   data_bindings:
   - {property: text, code: 'self.item[''loan_status'']'}
 - type: Link
@@ -27,12 +32,6 @@ components:
     col_spacing: medium, spacing_above: small, icon_align: left, col_widths: '', spacing_below: small,
     italic: false, background: '', bold: false, underline: false, icon: ''}
   name: link_1
-  layout_properties: {column: DBUUUO}
+  layout_properties: {grid_position: 'PNONTE,ZXMIQM'}
   event_bindings: {click: link_1_click}
-- type: Label
-  properties: {}
-  name: label_1
-  layout_properties: {column: EPCWQG}
-  data_bindings:
-  - {property: text, code: 'self.item[''loan_id'']'}
 is_package: true
