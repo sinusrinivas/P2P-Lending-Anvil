@@ -115,7 +115,7 @@ db_schema:
       admin_ui: {width: 200}
       type: string
     - name: organization_type
-      admin_ui: {order: 3, width: 230}
+      admin_ui: {order: 9, width: 234}
       type: string
     - name: employment_type
       admin_ui: {width: 200}
@@ -229,14 +229,6 @@ db_schema:
       admin_ui: {width: 200, order: 26}
       type: number
     title: fin_product_details
-  fin_lendor_gender:
-    client: full
-    server: full
-    columns:
-    - name: lendor_gender
-      admin_ui: {width: 200, order: 0}
-      type: string
-    title: fin_lendor_gender
   fin_borrower_organization_type:
     client: full
     server: full
@@ -509,7 +501,7 @@ db_schema:
       admin_ui: {order: 40, width: 200}
       type: string
     - name: usertype
-      admin_ui: {order: 3.5, width: 200}
+      admin_ui: {order: 22.5, width: 200}
       type: string
     - name: aadhaar_no
       admin_ui: {order: 14, width: 200}
@@ -984,13 +976,16 @@ db_schema:
     - name: guarantor_annual_earning
       admin_ui: {width: 200, order: 6}
       type: string
+    - name: customer_id
+      admin_ui: {order: -1, width: 200}
+      type: number
     title: fin_guarantor_details
   fin_loan_details:
     client: full
     server: full
     columns:
     - name: borrower_email_id
-      admin_ui: {order: -0.25, width: 200}
+      admin_ui: {order: 2.5, width: 200}
       type: string
     - name: borrower_full_name
       admin_ui: {order: -0.75, width: 200}
@@ -1017,7 +1012,7 @@ db_schema:
       admin_ui: {order: 0.625, width: 200}
       type: string
     - name: lender_full_name
-      admin_ui: {order: 4.5, width: 200}
+      admin_ui: {order: 5.375, width: 200}
       type: string
     - name: member_since
       admin_ui: {order: 16, width: 200}
@@ -1029,7 +1024,7 @@ db_schema:
       admin_ui: {order: 20, width: 277}
       type: number
     - name: lender_email_id
-      admin_ui: {order: 5.5, width: 200}
+      admin_ui: {order: 5.4375, width: 200}
       type: string
     - name: days_left
       admin_ui: {width: 200, order: 21}
@@ -1041,7 +1036,7 @@ db_schema:
       admin_ui: {order: 23, width: 200}
       type: date
     - name: lender_customer_id
-      admin_ui: {order: -0.125, width: 200}
+      admin_ui: {order: 5.25, width: 200}
       type: number
     - name: beseem_score
       admin_ui: {order: 6.5, width: 200}
@@ -1089,7 +1084,7 @@ db_schema:
       admin_ui: {order: 18.875, width: 280}
       type: date
     - name: emi_payment_type
-      admin_ui: {width: 200}
+      admin_ui: {order: 5.5, width: 200}
       type: string
     title: fin_loan_details
   fin_user_issues_bugreports:
