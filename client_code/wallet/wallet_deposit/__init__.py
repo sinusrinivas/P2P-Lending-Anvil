@@ -158,17 +158,22 @@ class wallet_deposit(wallet_depositTemplate):
         # Update the balance label with the new balance value
         wallet_row = app_tables.fin_wallet.get(user_email=email)
         if wallet_row:
-            self.balance_lable.text = f"{wallet_row['wallet_amount']}"
+            # Get loan_id from the user's loan details
+            loan_row = app_tables.fin_loan_details.search(loan_id=wallet_row['loan_id']).first()
 
-            # Deduct loan amount if applicable
-            loan_row = app_tables.fin_loan_details.get(lender_email_id=email)
-            if loan_row and loan_row['loan_amount'] > 0:
-                remaining_loan = max(0, loan_row['loan_amount'] - deposit_amount)
-                loan_row['loan_amount'] = remaining_loan
-                loan_row.save()
+            if loan_row:
+                # Get the loan_amount and subtract it from the wallet_amount
+                loan_amount = loan_row['loan_amount']
+                new_balance = wallet_row['wallet_amount'] - loan_amount
 
-                alert(f"Loan amount deducted: {deposit_amount}")
+                # Update the wallet_amount in fin_wallet
+                wallet_row['wallet_amount'] = new_balance
+                wallet_row.save()
 
+                # Update the balance label with the new balance value
+                self.balance_label.text = f"{new_balance}"
+            else:
+                alert("Loan details not found.")
     else:
         alert("Deposit failed!")
 
