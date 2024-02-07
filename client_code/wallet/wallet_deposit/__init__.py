@@ -135,7 +135,7 @@ class wallet_deposit(wallet_depositTemplate):
   #   else:
   #       alert("Deposit failed!")
 
-  def deposit_money_btn_1_click(self, **event_args):
+  def deposit_money_btn_click(self, **event_args):
     amount_entered = self.amount_text_box.text
 
     # Check if amount_entered is not empty and is a valid number
@@ -159,19 +159,23 @@ class wallet_deposit(wallet_depositTemplate):
         wallet_row = app_tables.fin_wallet.get(user_email=email)
         if wallet_row:
             # Get loan_id from the user's loan details
-            loan_row = app_tables.fin_loan_details.search(loan_id=wallet_row['loan_id']).first()
+            loan_rows = app_tables.fin_loan_details.search(loan_id=wallet_row['loan_id'])
 
-            if loan_row:
+            if loan_rows:
+                # Assuming there is only one loan with the given loan_id
+                loan_row = loan_rows[0]
+
                 # Get the loan_amount and subtract it from the wallet_amount
                 loan_amount = loan_row['loan_amount']
                 new_balance = wallet_row['wallet_amount'] - loan_amount
 
                 # Update the wallet_amount in fin_wallet
                 wallet_row['wallet_amount'] = new_balance
-                wallet_row.save()
+                wallet_row.update()   
 
                 # Update the balance label with the new balance value
-                self.balance_label.text = f"{new_balance}"
+                self.balance_lable.text = f"{new_balance}"
+                open_form('lendor_registration_form.dashboard')
             else:
                 alert("Loan details not found.")
     else:
