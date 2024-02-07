@@ -17,6 +17,7 @@ from datetime import timedelta
 class wallet_deposit(wallet_depositTemplate):
   def __init__(self, **properties):
     self.user_id = main_form_module.userId
+    self.selected_row = None
 
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
@@ -101,70 +102,100 @@ class wallet_deposit(wallet_depositTemplate):
 
   
   def deposit_money_btn_click(self, **event_args):
-    amount_entered = self.amount_text_box.text
+        amount_entered = self.amount_text_box.text
 
-    # Check if amount_entered is not empty and is a valid number
-    if not amount_entered or not str(amount_entered).isdigit():
-        alert("Please enter a valid amount.")
-        return
+        # Check if amount_entered is not empty and is a valid number
+        if not amount_entered or not str(amount_entered).isdigit():
+            alert("Please enter a valid amount.")
+            return
 
-    try:
-        deposit_amount = int(amount_entered)
-    except ValueError:
-        alert("Please enter a valid amount.")
-        return
+        try:
+            deposit_amount = int(amount_entered)
+        except ValueError:
+            alert("Please enter a valid amount.")
+            return
 
-    customer_id = 1000
-    email = self.email
+        customer_id = 1000
+        email = self.email
+        selected_row = self.selected_row
 
-    if anvil.server.call('deposit_money', email=email, deposit_amount=deposit_amount, customer_id=customer_id):
-        alert("Deposit successful!")
+        if anvil.server.call('deposit_money', email=email, deposit_amount=deposit_amount, customer_id=customer_id):
+            alert("Deposit successful!")
 
-        # Update the balance label with the new balance value
-        wallet_row = app_tables.fin_wallet.get(user_email=email)
-        if wallet_row:
-            # Get loan_id from the user's loan details
-            # loan_rows = app_tables.fin_loan_details.get(user_email=email)
-            loan_rows = app_tables.fin_loan_details.search(loan_id=wallet_row['loan_id'])
+            # Update the balance label with the new balance value
+            wallet_row = app_tables.fin_wallet.get(user_email=email)
+            if wallet_row:
+                # Get loan_id from the user's loan details
+                loan_rows = app_tables.fin_loan_details.get(lender_email_id=email)
+                # loan_rows = app_tables.fin_loan_details.search(loan_id=wallet_row['loan_id'])
 
-            if loan_rows:
-                # Assuming there is only one loan with the given loan_id
-                loan_row = loan_rows[0]
+                if loan_rows:
+                    # Assuming there is only one loan with the given loan_id
+                    loan_row = loan_rows[0]
 
-                # Get the loan_amount and subtract it from the wallet_amount
-                loan_amount = loan_row['loan_amount']
-                loan_updated_status = loan_row["loan_updated_status"]
-                loan_disbursed_timestamp = loan_row["loan_disbursed_timestamp"]
-                new_balance = wallet_row['wallet_amount'] - loan_amount
+                    # Get the loan_amount and subtract it from the wallet_amount
+                    loan_amount = loan_row['loan_amount']
+                    loan_updated_status = loan_row["loan_updated_status"]
+                    loan_disbursed_timestamp = loan_row["loan_disbursed_timestamp"]
+                    # emi_payment_type = loan_row["emi_payment_type"]
+                    new_balance = wallet_row['wallet_amount'] - loan_amount
 
-                # Update the wallet_amount in fin_wallet
-                wallet_row['wallet_amount'] = new_balance
-                wallet_row.update()
+                    # Update the wallet_amount in fin_wallet
+                    wallet_row['wallet_amount'] = new_balance
+                    wallet_row.update()
 
-                # Update the balance label with the new balance value
-                self.balance_lable.text = f"{new_balance}"
+                    # Update the balance label with the new balance value
+                    self.balance_lable.text = f"{new_balance}"
 
-                if loan_disbursed_timestamp is not None:
-                    # Update the loan_disbursed_timestamp with the current datetime
-                    loan_row['loan_disbursed_timestamp'] = datetime.now()
+                    if loan_disbursed_timestamp is not None:
+                        # Update the loan_disbursed_timestamp with the current datetime
+                        loan_row['loan_disbursed_timestamp'] = datetime.now()
+                    else:
+                        # Set the loan_disbursed_timestamp for the first time if it is None
+                        loan_row['loan_disbursed_timestamp'] = datetime.now()
+
+                    # Calculate and set the first EMI payment due date (only date portion)
+                    emi_payment_type = loan_row['emi_payment_type']
+                    loan_disbursed_timestamp = loan_row['loan_disbursed_timestamp']
+                    tenure = loan_row['tenure']
+                    first_emi_due_date = self.calculate_first_emi_due_date(emi_payment_type, loan_disbursed_timestamp, tenure)
+
+                    loan_row['first_emi_payment_due_date'] = first_emi_due_date
+
+                    # You may want to update the loan_updated_status here if needed
+                    updated_loan_status = 'disbursed loan'
+                    loan_row['loan_updated_status'] = updated_loan_status
+
+                    # Save the changes to the loan_row
+                    loan_row.update()
+
+                    alert("Loan Amount Paid to Borrower")
+                    open_form('lendor_registration_form.dashboard')
                 else:
-                    # Set the loan_disbursed_timestamp for the first time if it is None
-                    loan_row['loan_disbursed_timestamp'] = datetime.now()
+                    alert("Loan details not found.")
+        else:
+            alert("Deposit failed!")
 
-                # You may want to update the loan_updated_status here if needed
-                updated_loan_status = 'disbursed loan'
-                loan_row['loan_updated_status'] = updated_loan_status
-
-                # Save the changes to the loan_row
-                loan_row.update()
-
-                alert("Loan Amount Paid to Borrower")
-                open_form('lendor_registration_form.dashboard')
+  def calculate_first_emi_due_date(self, emi_payment_type, loan_disbursed_timestamp, tenure):
+        if emi_payment_type == "Monthly":
+            first_emi_due_date = (loan_disbursed_timestamp + timedelta(days=30)).date()
+        elif emi_payment_type == "Three Month":
+            first_emi_due_date = (loan_disbursed_timestamp + timedelta(days=90)).date()
+        elif emi_payment_type == "Six Month":
+            first_emi_due_date = (loan_disbursed_timestamp + timedelta(days=180)).date()
+        elif emi_payment_type == "One Time":
+            if tenure:
+                # Add the tenure in months to the loan_disbursed_timestamp
+                first_emi_due_date = (loan_disbursed_timestamp + timedelta(days=30 * tenure)).date()
             else:
-                alert("Loan details not found.")
-    else:
-        alert("Deposit failed!")
+                # Handle the case where tenure is not provided (raise an exception or set to None)
+                first_emi_due_date = None
+        else:
+            # Handle other cases or raise an exception as needed
+            first_emi_due_date = None
 
+        return first_emi_due_date
+    
   def withdraw_money_btn_click(self, **event_args):
     amount_entered = self.amount_text_box.text
 
