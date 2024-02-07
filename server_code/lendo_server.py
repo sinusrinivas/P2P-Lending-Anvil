@@ -496,7 +496,7 @@ def loan_disbursement_action(selected_row, email):
                   return "insufficient_balance"    
             else:
                 # Update loan status to 'under process'
-                selected_row['loan_updated_status'] = 'under process'
+                selected_row['loan_updated_status'] = 'accepted'
                 selected_row.update()
                 return "insufficient_balance"
         else:

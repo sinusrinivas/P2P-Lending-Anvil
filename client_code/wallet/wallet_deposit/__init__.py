@@ -12,6 +12,7 @@ from anvil import open_form, server
 # from ...lendor_registration_form.dashboard import lendor_main_form_module as main_form_module
 from ...borrower_registration_form.dashboard import main_form_module
 from datetime import datetime
+from datetime import timedelta
 
 class wallet_deposit(wallet_depositTemplate):
   def __init__(self, **properties):
@@ -98,43 +99,7 @@ class wallet_deposit(wallet_depositTemplate):
     """This method is called when the link is clicked"""
     pass
 
-  # def deposit_money_btn_1_click(self, **event_args):
-  #   amount_entered = self.amount_text_box.text
-
-  #   # Check if amount_entered is not empty and is a valid number
-  #   if not amount_entered or not str(amount_entered).isdigit():
-  #       alert("Please enter a valid amount.")
-  #       return
-
-  #   try:
-  #       deposit_amount = int(amount_entered)
-  #   except ValueError:
-  #       alert("Please enter a valid amount.")
-  #       return
-
-  #   customer_id = 1000
-  #   email = self.email
-
-  #   if anvil.server.call('deposit_money', email=email, deposit_amount=deposit_amount, customer_id=customer_id):
-  #       alert("Deposit successful!")
-
-  #       # Update the balance label with the new balance value
-  #       wallet_row = app_tables.fin_wallet.get(user_email=email)
-  #       if wallet_row:
-  #           self.balance_lable.text = f"{wallet_row['wallet_amount']}"
-
-  #           # Deduct loan amount if applicable
-  #           loan_row = app_tables.fin_loan_details.get(user_email=email)
-  #           if loan_row and loan_row['loan_amount'] > 0:
-  #               remaining_loan = max(0, loan_row['loan_amount'] - deposit_amount)
-  #               loan_row['loan_amount'] = remaining_loan
-  #               loan_row.save()
-
-  #               alert(f"Loan amount deducted: {deposit_amount}")
-
-  #   else:
-  #       alert("Deposit failed!")
-
+  
   def deposit_money_btn_click(self, **event_args):
     amount_entered = self.amount_text_box.text
 
@@ -159,6 +124,7 @@ class wallet_deposit(wallet_depositTemplate):
         wallet_row = app_tables.fin_wallet.get(user_email=email)
         if wallet_row:
             # Get loan_id from the user's loan details
+            # loan_rows = app_tables.fin_loan_details.get(user_email=email)
             loan_rows = app_tables.fin_loan_details.search(loan_id=wallet_row['loan_id'])
 
             if loan_rows:
@@ -167,14 +133,26 @@ class wallet_deposit(wallet_depositTemplate):
 
                 # Get the loan_amount and subtract it from the wallet_amount
                 loan_amount = loan_row['loan_amount']
+                loan_updated_status = loan_row["loan_updated_status"]
+                loan_disbursed_timestamp = loan_row["loan_disbursed_timestamp"]
                 new_balance = wallet_row['wallet_amount'] - loan_amount
 
                 # Update the wallet_amount in fin_wallet
                 wallet_row['wallet_amount'] = new_balance
-                wallet_row.update()   
+                wallet_row.update()
 
                 # Update the balance label with the new balance value
                 self.balance_lable.text = f"{new_balance}"
+
+                if loan_disbursed_timestamp is not None:
+                    # Update the loan_disbursed_timestamp with the current datetime
+                    loan_row['loan_disbursed_timestamp'] = datetime.now()
+                    loan_row.update()
+
+                # You may want to update the loan_updated_status here if needed
+                loan_updated_status['loan_updated_status'] = 'disbursed loan'
+
+                alert("Loan Amount Paid to Borrower")
                 open_form('lendor_registration_form.dashboard')
             else:
                 alert("Loan details not found.")
