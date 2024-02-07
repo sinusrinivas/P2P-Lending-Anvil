@@ -39,3 +39,5 @@ class view_profile_7(view_profile_7Template):
             self.loan_data['loan_updated_status'] = 'OTS'
             self.loan_data.update()
             alert('Request Submited')
+            self.button_2.visible = False
+          
