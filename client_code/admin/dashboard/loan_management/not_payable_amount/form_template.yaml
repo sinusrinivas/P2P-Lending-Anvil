@@ -34,13 +34,13 @@ components:
       role: null
       columns:
       - {id: EPCWQG, title: Loan ID, data_key: column_1, $$hashKey: 'object:53723',
-        expand: false, width: 120}
+        expand: false, width: 123}
       - {id: WMIWXU, title: Customer ID, data_key: column_2, $$hashKey: 'object:53724',
-        width: 187, expand: false}
+        width: 174, expand: false}
       - {id: PVBYZX, title: Full Name, data_key: column_3, $$hashKey: 'object:53725',
-        width: 147, expand: false}
+        width: 186, expand: false}
       - {id: HCAQYD, title: Loan Status, data_key: column_4, $$hashKey: 'object:53773',
-        width: 169, expand: false}
+        width: 130, expand: false}
       - {id: KQYBVK, title: '', data_key: view profile, $$hashKey: 'object:221467',
         width: '110', expand: false}
       auto_header: true
