@@ -176,44 +176,42 @@ class payment_details_extension(payment_details_extensionTemplate):
         last_paid_emi_ending_balance = selected_row['loan_amount']
 
         for month in range(1, total_tenure + 1):
+            emi = 0  # Assign a default value
             payment_date = self.calculate_payment_date(selected_row, month)
             loan_id = selected_row['loan_id']
             emi_number = month
             emi_row = app_tables.fin_emi_table.get(loan_id=loan_id, emi_number=emi_number)
-
+        
             if emi_row is not None:
                 scheduled_payment_made = emi_row['scheduled_payment_made']
                 account_number = emi_row['account_number']
             else:
                 scheduled_payment_made = None
                 account_number = None
-
+        
             formatted_payment_date = f"{payment_date:%Y-%m-%d}" if payment_date else "Awaiting Update"
-
-            if month <= last_paid_emi_number:  # Paid months: Calculate scheduled payment based on the selected row's tenure
+        
+            if month <= last_paid_emi_number:
                 emi = self.calculate_scheduled_payment(selected_row['loan_amount'], monthly_interest_rate, selected_row['tenure'])
                 total_payment = emi
             else:
-                # Unpaid months: Calculate scheduled payment based on tenure plus extension months
                 if selected_row['emi_payment_type'] == 'Monthly':
-                    pass  # No adjustment needed for monthly payments
+                    pass
                 elif selected_row['emi_payment_type'] == 'One Time':
-                    # For one-time payments, keep the EMI unchanged since it's paid at once
                     pass
                 elif selected_row['emi_payment_type'] == 'Three Month':
-                    # For every three-month payment, divide total emi by 3 and only consider every 3rd month
                     if month % 3 != 1:
-                        emi = 0  # No payment for months other than the first of every 3 months
+                        emi = 0
                     else:
                         emi /= 3
                 elif selected_row['emi_payment_type'] == 'Six Month':
-                    # For every six-month payment, divide total emi by 6 and only consider every 6th month
                     if month % 6 != 1:
-                        emi = 0  # No payment for months other than the first of every 6 months
+                        emi = 0
                     else:
                         emi /= 6
                 emi = self.calculate_scheduled_payment(last_paid_emi_ending_balance, monthly_interest_rate, total_tenure - (month - 1))
                 total_payment = emi + extension_fee_amount if month == last_paid_emi_number + 1 else emi
+
             self.emi = emi
             interest_amount = last_paid_emi_ending_balance * monthly_interest_rate
             principal_amount = emi - interest_amount
