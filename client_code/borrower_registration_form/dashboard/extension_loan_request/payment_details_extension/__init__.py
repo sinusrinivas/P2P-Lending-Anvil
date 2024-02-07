@@ -282,6 +282,7 @@ class payment_details_extension(payment_details_extensionTemplate):
 
 
 
+
     def calculate_scheduled_payment(self, loan_amount, monthly_interest_rate, remaining_tenure):
         emi = (loan_amount * monthly_interest_rate * ((1 + monthly_interest_rate) ** remaining_tenure)) / (
                 ((1 + monthly_interest_rate) ** remaining_tenure) - 1)
