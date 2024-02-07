@@ -101,7 +101,7 @@ class wallet_deposit(wallet_depositTemplate):
     pass
 
   
-  def deposit_money_btn_click(self, **event_args):
+  def deposit_money_btn_click(self,loan_id, **event_args):
         amount_entered = self.amount_text_box.text
 
         # Check if amount_entered is not empty and is a valid number
@@ -125,16 +125,14 @@ class wallet_deposit(wallet_depositTemplate):
             # Update the balance label with the new balance value
             wallet_row = app_tables.fin_wallet.get(user_email=email)
             if wallet_row:
-                user_loan_id = "LA1000001"
+                # user_loan_id = "LA1000001"
                 # Get loan_id from the user's loan details
                 # loan_row = app_tables.fin_loan_details.get(lender_email_id=email)
                 # More than one row matched this query
                 # loan_row = app_tables.fin_loan_details.search(loan_id=wallet_row['loan_id'])
-                loan_row = app_tables.fin_loan_details.get(loan_id=user_loan_id)
+                loan_row = app_tables.fin_loan_details.get(loan_id=loan_id)
               
                 if loan_row:
-                    # Assuming there is only one loan with the given loan_id
-                    # loan_row = loan_rows[0]
 
                     # Get the loan_amount and subtract it from the wallet_amount
                     loan_amount = loan_row['loan_amount']
