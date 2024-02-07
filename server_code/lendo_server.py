@@ -310,7 +310,7 @@ def get_user_data(user_id):
             'account_name': user['account_name'],
             'account_type': user['account_type'],
             'account_number': user['account_number'],
-            'select_bank': user['select_bank'],
+            'bank_name': user['bank_name'],
             'bank_id': user['bank_id'],
             # 'salary_type': user['salary_type'],
             'branch_name': user['branch_name'],
@@ -328,7 +328,7 @@ def transfer_user_profile_to_loan_details(email,user_id):
     print(f"Fetching data for email: {email}")
 
     # Fetch distinct loan_id values for the given email from the loan_details table
-    distinct_loan_ids = app_tables.fin_loan_details.search(customer_id=user_id)
+    distinct_loan_ids = app_tables.fin_loan_details.search()
 
     # Fetch lender data from user_profile table
     lender_row = app_tables.fin_user_profile.get(email_user=email)
@@ -491,7 +491,7 @@ def loan_disbursement_action(selected_row, email):
                 else:
                   print("2 minutes have not passed yet")
                   # 2 minutes have not passed yet
-                  selected_row['loan_updated_status'] = 'under process'
+                  selected_row['loan_updated_status'] = 'accepted'
                   selected_row.update()
                   return "insufficient_balance"    
             else:

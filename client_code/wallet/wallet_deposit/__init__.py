@@ -98,33 +98,84 @@ class wallet_deposit(wallet_depositTemplate):
     """This method is called when the link is clicked"""
     pass
 
-  def deposit_money_btn_click(self, **event_args):
+  # def deposit_money_btn_1_click(self, **event_args):
+  #   amount_entered = self.amount_text_box.text
+
+  #   # Check if amount_entered is not empty and is a valid number
+  #   if not amount_entered or not str(amount_entered).isdigit():
+  #       alert("Please enter a valid amount.")
+  #       return
+
+  #   try:
+  #       deposit_amount = int(amount_entered)
+  #   except ValueError:
+  #       alert("Please enter a valid amount.")
+  #       return
+
+  #   customer_id = 1000
+  #   email = self.email
+
+  #   if anvil.server.call('deposit_money', email=email, deposit_amount=deposit_amount, customer_id=customer_id):
+  #       alert("Deposit successful!")
+
+  #       # Update the balance label with the new balance value
+  #       wallet_row = app_tables.fin_wallet.get(user_email=email)
+  #       if wallet_row:
+  #           self.balance_lable.text = f"{wallet_row['wallet_amount']}"
+
+  #           # Deduct loan amount if applicable
+  #           loan_row = app_tables.fin_loan_details.get(user_email=email)
+  #           if loan_row and loan_row['loan_amount'] > 0:
+  #               remaining_loan = max(0, loan_row['loan_amount'] - deposit_amount)
+  #               loan_row['loan_amount'] = remaining_loan
+  #               loan_row.save()
+
+  #               alert(f"Loan amount deducted: {deposit_amount}")
+
+  #   else:
+  #       alert("Deposit failed!")
+
+  def deposit_money_btn_1_click(self, **event_args):
     amount_entered = self.amount_text_box.text
 
     # Check if amount_entered is not empty and is a valid number
     if not amount_entered or not str(amount_entered).isdigit():
-      alert("Please enter a valid amount.")
-      return
+        alert("Please enter a valid amount.")
+        return
 
     try:
-      deposit_amount = int(amount_entered)
+        deposit_amount = int(amount_entered)
     except ValueError:
-      alert("Please enter a valid amount.")
-      return
+        alert("Please enter a valid amount.")
+        return
 
     customer_id = 1000
     email = self.email
 
     if anvil.server.call('deposit_money', email=email, deposit_amount=deposit_amount, customer_id=customer_id):
-      alert("Deposit successful!")
+        alert("Deposit successful!")
 
-      # Update the balance label with the new balance value
-      wallet_row = app_tables.fin_wallet.get(user_email=email)
-      if wallet_row:
-        self.balance_lable.text = f"{wallet_row['wallet_amount']}"
+        # Update the balance label with the new balance value
+        wallet_row = app_tables.fin_wallet.get(user_email=email)
+        if wallet_row:
+            # Get loan_id from the user's loan details
+            loan_row = app_tables.fin_loan_details.search(loan_id=wallet_row['loan_id']).first()
+
+            if loan_row:
+                # Get the loan_amount and subtract it from the wallet_amount
+                loan_amount = loan_row['loan_amount']
+                new_balance = wallet_row['wallet_amount'] - loan_amount
+
+                # Update the wallet_amount in fin_wallet
+                wallet_row['wallet_amount'] = new_balance
+                wallet_row.save()
+
+                # Update the balance label with the new balance value
+                self.balance_label.text = f"{new_balance}"
+            else:
+                alert("Loan details not found.")
     else:
-      alert("Deposit failed!")
-
+        alert("Deposit failed!")
 
   def withdraw_money_btn_click(self, **event_args):
     amount_entered = self.amount_text_box.text
@@ -156,3 +207,7 @@ class wallet_deposit(wallet_depositTemplate):
   def all_transaction_btn_click(self, **event_args):
     """This method is called when the button is clicked"""
     open_form("wallet.wallet.all_transaction")
+
+  def timer_1_tick(self, **event_args):
+    """This method is called Every [interval] seconds. Does not trigger if [interval] is 0."""
+    pass
