@@ -150,7 +150,9 @@ class wallet_deposit(wallet_depositTemplate):
                     loan_row.update()
 
                 # You may want to update the loan_updated_status here if needed
-                loan_updated_status['loan_updated_status'] = 'disbursed loan'
+                updated_loan_status = 'disbursed loan'
+                loan_row['loan_updated_status'] = updated_loan_status
+                loan_row.update()
 
                 alert("Loan Amount Paid to Borrower")
                 open_form('lendor_registration_form.dashboard')
