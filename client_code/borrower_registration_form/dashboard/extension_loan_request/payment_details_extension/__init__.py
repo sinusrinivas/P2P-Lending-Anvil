@@ -256,15 +256,19 @@ class payment_details_extension(payment_details_extensionTemplate):
                 if emi_payment_type == 'Monthly':
                     payment_date = loan_disbursed_timestamp + timedelta(days=30 * current_month)
                 elif emi_payment_type == 'Three Month':
-                    if current_month % 3 == 1:
-                        # Calculate payment date after three months
-                        payment_date = loan_disbursed_timestamp + timedelta(days=30 * (current_month // 3))
+                    if current_month == 1:
+                        payment_date = loan_disbursed_timestamp + timedelta(days=90)  # First payment after 3 months
+                    elif (current_month - 1) % 3 == 0:
+                        # Calculate payment date every three months
+                        payment_date = loan_disbursed_timestamp + timedelta(days=90 * ((current_month - 1) // 3))
                     else:
                         payment_date = None
                 elif emi_payment_type == 'Six Month':
-                    if current_month % 6 == 1:
-                        # Calculate payment date after six months
-                        payment_date = loan_disbursed_timestamp + timedelta(days=30 * (current_month // 6))
+                    if current_month == 1:
+                        payment_date = loan_disbursed_timestamp + timedelta(days=180)  # First payment after 6 months
+                    elif (current_month - 1) % 6 == 0:
+                        # Calculate payment date every six months
+                        payment_date = loan_disbursed_timestamp + timedelta(days=180 * ((current_month - 1) // 6))
                     else:
                         payment_date = None
                 else:
