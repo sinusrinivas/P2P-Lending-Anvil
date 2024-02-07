@@ -34,7 +34,7 @@ components:
       role: null
       columns:
       - {id: EPCWQG, title: Loan ID, data_key: column_1, $$hashKey: 'object:53723',
-        expand: false, width: 123}
+        expand: false, width: 149.79998779296875}
       - {id: WMIWXU, title: Customer ID, data_key: column_2, $$hashKey: 'object:53724',
         width: 174, expand: false}
       - {id: PVBYZX, title: Full Name, data_key: column_3, $$hashKey: 'object:53725',
