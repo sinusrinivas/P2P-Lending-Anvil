@@ -161,7 +161,7 @@ class wallet_deposit(wallet_depositTemplate):
             self.balance_lable.text = f"{wallet_row['wallet_amount']}"
 
             # Deduct loan amount if applicable
-            loan_row = app_tables.fin_loan_details.get(user_email=email)
+            loan_row = app_tables.fin_loan_details.get(lender_email_id=email)
             if loan_row and loan_row['loan_amount'] > 0:
                 remaining_loan = max(0, loan_row['loan_amount'] - deposit_amount)
                 loan_row['loan_amount'] = remaining_loan

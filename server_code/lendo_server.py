@@ -491,7 +491,7 @@ def loan_disbursement_action(selected_row, email):
                 else:
                   print("2 minutes have not passed yet")
                   # 2 minutes have not passed yet
-                  selected_row['loan_updated_status'] = 'under process'
+                  selected_row['loan_updated_status'] = 'accepted'
                   selected_row.update()
                   return "insufficient_balance"    
             else:
