@@ -60,7 +60,6 @@ components:
     - type: RepeatingPanel
       properties: {item_template: admin.dashboard.loan_management.not_payable_amount.ItemTemplate25}
       name: repeating_panel_2
-      layout_properties: {grid_position: 'IGZUVM,UHYNJN'}
       data_bindings:
       - {property: items, code: 'self.item[''loan_id'']'}
 - type: Button
