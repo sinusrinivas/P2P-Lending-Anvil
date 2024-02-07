@@ -98,6 +98,43 @@ class wallet_deposit(wallet_depositTemplate):
     """This method is called when the link is clicked"""
     pass
 
+  # def deposit_money_btn_1_click(self, **event_args):
+  #   amount_entered = self.amount_text_box.text
+
+  #   # Check if amount_entered is not empty and is a valid number
+  #   if not amount_entered or not str(amount_entered).isdigit():
+  #       alert("Please enter a valid amount.")
+  #       return
+
+  #   try:
+  #       deposit_amount = int(amount_entered)
+  #   except ValueError:
+  #       alert("Please enter a valid amount.")
+  #       return
+
+  #   customer_id = 1000
+  #   email = self.email
+
+  #   if anvil.server.call('deposit_money', email=email, deposit_amount=deposit_amount, customer_id=customer_id):
+  #       alert("Deposit successful!")
+
+  #       # Update the balance label with the new balance value
+  #       wallet_row = app_tables.fin_wallet.get(user_email=email)
+  #       if wallet_row:
+  #           self.balance_lable.text = f"{wallet_row['wallet_amount']}"
+
+  #           # Deduct loan amount if applicable
+  #           loan_row = app_tables.fin_loan_details.get(user_email=email)
+  #           if loan_row and loan_row['loan_amount'] > 0:
+  #               remaining_loan = max(0, loan_row['loan_amount'] - deposit_amount)
+  #               loan_row['loan_amount'] = remaining_loan
+  #               loan_row.save()
+
+  #               alert(f"Loan amount deducted: {deposit_amount}")
+
+  #   else:
+  #       alert("Deposit failed!")
+
   def deposit_money_btn_1_click(self, **event_args):
     amount_entered = self.amount_text_box.text
 
@@ -134,7 +171,6 @@ class wallet_deposit(wallet_depositTemplate):
 
     else:
         alert("Deposit failed!")
-
 
   def withdraw_money_btn_click(self, **event_args):
     amount_entered = self.amount_text_box.text

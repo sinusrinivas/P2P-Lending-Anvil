@@ -985,7 +985,7 @@ db_schema:
     server: full
     columns:
     - name: borrower_email_id
-      admin_ui: {order: -0.25, width: 200}
+      admin_ui: {order: 2.5, width: 200}
       type: string
     - name: borrower_full_name
       admin_ui: {order: -0.75, width: 200}
@@ -1012,7 +1012,7 @@ db_schema:
       admin_ui: {order: 0.625, width: 200}
       type: string
     - name: lender_full_name
-      admin_ui: {order: 4.5, width: 200}
+      admin_ui: {order: 5.375, width: 200}
       type: string
     - name: member_since
       admin_ui: {order: 16, width: 200}
@@ -1024,7 +1024,7 @@ db_schema:
       admin_ui: {order: 20, width: 277}
       type: number
     - name: lender_email_id
-      admin_ui: {order: 5.5, width: 200}
+      admin_ui: {order: 5.4375, width: 200}
       type: string
     - name: days_left
       admin_ui: {width: 200, order: 21}
@@ -1036,7 +1036,7 @@ db_schema:
       admin_ui: {order: 23, width: 200}
       type: date
     - name: lender_customer_id
-      admin_ui: {order: -0.125, width: 200}
+      admin_ui: {order: 5.25, width: 200}
       type: number
     - name: beseem_score
       admin_ui: {order: 6.5, width: 200}
@@ -1084,7 +1084,7 @@ db_schema:
       admin_ui: {order: 18.875, width: 280}
       type: date
     - name: emi_payment_type
-      admin_ui: {width: 200}
+      admin_ui: {order: 5.5, width: 200}
       type: string
     title: fin_loan_details
   fin_user_issues_bugreports:
