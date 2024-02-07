@@ -125,15 +125,15 @@ class wallet_deposit(wallet_depositTemplate):
             # Update the balance label with the new balance value
             wallet_row = app_tables.fin_wallet.get(user_email=email)
             if wallet_row:
-                user_loan_id = "your_user_provided_loan_id"
+                user_loan_id = "LA1000001"
                 # Get loan_id from the user's loan details
-                # loan_rows = app_tables.fin_loan_details.get(lender_email_id=email)
-                # loan_rows = app_tables.fin_loan_details.search(loan_id=wallet_row['loan_id'])
+                # loan_row = app_tables.fin_loan_details.get(lender_email_id=email)
+                # loan_row = app_tables.fin_loan_details.search(loan_id=wallet_row['loan_id'])
                 loan_row = app_tables.fin_loan_details.get(loan_id=user_loan_id)
               
-                if loan_rows:
+                if loan_row:
                     # Assuming there is only one loan with the given loan_id
-                    loan_row = loan_rows[0]
+                    # loan_row = loan_rows[0]
 
                     # Get the loan_amount and subtract it from the wallet_amount
                     loan_amount = loan_row['loan_amount']
