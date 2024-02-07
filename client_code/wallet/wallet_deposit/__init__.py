@@ -128,6 +128,7 @@ class wallet_deposit(wallet_depositTemplate):
                 user_loan_id = "LA1000001"
                 # Get loan_id from the user's loan details
                 # loan_row = app_tables.fin_loan_details.get(lender_email_id=email)
+                # More than one row matched this query
                 # loan_row = app_tables.fin_loan_details.search(loan_id=wallet_row['loan_id'])
                 loan_row = app_tables.fin_loan_details.get(loan_id=user_loan_id)
               
@@ -139,7 +140,6 @@ class wallet_deposit(wallet_depositTemplate):
                     loan_amount = loan_row['loan_amount']
                     loan_updated_status = loan_row["loan_updated_status"]
                     loan_disbursed_timestamp = loan_row["loan_disbursed_timestamp"]
-                    # emi_payment_type = loan_row["emi_payment_type"]
                     new_balance = wallet_row['wallet_amount'] - loan_amount
 
                     # Update the wallet_amount in fin_wallet
