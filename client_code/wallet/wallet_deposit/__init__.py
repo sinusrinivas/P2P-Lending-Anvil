@@ -147,11 +147,15 @@ class wallet_deposit(wallet_depositTemplate):
                 if loan_disbursed_timestamp is not None:
                     # Update the loan_disbursed_timestamp with the current datetime
                     loan_row['loan_disbursed_timestamp'] = datetime.now()
-                    loan_row.update()
+                else:
+                    # Set the loan_disbursed_timestamp for the first time if it is None
+                    loan_row['loan_disbursed_timestamp'] = datetime.now()
 
                 # You may want to update the loan_updated_status here if needed
                 updated_loan_status = 'disbursed loan'
                 loan_row['loan_updated_status'] = updated_loan_status
+
+                # Save the changes to the loan_row
                 loan_row.update()
 
                 alert("Loan Amount Paid to Borrower")
