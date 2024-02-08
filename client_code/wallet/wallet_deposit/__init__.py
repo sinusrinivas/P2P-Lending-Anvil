@@ -132,7 +132,6 @@ class wallet_deposit(wallet_depositTemplate):
                 loan_row = app_tables.fin_loan_details.get(loan_id=entered_loan_id)
               
                 if loan_row:
-
                     # Get the loan_amount and subtract it from the wallet_amount
                     loan_amount = loan_row['loan_amount']
                     alert(f"Loan amount: {loan_amount}")
@@ -162,7 +161,6 @@ class wallet_deposit(wallet_depositTemplate):
 
                     loan_row['first_emi_payment_due_date'] = first_emi_due_date
 
-
                     entered_borrower_customer_id = self.entered_borrower_customer_id
                     # Convert entered_borrower_customer_id to integer
                     try:
@@ -176,21 +174,23 @@ class wallet_deposit(wallet_depositTemplate):
                       loan_amount = loan_row['loan_amount']
                       wallet_add['wallet_amount'] += deposit_amount
                       wallet_add.update()
-                      return True
-                      
-                    # You may want to update the loan_updated_status here if needed
-                    updated_loan_status = 'disbursed loan'
-                    loan_row['loan_updated_status'] = updated_loan_status
-                    # Save the changes to the loan_row
-                    loan_row.update()
+
+                      # You may want to update the loan_updated_status here if needed
+                      updated_loan_status = 'disbursed loan'
+                      loan_row['loan_updated_status'] = updated_loan_status
+                      # Save the changes to the loan_row
+                      loan_row.update()
                   
-                    alert(f"Loan Amount Paid to Borrower\nWallet Amount Updated")
-                    open_form('lendor_registration_form.dashboard')
-                  
+                      alert(f"Loan Amount Paid to Borrower\nWallet Amount Updated")
+                      open_form('lendor_registration_form.dashboard')
+                      return
+                    else:
+                      alert("Wallet not found for the entered borrower customer ID.")     
                 else:
                     alert("Loan details not found.")
         else:
             alert("Deposit failed!")
+          
 
   def calculate_first_emi_due_date(self, emi_payment_type, loan_disbursed_timestamp, tenure):
         if emi_payment_type == "Monthly":
