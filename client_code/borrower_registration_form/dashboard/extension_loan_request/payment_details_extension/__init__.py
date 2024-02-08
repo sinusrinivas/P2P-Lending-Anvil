@@ -215,7 +215,7 @@ class payment_details_extension(payment_details_extensionTemplate):
                 elif selected_row['emi_payment_type'] == 'Six Month':
                     # Calculate only for the first month of the six-month period
                     if month % 6 == 1:
-                        emi = self.calculate_scheduled_payment(selected_row['loan_amount'], monthly_interest_rate, 6)
+                        emi = self.calculate_scheduled_payment(selected_row['loan_amount'], monthly_interest_rate, (total_tenure/6))
         
             # If the calculated emi is non-zero, calculate principal and other details
             if emi != 0:
