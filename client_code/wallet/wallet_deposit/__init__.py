@@ -15,9 +15,11 @@ from datetime import datetime
 from datetime import timedelta
 
 class wallet_deposit(wallet_depositTemplate):
-  def __init__(self, **properties):
+  def __init__(self,entered_loan_id, **properties):
+    self.entered_loan_id = entered_loan_id
     self.user_id = main_form_module.userId
     self.selected_row = None
+    
 
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
@@ -101,7 +103,7 @@ class wallet_deposit(wallet_depositTemplate):
     pass
 
   
-  def deposit_money_btn_click(self,loan_id, **event_args):
+  def deposit_money_btn_click(self, **event_args):
         amount_entered = self.amount_text_box.text
 
         # Check if amount_entered is not empty and is a valid number
@@ -118,24 +120,25 @@ class wallet_deposit(wallet_depositTemplate):
         customer_id = 1000
         email = self.email
         selected_row = self.selected_row
+        entered_loan_id = self.entered_loan_id
 
         if anvil.server.call('deposit_money', email=email, deposit_amount=deposit_amount, customer_id=customer_id):
             alert("Deposit successful!")
+            # open_form("lendor_registration_form.dashboard.view_borrower_loan_request.Borr_loan_request",entered_loan_id=entered_loan_id, selected_row=selected_row)
 
             # Update the balance label with the new balance value
             wallet_row = app_tables.fin_wallet.get(user_email=email)
             if wallet_row:
-                # user_loan_id = "LA1000001"
-                # Get loan_id from the user's loan details
                 # loan_row = app_tables.fin_loan_details.get(lender_email_id=email)
-                # More than one row matched this query
                 # loan_row = app_tables.fin_loan_details.search(loan_id=wallet_row['loan_id'])
-                loan_row = app_tables.fin_loan_details.get(loan_id=loan_id)
+                entered_loan_id = self.entered_loan_id
+                loan_row = app_tables.fin_loan_details.get(loan_id=entered_loan_id)
               
                 if loan_row:
 
                     # Get the loan_amount and subtract it from the wallet_amount
                     loan_amount = loan_row['loan_amount']
+                    alert(f"Loan amount: {loan_amount}")
                     loan_updated_status = loan_row["loan_updated_status"]
                     loan_disbursed_timestamp = loan_row["loan_disbursed_timestamp"]
                     new_balance = wallet_row['wallet_amount'] - loan_amount
@@ -169,8 +172,9 @@ class wallet_deposit(wallet_depositTemplate):
                     # Save the changes to the loan_row
                     loan_row.update()
 
-                    alert("Loan Amount Paid to Borrower")
+                    alert(f"Loan Amount Paid to Borrower\nAvailable balance is {new_balance}")
                     open_form('lendor_registration_form.dashboard')
+                  
                 else:
                     alert("Loan details not found.")
         else:
