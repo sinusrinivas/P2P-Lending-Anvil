@@ -120,11 +120,9 @@ class wallet_deposit(wallet_depositTemplate):
         customer_id = 1000
         email = self.email
         selected_row = self.selected_row
-        entered_loan_id = self.entered_loan_id
 
         if anvil.server.call('deposit_money', email=email, deposit_amount=deposit_amount, customer_id=customer_id):
             alert("Deposit successful!")
-            # open_form("lendor_registration_form.dashboard.view_borrower_loan_request.Borr_loan_request",entered_loan_id=entered_loan_id, selected_row=selected_row)
 
             # Update the balance label with the new balance value
             wallet_row = app_tables.fin_wallet.get(user_email=email)
