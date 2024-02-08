@@ -261,9 +261,9 @@ class payment_details_extension(payment_details_extensionTemplate):
                 if emi_payment_type == 'Monthly':
                     payment_date = loan_disbursed_timestamp + timedelta(days=30 * current_month)
                 elif emi_payment_type == 'Three Month':
-                    payment_date = loan_disbursed_timestamp + timedelta(days=30 * current_month)  # Payment every month
+                    payment_date = loan_disbursed_timestamp + timedelta(days=90 * current_month)  # Payment every month
                 elif emi_payment_type == 'Six Month':
-                    payment_date = loan_disbursed_timestamp + timedelta(days=30 * current_month)  # Payment every month
+                    payment_date = loan_disbursed_timestamp + timedelta(days=180 * current_month)  # Payment every month
                 else:
                     payment_date = None
     
