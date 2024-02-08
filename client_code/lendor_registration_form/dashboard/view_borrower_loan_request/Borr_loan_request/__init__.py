@@ -71,6 +71,8 @@ class Borr_loan_request(Borr_loan_requestTemplate):
            
         loan_id = self.label_loan_id.text
         self.entered_loan_id = loan_id
+        borrower_customer_id = self.label_user_id.text
+        self.entered_borrower_customer_id = borrower_customer_id
       
     def calculate_rom(self, interest_rate, min_amount_text):
         # Calculate ROM based on your business logic
@@ -195,7 +197,8 @@ class Borr_loan_request(Borr_loan_requestTemplate):
         selected_row = self.selected_row  
         email = main_form_module.email
         entered_loan_id = self.entered_loan_id
-
+        entered_borrower_customer_id = self.entered_borrower_customer_id
+      
         tenure = selected_row['tenure']
       
         # Call the server-side function
@@ -204,7 +207,7 @@ class Borr_loan_request(Borr_loan_requestTemplate):
         # Check the signal and perform actions accordingly
         if signal == "insufficient_balance":
             alert("Warning: Your account balance is insufficient. Please deposit amount into your wallet. If not done within the next 2 minutes, the opportunity may be lost")
-            open_form("wallet.wallet_deposit", entered_loan_id=entered_loan_id)
+            open_form("wallet.wallet_deposit", entered_loan_id=entered_loan_id,entered_borrower_customer_id=entered_borrower_customer_id)
         elif signal == "Time_out":
             alert("The designated time has passed. The loan has moved to the 'Lost Opportunities' status.")
             open_form("wallet.wallet") 
