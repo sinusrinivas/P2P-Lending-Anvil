@@ -27,11 +27,11 @@ components:
     role: null
     columns:
     - {id: EPCWQG, title: Loan ID, data_key: column_1, $$hashKey: 'object:53723',
-      width: 129, expand: false}
+      width: '145', expand: false}
     - {id: WMIWXU, title: Customer ID, data_key: column_2, $$hashKey: 'object:53724',
-      width: 152, expand: false}
+      width: '175', expand: false}
     - {id: PVBYZX, title: Full Name, data_key: column_3, $$hashKey: 'object:53725',
-      width: 188, expand: false}
+      width: '170', expand: false}
     - {id: HCAQYD, title: Loan Status, data_key: column_4, $$hashKey: 'object:53773',
       width: 159, expand: false}
     - {id: KQYBVK, title: '', data_key: view profile, $$hashKey: 'object:221467',
