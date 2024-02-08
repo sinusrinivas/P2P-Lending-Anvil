@@ -15,8 +15,9 @@ from datetime import datetime
 from datetime import timedelta
 
 class wallet_deposit(wallet_depositTemplate):
-  def __init__(self,entered_loan_id, **properties):
+  def __init__(self,entered_loan_id,entered_borrower_customer_id, **properties):
     self.entered_loan_id = entered_loan_id
+    self.entered_borrower_customer_id = entered_borrower_customer_id
     self.user_id = main_form_module.userId
     self.selected_row = None
     
@@ -120,22 +121,17 @@ class wallet_deposit(wallet_depositTemplate):
         customer_id = 1000
         email = self.email
         selected_row = self.selected_row
-        entered_loan_id = self.entered_loan_id
 
         if anvil.server.call('deposit_money', email=email, deposit_amount=deposit_amount, customer_id=customer_id):
             alert("Deposit successful!")
-            # open_form("lendor_registration_form.dashboard.view_borrower_loan_request.Borr_loan_request",entered_loan_id=entered_loan_id, selected_row=selected_row)
 
             # Update the balance label with the new balance value
             wallet_row = app_tables.fin_wallet.get(user_email=email)
             if wallet_row:
-                # loan_row = app_tables.fin_loan_details.get(lender_email_id=email)
-                # loan_row = app_tables.fin_loan_details.search(loan_id=wallet_row['loan_id'])
                 entered_loan_id = self.entered_loan_id
                 loan_row = app_tables.fin_loan_details.get(loan_id=entered_loan_id)
               
                 if loan_row:
-
                     # Get the loan_amount and subtract it from the wallet_amount
                     loan_amount = loan_row['loan_amount']
                     alert(f"Loan amount: {loan_amount}")
@@ -165,20 +161,36 @@ class wallet_deposit(wallet_depositTemplate):
 
                     loan_row['first_emi_payment_due_date'] = first_emi_due_date
 
-                    # You may want to update the loan_updated_status here if needed
-                    updated_loan_status = 'disbursed loan'
-                    loan_row['loan_updated_status'] = updated_loan_status
+                    entered_borrower_customer_id = self.entered_borrower_customer_id
+                    # Convert entered_borrower_customer_id to integer
+                    try:
+                      entered_borrower_customer_id = int(entered_borrower_customer_id)
+                    except ValueError:
+                      alert("Please enter a valid customer ID.")
+                      return
+                    # Search for the row in fin_wallet table
+                    wallet_add = app_tables.fin_wallet.get(customer_id=entered_borrower_customer_id)
+                    if wallet_add:
+                      loan_amount = loan_row['loan_amount']
+                      wallet_add['wallet_amount'] += deposit_amount
+                      wallet_add.update()
 
-                    # Save the changes to the loan_row
-                    loan_row.update()
-
-                    alert(f"Loan Amount Paid to Borrower\nAvailable balance is {new_balance}")
-                    open_form('lendor_registration_form.dashboard')
+                      # You may want to update the loan_updated_status here if needed
+                      updated_loan_status = 'disbursed loan'
+                      loan_row['loan_updated_status'] = updated_loan_status
+                      # Save the changes to the loan_row
+                      loan_row.update()
                   
+                      alert(f"Loan Amount Paid to Borrower\nWallet Amount Updated")
+                      open_form('lendor_registration_form.dashboard')
+                      return
+                    else:
+                      alert("Wallet not found for the entered borrower customer ID.")     
                 else:
                     alert("Loan details not found.")
         else:
             alert("Deposit failed!")
+          
 
   def calculate_first_emi_due_date(self, emi_payment_type, loan_disbursed_timestamp, tenure):
         if emi_payment_type == "Monthly":
