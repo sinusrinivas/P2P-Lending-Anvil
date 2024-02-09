@@ -1,11 +1,13 @@
-container: {type: ColumnPanel}
+container:
+  type: ColumnPanel
+  properties: {col_widths: '{}'}
 components:
 - type: ColumnPanel
   properties: {col_widths: '{}'}
   name: content_panel
   layout_properties:
     col_widths: {}
-    grid_position: TXEWWP,MLKQSE
+    grid_position: VQHTOL,VJTLKB
   components:
   - type: ColumnPanel
     properties: {col_widths: '{}'}
@@ -26,21 +28,21 @@ components:
     - type: form:admin.dashboard.home_button_admin
       properties: {}
       name: home_button_admin_1
-      layout_properties: {grid_position: 'JJMMBB,IWUFES'}
+      layout_properties: {grid_position: 'JJMMBB,YFNBAM'}
   - type: DataGrid
     properties:
       role: null
       columns:
-      - {id: EPCWQG, title: Loan ID, data_key: column_1, $$hashKey: 'object:53723',
-        width: 129, expand: false}
-      - {id: WMIWXU, title: Customer ID, data_key: column_2, $$hashKey: 'object:53724',
-        width: 152, expand: false}
-      - {id: PVBYZX, title: Full Name, data_key: column_3, $$hashKey: 'object:53725',
-        width: 188, expand: false}
-      - {id: HCAQYD, title: Loan Status, data_key: column_4, $$hashKey: 'object:53773',
-        width: 159, expand: false}
-      - {id: KQYBVK, title: '', data_key: view profile, $$hashKey: 'object:221467',
-        width: '110', expand: false}
+      - {id: EPCWQG, title: Loan ID, data_key: label_1, $$hashKey: 'object:53723',
+        expand: false, width: '150'}
+      - {id: WMIWXU, title: Customer ID, data_key: label_2, $$hashKey: 'object:53724',
+        width: '165', expand: false}
+      - {id: PVBYZX, title: Full Name, data_key: label_3, $$hashKey: 'object:53725',
+        width: '245', expand: false}
+      - {id: HCAQYD, title: Loan Status, data_key: label_4, $$hashKey: 'object:53773',
+        width: 130, expand: false}
+      - {id: WSPWMC, title: '', data_key: view profile, $$hashKey: 'object:11688',
+        width: '54', expand: false}
       auto_header: true
       tooltip: ''
       border: ''
@@ -53,12 +55,14 @@ components:
       spacing_below: small
       background: ''
     name: data_grid_1
-    layout_properties: {grid_position: 'SYHKHY,ODSIUS'}
+    layout_properties: {grid_position: 'UGSYZZ,CACNNL'}
     components:
     - type: RepeatingPanel
-      properties: {spacing_above: none, spacing_below: none, item_template: admin.dashboard.loan_management.loan_disbursed.RowTemplate16}
-      name: repeating_panel_1
-      layout_properties: {}
+      properties: {item_template: admin.dashboard.loan_management.not_payable_amount.ItemTemplate25}
+      name: repeating_panel_2
+      data_bindings:
+      - {property: items, code: 'self.item[''loan_id'']'}
+      layout_properties: {grid_position: 'NLPSPV,OKZZXW'}
 - type: Button
   properties: {role: elevated-button, align: center, tooltip: '', border: '', enabled: true,
     foreground: white, visible: true, text: Back, font_size: null, font: '16', spacing_above: small,
@@ -67,6 +71,6 @@ components:
   name: button_1_copy
   layout_properties:
     col_widths: {}
-    grid_position: WRKNBL,XSHQTU
+    grid_position: RKBFZI,WBYDFF
   event_bindings: {click: button_1_copy_click}
 is_package: true

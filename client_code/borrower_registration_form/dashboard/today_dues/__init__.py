@@ -124,18 +124,29 @@ class today_dues(today_duesTemplate):
               })
         self.repeating_panel_1.items = loan_details
         for loan_detail in loan_details:
-            if loan_detail['days_left'] >= 6 and loan_detail['days_left'] < 8:
+            print("Processing loan:", loan_detail)
+            if loan_detail['days_left'] >= 2 and loan_detail['days_left'] < 8:
+                print("Updating status to 'lapsed loan'")
                 loan_detail['loan_updated_status'] = 'lapsed loan'
                 loan_row = app_tables.fin_loan_details.get(loan_id=loan_detail['loan_id'])
                 if loan_row is not None:
                     loan_row['loan_updated_status'] = 'lapsed loan'
                     loan_row.update()
-            elif loan_detail['days_left'] >= 8:
+            elif loan_detail['days_left'] >= 8 and loan_detail['days_left'] < 98:
+                print("Updating status to 'default loan'")
                 loan_detail['loan_updated_status'] = 'default loan'
                 loan_row = app_tables.fin_loan_details.get(loan_id=loan_detail['loan_id'])
                 if loan_row is not None:
                     loan_row['loan_updated_status'] = 'default loan'
                     loan_row.update()
+            elif loan_detail['days_left'] >= 98:
+                print("Updating status to 'default loan'")
+                loan_detail['loan_updated_status'] = 'NPA'
+                loan_row = app_tables.fin_loan_details.get(loan_id=loan_detail['loan_id'])
+                if loan_row is not None:
+                    loan_row['loan_updated_status'] = 'NPA'
+                    loan_row.update()
+
                   
     def home_borrower_registration_form_copy_1_click(self, **event_args):
         """This method is called when the button is clicked"""

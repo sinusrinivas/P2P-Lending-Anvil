@@ -51,6 +51,10 @@ class loan_management(loan_managementTemplate):
     """This method is called when the button is clicked"""
     open_form('admin.dashboard.loan_management.default_loans')
 
+  def button_6_copy_click(self, **event_args):
+    open_form('admin.dashboard.loan_management.not_payable_amount')
+
+
 
 
 
