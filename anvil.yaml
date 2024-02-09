@@ -23,6 +23,11 @@ runtime_options: {version: 2, client_version: '3', server_version: python3-sandb
 metadata: {title: 'P2P Bank ', description: this app provide services to person who are ready to invest and ready to give loan}
 startup_form: null
 db_schema:
+  wallet_notification:
+    title: fin_wallet_notification
+    client: full
+    server: full
+    columns: []
   fin_lendor_business_type:
     client: full
     server: full
@@ -31,14 +36,6 @@ db_schema:
       admin_ui: {width: 200, order: 0}
       type: string
     title: fin_lendor_business_type
-  fin_lendor_salary_type:
-    client: full
-    server: full
-    columns:
-    - name: lendor_salary_type
-      admin_ui: {width: 200, order: 0}
-      type: string
-    title: fin_lendor_salary_type
   fin_product_categories:
     title: fin_product_categories
     client: full
@@ -66,6 +63,14 @@ db_schema:
       admin_ui: {width: 200, order: 0}
       type: string
     title: fin_borrower_no_of_employees
+  fin_lendor_marrital_status:
+    title: fin_lendor_marrital_status
+    client: none
+    server: full
+    columns:
+    - name: lendor_marrital_status
+      admin_ui: {width: 200}
+      type: string
   fin_wallet:
     client: full
     server: full
@@ -430,14 +435,14 @@ db_schema:
     - name: wallet_id
       admin_ui: {width: 200, order: 11}
       type: string
-  fin_borrower_salary_type:
-    client: full
+  fin_fin_borrower_qualification:
+    title: fin_fin_borrower_qualification
+    client: none
     server: full
     columns:
-    - name: borrower_salary_type
-      admin_ui: {width: 200, order: 0}
+    - name: borrower_qualification
+      admin_ui: {width: 200}
       type: string
-    title: fin_borrower_salary_type
   fin_borrower_profession:
     client: full
     server: full
@@ -910,7 +915,7 @@ db_schema:
       admin_ui: {order: 12, width: 200}
       type: string
   fin_wallet_bank_account_table:
-    client: full
+    client: none
     server: full
     columns:
     - name: account_id
