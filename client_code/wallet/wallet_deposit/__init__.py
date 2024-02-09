@@ -172,7 +172,7 @@ class wallet_deposit(wallet_depositTemplate):
                     wallet_add = app_tables.fin_wallet.get(customer_id=entered_borrower_customer_id)
                     if wallet_add:
                       loan_amount = loan_row['loan_amount']
-                      wallet_add['wallet_amount'] += deposit_amount
+                      wallet_add['wallet_amount'] + deposit_amount
                       wallet_add.update()
 
                       # You may want to update the loan_updated_status here if needed
