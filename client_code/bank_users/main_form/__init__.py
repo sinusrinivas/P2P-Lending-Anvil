@@ -48,7 +48,13 @@ class main_form(main_formTemplate):
             if user_type == 'lender':
               open_form('lendor_registration_form.dashboard')
             elif user_type == 'borrower':
-              open_form('borrower_registration_form.dashboard')
+              loan_updated_status = app_tables.fin_loan_details.get(loan_updated_status=loan_updated_status)
+              if loan_updated_status is not None:
+                loan_status = loan_updated_status['loan_updated_status']
+                if loan_status != 'OTS':
+                  open_form('borrower_registration_form.dashboard')
+                elif loan_status == 'OTS':
+                  open_form('borrower_registration_form.ots_dashboard')
             elif user_type == 'admin':
               open_form('admin.dashboard')
             else:
