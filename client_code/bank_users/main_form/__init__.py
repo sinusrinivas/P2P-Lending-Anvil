@@ -18,9 +18,6 @@ class main_form(main_formTemplate):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
     # Any code you write here will run before the form opens.
-
-
-
   
   def login_signup_button_click(self, **event_args):
     anvil.users.login_with_form()
@@ -48,13 +45,14 @@ class main_form(main_formTemplate):
             if user_type == 'lender':
               open_form('lendor_registration_form.dashboard')
             elif user_type == 'borrower':
-              loan_updated_status = app_tables.fin_loan_details.get(loan_updated_status=loan_updated_status)
-              if loan_updated_status is not None:
-                loan_status = loan_updated_status['loan_updated_status']
-                if loan_status != 'OTS':
-                  open_form('borrower_registration_form.dashboard')
-                elif loan_status == 'OTS':
-                  open_form('borrower_registration_form.ots_dashboard')
+              open_form('borrower_registration_form.dashboard')
+              # self.loan_updated = app_tables.fin_loan_details.get(loan_updated_status=loan_updated_status)
+              # if self.loan_updated is not None:
+              #   self.loan_status = self.loan_updated['loan_updated_status']
+              #   if self.loan_status != 'OTS':
+              #     open_form('borrower_registration_form.dashboard')
+              #   elif self.loan_status == 'OTS':
+              #     open_form('borrower_registration_form.ots_dashboard')
             elif user_type == 'admin':
               open_form('admin.dashboard')
             else:
