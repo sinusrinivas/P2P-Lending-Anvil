@@ -320,6 +320,18 @@ def get_user_data(user_id):
         }
     else:
         return None
+      
+@anvil.server.callable
+def add_guarantor_details(g_full_name, g_dob,g_mobile_no,g_address,g_profession,g_company_name,g_annual_earning,user_id):
+  row = app_tables.fin_guarantor_details.search(customer_id=user_id)
+  if row:
+    row[0]['guarantor_name'] = g_full_name
+    row[0]['guarantor_date_of_birth'] = g_dob
+    row[0]['guarantor_mobile_no'] = g_mobile_no
+    row[0]['guarantor_address'] = g_address
+    row[0]['guarantor_profession'] = g_profession
+    row[0]['guarantor_company_name'] = g_company_name
+    row[0]['guarantor_annual_earning'] = g_annual_earning
 
 
 # code for view borr loan

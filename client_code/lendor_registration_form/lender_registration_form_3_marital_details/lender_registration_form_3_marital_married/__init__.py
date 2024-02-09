@@ -13,27 +13,41 @@ class lender_registration_form_3_marital_married(lender_registration_form_3_mari
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
     self.userId = user_id
-    self.another_person = None
+    # self.another_person = None
 
-    # Any code you write here will run before the form opens.
+    guarantor_data=app_tables.fin_guarantor_details.get(customer_id=user_id)
+    if guarantor_data:
+      self.father_name_text.text=guarantor_data['guarantor_name']
+      self.date_picker_1.date=guarantor_data['guarantor_date_of_birth']
+      self.father_mbl_no_text.text=guarantor_data['guarantor_mobile_no']
+      self.father_address_text.text=guarantor_data['guarantor_address']
+      self.father_profession_text.text=guarantor_data['guarantor_profession']
+      self.father_company_name_text.text=guarantor_data['guarantor_company_name']
+      self.father_annual_earning.text=guarantor_data['guarantor_annual_earning']
+      guarantor_data.update()
 
-  # def home_borrower_registration_form_copy_1_click(self, **event_args):
-  #   open_form('bank_users.user_form')
-
-  def radio_button_change(self, **event_args):
-    selected_button = self.radio_buttons.selected_button
-    self.another_person = selected_button.text.lower()
-    
-    # Hide other radio buttons
-    # for button in self.radio_buttons.components:
-    #   if button != selected_button:
-    #     button.visible = False
-
-    # Call the server function to update the database
-    anvil.server.call('update_another_person', self.userId, self.another_person)
   
   def button_submit_click(self, **event_args):
-    open_form('lendor_registration_form.lender_registration_form_4_bank_form_1')   
+    g_full_name = self.father_name_text.text
+    g_dob = self.date_picker_1.date
+    g_mobile_no = self.father_mbl_no_text.text
+    g_address = self.father_address_text.text
+    g_profession = self.father_profession_text.text
+    g_company_name = self.father_company_name_text.text
+    g_annual_earning = self.father_annual_earning.text
+    user_id = self.user_id
+
+    self.mbl_label_1.text = ''
+
+    if not re.match(r'\d{10}$', g_mobile_no):
+      self.mbl_label_1.text = 'Enter valid mobile no'
+
+    elif not g_full_name or not g_dob or not g_mobile_no or not g_address or not g_profession or not g_company_name or not g_annual_earning:
+      Notification('Please fill all details').show()
+
+    else:
+      anvil.server.call('add_guarantor_details', g_full_name,g_dob,g_mobile_no,g_address,g_profession,g_company_name,g_annual_earning,user_id)
+      open_form('lendor_registration_form.lender_registration_form_4_bank_form_1')   
 
   def button_1_click(self, **event_args):
     open_form('lendor_registration_form.lender_registration_form_3_marital_details',user_id=self.userId)
