@@ -273,8 +273,6 @@ class payment_details_extension(payment_details_extensionTemplate):
         else:
             return None
 
-
-
     def calculate_scheduled_payment(self, loan_amount, monthly_interest_rate, remaining_tenure):
         emi = (loan_amount * monthly_interest_rate * ((1 + monthly_interest_rate) ** remaining_tenure)) / (
                 ((1 + monthly_interest_rate) ** remaining_tenure) - 1)
@@ -288,3 +286,4 @@ class payment_details_extension(payment_details_extensionTemplate):
     def button_2_click(self, **event_args):
       """This method is called when the button is clicked"""
       open_form('borrower_registration_form.dashboard.extension_loan_request.borrower_extension', selected_row = self.selected_row)
+      
