@@ -261,9 +261,15 @@ class payment_details_extension(payment_details_extensionTemplate):
                 if emi_payment_type == 'Monthly':
                     payment_date = loan_disbursed_timestamp + timedelta(days=30 * current_month)
                 elif emi_payment_type == 'Three Month':
-                    payment_date = loan_disbursed_timestamp + timedelta(days=30 * current_month)  # Payment every month
+                    if current_month % 3 == 0:
+                        payment_date = loan_disbursed_timestamp + timedelta(days=30 * (current_month // 3))
+                    else:
+                        payment_date = None
                 elif emi_payment_type == 'Six Month':
-                    payment_date = loan_disbursed_timestamp + timedelta(days=30 * current_month)  # Payment every month
+                    if current_month % 6 == 0:
+                        payment_date = loan_disbursed_timestamp + timedelta(days=30 * (current_month // 6))
+                    else:
+                        payment_date = None
                 else:
                     payment_date = None
     
@@ -272,6 +278,7 @@ class payment_details_extension(payment_details_extensionTemplate):
                 return None
         else:
             return None
+
 
     def calculate_scheduled_payment(self, loan_amount, monthly_interest_rate, remaining_tenure):
         emi = (loan_amount * monthly_interest_rate * ((1 + monthly_interest_rate) ** remaining_tenure)) / (
@@ -286,4 +293,5 @@ class payment_details_extension(payment_details_extensionTemplate):
     def button_2_click(self, **event_args):
       """This method is called when the button is clicked"""
       open_form('borrower_registration_form.dashboard.extension_loan_request.borrower_extension', selected_row = self.selected_row)
-      
+
+
