@@ -38,6 +38,9 @@ class view_profile_7(view_profile_7Template):
         if self.loan_data:
             self.loan_data['loan_updated_status'] = 'OTS'
             self.loan_data.update()
+            ots = app_tables.fin_user_profile.get(customer_id=self.loan_data['borrower_customer_id'])
+            if ots:
+                ots['one_time_settlement'] = True
             alert('Request Submited')
             self.button_2.visible = False
           
