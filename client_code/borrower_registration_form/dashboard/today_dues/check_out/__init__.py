@@ -95,87 +95,6 @@ class check_out(check_outTemplate):
             return loan_row['first_emi_payment_due_date']
         else:
             return None  # or handle the case where the loan ID is not found
-          
-    # def pay_now_click(self, **event_args):
-    #  total_emi_amount = float(self.total_emi_amount_label.text)  # Fetch total EMI amount including extra payment
-    #  borrower_wallet = app_tables.fin_wallet.get(customer_id=self.user_id)
-
-    #  if borrower_wallet is not None:
-    #     wallet_balance = borrower_wallet['wallet_amount']
-
-    #     if wallet_balance >= total_emi_amount:
-    #         updated_balance = wallet_balance - total_emi_amount
-    #         borrower_wallet['wallet_amount'] = updated_balance
-    #         borrower_wallet.update()
-
-    #         # Retrieve lender's wallet based on lender_customer_id
-    #         lender_wallet = app_tables.fin_wallet.get(customer_id=self.selected_row['lender_customer_id'])
-    #         if lender_wallet is not None:
-    #             lender_balance = lender_wallet['wallet_amount']
-
-    #             # If lender_balance is None, treat it as zero
-    #             if lender_balance is None:
-    #                 lender_balance = 0
-
-    #             lender_balance += total_emi_amount  # Add deducted amount to lender's wallet
-    #             lender_wallet['wallet_amount'] = lender_balance
-    #             lender_wallet.update()
-
-    #             loan_id = self.selected_row['loan_id']
-    #             current_emi_number = int(self.selected_row['emi_number'])
-    #             account_number = self.selected_row['account_number']
-    #             emi_payment_type = self.selected_row['emi_payment_type']
-
-    #             prev_scheduled_payment = self.selected_row['scheduled_payment']
-    #             prev_next_payment = self.selected_row['next_payment']
-
-    #             # Check if the current scheduled payment is the same as the first payment due date
-    #             is_first_payment_due_date = (prev_scheduled_payment == self.get_first_payment_due_date(loan_id=loan_id))
-
-    #             # Calculate next scheduled payment based on emi_payment_type
-    #             if emi_payment_type in ['One Time', 'Monthly', 'Three Month', 'Six Month']:
-    #                 if emi_payment_type == 'One Time' or is_first_payment_due_date:
-    #                     # Ensure it's in the same year, month, and date as the first payment due date
-    #                     next_scheduled_payment = self.get_first_payment_due_date(loan_id=loan_id)
-    #                     next_next_payment = self.selected_row['next_payment']
-    #                 else:
-    #                     next_scheduled_payment = prev_next_payment  # For subsequent payments, use next_payment
-    #                     next_next_payment = prev_next_payment + timedelta(days=30)
-    #             else:
-    #                 # Default to monthly calculation
-    #                 next_scheduled_payment = prev_next_payment  # For subsequent payments, use next_payment
-    #                 next_next_payment = prev_next_payment + timedelta(days=30)
-
-    #             # Update scheduled payment and next_payment in the selected_row
-    #             self.selected_row['scheduled_payment'] = next_scheduled_payment
-    #             self.selected_row['next_payment'] = next_next_payment
-    #             self.selected_row.update()
-
-    #             # Add a new row to fin_emi_table
-    #             new_emi_row = app_tables.fin_emi_table.add_row(
-    #                 loan_id=loan_id,
-    #                 emi_number=current_emi_number + 1,
-    #                 account_number=account_number,
-    #                 scheduled_payment_made=datetime.now(),
-    #                 scheduled_payment=next_scheduled_payment,
-    #                 next_payment=next_next_payment
-    #             )
-
-    #             # Update the emi_number and next_payment in the selected_row
-    #             self.selected_row['emi_number'] = current_emi_number + 1
-    #             self.selected_row['next_payment'] = next_next_payment
-    #             self.selected_row.update()
-
-    #             self.status_label.text = "Payment successfully done..."
-    #             self.button_1_copy_3.visible = False
-    #         else:
-    #             self.status_label.text = "Lender's wallet not found."
-    #     else:
-    #         alert("Insufficient funds in wallet. Please deposit more funds to continue.")
-    #         open_form('wallet.wallet')
-    #  else:
-    #     self.status_label.text = "Wallet record not found."
-
 
     def pay_now_click(self, **event_args):
         total_emi_amount = float(self.total_emi_amount_label.text)  # Fetch total EMI amount including extra payment
@@ -265,3 +184,4 @@ class check_out(check_outTemplate):
     def button_1_copy_2_click(self, **event_args):
         """This method is called when the button is clicked"""
         open_form('borrower_registration_form.dashboard.today_dues')
+
