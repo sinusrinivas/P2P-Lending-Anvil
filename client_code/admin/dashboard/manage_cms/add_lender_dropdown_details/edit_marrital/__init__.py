@@ -19,7 +19,12 @@ class edit_marrital(edit_marritalTemplate):
 
   def button_1_click(self, **event_args):
     """This method is called when the button is clicked"""
+    
     update = self.text_box_1.text
+    valid_statuses = ['Not Married', 'Married', 'Other']
+    if update not in valid_statuses:
+        alert("Please enter a valid marital status: 'Not Married', 'Married', 'Other'.")
+        return
 
         # Update the 'borrower_gender' field in the database
     self.selected_row['lendor_marrital_status'] = update
