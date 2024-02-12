@@ -14,7 +14,7 @@ services:
 - source: /runtime/services/anvil/email.yml
   client_config: {}
   server_config: {}
-startup: {type: form, module: admin.dashboard}
+startup: {type: form, module: bank_users.main_form}
 package_name: bank_client
 allow_embedding: false
 name: P2P Lending App
@@ -734,10 +734,10 @@ db_schema:
       admin_ui: {width: 200, order: 2}
       type: string
     - name: payment_number
-      admin_ui: {width: 200, order: 4}
+      admin_ui: {order: 7.5, width: 200}
       type: number
     - name: payment_date
-      admin_ui: {width: 200, order: 5}
+      admin_ui: {order: 7.75, width: 200}
       type: date
     - name: lender_customer_id
       admin_ui: {width: 200, order: 6}
@@ -749,19 +749,19 @@ db_schema:
       admin_ui: {width: 200, order: 8}
       type: string
     - name: scheduled_payment_made
-      admin_ui: {width: 200, order: 9}
+      admin_ui: {order: 13, width: 232}
       type: datetime
     - name: emi_number
-      admin_ui: {width: 200, order: 10}
+      admin_ui: {order: 10.25, width: 200}
       type: number
     - name: account_number
-      admin_ui: {width: 200, order: 11}
+      admin_ui: {order: 8.5, width: 200}
       type: string
     - name: next_payment
-      admin_ui: {width: 200}
+      admin_ui: {order: 10.5, width: 200}
       type: date
     - name: scheduled_payment
-      admin_ui: {width: 200}
+      admin_ui: {order: 10.375, width: 200}
       type: date
   fin_borrower_business_type:
     client: full
@@ -829,6 +829,9 @@ db_schema:
     - name: extension_request_date
       admin_ui: {width: 200}
       type: datetime
+    - name: emi_number
+      admin_ui: {width: 200, order: 18}
+      type: number
     title: fin_extends_loan
   fin_borrower_marrital_status:
     client: full

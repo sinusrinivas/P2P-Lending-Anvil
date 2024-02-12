@@ -43,7 +43,8 @@ class today_dues(today_duesTemplate):
                 loan_updated_status = loan_details_row['loan_updated_status']
                 loan_disbursed_timestamp = loan_details_row['loan_disbursed_timestamp']
                 emi_payment_type = loan_details_row['emi_payment_type']
-                
+                lender_customer_id = loan_details_row['lender_customer_id']
+                first_emi_payment_due_date= loan_details_row['first_emi_payment_due_date']
                 
                 loan_details.append({
                     'loan_id': loan_id,
@@ -58,7 +59,9 @@ class today_dues(today_duesTemplate):
                     'loan_updated_status': loan_updated_status,
                     'loan_disbursed_timestamp': loan_disbursed_timestamp,
                     'next_payment': next_payment,
-                    'emi_payment_type': emi_payment_type
+                    'emi_payment_type': emi_payment_type,
+                    'lender_customer_id': lender_customer_id,
+                    'first_emi_payment_due_date':first_emi_payment_due_date
                 })
                 
         # If no loans are found with next_payment date matching today's date,
@@ -89,6 +92,7 @@ class today_dues(today_duesTemplate):
               loan_updated_status = loan_due['loan_updated_status']
               loan_disbursed_timestamp = loan_due['loan_disbursed_timestamp']
               emi_payment_type = loan_due['emi_payment_type']
+              lender_customer_id = loan_due['lender_customer_id']
               
               # Calculate next_payment based on first_payment_due_date
               if emi_payment_type == 'One Time':
@@ -120,7 +124,9 @@ class today_dues(today_duesTemplate):
                   'loan_disbursed_timestamp': loan_disbursed_timestamp,
                   'emi_number': emi_number,
                   'account_number': account_number,
-                  'emi_payment_type': emi_payment_type
+                  'emi_payment_type': emi_payment_type,
+                  'lender_customer_id': lender_customer_id,
+                  #'first_payment_due_date': first_payment_due_date
               })
         self.repeating_panel_1.items = loan_details
         for loan_detail in loan_details:
