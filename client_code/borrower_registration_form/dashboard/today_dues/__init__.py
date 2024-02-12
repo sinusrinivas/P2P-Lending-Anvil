@@ -93,28 +93,29 @@ class today_dues(today_duesTemplate):
               loan_disbursed_timestamp = loan_due['loan_disbursed_timestamp']
               emi_payment_type = loan_due['emi_payment_type']
               lender_customer_id = loan_due['lender_customer_id']
+              tenure = self.selected_row['tenure']
               
               # Calculate next_payment based on first_payment_due_date
               if emi_payment_type == 'One Time':
-            # For one-time payment, set next_payment to a year after first_payment_due_date
-                  next_payment = first_emi_payment_due_date + timedelta(days=365)
+                if tenure:
+                  next_payment = loan_disbursed_timestamp.date() + timedelta(days=30 * tenure)
               elif emi_payment_type == 'Monthly':
                   # For monthly payment, set next_payment to a month after first_payment_due_date
-                  next_payment = first_emi_payment_due_date + timedelta(days=30)
+                  next_payment = loan_disbursed_timestamp.date() + timedelta(days=30)
               elif emi_payment_type == 'Three Month':
                   # For three-month payment, set next_payment to three months after first_payment_due_date
-                  next_payment = first_emi_payment_due_date + timedelta(days=90)
+                  next_payment = loan_disbursed_timestamp.date() + timedelta(days=90)
               elif emi_payment_type == 'Six Month':
                   # For six-month payment, set next_payment to six months after first_payment_due_date
-                  next_payment = first_emi_payment_due_date + timedelta(days=180)
+                  next_payment = loan_disbursed_timestamp.date() + timedelta(days=180)
               else:
                   # Default to monthly calculation if emi_payment_type is not recognized
-                  next_payment = first_emi_payment_due_date + timedelta(days=30)
+                  next_payment = loan_disbursed_timestamp.date() + timedelta(days=30)
               
               loan_details.append({
                   'loan_id': loan_id,
                   'loan_amount': loan_amount,
-                  'scheduled_payment': first_emi_payment_due_date,  # Set scheduled_payment to first_payment_due_date
+                  'scheduled_payment': loan_disbursed_timestamp.date(),  # Set scheduled_payment to first_payment_due_date first_emi_payment_due_date
                   'next_payment': next_payment,
                   'days_left': days_left,
                   'tenure': tenure,
