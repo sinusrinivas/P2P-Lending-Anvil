@@ -1043,7 +1043,7 @@ db_schema:
       admin_ui: {order: 15.25, width: 241}
       type: datetime
     - name: credit_limit
-      admin_ui: {width: 200, order: 16}
+      admin_ui: {order: 15.484375, width: 200}
       type: number
     - name: loan_disbursed_timestamp
       admin_ui: {order: 15.4375, width: 228}

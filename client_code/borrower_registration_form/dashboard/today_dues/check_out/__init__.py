@@ -171,6 +171,7 @@ class check_out(check_outTemplate):
                         next_next_payment = prev_next_payment + timedelta(days=30)
 
                     # Update scheduled payment only if it's the same as the first payment due date
+                    is_first_payment_due_date = (prev_scheduled_payment == self.get_first_payment_due_date(loan_id=loan_id))
                     if is_first_payment_due_date:
                         self.selected_row['scheduled_payment'] = next_scheduled_payment
                         self.selected_row.update()
@@ -196,6 +197,8 @@ class check_out(check_outTemplate):
             open_form('wallet.wallet')
       else:
         self.status_label.text = "Wallet record not found."
+
+    
 
     
 
