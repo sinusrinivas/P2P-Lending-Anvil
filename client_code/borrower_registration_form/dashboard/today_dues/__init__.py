@@ -126,7 +126,7 @@ class today_dues(today_duesTemplate):
                   'account_number': account_number,
                   'emi_payment_type': emi_payment_type,
                   'lender_customer_id': lender_customer_id,
-                  #'first_payment_due_date': first_payment_due_date
+                  # 'first_payment_due_date': first_payment_due_date
               })
         self.repeating_panel_1.items = loan_details
         for loan_detail in loan_details:
