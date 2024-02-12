@@ -93,7 +93,6 @@ class today_dues(today_duesTemplate):
               loan_disbursed_timestamp = loan_due['loan_disbursed_timestamp']
               emi_payment_type = loan_due['emi_payment_type']
               lender_customer_id = loan_due['lender_customer_id']
-              tenure = self.selected_row['tenure']
               
               # Calculate next_payment based on first_payment_due_date
               if emi_payment_type == 'One Time':
