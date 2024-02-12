@@ -953,6 +953,12 @@ db_schema:
     - name: customer_id
       admin_ui: {order: -1, width: 200}
       type: number
+    - name: guarantor_person_relation
+      admin_ui: {width: 200, order: 8}
+      type: string
+    - name: another_person
+      admin_ui: {width: 200, order: 9}
+      type: string
     title: fin_guarantor_details
   fin_loan_details:
     client: full
