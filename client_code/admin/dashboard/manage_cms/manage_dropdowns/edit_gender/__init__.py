@@ -14,7 +14,7 @@ class edit_gender(edit_genderTemplate):
     self.init_components(**properties)
 
     # Any code you write here will run before the form opens.
-    self.text_box_01.text = selected_row['gender']
+    self.text_box_1.text = selected_row['gender']
         # Store the selected row for later use
     self.selected_row = selected_row
     
