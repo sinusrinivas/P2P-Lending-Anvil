@@ -144,7 +144,7 @@ class star_1_borrower_registration_form_3_marital_married(star_1_borrower_regist
             guarantor_address=details['father_address'],
             another_person=details['another_person']  # Store the selected radio button's name
         )
-        alert("Details submitted successfully!")
+        
         open_form('borrower_registration_form.star_1_borrower_registration_form_4_loan',user_id=self.userId)
 
     def button_submit_copy_click(self, **event_args):
@@ -161,7 +161,7 @@ class star_1_borrower_registration_form_3_marital_married(star_1_borrower_regist
             guarantor_address=details['mother_address'],
             another_person=details['another_person']  # Store the selected radio button's name
         )
-        alert("Details submitted successfully!")
+        
         open_form('borrower_registration_form.star_1_borrower_registration_form_4_loan',user_id=self.userId)
 
     def button_submit_copy_2_click(self, **event_args):
@@ -179,7 +179,7 @@ class star_1_borrower_registration_form_3_marital_married(star_1_borrower_regist
             guarantor_annual_earning=details['annual_earning'],
             another_person=details['another_person']  # Store the selected radio button's name
         )
-        alert("Details submitted successfully!")
+
         open_form('borrower_registration_form.star_1_borrower_registration_form_4_loan',user_id=self.userId)
 
     def button_submit_copy_3_click(self, **event_args):
@@ -196,5 +196,5 @@ class star_1_borrower_registration_form_3_marital_married(star_1_borrower_regist
             guarantor_person_relation= details['related_person_relation'],
             another_person=details['another_person']  # Store the selected radio button's name
         )
-        alert("Details submitted successfully!")
+ 
         open_form('borrower_registration_form.star_1_borrower_registration_form_4_loan',user_id=self.userId)
