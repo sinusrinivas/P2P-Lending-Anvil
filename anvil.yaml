@@ -683,6 +683,9 @@ db_schema:
     - name: phd
       admin_ui: {width: 200, order: 100}
       type: media
+    - name: one_time_settlement
+      admin_ui: {width: 200, order: 1.5}
+      type: bool
     title: fin_user_profile
   fin_wallet_transactions:
     title: fin_wallet_transactions
@@ -734,10 +737,10 @@ db_schema:
       admin_ui: {width: 200, order: 2}
       type: string
     - name: payment_number
-      admin_ui: {width: 200, order: 4}
+      admin_ui: {order: 7.5, width: 200}
       type: number
     - name: payment_date
-      admin_ui: {width: 200, order: 5}
+      admin_ui: {order: 7.75, width: 200}
       type: date
     - name: lender_customer_id
       admin_ui: {width: 200, order: 6}
@@ -746,22 +749,22 @@ db_schema:
       admin_ui: {width: 200, order: 7}
       type: string
     - name: loan_id
-      admin_ui: {width: 200, order: 8}
+      admin_ui: {order: 8.25, width: 200}
       type: string
     - name: scheduled_payment_made
-      admin_ui: {width: 200, order: 9}
+      admin_ui: {order: 13, width: 232}
       type: datetime
     - name: emi_number
-      admin_ui: {width: 200, order: 10}
+      admin_ui: {order: 10.25, width: 200}
       type: number
     - name: account_number
-      admin_ui: {width: 200, order: 11}
+      admin_ui: {order: 8.5, width: 200}
       type: string
     - name: next_payment
-      admin_ui: {width: 200}
+      admin_ui: {order: 10.5, width: 200}
       type: date
     - name: scheduled_payment
-      admin_ui: {width: 200}
+      admin_ui: {order: 10.375, width: 200}
       type: date
   fin_borrower_business_type:
     client: full
@@ -829,6 +832,9 @@ db_schema:
     - name: extension_request_date
       admin_ui: {width: 200}
       type: datetime
+    - name: emi_number
+      admin_ui: {width: 200, order: 18}
+      type: number
     title: fin_extends_loan
   fin_borrower_marrital_status:
     client: full
@@ -947,6 +953,12 @@ db_schema:
     - name: customer_id
       admin_ui: {order: -1, width: 200}
       type: number
+    - name: guarantor_person_relation
+      admin_ui: {width: 200, order: 8}
+      type: string
+    - name: another_person
+      admin_ui: {width: 200, order: 9}
+      type: string
     title: fin_guarantor_details
   fin_loan_details:
     client: full
@@ -1040,7 +1052,7 @@ db_schema:
       admin_ui: {order: 15.25, width: 241}
       type: datetime
     - name: credit_limit
-      admin_ui: {width: 200, order: 16}
+      admin_ui: {order: 15.484375, width: 200}
       type: number
     - name: loan_disbursed_timestamp
       admin_ui: {order: 15.4375, width: 228}

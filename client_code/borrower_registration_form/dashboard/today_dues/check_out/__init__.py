@@ -9,6 +9,7 @@ import anvil.tables.query as q
 from anvil.tables import app_tables
 from datetime import datetime, timedelta
 from .. import main_form_module as main_form_module
+from datetime import date
 
 class check_out(check_outTemplate):
     def __init__(self, selected_row, **properties):
@@ -124,35 +125,32 @@ class check_out(check_outTemplate):
                     current_emi_number = int(self.selected_row['emi_number'])
                     account_number = self.selected_row['account_number']
                     emi_payment_type = self.selected_row['emi_payment_type']
+                    tenure = self.selected_row['tenure']
 
                     prev_scheduled_payment = self.selected_row['scheduled_payment']
                     prev_next_payment = self.selected_row['next_payment']
 
-                    # Check if the current scheduled payment is the same as the first payment due date
-                    is_first_payment_due_date = (prev_scheduled_payment == self.get_first_payment_due_date(loan_id=loan_id))
+                    # # Check if the current scheduled payment is the same as the first payment due date
+                    # is_first_payment_due_date = (prev_scheduled_payment == self.get_first_payment_due_date(loan_id=loan_id))
 
                     # Calculate next scheduled payment based on emi_payment_type
                     if emi_payment_type in ['One Time', 'Monthly', 'Three Month', 'Six Month']:
-                        if emi_payment_type == 'One Time':
-                            next_scheduled_payment = prev_scheduled_payment + timedelta(days=365)
-                            next_next_payment = self.selected_row['next_payment'] + timedelta(days=365)
-                        elif emi_payment_type == 'Monthly':
+                        
+                        if emi_payment_type == 'Monthly':
                             next_scheduled_payment = prev_scheduled_payment + timedelta(days=30)
                             next_next_payment = prev_next_payment + timedelta(days=30)
                         elif emi_payment_type == 'Three Month':
                             next_scheduled_payment = prev_scheduled_payment + timedelta(days=90)
                             next_next_payment = prev_next_payment + timedelta(days=90)
                             # Reduce the scheduled payment by 3 months
-                            next_scheduled_payment -= timedelta(days=90)
+                            # next_scheduled_payment -= timedelta(days=90)
                         elif emi_payment_type == 'Six Month':
                             next_scheduled_payment = prev_scheduled_payment + timedelta(days=180)
                             next_next_payment = prev_next_payment + timedelta(days=180)
-                            
-                    
-                        # Update scheduled payment only if it's the same as the first payment due date
-                        if is_first_payment_due_date:
-                            self.selected_row['scheduled_payment'] = next_scheduled_payment
-                            self.selected_row.update()
+                        elif emi_payment_type == 'One Time':
+                          if tenure:
+                            next_scheduled_payment = prev_scheduled_payment + timedelta(days=30 * tenure)
+                            next_next_payment = self.selected_row['next_payment'] + timedelta(days=30 * tenure)                
                     else:
                         # Default to monthly calculation
                         next_scheduled_payment = prev_scheduled_payment + timedelta(days=30)
@@ -186,3 +184,4 @@ class check_out(check_outTemplate):
     def button_1_copy_2_click(self, **event_args):
         """This method is called when the button is clicked"""
         open_form('borrower_registration_form.dashboard.today_dues')
+
