@@ -89,4 +89,14 @@ components:
     col_widths: {}
     grid_position: ECSZQJ,XDVLVH
   event_bindings: {click: button_4_click}
+- name: button_4_copy
+  properties: {role: outlined-button, align: left, tooltip: '', border: '', enabled: true,
+    foreground: 'theme:On Primary', visible: true, text: 'One Time Settlement                    ',
+    font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small,
+    italic: false, background: '#00008B', bold: false, underline: false, icon: ''}
+  type: Button
+  layout_properties:
+    col_widths: {}
+    grid_position: ECSZQJ,RYYDNE
+  event_bindings: {click: button_4_copy_click}
 is_package: true
