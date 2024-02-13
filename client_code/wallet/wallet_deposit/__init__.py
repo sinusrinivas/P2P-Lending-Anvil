@@ -51,38 +51,22 @@ class wallet_deposit(wallet_depositTemplate):
     else:
       open_form("borrower_registration_form.dashboard")
 
-  # def home_main_form_link_click(self, **event_args):
+
+  # def about_main_form_link_click(self, **event_args):
   #   """This method is called when the link is clicked"""
-  #   print("Before getting user_type - user_id:", self.user_id)
+  #   open_form("lendor_registration_form.dashboard.dasboard_about")
 
-  #   user_request = app_tables.fin_user_profile.get(customer_id=self.user_id)
+  # def contact_main_form_link_click(self, **event_args):
+  #   """This method is called when the link is clicked"""
+  #   open_form("lendor_registration_form.dashboard.dasboard_contact")
 
-  #   if user_request:
-  #       self.user_type = user_request['usertype']
-  #       print("User type retrieved:", self.user_type)
-  #   else:
-  #       print("No user request found for user_id:", self.user_id)
+  # def notification_link_click(self, **event_args):
+  #   """This method is called when the link is clicked"""
+  #   open_form('lendor_registration_form.dashboard.notification')
 
-  #   if self.user_type == "lendor":
-  #       open_form("lendor_registration_form.dashboard")
-  #   else:
-  #       open_form("borrower_registration_form.dashboard")
-
-  def about_main_form_link_click(self, **event_args):
-    """This method is called when the link is clicked"""
-    open_form("lendor_registration_form.dashboard.dasboard_about")
-
-  def contact_main_form_link_click(self, **event_args):
-    """This method is called when the link is clicked"""
-    open_form("lendor_registration_form.dashboard.dasboard_contact")
-
-  def notification_link_click(self, **event_args):
-    """This method is called when the link is clicked"""
-    open_form('lendor_registration_form.dashboard.notification')
-
-  def button_2_click(self, **event_args):
-    """This method is called when the button is clicked"""
-    pass
+  # def button_2_click(self, **event_args):
+  #   """This method is called when the button is clicked"""
+  #   pass
 
   def deposit_btn_click(self, **event_args):
     """This method is called when the button is clicked"""
