@@ -21,7 +21,11 @@ class wallet_deposit(wallet_depositTemplate):
     self.entered_borrower_customer_id = entered_borrower_customer_id
     self.user_id = main_form_module.userId
     self.selected_row = None
-    # self.start_time = time.time()
+    self.start_time = time.time()
+    start_time = self.start_time
+    
+    
+    self.check_time_difference()
     
 
     # Set Form properties and Data Bindings.
@@ -181,12 +185,15 @@ class wallet_deposit(wallet_depositTemplate):
 
   def check_time_difference(self):
         current_time = datetime.now(timezone.utc)
-        time_difference = current_time - datetime.utcfromtimestamp(self.start_time)
+        # print("current_time:", current_time)
+        start_time_utc = datetime.utcfromtimestamp(self.start_time).replace(tzinfo=timezone.utc)
+        
+        time_difference = current_time - start_time_utc
 
         if time_difference.total_seconds() > 120:  # 120 seconds = 2 minutes
-            entered_borrower_customer_id = self.entered_borrower_customer_id
             # Update loan status based on the comparison of wallet_amount and loan_amount
-            wallet_row = app_tables.fin_wallet.get(customer_id=entered_borrower_customer_id)
+            
+            wallet_row = app_tables.fin_wallet.get(user_email=self.email)
             loan_row = app_tables.fin_loan_details.get(loan_id=self.entered_loan_id)
 
             if wallet_row and loan_row:
@@ -202,10 +209,21 @@ class wallet_deposit(wallet_depositTemplate):
                     open_form('lendor_registration_form.dashboard')
                 else:
                     alert("Time has passed, but wallet_amount is sufficient. No change in loan status.")
+                    open_form('lendor_registration_form.dashboard')
             else:
                 alert("Error: Wallet or loan details not found.")
+
+   
   def form_show(self, **event_args):
+        self.start_time = time.time()  # Set the start time when the form is shown
         self.check_time_difference()
+
+  def timer_1_tick(self, **event_args):
+    """This method is called Every [interval] seconds. Does not trigger if [interval] is 0."""
+    self.check_time_difference()
+    # Print time_difference every 30 seconds
+    if int(time.time() - self.start_time) % 30 == 0:
+      print("time_difference:", datetime.now(timezone.utc) - datetime.utcfromtimestamp(self.start_time).replace(tzinfo=timezone.utc))
   
   def calculate_first_emi_due_date(self, emi_payment_type, loan_disbursed_timestamp, tenure):
         if emi_payment_type == "Monthly":
@@ -226,6 +244,8 @@ class wallet_deposit(wallet_depositTemplate):
             first_emi_due_date = None
 
         return first_emi_due_date
+
+  
 
   # def timer_1_tick(self, **event_args):
   #       """This method is called Every [interval] seconds. Does not trigger if [interval] is 0."""
