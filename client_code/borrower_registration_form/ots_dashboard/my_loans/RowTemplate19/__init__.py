@@ -13,4 +13,10 @@ class RowTemplate19(RowTemplate19Template):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
 
+  def link_1_click(self, **event_args):
+    """This method is called when the link is clicked"""
+    value_to_pass = self.label_1.text
+    open_form('admin.dashboard.loan_management.approved_loans.view_profile', value_to_pass)
+
+
     # Any code you write here will run before the form opens.
