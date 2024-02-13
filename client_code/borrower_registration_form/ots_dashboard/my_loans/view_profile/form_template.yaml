@@ -1,4 +1,6 @@
-container: {type: ColumnPanel}
+container:
+  type: ColumnPanel
+  properties: {col_widths: '{}'}
 components:
 - type: Image
   properties: {role: null, vertical_align: center, height: 45, tooltip: '', border: '',
@@ -9,16 +11,6 @@ components:
   layout_properties:
     col_widths: {}
     grid_position: RARYGR,ZZWFUM
-- type: Button
-  properties: {role: elevated-button, align: right, tooltip: '', border: '', enabled: true,
-    foreground: white, visible: true, text: Home, font_size: 18, font: '', spacing_above: small,
-    icon_align: left, spacing_below: small, italic: false, background: '#0b2547',
-    bold: true, underline: false, icon: 'fa:home'}
-  name: button_1
-  layout_properties:
-    col_widths: {}
-    grid_position: RARYGR,IKIKUM
-  event_bindings: {click: button_1_click}
 - type: GridPanel
   properties: {spacing_above: medium, spacing_below: medium, background: '', foreground: '',
     border: '', visible: true, role: outlined-card, tooltip: ''}
@@ -88,6 +80,11 @@ components:
     name: label_8
     layout_properties: {grid_position: 'NWIEAF,YOSDKV', row: JUWMEX, width_xs: 4,
       col_xs: 6}
+  - type: Button
+    properties: {text: button_1}
+    name: button_1
+    layout_properties: {grid_position: 'QUSVMJ,LCYPBM', row: BCYNNR, width_xs: 12,
+      col_xs: 0}
   - type: Label
     properties: {role: null, align: right, tooltip: '', border: '', foreground: '#000337',
       visible: true, text: Application Status, font_size: null, font: '', spacing_above: small,
@@ -219,14 +216,4 @@ components:
     name: label_34
     layout_properties: {grid_position: 'FMEYUG,BVXSTI', row: GCJRBE, width_xs: 4,
       col_xs: 6}
-- type: Button
-  properties: {role: elevated-button, align: center, tooltip: '', border: '', enabled: true,
-    foreground: white, visible: true, text: Back, font_size: null, font: '16', spacing_above: small,
-    icon_align: left, spacing_below: small, italic: false, background: '#0b2547',
-    bold: true, underline: false, icon: 'fa:backward'}
-  name: button_1_copy
-  layout_properties:
-    col_widths: {}
-    grid_position: RVWOLZ,LDRAID
-  event_bindings: {click: button_1_copy_click}
 is_package: true
