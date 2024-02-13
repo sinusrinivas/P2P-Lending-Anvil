@@ -49,3 +49,6 @@ class ots_dashboard(ots_dashboardTemplate):
         email = self.email
         anvil.server.call('fetch_profile_data_and_insert', email, customer_id)
 
+  def button_4_click(self, **event_args):
+    open_form('borrower_registration_form.ots_dashboard.my_loans')
+

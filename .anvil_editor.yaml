@@ -79,6 +79,7 @@ unique_ids:
     lendor_registration_form.dashboard.view_lost_oppurtunities: '1699961316448706281090869.9006'
     admin.dashboard.loan_management.default_loans.ItemTemplate24: '1707132120783389953904553.8605'
     borrower_registration_form.star_1_borrower_registration_form_4_loan: '1698334844098576850520098.2563'
+    borrower_registration_form.ots_dashboard.my_loans.view_profile: '170781846204037880739353.10043'
     borrower_registration_form.dashboard.new_loan_request.check.RowTemplate27: '1704862271764988530792732.8186'
     admin.dashboard.manage_cms.manage_dropdowns.ItemTemplate28: '1707480377212216474976534.47202'
     wallet.wallet.all_transaction.RowTemplate29: '1704884931461492157927200.2286'
