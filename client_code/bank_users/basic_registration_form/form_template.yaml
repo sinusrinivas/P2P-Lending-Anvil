@@ -1,4 +1,6 @@
-container: {type: ColumnPanel}
+container:
+  type: ColumnPanel
+  properties: {col_widths: '{"QSHKVI":30,"JJEMAQ":20,"MYIECQ":10,"WFLRZP":30,"ZYIAJQ":20,"YBEUGO":10,"LEXOMW":30,"OGRIDF":20,"YKXHZL":10}'}
 components:
 - name: image_1_copy_copy_1_copy_1_copy
   properties: {role: null, vertical_align: center, height: 39, tooltip: '', border: '',
@@ -121,6 +123,10 @@ components:
   properties: {}
   type: FileLoader
   layout_properties: {grid_position: 'GAQQXD,OGRIDF'}
+- name: image_profile
+  properties: {height: 39.39996337890625}
+  type: Image
+  layout_properties: {grid_position: 'GAQQXD,YKXHZL'}
 - name: label_06
   properties: {text: Enter your Government ID1, bold: true}
   type: Label
@@ -150,6 +156,10 @@ components:
   properties: {}
   type: FileLoader
   layout_properties: {grid_position: 'MCCGKZ,ZYIAJQ'}
+- name: image_aadhar
+  properties: {height: 39.39996337890625}
+  type: Image
+  layout_properties: {grid_position: 'MCCGKZ,YBEUGO'}
 - name: label_08
   properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
     text: Enter your Government ID2, font_size: null, font: '', spacing_above: small,
@@ -181,6 +191,10 @@ components:
   properties: {}
   type: FileLoader
   layout_properties: {grid_position: 'TNBITH,JJEMAQ'}
+- name: image_pan
+  properties: {height: 39.39996337890625}
+  type: Image
+  layout_properties: {grid_position: 'TNBITH,MYIECQ'}
 - name: spacer_1_copy_copy
   properties: {height: 6.4444580078125}
   type: Spacer
