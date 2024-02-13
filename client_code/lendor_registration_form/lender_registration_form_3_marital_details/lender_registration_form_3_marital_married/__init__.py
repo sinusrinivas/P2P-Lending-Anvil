@@ -58,8 +58,7 @@ class lender_registration_form_3_marital_married(lender_registration_form_3_mari
             self.button_submit_copy_2.visible = True
             self.button_submit_copy_3.visible = False
             self.selected_radio_button = "spouse"
-        else:
-            alert("You are not married. Please select another option.")
+
 
     def radio_button_4_clicked(self, **event_args):
         """This method is called when this radio button is selected"""
@@ -150,7 +149,7 @@ class lender_registration_form_3_marital_married(lender_registration_form_3_mari
             guarantor_address=details['father_address'],
             another_person=details['another_person']  # Store the selected radio button's name
         )
-        alert("Details submitted successfully!")
+       
         open_form('lendor_registration_form.lender_registration_form_4_bank_form_1',user_id = user_id)
 
     def button_submit_copy_click(self, **event_args):
@@ -167,8 +166,8 @@ class lender_registration_form_3_marital_married(lender_registration_form_3_mari
             guarantor_address=details['mother_address'],
             another_person=details['another_person']  # Store the selected radio button's name
         )
-        alert("Details submitted successfully!")
-        open_form('lendor_registration_form.lender_registration_form_4_bank_form_1',user_id = user_id)
+        
+        open_form('lendor_registration_form.lender_registration_form_4_bank_form_1',user_id = self.userId)
 
     def button_submit_copy_2_click(self, **event_args):
         """This method is called when the button is clicked"""
@@ -185,8 +184,8 @@ class lender_registration_form_3_marital_married(lender_registration_form_3_mari
             guarantor_annual_earning=details['annual_earning'],
             another_person=details['another_person']  # Store the selected radio button's name
         )
-        alert("Details submitted successfully!")
-        open_form('lendor_registration_form.lender_registration_form_4_bank_form_1',user_id = user_id)
+    
+        open_form('lendor_registration_form.lender_registration_form_4_bank_form_1',user_id = self.userId)
       
     def button_submit_copy_3_click(self, **event_args):
         """This method is called when the button is clicked"""
@@ -202,5 +201,5 @@ class lender_registration_form_3_marital_married(lender_registration_form_3_mari
             guarantor_person_relation= details['related_person_relation'],
             another_person=details['another_person']  # Store the selected radio button's name
         )
-        alert("Details submitted successfully!")
-        open_form('lendor_registration_form.lender_registration_form_4_bank_form_1',user_id = user_id)
+     
+        open_form('lendor_registration_form.lender_registration_form_4_bank_form_1',user_id = self.userId)
