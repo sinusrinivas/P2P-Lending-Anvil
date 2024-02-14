@@ -11,8 +11,9 @@ from anvil import open_form, server
 # from .. import bmain_form_module as main_form_module
 # from ...lendor_registration_form.dashboard import lendor_main_form_module as main_form_module
 from ...borrower_registration_form.dashboard import main_form_module
-from datetime import datetime
+from datetime import datetime, timezone
 from datetime import timedelta
+import time
 
 class wallet_deposit(wallet_depositTemplate):
   def __init__(self,entered_loan_id,entered_borrower_customer_id, **properties):
@@ -20,6 +21,11 @@ class wallet_deposit(wallet_depositTemplate):
     self.entered_borrower_customer_id = entered_borrower_customer_id
     self.user_id = main_form_module.userId
     self.selected_row = None
+    self.start_time = time.time()
+    start_time = self.start_time
+    
+    
+    self.check_time_difference()
     
 
     # Set Form properties and Data Bindings.
@@ -51,38 +57,22 @@ class wallet_deposit(wallet_depositTemplate):
     else:
       open_form("borrower_registration_form.dashboard")
 
-  # def home_main_form_link_click(self, **event_args):
+
+  # def about_main_form_link_click(self, **event_args):
   #   """This method is called when the link is clicked"""
-  #   print("Before getting user_type - user_id:", self.user_id)
+  #   open_form("lendor_registration_form.dashboard.dasboard_about")
 
-  #   user_request = app_tables.fin_user_profile.get(customer_id=self.user_id)
+  # def contact_main_form_link_click(self, **event_args):
+  #   """This method is called when the link is clicked"""
+  #   open_form("lendor_registration_form.dashboard.dasboard_contact")
 
-  #   if user_request:
-  #       self.user_type = user_request['usertype']
-  #       print("User type retrieved:", self.user_type)
-  #   else:
-  #       print("No user request found for user_id:", self.user_id)
+  # def notification_link_click(self, **event_args):
+  #   """This method is called when the link is clicked"""
+  #   open_form('lendor_registration_form.dashboard.notification')
 
-  #   if self.user_type == "lendor":
-  #       open_form("lendor_registration_form.dashboard")
-  #   else:
-  #       open_form("borrower_registration_form.dashboard")
-
-  def about_main_form_link_click(self, **event_args):
-    """This method is called when the link is clicked"""
-    open_form("lendor_registration_form.dashboard.dasboard_about")
-
-  def contact_main_form_link_click(self, **event_args):
-    """This method is called when the link is clicked"""
-    open_form("lendor_registration_form.dashboard.dasboard_contact")
-
-  def notification_link_click(self, **event_args):
-    """This method is called when the link is clicked"""
-    open_form('lendor_registration_form.dashboard.notification')
-
-  def button_2_click(self, **event_args):
-    """This method is called when the button is clicked"""
-    pass
+  # def button_2_click(self, **event_args):
+  #   """This method is called when the button is clicked"""
+  #   pass
 
   def deposit_btn_click(self, **event_args):
     """This method is called when the button is clicked"""
@@ -139,6 +129,7 @@ class wallet_deposit(wallet_depositTemplate):
                     loan_disbursed_timestamp = loan_row["loan_disbursed_timestamp"]
                     new_balance = wallet_row['wallet_amount'] - loan_amount
 
+                    self.start_time = time.time()
                     # Update the wallet_amount in fin_wallet
                     wallet_row['wallet_amount'] = new_balance
                     wallet_row.update()
@@ -180,6 +171,7 @@ class wallet_deposit(wallet_depositTemplate):
                       loan_row['loan_updated_status'] = updated_loan_status
                       # Save the changes to the loan_row
                       loan_row.update()
+                      self.check_time_difference()
                   
                       alert(f"Loan Amount Paid to Borrower\nWallet Amount Updated")
                       open_form('lendor_registration_form.dashboard')
@@ -190,8 +182,49 @@ class wallet_deposit(wallet_depositTemplate):
                     alert("Loan details not found.")
         else:
             alert("Deposit failed!")
-          
 
+  def check_time_difference(self):
+        current_time = datetime.now(timezone.utc)
+        # print("current_time:", current_time)
+        start_time_utc = datetime.utcfromtimestamp(self.start_time).replace(tzinfo=timezone.utc)
+        
+        time_difference = current_time - start_time_utc
+
+        if time_difference.total_seconds() > 120:  # 120 seconds = 2 minutes
+            # Update loan status based on the comparison of wallet_amount and loan_amount
+            
+            wallet_row = app_tables.fin_wallet.get(user_email=self.email)
+            loan_row = app_tables.fin_loan_details.get(loan_id=self.entered_loan_id)
+
+            if wallet_row and loan_row:
+                loan_amount = loan_row['loan_amount']
+                wallet_amount = wallet_row['wallet_amount']
+
+                if loan_amount > wallet_amount:
+                    # Update loan status to 'lost opportunities'
+                    loan_row['loan_updated_status'] = 'lost opportunities'
+                    loan_row.update()
+                    print("loan_updated_status as lost opportunities")
+                    alert("The designated time has passed. The loan has moved to the 'Lost Opportunities' status.")
+                    open_form('lendor_registration_form.dashboard')
+                else:
+                    alert("Time has passed, but wallet_amount is sufficient. No change in loan status.")
+                    open_form('lendor_registration_form.dashboard')
+            else:
+                alert("Error: Wallet or loan details not found.")
+
+   
+  def form_show(self, **event_args):
+        self.start_time = time.time()  # Set the start time when the form is shown
+        self.check_time_difference()
+
+  def timer_1_tick(self, **event_args):
+    """This method is called Every [interval] seconds. Does not trigger if [interval] is 0."""
+    self.check_time_difference()
+    # Print time_difference every 30 seconds
+    if int(time.time() - self.start_time) % 30 == 0:
+      print("time_difference:", datetime.now(timezone.utc) - datetime.utcfromtimestamp(self.start_time).replace(tzinfo=timezone.utc))
+  
   def calculate_first_emi_due_date(self, emi_payment_type, loan_disbursed_timestamp, tenure):
         if emi_payment_type == "Monthly":
             first_emi_due_date = (loan_disbursed_timestamp + timedelta(days=30)).date()
@@ -211,38 +244,73 @@ class wallet_deposit(wallet_depositTemplate):
             first_emi_due_date = None
 
         return first_emi_due_date
+
+  
+
+  # def timer_1_tick(self, **event_args):
+  #       """This method is called Every [interval] seconds. Does not trigger if [interval] is 0."""
+  #       self.start_time = time.time()  # Initialize start_time here
+  #       start_time = self.start_time
+  #       # Check if 2 minutes have passed
+  #       elapsed_time = time.time() - start_time
+  #       if elapsed_time >= 120:  # 2 minutes
+  #           self.timer_1.enabled = False  # Stop the timer
+
+  #           # Check loan_amount and wallet_amount after 2 minutes
+  #           email = self.email
+  #           wallet_row = app_tables.fin_wallet.get(user_email=email)
+  #           if wallet_row:
+  #               new_balance = wallet_row['wallet_amount']
+
+  #               # Retrieve loan details
+  #               entered_loan_id = self.entered_loan_id
+  #               loan_row = app_tables.fin_loan_details.get(loan_id=entered_loan_id)
+
+  #               if loan_row:
+  #                   loan_amount = loan_row['loan_amount']
+
+  #                   if loan_amount > new_balance:
+  #                       # Update loan status to 'lost opportunities'
+  #                       loan_row['loan_updated_status'] = 'lost opportunities'
+  #                       loan_row.update()
+  #                       alert("The designated time has passed. The loan has moved to the 'Lost Opportunities' status.")
+  #                       open_form('lendor_registration_form.dashboard')
+  #                   else:
+  #                       alert("The designated time has passed, but the loan_amount is not greater than the wallet_amount.")
+  #               else:
+  #                   alert("Loan details not found.")
+  #           else:
+  #               alert("Wallet details not found.")
     
-  def withdraw_money_btn_click(self, **event_args):
-    amount_entered = self.amount_text_box.text
+  # def withdraw_money_btn_click(self, **event_args):
+  #   amount_entered = self.amount_text_box.text
 
-    try:
-      withdraw_amount = int(amount_entered)
-    except ValueError:
-      return
+  #   try:
+  #     withdraw_amount = int(amount_entered)
+  #   except ValueError:
+  #     return
 
-    customer_id = 1000
-    email = self.email
+  #   customer_id = 1000
+  #   email = self.email
 
-    wallet_row = app_tables.fin_wallet.get(user_email=email)
+  #   wallet_row = app_tables.fin_wallet.get(user_email=email)
 
-    if wallet_row is None:
-      wallet_row = app_tables.fin_wallet.add_row(user_email=email, wallet_amount=0)
+  #   if wallet_row is None:
+  #     wallet_row = app_tables.fin_wallet.add_row(user_email=email, wallet_amount=0)
 
-    if anvil.server.call('withdraw_money', email=email, withdraw_amount=withdraw_amount, customer_id=customer_id):
-      alert("Withdrawal successful!")
-      # Update the balance label with the new balance value
-      wallet_row = app_tables.fin_wallet.get(user_email=email)
-      if wallet_row:
-        self.balance_lable.text = f"{wallet_row['wallet_amount']}"
-    elif wallet_row is not None and withdraw_amount > wallet_row['wallet_amount']:
-      alert("Insufficient funds for withdrawal.")
-    else:
-      alert("Withdrawal failed!")
+  #   if anvil.server.call('withdraw_money', email=email, withdraw_amount=withdraw_amount, customer_id=customer_id):
+  #     alert("Withdrawal successful!")
+  #     # Update the balance label with the new balance value
+  #     wallet_row = app_tables.fin_wallet.get(user_email=email)
+  #     if wallet_row:
+  #       self.balance_lable.text = f"{wallet_row['wallet_amount']}"
+  #   elif wallet_row is not None and withdraw_amount > wallet_row['wallet_amount']:
+  #     alert("Insufficient funds for withdrawal.")
+  #   else:
+  #     alert("Withdrawal failed!")
 
   def all_transaction_btn_click(self, **event_args):
     """This method is called when the button is clicked"""
     open_form("wallet.wallet.all_transaction")
 
-  def timer_1_tick(self, **event_args):
-    """This method is called Every [interval] seconds. Does not trigger if [interval] is 0."""
-    pass
+  

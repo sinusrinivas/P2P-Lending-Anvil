@@ -12,6 +12,8 @@ from datetime import datetime,timedelta
 from ..main_form import main_form_module
 from ..user_form import user_module
 import re
+# from PIL import Image
+# from io import BytesIO
 
 class basic_registration_form(basic_registration_formTemplate):
   def __init__(self,**properties):
@@ -111,3 +113,24 @@ class basic_registration_form(basic_registration_formTemplate):
         dob = self.date_picker_1.date
         if not dob or dob > datetime.now().date():
             self.dob_label.text = ''
+
+  def registration_img_aadhar_file_loader_change(self, file, **event_args):
+    # Function to handle aadhar card file upload event
+    if file is not None:
+      # Display the image in an Image component
+      self.image_aadhar.display_mode = file
+      self.image_aadhar.visible = True
+
+  def registration_img_pan_file_loader_change(self, file, **event_args):
+    # Function to handle pan card file upload event
+    if file is not None:
+      # Display the image in an Image component
+      self.image_pan.display_mode = file
+      self.image_pan.visible = True
+
+  def registration_img_file_loader_change(self, file, **event_args):
+    # Function to handle user photo file upload event
+    if file is not None:
+        # Display the image in an Image component
+        self.image_user_photo.display_mode = file
+        self.image_user_photo.visible = True  
