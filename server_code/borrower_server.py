@@ -7,6 +7,7 @@ import anvil.tables.query as q
 from anvil.tables import app_tables
 import anvil.server
 from datetime import datetime
+from . import bessem as bessemfunctions
 
 
 # @anvil.server.callable
@@ -133,6 +134,9 @@ def add_borrower_step9(bank_id,bank_branch, user_id):
     row[0]['usertype'] = 'borrower'
     row[0]['last_confirm'] = True
     row[0]['form_count']=9
+    row[0]['bessem_value'] = bessemfunctions.final_points_update_bessem_table()
+    find_user_and_add_bessem_value(users_id=user_id)
+    
 
 @anvil.server.callable
 def update_loan_details(loan_id, emi, total_repayment_amount, interest_rate):
@@ -268,3 +272,8 @@ def generate_emi_id():
 
 # bessem code
 
+def find_user_and_add_bessem_value(user_id):
+  users = app_tables.fin_beseem_score.search(borrower_customer_id=user_id)
+  if users:
+    users[0]['total_point']=bessemfunctions.final_points_update_bessem_table()
+    users[0]['user_type'] = 'borrower'
