@@ -61,7 +61,7 @@ class main_form(main_formTemplate):
           if user_type == 'lender' or user_type=='borrower':
             open_form('bank_users.basic_registration_form')
           else:
-            open_form('')
+            open_form('admin.dashboard')
 
 #-- imp logic dont go up--#
 
