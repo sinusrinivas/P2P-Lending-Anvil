@@ -201,7 +201,18 @@ class payment_details_extension(payment_details_extensionTemplate):
             formatted_payment_date = f"{payment_date:%Y-%m-%d}" if payment_date else "Awaiting Update"
         
             if month <= last_paid_emi_number:
-                emi = self.calculate_scheduled_payment(selected_row['loan_amount'], monthly_interest_rate, selected_row['tenure'])
+              if selected_row['emi_payment_type'] == 'Monthly':
+                    emi = self.calculate_scheduled_payment(selected_row['loan_amount'], monthly_interest_rate, total_tenure)
+              elif selected_row['emi_payment_type'] == 'One Time':
+                    pass
+              elif selected_row['emi_payment_type'] == 'Three Month':
+                    if (month - last_paid_emi_number) % 3 == 1:
+                        emi = self.calculate_scheduled_payment(selected_row['loan_amount'], monthly_interest_rate, (total_tenure/3))
+                elif selected_row['emi_payment_type'] == 'Six Month':
+                    if (month - last_paid_emi_number) % 6 == 1:
+                        emi = self.calculate_scheduled_payment(selected_row['loan_amount'], monthly_interest_rate, (total_tenure/6))
+        
+              
             else:
                 if selected_row['emi_payment_type'] == 'Monthly':
                     emi = self.calculate_scheduled_payment(selected_row['loan_amount'], monthly_interest_rate, total_tenure)
