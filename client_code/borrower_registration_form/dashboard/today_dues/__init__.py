@@ -20,7 +20,7 @@ class today_dues(today_duesTemplate):
 
         # Fetch all loan details from fin_emi_table where next_payment matches today's date
         all_loans = app_tables.fin_emi_table.search(
-            next_payment=q.greater_than_or_equal_to(today_date)
+            next_payment=q.less_than_or_equal_to(today_date)
         )
 
         # Create a list to store loan details
@@ -68,7 +68,7 @@ class today_dues(today_duesTemplate):
         # fetch the loan details based on the first_payment_due_date
         if not loan_details:
           all_loans_due = app_tables.fin_loan_details.search(
-              first_emi_payment_due_date=q.greater_than_or_equal_to(today_date)
+              first_emi_payment_due_date=q.less_than_or_equal_to(today_date)
           )
       
           for loan_due in all_loans_due:
