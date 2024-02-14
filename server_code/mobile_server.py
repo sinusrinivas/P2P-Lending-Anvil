@@ -123,7 +123,7 @@ def calculate_emi_details(loan_amount, tenure_months, user_id, interest_rate, to
             'Principal': f"₹ {principal_amount:.2f}",
             'Interest': f"₹ {interest_amount:.2f}",
             'BeginningBalance': f"₹ {beginning_balance:.2f}",
-            'TotalPayment': f"₹ {emi:.2f}",  # Assuming no extra payment for simplicity
+            'TotalPayment': f"₹ {emi:.2f}",  
             'EndingBalance': f"₹ {ending_balance:.2f}"
         })
 
