@@ -14,14 +14,10 @@ components:
       spacing_below: small, background: '', horizontal_align: left}
     name: image_1
     layout_properties: {grid_position: 'WYPGSC,YBEPXY', width: 193, slot: title}
-  - type: Button
-    properties: {role: null, align: right, tooltip: '', border: '', enabled: true,
-      foreground: 'theme:On Primary', visible: true, text: Log Out, font_size: null,
-      font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
-      background: '#00008B', bold: false, underline: false, icon: ''}
-    name: button_1
-    layout_properties: {grid_position: 'WYPGSC,MKCRFL'}
-    event_bindings: {click: button_1_click}
+  - name: logout_1_copy
+    properties: {}
+    type: form:borrower_registration_form.logout
+    layout_properties: {grid_position: 'WYPGSC,BOGFWV'}
   - type: XYPanel
     properties: {height: 505}
     name: xy_panel_1
