@@ -181,6 +181,23 @@ components:
       type: Button
       layout_properties: {grid_position: 'YUTUEO,ZDKIXA'}
       event_bindings: {click: professioon_click}
+  - name: outlined_card_1_copy_7_copy
+    properties: {role: outlined-card, tooltip: '', border: '', foreground: '', visible: true,
+      wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '',
+      spacing_below: small, background: '#00008B'}
+    type: ColumnPanel
+    layout_properties: {x: 764.6918661892414, y: 140.69196537137032, width: 150.36145556640614}
+    components:
+    - name: button_1_copy_8
+      properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
+        foreground: 'theme:On Primary', visible: true, text: 'Salary
+
+          Type', font_size: null, font: '', spacing_above: small, icon_align: left,
+        spacing_below: small, italic: false, background: '', bold: false, underline: false,
+        icon: ''}
+      type: Button
+      layout_properties: {grid_position: 'YUTUEO,ZDKIXA'}
+      event_bindings: {click: salary_click}
 - name: column_panel_1
   properties: {role: null, tooltip: '', border: '', foreground: '', visible: true,
     wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
