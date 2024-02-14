@@ -790,10 +790,10 @@ db_schema:
       admin_ui: {width: 200, order: 0}
       type: string
     - name: borrower_customer_id
-      admin_ui: {width: 200, order: 1}
+      admin_ui: {order: 1.75, width: 200}
       type: number
     - name: borrower_email
-      admin_ui: {width: 200, order: 2}
+      admin_ui: {order: 1.9375, width: 200}
       type: string
     - name: payment_number
       admin_ui: {order: 7.5, width: 200}
@@ -808,22 +808,22 @@ db_schema:
       admin_ui: {width: 200, order: 7}
       type: string
     - name: loan_id
-      admin_ui: {order: 8.25, width: 200}
+      admin_ui: {order: 1.5, width: 200}
       type: string
     - name: scheduled_payment_made
-      admin_ui: {order: 13, width: 232}
+      admin_ui: {order: 1.625, width: 200}
       type: datetime
     - name: emi_number
-      admin_ui: {order: 10.25, width: 200}
+      admin_ui: {order: 1.6875, width: 200}
       type: number
     - name: account_number
-      admin_ui: {order: 8.5, width: 200}
+      admin_ui: {order: 1.875, width: 200}
       type: string
     - name: next_payment
       admin_ui: {order: 10.5, width: 200}
       type: date
     - name: scheduled_payment
-      admin_ui: {order: 10.375, width: 200}
+      admin_ui: {order: -1, width: 200}
       type: date
   fin_borrower_business_type:
     client: full
