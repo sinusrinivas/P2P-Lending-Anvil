@@ -15,12 +15,6 @@ import anvil.media
 from anvil import Media
 
 
-
-
-
-
-
-
 @anvil.server.callable
 def calculate_extension_details(loan_id, loan_extension_months):
     # Fetch necessary loan details from the Anvil data tables
@@ -94,3 +88,46 @@ def calculate_extension_details(loan_id, loan_extension_months):
     else:
         return "Loan details not found"
 
+
+@anvil.server.callable
+def calculate_emi_details(loan_amount, tenure_months, user_id, interest_rate, total_repayment_amount, product_id, membership_type, credit_limit, payment_type):
+    payment_details = []
+  
+
+    # Monthly interest rate
+    monthly_interest_rate = (interest_rate / 100) / 12
+
+    # Calculate EMI (monthly installment)
+    emi = (loan_amount * monthly_interest_rate * ((1 + monthly_interest_rate) ** tenure_months)) / (((1 + monthly_interest_rate) ** tenure_months) - 1)
+
+    # Initialize the first beginning balance with the initial loan amount
+    beginning_balance = loan_amount
+    payment_date_placeholder = "Awaiting update"
+
+    # Calculate payment details for each month up to the tenure
+    for month in range(1, tenure_months + 1):
+        # Calculate interest amount for the month
+        interest_amount = beginning_balance * monthly_interest_rate
+
+        # Calculate principal amount for the month
+        principal_amount = emi - interest_amount
+
+        # Update ending balance for the current iteration
+        ending_balance = beginning_balance - principal_amount
+
+        # Add payment details to the list
+        payment_details.append({
+            'PaymentNumber': month,
+            'PaymentDate': payment_date_placeholder,
+            'ScheduledPayment': f"₹ {emi:.2f}",
+            'Principal': f"₹ {principal_amount:.2f}",
+            'Interest': f"₹ {interest_amount:.2f}",
+            'BeginningBalance': f"₹ {beginning_balance:.2f}",
+            'TotalPayment': f"₹ {emi:.2f}",  # Assuming no extra payment for simplicity
+            'EndingBalance': f"₹ {ending_balance:.2f}"
+        })
+
+        # Update beginning balance for the next iteration
+        beginning_balance = ending_balance
+
+    return payment_details
