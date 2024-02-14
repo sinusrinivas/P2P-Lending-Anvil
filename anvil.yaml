@@ -895,6 +895,14 @@ db_schema:
       admin_ui: {width: 200, order: 18}
       type: number
     title: fin_extends_loan
+  fin_lendor_gender_2:
+    title: fin_lendor_gender
+    client: none
+    server: full
+    columns:
+    - name: lendor_gender
+      admin_ui: {width: 200}
+      type: string
   fin_borrower_marrital_status:
     client: full
     server: full
