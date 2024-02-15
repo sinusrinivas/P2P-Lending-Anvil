@@ -5,10 +5,11 @@ from ... import app_tables
 from ._anvil_designer import loan_typeTemplate
 
 class loan_type(loan_typeTemplate):
-    def __init__(self, product_group, product_cat, max_amount_lb, entered_values=None, **properties):
+    def __init__(self, product_group, product_cat, product_name, max_amount_lb, entered_values=None, **properties):
         self.user_id = main_form_module.userId
         self.proctct_g = product_group
         self.prodct_cate = product_cat
+        self.product_name = product_name
         self.credit_limt = max_amount_lb
         self.init_components(**properties)
 
@@ -20,7 +21,7 @@ class loan_type(loan_typeTemplate):
         # Load previously entered values when the form is initialized
         self.load_entered_values(entered_values)
 
-        user_request = app_tables.fin_product_details.get(product_categories=self.prodct_cate)
+        user_request = app_tables.fin_product_details.get(product_name=self.product_name)
         if user_request:
             self.roi = user_request['roi']
             self.processing_fee = user_request['processing_fee']
@@ -262,7 +263,7 @@ class loan_type(loan_typeTemplate):
       """This method is called when this radio button is selected"""
       pass
       
-loan_type_1 = loan_type('product_group_value', 'product_cat_value', 'self.credit_limt')
+loan_type_1 = loan_type('product_group_value', 'product_cat_value', 'product_name', 'self.credit_limt')
 
 # Open the form
 open_form(loan_type_1)

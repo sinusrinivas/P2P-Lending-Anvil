@@ -28,6 +28,11 @@ class star_1_borrower_registration_form_3_marital_married(star_1_borrower_regist
         self.button_submit_copy_2.visible = False
         self.button_submit_copy_3.visible = False
         self.selected_radio_button = "father"
+        self.prev_1.visible = True
+        self.prev_2.visible = False
+        self.prev_3.visible = False
+        self.prev_4.visible = False
+        self.button_1.visible = False
 
     def radio_button_2_clicked(self, **event_args):
         """This method is called when this radio button is selected"""
@@ -40,6 +45,11 @@ class star_1_borrower_registration_form_3_marital_married(star_1_borrower_regist
         self.button_submit_copy_2.visible = False
         self.button_submit_copy_3.visible = False
         self.selected_radio_button = "Mother"
+        self.prev_1.visible = False
+        self.prev_2.visible = True
+        self.prev_3.visible = False
+        self.prev_4.visible = False
+        self.button_1.visible = False
 
     def radio_button_3_clicked(self, **event_args):
         """This method is called when this radio button is selected"""
@@ -53,6 +63,11 @@ class star_1_borrower_registration_form_3_marital_married(star_1_borrower_regist
             self.button_submit_copy_2.visible = True
             self.button_submit_copy_3.visible = False
             self.selected_radio_button = "spouse"
+            self.prev_1.visible = False
+            self.prev_2.visible = False
+            self.prev_3.visible = True
+            self.prev_4.visible = False
+            self.button_1.visible = False
 
 
     def radio_button_4_clicked(self, **event_args):
@@ -66,6 +81,11 @@ class star_1_borrower_registration_form_3_marital_married(star_1_borrower_regist
         self.button_submit_copy_2.visible = False
         self.button_submit_copy_3.visible = True
         self.selected_radio_button = "others"
+        self.prev_1.visible = False
+        self.prev_2.visible = False
+        self.prev_3.visible = False
+        self.prev_4.visible = True
+        self.button_1.visible = False
 
     def collect_details(self):
         # Collect details from the form
@@ -198,3 +218,19 @@ class star_1_borrower_registration_form_3_marital_married(star_1_borrower_regist
         )
  
         open_form('borrower_registration_form.star_1_borrower_registration_form_4_loan',user_id=self.userId)
+
+    def prev_1_click(self, **event_args):
+      """This method is called when the button is clicked"""
+      open_form('borrower_registration_form.star_1_borrower_registration_form_3_marital', user_id=self.userId)
+
+    def prev_2_click(self, **event_args):
+      """This method is called when the button is clicked"""
+      open_form('borrower_registration_form.star_1_borrower_registration_form_3_marital', user_id=self.userId)
+
+    def prev_3_click(self, **event_args):
+      """This method is called when the button is clicked"""
+      open_form('borrower_registration_form.star_1_borrower_registration_form_3_marital', user_id=self.userId)
+
+    def prev_4_click(self, **event_args):
+      """This method is called when the button is clicked"""
+      open_form('borrower_registration_form.star_1_borrower_registration_form_3_marital', user_id=self.userId)
