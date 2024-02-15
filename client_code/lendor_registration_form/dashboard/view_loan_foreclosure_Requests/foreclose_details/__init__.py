@@ -25,7 +25,7 @@ class foreclose_details(foreclose_detailsTemplate):
 
     def button_1_click(self, **event_args):
         """This method is called when the button is clicked"""
-        open_form("lendor_registration_form.dashboard.vlfr")
+        open_form("lendor_registration_form.dashboard.view_loan_foreclosure_Requests")
 
     def approve_click(self, **event_args):
         """This method is called when the 'Approve' button is clicked"""      
@@ -33,12 +33,12 @@ class foreclose_details(foreclose_detailsTemplate):
         # Save changes to the table
         self.selected_row.update()
         Notification("Borrower will get notified").show()
-        open_form("lendor_registration_form.dashboard.vlfr")
+        open_form("lendor_registration_form.dashboard.view_loan_foreclosure_Requests")
 
     def decline_click(self, **event_args):
         """This method is called when the 'Decline' button is clicked"""
         self.selected_row['status'] = 'rejected'
         self.selected_row.update()
         Notification("Borrower will get notified").show()
-        open_form("lendor_registration_form.dashboard.vlfr")
+        open_form("lendor_registration_form.dashboard.view_loan_foreclosure_Requests")
       

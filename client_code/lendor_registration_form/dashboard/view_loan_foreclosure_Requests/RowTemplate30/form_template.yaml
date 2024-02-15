@@ -17,7 +17,7 @@ components:
   name: label_2
   layout_properties: {column: BXHZZF}
   data_bindings:
-  - {property: text, code: 'self.item[''borrower_full_name'']'}
+  - {property: text, code: 'self.item[''borrower_name'']'}
 - type: Label
   properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
     visible: true, text: '', font_size: null, font: '', spacing_above: small, icon_align: left,
@@ -28,7 +28,7 @@ components:
   data_bindings:
   - {property: text, code: 'self.item[''loan_amount'']'}
 - type: Link
-  properties: {}
+  properties: {text: Veiw Details}
   name: link_1
   layout_properties: {column: NKUDSE}
   event_bindings: {click: link_1_click}
