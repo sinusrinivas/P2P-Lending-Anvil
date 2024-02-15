@@ -1118,7 +1118,7 @@ db_schema:
       type: string
     title: fin_lendor_qualification
   fin_lendor_lending_period:
-    client: none
+    client: full
     server: full
     columns:
     - name: lendor_lending_period

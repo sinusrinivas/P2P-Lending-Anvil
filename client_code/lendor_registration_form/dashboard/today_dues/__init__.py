@@ -7,8 +7,8 @@ import anvil.users
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
-from datetime import datetime, timedelta, timezone
-from .. import lendor_main_form_module as main_form_module
+from datetime import datetime, timezone,timedelta
+from .. import main_form_module as main_form_module
 
 class today_dues(today_duesTemplate):
   def __init__(self, **properties):
@@ -19,33 +19,37 @@ class today_dues(today_duesTemplate):
         today_date = datetime.now(timezone.utc).date()
 
         # Fetch all loan details from fin_emi_table where next_payment matches today's date
-        all_loans = app_tables.fin_emi_table.search(
-            next_payment=q.greater_than_or_equal_to(today_date)
-        )
+        all_loans = list(app_tables.fin_emi_table.search(
+            next_payment=q.less_than_or_equal_to(today_date)
+        ))
 
-        # Create a list to store loan details
-        loan_details = []
-        
-        # Populate loan details with loan amounts from fin_loan_details table
-        for loan in all_loans:
-            loan_id = loan['loan_id']
+        # Sort the list of loans in descending order based on next_payment date
+        all_loans.sort(key=lambda x: x['next_payment'], reverse=True)
+        # Check if any loans were found
+        if all_loans:
+            latest_loan = all_loans[0]
+            
+            # Fetch details for the latest loan
+            loan_id = latest_loan['loan_id']
             loan_details_row = app_tables.fin_loan_details.get(loan_id=loan_id)
             if loan_details_row is not None:
                 loan_amount = loan_details_row['loan_amount']
-                scheduled_payment = loan['scheduled_payment']
-                next_payment = loan['next_payment']
-                days_left = (next_payment - today_date).days
-                emi_number = loan['emi_number']
-                account_number = loan['account_number']
+                scheduled_payment = latest_loan['scheduled_payment']
+                next_payment = latest_loan['next_payment']
+                days_left = (today_date - next_payment).days
+                emi_number = latest_loan['emi_number']
+                account_number = latest_loan['account_number']
                 tenure = loan_details_row['tenure']
                 interest_rate = loan_details_row['interest_rate']
                 borrower_loan_created_timestamp = loan_details_row['borrower_loan_created_timestamp']
                 loan_updated_status = loan_details_row['loan_updated_status']
                 loan_disbursed_timestamp = loan_details_row['loan_disbursed_timestamp']
                 emi_payment_type = loan_details_row['emi_payment_type']
-                
-                
-                loan_details.append({
+                lender_customer_id = loan_details_row['lender_customer_id']
+                first_emi_payment_due_date = loan_details_row['first_emi_payment_due_date']
+
+                # Populate loan details
+                loan_details = [{
                     'loan_id': loan_id,
                     'loan_amount': loan_amount,
                     'scheduled_payment': scheduled_payment,
@@ -58,21 +62,29 @@ class today_dues(today_duesTemplate):
                     'loan_updated_status': loan_updated_status,
                     'loan_disbursed_timestamp': loan_disbursed_timestamp,
                     'next_payment': next_payment,
-                    'emi_payment_type': emi_payment_type
-                })
+                    'emi_payment_type': emi_payment_type,
+                    'lender_customer_id': lender_customer_id,
+                    'first_emi_payment_due_date': first_emi_payment_due_date
+                }]
                 
+                # Now you can use loan_details list containing details of the latest loan
+                print(loan_details)
+        else:
+            # Handle case where no loans are found for today's date
+            print("No loans due today.")
+          
         # If no loans are found with next_payment date matching today's date,
         # fetch the loan details based on the first_payment_due_date
         if not loan_details:
           all_loans_due = app_tables.fin_loan_details.search(
-              first_emi_payment_due_date=q.greater_than_or_equal_to(today_date)
+              first_emi_payment_due_date=q.less_than_or_equal_to(today_date)
           )
       
           for loan_due in all_loans_due:
               loan_id = loan_due['loan_id']
               loan_amount = loan_due['loan_amount']
               first_emi_payment_due_date = loan_due['first_emi_payment_due_date']
-              days_left = (first_emi_payment_due_date - today_date).days
+              days_left = (today_date - scheduled_payment).days
               # Fetch account number from user profile table based on customer_id
               user_profile = app_tables.fin_user_profile.get(customer_id=self.user_id)
               if user_profile is not None:
@@ -89,28 +101,29 @@ class today_dues(today_duesTemplate):
               loan_updated_status = loan_due['loan_updated_status']
               loan_disbursed_timestamp = loan_due['loan_disbursed_timestamp']
               emi_payment_type = loan_due['emi_payment_type']
+              lender_customer_id = loan_due['lender_customer_id']
               
               # Calculate next_payment based on first_payment_due_date
               if emi_payment_type == 'One Time':
-            # For one-time payment, set next_payment to a year after first_payment_due_date
-                  next_payment = first_emi_payment_due_date + timedelta(days=365)
+                if tenure:
+                  next_payment = loan_disbursed_timestamp.date() + timedelta(days=30 * tenure)
               elif emi_payment_type == 'Monthly':
                   # For monthly payment, set next_payment to a month after first_payment_due_date
-                  next_payment = first_emi_payment_due_date + timedelta(days=30)
+                  next_payment = loan_disbursed_timestamp.date() + timedelta(days=30)
               elif emi_payment_type == 'Three Month':
                   # For three-month payment, set next_payment to three months after first_payment_due_date
-                  next_payment = first_emi_payment_due_date + timedelta(days=90)
+                  next_payment = loan_disbursed_timestamp.date() + timedelta(days=90)
               elif emi_payment_type == 'Six Month':
                   # For six-month payment, set next_payment to six months after first_payment_due_date
-                  next_payment = first_emi_payment_due_date + timedelta(days=180)
+                  next_payment = loan_disbursed_timestamp.date() + timedelta(days=180)
               else:
                   # Default to monthly calculation if emi_payment_type is not recognized
-                  next_payment = first_emi_payment_due_date + timedelta(days=30)
+                  next_payment = loan_disbursed_timestamp.date() + timedelta(days=30)
               
               loan_details.append({
                   'loan_id': loan_id,
                   'loan_amount': loan_amount,
-                  'scheduled_payment': first_emi_payment_due_date,  # Set scheduled_payment to first_payment_due_date
+                  'scheduled_payment': loan_disbursed_timestamp.date(),  # Set scheduled_payment to first_payment_due_date first_emi_payment_due_date
                   'next_payment': next_payment,
                   'days_left': days_left,
                   'tenure': tenure,
@@ -120,10 +133,12 @@ class today_dues(today_duesTemplate):
                   'loan_disbursed_timestamp': loan_disbursed_timestamp,
                   'emi_number': emi_number,
                   'account_number': account_number,
-                  'emi_payment_type': emi_payment_type
+                  'emi_payment_type': emi_payment_type,
+                  'lender_customer_id': lender_customer_id,
+                  # 'first_payment_due_date': first_payment_due_date
               })
         self.repeating_panel_1.items = loan_details
-      
+        
   
   def link_1_click(self, **event_args):
     """This method is called when the link is clicked"""
