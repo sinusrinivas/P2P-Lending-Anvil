@@ -58,14 +58,17 @@ components:
     components:
     - type: Button
       properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
-        foreground: '', visible: true, text: Approved, font_size: null, font: '',
+        foreground: white, visible: true, text: Approved, font_size: null, font: '',
         spacing_above: small, icon_align: left, spacing_below: small, italic: false,
         background: '', bold: false, underline: false, icon: ''}
       name: button_3
       layout_properties: {grid_position: 'FJZSQF,LSBGEG'}
       event_bindings: {click: button_3_click}
     - name: label_5
-      properties: {align: center}
+      properties: {role: null, align: center, tooltip: '', border: '', foreground: White,
+        visible: true, text: '', font_size: null, font: '', spacing_above: small,
+        icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+        underline: false, icon: ''}
       type: Label
       layout_properties: {grid_position: 'LCASWG,YDGEKT'}
   - name: outlined_card_2
@@ -79,14 +82,17 @@ components:
     components:
     - name: button_2
       properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
-        foreground: '', visible: true, text: Rejected, font_size: null, font: '',
+        foreground: white, visible: true, text: Rejected, font_size: null, font: '',
         spacing_above: small, icon_align: left, spacing_below: small, italic: false,
         background: '', bold: false, underline: false, icon: ''}
       type: Button
       layout_properties: {grid_position: 'FNHLVB,HDEYKB'}
       event_bindings: {click: button_2_click}
     - name: label_6
-      properties: {align: center}
+      properties: {role: null, align: center, tooltip: '', border: '', foreground: white,
+        visible: true, text: '', font_size: null, font: '', spacing_above: small,
+        icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+        underline: false, icon: ''}
       type: Label
       layout_properties: {grid_position: 'UZVEOM,KGCRHE'}
   - name: outlined_card_1_copy_3
@@ -100,14 +106,17 @@ components:
     components:
     - type: Button
       properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
-        foreground: '', visible: true, text: New Request, font_size: null, font: '',
+        foreground: white, visible: true, text: New Request, font_size: null, font: '',
         spacing_above: small, icon_align: left, spacing_below: small, italic: false,
         background: '', bold: false, underline: false, icon: ''}
       name: button_5
       layout_properties: {grid_position: 'MOULNU,LEUJAU'}
       event_bindings: {click: button_5_click}
     - name: new_request
-      properties: {align: center}
+      properties: {role: null, align: center, tooltip: '', border: '', foreground: white,
+        visible: true, text: '', font_size: null, font: '', spacing_above: small,
+        icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+        underline: false, icon: ''}
       type: Label
       layout_properties: {grid_position: 'NZNCOP,SKGMZB'}
   - name: outlined_card_1_copy_4
@@ -122,14 +131,17 @@ components:
     components:
     - type: Button
       properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
-        foreground: '', visible: true, text: All, font_size: null, font: '', spacing_above: small,
+        foreground: white, visible: true, text: All, font_size: null, font: '', spacing_above: small,
         icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
         underline: false, icon: ''}
       name: button_6
       layout_properties: {grid_position: 'LKUHOB,XESJNJ'}
       event_bindings: {click: button_6_click}
     - name: all
-      properties: {align: center}
+      properties: {role: null, align: center, tooltip: '', border: '', foreground: white,
+        visible: true, text: '', font_size: null, font: '', spacing_above: small,
+        icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+        underline: false, icon: ''}
       type: Label
       layout_properties: {grid_position: 'NZNCOP,SKGMZB'}
   - name: outlined_card_1_copy_2
@@ -143,14 +155,17 @@ components:
     components:
     - type: Button
       properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
-        foreground: '', visible: true, text: Under Process, font_size: null, font: '',
+        foreground: white, visible: true, text: Under Process, font_size: null, font: '',
         spacing_above: small, icon_align: left, spacing_below: small, italic: false,
         background: '', bold: false, underline: false, icon: ''}
       name: button_4
       layout_properties: {grid_position: 'ASNEUQ,FZFEWO'}
       event_bindings: {click: button_4_click}
     - name: label_5_copy
-      properties: {align: center}
+      properties: {role: null, align: center, tooltip: '', border: '', foreground: white,
+        visible: true, text: '', font_size: null, font: '', spacing_above: small,
+        icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+        underline: false, icon: ''}
       type: Label
       layout_properties: {grid_position: 'NZNCOP,SKGMZB'}
   - type: Label
