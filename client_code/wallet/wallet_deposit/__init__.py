@@ -16,11 +16,12 @@ from datetime import timedelta
 import time
 
 class wallet_deposit(wallet_depositTemplate):
-  def __init__(self,entered_loan_id,entered_borrower_customer_id, **properties):
+  def __init__(self,entered_loan_id,entered_borrower_customer_id, selected_row=None, **properties):
     self.entered_loan_id = entered_loan_id
     self.entered_borrower_customer_id = entered_borrower_customer_id
     self.user_id = main_form_module.userId
-    self.selected_row = None
+    # self.selected_row = None
+    self.selected_row = selected_row
     self.start_time = time.time()
     start_time = self.start_time
     
