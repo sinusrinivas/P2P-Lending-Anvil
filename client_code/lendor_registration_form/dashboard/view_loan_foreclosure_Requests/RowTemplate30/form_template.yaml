@@ -17,7 +17,7 @@ components:
   name: label_2
   layout_properties: {column: BXHZZF}
   data_bindings:
-  - {property: text, code: 'self.item[''borrower_full_name'']'}
+  - {property: text, code: 'self.item[''borrower_name'']'}
 - type: Label
   properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
     visible: true, text: '', font_size: null, font: '', spacing_above: small, icon_align: left,
