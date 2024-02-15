@@ -24,67 +24,69 @@ class payment_details_t(payment_details_tTemplate):
             self.load_payment_details(selected_row, entered_values)
 
     def load_payment_details(self, selected_row, entered_values):
-        self.load_entered_values(entered_values)
-        payment_details = []
-
-        # Calculate number of payment details based on emi_payment_type
-        num_payments = self.calculate_num_payments(selected_row)
-
-        for month in range(1, num_payments + 1):
-            payment_date = self.calculate_payment_date(selected_row, month)
-
-            emi, ending_balance = self.calculate_emi_and_balance(selected_row, month)
-
-            # Fetch extra payment from fin_extension_loan table
-            extension_row = app_tables.fin_extends_loan.get(
-                loan_id=selected_row['loan_id'],
-                emi_number=month
-            )
-            extra_payment = extension_row['extension_amount'] if extension_row else 0
-
-            # Fetch scheduled_payment_made and account_number from the emi_payments table
-            emi_row = app_tables.fin_emi_table.get(
-                loan_id=selected_row['loan_id'],
-                emi_number=month
-            )
-            scheduled_payment_made = emi_row['scheduled_payment_made'] if emi_row else None
-            account_number = emi_row['account_number'] if emi_row else None
-
-            # Update beginning balance for the next iteration
-            beginning_balance = ending_balance
-
-            # Calculate interest and principal amounts
-            monthly_interest_rate = (selected_row['interest_rate'] / 100) / 12
-            interest_amount = beginning_balance * monthly_interest_rate
-            principal_amount = emi - interest_amount
-            ending_balance = beginning_balance - principal_amount
-
-            # Determine display values for EMIDate and AccountNumber
-            scheduled_payment_made_display = f"{scheduled_payment_made:%Y-%m-%d}" if scheduled_payment_made else "N/A"
-            emi_time_display = f"{scheduled_payment_made:%I:%M %p}" if scheduled_payment_made else "N/A"
-            account_number_display = account_number if account_number else "N/A"
-
-            # Format payment date
-            formatted_payment_date = f"{payment_date:%Y-%m-%d}" if payment_date else "Awaiting Update"
-
-            # Add payment details to the list
-            payment_details.append({
-                'PaymentNumber': month,
-                'PaymentDate': formatted_payment_date,
-                'EMIDate': scheduled_payment_made_display,
-                'EMITime': emi_time_display,
-                'AccountNumber': account_number_display,
-                'ScheduledPayment': f"₹ {emi:.2f}",
-                'Principal': f"₹ {principal_amount:.2f}",
-                'Interest': f"₹ {interest_amount:.2f}",
-                'BeginningBalance': f"₹ {beginning_balance:.2f}",
-                'ExtraPayment': f"₹ {extra_payment:.2f}" if extra_payment is not None else "N/A",
-                'TotalPayment': f"₹ {emi + extra_payment if extra_payment is not None else emi:.2f}",
-                'EndingBalance': f"₹ {ending_balance:.2f}"
-            })
-
-        # Set the Data Grid's items property to the list of payment details
-        self.repeating_panel_1.items = payment_details
+      self.load_entered_values(entered_values)
+      payment_details = []
+  
+      # Calculate number of payment details based on emi_payment_type
+      num_payments = self.calculate_num_payments(selected_row)
+  
+      # Initialize beginning_balance to the loan amount
+      beginning_balance = selected_row['loan_amount']
+  
+      for month in range(1, num_payments + 1):
+          payment_date = self.calculate_payment_date(selected_row, month)
+  
+          emi, ending_balance = self.calculate_emi_and_balance(selected_row, month)
+  
+          # Fetch extra payment from fin_extension_loan table
+          extension_row = app_tables.fin_extends_loan.get(
+              loan_id=selected_row['loan_id'],
+              emi_number=month
+          )
+          extra_payment = extension_row['extension_amount'] if extension_row else 0
+  
+          # Fetch scheduled_payment_made and account_number from the emi_payments table
+          emi_row = app_tables.fin_emi_table.get(
+              loan_id=selected_row['loan_id'],
+              emi_number=month
+          )
+          scheduled_payment_made = emi_row['scheduled_payment_made'] if emi_row else None
+          account_number = emi_row['account_number'] if emi_row else None
+  
+          # Calculate interest and principal amounts based on the current month
+          monthly_interest_rate = (selected_row['interest_rate'] / 100) / 12
+          interest_amount = ending_balance * monthly_interest_rate
+          principal_amount = emi - interest_amount
+  
+          # Determine display values for EMIDate and AccountNumber
+          scheduled_payment_made_display = f"{scheduled_payment_made:%Y-%m-%d}" if scheduled_payment_made else "N/A"
+          emi_time_display = f"{scheduled_payment_made:%I:%M %p}" if scheduled_payment_made else "N/A"
+          account_number_display = account_number if account_number else "N/A"
+  
+          # Format payment date
+          formatted_payment_date = f"{payment_date:%Y-%m-%d}" if payment_date else "Awaiting Update"
+  
+          # Add payment details to the list
+          payment_details.append({
+              'PaymentNumber': month,
+              'PaymentDate': formatted_payment_date,
+              'EMIDate': scheduled_payment_made_display,
+              'EMITime': emi_time_display,
+              'AccountNumber': account_number_display,
+              'ScheduledPayment': f"₹ {emi:.2f}",
+              'Principal': f"₹ {principal_amount:.2f}",
+              'Interest': f"₹ {interest_amount:.2f}",
+              'BeginningBalance': f"₹ {beginning_balance:.2f}",
+              'ExtraPayment': f"₹ {extra_payment:.2f}" if extra_payment is not None else "N/A",
+              'TotalPayment': f"₹ {emi + extra_payment if extra_payment is not None else emi:.2f}",
+              'EndingBalance': f"₹ {ending_balance:.2f}"
+          })
+  
+          # Update beginning balance for the next iteration
+          beginning_balance = ending_balance
+  
+      # Set the Data Grid's items property to the list of payment details
+      self.repeating_panel_1.items = payment_details
 
     def load_entered_values(self, entered_values):
         if entered_values:
@@ -132,33 +134,34 @@ class payment_details_t(payment_details_tTemplate):
             return None
 
     def calculate_emi_and_balance(self, selected_row, current_month):
-        emi = self.calculate_emi(selected_row)
-        ending_balance = selected_row['loan_amount']
-        beginning_balance = selected_row['loan_amount']
-
-        if selected_row['emi_payment_type'] == 'Monthly':
-            # For monthly payments, calculate ending balance
-            for month in range(1, current_month + 1):
-                interest_amount = beginning_balance * (selected_row['interest_rate'] / 100) / 12
-                principal_amount = emi - interest_amount
-                ending_balance -= principal_amount
-                beginning_balance = ending_balance  # Update beginning balance for the next iteration
-        elif selected_row['emi_payment_type'] == 'Three Month':
-            # For three-month payments, calculate ending balance for each 3-month period
-            for period in range(1, (current_month // 3) + 1):
-                interest_amount = beginning_balance * (selected_row['interest_rate'] / 100) / 12 * 3
-                principal_amount = emi - interest_amount
-                ending_balance -= principal_amount
-                beginning_balance = ending_balance  # Update beginning balance for the next iteration
-        elif selected_row['emi_payment_type'] == 'Six Month':
-            # For six-month payments, calculate ending balance for each 6-month period
-            for period in range(1, (current_month // 6) + 1):
-                interest_amount = beginning_balance * (selected_row['interest_rate'] / 100) / 12 * 6
-                principal_amount = emi - interest_amount
-                ending_balance -= principal_amount
-                beginning_balance = ending_balance  # Update beginning balance for the next iteration
-
-        return emi, ending_balance
+      emi = self.calculate_emi(selected_row)
+      ending_balance = selected_row['loan_amount']
+      beginning_balance = selected_row['loan_amount']
+      
+  
+      if selected_row['emi_payment_type'] == 'Monthly':
+          # For monthly payments, calculate ending balance
+          for month in range(1, current_month + 1):
+              interest_amount = beginning_balance * (selected_row['interest_rate'] / 100) / 12
+              principal_amount = emi - interest_amount
+              ending_balance -= principal_amount
+              beginning_balance = ending_balance  # Update beginning balance for the next iteration
+      elif selected_row['emi_payment_type'] == 'Three Month':
+          # For three-month payments, calculate ending balance for each 3-month period
+          for period in range(1, (current_month // 3) + 1):
+              interest_amount = beginning_balance * (selected_row['interest_rate'] / 100) / 12 * 3
+              principal_amount = emi - interest_amount
+              ending_balance -= principal_amount
+              beginning_balance = ending_balance  # Update beginning balance for the next iteration
+      elif selected_row['emi_payment_type'] == 'Six Month':
+          # For six-month payments, calculate ending balance for each 6-month period
+          for period in range(1, (current_month // 6) + 1):
+              interest_amount = beginning_balance * (selected_row['interest_rate'] / 100) / 12 * 6
+              principal_amount = emi - interest_amount
+              ending_balance -= principal_amount
+              beginning_balance = ending_balance  # Update beginning balance for the next iteration
+              
+      return emi, ending_balance
 
     def calculate_num_payments(self, selected_row):
         tenure = selected_row['tenure']
@@ -175,15 +178,21 @@ class payment_details_t(payment_details_tTemplate):
         else:
             return 0
 
-    def calculate_emi(self, selected_row):
-        loan_amount = selected_row['loan_amount']
-        tenure = selected_row['tenure']
-        interest_rate = selected_row['interest_rate']
-
-        monthly_interest_rate = interest_rate / (12 * 100)
-        emi = (loan_amount * monthly_interest_rate * ((1 + monthly_interest_rate) ** tenure)) / (
-                ((1 + monthly_interest_rate) ** tenure) - 1)
-
+    def calculate_emi(self, selected_row, tenure=None):
+        tenure = selected_row['tenure'] if tenure is None else tenure
+        monthly_interest_rate = (selected_row['interest_rate'] / 100) / 12
+    
+        if selected_row['emi_payment_type'] == 'Monthly':
+            emi = (selected_row['loan_amount'] * monthly_interest_rate * ((1 + monthly_interest_rate) ** tenure)) / (((1 + monthly_interest_rate) ** tenure) - 1)
+        elif selected_row['emi_payment_type'] == 'One Time':
+            emi = selected_row['loan_amount'] / tenure
+        elif selected_row['emi_payment_type'] == 'Three Month':
+            emi = (selected_row['loan_amount'] * monthly_interest_rate * ((1 + monthly_interest_rate) ** (tenure / 3))) / (((1 + monthly_interest_rate) ** (tenure / 3)) - 1)
+        elif selected_row['emi_payment_type'] == 'Six Month':
+            emi = (selected_row['loan_amount'] * monthly_interest_rate * ((1 + monthly_interest_rate) ** (tenure / 6))) / (((1 + monthly_interest_rate) ** (tenure / 6)) - 1)
+        else:
+            emi = 0  # Handle unsupported payment types
+    
         return emi
 
     def button_1_click(self, **event_args):
