@@ -110,16 +110,19 @@ class wallet_deposit(wallet_depositTemplate):
 
         customer_id = 1000
         email = self.email
-        # selected_row = self.selected_row
+        selected_row = self.selected_row
         entered_loan_id = self.entered_loan_id
         entered_borrower_customer_id = self.entered_borrower_customer_id
 
         if anvil.server.call('deposit_money', email=email, deposit_amount=deposit_amount, customer_id=customer_id):
             alert("Deposit successful!")
+            entered_loan_id = self.entered_loan_id
+            entered_borrower_customer_id = self.entered_borrower_customer_id
             # Open Borr_loan_request form again with entered_loan_id and entered_borrower_customer_id
-            open_form('lendor_registration_form.dashboard.view_borrower_loan_request.Borr_loan_request', 
+            open_form('lendor_registration_form.dashboard.view_borrower_loan_request.Borr_loan_request',
+                       selected_row=selected_row,
                        entered_loan_id=entered_loan_id, 
-                       entered_borrower_customer_id=self.entered_borrower_customer_id)
+                       entered_borrower_customer_id=entered_borrower_customer_id)
 
         else:
             alert("Deposit failed!")

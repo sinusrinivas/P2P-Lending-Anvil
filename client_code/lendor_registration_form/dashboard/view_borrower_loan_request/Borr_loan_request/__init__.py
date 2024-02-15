@@ -21,7 +21,6 @@ class Borr_loan_request(Borr_loan_requestTemplate):
         self.user_id=main_form_1.userId
         use_id = self.user_id
         self.entered_loan_id = None
-
         self.email=main_form_module.email
         email = self.email
 
@@ -212,11 +211,12 @@ class Borr_loan_request(Borr_loan_requestTemplate):
            return
         # Assuming 'selected_row' is the selected row from the loan_details table
         selected_row = self.selected_row  
+        tenure = selected_row['tenure']
         email = main_form_module.email
         entered_loan_id = self.entered_loan_id
         entered_borrower_customer_id = self.entered_borrower_customer_id
       
-        tenure = selected_row['tenure']
+        
       
         # Call the server-side function
         signal = anvil.server.call('loan_disbursement_action', selected_row, email)
