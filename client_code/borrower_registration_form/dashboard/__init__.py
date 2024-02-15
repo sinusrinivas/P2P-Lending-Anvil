@@ -121,3 +121,7 @@ class dashboard(dashboardTemplate):
       """This method is called when the button is clicked"""
       open_form('borrower_registration_form.dashboard.extension_loan_request')
 
+    def outlined_button_1_copy_3_click(self, **event_args):
+      """This method is called when the button is clicked"""
+      pass
+
