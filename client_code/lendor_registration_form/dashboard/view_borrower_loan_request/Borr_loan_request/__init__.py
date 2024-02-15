@@ -26,18 +26,31 @@ class Borr_loan_request(Borr_loan_requestTemplate):
         email = self.email
 
         # self.entered_loan_id = entered_loan_id
+        if self.selected_row is not None:
+            # Populate labels with the selected row details
+            self.label_user_id.text = f"{selected_row['borrower_customer_id']}"
+            self.label_name.text = f"{selected_row['borrower_full_name']}"
+            self.label_loan_amount_applied.text = f"{selected_row['loan_amount']}"
+            self.label_loan_id.text = f"{selected_row['loan_id']}"
+            self.label_beseem_score.text = f"{selected_row['beseem_score']}"
+            self.label_loan_tenure.text = f"{selected_row['tenure']}"
+            self.label_credit_limit.text = f"{selected_row['credit_limit']}"
+            self.label_interest_rate.text = f"{selected_row['interest_rate']}"
+            self.update_ui_based_on_status()
+        else:
+            # Handle the case where selected_row is None
+            alert("Selected row is not available.")
         
-        
-        # Populate labels with the selected row details
-        self.label_user_id.text = f"{selected_row['borrower_customer_id']}"
-        self.label_name.text = f"{selected_row['borrower_full_name']}"
-        self.label_loan_amount_applied.text = f"{selected_row['loan_amount']}"
-        self.label_loan_id.text = f"{selected_row['loan_id']}"
-        self.label_beseem_score.text = f"{selected_row['beseem_score']}"
-        self.label_loan_tenure.text = f"{selected_row['tenure']}"
-        self.label_credit_limit.text = f"{selected_row['credit_limit']}"
-        self.label_interest_rate.text = f"{selected_row['interest_rate']}"
-        self.update_ui_based_on_status()
+        # # Populate labels with the selected row details
+        # self.label_user_id.text = f"{selected_row['borrower_customer_id']}"
+        # self.label_name.text = f"{selected_row['borrower_full_name']}"
+        # self.label_loan_amount_applied.text = f"{selected_row['loan_amount']}"
+        # self.label_loan_id.text = f"{selected_row['loan_id']}"
+        # self.label_beseem_score.text = f"{selected_row['beseem_score']}"
+        # self.label_loan_tenure.text = f"{selected_row['tenure']}"
+        # self.label_credit_limit.text = f"{selected_row['credit_limit']}"
+        # self.label_interest_rate.text = f"{selected_row['interest_rate']}"
+        # self.update_ui_based_on_status()
         
         # Fetch additional details from the 'borrower' table
         try:
@@ -193,7 +206,10 @@ class Borr_loan_request(Borr_loan_requestTemplate):
 
     def loan_disbursment_btn_click(self, **event_args):
         """This method is called when the button is clicked"""
-        
+         # Ensure that selected_row is not None before proceeding
+        if self.selected_row is None:
+           alert("Selected row is not available.")
+           return
         # Assuming 'selected_row' is the selected row from the loan_details table
         selected_row = self.selected_row  
         email = main_form_module.email

@@ -110,12 +110,16 @@ class wallet_deposit(wallet_depositTemplate):
 
         customer_id = 1000
         email = self.email
-        selected_row = self.selected_row
+        # selected_row = self.selected_row
         entered_loan_id = self.entered_loan_id
+        entered_borrower_customer_id = self.entered_borrower_customer_id
 
         if anvil.server.call('deposit_money', email=email, deposit_amount=deposit_amount, customer_id=customer_id):
             alert("Deposit successful!")
-            open_form('lendor_registration_form.dashboard.view_borrower_loan_request.Borr_loan_request', entered_loan_id)
+            # Open Borr_loan_request form again with entered_loan_id and entered_borrower_customer_id
+            open_form('lendor_registration_form.dashboard.view_borrower_loan_request.Borr_loan_request', 
+                       entered_loan_id=entered_loan_id, 
+                       entered_borrower_customer_id=self.entered_borrower_customer_id)
 
         else:
             alert("Deposit failed!")
@@ -227,8 +231,8 @@ class wallet_deposit(wallet_depositTemplate):
             if wallet_row and loan_row:
                 loan_amount = loan_row['loan_amount']
                 wallet_amount = wallet_row['wallet_amount']
-                self.entered_loan_id = entered_loan_id
-                self.entered_borrower_customer_id = entered_borrower_customer_id
+                entered_loan_id = self.entered_loan_id 
+                entered_borrower_customer_id = self.entered_borrower_customer_id
 
                 if loan_amount > wallet_amount:
                     # Update loan status to 'lost opportunities'
@@ -236,7 +240,7 @@ class wallet_deposit(wallet_depositTemplate):
                     loan_row.update()
                     print("loan_updated_status as lost opportunities")
                     alert("The designated time has passed. The loan has moved to the 'Lost Opportunities' status.")
-                    open_form('lendor_registration_form.dashboard.view_borrower_loan_request.Borr_loan_request', entered_loan_id)
+                    open_form('lendor_registration_form.dashboard')
                 else:
                     alert("Time has passed, but wallet_amount is sufficient. No change in loan status.")
                     open_form('lendor_registration_form.dashboard')
