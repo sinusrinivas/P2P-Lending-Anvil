@@ -18,7 +18,7 @@ def final_points_update_bessem_table():
   else:
     block_user()
 
-
+ 
 # caluculate from user_profile table
 def general_points():
   return 400
@@ -50,6 +50,7 @@ def fake_control():
 
 
 def fake_detection():
+  
   return True
 
 
