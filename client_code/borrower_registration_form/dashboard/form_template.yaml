@@ -108,11 +108,11 @@ components:
     event_bindings: {click: button_6_click}
   - name: outlined_button_1
     properties: {role: outlined-button, align: center, tooltip: '', border: '', enabled: true,
-      foreground: 'theme:On Primary', visible: true, text: 'Today''s Due                          ',
+      foreground: 'theme:On Primary', visible: true, text: 'Today''s  Due                          ',
       font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small,
       italic: false, background: '#00008B', bold: false, underline: false, icon: ''}
     type: Button
-    layout_properties: {row: VNSVWA, width_xs: 3, col_xs: 8, width: 143.5}
+    layout_properties: {row: VNSVWA, width_xs: 3, col_xs: 8, width: 251.5}
     event_bindings: {click: outlined_button_1_click}
   - name: outlined_button_3
     properties: {role: outlined-button, align: center, tooltip: '', border: '', enabled: true,
@@ -132,11 +132,11 @@ components:
     event_bindings: {click: outlined_button_6_click}
   - name: outlined_button_2
     properties: {role: outlined-button, align: center, tooltip: '', border: '', enabled: true,
-      foreground: 'theme:On Primary', visible: true, text: 'Loan Foreclose                           ',
+      foreground: 'theme:On Primary', visible: true, text: 'Loan Foreclosure                          ',
       font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small,
       italic: false, background: '#00008B', bold: false, underline: false, icon: ''}
     type: Button
-    layout_properties: {row: EMUNJQ, width_xs: 3, col_xs: 8, width: 143.5}
+    layout_properties: {row: EMUNJQ, width_xs: 3, col_xs: 8, width: 251.5}
     event_bindings: {click: outlined_button_2_click}
   - name: extended_loans
     properties: {role: outlined-button, align: center, tooltip: '', border: '', enabled: true,
