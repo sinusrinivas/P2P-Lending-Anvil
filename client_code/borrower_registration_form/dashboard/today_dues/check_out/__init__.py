@@ -171,8 +171,10 @@ class check_out(check_outTemplate):
                     self.selected_row['next_payment'] = next_next_payment
                     self.selected_row.update()
 
-                    self.status_label.text = "Payment successfully done..."
+                    #self.status_label.text = "Payment successfully done..."
                     self.button_1_copy_3.visible = False
+                    alert('Payment successfully done...')
+                    open_form('borrower_registration_form.dashboard')
                 else:
                     self.status_label.text = "Lender's wallet not found."
             else:
