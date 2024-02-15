@@ -20,6 +20,7 @@ class Borr_loan_request(Borr_loan_requestTemplate):
         self.init_components(**properties)
         self.user_id=main_form_1.userId
         use_id = self.user_id
+        self.entered_loan_id = None
 
         self.email=main_form_module.email
         email = self.email
