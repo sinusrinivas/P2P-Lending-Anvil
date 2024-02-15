@@ -36,5 +36,5 @@ class foreclose_details_approved_and_rejected(foreclose_details_approved_and_rej
 
   def button_1_click(self, **event_args):
     """This method is called when the button is clicked"""
-    open_form("lendor_registration_form.dashboard.vlfr")
+    open_form("lendor_registration_form.dashboard.view_loan_foreclosure_Requests")
 
