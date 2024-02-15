@@ -215,6 +215,18 @@ class Borr_loan_request(Borr_loan_requestTemplate):
         email = main_form_module.email
         entered_loan_id = self.entered_loan_id
         entered_borrower_customer_id = self.entered_borrower_customer_id
+        try:
+              entered_borrower_customer_id = int(entered_borrower_customer_id)
+              print("Saving to fin_disbursement_detail:")
+              print("entered_loan_id:", entered_loan_id)
+              print("entered_borrower_customer_id:", entered_borrower_customer_id)
+              disbursement_detail_row = app_tables.fin_disbursement_detail.add_row(
+                entered_loan_id=entered_loan_id,
+                entered_borrower_customer_id=entered_borrower_customer_id)
+              disbursement_detail_row.update()
+        except ValueError:
+              alert("Please enter a valid customer ID.")
+              return
       
         
       
@@ -243,6 +255,13 @@ class Borr_loan_request(Borr_loan_requestTemplate):
             # Convert entered_borrower_customer_id to integer
             try:
               entered_borrower_customer_id = int(entered_borrower_customer_id)
+              # print("Saving to fin_disbursement_detail:")
+              # print("entered_loan_id:", entered_loan_id)
+              # print("entered_borrower_customer_id:", entered_borrower_customer_id)
+              # disbursement_detail_row = app_tables.fin_disbursement_detail.add_row(
+              #   entered_loan_id=entered_loan_id,
+              #   entered_borrower_customer_id=entered_borrower_customer_id)
+              # disbursement_detail_row.save()
             except ValueError:
               alert("Please enter a valid customer ID.")
               return
