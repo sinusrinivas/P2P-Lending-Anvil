@@ -97,36 +97,36 @@ components:
 - type: GridPanel
   properties: {}
   name: grid_panel_1
-  layout_properties: {grid_position: 'PDPNFL,NBADJT'}
+  layout_properties: {grid_position: 'PDPNFL,YIQSNN'}
   components:
   - type: LinearPanel
     properties: {}
     name: linear_panel_2
     layout_properties: {row: VNSVWA, width_xs: 3, col_xs: 0}
     components:
-    - name: button_3
+    - name: outlined_button_4
       properties: {role: outlined-button, align: center, tooltip: '', border: '',
-        enabled: true, foreground: 'theme:On Primary', visible: true, text: 'View
-          Opening Balance       ', font_size: null, font: '', spacing_above: small,
+        enabled: true, foreground: 'theme:On Primary', visible: true, text: '  View
+          Loan Extension             ', font_size: null, font: '', spacing_above: small,
         icon_align: left, spacing_below: small, italic: false, background: '#00008B',
         bold: false, underline: false, icon: ''}
       type: Button
-      layout_properties: {grid_position: 'FFRNUM,BQWTYF'}
-      event_bindings: {click: button_3_click}
+      layout_properties: {grid_position: 'SPNLTZ,GGCOHO'}
+      event_bindings: {click: outlined_button_4_click}
   - type: LinearPanel
     properties: {}
     name: linear_panel_1
     layout_properties: {row: VNSVWA, width_xs: 3, col_xs: 0}
     components:
-    - name: button_4
+    - name: outlined_button_5
       properties: {role: outlined-button, align: center, tooltip: '', border: '',
-        enabled: true, foreground: 'theme:On Primary', visible: true, text: 'View
-          Available Balance        ', font_size: null, font: '', spacing_above: small,
+        enabled: true, foreground: 'theme:On Primary', visible: true, text: '  View
+          Loan Foreclosure               ', font_size: null, font: '', spacing_above: small,
         icon_align: left, spacing_below: small, italic: false, background: '#00008B',
         bold: false, underline: false, icon: ''}
       type: Button
-      layout_properties: {grid_position: 'FFRNUM,YUGGPU'}
-      event_bindings: {click: button_4_click}
+      layout_properties: {grid_position: 'SPNLTZ,TRGJPZ'}
+      event_bindings: {click: outlined_button_5_click}
   - type: LinearPanel
     properties: {}
     name: linear_panel_3
@@ -162,11 +162,12 @@ components:
     components:
     - name: outlined_button_3
       properties: {role: outlined-button, align: center, tooltip: '', border: '',
-        enabled: true, foreground: 'theme:On Primary', visible: true, text: '  View  Loans           ',
-        font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small,
-        italic: false, background: '#00008B', bold: false, underline: false, icon: ''}
+        enabled: true, foreground: 'theme:On Primary', visible: true, text: 'Veiw
+          Loans                                        ', font_size: null, font: '',
+        spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+        background: '#00008B', bold: false, underline: false, icon: ''}
       type: Button
-      layout_properties: {grid_position: 'OOVWBY,LHNMKW'}
+      layout_properties: {grid_position: 'FFRNUM,QDDEAN'}
       event_bindings: {click: outlined_button_3_click}
   - type: LinearPanel
     properties: {}
@@ -270,29 +271,11 @@ components:
     properties: {}
     name: linear_panel_13
     layout_properties: {row: CFIOXM, width_xs: 3, col_xs: 0}
-    components:
-    - name: outlined_button_4
-      properties: {role: outlined-button, align: center, tooltip: '', border: '',
-        enabled: true, foreground: 'theme:On Primary', visible: true, text: "  View\
-          \ Loan\n Extension Requests             ", font_size: null, font: '', spacing_above: small,
-        icon_align: left, spacing_below: small, italic: false, background: '#00008B',
-        bold: false, underline: false, icon: ''}
-      type: Button
-      layout_properties: {grid_position: 'SPNLTZ,GGCOHO'}
-      event_bindings: {click: outlined_button_4_click}
+    components: []
   - type: LinearPanel
     properties: {}
     name: linear_panel_14
     layout_properties: {row: CFIOXM, width_xs: 3, col_xs: 3}
-    components:
-    - name: outlined_button_5
-      properties: {role: outlined-button, align: center, tooltip: '', border: '',
-        enabled: true, foreground: 'theme:On Primary', visible: true, text: "  View\
-          \ Loan \nForeclosure Requests              ", font_size: null, font: '',
-        spacing_above: small, icon_align: left, spacing_below: small, italic: false,
-        background: '#00008B', bold: false, underline: false, icon: ''}
-      type: Button
-      layout_properties: {grid_position: 'SPNLTZ,TRGJPZ'}
-      event_bindings: {click: outlined_button_5_click}
+    components: []
 is_package: true
 custom_component: true
