@@ -186,7 +186,7 @@ def add_loan_details(loan_amount, tenure,user_id,interest_rate, total_repayment_
           loan_updated_status = "under process",
           borrower_loan_created_timestamp=loan_created_timestamp,
           product_id = product_id,
-          emi_payment_type = emi_payment_type,beseem_score= find_beseem_points_based_on_id(u)
+          emi_payment_type = emi_payment_type,beseem_score= find_beseem_points_based_on_id(user_id)
          )
 
         # Return the generated loan ID to the client
