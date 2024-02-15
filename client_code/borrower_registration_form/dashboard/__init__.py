@@ -123,5 +123,7 @@ class dashboard(dashboardTemplate):
 
     def outlined_button_1_copy_3_click(self, **event_args):
       """This method is called when the button is clicked"""
-      pass
+      open_form('borrower_registration_form.dashboard.foreclosure_request')
+
+  
 
