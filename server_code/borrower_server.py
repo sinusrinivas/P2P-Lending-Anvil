@@ -186,8 +186,7 @@ def add_loan_details(loan_amount, tenure,user_id,interest_rate, total_repayment_
           loan_updated_status = "under process",
           borrower_loan_created_timestamp=loan_created_timestamp,
           product_id = product_id,
-          emi_payment_type = emi_payment_type
-          # borrower_loan_created_timestamp = datetime.now()
+          emi_payment_type = emi_payment_type,beseem_score= find_beseem_points_based_on_id(u)
          )
 
         # Return the generated loan ID to the client
@@ -277,3 +276,12 @@ def find_user_and_add_bessem_value(user_id):
   if users:
     users[0]['total_point']=bessemfunctions.final_points_update_bessem_table()
     users[0]['user_type'] = 'borrower'
+
+
+
+def find_beseem_points_based_on_id(user_id):
+  users = app_tables.fin_beseem_score.search(borrower_customer_id=user_id)
+  if users:
+    total_points = users[0]['total_point']
+    return total_points
+  
