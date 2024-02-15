@@ -22,11 +22,6 @@ class new_loan_request(new_loan_requestTemplate):
         self.drop_down_2.selected_value = None
         self.drop_down_1.items = ['']
         self.drop_down_1.selected_value = None
-    # In borrower_registration_form.dashboard.new_loan_request module (client-side code)
-    # def loan_type():
-    #     # Call the server-side function to get product details
-    #     product_details = anvil.server.call('get_fin_product_details', 'desired_category')
-    #     # Process the product_details as needed
 
     def name_change(self, **event_args):
         self.selected_value = self.name.selected_value
@@ -45,26 +40,34 @@ class new_loan_request(new_loan_requestTemplate):
                 # Display product categories in drop_down_2, excluding empty strings
                 self.drop_down_2.items = [category['name_categories'] for category in product_categories if category['name_categories'].strip()]
                 self.drop_down_2.selected_value = None
+
     def drop_down_2_change(self, **event_args):
-      self.selected_value = self.drop_down_2.selected_value
-      if self.selected_value:
+        self.selected_value = self.drop_down_2.selected_value
+        if self.selected_value:
             self.label_1.visible = True
             self.label_2.visible = True
             self.name.visible = True
             self.drop_down_2.visible = True
             self.label_4.visible = True
             self.label_6.visible = True
+            self.label_7.visible = True
             self.drop_down_1.visible = True
-            product_name = app_tables.fin_product_details.search(product_name=self.drop_down_2.selected_value)
-            if product_name:
-              self.drop_down_1.items = [pro_name['product_name']]
+
+            # Fetch product names based on the selected category
+            product_names = app_tables.fin_product_details.search(product_categories=self.selected_value)
+            if product_names:
+                # Extract product names from the list of rows
+                product_name_list = [product['product_name'] for product in product_names if product['product_name'].strip()]
+                self.drop_down_1.items = product_name_list
+                self.drop_down_1.selected_value = None
+
     def button_2_click(self, **event_args):
         open_form('borrower_registration_form.dashboard')
 
     def button_1_copy_click(self, **event_args):
         name = self.name.selected_value
         category = self.drop_down_2.selected_value
-        pro_name = self.drop_down_1.selected_value
+        product_name = self.drop_down_1.selected_value
 
         if not name:
             self.label_3.text = "Please select a product group"
@@ -78,22 +81,24 @@ class new_loan_request(new_loan_requestTemplate):
         else:
             self.label_4.text = ""
 
-        if name and category:
-            open_form('borrower_registration_form.dashboard.new_loan_request.loan_type', name, category,self.max_amount_lb.text)
+        if not product_name:
+          self.label_7.text = "Please select a product name"
+          self.label_7.foreground = '#FF0000'
+        else:
+          self.label_7.text = ""
+
+        if name and category and product_name:
+            open_form('borrower_registration_form.dashboard.new_loan_request.loan_type', name, category,product_name,self.max_amount_lb.text)
 
     def max_amount_lb_show(self, **event_args):
         data = app_tables.fin_product_details.search()
         # Exclude empty strings from the max_amount values
         data1_strings = [str(data['max_amount']) for data in data if str(data['max_amount']).strip()]
         self.max_amount_lb.text = data1_strings[0] if data1_strings else None
-        # user_request = app_tables.product_details.get(product_categories=self.prodct_cate)
-        # if user_request:
-        #     self.credit_limit = user_request['max_amount']
 
     def button_1_click(self, **event_args):
-      open_form("borrower_registration_form.dashboard")
+        open_form("borrower_registration_form.dashboard")
 
     def drop_down_1_change(self, **event_args):
-      """This method is called when an item is selected"""
-      pass
-
+        """This method is called when an item is selected"""
+        pass
