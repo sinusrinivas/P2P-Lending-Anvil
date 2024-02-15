@@ -28,7 +28,7 @@ components:
   data_bindings:
   - {property: text, code: 'self.item[''loan_amount'']'}
 - type: Link
-  properties: {}
+  properties: {text: Veiw Details}
   name: link_1
   layout_properties: {column: NKUDSE}
   event_bindings: {click: link_1_click}
