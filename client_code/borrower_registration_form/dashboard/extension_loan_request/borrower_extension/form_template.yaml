@@ -177,7 +177,7 @@ components:
     properties: {role: filled-button, align: center, tooltip: '', border: '', enabled: true,
       foreground: 'theme:On Primary', visible: false, text: Back, font_size: null,
       font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
-      background: '#00008B', bold: false, underline: false, icon: 'fa:angle-double-left'}
+      background: '#0b2547', bold: false, underline: false, icon: 'fa:angle-double-left'}
     name: button_1_copy
     layout_properties:
       col_widths: {}
@@ -187,7 +187,7 @@ components:
     properties: {role: filled-button, align: center, tooltip: '', border: '', enabled: true,
       foreground: 'theme:On Primary', visible: false, text: Extension Request, font_size: null,
       font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
-      background: '#00008B', bold: false, underline: false, icon: ''}
+      background: '#0b2547', bold: false, underline: false, icon: ''}
     name: button_2
     layout_properties:
       col_widths: {}
@@ -197,7 +197,7 @@ components:
     properties: {role: filled-button, align: center, tooltip: '', border: '', enabled: true,
       foreground: 'theme:On Primary', visible: false, text: Back, font_size: null,
       font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
-      background: '#00008B', bold: false, underline: false, icon: 'fa:angle-double-left'}
+      background: '#0b2547', bold: false, underline: false, icon: 'fa:angle-double-left'}
     name: button_1
     layout_properties:
       col_widths: {}

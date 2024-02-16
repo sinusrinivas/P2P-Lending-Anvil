@@ -35,10 +35,10 @@ components:
   - type: Label
     properties: {role: null, align: center, tooltip: '', border: '', foreground: 'theme:On
         Primary', visible: true, text: Enter Values, font_size: 17, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: darkblue,
+      icon_align: left, spacing_below: small, italic: false, background: '#0b2547',
       bold: true, underline: false, icon: ''}
     name: label_25
-    layout_properties: {row: AUFPKE, width_xs: 12, col_xs: 0, width: 626}
+    layout_properties: {row: AUFPKE, width_xs: 12, col_xs: 0, width: 937.714}
   - type: Label
     properties: {role: title, align: right, tooltip: '', border: '', foreground: '',
       visible: true, text: Loan Amount, font_size: 15, font: '', spacing_above: small,

@@ -47,7 +47,7 @@ components:
       properties: {role: outlined-button, align: full, tooltip: '', border: '', enabled: true,
         foreground: 'theme:On Primary', visible: true, text: ' ADD PRODUCTS', font_size: null,
         font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
-        background: '#00008B', bold: false, underline: false, icon: ''}
+        background: '#0b2547', bold: false, underline: false, icon: ''}
       name: button_1
       layout_properties: {grid_position: 'IBKOJG,LPNHKI RDREJA,CFJDFC'}
       event_bindings: {click: button_1_click}
@@ -55,7 +55,7 @@ components:
       properties: {role: tonal-button, align: full, tooltip: '', border: '', enabled: true,
         foreground: 'theme:On Primary', visible: true, text: MANAGE PRODUCT GROUP,
         font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small,
-        italic: false, background: '#00008B', bold: false, underline: false, icon: ''}
+        italic: false, background: '#0b2547', bold: false, underline: false, icon: ''}
       name: button_1_copy_3
       layout_properties: {grid_position: 'IBKOJG,LPNHKI UOCTIV,UAZCIP'}
       event_bindings: {click: button_1_copy_3_click}
@@ -63,7 +63,7 @@ components:
       properties: {role: tonal-button, align: full, tooltip: '', border: '', enabled: true,
         foreground: 'theme:On Primary', visible: true, text: MANAGE PRODUCTS, font_size: null,
         font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
-        background: '#00008B', bold: false, underline: false, icon: ''}
+        background: '#0b2547', bold: false, underline: false, icon: ''}
       name: button_1_copy
       layout_properties: {grid_position: 'IBKOJG,DUAONS WZYYHT,BZBDUN'}
       event_bindings: {click: button_1_copy_click}
@@ -71,7 +71,7 @@ components:
       properties: {role: tonal-button, align: full, tooltip: '', border: '', enabled: true,
         foreground: 'theme:On Primary', visible: true, text: MANAGE PRODUCT CATEGORIES,
         font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small,
-        italic: false, background: '#00008B', bold: false, underline: false, icon: ''}
+        italic: false, background: '#0b2547', bold: false, underline: false, icon: ''}
       name: button_1_copy_4
       layout_properties: {grid_position: 'IBKOJG,DUAONS EMFTOG,LOLGWY'}
       event_bindings: {click: button_1_copy_4_click}
@@ -79,7 +79,7 @@ components:
       properties: {role: tonal-button, align: full, tooltip: '', border: '', enabled: true,
         foreground: 'theme:On Primary', visible: true, text: ADD PRODUCT GROUP  & CATEGORIES,
         font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small,
-        italic: false, background: '#00008B', bold: false, underline: false, icon: ''}
+        italic: false, background: '#0b2547', bold: false, underline: false, icon: ''}
       name: button_1_copy_2
       layout_properties: {grid_position: 'IBKOJG,AHBFVH'}
       event_bindings: {click: button_1_copy_2_click}

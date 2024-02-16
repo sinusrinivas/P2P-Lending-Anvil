@@ -21,17 +21,17 @@ components:
   - type: Button
     properties: {role: outlined-button, align: center, tooltip: '', border: '', enabled: true,
       foreground: white, visible: true, text: Back, font_size: null, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '#db2332',
+      icon_align: left, spacing_below: small, italic: false, background: '#0b2547',
       bold: false, underline: false, icon: ''}
     name: button_1
-    layout_properties: {row: HUKGQK, width_xs: 2, col_xs: 10, width: 99.9875}
+    layout_properties: {row: HUKGQK, width_xs: 2, col_xs: 10, width: 136.661}
   - type: Label
     properties: {role: null, align: center, tooltip: '', border: '', foreground: white,
       visible: true, text: REPORT A BUG, font_size: 18, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '#083973',
+      icon_align: left, spacing_below: small, italic: false, background: '#0b2547',
       bold: false, underline: true, icon: ''}
     name: label_2
-    layout_properties: {row: LZSMVC, width_xs: 12, col_xs: 0, width: 750}
+    layout_properties: {row: LZSMVC, width_xs: 12, col_xs: 0, width: 970}
   - type: Spacer
     properties: {height: 21}
     name: spacer_1
