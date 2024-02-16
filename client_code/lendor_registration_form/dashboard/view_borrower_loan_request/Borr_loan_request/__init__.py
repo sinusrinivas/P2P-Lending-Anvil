@@ -23,22 +23,6 @@ class Borr_loan_request(Borr_loan_requestTemplate):
         self.entered_loan_id = None
         self.email=main_form_module.email
         email = self.email
-
-        # # self.entered_loan_id = entered_loan_id
-        # if self.selected_row is not None:
-        #     # Populate labels with the selected row details
-        #     self.label_user_id.text = f"{selected_row['borrower_customer_id']}"
-        #     self.label_name.text = f"{selected_row['borrower_full_name']}"
-        #     self.label_loan_amount_applied.text = f"{selected_row['loan_amount']}"
-        #     self.label_loan_id.text = f"{selected_row['loan_id']}"
-        #     self.label_beseem_score.text = f"{selected_row['beseem_score']}"
-        #     self.label_loan_tenure.text = f"{selected_row['tenure']}"
-        #     self.label_credit_limit.text = f"{selected_row['credit_limit']}"
-        #     self.label_interest_rate.text = f"{selected_row['interest_rate']}"
-        #     self.update_ui_based_on_status()
-        # else:
-        #     # Handle the case where selected_row is None
-        #     alert("Selected row is not available.")
         
         # Populate labels with the selected row details
         self.label_user_id.text = f"{selected_row['borrower_customer_id']}"
@@ -215,8 +199,29 @@ class Borr_loan_request(Borr_loan_requestTemplate):
         email = main_form_module.email
         entered_loan_id = self.entered_loan_id
         entered_borrower_customer_id = self.entered_borrower_customer_id
-      
-        
+        # try:
+        #   entered_borrower_customer_id = int(entered_borrower_customer_id)
+        #   print("entered_loan_id:", entered_loan_id)
+        #   print("entered_borrower_customer_id:", entered_borrower_customer_id)
+
+        #   # Check if the borrower_customer_id already exists
+        #   existing_row = app_tables.fin_disbursement_detail.get(
+        #     entered_borrower_customer_id=entered_borrower_customer_id)
+        #   if existing_row:
+        #     # Update the existing row
+        #     existing_row.update(
+        #       entered_loan_id=entered_loan_id,
+        #       entered_borrower_customer_id=entered_borrower_customer_id)
+        #   else:
+        #     # Add a new row if the borrower_customer_id doesn't exist
+        #     disbursement_detail_row = app_tables.fin_disbursement_detail.add_row(
+        #       entered_loan_id=entered_loan_id,
+        #       entered_borrower_customer_id=entered_borrower_customer_id)
+        #     disbursement_detail_row.update()
+
+        # except ValueError:
+        #  alert("Please enter a valid customer ID.")
+        #  return     
       
         # Call the server-side function
         signal = anvil.server.call('loan_disbursement_action', selected_row, email)
@@ -243,6 +248,9 @@ class Borr_loan_request(Borr_loan_requestTemplate):
             # Convert entered_borrower_customer_id to integer
             try:
               entered_borrower_customer_id = int(entered_borrower_customer_id)
+              print("entered_loan_id:", entered_loan_id)
+              print("entered_borrower_customer_id:", entered_borrower_customer_id)
+              
             except ValueError:
               alert("Please enter a valid customer ID.")
               return
@@ -261,10 +269,6 @@ class Borr_loan_request(Borr_loan_requestTemplate):
               loan_row['loan_updated_status'] = updated_loan_status
               # Save the changes to the loan_row
               loan_row.update()
-
-            # # Update 'loan_updated_status' column
-            # selected_row['loan_updated_status'] = 'disbursed loan'
-            # selected_row.update()
 
             open_form("wallet.wallet")
 
