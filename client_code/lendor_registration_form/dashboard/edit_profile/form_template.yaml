@@ -204,11 +204,6 @@ components:
     layout_properties: {grid_position: 'COFHBC,NUWOKB'}
     event_bindings: {click: link_2_click}
   - type: Link
-    properties: {text: Loan Disbursement}
-    name: link_4
-    layout_properties: {grid_position: 'LPKVWH,AIPCEY'}
-    event_bindings: {click: link_4_click}
-  - type: Link
     properties: {text: View Lost Oppurtunities}
     name: link_5
     layout_properties: {grid_position: 'WBTWRL,YZOQFP'}

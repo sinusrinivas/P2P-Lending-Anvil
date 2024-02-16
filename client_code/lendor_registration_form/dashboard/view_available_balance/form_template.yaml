@@ -73,14 +73,6 @@ components:
     layout_properties: {grid_position: 'COFHBC,NUWOKB'}
     event_bindings: {click: link_2_click}
   - type: Link
-    properties: {role: null, url: '', align: left, tooltip: '', border: '', foreground: '',
-      visible: true, text: Loan Disbursement, font_size: null, wrap_on: mobile, font: '',
-      col_spacing: medium, spacing_above: small, icon_align: left, col_widths: '',
-      spacing_below: small, italic: false, background: '', bold: false, underline: false,
-      icon: ''}
-    name: link_3
-    layout_properties: {grid_position: 'BETRVZ,FYQGMZ'}
-  - type: Link
     properties: {text: View Lost Oppurtunities}
     name: link_4
     layout_properties: {grid_position: 'LPKVWH,AIPCEY'}

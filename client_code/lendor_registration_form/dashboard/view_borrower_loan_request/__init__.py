@@ -40,10 +40,6 @@ class view_borrower_loan_request(view_borrower_loan_requestTemplate):
     """This method is called when the link is clicked"""
     open_form("lendor_registration_form.dashboard.view_opening_balance")
 
-  def link_4_click(self, **event_args):
-    """This method is called when the link is clicked"""
-    open_form("lendor_registration_form.dashboard.view_borrower_loan_request.Borr_loan_request")
-
   def link_5_click(self, **event_args):
     """This method is called when the link is clicked"""
     open_form("lendor_registration_form.dashboard.view_lost_oppurtunities")
