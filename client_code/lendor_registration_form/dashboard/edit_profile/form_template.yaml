@@ -32,7 +32,7 @@ components:
     properties: {role: filled-button, align: right, tooltip: '', border: '', enabled: true,
       foreground: 'theme:On Primary', visible: true, text: Back, font_size: 15, font: '',
       spacing_above: small, icon_align: left, spacing_below: small, italic: false,
-      background: '#00008B', bold: false, underline: false, icon: 'fa:angle-double-left'}
+      background: '#0b2547', bold: false, underline: false, icon: 'fa:angle-double-left'}
     name: button_1
     layout_properties: {grid_position: 'AUUAZJ,FQVZON'}
     event_bindings: {click: button_1_click}

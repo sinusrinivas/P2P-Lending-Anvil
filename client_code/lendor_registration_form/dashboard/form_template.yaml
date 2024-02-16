@@ -216,20 +216,6 @@ components:
     name: linear_panel_9
     layout_properties: {row: ZOEATB, width_xs: 3, col_xs: 0}
     components:
-    - name: button_6
-      properties: {role: outlined-button, align: center, tooltip: '', border: '',
-        enabled: true, foreground: 'theme:On Primary', visible: true, text: 'Loan
-          Disbursement              ', font_size: null, font: '', spacing_above: small,
-        icon_align: left, spacing_below: small, italic: false, background: '#00008B',
-        bold: false, underline: false, icon: ''}
-      type: Button
-      layout_properties: {grid_position: 'WKLSTO,NFLNFH'}
-      event_bindings: {click: button_6_click}
-  - type: LinearPanel
-    properties: {}
-    name: linear_panel_10
-    layout_properties: {row: ZOEATB, width_xs: 3, col_xs: 3}
-    components:
     - name: outlined_button_8
       properties: {role: outlined-button, align: center, tooltip: '', border: '',
         enabled: true, foreground: 'theme:On Primary', visible: true, text: 'View/Edit
@@ -241,8 +227,8 @@ components:
       event_bindings: {click: outlined_button_8_click}
   - type: LinearPanel
     properties: {}
-    name: linear_panel_11
-    layout_properties: {row: ZOEATB, width_xs: 3, col_xs: 6}
+    name: linear_panel_10
+    layout_properties: {row: ZOEATB, width_xs: 3, col_xs: 3}
     components:
     - name: outlined_button_9
       properties: {role: outlined-button, align: center, tooltip: '', border: '',
@@ -255,8 +241,8 @@ components:
       event_bindings: {click: outlined_button_9_click}
   - type: LinearPanel
     properties: {}
-    name: linear_panel_12
-    layout_properties: {row: ZOEATB, width_xs: 3, col_xs: 9}
+    name: linear_panel_11
+    layout_properties: {row: ZOEATB, width_xs: 3, col_xs: 6}
     components:
     - name: outlined_button_10
       properties: {role: outlined-button, align: center, tooltip: '', border: '',
@@ -269,13 +255,8 @@ components:
       event_bindings: {click: outlined_button_10_click}
   - type: LinearPanel
     properties: {}
-    name: linear_panel_13
-    layout_properties: {row: CFIOXM, width_xs: 3, col_xs: 0}
-    components: []
-  - type: LinearPanel
-    properties: {}
-    name: linear_panel_14
-    layout_properties: {row: CFIOXM, width_xs: 3, col_xs: 3}
+    name: linear_panel_12
+    layout_properties: {row: ZOEATB, width_xs: 3, col_xs: 9}
     components: []
 is_package: true
 custom_component: true

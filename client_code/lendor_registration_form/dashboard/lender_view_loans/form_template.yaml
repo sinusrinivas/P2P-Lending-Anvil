@@ -36,7 +36,7 @@ components:
     - name: outlined_card_1
       properties: {role: outlined-card, tooltip: '', border: '', foreground: '', visible: true,
         wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
-        spacing_below: small, background: '#00008B'}
+        spacing_below: small, background: '#0b2547'}
       type: ColumnPanel
       layout_properties: {grid_position: 'CPJAWC,DUEXEN'}
       components:
@@ -58,7 +58,7 @@ components:
     - name: outlined_card_3
       properties: {role: outlined-card, tooltip: '', border: '', foreground: '', visible: true,
         wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
-        spacing_below: small, background: '#00008B'}
+        spacing_below: small, background: '#0b2547'}
       type: ColumnPanel
       layout_properties: {grid_position: 'CPJAWC,HJRMUL'}
       components:
@@ -80,7 +80,7 @@ components:
     - name: outlined_card_2
       properties: {role: outlined-card, tooltip: '', border: '', foreground: '', visible: true,
         wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '',
-        spacing_below: small, background: '#00008B'}
+        spacing_below: small, background: '#0b2547'}
       type: ColumnPanel
       layout_properties: {grid_position: 'CPJAWC,UWBSWG YZPIWA,VHJBRS'}
       components:
@@ -109,7 +109,7 @@ components:
     - name: outlined_card_5
       properties: {role: outlined-card, tooltip: '', border: '', foreground: '', visible: true,
         wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '',
-        spacing_below: small, background: '#00008B'}
+        spacing_below: small, background: '#0b2547'}
       type: ColumnPanel
       layout_properties: {grid_position: 'CPJAWC,SJVDVE'}
       components:
@@ -134,7 +134,7 @@ components:
     - name: outlined_card_4
       properties: {role: outlined-card, tooltip: '', border: '', foreground: '', visible: true,
         wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '',
-        spacing_below: small, background: '#00008B'}
+        spacing_below: small, background: '#0b2547'}
       type: ColumnPanel
       layout_properties: {grid_position: 'CPJAWC,FQNJFJ'}
       components:
