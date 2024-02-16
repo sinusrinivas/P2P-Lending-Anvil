@@ -546,13 +546,13 @@ def check_loan_timeout(selected_row, lender_accepted_timestamp, email):
             return "Time_out"
 
 @anvil.server.callable
-def get_loan_details(customer_id):
+def get_loan_details(entered_borrower_customer_id):
     try:
         # Assuming fin_disbursement_detail is your Data Table
         fin_disbursement_table = app_tables.fin_disbursement_detail
 
         # Fetch the row based on customer_id
-        row = fin_disbursement_table.get(entered_borrower_customer_id=customer_id)
+        row = fin_disbursement_table.get(entered_borrower_customer_id=entered_borrower_customer_id)
 
         if row is not None:
             # Extract relevant details and return as a dictionary

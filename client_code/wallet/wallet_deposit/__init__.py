@@ -116,7 +116,7 @@ class wallet_deposit(wallet_depositTemplate):
 
     if deposit_result:
         # Deposit successful, now retrieve loan details
-        loan_details = anvil.server.call('get_loan_details', entered_borrower_customer_id=customer_id)
+        loan_details = anvil.server.call('get_loan_details', entered_borrower_customer_id=entered_borrower_customer_id)
 
         if loan_details:
             # Extract entered_loan_id and entered_borrower_customer_id from loan_details
