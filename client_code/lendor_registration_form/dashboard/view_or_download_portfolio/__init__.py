@@ -54,11 +54,11 @@ class view_or_download_portfolio(view_or_download_portfolioTemplate):
 
   def link_11_click(self, **event_args):
     """This method is called when the link is clicked"""
-    open_form("lendor_registration_form.dashboard.view_or_download_portfolio")
+    open_form("lendor_registration_form.dashboard.view_profile")
 
   def link_12_click(self, **event_args):
     """This method is called when the link is clicked"""
-    open_form("lendor_registration_form.dashboard.view_profile")
+    open_form("lendor_registration_form.dashboard.view_or_send_notifications")
 
   def link_13_click(self, **event_args):
     """This method is called when the link is clicked"""

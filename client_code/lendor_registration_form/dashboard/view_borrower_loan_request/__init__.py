@@ -26,7 +26,7 @@ class view_borrower_loan_request(view_borrower_loan_requestTemplate):
 
   def link_1_click(self, **event_args):
     """This method is called when the link is clicked"""
-    open_form("lendor_registration_form.dashboard.view_available_balance")
+    open_form("lendor_registration_form.dashboard.view_opening_balance")
 
   def button_1_click(self, **event_args):
     """This method is called when the button is clicked"""
@@ -34,7 +34,7 @@ class view_borrower_loan_request(view_borrower_loan_requestTemplate):
 
   def link_2_click(self, **event_args):
     """This method is called when the link is clicked"""
-    open_form("lendor_registration_form.dashboard.view_borrower_loan_request")
+    open_form("lendor_registration_form.dashboard.view_available_balance")
 
   def link_3_click(self, **event_args):
     """This method is called when the link is clicked"""
@@ -42,19 +42,19 @@ class view_borrower_loan_request(view_borrower_loan_requestTemplate):
 
   def link_5_click(self, **event_args):
     """This method is called when the link is clicked"""
-    open_form("lendor_registration_form.dashboard.view_lost_oppurtunities")
+    open_form("lendor_registration_form.dashboard.today_dues")
 
   def link_6_click(self, **event_args):
     """This method is called when the link is clicked"""
-    open_form("lendor_registration_form.dashboard.today_dues")
+    open_form("lendor_registration_form.dashboard.lender_view_loans")
 
   def link_7_click(self, **event_args):
     """This method is called when the link is clicked"""
-    open_form("lendor_registration_form.dashboard.lender_view_loans")
+    open_form("lendor_registration_form.dashboard.view_loan_extension_requests")
 
   def link_8_click(self, **event_args):
     """This method is called when the link is clicked"""
-    open_form("lendor_registration_form.dashboard.view_loan_extension_requests")
+    open_form("lendor_registration_form.dashboard.view_loan_foreclosure_Requests")
 
   def link_9_click(self, **event_args):
     """This method is called when the link is clicked"""
@@ -62,15 +62,15 @@ class view_borrower_loan_request(view_borrower_loan_requestTemplate):
 
   def link_10_click(self, **event_args):
     """This method is called when the link is clicked"""
-    open_form("lendor_registration_form.dashboard.view_loan_foreclosure_Requests")
+    open_form("lendor_registration_form.dashboard.view_or_download_portfolio")
 
   def link_11_click(self, **event_args):
     """This method is called when the link is clicked"""
-    open_form("lendor_registration_form.dashboard.view_or_download_portfolio")
+    open_form("lendor_registration_form.dashboard.view_profile")
 
   def link_12_click(self, **event_args):
     """This method is called when the link is clicked"""
-    open_form("lendor_registration_form.dashboard.view_profile")
+    open_form("lendor_registration_form.dashboard.view_or_send_notifications")
 
   def link_13_click(self, **event_args):
     """This method is called when the link is clicked"""
@@ -81,3 +81,7 @@ class view_borrower_loan_request(view_borrower_loan_requestTemplate):
 
 
     # Any code you write here will run before the form opens.
+
+  def link_4_click(self, **event_args):
+    """This method is called when the link is clicked"""
+    open_form('lendor_registration_form.dashboard.view_lost_oppurtunities')

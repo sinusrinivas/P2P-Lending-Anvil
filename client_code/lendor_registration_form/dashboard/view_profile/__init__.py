@@ -69,7 +69,7 @@ class view_profile(view_profileTemplate):
 
   def link_12_click(self, **event_args):
     """This method is called when the link is clicked"""
-    open_form("lendor_registration_form.dashboard.view_profile")
+    open_form("lendor_registration_form.dashboard.view_or_send_notifications")
 
   def link_13_click(self, **event_args):
     """This method is called when the link is clicked"""

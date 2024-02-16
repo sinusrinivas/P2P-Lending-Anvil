@@ -76,6 +76,7 @@ components:
     properties: {text: View Lost Oppurtunities}
     name: link_4
     layout_properties: {grid_position: 'LPKVWH,AIPCEY'}
+    event_bindings: {click: link_4_click}
   - type: Link
     properties: {text: Today's Dues}
     name: link_5

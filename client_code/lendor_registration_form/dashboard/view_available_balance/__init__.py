@@ -69,3 +69,7 @@ class view_available_balance(view_available_balanceTemplate):
 
 
     # Any code you write here will run before the form opens.
+
+  def link_4_click(self, **event_args):
+    """This method is called when the link is clicked"""
+    open_form("lendor_registration_form.dashboard.view_lost_oppurtunities")
