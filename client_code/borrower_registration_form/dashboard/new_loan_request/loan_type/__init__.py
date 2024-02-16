@@ -88,7 +88,7 @@ class loan_type(loan_typeTemplate):
         if not any([self.label_22.text, self.label_23.text]):
             # If validations pass, open the 'check' form and pass the values
             open_form('borrower_registration_form.dashboard.new_loan_request.check',
-                      self.proctct_g, self.prodct_cate, str(loan_amount), tenure,
+                      self.proctct_g, self.prodct_cate, self.product_name, str(loan_amount), tenure,
                       self.user_id, self.roi, self.processing_fee,
                       self.membership_type, self.product_id,
                       self.Total_Repayment_Amount, self.credit_limt,self.entered_payment_type,
