@@ -216,19 +216,28 @@ class Borr_loan_request(Borr_loan_requestTemplate):
         entered_loan_id = self.entered_loan_id
         entered_borrower_customer_id = self.entered_borrower_customer_id
         try:
-              entered_borrower_customer_id = int(entered_borrower_customer_id)
-              print("Saving to fin_disbursement_detail:")
-              print("entered_loan_id:", entered_loan_id)
-              print("entered_borrower_customer_id:", entered_borrower_customer_id)
-              disbursement_detail_row = app_tables.fin_disbursement_detail.add_row(
-                entered_loan_id=entered_loan_id,
-                entered_borrower_customer_id=entered_borrower_customer_id)
-              disbursement_detail_row.update()
+          entered_borrower_customer_id = int(entered_borrower_customer_id)
+          print("entered_loan_id:", entered_loan_id)
+          print("entered_borrower_customer_id:", entered_borrower_customer_id)
+
+          # Check if the borrower_customer_id already exists
+          existing_row = app_tables.fin_disbursement_detail.get(
+            entered_borrower_customer_id=entered_borrower_customer_id)
+          if existing_row:
+            # Update the existing row
+            existing_row.update(
+              entered_loan_id=entered_loan_id,
+              entered_borrower_customer_id=entered_borrower_customer_id)
+          else:
+            # Add a new row if the borrower_customer_id doesn't exist
+            disbursement_detail_row = app_tables.fin_disbursement_detail.add_row(
+              entered_loan_id=entered_loan_id,
+              entered_borrower_customer_id=entered_borrower_customer_id)
+            disbursement_detail_row.update()
+
         except ValueError:
-              alert("Please enter a valid customer ID.")
-              return
-      
-        
+         alert("Please enter a valid customer ID.")
+         return     
       
         # Call the server-side function
         signal = anvil.server.call('loan_disbursement_action', selected_row, email)
