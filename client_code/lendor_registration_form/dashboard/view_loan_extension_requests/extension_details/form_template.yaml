@@ -29,7 +29,7 @@ components:
   - name: label_6
     properties: {role: null, align: center, tooltip: '', border: '', foreground: White,
       visible: true, text: Loan Extension details, font_size: 18, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '#083973',
+      icon_align: left, spacing_below: small, italic: false, background: '#0b2547',
       bold: false, underline: true, icon: ''}
     type: Label
     layout_properties:
