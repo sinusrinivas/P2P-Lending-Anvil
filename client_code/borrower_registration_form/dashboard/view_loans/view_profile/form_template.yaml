@@ -34,7 +34,7 @@ components:
   - name: label_1_copy_1_copy_1
     properties: {role: outlined-card, align: center, tooltip: '', border: '', foreground: white,
       visible: true, text: Closed Profile, font_size: null, font: '25', spacing_above: medium,
-      icon_align: left, spacing_below: medium, italic: false, background: darkblue,
+      icon_align: left, spacing_below: medium, italic: false, background: '#0b2547',
       bold: true, underline: false, icon: ''}
     type: Label
     layout_properties:
@@ -43,7 +43,7 @@ components:
       row: CEDYQW
       width_xs: 12
       col_xs: 0
-      width: 686.8
+      width: 905.4282800000001
   - name: label_7
     properties: {role: null, align: right, tooltip: '', border: '', foreground: '#000337',
       visible: true, text: Loan Id, font_size: null, font: '', spacing_above: small,
@@ -150,7 +150,7 @@ components:
 - name: button_1
   properties: {role: elevated-button, align: center, tooltip: '', border: '', enabled: true,
     foreground: 'theme:On Primary', visible: true, text: Back, font_size: null, font: '',
-    spacing_above: small, icon_align: left, spacing_below: small, italic: false, background: '#00008B',
+    spacing_above: small, icon_align: left, spacing_below: small, italic: false, background: '#0b2547',
     bold: true, underline: false, icon: 'fa:angle-double-left'}
   type: Button
   layout_properties: {grid_position: 'CUQCPK,AESIBY'}

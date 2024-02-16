@@ -32,67 +32,12 @@ components:
     layout_properties: {grid_position: 'JHFMCI,HYXZID', x: 346.8482131958008, y: 23.607131958007812,
       width: 95.2634}
     event_bindings: {click: button_1_click}
-  - name: outlined_card_2
-    properties: {role: outlined-card, tooltip: '', border: '', foreground: '', visible: true,
-      wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
-      spacing_below: small, background: '#00008B'}
-    type: ColumnPanel
-    layout_properties: {x: 564.5937042236328, y: 20.348158349609378, width: 151.152}
-    components:
-    - name: button_2
-      properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
-        foreground: 'theme:On Primary', visible: true, text: "No of \nemployees",
-        font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small,
-        italic: false, background: '', bold: false, underline: false, icon: ''}
-      type: Button
-      layout_properties: {grid_position: 'FNHLVB,MEZQLN'}
-      event_bindings: {click: No_of_emp_click}
-  - name: outlined_card_1_copy_5
-    properties: {role: outlined-card, tooltip: '', border: '', foreground: '', visible: true,
-      wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
-      spacing_below: small, background: '#00008B'}
-    type: ColumnPanel
-    layout_properties:
-      col_widths: {}
-      grid_position: REVWPJ,XJEEVK
-      x: 375.8303375244141
-      y: 23.59821319580078
-      width: 161.978
-    components:
-    - name: button_1_copy_4
-      properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
-        foreground: 'theme:On Primary', visible: true, text: 'Business
-
-          Type', font_size: null, font: '', spacing_above: small, icon_align: left,
-        spacing_below: small, italic: false, background: '', bold: false, underline: false,
-        icon: ''}
-      type: Button
-      layout_properties: {grid_position: 'JHOYUM,RXDVOZ'}
-      event_bindings: {click: business_click}
-  - name: outlined_card_1_copy_4
-    properties: {role: outlined-card, tooltip: '', border: '', foreground: '', visible: true,
-      wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
-      spacing_below: small, background: '#00008B'}
-    type: ColumnPanel
-    layout_properties: {grid_position: 'NLMVZE,NDTUKL', x: 199.21873474121094, y: 23.59821319580078,
-      width: 154.6288666992188}
-    components:
-    - name: marrital_button
-      properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
-        foreground: 'theme:On Primary', visible: true, text: 'Marrital
-
-          status', font_size: null, font: '', spacing_above: small, icon_align: left,
-        spacing_below: small, italic: false, background: '', bold: false, underline: false,
-        icon: ''}
-      type: Button
-      layout_properties: {grid_position: 'ZFWKHG,FNBPFP'}
-      event_bindings: {click: marrital_button_click}
   - name: outlined_card_1_copy_3
     properties: {role: outlined-card, tooltip: '', border: '', foreground: '', visible: true,
       wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '',
-      spacing_below: small, background: '#00008B'}
+      spacing_below: small, background: '#0b2547'}
     type: ColumnPanel
-    layout_properties: {x: 22.687502175569534, y: 140.12945774197578, width: 154.6205291748047}
+    layout_properties: {x: 22.678573608398438, y: 140.125, width: 164.8884111328125}
     components:
     - name: button_1_copy_6
       properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
@@ -104,44 +49,47 @@ components:
       type: Button
       layout_properties: {grid_position: 'YUTUEO,ZDKIXA'}
       event_bindings: {click: emp_type_button}
-  - name: outlined_card_1
+  - name: outlined_card_1_copy_4
+    properties: {role: outlined-card, tooltip: '', border: '', foreground: '', visible: true,
+      wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
+      spacing_below: small, background: '#0b2547'}
+    type: ColumnPanel
+    layout_properties: {grid_position: 'NLMVZE,NDTUKL', x: 214.9460152587891, y: 21.875,
+      width: 158.8656916503907}
+    components:
+    - name: marrital_button
+      properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
+        foreground: 'theme:On Primary', visible: true, text: 'Marrital
+
+          status', font_size: null, font: '', spacing_above: small, icon_align: left,
+        spacing_below: small, italic: false, background: '', bold: false, underline: false,
+        icon: ''}
+      type: Button
+      layout_properties: {grid_position: 'ZFWKHG,FNBPFP'}
+      event_bindings: {click: marrital_button_click}
+  - name: outlined_card_1_copy_7
     properties: {role: outlined-card, tooltip: '', border: '', foreground: '', visible: true,
       wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '',
-      spacing_below: small, background: '#00008B'}
+      spacing_below: small, background: '#0b2547'}
     type: ColumnPanel
-    layout_properties: {x: 747.7632162868977, y: 21.883936196565628, width: 151.2455291748047}
+    layout_properties: {x: 26.660720825195312, y: 23.58928680419922, width: 166.339}
     components:
-    - name: button_1
-      properties: {role: null, align: left, tooltip: '', border: '', enabled: true,
-        foreground: 'theme:On Primary', visible: true, text: 'Profession
+    - name: button_1_copy_8
+      properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
+        foreground: 'theme:On Primary', visible: true, text: 'Qualification
 
 
           ', font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small,
         italic: false, background: '', bold: false, underline: false, icon: ''}
       type: Button
       layout_properties: {grid_position: 'YUTUEO,ZDKIXA'}
-      event_bindings: {click: professioon_click}
-  - name: outlined_card_1_copy_7
-    properties: {role: outlined-card, tooltip: '', border: '', foreground: '', visible: true,
-      wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '',
-      spacing_below: small, background: '#00008B'}
-    type: ColumnPanel
-    layout_properties: {x: 26.675003815442324, y: 28.22499542310834, width: 162.5749969482422}
-    components:
-    - name: button_1_copy_8
-      properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
-        foreground: 'theme:On Primary', visible: true, text: Qualification, font_size: null,
-        font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
-        background: '', bold: false, underline: false, icon: ''}
-      type: Button
-      layout_properties: {grid_position: 'YUTUEO,ZDKIXA'}
       event_bindings: {click: salary_click}
   - name: outlined_card_1_copy_6
     properties: {role: outlined-card, tooltip: '', border: '', foreground: '', visible: true,
       wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
-      spacing_below: small, background: '#00008B'}
+      spacing_below: small, background: '#0b2547'}
     type: ColumnPanel
-    layout_properties: {x: 192.0000007636845, y: 137.09999542310834, width: 160.72500610351562}
+    layout_properties: {x: 211.79467990994453, y: 141.45534732937813, width: 162.01782226562503}
     components:
     - name: button_1_copy_7
       properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
@@ -156,9 +104,9 @@ components:
   - name: outlined_card_1_copy
     properties: {role: outlined-card, tooltip: '', border: '', foreground: '', visible: true,
       wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
-      spacing_below: small, background: '#00008B'}
+      spacing_below: small, background: '#0b2547'}
     type: ColumnPanel
-    layout_properties: {x: 373.2500007636845, y: 138.63750152662396, width: 164.55783886718743}
+    layout_properties: {x: 399.0401327908039, y: 138.69642093777657, width: 165.65604443359373}
     components:
     - name: button_1_copy_5
       properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
@@ -170,12 +118,61 @@ components:
       type: Button
       layout_properties: {grid_position: 'YUTUEO,ZDKIXA'}
       event_bindings: {click: account_click}
+  - name: outlined_card_1
+    properties: {role: outlined-card, tooltip: '', border: '', foreground: '', visible: true,
+      wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '',
+      spacing_below: small, background: '#0b2547'}
+    type: ColumnPanel
+    layout_properties: {x: 770.0758383572102, y: 21.910715371370316, width: 155.9330291748047}
+    components:
+    - name: button_1
+      properties: {role: null, align: left, tooltip: '', border: '', enabled: true,
+        foreground: 'theme:On Primary', visible: true, text: 'Profession
+
+
+          ', font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small,
+        italic: false, background: '', bold: false, underline: false, icon: ''}
+      type: Button
+      layout_properties: {grid_position: 'YUTUEO,ZDKIXA'}
+      event_bindings: {click: professioon_click}
+  - name: outlined_card_2
+    properties: {role: outlined-card, tooltip: '', border: '', foreground: '', visible: true,
+      wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
+      spacing_below: small, background: '#0b2547'}
+    type: ColumnPanel
+    layout_properties: {x: 592.9151938259602, y: 20.370538979768753, width: 151.17855834960938}
+    components:
+    - name: button_2
+      properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
+        foreground: 'theme:On Primary', visible: true, text: "No of \nemployees",
+        font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small,
+        italic: false, background: '', bold: false, underline: false, icon: ''}
+      type: Button
+      layout_properties: {grid_position: 'FNHLVB,HIUDPT'}
+      event_bindings: {click: No_of_emp_click}
+  - name: outlined_card_1_copy_5
+    properties: {role: outlined-card, tooltip: '', border: '', foreground: '', visible: true,
+      wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
+      spacing_below: small, background: '#0b2547'}
+    type: ColumnPanel
+    layout_properties: {x: 402.7098105251789, y: 20.370538979768753, width: 161.97320556640625}
+    components:
+    - name: button_1_copy_4
+      properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
+        foreground: 'theme:On Primary', visible: true, text: 'Business
+
+          Type', font_size: null, font: '', spacing_above: small, icon_align: left,
+        spacing_below: small, italic: false, background: '', bold: false, underline: false,
+        icon: ''}
+      type: Button
+      layout_properties: {grid_position: 'JHOYUM,RXDVOZ'}
+      event_bindings: {click: business_click}
   - name: outlined_card_1_copy_7_copy
     properties: {role: outlined-card, tooltip: '', border: '', foreground: '', visible: true,
       wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '',
-      spacing_below: small, background: '#00008B'}
+      spacing_below: small, background: '#0b2547'}
     type: ColumnPanel
-    layout_properties: {x: 563.2633383572102, y: 136.39284732937813, width: 152.51785278320312}
+    layout_properties: {x: 594.2276327908039, y: 139.0580237209797, width: 153.65623474121094}
     components:
     - name: button_1_copy_8_copy
       properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
@@ -229,7 +226,7 @@ components:
       properties: {role: null, align: left, tooltip: '', border: '', enabled: true,
         foreground: 'theme:On Primary', visible: true, text: ADD, font_size: null,
         font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
-        background: '#00008B', bold: true, underline: false, icon: ''}
+        background: '#0b2547', bold: true, underline: false, icon: ''}
       type: Button
       layout_properties:
         col_widths: {}
@@ -275,7 +272,7 @@ components:
       properties: {role: null, align: left, tooltip: '', border: '', enabled: true,
         foreground: 'theme:On Primary', visible: true, text: ADD, font_size: null,
         font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
-        background: '#00008B', bold: true, underline: false, icon: ''}
+        background: '#0b2547', bold: true, underline: false, icon: ''}
       type: Button
       layout_properties:
         col_widths: {}
@@ -319,7 +316,7 @@ components:
       properties: {role: null, align: left, tooltip: '', border: '', enabled: true,
         foreground: 'theme:On Primary', visible: true, text: ADD, font_size: null,
         font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
-        background: '#00008B', bold: true, underline: false, icon: ''}
+        background: '#0b2547', bold: true, underline: false, icon: ''}
       type: Button
       layout_properties:
         col_widths: {}
@@ -408,7 +405,7 @@ components:
       properties: {role: null, align: left, tooltip: '', border: '', enabled: true,
         foreground: 'theme:On Primary', visible: true, text: ADD, font_size: null,
         font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
-        background: '#00008B', bold: true, underline: false, icon: ''}
+        background: '#0b2547', bold: true, underline: false, icon: ''}
       type: Button
       layout_properties:
         col_widths: {}
@@ -451,7 +448,7 @@ components:
       properties: {role: null, align: left, tooltip: '', border: '', enabled: true,
         foreground: 'theme:On Primary', visible: true, text: ADD, font_size: null,
         font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
-        background: '#00008B', bold: true, underline: false, icon: ''}
+        background: '#0b2547', bold: true, underline: false, icon: ''}
       type: Button
       layout_properties:
         col_widths: {}
@@ -494,7 +491,7 @@ components:
       properties: {role: null, align: left, tooltip: '', border: '', enabled: true,
         foreground: 'theme:On Primary', visible: true, text: ADD, font_size: null,
         font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
-        background: '#00008B', bold: true, underline: false, icon: ''}
+        background: '#0b2547', bold: true, underline: false, icon: ''}
       type: Button
       layout_properties:
         col_widths: {}
@@ -537,7 +534,7 @@ components:
       properties: {role: null, align: left, tooltip: '', border: '', enabled: true,
         foreground: 'theme:On Primary', visible: true, text: ADD, font_size: null,
         font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
-        background: '#00008B', bold: true, underline: false, icon: ''}
+        background: '#0b2547', bold: true, underline: false, icon: ''}
       type: Button
       layout_properties:
         col_widths: {}
@@ -553,7 +550,7 @@ components:
       layout_properties: {grid_position: 'VRTHOW,FYGSMJ'}
   - name: column_panel_10_copy
     properties: {role: null, tooltip: '', border: '', foreground: '', visible: false,
-      wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{"ACRDSD":10,"OXEFAE":35,"XOPJRZ":10}',
+      wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{"ACRDSD":15,"OXEFAE":35,"XOPJRZ":10,"NRUXTE":15,"EARFPK":34}',
       spacing_below: small, background: ''}
     type: ColumnPanel
     layout_properties: {grid_position: 'KBHWGG,SVBISJ'}
@@ -580,7 +577,7 @@ components:
       properties: {role: null, align: left, tooltip: '', border: '', enabled: true,
         foreground: 'theme:Tertiary Container', visible: true, text: ADD, font_size: null,
         font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
-        background: '#00008B', bold: true, underline: false, icon: ''}
+        background: '#0b2547', bold: true, underline: false, icon: ''}
       type: Button
       layout_properties:
         col_widths: {}

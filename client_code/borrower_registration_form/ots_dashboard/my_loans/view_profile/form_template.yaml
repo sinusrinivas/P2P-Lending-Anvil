@@ -31,10 +31,10 @@ components:
   - type: Label
     properties: {role: outlined-card, align: center, tooltip: '', border: '', foreground: white,
       visible: true, text: Loan Details, font_size: 20, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: darkblue,
+      icon_align: left, spacing_below: small, italic: false, background: '#0b2547',
       bold: true, underline: false, icon: ''}
     name: label_35
-    layout_properties: {row: BTIHJS, width_xs: 12, col_xs: 0, width: 686.8}
+    layout_properties: {row: BTIHJS, width_xs: 12, col_xs: 0, width: 905.4282800000001}
   - type: Label
     properties: {role: null, align: right, tooltip: '', border: '', foreground: '#000337',
       visible: true, text: Loan ID, font_size: null, font: '', spacing_above: small,
