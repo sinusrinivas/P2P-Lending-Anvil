@@ -40,7 +40,7 @@ db_schema:
       type: string
     title: fin_lendor_business_type
   fin_lendor_salary_type:
-    client: none
+    client: full
     server: full
     columns:
     - name: lendor_salary_type

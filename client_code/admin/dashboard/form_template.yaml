@@ -99,7 +99,7 @@ components:
         icon_align: left, spacing_below: small, italic: false, background: '#00008B',
         bold: true, underline: false, icon: 'fa:cube'}
       name: button_2
-      layout_properties: {x: 10, y: 74, width: 245}
+      layout_properties: {x: 9.991069793701172, y: 73.99553680419922, width: 244.996}
       event_bindings: {click: button_2_click}
     - type: Button
       properties: {role: outlined-button, align: center, tooltip: '', border: '',
