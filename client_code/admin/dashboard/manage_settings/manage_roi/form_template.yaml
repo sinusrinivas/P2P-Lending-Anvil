@@ -116,9 +116,9 @@ components:
         properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
           foreground: 'theme:On Primary', visible: true, text: Calculate, font_size: null,
           font: '', spacing_above: small, icon_align: left, spacing_below: small,
-          italic: false, background: '#00008B', bold: false, underline: false, icon: ''}
+          italic: false, background: '#0b2547', bold: false, underline: false, icon: ''}
         name: button_2
-        layout_properties: {grid_position: 'SEBBCB,RTXEUU', x: 90.375, y: 227.5625,
+        layout_properties: {grid_position: 'SEBBCB,RTXEUU', x: 90.375, y: 227.5535888671875,
           width: 532}
         event_bindings: {click: button_2_click}
       - type: Label

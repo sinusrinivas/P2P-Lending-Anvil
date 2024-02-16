@@ -24,7 +24,7 @@ components:
 - name: outlined_card_1
   properties: {role: elevated-card, tooltip: '', border: '', foreground: '', visible: true,
     wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '', spacing_below: small,
-    background: '#00008B'}
+    background: '#0b2547'}
   type: ColumnPanel
   layout_properties: {grid_position: 'LCSCLJ,HWKVCB'}
   components:
@@ -46,7 +46,7 @@ components:
 - name: outlined_card_2
   properties: {role: elevated-card, tooltip: '', border: '', foreground: '', visible: true,
     wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '', spacing_below: small,
-    background: '#00008B'}
+    background: '#0b2547'}
   type: ColumnPanel
   layout_properties: {grid_position: 'LCSCLJ,YUYEIE'}
   components:
@@ -70,7 +70,7 @@ components:
 - name: outlined_card_3
   properties: {role: elevated-card, tooltip: '', border: '', foreground: '', visible: true,
     wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '', spacing_below: small,
-    background: '#00008B'}
+    background: '#0b2547'}
   type: ColumnPanel
   layout_properties: {grid_position: 'LCSCLJ,KJNUCJ'}
   components:
@@ -92,7 +92,7 @@ components:
 - name: outlined_card_4
   properties: {role: elevated-card, tooltip: '', border: '', foreground: '', visible: true,
     wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '', spacing_below: small,
-    background: '#00008B'}
+    background: '#0b2547'}
   type: ColumnPanel
   layout_properties: {grid_position: 'LCSCLJ,FSYNPZ'}
   components:
@@ -114,7 +114,7 @@ components:
 - name: outlined_card_5
   properties: {role: elevated-card, tooltip: '', border: '', foreground: '', visible: true,
     wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '', spacing_below: small,
-    background: '#00008B'}
+    background: '#0b2547'}
   type: ColumnPanel
   layout_properties: {grid_position: 'LCSCLJ,VJJTRT'}
   components:

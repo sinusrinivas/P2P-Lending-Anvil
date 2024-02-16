@@ -53,5 +53,5 @@ components:
           spacing_below: small, italic: false, background: '#00008B', bold: true,
           underline: false, icon: 'fa:cube'}
         type: Button
-        layout_properties: {x: 252.125, y: 20.640625, width: 482.688}
+        layout_properties: {x: 252.12501525878906, y: 20.625, width: 482.679}
         event_bindings: {click: button_2_click}

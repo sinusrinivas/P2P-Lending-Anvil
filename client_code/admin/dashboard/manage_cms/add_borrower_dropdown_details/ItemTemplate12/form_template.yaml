@@ -1,5 +1,7 @@
 is_package: true
-container: {type: ColumnPanel}
+container:
+  type: ColumnPanel
+  properties: {col_widths: '{"IQAJLT":35,"RBLNZV":25}'}
 components:
 - name: label_1
   properties: {}

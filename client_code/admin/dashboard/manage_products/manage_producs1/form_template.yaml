@@ -518,9 +518,9 @@ components:
           properties: {role: outlined-button, align: center, tooltip: '', border: '',
             enabled: true, foreground: 'theme:On Primary', visible: true, text: Save,
             font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small,
-            italic: false, background: '#00008B', bold: false, underline: false, icon: 'fa:save'}
+            italic: false, background: '#0b2547', bold: false, underline: false, icon: 'fa:save'}
           name: button_1
-          layout_properties: {x: 210.6947786254883, y: 1519.0416129882813, width: 230.5}
+          layout_properties: {x: 210.67857360839844, y: 1519.0357971191406, width: 230.5}
           event_bindings: {click: button_1_click}
         - type: Label
           properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
