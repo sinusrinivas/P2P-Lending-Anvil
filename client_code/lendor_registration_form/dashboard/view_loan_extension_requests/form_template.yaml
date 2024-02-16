@@ -100,9 +100,7 @@ components:
       wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
       spacing_below: small, background: '#0b2547'}
     type: ColumnPanel
-    layout_properties:
-      col_widths: {}
-      grid_position: OXGTLI,IVWYTR
+    layout_properties: {grid_position: 'OXGTLI,IVWYTR'}
     components:
     - type: Button
       properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
