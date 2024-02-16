@@ -86,6 +86,12 @@ class Borr_loan_request(Borr_loan_requestTemplate):
         self.entered_loan_id = loan_id
         borrower_customer_id = self.label_user_id.text
         self.entered_borrower_customer_id = borrower_customer_id
+        # borrower_customer_id = int(self.entered_borrower_customer_id)
+
+        # disbursement_row = app_tables.fin_disbursement_detail.get(entered_borrower_customer_id=self.entered_borrower_customer_id)
+        # if disbursement_row:
+        #        entered_loan_id = disbursement_row['entered_loan_id']
+        #        entered_borrower_customer_id = disbursement_row['entered_borrower_customer_id']
       
     def calculate_rom(self, interest_rate, min_amount_text):
         # Calculate ROM based on your business logic

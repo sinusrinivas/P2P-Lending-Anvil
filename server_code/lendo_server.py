@@ -545,28 +545,28 @@ def check_loan_timeout(selected_row, lender_accepted_timestamp, email):
             selected_row.update()
             return "Time_out"
 
-@anvil.server.callable
-def get_loan_details(entered_borrower_customer_id):
-    try:
-        # Assuming fin_disbursement_detail is your Data Table
-        fin_disbursement_table = app_tables.fin_disbursement_detail
+# @anvil.server.callable
+# def get_loan_details(entered_borrower_customer_id):
+#     try:
+#         # Assuming fin_disbursement_detail is your Data Table
+#         fin_disbursement_table = app_tables.fin_disbursement_detail
 
-        # Fetch the row based on customer_id
-        row = fin_disbursement_table.get(entered_borrower_customer_id=entered_borrower_customer_id)
+#         # Fetch the row based on customer_id
+#         row = fin_disbursement_table.get(entered_borrower_customer_id=entered_borrower_customer_id)
 
-        if row is not None:
-            # Extract relevant details and return as a dictionary
-            loan_details = {
-                'entered_loan_id': row['entered_loan_id'],
-                'entered_borrower_customer_id': row['entered_borrower_customer_id']
-                # Add more fields as needed
-            }
+#         if row is not None:
+#             # Extract relevant details and return as a dictionary
+#             loan_details = {
+#                 'entered_loan_id': row['entered_loan_id'],
+#                 'entered_borrower_customer_id': row['entered_borrower_customer_id']
+#                 # Add more fields as needed
+#             }
 
-            return loan_details
-        else:
-            # Return None if the row is not found
-            return None
-    except Exception as e:
-        print(f"Error in get_loan_details: {str(e)}")
-        return None      
+#             return loan_details
+#         else:
+#             # Return None if the row is not found
+#             return None
+#     except Exception as e:
+#         print(f"Error in get_loan_details: {str(e)}")
+#         return None      
           

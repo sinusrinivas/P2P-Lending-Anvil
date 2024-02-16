@@ -95,74 +95,38 @@ class wallet_deposit(wallet_depositTemplate):
 
   
   def deposit_money_btn_click(self, **event_args):
-    amount_entered = self.amount_text_box.text
+        amount_entered = self.amount_text_box.text
 
-    # Check if amount_entered is not empty and is a valid number
-    if not amount_entered or not str(amount_entered).isdigit():
-        alert("Please enter a valid amount.")
-        return
+        # Check if amount_entered is not empty and is a valid number
+        if not amount_entered or not str(amount_entered).isdigit():
+            alert("Please enter a valid amount.")
+            return
 
-    try:
-        deposit_amount = int(amount_entered)
-    except ValueError:
-        alert("Please enter a valid amount.")
-        return
+        try:
+            deposit_amount = int(amount_entered)
+        except ValueError:
+            alert("Please enter a valid amount.")
+            return
 
-    customer_id = 1000
-    email = self.email
+        customer_id = 1000
+        email = self.email
+        selected_row = self.selected_row
+        
 
-    # Call server function to deposit money
-    deposit_result = anvil.server.call('deposit_money', email=email, deposit_amount=deposit_amount, customer_id=customer_id)
+        if anvil.server.call('deposit_money', email=email, deposit_amount=deposit_amount, customer_id=customer_id):
+            alert("Deposit successful!")
+            disbursement_row = app_tables.fin_disbursement_detail.get(entered_borrower_customer_id=self.entered_borrower_customer_id)
+            if disbursement_row:
+               entered_loan_id = disbursement_row['entered_loan_id']
+               entered_borrower_customer_id = disbursement_row['entered_borrower_customer_id']
+               # Open Borr_loan_request form again with entered_loan_id and entered_borrower_customer_id
+               open_form('lendor_registration_form.dashboard.view_borrower_loan_request.Borr_loan_request',
+                       selected_row = selected_row,
+                       entered_loan_id=entered_loan_id, 
+                       entered_borrower_customer_id=entered_borrower_customer_id)
 
-    if deposit_result:
-        # Deposit successful, now retrieve loan details
-        loan_details = anvil.server.call('get_loan_details', entered_borrower_customer_id=entered_borrower_customer_id)
-
-        if loan_details:
-            # Extract entered_loan_id and entered_borrower_customer_id from loan_details
-            entered_loan_id = loan_details['entered_loan_id']
-            entered_borrower_customer_id = loan_details['entered_borrower_customer_id']
-
-            # Open the form with the obtained loan details
-            open_form('lendor_registration_form.dashboard.view_borrower_loan_request.Borr_loan_request', 
-                      entered_loan_id=entered_loan_id, 
-                      entered_borrower_customer_id=entered_borrower_customer_id)
         else:
-            alert("Failed to retrieve loan details.")
-    else:
-        alert("Deposit failed!")
-  
-  # def deposit_money_btn_click(self, **event_args):
-  #       amount_entered = self.amount_text_box.text
-
-  #       # Check if amount_entered is not empty and is a valid number
-  #       if not amount_entered or not str(amount_entered).isdigit():
-  #           alert("Please enter a valid amount.")
-  #           return
-
-  #       try:
-  #           deposit_amount = int(amount_entered)
-  #       except ValueError:
-  #           alert("Please enter a valid amount.")
-  #           return
-
-  #       customer_id = 1000
-  #       email = self.email
-  #       selected_row = self.selected_row
-  #       entered_loan_id = self.entered_loan_id
-  #       entered_borrower_customer_id = self.entered_borrower_customer_id
-
-  #       if anvil.server.call('deposit_money', email=email, deposit_amount=deposit_amount, customer_id=customer_id):
-  #           alert("Deposit successful!")
-  #           entered_loan_id = self.entered_loan_id
-  #           entered_borrower_customer_id = self.entered_borrower_customer_id
-  #           # Open Borr_loan_request form again with entered_loan_id and entered_borrower_customer_id
-  #           open_form('lendor_registration_form.dashboard.view_borrower_loan_request.Borr_loan_request',
-  #                      entered_loan_id=entered_loan_id, 
-  #                      entered_borrower_customer_id=entered_borrower_customer_id)
-
-  #       else:
-  #           alert("Deposit failed!")
+            alert("Deposit failed!")
           
   # def deposit_money_btn_click(self, **event_args):
   #       amount_entered = self.amount_text_box.text
@@ -262,7 +226,7 @@ class wallet_deposit(wallet_depositTemplate):
         
         time_difference = current_time - start_time_utc
 
-        if time_difference.total_seconds() > 120:  # 120 seconds = 2 minutes
+        if time_difference.total_seconds() > 300:  # 120 seconds = 2 minutes
             # Update loan status based on the comparison of wallet_amount and loan_amount
             
             wallet_row = app_tables.fin_wallet.get(user_email=self.email)
@@ -295,8 +259,8 @@ class wallet_deposit(wallet_depositTemplate):
   def timer_1_tick(self, **event_args):
     """This method is called Every [interval] seconds. Does not trigger if [interval] is 0."""
     self.check_time_difference()
-    # Print time_difference every 30 seconds
-    if int(time.time() - self.start_time) % 30 == 0:
+    # Print time_difference every 60 seconds
+    if int(time.time() - self.start_time) % 60 == 0:
       print("time_difference:", datetime.now(timezone.utc) - datetime.utcfromtimestamp(self.start_time).replace(tzinfo=timezone.utc))
   
   def calculate_first_emi_due_date(self, emi_payment_type, loan_disbursed_timestamp, tenure):
@@ -323,4 +287,3 @@ class wallet_deposit(wallet_depositTemplate):
     """This method is called when the button is clicked"""
     open_form("wallet.wallet.all_transaction")
 
-  
