@@ -25,7 +25,7 @@ class view_profile(view_profileTemplate):
    
   def link_1_click(self, **event_args):
     """This method is called when the link is clicked"""
-    open_form('lendor_registration_form.dashboard.view_available_balance')
+    open_form("lendor_registration_form.dashboard.view_available_balance")
 
   def button_1_click(self, **event_args):
     """This method is called when the button is clicked"""
@@ -33,7 +33,7 @@ class view_profile(view_profileTemplate):
 
   def link_2_click(self, **event_args):
     """This method is called when the link is clicked"""
-    open_form('lendor_registration_form.dashboard.view_borrower_loan_request')
+    open_form("lendor_registration_form.dashboard.view_borrower_loan_request")
 
   def link_3_click(self, **event_args):
     """This method is called when the link is clicked"""
@@ -41,7 +41,7 @@ class view_profile(view_profileTemplate):
 
   def link_4_click(self, **event_args):
     """This method is called when the link is clicked"""
-    open_form("lendor_registration_form.dashboard.loan_disbursement")
+    open_form("lendor_registration_form.dashboard.view_borrower_loan_request.Borr_loan_request")
 
   def link_5_click(self, **event_args):
     """This method is called when the link is clicked"""
@@ -53,7 +53,7 @@ class view_profile(view_profileTemplate):
 
   def link_7_click(self, **event_args):
     """This method is called when the link is clicked"""
-    open_form("lendor_registration_form.dashboard.vcl")
+    open_form("lendor_registration_form.dashboard.lender_view_loans")
 
   def link_8_click(self, **event_args):
     """This method is called when the link is clicked"""
@@ -73,7 +73,7 @@ class view_profile(view_profileTemplate):
 
   def link_12_click(self, **event_args):
     """This method is called when the link is clicked"""
-    open_form("lendor_registration_form.dashboard.view_or_send_notifications")
+    open_form("lendor_registration_form.dashboard.view_profile")
 
   def link_13_click(self, **event_args):
     """This method is called when the link is clicked"""

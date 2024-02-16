@@ -121,3 +121,4 @@ components:
     properties: {text: Change Password}
     name: link_13
     layout_properties: {grid_position: 'UBAZLK,DREEKQ'}
+    event_bindings: {click: link_13_click}
