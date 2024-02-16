@@ -53,7 +53,7 @@ class edit_profile(edit_profileTemplate):
 
   def link_7_click(self, **event_args):
     """This method is called when the link is clicked"""
-    open_form("lendor_registration_form.dashboard.vcl")
+    open_form("lendor_registration_form.dashboard.lender_view_loans")
 
   def link_8_click(self, **event_args):
     """This method is called when the link is clicked"""
