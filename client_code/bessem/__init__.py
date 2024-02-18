@@ -6,6 +6,11 @@ import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 
+
+# user data 
+
+#users = app_tables.fin_user_profile.search(email_user=)
+
 # this function is force push to total points in bessem table
 def final_points_update_bessem_table():
   final_points = general_points()+loan_points()+loan_and_trust_user_model()+occupation_point_and_government_id_model()
@@ -35,6 +40,7 @@ def loan_and_trust_user_model():
 
 # this function have to check by admin
 def occupation_point_and_government_id_model():
+  
   return 300
 
 
