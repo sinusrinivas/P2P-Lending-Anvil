@@ -29,8 +29,8 @@ class check_out(check_outTemplate):
         total_payments = tenure * 12
   
         if emi_payment_type == 'One Time':
-            emi = (loan_amount * monthly_interest_rate * (1 + monthly_interest_rate) ** 12) / ((1 + monthly_interest_rate) ** 12 - 1)
-            total_emi = emi + extension_amount  # Add extension amount to 12-month EMI total
+            emi = (loan_amount * monthly_interest_rate * (1 + monthly_interest_rate) ** tenure) / ((1 + monthly_interest_rate) ** tenure - 1)
+            total_emi = emi * tenure + extension_amount  # Add extension amount to 12-month EMI total
         elif emi_payment_type == 'Monthly':
             # Calculate monthly EMI amount
             emi = (loan_amount * monthly_interest_rate * (1 + monthly_interest_rate) ** total_payments) / ((1 + monthly_interest_rate) ** total_payments - 1)
