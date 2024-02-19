@@ -17,7 +17,7 @@ class today_dues(today_duesTemplate):
         self.init_components(**properties)
         
         today_date = datetime.now(timezone.utc).date()
-
+        loan_details = []
         # Fetch all loan details from fin_emi_table where next_payment matches today's date
         all_loans = list(app_tables.fin_emi_table.search(
             next_payment=q.less_than_or_equal_to(today_date)
@@ -36,7 +36,7 @@ class today_dues(today_duesTemplate):
                 loan_amount = loan_details_row['loan_amount']
                 scheduled_payment = latest_loan['scheduled_payment']
                 next_payment = latest_loan['next_payment']
-                days_left = (today_date - next_payment).days
+                days_left = (today_date - scheduled_payment).days
                 emi_number = latest_loan['emi_number']
                 account_number = latest_loan['account_number']
                 tenure = loan_details_row['tenure']
