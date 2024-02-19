@@ -99,21 +99,99 @@ components:
     type: Image
     layout_properties: {x: 969.2499511726201, y: 11.425000000745058, width: 384.9875183105469}
   - name: label_5_copy_1
-    properties: {role: input-prompt, align: left, tooltip: '', border: '', foreground: black,
+    properties: {role: body, align: left, tooltip: '', border: '', foreground: black,
       visible: true, text: '  An RBI registered Peer to Peer Lending Platform  (NBFC-P2P).',
       font_size: 20, font: a, spacing_above: small, icon_align: left, spacing_below: small,
       italic: false, background: white, bold: false, underline: false, icon: ''}
     type: Label
     layout_properties: {x: 91.0124862678349, y: 161.88749389722943, width: 531.6000366210938}
+- name: xy_panel_2
+  properties: {height: 59.5999755859375}
+  type: XYPanel
+  layout_properties: {grid_position: 'UGSXAM,ELGEVC'}
+  components:
+  - name: image_3_copy
+    properties: {height: 70.39999389648438, source: 'https://static.vecteezy.com/system/resources/previews/026/513/630/non_2x/data-analytics-logo-design-growth-arrow-logo-design-for-data-finance-investment-vector.jpg'}
+    type: Image
+    layout_properties: {x: 3.362500000745058, y: 0, width: 72.6624984741211}
+  - name: label_1
+    properties: {text: '₹ 13000 Cr+
+
+        ', bold: true, font_size: 24, font: a, foreground: ''}
+    type: Label
+    layout_properties: {x: 65.0125091560185, y: 14.112503051757812, width: 220}
+  - name: image_3
+    properties: {height: 66.19998168945312, source: 'https://www.pngitem.com/pimgs/m/255-2558030_icon-customers-drawing-customer-icon-png-transparent-png.png'}
+    type: Image
+    layout_properties: {x: 381.69997863844037, y: 3.4124984741210938, width: 53.32500076293945}
+  - name: label_5
+    properties: {text: 1Cr+, font_size: 25, font: a, bold: true}
+    type: Label
+    layout_properties: {x: 435.16250305250287, y: 7.875, width: 136.66250610351562}
+  - name: image_3_copy_2
+    properties: {height: 54.199981689453125, source: 'https://static.vecteezy.com/system/resources/previews/010/353/285/non_2x/colourful-google-logo-on-white-background-free-vector.jpg'}
+    type: Image
+    layout_properties: {x: 680.8999908454716, y: 5.400001525878906, width: 78}
+- name: grid_panel_1
+  properties: {}
+  type: GridPanel
+  layout_properties: {grid_position: 'CBJAZF,ZVTTMD'}
+  components:
+  - name: label_7
+    properties: {text: Invested Till Date, bold: true, foreground: '#0770e8'}
+    type: Label
+    layout_properties: {row: JGIILA, width_xs: 3, col_xs: 3}
+  - name: label_7_copy_2
+    properties: {text: Rating on Google, bold: true, foreground: '#0770e8'}
+    type: Label
+    layout_properties: {row: HQENJI, width_xs: 3, col_xs: 9}
+  - name: label_7_copy
+    properties: {text: Trusted Customers, bold: true, foreground: '#0770e8'}
+    type: Label
+    layout_properties: {row: HQENJI, width_xs: 3, col_xs: 8}
+  - name: label_6
+    properties: {text: 4.2/5, font: a, font_size: 25, bold: true}
+    type: Label
+    layout_properties: {row: ARWJZP, width_xs: 3, col_xs: 7}
+    data_bindings: []
 - name: spacer_4
-  properties: {height: 32}
+  properties: {height: 15.199981689453125}
   type: Spacer
-  layout_properties: {grid_position: 'AIFBLC,STKBWN'}
+  layout_properties: {grid_position: 'CEVIWJ,CAZEVF'}
+- name: label_2
+  properties: {role: null, align: center, tooltip: '', border: '', foreground: black,
+    visible: true, text: 'What is Peer to Peer Lending?
+
+      ', font_size: 25, font: a, spacing_above: small, icon_align: left, spacing_below: small,
+    italic: false, background: '', bold: true, underline: true, icon: ''}
+  type: Label
+  layout_properties: {grid_position: 'URGQIC,FTPFBU'}
+- name: image_2
+  properties: {source: 'https://www.godaddy.com/resources/wp-content/uploads/2024/01/How-to-Get-a-Loan-to-Start-a-Business-featured-dye20j.tmp_.jpeg?size=3840x0',
+    display_mode: shrink_to_fit}
+  type: Image
+  layout_properties: {grid_position: 'TSREDZ,NINEJA'}
+- name: label_3
+  properties: {align: center, text: 'Peer to Peer lending, also known as P2P Lending,
+      is a financial innovation which connects verified borrowers seeking unsecured
+      personal loans with investors looking to earn higher returns on their investments.
+      Verified borrowers are listed on the P2P lending platform, Investors can see
+      all the details about the borrowers before lending money to them. Investors
+      have the option to lend small amounts to multiple borrowers to diversify their
+      investments.
+
+      ', italic: true, font_size: 15.5, font: '', foreground: '', bold: false}
+  type: Label
+  layout_properties: {grid_position: 'ZHHAHZ,ZDKCSW'}
+- name: spacer_3
+  properties: {height: 16.79998779296875}
+  type: Spacer
+  layout_properties: {grid_position: 'CZXDIW,HTBLRL'}
 - name: grid_panel_2_copy_1
-  properties: {spacing_above: small, spacing_below: small, background: '#0b2547',
+  properties: {spacing_above: small, spacing_below: small, background: '#094586',
     foreground: '', border: '', visible: true, role: null, tooltip: ''}
   type: GridPanel
-  layout_properties: {grid_position: 'RFHNEJ,NBXHLS'}
+  layout_properties: {grid_position: 'RFHNEJ,NBXHLS', full_width_row: true}
   components:
   - name: linear_panel_1_copy_1
     properties: {}
@@ -121,17 +199,17 @@ components:
     layout_properties: {row: ETUSCF, width_xs: 12, col_xs: 0}
     components:
     - name: label_1_copy_1
-      properties: {role: null, align: left, tooltip: '', border: '', foreground: white,
+      properties: {role: null, align: center, tooltip: '', border: '', foreground: white,
         visible: true, text: "   Personal Loan (P2P Loan) at Interest \n   Rates Starting\
-          \ from 12%", font_size: 25, font: '', spacing_above: small, icon_align: left,
+          \ from 12%", font_size: 22, font: '', spacing_above: small, icon_align: left,
         spacing_below: small, italic: false, background: '', bold: true, underline: false,
         icon: ''}
       type: Label
       layout_properties: {}
     - name: outlined_button_1_copy_1
       properties: {role: tonal-button, align: center, tooltip: '', border: '', enabled: true,
-        foreground: Black, visible: true, text: Apply now, font_size: 15, font: '',
-        spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+        foreground: Black, visible: true, text: 'Apply now               ', font_size: 15,
+        font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
         background: white, bold: true, underline: false, icon: ''}
       type: Button
       layout_properties: {}
@@ -145,10 +223,10 @@ components:
     type: Label
     layout_properties: {row: QDSSCF, width_xs: 12, col_xs: 0, width: 470}
 - name: grid_panel_3_copy_1
-  properties: {spacing_above: small, spacing_below: small, background: '#0b2547',
+  properties: {spacing_above: small, spacing_below: small, background: '#094586',
     foreground: '', border: '', visible: true, role: null, tooltip: ''}
   type: GridPanel
-  layout_properties: {grid_position: 'RFHNEJ,XZZDKH'}
+  layout_properties: {grid_position: 'RFHNEJ,XZZDKH', full_width_row: true}
   components:
   - name: linear_panel_2_copy_1
     properties: {}
@@ -156,17 +234,17 @@ components:
     layout_properties: {row: QSFIAM, width_xs: 12, col_xs: 0}
     components:
     - name: label_2_copy_1
-      properties: {role: null, align: left, tooltip: '', border: '', foreground: white,
+      properties: {role: null, align: center, tooltip: '', border: '', foreground: white,
         visible: true, text: "   High Returns for Investors Earn good \n   returns",
-        font_size: 25, font: '', spacing_above: small, icon_align: left, spacing_below: small,
+        font_size: 22, font: '', spacing_above: small, icon_align: left, spacing_below: small,
         italic: false, background: '', bold: true, underline: false, icon: ''}
       type: Label
       layout_properties: {}
     - name: outlined_button_2_copy_1
       properties: {role: elevated-button, align: center, tooltip: '', border: '',
-        enabled: true, foreground: Black, visible: true, text: Invest Now, font_size: 15,
-        font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
-        background: white, bold: true, underline: false, icon: ''}
+        enabled: true, foreground: Black, visible: true, text: 'Invest Now               ',
+        font_size: 15, font: '', spacing_above: small, icon_align: left, spacing_below: small,
+        italic: false, background: white, bold: true, underline: false, icon: ''}
       type: Button
       layout_properties: {}
   - name: linear_panel_5_copy_1
@@ -183,49 +261,15 @@ components:
         icon: ''}
       type: Label
       layout_properties: {}
-- name: spacer_3
-  properties: {height: 42}
-  type: Spacer
-  layout_properties: {grid_position: 'TMLWZN,OFPRBQ'}
-- name: image_2
-  properties: {source: 'https://www.godaddy.com/resources/wp-content/uploads/2024/01/How-to-Get-a-Loan-to-Start-a-Business-featured-dye20j.tmp_.jpeg?size=3840x0',
-    display_mode: shrink_to_fit}
-  type: Image
-  layout_properties: {grid_position: 'YMGLXW,DJAORH'}
 - name: column_panel_1
   properties: {}
   type: ColumnPanel
   layout_properties: {grid_position: 'UUAAMD,PNSHYI'}
   components:
-  - name: label_2
-    properties: {role: null, align: center, tooltip: '', border: '', foreground: '#030852',
-      visible: true, text: 'What is Peer to Peer Lending?
-
-        ', font_size: 20, font: '', spacing_above: small, icon_align: left, spacing_below: small,
-      italic: false, background: '', bold: true, underline: false, icon: ''}
-    type: Label
-    layout_properties: {grid_position: 'NBSKAT,OIPHSQ'}
   - name: image_1
     properties: {height: 291, source: 'https://miro.medium.com/v2/resize:fit:800/1*DXKkKChhzChtYMfwYulTtw.jpeg'}
     type: Image
     layout_properties: {grid_position: 'KCBRJR,FZDYJO'}
-  - name: label_3
-    properties: {align: left, text: 'Peer to Peer lending, also known as P2P Lending,
-        is a financial innovation which connects verified borrowers seeking unsecured
-        personal loans with investors looking to earn higher returns on their investments.
-        Verified borrowers are listed on the P2P lending platform, Investors can see
-        all the details about the borrowers before lending money to them. Investors
-        have the option to lend small amounts to multiple borrowers to diversify their
-        investments.
-
-
-        Peer to Peer Lending is already a hugely successful model for alternate financing
-        across the globe. In India, P2P Lending is gaining traction at a very fast
-        pace and slowly becoming a very attractive investment option for investors.
-        RBI has already taken a cognizance of this innovation and come up with regulations
-        for the sector.', italic: true, font_size: 15, font: '', foreground: '', bold: false}
-    type: Label
-    layout_properties: {grid_position: 'KCBRJR,ZBNMHS'}
 - type: Spacer
   properties: {height: 18}
   name: spacer_5
@@ -236,7 +280,7 @@ components:
   layout_properties: {grid_position: 'YELVKG,AVJXAU', full_width_row: true}
   components: []
 - name: grid_panel_2
-  properties: {spacing_above: small, spacing_below: small, background: '#0b2547',
+  properties: {spacing_above: small, spacing_below: small, background: '#0770e8',
     foreground: '', border: '', visible: true, role: null, tooltip: ''}
   type: GridPanel
   layout_properties: {grid_position: 'NQBOEI,XTHIRA', full_width_row: true}
@@ -244,7 +288,7 @@ components:
   - name: flow_panel_3_copy_1
     properties: {role: null, vertical_align: full, spacing: medium, align: left, tooltip: '',
       border: '', foreground: '', visible: true, spacing_above: none, spacing_below: none,
-      background: '#0b2547'}
+      background: '#0770e8'}
     type: FlowPanel
     layout_properties: {row: JUWDTC, width_xs: 4, col_xs: 0, width: 198.328}
     components:
@@ -252,7 +296,7 @@ components:
       properties: {role: null, align: left, tooltip: '', border: '', foreground: white,
         visible: true, text: '© 2023 - 2024, GTPL - All Rights Reserved', font_size: null,
         font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
-        background: '#0b2547', bold: true, underline: false, icon: ''}
+        background: '#0770e8', bold: true, underline: false, icon: ''}
       name: label_4
       layout_properties: {}
   - name: link_5
