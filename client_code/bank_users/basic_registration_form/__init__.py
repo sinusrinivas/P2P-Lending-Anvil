@@ -134,3 +134,7 @@ class basic_registration_form(basic_registration_formTemplate):
         # Display the image in an Image component
         self.image_user_photo.display_mode = file
         self.image_user_photo.visible = True  
+
+  def gender_dd_change(self, **event_args):
+    """This method is called when an item is selected"""
+    pass
