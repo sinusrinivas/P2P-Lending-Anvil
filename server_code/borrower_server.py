@@ -253,18 +253,6 @@ def generate_emi_id():
     # Return the new EMI ID
     return f"EMI{counter}"
 
-# @anvil.server.callable
-# def get_max_amount():
-#     data = app_tables.fin_product_details.search()
-#     data1_strings = [str(row['max_amount']) for row in data if str(row['max_amount']).strip()]
-#     return data1_strings[0] if data1_strings else None
-
-# In borrower_registration_form.dashboard.new_loan_request module
-# @anvil.server.callable
-# def get_fin_product_details(product_categories):
-#     # Perform the search on the server side
-#     user_request = app_tables.fin_product_details.search(product_categories=product_categories)
-#     return user_request
 
 
 
@@ -274,7 +262,7 @@ def generate_emi_id():
 def find_user_and_add_bessem_value(user_id):
   users = app_tables.fin_beseem_score.search(borrower_customer_id=user_id)
   if users:
-    users[0]['total_point']=bessemfunctions.final_points_update_bessem_table()
+    users[0]['total_point']=bessemfunctions.final_points_update_bessem_table(user_id)
     users[0]['user_type'] = 'borrower'
 
 
