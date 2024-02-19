@@ -83,7 +83,7 @@ components:
   properties: {role: outlined-button, align: left, tooltip: '', border: '', enabled: true,
     foreground: 'theme:On Primary', visible: true, text: 'My Loans                          ',
     font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small,
-    italic: false, background: '#00008B', bold: false, underline: false, icon: ''}
+    italic: false, background: '#0b2547', bold: false, underline: false, icon: ''}
   type: Button
   layout_properties:
     col_widths: {}
@@ -93,7 +93,7 @@ components:
   properties: {role: outlined-button, align: left, tooltip: '', border: '', enabled: true,
     foreground: 'theme:On Primary', visible: true, text: 'One Time Settlement                    ',
     font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small,
-    italic: false, background: '#00008B', bold: false, underline: false, icon: ''}
+    italic: false, background: '#0b2547', bold: false, underline: false, icon: ''}
   type: Button
   layout_properties:
     col_widths: {}

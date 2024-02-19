@@ -472,9 +472,9 @@ components:
           properties: {role: outlined-button, align: center, tooltip: '', border: '',
             enabled: true, foreground: 'theme:On Primary', visible: true, text: SAVE,
             font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small,
-            italic: false, background: '#00008B', bold: false, underline: false, icon: 'fa:save'}
+            italic: false, background: '#0b2547', bold: false, underline: false, icon: 'fa:save'}
           name: button_1
-          layout_properties: {x: 38, y: 1436.9733, width: 720.375}
+          layout_properties: {x: 38, y: 1436.9643859863281, width: 720.375}
           event_bindings: {click: button_1_click}
         - type: Label
           properties: {role: null, align: left, tooltip: '', border: '', foreground: '',

@@ -215,8 +215,6 @@ def withdraw_money(email, withdraw_amount, customer_id):
         )
         return False
 
-
-
 @anvil.server.callable
 def fetch_profile_data_and_insert(email, customer_id):
     try:

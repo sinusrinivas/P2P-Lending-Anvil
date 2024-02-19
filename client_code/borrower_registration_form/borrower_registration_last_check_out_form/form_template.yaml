@@ -97,7 +97,7 @@ components:
 - name: prev_borrower_button
   properties: {role: null, align: right, tooltip: '', border: '', enabled: true, foreground: 'theme:On
       Primary', visible: true, text: prev, font_size: null, font: '', spacing_above: small,
-    icon_align: left, spacing_below: small, italic: false, background: '#00008B',
+    icon_align: left, spacing_below: small, italic: false, background: '#0b2547',
     bold: true, underline: false, icon: 'fa:angle-double-left'}
   type: Button
   layout_properties: {grid_position: 'CDBLHM,YTESTB'}
@@ -105,7 +105,7 @@ components:
   properties: {role: elevated-button, align: left, tooltip: '', border: '', enabled: true,
     foreground: 'theme:On Primary', visible: true, text: Submit, font_size: null,
     font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
-    background: '#00008B', bold: true, underline: false, icon: 'fa:angle-double-right'}
+    background: '#0b2547', bold: true, underline: false, icon: 'fa:angle-double-right'}
   type: Button
   layout_properties: {grid_position: 'CDBLHM,ETZZOJ'}
   event_bindings: {click: button_2_click}
