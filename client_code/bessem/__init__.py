@@ -24,10 +24,50 @@ def final_points_update_bessem_table(user_id):
 
 
 
-# caluculate from user_profile table
+# caluculate from user_profile table for this function if all values is true menas the user get 300 points 
 def general_points(id):
-  users = app_tables.fin_user_profile.search(customer_id=i)
-  return 400
+    users = app_tables.fin_user_profile.search(customer_id=id)
+    if users:
+        user = users[0]
+        martial_status = user['marital_status']
+        age = user['user_age']
+        qualification = user['qualification']
+        
+        points = 0
+        
+        # this code is for martial_status
+        if martial_status == "Single":
+            points += 100
+        elif martial_status == "Married":
+            points += 200
+        
+        # this code is for age
+        if age <= 30:
+            points += 50
+        elif 30 < age <= 50:
+            points += 100
+        elif age > 50:
+            points += 150
+        
+        # this code is for qulifications
+        if qualification == "High School":
+            points += 50
+        elif qualification == "Undergraduate":
+            points += 100
+        elif qualification == "Postgraduate":
+            points += 150
+        
+        # all pointa in range of  total points to 300
+        points = min(points, 300)
+        
+        return points
+    else:
+        return 0
+
+
+
+
+
 
 
 
@@ -42,7 +82,7 @@ def loan_and_trust_user_model(id):
 # this function have to check by admin
 def occupation_point_and_government_id_model(id):
   
-  return 300
+  return 400
 
 
 
