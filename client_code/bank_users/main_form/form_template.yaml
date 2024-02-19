@@ -69,7 +69,7 @@ components:
   event_bindings: {click: login_signup_button_click}
   layout_properties: {grid_position: 'IFJNGB,SYNJVB UAEYQF,SZJXCQ'}
 - name: spacer_1
-  properties: {height: 8.800003051757812}
+  properties: {height: 17.199966430664062}
   type: Spacer
   layout_properties: {grid_position: 'SIFLFT,HNDGOE'}
 - name: xy_panel_1
@@ -106,54 +106,49 @@ components:
     type: Label
     layout_properties: {x: 91.0124862678349, y: 161.88749389722943, width: 531.6000366210938}
 - name: xy_panel_2
-  properties: {height: 59.5999755859375}
+  properties: {height: 79}
   type: XYPanel
   layout_properties: {grid_position: 'UGSXAM,ELGEVC'}
   components:
   - name: image_3_copy
-    properties: {height: 70.39999389648438, source: 'https://static.vecteezy.com/system/resources/previews/026/513/630/non_2x/data-analytics-logo-design-growth-arrow-logo-design-for-data-finance-investment-vector.jpg'}
+    properties: {height: 68.79998779296875, source: 'https://static.vecteezy.com/system/resources/previews/026/513/630/non_2x/data-analytics-logo-design-growth-arrow-logo-design-for-data-finance-investment-vector.jpg'}
     type: Image
-    layout_properties: {x: 3.362500000745058, y: 0, width: 72.6624984741211}
+    layout_properties: {x: 3.362500000745058, y: 0, width: 61.30000305175784}
+  - name: image_3_copy_2
+    properties: {height: 46, source: 'https://static.vecteezy.com/system/resources/previews/010/353/285/non_2x/colourful-google-logo-on-white-background-free-vector.jpg'}
+    type: Image
+    layout_properties: {x: 771.7624786384404, y: 7.599998474121094, width: 54.79999923706055}
+  - name: label_6
+    properties: {text: 4.2/5, font: a, font_size: 25, bold: true}
+    type: Label
+    layout_properties: {x: 826.1874664314091, y: 0, width: 60.76250076293945}
+    data_bindings: []
+  - name: label_7_copy_2
+    properties: {text: Rating on Google, bold: true, foreground: '#0770e8'}
+    type: Label
+    layout_properties: {x: 830.0499542243779, y: 30.587501525878906, width: 136.66250610351562}
+  - name: image_3
+    properties: {height: 68.60000610351562, source: 'https://www.pngitem.com/pimgs/m/255-2558030_icon-customers-drawing-customer-icon-png-transparent-png.png'}
+    type: Image
+    layout_properties: {x: 417.18752746656537, y: 0, width: 64.31251220703125}
+  - name: label_5
+    properties: {text: 1Cr+, font_size: 25, font: a, bold: true}
+    type: Label
+    layout_properties: {x: 478.81252746656537, y: 6.474998474121094, width: 136.66250610351562}
+  - name: label_7_copy
+    properties: {text: Trusted Customers, bold: true, foreground: '#0770e8'}
+    type: Label
+    layout_properties: {x: 478.4500396735966, y: 33.599998474121094, width: 136.66250610351562}
   - name: label_1
     properties: {text: '₹ 13000 Cr+
 
         ', bold: true, font_size: 24, font: a, foreground: ''}
     type: Label
-    layout_properties: {x: 65.0125091560185, y: 14.112503051757812, width: 220}
-  - name: image_3
-    properties: {height: 66.19998168945312, source: 'https://www.pngitem.com/pimgs/m/255-2558030_icon-customers-drawing-customer-icon-png-transparent-png.png'}
-    type: Image
-    layout_properties: {x: 381.69997863844037, y: 3.4124984741210938, width: 53.32500076293945}
-  - name: label_5
-    properties: {text: 1Cr+, font_size: 25, font: a, bold: true}
-    type: Label
-    layout_properties: {x: 435.16250305250287, y: 7.875, width: 136.66250610351562}
-  - name: image_3_copy_2
-    properties: {height: 54.199981689453125, source: 'https://static.vecteezy.com/system/resources/previews/010/353/285/non_2x/colourful-google-logo-on-white-background-free-vector.jpg'}
-    type: Image
-    layout_properties: {x: 680.8999908454716, y: 5.400001525878906, width: 78}
-- name: grid_panel_1
-  properties: {}
-  type: GridPanel
-  layout_properties: {grid_position: 'CBJAZF,ZVTTMD'}
-  components:
+    layout_properties: {x: 59.674984741955996, y: 14.912498474121094, width: 220}
   - name: label_7
     properties: {text: Invested Till Date, bold: true, foreground: '#0770e8'}
     type: Label
-    layout_properties: {row: JGIILA, width_xs: 3, col_xs: 3}
-  - name: label_7_copy_2
-    properties: {text: Rating on Google, bold: true, foreground: '#0770e8'}
-    type: Label
-    layout_properties: {row: HQENJI, width_xs: 3, col_xs: 9}
-  - name: label_7_copy
-    properties: {text: Trusted Customers, bold: true, foreground: '#0770e8'}
-    type: Label
-    layout_properties: {row: HQENJI, width_xs: 3, col_xs: 8}
-  - name: label_6
-    properties: {text: 4.2/5, font: a, font_size: 25, bold: true}
-    type: Label
-    layout_properties: {row: ARWJZP, width_xs: 3, col_xs: 7}
-    data_bindings: []
+    layout_properties: {x: 64.97500305250287, y: 43, width: 136.66250610351562}
 - name: spacer_4
   properties: {height: 15.199981689453125}
   type: Spacer
@@ -208,7 +203,7 @@ components:
       layout_properties: {}
     - name: outlined_button_1_copy_1
       properties: {role: tonal-button, align: center, tooltip: '', border: '', enabled: true,
-        foreground: Black, visible: true, text: 'Apply now               ', font_size: 15,
+        foreground: Black, visible: true, text: 'Apply now                 ', font_size: 15,
         font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
         background: white, bold: true, underline: false, icon: ''}
       type: Button
@@ -261,17 +256,37 @@ components:
         icon: ''}
       type: Label
       layout_properties: {}
+- name: spacer_3_copy
+  properties: {height: 29}
+  type: Spacer
+  layout_properties: {grid_position: 'DEVKVL,ACLHUB'}
+- name: label_2_copy
+  properties: {role: null, align: center, tooltip: '', border: '', foreground: black,
+    visible: true, text: 'Hear from our investors
+
+      ', font_size: 25, font: a, spacing_above: small, icon_align: left, spacing_below: small,
+    italic: false, background: '', bold: true, underline: true, icon: ''}
+  type: Label
+  layout_properties: {grid_position: 'LGELET,VOMYRJ'}
 - name: column_panel_1
   properties: {}
   type: ColumnPanel
   layout_properties: {grid_position: 'UUAAMD,PNSHYI'}
   components:
   - name: image_1
-    properties: {height: 291, source: 'https://miro.medium.com/v2/resize:fit:800/1*DXKkKChhzChtYMfwYulTtw.jpeg'}
+    properties: {height: 291, source: _/theme/Screenshot 2024-02-19 152401.png}
     type: Image
     layout_properties: {grid_position: 'KCBRJR,FZDYJO'}
+  - name: image_1_copy
+    properties: {height: 291, source: _/theme/Screenshot 2024-02-19 152705.png}
+    type: Image
+    layout_properties: {grid_position: 'KCBRJR,IARGEJ'}
+  - name: image_1_copy_2
+    properties: {height: 291, source: _/theme/Screenshot 2024-02-19 152812.png}
+    type: Image
+    layout_properties: {grid_position: 'KCBRJR,ZVJKGU'}
 - type: Spacer
-  properties: {height: 18}
+  properties: {height: 21.199981689453125}
   name: spacer_5
   layout_properties: {grid_position: 'BMHMDX,VXLTQN', full_width_row: true}
 - name: flow_panel_3
@@ -280,7 +295,7 @@ components:
   layout_properties: {grid_position: 'YELVKG,AVJXAU', full_width_row: true}
   components: []
 - name: grid_panel_2
-  properties: {spacing_above: small, spacing_below: small, background: '#0770e8',
+  properties: {spacing_above: small, spacing_below: small, background: '#094586',
     foreground: '', border: '', visible: true, role: null, tooltip: ''}
   type: GridPanel
   layout_properties: {grid_position: 'NQBOEI,XTHIRA', full_width_row: true}
@@ -288,7 +303,7 @@ components:
   - name: flow_panel_3_copy_1
     properties: {role: null, vertical_align: full, spacing: medium, align: left, tooltip: '',
       border: '', foreground: '', visible: true, spacing_above: none, spacing_below: none,
-      background: '#0770e8'}
+      background: '#094586'}
     type: FlowPanel
     layout_properties: {row: JUWDTC, width_xs: 4, col_xs: 0, width: 198.328}
     components:
@@ -296,7 +311,7 @@ components:
       properties: {role: null, align: left, tooltip: '', border: '', foreground: white,
         visible: true, text: '© 2023 - 2024, GTPL - All Rights Reserved', font_size: null,
         font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
-        background: '#0770e8', bold: true, underline: false, icon: ''}
+        background: '#094586', bold: true, underline: false, icon: ''}
       name: label_4
       layout_properties: {}
   - name: link_5
