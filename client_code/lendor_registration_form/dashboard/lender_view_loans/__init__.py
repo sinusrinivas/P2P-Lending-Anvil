@@ -19,8 +19,7 @@ class lender_view_loans(lender_view_loansTemplate):
         # Retrieve and display open loans
         self.repeating_panel_1.items = app_tables.fin_loan_details.search(
             loan_updated_status=q.any_of(
-                q.like('accept%'),
-                q.like('under process%'),
+                q.like('disbursed loan%'),
                 q.like('foreclosure%'),
                 #q.like('close%')
             )
