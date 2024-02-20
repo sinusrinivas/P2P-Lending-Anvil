@@ -69,7 +69,7 @@ components:
   event_bindings: {click: login_signup_button_click}
   layout_properties: {grid_position: 'IFJNGB,SYNJVB UAEYQF,SZJXCQ'}
 - name: spacer_1
-  properties: {height: 17.199966430664062}
+  properties: {height: 4.8000030517578125}
   type: Spacer
   layout_properties: {grid_position: 'SIFLFT,HNDGOE'}
 - name: xy_panel_1
@@ -91,13 +91,6 @@ components:
       underline: false, icon: ''}
     type: Label
     layout_properties: {x: 89.03749542310834, y: 99.42501525953412, width: 355}
-  - name: image_1_copy_1
-    properties: {role: null, vertical_align: center, height: 266.79998779296875, tooltip: '',
-      border: '', foreground: '', visible: true, display_mode: shrink_to_fit, spacing_above: small,
-      source: 'https://cdni.iconscout.com/illustration/premium/thumb/lending-money-6771667-5639728.png?f=webp',
-      spacing_below: small, background: '', horizontal_align: center}
-    type: Image
-    layout_properties: {x: 969.2499511726201, y: 11.425000000745058, width: 384.9875183105469}
   - name: label_5_copy_1
     properties: {role: body, align: left, tooltip: '', border: '', foreground: black,
       visible: true, text: '  An RBI registered Peer to Peer Lending Platform  (NBFC-P2P).',
@@ -105,6 +98,13 @@ components:
       italic: false, background: white, bold: false, underline: false, icon: ''}
     type: Label
     layout_properties: {x: 91.0124862678349, y: 161.88749389722943, width: 531.6000366210938}
+  - name: image_1_copy_1
+    properties: {role: null, vertical_align: center, height: 266.79998779296875, tooltip: '',
+      border: '', foreground: '', visible: true, display_mode: shrink_to_fit, spacing_above: small,
+      source: 'https://cdni.iconscout.com/illustration/premium/thumb/lending-money-6771667-5639728.png?f=webp',
+      spacing_below: small, background: '', horizontal_align: center}
+    type: Image
+    layout_properties: {x: 973.2874877937138, y: 1.600006103515625, width: 384.9875183105469}
 - name: xy_panel_2
   properties: {height: 79}
   type: XYPanel
@@ -286,7 +286,7 @@ components:
     type: Image
     layout_properties: {grid_position: 'KCBRJR,ZVJKGU'}
 - type: Spacer
-  properties: {height: 21.199981689453125}
+  properties: {height: 40}
   name: spacer_5
   layout_properties: {grid_position: 'BMHMDX,VXLTQN', full_width_row: true}
 - name: flow_panel_3

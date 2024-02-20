@@ -83,27 +83,27 @@ components:
   type: XYPanel
   layout_properties: {grid_position: 'ZSBLGB,FHRVRQ', full_width_row: true}
   components:
-  - name: label_1_copy
-    properties: {role: null, align: left, tooltip: '', border: '', foreground: black,
-      visible: true, text: Highly Trusted Peer to Peer Lending Platform in India,
-      font_size: 26, font: a, spacing_above: small, icon_align: left, spacing_below: small,
-      italic: false, background: '', bold: true, underline: false, icon: ''}
-    type: Label
-    layout_properties: {x: 637.5125244148076, y: 29.762524414807558, width: 537.3875122070312}
   - name: image_1_copy_1
     properties: {role: null, vertical_align: center, height: 195, tooltip: '', border: '',
       foreground: '', visible: true, display_mode: shrink_to_fit, spacing_above: small,
       source: 'https://cdni.iconscout.com/illustration/premium/thumb/online-banking-4344487-3605240.png?f=webp',
       spacing_below: small, background: '', horizontal_align: center}
     type: Image
-    layout_properties: {x: 362.16251831129193, y: 0, width: 339.5625}
+    layout_properties: {x: 397.6624877937138, y: 0, width: 339.5625}
+  - name: label_1_copy
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: black,
+      visible: true, text: Highly Trusted Peer to Peer Lending Platform in India,
+      font_size: 26, font: a, spacing_above: small, icon_align: left, spacing_below: small,
+      italic: false, background: '', bold: true, underline: false, icon: ''}
+    type: Label
+    layout_properties: {x: 665.6500366218388, y: 12.312512207776308, width: 537.3875122070312}
   - name: label_5_copy_1
     properties: {role: body, align: left, tooltip: '', border: '', foreground: '#094586',
       visible: true, text: Get online personal loans at attractive interest rates through P2P Lending Go with the most preferred instrument that gives you risk adjusted returns.,
       font_size: 15, font: '', spacing_above: small, icon_align: left, spacing_below: small,
       italic: true, background: white, bold: false, underline: false, icon: ''}
     type: Label
-    layout_properties: {x: 639.8625000007451, y: 113.02500610426068, width: 496.6499938964844}
+    layout_properties: {x: 671.1499755866826, y: 99.52500610426068, width: 496.6499938964844}
 - type: Spacer
   properties: {height: 32}
   name: spacer_1
@@ -140,7 +140,7 @@ components:
   name: spacer_2
   layout_properties: {grid_position: 'ZMBEDP,GXCQQH'}
 - name: grid_panel_3
-  properties: {spacing_above: small, spacing_below: small, background: '#094586',
+  properties: {spacing_above: small, spacing_below: small, background: '#093b8b',
     foreground: white, border: '', visible: false, role: null, tooltip: ''}
   type: GridPanel
   layout_properties: {grid_position: 'UHGPTF,UAUDOX', full_width_row: true}
@@ -171,8 +171,8 @@ components:
     properties: {text: 'Post registration, open the borrower account by filling a
         simple online form and uploading all the relevant documents. Please remember,
         the more information and documents you provide, better is the chance you stand
-        to get lower interest rates.', bold: true, italic: true, visible: false, background: white,
-      align: center, foreground: '#0770e8'}
+        to get lower interest rates.', bold: true, italic: true, visible: false, background: '#0770e8',
+      align: center, foreground: ''}
     type: Label
     layout_properties: {row: EMBSZW, width_xs: 3, col_xs: 1}
     event_bindings: {show: label_1_show, hide: label_1_hide}
@@ -182,8 +182,8 @@ components:
         true credit profile and then recommends interest rate and risk category for
         the loan.
 
-        ', italic: true, background: white, visible: false, align: center, bold: true,
-      foreground: '#0770e8'}
+        ', italic: true, background: '#0770e8', visible: false, align: center, bold: true,
+      foreground: ''}
     type: Label
     layout_properties: {row: EMBSZW, width_xs: 4, col_xs: 4}
   - name: label_5
@@ -191,7 +191,7 @@ components:
         make your loan live on our email through the My Account section by setting
         the interest rate and expiry date. Please note that you can increase the interest
         rate of your loan to make the loan more attractive to investors.', italic: true,
-      visible: false, background: '#0770e8', align: center}
+      visible: false, background: '#0770e8', align: center, bold: true}
     type: Label
     layout_properties: {row: EMBSZW, width_xs: 3, col_xs: 8}
   - name: image_2_copy_5
@@ -216,7 +216,7 @@ components:
         all the investors registered on our portal. Soon, investors spread across
         India will start showing investment commitment in your loan project which
         can be easily monitored by you through my account section.', italic: true,
-      visible: false, background: '#0770e8', align: center}
+      visible: false, background: '#0770e8', align: center, bold: true}
     type: Label
     layout_properties: {row: COOOHK, width_xs: 3, col_xs: 1}
   - name: label_7
@@ -224,7 +224,7 @@ components:
         conduct physical verification to verify the documents submitted by you against
         the originals. You also need to sign a legal agreement and provide 3 undated
         cheques equal to the EMI amount for each investor.', italic: true, background: '#0770e8',
-      align: center}
+      align: center, bold: true}
     type: Label
     layout_properties: {row: COOOHK, width_xs: 4, col_xs: 4}
   - name: label_8
@@ -233,11 +233,11 @@ components:
         will be transferred to your bank account. Post which you need to repay the
         loan as per the terms mentioned in the agreement. You may also choose to prepay
         the loan without any penalty.', italic: true, align: center, visible: false,
-      background: '#0770e8'}
+      background: '#0770e8', bold: true}
     type: Label
     layout_properties: {row: COOOHK, width_xs: 3, col_xs: 8}
   - name: borrower_button
-    properties: {text: Continue As A Borrower, role: elevated-button, bold: true,
+    properties: {text: 'Continue As A Borrower   ', role: elevated-button, bold: true,
       background: white, foreground: Black, font_size: 16}
     type: Button
     layout_properties: {row: ETSUGN, width_xs: 8, col_xs: 2}
@@ -247,7 +247,7 @@ components:
     type: Spacer
     layout_properties: {row: ETSUGN, width_xs: 3, col_xs: 6}
 - name: grid_panel_3_copy_1
-  properties: {background: '#094586', visible: false, foreground: white}
+  properties: {background: '#093b8b', visible: false, foreground: white}
   type: GridPanel
   layout_properties: {grid_position: 'VUTQML,WOERBT', full_width_row: true}
   components:
@@ -277,14 +277,14 @@ components:
         adhere to KYC criteria as set by the RBI. Your wallet will be credited with
         the notional money of Rs. 50,000 after registration.', font_size: null, font: '',
       spacing_above: small, icon_align: left, spacing_below: small, italic: true,
-      background: '#0770e8', bold: false, underline: false, icon: ''}
+      background: '#0770e8', bold: true, underline: false, icon: ''}
     type: Label
     layout_properties: {row: QXVJZJ, width_xs: 3, col_xs: 1, width: 141.25}
   - name: label_10
     properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
       visible: false, text: Once registered you can review different P2P loans requested by borrowers. our platform has already assessed these loans using its proprietary credit score model recommends interest rates and assigns a risk category to each of the loans to make your investment decision simple.,
       font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small,
-      italic: true, background: '#0770e8', bold: false, underline: false, icon: ''}
+      italic: true, background: '#0770e8', bold: true, underline: false, icon: ''}
     type: Label
     layout_properties: {row: QXVJZJ, width_xs: 4, col_xs: 4, width: 198.328}
   - name: label_11
@@ -294,7 +294,7 @@ components:
         5,000, however, you can fund a maximum of up to 20% of the loan amount requested
         by the Borrower. You will have to recharge your wallet for investments after
         Rs. 50,000.', font_size: null, font: '', spacing_above: small, icon_align: left,
-      spacing_below: small, italic: true, background: '#0770e8', bold: false, underline: false,
+      spacing_below: small, italic: true, background: '#0770e8', bold: true, underline: false,
       icon: ''}
     type: Label
     layout_properties: {row: QXVJZJ, width_xs: 3, col_xs: 8, width: 141.25}
@@ -321,7 +321,7 @@ components:
         cheques equal to the EMI amount for each investor. we send the digital copy
         of these documents to all the investors.', font_size: null, font: '', spacing_above: small,
       icon_align: left, spacing_below: small, italic: true, background: '#0770e8',
-      bold: false, underline: false, icon: ''}
+      bold: true, underline: false, icon: ''}
     type: Label
     layout_properties: {row: SVNNKV, width_xs: 3, col_xs: 1, width: 141.25}
   - name: label_13
@@ -331,7 +331,7 @@ components:
         for disbursal. You will start receiving monthly repayments in your bank account
         from next month onwards.', font_size: null, font: '', spacing_above: small,
       icon_align: left, spacing_below: small, italic: true, background: '#0770e8',
-      bold: false, underline: false, icon: ''}
+      bold: true, underline: false, icon: ''}
     type: Label
     layout_properties: {row: SVNNKV, width_xs: 4, col_xs: 4, width: 198.328}
   - name: label_14
@@ -341,7 +341,7 @@ components:
         for disbursal. You will start receiving monthly repayments in your bank account
         from next month onwards.', font_size: null, font: '', spacing_above: small,
       icon_align: left, spacing_below: small, italic: true, background: '#0770e8',
-      bold: false, underline: false, icon: ''}
+      bold: true, underline: false, icon: ''}
     type: Label
     layout_properties: {row: SVNNKV, width_xs: 3, col_xs: 8, width: 141.25}
   - name: lendor_button
@@ -351,7 +351,7 @@ components:
     layout_properties: {row: JIMUGO, width_xs: 8, col_xs: 2}
     event_bindings: {click: lendor_button_click}
 - name: spacer_5
-  properties: {height: 155}
+  properties: {height: 263.5999755859375}
   type: Spacer
   layout_properties: {grid_position: 'NOEVAE,IUHKCW'}
 - name: grid_panel_2
