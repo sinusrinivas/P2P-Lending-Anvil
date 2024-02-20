@@ -219,7 +219,7 @@ class payment_details_t(payment_details_tTemplate):
         total_repayment_ending_balance -= principal_amount  # Update TREB for the next iteration
         beginning_balance -= principal_amount  # Update beginning balance for the next iteration
     
-        ending_balance = beginning_balance
+        ending_balance = 0
         return emi, ending_balance, total_repayment_beginning_balance, total_repayment_ending_balance
       
     def calculate_num_payments(self, selected_row):
