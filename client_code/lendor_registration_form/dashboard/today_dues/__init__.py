@@ -15,7 +15,7 @@ class today_dues(today_duesTemplate):
         # Set Form properties and Data Bindings.
         self.user_id = main_form_module.userId
         self.init_components(**properties)
-        
+        loan_details = []
         today_date = datetime.now(timezone.utc).date()
 
         # Fetch all loan details from fin_emi_table where next_payment matches today's date
@@ -84,7 +84,7 @@ class today_dues(today_duesTemplate):
               loan_id = loan_due['loan_id']
               loan_amount = loan_due['loan_amount']
               first_emi_payment_due_date = loan_due['first_emi_payment_due_date']
-              days_left = (today_date - scheduled_payment).days
+              days_left = (today_date - first_emi_payment_due_date).days
               # Fetch account number from user profile table based on customer_id
               user_profile = app_tables.fin_user_profile.get(customer_id=self.user_id)
               if user_profile is not None:
