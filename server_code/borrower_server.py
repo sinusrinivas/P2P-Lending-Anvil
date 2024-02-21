@@ -49,15 +49,15 @@ from . import bessem as bessemfunctions
 #     row[0]['form_count']=2
 
 
-@anvil.server.callable
-def add_borrower_step3a(father_name,father_age,mother_name,mother_age,user_id):
-  row = app_tables.fin_user_profile.search(customer_id=user_id)
-  if row:
-    row[0]['father_name'] = father_name
-    row[0]['father_age'] = father_age
-    row[0]['mother_name'] = mother_name
-    row[0]['mother_age'] = mother_age
-    row[0]['form_count']=4
+# @anvil.server.callable
+# def add_borrower_step3a(father_name,father_age,mother_name,mother_age,user_id):
+#   row = app_tables.fin_user_profile.search(customer_id=user_id)
+#   if row:
+#     row[0]['father_name'] = father_name
+#     row[0]['father_age'] = father_age
+#     row[0]['mother_name'] = mother_name
+#     row[0]['mother_age'] = mother_age
+#     row[0]['form_count']=4
 
 @anvil.server.callable
 def add_borrower_step3c(status_of_user,user_id):
@@ -84,28 +84,28 @@ def add_borrower_student(college_name,college_id,college_proof,college_address,u
     row[0]['college_proof']=college_proof
     
     
-@anvil.server.callable
-def add_borrower_step4a(spouse_name,marrege_date,spouse_mobile_no,user_id):
-  row=app_tables.fin_user_profile.search(customer_id=user_id)
-  if row:
-   row[0]['spouse_name']=spouse_name
-   row[0]['Date_mariage']=marrege_date
-   row[0]['spouse_mobile']=spouse_mobile_no
+# @anvil.server.callable
+# def add_borrower_step4a(spouse_name,marrege_date,spouse_mobile_no,user_id):
+#   row=app_tables.fin_user_profile.search(customer_id=user_id)
+#   if row:
+#    row[0]['spouse_name']=spouse_name
+#    row[0]['Date_mariage']=marrege_date
+#    row[0]['spouse_mobile']=spouse_mobile_no
 
-@anvil.server.callable
-def add_borrower_step5(spouse_company_name,spouse_company_address,spouse_profficen,user_id):
-  row = app_tables.fin_user_profile.search(customer_id=user_id)
-  if row:
-    row[0]['spouse_company_name']=spouse_company_name
-    row[0]['spouse_company_address']=spouse_company_address
-    row[0]['spouse_designation']=spouse_profficen
+# @anvil.server.callable
+# def add_borrower_step5(spouse_company_name,spouse_company_address,spouse_profficen,user_id):
+#   row = app_tables.fin_user_profile.search(customer_id=user_id)
+#   if row:
+#     row[0]['spouse_company_name']=spouse_company_name
+#     row[0]['spouse_company_address']=spouse_company_address
+#     row[0]['spouse_designation']=spouse_profficen
 
-@anvil.server.callable
-def add_borrower_spouse(annual_ctc,office_number,user_id):
-  row=app_tables.fin_user_profile.search(customer_id=user_id)
-  if row:
-    row[0]['spouse_annual_ctc']=annual_ctc
-    row[0]['spouse_office_number']=office_number
+# @anvil.server.callable
+# def add_borrower_spouse(annual_ctc,office_number,user_id):
+#   row=app_tables.fin_user_profile.search(customer_id=user_id)
+#   if row:
+#     row[0]['spouse_annual_ctc']=annual_ctc
+#     row[0]['spouse_office_number']=office_number
 
 @anvil.server.callable
 def add_borrower_step7(home_loan,other_loan,live_loan,user_id):
@@ -151,10 +151,8 @@ def update_loan_details(loan_id, emi, total_repayment_amount, interest_rate):
     else:
         raise ValueError(f"Row not found for loan_id {loan_id}")
 
-
-
 @anvil.server.callable
-def add_loan_details(loan_amount, tenure,user_id,interest_rate, total_repayment_amount,product_id,membership_type,credit_limit,emi_payment_type):
+def add_loan_details(loan_amount, tenure,user_id,interest_rate, total_repayment_amount,product_id,membership_type,credit_limit,product_name,emi_payment_type):
     
     # Generate a unique loan ID and get the updated counter
     loan_id = generate_loan_id()
@@ -186,6 +184,7 @@ def add_loan_details(loan_amount, tenure,user_id,interest_rate, total_repayment_
           loan_updated_status = "under process",
           borrower_loan_created_timestamp=loan_created_timestamp,
           product_id = product_id,
+          product_name = product_name,
           emi_payment_type = emi_payment_type,beseem_score= find_beseem_points_based_on_id(user_id)
          )
 

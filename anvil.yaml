@@ -699,9 +699,6 @@ db_schema:
     - name: one_time_settlement
       admin_ui: {width: 200, order: 1.5}
       type: bool
-    - name: year_estd
-      admin_ui: {width: 200, order: 10.5}
-      type: string
     - name: company_pincode
       admin_ui: {width: 200, order: 95}
       type: string
@@ -717,6 +714,9 @@ db_schema:
     - name: lending_period
       admin_ui: {width: 200, order: 107}
       type: string
+    - name: year_estd
+      admin_ui: {width: 200}
+      type: date
     title: fin_user_profile
   fin_wallet_transactions:
     title: fin_wallet_transactions
@@ -1096,6 +1096,9 @@ db_schema:
       type: date
     - name: emi_payment_type
       admin_ui: {order: 15.453125, width: 200}
+      type: string
+    - name: product_name
+      admin_ui: {order: 15.4921875, width: 200}
       type: string
     title: fin_loan_details
   fin_user_issues_bugreports:

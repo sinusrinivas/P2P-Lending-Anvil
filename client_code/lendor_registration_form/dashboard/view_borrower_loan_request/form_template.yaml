@@ -58,7 +58,7 @@ components:
       properties:
         role: null
         columns:
-        - {id: QLOWGE, title: Name, data_key: column_1, $$hashKey: 'object:3833'}
+        - {id: QLOWGE, title: Product Name, data_key: column_1, $$hashKey: 'object:3833'}
         - {id: FIZMCQ, title: Loan Amount, data_key: column_2, $$hashKey: 'object:3834',
           expand: false}
         - {id: GYGCMD, title: Loan_id, data_key: column_3, $$hashKey: 'object:3835',

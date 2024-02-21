@@ -94,6 +94,7 @@ class check(checkTemplate):
                                    self.product_id,
                                    self.membership_type,
                                    self.credit_limt,
+                                   self.product_name,
                                    self.entered_payment_type)
 
         # Log the result for debugging
