@@ -201,6 +201,10 @@ class wallet_deposit(wallet_depositTemplate):
         loan_disbursed_timestamp = loan_row["loan_disbursed_timestamp"]
         new_balance = wallet_row['wallet_amount'] - loan_amount
 
+        # Update the wallet_amount in fin_wallet
+        wallet_row['wallet_amount'] = new_balance
+        wallet_row.update()
+        
         # Update the balance label with the new balance value
         self.balance_lable.text = f"{new_balance}"
 

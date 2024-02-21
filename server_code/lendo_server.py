@@ -68,11 +68,6 @@ def add_lendor_education_form(qualification,certificate,user_id):
 def add_lendor_six_form(lending_type, investment,lending_period, user_id):
   row = app_tables.fin_lender.add_row(investment=investment, lending_type=lending_type,lending_period=lending_period,customer_id = user_id)
     
-@anvil.server.callable
-def update_another_person(user_id, selected_person):
-  user_profile = app_tables.fin_user_profile.get(customer_id=user_id)
-  user_profile['another_person'] = selected_person
-  user_profile.save()
 
 @anvil.server.callable
 def add_lendor_individual_form_1(company_name,org_type,emp_type,user_id):
@@ -92,9 +87,6 @@ def add_lendor_individual_form_2(comp_address,landmark,business_phone_number,use
     row[0]['company_landmark']=landmark
     row[0]['business_no']=business_phone_number
     
-          
-
-
 @anvil.server.callable
 def add_lendor_individual_form_3(annual_salary, designation,emp_id_proof,last_six_month,user_id):
   row = app_tables.fin_user_profile.search(customer_id = user_id)
@@ -507,9 +499,6 @@ def loan_disbursement_action(selected_row, email):
                   selected_row.update()
                   return "insufficient_balance"    
             else:
-                # Update loan status to 'under process'
-                selected_row['loan_updated_status'] = 'accepted'
-                selected_row.update()
                 return "insufficient_balance"
         else:
            wallet_amount -= loan_amount
@@ -531,7 +520,7 @@ def check_loan_timeout(selected_row, lender_accepted_timestamp, email):
 
     # Wait for 2 minutes
     while datetime.now() < start_time + timedelta(minutes=2):
-        anvil.server.sleep(10)  # Sleep for 10 seconds
+        anvil.server.sleep(10)  
 
     # After 2 minutes, check wallet_amount again
     wallet_rows = app_tables.fin_wallet.search(user_email=email)
@@ -544,29 +533,5 @@ def check_loan_timeout(selected_row, lender_accepted_timestamp, email):
             selected_row['loan_updated_status'] = 'lost opportunities'
             selected_row.update()
             return "Time_out"
-
-# @anvil.server.callable
-# def get_loan_details(entered_borrower_customer_id):
-#     try:
-#         # Assuming fin_disbursement_detail is your Data Table
-#         fin_disbursement_table = app_tables.fin_disbursement_detail
-
-#         # Fetch the row based on customer_id
-#         row = fin_disbursement_table.get(entered_borrower_customer_id=entered_borrower_customer_id)
-
-#         if row is not None:
-#             # Extract relevant details and return as a dictionary
-#             loan_details = {
-#                 'entered_loan_id': row['entered_loan_id'],
-#                 'entered_borrower_customer_id': row['entered_borrower_customer_id']
-#                 # Add more fields as needed
-#             }
-
-#             return loan_details
-#         else:
-#             # Return None if the row is not found
-#             return None
-#     except Exception as e:
-#         print(f"Error in get_loan_details: {str(e)}")
-#         return None      
+    
           
