@@ -94,3 +94,6 @@ class dashboard(dashboardTemplate):
   def button_1_click(self, **event_args):
     """This method is called when the button is clicked"""
     open_form('bank_users.main_form')
+
+  def manage_bessem_click(self, **event_args):
+    open_form('admin.dashboard.manage_bessem')
