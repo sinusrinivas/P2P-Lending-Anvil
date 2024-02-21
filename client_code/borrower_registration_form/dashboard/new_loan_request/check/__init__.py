@@ -7,12 +7,13 @@ from ._anvil_designer import checkTemplate
 from .. import main_form_module as main_form_module
 
 class check(checkTemplate):
-    def __init__(self, product_group, product_cat, loan_amount, tenure_months, user_id, interest_rate, processing_fee,
+    def __init__(self, product_group, product_cat, product_name, loan_amount, tenure_months, user_id, interest_rate, processing_fee,
                  membership_type, product_id, total_repayment_amount, credit_limt, emi_payment_type, total_interest=None, processing_fee_amount=None, entered_values=None,
                  **properties):
         # Initialize properties and data bindings
         self.product_group = product_group
         self.product_cat = product_cat
+        self.product_name = product_name
         self.loan_amount = int(loan_amount)
         self.loan_amount_beginning_balance = self.loan_amount          
         self.tenure_months = int(tenure_months)
@@ -69,6 +70,7 @@ class check(checkTemplate):
         open_form('borrower_registration_form.dashboard.new_loan_request.loan_type',
                   self.product_group,
                   self.product_cat,
+                  self.product_name,
                   self.credit_limt,
                   entered_values={
                       'loan_amount': self.entered_loan_amount,

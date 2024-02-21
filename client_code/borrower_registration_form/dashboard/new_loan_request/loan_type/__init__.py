@@ -265,7 +265,7 @@ class loan_type(loan_typeTemplate):
       """This method is called when this radio button is selected"""
       pass
       
-loan_type_1 = loan_type('product_group_value', 'product_cat_value', 'product_name', self.credit_limt')
+loan_type_1 = loan_type('product_group_value', 'product_cat_value', 'product_name', 'self.credit_limt')
 
 # Open the form
 open_form(loan_type_1)
