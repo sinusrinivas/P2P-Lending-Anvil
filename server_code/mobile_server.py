@@ -262,3 +262,53 @@ def generate_loan_id():
 
     # Return the new loan ID
     return f"LA{counter}"
+
+
+@anvil.server.callable
+def get_product_groups():
+    try:
+        product_groups = [product['product_group'] for product in app_tables.fin_product_details.search()]
+        return product_groups
+    except Exception as e:
+        print(f"Error in get_product_groups: {e}")
+        return []
+
+@anvil.server.callable
+def get_product_categories(product_group):
+    try:
+        # Check if the provided product_group is empty or invalid
+        if not product_group or product_group not in {entry['product_group'] for entry in app_tables.fin_product_details.search()}:
+            raise ValueError("Empty or invalid product_group")
+
+        # Fetch product categories for the selected product group
+        categories = [entry['product_categories'] for entry in app_tables.fin_product_details.search() if entry['product_group'] == product_group]
+
+        # Return the result as a dictionary
+        return {'product_categories': categories}
+
+    except Exception as e:
+        # Log the error and return an appropriate response
+        print(f"Error in get_product_categories: {e}")
+        return {'error': str(e)}
+
+@anvil.server.callable
+def get_product_names(product_group, product_category):
+    try:
+        # Check if the provided product_group and product_category are valid
+        if not product_group or not product_category:
+            raise ValueError("Empty or invalid product_group or product_category")
+
+        # Fetch product names for the selected product group and category
+        names = [entry['product_name'] for entry in app_tables.fin_product_details.search(
+            product_group=product_group,
+            product_categories=product_category
+        )]
+
+        # Return the result as a dictionary
+        return {'product_name': names}
+
+    except Exception as e:
+        # Log the error and return an appropriate response
+        print(f"Error in get_product_names: {e}")
+        return {'error': str(e)}
+
