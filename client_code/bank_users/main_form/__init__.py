@@ -19,45 +19,45 @@ class main_form(main_formTemplate):
     self.init_components(**properties)
     # Any code you write here will run before the form opens.
   
+  def handle_user_login(user_email):
+      check_user_already_exist = user_module.check_user_profile(user_email)
+      if check_user_already_exist is None:
+          user_module.add_email_and_user_id(user_email)
+          main_form_module.email = user_email
+          main_form_module.flag = True
+          open_form('bank_users.basic_registration_form')
+      else:
+          check_user_registration = user_module.check_user_registration_form_done_or_not_engine(user_email)
+          user_profile_e = app_tables.fin_user_profile.get(email_user=user_email)
+          main_form_module.email = user_email
+          main_form_module.userId = user_module.find_user_id(user_email)
+          if user_profile_e is not None:
+              user_type = user_profile_e['usertype']
+              if user_type == 'admin':
+                  open_form('admin.dashboard')
+              elif user_type == 'lender':
+                  open_form('lendor_registration_form.dashboard')
+              elif user_type == 'borrower':
+                  if user_profile_e['one_time_settlement'] != True:
+                      open_form('borrower_registration_form.dashboard')
+                  elif user_profile_e['one_time_settlement'] == True:
+                      open_form('borrower_registration_form.ots_dashboard')
+              else:
+                  open_form('bank_users.basic_registration_form')
+          else:
+              open_form('bank_users.user_form')
+  
+  
+  # Button 1 click event
   def login_signup_button_click(self, **event_args):
-        anvil.users.login_with_form()
-        current_user = anvil.users.get_user()
-        if current_user:
-            user_email = current_user['email']
-            print(user_email)
-            check_user_already_exist = user_module.check_user_profile(user_email)
-            print(check_user_already_exist)
-            if check_user_already_exist is None:
-                print("main if statement was executed")
-                user_module.add_email_and_user_id(user_email)
-                main_form_module.email = user_email
-                main_form_module.flag = True
-                open_form('bank_users.basic_registration_form')
-            else:
-                check_user_registration = user_module.check_user_registration_form_done_or_not_engine(user_email)
-                print("main else statement was executed")
-                user_profile_e = app_tables.fin_user_profile.get(email_user=user_email)
-                main_form_module.email = user_email
-                main_form_module.userId = user_module.find_user_id(user_email)
-                if user_profile_e is not None:
-                    user_type = user_profile_e['usertype']
-                    if user_type == 'admin':
-                        open_form('admin.dashboard')
-                    elif user_type == 'lender':
-                        open_form('lendor_registration_form.dashboard')
-                    elif user_type == 'borrower':
-                        if user_profile_e['one_time_settlement'] != True:
-                            open_form('borrower_registration_form.dashboard')
-                        elif user_profile_e['one_time_settlement'] == True:
-                            open_form('borrower_registration_form.ots_dashboard')
-                    else:
-                        open_form('bank_users.basic_registration_form')
-                else:
-                    # Handle the case when user_profile_e is None
-                    open_form('bank_users.user_form')
-        else:
-            # Handle the case when current_user is None
-            open_form('bank_users.user_form')
+      anvil.users.login_with_form()
+      current_user = anvil.users.get_user()
+      if current_user:
+          user_email = current_user['email']
+          print(user_email)
+          handle_user_login(user_email)
+      else:
+          open_form('bank_users.user_form')
 
 #-- imp logic dont go up--#
 
@@ -80,5 +80,18 @@ class main_form(main_formTemplate):
   def link_6_click(self, **event_args):
     """This method is called when the link is clicked"""
     open_form("admin.user_issue.user_bugreports")
+
+  def outlined_button_1_copy_1_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    anvil.users.login_with_form()
+    current_user = anvil.users.get_user()
+    if current_user:
+        user_email = current_user['email']
+        print(user_email)
+        handle_user_login(user_email)
+    else:
+        open_form('bank_users.user_form')
+
+
 
 
