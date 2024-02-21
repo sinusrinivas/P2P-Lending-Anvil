@@ -11,6 +11,7 @@ from anvil.js.window import navigator
 
 
 class location_main_form(location_main_formTemplate):
+
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
@@ -62,9 +63,7 @@ class location_main_form(location_main_formTemplate):
     """This method is called when the link is clicked"""
     open_form("bank_users.main_form")
 
-  def map_1_bounds_changed(self, **event_args):
-    """This method is called when the viewport bounds have changed."""
-    pass
+
 
   def about_main_form_link_click(self, **event_args):
     """This method is called when the link is clicked"""
@@ -81,3 +80,21 @@ class location_main_form(location_main_formTemplate):
   def carrer_main_form_link_click(self, **event_args):
     """This method is called when the link is clicked"""
     open_form("bank_users.main_form.career_main_form")
+
+
+
+
+
+
+
+    # Replace these coordinates with the desired latitude and longitude
+
+
+
+
+   
+
+
+
+
+

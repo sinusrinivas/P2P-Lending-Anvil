@@ -81,4 +81,14 @@ class main_form(main_formTemplate):
     """This method is called when the link is clicked"""
     open_form("admin.user_issue.user_bugreports")
 
+  def outlined_button_1_copy_1_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    self.login_signup_button_click()
+
+  def outlined_button_2_copy_1_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    self.login_signup_button_click()
+
+
+
 
