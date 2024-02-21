@@ -193,42 +193,19 @@ class Borr_loan_request(Borr_loan_requestTemplate):
         if self.selected_row is None:
            alert("Selected row is not available.")
            return
-        # Assuming 'selected_row' is the selected row from the loan_details table
+        
         selected_row = self.selected_row  
         tenure = selected_row['tenure']
         email = main_form_module.email
         entered_loan_id = self.entered_loan_id
-        entered_borrower_customer_id = self.entered_borrower_customer_id
-        # try:
-        #   entered_borrower_customer_id = int(entered_borrower_customer_id)
-        #   print("entered_loan_id:", entered_loan_id)
-        #   print("entered_borrower_customer_id:", entered_borrower_customer_id)
-
-        #   # Check if the borrower_customer_id already exists
-        #   existing_row = app_tables.fin_disbursement_detail.get(
-        #     entered_borrower_customer_id=entered_borrower_customer_id)
-        #   if existing_row:
-        #     # Update the existing row
-        #     existing_row.update(
-        #       entered_loan_id=entered_loan_id,
-        #       entered_borrower_customer_id=entered_borrower_customer_id)
-        #   else:
-        #     # Add a new row if the borrower_customer_id doesn't exist
-        #     disbursement_detail_row = app_tables.fin_disbursement_detail.add_row(
-        #       entered_loan_id=entered_loan_id,
-        #       entered_borrower_customer_id=entered_borrower_customer_id)
-        #     disbursement_detail_row.update()
-
-        # except ValueError:
-        #  alert("Please enter a valid customer ID.")
-        #  return     
+        entered_borrower_customer_id = self.entered_borrower_customer_id  
       
         # Call the server-side function
         signal = anvil.server.call('loan_disbursement_action', selected_row, email)
 
         # Check the signal and perform actions accordingly
         if signal == "insufficient_balance":
-            alert("Warning: Your account balance is insufficient. Please deposit amount into your wallet. If not done within the next 2 minutes, the opportunity may be lost")
+            alert("Warning: Your account balance is insufficient. Please deposit amount into your wallet. If not done within the next 30 minutes, the opportunity may be lost")
             open_form("wallet.wallet_deposit", entered_loan_id=entered_loan_id,entered_borrower_customer_id=entered_borrower_customer_id)
         elif signal == "Time_out":
             alert("The designated time has passed. The loan has moved to the 'Lost Opportunities' status.")

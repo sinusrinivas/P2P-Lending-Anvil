@@ -484,7 +484,7 @@ def loan_disbursement_action(selected_row, email):
             # Check if 5 minutes have passed since lender_accepted_timestamp
             time_difference = current_time - lender_accepted_timestamp
             print("time_difference:", time_difference)
-            if time_difference.total_seconds() > 120:  # 300 seconds = 5 minutes # 120 seconds = 2 minutes
+            if time_difference.total_seconds() > 1800:  # 300 seconds = 5 minutes # 1800 seconds = 30 minutes
                 # Update loan status based on the comparison of wallet_amount and loan_amount
                 if loan_amount > wallet_amount:
                  # Update loan status to 'lost opportunities'
@@ -518,7 +518,7 @@ def check_loan_timeout(selected_row, lender_accepted_timestamp, email):
     # Record the start time
     start_time = datetime.now()
 
-    # Wait for 2 minutes
+    # Wait for 30 minutes
     while datetime.now() < start_time + timedelta(minutes=2):
         anvil.server.sleep(10)  
 
