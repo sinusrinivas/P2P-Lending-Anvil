@@ -31,6 +31,11 @@ db_schema:
       admin_ui: {order: 0, width: 200}
       type: string
     title: fin_gender
+  wallet_notification:
+    title: fin_wallet_notification
+    client: full
+    server: full
+    columns: []
   fin_lendor_business_type:
     client: full
     server: full
@@ -713,11 +718,6 @@ db_schema:
       admin_ui: {width: 200}
       type: date
     title: fin_user_profile
-  fin_wallet_notification:
-    title: fin_wallet_notification
-    client: full
-    server: full
-    columns: []
   fin_wallet_transactions:
     title: fin_wallet_transactions
     client: full
@@ -941,8 +941,8 @@ db_schema:
     - name: branch_name
       admin_ui: {order: 6, width: 200}
       type: string
-    - name: ifsc_code
-      admin_ui: {width: 200, order: 7}
+    - name: bank_id
+      admin_ui: {order: 7, width: 200}
       type: string
     - name: account_type
       admin_ui: {width: 200, order: 8}
@@ -999,16 +999,16 @@ db_schema:
       admin_ui: {order: 2.5, width: 200}
       type: string
     - name: borrower_full_name
-      admin_ui: {order: -0.75, width: 200}
+      admin_ui: {order: 2, width: 155}
       type: string
     - name: interest_rate
-      admin_ui: {order: -0.03125, width: 200}
+      admin_ui: {order: 7, width: 124}
       type: number
     - name: loan_status
-      admin_ui: {order: 19, width: 200}
+      admin_ui: {order: 26, width: 115}
       type: bool
     - name: application_status
-      admin_ui: {order: 16, width: 200}
+      admin_ui: {order: 16, width: 158}
       type: bool
     - name: total_repayment_amount
       admin_ui: {order: 0.5, width: 200}
@@ -1017,28 +1017,28 @@ db_schema:
       admin_ui: {order: -1, width: 200}
       type: number
     - name: member_rom
-      admin_ui: {width: 200, order: 11.5}
+      admin_ui: {order: 15.4921875, width: 125}
       type: string
     - name: loan_updated_status
       admin_ui: {order: 0.625, width: 200}
       type: string
     - name: lender_full_name
-      admin_ui: {order: 5.375, width: 200}
+      admin_ui: {order: 5.375, width: 144}
       type: string
     - name: member_since
-      admin_ui: {order: 16, width: 200}
+      admin_ui: {order: 15.49609375, width: 135}
       type: date
     - name: loan_id
-      admin_ui: {order: -0.5, width: 200}
+      admin_ui: {order: 3, width: 92}
       type: string
     - name: borrower_compLeted_monthly_emi
-      admin_ui: {order: 20, width: 277}
+      admin_ui: {order: 27, width: 259}
       type: number
     - name: lender_email_id
-      admin_ui: {order: 5.4375, width: 200}
+      admin_ui: {order: 5.4375, width: 177}
       type: string
     - name: days_left
-      admin_ui: {width: 200, order: 21}
+      admin_ui: {order: 28, width: 118}
       type: number
     - name: foreclosure_type
       admin_ui: {order: 23, width: 200}
@@ -1047,19 +1047,19 @@ db_schema:
       admin_ui: {order: 23, width: 200}
       type: date
     - name: lender_customer_id
-      admin_ui: {order: 5.25, width: 200}
+      admin_ui: {order: 5.25, width: 156}
       type: number
     - name: beseem_score
-      admin_ui: {order: 15.4921875, width: 129}
+      admin_ui: {order: 15.4765625, width: 129}
       type: number
     - name: emi_due_date
-      admin_ui: {width: 200, order: 17}
+      admin_ui: {order: 23, width: 138}
       type: date
     - name: borrower_loan_created_timestamp
       admin_ui: {order: 5.375, width: 261}
       type: date
     - name: product_id
-      admin_ui: {order: -0.1875, width: 200}
+      admin_ui: {order: 5, width: 103}
       type: string
     - name: borrower_first_payment_done
       admin_ui: {width: 200, order: 27}
@@ -1071,19 +1071,19 @@ db_schema:
       admin_ui: {width: 200, order: 29}
       type: number
     - name: membership_type
-      admin_ui: {order: 15.375, width: 200}
+      admin_ui: {order: 15.375, width: 139}
       type: string
     - name: tenure
-      admin_ui: {width: 200, order: 1}
+      admin_ui: {order: 12, width: 117}
       type: number
     - name: loan_amount
-      admin_ui: {width: 200, order: 2}
+      admin_ui: {order: 13, width: 118}
       type: number
     - name: lender_accepted_timestamp
       admin_ui: {order: 15.25, width: 241}
       type: datetime
     - name: credit_limit
-      admin_ui: {order: 15.484375, width: 200}
+      admin_ui: {order: 15.484375, width: 122}
       type: number
     - name: loan_disbursed_timestamp
       admin_ui: {order: 15.4375, width: 228}
@@ -1098,7 +1098,7 @@ db_schema:
       admin_ui: {order: 15.453125, width: 200}
       type: string
     - name: product_name
-      admin_ui: {order: 15.4453125, width: 200}
+      admin_ui: {order: 15.4453125, width: 120}
       type: string
     title: fin_loan_details
   fin_user_issues_bugreports:
