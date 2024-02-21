@@ -243,6 +243,7 @@ components:
         italic: false, background: white, bold: true, underline: false, icon: ''}
       type: Button
       layout_properties: {}
+      event_bindings: {click: outlined_button_2_copy_1_click}
   - name: linear_panel_5_copy_1
     properties: {}
     type: LinearPanel
