@@ -16,9 +16,10 @@ from datetime import timedelta
 import time
 
 class wallet_deposit(wallet_depositTemplate):
-  def __init__(self,entered_loan_id,entered_borrower_customer_id, **properties):
+  def __init__(self,entered_loan_id,entered_borrower_customer_id,time_difference_seconds, **properties):
     self.entered_loan_id = entered_loan_id
     self.entered_borrower_customer_id = entered_borrower_customer_id
+    self.time_difference_seconds = time_difference_seconds
     self.user_id = main_form_module.userId
     self.selected_row = None
     # self.selected_row = selected_row
@@ -92,9 +93,6 @@ class wallet_deposit(wallet_depositTemplate):
   def wallet_dashboard_link_click(self, **event_args):
     """This method is called when the link is clicked"""
     pass
-
-  
-  
           
   def deposit_money_btn_click(self, **event_args):
     amount_entered = self.amount_text_box.text
@@ -152,8 +150,9 @@ class wallet_deposit(wallet_depositTemplate):
         start_time_utc = datetime.utcfromtimestamp(self.start_time).replace(tzinfo=timezone.utc)
         
         time_difference = current_time - start_time_utc
+        time_diff = 180 - self.time_difference_seconds 
 
-        if time_difference.total_seconds() > 1800:  # 1800 seconds = 30 minutes
+        if time_difference.total_seconds() > time_diff:  # 1800 seconds = 30 minutes
             # Update loan status based on the comparison of wallet_amount and loan_amount
             
             wallet_row = app_tables.fin_wallet.get(user_email=self.email)
@@ -258,7 +257,7 @@ class wallet_deposit(wallet_depositTemplate):
     """This method is called Every [interval] seconds. Does not trigger if [interval] is 0."""
     self.check_time_difference()
     # Print time_difference every 300 seconds i.e 5min
-    if int(time.time() - self.start_time) % 300 == 0:
+    if int(time.time() - self.start_time) % 30 == 0:
       print("time_difference:", datetime.now(timezone.utc) - datetime.utcfromtimestamp(self.start_time).replace(tzinfo=timezone.utc))
   
   def calculate_first_emi_due_date(self, emi_payment_type, loan_disbursed_timestamp, tenure):

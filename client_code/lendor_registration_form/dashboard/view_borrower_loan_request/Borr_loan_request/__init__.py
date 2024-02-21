@@ -201,12 +201,12 @@ class Borr_loan_request(Borr_loan_requestTemplate):
         entered_borrower_customer_id = self.entered_borrower_customer_id  
       
         # Call the server-side function
-        signal = anvil.server.call('loan_disbursement_action', selected_row, email)
+        signal, time_difference_seconds = anvil.server.call('loan_disbursement_action', selected_row, email)
 
         # Check the signal and perform actions accordingly
         if signal == "insufficient_balance":
             alert("Warning: Your account balance is insufficient. Please deposit amount into your wallet. If not done within the next 30 minutes, the opportunity may be lost")
-            open_form("wallet.wallet_deposit", entered_loan_id=entered_loan_id,entered_borrower_customer_id=entered_borrower_customer_id)
+            open_form("wallet.wallet_deposit", entered_loan_id=entered_loan_id,entered_borrower_customer_id=entered_borrower_customer_id,time_difference_seconds=time_difference_seconds)
         elif signal == "Time_out":
             alert("The designated time has passed. The loan has moved to the 'Lost Opportunities' status.")
             open_form("wallet.wallet") 
