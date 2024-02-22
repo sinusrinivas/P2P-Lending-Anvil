@@ -241,9 +241,9 @@ def fetch_profile_data_and_insert(email, customer_id):
                         user_email=profile['email_user'], 
                         account_name=profile['account_name'],
                         account_number=account_number_value,
-                        bank_name=profile['select_bank'],  
+                        bank_name=profile['bank_name'],  
                         branch_name=profile['account_bank_branch'],  
-                        ifsc_code=profile['ifsc_code'],
+                        bank_id=profile['bank_id'],
                         account_type=profile['account_type'],
                         wallet_id=wallet_id,
                         account_id=account_id
