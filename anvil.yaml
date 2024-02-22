@@ -470,7 +470,7 @@ db_schema:
       admin_ui: {width: 200, order: 16}
       type: string
     - name: last_confirm
-      admin_ui: {order: 39, width: 200}
+      admin_ui: {order: 0.25, width: 200}
       type: bool
     - name: mobile_check
       admin_ui: {width: 200, order: 19}
@@ -491,7 +491,7 @@ db_schema:
       admin_ui: {order: 40, width: 200}
       type: string
     - name: usertype
-      admin_ui: {order: 22.5, width: 200}
+      admin_ui: {order: 0.5, width: 200}
       type: string
     - name: aadhaar_no
       admin_ui: {order: 14, width: 200}
