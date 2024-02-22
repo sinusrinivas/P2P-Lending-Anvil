@@ -369,3 +369,7 @@ class manage_producs1(manage_producs1Template):
     def text_box_1_copy_pressed_enter(self, **event_args):
       """This method is called when the user presses Enter in this text box"""
       pass
+
+    def button_2_click(self, **event_args):
+      """This method is called when the button is clicked"""
+      open_form("admin.dashboard")

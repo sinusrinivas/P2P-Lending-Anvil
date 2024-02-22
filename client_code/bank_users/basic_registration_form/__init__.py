@@ -138,3 +138,12 @@ class basic_registration_form(basic_registration_formTemplate):
   def gender_dd_change(self, **event_args):
     """This method is called when an item is selected"""
     pass
+
+  def logout_click(self, **event_args):
+    """This method is called when the button is clicked"""
+       
+          
+    alert("Logged out successfully")
+    anvil.users.logout()
+    open_form('bank_users.main_form')
+
