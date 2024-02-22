@@ -47,11 +47,8 @@ class dashboard(dashboardTemplate):
         """This method is called when the link is clicked"""
         open_form("borrower_registration_form.dashboard")
 
-    def login_signup_button_click(self, **event_args):
-        """This method is called when the button is clicked"""
-        alert("Logged out successfully")
-        anvil.users.logout()
-        open_form('bank_users.main_form')
+
+
 
     def button_3_click(self, **event_args):
         """This method is called when the button is clicked"""
@@ -124,6 +121,13 @@ class dashboard(dashboardTemplate):
     def outlined_button_1_copy_3_click(self, **event_args):
       """This method is called when the button is clicked"""
       open_form('borrower_registration_form.dashboard.foreclosure_request')
+
+    def logout_click(self, **event_args):
+      """This method is called when the button is clicked"""
+          
+      alert("Logged out successfully")
+      anvil.users.logout()
+      open_form('bank_users.main_form')
 
   
 
