@@ -45,7 +45,7 @@ components:
         layout_properties: {grid_position: 'CXRQEH,IIZIQM'}
         event_bindings: {click: button_1_copy_3_click}
       - name: spacer_1
-        properties: {height: 34.399932861328125}
+        properties: {height: 28}
         type: Spacer
         layout_properties: {grid_position: 'EVTIKW,ELZHYD'}
       - type: Label
@@ -58,7 +58,7 @@ components:
       - name: grid_panel_1
         properties: {}
         type: GridPanel
-        layout_properties: {grid_position: 'EDOHLF,KGVOVA'}
+        layout_properties: {grid_position: 'EDOHLF,KGVOVA', full_width_row: true}
         components:
         - type: Label
           properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
@@ -66,7 +66,7 @@ components:
             icon_align: left, spacing_below: small, italic: false, background: '',
             bold: false, underline: false, icon: ''}
           name: label_2_copy
-          layout_properties: {row: OUCBZA, width_xs: 3, col_xs: 3}
+          layout_properties: {row: OUCBZA, width_xs: 2, col_xs: 4}
         - name: label_1
           properties: {}
           type: Label
@@ -77,7 +77,7 @@ components:
             icon_align: left, spacing_below: small, italic: false, background: '',
             bold: false, underline: false, icon: ''}
           name: label_2
-          layout_properties: {row: SBMUGJ, width_xs: 3, col_xs: 3}
+          layout_properties: {row: SBMUGJ, width_xs: 2, col_xs: 4}
         - type: TextBox
           properties: {role: outlined, align: left, hide_text: false, tooltip: '',
             placeholder: Enter product name, border: '', enabled: true, foreground: '',
@@ -86,27 +86,13 @@ components:
             underline: false}
           name: product_name
           layout_properties: {row: SBMUGJ, width_xs: 3, col_xs: 6}
-      - type: XYPanel
-        properties: {role: null, width: null, align: center, height: 1569.599998474121,
-          tooltip: '', border: '', foreground: '', visible: true, spacing_above: small,
-          spacing_below: small, background: ''}
-        name: xy_panel_1
-        layout_properties: {grid_position: 'JJSXRJ,NKBYEQ'}
-        components:
         - type: Label
           properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-            visible: true, text: ' Product Categories', font_size: null, font: '',
-            spacing_above: small, icon_align: left, spacing_below: small, italic: false,
-            background: '', bold: false, underline: false, icon: ''}
-          name: label_5
-          layout_properties: {x: 0.04724999999999113, y: 240.390625, width: 159.984}
-        - type: TextArea
-          properties: {role: outlined, align: left, height: 60.8, tooltip: '', placeholder: Enter your product description,
-            border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
-            auto_expand: true, font: '', spacing_above: small, spacing_below: small,
-            italic: false, background: white, bold: false, underline: false}
-          name: text_area_1
-          layout_properties: {x: 177, y: 293.359375, width: 461}
+            visible: true, text: ' Product Group', font_size: null, font: '', spacing_above: small,
+            icon_align: left, spacing_below: small, italic: false, background: '',
+            bold: false, underline: false, icon: ''}
+          name: label_3_copy
+          layout_properties: {row: QUNYQY, width_xs: 2, col_xs: 4}
         - type: DropDown
           properties:
             role: outlined
@@ -128,29 +114,65 @@ components:
             underline: false
             include_placeholder: true
           name: name
-          layout_properties: {x: 175.04167938232422, y: 173.68057250976562, width: 236.139}
+          layout_properties: {row: QUNYQY, width_xs: 3, col_xs: 6}
           data_bindings: []
           event_bindings: {change: name_change}
         - type: Label
           properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-            visible: true, text: ' Product Group', font_size: null, font: '', spacing_above: small,
-            icon_align: left, spacing_below: small, italic: false, background: '',
-            bold: false, underline: false, icon: ''}
-          name: label_3_copy
-          layout_properties: {x: 2.03125, y: 173.6875, width: 160}
+            visible: true, text: ' Product Categories', font_size: null, font: '',
+            spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+            background: '', bold: false, underline: false, icon: ''}
+          name: label_5
+          layout_properties: {row: STXXRX, width_xs: 2, col_xs: 4}
+        - type: DropDown
+          properties:
+            role: outlined
+            align: full
+            tooltip: ''
+            placeholder: Select product category
+            border: ''
+            enabled: true
+            foreground: ''
+            items: []
+            visible: true
+            font_size: null
+            font: ''
+            spacing_above: small
+            spacing_below: small
+            italic: false
+            background: white
+            bold: false
+            underline: false
+            include_placeholder: true
+          name: product_category
+          layout_properties: {row: STXXRX, width_xs: 3, col_xs: 6}
+        - type: Label
+          properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+            visible: true, text: ' Product Description', font_size: null, font: '',
+            spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+            background: '', bold: false, underline: false, icon: ''}
+          name: label_4_copy
+          layout_properties: {row: FVXXTV, width_xs: 2, col_xs: 4}
+        - type: TextArea
+          properties: {role: outlined, align: left, height: 60.8, tooltip: '', placeholder: Enter your product description,
+            border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
+            auto_expand: true, font: '', spacing_above: small, spacing_below: small,
+            italic: false, background: white, bold: false, underline: false}
+          name: text_area_1
+          layout_properties: {row: FVXXTV, width_xs: 6, col_xs: 6}
         - type: Label
           properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
             visible: true, text: ' Interest  Rate(%)', font_size: null, font: '',
             spacing_above: small, icon_align: left, spacing_below: small, italic: false,
             background: '', bold: false, underline: false, icon: ''}
           name: label_8_copy
-          layout_properties: {x: 2.015874999999994, y: 379, width: 160}
+          layout_properties: {row: VYZQMV, width_xs: 2, col_xs: 4}
         - type: ColumnPanel
           properties: {role: null, tooltip: '', border: '', foreground: '', visible: true,
             wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
             spacing_below: small, background: '#CBCFD0'}
           name: column_panel_2
-          layout_properties: {x: 177.59325, y: 379, width: 570.2913129882812}
+          layout_properties: {row: YFMNGR, width_xs: 7, col_xs: 5}
           components:
           - type: Label
             properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
@@ -288,28 +310,13 @@ components:
               background: '', bold: true, underline: false, icon: ''}
             name: link_2
             layout_properties: {grid_position: 'XGGTQP,CTLYKT'}
-        - type: DropDown
-          properties:
-            role: outlined
-            align: full
-            tooltip: ''
-            placeholder: Select product category
-            border: ''
-            enabled: true
-            foreground: ''
-            items: []
-            visible: true
-            font_size: null
-            font: ''
-            spacing_above: small
-            spacing_below: small
-            italic: false
-            background: white
-            bold: false
-            underline: false
-            include_placeholder: true
-          name: product_category
-          layout_properties: {x: 174.95833587646484, y: 235.38888549804688, width: 236.208}
+      - type: XYPanel
+        properties: {role: null, width: null, align: center, height: 1538, tooltip: '',
+          border: '', foreground: '', visible: true, spacing_above: small, spacing_below: small,
+          background: ''}
+        name: xy_panel_1
+        layout_properties: {grid_position: 'VPADHH,AJRDXY'}
+        components:
         - type: Label
           properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
             visible: true, text: ' EMI Payment', font_size: null, font: '', spacing_above: small,
@@ -345,13 +352,6 @@ components:
             italic: false, background: '', bold: false, checked: false, underline: false}
           name: six_month
           layout_properties: {x: 611.5138778686523, y: 832.8333129882812, width: 100}
-        - type: Label
-          properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-            visible: true, text: ' Product Description', font_size: null, font: '',
-            spacing_above: small, icon_align: left, spacing_below: small, italic: false,
-            background: '', bold: false, underline: false, icon: ''}
-          name: label_4_copy
-          layout_properties: {x: 2.1114503784179703, y: 309.2083435058594, width: 159.958}
         - type: Label
           properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
             visible: true, text: ' Foreclosure Type', font_size: null, font: '', spacing_above: small,
