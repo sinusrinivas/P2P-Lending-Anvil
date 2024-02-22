@@ -344,7 +344,7 @@ class payment_details_extension(payment_details_extensionTemplate):
         # Find the last paid EMI number for the specific loan
         last_paid_emi_records = app_tables.fin_emi_table.search(loan_id=selected_row['loan_id'], scheduled_payment_made=q.not_(None))
         last_paid_emi_number = max([record['emi_number'] for record in last_paid_emi_records], default=0)
-        print(last_paid_emi_number)
+        print("last_paid_emi_number", last_paid_emi_number)
         last_paid_emi_ending_balance = selected_row['loan_amount']
         
         # Counter for payment number
@@ -376,11 +376,12 @@ class payment_details_extension(payment_details_extensionTemplate):
                 elif selected_row['emi_payment_type'] == 'One Time':
                     pass
                 elif selected_row['emi_payment_type'] == 'Three Month':
-                    if (last_paid_emi_number - month) % 3 == 0:  
-                        emi = self.calculate_scheduled_payment(selected_row['loan_amount'], monthly_interest_rate, (selected_row['tenure']/3))
+                    # if (last_paid_emi_number - month) % 3 == 0:
+                    #     print('last_paid_emi_number - month',last_paid_emi_number - month)
+                    emi = self.calculate_scheduled_payment(selected_row['loan_amount'], monthly_interest_rate, (selected_row['tenure']/3))
                 elif selected_row['emi_payment_type'] == 'Six Month':
-                    if (last_paid_emi_number - month) % 6 == 0:  # Adjusted the condition to check if the difference is divisible by 6
-                        emi = self.calculate_scheduled_payment(selected_row['loan_amount'], monthly_interest_rate, (selected_row['tenure']/6))
+                    # if (last_paid_emi_number - month) % 6 == 0:  # Adjusted the condition to check if the difference is divisible by 6
+                    emi = self.calculate_scheduled_payment(selected_row['loan_amount'], monthly_interest_rate, (selected_row['tenure']/6))
                 total_payment = emi              
             else:
                 if selected_row['emi_payment_type'] == 'Monthly':
@@ -396,7 +397,7 @@ class payment_details_extension(payment_details_extensionTemplate):
         
             # If the calculated emi is non-zero, calculate principal and other details
             if emi != 0:
-                total_payment = emi + extension_fee_amount if month == last_paid_emi_number + 1 else emi
+                total_payment = emi + extension_fee_amount if month > last_paid_emi_number and month <= last_paid_emi_number + entered_extension_months else emi
                 interest_amount = last_paid_emi_ending_balance * monthly_interest_rate
                 principal_amount = emi - interest_amount
                 ending_balance = last_paid_emi_ending_balance - principal_amount 
@@ -411,7 +412,7 @@ class payment_details_extension(payment_details_extensionTemplate):
                     'Principal': f"₹ {principal_amount:.2f}",
                     'Interest': f"₹ {interest_amount:.2f}",
                     'BeginningBalance': f"₹ {last_paid_emi_ending_balance:.2f}",
-                    'ExtensionFee': f"₹ {extension_fee_amount:.2f}" if month == last_paid_emi_number + 1 else "₹ 0.00",
+                    'ExtensionFee': f"₹ {extension_fee_amount:.2f}" if month > last_paid_emi_number and month <= last_paid_emi_number + entered_extension_months else "₹ 0.00",
                     'TotalPayment': f"₹ {total_payment:.2f}",
                     'EndingBalance': f"₹ {ending_balance:.2f}"
                 })
