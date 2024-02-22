@@ -34,6 +34,11 @@ db_schema:
       admin_ui: {order: 0, width: 200}
       type: string
     title: fin_gender
+  wallet_notification:
+    title: fin_wallet_notification
+    client: full
+    server: full
+    columns: []
   fin_lendor_business_type:
     client: full
     server: full
@@ -715,60 +720,7 @@ db_schema:
     - name: year_estd
       admin_ui: {width: 200}
       type: date
-    - name: father_age
-      admin_ui: {width: 200}
-      type: string
-    - name: father_name
-      admin_ui: {width: 200}
-      type: string
-    - name: father_number
-      admin_ui: {width: 200}
-      type: string
-    - name: father_occupation
-      admin_ui: {width: 200}
-      type: string
-    - name: mother_age
-      admin_ui: {width: 200}
-      type: string
-    - name: mother_name
-      admin_ui: {width: 200}
-      type: string
-    - name: mother_number
-      admin_ui: {width: 200}
-      type: string
-    - name: mother_occupation
-      admin_ui: {width: 200}
-      type: string
-    - name: spouse_annual_salary
-      admin_ui: {width: 200}
-      type: string
-    - name: spouse_company_address
-      admin_ui: {width: 200}
-      type: string
-    - name: spouse_company_name
-      admin_ui: {width: 200}
-      type: string
-    - name: spouse_date
-      admin_ui: {width: 200}
-      type: string
-    - name: spouse_mobile
-      admin_ui: {width: 200}
-      type: string
-    - name: spouse_name
-      admin_ui: {width: 200}
-      type: string
-    - name: spouse_office_no
-      admin_ui: {width: 200}
-      type: string
-    - name: spouse_profession
-      admin_ui: {width: 200}
-      type: string
     title: fin_user_profile
-  fin_wallet_notification:
-    title: fin_wallet_notification
-    client: full
-    server: full
-    columns: []
   fin_wallet_transactions:
     title: fin_wallet_transactions
     client: full
