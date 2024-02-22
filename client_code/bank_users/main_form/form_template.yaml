@@ -208,6 +208,7 @@ components:
         background: white, bold: true, underline: false, icon: ''}
       type: Button
       layout_properties: {}
+      event_bindings: {click: outlined_button_1_copy_1_click}
   - name: label_3_copy_1
     properties: {role: null, align: center, tooltip: '', border: '', foreground: white,
       visible: true, text: 'Total Loan Amount Applied by Borrowers:
@@ -242,6 +243,7 @@ components:
         italic: false, background: white, bold: true, underline: false, icon: ''}
       type: Button
       layout_properties: {}
+      event_bindings: {click: outlined_button_2_copy_1_click}
   - name: linear_panel_5_copy_1
     properties: {}
     type: LinearPanel

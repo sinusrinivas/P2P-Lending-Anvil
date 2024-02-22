@@ -81,3 +81,13 @@ class contact_main_form(contact_main_formTemplate):
   def location_main_form_link_click(self, **event_args):
     """This method is called when the link is clicked"""
     open_form("bank_users.main_form.location_main_form")
+
+  def button_1_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    self.linear_panel_2.visible=True
+    self.linear_panel_3.visible=False
+
+  def button_2_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    self.linear_panel_3.visible=True
+    self.linear_panel_2.visible=False

@@ -35,15 +35,6 @@ components:
     - type: Button
       properties: {role: outlined-button, align: center, tooltip: '', border: '',
         enabled: true, foreground: 'theme:On Primary', visible: true, text: '     Manage
-          Lenders                ', font_size: null, font: '', spacing_above: small,
-        icon_align: left, spacing_below: small, italic: false, background: '#0b2547',
-        bold: true, underline: false, icon: 'fa:chain-broken'}
-      name: button_4
-      layout_properties: {x: 616.9955215454102, y: 73.99553680419922, width: 240.991}
-      event_bindings: {click: button_4_click}
-    - type: Button
-      properties: {role: outlined-button, align: center, tooltip: '', border: '',
-        enabled: true, foreground: 'theme:On Primary', visible: true, text: '     Manage
           Products                ', font_size: null, font: '', spacing_above: small,
         icon_align: left, spacing_below: small, italic: false, background: '#0b2547',
         bold: true, underline: false, icon: 'fa:exclamation-triangle'}
@@ -130,4 +121,13 @@ components:
       type: Button
       layout_properties: {x: 626.046875, y: 288.046875, width: 247}
       event_bindings: {click: manage_bessem_click}
+    - type: Button
+      properties: {role: outlined-button, align: center, tooltip: '', border: '',
+        enabled: true, foreground: 'theme:On Primary', visible: true, text: '     Manage
+          Lenders                ', font_size: null, font: '', spacing_above: small,
+        icon_align: left, spacing_below: small, italic: false, background: '#0b2547',
+        bold: true, underline: false, icon: 'fa:chain-broken'}
+      name: button_4
+      layout_properties: {x: 627.4875762946904, y: 72.48751525953412, width: 240.9875030517578}
+      event_bindings: {click: button_4_click}
 is_package: true

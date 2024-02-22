@@ -6,9 +6,11 @@ toolbox_item: {title: Logout}
 custom_component: true
 components:
 - name: login_signup_button
-  properties: {text: 'Logout          ', background: '#0770e8', foreground: white,
+  properties: {text: 'Logout                   ', background: '#0770e8', foreground: white,
     bold: true, align: right}
   type: Button
   layout_properties: {grid_position: 'OQGOYS,MOMJKX'}
   event_bindings: {click: login_signup_button_click}
-container: {type: ColumnPanel}
+container:
+  type: ColumnPanel
+  properties: {visible: true}

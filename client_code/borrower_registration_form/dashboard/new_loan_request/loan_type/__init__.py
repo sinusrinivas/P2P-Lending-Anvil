@@ -92,6 +92,8 @@ class loan_type(loan_typeTemplate):
                       self.user_id, self.roi, self.processing_fee,
                       self.membership_type, self.product_id,
                       self.Total_Repayment_Amount, self.credit_limt,self.entered_payment_type,
+                      total_interest=self.label_30.text,  
+                      processing_fee_amount=self.label_32.text,
                       entered_values={
                           'loan_amount': self.entered_loan_amount,
                           'tenure': self.entered_tenure,

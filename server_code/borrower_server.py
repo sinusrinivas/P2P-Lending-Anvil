@@ -152,7 +152,8 @@ def update_loan_details(loan_id, emi, total_repayment_amount, interest_rate):
         raise ValueError(f"Row not found for loan_id {loan_id}")
 
 @anvil.server.callable
-def add_loan_details(loan_amount, tenure,user_id,interest_rate, total_repayment_amount,product_id,membership_type,credit_limit,product_name,emi_payment_type):
+def add_loan_details(loan_amount, tenure,user_id,interest_rate, total_repayment_amount,product_id,membership_type,credit_limit,product_name,emi_payment_typeprocessing_fee_amount,
+                                    total_interest):
     
     # Generate a unique loan ID and get the updated counter
     loan_id = generate_loan_id()
@@ -185,7 +186,10 @@ def add_loan_details(loan_amount, tenure,user_id,interest_rate, total_repayment_
           borrower_loan_created_timestamp=loan_created_timestamp,
           product_id = product_id,
           product_name = product_name,
-          emi_payment_type = emi_payment_type,beseem_score= find_beseem_points_based_on_id(user_id)
+          emi_payment_type = emi_payment_type,
+          total_processing_fee_amount = processing_fee_amount,
+          total_interest_amount = total_interest,
+          beseem_score= find_beseem_points_based_on_id(user_id)
          )
 
         # Return the generated loan ID to the client
