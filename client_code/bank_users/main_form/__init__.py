@@ -73,9 +73,7 @@ class main_form(main_formTemplate):
     """This method is called when the link is clicked"""
     open_form("bank_users.main_form.contact_main_form")
 
-  def location_main_form_link_click(self, **event_args):
-    """This method is called when the link is clicked"""
-    open_form("bank_users.main_form.location_main_form")
+
 
   def link_6_click(self, **event_args):
     """This method is called when the link is clicked"""

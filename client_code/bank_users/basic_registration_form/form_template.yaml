@@ -13,14 +13,16 @@ components:
     spacing_below: small, background: '', horizontal_align: left}
   type: Image
   layout_properties: {grid_position: ''}
-- name: logout_1_copy
-  properties: {}
-  type: form:borrower_registration_form.logout
-  layout_properties: {grid_position: ',ODCOYS'}
+- name: logout
+  properties: {text: 'Logout          ', background: '#0770e8', foreground: white,
+    bold: true, align: right}
+  type: Button
+  layout_properties: {grid_position: ',KKHRQF'}
+  event_bindings: {click: logout_click}
 - name: label_01
   properties: {role: null, align: center, tooltip: '', border: '', foreground: white,
     visible: true, text: Basic Details, font_size: 20, font: a, spacing_above: small,
-    icon_align: left, spacing_below: small, italic: false, background: '#094586',
+    icon_align: left, spacing_below: small, italic: false, background: '#05264d',
     bold: true, underline: true, icon: ''}
   type: Label
   layout_properties: {grid_position: 'MXUAFJ,ACPFZJ', full_width_row: true}
@@ -305,7 +307,7 @@ components:
 - name: submit_btn
   properties: {role: elevated-button, align: center, tooltip: '', border: '', enabled: true,
     foreground: 'theme:On Primary', visible: true, text: 'Submit                  ',
-    font_size: 16, font: '', spacing_above: small, icon_align: right, spacing_below: small,
+    font_size: 14, font: '', spacing_above: small, icon_align: right, spacing_below: small,
     italic: false, background: '#0770e8', bold: true, underline: false, icon: ''}
   type: Button
   layout_properties: {grid_position: 'JDOPUY,TRZNKH'}
