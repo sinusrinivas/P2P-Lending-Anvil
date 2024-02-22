@@ -347,7 +347,8 @@ class payment_details_extension(payment_details_extensionTemplate):
         last_paid_emi_ending_balance = selected_row['loan_amount']
         
         # Counter for payment number
-        payment_number_counter = last_paid_emi_number + 1
+        # payment_number_counter = last_paid_emi_number + 1
+        payment_number_counter =   1
         
         # Adjust the total tenure to include extension months
         for month in range(1, total_tenure + 1):
