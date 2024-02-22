@@ -55,6 +55,7 @@ class check(checkTemplate):
                                    self.product_id,
                                    self.membership_type,
                                    self.credit_limt,
+                                   self.product_name,
                                    self.entered_payment_type,
                                    self.processing_fee_amount,
                                    self.total_interest)

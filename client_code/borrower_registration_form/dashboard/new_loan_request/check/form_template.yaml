@@ -59,23 +59,24 @@ components:
         role: null
         columns:
         - {id: IKQXMJ, title: Payment Number, data_key: column_1, $$hashKey: 'object:10339',
-          width: '', expand: false}
+          width: 78, expand: false}
         - {id: CLPOBH, title: Payment Date, data_key: column_2, $$hashKey: 'object:10340',
-          width: '', expand: false}
+          width: 147, expand: false}
         - {id: SSXXKU, title: Beginning Balance, data_key: column_3, $$hashKey: 'object:10341',
-          width: '', expand: false}
+          width: 137, expand: false}
         - {id: XEXQGC, title: Scheduled  Payment, data_key: column_4, $$hashKey: 'object:10414',
-          width: '', expand: false}
+          width: 142, expand: false}
         - {id: IBXUUB, title: Extra Payment, data_key: column_5, $$hashKey: 'object:10416',
-          width: '', expand: false}
+          width: 129, expand: false}
         - {id: MHNLDT, title: Total Payment, data_key: column_6, $$hashKey: 'object:10418',
-          width: '', expand: false}
+          width: 131, expand: false}
         - {id: ZSQFCF, title: Principal, data_key: column_7, $$hashKey: 'object:10420',
-          width: '', expand: false}
+          width: 120, expand: false}
         - {id: ZZIPKX, title: Interest, data_key: column_8, $$hashKey: 'object:10422',
-          width: '', expand: false}
+          width: 115, expand: false}
+        - {id: BBAJUJ, title: Processing Fee, data_key: column_10, $$hashKey: 'object:426',
+          width: 125, expand: false}
         - {id: BUUGHM, title: Ending Balance, data_key: column_9, $$hashKey: 'object:10424'}
-        - {id: BBAJUJ, title: Processing Fee, data_key: column_10, $$hashKey: 'object:426'}
         auto_header: true
         tooltip: ''
         border: ''
