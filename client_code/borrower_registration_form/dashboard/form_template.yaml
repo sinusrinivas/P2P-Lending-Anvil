@@ -109,7 +109,7 @@ components:
     event_bindings: {click: outlined_button_1_click}
   - name: button_6
     properties: {role: outlined-button, align: center, tooltip: '', border: '', enabled: true,
-      foreground: 'theme:On Primary', visible: true, text: 'Veiw  Loans                                        ',
+      foreground: 'theme:On Primary', visible: true, text: 'View  Loans                                        ',
       font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small,
       italic: false, background: '#0b2547', bold: false, underline: false, icon: ''}
     type: Button
