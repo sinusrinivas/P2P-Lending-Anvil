@@ -32,23 +32,23 @@ class payment_details_t(payment_details_tTemplate):
   
       # Initialize beginning_balance to the loan amount
       beginning_balance = selected_row['total_repayment_amount']
-      total_repayment_beginning_balance = selected_row['total_repayment_amount']
+      beginning_loan_amount_balance = selected_row['loan_amount']
   
       for month in range(1, num_payments + 1):
           payment_date = self.calculate_payment_date(selected_row, month)
   
           # Call the appropriate calculation method based on emi_payment_type
           if selected_row['emi_payment_type'] == 'Monthly':
-              emi, ending_balance, total_repayment_beginning_balance, total_repayment_ending_balance = self.calculate_monthly_emi_and_balance(selected_row, month)
+              emi, interest_amount, ending_balance, ending_loan_amount_balance = self.calculate_monthly_emi_and_balance(selected_row, month)
           elif selected_row['emi_payment_type'] == 'Three Month':
-              emi, ending_balance, total_repayment_beginning_balance, total_repayment_ending_balance = self.calculate_three_month_emi_and_balance(selected_row, month)
+              emi, interest_amount, ending_balance, ending_loan_amount_balance = self.calculate_three_month_emi_and_balance(selected_row, month)
           elif selected_row['emi_payment_type'] == 'Six Month':
-              emi, ending_balance, total_repayment_beginning_balance, total_repayment_ending_balance = self.calculate_six_month_emi_and_balance(selected_row, month)
+              emi, interest_amount, ending_balance, ending_loan_amount_balance = self.calculate_six_month_emi_and_balance(selected_row, month)
           elif selected_row['emi_payment_type'] == 'One Time':
-              emi, ending_balance, total_repayment_beginning_balance, total_repayment_ending_balance = self.calculate_one_time_emi_and_balance(selected_row, month)
+              emi, interest_amount, ending_balance, ending_loan_amount_balance = self.calculate_one_time_emi_and_balance(selected_row, month)
           else:
               # Handle unsupported payment types
-              emi, ending_balance, total_repayment_ending_balance = 0, 0, total_repayment_beginning_balance
+              emi, interest_amount, ending_balance, ending_loan_amount_balance = 0, 0, 0
   
           # Fetch extra payment from fin_extension_loan table
           extension_row = app_tables.fin_extends_loan.get(
@@ -57,6 +57,9 @@ class payment_details_t(payment_details_tTemplate):
           )
           extra_payment = extension_row['extension_amount'] if extension_row else 0
   
+          # Add extension amount to beginning balance
+          beginning_balance += extra_payment or 0
+  
           # Fetch scheduled_payment_made and account_number from the emi_payments table
           emi_row = app_tables.fin_emi_table.get(
               loan_id=selected_row['loan_id'],
@@ -64,11 +67,6 @@ class payment_details_t(payment_details_tTemplate):
           )
           scheduled_payment_made = emi_row['scheduled_payment_made'] if emi_row else None
           account_number = emi_row['account_number'] if emi_row else None
-  
-          # Calculate interest and principal amounts based on the current month
-          monthly_interest_rate = (selected_row['interest_rate'] / 100) / 12
-          interest_amount = ending_balance * monthly_interest_rate
-          principal_amount = emi - interest_amount
   
           # Determine display values for EMIDate and AccountNumber
           scheduled_payment_made_display = f"{scheduled_payment_made:%Y-%m-%d}" if scheduled_payment_made else "N/A"
@@ -86,22 +84,23 @@ class payment_details_t(payment_details_tTemplate):
               'EMITime': emi_time_display,
               'AccountNumber': account_number_display,
               'ScheduledPayment': f"₹ {emi:.2f}",
-              'Principal': f"₹ {principal_amount:.2f}",
+              'Principal': f"₹ {(emi - interest_amount):.2f}",
               'Interest': f"₹ {interest_amount:.2f}",
               'BeginningBalance': f"₹ {beginning_balance:.2f}",
               'ExtraPayment': f"₹ {extra_payment:.2f}" if extra_payment is not None else "N/A",
               'TotalPayment': f"₹ {emi + extra_payment if extra_payment is not None else emi:.2f}",
               'EndingBalance': f"₹ {ending_balance:.2f}",
-              'TotalRepaymentBeginningBalance': f"₹ {total_repayment_beginning_balance:.2f}",
-              'TotalRepaymentEndingBalance': f"₹ {total_repayment_ending_balance:.2f}"
+              'beginning_loan_amount_balance': f"₹ {beginning_loan_amount_balance:.2f}",
+              'ending_loan_amount_balance': f"₹ {ending_loan_amount_balance:.2f}"
           })
   
           # Update beginning balance for the next iteration
           beginning_balance = ending_balance
+          beginning_loan_amount_balance = ending_loan_amount_balance
   
       # Set the Data Grid's items property to the list of payment details
       self.repeating_panel_1.items = payment_details
-    
+        
     def load_entered_values(self, entered_values):
         if entered_values:
             # Load previously entered values into the form fields
@@ -152,90 +151,90 @@ class payment_details_t(payment_details_tTemplate):
       beginning_balance = selected_row['total_repayment_amount']
   
       # Initialize Total Repayment Beginning Balance (TRBB) and Total Repayment Ending Balance (TREB)
-      total_repayment_beginning_balance = selected_row['total_repayment_amount']
-      total_repayment_ending_balance = total_repayment_beginning_balance
-  
+      beginning_loan_amount_balance = selected_row['loan_amount']
+      processing_fee = selected_row['processing_fee'] / selected_row['tenure'] if 'processing_fee' in selected_row else 0
       # For monthly payments, calculate ending balance
       for month in range(1, current_month + 1):
-          interest_amount = beginning_balance * (selected_row['interest_rate'] / 100) / 12
+          interest_amount = beginning_loan_amount_balance * (selected_row['interest_rate'] / 100) / 12
           principal_amount = emi - interest_amount
-          total_repayment_beginning_balance = total_repayment_ending_balance  # Update TRBB for the next iteration
-          total_repayment_ending_balance -= principal_amount  # Update TREB for the next iteration
-          beginning_balance -= principal_amount  # Update beginning balance for the next iteration
-  
+          beginning_loan_amount_balance -= principal_amount  # Update TRBB for the next iteration
+          ending_loan_amount_balance = beginning_loan_amount_balance
+          beginning_balance -= emi + processing_fee # Update beginning balance for the next iteration
+        
       ending_balance = beginning_balance
-      return emi, ending_balance, total_repayment_beginning_balance, total_repayment_ending_balance
-  
+
+      return emi, interest_amount, ending_balance, ending_loan_amount_balance
+
     def calculate_three_month_emi_and_balance(self, selected_row, current_month):
-      emi = self.calculate_emi(selected_row)
-      beginning_balance = selected_row['total_repayment_amount']
-  
-      # Initialize Total Repayment Beginning Balance (TRBB) and Total Repayment Ending Balance (TREB)
-      total_repayment_beginning_balance = selected_row['total_repayment_amount']
-      total_repayment_ending_balance = total_repayment_beginning_balance
-  
-      # Calculate ending balance for the current month
-      for period in range(1, current_month + 1):
-          interest_amount = beginning_balance * (selected_row['interest_rate'] / 100) / (12 * 3)
-          principal_amount = emi - interest_amount
-          # total_repayment_beginning_balance = total_repayment_ending_balance  # Update TRBB for the next iteration
-          # total_repayment_ending_balance -= principal_amount
-          beginning_balance -= principal_amount  # Update beginning balance for the next iteration
-  
-      ending_balance = beginning_balance
-      return emi, ending_balance, total_repayment_beginning_balance, total_repayment_ending_balance
-    
+        emi = self.calculate_emi(selected_row)
+        beginning_balance = selected_row['total_repayment_amount']
+
+        # Initialize Total Repayment Beginning Balance (TRBB) and Total Repayment Ending Balance (TREB)
+        beginning_loan_amount_balance = selected_row['loan_amount']
+        ending_loan_amount_balance = beginning_loan_amount_balance
+
+        # Calculate ending balance for the current month
+        for period in range(1, current_month + 1):
+            interest_amount = beginning_loan_amount_balance * (selected_row['interest_rate'] / 100) / (12 * 3)
+            principal_amount = emi - interest_amount
+            beginning_loan_amount_balance -= principal_amount  # Update TRBB for the next iteration
+            ending_loan_amount_balance = beginning_loan_amount_balance
+            beginning_balance -= emi     # Update beginning balance for the next iteratio
+          
+        ending_balance = beginning_balance
+        return emi, interest_amount, ending_balance, ending_loan_amount_balance
+        
     def calculate_six_month_emi_and_balance(self, selected_row, current_month):
         emi = self.calculate_emi(selected_row)
         beginning_balance = selected_row['total_repayment_amount']
-    
+
         # Initialize Total Repayment Beginning Balance (TRBB) and Total Repayment Ending Balance (TREB)
-        total_repayment_beginning_balance = selected_row['total_repayment_amount']
-        total_repayment_ending_balance = total_repayment_beginning_balance
-    
+        beginning_loan_amount_balance = selected_row['loan_amount']
+        ending_loan_amount_balance = beginning_loan_amount_balance
+
         # For six-month payments, calculate ending balance for each 6-month period
         for period in range(1, current_month + 1):
-            interest_amount = beginning_balance * (selected_row['interest_rate'] / 100) / (12 * 6)
+            interest_amount = beginning_loan_amount_balance * (selected_row['interest_rate'] / 100) / (12 * 6)
             principal_amount = emi - interest_amount
-            total_repayment_beginning_balance = total_repayment_ending_balance  # Update TRBB for the next iteration
-            total_repayment_ending_balance -= principal_amount  # Update TREB for the next iteration
-            beginning_balance -= principal_amount  # Update beginning balance for the next iteration
-    
+            beginning_loan_amount_balance -= principal_amount  # Update TRBB for the next iteration
+            ending_loan_amount_balance = beginning_loan_amount_balance
+            beginning_balance -= emi  # Update beginning balance for the next iteration
+
         ending_balance = beginning_balance
-        return emi, ending_balance, total_repayment_beginning_balance, total_repayment_ending_balance
+        return emi, interest_amount, ending_balance, ending_loan_amount_balance
 
     def calculate_one_time_emi_and_balance(self, selected_row, current_month):
         emi = self.calculate_emi(selected_row)
         beginning_balance = selected_row['total_repayment_amount']
-    
+
         # Initialize Total Repayment Beginning Balance (TRBB) and Total Repayment Ending Balance (TREB)
-        total_repayment_beginning_balance = selected_row['total_repayment_amount']
-        total_repayment_ending_balance = total_repayment_beginning_balance
-    
+        beginning_loan_amount_balance = selected_row['loan_amount']
+        ending_loan_amount_balance = beginning_loan_amount_balance
+
         # For one-time payment, calculate ending balance for the single payment
-        interest_amount = beginning_balance * (selected_row['interest_rate'] / 100) / 12
+        interest_amount = beginning_loan_amount_balance * (selected_row['interest_rate'] / 100) / 12
         principal_amount = emi - interest_amount
-        total_repayment_beginning_balance = total_repayment_ending_balance  # Update TRBB for the next iteration
-        total_repayment_ending_balance -= principal_amount  # Update TREB for the next iteration
-        beginning_balance -= principal_amount  # Update beginning balance for the next iteration
-    
-        ending_balance = 0
-        return emi, ending_balance, total_repayment_beginning_balance, total_repayment_ending_balance
+        beginning_loan_amount_balance -= principal_amount  # Update TRBB for the next iteration
+        ending_loan_amount_balance = beginning_loan_amount_balance
+        beginning_balance -= emi# Update beginning balance for the next iteration
+
+        ending_balance = beginning_balance
+        return emi, interest_amount, ending_balance, ending_loan_amount_balance
       
     def calculate_num_payments(self, selected_row):
-        tenure = selected_row['tenure']
-        payment_type = selected_row['emi_payment_type']
-
-        if payment_type == 'One Time':
-            return 1
-        elif payment_type == 'Monthly':
-            return tenure
-        elif payment_type == 'Three Month':
-            return tenure // 3
-        elif payment_type == 'Six Month':
-            return tenure // 6
-        else:
-            return 0
+      tenure = selected_row['tenure']
+      payment_type = selected_row['emi_payment_type']
+  
+      if payment_type == 'One Time':
+          return 1
+      elif payment_type == 'Monthly':
+          return tenure
+      elif payment_type == 'Three Month':
+          return tenure // 3 + (1 if tenure % 3 != 0 else 0)  # Add 1 if the remainder is not 0
+      elif payment_type == 'Six Month':
+          return tenure // 6 + (1 if tenure % 6 != 0 else 0)  # Add 1 if the remainder is not 0
+      else:
+          return 0
 
     def calculate_emi(self, selected_row, tenure=None, repayment_amount=None):
         tenure = selected_row['tenure'] if tenure is None else tenure
@@ -247,7 +246,7 @@ class payment_details_t(payment_details_tTemplate):
         elif selected_row['emi_payment_type'] == 'One Time':
             emi = loan_amount / tenure
         elif selected_row['emi_payment_type'] == 'Three Month':
-            monthly_interest_rate = (selected_row['interest_rate'] / 100) / (12 * 3)  # Corrected calculation for 3 months
+            monthly_interest_rate = (selected_row['interest_rate'] / 100) / (12*3)  # Convert annual interest rate to monthly
             emi = (loan_amount * monthly_interest_rate * ((1 + monthly_interest_rate) ** (tenure / 3))) / (((1 + monthly_interest_rate) ** (tenure / 3)) - 1)
         elif selected_row['emi_payment_type'] == 'Six Month':
             monthly_interest_rate = (selected_row['interest_rate'] / 100) / (12 * 6)  # Corrected calculation for 6 months
@@ -264,3 +263,5 @@ class payment_details_t(payment_details_tTemplate):
     def button_2_click(self, **event_args):
         """This method is called when the button is clicked"""
         open_form('borrower_registration_form.dashboard.today_dues', selected_row=self.selected_row)
+
+   
