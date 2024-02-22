@@ -484,33 +484,34 @@ def loan_disbursement_action(selected_row, email):
             # Check if 5 minutes have passed since lender_accepted_timestamp
             time_difference = current_time - lender_accepted_timestamp
             print("time_difference:", time_difference)
-            if time_difference.total_seconds() > 120:  # 300 seconds = 5 minutes # 120 seconds = 2 minutes
+            time_difference_seconds = int(time_difference.total_seconds())
+            if time_difference_seconds > 1800:  # 300 seconds = 5 minutes # 1800 seconds = 30 minutes
                 # Update loan status based on the comparison of wallet_amount and loan_amount
                 if loan_amount > wallet_amount:
                  # Update loan status to 'lost opportunities'
                  selected_row['loan_updated_status'] = 'lost opportunities'
                  selected_row.update()
                  print("loan_updated_status as lost opportunities")
-                 return "Time_out"
+                 return "Time_out", time_difference_seconds
                 else:
                   print("2 minutes have not passed yet")
                   # 2 minutes have not passed yet
                   selected_row['loan_updated_status'] = 'accepted'
                   selected_row.update()
-                  return "insufficient_balance"    
+                  return "insufficient_balance", time_difference_seconds 
             else:
-                return "insufficient_balance"
+                return "insufficient_balance", time_difference_seconds
         else:
            wallet_amount -= loan_amount
            wallet_row['wallet_amount'] = wallet_amount
            wallet_row.update()
            
            # Signal the client to pay to the borrower
-           return "pay_to_borrower"
+           return "pay_to_borrower", time_difference_seconds
     else:
         # Handle the case where the wallet row is not found
         print("wallet_not_found")
-        return "wallet_not_found" 
+        return "wallet_not_found", None
 
 
 @anvil.server.background_task
@@ -518,7 +519,7 @@ def check_loan_timeout(selected_row, lender_accepted_timestamp, email):
     # Record the start time
     start_time = datetime.now()
 
-    # Wait for 2 minutes
+    # Wait for 30 minutes
     while datetime.now() < start_time + timedelta(minutes=2):
         anvil.server.sleep(10)  
 

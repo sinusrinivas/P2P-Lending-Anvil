@@ -16,9 +16,10 @@ from datetime import timedelta
 import time
 
 class wallet_deposit(wallet_depositTemplate):
-  def __init__(self,entered_loan_id,entered_borrower_customer_id, **properties):
+  def __init__(self,entered_loan_id,entered_borrower_customer_id,time_difference_seconds, **properties):
     self.entered_loan_id = entered_loan_id
     self.entered_borrower_customer_id = entered_borrower_customer_id
+    self.time_difference_seconds = time_difference_seconds
     self.user_id = main_form_module.userId
     self.selected_row = None
     # self.selected_row = selected_row
@@ -92,9 +93,6 @@ class wallet_deposit(wallet_depositTemplate):
   def wallet_dashboard_link_click(self, **event_args):
     """This method is called when the link is clicked"""
     pass
-
-  
-  
           
   def deposit_money_btn_click(self, **event_args):
     amount_entered = self.amount_text_box.text
@@ -152,8 +150,9 @@ class wallet_deposit(wallet_depositTemplate):
         start_time_utc = datetime.utcfromtimestamp(self.start_time).replace(tzinfo=timezone.utc)
         
         time_difference = current_time - start_time_utc
+        time_diff = 180 - self.time_difference_seconds 
 
-        if time_difference.total_seconds() > 300:  # 120 seconds = 2 minutes
+        if time_difference.total_seconds() > time_diff:  # 1800 seconds = 30 minutes
             # Update loan status based on the comparison of wallet_amount and loan_amount
             
             wallet_row = app_tables.fin_wallet.get(user_email=self.email)
@@ -257,8 +256,8 @@ class wallet_deposit(wallet_depositTemplate):
   def timer_1_tick(self, **event_args):
     """This method is called Every [interval] seconds. Does not trigger if [interval] is 0."""
     self.check_time_difference()
-    # Print time_difference every 60 seconds
-    if int(time.time() - self.start_time) % 60 == 0:
+    # Print time_difference every 300 seconds i.e 5min
+    if int(time.time() - self.start_time) % 30 == 0:
       print("time_difference:", datetime.now(timezone.utc) - datetime.utcfromtimestamp(self.start_time).replace(tzinfo=timezone.utc))
   
   def calculate_first_emi_due_date(self, emi_payment_type, loan_disbursed_timestamp, tenure):
@@ -284,37 +283,4 @@ class wallet_deposit(wallet_depositTemplate):
   def all_transaction_btn_click(self, **event_args):
     """This method is called when the button is clicked"""
     open_form("wallet.wallet.all_transaction")
-
-  # def deposit_money_btn_click(self, **event_args):
-  #       amount_entered = self.amount_text_box.text
-
-  #       # Check if amount_entered is not empty and is a valid number
-  #       if not amount_entered or not str(amount_entered).isdigit():
-  #           alert("Please enter a valid amount.")
-  #           return
-
-  #       try:
-  #           deposit_amount = int(amount_entered)
-  #       except ValueError:
-  #           alert("Please enter a valid amount.")
-  #           return
-
-  #       customer_id = 1000
-  #       email = self.email
-  #       # selected_row = self.selected_row
-        
-
-  #       if anvil.server.call('deposit_money', email=email, deposit_amount=deposit_amount, customer_id=customer_id):
-  #           alert("Deposit successful!")
-  #           disbursement_row = app_tables.fin_disbursement_detail.get(entered_borrower_customer_id=self.entered_borrower_customer_id)
-  #           if disbursement_row:
-  #              entered_loan_id = disbursement_row['entered_loan_id']
-  #              entered_borrower_customer_id = disbursement_row['entered_borrower_customer_id']
-  #              # Open Borr_loan_request form again with entered_loan_id and entered_borrower_customer_id
-  #              open_form('lendor_registration_form.dashboard.view_borrower_loan_request.Borr_loan_request',
-  #                      entered_loan_id=entered_loan_id, 
-  #                      entered_borrower_customer_id=entered_borrower_customer_id)
-
-  #       else:
-  #           alert("Deposit failed!")
 
