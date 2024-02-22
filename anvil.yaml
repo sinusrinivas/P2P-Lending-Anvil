@@ -14,6 +14,9 @@ services:
 - source: /runtime/services/anvil/email.yml
   client_config: {}
   server_config: {}
+- source: /runtime/services/anvil/secrets.yml
+  client_config: {}
+  server_config: {}
 startup: {type: form, module: bank_users.main_form}
 package_name: bank_client
 allow_embedding: false
@@ -31,11 +34,6 @@ db_schema:
       admin_ui: {order: 0, width: 200}
       type: string
     title: fin_gender
-  wallet_notification:
-    title: fin_wallet_notification
-    client: full
-    server: full
-    columns: []
   fin_lendor_business_type:
     client: full
     server: full
@@ -717,7 +715,60 @@ db_schema:
     - name: year_estd
       admin_ui: {width: 200}
       type: date
+    - name: father_age
+      admin_ui: {width: 200}
+      type: string
+    - name: father_name
+      admin_ui: {width: 200}
+      type: string
+    - name: father_number
+      admin_ui: {width: 200}
+      type: string
+    - name: father_occupation
+      admin_ui: {width: 200}
+      type: string
+    - name: mother_age
+      admin_ui: {width: 200}
+      type: string
+    - name: mother_name
+      admin_ui: {width: 200}
+      type: string
+    - name: mother_number
+      admin_ui: {width: 200}
+      type: string
+    - name: mother_occupation
+      admin_ui: {width: 200}
+      type: string
+    - name: spouse_annual_salary
+      admin_ui: {width: 200}
+      type: string
+    - name: spouse_company_address
+      admin_ui: {width: 200}
+      type: string
+    - name: spouse_company_name
+      admin_ui: {width: 200}
+      type: string
+    - name: spouse_date
+      admin_ui: {width: 200}
+      type: string
+    - name: spouse_mobile
+      admin_ui: {width: 200}
+      type: string
+    - name: spouse_name
+      admin_ui: {width: 200}
+      type: string
+    - name: spouse_office_no
+      admin_ui: {width: 200}
+      type: string
+    - name: spouse_profession
+      admin_ui: {width: 200}
+      type: string
     title: fin_user_profile
+  fin_wallet_notification:
+    title: fin_wallet_notification
+    client: full
+    server: full
+    columns: []
   fin_wallet_transactions:
     title: fin_wallet_transactions
     client: full
@@ -947,6 +998,9 @@ db_schema:
     - name: account_type
       admin_ui: {width: 200, order: 8}
       type: string
+    - name: ifsc_code
+      admin_ui: {width: 200}
+      type: string
     title: fin_wallet_bank_account_table
   fin_product_group:
     client: full
@@ -1151,5 +1205,12 @@ db_schema:
       admin_ui: {width: 200, order: 0}
       type: string
     title: fin_lendor_account_type
+secrets:
+  new_key:
+    type: key
+    value: {LKJSUIQBLUZBMSE6: TBwnfUPkKbp/It26TlEK7ffcchBJyWeJ3RPDinyx9E4SMEmxzWTBfG1lOeQvWaEP/WaVpb7P1M+MFaIXPNOPW8mRcf6tREN9I0Iyaqns+dn1cB2wBLYgiaw/8TjGCNoluK3XEhWVw/bCIYWjXMsvKmAisMpx7flh}
+  new_secret:
+    type: secret
+    value: {LKJSUIQBLUZBMSE6: ''}
 uplink_visible: true
 renamed: true
