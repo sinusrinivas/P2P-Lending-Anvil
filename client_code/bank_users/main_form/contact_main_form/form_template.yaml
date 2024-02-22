@@ -66,26 +66,29 @@ components:
   type: Label
   layout_properties: {grid_position: 'TBXCIC,CYSORV'}
 - name: xy_panel_1
-  properties: {height: 247}
+  properties: {height: 285.3999328613281}
   type: XYPanel
   layout_properties: {grid_position: 'YPGMGH,MNMIWM'}
   components:
+  - name: map_1
+    properties: {height: 260.5999755859375, visible: true, zoom: 16, map_type_control: true}
+    type: GoogleMap
+    layout_properties: {x: 8.937481690198183, y: 9, width: 567.587}
+    event_bindings: {show: map_1_show}
+    data_bindings:
+    - {property: map_type_control_options, code: 'self.item[''satellite'']', writeback: false}
   - name: label_2
     properties: {align: left, foreground: '#094586', text: P2P Lending Pvt LTD, font_size: 18,
       icon_align: left_edge, italic: false, bold: true, underline: false, icon: 'fa:map-marker'}
     type: Label
-    layout_properties: {x: 509.6500061042607, y: 70.4749984741211, width: 242.60000610351562}
+    layout_properties: {x: 644.8999298103154, y: 51.325009156018496, width: 242.60000610351562}
     data_bindings: []
   - name: label_1
     properties: {text: '10th floor, RMZ Latitude Commercial Building, Bellary Rd,
         Vinayakanagar, Byatarayanapura, Bengaluru, Karnataka 560024', italic: true,
       bold: false, font_size: 15}
     type: Label
-    layout_properties: {x: 515.6875274665654, y: 116.9124984741211, width: 428.1625061035156}
-  - name: map_1
-    properties: {height: 238, visible: true}
-    type: GoogleMap
-    layout_properties: {x: 8.937481690198183, y: 9, width: 483.5874938964844}
+    layout_properties: {x: 598.6874664314091, y: 110.66250305250287, width: 359.5625}
 - name: spacer_3
   properties: {height: 31.600006103515625}
   type: Spacer
