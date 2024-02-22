@@ -397,7 +397,7 @@ class payment_details_extension(payment_details_extensionTemplate):
         
             # If the calculated emi is non-zero, calculate principal and other details
             if emi != 0:
-                total_payment = emi + extension_fee_amount if month > last_paid_emi_number and month <= last_paid_emi_number + entered_extension_months else emi
+                total_payment = emi + extension_fee_amount if month == (last_paid_emi_number + 1) else emi
                 interest_amount = last_paid_emi_ending_balance * monthly_interest_rate
                 principal_amount = emi - interest_amount
                 ending_balance = last_paid_emi_ending_balance - principal_amount 
@@ -412,7 +412,7 @@ class payment_details_extension(payment_details_extensionTemplate):
                     'Principal': f"₹ {principal_amount:.2f}",
                     'Interest': f"₹ {interest_amount:.2f}",
                     'BeginningBalance': f"₹ {last_paid_emi_ending_balance:.2f}",
-                    'ExtensionFee': f"₹ {extension_fee_amount:.2f}" if month > last_paid_emi_number and month <= last_paid_emi_number + entered_extension_months else "₹ 0.00",
+                    'ExtensionFee': f"₹ {extension_fee_amount:.2f}"  if month == (last_paid_emi_number + 1) else "₹ 0.00",
                     'TotalPayment': f"₹ {total_payment:.2f}",
                     'EndingBalance': f"₹ {ending_balance:.2f}"
                 })
