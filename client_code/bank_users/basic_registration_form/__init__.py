@@ -28,6 +28,7 @@ class basic_registration_form(basic_registration_formTemplate):
     user_data=app_tables.fin_user_profile.get(customer_id=user_id)
     if user_data:
           self.full_name_text_box.text=user_data['full_name']
+          self.gender_dd.selected_value = user_data['gender']
           self.date_picker_1.date=user_data['date_of_birth']
           self.mobile_number_box.text=user_data['mobile']
           self.alternate_email_text_box.text=user_data['another_email']

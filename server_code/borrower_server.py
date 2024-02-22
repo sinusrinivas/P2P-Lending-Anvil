@@ -37,8 +37,6 @@ from . import bessem as bessemfunctions
 #     row[0]['another_email']= alternate_email
 #     row[0]['form_count']=1
 
-
-
 # @anvil.server.callable
 # def add_borrower_step3(aadhar,aadhar_card,pan,pan_card,user_id):
 #   row=app_tables.fin_user_profile.search(customer_id=user_id)
@@ -49,7 +47,6 @@ from . import bessem as bessemfunctions
 #     row[0]['pan_photo']=pan_card
 #     row[0]['form_count']=2
 
-
 # @anvil.server.callable
 # def add_borrower_step3a(father_name,father_age,mother_name,mother_age,user_id):
 #   row = app_tables.fin_user_profile.search(customer_id=user_id)
@@ -58,32 +55,7 @@ from . import bessem as bessemfunctions
 #     row[0]['father_age'] = father_age
 #     row[0]['mother_name'] = mother_name
 #     row[0]['mother_age'] = mother_age
-#     row[0]['form_count']=4
-
-@anvil.server.callable
-def add_borrower_step3c(status_of_user,user_id):
-  row = app_tables.fin_user_profile.search(customer_id=user_id)
-  if row:
-    row[0]['profficen'] = status_of_user
-    row[0]['form_count']=5
-
-
-@anvil.server.callable
-def add_borrower_step4(marital_status,user_id):
-  row = app_tables.fin_user_profile.search(customer_id=user_id)
-  if row:
-    row[0]['marital_status']=marital_status
-    row[0]['form_count']=6
-
-@anvil.server.callable
-def add_borrower_student(college_name,college_id,college_proof,college_address,user_id):
-  row=app_tables.fin_user_profile.search(customer_id=user_id)
-  if row:
-    row[0]['college_name']=college_name
-    row[0]['college_id']=college_id
-    row[0]['college_address']=college_address
-    row[0]['college_proof']=college_proof
-    
+#     row[0]['form_count']=4   
     
 # @anvil.server.callable
 # def add_borrower_step4a(spouse_name,marrege_date,spouse_mobile_no,user_id):
@@ -108,36 +80,67 @@ def add_borrower_student(college_name,college_id,college_proof,college_address,u
 #     row[0]['spouse_annual_ctc']=annual_ctc
 #     row[0]['spouse_office_number']=office_number
 
+
 @anvil.server.callable
-def add_borrower_step7(home_loan,other_loan,live_loan,user_id):
+def add_borrower_step1(qualification,user_id):
+  row = app_tables.fin_user_profile.search(customer_id=user_id)
+  if row:
+    row[0]['qualification'] = qualification
+    row[0]['form_count']=1
+    
+@anvil.server.callable
+def add_borrower_step2(status_of_user,user_id):
+  row = app_tables.fin_user_profile.search(customer_id=user_id)
+  if row:
+    row[0]['profficen'] = status_of_user
+    row[0]['form_count']=2
+
+@anvil.server.callable
+def add_borrower_step3(marital_status,user_id):
+  row = app_tables.fin_user_profile.search(customer_id=user_id)
+  if row:
+    row[0]['marital_status']=marital_status
+    row[0]['form_count']=3
+
+@anvil.server.callable
+def add_borrower_student(college_name,college_id,college_proof,college_address,user_id):
+  row=app_tables.fin_user_profile.search(customer_id=user_id)
+  if row:
+    row[0]['college_name']=college_name
+    row[0]['college_id']=college_id
+    row[0]['college_address']=college_address
+    row[0]['college_proof']=college_proof
+
+@anvil.server.callable
+def add_borrower_step4(home_loan,other_loan,live_loan,user_id):
   row = app_tables.fin_user_profile.search(customer_id=user_id)
   if row:
     row[0]['running_Home_Loan'] = home_loan
     row[0]['running_or_live loans']= live_loan
     row[0]['other_loan']=other_loan
-    row[0]['form_count']=7
+    row[0]['form_count']=4
+    
 @anvil.server.callable
-def add_borrower_step8(account_name, account_type,account_number,bank_name, user_id):
+def add_borrower_step5(account_name, account_type,account_number,bank_name, user_id):
   row = app_tables.fin_user_profile.search(customer_id=user_id)
   if row:
     row[0]['account_name'] = account_name
     row[0]['account_type'] = account_type
     row[0]['account_number'] = account_number
     row[0]['bank_name'] = bank_name  
-    row[0]['form_count']=8
+    row[0]['form_count']=5
 
 @anvil.server.callable
-def add_borrower_step9(bank_id,bank_branch, user_id):
+def add_borrower_step6(bank_id,bank_branch, user_id):
   row = app_tables.fin_user_profile.search(customer_id=user_id)
   if row:
     row[0]['bank_id'] = bank_id
     row[0]['account_bank_branch'] = bank_branch
     row[0]['usertype'] = 'borrower'
     row[0]['last_confirm'] = True
-    row[0]['form_count']=9
+    row[0]['form_count']=6
     row[0]['bessem_value'] = bessemfunctions.final_points_update_bessem_table()
     find_user_and_add_bessem_value(user_id=user_id)
-
 
 @anvil.server.callable
 def update_loan_details(loan_id, emi, total_repayment_amount, interest_rate):
