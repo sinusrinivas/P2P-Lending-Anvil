@@ -1056,7 +1056,7 @@ db_schema:
       admin_ui: {order: 2, width: 155}
       type: string
     - name: interest_rate
-      admin_ui: {order: 7, width: 124}
+      admin_ui: {order: 8.75, width: 124}
       type: number
     - name: loan_status
       admin_ui: {order: 26, width: 115}
@@ -1110,7 +1110,7 @@ db_schema:
       admin_ui: {order: 23, width: 138}
       type: date
     - name: borrower_loan_created_timestamp
-      admin_ui: {order: 5.375, width: 261}
+      admin_ui: {order: 8.5, width: 261}
       type: date
     - name: product_id
       admin_ui: {order: 5, width: 103}
@@ -1128,10 +1128,10 @@ db_schema:
       admin_ui: {order: 15.375, width: 139}
       type: string
     - name: tenure
-      admin_ui: {order: 12, width: 117}
+      admin_ui: {order: 8.875, width: 117}
       type: number
     - name: loan_amount
-      admin_ui: {order: 13, width: 118}
+      admin_ui: {order: 8.9375, width: 118}
       type: number
     - name: lender_accepted_timestamp
       admin_ui: {order: 15.25, width: 241}
