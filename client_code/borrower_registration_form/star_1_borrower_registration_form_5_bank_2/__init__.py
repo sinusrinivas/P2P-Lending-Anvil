@@ -21,6 +21,31 @@ class star_1_borrower_registration_form_5_bank_2(star_1_borrower_registration_fo
       self.accepted_terms = False
       self.button_2.enabled = False
 
+  # def button_2_click(self, **event_args):
+  #   user_id = self.userId
+  #   # Get user details from fin_user_profile table
+  #   user_row = app_tables.fin_user_profile.get(customer_id=user_id)
+
+  #   if user_row:
+  #       # Extracting details from fin_user_profile
+  #       customer_id = user_row['customer_id']
+  #       email_id = user_row['email_user']
+  #       user_name = user_row['full_name']
+  #       beseem_score = user_row['bessem_value']
+
+  #       # Other details from the form
+  #       bank_id = self.text_box_1.text
+  #       bank_branch = self.text_box_2.text
+
+  #       if not bank_id or not bank_branch:
+  #           Notification("Please fill all required fields").show()
+  #       else:
+  #           # Call server function to add borrower with updated credit_limit
+  #           anvil.server.call('add_borrower_step6', bank_id, bank_branch, customer_id, email_user, full_name, beseem_value)
+  #           open_form('borrower_registration_form.dashboard')
+  #   else:
+  #       Notification("User not found").show()
+
   def button_2_click(self, **event_args):
     bank_id = self.text_box_1.text
     # salary_type = self.drop_down_1.selected_value
