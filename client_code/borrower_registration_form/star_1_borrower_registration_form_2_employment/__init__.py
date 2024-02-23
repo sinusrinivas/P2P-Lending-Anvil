@@ -39,7 +39,7 @@ class star_1_borrower_registration_form_2_employment(star_1_borrower_registratio
     elif not user_id:
       Notification("User ID is missing").show()
     else:
-     anvil.server.call('add_borrower_step3c',status_of_user,user_id)
+     anvil.server.call('add_borrower_step2',status_of_user,user_id)
     if status_of_user == 'Student':
       open_form('borrower_registration_form.star_1_borrower_registration_form_2_employment.star_1_borrower_registration_form_2_employment_student',user_id=user_id)
     elif status_of_user == 'Employee':

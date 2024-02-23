@@ -41,7 +41,7 @@ class star_1_borrower_registration_form_5_bank_1(star_1_borrower_registration_fo
     elif not account_number.isdigit():
         Notification("Account number should be valid").show()
     else:
-        anvil.server.call('add_borrower_step8', account_name, account_type, account_number, bank_name, user_id)
+        anvil.server.call('add_borrower_step5', account_name, account_type, account_number, bank_name, user_id)
         open_form('borrower_registration_form.star_1_borrower_registration_form_5_bank_2', user_id=self.userId)
 
   def button_1_click(self, **event_args):
