@@ -1,4 +1,6 @@
-container: {type: ColumnPanel}
+container:
+  type: ColumnPanel
+  properties: {col_widths: '{"GEMVOK":30,"UTPMNS":30}'}
 components:
 - type: Image
   properties: {role: null, vertical_align: center, height: 45.59999084472656, tooltip: '',
