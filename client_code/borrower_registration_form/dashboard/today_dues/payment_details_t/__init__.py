@@ -152,7 +152,7 @@ class payment_details_t(payment_details_tTemplate):
   
       # Initialize Total Repayment Beginning Balance (TRBB) and Total Repayment Ending Balance (TREB)
       beginning_loan_amount_balance = selected_row['loan_amount']
-      processing_fee = selected_row['processing_fee'] / selected_row['tenure'] if 'processing_fee' in selected_row else 0
+      processing_fee = selected_row['processing_fee'] / selected_row['tenure'] if selected_row['processing_fee'] is not None else 0
       # For monthly payments, calculate ending balance
       for month in range(1, current_month + 1):
           interest_amount = beginning_loan_amount_balance * (selected_row['interest_rate'] / 100) / 12
@@ -166,61 +166,80 @@ class payment_details_t(payment_details_tTemplate):
       return emi, interest_amount, ending_balance, ending_loan_amount_balance
 
     def calculate_three_month_emi_and_balance(self, selected_row, current_month):
-        emi = self.calculate_emi(selected_row)
-        beginning_balance = selected_row['total_repayment_amount']
-
-        # Initialize Total Repayment Beginning Balance (TRBB) and Total Repayment Ending Balance (TREB)
-        beginning_loan_amount_balance = selected_row['loan_amount']
-        ending_loan_amount_balance = beginning_loan_amount_balance
-
-        # Calculate ending balance for the current month
-        for period in range(1, current_month + 1):
-            interest_amount = beginning_loan_amount_balance * (selected_row['interest_rate'] / 100) / (12 * 3)
-            principal_amount = emi - interest_amount
-            beginning_loan_amount_balance -= principal_amount  # Update TRBB for the next iteration
-            ending_loan_amount_balance = beginning_loan_amount_balance
-            beginning_balance -= emi     # Update beginning balance for the next iteratio
-          
-        ending_balance = beginning_balance
-        return emi, interest_amount, ending_balance, ending_loan_amount_balance
+      emi = self.calculate_emi(selected_row)
+      beginning_balance = selected_row['total_repayment_amount']
+  
+      # Initialize Total Repayment Beginning Balance (TRBB) and Total Repayment Ending Balance (TREB)
+      beginning_loan_amount_balance = selected_row['loan_amount']
+      ending_loan_amount_balance = beginning_loan_amount_balance
+  
+      # Since processing fee is a one-time charge, apply it only at the beginning
+      processing_fee = selected_row['processing_fee'] if selected_row['processing_fee'] is not None else 0
+  
+      # Subtract processing fee from the total repayment amount at the beginning
+      beginning_balance -= processing_fee
+  
+      # Calculate ending balance for the current month
+      for period in range(1, current_month + 1):
+          interest_amount = beginning_loan_amount_balance * (selected_row['interest_rate'] / 100) / (12 * 3)
+          principal_amount = emi - interest_amount
+          beginning_loan_amount_balance -= principal_amount  # Update TRBB for the next iteration
+          ending_loan_amount_balance = beginning_loan_amount_balance
+          beginning_balance -= emi  # Update beginning balance for the next iteration
+  
+      ending_balance = beginning_balance
+      return emi, interest_amount, ending_balance, ending_loan_amount_balance
         
     def calculate_six_month_emi_and_balance(self, selected_row, current_month):
-        emi = self.calculate_emi(selected_row)
-        beginning_balance = selected_row['total_repayment_amount']
-
-        # Initialize Total Repayment Beginning Balance (TRBB) and Total Repayment Ending Balance (TREB)
-        beginning_loan_amount_balance = selected_row['loan_amount']
-        ending_loan_amount_balance = beginning_loan_amount_balance
-
-        # For six-month payments, calculate ending balance for each 6-month period
-        for period in range(1, current_month + 1):
-            interest_amount = beginning_loan_amount_balance * (selected_row['interest_rate'] / 100) / (12 * 6)
-            principal_amount = emi - interest_amount
-            beginning_loan_amount_balance -= principal_amount  # Update TRBB for the next iteration
-            ending_loan_amount_balance = beginning_loan_amount_balance
-            beginning_balance -= emi  # Update beginning balance for the next iteration
-
-        ending_balance = beginning_balance
-        return emi, interest_amount, ending_balance, ending_loan_amount_balance
-
+      emi = self.calculate_emi(selected_row)
+      beginning_balance = selected_row['total_repayment_amount']
+  
+      # Initialize Total Repayment Beginning Balance (TRBB) and Total Repayment Ending Balance (TREB)
+      beginning_loan_amount_balance = selected_row['loan_amount']
+      ending_loan_amount_balance = beginning_loan_amount_balance
+  
+      # Since processing fee is a one-time charge, apply it only at the beginning
+      processing_fee = selected_row['processing_fee'] if selected_row['processing_fee'] is not None else 0
+  
+      # Subtract processing fee from the total repayment amount at the beginning
+      beginning_balance -= processing_fee
+  
+      # For six-month payments, calculate ending balance for each 6-month period
+      for period in range(1, current_month + 1):
+          interest_amount = beginning_loan_amount_balance * (selected_row['interest_rate'] / 100) / (12 * 6)
+          principal_amount = emi - interest_amount
+          beginning_loan_amount_balance -= principal_amount  # Update TRBB for the next iteration
+          ending_loan_amount_balance = beginning_loan_amount_balance
+          beginning_balance -= emi   # Update beginning balance for the next iteration
+  
+      ending_balance = beginning_balance
+      return emi, interest_amount, ending_balance, ending_loan_amount_balance
+  
+  
     def calculate_one_time_emi_and_balance(self, selected_row, current_month):
         emi = self.calculate_emi(selected_row)
         beginning_balance = selected_row['total_repayment_amount']
-
+    
         # Initialize Total Repayment Beginning Balance (TRBB) and Total Repayment Ending Balance (TREB)
         beginning_loan_amount_balance = selected_row['loan_amount']
         ending_loan_amount_balance = beginning_loan_amount_balance
-
+    
+        # Since processing fee is a one-time charge, apply it only at the beginning
+        processing_fee = selected_row['processing_fee'] if selected_row['processing_fee'] is not None else 0
+    
+        # Subtract processing fee from the total repayment amount at the beginning
+        beginning_balance -= processing_fee
+    
         # For one-time payment, calculate ending balance for the single payment
         interest_amount = beginning_loan_amount_balance * (selected_row['interest_rate'] / 100) / 12
         principal_amount = emi - interest_amount
         beginning_loan_amount_balance -= principal_amount  # Update TRBB for the next iteration
         ending_loan_amount_balance = beginning_loan_amount_balance
-        beginning_balance -= emi# Update beginning balance for the next iteration
-
+        beginning_balance -= emi  # Update beginning balance for the next iteration
+    
         ending_balance = beginning_balance
         return emi, interest_amount, ending_balance, ending_loan_amount_balance
-      
+        
     def calculate_num_payments(self, selected_row):
       tenure = selected_row['tenure']
       payment_type = selected_row['emi_payment_type']
@@ -230,9 +249,9 @@ class payment_details_t(payment_details_tTemplate):
       elif payment_type == 'Monthly':
           return tenure
       elif payment_type == 'Three Month':
-          return tenure // 3 + (1 if tenure % 3 != 0 else 0)  # Add 1 if the remainder is not 0
+          return tenure // 3
       elif payment_type == 'Six Month':
-          return tenure // 6 + (1 if tenure % 6 != 0 else 0)  # Add 1 if the remainder is not 0
+          return tenure // 6
       else:
           return 0
 
