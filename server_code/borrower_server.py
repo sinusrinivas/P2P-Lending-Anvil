@@ -230,6 +230,7 @@ def add_loan_details(loan_amount, tenure,user_id,interest_rate, total_repayment_
         # Handle the case where no user profile is found
         return "User profile not found"
 
+
 def generate_loan_id():
     # Query the latest loan ID from the data table
     latest_loan = app_tables.fin_loan_details.search(tables.order_by("loan_id", ascending=False))
