@@ -86,7 +86,7 @@ components:
   - name: spacer_6
     properties: {height: 32}
     type: Spacer
-    layout_properties: {width: 37}
+    layout_properties: {width: 216}
   - name: new_expense
     properties: {role: outlined, align: right, tooltip: '', border: '', enabled: true,
       foreground: '', visible: true, text: Add Column, font_size: null, font: '',
@@ -95,6 +95,14 @@ components:
     type: Button
     layout_properties: {}
     event_bindings: {click: new_expense_click}
+  - name: new_expense_copy
+    properties: {role: outlined, align: right, tooltip: '', border: '', enabled: true,
+      foreground: '', visible: true, text: Save Changes, font_size: null, font: '',
+      spacing_above: small, icon_align: left, spacing_below: medium, italic: false,
+      background: '', bold: true, underline: false, icon: 'fa:save'}
+    type: Button
+    layout_properties: {}
+    event_bindings: {}
 - name: data_grid_2
   properties:
     columns:
