@@ -29,15 +29,6 @@ from datetime import datetime, timezone
 #     row[0]['user_photo'] = photo
 #     row[0]['form_count'] = 1
 
-@anvil.server.callable
-def add_lendor_education_form(qualification,certificate,user_id):
-  row = app_tables.fin_user_profile.search(customer_id = user_id)
-  if row:
-    
-    row[0]['qualification'] = qualification
-    row[0]['education_certificate'] = certificate
-    
-
 # @anvil.server.callable
 # def add_lendor_third_form(aadhaar_photo, pan_card, pan_id,aadhaar_card,user_id):
 #   row = app_tables.fin_user_profile.search(customer_id = user_id)
@@ -63,13 +54,18 @@ def add_lendor_education_form(qualification,certificate,user_id):
 #     row[0]['country'] = country
 #     row[0]['pincode'] = pincode
 
-
+@anvil.server.callable
+def add_lendor_education_form(qualification,certificate,user_id):
+  row = app_tables.fin_user_profile.search(customer_id = user_id)
+  if row:
+    
+    row[0]['qualification'] = qualification
+    row[0]['education_certificate'] = certificate
 
 @anvil.server.callable
 def add_lendor_six_form(lending_type, investment,lending_period, user_id):
   row = app_tables.fin_lender.add_row(investment=investment, lending_type=lending_type,lending_period=lending_period,customer_id = user_id)
     
-
 @anvil.server.callable
 def add_lendor_individual_form_1(company_name,org_type,emp_type,user_id):
   row = app_tables.fin_user_profile.search(customer_id = user_id)
@@ -77,8 +73,6 @@ def add_lendor_individual_form_1(company_name,org_type,emp_type,user_id):
     row[0]['company_name']=company_name
     row[0]['organization_type']=org_type
     row[0]['employment_type']=emp_type
-
-    
 
 @anvil.server.callable
 def add_lendor_individual_form_2(comp_address,landmark,business_phone_number,user_id):
@@ -144,7 +138,7 @@ def add_lendor_marital(marital_status,user_id):
   row = app_tables.fin_user_profile.search(customer_id=user_id)
   if row:
     row[0]['marital_status']=marital_status
-    # row[0]['form_count']=6
+    row[0]['form_count']=3
 
 @anvil.server.callable
 def add_education_tenth(tenth_class,user_id):
@@ -185,13 +179,6 @@ def add_education_phd(tenth_class,intermediate,btech,mtech,phd,user_id):
     row[0]['btech']=btech
     row[0]['mtech']=mtech
     row[0]['phd']=phd
-
-@anvil.server.callable
-def add_lendor_married(another_person,user_id):
-  row = app_tables.fin_user_profile.search(customer_id=user_id)
-  if row:
-    row[0]['another_person']=another_person
-    # row[0]['form_count']=6
 
 @anvil.server.callable
 def add_lendor_bank_details_form_1(account_name, account_type,account_number,bank_name, user_id):
