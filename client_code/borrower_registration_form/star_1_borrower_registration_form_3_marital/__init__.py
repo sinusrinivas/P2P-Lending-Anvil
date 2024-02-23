@@ -33,7 +33,7 @@ class star_1_borrower_registration_form_3_marital(star_1_borrower_registration_f
     if not marital_status or marital_status not in ['Not Married', 'Married', 'Other']:
       Notification("Please select a valid marital status").show()
     else:
-      anvil.server.call('add_borrower_step4',marital_status,user_id)
+      anvil.server.call('add_borrower_step3',marital_status,user_id)
       if marital_status == 'Not Married':
         open_form('borrower_registration_form.star_1_borrower_registration_form_3_marital.star_1_borrower_registration_form_3_marital_married',user_id = user_id)
       elif marital_status == 'Married':
