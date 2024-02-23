@@ -139,7 +139,8 @@ def add_borrower_step6(bank_id,bank_branch, user_id):
     row[0]['usertype'] = 'borrower'
     row[0]['last_confirm'] = True
     row[0]['form_count']=6
-    row[0]['bessem_value'] = bessemfunctions.final_points_update_bessem_table(user_id)
+    row[0]['bessem_value'] = bessemfunctions.final_points_update_bessem_table()
+    find_user_and_add_bessem_value(user_id=user_id)
 
 @anvil.server.callable
 def update_loan_details(loan_id, emi, total_repayment_amount, interest_rate):
