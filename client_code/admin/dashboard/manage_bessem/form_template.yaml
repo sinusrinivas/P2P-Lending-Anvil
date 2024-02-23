@@ -14,8 +14,8 @@ components:
   type: Spacer
   layout_properties: {grid_position: 'FQSMNI,KDPUNL'}
 - name: button_1
-  properties: {text: Home, spacing_above: none, spacing_below: none, bold: true, icon: 'fa:home',
-    role: filled-button, background: '#0b2547', align: left}
+  properties: {text: Home, spacing_above: small, spacing_below: small, bold: true,
+    icon: 'fa:home', role: filled-button, background: '#0b2547', align: center}
   type: Button
   layout_properties: {grid_position: 'FQSMNI,OWVADJ'}
   event_bindings: {click: button_1_click}
@@ -49,7 +49,7 @@ components:
     type: Button
     layout_properties: {grid_position: 'FVAMOQ,QLWWJH'}
 - name: values_view
-  properties: {role: outlined-card, col_widths: '{}', col_spacing: small, spacing_above: none}
+  properties: {role: null, col_widths: '{}', col_spacing: small, spacing_above: none}
   type: ColumnPanel
   layout_properties: {grid_position: 'CBYJYE,QHUBWT', full_width_row: true}
   components:
@@ -73,25 +73,17 @@ components:
 - name: data_grid_2
   properties:
     columns:
-    - {id: JKSDUP, title: Column 1, data_key: column_1}
-    - {id: VJQQOR, title: Column 2, data_key: column_2}
-    - {id: OJLQEN, title: Column 3, data_key: column_3}
+    - {id: JKSDUP, title: Group Names, data_key: column_1, width: 249, expand: false}
+    - {id: VJQQOR, title: Sub Category, data_key: column_2, width: 579, expand: false}
+    - {id: OJLQEN, title: Min Points, data_key: column_3, width: 126, expand: false}
+    - {id: RKJYHT, data_key: column_1, title: Max Points}
+    wrap_on: mobile
+    rows_per_page: 30
+    show_page_controls: false
   type: DataGrid
   components:
   - name: repeating_panel_2
     properties: {item_template: admin.dashboard.manage_bessem.RowTemplate41}
     type: RepeatingPanel
-  layout_properties: {grid_position: ''}
-- name: data_grid_1
-  properties:
-    columns:
-    - {id: JKSDUP, title: Column 1, data_key: column_1}
-    - {id: VJQQOR, title: Column 2, data_key: column_2}
-    - {id: OJLQEN, title: Column 3, data_key: column_3}
-  type: DataGrid
-  components:
-  - name: repeating_panel_1
-    properties: {item_template: admin.dashboard.manage_bessem.RowTemplate19}
-    type: RepeatingPanel
-  layout_properties: {grid_position: ''}
+  layout_properties: {grid_position: '', full_width_row: true}
 is_package: true
