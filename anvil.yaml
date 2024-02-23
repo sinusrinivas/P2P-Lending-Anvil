@@ -34,11 +34,6 @@ db_schema:
       admin_ui: {order: 0, width: 200}
       type: string
     title: fin_gender
-  wallet_notification:
-    title: fin_wallet_notification
-    client: full
-    server: full
-    columns: []
   fin_lendor_business_type:
     client: full
     server: full
@@ -67,7 +62,7 @@ db_schema:
       admin_ui: {width: 200}
       type: string
   fin_lendor_no_of_employees:
-    client: none
+    client: full
     server: full
     columns:
     - name: lendor_no_of_employees
@@ -475,7 +470,7 @@ db_schema:
       admin_ui: {width: 200, order: 16}
       type: string
     - name: last_confirm
-      admin_ui: {order: 39, width: 200}
+      admin_ui: {order: 0.25, width: 200}
       type: bool
     - name: mobile_check
       admin_ui: {width: 200, order: 19}
@@ -496,7 +491,7 @@ db_schema:
       admin_ui: {order: 40, width: 200}
       type: string
     - name: usertype
-      admin_ui: {order: 22.5, width: 200}
+      admin_ui: {order: 0.5, width: 200}
       type: string
     - name: aadhaar_no
       admin_ui: {order: 14, width: 200}
@@ -769,6 +764,11 @@ db_schema:
       admin_ui: {width: 200}
       type: string
     title: fin_user_profile
+  fin_wallet_notification:
+    title: fin_wallet_notification
+    client: full
+    server: full
+    columns: []
   fin_wallet_transactions:
     title: fin_wallet_transactions
     client: full
@@ -1154,6 +1154,12 @@ db_schema:
     - name: product_name
       admin_ui: {order: 15.4453125, width: 120}
       type: string
+    - name: total_interest_amount
+      admin_ui: {width: 200}
+      type: number
+    - name: total_processing_fee_amount
+      admin_ui: {width: 200}
+      type: number
     title: fin_loan_details
   fin_user_issues_bugreports:
     title: fin_user_issues_bugreports
