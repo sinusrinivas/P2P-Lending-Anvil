@@ -130,18 +130,46 @@ def add_borrower_step5(account_name, account_type,account_number,bank_name, user
     row[0]['bank_name'] = bank_name  
     row[0]['form_count']=5
 
-@anvil.server.callable
-def add_borrower_step6(bank_id,bank_branch, user_id):
-  row = app_tables.fin_user_profile.search(customer_id=user_id)
-  if row:
-    row[0]['bank_id'] = bank_id
-    row[0]['account_bank_branch'] = bank_branch
-    row[0]['usertype'] = 'borrower'
-    row[0]['last_confirm'] = True
-    row[0]['form_count']=6
-    row[0]['bessem_value'] = bessemfunctions.final_points_update_bessem_table(user_id)
-    # find_user_and_add_bessem_value(user_id=user_id)
+# @anvil.server.callable
+# def add_borrower_step6(bank_id,bank_branch, user_id):
+#   row = app_tables.fin_user_profile.search(customer_id=user_id)
+#   if row:
+#     row[0]['bank_id'] = bank_id
+#     row[0]['account_bank_branch'] = bank_branch
+#     row[0]['usertype'] = 'borrower'
+#     row[0]['last_confirm'] = True
+#     row[0]['form_count']=6
+#     row[0]['bessem_value'] = bessemfunctions.final_points_update_bessem_table(user_id)
+#     # find_user_and_add_bessem_value(user_id=user_id)
 
+@anvil.server.callable
+def add_borrower_step6(bank_id, bank_branch, user_id):
+    row = app_tables.fin_user_profile.search(customer_id=user_id)
+    
+    if row:
+        # Update fin_user_profile table
+        row[0]['bank_id'] = bank_id
+        row[0]['account_bank_branch'] = bank_branch
+        row[0]['usertype'] = 'borrower'
+        row[0]['last_confirm'] = True
+        row[0]['form_count'] = 6
+        row[0]['bessem_value'] = bessemfunctions.final_points_update_bessem_table(user_id)
+
+        # Create a new row in fin_borrower table
+        fin_borrower_row = app_tables.fin_borrower.add_row(
+            customer_id=row[0]['customer_id'],
+            email_id=row[0]['email_user'],
+            user_name=row[0]['full_name'],
+            beseem_score=row[0]['bessem_value']
+        )
+
+        fin_borrower_row['credit_limit'] = 1000000
+        fin_borrower_row.update()
+
+    else:
+        # If user not found in fin_user_profile table
+        raise ValueError("User not found in fin_user_profile table")
+      
 @anvil.server.callable
 def update_loan_details(loan_id, emi, total_repayment_amount, interest_rate):
     rows = app_tables.fin_loan_details.search(loan_id=loan_id)
@@ -193,7 +221,7 @@ def add_loan_details(loan_amount, tenure,user_id,interest_rate, total_repayment_
           emi_payment_type = emi_payment_type,
           total_processing_fee_amount = processing_fee_amount,
           total_interest_amount = total_interest,
-          beseem_score= find_beseem_points_based_on_id(user_id)
+          # beseem_score= find_beseem_points_based_on_id(user_id)
          )
 
         # Return the generated loan ID to the client

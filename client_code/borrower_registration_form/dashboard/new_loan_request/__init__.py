@@ -91,9 +91,9 @@ class new_loan_request(new_loan_requestTemplate):
             open_form('borrower_registration_form.dashboard.new_loan_request.loan_type', name, category,product_name,self.max_amount_lb.text)
 
     def max_amount_lb_show(self, **event_args):
-        data = app_tables.fin_product_details.search()
+        data = app_tables.fin_borrower.search()
         # Exclude empty strings from the max_amount values
-        data1_strings = [str(data['max_amount']) for data in data if str(data['max_amount']).strip()]
+        data1_strings = [str(data['credit_limit']) for data in data if str(data['credit_limit']).strip()]
         self.max_amount_lb.text = data1_strings[0] if data1_strings else None
 
     def button_1_click(self, **event_args):
