@@ -13,8 +13,11 @@ class star_1_borrower_registration_form_1_education(star_1_borrower_registration
     self.userId = user_id
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
-    user_data = anvil.server.call('get_user_data', user_id)
-
+    # user_data = anvil.server.call('get_user_data', user_id)
+    user_data = app_tables.fin_user_profile.get(customer_id=user_id)
+    if user_data:
+      self.drop_down_1.selected_value = user_data['qualification']
+      user_data.update()
     options = app_tables.fin_borrower_qualification.search()
     options_string = [str(option['borrower_qualification']) for option in options]
     self.drop_down_1.items = options_string
@@ -31,6 +34,13 @@ class star_1_borrower_registration_form_1_education(star_1_borrower_registration
     """This method is called when the button is clicked"""
     qualification = self.drop_down_1.selected_value
     user_id = self.userId
+    if qualification not in  ['10th class','Intermediate / PUC','Btech / B.E','Mtech','Phd']:
+      Notification("Please select a valid qualification status").show()
+    elif not user_id:
+      Notification("User ID is missing").show()
+    else:
+      anvil.server.call('add_borrower_step1',qualification,user_id)
+    
     if qualification == '10th class':
       open_form('borrower_registration_form.star_1_borrower_registration_form_1_education.star_1_borrower_registration_form_education_10th_class',user_id=user_id)
     elif qualification == 'Intermediate / PUC':
