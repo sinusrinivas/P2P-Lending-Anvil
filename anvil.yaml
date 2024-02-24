@@ -435,8 +435,8 @@ db_schema:
       admin_ui: {width: 200, order: 11}
       type: string
     - name: customer_id
-      admin_ui: {order: 0, width: 200}
-      type: number
+      admin_ui: {width: 200}
+      type: string
   fin_borrower_salary_type:
     client: full
     server: full
@@ -991,7 +991,7 @@ db_schema:
       admin_ui: {order: 12, width: 200}
       type: string
   fin_wallet_bank_account_table:
-    client: none
+    client: full
     server: full
     columns:
     - name: account_id
