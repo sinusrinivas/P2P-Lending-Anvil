@@ -15,7 +15,7 @@ components:
     type: Image
     layout_properties: {width: 211.39999389648438}
 - name: logout
-  properties: {text: ' Logout           ', background: '#0770e8', foreground: white,
+  properties: {text: ' Logout           ', background: '#05264d', foreground: white,
     bold: true}
   type: Button
   layout_properties: {grid_position: 'LFJREP,WTXBXV'}

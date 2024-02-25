@@ -55,7 +55,7 @@ components:
 - name: login_signup_button
   properties: {role: outlined-button, align: center, tooltip: '', border: '', enabled: true,
     foreground: white, visible: true, text: 'Login/Signup    ', font_size: null, font: '',
-    spacing_above: small, icon_align: left, spacing_below: small, italic: false, background: '#0770e8',
+    spacing_above: small, icon_align: left, spacing_below: small, italic: false, background: '#013065',
     bold: true, underline: false, icon: ''}
   type: Button
   event_bindings: {click: login_signup_button_click}
