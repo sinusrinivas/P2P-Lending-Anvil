@@ -34,11 +34,6 @@ db_schema:
       admin_ui: {order: 0, width: 200}
       type: string
     title: fin_gender
-  wallet_notification:
-    title: fin_wallet_notification
-    client: full
-    server: full
-    columns: []
   fin_lendor_business_type:
     client: full
     server: full
@@ -224,6 +219,44 @@ db_schema:
       admin_ui: {width: 200, order: 0}
       type: string
     title: fin_borrower_organization_type
+  fin_beseem_score:
+    title: fin_beseem_score
+    client: full
+    server: full
+    columns:
+    - name: borrower_customer_id
+      admin_ui: {width: 200}
+      type: number
+    - name: occupation_point
+      admin_ui: {width: 200}
+      type: number
+    - name: relationship_point
+      admin_ui: {width: 200}
+      type: number
+    - name: borrower_email_id
+      admin_ui: {width: 200}
+      type: string
+    - name: loan_point
+      admin_ui: {width: 200}
+      type: number
+    - name: total_point
+      admin_ui: {width: 200}
+      type: number
+    - name: educational_point
+      admin_ui: {width: 200}
+      type: number
+    - name: language_point
+      admin_ui: {width: 200}
+      type: number
+    - name: region_point
+      admin_ui: {width: 200}
+      type: number
+    - name: documentation_point
+      admin_ui: {width: 200}
+      type: number
+    - name: user_type
+      admin_ui: {width: 200}
+      type: string
   fin_borrower_account_type:
     client: full
     server: full
@@ -402,8 +435,8 @@ db_schema:
       admin_ui: {width: 200, order: 11}
       type: string
     - name: customer_id
-      admin_ui: {order: 0, width: 200}
-      type: number
+      admin_ui: {width: 200}
+      type: string
   fin_borrower_salary_type:
     client: full
     server: full
@@ -754,6 +787,11 @@ db_schema:
       admin_ui: {width: 200}
       type: string
     title: fin_user_profile
+  fin_wallet_notification:
+    title: fin_wallet_notification
+    client: full
+    server: full
+    columns: []
   fin_wallet_transactions:
     title: fin_wallet_transactions
     client: full
@@ -1041,7 +1079,7 @@ db_schema:
       admin_ui: {order: 2, width: 155}
       type: string
     - name: interest_rate
-      admin_ui: {order: 7, width: 124}
+      admin_ui: {order: 8.75, width: 124}
       type: number
     - name: loan_status
       admin_ui: {order: 26, width: 115}
@@ -1095,7 +1133,7 @@ db_schema:
       admin_ui: {order: 23, width: 138}
       type: date
     - name: borrower_loan_created_timestamp
-      admin_ui: {order: 5.375, width: 261}
+      admin_ui: {order: 8.5, width: 261}
       type: date
     - name: product_id
       admin_ui: {order: 5, width: 103}
@@ -1113,10 +1151,10 @@ db_schema:
       admin_ui: {order: 15.375, width: 139}
       type: string
     - name: tenure
-      admin_ui: {order: 12, width: 117}
+      admin_ui: {order: 8.875, width: 117}
       type: number
     - name: loan_amount
-      admin_ui: {order: 13, width: 118}
+      admin_ui: {order: 8.9375, width: 118}
       type: number
     - name: lender_accepted_timestamp
       admin_ui: {order: 15.25, width: 241}
