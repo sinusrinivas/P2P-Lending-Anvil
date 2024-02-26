@@ -228,17 +228,36 @@ def calculate_total_repayment(selected_category, loan_amount, loan_tenure):
 
 
 @anvil.server.callable
-def add_loan_data(loan_amount, loan_tenure, roi, total_repayment):
+def add_loan_data(loan_amount, loan_tenure, roi, total_repayment, date_of_apply):
     try:
         # Assuming 'fin_loan_details' is the name of your Anvil table
+        email = another_method()
+        data = profile()
+        email_list = []
+        customer_id_list = []
+        borrower_name_list = []
+        for i in data:
+          email_list.append(i['email_user'])
+          customer_id_list.append(i['customer_id'])
+          borrower_name_list.append(i['full_name'])
+          
+        if email in email_list:
+          index = email_list.index(email)
+        else:
+          print("email not there")
+        customer_id = customer_id_list[index]
+        customer_name = borrower_name_list[index]
         loan_id = generate_loan_id()
         app_tables.fin_loan_details.add_row(
+            borrower_customer_id=customer_id,
+            borrower_full_name=customer_name,
             loan_id=loan_id,
             loan_amount=float(loan_amount),
             tenure=float(loan_tenure),
             loan_updated_status = "under process",
             total_repayment_amount=float(total_repayment),
             interest_rate=float(roi),
+            borrower_loan_created_timestamp=date_of_apply
         )
 
         # You can also return the loan ID if needed
