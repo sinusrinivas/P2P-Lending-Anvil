@@ -47,6 +47,8 @@ class today_dues(today_duesTemplate):
                 emi_payment_type = loan_details_row['emi_payment_type']
                 lender_customer_id = loan_details_row['lender_customer_id']
                 first_emi_payment_due_date = loan_details_row['first_emi_payment_due_date']
+                total_repayment_amount = loan_details_row['total_repayment_amount']
+                processing_fee = loan_details_row['processing_fee']
 
                 # Populate loan details
                 loan_details = [{
@@ -64,7 +66,9 @@ class today_dues(today_duesTemplate):
                     'next_payment': next_payment,
                     'emi_payment_type': emi_payment_type,
                     'lender_customer_id': lender_customer_id,
-                    'first_emi_payment_due_date': first_emi_payment_due_date
+                    'first_emi_payment_due_date': first_emi_payment_due_date,
+                    'total_repayment_amount':total_repayment_amount,
+                    'processing_fee' : processing_fee
                 }]
                 
                 # Now you can use loan_details list containing details of the latest loan
@@ -102,6 +106,8 @@ class today_dues(today_duesTemplate):
               loan_disbursed_timestamp = loan_due['loan_disbursed_timestamp']
               emi_payment_type = loan_due['emi_payment_type']
               lender_customer_id = loan_due['lender_customer_id']
+              total_repayment_amount = loan_due['total_repayment_amount']
+              processing_fee = loan_due['processing_fee']
               
               # Calculate next_payment based on first_payment_due_date
               if emi_payment_type == 'One Time':
@@ -114,7 +120,7 @@ class today_dues(today_duesTemplate):
                   # For three-month payment, set next_payment to three months after first_payment_due_date
                   next_payment = loan_disbursed_timestamp.date() + timedelta(days=90)
               elif emi_payment_type == 'Six Month':
-                  # For six-month payment, set next_payment to six months after first_payment_due_date
+                  # For six-month payment, set next_payment  six months after first_payment_due_date
                   next_payment = loan_disbursed_timestamp.date() + timedelta(days=180)
               else:
                   # Default to monthly calculation if emi_payment_type is not recognized
@@ -123,7 +129,7 @@ class today_dues(today_duesTemplate):
               loan_details.append({
                   'loan_id': loan_id,
                   'loan_amount': loan_amount,
-                  'scheduled_payment': loan_disbursed_timestamp.date(),  # Set scheduled_payment to first_payment_due_date first_emi_payment_due_date
+                  'scheduled_payment':first_emi_payment_due_date,   # Set scheduled_payment to first_payment_due_date first_emi_payment_due_date
                   'next_payment': next_payment,
                   'days_left': days_left,
                   'tenure': tenure,
@@ -135,7 +141,9 @@ class today_dues(today_duesTemplate):
                   'account_number': account_number,
                   'emi_payment_type': emi_payment_type,
                   'lender_customer_id': lender_customer_id,
+                  'total_repayment_amount':total_repayment_amount,
                   # 'first_payment_due_date': first_payment_due_date
+                  'processing_fee':processing_fee
               })
         self.repeating_panel_1.items = loan_details
         for loan_detail in loan_details:
