@@ -33,10 +33,11 @@ class lender_registration_form_1_education_form(lender_registration_form_1_educa
       open_form('lendor_registration_form.lender_registration_form_1_education_form.lender_registration_education_Btech',user_id=user_id)
     elif qualification == 'Mtech':
       open_form('lendor_registration_form.lender_registration_form_1_education_form.lender_registration_education_Mtech',user_id = user_id)
+    elif qualification == 'Phd':
+      open_form('lendor_registration_form.lender_registration_form_1_education_form.lender_registration_education_Phd',user_id = user_id)
     else:
-      qualification == 'Phd'
-      open_form('lendor_registration_form.lender_registration_form_1_education_form.lender_registration_education_Phd',user_id=user_id)
-
+      open_form('lendor_registration_form.lender_registration_form_1_education_form',user_id=user_id)
+      alert('Please select a valid qualification')
   def button_3_click(self, **event_args):
     """This method is called when the button is clicked"""
     open_form("bank_users.user_form")

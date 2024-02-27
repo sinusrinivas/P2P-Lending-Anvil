@@ -53,7 +53,7 @@ class star_1_borrower_registration_form_1_education(star_1_borrower_registration
       open_form('borrower_registration_form.star_1_borrower_registration_form_1_education.star_1_borrower_registration_form_education_phd',user_id=user_id)
     else:
       open_form('borrower_registration_form.star_1_borrower_registration_form_1_education')
-      alert('Select a valid qualification from the dropdown')
+      alert('Please select a valid qualification')
 
   def button_3_click(self, **event_args):
     """This method is called when the button is clicked"""
