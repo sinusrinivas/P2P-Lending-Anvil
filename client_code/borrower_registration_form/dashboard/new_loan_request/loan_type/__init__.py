@@ -29,8 +29,8 @@ class loan_type(loan_typeTemplate):
             self.product_id = user_request['product_id']
             self.emi_payment_options = user_request['emi_payment']
 
-            # Show/hide and adjust properties of radio buttons based on emi_payment options
-            self.set_radio_button_visibility()
+            # Show/hide and adjust properties of buttons based on emi_payment options
+            self.set_button_visibility()
 
     def load_entered_values(self, entered_values):
         if entered_values:
@@ -44,28 +44,28 @@ class loan_type(loan_typeTemplate):
             if self.entered_tenure is not None:
                 self.text_box_1.text = str(self.entered_tenure)
             if self.entered_payment_type is not None:
-                # Set the selected radio button based on the stored value
+                # Set the selected button based on the stored value
                 self.set_selected_payment_type(self.entered_payment_type)
 
     def set_selected_payment_type(self, payment_type):
-        # Set the selected payment type based on the stored value
-        if payment_type == "One Time":
-            self.radio_button_1.selected = True
-        elif payment_type == "Monthly":
-            self.radio_button_2.selected = True
-        elif payment_type == "Three Month":
-            self.radio_button_3.selected = True
-        elif payment_type == "Six Month":
-            self.radio_button_4.selected = True
+        # Replace buttons with buttons
+        button_names = ["One Time", "Monthly", "Three Month", "Six Month"]
+        for i, emi_option in enumerate(button_names):
+            button = getattr(self, f'button_{i + 1}_1')
+            if emi_option == payment_type:
+                button.background = '#00008B'  # Set the background color to #00008B if selected
+                #button.icon = "fa:check-circle"  # Change the icon as needed
+            else:
+                button.background = '#336699'  # Set the background color to #336699 for unselected buttons
+                #button.icon = None
 
-    def set_radio_button_visibility(self):
-        visible_options = [emi_option for emi_option in ["One Time", "Monthly", "Three Month", "Six Month"] if emi_option in self.emi_payment_options]
-
-        for i, emi_option in enumerate(visible_options):
-            radio_button = getattr(self, f'radio_button_{i + 1}')
-            radio_button.visible = True
-            radio_button.text = emi_option
-            radio_button.x = 20 + i * 150  # Adjust the value (20 and 150) according to your layout preference
+    def set_button_visibility(self):
+        # Replace buttons with buttons
+        button_names = ["One Time", "Monthly", "Three Month", "Six Month"]
+        for i, emi_option in enumerate(button_names):
+            button = getattr(self, f'button_{i + 1}_1')
+            button.visible = True
+            button.text = emi_option
 
     def button_1_click(self, **event_args):
         open_form('borrower_registration_form.dashboard')
@@ -91,8 +91,8 @@ class loan_type(loan_typeTemplate):
                       self.proctct_g, self.prodct_cate, self.product_name, str(loan_amount), tenure,
                       self.user_id, self.roi, self.processing_fee,
                       self.membership_type, self.product_id,
-                      self.Total_Repayment_Amount, self.credit_limt,self.entered_payment_type,
-                      total_interest=self.label_30.text,  
+                      self.Total_Repayment_Amount, self.credit_limt, self.entered_payment_type,
+                      total_interest=self.label_30.text,
                       processing_fee_amount=self.label_32.text,
                       entered_values={
                           'loan_amount': self.entered_loan_amount,
@@ -155,10 +155,10 @@ class loan_type(loan_typeTemplate):
     def button_4_click(self, **event_args):
         loan_amount = self.loan_amount_tb.text
         tenure = self.text_box_1.text
-        one_time = self.radio_button_1.selected
-        monthly_emi = self.radio_button_2.selected
-        three_month = self.radio_button_3.selected
-        six_month = self.radio_button_4.selected
+        one_time = self.button_1_1.background == '#00008B'
+        monthly_emi = self.button_2_1.background == '#00008B'
+        three_month = self.button_3_1.background == '#00008B'
+        six_month = self.button_4_1.background == '#00008B'
 
         if not loan_amount:
             self.label_22.text = "Please fill the loan amount"
@@ -193,7 +193,7 @@ class loan_type(loan_typeTemplate):
                 self.label_23.text = f"Tenure should be between {min_tenure} and {max_tenure}"
                 self.label_23.foreground = '#FF0000'
 
-        # Validate radio_button_1 and radio_button_2
+        # Validate button_1_1 and button_2_1
         if not (one_time or monthly_emi or three_month or six_month):
             self.label_24.text = "Please select the EMI Payment Type"
             self.label_24.foreground = '#FF0000'
@@ -226,20 +226,18 @@ class loan_type(loan_typeTemplate):
                 # Disable editing after clicking button_4
                 self.loan_amount_tb.enabled = False
                 self.text_box_1.enabled = False
-                self.radio_button_1.enabled = False
-                self.radio_button_2.enabled = False
-                self.radio_button_3.enabled = False
-                self.radio_button_4.enabled = False
-
-
+                self.button_1_1.enabled = False
+                self.button_2_1.enabled = False
+                self.button_3_1.enabled = False
+                self.button_4_1.enabled = False
 
     def button_5_click(self, **event_args):
         self.loan_amount_tb.enabled = True
         self.text_box_1.enabled = True
-        self.radio_button_1.enabled = True
-        self.radio_button_2.enabled = True
-        self.radio_button_3.enabled = True
-        self.radio_button_4.enabled = True
+        self.button_1_1.enabled = True
+        self.button_2_1.enabled = True
+        self.button_3_1.enabled = True
+        self.button_4_1.enabled = True
         self.grid_panel_2.visible = False
         self.button_2.visible = False
         self.button_3.visible = False
@@ -247,24 +245,26 @@ class loan_type(loan_typeTemplate):
         self.button_4.visible = True
 
     def get_selected_payment_type(self):
-        # Return the selected payment type based on the radio buttons
-        if self.radio_button_1.selected:
-            return "One Time"
-        elif self.radio_button_2.selected:
-            return "Monthly"
-        elif self.radio_button_3.selected:
-            return "Three Month"
-        elif self.radio_button_4.selected:
-            return "Six Month"
-        else:
-            return None
+        # Return the selected payment type based on the buttons
+        button_names = ["One Time", "Monthly", "Three Month", "Six Month"]
+        for i, emi_option in enumerate(button_names):
+            button = getattr(self, f'button_{i + 1}_1')
+            if button.background == '#00008B':
+                return emi_option
+        return None
 
-# Instantiate the form
+    def button_1_1_click(self, **event_args):
+        self.set_selected_payment_type("One Time")
 
-    def radio_button_4_clicked(self, **event_args):
-      """This method is called when this radio button is selected"""
-      pass
-      
+    def button_2_1_click(self, **event_args):
+        self.set_selected_payment_type("Monthly")
+
+    def button_3_1_click(self, **event_args):
+        self.set_selected_payment_type("Three Month")
+
+    def button_4_1_click(self, **event_args):
+        self.set_selected_payment_type("Six Month")
+
 loan_type_1 = loan_type('product_group_value', 'product_cat_value', 'product_name', 'self.credit_limt')
 
 # Open the form
