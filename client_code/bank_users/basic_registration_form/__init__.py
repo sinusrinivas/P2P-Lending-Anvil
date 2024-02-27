@@ -28,6 +28,7 @@ class basic_registration_form(basic_registration_formTemplate):
     user_data=app_tables.fin_user_profile.get(customer_id=user_id)
     if user_data:
           self.full_name_text_box.text=user_data['full_name']
+          self.gender_dd.selected_value = user_data['gender']
           self.date_picker_1.date=user_data['date_of_birth']
           self.mobile_number_box.text=user_data['mobile']
           self.alternate_email_text_box.text=user_data['another_email']
@@ -138,3 +139,12 @@ class basic_registration_form(basic_registration_formTemplate):
   def gender_dd_change(self, **event_args):
     """This method is called when an item is selected"""
     pass
+
+  def logout_click(self, **event_args):
+    """This method is called when the button is clicked"""
+       
+          
+    alert("Logged out successfully")
+    anvil.users.logout()
+    open_form('bank_users.main_form')
+

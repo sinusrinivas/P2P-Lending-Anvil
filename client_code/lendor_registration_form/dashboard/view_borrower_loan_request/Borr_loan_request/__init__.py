@@ -113,32 +113,68 @@ class Borr_loan_request(Borr_loan_requestTemplate):
             self.rejected_btn.enabled = False
             self.accepted_btn.visible = False
             self.rejected_btn.visible = False
-        
+
     def accepted_btn_click(self, **event_args):
-        """This method is called when the button is clicked"""
+      """This method is called when the button is clicked"""
+
+      # Check if the user has a wallet_id
+      wallet_row = app_tables.fin_wallet.get(user_email=self.email)
+
+      if wallet_row:
+        wallet_id = wallet_row['wallet_id']
         
+        # Continue with the loan acceptance process
         self.accepted_btn.visible = True
         self.rejected_btn.visible = False
         self.loan_disbursment_btn.visible = False
-      
-        self.accepted_btn.visible = False
+
         # Set the text of the Output Label with blue color
-        self.output_label1.text = "This Borrower Loan is Rejected"
+        self.output_label1.text = "This Borrower Loan is Accepted"
         self.output_label1.foreground = '#0000FF'  # Blue color
         self.output_label1.visible = True
+        
         # Update the 'loan_updated_status' column in the 'loan_details' table to 'accepted'
         self.selected_row['loan_updated_status'] = 'accepted'
         self.selected_row['lender_accepted_timestamp'] = datetime.now()
+        
         # Save changes to the table
         self.selected_row.update()
+        
         # Update UI based on the new status
         Notification("Borrower will get notified").show()
         self.update_ui_based_on_status()
         self.loan_disbursment_btn.visible = True
+
+      else:
+        # Display alert message and open wallet.wallet form
+        alert("Do some transaction", title="Alert")
+        open_form('wallet.wallet')
+      
+    # def accepted_btn_click(self, **event_args):
+    #     """This method is called when the button is clicked"""
+        
+    #     self.accepted_btn.visible = True
+    #     self.rejected_btn.visible = False
+    #     self.loan_disbursment_btn.visible = False
+      
+    #     self.accepted_btn.visible = False
+    #     # Set the text of the Output Label with blue color
+    #     self.output_label1.text = "This Borrower Loan is Rejected"
+    #     self.output_label1.foreground = '#0000FF'  # Blue color
+    #     self.output_label1.visible = True
+    #     # Update the 'loan_updated_status' column in the 'loan_details' table to 'accepted'
+    #     self.selected_row['loan_updated_status'] = 'accepted'
+    #     self.selected_row['lender_accepted_timestamp'] = datetime.now()
+    #     # Save changes to the table
+    #     self.selected_row.update()
+    #     # Update UI based on the new status
+    #     Notification("Borrower will get notified").show()
+    #     self.update_ui_based_on_status()
+    #     self.loan_disbursment_btn.visible = True
         
 
-        # Close the form after deletion
-        # open_form("lendor_registration_form.dashboard.vblr")
+    #     # Close the form after deletion
+    #     # open_form("lendor_registration_form.dashboard.vblr")
 
     def rejected_btn_click(self, **event_args):
         """This method is called when the button is clicked"""
@@ -193,43 +229,20 @@ class Borr_loan_request(Borr_loan_requestTemplate):
         if self.selected_row is None:
            alert("Selected row is not available.")
            return
-        # Assuming 'selected_row' is the selected row from the loan_details table
+        
         selected_row = self.selected_row  
         tenure = selected_row['tenure']
         email = main_form_module.email
         entered_loan_id = self.entered_loan_id
-        entered_borrower_customer_id = self.entered_borrower_customer_id
-        # try:
-        #   entered_borrower_customer_id = int(entered_borrower_customer_id)
-        #   print("entered_loan_id:", entered_loan_id)
-        #   print("entered_borrower_customer_id:", entered_borrower_customer_id)
-
-        #   # Check if the borrower_customer_id already exists
-        #   existing_row = app_tables.fin_disbursement_detail.get(
-        #     entered_borrower_customer_id=entered_borrower_customer_id)
-        #   if existing_row:
-        #     # Update the existing row
-        #     existing_row.update(
-        #       entered_loan_id=entered_loan_id,
-        #       entered_borrower_customer_id=entered_borrower_customer_id)
-        #   else:
-        #     # Add a new row if the borrower_customer_id doesn't exist
-        #     disbursement_detail_row = app_tables.fin_disbursement_detail.add_row(
-        #       entered_loan_id=entered_loan_id,
-        #       entered_borrower_customer_id=entered_borrower_customer_id)
-        #     disbursement_detail_row.update()
-
-        # except ValueError:
-        #  alert("Please enter a valid customer ID.")
-        #  return     
+        entered_borrower_customer_id = self.entered_borrower_customer_id  
       
         # Call the server-side function
-        signal = anvil.server.call('loan_disbursement_action', selected_row, email)
+        signal, time_difference_seconds = anvil.server.call('loan_disbursement_action', selected_row, email)
 
         # Check the signal and perform actions accordingly
         if signal == "insufficient_balance":
-            alert("Warning: Your account balance is insufficient. Please deposit amount into your wallet. If not done within the next 2 minutes, the opportunity may be lost")
-            open_form("wallet.wallet_deposit", entered_loan_id=entered_loan_id,entered_borrower_customer_id=entered_borrower_customer_id)
+            alert("Warning: Your account balance is insufficient. Please deposit amount into your wallet. If not done within the next 30 minutes, the opportunity may be lost")
+            open_form("wallet.wallet_deposit", entered_loan_id=entered_loan_id,entered_borrower_customer_id=entered_borrower_customer_id,time_difference_seconds=time_difference_seconds)
         elif signal == "Time_out":
             alert("The designated time has passed. The loan has moved to the 'Lost Opportunities' status.")
             open_form("wallet.wallet") 
@@ -255,11 +268,14 @@ class Borr_loan_request(Borr_loan_requestTemplate):
               alert("Please enter a valid customer ID.")
               return
             # Search for the row in fin_wallet table
-            wallet_add = app_tables.fin_wallet.get(customer_id=entered_borrower_customer_id)
-            if wallet_add:
-              entered_loan_id = self.entered_loan_id
-              loan_row = app_tables.fin_loan_details.get(loan_id=entered_loan_id)
-              if loan_row:
+            loan_row = app_tables.fin_loan_details.get(loan_id=entered_loan_id)
+            
+            if loan_row:
+              loan_amount = loan_row['loan_amount']
+              wallet_add = app_tables.fin_wallet.get(customer_id=entered_borrower_customer_id)
+              if wallet_add:
+                wallet_add['wallet_amount'] += loan_amount
+                wallet_add.update()
                 loan_amount = loan_row['loan_amount']
               wallet_add['wallet_amount'] += loan_amount
               wallet_add.update()

@@ -35,43 +35,35 @@ class user_form(user_formTemplate):
   def home_main_form_link_click(self, **event_args):
     open_form("bank_users.user_form")
 
-  # def borrower_button_click(self, **event_args):
-  #   userid = self.user_id
-  #   user_data=app_tables.fin_user_profile.get(customer_id=userid)
-  #   if user_data:
-  #     actual_count=user_data['form_count']
-  #     print(actual_count)
-  #     print("")
-  #     if actual_count==0:
-  #       open_form('borrower_registration_form.star_1_borrower_registration_form_begin',user_id=userid)
-  #     elif actual_count==1:
-  #       open_form('borrower_registration_form.star_1_borrower_registration_form_begin_2',user_id=userid)
-  #     elif actual_count==2:
-  #       open_form('borrower_registration_form.star_1_borrower_registration_form_begin_3',user_id=userid)
-  #     elif actual_count==3:
-  #       open_form('borrower_registration_form.star_1_borrower_registration_form_begin_3.star_1_borrower_registration_form_begin_3a_1',user_id=userid)
-  #     elif actual_count==4:
-  #       open_form('borrower_registration_form.star_1_borrower_registration_form_begin_3.star_1_borrower_registration_form_begin_3a',user_id=userid)
-  #     elif actual_count==5:
-  #       open_form('borrower_registration_form.star_1_borrower_registration_form_begin_3.star_1_borrower_registration_form_begin_3c',user_id=userid)
-  #     elif actual_count==6:
-  #       open_form('borrower_registration_form.star_1_borrower_registration_form_begin_4',user_id=userid)
-  #     elif actual_count==7:
-  #       open_form('borrower_registration_form.star_1_borrower_registration_form_begin_7',user_id=userid)
-  #     elif actual_count==8:
-  #       open_form('borrower_registration_form.star_1_borrower_registration_form_begin_8',user_id=userid)
-  #     elif actual_count==9:
-  #       open_form('borrower_registration_form.star_1_borrower_registration_form_begin_9',user_id=userid)
-  #     else:
-  #       open_form('borrower_registration_form.star_1_borrower_registration_form_begin',user_id=userid)
-  #   else:
-  #    open_form('borrower_registration_form.star_1_borrower_registration_form_begin',user_id=userid)
-  #    print(actual_count)
-
   def borrower_button_click(self, **event_args):
-    """This method is called when the button is clicked"""
     userid = self.user_id
-    open_form('borrower_registration_form.star_1_borrower_registration_form_1_education',user_id=userid)
+    user_data=app_tables.fin_user_profile.get(customer_id=userid)
+    if user_data:
+      actual_count=user_data['form_count']
+      print(actual_count)
+      print("")
+      if actual_count==1:
+        open_form('borrower_registration_form.star_1_borrower_registration_form_1_education',user_id=userid)
+      elif actual_count==2:
+        open_form('borrower_registration_form.star_1_borrower_registration_form_2_employment',user_id=userid)
+      elif actual_count==3:
+        open_form('borrower_registration_form.star_1_borrower_registration_form_3_marital',user_id=userid)
+      elif actual_count==4:
+        open_form('borrower_registration_form.star_1_borrower_registration_form_4_loan',user_id=userid)
+      elif actual_count==5:
+        open_form('borrower_registration_form.star_1_borrower_registration_form_5_bank_1',user_id=userid)
+      elif actual_count==6:
+        open_form('borrower_registration_form.star_1_borrower_registration_form_5_bank_2',user_id=userid)
+      else:
+        open_form('borrower_registration_form.star_1_borrower_registration_form_1_education',user_id=userid)
+    else:
+     open_form('borrower_registration_form.star_1_borrower_registration_form_1_education',user_id=userid)
+     print(actual_count)
+
+  # def borrower_button_click(self, **event_args):
+  #   """This method is called when the button is clicked"""
+  #   userid = self.user_id
+  #   open_form('borrower_registration_form.star_1_borrower_registration_form_1_education',user_id=userid)
 
   def lendor_button_click(self, **event_args):
     userid = self.user_id

@@ -47,11 +47,8 @@ class dashboard(dashboardTemplate):
         """This method is called when the link is clicked"""
         open_form("borrower_registration_form.dashboard")
 
-    def login_signup_button_click(self, **event_args):
-        """This method is called when the button is clicked"""
-        alert("Logged out successfully")
-        anvil.users.logout()
-        open_form('bank_users.main_form')
+
+
 
     def button_3_click(self, **event_args):
         """This method is called when the button is clicked"""
@@ -59,7 +56,54 @@ class dashboard(dashboardTemplate):
 
     def button_4_click(self, **event_args):
         """This method is called when the button is clicked"""
-        open_form('borrower_registration_form.dashboard.new_loan_request')
+    
+        email = main_form_module.email
+    
+        user_profile = app_tables.fin_user_profile.get(email_user=email)
+    
+        if user_profile:
+            user_id = user_profile['customer_id']
+    
+            # Count the number of loans the user already has (based on specific patterns)
+            try:
+                existing_loans = app_tables.fin_loan_details.search(
+                    borrower_customer_id=user_id,
+                    loan_updated_status=q.any_of(
+                        q.like('accept%'),
+                        q.like('Approved%'),
+                        q.like('approved%'),
+                        q.like('under process%'),
+                        q.like('foreclosure%'),
+                        # q.like('close%'),
+                        # q.like('Close%'),
+                        # q.like('closed loans%'),
+                        q.like('disbursed loan%'),
+                        q.like('Disbursed loan%'),
+                        q.like('Under Process%')
+                    )
+                )
+                num_existing_loans = len(existing_loans)
+                print(f"User ID: {user_id}, Existing Loans: {num_existing_loans}")
+    
+                # Check if the user has more than 5 loans
+                if num_existing_loans >= 5:
+                    alert("You already have 5 loans. Cannot open a new loan request.")
+                else:
+                    wallet_row = app_tables.fin_wallet.get(customer_id=user_id)
+    
+                    if wallet_row and wallet_row['wallet_id'] is not None:
+                        open_form('borrower_registration_form.dashboard.new_loan_request')
+                    else:
+                        alert("Wallet not found. Please create a wallet.")
+    
+            except anvil.tables.TableError as e:
+                # Check if the error message contains information about the non-existent row
+                if "Row not found" in str(e):
+                    # Handle the case when no row is found
+                    alert("No data found.")
+                else:
+                    # Handle other table errors
+                    alert("Error fetching existing loans.")
 
     def button_6_click(self, **event_args):
         """This method is called when the button is clicked"""
@@ -124,6 +168,13 @@ class dashboard(dashboardTemplate):
     def outlined_button_1_copy_3_click(self, **event_args):
       """This method is called when the button is clicked"""
       open_form('borrower_registration_form.dashboard.foreclosure_request')
+
+    def logout_click(self, **event_args):
+      """This method is called when the button is clicked"""
+          
+      alert("Logged out successfully")
+      anvil.users.logout()
+      open_form('bank_users.main_form')
 
   
 

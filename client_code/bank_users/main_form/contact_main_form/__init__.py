@@ -81,3 +81,25 @@ class contact_main_form(contact_main_formTemplate):
   def location_main_form_link_click(self, **event_args):
     """This method is called when the link is clicked"""
     open_form("bank_users.main_form.location_main_form")
+
+  def button_1_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    self.linear_panel_2.visible=True
+    self.linear_panel_3.visible=False
+
+  def button_2_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    self.linear_panel_3.visible=True
+    self.linear_panel_2.visible=False
+
+  def map_1_show(self, **event_args):
+    """This method is called when the GoogleMap is shown on the screen"""
+    self.map_1.center = GoogleMap.LatLng(13.056711468569468, 77.59442187827115)
+    self.map_1.map_type_id = "hybrid"
+    self.map_1.map_type_control = True
+    marker = GoogleMap.Marker(
+    animation=GoogleMap.Animation.DROP,
+    position=GoogleMap.LatLng(13.056711468569468, 77.59442187827115)
+    )
+
+    self.map_1.add_component(marker)

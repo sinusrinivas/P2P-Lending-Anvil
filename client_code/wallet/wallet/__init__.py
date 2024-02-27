@@ -25,6 +25,7 @@ class wallet(walletTemplate):
     self.email=main_form_module.email
     email = self.email
 
+    
 
     wallet_row =app_tables.fin_wallet.get(user_email=email)
     if wallet_row:

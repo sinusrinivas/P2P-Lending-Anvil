@@ -54,4 +54,10 @@ components:
   layout_properties: {column: BUUGHM}
   data_bindings:
   - {property: text, code: 'self.item[''EndingBalance'']'}
+- type: Label
+  properties: {}
+  name: label_10
+  layout_properties: {column: BBAJUJ}
+  data_bindings:
+  - {property: text, code: 'self.item[''ProcessingFee'']'}
 is_package: true

@@ -289,5 +289,9 @@ class edit_form(edit_formTemplate):
     def button_1_copy_3_click(self, **event_args):
         open_form('admin.dashboard.manage_products.view_product')
 
+    def button_2_click(self, **event_args):
+      """This method is called when the button is clicked"""
+      open_form("admin.dashboard")
+
     
 

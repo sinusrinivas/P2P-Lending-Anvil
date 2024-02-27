@@ -1,3 +1,4 @@
+import anvil.secrets
 import anvil.email
 import anvil.google.auth, anvil.google.drive, anvil.google.mail
 from anvil.google.drive import app_files
@@ -28,15 +29,6 @@ from datetime import datetime, timezone
 #     row[0]['user_photo'] = photo
 #     row[0]['form_count'] = 1
 
-@anvil.server.callable
-def add_lendor_education_form(qualification,certificate,user_id):
-  row = app_tables.fin_user_profile.search(customer_id = user_id)
-  if row:
-    
-    row[0]['qualification'] = qualification
-    row[0]['education_certificate'] = certificate
-    
-
 # @anvil.server.callable
 # def add_lendor_third_form(aadhaar_photo, pan_card, pan_id,aadhaar_card,user_id):
 #   row = app_tables.fin_user_profile.search(customer_id = user_id)
@@ -62,13 +54,18 @@ def add_lendor_education_form(qualification,certificate,user_id):
 #     row[0]['country'] = country
 #     row[0]['pincode'] = pincode
 
-
+@anvil.server.callable
+def add_lendor_education_form(qualification,certificate,user_id):
+  row = app_tables.fin_user_profile.search(customer_id = user_id)
+  if row:
+    
+    row[0]['qualification'] = qualification
+    row[0]['education_certificate'] = certificate
 
 @anvil.server.callable
 def add_lendor_six_form(lending_type, investment,lending_period, user_id):
   row = app_tables.fin_lender.add_row(investment=investment, lending_type=lending_type,lending_period=lending_period,customer_id = user_id)
     
-
 @anvil.server.callable
 def add_lendor_individual_form_1(company_name,org_type,emp_type,user_id):
   row = app_tables.fin_user_profile.search(customer_id = user_id)
@@ -76,8 +73,6 @@ def add_lendor_individual_form_1(company_name,org_type,emp_type,user_id):
     row[0]['company_name']=company_name
     row[0]['organization_type']=org_type
     row[0]['employment_type']=emp_type
-
-    
 
 @anvil.server.callable
 def add_lendor_individual_form_2(comp_address,landmark,business_phone_number,user_id):
@@ -143,7 +138,7 @@ def add_lendor_marital(marital_status,user_id):
   row = app_tables.fin_user_profile.search(customer_id=user_id)
   if row:
     row[0]['marital_status']=marital_status
-    # row[0]['form_count']=6
+    row[0]['form_count']=3
 
 @anvil.server.callable
 def add_education_tenth(tenth_class,user_id):
@@ -184,13 +179,6 @@ def add_education_phd(tenth_class,intermediate,btech,mtech,phd,user_id):
     row[0]['btech']=btech
     row[0]['mtech']=mtech
     row[0]['phd']=phd
-
-@anvil.server.callable
-def add_lendor_married(another_person,user_id):
-  row = app_tables.fin_user_profile.search(customer_id=user_id)
-  if row:
-    row[0]['another_person']=another_person
-    # row[0]['form_count']=6
 
 @anvil.server.callable
 def add_lendor_bank_details_form_1(account_name, account_type,account_number,bank_name, user_id):
@@ -479,38 +467,40 @@ def loan_disbursement_action(selected_row, email):
         # Get the current time in the same timezone as lender_accepted_timestamp
         current_time = datetime.now(timezone.utc)
         print("current_time:", current_time)
+        time_difference_seconds = 0
       
         if loan_amount > wallet_amount:
             # Check if 5 minutes have passed since lender_accepted_timestamp
             time_difference = current_time - lender_accepted_timestamp
             print("time_difference:", time_difference)
-            if time_difference.total_seconds() > 120:  # 300 seconds = 5 minutes # 120 seconds = 2 minutes
+            time_difference_seconds = int(time_difference.total_seconds())
+            if time_difference_seconds > 1800:  # 300 seconds = 5 minutes # 1800 seconds = 30 minutes
                 # Update loan status based on the comparison of wallet_amount and loan_amount
                 if loan_amount > wallet_amount:
                  # Update loan status to 'lost opportunities'
                  selected_row['loan_updated_status'] = 'lost opportunities'
                  selected_row.update()
                  print("loan_updated_status as lost opportunities")
-                 return "Time_out"
+                 return "Time_out", time_difference_seconds
                 else:
                   print("2 minutes have not passed yet")
                   # 2 minutes have not passed yet
                   selected_row['loan_updated_status'] = 'accepted'
                   selected_row.update()
-                  return "insufficient_balance"    
+                  return "insufficient_balance", time_difference_seconds 
             else:
-                return "insufficient_balance"
+                return "insufficient_balance", time_difference_seconds
         else:
            wallet_amount -= loan_amount
            wallet_row['wallet_amount'] = wallet_amount
            wallet_row.update()
            
            # Signal the client to pay to the borrower
-           return "pay_to_borrower"
+           return "pay_to_borrower", time_difference_seconds
     else:
         # Handle the case where the wallet row is not found
         print("wallet_not_found")
-        return "wallet_not_found" 
+        return "wallet_not_found", None
 
 
 @anvil.server.background_task
@@ -518,7 +508,7 @@ def check_loan_timeout(selected_row, lender_accepted_timestamp, email):
     # Record the start time
     start_time = datetime.now()
 
-    # Wait for 2 minutes
+    # Wait for 30 minutes
     while datetime.now() < start_time + timedelta(minutes=2):
         anvil.server.sleep(10)  
 

@@ -29,7 +29,7 @@ class star_1_borrower_registration_form_4_loan(star_1_borrower_registration_form
     if home_loan not in ['yes', 'no'] or other_loan not in ['yes', 'no'] or live_loan not in ['yes', 'no']:
       Notification("Please enter 'yes' or 'no' for all fields").show()
     else:
-      anvil.server.call('add_borrower_step7',home_loan,other_loan,live_loan,user_id)
+      anvil.server.call('add_borrower_step4',home_loan,other_loan,live_loan,user_id)
       open_form('borrower_registration_form.star_1_borrower_registration_form_5_bank_1',user_id=user_id)
 
   def home_borrower_registration_form_click(self, **event_args):
