@@ -37,7 +37,7 @@ class Borr_loan_request(Borr_loan_requestTemplate):
         
         # Fetch additional details from the 'borrower' table
         try:
-            user_request = app_tables.fin_borrower.get(customer_id=str(selected_row['borrower_customer_id']))
+            user_request = app_tables.fin_borrower.get(customer_id=int(selected_row['borrower_customer_id']))
             if user_request is not None:
                 # Assuming 'bank_acc_details' is a valid column name in the 'borrower' table
                 bank_acc_details = user_request['bank_acc_details']
