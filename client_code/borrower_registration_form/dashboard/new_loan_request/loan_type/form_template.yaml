@@ -149,38 +149,43 @@ components:
     underline: false, icon: ''}
   name: label_39
   layout_properties: {grid_position: 'OVKXGZ,WUYONQ'}
-- type: Button
-  properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
-    foreground: 'theme:On Primary', visible: true, text: One Time, font_size: null,
-    font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
-    background: '#05264d', bold: false, underline: false, icon: ''}
-  name: button_1_1
-  layout_properties: {grid_position: 'BQXUFN,DVEDID'}
-  event_bindings: {click: button_1_1_click}
-- type: Button
-  properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
-    foreground: 'theme:On Primary', visible: true, text: Monthly, font_size: null,
-    font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
-    background: '#05264d', bold: false, underline: false, icon: ''}
-  name: button_2_1
-  layout_properties: {grid_position: 'BQXUFN,WFXRUA'}
-  event_bindings: {click: button_2_1_click}
-- type: Button
-  properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
-    foreground: 'theme:On Primary', visible: true, text: Three Months, font_size: null,
-    font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
-    background: '#05264d', bold: false, underline: false, icon: ''}
-  name: button_3_1
-  layout_properties: {grid_position: 'BQXUFN,AHTRSJ'}
-  event_bindings: {click: button_3_1_click}
-- type: Button
-  properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
-    foreground: 'theme:On Primary', visible: true, text: Six Months, font_size: null,
-    font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
-    background: '#05264d', bold: false, underline: false, icon: ''}
-  name: button_4_1
-  layout_properties: {grid_position: 'BQXUFN,ZPRITM'}
-  event_bindings: {click: button_4_1_click}
+- type: FlowPanel
+  properties: {}
+  name: flow_panel_3
+  layout_properties: {grid_position: 'JTSLSC,TNSIXR'}
+  components:
+  - type: Button
+    properties: {role: null, align: full, tooltip: '', border: '', enabled: true,
+      foreground: 'theme:On Primary', visible: true, text: One Time, font_size: null,
+      font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+      background: '#05264d', bold: false, underline: false, icon: ''}
+    name: button_1_1
+    layout_properties: {grid_position: 'BQXUFN,DVEDID', width: 224}
+    event_bindings: {click: button_1_1_click}
+  - type: Button
+    properties: {role: null, align: full, tooltip: '', border: '', enabled: true,
+      foreground: 'theme:On Primary', visible: true, text: Monthly, font_size: null,
+      font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+      background: '#05264d', bold: false, underline: false, icon: ''}
+    name: button_2_1
+    layout_properties: {grid_position: 'BQXUFN,WFXRUA', width: 224}
+    event_bindings: {click: button_2_1_click}
+  - type: Button
+    properties: {role: null, align: full, tooltip: '', border: '', enabled: true,
+      foreground: 'theme:On Primary', visible: true, text: Three Months, font_size: null,
+      font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+      background: '#05264d', bold: false, underline: false, icon: ''}
+    name: button_3_1
+    layout_properties: {grid_position: 'BQXUFN,AHTRSJ', width: 224}
+    event_bindings: {click: button_3_1_click}
+  - type: Button
+    properties: {role: null, align: full, tooltip: '', border: '', enabled: true,
+      foreground: 'theme:On Primary', visible: true, text: Six Months, font_size: null,
+      font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+      background: '#05264d', bold: false, underline: false, icon: ''}
+    name: button_4_1
+    layout_properties: {grid_position: 'BQXUFN,ZPRITM', width: 224}
+    event_bindings: {click: button_4_1_click}
 - type: Label
   properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
     text: '', font_size: null, font: '', spacing_above: none, icon_align: left, spacing_below: small,
@@ -196,7 +201,7 @@ components:
   properties: {role: elevated-button, align: center, tooltip: '', border: '', enabled: true,
     foreground: 'theme:On Primary', visible: true, text: Next, font_size: null, font: '',
     spacing_above: small, icon_align: right, spacing_below: small, italic: false,
-    background: '#00008B', bold: false, underline: false, icon: 'fa:angle-double-right'}
+    background: '#05264d', bold: false, underline: false, icon: 'fa:angle-double-right'}
   name: button_4
   layout_properties: {grid_position: 'FEYOOS,MEYCXV'}
   event_bindings: {click: button_4_click}
@@ -297,7 +302,7 @@ components:
   properties: {role: elevated-button, align: right, tooltip: '', border: '', enabled: true,
     foreground: 'theme:On Primary', visible: false, text: ' Back', font_size: null,
     font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
-    background: '#00008B', bold: false, underline: false, icon: 'fa:angle-double-left'}
+    background: '#05264d', bold: false, underline: false, icon: 'fa:angle-double-left'}
   name: button_2
   layout_properties:
     col_widths: {}
@@ -306,7 +311,7 @@ components:
 - type: Button
   properties: {role: elevated-button, align: center, tooltip: '', border: '', enabled: true,
     foreground: 'theme:On Primary', visible: false, text: Edit, font_size: null, font: '',
-    spacing_above: small, icon_align: left, spacing_below: small, italic: false, background: '#00008B',
+    spacing_above: small, icon_align: left, spacing_below: small, italic: false, background: '#05264d',
     bold: false, underline: false, icon: ''}
   name: button_5
   layout_properties: {grid_position: 'NEBSCK,WKOWUH'}
@@ -315,7 +320,7 @@ components:
   properties: {role: elevated-button, align: left, tooltip: '', border: '', enabled: true,
     foreground: 'theme:On Primary', visible: false, text: Next, font_size: null, font: '',
     spacing_above: small, icon_align: right, spacing_below: small, italic: false,
-    background: '#00008B', bold: false, underline: false, icon: 'fa:angle-double-right'}
+    background: '#05264d', bold: false, underline: false, icon: 'fa:angle-double-right'}
   name: button_3
   layout_properties: {grid_position: 'NEBSCK,LVDGBE'}
   event_bindings: {click: button_3_click}
