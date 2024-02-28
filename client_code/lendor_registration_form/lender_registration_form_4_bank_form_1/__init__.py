@@ -50,6 +50,10 @@ class lender_registration_form_4_bank_form_1(lender_registration_form_4_bank_for
     user_id = self.userId
     if not account_name or not account_type or not account_number or not bank_name:
       Notification("please fill the all required fields").show()
+    elif not re.match(r'^[A-Za-z\s]+$', account_name):
+        Notification("Account name should be valid").show()
+    elif not account_number.isdigit():
+        Notification("Account number should be valid").show()
     else:
       anvil.server.call('add_lendor_bank_details_form_1', account_name, account_type,account_number,bank_name, user_id)
       open_form('lendor_registration_form.lender_registration_form_4_bank_form_2',user_id=self.userId)

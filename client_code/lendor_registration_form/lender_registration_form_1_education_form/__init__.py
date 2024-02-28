@@ -25,6 +25,15 @@ class lender_registration_form_1_education_form(lender_registration_form_1_educa
     """This method is called when the button is clicked"""
     qualification = self.drop_down_1.selected_value
     user_id = self.userId
+    qualification = self.drop_down_1.selected_value
+    user_id = self.userId
+    if qualification not in  ['10th class','Intermediate / PUC','Btech / B.E','Mtech','Phd']:
+      Notification("Please select a valid qualification status").show()
+    elif not user_id:
+      Notification("User ID is missing").show()
+    else:
+      anvil.server.call('add_lender_step1',qualification,user_id)
+      
     if qualification == '10th class':
       open_form('lendor_registration_form.lender_registration_form_1_education_form.lender_registration_education_10th_class',user_id=user_id)
     elif qualification == 'Intermediate / PUC':
