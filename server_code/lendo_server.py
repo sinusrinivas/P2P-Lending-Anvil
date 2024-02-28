@@ -63,7 +63,7 @@ def add_lender_step1(qualification,user_id):
 @anvil.server.callable
 def add_lender_step2(lending_type,investment,lending_period,user_id):
   row = app_tables.fin_lender.search(customer_id=user_id)
-  if row:
+  if row and len(row) > 0:
     row[0]['lending_type'] = lending_type
     row[0]['investment'] = investment
     row[0]['lending_period'] = lending_period
