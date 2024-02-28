@@ -233,6 +233,10 @@ class wallet_deposit(wallet_depositTemplate):
         wallet_add = app_tables.fin_wallet.get(customer_id=entered_borrower_customer_id)
         if wallet_add:
           loan_amount = loan_row['loan_amount']
+          
+          if wallet_add['wallet_amount'] is None:
+            wallet_add['wallet_amount'] = 0
+            
           wallet_add['wallet_amount'] += loan_amount
           wallet_add.update()
 

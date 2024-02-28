@@ -150,9 +150,9 @@ def add_borrower_step6(bank_id, bank_branch, user_id):
         # Update fin_user_profile table
         row[0]['bank_id'] = bank_id
         row[0]['account_bank_branch'] = bank_branch
+        row[0]['form_count'] = 6
         row[0]['usertype'] = 'borrower'
         row[0]['last_confirm'] = True
-        row[0]['form_count'] = 6
         row[0]['bessem_value'] = bessemfunctions.final_points_update_bessem_table(user_id)
 
         # Create a new row in fin_borrower table

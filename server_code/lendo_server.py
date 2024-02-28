@@ -53,6 +53,24 @@ from datetime import datetime, timezone
 #     row[0]['state'] = state
 #     row[0]['country'] = country
 #     row[0]['pincode'] = pincode
+@anvil.server.callable
+def add_lender_step1(qualification,user_id):
+  row = app_tables.fin_user_profile.search(customer_id=user_id)
+  if row:
+    row[0]['qualification'] = qualification
+    row[0]['form_count']=1 
+
+@anvil.server.callable
+def add_lender_step2(lending_type,investment,lending_period,user_id):
+  row = app_tables.fin_lender.search(customer_id=user_id)
+  if row and len(row) > 0:
+    row[0]['lending_type'] = lending_type
+    row[0]['investment'] = investment
+    row[0]['lending_period'] = lending_period
+    user = app_tables.fin_user_profile.get(customer_id = user_id)
+    if user:
+      user['form_count'] = 2
+    
 
 @anvil.server.callable
 def add_lendor_education_form(qualification,certificate,user_id):
@@ -61,6 +79,7 @@ def add_lendor_education_form(qualification,certificate,user_id):
     
     row[0]['qualification'] = qualification
     row[0]['education_certificate'] = certificate
+    
 
 @anvil.server.callable
 def add_lendor_six_form(lending_type, investment,lending_period, user_id):
@@ -188,6 +207,7 @@ def add_lendor_bank_details_form_1(account_name, account_type,account_number,ban
     row[0]['account_type'] = account_type
     row[0]['account_number'] = account_number
     row[0]['bank_name'] = bank_name
+    row[0]['form_count'] = 4
 
 
 @anvil.server.callable
@@ -196,8 +216,10 @@ def add_lendor_bank_details_form_2(bank_id,branch_name, user_id):
   if row:
     row[0]['bank_id'] = bank_id
     row[0]['branch_name'] = branch_name
+    row[0]['form_count'] = 5
     row[0]['usertype'] = 'lender'
     row[0]['last_confirm'] = True
+    
 
 
 

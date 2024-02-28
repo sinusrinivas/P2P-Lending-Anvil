@@ -74,6 +74,12 @@ class lender_registration_form_2(lender_registration_form_2Template):
                 open_form('lendor_registration_form.lender_registration_form_2.lender_registration_individual_form_1', user_id=user_id)
             elif lending_type == 'Institutional':
                 open_form('lendor_registration_form.lender_registration_form_2.lender_registration_Institutional_form_1', user_id=user_id)
+        else:
+          anvil.server.call('add_lender_step2', lending_type, investment, lending_period, user_id)
+          if lending_type == 'Individual':
+            open_form('lendor_registration_form.lender_registration_form_2.lender_registration_individual_form_1', user_id=user_id)
+          elif lending_type == 'Institutional':
+            open_form('lendor_registration_form.lender_registration_form_2.lender_registration_Institutional_form_1', user_id=user_id)
 
     def button_3_click(self, **event_args):
         open_form("bank_users.user_form")

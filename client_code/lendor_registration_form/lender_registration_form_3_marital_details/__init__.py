@@ -42,6 +42,7 @@ class lender_registration_form_3_marital_details(lender_registration_form_3_mari
         open_form('lendor_registration_form.lender_registration_form_3_marital_details.lender_registration_form_3_marital_married',user_id = user_id)
       else:
         open_form('lendor_registration_form.lender_registration_form_4_bank_form_1',user_id = user_id)
+        alert('Please select a valid marital status')
 
   def button_1_click(self, **event_args):
     open_form('lendor_registration_form.lender_registration_form_2',user_id=self.userId)
