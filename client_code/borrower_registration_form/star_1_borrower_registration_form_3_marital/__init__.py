@@ -38,8 +38,9 @@ class star_1_borrower_registration_form_3_marital(star_1_borrower_registration_f
         open_form('borrower_registration_form.star_1_borrower_registration_form_3_marital.star_1_borrower_registration_form_3_marital_married',user_id = user_id)
       elif marital_status == 'Married':
         open_form('borrower_registration_form.star_1_borrower_registration_form_3_marital.star_1_borrower_registration_form_3_marital_married',user_id = user_id)
-      else:
-        open_form('borrower_registration_form.star_1_borrower_registration_form_4_loan',user_id = user_id)
+      # else:
+      #   open_form('borrower_registration_form.star_1_borrower_registration_form_3_marital',user_id = user_id)
+      #   alert('Please select a valid marital status')
 
   
   def button_1_click(self, **event_args):

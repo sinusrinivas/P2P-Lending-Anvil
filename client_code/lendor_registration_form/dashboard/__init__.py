@@ -40,7 +40,20 @@ class dashboard(dashboardTemplate):
 
   def button_5_click(self, **event_args):
     """This method is called when the button is clicked"""
-    open_form("lendor_registration_form.dashboard.view_borrower_loan_request")
+    # open_form("lendor_registration_form.dashboard.view_borrower_loan_request")
+    email = main_form_module.email
+    user_profile = app_tables.fin_user_profile.get(email_user=email)
+    if user_profile:
+            user_id = user_profile['customer_id']
+            
+            wallet_row = app_tables.fin_wallet.get(customer_id=user_id)
+            
+            print(f"User ID: {user_id}")
+            
+            if wallet_row and wallet_row['wallet_id'] is not None:                
+                open_form('lendor_registration_form.dashboard.view_borrower_loan_request')
+            else:              
+                alert("Wallet not found. Do some transaction", title="Alert")
 
   def button_6_click(self, **event_args):
     """This method is called when the button is clicked"""
