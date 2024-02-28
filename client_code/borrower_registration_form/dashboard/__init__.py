@@ -17,6 +17,8 @@ class dashboard(dashboardTemplate):
         self.init_components(**properties)
 
         self.email = main_form_module.email
+        self.user_id=main_form_module.userId
+        user_id = self.user_id
 
         # Fetch the user profile based on the current user's email
         user = anvil.users.get_user()
@@ -142,24 +144,30 @@ class dashboard(dashboardTemplate):
         open_form('lender_registration_form.dashboard.notification')
 
     def wallet_dashboard_link_click(self, **event_args):
-        user_profiles = server.call('fetch_user_profiles')
-        
-        for profile in user_profiles:
-            result = server.call(
-                'create_wallet_entry',
-                profile['email_user'],
-                profile['customer_id'],
-                profile['full_name'],
-                profile['usertype']
-            )
-            
-            print(result)
-        
+      email = self.email
+      customer_id = self.user_id
+
+      # Fetch the user's full name from the server
+      user_profile = anvil.server.call('fetch_user_profile', email)
+      if user_profile:
+        full_name = user_profile['full_name']
+        usertype = user_profile['usertype']
+
+        result = anvil.server.call(
+            'create_wallet_entry',
+            email,
+            customer_id,
+            full_name,
+            usertype
+        )
+
+        print(result)
+
         open_form('wallet.wallet')
-        
-        customer_id = 1000
-        email = self.email
+
         anvil.server.call('fetch_profile_data_and_insert', email, customer_id)
+      else:
+        print("User profile not found.")
 
     def extended_loans_click(self, **event_args):
       """This method is called when the button is clicked"""

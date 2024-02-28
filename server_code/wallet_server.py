@@ -46,12 +46,17 @@ def create_wallet_entry(email, customer_id, full_name, user_type):
     else:
         return f"Wallet entry already exists for {email}. Multiple entries found."
 
-@anvil.server.callable
-def fetch_user_profiles():
-    user_profiles = app_tables.fin_user_profile.search()
-    print(user_profiles)
-    return user_profiles
+# @anvil.server.callable
+# def fetch_user_profiles(user_id):
+#     user_profiles = app_tables.fin_user_profile.search()
+#     print(user_profiles)
+#     return user_profiles
 
+@anvil.server.callable
+def fetch_user_profile(email):
+    user_profile = app_tables.fin_user_profile.get(email_user=email)
+    return user_profile
+  
 def generate_wallet_id():
     existing_wallets = app_tables.fin_wallet.search(tables.order_by("wallet_id", ascending=False))
 
@@ -87,7 +92,54 @@ def generate_account_id():
         counter = 1  # Start the counter from 1 if no existing accounts
 
     return f"A{counter:04d}"
-
+  
+@anvil.server.callable
+def fetch_profile_data_and_insert(email, customer_id):
+    try:
+        # Fetch user profile based on customer_id
+        profile = app_tables.fin_user_profile.get(email_user=email)
+        
+        if profile is not None:
+            # Fetch wallet data based on customer_id
+            wallet_data = app_tables.fin_wallet.get(user_email=email)
+            
+            if wallet_data is not None:
+                wallet_id = wallet_data['wallet_id']
+                account_id = wallet_data['account_id']
+                
+                # Check if account_number is a string before converting to number
+                account_number_value = int(profile['account_number']) if isinstance(profile['account_number'], str) else profile['account_number']
+                
+                # Check if a row with the same user_email already exists in wallet_bank_account_table
+                existing_row = app_tables.fin_wallet_bank_account_table.get(user_email=profile['email_user'])
+                
+                if existing_row is None:
+                    # Add a new row to wallet_bank_account_table
+                    app_tables.fin_wallet_bank_account_table.add_row(
+                        user_email=profile['email_user'], 
+                        account_name=profile['account_name'],
+                        account_number=account_number_value,
+                        bank_name=profile['bank_name'],  
+                        branch_name=profile['branch_name'],  
+                        bank_id=profile['bank_id'],
+                        account_type=profile['account_type'],
+                        wallet_id=wallet_id,
+                        account_id=account_id
+                    )
+                    
+                    return True
+                else:
+                    print("Row with the same user_email already exists in wallet_bank_account_table.")
+                    return False
+            else:
+                print("Wallet data not found for the provided customer_id.")
+                return False
+        else:
+            print("Profile not found for the provided customer_id.")
+            return False
+    except Exception as e:
+        print(f"Error occurred: {e}")
+        return False
 
 # code for wallet_transactions
 def generate_transaction_id():
@@ -216,51 +268,5 @@ def withdraw_money(email, withdraw_amount, customer_id):
         )
         return False
 
-@anvil.server.callable
-def fetch_profile_data_and_insert(email, customer_id):
-    try:
-        # Fetch user profile based on customer_id
-        profile = app_tables.fin_user_profile.get(email_user=email)
-        
-        if profile is not None:
-            # Fetch wallet data based on customer_id
-            wallet_data = app_tables.fin_wallet.get(user_email=email)
-            
-            if wallet_data is not None:
-                wallet_id = wallet_data['wallet_id']
-                account_id = wallet_data['account_id']
-                
-                # Check if account_number is a string before converting to number
-                account_number_value = int(profile['account_number']) if isinstance(profile['account_number'], str) else profile['account_number']
-                
-                # Check if a row with the same user_email already exists in wallet_bank_account_table
-                existing_row = app_tables.fin_wallet_bank_account_table.get(user_email=profile['email_user'])
-                
-                if existing_row is None:
-                    # Add a new row to wallet_bank_account_table
-                    app_tables.fin_wallet_bank_account_table.add_row(
-                        user_email=profile['email_user'], 
-                        account_name=profile['account_name'],
-                        account_number=account_number_value,
-                        bank_name=profile['bank_name'],  
-                        branch_name=profile['account_bank_branch'],  
-                        bank_id=profile['bank_id'],
-                        account_type=profile['account_type'],
-                        wallet_id=wallet_id,
-                        account_id=account_id
-                    )
-                    
-                    return True
-                else:
-                    print("Row with the same user_email already exists in wallet_bank_account_table.")
-                    return False
-            else:
-                print("Wallet data not found for the provided customer_id.")
-                return False
-        else:
-            print("Profile not found for the provided customer_id.")
-            return False
-    except Exception as e:
-        print(f"Error occurred: {e}")
-        return False
+
       
