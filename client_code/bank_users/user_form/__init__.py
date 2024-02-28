@@ -67,7 +67,28 @@ class user_form(user_formTemplate):
 
   def lendor_button_click(self, **event_args):
     userid = self.user_id
-    open_form('lendor_registration_form.lender_registration_form_1_education_form',user_id=userid)
+    # open_form('lendor_registration_form.lender_registration_form_1_education_form',user_id=userid)
+    userid = self.user_id
+    user_data=app_tables.fin_user_profile.get(customer_id=userid)
+    if user_data:
+      actual_count=user_data['form_count']
+      print(actual_count)
+      print("")
+      if actual_count==1:
+        open_form('lendor_registration_form.lender_registration_form_1_education_form',user_id=userid)
+      elif actual_count==2:
+        open_form('lendor_registration_form.lender_registration_form_2',user_id=userid)
+      elif actual_count==3:
+        open_form('lendor_registration_form.lender_registration_form_3_marital_details',user_id=userid)
+      elif actual_count==4:
+        open_form('lendor_registration_form.lender_registration_form_4_bank_form_1',user_id=userid)
+      elif actual_count==5:
+        open_form('lendor_registration_form.lender_registration_form_4_bank_form_2',user_id=userid)
+      else:
+        open_form('lendor_registration_form.lender_registration_form_1_education_form',user_id=userid)
+    else:
+     open_form('lendor_registration_form.lender_registration_form_1_education_form',user_id=userid)
+     print(actual_count)
 
   def button_3_click(self, **event_args):
     """This method is called when the button is clicked"""
