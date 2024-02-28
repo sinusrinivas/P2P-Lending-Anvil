@@ -155,7 +155,7 @@ class check(checkTemplate):
                 'BeginningBalance': f"₹ {beginning_balance:.2f}",
                 'ExtraPayment': "₹ 0.00",
                 'TotalPayment': f"₹ {total_payment:.2f}",
-                'EndingBalance': f"₹ {beginning_balance - total_payment:.2f}"
+                'EndingBalance': f"₹ {max(0,beginning_balance - total_payment):.2f}"
             })
 
             beginning_balance = beginning_balance - total_payment
@@ -241,7 +241,7 @@ class check(checkTemplate):
                     'Interest': f"₹ {total_interest:.2f}",
                     'Principal': f"₹ {principal:.2f}",
                     'ProcessingFee': f"₹ {total_processing_fee:.2f}",
-                    'EndingBalance': f"₹ {ending_balance:.2f}",
+                    'EndingBalance': f"₹ {max(0, ending_balance):.2f}",
                     'LoanAmountBeginningBalance': f"₹ {loan_amount_beginning_balance:.2f}",
                     'LoanAmountEndingBalance': f"₹ {loan_amount_ending_balance:.2f}"
                 })
@@ -327,7 +327,7 @@ class check(checkTemplate):
                     'Interest': f"₹ {total_interest:.2f}",
                     'Principal': f"₹ {principal:.2f}",
                     'ProcessingFee': f"₹ {total_processing_fee:.2f}",
-                    'EndingBalance': f"₹ {ending_balance:.2f}",
+                    'EndingBalance': f"₹ {max(0, ending_balance):.2f}",
                     'LoanAmountBeginningBalance': f"₹ {loan_amount_beginning_balance:.2f}",
                     'LoanAmountEndingBalance': f"₹ {loan_amount_ending_balance:.2f}"
                 })
