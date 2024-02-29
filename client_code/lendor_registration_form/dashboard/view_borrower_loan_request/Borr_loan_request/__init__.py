@@ -6,6 +6,7 @@ import anvil.tables as tables
 from anvil.tables import app_tables
 from anvil import open_form
 from datetime import datetime
+import anvil.tables.query as q
 from ... import lendor_main_form_module as main_form_1
 from .....bank_users.main_form import main_form_module
 from datetime import timedelta
@@ -59,7 +60,7 @@ class Borr_loan_request(Borr_loan_requestTemplate):
                         min_amount_text = loan_details['loan_amount']
                         
                         # Calculate and display ROM in amount format
-                        rom_amount = self.calculate_rom(interest_rate,min_amount_text)
+                        rom_amount = self.calculate_rom()
                         self.label_member_rom.text = f"{rom_amount:.2f}"
                     else:
                         self.label_member_rom.text = "No data for loan_id in loan_details"
@@ -78,44 +79,52 @@ class Borr_loan_request(Borr_loan_requestTemplate):
         self.entered_borrower_customer_id = borrower_customer_id
       
     def calculate_rom(self):
-        email = self.email 
+      email = self.email
+      user_profile = app_tables.fin_user_profile.get(email_user=email)
     
-        user_profile = app_tables.fin_user_profile.get(email_user=email)
-    
-        if user_profile:
-            user_id = user_profile['customer_id']
-    
-            # Count the number of loans the user already has (based on specific patterns)
-            try:
-                existing_loans = app_tables.fin_loan_details.search(
-                    borrower_customer_id=user_id,
-                    loan_updated_status=q.any_of(
-                        q.like('accept%'),
-                        q.like('Approved%'),
-                        q.like('approved%'),
-                        q.like('under process%'),
-                        q.like('foreclosure%'),
-                        # q.like('close%'),
-                        # q.like('Close%'),
-                        # q.like('closed loans%'),
-                        q.like('disbursed loan%'),
-                        q.like('Disbursed loan%'),
-                        q.like('Under Process%')
-                    )
-                )
-                num_existing_loans = len(existing_loans)
-              
-                closed_loans = app_tables.fin_loan_details.search(
-                    borrower_customer_id=user_id,
-                    loan_updated_status=q.any_of(
-                        q.like('close%'),
-                        q.like('Close%'),
-                        q.like('closed loans%')
-                    )
-                )
-                num_closed_loans = len(closed_loans)
+      if user_profile:
+        user_id = user_profile['customer_id']
 
-    
+        # Count the number of loans the user already has (based on specific patterns)
+        try:
+            existing_loans = app_tables.fin_loan_details.search(
+                borrower_customer_id=user_id,
+                loan_updated_status=q.any_of(
+                    q.like('accept%'),
+                    q.like('Approved%'),
+                    q.like('approved%'),
+                    q.like('under process%'),
+                    q.like('foreclosure%'),
+                    q.like('disbursed loan%'),
+                    q.like('Disbursed loan%'),
+                    q.like('Under Process%')
+                )
+            )
+            num_existing_loans = len(existing_loans)
+
+            closed_loans = app_tables.fin_loan_details.search(
+                borrower_customer_id=user_id,
+                loan_updated_status=q.any_of(
+                    q.like('close%'),
+                    q.like('Close%'),
+                    q.like('closed loans%')
+                )
+            )
+            num_closed_loans = len(closed_loans)
+
+            # Avoid division by zero
+            if num_existing_loans > 0:
+                rom_amount = f"{num_closed_loans}/{num_existing_loans}"
+            else:
+                rom_amount = "0/0"
+
+            return rom_amount
+        except anvil.tables.TableError as e:
+            print(f"Error fetching loan details: {e}")
+            return "0/0"  
+    else:
+        print("User profile not found.")
+        return "0/0"
 
     def button_1_click(self, **event_args):
       """This method is called when the button is clicked"""
