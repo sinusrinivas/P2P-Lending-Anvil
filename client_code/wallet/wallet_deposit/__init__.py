@@ -229,7 +229,7 @@ class wallet_deposit(wallet_depositTemplate):
         except ValueError:
             alert("Please enter a valid customer ID.")
             return
-          # Search for the row in fin_wallet table
+          
         wallet_add = app_tables.fin_wallet.get(customer_id=entered_borrower_customer_id)
         if wallet_add:
           loan_amount = loan_row['loan_amount']
@@ -245,6 +245,7 @@ class wallet_deposit(wallet_depositTemplate):
           loan_row['loan_updated_status'] = updated_loan_status
           # Save the changes to the loan_row
           loan_row.update()
+          
           self.check_time_difference()
                   
           alert(f"Loan Amount Paid to Borrower\nWallet Amount Updated")
