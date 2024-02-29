@@ -215,7 +215,7 @@ def add_lendor_bank_details_form_2(bank_id,branch_name, user_id):
   row = app_tables.fin_user_profile.search(customer_id = user_id)
   if row:
     row[0]['bank_id'] = bank_id
-    row[0]['branch_name'] = branch_name
+    row[0]['account_bank_branch'] = branch_name
     row[0]['form_count'] = 5
     row[0]['usertype'] = 'lender'
     row[0]['last_confirm'] = True

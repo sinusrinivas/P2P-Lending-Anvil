@@ -15,7 +15,7 @@ class view_borrower_loan_request(view_borrower_loan_requestTemplate):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
     self.user_id=main_module.userId
-    # user_id = self.user_id
+    user_id = self.user_id
     self.email = main_module.email
     email = self.email
     

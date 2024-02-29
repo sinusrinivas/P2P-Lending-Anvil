@@ -150,7 +150,7 @@ class wallet_deposit(wallet_depositTemplate):
         start_time_utc = datetime.utcfromtimestamp(self.start_time).replace(tzinfo=timezone.utc)
         
         time_difference = current_time - start_time_utc
-        time_diff = 180 - self.time_difference_seconds 
+        time_diff = 1800 - self.time_difference_seconds 
 
         if time_difference.total_seconds() > time_diff:  # 1800 seconds = 30 minutes
             # Update loan status based on the comparison of wallet_amount and loan_amount
@@ -262,7 +262,7 @@ class wallet_deposit(wallet_depositTemplate):
     """This method is called Every [interval] seconds. Does not trigger if [interval] is 0."""
     self.check_time_difference()
     # Print time_difference every 300 seconds i.e 5min
-    if int(time.time() - self.start_time) % 30 == 0:
+    if int(time.time() - self.start_time) % 300 == 0:
       print("time_difference:", datetime.now(timezone.utc) - datetime.utcfromtimestamp(self.start_time).replace(tzinfo=timezone.utc))
   
   def calculate_first_emi_due_date(self, emi_payment_type, loan_disbursed_timestamp, tenure):
@@ -288,4 +288,3 @@ class wallet_deposit(wallet_depositTemplate):
   def all_transaction_btn_click(self, **event_args):
     """This method is called when the button is clicked"""
     open_form("wallet.wallet.all_transaction")
-
