@@ -107,7 +107,7 @@ class today_dues(today_duesTemplate):
               emi_payment_type = loan_due['emi_payment_type']
               lender_customer_id = loan_due['lender_customer_id']
               total_repayment_amount = loan_due['total_repayment_amount']
-              #total_processing_fee_amount = loan_due['processing_fee']
+              total_processing_fee_amount = loan_due['total_processing_fee_amount']
               
               # Calculate next_payment based on first_payment_due_date
               if emi_payment_type == 'One Time':
