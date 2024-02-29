@@ -39,15 +39,19 @@ class Borr_loan_request(Borr_loan_requestTemplate):
         try:
             user_request = app_tables.fin_borrower.get(customer_id=int(selected_row['borrower_customer_id']))
             if user_request is not None:
-                # Assuming 'bank_acc_details' is a valid column name in the 'borrower' table
                 bank_acc_details = user_request['bank_acc_details']
                 borrower_since = user_request['borrower_since']
-                self.label_member_since.text = f"{borrower_since}"
-                self.label_bank_acc_details.text = f"{bank_acc_details}"
+                if borrower_since is not None:
+                  current_date = datetime.now().date()
+                  difference = current_date - borrower_since
+                  difference = f"{difference.days // 365} years {difference.days % 365} days"
+                  self.label_member_since.text = f"{difference}"
+                  self.label_bank_acc_details.text = f"{bank_acc_details}"
+                else:
+                  self.label_member_since.text = "N/A"
                 
                 # Fetch additional details from the 'loan_details' table
                 try:
-                    #loan_details = app_tables.loan_details.get(loan_id=int(selected_row['loan_id']))
                     loan_details = app_tables.fin_loan_details.get(loan_id=str(selected_row['loan_id']))
                     if loan_details is not None:
                         # Assuming 'interest_rate' and 'min_amount' are valid column names in the 'loan_details' table
