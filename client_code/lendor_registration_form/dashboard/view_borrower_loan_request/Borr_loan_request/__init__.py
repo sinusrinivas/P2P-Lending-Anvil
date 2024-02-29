@@ -61,7 +61,7 @@ class Borr_loan_request(Borr_loan_requestTemplate):
                         
                         # Calculate and display ROM in amount format
                         rom_amount = self.calculate_rom()
-                        self.label_member_rom.text = f"{rom_amount:.2f}"
+                        self.label_member_rom.text = str(rom_amount)
                     else:
                         self.label_member_rom.text = "No data for loan_id in loan_details"
                 except anvil.tables.TableError as e:
@@ -101,6 +101,7 @@ class Borr_loan_request(Borr_loan_requestTemplate):
                 )
             )
             num_existing_loans = len(existing_loans)
+            print(num_existing_loans)
 
             closed_loans = app_tables.fin_loan_details.search(
                 borrower_customer_id=user_id,
@@ -122,7 +123,7 @@ class Borr_loan_request(Borr_loan_requestTemplate):
         except anvil.tables.TableError as e:
             print(f"Error fetching loan details: {e}")
             return "0/0"  
-    else:
+      else:
         print("User profile not found.")
         return "0/0"
 
