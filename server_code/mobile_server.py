@@ -403,3 +403,118 @@ def calculate_extension_details(loan_id, loan_extension_months):
         }
     else:
         return "Loan details not found"
+@anvil.server.callable
+def calculate_emi_details(loan_amount, tenure_months, user_id, interest_rate, total_repayment_amount, product_id, membership_type, credit_limit, payment_type):
+    payment_details = []
+  
+
+    # Monthly interest rate
+    monthly_interest_rate = (interest_rate / 100) / 12
+
+    # Calculate EMI (monthly installment)
+    emi = (loan_amount * monthly_interest_rate * ((1 + monthly_interest_rate) ** tenure_months)) / (((1 + monthly_interest_rate) ** tenure_months) - 1)
+
+    # Initialize the first beginning balance with the initial loan amount
+    beginning_balance = loan_amount
+    payment_date_placeholder = "Awaiting update"
+
+    # Calculate payment details for each month up to the tenure
+    for month in range(1, tenure_months + 1):
+        # Calculate interest amount for the month
+        interest_amount = beginning_balance * monthly_interest_rate
+
+        # Calculate principal amount for the month
+        principal_amount = emi - interest_amount
+
+        # Update ending balance for the current iteration
+        ending_balance = beginning_balance - principal_amount
+
+        # Add payment details to the list
+        payment_details.append({
+            'PaymentNumber': month,
+            'PaymentDate': payment_date_placeholder,
+            'ScheduledPayment': f"₹ {emi:.2f}",
+            'Principal': f"₹ {principal_amount:.2f}",
+            'Interest': f"₹ {interest_amount:.2f}",
+            'BeginningBalance': f"₹ {beginning_balance:.2f}",
+            'TotalPayment': f"₹ {emi:.2f}",  
+            'EndingBalance': f"₹ {ending_balance:.2f}"
+        })
+
+        # Update beginning balance for the next iteration
+        beginning_balance = ending_balance
+
+    return payment_details
+@anvil.server.callable
+def calc_total_payments_made(loan_id):
+    # Fetching the last row data for the specified loan_id from the fin_emi_table
+    last_emi_rows = app_tables.fin_emi_table.search(loan_id=loan_id)
+    if last_emi_rows:
+        # Convert LiveObjectProxy to list
+        last_emi_list = list(last_emi_rows)
+        
+        # Sort the list of rows based on the 'emi_number' column in reverse order
+        last_emi_list.sort(key=lambda x: x['emi_number'], reverse=True)
+        
+        # Extract the 'emi_number' from the first row, which represents the highest 'emi_number'
+        total_payments_made = last_emi_list[0]['emi_number']
+    else:
+        total_payments_made = 0
+
+    # Return the total payments made
+    return total_payments_made
+
+
+@anvil.server.callable
+def calculate_foreclosure(loan_amount, tenure, interest_rate, total_payments_made, product_id):
+    loan_amount = float(loan_amount)
+    tenure = float(tenure)  # Assuming tenure is given in months
+    interest_rate = float(interest_rate)
+
+    # Calculate EMIs
+    monthly_interest_rate = interest_rate / (12 * 100)  # Assuming interest rate is in percentage
+    factor = (1 + monthly_interest_rate) ** tenure  
+    emi = loan_amount * monthly_interest_rate * factor / (factor - 1)
+    emi = float(emi)
+    monthly_installment = loan_amount / tenure
+    monthly_installment = float(monthly_installment)
+
+    # Calculate payments made
+    paid_amount = emi * total_payments_made
+    paid_amount = float(paid_amount)
+    monthly_interest_amount = emi - monthly_installment
+    monthly_interest_amount = float(monthly_interest_amount)
+
+    # Calculate outstanding amount
+    outstanding_amount = loan_amount - (monthly_installment * total_payments_made)
+    oustanding_month = tenure - total_payments_made
+    outstanding_amount_i_amount = monthly_interest_amount * oustanding_month
+    total_outstanding_amount = outstanding_amount + outstanding_amount_i_amount
+
+    # Fetch product details and foreclosure fees
+    data = app_tables.fin_product_details.search(product_id=product_id)
+    foreclosure_fee_lst = [i['foreclosure_fee'] for i in data]
+    foreclosure_fee_str = ', '.join(map(str, foreclosure_fee_lst))
+
+    # Calculate foreclosure amount
+    foreclose_fee = float(foreclosure_fee_str)
+    foreclose_amount = outstanding_amount * (foreclose_fee / 100)
+    foreclose_amount = float(foreclose_amount)
+
+    # Calculate total due amount
+    total_due_amount = outstanding_amount + foreclose_amount
+    total_due_amount = float(total_due_amount)
+
+    return {
+        "outstanding_amount": outstanding_amount,
+        "total_outstanding_amount": total_outstanding_amount,
+        "emi": emi,
+        "foreclose_amount": foreclose_amount,
+        "paid_amount": paid_amount,
+        "monthly_installment": monthly_installment,
+        "monthly_interest_amount": monthly_interest_amount,
+        "outstanding_interest_amount": outstanding_amount_i_amount,
+        "remaining_months": oustanding_month,
+        "foreclosure_fee_str": foreclosure_fee_str,
+        "total_due_amount": total_due_amount
+    }
