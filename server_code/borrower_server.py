@@ -160,6 +160,7 @@ def add_borrower_step6(bank_id, bank_branch, user_id):
             customer_id=row[0]['customer_id'],
             email_id=row[0]['email_user'],
             user_name=row[0]['full_name'],
+            bank_acc_details=row[0]['account_number'],
             beseem_score=row[0]['bessem_value']
         )
 

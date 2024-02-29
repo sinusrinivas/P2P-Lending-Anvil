@@ -229,7 +229,7 @@ class wallet_deposit(wallet_depositTemplate):
         except ValueError:
             alert("Please enter a valid customer ID.")
             return
-          # Search for the row in fin_wallet table
+          
         wallet_add = app_tables.fin_wallet.get(customer_id=entered_borrower_customer_id)
         if wallet_add:
           loan_amount = loan_row['loan_amount']
@@ -237,19 +237,20 @@ class wallet_deposit(wallet_depositTemplate):
           if wallet_add['wallet_amount'] is None:
             wallet_add['wallet_amount'] = 0
             
-            wallet_add['wallet_amount'] += loan_amount
-            wallet_add.update()
+          wallet_add['wallet_amount'] += loan_amount
+          wallet_add.update()
 
-            # You may want to update the loan_updated_status here if needed
-            updated_loan_status = 'disbursed loan'
-            loan_row['loan_updated_status'] = updated_loan_status
-            # Save the changes to the loan_row
-            loan_row.update()
-            self.check_time_difference()
+          # You may want to update the loan_updated_status here if needed
+          updated_loan_status = 'disbursed loan'
+          loan_row['loan_updated_status'] = updated_loan_status
+          # Save the changes to the loan_row
+          loan_row.update()
+          
+          self.check_time_difference()
                   
-            alert(f"Loan Amount Paid to Borrower\nWallet Amount Updated")
-            open_form('lendor_registration_form.dashboard')
-            return
+          alert(f"Loan Amount Paid to Borrower\nWallet Amount Updated")
+          open_form('lendor_registration_form.dashboard')
+          return
         else:
             alert("Wallet not found for the entered borrower customer ID.") 
       else:
