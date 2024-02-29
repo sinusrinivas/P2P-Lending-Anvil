@@ -80,38 +80,41 @@ class Borr_loan_request(Borr_loan_requestTemplate):
       
     def calculate_rom(self):
       email = self.email
-      user_profile = app_tables.fin_user_profile.get(email_user=email)
-    
-      if user_profile:
-        user_id = user_profile['customer_id']
+      user_profile = app_tables.fin_loan_details.get(lender_email_id=email)
 
+      if user_profile:
+        # user_id = user_profile['customer_id']
+        borrower_customer_id = user_profile['borrower_customer_id']
+        print("borrower_customer_id:",borrower_customer_id)
         # Count the number of loans the user already has (based on specific patterns)
         try:
-            existing_loans = app_tables.fin_loan_details.search(
-                borrower_customer_id=user_id,
+            existing_loans = list(app_tables.fin_loan_details.search(
+                borrower_customer_id=borrower_customer_id,
                 loan_updated_status=q.any_of(
-                    q.like('accept%'),
+                    q.like('under process%'),
+                    q.like('Under Process%'),
                     q.like('Approved%'),
                     q.like('approved%'),
-                    q.like('under process%'),
+                    q.like('accept%'),
                     q.like('foreclosure%'),
                     q.like('disbursed loan%'),
-                    q.like('Disbursed loan%'),
-                    q.like('Under Process%')
+                    q.like('Disbursed loan%')
                 )
-            )
+            ))
+            
             num_existing_loans = len(existing_loans)
-            print(num_existing_loans)
+            print("Existing Loans:", existing_loans)  
 
-            closed_loans = app_tables.fin_loan_details.search(
-                borrower_customer_id=user_id,
+            closed_loans = list(app_tables.fin_loan_details.search(
+                borrower_customer_id=borrower_customer_id),
                 loan_updated_status=q.any_of(
                     q.like('close%'),
                     q.like('Close%'),
                     q.like('closed loans%')
-                )
-            )
+                ))
+          
             num_closed_loans = len(closed_loans)
+            print("Closed Loans:", closed_loans)  
 
             # Avoid division by zero
             if num_existing_loans > 0:
@@ -122,11 +125,10 @@ class Borr_loan_request(Borr_loan_requestTemplate):
             return rom_amount
         except anvil.tables.TableError as e:
             print(f"Error fetching loan details: {e}")
-            return "0/0"  
+            return "0/0"
       else:
         print("User profile not found.")
         return "0/0"
-
     def button_1_click(self, **event_args):
       """This method is called when the button is clicked"""
       open_form('lendor_registration_form.dashboard.view_borrower_loan_request')
