@@ -101,12 +101,12 @@ class Borr_loan_request(Borr_loan_requestTemplate):
                     q.like('Disbursed loan%')
                 )
             )
-            existing_loans = [existing_loan] if existing_loan else []
+          
             num_existing_loans = len(existing_loans)
             print("Existing Loans:", existing_loans)  
 
-            closed_loans = list(app_tables.fin_loan_details.search(
-                borrower_customer_id=borrower_customer),
+            closed_loans = app_tables.fin_loan_details.search(
+                borrower_customer_id=borrower_customer,
                 loan_updated_status=q.any_of(
                     q.like('close%'),
                     q.like('Close%'),
@@ -129,6 +129,7 @@ class Borr_loan_request(Borr_loan_requestTemplate):
       else:
         print("User profile not found.")
         return "0/0"
+        
     def button_1_click(self, **event_args):
       """This method is called when the button is clicked"""
       open_form('lendor_registration_form.dashboard.view_borrower_loan_request')
