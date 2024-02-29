@@ -166,7 +166,13 @@ def add_borrower_step6(bank_id, bank_branch, user_id):
             existing_borrower_row['credit_limit'] = 1000000
 
             if row[0]['last_confirm']:
-                existing_borrower_row['borrower_since'] = datetime.now().date()
+                # Calculate the difference between last_confirm date and the current date
+                last_confirm_date = row[0]['last_confirm']
+                current_date = datetime.now().date()
+                difference = current_date - last_confirm_date
+
+                # Update borrower_since with the difference in years and days
+                existing_borrower_row['borrower_since'] = f"{difference.days // 365} years {difference.days % 365} days"
 
             existing_borrower_row.update()
         else:
@@ -181,10 +187,15 @@ def add_borrower_step6(bank_id, bank_branch, user_id):
             )
 
             if row[0]['last_confirm']:
-                fin_borrower_row['borrower_since'] = datetime.now().date()
+                # Calculate the difference between last_confirm date and the current date
+                last_confirm_date = row[0]['last_confirm']
+                current_date = datetime.now().date()
+                difference = current_date - last_confirm_date
+
+                # Update borrower_since with the difference in years and days
+                fin_borrower_row['borrower_since'] = f"{difference.days // 365} years {difference.days % 365} days"
 
             fin_borrower_row.update()
-
     else:
         # If user not found in fin_user_profile table
         raise ValueError("User not found in fin_user_profile table")

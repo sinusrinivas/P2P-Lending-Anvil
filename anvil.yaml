@@ -421,9 +421,6 @@ db_schema:
     - name: credit_limit
       admin_ui: {order: 2.375, width: 200}
       type: number
-    - name: borrower_since
-      admin_ui: {order: 4.5, width: 200}
-      type: date
     - name: beseem_score
       admin_ui: {width: 200, order: 3.5}
       type: number
@@ -439,6 +436,9 @@ db_schema:
     - name: customer_id
       admin_ui: {order: 3.5, width: 200}
       type: number
+    - name: borrower_since
+      admin_ui: {order: 4.5, width: 200}
+      type: string
   fin_borrower_salary_type:
     client: full
     server: full
