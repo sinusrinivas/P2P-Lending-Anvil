@@ -118,6 +118,9 @@ db_schema:
     - name: customer_id
       admin_ui: {width: 200, order: 0.5}
       type: number
+    - name: loan_id
+      admin_ui: {width: 200}
+      type: string
     title: fin_wallet
   fin_lendor_lending_type:
     client: full
@@ -1017,6 +1020,9 @@ db_schema:
       type: string
     - name: account_type
       admin_ui: {width: 200, order: 8}
+      type: string
+    - name: ifsc_code
+      admin_ui: {width: 200}
       type: string
     title: fin_wallet_bank_account_table
   fin_product_group:
