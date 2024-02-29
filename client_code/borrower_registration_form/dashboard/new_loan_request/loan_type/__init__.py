@@ -59,9 +59,9 @@ class loan_type(loan_typeTemplate):
     for i, emi_option in enumerate(button_names):
       button = getattr(self, f'button_{i + 1}_1')
       if emi_option == payment_type:
-        button.background = '#00008B'
+        button.background = '#0a2346'
       else:
-        button.background = '#336699'
+        button.background = '#939191'#'#336699'
 
   def set_button_visibility(self):
     available_options = ["One Time", "Monthly", "Three Month", "Six Month"]
@@ -155,10 +155,10 @@ class loan_type(loan_typeTemplate):
   def button_4_click(self, **event_args):
     loan_amount = self.loan_amount_tb.text
     tenure = self.text_box_1.text
-    one_time = self.button_1_1.background == '#00008B'
-    monthly_emi = self.button_2_1.background == '#00008B'
-    three_month = self.button_3_1.background == '#00008B'
-    six_month = self.button_4_1.background == '#00008B'
+    one_time = self.button_1_1.background == '#0a2346'
+    monthly_emi = self.button_2_1.background == '#0a2346'
+    three_month = self.button_3_1.background == '#0a2346'
+    six_month = self.button_4_1.background == '#0a2346'
 
     if not loan_amount:
       self.label_22.text = "Please fill the loan amount"
@@ -244,7 +244,7 @@ class loan_type(loan_typeTemplate):
     button_names = ["One Time", "Monthly", "Three Month", "Six Month"]
     for i, emi_option in enumerate(button_names):
       button = getattr(self, f'button_{i + 1}_1')
-      if button.background == '#00008B':
+      if button.background == '#0a2346':
         return emi_option
     return None
 
