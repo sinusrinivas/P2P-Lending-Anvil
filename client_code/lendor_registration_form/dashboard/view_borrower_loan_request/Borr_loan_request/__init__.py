@@ -66,8 +66,10 @@ class Borr_loan_request(Borr_loan_requestTemplate):
                 except anvil.tables.TableError as e:
                     self.label_member_rom.text = f"Error fetching loan details: {e}"
             else:
+                self.label_member_since.text = "N/A"
                 self.label_bank_acc_details.text = "No data for bank_acc_details in user_request"
         except anvil.tables.TableError as e:
+            self.label_member_since.text = "N/A"
             self.label_bank_acc_details.text = f"Error fetching user details: {e}"
            
         loan_id = self.label_loan_id.text
@@ -75,18 +77,43 @@ class Borr_loan_request(Borr_loan_requestTemplate):
         borrower_customer_id = self.label_user_id.text
         self.entered_borrower_customer_id = borrower_customer_id
       
-    def calculate_rom(self, interest_rate, min_amount_text):
-        # Calculate ROM based on your business logic
-        try:
-            # Convert min_amount_text to a numeric value (assuming it's a string representing a number)
-            min_amount = float(min_amount_text)
-
-            earnings = interest_rate * min_amount
-
-            return earnings
-        except ValueError as e:
-            print(f"Error converting min_amount_text to numeric: {e}")
-            return 0
+    def calculate_rom(self):
+        email = self.email 
+    
+        user_profile = app_tables.fin_user_profile.get(email_user=email)
+    
+        if user_profile:
+            user_id = user_profile['customer_id']
+    
+            # Count the number of loans the user already has (based on specific patterns)
+            try:
+                existing_loans = app_tables.fin_loan_details.search(
+                    borrower_customer_id=user_id,
+                    loan_updated_status=q.any_of(
+                        q.like('accept%'),
+                        q.like('Approved%'),
+                        q.like('approved%'),
+                        q.like('under process%'),
+                        q.like('foreclosure%'),
+                        # q.like('close%'),
+                        # q.like('Close%'),
+                        # q.like('closed loans%'),
+                        q.like('disbursed loan%'),
+                        q.like('Disbursed loan%'),
+                        q.like('Under Process%')
+                    )
+                )
+                num_existing_loans = len(existing_loans)
+              
+                closed_loans = app_tables.fin_loan_details.search(
+                    borrower_customer_id=user_id,
+                    loan_updated_status=q.any_of(
+                        q.like('close%'),
+                        q.like('Close%'),
+                        q.like('closed loans%')
+                    )
+                )
+                num_closed_loans = len(closed_loans)
 
     
 
