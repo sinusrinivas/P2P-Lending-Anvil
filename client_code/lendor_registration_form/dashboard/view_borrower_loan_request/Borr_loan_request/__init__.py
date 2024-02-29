@@ -80,16 +80,16 @@ class Borr_loan_request(Borr_loan_requestTemplate):
       
     def calculate_rom(self):
       email = self.email
-      user_profile = app_tables.fin_loan_details.get(lender_email_id=email)
+      borrower_customer = self.selected_row['borrower_customer_id']
+      user_profile = app_tables.fin_user_profile.get(email_user=email)
 
       if user_profile:
-        # user_id = user_profile['customer_id']
-        borrower_customer_id = user_profile['borrower_customer_id']
-        print("borrower_customer_id:",borrower_customer_id)
+        user_id = user_profile['customer_id']
+        
         # Count the number of loans the user already has (based on specific patterns)
         try:
-            existing_loans = list(app_tables.fin_loan_details.search(
-                borrower_customer_id=borrower_customer_id,
+            existing_loans = app_tables.fin_loan_details.search(
+                borrower_customer_id=borrower_customer,
                 loan_updated_status=q.any_of(
                     q.like('under process%'),
                     q.like('Under Process%'),
@@ -100,13 +100,13 @@ class Borr_loan_request(Borr_loan_requestTemplate):
                     q.like('disbursed loan%'),
                     q.like('Disbursed loan%')
                 )
-            ))
-            
+            )
+            existing_loans = [existing_loan] if existing_loan else []
             num_existing_loans = len(existing_loans)
             print("Existing Loans:", existing_loans)  
 
             closed_loans = list(app_tables.fin_loan_details.search(
-                borrower_customer_id=borrower_customer_id),
+                borrower_customer_id=borrower_customer),
                 loan_updated_status=q.any_of(
                     q.like('close%'),
                     q.like('Close%'),
