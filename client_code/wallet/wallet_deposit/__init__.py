@@ -237,12 +237,12 @@ class wallet_deposit(wallet_depositTemplate):
           if wallet_add['wallet_amount'] is None:
             wallet_add['wallet_amount'] = 0
             
-            wallet_add['wallet_amount'] += loan_amount
-            wallet_add.update()
+          wallet_add['wallet_amount'] += loan_amount
+          wallet_add.update()
 
-            # You may want to update the loan_updated_status here if needed
-            updated_loan_status = 'disbursed loan'
-            loan_row['loan_updated_status'] = updated_loan_status
+          # You may want to update the loan_updated_status here if needed
+          updated_loan_status = 'disbursed loan'
+          loan_row['loan_updated_status'] = updated_loan_status
             # Save the changes to the loan_row
             loan_row.update()
             self.check_time_difference()
