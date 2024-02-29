@@ -41,8 +41,8 @@ class Borr_loan_request(Borr_loan_requestTemplate):
             if user_request is not None:
                 # Assuming 'bank_acc_details' is a valid column name in the 'borrower' table
                 bank_acc_details = user_request['bank_acc_details']
-                borrower_approve_date = user_request['borrower_approve_date']
-                self.label_member_since.text = f"{borrower_approve_date}"
+                borrower_since = user_request['borrower_since']
+                self.label_member_since.text = f"{borrower_since}"
                 self.label_bank_acc_details.text = f"{bank_acc_details}"
                 
                 # Fetch additional details from the 'loan_details' table

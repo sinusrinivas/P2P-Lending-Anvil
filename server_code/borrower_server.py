@@ -165,6 +165,10 @@ def add_borrower_step6(bank_id, bank_branch, user_id):
         )
 
         fin_borrower_row['credit_limit'] = 1000000
+
+        if row[0]['last_confirm']:
+          fin_borrower_row['borrower_since']=datetime.now().date()
+          
         fin_borrower_row.update()
 
     else:
