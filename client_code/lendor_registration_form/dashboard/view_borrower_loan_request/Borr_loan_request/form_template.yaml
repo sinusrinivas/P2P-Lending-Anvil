@@ -118,11 +118,11 @@ components:
         layout_properties: {row: HYIUHK, width_xs: 3, col_xs: 6, width: 157.197}
       - type: Label
         properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-          visible: true, text: 'Member Rom :', font_size: null, font: '', spacing_above: small,
+          visible: true, text: 'Member ROM :', font_size: null, font: '', spacing_above: small,
           icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
           underline: false, icon: ''}
         name: label_6
-        layout_properties: {row: EHRDEQ, width_xs: 3, col_xs: 3, width: 157.197}
+        layout_properties: {row: EHRDEQ, width_xs: 3, col_xs: 3, width: 123.25}
       - type: Label
         properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
           visible: true, text: '', font_size: null, font: '', spacing_above: small,
