@@ -44,6 +44,8 @@ class star_1_borrower_registration_form_2_employment(star_1_borrower_registratio
       open_form('borrower_registration_form.star_1_borrower_registration_form_2_employment.star_1_borrower_registration_form_2_employment_student',user_id=user_id)
     elif status_of_user == 'Employee':
       open_form('borrower_registration_form.star_1_borrower_registration_form_2_employment.star_1_borrower_registration_form_2_employment_emp_detail_1',user_id=user_id)
-    else:
-      open_form('borrower_registration_form.star_1_borrower_registration_form_2_employment',user_id=user_id)
-      alert('Please select a valid Profesion')
+    elif status_of_user == 'Business':
+      open_form('borrower_registration_form.star_1_borrower_registration_form_2_employment.star_1_borrower_registration_form_2_employment_business_1',user_id=user_id) 
+    # else:
+    #   open_form('borrower_registration_form.star_1_borrower_registration_form_2_employment',user_id=user_id)
+    #   alert('Please select a valid Profesion')
