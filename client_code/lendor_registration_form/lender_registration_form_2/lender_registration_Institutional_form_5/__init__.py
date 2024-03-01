@@ -37,7 +37,7 @@ class lender_registration_Institutional_form_5(lender_registration_Institutional
     proof_verification = self.file_loader_1.file
     user_id = self.userId
     if not reg_off_add or not off_add_proof or not proof_verification:
-      Notification("Please all the fields")
+      Notification("Please all the fields").show()
     else:
      anvil.server.call('add_lendor_institutional_form_5',reg_off_add,off_add_proof,proof_verification,user_id)
      open_form('lendor_registration_form.lender_registration_form_3_marital_details',user_id=user_id)

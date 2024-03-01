@@ -74,6 +74,24 @@ class lender_registration_form_3_marital_married(lender_registration_form_3_mari
             self.prev_4.visible = False
             self.button_1.visible = False
 
+        else:
+            # If not married, hide the spouse radio button and related panels
+            self.grid_panel_1.visible = False
+            self.grid_panel_2.visible = False
+            self.grid_panel_3.visible = False
+            self.grid_panel_4.visible = False
+            self.button_submit.visible = False
+            self.button_submit_copy.visible = False
+            self.button_submit_copy_2.visible = False
+            self.button_submit_copy_3.visible = False
+            self.prev_1.visible = False
+            self.prev_2.visible = False
+            self.prev_3.visible = False
+            self.prev_4.visible = False
+            self.button_1.visible = False
+            self.radio_button_3.selected = False  # Ensure the radio button is deselected
+
+
 
     def radio_button_4_clicked(self, **event_args):
         """This method is called when this radio button is selected"""

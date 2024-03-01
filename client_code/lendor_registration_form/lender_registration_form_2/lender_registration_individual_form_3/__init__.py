@@ -37,14 +37,22 @@ class lender_registration_individual_form_3(lender_registration_individual_form_
     
 
   def button_1_click(self, **event_args):
-    annual_salary = self.text_box_1.text
-    designation = self.text_box_2.text
-    emp_id_proof = self.file_loader_1.file
-    last_six_month = self.file_loader_2.file
-    user_id = self.userId
-    anvil.server.call('add_lendor_individual_form_3',annual_salary, designation,emp_id_proof,last_six_month,user_id)
-    open_form('lendor_registration_form.lender_registration_form_3_marital_details',user_id=self.userId)
-
+      annual_salary = self.text_box_1.text
+      designation = self.text_box_2.text
+      emp_id_proof = self.file_loader_1.file
+      last_six_month = self.file_loader_2.file
+      user_id = self.userId
+      
+      # Validation: Check if any of the required fields is empty
+      if not annual_salary or not designation or not emp_id_proof or not last_six_month:
+          Notification("Please fill all the required fields").show()
+      else:
+          # Validation: Check if the uploaded files are not empty
+          if not emp_id_proof or not last_six_month:
+              Notification("Please upload all required documents").show()
+          else:
+              anvil.server.call('add_lendor_individual_form_3', annual_salary, designation, emp_id_proof, last_six_month, user_id)
+              open_form('lendor_registration_form.lender_registration_form_3_marital_details', user_id=self.userId)
   def button_3_click(self, **event_args):
     open_form("bank_users.user_form")
     

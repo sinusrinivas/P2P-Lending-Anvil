@@ -61,7 +61,7 @@ components:
     layout_properties: {}
     event_bindings: {clicked: radio_button_4_clicked}
 - name: button_1
-  properties: {role: elevated-button, align: right, tooltip: '', border: '', enabled: true,
+  properties: {role: elevated-button, align: center, tooltip: '', border: '', enabled: true,
     foreground: 'theme:On Primary', visible: true, text: prev, font_size: null, font: '',
     spacing_above: small, icon_align: left, spacing_below: small, italic: false, background: '#0b2547',
     bold: true, underline: false, icon: 'fa:angle-double-left'}
@@ -197,8 +197,8 @@ components:
   event_bindings: {click: prev_1_click}
 - name: button_submit
   properties: {role: elevated-button, align: left, tooltip: '', border: '', enabled: true,
-    foreground: 'theme:On Primary', visible: false, text: Submit, font_size: null,
-    font: '', spacing_above: small, icon_align: right, spacing_below: small, italic: false,
+    foreground: 'theme:On Primary', visible: false, text: Next, font_size: null, font: '',
+    spacing_above: small, icon_align: right, spacing_below: small, italic: false,
     background: '#0b2547', bold: true, underline: false, icon: 'fa:angle-double-right'}
   type: Button
   layout_properties: {grid_position: 'JFBPSA,XGFVFG'}
@@ -336,8 +336,8 @@ components:
   event_bindings: {click: prev_2_click}
 - name: button_submit_copy
   properties: {role: elevated-button, align: left, tooltip: '', border: '', enabled: true,
-    foreground: 'theme:On Primary', visible: false, text: Submit, font_size: null,
-    font: '', spacing_above: small, icon_align: right, spacing_below: small, italic: false,
+    foreground: 'theme:On Primary', visible: false, text: Next, font_size: null, font: '',
+    spacing_above: small, icon_align: right, spacing_below: small, italic: false,
     background: '#0b2547', bold: true, underline: false, icon: 'fa:angle-double-right'}
   type: Button
   layout_properties:
@@ -461,8 +461,8 @@ components:
   event_bindings: {click: prev_3_click}
 - name: button_submit_copy_2
   properties: {role: elevated-button, align: left, tooltip: '', border: '', enabled: true,
-    foreground: 'theme:On Primary', visible: false, text: Submit, font_size: null,
-    font: '', spacing_above: small, icon_align: right, spacing_below: small, italic: false,
+    foreground: 'theme:On Primary', visible: false, text: Next, font_size: null, font: '',
+    spacing_above: small, icon_align: right, spacing_below: small, italic: false,
     background: '#0b2547', bold: true, underline: false, icon: 'fa:angle-double-right'}
   type: Button
   layout_properties:
@@ -599,8 +599,8 @@ components:
   event_bindings: {click: prev_4_click}
 - name: button_submit_copy_3
   properties: {role: elevated-button, align: left, tooltip: '', border: '', enabled: true,
-    foreground: 'theme:On Primary', visible: false, text: Submit, font_size: null,
-    font: '', spacing_above: small, icon_align: right, spacing_below: small, italic: false,
+    foreground: 'theme:On Primary', visible: false, text: Next, font_size: null, font: '',
+    spacing_above: small, icon_align: right, spacing_below: small, italic: false,
     background: '#0b2547', bold: true, underline: false, icon: 'fa:angle-double-right'}
   type: Button
   layout_properties:

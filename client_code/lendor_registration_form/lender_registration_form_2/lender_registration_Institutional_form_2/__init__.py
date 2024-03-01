@@ -57,7 +57,7 @@ class lender_registration_Institutional_form_2(lender_registration_Institutional
     year = self.date_picker_1.date
     user_id = self.userId
     if not nearest_loc or not business_type or not empolyees_working or not year:
-      Notification("Please fill all the fields")
+      Notification("Please fill all the fields").show()
     else:
      anvil.server.call('add_lendor_institutional_form_2',nearest_loc,business_type,empolyees_working,year,user_id)
      open_form('lendor_registration_form.lender_registration_form_2.lender_registration_Institutional_form_3',user_id = user_id)

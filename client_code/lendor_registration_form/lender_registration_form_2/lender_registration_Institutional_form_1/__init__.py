@@ -45,7 +45,7 @@ class lender_registration_Institutional_form_1(lender_registration_Institutional
     business_location = self.text_box_3.text
     user_id = self.userId
     if not business_name or not business_add or not business_location:
-      Notification("Please fill all the fields")
+      Notification("Please fill all the fields").show()
     else:
       anvil.server.call('add_lendor_institutional_form_1',business_name,business_add,business_location,user_id)
       open_form('lendor_registration_form.lender_registration_form_2.lender_registration_Institutional_form_2',user_id=self.userId)

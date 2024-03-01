@@ -46,7 +46,9 @@ class lender_registration_Institutional_form_4(lender_registration_Institutional
     cin = self.text_box_4.text
     user_id = self.userId
     if not director_name or not director_no or not din or not cin:
-      Notification("Please fill all the fields")
+      Notification("Please fill all the fields").show()
+    elif not director_no.isdigit():
+          Notification("director phone number should be in digits").show() 
     else:
      anvil.server.call('add_lendor_institutional_form_4',director_name,director_no,din,cin,user_id)
      open_form('lendor_registration_form.lender_registration_form_2.lender_registration_Institutional_form_5',user_id = user_id)
