@@ -10,18 +10,7 @@ import anvil.server
 from datetime import datetime 
 from datetime import datetime, timezone
 
-# This is a server module. It runs on the Anvil server,
-# rather than in the user's browser.
-#
-# To allow anvil.server.call() to call functions here, we mark
-# them with @anvil.server.callable.
-# Here is an example - you can replace it with your own:
-#
-# @anvil.server.callable
-# def say_hello(name):
-#   print("Hello, " + name + "!")
-#   return 42
-#
+
 
 
 @anvil.server.callable
@@ -46,11 +35,6 @@ def create_wallet_entry(email, customer_id, full_name, user_type):
     else:
         return f"Wallet entry already exists for {email}. Multiple entries found."
 
-# @anvil.server.callable
-# def fetch_user_profiles(user_id):
-#     user_profiles = app_tables.fin_user_profile.search()
-#     print(user_profiles)
-#     return user_profiles
 
 @anvil.server.callable
 def fetch_user_profile(email):
