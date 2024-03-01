@@ -72,4 +72,10 @@ components:
   layout_properties: {column: DOLXPH}
   data_bindings:
   - {property: text, code: 'self.item[''AccountNumber'']'}
+- name: label_13
+  properties: {}
+  type: Label
+  layout_properties: {column: RDQBRB}
+  data_bindings:
+  - {property: text, code: 'self.item[''ProcessingFee'']', writeback: false}
 is_package: true

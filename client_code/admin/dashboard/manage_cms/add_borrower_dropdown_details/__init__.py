@@ -138,13 +138,13 @@ class add_borrower_dropdown_details(add_borrower_dropdown_detailsTemplate):
     self.column_panel_7.visible = False
     self.column_panel_8.visible = False
     self.column_panel_9.visible = False
-    self.column_panel_10.visible = True
+    self.column_panel_10.visible = False
     self.column_panel_6.visible = False
     self.column_panel_5.visible = False   
     self.column_panel_4.visible = False
     self.column_panel_3.visible = False
     # self.column_panel_2.visible = False
-    self.column_panel_10_copy.visible = False
+    self.column_panel_10_copy.visible = True
 
   def marital_button_click(self, **event_args):
     """This method is called when the button is clicked"""
@@ -233,6 +233,19 @@ class add_borrower_dropdown_details(add_borrower_dropdown_detailsTemplate):
     new_row = app_tables.fin_borrower_salary_type.add_row(borrower_salary_type=entered_data)
     self.text_box_9_copy.text = ' '
     self.refresh()
+
+  def Qualifications_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    self.column_panel_7.visible = False
+    self.column_panel_8.visible = False
+    self.column_panel_9.visible = False
+    self.column_panel_10.visible = True
+    self.column_panel_6.visible = False
+    self.column_panel_5.visible = False   
+    self.column_panel_4.visible = False
+    self.column_panel_3.visible = False
+    # self.column_panel_2.visible = False
+    self.column_panel_10_copy.visible = False
 
 
 
