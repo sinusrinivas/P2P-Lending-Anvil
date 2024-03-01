@@ -33,7 +33,7 @@ class lender_registration_education_Mtech(lender_registration_education_MtechTem
     mtech = self.file_loader_4.file
     
     if not tenth_class or not intermediate or not btech or not mtech:
-      Notification('Please fill all details').show()
+      Notification('Please upload all four files before proceed.').show()
     else:
       anvil.server.call('add_education_mtech',tenth_class,intermediate,btech,mtech,user_id)
       open_form('lendor_registration_form.lender_registration_form_2',user_id=user_id)

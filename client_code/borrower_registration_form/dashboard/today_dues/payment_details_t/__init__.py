@@ -111,20 +111,12 @@ class payment_details_t(payment_details_tTemplate):
           
           # Calculate interest amount for the remaining months
           interest_amount = self.calculate_interest(beginning_balance, selected_row['interest_rate'], remaining_months)
-          extra_payment = 0
-          # Initialize other variables (fetch from the database if needed)
-#           extension_row = app_tables.fin_extends_loan.search(
-#           loan_id = selected_row['loan_id'],
-#           order_by=q.emi_number,
-#           ascending=False,
-#           limit=1
-# )
-          
-#           # Sum up all the extra payments for the remaining months
-#           total_extra_payment = sum(row['extension_amount'] for row in extension_rows)
-          
-#           # If extra payment information is not available, assume it to be zero
-#           extra_payment = total_extra_payment if total_extra_payment else 0
+        
+          extension_row = app_tables.fin_extends_loan.get(
+          loan_id=selected_row['loan_id'],
+          emi_number=num_payments + 1  # Assuming num_payments is the last paid EMIs count
+             )
+          extra_payment = extension_row['extension_amount'] if extension_row else 0
 
           if selected_row['total_processing_fee_amount'] is not None:
               # Ensure processing fee is considered monthly
@@ -138,11 +130,23 @@ class payment_details_t(payment_details_tTemplate):
               processing_fee_per_month = 0
             
           account_number_display = account_number_display
-          scheduled_payment_made_display = "N/A"
-          emi_time_display = "N/A"
+        
+          emi_row_remaining = app_tables.fin_emi_table.search(
+              loan_id=selected_row['loan_id'],
+          )
+          latest_scheduled_payment = None
+          for row in emi_row_remaining:
+              if row['emi_number'] > num_payments:
+                  # This payment is within the remaining months
+                  if row['scheduled_payment_made'] is not None:
+                      if latest_scheduled_payment is None or row['scheduled_payment_made'] > latest_scheduled_payment:
+                          latest_scheduled_payment = row['scheduled_payment_made']
+          if latest_scheduled_payment:
+              scheduled_payment_made_display = f"{latest_scheduled_payment:%Y-%m-%d}"
+              emi_time_display = f"{latest_scheduled_payment:%I:%M %p}"
+        
           loan_updated_status = selected_row['loan_updated_status'].lower() if selected_row['loan_updated_status'] else None
-
-# Checking if loan_updated_status is 'close' before proceeding with date manipulation
+          # Checking if loan_updated_status is 'close' before proceeding with date manipulation
           if loan_updated_status in ['close', 'closed loans', 'disbursed loan', 'foreclosure']:
               formatted_payment_date_datetime = datetime.strptime(formatted_payment_date, '%Y-%m-%d')
           
@@ -172,7 +176,7 @@ class payment_details_t(payment_details_tTemplate):
               'ScheduledPayment': f"₹ {remaining_emi:.2f}",
               'Principal': f"₹ {(remaining_emi - interest_amount):.2f}",
               'Interest': f"₹ {interest_amount:.2f}",
-              'BeginningBalance': f"₹ {beginning_balance:.2f}",
+              'BeginningBalance': f"₹ {beginning_balance + extra_payment:.2f}",
               'ProcessingFee': f"₹ {processing_fee_per_month:.2f}",
               'ExtraPayment': f"₹ {extra_payment:.2f}" if extra_payment is not None else "N/A",
               'TotalPayment': f"₹ {remaining_emi + extra_payment:.2f}",
@@ -318,12 +322,6 @@ class payment_details_t(payment_details_tTemplate):
         beginning_loan_amount_balance = selected_row['loan_amount']
         ending_loan_amount_balance = beginning_loan_amount_balance
     
-        # Since processing fee is a one-time charge, apply it only at the beginning
-        #processing_fee = selected_row['processing_fee'] if selected_row['processing_fee'] is not None else 0
-    
-        # Subtract processing fee from the total repayment amount at the beginning
-        #beginning_balance -= processing_fee
-    
         # For one-time payment, calculate ending balance for the single payment
         interest_amount = beginning_loan_amount_balance * (selected_row['interest_rate'] / 100) / 12
         principal_amount = emi - interest_amount
@@ -344,13 +342,9 @@ class payment_details_t(payment_details_tTemplate):
           return tenure
       elif payment_type == 'Three Month':
           num_payments = tenure // 3
-          # if tenure % 3 != 0:
-          #     num_payments += 1
           return num_payments
       elif payment_type == 'Six Month':
           num_payments = tenure // 6
-          # if tenure % 6 != 0:
-          #     num_payments += 1
           return num_payments
       else:
           return 0

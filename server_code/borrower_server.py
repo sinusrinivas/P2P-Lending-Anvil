@@ -11,76 +11,6 @@ from datetime import datetime
 from . import bessem as bessemfunctions
 
 
-# @anvil.server.callable
-# def add_borrower_step1(full_name,gender,dob,user_id):
-#   row = app_tables.fin_user_profile.search(customer_id=user_id)
-#   if row:
-#     row[0]['full_name'] = full_name
-#     row[0]['gender'] = gender
-#     row[0]['date_of_birth'] = dob
-#     row[0]['form_count']=0
-
-# @anvil.server.callable
-# def add_borrower_3a1_form(street_adress_1,street_address_2,city,user_id):
-#   row = app_tables.fin_user_profile.search(customer_id=user_id)
-#   if row:
-#     row[0]['street_adress_1'] = street_adress_1
-#     row[0]['street_address_2'] = street_address_2
-#     row[0]['city'] = city    
-#     row[0]['form_count']=3
-# @anvil.server.callable
-# def add_borrower_step2(mobile_no,user_photo,alternate_email,user_id):
-#   row=app_tables.fin_user_profile.search(customer_id=user_id)
-#   if row:
-#     row[0]['mobile']=mobile_no
-#     row[0]['user_photo']=user_photo
-#     row[0]['another_email']= alternate_email
-#     row[0]['form_count']=1
-
-# @anvil.server.callable
-# def add_borrower_step3(aadhar,aadhar_card,pan,pan_card,user_id):
-#   row=app_tables.fin_user_profile.search(customer_id=user_id)
-#   if row:
-#     row[0]['aadhaar_no']=aadhar
-#     row[0]['aadhaar_photo']=aadhar_card
-#     row[0]['pan_number']=pan
-#     row[0]['pan_photo']=pan_card
-#     row[0]['form_count']=2
-
-# @anvil.server.callable
-# def add_borrower_step3a(father_name,father_age,mother_name,mother_age,user_id):
-#   row = app_tables.fin_user_profile.search(customer_id=user_id)
-#   if row:
-#     row[0]['father_name'] = father_name
-#     row[0]['father_age'] = father_age
-#     row[0]['mother_name'] = mother_name
-#     row[0]['mother_age'] = mother_age
-#     row[0]['form_count']=4   
-    
-# @anvil.server.callable
-# def add_borrower_step4a(spouse_name,marrege_date,spouse_mobile_no,user_id):
-#   row=app_tables.fin_user_profile.search(customer_id=user_id)
-#   if row:
-#    row[0]['spouse_name']=spouse_name
-#    row[0]['Date_mariage']=marrege_date
-#    row[0]['spouse_mobile']=spouse_mobile_no
-
-# @anvil.server.callable
-# def add_borrower_step5(spouse_company_name,spouse_company_address,spouse_profficen,user_id):
-#   row = app_tables.fin_user_profile.search(customer_id=user_id)
-#   if row:
-#     row[0]['spouse_company_name']=spouse_company_name
-#     row[0]['spouse_company_address']=spouse_company_address
-#     row[0]['spouse_designation']=spouse_profficen
-
-# @anvil.server.callable
-# def add_borrower_spouse(annual_ctc,office_number,user_id):
-#   row=app_tables.fin_user_profile.search(customer_id=user_id)
-#   if row:
-#     row[0]['spouse_annual_ctc']=annual_ctc
-#     row[0]['spouse_office_number']=office_number
-
-
 @anvil.server.callable
 def add_borrower_step1(qualification,user_id):
   row = app_tables.fin_user_profile.search(customer_id=user_id)
@@ -130,18 +60,6 @@ def add_borrower_step5(account_name, account_type,account_number,bank_name, user
     row[0]['bank_name'] = bank_name  
     row[0]['form_count']=5
 
-# @anvil.server.callable
-# def add_borrower_step6(bank_id,bank_branch, user_id):
-#   row = app_tables.fin_user_profile.search(customer_id=user_id)
-#   if row:
-#     row[0]['bank_id'] = bank_id
-#     row[0]['account_bank_branch'] = bank_branch
-#     row[0]['usertype'] = 'borrower'
-#     row[0]['last_confirm'] = True
-#     row[0]['form_count']=6
-#     row[0]['bessem_value'] = bessemfunctions.final_points_update_bessem_table(user_id)
-#     # find_user_and_add_bessem_value(user_id=user_id)
-
 @anvil.server.callable
 def add_borrower_step6(bank_id, bank_branch, user_id):
     row = app_tables.fin_user_profile.search(customer_id=user_id)
@@ -169,15 +87,6 @@ def add_borrower_step6(bank_id, bank_branch, user_id):
                 existing_borrower_row['borrower_since'] = datetime.now().date()
 
             existing_borrower_row.update()
-            # if row[0]['last_confirm']:
-            #     last_confirm_date  = datetime.now().date()        
-            #     current_date = datetime.now().date()
-            #     difference = current_date - last_confirm_date
-
-            #     # Update borrower_since with the difference in years and days
-            #     existing_borrower_row['borrower_since'] = f"{difference.days // 365} years {difference.days % 365} days"
-
-            # existing_borrower_row.update()
         else:
             # If no row exists, create a new row in fin_borrower table
             fin_borrower_row = app_tables.fin_borrower.add_row(
