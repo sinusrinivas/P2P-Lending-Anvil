@@ -155,18 +155,44 @@ def add_borrower_step6(bank_id, bank_branch, user_id):
         row[0]['last_confirm'] = True
         row[0]['bessem_value'] = bessemfunctions.final_points_update_bessem_table(user_id)
 
-        # Create a new row in fin_borrower table
-        fin_borrower_row = app_tables.fin_borrower.add_row(
-            customer_id=row[0]['customer_id'],
-            email_id=row[0]['email_user'],
-            user_name=row[0]['full_name'],
-            bank_acc_details=row[0]['account_number'],
-            beseem_score=row[0]['bessem_value']
-        )
+        # Search for an existing row with the same email_id in fin_borrower table
+        existing_borrower_row = app_tables.fin_borrower.get(email_id=row[0]['email_user'])
+        
+        if existing_borrower_row:
+            # If a row exists, update the existing row
+            existing_borrower_row['user_name'] = row[0]['full_name']
+            existing_borrower_row['bank_acc_details'] = row[0]['account_number']
+            existing_borrower_row['beseem_score'] = row[0]['bessem_value']
+            existing_borrower_row['credit_limit'] = 1000000
 
-        fin_borrower_row['credit_limit'] = 1000000
-        fin_borrower_row.update()
+            if row[0]['last_confirm']:
+                existing_borrower_row['borrower_since'] = datetime.now().date()
 
+            existing_borrower_row.update()
+            # if row[0]['last_confirm']:
+            #     last_confirm_date  = datetime.now().date()        
+            #     current_date = datetime.now().date()
+            #     difference = current_date - last_confirm_date
+
+            #     # Update borrower_since with the difference in years and days
+            #     existing_borrower_row['borrower_since'] = f"{difference.days // 365} years {difference.days % 365} days"
+
+            # existing_borrower_row.update()
+        else:
+            # If no row exists, create a new row in fin_borrower table
+            fin_borrower_row = app_tables.fin_borrower.add_row(
+                customer_id=row[0]['customer_id'],
+                email_id=row[0]['email_user'],
+                user_name=row[0]['full_name'],
+                bank_acc_details=row[0]['account_number'],
+                beseem_score=row[0]['bessem_value'],
+                credit_limit=1000000
+            )
+
+            if row[0]['last_confirm']:
+                fin_borrower_row['borrower_since'] = datetime.now().date()
+
+            fin_borrower_row.update()
     else:
         # If user not found in fin_user_profile table
         raise ValueError("User not found in fin_user_profile table")

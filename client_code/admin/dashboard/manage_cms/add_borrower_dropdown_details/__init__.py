@@ -138,13 +138,13 @@ class add_borrower_dropdown_details(add_borrower_dropdown_detailsTemplate):
     self.column_panel_7.visible = False
     self.column_panel_8.visible = False
     self.column_panel_9.visible = False
-    self.column_panel_10.visible = False
+    self.column_panel_10.visible = True
     self.column_panel_6.visible = False
     self.column_panel_5.visible = False   
     self.column_panel_4.visible = False
     self.column_panel_3.visible = False
     # self.column_panel_2.visible = False
-    self.column_panel_10_copy.visible = True
+    self.column_panel_10_copy.visible = False
 
   def marital_button_click(self, **event_args):
     """This method is called when the button is clicked"""
