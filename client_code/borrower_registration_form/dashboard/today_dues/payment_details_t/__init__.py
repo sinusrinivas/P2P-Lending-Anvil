@@ -111,20 +111,12 @@ class payment_details_t(payment_details_tTemplate):
           
           # Calculate interest amount for the remaining months
           interest_amount = self.calculate_interest(beginning_balance, selected_row['interest_rate'], remaining_months)
-          extra_payment = 0
-          # Initialize other variables (fetch from the database if needed)
-#           extension_row = app_tables.fin_extends_loan.search(
-#           loan_id = selected_row['loan_id'],
-#           order_by=q.emi_number,
-#           ascending=False,
-#           limit=1
-# )
-          
-#           # Sum up all the extra payments for the remaining months
-#           total_extra_payment = sum(row['extension_amount'] for row in extension_rows)
-          
-#           # If extra payment information is not available, assume it to be zero
-#           extra_payment = total_extra_payment if total_extra_payment else 0
+        
+          extension_row = app_tables.fin_extends_loan.get(
+          loan_id=selected_row['loan_id'],
+          emi_number=num_payments + 1  # Assuming num_payments is the last paid EMIs count
+             )
+          extra_payment = extension_row['extension_amount'] if extension_row else 0
 
           if selected_row['total_processing_fee_amount'] is not None:
               # Ensure processing fee is considered monthly
@@ -184,7 +176,7 @@ class payment_details_t(payment_details_tTemplate):
               'ScheduledPayment': f"₹ {remaining_emi:.2f}",
               'Principal': f"₹ {(remaining_emi - interest_amount):.2f}",
               'Interest': f"₹ {interest_amount:.2f}",
-              'BeginningBalance': f"₹ {beginning_balance:.2f}",
+              'BeginningBalance': f"₹ {beginning_balance + extra_payment:.2f}",
               'ProcessingFee': f"₹ {processing_fee_per_month:.2f}",
               'ExtraPayment': f"₹ {extra_payment:.2f}" if extra_payment is not None else "N/A",
               'TotalPayment': f"₹ {remaining_emi + extra_payment:.2f}",
