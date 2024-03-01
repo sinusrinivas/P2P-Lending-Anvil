@@ -140,20 +140,26 @@ class payment_details_t(payment_details_tTemplate):
           account_number_display = account_number_display
           scheduled_payment_made_display = "N/A"
           emi_time_display = "N/A"
-          formatted_payment_date_datetime = datetime.strptime(formatted_payment_date, '%Y-%m-%d')
+          loan_updated_status = selected_row['loan_updated_status'].lower() if selected_row['loan_updated_status'] else None
+
+# Checking if loan_updated_status is 'close' before proceeding with date manipulation
+          if loan_updated_status in ['close', 'closed loans', 'disbursed loan', 'foreclosure']:
+              formatted_payment_date_datetime = datetime.strptime(formatted_payment_date, '%Y-%m-%d')
           
-          if selected_row['emi_payment_type'] == 'Three Month':
-              # For 'Three Month', add 90 days and update to the next boundary
-              payment_date = formatted_payment_date_datetime + timedelta(days=90)
-          elif selected_row['emi_payment_type'] == 'Six Month':
-              # For 'Six Month', add 180 days
-              payment_date = formatted_payment_date_datetime + timedelta(days=180)
+              if selected_row['emi_payment_type'] == 'Three Month':
+                  # For 'Three Month', add 90 days and update to the next boundary
+                  payment_date = formatted_payment_date_datetime + timedelta(days=90)
+              elif selected_row['emi_payment_type'] == 'Six Month':
+                  # For 'Six Month', add 180 days
+                  payment_date = formatted_payment_date_datetime + timedelta(days=180)
+              else:
+                  # Assuming payment date is None for other payment types
+                  payment_date = None
+          
+              # Concatenate only the date component if payment_date is not None
+              formatted_payment_date = payment_date.strftime('%Y-%m-%d') if payment_date else "Awaiting Update"  # Indicate that this is for the remaining month(s)
           else:
-              # Assuming payment date is None for other payment types
-              payment_date = None
-          
-          # Concatenate only the date component if payment_date is not None
-          formatted_payment_date = payment_date.strftime('%Y-%m-%d') if payment_date else "Awaiting Update"  # Indicate that this is for the remaining month(s)
+              formatted_payment_date = "Awaiting Update"
           beginning_balance = ending_balance  # Use the total repayment amount
           
           # Add the details for the remaining month(s)
