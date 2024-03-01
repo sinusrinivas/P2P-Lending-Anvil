@@ -21,6 +21,8 @@ class under_process(under_processTemplate):
     self.list_2 = []
     self.list_3 = []
     self.list_4 = []
+    self.list_5 = []
+    self.list_6 = []
     
     
     for i in self.data:
@@ -29,6 +31,8 @@ class under_process(under_processTemplate):
       self.list_2.append(i['borrower_customer_id'])
       self.list_3.append(i['borrower_full_name'])
       self.list_4.append(i['loan_updated_status'])
+      self.list_5.append(i['lender_full_name'])
+      self.list_6.append(i['lender_customer_id'])
     print(a)
 
     self.result = []
@@ -43,9 +47,9 @@ class under_process(under_processTemplate):
           self.index.append(b)
           
       for i in self.index:
-        self.result.append({'loan_id' : self.list_1[i], 'coustmer_id' : self.list_2[i], 'full_name' : self.list_3[i], 'loan_status' : self.list_4[i]})
+        self.result.append({'loan_id' : self.list_1[i], 'coustmer_id' : self.list_2[i], 'full_name' : self.list_3[i], 'loan_status' : self.list_4[i],'lendor_full_name' : self.list_5[i],'lender_customer_id':self.list_6[i]})
 
-      self.repeating_panel_1.items = self.result
+      self.repeating_panel_2.items = self.result
 
   # def link_1_click(self, **event_args):
   #   """This method is called when the link is clicked"""

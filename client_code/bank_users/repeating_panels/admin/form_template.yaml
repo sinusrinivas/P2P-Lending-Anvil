@@ -2,9 +2,9 @@ is_package: true
 container: {type: ColumnPanel}
 components:
 - name: xy_panel_1
-  properties: {height: 358.99993896484375, role: outlined-card}
+  properties: {height: 360.3999938964844, role: outlined-card}
   type: XYPanel
-  layout_properties: {grid_position: 'IHYPEC,GSWOLL'}
+  layout_properties: {grid_position: 'SCZVYV,ZVDIDE'}
   components:
   - name: outlined_button_1
     properties: {text: View Loan Details, role: outlined-button, align: center, font_size: null,
@@ -35,19 +35,11 @@ components:
     properties: {}
     type: Label
     layout_properties: {x: 737.8068528622389, y: 199.0454602688551, width: 200}
-  - name: term
-    properties: {}
-    type: Label
-    layout_properties: {x: 738.5454711914062, y: 169.68182806670666, width: 200}
-  - name: interest_rate
-    properties: {}
-    type: Label
-    layout_properties: {x: 736.9886765927076, y: 141.31818060576916, width: 200}
   - name: label_3
-    properties: {text: '---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------',
-      foreground: grey}
+    properties: {text: '------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------',
+      foreground: grey, align: center}
     type: Label
-    layout_properties: {x: 0.147705078125, y: 108.6477323025465, width: 938.3977661132812}
+    layout_properties: {x: 0.147705078125, y: 108.6477323025465, width: 938.4028450195312}
   - name: image_1
     properties: {height: 63.399932861328125, source: 'https://freesvg.org/img/abstract-user-flat-4.png'}
     type: Image
@@ -56,22 +48,18 @@ components:
     properties: {}
     type: Label
     layout_properties: {x: 77.17046980559826, y: 85.48864416778088, width: 200}
+    data_bindings:
+    - {property: text, code: 'self.item[''coustmer_id'']'}
   - name: borrower_name
     properties: {bold: true}
     type: Label
     layout_properties: {x: 77.06814436614513, y: 59.68181852996349, width: 200}
+    data_bindings:
+    - {property: text, code: 'self.item[''full_name'']'}
   - name: image_1_copy
     properties: {height: 63.399932861328125, source: 'https://freesvg.org/img/abstract-user-flat-4.png'}
     type: Image
     layout_properties: {x: 853.3750152587891, y: 53.13636641204357, width: 85.17045593261719}
-  - name: lendor_mobile
-    properties: {}
-    type: Label
-    layout_properties: {x: 738.5454711914062, y: 82.22727255523205, width: 200}
-  - name: lendor_name
-    properties: {}
-    type: Label
-    layout_properties: {x: 733.8294969052076, y: 53.86364226043224, width: 200}
   - name: product_details
     properties: {align: center}
     type: Label
@@ -80,3 +68,27 @@ components:
     properties: {bold: true, align: center}
     type: Label
     layout_properties: {x: 343.5568528622389, y: 0.04545454680919647, width: 200}
+  - name: label_1
+    properties: {text: '%', align: left, bold: false}
+    type: Label
+    layout_properties: {x: 776.7375610359013, y: 147.78750610351562, width: 30.399999618530273}
+  - name: interest_rate
+    properties: {align: left, text: ''}
+    type: Label
+    layout_properties: {x: 741.4125488288701, y: 147.78750610351562, width: 30.587500000000006}
+  - name: term
+    properties: {align: left}
+    type: Label
+    layout_properties: {x: 737.9751098640263, y: 174.1875, width: 94.51250457763672}
+  - name: lendor_name
+    properties: {bold: true, align: right}
+    type: Label
+    layout_properties: {x: 669.7625396735966, y: 51.38750457763672, width: 178.9869755859375}
+    data_bindings:
+    - {property: text, code: 'self.item[''lendor_full_name'']', writeback: false}
+  - name: lendor_mobile
+    properties: {align: right}
+    type: Label
+    layout_properties: {x: 655.5124176032841, y: 75.1875, width: 200}
+    data_bindings:
+    - {property: text, code: 'self.item[''lender_customer_id'']', writeback: false}
