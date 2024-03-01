@@ -265,6 +265,7 @@ class payment_details_t(payment_details_tTemplate):
 
     def calculate_three_month_emi_and_balance(self, selected_row, current_month):
       emi = self.calculate_emi(selected_row)
+      emi = emi * 3
       beginning_balance = selected_row['total_repayment_amount']
   
       # Initialize Total Repayment Beginning Balance (TRBB) and Total Repayment Ending Balance (TREB)
@@ -290,6 +291,7 @@ class payment_details_t(payment_details_tTemplate):
         
     def calculate_six_month_emi_and_balance(self, selected_row, current_month):
       emi = self.calculate_emi(selected_row)
+      emi = emi * 6
       beginning_balance = selected_row['total_repayment_amount']
   
       # Initialize Total Repayment Beginning Balance (TRBB) and Total Repayment Ending Balance (TREB)
@@ -359,11 +361,11 @@ class payment_details_t(payment_details_tTemplate):
         elif selected_row['emi_payment_type'] == 'One Time':
             emi = selected_row['total_repayment_amount']
         elif selected_row['emi_payment_type'] == 'Three Month':
-            monthly_interest_rate = (selected_row['interest_rate'] / 100) / (12*3)  # Convert annual interest rate to monthly
-            emi = (loan_amount * monthly_interest_rate * ((1 + monthly_interest_rate) ** (tenure / 3))) / (((1 + monthly_interest_rate) ** (tenure / 3)) - 1)
+            monthly_interest_rate = (selected_row['interest_rate'] / 100) / (12)  # Convert annual interest rate to monthly
+            emi = (loan_amount * monthly_interest_rate * ((1 + monthly_interest_rate) ** (tenure ))) / (((1 + monthly_interest_rate) ** (tenure)) - 1)
         elif selected_row['emi_payment_type'] == 'Six Month':
-            monthly_interest_rate = (selected_row['interest_rate'] / 100) / (12 * 6)  # Corrected calculation for 6 months
-            emi = (loan_amount * monthly_interest_rate * ((1 + monthly_interest_rate) ** (tenure / 6))) / (((1 + monthly_interest_rate) ** (tenure / 6)) - 1)
+            monthly_interest_rate = (selected_row['interest_rate'] / 100) / (12 )  # Corrected calculation for 6 months
+            emi = (loan_amount * monthly_interest_rate * ((1 + monthly_interest_rate) ** (tenure ))) / (((1 + monthly_interest_rate) ** (tenure )) - 1)
         else:
             emi = 0  # Handle unsupported payment types
     
