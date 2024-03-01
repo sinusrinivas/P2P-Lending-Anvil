@@ -396,12 +396,8 @@ class payment_details_extension(payment_details_extensionTemplate):
                         emi = self.calculate_scheduled_payment(selected_row['loan_amount'], monthly_interest_rate, (total_tenure/6))
         
             # If the calculated emi is non-zero, calculate principal and other details
-            if emi != 0:
-                if month == (last_paid_emi_number + 1):
-                    total_payment = emi + extension_fee_amount
-                else:
-                    total_payment = emi
-                # total_payment = emi + extension_fee_amount if month == (last_paid_emi_number + 1) else emi
+            if emi != 0:                
+                total_payment = emi + extension_fee_amount if month == (last_paid_emi_number + 1) else emi
                 interest_amount = last_paid_emi_ending_balance * monthly_interest_rate
                 principal_amount = emi - interest_amount
                 ending_balance = last_paid_emi_ending_balance - principal_amount 

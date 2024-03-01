@@ -17,7 +17,7 @@ services:
 - source: /runtime/services/anvil/secrets.yml
   client_config: {}
   server_config: {}
-startup: {type: form, module: admin.dashboard}
+startup: {type: form, module: bank_users.main_form}
 package_name: bank_client
 allow_embedding: false
 name: P2P Lending App
@@ -67,7 +67,7 @@ db_schema:
       admin_ui: {width: 200}
       type: string
   fin_lendor_no_of_employees:
-    client: full
+    client: none
     server: full
     columns:
     - name: lendor_no_of_employees
@@ -119,6 +119,41 @@ db_schema:
       admin_ui: {width: 200, order: 0.5}
       type: number
     title: fin_wallet
+  fin_lendor_manage_dropdown:
+    title: fin_lendor_manage_dropdown
+    client: full
+    server: full
+    columns:
+    - name: gender
+      admin_ui: {width: 200}
+      type: string
+    - name: business_type
+      admin_ui: {width: 200}
+      type: string
+    - name: no_of_employees
+      admin_ui: {width: 200}
+      type: string
+    - name: employment_type
+      admin_ui: {width: 200}
+      type: string
+    - name: salary_type
+      admin_ui: {width: 200}
+      type: string
+    - name: account_type
+      admin_ui: {width: 200}
+      type: string
+    - name: qualification
+      admin_ui: {width: 200}
+      type: string
+    - name: lending_type
+      admin_ui: {width: 200}
+      type: string
+    - name: lending_period
+      admin_ui: {width: 200}
+      type: string
+    - name: organization_type
+      admin_ui: {width: 230}
+      type: string
   fin_lendor_lending_type:
     client: full
     server: full
@@ -1017,6 +1052,9 @@ db_schema:
       type: string
     - name: account_type
       admin_ui: {width: 200, order: 8}
+      type: string
+    - name: ifsc_code
+      admin_ui: {width: 200}
       type: string
     title: fin_wallet_bank_account_table
   fin_product_group:
