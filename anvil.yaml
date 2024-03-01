@@ -118,9 +118,6 @@ db_schema:
     - name: customer_id
       admin_ui: {width: 200, order: 0.5}
       type: number
-    - name: status
-      admin_ui: {width: 200}
-      type: bool
     title: fin_wallet
   fin_lendor_lending_type:
     client: full
