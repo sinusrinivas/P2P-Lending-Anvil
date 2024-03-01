@@ -138,11 +138,23 @@ class payment_details_t(payment_details_tTemplate):
               processing_fee_per_month = 0
             
           account_number_display = account_number_display
-          scheduled_payment_made_display = "N/A"
-          emi_time_display = "N/A"
+        
+          emi_row_remaining = app_tables.fin_emi_table.search(
+              loan_id=selected_row['loan_id'],
+          )
+          latest_scheduled_payment = None
+          for row in emi_row_remaining:
+              if row['emi_number'] > num_payments:
+                  # This payment is within the remaining months
+                  if row['scheduled_payment_made'] is not None:
+                      if latest_scheduled_payment is None or row['scheduled_payment_made'] > latest_scheduled_payment:
+                          latest_scheduled_payment = row['scheduled_payment_made']
+          if latest_scheduled_payment:
+              scheduled_payment_made_display = f"{latest_scheduled_payment:%Y-%m-%d}"
+              emi_time_display = f"{latest_scheduled_payment:%I:%M %p}"
+        
           loan_updated_status = selected_row['loan_updated_status'].lower() if selected_row['loan_updated_status'] else None
-
-# Checking if loan_updated_status is 'close' before proceeding with date manipulation
+          # Checking if loan_updated_status is 'close' before proceeding with date manipulation
           if loan_updated_status in ['close', 'closed loans', 'disbursed loan', 'foreclosure']:
               formatted_payment_date_datetime = datetime.strptime(formatted_payment_date, '%Y-%m-%d')
           
