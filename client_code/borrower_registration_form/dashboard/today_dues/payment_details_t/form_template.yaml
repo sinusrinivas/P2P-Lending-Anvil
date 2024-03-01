@@ -73,6 +73,7 @@ components:
         - {id: HPIGBD, title: Scheduled Payment Date, data_key: column_10, $$hashKey: 'object:1501'}
         - {id: LLZKZE, title: Scheduled Payment Time, data_key: column_11, $$hashKey: 'object:1503'}
         - {id: DOLXPH, title: Account Number, data_key: column_12, $$hashKey: 'object:1505'}
+        - {id: RDQBRB, data_key: column_1, title: Processing Fee}
         auto_header: true
         tooltip: ''
         border: ''
