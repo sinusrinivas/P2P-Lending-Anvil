@@ -13,7 +13,48 @@ class lender_registration_form_3_marital_married(lender_registration_form_3_mari
         # Set Form properties and Data Bindings.
         self.init_components(**properties)
         self.userId = user_id
+        user_profile = app_tables.fin_user_profile.get(customer_id=self.userId)
+        marital_status = user_profile['marital_status']
 
+        # Set the visibility of the spouse controls based on the marital status
+        if marital_status == 'Married':
+            self.marital_status_lender_registration_dropdown.selected_value = marital_status
+            self.show_spouse_controls()
+        else:
+            self.hide_spouse_controls()
+            self.radio_button_3.visible = False
+
+    def show_spouse_controls(self):
+        # Show the spouse radio button and related panels
+        self.grid_panel_1.visible = True
+        self.grid_panel_2.visible = False
+        self.grid_panel_3.visible = False
+        self.grid_panel_4.visible = False
+        self.button_submit.visible = True
+        self.button_submit_copy.visible = False
+        self.button_submit_copy_2.visible = False
+        self.button_submit_copy_3.visible = False
+        self.prev_1.visible = True
+        self.prev_2.visible = False
+        self.prev_3.visible = False
+        self.prev_4.visible = False
+        self.button_1.visible = False
+
+    def hide_spouse_controls(self):
+        # Hide the spouse radio button and related panels
+        self.grid_panel_1.visible = False
+        self.grid_panel_2.visible = False
+        self.grid_panel_3.visible = False
+        self.grid_panel_4.visible = False
+        self.button_submit.visible = False
+        self.button_submit_copy.visible = False
+        self.button_submit_copy_2.visible = False
+        self.button_submit_copy_3.visible = False
+        self.prev_1.visible = False
+        self.prev_2.visible = False
+        self.prev_3.visible = False
+        self.prev_4.visible = False
+        self.button_1.visible = False
     def is_married(self):
         # Check the marital status in the user profile table
         user_profile = app_tables.fin_user_profile.get(customer_id=self.userId)
@@ -57,22 +98,27 @@ class lender_registration_form_3_marital_married(lender_registration_form_3_mari
         self.button_1.visible = False
 
     def radio_button_3_clicked(self, **event_args):
-        """This method is called when this radio button is selected"""
-        if self.is_married():
-            self.grid_panel_1.visible = False
-            self.grid_panel_2.visible = False
-            self.grid_panel_3.visible = True
-            self.grid_panel_4.visible = False
-            self.button_submit.visible = False
-            self.button_submit_copy.visible = False
-            self.button_submit_copy_2.visible = True
-            self.button_submit_copy_3.visible = False
-            self.selected_radio_button = "spouse"
-            self.prev_1.visible = False
-            self.prev_2.visible = False
-            self.prev_3.visible = True
-            self.prev_4.visible = False
-            self.button_1.visible = False
+       pass
+
+    # def radio_button_3_clicked(self, **event_args):
+    #     """This method is called when this radio button is selected"""
+    #     if self.is_married():
+    #         self.grid_panel_1.visible = False
+    #         self.grid_panel_2.visible = False
+    #         self.grid_panel_3.visible = True
+    #         self.grid_panel_4.visible = False
+    #         self.button_submit.visible = False
+    #         self.button_submit_copy.visible = False
+    #         self.button_submit_copy_2.visible = True
+    #         self.button_submit_copy_3.visible = False
+    #         self.selected_radio_button = "spouse"
+    #         self.prev_1.visible = False
+    #         self.prev_2.visible = False
+    #         self.prev_3.visible = True
+    #         self.prev_4.visible = False
+    #         self.button_1.visible = False
+
+        
 
 
     def radio_button_4_clicked(self, **event_args):

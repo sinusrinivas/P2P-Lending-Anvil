@@ -37,7 +37,7 @@ class lender_registration_Institutional_form_3(lender_registration_Institutional
     last_six_statements = self.file_loader_1.file
     user_id = self.userId
     if not industry_type or not turn_over or not last_six_statements:
-      Notification("Please fill all the fields")
+      Notification("Please fill all the fields").show()
     else:
      anvil.server.call('add_lendor_institutional_form_3',industry_type,turn_over,last_six_statements,user_id)
      open_form('lendor_registration_form.lender_registration_form_2.lender_registration_Institutional_form_4',user_id = user_id)
