@@ -29,7 +29,7 @@ class star_1_borrower_registration_form_2_employment_business_4(star_1_borrower_
     cin = self.text_box_4.text
     user_id = self.userId
     if not director_name or not director_no or not din or not cin:
-      Notification("Please fill all the fields")
+      Notification("Please fill all the fields").show()
     elif not director_no.isdigit():
         Notification("Director number should be valid").show()
     else:

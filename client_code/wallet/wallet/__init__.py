@@ -8,10 +8,9 @@ import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 from anvil import open_form, server
-# from .. import bmain_form_module as main_form_module
-# from ...lendor_registration_form.dashboard import lendor_main_form_module as main_form_module
 from ...borrower_registration_form.dashboard import main_form_module
 from datetime import datetime
+
 
 class wallet(walletTemplate):
   def __init__(self, **properties):

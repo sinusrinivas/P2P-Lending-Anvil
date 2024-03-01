@@ -31,7 +31,7 @@ class lender_registration_education_Intermediate(lender_registration_education_I
     intermediate = self.file_loader_2.file
     
     if not tenth_class or not intermediate:
-      Notification('Please fill all details').show()
+      Notification('Please upload both files before proceed.').show()
     else:
       anvil.server.call('add_education_int',tenth_class,intermediate,user_id)
       open_form('lendor_registration_form.lender_registration_form_2',user_id=user_id)
