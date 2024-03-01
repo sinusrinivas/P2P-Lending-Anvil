@@ -25,7 +25,7 @@ class star_1_borrower_registration_form_2_employment_business_3(star_1_borrower_
     last_six_statements = self.file_loader_1.file
     user_id = self.userId
     if not industry_type or not turn_over or not last_six_statements:
-      Notification("Please fill all the fields")
+      Notification("Please fill all the fields").show()
     else:
      anvil.server.call('add_lendor_institutional_form_3',industry_type,turn_over,last_six_statements,user_id)
      open_form('borrower_registration_form.star_1_borrower_registration_form_2_employment.star_1_borrower_registration_form_2_employment_business_4',user_id = user_id)

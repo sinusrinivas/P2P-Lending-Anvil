@@ -25,7 +25,7 @@ class star_1_borrower_registration_form_2_employment_business_5(star_1_borrower_
     proof_verification = self.file_loader_1.file
     user_id = self.userId
     if not reg_off_add or not off_add_proof or not proof_verification:
-      Notification("Please all the fields")
+      Notification("Please all the fields").
     else:
      anvil.server.call('add_lendor_institutional_form_5',reg_off_add,off_add_proof,proof_verification,user_id)
      open_form('borrower_registration_form.star_1_borrower_registration_form_3_marital',user_id=user_id)
