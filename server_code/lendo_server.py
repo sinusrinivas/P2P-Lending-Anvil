@@ -65,7 +65,7 @@ def add_lender_step2(lending_type,investment,lending_period,user_id):
   row = app_tables.fin_lender.search(customer_id=user_id)
   if row and len(row) > 0:
     row[0]['lending_type'] = lending_type
-    row[0]['investment'] = investment
+    row[0]['investment'] = int(investment)
     row[0]['lending_period'] = lending_period
     user = app_tables.fin_user_profile.get(customer_id = user_id)
     if user:
@@ -114,7 +114,7 @@ def add_lendor_individual_form_3(annual_salary, designation,emp_id_proof,last_si
 def add_lendor_institutional_form_1(business_name,business_location,business_add,user_id):
   row = app_tables.fin_user_profile.search(customer_id = user_id)
   if row:
-    row[0]['business_name'] = branch_name
+    row[0]['business_name'] = business_name
     row[0]['business_location'] = business_location
     row[0]['business_add'] = business_add
 
@@ -173,7 +173,7 @@ def add_education_int(tenth_class,intermediate,user_id):
     row[0]['intermediate']=intermediate
 
 @anvil.server.callable
-def add_education_btech(tenth_class,intermediate,user_id):
+def add_education_btech(tenth_class,intermediate,btech,user_id):
   row = app_tables.fin_user_profile.search(customer_id=user_id)
   if row:
     row[0]['tenth_class']=tenth_class

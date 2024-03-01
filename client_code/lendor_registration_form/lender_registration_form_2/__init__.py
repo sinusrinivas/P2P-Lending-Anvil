@@ -49,38 +49,58 @@ class lender_registration_form_2(lender_registration_form_2Template):
 
     def button_2_click(self, **event_args):
         lending_type = self.lending_type_dropdown.selected_value
-        investment = self.text_box_1.text
+        investment_str = self.text_box_1.text
         lending_period = self.drop_down_2.selected_value
         user_id = self.userId
-
-        # Check if user_data is not empty before accessing its elements
-        if lending_type and investment and lending_period:
-            # Search for existing user data in the lender table
-            user_data = app_tables.fin_lender.search(customer_id = user_id)
-
-            if user_data and len(user_data) > 0:
-                # If the row exists, update the existing row
-                user_row = user_data[0]
-                user_row['lending_type'] = lending_type
-                user_row['investment'] = int(investment)
-                user_row['lending_period'] = lending_period
-                user_row['membership'] = self.calculate_membership(float(investment))
-                user_row.update()
-            else:
-                # If the row doesn't exist, add a new row
-                app_tables.fin_lender.add_row(customer_id = user_id, lending_type=lending_type, investment=int(investment), lending_period=lending_period, membership=self.calculate_membership(float(investment)))
-
-            if lending_type == 'Individual':
-                open_form('lendor_registration_form.lender_registration_form_2.lender_registration_individual_form_1', user_id=user_id)
-            elif lending_type == 'Institutional':
-                open_form('lendor_registration_form.lender_registration_form_2.lender_registration_Institutional_form_1', user_id=user_id)
+    
+        # Check if all fields are filled
+        if not (lending_type and investment_str and lending_period):
+            alert("Please fill in all fields.")
+            return
+    
+        # Validate investment input
+        try:
+            investment = int(investment_str)
+            if investment <= 0:
+                # Show an error message or handle invalid input
+                alert("Please enter a valid positive number for investment.")
+                return
+        except ValueError:
+            # Show an error message for non-integer input
+            alert("Please enter a valid number for investment.")
+            return
+    
+        # Search for existing user data in the lender table
+        user_data = app_tables.fin_lender.search(customer_id=user_id)
+    
+        if user_data and len(user_data) > 0:
+            # If the row exists, update the existing row
+            user_row = user_data[0]
+            user_row['lending_type'] = lending_type
+            user_row['investment'] = int(investment)
+            user_row['lending_period'] = lending_period
+            user_row['membership'] = self.calculate_membership(float(investment))
+            user_row.update()
         else:
-          anvil.server.call('add_lender_step2', lending_type, investment, lending_period, user_id)
-          if lending_type == 'Individual':
-            open_form('lendor_registration_form.lender_registration_form_2.lender_registration_individual_form_1', user_id=user_id)
-          elif lending_type == 'Institutional':
-            open_form('lendor_registration_form.lender_registration_form_2.lender_registration_Institutional_form_1', user_id=user_id)
-
+            # If the row doesn't exist, add a new row
+            app_tables.fin_lender.add_row(customer_id=user_id, lending_type=lending_type, investment=int(investment),
+                                          lending_period=lending_period, membership=self.calculate_membership(float(investment)))
+    
+        if lending_type == 'Individual':
+            open_form('lendor_registration_form.lender_registration_form_2.lender_registration_individual_form_1',
+                      user_id=user_id)
+        elif lending_type == 'Institutional':
+            open_form('lendor_registration_form.lender_registration_form_2.lender_registration_Institutional_form_1',
+                      user_id=user_id)
+        else:
+            # Your existing code in the else block
+            anvil.server.call('add_lender_step2', lending_type, investment, lending_period, user_id)
+            if lending_type == 'Individual':
+                open_form('lendor_registration_form.lender_registration_form_2.lender_registration_individual_form_1',
+                          user_id=user_id)
+            elif lending_type == 'Institutional':
+                open_form('lendor_registration_form.lender_registration_form_2.lender_registration_Institutional_form_1',
+                          user_id=user_id)
     def button_3_click(self, **event_args):
         open_form("bank_users.user_form")
 

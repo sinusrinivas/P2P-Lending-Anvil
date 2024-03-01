@@ -13,9 +13,7 @@ from ...bank_users.user_form import user_module
 class dashboard(dashboardTemplate):
     def __init__(self, **properties):
         email = main_form_module.email
-        # Set Form properties and Data Bindings.
         self.init_components(**properties)
-
         self.email = main_form_module.email
         self.user_id=main_form_module.userId
         user_id = self.user_id
@@ -108,78 +106,51 @@ class dashboard(dashboardTemplate):
                     alert("Error fetching existing loans.")
 
     def button_6_click(self, **event_args):
-        """This method is called when the button is clicked"""
-        open_form('borrower_registration_form.dashboard.view_loans')
+      open_form('borrower_registration_form.dashboard.view_loans')
 
     def outlined_button_1_click(self, **event_args):
-        """This method is called when the button is clicked"""
-        open_form('borrower_registration_form.dashboard.today_dues')
+      open_form('borrower_registration_form.dashboard.today_dues')
 
     def outlined_button_3_click(self, **event_args):
-        """This method is called when the button is clicked"""
-        open_form('borrower_registration_form.dashboard.application_tracker')
+      open_form('borrower_registration_form.dashboard.application_tracker')
 
     def outlined_button_2_click(self, **event_args):
-        """This method is called when the button is clicked"""
-        open_form('borrower_registration_form.dashboard.foreclosure_request')
+      open_form('borrower_registration_form.dashboard.foreclosure_request')
 
     def outlined_button_6_click(self, **event_args):
-        """This method is called when the button is clicked"""
-        open_form('borrower_registration_form.dashboard.discount_coupons')
+      open_form('borrower_registration_form.dashboard.discount_coupons')
 
     def outlined_button_7_click(self, **event_args):
-        """This method is called when the button is clicked"""
-        open_form('bank_users.borrower.view_portfolio')
+      open_form('bank_users.borrower.view_portfolio')
 
     def about_main_form_link_click(self, **event_args):
-        """This method is called when the link is clicked"""
-        open_form('borrower_registration_form.dashboard.dashboard_about')
+      open_form('borrower_registration_form.dashboard.dashboard_about')
 
     def contact_main_form_link_click(self, **event_args):
-        """This method is called when the link is clicked"""
-        open_form("borrower_registration_form.dashboard.dashboard_contact")
+      open_form("borrower_registration_form.dashboard.dashboard_contact")
 
     def notification_link_click(self, **event_args):
-        """This method is called when the link is clicked"""
-        open_form('lender_registration_form.dashboard.notification')
+      open_form('lender_registration_form.dashboard.notification')
 
+
+  
+    # this button is work for wallet 
     def wallet_dashboard_link_click(self, **event_args):
-      email = self.email
-      customer_id = self.user_id
+      open_form('wallet.wallet')
 
-      # Fetch the user's full name from the server
-      user_profile = anvil.server.call('fetch_user_profile', email)
-      if user_profile:
-        full_name = user_profile['full_name']
-        usertype = user_profile['usertype']
 
-        result = anvil.server.call(
-            'create_wallet_entry',
-            email,
-            customer_id,
-            full_name,
-            usertype
-        )
 
-        print(result)
-
-        open_form('wallet.wallet')
-
-        anvil.server.call('fetch_profile_data_and_insert', email, customer_id)
-      else:
-        print("User profile not found.")
+  
 
     def extended_loans_click(self, **event_args):
-      """This method is called when the button is clicked"""
       open_form('borrower_registration_form.dashboard.extension_loan_request')
 
     def outlined_button_1_copy_3_click(self, **event_args):
-      """This method is called when the button is clicked"""
       open_form('borrower_registration_form.dashboard.foreclosure_request')
 
+
+    # this is for logout
     def logout_click(self, **event_args):
-      """This method is called when the button is clicked"""
-          
       alert("Logged out successfully")
       anvil.users.logout()
       open_form('bank_users.main_form')

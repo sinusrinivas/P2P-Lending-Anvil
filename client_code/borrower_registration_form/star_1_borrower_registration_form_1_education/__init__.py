@@ -52,7 +52,7 @@ class star_1_borrower_registration_form_1_education(star_1_borrower_registration
     elif qualification == 'Phd':
       open_form('borrower_registration_form.star_1_borrower_registration_form_1_education.star_1_borrower_registration_form_education_phd',user_id=user_id)
     else:
-      open_form('borrower_registration_form.star_1_borrower_registration_form_1_education')
+      open_form('borrower_registration_form.star_1_borrower_registration_form_1_education',user_id=user_id)
       # alert('Please select a valid qualification')
 
   def button_3_click(self, **event_args):
