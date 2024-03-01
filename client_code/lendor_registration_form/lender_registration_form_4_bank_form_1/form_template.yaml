@@ -68,6 +68,7 @@ components:
     include_placeholder: false
   name: drop_down_1
   layout_properties: {grid_position: 'XDKRAU,WXTQDX'}
+  event_bindings: {change: drop_down_1_change}
 - name: label_1
   properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
     text: Account Number, font_size: null, font: '', spacing_above: small, icon_align: left,

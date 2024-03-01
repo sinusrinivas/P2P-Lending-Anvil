@@ -42,8 +42,9 @@ class lender_registration_form_4_bank_form_2(lender_registration_form_4_bank_for
     user_id = self.userId
     bank_id = self.text_box_1.text
     branch_name = self.text_box_2.text
+    t_and_c = self.check_box_1_copy_3 
     
-    if not bank_id  or not branch_name:
+    if not bank_id  or not branch_name or not t_and_c:
       Notification("please fill all required fields").show()
     else:
       anvil.server.call('add_lendor_bank_details_form_2', bank_id,branch_name, user_id)
