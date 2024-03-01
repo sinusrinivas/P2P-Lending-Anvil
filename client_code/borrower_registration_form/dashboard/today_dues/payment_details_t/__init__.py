@@ -322,12 +322,6 @@ class payment_details_t(payment_details_tTemplate):
         beginning_loan_amount_balance = selected_row['loan_amount']
         ending_loan_amount_balance = beginning_loan_amount_balance
     
-        # Since processing fee is a one-time charge, apply it only at the beginning
-        #processing_fee = selected_row['processing_fee'] if selected_row['processing_fee'] is not None else 0
-    
-        # Subtract processing fee from the total repayment amount at the beginning
-        #beginning_balance -= processing_fee
-    
         # For one-time payment, calculate ending balance for the single payment
         interest_amount = beginning_loan_amount_balance * (selected_row['interest_rate'] / 100) / 12
         principal_amount = emi - interest_amount
@@ -348,13 +342,9 @@ class payment_details_t(payment_details_tTemplate):
           return tenure
       elif payment_type == 'Three Month':
           num_payments = tenure // 3
-          # if tenure % 3 != 0:
-          #     num_payments += 1
           return num_payments
       elif payment_type == 'Six Month':
           num_payments = tenure // 6
-          # if tenure % 6 != 0:
-          #     num_payments += 1
           return num_payments
       else:
           return 0
