@@ -42,7 +42,7 @@ components:
       border: ''
       foreground: ''
       rows_per_page: 20
-      visible: true
+      visible: false
       wrap_on: never
       show_page_controls: true
       spacing_above: large
@@ -63,6 +63,10 @@ components:
       name: link_2
       layout_properties: {}
       event_bindings: {click: link_2_click}
+  - name: repeating_panel_2
+    properties: {item_template: bank_users.repeating_panels.admin}
+    type: RepeatingPanel
+    layout_properties: {grid_position: 'YMZMKS,ZQNQEZ'}
 - type: FlowPanel
   properties: {}
   name: navbar_links
