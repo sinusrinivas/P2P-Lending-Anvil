@@ -429,30 +429,72 @@ class payment_details_extension(payment_details_extensionTemplate):
         self.entered_tenure = self.selected_row['tenure']
         self.entered_extension_months = self.loan_extension_months
 
+    # def calculate_payment_date(self, selected_row, current_month):
+    #     loan_updated_status = selected_row['loan_updated_status'].lower()
+    
+    #     if loan_updated_status in ['close', 'closed loans', 'disbursed loan', 'foreclosure']:
+    #         loan_disbursed_timestamp = selected_row['loan_disbursed_timestamp']
+    #         loan_details_row = app_tables.fin_loan_details.get(loan_id=selected_row['loan_id'])
+    
+    #         if loan_disbursed_timestamp and loan_details_row:
+    #             emi_payment_type = loan_details_row['emi_payment_type']
+    
+    #             if emi_payment_type == 'Monthly':
+    #                 payment_date = loan_disbursed_timestamp + timedelta(days = 30 * current_month)
+    #             elif emi_payment_type == 'Three Month':
+    #                 payment_date = loan_disbursed_timestamp + timedelta(days = 30 * current_month)  
+    #             elif emi_payment_type == 'Six Month':
+    #                 payment_date = loan_disbursed_timestamp + timedelta(days = 30 * current_month )  
+    #             else:
+    #                 payment_date = None
+    
+    #             return payment_date
+    #         else:
+    #             return None
+    #     else:
+    #         return None
+
     def calculate_payment_date(self, selected_row, current_month):
         loan_updated_status = selected_row['loan_updated_status'].lower()
     
         if loan_updated_status in ['close', 'closed loans', 'disbursed loan', 'foreclosure']:
             loan_disbursed_timestamp = selected_row['loan_disbursed_timestamp']
-            loan_details_row = app_tables.fin_loan_details.get(loan_id=selected_row['loan_id'])
+            loan_id = selected_row['loan_id']
     
-            if loan_disbursed_timestamp and loan_details_row:
-                emi_payment_type = loan_details_row['emi_payment_type']
+            # Search for the row in fin_emi_table based on the loan_id
+            rows = app_tables.fin_emi_table.search(loan_id=loan_id)
     
-                if emi_payment_type == 'Monthly':
-                    payment_date = loan_disbursed_timestamp + timedelta(days = 30 * current_month)
-                elif emi_payment_type == 'Three Month':
-                    payment_date = loan_disbursed_timestamp + timedelta(days = 30 * current_month)  
-                elif emi_payment_type == 'Six Month':
-                    payment_date = loan_disbursed_timestamp + timedelta(days = 30 * current_month )  
+            if rows:
+                # Assuming you want to use the first row found
+                emi_row = rows[0]
+                scheduled_payment_made = emi_row['scheduled_payment_made']
+                emi_number = emi_row['emi_number']
+    
+                # Query the fin_emi_table to get the scheduled_payment_made
+                emi_row = app_tables.fin_emi_table.get(loan_id=loan_id, emi_number=emi_number)
+                scheduled_payment_made = emi_row['scheduled_payment_made'] if emi_row is not None else None
+                emi_number = emi_row['emi_number'] if emi_row is not None else None
+    
+                if loan_disbursed_timestamp:
+                    emi_payment_type = selected_row['emi_payment_type']
+    
+                    if emi_payment_type == 'Monthly':
+                        payment_date = loan_disbursed_timestamp + timedelta(days=30 * current_month)
+                    elif emi_payment_type == 'Three Month':
+                        payment_date = loan_disbursed_timestamp + timedelta(days=30 * (current_month + 1))  # Adjusted multiplier
+                    elif emi_payment_type == 'Six Month':
+                        payment_date = loan_disbursed_timestamp + timedelta(days=30 * (current_month + 2))  # Adjusted multiplier
+                    else:
+                        payment_date = None
+    
+                    return payment_date
                 else:
-                    payment_date = None
-    
-                return payment_date
+                    return None
             else:
                 return None
         else:
             return None
+
 
 
     def calculate_scheduled_payment(self, loan_amount, monthly_interest_rate, remaining_tenure):
