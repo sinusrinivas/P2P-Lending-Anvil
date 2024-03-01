@@ -68,8 +68,8 @@ components:
   event_bindings: {click: button_1_click}
 - name: button_next
   properties: {role: elevated-button, align: left, tooltip: '', border: '', enabled: true,
-    foreground: 'theme:On Primary', visible: true, text: Submit, font_size: null,
-    font: '', spacing_above: small, icon_align: right, spacing_below: small, italic: false,
+    foreground: 'theme:On Primary', visible: true, text: Next, font_size: null, font: '',
+    spacing_above: small, icon_align: right, spacing_below: small, italic: false,
     background: '#0b2547', bold: true, underline: false, icon: 'fa:angle-double-right'}
   type: Button
   layout_properties: {grid_position: 'WJRHME,KZQQNN'}

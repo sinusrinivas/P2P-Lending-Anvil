@@ -38,7 +38,7 @@ class star_1_borrower_registration_form_2_employment_business_2(star_1_borrower_
     year = self.date_picker_1.date
     user_id = self.userId
     if not nearest_loc or not business_type or not empolyees_working or not year:
-      Notification("Please fill all the fields")
+      Notification("Please fill all the fields").show()
     else:
       anvil.server.call('add_lendor_institutional_form_2',nearest_loc,business_type,empolyees_working,year,user_id)
       open_form('borrower_registration_form.star_1_borrower_registration_form_2_employment.star_1_borrower_registration_form_2_employment_business_3',user_id = user_id)

@@ -27,7 +27,7 @@ class lender_registration_education_10th_class(lender_registration_education_10t
     tenth_class = self.file_loader_1.file
     
     if not tenth_class:
-      Notification('Please fill all details').show()
+      Notification('Please upload file.').show()
     else:
       anvil.server.call('add_education_tenth',tenth_class,user_id)
       open_form('lendor_registration_form.lender_registration_form_2',user_id=user_id)
