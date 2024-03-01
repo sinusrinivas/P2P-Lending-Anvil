@@ -5,6 +5,7 @@ import anvil.users
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
+from ... import wallet
 
 
 # this is the method for user_id generate ----> start hear
@@ -31,7 +32,7 @@ def add_email_and_user_id(email_id):
     generated_id = generate_user_id()
     app_tables.fin_user_profile.add_row(email_user=email_id, customer_id=generated_id,registration_approve=False,profile_status=False,mobile_check=False,last_confirm=False)
     app_tables.fin_beseem_score_users.add_row(borrower_customer_id=generated_id,borrower_email_id=email_id,documentation_point=0,educational_point=0,language_point=0,loan_point=0,occupation_point=0,region_point=0,relationship_point=0,total_point=50)
-    
+    app_tables.fin_wallet.add_row(user_email=email_id,customer_id=generated_id,wallet_amount=0,Status=True,wallet_id=wallet.create_wallet_id())
 
 #----- end hear ----- #
 
