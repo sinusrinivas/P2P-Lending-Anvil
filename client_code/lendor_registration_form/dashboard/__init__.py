@@ -10,26 +10,19 @@ import anvil.users
 from anvil.tables import app_tables
 from anvil import open_form, server
 from anvil import server
-#from anvil import get_current_user
-#from ....bank_users.main_form import main_form_module
 from ...bank_users.main_form import main_form_module
 
 
 class dashboard(dashboardTemplate):
   def __init__(self, **properties):
-    # Set Form properties and Data Bindings.
     self.init_components(**properties)
-   
     self.email = main_form_module.email
     email = self.email
     self.user_id=main_form_module.userId
     user_id = self.user_id
     
- 
-    # customer_id = 1000
-    
-    # anvil.server.call('fetch_profile_data_and_insert', email,user_id)
 
+  
   def button_3_click(self, **event_args):
     """This method is called when the button is clicked"""
     open_form("lendor_registration_form.dashboard.view_opening_balance")
@@ -153,37 +146,7 @@ class dashboard(dashboardTemplate):
     """This method is called when the link is clicked"""
     open_form('lendor_registration_form.dashboard.notification')
 
-  # def wallet_dashboard_link_click(self, **event_args):
-  #   """This method is called when the link is clicked"""
-  #   open_form('wallet.wallet')
 
   def wallet_dashboard_link_click(self, **event_args):
-    
-    email = self.email
-    customer_id = self.user_id
-
-    # Fetch the user's full name from the server
-    user_profile = anvil.server.call('fetch_user_profile', email)
-    
-    if user_profile:
-        full_name = user_profile['full_name']
-        usertype = user_profile['usertype']
-
-        result = anvil.server.call(
-            'create_wallet_entry',
-            email,
-            customer_id,
-            full_name,
-            usertype
-        )
-
-        print(result)
-
-        open_form('wallet.wallet')
-
-        anvil.server.call('fetch_profile_data_and_insert', email, customer_id)
-    else:
-        print("User profile not found.")
-
-    
+    open_form('wallet.wallet')
   
