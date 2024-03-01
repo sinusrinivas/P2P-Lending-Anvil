@@ -23,3 +23,12 @@ def create_wallet_id():
   else:
     counter = 1  
   return f"WA{counter:04d}"
+
+
+
+def find_user_update_type(user_id, user_name):
+  user = app_tables.fin_wallet.search(customer_id=user_id)
+  if user:
+    user[0]['user_name'] = user_name
+    user[0]['user_type'] = 'lender'
+    user[0]['status'] = True
