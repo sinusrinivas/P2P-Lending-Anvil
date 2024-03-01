@@ -85,7 +85,7 @@ def deposit_money(email, deposit_amount, customer_id):
     transaction_id = generate_transaction_id()
     
     try:
-        # Fetch user_email and wallet_id based on customer_id
+        # Fetch user_email and wallet_id based on  customer_id
         wallet_row = app_tables.fin_wallet.get(user_email=email)
         
         if wallet_row is None:
