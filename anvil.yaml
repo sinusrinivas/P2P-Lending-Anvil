@@ -118,9 +118,9 @@ db_schema:
     - name: customer_id
       admin_ui: {width: 200, order: 0.5}
       type: number
-    - name: loan_id
+    - name: status
       admin_ui: {width: 200}
-      type: string
+      type: bool
     title: fin_wallet
   fin_lendor_manage_dropdown:
     title: fin_lendor_manage_dropdown

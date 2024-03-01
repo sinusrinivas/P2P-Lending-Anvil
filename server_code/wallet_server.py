@@ -11,71 +11,12 @@ from datetime import datetime
 from datetime import datetime, timezone
 
 
-
-
-@anvil.server.callable
-def create_wallet_entry(email, customer_id, full_name, user_type):
-    # Generate unique wallet_id and account_id
-    wallet_id = generate_wallet_id()
-    account_id = generate_account_id()
-    
-    existing_wallets = app_tables.fin_wallet.search(user_email=email)
-    print(existing_wallets)
-    
-    if len(existing_wallets) == 0:
-        app_tables.fin_wallet.add_row(
-            user_email=email,
-            wallet_id=wallet_id,
-            account_id=account_id,
-            customer_id=customer_id,
-            user_name=full_name,
-            user_type=user_type
-        )
-        return f"Wallet entry created successfully for {email}"
-    else:
-        return f"Wallet entry already exists for {email}. Multiple entries found."
-
-
 @anvil.server.callable
 def fetch_user_profile(email):
     user_profile = app_tables.fin_user_profile.get(email_user=email)
     return user_profile
-  
-def generate_wallet_id():
-    existing_wallets = app_tables.fin_wallet.search(tables.order_by("wallet_id", ascending=False))
 
-    if existing_wallets and len(existing_wallets) > 0:
-        new_wallet_id = existing_wallets[0]['wallet_id']
-        if new_wallet_id:
-            try:
-                counter = int(new_wallet_id[2:]) + 1
-            except Exception as e:
-                print(f"Error converting counter: {e}")
-                counter = 1
-        else:
-            counter = 1
-    else:
-        counter = 1  # Start the counter from 1 if no existing wallets
 
-    return f"WA{counter:04d}"
-
-def generate_account_id():
-    existing_accounts = app_tables.fin_wallet.search(tables.order_by("account_id", ascending=False))
-
-    if existing_accounts and len(existing_accounts) > 0:
-        new_account_id = existing_accounts[0]['account_id']
-        if new_account_id:
-            try:
-                counter = int(new_account_id[1:]) + 1
-            except Exception as e:
-                print(f"Error converting counter: {e}")
-                counter = 1
-        else:
-            counter = 1
-    else:
-        counter = 1  # Start the counter from 1 if no existing accounts
-
-    return f"A{counter:04d}"
   
 @anvil.server.callable
 def fetch_profile_data_and_insert(email, customer_id):
@@ -252,5 +193,3 @@ def withdraw_money(email, withdraw_amount, customer_id):
         )
         return False
 
-
-      
