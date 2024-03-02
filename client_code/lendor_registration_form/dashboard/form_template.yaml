@@ -175,7 +175,7 @@ components:
     components:
     - name: outlined_button_3
       properties: {role: outlined-button, align: center, tooltip: '', border: '',
-        enabled: true, foreground: 'theme:On Primary', visible: true, text: 'Veiw
+        enabled: true, foreground: 'theme:On Primary', visible: true, text: 'View
           Loans                                        ', font_size: null, font: '',
         spacing_above: small, icon_align: left, spacing_below: small, italic: false,
         background: '#0b2547', bold: false, underline: false, icon: ''}
