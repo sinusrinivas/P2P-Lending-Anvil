@@ -5,6 +5,7 @@ import anvil.tables.query as q
 from anvil.tables import app_tables
 
 class star_1_borrower_registration_form_3_marital_married(star_1_borrower_registration_form_3_marital_marriedTemplate):
+    selected_radio_button = None
     def __init__(self, user_id, marital_status, **properties):
         # Set Form properties and Data Bindings.
         self.init_components(**properties)
@@ -15,21 +16,23 @@ class star_1_borrower_registration_form_3_marital_married(star_1_borrower_regist
         # Set the visibility of the spouse controls based on the marital status
         if marital_status == 'Married':
             self.show_spouse_controls()
+            self.button_1.visible = True
         else:
             self.hide_spouse_controls()
             self.radio_button_3.visible = False
+            self.button_1.visible = True
 
     def show_spouse_controls(self):
         # Show the spouse radio button and related panels
-        self.grid_panel_1.visible = True
+        self.grid_panel_1.visible = False
         self.grid_panel_2.visible = False
         self.grid_panel_3.visible = False
         self.grid_panel_4.visible = False
-        self.button_submit.visible = True
+        self.button_submit.visible = False
         self.button_submit_copy.visible = False
         self.button_submit_copy_2.visible = False
         self.button_submit_copy_3.visible = False
-        self.prev_1.visible = True
+        self.prev_1.visible = False
         self.prev_2.visible = False
         self.prev_3.visible = False
         self.prev_4.visible = False
@@ -92,7 +95,20 @@ class star_1_borrower_registration_form_3_marital_married(star_1_borrower_regist
         self.prev_4.visible = False
         self.button_1.visible = False
     def radio_button_3_clicked(self, **event_args):
-      pass
+        self.grid_panel_1.visible = False
+        self.grid_panel_2.visible = False
+        self.grid_panel_3.visible = True
+        self.grid_panel_4.visible = False
+        self.button_submit.visible = False
+        self.button_submit_copy.visible = False
+        self.button_submit_copy_2.visible = True
+        self.button_submit_copy_3.visible = False
+        self.selected_radio_button = "spouse"
+        self.prev_1.visible = False
+        self.prev_2.visible = False
+        self.prev_3.visible = True
+        self.prev_4.visible = False
+        self.button_1.visible = False
     # def radio_button_3_clicked(self, **event_args):
     #     """This method is called when this radio button is selected"""
     #     if self.is_married():

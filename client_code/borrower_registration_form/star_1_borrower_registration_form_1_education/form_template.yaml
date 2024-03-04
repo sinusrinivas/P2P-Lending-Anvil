@@ -44,7 +44,7 @@ components:
     role: null
     align: full
     tooltip: ''
-    placeholder: Select one
+    placeholder: Select One
     border: ''
     enabled: true
     foreground: ''

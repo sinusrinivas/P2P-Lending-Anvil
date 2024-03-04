@@ -44,7 +44,7 @@ components:
     role: null
     align: full
     tooltip: ''
-    placeholder: Select your profession
+    placeholder: Select Your Profession
     border: ''
     enabled: true
     foreground: ''
