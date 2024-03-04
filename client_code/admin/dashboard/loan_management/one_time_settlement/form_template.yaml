@@ -41,7 +41,7 @@ components:
     border: ''
     foreground: ''
     rows_per_page: 20
-    visible: true
+    visible: false
     wrap_on: never
     show_page_controls: true
     spacing_above: large
@@ -56,6 +56,10 @@ components:
     properties: {item_template: admin.dashboard.loan_management.one_time_settlement.ItemTemplate26}
     name: repeating_panel_1
     layout_properties: {grid_position: 'VBBRLE,KWQDMN'}
+- name: repeating_panel_2
+  properties: {item_template: admin.dashboard.loan_management.one_time_settlement.ItemTemplate40}
+  type: RepeatingPanel
+  layout_properties: {grid_position: 'ZWXCSA,LNLHLC'}
 - type: Button
   properties: {role: elevated-button, align: center, tooltip: '', border: '', enabled: true,
     foreground: white, visible: true, text: Back, font_size: null, font: '16', spacing_above: small,
