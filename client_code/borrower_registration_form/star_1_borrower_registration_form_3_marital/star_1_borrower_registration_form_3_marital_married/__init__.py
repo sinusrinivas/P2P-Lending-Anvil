@@ -5,16 +5,15 @@ import anvil.tables.query as q
 from anvil.tables import app_tables
 
 class star_1_borrower_registration_form_3_marital_married(star_1_borrower_registration_form_3_marital_marriedTemplate):
-    def __init__(self, user_id, **properties):
+    def __init__(self, user_id, marital_status, **properties):
         # Set Form properties and Data Bindings.
         self.init_components(**properties)
         self.userId = user_id
-        user_profile = app_tables.fin_user_profile.get(customer_id=self.userId)
-        marital_status = user_profile['marital_status']
+         #self.userId = user_id
+        self.marital_status = marital_status
 
         # Set the visibility of the spouse controls based on the marital status
         if marital_status == 'Married':
-            self.marital_status_lender_registration_dropdown.selected_value = marital_status
             self.show_spouse_controls()
         else:
             self.hide_spouse_controls()

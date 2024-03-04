@@ -13,7 +13,7 @@ components:
   layout_properties: {slot: default}
   components:
   - type: ColumnPanel
-    properties: {col_widths: '{"LPNHKI":18,"DUAONS":22,"AHBFVH":20,"WLHNNP":33,"HMJZMI":13,"MJBOIF":14}'}
+    properties: {col_widths: '{"LPNHKI":18,"DUAONS":22,"AHBFVH":20,"WLHNNP":33,"MJBOIF":14}'}
     name: content_panel_copy_2
     layout_properties:
       col_widths: {}
