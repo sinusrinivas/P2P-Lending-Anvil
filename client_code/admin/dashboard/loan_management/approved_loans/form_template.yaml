@@ -65,10 +65,10 @@ components:
       layout_properties: {}
       event_bindings: {click: link_2_click}
       components: []
-  - name: repeating_panel_2
-    properties: {item_template: admin.dashboard.loan_management.approved_loans.ItemTemplate39}
-    type: RepeatingPanel
-    layout_properties: {grid_position: 'CBTFRN,BHFGML'}
+  - type: RepeatingPanel
+    properties: {item_template: admin.dashboard.loan_management.approved_loans.ItemTemplate31}
+    name: repeating_panel_2
+    layout_properties: {grid_position: 'KFMOWY,ZOIRHB'}
 - type: FlowPanel
   properties: {}
   name: navbar_links

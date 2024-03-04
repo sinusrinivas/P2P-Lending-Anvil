@@ -65,10 +65,10 @@ components:
       name: link_2
       layout_properties: {}
       event_bindings: {click: link_2_click}
-  - name: repeating_panel_2
-    properties: {item_template: bank_users.repeating_panels.admin}
-    type: RepeatingPanel
-    layout_properties: {grid_position: 'GXTTFR,UHJIYG'}
+  - type: RepeatingPanel
+    properties: {item_template: admin.dashboard.loan_management.closed_loans.ItemTemplate39}
+    name: repeating_panel_2
+    layout_properties: {grid_position: 'EKCBXW,SRNRZD'}
 - type: FlowPanel
   properties: {}
   name: navbar_links

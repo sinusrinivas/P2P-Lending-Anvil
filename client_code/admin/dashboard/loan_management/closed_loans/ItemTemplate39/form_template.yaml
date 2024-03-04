@@ -1,10 +1,11 @@
-is_package: true
 container: {type: ColumnPanel}
 components:
 - name: xy_panel_1
   properties: {height: 441, role: outlined-card}
   type: XYPanel
-  layout_properties: {grid_position: 'SCZVYV,ZVDIDE'}
+  layout_properties:
+    col_widths: {}
+    grid_position: USAEAZ,BWLZYN
   components:
   - name: label_3
     properties: {text: '---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------',
@@ -130,3 +131,4 @@ components:
     layout_properties: {x: 736.1607513427734, y: 135.1785831451416, width: 160}
     data_bindings:
     - {property: text, code: 'self.item[''loan_id'']'}
+is_package: true
