@@ -69,7 +69,8 @@ class view_loans(view_loansTemplate):
         self.label_4.visible = False
         self.label_10.visible = False
         self.data_grid_1.visible = False
-        self.data_grid_2.visible = True
+        self.repeating_panel_2.visible = True 
+      
         self.data_grid_3.visible = False
         self.data_grid_4.visible = False
         self.data_grid_5.visible = False

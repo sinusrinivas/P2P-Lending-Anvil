@@ -174,6 +174,7 @@ unique_ids:
     admin.dashboard.loan_management.not_payable_amount: '1707202505340461905881878.67584'
     admin.dashboard.loan_management.closed_loans.ItemTemplate31: '1709289840770586098820052.3331'
     lendor_registration_form.lender_registration_form_2.lender_registration_Institutional_form_5: '1699430377713576071178309.6973'
+    borrower_registration_form.dashboard.view_loans.ItemTemplate38: '1709533605306754896988177.7827'
     admin.user_issue.user_viewprofile: '1701187753190491873666760.6118'
     admin.dashboard.manage_cms.manage_dropdowns.edit_gender: '1706531829259180704007880.1083'
     lendor_registration_form.dashboard.view_opening_balance: '1699956535223911918554378.0013'
