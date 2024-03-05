@@ -80,7 +80,7 @@ class view_loan_foreclosure_Requests(view_loan_foreclosure_RequestsTemplate):
 
   def button_5_click(self, **event_args):
     """This method is called when the button is clicked"""
-    self.data_grid_4.visible = not self.data_grid_4.visible
+    #self.data_grid_4.visible = not self.data_grid_4.visible
     self.new.visible = True
     #self.data_grid_4.visible = True
     self.label_4.visible = False
