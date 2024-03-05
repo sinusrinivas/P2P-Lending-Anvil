@@ -12,14 +12,15 @@ class add_subcategory(add_subcategoryTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
+    self.refresh()
 
     # Any code you write here will run before the form opens.
 
   def refresh(self):
     """Refresh repeating panels with the latest data"""
-    self.repeating_panel_1.items = app_tables.fin_admin_beseem_groups.search()
+    self.repeating_panel_1.items = app_tables.fin_admin_beseem_categories.search()
     
-  def gender_button_click(self, **event_args):
+  def gender_button_1_click(self, **event_args):
     """This method is called when the button is clicked"""
     entered_sub = self.text_box_1.text
     entered_min_pts = int(self.text_box_2.text)
@@ -35,20 +36,22 @@ class add_subcategory(add_subcategoryTemplate):
         group_row = app_tables.fin_admin_beseem_groups.get(group_name='gender')
         
         if group_row:
-            group_row.max_points = max_points
+            group_row['max_points'] = max_points
             group_row.update()
       
 
-  def button_1_click(self, **event_args):
+  def gender_click(self, **event_args):
     """This method is called when the button is clicked"""
     self.grid_panel_1.visible = True
 
-  def button_2_click(self, **event_args):
+  def qualification_click(self, **event_args):
     """This method is called when the button is clicked"""
     self.grid_panel_1.visible = False
 
-  def button_3_click(self, **event_args):
+  def marrital_status_click(self, **event_args):
     """This method is called when the button is clicked"""
     self.grid_panel_1.visible = False
+
+  
 
   

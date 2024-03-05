@@ -1,7 +1,7 @@
 is_package: true
 container:
   type: ColumnPanel
-  properties: {col_widths: '{"XPDOBX":20,"CTFZCE":17,"DEPLSL":11}'}
+  properties: {col_widths: '{"XPDOBX":20,"CTFZCE":19,"DEPLSL":12}'}
 components:
 - name: label_1
   properties: {align: center}
@@ -19,3 +19,4 @@ components:
   properties: {text: Edit Details, align: left}
   type: Link
   layout_properties: {grid_position: 'FELXKW,DEPLSL'}
+  event_bindings: {click: link_1_click}
