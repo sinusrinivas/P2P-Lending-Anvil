@@ -19,14 +19,14 @@ components:
   layout_properties: {grid_position: 'YECSAJ,TGXWWX'}
 - name: label_1_copy_1_copy_1
   properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
-    visible: true, text: Bussiness Details, font_size: null, font: '', spacing_above: small,
+    visible: true, text: Business Details, font_size: null, font: '', spacing_above: small,
     icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
     underline: false, icon: ''}
   type: Label
   layout_properties: {grid_position: 'RRAGMA,VNTJEF'}
 - name: label_2_copy_1_copy_1
   properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
-    text: Registered office Address, font_size: null, font: '', spacing_above: small,
+    text: Registered Office Address, font_size: null, font: '', spacing_above: small,
     icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
     underline: false, icon: ''}
   type: Label
@@ -40,7 +40,7 @@ components:
   layout_properties: {grid_position: 'VLEQOB,JJRRYV'}
 - name: label_3_copy_1_copy_1
   properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
-    text: Office Address proof, font_size: null, font: '', spacing_above: small, icon_align: left,
+    text: Office Address Proof, font_size: null, font: '', spacing_above: small, icon_align: left,
     spacing_below: small, italic: false, background: '', bold: true, underline: false,
     icon: ''}
   type: Label
@@ -54,7 +54,7 @@ components:
   layout_properties: {grid_position: 'GYIIBA,VMVTLX'}
 - name: label_1_copy_1
   properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
-    text: Proof of verification, font_size: null, font: '', spacing_above: small,
+    text: Proof of Verification, font_size: null, font: '', spacing_above: small,
     icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
     underline: false, icon: ''}
   type: Label

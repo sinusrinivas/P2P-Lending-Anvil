@@ -58,10 +58,24 @@ components:
   layout_properties: {grid_position: 'FOXPPS,XTINSM'}
 - name: gender_dd
   properties:
+    role: null
+    align: full
+    tooltip: ''
+    placeholder: Select Your Gender
+    border: ''
+    enabled: true
+    foreground: ''
     items: [Male, Female, Others]
+    visible: true
+    font_size: null
+    font: ''
+    spacing_above: small
+    spacing_below: small
+    italic: false
     background: theme:On Secondary
+    bold: false
+    underline: false
     include_placeholder: true
-    placeholder: select your gender
   type: DropDown
   layout_properties: {grid_position: 'FOXPPS,KQZQAA'}
   event_bindings: {change: gender_dd_change}
@@ -73,7 +87,10 @@ components:
   type: Label
   layout_properties: {grid_position: 'ZQPBSI,JQBMOP'}
 - name: date_picker_1
-  properties: {background: white, placeholder: select_your_dob}
+  properties: {role: null, align: left, max_date: '', pick_time: false, tooltip: '',
+    placeholder: Select Your DOB, border: '', enabled: true, foreground: '', visible: true,
+    font_size: null, font: '', spacing_above: small, spacing_below: small, italic: false,
+    date: '', min_date: '', background: white, bold: false, underline: false, format: ''}
   type: DatePicker
   layout_properties: {grid_position: 'ZQPBSI,UXBJOC WFLUST,FWRCRR'}
 - name: dob_label
@@ -82,7 +99,7 @@ components:
   layout_properties: {grid_position: 'ZQPBSI,UXBJOC DTQJZG,KULCCT'}
 - name: label_05
   properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
-    text: 'Mobile number :', font_size: 16, font: '', spacing_above: small, icon_align: left,
+    text: 'Mobile Number :', font_size: 16, font: '', spacing_above: small, icon_align: left,
     spacing_below: small, italic: false, background: '', bold: true, underline: false,
     icon: ''}
   type: Label
@@ -119,7 +136,7 @@ components:
   layout_properties: {grid_position: 'UAHFOF,LEHDTB ULTRBB,UNIMQV'}
 - name: label_3_copy_1
   properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
-    text: 'Upload Profile photo
+    text: 'Upload Profile Photo
 
       (Size less than 2MB)', font_size: 16, font: '', spacing_above: small, icon_align: left,
     spacing_below: small, italic: false, background: '', bold: true, underline: false,
@@ -135,7 +152,10 @@ components:
   type: Image
   layout_properties: {grid_position: 'GAQQXD,YKXHZL'}
 - name: label_06
-  properties: {text: Enter your Government ID1, bold: true, font_size: 16}
+  properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
+    text: Enter Your Government ID1, font_size: 16, font: '', spacing_above: small,
+    icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+    underline: false, icon: ''}
   type: Label
   layout_properties: {grid_position: 'FUKIAQ,FHUQHO'}
 - name: govt_id1_text_box
@@ -152,7 +172,7 @@ components:
   layout_properties: {grid_position: 'FUKIAQ,NACRVB TKHUVQ,EKZMAN'}
 - name: label_3_copy_1_copy_2
   properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
-    text: 'Upload your Govt ID1
+    text: 'Upload Your Govt ID1
 
       (Size less than 2MB)', font_size: 16, font: '', spacing_above: small, icon_align: left,
     spacing_below: small, italic: false, background: '', bold: true, underline: false,
@@ -169,7 +189,7 @@ components:
   layout_properties: {grid_position: 'MCCGKZ,YBEUGO'}
 - name: label_08
   properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
-    text: Enter your Government ID2, font_size: 16, font: '', spacing_above: small,
+    text: Enter Your Government ID2, font_size: 16, font: '', spacing_above: small,
     icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
     underline: false, icon: ''}
   type: Label
@@ -187,7 +207,7 @@ components:
   layout_properties: {grid_position: 'YICHJM,RKWAOY JIPPJW,PHGLAV'}
 - name: label_3_copy_1_copy_4
   properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
-    text: 'Upload your Govt ID2
+    text: 'Upload Your Govt ID2
 
       (Size less than 2MB)', font_size: 16, font: '', spacing_above: small, icon_align: left,
     spacing_below: small, italic: false, background: '', bold: true, underline: false,
