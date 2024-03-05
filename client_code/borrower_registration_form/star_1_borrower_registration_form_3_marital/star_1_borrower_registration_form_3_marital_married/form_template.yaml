@@ -28,7 +28,7 @@ components:
   components:
   - name: label_1
     properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-      visible: true, text: Provide another person detail, font_size: null, font: '',
+      visible: true, text: Provide Another Person Details, font_size: null, font: '',
       spacing_above: small, icon_align: left, spacing_below: small, italic: false,
       background: '', bold: true, underline: false, icon: ''}
     type: Label

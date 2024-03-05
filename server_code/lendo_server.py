@@ -93,14 +93,14 @@ def add_lendor_institutional_form_3(industry_type,six_monthturnover,last_six_sta
     row[0]['six_month_turnover'] = six_monthturnover
     row[0]['last_six_month_bank_proof'] = last_six_statments
 
-@anvil.server.callable
-def add_lendor_institutional_form_4(director_name,director_no,din,cin,user_id):
-  row = app_tables.fin_user_profile.search(customer_id = user_id)
-  if row:
-    row[0]['director_name'] = director_name
-    row[0]['director_no'] = director_no
-    row[0]['din'] = din
-    row[0]['cin'] = cin
+# @anvil.server.callable
+# def add_lendor_institutional_form_4(director_name,director_no,din,cin,user_id):
+#   row = app_tables.fin_user_profile.search(customer_id = user_id)
+#   if row:
+#     row[0]['director_name'] = director_name
+#     row[0]['director_no'] = director_no
+#     row[0]['din'] = din
+#     row[0]['cin'] = cin
 
 @anvil.server.callable
 def add_lendor_institutional_form_5(reg_office_add,off_add_proof,proof_verification,user_id):

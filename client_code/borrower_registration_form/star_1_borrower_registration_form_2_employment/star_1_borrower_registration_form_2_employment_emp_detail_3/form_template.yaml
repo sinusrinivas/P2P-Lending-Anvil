@@ -34,7 +34,7 @@ components:
   layout_properties: {grid_position: ''}
 - name: label_2_copy_1
   properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
-    text: Annual salary, font_size: null, font: '', spacing_above: small, icon_align: left,
+    text: Annual Salary, font_size: null, font: '', spacing_above: small, icon_align: left,
     spacing_below: small, italic: false, background: '', bold: true, underline: false,
     icon: ''}
   type: Label
@@ -75,7 +75,7 @@ components:
   layout_properties: {grid_position: 'OJCELP,GGXQEK'}
 - name: label_2
   properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
-    text: 'Upload last six months bank Statements
+    text: 'Upload Last Six Months Bank Statements
 
       (Image size less-than 2MB)(Spouse)', font_size: null, font: '', spacing_above: small,
     icon_align: left, spacing_below: small, italic: false, background: '', bold: true,

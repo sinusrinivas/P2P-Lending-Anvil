@@ -40,7 +40,7 @@ components:
     role: null
     align: full
     tooltip: ''
-    placeholder: select marrital status
+    placeholder: Select Marrital Status
     border: ''
     enabled: true
     foreground: ''
