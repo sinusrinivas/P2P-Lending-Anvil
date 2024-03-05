@@ -14,14 +14,14 @@ class view_loan_foreclosure_Requests(view_loan_foreclosure_RequestsTemplate):
     self.init_components(**properties)
     self.repeating_panel_6.items=app_tables.fin_foreclosure.search()
 
-    self.repeating_panel_1.items = app_tables.fin_foreclosure.search(status=q.like('approved%'))
-    self.label_5.text = str(len(self.repeating_panel_1.items))
+    self.repeating_panel_7.items = app_tables.fin_foreclosure.search(status=q.like('approved%'))
+    self.label_5.text = str(len(self.repeating_panel_7.items))
 
-    self.repeating_panel_2.items = app_tables.fin_foreclosure.search(status=q.like('rejected%'))
-    self.label_6.text = str(len(self.repeating_panel_2.items))
+    self.repeating_panel_8.items = app_tables.fin_foreclosure.search(status=q.like('rejected%'))
+    self.label_6.text = str(len(self.repeating_panel_8.items))
 
-    self.repeating_panel_3.items = app_tables.fin_foreclosure.search(status=q.like('under process%'))
-    self.label_5_copy.text = str(len(self.repeating_panel_3.items))
+    self.repeating_panel_9.items = app_tables.fin_foreclosure.search(status=q.like('under process%'))
+    self.label_5_copy.text = str(len(self.repeating_panel_9.items))
 
     self.repeating_panel_5.items = app_tables.fin_foreclosure.search(status=q.like('under process%'))
     self.new_request.text = str(len(self.repeating_panel_5.items))
@@ -36,7 +36,7 @@ class view_loan_foreclosure_Requests(view_loan_foreclosure_RequestsTemplate):
   def button_3_click(self, **event_args):
     """This method is called when the button is clicked"""
     self.label_2.visible = True
-    self.data_grid_2.visible = True
+    #self.data_grid_2.visible = True
     self.label_3.visible = False
     self.data_grid_2_copy.visible = False
     self.label_4.visible = False
@@ -47,11 +47,14 @@ class view_loan_foreclosure_Requests(view_loan_foreclosure_RequestsTemplate):
     self.data_grid_1.visible = False
     self.repeating_panel_6.visible = False
     self.repeating_panel_5.visible = False  
+    self.repeating_panel_7.visible = True
+    self.repeating_panel_8.visible = False 
+    self.repeating_panel_9.visible = False
 
   def button_2_click(self, **event_args):
     """This method is called when the button is clicked"""
     self.label_3.visible = True
-    self.data_grid_2_copy.visible = True
+    #self.data_grid_2_copy.visible = True
     self.label_4.visible = False
     self.data_grid_3.visible = False
     self.label_2.visible = False
@@ -62,11 +65,14 @@ class view_loan_foreclosure_Requests(view_loan_foreclosure_RequestsTemplate):
     self.data_grid_1.visible = False
     self.repeating_panel_6.visible = False
     self.repeating_panel_5.visible = False  
+    self.repeating_panel_7.visible = False
+    self.repeating_panel_8.visible = True 
+    self.repeating_panel_9.visible = False
 
   def button_4_click(self, **event_args):
     """This method is called when the button is clicked"""
     self.label_4.visible = True
-    self.data_grid_3.visible = True
+    #self.data_grid_3.visible = True
     self.label_2.visible = False
     self.data_grid_2.visible = False
     self.label_3.visible = False
@@ -77,6 +83,9 @@ class view_loan_foreclosure_Requests(view_loan_foreclosure_RequestsTemplate):
     self.data_grid_1.visible = False
     self.repeating_panel_6.visible = False
     self.repeating_panel_5.visible = False  
+    self.repeating_panel_7.visible = False
+    self.repeating_panel_8.visible = False 
+    self.repeating_panel_9.visible = True
 
   def button_5_click(self, **event_args):
     """This method is called when the button is clicked"""

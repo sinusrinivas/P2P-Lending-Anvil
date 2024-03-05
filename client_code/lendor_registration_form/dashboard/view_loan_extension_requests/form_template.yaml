@@ -362,6 +362,21 @@ components:
       visible: false}
     type: RepeatingPanel
     layout_properties: {grid_position: 'IHGLYR,CFLUZB'}
+  - name: repeating_panel_7
+    properties: {item_template: lendor_registration_form.dashboard.view_loan_extension_requests.ItemTemplate62,
+      visible: false}
+    type: RepeatingPanel
+    layout_properties: {grid_position: 'SOWZWQ,NOMEUR'}
+  - name: repeating_panel_8
+    properties: {item_template: lendor_registration_form.dashboard.view_loan_extension_requests.ItemTemplate63,
+      visible: false}
+    type: RepeatingPanel
+    layout_properties: {grid_position: 'JEDXHN,ZYDQVM'}
+  - name: repeating_panel_9
+    properties: {item_template: lendor_registration_form.dashboard.view_loan_extension_requests.ItemTemplate64,
+      visible: false}
+    type: RepeatingPanel
+    layout_properties: {grid_position: 'ESYWTB,AXMYRD'}
 - type: FlowPanel
   properties: {}
   name: navbar_links
