@@ -37,8 +37,8 @@ class ots_dashboard(ots_dashboardTemplate):
       b = -1
       for i in self.list_4:
         b+=1
-        # if i == "Approved" or i == 'approved':
-        self.index.append(b)
+        if i == "OTS" or i == "Approved" or i == 'approved' or i == 'disbursed loan' or i == 'Disbursed loan' or i == 'default loan' or i == 'under process' or i == 'NPA' or i == 'lapsed loan':
+          self.index.append(b)
           
       for i in self.index:
         self.result.append({'loan_id' : self.list_1[i], 'coustmer_id' : self.list_2[i], 'full_name' : self.list_3[i], 'loan_status' : self.list_4[i]})
