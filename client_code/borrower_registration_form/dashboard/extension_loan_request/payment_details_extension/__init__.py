@@ -495,7 +495,7 @@ class payment_details_extension(payment_details_extensionTemplate):
                     'ScheduledPayment': f"₹ {emi:.2f}",
                     'Principal': f"₹ {principal_amount:.2f}",
                     'Interest': f"₹ {interest_amount:.2f}",
-                    'BeginningBalance': f"₹ {(last_paid_emi_ending_balance + extension_fee_amount):.2f}" if payment_number_counter == (last_paid_emi_number + 1) else "N/A",
+                    'BeginningBalance': f"₹ {last_paid_emi_ending_balance :.2f}" if last_paid_emi_ending_balance else "N/A",
                     'ExtensionFee': f"₹ {extension_fee_amount:.2f}"  if payment_number_counter == (last_paid_emi_number + 1) else "₹ 0.00",
                     'TotalPayment': f"₹ {total_payment:.2f}",
                     'EndingBalance': f"₹ {ending_balance:.2f}"
