@@ -1,4 +1,4 @@
-from ._anvil_designer import lendorTemplate
+from ._anvil_designer import ItemTemplate48Template
 from anvil import *
 import anvil.server
 import anvil.google.auth, anvil.google.drive
@@ -8,7 +8,7 @@ import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 
-class lendor(lendorTemplate):
+class ItemTemplate48(ItemTemplate48Template):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
@@ -17,6 +17,6 @@ class lendor(lendorTemplate):
 
   def outlined_button_1_click(self, **event_args):
     """This method is called when the button is clicked"""
-    selcted_row=self.item
-    open_form('lendor_registration_form.dashboard.lender_view_loans.view_details_1',selected_row=selcted_row)
-
+    selected_row = self.item
+        # Open the Borr_loan_request form with the selected row data
+    open_form("lendor_registration_form.dashboard.view_borrower_loan_request.Borr_loan_request", selected_row=selected_row)

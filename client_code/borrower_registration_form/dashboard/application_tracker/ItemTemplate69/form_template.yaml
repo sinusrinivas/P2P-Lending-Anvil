@@ -4,7 +4,7 @@ components:
 - name: xy_panel_1
   properties: {height: 292.99993896484375, role: outlined-card}
   type: XYPanel
-  layout_properties: {grid_position: 'QCWOXP,DXGFHO'}
+  layout_properties: {grid_position: 'ZTIDSK,SMSLVN'}
   components:
   - name: image_1
     properties: {height: 63.399932861328125, source: 'https://freesvg.org/img/abstract-user-flat-4.png'}
@@ -21,7 +21,7 @@ components:
     type: Label
     layout_properties: {x: 78.53748779371381, y: 27.950009156018496, width: 200}
     data_bindings:
-    - {property: text, code: 'self.item[''lener_customer_id'']', writeback: false}
+    - {property: text, code: 'self.item[''lender_customer_id'']', writeback: false}
   - name: label_3
     properties: {text: '---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------',
       foreground: grey}
@@ -31,6 +31,8 @@ components:
     properties: {}
     type: Label
     layout_properties: {x: 735.2499206550419, y: 0, width: 200}
+    data_bindings:
+    - {property: text, code: 'self.item[''product_name'']', writeback: false}
   - name: product_details
     properties: {}
     type: Label
