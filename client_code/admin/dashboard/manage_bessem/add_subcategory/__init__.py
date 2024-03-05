@@ -28,7 +28,15 @@ class add_subcategory(add_subcategoryTemplate):
     self.text_box_2.text = ' '
     self.refresh()
 
-    data = app_tables.fin_admin_beseem_groups.search()
+    category_rows = app_tables.fin_admin_beseem_categories.search(group_name='gender')
+    
+    if category_rows:
+        max_points = max(row['min_points'] for row in category_rows)
+        group_row = app_tables.fin_admin_beseem_groups.get(group_name='gender')
+        
+        if group_row:
+            group_row.max_points = max_points
+            group_row.update()
       
 
   def button_1_click(self, **event_args):
