@@ -24,8 +24,16 @@ components:
     underline: true, icon: ''}
   name: label_1
   layout_properties: {grid_position: 'QQNRWX,MGPSVS'}
+- type: RepeatingPanel
+  properties: {role: null, tooltip: '', border: '', foreground: '', items: null, visible: true,
+    spacing_above: small, spacing_below: small, item_template: bank_users.repeating_panels.borrower,
+    background: ''}
+  name: repeating_panel_3
+  layout_properties: {grid_position: 'AYOLOG,DFDDMG'}
 - type: ColumnPanel
-  properties: {role: outlined-card, col_widths: '{}', visible: false}
+  properties: {role: outlined-card, tooltip: '', border: '', foreground: '', visible: true,
+    wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
+    spacing_below: small, background: ''}
   name: outlined_card_1
   layout_properties: {grid_position: 'NPXXDJ,YYVJGH'}
   components:
@@ -57,8 +65,9 @@ components:
       name: repeating_panel_1
       layout_properties: {}
 - name: repeating_panel_2
-  properties: {item_template: borrower_registration_form.dashboard.foreclosure_request.ItemTemplate46,
-    visible: true}
+  properties: {role: null, tooltip: '', border: '', foreground: '', items: null, visible: false,
+    spacing_above: small, spacing_below: small, item_template: borrower_registration_form.dashboard.foreclosure_request.ItemTemplate46,
+    background: ''}
   type: RepeatingPanel
   layout_properties: {grid_position: 'WFUAYG,PXXXRI'}
 is_package: true

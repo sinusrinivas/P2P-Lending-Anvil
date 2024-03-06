@@ -326,6 +326,7 @@ unique_ids:
     wallet.wallet_deposit: '1707193556464697641891614.515'
     borrower_registration_form.dashboard.dashboard_contact: '1701024135120380095014250.6585'
     borrower_registration_form.dashboard: '1700743782571887751708379.0123'
+    borrower_registration_form.dashboard.foreclosure_request.ItemTemplate71: '1709715497131312960996190.5377'
     borrower_registration_form.star_1_borrower_registration_form_1_education: '1706674209284259079855206.07712'
     admin.dashboard.loan_management.approved_loans: '1699528799869373096001113.10925'
     lendor_registration_form.dashboard.view_profile: '1699967210041830030429676.4268'
