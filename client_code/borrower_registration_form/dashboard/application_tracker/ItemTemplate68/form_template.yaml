@@ -59,23 +59,12 @@ components:
     layout_properties: {x: 735.2361068725586, y: 155.9862060546875, width: 200}
     data_bindings:
     - {property: text, code: 'self.item[''tenure'']', writeback: false}
-  - type: Label
-    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-      visible: true, text: 'Loan Id :', font_size: null, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
-      underline: false, icon: ''}
-    name: label_1
-    layout_properties: {x: 10, y: 88.97216796875, width: 160}
   - name: interest_rate
     properties: {}
     type: Label
     layout_properties: {x: 735.2361068725586, y: 118.9862060546875, width: 200}
     data_bindings:
     - {property: text, code: 'self.item[''interest_rate'']', writeback: false}
-  - type: Label
-    properties: {}
-    name: loan_id
-    layout_properties: {x: 735.3750228881836, y: 81.9444580078125, width: 160}
   - name: lendor_name
     properties: {bold: true}
     type: Label
