@@ -20,8 +20,7 @@ components:
     properties: {}
     type: Label
     layout_properties: {x: 78.53748779371381, y: 27.950009156018496, width: 200}
-    data_bindings:
-    - {property: text, code: 'self.item[''borrower_customer_id'']', writeback: false}
+    data_bindings: []
   - name: label_3
     properties: {text: '---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------',
       foreground: grey}
@@ -31,14 +30,12 @@ components:
     properties: {}
     type: Label
     layout_properties: {x: 735.2499206550419, y: 0, width: 200}
-    data_bindings:
-    - {property: text, code: 'self.item['''']', writeback: false}
+    data_bindings: []
   - name: product_details
     properties: {}
     type: Label
     layout_properties: {x: 735.3874938972294, y: 24.000012207776308, width: 200}
-    data_bindings:
-    - {property: text, code: 'self.item['''']', writeback: false}
+    data_bindings: []
   - name: outlined_button_1
     properties: {text: View Loan Details, role: outlined-button, align: center, font_size: null,
       background: '#05264d', foreground: white, bold: true}
@@ -68,14 +65,12 @@ components:
     properties: {}
     type: Label
     layout_properties: {x: 735.3750152587891, y: 117.33927917480469, width: 200}
-    data_bindings:
-    - {property: text, code: 'self.item[''interest_rate'']', writeback: false}
+    data_bindings: []
   - name: term
     properties: {}
     type: Label
     layout_properties: {x: 735.2321929931641, y: 150.3392791748047, width: 200}
-    data_bindings:
-    - {property: text, code: 'self.item[''tenure'']', writeback: false}
+    data_bindings: []
   - name: principal_amount
     properties: {}
     type: Label

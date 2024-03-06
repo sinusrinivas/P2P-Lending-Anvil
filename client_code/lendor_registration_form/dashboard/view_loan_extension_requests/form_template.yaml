@@ -361,7 +361,7 @@ components:
     properties: {item_template: lendor_registration_form.dashboard.view_loan_extension_requests.ItemTemplate58,
       visible: false}
     type: RepeatingPanel
-    layout_properties: {grid_position: 'EQYOXW,JGDQTL'}
+    layout_properties: {grid_position: 'DFTWKU,UIYXSN'}
   - name: repeating_panel_7
     properties: {item_template: lendor_registration_form.dashboard.view_loan_extension_requests.ItemTemplate59,
       visible: false}
