@@ -71,41 +71,33 @@ def final_points_update_bessem_table(user_id):
 
 
 
-# this function is working on underwriting 
-def loan_points(id):
-  return 100
+# # this function is working on underwriting 
+# def loan_points(id):
+#   return 100
 
-# this function is working on underwriting
-def loan_and_trust_user_model(id):
-  return 200
+# # this function is working on underwriting
+# def loan_and_trust_user_model(id):
+#   return 200
 
-# this function have to check by admin
-def occupation_point_and_government_id_model(id):
+# # this function have to check by admin
+# def occupation_point_and_government_id_model(id):
   
-  return 400
+#   return 400
+
+# # this function goes to be create
 
 
+# def fake_control(id):
+#   return 500
 
 
-
-
-# this function goes to be create
-
-
-def fake_control(id):
-  return 500
-
-
-def fake_detection(id):
+# def fake_detection(id):
   
-  return True
+#   return True
 
 
-def block_user(id):
-  pass
-  # if this function is call the is going to be block
-
-
-
+# def block_user(id):
+#   pass
+#   # if this function is call the is going to be block
 
 # outer call function
