@@ -2,7 +2,7 @@ is_package: true
 container: {type: ColumnPanel}
 components:
 - name: xy_panel_1
-  properties: {height: 374.99993896484375, role: outlined-card}
+  properties: {height: 374.99993896484375, role: outlined-card, width: 920.222}
   type: XYPanel
   layout_properties: {grid_position: 'ZTIDSK,SMSLVN'}
   components:
@@ -77,7 +77,7 @@ components:
     type: Label
     layout_properties: {x: 735.3750228881836, y: 34, width: 200}
     data_bindings:
-    - {property: text, code: 'self.item[''product_id'']', writeback: false}
+    - {property: text, code: 'self.item[''product_description'']', writeback: false}
   - name: mobile
     properties: {}
     type: Label
@@ -95,4 +95,4 @@ components:
     type: Label
     layout_properties: {x: 735.2361068725586, y: -12, width: 200}
     data_bindings:
-    - {property: text, code: 'self.item[''product_name'']', writeback: false}
+    - {property: text, code: 'self.item[''product_id'']', writeback: false}
