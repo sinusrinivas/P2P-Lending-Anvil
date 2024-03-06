@@ -13,7 +13,7 @@ from anvil.tables import app_tables
 def final_points_update_bessem_table(user_id):
   id = user_id
   final_points = loan_points(id)+loan_and_trust_user_model(id)+occupation_point_and_government_id_model(id)
-  general_check = fake_detection(id)
+  # general_check = fake_detection(id)
   if general_check:
     if final_points<= 1000:
       return final_points
