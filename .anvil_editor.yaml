@@ -209,7 +209,6 @@ unique_ids:
     lendor_registration_form.dashboard.view_borrower_loan_request.Borr_loan_request: '1700542763128106365112272.9714'
     admin.dashboard.manage_products.view_product: '1700713112442254456792559.71744'
     borrower_registration_form.dashboard.today_dues.payment_details_t: '1707196716516415361380278.654'
-    borrower_registration_form.dashboard.foreclosure_request.ItemTemplate46: '1709551887069676820527883.9896'
     borrower_registration_form.dashboard.view_loans.ItemTemplate41: '1709548268754308857962307.0511'
     lendor_registration_form.dashboard.view_lost_oppurtunities.RowTemplate34: '1704968592298956121945816.4596'
     admin.dashboard.loan_management.closed_loans: '1699528886441906086843573.9337'
@@ -233,6 +232,7 @@ unique_ids:
     ? borrower_registration_form.star_1_borrower_registration_form_2_employment.star_1_borrower_registration_form_2_employment_business_1
     : '1700570064478378100736204.996'
     lendor_registration_form.dashboard.view_loan_extension_requests.RowTemplate38: '170650256999669053578754.57318'
+    borrower_registration_form.dashboard.foreclosure_request.ItemTemplate72: '1709719079370200168118421.90018'
     lendor_registration_form.lender_registration_form_2.lender_registration_individual_form_1: '169942903909778939193987.11401'
     admin.dashboard.manage_products.view_products_and_categories.RowTemplate28: '1704172157354836718833767.5173'
     admin.dashboard.manage_cms.add_lender_dropdown_details.edit_organizaton_type: '1706531933047410934362132.85895'
@@ -326,7 +326,6 @@ unique_ids:
     wallet.wallet_deposit: '1707193556464697641891614.515'
     borrower_registration_form.dashboard.dashboard_contact: '1701024135120380095014250.6585'
     borrower_registration_form.dashboard: '1700743782571887751708379.0123'
-    borrower_registration_form.dashboard.foreclosure_request.ItemTemplate71: '1709715497131312960996190.5377'
     borrower_registration_form.star_1_borrower_registration_form_1_education: '1706674209284259079855206.07712'
     admin.dashboard.loan_management.approved_loans: '1699528799869373096001113.10925'
     lendor_registration_form.dashboard.view_profile: '1699967210041830030429676.4268'
