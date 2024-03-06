@@ -42,6 +42,7 @@ unique_ids:
     admin.dashboard.manage_cms.add_lender_dropdown_details.ItemTemplate21: '1706531177519940623216509.8158'
     admin.dashboard.manage_products.choose_grooup_categoris: '1706013405349542479965126.4427'
     admin.dashboard.manage_bessem: '170953922392368996895390.69653'
+    admin.dashboard.manage_bessem.add_subcategory.ItemTemplate74: '1709734065080628871844250.8976'
     borrower_registration_form.dashboard.edit_profile: '1698653709394569134493869.6183'
     lendor_registration_form.dashboard.view_loan_extension_requests.ItemTemplate59: '1709613549387844679911689.402'
     lendor_registration_form.dashboard.view_loan_extension_requests.ItemTemplate56: '1709613500033774888505859.3735'
@@ -70,6 +71,7 @@ unique_ids:
     admin.dashboard.loan_management.loan_disbursed.RowTemplate16: '1701160112605363272029232.90436'
     ? borrower_registration_form.star_1_borrower_registration_form_2_employment.star_1_borrower_registration_form_2_employment_emp_detail_1
     : '1700037370196273229157101.42648'
+    admin.dashboard.manage_bessem.add_subcategory.edit_qualification: '170973382597126282095202.1523'
     lendor_registration_form.lender_registration_form_3_marital_details: '1706634738424786944931523.7909'
     admin.dashboard.loan_management.open_loans.view_profile_4: '1701079146053366244134425.9466'
     lendor_registration_form.lender_registration_form_3_marital_details.lender_registration_form_3_marital_married: '1706685942475751422266010.4158'
@@ -94,6 +96,7 @@ unique_ids:
     borrower_registration_form.dashboard.foreclosure_request: '1699009486604204061292370.0036'
     admin.dashboard.admin_teams.view_profile.update_form: '169952839624818688697299.6676'
     lendor_registration_form.dashboard.today_dues.ItemTemplate1: '1703564885286922717800272.7809'
+    admin.dashboard.manage_bessem.add_subcategory.edit_marrital: '1709734215763733851464964.1079'
     bank_users.main_form.RowTemplate12: '1700563368307555313567841.8457'
     lendor_registration_form.lender_registration_form_1_education_form.lender_registration_education_10th_class: '1700756647393597319323171.6338'
     lendor_registration_form.lender_registration_form_2.lender_registration_individual_form_2: '1699429198901172624943660.5969'
