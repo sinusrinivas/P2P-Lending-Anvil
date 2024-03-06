@@ -17,7 +17,7 @@ services:
 - source: /runtime/services/anvil/secrets.yml
   client_config: {}
   server_config: {}
-startup: {type: form, module: bank_users.main_form}
+startup: {type: form, module: admin.dashboard}
 package_name: bank_client
 allow_embedding: false
 name: P2P Lending App
@@ -288,30 +288,15 @@ db_schema:
       admin_ui: {width: 200}
       type: string
   fin_admin_beseem_groups:
-    client: none
+    client: full
     server: full
     columns:
-    - name: Group Id
-      admin_ui: {order: 6, width: 200}
-      type: number
     - name: group_name
-      admin_ui: {order: 1, width: 200}
+      admin_ui: {width: 200, order: 0}
       type: string
-    - name: min_points
-      admin_ui: {order: 2, width: 200}
-      type: number
     - name: max_points
-      admin_ui: {order: 3, width: 200}
+      admin_ui: {width: 200, order: 1}
       type: number
-    - name: status
-      admin_ui: {order: 4, width: 200}
-      type: bool
-    - name: Modify Date
-      admin_ui: {width: 200, order: 5}
-      type: date
-    - name: sub_category
-      admin_ui: {width: 200, order: 1.5}
-      type: string
     title: fin_admin_beseem_groups
   fin_borrower_employee_type:
     client: full
@@ -757,6 +742,29 @@ db_schema:
       admin_ui: {width: 200}
       type: string
     title: fin_user_profile
+  fin_admin_beseem_categories:
+    client: full
+    server: full
+    columns:
+    - name: Group Id
+      admin_ui: {order: 6, width: 200}
+      type: number
+    - name: group_name
+      admin_ui: {order: 1, width: 200}
+      type: string
+    - name: min_points
+      admin_ui: {order: 2, width: 200}
+      type: number
+    - name: status
+      admin_ui: {order: 4, width: 200}
+      type: bool
+    - name: Modify Date
+      admin_ui: {width: 200, order: 5}
+      type: date
+    - name: sub_category
+      admin_ui: {width: 200, order: 1.5}
+      type: string
+    title: fin_admin_beseem_categories
   fin_wallet_transactions:
     title: fin_wallet_transactions
     client: full
@@ -956,7 +964,7 @@ db_schema:
       admin_ui: {order: 12, width: 200}
       type: string
   fin_wallet_bank_account_table:
-    client: none
+    client: full
     server: full
     columns:
     - name: account_id
