@@ -1,4 +1,4 @@
-from ._anvil_designer import edit_detailsTemplate
+from ._anvil_designer import edit_genderTemplate
 from anvil import *
 import anvil.server
 import anvil.google.auth, anvil.google.drive
@@ -8,7 +8,7 @@ import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 
-class edit_details(edit_detailsTemplate):
+class edit_gender(edit_genderTemplate):
   def __init__(self, selected_row, **properties):
     self.init_components(**properties)
 
@@ -35,7 +35,18 @@ class edit_details(edit_detailsTemplate):
 
       # Save changes to the database
       self.selected_row.update()
+      
+      existing_min_points = [row["min_points"] for row in app_tables.fin_admin_beseem_categories.search(group_name="gender")]
+      max_points = max(existing_min_points + [updated_points])
 
+      existing_group_row  = app_tables.fin_admin_beseem_groups.get(group_name="gender")
+      if existing_group_row:
+        existing_group_row['max_points'] = max_points
+        existing_group_row.update()
+      else:
+        new_group_row = app_tables.fin_admin_beseem_groups.add_row(
+          group_name="gender", max_points=max_points)
+    
       alert("Changes saved successfully!")
       open_form('admin.dashboard.manage_bessem.add_subcategory')
 
@@ -45,6 +56,17 @@ class edit_details(edit_detailsTemplate):
     if confirm("Are you sure you want to delete this item?"):
       # Delete the row directly on the client side
       self.selected_row.delete()
+
+      existing_min_points = [row["min_points"] for row in app_tables.fin_admin_beseem_categories.search(group_name="gender")]
+      max_points = max(existing_min_points)
+
+      existing_group_row  = app_tables.fin_admin_beseem_groups.get(group_name="gender")
+      if existing_group_row:
+        existing_group_row['max_points'] = max_points
+        existing_group_row.update()
+      else:
+        new_group_row = app_tables.fin_admin_beseem_groups.add_row(
+          group_name="gender", max_points=max_points)
 
       # Optionally, navigate to a different form or perform other actions
       open_form('admin.dashboard.manage_bessem.add_subcategory')
