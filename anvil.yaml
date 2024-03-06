@@ -1153,6 +1153,9 @@ db_schema:
     - name: total_processing_fee_amount
       admin_ui: {width: 200}
       type: number
+    - name: product_description
+      admin_ui: {width: 200, order: 37}
+      type: string
     title: fin_loan_details
   fin_beseem_score_users:
     client: full
