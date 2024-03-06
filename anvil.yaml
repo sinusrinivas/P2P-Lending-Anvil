@@ -159,7 +159,7 @@ db_schema:
       admin_ui: {width: 200, order: 7}
       type: string
     - name: product_discription
-      admin_ui: {width: 200, order: 8}
+      admin_ui: {order: 8, width: 200}
       type: string
     - name: processing_fee
       admin_ui: {width: 200, order: 9}
