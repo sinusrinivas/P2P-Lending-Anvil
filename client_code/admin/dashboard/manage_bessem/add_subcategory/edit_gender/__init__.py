@@ -79,3 +79,4 @@ class edit_gender(edit_genderTemplate):
     """Cancel button click event"""
     # Close the form without saving changes
     open_form('admin.dashboard.manage_bessem.add_subcategory')
+
