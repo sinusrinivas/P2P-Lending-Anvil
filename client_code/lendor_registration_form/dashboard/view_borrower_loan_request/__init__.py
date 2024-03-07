@@ -28,9 +28,9 @@ class view_borrower_loan_request(view_borrower_loan_requestTemplate):
     loan_requests_with_details = []
 
         # Loop through each loan request and append additional details
-    for loan_request in loan_requests:
+    for loan in loan_requests:
             # Example: Get borrower's profile based on borrower_customer_id
-            borrower_profile = app_tables.fin_user_profile.get(customer_id=loan_request['borrower_customer_id'])
+            borrower_profile = app_tables.fin_user_profile.get(customer_id=loan['borrower_customer_id'])
             if borrower_profile is not None:
                 loan_requests_with_details.append({
                     'mobile': borrower_profile['mobile'],
@@ -42,8 +42,12 @@ class view_borrower_loan_request(view_borrower_loan_requestTemplate):
                     'product_description': loan['product_description'],
                     'borrower_full_name': loan['borrower_full_name'],
                     'loan_id': loan['loan_id'],
-                    'lender_accepted_timestamp': loan['lender_accepted_timestamp'],
+                    'beseem_score': loan['beseem_score'],
+                    'credit_limit': loan['credit_limit'],
                     'loan_updated_status': loan['loan_updated_status'],
+                    'emi_payment_type': loan['emi_payment_type'],
+                     'borrower_customer_id': loan['borrower_customer_id'],
+                    # 'borrower_customer_id': loan['borrower_customer_id']
                     # Add other details you want to include
                                                   })
           
