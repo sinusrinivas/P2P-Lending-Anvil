@@ -53,7 +53,7 @@ components:
       border: ''
       foreground: ''
       rows_per_page: 20
-      visible: true
+      visible: false
       wrap_on: never
       show_page_controls: true
       spacing_above: small
@@ -66,6 +66,11 @@ components:
       properties: {spacing_above: none, spacing_below: none, item_template: borrower_registration_form.dashboard.extension_loan_request.RowTemplate37}
       name: repeating_panel_1
       layout_properties: {}
+  - name: repeating_panel_2
+    properties: {item_template: borrower_registration_form.dashboard.extension_loan_request.ItemTemplate75,
+      visible: true}
+    type: RepeatingPanel
+    layout_properties: {grid_position: 'VGBDCC,NZWKZT'}
 - type: FlowPanel
   properties: {}
   name: navbar_links
