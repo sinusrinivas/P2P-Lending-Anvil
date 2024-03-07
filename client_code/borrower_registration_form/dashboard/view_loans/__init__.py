@@ -175,6 +175,8 @@ class view_loans(view_loansTemplate):
                         'loan_id': loan['loan_id'],
                         'borrower_loan_created_timestamp':loan['borrower_loan_created_timestamp'],
                         'loan_updated_status' : loan['loan_updated_status']})
+
+        self.repeating_panel_6.items = borrower_profiles
                  
             
             
