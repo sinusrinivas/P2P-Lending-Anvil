@@ -43,6 +43,8 @@ class foreclosure_request(foreclosure_requestTemplate):
                                 'borrower_full_name': loan['borrower_full_name'],
                                 'loan_updated_status': loan['loan_updated_status'],
                                 'emi_payment_type': loan['emi_payment_type'],
+                                'credit_limit' : loan['credit_limit'],
+                                # 'foreclose_type' : loan['foreclose_type'],
                                 'eligible': self.is_loan_eligible(loan)
                             }
                             loans.append(loan_data)

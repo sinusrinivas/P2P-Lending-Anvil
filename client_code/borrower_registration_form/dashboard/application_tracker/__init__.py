@@ -38,7 +38,7 @@ class application_tracker(application_trackerTemplate):
     self.repeating_panel_2.items = borrower_profiles
     #self.label_1.text = str(len(under_process_items))
 
-    approved_items = app_tables.fin_loan_details.search(loan_updated_status=q.like('approve%'), borrower_customer_id=self.user_id)
+    approved_items = app_tables.fin_loan_details.search(loan_updated_status=q.like('approved%'), borrower_customer_id=self.user_id)
     borrower_prof = []
     for loan in approved_items:
             user_profiles = app_tables.fin_user_profile.get(customer_id=loan['lender_customer_id'])
