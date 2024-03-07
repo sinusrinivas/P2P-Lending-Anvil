@@ -26,8 +26,8 @@ components:
   components:
   - name: label_1_copy_1_copy_1
     properties: {role: null, align: center, tooltip: '', border: '', foreground: 'theme:On
-        Primary', visible: true, text: Application Tracker, font_size: null, font: '',
-      spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+        Primary', visible: true, text: '        Application Tracker', font_size: null,
+      font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
       background: '', bold: true, underline: false, icon: ''}
     type: Label
     layout_properties: {grid_position: 'YVGBZD,SIADQG'}

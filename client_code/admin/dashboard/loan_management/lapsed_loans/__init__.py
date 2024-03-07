@@ -15,50 +15,36 @@ class lapsed_loans(lapsed_loansTemplate):
     self.init_components(**properties)
 
     # Any code you write here will run before the form opens.
-    self.data = tables.app_tables.fin_loan_details.search()
-
-    a = -1
-    self.list_1 = []
-    self.list_2 = []
-    self.list_3 = []
-    self.list_4 = []
-    self.list_5 = []
-    self.list_6 = []
-    self.list_7 = []
-    self.list_8 = []
-    self.list_9 = []
-    self.list_10 = []
-    
-    
-    for i in self.data:
-      a+=1
-      self.list_1.append(i['loan_id'])
-      self.list_2.append(i['borrower_customer_id'])
-      self.list_3.append(i['borrower_full_name'])
-      self.list_4.append(i['loan_updated_status'])
-      self.list_5.append(i['lender_full_name'])
-      self.list_6.append(i['lender_customer_id'])
-      self.list_7.append(i['interest_rate'])
-      self.list_8.append(i['tenure'])
-      self.list_9.append(i['loan_amount'])
-      self.list_10.append(i['lender_accepted_timestamp'])
-    print(a)
+    self.data = app_tables.fin_loan_details.search(loan_updated_status=q.like('lapsed%'))
 
     self.result = []
-    self.index = []
-    if a == -1:
-      alert("No Data Available Here!")
-    else:
-      b = -1
-      for i in self.list_4:
-        b+=1
-        if i == "lapsed loan" or i == 'Lapsed loan' or i == "Lapsed Loan" or i == 'lapsed' or i == 'Lapsed':
-          self.index.append(b)
-          
-      for i in self.index:
-        self.result.append({'loan_id' : self.list_1[i], 'coustmer_id' : self.list_2[i], 'full_name' : self.list_3[i], 'loan_status' : self.list_4[i],'lendor_full_name' : self.list_5[i],'lender_customer_id':self.list_6[i],'interest_rate':self.list_7[i],'tenure':self.list_8[i],'loan_amount':self.list_9[i],'lender_timestamp':self.list_10[i]})
+    for loan in self.data:
+        borrower_profile = app_tables.fin_user_profile.get(customer_id=loan['borrower_customer_id'])
+        lender_profile = app_tables.fin_user_profile.get(customer_id=loan['lender_customer_id'])
+        if borrower_profile is not None:
+            self.result.append({
+                'loan_id': loan['loan_id'],
+                'customer_id': loan['borrower_customer_id'],
+                'full_name': loan['borrower_full_name'],
+                'loan_status': loan['loan_updated_status'],
+                'lender_full_name': loan['lender_full_name'],
+               'borrower_full_name': loan['borrower_full_name'],
+                'lender_customer_id': loan['lender_customer_id'],
+                'interest_rate': loan['interest_rate'],
+                'tenure': loan['tenure'],
+                'loan_amount': loan['loan_amount'],
+                'lender_timestamp': loan['lender_accepted_timestamp'],
+                'borrower_mobile': borrower_profile['mobile'],  # Include additional profile details here
+                'lender_mobile': lender_profile['mobile']  ,
+                'product_name':loan['product_name'],
+                'product_description':loan['product_description'],
+              'loan_disbursed_timestamp':loan['loan_disbursed_timestamp'],
+            })
 
-      self.repeating_panel_2.items = self.result
+    if not self.result:
+        alert("No Approved Loans Available!")
+    else:
+        self.repeating_panel_2.items = self.result
 
 
   def button_1_copy_click(self, **event_args):

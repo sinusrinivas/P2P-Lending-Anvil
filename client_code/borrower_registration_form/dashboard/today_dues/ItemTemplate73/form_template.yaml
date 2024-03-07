@@ -60,7 +60,7 @@ components:
     type: Label
     layout_properties: {x: 735.2361068725586, y: -5.888885498046875, width: 200}
     data_bindings:
-    - {property: text, code: 'self.item[''product_id'']'}
+    - {property: text, code: 'self.item[''product_name'']', writeback: false}
   - name: product_details
     properties: {}
     type: Label
@@ -78,7 +78,7 @@ components:
     type: Label
     layout_properties: {x: 78.52777862548828, y: 27.9444580078125, width: 200}
     data_bindings:
-    - {property: text, code: 'self.item[''lender_customer_id'']', writeback: false}
+    - {property: text, code: 'self.item[''mobile'']', writeback: false}
   - type: Button
     properties: {role: outlined-button, align: center, tooltip: '', border: '', enabled: true,
       foreground: white, visible: true, text: Pay, font_size: null, font: '', spacing_above: small,

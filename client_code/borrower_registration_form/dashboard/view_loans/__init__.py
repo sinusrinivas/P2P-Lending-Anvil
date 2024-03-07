@@ -16,26 +16,145 @@ class view_loans(view_loansTemplate):
         self.user_id = main_form_module.userId
 
         # Fetch data based on loan status and user ID
-        self.repeating_panel_6.items = app_tables.fin_loan_details.search(
-            loan_updated_status=q.any_of(
-                q.like('accept%'),
-                q.like('Approved%'),
-                q.like('approved%'),
-                q.like('under process%'),
-                q.like('foreclosure%'),
-                #q.like('close%'),
-                #q.like('Close%'),
-                #q.like('closed loans%'),
-                q.like('disbursed loan%'),
-                q.like('Disbursed loan%'),
-                q.like('Under Process%')
-            ),
+        open_loans = app_tables.fin_loan_details.search(
+            loan_updated_status=q.like('approved%'), 
             borrower_customer_id=self.user_id
         )
-        self.repeating_panel_7.items = app_tables.fin_loan_details.search(loan_updated_status=q.like('close%'), borrower_customer_id=self.user_id)
-        self.repeating_panel_8.items = app_tables.fin_loan_details.search(loan_updated_status=q.like('reject%'), borrower_customer_id=self.user_id)
-        self.repeating_panel_9.items = app_tables.fin_loan_details.search(loan_updated_status=q.like('under process%'), borrower_customer_id=self.user_id)
-        self.repeating_panel_10.items = app_tables.fin_loan_details.search(loan_updated_status=q.like('foreclosure%'), borrower_customer_id=self.user_id)
+
+        borrower_profiles = []
+        for loan in open_loans:
+            user_profile = app_tables.fin_user_profile.get(customer_id=loan['lender_customer_id'])
+            if user_profile is not None:
+                borrower_profiles.append({
+                    'mobile': user_profile['mobile'],
+                    'interest_rate': loan['interest_rate'],
+                    'loan_amount': loan['loan_amount'],
+                    'tenure': loan['tenure'],
+                    'loan_disbursed_timestamp': loan['loan_disbursed_timestamp'],
+                    'product_name': loan['product_name'],
+                    'product_description': loan['product_description'],
+                    'lender_full_name': loan['lender_full_name'],
+                    'product_id': loan['product_id'],
+                    'loan_id': loan['loan_id'],
+                    'borrower_loan_created_timestamp': loan['borrower_loan_created_timestamp'],
+                    'loan_updated_status' : loan['loan_updated_status']
+                })
+
+        self.repeating_panel_6.items = borrower_profiles
+
+        # Fetch data based on loan status and user ID
+        closed_loans = app_tables.fin_loan_details.search(
+            loan_updated_status=q.like('close%'), 
+            borrower_customer_id=self.user_id
+        )
+
+        borrower_profiles1 = []
+        for loan in closed_loans:
+            user_profile = app_tables.fin_user_profile.get(customer_id=loan['lender_customer_id'])
+            if user_profile is not None:
+                borrower_profiles1.append({
+                    'mobile': user_profile['mobile'],
+                    'interest_rate': loan['interest_rate'],
+                    'loan_amount': loan['loan_amount'],
+                    'tenure': loan['tenure'],
+                    'loan_disbursed_timestamp': loan['loan_disbursed_timestamp'],
+                    'product_name': loan['product_name'],
+                    'product_description': loan['product_description'],
+                    'lender_full_name': loan['lender_full_name'],
+                    'product_id': loan['product_id'],
+                    'loan_id': loan['loan_id'],
+                    'borrower_loan_created_timestamp': loan['borrower_loan_created_timestamp'],
+                    'loan_updated_status' : loan['loan_updated_status']
+                })
+
+        self.repeating_panel_7.items = borrower_profiles1
+
+
+        # Fetch data based on loan status and user ID
+        under_process = app_tables.fin_loan_details.search(
+            loan_updated_status=q.like('under process%'), 
+            borrower_customer_id=self.user_id
+        )
+
+        borrower_profiles2 = []
+        for loan in under_process:
+            user_profile = app_tables.fin_user_profile.get(customer_id=loan['lender_customer_id'])
+            if user_profile is not None:
+                borrower_profiles2.append({
+                    'mobile': user_profile['mobile'],
+                    'interest_rate': loan['interest_rate'],
+                    'loan_amount': loan['loan_amount'],
+                    'tenure': loan['tenure'],
+                    'loan_disbursed_timestamp': loan['loan_disbursed_timestamp'],
+                    'product_name': loan['product_name'],
+                    'product_description': loan['product_description'],
+                    'lender_full_name': loan['lender_full_name'],
+                    'product_id': loan['product_id'],
+                    'loan_id': loan['loan_id'],
+                    'borrower_loan_created_timestamp': loan['borrower_loan_created_timestamp'],
+                    'loan_updated_status' : loan['loan_updated_status']
+                })
+
+        self.repeating_panel_9.items = borrower_profiles2
+
+        rejected_loans = app_tables.fin_loan_details.search(
+            loan_updated_status=q.like('rejected%'), 
+            borrower_customer_id=self.user_id
+        )
+
+        borrower_profiles3 = []
+        for loan in rejected_loans:
+            user_profile = app_tables.fin_user_profile.get(customer_id=loan['lender_customer_id'])
+            if user_profile is not None:
+                borrower_profiles3.append({
+                    'mobile': user_profile['mobile'],
+                    'interest_rate': loan['interest_rate'],
+                    'loan_amount': loan['loan_amount'],
+                    'tenure': loan['tenure'],
+                    'loan_disbursed_timestamp': loan['loan_disbursed_timestamp'],
+                    'product_name': loan['product_name'],
+                    'product_description': loan['product_description'],
+                    'lender_full_name': loan['lender_full_name'],
+                    'product_id': loan['product_id'],
+                    'loan_id': loan['loan_id'],
+                    'borrower_loan_created_timestamp': loan['borrower_loan_created_timestamp'],
+                    'loan_updated_status' : loan['loan_updated_status']
+                })
+
+        self.repeating_panel_8.items = borrower_profiles3
+
+        foreclose = app_tables.fin_loan_details.search(
+            loan_updated_status=q.like('foreclose%'), 
+            borrower_customer_id=self.user_id
+        )
+
+        borrower_profiles4 = []
+        for loan in foreclose:
+            user_profile = app_tables.fin_user_profile.get(customer_id=loan['lender_customer_id'])
+            if user_profile is not None:
+                borrower_profiles4.append({
+                    'mobile': user_profile['mobile'],
+                    'interest_rate': loan['interest_rate'],
+                    'loan_amount': loan['loan_amount'],
+                    'tenure': loan['tenure'],
+                    'loan_disbursed_timestamp': loan['loan_disbursed_timestamp'],
+                    'product_name': loan['product_name'],
+                    'product_description': loan['product_description'],
+                    'lender_full_name': loan['lender_full_name'],
+                    'product_id': loan['product_id'],
+                    'loan_id': loan['loan_id'],
+                    'borrower_loan_created_timestamp': loan['borrower_loan_created_timestamp'],
+                    'loan_updated_status' : loan['loan_updated_status']
+                })
+
+        self.repeating_panel_10.items = borrower_profiles4
+
+        
+
+        # self.repeating_panel_7.items = app_tables.fin_loan_details.search(loan_updated_status=q.like('close%'), borrower_customer_id=self.user_id)
+        # self.repeating_panel_8.items = app_tables.fin_loan_details.search(loan_updated_status=q.like('reject%'), borrower_customer_id=self.user_id)
+        # self.repeating_panel_9.items = app_tables.fin_loan_details.search(loan_updated_status=q.like('under process%'), borrower_customer_id=self.user_id)
+        # self.repeating_panel_10.items = app_tables.fin_loan_details.search(loan_updated_status=q.like('foreclosure%'), borrower_customer_id=self.user_id)
 
         # Update label texts with the count of items in each repeating panel
         self.label_5.text = str(len(self.repeating_panel_6.items))
@@ -55,11 +174,6 @@ class view_loans(view_loansTemplate):
         self.label_3.visible = False
         self.label_4.visible = False
         self.label_10.visible = False
-        #self.data_grid_1.visible = True
-        # self.data_grid_2.visible = False
-        # self.data_grid_3.visible = False
-        # self.data_grid_4.visible = False
-        # self.data_grid_5.visible = False
         self.repeating_panel_6.visible = True
         self.repeating_panel_7.visible = False
         self.repeating_panel_8.visible = False
@@ -73,16 +187,11 @@ class view_loans(view_loansTemplate):
         self.label_3.visible = False
         self.label_4.visible = False
         self.label_10.visible = False
-        #self.data_grid_1.visible = False
         self.repeating_panel_6.visible = False
         self.repeating_panel_7.visible = True
         self.repeating_panel_8.visible = False
         self.repeating_panel_9.visible = False
         self.repeating_panel_10.visible = False 
-      
-        # self.data_grid_3.visible = False
-        # self.data_grid_4.visible = False
-        # self.data_grid_5.visible = False
 
     def button_3_click(self, **event_args):
         """This method is called when the button is clicked"""
@@ -91,11 +200,6 @@ class view_loans(view_loansTemplate):
         self.label_3.visible = True
         self.label_4.visible = False
         self.label_10.visible = False
-        # self.data_grid_1.visible = False
-        # self.data_grid_2.visible = False
-        # self.data_grid_3.visible = True
-        # self.data_grid_4.visible = False
-        # self.data_grid_5.visible = False
         self.repeating_panel_6.visible = False
         self.repeating_panel_7.visible = False
         self.repeating_panel_8.visible = True
@@ -109,11 +213,6 @@ class view_loans(view_loansTemplate):
         self.label_3.visible = False
         self.label_4.visible = True
         self.label_10.visible = False
-        # self.data_grid_1.visible = False
-        # self.data_grid_2.visible = False
-        # self.data_grid_3.visible = False
-        # self.data_grid_4.visible = True
-        # self.data_grid_5.visible = False
         self.repeating_panel_6.visible = False
         self.repeating_panel_7.visible = False
         self.repeating_panel_8.visible = False
@@ -127,13 +226,8 @@ class view_loans(view_loansTemplate):
         self.label_3.visible = False
         self.label_4.visible = False
         self.label_10.visible = True
-        # self.data_grid_1.visible = False
-        # self.data_grid_2.visible = False
-        # self.data_grid_3.visible = False
-        # self.data_grid_4.visible = False
-        # self.data_grid_5.visible = True
         self.repeating_panel_6.visible = False
         self.repeating_panel_7.visible = False
         self.repeating_panel_8.visible = False
         self.repeating_panel_9.visible = False
-        self.repeating_panel_10.visible = True
+        self.repeating_panel_10.visible = True  

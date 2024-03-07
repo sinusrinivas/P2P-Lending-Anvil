@@ -26,10 +26,31 @@ class foreclosure_request(foreclosure_requestTemplate):
                 # Filter loan_details table based on the current user's ID
                 try:
                     customer_loans = app_tables.fin_loan_details.search(borrower_customer_id=user_id)
-                    eligible_loans = [loan for loan in customer_loans if self.is_loan_eligible(loan)]
+                    loans = []
+                    for loan in customer_loans:
+                        if user_profile is not None:
+                            loan_data = {
+                                'mobile': user_profile['mobile'],
+                                'interest_rate': loan['interest_rate'],
+                                'loan_amount': loan['loan_amount'],
+                                'tenure': loan['tenure'],
+                                'loan_disbursed_timestamp': loan['loan_disbursed_timestamp'],
+                                'product_name': loan['product_name'],
+                                'product_description': loan['product_description'],
+                                'lender_full_name': loan['lender_full_name'],
+                                'product_id': loan['product_id'],
+                                'loan_id': loan['loan_id'],
+                                'borrower_full_name': loan['borrower_full_name'],
+                                'loan_updated_status': loan['loan_updated_status'],
+                                'emi_payment_type': loan['emi_payment_type'],
+                                'credit_limit' : loan['credit_limit'],
+                                # 'foreclose_type' : loan['foreclose_type'],
+                                'eligible': self.is_loan_eligible(loan)
+                            }
+                            loans.append(loan_data)
 
                     # Set the filtered data as the items for the repeating panel
-                    self.repeat.items = eligible_loans
+                    self.repeat.items = loans
                 except anvil.tables.TableError as e:
                     print(f"Error: {e}")
             else:
