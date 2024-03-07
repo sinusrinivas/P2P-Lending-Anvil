@@ -30,6 +30,10 @@ class view_lost_oppurtunities(view_lost_oppurtunitiesTemplate):
                     'product_name': loan['product_name'],
                     'product_description': loan['product_description'],
                     'borrower_full_name': loan['borrower_full_name'],
+                    'loan_id': loan['loan_id'],
+                    'lender_accepted_timestamp': loan['lender_accepted_timestamp'],
+                    'loan_updated_status': loan['loan_updated_status'],
+                    #'loan_updated_status': loan['loan_updated_status'],
                     #'name': user_profile['name'],  # Replace 'name' with the actual column name
                     # Add other attributes you want to include in borrower_profiles
                 })
