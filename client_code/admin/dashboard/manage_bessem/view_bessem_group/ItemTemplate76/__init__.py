@@ -1,4 +1,4 @@
-from ._anvil_designer import RowTemplate41Template
+from ._anvil_designer import ItemTemplate76Template
 from anvil import *
 import anvil.server
 import anvil.google.auth, anvil.google.drive
@@ -8,7 +8,7 @@ import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 
-class RowTemplate41(RowTemplate41Template):
+class ItemTemplate76(ItemTemplate76Template):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
