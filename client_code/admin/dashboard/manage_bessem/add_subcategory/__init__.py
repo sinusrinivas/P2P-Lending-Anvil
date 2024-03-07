@@ -74,7 +74,7 @@ class add_subcategory(add_subcategoryTemplate):
     entered_min_pts = int(self.text_box_6.text)
     new_row = app_tables.fin_admin_beseem_categories.add_row(group_name='marrital_status',sub_category=entered_sub,min_points=entered_min_pts)
     self.text_box_5.text = ' '
-    self.text_box_4.text = ' '
+    self.text_box_6.text = ' '
     self.refresh()
 
     existing_min_points = [row["min_points"] for row in app_tables.fin_admin_beseem_categories.search(group_name='marrital_status')]
@@ -108,3 +108,7 @@ class add_subcategory(add_subcategoryTemplate):
     self.grid_panel_1.visible = False
     self.grid_panel_2.visible = False
     self.grid_panel_3.visible = True
+
+  def back_btn_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    open_form("admin.dashboard.manage_bessem")
