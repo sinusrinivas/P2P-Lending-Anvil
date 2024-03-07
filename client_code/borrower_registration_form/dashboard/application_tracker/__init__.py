@@ -17,12 +17,47 @@ class application_tracker(application_trackerTemplate):
     
     # Any code you write here will run before the form oopens.
     under_process_items = app_tables.fin_loan_details.search(loan_updated_status=q.like('under proces%'), borrower_customer_id=self.user_id)
-    self.repeating_panel_2.items = under_process_items
+    borrower_profiles = []
+    for loan in under_process_items:
+            user_profile = app_tables.fin_user_profile.get(customer_id=loan['lender_customer_id'])
+            if user_profile is not None:
+                borrower_profiles.append({
+                    'mobile': user_profile['mobile'],
+                    'interest_rate': loan['interest_rate'],
+                    'loan_amount': loan['loan_amount'],
+                    'tenure': loan['tenure'],
+                    'loan_disbursed_timestamp': loan['loan_disbursed_timestamp'],
+                    'product_name': loan['product_name'],
+                    'product_description': loan['product_description'],
+                    'lender_full_name': loan['lender_full_name'],
+                    'product_id': loan['product_id'],
+                    'loan_id': loan['loan_id'],
+                    'borrower_loan_created_timestamp':loan['borrower_loan_created_timestamp'],
+                    'loan_updated_status' : loan['loan_updated_status']})
+              
+    self.repeating_panel_2.items = borrower_profiles
     #self.label_1.text = str(len(under_process_items))
 
     approved_items = app_tables.fin_loan_details.search(loan_updated_status=q.like('approve%'), borrower_customer_id=self.user_id)
-    self.repeating_panel_3.items = approved_items
-    #self.label_2.text = str(len(approved_items))      
+    borrower_prof = []
+    for loan in approved_items:
+            user_profiles = app_tables.fin_user_profile.get(customer_id=loan['lender_customer_id'])
+            if user_profiles is not None:
+                borrower_prof.append({
+                    'mobile': user_profile['mobile'],
+                    'interest_rate': loan['interest_rate'],
+                    'loan_amount': loan['loan_amount'],
+                    'tenure': loan['tenure'],
+                    'loan_disbursed_timestamp': loan['loan_disbursed_timestamp'],
+                    'product_name': loan['product_name'],
+                    'product_description': loan['product_description'],
+                    'lender_full_name': loan['lender_full_name'],
+                    'product_id': loan['product_id'],
+                    'loan_id': loan['loan_id'],
+                    'borrower_loan_created_timestamp':loan['borrower_loan_created_timestamp'],
+                    'loan_updated_status' : loan['loan_updated_status']})
+    self.repeating_panel_3.items = borrower_prof
+      
   
   def home_borrower_registration_button_click(self, **event_args):
     open_form('borrower_registration_form.dashboard')
