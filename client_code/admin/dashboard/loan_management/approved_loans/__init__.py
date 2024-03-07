@@ -9,64 +9,70 @@ import anvil.tables.query as q
 from anvil.tables import app_tables
 
 class approved_loans(approved_loansTemplate):
-  def __init__(self, **properties):
-    # Set Form properties and Data Bindings.
-    self.init_components(**properties)
+    def __init__(self, **properties):
+        # Set Form properties and Data Bindings.
+        self.init_components(**properties)
 
-    # Any code you write here will run before the form opens.
-    self.data = tables.app_tables.fin_loan_details.search()
+        # Retrieve loan details from the database
+        loan_details = app_tables.fin_loan_details.search()
 
-    a = -1
-    self.list_1 = []
-    self.list_2 = []
-    self.list_3 = []
-    self.list_4 = []
-    self.list_5 = []
-    self.list_6 = []
-    self.list_7 = []
-    self.list_8 = []
-    self.list_9 = []
-    self.list_10 = []
-    
-    
-    for i in self.data:
-      a+=1
-      self.list_1.append(i['loan_id'])
-      self.list_2.append(i['borrower_customer_id'])
-      self.list_3.append(i['borrower_full_name'])
-      self.list_4.append(i['loan_updated_status'])
-      self.list_5.append(i['lender_full_name'])
-      self.list_6.append(i['lender_customer_id'])
-      self.list_7.append(i['interest_rate'])
-      self.list_8.append(i['tenure'])
-      self.list_9.append(i['loan_amount'])
-      self.list_10.append(i['lender_accepted_timestamp'])
-    print(a)
+        # Initialize lists to store loan details
+        self.loan_ids = []
+        self.borrower_customer_ids = []
+        self.borrower_full_names = []
+        self.loan_statuses = []
+        self.lender_full_names = []
+        self.lender_customer_ids = []
+        self.interest_rates = []
+        self.tenures = []
+        self.loan_amounts = []
+        self.lender_accepted_timestamps = []
 
-    self.result = []
-    self.index = []
-    if a == -1:
-      alert("No Data Available Here!")
-    else:
-      b = -1
-      for i in self.list_4:
-        b+=1
-        if i == "Approved" or i == 'approved':
-          self.index.append(b)
-          
-      for i in self.index:
-        self.result.append({'loan_id' : self.list_1[i], 'coustmer_id' : self.list_2[i], 'full_name' : self.list_3[i], 'loan_status' : self.list_4[i],'lendor_full_name' : self.list_5[i],'lender_customer_id':self.list_6[i],'interest_rate':self.list_7[i],'tenure':self.list_8[i],'loan_amount':self.list_9[i],'lender_timestamp':self.list_10[i]})
+        # Iterate through the loan details
+        for loan in loan_details:
+            # Append loan details to respective lists
+            self.loan_ids.append(loan['loan_id'])
+            self.borrower_customer_ids.append(loan['borrower_customer_id'])
+            self.loan_statuses.append(loan['loan_updated_status'])
+            self.interest_rates.append(loan['interest_rate'])
+            self.tenures.append(loan['tenure'])
+            self.loan_amounts.append(loan['loan_amount'])
+            self.lender_accepted_timestamps.append(loan['lender_accepted_timestamp'])
 
-      self.repeating_panel_2.items = self.result
+            # Retrieve user profile of borrower from user profile table
+            borrower_profile = app_tables.fin_user_profile.get(customer_id=loan['borrower_customer_id'])
+            if borrower_profile:
+                self.borrower_full_names.append(borrower_profile['full_name'])
+            else:
+                self.borrower_full_names.append("N/A")
 
-  # def link_1_click(self, **event_args):
-  #   """This method is called when the link is clicked"""
-  #   open_form('admin.dashboard.loan_management')
+            # Retrieve user profile of lender from user profile table
+            lender_profile = app_tables.fin_user_profile.get(customer_id=loan['lender_customer_id'])
+            if lender_profile:
+                self.lender_full_names.append(lender_profile['full_name'])
+            else:
+                self.lender_full_names.append("N/A")
 
-  def link_2_click(self, **event_args):
-    """This method is called when the link is clicked"""
-    open_form('admin.dashboard.performance_tracker')
+        # Create a list of dictionaries containing loan details
+        self.loan_data = [{'loan_id': self.loan_ids[i], 
+                           'borrower_customer_id': self.borrower_customer_ids[i], 
+                           'borrower_full_name': self.borrower_full_names[i], 
+                           'loan_status': self.loan_statuses[i], 
+                           'lender_full_name': self.lender_full_names[i], 
+                           'lender_customer_id': self.lender_customer_ids[i], 
+                           'interest_rate': self.interest_rates[i], 
+                           'tenure': self.tenures[i], 
+                           'loan_amount': self.loan_amounts[i], 
+                           'lender_accepted_timestamp': self.lender_accepted_timestamps[i]} 
+                          for i in range(len(self.loan_ids))]
 
-  def button_1_copy_click(self, **event_args):
-    """This method is called when the button is clicked"""
-    open_form('admin.dashboard.loan_management')
+        # Display approved loans in the repeating panel
+        self.repeating_panel_2.items = [loan for loan in self.loan_data if loan['loan_status'].lower() == 'approved']
+
+    def link_2_click(self, **event_args):
+        """This method is called when the link is clicked"""
+        open_form('admin.dashboard.performance_tracker')
+
+    def button_1_copy_click(self, **event_args):
+        """This method is called when the button is clicked"""
+        open_form('admin.dashboard.loan_management')
