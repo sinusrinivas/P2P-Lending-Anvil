@@ -17,16 +17,22 @@ class view_lost_oppurtunities(view_lost_oppurtunitiesTemplate):
     self.user_id = main_form_module.userId
     #self.repeating_panel_1.items = app_tables.fin_loan_details.search(loan_updated_status=q.like('lost opportunities%'))
     lost_opportunities = app_tables.fin_loan_details.search(loan_updated_status=q.like('lost opportunities%'))
-    borrower_customer_ids = [loan['lender_customer_id'] for loan in lost_opportunities]
-
-        # Retrieve profiles for each borrower customer ID
     borrower_profiles = []
-    for customer_id in borrower_customer_ids:
-            user_profile = app_tables.fin_user_profile.get(customer_id=customer_id)
+    for loan in lost_opportunities:
+            user_profile = app_tables.fin_user_profile.get(customer_id=loan['lender_customer_id'])
             if user_profile is not None:
-                borrower_profiles.append(user_profile.to_dict())
-
-        # Update UI with borrower profiles
+                borrower_profiles.append({
+                    'mobile': user_profile['mobile'],
+                    'interest_rate': loan['interest_rate'],
+                    'loan_amount': loan['loan_amount'],
+                    'tenure': loan['tenure'],
+                    'loan_disbursed_timestamp': loan['loan_disbursed_timestamp'],
+                    'product_name': loan['product_name'],
+                    'product_description': loan['product_description'],
+                    'borrower_full_name': loan['borrower_full_name'],
+                    #'name': user_profile['name'],  # Replace 'name' with the actual column name
+                    # Add other attributes you want to include in borrower_profiles
+                })
     self.repeating_panel_1.items = borrower_profiles
   
   def button_1_click(self, **event_args):
