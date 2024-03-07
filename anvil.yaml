@@ -741,23 +741,20 @@ db_schema:
     client: full
     server: full
     columns:
-    - name: Group Id
-      admin_ui: {order: 6, width: 200}
-      type: number
     - name: group_name
       admin_ui: {order: 1, width: 200}
       type: string
     - name: min_points
       admin_ui: {order: 2, width: 200}
       type: number
-    - name: status
-      admin_ui: {order: 4, width: 200}
-      type: bool
     - name: Modify Date
       admin_ui: {width: 200, order: 5}
       type: date
     - name: sub_category
       admin_ui: {width: 200, order: 1.5}
+      type: string
+    - name: is_liveloan
+      admin_ui: {width: 200, order: 3.5}
       type: string
     title: fin_admin_beseem_categories
   fin_wallet_transactions:
