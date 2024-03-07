@@ -119,7 +119,7 @@ components:
         enabled: true, foreground: 'theme:On Primary', visible: true, text: '     Manage
           Bessem         ', font_size: null, font: '', spacing_above: small, icon_align: left,
         spacing_below: small, italic: false, background: '#0b2547', bold: true, underline: false,
-        icon: 'fa:dribbble'}
+        icon: 'fa:edit'}
       type: Button
       layout_properties: {x: 636.2500274665654, y: 280.67502288892865, width: 242.5619755859375}
       event_bindings: {click: manage_bessem_click}

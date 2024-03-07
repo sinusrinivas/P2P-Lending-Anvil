@@ -76,7 +76,7 @@ class EditDetailsForm(EditDetailsFormTemplate):
             self.selected_row.delete()
 
             # Delete the corresponding rows from the product_categories table
-            categories_to_delete = app_tables.product_categories.search(q.any_of(name_group=group_name))
+            categories_to_delete = app_tables.fin_product_categories.search(q.any_of(name_group=group_name))
             for category_row in categories_to_delete:
                 category_row.delete()
 

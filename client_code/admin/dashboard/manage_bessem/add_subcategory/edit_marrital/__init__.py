@@ -22,7 +22,7 @@ class edit_marrital(edit_marritalTemplate):
     # Store the selected row for later use
     self.selected_row = selected_row
 
-  def button_1_click(self, **event_args):
+  def save_click(self, **event_args):
     """Save changes button click event"""
     # Get the updated values from the input components
     updated_sub_category = self.text_box_1.text
