@@ -24,15 +24,13 @@ components:
   - name: data_grid_1
     properties:
       columns:
-      - {id: JKSDUP, title: 'SL.No ', data_key: column_1, width: 129, expand: false}
-      - {id: VJQQOR, title: Group Names, data_key: column_2, width: 278.20001220703125,
+      - {id: VJQQOR, title: Group Names, data_key: column_2, width: 437.39996337890625,
         expand: false}
-      - {id: OJLQEN, title: Sub Category, data_key: column_3}
-      - {id: UWQTPT, data_key: column_4, title: Min Points}
+      - {id: UWQTPT, data_key: column_4, title: Max Points}
     type: DataGrid
     components:
     - name: repeating_panel_1
-      properties: {item_template: admin.dashboard.manage_bessem.view_bessem.ItemTemplate38}
+      properties: {item_template: admin.dashboard.manage_bessem.view_bessem_group.ItemTemplate76}
       type: RepeatingPanel
     layout_properties: {grid_position: 'PCZEDG,SNPCKJ'}
   - type: Button

@@ -246,6 +246,18 @@ components:
         properties: {item_template: admin.dashboard.manage_bessem.add_subcategory.ItemTemplate74}
         type: RepeatingPanel
         layout_properties: {row: XGQZYH, width_xs: 11, col_xs: 1}
+  - name: spacer_1_copy
+    properties: {height: 19.20001220703125}
+    type: Spacer
+    layout_properties: {grid_position: 'WKFEWU,UVRHEX'}
+  - name: back_btn
+    properties: {role: elevated-button, align: center, tooltip: '', border: '', enabled: true,
+      foreground: white, visible: true, text: Back, font_size: null, font: '16', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '#0b2547',
+      bold: true, underline: false, icon: 'fa:backward'}
+    type: Button
+    layout_properties: {grid_position: 'BLALBU,SIYHVA'}
+    event_bindings: {click: back_btn_click}
 - type: FlowPanel
   properties: {}
   name: navbar_links
