@@ -19,7 +19,7 @@ class view_lost_oppurtunities(view_lost_oppurtunitiesTemplate):
     lost_opportunities = app_tables.fin_loan_details.search(loan_updated_status=q.like('lost opportunities%'))
     borrower_profiles = []
     for loan in lost_opportunities:
-            user_profile = app_tables.fin_user_profile.get(customer_id=loan['lender_customer_id'])
+            user_profile = app_tables.fin_user_profile.get(customer_id=loan['borrower_customer_id'])
             if user_profile is not None:
                 borrower_profiles.append({
                     'mobile': user_profile['mobile'],

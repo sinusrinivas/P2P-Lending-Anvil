@@ -20,8 +20,36 @@ class view_borrower_loan_request(view_borrower_loan_requestTemplate):
     email = self.email
     
     
-    self.repeating_panel_2.items=app_tables.fin_loan_details.search(loan_updated_status="under process")
-    
+    #self.repeating_panel_2.items=app_tables.fin_loan_details.search(loan_updated_status="under process")
+
+    loan_requests = app_tables.fin_loan_details.search(loan_updated_status="under process")
+
+        # List to hold loan requests with additional details
+    loan_requests_with_details = []
+
+        # Loop through each loan request and append additional details
+    for loan_request in loan_requests:
+            # Example: Get borrower's profile based on borrower_customer_id
+            borrower_profile = app_tables.fin_user_profile.get(customer_id=loan_request['borrower_customer_id'])
+            if borrower_profile is not None:
+                loan_requests_with_details.append({
+                    'mobile': borrower_profile['mobile'],
+                    'interest_rate': loan['interest_rate'],
+                    'loan_amount': loan['loan_amount'],
+                    'tenure': loan['tenure'],
+                    'loan_disbursed_timestamp': loan['loan_disbursed_timestamp'],
+                    'product_name': loan['product_name'],
+                    'product_description': loan['product_description'],
+                    'borrower_full_name': loan['borrower_full_name'],
+                    'loan_id': loan['loan_id'],
+                    'lender_accepted_timestamp': loan['lender_accepted_timestamp'],
+                    'loan_updated_status': loan['loan_updated_status'],
+                    # Add other details you want to include
+                                                  })
+          
+
+        # Set the items for the repeating panel
+    self.repeating_panel_2.items = loan_requests_with_details
     anvil.server.call('transfer_user_profile_to_loan_details', email,self.user_id) 
 
   
