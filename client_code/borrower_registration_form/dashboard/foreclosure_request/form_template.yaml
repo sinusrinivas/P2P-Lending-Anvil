@@ -24,40 +24,6 @@ components:
     underline: true, icon: ''}
   name: label_1
   layout_properties: {grid_position: 'QQNRWX,MGPSVS'}
-- type: ColumnPanel
-  properties: {role: outlined-card, tooltip: '', border: '', foreground: '', visible: false,
-    wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
-    spacing_below: small, background: ''}
-  name: outlined_card_1
-  layout_properties: {grid_position: 'NPXXDJ,YYVJGH'}
-  components:
-  - type: DataGrid
-    properties:
-      role: null
-      columns:
-      - {id: YRBSTU, title: Loan Id, data_key: column_1, $$hashKey: 'object:4171'}
-      - {id: BBLWGQ, title: Name, data_key: column_2, $$hashKey: 'object:4172'}
-      - {id: JNXGTJ, title: Loan Amount, data_key: column_3, $$hashKey: 'object:4173'}
-      - {id: SNBEBY, title: Tenure, data_key: column_4, $$hashKey: 'object:4288'}
-      - {id: UJRMZF, title: '', data_key: column_5, $$hashKey: 'object:4290'}
-      auto_header: true
-      tooltip: ''
-      border: ''
-      foreground: ''
-      rows_per_page: 20
-      visible: true
-      wrap_on: never
-      show_page_controls: false
-      spacing_above: small
-      spacing_below: small
-      background: ''
-    name: data_grid_1
-    layout_properties: {grid_position: 'QDNFAP,KLCDSF'}
-    components:
-    - type: RepeatingPanel
-      properties: {spacing_above: none, spacing_below: none, item_template: borrower_registration_form.dashboard.foreclosure_request.RowTemplate6}
-      name: repeating_panel_1
-      layout_properties: {}
 - name: repeat
   properties: {item_template: borrower_registration_form.dashboard.foreclosure_request.ItemTemplate72}
   type: RepeatingPanel
