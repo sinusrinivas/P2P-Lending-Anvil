@@ -101,7 +101,7 @@ class today_dues(today_duesTemplate):
               first_emi_payment_due_date = loan_due['first_emi_payment_due_date']
               days_left = (today_date - first_emi_payment_due_date).days
               # Fetch account number from user profile table based on customer_id
-              user_profile = app_tables.fin_user_profile.get(customer_id=loan_due['bo'])
+              user_profile = app_tables.fin_user_profile.get(customer_id=loan_due['borrower_customer_id'])
               if user_profile is not None:
                   account_number = user_profile['account_number']
               else:
