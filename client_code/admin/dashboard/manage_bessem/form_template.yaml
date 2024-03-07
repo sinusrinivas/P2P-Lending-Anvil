@@ -24,7 +24,7 @@ components:
     type: Spacer
     layout_properties: {grid_position: 'RZOWVD,JBQYLV'}
   - name: xy_panel_1
-    properties: {height: 100}
+    properties: {height: 207.5999755859375}
     type: XYPanel
     layout_properties: {grid_position: 'EZWZML,JTVZRW'}
     components:
@@ -35,21 +35,33 @@ components:
       components:
       - name: button_2
         properties: {role: outlined-button, align: full, tooltip: '', border: '',
-          enabled: true, foreground: 'theme:On Primary', visible: true, text: MANAGE BESSEM,
+          enabled: true, foreground: 'theme:On Primary', visible: true, text: VIEW BESSEM SUBCATEGORY,
           font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small,
           italic: false, background: '#0b2547', bold: false, underline: false, icon: ''}
         type: Button
         layout_properties: {grid_position: 'YSVSJB,RMKTTU'}
-        event_bindings: {click: button_1_click}
-      - name: button_3
+        event_bindings: {click: button_2_click}
+      - name: button_4
         properties: {role: outlined-button, align: full, tooltip: '', border: '',
-          enabled: true, foreground: 'theme:On Primary', visible: true, text: ' ADD
-            SUB CATEGORY', font_size: null, font: '', spacing_above: small, icon_align: left,
-          spacing_below: small, italic: false, background: '#0b2547', bold: false,
-          underline: false, icon: ''}
+          enabled: true, foreground: 'theme:On Primary', visible: true, text: VIEW BESSEM GROUPS,
+          font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small,
+          italic: false, background: '#0b2547', bold: false, underline: false, icon: ''}
         type: Button
-        layout_properties: {grid_position: 'YSVSJB,NPZSHV'}
-        event_bindings: {click: button_3_click}
+        layout_properties: {grid_position: 'YSVSJB,FYWLEH'}
+        event_bindings: {click: button_4_click}
+    - name: column_panel_1_copy
+      properties: {}
+      type: ColumnPanel
+      layout_properties: {x: 0, y: 0, width: 200}
+      components: []
+    - name: button_3
+      properties: {role: outlined-button, align: full, tooltip: '', border: '', enabled: true,
+        foreground: 'theme:On Primary', visible: true, text: ' ADD SUB CATEGORY',
+        font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small,
+        italic: false, background: '#0b2547', bold: false, underline: false, icon: ''}
+      type: Button
+      layout_properties: {x: 245.81248169019818, y: 130.85000305250287, width: 472.1750183105469}
+      event_bindings: {click: button_3_click}
 - type: FlowPanel
   properties: {}
   name: navbar_links
