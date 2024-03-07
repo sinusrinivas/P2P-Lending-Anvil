@@ -167,6 +167,7 @@ class today_dues(today_duesTemplate):
                   'borrower_customer_id':borrower_customer_id
               })
         self.repeating_panel_2.items = loan_details
+      
         for loan_detail in loan_details:
             print("Processing loan:", loan_detail)
             if loan_detail['days_left'] >= 6 and loan_detail['days_left'] < 8:
@@ -194,4 +195,4 @@ class today_dues(today_duesTemplate):
                   
     def home_borrower_registration_form_copy_1_click(self, **event_args):
         """This method is called when the button is clicked"""
-        open_form('')
+        open_form('lendor_registration_form.dashboard')

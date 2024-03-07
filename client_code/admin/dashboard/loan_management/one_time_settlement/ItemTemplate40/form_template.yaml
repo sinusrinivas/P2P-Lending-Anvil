@@ -20,13 +20,13 @@ components:
     type: Label
     layout_properties: {x: 77.17046980559826, y: 85.48864416778088, width: 200}
     data_bindings:
-    - {property: text, code: 'self.item[''coustmer_id'']'}
+    - {property: text, code: 'self.item[''borrower_mobile'']', writeback: false}
   - name: borrower_name
     properties: {bold: true}
     type: Label
     layout_properties: {x: 77.06814436614513, y: 59.68181852996349, width: 200}
     data_bindings:
-    - {property: text, code: 'self.item[''full_name'']'}
+    - {property: text, code: 'self.item[''borrower_full_name'']', writeback: false}
   - name: image_1_copy
     properties: {height: 63.399932861328125, source: 'https://freesvg.org/img/abstract-user-flat-4.png'}
     type: Image
@@ -35,22 +35,26 @@ components:
     properties: {align: center}
     type: Label
     layout_properties: {x: 350.1818528622389, y: 21.704544588923454, width: 200}
+    data_bindings:
+    - {property: text, code: 'self.item[''product_description'']', writeback: false}
   - name: Product
     properties: {bold: true, align: center}
     type: Label
     layout_properties: {x: 343.5568528622389, y: 0.04545454680919647, width: 200}
+    data_bindings:
+    - {property: text, code: 'self.item[''product_name'']', writeback: false}
   - name: lendor_name
     properties: {bold: true, align: right}
     type: Label
     layout_properties: {x: 669.7625396735966, y: 51.38750457763672, width: 178.9869755859375}
     data_bindings:
-    - {property: text, code: 'self.item[''lendor_full_name'']', writeback: false}
+    - {property: text, code: 'self.item[''lender_full_name'']', writeback: false}
   - name: lendor_mobile
     properties: {align: right}
     type: Label
     layout_properties: {x: 655.5124176032841, y: 75.1875, width: 200}
     data_bindings:
-    - {property: text, code: 'self.item[''lender_customer_id'']', writeback: false}
+    - {property: text, code: 'self.item[''lender_mobile'']', writeback: false}
   - name: outlined_button_1
     properties: {text: View Loan Details, role: outlined-button, align: center, font_size: null,
       background: '#05264d', foreground: white, bold: true}
@@ -63,7 +67,7 @@ components:
     type: Label
     layout_properties: {x: 3.4642791748046875, y: 316.1964359283447, width: 200}
     data_bindings:
-    - {property: text, code: 'self.item[''lender_timestamp'']', writeback: false}
+    - {property: text, code: 'self.item[''loan_disbursed_timestamp'']', writeback: false}
   - name: label_9
     properties: {text: 'Invested on : ', bold: true}
     type: Label
