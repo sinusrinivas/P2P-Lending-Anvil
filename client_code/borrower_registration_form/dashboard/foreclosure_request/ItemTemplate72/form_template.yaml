@@ -21,18 +21,12 @@ components:
     type: Label
     layout_properties: {x: 78.53748779371381, y: 27.950009156018496, width: 200}
     data_bindings:
-    - {property: text, code: 'self.item[''lender_customer_id'']', writeback: false}
+    - {property: text, code: 'self.item[''mobile'']', writeback: false}
   - name: label_3
     properties: {text: '---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------',
       foreground: grey}
     type: Label
     layout_properties: {x: 0, y: 51.15000610426068, width: 938.4000244140625}
-  - name: product
-    properties: {}
-    type: Label
-    layout_properties: {x: 735.2499206550419, y: 0, width: 200}
-    data_bindings:
-    - {property: text, code: 'self.item[''product_id'']'}
   - name: product_details
     properties: {}
     type: Label
@@ -85,3 +79,9 @@ components:
     layout_properties: {x: 738.4000244140625, y: 204, width: 200}
     data_bindings:
     - {property: text, code: 'self.item[''loan_disbursed_timestamp'']', writeback: false}
+  - name: product
+    properties: {}
+    type: Label
+    layout_properties: {x: 736.1667582206428, y: 0, width: 200}
+    data_bindings:
+    - {property: text, code: 'self.item[''product_name'']', writeback: false}
