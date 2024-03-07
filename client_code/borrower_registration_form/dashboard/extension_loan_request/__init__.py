@@ -31,7 +31,7 @@ class extension_loan_request(extension_loan_requestTemplate):
                     eligible_loans = [loan for loan in customer_loans if self.is_loan_eligible(loan)]
 
                     # Set the filtered data as the items for the repeating panel
-                    self.repeating_panel_1.items = eligible_loans
+                    self.repeating_panel_2.items = eligible_loans
                 except anvil.tables.TableError as e:
                     print(f"Error: {e}")
             else:
