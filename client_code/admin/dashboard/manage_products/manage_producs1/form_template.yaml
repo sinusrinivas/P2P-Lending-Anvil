@@ -87,7 +87,7 @@ components:
           layout_properties: {row: SBMUGJ, width_xs: 2, col_xs: 3}
         - type: TextBox
           properties: {role: outlined, align: left, hide_text: false, tooltip: '',
-            placeholder: Enter product name, border: '', enabled: true, foreground: '',
+            placeholder: Enter Product Name, border: '', enabled: true, foreground: '',
             visible: true, text: '', font_size: null, font: '', spacing_above: small,
             type: text, spacing_below: small, italic: false, background: white, bold: false,
             underline: false}
@@ -105,7 +105,7 @@ components:
             role: outlined
             align: full
             tooltip: ''
-            placeholder: Select product group
+            placeholder: Select Product Group
             border: ''
             enabled: true
             foreground: ''
@@ -136,7 +136,7 @@ components:
             role: outlined
             align: full
             tooltip: ''
-            placeholder: Select product category
+            placeholder: Select Product Category
             border: ''
             enabled: true
             foreground: ''
@@ -162,8 +162,8 @@ components:
           layout_properties: {row: FVXXTV, width_xs: 2, col_xs: 3}
         - type: TextArea
           properties: {role: outlined, align: left, height: 90, tooltip: '', placeholder: Enter your product description,
-            border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
-            auto_expand: true, font: '', spacing_above: small, spacing_below: small,
+            border: '', enabled: true, foreground: '', visible: true, text: Enter your Product Description,
+            font_size: null, auto_expand: true, font: '', spacing_above: small, spacing_below: small,
             italic: false, background: white, bold: false, underline: false}
           name: text_area_1
           layout_properties: {row: FVXXTV, width_xs: 6, col_xs: 5}
@@ -241,7 +241,7 @@ components:
             layout_properties: {grid_position: 'SVITEG,VDKAQD'}
           - type: TextBox
             properties: {role: outlined, align: left, hide_text: false, tooltip: '',
-              placeholder: Enter interest percentage, border: '', enabled: true, foreground: '',
+              placeholder: Enter Interest percentage, border: '', enabled: true, foreground: '',
               visible: true, text: '', font_size: null, font: '', spacing_above: small,
               type: text, spacing_below: small, italic: false, background: White,
               bold: false, underline: false}
@@ -374,7 +374,7 @@ components:
             role: outlined
             align: full
             tooltip: ''
-            placeholder: Select foreclosure
+            placeholder: Select Foreclosure
             border: ''
             enabled: true
             foreground: ''
@@ -495,13 +495,14 @@ components:
         - type: TextBox
           properties: {role: outlined, align: left, hide_text: false, tooltip: '',
             placeholder: '', border: '', enabled: true, foreground: '', visible: true,
-            text: '', font_size: null, font: '', spacing_above: small, type: text,
-            spacing_below: small, italic: false, background: '', bold: false, underline: false}
+            text: Enter Lapsed Fee, font_size: null, font: '', spacing_above: small,
+            type: text, spacing_below: small, italic: false, background: '', bold: false,
+            underline: false}
           name: lapsed_fee
           layout_properties: {row: NXRXGH, width_xs: 3, col_xs: 5}
         - type: Label
           properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-            visible: true, text: Default Fee, font_size: null, font: '', spacing_above: small,
+            visible: true, text: Defaulters Fee, font_size: null, font: '', spacing_above: small,
             icon_align: left, spacing_below: small, italic: false, background: '',
             bold: true, underline: false, icon: ''}
           name: label_13
@@ -509,22 +510,23 @@ components:
         - type: TextBox
           properties: {role: outlined, align: left, hide_text: false, tooltip: '',
             placeholder: '', border: '', enabled: true, foreground: '', visible: true,
-            text: '', font_size: null, font: '', spacing_above: small, type: text,
-            spacing_below: small, italic: false, background: '', bold: false, underline: false}
+            text: Enter Defaulters Fee, font_size: null, font: '', spacing_above: small,
+            type: text, spacing_below: small, italic: false, background: '', bold: false,
+            underline: false}
           name: default_fee
           layout_properties: {row: PNKPBU, width_xs: 3, col_xs: 5}
           event_bindings: {pressed_enter: text_box_1_copy_pressed_enter}
         - type: Label
           properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-            visible: true, text: ' NPA', font_size: null, font: '', spacing_above: small,
-            icon_align: left, spacing_below: small, italic: false, background: '',
-            bold: true, underline: false, icon: ''}
+            visible: true, text: Non Performing Asset, font_size: null, font: '',
+            spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+            background: '', bold: true, underline: false, icon: ''}
           name: label_14
           layout_properties: {row: PMIUUA, width_xs: 2, col_xs: 3}
         - type: TextBox
           properties: {role: outlined, align: left, hide_text: false, tooltip: '',
             placeholder: '', border: '', enabled: true, foreground: '', visible: true,
-            text: '', font_size: null, font: '', spacing_above: small, type: text,
+            text: NPA, font_size: null, font: '', spacing_above: small, type: text,
             spacing_below: small, italic: false, background: '', bold: false, underline: false}
           name: npa
           layout_properties: {row: PMIUUA, width_xs: 3, col_xs: 5}
