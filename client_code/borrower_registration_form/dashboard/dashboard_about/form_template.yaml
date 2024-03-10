@@ -48,7 +48,7 @@ components:
     type: Image
     layout_properties: {grid_position: 'KPEKWP,RCAWZV'}
   - name: label_2
-    properties: {text: 'Kotak is an online Peer to Peer Lending (P2P Lending) marketplace
+    properties: {text: 'P2P Gold is an online Peer to Peer Lending (P2P Lending) marketplace
         which connects verified borrowers looking for unsecured loans with investors
         looking for an investment opportunity to make higher risk-adjusted returns.The
         entire process of the loan application to credit evaluation, investment, fund
@@ -57,7 +57,7 @@ components:
     type: Label
     layout_properties: {grid_position: 'SATUHG,JQEPZP'}
   - name: label_4
-    properties: {text: 'Why Borrow At Kotak?', bold: true, align: center, underline: true,
+    properties: {text: 'Why Borrow At P2P Gold?', bold: true, align: center, underline: true,
       font_size: 20, background: '#0b2547', foreground: white}
     type: Label
     layout_properties: {grid_position: 'LMIMLK,DETZVI', row_background: '#0b2547'}
@@ -86,7 +86,7 @@ components:
       type: Label
       layout_properties: {row: KHJLXU, width_xs: 5, col_xs: 0, width: 242.078}
     - name: label_6
-      properties: {text: 'provides a seamless user experience in terms of ease of
+      properties: {text: 'Provides a seamless user experience in terms of ease of
           transaction, ability to view detailed account statements, transaction analysis,
           and many more features.', bold: true, italic: true, font_size: 18, icon: 'fa:angle-right',
         icon_align: left_edge}

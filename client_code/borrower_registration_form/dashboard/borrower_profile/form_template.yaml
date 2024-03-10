@@ -146,7 +146,7 @@ components:
   - {property: text, code: 'self.item[''gender'']'}
 - type: Label
   properties: {role: null, align: right, tooltip: '', border: '', foreground: '',
-    visible: true, text: 'Mother Tounge:', font_size: null, font: '', spacing_above: small,
+    visible: true, text: 'Mother Tongue:', font_size: null, font: '', spacing_above: small,
     icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
     underline: false, icon: ''}
   name: label_15
