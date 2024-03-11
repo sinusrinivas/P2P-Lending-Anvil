@@ -25,6 +25,10 @@ components:
     - name: date_lable
       properties: {}
       type: Label
+  - name: label_2
+    properties: {align: center, bold: true, visible: false}
+    type: Label
+    layout_properties: {grid_position: 'ALOSSQ,SRPPLG'}
   - name: column_panel_2
     properties: {role: elevated-card, col_widths: '{"JGTWGA":25,"OAUSYI":35,"EHEFYZ":20}'}
     type: ColumnPanel
@@ -117,6 +121,7 @@ components:
       properties: {text: clear, bold: true, role: filled-button}
       type: Button
       layout_properties: {grid_position: 'PKTVOO,JGTWGA'}
+      event_bindings: {click: clear_function_click}
     - name: spacer_3_copy
       properties: {height: 32}
       type: Spacer
