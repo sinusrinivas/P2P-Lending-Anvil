@@ -285,7 +285,7 @@ class manage_producs1(manage_producs1Template):
                 self.text_box_5.text.strip(),
                 self.foreclose_type.selected_value,
                 self.extension_allowed.selected_value,
-                (self.monthly.checked or self.one_time.checked or self.three_month.checked or self.six_month.checked),
+                (self.button_1_1.enabled or self.button_2_1.enabled or self.button_3_1.enabled or self.button_4_1.enabled),
                 self.lapsed_fee.text.strip(),
                 self.default_fee.text.strip(),
                 self.npa.text.strip()]):
@@ -327,14 +327,28 @@ class manage_producs1(manage_producs1Template):
         extension_allowed = self.extension_allowed.selected_value
         extension_fee = int(self.text_box_4.text.strip()) if extension_allowed == "Yes" else 0
     
-        emi_payment = [
-            "Monthly" if self.monthly.checked else "",
-            "One Time" if self.one_time.checked else "",
-            "Three Month" if self.three_month.checked else "",
-            "Six Month" if self.six_month.checked else "",
-      ]
-        emi_payment = json.dumps(emi_payment)
-   
+      #   emi_payment = [
+      #       "Monthly" if self.monthly.checked else "",
+      #       "One Time" if self.one_time.checked else "",
+      #       "Three Month" if self.three_month.checked else "",
+      #       "Six Month" if self.six_month.checked else "",
+      # ]
+      #   emi_payment = json.dumps(emi_payment)
+
+        emi_payment = []
+        if self.button_1_1.selected:
+            emi_payment.append("One Time")
+        if self.button_2_1.selected:
+            emi_payment.append("Monthly")
+        if self.button_3_1.selected:
+            emi_payment.append("Three Month")
+        if self.button_4_1.selected:
+            emi_payment.append("Six Month")
+    
+        emi_payment = ', '.join(emi_payment)
+
+        # payment_type = self.get_selected_payment_type()
+      
         existing_product = app_tables.fin_product_details.get(
             product_name=product_name,
             product_categories=product_categories
@@ -371,3 +385,50 @@ class manage_producs1(manage_producs1Template):
     def button_2_click(self, **event_args):
       """This method is called when the button is clicked"""
       open_form("admin.dashboard")
+
+
+
+
+
+      
+
+
+    def button_1_1_click(self, **event_args):
+      """This method is called when the button is clicked"""
+      self.button_1_1.background = "#00FF00" if self.button_1_1.enabled else "#FFFFFF"
+
+    def button_2_1_click(self, **event_args):
+      """This method is called when the button is clicked"""
+      self.button_2_1.background = "#00FF00" if self.button_2_1.enabled else "#FFFFFF"
+
+    def button_3_1_click(self, **event_args):
+      """This method is called when the button is clicked"""
+      self.button_3_1.background = "#00FF00" if self.button_3_1.enabled else "#FFFFFF"
+
+    def button_4_1_click(self, **event_args):
+      """This method is called when the button is clicked"""
+      self.button_4_1.background = "#00FF00" if self.button_4_1.enabled else "#FFFFFF"
+
+
+  
+    # def button_1_1_click(self, **event_args):
+    #   self.set_selected_payment_type("One Time")
+  
+    # def button_2_1_click(self, **event_args):
+    #   self.set_selected_payment_type("Monthly")
+  
+    # def button_3_1_click(self, **event_args):
+    #   self.set_selected_payment_type("Three Month")
+  
+    # def button_4_1_click(self, **event_args):
+    #   self.set_selected_payment_type("Six Month")
+
+
+    # def set_selected_payment_type(self, payment_type):
+    #   button_names = ["One Time", "Monthly", "Three Month", "Six Month"]
+    #   for i, emi_option in enumerate(button_names):
+    #     button = getattr(self, f'button_{i + 1}_1')
+    #     if emi_option == payment_type:
+    #       button.background = '#0a2346'
+    #     else:
+    #       button.background = '#939191'#'#336699'
