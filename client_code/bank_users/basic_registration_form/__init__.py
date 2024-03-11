@@ -12,8 +12,6 @@ from datetime import datetime, timedelta
 from ..main_form import main_form_module
 from ..user_form import user_module
 import re
-# from PIL import Image
-# from io import BytesIO
 
 class basic_registration_form(basic_registration_formTemplate):
     def __init__(self, **properties):
@@ -23,7 +21,7 @@ class basic_registration_form(basic_registration_formTemplate):
         email = self.email
         self.user_id = user_module.find_user_id(email)
         print(self.user_id)
-        
+
         user_id = self.user_id
         user_data = app_tables.fin_user_profile.get(customer_id=user_id)
         if user_data:
@@ -41,13 +39,10 @@ class basic_registration_form(basic_registration_formTemplate):
             self.text_box_5.text = user_data['state']
             self.text_box_6.text = user_data['country']
             user_data.update()
-        
+
             options = app_tables.fin_gender.search()
             option_strings = [str(option['gender']) for option in options]
             self.gender_dd.items = option_strings
-            
-
-    # Any code you write here will run before the form opens.
 
     def submit_btn_click(self, **event_args):
         """This method is called when the button is clicked"""
@@ -79,45 +74,75 @@ class basic_registration_form(basic_registration_formTemplate):
         
         # Validate full name
         if not re.match(r'^[A-Za-z\s]+$', full_name):
-                self.full_name_label.text = 'Enter a valid full name'
+            self.full_name_label.text = 'Enter a valid full name'
         elif not dob or dob > datetime.now().date():
-                self.dob_label.text = 'Enter a valid date of birth'
+            self.dob_label.text = 'Enter a valid date of birth'
         # Validate age (must be 18 or older)
         elif datetime.now().date() - dob < timedelta(days=365 * 18):
-                self.dob_label.text = 'You must be at least 18 years old'
+            self.dob_label.text = 'You must be at least 18 years old'
         elif not re.match(r'^\d{10}$', mobile_no):
-          self.mobile_label.text = 'Enter valid mobile no'
+            self.mobile_label.text = 'Enter valid mobile no'
         elif not re.match(r'^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$', alternate_email):
-          self.email_label.text = 'Enter a valid email address'
+            self.email_label.text = 'Enter a valid email address'
         # elif not re.match(r'^\d{12}$', aadhar):
         #   self.label_1.text='enter valid aadhar no'
         # elif not re.match(r'^[A-Z]{5}[0-9]{4}[A-Z]$', pan):
         #   self.label_2.text='enter valid pan no'
         elif not full_name or not gender or not dob or not mobile_no or not alternate_email or not user_photo or not aadhar or not aadhar_card or not pan or not pan_card or not street_adress_1 and not street_address_2 or not city or not pincode or not state or not state or not country:
-          Notification('Please fill all details').show()
+            Notification('Please fill all details').show()
         else:
-          user_age = datetime.now().year - dob.year - ((datetime.now().month, datetime.now().day) < (dob.month, dob.day))
-          anvil.server.call('add_basic_details', full_name, gender, dob, mobile_no, user_photo, alternate_email, aadhar, aadhar_card, pan, pan_card, street_adress_1, street_address_2, city, pincode, state, country, user_id, user_age)
-          Notification("basic details form fill up submitted successfully")
-          open_form('bank_users.user_form')
+            user_age = datetime.now().year - dob.year - ((datetime.now().month, datetime.now().day) < (dob.month, dob.day))
+            anvil.server.call('add_basic_details', full_name, gender, dob, mobile_no, user_photo, alternate_email,
+                              aadhar, aadhar_card, pan, pan_card, street_adress_1, street_address_2, city, pincode,
+                              state, country, user_id, user_age)
+            Notification("Basic details form filled up submitted successfully").show()
+            open_form('bank_users.user_form')
 
     def full_name_text_box_change(self, **event_args):
-            # This event is triggered when the text in the full name text box changes.
-            # Check the format and hide the error label if the format is correct.
-            full_name = self.full_name_text_box.text
-            if re.match(r'^[A-Za-z\s]+$', full_name):
-                self.full_name_label.text = ''
-        
+        # This event is triggered when the text in the full name text box changes.
+        # Check the format and hide the error label if the format is correct.
+        full_name = self.full_name_text_box.text
+        if re.match(r'^[A-Za-z\s]+$', full_name):
+            self.full_name_label.text = ''
+    
     def date_picker_1_change(self, **event_args):
-            # This event is triggered when the date in the date picker changes.
-            # Check if the date is valid and hide the error label if it is correct.
-            dob = self.date_picker_1.date
-            if not dob or dob > datetime.now().date():
-                self.dob_label.text = ''
-            # Update user age based on the dob
-            self.update_user_age(dob)
-
-    def update_user_age(self, dob):
-            # Update the user's age based on the selected date of birth
+        # This event is triggered when the date in the date picker changes.
+        # Check if the date is valid and hide the error label if it is correct.
+        dob = self.date_picker_1.date
+        if not dob or dob > datetime.now().date():
+            self.dob_label.text = ''
+        else:
+            # Calculate user's age based on the selected date of birth
             user_age = datetime.now().year - dob.year - ((datetime.now().month, datetime.now().day) < (dob.month, dob.day))
-            # Perform any action with user_age as needed
+            self.label_user_age.text = f'Age: {user_age} years'
+
+    def registration_img_aadhar_file_loader_change(self, file, **event_args):
+        # Function to handle aadhar card file upload event
+        if file is not None:
+            # Display the image in an Image component
+            self.image_aadhar.display_mode = file
+            self.image_aadhar.visible = True
+
+    def registration_img_pan_file_loader_change(self, file, **event_args):
+        # Function to handle pan card file upload event
+        if file is not None:
+            # Display the image in an Image component
+            self.image_pan.display_mode = file
+            self.image_pan.visible = True
+
+    def registration_img_file_loader_change(self, file, **event_args):
+        # Function to handle user photo file upload event
+        if file is not None:
+            # Display the image in an Image component
+            self.image_user_photo.display_mode = file
+            self.image_user_photo.visible = True  
+
+    def gender_dd_change(self, **event_args):
+        """This method is called when an item is selected"""
+        pass
+
+    def logout_click(self, **event_args):
+        """This method is called when the button is clicked"""
+        alert("Logged out successfully")
+        anvil.users.logout()
+        open_form('bank_users.main_form')
