@@ -89,21 +89,21 @@ components:
       source: 'https://cdni.iconscout.com/illustration/premium/thumb/online-banking-4344487-3605240.png?f=webp',
       spacing_below: small, background: '', horizontal_align: center}
     type: Image
-    layout_properties: {x: 397.6624877937138, y: 0, width: 339.5625}
+    layout_properties: {x: 31.86199951171875, y: 0, width: 339.5572814941406}
   - name: label_1_copy
     properties: {role: null, align: left, tooltip: '', border: '', foreground: black,
       visible: true, text: Highly Trusted Peer to Peer Lending Platform in India,
       font_size: 26, font: a, spacing_above: small, icon_align: left, spacing_below: small,
       italic: false, background: '', bold: true, underline: false, icon: ''}
     type: Label
-    layout_properties: {x: 665.6500366218388, y: 12.312512207776308, width: 537.3875122070312}
+    layout_properties: {x: 419.0103759765625, y: 16.510421752929688, width: 537.3828125}
   - name: label_5_copy_1
     properties: {role: body, align: left, tooltip: '', border: '', foreground: '#094586',
       visible: true, text: Get online personal loans at attractive interest rates through P2P Lending Go with the most preferred instrument that gives you risk adjusted returns.,
       font_size: 15, font: '', spacing_above: small, icon_align: left, spacing_below: small,
       italic: true, background: white, bold: false, underline: false, icon: ''}
     type: Label
-    layout_properties: {x: 671.1499755866826, y: 99.52500610426068, width: 496.6499938964844}
+    layout_properties: {x: 419.5963439941406, y: 114.63539123535156, width: 496.640625}
 - type: Spacer
   properties: {height: 32}
   name: spacer_1
