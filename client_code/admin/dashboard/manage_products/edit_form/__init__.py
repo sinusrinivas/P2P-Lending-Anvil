@@ -138,8 +138,8 @@ class edit_form(edit_formTemplate):
                     self.product_category.enabled = False
                     self.text_box_3.enabled = False
                     self.text_box_4.enabled = False
-                    self.check_box_1.enabled = False
-                    self.check_box_2.enabled = False
+                    # self.check_box_1.enabled = False
+                    # self.check_box_2.enabled = False
                     self.lapsed.enabled = False
                     self.default.enabled = False
                     self.npa.enabled = False

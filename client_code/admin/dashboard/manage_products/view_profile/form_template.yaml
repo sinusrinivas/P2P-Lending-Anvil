@@ -172,7 +172,7 @@ components:
       - type: Label
         properties: {}
         name: label_18
-        layout_properties: {x: 212.9821319580078, y: 718.7857818603516, width: 160}
+        layout_properties: {x: 212.9821319580078, y: 718.7857818603516, width: 439.142822265625}
       - type: Label
         properties: {}
         name: label_20
