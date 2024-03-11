@@ -336,7 +336,9 @@ class manage_producs1(manage_producs1Template):
         # emi_payment = json.dumps(emi_payment)
     
         #discount_coupons = self.radio_button_3.text if self.radio_button_3.selected else (self.radio_button_4.text if self.radio_button_4.selected else None)
-    
+
+      
+      
         existing_product = app_tables.fin_product_details.get(
             product_name=product_name,
             product_categories=product_categories
@@ -373,3 +375,40 @@ class manage_producs1(manage_producs1Template):
     def button_2_click(self, **event_args):
       """This method is called when the button is clicked"""
       open_form("admin.dashboard")
+
+
+    def set_selected_payment_type(self, payment_type):
+      button_names = ["One Time", "Monthly", "Three Month", "Six Month"]
+      for i, emi_option in enumerate(button_names):
+        button = getattr(self, f'button_{i + 1}_1')
+        if emi_option == payment_type:
+          button.background = '#0a2346'
+        else:
+          button.background = '#939191'#'#336699'
+
+    def set_button_visibility(self):
+      available_options = ["One Time", "Monthly", "Three Month", "Six Month"]
+      for i, emi_option in enumerate(available_options):
+        button = getattr(self, f'button_{i + 1}_1')
+        button.visible = emi_option in self.emi_payment_options
+        button.text = emi_option
+
+    def get_selected_payment_type(self):
+      button_names = ["One Time", "Monthly", "Three Month", "Six Month"]
+      for i, emi_option in enumerate(button_names):
+        button = getattr(self, f'button_{i + 1}_1')
+        if button.background == '#0a2346':
+          return emi_option
+    return None
+  
+    def button_1_1_click(self, **event_args):
+      self.set_selected_payment_type("One Time")
+  
+    def button_2_1_click(self, **event_args):
+      self.set_selected_payment_type("Monthly")
+  
+    def button_3_1_click(self, **event_args):
+      self.set_selected_payment_type("Three Month")
+  
+    def button_4_1_click(self, **event_args):
+      self.set_selected_payment_type("Six Month")
