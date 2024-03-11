@@ -248,6 +248,9 @@ db_schema:
     - name: npa
       admin_ui: {width: 200, order: 26}
       type: number
+    - name: occupation
+      admin_ui: {width: 200}
+      type: string
     title: fin_product_details
   fin_borrower_organization_type:
     client: full
@@ -794,6 +797,9 @@ db_schema:
     - name: is_liveloan
       admin_ui: {width: 200, order: 3.5}
       type: string
+    - name: Group Id
+      admin_ui: {width: 200}
+      type: number
     title: fin_admin_beseem_categories
   fin_wallet_transactions:
     title: fin_wallet_transactions
