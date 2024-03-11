@@ -25,6 +25,10 @@ components:
     - name: date_lable
       properties: {}
       type: Label
+  - name: label_2
+    properties: {align: center, bold: true, visible: false}
+    type: Label
+    layout_properties: {grid_position: 'ALOSSQ,SRPPLG'}
   - name: column_panel_2
     properties: {role: elevated-card, col_widths: '{"JGTWGA":25,"OAUSYI":35,"EHEFYZ":20}'}
     type: ColumnPanel
@@ -56,7 +60,7 @@ components:
       properties: {text: '    Mobile Number:', bold: true}
       type: Label
       layout_properties: {grid_position: 'PRVTJW,IMMSJY'}
-    - name: text_box_1
+    - name: mobile_number
       properties: {role: outlined, placeholder: Enter Mobile Number}
       type: TextBox
       layout_properties: {grid_position: 'PRVTJW,CLBXDZ'}
@@ -92,6 +96,23 @@ components:
         placeholder: Chose Role
       type: DropDown
       layout_properties: {grid_position: 'HGBHNN,UBNDFG'}
+    - name: lable
+      properties: {text: '    Create Password:', bold: true}
+      type: Label
+      layout_properties: {grid_position: 'ULKZYE,WZPXPK'}
+    - name: create_password_text
+      properties: {role: outlined, placeholder: Create Password}
+      type: TextBox
+      layout_properties: {grid_position: 'ULKZYE,VIQBZO'}
+      event_bindings: {pressed_enter: create_password_text_pressed_enter}
+    - name: labled
+      properties: {text: '   Re Enter  Password:', bold: true}
+      type: Label
+      layout_properties: {grid_position: 'KLWCJI,TTMNHR'}
+    - name: re_enter_password
+      properties: {role: outlined, placeholder: Re Enter Password}
+      type: TextBox
+      layout_properties: {grid_position: 'KLWCJI,BFVOCT'}
     - name: spacer_3
       properties: {height: 32}
       type: Spacer
@@ -100,6 +121,7 @@ components:
       properties: {text: clear, bold: true, role: filled-button}
       type: Button
       layout_properties: {grid_position: 'PKTVOO,JGTWGA'}
+      event_bindings: {click: clear_function_click}
     - name: spacer_3_copy
       properties: {height: 32}
       type: Spacer
@@ -108,4 +130,5 @@ components:
       properties: {text: save, role: filled-button}
       type: Button
       layout_properties: {grid_position: 'PKTVOO,OAUSYI'}
+      event_bindings: {click: save_all_fields_click}
 is_package: true
