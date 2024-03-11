@@ -327,15 +327,15 @@ class manage_producs1(manage_producs1Template):
         extension_allowed = self.extension_allowed.selected_value
         extension_fee = int(self.text_box_4.text.strip()) if extension_allowed == "Yes" else 0
     
-        emi_payment = [
-            "Monthly" if self.monthly.checked else "",
-            "One Time" if self.one_time.checked else "",
-            "Three Month" if self.three_month.checked else "",
-            "Six Month" if self.six_month.checked else "",
-        ]
-        emi_payment = json.dumps(emi_payment)
+        # emi_payment = [
+        #     "Monthly" if self.monthly.checked else "",
+        #     "One Time" if self.one_time.checked else "",
+        #     "Three Month" if self.three_month.checked else "",
+        #     "Six Month" if self.six_month.checked else "",
+        # ]
+        # emi_payment = json.dumps(emi_payment)
     
-        discount_coupons = self.radio_button_3.text if self.radio_button_3.selected else (self.radio_button_4.text if self.radio_button_4.selected else None)
+        #discount_coupons = self.radio_button_3.text if self.radio_button_3.selected else (self.radio_button_4.text if self.radio_button_4.selected else None)
     
         existing_product = app_tables.fin_product_details.get(
             product_name=product_name,
