@@ -43,7 +43,7 @@ db_schema:
       type: string
     title: fin_lendor_business_type
   fin_admin_users:
-    client: none
+    client: full
     server: full
     columns:
     - name: admin_id
