@@ -336,13 +336,13 @@ class manage_producs1(manage_producs1Template):
       #   emi_payment = json.dumps(emi_payment)
 
         emi_payment = []
-        if self.button_1_1.selected:
+        if self.button_1_1.enabled:
             emi_payment.append("One Time")
-        if self.button_2_1.selected:
+        if self.button_2_1.enabled:
             emi_payment.append("Monthly")
-        if self.button_3_1.selected:
+        if self.button_3_1.enabled:
             emi_payment.append("Three Month")
-        if self.button_4_1.selected:
+        if self.button_4_1.enabled:
             emi_payment.append("Six Month")
     
         emi_payment = ', '.join(emi_payment)
