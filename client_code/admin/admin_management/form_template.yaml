@@ -1,12 +1,14 @@
-container:
-  type: ColumnPanel
-  properties: {col_widths: '{}'}
+container: {type: ColumnPanel}
 components:
 - name: flow_panel_1
   properties: {spacing: small, spacing_above: none, spacing_below: none}
   type: FlowPanel
-  layout_properties: {grid_position: 'MREANM,ESGNTW', full_width_row: true}
+  layout_properties: {grid_position: 'PCIQDK,CCBPHH', full_width_row: true}
   components:
+  - name: spacer_2_copy_2
+    properties: {height: 32}
+    type: Spacer
+    layout_properties: {width: 61}
   - name: image_1
     properties: {role: null, vertical_align: center, height: 45.59999084472656, tooltip: '',
       border: '', foreground: '', visible: true, display_mode: shrink_to_fit, spacing_above: small,
@@ -15,136 +17,50 @@ components:
     type: Image
     layout_properties: {width: 134.312}
   - name: spacer_2
-    properties: {height: 32}
+    properties: {height: 40}
     type: Spacer
-    layout_properties: {width: 214}
+    layout_properties: {width: 33}
   - name: label_1
-    properties: {text: Admin Dashboard, bold: true, align: center, font_size: 25}
+    properties: {}
     type: Label
-    layout_properties: {}
   - name: spacer_1
-    properties: {height: 32}
+    properties: {height: 39}
     type: Spacer
-    layout_properties: {width: 284}
+    layout_properties: {width: 433}
+  - name: home
+    properties: {text: Home, bold: true, background: '#0b2547', foreground: white}
+    type: Button
+    layout_properties: {}
+    event_bindings: {click: home_click}
+  - name: spacer_2_copy
+    properties: {height: 40}
+    type: Spacer
+    layout_properties: {width: 44}
   - name: logout_
     properties: {text: Log out, bold: true, background: '#0b2547', foreground: white}
     type: Button
     layout_properties: {}
-- type: ColumnPanel
-  properties: {col_widths: '{}'}
-  name: content_panel
-  layout_properties: {grid_position: 'DFGUZJ,OGACIN'}
+    event_bindings: {click: logout__click}
+- name: column_panel_1
+  properties: {spacing_above: none}
+  type: ColumnPanel
+  layout_properties: {grid_position: 'FDPHVN,ITUKWN', full_width_row: true}
   components:
-  - type: XYPanel
-    properties: {height: 505}
-    name: xy_panel_1
-    layout_properties: {grid_position: 'AJQHBW,IHAEKO'}
-    components:
-    - type: Button
-      properties: {role: outlined-button, align: center, tooltip: '', border: '',
-        enabled: true, foreground: 'theme:On Primary', visible: true, text: '     Manage
-          Borrowers              ', font_size: null, font: '', spacing_above: small,
-        icon_align: left, spacing_below: small, italic: false, background: '#0b2547',
-        bold: true, underline: false, icon: 'fa:align-left'}
-      name: button_3
-      layout_properties: {x: 316, y: 74, width: 277}
-      event_bindings: {click: button_3_click}
-    - type: Button
-      properties: {role: outlined-button, align: center, tooltip: '', border: '',
-        enabled: true, foreground: 'theme:On Primary', visible: true, text: '     Manage
-          Products                ', font_size: null, font: '', spacing_above: small,
-        icon_align: left, spacing_below: small, italic: false, background: '#0b2547',
-        bold: true, underline: false, icon: 'fa:exclamation-triangle'}
-      name: button_6
-      layout_properties: {x: 316.99552154541016, y: 145.99552154541016, width: 275.015625}
-      event_bindings: {click: button_6_click}
-    - type: Button
-      properties: {role: outlined-button, align: center, tooltip: '', border: '',
-        enabled: true, foreground: 'theme:On Primary', visible: true, text: '  Manage
-          Risk Pool (FLDGB)     ', font_size: null, font: '', spacing_above: small,
-        icon_align: left, spacing_below: small, italic: false, background: '#0b2547',
-        bold: true, underline: false, icon: 'fa:stumbleupon'}
-      name: button_9
-      layout_properties: {x: 315.9910659790039, y: 214.99553680419922, width: 276.01562500000006}
-      event_bindings: {click: button_9_click}
-    - type: Button
-      properties: {role: outlined-button, align: center, tooltip: '', border: '',
-        enabled: true, foreground: 'theme:On Primary', visible: true, text: '  Manage
-          Revenu Share         ', font_size: null, font: '', spacing_above: small,
-        icon_align: left, spacing_below: small, italic: false, background: '#0b2547',
-        bold: true, underline: false, icon: 'fa:inr'}
-      name: button_8
-      layout_properties: {x: 9.991069793701172, y: 214.99553680419922, width: 244.996}
-      event_bindings: {click: button_8_click}
-    - type: Button
-      properties: {role: outlined-button, align: center, tooltip: '', border: '',
-        enabled: true, foreground: 'theme:On Primary', visible: true, text: '  Loan  Management               ',
-        font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small,
-        italic: false, background: '#0b2547', bold: true, underline: false, icon: 'fa:trello'}
-      name: button_5
-      layout_properties: {x: 10, y: 146, width: 245}
-      event_bindings: {click: button_5_click}
-    - type: Button
-      properties: {role: outlined-button, align: center, tooltip: '', border: '',
-        enabled: true, foreground: 'theme:On Primary', visible: true, text: 'Manage
-          Admins                 ', font_size: null, font: '', spacing_above: small,
-        icon_align: left, spacing_below: small, italic: false, background: '#0b2547',
-        bold: true, underline: false, icon: 'fa:cube'}
-      name: button_2
-      layout_properties: {x: 9.991069793701172, y: 73.99553680419922, width: 244.996}
-      event_bindings: {click: button_2_click}
-    - type: Button
-      properties: {role: outlined-button, align: center, tooltip: '', border: '',
-        enabled: true, foreground: 'theme:On Primary', visible: true, text: '     Manage
-          Reports                 ', font_size: null, font: '', spacing_above: small,
-        icon_align: left, spacing_below: small, italic: false, background: '#0b2547',
-        bold: true, underline: false, icon: 'fa:newspaper-o'}
-      name: button_11
-      layout_properties: {x: 9.991069793701172, y: 277.9955062866211, width: 244.996}
-      event_bindings: {click: button_11_click}
-    - type: Button
-      properties: {role: outlined-button, align: center, tooltip: '', border: '',
-        enabled: true, foreground: 'theme:On Primary', visible: true, text: '      Performance
-          Tracker           ', font_size: null, font: '', spacing_above: small, icon_align: left,
-        spacing_below: small, italic: false, background: '#0b2547', bold: true, underline: false,
-        icon: 'fa:compass'}
-      name: button_13
-      layout_properties: {x: 316.99552154541016, y: 281.38390350341797, width: 275.015625}
-      event_bindings: {click: button_13_click}
-    - type: Button
-      properties: {role: outlined-button, align: center, tooltip: '', border: '',
-        enabled: true, foreground: 'theme:On Primary', visible: true, text: '     Manage
-          Lenders                ', font_size: null, font: '', spacing_above: small,
-        icon_align: left, spacing_below: small, italic: false, background: '#0b2547',
-        bold: true, underline: false, icon: 'fa:chain-broken'}
-      name: button_4
-      layout_properties: {x: 627.4875762946904, y: 72.48751525953412, width: 240.9875030517578}
-      event_bindings: {click: button_4_click}
-    - type: Button
-      properties: {role: outlined-button, align: center, tooltip: '', border: '',
-        enabled: true, foreground: 'theme:On Primary', visible: true, text: '     Manage
-          CMS                      ', font_size: null, font: '', spacing_above: small,
-        icon_align: left, spacing_below: small, italic: false, background: '#0b2547',
-        bold: true, underline: false, icon: 'fa:dribbble'}
-      name: button_10
-      layout_properties: {x: 633.3000152595341, y: 213.48749237135053, width: 240}
-      event_bindings: {click: button_10_click}
-    - name: manage_bessem
-      properties: {role: outlined-button, align: center, tooltip: '', border: '',
-        enabled: true, foreground: 'theme:On Primary', visible: true, text: '     Manage
-          Bessem         ', font_size: null, font: '', spacing_above: small, icon_align: left,
-        spacing_below: small, italic: false, background: '#0b2547', bold: true, underline: false,
-        icon: 'fa:edit'}
-      type: Button
-      layout_properties: {x: 636.2500274665654, y: 280.67502288892865, width: 242.5619755859375}
-      event_bindings: {click: manage_bessem_click}
-    - type: Button
-      properties: {role: outlined-button, align: center, tooltip: '', border: '',
-        enabled: true, foreground: 'theme:On Primary', visible: true, text: '      Manage
-          Settings               ', font_size: null, font: '', spacing_above: small,
-        icon_align: left, spacing_below: small, italic: false, background: '#0b2547',
-        bold: true, underline: false, icon: 'fa:cogs'}
-      name: button_7
-      layout_properties: {x: 634.1000030525029, y: 146.08749847486615, width: 240}
-      event_bindings: {click: button_7_click}
+  - name: label_2
+    properties: {text: Managing admin permissions, bold: true, align: center}
+    type: Label
+    layout_properties: {grid_position: 'ZWGFRW,MFFSTN'}
+  - name: add_people
+    properties: {text: Add people}
+    type: Button
+    layout_properties: {grid_position: 'ZWGFRW,UISZEF'}
+    event_bindings: {click: add_peopless}
+  - name: button_1_copy
+    properties: {text: View people}
+    type: Button
+    layout_properties: {grid_position: 'ZWGFRW,JKYPCQ'}
+- name: content_panel
+  properties: {}
+  type: ColumnPanel
+  layout_properties: {grid_position: 'CDJUQY,UJKDJO', full_width_row: true}
 is_package: true
