@@ -324,6 +324,7 @@ components:
           name: button_1_1
           layout_properties: {grid_position: 'BQXUFN,DVEDID', width: 132.76700000000002,
             x: 408.5900152587891, y: 406.19647216796875}
+          event_bindings: {click: button_1_1_click}
         - type: Button
           properties: {role: null, align: full, tooltip: '', border: '', enabled: true,
             foreground: 'theme:On Primary', visible: true, text: Monthly, font_size: null,
@@ -332,6 +333,7 @@ components:
           name: button_2_1
           layout_properties: {grid_position: 'BQXUFN,WFXRUA', width: 129.67770556640627,
             x: 549.304015258789, y: 406.19647216796875}
+          event_bindings: {click: button_2_1_click}
         - type: Button
           properties: {role: null, align: full, tooltip: '', border: '', enabled: true,
             foreground: 'theme:On Primary', visible: true, text: Six Months, font_size: null,
@@ -340,6 +342,7 @@ components:
           name: button_4_1
           layout_properties: {grid_position: 'BQXUFN,ZPRITM', width: 134, x: 835.9817208251952,
             y: 406.19647216796875}
+          event_bindings: {click: button_4_1_click}
         - type: Button
           properties: {role: null, align: full, tooltip: '', border: '', enabled: true,
             foreground: 'theme:On Primary', visible: true, text: Three Months, font_size: null,
@@ -348,6 +351,7 @@ components:
           name: button_3_1
           layout_properties: {grid_position: 'BQXUFN,AHTRSJ', width: 137, x: 688.9643096923828,
             y: 406.19647216796875}
+          event_bindings: {click: button_3_1_click}
         - type: Button
           properties: {role: null, align: full, tooltip: '', border: '', enabled: true,
             foreground: 'theme:On Primary', visible: true, text: Business, font_size: null,
