@@ -168,7 +168,7 @@ components:
             auto_expand: true, font: '', spacing_above: small, spacing_below: small,
             italic: false, background: white, bold: false, underline: false}
           name: text_area_1
-          layout_properties: {row: FVXXTV, width_xs: 6, col_xs: 5}
+          layout_properties: {row: FVXXTV, width_xs: 7, col_xs: 5}
       - name: xy_panel_2
         properties: {height: 512.1999816894531}
         type: XYPanel
@@ -337,6 +337,7 @@ components:
             italic: false, background: '', bold: false, checked: false, underline: false}
           name: one_time
           layout_properties: {x: 428.62504272535443, y: 473.3500099182129, width: 104.6624984741211}
+          event_bindings: {change: one_time_change}
         - type: CheckBox
           properties: {role: null, align: left, tooltip: '', border: '', enabled: true,
             foreground: '', allow_indeterminate: false, visible: true, text: Three Months,
@@ -438,7 +439,7 @@ components:
           properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
             visible: true, text: ' Extension Allowed', font_size: null, font: '',
             spacing_above: small, icon_align: left, spacing_below: small, italic: false,
-            background: '', bold: false, underline: false, icon: ''}
+            background: '', bold: true, underline: false, icon: ''}
           name: label_7
           layout_properties: {row: VSFALN, width_xs: 2, col_xs: 3}
         - type: DropDown
@@ -508,7 +509,7 @@ components:
             type: text, spacing_below: small, italic: false, background: '', bold: false,
             underline: false}
           name: default_fee
-          layout_properties: {row: PNKPBU, width_xs: 4, col_xs: 5}
+          layout_properties: {row: PNKPBU, width_xs: 3, col_xs: 5}
           event_bindings: {pressed_enter: text_box_1_copy_pressed_enter}
         - type: Label
           properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
