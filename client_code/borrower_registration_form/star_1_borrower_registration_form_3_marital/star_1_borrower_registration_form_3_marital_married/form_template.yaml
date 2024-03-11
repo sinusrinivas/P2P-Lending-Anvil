@@ -35,7 +35,7 @@ components:
   - name: spacer_1
     properties: {height: 32}
     type: Spacer
-    layout_properties: {width: 272.15277099609375}
+    layout_properties: {width: 118.15277099609375}
   - name: radio_button_1
     properties: {text: Father, selected: false}
     type: RadioButton
