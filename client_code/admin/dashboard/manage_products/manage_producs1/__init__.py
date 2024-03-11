@@ -402,19 +402,19 @@ class manage_producs1(manage_producs1Template):
 
     def button_1_1_click(self, **event_args):
       """This method is called when the button is clicked"""
-      self.button_1_1.background = "#0770e8" if self.button_1_1.enabled else "#FFFFFF"
+      self.button_1_1.background = "#0770e8" if self.button_1_1.enabled else ""
 
     def button_2_1_click(self, **event_args):
       """This method is called when the button is clicked"""
-      self.button_2_1.background = "#0770e8" if self.button_2_1.enabled else "#FFFFFF"
+      self.button_2_1.background = "#0770e8" if self.button_2_1.enabled else ""
 
     def button_3_1_click(self, **event_args):
       """This method is called when the button is clicked"""
-      self.button_3_1.background = "#0770e8" if self.button_3_1.enabled else "#FFFFFF"
+      self.button_3_1.background = "#0770e8" if self.button_3_1.enabled else ""
 
     def button_4_1_click(self, **event_args):
       """This method is called when the button is clicked"""
-      self.button_4_1.background = "#0770e8" if self.button_4_1.enabled else "#FFFFFF"
+      self.button_4_1.background = "#0770e8" if self.button_4_1.enabled else ""
 
 
   
@@ -433,22 +433,22 @@ class manage_producs1(manage_producs1Template):
 
 
 
-    def button_1_1_click(self, **event_args):
-        """This method is called when the button is clicked"""
-        self.button_1_1.enabled = not self.button_1_1.enabled
-        self.button_1_1.background = "#0770e8" if self.button_1_1.enabled else "#FFFFFF"
+    # def button_1_1_click(self, **event_args):
+    #     """This method is called when the button is clicked"""
+    #     self.button_1_1.enabled = not self.button_1_1.enabled
+    #     self.button_1_1.background = "#0770e8" if self.button_1_1.enabled else "#FFFFFF"
     
-    def button_2_1_click(self, **event_args):
-        """This method is called when the button is clicked"""
-        self.button_2_1.enabled = not self.button_2_1.enabled
-        self.button_2_1.background = "#0770e8" if self.button_2_1.enabled else "#FFFFFF"
+    # def button_2_1_click(self, **event_args):
+    #     """This method is called when the button is clicked"""
+    #     self.button_2_1.enabled = not self.button_2_1.enabled
+    #     self.button_2_1.background = "#0770e8" if self.button_2_1.enabled else "#FFFFFF"
     
-    def button_3_1_click(self, **event_args):
-        """This method is called when the button is clicked"""
-        self.button_3_1.enabled = not self.button_3_1.enabled
-        self.button_3_1.background = "#0770e8" if self.button_3_1.enabled else "#FFFFFF"
+    # def button_3_1_click(self, **event_args):
+    #     """This method is called when the button is clicked"""
+    #     self.button_3_1.enabled = not self.button_3_1.enabled
+    #     self.button_3_1.background = "#0770e8" if self.button_3_1.enabled else "#FFFFFF"
     
-    def button_4_1_click(self, **event_args):
-        """This method is called when the button is clicked"""
-        self.button_4_1.enabled = not self.button_4_1.enabled
-        self.button_4_1.background = "#0770e8" if self.button_4_1.enabled else "#FFFFFF
+    # def button_4_1_click(self, **event_args):
+    #     """This method is called when the button is clicked"""
+    #     self.button_4_1.enabled = not self.button_4_1.enabled
+    #     self.button_4_1.background = "#0770e8" if self.button_4_1.enabled else "#FFFFFF"
