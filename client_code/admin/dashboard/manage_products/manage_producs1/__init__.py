@@ -348,7 +348,7 @@ class manage_producs1(manage_producs1Template):
         anvil.server.call('product_details', self.id, product_name, product_group, product_discription,
                           product_categories, processing_fee, extension_fee, membership_type, interest_type, max_amount,
                           min_amount, min_tenure, max_tenure, roi, foreclose_type, foreclosure_fee, extension_allowed,
-                          emi_payment, min_months, discount_coupons, lapsed_fee, default_fee, npa)
+                          emi_payment, min_months, lapsed_fee, default_fee, npa)
     
         # Update product ID and show success notification
         product_id = self.label_1.text

@@ -163,10 +163,11 @@ components:
           name: label_4_copy
           layout_properties: {row: FVXXTV, width_xs: 2, col_xs: 3}
         - type: TextArea
-          properties: {role: outlined, align: left, height: 90, tooltip: '', placeholder: Enter your Product Description,
-            border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
-            auto_expand: true, font: '', spacing_above: small, spacing_below: small,
-            italic: false, background: white, bold: false, underline: false}
+          properties: {role: outlined, align: left, height: 140.28570556640625, tooltip: '',
+            placeholder: Enter your Product Description, border: '', enabled: true,
+            foreground: '', visible: true, text: '', font_size: null, auto_expand: true,
+            font: '', spacing_above: small, spacing_below: small, italic: false, background: white,
+            bold: false, underline: false}
           name: text_area_1
           layout_properties: {row: FVXXTV, width_xs: 7, col_xs: 5}
       - name: xy_panel_2
