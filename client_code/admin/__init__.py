@@ -19,4 +19,7 @@ def admin_check(email):
   else:
     return False
   
-  
+
+
+def add_admin_details(email,):
+  admin_users = app_tables.fin_admin_users.search()
