@@ -237,9 +237,9 @@ components:
               width: 178.656}
           - type: Label
             properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-              visible: true, text: '    Rate Of Interest (per year)', font_size: null,
-              font: '', spacing_above: small, icon_align: left, spacing_below: small,
-              italic: false, background: '', bold: false, underline: false, icon: ''}
+              visible: true, text: '    Rate Of Interest (%)', font_size: null, font: '',
+              spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+              background: '', bold: false, underline: false, icon: ''}
             name: label_13_copy
             layout_properties: {grid_position: 'SVITEG,VDKAQD'}
           - type: TextBox
@@ -310,13 +310,6 @@ components:
               bold: false, underline: false}
             name: max_tenure
             layout_properties: {grid_position: 'XYEYWQ,YVIEJJ JRWJMI,IRPPSM'}
-        - type: Label
-          properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-            visible: true, text: ' Interest  Rate(%)', font_size: null, font: '',
-            spacing_above: small, icon_align: left, spacing_below: small, italic: false,
-            background: '', bold: true, underline: false, icon: ''}
-          name: label_8_copy
-          layout_properties: {x: 243.90000610426068, y: 2.200000762939453, width: 118.4625015258789}
         - type: Button
           properties: {role: null, align: full, tooltip: '', border: '', enabled: true,
             foreground: 'theme:On Primary', visible: true, text: One Time, font_size: null,
@@ -361,6 +354,7 @@ components:
           name: business
           layout_properties: {grid_position: 'BQXUFN,DVEDID', width: 132.75, x: 408.5893096923828,
             y: 467.32147216796875}
+          event_bindings: {click: business_click}
         - type: Button
           properties: {role: null, align: full, tooltip: '', border: '', enabled: true,
             foreground: 'theme:On Primary', visible: true, text: Student, font_size: null,
@@ -369,6 +363,7 @@ components:
           name: student
           layout_properties: {grid_position: 'BQXUFN,DVEDID', width: 132.75, x: 551.3393096923828,
             y: 467.03570556640625}
+          event_bindings: {click: student_click}
         - type: Button
           properties: {role: null, align: full, tooltip: '', border: '', enabled: true,
             foreground: 'theme:On Primary', visible: true, text: Employee, font_size: null,
@@ -377,6 +372,7 @@ components:
           name: employee
           layout_properties: {grid_position: 'BQXUFN,DVEDID', width: 132.75, x: 694.0893096923828,
             y: 467.03570556640625}
+          event_bindings: {click: employee_click}
         - type: Label
           properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
             visible: true, text: Choose Occupation, font_size: null, font: '', spacing_above: small,
@@ -391,6 +387,13 @@ components:
             bold: true, underline: false, icon: ''}
           name: label_8
           layout_properties: {x: 252.6428680419922, y: 406.19647216796875, width: 112.054}
+        - type: Label
+          properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+            visible: true, text: ' Interest  Rate (per year)', font_size: null, font: '',
+            spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+            background: '', bold: true, underline: false, icon: ''}
+          name: label_8_copy
+          layout_properties: {x: 230.8928680419922, y: 2.1785888671875, width: 158.679}
       - name: grid_panel_2
         properties: {}
         type: GridPanel

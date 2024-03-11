@@ -286,6 +286,7 @@ class manage_producs1(manage_producs1Template):
                 self.foreclose_type.selected_value,
                 self.extension_allowed.selected_value,
                 (self.button_1_1.enabled or self.button_2_1.enabled or self.button_3_1.enabled or self.button_4_1.enabled),
+                (self.business.enabled or self.student.enabled or self.student.enabled ),
                 self.lapsed_fee.text.strip(),
                 self.default_fee.text.strip(),
                 self.npa.text.strip()]):
@@ -341,13 +342,22 @@ class manage_producs1(manage_producs1Template):
         if self.button_2_1.enabled:
             emi_payment.append("Monthly")
         if self.button_3_1.enabled:
-            emi_payment.append("Three Month")
+            emi_payment.append("Three Months")
         if self.button_4_1.enabled:
-            emi_payment.append("Six Month")
+            emi_payment.append("Six Months")
     
         emi_payment = ', '.join(emi_payment)
 
-        # payment_type = self.get_selected_payment_type()
+
+        occupation = []
+        if self.business.enabled:
+            occupation.append("Business")
+        if self.student.enabled:
+            occupation.append("Student")
+        if self.employee.enabled:
+            occupation.append("Employee")
+
+        occupation = ', '.join(occupation)
       
         existing_product = app_tables.fin_product_details.get(
             product_name=product_name,
@@ -362,7 +372,7 @@ class manage_producs1(manage_producs1Template):
         anvil.server.call('product_details', self.id, product_name, product_group, product_discription,
                           product_categories, processing_fee, extension_fee, membership_type, interest_type, max_amount,
                           min_amount, min_tenure, max_tenure, roi, foreclose_type, foreclosure_fee, extension_allowed,
-                          emi_payment, min_months, lapsed_fee, default_fee, npa)
+                          emi_payment, min_months, lapsed_fee, default_fee, npa,occupation)
     
         # Update product ID and show success notification
         product_id = self.label_1.text
@@ -387,48 +397,36 @@ class manage_producs1(manage_producs1Template):
       open_form("admin.dashboard")
 
 
-
-
-
       
 
 
     def button_1_1_click(self, **event_args):
       """This method is called when the button is clicked"""
-      self.button_1_1.background = "#00FF00" if self.button_1_1.enabled else "#FFFFFF"
+      self.button_1_1.background = "#0770e8" if self.button_1_1.enabled else "#FFFFFF"
 
     def button_2_1_click(self, **event_args):
       """This method is called when the button is clicked"""
-      self.button_2_1.background = "#00FF00" if self.button_2_1.enabled else "#FFFFFF"
+      self.button_2_1.background = "#0770e8" if self.button_2_1.enabled else "#FFFFFF"
 
     def button_3_1_click(self, **event_args):
       """This method is called when the button is clicked"""
-      self.button_3_1.background = "#00FF00" if self.button_3_1.enabled else "#FFFFFF"
+      self.button_3_1.background = "#0770e8" if self.button_3_1.enabled else "#FFFFFF"
 
     def button_4_1_click(self, **event_args):
       """This method is called when the button is clicked"""
-      self.button_4_1.background = "#00FF00" if self.button_4_1.enabled else "#FFFFFF"
+      self.button_4_1.background = "#0770e8" if self.button_4_1.enabled else "#FFFFFF"
 
 
   
-    # def button_1_1_click(self, **event_args):
-    #   self.set_selected_payment_type("One Time")
-  
-    # def button_2_1_click(self, **event_args):
-    #   self.set_selected_payment_type("Monthly")
-  
-    # def button_3_1_click(self, **event_args):
-    #   self.set_selected_payment_type("Three Month")
-  
-    # def button_4_1_click(self, **event_args):
-    #   self.set_selected_payment_type("Six Month")
+    def business_click(self, **event_args):
+      """This method is called when the button is clicked"""
+      self.business.background = "#0770e8" if self.business.enabled else "#FFFFFF"
 
+    def student_click(self, **event_args):
+      """This method is called when the button is clicked"""
+      self.student.background = "#0770e8" if self.student.enabled else "#FFFFFF"
 
-    # def set_selected_payment_type(self, payment_type):
-    #   button_names = ["One Time", "Monthly", "Three Month", "Six Month"]
-    #   for i, emi_option in enumerate(button_names):
-    #     button = getattr(self, f'button_{i + 1}_1')
-    #     if emi_option == payment_type:
-    #       button.background = '#0a2346'
-    #     else:
-    #       button.background = '#939191'#'#336699'
+    def employee_click(self, **event_args):
+      """This method is called when the button is clicked"""
+      self.employee.background = "#0770e8" if self.employee.enabled else "#FFFFFF"
+
