@@ -12,10 +12,7 @@ class lendor(lendorTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
-    user_id = self.user_id
-    user_data=app_tables.fin_user_profile.get(customer_id=user_id)
-    if user_data:
-      self.image_1.source= user_data['user_photo']
+
 
     # Any code you write here will run before the form opens.
 

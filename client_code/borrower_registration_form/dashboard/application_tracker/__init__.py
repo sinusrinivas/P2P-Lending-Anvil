@@ -15,6 +15,8 @@ class application_tracker(application_trackerTemplate):
     self.init_components(**properties)
     self.user_id=main_form_module.userId
     
+    
+    
     # Any code you write here will run before the form oopens.
     under_process_items = app_tables.fin_loan_details.search(loan_updated_status=q.like('under proces%'), borrower_customer_id=self.user_id)
     borrower_profiles = []
@@ -34,6 +36,7 @@ class application_tracker(application_trackerTemplate):
                     'loan_id': loan['loan_id'],
                     'borrower_loan_created_timestamp':loan['borrower_loan_created_timestamp'],
                     'loan_updated_status' : loan['loan_updated_status']})
+                    # 'image_1' : user_profile['user_photo']})
               
     self.repeating_panel_2.items = borrower_profiles
     #self.label_1.text = str(len(under_process_items))
