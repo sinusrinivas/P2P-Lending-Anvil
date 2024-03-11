@@ -3,7 +3,7 @@ container:
   properties: {col_widths: '{}'}
 components:
 - name: flow_panel_1
-  properties: {spacing: small, spacing_above: none, spacing_below: none, align: center}
+  properties: {spacing: small, spacing_above: none, spacing_below: none, align: justify}
   type: FlowPanel
   layout_properties: {grid_position: 'MREANM,ESGNTW', full_width_row: true}
   components:
@@ -32,12 +32,12 @@ components:
     layout_properties: {}
     event_bindings: {click: logout__click}
 - type: ColumnPanel
-  properties: {col_widths: '{}'}
+  properties: {col_widths: '{}', visible: true}
   name: content_panel
   layout_properties: {grid_position: 'DFGUZJ,OGACIN'}
   components:
   - type: XYPanel
-    properties: {height: 505}
+    properties: {height: 505, visible: true}
     name: xy_panel_1
     layout_properties: {grid_position: 'AJQHBW,IHAEKO'}
     components:
