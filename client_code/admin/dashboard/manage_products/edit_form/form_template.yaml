@@ -155,20 +155,21 @@ components:
           name: label_4_copy
           layout_properties: {row: GHKQPJ, width_xs: 2, col_xs: 3}
         - type: TextArea
-          properties: {role: outlined, align: left, height: 69.8, tooltip: '', placeholder: Enter product description,
-            border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
-            auto_expand: false, font: '', spacing_above: small, spacing_below: small,
-            italic: false, background: '', bold: false, underline: false}
+          properties: {role: outlined, align: left, height: 133.85708618164062, tooltip: '',
+            placeholder: Enter product description, border: '', enabled: true, foreground: '',
+            visible: true, text: '', font_size: null, auto_expand: false, font: '',
+            spacing_above: small, spacing_below: small, italic: false, background: '',
+            bold: false, underline: false}
           name: text_area_1
-          layout_properties: {row: GHKQPJ, width_xs: 6, col_xs: 5}
+          layout_properties: {row: GHKQPJ, width_xs: 7, col_xs: 5}
       - name: xy_panel_2
-        properties: {height: 476}
+        properties: {height: 501.42852783203125}
         type: XYPanel
         layout_properties: {grid_position: 'ANIPMU,LPMJFE'}
         components:
         - type: Label
           properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-            visible: true, text: ' Interest  Rate(%)', font_size: null, font: '',
+            visible: true, text: ' Interest  Rate (per year)', font_size: null, font: '',
             spacing_above: small, icon_align: left, spacing_below: small, italic: false,
             background: '', bold: true, underline: false, icon: ''}
           name: label_8_copy
@@ -312,51 +313,77 @@ components:
               bold: false, underline: false}
             name: max_tenure
             layout_properties: {grid_position: 'RYDMOM,TYCYZS'}
-          - type: Link
-            properties: {role: null, url: '', align: right, tooltip: '', border: '',
-              foreground: Blue, visible: true, text: '+Add More Interest rate ', font_size: null,
-              wrap_on: mobile, font: '', col_spacing: medium, spacing_above: small,
-              icon_align: left, col_widths: '', spacing_below: small, italic: false,
-              background: '', bold: true, underline: false, icon: ''}
-            name: link_2
-            layout_properties: {grid_position: 'NIXQDN,UTZNNW'}
-        - type: CheckBox
-          properties: {role: null, align: left, tooltip: '', border: '', enabled: true,
-            foreground: '', allow_indeterminate: false, visible: true, text: Monthly,
-            font_size: null, font: '', spacing_above: small, spacing_below: small,
-            italic: false, background: '', bold: false, checked: false, underline: false}
-          name: check_box_1
-          layout_properties: {x: 436.3000305183232, y: 437.14999771118164, width: 100}
-          event_bindings: {change: check_box_1_change}
-        - type: CheckBox
-          properties: {role: null, align: left, tooltip: '', border: '', enabled: true,
-            foreground: '', allow_indeterminate: false, visible: true, text: One Time,
-            font_size: null, font: '', spacing_above: small, spacing_below: small,
-            italic: false, background: '', bold: false, checked: false, underline: false}
-          name: check_box_2
-          layout_properties: {x: 531.7875183112919, y: 437.14999771118164, width: 100}
-        - type: CheckBox
-          properties: {role: null, align: left, tooltip: '', border: '', enabled: true,
-            foreground: '', allow_indeterminate: false, visible: true, text: Three Month,
-            font_size: null, font: '', spacing_above: small, spacing_below: small,
-            italic: false, background: '', bold: false, checked: false, underline: false}
-          name: check_box_3
-          layout_properties: {x: 633.8500183112919, y: 437.14999771118164, width: 132}
-        - type: CheckBox
-          properties: {role: null, align: left, tooltip: '', border: '', enabled: true,
-            foreground: '', allow_indeterminate: false, visible: true, text: Six Month,
-            font_size: null, font: '', spacing_above: small, spacing_below: small,
-            italic: false, background: '', bold: false, checked: false, underline: false}
-          name: check_box_4
-          layout_properties: {x: 755.8500183112919, y: 437.14999771118164, width: 100}
         - type: Label
           properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
             visible: true, text: EMI Payment, font_size: null, font: '', spacing_above: small,
             icon_align: left, spacing_below: small, italic: false, background: '',
             bold: true, underline: false, icon: ''}
           name: label_8
-          layout_properties: {x: 254.73753051832318, y: 440, width: 122}
+          layout_properties: {x: 252.8392791748047, y: 386.00006103515625, width: 122}
           event_bindings: {show: label_8_show}
+        - type: Button
+          properties: {role: null, align: full, tooltip: '', border: '', enabled: true,
+            foreground: 'theme:On Primary', visible: true, text: Monthly, font_size: null,
+            font: '', spacing_above: small, icon_align: left, spacing_below: small,
+            italic: false, background: '#05264d', bold: false, underline: false, icon: ''}
+          name: button_2_1
+          layout_properties: {grid_position: 'BQXUFN,WFXRUA', width: 129.661, x: 546.2857208251953,
+            y: 382}
+        - type: Button
+          properties: {role: null, align: full, tooltip: '', border: '', enabled: true,
+            foreground: 'theme:On Primary', visible: true, text: Three Months, font_size: null,
+            font: '', spacing_above: small, icon_align: left, spacing_below: small,
+            italic: false, background: '#05264d', bold: false, underline: false, icon: ''}
+          name: button_3_1
+          layout_properties: {grid_position: 'BQXUFN,AHTRSJ', width: 137, x: 685.9467208251954,
+            y: 382}
+        - type: Button
+          properties: {role: null, align: full, tooltip: '', border: '', enabled: true,
+            foreground: 'theme:On Primary', visible: true, text: Six Months, font_size: null,
+            font: '', spacing_above: small, icon_align: left, spacing_below: small,
+            italic: false, background: '#05264d', bold: false, underline: false, icon: ''}
+          name: button_4_1
+          layout_properties: {grid_position: 'BQXUFN,ZPRITM', width: 134, x: 832.9464874267578,
+            y: 382}
+        - type: Label
+          properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+            visible: true, text: Choose Occupation, font_size: null, font: '', spacing_above: small,
+            icon_align: left, spacing_below: small, italic: false, background: '',
+            bold: true, underline: false, icon: ''}
+          name: label_10_copy_2
+          layout_properties: {x: 252.6428680419922, y: 450.03570556640625, width: 136.929}
+        - type: Button
+          properties: {role: null, align: full, tooltip: '', border: '', enabled: true,
+            foreground: 'theme:On Primary', visible: true, text: Business, font_size: null,
+            font: '', spacing_above: small, icon_align: left, spacing_below: small,
+            italic: false, background: '#05264d', bold: false, underline: false, icon: ''}
+          name: business
+          layout_properties: {grid_position: 'BQXUFN,DVEDID', width: 132.75, x: 408.5893096923828,
+            y: 446.03570556640625}
+        - type: Button
+          properties: {role: null, align: full, tooltip: '', border: '', enabled: true,
+            foreground: 'theme:On Primary', visible: true, text: Employee, font_size: null,
+            font: '', spacing_above: small, icon_align: left, spacing_below: small,
+            italic: false, background: '#05264d', bold: false, underline: false, icon: ''}
+          name: employee
+          layout_properties: {grid_position: 'BQXUFN,DVEDID', width: 132.75, x: 694.0893096923828,
+            y: 446.03570556640625}
+        - type: Button
+          properties: {role: null, align: full, tooltip: '', border: '', enabled: true,
+            foreground: 'theme:On Primary', visible: true, text: Student, font_size: null,
+            font: '', spacing_above: small, icon_align: left, spacing_below: small,
+            italic: false, background: '#05264d', bold: false, underline: false, icon: ''}
+          name: student
+          layout_properties: {grid_position: 'BQXUFN,DVEDID', width: 132.75, x: 551.3393096923828,
+            y: 446.03570556640625}
+        - type: Button
+          properties: {role: null, align: full, tooltip: '', border: '', enabled: true,
+            foreground: 'theme:On Primary', visible: true, text: One Time, font_size: null,
+            font: '', spacing_above: small, icon_align: left, spacing_below: small,
+            italic: false, background: '#05264d', bold: false, underline: false, icon: ''}
+          name: button_1_1
+          layout_properties: {grid_position: 'BQXUFN,DVEDID', width: 132.75, x: 408.5893096923828,
+            y: 382}
       - name: grid_panel_2
         properties: {}
         type: GridPanel
@@ -390,7 +417,7 @@ components:
             underline: false
             include_placeholder: true
           name: foreclose_type
-          layout_properties: {row: MGOHHU, width_xs: 3, col_xs: 5}
+          layout_properties: {row: MGOHHU, width_xs: 4, col_xs: 5}
         - type: Label
           properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
             visible: true, text: ' Foreclosure_fee(%)', font_size: null, font: '',
@@ -405,7 +432,7 @@ components:
             type: text, spacing_below: small, italic: false, background: '', bold: false,
             underline: false}
           name: foreclosure_fee
-          layout_properties: {row: ACRMQG, width_xs: 3, col_xs: 5}
+          layout_properties: {row: ACRMQG, width_xs: 4, col_xs: 5}
         - type: Label
           properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
             visible: true, text: ' Min Months', font_size: null, font: '', spacing_above: small,
@@ -420,7 +447,7 @@ components:
             type: text, spacing_below: small, italic: false, background: '', bold: false,
             underline: false}
           name: min_months
-          layout_properties: {row: IOOZKW, width_xs: 3, col_xs: 5}
+          layout_properties: {row: IOOZKW, width_xs: 4, col_xs: 5}
         - type: Label
           properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
             visible: true, text: ' Processing Fee(%)', font_size: null, font: '',
@@ -435,7 +462,7 @@ components:
             type: text, spacing_below: small, italic: false, background: '', bold: false,
             underline: false}
           name: text_box_3
-          layout_properties: {row: NKOVWX, width_xs: 3, col_xs: 5}
+          layout_properties: {row: NKOVWX, width_xs: 4, col_xs: 5}
         - type: Label
           properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
             visible: true, text: ' Extension Allowed', font_size: null, font: '',
@@ -464,7 +491,7 @@ components:
             underline: false
             include_placeholder: true
           name: extension_allowed
-          layout_properties: {row: DACAAY, width_xs: 3, col_xs: 5}
+          layout_properties: {row: DACAAY, width_xs: 4, col_xs: 5}
           event_bindings: {change: extension_allowed_copy_change}
         - type: Label
           properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
@@ -480,71 +507,52 @@ components:
             type: text, spacing_below: small, italic: false, background: '', bold: false,
             underline: false}
           name: text_box_4
-          layout_properties: {row: NODUMH, width_xs: 3, col_xs: 5}
+          layout_properties: {row: NODUMH, width_xs: 4, col_xs: 5}
         - type: Label
           properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-            visible: true, text: Lapsed Fee, font_size: null, font: '', spacing_above: small,
+            visible: true, text: Lapsed Fee(₹), font_size: null, font: '', spacing_above: small,
             icon_align: left, spacing_below: small, italic: false, background: '',
             bold: true, underline: false, icon: ''}
           name: label_9
           layout_properties: {row: LZYYNI, width_xs: 2, col_xs: 3}
         - type: TextBox
           properties: {role: outlined, align: left, hide_text: false, tooltip: '',
-            placeholder: '', border: '', enabled: true, foreground: '', visible: true,
-            text: '', font_size: null, font: '', spacing_above: small, type: text,
-            spacing_below: small, italic: false, background: '', bold: false, underline: false}
+            placeholder: Enter Laped Fee, border: '', enabled: true, foreground: '',
+            visible: true, text: '', font_size: null, font: '', spacing_above: small,
+            type: text, spacing_below: small, italic: false, background: '', bold: false,
+            underline: false}
           name: lapsed
-          layout_properties: {row: LZYYNI, width_xs: 3, col_xs: 5}
+          layout_properties: {row: LZYYNI, width_xs: 4, col_xs: 5}
         - type: Label
           properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-            visible: true, text: Default Fee, font_size: null, font: '', spacing_above: small,
+            visible: true, text: Default Fee(₹), font_size: null, font: '', spacing_above: small,
             icon_align: left, spacing_below: small, italic: false, background: '',
             bold: true, underline: false, icon: ''}
           name: label_11
           layout_properties: {row: WDXFGB, width_xs: 2, col_xs: 3}
         - type: TextBox
           properties: {role: outlined, align: left, hide_text: false, tooltip: '',
-            placeholder: '', border: '', enabled: true, foreground: '', visible: true,
-            text: '', font_size: null, font: '', spacing_above: small, type: text,
-            spacing_below: small, italic: false, background: '', bold: false, underline: false}
+            placeholder: Enter Defaulters Fee, border: '', enabled: true, foreground: '',
+            visible: true, text: '', font_size: null, font: '', spacing_above: small,
+            type: text, spacing_below: small, italic: false, background: '', bold: false,
+            underline: false}
           name: default
-          layout_properties: {row: WDXFGB, width_xs: 3, col_xs: 5}
+          layout_properties: {row: WDXFGB, width_xs: 4, col_xs: 5}
         - type: Label
           properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-            visible: true, text: ' NPA', font_size: null, font: '', spacing_above: small,
-            icon_align: left, spacing_below: small, italic: false, background: '',
-            bold: true, underline: false, icon: ''}
+            visible: true, text: ' Non Performing Asset(₹)', font_size: null, font: '',
+            spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+            background: '', bold: true, underline: false, icon: ''}
           name: label_12
           layout_properties: {row: JNWARG, width_xs: 2, col_xs: 3}
         - type: TextBox
           properties: {role: outlined, align: left, hide_text: false, tooltip: '',
-            placeholder: '', border: '', enabled: true, foreground: '', visible: true,
-            text: '', font_size: null, font: '', spacing_above: small, type: text,
-            spacing_below: small, italic: false, background: '', bold: false, underline: false}
+            placeholder: Enter Non Performing Asset Fee, border: '', enabled: true,
+            foreground: '', visible: true, text: '', font_size: null, font: '', spacing_above: small,
+            type: text, spacing_below: small, italic: false, background: '', bold: false,
+            underline: false}
           name: npa
-          layout_properties: {row: JNWARG, width_xs: 3, col_xs: 5}
-        - type: Label
-          properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-            visible: true, text: ' Discount  Coupons', font_size: null, font: '',
-            spacing_above: small, icon_align: left, spacing_below: small, italic: false,
-            background: '', bold: true, underline: false, icon: ''}
-          name: label_14_copy
-          layout_properties: {row: ZBPAFB, width_xs: 2, col_xs: 3}
-        - type: RadioButton
-          properties: {role: null, selected: false, align: left, tooltip: '', border: '',
-            enabled: true, foreground: '', value: '', visible: true, text: 'Yes',
-            font_size: null, font: '', spacing_above: small, spacing_below: small,
-            italic: false, background: '', bold: false, group_name: radioGroup2, underline: false}
-          name: radio_button_3
-          layout_properties: {row: ZBPAFB, width_xs: 1, col_xs: 5}
-          event_bindings: {clicked: radio_button_3_clicked}
-        - type: RadioButton
-          properties: {role: null, selected: false, align: left, tooltip: '', border: '',
-            enabled: true, foreground: '', value: '', visible: true, text: 'No', font_size: null,
-            font: '', spacing_above: small, spacing_below: small, italic: false, background: '',
-            bold: false, group_name: radioGroup2, underline: false}
-          name: radio_button_4
-          layout_properties: {row: ZBPAFB, width_xs: 1, col_xs: 6}
+          layout_properties: {row: JNWARG, width_xs: 4, col_xs: 5}
       - name: spacer_2
         properties: {height: 32}
         type: Spacer

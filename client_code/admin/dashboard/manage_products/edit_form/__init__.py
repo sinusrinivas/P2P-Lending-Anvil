@@ -47,6 +47,7 @@ class edit_form(edit_formTemplate):
         self.npa_lst = []
         self.min_month_list = []
         self.disc_coupans_list = []
+        self.occupation = []
 
         a = -1
         for i in self.data:
@@ -74,6 +75,7 @@ class edit_form(edit_formTemplate):
             self.npa_lst.append(i['npa'])
             self.min_month_list.append(i['min_months'])
             self.disc_coupans_list.append(i['discount_coupons'])
+            self.occupation.append(i['occupation'])
 
         if a == -1:
             alert("No Data Available Here!!")
@@ -114,12 +116,12 @@ class edit_form(edit_formTemplate):
             if self.intr_type:
                 selected_interest_type = str(self.intr_type[-1])
                 if selected_interest_type == "Fixed":
-                    self.radio_button_1.selected = True
-                    self.radio_button_2.selected = False
-                    self.radio_button_3.enabled = False
-                    self.radio_button_4.enabled = False
-                    self.radio_button_3.selected = True  
-                    self.radio_button_4.selected = False 
+                    # self.radio_button_1.selected = True
+                    # self.radio_button_2.selected = False
+                    # self.radio_button_3.enabled = False
+                    # self.radio_button_4.enabled = False
+                    # self.radio_button_3.selected = True  
+                    # self.radio_button_4.selected = False 
                     self.text_area_1.enabled = False
                     self.product_name.enabled = False
                     self.min_amount.enabled = False
@@ -136,18 +138,18 @@ class edit_form(edit_formTemplate):
                     self.product_category.enabled = False
                     self.text_box_3.enabled = False
                     self.text_box_4.enabled = False
-                    self.check_box_1.enabled = False
-                    self.check_box_2.enabled = False
+                    # self.check_box_1.enabled = False
+                    # self.check_box_2.enabled = False
                     self.lapsed.enabled = False
                     self.default.enabled = False
                     self.npa.enabled = False
-                    self.radio_button_3.selected = False
-                    self.radio_button_4.selected = False
+                    # self.radio_button_3.selected = False
+                    # self.radio_button_4.selected = False
                 elif selected_interest_type == "Variable":
-                    self.radio_button_1.selected = False
-                    self.radio_button_2.selected = True
-                    self.radio_button_3.enabled = False
-                    self.radio_button_4.enabled = False
+                    # self.radio_button_1.selected = False
+                    # self.radio_button_2.selected = True
+                    # self.radio_button_3.enabled = False
+                    # self.radio_button_4.enabled = False
                     self.text_area_1.enabled = False
                     self.min_amount.enabled = False
                     self.roi.enabled = True
@@ -164,22 +166,22 @@ class edit_form(edit_formTemplate):
                     self.text_box_3.enabled = False
                     self.foreclosure_fee.enabled = False
                     self.text_box_4.enabled = False
-                    self.check_box_1.enabled = False
-                    self.check_box_2.enabled = False
+                    # self.check_box_1.enabled = False
+                    # self.check_box_2.enabled = False
                     self.lapsed.enabled = False
                     self.default.enabled = False
                     self.npa.enabled = False
-                    self.radio_button_3.selected = False
-                    self.radio_button_4.selected = False
+                    # self.radio_button_3.selected = False
+                    # self.radio_button_4.selected = False
                 else:
                     print(f"Unexpected interest type: {selected_interest_type}")
 
-            else:
-                # Assuming "Variable" when intr_type is not available
-                self.radio_button_1.selected = False
-                self.radio_button_2.selected = False
-                self.radio_button_3.enabled = False
-                self.radio_button_4.enabled = False
+            # else:
+            #     # Assuming "Variable" when intr_type is not available
+            #     self.radio_button_1.selected = False
+            #     self.radio_button_2.selected = False
+            #     self.radio_button_3.enabled = False
+            #     self.radio_button_4.enabled = False
 
 
             if self.roi_list:
@@ -199,18 +201,33 @@ class edit_form(edit_formTemplate):
 
             if self.emi_payment_list:
                 self.checkbox_values = [
-                    self.check_box_1.checked,
-                    self.check_box_2.checked,
-                    self.check_box_3.checked,
-                    self.check_box_4.checked
+                    self.button_1_1.enabled,
+                    self.button_2_1.enabled,
+                    self.button_3_1.enabled,
+                    self.button_4_1.enabled
                 ]
             if self.emi_payment_list:
                 checkbox_values = self.emi_payment_list[-1]
-                self.check_box_1.checked = checkbox_values[0]
-                self.check_box_2.checked = checkbox_values[1]
-                self.check_box_3.checked = checkbox_values[2]
-                self.check_box_4.checked = checkbox_values[3]
+                self.button_1_1.enabled = checkbox_values[0]
+                self.button_2_1.enabled = checkbox_values[1]
+                self.button_3_1.enabled = checkbox_values[2]
+                self.button_4_1.enabled = checkbox_values[3]
 
+
+            if self.occupation:
+                self.button = [
+                    self.business.enabled,
+                    self.student.enabled,
+                    self.employee.enabled,
+                   
+                ]
+            if self.occupation:
+                button = self.occupation[-1]
+                self.business.enabled = button[0]
+                self.student.enabled = button[1]
+                self.employee.enabled = button[2]
+                # self.button_4_1.enabled = checkbox_values[3]
+          
             if self.lapsed_lst:
                 self.lapsed.text = self.lapsed_lst[-1]
 
@@ -223,13 +240,13 @@ class edit_form(edit_formTemplate):
             if self.min_month_list:
                 self.min_months.text = str(self.min_month_list[-1])
 
-            if self.disc_coupans_list:
-                if self.disc_coupans_list[-1] == "Yes":
-                    self.radio_button_3.text = "Yes"
-                    self.radio_button_4.text = "No"
-                else:
-                    self.radio_button_3.text = "No"
-                    self.radio_button_4.text = "Yes"
+            # if self.disc_coupans_list:
+            #     if self.disc_coupans_list[-1] == "Yes":
+            #         self.radio_button_3.text = "Yes"
+            #         self.radio_button_4.text = "No"
+            #     else:
+            #         self.radio_button_3.text = "No"
+            #         self.radio_button_4.text = "Yes"
 
     def button_1_click(self, **event_args):
         """This method is called when the button is clicked"""
@@ -282,7 +299,8 @@ class edit_form(edit_formTemplate):
                 data['default_fee'] = int(self.default.text)
                 data['npa'] = int(self.npa.text)
                 data['min_months'] = int(self.min_months.text)
-                data['discount_coupons'] = "Yes" if self.radio_button_3.selected else "No"
+                # data['discount_coupons'] = "Yes" if self.radio_button_3.selected else "No"
+                data['occupation'] = int(self.button.text)
 
                 Notification("Product details updated successfully").show()
 

@@ -38,7 +38,7 @@ class view_profile(view_profileTemplate):
     self.lapsed_lst = []
     self.default_lst = []
     self.npa_lst = []
-    self.dis_cou = []
+    # self.dis_cou = []
 
     a = -1
     for i in self.data:
@@ -65,7 +65,7 @@ class view_profile(view_profileTemplate):
       self.lapsed_lst.append(i['lapsed_fee'])
       self.default_lst.append(i['default_fee'])
       self.npa_lst.append((i['npa']))
-      self.dis_cou.append(i['discount_coupons'])
+      # self.dis_cou.append(i['discount_coupons'])
 
     if a == -1:
       alert("No Data Available Here!!")
@@ -94,7 +94,7 @@ class view_profile(view_profileTemplate):
         self.lapsed.text = self.lapsed_lst[b]
         self.default.text = self.default_lst[b]
         self.npa.text = self.npa_lst[b]
-        self.label_12.text = self.dis_cou[b]
+        # self.label_12.text = self.dis_cou[b]
 
   def button_1_click(self, **event_args):
     """This method is called when the button is clicked"""
