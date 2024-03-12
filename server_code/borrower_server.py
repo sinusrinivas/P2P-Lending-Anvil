@@ -271,7 +271,7 @@ def get_user_points(id):
 
         def search_category(group_name, sub_category):
             return app_tables.fin_admin_beseem_categories.search(
-                group_name=group_name, sub_category=sub_category,age=age)
+                group_name=group_name, sub_category=sub_category,age=str(age))
 
         # Initialize user_points to 0
         user_points = 0
