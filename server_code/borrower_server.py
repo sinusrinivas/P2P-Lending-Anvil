@@ -72,7 +72,8 @@ def add_borrower_step6(bank_id, bank_branch, user_id):
         row[0]['form_count'] = 6
         row[0]['usertype'] = 'borrower'
         row[0]['last_confirm'] = True
-        row[0]['bessem_value'] = final_points_update_bessem_table(user_id)
+        bessem_value = final_points_update_bessem_table(user_id)
+        row[0]['bessem_value'] = float(bessem_value)
         wallet.find_user_update_type(user_id,row[0]['full_name'],"borrower")
         
 
@@ -247,6 +248,8 @@ def final_points_update_bessem_table(user_id):
     user_points = get_user_points(user_id)
     group_points = get_group_points()
 
+    print(f"Debug: user_points={user_points}, group_points={group_points}")
+
     if user_points is not None and group_points is not None and group_points != 0:
         points = (user_points / group_points) * 100
 
@@ -260,42 +263,55 @@ def get_user_points(id):
 
     if users:
         user = users[0]
-        gender = user['gender']
-        qualification = user['qualification']
-        marrital_status = user['marital_status']
-        profession = user['profficen']
+        gender = user['gender'].lower()
+        qualification = user['qualification'].lower()
+        marrital_status = user['marital_status'].lower()
+        profession = user['profficen'].lower()
         age = user['user_age']
-        home_loan = user['running_Home_Loan']
-        live_loan = user['running_or_live loans']
-        other_loans = user['other_loan']
+        
+        print(f"Debug: gender={gender}, qualification={qualification}, marrital_status={marrital_status}, profession={profession}, age={age}")
 
-        def search_category(group_name, sub_category):
-            return app_tables.fin_admin_beseem_categories.search(
-                group_name=group_name, sub_category=sub_category)
+        def is_age_within_range(row):
+            if age is not None and row['age'] is not None:
+                age_range = map(int, row['age'].split('-'))
+                return age_range[0] <= int(age) <= age_range[1]
+            return True
+
+        def search_category(group_name, sub_category, age=None):
+            group_name = group_name.lower()
+            sub_category = sub_category.lower()
+            return [row for row in app_tables.fin_admin_beseem_categories.search(
+                group_name=group_name, sub_category=sub_category, age=str(age).lower())
+                if is_age_within_range(row)]
 
         # Initialize user_points to 0
         user_points = 0
 
         gender_category_rows = search_category('gender', gender)
+        print(f"Debug: gender_category_rows={gender_category_rows}")
         if gender_category_rows:
             user_points += gender_category_rows[0]['min_points']
 
         qualification_category_rows = search_category('qualification', qualification)
+        print(f"Debug: qualification_category_rows={qualification_category_rows}")
         if qualification_category_rows:
             user_points += qualification_category_rows[0]['min_points']
 
-        marital_status_category_rows = search_category('marrital_status', marrital_status)
-        if marital_status_category_rows:
-            user_points += marital_status_category_rows[0]['min_points']
+        marital_status_category_rows = search_category('marrital_status', marrital_status, age)
+        print(f"Debug: marital_status_category_rows={marital_status_category_rows}")
+        for row in marital_status_category_rows:
+            user_points += row['min_points']
 
-        profession_category_rows = search_category('profession', profession, age)
+        profession_category_rows = search_category('profession', profession)
+        print(f"Debug: profession_category_rows={profession_category_rows}")
         if profession_category_rows:
             user_points += profession_category_rows[0]['min_points']
 
         # Return the total user_points
+        print(f"Debug: user_points={user_points}")
         return user_points
     return None
-        
+
 def get_group_points():
     groups = app_tables.fin_admin_beseem_groups.search()
 
