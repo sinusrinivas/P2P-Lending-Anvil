@@ -7,7 +7,8 @@ import anvil.users
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
-from .. import main_form_module as main_form_module
+from ... import main_form_module 
+# from .. import main_form_module as main_form_module
 
 class RowTemplate7(RowTemplate7Template):
   def __init__(self, **properties):
