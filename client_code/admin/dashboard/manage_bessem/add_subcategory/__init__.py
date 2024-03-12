@@ -22,7 +22,7 @@ class add_subcategory(add_subcategoryTemplate):
     self.repeating_panel_2.items = app_tables.fin_admin_beseem_categories.search(group_name="qualification")
     self.repeating_panel_3.items = app_tables.fin_admin_beseem_categories.search(group_name="marrital_status")
     self.repeating_panel_5.items = app_tables.fin_admin_beseem_categories.search(group_name="profession")
-    self.repeating_panel_4.items = app_tables.fin_admin_beseem_categories.search(group_name="live_loans")
+    self.repeating_panel_4.items = app_tables.fin_admin_beseem_categories.search(group_name="all_loans")
 
   def back_btn_click(self, **event_args):
     """This method is called when the button is clicked"""
@@ -126,29 +126,34 @@ class add_subcategory(add_subcategoryTemplate):
             group_name="profession", max_points=max_points
         )
     
-  def liveloans_button_click(self, **event_args):
+  def all_loans_button_click(self, **event_args):
     """This method is called when the button is clicked"""
-    entered_sub = self.text_box_7.text
-    entered_min_pts = int(self.text_box_9.text)
-    entered_yes_no = self.text_box_8.text
-    new_row = app_tables.fin_admin_beseem_categories.add_row(group_name='live_loans',sub_category=entered_sub,min_points=entered_min_pts)
-    self.text_box_7.text = ' '
+    entered_sub = self.text_box_9.text
+    entered_yes_no = self.text_box_10.text
+    valid_statuses = ['Yes', 'No']
+    if entered_yes_no not in valid_statuses:
+        alert("Kindly input either 'Yes' or 'No'.")
+        return
+    entered_min_pts = int(self.text_box_11.text)
+    
+    new_row = app_tables.fin_admin_beseem_categories.add_row(group_name='all_loans',sub_category=entered_sub,min_points=entered_min_pts,is_liveloan=entered_yes_no)
     self.text_box_9.text = ' '
-    self.text_box_9.text = ' '
+    self.text_box_10.text = ' '
+    self.text_box_11.text = ' '
     self.refresh()
 
-    existing_min_points = [row["min_points"] for row in app_tables.fin_admin_beseem_categories.search(group_name='live_loans')]
+    existing_min_points = [row["min_points"] for row in app_tables.fin_admin_beseem_categories.search(group_name='all_loans')]
 
     max_points = max(existing_min_points + [entered_min_pts])
 
-    existing_group_row  = app_tables.fin_admin_beseem_groups.get(group_name="live_loans")
+    existing_group_row  = app_tables.fin_admin_beseem_groups.get(group_name="all_loans")
     if existing_group_row:
       existing_group_row['max_points'] = max_points
       existing_group_row.update()
 
     else:
       new_group_row = app_tables.fin_admin_beseem_groups.add_row(
-            group_name="live_loans", max_points=max_pointsq
+            group_name="all_loans", max_points=max_points
         )
     
   def gender_click(self, **event_args):
@@ -183,7 +188,7 @@ class add_subcategory(add_subcategoryTemplate):
     self.grid_panel_4.visible = True
     self.grid_panel_5.visible = False
 
-  def live_loans_click(self, **event_args):
+  def all_loans_click(self, **event_args):
     """This method is called when the button is clicked"""
     self.grid_panel_1.visible = False
     self.grid_panel_2.visible = False

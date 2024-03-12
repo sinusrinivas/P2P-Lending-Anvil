@@ -1,4 +1,4 @@
-from ._anvil_designer import edit_liveloansTemplate
+from ._anvil_designer import edit_all_loansTemplate
 from anvil import *
 import anvil.server
 import anvil.google.auth, anvil.google.drive
@@ -8,17 +8,20 @@ import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 
-class edit_liveloans(edit_liveloansTemplate):
+class edit_all_loans(edit_all_loansTemplate):
   def __init__(self, selected_row, **properties):
     self.init_components(**properties)
 
     # Set the initial values for the input components
     self.text_box_1.text = selected_row['sub_category']
-    self.text_box_1.enabled = True  # Make text_box_1 non-editable
+    self.text_box_1.enabled = False  
 
     self.text_box_2.text = selected_row['min_points']
-    self.text_box_2.enabled = True  # Make text_box_2 editable
+    self.text_box_2.enabled = True  
 
+    self.text_box_3.text = selected_row['is_liveloan']
+    self.text_box_3.enabled = False
+    
     # Store the selected row for later use
     self.selected_row = selected_row
 
@@ -27,11 +30,13 @@ class edit_liveloans(edit_liveloansTemplate):
     # Get the updated values from the input components
     updated_sub_category = self.text_box_1.text
     updated_points = int(self.text_box_2.text)
-
+    updated_yesno = self.text_box_3.text
+    
     # Update the existing row in the product_categories table
     if self.selected_row is not None:
       self.selected_row['sub_category'] = updated_sub_category
       self.selected_row['min_points'] = updated_points
+      self.selected_row['is_liveloan'] = updated_yesno
 
       # Save changes to the database
       self.selected_row.update()

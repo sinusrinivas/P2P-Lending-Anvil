@@ -72,7 +72,7 @@ def add_borrower_step6(bank_id, bank_branch, user_id):
         row[0]['form_count'] = 6
         row[0]['usertype'] = 'borrower'
         row[0]['last_confirm'] = True
-        row[0]['bessem_value'] = bessemfunctions.final_points_update_bessem_table(user_id)
+        row[0]['bessem_value'] = final_points_update_bessem_table(user_id)
         wallet.find_user_update_type(user_id,row[0]['full_name'],"borrower")
         
 
@@ -265,6 +265,9 @@ def get_user_points(id):
         marrital_status = user['marital_status']
         profession = user['profficen']
         age = user['user_age']
+        home_loan = user['running_Home_Loan']
+        live_loan = user['running_or_live loans']
+        other_loans = user['other_loan']
 
         def search_category(group_name, sub_category):
             return app_tables.fin_admin_beseem_categories.search(

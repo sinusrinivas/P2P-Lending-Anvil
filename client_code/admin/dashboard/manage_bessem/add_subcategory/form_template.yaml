@@ -53,9 +53,9 @@ components:
       type: ColumnPanel
       layout_properties: {x: 14.67500763013959, y: 132.18749694898725, width: 200}
       components:
-      - name: live_loans
+      - name: all_loans
         properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
-          foreground: 'theme:On Primary', visible: true, text: 'Live
+          foreground: 'theme:On Primary', visible: true, text: 'All
 
             loans
 
@@ -64,7 +64,7 @@ components:
           icon: ''}
         type: Button
         layout_properties: {grid_position: 'YUTUEO,ZDKIXA'}
-        event_bindings: {click: live_loans_click}
+        event_bindings: {click: all_loans_click}
     - name: outlined_card_2
       properties: {role: outlined-card, tooltip: '', border: '', foreground: '', visible: true,
         wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '',
@@ -308,7 +308,7 @@ components:
         properties: {text: Add Points, bold: true, align: center}
         type: Label
         layout_properties: {row: ZEZCYX, width_xs: 4, col_xs: 5}
-      - name: text_box_7_copy
+      - name: text_box_7
         properties: {role: outlined, align: center, hide_text: false, tooltip: '',
           placeholder: '', border: '', enabled: true, foreground: '', visible: true,
           text: '', font_size: null, font: '', spacing_above: small, type: text, spacing_below: small,
@@ -316,7 +316,7 @@ components:
         type: TextBox
         layout_properties: {row: QDOTVC, width_xs: 4, col_xs: 1}
         event_bindings: {pressed_enter: text_box_1_pressed_enter}
-      - name: text_box_8_copy
+      - name: text_box_8
         properties: {role: outlined, align: center, hide_text: false, tooltip: '',
           placeholder: '', border: '', enabled: true, foreground: '', visible: true,
           text: '', font_size: null, font: '', spacing_above: small, type: text, spacing_below: small,
@@ -347,24 +347,24 @@ components:
       components:
       - name: label_011
         properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
-          visible: true, text: Add Live Loans Details, font_size: 18, font: '', spacing_above: small,
+          visible: true, text: Add All Loans Details, font_size: 18, font: '', spacing_above: small,
           icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
           underline: false, icon: ''}
         type: Label
         layout_properties: {row: TQZTXO, width_xs: 12, col_xs: 0}
-      - name: label_2_copy_copy_copy
-        properties: {text: Add Points, bold: true, align: center}
-        type: Label
-        layout_properties: {row: ZEZCYX, width_xs: 3, col_xs: 0}
-      - name: label_3
-        properties: {text: Yes/No, bold: true, align: center}
-        type: Label
-        layout_properties: {row: ZEZCYX, width_xs: 2, col_xs: 4}
       - name: label_1_copy_copy_copy
         properties: {text: Add Subcategory, bold: true, align: center}
         type: Label
-        layout_properties: {row: ZEZCYX, width_xs: 3, col_xs: 1}
-      - name: text_box_7
+        layout_properties: {row: ZEZCYX, width_xs: 4, col_xs: 0}
+      - name: label_3
+        properties: {text: Yes/No, bold: true, align: center}
+        type: Label
+        layout_properties: {row: ZEZCYX, width_xs: 3, col_xs: 4}
+      - name: label_2_copy_copy_copy
+        properties: {text: Add Points, bold: true, align: center}
+        type: Label
+        layout_properties: {row: ZEZCYX, width_xs: 3, col_xs: 6}
+      - name: text_box_9
         properties: {role: outlined, align: center, hide_text: false, tooltip: '',
           placeholder: '', border: '', enabled: true, foreground: '', visible: true,
           text: '', font_size: null, font: '', spacing_above: small, type: text, spacing_below: small,
@@ -372,30 +372,30 @@ components:
         type: TextBox
         layout_properties: {row: BMWBRB, width_xs: 4, col_xs: 0}
         event_bindings: {pressed_enter: text_box_1_pressed_enter}
-      - name: text_box_8
+      - name: text_box_10
         properties: {role: outlined, align: center, hide_text: false, tooltip: '',
           placeholder: '', border: '', enabled: true, foreground: '', visible: true,
           text: '', font_size: null, font: '', spacing_above: small, type: text, spacing_below: small,
           italic: false, background: '', bold: false, underline: false}
         type: TextBox
-        layout_properties: {row: BMWBRB, width_xs: 2, col_xs: 4}
+        layout_properties: {row: BMWBRB, width_xs: 3, col_xs: 4}
         event_bindings: {pressed_enter: text_box_1_pressed_enter}
-      - name: text_box_9
+      - name: text_box_11
         properties: {role: outlined, align: center, hide_text: false, tooltip: '',
           placeholder: '', border: '', enabled: true, foreground: '', visible: true,
           text: '', font_size: null, font: '', spacing_above: small, type: text, spacing_below: small,
           italic: false, background: '', bold: false, underline: false}
         type: TextBox
-        layout_properties: {row: BMWBRB, width_xs: 4, col_xs: 6}
+        layout_properties: {row: BMWBRB, width_xs: 3, col_xs: 7}
         event_bindings: {pressed_enter: text_box_1_pressed_enter}
-      - name: liveloans_button
+      - name: all_loans_button
         properties: {role: null, align: full, tooltip: '', border: '', enabled: true,
           foreground: 'theme:On Primary', visible: true, text: ADD, font_size: null,
           font: '', spacing_above: small, icon_align: left, spacing_below: small,
           italic: false, background: '#00008B', bold: true, underline: false, icon: ''}
         type: Button
         layout_properties: {row: BMWBRB, width_xs: 2, col_xs: 10}
-        event_bindings: {click: liveloans_button_click}
+        event_bindings: {click: all_loans_button_click}
       - name: repeating_panel_4
         properties: {item_template: admin.dashboard.manage_bessem.add_subcategory.ItemTemplate61}
         type: RepeatingPanel

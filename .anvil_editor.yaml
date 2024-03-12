@@ -63,6 +63,7 @@ unique_ids:
     wallet.wallet.ItemTemplate1: '1703492569011195703115231.62308'
     lendor_registration_form.lender_registration_form_2.lender_registration_individual_form_3: '1699429299471944361321501.9009'
     admin.dashboard.loan_management.loan_disbursed.RowTemplate16: '1701160112605363272029232.90436'
+    admin.dashboard.manage_bessem.add_subcategory.edit_all_loans: '1710222862958473841917188.2917'
     ? borrower_registration_form.star_1_borrower_registration_form_2_employment.star_1_borrower_registration_form_2_employment_emp_detail_1
     : '1700037370196273229157101.42648'
     admin.dashboard.manage_bessem.add_subcategory.edit_qualification: '170973382597126282095202.1523'
@@ -85,7 +86,6 @@ unique_ids:
     admin.dashboard.lenders.view_profile_copy.edit_form_copy: '1700738442974165215211725.12378'
     admin.dashboard.manage_cms.add_lender_dropdown_details.edit_business: '1706531698832276711382247.1159'
     lendor_registration_form.Toggleswitch: '1701335189405602120940903.774'
-    admin.dashboard.manage_bessem.add_subcategory.edit_liveloans: '1710222862958473841917188.2917'
     borrower_registration_form.dashboard.foreclosure_request: '1699009486604204061292370.0036'
     admin.dashboard.admin_teams.view_profile.update_form: '169952839624818688697299.6676'
     lendor_registration_form.dashboard.today_dues.ItemTemplate1: '1703564885286922717800272.7809'

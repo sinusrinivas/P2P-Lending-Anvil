@@ -19,6 +19,9 @@ class edit_marrital(edit_marritalTemplate):
     self.text_box_2.text = selected_row['min_points']
     self.text_box_2.enabled = True  # Make text_box_2 editable
 
+    self.text_box_3.text = selected_row['age']
+    self.text_box_3.enabled = True
+
     # Store the selected row for later use
     self.selected_row = selected_row
 
@@ -27,11 +30,13 @@ class edit_marrital(edit_marritalTemplate):
     # Get the updated values from the input components
     updated_sub_category = self.text_box_1.text
     updated_points = int(self.text_box_2.text)
+    updated_age = self.text_box_3.text
 
     # Update the existing row in the product_categories table
     if self.selected_row is not None:
       self.selected_row['sub_category'] = updated_sub_category
       self.selected_row['min_points'] = updated_points
+      self.selected_row['age'] = updated_age
 
       # Save changes to the database
       self.selected_row.update()
