@@ -58,7 +58,8 @@ class borrower_extension(borrower_extensionTemplate):
         if approved_status:
             # If there is an approved status, make "Pay" button visible
             self.label_5_copy_2.visible = True
-            self.button_1_copy.visible = True
+            self.button_1_copy.visible = False 
+            self.button_s.visible = True
             self.button_1.visible = False
             self.button_2.visible = False
             loan_details_row = loan_details_row['loan_extension_months']
@@ -67,7 +68,8 @@ class borrower_extension(borrower_extensionTemplate):
         elif rejected_status:
             # If there is a reject status, show an alert            
             self.label_5_copy_3.visible = True
-            self.button_1_copy.visible = True
+            self.button_1_copy.visible = False 
+            self.button_s.visible = True
             self.button_1.visible = False
             self.button_2.visible = False
             loan_details_row = loan_details_row['loan_extension_months']
@@ -84,7 +86,8 @@ class borrower_extension(borrower_extensionTemplate):
                 self.text_box_1.text = str(loan_details_row)
                 self.button_2.visible = False 
                 self.label_5_copy.visible = True
-                self.button_1_copy.visible = True
+                self.button_1_copy.visible = False 
+                self.button_s.visible = True
                 self.button_1.visible = False
             
             # Fetch scheduled payments from fin_emi_table
@@ -105,14 +108,14 @@ class borrower_extension(borrower_extensionTemplate):
             # Additional condition to make button_1 visible if there are no existing requests
             if len(existing_requests) == 0:
                 self.button_1_copy.visible = True
-
+    
     def button_1_click(self, **event_args):
         """This method is called when the Back button is clicked"""
         open_form('borrower_registration_form.dashboard.extension_loan_request')
 
-    def button_3_click(self, **event_args):
+    def button_s_click(self, **event_args):
         """This method is called when the Close button is clicked"""
-        open_form('borrower_registration_form.dashboard')
+        open_form('borrower_registration_form.dashboard.extension_loan_request')
 
     def button_2_click(self, **event_args):
         """This method is called when the Submit Extension Request button is clicked"""

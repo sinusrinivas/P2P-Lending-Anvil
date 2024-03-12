@@ -151,7 +151,7 @@ def add_loan_details(loan_amount, tenure,user_id,interest_rate, total_repayment_
           total_repayment_amount = total_repayment_amount,
           loan_id = loan_id,
           membership_type = membership_type,
-          credit_limit=credit_limit,
+          credit_limit=int(credit_limit),
           borrower_full_name = borrower_full_name,
           borrower_email_id = borrower_email_id,
           loan_updated_status = "under process",
@@ -161,7 +161,7 @@ def add_loan_details(loan_amount, tenure,user_id,interest_rate, total_repayment_
           emi_payment_type = emi_payment_type,
           total_processing_fee_amount = processing_fee_amount,
           total_interest_amount = total_interest,
-          product_discription = product_discription,
+          #product_discription = product_discription,
           # beseem_score= find_beseem_points_based_on_id(user_id)
          )
 
