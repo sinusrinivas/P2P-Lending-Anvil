@@ -1,5 +1,3 @@
-
-
 from ._anvil_designer import payment_details_extensionTemplate
 from anvil import *
 import anvil.server
@@ -16,6 +14,7 @@ class payment_details_extension(payment_details_extensionTemplate):
     self.selected_row = selected_row
     self.loan_extension_months = loan_extension_months
     self.extension_fee = extension_fee
+    self.emi = None 
     self.init_components(**properties)
 
     if selected_row:
@@ -78,9 +77,10 @@ class payment_details_extension(payment_details_extensionTemplate):
         total_payment = emi
       else:
         if selected_row['emi_payment_type'] == 'Monthly':
-          emi = self.calculate_scheduled_payment(selected_row['loan_amount'], monthly_interest_rate, selected_row['tenure'])
+          emi = self.calculate_scheduled_payment(selected_row['loan_amount'], monthly_interest_rate, total_tenure)
         elif selected_row['emi_payment_type'] == 'One Time':
-          pass
+                self.generate_one_time_payment_details(selected_row, extension_fee_amount)
+                return
         elif selected_row['emi_payment_type'] == 'Three Month':
           if (month - last_paid_emi_number) % 3 == 0:
             emi = self.calculate_scheduled_payment(selected_row['loan_amount'], monthly_interest_rate, (total_tenure/3))
@@ -129,7 +129,7 @@ class payment_details_extension(payment_details_extensionTemplate):
         loan_id = selected_row['loan_id']
 
         # Search for the row in loan_details_table based on the loan_id
-loan_details_row = app_tables.fin_loan_details.get(loan_id=loan_id)
+        loan_details_row = app_tables.fin_loan_details.get(loan_id=loan_id)
         if loan_details_row:
             loan_disbursed_timestamp = loan_details_row['loan_disbursed_timestamp']
 
@@ -160,30 +160,74 @@ loan_details_row = app_tables.fin_loan_details.get(loan_id=loan_id)
 
     return emi
 
-  # def calculate_emi(self, selected_row, tenure=None, repayment_amount=None):
-  #     tenure = selected_row['tenure'] if tenure is None else tenure
-  #     monthly_interest_rate = (selected_row['interest_rate'] / 100) / 12
-  #     loan_amount = selected_row['loan_amount'] - repayment_amount if repayment_amount else selected_row['loan_amount']
-
-  #     if selected_row['emi_payment_type'] == 'Monthly':
-  #         emi = (loan_amount * monthly_interest_rate * ((1 + monthly_interest_rate) ** tenure)) / (((1 + monthly_interest_rate) ** tenure) - 1)
-  #       # elif selected_row['emi_payment_type'] == 'One Time':
-  #       #     emi = selected_row['total_repayment_amount']
-  #     elif selected_row['emi_payment_type'] == 'Three Month':
-  #         monthly_interest_rate = (selected_row['interest_rate'] / 100) / (12)  # Convert annual interest rate to monthly
-  #         emi = (loan_amount * monthly_interest_rate * ((1 + monthly_interest_rate) ** (tenure ))) / (((1 + monthly_interest_rate) ** (tenure)) - 1)
-  #     elif selected_row['emi_payment_type'] == 'Six Month':
-  #         monthly_interest_rate = (selected_row['interest_rate'] / 100) / (12 )  # Corrected calculation for 6 months
-  #         emi = (loan_amount * monthly_interest_rate * ((1 + monthly_interest_rate) ** (tenure ))) / (((1 + monthly_interest_rate) ** (tenure )) - 1)
-  #     else:
-  #         emi = 0  # Handle unsupported payment types
-
-  #     return emi
+  
 
   def button_1_click(self, **event_args):
-    open_form('borrower_registration_form.dashboard.extension_loan_request.borrower_extension.extension2',
-              selected_row=self.selected_row, loan_extension_months=self.loan_extension_months, new_emi = self.emi)
+    # Find the index of the row where the extension fee is applied
+    extension_fee_row_index = next(
+        (i for i, item in enumerate(self.repeating_panel_1.items) if item.get('ExtensionFee', '') != '₹ 0.00'), None)
 
+    if extension_fee_row_index is not None:
+        # Extract the new EMI from the next row after the extension fee is applied
+        if self.selected_row['emi_payment_type'] == 'One Time' and extension_fee_row_index + 1 >= len(self.repeating_panel_1.items):
+            new_emi_amount = float(self.repeating_panel_1.items[extension_fee_row_index]['ScheduledPayment'].replace('₹ ', ''))
+        else:
+            new_emi_amount = float(self.repeating_panel_1.items[extension_fee_row_index + 1]['ScheduledPayment'].replace('₹ ', ''))
+
+        # Find the month number for the extension
+        extension_month_number = self.repeating_panel_1.items[extension_fee_row_index]['PaymentNumber']
+
+        print(f"New EMI passed to extension2 form: {new_emi_amount}")
+        print(f"Extension applied in month number: {extension_month_number}")
+
+        # Pass the new EMI and extension month number to the extension2 form
+        open_form('borrower_registration_form.dashboard.extension_loan_request.borrower_extension.extension2',
+                    selected_row=self.selected_row, loan_extension_months=self.loan_extension_months, new_emi=new_emi_amount, emi_number=extension_month_number)
+    else:
+        alert("Extension fee not found in payment details.")
   def button_2_click(self, **event_args):
-    """This method is called when the button is clicked"""
-    open_form('borrower_registration_form.dashboard.extension_loan_request.borrower_extension', selected_row = self.selected_row)
+    open_form('borrower_registration_form.dashboard.extension_loan_request.borrower_extension', selected_row=self.selected_row)
+  def generate_one_time_payment_details(self, selected_row, extension_fee_amount):
+    # Fetch required details from loan_details_table for one-time payment
+    loan_details_row = app_tables.fin_loan_details.get(loan_id=selected_row['loan_id'])
+    if loan_details_row:
+        loan_updated_status = loan_details_row['loan_updated_status'].lower()
+        if loan_updated_status in ['close', 'closed loans', 'disbursed loan', 'foreclosure']:
+            loan_disbursed_timestamp = loan_details_row['loan_disbursed_timestamp']
+            if loan_disbursed_timestamp:
+                # Calculate the payment date for total tenure
+                total_tenure_days = selected_row['tenure'] + self.loan_extension_months  # Total tenure in days
+                payment_date = loan_disbursed_timestamp + timedelta(days=30 * total_tenure_days)
+                formatted_payment_date = payment_date.strftime('%Y-%m-%d')
+            else:
+                formatted_payment_date = "N/A"
+
+            beginning_balance = loan_details_row['total_repayment_amount'] + extension_fee_amount
+            principal_amount = loan_details_row['loan_amount']
+            interest_amount = loan_details_row['total_interest_amount']  # For one-time payment, interest is assumed to be zero
+            total_payment = beginning_balance
+            scheduled_payment = principal_amount + interest_amount
+            ending_balance = 0
+
+            # Append data to payment_details list
+            payment_details = [{
+                'PaymentNumber': 1,
+                'PaymentDate': formatted_payment_date,
+                'EMIDate': "N/A",
+                'EMITime': "N/A",
+                'AccountNumber': "N/A",
+                'ScheduledPayment': f"₹ {scheduled_payment:.2f}",
+                'Principal': f"₹ {principal_amount:.2f}",
+                'Interest': f"₹ {interest_amount:.2f}",
+                'BeginningBalance': f"₹ {beginning_balance:.2f}",
+                'ExtensionFee': f"₹ {extension_fee_amount:.2f}",
+                'TotalPayment': f"₹ {total_payment:.2f}",
+                'EndingBalance': "₹ 0.00"
+            }]
+
+            self.repeating_panel_1.items = payment_details
+        else:
+            print("Loan status not suitable for generating one-time payment details.")
+    else:
+        # Handle case where loan details are not found
+        print("Loan details not found for loan ID:", selected_row['loan_id'])
