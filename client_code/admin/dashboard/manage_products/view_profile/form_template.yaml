@@ -147,14 +147,6 @@ components:
           underline: false, icon: ''}
         name: label_31
         layout_properties: {x: 11.982131958007812, y: 1040.7857818603516, width: 160}
-      - type: Button
-        properties: {role: outlined-button, align: center, tooltip: '', border: '',
-          enabled: true, foreground: 'theme:On Primary', visible: true, text: Edit,
-          font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small,
-          italic: false, background: '#0b2547', bold: false, underline: false, icon: 'fa:edit'}
-        name: button_1
-        layout_properties: {x: 258.9643096923828, y: 1211.3572082519531, width: 320}
-        event_bindings: {click: button_1_click}
       - type: Label
         properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
           visible: true, text: ' Default Fee(₹)', font_size: null, font: '', spacing_above: small,
@@ -321,6 +313,27 @@ components:
         properties: {}
         name: label_3
         layout_properties: {x: 206.00001525878906, y: 251.7857208251953, width: 701}
+      - type: Label
+        properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+          visible: true, text: 'Occupation
+
+            ', font_size: null, font: '', spacing_above: small, icon_align: left,
+          spacing_below: small, italic: false, background: '', bold: false, underline: false,
+          icon: ''}
+        name: label_12
+        layout_properties: {x: 11.964279174804688, y: 1165.357192993164, width: 160}
+      - type: Label
+        properties: {}
+        name: occupation
+        layout_properties: {x: 206.00001525878906, y: 1165.357192993164, width: 160}
+      - type: Button
+        properties: {role: outlined-button, align: center, tooltip: '', border: '',
+          enabled: true, foreground: 'theme:On Primary', visible: true, text: Edit,
+          font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small,
+          italic: false, background: '#0b2547', bold: false, underline: false, icon: 'fa:edit'}
+        name: button_1
+        layout_properties: {x: 304.9642791748047, y: 1211.1043000000002, width: 320}
+        event_bindings: {click: button_1_click}
 - type: FlowPanel
   properties: {}
   name: navbar_links

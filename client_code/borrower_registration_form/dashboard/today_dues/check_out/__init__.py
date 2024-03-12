@@ -33,7 +33,7 @@ class check_out(check_outTemplate):
             total_emi = emi * tenure + extension_amount  # Add extension amount to 12-month EMI total
         elif emi_payment_type == 'Monthly':
             # Calculate monthly EMI amount
-            emi = (loan_amount * monthly_interest_rate * (1 + monthly_interest_rate) ** total_payments) / ((1 + monthly_interest_rate) ** total_payments - 1)
+            emi = (loan_amount * monthly_interest_rate * ((1 + monthly_interest_rate) ** tenure)) / (((1 + monthly_interest_rate) ** tenure) - 1)
             total_emi = emi + extension_amount  # Add extension amount to monthly EMI
         elif emi_payment_type == 'Three Month':
             # Calculate EMI amount for 3 months
@@ -163,7 +163,8 @@ class check_out(check_outTemplate):
                         account_number=account_number,
                         scheduled_payment_made=datetime.now(),
                         scheduled_payment=next_scheduled_payment,
-                        next_payment=next_next_payment
+                        next_payment=next_next_payment,
+                        amount_paid= total_emi_amount
                     )
 
                     # Update the emi_number and next_payment in the selected_row
