@@ -800,6 +800,9 @@ db_schema:
     - name: age
       admin_ui: {width: 200}
       type: string
+    - name: Group Id
+      admin_ui: {width: 200}
+      type: number
     title: fin_admin_beseem_categories
   fin_wallet_transactions:
     title: fin_wallet_transactions
@@ -880,6 +883,9 @@ db_schema:
     - name: scheduled_payment
       admin_ui: {order: -1, width: 200}
       type: date
+    - name: amount_paid
+      admin_ui: {order: 13, width: 200}
+      type: number
   fin_borrower_business_type:
     client: full
     server: full
