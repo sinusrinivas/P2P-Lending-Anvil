@@ -195,7 +195,9 @@ class manage_producs1(manage_producs1Template):
     def __init__(self, **properties):
         # Set Form properties and Data Bindings.
         self.init_components(**properties)
-
+        self.occupation = []
+        self.emi_payment = []
+      
         options = app_tables.fin_product_group.search()
         option_strings = [option['name'] for option in options]
         self.name.items = option_strings
@@ -287,9 +289,11 @@ class manage_producs1(manage_producs1Template):
                 self.extension_allowed.selected_value,
                 (self.button_1_1.enabled or self.button_2_1.enabled or self.button_3_1.enabled or self.button_4_1.enabled),
                 (self.business.enabled or self.student.enabled or self.student.enabled ),
+                
                 self.lapsed_fee.text.strip(),
                 self.default_fee.text.strip(),
                 self.npa.text.strip()]):
+                
             Notification("Please fill in all the details").show()
             return
         # Retrieve and validate input values
@@ -327,36 +331,21 @@ class manage_producs1(manage_producs1Template):
     
         extension_allowed = self.extension_allowed.selected_value
         extension_fee = int(self.text_box_4.text.strip()) if extension_allowed == "Yes" else 0
-    
+
+      
       #   emi_payment = [
-      #       "Monthly" if self.monthly.checked else "",
-      #       "One Time" if self.one_time.checked else "",
-      #       "Three Month" if self.three_month.checked else "",
-      #       "Six Month" if self.six_month.checked else "",
+      #       "Monthly" if self.button_1_1.enabled else "",
+      #       "One Time" if self.button_2_1.enabled else "",
+      #       "Three Month" if self.button_3_1.enabled else "",
+      #       "Six Month" if self.button_4_1.enabled else "",
       # ]
       #   emi_payment = json.dumps(emi_payment)
 
-        emi_payment = []
-        if self.button_1_1.enabled:
-            emi_payment.append("One Time")
-        if self.button_2_1.enabled:
-            emi_payment.append("Monthly")
-        if self.button_3_1.enabled:
-            emi_payment.append("Three Months")
-        if self.button_4_1.enabled:
-            emi_payment.append("Six Months")
-    
+
+        emi_payment = self.emi_payment
         emi_payment = ', '.join(emi_payment)
 
-
-        occupation = []
-        if self.business.enabled:
-            occupation.append("Business")
-        if self.student.enabled:
-            occupation.append("Student")
-        if self.employee.enabled:
-            occupation.append("Employee")
-
+        occupation = self.occupation
         occupation = ', '.join(occupation)
       
         existing_product = app_tables.fin_product_details.get(
@@ -402,53 +391,38 @@ class manage_producs1(manage_producs1Template):
 
     def button_1_1_click(self, **event_args):
       """This method is called when the button is clicked"""
-      self.button_1_1.background = "#0770e8" if self.button_1_1.enabled else ""
+      self.button_1_1.background = "#0770e8"
+      self.emi_payment.append("One Time")
 
     def button_2_1_click(self, **event_args):
       """This method is called when the button is clicked"""
-      self.button_2_1.background = "#0770e8" if self.button_2_1.enabled else ""
+      self.button_2_1.background = "#0770e8" 
+      self.emi_payment.append("Monthly")
 
     def button_3_1_click(self, **event_args):
       """This method is called when the button is clicked"""
-      self.button_3_1.background = "#0770e8" if self.button_3_1.enabled else ""
+      self.button_3_1.background = "#0770e8" 
+      self.emi_payment.append("Three Months")
 
     def button_4_1_click(self, **event_args):
       """This method is called when the button is clicked"""
-      self.button_4_1.background = "#0770e8" if self.button_4_1.enabled else ""
+      self.button_4_1.background = "#0770e8"
+      self.emi_payment.append("Six Months")
 
 
   
     def business_click(self, **event_args):
       """This method is called when the button is clicked"""
-      self.business.background = "#0770e8" if self.business.enabled else "#FFFFFF"
+      self.business.background = "#0770e8" #if self.business.enabled else "#FFFFFF"
+      self.occupation.append("Business")
 
     def student_click(self, **event_args):
       """This method is called when the button is clicked"""
-      self.student.background = "#0770e8" if self.student.enabled else "#FFFFFF"
+      self.student.background = "#0770e8" #if self.student.enabled else "#FFFFFF"
+      self.occupation.append("Student")
 
     def employee_click(self, **event_args):
       """This method is called when the button is clicked"""
-      self.employee.background = "#0770e8" if self.employee.enabled else "#FFFFFF"
+      self.employee.background = "#0770e8" #if self.employee.enabled else "#FFFFFF"
+      self.occupation.append("Employee")
 
-
-
-
-    # def button_1_1_click(self, **event_args):
-    #     """This method is called when the button is clicked"""
-    #     self.button_1_1.enabled = not self.button_1_1.enabled
-    #     self.button_1_1.background = "#0770e8" if self.button_1_1.enabled else "#FFFFFF"
-    
-    # def button_2_1_click(self, **event_args):
-    #     """This method is called when the button is clicked"""
-    #     self.button_2_1.enabled = not self.button_2_1.enabled
-    #     self.button_2_1.background = "#0770e8" if self.button_2_1.enabled else "#FFFFFF"
-    
-    # def button_3_1_click(self, **event_args):
-    #     """This method is called when the button is clicked"""
-    #     self.button_3_1.enabled = not self.button_3_1.enabled
-    #     self.button_3_1.background = "#0770e8" if self.button_3_1.enabled else "#FFFFFF"
-    
-    # def button_4_1_click(self, **event_args):
-    #     """This method is called when the button is clicked"""
-    #     self.button_4_1.enabled = not self.button_4_1.enabled
-    #     self.button_4_1.background = "#0770e8" if self.button_4_1.enabled else "#FFFFFF"
