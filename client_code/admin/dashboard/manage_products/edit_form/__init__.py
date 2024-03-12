@@ -118,10 +118,10 @@ class edit_form(edit_formTemplate):
                 if selected_interest_type == "Fixed":
                     self.radio_button_1.selected = True
                     self.radio_button_2.selected = False
-                    # self.radio_button_3.enabled = False
-                    # self.radio_button_4.enabled = False
-                    # self.radio_button_3.selected = True  
-                    # self.radio_button_4.selected = False 
+                    self.button_1_1.enabled = False
+                    self.button_2_1.enabled = False
+                    self.button_3_1.selected = False  
+                    self.button_4_1.selected = False 
                     self.text_area_1.enabled = False
                     self.product_name.enabled = False
                     self.min_amount.enabled = False
@@ -138,8 +138,9 @@ class edit_form(edit_formTemplate):
                     self.product_category.enabled = False
                     self.text_box_3.enabled = False
                     self.text_box_4.enabled = False
-                    # self.check_box_1.enabled = False
-                    # self.check_box_2.enabled = False
+                    self.business.enabled = False
+                    self.student.enabled = False
+                    self.employee.enabled = False
                     self.lapsed.enabled = False
                     self.default.enabled = False
                     self.npa.enabled = False
@@ -171,8 +172,13 @@ class edit_form(edit_formTemplate):
                     self.lapsed.enabled = False
                     self.default.enabled = False
                     self.npa.enabled = False
-                    # self.radio_button_3.selected = False
-                    # self.radio_button_4.selected = False
+                    self.student.selected = False
+                    self.employee.selected = False
+                    self.business.selected = False
+                    self.button_1_1.enabled = False
+                    self.button_2_1.enabled = False
+                    self.button_3_1.selected = False  
+                    self.button_4_1.selected = False 
                 else:
                     print(f"Unexpected interest type: {selected_interest_type}")
 
@@ -252,7 +258,6 @@ class edit_form(edit_formTemplate):
         """This method is called when the button is clicked"""
         open_form('admin.dashboard.manage_products.view_product')
         selected_product_id = None
-
         if (
             selected_product_id is None
             or self.name.selected_value is None
@@ -269,6 +274,7 @@ class edit_form(edit_formTemplate):
         ):
             alert("Fill All Required Details")
         else:
+
             selected_row = self.product_data_grid.selected_row
 
             if selected_row is not None:

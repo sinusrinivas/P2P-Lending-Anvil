@@ -800,6 +800,9 @@ db_schema:
     - name: age
       admin_ui: {width: 200}
       type: string
+    - name: Group Id
+      admin_ui: {width: 200}
+      type: number
     title: fin_admin_beseem_categories
   fin_wallet_transactions:
     title: fin_wallet_transactions
