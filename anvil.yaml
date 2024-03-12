@@ -797,9 +797,9 @@ db_schema:
     - name: is_liveloan
       admin_ui: {width: 200, order: 3.5}
       type: string
-    - name: Group Id
+    - name: age
       admin_ui: {width: 200}
-      type: number
+      type: string
     title: fin_admin_beseem_categories
   fin_wallet_transactions:
     title: fin_wallet_transactions
@@ -1000,7 +1000,7 @@ db_schema:
       admin_ui: {order: 12, width: 200}
       type: string
   fin_wallet_bank_account_table:
-    client: none
+    client: full
     server: full
     columns:
     - name: account_id

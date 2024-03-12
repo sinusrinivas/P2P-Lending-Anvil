@@ -1,7 +1,7 @@
 is_package: true
 container:
   type: ColumnPanel
-  properties: {col_widths: '{"SJKBEE":25,"DPGQZE":20,"YKAVHI":15}'}
+  properties: {col_widths: '{"SJKBEE":20,"DPGQZE":20,"YKAVHI":15,"QDDRDX":20}'}
 components:
 - name: label_1
   properties: {align: center}
@@ -9,6 +9,12 @@ components:
   layout_properties: {grid_position: 'YNGSBB,SJKBEE'}
   data_bindings:
   - {property: text, code: 'self.item[''sub_category'']'}
+- name: label_3
+  properties: {align: center}
+  type: Label
+  layout_properties: {grid_position: 'YNGSBB,QDDRDX'}
+  data_bindings:
+  - {property: text, code: 'self.item[''age'']'}
 - name: label_2
   properties: {align: center}
   type: Label
