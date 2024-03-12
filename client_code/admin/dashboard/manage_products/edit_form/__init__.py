@@ -74,7 +74,7 @@ class edit_form(edit_formTemplate):
             self.default_lst.append(i['default_fee'])
             self.npa_lst.append(i['npa'])
             self.min_month_list.append(i['min_months'])
-            self.disc_coupans_list.append(i['discount_coupons'])
+            #self.disc_coupans_list.append(i['discount_coupons'])
             self.occupation.append(i['occupation'])
 
         if a == -1:
@@ -116,8 +116,8 @@ class edit_form(edit_formTemplate):
             if self.intr_type:
                 selected_interest_type = str(self.intr_type[-1])
                 if selected_interest_type == "Fixed":
-                    # self.radio_button_1.selected = True
-                    # self.radio_button_2.selected = False
+                    self.radio_button_1.selected = True
+                    self.radio_button_2.selected = False
                     # self.radio_button_3.enabled = False
                     # self.radio_button_4.enabled = False
                     # self.radio_button_3.selected = True  
@@ -146,8 +146,8 @@ class edit_form(edit_formTemplate):
                     # self.radio_button_3.selected = False
                     # self.radio_button_4.selected = False
                 elif selected_interest_type == "Variable":
-                    # self.radio_button_1.selected = False
-                    # self.radio_button_2.selected = True
+                    self.radio_button_1.selected = False
+                    self.radio_button_2.selected = True
                     # self.radio_button_3.enabled = False
                     # self.radio_button_4.enabled = False
                     self.text_area_1.enabled = False
@@ -178,8 +178,8 @@ class edit_form(edit_formTemplate):
 
             # else:
             #     # Assuming "Variable" when intr_type is not available
-            #     self.radio_button_1.selected = False
-            #     self.radio_button_2.selected = False
+                self.radio_button_1.selected = False
+                self.radio_button_2.selected = False
             #     self.radio_button_3.enabled = False
             #     self.radio_button_4.enabled = False
 
