@@ -270,6 +270,14 @@ components:
     properties: {}
     name: linear_panel_12
     layout_properties: {row: ZOEATB, width_xs: 3, col_xs: 9}
-    components: []
+    components:
+    - name: history
+      properties: {role: outlined-button, align: center, tooltip: '', border: '',
+        enabled: true, foreground: 'theme:On Primary', visible: true, text: 'View
+          Transaction History                ', font_size: null, font: '', spacing_above: small,
+        icon_align: left, spacing_below: small, italic: false, background: '#0b2547',
+        bold: false, underline: false, icon: ''}
+      type: Button
+      event_bindings: {click: outlined_button_10_click}
 is_package: true
 custom_component: true
