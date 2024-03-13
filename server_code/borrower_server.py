@@ -267,7 +267,7 @@ def get_user_points(id):
         qualification = user['qualification'].lower()
         marrital_status = user['marital_status'].lower()
         profession = user['profficen'].lower()
-        age = user['user_age']
+        user_age = user['user_age']
         
         print(f"Debug: gender={gender}, qualification={qualification}, marrital_status={marrital_status}, profession={profession}, age={age}")
 
