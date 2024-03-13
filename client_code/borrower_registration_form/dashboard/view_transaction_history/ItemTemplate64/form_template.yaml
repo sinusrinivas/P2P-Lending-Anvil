@@ -1,0 +1,65 @@
+is_package: true
+container: {type: ColumnPanel}
+components:
+- name: xy_panel_1
+  properties: {height: 299.79998779296875, role: outlined-card}
+  type: XYPanel
+  layout_properties: {grid_position: 'OMNXXN,MSVXEH'}
+  components:
+  - name: image_2
+    properties: {height: 78.39993286132812, source: 'https://freesvg.org/img/abstract-user-flat-4.png'}
+    type: Image
+    layout_properties: {x: 758.4000244140625, y: 63.374996948987246, width: 180}
+  - name: borrower_mobile
+    properties: {}
+    type: Label
+    layout_properties: {x: 99.93751220777631, y: 104.08749084547162, width: 200}
+    data_bindings:
+    - {property: text, code: 'self.item[''mobile'']', writeback: false}
+  - name: borrower_name
+    properties: {bold: true}
+    type: Label
+    layout_properties: {x: 99.90000610426068, y: 61.687496948987246, width: 200}
+    data_bindings:
+    - {property: text, code: 'self.item[''borrower_full_name'']', writeback: false}
+  - name: lender_mobile
+    properties: {align: right}
+    type: Label
+    layout_properties: {x: 576.100033570081, y: 104.51249389722943, width: 200}
+    data_bindings:
+    - {property: text, code: 'self.item[''product_description'']', writeback: false}
+  - name: lender_name
+    properties: {align: right}
+    type: Label
+    layout_properties: {x: 575.287533570081, y: 60.60000305250287, width: 200}
+    data_bindings:
+    - {property: text, code: 'self.item[''product_name'']', writeback: false}
+  - name: label_1
+    properties: {role: null, align: center, tooltip: '', border: '', foreground: white,
+      visible: true, text: Menu Bar, font_size: 20, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '#0b2547',
+      bold: true, underline: false, icon: ''}
+    type: Label
+    layout_properties: {x: 0, y: 0, width: 938.3999862670897}
+  - name: label_3
+    properties: {text: '--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------',
+      foreground: grey}
+    type: Label
+    layout_properties: {x: 1.4000244140625, y: 37.02500610426068, width: 937}
+  - name: label_3_copy
+    properties: {text: '--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------',
+      foreground: grey}
+    type: Label
+    layout_properties: {x: 0, y: 263.8000183105469, width: 938.4000244140625}
+  - name: image_1
+    properties: {height: 78.39993286132812, source: 'https://freesvg.org/img/abstract-user-flat-4.png'}
+    type: Image
+    layout_properties: {x: 9.64999084547162, y: 66.53748779371381, width: 74}
+  - name: amount
+    properties: {}
+    type: Label
+    layout_properties: {x: 823.6375473029912, y: 226.83749084547162, width: 65.5875015258789}
+  - name: date_of_transaction
+    properties: {}
+    type: Label
+    layout_properties: {x: 14.47499542310834, y: 221.46252136304975, width: 160}

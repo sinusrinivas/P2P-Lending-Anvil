@@ -193,3 +193,72 @@ def withdraw_money(email, withdraw_amount, customer_id):
         )
         return False
 
+
+@anvil.server.callable
+def get_borrower_email(customer_id):
+    # Fetch the borrower's email from the fin_wallet table based on the customer ID
+    borrower_wallet_row = app_tables.fin_wallet.get(customer_id=customer_id, user_type='borrower')
+    if borrower_wallet_row:
+        return borrower_wallet_row['user_email']
+    else:
+        return None
+      
+@anvil.server.callable
+def transfer_money(customer_id, transfer_amount):
+    transaction_id = generate_transaction_id()
+    customer_id = customer_id
+    transfer_amount = transfer_amount
+    print("customer_id", customer_id)
+    print("transfer_amount", transfer_amount)
+    
+    try:
+        # Obtain the current timestamp
+        transaction_timestamp = datetime.now()
+        
+        # Fetch the borrower's email using the customer_id from the fin_wallet table
+        borrower_email = get_borrower_email(customer_id)
+        print("borrower_email", borrower_email)
+        
+        # Ensure that borrower_email is not None
+        if borrower_email is None:
+            raise ValueError("Borrower email not found.")
+        
+        # Fetch the wallet row for the borrower
+        borrower_wallet_row = app_tables.fin_wallet.get(user_email=borrower_email)
+        
+        # Ensure that wallet row exists for the borrower
+        if borrower_wallet_row is None:
+            raise ValueError("Wallet not found for borrower.")
+        
+        # Add a row to wallet_transactions table for the transfer to the borrower
+        borrower_transaction = app_tables.fin_wallet_transactions.add_row(
+            user_email = borrower_email,
+            wallet_id = borrower_wallet_row['wallet_id'],
+            transaction_id=transaction_id,
+            amount=transfer_amount,   # Positive amount for addition to borrower's wallet
+            transaction_type='received from',
+            transaction_time_stamp=transaction_timestamp,
+            status='success',
+            reciever_email = borrower_email,
+            receiver_customer_id = customer_id
+        )
+        
+        # Update borrower's wallet amount
+        borrower_wallet_row['wallet_amount'] += transfer_amount
+        
+        # Update the wallet row
+        borrower_wallet_row.update()
+        
+        return True
+    
+    except Exception as e:
+        print(f"Transfer failed: {e}")
+        # Log the failed transaction in wallet_transactions table
+        app_tables.fin_wallet_transactions.add_row(
+            transaction_id=transaction_id,
+            amount = transfer_amount,
+            transaction_type ='transferred to',
+            transaction_time_stamp=datetime.now(),  
+            status='fail'
+        )
+        return False

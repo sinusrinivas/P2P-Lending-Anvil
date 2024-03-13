@@ -90,6 +90,10 @@ class dashboard(dashboardTemplate):
 
   def outlined_button_10_click(self, **event_args):
     """This method is called when the button is clicked"""
+    open_form("lendor_registration_form.dashboard.view_transaction_history")
+
+  def history(self, **event_args):
+    """This method is called when the button is clicked"""
     open_form("lendor_registration_form.dashboard.change_password")
 
   def login_signup_button_click(self, **event_args):

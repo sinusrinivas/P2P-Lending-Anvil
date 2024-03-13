@@ -149,4 +149,21 @@ components:
     type: Button
     layout_properties: {row: LCEQII, width_xs: 3, col_xs: 6}
     event_bindings: {click: extended_loans_click}
+  - name: linear_panel_1
+    properties: {}
+    type: LinearPanel
+    layout_properties: {row: LCEQII, width_xs: 3, col_xs: 9}
+    components:
+    - name: linear_panel_1_copy
+      properties: {}
+      type: LinearPanel
+      components:
+      - name: outlined_button_7
+        properties: {role: outlined-button, align: center, tooltip: '', border: '',
+          enabled: true, foreground: 'theme:On Primary', visible: true, text: View Transaction History,
+          font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small,
+          italic: false, background: '#0b2547', bold: false, underline: false, icon: ''}
+        type: Button
+        layout_properties: {}
+        event_bindings: {click: outlined_button_7_click}
 is_package: true

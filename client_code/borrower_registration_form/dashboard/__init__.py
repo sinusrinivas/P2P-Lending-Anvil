@@ -121,7 +121,7 @@ class dashboard(dashboardTemplate):
       open_form('borrower_registration_form.dashboard.discount_coupons')
 
     def outlined_button_7_click(self, **event_args):
-      open_form('bank_users.borrower.view_portfolio')
+      open_form('borrower_registration_form.dashboard.view_transaction_history')
 
     def about_main_form_link_click(self, **event_args):
       open_form('borrower_registration_form.dashboard.dashboard_about')
