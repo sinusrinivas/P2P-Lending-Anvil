@@ -182,9 +182,9 @@ class add_borrower_dropdown_details(add_borrower_dropdown_detailsTemplate):
   def profession_click(self, **event_args):
     """This method is called when the button is clicked"""
     entered_data = self.text_box_5.text
-    valid_statuses = ['Student', 'Employee', 'Business']
+    valid_statuses = ['Student', 'Employee', 'Self Employment']
     if entered_data not in valid_statuses:
-        alert("Please enter a valid marital status: 'Student', 'Employee', 'Business'.")
+        alert("Please enter a valid marital status: 'Student', 'Employee', 'Self Employment'.")
         return
     new_row = app_tables.fin_borrower_profession.add_row(borrower_profession=entered_data)
     self.text_box_5.text = ' '
@@ -215,9 +215,9 @@ class add_borrower_dropdown_details(add_borrower_dropdown_detailsTemplate):
     """This method is called when the button is clicked"""
     entered_data = self.text_box_9.text
     # Check if the entered status is valid
-    valid_statuses = ['10th Class', 'Intermediate / PUC', "Bachelor's", "Master's", 'PhD']
+    valid_statuses = ['10th Standard', 'Intermediate / PUC', "Bachelor's", "Master's", 'PhD']
     if entered_data not in valid_statuses:
-        alert("Please enter a valid qualification: '10th Class', 'Intermediate / PUC', 'Bachelor's', 'Master's', 'PhD'.")
+        alert("Please enter a valid qualification: '10th Standard', 'Intermediate / PUC', 'Bachelor's', 'Master's', 'PhD'.")
         return
     new_row = app_tables.fin_borrower_qualification.add_row(borrower_qualification=entered_data)
     self.text_box_9.text = ' '

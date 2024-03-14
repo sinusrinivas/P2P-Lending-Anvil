@@ -15,6 +15,10 @@ class star_1_borrower_registration_form_2_employment_emp_detail_3(star_1_borrowe
     if user_data:
       self.text_box_1.text=user_data['annual_salary']
       self.text_box_2.text=user_data['designation']
+      
+      options = app_tables.fin_borrower_salary_type.search()
+      option_strings = [str(option['borrower_salary_type']) for option in options]
+      self.drop_down_1.items = option_strings
       user_data.update()
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
@@ -25,13 +29,15 @@ class star_1_borrower_registration_form_2_employment_emp_detail_3(star_1_borrowe
       designation = self.text_box_2.text
       emp_id_proof = self.file_loader_1.file
       last_six_month = self.file_loader_2.file
+      salary_type = self.drop_down_1.selected_value
       user_id = self.userId
+      
   
       # Check if all fields are filled
       if not (annual_salary and designation and emp_id_proof and last_six_month):
           Notification("Please fill in all required fields.").show()
       else:
-          anvil.server.call('add_lendor_individual_form_3', annual_salary, designation, emp_id_proof, last_six_month, user_id)
+          anvil.server.call('add_lendor_individual_form_3', annual_salary, designation, emp_id_proof, last_six_month, user_id,salary_type )
           open_form('borrower_registration_form.star_1_borrower_registration_form_3_marital', user_id=user_id)
 
   def button_1_click(self, **event_args):
