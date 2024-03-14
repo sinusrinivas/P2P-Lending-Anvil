@@ -81,9 +81,9 @@ components:
 - name: repeating_panel_3
   properties: {item_template: borrower_registration_form.dashboard.application_tracker.ItemTemplate69}
   type: RepeatingPanel
-  layout_properties: {grid_position: 'JTFZBD,TXPLSU BWANXH,LIKHID'}
+  layout_properties: {grid_position: 'CZFPET,MIDKBC'}
 - name: repeating_panel_2
   properties: {item_template: borrower_registration_form.dashboard.application_tracker.ItemTemplate68}
   type: RepeatingPanel
-  layout_properties: {grid_position: 'JTFZBD,TXPLSU QWAOWU,DYWPZC'}
+  layout_properties: {grid_position: 'QWAOWU,DYWPZC'}
 is_package: true
