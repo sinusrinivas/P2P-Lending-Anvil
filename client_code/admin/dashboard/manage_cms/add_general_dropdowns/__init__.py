@@ -20,6 +20,7 @@ class add_general_dropdowns(add_general_dropdownsTemplate):
         self.repeating_panel_1.items = app_tables.fin_gender.search()
         self.repeating_panel_2.items = app_tables.fin_present_address.search()
         self.repeating_panel_3.items = app_tables.fin_duration_at_address.search()
+        self.repeating_panel_4.items = app_tables.fin_company_type.search()
 
 
 
@@ -50,16 +51,32 @@ class add_general_dropdowns(add_general_dropdownsTemplate):
     self.column_panel_01.visible = True
     self.column_panel_02.visible = False
     self.column_panel_03.visible = False
+    self.column_panel_04.visible = False
 
   def present(self, **event_args):
     """This method is called when the button is clicked"""
     self.column_panel_01.visible = False
     self.column_panel_02.visible = True
     self.column_panel_03.visible = False
+    self.column_panel_04.visible = False
 
   def duration(self, **event_args):
     """This method is called when the button is clicked"""
     self.column_panel_01.visible = False
     self.column_panel_02.visible = False
     self.column_panel_03.visible = True
+    self.column_panel_04.visible = False
 
+  def company_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    entered_data = self.text_box_2.text
+    new_row = app_tables.fin_company_type.add_row(company_type=entered_data)
+    self.text_box_2.text = ' '
+    self.refresh()
+
+  def company(self, **event_args):
+    """This method is called when the button is clicked"""
+    self.column_panel_01.visible = False
+    self.column_panel_02.visible = False
+    self.column_panel_03.visible = False
+    self.column_panel_04.visible = True

@@ -1,4 +1,4 @@
-from ._anvil_designer import edit_genderTemplate
+from ._anvil_designer import edit_companyTemplate
 from anvil import *
 import anvil.server
 import anvil.google.auth, anvil.google.drive
@@ -8,27 +8,27 @@ import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 
-class edit_gender(edit_genderTemplate):
+class edit_company(edit_companyTemplate):
   def __init__(self,selected_row, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
 
     # Any code you write here will run before the form opens.
-    self.text_box_1.text = selected_row['gender']
+    self.text_box_1.text = selected_row['company_type']
         # Store the selected row for later use
     self.selected_row = selected_row
     
   def button_1_click(self, **event_args):
     """This method is called when the button is clicked"""
     # Get the updated gender from the textbox
-    updated_gender = self.text_box_01.text
+    updated_gender = self.text_box_1.text
 
         # Update the 'borrower_gender' field in the database
-    self.selected_row['gender'] = updated_gender
+    self.selected_row['company_type'] = updated_gender
     self.selected_row.update()
         # Close the form
     alert("Changes saved successfully!")
-    open_form('admin.dashboard.manage_cms.manage_dropdowns')
+    open_form('admin.dashboard.manage_cms.add_general_dropdowns')
 
   def delete_button(self, **event_args):
     """This method is called when the button is clicked"""
@@ -39,11 +39,13 @@ class edit_gender(edit_genderTemplate):
         )
     if confirmation:
             # Get the name of the group to be deleted
-            group_name = self.selected_row['gender']
+            group_name = self.selected_row['company_type']
 
             # Delete the rows from the product_group table
             self.selected_row.delete()
-            open_form('admin.dashboard.manage_cms.manage_dropdowns')
+            open_form('admin.dashboard.manage_cms.add_general_dropdowns')
+
+
 
   def home_button(self, **event_args):
     """This method is called when the button is clicked"""
@@ -51,4 +53,4 @@ class edit_gender(edit_genderTemplate):
 
   def button_1_copy_3_click(self, **event_args):
     """This method is called when the button is clicked"""
-    open_form('admin.dashboard.manage_cms.manage_dropdowns')
+    open_form('admin.dashboard.manage_cms.add_general_dropdowns')
