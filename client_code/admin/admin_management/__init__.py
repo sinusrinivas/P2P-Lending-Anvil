@@ -25,6 +25,10 @@ class admin_management(admin_managementTemplate):
 
   def add_peopless(self, **event_args):
     self.content_panel.add_component(add_people(),full_width_row=True)
+
+  def button_1_copy_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    pass
     
 
   

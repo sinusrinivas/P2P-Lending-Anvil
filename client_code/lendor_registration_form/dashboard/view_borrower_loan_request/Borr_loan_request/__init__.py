@@ -355,9 +355,11 @@ class Borr_loan_request(Borr_loan_requestTemplate):
         self.init_components(**properties)
         self.user_id=main_form_1.userId
         use_id = self.user_id
+        print(use_id)
         self.entered_loan_id = None
         self.email=main_form_module.email
         email = self.email
+        self.lender_customer_id = None
         
         # Populate labels with the selected row details
         self.label_user_id.text = f"{selected_row['borrower_customer_id']}"
@@ -368,6 +370,14 @@ class Borr_loan_request(Borr_loan_requestTemplate):
         self.label_loan_tenure.text = f"{selected_row['tenure']}"
         self.label_credit_limit.text = f"{selected_row['credit_limit']}"
         self.label_interest_rate.text = f"{selected_row['interest_rate']}"
+
+
+        loan_deta = app_tables.fin_loan_details.get(loan_id=self.label_loan_id.text)
+        if loan_deta is not None:
+            self.lender_customer_id = loan_deta['lender_customer_id']
+            print("lenderrrrrrrrrrrrrrrrrrrrrrrrr", self.lender_customer_id)
+          
+        
         self.update_ui_based_on_status()
         
         # Fetch additional details from the 'borrower' table
@@ -392,7 +402,7 @@ class Borr_loan_request(Borr_loan_requestTemplate):
                         # Assuming 'interest_rate' and 'min_amount' are valid column names in the 'loan_details' table
                         interest_rate = loan_details['interest_rate']
                         min_amount_text = loan_details['loan_amount']
-                        
+                      
                         # Calculate and display ROM in amount format
                         rom_amount = self.calculate_rom()
                         self.label_member_rom.text = str(rom_amount)
@@ -411,6 +421,8 @@ class Borr_loan_request(Borr_loan_requestTemplate):
         self.entered_loan_id = loan_id
         borrower_customer_id = self.label_user_id.text
         self.entered_borrower_customer_id = borrower_customer_id
+        
+        
       
     def calculate_rom(self):
       email = self.email
@@ -612,7 +624,7 @@ class Borr_loan_request(Borr_loan_requestTemplate):
             if loan_row:
               loan_amount = loan_row['loan_amount']
               wallet_add = app_tables.fin_wallet.get(customer_id=entered_borrower_customer_id)
-              transfer_money(customer_id=entered_borrower_customer_id, transfer_amount=loan_amount)
+              transfer_money(lender_id = self.lender_customer_id, borrower_id=entered_borrower_customer_id, transfer_amount=loan_amount)
               if wallet_add:
                 wallet_add['wallet_amount'] += loan_amount
                 wallet_add.update()
