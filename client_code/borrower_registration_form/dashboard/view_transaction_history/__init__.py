@@ -17,25 +17,41 @@ class view_transaction_history(view_transaction_historyTemplate):
         self.user_id = main_form_module.userId
         print(self.user_id)
         
-        # Fetch transaction_id associated with the provided customer_id
-        transaction_ids = [row['transaction_id'] for row in app_tables.fin_wallet_transactions.search(receiver_customer_id = self.user_id)]
-        
-        # Fetch transaction data based on transaction_ids
+        # Fetch transaction data based on customer_id and transaction_type
         self.result = []
-        for transaction_id in transaction_ids:
-            transaction_data = app_tables.fin_wallet_transactions.get(transaction_id=transaction_id)
-            if transaction_data is not None:
-                borrower_profile = app_tables.fin_user_profile.get(email_user=transaction_data['user_email'])
-                lender_profile = app_tables.fin_user_profile.get(customer_id=transaction_data['receiver_customer_id'])
-                if borrower_profile is not None and lender_profile is not None:
-                    self.result.append({
-                        'borrower_full_name': borrower_profile['full_name'],                    
-                        'lender_full_name': lender_profile['full_name'],
-                        'amount': transaction_data['amount'],
-                        'transaction_time_stamp': transaction_data['transaction_time_stamp'],
-                        'borrower_mobile': borrower_profile['mobile'], 
-                        'lender_mobile': lender_profile['mobile']             
-                    })
+        transactions_received = app_tables.fin_wallet_transactions.search(
+            customer_id=self.user_id,
+            transaction_type = 'received from'
+        )
+        transactions_transferred = app_tables.fin_wallet_transactions.search(
+            receiver_customer_id=self.user_id,
+            transaction_type = 'transferred to'
+        )
+        
+        for transaction_data in transactions_received:
+            lender_profile = app_tables.fin_user_profile.get(email_user=transaction_data['user_email'])
+            borrower_profile = app_tables.fin_user_profile.get(customer_id=transaction_data['receiver_customer_id'])
+            if borrower_profile is not None and lender_profile is not None:
+                self.result.append({
+                    'borrower_full_name': borrower_profile['full_name'],                    
+                    'lender_full_name': lender_profile['full_name'],
+                    'amount': transaction_data['amount'],
+                    'transaction_time_stamp': transaction_data['transaction_time_stamp'],
+                    'borrower_mobile': borrower_profile['mobile'], 
+                    'lender_mobile': lender_profile['mobile']             
+                })
+        
+        for transaction_data in transactions_transferred:
+            lender_profile = app_tables.fin_user_profile.get(email_user=transaction_data['user_email'])
+            borrower_profile = app_tables.fin_user_profile.get(customer_id=transaction_data['receiver_customer_id'])
+            if borrower_profile is not None and lender_profile is not None:
+                self.result.append({
+                    'borrower_full_name': borrower_profile['full_name'],                    
+                    'lender_full_name': lender_profile['full_name'],
+                    'amount': transaction_data['amount'],
+                    'transaction_time_stamp': transaction_data['transaction_time_stamp'],
+                    'borrower_mobile': borrower_profile['mobile'], 
+                    'lender_mobile': lender_profile['mobile']             
+                })
 
         self.repeating_panel_1.items = self.result
-
