@@ -1118,7 +1118,7 @@ db_schema:
       admin_ui: {order: 15.49609375, width: 135}
       type: date
     - name: loan_id
-      admin_ui: {order: 3, width: 92}
+      admin_ui: {order: 7, width: 108}
       type: string
     - name: borrower_compLeted_monthly_emi
       admin_ui: {order: 27, width: 259}
