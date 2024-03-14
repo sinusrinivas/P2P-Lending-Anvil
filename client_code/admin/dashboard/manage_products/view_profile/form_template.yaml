@@ -58,41 +58,6 @@ components:
         layout_properties: {x: 0, y: 10, width: 145}
       - type: Label
         properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-          visible: true, text: ' Product ID', font_size: null, font: '', spacing_above: small,
-          icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
-          underline: false, icon: ''}
-        name: label_2_copy
-        layout_properties: {x: 0, y: 78, width: 160}
-      - type: Label
-        properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-          visible: true, text: ' Product Group', font_size: null, font: '', spacing_above: small,
-          icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
-          underline: false, icon: ''}
-        name: label_3_copy
-        layout_properties: {x: 0, y: 165.1875, width: 160}
-      - type: Label
-        properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-          visible: true, text: ' Product Name', font_size: null, font: '', spacing_above: small,
-          icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
-          underline: false, icon: ''}
-        name: label_23
-        layout_properties: {x: 0, y: 119.1875, width: 160}
-      - type: Label
-        properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-          visible: true, text: ' Product Categories', font_size: null, font: '', spacing_above: small,
-          icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
-          underline: false, icon: ''}
-        name: label_5_copy
-        layout_properties: {x: 0, y: 205.796875, width: 145}
-      - type: Label
-        properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-          visible: true, text: ' Product Description', font_size: null, font: '',
-          spacing_above: small, icon_align: left, spacing_below: small, italic: false,
-          background: '', bold: false, underline: false, icon: ''}
-        name: label_4_copy
-        layout_properties: {x: 0, y: 251.79165649414062, width: 160}
-      - type: Label
-        properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
           visible: true, text: ' EMI Payment', font_size: null, font: '', spacing_above: small,
           icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
           underline: false, icon: ''}
@@ -294,26 +259,6 @@ components:
           name: label_16
           layout_properties: {x: 637, y: 752, width: 160, grid_position: 'NFHBIS,JNRMSC'}
       - type: Label
-        properties: {}
-        name: label_1
-        layout_properties: {x: 206.00001525878906, y: 78.00001525878906, width: 225}
-      - type: Label
-        properties: {}
-        name: label_24
-        layout_properties: {x: 206.00001525878906, y: 124.00001525878906, width: 160}
-      - type: Label
-        properties: {}
-        name: label_2
-        layout_properties: {x: 206.00001525878906, y: 165.17857360839844, width: 232}
-      - type: Label
-        properties: {}
-        name: label_4
-        layout_properties: {x: 206.00001525878906, y: 205.7857208251953, width: 232}
-      - type: Label
-        properties: {}
-        name: label_3
-        layout_properties: {x: 206.00001525878906, y: 251.7857208251953, width: 701}
-      - type: Label
         properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
           visible: true, text: 'Occupation
 
@@ -334,6 +279,64 @@ components:
         name: button_1
         layout_properties: {x: 304.9642791748047, y: 1211.1043000000002, width: 320}
         event_bindings: {click: button_1_click}
+      - type: Label
+        properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+          visible: true, text: ' Product ID', font_size: null, font: '', spacing_above: small,
+          icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+          underline: false, icon: ''}
+        name: label_2_copy
+        layout_properties: {x: 3.991213195800782, y: 63.98658752441406, width: 159.978}
+      - type: Label
+        properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+          visible: true, text: ' Product Categories', font_size: null, font: '', spacing_above: small,
+          icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+          underline: false, icon: ''}
+        name: label_5_copy
+        layout_properties: {x: 3.9910659790039062, y: 146.92853752441408, width: 144.978}
+      - type: Label
+        properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+          visible: true, text: ' Product Name', font_size: null, font: '', spacing_above: small,
+          icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+          underline: false, icon: ''}
+        name: label_23
+        layout_properties: {x: 3.991213195800782, y: 187.8080291748047, width: 159.978}
+      - type: Label
+        properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+          visible: true, text: ' Product Description', font_size: null, font: '',
+          spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+          background: '', bold: false, underline: false, icon: ''}
+        name: label_4_copy
+        layout_properties: {x: 3.991213195800782, y: 233.7812291748047, width: 159.978}
+      - type: Label
+        properties: {}
+        name: label_1
+        layout_properties: {x: 205.9955291748047, y: 71.99998474121094, width: 225}
+      - type: Label
+        properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+          visible: true, text: ' Product Group', font_size: null, font: '', spacing_above: small,
+          icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+          underline: false, icon: ''}
+        name: label_3_copy
+        layout_properties: {x: 3.9910659790039062, y: 109.95087639160158, width: 159.978}
+      - type: Label
+        properties: {}
+        name: label_2
+        layout_properties: {x: 205.9955291748047, y: 109.95087639160158, width: 231.978}
+      - type: Label
+        properties: {}
+        name: label_4
+        layout_properties: {x: 205.9955291748047, y: 146.9196319580078, width: 231.978}
+      - type: Label
+        properties: {}
+        name: label_24
+        layout_properties: {x: 205.9955291748047, y: 192.89283195800783, width: 159.978}
+      - type: TextArea
+        properties: {role: outlined, align: left, height: 103.6786, tooltip: '', placeholder: '',
+          border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
+          auto_expand: false, font: '', spacing_above: small, spacing_below: small,
+          italic: false, background: '', bold: false, underline: false}
+        name: text_area_1
+        layout_properties: {x: 205.9955291748047, y: 233.7812291748047, width: 527.103}
 - type: FlowPanel
   properties: {}
   name: navbar_links
