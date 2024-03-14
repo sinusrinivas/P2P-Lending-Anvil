@@ -303,37 +303,128 @@ def get_borrower_email(borrower_id):
 #         )
 #         return False
 
-
-
-import uuid
-from datetime import datetime
-
+# @anvil.server.callable
+# def transfer_money(lender_id, borrower_id, transfer_amount):
+#     lender_id = lender_id
+#     borrower_id = borrower_id
+#     transfer_amount = transfer_amount
+#     print("transfer_amount", transfer_amount)
+#     print("lender_id", lender_id)
+#     print("borrower_id", borrower_id)
+    
+#     try:
+#         # Obtain the current timestamp
+#         transaction_timestamp = datetime.now()
+        
+#         # Fetch the lender's email using the lender_id from the fin_wallet table
+#         lender_email = get_lender_email(lender_id)
+#         print("lender_email", lender_email)
+        
+#         # Ensure that lender_email is not None
+#         if lender_email is None:
+#             raise ValueError("Lender email not found.")
+        
+#         # Fetch the borrower's email using the borrower_id from the fin_wallet table
+#         borrower_email = get_borrower_email(borrower_id)
+#         print("borrower email", borrower_email)
+        
+#         # Ensure that borrower_email is not None
+#         if borrower_email is None:
+#             raise ValueError("Borrower email not found.")
+        
+#         # Fetch the wallet rows for both lender and borrower
+#         lender_wallet_row = app_tables.fin_wallet.get(user_email=lender_email)
+#         borrower_wallet_row = app_tables.fin_wallet.get(user_email=borrower_email)
+        
+#         # Ensure that wallet rows exist for both lender and borrower
+#         if lender_wallet_row is None or borrower_wallet_row is None:
+#             raise ValueError("Wallet not found for lender or borrower.")
+        
+#         # Generate separate transaction IDs for lender and borrower
+#         lender_transaction_id = generate_transaction_id()
+#         print(lender_transaction_id)
+#         borrower_transaction_id = generate_transaction_id()
+#         print(borrower_transaction_id)
+        
+#         # Add a row to wallet_transactions table for the transfer from lender to borrower
+#         lender_transaction = app_tables.fin_wallet_transactions.add_row(
+#             user_email=lender_email,
+#             customer_id=lender_id,
+#             wallet_id=lender_wallet_row['wallet_id'],
+#             transaction_id=lender_transaction_id,
+#             amount=transfer_amount,  # Negative amount for deduction from lender's wallet
+#             transaction_type='transferred to',
+#             transaction_time_stamp=transaction_timestamp,
+#             status='success',
+#             receiver_email=borrower_email,
+#             receiver_customer_id=borrower_id
+#         )
+        
+#         borrower_transaction = app_tables.fin_wallet_transactions.add_row(
+#             user_email=lender_email,
+#             customer_id=lender_id,
+#             wallet_id=borrower_wallet_row['wallet_id'],
+#             transaction_id=borrower_transaction_id,
+#             amount=transfer_amount,   # Positive amount for addition to borrower's wallet
+#             transaction_type='received from',
+#             transaction_time_stamp=transaction_timestamp,
+#             status='success',
+#             receiver_email=borrower_email,
+#             receiver_customer_id=borrower_id
+#         )
+        
+#         # Update lender's and borrower's wallet amounts
+#         # lender_wallet_row['wallet_amount'] -= transfer_amount
+#         # borrower_wallet_row['wallet_amount'] += transfer_amount
+        
+#         # Update the wallet rows
+#         lender_wallet_row.update()
+#         borrower_wallet_row.update()
+        
+#         return True
+    
+#     except Exception as e:
+#         print(f"Transfer failed: {e}")
+#         lender_transaction_id = generate_transaction_id()  # Assign here
+#         borrower_transaction_id = generate_transaction_id()  # Assign here
+#         # Log the failed transaction in wallet_transactions table
+#         app_tables.fin_wallet_transactions.add_row(
+#             transaction_id=lender_transaction_id,
+#             amount=transfer_amount,
+#             transaction_type='transferred to',
+#             transaction_time_stamp=datetime.now(),  
+#             status='fail',
+#             customer_id=lender_id,
+#             user_email=lender_email,
+#         )
+#         app_tables.fin_wallet_transactions.add_row(
+#             transaction_id=borrower_transaction_id,
+#             amount=transfer_amount,
+#             transaction_type='received from',
+#             transaction_time_stamp=datetime.now(),  
+#             status='fail',
+#             customer_id=borrower_id,
+#             user_email=borrower_email,
+#         )
+#         return False
+@anvil.server.callable
+def generate_transaction_id(latest_transaction_id):
+    counter = int(latest_transaction_id[2:]) + 1
+    return f"TA{counter:04d}"
+  
 @anvil.server.callable
 def transfer_money(lender_id, borrower_id, transfer_amount):
-    lender_id = lender_id
-    borrower_id = borrower_id
-    transfer_amount = transfer_amount
-    print("transfer_amount", transfer_amount)
-    print("lender_id", lender_id)
-    print("borrower_id", borrower_id)
-    
     try:
         # Obtain the current timestamp
         transaction_timestamp = datetime.now()
         
-        # Fetch the lender's email using the lender_id from the fin_wallet table
+        # Fetch the lender's and borrower's email using their IDs from the fin_wallet table
         lender_email = get_lender_email(lender_id)
-        print("lender_email", lender_email)
+        borrower_email = get_borrower_email(borrower_id)
         
-        # Ensure that lender_email is not None
+        # Ensure that lender_email and borrower_email are not None
         if lender_email is None:
             raise ValueError("Lender email not found.")
-        
-        # Fetch the borrower's email using the borrower_id from the fin_wallet table
-        borrower_email = get_borrower_email(borrower_id)
-        print("borrower email", borrower_email)
-        
-        # Ensure that borrower_email is not None
         if borrower_email is None:
             raise ValueError("Borrower email not found.")
         
@@ -345,9 +436,19 @@ def transfer_money(lender_id, borrower_id, transfer_amount):
         if lender_wallet_row is None or borrower_wallet_row is None:
             raise ValueError("Wallet not found for lender or borrower.")
         
+        # Get the latest transaction IDs for both lender and borrower
+        latest_lender_transaction_id = app_tables.fin_wallet_transactions.search(
+            tables.order_by("transaction_id", ascending=False),
+            user_email=lender_email
+        )[0]['transaction_id']
+        latest_borrower_transaction_id = app_tables.fin_wallet_transactions.search(
+            tables.order_by("transaction_id", ascending=False),
+            user_email=borrower_email
+        )[0]['transaction_id']
+        
         # Generate separate transaction IDs for lender and borrower
-        lender_transaction_id = generate_transaction_id()
-        borrower_transaction_id = generate_transaction_id()
+        lender_transaction_id = generate_transaction_id(latest_lender_transaction_id)
+        borrower_transaction_id = generate_transaction_id(latest_borrower_transaction_id)
         
         # Add a row to wallet_transactions table for the transfer from lender to borrower
         lender_transaction = app_tables.fin_wallet_transactions.add_row(
@@ -355,7 +456,7 @@ def transfer_money(lender_id, borrower_id, transfer_amount):
             customer_id=lender_id,
             wallet_id=lender_wallet_row['wallet_id'],
             transaction_id=lender_transaction_id,
-            amount=transfer_amount,  # Negative amount for deduction from lender's wallet
+            amount=-transfer_amount,  # Negative amount for deduction from lender's wallet
             transaction_type='transferred to',
             transaction_time_stamp=transaction_timestamp,
             status='success',
@@ -364,16 +465,16 @@ def transfer_money(lender_id, borrower_id, transfer_amount):
         )
         
         borrower_transaction = app_tables.fin_wallet_transactions.add_row(
-            user_email=lender_email,
-            customer_id=lender_id,
+            user_email=borrower_email,
+            customer_id=borrower_id,
             wallet_id=borrower_wallet_row['wallet_id'],
             transaction_id=borrower_transaction_id,
             amount=transfer_amount,   # Positive amount for addition to borrower's wallet
             transaction_type='received from',
             transaction_time_stamp=transaction_timestamp,
             status='success',
-            receiver_email=borrower_email,
-            receiver_customer_id=borrower_id
+            receiver_email=lender_email,
+            receiver_customer_id=lender_id
         )
         
         # Update lender's and borrower's wallet amounts
@@ -388,29 +489,4 @@ def transfer_money(lender_id, borrower_id, transfer_amount):
     
     except Exception as e:
         print(f"Transfer failed: {e}")
-        lender_transaction_id = generate_transaction_id()  # Assign here
-        borrower_transaction_id = generate_transaction_id()  # Assign here
-        # Log the failed transaction in wallet_transactions table
-        app_tables.fin_wallet_transactions.add_row(
-            transaction_id=lender_transaction_id,
-            amount=transfer_amount,
-            transaction_type='transferred to',
-            transaction_time_stamp=datetime.now(),  
-            status='fail',
-            customer_id=lender_id,
-            user_email=lender_email,
-        )
-        app_tables.fin_wallet_transactions.add_row(
-            transaction_id=borrower_transaction_id,
-            amount=transfer_amount,
-            transaction_type='received from',
-            transaction_time_stamp=datetime.now(),  
-            status='fail',
-            customer_id=borrower_id,
-            user_email=borrower_email,
-        )
         return False
-
-
-
-
