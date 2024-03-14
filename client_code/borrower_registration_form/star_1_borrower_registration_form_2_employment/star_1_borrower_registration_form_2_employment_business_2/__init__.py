@@ -36,11 +36,13 @@ class star_1_borrower_registration_form_2_employment_business_2(star_1_borrower_
     business_type = self.drop_down_1.selected_value
     empolyees_working = self.drop_down_2.selected_value
     year = self.date_picker_1.date
+    month = self.date_picker_1.date.year
     user_id = self.userId
     if not nearest_loc or not business_type or not empolyees_working or not year:
       Notification("Please fill all the fields").show()
     else:
-      anvil.server.call('add_lendor_institutional_form_2',nearest_loc,business_type,empolyees_working,year,user_id)
+      months = month*12
+      anvil.server.call('add_lendor_institutional_form_2',nearest_loc,business_type,empolyees_working,year,user_id, months)
       open_form('borrower_registration_form.star_1_borrower_registration_form_2_employment.star_1_borrower_registration_form_2_employment_business_3',user_id = user_id)
     """This method is called when the button is clicked"""
 
