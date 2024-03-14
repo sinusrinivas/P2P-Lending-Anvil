@@ -31,7 +31,7 @@ class add_people(add_peopleTemplate):
         
         if email and name and mobile_no and dob and gender and role and password:
             if password == retype:  # Check if passwords match
-                result = admin.add_admin_details(email, name, mobile_no, dob, gender, role, password, created_date)
+                result = admin.add_admin_details(email, name, mobile_no, dob, gender, role, password, created_date, status)
                 if result:
                     self.label_7.text = "Data added Successfully"
                 else:
