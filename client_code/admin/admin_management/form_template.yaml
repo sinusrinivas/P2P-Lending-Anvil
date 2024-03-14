@@ -38,21 +38,23 @@ components:
   layout_properties: {grid_position: 'FDPHVN,ITUKWN', full_width_row: true}
   components:
   - name: label_2
-    properties: {text: Managing admin permissions, bold: true, align: center}
+    properties: {text: Manage Admins, bold: true, align: center, font_size: 20}
     type: Label
     layout_properties: {grid_position: 'ZWGFRW,MFFSTN'}
-  - name: add_people
-    properties: {text: Add people, role: elevated-button, foreground: '#0b2547', bold: true}
-    type: Button
-    layout_properties: {grid_position: 'ZWGFRW,UISZEF'}
-    event_bindings: {click: add_peopless}
-  - name: button_1_copy
-    properties: {text: View people, role: elevated-button, foreground: '#0b2547',
-      bold: true}
-    type: Button
-    layout_properties: {grid_position: 'ZWGFRW,JKYPCQ'}
 - name: content_panel
   properties: {}
   type: ColumnPanel
   layout_properties: {grid_position: 'CDJUQY,UJKDJO', full_width_row: true}
+- name: add_people
+  properties: {text: Add Admin, role: elevated-button, foreground: 'theme:On Primary',
+    bold: true, border: '', background: '#0b2547'}
+  type: Button
+  layout_properties: {grid_position: 'KQZUCT,FLOATQ', row_background: ''}
+  event_bindings: {click: add_peopless}
+- name: button_1_copy
+  properties: {text: View Admins, role: elevated-button, foreground: 'theme:On Primary',
+    bold: true, background: '#0b2547'}
+  type: Button
+  layout_properties: {grid_position: 'KQZUCT,RGTAYF'}
+  event_bindings: {click: button_1_copy_click}
 is_package: true
