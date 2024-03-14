@@ -9,6 +9,7 @@ from anvil.tables import app_tables
 import anvil.server
 from datetime import datetime 
 from datetime import datetime, timezone
+import uuid
 
 
 @anvil.server.callable
@@ -303,22 +304,24 @@ def get_borrower_email(borrower_id):
 #         return False
 
 
+
+def generate_transaction_id1():
+    # Using a combination of timestamp and random component
+    return "TA" + str(uuid.uuid4().hex[:6])
+
+
 @anvil.server.callable
 def transfer_money(lender_id, borrower_id, transfer_amount):
     lender_id = lender_id
     borrower_id = borrower_id
     transfer_amount = transfer_amount
     print("transfer_amount", transfer_amount)
-    print("lender_id",lender_id)
-    print("borrower_id",borrower_id)
+    print("lender_id", lender_id)
+    print("borrower_id", borrower_id)
     
     try:
         # Obtain the current timestamp
         transaction_timestamp = datetime.now()
-        
-        # Generate separate transaction IDs for lender and borrower
-        lender_transaction_id = generate_transaction_id()
-        borrower_transaction_id = generate_transaction_id()
         
         # Fetch the lender's email using the lender_id from the fin_wallet table
         lender_email = get_lender_email(lender_id)
@@ -344,13 +347,17 @@ def transfer_money(lender_id, borrower_id, transfer_amount):
         if lender_wallet_row is None or borrower_wallet_row is None:
             raise ValueError("Wallet not found for lender or borrower.")
         
+        # Generate separate transaction IDs for lender and borrower
+        lender_transaction_id = generate_transaction_id1()()
+        borrower_transaction_id = generate_transaction_id1()()
+        
         # Add a row to wallet_transactions table for the transfer from lender to borrower
         lender_transaction = app_tables.fin_wallet_transactions.add_row(
             user_email=lender_email,
             customer_id=lender_id,
             wallet_id=lender_wallet_row['wallet_id'],
             transaction_id=lender_transaction_id,
-            amount=transfer_amount, 
+            amount=transfer_amount,  # Negative amount for deduction from lender's wallet
             transaction_type='transferred to',
             transaction_time_stamp=transaction_timestamp,
             status='success',
@@ -359,16 +366,16 @@ def transfer_money(lender_id, borrower_id, transfer_amount):
         )
         
         borrower_transaction = app_tables.fin_wallet_transactions.add_row(
-            user_email=lender_email,
-            customer_id=lender_id,
+            user_email=borrower_email,
+            customer_id=borrower_id,
             wallet_id=borrower_wallet_row['wallet_id'],
             transaction_id=borrower_transaction_id,
-            amount=transfer_amount,   
+            amount=transfer_amount,   # Positive amount for addition to borrower's wallet
             transaction_type='received from',
             transaction_time_stamp=transaction_timestamp,
             status='success',
-            receiver_email=borrower_email,
-            receiver_customer_id=borrower_id
+            receiver_email=lender_email,
+            receiver_customer_id=lender_id
         )
         
         # Update lender's and borrower's wallet amounts
@@ -392,8 +399,6 @@ def transfer_money(lender_id, borrower_id, transfer_amount):
             status='fail',
             customer_id=lender_id,
             user_email=lender_email,
-            receiver_email=borrower_email,
-            receiver_customer_id=borrower_id
         )
         app_tables.fin_wallet_transactions.add_row(
             transaction_id=borrower_transaction_id,
@@ -403,7 +408,5 @@ def transfer_money(lender_id, borrower_id, transfer_amount):
             status='fail',
             customer_id=borrower_id,
             user_email=borrower_email,
-            receiver_email=borrower_email,
-            receiver_customer_id=borrower_id
         )
         return False
