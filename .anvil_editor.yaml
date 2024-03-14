@@ -179,6 +179,7 @@ unique_ids:
     lendor_registration_form.lender_registration_form_4_bank_form_2: '1699429556412724511736888.3689'
     admin.dashboard.loan_management.open_loans: '1699528907914284548214666.92645'
     bank_users.repeating_panels.borrower: '1709109885364260908712663.55365'
+    borrower_registration_form.dashboard.view_transaction_history.ItemTemplate66: '1710387924655530247981734.1659'
     admin.dashboard.manage_cms.add_lender_dropdown_details.ItemTemplate18: '1706531161313890698385999.5632'
     admin.dashboard.loan_management.under_process.ItemTemplate3: '1709202548598507207708322.4673'
     admin.dashboard.loan_management.rejected_loans.RowTemplate8: '1700812073713245303231724.8567'

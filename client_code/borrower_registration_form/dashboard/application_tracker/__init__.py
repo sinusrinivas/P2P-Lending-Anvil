@@ -47,7 +47,7 @@ class application_tracker(application_trackerTemplate):
             user_profiles = app_tables.fin_user_profile.get(customer_id=loan['lender_customer_id'])
             if user_profiles is not None:
                 borrower_prof.append({
-                    'mobile': user_profile['mobile'],
+                    'mobile': user_profiles['mobile'],
                     'interest_rate': loan['interest_rate'],
                     'loan_amount': loan['loan_amount'],
                     'tenure': loan['tenure'],

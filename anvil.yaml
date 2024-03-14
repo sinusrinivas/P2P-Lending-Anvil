@@ -864,8 +864,8 @@ db_schema:
     - name: receiver_customer_id
       admin_ui: {width: 200}
       type: number
-    - name: reciever_email
-      admin_ui: {width: 200}
+    - name: receiver_email
+      admin_ui: {order: 11, width: 200}
       type: string
   fin_emi_table:
     title: fin_emi_table
@@ -1034,7 +1034,7 @@ db_schema:
       admin_ui: {order: 12, width: 200}
       type: string
   fin_wallet_bank_account_table:
-    client: full
+    client: none
     server: full
     columns:
     - name: account_id
