@@ -222,10 +222,10 @@ components:
   - type: Label
     properties: {role: null, align: center, tooltip: '', border: '', foreground: 'theme:On
         Primary', visible: true, text: Loan summary, font_size: 17, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: darkblue,
+      icon_align: left, spacing_below: small, italic: false, background: '#0b2547',
       bold: true, underline: false, icon: ''}
     name: label_26
-    layout_properties: {row: LIJSZJ, width_xs: 12, col_xs: 0, width: 626}
+    layout_properties: {row: LIJSZJ, width_xs: 12, col_xs: 0, width: 645}
   - type: Label
     properties: {role: null, align: right, tooltip: '', border: '', foreground: '',
       visible: true, text: Loan Amount, font_size: 15, font: '', spacing_above: small,
