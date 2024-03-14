@@ -2,7 +2,7 @@ is_package: true
 container: {type: ColumnPanel}
 components:
 - name: xy_panel_1
-  properties: {height: 267.1817626953125, role: outlined-card}
+  properties: {height: 247.272705078125, role: outlined-card}
   type: XYPanel
   layout_properties: {grid_position: 'HHOWPO,UCIKOU'}
   components:
