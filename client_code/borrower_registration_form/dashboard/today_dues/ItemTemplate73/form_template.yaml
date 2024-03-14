@@ -10,11 +10,6 @@ components:
     properties: {height: 63.399932861328125, source: 'https://freesvg.org/img/abstract-user-flat-4.png'}
     type: Image
     layout_properties: {x: 3.050000000745058, y: 0, width: 66}
-  - name: label_3
-    properties: {text: '---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------',
-      foreground: grey}
-    type: Label
-    layout_properties: {x: 0, y: 51.15000610426068, width: 938.4000244140625}
   - name: label_6
     properties: {text: 'Interest Rate :'}
     type: Label
@@ -55,18 +50,6 @@ components:
     layout_properties: {x: 738.4000244140625, y: 204, width: 200}
     data_bindings:
     - {property: text, code: 'self.item[''loan_disbursed_timestamp'']'}
-  - name: product
-    properties: {}
-    type: Label
-    layout_properties: {x: 735.2361068725586, y: -5.888885498046875, width: 200}
-    data_bindings:
-    - {property: text, code: 'self.item[''product_name'']', writeback: false}
-  - name: product_details
-    properties: {}
-    type: Label
-    layout_properties: {x: 735.3750228881836, y: 27.9444580078125, width: 200}
-    data_bindings:
-    - {property: text, code: 'self.item[''product_description'']', writeback: false}
   - name: lendor_name
     properties: {bold: true}
     type: Label
@@ -93,3 +76,20 @@ components:
     type: Button
     layout_properties: {x: 120.04166412353516, y: 262.7638854980469, width: 392.431}
     event_bindings: {click: outlined_button_1_click}
+  - name: label_3
+    properties: {text: '---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------',
+      foreground: grey}
+    type: Label
+    layout_properties: {x: 3.0500030517578125, y: 73.38750000000005, width: 938.4}
+  - name: product
+    properties: {}
+    type: Label
+    layout_properties: {x: 358.2249984741211, y: 8, width: 200}
+    data_bindings:
+    - {property: text, code: 'self.item[''product_name'']', writeback: false}
+  - name: product_details
+    properties: {}
+    type: Label
+    layout_properties: {x: 358.2249984741211, y: 27.9375, width: 520}
+    data_bindings:
+    - {property: text, code: 'self.item[''product_description'']', writeback: false}
