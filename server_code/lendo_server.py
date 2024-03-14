@@ -71,18 +71,18 @@ def add_lendor_individual_form_3(annual_salary, designation,emp_id_proof,last_si
     row[0]['salary_type']=salary_type
 
 @anvil.server.callable
-def add_lendor_institutional_form_1(business_name,business_location,user_id):
+def add_lendor_institutional_form_1(business_name,business_add,user_id):
   row = app_tables.fin_user_profile.search(customer_id = user_id)
   if row:
     row[0]['business_name'] = business_name
-    row[0]['business_location'] = business_location
-    #row[0]['business_add'] = business_add
+    #row[0]['business_location'] = business_location
+    row[0]['business_add'] = business_add
 
 @anvil.server.callable
-def add_lendor_institutional_form_2(nearest_loc,business_type,empolyees_working,year_estd,user_id,months):
+def add_lendor_institutional_form_2(business_type,empolyees_working,year_estd,user_id,months):
   row = app_tables.fin_user_profile.search(customer_id = user_id)
   if row:
-    row[0]['nearest_location'] = nearest_loc
+    #row[0]['nearest_location'] = nearest_loc
     row[0]['business_type'] = business_type
     row[0]['employees_working'] = empolyees_working
     row[0]['year_estd'] = year_estd
