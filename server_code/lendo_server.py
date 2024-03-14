@@ -60,13 +60,14 @@ def add_lendor_individual_form_2(comp_address,landmark,business_phone_number,use
     row[0]['business_no']=business_phone_number
     
 @anvil.server.callable
-def add_lendor_individual_form_3(annual_salary, designation,emp_id_proof,last_six_month,user_id):
+def add_lendor_individual_form_3(annual_salary, designation,emp_id_proof,last_six_month,user_id,salary_type):
   row = app_tables.fin_user_profile.search(customer_id = user_id)
   if row:
     row [0]['annual_salary']=annual_salary
     row[0]['designation'] = designation
     row[0]['emp_id_proof']=emp_id_proof
     row[0]['last_six_month_bank_proof']=last_six_month
+    row[0]['salary_type']=salary_type
 
 @anvil.server.callable
 def add_lendor_institutional_form_1(business_name,business_location,business_add,user_id):

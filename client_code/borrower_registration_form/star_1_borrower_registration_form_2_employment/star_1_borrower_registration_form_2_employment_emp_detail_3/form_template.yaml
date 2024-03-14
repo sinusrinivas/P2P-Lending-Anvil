@@ -38,14 +38,43 @@ components:
     spacing_below: small, italic: false, background: '', bold: true, underline: false,
     icon: ''}
   type: Label
-  layout_properties: {grid_position: 'GUHTRC,SIRBDK'}
+  layout_properties: {grid_position: 'GUHTRC,SIRBDK VDXOQS,VFAHXV'}
+- type: Label
+  properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
+    text: Salary type, font_size: null, font: '', spacing_above: small, icon_align: left,
+    spacing_below: small, italic: false, background: '', bold: true, underline: false,
+    icon: ''}
+  name: label_3
+  layout_properties: {grid_position: 'GUHTRC,SIRBDK PTUVYD,EVIYDQ'}
 - name: text_box_1
   properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: '',
     border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
     font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
     background: 'theme:On Primary', bold: false, underline: false}
   type: TextBox
-  layout_properties: {grid_position: 'GUHTRC,BCBQBT'}
+  layout_properties: {grid_position: 'GUHTRC,BCBQBT ZYLGWV,FASZGM'}
+- type: DropDown
+  properties:
+    role: null
+    align: full
+    tooltip: ''
+    placeholder: Select salary type
+    border: ''
+    enabled: true
+    foreground: ''
+    items: []
+    visible: true
+    font_size: null
+    font: ''
+    spacing_above: small
+    spacing_below: small
+    italic: false
+    background: theme:On Secondary
+    bold: false
+    underline: false
+    include_placeholder: true
+  name: drop_down_1
+  layout_properties: {grid_position: 'GUHTRC,BCBQBT GJSXQS,MXHORH'}
 - name: label_3_copy_1
   properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
     text: Designation, font_size: null, font: '', spacing_above: small, icon_align: left,
