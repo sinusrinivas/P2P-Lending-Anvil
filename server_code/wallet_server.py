@@ -305,10 +305,8 @@ def get_borrower_email(borrower_id):
 
 
 
-def generate_transaction_id1():
-    # Using a combination of timestamp and random component
-    return "TA" + str(uuid.uuid4().hex[:6])
-
+import uuid
+from datetime import datetime
 
 @anvil.server.callable
 def transfer_money(lender_id, borrower_id, transfer_amount):
@@ -348,8 +346,8 @@ def transfer_money(lender_id, borrower_id, transfer_amount):
             raise ValueError("Wallet not found for lender or borrower.")
         
         # Generate separate transaction IDs for lender and borrower
-        lender_transaction_id = generate_transaction_id1()()
-        borrower_transaction_id = generate_transaction_id1()()
+        lender_transaction_id = generate_transaction_id()
+        borrower_transaction_id = generate_transaction_id()
         
         # Add a row to wallet_transactions table for the transfer from lender to borrower
         lender_transaction = app_tables.fin_wallet_transactions.add_row(
@@ -366,16 +364,16 @@ def transfer_money(lender_id, borrower_id, transfer_amount):
         )
         
         borrower_transaction = app_tables.fin_wallet_transactions.add_row(
-            user_email=borrower_email,
-            customer_id=borrower_id,
+            user_email=lender_email,
+            customer_id=lender_id,
             wallet_id=borrower_wallet_row['wallet_id'],
             transaction_id=borrower_transaction_id,
             amount=transfer_amount,   # Positive amount for addition to borrower's wallet
             transaction_type='received from',
             transaction_time_stamp=transaction_timestamp,
             status='success',
-            receiver_email=lender_email,
-            receiver_customer_id=lender_id
+            receiver_email=borrower_email,
+            receiver_customer_id=borrower_id
         )
         
         # Update lender's and borrower's wallet amounts
@@ -390,6 +388,8 @@ def transfer_money(lender_id, borrower_id, transfer_amount):
     
     except Exception as e:
         print(f"Transfer failed: {e}")
+        lender_transaction_id = generate_transaction_id()  # Assign here
+        borrower_transaction_id = generate_transaction_id()  # Assign here
         # Log the failed transaction in wallet_transactions table
         app_tables.fin_wallet_transactions.add_row(
             transaction_id=lender_transaction_id,
@@ -410,3 +410,7 @@ def transfer_money(lender_id, borrower_id, transfer_amount):
             user_email=borrower_email,
         )
         return False
+
+
+
+
