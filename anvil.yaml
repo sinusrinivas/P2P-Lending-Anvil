@@ -100,7 +100,7 @@ db_schema:
       admin_ui: {width: 200}
       type: string
   fin_lendor_no_of_employees:
-    client: none
+    client: full
     server: full
     columns:
     - name: lendor_no_of_employees
@@ -342,6 +342,14 @@ db_schema:
       admin_ui: {width: 200, order: 2}
       type: number
     title: fin_admin_beseem_groups
+  fin_company_type:
+    title: fin_company_type
+    client: full
+    server: full
+    columns:
+    - name: company_type
+      admin_ui: {width: 200}
+      type: string
   fin_borrower_employee_type:
     client: full
     server: full
@@ -802,6 +810,12 @@ db_schema:
     - name: salary_type
       admin_ui: {width: 200, order: 5.5}
       type: string
+    - name: company_type
+      admin_ui: {width: 200}
+      type: string
+    - name: month_estd
+      admin_ui: {width: 200}
+      type: number
     title: fin_user_profile
   fin_admin_beseem_categories:
     client: full
