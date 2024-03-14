@@ -67,7 +67,7 @@ components:
       - name: grid_panel_1
         properties: {}
         type: GridPanel
-        layout_properties: {grid_position: 'FDSRJC,HTIWKS'}
+        layout_properties: {grid_position: 'FDSRJC,ZNPHNP'}
         components:
         - type: Label
           properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
@@ -108,7 +108,7 @@ components:
             underline: false
             include_placeholder: true
           name: name
-          layout_properties: {row: GJTLBO, width_xs: 3, col_xs: 5}
+          layout_properties: {row: GJTLBO, width_xs: 4, col_xs: 5}
           data_bindings: []
           event_bindings: {change: name_change}
         - type: Label
@@ -139,7 +139,7 @@ components:
             underline: false
             include_placeholder: true
           name: product_category
-          layout_properties: {row: KGVTRF, width_xs: 3, col_xs: 5}
+          layout_properties: {row: KGVTRF, width_xs: 4, col_xs: 5}
         - type: Label
           properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
             visible: true, text: Product Name, font_size: null, font: '', spacing_above: small,
@@ -154,7 +154,7 @@ components:
             type: text, spacing_below: small, italic: false, background: white, bold: false,
             underline: false}
           name: product_name
-          layout_properties: {row: JYPCHO, width_xs: 3, col_xs: 5}
+          layout_properties: {row: JYPCHO, width_xs: 4, col_xs: 5}
         - type: Label
           properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
             visible: true, text: ' Product Description', font_size: null, font: '',
@@ -314,63 +314,63 @@ components:
           properties: {role: null, align: full, tooltip: '', border: '', enabled: true,
             foreground: 'theme:On Primary', visible: true, text: One Time, font_size: null,
             font: '', spacing_above: small, icon_align: left, spacing_below: small,
-            italic: false, background: '#05264d', bold: false, underline: false, icon: ''}
+            italic: false, background: '#939191', bold: false, underline: false, icon: ''}
           name: button_1_1
-          layout_properties: {grid_position: 'BQXUFN,DVEDID', width: 132.76700000000002,
-            x: 408.5900152587891, y: 406.19647216796875}
+          layout_properties: {grid_position: 'BQXUFN,DVEDID', width: 132.763, x: 408.58924865722656,
+            y: 406.19195556640625}
           event_bindings: {click: button_1_1_click}
         - type: Button
           properties: {role: null, align: full, tooltip: '', border: '', enabled: true,
             foreground: 'theme:On Primary', visible: true, text: Monthly, font_size: null,
             font: '', spacing_above: small, icon_align: left, spacing_below: small,
-            italic: false, background: '#05264d', bold: false, underline: false, icon: ''}
+            italic: false, background: '#939191', bold: false, underline: false, icon: ''}
           name: button_2_1
-          layout_properties: {grid_position: 'BQXUFN,WFXRUA', width: 129.67770556640627,
-            x: 549.304015258789, y: 406.19647216796875}
+          layout_properties: {grid_position: 'BQXUFN,WFXRUA', width: 129.67, x: 549.2946014404297,
+            y: 406.19195556640625}
           event_bindings: {click: button_2_1_click}
         - type: Button
           properties: {role: null, align: full, tooltip: '', border: '', enabled: true,
             foreground: 'theme:On Primary', visible: true, text: Six Months, font_size: null,
             font: '', spacing_above: small, icon_align: left, spacing_below: small,
-            italic: false, background: '#05264d', bold: false, underline: false, icon: ''}
+            italic: false, background: '#939191', bold: false, underline: false, icon: ''}
           name: button_4_1
-          layout_properties: {grid_position: 'BQXUFN,ZPRITM', width: 134, x: 835.9817208251952,
-            y: 406.19647216796875}
+          layout_properties: {grid_position: 'BQXUFN,ZPRITM', width: 134, x: 835.9643402099609,
+            y: 406.1964111328125}
           event_bindings: {click: button_4_1_click}
         - type: Button
           properties: {role: null, align: full, tooltip: '', border: '', enabled: true,
             foreground: 'theme:On Primary', visible: true, text: Three Months, font_size: null,
             font: '', spacing_above: small, icon_align: left, spacing_below: small,
-            italic: false, background: '#05264d', bold: false, underline: false, icon: ''}
+            italic: false, background: '#939191', bold: false, underline: false, icon: ''}
           name: button_3_1
-          layout_properties: {grid_position: 'BQXUFN,AHTRSJ', width: 137, x: 688.9643096923828,
-            y: 406.19647216796875}
+          layout_properties: {grid_position: 'BQXUFN,AHTRSJ', width: 136.996, x: 688.9553070068359,
+            y: 406.19195556640625}
           event_bindings: {click: button_3_1_click}
         - type: Button
           properties: {role: null, align: full, tooltip: '', border: '', enabled: true,
             foreground: 'theme:On Primary', visible: true, text: Business, font_size: null,
             font: '', spacing_above: small, icon_align: left, spacing_below: small,
-            italic: false, background: '#05264d', bold: false, underline: false, icon: ''}
+            italic: false, background: '#939191', bold: false, underline: false, icon: ''}
           name: business
-          layout_properties: {grid_position: 'BQXUFN,DVEDID', width: 132.75, x: 408.5893096923828,
-            y: 467.32147216796875}
+          layout_properties: {grid_position: 'BQXUFN,DVEDID', width: 132.75, x: 408.58924865722656,
+            y: 467.31695556640625}
           event_bindings: {click: business_click}
         - type: Button
           properties: {role: null, align: full, tooltip: '', border: '', enabled: true,
             foreground: 'theme:On Primary', visible: true, text: Student, font_size: null,
             font: '', spacing_above: small, icon_align: left, spacing_below: small,
-            italic: false, background: '#05264d', bold: false, underline: false, icon: ''}
+            italic: false, background: '#939191', bold: false, underline: false, icon: ''}
           name: student
-          layout_properties: {grid_position: 'BQXUFN,DVEDID', width: 132.75, x: 551.3393096923828,
+          layout_properties: {grid_position: 'BQXUFN,DVEDID', width: 132.75, x: 551.3303070068359,
             y: 467.03570556640625}
           event_bindings: {click: student_click}
         - type: Button
           properties: {role: null, align: full, tooltip: '', border: '', enabled: true,
             foreground: 'theme:On Primary', visible: true, text: Employee, font_size: null,
             font: '', spacing_above: small, icon_align: left, spacing_below: small,
-            italic: false, background: '#05264d', bold: false, underline: false, icon: ''}
+            italic: false, background: '#939191', bold: false, underline: false, icon: ''}
           name: employee
-          layout_properties: {grid_position: 'BQXUFN,DVEDID', width: 132.75, x: 694.0893096923828,
+          layout_properties: {grid_position: 'BQXUFN,DVEDID', width: 132.75, x: 694.0847625732422,
             y: 467.03570556640625}
           event_bindings: {click: employee_click}
         - type: Label
