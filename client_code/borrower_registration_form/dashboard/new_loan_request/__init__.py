@@ -9,6 +9,7 @@ from .. import main_form_module as main_form_module
 class new_loan_request(new_loan_requestTemplate):
     def __init__(self, **properties):
         self.user_id = main_form_module.userId
+        self.product_description = None
         self.init_components(**properties)
 
         options = app_tables.fin_product_group.search()
@@ -82,14 +83,36 @@ class new_loan_request(new_loan_requestTemplate):
             self.label_4.text = ""
 
         if not product_name:
-          self.label_7.text = "Please select a product name"
-          self.label_7.foreground = '#FF0000'
+            self.label_7.text = "Please select a product name"
+            self.label_7.foreground = '#FF0000'
         else:
-          self.label_7.text = ""
+            self.label_7.text = ""
 
         if name and category and product_name:
-            open_form('borrower_registration_form.dashboard.new_loan_request.loan_type', name, category,product_name,self.max_amount_lb.text)
+            # Fetch product details based on the selected product name
+            product_details = app_tables.fin_product_details.get(product_name=product_name)
 
+            if product_details:
+                # Set product_description as a class attribute
+                self.product_description = product_details['product_discription']
+
+                # Open the next form and pass the required parameters
+                open_form('borrower_registration_form.dashboard.new_loan_request.loan_type',
+                          name, category, product_name, self.max_amount_lb.text, self.product_description)
+            else:
+                # Handle the case where product details are not found
+                self.label_8.visible = True
+                self.product_description_label.text = "Product description not available"
+        else:
+            # Handle the case where no product is selected
+            self.label_8.visible = False
+            self.product_description_label.text = ""
+
+    def max_amount_lb_show(self, **event_args):
+        data = app_tables.fin_borrower.search()
+        # Exclude empty strings from the max_amount values
+        data1_strings = [str(data['credit_limit']) for data in data if str(data['credit_limit']).strip()]
+        self.max_amount_lb.text = data1_strings[0] if data1_strings else None
     def max_amount_lb_show(self, **event_args):
         data = app_tables.fin_borrower.search()
         # Exclude empty strings from the max_amount values
@@ -100,5 +123,24 @@ class new_loan_request(new_loan_requestTemplate):
         open_form("borrower_registration_form.dashboard")
 
     def drop_down_1_change(self, **event_args):
-        """This method is called when an item is selected"""
-        pass
+        selected_product_name = self.drop_down_1.selected_value
+    
+        if selected_product_name:
+            # Fetch product details based on the selected product name
+            
+            product_details = app_tables.fin_product_details.get(product_name=selected_product_name)
+            
+            if product_details:
+                # Display product description in a label or another component
+                self.label_8.visible = True
+                self.product_description_label.text = product_details['product_discription']
+            else:
+                # Handle the case where product details are not found
+                self.label_8.visible = True
+                self.product_description_label.text = "Product description not available"
+        else:
+            # Handle the case where no product is selected
+            self.label_8.visible = False
+            self.product_description_label.text = ""
+
+    

@@ -8,7 +8,7 @@ from .. import main_form_module as main_form_module
 
 class check(checkTemplate):
     def __init__(self, product_group, product_cat, product_name, loan_amount, tenure_months, user_id, interest_rate, processing_fee,
-                 membership_type, product_id, total_repayment_amount, credit_limt, emi_payment_type, total_interest=None, processing_fee_amount=None, entered_values=None,
+                 membership_type, product_id, product_desc, total_repayment_amount, credit_limt, emi_payment_type, total_interest=None, processing_fee_amount=None, entered_values=None,
                  **properties):
         # Initialize properties and data bindings
         self.product_group = product_group
@@ -28,7 +28,7 @@ class check(checkTemplate):
         self.total_repayment_amount = float(str(total_repayment_amount).replace('₹ ', '')) if total_repayment_amount is not None else 0
         self.credit_limt = credit_limt
         self.entered_payment_type = emi_payment_type
-        # self.product_discription = product_desc
+        self.product_description = product_desc
 
         # Set Form properties and Data Bindings.
         self.init_components(**properties)
@@ -60,8 +60,8 @@ class check(checkTemplate):
                                    self.product_name,
                                    self.entered_payment_type,
                                    self.processing_fee_amount,
-                                   self.total_interest)
-                                   # self.product_discription)
+                                   self.total_interest,
+                                   self.product_description)  # Pass product description here
 
         # Log the result for debugging
         print(result)
@@ -75,6 +75,7 @@ class check(checkTemplate):
                   self.product_group,
                   self.product_cat,
                   self.product_name,
+                  self.product_description,
                   self.credit_limt,
                   entered_values={
                       'loan_amount': self.entered_loan_amount,
@@ -91,9 +92,9 @@ class check(checkTemplate):
             self.display_one_time_payment_details()
         elif self.entered_payment_type == "Monthly":
             self.display_monthly_payment_details()
-        elif self.entered_payment_type == "Three Month":
+        elif self.entered_payment_type == "Three Months":
             self.display_three_month_payment_details(total_interest_amount=self.total_interest)
-        elif self.entered_payment_type == "Six Month":
+        elif self.entered_payment_type == "Six Months":
             self.display_six_month_payment_details(total_interest_amount=self.total_interest)
 
     def display_one_time_payment_details(self):
