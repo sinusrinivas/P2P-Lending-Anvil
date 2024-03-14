@@ -276,6 +276,14 @@ db_schema:
     - name: borrower_qualification
       admin_ui: {width: 200}
       type: string
+  fin_duration_at_address:
+    title: fin_duration_at_address
+    client: full
+    server: full
+    columns:
+    - name: duration_at_address
+      admin_ui: {width: 200}
+      type: string
   fin_foreclosure:
     title: fin_foreclosure
     client: full
@@ -436,6 +444,14 @@ db_schema:
       admin_ui: {width: 200, order: 0}
       type: string
     title: fin_borrower_salary_type
+  fin_present_address:
+    title: fin_present_address
+    client: full
+    server: full
+    columns:
+    - name: present_address
+      admin_ui: {width: 200}
+      type: string
   fin_borrower_profession:
     client: full
     server: full
@@ -777,6 +793,12 @@ db_schema:
     - name: father_occupation
       admin_ui: {width: 200}
       type: string
+    - name: duration_at_address
+      admin_ui: {width: 200}
+      type: string
+    - name: present_address
+      admin_ui: {width: 200}
+      type: string
     title: fin_user_profile
   fin_admin_beseem_categories:
     client: full
@@ -1009,7 +1031,7 @@ db_schema:
       admin_ui: {order: 12, width: 200}
       type: string
   fin_wallet_bank_account_table:
-    client: full
+    client: none
     server: full
     columns:
     - name: account_id
