@@ -78,7 +78,7 @@ class view_profile(view_profileTemplate):
         self.label_2.text = self.name_list[b]
         self.label_24.text = self.product_name_lst[b]
         self.label_4.text = self.categories_list[b]
-        self.label_3.text = self.product_descri[b]
+        self.text_area_1.text = self.product_descri[b]
         self.label_5.text = self.profee_list[b]
         self.label_6.text = self.extfee_list[b]
         self.label_20.text = self.foreclose_list[b]

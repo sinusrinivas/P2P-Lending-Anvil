@@ -390,39 +390,67 @@ class manage_producs1(manage_producs1Template):
 
 
     def button_1_1_click(self, **event_args):
-      """This method is called when the button is clicked"""
-      self.button_1_1.background = "#0770e8"
-      self.emi_payment.append("One Time")
-
+        """This method is called when the button is clicked"""
+        if "One Time" in self.emi_payment:
+            self.button_1_1.background = "#939191"
+            self.emi_payment.remove("One Time")
+        else:
+            self.button_1_1.background = "#0a2346"
+            self.emi_payment.append("One Time")
+    
     def button_2_1_click(self, **event_args):
-      """This method is called when the button is clicked"""
-      self.button_2_1.background = "#0770e8" 
-      self.emi_payment.append("Monthly")
-
+        """This method is called when the button is clicked"""
+        if "Monthly" in self.emi_payment:
+            self.button_2_1.background = "#939191"
+            self.emi_payment.remove("Monthly")
+        else:
+            self.button_2_1.background = "#0a2346"
+            self.emi_payment.append("Monthly")
+    
     def button_3_1_click(self, **event_args):
-      """This method is called when the button is clicked"""
-      self.button_3_1.background = "#0770e8" 
-      self.emi_payment.append("Three Months")
-
+        """This method is called when the button is clicked"""
+        if "Three Months" in self.emi_payment:
+            self.button_3_1.background = "#939191"
+            self.emi_payment.remove("Three Months")
+        else:
+            self.button_3_1.background = "#0a2346"
+            self.emi_payment.append("Three Months")
+    
     def button_4_1_click(self, **event_args):
-      """This method is called when the button is clicked"""
-      self.button_4_1.background = "#0770e8"
-      self.emi_payment.append("Six Months")
+        """This method is called when the button is clicked"""
+        if "Six Months" in self.emi_payment:
+            self.button_4_1.background = "#939191"
+            self.emi_payment.remove("Six Months")
+        else:
+            self.button_4_1.background = "#0a2346"
+            self.emi_payment.append("Six Months")
 
 
   
     def business_click(self, **event_args):
-      """This method is called when the button is clicked"""
-      self.business.background = "#0770e8" #if self.business.enabled else "#FFFFFF"
-      self.occupation.append("Business")
-
+        """This method is called when the button is clicked"""
+        if "Business" in self.occupation:
+            self.business.background = "#939191"
+            self.occupation.remove("Business")
+        else:
+            self.business.background = "#0a2346"
+            self.occupation.append("Business")
+    
     def student_click(self, **event_args):
-      """This method is called when the button is clicked"""
-      self.student.background = "#0770e8" #if self.student.enabled else "#FFFFFF"
-      self.occupation.append("Student")
-
+        """This method is called when the button is clicked"""
+        if "Student" in self.occupation:
+            self.student.background = "#939191"
+            self.occupation.remove("Student")
+        else:
+            self.student.background = "#0a2346"
+            self.occupation.append("Student")
+    
     def employee_click(self, **event_args):
-      """This method is called when the button is clicked"""
-      self.employee.background = "#0770e8" #if self.employee.enabled else "#FFFFFF"
-      self.occupation.append("Employee")
-
+        """This method is called when the button is clicked"""
+        if "Employee" in self.occupation:
+            self.employee.background = "#939191"
+            self.occupation.remove("Employee")
+        else:
+            self.employee.background = "#0a2346"
+            self.occupation.append("Employee")
+    
