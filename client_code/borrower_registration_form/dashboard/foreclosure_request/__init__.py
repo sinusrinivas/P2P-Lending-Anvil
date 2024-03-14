@@ -25,7 +25,7 @@ class foreclosure_request(foreclosure_requestTemplate):
                 user_id = user_profile['customer_id']
                 # Filter loan_details table based on the current user's ID
                 try:
-                    customer_loans = app_tables.fin_loan_details.search(borrower_customer_id=user_id)
+                    customer_loans = app_tables.fin_loan_details.search(lender_customer_id=user_id)
                     loans = []
                     for loan in customer_loans:
                         if user_profile is not None:
@@ -40,11 +40,10 @@ class foreclosure_request(foreclosure_requestTemplate):
                                 'lender_full_name': loan['lender_full_name'],
                                 'product_id': loan['product_id'],
                                 'loan_id': loan['loan_id'],
-                                'borrower_full_name': loan['borrower_full_name'],
                                 'loan_updated_status': loan['loan_updated_status'],
                                 'emi_payment_type': loan['emi_payment_type'],
                                 'credit_limit' : loan['credit_limit'],
-                                # 'foreclose_type' : loan['foreclose_type'],
+                                'foreclose_type' : loan['foreclose_type'],
                                 'eligible': self.is_loan_eligible(loan)
                             }
                             loans.append(loan_data)
