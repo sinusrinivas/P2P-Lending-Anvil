@@ -16,13 +16,6 @@ components:
     layout_properties: {x: 99.93751220777631, y: 104.08749084547162, width: 200}
     data_bindings:
     - {property: text, code: 'self.item[''borrower_mobile'']', writeback: false}
-  - name: label_1
-    properties: {role: null, align: center, tooltip: '', border: '', foreground: white,
-      visible: true, text: Menu Bar, font_size: 20, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '#0b2547',
-      bold: true, underline: false, icon: ''}
-    type: Label
-    layout_properties: {x: 0, y: 0, width: 917.841}
   - name: image_1
     properties: {height: 78.39993286132812, source: 'https://freesvg.org/img/abstract-user-flat-4.png'}
     type: Image

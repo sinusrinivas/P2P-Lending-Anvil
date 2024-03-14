@@ -79,6 +79,9 @@ db_schema:
     - name: ref_admin_email
       admin_ui: {width: 200, order: 8}
       type: string
+    - name: ref_admin_name
+      admin_ui: {width: 200, order: 11}
+      type: string
     title: fin_admin_users
   fin_lendor_salary_type:
     client: full
