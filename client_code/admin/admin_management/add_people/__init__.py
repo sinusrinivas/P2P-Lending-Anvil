@@ -30,9 +30,9 @@ class add_people(add_peopleTemplate):
     if email and name and mobile_no and dob and gender and role and password:
       result = admin.add_admin_details(email,name,mobile_no,dob,gender,role,password,created_date)
       if result:
-        self.label_6.text = "Data added Successfully"
+        self.label_7.text = "Data added Successfully"
       else:
-        self.label_6.text = "User already exist"
+        self.label_7.text = "User already exist"
     else:
       alert("fill all the fields")
 

@@ -113,10 +113,10 @@ components:
       properties: {role: outlined, placeholder: Re Enter Password}
       type: TextBox
       layout_properties: {grid_position: 'KLWCJI,BFVOCT'}
-    - name: spacer_3
-      properties: {height: 32}
-      type: Spacer
-      layout_properties: {grid_position: 'MGPQOE,ICWEST'}
+    - name: label_7
+      properties: {align: center, bold: true, font_size: 16}
+      type: Label
+      layout_properties: {grid_position: 'EVQMFH,GMIJAD'}
     - name: clear_function
       properties: {text: clear, bold: true, role: filled-button}
       type: Button
