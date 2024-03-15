@@ -28,7 +28,7 @@ class admin_management(admin_managementTemplate):
 
   def button_1_copy_click(self, **event_args):
     """This method is called when the button is clicked"""
-    pass
+    open_form('admin.admin_management.view_admins')
     
 
   
