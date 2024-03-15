@@ -16,6 +16,7 @@ class star_1_borrower_registration_form_2_employment_emp_detail_1(star_1_borrowe
       self.text_box_1.text=user_data['company_name']
       self.drop_down_1.selected_value=user_data['employment_type']
       self.drop_down_2.selected_value=user_data['organization_type']
+      self.drop_down_3.selected_value = user_data['business_age']
       user_data.update()
 
     options_1 = app_tables.fin_borrower_employee_type.search()

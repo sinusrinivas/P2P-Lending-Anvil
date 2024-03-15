@@ -261,7 +261,7 @@ class star_1_borrower_registration_form_3_marital_married(star_1_borrower_regist
             guarantor_annual_earning=details['annual_earning'],
             another_person=details['another_person']  # Store the selected radio button's name
         )
-        if not details['spouse_name'] or not details['spouse_dob'] or not details['spouse_mbl_no'] or not details['spouse_profession'] or not details['spouse_company']:
+        if not details['spouse_name'] or not details['spouse_dob'] or not details['spouse_mbl_no'] or not details['spouse_profession']:
           Notification("Please fill all the required fields").show()
         else:
           open_form('borrower_registration_form.star_1_borrower_registration_form_4_loan',user_id=self.userId)

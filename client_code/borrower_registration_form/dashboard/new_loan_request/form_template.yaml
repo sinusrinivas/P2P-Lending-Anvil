@@ -171,7 +171,7 @@ components:
 - type: Button
   properties: {role: elevated-button, align: center, tooltip: '', border: '', enabled: true,
     foreground: 'theme:On Primary', visible: true, text: Next, font_size: null, font: '',
-    spacing_above: small, icon_align: left, spacing_below: small, italic: false, background: '#0b2547',
+    spacing_above: small, icon_align: left, spacing_below: small, italic: false, background: '#05264d',
     bold: true, underline: false, icon: 'fa:angle-double-right'}
   name: button_1_copy
   layout_properties:
