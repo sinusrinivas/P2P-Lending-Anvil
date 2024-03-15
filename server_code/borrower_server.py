@@ -23,8 +23,16 @@ def add_borrower_step1(qualification,user_id):
 def add_borrower_step2(status_of_user,user_id):
   row = app_tables.fin_user_profile.search(customer_id=user_id)
   if row:
-    row[0]['profficen'] = status_of_user
+    row[0]['profession'] = status_of_user
     row[0]['form_count']=2
+
+@anvil.server.callable
+def add_borrwer_self_employment(status_of_user,user_id):
+  row=app_tables.fin_user_profile.search(customer_id=user_id)
+  if row:
+    row[0]['self_employment']=status_of_user
+    
+    
 
 @anvil.server.callable
 def add_borrower_step3(marital_status,user_id):
