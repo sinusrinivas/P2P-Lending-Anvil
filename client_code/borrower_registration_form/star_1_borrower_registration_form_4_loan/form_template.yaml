@@ -61,13 +61,32 @@ components:
     background: 'theme:On Primary', bold: false, underline: false}
   name: text_box_3
   layout_properties: {grid_position: 'WSZLRM,VZPIVJ'}
+- type: Label
+  properties: {}
+  name: label_5
+  layout_properties: {grid_position: 'DUWVVE,QDYNZE'}
+- type: TextBox
+  properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: '',
+    border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
+    font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
+    background: 'theme:On Primary', bold: false, underline: false}
+  name: text_box_4
+  layout_properties: {grid_position: 'DUWVVE,WQYWCH'}
+- type: Label
+  properties: {}
+  name: label_6
+  layout_properties: {grid_position: 'WAMCJC,YXCLQI WLHKHR,NTSLHB'}
+- type: TextBox
+  properties: {}
+  name: text_box_5
+  layout_properties: {grid_position: 'WAMCJC,YXCLQI WLHKHR,FASGGB'}
 - type: Button
   properties: {role: elevated-button, align: right, tooltip: '', border: '', enabled: true,
     foreground: 'theme:On Primary', visible: true, text: Prev, font_size: null, font: '',
     spacing_above: small, icon_align: left, spacing_below: small, italic: false, background: '#0b2547',
     bold: true, underline: false, icon: 'fa:angle-double-left'}
   name: button_1
-  layout_properties: {grid_position: 'WAMCJC,YXCLQI'}
+  layout_properties: {grid_position: 'WAMCJC,YXCLQI YKHYTE,HGSLDY'}
   event_bindings: {click: button_1_click}
 - type: Button
   properties: {role: elevated-button, align: left, tooltip: '', border: '', enabled: true,
