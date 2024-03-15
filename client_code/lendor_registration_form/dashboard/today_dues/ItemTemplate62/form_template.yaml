@@ -115,4 +115,4 @@ components:
     name: product_details
     layout_properties: {x: 365.2249984741211, y: 43.38751220703125, width: 500}
     data_bindings:
-    - {property: data, code: 'self.item[''product_description'']'}
+    - {property: content, code: 'self.item[''product_description'']'}
