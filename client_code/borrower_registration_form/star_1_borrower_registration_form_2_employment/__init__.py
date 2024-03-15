@@ -14,7 +14,7 @@ class star_1_borrower_registration_form_2_employment(star_1_borrower_registratio
     self.userId = user_id
     user_data=app_tables.fin_user_profile.get(customer_id=user_id)
     if user_data:
-     self.Profesion_borrower_registration_form_drop_down.selected_value=user_data['profficen']
+     self.Profesion_borrower_registration_form_drop_down.selected_value=user_data['profession']
      user_data.update()
 
     options = app_tables.fin_borrower_profession.search()
@@ -45,7 +45,7 @@ class star_1_borrower_registration_form_2_employment(star_1_borrower_registratio
     elif status_of_user == 'Employee':
       open_form('borrower_registration_form.star_1_borrower_registration_form_2_employment.star_1_borrower_registration_form_2_employment_emp_detail_1',user_id=user_id)
     elif status_of_user == 'Self Employment':
-      open_form('borrower_registration_form.star_1_borrower_registration_form_2_employment.star_1_borrower_registration_form_2_employment_business_1',user_id=user_id) 
+      open_form('borrower_registration_form.star_1_borrower_registration_form_2_employment.star_1_borrower_registration_form_2_self_employment',user_id=user_id) 
     # else:
     #   open_form('borrower_registration_form.star_1_borrower_registration_form_2_employment',user_id=user_id)
     #   alert('Please select a valid Profesion')

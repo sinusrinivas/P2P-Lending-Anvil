@@ -15,11 +15,16 @@ class star_1_borrower_registration_form_2_employment_emp_detail_3(star_1_borrowe
     if user_data:
       self.text_box_1.text=user_data['annual_salary']
       self.text_box_2.text=user_data['designation']
+      self.drop_down_1.selected_value = user_data['salary_type']
       
-      options = app_tables.fin_borrower_salary_type.search()
-      option_strings = [str(option['borrower_salary_type']) for option in options]
-      self.drop_down_1.items = option_strings
+      # options = app_tables.fin_borrower_salary_type.search()
+      # option_strings = [str(option['borrower_salary_type']) for option in options]
+      # self.drop_down_1.items = option_strings
       user_data.update()
+
+    options = app_tables.fin_borrower_salary_type.search()
+    option_strings = [str(option['borrower_salary_type']) for option in options]
+    self.drop_down_1.items = option_strings
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
 

@@ -110,6 +110,14 @@ db_schema:
       admin_ui: {width: 200, order: 0}
       type: string
     title: fin_lendor_no_of_employees
+  fin_self_employment:
+    title: fin_self_employment
+    client: full
+    server: full
+    columns:
+    - name: self_employment
+      admin_ui: {width: 200}
+      type: string
   fin_borrower_no_of_employees:
     client: full
     server: full
@@ -528,9 +536,6 @@ db_schema:
     - name: marital_status
       admin_ui: {width: 200, order: 22}
       type: string
-    - name: profficen
-      admin_ui: {order: 40, width: 200}
-      type: string
     - name: usertype
       admin_ui: {order: 0.5, width: 200}
       type: string
@@ -816,9 +821,15 @@ db_schema:
     - name: company_type
       admin_ui: {width: 200}
       type: string
-    - name: month_estd
+    - name: business_age
       admin_ui: {width: 200}
       type: number
+    - name: profession
+      admin_ui: {width: 200}
+      type: string
+    - name: self_employment
+      admin_ui: {width: 200}
+      type: string
     title: fin_user_profile
   fin_admin_beseem_categories:
     client: full
@@ -1051,7 +1062,7 @@ db_schema:
       admin_ui: {order: 12, width: 200}
       type: string
   fin_wallet_bank_account_table:
-    client: full
+    client: none
     server: full
     columns:
     - name: account_id
