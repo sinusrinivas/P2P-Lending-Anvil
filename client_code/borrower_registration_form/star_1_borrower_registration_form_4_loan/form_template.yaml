@@ -61,6 +61,25 @@ components:
     background: 'theme:On Primary', bold: false, underline: false}
   name: text_box_3
   layout_properties: {grid_position: 'WSZLRM,VZPIVJ'}
+- type: Label
+  properties: {text: Do you have any Personal Credit Card Loans, bold: true}
+  name: label_5
+  layout_properties: {grid_position: 'DUWVVE,QDYNZE VSRXJK,FVTIEF'}
+- type: Label
+  properties: {text: Do you have any Two Wheeler / Four Wheeler Loans, bold: true}
+  name: label_6
+  layout_properties: {grid_position: 'DUWVVE,QDYNZE YWFQGY,SXLOWH'}
+- type: TextBox
+  properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: '',
+    border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
+    font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
+    background: 'theme:On Primary', bold: false, underline: false}
+  name: text_box_4
+  layout_properties: {grid_position: 'DUWVVE,WQYWCH GUJVRD,FUPLZI'}
+- type: TextBox
+  properties: {background: 'theme:On Primary'}
+  name: text_box_5
+  layout_properties: {grid_position: 'DUWVVE,WQYWCH ZFRZZH,SXTTBW'}
 - type: Button
   properties: {role: elevated-button, align: right, tooltip: '', border: '', enabled: true,
     foreground: 'theme:On Primary', visible: true, text: Prev, font_size: null, font: '',

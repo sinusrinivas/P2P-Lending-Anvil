@@ -103,7 +103,7 @@ db_schema:
       admin_ui: {width: 200}
       type: string
   fin_lendor_no_of_employees:
-    client: none
+    client: full
     server: full
     columns:
     - name: lendor_no_of_employees
@@ -830,6 +830,12 @@ db_schema:
     - name: self_employment
       admin_ui: {width: 200}
       type: string
+    - name: wheeler_loans
+      admin_ui: {width: 200, order: 80.5}
+      type: string
+    - name: credit_card_loans
+      admin_ui: {width: 200, order: 80.25}
+      type: string
     title: fin_user_profile
   fin_admin_beseem_categories:
     client: full
@@ -1330,6 +1336,14 @@ db_schema:
       admin_ui: {width: 200, order: 0}
       type: string
     title: fin_lendor_qualification
+  fin_spouse_profession:
+    client: full
+    server: full
+    columns:
+    - name: spouse_profession
+      admin_ui: {width: 200, order: 0}
+      type: string
+    title: fin_spouse_profession
   fin_lendor_lending_period:
     client: full
     server: full

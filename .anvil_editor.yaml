@@ -62,6 +62,7 @@ unique_ids:
     admin.dashboard.manage_cms.add_general_dropdowns.edit_company: '1710411462796305921760191.0538'
     admin.dashboard.loan_management.open_loans.RowTemplate13: '1701079025496570111432574.5491'
     admin.dashboard.manage_cms.add_lender_dropdown_details.edit_no_of_emp: '1706531881285776983025492.1349'
+    admin.dashboard.manage_cms.add_borrower_dropdown_details.edit_spouse_profession: '1710495428888891993954718.6715'
     lendor_registration_form.dashboard.lender_view_loans.RowTemplate24: '1703182023237906200953522.0261'
     borrower_registration_form.logout: '1706172316000574399103224.3589'
     admin.dashboard.manage_products.edit_form.RowTemplate43: '1708595686278597703687406.9668'
@@ -122,6 +123,7 @@ unique_ids:
     admin.dashboard.revenue_share: '1699529452988469665100106.9467'
     lendor_registration_form.dashboard.view_borrower_loan_request: '1699960229158369964369354.56226'
     admin.dashboard.loan_management.loan_disbursed.view_profile_6: '1704878672712960872612311.6324'
+    admin.dashboard.manage_cms.add_borrower_dropdown_details.ItemTemplate85: '1710495046477101407015295.04103'
     lendor_registration_form.dashboard.view_loan_extension_requests.extension_details: '1706448836532652081977126.0691'
     ? borrower_registration_form.star_1_borrower_registration_form_2_employment.star_1_borrower_registration_form_2_employment_business_3
     : '1700126739765126145778650.8795'
