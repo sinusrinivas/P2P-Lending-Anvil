@@ -26,13 +26,9 @@ class view_admins(view_adminsTemplate):
         # Populate the repeating panel with fetched data
         for admin_user in admin_users:
             # Extract values from the row object and create a dictionary
-            admin_data = {
-                'full_name': admin_user['full_name'],
-                'admin_email': admin_user['admin_email'],
-                'admin_role': admin_user['admin_role'],
-                'ref_admin_name': admin_user['ref_admin_name'],
-                'join_dates': admin_user['join_date']
-                
+            admin_data = {               
+                'admin_email': admin_user['admin_email']   
             }
+            
             # Append the dictionary to the repeating panel items
             self.repeating_panel.items.append(admin_data)
