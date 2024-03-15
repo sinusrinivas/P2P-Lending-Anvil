@@ -7,7 +7,6 @@ import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 import anvil.server
-import hashlib
 
 
 @anvil.server.callable
@@ -101,7 +100,12 @@ def find_highest_customer_id():
             highest_id = customer_id
     return highest_id
 
+
+
+import bcrypt
+
 @anvil.server.callable
 def hash_password(password):
-    hashed_password = hashlib.sha256(password.encode()).hexdigest()
-    return hashed_password
+    # Hash the password using bcrypt
+    hashed_password = bcrypt.hashpw(password.encode(), bcrypt.gensalt())
+    return hashed_password.decode()

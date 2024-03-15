@@ -51,7 +51,6 @@ class add_admin(add_adminTemplate):
         
         if email and name and mobile_no and dob and gender and role and password:
             if password == retype:  # Check if passwords match
-                hashed_password = hashlib.sha256(password.encode()).hexdigest()
                 result = admin.add_admin_details(email, name, mobile_no, dob, gender, role, hashed_password, created_date, status, ref_admin_name, ref_admin_email, customer_id)
                 if result:
                     self.label_7.text = "Data added Successfully"
