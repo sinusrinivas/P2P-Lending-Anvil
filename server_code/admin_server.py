@@ -9,7 +9,6 @@ from anvil.tables import app_tables
 import anvil.server
 
 
-
 @anvil.server.callable
 def product_details(product_id, product_name, product_group,product_discription, product_categories,processing_fee,  extension_fee, membership_type, interest_type, max_amount, min_amount, min_tenure, max_tenure, roi, foreclose_type, foreclosure_fee, extension_allowed, emi_payment, min_months,lapsed_fee, default_fee, npa ,occupation):
   row = app_tables.fin_product_details.add_row(product_id=product_id,
@@ -82,4 +81,38 @@ def add_basic_details(full_name, gender, dob, mobile_no, user_photo, alternate_e
     row[0]['user_age'] = user_age
     row[0]['present_address'] = present
     row[0]['duration_at_address'] = duration
-    
+
+@anvil.server.callable
+def generate_admin_id():
+    full_table = app_tables.fin_user_profile.search()
+    if full_table:
+        highest_customer_id = find_highest_customer_id()
+        return highest_customer_id + 1
+    else:
+        return 100000
+
+def find_highest_customer_id():
+    table_data = app_tables.fin_user_profile.search()
+    highest_id = 99999
+    for row in table_data:
+        customer_id = row['customer_id']
+        if customer_id > highest_id:
+            highest_id = customer_id
+    return highest_id
+
+
+
+import bcrypt
+
+@anvil.server.callable
+def hash_password(password):
+    # Hash the password using bcrypt
+    hashed_password = bcrypt.hashpw(password.encode(), bcrypt.gensalt())
+    return hashed_password.decode()
+
+# for view admins
+@anvil.server.callable
+def get_admin_users():
+    # Fetch data from the fin_admin_users table
+    admin_users = app_tables.fin_admin_users.search()
+    return admin_users
