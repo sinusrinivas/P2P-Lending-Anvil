@@ -4,7 +4,7 @@ components:
 - name: xy_panel_1
   properties: {height: 451.5454406738281, role: outlined-card}
   type: XYPanel
-  layout_properties: {grid_position: 'EIPCQK,JFGHEF'}
+  layout_properties: {grid_position: 'DSYIQH,PBOBNJ'}
   components:
   - name: image_1
     properties: {height: 63.399932861328125, source: 'https://freesvg.org/img/abstract-user-flat-4.png'}
@@ -98,19 +98,25 @@ components:
     data_bindings:
     - {property: text, code: 'self.item[''loan_disbursed_timestamp'']'}
   - name: label_3
-    properties: {text: '---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------',
-      foreground: grey}
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: grey,
+      visible: true, text: '--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------',
+      font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small,
+      italic: false, background: '', bold: false, underline: false, icon: ''}
     type: Label
     layout_properties: {x: 10, y: 87.1500244140625, width: 938.4}
   - name: product
     properties: {}
     type: Label
-    layout_properties: {x: 358.23751068115234, y: 16, width: 200}
+    layout_properties: {x: 365.2250061035156, y: 10, width: 372}
     data_bindings:
     - {property: text, code: 'self.item[''product_name'']', writeback: false}
-  - name: product_details
-    properties: {}
-    type: Label
-    layout_properties: {x: 358.23751068115234, y: 41.1500244140625, width: 428}
+  - type: TextArea
+    properties: {role: null, align: left, height: 56, tooltip: '', placeholder: '',
+      border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
+      auto_expand: false, font: '', spacing_above: small, spacing_below: small, italic: false,
+      background: white, bold: false, underline: false}
+    name: product_details
+    layout_properties: {x: 358.22503662109375, y: 37.53753662109375, width: 563.8}
     data_bindings:
-    - {property: text, code: 'self.item[''product_description'']', writeback: false}
+    - {property: text, code: 'self.item[''product_description'']', writeback: true}
+    event_bindings: {}
