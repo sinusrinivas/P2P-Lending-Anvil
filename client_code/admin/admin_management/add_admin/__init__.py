@@ -11,12 +11,26 @@ from datetime import date
 from .... import admin
 
 
+
 class add_admin(add_adminTemplate):
     def __init__(self, **properties):
         # Set Form properties and Data Bindings.
         self.init_components(**properties)
+        # self.user_id = main_form_module.userId
         self.date_lable.text = date.today().strftime('%d %b %Y')
         # Any code you write here will run before the form opens.
+        user = anvil.users.get_user()
+        # Check if a user is logged in
+        if user:
+            # Fetch the user profile record based on the current user's email
+            user_profile = app_tables.fin_user_profile.get(email_user=user['email'])
+            # Check if the user profile record is found
+            if user_profile:
+                # Access the user ID from the user profile record
+                self.user_mail = user_profile['email_user']
+                self.user_name = user_profile['full_name']
+                print(self.user_mail)
+                print(self.user_name)
 
     def save_all_fields_click(self, **event_args):
         email = self.admin_email.text 
@@ -29,10 +43,12 @@ class add_admin(add_adminTemplate):
         retype = self.re_enter_password.text
         created_date = date.today()
         status = True
+        ref_admin_name = self.user_name
+        ref_admin_email = self.user_mail
         
         if email and name and mobile_no and dob and gender and role and password:
             if password == retype:  # Check if passwords match
-                result = admin.add_admin_details(email, name, mobile_no, dob, gender, role, password, created_date, status)
+                result = admin.add_admin_details(email, name, mobile_no, dob, gender, role, password, created_date, status,ref_admin_name,ref_admin_email)
                 if result:
                     self.label_7.text = "Data added Successfully"
                 else:
