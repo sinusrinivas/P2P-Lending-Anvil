@@ -27,3 +27,4 @@ class ItemTemplate62(ItemTemplate62Template):
     selected_row=self.item
     open_form('lendor_registration_form.dashboard.today_dues.View_Details',selected_row=selected_row)
 
+
