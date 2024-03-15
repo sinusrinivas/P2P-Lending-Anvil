@@ -109,3 +109,10 @@ def hash_password(password):
     # Hash the password using bcrypt
     hashed_password = bcrypt.hashpw(password.encode(), bcrypt.gensalt())
     return hashed_password.decode()
+
+# for view admins
+@anvil.server.callable
+def get_admin_users():
+    # Fetch data from the fin_admin_users table
+    admin_users = app_tables.fin_admin_users.search()
+    return admin_users

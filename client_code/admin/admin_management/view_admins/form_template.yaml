@@ -16,6 +16,7 @@ components:
       - {id: VJQQOR, title: Email, data_key: column_2, $$hashKey: 'object:1848'}
       - {id: OJLQEN, title: Admin Role, data_key: column_3, expand: false, $$hashKey: 'object:1849'}
       - {id: UKTBYS, title: Ref Admin Name, data_key: column_4, $$hashKey: 'object:1930'}
+      - {id: VKAVKF, title: Joined Date, data_key: column_5, $$hashKey: 'object:395'}
       auto_header: true
       tooltip: ''
       border: ''
@@ -29,7 +30,7 @@ components:
       background: ''
     type: DataGrid
     components:
-    - name: repeating_panel_1
+    - name: repeating_panel
       properties: {item_template: admin.admin_management.view_admins.RowTemplate41}
       type: RepeatingPanel
     layout_properties: {grid_position: 'DCVZXG,PCTYWQ'}
