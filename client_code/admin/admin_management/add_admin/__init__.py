@@ -11,13 +11,14 @@ from datetime import date
 from .... import admin
 
 
-
 class add_admin(add_adminTemplate):
     def __init__(self, **properties):
         # Set Form properties and Data Bindings.
         self.init_components(**properties)
         # self.user_id = main_form_module.userId
         self.date_lable.text = date.today().strftime('%d %b %Y')
+        self.customer_id = anvil.server.call('generate_admin_id')
+        print(self.customer_id)
         # Any code you write here will run before the form opens.
         user = anvil.users.get_user()
         # Check if a user is logged in
@@ -40,15 +41,18 @@ class add_admin(add_adminTemplate):
         gender = self.gender.selected_value
         role = self.role.selected_value
         password = self.create_password_text.text
+        hashed_password = anvil.server.call('hash_password', password)
         retype = self.re_enter_password.text
         created_date = date.today()
         status = True
         ref_admin_name = self.user_name
         ref_admin_email = self.user_mail
+        customer_id = self.customer_id
         
         if email and name and mobile_no and dob and gender and role and password:
             if password == retype:  # Check if passwords match
-                result = admin.add_admin_details(email, name, mobile_no, dob, gender, role, password, created_date, status,ref_admin_name,ref_admin_email)
+                hashed_password = hashlib.sha256(password.encode()).hexdigest()
+                result = admin.add_admin_details(email, name, mobile_no, dob, gender, role, hashed_password, created_date, status, ref_admin_name, ref_admin_email, customer_id)
                 if result:
                     self.label_7.text = "Data added Successfully"
                 else:
