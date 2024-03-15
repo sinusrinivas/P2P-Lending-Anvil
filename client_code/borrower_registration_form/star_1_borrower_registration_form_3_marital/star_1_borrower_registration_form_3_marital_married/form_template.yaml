@@ -336,6 +336,7 @@ components:
       background: 'theme:On Primary', bold: false, underline: false}
     type: TextBox
     layout_properties: {row: CEITXX, width_xs: 5, col_xs: 6}
+    event_bindings: {pressed_enter: spouse_mbl_no_text_pressed_enter}
   - name: mbl_label_3
     properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
       visible: true, text: '', font_size: 12, font: '', spacing_above: none, icon_align: left,

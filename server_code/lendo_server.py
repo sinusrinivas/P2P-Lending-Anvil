@@ -86,7 +86,7 @@ def add_lendor_institutional_form_2(business_type,empolyees_working,year_estd,us
     row[0]['business_type'] = business_type
     row[0]['employees_working'] = empolyees_working
     row[0]['year_estd'] = year_estd
-    row[0]['month_estd'] = months
+    row[0]['business_age'] = months
 @anvil.server.callable
 def add_lendor_institutional_form_3(industry_type,six_monthturnover,last_six_statments,user_id):
   row = app_tables.fin_user_profile.search(customer_id = user_id)

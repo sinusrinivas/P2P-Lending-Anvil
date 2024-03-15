@@ -38,6 +38,8 @@ class basic_registration_form(basic_registration_formTemplate):
             self.text_box_4.text = user_data['pincode']
             self.text_box_5.text = user_data['state']
             self.text_box_6.text = user_data['country']
+            self.drop_down_1.selected_value = user_data['present_address']
+            self.drop_down_2.selected_value = user_data['duration_at_address']
             user_data.update()
 
             options = app_tables.fin_gender.search()
