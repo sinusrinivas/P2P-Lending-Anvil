@@ -356,11 +356,11 @@ components:
       role: null
       align: full
       tooltip: ''
-      placeholder: ''
+      placeholder: Select One
       border: ''
       enabled: true
       foreground: ''
-      items: [Select one]
+      items: ['']
       visible: true
       font_size: null
       font: ''

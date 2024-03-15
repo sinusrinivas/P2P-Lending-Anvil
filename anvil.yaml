@@ -830,6 +830,12 @@ db_schema:
     - name: self_employment
       admin_ui: {width: 200}
       type: string
+    - name: wheeler_loans
+      admin_ui: {width: 200, order: 80.5}
+      type: string
+    - name: credit_card_loans
+      admin_ui: {width: 200, order: 80.25}
+      type: string
     title: fin_user_profile
   fin_admin_beseem_categories:
     client: full

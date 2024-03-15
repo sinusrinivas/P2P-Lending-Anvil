@@ -10,6 +10,7 @@ class star_1_borrower_registration_form_3_marital_married(star_1_borrower_regist
         # Set Form properties and Data Bindings.
         self.init_components(**properties)
         self.userId = user_id
+
          #self.userId = user_id
         self.marital_status = marital_status
 
