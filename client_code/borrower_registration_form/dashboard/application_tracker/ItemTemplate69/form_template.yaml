@@ -2,7 +2,7 @@ is_package: true
 container: {type: ColumnPanel}
 components:
 - name: xy_panel_1
-  properties: {height: 374.99993896484375, role: outlined-card, width: 920.222}
+  properties: {height: 374.99993896484375, role: outlined-card, width: 964.222}
   type: XYPanel
   layout_properties: {grid_position: 'ZTIDSK,SMSLVN'}
   components:
@@ -75,15 +75,18 @@ components:
       foreground: grey}
     type: Label
     layout_properties: {x: 0, y: 97.1500244140625, width: 938.4}
+  - type: TextArea
+    properties: {role: null, align: left, height: 56, tooltip: '', placeholder: '',
+      border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
+      auto_expand: false, font: '', spacing_above: small, spacing_below: small, italic: false,
+      background: white, bold: false, underline: false}
+    name: product_details
+    layout_properties: {x: 358.22503662109375, y: 37.53753662109375, width: 563.8}
+    data_bindings:
+    - {property: text, code: 'self.item[''product_description'']', writeback: true}
   - name: product
     properties: {}
     type: Label
-    layout_properties: {x: 383.2250213623047, y: 11, width: 200}
+    layout_properties: {x: 358.2249984741211, y: 11, width: 200}
     data_bindings:
     - {property: text, code: 'self.item[''product_name'']', writeback: false}
-  - name: product_details
-    properties: {}
-    type: Label
-    layout_properties: {x: 383.22499084472656, y: 40.112548828125, width: 495}
-    data_bindings:
-    - {property: text, code: 'self.item[''product_description'']', writeback: false}
