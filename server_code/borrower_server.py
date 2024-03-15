@@ -274,8 +274,12 @@ def get_user_points(id):
         gender = user['gender'].lower() 
         qualification = user['qualification'].lower()  
         marital_status = user['marital_status'].lower()  
-        profession = user['profficen'].lower()
+        profession = user['profession'].lower()
         user_age = user['user_age']
+        organization_type = user['organization_type'].lower()
+        present_address = user['present_address'].lower()
+        duration_at_address = user['duration_at_address']
+        
 
         # Initialize user points
         user_points = 0
