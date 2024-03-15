@@ -20,9 +20,9 @@ class edit_profession(edit_professionTemplate):
   def button_1_click(self, **event_args):
     """This method is called when the button is clicked"""
     update = self.text_box_1.text
-    valid_statuses = ['Student', 'Employee', 'Business']
+    valid_statuses = ['Student', 'Employee', 'Self Employment']
     if update not in valid_statuses:
-        alert("Please enter a valid marital status: 'Student', 'Employee', 'Business'.")
+        alert("Please enter a valid marital status: 'Student', 'Employee', 'Self Employment'.")
         return
         # Update the 'borrower_gender' field in the database
     self.selected_row['borrower_profession'] = update

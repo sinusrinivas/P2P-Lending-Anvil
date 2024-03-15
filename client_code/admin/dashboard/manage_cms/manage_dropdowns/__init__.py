@@ -16,12 +16,12 @@ class manage_dropdowns(manage_dropdownsTemplate):
 
   def button_2_click(self, **event_args):
     """This method is called when the button is clicked"""
-    self.repeating_panel_1.visible = False
+    
     open_form('admin.dashboard.manage_cms.add_borrower_dropdown_details')
 
   def button_2_copy_click(self, **event_args):
     """This method is called when the button is clicked"""
-    self.column_panel_02.visible = False
+    
     open_form('admin.dashboard.manage_cms.add_lender_dropdown_details')
 
   def button_1_copy_3_click(self, **event_args):
