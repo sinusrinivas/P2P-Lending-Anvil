@@ -40,5 +40,6 @@ def add_admin_details(email,name,mobile_no,dob,gender,role,password,created_date
   else:
     app_tables.users.add_row(email=email,enabled=True,password_hash=password)
     app_tables.fin_admin_users.add_row(admin_email=email,admin_role=role,full_name=name, mobile_no=mobile_no, join_date = created_date, gender=gender, status=status, ref_admin_name=ref_admin_name, ref_admin_email=ref_admin_email )
+    app_tables.fin_user_profile.add_row(full_name=name, email_user=email, last_confirm = True,usertype =role,gender=gender, mobile = strmobile_no,registration_approve = True,   )
     return True   
 
