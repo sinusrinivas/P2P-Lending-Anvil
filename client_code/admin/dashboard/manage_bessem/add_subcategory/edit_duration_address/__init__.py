@@ -1,4 +1,4 @@
-from ._anvil_designer import edit_marritalTemplate
+from ._anvil_designer import edit_duration_addressTemplate
 from anvil import *
 import anvil.server
 import anvil.google.auth, anvil.google.drive
@@ -8,7 +8,7 @@ import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 
-class edit_marrital(edit_marritalTemplate):
+class edit_duration_address(edit_duration_addressTemplate):
   def __init__(self, selected_row, **properties):
     self.init_components(**properties)
 
@@ -19,9 +19,6 @@ class edit_marrital(edit_marritalTemplate):
     self.text_box_2.text = selected_row['min_points']
     self.text_box_2.enabled = True  # Make text_box_2 editable
 
-    self.text_box_3.text = selected_row['age']
-    self.text_box_3.enabled = True
-
     # Store the selected row for later use
     self.selected_row = selected_row
 
@@ -30,27 +27,25 @@ class edit_marrital(edit_marritalTemplate):
     # Get the updated values from the input components
     updated_sub_category = self.text_box_1.text
     updated_points = int(self.text_box_2.text)
-    updated_age = self.text_box_3.text
 
     # Update the existing row in the product_categories table
     if self.selected_row is not None:
       self.selected_row['sub_category'] = updated_sub_category
       self.selected_row['min_points'] = updated_points
-      self.selected_row['age'] = updated_age
 
       # Save changes to the database
       self.selected_row.update()
 
-      existing_min_points = [row["min_points"] for row in app_tables.fin_admin_beseem_categories.search(group_name="marital_status")]
+      existing_min_points = [row["min_points"] for row in app_tables.fin_admin_beseem_categories.search(group_name="duration_at_address")]
       max_points = max(existing_min_points + [updated_points])
 
-      existing_group_row  = app_tables.fin_admin_beseem_groups.get(group_name="marital_status")
+      existing_group_row  = app_tables.fin_admin_beseem_groups.get(group_name="duration_at_address")
       if existing_group_row:
         existing_group_row['max_points'] = max_points
         existing_group_row.update()
       else:
         new_group_row = app_tables.fin_admin_beseem_groups.add_row(
-          group_name="marital_status", max_points=max_points)
+          group_name="duration_at_address", max_points=max_points)
 
       alert("Changes saved successfully!")
       open_form('admin.dashboard.manage_bessem.add_subcategory')
@@ -62,16 +57,16 @@ class edit_marrital(edit_marritalTemplate):
       # Delete the row directly on the client side
       self.selected_row.delete()
 
-      existing_min_points = [row["min_points"] for row in app_tables.fin_admin_beseem_categories.search(group_name='marital_status')]
+      existing_min_points = [row["min_points"] for row in app_tables.fin_admin_beseem_categories.search(group_name="duration_at_address")]
       max_points = max(existing_min_points)
 
-      existing_group_row  = app_tables.fin_admin_beseem_groups.get(group_name="marital_status")
+      existing_group_row  = app_tables.fin_admin_beseem_groups.get(group_name="duration_at_address")
       if existing_group_row:
         existing_group_row['max_points'] = max_points
         existing_group_row.update()
       else:
         new_group_row = app_tables.fin_admin_beseem_groups.add_row(
-          group_name="marital_status", max_points=max_points)
+          group_name="duration_at_address", max_points=max_points)
 
       # Optionally, navigate to a different form or perform other actions
       open_form('admin.dashboard.manage_bessem.add_subcategory')
@@ -82,5 +77,4 @@ class edit_marrital(edit_marritalTemplate):
 
   def button_1_copy_3_click(self, **event_args):
     """Cancel button click event"""
-    # Close the form without saving changes
     open_form('admin.dashboard.manage_bessem.add_subcategory')
