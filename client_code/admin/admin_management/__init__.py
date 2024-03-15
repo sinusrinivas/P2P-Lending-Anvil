@@ -7,7 +7,7 @@ import anvil.users
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
-from .add_people import add_people
+from .add_admin import add_admin
 
 class admin_management(admin_managementTemplate):
   def __init__(self, **properties):
@@ -24,11 +24,11 @@ class admin_management(admin_managementTemplate):
     open_form('bank_users.main_form')
 
   def add_peopless(self, **event_args):
-    self.content_panel.add_component(add_people(),full_width_row=True)
+    self.content_panel.add_component(add_admin(),full_width_row=True)
 
   def button_1_copy_click(self, **event_args):
     """This method is called when the button is clicked"""
-    pass
+    open_form('admin.admin_management.view_admins')
     
 
   
