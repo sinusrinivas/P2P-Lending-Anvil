@@ -4,7 +4,7 @@ components:
 - name: xy_panel_1
   properties: {height: 451.5454406738281, role: outlined-card}
   type: XYPanel
-  layout_properties: {grid_position: 'EIPCQK,JFGHEF'}
+  layout_properties: {grid_position: 'DSYIQH,PBOBNJ'}
   components:
   - name: image_1
     properties: {height: 63.399932861328125, source: 'https://freesvg.org/img/abstract-user-flat-4.png'}
@@ -105,12 +105,14 @@ components:
   - name: product
     properties: {}
     type: Label
-    layout_properties: {x: 358.23751068115234, y: 16, width: 200}
+    layout_properties: {x: 365.2250061035156, y: 10, width: 372}
     data_bindings:
     - {property: text, code: 'self.item[''product_name'']', writeback: false}
-  - name: product_details
-    properties: {}
-    type: Label
-    layout_properties: {x: 358.23751068115234, y: 41.1500244140625, width: 428}
+  - type: RichText
+    properties: {role: null, align: left, tooltip: '', enable_slots: true, border: '',
+      foreground: '', visible: true, font_size: null, content: '', font: '', spacing_above: small,
+      spacing_below: small, data: null, background: white, format: markdown}
+    name: product_details
+    layout_properties: {x: 365.2249984741211, y: 43.38751220703125, width: 500}
     data_bindings:
-    - {property: text, code: 'self.item[''product_description'']', writeback: false}
+    - {property: data, code: 'self.item[''product_description'']'}
