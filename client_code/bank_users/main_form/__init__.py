@@ -41,7 +41,7 @@ class main_form(main_formTemplate):
                 main_form_module.userId = user_module.find_user_id(user_email)
                 if user_profile_e is not None:
                     user_type = user_profile_e['usertype']
-                    if user_type == 'admin':
+                    if user_type == 'admin' or user_type == 'super admin':
                         open_form('admin.dashboard')
                     elif user_type == 'lender':
                         open_form('lendor_registration_form.dashboard')

@@ -10,6 +10,7 @@ from anvil.tables import app_tables
 from datetime import date
 from .... import admin
 
+
 class add_people(add_peopleTemplate):
     def __init__(self, **properties):
         # Set Form properties and Data Bindings.
