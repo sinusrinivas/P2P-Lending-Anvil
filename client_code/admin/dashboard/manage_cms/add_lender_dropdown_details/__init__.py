@@ -155,9 +155,9 @@ class add_lender_dropdown_details(add_lender_dropdown_detailsTemplate):
     """This method is called when the button is clicked"""
     entered_data = self.text_box_2.text
     # Check if the entered status is valid
-    valid_statuses = ['10th class', 'Intermediate / PUC', "Bachelors", "Masters", 'PhD']
+    valid_statuses = ['10th standard', '12th standard', "Bachelor's degree", "Master's degree", 'PhD']
     if entered_data not in valid_statuses:
-        alert("Please enter a valid qualification: '10th class', 'Intermediate / PUC', 'Bachelors', 'Masters', 'PhD'.")
+        alert("Please enter a valid qualification: '10th standard', '12th standard', 'Bachelor's degree', 'Master's degree', 'PhD'.")
         return
     new_row = app_tables.fin_lendor_qualification.add_row(l=entered_data)
     self.text_box_2.text = ' '
