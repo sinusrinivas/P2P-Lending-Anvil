@@ -1,4 +1,4 @@
-from ._anvil_designer import add_peopleTemplate
+from ._anvil_designer import add_adminTemplate
 from anvil import *
 import anvil.server
 import anvil.google.auth, anvil.google.drive
@@ -11,7 +11,7 @@ from datetime import date
 from .... import admin
 
 
-class add_people(add_peopleTemplate):
+class add_admin(add_adminTemplate):
     def __init__(self, **properties):
         # Set Form properties and Data Bindings.
         self.init_components(**properties)
