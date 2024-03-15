@@ -21,7 +21,7 @@ components:
     type: Label
     layout_properties: {x: 78.53748779371381, y: 27.950009156018496, width: 200}
     data_bindings:
-    - {property: text, code: 'self.item[''borrower_customer_id'']', writeback: false}
+    - {property: text, code: 'self.item[''mobile'']', writeback: false}
   - name: outlined_button_1
     properties: {text: View Loan Details, role: outlined-button, align: center, font_size: null,
       background: '#05264d', foreground: white, bold: true}
@@ -70,19 +70,24 @@ components:
     type: Label
     layout_properties: {x: 735.3750152587891, y: 230.00001525878906, width: 200}
   - name: label_3
-    properties: {text: '---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------',
-      foreground: grey}
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: grey,
+      visible: true, text: '--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------',
+      font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small,
+      italic: false, background: '', bold: false, underline: false, icon: ''}
     type: Label
-    layout_properties: {x: 3.0500030517578125, y: 87.1500244140625, width: 938.4}
+    layout_properties: {x: 3.050018310546875, y: 87.1500244140625, width: 938.4}
+  - type: TextArea
+    properties: {role: null, align: left, height: 56, tooltip: '', placeholder: '',
+      border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
+      auto_expand: false, font: '', spacing_above: small, spacing_below: small, italic: false,
+      background: white, bold: false, underline: false}
+    name: product_details
+    layout_properties: {x: 358.22503662109375, y: 37.53753662109375, width: 563.8}
+    data_bindings:
+    - {property: text, code: 'self.item[''product_description'']', writeback: true}
   - name: product
     properties: {}
     type: Label
-    layout_properties: {x: 385.23751068115234, y: 11, width: 200}
+    layout_properties: {x: 358.22499084472656, y: 11, width: 200}
     data_bindings:
     - {property: text, code: 'self.item[''product_name'']', writeback: false}
-  - name: product_details
-    properties: {}
-    type: Label
-    layout_properties: {x: 385.23751068115234, y: 41.1500244140625, width: 403}
-    data_bindings:
-    - {property: text, code: 'self.item[''product_description'']', writeback: false}
