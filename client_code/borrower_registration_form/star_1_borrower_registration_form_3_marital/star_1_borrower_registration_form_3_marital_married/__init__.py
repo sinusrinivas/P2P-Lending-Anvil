@@ -22,6 +22,10 @@ class star_1_borrower_registration_form_3_marital_married(star_1_borrower_regist
             self.radio_button_3.visible = False
             self.button_1.visible = True
 
+        options = app_tables.fin_spouse_profession.search()
+        option_strings = [str(option['spouse_profession']) for option in options]
+        self.drop_down_1.items = option_strings
+
     def show_spouse_controls(self):
         # Show the spouse radio button and related panels
         self.grid_panel_1.visible = False
@@ -167,7 +171,11 @@ class star_1_borrower_registration_form_3_marital_married(star_1_borrower_regist
         spouse_dob = self.date_picker_3.date
         spouse_mbl_no_text = self.spouse_mbl_no_text.text
         spouse_mbl_no = int(spouse_mbl_no_text) if spouse_mbl_no_text.strip().isdigit() else None
-        spouse_profession = self.spouse_profession_text.text
+
+        # options = app_tables.fin_spouse_profession.search()
+        # option_strings = [str(option['spouse_profession']) for option in options]
+        # self.drop_down_1.items = option_strings
+        spouse_profession = self.drop_down_1.selected_value
         spouse_company = self.spouse_companyname_text.text
         anual_earning = self.annual_earning_text.text
 

@@ -351,13 +351,28 @@ components:
       underline: false, icon: ''}
     type: Label
     layout_properties: {row: HBHHFF, width_xs: 4, col_xs: 2}
-  - name: spouse_profession_text
-    properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: '',
-      border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
-      font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
-      background: 'theme:On Primary', bold: false, underline: false}
-    type: TextBox
-    layout_properties: {row: HBHHFF, width_xs: 5, col_xs: 6}
+  - type: DropDown
+    properties:
+      role: null
+      align: full
+      tooltip: ''
+      placeholder: ''
+      border: ''
+      enabled: true
+      foreground: ''
+      items: [Select one]
+      visible: true
+      font_size: null
+      font: ''
+      spacing_above: small
+      spacing_below: small
+      italic: false
+      background: theme:On Primary
+      bold: false
+      underline: false
+      include_placeholder: true
+    name: drop_down_1
+    layout_properties: {row: HBHHFF, width_xs: 5, col_xs: 6, width: 373.214}
   - name: label_3_copy_1_copy_2_copy_copy
     properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
       visible: true, text: 'Spouse Company Name :

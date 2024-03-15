@@ -1330,6 +1330,14 @@ db_schema:
       admin_ui: {width: 200, order: 0}
       type: string
     title: fin_lendor_qualification
+  fin_spouse_profession:
+    client: full
+    server: full
+    columns:
+    - name: spouse_profession
+      admin_ui: {width: 200, order: 0}
+      type: string
+    title: fin_spouse_profession
   fin_lendor_lending_period:
     client: full
     server: full
