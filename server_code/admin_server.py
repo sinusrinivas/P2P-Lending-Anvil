@@ -127,7 +127,7 @@ def get_admin_details(email):
             'admin_role': admin_user['admin_role'],
             'full_name': admin_user['full_name'],
             'mobile_no': admin_user['mobile_no'],
-            # Add more fields as needed
+            'ref_admin_name': admin_user['ref_admin_name']
         }
     else:
         return None
