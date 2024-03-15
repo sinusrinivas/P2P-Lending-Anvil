@@ -72,19 +72,24 @@ components:
     data_bindings:
     - {property: text, code: 'self.item[''loan_disbursed_timestamp'']'}
   - name: label_3
-    properties: {text: '---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------',
-      foreground: grey}
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: grey,
+      visible: true, text: '--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------',
+      font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small,
+      italic: false, background: '', bold: false, underline: false, icon: ''}
     type: Label
-    layout_properties: {x: 10, y: 84.14990234375, width: 938.4}
+    layout_properties: {x: 10, y: 84.13720703125, width: 938.4}
+  - type: TextArea
+    properties: {role: null, align: left, height: 56, tooltip: '', placeholder: '',
+      border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
+      auto_expand: false, font: '', spacing_above: small, spacing_below: small, italic: false,
+      background: white, bold: false, underline: false}
+    name: product_details
+    layout_properties: {x: 358.22503662109375, y: 37.53753662109375, width: 563.8}
+    data_bindings:
+    - {property: text, code: 'self.item[''product_description'']', writeback: true}
   - name: product
     properties: {}
     type: Label
-    layout_properties: {x: 393.23751068115234, y: 18, width: 200}
+    layout_properties: {x: 358.2249984741211, y: 18, width: 200}
     data_bindings:
     - {property: text, code: 'self.item[''product_name'']', writeback: false}
-  - name: product_details
-    properties: {}
-    type: Label
-    layout_properties: {x: 393.23751068115234, y: 38.13720703125, width: 445}
-    data_bindings:
-    - {property: text, code: 'self.item[''product_description'']', writeback: false}

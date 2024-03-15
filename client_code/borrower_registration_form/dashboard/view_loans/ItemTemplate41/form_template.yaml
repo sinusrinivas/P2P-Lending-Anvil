@@ -76,12 +76,15 @@ components:
   - name: product
     properties: {}
     type: Label
-    layout_properties: {x: 350.23751068115234, y: 7, width: 200}
+    layout_properties: {x: 355.92501068115234, y: 0, width: 200}
     data_bindings:
     - {property: text, code: 'self.item[''product_name'']', writeback: false}
-  - name: product_details
-    properties: {}
-    type: Label
-    layout_properties: {x: 350.23751068115234, y: 27.95001220703125, width: 529}
+  - type: TextArea
+    properties: {role: null, align: left, height: 56, tooltip: '', placeholder: '',
+      border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
+      auto_expand: false, font: '', spacing_above: small, spacing_below: small, italic: false,
+      background: white, bold: false, underline: false}
+    name: product_details
+    layout_properties: {x: 355.92501068115234, y: 28.35003662109375, width: 563.8}
     data_bindings:
-    - {property: text, code: 'self.item[''product_description'']', writeback: false}
+    - {property: text, code: 'self.item[''product_description'']', writeback: true}

@@ -76,15 +76,18 @@ components:
       foreground: grey}
     type: Label
     layout_properties: {x: 3.0130015258789626, y: 86.14990234375, width: 938.4}
+  - type: TextArea
+    properties: {role: null, align: left, height: 56, tooltip: '', placeholder: '',
+      border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
+      auto_expand: false, font: '', spacing_above: small, spacing_below: small, italic: false,
+      background: white, bold: false, underline: false}
+    name: product_details
+    layout_properties: {x: 358.22503662109375, y: 37.53753662109375, width: 563.8}
+    data_bindings:
+    - {property: text, code: 'self.item[''product_description'']', writeback: true}
   - name: product
     properties: {}
     type: Label
-    layout_properties: {x: 369.23751068115234, y: 11, width: 200}
+    layout_properties: {x: 358.2249984741211, y: 13, width: 200}
     data_bindings:
     - {property: text, code: 'self.item[''product_name'']'}
-  - name: product_details
-    properties: {}
-    type: Label
-    layout_properties: {x: 369.23751068115234, y: 40.1376953125, width: 525}
-    data_bindings:
-    - {property: text, code: 'self.item[''product_description'']', writeback: false}
