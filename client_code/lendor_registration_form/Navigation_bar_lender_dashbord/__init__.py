@@ -31,3 +31,6 @@ class Navigation_bar_lender_dashbord(Navigation_bar_lender_dashbordTemplate):
   def help_link_click(self, **event_args):
     """This method is called when the link is clicked"""
     pass
+
+  def About_Us_click(self, **event_args):
+    open_form('lendor_registration_form.dashboard.dasboard_about')

@@ -16,7 +16,7 @@ class Navigation_form_dashboard(Navigation_form_dashboardTemplate):
     # Any code you write here will run before the form opens.
 
   def borrower_dashboard_home_linkhome_borrower_registration_button_copy_1_click(self, **event_args):
-    open_form('borrower_registration_form.dashboard')
+    open_form("borrower_registration_form.dashboard")
 
   def contact_main_form_link_click(self, **event_args):
     open_form("borrower_registration_form.dashboard.dashboard_contact")
@@ -29,7 +29,6 @@ class Navigation_form_dashboard(Navigation_form_dashboardTemplate):
     """This method is called when the link is clicked"""
     pass
 
-  def borrower_dashboard_report_problem_linkclick(self, **event_args):
-    """This method is called when the link is clicked"""
-    pass
 
+  def About_Us_click(self, **event_args):
+    open_form("borrower_registration_form.dashboard.dashboard_about")
