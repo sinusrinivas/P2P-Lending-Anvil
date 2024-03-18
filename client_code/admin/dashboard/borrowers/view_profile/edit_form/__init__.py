@@ -11,7 +11,7 @@ class edit_form(edit_formTemplate):
     self.init_components(**properties)
 
     # Any code you write here will run before the form opens.
-    self.data = tables.app_tables.user_profile.search()
+    self.data = tables.app_tables.fin_user_profile.search()
   
 
     self.id_list = []
@@ -77,7 +77,7 @@ class edit_form(edit_formTemplate):
     a = -1
     for i in self.data:
       a+=1
-      self.id_list.append(i['coustmer_id'])
+      self.id_list.append(i['customer_id'])
       self.name_list.append(i['full_name'])
       self.status_list.append(i['profile_status'])
       self.gender_list.append(i['gender'])
@@ -91,7 +91,7 @@ class edit_form(edit_formTemplate):
       self.mobile_check_list.append(i['mobile_check'])
       self.mother_status_list.append(i['marital_status'])
       self.mother_tongue_list.append(i['mouther_tounge'])
-      self.date_marrige_list.append(i['Date_mariage'])
+      # self.date_marrige_list.append(i['Date_mariage'])
       self.space_name_list.append(i['spouse_name'])
       self.about_list.append(i['about'])
       self.alets_list.append(i['alerts'])
@@ -108,7 +108,7 @@ class edit_form(edit_formTemplate):
       self.spouse_number_list.append(i['spouse_mobile'])
       self.company_name_list.append(i['spouse_company_name'])
       self.company_adress_list.append(i['spouse_company_address'])
-      self.proffic_list.append(i['spouse_profficen'])
+      self.proffic_list.append(i['spouse_profession'])
       self.user_type_list.append(i['usertype'])
       self.approve_list.append(i['registration_approve'])
       self.mobile_list.append(i['mobile'])
@@ -125,9 +125,9 @@ class edit_form(edit_formTemplate):
       self.account_type.append(i['account_type'])
       self.account_number.append(i['account_number'])
       self.account_bank_branch.append(i['account_bank_branch'])
-      self.ifsc_code.append(i['ifsc_code'])
+      # self.ifsc_code.append(i['ifsc_code'])
       self.salary_type.append(i['salary_type'])
-      self.select_bank.append(i['select_bank'])
+      # self.select_bank.append(i['select_bank'])
       self.net_bank.append(i['net_bank'])
       self.father_name.append(i['father_name'])
       self.father_age.append(i['father_age'])
@@ -154,7 +154,7 @@ class edit_form(edit_formTemplate):
       self.text_box_13.text = bool(self.mobile_check_list[c])
       self.text_box_14.text = self.mother_tongue_list[c]
       self.text_box_15.text = self.mother_status_list[c]
-      self.date_picker_2.text = self.date_marrige_list[c]
+      # self.date_picker_2.text = self.date_marrige_list[c]
       self.text_box_17.text = self.space_name_list[c]
       self.text_box_24.text = self.about_list[c]
       self.text_box_26.text = bool(self.alets_list[c])
@@ -186,9 +186,9 @@ class edit_form(edit_formTemplate):
       self.text_box_41.text = self.account_type[c]
       self.text_box_42.text = self.account_number[c]
       self.text_box_43.text = self.account_bank_branch[c]
-      self.text_box_44.text = self.ifsc_code[c]
+      # self.text_box_44.text = self.ifsc_code[c]
       self.text_box_45.text = self.salary_type[c]
-      self.text_box_46.text = self.select_bank[c]
+      # self.text_box_46.text = self.select_bank[c]
       self.text_box_47.text = self.net_bank[c]
       self.text_box_48.text = self.father_name[c]
       self.text_box_49.text = self.father_age[c]
@@ -205,11 +205,11 @@ class edit_form(edit_formTemplate):
 
   def button_2_click(self, **event_args):
     """This method is called when the button is clicked"""
-    data = tables.app_tables.user_profile.search()
+    data = tables.app_tables.fin_user_profile.search()
 
     id_list = []
     for i in self.data:
-      id_list.append(i['coustmer_id'])
+      id_list.append(i['customer_id'])
 
     if self.get in id_list:
       a = id_list.index(self.get)
@@ -226,12 +226,12 @@ class edit_form(edit_formTemplate):
       data[a]['mobile_check'] = bool(self.text_box_13.text)
       data[a]['mouther_tounge'] = self.text_box_14.text
       data[a]['marital_status'] = self.text_box_15.text
-      data[a]['Date_mariage'] = self.date_picker_2.date
+      # data[a]['Date_mariage'] = self.date_picker_2.date
       data[a]['spouse_name'] = self.text_box_17.text
       data[a]['spouse_mobile'] = self.text_box_18.text
       data[a]['spouse_company_name'] = self.text_box_19.text
       data[a]['spouse_company_address'] = self.text_box_20.text
-      data[a]['spouse_profficen'] = self.text_box_21.text
+      data[a]['spouse_profession'] = self.text_box_21.text
       data[a]['usertype'] = self.text_box_22.text
       data[a]['registration_approve'] = bool(self.text_box_23.text)
       data[a]['about'] = self.text_box_24.text
@@ -258,9 +258,9 @@ class edit_form(edit_formTemplate):
       data[a]['account_type'] = self.text_box_41.text
       data[a]['account_number'] = self.text_box_42.text
       data[a]['account_bank_branch'] = self.text_box_43.text
-      data[a]['ifsc_code'] = self.text_box_44.text
+      # data[a]['ifsc_code'] = self.text_box_44.text
       data[a]['salary_type'] = self.text_box_45.text
-      data[a]['select_bank'] = self.text_box_46.text
+      # data[a]['select_bank'] = self.text_box_46.text
       data[a]['net_bank'] = self.text_box_47.text
       data[a]['father_name'] = self.text_box_48.text
       data[a]['father_age'] = self.text_box_49.text

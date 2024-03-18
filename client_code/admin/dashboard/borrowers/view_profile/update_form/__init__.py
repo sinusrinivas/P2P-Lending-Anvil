@@ -18,10 +18,10 @@ class update_form(update_formTemplate):
     if self.text_box_2.text == "" or  self.text_box_3.text == "" or self.text_box_4.text == "" or self.text_box_5.text == ""  or self.text_box_7.text == "" or self.text_box_8.text == "" or self.text_box_9.text == "" or self.text_box_10.text == "" or self.text_box_12.text == "" or self.text_box_13.text == "" or self.text_box_14.text == "" or self.text_box_15.text == "" or self.text_box_17.text == "" or self.text_box_18.text == "" or self.text_box_19.text == "" or self.text_box_20.text == "" or self.text_box_21.text == "" or self.text_box_22.text == "" or self.text_box_23.text == "" or self.text_box_24.text == "" or self.text_box_25.text == "" or self.text_box_26.text == "" or self.text_box_27.text == "" or self.text_box_28.text == "" or self.text_box_29.text == "" or self.text_box_30.text == "" or self.text_box_32.text == "" or self.text_box_33.text == "" or self.text_box_34.text == "" or self.text_box_35.text == "" :
       Notification("Fill All Required Details").show()
     else:
-      data = tables.app_tables.user_profile.search()
+      data = tables.app_tables.fin_user_profi.search()
       id_list = []
       for i in data:
-        id_list.append(i['coustmer_id'])
+        id_list.append(i['customer_id'])
 
       if self.get in id_list:
         a = id_list.index(self.get)
@@ -38,12 +38,12 @@ class update_form(update_formTemplate):
         data[a]['mobile_check'] = bool(self.text_box_13.text)
         data[a]['mouther_tounge'] = self.text_box_14.text
         data[a]['marital_status'] = self.text_box_15.text
-        data[a]['Date_mariage'] = self.date_picker_2.date
+        #data[a]['Date_mariage'] = self.date_picker_2.date
         data[a]['spouse_name'] = self.text_box_17.text
         data[a]['spouse_mobile'] = self.text_box_18.text
         data[a]['spouse_company_name'] = self.text_box_19.text
         data[a]['spouse_company_address'] = self.text_box_20.text
-        data[a]['spouse_profficen'] = self.text_box_21.text
+        data[a]['spouse_profession'] = self.text_box_21.text
         data[a]['usertype'] = self.text_box_22.text
         data[a]['registration_approve'] = bool(self.text_box_23.text)
         data[a]['about'] = self.text_box_24.text
@@ -70,9 +70,9 @@ class update_form(update_formTemplate):
         data[a]['account_type'] = self.text_box_41.text
         data[a]['account_number'] = self.text_box_42.text
         data[a]['account_bank_branch'] = self.text_box_43.text
-        data[a]['ifsc_code'] = self.text_box_44.text
+        #data[a]['ifsc_code'] = self.text_box_44.text
         data[a]['salary_type'] = self.text_box_45.text
-        data[a]['select_bank'] = self.text_box_46.text
+        #data[a]['select_bank'] = self.text_box_46.text
         data[a]['net_bank'] = self.text_box_47.text
         data[a]['father_name'] = self.text_box_48.text
         data[a]['father_age'] = self.text_box_49.text
