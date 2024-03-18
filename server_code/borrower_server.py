@@ -51,12 +51,14 @@ def add_borrower_student(college_name,college_id,college_proof,college_address,u
     row[0]['college_proof']=college_proof
 
 @anvil.server.callable
-def add_borrower_step4(home_loan,other_loan,live_loan,user_id):
+def add_borrower_step4(home_loan,other_loan,live_loan,user_id,credit_card, wheeler):
   row = app_tables.fin_user_profile.search(customer_id=user_id)
   if row:
     row[0]['running_Home_Loan'] = home_loan
     row[0]['running_or_live loans']= live_loan
     row[0]['other_loan']=other_loan
+    row[0]['credit_card_loans']=credit_card
+    row[0]['wheeler_loans']=wheeler
     row[0]['form_count']=4
     
 @anvil.server.callable
