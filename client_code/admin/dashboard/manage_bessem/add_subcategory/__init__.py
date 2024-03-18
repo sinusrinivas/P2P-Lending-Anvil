@@ -163,23 +163,23 @@ class add_subcategory(add_subcategoryTemplate):
     """This method is called when the button is clicked"""
     entered_sub = self.text_box_12.text
     entered_min_pts = int(self.text_box_13.text)
-    new_row = app_tables.fin_admin_beseem_categories.add_row(group_name='oragnization_type',sub_category=entered_sub,min_points=entered_min_pts)
+    new_row = app_tables.fin_admin_beseem_categories.add_row(group_name='organization_type',sub_category=entered_sub,min_points=entered_min_pts)
     self.text_box_12.text = ' '
     self.text_box_13.text = ' '
     self.refresh()
 
-    existing_min_points = [row["min_points"] for row in app_tables.fin_admin_beseem_categories.search(group_name='oragnization_type')]
+    existing_min_points = [row["min_points"] for row in app_tables.fin_admin_beseem_categories.search(group_name='organization_type')]
 
     max_points = max(existing_min_points + [entered_min_pts])
 
-    existing_group_row  = app_tables.fin_admin_beseem_groups.get(group_name="oragnization_type")
+    existing_group_row  = app_tables.fin_admin_beseem_groups.get(group_name="organization_type")
     if existing_group_row:
       existing_group_row['max_points'] = max_points
       existing_group_row.update()
 
     else:
       new_group_row = app_tables.fin_admin_beseem_groups.add_row(
-            group_name="oragnization_type", max_points=max_points
+            group_name="organization_type", max_points=max_points
         )
 
   def present_address_button_click(self, **event_args):

@@ -1,4 +1,4 @@
-from ._anvil_designer import edit_oragnization_typeTemplate
+from ._anvil_designer import edit_organization_typeTemplate
 from anvil import *
 import anvil.server
 import anvil.google.auth, anvil.google.drive
@@ -8,7 +8,7 @@ import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 
-class edit_oragnization_type(edit_oragnization_typeTemplate):
+class edit_organization_type(edit_organization_typeTemplate):
   def __init__(self, selected_row, **properties):
     self.init_components(**properties)
 
@@ -36,16 +36,16 @@ class edit_oragnization_type(edit_oragnization_typeTemplate):
       # Save changes to the database
       self.selected_row.update()
 
-      existing_min_points = [row["min_points"] for row in app_tables.fin_admin_beseem_categories.search(group_name="oragnization_type")]
+      existing_min_points = [row["min_points"] for row in app_tables.fin_admin_beseem_categories.search(group_name="organization_type")]
       max_points = max(existing_min_points + [updated_points])
 
-      existing_group_row  = app_tables.fin_admin_beseem_groups.get(group_name="oragnization_type")
+      existing_group_row  = app_tables.fin_admin_beseem_groups.get(group_name="organization_type")
       if existing_group_row:
         existing_group_row['max_points'] = max_points
         existing_group_row.update()
       else:
         new_group_row = app_tables.fin_admin_beseem_groups.add_row(
-          group_name="oragnization_type", max_points=max_points)
+          group_name="organization_type", max_points=max_points)
 
       alert("Changes saved successfully!")
       open_form('admin.dashboard.manage_bessem.add_subcategory')
@@ -57,16 +57,16 @@ class edit_oragnization_type(edit_oragnization_typeTemplate):
       # Delete the row directly on the client side
       self.selected_row.delete()
 
-      existing_min_points = [row["min_points"] for row in app_tables.fin_admin_beseem_categories.search(group_name="oragnization_type")]
+      existing_min_points = [row["min_points"] for row in app_tables.fin_admin_beseem_categories.search(group_name="organization_type")]
       max_points = max(existing_min_points)
 
-      existing_group_row  = app_tables.fin_admin_beseem_groups.get(group_name="oragnization_type")
+      existing_group_row  = app_tables.fin_admin_beseem_groups.get(group_name="organization_type")
       if existing_group_row:
         existing_group_row['max_points'] = max_points
         existing_group_row.update()
       else:
         new_group_row = app_tables.fin_admin_beseem_groups.add_row(
-          group_name="oragnization_type", max_points=max_points)
+          group_name="organization_type", max_points=max_points)
 
       # Optionally, navigate to a different form or perform other actions
       open_form('admin.dashboard.manage_bessem.add_subcategory')
