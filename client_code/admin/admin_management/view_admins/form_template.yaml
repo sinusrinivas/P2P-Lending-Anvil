@@ -12,8 +12,8 @@ components:
     properties:
       role: null
       columns:
-      - {id: JKSDUP, title: Admin Name, data_key: column_1, $$hashKey: 'object:1847'}
-      - {id: VJQQOR, title: Email, data_key: column_2, $$hashKey: 'object:1848'}
+      - {id: JKSDUP, title: Admin Email, data_key: column_1, $$hashKey: 'object:1847'}
+      - {id: VJQQOR, title: Admin Name, data_key: column_2, $$hashKey: 'object:1848'}
       - {id: OJLQEN, title: Admin Role, data_key: column_3, expand: false, $$hashKey: 'object:1849'}
       - {id: UKTBYS, title: Ref Admin Name, data_key: column_4, $$hashKey: 'object:1930'}
       - {id: VKAVKF, title: Joined Date, data_key: column_5, $$hashKey: 'object:395'}
