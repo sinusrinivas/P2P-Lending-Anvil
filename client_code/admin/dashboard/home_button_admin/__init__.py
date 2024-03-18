@@ -18,3 +18,26 @@ class home_button_admin(home_button_adminTemplate):
   def button_1_click(self, **event_args):
     open_form('admin.dashboard')
 
+  def Admins_click(self, **event_args):
+    open_form('admin.admin_management')
+
+  def Borrowers_click(self, **event_args):
+    open_form('admin.dashboard.borrowers')
+
+  def Lenders_click(self, **event_args):
+    open_form('admin.dashboard.lenders')
+
+  def Management_click(self, **event_args):
+    open_form('admin.dashboard.loan_management')
+
+  def Products_click(self, **event_args):
+    open_form('admin.dashboard.manage_products')
+
+  def CMS_click(self, **event_args):
+    open_form('admin.dashboard.manage_cms')
+
+  def Bessem_click(self, **event_args):
+    open_form('admin.dashboard.manage_bessem')
+
+  def Settings_click(self, **event_args):
+    open_form('admin.dashboard.manage_settings')
