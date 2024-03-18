@@ -14,7 +14,7 @@ class view_profile_copy(view_profile_copyTemplate):
     self.init_components(**properties)
 
     # Any code you write here will run before the form opens.
-    self.data = tables.app_tables.user_profile.search()
+    self.data = tables.app_tables.fin_user_profile.search()
 
     self.id_list = []
     self.name_list = []
@@ -86,7 +86,7 @@ class view_profile_copy(view_profile_copyTemplate):
     a = -1
     for i in self.data:
       a+=1
-      self.id_list.append(i['coustmer_id'])
+      self.id_list.append(i['customer_id'])
       self.name_list.append(i['full_name'])
       self.status_list.append(i['profile_status'])
       self.gender_list.append(i['gender'])
@@ -100,7 +100,7 @@ class view_profile_copy(view_profile_copyTemplate):
       self.mobile_check_list.append(i['mobile_check'])
       self.mother_status_list.append(i['marital_status'])
       self.mother_tongue_list.append(i['mouther_tounge'])
-      self.date_marrige_list.append(i['Date_mariage'])
+      # self.date_marrige_list.append(i['Date_mariage'])
       self.space_name_list.append(i['spouse_name'])
       self.about_list.append(i['about'])
       self.alets_list.append(i['alerts'])
@@ -117,7 +117,7 @@ class view_profile_copy(view_profile_copyTemplate):
       self.spouse_number_list.append(i['spouse_mobile'])
       self.company_name_list.append(i['spouse_company_name'])
       self.company_adress_list.append(i['spouse_company_address'])
-      self.proffic_list.append(i['spouse_profficen'])
+      self.proffic_list.append(i['spouse_profession'])
       self.user_type_list.append(i['usertype'])
       self.approve_list.append(i['registration_approve'])
       self.mobile_list.append(i['mobile'])
@@ -134,9 +134,9 @@ class view_profile_copy(view_profile_copyTemplate):
       self.account_type.append(i['account_type'])
       self.account_number.append(i['account_number'])
       self.account_bank_branch.append(i['account_bank_branch'])
-      self.ifsc_code.append(i['ifsc_code'])
+      # self.ifsc_code.append(i['ifsc_code'])
       self.salary_type.append(i['salary_type'])
-      self.select_bank.append(i['select_bank'])
+      # self.select_bank.append(i['select_bank'])
       self.net_bank.append(i['net_bank'])
       self.father_name.append(i['father_name'])
       self.father_age.append(i['father_age'])
@@ -174,7 +174,7 @@ class view_profile_copy(view_profile_copyTemplate):
         self.label_50.text = self.mobile_check_list[b]
         self.label_51.text = self.mother_tongue_list[b]
         self.label_52.text = self.mother_status_list[b]
-        self.label_53.text = self.date_marrige_list[b]
+        # self.label_53.text = self.date_marrige_list[b]
         self.label_54.text = self.space_name_list[b]
         self.label_61.text = self.about_list[b]
         self.label_63.text = bool(self.alets_list[b])
@@ -206,9 +206,9 @@ class view_profile_copy(view_profile_copyTemplate):
         self.label_93.text = self.account_type[b]
         self.label_95.text = self.account_number[b]
         self.label_97.text = self.account_bank_branch[b]
-        self.label_99.text = self.ifsc_code[b]
+        # self.label_99.text = self.ifsc_code[b]
         self.label_101.text = self.salary_type[b]
-        self.label_103.text = self.select_bank[b]
+        #self.label_103.text = self.select_bank[b]
         self.label_105.text = self.net_bank[b]
         self.label_107.text = self.father_name[b]
         self.label_109.text = self.father_age[b]
