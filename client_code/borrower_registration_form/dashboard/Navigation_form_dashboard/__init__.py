@@ -16,11 +16,10 @@ class Navigation_form_dashboard(Navigation_form_dashboardTemplate):
     # Any code you write here will run before the form opens.
 
   def borrower_dashboard_home_linkhome_borrower_registration_button_copy_1_click(self, **event_args):
-    open_form('borrower_registration_form.dashboard')
+    open_form("borrower_registration_form.dashboard")
 
   def contact_main_form_link_click(self, **event_args):
-    open_form("borrower_registration_form.dashboard_contact_borrower_registration_form
-    ")
+    open_form("borrower_registration_form.dashboard.dashboard_contact")
 
 
   def wallet_dashboard_link_click(self, **event_args):
@@ -32,4 +31,4 @@ class Navigation_form_dashboard(Navigation_form_dashboardTemplate):
 
 
   def About_Us_click(self, **event_args):
-    open_form("borrower_registration_form.dashboard_about_borrower_registration_form")
+    open_form("borrower_registrati")
