@@ -60,7 +60,7 @@ components:
       italic: false, background: '', bold: false, underline: false, icon: 'fa:shopping-cart'}
     type: Link
     layout_properties: {}
-    event_bindings: {click: contact_main_form_link_click}
+    event_bindings: {click: borrower_dashboard_product_link_click}
   - name: borrower_dashboard_contact_link
     properties: {role: null, url: '', align: center, tooltip: '', border: '', foreground: white,
       visible: true, text: 'Contact ', font_size: 15, wrap_on: mobile, font: '', col_spacing: medium,
