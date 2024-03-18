@@ -203,6 +203,10 @@ class user_form(user_formTemplate):
     """This method is called when the link is clicked"""
     open_form("admin.user_issue.user_bugreports")
 
+  def about_main_form_link_click(self, **event_args):
+    """This method is called when the link is clicked"""
+    pass
+
   
 
 
