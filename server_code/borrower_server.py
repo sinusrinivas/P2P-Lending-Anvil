@@ -298,8 +298,8 @@ def get_user_points(id):
 
         duration_at_address_search = app_tables.fin_admin_beseem_categories.search(group_name='duration_at_address', sub_category=duration_at_address)
         if duration_at_address_search:
-            duration_at_address_points = duration_at_address_search[0]['min_points']
-            user_points += duration_at_address_points
+           duration_at_address_points = duration_at_address_search[0]['min_points']
+           user_points += duration_at_address_points
 
         qualification_search = app_tables.fin_admin_beseem_categories.search(group_name='qualification', sub_category=qualification)
         if qualification_search:
