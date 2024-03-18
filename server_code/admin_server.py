@@ -112,7 +112,24 @@ def hash_password(password):
 
 # for view admins
 @anvil.server.callable
-def get_admin_users():
-    # Fetch data from the fin_admin_users table
-    admin_users = app_tables.fin_admin_users.search()
-    return admin_users
+def get_admin_emails():
+    # Fetch all admin emails from the fin_admin_users table
+    admin_emails = [admin['admin_email'] for admin in app_tables.fin_admin_users.search()]
+    return admin_emails
+
+@anvil.server.callable
+def get_admin_details(email):
+    # Fetch admin details based on email from the fin_admin_users table
+    admin = app_tables.fin_admin_users.get(admin_email=email)
+    if admin:
+        admin_details = {
+            'admin_email': admin['admin_email'],
+            'full_name': admin['full_name'],
+            'admin_role':admin['admin_role'],
+            'ref_admin_name':admin['ref_admin_name'],
+            'joined_date':admin['join_date']
+        }
+        return admin_details
+    else:
+        return None
+
