@@ -26,6 +26,7 @@ class add_subcategory(add_subcategoryTemplate):
     self.repeating_panel_6.items = app_tables.fin_admin_beseem_categories.search(group_name="organization_type")
     self.repeating_panel_7.items = app_tables.fin_admin_beseem_categories.search(group_name="present_address")
     self.repeating_panel_8.items = app_tables.fin_admin_beseem_categories.search(group_name="duration_at_address")
+    self.repeating_panel_9.items = app_tables.fin_admin_beseem_categories.search(group_name="profession")
 
   def back_btn_click(self, **event_args):
     """This method is called when the button is clicked"""
@@ -105,10 +106,10 @@ class add_subcategory(add_subcategoryTemplate):
   def profession_button_click(self, **event_args):
     """This method is called when the button is clicked"""
     entered_sub = self.text_box_7.text.lower()
-    valid_statuses = ['student', 'employee', 'self employment']
-    if entered_sub not in valid_statuses:
-        alert("Please enter a valid profession: 'Student', 'Employee', 'Self employment'.")
-        return
+    # valid_statuses = ['student', 'employee', 'self employment']
+    # if entered_sub not in valid_statuses:
+    #     alert("Please enter a valid profession: 'Student', 'Employee', 'Self employment'.")
+    #     return
     entered_min_pts = int(self.text_box_8.text)
     new_row = app_tables.fin_admin_beseem_categories.add_row(group_name='profession',sub_category=entered_sub,min_points=entered_min_pts)
     self.text_box_7.text = ' '
@@ -227,6 +228,10 @@ class add_subcategory(add_subcategoryTemplate):
       new_group_row = app_tables.fin_admin_beseem_groups.add_row(
             group_name="duration_at_address", max_points=max_points
         )
+
+  def self_employment_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    pass
     
   def gender_click(self, **event_args):
     """This method is called when the button is clicked"""
@@ -315,4 +320,10 @@ class add_subcategory(add_subcategoryTemplate):
     self.grid_panel_6.visible = False
     self.grid_panel_7.visible = False
     self.grid_panel_8.visible = True
+
+  def selfemployment_button_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    pass
+
+  
   
