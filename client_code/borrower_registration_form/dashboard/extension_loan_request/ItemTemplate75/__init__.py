@@ -25,7 +25,8 @@ class ItemTemplate75(ItemTemplate75Template):
 
        # Any code you write here will run before the form opens.
 
-    def outlined_button_1_click(self, **event_args):
+  def outlined_button_1_click(self, **event_args):
         """This method is called when the button is clicked"""
         selected_row = self.item
         open_form('borrower_registration_form.dashboard.extension_loan_request.borrower_extension', selected_row=selected_row)
+
