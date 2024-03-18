@@ -176,6 +176,7 @@ unique_ids:
     admin.dashboard.loan_management.not_payable_amount.ItemTemplate37: '1709292605385324148755782.3453'
     admin.dashboard.loan_management.rejected_loans: '1699528958889169021462649.09222'
     admin.dashboard.loan_management.rejected_loans.view_profile_2: '1700812221243295088415002.8101'
+    borrower_registration_form.dashboard.notification: '1710759928351738411832417.4897'
     ? borrower_registration_form.star_1_borrower_registration_form_2_employment.star_1_borrower_registration_form_2_employment_emp_detail_3
     : '170003767984838881190201.539795'
     admin.dashboard.manage_cms.add_borrower_dropdown_details.edit_account_type: '1706191282813671329465946.1777'

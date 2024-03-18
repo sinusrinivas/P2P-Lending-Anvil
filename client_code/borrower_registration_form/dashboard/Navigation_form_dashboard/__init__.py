@@ -31,4 +31,4 @@ class Navigation_form_dashboard(Navigation_form_dashboardTemplate):
 
 
   def About_Us_click(self, **event_args):
-    open_form("borrower_registrati")
+    open_form("borrower_registration_form.dashboard.dashboard_about")
