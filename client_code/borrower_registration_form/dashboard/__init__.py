@@ -126,9 +126,6 @@ class dashboard(dashboardTemplate):
     def about_main_form_link_click(self, **event_args):
       open_form('borrower_registration_form.dashboard.dashboard_about')
 
-    def contact_main_form_link_click(self, **event_args):
-      open_form("borrower_registration_form.dashboard.dashboard_contact")
-
     def notification_link_click(self, **event_args):
       open_form('lender_registration_form.dashboard.notification')
 
@@ -154,6 +151,10 @@ class dashboard(dashboardTemplate):
       alert("Logged out successfully")
       anvil.users.logout()
       open_form('bank_users.main_form')
+
+    def borrower_dashboard_product_link_click(self, **event_args):
+      """This method is called when the link is clicked"""
+      pass
 
   
 

@@ -12,7 +12,7 @@ class new_loan_request(new_loan_requestTemplate):
         self.product_description = None
         self.init_components(**properties)
 
-        options = app_tables.fin_product_group.search()
+        options = app_tables.fin_product_details.search()
         # Exclude empty strings from the drop-down options
         option_strings = [option['name'] for option in options if option['name'].strip()]
         self.name.items = option_strings
@@ -34,7 +34,7 @@ class new_loan_request(new_loan_requestTemplate):
             self.drop_down_2.visible = True
             self.label_4.visible = True
             # Fetch product categories based on the selected loan type
-            product_categories = app_tables.fin_product_categories.search(
+            product_categories = app_tables.fin_product_details.search(
                 name_group=self.name.selected_value
             )
             if product_categories:

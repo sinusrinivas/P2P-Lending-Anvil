@@ -4,10 +4,14 @@ container:
   properties: {html: '@theme:standard-page.html'}
 components:
 - type: ColumnPanel
-  properties: {}
+  properties: {col_widths: '{}'}
   name: content_panel
   layout_properties: {slot: default}
   components:
+  - type: form:borrower_registration_form.dashboard.Navigation_form_dashboard
+    properties: {}
+    name: navigation_form_dashboard_1
+    layout_properties: {grid_position: 'DFBSVE,GHFDCG'}
   - name: label_1
     properties: {text: View Transaction History, foreground: white, background: '#0b2547',
       align: center, bold: true, font_size: 18, italic: false, underline: false}
@@ -25,3 +29,8 @@ components:
   properties: {}
   name: navbar_links
   layout_properties: {slot: nav-right}
+  components:
+  - type: form:borrower_registration_form.logout
+    properties: {}
+    name: logout_1
+    layout_properties: {}
