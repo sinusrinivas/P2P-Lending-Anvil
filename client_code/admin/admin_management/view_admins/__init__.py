@@ -24,6 +24,10 @@ class view_admins(view_adminsTemplate):
 
             self.repeating_panel.items = self.result
 
+    def button_1_click(self, **event_args):
+      """This method is called when the button is clicked"""
+      open_form('admin.admin_management')
+
 
 
 
