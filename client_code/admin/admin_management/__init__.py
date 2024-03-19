@@ -44,7 +44,8 @@ class admin_management(admin_managementTemplate):
         open_form('bank_users.main_form')
 
     def add_peopless(self, **event_args):
-        self.content_panel.add_component(add_admin(), full_width_row=True)
+        # self.content_panel.add_component(add_admin(), full_width_row=True)
+        open_form('admin.admin_management.add_admin')
 
     def view_people_click(self, **event_args):
         """This method is called when the button is clicked"""
