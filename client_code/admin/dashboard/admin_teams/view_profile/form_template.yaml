@@ -128,7 +128,3 @@ components:
       name: button_4_copy
       layout_properties: {grid_position: 'JXACMF,TLVGCF'}
       event_bindings: {click: button_4_click}
-- type: FlowPanel
-  properties: {}
-  name: navbar_links
-  layout_properties: {slot: nav-right}

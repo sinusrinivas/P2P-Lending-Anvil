@@ -24,8 +24,12 @@ class navigation_bar_main_lender(navigation_bar_main_lenderTemplate):
     pass
 
   def contact_main_form_link_click(self, **event_args):
-    open_form("lendor_registration_form.dashboard.dasboard_contact")
+    open_form("lendor_registration_form.dasboard_contact_lendor_registration_form")
 
   def help_link_click(self, **event_args):
     """This method is called when the link is clicked"""
     pass
+
+  def About_Us_click(self, **event_args):
+    open_form('lendor_registration_form.dasboard_about_lendor_registration_form')
+    

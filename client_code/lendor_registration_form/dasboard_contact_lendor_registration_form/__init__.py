@@ -1,4 +1,4 @@
-from ._anvil_designer import dasboard_contact_copy_copyTemplate
+from ._anvil_designer import dasboard_contact_lendor_registration_formTemplate
 from anvil import *
 import anvil.server
 import anvil.google.auth, anvil.google.drive
@@ -8,7 +8,7 @@ import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 
-class dasboard_contact_copy_copy(dasboard_contact_copy_copyTemplate):
+class dasboard_contact_lendor_registration_form(dasboard_contact_lendor_registration_formTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)

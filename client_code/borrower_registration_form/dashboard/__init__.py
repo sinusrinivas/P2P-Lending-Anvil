@@ -127,7 +127,7 @@ class dashboard(dashboardTemplate):
       open_form('borrower_registration_form.dashboard.dashboard_about')
 
     def notification_link_click(self, **event_args):
-      open_form('lender_registration_form.dashboard.notification')
+      open_form('borrower_registration_form.dashboard.notification')
 
 
   
@@ -156,5 +156,7 @@ class dashboard(dashboardTemplate):
       """This method is called when the link is clicked"""
       pass
 
+    def contact_main_form_link_click(self, **event_args):
+      open_form('borrower_registration_form.dashboard.dashboard_contact')
   
 

@@ -19,7 +19,7 @@ class navigation_bar_main(navigation_bar_mainTemplate):
     open_form('bank_users.user_form')
 
   def contact_main_form_link_click(self, **event_args):
-    open_form("borrower_registration_form.dashboard.dashboard_contact")
+    open_form("borrower_registration_form.dashboard_contact_borrower_registration_form")
 
   def notification_link_click(self, **event_args):
     """This method is called when the link is clicked"""
@@ -27,3 +27,6 @@ class navigation_bar_main(navigation_bar_mainTemplate):
 
   def wallet_dashboard_link_click(self, **event_args):
     open_form("wallet.wallet")
+
+  def About_Us_click(self, **event_args):
+    open_form("borrower_registration_form.dashboard_about_borrower_registration_form")
