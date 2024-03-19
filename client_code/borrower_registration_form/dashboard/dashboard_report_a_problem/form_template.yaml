@@ -17,7 +17,7 @@ components:
   name: navbar_links
   layout_properties: {slot: nav-right}
 - type: ColumnPanel
-  properties: {role: outlined-card, col_widths: '{"EJEVIJ":18,"KVDELN":37,"RWJHGP":20,"EWXFBB":40,"KKRGQQ":20,"QUTBBB":40,"ZFYWQR":20,"THCDRO":40}',
+  properties: {role: outlined-card, col_widths: '{"EJEVIJ":18,"KVDELN":37,"RWJHGP":20,"EWXFBB":40,"KKRGQQ":20,"QUTBBB":40,"ZFYWQR":20,"THCDRO":40,"ELRYCE":20,"JGHWBK":40}',
     wrap_on: mobile}
   name: outlined_card_2_copy
   layout_properties: {grid_position: 'ECKBEK,XFTDMP', row: QBZMKP, width_xs: 12, col_xs: 0}
@@ -75,6 +75,40 @@ components:
       background: 'theme:On Primary', bold: false, underline: false}
     name: mobile_box
     layout_properties: {grid_position: 'ZLZTYL,EWXFBB'}
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: Upload Your Photo, font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+      underline: false, icon: ''}
+    name: label_8
+    layout_properties: {grid_position: 'OJHCCD,ELRYCE'}
+  - type: FileLoader
+    properties:
+      role: null
+      show_state: true
+      align: left
+      tooltip: ''
+      border: ''
+      file_types: null
+      enabled: true
+      files: []
+      foreground: ''
+      visible: true
+      text: Upload
+      font_size: null
+      font: ''
+      spacing_above: small
+      icon_align: left
+      spacing_below: small
+      italic: false
+      file: null
+      background: ''
+      bold: false
+      underline: false
+      multiple: false
+      icon: fa:upload
+    name: file_loader_1
+    layout_properties: {grid_position: 'OJHCCD,JGHWBK'}
   - type: Label
     properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
       visible: true, text: 'Title ', font_size: 16, font: '', spacing_above: small,

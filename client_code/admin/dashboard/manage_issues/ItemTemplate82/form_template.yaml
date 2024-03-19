@@ -56,9 +56,9 @@ components:
     layout_properties: {x: -7, y: 76.78125, width: 942}
   - type: Button
     properties: {role: filled-button, align: center, tooltip: '', border: '', enabled: true,
-      foreground: '', visible: true, text: Problem Solved, font_size: null, font: '',
-      spacing_above: small, icon_align: left, spacing_below: small, italic: false,
-      background: '', bold: false, underline: false, icon: ''}
+      foreground: 'theme:On Primary', visible: true, text: Problem Solved, font_size: null,
+      font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+      background: '#05264d', bold: false, underline: false, icon: ''}
     name: button_1
     layout_properties: {x: -14, y: 232, width: 963}
     event_bindings: {click: button_1_click}
