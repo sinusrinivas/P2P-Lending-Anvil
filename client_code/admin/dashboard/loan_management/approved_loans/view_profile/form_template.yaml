@@ -13,12 +13,12 @@ components:
   layout_properties: {grid_position: 'RAPIYO,JLAERM', full_width_row: false, row_background: ''}
   components:
   - type: Label
-    properties: {role: outlined-card, align: center, tooltip: '', border: '', foreground: white,
-      visible: true, text: Loan Details, font_size: 20, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: darkblue,
+    properties: {role: outlined-card, align: center, tooltip: '', border: '', foreground: 'theme:On
+        Primary', visible: true, text: Loan Details, font_size: 20, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '#05264d',
       bold: true, underline: false, icon: ''}
     name: label_35
-    layout_properties: {row: BTIHJS, width_xs: 12, col_xs: 0, width: 686.8}
+    layout_properties: {row: BTIHJS, width_xs: 12, col_xs: 0, width: 558}
   - type: Label
     properties: {role: null, align: right, tooltip: '', border: '', foreground: '#000337',
       visible: true, text: Loan ID, font_size: null, font: '', spacing_above: small,
@@ -205,8 +205,8 @@ components:
       col_xs: 6}
 - type: Button
   properties: {role: elevated-button, align: center, tooltip: '', border: '', enabled: true,
-    foreground: white, visible: true, text: Back, font_size: null, font: '16', spacing_above: small,
-    icon_align: left, spacing_below: small, italic: false, background: '#0b2547',
+    foreground: 'theme:On Primary', visible: true, text: Back, font_size: null, font: '16',
+    spacing_above: small, icon_align: left, spacing_below: small, italic: false, background: '#05264d',
     bold: true, underline: false, icon: 'fa:backward'}
   name: button_1_copy
   layout_properties:

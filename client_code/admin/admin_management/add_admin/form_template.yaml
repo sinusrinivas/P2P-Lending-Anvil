@@ -3,7 +3,7 @@ components:
 - name: column_panel_1
   properties: {spacing_above: none, spacing_below: none, role: null}
   type: ColumnPanel
-  layout_properties: {grid_position: 'GGCCPS,GKLFYL', full_width_row: true}
+  layout_properties: {grid_position: 'UACKEM,NTBJDA'}
   components:
   - name: flow_panel_1
     properties: {role: outlined-card, spacing: huge, align: center}
@@ -14,37 +14,37 @@ components:
       properties: {text: 'Enter Admin Details ', bold: true, align: center}
       type: Label
       layout_properties: {}
-    - name: spacer_1
-      properties: {height: 32}
-      type: Spacer
-      layout_properties: {width: 253}
-    - name: spacer_2
-      properties: {height: 32}
-      type: Spacer
-      layout_properties: {width: 124}
-    - name: date_lable
-      properties: {}
-      type: Label
   - name: label_2
     properties: {align: center, bold: true, visible: false}
     type: Label
     layout_properties: {grid_position: 'ALOSSQ,SRPPLG'}
   - name: column_panel_2
-    properties: {role: elevated-card, col_widths: '{"JGTWGA":25,"OAUSYI":35,"EHEFYZ":20}'}
+    properties: {role: elevated-card, col_widths: '{"JGTWGA":25,"OAUSYI":35,"EHEFYZ":20,"ZJBHAN":30,"KVDHMP":30,"TTMNHR":30,"BFVOCT":30}'}
     type: ColumnPanel
-    layout_properties: {grid_position: 'XCLZXM,CHUTZI'}
+    layout_properties: {grid_position: 'CRJTTO,BXRPSY'}
     components:
     - name: label_1_copy
+      properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+        visible: true, text: '    Date :', font_size: null, font: '', spacing_above: small,
+        icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+        underline: false, icon: ''}
+      type: Label
+      layout_properties: {grid_position: 'WJWNQB,ZJBHAN DTWTHP,VWHOAF'}
+    - name: label_1_copy_copy
       properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
         visible: true, text: '    Name :', font_size: null, font: '', spacing_above: small,
         icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
         underline: false, icon: ''}
       type: Label
-      layout_properties: {grid_position: 'WJWNQB,ZJBHAN'}
+      layout_properties: {grid_position: 'WJWNQB,ZJBHAN DTFLFR,CWZFYF'}
+    - name: date_lable
+      properties: {}
+      type: Label
+      layout_properties: {grid_position: 'WJWNQB,KVDHMP QKBAVM,TDBBIO'}
     - name: admin_name
       properties: {role: outlined, placeholder: Enter Full Name}
       type: TextBox
-      layout_properties: {grid_position: 'WJWNQB,KVDHMP'}
+      layout_properties: {grid_position: 'WJWNQB,KVDHMP OEJILY,YVAKRQ'}
     - name: label_2_copy
       properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
         visible: true, text: '    Email Id: ', font_size: null, font: '', spacing_above: small,
@@ -113,10 +113,6 @@ components:
       properties: {role: outlined, placeholder: Re Enter Password}
       type: TextBox
       layout_properties: {grid_position: 'KLWCJI,BFVOCT'}
-    - name: label_7
-      properties: {align: center, bold: true, font_size: 16}
-      type: Label
-      layout_properties: {grid_position: 'EVQMFH,GMIJAD'}
     - name: clear_function
       properties: {text: clear, bold: true, role: filled-button}
       type: Button
