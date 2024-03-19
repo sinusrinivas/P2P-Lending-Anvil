@@ -17,7 +17,7 @@ services:
 - source: /runtime/services/anvil/secrets.yml
   client_config: {}
   server_config: {}
-startup: {type: form, module: bank_users.main_form}
+startup: {type: form, module: admin.dashboard}
 package_name: bank_client
 allow_embedding: false
 name: P2P Lending App
@@ -26,6 +26,29 @@ runtime_options: {version: 2, client_version: '3', server_version: python3-sandb
 metadata: {title: 'P2P Bank ', description: this app provide services to person who are ready to invest and ready to give loan}
 startup_form: null
 db_schema:
+  fin_reported_problems:
+    client: full
+    server: full
+    columns:
+    - name: name
+      admin_ui: {width: 200, order: 0}
+      type: string
+    - name: email
+      admin_ui: {width: 200, order: 1}
+      type: string
+    - name: mobile_number
+      admin_ui: {width: 200, order: 2}
+      type: number
+    - name: issue_occured
+      admin_ui: {width: 200, order: 3}
+      type: string
+    - name: issue_description
+      admin_ui: {width: 200, order: 4}
+      type: string
+    - name: report_date
+      admin_ui: {width: 200, order: 5}
+      type: datetime
+    title: fin_reported_problems
   fin_gender:
     client: full
     server: full
@@ -103,7 +126,7 @@ db_schema:
       admin_ui: {width: 200}
       type: string
   fin_lendor_no_of_employees:
-    client: none
+    client: full
     server: full
     columns:
     - name: lendor_no_of_employees

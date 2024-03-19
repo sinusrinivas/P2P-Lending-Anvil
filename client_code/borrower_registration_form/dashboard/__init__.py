@@ -118,7 +118,7 @@ class dashboard(dashboardTemplate):
       open_form('borrower_registration_form.dashboard.foreclosure_request')
 
     def outlined_button_6_click(self, **event_args):
-      open_form('borrower_registration_form.dashboard.discount_coupons')
+      open_form('borrower_registration_form.dashboard.dashboard_report_a_problem')
 
     def outlined_button_7_click(self, **event_args):
       open_form('borrower_registration_form.dashboard.view_transaction_history')
