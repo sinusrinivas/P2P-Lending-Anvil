@@ -282,6 +282,7 @@ def get_user_points(id):
         present_address = user['present_address'].lower()
         duration_at_address = str(user['duration_at_address']).lower()
         self_employment = user['self_employment'].lower()
+        age_of_business = user['business_age'].lower()
         
 
         # Initialize user points
@@ -338,7 +339,7 @@ def get_user_points(id):
                     user_points += organization_type_points
 
             elif profession == 'business':
-                business_age_search = app_tables.fin_admin_beseem_categories.search(group_name='age_of_business', sub_category=organization_type.lower())
+                business_age_search = app_tables.fin_admin_beseem_categories.search(group_name='age_of_business', sub_category=age_of_business.lower())
                 if business_age_search:
                     business_age_points = business_age_search
                     print("Business age Points:", business_age_points)
