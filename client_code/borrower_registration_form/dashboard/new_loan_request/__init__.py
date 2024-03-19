@@ -94,7 +94,7 @@ class new_loan_request(new_loan_requestTemplate):
 
             if product_details:
                 # Set product_description as a class attribute
-                self.product_description = product_details['product_discription']
+                self.product_description = product_details['product_description']
 
                 # Open the next form and pass the required parameters
                 open_form('borrower_registration_form.dashboard.new_loan_request.loan_type',
@@ -133,7 +133,7 @@ class new_loan_request(new_loan_requestTemplate):
             if product_details:
                 # Display product description in a label or another component
                 self.label_8.visible = True
-                self.product_description_label.text = product_details['product_discription']
+                self.product_description_label.text = product_details['product_description']
             else:
                 # Handle the case where product details are not found
                 self.label_8.visible = True
