@@ -1,17 +1,28 @@
-container: {type: ColumnPanel}
+container:
+  type: ColumnPanel
+  properties: {col_widths: '{}'}
 components:
+- type: form:admin.dashboard.home_button_admin
+  properties: {}
+  name: home_button_admin_1
+  layout_properties: {grid_position: 'PTBVNJ,JJXPMO'}
 - name: column_panel_1
   properties: {spacing_above: none, spacing_below: none, role: null}
   type: ColumnPanel
   layout_properties: {grid_position: 'UACKEM,NTBJDA'}
   components:
+  - name: button_1
+    properties: {text: Back, foreground: White, icon: 'fa:angle-double-left', background: '#05264d',
+      bold: true, align: right}
+    type: Button
+    layout_properties: {grid_position: 'FSSYHS,RKKUNA'}
   - name: flow_panel_1
     properties: {role: outlined-card, spacing: huge, align: center}
     type: FlowPanel
     layout_properties: {grid_position: 'WVVNBA,JKXLQZ'}
     components:
     - name: label_1
-      properties: {text: 'Enter Admin Details ', bold: true, align: center}
+      properties: {text: 'Enter Admin Details ', bold: true, align: center, font_size: 16}
       type: Label
       layout_properties: {}
   - name: label_2
@@ -114,7 +125,8 @@ components:
       type: TextBox
       layout_properties: {grid_position: 'KLWCJI,BFVOCT'}
     - name: clear_function
-      properties: {text: clear, bold: true, role: filled-button}
+      properties: {text: clear, bold: true, role: filled-button, background: '#05264d',
+        icon: clear}
       type: Button
       layout_properties: {grid_position: 'PKTVOO,JGTWGA'}
       event_bindings: {click: clear_function_click}
@@ -123,8 +135,10 @@ components:
       type: Spacer
       layout_properties: {grid_position: 'PKTVOO,EHEFYZ'}
     - name: save_all_fields
-      properties: {text: save, role: filled-button}
+      properties: {text: save, role: filled-button, background: '#05264d', bold: true,
+        icon: 'fa:save'}
       type: Button
       layout_properties: {grid_position: 'PKTVOO,OAUSYI'}
       event_bindings: {click: save_all_fields_click}
+      data_bindings: []
 is_package: true

@@ -36,7 +36,7 @@ class loan_type(loan_typeTemplate):
             self.processing_fee = user_request['processing_fee']
             self.membership_type = user_request['membership_type']
             self.product_id = user_request['product_id']
-            self.product_desc = user_request['product_discription']
+            self.product_desc = user_request['product_description']
 
             # Fetch emi_payment options from the database
             self.emi_payment_options = user_request['emi_payment']

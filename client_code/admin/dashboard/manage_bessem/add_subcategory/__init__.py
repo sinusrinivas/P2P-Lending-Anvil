@@ -132,7 +132,7 @@ class add_subcategory(add_subcategoryTemplate):
             group_name="profession", max_points=max_points
         )
     
-  def all_loans_button_click(self, **event_args):
+  def all_loan_button_click(self, **event_args):
     """This method is called when the button is clicked"""
     entered_sub = self.text_box_9.text.lower()
     entered_yes_no = self.text_box_10.text.lower()
@@ -142,7 +142,7 @@ class add_subcategory(add_subcategoryTemplate):
         return
     entered_min_pts = int(self.text_box_11.text)
     
-    new_row = app_tables.fin_admin_beseem_categories.add_row(group_name='all_loans',sub_category=entered_sub,min_points=entered_min_pts,is_liveloan=entered_yes_no)
+    new_row = app_tables.fin_admin_beseem_categories.add_row(group_name='all_loans',sub_category=entered_sub,min_points=entered_min_pts)
     self.text_box_9.text = ' '
     self.text_box_10.text = ' '
     self.text_box_11.text = ' '
@@ -312,6 +312,8 @@ class add_subcategory(add_subcategoryTemplate):
     self.grid_panel_7.visible = False
     self.grid_panel_8.visible = False
     self.grid_panel_9.visible = True
+    self.grid_panel_10.visible = False
+    self.grid_panel_11.visible = False
     
   def gender_click(self, **event_args):
     """This method is called when the button is clicked"""
@@ -324,6 +326,8 @@ class add_subcategory(add_subcategoryTemplate):
     self.grid_panel_7.visible = False
     self.grid_panel_8.visible = False
     self.grid_panel_9.visible = False
+    self.grid_panel_10.visible = False
+    self.grid_panel_11.visible = False
 
   def qualification_click(self, **event_args):
     """This method is called when the button is clicked"""
@@ -336,6 +340,8 @@ class add_subcategory(add_subcategoryTemplate):
     self.grid_panel_7.visible = False
     self.grid_panel_8.visible = False
     self.grid_panel_9.visible = False
+    self.grid_panel_10.visible = False
+    self.grid_panel_11.visible = False
 
   def marrital_status_click(self, **event_args):
     """This method is called when the button is clicked"""
@@ -348,6 +354,8 @@ class add_subcategory(add_subcategoryTemplate):
     self.grid_panel_7.visible = False
     self.grid_panel_8.visible = False
     self.grid_panel_9.visible = False
+    self.grid_panel_10.visible = False
+    self.grid_panel_11.visible = False
 
   def profession_click(self, **event_args):
     """This method is called when the button is clicked"""
@@ -360,8 +368,10 @@ class add_subcategory(add_subcategoryTemplate):
     self.grid_panel_7.visible = False
     self.grid_panel_8.visible = False
     self.grid_panel_9.visible = False
+    self.grid_panel_10.visible = False
+    self.grid_panel_11.visible = False
 
-  def all_loans_click(self, **event_args):
+  def all_loan_click(self, **event_args):
     """This method is called when the button is clicked"""
     self.grid_panel_1.visible = False
     self.grid_panel_2.visible = False
@@ -372,6 +382,8 @@ class add_subcategory(add_subcategoryTemplate):
     self.grid_panel_7.visible = False
     self.grid_panel_8.visible = False
     self.grid_panel_9.visible = False
+    self.grid_panel_10.visible = False
+    self.grid_panel_11.visible = False
 
   def organization_type_click(self, **event_args):
     """This method is called when the button is clicked"""
@@ -384,6 +396,8 @@ class add_subcategory(add_subcategoryTemplate):
     self.grid_panel_7.visible = False
     self.grid_panel_8.visible = False
     self.grid_panel_9.visible = False
+    self.grid_panel_10.visible = False
+    self.grid_panel_11.visible = False
 
   def present_address_click(self, **event_args):
     """This method is called when the button is clicked"""
@@ -396,6 +410,8 @@ class add_subcategory(add_subcategoryTemplate):
     self.grid_panel_7.visible = True
     self.grid_panel_8.visible = False
     self.grid_panel_9.visible = False
+    self.grid_panel_10.visible = False
+    self.grid_panel_11.visible = False
 
   def duration_at_address_click(self, **event_args):
     """This method is called when the button is clicked"""
@@ -408,6 +424,8 @@ class add_subcategory(add_subcategoryTemplate):
     self.grid_panel_7.visible = False
     self.grid_panel_8.visible = True
     self.grid_panel_9.visible = False
+    self.grid_panel_10.visible = False
+    self.grid_panel_11.visible = False
 
   def spouse_profession_click(self, **event_args):
     """This method is called when the button is clicked"""
