@@ -24,9 +24,9 @@ components:
     - name: outlined_card_1
       properties: {role: outlined-card, tooltip: '', border: '', foreground: '', visible: true,
         wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '',
-        spacing_below: small, background: '#0b2547'}
+        spacing_below: small, background: '#05264d'}
       type: ColumnPanel
-      layout_properties: {x: 12.950009156018496, y: 10.449993897229433, width: 200}
+      layout_properties: {x: 12.9375, y: 10.4375, width: 168}
       components:
       - name: gender
         properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
@@ -42,9 +42,9 @@ components:
     - name: outlined_card_2
       properties: {role: outlined-card, tooltip: '', border: '', foreground: '', visible: true,
         wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '',
-        spacing_below: small, background: '#0b2547'}
+        spacing_below: small, background: '#05264d'}
       type: ColumnPanel
-      layout_properties: {x: 234.69999389722943, y: 8.612500000745058, width: 200}
+      layout_properties: {x: 234.6875, y: 8.609375, width: 168}
       components:
       - name: qualification
         properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
@@ -60,9 +60,9 @@ components:
     - name: outlined_card_3
       properties: {role: outlined-card, tooltip: '', border: '', foreground: '', visible: true,
         wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '',
-        spacing_below: small, background: '#0b2547'}
+        spacing_below: small, background: '#05264d'}
       type: ColumnPanel
-      layout_properties: {x: 458.83747558668256, y: 9.55001525953412, width: 200}
+      layout_properties: {x: 458.828125, y: 9.546875, width: 168}
       components:
       - name: marrital_status
         properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
@@ -79,9 +79,9 @@ components:
     - name: outlined_card_7
       properties: {role: outlined-card, tooltip: '', border: '', foreground: '', visible: true,
         wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '',
-        spacing_below: small, background: '#0b2547'}
+        spacing_below: small, background: '#05264d'}
       type: ColumnPanel
-      layout_properties: {x: 682.7875488288701, y: 10.749996948987246, width: 200}
+      layout_properties: {x: 682.78125, y: 10.734375, width: 168}
       components:
       - name: profession
         properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
@@ -94,9 +94,9 @@ components:
     - name: outlined_card_3_copy_copy_copy
       properties: {role: outlined-card, tooltip: '', border: '', foreground: '', visible: true,
         wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '',
-        spacing_below: small, background: '#0b2547'}
+        spacing_below: small, background: '#05264d'}
       type: ColumnPanel
-      layout_properties: {x: 460.0500152595341, y: 141.98751068115234, width: 200}
+      layout_properties: {x: 460.046875, y: 141.984375, width: 168}
       components:
       - name: present_address
         properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
@@ -113,9 +113,9 @@ components:
     - name: outlined_card_3_copy_copy_copy_copy
       properties: {role: outlined-card, tooltip: '', border: '', foreground: '', visible: true,
         wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '',
-        spacing_below: small, background: '#0b2547'}
+        spacing_below: small, background: '#05264d'}
       type: ColumnPanel
-      layout_properties: {x: 685.6500213630497, y: 141.98751068115234, width: 200}
+      layout_properties: {x: 685.640625, y: 141.984375, width: 168}
       components:
       - name: duration_at_address
         properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
@@ -132,9 +132,9 @@ components:
     - name: outlined_card_3_copy_copy
       properties: {role: outlined-card, tooltip: '', border: '', foreground: '', visible: true,
         wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '',
-        spacing_below: small, background: '#0b2547'}
+        spacing_below: small, background: '#05264d'}
       type: ColumnPanel
-      layout_properties: {x: 231.65000610426068, y: 141.98751068115234, width: 200}
+      layout_properties: {x: 231.640625, y: 141.984375, width: 168}
       components:
       - name: organization_type
         properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
@@ -151,9 +151,9 @@ components:
     - name: outlined_card_3_copy
       properties: {role: outlined-card, tooltip: '', border: '', foreground: '', visible: true,
         wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '',
-        spacing_below: small, background: '#0b2547'}
+        spacing_below: small, background: '#05264d'}
       type: ColumnPanel
-      layout_properties: {x: 17.925000000745058, y: 141.98751068115234, width: 200}
+      layout_properties: {x: 17.921875, y: 141.984375, width: 168}
       components:
       - name: all_loans
         properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
@@ -214,9 +214,9 @@ components:
         properties: {role: null, align: full, tooltip: '', border: '', enabled: true,
           foreground: 'theme:On Primary', visible: true, text: ADD, font_size: null,
           font: '', spacing_above: small, icon_align: left, spacing_below: small,
-          italic: false, background: '#0b2547', bold: true, underline: false, icon: ''}
+          italic: false, background: '#05264d', bold: true, underline: false, icon: ''}
         type: Button
-        layout_properties: {row: QDOTVC, width_xs: 2, col_xs: 9}
+        layout_properties: {row: QDOTVC, width_xs: 2, col_xs: 9, width: 95.1562}
         event_bindings: {click: gender_button_click}
       - name: spacer_2
         properties: {height: 141.79998779296875}
@@ -266,9 +266,9 @@ components:
         properties: {role: null, align: full, tooltip: '', border: '', enabled: true,
           foreground: 'theme:On Primary', visible: true, text: ADD, font_size: null,
           font: '', spacing_above: small, icon_align: left, spacing_below: small,
-          italic: false, background: '#0b2547', bold: true, underline: false, icon: ''}
+          italic: false, background: '#05264d', bold: true, underline: false, icon: ''}
         type: Button
-        layout_properties: {row: QDOTVC, width_xs: 2, col_xs: 9}
+        layout_properties: {row: QDOTVC, width_xs: 2, col_xs: 9, width: 95.1562}
         event_bindings: {click: qualification_button_click}
       - name: spacer_2_copy
         properties: {height: 141.79998779296875}
@@ -330,9 +330,9 @@ components:
         properties: {role: null, align: full, tooltip: '', border: '', enabled: true,
           foreground: 'theme:On Primary', visible: true, text: ADD, font_size: null,
           font: '', spacing_above: small, icon_align: left, spacing_below: small,
-          italic: false, background: '#0b2547', bold: true, underline: false, icon: ''}
+          italic: false, background: '#05264d', bold: true, underline: false, icon: ''}
         type: Button
-        layout_properties: {row: UJISFO, width_xs: 2, col_xs: 9}
+        layout_properties: {row: UJISFO, width_xs: 2, col_xs: 9, width: 95.1562}
         event_bindings: {click: marrital_button_click}
       - name: repeating_panel_3
         properties: {item_template: admin.dashboard.manage_bessem.add_subcategory.ItemTemplate74}
@@ -378,9 +378,9 @@ components:
         properties: {role: null, align: full, tooltip: '', border: '', enabled: true,
           foreground: 'theme:On Primary', visible: true, text: ADD, font_size: null,
           font: '', spacing_above: small, icon_align: left, spacing_below: small,
-          italic: false, background: '#0b2547', bold: true, underline: false, icon: ''}
+          italic: false, background: '#05264d', bold: true, underline: false, icon: ''}
         type: Button
-        layout_properties: {row: QDOTVC, width_xs: 2, col_xs: 9}
+        layout_properties: {row: QDOTVC, width_xs: 2, col_xs: 9, width: 95.1562}
         event_bindings: {click: profession_button_click}
       - name: spacer_2_copy_copy_copy
         properties: {height: 141.79998779296875}
@@ -442,9 +442,9 @@ components:
         properties: {role: null, align: full, tooltip: '', border: '', enabled: true,
           foreground: 'theme:On Primary', visible: true, text: ADD, font_size: null,
           font: '', spacing_above: small, icon_align: left, spacing_below: small,
-          italic: false, background: '#0b2547', bold: true, underline: false, icon: ''}
+          italic: false, background: '#05264d', bold: true, underline: false, icon: ''}
         type: Button
-        layout_properties: {row: BMWBRB, width_xs: 2, col_xs: 10}
+        layout_properties: {row: BMWBRB, width_xs: 2, col_xs: 10, width: 95.1562}
         event_bindings: {click: all_loans_button_click}
       - name: repeating_panel_4
         properties: {item_template: admin.dashboard.manage_bessem.add_subcategory.ItemTemplate61}
@@ -490,9 +490,9 @@ components:
         properties: {role: null, align: full, tooltip: '', border: '', enabled: true,
           foreground: 'theme:On Primary', visible: true, text: ADD, font_size: null,
           font: '', spacing_above: small, icon_align: left, spacing_below: small,
-          italic: false, background: '#0b2547', bold: true, underline: false, icon: ''}
+          italic: false, background: '#05264d', bold: true, underline: false, icon: ''}
         type: Button
-        layout_properties: {row: QDOTVC, width_xs: 2, col_xs: 9}
+        layout_properties: {row: QDOTVC, width_xs: 2, col_xs: 9, width: 95.1562}
         event_bindings: {click: organization_type_button_click}
       - name: spacer_2_copy_2
         properties: {height: 141.79998779296875}
@@ -542,9 +542,9 @@ components:
         properties: {role: null, align: full, tooltip: '', border: '', enabled: true,
           foreground: 'theme:On Primary', visible: true, text: ADD, font_size: null,
           font: '', spacing_above: small, icon_align: left, spacing_below: small,
-          italic: false, background: '#0b2547', bold: true, underline: false, icon: ''}
+          italic: false, background: '#05264d', bold: true, underline: false, icon: ''}
         type: Button
-        layout_properties: {row: QDOTVC, width_xs: 2, col_xs: 9}
+        layout_properties: {row: QDOTVC, width_xs: 2, col_xs: 9, width: 95.1562}
         event_bindings: {click: present_address_button_click}
       - name: spacer_2_copy_2_copy
         properties: {height: 141.79998779296875}
@@ -594,9 +594,9 @@ components:
         properties: {role: null, align: full, tooltip: '', border: '', enabled: true,
           foreground: 'theme:On Primary', visible: true, text: ADD, font_size: null,
           font: '', spacing_above: small, icon_align: left, spacing_below: small,
-          italic: false, background: '#0b2547', bold: true, underline: false, icon: ''}
+          italic: false, background: '#05264d', bold: true, underline: false, icon: ''}
         type: Button
-        layout_properties: {row: QDOTVC, width_xs: 2, col_xs: 9}
+        layout_properties: {row: QDOTVC, width_xs: 2, col_xs: 9, width: 95.1562}
         event_bindings: {click: duration_at_address_button_click}
       - name: spacer_2_copy_2_copy_copy
         properties: {height: 141.79998779296875}
@@ -612,9 +612,9 @@ components:
     layout_properties: {grid_position: 'WKFEWU,UVRHEX'}
   - name: back_btn
     properties: {role: elevated-button, align: center, tooltip: '', border: '', enabled: true,
-      foreground: white, visible: true, text: Back, font_size: null, font: '16', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '#0b2547',
-      bold: true, underline: false, icon: 'fa:backward'}
+      foreground: 'theme:On Primary', visible: true, text: Back, font_size: null,
+      font: '16', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+      background: '#05264d', bold: true, underline: false, icon: 'fa:backward'}
     type: Button
     layout_properties: {grid_position: 'BLALBU,SIYHVA'}
     event_bindings: {click: back_btn_click}

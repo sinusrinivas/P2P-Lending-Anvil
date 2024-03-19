@@ -26,9 +26,9 @@ components:
   - name: outlined_card_1_copy_3
     properties: {role: outlined-card, tooltip: '', border: '', foreground: '', visible: true,
       wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '',
-      spacing_below: small, background: '#0b2547'}
+      spacing_below: small, background: '#05264d'}
     type: ColumnPanel
-    layout_properties: {x: 22.678573608398438, y: 140.125, width: 162.60628000000003}
+    layout_properties: {x: 22.671875, y: 140.125, width: 130.594}
     components:
     - name: button_1_copy_6
       properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
@@ -43,9 +43,9 @@ components:
   - name: outlined_card_1_copy_6
     properties: {role: outlined-card, tooltip: '', border: '', foreground: '', visible: true,
       wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
-      spacing_below: small, background: '#0b2547'}
+      spacing_below: small, background: '#05264d'}
     type: ColumnPanel
-    layout_properties: {x: 203.94642639160156, y: 139.44642639160156, width: 171.42828}
+    layout_properties: {x: 203.9375, y: 139.4375, width: 139.422}
     components:
     - name: button_1_copy_7
       properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
@@ -60,9 +60,9 @@ components:
   - name: outlined_card_1_copy
     properties: {role: outlined-card, tooltip: '', border: '', foreground: '', visible: true,
       wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
-      spacing_below: small, background: '#0b2547'}
+      spacing_below: small, background: '#05264d'}
     type: ColumnPanel
-    layout_properties: {x: 393.1964569091797, y: 138.58929443359375, width: 136.05328}
+    layout_properties: {x: 393.1875, y: 138.578125, width: 104.047}
     components:
     - name: button_1_copy_5
       properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
@@ -77,9 +77,9 @@ components:
   - name: outlined_card_1_copy_7
     properties: {role: outlined-card, tooltip: '', border: '', foreground: '', visible: true,
       wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '',
-      spacing_below: small, background: '#0b2547'}
+      spacing_below: small, background: '#05264d'}
     type: ColumnPanel
-    layout_properties: {x: 399.28575134277344, y: 27.232139587402344, width: 139.94628}
+    layout_properties: {x: 399.28125, y: 27.21875, width: 107.93799999999999}
     components:
     - name: marital
       properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
@@ -94,9 +94,9 @@ components:
   - name: outlined_card_1_copy_4
     properties: {role: outlined-card, tooltip: '', border: '', foreground: '', visible: true,
       wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
-      spacing_below: small, background: '#0b2547'}
+      spacing_below: small, background: '#05264d'}
     type: ColumnPanel
-    layout_properties: {x: 25.946426391601562, y: 27.875, width: 159.33928}
+    layout_properties: {x: 25.9375, y: 27.875, width: 127.328}
     components:
     - name: marrital_button
       properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
@@ -111,9 +111,9 @@ components:
   - name: outlined_card_1_copy_5
     properties: {role: outlined-card, tooltip: '', border: '', foreground: '', visible: true,
       wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
-      spacing_below: small, background: '#0b2547'}
+      spacing_below: small, background: '#05264d'}
     type: ColumnPanel
-    layout_properties: {x: 205.80357360839844, y: 24.71428680419922, width: 169.57113278320313}
+    layout_properties: {x: 205.796875, y: 24.703125, width: 137.562}
     components:
     - name: button_1_copy_4
       properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
@@ -128,9 +128,9 @@ components:
   - name: outlined_card_2
     properties: {role: outlined-card, tooltip: '', border: '', foreground: '', visible: true,
       wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
-      spacing_below: small, background: '#0b2547'}
+      spacing_below: small, background: '#05264d'}
     type: ColumnPanel
-    layout_properties: {x: 565.4821624755859, y: 28.30329443359375, width: 151.857}
+    layout_properties: {x: 565.46875, y: 28.296875, width: 119.844}
     components:
     - name: button_2
       properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
@@ -143,9 +143,9 @@ components:
   - name: outlined_card_1_copy_3_copy
     properties: {role: outlined-card, tooltip: '', border: '', foreground: '', visible: true,
       wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '',
-      spacing_below: small, background: '#0b2547'}
+      spacing_below: small, background: '#05264d'}
     type: ColumnPanel
-    layout_properties: {x: 558.3393402099609, y: 135.00028680419922, width: 158.98188330078116}
+    layout_properties: {x: 558.328125, y: 135, width: 126.969}
     components:
     - name: button_1_copy_6_copy
       properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
@@ -160,9 +160,9 @@ components:
   - name: outlined_card_1
     properties: {role: outlined-card, tooltip: '', border: '', foreground: '', visible: true,
       wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '',
-      spacing_below: small, background: '#0b2547'}
+      spacing_below: small, background: '#05264d'}
     type: ColumnPanel
-    layout_properties: {x: 747.8036346435547, y: 30.392573608398436, width: 152.929}
+    layout_properties: {x: 747.796875, y: 30.390625, width: 120.922}
     components:
     - name: button_1
       properties: {role: null, align: left, tooltip: '', border: '', enabled: true,
@@ -175,9 +175,9 @@ components:
   - name: outlined_card_1_copy_7_copy
     properties: {role: outlined-card, tooltip: '', border: '', foreground: '', visible: true,
       wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '',
-      spacing_below: small, background: '#0b2547'}
+      spacing_below: small, background: '#05264d'}
     type: ColumnPanel
-    layout_properties: {x: 747.8035736083984, y: 140.67857360839844, width: 146.054}
+    layout_properties: {x: 747.796875, y: 140.671875, width: 114.047}
     components:
     - name: button_1_copy_8
       properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
@@ -231,7 +231,7 @@ components:
       properties: {role: null, align: left, tooltip: '', border: '', enabled: true,
         foreground: 'theme:On Primary', visible: true, text: ADD, font_size: null,
         font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
-        background: '#0b2547', bold: true, underline: false, icon: ''}
+        background: '#05264d', bold: true, underline: false, icon: ''}
       type: Button
       layout_properties:
         col_widths: {}
@@ -277,7 +277,7 @@ components:
       properties: {role: null, align: left, tooltip: '', border: '', enabled: true,
         foreground: 'theme:On Primary', visible: true, text: ADD, font_size: null,
         font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
-        background: '#0b2547', bold: true, underline: false, icon: ''}
+        background: '#05264d', bold: true, underline: false, icon: ''}
       type: Button
       layout_properties:
         col_widths: {}
@@ -321,7 +321,7 @@ components:
       properties: {role: null, align: left, tooltip: '', border: '', enabled: true,
         foreground: 'theme:On Primary', visible: true, text: ADD, font_size: null,
         font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
-        background: '#0b2547', bold: true, underline: false, icon: ''}
+        background: '#05264d', bold: true, underline: false, icon: ''}
       type: Button
       layout_properties:
         col_widths: {}
@@ -367,7 +367,7 @@ components:
       properties: {role: null, align: left, tooltip: '', border: '', enabled: true,
         foreground: 'theme:On Primary', visible: true, text: ADD, font_size: null,
         font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
-        background: '#0b2547', bold: true, underline: false, icon: ''}
+        background: '#05264d', bold: true, underline: false, icon: ''}
       type: Button
       layout_properties:
         col_widths: {}
@@ -410,7 +410,7 @@ components:
       properties: {role: null, align: left, tooltip: '', border: '', enabled: true,
         foreground: 'theme:On Primary', visible: true, text: ADD, font_size: null,
         font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
-        background: '#0b2547', bold: true, underline: false, icon: ''}
+        background: '#05264d', bold: true, underline: false, icon: ''}
       type: Button
       layout_properties:
         col_widths: {}
@@ -453,7 +453,7 @@ components:
       properties: {role: null, align: left, tooltip: '', border: '', enabled: true,
         foreground: 'theme:On Primary', visible: true, text: ADD, font_size: null,
         font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
-        background: '#0b2547', bold: true, underline: false, icon: ''}
+        background: '#05264d', bold: true, underline: false, icon: ''}
       type: Button
       layout_properties:
         col_widths: {}
@@ -496,7 +496,7 @@ components:
       properties: {role: null, align: left, tooltip: '', border: '', enabled: true,
         foreground: 'theme:On Primary', visible: true, text: ADD, font_size: null,
         font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
-        background: '#0b2547', bold: true, underline: false, icon: ''}
+        background: '#05264d', bold: true, underline: false, icon: ''}
       type: Button
       layout_properties:
         col_widths: {}
@@ -539,7 +539,7 @@ components:
       properties: {role: null, align: left, tooltip: '', border: '', enabled: true,
         foreground: 'theme:On Primary', visible: true, text: ADD, font_size: null,
         font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
-        background: '#0b2547', bold: true, underline: false, icon: ''}
+        background: '#05264d', bold: true, underline: false, icon: ''}
       type: Button
       layout_properties:
         col_widths: {}
@@ -586,7 +586,7 @@ components:
       properties: {role: null, align: left, tooltip: '', border: '', enabled: true,
         foreground: 'theme:On Primary', visible: true, text: ADD, font_size: null,
         font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
-        background: '#0b2547', bold: true, underline: false, icon: ''}
+        background: '#05264d', bold: true, underline: false, icon: ''}
       type: Button
       layout_properties:
         col_widths: {}
@@ -629,7 +629,7 @@ components:
       properties: {role: null, align: left, tooltip: '', border: '', enabled: true,
         foreground: 'theme:Tertiary Container', visible: true, text: ADD, font_size: null,
         font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
-        background: '#0b2547', bold: true, underline: false, icon: ''}
+        background: '#05264d', bold: true, underline: false, icon: ''}
       type: Button
       layout_properties:
         col_widths: {}
@@ -645,8 +645,8 @@ components:
       layout_properties: {grid_position: 'VRTHOW,IPWPHX'}
 - type: Button
   properties: {role: elevated-button, align: center, tooltip: '', border: '', enabled: true,
-    foreground: white, visible: true, text: Back, font_size: null, font: '16', spacing_above: small,
-    icon_align: left, spacing_below: small, italic: false, background: '#0b2547',
+    foreground: 'theme:On Primary', visible: true, text: Back, font_size: null, font: '16',
+    spacing_above: small, icon_align: left, spacing_below: small, italic: false, background: '#05264d',
     bold: true, underline: false, icon: 'fa:backward'}
   name: button_1_copy_3
   layout_properties:

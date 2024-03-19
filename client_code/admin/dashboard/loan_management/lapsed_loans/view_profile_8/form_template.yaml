@@ -27,11 +27,11 @@ components:
       components:
       - type: Label
         properties: {role: outlined-card, align: center, tooltip: '', border: '',
-          foreground: white, visible: true, text: Loan Details, font_size: 20, font: '',
-          spacing_above: small, icon_align: left, spacing_below: small, italic: false,
-          background: darkblue, bold: true, underline: false, icon: ''}
+          foreground: 'theme:On Primary', visible: true, text: Loan Details, font_size: 20,
+          font: '', spacing_above: small, icon_align: left, spacing_below: small,
+          italic: false, background: '#05264d', bold: true, underline: false, icon: ''}
         name: label_35
-        layout_properties: {row: FOJRRX, width_xs: 12, col_xs: 0, width: 686.8}
+        layout_properties: {row: FOJRRX, width_xs: 12, col_xs: 0, width: 590}
       - type: Label
         properties: {role: null, align: right, tooltip: '', border: '', foreground: '#000337',
           visible: true, text: Loan ID, font_size: null, font: '', spacing_above: small,
@@ -221,11 +221,11 @@ components:
         - {property: text, code: 'self.item[''user_type'']'}
       - type: Button
         properties: {role: elevated-button, align: center, tooltip: '', border: '',
-          enabled: true, foreground: white, visible: true, text: Back, font_size: 16,
-          font: '', spacing_above: small, icon_align: left, spacing_below: small,
-          italic: false, background: '#0b2547', bold: true, underline: false, icon: 'fa:backward'}
+          enabled: true, foreground: 'theme:On Primary', visible: true, text: Back,
+          font_size: 16, font: '', spacing_above: small, icon_align: left, spacing_below: small,
+          italic: false, background: '#05264d', bold: true, underline: false, icon: 'fa:backward'}
         name: back
         layout_properties: {grid_position: 'IHKKCN,HCGMZR', row: KSOFZZ, width_xs: 12,
-          col_xs: 0}
+          col_xs: 0, width: 622}
         event_bindings: {click: back_click}
 is_package: true
