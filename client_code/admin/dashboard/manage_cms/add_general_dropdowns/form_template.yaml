@@ -22,9 +22,9 @@ components:
   - name: outlined_card_1_copy_9
     properties: {role: outlined-card, tooltip: '', border: '', foreground: '', visible: true,
       wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
-      spacing_below: small, background: '#0b2547'}
+      spacing_below: small, background: '#05264d'}
     type: ColumnPanel
-    layout_properties: {x: 26.660720825195312, y: 23, width: 197.1604111328125}
+    layout_properties: {x: 26.65625, y: 23, width: 165.156}
     components:
     - name: button_1_copy_10
       properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
@@ -41,9 +41,9 @@ components:
   - name: outlined_card_1_copy_7
     properties: {role: outlined-card, tooltip: '', border: '', foreground: '', visible: true,
       wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '',
-      spacing_below: small, background: '#0b2547'}
+      spacing_below: small, background: '#05264d'}
     type: ColumnPanel
-    layout_properties: {x: 262.41066851094365, y: 21.33931078389287, width: 204.018111328125}
+    layout_properties: {x: 262.40625, y: 21.328125, width: 172.016}
     components:
     - name: button_1_copy_8
       properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
@@ -60,9 +60,9 @@ components:
   - name: outlined_card_1_copy_8
     properties: {role: outlined-card, tooltip: '', border: '', foreground: '', visible: true,
       wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
-      spacing_below: small, background: '#0b2547'}
+      spacing_below: small, background: '#05264d'}
     type: ColumnPanel
-    layout_properties: {x: 506.00002397969365, y: 21.339295525103807, width: 207.304}
+    layout_properties: {x: 506, y: 21.328125, width: 175.297}
     components:
     - name: button_1_copy_9
       properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
@@ -79,9 +79,9 @@ components:
   - name: outlined_card_1_copy_9_copy
     properties: {role: outlined-card, tooltip: '', border: '', foreground: '', visible: true,
       wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
-      spacing_below: small, background: '#0b2547'}
+      spacing_below: small, background: '#05264d'}
     type: ColumnPanel
-    layout_properties: {x: 749.7500392384827, y: 21.75002397969365, width: 200.00001525878906}
+    layout_properties: {x: 749.75, y: 21.75, width: 168}
     components:
     - name: button_1_copy_10_copy
       properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
@@ -137,7 +137,7 @@ components:
       properties: {role: null, align: left, tooltip: '', border: '', enabled: true,
         foreground: 'theme:On Primary', visible: true, text: ADD, font_size: null,
         font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
-        background: '#0b2547', bold: true, underline: false, icon: ''}
+        background: '#05264d', bold: true, underline: false, icon: ''}
       type: Button
       layout_properties:
         col_widths: {}
@@ -188,7 +188,7 @@ components:
       properties: {role: null, align: left, tooltip: '', border: '', enabled: true,
         foreground: 'theme:On Primary', visible: true, text: ADD, font_size: null,
         font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
-        background: '#0b2547', bold: true, underline: false, icon: ''}
+        background: '#05264d', bold: true, underline: false, icon: ''}
       type: Button
       layout_properties:
         col_widths: {}
@@ -239,7 +239,7 @@ components:
       properties: {role: null, align: left, tooltip: '', border: '', enabled: true,
         foreground: 'theme:On Primary', visible: true, text: ADD, font_size: null,
         font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
-        background: '#0b2547', bold: true, underline: false, icon: ''}
+        background: '#05264d', bold: true, underline: false, icon: ''}
       type: Button
       layout_properties:
         col_widths: {}
@@ -290,7 +290,7 @@ components:
       properties: {role: null, align: left, tooltip: '', border: '', enabled: true,
         foreground: 'theme:On Primary', visible: true, text: ADD, font_size: null,
         font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
-        background: '#0b2547', bold: true, underline: false, icon: ''}
+        background: '#05264d', bold: true, underline: false, icon: ''}
       type: Button
       layout_properties:
         col_widths: {}
@@ -306,8 +306,8 @@ components:
       layout_properties: {grid_position: 'THVHBG,YIQWNT'}
 - name: button_1_copy_3
   properties: {role: elevated-button, align: center, tooltip: '', border: '', enabled: true,
-    foreground: white, visible: true, text: Back, font_size: null, font: '16', spacing_above: small,
-    icon_align: left, spacing_below: small, italic: false, background: '#0b2547',
+    foreground: 'theme:On Primary', visible: true, text: Back, font_size: null, font: '16',
+    spacing_above: small, icon_align: left, spacing_below: small, italic: false, background: '#05264d',
     bold: true, underline: false, icon: 'fa:backward'}
   type: Button
   layout_properties: {grid_position: 'QHXQVC,RRHUJQ'}

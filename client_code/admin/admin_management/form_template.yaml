@@ -25,7 +25,10 @@ components:
     type: Spacer
     layout_properties: {width: 191}
   - name: home
-    properties: {text: Home, bold: true, background: '#0b2547', foreground: white}
+    properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
+      foreground: white, visible: true, text: Home, font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '#05264d',
+      bold: true, underline: false, icon: ''}
     type: Button
     event_bindings: {click: home_click}
   - name: spacer_1_copy
@@ -46,14 +49,18 @@ components:
   type: ColumnPanel
   layout_properties: {grid_position: 'CDJUQY,UJKDJO', full_width_row: true}
 - name: add_people
-  properties: {text: Add Admin, role: elevated-button, foreground: 'theme:On Primary',
-    bold: true, border: '', background: '#0b2547'}
+  properties: {role: elevated-button, align: center, tooltip: '', border: '', enabled: true,
+    foreground: 'theme:On Primary', visible: true, text: Add Admin, font_size: null,
+    font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+    background: '#05264d', bold: true, underline: false, icon: ''}
   type: Button
   layout_properties: {grid_position: 'KQZUCT,FLOATQ', row_background: ''}
   event_bindings: {click: add_peopless}
 - name: button_1_copy
-  properties: {text: View Admins, role: elevated-button, foreground: 'theme:On Primary',
-    bold: true, background: '#0b2547'}
+  properties: {role: elevated-button, align: center, tooltip: '', border: '', enabled: true,
+    foreground: 'theme:On Primary', visible: true, text: View Admins, font_size: null,
+    font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+    background: '#05264d', bold: true, underline: false, icon: ''}
   type: Button
   layout_properties: {grid_position: 'KQZUCT,RGTAYF'}
   event_bindings: {click: button_1_copy_click}

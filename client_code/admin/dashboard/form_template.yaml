@@ -11,7 +11,7 @@ components:
 - name: logout_
   properties: {role: null, align: right, tooltip: '', border: '', enabled: true, foreground: white,
     visible: true, text: Log out, font_size: null, font: '', spacing_above: small,
-    icon_align: left, spacing_below: small, italic: false, background: '#0b2547',
+    icon_align: left, spacing_below: small, italic: false, background: '#05264d',
     bold: true, underline: false, icon: ''}
   type: Button
   layout_properties: {grid_position: 'KEPDYN,HUYVPU', full_width_row: true}
@@ -30,7 +30,7 @@ components:
       properties: {role: outlined-button, align: center, tooltip: '', border: '',
         enabled: true, foreground: 'theme:On Primary', visible: true, text: '     Manage
           Borrowers              ', font_size: null, font: '', spacing_above: small,
-        icon_align: left, spacing_below: small, italic: false, background: '#0b2547',
+        icon_align: left, spacing_below: small, italic: false, background: '#05264d',
         bold: true, underline: false, icon: 'fa:align-left'}
       name: button_3
       layout_properties: {x: 316, y: 74, width: 277}
@@ -39,34 +39,34 @@ components:
       properties: {role: outlined-button, align: center, tooltip: '', border: '',
         enabled: true, foreground: 'theme:On Primary', visible: true, text: '     Manage
           Products                ', font_size: null, font: '', spacing_above: small,
-        icon_align: left, spacing_below: small, italic: false, background: '#0b2547',
+        icon_align: left, spacing_below: small, italic: false, background: '#05264d',
         bold: true, underline: false, icon: 'fa:exclamation-triangle'}
       name: button_6
-      layout_properties: {x: 316.99552154541016, y: 145.99552154541016, width: 275.015625}
+      layout_properties: {x: 316.984375, y: 145.984375, width: 275.016}
       event_bindings: {click: button_6_click}
     - type: Button
       properties: {role: outlined-button, align: center, tooltip: '', border: '',
         enabled: true, foreground: 'theme:On Primary', visible: true, text: '  Manage
           Risk Pool (FLDGB)     ', font_size: null, font: '', spacing_above: small,
-        icon_align: left, spacing_below: small, italic: false, background: '#0b2547',
+        icon_align: left, spacing_below: small, italic: false, background: '#05264d',
         bold: true, underline: false, icon: 'fa:stumbleupon'}
       name: button_9
-      layout_properties: {x: 315.9910659790039, y: 214.99553680419922, width: 276.01562500000006}
+      layout_properties: {x: 315.984375, y: 214.984375, width: 276.016}
       event_bindings: {click: button_9_click}
     - type: Button
       properties: {role: outlined-button, align: center, tooltip: '', border: '',
         enabled: true, foreground: 'theme:On Primary', visible: true, text: '  Manage
           Revenu Share         ', font_size: null, font: '', spacing_above: small,
-        icon_align: left, spacing_below: small, italic: false, background: '#0b2547',
+        icon_align: left, spacing_below: small, italic: false, background: '#05264d',
         bold: true, underline: false, icon: 'fa:inr'}
       name: button_8
-      layout_properties: {x: 9.991069793701172, y: 214.99553680419922, width: 244.996}
+      layout_properties: {x: 9.984375, y: 214.984375, width: 244.984}
       event_bindings: {click: button_8_click}
     - type: Button
       properties: {role: outlined-button, align: center, tooltip: '', border: '',
         enabled: true, foreground: 'theme:On Primary', visible: true, text: '  Loan  Management               ',
         font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small,
-        italic: false, background: '#0b2547', bold: true, underline: false, icon: 'fa:trello'}
+        italic: false, background: '#05264d', bold: true, underline: false, icon: 'fa:trello'}
       name: button_5
       layout_properties: {x: 10, y: 146, width: 245}
       event_bindings: {click: button_5_click}
@@ -74,28 +74,28 @@ components:
       properties: {role: outlined-button, align: center, tooltip: '', border: '',
         enabled: true, foreground: 'theme:On Primary', visible: true, text: 'Manage
           Admins                 ', font_size: null, font: '', spacing_above: small,
-        icon_align: left, spacing_below: small, italic: false, background: '#0b2547',
+        icon_align: left, spacing_below: small, italic: false, background: '#05264d',
         bold: true, underline: false, icon: 'fa:cube'}
       name: button_2
-      layout_properties: {x: 9.991069793701172, y: 73.99553680419922, width: 244.996}
+      layout_properties: {x: 9.984375, y: 73.984375, width: 244.984}
       event_bindings: {click: button_2_click}
     - type: Button
       properties: {role: outlined-button, align: center, tooltip: '', border: '',
         enabled: true, foreground: 'theme:On Primary', visible: true, text: '     Manage
           Reports                 ', font_size: null, font: '', spacing_above: small,
-        icon_align: left, spacing_below: small, italic: false, background: '#0b2547',
+        icon_align: left, spacing_below: small, italic: false, background: '#05264d',
         bold: true, underline: false, icon: 'fa:newspaper-o'}
       name: button_11
-      layout_properties: {x: 9.991069793701172, y: 277.9955062866211, width: 244.996}
+      layout_properties: {x: 9.984375, y: 277.984375, width: 244.984}
       event_bindings: {click: button_11_click}
     - type: Button
       properties: {role: outlined-button, align: center, tooltip: '', border: '',
         enabled: true, foreground: 'theme:On Primary', visible: true, text: '      Performance
           Tracker           ', font_size: null, font: '', spacing_above: small, icon_align: left,
-        spacing_below: small, italic: false, background: '#0b2547', bold: true, underline: false,
+        spacing_below: small, italic: false, background: '#05264d', bold: true, underline: false,
         icon: 'fa:compass'}
       name: button_13
-      layout_properties: {x: 316.99552154541016, y: 281.38390350341797, width: 275.015625}
+      layout_properties: {x: 316.984375, y: 281.375, width: 275.016}
       event_bindings: {click: button_13_click}
     - type: Button
       properties: {role: outlined-button, align: center, tooltip: '', border: '',
