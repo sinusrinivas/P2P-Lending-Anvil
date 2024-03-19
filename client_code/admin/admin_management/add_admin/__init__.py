@@ -1,13 +1,11 @@
 from ._anvil_designer import add_adminTemplate
 from anvil import *
 import anvil.server
-import anvil.google.auth, anvil.google.drive
-from anvil.google.drive import app_files
 import anvil.users
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
-from datetime import date
+from datetime import date, datetime
 from .... import admin
 
 
@@ -36,12 +34,11 @@ class add_admin(add_adminTemplate):
     def save_all_fields_click(self, **event_args):
         email = self.admin_email.text 
         name = self.admin_name.text
-        mobile_no = int(self.mobile_number.text)
+        mobile_no = self.mobile_number.text
         dob = self.dob.date
         gender = self.gender.selected_value
         role = self.role.selected_value
         password = self.create_password_text.text
-        hashed_password = anvil.server.call('hash_password', password)
         retype = self.re_enter_password.text
         created_date = date.today()
         status = True
@@ -49,17 +46,41 @@ class add_admin(add_adminTemplate):
         ref_admin_email = self.user_mail
         customer_id = self.customer_id
         
-        if email and name and mobile_no and dob and gender and role and password:
-            if password == retype:  # Check if passwords match
-                result = admin.add_admin_details(email, name, mobile_no, dob, gender, role, hashed_password, created_date, status, ref_admin_name, ref_admin_email, customer_id)
-                if result:
-                    self.label_7.text = "Data added Successfully"
-                else:
-                    self.label_7.text = "User already exists"
-            else:
-                alert("Passwords do not match. Please re-enter.")
-        else:
+        # Validation
+        if not all([email, name, mobile_no, dob, gender, role, password]):
             alert("Fill all the fields")
+            return
+
+        if password != retype:
+            alert("Passwords do not match. Please re-enter.")
+            return
+
+        if not name.isalpha():
+            alert("Name should contain only alphabetic characters.")
+            return
+
+        if not mobile_no.isdigit() or len(mobile_no) != 10:
+            alert("Mobile number should contain 10 digits only.")
+            return
+
+        dob_str = dob.strftime('%Y-%m-%d')  # Convert date to string
+        try:
+            dob = datetime.strptime(dob_str, '%Y-%m-%d').date()
+        except ValueError:
+            alert("Invalid Date of Birth")
+            return
+    
+        age = (date.today() - dob).days // 365  # Calculate age
+        if age < 18:
+            alert("Age should be 18 years or more.")
+            return
+
+        hashed_password = anvil.server.call('hash_password', password)
+
+        result = admin.add_admin_details(email, name, mobile_no, dob, gender, role, hashed_password, created_date, status, ref_admin_name, ref_admin_email, customer_id)
+
+        alert("data added succesfully!")
+        open_form('admin.admin_management')
 
     def clear_function_click(self, **event_args):
         open_form()
