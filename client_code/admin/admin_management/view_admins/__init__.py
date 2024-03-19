@@ -1,38 +1,3 @@
-# from ._anvil_designer import view_adminsTemplate
-# from anvil import *
-# import anvil.server
-# import anvil.google.auth, anvil.google.drive
-# from anvil.google.drive import app_files
-# import anvil.users
-# import anvil.tables as tables
-# import anvil.tables.query as q
-# from anvil.tables import app_tables
-
-
-# class view_admins(view_adminsTemplate):
-#     def __init__(self, **properties):
-#         # Set Form properties and Data Bindings.
-#         self.init_components(**properties)
-
-#     #     # Any code you write here will run before the form opens.
-#     #     self.populate_admins()
-
-#     # def populate_admins(self):
-#     #     # Call the server function to fetch admin users data
-#     #     admin_emails = anvil.server.call('get_admin_emails')
-
-#     #     # Clear the repeating panel
-#     #     self.repeating_panel.items = []
-
-#     #     # Populate the repeating panel with fetched data
-#     #     for email in admin_emails:
-#     #         # Call the server function to fetch admin details based on email
-#     #         admin_details = anvil.server.call('get_admin_details', email)
-#     #         if admin_details:
-#     #             # Append the admin details to the repeating panel items
-#     #             self.repeating_panel.items.append(admin_details)
-
-
 from ._anvil_designer import view_adminsTemplate
 from anvil import *
 import anvil.server
@@ -44,17 +9,32 @@ class view_admins(view_adminsTemplate):
         self.populate_admins()
 
     def populate_admins(self):
-        # Call the server function to fetch admin users data
-        admin_emails = anvil.server.call('get_admin_emails')
+        
+        self.data = tables.app_tables.fin_admin_users.search()
 
-        # Clear the repeating panel
-        self.repeating_panel.items = []
+        if not self.data:
+            Notification("No Data Available Here!").show()
+        else:
+            self.result = [{'admin_email': i['admin_email'],
+                            'admin_name': i['full_name'],
+                            'admin_role': i['admin_role'],
+                            'ref_admin_name': i['ref_admin_name'],
+                            'join_date': i['join_date']}
+                           for i in self.data]
 
-        # Populate the repeating panel with fetched data
-        for email in admin_emails:
-            # Call the server function to fetch admin details based on email
-            admin_details = anvil.server.call('get_admin_details', email)
-            if admin_details:
-                print(admin_details)
-                # Append the admin details to the repeating panel items
-                self.repeating_panel.items.append(admin_details)
+            self.repeating_panel.items = self.result
+
+    def button_1_click(self, **event_args):
+      """This method is called when the button is clicked"""
+      open_form('admin.admin_management')
+
+
+
+
+
+
+
+
+
+
+
