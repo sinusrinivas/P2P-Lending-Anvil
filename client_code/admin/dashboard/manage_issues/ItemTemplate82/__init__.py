@@ -16,5 +16,13 @@ class ItemTemplate82(ItemTemplate82Template):
     # Any code you write here will run before the form opens.
 
   def button_1_click(self, **event_args):
-    """This method is called when the button is clicked"""
-    alert('problem solved')
+        """This method is called when the button is clicked"""
+        item = self.item  # Get the item associated with the button
+        
+        if item is not None:
+            # Update the status column to indicate the problem is solved
+            item['status'] = True  # Replace 'status' with the actual column name
+            alert('Problem solved.')
+            open_form('admin.dashboard.manage_issues')
+        else:
+            alert('Please select a problem to mark as solved.')

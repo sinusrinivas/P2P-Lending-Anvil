@@ -48,6 +48,9 @@ db_schema:
     - name: report_date
       admin_ui: {width: 200, order: 5}
       type: datetime
+    - name: status
+      admin_ui: {width: 200, order: 6}
+      type: bool
     title: fin_reported_problems
   fin_gender:
     client: full
