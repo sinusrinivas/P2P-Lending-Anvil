@@ -79,7 +79,7 @@ components:
     - name: gender
       properties:
         role: outlined
-        items: [male, female]
+        items: ['']
         placeholder: Chose Gender
         include_placeholder: true
       type: DropDown
@@ -91,7 +91,7 @@ components:
     - name: role
       properties:
         role: outlined
-        items: [admin, super admin]
+        items: ['']
         include_placeholder: true
         placeholder: Chose Role
       type: DropDown

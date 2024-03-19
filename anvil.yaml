@@ -17,7 +17,7 @@ services:
 - source: /runtime/services/anvil/secrets.yml
   client_config: {}
   server_config: {}
-startup: {type: form, module: admin.dashboard}
+startup: {type: form, module: bank_users.main_form}
 package_name: bank_client
 allow_embedding: false
 name: P2P Lending App
@@ -103,7 +103,7 @@ db_schema:
       admin_ui: {width: 200}
       type: string
   fin_lendor_no_of_employees:
-    client: full
+    client: none
     server: full
     columns:
     - name: lendor_no_of_employees
@@ -202,9 +202,6 @@ db_schema:
     - name: product_id
       admin_ui: {width: 200, order: 7}
       type: string
-    - name: product_discription
-      admin_ui: {order: 8, width: 200}
-      type: string
     - name: processing_fee
       admin_ui: {width: 200, order: 9}
       type: number
@@ -262,13 +259,16 @@ db_schema:
     - name: occupation
       admin_ui: {width: 200}
       type: string
+    - name: product_description
+      admin_ui: {width: 200}
+      type: string
     title: fin_product_details
   fin_borrower_organization_type:
     client: full
     server: full
     columns:
     - name: borrower_organization_type
-      admin_ui: {width: 200, order: 0}
+      admin_ui: {order: 0, width: 243}
       type: string
     title: fin_borrower_organization_type
   fin_borrower_account_type:
@@ -471,6 +471,14 @@ db_schema:
     - name: present_address
       admin_ui: {width: 200}
       type: string
+  fin_admin_role:
+    title: fin_admin_role
+    client: full
+    server: full
+    columns:
+    - name: role
+      admin_ui: {width: 200}
+      type: string
   fin_borrower_profession:
     client: full
     server: full
@@ -657,7 +665,7 @@ db_schema:
       admin_ui: {width: 200, order: 64}
       type: string
     - name: running_Home_Loan
-      admin_ui: {width: 200, order: 65}
+      admin_ui: {order: 66.5, width: 200}
       type: string
     - name: other_loan
       admin_ui: {width: 200, order: 66}
@@ -810,31 +818,31 @@ db_schema:
       admin_ui: {width: 200}
       type: string
     - name: duration_at_address
-      admin_ui: {width: 200}
+      admin_ui: {order: 81.9921875, width: 200}
       type: string
     - name: present_address
-      admin_ui: {width: 200}
+      admin_ui: {order: 81.75, width: 200}
       type: string
     - name: salary_type
-      admin_ui: {width: 200, order: 5.5}
+      admin_ui: {order: 81.5, width: 200}
       type: string
     - name: company_type
-      admin_ui: {width: 200}
+      admin_ui: {order: 81.875, width: 200}
       type: string
     - name: business_age
-      admin_ui: {width: 200}
+      admin_ui: {order: 81.99609375, width: 200}
       type: number
     - name: profession
-      admin_ui: {width: 200}
+      admin_ui: {order: 81.9375, width: 200}
       type: string
     - name: self_employment
-      admin_ui: {width: 200}
+      admin_ui: {order: 104.998046875, width: 200}
       type: string
     - name: wheeler_loans
-      admin_ui: {width: 200, order: 80.5}
+      admin_ui: {order: 81.375, width: 200}
       type: string
     - name: credit_card_loans
-      admin_ui: {width: 200, order: 80.25}
+      admin_ui: {order: 81.25, width: 200}
       type: string
     title: fin_user_profile
   fin_admin_beseem_categories:
@@ -851,7 +859,7 @@ db_schema:
       admin_ui: {width: 200, order: 5}
       type: date
     - name: sub_category
-      admin_ui: {width: 200, order: 1.5}
+      admin_ui: {order: 1, width: 220}
       type: string
     - name: is_liveloan
       admin_ui: {width: 200, order: 3.5}
@@ -1068,7 +1076,7 @@ db_schema:
       admin_ui: {order: 12, width: 200}
       type: string
   fin_wallet_bank_account_table:
-    client: full
+    client: none
     server: full
     columns:
     - name: account_id
