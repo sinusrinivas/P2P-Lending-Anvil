@@ -53,7 +53,6 @@ class edit_age_of_business(edit_age_of_businessTemplate):
     """This method is called when the Delete button is clicked"""
     # Check if the user confirms the deletion
     if confirm("Are you sure you want to delete this item?"):
-      # Delete the row directly on the client side
       self.selected_row.delete()
 
       existing_min_points = [row["min_points"] for row in app_tables.fin_admin_beseem_categories.search(group_name='age_of_business')]

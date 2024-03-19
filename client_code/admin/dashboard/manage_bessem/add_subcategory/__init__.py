@@ -280,11 +280,11 @@ class add_subcategory(add_subcategoryTemplate):
 
   def age_of_business_button_click(self, **event_args):
     """This method is called when the button is clicked"""
-    entered_sub = self.text_box_20.text.lower()
-    entered_min_pts = int(self.text_box_21.text)
+    entered_sub = self.text_box_22.text.lower()
+    entered_min_pts = int(self.text_box_23.text)
     new_row = app_tables.fin_admin_beseem_categories.add_row(group_name='age_of_business',sub_category=entered_sub,min_points=entered_min_pts)
-    self.text_box_20.text = ' '
-    self.text_box_21.text = ' '
+    self.text_box_22.text = ' '
+    self.text_box_23.text = ' '
     self.refresh()
 
     existing_min_points = [row["min_points"] for row in app_tables.fin_admin_beseem_categories.search(group_name='age_of_business')]

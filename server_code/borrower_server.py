@@ -337,6 +337,13 @@ def get_user_points(id):
                     print("Organization_type Points:", organization_type_points)
                     user_points += organization_type_points
 
+            elif profession == 'business':
+                business_age_search = app_tables.fin_admin_beseem_categories.search(group_name='age_of_business', sub_category=organization_type.lower())
+                if business_age_search:
+                    business_age_points = business_age_search
+                    print("Business age Points:", business_age_points)
+                    user_points += business_age_points
+
         return user_points
     else:
         return None
