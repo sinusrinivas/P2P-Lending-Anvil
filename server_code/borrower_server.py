@@ -299,11 +299,11 @@ def get_user_points(id):
             print("Present address Points:", present_address_points)
             user_points += present_address_points
 
-        # duration_at_address_search = app_tables.fin_admin_beseem_categories.search(group_name='duration_at_address', sub_category=duration_at_address)
-        # if duration_at_address_search:
-        #    duration_at_address_points = duration_at_address_search[0]['min_points']
-        #    print("Duration at address Points:", duration_at_address_points)
-        #    user_points += duration_at_address_points
+        duration_at_address_search = app_tables.fin_admin_beseem_categories.search(group_name='duration_at_address', sub_category=duration_at_address.lower())
+        if duration_at_address_search:
+           duration_at_address_points = duration_at_address_search[0]['min_points']
+           print("Duration at address Points:", duration_at_address_points)
+           user_points += duration_at_address_points
 
         qualification_search = app_tables.fin_admin_beseem_categories.search(group_name='qualification', sub_category=qualification.lower())
         if qualification_search:
@@ -311,11 +311,11 @@ def get_user_points(id):
             print("Qualification Points:", qualification_points)
             user_points += qualification_points
 
-        # marital_status_search = app_tables.fin_admin_beseem_categories.search(group_name='marital_status', sub_category=marital_status)
-        # if marital_status_search:
-        #     marital_status_points = marital_status_search[0]['min_points']
-        #     print("Marital status Points:", marital_status_points)
-        #     user_points += marital_status_points
+        marital_status_search = app_tables.fin_admin_beseem_categories.search(group_name='marital_status', sub_category=marital_status.lower())
+        if marital_status_search:
+            marital_status_points = marital_status_search[0]['min_points']
+            print("Marital status Points:", marital_status_points)
+            user_points += marital_status_points
 
         profession_search = app_tables.fin_admin_beseem_categories.search(group_name='profession', sub_category=profession.lower())
         if profession_search:
