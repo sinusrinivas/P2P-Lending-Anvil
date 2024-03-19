@@ -48,7 +48,7 @@ class view_profile(view_profileTemplate):
       self.product_name_lst.append(i['product_name'])
       self.name_list.append(i['product_group'])
       self.categories_list.append(i['product_categories'])
-      self.product_descri.append(i['product_discription'])
+      self.product_descri.append(i['product_description'])
       self.profee_list.append(i['processing_fee'])
       self.extfee_list.append(i['extension_fee'])
       self.foreclose_list.append(i['foreclose_type'])
