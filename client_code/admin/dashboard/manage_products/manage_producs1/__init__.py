@@ -319,7 +319,7 @@ class manage_producs1(manage_producs1Template):
         # Process the rest of the code if all validations pass
         product_name = self.product_name.text
         product_group = self.name.selected_value
-        product_discription = self.text_area_1.text
+        product_description = self.text_area_1.text
         product_categories = self.product_category.selected_value
     
         membership_type = self.drop_down_2.selected_value
@@ -358,7 +358,7 @@ class manage_producs1(manage_producs1Template):
             return
     
         # Call the server function to add product details
-        anvil.server.call('product_details', self.id, product_name, product_group, product_discription,
+        anvil.server.call('product_details', self.id, product_name, product_group, product_description,
                           product_categories, processing_fee, extension_fee, membership_type, interest_type, max_amount,
                           min_amount, min_tenure, max_tenure, roi, foreclose_type, foreclosure_fee, extension_allowed,
                           emi_payment, min_months, lapsed_fee, default_fee, npa,occupation)
