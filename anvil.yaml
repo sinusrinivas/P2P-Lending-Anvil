@@ -342,6 +342,9 @@ db_schema:
     - name: status
       admin_ui: {width: 200}
       type: string
+    - name: foreclosure_emi_num
+      admin_ui: {width: 200, order: 14}
+      type: number
   fin_admin_beseem_groups:
     client: full
     server: full

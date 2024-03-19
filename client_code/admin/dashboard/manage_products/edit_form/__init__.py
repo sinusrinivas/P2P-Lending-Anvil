@@ -25,7 +25,7 @@ class edit_form(edit_formTemplate):
             self.label_1.text = str(product['product_id'])
             self.product_name.text = product['product_name']
             self.text_box_1.text = product['product_group']
-            self.text_area_1.text = str(product['product_discription'])
+            self.text_area_1.text = str(product['product_description'])
             self.text_box_2.text = product['product_categories']
             self.text_box_3.text = str(product['processing_fee'])
             self.text_box_4.text = str(product['extension_fee'])
