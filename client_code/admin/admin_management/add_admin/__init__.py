@@ -94,4 +94,13 @@ class add_admin(add_adminTemplate):
         open_form('admin.admin_management')
 
     def clear_function_click(self, **event_args):
-        open_form()
+        # Clear all input fields
+        self.admin_email.text = ""
+        self.admin_name.text = ""
+        self.mobile_number.text = ""
+        self.dob.date = None
+        self.gender.selected_value = None
+        self.role.selected_value = None
+        self.create_password_text.text = ""
+        self.re_enter_password.text = ""
+      
