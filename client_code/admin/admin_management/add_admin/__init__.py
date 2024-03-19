@@ -7,6 +7,7 @@ import anvil.tables.query as q
 from anvil.tables import app_tables
 from datetime import date, datetime
 from .... import admin
+import re
 
 
 class add_admin(add_adminTemplate):
@@ -18,6 +19,12 @@ class add_admin(add_adminTemplate):
         self.customer_id = anvil.server.call('generate_admin_id')
         print(self.customer_id)
         # Any code you write here will run before the form opens.
+        gender_options = [row['gender'] for row in app_tables.fin_gender.search()]
+        # Set the dropdown options
+        self.gender.items = gender_options
+        role_options = [row['role'] for row in app_tables.fin_admin_role.search()]
+        # Set the dropdown options
+        self.role.items = role_options
         user = anvil.users.get_user()
         # Check if a user is logged in
         if user:
@@ -55,8 +62,12 @@ class add_admin(add_adminTemplate):
             alert("Passwords do not match. Please re-enter.")
             return
 
-        if not name.isalpha():
-            alert("Name should contain only alphabetic characters.")
+        # Regular expression pattern to allow alphabetic characters and underscores
+        pattern = r'^[a-zA-Z_ ]+$'
+        
+        # Check if the name matches the pattern
+        if not re.match(pattern, name):
+            alert("Name should contain only alphabetic characters and underscores.")
             return
 
         if not mobile_no.isdigit() or len(mobile_no) != 10:

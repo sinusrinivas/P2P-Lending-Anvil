@@ -12,7 +12,7 @@ components:
   type: Label
   layout_properties: {column: VJQQOR}
   data_bindings:
-  - {property: text, code: 'self.item[''full_name'']', writeback: false}
+  - {property: text, code: 'self.item[''admin_name'']', writeback: false}
 - name: label_3
   properties: {}
   type: Label
@@ -30,4 +30,4 @@ components:
   type: Label
   layout_properties: {column: VKAVKF}
   data_bindings:
-  - {property: text, code: 'self.item[''joined_date'']', writeback: false}
+  - {property: text, code: 'self.item[''join_date'']', writeback: false}
