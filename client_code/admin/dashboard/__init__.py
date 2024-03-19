@@ -49,7 +49,7 @@ class dashboard(dashboardTemplate):
     open_form('admin.dashboard.manage_cms')
 
   def button_11_click(self, **event_args):
-    open_form('admin.dashboard.manage_reports')
+    open_form('admin.dashboard.manage_issues')
 
   def button_13_click(self, **event_args):
     open_form('admin.dashboard.performance_tracker')
