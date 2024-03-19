@@ -28,7 +28,7 @@ class add_subcategory(add_subcategoryTemplate):
     self.repeating_panel_8.items = app_tables.fin_admin_beseem_categories.search(group_name="duration_at_address")
     self.repeating_panel_9.items = app_tables.fin_admin_beseem_categories.search(group_name="salary_type")
     self.repeating_panel_10.items = app_tables.fin_admin_beseem_categories.search(group_name='spouse_profession')
-    self.repeating_panel_11.items = self
+    self.repeating_panel_11.items = app_tables.fin_admin_beseem_categories.search(group_name='age_of_business')
   
   def back_btn_click(self, **event_args):
     """This method is called when the button is clicked"""
@@ -420,6 +420,22 @@ class add_subcategory(add_subcategoryTemplate):
     self.grid_panel_7.visible = False
     self.grid_panel_8.visible = False
     self.grid_panel_9.visible = False
+    self.grid_panel_10.visible = True
+    self.grid_panel_11.visible = False
+
+  def age_of_business_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    self.grid_panel_1.visible = False
+    self.grid_panel_2.visible = False
+    self.grid_panel_3.visible = False
+    self.grid_panel_4.visible = False
+    self.grid_panel_5.visible = False
+    self.grid_panel_6.visible = False
+    self.grid_panel_7.visible = False
+    self.grid_panel_8.visible = False
+    self.grid_panel_9.visible = False
+    self.grid_panel_10.visible = False
+    self.grid_panel_11.visible = True
 
   
 
