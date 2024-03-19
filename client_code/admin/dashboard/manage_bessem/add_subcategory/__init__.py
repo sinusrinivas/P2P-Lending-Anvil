@@ -132,7 +132,7 @@ class add_subcategory(add_subcategoryTemplate):
             group_name="profession", max_points=max_points
         )
     
-  def all_loans_button_click(self, **event_args):
+  def all_loan_button_click(self, **event_args):
     """This method is called when the button is clicked"""
     entered_sub = self.text_box_9.text.lower()
     entered_yes_no = self.text_box_10.text.lower()
@@ -142,7 +142,7 @@ class add_subcategory(add_subcategoryTemplate):
         return
     entered_min_pts = int(self.text_box_11.text)
     
-    new_row = app_tables.fin_admin_beseem_categories.add_row(group_name='all_loans',sub_category=entered_sub,min_points=entered_min_pts,is_liveloan=entered_yes_no)
+    new_row = app_tables.fin_admin_beseem_categories.add_row(group_name='all_loans',sub_category=entered_sub,min_points=entered_min_pts)
     self.text_box_9.text = ' '
     self.text_box_10.text = ' '
     self.text_box_11.text = ' '
@@ -371,7 +371,7 @@ class add_subcategory(add_subcategoryTemplate):
     self.grid_panel_10.visible = False
     self.grid_panel_11.visible = False
 
-  def home_loan_click(self, **event_args):
+  def all_loan_click(self, **event_args):
     """This method is called when the button is clicked"""
     self.grid_panel_1.visible = False
     self.grid_panel_2.visible = False
