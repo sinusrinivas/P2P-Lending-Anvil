@@ -11,7 +11,7 @@ components:
   - type: form:admin.dashboard.home_button_admin
     properties: {}
     name: home_button_admin_1
-    layout_properties: {grid_position: 'EMFUOQ,KUTSLQ'}
+    layout_properties: {grid_position: 'EMFUOQ,KUTSLQ', full_width_row: true}
   - type: RepeatingPanel
     properties: {role: null, tooltip: '', border: '', foreground: '', items: null,
       visible: true, spacing_above: small, spacing_below: small, item_template: admin.dashboard.manage_issues.ItemTemplate82,
