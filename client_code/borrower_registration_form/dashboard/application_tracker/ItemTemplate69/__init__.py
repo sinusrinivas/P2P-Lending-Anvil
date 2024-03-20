@@ -12,7 +12,8 @@ from .. import main_form_module as main_form_module
 class ItemTemplate69(ItemTemplate69Template):
   def __init__(self, **properties):
     self.init_components(**properties)
-    self.user_id = main_form_module.userId   
+    self.user_id = main_form_module.userId 
+    print(self.user_id)
     user_data = app_tables.fin_loan_details.search()
     for row in user_data:
         borrower_customer_id = row['borrower_customer_id']

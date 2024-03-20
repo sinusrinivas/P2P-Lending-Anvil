@@ -82,7 +82,7 @@ components:
     - type: Button
       properties: {role: outlined-button, align: center, tooltip: '', border: '',
         enabled: true, foreground: 'theme:On Primary', visible: true, text: '     Manage
-          Reports                 ', font_size: null, font: '', spacing_above: small,
+          issues              ', font_size: null, font: '', spacing_above: small,
         icon_align: left, spacing_below: small, italic: false, background: '#05264d',
         bold: true, underline: false, icon: 'fa:newspaper-o'}
       name: button_11
