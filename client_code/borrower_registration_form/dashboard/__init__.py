@@ -129,15 +129,11 @@ class dashboard(dashboardTemplate):
     def notification_link_click(self, **event_args):
       open_form('borrower_registration_form.dashboard.notification')
 
-
   
     # this button is work for wallet 
     def wallet_dashboard_link_click(self, **event_args):
       open_form('wallet.wallet')
 
-
-
-  
 
     def extended_loans_click(self, **event_args):
       open_form('borrower_registration_form.dashboard.extension_loan_request')
@@ -158,5 +154,6 @@ class dashboard(dashboardTemplate):
 
     def contact_main_form_link_click(self, **event_args):
       open_form('borrower_registration_form.dashboard.dashboard_contact')
-  
 
+    def Report_A_Problem_click(self, **event_args):
+      open_form('borrower_registration_form.dashboard.dashboard_report_a_problem')
