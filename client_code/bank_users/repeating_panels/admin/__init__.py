@@ -9,6 +9,7 @@ import anvil.tables.query as q
 from anvil.tables import app_tables
 from ..main_form import main_form_module
 
+
 class admin(adminTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
