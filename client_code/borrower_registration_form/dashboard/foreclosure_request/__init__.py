@@ -23,9 +23,10 @@ class foreclosure_request(foreclosure_requestTemplate):
             if user_profile:
                 # Access the user ID from the userprofile record
                 user_id = user_profile['customer_id']
+                print(user_id)
                 # Filter loan_details table based on the current user's ID
                 try:
-                    customer_loans = app_tables.fin_loan_details.search(lender_customer_id=user_id)
+                    customer_loans = app_tables.fin_loan_details.search(borrower_customer_id=user_id)
                     loans = []
                     for loan in customer_loans:
                         if user_profile is not None:
@@ -43,8 +44,9 @@ class foreclosure_request(foreclosure_requestTemplate):
                                 'loan_updated_status': loan['loan_updated_status'],
                                 'emi_payment_type': loan['emi_payment_type'],
                                 'credit_limit' : loan['credit_limit'],
-                                'foreclose_type' : loan['foreclose_type'],
-                                'eligible': self.is_loan_eligible(loan)
+                                'foreclosure_type' : loan['foreclosure_type'],
+                                'borrower_full_name' : loan['borrower_full_name']
+                                # 'eligible': self.is_loan_eligible(loan)
                             }
                             loans.append(loan_data)
 
@@ -63,8 +65,8 @@ class foreclosure_request(foreclosure_requestTemplate):
         """This method is called when the button is clicked"""
         open_form('borrower_registration_form.dashboard')
 
-    def is_loan_eligible(self, loan):
-        # Check eligibility based on 'extension_allowed' from product_details
-        product_details_record = app_tables.fin_product_details.get(product_id=loan['product_id'])
-        return product_details_record['foreclose_type'] == 'Eligible'
+    # def is_loan_eligible(self, loan):
+    #     # Check eligibility based on 'extension_allowed' from product_details
+    #     product_details_record = app_tables.fin_product_details.get(product_id=loan['product_id'])
+    #     return product_details_record['foreclose_type'] == 'Eligible'
 
