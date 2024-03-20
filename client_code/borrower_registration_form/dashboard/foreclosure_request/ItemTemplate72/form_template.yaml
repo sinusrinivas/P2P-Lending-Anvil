@@ -83,7 +83,7 @@ components:
     name: product_details
     layout_properties: {x: 355.9250076301396, y: 33.624996948987246, width: 563.7999877929688}
     data_bindings:
-    - {property: text, code: 'self.item[''product_description'']', writeback: true}
+    - {property: text, code: 'self.item[''product_description'']', writeback: false}
   - name: product
     properties: {}
     type: Label
