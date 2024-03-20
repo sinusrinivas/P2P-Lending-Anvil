@@ -41,3 +41,8 @@ class home_button_admin(home_button_adminTemplate):
 
   def Settings_click(self, **event_args):
     open_form('admin.dashboard.manage_settings')
+
+  def logout__click(self, **event_args):
+    anvil.users.logout()
+    open_form('bank_users.main_form')
+
