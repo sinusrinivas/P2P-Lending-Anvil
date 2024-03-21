@@ -204,6 +204,7 @@ unique_ids:
     admin.dashboard.manage_cms.add_lender_dropdown_details.ItemTemplate22: '1707911848966564215954614.5051'
     bank_users.main_form.about_main_form: '1700562950795405574544713.0248'
     admin.dashboard.loan_management.lapsed_loans.ItemTemplate34: '1709290647058800846188305.7046'
+    admin.dashboard.borrowers.ItemTemplate83: '1710933240714867907402097.1871'
     lendor_registration_form.dashboard.view_loan_extension_requests.ItemTemplate76: '1709795514432851964860166.374'
     borrower_registration_form.dashboard.extension_loan_request.borrower_extension.extension2: '1706012516323377965932960.3422'
     lendor_registration_form.lender_registration_form_1_education_form.lender_registration_education_Mtech: '1700756951276419563635826.77423'

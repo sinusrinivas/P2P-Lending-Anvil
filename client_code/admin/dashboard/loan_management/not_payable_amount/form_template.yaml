@@ -19,7 +19,7 @@ components:
     - type: form:admin.dashboard.home_button_admin
       properties: {}
       name: home_button_admin_1
-      layout_properties: {grid_position: 'JJMMBB,YFNBAM'}
+      layout_properties: {grid_position: 'JJMMBB,YFNBAM', full_width_row: true}
   - type: DataGrid
     properties:
       role: null

@@ -11,7 +11,7 @@ components:
   - name: home_button_admin_1
     properties: {}
     type: form:admin.dashboard.home_button_admin
-    layout_properties: {grid_position: 'KDQWMO,WMGTGU'}
+    layout_properties: {grid_position: 'KDQWMO,WMGTGU', full_width_row: true}
   - name: spacer_1
     properties: {height: 32}
     type: Spacer

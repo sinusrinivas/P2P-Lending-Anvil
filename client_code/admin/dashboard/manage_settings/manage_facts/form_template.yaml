@@ -18,7 +18,7 @@ components:
     - type: form:admin.dashboard.home_button_admin
       properties: {}
       name: home_button_admin_1
-      layout_properties: {grid_position: 'HFHKEK,PHKIQS'}
+      layout_properties: {grid_position: 'HFHKEK,PHKIQS', full_width_row: true}
     - type: Button
       properties: {role: elevated-button, align: right, tooltip: '', border: '', enabled: true,
         foreground: white, visible: true, text: Back, font_size: null, font: '16',

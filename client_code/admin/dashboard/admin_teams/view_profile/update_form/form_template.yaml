@@ -11,7 +11,8 @@ components:
   - type: form:admin.dashboard.home_button_admin
     properties: {}
     name: home_button_admin_1
-    layout_properties: {x: 523.85, y: 10, width: 124.55, grid_position: 'GSBFUB,AAPIBR'}
+    layout_properties: {x: 523.85, y: 10, width: 124.55, grid_position: 'GSBFUB,AAPIBR',
+      full_width_row: true}
   - type: ColumnPanel
     properties: {}
     name: content_panel_copy

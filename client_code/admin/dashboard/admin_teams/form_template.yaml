@@ -11,7 +11,8 @@ components:
   - type: form:admin.dashboard.home_button_admin
     properties: {}
     name: home_button_admin_1
-    layout_properties: {x: 265.2000198364258, y: 10, width: 139.325, grid_position: 'TPKGFA,RFKDZI'}
+    layout_properties: {x: 265.2000198364258, y: 10, width: 139.325, grid_position: 'TPKGFA,RFKDZI',
+      full_width_row: true}
   - type: XYPanel
     properties: {height: 502}
     name: xy_panel_1
