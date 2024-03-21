@@ -51,11 +51,10 @@ def add_borrower_student(college_name,college_id,college_proof,college_address,u
     row[0]['college_proof']=college_proof
 
 @anvil.server.callable
-def add_borrower_step4(home_loan,other_loan,live_loan,user_id,credit_card, wheeler):
+def add_borrower_step4(home_loan,other_loan,user_id,credit_card,wheeler):
   row = app_tables.fin_user_profile.search(customer_id=user_id)
   if row:
     row[0]['running_Home_Loan'] = home_loan
-    row[0]['running_or_live loans']= live_loan
     row[0]['other_loan']=other_loan
     row[0]['credit_card_loans']=credit_card
     row[0]['wheeler_loans']=wheeler
@@ -282,17 +281,14 @@ def get_user_points(id):
         present_address = user['present_address'].lower()
         duration_at_address = str(user['duration_at_address']).lower()
         self_employment = user['self_employment'].lower()
-        age_of_business = user['business_age'].lower()
+        age_of_business = user['business_age']
         salary_type = user['salary_type'].lower()
         home_loan = user['running_Home_Loan'].lower()
         other_loan = user['other_loan'].lower()
-        live_loan = user['running_or_live loans'].lower()
         credit_card_loan = user['credit_card_loans'].lower()
         vehicle_loan = user['wheeler_loans'].lower()
-        data = app_tables.fin_guarantor_details.search(customer_id=id)
-        if data:
-          another_person = data['another_person']
-          spouse_profession = data['guarantor_profession']
+        
+        
         
         # Initialize user points
         user_points = 0
@@ -367,11 +363,15 @@ def get_user_points(id):
                     print("Business Age Points:", business_age_points)
                     user_points += business_age_points
                   
-        marital_status_search = app_tables.fin_admin_beseem_categories.search(group_name='marital_status', sub_category=marital_status.lower(),age=user_age)
+        marital_status_search = app_tables.fin_admin_beseem_categories.search(group_name='marital_status', sub_category=marital_status.lower(),age=str(user_age)
         if marital_status_search:
             marital_status_points = marital_status_search[0]['min_points']
             print("Marital status Points:", marital_status_points)
             user_points += marital_status_points
+            data = app_tables.fin_guarantor_details.search(customer_id=id)
+            if data:
+               another_person = data['another_person']
+               spouse_profession = data['guarantor_profession']
           
             if marital_status == 'married' and another_person == 'spouse':
                spouse_profession_search = app_tables.fin_admin_beseem_categories.search(group_name='spouse_profession',sub_category=spouse_profession.lower())
