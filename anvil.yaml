@@ -678,9 +678,6 @@ db_schema:
     - name: bank_id
       admin_ui: {order: 60, width: 200}
       type: string
-    - name: net_bank
-      admin_ui: {width: 200, order: 55}
-      type: string
     - name: mail_id
       admin_ui: {width: 200}
       type: string
