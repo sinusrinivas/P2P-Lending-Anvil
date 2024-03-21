@@ -14,8 +14,10 @@ class open_loans(open_loansTemplate):
     self.init_components(**properties)
 
     # Any code you write here will run before the form opens.
-    self.data = app_tables.fin_loan_details.search(loan_updated_status=q.like('open%'))
-
+    statuses = ['foreclosure%', 'approved%', 'disbursed%', 'extension%']
+    self.data = app_tables.fin_loan_details.search(
+        loan_updated_status=q.any_of(*[q.like(status) for status in statuses])
+    )
     self.result = []
     for loan in self.data:
         borrower_profile = app_tables.fin_user_profile.get(customer_id=loan['borrower_customer_id'])
@@ -43,7 +45,7 @@ class open_loans(open_loansTemplate):
     if not self.result:
         alert("No Approved Loans Available!")
     else:
-        self.repeating_panel_2.items = self.result
+        self.repeating_panel_1.items = self.result
 
 
 
