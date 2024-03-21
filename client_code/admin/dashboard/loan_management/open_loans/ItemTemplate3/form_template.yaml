@@ -4,7 +4,7 @@ components:
 - name: xy_panel_1
   properties: {height: 441, role: outlined-card}
   type: XYPanel
-  layout_properties: {grid_position: 'ZNHHXY,NXHGBT'}
+  layout_properties: {grid_position: 'IMFITS,VYSBGC'}
   components:
   - name: label_3
     properties: {text: '---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------',
@@ -110,6 +110,10 @@ components:
     layout_properties: {x: 736.1607624755859, y: 165.1785831451416, width: 30.5714}
     data_bindings:
     - {property: text, code: 'self.item[''interest_rate'']', writeback: false}
+  - name: label_1
+    properties: {text: '%', align: left, bold: false}
+    type: Label
+    layout_properties: {x: 776.7321624755859, y: 165.1785831451416, width: 30.3929}
   - name: label_6
     properties: {text: 'Interest Rate :'}
     type: Label
@@ -130,7 +134,3 @@ components:
     layout_properties: {x: 736.1607513427734, y: 135.1785831451416, width: 160}
     data_bindings:
     - {property: text, code: 'self.item[''loan_id'']'}
-  - name: label_1
-    properties: {text: '%', align: left, bold: false}
-    type: Label
-    layout_properties: {x: 706.306826159358, y: 168.94319586455822, width: 30.386363983154297}

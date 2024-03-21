@@ -25,7 +25,7 @@ class loan_disbursed(loan_disbursedTemplate):
                 'full_name': loan['borrower_full_name'],
                 'loan_status': loan['loan_updated_status'],
                 'lender_full_name': loan['lender_full_name'],
-               'borrower_full_name': loan['borrower_full_name'],
+                'borrower_full_name': loan['borrower_full_name'],
                 'lender_customer_id': loan['lender_customer_id'],
                 'interest_rate': loan['interest_rate'],
                 'tenure': loan['tenure'],
@@ -35,7 +35,7 @@ class loan_disbursed(loan_disbursedTemplate):
                 'lender_mobile': lender_profile['mobile']  ,
                 'product_name':loan['product_name'],
                 'product_description':loan['product_description'],
-              'loan_disbursed_timestamp':loan['loan_disbursed_timestamp'],
+                'loan_disbursed_timestamp':loan['loan_disbursed_timestamp'],
             })
 
     if not self.result:
