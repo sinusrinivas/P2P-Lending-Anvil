@@ -382,29 +382,29 @@ def get_user_points(id):
                     print("Spouse profession:", spouse_profession_points)
                     user_points += spouse_profession_points
 
-        # if home_loan:
-        #     home_loan_search = app_tables.fin_admin_beseem_categories.search(group_name='all_loans', sub_category=home_loan.lower())
-        #     if home_loan_search and home_loan_search[0]['is_liveloan']:
-        #         home_loan_points = home_loan_search[0]['min_points']
-        #         user_points += home_loan_points
+        if home_loan:
+            home_loan_search = app_tables.fin_admin_beseem_categories.search(group_name='all_loans', sub_category=home_loan.lower())
+            if home_loan_search and home_loan_search[0]['is_liveloan']:
+                home_loan_points = home_loan_search[0]['min_points']
+                user_points += home_loan_points
 
-        # if other_loan:
-        #     other_loan_search = app_tables.fin_admin_beseem_categories.search(group_name='all_loans', sub_category=other_loan.lower())
-        #     if other_loan_search and other_loan_search[0]['is_liveloan']:
-        #         other_loan_points = other_loan_search[0]['min_points']
-        #         user_points += other_loan_points
+        if other_loan:
+            other_loan_search = app_tables.fin_admin_beseem_categories.search(group_name='all_loans', sub_category=other_loan.lower())
+            if other_loan_search and other_loan_search[0]['is_liveloan']:
+                other_loan_points = other_loan_search[0]['min_points']
+                user_points += other_loan_points
 
-        # if credit_card_loan:
-        #     credit_card_loan_search = app_tables.fin_admin_beseem_categories.search(group_name='all_loans', sub_category=credit_card_loan.lower())
-        #     if credit_card_loan_search and credit_card_loan_search[0]['is_liveloan']:
-        #         credit_card_loan_points = credit_card_loan_search[0]['min_points']
-        #         user_points += credit_card_loan_points
+        if credit_card_loan:
+            credit_card_loan_search = app_tables.fin_admin_beseem_categories.search(group_name='all_loans', sub_category=credit_card_loan.lower())
+            if credit_card_loan_search and credit_card_loan_search[0]['is_liveloan']:
+                credit_card_loan_points = credit_card_loan_search[0]['min_points']
+                user_points += credit_card_loan_points
 
-        # if vehicle_loan:
-        #     vehicle_loan_search = app_tables.fin_admin_beseem_categories.search(group_name='all_loans', sub_category=vehicle_loan.lower())
-        #     if vehicle_loan_search and vehicle_loan_search[0]['is_liveloan']:
-        #         vehicle_loan_points = vehicle_loan_search[0]['min_points']
-        #         user_points += vehicle_loan_points
+        if vehicle_loan:
+            vehicle_loan_search = app_tables.fin_admin_beseem_categories.search(group_name='all_loans', sub_category=vehicle_loan.lower())
+            if vehicle_loan_search and vehicle_loan_search[0]['is_liveloan']:
+                vehicle_loan_points = vehicle_loan_search[0]['min_points']
+                user_points += vehicle_loan_points
 
         # home_loan_search = app_tables.fin_admin_beseem_categories.search(group_name='all_loans', sub_category=home_loan.lower())
         # if home_loan_search:
