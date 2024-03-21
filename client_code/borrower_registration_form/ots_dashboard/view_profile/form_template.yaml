@@ -11,13 +11,15 @@ components:
   layout_properties:
     col_widths: {}
     grid_position: RARYGR,ZZWFUM
+    full_width_row: true
 - type: Button
   properties: {role: elevated-button, align: right, tooltip: '', border: '', enabled: true,
     foreground: white, visible: true, text: Home, font_size: 18, font: '', spacing_above: small,
     icon_align: left, spacing_below: small, italic: false, background: '#0b2547',
     bold: true, underline: false, icon: 'fa:home'}
   name: button_1
-  layout_properties: {grid_position: 'RARYGR,QOXRPT', row: BCYNNR, width_xs: 12, col_xs: 0}
+  layout_properties: {grid_position: 'RARYGR,QOXRPT', row: BCYNNR, width_xs: 12, col_xs: 0,
+    full_width_row: true}
   event_bindings: {click: button_1_click}
 - type: GridPanel
   properties: {spacing_above: medium, spacing_below: medium, background: '', foreground: '',
