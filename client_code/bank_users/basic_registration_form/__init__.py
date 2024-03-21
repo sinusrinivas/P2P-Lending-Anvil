@@ -146,8 +146,8 @@ class basic_registration_form(basic_registration_formTemplate):
         # Function to handle user photo file upload event
         if file is not None:
             # Display the image in an Image component
-            self.image_user_photo.display_mode = file
-            self.image_user_photo.visible = True  
+            self.image_profile.display_mode = file
+            self.image_profile.visible = True  
 
     def gender_dd_change(self, **event_args):
         """This method is called when an item is selected"""

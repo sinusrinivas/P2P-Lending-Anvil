@@ -41,16 +41,16 @@ class edit_all_loans(edit_all_loansTemplate):
       # Save changes to the database
       self.selected_row.update()
 
-      existing_min_points = [row["min_points"] for row in app_tables.fin_admin_beseem_categories.search(group_name="qualification")]
+      existing_min_points = [row["min_points"] for row in app_tables.fin_admin_beseem_categories.search(group_name="all_loans")]
       max_points = max(existing_min_points + [updated_points])
 
-      existing_group_row  = app_tables.fin_admin_beseem_groups.get(group_name="qualification")
+      existing_group_row  = app_tables.fin_admin_beseem_groups.get(group_name="all_loans")
       if existing_group_row:
         existing_group_row['max_points'] = max_points
         existing_group_row.update()
       else:
         new_group_row = app_tables.fin_admin_beseem_groups.add_row(
-          group_name="qualification", max_points=max_points)
+          group_name="all_loans", max_points=max_points)
 
       alert("Changes saved successfully!")
       open_form('admin.dashboard.manage_bessem.add_subcategory')
@@ -62,16 +62,16 @@ class edit_all_loans(edit_all_loansTemplate):
       # Delete the row directly on the client side
       self.selected_row.delete()
 
-      existing_min_points = [row["min_points"] for row in app_tables.fin_admin_beseem_categories.search(group_name='qualification')]
+      existing_min_points = [row["min_points"] for row in app_tables.fin_admin_beseem_categories.search(group_name='all_loans')]
       max_points = max(existing_min_points)
 
-      existing_group_row  = app_tables.fin_admin_beseem_groups.get(group_name="qualification")
+      existing_group_row  = app_tables.fin_admin_beseem_groups.get(group_name="all_loans")
       if existing_group_row:
         existing_group_row['max_points'] = max_points
         existing_group_row.update()
       else:
         new_group_row = app_tables.fin_admin_beseem_groups.add_row(
-          group_name="qualification", max_points=max_points)
+          group_name="all_loans", max_points=max_points)
 
       # Optionally, navigate to a different form or perform other actions
       open_form('admin.dashboard.manage_bessem.add_subcategory')
