@@ -49,18 +49,6 @@ components:
     background: 'theme:On Primary', bold: false, underline: false}
   name: text_box_2
   layout_properties: {grid_position: 'UIVKKU,ELQSDV'}
-- name: label_1
-  properties: {text: Do you have any running / live loans /liability on your name(Yes / No),
-    bold: true}
-  type: Label
-  layout_properties: {grid_position: 'WSZLRM,RPLYQQ'}
-- type: TextBox
-  properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: '',
-    border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
-    font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
-    background: 'theme:On Primary', bold: false, underline: false}
-  name: text_box_3
-  layout_properties: {grid_position: 'WSZLRM,VZPIVJ'}
 - type: Label
   properties: {text: Do you have any Personal Credit Card Loans, bold: true}
   name: label_5
