@@ -62,7 +62,6 @@ unique_ids:
     lendor_registration_form.dashboard.lender_view_loans.ItemTemplate51: '170961220178749154151057.25884'
     admin.dashboard: '1699523403306752264878574.3744'
     admin.dashboard.manage_cms.add_general_dropdowns.edit_company: '1710411462796305921760191.0538'
-    admin.dashboard.loan_management.open_loans.RowTemplate13: '1701079025496570111432574.5491'
     admin.dashboard.manage_cms.add_lender_dropdown_details.edit_no_of_emp: '1706531881285776983025492.1349'
     admin.dashboard.manage_cms.add_borrower_dropdown_details.edit_spouse_profession: '1710495428888891993954718.6715'
     lendor_registration_form.dashboard.lender_view_loans.RowTemplate24: '1703182023237906200953522.0261'
@@ -134,6 +133,7 @@ unique_ids:
     : '1700126739765126145778650.8795'
     ? borrower_registration_form.star_1_borrower_registration_form_2_employment.star_1_borrower_registration_form_2_employment_business_5
     : '17005720020403876226355.3249187'
+    admin.dashboard.loan_management.open_loans.ItemTemplate3: '171101040560926993222468.07667'
     lendor_registration_form.dashboard.view_loan_foreclosure_Requests: '169996304408474987603925.53683'
     admin.dashboard.loan_management.closed_loans.RowTemplate14: '1701079863491503664452804.4547'
     bank_users.main_form.products_main_form: '1700563558734712481921773.0997'
@@ -155,7 +155,6 @@ unique_ids:
     bank_users.user_form.user_form_copy: '1700712538416515803210372.55963'
     admin.dashboard.borrowers.view_profile.update_form: '1699967990279922551849592.2898'
     lendor_registration_form.dashboard.view_loan_foreclosure_Requests.ItemTemplate59: '1709797526719604321418306.3726'
-    admin.dashboard.loan_management.open_loans.ItemTemplate29: '1709273343749864195878325.7599'
     lendor_registration_form.dashboard.view_borrower_loan_request.RowTemplate10: '1700542200026541460267637.76886'
     borrower_registration_form.dashboard.dashboard_about: '1701024263832190033852688.87518'
     admin.dashboard.manage_cms.add_borrower_dropdown_details.edit_qualification: '1706191359421651665929783.5277'
