@@ -5,7 +5,7 @@ components:
   type: XYPanel
   layout_properties:
     col_widths: {}
-    grid_position: JMQIQU,ISFWMX
+    grid_position: OUQLNH,CZUOUS
   components:
   - name: image_1
     properties: {height: 63.399932861328125, source: 'https://freesvg.org/img/abstract-user-flat-4.png'}

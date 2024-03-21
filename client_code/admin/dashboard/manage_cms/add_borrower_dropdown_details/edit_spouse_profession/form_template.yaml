@@ -1,9 +1,11 @@
 container: {type: ColumnPanel}
 components:
 - name: column_panel_1
-  properties: {col_widths: '{"FYQGWM":40,"IMCBIM":10,"DCZLJB":10}'}
+  properties: {role: null, tooltip: '', border: '', foreground: '', visible: true,
+    wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{"FYQGWM":40,"IMCBIM":10,"DCZLJB":10}',
+    spacing_below: small, background: ''}
   type: ColumnPanel
-  layout_properties: {grid_position: 'ESGIXE,CBRFUF'}
+  layout_properties: {grid_position: 'ESGIXE,CBRFUF', full_width_row: true}
   components:
   - name: home_button_admin_1
     properties: {}
