@@ -142,7 +142,7 @@ class add_subcategory(add_subcategoryTemplate):
         return
     entered_min_pts = int(self.text_box_11.text)
     
-    new_row = app_tables.fin_admin_beseem_categories.add_row(group_name='all_loans',sub_category=entered_sub,min_points=entered_min_pts)
+    new_row = app_tables.fin_admin_beseem_categories.add_row(group_name='all_loans',sub_category=entered_sub,min_points=entered_min_pts,is_liveloan=entered_yes_no)
     self.text_box_9.text = ' '
     self.text_box_10.text = ' '
     self.text_box_11.text = ' '
