@@ -1,18 +1,24 @@
 container: {type: ColumnPanel}
 components:
 - type: ColumnPanel
-  properties: {col_widths: '{}'}
+  properties: {role: null, tooltip: '', border: '', foreground: '', visible: true,
+    wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
+    spacing_below: small, background: ''}
   name: content_panel
   layout_properties:
     col_widths: {}
     grid_position: TXEWWP,MLKQSE
+    full_width_row: true
   components:
   - type: ColumnPanel
-    properties: {col_widths: '{}'}
+    properties: {role: null, tooltip: '', border: '', foreground: '', visible: true,
+      wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
+      spacing_below: small, background: ''}
     name: content_panel_copy
     layout_properties:
       col_widths: {}
       grid_position: AETBJQ,AWJFKB
+      full_width_row: true
     components:
     - type: form:admin.dashboard.home_button_admin
       properties: {}
