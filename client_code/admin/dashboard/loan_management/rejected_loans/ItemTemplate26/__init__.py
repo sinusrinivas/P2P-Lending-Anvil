@@ -1,4 +1,4 @@
-from ._anvil_designer import ItemTemplate3Template
+from ._anvil_designer import ItemTemplate26Template
 from anvil import *
 import anvil.server
 import anvil.google.auth, anvil.google.drive
@@ -8,13 +8,12 @@ import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 from ......borrower_registration_form.dashboard import main_form_module
-# from ......bank_users.main_form import main_form_module
 
-class ItemTemplate3(ItemTemplate3Template):
+class ItemTemplate26(ItemTemplate26Template):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
-        self.init_components(**properties)
-        self.user_id = main_form_module.userId
+    self.init_components(**properties)
+    self.user_id = main_form_module.userId
         
         user_data = app_tables.fin_loan_details.search()
         
@@ -31,3 +30,11 @@ class ItemTemplate3(ItemTemplate3Template):
  
 
     # Any code you write here will run before the form opens.
+
+  def outlined_button_1_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    value_to_pass = self.loan_id.text
+    open_form('admin.dashboard.loan_management.rejected_loans.view_profile_2', value_to_pass)
+
+
+    
