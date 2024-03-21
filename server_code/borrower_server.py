@@ -391,7 +391,7 @@ def get_user_points(id):
                 loan_search = app_tables.fin_admin_beseem_categories.search(
                     (app_tables.fin_admin_beseem_categories.group_name == 'all_loans') &
                     (app_tables.fin_admin_beseem_categories.sub_category == loan_column.lower()) &
-                    (app_tables.fin_admin_beseem_categories.is_liveloan == loan_value.lower)
+                    (app_tables.fin_admin_beseem_categories.is_liveloan == loan_value.lower())
                 )
                 if loan_search:
                     loan_points_total += loan_search[0]['min_points']
