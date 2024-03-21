@@ -693,7 +693,7 @@ db_schema:
     - name: college_address
       admin_ui: {width: 200, order: 64}
       type: string
-    - name: running_Home_Loan
+    - name: home_loan
       admin_ui: {order: 66.5, width: 200}
       type: string
     - name: other_loan
@@ -864,7 +864,7 @@ db_schema:
     - name: self_employment
       admin_ui: {order: 104.998046875, width: 200}
       type: string
-    - name: wheeler_loans
+    - name: vehicle_loan
       admin_ui: {order: 81.375, width: 200}
       type: string
     - name: credit_card_loans
