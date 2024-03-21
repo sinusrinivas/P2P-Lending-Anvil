@@ -1,11 +1,14 @@
 container: {type: ColumnPanel}
 components:
 - type: ColumnPanel
-  properties: {col_widths: '{}'}
+  properties: {role: null, tooltip: '', border: '', foreground: '', visible: true,
+    wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
+    spacing_below: small, background: ''}
   name: content_panel
   layout_properties:
     col_widths: {}
     grid_position: TAZBQH,TXBFFJ
+    full_width_row: true
   components:
   - type: ColumnPanel
     properties: {col_widths: '{"OWRJSF":30,"CLRBYA":30}'}
