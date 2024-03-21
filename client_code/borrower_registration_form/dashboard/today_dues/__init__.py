@@ -217,7 +217,7 @@ class today_dues(today_duesTemplate):
 
         # Fetch all loan details from fin_emi_table where next_payment matches today's date
         all_loans = list(app_tables.fin_emi_table.search(
-            next_payment=q.less_than_or_equal_to(today_date)
+            new=q.less_than_or_equal_to(today_date)
         ))
 
         # Sort the list of loans in descending order based on next_payment date
