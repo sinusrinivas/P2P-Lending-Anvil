@@ -21,7 +21,7 @@ components:
 - type: form:borrower_registration_form.dashboard.Navigation_form_dashboard
   properties: {}
   name: navigation_form_dashboard_1
-  layout_properties: {grid_position: 'IDMTZY,XESOHF'}
+  layout_properties: {grid_position: 'IDMTZY,XESOHF', full_width_row: true}
 - name: spacer_1
   properties: {height: 0}
   type: Spacer

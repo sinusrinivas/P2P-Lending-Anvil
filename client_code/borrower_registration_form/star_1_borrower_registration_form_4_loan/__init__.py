@@ -14,11 +14,12 @@ class star_1_borrower_registration_form_4_loan(star_1_borrower_registration_form
     self.userId = user_id
     user_data=app_tables.fin_user_profile.get(customer_id=user_id)
     if user_data:
-      self.text_box_1.text=user_data['running_Home_Loan']
+      self.text_box_1.text=user_data['home_loan']
       self.text_box_2.text=user_data['other_loan']
       self.text_box_4.text = user_data['credit_card_loans']
-      self.text_box_5.text = user_data['wheeler_loans']
+      self.text_box_5.text = user_data['vehicle_loan']
       user_data.update()
+      
   def button_1_click(self, **event_args):
     open_form('borrower_registration_form.star_1_borrower_registration_form_3_marital',user_id = self.userId)
 

@@ -14,6 +14,7 @@ from ...borrower_registration_form.dashboard import main_form_module
 from datetime import datetime, timezone
 from datetime import timedelta
 import time
+from ...lendor_registration_form.dashboard.Module1 import transfer_money
 
 class wallet_deposit(wallet_depositTemplate):
   def __init__(self,entered_loan_id,entered_borrower_customer_id,time_difference_seconds, **properties):
@@ -27,6 +28,7 @@ class wallet_deposit(wallet_depositTemplate):
     start_time = self.start_time
     
     self.check_time_difference()
+    
     
 
     # Set Form properties and Data Bindings.
@@ -187,7 +189,11 @@ class wallet_deposit(wallet_depositTemplate):
     customer_id = 1000
     email = self.email
     entered_loan_id = self.entered_loan_id 
-    entered_borrower_customer_id = self.entered_borrower_customer_id 
+    entered_borrower_customer_id = self.entered_borrower_customer_id
+    loan_deta = app_tables.fin_loan_details.get(loan_id=entered_loan_id)
+    if loan_deta is not None:
+        self.lender_customer_id = loan_deta['lender_customer_id']
+        print("lenderrrrrrrrrrrrrrrrrrrrrrrrr", self.lender_customer_id)
     wallet_row = app_tables.fin_wallet.get(user_email=email)
     if wallet_row:
       entered_loan_id = self.entered_loan_id
@@ -239,7 +245,7 @@ class wallet_deposit(wallet_depositTemplate):
             
           wallet_add['wallet_amount'] += loan_amount
           wallet_add.update()
-
+          transfer_money(lender_id = self.lender_customer_id, borrower_id=entered_borrower_customer_id, transfer_amount=loan_amount)
           # You may want to update the loan_updated_status here if needed
           updated_loan_status = 'disbursed loan'
           loan_row['loan_updated_status'] = updated_loan_status

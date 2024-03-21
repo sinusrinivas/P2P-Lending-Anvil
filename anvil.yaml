@@ -132,7 +132,7 @@ db_schema:
       admin_ui: {width: 200}
       type: string
   fin_lendor_no_of_employees:
-    client: none
+    client: full
     server: full
     columns:
     - name: lendor_no_of_employees
@@ -693,7 +693,7 @@ db_schema:
     - name: college_address
       admin_ui: {width: 200, order: 64}
       type: string
-    - name: running_Home_Loan
+    - name: home_loan
       admin_ui: {order: 66.5, width: 200}
       type: string
     - name: other_loan
@@ -864,17 +864,11 @@ db_schema:
     - name: self_employment
       admin_ui: {order: 104.998046875, width: 200}
       type: string
-    - name: wheeler_loans
+    - name: vehicle_loan
       admin_ui: {order: 81.375, width: 200}
       type: string
     - name: credit_card_loans
       admin_ui: {order: 81.25, width: 200}
-      type: string
-    - name: net_bank
-      admin_ui: {width: 200}
-      type: string
-    - name: running_or_live loans
-      admin_ui: {width: 200}
       type: string
     title: fin_user_profile
   fin_admin_beseem_categories:
@@ -1108,7 +1102,7 @@ db_schema:
       admin_ui: {order: 12, width: 200}
       type: string
   fin_wallet_bank_account_table:
-    client: none
+    client: full
     server: full
     columns:
     - name: account_id
