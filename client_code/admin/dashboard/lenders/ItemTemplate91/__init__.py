@@ -25,4 +25,5 @@ class ItemTemplate91(ItemTemplate91Template):
     # Any code you write here will run before the form opens.
 
   def outlined_button_1_click(self, **event_args):
-    open_form('admin.dashboard.lenders.view_profile_copy')
+    value_to_pass = self.link_1.text
+    open_form('admin.dashboard.lenders.view_profile_copy', value_to_pass)
