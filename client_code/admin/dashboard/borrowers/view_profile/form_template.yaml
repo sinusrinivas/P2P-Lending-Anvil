@@ -1,16 +1,15 @@
 container: {type: ColumnPanel}
 components:
 - type: ColumnPanel
-  properties: {col_widths: '{}'}
+  properties: {role: null, tooltip: '', border: '', foreground: '', visible: true,
+    wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
+    spacing_below: small, background: ''}
   name: content_panel_copy
   layout_properties:
     col_widths: {}
     grid_position: VSQHCN,TLAMBF
+    full_width_row: true
   components:
-  - type: form:admin.dashboard.home_button_admin
-    properties: {}
-    name: home_button_admin_1
-    layout_properties: {grid_position: 'VXBZRK,RFHJOX', full_width_row: true}
   - type: Label
     properties: {}
     name: label_43
@@ -789,4 +788,8 @@ components:
     name: button_3
     layout_properties: {grid_position: 'TSKUXZ,ODHLUP'}
     event_bindings: {click: button_3_click}
+- type: form:admin.dashboard.home_button_admin
+  properties: {}
+  name: home_button_admin_1
+  layout_properties: {grid_position: 'VSQHCN,STONTX', full_width_row: true}
 is_package: true
