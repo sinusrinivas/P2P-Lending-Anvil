@@ -1,0 +1,9 @@
+container: {type: ColumnPanel}
+components:
+- type: RepeatingPanel
+  properties: {item_template: admin.dashboard.borrowers.ItemTemplate83}
+  name: repeating_panel_2
+  layout_properties:
+    col_widths: {}
+    grid_position: FZCHGM,NEUCNB
+is_package: true

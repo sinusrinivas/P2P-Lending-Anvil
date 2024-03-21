@@ -33,21 +33,21 @@ components:
     type: Label
     layout_properties: {x: 0, y: 73.63748168945312, width: 938.4}
   - type: Label
-    properties: {role: null, align: right, tooltip: '', border: '', foreground: '',
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
       visible: true, text: 'Customer ID :', font_size: null, font: '', spacing_above: small,
       icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
       underline: false, icon: ''}
     name: label_4
     layout_properties: {x: 19.1875, y: 112.33750915527344, width: 92}
   - type: Label
-    properties: {role: null, align: right, tooltip: '', border: '', foreground: '',
-      visible: true, text: 'Email :', font_size: null, font: '', spacing_above: small,
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: 'Email             :', font_size: null, font: '', spacing_above: small,
       icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
       underline: false, icon: ''}
     name: label_7
     layout_properties: {x: 19.1875, y: 150.33750915527344, width: 92}
   - type: Label
-    properties: {role: null, align: right, tooltip: '', border: '', foreground: '',
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
       visible: true, text: 'Date of Birth :', font_size: null, font: '', spacing_above: small,
       icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
       underline: false, icon: ''}
