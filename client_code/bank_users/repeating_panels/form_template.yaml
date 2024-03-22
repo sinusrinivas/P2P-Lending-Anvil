@@ -89,5 +89,5 @@ components:
 - name: repeating_panel_3
   properties: {item_template: bank_users.repeating_panels.admin}
   type: RepeatingPanel
-  layout_properties: {grid_position: 'IQYKCO,JFBXER'}
+  layout_properties: {grid_position: 'IQYKCO,OKAMNJ'}
 is_package: true

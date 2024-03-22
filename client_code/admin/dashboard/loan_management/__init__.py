@@ -56,10 +56,3 @@ class loan_management(loan_managementTemplate):
 
   def button_6_copy_2_click(self, **event_args):
     open_form('admin.dashboard.loan_management.one_time_settlement')
-
-
-
-
-
-
-  
