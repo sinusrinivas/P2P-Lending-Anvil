@@ -18,10 +18,10 @@ class check_out(check_outTemplate):
         self.init_components(**properties)
   
         loan_id = selected_row['loan_id']
-        extension_amount = self.get_extension_amount(loan_id, selected_row['emi_number'])
-  
+        extension_months = self.get_extension_details(loan_id, selected_row['emi_number'])
+        extension_amount = self.get_extension_details_1(loan_id,selected_row['emi_number'])
         loan_amount = selected_row['loan_amount']
-        tenure = selected_row['tenure']
+        tenure = selected_row['tenure'] + extension_months
         interest_rate = selected_row['interest_rate']
         emi_payment_type = selected_row['emi_payment_type']
   
@@ -75,17 +75,44 @@ class check_out(check_outTemplate):
         # Display total EMI amount including extension amount
         self.update_total_emi_amount(total_emi)
 
-    def get_extension_amount(self, loan_id, emi_number):
+        foreclosure_details = self.get_foreclosure_details(loan_id, selected_row['emi_number'])
+        if foreclosure_details is not None:
+          total_due_amount = foreclosure_details['total_due_amount']
+          foreclosure_amount = foreclosure_details['foreclose_amount']
+          #foreclosure_amount = foreclosure_details['foreclose_amount']
+          self.emi_amount_label.text = "{:.2f}".format(total_due_amount)
+          self.extension_amount_label.text =  "{:.2f}".format(foreclosure_amount)
+          self.total_emi_amount_label.text = "{:.2f}".format(total_due_amount + foreclosure_amount)
+          self.total_emi_amount_label.visible = True
+          self.label_3.visible = True
+
+    def get_extension_details(self, loan_id, emi_number):
+        extension_row = app_tables.fin_extends_loan.get(
+            loan_id=loan_id,
+            emi_number=q.less_than_or_equal_to(emi_number)
+        )
+        extension_months = 0
+        if extension_row is not None:
+            extension_months = extension_row['total_extension_months']
+        return  extension_months
+
+    def get_extension_details_1(self, loan_id, emi_number):
         extension_row = app_tables.fin_extends_loan.get(
             loan_id=loan_id,
             emi_number=emi_number
         )
+        extension_amount = 0
         if extension_row is not None:
             extension_amount = extension_row['extension_amount']
-            if extension_amount is not None:
-                return extension_amount
-        return 0
+        return extension_amount
 
+    def get_foreclosure_details(self, loan_id, emi_number):
+        foreclosure_row = app_tables.fin_foreclosure.get(
+            loan_id=loan_id,
+             foreclosure_emi_num= emi_number
+        )
+        return foreclosure_row
+  
     def update_total_emi_amount(self, total_emi):
         self.total_emi_amount_label.text = "{:.2f}".format(total_emi)
 
