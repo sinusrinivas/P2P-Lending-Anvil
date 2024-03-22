@@ -134,7 +134,7 @@ class view_profile(view_profileTemplate):
       #self.ifsc_code.append(i['ifsc_code'])
       self.salary_type.append(i['salary_type'])
       #self.select_bank.append(i['select_bank'])
-      self.net_bank.append(i['net_bank'])
+      # self.net_bank.append(i['net_bank'])
       self.father_name.append(i['father_name'])
       self.father_age.append(i['father_age'])
       self.mother_name.append(i['mother_name'])
@@ -206,7 +206,7 @@ class view_profile(view_profileTemplate):
         #self.label_99.text = self.ifsc_code[b]
         self.label_101.text = self.salary_type[b]
         #self.label_103.text = self.select_bank[b]
-        self.label_105.text = self.net_bank[b]
+        # self.label_105.text = self.net_bank[b]
         self.label_107.text = self.father_name[b]
         self.label_109.text = self.father_age[b]
         self.label_111.text = self.mother_name[b]
