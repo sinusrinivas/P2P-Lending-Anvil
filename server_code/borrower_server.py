@@ -408,22 +408,18 @@ def get_user_points(id):
     else:
         return None
 
-def get_group_points(id):
-    users = app_tables.fin_user_profile.search(customer_id=id)
-    if users:
-        user = users[0]
+def get_group_points(customer_id):
+    # Fetch user details
+    user = app_tables.fin_user_profile.get(customer_id=customer_id)
+    if user:
         profession = user['profession'].lower()
         marital_status = user['marital_status'].lower()
         
-        # Additional user attributes
-        gender = user['gender'].lower()
-        present_address = user['present_address'].lower()
-        qualification = user['qualification'].lower()
-        
-        # Loans information
-        data = app_tables.fin_guarantor_details.search(customer_id=id)
-        if data:
-            for item in data:
+        loans_data = app_tables.fin_guarantor_details.search(customer_id=customer_id)
+        another_person = ''
+        spouse_profession = ''
+        if loans_data:
+            for item in loans_data:
                 another_person = item['another_person'].lower()
                 spouse_profession = item['guarantor_profession'].lower()
 
@@ -431,40 +427,35 @@ def get_group_points(id):
         if groups:
             group_points = 0
             for group_row in groups:
-              if group_row['group_name'].lower() == gender:
-                 group_points += group_row['max_points']
-              if group_row['group_name'].lower() == present_address:
-                  group_points += group_row['max_points']
-              if group_row['group_name'].lower() == qualification:
-                  group_points += group_row['max_points']
-              if group_row['group_name'].lower() == 'home_loan':
-                  group_points += group_row['max_points']
-              if group_row['group_name'].lower() == 'other_loan':
-                  group_points += group_row['max_points']
-              if group_row['group_name'].lower() == 'credit_card_loan':
-                  group_points += group_row['max_points']
-              if group_row['group_name'].lower() == 'vehicle_loan':
-                  group_points += group_row['max_points']
-
-          
-            
-              if profession == 'employee':
-                for group_row in groups:
-                    if group_row['group_name'].lower() == organization_type:
-                        group_points += group_row['max_points']
-                    if group_row['group_name'].lower() == salary_type:
-                        group_points += group_row['max_points']
-              elif profession == 'business':
-                for group_row in groups:
-                    if group_row['group_name'].lower() == 'age_of_business':
-                        group_points += group_row['max_points']
-            
-              if marital_status == 'married' and another_person == 'spouse':
-                for group_row in groups:
-                    if group_row['group_name'].lower() == spouse_profession:
-                        group_points += group_row['max_points']
+                group_name = group_row['group_name'].lower()
+                max_points = group_row['max_points']
+                
+                # Add points based on group criteria
+                if group_name == 'gender':
+                    group_points += max_points
+                elif group_name == 'present_address':
+                    group_points += max_points
+                elif group_name == 'qualification':
+                    group_points += max_points
+                elif group_name == 'home_loan':
+                    group_points += max_points
+                elif group_name == 'other_loan':
+                    group_points += max_points
+                elif group_name == 'credit_card_loan':
+                    group_points += max_points
+                elif group_name == 'vehicle_loan':
+                    group_points += max_points
+                elif group_name == 'organization_type' and profession == 'employee':
+                    group_points += max_points
+                elif group_name == 'salary_type' and profession == 'employee':
+                    group_points += max_points
+                elif group_name == 'age_of_business' and profession == 'business':
+                    group_points += max_points
+                elif group_name == 'spouse_profession' and marital_status == 'married' and another_person == 'spouse':
+                    group_points += max_points
 
             return group_points
+
     return None
 
 # loan_points_total = 0
