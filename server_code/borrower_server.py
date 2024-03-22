@@ -256,7 +256,7 @@ def generate_emi_id():
 
 def final_points_update_bessem_table(user_id):
     user_points = get_user_points(user_id)
-    group_points = get_group_points()
+    group_points = get_group_points(user_id)
 
     print(f"Debug: user_points={user_points}, group_points={group_points}")
 
@@ -408,29 +408,64 @@ def get_user_points(id):
     else:
         return None
 
-def get_group_points():
-  users = app_tables.fin_user_profile.search(customer_id=id)
-  if users:
-     user = users[0]
-     profession = user['profession'].lower()
-     marital_status = user['marital_status'].lower()
-     self_employment = user['self_employment'].lower()
-     organization_type = user['organization_type'].lower()
-     salary_type = user['salary_type'].lower()
-     age_of_business = user['business_age']
-     data = app_tables.fin_guarantor_details.search(customer_id=id)
-     if data:
-       for item in data:
-          another_person = item['another_person'].lower()
-          spouse_profession = item['guarantor_profession'].lower()
+def get_group_points(id):
+    users = app_tables.fin_user_profile.search(customer_id=id)
+    if users:
+        user = users[0]
+        profession = user['profession'].lower()
+        marital_status = user['marital_status'].lower()
+        
+        # Additional user attributes
+        gender = user['gender'].lower()
+        present_address = user['present_address'].lower()
+        qualification = user['qualification'].lower()
+        
+        # Loans information
+        data = app_tables.fin_guarantor_details.search(customer_id=id)
+        if data:
+            for item in data:
+                another_person = item['another_person'].lower()
+                spouse_profession = item['guarantor_profession'].lower()
 
-  groups = app_tables.fin_admin_beseem_groups.search()
-  if groups:
-    group_points = 0
-    for group_row in groups:
-       group_points += group_row['max_points']
-    return group_points
-  return None
+        groups = app_tables.fin_admin_beseem_groups.search()
+        if groups:
+            group_points = 0
+            for group_row in groups:
+              if group_row['group_name'].lower() == gender:
+                 group_points += group_row['max_points']
+              if group_row['group_name'].lower() == present_address:
+                  group_points += group_row['max_points']
+              if group_row['group_name'].lower() == qualification:
+                  group_points += group_row['max_points']
+              if group_row['group_name'].lower() == 'home_loan':
+                  group_points += group_row['max_points']
+              if group_row['group_name'].lower() == 'other_loan':
+                  group_points += group_row['max_points']
+              if group_row['group_name'].lower() == 'credit_card_loan':
+                  group_points += group_row['max_points']
+              if group_row['group_name'].lower() == 'vehicle_loan':
+                  group_points += group_row['max_points']
+
+          
+            
+              if profession == 'employee':
+                for group_row in groups:
+                    if group_row['group_name'].lower() == organization_type:
+                        group_points += group_row['max_points']
+                    if group_row['group_name'].lower() == salary_type:
+                        group_points += group_row['max_points']
+              elif profession == 'business':
+                for group_row in groups:
+                    if group_row['group_name'].lower() == 'age_of_business':
+                        group_points += group_row['max_points']
+            
+              if marital_status == 'married' and another_person == 'spouse':
+                for group_row in groups:
+                    if group_row['group_name'].lower() == spouse_profession:
+                        group_points += group_row['max_points']
+
+            return group_points
+    return None
 
 # loan_points_total = 0
         # home_loan_search = app_tables.fin_admin_beseem_categories.search(group_name='all_loans', sub_category='home loan', is_liveloan=home_loan.lower())
