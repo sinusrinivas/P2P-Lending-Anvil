@@ -384,7 +384,7 @@ def get_user_points(id):
                     print("Spouse profession:", spouse_profession_points)
                     user_points += spouse_profession_points
 
-        home_loan_search = app_tables.fin_admin_beseem_categories.search(group_name='all_loans', sub_category='home loan', is_liveloan=home_loan)
+        home_loan_search = app_tables.fin_admin_beseem_categories.search(group_name='all_loans', sub_category='home loan', is_liveloan=home_loan.lower())
         if home_loan_search:
             home_loan_points = home_loan_search[0]['min_points']
             print("Home loan Points:", home_loan_points)
