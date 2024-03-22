@@ -39,7 +39,7 @@ class loan_disbursed(loan_disbursedTemplate):
             })
 
     if not self.result:
-        alert("No Approved Loans Available!")
+        alert("No Disbursed Loans Available!")
     else:
         self.repeating_panel_2.items = self.result
 

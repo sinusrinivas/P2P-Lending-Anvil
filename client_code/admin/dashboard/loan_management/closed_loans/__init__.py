@@ -27,7 +27,7 @@ class closed_loans(closed_loansTemplate):
                 'full_name': loan['borrower_full_name'],
                 'loan_status': loan['loan_updated_status'],
                 'lender_full_name': loan['lender_full_name'],
-               'borrower_full_name': loan['borrower_full_name'],
+                'borrower_full_name': loan['borrower_full_name'],
                 'lender_customer_id': loan['lender_customer_id'],
                 'interest_rate': loan['interest_rate'],
                 'tenure': loan['tenure'],
@@ -37,11 +37,11 @@ class closed_loans(closed_loansTemplate):
                 'lender_mobile': lender_profile['mobile']  ,
                 'product_name':loan['product_name'],
                 'product_description':loan['product_description'],
-              'loan_disbursed_timestamp':loan['loan_disbursed_timestamp'],
+                'loan_disbursed_timestamp':loan['loan_disbursed_timestamp'],
             })
 
     if not self.result:
-        alert("No Approved Loans Available!")
+        alert("No Closed Loans Available!")
     else:
         self.repeating_panel_2.items = self.result
 

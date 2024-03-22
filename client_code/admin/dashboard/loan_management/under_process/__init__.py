@@ -41,7 +41,7 @@ class under_process(under_processTemplate):
             })
 
     if not self.result:
-        alert("No Approved Loans Available!")
+        alert("No under process Loans Available!")
     else:
         self.repeating_panel_1.items = self.result
 

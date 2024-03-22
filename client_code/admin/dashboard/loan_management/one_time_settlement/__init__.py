@@ -39,7 +39,7 @@ class one_time_settlement(one_time_settlementTemplate):
             })
 
     if not self.result:
-        alert("No Approved Loans Available!")
+        alert("No OTS Loans Available!")
     else:
         self.repeating_panel_2.items = self.result
 
