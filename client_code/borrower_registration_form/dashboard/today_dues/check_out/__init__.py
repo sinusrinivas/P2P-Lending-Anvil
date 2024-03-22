@@ -199,6 +199,9 @@ class check_out(check_outTemplate):
                     self.selected_row['next_payment'] = next_next_payment
                     self.selected_row.update()
 
+                    if self.foreclosure_condition_satisfied(loan_id, current_emi_number):
+                      self.update_loan_status(loan_id, 'close')
+
                     #self.status_label.text = "Payment successfully done..."
                     self.button_1_copy_3.visible = False
                     alert('Payment successfully done...')
@@ -215,3 +218,18 @@ class check_out(check_outTemplate):
         """This method is called when the button is clicked"""
         open_form('borrower_registration_form.dashboard.today_dues')
 
+    def update_loan_status(self, loan_id, new_status):
+    # Update loan status in the loan details table for the given loan ID
+      loan_row = app_tables.fin_loan_details.get(loan_id=loan_id)
+      if loan_row is not None:
+          loan_row['loan_updated_status'] = new_status
+          loan_row.update()
+
+
+    def foreclosure_condition_satisfied(self, loan_id, emi_number):
+    # Check if foreclosure details are returned for the given loan and EMIs
+      foreclosure_row = app_tables.fin_foreclosure.get(
+          loan_id=loan_id,
+          foreclosure_emi_num=emi_number
+      )
+      return foreclosure_row is not None
