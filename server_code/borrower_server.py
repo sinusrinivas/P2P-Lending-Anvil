@@ -254,6 +254,7 @@ def final_points_update_bessem_table(user_id):
         points = (user_points / group_points) * 100
 
         final_points = '{:.2f}'.format(points)
+        update_user_beseem_score(user_id, user_points)
 
         return final_points
     return None
@@ -398,25 +399,37 @@ def get_user_points(id):
     else:
         return None
 
+def update_user_beseem_score(user_id, total_points):
+    # Fetch user data from fin_user_beseem_score table
+    user_data = app_tables.fin_user_beseem_score.get(borrower_customer_id=user_id)
+    if user_data:
+        # Update total_user_point with calculated points
+        user_data['total_user_point'] = total_points
+        user_data.save()
+      
 # def find_user_and_add_bessem_value(user_id):
-#   df = app_tables.fin_user_beseem_score.search(borrower_customer_id=user_id)
-#   if df:
-#     df[0]['borrower_customer_id']
-#     df[0]['borrower_email_id']
-#     df[0]['present_address_point']
-#     df[0]['duration_at_address_point']
-#     df[0]['qualification_point']
-#     df[0]['profession_point']
-#     df[0]['organization_type_point']
-#     df[0]['salary_type_point']
-#     df[0]['age_of_business_point']
-#     df[0]['marital_status_point']
-#     df[0]['spouse_profession_point']
-#     df[0]['home_loan_point']
-#     df[0]['other_loan_point']
-#     df[0]['credit_card_loan_point']
-#     df[0]['vehicle_loan_point']
-#     df[0]['total_user_point']
+#     # Fetch user details from fin_user_beseem_score table
+#     user_data = app_tables.fin_user_beseem_score.get(borrower_customer_id=user_id)
+#     if user_data:
+#         present_address_point = user_data['present_address_point']
+#         duration_at_address_point = user_data['duration_at_address_point']
+#         qualification_point = user_data['qualification_point']
+#         profession_point = user_data['profession_point']
+#         organization_type_point = user_data['organization_type_point']
+#         salary_type_point = user_data['salary_type_point']
+#         age_of_business_point = user_data['age_of_business_point']
+#         marital_status_point = user_data['marital_status_point']
+#         spouse_profession_point = user_data['spouse_profession_point']
+#         home_loan_point = user_data['home_loan_point']
+#         other_loan_point = user_data['other_loan_point']
+#         credit_card_loan_point = user_data['credit_card_loan_point']
+#         vehicle_loan_point = user_data['vehicle_loan_point']
+
+#         total_user_point = user_points
+
+#         # Update the user's Beseem value in fin_user_beseem_score table
+#         user_data['total_user_point'] = user_points
+#         user_data.save()
     
 def get_group_points(customer_id):
     # Fetch user details
