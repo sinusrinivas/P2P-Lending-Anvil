@@ -3,14 +3,16 @@ container:
   properties: {col_widths: '{"EMHHXZ":30,"LMHRTT":10,"OWFYDN":20}', visible: true}
 components:
 - type: ColumnPanel
-  properties: {col_widths: '{"FDDXVJ":15,"HACQJG":45,"GVPHFB":15,"VRVUMX":45}'}
+  properties: {role: null, tooltip: '', border: '', foreground: '', visible: true,
+    wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{"FDDXVJ":15,"HACQJG":45,"GVPHFB":15,"VRVUMX":45}',
+    spacing_below: small, background: ''}
   name: column_panel_2
-  layout_properties: {grid_position: 'UQCZNB,KHJKIT'}
+  layout_properties: {grid_position: 'UQCZNB,KHJKIT', full_width_row: true}
   components:
   - type: form:admin.dashboard.home_button_admin
     properties: {}
     name: home_button_admin_1
-    layout_properties: {grid_position: 'XMKVND,CVZVLB'}
+    layout_properties: {grid_position: 'XMKVND,CVZVLB', full_width_row: true}
   - name: label_3
     properties: {align: center, text: ADD CATEGORIES, bold: true}
     type: Label

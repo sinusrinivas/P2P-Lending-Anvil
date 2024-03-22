@@ -17,14 +17,15 @@ components:
     layout_properties:
       col_widths: {}
       grid_position: TSKOMM,QRBVPB
+      full_width_row: true
   - type: form:borrower_registration_form.logout
     properties: {}
     name: logout_1
-    layout_properties: {grid_position: 'TSKOMM,FMHHUA'}
+    layout_properties: {grid_position: 'TSKOMM,FMHHUA', full_width_row: true}
   - type: form:borrower_registration_form.dashboard.Navigation_form_dashboard
     properties: {}
     name: navigation_form_dashboard_1
-    layout_properties: {grid_position: 'QPZQFW,VPODZT'}
+    layout_properties: {grid_position: 'QPZQFW,VPODZT', full_width_row: true}
   - type: Spacer
     properties: {height: 0}
     name: spacer_3

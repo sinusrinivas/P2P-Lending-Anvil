@@ -11,7 +11,7 @@ components:
   - type: form:admin.dashboard.home_button_admin
     properties: {}
     name: home_button_admin_1
-    layout_properties: {grid_position: 'AETBJQ,WGCLPP'}
+    layout_properties: {grid_position: 'AETBJQ,WGCLPP', full_width_row: true}
   - type: DataGrid
     properties:
       role: null

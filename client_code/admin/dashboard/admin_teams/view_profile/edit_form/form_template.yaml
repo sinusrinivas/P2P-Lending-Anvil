@@ -11,7 +11,7 @@ components:
   - type: form:admin.dashboard.home_button_admin
     properties: {}
     name: home_button_admin_1
-    layout_properties: {grid_position: 'KRBWAI,VZOSKE', slot: title}
+    layout_properties: {grid_position: 'KRBWAI,VZOSKE', slot: title, full_width_row: true}
   - type: ColumnPanel
     properties: {}
     name: content_panel_copy
@@ -34,9 +34,11 @@ components:
           grid_position: PQADQZ,DQLBXL
         components:
         - type: XYPanel
-          properties: {height: 509}
+          properties: {role: null, width: null, align: center, height: 509, tooltip: '',
+            border: '', foreground: '', visible: true, spacing_above: small, spacing_below: small,
+            background: ''}
           name: xy_panel_1
-          layout_properties: {grid_position: 'XZPAMP,CHYXDG'}
+          layout_properties: {grid_position: 'XZPAMP,CHYXDG', full_width_row: true}
           components:
           - type: Label
             properties: {role: null, align: left, tooltip: '', border: '', foreground: '',

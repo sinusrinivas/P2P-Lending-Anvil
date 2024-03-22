@@ -41,7 +41,7 @@ class not_payable_amount(not_payable_amountTemplate):
     if not self.result:
         alert("No Approved Loans Available!")
     else:
-        self.repeating_panel_2.items = self.result
+        self.repeating_panel_1.items = self.result
 
   def button_1_copy_click(self, **event_args):
     open_form('admin.dashboard.loan_management')

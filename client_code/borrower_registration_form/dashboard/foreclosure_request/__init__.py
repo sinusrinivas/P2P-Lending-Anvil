@@ -8,6 +8,7 @@ import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 
+
 class foreclosure_request(foreclosure_requestTemplate):
     def __init__(self, **properties):
         # Set Form properties and Data Bindings.
@@ -24,31 +25,33 @@ class foreclosure_request(foreclosure_requestTemplate):
                 # Access the user ID from the userprofile record
                 user_id = user_profile['customer_id']
                 print(user_id)
-                # Filter loan_details table based on the current user's ID
+                # Filter loan_details table based on the current user's ID and loan status
                 try:
-                    customer_loans = app_tables.fin_loan_details.search(borrower_customer_id=user_id)
+                    customer_loans = [loan for loan in app_tables.fin_loan_details.search(borrower_customer_id=user_id) if loan['loan_updated_status'] == 'disbursed']
                     loans = []
                     for loan in customer_loans:
                         if user_profile is not None:
-                            loan_data = {
-                                'mobile': user_profile['mobile'],
-                                'interest_rate': loan['interest_rate'],
-                                'loan_amount': loan['loan_amount'],
-                                'tenure': loan['tenure'],
-                                'loan_disbursed_timestamp': loan['loan_disbursed_timestamp'],
-                                'product_name': loan['product_name'],
-                                'product_description': loan['product_description'],
-                                'lender_full_name': loan['lender_full_name'],
-                                'product_id': loan['product_id'],
-                                'loan_id': loan['loan_id'],
-                                'loan_updated_status': loan['loan_updated_status'],
-                                'emi_payment_type': loan['emi_payment_type'],
-                                'credit_limit' : loan['credit_limit'],
-                                'foreclosure_type' : loan['foreclosure_type'],
-                                'borrower_full_name' : loan['borrower_full_name']
-                                # 'eligible': self.is_loan_eligible(loan)
-                            }
-                            loans.append(loan_data)
+                            # Check if the loan product is eligible for foreclosure
+                            product_details_record = app_tables.fin_product_details.get(product_id=loan['product_id'])
+                            if product_details_record['foreclose_type'] == 'Eligible':
+                                loan_data = {
+                                    'mobile': user_profile['mobile'],
+                                    'interest_rate': loan['interest_rate'],
+                                    'loan_amount': loan['loan_amount'],
+                                    'tenure': loan['tenure'],
+                                    'loan_disbursed_timestamp': loan['loan_disbursed_timestamp'],
+                                    'product_name': loan['product_name'],
+                                    'product_description': loan['product_description'],
+                                    'lender_full_name': loan['lender_full_name'],
+                                    'product_id': loan['product_id'],
+                                    'loan_id': loan['loan_id'],
+                                    'loan_updated_status': loan['loan_updated_status'],
+                                    'emi_payment_type': loan['emi_payment_type'],
+                                    'credit_limit' : loan['credit_limit'],
+                                    'foreclosure_type' : loan['foreclosure_type'],
+                                    'borrower_full_name' : loan['borrower_full_name'],
+                                }
+                                loans.append(loan_data)
 
                     # Set the filtered data as the items for the repeating panel
                     self.repeat.items = loans
@@ -64,9 +67,3 @@ class foreclosure_request(foreclosure_requestTemplate):
     def button_1_click(self, **event_args):
         """This method is called when the button is clicked"""
         open_form('borrower_registration_form.dashboard')
-
-    # def is_loan_eligible(self, loan):
-    #     # Check eligibility based on 'extension_allowed' from product_details
-    #     product_details_record = app_tables.fin_product_details.get(product_id=loan['product_id'])
-    #     return product_details_record['foreclose_type'] == 'Eligible'
-

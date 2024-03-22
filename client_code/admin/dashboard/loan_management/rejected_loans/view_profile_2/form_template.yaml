@@ -3,23 +3,29 @@ container:
   properties: {col_widths: '{}'}
 components:
 - type: ColumnPanel
-  properties: {}
+  properties: {role: null, tooltip: '', border: '', foreground: '', visible: true,
+    wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '', spacing_below: small,
+    background: ''}
   name: content_panel
   layout_properties:
     col_widths: {}
     grid_position: CGGMYR,RKJRXK
+    full_width_row: true
   components:
   - type: ColumnPanel
-    properties: {col_widths: '{}'}
+    properties: {role: null, tooltip: '', border: '', foreground: '', visible: true,
+      wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
+      spacing_below: small, background: ''}
     name: content_panel_copy
     layout_properties:
       col_widths: {}
       grid_position: SDSJYQ,RIJUQY
+      full_width_row: true
     components:
     - type: form:admin.dashboard.home_button_admin
       properties: {}
       name: home_button_admin_1
-      layout_properties: {grid_position: 'JJMMBB,LPHIKQ'}
+      layout_properties: {grid_position: 'JJMMBB,LPHIKQ', full_width_row: true}
 - type: GridPanel
   properties: {spacing_above: medium, spacing_below: medium, background: '', foreground: '',
     border: '', visible: true, role: outlined-card, tooltip: ''}

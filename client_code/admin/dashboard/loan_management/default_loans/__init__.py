@@ -14,7 +14,7 @@ class default_loans(default_loansTemplate):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
     # Any code you write here will run before the form opens.
-    self.data = app_tables.fin_loan_details.search(loan_updated_status=q.like('default loan%'))
+    self.data = app_tables.fin_loan_details.search(loan_updated_status=q.like('default%'))
 
     self.result = []
     for loan in self.data:

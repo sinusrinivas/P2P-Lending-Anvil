@@ -11,14 +11,15 @@ components:
   layout_properties:
     col_widths: {}
     grid_position: BTHXWL,CCPSFO
+    full_width_row: true
 - type: form:borrower_registration_form.logout
   properties: {}
   name: logout_1
-  layout_properties: {grid_position: 'BTHXWL,TZRZWU'}
+  layout_properties: {grid_position: 'BTHXWL,TZRZWU', full_width_row: true}
 - type: form:borrower_registration_form.navigation_bar_main
-  properties: {}
+  properties: {prop: ''}
   name: navigation_bar_1
-  layout_properties: {grid_position: 'OLJJRL,XSGSCU'}
+  layout_properties: {grid_position: 'OLJJRL,XSGSCU', full_width_row: true}
 - name: label_1_copy_1
   properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
     visible: true, text: Business Details, font_size: null, font: '', spacing_above: small,
