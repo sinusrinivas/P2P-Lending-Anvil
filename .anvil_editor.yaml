@@ -72,7 +72,6 @@ unique_ids:
     admin.dashboard.manage_cms.add_borrower_dropdown_details.ItemTemplate11: '1706093228261598885466552.9293'
     wallet.wallet.ItemTemplate1: '1703492569011195703115231.62308'
     lendor_registration_form.lender_registration_form_2.lender_registration_individual_form_3: '1699429299471944361321501.9009'
-    admin.dashboard.loan_management.loan_disbursed.RowTemplate16: '1701160112605363272029232.90436'
     admin.dashboard.manage_bessem.add_subcategory.edit_all_loans: '1710222862958473841917188.2917'
     ? borrower_registration_form.star_1_borrower_registration_form_2_employment.star_1_borrower_registration_form_2_employment_emp_detail_1
     : '1700037370196273229157101.42648'
@@ -111,7 +110,6 @@ unique_ids:
     admin.dashboard.manage_bessem.add_subcategory.ItemTemplate37: '1711087717699357608740554.9464'
     admin.dashboard.loan_management.default_loans: '1701349219800657114662317.6571'
     lendor_registration_form.dashboard.view_lost_oppurtunities: '1699961316448706281090869.9006'
-    admin.dashboard.loan_management.default_loans.ItemTemplate24: '1707132120783389953904553.8605'
     borrower_registration_form.dashboard.view_loans.ItemTemplate42: '1709550013935873284404662.2515'
     borrower_registration_form.dashboard.today_dues.ItemTemplate46: '1709722913535335409689375.16394'
     admin.dashboard.manage_bessem.add_subcategory.ItemTemplate88: '1710772418468402447492477.0014'
@@ -139,7 +137,6 @@ unique_ids:
     : '17005720020403876226355.3249187'
     admin.dashboard.loan_management.open_loans.ItemTemplate3: '171101040560926993222468.07667'
     lendor_registration_form.dashboard.view_loan_foreclosure_Requests: '169996304408474987603925.53683'
-    admin.dashboard.loan_management.closed_loans.RowTemplate14: '1701079863491503664452804.4547'
     bank_users.main_form.products_main_form: '1700563558734712481921773.0997'
     admin.dashboard.loan_management.not_payable_amount.view_profile_9: '1707203080661303272266486.02234'
     lendor_registration_form.dashboard.view_loan_foreclosure_Requests.RowTemplate32: '1704952273890916518019119.6376'
