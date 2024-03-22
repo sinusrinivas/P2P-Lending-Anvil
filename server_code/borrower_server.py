@@ -288,8 +288,6 @@ def get_user_points(id):
         credit_card_loan = user['credit_card_loans'].lower()
         vehicle_loan = user['vehicle_loan'].lower()
         
-        # loan_columns = ['home_loan', 'other_loan', 'credit_card_loans', 'vehicle_loan']
-        
         # Initialize user points
         user_points = 0
 
