@@ -172,7 +172,6 @@ def add_loan_details(loan_amount, tenure,user_id,interest_rate, total_repayment_
           total_interest_amount = total_interest,
           product_description = product_description,
           monthly_emi = emi
-          # beseem_score= find_beseem_points_based_on_id(user_id)
          )
 
         # Return the generated loan ID to the client
@@ -240,17 +239,8 @@ def generate_emi_id():
     # Return the new EMI ID
     return f"EMI{counter}"
 
-# def find_user_and_add_bessem_value(user_id):
-#   users = app_tables.fin_beseem_score.search(borrower_customer_id=user_id)
-#   if users:
-#     users[0]['total_point']=bessemfunctions.final_points_update_bessem_table(user_id)
-#     users[0]['user_type'] = 'borrower'
 
-# def find_beseem_points_based_on_id(user_id):
-#   users = app_tables.fin_beseem_score.search(borrower_customer_id=user_id)
-#   if users:
-#     total_points = users[0]['total_point']
-#     return total_points
+
 
 # bessem code
 
@@ -408,6 +398,26 @@ def get_user_points(id):
     else:
         return None
 
+# def find_user_and_add_bessem_value(user_id):
+#   df = app_tables.fin_user_beseem_score.search(borrower_customer_id=user_id)
+#   if df:
+#     df[0]['borrower_customer_id']
+#     df[0]['borrower_email_id']
+#     df[0]['present_address_point']
+#     df[0]['duration_at_address_point']
+#     df[0]['qualification_point']
+#     df[0]['profession_point']
+#     df[0]['organization_type_point']
+#     df[0]['salary_type_point']
+#     df[0]['age_of_business_point']
+#     df[0]['marital_status_point']
+#     df[0]['spouse_profession_point']
+#     df[0]['home_loan_point']
+#     df[0]['other_loan_point']
+#     df[0]['credit_card_loan_point']
+#     df[0]['vehicle_loan_point']
+#     df[0]['total_user_point']
+    
 def get_group_points(customer_id):
     # Fetch user details
     user = app_tables.fin_user_profile.get(customer_id=customer_id)
@@ -435,6 +445,8 @@ def get_group_points(customer_id):
                     group_points += max_points
                 elif group_name == 'present_address':
                     group_points += max_points
+                elif group_name == 'duration_at_address':
+                    group_points += max_points
                 elif group_name == 'qualification':
                     group_points += max_points
                 elif group_name == 'home_loan':
@@ -445,11 +457,15 @@ def get_group_points(customer_id):
                     group_points += max_points
                 elif group_name == 'vehicle_loan':
                     group_points += max_points
+                elif group_name == 'profession':
+                    group_points += max_points
                 elif group_name == 'organization_type' and profession == 'employee':
                     group_points += max_points
                 elif group_name == 'salary_type' and profession == 'employee':
                     group_points += max_points
                 elif group_name == 'age_of_business' and profession == 'business':
+                    group_points += max_points
+                elif group_name == 'marital_status':
                     group_points += max_points
                 elif group_name == 'spouse_profession' and marital_status == 'married' and another_person == 'spouse':
                     group_points += max_points

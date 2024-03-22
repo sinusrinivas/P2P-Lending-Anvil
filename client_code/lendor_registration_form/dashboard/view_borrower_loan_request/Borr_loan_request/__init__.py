@@ -443,6 +443,9 @@ class Borr_loan_request(Borr_loan_requestTemplate):
                     q.like('approved%'),
                     q.like('accept%'),
                     q.like('foreclosure%'),
+                    q.like('close%'),
+                    q.like('Close%'),
+                    q.like('closed loans%'),
                     q.like('disbursed loan%'),
                     q.like('Disbursed loan%')
                 )
