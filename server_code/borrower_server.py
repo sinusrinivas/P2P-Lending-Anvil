@@ -283,12 +283,12 @@ def get_user_points(id):
         self_employment = user['self_employment'].lower()
         age_of_business = user['business_age']
         salary_type = user['salary_type'].lower()
-        # home_loan = user['home_loan'].lower()
-        # other_loan = user['other_loan'].lower()
-        # credit_card_loan = user['credit_card_loans'].lower()
-        # vehicle_loan = user['vehicle_loan'].lower()
+        home_loan = user['home_loan'].lower()
+        other_loan = user['other_loan'].lower()
+        credit_card_loan = user['credit_card_loans'].lower()
+        vehicle_loan = user['vehicle_loan'].lower()
         
-        loan_columns = ['home_loan', 'other_loan', 'credit_card_loans', 'vehicle_loan']
+        # loan_columns = ['home_loan', 'other_loan', 'credit_card_loans', 'vehicle_loan']
         
         # Initialize user points
         user_points = 0
@@ -384,19 +384,43 @@ def get_user_points(id):
                     print("Spouse profession:", spouse_profession_points)
                     user_points += spouse_profession_points
 
-        loan_points_total = 0
-        for loan_column in loan_columns:
-            loan_value = user[loan_column].lower()
-            if loan_value in ['yes', 'no']: 
-                loan_search = app_tables.fin_admin_beseem_categories.search(
-                    (app_tables.fin_admin_beseem_categories.group_name == 'all_loans') &
-                    (app_tables.fin_admin_beseem_categories.sub_category == loan_column.lower()) &
-                    (app_tables.fin_admin_beseem_categories.is_liveloan == loan_value.lower())
-                )
-                if loan_search:
-                    loan_points_total += loan_search[0]['min_points']
+        home_loan_search = app_tables.fin_admin_beseem_categories.search(group_name='all_loans', sub_category='home loan', is_liveloan=home_loan)
+        if home_loan_search:
+            home_loan_points = home_loan_search[0]['min_points']
+            print("Home loan Points:", home_loan_points)
+            user_points += home_loan_points
 
-        user_points += loan_points_total
+        other_loan_search = app_tables.fin_admin_beseem_categories.search(group_name='all_loans',sub_category='other loan', is_liveloan=other_loan.lower())
+        if other_loan_search:
+            other_loan_points = other_loan_search[0]['min_points']
+            print("Other loan Points:", other_loan_points)
+            user_points += other_loan_points
+
+        credit_card_loan_search = app_tables.fin_admin_beseem_categories.search(group_name='all_loans',sub_category='credit card loan' ,is_liveloan=credit_card_loan.lower())
+        if credit_card_loan_search:
+            credit_card_loan_points = credit_card_loan_search[0]['min_points']
+            print("Credit card loan Points:", credit_card_loan_points)
+            user_points += credit_card_loan_points
+
+        vehicle_loan_search = app_tables.fin_admin_beseem_categories.search(group_name='all_loans', sub_category='vehicle loan',is_liveloan=vehicle_loan.lower())
+        if vehicle_loan_search:
+            vehicle_loan_points = vehicle_loan_search[0]['min_points']
+            print("Vehicle Points:", vehicle_loan_points)
+            user_points += vehicle_loan_points 
+      
+        # loan_points_total = 0
+        # for loan_column in loan_columns:
+        #     loan_value = user[loan_column].lower()
+        #     if loan_value in ['yes', 'no']: 
+        #         loan_search = app_tables.fin_admin_beseem_categories.search(
+        #             (app_tables.fin_admin_beseem_categories.group_name == 'all_loans') &
+        #             (app_tables.fin_admin_beseem_categories.sub_category == loan_column.lower()) &
+        #             (app_tables.fin_admin_beseem_categories.is_liveloan == loan_value.lower())
+        #         )
+        #         if loan_search:
+        #             loan_points_total += loan_search[0]['min_points']
+
+        # user_points += loan_points_total
 
         # if home_loan:
         #     home_loan_search = app_tables.fin_admin_beseem_categories.search(group_name='all_loans', sub_category=home_loan.lower())
@@ -422,35 +446,7 @@ def get_user_points(id):
         #         vehicle_loan_points = vehicle_loan_search[0]['min_points']
         #         user_points += vehicle_loan_points
 
-        # home_loan_search = app_tables.fin_admin_beseem_categories.search(group_name='all_loans', sub_category=home_loan.lower())
-        # if home_loan_search:
-        #     home_loan_points = home_loan_search[0]['min_points']
-        #     print("Home loan Points:", home_loan_points)
-        #     user_points += home_loan_points
-
-        # other_loan_search = app_tables.fin_admin_beseem_categories.search(group_name='all_loans', sub_category=other_loan.lower())
-        # if other_loan_search:
-        #     other_loan_points = other_loan_search[0]['min_points']
-        #     print("Other loan Points:", other_loan_points)
-        #     user_points += other_loan_points
-
-        # live_loan_search = app_tables.fin_admin_beseem_categories.search(group_name='all_loans', sub_category=live_loan.lower())
-        # if live_loan_search:
-        #     live_loan_points = live_loan_search[0]['min_points']
-        #     print("Live loan Points:", live_loan_points)
-        #     user_points += live_loan_points
-
-        # credit_card_loan_search = app_tables.fin_admin_beseem_categories.search(group_name='all_loans', sub_category=credit_card_loan.lower())
-        # if credit_card_loan_search:
-        #     credit_card_loan_points = credit_card_loan_search[0]['min_points']
-        #     print("Credit card loan Points:", credit_card_loan_points)
-        #     user_points += credit_card_loan_points
-
-        # vehicle_loan_search = app_tables.fin_admin_beseem_categories.search(group_name='all_loans', sub_category=vehicle_loan.lower())
-        # if vehicle_loan_search:
-        #     vehicle_loan_points = vehicle_loan_search[0]['min_points']
-        #     print("Vehicle Points:", vehicle_loan_points)
-        #     user_points += vehicle_loan_points       
+              
 
         return user_points
     else:
