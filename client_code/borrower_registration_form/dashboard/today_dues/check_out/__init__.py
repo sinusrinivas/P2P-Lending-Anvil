@@ -47,10 +47,40 @@ class check_out(check_outTemplate):
             # Default to monthly calculation
             emi = (loan_amount * monthly_interest_rate * (1 + monthly_interest_rate) ** total_payments) / ((1 + monthly_interest_rate) ** total_payments - 1)
             total_emi = emi + extension_amount  # Add extension amount to monthly EMI
-  
-        # Display the calculated EMI amount in the EMI amount label
+
+
+        loan_state_status = app_tables.fin_loan_details.get(loan_id=loan_id)['loan_state_status']
+        if loan_state_status == 'lapsed loan':
+            # Fetch the lapsed fee from product details table
+            product_id = selected_row['product_id']
+            lapsed_fee = app_tables.fin_product_details.get(product_id=product_id)['lapsed_fee']
+            total_emi += lapsed_fee
+            self.penalty.text = "{:.2f}".format(lapsed_fee)
+            self.penalty.visible = True
+        elif loan_state_status == 'default loan' and selected_row['days_left'] > 8:
+            # Calculate the number of days between today's date and the selected schedule payment date
+            days_left = selected_row['days_left']
+            days_difference = days_left - 8 #(selected_payment_date - date.today()).days
+            
+            # Subtract 8 from the days difference and ensure it's not negative
+            #remaining_days = max(days_difference - 8, 0)
+            
+            # Fetch the default fee from product details table
+            product_id = selected_row['product_id']
+            default_fee = app_tables.fin_product_details.get(product_id=product_id)['default_fee']
+            total_default_fee = days_difference * default_fee
+            # Multiply the remaining days with the default fee and add to the total EMI
+            total_emi += total_default_fee
+            self.penalty.text = "{:.2f}".format(total_default_fee)
+            self.penalty.visible = True
+            self.label_5.visible = True
+
         self.emi_amount_label.text = "{:.2f}".format(emi)  # Show only the EMI amount without extension
-  
+        self.update_total_emi_amount(total_emi)
+        self.total_emi_amount_label.visible = True
+        self.label_5.visible = True
+          # Show only the EMI amount without extension
+          
         # Update labels based on the presence of extension amount
         if extension_amount > 0:
             self.total_emi_amount_label.text = "{:.2f}".format(total_emi)
@@ -207,7 +237,7 @@ class check_out(check_outTemplate):
                     alert('Payment successfully done...')
                     open_form('borrower_registration_form.dashboard')
                 else:
-                    self.status_label.text = "Lender's wallet not found."
+                    alert( "Lender's wallet not found.")
             else:
                 alert("Insufficient funds in wallet. Please deposit more funds to continue.")
                 open_form('wallet.wallet')

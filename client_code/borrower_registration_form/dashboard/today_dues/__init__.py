@@ -54,6 +54,8 @@ class today_dues(today_duesTemplate):
                     product_name = loan_detail['product_name']
                     product_description = loan_detail['product_description']
                     lender_full_name = loan_detail['lender_full_name']
+                    loan_state_status = loan_detail['loan_state_status']
+                    product_id = loan_detail['product_id']
                     
                     loan_details.append({
                         'loan_id': loan_id,
@@ -77,7 +79,9 @@ class today_dues(today_duesTemplate):
                         'product_description': product_description,
                         'product_name': product_name,
                         'lender_full_name': lender_full_name,
-                        'borrower_customer_id': borrower_customer_id
+                        'borrower_customer_id': borrower_customer_id,
+                        'loan_state_status': loan_state_status,
+                        'product_id':product_id,
                     })
             else:
                 
@@ -113,6 +117,8 @@ class today_dues(today_duesTemplate):
                   borrower_customer_id = loan_detail['borrower_customer_id']
                   lender_full_name = loan_detail['lender_full_name']
                   scheduled_payment = loan_disbursed_timestamp.date()
+                  loan_state_status = loan_detail['loan_state_status']
+                  product_id =loan_detail['product_id']
                   
                   
                   # Calculate next_payment based on first_payment_due_date
@@ -155,6 +161,8 @@ class today_dues(today_duesTemplate):
                       'product_name': product_name,
                       'lender_full_name': lender_full_name,  
                       'borrower_customer_id': borrower_customer_id,
+                      'loan_state_status':loan_state_status,
+                      'product_id':product_id
                       
                   })
             self.repeating_panel_2.items = loan_details
