@@ -42,7 +42,7 @@ class lapsed_loans(lapsed_loansTemplate):
             })
 
     if not self.result:
-        alert("No Approved Loans Available!")
+        alert("No Lapsed Loans Available!")
     else:
         self.repeating_panel_1.items = self.result
 

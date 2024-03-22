@@ -39,7 +39,7 @@ class not_payable_amount(not_payable_amountTemplate):
             })
 
     if not self.result:
-        alert("No Approved Loans Available!")
+        alert("No NPA Loans Available!")
     else:
         self.repeating_panel_1.items = self.result
 

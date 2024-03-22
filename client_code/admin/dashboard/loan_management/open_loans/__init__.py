@@ -43,7 +43,7 @@ class open_loans(open_loansTemplate):
             })
 
     if not self.result:
-        alert("No Approved Loans Available!")
+        alert("No open Loans Available!")
     else:
         self.repeating_panel_1.items = self.result
 

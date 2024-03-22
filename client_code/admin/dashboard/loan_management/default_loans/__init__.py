@@ -41,7 +41,7 @@ class default_loans(default_loansTemplate):
             })
 
     if not self.result:
-        alert("No Approved Loans Available!")
+        alert("No Default Loans Available!")
     else:
         self.repeating_panel_2.items = self.result
   #   # Any code you write here will run before the form opens.
