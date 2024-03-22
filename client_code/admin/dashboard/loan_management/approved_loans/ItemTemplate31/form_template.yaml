@@ -8,7 +8,7 @@ components:
     grid_position: MKYGRL,GCNFVU
   components:
   - name: label_3
-    properties: {text: '---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------',
+    properties: {text: '--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------',
       foreground: grey, align: center}
     type: Label
     layout_properties: {x: 0.147705078125, y: 108.6477323025465, width: 938.4028450195312}
@@ -45,15 +45,15 @@ components:
     data_bindings:
     - {property: text, code: 'self.item[''product_name'']', writeback: false}
   - name: lendor_name
-    properties: {bold: true, align: right}
+    properties: {bold: true, align: center}
     type: Label
-    layout_properties: {x: 669.7625396735966, y: 51.38750457763672, width: 178.9869755859375}
+    layout_properties: {x: 669.7625396735966, y: 51.38750457763672, width: 181.977}
     data_bindings:
     - {property: text, code: 'self.item[''lender_full_name'']', writeback: false}
   - name: lendor_mobile
-    properties: {align: right}
+    properties: {align: center}
     type: Label
-    layout_properties: {x: 655.5124176032841, y: 75.1875, width: 200}
+    layout_properties: {x: 655.5124176032841, y: 75.1875, width: 196.21599999999998}
     data_bindings:
     - {property: text, code: 'self.item[''lender_mobile'']', writeback: false}
   - name: outlined_button_1

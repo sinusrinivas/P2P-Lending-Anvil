@@ -31,18 +31,6 @@ components:
     properties: {height: 63.399932861328125, source: 'https://freesvg.org/img/abstract-user-flat-4.png'}
     type: Image
     layout_properties: {x: 853.3750152587891, y: 53.13636641204357, width: 85.17045593261719}
-  - name: product_details
-    properties: {align: center}
-    type: Label
-    layout_properties: {x: 350.1818528622389, y: 21.704544588923454, width: 200}
-    data_bindings:
-    - {property: text, code: 'self.item[''product_description'']', writeback: false}
-  - name: Product
-    properties: {bold: true, align: center}
-    type: Label
-    layout_properties: {x: 343.5568528622389, y: 0.04545454680919647, width: 200}
-    data_bindings:
-    - {property: text, code: 'self.item[''product_name'']', writeback: false}
   - name: lendor_name
     properties: {bold: true, align: right}
     type: Label
@@ -118,19 +106,21 @@ components:
     properties: {text: 'Interest Rate :'}
     type: Label
     layout_properties: {x: 23.089279174804688, y: 165.1785831451416, width: 200}
-  - name: label_5
-    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-      visible: true, text: Loan id, font_size: null, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
-      underline: false, icon: ''}
+  - name: product_details
+    properties: {align: center}
     type: Label
-    layout_properties: {x: 23.053573608398438, y: 131.48214149475098, width: 160}
-  - name: loan_id
-    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-      visible: true, text: '', font_size: null, font: '', spacing_above: small, icon_align: left,
-      spacing_below: small, italic: false, background: '', bold: false, underline: false,
-      icon: ''}
-    type: Label
-    layout_properties: {x: 736.1607513427734, y: 135.1785831451416, width: 160}
+    layout_properties: {x: 432.4545922726393, y: 405, width: 200}
     data_bindings:
-    - {property: text, code: 'self.item[''loan_id'']'}
+    - {property: text, code: 'self.item[''product_description'']', writeback: false}
+  - name: Product
+    properties: {bold: true, align: center}
+    type: Label
+    layout_properties: {x: 544.6818871945143, y: 405, width: 200}
+    data_bindings:
+    - {property: text, code: 'self.item[''product_name'']', writeback: false}
+  - name: Product_copy
+    properties: {bold: true, align: center}
+    type: Label
+    layout_properties: {x: 0, y: 0, width: 200}
+    data_bindings:
+    - {property: text, code: 'self.item[''product_name'']', writeback: false}
