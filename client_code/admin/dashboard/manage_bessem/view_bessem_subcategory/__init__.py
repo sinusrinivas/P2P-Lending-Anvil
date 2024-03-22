@@ -20,7 +20,8 @@ class view_bessem_subcategory(view_bessem_subcategoryTemplate):
     else:
         self.result = [{'group_name': i['group_name'],
                         'sub_category': i['sub_category'],
-                        'min_points': i['min_points']}
+                        'min_points': i['min_points'],
+                        'age':i['age']}
                        for i in self.data]
         self.repeating_panel_1.items = self.result
 
