@@ -1102,7 +1102,7 @@ db_schema:
       admin_ui: {order: 12, width: 200}
       type: string
   fin_wallet_bank_account_table:
-    client: full
+    client: none
     server: full
     columns:
     - name: account_id
@@ -1297,6 +1297,9 @@ db_schema:
     - name: monthly_emi
       admin_ui: {width: 200, order: 0.5}
       type: number
+    - name: loan_state_status
+      admin_ui: {width: 200, order: 39}
+      type: string
     title: fin_loan_details
   fin_beseem_score_users:
     client: full
