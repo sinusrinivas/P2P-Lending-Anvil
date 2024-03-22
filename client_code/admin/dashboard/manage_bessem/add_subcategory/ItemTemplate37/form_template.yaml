@@ -1,0 +1,22 @@
+is_package: true
+container:
+  type: ColumnPanel
+  properties: {col_widths: '{"SZDPRN":25,"QLRTDQ":20,"ZAYNGC":15}'}
+components:
+- name: label_1
+  properties: {align: center}
+  type: Label
+  layout_properties: {grid_position: 'RDOFKW,SZDPRN'}
+  data_bindings:
+  - {property: text, code: 'self.item[''sub_category'']'}
+- name: label_2
+  properties: {align: center}
+  type: Label
+  layout_properties: {grid_position: 'RDOFKW,QLRTDQ'}
+  data_bindings:
+  - {property: text, code: 'self.item[''min_points'']'}
+- name: link_1
+  properties: {text: Edit Details}
+  type: Link
+  layout_properties: {grid_position: 'RDOFKW,ZAYNGC'}
+  event_bindings: {click: link_1_click}

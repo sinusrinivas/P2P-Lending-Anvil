@@ -15,10 +15,11 @@ components:
   - name: data_grid_1
     properties:
       columns:
-      - {id: VJQQOR, title: Group Names, data_key: column_2, width: 303.39996337890625,
+      - {id: VJQQOR, title: Group Names, data_key: column_2, width: 263.33331298828125,
         expand: false}
       - {id: OJLQEN, title: Sub Category, data_key: column_3}
       - {id: UWQTPT, data_key: column_4, title: Min Points}
+      - {id: TRHWNK, data_key: column_1, title: Age}
     type: DataGrid
     components:
     - name: repeating_panel_1
