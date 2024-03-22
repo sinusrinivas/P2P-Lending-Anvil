@@ -11,10 +11,6 @@ components:
       foreground: grey, align: center}
     type: Label
     layout_properties: {x: 0.147705078125, y: 108.6477323025465, width: 938.4028450195312}
-  - name: image_1
-    properties: {height: 63.399932861328125, source: 'https://freesvg.org/img/abstract-user-flat-4.png'}
-    type: Image
-    layout_properties: {x: 1.6363664120435715, y: 60.409094378352165, width: 66}
   - name: borrower_mobile
     properties: {}
     type: Label
@@ -139,3 +135,7 @@ components:
     layout_properties: {x: 0, y: 0, width: 200}
     data_bindings:
     - {property: text, code: 'self.item[''loan_id'']', writeback: false}
+  - name: image_1
+    properties: {height: 63.399932861328125, source: 'https://freesvg.org/img/abstract-user-flat-4.png'}
+    type: Image
+    layout_properties: {x: 0, y: 50.27271895110607, width: 66}
