@@ -51,7 +51,7 @@ class check_out(check_outTemplate):
 
 
         loan_state_status = app_tables.fin_loan_details.get(loan_id=loan_id)['loan_state_status']
-        if loan_state_status == 'lapsed loan' and selected_row['days_left'] > 8:
+        if loan_state_status == 'lapsed loan' and selected_row['days_left'] > 6:
             # Fetch the lapsed fee from product details table
             product_id = selected_row['product_id']
             lapsed_fee = app_tables.fin_product_details.get(product_id=product_id)['lapsed_fee']
@@ -80,6 +80,7 @@ class check_out(check_outTemplate):
             self.label_9.visible = True
             self.lapsed.visible = False
             self.label_5.visible = False
+
 
         # Display the calculated EMI amount in the EMI amount label
         self.emi_amount_label.text = "{:.2f}".format(emi)  # Show only the EMI amount without extension
