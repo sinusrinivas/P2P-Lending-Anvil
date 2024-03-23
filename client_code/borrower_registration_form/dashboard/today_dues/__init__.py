@@ -37,6 +37,7 @@ class today_dues(today_duesTemplate):
                     scheduled_payment = latest_loan['scheduled_payment']
                     next_payment = latest_loan['next_payment']
                     days_left = (today_date - next_payment).days
+               
                     emi_number = latest_loan['emi_number']
                     account_number = latest_loan['account_number']
                     tenure = loan_detail['tenure']
@@ -56,7 +57,9 @@ class today_dues(today_duesTemplate):
                     lender_full_name = loan_detail['lender_full_name']
                     loan_state_status = loan_detail['loan_state_status']
                     product_id = loan_detail['product_id']
-                    
+                    total_interest_amount = loan_detail['total_interest_amount']
+                    Scheduled_date = latest_loan['next_payment']
+                  
                     loan_details.append({
                         'loan_id': loan_id,
                         'loan_amount': loan_amount,
@@ -82,6 +85,8 @@ class today_dues(today_duesTemplate):
                         'borrower_customer_id': borrower_customer_id,
                         'loan_state_status': loan_state_status,
                         'product_id':product_id,
+                        'total_interest_amount':total_interest_amount,
+                        'Scheduled_date':Scheduled_date,
                     })
             else:
                 
@@ -119,6 +124,8 @@ class today_dues(today_duesTemplate):
                   scheduled_payment = loan_disbursed_timestamp.date()
                   loan_state_status = loan_detail['loan_state_status']
                   product_id =loan_detail['product_id']
+                  total_interest_amount  = loan_detail['total_interest_amount']
+                  Scheduled_date = loan_detail['first_emi_payment_due_date']
                   
                   
                   # Calculate next_payment based on first_payment_due_date
@@ -162,7 +169,9 @@ class today_dues(today_duesTemplate):
                       'lender_full_name': lender_full_name,  
                       'borrower_customer_id': borrower_customer_id,
                       'loan_state_status':loan_state_status,
-                      'product_id':product_id
+                      'product_id':product_id,
+                      'total_interest_amount':total_interest_amount,
+                      'Scheduled_date':Scheduled_date,
                       
                   })
             self.repeating_panel_2.items = loan_details

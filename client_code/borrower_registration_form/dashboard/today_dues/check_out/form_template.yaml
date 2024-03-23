@@ -122,7 +122,10 @@ components:
     type: Label
     layout_properties: {grid_position: 'PVVUNN,JSEVIT ILCTME,EHGDCT'}
   - name: label_5
-    properties: {align: center}
+    properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
+      visible: false, text: Lapsed Fee, font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+      underline: false, icon: ''}
     type: Label
     layout_properties: {grid_position: 'PVVUNN,JSEVIT AQLWWM,VDOCWV'}
   - name: total_emi_amount_label
@@ -136,8 +139,22 @@ components:
     properties: {align: center}
     type: Label
     layout_properties: {grid_position: 'PVVUNN,RVLJIB RUGYLV,ODLRTL'}
+  - type: Label
+    properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
+      visible: false, text: Default Fee, font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+      underline: false, icon: ''}
+    name: label_9
+    layout_properties: {grid_position: 'ZVHAVU,LMPFPU'}
+  - type: Label
+    properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
+      visible: true, text: '', font_size: null, font: '', spacing_above: small, icon_align: left,
+      spacing_below: small, italic: false, background: '', bold: true, underline: false,
+      icon: ''}
+    name: default
+    layout_properties: {grid_position: 'ZVHAVU,XJYKJW'}
   - name: spacer_3
-    properties: {height: 32}
+    properties: {height: 10}
     type: Spacer
     layout_properties: {grid_position: 'EKLWXD,YAFEZR'}
   - name: button_1_copy_2
