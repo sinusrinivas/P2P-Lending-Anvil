@@ -55,7 +55,6 @@ class check_out(check_outTemplate):
             # Fetch the lapsed fee from product details table
             product_id = selected_row['product_id']
             lapsed_fee = app_tables.fin_product_details.get(product_id=product_id)['lapsed_fee']
-            self.update_total_emi_amount(total_emi)
             total_emi += lapsed_fee
             self.lapsed.text = "{:.2f}".format(lapsed_fee)
             self.lapsed.visible = True
@@ -75,7 +74,6 @@ class check_out(check_outTemplate):
             default_fee = app_tables.fin_product_details.get(product_id=product_id)['default_fee']
             total_default_fee = days_difference * default_fee
             # Multiply the remaining days with the default fee and add to the total EMI
-            self.update_total_emi_amount(total_emi)
             total_emi += total_default_fee
             self.default.text = "{:.2f}".format(total_default_fee)
             self.default.visible = True
@@ -116,14 +114,33 @@ class check_out(check_outTemplate):
       
         foreclosure_details = self.get_foreclosure_details(loan_id, selected_row['emi_number'])
         if foreclosure_details is not None:
-          total_due_amount = foreclosure_details['total_due_amount']
-          foreclosure_amount = foreclosure_details['foreclose_amount']
-          #foreclosure_amount = foreclosure_details['foreclose_amount']
-          self.emi_amount_label.text = "{:.2f}".format(total_due_amount)
-          self.extension_amount_label.text =  "{:.2f}".format(foreclosure_amount)
-          self.total_emi_amount_label.text = "{:.2f}".format(total_due_amount + foreclosure_amount)
-          self.total_emi_amount_label.visible = True
-          self.label_3.visible = True
+            total_due_amount = foreclosure_details['total_due_amount']
+            foreclosure_amount = foreclosure_details['foreclose_amount']
+        
+            # Check if lapsed fee or default fee is applicable
+            loan_state_status = app_tables.fin_loan_details.get(loan_id=loan_id)['loan_state_status']
+            if loan_state_status == 'lapsed loan' and selected_row['days_left'] > 6:
+                # Fetch the lapsed fee from product details table
+                product_id = selected_row['product_id']
+                lapsed_fee = app_tables.fin_product_details.get(product_id=product_id)['lapsed_fee']
+                total_due_amount += lapsed_fee
+        
+            elif loan_state_status == 'default loan' and selected_row['days_left'] > 8:
+                # Calculate the number of days between today's date and the selected schedule payment date
+                days_left = selected_row['days_left']
+                days_difference = days_left - 8
+        
+                # Fetch the default fee from product details table
+                product_id = selected_row['product_id']
+                default_fee = app_tables.fin_product_details.get(product_id=product_id)['default_fee']
+                total_default_fee = days_difference * default_fee
+                total_due_amount += total_default_fee
+            # Update labels with foreclosure details
+            self.emi_amount_label.text = "{:.2f}".format(total_due_amount)
+            self.extension_amount_label.text = "{:.2f}".format(foreclosure_amount)
+            self.total_emi_amount_label.text = "{:.2f}".format(total_due_amount + foreclosure_amount)
+            self.total_emi_amount_label.visible = True
+            self.label_3.visible = True
 
     def get_extension_details(self, loan_id, emi_number):
         extension_row = app_tables.fin_extends_loan.get(
