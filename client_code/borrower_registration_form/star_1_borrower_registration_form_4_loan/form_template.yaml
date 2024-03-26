@@ -84,4 +84,12 @@ components:
   name: button_2
   layout_properties: {grid_position: 'WAMCJC,XEHGKC'}
   event_bindings: {click: button_2_click}
+- name: button_1_1
+  properties: {role: null, align: full, tooltip: '', border: '', enabled: true, foreground: 'theme:On
+      Primary', visible: true, text: One Time, font_size: null, font: '', spacing_above: small,
+    icon_align: left, spacing_below: small, italic: false, background: '#05264d',
+    bold: false, underline: false, icon: ''}
+  type: Button
+  layout_properties: {grid_position: 'WAMCJC,UOBGOG'}
+  event_bindings: {click: button_1_1_click}
 is_package: true
