@@ -1052,6 +1052,9 @@ db_schema:
     - name: amount_paid
       admin_ui: {order: 13, width: 200}
       type: number
+    - name: extra_fee
+      admin_ui: {width: 200, order: 14}
+      type: number
   fin_borrower_business_type:
     client: full
     server: full
