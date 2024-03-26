@@ -1,6 +1,6 @@
 container:
   type: ColumnPanel
-  properties: {col_widths: '{}'}
+  properties: {col_widths: '{"CSGRZU":30,"FRNBWU":20,"GATXTR":10,"OBRPNO":30,"QTMSDK":20,"CUFRRJ":10,"FVTIEF":30,"DAQOHY":20,"EJBKNI":10,"SXLOWH":30,"OWNOTI":20,"PBTZJD":10}'}
 components:
 - name: image_1_copy_1_copy_1_copy_1
   properties: {role: null, vertical_align: center, height: 48, tooltip: '', border: '',
@@ -31,10 +31,31 @@ components:
     bold: true, underline: false, icon: ''}
   name: label_3
   layout_properties: {grid_position: 'HTDUMA,CSGRZU'}
-- name: text_box_1
-  properties: {background: 'theme:On Primary', hide_text: false}
-  type: TextBox
-  layout_properties: {grid_position: 'HTDUMA,OFKZLP'}
+- name: column_panel_1
+  properties: {}
+  type: ColumnPanel
+  layout_properties: {grid_position: 'HTDUMA,FRNBWU'}
+  components:
+  - name: button_1_1
+    properties: {role: null, align: full, tooltip: '', border: '', enabled: true,
+      foreground: 'theme:On Primary', visible: true, text: 'Yes', font_size: null,
+      font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+      background: '#05264d', bold: false, underline: false, icon: ''}
+    type: Button
+    layout_properties: {grid_position: 'ZRUQLM,TDXXXS'}
+    event_bindings: {click: button_1_1_click}
+  - name: button_2_1
+    properties: {role: null, align: full, tooltip: '', border: '', enabled: true,
+      foreground: 'theme:On Primary', visible: true, text: 'No', font_size: null,
+      font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+      background: '#05264d', bold: false, underline: false, icon: ''}
+    type: Button
+    layout_properties: {grid_position: 'ZRUQLM,GRFUGM'}
+    event_bindings: {click: button_2_1_click}
+- name: spacer_1
+  properties: {height: 47.444427490234375}
+  type: Spacer
+  layout_properties: {grid_position: 'HTDUMA,GATXTR'}
 - type: Label
   properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
     text: Do you have any other loan against your name (Yes / No), font_size: null,
@@ -42,32 +63,89 @@ components:
     background: '', bold: true, underline: false, icon: ''}
   name: label_4
   layout_properties: {grid_position: 'UIVKKU,OBRPNO'}
-- type: TextBox
-  properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: '',
-    border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
-    font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
-    background: 'theme:On Primary', bold: false, underline: false}
-  name: text_box_2
-  layout_properties: {grid_position: 'UIVKKU,ELQSDV'}
+- name: column_panel_1_copy
+  properties: {}
+  type: ColumnPanel
+  layout_properties: {grid_position: 'UIVKKU,QTMSDK'}
+  components:
+  - name: button_1_3
+    properties: {role: null, align: full, tooltip: '', border: '', enabled: true,
+      foreground: 'theme:On Primary', visible: true, text: 'Yes', font_size: null,
+      font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+      background: '#05264d', bold: false, underline: false, icon: ''}
+    type: Button
+    layout_properties: {grid_position: 'ZRUQLM,TDXXXS'}
+    event_bindings: {click: button_1_3_click}
+  - name: button_2_2
+    properties: {role: null, align: full, tooltip: '', border: '', enabled: true,
+      foreground: 'theme:On Primary', visible: true, text: 'No', font_size: null,
+      font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+      background: '#05264d', bold: false, underline: false, icon: ''}
+    type: Button
+    layout_properties: {grid_position: 'ZRUQLM,GRFUGM'}
+    event_bindings: {click: button_2_2_click}
+- name: spacer_1_copy
+  properties: {height: 47.444427490234375}
+  type: Spacer
+  layout_properties: {grid_position: 'UIVKKU,CUFRRJ'}
 - type: Label
   properties: {text: Do you have any Personal Credit Card Loans, bold: true}
   name: label_5
-  layout_properties: {grid_position: 'DUWVVE,QDYNZE VSRXJK,FVTIEF'}
+  layout_properties: {grid_position: 'VSRXJK,FVTIEF'}
+- name: column_panel_1_copy_2
+  properties: {}
+  type: ColumnPanel
+  layout_properties: {grid_position: 'VSRXJK,DAQOHY'}
+  components:
+  - name: button_1_5
+    properties: {role: null, align: full, tooltip: '', border: '', enabled: true,
+      foreground: 'theme:On Primary', visible: true, text: 'Yes', font_size: null,
+      font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+      background: '#05264d', bold: false, underline: false, icon: ''}
+    type: Button
+    layout_properties: {grid_position: 'ZRUQLM,TDXXXS'}
+    event_bindings: {click: button_1_5_click}
+  - name: button_2_3
+    properties: {role: null, align: full, tooltip: '', border: '', enabled: true,
+      foreground: 'theme:On Primary', visible: true, text: 'No', font_size: null,
+      font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+      background: '#05264d', bold: false, underline: false, icon: ''}
+    type: Button
+    layout_properties: {grid_position: 'ZRUQLM,GRFUGM'}
+    event_bindings: {click: button_2_3_click}
+- name: spacer_1_copy_2
+  properties: {height: 47.444427490234375}
+  type: Spacer
+  layout_properties: {grid_position: 'VSRXJK,EJBKNI'}
 - type: Label
   properties: {text: Do you have any Two Wheeler / Four Wheeler Loans, bold: true}
   name: label_6
-  layout_properties: {grid_position: 'DUWVVE,QDYNZE YWFQGY,SXLOWH'}
-- type: TextBox
-  properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: '',
-    border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
-    font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
-    background: 'theme:On Primary', bold: false, underline: false}
-  name: text_box_4
-  layout_properties: {grid_position: 'DUWVVE,WQYWCH GUJVRD,FUPLZI'}
-- type: TextBox
-  properties: {background: 'theme:On Primary'}
-  name: text_box_5
-  layout_properties: {grid_position: 'DUWVVE,WQYWCH ZFRZZH,SXTTBW'}
+  layout_properties: {grid_position: 'YWFQGY,SXLOWH'}
+- name: column_panel_1_copy_2_copy
+  properties: {}
+  type: ColumnPanel
+  layout_properties: {grid_position: 'YWFQGY,OWNOTI'}
+  components:
+  - name: button_1_7
+    properties: {role: null, align: full, tooltip: '', border: '', enabled: true,
+      foreground: 'theme:On Primary', visible: true, text: 'Yes', font_size: null,
+      font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+      background: '#05264d', bold: false, underline: false, icon: ''}
+    type: Button
+    layout_properties: {grid_position: 'ZRUQLM,TDXXXS'}
+    event_bindings: {click: button_1_7_click}
+  - name: button_2_4
+    properties: {role: null, align: full, tooltip: '', border: '', enabled: true,
+      foreground: 'theme:On Primary', visible: true, text: 'No', font_size: null,
+      font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+      background: '#05264d', bold: false, underline: false, icon: ''}
+    type: Button
+    layout_properties: {grid_position: 'ZRUQLM,GRFUGM'}
+    event_bindings: {click: button_2_4_click}
+- name: spacer_1_copy_2_copy
+  properties: {height: 47.444427490234375}
+  type: Spacer
+  layout_properties: {grid_position: 'YWFQGY,PBTZJD'}
 - type: Button
   properties: {role: elevated-button, align: right, tooltip: '', border: '', enabled: true,
     foreground: 'theme:On Primary', visible: true, text: Prev, font_size: null, font: '',
@@ -84,4 +162,26 @@ components:
   name: button_2
   layout_properties: {grid_position: 'WAMCJC,XEHGKC'}
   event_bindings: {click: button_2_click}
+- name: text_box_1
+  properties: {background: 'theme:On Primary', hide_text: false, visible: false}
+  type: TextBox
+  layout_properties: {grid_position: 'NBGXQW,PHKDFT'}
+- type: TextBox
+  properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: '',
+    border: '', enabled: true, foreground: '', visible: false, text: '', font_size: null,
+    font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
+    background: 'theme:On Primary', bold: false, underline: false}
+  name: text_box_2
+  layout_properties: {grid_position: 'BXWZJL,FYGSTX'}
+- type: TextBox
+  properties: {background: 'theme:On Primary', visible: false}
+  name: text_box_5
+  layout_properties: {grid_position: 'OOGTOQ,QVZTMM'}
+- type: TextBox
+  properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: '',
+    border: '', enabled: true, foreground: '', visible: false, text: '', font_size: null,
+    font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
+    background: 'theme:On Primary', bold: false, underline: false}
+  name: text_box_4
+  layout_properties: {grid_position: 'IWXFCB,WSVGVC'}
 is_package: true
