@@ -308,6 +308,20 @@ db_schema:
       admin_ui: {width: 200, order: 0}
       type: string
     title: fin_borrower_account_type
+  fin_membership:
+    title: fin_membership
+    client: full
+    server: full
+    columns:
+    - name: membership_type
+      admin_ui: {width: 200}
+      type: string
+    - name: min_amount
+      admin_ui: {width: 200}
+      type: number
+    - name: max_amount
+      admin_ui: {width: 200}
+      type: number
   fin_borrower_qualification:
     title: fin_borrower_qualification
     client: full
