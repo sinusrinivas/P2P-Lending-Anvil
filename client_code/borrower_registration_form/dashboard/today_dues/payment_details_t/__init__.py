@@ -78,6 +78,8 @@ class payment_details_t(payment_details_tTemplate):
           )
           scheduled_payment_made = emi_row['scheduled_payment_made'] if emi_row else None
           account_number = emi_row['account_number'] if emi_row else None
+          additional_fee = emi_row['extra_fee'] if emi_row else None
+          extra_payment += additional_fee or 0
   
           # Determine display values for EMIDate and AccountNumber
           scheduled_payment_made_display = f"{scheduled_payment_made:%Y-%m-%d}" if scheduled_payment_made else "N/A"
@@ -96,6 +98,8 @@ class payment_details_t(payment_details_tTemplate):
             # If foreclosed, set beginning balance and ending balance to the total amount in the foreclosure table
             foreclosure_amount = foreclosure_row['foreclose_amount']
             beginning_balance = foreclosure_row['total_due_amount']
+            additional_fee = additional_fee or 0
+            foreclosure_amount += additional_fee
             ending_balance = 0
             principal_amount = beginning_balance - interest_amount
             # Add the foreclosure details to payment details
@@ -109,7 +113,7 @@ class payment_details_t(payment_details_tTemplate):
                 'Principal': f"₹ {principal_amount:.2f}",
                 'Interest': f"₹ {interest_amount:.2f}",
                 'BeginningBalance': f"₹ {beginning_balance+ foreclosure_amount :.2f}",
-                'ExtraPayment': f"₹ {foreclosure_amount:.2f}",
+                'ExtraPayment': f"₹ {foreclosure_amount :.2f}",
                 'TotalPayment': f"₹ {beginning_balance + foreclosure_amount:.2f}",
                 'EndingBalance': "₹ 0.00",
                 'ProcessingFee': f"₹ {processing_fee_per_month:.2f}",
@@ -171,22 +175,21 @@ class payment_details_t(payment_details_tTemplate):
                   processing_fee_per_month = selected_row['total_processing_fee_amount']
           else:
               processing_fee_per_month = 0
-            
-          account_number_display = account_number_display
-        
-          emi_row_remaining = app_tables.fin_emi_table.search(
+                    
+          emi_row_remaining = app_tables.fin_emi_table.get(
               loan_id=selected_row['loan_id'],
+              emi_number=q.greater_than(num_payments)
           )
-          latest_scheduled_payment = None
-          for row in emi_row_remaining:
-              if row['emi_number'] > num_payments:
-                  # This payment is within the remaining months
-                  if row['scheduled_payment_made'] is not None:
-                      if latest_scheduled_payment is None or row['scheduled_payment_made'] > latest_scheduled_payment:
-                          latest_scheduled_payment = row['scheduled_payment_made']
-          if latest_scheduled_payment:
-              scheduled_payment_made_display = f"{latest_scheduled_payment:%Y-%m-%d}"
-              emi_time_display = f"{latest_scheduled_payment:%I:%M %p}"
+
+          date = emi_row_remaining['scheduled_payment_made'] if emi_row_remaining else None
+         # if date is not None:
+          scheduled_payment_made_display = f"{date:%Y-%m-%d}" if date else "N/A"
+          emi_time_display = f"{date:%I:%M %p}" if date else "N/A"
+
+          extra_fee = emi_row_remaining['extra_fee'] if emi_row_remaining else 0
+          extra_payment += extra_fee or 0
+
+          account_number_display = emi_row_remaining['account_number']  if emi_row_remaining else   "N/A"
         
           loan_updated_status = selected_row['loan_updated_status'].lower() if selected_row['loan_updated_status'] else None
           # Checking if loan_updated_status is 'close' before proceeding with date manipulation
