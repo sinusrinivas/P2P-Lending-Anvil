@@ -131,31 +131,11 @@ class manage_membership(manage_membershipTemplate):
         max_amount = int(self.text_box_2.text)
     elif membership_type == 'Gold':
         min_amount = int(self.text_box_3.text)
-        new_max_amount = int(self.text_box_4.text)
-        # Calculate Gold max_amount based on Silver min_amount
-        silver_row = app_tables.fin_membership.get(membership_type='Silver')
-        if silver_row is not None:
-            max_amount = new_max_amount - silver_row['max_amount']
-            # Ensure max_amount is not less than Silver max_amount
-            if max_amount < silver_row['max_amount']:
-                max_amount = silver_row['max_amount']
-            # Adjust Platinum min_amount if necessary
-            platinum_row = app_tables.fin_membership.get(membership_type='Platinum')
-            if platinum_row is not None and platinum_row['min_amount'] <= new_max_amount:
-                platinum_row.update(min_amount=new_max_amount + 1)
+        max_amount = int(self.text_box_4.text)
     elif membership_type == 'Platinum':
         min_amount = int(self.text_box_5.text)
-        new_max_amount = int(self.text_box_6.text)
-        # Calculate Platinum max_amount based on Gold min_amount
-        gold_row = app_tables.fin_membership.get(membership_type='Gold')
-        if gold_row is not None:
-            max_amount = new_max_amount - gold_row['max_amount']
-            # Ensure max_amount is not less than Gold max_amount
-            if max_amount < gold_row['max_amount']:
-                max_amount = gold_row['max_amount']
+        max_amount = int(self.text_box_6.text)
 
-    print("Min Amount:", min_amount)
-    print("Max Amount:", max_amount)
 
     print("Min Amount:", min_amount)
     print("Max Amount:", max_amount)
@@ -185,9 +165,7 @@ class manage_membership(manage_membershipTemplate):
         platinum_row = app_tables.fin_membership.get(membership_type='Platinum')
         if platinum_row is not None and max_amount >= platinum_row['min_amount']:
             # Increase Platinum min_amount by 1
-            platinum_row.update(min_amount=max_amount + 1)
-    
-    
+            platinum_row.update(min_amount=max_amount + 1)    
     
     # Alert message after saving
     alert("Saved successfully!", title="Success")
@@ -217,8 +195,6 @@ class manage_membership(manage_membershipTemplate):
   def button_2_click(self, **event_args):
     """This method is called when the button is clicked"""
     self.save_membership('Silver')
-    # self.save_membership('Gold')
-    # self.save_membership('Platinum')
     open_form('admin.dashboard.manage_settings.manage_membership')
 
 # # from ._anvil_designer import manage_membershipTemplate
@@ -429,59 +405,3 @@ class manage_membership(manage_membershipTemplate):
 
 
 
-# from ._anvil_designer import manage_membershipTemplate
-# from anvil import *
-# import anvil.server
-# import anvil.users
-# import anvil.tables as tables
-# import anvil.tables.query as q
-# from anvil.tables import app_tables
-
-# class manage_membership(manage_membershipTemplate):
-#     def __init__(self, **properties):
-#         self.init_components(**properties)
-#         self.load_membership_data()
-
-#     def load_membership_data(self):
-#         # Load existing membership data or initialize with default values
-#         self.membership_data = {
-#             'Silver': {'min_amount': 0, 'max_amount': 0},
-#             'Gold': {'min_amount': 0, 'max_amount': 0},
-#             'Platinum': {'min_amount': 0, 'max_amount': 0}
-#         }
-
-#         for membership_type, data in self.membership_data.items():
-#             row = app_tables.fin_membership.get(membership_type=membership_type)
-#             if row is not None:
-#                 self.membership_data[membership_type]['min_amount'] = row['min_amount']
-#                 self.membership_data[membership_type]['max_amount'] = row['max_amount']
-
-#         self.populate_text_boxes()
-
-#     def populate_text_boxes(self):
-#         # Populate text boxes with membership data
-#         for membership_type, data in self.membership_data.items():
-#             getattr(self, f'{membership_type.lower()}text_box_1').text = str(data['min_amount'])
-#             getattr(self, f'{membership_type.lower()}text_box_2').text = str(data['max_amount'])
-
-#     def edit_membership(self):
-#         # Enable text boxes for editing
-#         for membership_type in self.membership_data:
-#             getattr(self, f'{membership_type.lower()}text_box_1').enabled = True
-#             getattr(self, f'{membership_type.lower()}text_box_1').enabled = True
-
-#     def save_membership(self):
-#         # Save edited membership data to the table
-#         for membership_type in self.membership_data:
-#             min_amount = int(getattr(self, f'{membership_type.lower()}_min_textbox').text)
-#             max_amount = int(getattr(self, f'{membership_type.lower()}_max_textbox').text)
-#             app_tables.fin_membership.upsert_row(membership_type=membership_type, min_amount=min_amount, max_amount=max_amount)
-        
-#         alert("Membership data saved successfully!", title="Success")
-#         self.load_membership_data()
-
-#     def button_edit_click(self, **event_args):
-#         self.edit_membership()
-
-#     def button_save_click(self, **event_args):
-#         self.save_membership()
