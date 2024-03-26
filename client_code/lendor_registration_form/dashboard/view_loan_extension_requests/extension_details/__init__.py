@@ -43,6 +43,11 @@ class extension_details(extension_detailsTemplate):
         # Save changes to the table
         self.selected_row.update()
         Notification("Borrower will get notified").show()
+
+        self.update_extension_status('approved')
+
+        loan = app_tables.fin_loan_details.get(loan_id=self.selected_row['loan_id'])
+        loan['loan_updated_status'] = "extension"
         open_form("lendor_registration_form.dashboard.view_loan_extension_requests")
 
     def decline_click(self, **event_args):
@@ -51,6 +56,13 @@ class extension_details(extension_detailsTemplate):
         self.selected_row.update()
         Notification("Borrower will get notified").show()
         open_form("lendor_registration_form.dashboard.view_loan_extension_requests")
+
+    def update_extension_status(self, new_status):
+        """Update the status in the fin_foreclosure table"""
+        foreclosure_row = app_tables.fin_extends_loan.get(loan_id=self.selected_row['loan_id'])
+        if foreclosure_row is not None:
+            foreclosure_row['status'] = new_status
+            foreclosure_row.update()
 
     def button_1_click(self, **event_args):
         """This method is called when the button is clicked"""
