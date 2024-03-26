@@ -101,13 +101,13 @@ components:
     - {property: text, code: 'self.item[''Scheduled_date'']'}
   - type: Label
     properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-      visible: true, text: Days Passed Due Date, font_size: null, font: '', spacing_above: small,
+      visible: false, text: Days Passed Due Date, font_size: null, font: '', spacing_above: small,
       icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
       underline: false, icon: ''}
     name: label_2
     layout_properties: {x: 12.142868041992188, y: 247.98214721679688, width: 160}
   - type: Label
-    properties: {}
+    properties: {visible: false}
     name: label_4
     layout_properties: {x: 719.6964874267578, y: 247.98214721679688, width: 160}
     data_bindings:
