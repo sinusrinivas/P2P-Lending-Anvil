@@ -33,6 +33,12 @@ class foreclose_details(foreclose_detailsTemplate):
         # Save changes to the table
         self.selected_row.update()
         Notification("Borrower will get notified").show()
+
+        # Update status in the fin_foreclosure table
+        self.update_foreclosure_status('approved')
+
+        loan = app_tables.fin_loan_details.get(loan_id=self.selected_row['loan_id'])
+        loan['loan_updated_status'] = "foreclosure"
         open_form("lendor_registration_form.dashboard.view_loan_foreclosure_Requests")
 
     def decline_click(self, **event_args):
@@ -42,3 +48,9 @@ class foreclose_details(foreclose_detailsTemplate):
         Notification("Borrower will get notified").show()
         open_form("lendor_registration_form.dashboard.view_loan_foreclosure_Requests")
       
+    def update_foreclosure_status(self, new_status):
+        """Update the status in the fin_foreclosure table"""
+        foreclosure_row = app_tables.fin_foreclosure.get(loan_id=self.selected_row['loan_id'])
+        if foreclosure_row is not None:
+            foreclosure_row['status'] = new_status
+            foreclosure_row.update()
