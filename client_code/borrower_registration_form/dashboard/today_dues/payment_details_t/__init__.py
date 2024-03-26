@@ -186,9 +186,14 @@ class payment_details_t(payment_details_tTemplate):
                   if row['scheduled_payment_made'] is not None:
                       if latest_scheduled_payment is None or row['scheduled_payment_made'] > latest_scheduled_payment:
                           latest_scheduled_payment = row['scheduled_payment_made']
+
+                  if row['extra_fee'] is not None:
+                    extra_fee = row['extra_fee']
           if latest_scheduled_payment:
               scheduled_payment_made_display = f"{latest_scheduled_payment:%Y-%m-%d}"
               emi_time_display = f"{latest_scheduled_payment:%I:%M %p}"
+
+          extra_payment += extra_fee
         
           loan_updated_status = selected_row['loan_updated_status'].lower() if selected_row['loan_updated_status'] else None
           # Checking if loan_updated_status is 'close' before proceeding with date manipulation
