@@ -55,6 +55,7 @@ class check_out(check_outTemplate):
             # Fetch the lapsed fee from product details table
             product_id = selected_row['product_id']
             lapsed_fee = app_tables.fin_product_details.get(product_id=product_id)['lapsed_fee']
+            self.update_total_emi_amount(total_emi)
             total_emi += lapsed_fee
             self.lapsed.text = "{:.2f}".format(lapsed_fee)
             self.lapsed.visible = True
@@ -74,6 +75,7 @@ class check_out(check_outTemplate):
             default_fee = app_tables.fin_product_details.get(product_id=product_id)['default_fee']
             total_default_fee = days_difference * default_fee
             # Multiply the remaining days with the default fee and add to the total EMI
+            self.update_total_emi_amount(total_emi)
             total_emi += total_default_fee
             self.default.text = "{:.2f}".format(total_default_fee)
             self.default.visible = True
