@@ -42,9 +42,9 @@ class payment_details_t(payment_details_tTemplate):
           # Call the appropriate calculation method based on emi_payment_type
           if selected_row['emi_payment_type'] == 'Monthly':
               emi, interest_amount, ending_balance, ending_loan_amount_balance,processing_fee_per_month = self.calculate_monthly_emi_and_balance(selected_row, month)
-          elif selected_row['emi_payment_type'] == 'Three Month':
+          elif selected_row['emi_payment_type'] == 'Three Months':
               emi, interest_amount, ending_balance, ending_loan_amount_balance,processing_fee_per_month = self.calculate_three_month_emi_and_balance(selected_row, month)
-          elif selected_row['emi_payment_type'] == 'Six Month':
+          elif selected_row['emi_payment_type'] == 'Six Months':
               emi, interest_amount, ending_balance, ending_loan_amount_balance,processing_fee_per_month = self.calculate_six_month_emi_and_balance(selected_row, month)
           elif selected_row['emi_payment_type'] == 'One Time':
               emi, interest_amount, ending_balance, ending_loan_amount_balance,processing_fee_per_month = self.calculate_one_time_emi_and_balance(selected_row, month)
@@ -148,7 +148,7 @@ class payment_details_t(payment_details_tTemplate):
 
     
 # Check if there are remaining months
-      if remaining_months and selected_row['emi_payment_type'] in ['Three Month', 'Six Month']:
+      if remaining_months and selected_row['emi_payment_type'] in ['Three Months', 'Six Months']:
           # Calculate EMI for the remaining month(s)
           remaining_emi = self.calculate_emi_1(beginning_balance, remaining_months,selected_row['interest_rate'])
           
@@ -193,10 +193,10 @@ class payment_details_t(payment_details_tTemplate):
           if loan_updated_status in ['close', 'closed loans', 'disbursed loan', 'foreclosure']:
               formatted_payment_date_datetime = datetime.strptime(formatted_payment_date, '%Y-%m-%d')
           
-              if selected_row['emi_payment_type'] == 'Three Month':
+              if selected_row['emi_payment_type'] == 'Three Months':
                   # For 'Three Month', add 90 days and update to the next boundary
                   payment_date = formatted_payment_date_datetime + timedelta(days=90)
-              elif selected_row['emi_payment_type'] == 'Six Month':
+              elif selected_row['emi_payment_type'] == 'Six Months':
                   # For 'Six Month', add 180 days
                   payment_date = formatted_payment_date_datetime + timedelta(days=180)
               else:
@@ -267,10 +267,10 @@ class payment_details_t(payment_details_tTemplate):
                     elif emi_payment_type == 'One Time':
                         # Payment date is set for the first month only
                         payment_date = loan_disbursed_timestamp + timedelta(days=30)  # Assuming 30 days per month
-                    elif emi_payment_type == 'Three Month':
+                    elif emi_payment_type == 'Three Months':
                         # Add 3 months to the loan disbursal date
                         payment_date = loan_disbursed_timestamp + timedelta(days=current_month * 90)
-                    elif emi_payment_type == 'Six Month':
+                    elif emi_payment_type == 'Six Months':
                         # Add 6 months to the loan disbursal date
                         payment_date = loan_disbursed_timestamp + timedelta(days=current_month * 180)
                     else:
@@ -386,10 +386,10 @@ class payment_details_t(payment_details_tTemplate):
           return 1
       elif payment_type == 'Monthly':
           return tenure + self.calculate_extension_months(selected_row)
-      elif payment_type == 'Three Month':
+      elif payment_type == 'Three Months':
           num_payments = tenure // 3
           return num_payments + self.calculate_extension_months(selected_row)
-      elif payment_type == 'Six Month':
+      elif payment_type == 'Six Months':
           num_payments = tenure // 6
           return num_payments + self.calculate_extension_months(selected_row)
       else:
@@ -449,10 +449,10 @@ class payment_details_t(payment_details_tTemplate):
           emi = (loan_amount * monthly_interest_rate * ((1 + monthly_interest_rate) ** total_tenure)) / (((1 + monthly_interest_rate) ** total_tenure) - 1)
       elif selected_row['emi_payment_type'] == 'One Time':
           emi = selected_row['total_repayment_amount']
-      elif selected_row['emi_payment_type'] == 'Three Month':
+      elif selected_row['emi_payment_type'] == 'Three Months':
           monthly_interest_rate = (selected_row['interest_rate'] / 100) / (12)  # Convert annual interest rate to monthly
           emi = (loan_amount * monthly_interest_rate * ((1 + monthly_interest_rate) ** (total_tenure ))) / (((1 + monthly_interest_rate) ** (total_tenure)) - 1)
-      elif selected_row['emi_payment_type'] == 'Six Month':
+      elif selected_row['emi_payment_type'] == 'Six Months':
           monthly_interest_rate = (selected_row['interest_rate'] / 100) / (12 )  # Corrected calculation for 6 months
           emi = (loan_amount * monthly_interest_rate * ((1 + monthly_interest_rate) ** (total_tenure ))) / (((1 + monthly_interest_rate) ** (total_tenure )) - 1)
       else:
