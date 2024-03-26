@@ -326,7 +326,7 @@ class manage_producs1(manage_producs1Template):
         interest_type = self.radio_button_1.text if self.radio_button_1.selected else self.radio_button_2.text
     
         foreclose_type = str(self.foreclose_type.selected_value)
-        foreclosure_fee = int(self.foreclosure_fee.text.strip()) if foreclose_type == "Eligible" else 0
+        foreclosure_fee = float(self.foreclosure_fee.text.strip()) if foreclose_type == "Eligible" else 0
         min_months = int(self.min_months.text.strip()) if foreclose_type == "Eligible" else 0
     
         extension_allowed = self.extension_allowed.selected_value
