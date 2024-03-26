@@ -22,7 +22,7 @@ class edit_profession(edit_professionTemplate):
     update = self.text_box_1.text
     valid_statuses = ['Student', 'Employee', 'Self Employment']
     if update not in valid_statuses:
-        alert("Please enter a valid marital status: 'Student', 'Employee', 'Self Employment'.")
+        alert("Please enter a valid marital status: 'Student', 'Employee', 'Self employment'.")
         return
         # Update the 'borrower_gender' field in the database
     self.selected_row['borrower_profession'] = update
