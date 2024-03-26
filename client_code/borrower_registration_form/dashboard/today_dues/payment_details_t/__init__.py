@@ -173,27 +173,35 @@ class payment_details_t(payment_details_tTemplate):
                   processing_fee_per_month = selected_row['total_processing_fee_amount']
           else:
               processing_fee_per_month = 0
-            
-          account_number_display = account_number_display
-        
-          emi_row_remaining = app_tables.fin_emi_table.search(
+                    
+          emi_row_remaining = app_tables.fin_emi_table.get(
               loan_id=selected_row['loan_id'],
+              emi_number=q.greater_than(num_payments)
           )
-          latest_scheduled_payment = None
-          for row in emi_row_remaining:
-              if row['emi_number'] > num_payments:
-                  # This payment is within the remaining months
-                  if row['scheduled_payment_made'] is not None:
-                      if latest_scheduled_payment is None or row['scheduled_payment_made'] > latest_scheduled_payment:
-                          latest_scheduled_payment = row['scheduled_payment_made']
+          # latest_scheduled_payment = None
+          # for row in emi_row_remaining:
+          #     if row['emi_number'] > num_payments:
+          #         # This payment is within the remaining months
+          #         if row['scheduled_payment_made'] is not None:
+          #             if latest_scheduled_payment is None or row['scheduled_payment_made'] > latest_scheduled_payment:
+          #                 latest_scheduled_payment = row['scheduled_payment_made']
 
-                  if row['extra_fee'] is not None:
-                    extra_fee = row['extra_fee']
-          if latest_scheduled_payment:
-              scheduled_payment_made_display = f"{latest_scheduled_payment:%Y-%m-%d}"
-              emi_time_display = f"{latest_scheduled_payment:%I:%M %p}"
+          #         if row['extra_fee'] is not None:
+          #           extra_fee = row['extra_fee']
+          # if latest_scheduled_payment:
+          #     scheduled_payment_made_display = f"{latest_scheduled_payment:%Y-%m-%d}"
+          #     emi_time_display = f"{latest_scheduled_payment:%I:%M %p}"
 
-          extra_payment += extra_fee
+          # extra_payment += extra_fee
+          latest_scheduled_payment = emi_row_remaining['scheduled_payment_made'] if emi_row_remaining else None
+          if latest_scheduled_payment is not None:
+            scheduled_payment_made_display = f"{latest_scheduled_payment:%Y-%m-%d}"
+            emi_time_display = f"{latest_scheduled_payment:%I:%M %p}"
+
+          extra_fee = emi_row_remaining['extra_fee'] if emi_row_remaining else 0
+          extra_payment += extra_fee or 0
+
+          account_number_display = emi_row_remaining['account_number']  if emi_row_remaining else   "N/A"
         
           loan_updated_status = selected_row['loan_updated_status'].lower() if selected_row['loan_updated_status'] else None
           # Checking if loan_updated_status is 'close' before proceeding with date manipulation
