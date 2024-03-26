@@ -98,6 +98,8 @@ class payment_details_t(payment_details_tTemplate):
             # If foreclosed, set beginning balance and ending balance to the total amount in the foreclosure table
             foreclosure_amount = foreclosure_row['foreclose_amount']
             beginning_balance = foreclosure_row['total_due_amount']
+            additional_fee = additional_fee or 0
+            foreclosure_amount += additional_fee
             ending_balance = 0
             principal_amount = beginning_balance - interest_amount
             # Add the foreclosure details to payment details
@@ -111,7 +113,7 @@ class payment_details_t(payment_details_tTemplate):
                 'Principal': f"₹ {principal_amount:.2f}",
                 'Interest': f"₹ {interest_amount:.2f}",
                 'BeginningBalance': f"₹ {beginning_balance+ foreclosure_amount :.2f}",
-                'ExtraPayment': f"₹ {foreclosure_amount + additional_fee:.2f}",
+                'ExtraPayment': f"₹ {foreclosure_amount :.2f}",
                 'TotalPayment': f"₹ {beginning_balance + foreclosure_amount:.2f}",
                 'EndingBalance': "₹ 0.00",
                 'ProcessingFee': f"₹ {processing_fee_per_month:.2f}",
@@ -178,25 +180,11 @@ class payment_details_t(payment_details_tTemplate):
               loan_id=selected_row['loan_id'],
               emi_number=q.greater_than(num_payments)
           )
-          # latest_scheduled_payment = None
-          # for row in emi_row_remaining:
-          #     if row['emi_number'] > num_payments:
-          #         # This payment is within the remaining months
-          #         if row['scheduled_payment_made'] is not None:
-          #             if latest_scheduled_payment is None or row['scheduled_payment_made'] > latest_scheduled_payment:
-          #                 latest_scheduled_payment = row['scheduled_payment_made']
 
-          #         if row['extra_fee'] is not None:
-          #           extra_fee = row['extra_fee']
-          # if latest_scheduled_payment:
-          #     scheduled_payment_made_display = f"{latest_scheduled_payment:%Y-%m-%d}"
-          #     emi_time_display = f"{latest_scheduled_payment:%I:%M %p}"
-
-          # extra_payment += extra_fee
-          latest_scheduled_payment = emi_row_remaining['scheduled_payment_made'] if emi_row_remaining else None
-          if latest_scheduled_payment is not None:
-            scheduled_payment_made_display = f"{latest_scheduled_payment:%Y-%m-%d}"
-            emi_time_display = f"{latest_scheduled_payment:%I:%M %p}"
+          date = emi_row_remaining['scheduled_payment_made'] if emi_row_remaining else None
+         # if date is not None:
+          scheduled_payment_made_display = f"{date:%Y-%m-%d}" if date else "N/A"
+          emi_time_display = f"{date:%I:%M %p}" if date else "N/A"
 
           extra_fee = emi_row_remaining['extra_fee'] if emi_row_remaining else 0
           extra_payment += extra_fee or 0
