@@ -1,6 +1,6 @@
 container:
   type: ColumnPanel
-  properties: {col_widths: '{}'}
+  properties: {col_widths: '{"CSGRZU":30,"FRNBWU":20,"GATXTR":10}'}
 components:
 - name: image_1_copy_1_copy_1_copy_1
   properties: {role: null, vertical_align: center, height: 48, tooltip: '', border: '',
@@ -31,10 +31,31 @@ components:
     bold: true, underline: false, icon: ''}
   name: label_3
   layout_properties: {grid_position: 'HTDUMA,CSGRZU'}
-- name: text_box_1
-  properties: {background: 'theme:On Primary', hide_text: false}
-  type: TextBox
-  layout_properties: {grid_position: 'HTDUMA,OFKZLP'}
+- name: column_panel_1
+  properties: {}
+  type: ColumnPanel
+  layout_properties: {grid_position: 'HTDUMA,FRNBWU'}
+  components:
+  - name: button_1_1
+    properties: {role: null, align: full, tooltip: '', border: '', enabled: true,
+      foreground: 'theme:On Primary', visible: true, text: 'Yes', font_size: null,
+      font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+      background: '#05264d', bold: false, underline: false, icon: ''}
+    type: Button
+    layout_properties: {grid_position: 'ZRUQLM,TDXXXS'}
+    event_bindings: {click: button_1_1_click}
+  - name: button_1_2
+    properties: {role: null, align: full, tooltip: '', border: '', enabled: true,
+      foreground: 'theme:On Primary', visible: true, text: 'No', font_size: null,
+      font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+      background: '#05264d', bold: false, underline: false, icon: ''}
+    type: Button
+    layout_properties: {grid_position: 'ZRUQLM,GRFUGM'}
+    event_bindings: {click: button_1_1_click}
+- name: spacer_1
+  properties: {height: 47.444427490234375}
+  type: Spacer
+  layout_properties: {grid_position: 'HTDUMA,GATXTR'}
 - type: Label
   properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
     text: Do you have any other loan against your name (Yes / No), font_size: null,
@@ -84,12 +105,8 @@ components:
   name: button_2
   layout_properties: {grid_position: 'WAMCJC,XEHGKC'}
   event_bindings: {click: button_2_click}
-- name: button_1_1
-  properties: {role: null, align: full, tooltip: '', border: '', enabled: true, foreground: 'theme:On
-      Primary', visible: true, text: One Time, font_size: null, font: '', spacing_above: small,
-    icon_align: left, spacing_below: small, italic: false, background: '#05264d',
-    bold: false, underline: false, icon: ''}
-  type: Button
-  layout_properties: {grid_position: 'WAMCJC,UOBGOG'}
-  event_bindings: {click: button_1_1_click}
+- name: text_box_1
+  properties: {background: 'theme:On Primary', hide_text: false}
+  type: TextBox
+  layout_properties: {grid_position: 'NBGXQW,PHKDFT'}
 is_package: true
