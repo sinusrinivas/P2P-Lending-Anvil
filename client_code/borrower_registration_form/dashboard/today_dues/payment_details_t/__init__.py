@@ -79,7 +79,7 @@ class payment_details_t(payment_details_tTemplate):
           scheduled_payment_made = emi_row['scheduled_payment_made'] if emi_row else None
           account_number = emi_row['account_number'] if emi_row else None
           additional_fee = emi_row['extra_fee'] if emi_row else None
-          extra_payment += additional_fee or 
+          extra_payment += additional_fee or 0
   
           # Determine display values for EMIDate and AccountNumber
           scheduled_payment_made_display = f"{scheduled_payment_made:%Y-%m-%d}" if scheduled_payment_made else "N/A"
@@ -111,7 +111,7 @@ class payment_details_t(payment_details_tTemplate):
                 'Principal': f"₹ {principal_amount:.2f}",
                 'Interest': f"₹ {interest_amount:.2f}",
                 'BeginningBalance': f"₹ {beginning_balance+ foreclosure_amount :.2f}",
-                'ExtraPayment': f"₹ {foreclosure_amount:.2f}",
+                'ExtraPayment': f"₹ {foreclosure_amount + additional_fee:.2f}",
                 'TotalPayment': f"₹ {beginning_balance + foreclosure_amount:.2f}",
                 'EndingBalance': "₹ 0.00",
                 'ProcessingFee': f"₹ {processing_fee_per_month:.2f}",
