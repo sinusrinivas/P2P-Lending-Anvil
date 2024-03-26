@@ -298,15 +298,15 @@ class manage_producs1(manage_producs1Template):
             return
         # Retrieve and validate input values
         try:
-            processing_fee = int(self.text_box_3.text.strip())
-            min_amount = int(self.min_amount.text.strip())
-            max_amount = int(self.max_amount.text.strip())
-            min_tenure = int(self.min_tenure.text.strip())
-            max_tenure = int(self.max_tenure.text.strip())
-            roi = int(self.text_box_5.text.strip())
-            lapsed_fee = int(self.lapsed_fee.text.strip())
-            default_fee = int(self.default_fee.text.strip())
-            npa = int(self.npa.text.strip())
+            processing_fee = float(self.text_box_3.text.strip())
+            min_amount = float(self.min_amount.text.strip())
+            max_amount = float(self.max_amount.text.strip())
+            min_tenure = float(self.min_tenure.text.strip())
+            max_tenure = float(self.max_tenure.text.strip())
+            roi = float(self.text_box_5.text.strip())
+            lapsed_fee = float(self.lapsed_fee.text.strip())
+            default_fee = float(self.default_fee.text.strip())
+            npa = float(self.npa.text.strip())
     
             # Validate non-negative values
             if processing_fee < 0 or min_amount < 0 or max_amount < 0 or min_tenure < 0 or max_tenure < 0 or roi < 0 or lapsed_fee < 0 or default_fee < 0 or npa < 0:
@@ -326,7 +326,7 @@ class manage_producs1(manage_producs1Template):
         interest_type = self.radio_button_1.text if self.radio_button_1.selected else self.radio_button_2.text
     
         foreclose_type = str(self.foreclose_type.selected_value)
-        foreclosure_fee = int(self.foreclosure_fee.text.strip()) if foreclose_type == "Eligible" else 0
+        foreclosure_fee = float(self.foreclosure_fee.text.strip()) if foreclose_type == "Eligible" else 0
         min_months = int(self.min_months.text.strip()) if foreclose_type == "Eligible" else 0
     
         extension_allowed = self.extension_allowed.selected_value
