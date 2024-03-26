@@ -73,13 +73,9 @@ class star_1_borrower_registration_form_4_loan(star_1_borrower_registration_form
             user_data.save()
 
     def set_loan_buttons_visibility(self, loan_type, selected_option):
-        button_indices = {'home_loan': (1, 2), 'other_loan': (3, 4), 'credit_card_loans': (5, 6), 'vehicle_loan': (7, 8)}
-        button_1, button_2 = button_indices[loan_type]
-        for i in range(button_1, button_2 + 1):
-            button = getattr(self, f'button_1_{i}')
-            button.visible = True
-            if button.text.lower() == selected_option:
-                button.visible = False
+        button_indices = {'home_loan': 0, 'other_loan': 1, 'credit_card_loans': 2, 'vehicle_loan': 3}
+        button_index = button_indices[loan_type]
+        self.select_button(button_index, selected_option)
 
     def button_1_click(self, loan_type, button_index, **event_args):
         selected_option = 'Yes' if button_index % 2 == 1 else 'No'
@@ -88,38 +84,46 @@ class star_1_borrower_registration_form_4_loan(star_1_borrower_registration_form
         open_form('borrower_registration_form.star_1_borrower_registration_form_5_bank_1', user_id=self.userId)
 
     def button_1_1_click(self, **event_args):
-        self.select_button(0)
+        self.select_button(0, 'Yes')
 
     def button_1_2_click(self, **event_args):
-        self.select_button(1)
+        self.select_button(0, 'No')
 
     def button_1_3_click(self, **event_args):
-        self.select_button(2)
+        self.select_button(1, 'Yes')
 
     def button_1_4_click(self, **event_args):
-        self.select_button(3)
+        self.select_button(1, 'No')
 
     def button_1_5_click(self, **event_args):
-        self.select_button(4)
+        self.select_button(2, 'Yes')
 
     def button_1_6_click(self, **event_args):
-        self.select_button(5)
+        self.select_button(2, 'No')
 
     def button_1_7_click(self, **event_args):
-        self.select_button(6)
+        self.select_button(3, 'Yes')
 
     def button_1_8_click(self, **event_args):
-        self.select_button(7)
+        self.select_button(3, 'No')
 
-    def select_button(self, button_index):
+    def select_button(self, button_index, selected_option):
         # Update background color of previously selected button
         if self.selected_button_index is not None:
-            prev_button = getattr(self, f'button_1_{self.selected_button_index + 1}')
-            prev_button.background = '#939191'
+            prev_button_1 = getattr(self, f'button_1_{self.selected_button_index * 2 + 1}')
+            prev_button_2 = getattr(self, f'button_1_{self.selected_button_index * 2 + 2}')
+            prev_button_1.background = '#939191'
+            prev_button_2.background = '#939191'
 
         # Update background color of newly selected button
-        button = getattr(self, f'button_1_{button_index + 1}')
-        button.background = '#0a2346'
+        button_1 = getattr(self, f'button_1_{button_index * 2 + 1}')
+        button_2 = getattr(self, f'button_1_{button_index * 2 + 2}')
+        if selected_option == 'Yes':
+            button_1.background = '#0a2346'
+            button_2.background = '#939191'
+        else:
+            button_1.background = '#939191'
+            button_2.background = '#0a2346'
 
         # Update selected button index
         self.selected_button_index = button_index
