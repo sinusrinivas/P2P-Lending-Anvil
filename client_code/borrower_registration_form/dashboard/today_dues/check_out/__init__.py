@@ -24,6 +24,7 @@ class check_out(check_outTemplate):
         tenure = selected_row['tenure'] + extension_months
         interest_rate = selected_row['interest_rate']
         emi_payment_type = selected_row['emi_payment_type']
+        total_interest_amount = selected_row['total_interest_amount']
   
         monthly_interest_rate = interest_rate / 12 / 100
         total_payments = tenure * 12
@@ -35,11 +36,11 @@ class check_out(check_outTemplate):
             # Calculate monthly EMI amount
             emi = (loan_amount * monthly_interest_rate * ((1 + monthly_interest_rate) ** tenure)) / (((1 + monthly_interest_rate) ** tenure) - 1)
             total_emi = emi + extension_amount  # Add extension amount to monthly EMI
-        elif emi_payment_type == 'Three Month':
+        elif emi_payment_type == 'Three Months':
             # Calculate EMI amount for 3 months
             emi = (loan_amount * monthly_interest_rate * (1 + monthly_interest_rate) ** 3) / ((1 + monthly_interest_rate) ** 3 - 1)
             total_emi = emi + extension_amount  # Add extension amount to 3-month EMI
-        elif emi_payment_type == 'Six Month':
+        elif emi_payment_type == 'Six Months':
             # Calculate EMI amount for 6 months
             emi = (loan_amount * monthly_interest_rate * (1 + monthly_interest_rate) ** 6) / ((1 + monthly_interest_rate) ** 6 - 1)
             total_emi = emi + extension_amount  # Add extension amount to 6-month EMI
@@ -47,10 +48,46 @@ class check_out(check_outTemplate):
             # Default to monthly calculation
             emi = (loan_amount * monthly_interest_rate * (1 + monthly_interest_rate) ** total_payments) / ((1 + monthly_interest_rate) ** total_payments - 1)
             total_emi = emi + extension_amount  # Add extension amount to monthly EMI
-  
+
+
+        loan_state_status = app_tables.fin_loan_details.get(loan_id=loan_id)['loan_state_status']
+        if loan_state_status == 'lapsed loan' and selected_row['days_left'] > 6:
+            # Fetch the lapsed fee from product details table
+            product_id = selected_row['product_id']
+            lapsed_fee = app_tables.fin_product_details.get(product_id=product_id)['lapsed_fee']
+            total_emi += lapsed_fee
+            self.lapsed.text = "{:.2f}".format(lapsed_fee)
+            self.lapsed.visible = True
+            self.label_5.visible = True
+            self.default.visible = False
+            self.label_9.visible = False
+        elif loan_state_status == 'default loan' and selected_row['days_left'] > 8:
+            # Calculate the number of days between today's date and the selected schedule payment date
+            days_left = selected_row['days_left']
+            days_difference = days_left - 8 #(selected_payment_date - date.today()).days
+            
+            # Subtract 8 from the days difference and ensure it's not negative
+            #remaining_days = max(days_difference - 8, 0)
+            
+            # Fetch the default fee from product details table
+            product_id = selected_row['product_id']
+            default_fee = app_tables.fin_product_details.get(product_id=product_id)['default_fee']
+            total_default_fee = days_difference * default_fee
+            # Multiply the remaining days with the default fee and add to the total EMI
+            total_emi += total_default_fee
+            self.default.text = "{:.2f}".format(total_default_fee)
+            self.default.visible = True
+            self.label_9.visible = True
+            self.lapsed.visible = False
+            self.label_5.visible = False
+
+
         # Display the calculated EMI amount in the EMI amount label
         self.emi_amount_label.text = "{:.2f}".format(emi)  # Show only the EMI amount without extension
-  
+        
+        self.update_total_emi_amount(total_emi)
+        self.total_emi_amount_label.visible = True
+
         # Update labels based on the presence of extension amount
         if extension_amount > 0:
             self.total_emi_amount_label.text = "{:.2f}".format(total_emi)
@@ -68,23 +105,42 @@ class check_out(check_outTemplate):
         # Update other labels
         self.loan_id_label.text = str(selected_row['loan_id'])
         self.loan_amount_label.text = str(loan_amount)
-        self.interest_label.text = str(interest_rate)
+        self.interest_label.text = str(total_interest_amount)
         self.tenure_label.text = str(tenure)
         self.account_no_label.text = str(selected_row['account_number'])
-  
+      
         # Display total EMI amount including extension amount
         self.update_total_emi_amount(total_emi)
-
+      
         foreclosure_details = self.get_foreclosure_details(loan_id, selected_row['emi_number'])
         if foreclosure_details is not None:
-          total_due_amount = foreclosure_details['total_due_amount']
-          foreclosure_amount = foreclosure_details['foreclose_amount']
-          #foreclosure_amount = foreclosure_details['foreclose_amount']
-          self.emi_amount_label.text = "{:.2f}".format(total_due_amount)
-          self.extension_amount_label.text =  "{:.2f}".format(foreclosure_amount)
-          self.total_emi_amount_label.text = "{:.2f}".format(total_due_amount + foreclosure_amount)
-          self.total_emi_amount_label.visible = True
-          self.label_3.visible = True
+            total_due_amount = foreclosure_details['total_due_amount']
+            foreclosure_amount = foreclosure_details['foreclose_amount']
+        
+            # Check if lapsed fee or default fee is applicable
+            loan_state_status = app_tables.fin_loan_details.get(loan_id=loan_id)['loan_state_status']
+            if loan_state_status == 'lapsed loan' and selected_row['days_left'] > 6:
+                # Fetch the lapsed fee from product details table
+                product_id = selected_row['product_id']
+                lapsed_fee = app_tables.fin_product_details.get(product_id=product_id)['lapsed_fee']
+                total_due_amount += lapsed_fee
+        
+            elif loan_state_status == 'default loan' and selected_row['days_left'] > 8:
+                # Calculate the number of days between today's date and the selected schedule payment date
+                days_left = selected_row['days_left']
+                days_difference = days_left - 8
+        
+                # Fetch the default fee from product details table
+                product_id = selected_row['product_id']
+                default_fee = app_tables.fin_product_details.get(product_id=product_id)['default_fee']
+                total_default_fee = days_difference * default_fee
+                total_due_amount += total_default_fee
+            # Update labels with foreclosure details
+            self.emi_amount_label.text = "{:.2f}".format(total_due_amount)
+            self.extension_amount_label.text = "{:.2f}".format(foreclosure_amount)
+            self.total_emi_amount_label.text = "{:.2f}".format(total_due_amount + foreclosure_amount)
+            self.total_emi_amount_label.visible = True
+            self.label_3.visible = True
 
     def get_extension_details(self, loan_id, emi_number):
         extension_row = app_tables.fin_extends_loan.get(
@@ -124,6 +180,17 @@ class check_out(check_outTemplate):
             return None  # or handle the case where the loan ID is not found
 
     def pay_now_click(self, **event_args):
+        try:
+            lapsed_fee = float(self.lapsed.text)
+        except ValueError:
+            lapsed_fee = 0.0  # Default value if conversion fails
+        
+        try:
+            default_fee = float(self.default.text)
+        except ValueError:
+            default_fee = 0.0
+        extra_fee = lapsed_fee + default_fee
+      
         total_emi_amount = float(self.total_emi_amount_label.text)  # Fetch total EMI amount including extra payment
         borrower_wallet = app_tables.fin_wallet.get(customer_id=self.user_id)
 
@@ -157,21 +224,18 @@ class check_out(check_outTemplate):
                     prev_scheduled_payment = self.selected_row['scheduled_payment']
                     prev_next_payment = self.selected_row['next_payment']
 
-                    # # Check if the current scheduled payment is the same as the first payment due date
-                    # is_first_payment_due_date = (prev_scheduled_payment == self.get_first_payment_due_date(loan_id=loan_id))
-
+                  
                     # Calculate next scheduled payment based on emi_payment_type
-                    if emi_payment_type in ['One Time', 'Monthly', 'Three Month', 'Six Month']:
+                    if emi_payment_type in ['One Time', 'Monthly', 'Three Months', 'Six Months']:
                         
                         if emi_payment_type == 'Monthly':
                             next_scheduled_payment = prev_scheduled_payment + timedelta(days=30)
                             next_next_payment = prev_next_payment + timedelta(days=30)
-                        elif emi_payment_type == 'Three Month':
+                        elif emi_payment_type == 'Three Months':
                             next_scheduled_payment = prev_scheduled_payment + timedelta(days=90)
                             next_next_payment = prev_next_payment + timedelta(days=90)
-                            # Reduce the scheduled payment by 3 months
-                            # next_scheduled_payment -= timedelta(days=90)
-                        elif emi_payment_type == 'Six Month':
+                     
+                        elif emi_payment_type == 'Six Months':
                             next_scheduled_payment = prev_scheduled_payment + timedelta(days=180)
                             next_next_payment = prev_next_payment + timedelta(days=180)
                         elif emi_payment_type == 'One Time':
@@ -191,7 +255,11 @@ class check_out(check_outTemplate):
                         scheduled_payment_made=datetime.now(),
                         scheduled_payment=next_scheduled_payment,
                         next_payment=next_next_payment,
-                        amount_paid= total_emi_amount
+                        amount_paid= total_emi_amount,
+                        extra_fee=extra_fee,
+                       
+                        
+                        
                     )
 
                     # Update the emi_number and next_payment in the selected_row
@@ -207,7 +275,7 @@ class check_out(check_outTemplate):
                     alert('Payment successfully done...')
                     open_form('borrower_registration_form.dashboard')
                 else:
-                    self.status_label.text = "Lender's wallet not found."
+                    alert( "Lender's wallet not found.")
             else:
                 alert("Insufficient funds in wallet. Please deposit more funds to continue.")
                 open_form('wallet.wallet')
