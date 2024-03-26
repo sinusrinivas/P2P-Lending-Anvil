@@ -149,7 +149,7 @@ class check_out(check_outTemplate):
             emi_number=q.less_than_or_equal_to(emi_number)
         )
         extension_months = 0
-        if extension_row is not None:
+        if extension_row is not None and extension_row['status'] == 'approved':
             extension_months = extension_row['total_extension_months']
         return  extension_months
 
@@ -159,7 +159,7 @@ class check_out(check_outTemplate):
             emi_number=emi_number
         )
         extension_amount = 0
-        if extension_row is not None:
+        if extension_row is not None and extension_row['status'] == 'approved':
             extension_amount = extension_row['extension_amount']
         return extension_amount
 
