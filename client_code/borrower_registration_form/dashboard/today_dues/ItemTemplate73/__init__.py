@@ -13,6 +13,9 @@ class ItemTemplate73(ItemTemplate73Template):
   def __init__(self, **properties):
     self.init_components(**properties)
     self.user_id = main_form_module.userId   
+    if self.label_4.text > 0:
+      self.label_2.visible = True
+      self.label_4.visible = True
     user_data = app_tables.fin_loan_details.search()
     for row in user_data:
         borrower_customer_id = row['borrower_customer_id']
