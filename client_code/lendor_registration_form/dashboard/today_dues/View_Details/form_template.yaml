@@ -89,14 +89,14 @@ components:
     layout_properties: {grid_position: 'KSEEYY,IVLWPK UJYTNE,MPSHVZ'}
   - type: Label
     properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-      visible: true, text: Lapsed Fee, font_size: null, font: '', spacing_above: small,
+      visible: false, text: Lapsed Fee, font_size: null, font: '', spacing_above: small,
       icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
       underline: false, icon: ''}
     name: label_5
     layout_properties: {grid_position: 'KSEEYY,IVLWPK BCUNNG,JFHCLM'}
   - type: Label
     properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-      visible: true, text: Default Fee, font_size: null, font: '', spacing_above: small,
+      visible: false, text: Default Fee, font_size: null, font: '', spacing_above: small,
       icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
       underline: false, icon: ''}
     name: label_9
