@@ -1,7 +1,7 @@
 container: {type: ColumnPanel}
 components:
 - name: column_panel_1
-  properties: {col_widths: '{"KIETYU":20,"IVLWPK":15,"LEWFZL":10,"QOVJUX":15}'}
+  properties: {col_widths: '{"KIETYU":15,"IVLWPK":25,"LEWFZL":10,"QOVJUX":10}'}
   type: ColumnPanel
   layout_properties: {grid_position: 'ENEUVO,PHRFBD'}
   components:
@@ -32,7 +32,7 @@ components:
     type: Spacer
     layout_properties: {grid_position: 'GYFOVK,SGYTJO'}
   - type: Spacer
-    properties: {height: 32}
+    properties: {height: 391.61903381347656}
     name: spacer_4
     layout_properties: {grid_position: 'KSEEYY,KIETYU'}
   - name: label_7
@@ -151,7 +151,7 @@ components:
     name: default
     layout_properties: {grid_position: 'KSEEYY,LEWFZL FFHVSU,LJHKFN'}
   - type: Spacer
-    properties: {height: 32}
+    properties: {height: 270.047607421875}
     name: spacer_5
     layout_properties: {grid_position: 'KSEEYY,QOVJUX'}
   - name: spacer_3
