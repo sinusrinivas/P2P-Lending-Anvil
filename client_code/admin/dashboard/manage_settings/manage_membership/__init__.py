@@ -12,6 +12,7 @@ class manage_membership(manage_membershipTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
+    self.min_amount = 0
 
     # Initially, check if there is any existing membership data
     self.check_existing_membership_data()
@@ -166,62 +167,7 @@ class manage_membership(manage_membershipTemplate):
   #   self.enable_edit_button(membership_type)
   #   self.disable_text_boxes(membership_type)
 
-  def save_membership(self, membership_type):
-    print("Saving membership for:", membership_type)
-    # Determine which textboxes to read based on membership type
-    if membership_type == 'Silver':
-        min_amount = int(self.text_box_1.text)
-        max_amount = int(self.text_box_2.text)
-        silver_row = app_tables.fin_membership.get(membership_type='Silver')
-        if min_amount >= max_amount:
-            alert("Minimum amount must be less than maximum amount!", title="Error")
-            return
-        # Check if Silver's max_amount exceeds Gold's min_amount
-        gold_row = app_tables.fin_membership.get(membership_type='Gold')
-        if gold_row is not None and max_amount >= gold_row['min_amount']:
-            print("silver max", max_amount)
-            gold_row['min_amount'] =  max_amount + 1
-            self.min_amount = gold_row['min_amount']
-            alert("Silver's max_amount cannot exceed Gold's min_amount! Adjusting max_amount.", title="Warning")
-
-    elif membership_type == 'Gold':
-        min_amount = self.min_amount
-        max_amount = int(self.text_box_4.text)
-        if min_amount >= max_amount:
-            alert("Minimum amount must be less than maximum amount!", title="Error")
-            return
-        # Check if Gold's max_amount exceeds Platinum's min_amount
-        platinum_row = app_tables.fin_membership.get(membership_type='Platinum')
-        if platinum_row is not None and max_amount >= platinum_row['min_amount']:
-            platinum_row['min_amount'] =  max_amount + 1
-            alert("Gold's max_amount cannot exceed Platinum's min_amount! Adjusting max_amount.", title="Warning")
-
-    elif membership_type == 'Platinum':
-        min_amount = int(self.text_box_5.text)
-        max_amount = int(self.text_box_6.text)
-        if min_amount >= max_amount:
-            alert("Minimum amount must be less than maximum amount!", title="Error")
-            return
-
-    print("Min Amount:", min_amount)
-    print("Max Amount:", max_amount)
-
-    # Check if a row already exists for this membership type
-    existing_row = app_tables.fin_membership.get(membership_type=membership_type)
-    if existing_row is not None:
-        # Update the existing row
-        existing_row.update(min_amount=int(min_amount), max_amount=int(max_amount))
-    else:
-        # Save data to fin_membership table
-        app_tables.fin_membership.add_row(membership_type=membership_type, min_amount=int(min_amount), max_amount=int(max_amount))
-
-    open_form('admin.dashboard.manage_settings.manage_membership')
-
-    # Re-enable edit and save buttons
-    self.disable_save_button(membership_type)
-    self.enable_edit_button(membership_type)
-    self.disable_text_boxes(membership_type)
-
+  
 
   def edit_membership(self, membership_type):
     print("Editing membership for:", membership_type)
