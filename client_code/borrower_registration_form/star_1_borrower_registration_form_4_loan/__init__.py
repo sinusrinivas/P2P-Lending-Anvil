@@ -37,3 +37,23 @@ class star_1_borrower_registration_form_4_loan(star_1_borrower_registration_form
 
   def home_borrower_registration_form_click(self, **event_args):
     open_form('bank_users.user_form')
+
+  def button_1_1_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    pass
+
+  def set_selected_homeloan(self, home_loan):
+        button_names = ["Yes", "No"]
+        for i, loan_option in enumerate(button_names):
+            button = getattr(self, f'button_{i + 1}_1')
+            if loan_option == home_loan:
+                button.background = '#0a2346'
+            else:
+                button.background = '#939191'
+
+  def set_button_visibility(self):
+        available_options = ["Yes", "No"]
+        for i, loan_option in enumerate(available_options):
+            button = getattr(self, f'button_{i + 1}_1')
+            button.visible = loan_option
+            button.text = loan_option
