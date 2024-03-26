@@ -84,6 +84,7 @@ class check_out(check_outTemplate):
 
         # Display the calculated EMI amount in the EMI amount label
         self.emi_amount_label.text = "{:.2f}".format(emi)  # Show only the EMI amount without extension
+        
         self.update_total_emi_amount(total_emi)
         self.total_emi_amount_label.visible = True
 
