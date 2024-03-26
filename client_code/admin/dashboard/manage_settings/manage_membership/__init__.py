@@ -210,11 +210,15 @@ class manage_membership(manage_membershipTemplate):
     """This method is called when the button is clicked"""
     self.home_button_admin_1.visible = False
     self.edit_membership('Silver')
-    
+    # self.edit_membership('Gold')
+    # self.edit_membership('Platinum')
+       
 
   def button_2_click(self, **event_args):
     """This method is called when the button is clicked"""
     self.save_membership('Silver')
+    # self.save_membership('Gold')
+    # self.save_membership('Platinum')
     open_form('admin.dashboard.manage_settings.manage_membership')
 
 # from ._anvil_designer import manage_membershipTemplate
@@ -421,4 +425,7 @@ class manage_membership(manage_membershipTemplate):
 #         """This method is called when the button is clicked"""
 #         # membership_type = event_args['membership_type']
 #         self.save_membership("Silver" or "Gold" or "Platinum")
+
+
+
 
