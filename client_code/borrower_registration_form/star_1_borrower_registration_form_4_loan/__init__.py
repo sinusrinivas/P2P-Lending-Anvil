@@ -86,25 +86,25 @@ class star_1_borrower_registration_form_4_loan(star_1_borrower_registration_form
     def button_1_1_click(self, **event_args):
         self.select_button(0, 'Yes')
 
-    def button_1_2_click(self, **event_args):
+    def button_2_1_click(self, **event_args):
         self.select_button(0, 'No')
 
     def button_1_3_click(self, **event_args):
         self.select_button(1, 'Yes')
 
-    def button_1_4_click(self, **event_args):
+    def button_2_2_click(self, **event_args):
         self.select_button(1, 'No')
 
     def button_1_5_click(self, **event_args):
         self.select_button(2, 'Yes')
 
-    def button_1_6_click(self, **event_args):
+    def button_2_3_click(self, **event_args):
         self.select_button(2, 'No')
 
     def button_1_7_click(self, **event_args):
         self.select_button(3, 'Yes')
 
-    def button_1_8_click(self, **event_args):
+    def button_2_4_click(self, **event_args):
         self.select_button(3, 'No')
 
     def select_button(self, button_index, selected_option):
