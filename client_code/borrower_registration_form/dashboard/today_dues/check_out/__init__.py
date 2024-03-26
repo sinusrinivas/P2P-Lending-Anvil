@@ -36,11 +36,11 @@ class check_out(check_outTemplate):
             # Calculate monthly EMI amount
             emi = (loan_amount * monthly_interest_rate * ((1 + monthly_interest_rate) ** tenure)) / (((1 + monthly_interest_rate) ** tenure) - 1)
             total_emi = emi + extension_amount  # Add extension amount to monthly EMI
-        elif emi_payment_type == 'Three Month':
+        elif emi_payment_type == 'Three Months':
             # Calculate EMI amount for 3 months
             emi = (loan_amount * monthly_interest_rate * (1 + monthly_interest_rate) ** 3) / ((1 + monthly_interest_rate) ** 3 - 1)
             total_emi = emi + extension_amount  # Add extension amount to 3-month EMI
-        elif emi_payment_type == 'Six Month':
+        elif emi_payment_type == 'Six Months':
             # Calculate EMI amount for 6 months
             emi = (loan_amount * monthly_interest_rate * (1 + monthly_interest_rate) ** 6) / ((1 + monthly_interest_rate) ** 6 - 1)
             total_emi = emi + extension_amount  # Add extension amount to 6-month EMI
@@ -195,16 +195,16 @@ class check_out(check_outTemplate):
 
                   
                     # Calculate next scheduled payment based on emi_payment_type
-                    if emi_payment_type in ['One Time', 'Monthly', 'Three Month', 'Six Month']:
+                    if emi_payment_type in ['One Time', 'Monthly', 'Three Months', 'Six Months']:
                         
                         if emi_payment_type == 'Monthly':
                             next_scheduled_payment = prev_scheduled_payment + timedelta(days=30)
                             next_next_payment = prev_next_payment + timedelta(days=30)
-                        elif emi_payment_type == 'Three Month':
+                        elif emi_payment_type == 'Three Months':
                             next_scheduled_payment = prev_scheduled_payment + timedelta(days=90)
                             next_next_payment = prev_next_payment + timedelta(days=90)
                      
-                        elif emi_payment_type == 'Six Month':
+                        elif emi_payment_type == 'Six Months':
                             next_scheduled_payment = prev_scheduled_payment + timedelta(days=180)
                             next_next_payment = prev_next_payment + timedelta(days=180)
                         elif emi_payment_type == 'One Time':

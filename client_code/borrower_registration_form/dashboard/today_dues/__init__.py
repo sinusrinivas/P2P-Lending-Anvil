@@ -135,10 +135,10 @@ class today_dues(today_duesTemplate):
                   elif emi_payment_type == 'Monthly':
                       # For monthly payment, set next_payment to a month after first_payment_due_date
                       next_payment = loan_disbursed_timestamp.date() + timedelta(days=30)
-                  elif emi_payment_type == 'Three Month':
+                  elif emi_payment_type == 'Three Months':
                       # For three-month payment, set next_payment to three months after first_payment_due_date
                       next_payment = loan_disbursed_timestamp.date() + timedelta(days=90)
-                  elif emi_payment_type == 'Six Month':
+                  elif emi_payment_type == 'Six Months':
                       # For six-month payment, set next_payment  six months after first_payment_due_date
                       next_payment = loan_disbursed_timestamp.date() + timedelta(days=180)
                   else:
