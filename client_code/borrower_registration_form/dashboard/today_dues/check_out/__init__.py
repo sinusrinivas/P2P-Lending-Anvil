@@ -97,10 +97,10 @@ class check_out(check_outTemplate):
             self.label_6.visible = True
             self.label_3.visible = True
         else:
-            self.total_emi_amount_label.visible = False
+            self.total_emi_amount_label.visible = True
             self.extension_amount_label.visible = False
             self.label_6.visible = False
-            self.label_3.visible = False
+            self.label_3.visible = True
   
         # Update other labels
         self.loan_id_label.text = str(selected_row['loan_id'])
@@ -194,7 +194,14 @@ class check_out(check_outTemplate):
             default_fee = float(self.default.text)
         except ValueError:
             default_fee = 0.0
-        extra_fee = lapsed_fee + default_fee
+
+        try:
+            extra_amount = float(self.extension_amount_label.text)
+        except ValueError:
+            extra_amount = 0.0
+
+       # extra_amount = float(self.extension_amount_label.text)
+        extra_fee = lapsed_fee + default_fee + extra_amount
       
         total_emi_amount = float(self.total_emi_amount_label.text)  # Fetch total EMI amount including extra payment
         borrower_wallet = app_tables.fin_wallet.get(customer_id=self.user_id)
