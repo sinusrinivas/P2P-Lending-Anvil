@@ -51,76 +51,71 @@ from anvil.tables import app_tables
   #           else:
   #               button.background = '#939191'
 
-class BorrowerRegistrationForm(BorrowerRegistrationFormTemplate):
-    def __init__(self, user_id, **properties):
-        # Set up default properties and event handlers
-        self.init_components(**properties)
+class star_1_borrower_registration_form_4_loan(star_1_borrower_registration_form_4_loanTemplate):
+  def __init__(self, user_id, **properties):
+     self.init_components(**properties)
+     self.user_id = user_id
         
-        # Store the user ID
-        self.user_id = user_id
+     self.home_loan_status = ''
+     self.other_loan_status = ''
+     self.credit_card_loan_status = ''
+     self.vehicle_loan_status = ''
         
-        # Initialize loan status variables
-        self.home_loan_status = ''
-        self.other_loan_status = ''
-        self.credit_card_loan_status = ''
-        self.vehicle_loan_status = ''
-        
-        # Load user loan status if available
-        self.load_loan_status()
+     self.load_loan_status()
     
-    def load_loan_status(self):
-        # Load user loan status if available
+  def load_loan_status(self):
         user_data = app_tables.fin_user_profile.get(customer_id=self.user_id)
         if user_data:
             self.home_loan_status = user_data['home_loan']
             self.other_loan_status = user_data['other_loan']
-            self.credit_card_loan_status = user_data['credit_card_loan']
+            self.credit_card_loan_status = user_data['credit_card_loans']
             self.vehicle_loan_status = user_data['vehicle_loan']
             self.update_buttons_visibility()
 
-    def update_buttons_visibility(self):
+  def update_buttons_visibility(self):
         # Update button visibility based on loan status
-        self.button_1_1.visible = self.home_loan_status != 'yes'
-        self.button_2_1.visible = self.home_loan_status == 'yes'
-        
-        self.button_1_2.visible = self.other_loan_status != 'yes'
-        self.button_2_2.visible = self.other_loan_status == 'yes'
-        
-        self.button_1_3.visible = self.credit_card_loan_status != 'yes'
-        self.button_2_3.visible = self.credit_card_loan_status == 'yes'
-        
-        self.button_1_4.visible = self.vehicle_loan_status != 'yes'
-        self.button_2_4.visible = self.vehicle_loan_status == 'yes'
+        self.set_button_visibility(self.home_loan_status, self.button_1_1, self.button_2_1)
+        self.set_button_visibility(self.other_loan_status, self.button_1_2, self.button_2_2)
+        self.set_button_visibility(self.credit_card_loan_status, self.button_1_3, self.button_2_3)
+        self.set_button_visibility(self.vehicle_loan_status, self.button_1_4, self.button_2_4)
 
-    def update_loan_status(self, loan_type, status):
+  def set_button_visibility(self, status, button1, button2):
+        if status == 'yes':
+            button1.visible = True
+            button2.visible = False
+        else:
+            button1.visible = False
+            button2.visible = True
+
+  def update_loan_status(self, loan_type, status):
         # Update loan status and save to database
         user_data = app_tables.fin_user_profile.get(customer_id=self.user_id)
         if user_data:
             user_data[loan_type] = status
-            user_data.save()
+            user_data.update()
             # Update visibility after status change
             self.load_loan_status()
 
-    def button_1_1_click(self, **event_args):
+  def button_1_1_click(self, **event_args):
         self.update_loan_status('home_loan', 'yes')
 
-    def button_2_1_click(self, **event_args):
+  def button_2_1_click(self, **event_args):
         self.update_loan_status('home_loan', 'no')
 
-    def button_1_2_click(self, **event_args):
+  def button_1_2_click(self, **event_args):
         self.update_loan_status('other_loan', 'yes')
 
-    def button_2_2_click(self, **event_args):
+  def button_2_2_click(self, **event_args):
         self.update_loan_status('other_loan', 'no')
 
-    def button_1_3_click(self, **event_args):
+  def button_1_3_click(self, **event_args):
         self.update_loan_status('credit_card_loan', 'yes')
 
-    def button_2_3_click(self, **event_args):
+  def button_2_3_click(self, **event_args):
         self.update_loan_status('credit_card_loan', 'no')
 
-    def button_1_4_click(self, **event_args):
+  def button_1_4_click(self, **event_args):
         self.update_loan_status('vehicle_loan', 'yes')
 
-    def button_2_4_click(self, **event_args):
+  def button_2_4_click(self, **event_args):
         self.update_loan_status('vehicle_loan', 'no')
