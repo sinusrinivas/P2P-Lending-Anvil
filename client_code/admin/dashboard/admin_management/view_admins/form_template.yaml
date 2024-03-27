@@ -40,7 +40,7 @@ components:
     type: DataGrid
     components:
     - name: repeating_panel
-      properties: {item_template: admin.admin_management.view_admins.RowTemplate41}
+      properties: {item_template: admin.dashboard.admin_management.view_admins.RowTemplate41}
       type: RepeatingPanel
     layout_properties: {grid_position: 'DCVZXG,PCTYWQ'}
 - type: FlowPanel

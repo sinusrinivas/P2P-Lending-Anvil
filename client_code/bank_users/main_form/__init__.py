@@ -13,11 +13,13 @@ from . import main_form_module
 # from ..borrower_dashboard import borrower_main_form_module
 from ...borrower_registration_form.dashboard import main_form_module
 
+
 class main_form(main_formTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
     # Any code you write here will run before the form opens.
+    self.data_row_panel_1.background_color = None 
   
   def login_signup_button_click(self, **event_args):
         anvil.users.login_with_form()
@@ -51,7 +53,7 @@ class main_form(main_formTemplate):
                         elif user_profile_e['one_time_settlement'] == True:
                             open_form('borrower_registration_form.ots_dashboard')
                     else:
-                        open_form('bank_users.basic_registration_form')
+                        open_form('bank_users.main_form.basic_registration_form')
                 else:
                     # Handle the case when user_profile_e is None
                     open_form('bank_users.user_form')
@@ -61,6 +63,7 @@ class main_form(main_formTemplate):
 
 #-- imp logic dont go up--#
 
+  
   def about_main_form_link_click(self, **event_args):
     """This method is called when the link is clicked"""
     open_form("bank_users.main_form.about_main_form")
@@ -86,6 +89,16 @@ class main_form(main_formTemplate):
   def outlined_button_2_copy_1_click(self, **event_args):
     """This method is called when the button is clicked"""
     self.login_signup_button_click()
+
+  # def image_9_mouse_enter(self, x, y, **event_args):
+  #   """This method is called when the mouse cursor enters this component"""
+  #   self.data_row_panel.background_color = '#05264d'
+
+  # def image_9_mouse_leave(self, x, y, **event_args):
+  #   """This method is called when the mouse cursor leaves this component"""
+  #   self.data_row_panel.background_color = None
+
+  
 
   
 

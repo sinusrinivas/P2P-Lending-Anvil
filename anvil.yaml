@@ -599,16 +599,16 @@ db_schema:
     server: full
     columns:
     - name: customer_id
-      admin_ui: {order: 0, width: 200}
+      admin_ui: {order: -2, width: 200}
       type: number
     - name: full_name
-      admin_ui: {width: 200}
+      admin_ui: {order: -3, width: 200}
       type: string
     - name: user_photo
       admin_ui: {width: 200}
       type: media
     - name: gender
-      admin_ui: {width: 200, order: 7}
+      admin_ui: {order: 0.125, width: 200}
       type: string
     - name: date_of_birth
       admin_ui: {width: 200, order: 8}
@@ -626,10 +626,10 @@ db_schema:
       admin_ui: {width: 200, order: 15}
       type: string
     - name: email_user
-      admin_ui: {width: 200, order: 16}
+      admin_ui: {order: -2.5, width: 200}
       type: string
     - name: last_confirm
-      admin_ui: {order: 0.25, width: 200}
+      admin_ui: {order: -1, width: 200}
       type: bool
     - name: mobile_check
       admin_ui: {width: 200, order: 19}
@@ -647,13 +647,13 @@ db_schema:
       admin_ui: {width: 200, order: 22}
       type: string
     - name: usertype
-      admin_ui: {order: 0.5, width: 200}
+      admin_ui: {order: -1.25, width: 200}
       type: string
     - name: aadhaar_no
       admin_ui: {order: 14, width: 200}
       type: string
     - name: user_age
-      admin_ui: {width: 200, order: 7.5}
+      admin_ui: {order: 12.5, width: 200}
       type: number
     - name: registration_approve
       admin_ui: {width: 200, order: 31}
@@ -749,7 +749,7 @@ db_schema:
       admin_ui: {order: 60, width: 200}
       type: string
     - name: mail_id
-      admin_ui: {width: 200}
+      admin_ui: {order: -1.5, width: 200}
       type: string
     - name: college_name
       admin_ui: {width: 200, order: 61}
@@ -827,7 +827,7 @@ db_schema:
       admin_ui: {width: 200, order: 88.5}
       type: number
     - name: bessem_value
-      admin_ui: {width: 200}
+      admin_ui: {order: -0.75, width: 200}
       type: number
     - name: tenth_class
       admin_ui: {width: 200, order: 96}
@@ -1175,7 +1175,7 @@ db_schema:
       admin_ui: {order: 12, width: 200}
       type: string
   fin_wallet_bank_account_table:
-    client: none
+    client: full
     server: full
     columns:
     - name: account_id

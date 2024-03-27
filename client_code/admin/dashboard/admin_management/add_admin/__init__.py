@@ -6,7 +6,7 @@ import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 from datetime import date, datetime
-from .... import admin
+from ..... import admin
 import re
 
 
@@ -91,7 +91,7 @@ class add_admin(add_adminTemplate):
         result = admin.add_admin_details(email, name, mobile_no, dob, gender, role, hashed_password, created_date, status, ref_admin_name, ref_admin_email, customer_id)
 
         alert("data added succesfully!")
-        open_form('admin.admin_management')
+        open_form('admin.dashboard.admin_management')
 
     def clear_function_click(self, **event_args):
         # Clear all input fields
