@@ -914,10 +914,10 @@ db_schema:
       admin_ui: {width: 200}
       type: string
     - name: duration_at_address
-      admin_ui: {order: 81.9921875, width: 200}
+      admin_ui: {order: 89.25, width: 200}
       type: string
     - name: present_address
-      admin_ui: {order: 81.75, width: 200}
+      admin_ui: {order: 89.5, width: 200}
       type: string
     - name: salary_type
       admin_ui: {order: 81.5, width: 200}
