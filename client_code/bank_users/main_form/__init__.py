@@ -53,7 +53,7 @@ class main_form(main_formTemplate):
                         elif user_profile_e['one_time_settlement'] == True:
                             open_form('borrower_registration_form.ots_dashboard')
                     else:
-                        open_form('bank_users.basic_registration_form')
+                        open_form('bank_users.main_form.basic_registration_form')
                 else:
                     # Handle the case when user_profile_e is None
                     open_form('bank_users.user_form')
@@ -63,6 +63,7 @@ class main_form(main_formTemplate):
 
 #-- imp logic dont go up--#
 
+  
   def about_main_form_link_click(self, **event_args):
     """This method is called when the link is clicked"""
     open_form("bank_users.main_form.about_main_form")

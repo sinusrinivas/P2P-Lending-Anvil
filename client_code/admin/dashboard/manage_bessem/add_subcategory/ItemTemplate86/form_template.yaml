@@ -10,7 +10,7 @@ components:
   data_bindings:
   - {property: text, code: 'self.item[''sub_category'']'}
 - name: label_2
-  properties: {}
+  properties: {align: center}
   type: Label
   layout_properties: {grid_position: 'DQWLFE,GIVGFF'}
   data_bindings:

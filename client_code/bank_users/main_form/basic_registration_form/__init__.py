@@ -8,9 +8,12 @@ import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 from datetime import datetime, timedelta
-# from ..borrower_dashboard import borrower_main_form_module
-from ..main_form import main_form_module
-from ..user_form import user_module
+# bank_users.main_form.basic_registration_form
+from .. import main_form
+from .. import main_form_module
+# from . import main_form_module
+# from ..user_form import user_module
+from ...user_form import user_module
 import re
 
 class basic_registration_form(basic_registration_formTemplate):
@@ -81,8 +84,6 @@ class basic_registration_form(basic_registration_formTemplate):
         self.dob_label.text = ''
         self.mobile_label.text = ''
         self.email_label.text = ''
-        self.label_1.text = ''
-        self.label_2.text = ''
         
         # Validate full name
         if not re.match(r'^[A-Za-z\s]+$', full_name):
@@ -111,8 +112,6 @@ class basic_registration_form(basic_registration_formTemplate):
             open_form('bank_users.user_form')
 
     def full_name_text_box_change(self, **event_args):
-        # This event is triggered when the text in the full name text box changes.
-        # Check the format and hide the error label if the format is correct.
         full_name = self.full_name_text_box.text
         if re.match(r'^[A-Za-z\s]+$', full_name):
             self.full_name_label.text = ''
