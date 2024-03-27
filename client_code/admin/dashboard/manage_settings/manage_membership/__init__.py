@@ -113,6 +113,9 @@ class manage_membership(manage_membershipTemplate):
     if membership_type == 'Silver':
         min_amount = int(self.text_box_1.text)
         max_amount = int(self.text_box_2.text)
+        if min_amount <= 0:
+            alert("Silver Minimum amount must be greater than zero!", title="Error")
+            return
         if min_amount >= max_amount:
             alert("Silver Minimum amount must be less than Silver maximum amount!", title="Error")
             return
@@ -126,8 +129,15 @@ class manage_membership(manage_membershipTemplate):
     elif membership_type == 'Gold':
         min_amount = int(self.text_box_3.text)
         max_amount = int(self.text_box_4.text)
+        if min_amount <= 0:
+            alert("Gold Minimum amount can't be set as zero, it should be greater than Silver max-amount and less than Gold max_amount!", title="Error")
+            return
         if min_amount >= max_amount:
             alert("Gold Minimum amount must be less than Gold maximum amount!", title="Error")
+            return
+        silver_max = int(self.text_box_2.text)
+        if min_amount <= silver_max:
+            alert("Gold's min_amount must be greater than Silver's max_amount!", title="Error")
             return
         # Check if Gold's max_amount exceeds Platinum's max_amount
         platinum_max = int(self.text_box_6.text)
@@ -140,6 +150,13 @@ class manage_membership(manage_membershipTemplate):
         max_amount = int(self.text_box_6.text)
         if min_amount >= max_amount:
             alert("Platinum Minimum amount must be less than Platinum maximum amount!", title="Error")
+            return
+        if min_amount <= 0:
+            alert("Platinum Minimum amount can't be set as zero, it should be greater than Gold max-amount and less than platinum max_amount!", title="Error")
+            return
+        gold_max = int(self.text_box_4.text)
+        if min_amount <= gold_max:
+            alert("platinum's min_amount must be greater than Silver's max_amount!", title="Error")
             return
       
     print("Min Amount:", min_amount)
