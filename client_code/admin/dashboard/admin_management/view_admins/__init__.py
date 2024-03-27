@@ -26,7 +26,7 @@ class view_admins(view_adminsTemplate):
 
     def button_1_click(self, **event_args):
       """This method is called when the button is clicked"""
-      open_form('admin.admin_management')
+      open_form('admin.dashboard.admin_management')
 
 
 

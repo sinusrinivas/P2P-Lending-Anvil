@@ -17,7 +17,7 @@ class dashboard(dashboardTemplate):
 
   def button_2_click(self, **event_args):
    
-    open_form('admin.admin_management')
+    open_form('admin.dashboard.admin_management')
 
   def button_3_click(self, **event_args):
    
