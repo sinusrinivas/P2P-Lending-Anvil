@@ -66,11 +66,11 @@ class payment_details_t(payment_details_tTemplate):
               loan_id=selected_row['loan_id'],
               emi_number=month 
           )   
-          extra_payment_1 = extension_row_1['extension_amount'] if extension_row_1 else 0
+          extra_payment = extension_row_1['extension_amount'] if extension_row_1 else 0
             
           # Add extension amount to beginning balance
-          total_extra_payment += extra_payment_1 or 0
-          extra_payment =0
+          total_extra_payment += extra_payment or 0
+        
   
           # Fetch scheduled_payment_made and account_number from the emi_payments table
           emi_row = app_tables.fin_emi_table.get(
@@ -146,7 +146,7 @@ class payment_details_t(payment_details_tTemplate):
           # Update beginning balance for the next iteration
           beginning_balance = ending_balance
           beginning_loan_amount_balance = ending_loan_amount_balance
-      extra_payment += ex     
+      # extra_payment += ex     
       beginning_balance += total_extra_payment
       # If there are remaining months and the last payment type is 'Three Month' or 'Six Month'
       remaining_months = selected_row['tenure'] % 3 if selected_row['emi_payment_type'] == 'Three Month' else selected_row['tenure'] % 6
