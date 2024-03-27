@@ -68,14 +68,14 @@ components:
   type: ColumnPanel
   layout_properties: {grid_position: 'UIVKKU,QTMSDK'}
   components:
-  - name: button_1_3
+  - name: button_1_2
     properties: {role: null, align: full, tooltip: '', border: '', enabled: true,
       foreground: 'theme:On Primary', visible: true, text: 'Yes', font_size: null,
       font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
       background: '#05264d', bold: false, underline: false, icon: ''}
     type: Button
     layout_properties: {grid_position: 'ZRUQLM,TDXXXS'}
-    event_bindings: {click: button_1_3_click}
+    event_bindings: {click: button_1_2_click}
   - name: button_2_2
     properties: {role: null, align: full, tooltip: '', border: '', enabled: true,
       foreground: 'theme:On Primary', visible: true, text: 'No', font_size: null,
@@ -97,14 +97,14 @@ components:
   type: ColumnPanel
   layout_properties: {grid_position: 'VSRXJK,DAQOHY'}
   components:
-  - name: button_1_5
+  - name: button_1_3
     properties: {role: null, align: full, tooltip: '', border: '', enabled: true,
       foreground: 'theme:On Primary', visible: true, text: 'Yes', font_size: null,
       font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
       background: '#05264d', bold: false, underline: false, icon: ''}
     type: Button
     layout_properties: {grid_position: 'ZRUQLM,TDXXXS'}
-    event_bindings: {click: button_1_5_click}
+    event_bindings: {click: button_1_3_click}
   - name: button_2_3
     properties: {role: null, align: full, tooltip: '', border: '', enabled: true,
       foreground: 'theme:On Primary', visible: true, text: 'No', font_size: null,
@@ -126,14 +126,14 @@ components:
   type: ColumnPanel
   layout_properties: {grid_position: 'YWFQGY,OWNOTI'}
   components:
-  - name: button_1_7
+  - name: button_1_4
     properties: {role: null, align: full, tooltip: '', border: '', enabled: true,
       foreground: 'theme:On Primary', visible: true, text: 'Yes', font_size: null,
       font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
       background: '#05264d', bold: false, underline: false, icon: ''}
     type: Button
     layout_properties: {grid_position: 'ZRUQLM,TDXXXS'}
-    event_bindings: {click: button_1_7_click}
+    event_bindings: {click: button_1_4_click}
   - name: button_2_4
     properties: {role: null, align: full, tooltip: '', border: '', enabled: true,
       foreground: 'theme:On Primary', visible: true, text: 'No', font_size: null,

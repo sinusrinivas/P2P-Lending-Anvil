@@ -51,79 +51,76 @@ from anvil.tables import app_tables
   #           else:
   #               button.background = '#939191'
 
-class star_1_borrower_registration_form_4_loan(star_1_borrower_registration_form_4_loanTemplate):
+class BorrowerRegistrationForm(BorrowerRegistrationFormTemplate):
     def __init__(self, user_id, **properties):
+        # Set up default properties and event handlers
         self.init_components(**properties)
-        self.selected_button_index = None
-        self.userId = user_id
-        user_data = app_tables.fin_user_profile.get(customer_id=user_id)
+        
+        # Store the user ID
+        self.user_id = user_id
+        
+        # Initialize loan status variables
+        self.home_loan_status = ''
+        self.other_loan_status = ''
+        self.credit_card_loan_status = ''
+        self.vehicle_loan_status = ''
+        
+        # Load user loan status if available
+        self.load_loan_status()
+    
+    def load_loan_status(self):
+        # Load user loan status if available
+        user_data = app_tables.fin_user_profile.get(customer_id=self.user_id)
         if user_data:
-            self.set_selected_loan_option(user_data)
+            self.home_loan_status = user_data['home_loan']
+            self.other_loan_status = user_data['other_loan']
+            self.credit_card_loan_status = user_data['credit_card_loan']
+            self.vehicle_loan_status = user_data['vehicle_loan']
+            self.update_buttons_visibility()
 
-    def set_selected_loan_option(self, user_data):
-        loan_types = ['home_loan', 'other_loan', 'credit_card_loans', 'vehicle_loan']
-        for loan_type in loan_types:
-            selected_option = getattr(user_data, loan_type, '').lower()
-            self.set_loan_buttons_visibility(loan_type, selected_option)
+    def update_buttons_visibility(self):
+        # Update button visibility based on loan status
+        self.button_1_1.visible = self.home_loan_status != 'yes'
+        self.button_2_1.visible = self.home_loan_status == 'yes'
+        
+        self.button_1_2.visible = self.other_loan_status != 'yes'
+        self.button_2_2.visible = self.other_loan_status == 'yes'
+        
+        self.button_1_3.visible = self.credit_card_loan_status != 'yes'
+        self.button_2_3.visible = self.credit_card_loan_status == 'yes'
+        
+        self.button_1_4.visible = self.vehicle_loan_status != 'yes'
+        self.button_2_4.visible = self.vehicle_loan_status == 'yes'
 
-    def save_selected_loan_option(self, loan_type, selected_option):
-        user_data = app_tables.fin_user_profile.get(customer_id=self.userId)
+    def update_loan_status(self, loan_type, status):
+        # Update loan status and save to database
+        user_data = app_tables.fin_user_profile.get(customer_id=self.user_id)
         if user_data:
-            setattr(user_data, loan_type, selected_option.lower())
+            user_data[loan_type] = status
             user_data.save()
-
-    def set_loan_buttons_visibility(self, loan_type, selected_option):
-        button_indices = {'home_loan': 0, 'other_loan': 1, 'credit_card_loans': 2, 'vehicle_loan': 3}
-        button_index = button_indices[loan_type]
-        self.select_button(button_index, selected_option)
-
-    def button_1_click(self, loan_type, button_index, **event_args):
-        selected_option = 'Yes' if button_index % 2 == 1 else 'No'
-        self.save_selected_loan_option(loan_type, selected_option)
-        self.set_loan_buttons_visibility(loan_type, selected_option)
-        open_form('borrower_registration_form.star_1_borrower_registration_form_5_bank_1', user_id=self.userId)
+            # Update visibility after status change
+            self.load_loan_status()
 
     def button_1_1_click(self, **event_args):
-        self.select_button(0, 'Yes')
+        self.update_loan_status('home_loan', 'yes')
 
     def button_2_1_click(self, **event_args):
-        self.select_button(0, 'No')
+        self.update_loan_status('home_loan', 'no')
 
-    def button_1_3_click(self, **event_args):
-        self.select_button(1, 'Yes')
+    def button_1_2_click(self, **event_args):
+        self.update_loan_status('other_loan', 'yes')
 
     def button_2_2_click(self, **event_args):
-        self.select_button(1, 'No')
+        self.update_loan_status('other_loan', 'no')
 
-    def button_1_5_click(self, **event_args):
-        self.select_button(2, 'Yes')
+    def button_1_3_click(self, **event_args):
+        self.update_loan_status('credit_card_loan', 'yes')
 
     def button_2_3_click(self, **event_args):
-        self.select_button(2, 'No')
+        self.update_loan_status('credit_card_loan', 'no')
 
-    def button_1_7_click(self, **event_args):
-        self.select_button(3, 'Yes')
+    def button_1_4_click(self, **event_args):
+        self.update_loan_status('vehicle_loan', 'yes')
 
     def button_2_4_click(self, **event_args):
-        self.select_button(3, 'No')
-
-    def select_button(self, button_index, selected_option):
-        # Update background color of previously selected button
-        if self.selected_button_index is not None:
-            prev_button_1 = getattr(self, f'button_1_{self.selected_button_index * 2 + 1}')
-            prev_button_2 = getattr(self, f'button_1_{self.selected_button_index * 2 + 2}')
-            prev_button_1.background = '#939191'
-            prev_button_2.background = '#939191'
-
-        # Update background color of newly selected button
-        button_1 = getattr(self, f'button_1_{button_index * 2 + 1}')
-        button_2 = getattr(self, f'button_1_{button_index * 2 + 2}')
-        if selected_option == 'Yes':
-            button_1.background = '#0a2346'
-            button_2.background = '#939191'
-        else:
-            button_1.background = '#939191'
-            button_2.background = '#0a2346'
-
-        # Update selected button index
-        self.selected_button_index = button_index
+        self.update_loan_status('vehicle_loan', 'no')
