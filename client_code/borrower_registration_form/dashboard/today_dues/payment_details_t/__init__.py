@@ -297,7 +297,7 @@ class payment_details_t(payment_details_tTemplate):
 
     def calculate_monthly_emi_and_balance(self, selected_row, current_month):
       emi = self.calculate_emi(selected_row ,current_month)
-
+      
       beginning_balance = selected_row['total_repayment_amount']
   
       # Initialize Total Repayment Beginning Balance (TRBB) and Total Repayment Ending Balance (TREB)
@@ -444,7 +444,7 @@ class payment_details_t(payment_details_tTemplate):
       total_tenure = selected_row['tenure']
       extension_rows = app_tables.fin_extends_loan.search(loan_id=selected_row['loan_id'])
       for extension_row in extension_rows:
-          if current_month > extension_row['emi_number'] and extension_row['status'] :
+          if current_month > extension_row['emi_number'] and extension_row['status'] == 'approved':
               total_tenure += extension_row['total_extension_months']
               break
   
