@@ -35,21 +35,6 @@ from anvil.tables import app_tables
 #       anvil.server.call('add_borrower_step4',home_loan,other_loan,user_id,credit_card,wheeler)
 #       open_form('borrower_registration_form.star_1_borrower_registration_form_5_bank_1',user_id=user_id)
 
-#   def home_borrower_registration_form_click(self, **event_args):
-#     open_form('bank_users.user_form')
-
-#   def button_1_1_click(self, **event_args):
-#     """This method is called when the button is clicked"""
-#     pass
-
-  # def set_selected_homeloan(self, home_loan):
-  #       button_names = ["Yes", "No"]
-  #       for i, loan_option in enumerate(button_names):
-  #           button = getattr(self, f'button_{i + 1}_1')
-  #           if loan_option == home_loan:
-  #               button.background = '#0a2346'
-  #           else:
-  #               button.background = '#939191'
 
 class star_1_borrower_registration_form_4_loan(star_1_borrower_registration_form_4_loanTemplate):
   def __init__(self, user_id, **properties):
@@ -132,3 +117,9 @@ class star_1_borrower_registration_form_4_loan(star_1_borrower_registration_form
     else:
       anvil.server.call('add_borrower_step4',home_loan,other_loan,user_id,credit_card,vehicle)
       open_form('borrower_registration_form.star_1_borrower_registration_form_5_bank_1',user_id=user_id)
+
+  def button_1_click(self, **event_args):
+    open_form('borrower_registration_form.star_1_borrower_registration_form_3_marital',user_id = self.user_id)
+
+  def home_borrower_registration_form_click(self, **event_args):
+    open_form('bank_users.user_form')

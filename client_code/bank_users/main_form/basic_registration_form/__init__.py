@@ -84,13 +84,6 @@ class basic_registration_form(basic_registration_formTemplate):
         self.dob_label.text = ''
         self.mobile_label.text = ''
         self.email_label.text = ''
-        # self.govt_id1_text_box.text = ''
-        # self.govt_id2_text_box.text = ''
-        # self.text_box_1.text = ''
-        # self.text_box_3.text = ''
-        # self.text_box_4.text = ''
-        # self.text_box_5.text = ''
-        # self.text_box_6.text = ''
         
         # Validate full name
         if not re.match(r'^[A-Za-z\s]+$', full_name):
