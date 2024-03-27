@@ -146,27 +146,40 @@ components:
   layout_properties: {grid_position: 'CEVIWJ,CAZEVF'}
 - name: label_2
   properties: {role: null, align: left, tooltip: '', border: '', foreground: black,
-    visible: true, text: 'What is Peer to Peer ?
+    visible: true, text: 'What is Peer to Peer Lending?
 
       ', font_size: 30, font: a, spacing_above: small, icon_align: left, spacing_below: small,
     italic: false, background: '', bold: true, underline: false, icon: ''}
   type: Label
-  layout_properties: {grid_position: 'URGQIC,FTPFBU'}
+  layout_properties: {grid_position: 'HQITGR,VLAOWI RYNAYV,PTBILZ'}
 - name: label_3
   properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
-    text: 'Peer to peer (P2P) lending is a form of crowdfunding and refers to investors
-      providing finance to businesses without the use of a conventional intermediary,
-      such as a bank. P2P lending uses the internet as a platform to reach a crowd
-      of hundreds of potential investors.', font_size: 16, font: '', spacing_above: small,
+    text: Peer to peer lending is a method of lending capital to borrowers on a mutual interest rate through an online platform like Lendbox which act as a matchmaker,
+    font_size: 16, font: '', spacing_above: small, icon_align: left, spacing_below: small,
+    italic: false, background: '', bold: false, underline: false, icon: ''}
+  type: Label
+  layout_properties: {grid_position: 'HQITGR,VLAOWI SPIUIS,ROXSKN'}
+- type: Label
+  properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
+    text: 'Is Peer to peer lending safe?', font_size: null, font: '', spacing_above: small,
     icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
     underline: false, icon: ''}
-  type: Label
-  layout_properties: {grid_position: 'HQITGR,JNQGCL'}
+  name: label_14
+  layout_properties: {grid_position: 'HQITGR,VLAOWI FCQLMN,GTLDUD'}
 - name: image_2
   properties: {source: 'https://www.godaddy.com/resources/wp-content/uploads/2024/01/How-to-Get-a-Loan-to-Start-a-Business-featured-dye20j.tmp_.jpeg?size=3840x0',
-    display_mode: shrink_to_fit, height: 116.6363525390625}
+    display_mode: shrink_to_fit, height: 423}
   type: Image
   layout_properties: {grid_position: 'HQITGR,LQHJEY'}
+- type: Label
+  properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
+    text: 'Is Peer to peer lending safe?', font_size: null, font: '', spacing_above: small,
+    icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+    underline: false, icon: ''}
+  name: label_14_copy
+  layout_properties:
+    col_widths: {}
+    grid_position: IIXKGS,EAWUYF
 - name: spacer_3
   properties: {height: 49.272705078125}
   type: Spacer
@@ -314,7 +327,7 @@ components:
   type: Label
   layout_properties: {grid_position: 'LGELET,VOMYRJ'}
 - name: column_panel_1
-  properties: {}
+  properties: {col_widths: '{}'}
   type: ColumnPanel
   layout_properties: {grid_position: 'UUAAMD,PNSHYI'}
   components:
