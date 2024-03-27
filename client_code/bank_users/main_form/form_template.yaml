@@ -22,7 +22,7 @@ components:
       spacing_above: small, icon_align: left, col_widths: '{}', spacing_below: none,
       italic: false, background: '', bold: true, underline: false, icon: 'fa:home'}
     type: Link
-    layout_properties: {grid_position: 'KHIQYH,ISMTDW'}
+    layout_properties: {}
     event_bindings: {click: home_main_form_link_click}
   - name: about_main_form_link_copy_1
     properties: {role: null, url: '', align: center, tooltip: '', border: '', foreground: black,
@@ -30,7 +30,6 @@ components:
       spacing_above: small, icon_align: left, col_widths: '{}', spacing_below: small,
       italic: false, background: '', bold: true, underline: false, icon: 'fa:adn'}
     type: Link
-    layout_properties: {grid_position: 'BEBBVL,XIXDMT'}
     event_bindings: {click: about_main_form_link_click}
   - name: link_1
     properties: {text: Products, foreground: black, font_size: 15, icon: 'fa:shopping-cart',
@@ -142,38 +141,90 @@ components:
     type: Label
     layout_properties: {x: 64.97500305250287, y: 43, width: 136.66250610351562}
 - name: spacer_4
-  properties: {height: 15.199981689453125}
+  properties: {height: 53.199981689453125}
   type: Spacer
   layout_properties: {grid_position: 'CEVIWJ,CAZEVF'}
 - name: label_2
-  properties: {role: null, align: center, tooltip: '', border: '', foreground: black,
-    visible: true, text: 'What is Peer to Peer Lending?
+  properties: {role: null, align: left, tooltip: '', border: '', foreground: black,
+    visible: true, text: 'What is Peer to Peer ?
 
-      ', font_size: 25, font: a, spacing_above: small, icon_align: left, spacing_below: small,
-    italic: false, background: '', bold: true, underline: true, icon: ''}
+      ', font_size: 30, font: a, spacing_above: small, icon_align: left, spacing_below: small,
+    italic: false, background: '', bold: true, underline: false, icon: ''}
   type: Label
   layout_properties: {grid_position: 'URGQIC,FTPFBU'}
+- name: label_3
+  properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
+    text: 'Peer to peer (P2P) lending is a form of crowdfunding and refers to investors
+      providing finance to businesses without the use of a conventional intermediary,
+      such as a bank. P2P lending uses the internet as a platform to reach a crowd
+      of hundreds of potential investors.', font_size: 16, font: '', spacing_above: small,
+    icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+    underline: false, icon: ''}
+  type: Label
+  layout_properties: {grid_position: 'HQITGR,JNQGCL'}
 - name: image_2
   properties: {source: 'https://www.godaddy.com/resources/wp-content/uploads/2024/01/How-to-Get-a-Loan-to-Start-a-Business-featured-dye20j.tmp_.jpeg?size=3840x0',
-    display_mode: shrink_to_fit}
+    display_mode: shrink_to_fit, height: 116.6363525390625}
   type: Image
-  layout_properties: {grid_position: 'TSREDZ,NINEJA'}
-- name: label_3
-  properties: {align: center, text: 'Peer to Peer lending, also known as P2P Lending,
-      is a financial innovation which connects verified borrowers seeking unsecured
-      personal loans with investors looking to earn higher returns on their investments.
-      Verified borrowers are listed on the P2P lending platform, Investors can see
-      all the details about the borrowers before lending money to them. Investors
-      have the option to lend small amounts to multiple borrowers to diversify their
-      investments.
-
-      ', italic: true, font_size: 15.5, font: '', foreground: '', bold: false}
-  type: Label
-  layout_properties: {grid_position: 'ZHHAHZ,ZDKCSW'}
+  layout_properties: {grid_position: 'HQITGR,LQHJEY'}
 - name: spacer_3
-  properties: {height: 16.79998779296875}
+  properties: {height: 49.272705078125}
   type: Spacer
   layout_properties: {grid_position: 'CZXDIW,HTBLRL'}
+- name: label_8
+  properties: {text: How it works​, role: headline, font_size: 30, align: center,
+    bold: true, font: a}
+  type: Label
+  layout_properties: {grid_position: 'LNLPBU,ZLMQPF'}
+- name: label_9
+  properties: {text: 'Kotak Mahindra digital platform facilitates seamless connections
+      between creditworthy businesses seeking funding and investors eager to fuel
+      their expansion, fostering a vibrant ecosystem of growth and opportunity', align: center,
+    font_size: 16}
+  type: Label
+  layout_properties: {grid_position: 'HBLVJB,WJZBTP'}
+- name: spacer_6
+  properties: {height: 33.45452880859375}
+  type: Spacer
+  layout_properties: {grid_position: 'FGAEGL,EDOHWZ'}
+- name: image_4
+  properties: {source: _/theme/images.png}
+  type: Image
+  layout_properties: {grid_position: 'BGOTWK,XXIPLN'}
+- name: label_10
+  properties: {text: Business applies for ﬁnance on Beehive, align: center, font_size: 16}
+  type: Label
+  layout_properties: {grid_position: 'BGOTWK,XXIPLN LDUNEZ,EMAVPJ'}
+- name: image_5
+  properties: {source: _/theme/pic2.png, background: '', role: null, visible: true}
+  type: Image
+  layout_properties: {grid_position: 'BGOTWK,PRCSLT EVJEUH,SLMCTO'}
+- name: label_11
+  properties: {text: Approved business listed on our marketplace, align: center, font_size: 16}
+  type: Label
+  layout_properties: {grid_position: 'BGOTWK,PRCSLT OBEGGH,AVGGCR'}
+- name: image_6
+  properties: {source: _/theme/pic3.webp}
+  type: Image
+  layout_properties: {grid_position: 'BGOTWK,PTRZYW BSEDZX,SAVEOO'}
+- name: label_12
+  properties: {text: Investors fund finance request on the platform, align: center,
+    bold: false, font_size: 16}
+  type: Label
+  layout_properties: {grid_position: 'BGOTWK,PTRZYW JEGIDN,XAPYYC'}
+- name: image_7
+  properties: {source: _/theme/pic4.png, role: null}
+  type: Image
+  layout_properties: {grid_position: 'BGOTWK,FKRLFV PFXHBP,WYSPHY'}
+- name: label_13
+  properties: {text: Business gets loan and investors get monthly returns, align: center,
+    font_size: 16}
+  type: Label
+  layout_properties: {grid_position: 'BGOTWK,FKRLFV DOZWJT,LZIAIC'}
+- name: spacer_2
+  properties: {height: 44.9090576171875}
+  type: Spacer
+  layout_properties: {grid_position: 'LCUPAG,KHUANQ'}
 - name: grid_panel_2_copy_1
   properties: {spacing_above: small, spacing_below: small, background: '#094586',
     foreground: '', border: '', visible: true, role: null, tooltip: ''}
@@ -258,8 +309,8 @@ components:
   properties: {role: null, align: center, tooltip: '', border: '', foreground: black,
     visible: true, text: 'Hear from our investors
 
-      ', font_size: 25, font: a, spacing_above: small, icon_align: left, spacing_below: small,
-    italic: false, background: '', bold: true, underline: true, icon: ''}
+      ', font_size: 30, font: a, spacing_above: small, icon_align: left, spacing_below: small,
+    italic: false, background: '', bold: true, underline: false, icon: ''}
   type: Label
   layout_properties: {grid_position: 'LGELET,VOMYRJ'}
 - name: column_panel_1
