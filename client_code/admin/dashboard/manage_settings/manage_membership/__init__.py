@@ -106,85 +106,6 @@ class manage_membership(manage_membershipTemplate):
     elif membership_type == 'Platinum':
       self.button_2.visible = False
   
-# def save_membership(self, membership_type):
-#     print("Saving membership for:", membership_type)
-#     # Determine which textboxes to read based on membership type
-#     if membership_type == 'Silver':
-#         min_amount = int(self.text_box_1.text)
-#         max_amount = int(self.text_box_2.text)
-        
-#     elif membership_type == 'Gold':
-#         min_amount = int(self.text_box_3.text)
-#         max_amount = int(self.text_box_4.text)
-        
-#     elif membership_type == 'Platinum':
-#         min_amount = int(self.text_box_5.text)
-#         max_amount = int(self.text_box_6.text)
-      
-    # if membership_type == 'Silver':
-    #     min_amount = int(self.text_box_1.text)
-    #     max_amount = int(self.text_box_2.text)
-    #     silver_row = app_tables.fin_membership.get(membership_type='Silver')
-    #     if min_amount >= max_amount:
-    #         alert("Minimum amount must be less than maximum amount!", title="Error")
-    #         return
-    #     # Check if Silver's max_amount exceeds Gold's min_amount
-    #     gold_row = app_tables.fin_membership.get(membership_type='Gold')
-    #     if gold_row is not None and gold_row['min_amount'] is not None and max_amount >= gold_row['min_amount']:
-    #         print("silver max", max_amount)
-    #         gold_row['min_amount'] =  max_amount + 1
-    #         self.text_box_3.text = max_amount + 1  # Update self.min_amount
-    #         alert("Silver's max_amount cannot exceed Gold's min_amount! Adjusting max_amount.", title="Warning")
-    #     else:
-    #         # Add Gold membership type if it doesn't exist
-    #         app_tables.fin_membership.add_row( min_amount=min_amount, max_amount=max_amount)
-
-    # elif membership_type == 'Gold':
-    #     min_amount = int(self.text_box_3.text)
-    #     max_amount = int(self.text_box_4.text)
-    #     if min_amount >= max_amount:
-    #         alert("Minimum amount must be less than maximum amount!", title="Error")
-    #         return
-    #     # Check if Gold's max_amount exceeds Platinum's min_amount
-    #     platinum_row = app_tables.fin_membership.get(membership_type='Platinum')
-    #     if platinum_row is not None and platinum_row['min_amount'] is not None and max_amount >= platinum_row['min_amount']:
-    #         platinum_row['min_amount'] =  max_amount + 1
-    #         alert("Gold's max_amount cannot exceed Platinum's min_amount! Adjusting max_amount.", title="Warning")
-    #     else:
-    #         # Add Platinum membership type if it doesn't exist
-    #         app_tables.fin_membership.add_row(membership_type='Platinum', min_amount=min_amount, max_amount=max_amount)
-
-    # elif membership_type == 'Platinum':
-    #     min_amount = int(self.text_box_5.text)
-    #     max_amount = int(self.text_box_6.text)
-    #     if min_amount >= max_amount:
-    #         alert("Minimum amount must be less than maximum amount!", title="Error")
-    #         return
-    #     # Ensure that Platinum's min_amount is greater than Gold's max_amount
-    #     gold_row = app_tables.fin_membership.get(membership_type='Gold')
-    #     if gold_row is not None and gold_row['max_amount'] is not None and min_amount <= gold_row['max_amount']:
-    #         min_amount = gold_row['max_amount'] + 1
-    #         alert("Platinum's min_amount cannot be less than or equal to Gold's max_amount! Adjusting min_amount.", title="Warning")
-
-    # print("Min Amount:", min_amount)
-    # print("Max Amount:", max_amount)
-
-#     # Check if a row already exists for this membership type
-#     existing_row = app_tables.fin_membership.get(membership_type=membership_type)
-#     if existing_row is not None:
-#         # Update the existing row
-#         existing_row.update(min_amount=int(min_amount), max_amount=int(max_amount))
-#     else:
-#         # Save data to fin_membership table
-#         app_tables.fin_membership.add_row(membership_type=membership_type, min_amount=int(min_amount), max_amount=int(max_amount))
-
-#     open_form('admin.dashboard.manage_settings.manage_membership')
-
-#     # Re-enable edit and save buttons
-#     self.disable_save_button(membership_type)
-#     self.enable_edit_button(membership_type)
-#     self.disable_text_boxes(membership_type)
-
 
   def save_membership(self, membership_type):
     print("Saving membership for:", membership_type)
@@ -192,14 +113,34 @@ class manage_membership(manage_membershipTemplate):
     if membership_type == 'Silver':
         min_amount = int(self.text_box_1.text)
         max_amount = int(self.text_box_2.text)
+        if min_amount >= max_amount:
+            alert("Silver Minimum amount must be less than Silver maximum amount!", title="Error")
+            return
+        # Check if Silver's max_amount exceeds Gold's max_amount
+        gold_max = int(self.text_box_4.text)
+        if max_amount >= gold_max:
+            alert("Silver's max_amount cannot exceed Gold's max_amount or same!", title="Warning")
+            return
+        
         
     elif membership_type == 'Gold':
         min_amount = int(self.text_box_3.text)
         max_amount = int(self.text_box_4.text)
+        if min_amount >= max_amount:
+            alert("Gold Minimum amount must be less than Gold maximum amount!", title="Error")
+            return
+        # Check if Gold's max_amount exceeds Platinum's max_amount
+        platinum_max = int(self.text_box_6.text)
+        if max_amount >= platinum_max:
+            alert("Gold's max_amount cannot exceed Platinum's max_amount or same!", title="Warning")
+            return
         
     elif membership_type == 'Platinum':
         min_amount = int(self.text_box_5.text)
         max_amount = int(self.text_box_6.text)
+        if min_amount >= max_amount:
+            alert("Platinum Minimum amount must be less than Platinum maximum amount!", title="Error")
+            return
       
     print("Min Amount:", min_amount)
     print("Max Amount:", max_amount)
