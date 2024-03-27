@@ -1,6 +1,6 @@
 container:
   type: ColumnPanel
-  properties: {col_widths: '{"CSGRZU":30,"FRNBWU":20,"GATXTR":10,"OBRPNO":30,"QTMSDK":20,"CUFRRJ":10,"FVTIEF":30,"DAQOHY":20,"EJBKNI":10,"SXLOWH":30,"OWNOTI":20,"PBTZJD":10}'}
+  properties: {col_widths: '{"CSGRZU":30,"FRNBWU":25,"GATXTR":5,"OBRPNO":30,"QTMSDK":25,"CUFRRJ":5,"FVTIEF":30,"DAQOHY":25,"EJBKNI":5,"SXLOWH":30,"OWNOTI":25,"PBTZJD":5,"TQSJRK":15,"FJLQAK":15,"EHXFUG":15,"FIPHUL":15}'}
 components:
 - name: image_1_copy_1_copy_1_copy_1
   properties: {role: null, vertical_align: center, height: 48, tooltip: '', border: '',
@@ -31,6 +31,10 @@ components:
     bold: true, underline: false, icon: ''}
   name: label_3
   layout_properties: {grid_position: 'HTDUMA,CSGRZU'}
+- name: spacer_1_copy_3
+  properties: {height: 47.444427490234375}
+  type: Spacer
+  layout_properties: {grid_position: 'HTDUMA,TQSJRK'}
 - name: column_panel_1
   properties: {}
   type: ColumnPanel
@@ -40,7 +44,7 @@ components:
     properties: {role: null, align: full, tooltip: '', border: '', enabled: true,
       foreground: 'theme:On Primary', visible: true, text: 'Yes', font_size: null,
       font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
-      background: '#05264d', bold: false, underline: false, icon: ''}
+      background: '#05264d', bold: true, underline: false, icon: ''}
     type: Button
     layout_properties: {grid_position: 'ZRUQLM,TDXXXS'}
     event_bindings: {click: button_1_1_click}
@@ -48,7 +52,7 @@ components:
     properties: {role: null, align: full, tooltip: '', border: '', enabled: true,
       foreground: 'theme:On Primary', visible: true, text: 'No', font_size: null,
       font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
-      background: '#05264d', bold: false, underline: false, icon: ''}
+      background: '#05264d', bold: true, underline: false, icon: ''}
     type: Button
     layout_properties: {grid_position: 'ZRUQLM,GRFUGM'}
     event_bindings: {click: button_2_1_click}
@@ -63,6 +67,10 @@ components:
     background: '', bold: true, underline: false, icon: ''}
   name: label_4
   layout_properties: {grid_position: 'UIVKKU,OBRPNO'}
+- name: spacer_1_copy_4
+  properties: {height: 47.444427490234375}
+  type: Spacer
+  layout_properties: {grid_position: 'UIVKKU,FJLQAK'}
 - name: column_panel_1_copy
   properties: {}
   type: ColumnPanel
@@ -72,7 +80,7 @@ components:
     properties: {role: null, align: full, tooltip: '', border: '', enabled: true,
       foreground: 'theme:On Primary', visible: true, text: 'Yes', font_size: null,
       font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
-      background: '#05264d', bold: false, underline: false, icon: ''}
+      background: '#05264d', bold: true, underline: false, icon: ''}
     type: Button
     layout_properties: {grid_position: 'ZRUQLM,TDXXXS'}
     event_bindings: {click: button_1_2_click}
@@ -80,7 +88,7 @@ components:
     properties: {role: null, align: full, tooltip: '', border: '', enabled: true,
       foreground: 'theme:On Primary', visible: true, text: 'No', font_size: null,
       font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
-      background: '#05264d', bold: false, underline: false, icon: ''}
+      background: '#05264d', bold: true, underline: false, icon: ''}
     type: Button
     layout_properties: {grid_position: 'ZRUQLM,GRFUGM'}
     event_bindings: {click: button_2_2_click}
@@ -92,6 +100,10 @@ components:
   properties: {text: Do you have any Personal Credit Card Loans, bold: true}
   name: label_5
   layout_properties: {grid_position: 'VSRXJK,FVTIEF'}
+- name: spacer_1_copy_5
+  properties: {height: 47.444427490234375}
+  type: Spacer
+  layout_properties: {grid_position: 'VSRXJK,EHXFUG'}
 - name: column_panel_1_copy_2
   properties: {}
   type: ColumnPanel
@@ -101,7 +113,7 @@ components:
     properties: {role: null, align: full, tooltip: '', border: '', enabled: true,
       foreground: 'theme:On Primary', visible: true, text: 'Yes', font_size: null,
       font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
-      background: '#05264d', bold: false, underline: false, icon: ''}
+      background: '#05264d', bold: true, underline: false, icon: ''}
     type: Button
     layout_properties: {grid_position: 'ZRUQLM,TDXXXS'}
     event_bindings: {click: button_1_3_click}
@@ -109,7 +121,7 @@ components:
     properties: {role: null, align: full, tooltip: '', border: '', enabled: true,
       foreground: 'theme:On Primary', visible: true, text: 'No', font_size: null,
       font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
-      background: '#05264d', bold: false, underline: false, icon: ''}
+      background: '#05264d', bold: true, underline: false, icon: ''}
     type: Button
     layout_properties: {grid_position: 'ZRUQLM,GRFUGM'}
     event_bindings: {click: button_2_3_click}
@@ -121,6 +133,10 @@ components:
   properties: {text: Do you have any Two Wheeler / Four Wheeler Loans, bold: true}
   name: label_6
   layout_properties: {grid_position: 'YWFQGY,SXLOWH'}
+- name: spacer_1_copy_6
+  properties: {height: 47.444427490234375}
+  type: Spacer
+  layout_properties: {grid_position: 'YWFQGY,FIPHUL'}
 - name: column_panel_1_copy_2_copy
   properties: {}
   type: ColumnPanel
@@ -130,7 +146,7 @@ components:
     properties: {role: null, align: full, tooltip: '', border: '', enabled: true,
       foreground: 'theme:On Primary', visible: true, text: 'Yes', font_size: null,
       font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
-      background: '#05264d', bold: false, underline: false, icon: ''}
+      background: '#05264d', bold: true, underline: false, icon: ''}
     type: Button
     layout_properties: {grid_position: 'ZRUQLM,TDXXXS'}
     event_bindings: {click: button_1_4_click}
@@ -138,7 +154,7 @@ components:
     properties: {role: null, align: full, tooltip: '', border: '', enabled: true,
       foreground: 'theme:On Primary', visible: true, text: 'No', font_size: null,
       font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
-      background: '#05264d', bold: false, underline: false, icon: ''}
+      background: '#05264d', bold: true, underline: false, icon: ''}
     type: Button
     layout_properties: {grid_position: 'ZRUQLM,GRFUGM'}
     event_bindings: {click: button_2_4_click}
@@ -159,9 +175,9 @@ components:
     foreground: 'theme:On Primary', visible: true, text: Next, font_size: null, font: '',
     spacing_above: small, icon_align: right, spacing_below: small, italic: false,
     background: '#0b2547', bold: true, underline: false, icon: 'fa:angle-double-right'}
-  name: button_2
+  name: next
   layout_properties: {grid_position: 'WAMCJC,XEHGKC'}
-  event_bindings: {click: button_2_click}
+  event_bindings: {click: next_click}
 - name: text_box_1
   properties: {background: 'theme:On Primary', hide_text: false, visible: false}
   type: TextBox

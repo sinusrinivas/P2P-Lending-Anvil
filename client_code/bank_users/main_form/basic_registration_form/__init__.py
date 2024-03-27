@@ -81,8 +81,13 @@ class basic_registration_form(basic_registration_formTemplate):
         self.dob_label.text = ''
         self.mobile_label.text = ''
         self.email_label.text = ''
-        self.label_1.text = ''
-        self.label_2.text = ''
+        self.govt_id1_text_box.text = ''
+        self.govt_id2_text_box.text = ''
+        self.text_box_1.text = ''
+        self.text_box_3.text = ''
+        self.text_box_4.text = ''
+        self.text_box_5.text = ''
+        self.text_box_6.text = ''
         
         # Validate full name
         if not re.match(r'^[A-Za-z\s]+$', full_name):
@@ -111,8 +116,6 @@ class basic_registration_form(basic_registration_formTemplate):
             open_form('bank_users.user_form')
 
     def full_name_text_box_change(self, **event_args):
-        # This event is triggered when the text in the full name text box changes.
-        # Check the format and hide the error label if the format is correct.
         full_name = self.full_name_text_box.text
         if re.match(r'^[A-Za-z\s]+$', full_name):
             self.full_name_label.text = ''

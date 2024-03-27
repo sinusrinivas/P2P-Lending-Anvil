@@ -70,22 +70,6 @@ class star_1_borrower_registration_form_4_loan(star_1_borrower_registration_form
             self.other_loan_status = user_data['other_loan']
             self.credit_card_loan_status = user_data['credit_card_loans']
             self.vehicle_loan_status = user_data['vehicle_loan']
-            self.update_buttons_visibility()
-
-  def update_buttons_visibility(self):
-        # Update button visibility based on loan status
-        self.set_button_visibility(self.home_loan_status, self.button_1_1, self.button_2_1)
-        self.set_button_visibility(self.other_loan_status, self.button_1_2, self.button_2_2)
-        self.set_button_visibility(self.credit_card_loan_status, self.button_1_3, self.button_2_3)
-        self.set_button_visibility(self.vehicle_loan_status, self.button_1_4, self.button_2_4)
-
-  def set_button_visibility(self, status, button1, button2):
-        if status == 'yes':
-            button1.visible = True
-            button2.visible = False
-        else:
-            button1.visible = False
-            button2.visible = True
 
   def update_loan_status(self, loan_type, status):
         # Update loan status and save to database
@@ -97,25 +81,54 @@ class star_1_borrower_registration_form_4_loan(star_1_borrower_registration_form
             self.load_loan_status()
 
   def button_1_1_click(self, **event_args):
-        self.update_loan_status('home_loan', 'yes')
+     self.button_1_1.background = '#0a2346'
+     self.button_2_1.background = '#939191'
+     self.update_loan_status('home_loan', 'yes')
 
   def button_2_1_click(self, **event_args):
-        self.update_loan_status('home_loan', 'no')
+     self.button_1_1.background = '#0a2346'
+     self.button_2_1.background = '#939191'
+     self.update_loan_status('home_loan', 'no')
 
   def button_1_2_click(self, **event_args):
-        self.update_loan_status('other_loan', 'yes')
+     self.button_1_2.background = '#0a2346'
+     self.button_2_2.background = '#939191'
+     self.update_loan_status('other_loan', 'yes')
 
   def button_2_2_click(self, **event_args):
-        self.update_loan_status('other_loan', 'no')
+     self.button_1_2.background = '#939191'
+     self.button_2_2.background = '#0a2346'
+     self.update_loan_status('other_loan', 'no')
 
   def button_1_3_click(self, **event_args):
-        self.update_loan_status('credit_card_loan', 'yes')
+     self.button_1_3.background = '#0a2346'
+     self.button_2_3.background = '#939191'
+     self.update_loan_status('credit_card_loans', 'yes')
 
   def button_2_3_click(self, **event_args):
-        self.update_loan_status('credit_card_loan', 'no')
+     self.button_1_3.background = '#939191'
+     self.button_2_3.background = '#0a2346'
+     self.update_loan_status('credit_card_loans', 'no')
 
   def button_1_4_click(self, **event_args):
-        self.update_loan_status('vehicle_loan', 'yes')
+     self.button_1_4.background = '#0a2346'
+     self.button_2_4.background = '#939191'
+     self.update_loan_status('vehicle_loan', 'yes')
 
   def button_2_4_click(self, **event_args):
-        self.update_loan_status('vehicle_loan', 'no')
+      self.button_1_4.background = '#939191'
+      self.button_2_4.background = '#0a2346'
+      self.update_loan_status('vehicle_loan', 'no')
+
+  def next_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    home_loan = self.home_loan_status
+    other_loan = self.other_loan_status
+    credit_card = self.credit_card_loan_status
+    vehicle = self.vehicle_loan_status
+    user_id = self.user_id
+    if home_loan not in ['yes', 'no'] or other_loan not in ['yes', 'no'] or credit_card not in ['yes', 'no'] or vehicle not in ['yes', 'no']:
+      Notification("Please enter 'yes' or 'no' for all fields").show()
+    else:
+      anvil.server.call('add_borrower_step4',home_loan,other_loan,user_id,credit_card,vehicle)
+      open_form('borrower_registration_form.star_1_borrower_registration_form_5_bank_1',user_id=user_id)
