@@ -8,9 +8,12 @@ import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 from datetime import datetime, timedelta
-# from ..borrower_dashboard import borrower_main_form_module
-from ..main_form import main_form_module
-from ..user_form import user_module
+# bank_users.main_form.basic_registration_form
+from .. import main_form
+from .. import main_form_module
+# from . import main_form_module
+# from ..user_form import user_module
+from ...user_form import user_module
 import re
 
 class basic_registration_form(basic_registration_formTemplate):
@@ -81,13 +84,13 @@ class basic_registration_form(basic_registration_formTemplate):
         self.dob_label.text = ''
         self.mobile_label.text = ''
         self.email_label.text = ''
-        self.govt_id1_text_box.text = ''
-        self.govt_id2_text_box.text = ''
-        self.text_box_1.text = ''
-        self.text_box_3.text = ''
-        self.text_box_4.text = ''
-        self.text_box_5.text = ''
-        self.text_box_6.text = ''
+        # self.govt_id1_text_box.text = ''
+        # self.govt_id2_text_box.text = ''
+        # self.text_box_1.text = ''
+        # self.text_box_3.text = ''
+        # self.text_box_4.text = ''
+        # self.text_box_5.text = ''
+        # self.text_box_6.text = ''
         
         # Validate full name
         if not re.match(r'^[A-Za-z\s]+$', full_name):
