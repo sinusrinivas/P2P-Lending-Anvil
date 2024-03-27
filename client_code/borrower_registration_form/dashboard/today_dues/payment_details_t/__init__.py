@@ -66,10 +66,11 @@ class payment_details_t(payment_details_tTemplate):
               loan_id=selected_row['loan_id'],
               emi_number=month 
           )   
-          extra_payment = extension_row_1['extension_amount'] if extension_row_1 else 0
+          extra_payment_1 = extension_row_1['extension_amount'] if extension_row_1 else 0
             
           # Add extension amount to beginning balance
-          total_extra_payment += extra_payment or 0
+          total_extra_payment += extra_payment_1 or 0
+          extra_payment =0
   
           # Fetch scheduled_payment_made and account_number from the emi_payments table
           emi_row = app_tables.fin_emi_table.get(
@@ -80,6 +81,7 @@ class payment_details_t(payment_details_tTemplate):
           account_number = emi_row['account_number'] if emi_row else None
           additional_fee = emi_row['extra_fee'] if emi_row else None
           extra_payment += additional_fee or 0
+          #emi_number = emi_row['emi_number']
   
           # Determine display values for EMIDate and AccountNumber
           scheduled_payment_made_display = f"{scheduled_payment_made:%Y-%m-%d}" if scheduled_payment_made else "N/A"
@@ -92,7 +94,7 @@ class payment_details_t(payment_details_tTemplate):
 
           foreclosure_row = app_tables.fin_foreclosure.get(
             loan_id=selected_row['loan_id'],
-            foreclosure_emi_num=month
+            foreclosure_emi_num=q.less_than(month)
         )
           if foreclosure_row is not None and foreclosure_row['status']=='approved':
             # If foreclosed, set beginning balance and ending balance to the total amount in the foreclosure table
@@ -104,7 +106,7 @@ class payment_details_t(payment_details_tTemplate):
             principal_amount = beginning_balance - interest_amount
             # Add the foreclosure details to payment details
             payment_details.append({
-                'PaymentNumber': month,
+                'PaymentNumber': month ,
                 'PaymentDate': formatted_payment_date if formatted_payment_date != "Awaiting Update" else "N/A", #foreclosure_row['requested_on'].strftime('%Y-%m-%d'),
                 'EMIDate': "N/A",
                 'EMITime': "N/A",
@@ -144,7 +146,7 @@ class payment_details_t(payment_details_tTemplate):
           # Update beginning balance for the next iteration
           beginning_balance = ending_balance
           beginning_loan_amount_balance = ending_loan_amount_balance
-          
+      extra_payment += ex     
       beginning_balance += total_extra_payment
       # If there are remaining months and the last payment type is 'Three Month' or 'Six Month'
       remaining_months = selected_row['tenure'] % 3 if selected_row['emi_payment_type'] == 'Three Month' else selected_row['tenure'] % 6
