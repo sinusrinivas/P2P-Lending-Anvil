@@ -236,7 +236,7 @@ components:
 - name: label_9
   properties: {text: 'Kotak digital platform facilitates seamless connections between
       creditworthy businesses seeking funding and investors eager to fuel their expansion,
-      fostering a vibrant ecosystem of growth and opportunity', align: center, font_size: 16}
+      fostering a vibrant ecosystem of growth and opportunity', align: center, font_size: 20}
   type: Label
   layout_properties: {grid_position: 'HBLVJB,WJZBTP'}
 - name: spacer_6
@@ -244,38 +244,39 @@ components:
   type: Spacer
   layout_properties: {grid_position: 'FGAEGL,EDOHWZ'}
 - name: image_4
-  properties: {source: _/theme/icons8-laptop-64.png, display_mode: zoom_to_fill}
+  properties: {source: _/theme/icons8-laptop-64.png, display_mode: shrink_to_fit,
+    height: 140.39999389648438}
   type: Image
   layout_properties: {grid_position: 'BGOTWK,XXIPLN'}
 - name: label_10
-  properties: {text: Business applies for ﬁnance on Kotak, align: center, font_size: 16}
+  properties: {text: Business applies for ﬁnance on Kotak, align: center, font_size: 20}
   type: Label
   layout_properties: {grid_position: 'BGOTWK,XXIPLN LDUNEZ,EMAVPJ'}
 - name: image_5
   properties: {source: _/theme/icons8-approved-webpage-100.png, background: '', role: null,
-    visible: true}
+    visible: true, height: 140}
   type: Image
   layout_properties: {grid_position: 'BGOTWK,PRCSLT EVJEUH,SLMCTO'}
 - name: label_11
-  properties: {text: Approved business listed on our marketplace, align: center, font_size: 16}
+  properties: {text: Approved business listed on our marketplace, align: center, font_size: 20}
   type: Label
   layout_properties: {grid_position: 'BGOTWK,PRCSLT OBEGGH,AVGGCR'}
 - name: image_6
-  properties: {source: _/theme/icons8-fund-100.png}
+  properties: {source: _/theme/icons8-fund-100.png, height: 140}
   type: Image
   layout_properties: {grid_position: 'BGOTWK,PTRZYW BSEDZX,SAVEOO'}
 - name: label_12
   properties: {text: Investors fund finance request on the platform, align: center,
-    bold: false, font_size: 16}
+    bold: false, font_size: 20}
   type: Label
   layout_properties: {grid_position: 'BGOTWK,PTRZYW JEGIDN,XAPYYC'}
 - name: image_7
-  properties: {source: _/theme/icons8-business-goal-100.png, role: null}
+  properties: {source: _/theme/icons8-business-goal-100.png, role: null, height: 141}
   type: Image
-  layout_properties: {grid_position: 'BGOTWK,FKRLFV PFXHBP,WYSPHY'}
+  layout_properties: {grid_position: 'BGOTWK,FKRLFV NBOARJ,FCSFDI'}
 - name: label_13
   properties: {text: Business gets loan and investors get monthly returns, align: center,
-    font_size: 16}
+    font_size: 20}
   type: Label
   layout_properties: {grid_position: 'BGOTWK,FKRLFV DOZWJT,LZIAIC'}
 - name: spacer_2
