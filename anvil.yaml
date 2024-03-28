@@ -671,7 +671,7 @@ db_schema:
       admin_ui: {width: 200, order: 24.140625}
       type: bool
     - name: qualification
-      admin_ui: {width: 200, order: 24.375}
+      admin_ui: {order: 0.5625, width: 200}
       type: string
     - name: address_type
       admin_ui: {width: 200, order: 24.4375}
@@ -1175,7 +1175,7 @@ db_schema:
       admin_ui: {order: 12, width: 200}
       type: string
   fin_wallet_bank_account_table:
-    client: none
+    client: full
     server: full
     columns:
     - name: account_id

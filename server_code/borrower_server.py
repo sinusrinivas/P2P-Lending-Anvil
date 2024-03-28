@@ -253,10 +253,6 @@ def final_points_update_bessem_table(user_id):
         points = (user_points / group_points) * 100
 
         final_points = '{:.2f}'.format(points)
-        # update_user_beseem_score(user_id, borrower_email_id, gender_points, present_address_points, duration_at_address_points,
-        #                  qualification_points, profession_points, organization_type_points, salary_type_points,
-        #                  age_of_business_points, marital_status_points, spouse_profession_points, home_loan_points,
-        #                  other_loan_points, credit_card_loan_points, vehicle_loan_points, user_points)
 
         return final_points
     return None
@@ -285,7 +281,6 @@ def get_user_points(id):
         credit_card_loan = user['credit_card_loans'].lower()
         vehicle_loan = user['vehicle_loan'].lower()
         
-        # Initialize user points
         user_points = 0
 
         # Find the age range for the user_age
@@ -323,9 +318,11 @@ def get_user_points(id):
 
         qualification_search = app_tables.fin_admin_beseem_categories.search(group_name='qualification', sub_category=qualification.lower())
         if qualification_search:
-            qualification_points = qualification_search[0]['min_points']
-            print("Qualification Points:", qualification_points)
-            user_points += qualification_points
+           qualification_points = qualification_search[0]['min_points']
+           print("Qualification Points:", qualification_points)
+           user_points += qualification_points
+        else:
+           print("Qualification not found in categories.")
 
         profession_search = app_tables.fin_admin_beseem_categories.search(group_name='profession', sub_category=profession.lower())
         if profession_search:
@@ -405,35 +402,6 @@ def get_user_points(id):
     else:
         return None
 
-# def update_user_beseem_score(user_id, borrower_email_id, gender_points, present_address_points, duration_at_address_points,
-#                              qualification_points, profession_points, organization_type_points, salary_type_points,
-#                              age_of_business_points, marital_status_points, spouse_profession_points, home_loan_points,
-#                              other_loan_points, credit_card_loan_points, vehicle_loan_points, user_points):
-#     # Check if user data already exists, if not, create a new row
-#     user_data = app_tables.fin_user_beseem_score.get(borrower_customer_id=user_id)
-#     if not user_data:
-#         user_data = app_tables.fin_user_beseem_score.add_row(borrower_customer_id=user_id)
-    
-#     # Update user data
-#     user_data['borrower_email_id'] = email
-#     user_data['gender_points'] = gender_points
-#     user_data['present_address_points'] = present_address_points
-#     user_data['duration_at_address_points'] = duration_at_address_points
-#     user_data['qualification_points'] = qualification_points
-#     user_data['profession_points'] = profession_points
-#     user_data['organization_type_points'] = organization_type_points
-#     user_data['salary_type_points'] = salary_type_points
-#     user_data['age_of_business_points'] = age_of_business_points
-#     user_data['marital_status_points'] = marital_status_points
-#     user_data['spouse_profession_points'] = spouse_profession_points
-#     user_data['home_loan_points'] = home_loan_points
-#     user_data['other_loan_points'] = other_loan_points
-#     user_data['credit_card_loan_points'] = credit_card_loan_points
-#     user_data['vehicle_loan_points'] = vehicle_loan_points
-#     user_data['user_points'] = user_points
-    
-#     user_data.save()
-    
 def get_group_points(customer_id):
     # Fetch user details
     user = app_tables.fin_user_profile.get(customer_id=customer_id)
