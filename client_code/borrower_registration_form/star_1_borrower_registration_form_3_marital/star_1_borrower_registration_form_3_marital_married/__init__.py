@@ -217,7 +217,7 @@ class star_1_borrower_registration_form_3_marital_married(star_1_borrower_regist
     def button_submit_click(self, **event_args):
        details = self.collect_details()
 
-       existing_rows = app_tables.fin_guarantor_details.search(customer_id=self.userId)
+       existing_rows = app_tables.fin_guarantor_details.get(customer_id=self.userId)
 
        if existing_rows:
          existing_row = existing_rows[0]
@@ -257,7 +257,7 @@ class star_1_borrower_registration_form_3_marital_married(star_1_borrower_regist
       """This method is called when the button is clicked"""
       details = self.collect_details()
   
-      existing_rows = app_tables.fin_guarantor_details.search(customer_id=self.userId)
+      existing_rows = app_tables.fin_guarantor_details.get(customer_id=self.userId)
     
       if existing_rows:
          existing_row = existing_rows[0]
@@ -297,7 +297,7 @@ class star_1_borrower_registration_form_3_marital_married(star_1_borrower_regist
         """This method is called when the button is clicked"""
         details = self.collect_details()
 
-        existing_rows = app_tables.fin_guarantor_details.search(customer_id=self.userId)
+        existing_rows = app_tables.fin_guarantor_details.get(customer_id=self.userId)
 
         if existing_rows:
           existing_row = existing_rows[0]
@@ -341,7 +341,7 @@ class star_1_borrower_registration_form_3_marital_married(star_1_borrower_regist
     def button_submit_copy_3_click(self, **event_args):
         """This method is called when the button is clicked"""
         details = self.collect_details()
-        existing_rows = app_tables.fin_guarantor_details.search(customer_id=self.userId)
+        existing_rows = app_tables.fin_guarantor_details.get(customer_id=self.userId)
         if existing_rows:
           existing_row = existing_rows[0]
           existing_row.guarantor_name = details['mother_name']
