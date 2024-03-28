@@ -98,6 +98,26 @@ class main_form(main_formTemplate):
   #   """This method is called when the mouse cursor leaves this component"""
   #   self.data_row_panel.background_color = None
 
+  def button_1_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    self.rich_text_1.visible = not self.rich_text_1.visible
+
+  def button_1_copy_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    self.rich_text_2.visible = not self.rich_text_2.visible
+
+  def button_2_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    self.link_7.visible = not self.link_7.visible
+    self.link_8.visible = not self.link_8.visible
+
+  def link_7_click(self, **event_args):
+    """This method is called when the link is clicked"""
+    open_form("bank_users.main_form.basic_registration_form")
+
+ 
+
+
   
 
   
