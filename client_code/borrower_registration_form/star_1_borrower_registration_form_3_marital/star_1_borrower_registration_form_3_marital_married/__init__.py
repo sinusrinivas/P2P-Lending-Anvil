@@ -173,7 +173,6 @@ class star_1_borrower_registration_form_3_marital_married(star_1_borrower_regist
         spouse_dob = self.date_picker_3.date
         spouse_mbl_no_text = self.spouse_mbl_no_text.text
         spouse_mbl_no = int(spouse_mbl_no_text) if spouse_mbl_no_text.strip().isdigit() else None
-
         spouse_profession = self.drop_down_1.selected_value
         spouse_company = self.spouse_companyname_text.text
         anual_earning = self.annual_earning_text.text
@@ -216,52 +215,81 @@ class star_1_borrower_registration_form_3_marital_married(star_1_borrower_regist
         }
 
     def button_submit_click(self, **event_args):
-        # Collect details from the form
-        details = self.collect_details()
+       details = self.collect_details()
 
-        # Insert details into the data table
-        app_tables.fin_guarantor_details.add_row(
+       existing_rows = app_tables.fin_guarantor_details.search(customer_id=self.userId)
+
+       if existing_rows:
+         existing_row = existing_rows[0]
+         existing_row.guarantor_name = details['father_name']
+         existing_row.guarantor_date_of_birth = details['father_dob']
+         existing_row.guarantor_mobile_no = details['father_mbl_no']
+         existing_row.guarantor_profession = details['father_profession']
+         existing_row.guarantor_address = details['father_address']
+         existing_row.another_person = details['another_person']
+         existing_row.update()
+       else:
+          app_tables.fin_guarantor_details.add_row(
             customer_id=self.userId,
             guarantor_name=details['father_name'],
             guarantor_date_of_birth=details['father_dob'],
             guarantor_mobile_no=details['father_mbl_no'],
             guarantor_profession=details['father_profession'],
             guarantor_address=details['father_address'],
-            another_person=details['another_person']  
-        )
+            another_person=details['another_person']
+          )
 
-        if not re.match(r'^[A-Za-z\s]+$', details['father_name']):
-            alert("Enter a valid full name!", title="Error")
-            return
-        elif not details['father_dob'] or details['father_dob'] > datetime.now().date():
-            alert("Enter a valid date of birth!", title="Error")
-            return
-        elif datetime.now().date() - details['father_dob'] < timedelta(days=365 * 18):
-            alert("You must be at least 18 years old!", title="Error")
-            return
-        elif not re.match(r'^\d{10}$', details['father_mbl_no']):
-            self.mbl_label_1.text = 'Enter valid mobile no'
+       if not re.match(r'^[A-Za-z\s]+$', details['father_name']):
+          Notification("Enter a valid full name!").show()
+       elif not details['father_dob'] or details['father_dob'] > datetime.now().date():
+          Notification("Enter a valid date of birth!").show()
+       elif datetime.now().date() - details['father_dob'] < timedelta(days=365 * 18):
+          Notification("You must be at least 18 years old!").show()
+       elif not re.match(r'^\d{10}$', str(details['father_mbl_no'])):
+          self.mbl_label_1.text = 'Enter valid mobile no'
 
-        if not details['father_name'] or not details['father_dob'] or not details['father_mbl_no'] or not details['father_profession'] or not details['father_address']:
+       if not all(details[key] for key in ['father_name', 'father_dob', 'father_mbl_no', 'father_profession', 'father_address']):
           Notification("Please fill all the required fields").show()
-        else:
-          open_form('borrower_registration_form.star_1_borrower_registration_form_4_loan',user_id=self.userId)
+       else:
+          open_form('borrower_registration_form.star_1_borrower_registration_form_4_loan', user_id=self.userId)
 
     def button_submit_copy_click(self, **event_args):
         """This method is called when the button is clicked"""
         details = self.collect_details()
+      
+        existing_rows = app_tables.fin_guarantor_details.search(customer_id=self.userId)
+        if existing_rows:
+          existing_row = existing_rows[0]
+          existing_row.guarantor_name = details['mother_name']
+          existing_row.guarantor_date_of_birth = details['mother_dob']
+          existing_row.guarantor_mobile_no = details['mother_mbl_no']
+          existing_row.guarantor_profession = details['mother_profession']
+          existing_row.guarantor_address = details['mother_address']
+          existing_row.another_person = details['another_person']
+          existing_row.update()
+        else:
+           app_tables.fin_guarantor_details.add_row(
+             customer_id=self.userId,
+             guarantor_name=details['mother_name'],
+             guarantor_date_of_birth=details['mother_dob'],
+             guarantor_mobile_no=details['mother_mbl_no'],
+             guarantor_profession=details['mother_profession'],
+             guarantor_address=details['mother_address'],
+             another_person=details['another_person']
+           )
+        if not re.match(r'^[A-Za-z\s]+$', details['mother_name']):
+            alert("Enter a valid full name!", title="Error")
+            return
+        elif not details['mother_dob'] or details['mother_dob'] > datetime.now().date():
+            alert("Enter a valid date of birth!", title="Error")
+            return
+        elif datetime.now().date() - details['mother_dob'] < timedelta(days=365 * 18):
+            alert("You must be at least 18 years old!", title="Error")
+            return
+        elif not re.match(r'^\d{10}$', str(details['mother_mbl_no'])):
+            self.mbl_label_1.text = 'Enter valid mobile no'
 
-        # Insert details into the data table
-        app_tables.fin_guarantor_details.add_row(
-            customer_id=self.userId,
-            guarantor_name=details['mother_name'],
-            guarantor_date_of_birth=details['mother_dob'],
-            guarantor_mobile_no=details['mother_mbl_no'],
-            guarantor_profession=details['mother_profession'],
-            guarantor_address=details['mother_address'],
-            another_person=details['another_person']  # Store the selected radio button's name
-        )
-        if not details['mother_name'] or not details['mother_dob'] or not details['mother_mbl_no'] or not details['mother_profession'] or not details['mother_address']:
+        if not all(details[key] for key in ['mother_name', 'mother_dob', 'mother_mbl_no', 'mother_profession', 'mother_address']):
           Notification("Please fill all the required fields").show()
         else:
           open_form('borrower_registration_form.star_1_borrower_registration_form_4_loan',user_id=self.userId)
@@ -270,18 +298,43 @@ class star_1_borrower_registration_form_3_marital_married(star_1_borrower_regist
         """This method is called when the button is clicked"""
         details = self.collect_details()
 
-        # Insert details into the data table
-        app_tables.fin_guarantor_details.add_row(
-            customer_id=self.userId,
-            guarantor_name=details['spouse_name'],
-            guarantor_date_of_birth=details['spouse_dob'],
-            guarantor_mobile_no=details['spouse_mbl_no'],
-            guarantor_profession=details['spouse_profession'],
-            guarantor_company_name=details['spouse_company'],
-            guarantor_annual_earning=details['annual_earning'],
-            another_person=details['another_person']  # Store the selected radio button's name
-        )
-        if not details['spouse_name'] or not details['spouse_dob'] or not details['spouse_mbl_no'] or not details['spouse_profession']:
+        existing_rows = app_tables.fin_guarantor_details.search(customer_id=self.userId)
+
+        if existing_rows:
+          existing_row = existing_rows[0]
+          existing_row.guarantor_name = details['spouse_name']
+          existing_row.guarantor_date_of_birth = details['spouse_dob']
+          existing_row.guarantor_mobile_no = details['spouse_mbl_no']
+          existing_row.guarantor_profession = details['spouse_profession']
+          existing_row.guarantor_company_name = details['spouse_company']
+          existing_row.guarantor_annual_earning = details['annual_earning']
+          existing_row.another_person = details['another_person']
+          existing_row.update()
+        else:
+           app_tables.fin_guarantor_details.add_row(
+             customer_id=self.userId,
+             guarantor_name=details['spouse_name'],
+             guarantor_date_of_birth=details['spouse_dob'],
+             guarantor_mobile_no=details['spouse_mbl_no'],
+             guarantor_profession=details['spouse_profession'],
+             guarantor_company_name=details['spouse_company'],
+             guarantor_annual_earning=details['annual_earning'],
+             another_person=details['another_person']
+           )
+          
+        if not re.match(r'^[A-Za-z\s]+$', details['spouse_name']):
+            alert("Enter a valid full name!", title="Error")
+            return
+        elif not details['spouse_dob'] or details['spouse_dob'] > datetime.now().date():
+            alert("Enter a valid date of birth!", title="Error")
+            return
+        elif datetime.now().date() - details['spouse_dob'] < timedelta(days=365 * 18):
+            alert("You must be at least 18 years old!", title="Error")
+            return
+        elif not re.match(r'^\d{10}$', str(details['spouse_mbl_no'])):
+            self.mbl_label_1.text = 'Enter valid mobile no'
+
+        if not all(details[key] for key in ['spouse_name', 'spouse_dob', 'spouse_mbl_no', 'spouse_profession']):
           Notification("Please fill all the required fields").show()
         else:
           open_form('borrower_registration_form.star_1_borrower_registration_form_4_loan',user_id=self.userId)
@@ -289,31 +342,42 @@ class star_1_borrower_registration_form_3_marital_married(star_1_borrower_regist
     def button_submit_copy_3_click(self, **event_args):
         """This method is called when the button is clicked"""
         details = self.collect_details()
-        app_tables.fin_guarantor_details.add_row(
-        customer_id=self.userId,
-        guarantor_name=details['related_person_name'],
-        guarantor_date_of_birth=details['related_person_dob'],
-        guarantor_mobile_no=details['related_person_mob'],
-        guarantor_profession=details['related_person_profession'],
-        guarantor_person_relation= details['related_person_relation'],
-        another_person=details['another_person']  # Store the selected radio button's name
-        )        
-
-        # Insert details into the data table
-
-        if not details['related_person_name'] or not details['related_person_dob'] or not details['related_person_mob'] or not details['related_person_profession'] or not details['related_person_relation']:
-          Notification("Please fill all the required fields").show()
+        existing_rows = app_tables.fin_guarantor_details.search(customer_id=self.userId)
+        if existing_rows:
+          existing_row = existing_rows[0]
+          existing_row.guarantor_name = details['mother_name']
+          existing_row.guarantor_date_of_birth = details['mother_dob']
+          existing_row.guarantor_mobile_no = details['mother_mbl_no']
+          existing_row.guarantor_profession = details['mother_profession']
+          existing_row.guarantor_address = details['mother_address']
+          existing_row.another_person = details['another_person']
+          existing_row.update()
         else:
-            details = self.collect_details()
-            app_tables.fin_guarantor_details.add_row(
+          app_tables.fin_guarantor_details.add_row(
             customer_id=self.userId,
             guarantor_name=details['related_person_name'],
             guarantor_date_of_birth=details['related_person_dob'],
             guarantor_mobile_no=details['related_person_mob'],
             guarantor_profession=details['related_person_profession'],
             guarantor_person_relation= details['related_person_relation'],
-            another_person=details['another_person']  # Store the selected radio button's name
-            )
+            another_person=details['another_person']
+          )        
+
+        if not re.match(r'^[A-Za-z\s]+$', details['related_person_name']):
+            alert("Enter a valid full name!", title="Error")
+            return
+        elif not details['related_person_dob'] or details['related_person_dob'] > datetime.now().date():
+            alert("Enter a valid date of birth!", title="Error")
+            return
+        elif datetime.now().date() - details['related_person_dob'] < timedelta(days=365 * 18):
+            alert("You must be at least 18 years old!", title="Error")
+            return
+        elif not re.match(r'^\d{10}$', str(details['related_person_mob'])):
+            self.mbl_label_1.text = 'Enter valid mobile no'
+
+        if not all(details[key] for key in ['related_person_name', 'related_person_dob', 'related_person_mob', 'related_person_profession', 'related_person_relation']):
+          Notification("Please fill all the required fields").show()
+        else:
             open_form('borrower_registration_form.star_1_borrower_registration_form_4_loan',user_id=self.userId)
 
     def prev_1_click(self, **event_args):
