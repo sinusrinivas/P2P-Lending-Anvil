@@ -88,38 +88,52 @@ components:
   type: Spacer
   layout_properties: {grid_position: 'SIFLFT,HNDGOE'}
 - name: xy_panel_1
-  properties: {height: 268.39996337890625, background: '#05264d'}
+  properties: {height: 442.25, background: '#2994bb'}
   type: XYPanel
-  layout_properties: {grid_position: 'PMWTJR,ZTCSRI', full_width_row: true}
+  layout_properties: {grid_position: 'PMWTJR,PWFVJJ', full_width_row: true}
   components:
-  - name: label_4_copy_1
-    properties: {role: null, align: left, tooltip: '', border: '', foreground: white,
-      visible: true, text: Welcome to, font_size: 30, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
-      underline: false, icon: ''}
-    type: Label
-    layout_properties: {x: 98.22500305250287, y: 57.40000610426068, width: 462.8000183105469}
+  - name: image_1_copy_1
+    properties: {role: null, vertical_align: center, height: 431.46661376953125, tooltip: '',
+      border: '', foreground: '', visible: true, display_mode: fill_width, spacing_above: small,
+      source: _/theme/main.png, spacing_below: small, background: '', horizontal_align: center}
+    type: Image
+    layout_properties: {x: 146.75, y: -9.299999999999955, width: 457.15}
+  - type: Image
+    properties: {height: 46, source: _/theme/rbi-registered-1.svg}
+    name: image_11
+    layout_properties: {x: 159, y: 366.984375, width: 230.60000610351562}
+  - type: Image
+    properties: {height: 39, source: _/theme/12-300x94.png}
+    name: image_12
+    layout_properties: {x: 419, y: 302.984375, width: 184.89998474121091}
   - name: label_4_copy_1_copy
     properties: {role: null, align: left, tooltip: '', border: '', foreground: white,
-      visible: true, text: ' P2P Lending App', font_size: 35, font: A, spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-      underline: false, icon: ''}
+      visible: true, text: Now invest with the largest P2P Lending platform in India. Go with the most preferred non-market linked investment instrument that gives you risk adjusted returns.,
+      font_size: 25, font: A, spacing_above: small, icon_align: left, spacing_below: small,
+      italic: false, background: '', bold: false, underline: false, icon: ''}
     type: Label
-    layout_properties: {x: 89.03749542310834, y: 99.42501525953412, width: 355}
-  - name: label_5_copy_1
-    properties: {role: body, align: left, tooltip: '', border: '', foreground: black,
-      visible: true, text: '  An RBI registered Peer to Peer Lending Platform  (NBFC-P2P).',
-      font_size: 20, font: a, spacing_above: small, icon_align: left, spacing_below: small,
-      italic: false, background: white, bold: false, underline: false, icon: ''}
+    layout_properties: {x: 732.800048828125, y: 170.3499984741211, width: 616}
+  - name: label_4_copy_1
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: white,
+      visible: true, text: Earn up to 15% p.a.* with P2P Lending, font_size: 35, font: '',
+      spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+      background: '', bold: false, underline: false, icon: ''}
     type: Label
-    layout_properties: {x: 91.0124862678349, y: 161.88749389722943, width: 531.6000366210938}
-  - name: image_1_copy_1
-    properties: {role: null, vertical_align: center, height: 266.79998779296875, tooltip: '',
-      border: '', foreground: '', visible: true, display_mode: shrink_to_fit, spacing_above: small,
-      source: 'https://cdni.iconscout.com/illustration/premium/thumb/lending-money-6771667-5639728.png?f=webp',
-      spacing_below: small, background: '', horizontal_align: center}
-    type: Image
-    layout_properties: {x: 973.2874877937138, y: 1.600006103515625, width: 384.9875183105469}
+    layout_properties: {x: 733.8499877937138, y: 41.15000610426068, width: 555.7999877929688}
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: white,
+      visible: true, text: No hidden fees. No fake promises., font_size: 20, font: '',
+      spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+      background: '', bold: false, underline: false, icon: ''}
+    name: label_24
+    layout_properties: {x: 737.6375244148076, y: 397.6875, width: 318}
+  - type: Button
+    properties: {role: filled-button, align: center, tooltip: '', border: '', enabled: true,
+      foreground: white, visible: true, text: Start Investing, font_size: null, font: '',
+      spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+      background: '#05264d', bold: false, underline: false, icon: ''}
+    name: button_3
+    layout_properties: {x: 723.4375122077763, y: 333.9750099182129, width: 159}
 - name: spacer_7
   properties: {height: 32}
   type: Spacer
