@@ -3,6 +3,8 @@ from anvil import *
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
+import re
+from datetime import datetime, timedelta
 
 class star_1_borrower_registration_form_3_marital_married(star_1_borrower_registration_form_3_marital_marriedTemplate):
     selected_radio_button = None
@@ -20,7 +22,7 @@ class star_1_borrower_registration_form_3_marital_married(star_1_borrower_regist
             self.button_1.visible = True
         else:
             self.hide_spouse_controls()
-            self.radio_button_3.visible = False
+            self.button_1_3.visible = False
             self.button_1.visible = True
 
         options = app_tables.fin_spouse_profession.search()
@@ -66,8 +68,12 @@ class star_1_borrower_registration_form_3_marital_married(star_1_borrower_regist
     def button_1_click(self, **event_args):
         open_form('borrower_registration_form.star_1_borrower_registration_form_3_marital', user_id=self.userId)
 
-    def radio_button_1_clicked(self, **event_args):
+    def button_1_1_click(self, **event_args):
         """This method is called when this radio button is selected"""
+        self.button_1_1.background = '#0a2346'
+        self.button_1_2.background = '#939191'
+        self.button_1_3.background = '#939191'
+        self.button_1_4.background = '#939191'
         self.grid_panel_1.visible = True
         self.grid_panel_2.visible = False
         self.grid_panel_3.visible = False
@@ -83,8 +89,12 @@ class star_1_borrower_registration_form_3_marital_married(star_1_borrower_regist
         self.prev_4.visible = False
         self.button_1.visible = False
 
-    def radio_button_2_clicked(self, **event_args):
+    def button_1_2_click(self, **event_args):
         """This method is called when this radio button is selected"""
+        self.button_1_1.background = '#939191'
+        self.button_1_2.background = '#0a2346'
+        self.button_1_3.background = '#939191'
+        self.button_1_4.background = '#939191'
         self.grid_panel_1.visible = False
         self.grid_panel_2.visible = True
         self.grid_panel_3.visible = False
@@ -99,7 +109,12 @@ class star_1_borrower_registration_form_3_marital_married(star_1_borrower_regist
         self.prev_3.visible = False
         self.prev_4.visible = False
         self.button_1.visible = False
-    def radio_button_3_clicked(self, **event_args):
+      
+    def button_1_3_click(self, **event_args):
+        self.button_1_1.background = '#939191'
+        self.button_1_2.background = '#939191'
+        self.button_1_3.background = '#0a2346'
+        self.button_1_4.background = '#939191'
         self.grid_panel_1.visible = False
         self.grid_panel_2.visible = False
         self.grid_panel_3.visible = True
@@ -114,27 +129,13 @@ class star_1_borrower_registration_form_3_marital_married(star_1_borrower_regist
         self.prev_3.visible = True
         self.prev_4.visible = False
         self.button_1.visible = False
-    # def radio_button_3_clicked(self, **event_args):
-    #     """This method is called when this radio button is selected"""
-    #     if self.is_married():
-    #         self.grid_panel_1.visible = False
-    #         self.grid_panel_2.visible = False
-    #         self.grid_panel_3.visible = True
-    #         self.grid_panel_4.visible = False
-    #         self.button_submit.visible = False
-    #         self.button_submit_copy.visible = False
-    #         self.button_submit_copy_2.visible = True
-    #         self.button_submit_copy_3.visible = False
-    #         self.selected_radio_button = "spouse"
-    #         self.prev_1.visible = False
-    #         self.prev_2.visible = False
-    #         self.prev_3.visible = True
-    #         self.prev_4.visible = False
-    #         self.button_1.visible = False
-
-
-    def radio_button_4_clicked(self, **event_args):
+    
+    def button_1_4_click(self, **event_args):
         """This method is called when this radio button is selected"""
+        self.button_1_1.background = '#939191'
+        self.button_1_2.background = '#939191'
+        self.button_1_3.background = '#939191'
+        self.button_1_4.background = '#0a2346'
         self.grid_panel_1.visible = False
         self.grid_panel_2.visible = False
         self.grid_panel_3.visible = False
@@ -173,9 +174,6 @@ class star_1_borrower_registration_form_3_marital_married(star_1_borrower_regist
         spouse_mbl_no_text = self.spouse_mbl_no_text.text
         spouse_mbl_no = int(spouse_mbl_no_text) if spouse_mbl_no_text.strip().isdigit() else None
 
-        # options = app_tables.fin_spouse_profession.search()
-        # option_strings = [str(option['spouse_profession']) for option in options]
-        # self.drop_down_1.items = option_strings
         spouse_profession = self.drop_down_1.selected_value
         spouse_company = self.spouse_companyname_text.text
         anual_earning = self.annual_earning_text.text
@@ -214,7 +212,7 @@ class star_1_borrower_registration_form_3_marital_married(star_1_borrower_regist
             'related_person_name': related_name,
             'related_person_mob': related_mob,
             'related_person_profession': related_profession,
-            'another_person': self.selected_radio_button  # Store the selected radio button's name
+            'another_person': self.selected_radio_button 
         }
 
     def button_submit_click(self, **event_args):
@@ -229,8 +227,21 @@ class star_1_borrower_registration_form_3_marital_married(star_1_borrower_regist
             guarantor_mobile_no=details['father_mbl_no'],
             guarantor_profession=details['father_profession'],
             guarantor_address=details['father_address'],
-            another_person=details['another_person']  # Store the selected radio button's name
+            another_person=details['another_person']  
         )
+
+        if not re.match(r'^[A-Za-z\s]+$', details['father_name']):
+            alert("Enter a valid full name!", title="Error")
+            return
+        elif not details['father_dob'] or details['father_dob'] > datetime.now().date():
+            alert("Enter a valid date of birth!", title="Error")
+            return
+        elif datetime.now().date() - details['father_dob'] < timedelta(days=365 * 18):
+            alert("You must be at least 18 years old!", title="Error")
+            return
+        elif not re.match(r'^\d{10}$', details['father_mbl_no']):
+            self.mbl_label_1.text = 'Enter valid mobile no'
+
         if not details['father_name'] or not details['father_dob'] or not details['father_mbl_no'] or not details['father_profession'] or not details['father_address']:
           Notification("Please fill all the required fields").show()
         else:
