@@ -383,7 +383,7 @@ def transfer_money_1(lender_id, borrower_id, transfer_amount):
             customer_id=borrower_id,
             wallet_id=lender_wallet_row['wallet_id'],
             transaction_id=lender_transaction_id,
-            amount=transfer_amount,   # Positive amount for addition to borrower's wallet
+            amount= -  transfer_amount,   # Positive amount for addition to borrower's wallet
             transaction_type='received from',
             transaction_time_stamp=transaction_timestamp,
             status='success',
@@ -417,7 +417,7 @@ def transfer_money_1(lender_id, borrower_id, transfer_amount):
         )
         app_tables.fin_wallet_transactions.add_row(
             transaction_id=lender_transaction_id,
-            amount=transfer_amount,
+            amount= -  transfer_amount,
             transaction_type='received from',
             transaction_time_stamp=datetime.now(),  
             status='fail',
