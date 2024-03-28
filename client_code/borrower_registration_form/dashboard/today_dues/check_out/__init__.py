@@ -42,12 +42,14 @@ class check_out(check_outTemplate):
         elif emi_payment_type == 'Three Months':
             # Calculate EMI amount for 3 months
             processing_fee = processing_fee * 3
-            emi = (loan_amount * monthly_interest_rate * (1 + monthly_interest_rate) ** 3) / ((1 + monthly_interest_rate) ** 3 - 1)
+            emi = (loan_amount * monthly_interest_rate * ((1 + monthly_interest_rate) ** (tenure ))) / (((1 + monthly_interest_rate) ** (tenure)) - 1)
+            emi*=3
             total_emi = emi + extension_amount + processing_fee # Add extension amount to 3-month EMI
         elif emi_payment_type == 'Six Months':
             processing_fee = processing_fee * 6
             # Calculate EMI amount for 6 months
-            emi = (loan_amount * monthly_interest_rate * (1 + monthly_interest_rate) ** 6) / ((1 + monthly_interest_rate) ** 6 - 1)
+            emi = (loan_amount * monthly_interest_rate * ((1 + monthly_interest_rate) ** (tenure ))) / (((1 + monthly_interest_rate) ** (tenure)) - 1)
+            emi*=6
             total_emi = emi + extension_amount+ processing_fee  # Add extension amount to 6-month EMI
         else:
             # Default to monthly calculation
