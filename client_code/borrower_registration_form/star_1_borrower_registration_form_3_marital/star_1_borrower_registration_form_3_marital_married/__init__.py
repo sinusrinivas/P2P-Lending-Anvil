@@ -254,45 +254,44 @@ class star_1_borrower_registration_form_3_marital_married(star_1_borrower_regist
           open_form('borrower_registration_form.star_1_borrower_registration_form_4_loan', user_id=self.userId)
 
     def button_submit_copy_click(self, **event_args):
-        """This method is called when the button is clicked"""
-        details = self.collect_details()
-      
-        existing_rows = app_tables.fin_guarantor_details.search(customer_id=self.userId)
-        if existing_rows:
-          existing_row = existing_rows[0]
-          existing_row.guarantor_name = details['mother_name']
-          existing_row.guarantor_date_of_birth = details['mother_dob']
-          existing_row.guarantor_mobile_no = details['mother_mbl_no']
-          existing_row.guarantor_profession = details['mother_profession']
-          existing_row.guarantor_address = details['mother_address']
-          existing_row.another_person = details['another_person']
-          existing_row.update()
-        else:
-           app_tables.fin_guarantor_details.add_row(
-             customer_id=self.userId,
-             guarantor_name=details['mother_name'],
-             guarantor_date_of_birth=details['mother_dob'],
-             guarantor_mobile_no=details['mother_mbl_no'],
-             guarantor_profession=details['mother_profession'],
-             guarantor_address=details['mother_address'],
-             another_person=details['another_person']
-           )
-        if not re.match(r'^[A-Za-z\s]+$', details['mother_name']):
-            alert("Enter a valid full name!", title="Error")
-            return
-        elif not details['mother_dob'] or details['mother_dob'] > datetime.now().date():
-            alert("Enter a valid date of birth!", title="Error")
-            return
-        elif datetime.now().date() - details['mother_dob'] < timedelta(days=365 * 18):
-            alert("You must be at least 18 years old!", title="Error")
-            return
-        elif not re.match(r'^\d{10}$', str(details['mother_mbl_no'])):
-            self.mbl_label_1.text = 'Enter valid mobile no'
+      """This method is called when the button is clicked"""
+      details = self.collect_details()
+  
+      existing_rows = app_tables.fin_guarantor_details.search(customer_id=self.userId)
+    
+      if existing_rows:
+         existing_row = existing_rows[0]
+         existing_row.guarantor_name = details['mother_name']
+         existing_row.guarantor_date_of_birth = details['mother_dob']
+         existing_row.guarantor_mobile_no = details['mother_mbl_no']
+         existing_row.guarantor_profession = details['mother_profession']
+         existing_row.guarantor_address = details['mother_address']
+         existing_row.another_person = details['another_person']
+         existing_row.update()
+      else:
+         app_tables.fin_guarantor_details.add_row(
+            customer_id=self.userId,
+            guarantor_name=details['mother_name'],
+            guarantor_date_of_birth=details['mother_dob'],
+            guarantor_mobile_no=details['mother_mbl_no'],
+            guarantor_profession=details['mother_profession'],
+            guarantor_address=details['mother_address'],
+            another_person=details['another_person']
+         )
+        
+      if not re.match(r'^[A-Za-z\s]+$', details['mother_name']):
+        Notification("Enter a valid full name!").show()
+      elif not details['mother_dob'] or details['mother_dob'] > datetime.now().date():
+        Notification("Enter a valid date of birth!").show()
+      elif datetime.now().date() - details['mother_dob'] < timedelta(days=365 * 18):
+        Notification("You must be at least 18 years old!")
+      elif not re.match(r'^\d{10}$', str(details['mother_mbl_no'])):
+        self.mbl_label_1.text = 'Enter valid mobile no'
 
-        if not all(details[key] for key in ['mother_name', 'mother_dob', 'mother_mbl_no', 'mother_profession', 'mother_address']):
-          Notification("Please fill all the required fields").show()
-        else:
-          open_form('borrower_registration_form.star_1_borrower_registration_form_4_loan',user_id=self.userId)
+      if not all(details[key] for key in ['mother_name', 'mother_dob', 'mother_mbl_no', 'mother_profession', 'mother_address']):
+        Notification("Please fill all the required fields").show()
+      else:
+        open_form('borrower_registration_form.star_1_borrower_registration_form_4_loan', user_id=self.userId)
 
     def button_submit_copy_2_click(self, **event_args):
         """This method is called when the button is clicked"""
