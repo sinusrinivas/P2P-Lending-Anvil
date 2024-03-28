@@ -58,7 +58,7 @@ components:
     event_bindings: {clicked: radio_button_4_clicked}
 - name: button_1
   properties: {role: elevated-button, align: center, tooltip: '', border: '', enabled: true,
-    foreground: 'theme:On Primary', visible: true, text: prev, font_size: null, font: '',
+    foreground: 'theme:On Primary', visible: true, text: Prev, font_size: null, font: '',
     spacing_above: small, icon_align: left, spacing_below: small, italic: false, background: '#0b2547',
     bold: true, underline: false, icon: 'fa:angle-double-left'}
   type: Button
@@ -157,7 +157,7 @@ components:
     layout_properties: {row: CTDQTO, width_xs: 5, col_xs: 6}
 - name: prev_1
   properties: {role: elevated-button, align: right, tooltip: '', border: '', enabled: true,
-    foreground: 'theme:On Primary', visible: false, text: prev, font_size: null, font: '',
+    foreground: 'theme:On Primary', visible: false, text: Prev, font_size: null, font: '',
     spacing_above: small, icon_align: left, spacing_below: small, italic: false, background: '#0b2547',
     bold: true, underline: false, icon: 'fa:angle-double-left'}
   type: Button
@@ -264,7 +264,7 @@ components:
     layout_properties: {row: WPPSLK, width_xs: 5, col_xs: 6}
 - name: prev_2
   properties: {role: elevated-button, align: right, tooltip: '', border: '', enabled: true,
-    foreground: 'theme:On Primary', visible: false, text: prev, font_size: null, font: '',
+    foreground: 'theme:On Primary', visible: false, text: Prev, font_size: null, font: '',
     spacing_above: small, icon_align: left, spacing_below: small, italic: false, background: '#0b2547',
     bold: true, underline: false, icon: 'fa:angle-double-left'}
   type: Button
@@ -405,7 +405,7 @@ components:
     layout_properties: {row: HXYACP, width_xs: 5, col_xs: 6}
 - name: prev_3
   properties: {role: elevated-button, align: right, tooltip: '', border: '', enabled: true,
-    foreground: 'theme:On Primary', visible: false, text: prev, font_size: null, font: '',
+    foreground: 'theme:On Primary', visible: false, text: Prev, font_size: null, font: '',
     spacing_above: small, icon_align: left, spacing_below: small, italic: false, background: '#0b2547',
     bold: true, underline: false, icon: 'fa:angle-double-left'}
   type: Button
@@ -514,7 +514,7 @@ components:
     layout_properties: {row: HBHHFF, width_xs: 5, col_xs: 6}
 - name: prev_4
   properties: {role: elevated-button, align: right, tooltip: '', border: '', enabled: true,
-    foreground: 'theme:On Primary', visible: false, text: prev, font_size: null, font: '',
+    foreground: 'theme:On Primary', visible: false, text: Prev, font_size: null, font: '',
     spacing_above: small, icon_align: left, spacing_below: small, italic: false, background: '#0b2547',
     bold: true, underline: false, icon: 'fa:angle-double-left'}
   type: Button
