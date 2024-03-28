@@ -10,6 +10,8 @@ from anvil.tables import app_tables
 from datetime import datetime, timedelta
 from .. import main_form_module as main_form_module
 from datetime import date
+from ...Module1 import transfer_money_1
+
 
 class check_out(check_outTemplate):
     def __init__(self, selected_row, **properties):
@@ -212,6 +214,9 @@ class check_out(check_outTemplate):
       
         total_emi_amount = float(self.total_emi_amount_label.text)  # Fetch total EMI amount including extra payment
         borrower_wallet = app_tables.fin_wallet.get(customer_id=self.user_id)
+        print(self.selected_row['lender_customer_id'])
+        print(self.selected_row['borrower_customer_id'])
+        # transfer_money(lender_id = self.selected_row['lender_customer_id'], borrower_id=self.selected_row['borrower_customer_id'], transfer_amount=total_emi_amount) 
 
         if borrower_wallet is not None:
             wallet_balance = borrower_wallet['wallet_amount']
@@ -223,6 +228,8 @@ class check_out(check_outTemplate):
 
                 # Retrieve lender's wallet based on lender_customer_id
                 lender_wallet = app_tables.fin_wallet.get(customer_id=self.selected_row['lender_customer_id'])
+                transfer_money_1(lender_id = self.selected_row['lender_customer_id'], borrower_id=self.selected_row['borrower_customer_id'], transfer_amount=total_emi_amount) 
+
                 if lender_wallet is not None:
                     lender_balance = lender_wallet['wallet_amount']
 
