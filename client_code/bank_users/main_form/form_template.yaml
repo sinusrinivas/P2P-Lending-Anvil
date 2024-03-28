@@ -69,7 +69,7 @@ components:
     properties: {text: Sign Up, role: outlined-button, background: '#013065', foreground: white,
       bold: true, align: left}
     type: Button
-    layout_properties: {grid_position: 'SLVHIZ,OBTHYL'}
+    layout_properties: {grid_position: 'QIQAXY,ILVFPK'}
     event_bindings: {click: button_2_click}
   - name: link_7
     properties: {text: Invest Now, foreground: black, align: left, font_size: 16,
