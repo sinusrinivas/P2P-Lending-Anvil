@@ -128,7 +128,7 @@ class edit_form(edit_formTemplate):
       # self.ifsc_code.append(i['ifsc_code'])
       self.salary_type.append(i['salary_type'])
       # self.select_bank.append(i['select_bank'])
-      self.net_bank.append(i['net_bank'])
+      # self.net_bank.append(i['net_bank'])
       self.father_name.append(i['father_name'])
       self.father_age.append(i['father_age'])
       self.mother_name.append(i['mother_name'])
@@ -189,7 +189,7 @@ class edit_form(edit_formTemplate):
       # self.text_box_44.text = self.ifsc_code[c]
       self.text_box_45.text = self.salary_type[c]
       # self.text_box_46.text = self.select_bank[c]
-      self.text_box_47.text = self.net_bank[c]
+      # self.text_box_47.text = self.net_bank[c]
       self.text_box_48.text = self.father_name[c]
       self.text_box_49.text = self.father_age[c]
       self.text_box_50.text = self.mother_name[c]
@@ -261,7 +261,7 @@ class edit_form(edit_formTemplate):
       # data[a]['ifsc_code'] = self.text_box_44.text
       data[a]['salary_type'] = self.text_box_45.text
       # data[a]['select_bank'] = self.text_box_46.text
-      data[a]['net_bank'] = self.text_box_47.text
+      # data[a]['net_bank'] = self.text_box_47.text
       data[a]['father_name'] = self.text_box_48.text
       data[a]['father_age'] = self.text_box_49.text
       data[a]['mother_name'] = self.text_box_50.text
