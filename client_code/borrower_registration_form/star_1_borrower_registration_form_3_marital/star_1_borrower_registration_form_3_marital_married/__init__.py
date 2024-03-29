@@ -262,21 +262,20 @@ class star_1_borrower_registration_form_3_marital_married(star_1_borrower_regist
       Args:
       guarantor_row (object): The existing guarantor row object.
       details (dict): The guarantor details dictionary.
-      guarantor_type (str): The type of guarantor.
-  """
-  mapping = {
-      "father": ["guarantor_name", "guarantor_date_of_birth", "guarantor_mobile_no",
-                 "guarantor_profession", "guarantor_address"],
-      "mother": ["guarantor_name", "guarantor_date_of_birth", "guarantor_mobile_no",
-                 "guarantor_profession", "guarantor_address"],
-      "spouse": ["guarantor_name", "guarantor_date_of_birth", "guarantor_mobile_no",
-                 "guarantor_profession", "guarantor_company_name", "guarantor_annual_earning"],
-      "related_person": ["guarantor_name", "guarantor_date_of_birth", "guarantor_mobile_no",
-                          "guarantor_profession", "guarantor_person_relation"],
-  }
-  # Update relevant fields based on the mapping
-  for field in mapping[guarantor_type]:
-    setattr(guarantor_row, field, details[field])
+      guarantor_type (str): The type of guarantor."""
+      mapping = {
+         "father": ["guarantor_name", "guarantor_date_of_birth", "guarantor_mobile_no",
+                    "guarantor_profession", "guarantor_address"],
+         "mother": ["guarantor_name", "guarantor_date_of_birth", "guarantor_mobile_no",
+                    "guarantor_profession", "guarantor_address"],
+         "spouse": ["guarantor_name", "guarantor_date_of_birth", "guarantor_mobile_no",
+                    "guarantor_profession", "guarantor_company_name", "guarantor_annual_earning"],
+         "related_person": ["guarantor_name", "guarantor_date_of_birth", "guarantor_mobile_no",
+                            "guarantor_profession", "guarantor_person_relation"],
+      }
+             
+      for field in mapping[guarantor_type]:
+         setattr(guarantor_row, field, details[field])
 
     # def button_submit_click(self, **event_args):
     #    details = self.collect_details()
