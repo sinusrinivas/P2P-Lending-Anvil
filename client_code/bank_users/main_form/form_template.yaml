@@ -1,7 +1,7 @@
 container:
   type: ColumnPanel
   properties: {col_widths: '{"UXWIME":15,"SYNJVB":45,"NSBNDL":45,"SZJXCQ":15,"HJXPJG":64,"ASUGOE":5,"GKGMVX":5,"GZEPAB":55}',
-    spacing_below: none}
+    spacing_below: none, background: ''}
 components:
 - name: image_1_copy_copy_1
   properties: {role: null, vertical_align: center, height: 43.59999084472656, tooltip: '',
@@ -139,7 +139,7 @@ components:
   type: Spacer
   layout_properties: {grid_position: 'DRLNYG,CDSYSD'}
 - name: xy_panel_2
-  properties: {height: 79}
+  properties: {height: 79, width: 1388}
   type: XYPanel
   layout_properties: {grid_position: 'UGSXAM,ELGEVC'}
   components:
@@ -190,7 +190,7 @@ components:
   properties: {role: null, align: left, tooltip: '', border: '', foreground: black,
     visible: true, text: 'What is Peer to Peer Lending?
 
-      ', font_size: 25, font: a, spacing_above: small, icon_align: left, spacing_below: small,
+      ', font_size: 30, font: a, spacing_above: small, icon_align: left, spacing_below: small,
     italic: false, background: '', bold: true, underline: false, icon: ''}
   type: Label
   layout_properties: {grid_position: 'HQITGR,VLAOWI RYNAYV,PTBILZ'}
@@ -203,7 +203,7 @@ components:
   layout_properties: {grid_position: 'HQITGR,VLAOWI SPIUIS,ROXSKN'}
 - type: Label
   properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
-    text: 'Is Peer to peer lending safe?', font_size: 25, font: a, spacing_above: small,
+    text: 'Is Peer to peer lending safe?', font_size: 30, font: a, spacing_above: small,
     icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
     underline: false, icon: ''}
   name: label_14
@@ -229,7 +229,7 @@ components:
   type: Spacer
   layout_properties: {grid_position: 'CZXDIW,HTBLRL'}
 - name: label_8
-  properties: {text: How it works​, role: headline, font_size: 25, align: center,
+  properties: {text: How it works​, role: headline, font_size: 30, align: center,
     bold: true, font: a}
   type: Label
   layout_properties: {grid_position: 'LNLPBU,ZLMQPF'}
@@ -285,11 +285,11 @@ components:
   layout_properties: {grid_position: 'LCUPAG,KHUANQ'}
 - name: label_15
   properties: {text: 'Why invest in P2P lending with Kotak?', align: center, font: a,
-    font_size: 22}
+    font_size: 25}
   type: Label
   layout_properties: {grid_position: 'GERKWX,DKAZVL'}
 - name: label_16
-  properties: {text: Investment opportunities crafted for best returns, font_size: 25,
+  properties: {text: Investment opportunities crafted for best returns, font_size: 30,
     font: a, bold: true, align: center}
   type: Label
   layout_properties: {grid_position: 'RRMBIW,UUROLK'}
@@ -370,14 +370,14 @@ components:
     - name: label_1_copy_1
       properties: {role: null, align: center, tooltip: '', border: '', foreground: white,
         visible: true, text: "   Personal Loan (P2P Loan) at Interest \n   Rates Starting\
-          \ from 12%", font_size: 22, font: '', spacing_above: small, icon_align: left,
+          \ from 12%", font_size: 30, font: '', spacing_above: small, icon_align: left,
         spacing_below: small, italic: false, background: '', bold: true, underline: false,
         icon: ''}
       type: Label
       layout_properties: {}
     - name: outlined_button_1_copy_1
       properties: {role: tonal-button, align: center, tooltip: '', border: '', enabled: true,
-        foreground: Black, visible: true, text: 'Apply now                 ', font_size: 15,
+        foreground: Black, visible: true, text: 'Apply now                 ', font_size: 20,
         font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
         background: white, bold: true, underline: false, icon: ''}
       type: Button
@@ -387,7 +387,7 @@ components:
     properties: {role: null, align: center, tooltip: '', border: '', foreground: white,
       visible: true, text: 'Total Loan Amount Applied by Borrowers:
 
-        ₹ 13,27,57,65,146.44', font_size: 20, font: a, spacing_above: small, icon_align: left,
+        ₹ 13,27,57,65,146.44', font_size: 25, font: a, spacing_above: small, icon_align: left,
       spacing_below: small, italic: false, background: '', bold: false, underline: false,
       icon: ''}
     type: Label
@@ -406,14 +406,14 @@ components:
     - name: label_2_copy_1
       properties: {role: null, align: center, tooltip: '', border: '', foreground: white,
         visible: true, text: "   High Returns for Investors Earn good \n   returns",
-        font_size: 22, font: '', spacing_above: small, icon_align: left, spacing_below: small,
+        font_size: 30, font: '', spacing_above: small, icon_align: left, spacing_below: small,
         italic: false, background: '', bold: true, underline: false, icon: ''}
       type: Label
       layout_properties: {}
     - name: outlined_button_2_copy_1
       properties: {role: elevated-button, align: center, tooltip: '', border: '',
         enabled: true, foreground: Black, visible: true, text: 'Invest Now               ',
-        font_size: 15, font: '', spacing_above: small, icon_align: left, spacing_below: small,
+        font_size: 20, font: '', spacing_above: small, icon_align: left, spacing_below: small,
         italic: false, background: white, bold: true, underline: false, icon: ''}
       type: Button
       layout_properties: {}
@@ -427,7 +427,7 @@ components:
       properties: {role: null, align: center, tooltip: '', border: '', foreground: white,
         visible: true, text: 'Total Investment Commitment from Investors:
 
-          ₹ 3,20,97,64,407.80', font_size: 20, font: a, spacing_above: small, icon_align: left,
+          ₹ 3,20,97,64,407.80', font_size: 25, font: a, spacing_above: small, icon_align: left,
         spacing_below: small, italic: false, background: '', bold: false, underline: false,
         icon: ''}
       type: Label
@@ -437,12 +437,12 @@ components:
   type: Spacer
   layout_properties: {grid_position: 'DEVKVL,ACLHUB'}
 - name: label_23
-  properties: {text: FAQ, font_size: 25, font: a, bold: true}
+  properties: {text: FAQ, font_size: 30, font: a, bold: true}
   type: Label
   layout_properties: {grid_position: 'NLJPGR,IKJPKV'}
 - name: button_1
-  properties: {text: 'What are the benefits of using P2P lending software?                                                      +',
-    foreground: black, align: left, font_size: 22, role: null, bold: true, font: a}
+  properties: {text: 'What are the benefits of using P2P lending software?                                               +',
+    foreground: black, align: left, font_size: 26, role: null, bold: true, font: a}
   type: Button
   layout_properties: {grid_position: 'EIRRMF,JRRQBH'}
   event_bindings: {click: button_1_click}
@@ -477,12 +477,12 @@ components:
 
       8. Built-in reports and dashboards powered by Amazon Quick Sight for data-driven
       decisions, enabling lenders to make informed decisions based on the platform’s
-      data.', font_size: 18, visible: false}
+      data.', font_size: 20, visible: false, background: ''}
   type: RichText
   layout_properties: {grid_position: 'RFIPML,GZEPAB'}
 - name: button_1_copy
   properties: {text: 'What types of loans can be offered through peer-to-peer marketplace
-      software?         +', foreground: black, align: left, font_size: 22, role: null,
+      software?        +', foreground: black, align: left, font_size: 25, role: null,
     font: a, bold: true}
   type: Button
   layout_properties: {grid_position: 'DAMLNZ,ITXSQB'}
@@ -496,14 +496,14 @@ components:
       and commercial loans. These can include personal loans, business loans, education
       loans, home improvement loans, debt consolidation loans, and more. You are free
       to add specific loan types on a P2P lending platform depending on the platform’s
-      focus and target audience.', font_size: 18, visible: false}
+      focus and target audience.', font_size: 20, visible: false}
   type: RichText
   layout_properties: {grid_position: 'CVDGOO,HJXPJG'}
 - name: label_2_copy
   properties: {role: null, align: center, tooltip: '', border: '', foreground: black,
     visible: true, text: 'Hear from our investors
 
-      ', font_size: 25, font: a, spacing_above: small, icon_align: left, spacing_below: small,
+      ', font_size: 30, font: a, spacing_above: small, icon_align: left, spacing_below: small,
     italic: false, background: '', bold: true, underline: false, icon: ''}
   type: Label
   layout_properties: {grid_position: 'LGELET,VOMYRJ'}
@@ -513,17 +513,20 @@ components:
   layout_properties: {grid_position: 'UUAAMD,PNSHYI'}
   components:
   - name: image_1
-    properties: {height: 291, source: _/theme/Screenshot 2024-02-19 152401.png}
+    properties: {height: 291, source: _/theme/Screenshot 2024-02-19 152401.png, display_mode: shrink_to_fit,
+      background: 'theme:On Primary'}
     type: Image
     layout_properties: {grid_position: 'KCBRJR,FZDYJO'}
-  - name: image_1_copy
-    properties: {height: 291, source: _/theme/Screenshot 2024-02-19 152705.png}
-    type: Image
-    layout_properties: {grid_position: 'KCBRJR,IARGEJ'}
-  - name: image_1_copy_2
-    properties: {height: 291, source: _/theme/Screenshot 2024-02-19 152812.png}
-    type: Image
-    layout_properties: {grid_position: 'KCBRJR,ZVJKGU'}
+- name: image_1_copy_2
+  properties: {height: 254, source: _/theme/Screenshot 2024-02-19 152812.png, display_mode: shrink_to_fit,
+    horizontal_align: center, spacing_above: large, background: 'theme:On Primary'}
+  type: Image
+  layout_properties: {grid_position: 'UUAAMD,EPLFYI'}
+- name: image_1_copy
+  properties: {height: 291, source: _/theme/Screenshot 2024-02-19 152705.png, display_mode: shrink_to_fit,
+    background: 'theme:On Primary'}
+  type: Image
+  layout_properties: {grid_position: 'UUAAMD,XEMJBS'}
 - type: Spacer
   properties: {height: 40}
   name: spacer_5
