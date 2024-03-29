@@ -1,6 +1,6 @@
 container:
   type: ColumnPanel
-  properties: {col_widths: '{"UXWIME":15,"SYNJVB":45,"NSBNDL":45,"SZJXCQ":15,"HJXPJG":64,"ASUGOE":5,"GKGMVX":5,"GZEPAB":55,"YXEJAJ":5,"BRNMJF":55,"YCDQDS":5,"EGYCFU":55}',
+  properties: {col_widths: '{"UXWIME":15,"SYNJVB":45,"NSBNDL":30,"SZJXCQ":10,"HJXPJG":64,"ASUGOE":5,"GKGMVX":5,"GZEPAB":55,"YXEJAJ":5,"BRNMJF":55,"YCDQDS":5,"EGYCFU":55,"WRNWWZ":10,"JZUUWF":20,"RDWIZR":20,"AMTGYB":20}',
     spacing_below: none, background: ''}
 components:
 - name: image_1_copy_copy_1
@@ -60,28 +60,24 @@ components:
   type: Button
   event_bindings: {click: login_signup_button_click}
   layout_properties: {grid_position: 'IFJNGB,SYNJVB UAEYQF,SZJXCQ'}
-- type: ColumnPanel
-  properties: {col_widths: '{}'}
-  name: column_panel_2
-  layout_properties: {grid_position: 'IFJNGB,EUNVEV', full_width_row: true}
+- name: button_2
+  properties: {text: Sign Up, role: outlined-button, background: '#013065', foreground: white,
+    bold: true, align: left}
+  type: Button
+  layout_properties: {grid_position: 'IFJNGB,SYNJVB UAEYQF,WRNWWZ CQIBAM,RUCCXK'}
+  event_bindings: {click: button_2_click}
+- name: link_7
+  properties: {text: Invest Now, foreground: black, align: left, font_size: 16, visible: false,
+    background: 'theme:On Primary', col_widths: '{}'}
+  type: Link
+  layout_properties: {grid_position: 'IFJNGB,SYNJVB UAEYQF,WRNWWZ KAQRQU,HANEYF'}
+  event_bindings: {click: link_7_click}
   components:
-  - name: button_2
-    properties: {text: Sign Up, role: outlined-button, background: '#013065', foreground: white,
-      bold: true, align: left}
-    type: Button
-    layout_properties: {grid_position: 'QIQAXY,ILVFPK'}
-    event_bindings: {click: button_2_click}
-  - name: link_7
-    properties: {text: Invest Now, foreground: black, align: left, font_size: 16,
-      visible: false, background: 'theme:On Primary'}
-    type: Link
-    layout_properties: {grid_position: 'VXNYRM,RXGLCT'}
-    event_bindings: {click: link_7_click}
   - name: link_8
     properties: {font_size: 16, text: Apply for a Loan, foreground: black, visible: false,
       background: 'theme:On Primary'}
     type: Link
-    layout_properties: {grid_position: 'PVTGZZ,GLYHMT'}
+    layout_properties: {grid_position: 'VLERJJ,ZFSLGN', full_width_row: true}
     event_bindings: {click: link_8_click}
 - name: spacer_1
   properties: {height: 4.8000030517578125}
@@ -139,9 +135,9 @@ components:
   type: Spacer
   layout_properties: {grid_position: 'DRLNYG,CDSYSD'}
 - name: xy_panel_2
-  properties: {height: 79, width: 1388}
+  properties: {height: 86.60000610351562, width: 1388}
   type: XYPanel
-  layout_properties: {grid_position: 'UGSXAM,ELGEVC'}
+  layout_properties: {grid_position: 'UGSXAM,ELGEVC', full_width_row: false}
   components:
   - name: image_3_copy
     properties: {height: 80.5999755859375, source: 'https://static.vecteezy.com/system/resources/previews/026/513/630/non_2x/data-analytics-logo-design-growth-arrow-logo-design-for-data-finance-investment-vector.jpg'}
@@ -228,10 +224,6 @@ components:
   type: XYPanel
   layout_properties: {grid_position: 'UKAIXF,QSQQHQ', full_width_row: true}
   components:
-  - type: Label
-    properties: {text: Earn monthly interest, font_size: 16, align: center, foreground: white}
-    name: label_3
-    layout_properties: {x: 35.662506103515625, y: 26.42498779296875, width: 246.20001220703125}
   - type: Image
     properties: {source: _/theme/mip-monthly-income-p2p-lending.webp, height: 265}
     name: image_13
@@ -245,8 +237,12 @@ components:
       foreground: white}
     name: label_26
     layout_properties: {x: 10, y: 83.48751220703127, width: 285.7999755859375}
+  - type: Label
+    properties: {text: Earn monthly interest, font_size: 16, align: center, foreground: white}
+    name: label_3
+    layout_properties: {x: 29.662506103515625, y: 23.41253662109375, width: 246.2}
 - name: xy_panel_5
-  properties: {height: 494.20001220703125, background: '#094586', role: elevated-card}
+  properties: {height: 488.79998779296875, background: '#094586', role: elevated-card}
   type: XYPanel
   layout_properties: {grid_position: 'UKAIXF,HIVORL', full_width_row: true, row_background: ''}
   components:
@@ -269,9 +265,73 @@ components:
     name: image_17
     layout_properties: {x: 0, y: 398.79999999999995, width: 306.32547558593745}
 - name: spacer_3
-  properties: {height: 25.272705078125}
+  properties: {height: 50}
   type: Spacer
   layout_properties: {grid_position: 'CZXDIW,HTBLRL'}
+- name: label_30
+  properties: {text: Why you should invest through Kotak, bold: true, align: center,
+    font_size: 30}
+  type: Label
+  layout_properties: {grid_position: 'ZLEBRM,CWWZBJ'}
+- name: spacer_16
+  properties: {height: 32}
+  type: Spacer
+  layout_properties: {grid_position: 'IVNNMQ,PTSXGH'}
+- name: label_31
+  properties: {text: 'With kotak, you can lend capital to borrowers and earn fixed
+      returns on your investments, invest across multiple products and earn up to
+      15.4% in ROI and for flexible tenure from just 3 months to 36 months and create
+      a seamless passive income with regular monthly repayments.', font_size: 25,
+    align: center}
+  type: Label
+  layout_properties: {grid_position: 'HZVBYQ,BRHALK'}
+- name: spacer_15
+  properties: {height: 32}
+  type: Spacer
+  layout_properties: {grid_position: 'FVLWUO,JEWRPZ'}
+- name: xy_panel_6
+  properties: {height: 261.79998779296875}
+  type: XYPanel
+  layout_properties: {grid_position: 'ELJQFW,JZUUWF'}
+  components:
+  - type: Image
+    properties: {height: 112}
+    name: image_18
+    layout_properties: {x: 10, y: 16.3375244140625, width: 200}
+  - type: Label
+    properties: {}
+    name: label_32
+    layout_properties: {x: 31, y: 183.3375244140625, width: 160}
+- name: xy_panel_7
+  properties: {height: 258.1999816894531}
+  type: XYPanel
+  layout_properties: {grid_position: 'ELJQFW,RDWIZR'}
+  components:
+  - type: Image
+    properties: {height: 116}
+    name: image_19
+    layout_properties: {x: 10, y: 15.3375244140625, width: 200}
+  - type: Label
+    properties: {}
+    name: label_33
+    layout_properties: {x: 28.662506103515625, y: 184.3375244140625, width: 160}
+- name: xy_panel_8
+  properties: {height: 254.79998779296875}
+  type: XYPanel
+  layout_properties: {grid_position: 'ELJQFW,AMTGYB'}
+  components:
+  - type: Image
+    properties: {height: 113}
+    name: image_20
+    layout_properties: {x: 10, y: 16.3375244140625, width: 200}
+  - type: Label
+    properties: {}
+    name: label_34
+    layout_properties: {x: 42.32501220703125, y: 190.3375244140625, width: 160}
+- name: spacer_17
+  properties: {height: 32}
+  type: Spacer
+  layout_properties: {grid_position: 'ONFDSS,EMMEBO'}
 - name: label_8
   properties: {text: How it works​, role: headline, font_size: 30, align: center,
     bold: true, font: ''}
@@ -284,7 +344,7 @@ components:
   type: Label
   layout_properties: {grid_position: 'HBLVJB,WJZBTP'}
 - name: spacer_6
-  properties: {height: 33.45452880859375}
+  properties: {height: 41.79998779296875}
   type: Spacer
   layout_properties: {grid_position: 'FGAEGL,EDOHWZ'}
 - name: image_4
@@ -338,7 +398,7 @@ components:
   type: Label
   layout_properties: {grid_position: 'RRMBIW,UUROLK'}
 - name: spacer_8
-  properties: {height: 32}
+  properties: {height: 45.199981689453125}
   type: Spacer
   layout_properties: {grid_position: 'GTTQDX,CSHUEV'}
 - name: data_row_panel_1
@@ -397,7 +457,7 @@ components:
   type: Label
   layout_properties: {grid_position: 'RUUBND,UTGGPW RLQOJA,BCFMPC'}
 - name: spacer_9
-  properties: {height: 34.9090576171875}
+  properties: {height: 45}
   type: Spacer
   layout_properties: {grid_position: 'OCHPMV,DVARFM'}
 - name: grid_panel_2_copy_1
@@ -413,10 +473,9 @@ components:
     components:
     - name: label_1_copy_1
       properties: {role: null, align: center, tooltip: '', border: '', foreground: white,
-        visible: true, text: "   Personal Loan (P2P Loan) at Interest \n   Rates Starting\
-          \ from 12%", font_size: 30, font: '', spacing_above: small, icon_align: left,
-        spacing_below: small, italic: false, background: '', bold: true, underline: false,
-        icon: ''}
+        visible: true, text: Personal Loan at Interest Rates Starting from 12%, font_size: 30,
+        font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+        background: '', bold: true, underline: false, icon: ''}
       type: Label
       layout_properties: {}
     - name: outlined_button_1_copy_1
@@ -440,20 +499,20 @@ components:
   properties: {spacing_above: small, spacing_below: small, background: '#094586',
     foreground: '', border: '', visible: true, role: null, tooltip: ''}
   type: GridPanel
-  layout_properties: {grid_position: 'RFHNEJ,XZZDKH', full_width_row: true}
+  layout_properties: {grid_position: 'RFHNEJ,XZZDKH', full_width_row: false}
   components:
+  - name: label_2_copy_1
+    properties: {role: null, align: center, tooltip: '', border: '', foreground: white,
+      visible: true, text: Generate substantial profits for investors, font_size: 30,
+      font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+      background: '', bold: true, underline: false, icon: ''}
+    type: Label
+    layout_properties: {row: QSFIAM, width_xs: 12, col_xs: 0}
   - name: linear_panel_2_copy_1
     properties: {}
     type: LinearPanel
     layout_properties: {row: QSFIAM, width_xs: 12, col_xs: 0}
     components:
-    - name: label_2_copy_1
-      properties: {role: null, align: center, tooltip: '', border: '', foreground: white,
-        visible: true, text: '   High Returns for Investors Earn good returns', font_size: 30,
-        font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
-        background: '', bold: true, underline: false, icon: ''}
-      type: Label
-      layout_properties: {}
     - name: outlined_button_2_copy_1
       properties: {role: elevated-button, align: center, tooltip: '', border: '',
         enabled: true, foreground: Black, visible: true, text: 'Invest Now               ',
@@ -477,7 +536,7 @@ components:
       type: Label
       layout_properties: {}
 - name: spacer_3_copy
-  properties: {height: 29}
+  properties: {height: 37}
   type: Spacer
   layout_properties: {grid_position: 'DEVKVL,ACLHUB'}
 - name: label_23
