@@ -25,13 +25,13 @@ class lender_registration_form_2(lender_registration_form_2Template):
         if user_data and len(user_data) > 0:
             lending_type = user_data[0]['lending_type']
             investment = user_data[0]['investment']
-            lending_period = user_data[0]['lending_period']
+            lending_period = user_data[0]['l']
 
         # Set selected values for dropdowns
         if lending_type:
             self.lending_type_dropdown.selected_value = lending_type
         if investment:
-            self.text_box_1.text = investment  # No need to convert to string
+            self.text_box_1.text = investment  
         if lending_period:
             self.drop_down_2.selected_value = lending_period
 
