@@ -103,7 +103,7 @@ class star_1_borrower_registration_form_3_marital_married(star_1_borrower_regist
         self.button_submit_copy.visible = True
         self.button_submit_copy_2.visible = False
         self.button_submit_copy_3.visible = False
-        self.selected_radio_button = "Mother"
+        self.selected_radio_button = "mother"
         self.prev_1.visible = False
         self.prev_2.visible = True
         self.prev_3.visible = False
