@@ -216,23 +216,10 @@ class lender_registration_form_3_marital_married(lender_registration_form_3_mari
         }
 
     def button_submit_click(self, **event_args):
-        # Collect details from the form
-        details = self.collect_details()
-        
-        # Validations...
-        if not re.match(r'^[A-Za-z\s]+$', details['father_name']):
-           Notification("Enter a valid full name!").show()
-        elif not details['father_dob'] or details['father_dob'] > datetime.now().date():
-           Notification("Enter a valid date of birth!").show()
-        elif datetime.now().date() - details['father_dob'] < timedelta(days=365 * 18):
-           Notification("You must be at least 18 years old!").show()
-        elif not re.match(r'^\d{10}$', str(details['father_mbl_no'])):
-           self.mbl_label_1.text = 'Enter valid mobile no'
+       details = self.collect_details()
 
-        if not all(details[key] for key in ['father_name', 'father_dob', 'father_mbl_no', 'father_profession', 'father_address']):
-           Notification("Please fill all the required fields").show()
-           return
-        # Insert details into the data table
+   
+    try:
         new_row = app_tables.fin_guarantor_details.add_row(
             customer_id=self.userId,
             guarantor_name=details['father_name'],
@@ -242,6 +229,24 @@ class lender_registration_form_3_marital_married(lender_registration_form_3_mari
             guarantor_address=details['father_address'],
             another_person=details['another_person'] 
         )
+    except Exception as e:
+        Notification(f"Failed to submit form: {e}").show()
+        return
+
+    # Validations...
+    errors = []
+    if not re.match(r'^[A-Za-z\s]+$', details['father_name']):
+        errors.append("Enter a valid full name!")
+    if not details['father_dob'] or details['father_dob'] > datetime.now().date():
+        errors.append("Enter a valid date of birth!")
+    if datetime.now().date() - details['father_dob'] < timedelta(days=365 * 18):
+        errors.append("You must be at least 18 years old!")
+    if not re.match(r'^\d{10}$', str(details['father_mbl_no'])):
+        errors.append("Enter a valid mobile no!")
+
+    if errors:
+        Notification("\n".join(errors)).show()
+    else:
         open_form('lendor_registration_form.lender_registration_form_4_bank_form_1', user_id=self.userId)
 
     def button_submit_copy_click(self, **event_args):
