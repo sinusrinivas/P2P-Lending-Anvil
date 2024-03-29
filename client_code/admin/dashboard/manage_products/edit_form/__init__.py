@@ -63,6 +63,7 @@ class edit_form(edit_formTemplate):
                     self.default.enabled = False
                     self.npa.enabled = False
                     self.drop_down_2.enabled = False
+                    self.text_box_5.enabled = False
                
             elif selected_interest_type == "Variable":
                     self.radio_button_1.enabled = False
@@ -93,6 +94,7 @@ class edit_form(edit_formTemplate):
                     self.default.enabled = False
                     self.npa.enabled = False
                     self.drop_down_2.enabled = False
+                    self.text_box_5.enabled = False
                
             else:
                 print(f"Unexpected interest type: {selected_interest_type}")
@@ -106,6 +108,7 @@ class edit_form(edit_formTemplate):
             self.lapsed.text = str(product['lapsed_fee'])
             self.default.text = str(product['default_fee'])
             self.npa.text = str(product['npa'])
+            self.text_box_5.text = str(product['min_extension_months'])
 
     def button_1_click(self, **event_args):
       """This method is called when the button is clicked"""

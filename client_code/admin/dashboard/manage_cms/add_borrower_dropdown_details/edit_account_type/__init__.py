@@ -19,7 +19,10 @@ class edit_account_type(edit_account_typeTemplate):
 
   def button_1_click(self, **event_args):
     """This method is called when the button is clicked"""
-    update = self.text_box_1.text
+    update = self.text_box_1.text.strip()
+    if not update:
+        alert("Please enter a valid data.")
+        return
 
         # Update the 'borrower_gender' field in the database
     self.selected_row['borrower_account_type'] = update

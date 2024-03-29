@@ -25,29 +25,36 @@ class View_Details(View_DetailsTemplate):
         interest_rate = selected_row['interest_rate']
         emi_payment_type = selected_row['emi_payment_type']
         total_interest_amount = selected_row['total_interest_amount']
-  
+        total_processing_fee_amount = selected_row['total_processing_fee_amount']
+        processing_fee = total_processing_fee_amount/ tenure
         monthly_interest_rate = interest_rate / 12 / 100
         total_payments = tenure * 12
+        total_repayment_amount = selected_row['total_repayment_amount']
   
         if emi_payment_type == 'One Time':
-            emi = (loan_amount * monthly_interest_rate * (1 + monthly_interest_rate) ** tenure) / ((1 + monthly_interest_rate) ** tenure - 1)
-            total_emi = emi * tenure + extension_amount  # Add extension amount to 12-month EMI total
+            emi = total_repayment_amount
+            #total_emi += emi  # Add extension amount to 12-month EMI total
+            total_emi = emi +  extension_amount + total_processing_fee_amount
         elif emi_payment_type == 'Monthly':
             # Calculate monthly EMI amount
             emi = (loan_amount * monthly_interest_rate * ((1 + monthly_interest_rate) ** tenure)) / (((1 + monthly_interest_rate) ** tenure) - 1)
-            total_emi = emi + extension_amount  # Add extension amount to monthly EMI
+            total_emi = emi + extension_amount + processing_fee  # Add extension amount to monthly EMI
         elif emi_payment_type == 'Three Months':
             # Calculate EMI amount for 3 months
-            emi = (loan_amount * monthly_interest_rate * (1 + monthly_interest_rate) ** 3) / ((1 + monthly_interest_rate) ** 3 - 1)
-            total_emi = emi + extension_amount  # Add extension amount to 3-month EMI
+            processing_fee = processing_fee * 3
+            emi = (loan_amount * monthly_interest_rate * ((1 + monthly_interest_rate) ** (tenure ))) / (((1 + monthly_interest_rate) ** (tenure)) - 1)
+            emi*=3
+            total_emi = emi + extension_amount + processing_fee # Add extension amount to 3-month EMI
         elif emi_payment_type == 'Six Months':
+            processing_fee = processing_fee * 6
             # Calculate EMI amount for 6 months
-            emi = (loan_amount * monthly_interest_rate * (1 + monthly_interest_rate) ** 6) / ((1 + monthly_interest_rate) ** 6 - 1)
-            total_emi = emi + extension_amount  # Add extension amount to 6-month EMI
+            emi = (loan_amount * monthly_interest_rate * ((1 + monthly_interest_rate) ** (tenure ))) / (((1 + monthly_interest_rate) ** (tenure)) - 1)
+            emi*=6
+            total_emi = emi + extension_amount+ processing_fee  # Add extension amount to 6-month EMI
         else:
             # Default to monthly calculation
             emi = (loan_amount * monthly_interest_rate * (1 + monthly_interest_rate) ** total_payments) / ((1 + monthly_interest_rate) ** total_payments - 1)
-            total_emi = emi + extension_amount  # Add extension amount to monthly EMI
+            total_emi = emi + extension_amount + processing_fee # Add extension amount to monthly EMI
 
 
         loan_state_status = app_tables.fin_loan_details.get(loan_id=loan_id)['loan_state_status']
@@ -97,10 +104,10 @@ class View_Details(View_DetailsTemplate):
             self.label_6.visible = True
             self.label_3.visible = True
         else:
-            self.total_emi_amount_label.visible = False
+            self.total_emi_amount_label.visible = True
             self.extension_amount_label.visible = False
             self.label_6.visible = False
-            self.label_3.visible = False
+            self.label_3.visible = True
   
         # Update other labels
         self.loan_id_label.text = str(selected_row['loan_id'])
@@ -113,7 +120,8 @@ class View_Details(View_DetailsTemplate):
         self.update_total_emi_amount(total_emi)
       
         foreclosure_details = self.get_foreclosure_details(loan_id, selected_row['emi_number'])
-        if foreclosure_details is not None:
+        if foreclosure_details is not None :
+            
             total_due_amount = foreclosure_details['total_due_amount']
             foreclosure_amount = foreclosure_details['foreclose_amount']
         
@@ -175,6 +183,14 @@ class View_Details(View_DetailsTemplate):
   
     def update_total_emi_amount(self, total_emi):
         self.total_emi_amount_label.text = "{:.2f}".format(total_emi)
+
+    # def get_first_payment_due_date(self, loan_id):
+    #     loan_row = app_tables.fin_loan_details.get(loan_id=loan_id)
+    #     if loan_row is not None:
+    #         return loan_row['first_emi_payment_due_date']
+    #     else:
+    #         return None  # or handle the case where the loan ID is not found
+
 
     def button_1_copy_2_click(self, **event_args):
       """This method is called when the button is clicked"""

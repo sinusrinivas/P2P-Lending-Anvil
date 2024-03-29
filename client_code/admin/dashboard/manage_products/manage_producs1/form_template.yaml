@@ -514,6 +514,23 @@ components:
           layout_properties: {row: CBEBWH, width_xs: 4, col_xs: 5}
         - type: Label
           properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+            visible: false, text: 'Min Months For
+
+              Extension', font_size: null, font: '', spacing_above: small, icon_align: left,
+            spacing_below: small, italic: false, background: '', bold: true, underline: false,
+            icon: ''}
+          name: min_extension_label
+          layout_properties: {row: EVKFVD, width_xs: 2, col_xs: 3, width: 99.9911}
+        - type: TextBox
+          properties: {role: outlined, align: left, hide_text: false, tooltip: '',
+            placeholder: Enter min months, border: '', enabled: true, foreground: '',
+            visible: false, text: '', font_size: null, font: '', spacing_above: small,
+            type: text, spacing_below: small, italic: false, background: '', bold: false,
+            underline: false}
+          name: min_extension_month_text_box
+          layout_properties: {row: EVKFVD, width_xs: 4, col_xs: 5, width: 196.28171400000002}
+        - type: Label
+          properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
             visible: true, text: Lapsed Fee(₹), font_size: null, font: '', spacing_above: small,
             icon_align: left, spacing_below: small, italic: false, background: '',
             bold: true, underline: false, icon: ''}

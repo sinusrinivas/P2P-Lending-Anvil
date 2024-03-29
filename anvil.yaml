@@ -17,7 +17,7 @@ services:
 - source: /runtime/services/anvil/secrets.yml
   client_config: {}
   server_config: {}
-startup: {type: form, module: bank_users.main_form}
+startup: {type: form, module: admin.dashboard}
 package_name: bank_client
 allow_embedding: false
 name: P2P Lending App
@@ -296,6 +296,9 @@ db_schema:
     - name: product_description
       admin_ui: {width: 200}
       type: string
+    - name: min_extension_months
+      admin_ui: {width: 200, order: 1.5}
+      type: number
     title: fin_product_details
   fin_borrower_organization_type:
     client: full
@@ -305,6 +308,14 @@ db_schema:
       admin_ui: {order: 0, width: 243}
       type: string
     title: fin_borrower_organization_type
+  fin_lender_spouse_profession:
+    client: full
+    server: full
+    columns:
+    - name: spouse_profession
+      admin_ui: {width: 200, order: 0}
+      type: string
+    title: fin_lender_spouse_profession
   fin_borrower_account_type:
     client: full
     server: full
@@ -1180,7 +1191,7 @@ db_schema:
       admin_ui: {order: 12, width: 200}
       type: string
   fin_wallet_bank_account_table:
-    client: full
+    client: none
     server: full
     columns:
     - name: account_id

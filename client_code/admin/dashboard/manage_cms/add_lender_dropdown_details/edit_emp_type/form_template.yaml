@@ -56,6 +56,6 @@ components:
   name: button_1_copy_3
   layout_properties:
     col_widths: {}
-    grid_position: FRJYHN,XDKDZF
+    grid_position: DFXBNU,PYRPRJ
   event_bindings: {click: button_1_copy_3_click}
 is_package: true

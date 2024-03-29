@@ -392,11 +392,11 @@ components:
           layout_properties: {row: ACRMQG, width_xs: 4, col_xs: 5}
         - type: Label
           properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-            visible: true, text: ' Min Months', font_size: null, font: '', spacing_above: small,
-            icon_align: left, spacing_below: small, italic: false, background: '',
-            bold: true, underline: false, icon: ''}
+            visible: true, text: ' Min Foreclosur Months', font_size: null, font: '',
+            spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+            background: '', bold: true, underline: false, icon: ''}
           name: label_10
-          layout_properties: {row: IOOZKW, width_xs: 2, col_xs: 3}
+          layout_properties: {row: IOOZKW, width_xs: 2, col_xs: 3, width: 98.6652}
         - type: TextBox
           properties: {role: outlined, align: left, hide_text: false, tooltip: '',
             placeholder: Enter min months, border: '', enabled: true, foreground: '',
@@ -465,6 +465,22 @@ components:
             underline: false}
           name: text_box_4
           layout_properties: {row: NODUMH, width_xs: 4, col_xs: 5}
+        - type: Label
+          properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+            visible: true, text: 'Min Extension
+
+              Months', font_size: null, font: '', spacing_above: small, icon_align: left,
+            spacing_below: small, italic: false, background: '', bold: true, underline: false,
+            icon: ''}
+          name: label_13
+          layout_properties: {row: NPDMFN, width_xs: 2, col_xs: 3, width: 98.6652}
+        - type: TextBox
+          properties: {role: outlined, align: left, hide_text: false, tooltip: '',
+            placeholder: '', border: '', enabled: true, foreground: '', visible: true,
+            text: '', font_size: null, font: '', spacing_above: small, type: text,
+            spacing_below: small, italic: false, background: '', bold: false, underline: false}
+          name: text_box_5
+          layout_properties: {row: NPDMFN, width_xs: 4, col_xs: 5, width: 131.004}
         - type: Label
           properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
             visible: true, text: Lapsed Fee(₹), font_size: null, font: '', spacing_above: small,
