@@ -69,9 +69,9 @@ class add_lender_dropdown_details(add_lender_dropdown_detailsTemplate):
     self.column_panel_5.visible = False   
     self.column_panel_4.visible = False
     self.column_panel_3.visible = False
-    self.column_panel_10_copy.visible = False
-    # self.column_panel_2.visible = False   
+    self.column_panel_10_copy.visible = False  
     self.column_panel_11.visible = False
+    
   def No_of_emp_click(self, **event_args):
     """This method is called when the button is clicked"""
     self.column_panel_7.visible = False
@@ -159,7 +159,7 @@ class add_lender_dropdown_details(add_lender_dropdown_detailsTemplate):
     if entered_data not in valid_statuses:
         alert("Please enter a valid qualification: '10th standard', '12th standard', 'Bachelor's degree', 'Master's degree', 'PhD'.")
         return
-    new_row = app_tables.fin_lendor_qualification.add_row(l=entered_data)
+    new_row = app_tables.fin_lendor_qualification.add_row(lendor_qualification=entered_data)
     self.text_box_2.text = ' '
     self.refresh()
     
