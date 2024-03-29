@@ -57,9 +57,10 @@ components:
   layout_properties: {grid_position: 'JDKXXI,UDIKJN'}
 - type: Label
   properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
-    text: Bachelor's, font_size: null, font: '', spacing_above: small, icon_align: left,
-    spacing_below: small, italic: false, background: '', bold: true, underline: false,
-    icon: ''}
+    text: 'Bachelor''s degree
+
+      ', font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small,
+    italic: false, background: '', bold: true, underline: false, icon: ''}
   name: label_3
   layout_properties: {grid_position: 'IMTAFK,UKDPZR'}
 - type: FileLoader
@@ -68,7 +69,7 @@ components:
   layout_properties: {grid_position: 'IMTAFK,NXMIOE'}
 - type: Label
   properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
-    text: Master's, font_size: null, font: '', spacing_above: small, icon_align: left,
+    text: Master's degree, font_size: null, font: '', spacing_above: small, icon_align: left,
     spacing_below: small, italic: false, background: '', bold: true, underline: false,
     icon: ''}
   name: label_4
@@ -79,7 +80,7 @@ components:
   layout_properties: {grid_position: 'OJIHRV,TOBOFI'}
 - type: Label
   properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
-    text: Phd, font_size: null, font: '', spacing_above: small, icon_align: left,
+    text: PhD, font_size: null, font: '', spacing_above: small, icon_align: left,
     spacing_below: small, italic: false, background: '', bold: true, underline: false,
     icon: ''}
   name: label_5
