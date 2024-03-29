@@ -349,36 +349,90 @@ components:
   - name: label_36
     properties: {underline: false, font_size: 18, text: Create passive income with regular monthly repayments as borrowers pay back with EMI's}
     type: Label
-    layout_properties: {x: 10, y: 140.3375244140625, width: 200}
+    layout_properties: {x: 10, y: 140.3375244140625, width: 288.22216796875}
 - name: spacer_17
   properties: {height: 32}
   type: Spacer
   layout_properties: {grid_position: 'ONFDSS,EMMEBO'}
 - name: image_21
-  properties: {height: 322.3999938964844, source: _/theme/graph.png, display_mode: shrink_to_fit}
+  properties: {height: 322.3999938964844, source: _/theme/graph.png, display_mode: original_size}
   type: Image
   layout_properties: {grid_position: 'UJFNFY,RICQYA'}
 - name: spacer_18
   properties: {height: 32}
   type: Spacer
-  layout_properties: {grid_position: 'XGJSCV,QDTBUM'}
+  layout_properties: {grid_position: 'IDRRFC,FHRNWS'}
 - name: xy_panel_9
-  properties: {height: 221.19998168945312}
+  properties: {height: 554.6666870117188, background: '#Edf0f4'}
   type: XYPanel
-  layout_properties: {grid_position: 'GERSJG,ONLHDU', full_width_row: true}
+  layout_properties: {grid_position: 'DUCRGR,KKDHDR', full_width_row: true}
   components:
-  - name: xy_panel_10
-    properties: {height: 214.60000610351562}
+  - name: label_38
+    properties: {text: Get started today, align: center, bold: true, font_size: 30}
+    type: Label
+    layout_properties: {grid_position: 'VFQQUF,RWHPEN', x: 68, y: 10, width: 1200}
+  - name: xy_panel_8_copy
+    properties: {height: 295}
     type: XYPanel
-    layout_properties: {x: 23.361094158142805, y: 0, width: 200}
-  - name: xy_panel_12
-    properties: {height: 210}
+    layout_properties: {x: 986.8750406913459, y: 125.34722900390625, width: 350}
+    components:
+    - name: image_20_copy
+      properties: {height: 113, source: _/theme/money-bag-hand_bean.2c2a2a6.png, display_mode: original_size}
+      type: Image
+      layout_properties: {x: 10, y: 16.3375244140625, width: 88.39996337890625}
+    - name: label_34_copy
+      properties: {text: Get monthly repayments, font_size: 21, bold: true}
+      type: Label
+      layout_properties: {x: 10, y: 94.3375244140625, width: 249.2364580078125}
+    - name: label_36_copy
+      properties: {underline: false, font_size: 18, text: Receive monthly returns from the borrower and start growing your wealth. You also have the option to reinvest your earnings.}
+      type: Label
+      layout_properties: {x: 10, y: 140.3375244140625, width: 266.972083984375}
+  - name: xy_panel_6_copy
+    properties: {height: 290.3999938964844}
     type: XYPanel
-    layout_properties: {x: 854.2625244148076, y: 5.587493896484375, width: 200}
-  - name: xy_panel_11
-    properties: {height: 213}
+    layout_properties: {x: 75.79165522381663, y: 127.15280151367188, width: 350}
+    components:
+    - name: image_18_copy
+      properties: {height: 71.60000610351562, source: _/theme/register.png, display_mode: original_size}
+      type: Image
+      layout_properties: {x: 10, y: 16.3375244140625, width: 87.61122900390625}
+    - name: label_32_copy
+      properties: {text: Register, font_size: 20, bold: true}
+      type: Label
+      layout_properties: {x: 10, y: 93.3375244140625, width: 160}
+    - name: label_35_copy
+      properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+        visible: true, text: Register as a lender by providing basic KYC information.,
+        font_size: 18, font: '', spacing_above: small, icon_align: left, spacing_below: small,
+        italic: false, background: '', bold: false, underline: false, icon: ''}
+      type: Label
+      layout_properties: {x: 10, y: 139.3375244140625, width: 221}
+  - name: xy_panel_7_copy
+    properties: {height: 293.1999816894531}
     type: XYPanel
-    layout_properties: {x: 462.8750122077763, y: 2.587493896484375, width: 200}
+    layout_properties: {x: 533.5278727225959, y: 124.34722900390625, width: 350}
+    components:
+    - name: image_19_copy
+      properties: {height: 116, source: _/theme/profile-cards_bean.6b9a100.png, display_mode: original_size}
+      type: Image
+      layout_properties: {x: 10, y: 15.3375244140625, width: 87.61122900390625}
+    - name: label_33_copy
+      properties: {text: Choose your products, bold: true, font_size: 20}
+      type: Label
+      layout_properties: {x: 18.662506103515625, y: 95.3375244140625, width: 226}
+    - name: label_37_copy
+      properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+        visible: true, text: Invest across variety of products and build a diversified portfolio and better returns at lower risk.,
+        font_size: 18, font: '', spacing_above: small, icon_align: left, spacing_below: small,
+        italic: false, background: '', bold: false, underline: false, icon: ''}
+      type: Label
+      layout_properties: {x: 13.362518310546875, y: 141.3375244140625, width: 225.74954199218752}
+  - name: button_5
+    properties: {text: Register Now, align: full, bold: true, role: filled-button,
+      background: '#013065'}
+    type: Button
+    layout_properties: {x: 578.0277506522834, y: 481.20831298828125, width: 200}
 - name: spacer_19
   properties: {height: 32}
   type: Spacer
@@ -667,6 +721,7 @@ components:
       data.', font_size: 20, visible: false, background: ''}
   type: RichText
   layout_properties: {grid_position: 'RFIPML,GZEPAB'}
+  components: []
 - name: button_1_copy
   properties: {text: 'What types of loans can be offered through peer-to-peer marketplace
       software?        +', foreground: black, align: left, font_size: 23, role: null,
