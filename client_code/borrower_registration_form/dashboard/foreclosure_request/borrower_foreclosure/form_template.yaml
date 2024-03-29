@@ -46,21 +46,21 @@ components:
           icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
           underline: false, icon: ''}
         name: label_2
-        layout_properties: {row: YCOBYK, width_xs: 4, col_xs: 3}
+        layout_properties: {row: YCOBYK, width_xs: 4, col_xs: 2, width: 145.328}
       - type: Label
         properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
           visible: true, text: '', font_size: null, font: '', spacing_above: small,
           icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
           underline: false, icon: ''}
         name: label_loan_id
-        layout_properties: {row: YCOBYK, width_xs: 4, col_xs: 7}
+        layout_properties: {row: YCOBYK, width_xs: 4, col_xs: 7, width: 145.328}
       - type: Label
         properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
           visible: true, text: 'Name :', font_size: null, font: '', spacing_above: small,
           icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
           underline: false, icon: ''}
         name: label_4
-        layout_properties: {row: MVNJQG, width_xs: 4, col_xs: 3}
+        layout_properties: {row: MVNJQG, width_xs: 4, col_xs: 2, width: 145.328}
       - type: Label
         properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
           visible: true, text: '', font_size: null, font: '', spacing_above: small,
@@ -74,7 +74,7 @@ components:
           icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
           underline: false, icon: ''}
         name: label_6
-        layout_properties: {row: OJBBUG, width_xs: 4, col_xs: 3}
+        layout_properties: {row: OJBBUG, width_xs: 4, col_xs: 2, width: 145.328}
       - type: Label
         properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
           visible: true, text: '', font_size: null, font: '', spacing_above: small,
@@ -88,7 +88,7 @@ components:
           icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
           underline: false, icon: ''}
         name: label_9
-        layout_properties: {row: FDBVEC, width_xs: 4, col_xs: 3}
+        layout_properties: {row: FDBVEC, width_xs: 4, col_xs: 2, width: 145.328}
       - type: Label
         properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
           visible: true, text: '', font_size: null, font: '', spacing_above: small,
@@ -102,7 +102,7 @@ components:
           icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
           underline: false, icon: ''}
         name: label_10
-        layout_properties: {row: OFYZGR, width_xs: 4, col_xs: 3}
+        layout_properties: {row: OFYZGR, width_xs: 4, col_xs: 2, width: 145.328}
       - type: Label
         properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
           visible: true, text: '', font_size: null, font: '', spacing_above: small,
@@ -116,7 +116,7 @@ components:
           icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
           underline: false, icon: ''}
         name: label_12
-        layout_properties: {row: FXCYAS, width_xs: 4, col_xs: 3}
+        layout_properties: {row: FXCYAS, width_xs: 4, col_xs: 2, width: 145.328}
       - type: Label
         properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
           visible: true, text: '', font_size: null, font: '', spacing_above: small,
@@ -130,7 +130,7 @@ components:
           icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
           underline: false, icon: ''}
         name: label_7
-        layout_properties: {row: JFILBT, width_xs: 3, col_xs: 3}
+        layout_properties: {row: JFILBT, width_xs: 3, col_xs: 2, width: 146.611}
       - type: Label
         properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
           visible: true, text: '', font_size: null, font: '', spacing_above: small,
@@ -144,7 +144,7 @@ components:
           spacing_above: small, icon_align: left, spacing_below: small, italic: false,
           background: '', bold: true, underline: false, icon: ''}
         name: label_16
-        layout_properties: {row: PZBXTY, width_xs: 4, col_xs: 3}
+        layout_properties: {row: PZBXTY, width_xs: 4, col_xs: 2, width: 145.328}
       - type: Label
         properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
           visible: true, text: '', font_size: null, font: '', spacing_above: small,

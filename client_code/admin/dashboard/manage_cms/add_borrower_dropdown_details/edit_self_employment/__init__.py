@@ -19,10 +19,7 @@ class edit_self_employment(edit_self_employmentTemplate):
 
   def button_1_click(self, **event_args):
     """This method is called when the button is clicked"""
-    update = self.text_box_1.text.strip()
-    if not update:
-        alert("Please enter a valid data.")
-        return
+    update = self.text_box_1.text
 
         # Update the 'borrower_gender' field in the database
     self.selected_row['self_employment'] = update

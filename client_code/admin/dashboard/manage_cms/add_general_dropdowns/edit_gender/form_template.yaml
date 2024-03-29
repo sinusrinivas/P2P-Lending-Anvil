@@ -60,5 +60,4 @@ components:
   layout_properties:
     col_widths: {}
     grid_position: GSQZAB,VOATSZ
-  event_bindings: {click: button_1_copy_3_click}
 is_package: true

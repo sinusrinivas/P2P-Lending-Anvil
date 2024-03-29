@@ -20,10 +20,6 @@ class edit_qualification(edit_qualificationTemplate):
   def button_1_click(self, **event_args):
     """This method is called when the button is clicked"""
     update = self.text_box_1.text
-    valid_statuses = ['10th standard', '12th standard', "Bachelor's degree", "Master's degree", 'PhD']
-    if update not in valid_statuses:
-        alert("Please enter a valid qualification: '10th standard', '12th standard', 'Bachelor's degree', 'Master's degree', 'PhD'.")
-        return
 
         # Update the 'borrower_gender' field in the database
     self.selected_row['borrower_qualification'] = update

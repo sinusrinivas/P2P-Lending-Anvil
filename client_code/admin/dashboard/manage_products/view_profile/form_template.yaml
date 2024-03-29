@@ -30,7 +30,7 @@ components:
       grid_position: RRUJCC,VUCDFT
     components:
     - type: XYPanel
-      properties: {height: 1335.2666854858398}
+      properties: {height: 1258.2666854858398}
       name: xy_panel_1
       layout_properties: {grid_position: 'SUEJWV,HDFXXS'}
       components:
@@ -64,11 +64,11 @@ components:
         layout_properties: {x: 10, y: 810.7916870117188, width: 160}
       - type: Label
         properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-          visible: true, text: ' Min Foreclosure Months', font_size: null, font: '',
-          spacing_above: small, icon_align: left, spacing_below: small, italic: false,
-          background: '', bold: false, underline: false, icon: ''}
+          visible: true, text: ' Min Months', font_size: null, font: '', spacing_above: small,
+          icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+          underline: false, icon: ''}
         name: label_29
-        layout_properties: {x: 11.973213195800781, y: 856.7811889648438, width: 159.991}
+        layout_properties: {x: 11.986114501953125, y: 856.7916870117188, width: 160}
       - type: Label
         properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
           visible: true, text: ' Processing Fee(%)', font_size: null, font: '', spacing_above: small,
@@ -90,6 +90,27 @@ components:
           underline: false, icon: ''}
         name: label_7_copy
         layout_properties: {x: 10, y: 994.7916870117188, width: 160}
+      - type: Label
+        properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+          visible: true, text: ' Lapsed Fee(₹)', font_size: null, font: '', spacing_above: small,
+          icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+          underline: false, icon: ''}
+        name: label_31
+        layout_properties: {x: 11.982131958007812, y: 1040.7857818603516, width: 160}
+      - type: Label
+        properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+          visible: true, text: ' Default Fee(₹)', font_size: null, font: '', spacing_above: small,
+          icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+          underline: false, icon: ''}
+        name: label_32
+        layout_properties: {x: 11.982131958007812, y: 1079.7857818603516, width: 160}
+      - type: Label
+        properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+          visible: true, text: ' Non Performing Asset(₹)', font_size: null, font: '',
+          spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+          background: '', bold: false, underline: false, icon: ''}
+        name: label_33
+        layout_properties: {x: 10, y: 1125.7857818603516, width: 160}
       - type: Label
         properties: {}
         name: label_18
@@ -114,6 +135,22 @@ components:
         properties: {}
         name: label_22
         layout_properties: {x: 212.9642791748047, y: 948.7857818603516, width: 160}
+      - type: Label
+        properties: {}
+        name: label_6
+        layout_properties: {x: 212.9642791748047, y: 994.7857818603516, width: 232}
+      - type: Label
+        properties: {}
+        name: lapsed
+        layout_properties: {x: 212.9642791748047, y: 1040.7857818603516, width: 160}
+      - type: Label
+        properties: {}
+        name: default
+        layout_properties: {x: 212.9642791748047, y: 1079.7857818603516, width: 160}
+      - type: Label
+        properties: {}
+        name: npa
+        layout_properties: {x: 212.9642791748047, y: 1125.7857818603516, width: 160}
       - type: Label
         properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
           visible: true, text: ' Interest  Rate (per year)', font_size: null, font: '',
@@ -208,6 +245,27 @@ components:
           layout_properties: {x: 637, y: 752, width: 160, grid_position: 'NFHBIS,JNRMSC'}
       - type: Label
         properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+          visible: true, text: 'Occupation
+
+            ', font_size: null, font: '', spacing_above: small, icon_align: left,
+          spacing_below: small, italic: false, background: '', bold: false, underline: false,
+          icon: ''}
+        name: label_12
+        layout_properties: {x: 11.964279174804688, y: 1165.357192993164, width: 160}
+      - type: Label
+        properties: {}
+        name: occupation
+        layout_properties: {x: 206.00001525878906, y: 1165.357192993164, width: 160}
+      - type: Button
+        properties: {role: outlined-button, align: center, tooltip: '', border: '',
+          enabled: true, foreground: 'theme:On Primary', visible: true, text: Edit,
+          font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small,
+          italic: false, background: '#05264d', bold: false, underline: false, icon: 'fa:edit'}
+        name: button_1
+        layout_properties: {x: 304.953125, y: 1211.09375, width: 320}
+        event_bindings: {click: button_1_click}
+      - type: Label
+        properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
           visible: true, text: ' Product ID', font_size: null, font: '', spacing_above: small,
           icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
           underline: false, icon: ''}
@@ -264,75 +322,6 @@ components:
           italic: false, background: '', bold: false, underline: false}
         name: text_area_1
         layout_properties: {x: 205.9955291748047, y: 233.7812291748047, width: 527.103}
-      - type: Label
-        properties: {}
-        name: label_6
-        layout_properties: {x: 212.95980834960938, y: 994.7811889648438, width: 231.991}
-      - type: Button
-        properties: {role: outlined-button, align: center, tooltip: '', border: '',
-          enabled: true, foreground: 'theme:On Primary', visible: true, text: Edit,
-          font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small,
-          italic: false, background: '#05264d', bold: false, underline: false, icon: 'fa:edit'}
-        name: button_1
-        layout_properties: {x: 304.94195556640625, y: 1270.0847778320312, width: 319.996}
-        event_bindings: {click: button_1_click}
-      - type: Label
-        properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-          visible: true, text: 'Occupation
-
-            ', font_size: null, font: '', spacing_above: small, icon_align: left,
-          spacing_below: small, italic: false, background: '', bold: false, underline: false,
-          icon: ''}
-        name: label_12
-        layout_properties: {x: 11.959823608398438, y: 1202.1071166992188, width: 159.978}
-      - type: Label
-        properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-          visible: true, text: ' Non Performing Asset(₹)', font_size: null, font: '',
-          spacing_above: small, icon_align: left, spacing_below: small, italic: false,
-          background: '', bold: false, underline: false, icon: ''}
-        name: label_33
-        layout_properties: {x: 9.991073608398438, y: 1162.1294000976563, width: 159.978}
-      - type: Label
-        properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-          visible: true, text: ' Default Fee(₹)', font_size: null, font: '', spacing_above: small,
-          icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
-          underline: false, icon: ''}
-        name: label_32
-        layout_properties: {x: 9.991073608398438, y: 1116.1517389648438, width: 159.978}
-      - type: Label
-        properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-          visible: true, text: ' Lapsed Fee(₹)', font_size: null, font: '', spacing_above: small,
-          icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
-          underline: false, icon: ''}
-        name: label_31
-        layout_properties: {x: 11.973213195800781, y: 1077.5490112304688, width: 159.978}
-      - type: Label
-        properties: {}
-        name: label_27
-        layout_properties: {x: 212.97320556640625, y: 1040.7543889648437, width: 160}
-      - type: Label
-        properties: {}
-        name: lapsed
-        layout_properties: {x: 212.95980834960938, y: 1086.7097778320312, width: 159.978}
-      - type: Label
-        properties: {}
-        name: default
-        layout_properties: {x: 212.98620556640623, y: 1123.5222112304687, width: 159.978}
-      - type: Label
-        properties: {}
-        name: npa
-        layout_properties: {x: 212.95980834960938, y: 1162.1204778320312, width: 159.978}
-      - type: Label
-        properties: {}
-        name: occupation
-        layout_properties: {x: 205.99551391601562, y: 1202.1026000976562, width: 159.978}
-      - type: Label
-        properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-          visible: true, text: Min Extension Months, font_size: null, font: '', spacing_above: small,
-          icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
-          underline: false, icon: ''}
-        name: label_3
-        layout_properties: {x: 11.973213195800781, y: 1040.7454223632812, width: 159.978}
 - type: FlowPanel
   properties: {}
   name: navbar_links
