@@ -56,6 +56,6 @@ components:
   name: button_1_copy_3
   layout_properties:
     col_widths: {}
-    grid_position: DRGRWT,UEWVTZ
+    grid_position: SLLNOZ,GNOSXF
   event_bindings: {click: button_1_copy_3_click}
 is_package: true

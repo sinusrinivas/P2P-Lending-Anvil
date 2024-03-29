@@ -159,7 +159,7 @@ class add_lender_dropdown_details(add_lender_dropdown_detailsTemplate):
     if entered_data not in valid_statuses:
         alert("Please enter a valid qualification: '10th standard', '12th standard', 'Bachelor's degree', 'Master's degree', 'PhD'.")
         return
-    new_row = app_tables.fin_lendor_qualification.add_row(l=entered_data)
+    new_row = app_tables.fin_lendor_qualification.add_row(lendor_qualification=entered_data)
     self.text_box_2.text = ' '
     self.refresh()
     
@@ -172,14 +172,20 @@ class add_lender_dropdown_details(add_lender_dropdown_detailsTemplate):
   
   def business_button_click(self, **event_args):
     """This method is called when the button is clicked"""
-    entered_data = self.text_box_3.text
+    entered_data = self.text_box_3.text.strip()
+    if not entered_data:
+        alert("Please enter a valid data.")
+        return
     new_row = app_tables.fin_lendor_business_type.add_row(lendor_business_type=entered_data)
     self.text_box_3.text = ' '
     self.refresh()
 
   def no_of_emp_click(self, **event_args):
     """This method is called when the button is clicked"""
-    entered_data = self.text_box_4.text
+    entered_data = self.text_box_4.text.strip()
+    if not entered_data:
+        alert("Please enter a valid data.")
+        return
     new_row = app_tables.fin_lendor_no_of_employees.add_row(lendor_no_of_employees=entered_data)
     self.text_box_4.text = ' '
     self.refresh()
@@ -197,21 +203,30 @@ class add_lender_dropdown_details(add_lender_dropdown_detailsTemplate):
 
   def emp_type_click(self, **event_args):
     """This method is called when the button is clicked"""
-    entered_data = self.text_box_6.text
+    entered_data = self.text_box_6.text.strip()
+    if not entered_data:
+        alert("Please enter a valid data.")
+        return
     new_row = app_tables.fin_lendor_employee_type.add_row(lendor_employee_type=entered_data)
     self.text_box_6.text = ' '
     self.refresh()
 
   def organization_button_click(self, **event_args):
     """This method is called when the button is clicked"""
-    entered_data = self.text_box_7.text
+    entered_data = self.text_box_7.text.strip()
+    if not entered_data:
+        alert("Please enter a valid data.")
+        return
     new_row = app_tables.fin_lendor_organization_type.add_row(lendor_organization_type=entered_data)
     self.text_box_7.text = ' '
     self.refresh()
 
   def account_Type_click(self, **event_args):
     """This method is called when the button is clicked"""
-    entered_data = self.text_box_8.text
+    entered_data = self.text_box_8.text.strip()
+    if not entered_data:
+        alert("Please enter a valid data.")
+        return
     new_row = app_tables.fin_lendor_account_type.add_row(lendor_account_type=entered_data)
     self.text_box_8.text = ' '
     self.refresh()
@@ -243,7 +258,10 @@ class add_lender_dropdown_details(add_lender_dropdown_detailsTemplate):
 
   def lending_period_button_click(self, **event_args):
     """This method is called when the button is clicked"""
-    entered_data = self.text_box_10.text
+    entered_data = self.text_box_10.text.strip()
+    if not entered_data:
+        alert("Please enter a valid data.")
+        return
     new_row = app_tables.fin_lendor_lending_period.add_row(lendor_lending_period=entered_data)
     self.text_box_10.text = ' '
     self.refresh()
@@ -254,7 +272,10 @@ class add_lender_dropdown_details(add_lender_dropdown_detailsTemplate):
 
   def salary_type_click(self, **event_args):
     """This method is called when the button is clicked"""
-    entered_data = self.text_box_9_copy.text
+    entered_data = self.text_box_9_copy.text.strip()
+    if not entered_data:
+        alert("Please enter a valid data.")
+        return
     new_row = app_tables.fin_lendor_salary_type.add_row(lendor_salary_type=entered_data)
     self.text_box_9_copy.text = ' '
     self.refresh()

@@ -173,14 +173,20 @@ class add_borrower_dropdown_details(add_borrower_dropdown_detailsTemplate):
   
   def business_button_click(self, **event_args):
     """This method is called when the button is clicked"""
-    entered_data = self.text_box_3.text
+    entered_data = self.text_box_3.text.strip()
+    if not entered_data:
+        alert("Please enter a valid data.")
+        return
     new_row = app_tables.fin_borrower_business_type.add_row(borrower_business_type=entered_data)
     self.text_box_3.text = ' '
     self.refresh()
 
   def no_of_emp_click(self, **event_args):
     """This method is called when the button is clicked"""
-    entered_data = self.text_box_4.text
+    entered_data = self.text_box_4.text.strip()
+    if not entered_data:
+        alert("Please enter a valid data.")
+        return
     new_row = app_tables.fin_borrower_no_of_employees.add_row(borrower_no_of_employees=entered_data)
     self.text_box_4.text = ' '
     self.refresh()
@@ -198,21 +204,30 @@ class add_borrower_dropdown_details(add_borrower_dropdown_detailsTemplate):
 
   def emp_type_click(self, **event_args):
     """This method is called when the button is clicked"""
-    entered_data = self.text_box_6.text
+    entered_data = self.text_box_6.text.strip()
+    if not entered_data:
+        alert("Please enter a valid data.")
+        return
     new_row = app_tables.fin_borrower_employee_type.add_row(borrower_employee_type=entered_data)
     self.text_box_6.text = ' '
     self.refresh()
 
   def organization_button_click(self, **event_args):
     """This method is called when the button is clicked"""
-    entered_data = self.text_box_7.text
+    entered_data = self.text_box_7.text.strip()
+    if not entered_data:
+        alert("Please enter a valid data.")
+        return
     new_row = app_tables.fin_borrower_organization_type.add_row(borrower_organization_type=entered_data)
     self.text_box_7.text = ' '
     self.refresh()
 
   def account_Type_click(self, **event_args):
     """This method is called when the button is clicked"""
-    entered_data = self.text_box_8.text
+    entered_data = self.text_box_8.text.strip()
+    if not entered_data:
+        alert("Please enter a valid data.")
+        return
     new_row = app_tables.fin_borrower_account_type.add_row(borrower_account_type=entered_data)
     self.text_box_8.text = ' '
     self.refresh()
@@ -231,11 +246,14 @@ class add_borrower_dropdown_details(add_borrower_dropdown_detailsTemplate):
     
   def button_1_copy_3_click(self, **event_args):
     """This method is called when the button is clicked"""
-    open_form('admin.dashboard.manage_cms')
+    open_form('admin.dashboard.manage_cms.manage_dropdowns')
 
   def salary_type_click(self, **event_args):
     """This method is called when the button is clicked"""
-    entered_data = self.text_box_9_copy.text
+    entered_data = self.text_box_9_copy.text.strip()
+    if not entered_data:
+        alert("Please enter a valid data.")
+        return
     new_row = app_tables.fin_borrower_salary_type.add_row(borrower_salary_type=entered_data)
     self.text_box_9_copy.text = ' '
     self.refresh()
@@ -299,7 +317,10 @@ class add_borrower_dropdown_details(add_borrower_dropdown_detailsTemplate):
 
   def spouse_click(self, **event_args):
     """This method is called when the button is clicked"""
-    entered_data = self.text_box_01_copy.text
+    entered_data = self.text_box_01_copy.text.strip()
+    if not entered_data:
+        alert("Please enter a valid data.")
+        return
     new_row = app_tables.fin_spouse_profession.add_row(spouse_profession=entered_data)
     self.text_box_01_copy.text = ' '
     self.refresh()
