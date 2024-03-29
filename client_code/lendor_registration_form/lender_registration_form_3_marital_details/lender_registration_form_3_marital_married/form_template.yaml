@@ -435,6 +435,7 @@ components:
   layout_properties:
     col_widths: {}
     grid_position: ODQFKS,WPJYQE
+  event_bindings: {click: button_submit_copy_2_click}
 - name: spacer_1_copy_1_copy_copy_copy_2
   properties: {height: 16.22222900390625}
   type: Spacer

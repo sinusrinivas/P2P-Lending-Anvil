@@ -91,9 +91,11 @@ def get_user_points(id):
 
         profession_search = app_tables.fin_admin_beseem_categories.search(group_name='profession', sub_category=profession.lower())
         if profession_search:
-            profession_points = profession_search[0]['min_points']
-            print("Profession Points:", profession_points)
-            user_points += profession_points
+           profession_points = profession_search[0]['min_points']
+           print("Profession Points:", profession_points)
+           user_points += profession_points
+        else:
+            print("No matching profession found in the database")
 
             if profession == 'self employment':
                 self_employment_search = app_tables.fin_admin_beseem_categories.search(group_name='profession', sub_category=self_employment.lower())
