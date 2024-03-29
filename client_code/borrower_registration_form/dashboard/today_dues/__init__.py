@@ -16,7 +16,7 @@ class today_dues(today_duesTemplate):
         loan_details = []
 
         all_loans_disbursed = app_tables.fin_loan_details.search(
-            loan_updated_status=q.any_of("disbursed loan", "extension", "foreclose"),
+            loan_updated_status=q.any_of("disbursed loan", "extension", "foreclosure"),
             first_emi_payment_due_date=q.less_than_or_equal_to(today_date)
         )
         
@@ -36,7 +36,8 @@ class today_dues(today_duesTemplate):
                     loan_amount = loan_detail['loan_amount']
                     scheduled_payment = latest_loan['scheduled_payment']
                     next_payment = latest_loan['next_payment']
-                    days_left = (today_date - scheduled_payment).days
+                    days_left = (today_date - next_payment).days
+               
                     emi_number = latest_loan['emi_number']
                     account_number = latest_loan['account_number']
                     tenure = loan_detail['tenure']
@@ -54,6 +55,11 @@ class today_dues(today_duesTemplate):
                     product_name = loan_detail['product_name']
                     product_description = loan_detail['product_description']
                     lender_full_name = loan_detail['lender_full_name']
+                    loan_state_status = loan_detail['loan_state_status']
+                    product_id = loan_detail['product_id']
+                    total_interest_amount = loan_detail['total_interest_amount']
+                    Scheduled_date = latest_loan['next_payment']
+                  
                     loan_details.append({
                         'loan_id': loan_id,
                         'loan_amount': loan_amount,
@@ -76,7 +82,11 @@ class today_dues(today_duesTemplate):
                         'product_description': product_description,
                         'product_name': product_name,
                         'lender_full_name': lender_full_name,
-                        'borrower_customer_id': borrower_customer_id
+                        'borrower_customer_id': borrower_customer_id,
+                        'loan_state_status': loan_state_status,
+                        'product_id':product_id,
+                        'total_interest_amount':total_interest_amount,
+                        'Scheduled_date':Scheduled_date,
                     })
             else:
                 
@@ -111,6 +121,12 @@ class today_dues(today_duesTemplate):
                   product_description = loan_detail['product_description']
                   borrower_customer_id = loan_detail['borrower_customer_id']
                   lender_full_name = loan_detail['lender_full_name']
+                  scheduled_payment = loan_disbursed_timestamp.date()
+                  loan_state_status = loan_detail['loan_state_status']
+                  product_id =loan_detail['product_id']
+                  total_interest_amount  = loan_detail['total_interest_amount']
+                  Scheduled_date = loan_detail['first_emi_payment_due_date']
+                  
                   
                   # Calculate next_payment based on first_payment_due_date
                   if emi_payment_type == 'One Time':
@@ -119,10 +135,10 @@ class today_dues(today_duesTemplate):
                   elif emi_payment_type == 'Monthly':
                       # For monthly payment, set next_payment to a month after first_payment_due_date
                       next_payment = loan_disbursed_timestamp.date() + timedelta(days=30)
-                  elif emi_payment_type == 'Three Month':
+                  elif emi_payment_type == 'Three Months':
                       # For three-month payment, set next_payment to three months after first_payment_due_date
                       next_payment = loan_disbursed_timestamp.date() + timedelta(days=90)
-                  elif emi_payment_type == 'Six Month':
+                  elif emi_payment_type == 'Six Months':
                       # For six-month payment, set next_payment  six months after first_payment_due_date
                       next_payment = loan_disbursed_timestamp.date() + timedelta(days=180)
                   else:
@@ -132,7 +148,7 @@ class today_dues(today_duesTemplate):
                   loan_details.append({
                       'loan_id': loan_id,
                       'loan_amount': loan_amount,
-                      'scheduled_payment': first_emi_payment_due_date,   # Set scheduled_payment to first_payment_due_date first_emi_payment_due_date
+                      'scheduled_payment': scheduled_payment,   # Set scheduled_payment to first_payment_due_date first_emi_payment_due_date
                       'next_payment': next_payment,
                       'days_left': days_left,
                       'tenure': tenure,
@@ -151,28 +167,33 @@ class today_dues(today_duesTemplate):
                       'product_description': product_description,
                       'product_name': product_name,
                       'lender_full_name': lender_full_name,  
-                      'borrower_customer_id': borrower_customer_id
+                      'borrower_customer_id': borrower_customer_id,
+                      'loan_state_status':loan_state_status,
+                      'product_id':product_id,
+                      'total_interest_amount':total_interest_amount,
+                      'Scheduled_date':Scheduled_date,
+                      
                   })
             self.repeating_panel_2.items = loan_details
             for loan_detail_1 in loan_details:
               print("Processing loan:", loan_detail_1)
-              if loan_detail_1['days_left'] >= 6 and loan_detail_1['days_left'] < 8:
+              if loan_detail_1['days_left'] > 6 and loan_detail_1['days_left'] <= 8:
                   print("Updating status to 'lapsed loan'")
-                  loan_detail_1['loan_updated_status'] = 'lapsed loan'
+                  loan_detail_1['loan_state_status'] = 'lapsed loan'
                   loan_row = app_tables.fin_loan_details.get(loan_id=loan_detail_1['loan_id'])
                   if loan_row is not None:
-                      loan_row['loan_updated_status'] = 'lapsed loan'
+                      loan_row['loan_state_status'] = 'lapsed loan'
                       loan_row.update()
-              elif loan_detail_1['days_left'] >= 8 and loan_detail_1['days_left'] < 98:
+              elif loan_detail_1['days_left'] > 8 and loan_detail_1['days_left'] <= 98:
                   print("Updating status to 'default loan'")
-                  loan_detail_1['loan_updated_status'] = 'default loan'
+                  loan_detail_1['loan_state_status'] = 'default loan'
                   loan_row = app_tables.fin_loan_details.get(loan_id=loan_detail_1['loan_id'])
                   if loan_row is not None:
-                      loan_row['loan_updated_status'] = 'default loan'
+                      loan_row['loan_state_status'] = 'default loan'
                       loan_row.update()
-              elif loan_detail_1['days_left'] >= 98:
+              elif loan_detail_1['days_left'] > 98:
                   print("Updating status to 'default loan'")
-                  loan_detail_1['loan_updated_status'] = 'NPA'
+                  loan_detail_1['loan_state_status'] = 'NPA'
                   loan_row = app_tables.fin_loan_details.get(loan_id=loan_detail['loan_id'])
                   if loan_row is not None:
                       loan_row['loan_updated_status'] = 'NPA'

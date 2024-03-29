@@ -22,7 +22,6 @@ class add_subcategory(add_subcategoryTemplate):
     self.repeating_panel_2.items = app_tables.fin_admin_beseem_categories.search(group_name="qualification")
     self.repeating_panel_3.items = app_tables.fin_admin_beseem_categories.search(group_name="marital_status")
     self.repeating_panel_5.items = app_tables.fin_admin_beseem_categories.search(group_name="profession")
-    self.repeating_panel_4.items = app_tables.fin_admin_beseem_categories.search(group_name="all_loans")
     self.repeating_panel_6.items = app_tables.fin_admin_beseem_categories.search(group_name="organization_type")
     self.repeating_panel_7.items = app_tables.fin_admin_beseem_categories.search(group_name="present_address")
     self.repeating_panel_8.items = app_tables.fin_admin_beseem_categories.search(group_name="duration_at_address")
@@ -136,35 +135,6 @@ class add_subcategory(add_subcategoryTemplate):
             group_name="profession", max_points=max_points
         )
     
-  # def all_loan_button_click(self, **event_args):
-  #   """This method is called when the button is clicked"""
-  #   entered_sub = self.text_box_9.text.lower()
-  #   entered_yes_no = self.text_box_10.text.lower()
-  #   valid_statuses = ['yes', 'no']
-  #   if entered_yes_no not in valid_statuses:
-  #       alert("Kindly input either 'yes' or 'no'.")
-  #       return
-  #   entered_min_pts = int(self.text_box_11.text)
-    
-  #   new_row = app_tables.fin_admin_beseem_categories.add_row(group_name='all_loans',sub_category=entered_sub,min_points=entered_min_pts,is_liveloan=entered_yes_no)
-  #   self.text_box_9.text = ' '
-  #   self.text_box_10.text = ' '
-  #   self.text_box_11.text = ' '
-  #   self.refresh()
-
-  #   existing_min_points = [row["min_points"] for row in app_tables.fin_admin_beseem_categories.search(group_name='all_loans')]
-
-  #   max_points = max(existing_min_points + [entered_min_pts])
-
-  #   existing_group_row  = app_tables.fin_admin_beseem_groups.get(group_name="all_loans")
-  #   if existing_group_row:
-  #     existing_group_row['max_points'] = max_points
-  #     existing_group_row.update()
-
-  #   else:
-  #     new_group_row = app_tables.fin_admin_beseem_groups.add_row(
-  #           group_name="all_loans", max_points=max_points
-  #       )
 
   def organization_type_button_click(self, **event_args):
     """This method is called when the button is clicked"""
@@ -419,7 +389,6 @@ class add_subcategory(add_subcategoryTemplate):
     self.grid_panel_2.visible = False
     self.grid_panel_3.visible = False
     self.grid_panel_4.visible = False
-    self.grid_panel_5.visible = False
     self.grid_panel_6.visible = False
     self.grid_panel_7.visible = False
     self.grid_panel_8.visible = False
@@ -437,7 +406,6 @@ class add_subcategory(add_subcategoryTemplate):
     self.grid_panel_2.visible = False
     self.grid_panel_3.visible = False
     self.grid_panel_4.visible = False
-    self.grid_panel_5.visible = False
     self.grid_panel_6.visible = False
     self.grid_panel_7.visible = False
     self.grid_panel_8.visible = False
@@ -455,7 +423,6 @@ class add_subcategory(add_subcategoryTemplate):
     self.grid_panel_2.visible = True
     self.grid_panel_3.visible = False
     self.grid_panel_4.visible = False
-    self.grid_panel_5.visible = False
     self.grid_panel_6.visible = False
     self.grid_panel_7.visible = False
     self.grid_panel_8.visible = False
@@ -473,7 +440,6 @@ class add_subcategory(add_subcategoryTemplate):
     self.grid_panel_2.visible = False
     self.grid_panel_3.visible = True
     self.grid_panel_4.visible = False
-    self.grid_panel_5.visible = False
     self.grid_panel_6.visible = False
     self.grid_panel_7.visible = False
     self.grid_panel_8.visible = False
@@ -491,7 +457,6 @@ class add_subcategory(add_subcategoryTemplate):
     self.grid_panel_2.visible = False
     self.grid_panel_3.visible = False
     self.grid_panel_4.visible = True
-    self.grid_panel_5.visible = False
     self.grid_panel_6.visible = False
     self.grid_panel_7.visible = False
     self.grid_panel_8.visible = False
@@ -503,27 +468,12 @@ class add_subcategory(add_subcategoryTemplate):
     self.grid_panel_14.visible = False
     self.grid_panel_15.visible = False
 
-  # def all_loan_click(self, **event_args):
-  #   """This method is called when the button is clicked"""
-  #   self.grid_panel_1.visible = False
-  #   self.grid_panel_2.visible = False
-  #   self.grid_panel_3.visible = False
-  #   self.grid_panel_4.visible = False
-  #   self.grid_panel_5.visible = True
-  #   self.grid_panel_6.visible = False
-  #   self.grid_panel_7.visible = False
-  #   self.grid_panel_8.visible = False
-  #   self.grid_panel_9.visible = False
-  #   self.grid_panel_10.visible = False
-  #   self.grid_panel_11.visible = False
-
   def organization_type_click(self, **event_args):
     """This method is called when the button is clicked"""
     self.grid_panel_1.visible = False
     self.grid_panel_2.visible = False
     self.grid_panel_3.visible = False
     self.grid_panel_4.visible = False
-    self.grid_panel_5.visible = False
     self.grid_panel_6.visible = True
     self.grid_panel_7.visible = False
     self.grid_panel_8.visible = False

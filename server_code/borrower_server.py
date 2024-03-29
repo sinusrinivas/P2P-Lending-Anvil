@@ -51,13 +51,13 @@ def add_borrower_student(college_name,college_id,college_proof,college_address,u
     row[0]['college_proof']=college_proof
 
 @anvil.server.callable
-def add_borrower_step4(home_loan,other_loan,user_id,credit_card,wheeler):
+def add_borrower_step4(home_loan,other_loan,user_id,credit_card,vehicle):
   row = app_tables.fin_user_profile.search(customer_id=user_id)
   if row:
     row[0]['home_loan'] = home_loan
     row[0]['other_loan']=other_loan
     row[0]['credit_card_loans']=credit_card
-    row[0]['vehicle_loan']=wheeler
+    row[0]['vehicle_loan']=vehicle
     row[0]['form_count']=4
     
 @anvil.server.callable
@@ -78,13 +78,12 @@ def add_borrower_step6(bank_id, bank_branch, user_id):
         # Update fin_user_profile table
         row[0]['bank_id'] = bank_id
         row[0]['account_bank_branch'] = bank_branch
+        bessem_value = final_points_update_bessem_table(user_id)
+        row[0]['bessem_value'] = float(bessem_value)
         row[0]['form_count'] = 6
         row[0]['usertype'] = 'borrower'
         row[0]['last_confirm'] = True
-        bessem_value = final_points_update_bessem_table(user_id)
-        row[0]['bessem_value'] = float(bessem_value)
-        wallet.find_user_update_type(user_id,row[0]['full_name'],"borrower")
-        
+        wallet.find_user_update_type(user_id,row[0]['full_name'],"borrower")        
 
         # Search for an existing row with the same email_id in fin_borrower table
         existing_borrower_row = app_tables.fin_borrower.get(email_id=row[0]['email_user'])
@@ -254,6 +253,10 @@ def final_points_update_bessem_table(user_id):
         points = (user_points / group_points) * 100
 
         final_points = '{:.2f}'.format(points)
+        # update_user_beseem_score(user_id, borrower_email_id, gender_points, present_address_points, duration_at_address_points,
+        #                  qualification_points, profession_points, organization_type_points, salary_type_points,
+        #                  age_of_business_points, marital_status_points, spouse_profession_points, home_loan_points,
+        #                  other_loan_points, credit_card_loan_points, vehicle_loan_points, user_points)
 
         return final_points
     return None
@@ -262,6 +265,7 @@ def get_user_points(id):
     users = app_tables.fin_user_profile.search(customer_id=id)
     if users:
         user = users[0]
+        email = user['email_user']
         gender = user['gender'].lower() 
         qualification = user['qualification'].lower()  
         marital_status = user['marital_status'].lower()  
@@ -270,7 +274,10 @@ def get_user_points(id):
         organization_type = user['organization_type'].lower()
         present_address = user['present_address'].lower()
         duration_at_address = str(user['duration_at_address']).lower()
-        self_employment = user['self_employment'].lower()
+        # self_employment = user['self_employment'].lower()
+        self_employment = user['self_employment']
+        if self_employment is not None:
+          self_employment = self_employment.lower()
         age_of_business = user['business_age']
         salary_type = user['salary_type'].lower()
         home_loan = user['home_loan'].lower()
@@ -284,19 +291,19 @@ def get_user_points(id):
         # Find the age range for the user_age
         user_age_range = None
         if 18 <= user_age <= 24:
-          user_age_range = '18-24'
+            user_age_range = '18-24'
         elif 25 <= user_age <= 30:
-          user_age_range = '25-30'
+            user_age_range = '25-30'
         elif 31 <= user_age <= 36:
-          user_age_range = '31-36'
+            user_age_range = '31-36'
         elif 37 <= user_age <= 40:
-          user_age_range = '37-40'
+            user_age_range = '37-40'
         elif 41 <= user_age <= 50:
-          user_age_range = '41-50'
+            user_age_range = '41-50'
         else:
-          user_age_range = '51'      
+            user_age_range = '51'      
       
-        gender_search = app_tables.fin_admin_beseem_categories.search(group_name='gender', sub_category=gender)
+        gender_search = app_tables.fin_admin_beseem_categories.search(group_name='gender', sub_category=gender.lower())
         if gender_search:
             gender_points = gender_search[0]['min_points']
             print("Gender Points:", gender_points)
@@ -310,9 +317,9 @@ def get_user_points(id):
 
         duration_at_address_search = app_tables.fin_admin_beseem_categories.search(group_name='duration_at_address', sub_category=duration_at_address.lower())
         if duration_at_address_search:
-           duration_at_address_points = duration_at_address_search[0]['min_points']
-           print("Duration at address Points:", duration_at_address_points)
-           user_points += duration_at_address_points
+            duration_at_address_points = duration_at_address_search[0]['min_points']
+            print("Duration at address Points:", duration_at_address_points)
+            user_points += duration_at_address_points
 
         qualification_search = app_tables.fin_admin_beseem_categories.search(group_name='qualification', sub_category=qualification.lower())
         if qualification_search:
@@ -327,11 +334,11 @@ def get_user_points(id):
             user_points += profession_points
 
             if profession == 'self employment':
-              self_employment_search = app_tables.fin_admin_beseem_categories.search(group_name='profession', sub_category= self_employment.lower())
-              if self_employment_search:
-                self_employment_points = self_employment_search[0]['min_points']
-                print("self employment Points:", self_employment_points)
-                user_points += self_employment_points
+                self_employment_search = app_tables.fin_admin_beseem_categories.search(group_name='profession', sub_category=self_employment.lower())
+                if self_employment_search:
+                    self_employment_points = self_employment_search[0]['min_points']
+                    print("self employment Points:", self_employment_points)
+                    user_points += self_employment_points
                 
             elif profession == 'employee':
                 organization_type_search = app_tables.fin_admin_beseem_categories.search(group_name='organization_type', sub_category=organization_type.lower())
@@ -339,56 +346,56 @@ def get_user_points(id):
                     organization_type_points = organization_type_search[0]['min_points']
                     print("Organization type Points:", organization_type_points)
                     user_points += organization_type_points
-                salary_type_search = app_tables.fin_admin_beseem_categories.search(group_name='salary_type',sub_category=salary_type.lower())
+                salary_type_search = app_tables.fin_admin_beseem_categories.search(group_name='salary_type', sub_category=salary_type.lower())
                 if salary_type_search:
-                  salary_type_points = salary_type_search[0]['min_points']
-                  print("Salary type Points:", salary_type_points)
+                    salary_type_points = salary_type_search[0]['min_points']
+                    print("Salary type Points:", salary_type_points)
 
             elif profession == 'business':
                 business_age_search = app_tables.fin_admin_beseem_categories.search(group_name='age_of_business', sub_category=age_of_business.lower())
                 if business_age_search:
-                    business_age_points = business_age_search
+                    business_age_points = business_age_search[0]['min_points']
                     print("Business Age Points:", business_age_points)
                     user_points += business_age_points
                   
         marital_status_search = app_tables.fin_admin_beseem_categories.search(group_name='marital_status', sub_category=marital_status.lower(), age=user_age_range)
         if marital_status_search:
-           marital_status_points = marital_status_search[0]['min_points']
-           print("Marital status Points:", marital_status_points)
-           user_points += marital_status_points
+            marital_status_points = marital_status_search[0]['min_points']
+            print("Marital status Points:", marital_status_points)
+            user_points += marital_status_points
     
-           data = app_tables.fin_guarantor_details.search(customer_id=id)
-           if data:
-              for item in data:
-               another_person = item['another_person'].lower()
-               spouse_profession = item['guarantor_profession'].lower()
+            data = app_tables.fin_guarantor_details.search(customer_id=id)
+            if data:
+                for item in data:
+                    another_person = item['another_person'].lower()
+                    spouse_profession = item['guarantor_profession'].lower()
 
-               if marital_status == 'married' and another_person == 'spouse':
-                 spouse_profession_search = app_tables.fin_admin_beseem_categories.search(group_name='spouse_profession', sub_category=spouse_profession.lower())
-                 if spouse_profession_search:
-                    spouse_profession_points = spouse_profession_search[0]['min_points']
-                    print("Spouse profession:", spouse_profession_points)
-                    user_points += spouse_profession_points        
+                    if marital_status == 'married' and another_person == 'spouse':
+                        spouse_profession_search = app_tables.fin_admin_beseem_categories.search(group_name='spouse_profession', sub_category=spouse_profession.lower())
+                        if spouse_profession_search:
+                            spouse_profession_points = spouse_profession_search[0]['min_points']
+                            print("Spouse profession:", spouse_profession_points)
+                            user_points += spouse_profession_points        
 
-        home_loan_search = app_tables.fin_admin_beseem_categories.search( group_name='home_loan', sub_category=home_loan.lower())
+        home_loan_search = app_tables.fin_admin_beseem_categories.search(group_name='home_loan', sub_category=home_loan.lower())
         if home_loan_search:
             home_loan_points = home_loan_search[0]['min_points']
             print("Home loan Points:", home_loan_points)
             user_points += home_loan_points
 
-        other_loan_search = app_tables.fin_admin_beseem_categories.search(group_name='other_loan', sub_category=other_loan)
+        other_loan_search = app_tables.fin_admin_beseem_categories.search(group_name='other_loan', sub_category=other_loan.lower())
         if other_loan_search:
             other_loan_points = other_loan_search[0]['min_points']
             print("Other loan Points:", other_loan_points)
             user_points += other_loan_points
           
-        credit_card_loan_search = app_tables.fin_admin_beseem_categories.search(group_name='credit_card_loan',sub_category=credit_card_loan.lower())
+        credit_card_loan_search = app_tables.fin_admin_beseem_categories.search(group_name='credit_card_loan', sub_category=credit_card_loan.lower())
         if credit_card_loan_search:
             credit_card_loan_points = credit_card_loan_search[0]['min_points']
             print("Credit card loan Points:", credit_card_loan_points)
             user_points += credit_card_loan_points
 
-        vehicle_loan_search = app_tables.fin_admin_beseem_categories.search(group_name ='vehicle_loan',sub_category=vehicle_loan.lower())
+        vehicle_loan_search = app_tables.fin_admin_beseem_categories.search(group_name='vehicle_loan', sub_category=vehicle_loan.lower())
         if vehicle_loan_search:
             vehicle_loan_points = vehicle_loan_search[0]['min_points']
             print("Vehicle Points:", vehicle_loan_points)
@@ -398,25 +405,34 @@ def get_user_points(id):
     else:
         return None
 
-# def find_user_and_add_bessem_value(user_id):
-#   df = app_tables.fin_user_beseem_score.search(borrower_customer_id=user_id)
-#   if df:
-#     df[0]['borrower_customer_id']
-#     df[0]['borrower_email_id']
-#     df[0]['present_address_point']
-#     df[0]['duration_at_address_point']
-#     df[0]['qualification_point']
-#     df[0]['profession_point']
-#     df[0]['organization_type_point']
-#     df[0]['salary_type_point']
-#     df[0]['age_of_business_point']
-#     df[0]['marital_status_point']
-#     df[0]['spouse_profession_point']
-#     df[0]['home_loan_point']
-#     df[0]['other_loan_point']
-#     df[0]['credit_card_loan_point']
-#     df[0]['vehicle_loan_point']
-#     df[0]['total_user_point']
+# def update_user_beseem_score(user_id, borrower_email_id, gender_points, present_address_points, duration_at_address_points,
+#                              qualification_points, profession_points, organization_type_points, salary_type_points,
+#                              age_of_business_points, marital_status_points, spouse_profession_points, home_loan_points,
+#                              other_loan_points, credit_card_loan_points, vehicle_loan_points, user_points):
+#     # Check if user data already exists, if not, create a new row
+#     user_data = app_tables.fin_user_beseem_score.get(borrower_customer_id=user_id)
+#     if not user_data:
+#         user_data = app_tables.fin_user_beseem_score.add_row(borrower_customer_id=user_id)
+    
+#     # Update user data
+#     user_data['borrower_email_id'] = email
+#     user_data['gender_points'] = gender_points
+#     user_data['present_address_points'] = present_address_points
+#     user_data['duration_at_address_points'] = duration_at_address_points
+#     user_data['qualification_points'] = qualification_points
+#     user_data['profession_points'] = profession_points
+#     user_data['organization_type_points'] = organization_type_points
+#     user_data['salary_type_points'] = salary_type_points
+#     user_data['age_of_business_points'] = age_of_business_points
+#     user_data['marital_status_points'] = marital_status_points
+#     user_data['spouse_profession_points'] = spouse_profession_points
+#     user_data['home_loan_points'] = home_loan_points
+#     user_data['other_loan_points'] = other_loan_points
+#     user_data['credit_card_loan_points'] = credit_card_loan_points
+#     user_data['vehicle_loan_points'] = vehicle_loan_points
+#     user_data['user_points'] = user_points
+    
+#     user_data.save()
     
 def get_group_points(customer_id):
     # Fetch user details
