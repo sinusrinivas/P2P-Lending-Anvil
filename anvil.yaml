@@ -21,10 +21,15 @@ startup: {type: form, module: bank_users.main_form}
 package_name: bank_client
 allow_embedding: false
 name: P2P Lending App
-runtime_options: {version: 2, client_version: '3', server_version: python3-sandbox,
-  server_spec: null}
+runtime_options:
+  version: 3
+  client_version: '3'
+  server_version: python3-sandbox
+  server_spec: null
+  legacy_features: {class_names: true, bootstrap3: true, __dict__: true, root_container: true}
 metadata: {title: 'P2P Bank ', description: this app provide services to person who are ready to invest and ready to give loan}
 startup_form: null
+native_deps: null
 db_schema:
   fin_reported_problems:
     client: full
@@ -671,7 +676,7 @@ db_schema:
       admin_ui: {width: 200, order: 24.140625}
       type: bool
     - name: qualification
-      admin_ui: {width: 200, order: 24.375}
+      admin_ui: {order: 0.5625, width: 200}
       type: string
     - name: address_type
       admin_ui: {width: 200, order: 24.4375}

@@ -14,6 +14,7 @@ class star_1_borrower_registration_form_2_employment_emp_detail_1(star_1_borrowe
     user_data=app_tables.fin_user_profile.get(customer_id=user_id)
     if user_data:
       self.text_box_1.text=user_data['company_name']
+      self.drop_down_3.selected_value = user_data['company_type']
       self.drop_down_1.selected_value=user_data['employment_type']
       self.drop_down_2.selected_value=user_data['organization_type']
       self.drop_down_3.selected_value = user_data['business_age']
@@ -41,7 +42,7 @@ class star_1_borrower_registration_form_2_employment_emp_detail_1(star_1_borrowe
     com_type = self.drop_down_3.selected_value
     company_name = self.text_box_1.text
     user_id = self.userId
-    if not emp_type or not org_type or not company_name:
+    if not emp_type or not org_type or not com_type or not company_name:
       Notification("please fill the required fields ").show()
     else:
       anvil.server.call('add_lendor_individual_form_1', company_name,org_type,emp_type,user_id,com_type)
