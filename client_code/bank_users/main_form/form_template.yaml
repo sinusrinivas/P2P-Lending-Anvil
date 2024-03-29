@@ -1,6 +1,6 @@
 container:
   type: ColumnPanel
-  properties: {col_widths: '{"UXWIME":15,"SYNJVB":45,"NSBNDL":45,"SZJXCQ":15,"HJXPJG":64,"ASUGOE":5,"GKGMVX":5,"GZEPAB":55}',
+  properties: {col_widths: '{"UXWIME":15,"SYNJVB":45,"NSBNDL":45,"SZJXCQ":15,"HJXPJG":64,"ASUGOE":5,"GKGMVX":5,"GZEPAB":55,"YXEJAJ":5,"BRNMJF":55,"YCDQDS":5,"EGYCFU":55}',
     spacing_below: none, background: ''}
 components:
 - name: image_1_copy_copy_1
@@ -144,7 +144,7 @@ components:
   layout_properties: {grid_position: 'UGSXAM,ELGEVC'}
   components:
   - name: image_3_copy
-    properties: {height: 68.79998779296875, source: 'https://static.vecteezy.com/system/resources/previews/026/513/630/non_2x/data-analytics-logo-design-growth-arrow-logo-design-for-data-finance-investment-vector.jpg'}
+    properties: {height: 80.5999755859375, source: 'https://static.vecteezy.com/system/resources/previews/026/513/630/non_2x/data-analytics-logo-design-growth-arrow-logo-design-for-data-finance-investment-vector.jpg'}
     type: Image
     layout_properties: {x: 3.362500000745058, y: 0, width: 61.30000305175784}
   - name: image_3_copy_2
@@ -177,7 +177,7 @@ components:
 
         ', bold: true, font_size: 24, font: a, foreground: ''}
     type: Label
-    layout_properties: {x: 59.674984741955996, y: 14.912498474121094, width: 220}
+    layout_properties: {x: 59.674984741955996, y: 14.912498474121094, width: 241.58798779296876}
   - name: label_7
     properties: {text: Invested Till Date, bold: true, foreground: '#0770e8'}
     type: Label
@@ -186,44 +186,74 @@ components:
   properties: {height: 40.727264404296875}
   type: Spacer
   layout_properties: {grid_position: 'CEVIWJ,CAZEVF'}
-- name: label_2
-  properties: {role: null, align: left, tooltip: '', border: '', foreground: black,
-    visible: true, text: 'What is Peer to Peer Lending?
-
-      ', font_size: 30, font: a, spacing_above: small, icon_align: left, spacing_below: small,
-    italic: false, background: '', bold: true, underline: false, icon: ''}
-  type: Label
-  layout_properties: {grid_position: 'HQITGR,VLAOWI RYNAYV,PTBILZ'}
-- name: label_3
-  properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
-    text: Peer to peer lending is a method of lending capital to borrowers on a mutual interest rate through an online platform like kotak which act as a matchmaker,
-    font_size: 16, font: '', spacing_above: small, icon_align: left, spacing_below: small,
-    italic: false, background: '', bold: false, underline: false, icon: ''}
-  type: Label
-  layout_properties: {grid_position: 'HQITGR,VLAOWI SPIUIS,ROXSKN'}
-- type: Label
-  properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
-    text: 'Is Peer to peer lending safe?', font_size: 30, font: a, spacing_above: small,
-    icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-    underline: false, icon: ''}
-  name: label_14
-  layout_properties: {grid_position: 'HQITGR,VLAOWI FCQLMN,GTLDUD'}
-- type: Label
-  properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
-    text: 'P2P lending offers attractive returns on capital by enabling direct lending
-      between individuals, bypassing traditional financial institutions. While it''s
-      a convenient and lucrative investment avenue, it carries inherent risks, chiefly
-      borrower default. However, prudent risk management strategies can effectively
-      mitigate this concern.', font_size: 16, font: '', spacing_above: small, icon_align: left,
-    spacing_below: small, italic: false, background: '', bold: false, underline: false,
-    icon: ''}
-  name: label_14_copy
-  layout_properties: {grid_position: 'HQITGR,VLAOWI LBUUFW,MSYDRE'}
-- name: image_2
-  properties: {source: 'https://www.godaddy.com/resources/wp-content/uploads/2024/01/How-to-Get-a-Loan-to-Start-a-Business-featured-dye20j.tmp_.jpeg?size=3840x0',
-    display_mode: shrink_to_fit, height: 360.6363525390625}
-  type: Image
-  layout_properties: {grid_position: 'HQITGR,LQHJEY'}
+- name: xy_panel_3
+  properties: {height: 490.1999816894531, background: '#094586'}
+  type: XYPanel
+  layout_properties: {grid_position: 'UKAIXF,VZAKIK'}
+  components:
+  - type: Label
+    properties: {text: Long term wealth creation fund, foreground: white, align: center,
+      font_size: 15}
+    name: label_14
+    layout_properties: {x: 33, y: 23.42498779296875, width: 237.60000610351562}
+  - type: Label
+    properties: {text: Lumpsum, font_size: 25, font: a, foreground: white, align: center,
+      bold: true}
+    name: label_25
+    layout_properties: {x: 33, y: 82.42498779296875, width: 247.79998779296875}
+  - type: Image
+    properties: {source: _/theme/lumpsum-p2p-lending.webp, height: 255.19998168945312}
+    name: image_2
+    layout_properties: {x: 10, y: 149.20000000000005, width: 301.79998779296875}
+  - type: Image
+    properties: {source: _/theme/invest 1.png, height: 88.20001220703125}
+    name: image_15
+    layout_properties: {x: 0, y: 390.38801220703135, width: 311.788}
+- name: xy_panel_4
+  properties: {height: 492.79998779296875, background: '#094586'}
+  type: XYPanel
+  layout_properties: {grid_position: 'UKAIXF,QSQQHQ'}
+  components:
+  - type: Label
+    properties: {text: Earn monthly interest, font_size: 16, align: center, foreground: white}
+    name: label_3
+    layout_properties: {x: 35.662506103515625, y: 26.42498779296875, width: 246.20001220703125}
+  - type: Image
+    properties: {source: _/theme/mip-monthly-income-p2p-lending.webp, height: 265}
+    name: image_13
+    layout_properties: {x: 10, y: 145.20000000000005, width: 294.39996337890625}
+  - type: Image
+    properties: {source: _/theme/New-Project-1.png, height: 88.5999755859375}
+    name: image_16
+    layout_properties: {x: 0, y: 394.78753662109375, width: 310.5999755859375}
+  - type: Label
+    properties: {text: Monthly Income, font: a, font_size: 25, align: center, bold: true,
+      foreground: white}
+    name: label_26
+    layout_properties: {x: 35.71247558668256, y: 441.08751678466797, width: 235.1999969482422}
+- name: xy_panel_5
+  properties: {height: 494.20001220703125, background: '#094586'}
+  type: XYPanel
+  layout_properties: {grid_position: 'UKAIXF,HIVORL'}
+  components:
+  - type: Label
+    properties: {text: Invest based on your preference, foreground: white, align: center,
+      font_size: 15}
+    name: label_2
+    layout_properties: {x: 35.32501220703125, y: 20.42498779296875, width: 252.39996337890625}
+  - type: Label
+    properties: {text: Manual Lending, foreground: white, align: center, font: a,
+      font_size: 25, bold: true}
+    name: label_27
+    layout_properties: {x: 35.32501220703125, y: 84.42498779296875, width: 217.20001220703125}
+  - type: Image
+    properties: {source: _/theme/Updated-Icon-01-1-1024x1024.png, height: 265}
+    name: image_14
+    layout_properties: {x: 12.538000000000011, y: 143.4000000000001, width: 293.7999267578125}
+  - type: Image
+    properties: {source: _/theme/ML-urgent.png, height: 91}
+    name: image_17
+    layout_properties: {x: 0, y: 398.79999999999995, width: 306.32547558593745}
 - name: spacer_3
   properties: {height: 25.272705078125}
   type: Spacer
@@ -244,7 +274,7 @@ components:
   type: Spacer
   layout_properties: {grid_position: 'FGAEGL,EDOHWZ'}
 - name: image_4
-  properties: {source: _/theme/icons8-laptop-64.png, display_mode: shrink_to_fit,
+  properties: {source: _/theme/icons8-laptop-100 (1).png, display_mode: shrink_to_fit,
     height: 140.39999389648438}
   type: Image
   layout_properties: {grid_position: 'BGOTWK,XXIPLN'}
@@ -405,9 +435,9 @@ components:
     components:
     - name: label_2_copy_1
       properties: {role: null, align: center, tooltip: '', border: '', foreground: white,
-        visible: true, text: "   High Returns for Investors Earn good \n   returns",
-        font_size: 30, font: '', spacing_above: small, icon_align: left, spacing_below: small,
-        italic: false, background: '', bold: true, underline: false, icon: ''}
+        visible: true, text: '   High Returns for Investors Earn good returns', font_size: 30,
+        font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+        background: '', bold: true, underline: false, icon: ''}
       type: Label
       layout_properties: {}
     - name: outlined_button_2_copy_1
@@ -440,11 +470,44 @@ components:
   properties: {text: FAQ, font_size: 30, font: a, bold: true}
   type: Label
   layout_properties: {grid_position: 'NLJPGR,IKJPKV'}
-- name: button_1
-  properties: {text: 'What are the benefits of using P2P lending software?                                               +',
-    foreground: black, align: left, font_size: 26, role: null, bold: true, font: a}
+- name: button_4
+  properties: {text: 'What is Peer to Peer Lending?                                                                                          +',
+    foreground: black, bold: true, font: a, font_size: 23, align: left}
   type: Button
-  layout_properties: {grid_position: 'EIRRMF,JRRQBH'}
+  layout_properties: {grid_position: 'EBBCHI,DHGHAX'}
+  event_bindings: {click: button_4_click}
+- name: spacer_10
+  properties: {height: 32}
+  type: Spacer
+  layout_properties: {grid_position: 'XAUWPD,YCDQDS'}
+- name: rich_text_3
+  properties: {content: Peer to peer lending is a method of lending capital to borrowers on a mutual interest rate through an online platform like kotak which act as a matchmaker,
+    font_size: 20, visible: false}
+  type: RichText
+  layout_properties: {grid_position: 'XAUWPD,EGYCFU'}
+- name: button_4_copy
+  properties: {text: 'Is Peer to peer lending safe?                                                                                              +',
+    foreground: black, bold: true, font: a, font_size: 23, align: left}
+  type: Button
+  layout_properties: {grid_position: 'YMHUAU,LULQCV'}
+  event_bindings: {click: button_4_copy_click}
+- name: spacer_13
+  properties: {height: 32}
+  type: Spacer
+  layout_properties: {grid_position: 'BNOUZX,YXEJAJ'}
+- name: rich_text_4
+  properties: {content: 'P2P lending offers attractive returns on capital by enabling
+      direct lending between individuals, bypassing traditional financial institutions.
+      While it''s a convenient and lucrative investment avenue, it carries inherent
+      risks, chiefly borrower default. However, prudent risk management strategies
+      can effectively mitigate this concern.', font_size: 20, visible: false}
+  type: RichText
+  layout_properties: {grid_position: 'BNOUZX,BRNMJF'}
+- name: button_1
+  properties: {text: 'What are the benefits of using P2P lending software?                                                     +',
+    foreground: black, align: left, font_size: 23, role: null, bold: true, font: a}
+  type: Button
+  layout_properties: {grid_position: 'MBJAWJ,OZKRQT'}
   event_bindings: {click: button_1_click}
 - name: spacer_11
   properties: {height: 32}
@@ -482,7 +545,7 @@ components:
   layout_properties: {grid_position: 'RFIPML,GZEPAB'}
 - name: button_1_copy
   properties: {text: 'What types of loans can be offered through peer-to-peer marketplace
-      software?        +', foreground: black, align: left, font_size: 25, role: null,
+      software?        +', foreground: black, align: left, font_size: 23, role: null,
     font: a, bold: true}
   type: Button
   layout_properties: {grid_position: 'DAMLNZ,ITXSQB'}

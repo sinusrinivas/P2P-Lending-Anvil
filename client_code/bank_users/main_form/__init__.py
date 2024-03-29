@@ -115,6 +115,14 @@ class main_form(main_formTemplate):
     """This method is called when the link is clicked"""
     open_form("bank_users.main_form.basic_registration_form")
 
+  def button_4_copy_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    self.rich_text_4.visible = not self.rich_text_4.visible
+
+  def button_4_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    self.rich_text_3.visible = not self.rich_text_3.visible
+
  
 
 
