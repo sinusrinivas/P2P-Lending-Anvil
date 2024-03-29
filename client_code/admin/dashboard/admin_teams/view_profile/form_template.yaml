@@ -10,7 +10,7 @@ components:
   components:
   - type: ColumnPanel
     properties: {role: null, tooltip: '', border: '', foreground: '', visible: true,
-      wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{"PWLLJC":30,"JZLCIC":15,"FOOZGC":25,"FVVEWJ":10,"RROCZE":10}',
+      wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{"PWLLJC":30}',
       spacing_below: small, background: ''}
     name: content_panel_copy_2
     layout_properties:
@@ -37,80 +37,72 @@ components:
         underline: false, icon: ''}
       name: label_1_copy
       layout_properties: {grid_position: 'JSNJZR,SUFXXP'}
-    - type: Spacer
-      properties: {height: 250}
-      name: spacer_1
-      layout_properties: {grid_position: 'KJQTJM,JZLCIC'}
     - type: Label
-      properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      properties: {role: null, align: right, tooltip: '', border: '', foreground: '',
         visible: true, text: '   Name', font_size: null, font: '', spacing_above: small,
         icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
         underline: false, icon: ''}
       name: label_2_copy
-      layout_properties: {grid_position: 'KJQTJM,FOOZGC FPXMCS,APIEWM'}
+      layout_properties: {grid_position: 'KJQTJM,FOOZGC'}
     - type: Label
-      properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      properties: {}
+      name: label_7_copy
+      layout_properties: {grid_position: 'KJQTJM,FVVEWJ'}
+    - type: Label
+      properties: {role: null, align: right, tooltip: '', border: '', foreground: '',
         visible: true, text: '   Email', font_size: null, font: '', spacing_above: small,
         icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
         underline: false, icon: ''}
       name: label_3_copy
-      layout_properties: {grid_position: 'KJQTJM,FOOZGC NYLMVU,ZIBRZJ'}
+      layout_properties: {grid_position: 'YTKYYT,WTMAED'}
     - type: Label
-      properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      properties: {}
+      name: label_8_copy
+      layout_properties: {grid_position: 'YTKYYT,ERIJZP'}
+    - type: Label
+      properties: {role: null, align: right, tooltip: '', border: '', foreground: '',
         visible: true, text: '   Mobile No', font_size: null, font: '', spacing_above: small,
         icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
         underline: false, icon: ''}
       name: label_4_copy
-      layout_properties: {grid_position: 'KJQTJM,FOOZGC XDGURN,PHFYTH'}
+      layout_properties: {grid_position: 'UBLDCL,SWFLUX'}
     - type: Label
-      properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      properties: {}
+      name: label_9_copy
+      layout_properties: {grid_position: 'UBLDCL,TRMDGM'}
+    - type: Label
+      properties: {role: null, align: right, tooltip: '', border: '', foreground: '',
         visible: true, text: '   Joining Date', font_size: null, font: '', spacing_above: small,
         icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
         underline: false, icon: ''}
       name: label_5_copy
-      layout_properties: {grid_position: 'KJQTJM,FOOZGC OALUYZ,KEGRJQ'}
+      layout_properties: {grid_position: 'OLLSOD,PXBOPQ'}
     - type: Label
-      properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      properties: {}
+      name: label_10_copy
+      layout_properties: {grid_position: 'OLLSOD,WEPYEV'}
+    - type: Label
+      properties: {role: null, align: right, tooltip: '', border: '', foreground: '',
         visible: true, text: '   Role', font_size: null, font: '', spacing_above: small,
         icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
         underline: false, icon: ''}
       name: label_6_copy
-      layout_properties: {grid_position: 'KJQTJM,FOOZGC WTSSGR,NIMODJ'}
+      layout_properties: {grid_position: 'NCALKL,XSQUXU'}
     - type: Label
-      properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      properties: {}
+      name: label_11_copy
+      layout_properties: {grid_position: 'NCALKL,NFDVAQ'}
+    - type: Label
+      properties: {role: null, align: right, tooltip: '', border: '', foreground: '',
         visible: true, text: '   Permission', font_size: null, font: '', spacing_above: small,
         icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
         underline: false, icon: ''}
       name: label_12_copy
-      layout_properties: {grid_position: 'KJQTJM,FOOZGC LHRZTA,XGAVPR'}
-    - type: Label
-      properties: {}
-      name: label_7_copy
-      layout_properties: {grid_position: 'KJQTJM,FVVEWJ OPLZXV,GWDOBT'}
-    - type: Label
-      properties: {}
-      name: label_8_copy
-      layout_properties: {grid_position: 'KJQTJM,FVVEWJ NVMJPE,JWOJFW'}
-    - type: Label
-      properties: {}
-      name: label_9_copy
-      layout_properties: {grid_position: 'KJQTJM,FVVEWJ RVVEPS,PRJABT'}
-    - type: Label
-      properties: {}
-      name: label_10_copy
-      layout_properties: {grid_position: 'KJQTJM,FVVEWJ AJNPOV,DOSXSQ'}
-    - type: Label
-      properties: {}
-      name: label_11_copy
-      layout_properties: {grid_position: 'KJQTJM,FVVEWJ FIXFAH,YMTUSU'}
+      layout_properties: {grid_position: 'NETSET,UQZVCN'}
     - type: Label
       properties: {}
       name: label_13_copy
-      layout_properties: {grid_position: 'KJQTJM,FVVEWJ JBYZWA,LAXPSE'}
-    - type: Spacer
-      properties: {height: 241}
-      name: spacer_2
-      layout_properties: {grid_position: 'KJQTJM,RROCZE'}
+      layout_properties: {grid_position: 'NETSET,QTSFHT'}
     - type: Label
       properties: {}
       name: label_14_copy

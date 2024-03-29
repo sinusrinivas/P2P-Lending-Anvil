@@ -76,7 +76,7 @@ class update_form_copy(update_form_copyTemplate):
         #data[a]['ifsc_code'] = self.text_box_44.text
         data[a]['salary_type'] = self.text_box_45.text
         #data[a]['select_bank'] = self.text_box_46.text
-        # data[a]['net_bank'] = self.text_box_47.text
+        data[a]['net_bank'] = self.text_box_47.text
         data[a]['father_name'] = self.text_box_48.text
         data[a]['father_age'] = self.text_box_49.text
         data[a]['mother_name'] = self.text_box_50.text
@@ -84,7 +84,7 @@ class update_form_copy(update_form_copyTemplate):
         data[a]['college_name'] = self.text_box_52.text
         data[a]['college_id'] = self.text_box_53.text
         data[a]['college_address'] = self.text_box_54.text
-        # data[a]['running_Home_Loan'] = self.text_box_55.text
+        data[a]['running_Home_Loan'] = self.text_box_55.text
         print(a)
         open_form('admin.dashboard.lenders.view_profile_copy', self.get)
 

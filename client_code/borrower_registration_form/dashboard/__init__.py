@@ -37,10 +37,10 @@ class dashboard(dashboardTemplate):
                     alert("No data found")
 
                 # Check if the user has at least 3 loans
-                # if len(customer_loans) > 3:
-                #     self.extended_loans.visible = True
-                # else:
-                #     self.extended_loans.visible = False
+                if len(customer_loans) > 3:
+                    self.extended_loans.visible = True
+                else:
+                    self.extended_loans.visible = False
 
 
     def home_main_form_link_click(self, **event_args):

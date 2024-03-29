@@ -4,7 +4,7 @@ container:
   properties: {html: '@theme:standard-page.html'}
 components:
 - type: ColumnPanel
-  properties: {col_widths: '{"VTNEWW":20,"BMBMQP":47,"GLFLFL":3}'}
+  properties: {col_widths: '{}'}
   name: content_panel
   layout_properties: {slot: default}
   components:
@@ -51,17 +51,13 @@ components:
       underline: false, icon: ''}
     name: label_1
     layout_properties: {grid_position: 'JICCEY,UEHAQW'}
-  - name: spacer_1
-    properties: {height: 360.78570556640625}
-    type: Spacer
-    layout_properties: {grid_position: 'WQHIEH,VTNEWW'}
   - type: ColumnPanel
     properties: {col_widths: '{}'}
     name: column_panel_3
-    layout_properties: {grid_position: 'WQHIEH,BMBMQP PMIJKR,LLXYMQ'}
+    layout_properties: {grid_position: 'WQHIEH,BMBMQP'}
     components:
     - type: Label
-      properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
         visible: true, text: Full Name, font_size: null, font: '', spacing_above: small,
         icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
         underline: false, icon: ''}
@@ -74,10 +70,10 @@ components:
   - type: ColumnPanel
     properties: {col_widths: '{}'}
     name: column_panel_4
-    layout_properties: {grid_position: 'WQHIEH,BMBMQP OMQWNF,CDAVFE'}
+    layout_properties: {grid_position: 'AWUGSU,WECJYP'}
     components:
     - type: Label
-      properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
         visible: true, text: Email Id, font_size: null, font: '', spacing_above: small,
         icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
         underline: false, icon: ''}
@@ -90,10 +86,10 @@ components:
   - type: ColumnPanel
     properties: {col_widths: '{}'}
     name: column_panel_5
-    layout_properties: {grid_position: 'WQHIEH,BMBMQP TVPJGQ,JLNJLH'}
+    layout_properties: {grid_position: 'XVYAQN,ISYCXH'}
     components:
     - type: Label
-      properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
         visible: true, text: Mobile, font_size: null, font: '', spacing_above: small,
         icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
         underline: false, icon: ''}
@@ -106,10 +102,10 @@ components:
   - type: ColumnPanel
     properties: {col_widths: '{}'}
     name: column_panel_7
-    layout_properties: {grid_position: 'WQHIEH,BMBMQP WBJHJA,QSPXOP'}
+    layout_properties: {grid_position: 'AGUYSU,JQBHRA'}
     components:
     - type: Label
-      properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
         visible: true, text: Gender, font_size: null, font: '', spacing_above: small,
         icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
         underline: false, icon: ''}
@@ -122,10 +118,10 @@ components:
   - type: ColumnPanel
     properties: {col_widths: '{}'}
     name: column_panel_8
-    layout_properties: {grid_position: 'WQHIEH,BMBMQP CPVTSP,NRBJUM'}
+    layout_properties: {grid_position: 'QFWFJU,RHGEPY'}
     components:
     - type: Label
-      properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
         visible: true, text: DOB, font_size: null, font: '', spacing_above: small,
         icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
         underline: false, icon: ''}
@@ -138,10 +134,10 @@ components:
   - type: ColumnPanel
     properties: {col_widths: '{}'}
     name: column_panel_9
-    layout_properties: {grid_position: 'WQHIEH,BMBMQP GDZLJA,LKURZU'}
+    layout_properties: {grid_position: 'XXUHAC,MBSYUG'}
     components:
     - type: Label
-      properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
         visible: true, text: Aadhar no, font_size: null, font: '', spacing_above: small,
         icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
         underline: false, icon: ''}
@@ -154,10 +150,10 @@ components:
   - type: ColumnPanel
     properties: {col_widths: '{}'}
     name: column_panel_10
-    layout_properties: {grid_position: 'WQHIEH,BMBMQP ROOJCO,EMLEDY'}
+    layout_properties: {grid_position: 'CBEQQP,JETOPH'}
     components:
     - type: Label
-      properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
         visible: true, text: Pan number, font_size: null, font: '', spacing_above: small,
         icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
         underline: false, icon: ''}
@@ -167,10 +163,6 @@ components:
       properties: {}
       name: pan_number
       layout_properties: {grid_position: 'OVPFVR,PPCPSN'}
-  - name: spacer_2
-    properties: {height: 351.21429443359375}
-    type: Spacer
-    layout_properties: {grid_position: 'WQHIEH,GLFLFL'}
 - type: FlowPanel
   properties: {}
   name: navbar_links

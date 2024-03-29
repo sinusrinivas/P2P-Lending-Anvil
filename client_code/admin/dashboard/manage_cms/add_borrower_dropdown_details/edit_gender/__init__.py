@@ -21,10 +21,7 @@ class edit_gender(edit_genderTemplate):
   def button_1_click(self, **event_args):
     """This method is called when the button is clicked"""
     # Get the updated gender from the textbox
-    updated_gender = self.text_box_1.text.strip()
-    if not updated_gender:
-        alert("Please enter a valid data.")
-        return
+    updated_gender = self.text_box_1.text
 
         # Update the 'borrower_gender' field in the database
     self.selected_row['borrower_gender'] = updated_gender

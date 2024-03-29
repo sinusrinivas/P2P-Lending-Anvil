@@ -268,13 +268,9 @@ class manage_producs1(manage_producs1Template):
         if selected_value == "Yes":
             self.label_7_copy.visible = True
             self.text_box_4.visible = True
-            self.min_extension_month_text_box.visible = True
-            self.min_extension_label.visible = True
         else:
             self.label_7_copy.visible = False
             self.text_box_4.visible = False
-            self.min_extension_month_text_box.visible = False
-            self.min_extension_label.visible = False
 
     def button_1_click(self, **event_args):
         """This method is called when the button is clicked"""
@@ -335,7 +331,6 @@ class manage_producs1(manage_producs1Template):
     
         extension_allowed = self.extension_allowed.selected_value
         extension_fee = int(self.text_box_4.text.strip()) if extension_allowed == "Yes" else 0
-        min_extension_month = int(self.min_extension_month_text_box.text.strip()) if extension_allowed == "Yes" else 0
 
       
       #   emi_payment = [
@@ -366,7 +361,7 @@ class manage_producs1(manage_producs1Template):
         anvil.server.call('product_details', self.id, product_name, product_group, product_description,
                           product_categories, processing_fee, extension_fee, membership_type, interest_type, max_amount,
                           min_amount, min_tenure, max_tenure, roi, foreclose_type, foreclosure_fee, extension_allowed,
-                          emi_payment, min_months, lapsed_fee, default_fee, npa,occupation,min_extension_month )
+                          emi_payment, min_months, lapsed_fee, default_fee, npa,occupation)
     
         # Update product ID and show success notification
         product_id = self.label_1.text

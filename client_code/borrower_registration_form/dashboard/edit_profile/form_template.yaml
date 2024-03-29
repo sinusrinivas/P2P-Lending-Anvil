@@ -1,6 +1,6 @@
 container:
   type: ColumnPanel
-  properties: {col_widths: '{"GVRGAT":15,"TILVKS":20,"LKCTXU":20,"FTWTHN":5}'}
+  properties: {col_widths: '{}'}
 components:
 - name: image_1_copy_1
   properties: {role: null, vertical_align: center, height: 48, tooltip: '', border: '',
@@ -26,104 +26,100 @@ components:
   layout_properties:
     col_widths: {}
     grid_position: FHCCYR,XQFXNC
-- name: spacer_1
-  properties: {height: 329.9285888671875}
-  type: Spacer
-  layout_properties: {grid_position: 'FFAZCJ,GVRGAT'}
 - type: Label
-  properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
-    text: 'Full Name:', font_size: null, font: '', spacing_above: small, icon_align: left,
-    spacing_below: small, italic: false, background: '', bold: true, underline: false,
-    icon: ''}
+  properties: {role: null, align: right, tooltip: '', border: '', foreground: '',
+    visible: true, text: 'Full Name:', font_size: null, font: '', spacing_above: small,
+    icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+    underline: false, icon: ''}
   name: label_1
   layout_properties:
     col_widths: {}
-    grid_position: FFAZCJ,TILVKS CXAMPM,TMLIOS
-- name: spacer_4
-  properties: {height: -0.642852783203125}
-  type: Spacer
-  layout_properties: {grid_position: 'FFAZCJ,TILVKS ORTOMT,RJLWJD'}
+    grid_position: FFAZCJ,TILVKS
+- name: borrower_full_name_text
+  properties: {background: white}
+  type: TextBox
+  layout_properties: {grid_position: 'FFAZCJ,LKCTXU'}
 - type: Label
-  properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
-    text: 'Email ID:', font_size: null, font: '', spacing_above: small, icon_align: left,
-    spacing_below: small, italic: false, background: '', bold: true, underline: false,
-    icon: ''}
+  properties: {role: null, align: right, tooltip: '', border: '', foreground: '',
+    visible: true, text: 'Email ID:', font_size: null, font: '', spacing_above: small,
+    icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+    underline: false, icon: ''}
   name: label_3
-  layout_properties: {grid_position: 'FFAZCJ,TILVKS TYFQNK,SKTKWY'}
-- name: spacer_5
-  properties: {height: 1.357147216796875}
-  type: Spacer
-  layout_properties: {grid_position: 'FFAZCJ,TILVKS XQECUD,RMSXMB'}
+  layout_properties:
+    col_widths: {}
+    grid_position: ADGYID,JHYFCJ
+- name: mail_text
+  properties: {background: white}
+  type: TextBox
+  layout_properties: {grid_position: 'ADGYID,VLYNBS'}
 - type: Label
-  properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
-    text: 'Mobile No:', font_size: null, font: '', spacing_above: small, icon_align: left,
-    spacing_below: small, italic: false, background: '', bold: true, underline: false,
-    icon: ''}
+  properties: {role: null, align: right, tooltip: '', border: '', foreground: '',
+    visible: true, text: 'Mobile No:', font_size: null, font: '', spacing_above: small,
+    icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+    underline: false, icon: ''}
   name: label_5
-  layout_properties: {grid_position: 'FFAZCJ,TILVKS DTBCSF,TKOQYS'}
-- name: spacer_3
-  properties: {height: 8.214324951171875}
-  type: Spacer
-  layout_properties: {grid_position: 'FFAZCJ,TILVKS BZPTVP,RZOEKU'}
+  layout_properties:
+    col_widths: {}
+    grid_position: QAHJBM,DMISYN
+- name: mobile_text
+  properties: {background: white}
+  type: TextBox
+  layout_properties: {grid_position: 'QAHJBM,TDVHAD'}
 - type: Label
-  properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
-    text: 'Your Date Of Birth:', font_size: null, font: '', spacing_above: small,
-    icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+  properties: {role: null, align: right, tooltip: '', border: '', foreground: '',
+    visible: true, text: 'Your Date Of Birth:', font_size: null, font: '', spacing_above: small,
+    icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
     underline: false, icon: ''}
   name: label_7
-  layout_properties: {grid_position: 'FFAZCJ,TILVKS DAVZCR,OLYDRQ'}
-- type: Label
-  properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
-    text: City, font_size: null, font: '', spacing_above: small, icon_align: left,
-    spacing_below: small, italic: false, background: '', bold: true, underline: false,
-    icon: ''}
-  name: label_9
-  layout_properties: {grid_position: 'FFAZCJ,TILVKS ECMFGG,MKTPUW'}
-- type: Label
-  properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
-    text: 'Your pan Card:', font_size: null, font: '', spacing_above: small, icon_align: left,
-    spacing_below: small, italic: false, background: '', bold: true, underline: false,
-    icon: ''}
-  name: label_11
-  layout_properties: {grid_position: 'FFAZCJ,TILVKS AOIJSG,MFNAAX'}
-- type: Label
-  properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
-    text: 'Gender:', font_size: null, font: '', spacing_above: small, icon_align: left,
-    spacing_below: small, italic: false, background: '', bold: true, underline: false,
-    icon: ''}
-  name: label_13
-  layout_properties: {grid_position: 'FFAZCJ,TILVKS VYYWMO,ZGNDUB'}
-- type: Label
-  properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
-    text: 'Mother Tongue:', font_size: null, font: '', spacing_above: small, icon_align: left,
-    spacing_below: small, italic: false, background: '', bold: true, underline: false,
-    icon: ''}
-  name: label_15
-  layout_properties: {grid_position: 'FFAZCJ,TILVKS PRFRFC,OYAPJH'}
-- name: borrower_full_name_text
-  properties: {background: white, role: null}
-  type: TextBox
-  layout_properties: {grid_position: 'FFAZCJ,LKCTXU IBMYHO,IIQXVD'}
-- name: mail_text
-  properties: {background: white, role: null}
-  type: TextBox
-  layout_properties: {grid_position: 'FFAZCJ,LKCTXU IUDVDY,CGCKNW'}
-- name: mobile_text
-  properties: {background: white, role: null}
-  type: TextBox
-  layout_properties: {grid_position: 'FFAZCJ,LKCTXU JWDCJZ,BSQKSH'}
+  layout_properties:
+    col_widths: {}
+    grid_position: ZXBVDF,KKYSBB
 - name: date_label
   properties: {background: white}
   type: Label
-  layout_properties: {grid_position: 'FFAZCJ,LKCTXU ZHLMAU,LLXSNY'}
+  layout_properties: {grid_position: 'ZXBVDF,BXIPRV'}
+- type: Label
+  properties: {role: null, align: right, tooltip: '', border: '', foreground: '',
+    visible: true, text: City, font_size: null, font: '', spacing_above: small, icon_align: left,
+    spacing_below: small, italic: false, background: '', bold: false, underline: false,
+    icon: ''}
+  name: label_9
+  layout_properties:
+    col_widths: {}
+    grid_position: SAMLBI,IIKIZQ
 - name: city_text
   properties: {background: white}
   type: TextBox
-  layout_properties: {grid_position: 'FFAZCJ,LKCTXU HHDAEA,GRUIWZ'}
+  layout_properties: {grid_position: 'SAMLBI,MMVODB'}
+- type: Label
+  properties: {role: null, align: right, tooltip: '', border: '', foreground: '',
+    visible: true, text: 'Your pan Card:', font_size: null, font: '', spacing_above: small,
+    icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+    underline: false, icon: ''}
+  name: label_11
+  layout_properties:
+    col_widths: {}
+    grid_position: MCOSMG,AHINEJ
 - name: pan_text
   properties: {background: white}
   type: Label
-  layout_properties: {grid_position: 'FFAZCJ,LKCTXU WBCKDG,LYDSWY'}
+  layout_properties: {grid_position: 'MCOSMG,JUNHNQ'}
+- type: Label
+  properties: {role: null, align: right, tooltip: '', border: '', foreground: '',
+    visible: true, text: 'Gender:', font_size: null, font: '', spacing_above: small,
+    icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+    underline: false, icon: ''}
+  name: label_13
+  layout_properties:
+    col_widths: {}
+    grid_position: NFAGTP,WNWNZL EBXMWA,GARRPD
+- type: Label
+  properties: {role: null, align: right, tooltip: '', border: '', foreground: '',
+    visible: true, text: 'Mother Tongue:', font_size: null, font: '', spacing_above: small,
+    icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+    underline: false, icon: ''}
+  name: label_15
+  layout_properties: {grid_position: 'NFAGTP,WNWNZL ERFWUJ,VGAKZF'}
 - name: gender_down
   properties:
     background: white
@@ -131,15 +127,11 @@ components:
     include_placeholder: true
     placeholder: Select your gender
   type: DropDown
-  layout_properties: {grid_position: 'FFAZCJ,LKCTXU AVJTDE,TMNGMZ'}
+  layout_properties: {grid_position: 'NFAGTP,VXMEWB KOKPBD,CAVVLK'}
 - name: mother_label
   properties: {background: white}
   type: Label
-  layout_properties: {grid_position: 'FFAZCJ,LKCTXU CRMOMF,VOOXKL'}
-- name: spacer_2
-  properties: {height: 32}
-  type: Spacer
-  layout_properties: {grid_position: 'FFAZCJ,FTWTHN'}
+  layout_properties: {grid_position: 'NFAGTP,VXMEWB HPYGMR,LKRSOT'}
 - name: button_1_copy_1
   properties: {role: tonal-button, align: center, tooltip: '', border: '', enabled: true,
     foreground: 'theme:On Primary', visible: true, text: Submit, font_size: null,

@@ -134,7 +134,7 @@ class view_profile(view_profileTemplate):
       #self.ifsc_code.append(i['ifsc_code'])
       self.salary_type.append(i['salary_type'])
       #self.select_bank.append(i['select_bank'])
-      # self.net_bank.append(i['net_bank'])
+      self.net_bank.append(i['net_bank'])
       self.father_name.append(i['father_name'])
       self.father_age.append(i['father_age'])
       self.mother_name.append(i['mother_name'])
@@ -142,7 +142,7 @@ class view_profile(view_profileTemplate):
       self.college_name.append(i['college_name'])
       self.college_id.append(i['college_id'])
       self.college_address.append(i['college_address'])
-      # self.running_loan.append('running_Home_Loan')
+      self.running_loan.append('running_Home_Loan')
       self.profile.append(i['user_photo'])
       self.aadhaar_photo.append(i['aadhaar_photo'])
       self.pan_photo.append(i['pan_photo'])
@@ -206,7 +206,7 @@ class view_profile(view_profileTemplate):
         #self.label_99.text = self.ifsc_code[b]
         self.label_101.text = self.salary_type[b]
         #self.label_103.text = self.select_bank[b]
-        # self.label_105.text = self.net_bank[b]
+        self.label_105.text = self.net_bank[b]
         self.label_107.text = self.father_name[b]
         self.label_109.text = self.father_age[b]
         self.label_111.text = self.mother_name[b]
@@ -214,7 +214,7 @@ class view_profile(view_profileTemplate):
         self.label_115.text = self.college_name[b]
         self.label_117.text = self.college_id[b]
         self.label_119.text = self.college_address[b]
-        # self.label_121.text = self.running_loan[b]
+        self.label_121.text = self.running_loan[b]
         self.image_2.source = self.profile[b]
         self.image_3.source = self.aadhaar_photo[b]
         self.image_4.source = self.pan_photo[b]

@@ -33,7 +33,6 @@ components:
           Gender
 
 
-
           ', font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small,
         italic: false, background: '', bold: false, underline: false, icon: ''}
       type: Button
