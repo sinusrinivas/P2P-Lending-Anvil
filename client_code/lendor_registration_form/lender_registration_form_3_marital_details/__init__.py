@@ -24,11 +24,6 @@ class lender_registration_form_3_marital_details(lender_registration_form_3_mari
     self.marital_status_lender_registration_dropdown.items = options_string
     self.init_components(**properties)
 
-    # Any code you write here will run before the form opens.
-
-  # def home_borrower_registration_form_copy_1_click(self, **event_args):
-  #   open_form('bank_users.user_form')
-
   def button_next_click(self, **event_args):
       marital_status = self.marital_status_lender_registration_dropdown.selected_value
       user_id = self.userId
@@ -39,7 +34,7 @@ class lender_registration_form_3_marital_details(lender_registration_form_3_mari
           # Call the server function before opening the next form
           anvil.server.call('add_lendor_marital', marital_status, user_id)
   
-          open_form('borrower_registration_form.star_1_borrower_registration_form_3_marital.star_1_borrower_registration_form_3_marital_married',
+          open_form('lendor_registration_form.lender_registration_form_3_marital_details.lender_registration_form_3_marital_married',
                     user_id=user_id, marital_status=marital_status)
   
   # def button_next_click(self, **event_args):
