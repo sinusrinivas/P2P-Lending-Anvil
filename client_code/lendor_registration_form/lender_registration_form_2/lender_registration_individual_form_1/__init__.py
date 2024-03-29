@@ -57,7 +57,7 @@ class lender_registration_individual_form_1(lender_registration_individual_form_
       org_type = self.drop_down_2.selected_value
       company_name = self.text_box_1.text
       com_type = self.drop_down_3.selected_value
-      user_id = self.userId
+      user_id = int(self.userId)
       
       if not emp_type or not org_type or not company_name or not com_type:
           Notification("Please fill in all required fields.").show()  
