@@ -291,6 +291,9 @@ db_schema:
     - name: product_description
       admin_ui: {width: 200}
       type: string
+    - name: min_extension_months
+      admin_ui: {width: 200, order: 1.5}
+      type: number
     title: fin_product_details
   fin_borrower_organization_type:
     client: full
