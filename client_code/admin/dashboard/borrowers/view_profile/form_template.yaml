@@ -6,7 +6,7 @@ components:
   layout_properties: {grid_position: 'UGYMFJ,CXBJKW', full_width_row: true}
 - type: ColumnPanel
   properties: {role: null, tooltip: '', border: '', foreground: '', visible: true,
-    wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{"KOUUCZ":10,"OSCEES":20,"KYKCVY":15,"QKMAUD":15}',
+    wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{"KOUUCZ":10,"OSCEES":30,"KYKCVY":15,"QKMAUD":5,"LFHIOP":35,"TSCGID":25}',
     spacing_below: small, background: ''}
   name: content_panel_copy
   layout_properties:
@@ -29,7 +29,7 @@ components:
       grid_position: RDESLG,TSCGID
     event_bindings: {click: button_1_copy_click}
   - type: Spacer
-    properties: {height: 1449}
+    properties: {height: 3180.0001220703125}
     name: spacer_1
     layout_properties: {grid_position: 'DKVFGO,KOUUCZ'}
   - type: Label
@@ -243,6 +243,278 @@ components:
     name: label_33
     layout_properties: {grid_position: 'DKVFGO,OSCEES PITXUA,HCGDCJ'}
   - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: '   Pincode', font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+      underline: false, icon: ''}
+    name: label_34
+    layout_properties: {grid_position: 'DKVFGO,OSCEES SVMJNL,OIPTYV'}
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: '   Qualification', font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+      underline: false, icon: ''}
+    name: label_35
+    layout_properties: {grid_position: 'DKVFGO,OSCEES WVVEZP,RPMURL'}
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: '   State', font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+      underline: false, icon: ''}
+    name: label_36
+    layout_properties: {grid_position: 'DKVFGO,OSCEES KWEAIB,YGZOCV'}
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: '   Street', font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+      underline: false, icon: ''}
+    name: label_37
+    layout_properties: {grid_position: 'DKVFGO,OSCEES UJHKUC,ZQYGIT'}
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: '   Terms', font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+      underline: false, icon: ''}
+    name: label_38
+    layout_properties: {grid_position: 'DKVFGO,OSCEES VCKOZH,YNXUNE'}
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: '   another email', font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+      underline: false, icon: ''}
+    name: label_73
+    layout_properties: {grid_position: 'DKVFGO,OSCEES AYLCFV,IKOXSU'}
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: '   company name', font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+      underline: false, icon: ''}
+    name: label_75
+    layout_properties: {grid_position: 'DKVFGO,OSCEES JSNBXE,OWBBXQ'}
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: '   organization type', font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+      underline: false, icon: ''}
+    name: label_42
+    layout_properties: {grid_position: 'DKVFGO,OSCEES REXTDY,GIKCGB'}
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: '   employment type', font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+      underline: false, icon: ''}
+    name: label_78
+    layout_properties: {grid_position: 'DKVFGO,OSCEES JHGAZZ,AEMWGL'}
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: '   business no', font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+      underline: false, icon: ''}
+    name: label_80
+    layout_properties: {grid_position: 'DKVFGO,OSCEES AHVELC,KFPLLO'}
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: '   company landmark', font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+      underline: false, icon: ''}
+    name: label_82
+    layout_properties: {grid_position: 'DKVFGO,OSCEES SNBQXS,KBAGSQ'}
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: '   company address', font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+      underline: false, icon: ''}
+    name: label_84
+    layout_properties: {grid_position: 'DKVFGO,OSCEES FSDAKV,TWCLOO'}
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: '   annual salary', font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+      underline: false, icon: ''}
+    name: label_86
+    layout_properties: {grid_position: 'DKVFGO,OSCEES ZXBOEL,BQUZXG'}
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: '   designation', font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+      underline: false, icon: ''}
+    name: label_88
+    layout_properties: {grid_position: 'DKVFGO,OSCEES CXAJRH,GDSARM'}
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: '   account name', font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+      underline: false, icon: ''}
+    name: label_90
+    layout_properties: {grid_position: 'DKVFGO,OSCEES BUFQDP,DKUQMO'}
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: '   account type', font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+      underline: false, icon: ''}
+    name: label_92
+    layout_properties: {grid_position: 'DKVFGO,OSCEES BTAZUF,HWGLKE'}
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: '   account number', font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+      underline: false, icon: ''}
+    name: label_94
+    layout_properties: {grid_position: 'DKVFGO,OSCEES FTHBGS,JUCNJQ'}
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: '   branch name', font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+      underline: false, icon: ''}
+    name: label_96
+    layout_properties: {grid_position: 'DKVFGO,OSCEES YTHSPP,OFGNEN'}
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: '   IFSC code', font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+      underline: false, icon: ''}
+    name: label_98
+    layout_properties: {grid_position: 'DKVFGO,OSCEES JJGSHY,UDWDKU'}
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: '   salary type', font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+      underline: false, icon: ''}
+    name: label_100
+    layout_properties: {grid_position: 'DKVFGO,OSCEES QZXXKN,KPPHAR'}
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: '   select bank', font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+      underline: false, icon: ''}
+    name: label_102
+    layout_properties: {grid_position: 'DKVFGO,OSCEES HKWJEJ,AROWMJ'}
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: '   net bank', font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+      underline: false, icon: ''}
+    name: label_104
+    layout_properties: {grid_position: 'DKVFGO,OSCEES FJRBCI,VNILRV'}
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: '   father name', font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+      underline: false, icon: ''}
+    name: label_106
+    layout_properties: {grid_position: 'DKVFGO,OSCEES OVOIKC,YZYBUB'}
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: '   father age', font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+      underline: false, icon: ''}
+    name: label_108
+    layout_properties: {grid_position: 'DKVFGO,OSCEES FTFQMY,PEKRSZ'}
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: '   mother name', font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+      underline: false, icon: ''}
+    name: label_110
+    layout_properties: {grid_position: 'DKVFGO,OSCEES WZFTJG,BOFRLP'}
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: '   mother age', font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+      underline: false, icon: ''}
+    name: label_112
+    layout_properties: {grid_position: 'DKVFGO,OSCEES PCVMCH,XASLWY'}
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: '   college name', font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+      underline: false, icon: ''}
+    name: label_114
+    layout_properties: {grid_position: 'DKVFGO,OSCEES FVGXUD,BARVFK'}
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: '   college id', font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+      underline: false, icon: ''}
+    name: label_116
+    layout_properties: {grid_position: 'DKVFGO,OSCEES XQDJSY,OMVMDO'}
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: '   college address', font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+      underline: false, icon: ''}
+    name: label_118
+    layout_properties: {grid_position: 'DKVFGO,OSCEES SRUJEJ,OJMOWA'}
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: '   running Home Loan', font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+      underline: false, icon: ''}
+    name: label_120
+    layout_properties: {grid_position: 'DKVFGO,OSCEES LVFCRH,RKMLPS'}
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: '   Profile Photo', font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+      underline: false, icon: ''}
+    name: label_122
+    layout_properties: {grid_position: 'DKVFGO,OSCEES TVLAJJ,XSECBG'}
+  - type: Spacer
+    properties: {height: 54}
+    name: spacer_3
+    layout_properties: {grid_position: 'DKVFGO,OSCEES FXIZCV,XZCYMY'}
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: '   aadhaar photo', font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+      underline: false, icon: ''}
+    name: label_123
+    layout_properties: {grid_position: 'DKVFGO,OSCEES DKEVNZ,QBDRJB'}
+  - type: Spacer
+    properties: {height: 63}
+    name: spacer_4
+    layout_properties: {grid_position: 'DKVFGO,OSCEES SQKATD,KHFRGC'}
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: '   pan photo', font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+      underline: false, icon: ''}
+    name: label_124
+    layout_properties: {grid_position: 'DKVFGO,OSCEES ERPLPU,ECJCPT'}
+  - type: Spacer
+    properties: {height: 55}
+    name: spacer_5
+    layout_properties: {grid_position: 'DKVFGO,OSCEES UINRBJ,MCPCSP'}
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: '   employee id  proof', font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+      underline: false, icon: ''}
+    name: label_125
+    layout_properties: {grid_position: 'DKVFGO,OSCEES BAAIFP,TKTYID'}
+  - type: Spacer
+    properties: {height: 51}
+    name: spacer_6
+    layout_properties: {grid_position: 'DKVFGO,OSCEES OERSYT,HEHIXO'}
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: '   last six month bank proof', font_size: null, font: '',
+      spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+      background: '', bold: true, underline: false, icon: ''}
+    name: label_126
+    layout_properties: {grid_position: 'DKVFGO,OSCEES BMMTYG,SICASG'}
+  - type: Spacer
+    properties: {height: 57}
+    name: spacer_7
+    layout_properties: {grid_position: 'DKVFGO,OSCEES PLOXCT,KKXAYQ'}
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: '   college proof', font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+      underline: false, icon: ''}
+    name: label_127
+    layout_properties: {grid_position: 'DKVFGO,OSCEES FEBTNH,USZNDP'}
+  - type: Label
     properties: {}
     name: label_3
     layout_properties: {grid_position: 'DKVFGO,KYKCVY IBTWPW,NHZIIV'}
@@ -362,421 +634,169 @@ components:
     properties: {}
     name: label_67
     layout_properties: {grid_position: 'DKVFGO,KYKCVY WMWUBO,IMTSFP'}
-  - type: Spacer
-    properties: {height: 507}
-    name: spacer_2
-    layout_properties: {grid_position: 'DKVFGO,QKMAUD'}
-  - type: Label
-    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-      visible: true, text: '   Pincode', font_size: null, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-      underline: false, icon: ''}
-    name: label_34
-    layout_properties: {grid_position: 'IRTSDX,OOLCJV'}
   - type: Label
     properties: {}
     name: label_68
-    layout_properties: {grid_position: 'IRTSDX,NIXZCG'}
-  - type: Label
-    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-      visible: true, text: '   Qualification', font_size: null, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-      underline: false, icon: ''}
-    name: label_35
-    layout_properties: {grid_position: 'AHCIGS,NCKJVO'}
+    layout_properties: {grid_position: 'DKVFGO,KYKCVY YHFBMZ,VDOHCX'}
   - type: Label
     properties: {}
     name: label_69
-    layout_properties: {grid_position: 'AHCIGS,OSNKDI'}
-  - type: Label
-    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-      visible: true, text: '   State', font_size: null, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-      underline: false, icon: ''}
-    name: label_36
-    layout_properties: {grid_position: 'CMRUXG,MZJNFQ'}
+    layout_properties: {grid_position: 'DKVFGO,KYKCVY XYYNZB,VGOEWI'}
   - type: Label
     properties: {}
     name: label_70
-    layout_properties: {grid_position: 'CMRUXG,JUWZPW'}
-  - type: Label
-    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-      visible: true, text: '   Street', font_size: null, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-      underline: false, icon: ''}
-    name: label_37
-    layout_properties: {grid_position: 'NRLORM,WMIIKJ'}
+    layout_properties: {grid_position: 'DKVFGO,KYKCVY TCJGLF,FVAHIN'}
   - type: Label
     properties: {}
     name: label_71
-    layout_properties: {grid_position: 'NRLORM,OADWZL'}
-  - type: Label
-    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-      visible: true, text: '   Terms', font_size: null, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-      underline: false, icon: ''}
-    name: label_38
-    layout_properties: {grid_position: 'SGEGID,GAAZZZ'}
+    layout_properties: {grid_position: 'DKVFGO,KYKCVY HLNIMN,VIOGQU'}
   - type: Label
     properties: {}
     name: label_72
-    layout_properties: {grid_position: 'SGEGID,XVGSEP'}
-  - type: Label
-    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-      visible: true, text: '   another email', font_size: null, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-      underline: false, icon: ''}
-    name: label_73
-    layout_properties: {grid_position: 'PMRNHE,VJZABE'}
+    layout_properties: {grid_position: 'DKVFGO,KYKCVY YOVJHR,PQPOBB'}
   - type: Label
     properties: {}
     name: label_74
-    layout_properties: {grid_position: 'PMRNHE,RMKIAZ'}
-  - type: Label
-    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-      visible: true, text: '   company name', font_size: null, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-      underline: false, icon: ''}
-    name: label_75
-    layout_properties: {grid_position: 'WJJMGO,COLGRZ'}
+    layout_properties: {grid_position: 'DKVFGO,KYKCVY INADRB,WHGFDN'}
   - type: Label
     properties: {}
     name: label_76
-    layout_properties: {grid_position: 'WJJMGO,DEKTHS'}
-  - type: Label
-    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-      visible: true, text: '   organization type', font_size: null, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-      underline: false, icon: ''}
-    name: label_42
-    layout_properties: {grid_position: 'ZVNTPR,VKKIFF'}
+    layout_properties: {grid_position: 'DKVFGO,KYKCVY HCRZNZ,PGKNBB'}
   - type: Label
     properties: {}
     name: label_77
-    layout_properties: {grid_position: 'ZVNTPR,WIXTWO'}
-  - type: Label
-    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-      visible: true, text: '   employment type', font_size: null, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-      underline: false, icon: ''}
-    name: label_78
-    layout_properties: {grid_position: 'PHROOT,EYUNBN'}
+    layout_properties: {grid_position: 'DKVFGO,KYKCVY ZMIPJH,GLNKBK'}
   - type: Label
     properties: {}
     name: label_79
-    layout_properties: {grid_position: 'PHROOT,RDTJCX'}
-  - type: Label
-    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-      visible: true, text: '   business no', font_size: null, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-      underline: false, icon: ''}
-    name: label_80
-    layout_properties: {grid_position: 'RPLXHY,FWOAMI'}
+    layout_properties: {grid_position: 'DKVFGO,KYKCVY SNQCKD,IVKDVR'}
   - type: Label
     properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
       visible: true, text: '', font_size: null, font: '', spacing_above: small, icon_align: left,
       spacing_below: small, italic: false, background: '', bold: true, underline: false,
       icon: ''}
     name: label_81
-    layout_properties: {grid_position: 'RPLXHY,TAKJHO'}
-  - type: Label
-    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-      visible: true, text: '   company landmark', font_size: null, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-      underline: false, icon: ''}
-    name: label_82
-    layout_properties: {grid_position: 'JEJYUK,IUHGIE'}
+    layout_properties: {grid_position: 'DKVFGO,KYKCVY IWHNLE,SWDGQM'}
   - type: Label
     properties: {}
     name: label_83
-    layout_properties: {grid_position: 'JEJYUK,ENFTXM'}
-  - type: Label
-    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-      visible: true, text: '   company address', font_size: null, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-      underline: false, icon: ''}
-    name: label_84
-    layout_properties: {grid_position: 'JSWXIZ,JZPSES'}
+    layout_properties: {grid_position: 'DKVFGO,KYKCVY CFPYQC,MEDUZY'}
   - type: Label
     properties: {}
     name: label_85
-    layout_properties: {grid_position: 'JSWXIZ,OPRIDB'}
-  - type: Label
-    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-      visible: true, text: '   annual salary', font_size: null, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-      underline: false, icon: ''}
-    name: label_86
-    layout_properties: {grid_position: 'ZZFKAT,NNUAEJ'}
+    layout_properties: {grid_position: 'DKVFGO,KYKCVY WGNQGR,ATWSRE'}
   - type: Label
     properties: {}
     name: label_87
-    layout_properties: {grid_position: 'ZZFKAT,LRVZFB'}
-  - type: Label
-    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-      visible: true, text: '   designation', font_size: null, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-      underline: false, icon: ''}
-    name: label_88
-    layout_properties: {grid_position: 'QBHSVZ,PVGPNF'}
+    layout_properties: {grid_position: 'DKVFGO,KYKCVY RXMEOK,OTYOJY'}
   - type: Label
     properties: {}
     name: label_89
-    layout_properties: {grid_position: 'QBHSVZ,YFGXRL'}
-  - type: Label
-    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-      visible: true, text: '   account name', font_size: null, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-      underline: false, icon: ''}
-    name: label_90
-    layout_properties: {grid_position: 'USPXTY,NBVESA'}
+    layout_properties: {grid_position: 'DKVFGO,KYKCVY BGNQTN,UDCSDZ'}
   - type: Label
     properties: {}
     name: label_91
-    layout_properties: {grid_position: 'USPXTY,CSWNYL'}
-  - type: Label
-    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-      visible: true, text: '   account type', font_size: null, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-      underline: false, icon: ''}
-    name: label_92
-    layout_properties: {grid_position: 'HBCBCF,JWTGOT'}
+    layout_properties: {grid_position: 'DKVFGO,KYKCVY HJULYR,JGNTKI'}
   - type: Label
     properties: {}
     name: label_93
-    layout_properties: {grid_position: 'HBCBCF,GLJJEZ'}
-  - type: Label
-    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-      visible: true, text: '   account number', font_size: null, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-      underline: false, icon: ''}
-    name: label_94
-    layout_properties: {grid_position: 'ZDQCTV,TCKCYS'}
+    layout_properties: {grid_position: 'DKVFGO,KYKCVY HWAVSE,PJSWSP'}
   - type: Label
     properties: {}
     name: label_95
-    layout_properties: {grid_position: 'ZDQCTV,USYWTD'}
-  - type: Label
-    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-      visible: true, text: '   branch name', font_size: null, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-      underline: false, icon: ''}
-    name: label_96
-    layout_properties: {grid_position: 'XOGWFB,SDTYQF'}
+    layout_properties: {grid_position: 'DKVFGO,KYKCVY ESPMIC,XXPFPT'}
   - type: Label
     properties: {}
     name: label_97
-    layout_properties: {grid_position: 'XOGWFB,LNKHQV'}
-  - type: Label
-    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-      visible: true, text: '   IFSC code', font_size: null, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-      underline: false, icon: ''}
-    name: label_98
-    layout_properties: {grid_position: 'XSLIER,VXMTSX'}
+    layout_properties: {grid_position: 'DKVFGO,KYKCVY RAFIBM,UAJFNE'}
   - type: Label
     properties: {}
     name: label_99
-    layout_properties: {grid_position: 'XSLIER,XJGAKD'}
-  - type: Label
-    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-      visible: true, text: '   salary type', font_size: null, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-      underline: false, icon: ''}
-    name: label_100
-    layout_properties: {grid_position: 'OSYVKY,YWFBTD'}
+    layout_properties: {grid_position: 'DKVFGO,KYKCVY AXOHJZ,RZPNSS'}
   - type: Label
     properties: {}
     name: label_101
-    layout_properties: {grid_position: 'OSYVKY,SVMOYW'}
-  - type: Label
-    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-      visible: true, text: '   select bank', font_size: null, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-      underline: false, icon: ''}
-    name: label_102
-    layout_properties: {grid_position: 'KOIIJO,UHIOUS'}
+    layout_properties: {grid_position: 'DKVFGO,KYKCVY OSMUTF,IYUKWT'}
   - type: Label
     properties: {}
     name: label_103
-    layout_properties: {grid_position: 'KOIIJO,DXEEDP'}
-  - type: Label
-    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-      visible: true, text: '   net bank', font_size: null, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-      underline: false, icon: ''}
-    name: label_104
-    layout_properties: {grid_position: 'FDJBKM,JKEGBM'}
+    layout_properties: {grid_position: 'DKVFGO,KYKCVY GJYIKG,JKOXGL'}
   - type: Label
     properties: {}
     name: label_105
-    layout_properties: {grid_position: 'FDJBKM,MFBTWP'}
-  - type: Label
-    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-      visible: true, text: '   father name', font_size: null, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-      underline: false, icon: ''}
-    name: label_106
-    layout_properties: {grid_position: 'KKSUZZ,TBOGFH'}
+    layout_properties: {grid_position: 'DKVFGO,KYKCVY BBERVD,WWGKRW'}
   - type: Label
     properties: {}
     name: label_107
-    layout_properties: {grid_position: 'KKSUZZ,SRQKCX'}
-  - type: Label
-    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-      visible: true, text: '   father age', font_size: null, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-      underline: false, icon: ''}
-    name: label_108
-    layout_properties: {grid_position: 'NCFZFD,MWMREC'}
+    layout_properties: {grid_position: 'DKVFGO,KYKCVY ZWHTHZ,ADYUYP'}
   - type: Label
     properties: {}
     name: label_109
-    layout_properties: {grid_position: 'NCFZFD,MHJBOI'}
-  - type: Label
-    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-      visible: true, text: '   mother name', font_size: null, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-      underline: false, icon: ''}
-    name: label_110
-    layout_properties: {grid_position: 'KZSDDS,AXXOTK'}
+    layout_properties: {grid_position: 'DKVFGO,KYKCVY JMNBFA,DDCIBN'}
   - type: Label
     properties: {}
     name: label_111
-    layout_properties: {grid_position: 'KZSDDS,OJFQYK'}
-  - type: Label
-    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-      visible: true, text: '   mother age', font_size: null, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-      underline: false, icon: ''}
-    name: label_112
-    layout_properties: {grid_position: 'QPRWGW,XXVLAI'}
+    layout_properties: {grid_position: 'DKVFGO,KYKCVY YMBYEJ,YZMITS'}
   - type: Label
     properties: {}
     name: label_113
-    layout_properties: {grid_position: 'QPRWGW,GLNBDA'}
-  - type: Label
-    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-      visible: true, text: '   college name', font_size: null, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-      underline: false, icon: ''}
-    name: label_114
-    layout_properties: {grid_position: 'ABRRZQ,BTUNPI'}
+    layout_properties: {grid_position: 'DKVFGO,KYKCVY BMOCRH,YJGMPV'}
   - type: Label
     properties: {}
     name: label_115
-    layout_properties: {grid_position: 'ABRRZQ,RYQXVQ'}
-  - type: Label
-    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-      visible: true, text: '   college id', font_size: null, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-      underline: false, icon: ''}
-    name: label_116
-    layout_properties: {grid_position: 'RKUEBD,GQCPBG'}
+    layout_properties: {grid_position: 'DKVFGO,KYKCVY VWVJJH,CWPABS'}
   - type: Label
     properties: {}
     name: label_117
-    layout_properties: {grid_position: 'RKUEBD,ENFGCL'}
-  - type: Label
-    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-      visible: true, text: '   college address', font_size: null, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-      underline: false, icon: ''}
-    name: label_118
-    layout_properties: {grid_position: 'JMJURG,TRYYGS'}
+    layout_properties: {grid_position: 'DKVFGO,KYKCVY QAOPJY,TWZMLP'}
   - type: Label
     properties: {}
     name: label_119
-    layout_properties: {grid_position: 'JMJURG,ZQRXNJ'}
-  - type: Label
-    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-      visible: true, text: '   running Home Loan', font_size: null, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-      underline: false, icon: ''}
-    name: label_120
-    layout_properties: {grid_position: 'TGNVQU,WGYFBM'}
+    layout_properties: {grid_position: 'DKVFGO,KYKCVY QHREHO,VVOHBF'}
   - type: Label
     properties: {}
     name: label_121
-    layout_properties: {grid_position: 'TGNVQU,DQSAOT'}
-  - type: Label
-    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-      visible: true, text: '   Profile Photo', font_size: null, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-      underline: false, icon: ''}
-    name: label_122
-    layout_properties: {grid_position: 'QMYXSP,DPBIHJ'}
+    layout_properties: {grid_position: 'DKVFGO,KYKCVY LEIIML,QRZDIK'}
   - type: Image
     properties: {role: null, vertical_align: top, height: '100', tooltip: '', border: '',
       foreground: '', visible: true, display_mode: shrink_to_fit, spacing_above: small,
       source: '', spacing_below: small, background: '', horizontal_align: left}
     name: image_2
-    layout_properties: {grid_position: 'QMYXSP,YOYXAW'}
-  - type: Label
-    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-      visible: true, text: '   aadhaar photo', font_size: null, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-      underline: false, icon: ''}
-    name: label_123
-    layout_properties: {grid_position: 'WHXIQL,JXUONO'}
+    layout_properties: {grid_position: 'DKVFGO,KYKCVY BZMYYC,JNECDC'}
   - type: Image
     properties: {role: null, vertical_align: top, height: '100', tooltip: '', border: '',
       foreground: '', visible: true, display_mode: shrink_to_fit, spacing_above: small,
       source: '', spacing_below: small, background: '', horizontal_align: left}
     name: image_3
-    layout_properties: {grid_position: 'WHXIQL,YZPXVT'}
-  - type: Label
-    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-      visible: true, text: '   pan photo', font_size: null, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-      underline: false, icon: ''}
-    name: label_124
-    layout_properties: {grid_position: 'JEHTDA,VWFPLQ'}
+    layout_properties: {grid_position: 'DKVFGO,KYKCVY CNAKQV,SUAZWC'}
   - type: Image
     properties: {role: null, vertical_align: top, height: '100', tooltip: '', border: '',
       foreground: '', visible: true, display_mode: shrink_to_fit, spacing_above: small,
       source: '', spacing_below: small, background: '', horizontal_align: left}
     name: image_4
-    layout_properties: {grid_position: 'JEHTDA,STGCRU'}
-  - type: Label
-    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-      visible: true, text: '   employee id  proof', font_size: null, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-      underline: false, icon: ''}
-    name: label_125
-    layout_properties: {grid_position: 'NAXTZG,KKAPSW'}
+    layout_properties: {grid_position: 'DKVFGO,KYKCVY ZBXPHI,VMOSJC'}
   - type: Image
-    properties: {role: null, vertical_align: top, height: '100', tooltip: '', border: '',
+    properties: {role: null, vertical_align: top, height: 98, tooltip: '', border: '',
       foreground: '', visible: true, display_mode: shrink_to_fit, spacing_above: small,
       source: '', spacing_below: small, background: '', horizontal_align: left}
     name: image_5
-    layout_properties: {grid_position: 'NAXTZG,GROOFH'}
-  - type: Label
-    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-      visible: true, text: '   last six month bank proof', font_size: null, font: '',
-      spacing_above: small, icon_align: left, spacing_below: small, italic: false,
-      background: '', bold: true, underline: false, icon: ''}
-    name: label_126
-    layout_properties: {grid_position: 'HJVLXA,VPOGYU'}
+    layout_properties: {grid_position: 'DKVFGO,KYKCVY QMIZDB,HVVNQN'}
   - type: Image
     properties: {role: null, vertical_align: top, height: '100', tooltip: '', border: '',
       foreground: '', visible: true, display_mode: shrink_to_fit, spacing_above: small,
       source: '', spacing_below: small, background: '', horizontal_align: left}
     name: image_6
-    layout_properties: {grid_position: 'HJVLXA,HSYCOX'}
-  - type: Label
-    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-      visible: true, text: '   college proof', font_size: null, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-      underline: false, icon: ''}
-    name: label_127
-    layout_properties: {grid_position: 'UQGPLU,FNDWRA'}
+    layout_properties: {grid_position: 'DKVFGO,KYKCVY ZZGJLF,HXLOUP'}
   - type: Image
     properties: {role: null, vertical_align: top, height: '100', tooltip: '', border: '',
       foreground: '', visible: true, display_mode: shrink_to_fit, spacing_above: small,
       source: '', spacing_below: small, background: '', horizontal_align: left}
     name: image_7
-    layout_properties: {grid_position: 'UQGPLU,XLJMNZ'}
+    layout_properties: {grid_position: 'DKVFGO,KYKCVY TZLVQL,NTZFWR'}
+  - type: Spacer
+    properties: {height: 3162.8569946289062}
+    name: spacer_2
+    layout_properties: {grid_position: 'DKVFGO,QKMAUD'}
   - type: ColumnPanel
     properties: {}
     name: content_panel
