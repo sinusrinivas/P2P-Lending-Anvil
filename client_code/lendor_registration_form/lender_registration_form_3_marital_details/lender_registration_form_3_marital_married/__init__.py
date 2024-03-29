@@ -8,6 +8,7 @@ import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 import re
+from datetime import datetime, timedelta
 
 class lender_registration_form_3_marital_married(lender_registration_form_3_marital_marriedTemplate):
     selected_radio_button = None
@@ -218,20 +219,37 @@ class lender_registration_form_3_marital_married(lender_registration_form_3_mari
 
     def button_submit_click(self, **event_args):
        details = self.collect_details()
-       try:
-         new_row = app_tables.fin_guarantor_details.add_row(
-            customer_id=self.userId,
-            guarantor_name=details['father_name'],
-            guarantor_date_of_birth=details['father_dob'],
-            guarantor_mobile_no=details['father_mbl_no'],
-            guarantor_profession=details['father_profession'],
-            guarantor_address=details['father_address'],
-            another_person=details['another_person']
-         )
-       except Exception as e:
-         Notification(f"Failed to submit form: {e}").show()
-         return
-
+    
+       existing_row = app_tables.fin_guarantor_details.get(customer_id=self.userId)
+    
+       if existing_row is None:
+          try:
+             new_row = app_tables.fin_guarantor_details.add_row(
+                customer_id=self.userId,
+                guarantor_name=details['father_name'],
+                guarantor_date_of_birth=details['father_dob'],
+                guarantor_mobile_no=details['father_mbl_no'],
+                guarantor_profession=details['father_profession'],
+                guarantor_address=details['father_address'],
+                another_person=details['another_person']
+            )
+          except Exception as e:
+             Notification(f"Failed to submit form: {e}").show()
+             return
+       else:
+         existing_row['guarantor_name'] = details['father_name']
+         existing_row['guarantor_date_of_birth'] = details['father_dob']
+         existing_row['guarantor_mobile_no'] = details['father_mbl_no']
+         existing_row['guarantor_profession'] = details['father_profession']
+         existing_row['guarantor_address'] = details['father_address']
+         existing_row['another_person'] = details['another_person']
+        
+         try:
+             existing_row.update()
+         except Exception as e:
+             Notification(f"Failed to update form: {e}").show()
+             return
+    
        # Validations...
        errors = []
        if not re.match(r'^[A-Za-z\s]+$', details['father_name']):
