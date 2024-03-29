@@ -81,7 +81,7 @@ class update_form(update_formTemplate):
         data[a]['college_name'] = self.text_box_52.text
         data[a]['college_id'] = self.text_box_53.text
         data[a]['college_address'] = self.text_box_54.text
-        data[a]['running_Home_Loan'] = self.text_box_55.text
+        # data[a]['running_Home_Loan'] = self.text_box_55.text
         print(a)
         open_form('admin.dashboard.borrowers.view_profile', self.get)
 

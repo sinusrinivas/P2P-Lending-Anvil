@@ -136,7 +136,7 @@ class edit_form(edit_formTemplate):
       self.college_name.append(i['college_name'])
       self.college_id.append(i['college_id'])
       self.college_address.append(i['college_address'])
-      self.running_loan.append('running_Home_Loan')
+      # self.running_loan.append('running_Home_Loan')
 
     print(self.company_adress_list)
     if get_customer_id_value in self.id_list:
@@ -197,7 +197,7 @@ class edit_form(edit_formTemplate):
       self.text_box_52.text = self.college_name[c]
       self.text_box_53.text = self.college_id[c]
       self.text_box_54.text = self.college_address[c]
-      self.text_box_55.text = self.running_loan[c]
+      # self.text_box_55.text = self.running_loan[c]
     
 
     self.get = get_customer_id_value
@@ -269,7 +269,7 @@ class edit_form(edit_formTemplate):
       data[a]['college_name'] = self.text_box_52.text
       data[a]['college_id'] = self.text_box_53.text
       data[a]['college_address'] = self.text_box_54.text
-      data[a]['running_Home_Loan'] = self.text_box_55.text
+      # data[a]['running_Home_Loan'] = self.text_box_55.text
       print(a)
       open_form('admin.dashboard.borrowers.view_profile', self.get)
 

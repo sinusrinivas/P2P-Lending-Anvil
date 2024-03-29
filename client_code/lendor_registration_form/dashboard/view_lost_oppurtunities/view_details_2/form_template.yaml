@@ -23,7 +23,7 @@ components:
   name: navigation_bar_lender_dashbord_1
   layout_properties: {grid_position: 'XEPGMG,ADUDJW'}
 - type: ColumnPanel
-  properties: {col_widths: '{}'}
+  properties: {col_widths: '{"CENTDB":15,"QXNPVA":25,"FRULLM":15,"JYCSUH":5}'}
   name: column_panel_1
   layout_properties: {grid_position: 'MDGESW,ALCUBF'}
   components:
@@ -43,81 +43,73 @@ components:
     layout_properties:
       col_widths: {}
       grid_position: ZQPTBI,SXCCMK
+  - name: spacer_2
+    properties: {height: 256.64288330078125}
+    type: Spacer
+    layout_properties: {grid_position: 'YAYLYA,CENTDB'}
   - name: label_7
     properties: {text: 'Loan Id:', bold: true}
     type: Label
     layout_properties:
       col_widths: {}
-      grid_position: YAYLYA,QXNPVA
+      grid_position: YAYLYA,QXNPVA SNPLNX,RXHKXB
+  - name: label_8
+    properties: {bold: true, text: 'Loan Amount:'}
+    type: Label
+    layout_properties: {grid_position: 'YAYLYA,QXNPVA MCKIQE,YKCJYA'}
+  - name: label_11
+    properties: {bold: true, text: 'Intrest Rate:'}
+    type: Label
+    layout_properties: {grid_position: 'YAYLYA,QXNPVA TTTIRF,GPWQQC'}
+  - name: label_10
+    properties: {bold: true, text: 'Tenure:'}
+    type: Label
+    layout_properties: {grid_position: 'YAYLYA,QXNPVA JBUDOW,JOAIEM'}
+  - name: label_12
+    properties: {bold: true, text: 'Date Of Apply:'}
+    type: Label
+    layout_properties: {grid_position: 'YAYLYA,QXNPVA LIGBRV,THEOSR'}
+  - name: label_2
+    properties: {bold: true, text: 'Loan Updated Status:'}
+    type: Label
+    layout_properties: {grid_position: 'YAYLYA,QXNPVA FDWRZH,QQCFKR'}
   - name: loan_id_label
     properties: {}
     type: Label
     layout_properties:
       col_widths: {}
-      grid_position: YAYLYA,FRULLM
-  - name: label_8
-    properties: {bold: true, text: 'Loan Amount:'}
-    type: Label
-    layout_properties:
-      col_widths: {}
-      grid_position: ERNTWC,UROTTC
+      grid_position: YAYLYA,FRULLM OKKCVC,URKXGY
   - name: loan_amount_label
     properties: {}
     type: Label
-    layout_properties:
-      col_widths: {}
-      grid_position: ERNTWC,SGQVCS
-  - name: label_11
-    properties: {bold: true, text: 'Intrest Rate:'}
-    type: Label
-    layout_properties:
-      col_widths: {}
-      grid_position: ECDRIR,VBIFEK
+    layout_properties: {grid_position: 'YAYLYA,FRULLM CFEJGI,ZQIUXI'}
   - name: intrest_rate_label
     properties: {}
     type: Label
-    layout_properties:
-      col_widths: {}
-      grid_position: ECDRIR,XSMDKD
-  - name: label_10
-    properties: {bold: true, text: 'Tenure:'}
-    type: Label
-    layout_properties:
-      col_widths: {}
-      grid_position: TUJYPQ,NKMYWA
+    layout_properties: {grid_position: 'YAYLYA,FRULLM PTGHFV,QTDLVF'}
   - name: tenure_label
     properties: {}
     type: Label
-    layout_properties:
-      col_widths: {}
-      grid_position: TUJYPQ,BSUYHS
-  - name: label_12
-    properties: {bold: true, text: 'Date Of Apply:'}
-    type: Label
-    layout_properties:
-      col_widths: {}
-      grid_position: OABTZE,MGNHGQ
+    layout_properties: {grid_position: 'YAYLYA,FRULLM POOJNP,CKESYK'}
   - name: date_of_apply_label
     properties: {}
     type: Label
-    layout_properties:
-      col_widths: {}
-      grid_position: OABTZE,EOIHJJ
+    layout_properties: {grid_position: 'YAYLYA,FRULLM XINAWE,GDIPNH'}
     data_bindings: []
-  - name: label_2
-    properties: {bold: true, text: 'Loan Updated Status:'}
-    type: Label
-    layout_properties:
-      col_widths: {}
-      grid_position: UJVNLI,EIASBF
   - name: loan_updated_status_label
     properties: {}
     type: Label
-    layout_properties:
-      col_widths: {}
-      grid_position: UJVNLI,MZAFXE
+    layout_properties: {grid_position: 'YAYLYA,FRULLM MIAPII,DJKJKN'}
     data_bindings:
     - {property: text, code: 'self.item[''loan_updated_status'']', writeback: false}
+  - name: spacer_3
+    properties: {height: 248.78567504882812}
+    type: Spacer
+    layout_properties: {grid_position: 'YAYLYA,JYCSUH'}
+  - name: spacer_4
+    properties: {height: 32}
+    type: Spacer
+    layout_properties: {grid_position: 'XIRMDP,BLLXJO'}
 - name: button_1
   properties: {role: elevated-button, align: center, tooltip: '', border: '', enabled: true,
     foreground: 'theme:On Primary', visible: true, text: Back, font_size: null, font: '',

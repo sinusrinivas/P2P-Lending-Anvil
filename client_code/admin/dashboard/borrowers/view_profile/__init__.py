@@ -142,7 +142,7 @@ class view_profile(view_profileTemplate):
       self.college_name.append(i['college_name'])
       self.college_id.append(i['college_id'])
       self.college_address.append(i['college_address'])
-      self.running_loan.append('running_Home_Loan')
+      # self.running_loan.append('running_Home_Loan')
       self.profile.append(i['user_photo'])
       self.aadhaar_photo.append(i['aadhaar_photo'])
       self.pan_photo.append(i['pan_photo'])
@@ -214,7 +214,7 @@ class view_profile(view_profileTemplate):
         self.label_115.text = self.college_name[b]
         self.label_117.text = self.college_id[b]
         self.label_119.text = self.college_address[b]
-        self.label_121.text = self.running_loan[b]
+        # self.label_121.text = self.running_loan[b]
         self.image_2.source = self.profile[b]
         self.image_3.source = self.aadhaar_photo[b]
         self.image_4.source = self.pan_photo[b]
