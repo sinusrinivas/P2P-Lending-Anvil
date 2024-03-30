@@ -21,7 +21,10 @@ class edit_present_address(edit_present_addressTemplate):
   def button_1_click(self, **event_args):
     """This method is called when the button is clicked"""
     # Get the updated gender from the textbox
-    updated_gender = self.text_box_1.text
+    updated_gender = self.text_box_1.text.strip()
+    if not updated_gender:
+        alert("Please enter a valid data.")
+        return
 
         # Update the 'borrower_gender' field in the database
     self.selected_row['present_address'] = updated_gender
