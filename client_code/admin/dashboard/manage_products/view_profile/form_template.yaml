@@ -330,7 +330,7 @@ components:
       - name: occupation
         properties: {}
         type: Label
-        layout_properties: {x: 205.99551391601562, y: 1202.1026000976562, width: 159.978}
+        layout_properties: {x: 205.99551391601562, y: 1202.1026000976562, width: 265.964}
       - name: label_3
         properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
           visible: true, text: Min Extension Months, font_size: null, font: '', spacing_above: small,
