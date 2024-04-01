@@ -1,6 +1,6 @@
 container:
   type: ColumnPanel
-  properties: {col_widths: '{}'}
+  properties: {col_widths: '{"IKUKOK":20,"TILVKS":35,"MEDTTA":5}'}
 components:
 - name: image_1_copy_1
   properties: {role: null, vertical_align: center, height: 48, tooltip: '', border: '',
@@ -26,100 +26,85 @@ components:
   layout_properties:
     col_widths: {}
     grid_position: FHCCYR,XQFXNC
+- name: spacer_1
+  properties: {height: 32}
+  type: Spacer
+  layout_properties: {grid_position: 'FFAZCJ,IKUKOK'}
 - type: Label
-  properties: {role: null, align: right, tooltip: '', border: '', foreground: '',
-    visible: true, text: 'Full Name:', font_size: null, font: '', spacing_above: small,
-    icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
-    underline: false, icon: ''}
+  properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
+    text: 'Full Name:', font_size: null, font: '', spacing_above: small, icon_align: left,
+    spacing_below: small, italic: false, background: '', bold: false, underline: false,
+    icon: ''}
   name: label_1
   layout_properties:
     col_widths: {}
-    grid_position: FFAZCJ,TILVKS
+    grid_position: FFAZCJ,TILVKS KVPSYY,WSBVTG
 - name: borrower_full_name_text
   properties: {background: white}
   type: TextBox
-  layout_properties: {grid_position: 'FFAZCJ,LKCTXU'}
+  layout_properties: {grid_position: 'FFAZCJ,TILVKS KVPSYY,CVAONX'}
 - type: Label
-  properties: {role: null, align: right, tooltip: '', border: '', foreground: '',
-    visible: true, text: 'Email ID:', font_size: null, font: '', spacing_above: small,
-    icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
-    underline: false, icon: ''}
+  properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
+    text: 'Email ID:', font_size: null, font: '', spacing_above: small, icon_align: left,
+    spacing_below: small, italic: false, background: '', bold: false, underline: false,
+    icon: ''}
   name: label_3
-  layout_properties:
-    col_widths: {}
-    grid_position: ADGYID,JHYFCJ
+  layout_properties: {grid_position: 'FFAZCJ,TILVKS YRUBGQ,URRJAH'}
 - name: mail_text
   properties: {background: white}
   type: TextBox
-  layout_properties: {grid_position: 'ADGYID,VLYNBS'}
+  layout_properties: {grid_position: 'FFAZCJ,TILVKS YRUBGQ,ZJTXKG'}
 - type: Label
-  properties: {role: null, align: right, tooltip: '', border: '', foreground: '',
-    visible: true, text: 'Mobile No:', font_size: null, font: '', spacing_above: small,
-    icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
-    underline: false, icon: ''}
+  properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
+    text: 'Mobile No:', font_size: null, font: '', spacing_above: small, icon_align: left,
+    spacing_below: small, italic: false, background: '', bold: false, underline: false,
+    icon: ''}
   name: label_5
-  layout_properties:
-    col_widths: {}
-    grid_position: QAHJBM,DMISYN
+  layout_properties: {grid_position: 'FFAZCJ,TILVKS IYPVIA,WFEQPM'}
 - name: mobile_text
   properties: {background: white}
   type: TextBox
-  layout_properties: {grid_position: 'QAHJBM,TDVHAD'}
+  layout_properties: {grid_position: 'FFAZCJ,TILVKS IYPVIA,KQJEUH'}
 - type: Label
-  properties: {role: null, align: right, tooltip: '', border: '', foreground: '',
-    visible: true, text: 'Your Date Of Birth:', font_size: null, font: '', spacing_above: small,
+  properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
+    text: 'Your Date Of Birth:', font_size: null, font: '', spacing_above: small,
     icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
     underline: false, icon: ''}
   name: label_7
-  layout_properties:
-    col_widths: {}
-    grid_position: ZXBVDF,KKYSBB
+  layout_properties: {grid_position: 'FFAZCJ,TILVKS MUNRNX,ILOSRQ'}
 - name: date_label
   properties: {background: white}
   type: Label
-  layout_properties: {grid_position: 'ZXBVDF,BXIPRV'}
+  layout_properties: {grid_position: 'FFAZCJ,TILVKS MUNRNX,OXGBBK'}
 - type: Label
-  properties: {role: null, align: right, tooltip: '', border: '', foreground: '',
-    visible: true, text: City, font_size: null, font: '', spacing_above: small, icon_align: left,
+  properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
+    text: City, font_size: null, font: '', spacing_above: small, icon_align: left,
     spacing_below: small, italic: false, background: '', bold: false, underline: false,
     icon: ''}
   name: label_9
-  layout_properties:
-    col_widths: {}
-    grid_position: SAMLBI,IIKIZQ
+  layout_properties: {grid_position: 'FFAZCJ,TILVKS XQMNFT,DLBFQK'}
 - name: city_text
   properties: {background: white}
   type: TextBox
-  layout_properties: {grid_position: 'SAMLBI,MMVODB'}
+  layout_properties: {grid_position: 'FFAZCJ,TILVKS XQMNFT,UKFMQA'}
 - type: Label
-  properties: {role: null, align: right, tooltip: '', border: '', foreground: '',
-    visible: true, text: 'Your pan Card:', font_size: null, font: '', spacing_above: small,
-    icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
-    underline: false, icon: ''}
+  properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
+    text: 'Your pan Card:', font_size: null, font: '', spacing_above: small, icon_align: left,
+    spacing_below: small, italic: false, background: '', bold: false, underline: false,
+    icon: ''}
   name: label_11
-  layout_properties:
-    col_widths: {}
-    grid_position: MCOSMG,AHINEJ
+  layout_properties: {grid_position: 'FFAZCJ,TILVKS FCNRIN,DPMEEG'}
 - name: pan_text
   properties: {background: white}
   type: Label
-  layout_properties: {grid_position: 'MCOSMG,JUNHNQ'}
+  layout_properties: {grid_position: 'FFAZCJ,TILVKS FCNRIN,PGHMDD'}
 - type: Label
-  properties: {role: null, align: right, tooltip: '', border: '', foreground: '',
-    visible: true, text: 'Gender:', font_size: null, font: '', spacing_above: small,
-    icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
-    underline: false, icon: ''}
+  properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
+    text: 'Gender:', font_size: null, font: '', spacing_above: small, icon_align: left,
+    spacing_below: small, italic: false, background: '', bold: false, underline: false,
+    icon: ''}
   name: label_13
-  layout_properties:
-    col_widths: {}
-    grid_position: NFAGTP,WNWNZL EBXMWA,GARRPD
-- type: Label
-  properties: {role: null, align: right, tooltip: '', border: '', foreground: '',
-    visible: true, text: 'Mother Tongue:', font_size: null, font: '', spacing_above: small,
-    icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
-    underline: false, icon: ''}
-  name: label_15
-  layout_properties: {grid_position: 'NFAGTP,WNWNZL ERFWUJ,VGAKZF'}
+  layout_properties: {grid_position: 'FFAZCJ,TILVKS GDJJKK,KJEMVT'}
 - name: gender_down
   properties:
     background: white
@@ -127,11 +112,22 @@ components:
     include_placeholder: true
     placeholder: Select your gender
   type: DropDown
-  layout_properties: {grid_position: 'NFAGTP,VXMEWB KOKPBD,CAVVLK'}
+  layout_properties: {grid_position: 'FFAZCJ,TILVKS GDJJKK,QAQXDC'}
+- type: Label
+  properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
+    text: 'Mother Tongue:', font_size: null, font: '', spacing_above: small, icon_align: left,
+    spacing_below: small, italic: false, background: '', bold: false, underline: false,
+    icon: ''}
+  name: label_15
+  layout_properties: {grid_position: 'FFAZCJ,TILVKS OPEJFQ,QVZHLH'}
 - name: mother_label
   properties: {background: white}
   type: Label
-  layout_properties: {grid_position: 'NFAGTP,VXMEWB HPYGMR,LKRSOT'}
+  layout_properties: {grid_position: 'FFAZCJ,TILVKS OPEJFQ,CAJPDY'}
+- name: spacer_2
+  properties: {height: 32}
+  type: Spacer
+  layout_properties: {grid_position: 'FFAZCJ,MEDTTA'}
 - name: button_1_copy_1
   properties: {role: tonal-button, align: center, tooltip: '', border: '', enabled: true,
     foreground: 'theme:On Primary', visible: true, text: Submit, font_size: null,
