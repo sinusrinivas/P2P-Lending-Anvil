@@ -53,7 +53,7 @@ components:
     layout_properties: {}
     event_bindings: {click: link_6_click}
 - name: login_signup_button
-  properties: {role: outlined-button, align: center, tooltip: '', border: '', enabled: true,
+  properties: {role: outlined-button, align: right, tooltip: '', border: '', enabled: true,
     foreground: white, visible: true, text: Sign In, font_size: null, font: '', spacing_above: small,
     icon_align: left, spacing_below: small, italic: false, background: '#013065',
     bold: true, underline: false, icon: ''}
@@ -67,7 +67,7 @@ components:
   layout_properties: {grid_position: 'IFJNGB,SYNJVB UAEYQF,WRNWWZ CQIBAM,RUCCXK'}
   event_bindings: {click: button_2_click}
 - name: link_7
-  properties: {text: Invest Now, foreground: black, align: left, font_size: 16, visible: false,
+  properties: {text: Invest Now, foreground: black, align: right, font_size: 16, visible: false,
     background: 'theme:On Primary', col_widths: '{}'}
   type: Link
   layout_properties: {grid_position: 'IFJNGB,SYNJVB UAEYQF,WRNWWZ KAQRQU,HANEYF'}
