@@ -27,21 +27,30 @@ class add_general_dropdowns(add_general_dropdownsTemplate):
   
   def gender_button_click(self, **event_args):
     """This method is called when the button is clicked"""
-    entered_data = self.text_box_01.text
+    entered_data = self.text_box_01.text.strip()
+    if not entered_data:
+        alert("Please enter a valid data.")
+        return
     new_row = app_tables.fin_gender.add_row(gender=entered_data)
     self.text_box_01.text = ' '
     self.refresh()
 
   def present_address_click(self, **event_args):
     """This method is called when the button is clicked"""
-    entered_data = self.text_box_01_copy.text
+    entered_data = self.text_box_01_copy.text.strip()
+    if not entered_data:
+        alert("Please enter a valid data.")
+        return
     new_row = app_tables.fin_present_address.add_row(present_address=entered_data)
     self.text_box_01_copy.text = ' '
     self.refresh()
 
   def how_long_click(self, **event_args):
     """This method is called when the button is clicked"""
-    entered_data = self.text_box_01_copy_2.text
+    entered_data = self.text_box_01_copy_2.text.strip()
+    if not entered_data:
+        alert("Please enter a valid data.")
+        return
     new_row = app_tables.fin_duration_at_address.add_row(duration_at_address=entered_data)
     self.text_box_01_copy_2.text = ' '
     self.refresh()
@@ -69,7 +78,10 @@ class add_general_dropdowns(add_general_dropdownsTemplate):
 
   def company_click(self, **event_args):
     """This method is called when the button is clicked"""
-    entered_data = self.text_box_2.text
+    entered_data = self.text_box_2.text.strip()
+    if not entered_data:
+        alert("Please enter a valid data.")
+        return
     new_row = app_tables.fin_company_type.add_row(company_type=entered_data)
     self.text_box_2.text = ' '
     self.refresh()
