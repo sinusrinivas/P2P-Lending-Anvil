@@ -469,9 +469,10 @@ components:
   layout_properties: {grid_position: 'FFODXR,YRTVLS LNZJQX,UAPIXD', full_width_row: false}
   components:
   - name: image_23
-    properties: {height: 64, vertical_align: top, source: _/theme/screening.png, display_mode: original_size}
+    properties: {height: 89.55551147460938, vertical_align: top, source: _/theme/screening.png,
+      display_mode: original_size}
     type: Image
-    layout_properties: {x: 18.874981690198183, y: 0, width: 72.16198168945311}
+    layout_properties: {x: 18.874981690198183, y: 0, width: 81.37495649414062}
 - name: xy_panel_13
   properties: {height: '211'}
   type: XYPanel
@@ -482,6 +483,10 @@ components:
       display_mode: original_size}
     type: Image
     layout_properties: {x: 23.81943766400218, y: 11, width: 110.33334350585938}
+  - name: label_45
+    properties: {}
+    type: Label
+    layout_properties: {x: 36.263865154236555, y: 175, width: 200}
 - name: xy_panel_12
   properties: {height: 211}
   type: XYPanel
@@ -491,10 +496,24 @@ components:
     properties: {height: 66.77777099609375, source: _/theme/manager.png, display_mode: original_size}
     type: Image
     layout_properties: {x: 0.5972086600959301, y: 11, width: 93.208283984375}
+  - name: label_43
+    properties: {}
+    type: Label
+    layout_properties: {x: 20.847317218780518, y: 175, width: 200}
 - name: xy_panel_14
   properties: {height: '211'}
   type: XYPanel
   layout_properties: {grid_position: 'FFODXR,UYCLKT PLTTVV,AOXOXT'}
+  components:
+  - name: image_26
+    properties: {height: 64.99993896484375, source: _/theme/money-bag-hand_bean.2c2a2a6.png,
+      display_mode: original_size}
+    type: Image
+    layout_properties: {x: 22.37504069134593, y: 11, width: 81.33368701171875}
+  - name: label_44
+    properties: {}
+    type: Label
+    layout_properties: {x: 17.91672770306468, y: 175, width: 200}
 - name: label_8
   properties: {text: How it works​, role: headline, font_size: 30, align: center,
     bold: true, font: ''}
@@ -636,7 +655,7 @@ components:
     components:
     - name: label_1_copy_1
       properties: {role: null, align: center, tooltip: '', border: '', foreground: white,
-        visible: true, text: Personal Loan at Interest Rates Starting from 12%, font_size: 30,
+        visible: true, text: Personal Loan at Interest Rates Starting from 12%, font_size: 25,
         font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
         background: '', bold: true, underline: false, icon: ''}
       type: Label
@@ -666,7 +685,7 @@ components:
   components:
   - name: label_2_copy_1
     properties: {role: null, align: center, tooltip: '', border: '', foreground: white,
-      visible: true, text: Generate substantial profits for investors, font_size: 30,
+      visible: true, text: Generate substantial profits for investors, font_size: 25,
       font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
       background: '', bold: true, underline: false, icon: ''}
     type: Label
