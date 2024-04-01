@@ -7,34 +7,42 @@ import anvil.users
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
+import re
+from datetime import datetime, timedelta
 
 class lender_registration_form_3_marital_married(lender_registration_form_3_marital_marriedTemplate):
-    def __init__(self, user_id, **properties):
+    selected_radio_button = None
+    def __init__(self, user_id,marital_status, **properties):
         # Set Form properties and Data Bindings.
         self.init_components(**properties)
         self.userId = user_id
-        user_profile = app_tables.fin_user_profile.get(customer_id=self.userId)
-        marital_status = user_profile['marital_status']
+
+        self.marital_status = marital_status
 
         # Set the visibility of the spouse controls based on the marital status
         if marital_status == 'Married':
-            self.marital_status_lender_registration_dropdown.selected_value = marital_status
             self.show_spouse_controls()
+            self.button_1.visible = True
         else:
             self.hide_spouse_controls()
-            self.radio_button_3.visible = False
+            self.button_1_3.visible = False
+            self.button_1.visible = True
+
+        options = app_tables.fin_spouse_profession.search()
+        option_strings = [str(option['spouse_profession']) for option in options]
+        self.drop_down_1.items = option_strings
 
     def show_spouse_controls(self):
         # Show the spouse radio button and related panels
-        self.grid_panel_1.visible = True
+        self.grid_panel_1.visible = False
         self.grid_panel_2.visible = False
         self.grid_panel_3.visible = False
         self.grid_panel_4.visible = False
-        self.button_submit.visible = True
+        self.button_submit.visible = False
         self.button_submit_copy.visible = False
         self.button_submit_copy_2.visible = False
         self.button_submit_copy_3.visible = False
-        self.prev_1.visible = True
+        self.prev_1.visible = False
         self.prev_2.visible = False
         self.prev_3.visible = False
         self.prev_4.visible = False
@@ -63,8 +71,12 @@ class lender_registration_form_3_marital_married(lender_registration_form_3_mari
     def button_1_click(self, **event_args):
         open_form('lendor_registration_form.lender_registration_form_2.lender_registration_form_3_marital_details',user_id=self.userId)
 
-    def radio_button_1_clicked(self, **event_args):
+    def button_1_1_click(self, **event_args):
         """This method is called when this radio button is selected"""
+        self.button_1_1.background = '#0a2346'
+        self.button_1_2.background = '#939191'
+        self.button_1_3.background = '#939191'
+        self.button_1_4.background = '#939191'
         self.grid_panel_1.visible = True
         self.grid_panel_2.visible = False
         self.grid_panel_3.visible = False
@@ -80,8 +92,12 @@ class lender_registration_form_3_marital_married(lender_registration_form_3_mari
         self.prev_4.visible = False
         self.button_1.visible = False
 
-    def radio_button_2_clicked(self, **event_args):
+    def button_1_2_click(self, **event_args):
         """This method is called when this radio button is selected"""
+        self.button_1_1.background = '#939191'
+        self.button_1_2.background = '#0a2346'
+        self.button_1_3.background = '#939191'
+        self.button_1_4.background = '#939191'
         self.grid_panel_1.visible = False
         self.grid_panel_2.visible = True
         self.grid_panel_3.visible = False
@@ -90,39 +106,39 @@ class lender_registration_form_3_marital_married(lender_registration_form_3_mari
         self.button_submit_copy.visible = True
         self.button_submit_copy_2.visible = False
         self.button_submit_copy_3.visible = False
-        self.selected_radio_button = "Mother"
+        self.selected_radio_button = "mother"
         self.prev_1.visible = False
         self.prev_2.visible = True
         self.prev_3.visible = False
         self.prev_4.visible = False
         self.button_1.visible = False
 
-    def radio_button_3_clicked(self, **event_args):
-       pass
+    def button_1_3_click(self, **event_args):
+        self.button_1_1.background = '#939191'
+        self.button_1_2.background = '#939191'
+        self.button_1_3.background = '#0a2346'
+        self.button_1_4.background = '#939191'
+        self.grid_panel_1.visible = False
+        self.grid_panel_2.visible = False
+        self.grid_panel_3.visible = True
+        self.grid_panel_4.visible = False
+        self.button_submit.visible = False
+        self.button_submit_copy.visible = False
+        self.button_submit_copy_2.visible = True
+        self.button_submit_copy_3.visible = False
+        self.selected_radio_button = "spouse"
+        self.prev_1.visible = False
+        self.prev_2.visible = False
+        self.prev_3.visible = True
+        self.prev_4.visible = False
+        self.button_1.visible = False
 
-    # def radio_button_3_clicked(self, **event_args):
-    #     """This method is called when this radio button is selected"""
-    #     if self.is_married():
-    #         self.grid_panel_1.visible = False
-    #         self.grid_panel_2.visible = False
-    #         self.grid_panel_3.visible = True
-    #         self.grid_panel_4.visible = False
-    #         self.button_submit.visible = False
-    #         self.button_submit_copy.visible = False
-    #         self.button_submit_copy_2.visible = True
-    #         self.button_submit_copy_3.visible = False
-    #         self.selected_radio_button = "spouse"
-    #         self.prev_1.visible = False
-    #         self.prev_2.visible = False
-    #         self.prev_3.visible = True
-    #         self.prev_4.visible = False
-    #         self.button_1.visible = False
-
-        
-
-
-    def radio_button_4_clicked(self, **event_args):
+    def button_1_4_click(self, **event_args):
         """This method is called when this radio button is selected"""
+        self.button_1_1.background = '#939191'
+        self.button_1_2.background = '#939191'
+        self.button_1_3.background = '#939191'
+        self.button_1_4.background = '#0a2346'
         self.grid_panel_1.visible = False
         self.grid_panel_2.visible = False
         self.grid_panel_3.visible = False
@@ -161,7 +177,7 @@ class lender_registration_form_3_marital_married(lender_registration_form_3_mari
         spouse_dob = self.date_picker_3.date
         spouse_mbl_no_text = self.spouse_mbl_no_text.text
         spouse_mbl_no = int(spouse_mbl_no_text) if spouse_mbl_no_text.strip().isdigit() else None
-        spouse_profession = self.spouse_profession_text.text
+        spouse_profession = self.drop_down_1.selected_value
         spouse_company = self.spouse_companyname_text.text
         anual_earning = self.annual_earning_text.text
 
@@ -173,7 +189,6 @@ class lender_registration_form_3_marital_married(lender_registration_form_3_mari
         related_mob = int(related_mob_text) if related_mob_text.strip().isdigit() else None
         related_profession = self.profession_text_copy.text
 
-        # Return the collected details as a dictionary
         return {
             'father_name': father_name,
             'father_dob': father_dob,
@@ -199,60 +214,206 @@ class lender_registration_form_3_marital_married(lender_registration_form_3_mari
             'related_person_name': related_name,
             'related_person_mob': related_mob,
             'related_person_profession': related_profession,
-            'another_person': self.selected_radio_button  # Store the selected radio button's name
+            'another_person': self.selected_radio_button  
         }
 
     def button_submit_click(self, **event_args):
-        # Collect details from the form
-        details = self.collect_details()
+       details = self.collect_details()
+    
+       existing_row = app_tables.fin_guarantor_details.get(customer_id=self.userId)
+    
+       if existing_row is None:
+          try:
+             new_row = app_tables.fin_guarantor_details.add_row(
+                customer_id=self.userId,
+                guarantor_name=details['father_name'],
+                guarantor_date_of_birth=details['father_dob'],
+                guarantor_mobile_no=details['father_mbl_no'],
+                guarantor_profession=details['father_profession'],
+                guarantor_address=details['father_address'],
+                another_person=details['another_person']
+            )
+          except Exception as e:
+             Notification(f"Failed to submit form: {e}").show()
+             return
+       else:
+         existing_row['guarantor_name'] = details['father_name']
+         existing_row['guarantor_date_of_birth'] = details['father_dob']
+         existing_row['guarantor_mobile_no'] = details['father_mbl_no']
+         existing_row['guarantor_profession'] = details['father_profession']
+         existing_row['guarantor_address'] = details['father_address']
+         existing_row['another_person'] = details['another_person']
+        
+         try:
+             existing_row.update()
+         except Exception as e:
+             Notification(f"Failed to update form: {e}").show()
+             return
+    
+       # Validations...
+       errors = []
+       if not re.match(r'^[A-Za-z\s]+$', details['father_name']):
+         errors.append("Enter a valid full name!")
+       if not details['father_dob'] or details['father_dob'] > datetime.now().date():
+         errors.append("Enter a valid date of birth!")
+       if datetime.now().date() - details['father_dob'] < timedelta(days=365 * 18):
+         errors.append("You must be at least 18 years old!")
+       if not re.match(r'^\d{10}$', str(details['father_mbl_no'])):
+         errors.append("Enter a valid mobile no!")
 
-        # Insert details into the data table
-        app_tables.fin_guarantor_details.add_row(
-            customer_id=self.userId,
-            guarantor_name=details['father_name'],
-            guarantor_date_of_birth=details['father_dob'],
-            guarantor_mobile_no=details['father_mbl_no'],
-            guarantor_profession=details['father_profession'],
-            guarantor_address=details['father_address'],
-            another_person=details['another_person']  # Store the selected radio button's name
-        )
-       
-        open_form('lendor_registration_form.lender_registration_form_4_bank_form_1',user_id = self.userId)
+       if errors:
+         Notification("\n".join(errors)).show()
+       else:
+         open_form('lendor_registration_form.lender_registration_form_4_bank_form_1', user_id=self.userId)
 
     def button_submit_copy_click(self, **event_args):
-        """This method is called when the button is clicked"""
-        details = self.collect_details()
-
-        # Insert details into the data table
-        app_tables.fin_guarantor_details.add_row(
-            customer_id=self.userId,
-            guarantor_name=details['mother_name'],
-            guarantor_date_of_birth=details['mother_dob'],
-            guarantor_mobile_no=details['mother_mbl_no'],
-            guarantor_profession=details['mother_profession'],
-            guarantor_address=details['mother_address'],
-            another_person=details['another_person']  # Store the selected radio button's name
-        )
+       details = self.collect_details()
+    
+       existing_row = app_tables.fin_guarantor_details.get(customer_id=self.userId)
+    
+       if existing_row is None:
+          try:
+             new_row = app_tables.fin_guarantor_details.add_row(
+                customer_id=self.userId,
+                guarantor_name=details['mother_name'],
+                guarantor_date_of_birth=details['mother_dob'],
+                guarantor_mobile_no=details['mother_mbl_no'],
+                guarantor_profession=details['mother_profession'],
+                guarantor_address=details['mother_address'],
+                another_person=details['another_person']
+            )
+          except Exception as e:
+             Notification(f"Failed to submit form: {e}").show()
+             return
+       else:
+         existing_row['guarantor_name'] = details['mother_name']
+         existing_row['guarantor_date_of_birth'] = details['mother_dob']
+         existing_row['guarantor_mobile_no'] = details['mother_mbl_no']
+         existing_row['guarantor_profession'] = details['mother_profession']
+         existing_row['guarantor_address'] = details['mother_address']
+         existing_row['another_person'] = details['another_person']
         
-        open_form('lendor_registration_form.lender_registration_form_4_bank_form_1',user_id = self.userId)
+         try:
+             existing_row.update()
+         except Exception as e:
+             Notification(f"Failed to update form: {e}").show()
+             return
+    
+       # Validations...
+       errors = []
+       if not re.match(r'^[A-Za-z\s]+$', details['mother_name']):
+         errors.append("Enter a valid full name!")
+       if not details['mother_dob'] or details['mother_dob'] > datetime.now().date():
+         errors.append("Enter a valid date of birth!")
+       if datetime.now().date() - details['mother_dob'] < timedelta(days=365 * 18):
+         errors.append("You must be at least 18 years old!")
+       if not re.match(r'^\d{10}$', str(details['mother_mbl_no'])):
+         errors.append("Enter a valid mobile no!")
+
+       if errors:
+         Notification("\n".join(errors)).show()
+       else:
+         open_form('lendor_registration_form.lender_registration_form_4_bank_form_1', user_id=self.userId)
 
     def button_submit_copy_2_click(self, **event_args):
-        """This method is called when the button is clicked"""
-        details = self.collect_details()
-
-        # Insert details into the data table
-        app_tables.fin_guarantor_details.add_row(
-            customer_id=self.userId,
-            guarantor_name=details['spouse_name'],
-            guarantor_date_of_birth=details['spouse_dob'],
-            guarantor_mobile_no=details['spouse_mbl_no'],
-            guarantor_profession=details['spouse_profession'],
-            guarantor_company_name=details['spouse_company'],
-            guarantor_annual_earning=details['annual_earning'],
-            another_person=details['another_person']  # Store the selected radio button's name
-        )
+       details = self.collect_details()
     
-        open_form('lendor_registration_form.lender_registration_form_4_bank_form_1',user_id = self.userId)
+       existing_row = app_tables.fin_guarantor_details.get(customer_id=self.userId)
+    
+       if existing_row is None:
+          try:
+             new_row = app_tables.fin_guarantor_details.add_row(
+                customer_id=self.userId,
+                guarantor_name=details['spouse_name'],
+                guarantor_date_of_birth=details['spouse_dob'],
+                guarantor_mobile_no=details['spouse_mbl_no'],
+                guarantor_profession=details['spouse_profession'],
+                guarantor_company_name=details['spouse_company'],
+                guarantor_annual_earning=details['annual_earning'],
+                another_person=details['another_person']
+            )
+          except Exception as e:
+             Notification(f"Failed to submit form: {e}").show()
+             return
+       else:
+         existing_row['guarantor_name'] = details['spouse_name']
+         existing_row['guarantor_date_of_birth'] = details['spouse_dob']
+         existing_row['guarantor_mobile_no'] = details['spouse_mbl_no']
+         existing_row['guarantor_profession'] = details['spouse_profession']
+         existing_row['guarantor_company_name'] = details['spouse_company']
+         existing_row['guarantor_annual_earning'] = details['annual_earning']
+         existing_row['another_person'] = details['another_person']
+        
+         try:
+             existing_row.update()
+         except Exception as e:
+             Notification(f"Failed to update form: {e}").show()
+             return
+    
+       # Validations...
+       errors = []
+       if not re.match(r'^[A-Za-z\s]+$', details['spouse_name']):
+         errors.append("Enter a valid full name!")
+       if not details['spouse_dob'] or details['spouse_dob'] > datetime.now().date():
+         errors.append("Enter a valid date of birth!")
+       if datetime.now().date() - details['spouse_dob'] < timedelta(days=365 * 18):
+         errors.append("You must be at least 18 years old!")
+       if not re.match(r'^\d{10}$', str(details['spouse_mbl_no'])):
+         errors.append("Enter a valid mobile no!")
+
+       if errors:
+         Notification("\n".join(errors)).show()
+       else:
+         open_form('lendor_registration_form.lender_registration_form_4_bank_form_1', user_id=self.userId)
+
+    def button_submit_copy_3_click(self, **event_args):
+       details = self.collect_details()
+    
+       existing_row = app_tables.fin_guarantor_details.get(customer_id=self.userId)
+    
+       if existing_row is None:
+          try:
+             new_row = app_tables.fin_guarantor_details.add_row(
+                customer_id=self.userId,
+                guarantor_name=details['related_person_name'],
+                guarantor_date_of_birth=details['related_person_dob'],
+                guarantor_mobile_no=details['related_person_mob'],
+                guarantor_profession=details['related_person_profession'],
+                guarantor_person_relation= details['related_person_relation'],
+                another_person=details['another_person']
+            )
+          except Exception as e:
+             Notification(f"Failed to submit form: {e}").show()
+             return
+       else:
+         existing_row['guarantor_name'] = details['related_person_name']
+         existing_row['guarantor_date_of_birth'] = details['related_person_dob']
+         existing_row['guarantor_mobile_no'] = details['related_person_mob']
+         existing_row['guarantor_profession'] = details['related_person_profession']
+         existing_row['guarantor_person_relation'] = details['related_person_relation']
+         existing_row['another_person'] = details['another_person']
+        
+         try:
+             existing_row.update()
+         except Exception as e:
+             Notification(f"Failed to update form: {e}").show()
+             return
+    
+       # Validations...
+       errors = []
+       if not re.match(r'^[A-Za-z\s]+$', details['related_person_name']):
+         errors.append("Enter a valid full name!")
+       if not details['related_person_dob'] or details['related_person_dob'] > datetime.now().date():
+         errors.append("Enter a valid date of birth!")
+       if datetime.now().date() - details['related_person_dob'] < timedelta(days=365 * 18):
+         errors.append("You must be at least 18 years old!")
+       if not re.match(r'^\d{10}$', str(details['related_person_mob'])):
+         errors.append("Enter a valid mobile no!")
+
+       if errors:
+         Notification("\n".join(errors)).show()
+       else:
+         open_form('lendor_registration_form.lender_registration_form_4_bank_form_1', user_id=self.userId)
       
     def button_submit_copy_3_click(self, **event_args):
         """This method is called when the button is clicked"""
@@ -266,23 +427,25 @@ class lender_registration_form_3_marital_married(lender_registration_form_3_mari
             guarantor_mobile_no=details['related_person_mob'],
             guarantor_profession=details['related_person_profession'],
             guarantor_person_relation= details['related_person_relation'],
-            another_person=details['another_person']  # Store the selected radio button's name
+            another_person=details['another_person']  
         )
      
         open_form('lendor_registration_form.lender_registration_form_4_bank_form_1',user_id = self.userId)
 
     def prev_1_click(self, **event_args):
       """This method is called when the button is clicked"""
-      open_form('borrower_registration_form.star_1_borrower_registration_form_3_marital', user_id=self.userId)
+      open_form('lendor_registration_form.lender_registration_form_3_marital_details', user_id=self.userId)
 
     def prev_2_click(self, **event_args):
       """This method is called when the button is clicked"""
-      open_form('borrower_registration_form.star_1_borrower_registration_form_3_marital', user_id=self.userId)
+      open_form('lendor_registration_form.lender_registration_form_3_marital_details', user_id=self.userId)
 
     def prev_3_click(self, **event_args):
       """This method is called when the button is clicked"""
-      open_form('borrower_registration_form.star_1_borrower_registration_form_3_marital', user_id=self.userId)
+      open_form('lendor_registration_form.lender_registration_form_3_marital_details', user_id=self.userId)
 
     def prev_4_click(self, **event_args):
       """This method is called when the button is clicked"""
-      open_form('borrower_registration_form.star_1_borrower_registration_form_3_marital', user_id=self.userId)
+      open_form('lendor_registration_form.lender_registration_form_3_marital_details', user_id=self.userId)
+
+ 

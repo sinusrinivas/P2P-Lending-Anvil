@@ -21,10 +21,15 @@ startup: {type: form, module: admin.dashboard}
 package_name: bank_client
 allow_embedding: false
 name: P2P Lending App
-runtime_options: {version: 2, client_version: '3', server_version: python3-sandbox,
-  server_spec: null}
+runtime_options:
+  version: 3
+  client_version: '3'
+  server_version: python3-sandbox
+  server_spec: null
+  legacy_features: {class_names: true, bootstrap3: true, __dict__: true, root_container: true}
 metadata: {title: 'P2P Bank ', description: this app provide services to person who are ready to invest and ready to give loan}
 startup_form: null
+native_deps: null
 db_schema:
   fin_reported_problems:
     client: full
@@ -132,7 +137,7 @@ db_schema:
       admin_ui: {width: 200}
       type: string
   fin_lendor_no_of_employees:
-    client: none
+    client: full
     server: full
     columns:
     - name: lendor_no_of_employees
@@ -291,6 +296,9 @@ db_schema:
     - name: product_description
       admin_ui: {width: 200}
       type: string
+    - name: min_extension_months
+      admin_ui: {width: 200}
+      type: number
     title: fin_product_details
   fin_borrower_organization_type:
     client: full
@@ -300,6 +308,14 @@ db_schema:
       admin_ui: {order: 0, width: 243}
       type: string
     title: fin_borrower_organization_type
+  fin_lender_spouse_profession:
+    title: fin_lender_spouse_profession
+    client: full
+    server: full
+    columns:
+    - name: spouse_profession
+      admin_ui: {width: 200}
+      type: string
   fin_borrower_account_type:
     client: full
     server: full
@@ -671,7 +687,7 @@ db_schema:
       admin_ui: {width: 200, order: 24.140625}
       type: bool
     - name: qualification
-      admin_ui: {width: 200, order: 24.375}
+      admin_ui: {order: 0.5625, width: 200}
       type: string
     - name: address_type
       admin_ui: {width: 200, order: 24.4375}
