@@ -60,35 +60,22 @@ components:
   type: Button
   event_bindings: {click: login_signup_button_click}
   layout_properties: {grid_position: 'IFJNGB,SYNJVB UAEYQF,SZJXCQ'}
-- name: button_2
-  properties: {text: Sign Up, role: filled-button, foreground: White, background: '#013065'}
-  type: Button
-  layout_properties: {grid_position: 'IFJNGB,SYNJVB UAEYQF,WRNWWZ'}
-  event_bindings: {click: button_2_click}
-- name: label_40
-  properties: {}
-  type: Label
-  layout_properties: {grid_position: 'IFJNGB,SYNJVB UAEYQF,WRNWWZ SITSGY,VCCZLL'}
 - name: drop_down_1
   properties:
-    role: null
+    role: outlined
     align: left
     placeholder: Sign Up
     border: ''
     foreground: black
     items: [Invest Now, Apply for Loan]
-    visible: false
+    visible: true
     background: white
     bold: true
     include_placeholder: true
   type: DropDown
-  layout_properties: {grid_position: 'IFJNGB,SYNJVB IRTYOE,DHVLXD'}
+  layout_properties: {grid_position: 'IFJNGB,SYNJVB UAEYQF,WRNWWZ'}
   data_bindings: []
   event_bindings: {change: drop_down_1_change}
-- name: label_39
-  properties: {}
-  type: Label
-  layout_properties: {grid_position: 'QQDHRF,CUYOJZ'}
 - name: spacer_1
   properties: {height: 4.8000030517578125}
   type: Spacer
@@ -206,7 +193,7 @@ components:
   type: Spacer
   layout_properties: {grid_position: 'JTHRJN,OMJPXC'}
 - name: xy_panel_3
-  properties: {height: 490.1999816894531, background: '#094586', spacing_above: small,
+  properties: {height: 572.3999328613281, background: '#094586', spacing_above: small,
     tooltip: '', role: elevated-card}
   type: XYPanel
   layout_properties: {grid_position: 'UKAIXF,VZAKIK', full_width_row: false}
@@ -229,8 +216,13 @@ components:
     properties: {source: _/theme/invest 1.png, height: 88.20001220703125}
     name: image_15
     layout_properties: {x: 0, y: 402.00521087646484, width: 282.66925048828125}
+  - name: button_8
+    properties: {text: View Details, role: filled-button, bold: true, font_size: 18,
+      underline: false, background: white, foreground: black}
+    type: Button
+    layout_properties: {x: 36.349995613098145, y: 532.3875122070312, width: 200}
 - name: xy_panel_4
-  properties: {height: 488.39996337890625, background: '#094586', role: elevated-card}
+  properties: {height: 570.3999328613281, background: '#094586', role: elevated-card}
   type: XYPanel
   layout_properties: {grid_position: 'UKAIXF,QSQQHQ', full_width_row: true}
   components:
@@ -251,8 +243,13 @@ components:
     properties: {source: _/theme/New-Project-1.png, height: 88.5999755859375}
     name: image_16
     layout_properties: {x: 0, y: 399.8046875, width: 282.66925048828125}
+  - name: button_7
+    properties: {text: View Details, foreground: black, background: white, font_size: 18,
+      bold: true}
+    type: Button
+    layout_properties: {x: 42.74995136260986, y: 530.3875122070312, width: 200}
 - name: xy_panel_5
-  properties: {height: 488.79998779296875, background: '#094586', role: elevated-card}
+  properties: {height: 570.1999816894531, background: '#094586', role: elevated-card}
   type: XYPanel
   layout_properties: {grid_position: 'UKAIXF,HIVORL', full_width_row: true, row_background: ''}
   components:
@@ -274,6 +271,11 @@ components:
     properties: {source: _/theme/ML-urgent.png, height: 91}
     name: image_17
     layout_properties: {x: 0, y: 397.7994842529297, width: 282.66925048828125}
+  - name: button_6
+    properties: {text: View Details, bold: true, font_size: 18, background: white,
+      foreground: black}
+    type: Button
+    layout_properties: {x: 45.11250019073486, y: 530.2000122070312, width: 200}
 - name: spacer_3
   properties: {height: 50}
   type: Spacer
@@ -373,7 +375,7 @@ components:
   type: Spacer
   layout_properties: {grid_position: 'IDRRFC,FHRNWS'}
 - name: xy_panel_9
-  properties: {height: 554.6666870117188, background: '#Edf0f4'}
+  properties: {height: 589.7999877929688, background: '#Edf0f4'}
   type: XYPanel
   layout_properties: {grid_position: 'DUCRGR,KKDHDR', full_width_row: true}
   components:
@@ -752,6 +754,31 @@ components:
       focus and target audience.', font_size: 20, visible: false}
   type: RichText
   layout_properties: {grid_position: 'CVDGOO,HJXPJG'}
+- name: spacer_20
+  properties: {height: 32}
+  type: Spacer
+  layout_properties: {grid_position: 'GARQWW,LDCTBY'}
+- name: xy_panel_10
+  properties: {height: 405.39996337890625}
+  type: XYPanel
+  layout_properties: {grid_position: 'ETYOFX,NPEIES', full_width_row: true}
+  components:
+  - name: image_22
+    properties: {height: 406.20001220703125, source: _/theme/india map.png, display_mode: shrink_to_fit}
+    type: Image
+    layout_properties: {x: 569.0875137336552, y: 0, width: 394.788}
+  - name: label_39
+    properties: {}
+    type: Label
+    layout_properties: {x: 387.87498807907104, y: 369.38751220703125, width: 200}
+  - name: label_41
+    properties: {}
+    type: Label
+    layout_properties: {x: 164.49999694898725, y: 369.38751220703125, width: 200}
+- name: spacer_21
+  properties: {height: 32}
+  type: Spacer
+  layout_properties: {grid_position: 'YGXHKC,CGUJLG'}
 - name: label_2_copy
   properties: {role: null, align: center, tooltip: '', border: '', foreground: black,
     visible: true, text: 'Hear from our investors
