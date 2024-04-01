@@ -296,6 +296,9 @@ db_schema:
     - name: product_description
       admin_ui: {width: 200}
       type: string
+    - name: min_extension_months
+      admin_ui: {width: 200}
+      type: number
     title: fin_product_details
   fin_borrower_organization_type:
     client: full
@@ -305,6 +308,14 @@ db_schema:
       admin_ui: {order: 0, width: 243}
       type: string
     title: fin_borrower_organization_type
+  fin_lender_spouse_profession:
+    title: fin_lender_spouse_profession
+    client: full
+    server: full
+    columns:
+    - name: spouse_profession
+      admin_ui: {width: 200}
+      type: string
   fin_borrower_account_type:
     client: full
     server: full
@@ -1180,7 +1191,7 @@ db_schema:
       admin_ui: {order: 12, width: 200}
       type: string
   fin_wallet_bank_account_table:
-    client: full
+    client: none
     server: full
     columns:
     - name: account_id

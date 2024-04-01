@@ -22,156 +22,162 @@ components:
   - type: form:borrower_registration_form.dashboard.Navigation_form_dashboard
     properties: {}
     name: navigation_form_dashboard_1
-    layout_properties: {grid_position: 'HAKBBG,ECDNIK', full_width_row: true}
-  - type: ColumnPanel
+    layout_properties: {grid_position: 'QOMAKJ,YYNNNA', full_width_row: true}
+  - name: content_panel_copy
     properties: {role: outlined-card, tooltip: '', border: '', foreground: '', visible: true,
       wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
       spacing_below: small, background: ''}
-    name: content_panel_copy
-    layout_properties:
-      col_widths: {}
-      grid_position: ORGPRT,JOHWXD
+    type: ColumnPanel
+    layout_properties: {grid_position: 'MTGSGN,FPSQIZ'}
     components:
-    - type: Label
+    - name: label_1
       properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
         visible: true, text: Loan Extension Details, font_size: 18, font: '', spacing_above: small,
         icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
         underline: true, icon: ''}
-      name: label_1
+      type: Label
       layout_properties: {grid_position: 'SZJHHH,ALAMQA'}
-    - type: ColumnPanel
-      properties: {role: outlined-card, col_widths: '{}'}
-      name: outlined_card_2
+    - name: outlined_card_2
+      properties: {role: outlined-card, col_widths: '{"EACVUA":15,"ZUWPLM":40,"QLUFCM":5}'}
+      type: ColumnPanel
       layout_properties:
         col_widths: {}
         grid_position: BSMDAN,TUXGSY
       components:
-      - type: GridPanel
+      - name: spacer_1
+        properties: {height: 323.0714111328125}
+        type: Spacer
+        layout_properties: {grid_position: 'LTBQEJ,EACVUA'}
+      - name: grid_panel_2
         properties: {}
-        name: grid_panel_2
+        type: GridPanel
         layout_properties: {grid_position: 'LTBQEJ,ZUWPLM'}
         components:
-        - type: Label
+        - name: label_10
           properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
             visible: true, text: 'loan ID :', font_size: null, font: '', spacing_above: small,
             icon_align: left, spacing_below: small, italic: false, background: '',
             bold: false, underline: false, icon: ''}
-          name: label_10
+          type: Label
           layout_properties: {row: MPVXLB, width_xs: 4, col_xs: 1, width: 219.328}
-        - type: Label
+        - name: label_23
           properties: {}
-          name: label_23
+          type: Label
           layout_properties: {row: MPVXLB, width_xs: 2, col_xs: 6}
-        - type: Label
+        - name: label_12
           properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
             visible: true, text: 'Loan Amount :', font_size: null, font: '', spacing_above: small,
             icon_align: left, spacing_below: small, italic: false, background: '',
             bold: false, underline: false, icon: ''}
-          name: label_12
+          type: Label
           layout_properties: {row: CULTKB, width_xs: 4, col_xs: 1, width: 219.328}
-        - type: Label
+        - name: mi_label
           properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
             visible: true, text: '', font_size: null, font: '', spacing_above: small,
             icon_align: left, spacing_below: small, italic: false, background: '',
             bold: false, underline: false, icon: ''}
-          name: mi_label
+          type: Label
           layout_properties: {row: CULTKB, width_xs: 4, col_xs: 6, width: 149.656}
-        - type: Label
+        - name: label_13
           properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
             visible: true, text: 'Extension Fee(%) :', font_size: null, font: '',
             spacing_above: small, icon_align: left, spacing_below: small, italic: false,
             background: '', bold: false, underline: false, icon: ''}
-          name: label_13
+          type: Label
           layout_properties: {row: ANIWUU, width_xs: 4, col_xs: 1, width: 219.328}
-        - type: Label
+        - name: extension_fee
           properties: {}
-          name: extension_fee
+          type: Label
           layout_properties: {row: ANIWUU, width_xs: 2, col_xs: 6}
-        - type: Label
+        - name: label_11
           properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
             visible: true, text: 'Extension Amount :', font_size: null, font: '',
             spacing_above: small, icon_align: left, spacing_below: small, italic: false,
             background: '', bold: false, underline: false, icon: ''}
-          name: label_11
+          type: Label
           layout_properties: {row: KEWPJD, width_xs: 4, col_xs: 1, width: 219.328}
-        - type: Label
+        - name: extension_amountt
           properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
             visible: true, text: '', font_size: null, font: '', spacing_above: small,
             icon_align: left, spacing_below: small, italic: false, background: '',
             bold: false, underline: false, icon: ''}
-          name: extension_amountt
+          type: Label
           layout_properties: {row: KEWPJD, width_xs: 2, col_xs: 6, width: 131.328}
-        - type: Label
+        - name: label_3
           properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
             visible: true, text: 'New Emi :', font_size: null, font: '', spacing_above: small,
             icon_align: left, spacing_below: small, italic: false, background: '',
             bold: false, underline: false, icon: ''}
-          name: label_3
+          type: Label
           layout_properties: {row: ZNWJWB, width_xs: 3, col_xs: 1, width: 136}
-        - type: Label
+        - name: new_emii
           properties: {}
-          name: new_emii
+          type: Label
           layout_properties: {row: ZNWJWB, width_xs: 3, col_xs: 6}
-        - type: Label
+        - name: label_2
           properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
             visible: true, text: Final Repayment Amount, font_size: null, font: '',
             spacing_above: small, icon_align: left, spacing_below: small, italic: false,
             background: '', bold: false, underline: false, icon: ''}
-          name: label_2
+          type: Label
           layout_properties: {row: ALFQIC, width_xs: 3, col_xs: 1, width: 157}
-        - type: Label
+        - name: final_repayment
           properties: {}
-          name: final_repayment
+          type: Label
           layout_properties: {row: ALFQIC, width_xs: 3, col_xs: 6}
-    - type: Label
+      - name: spacer_2
+        properties: {height: 356.9285888671875}
+        type: Spacer
+        layout_properties: {grid_position: 'LTBQEJ,QLUFCM'}
+    - name: label_6
       properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
         visible: true, text: Reason for Loan Extension, font_size: null, font: '',
         spacing_above: small, icon_align: left, spacing_below: small, italic: false,
         background: '', bold: true, underline: false, icon: ''}
-      name: label_6
+      type: Label
       layout_properties:
         col_widths: {}
         grid_position: UMNNGV,IKQVYH
-    - type: TextBox
+    - name: reason_textbox
       properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: mention a reason here for loan extension,
         border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
         font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
         background: 'theme:On Primary', bold: false, underline: false}
-      name: reason_textbox
+      type: TextBox
       layout_properties:
         col_widths: {}
         grid_position: RYCLDC,QNPYSQ
-    - type: CheckBox
+    - name: f_checkbox
       properties: {role: null, align: left, tooltip: '', border: '', enabled: true,
         foreground: '', allow_indeterminate: false, visible: true, text: I  agree to proceed with the Loan Extension process,
         font_size: null, font: '', spacing_above: small, spacing_below: small, italic: false,
         background: '', bold: false, checked: false, underline: false}
-      name: f_checkbox
+      type: CheckBox
       layout_properties:
         col_widths: {}
         grid_position: BCRPXA,CPGAXW
-    - type: Link
+    - name: link_1
       properties: {role: null, url: '', align: left, tooltip: '', border: '', foreground: '#0876E8',
         visible: true, text: Terms and Conditions, font_size: null, wrap_on: mobile,
         font: '', col_spacing: medium, spacing_above: small, icon_align: left, col_widths: '',
         spacing_below: small, italic: false, background: '', bold: false, underline: false,
         icon: 'fa:info-circle'}
-      name: link_1
+      type: Link
       layout_properties: {row: RHOAGV, width_xs: 4, col_xs: 8, grid_position: 'BCRPXA,UNBDGB'}
-    - type: Button
+    - name: button_2
       properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
         foreground: 'theme:On Primary', visible: true, text: Back, font_size: null,
         font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
         background: '#0b2547', bold: false, underline: false, icon: 'fa:angle-double-left'}
-      name: button_2
+      type: Button
       layout_properties: {grid_position: 'IIDEAB,JRZZAN'}
       event_bindings: {click: button_2_click}
-    - type: Button
+    - name: button_3
       properties: {role: elevated-button, align: center, tooltip: '', border: '',
         enabled: true, foreground: 'theme:On Primary', visible: true, text: SUBMIT,
         font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small,
         italic: false, background: '#0b2547', bold: true, underline: false, icon: ''}
-      name: button_3
+      type: Button
       layout_properties: {grid_position: 'IIDEAB,KZISID'}
       event_bindings: {click: button_3_click}
 - type: FlowPanel
