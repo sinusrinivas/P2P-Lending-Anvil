@@ -1,3 +1,161 @@
+# from ._anvil_designer import main_formTemplate
+# from anvil import *
+# import anvil.server
+# import anvil.google.auth, anvil.google.drive
+# from anvil.google.drive import app_files
+# import anvil.users
+# import anvil.tables as tables
+# import anvil.tables.query as q
+# from anvil.tables import app_tables
+# from anvil.js.window import navigator
+# from ..user_form import user_module
+# from . import main_form_module
+# # from ..borrower_dashboard import borrower_main_form_module
+# from ...borrower_registration_form.dashboard import main_form_module
+
+
+# class main_form(main_formTemplate):
+#   def __init__(self, **properties):
+#     # Set Form properties and Data Bindings.
+#     self.init_components(**properties)
+#     # Any code you write here will run before the form opens.
+#     self.data_row_panel_1.background_color = None 
+#     # Set up event handlers
+#     dropdown_items = ["Invest Now", "Apply for Loan"]
+#     for item in dropdown_items:
+#         Label = Label(text=item, role='dropdown_item', visible=False, **properties)
+#         Label.set_event_handler('x-click', self.dropdown_item_click)
+#         self.add_component(Label)
+        
+#         # Set up event handlers
+#         self.button_2_click_event = self.button_2_click
+  
+#   def login_signup_button_click(self, **event_args):
+#         anvil.users.login_with_form()
+#         current_user = anvil.users.get_user()
+#         if current_user:
+#             user_email = current_user['email']
+#             print(user_email)
+#             check_user_already_exist = user_module.check_user_profile(user_email)
+#             print(check_user_already_exist)
+#             if check_user_already_exist is None:
+#                 print("main if statement was executed")
+#                 user_module.add_email_and_user_id(user_email)
+#                 main_form_module.email = user_email
+#                 main_form_module.flag = True
+#                 open_form('bank_users.basic_registration_form')
+#             else:
+#                 check_user_registration = user_module.check_user_registration_form_done_or_not_engine(user_email)
+#                 print("main else statement was executed")
+#                 user_profile_e = app_tables.fin_user_profile.get(email_user=user_email)
+#                 main_form_module.email = user_email
+#                 main_form_module.userId = user_module.find_user_id(user_email)
+#                 if user_profile_e is not None:
+#                     user_type = user_profile_e['usertype']
+#                     if user_type == 'admin' or user_type == 'super admin':
+#                         open_form('admin.dashboard')
+#                     elif user_type == 'lender':
+#                         open_form('lendor_registration_form.dashboard')
+#                     elif user_type == 'borrower':
+#                         if user_profile_e['one_time_settlement'] != True:
+#                             open_form('borrower_registration_form.dashboard')
+#                         elif user_profile_e['one_time_settlement'] == True:
+#                             open_form('borrower_registration_form.ots_dashboard')
+#                     else:
+#                         open_form('bank_users.main_form.basic_registration_form')
+#                 else:
+#                     # Handle the case when user_profile_e is None
+#                     open_form('bank_users.user_form')
+#         else:
+#             # Handle the case when current_user is None
+#             open_form('bank_users.user_form')
+
+# #-- imp logic dont go up--#
+
+  
+#   def about_main_form_link_click(self, **event_args):
+#     """This method is called when the link is clicked"""
+#     open_form("bank_users.main_form.about_main_form")
+
+#   def link_1_click(self, **event_args):
+#     """This method is called when the link is clicked"""
+#     open_form("bank_users.main_form.products_main_form")
+
+#   def contact_main_form_link_click(self, **event_args):
+#     """This method is called when the link is clicked"""
+#     open_form("bank_users.main_form.contact_main_form")
+
+
+
+#   def link_6_click(self, **event_args):
+#     """This method is called when the link is clicked"""
+#     open_form("admin.user_issue.user_bugreports")
+
+#   def outlined_button_1_copy_1_click(self, **event_args):
+#     """This method is called when the button is clicked"""
+#     self.login_signup_button_click()
+
+#   def outlined_button_2_copy_1_click(self, **event_args):
+#     """This method is called when the button is clicked"""
+#     self.login_signup_button_click()
+
+#   # def image_9_mouse_enter(self, x, y, **event_args):
+#   #   """This method is called when the mouse cursor enters this component"""
+#   #   self.data_row_panel.background_color = '#05264d'
+
+#   # def image_9_mouse_leave(self, x, y, **event_args):
+#   #   """This method is called when the mouse cursor leaves this component"""
+#   #   self.data_row_panel.background_color = None
+
+#   def button_1_click(self, **event_args):
+#     """This method is called when the button is clicked"""
+#     self.rich_text_1.visible = not self.rich_text_1.visible
+
+#   def button_1_copy_click(self, **event_args):
+#     """This method is called when the button is clicked"""
+#     self.rich_text_2.visible = not self.rich_text_2.visible
+
+#   def button_2_click(self, **event_args):
+#     """This method is called when the button is clicked"""
+#     for component in self.get_components():
+#         if isinstance(component, Label) and component.role == 'dropdown_item':
+#             component.visible = True
+
+
+
+#   def link_7_click(self, **event_args):
+#     """This method is called when the link is clicked"""
+#     open_form("bank_users.main_form.basic_registration_form")
+
+#   def button_4_copy_click(self, **event_args):
+#     """This method is called when the button is clicked"""
+#     self.rich_text_4.visible = not self.rich_text_4.visible
+
+#   def button_4_click(self, **event_args):
+#     """This method is called when the button is clicked"""
+#     self.rich_text_3.visible = not self.rich_text_3.visible
+
+#   def dropdown_item_click(self, sender, **event_args):
+#         """This method is called when a dropdown item is clicked"""
+#         selected_option = sender.text
+#         # Redirect to another page based on the selected option
+#         if selected_option == "Invest Now":
+#             open_form('bank_users.main_form.basic_registration_form')  # Replace 'Form1' with the name of your target form
+#         elif selected_option == "Apply for Loan":
+#             open_form('bank_users.main_form.about_main_form')
+
+ 
+
+
+  
+
+  
+
+
+
+
+
+
 from ._anvil_designer import main_formTemplate
 from anvil import *
 import anvil.server
@@ -20,6 +178,15 @@ class main_form(main_formTemplate):
     self.init_components(**properties)
     # Any code you write here will run before the form opens.
     self.data_row_panel_1.background_color = None 
+    # Set up event handlers
+    dropdown_items = ["Invest Now", "Apply for Loan"]
+    for item in dropdown_items:
+        label = Label(text=item, role='dropdown_item', visible=False, **properties)  # Changed variable name to 'label'
+        label.set_event_handler('x-click', self.dropdown_item_click)
+        self.add_component(label)
+        
+        # Set up event handlers
+        self.button_2_click_event = self.button_2_click
   
   def login_signup_button_click(self, **event_args):
         anvil.users.login_with_form()
@@ -108,8 +275,11 @@ class main_form(main_formTemplate):
 
   def button_2_click(self, **event_args):
     """This method is called when the button is clicked"""
-    self.link_7.visible = not self.link_7.visible
-    self.link_8.visible = not self.link_8.visible
+    for component in self.get_components():
+        if isinstance(component, Label) and component.role == 'dropdown_item':
+            component.visible = True
+
+
 
   def link_7_click(self, **event_args):
     """This method is called when the link is clicked"""
@@ -123,13 +293,11 @@ class main_form(main_formTemplate):
     """This method is called when the button is clicked"""
     self.rich_text_3.visible = not self.rich_text_3.visible
 
- 
-
-
-  
-
-  
-
-
-
-
+  def dropdown_item_click(self, sender, **event_args):
+        """This method is called when a dropdown item is clicked"""
+        selected_option = sender.text
+        # Redirect to another page based on the selected option
+        if selected_option == "Invest Now":
+            open_form('bank_users.main_form.basic_registration_form')  # Replace 'Form1' with the name of your target form
+        elif selected_option == "Apply for Loan":
+            open_form('bank_users.main_form.about_main_form')
