@@ -53,32 +53,29 @@ components:
     layout_properties: {}
     event_bindings: {click: link_6_click}
 - name: login_signup_button
-  properties: {role: outlined-button, align: center, tooltip: '', border: '', enabled: true,
-    foreground: white, visible: true, text: Sign In, font_size: null, font: '', spacing_above: small,
+  properties: {role: null, align: right, tooltip: '', border: '', enabled: true, foreground: white,
+    visible: true, text: Sign In, font_size: null, font: '', spacing_above: small,
     icon_align: left, spacing_below: small, italic: false, background: '#013065',
     bold: true, underline: false, icon: ''}
   type: Button
   event_bindings: {click: login_signup_button_click}
   layout_properties: {grid_position: 'IFJNGB,SYNJVB UAEYQF,SZJXCQ'}
-- name: button_2
-  properties: {text: Sign Up, role: outlined-button, background: '#013065', foreground: white,
-    bold: true, align: left}
-  type: Button
-  layout_properties: {grid_position: 'IFJNGB,SYNJVB UAEYQF,WRNWWZ CQIBAM,RUCCXK'}
-  event_bindings: {click: button_2_click}
-- name: link_7
-  properties: {text: Invest Now, foreground: black, align: left, font_size: 16, visible: false,
-    background: 'theme:On Primary', col_widths: '{}'}
-  type: Link
-  layout_properties: {grid_position: 'IFJNGB,SYNJVB UAEYQF,WRNWWZ KAQRQU,HANEYF'}
-  event_bindings: {click: link_7_click}
-  components:
-  - name: link_8
-    properties: {font_size: 16, text: Apply for a Loan, foreground: black, visible: false,
-      background: 'theme:On Primary'}
-    type: Link
-    layout_properties: {grid_position: 'VLERJJ,ZFSLGN', full_width_row: true}
-    event_bindings: {click: link_8_click}
+- name: drop_down_1
+  properties:
+    role: input-error
+    align: left
+    placeholder: Sign Up
+    border: ''
+    foreground: black
+    items: [Invest Now, Apply for Loan]
+    visible: true
+    background: white
+    bold: true
+    include_placeholder: true
+  type: DropDown
+  layout_properties: {grid_position: 'IFJNGB,SYNJVB UAEYQF,WRNWWZ'}
+  data_bindings: []
+  event_bindings: {change: drop_down_1_change}
 - name: spacer_1
   properties: {height: 4.8000030517578125}
   type: Spacer
@@ -196,7 +193,7 @@ components:
   type: Spacer
   layout_properties: {grid_position: 'JTHRJN,OMJPXC'}
 - name: xy_panel_3
-  properties: {height: 490.1999816894531, background: '#094586', spacing_above: small,
+  properties: {height: 572.3999328613281, background: '#094586', spacing_above: small,
     tooltip: '', role: elevated-card}
   type: XYPanel
   layout_properties: {grid_position: 'UKAIXF,VZAKIK', full_width_row: false}
@@ -219,8 +216,13 @@ components:
     properties: {source: _/theme/invest 1.png, height: 88.20001220703125}
     name: image_15
     layout_properties: {x: 0, y: 402.00521087646484, width: 282.66925048828125}
+  - name: button_8
+    properties: {text: View Details, role: filled-button, bold: true, font_size: 18,
+      underline: false, background: white, foreground: black}
+    type: Button
+    layout_properties: {x: 36.349995613098145, y: 532.3875122070312, width: 200}
 - name: xy_panel_4
-  properties: {height: 488.39996337890625, background: '#094586', role: elevated-card}
+  properties: {height: 570.3999328613281, background: '#094586', role: elevated-card}
   type: XYPanel
   layout_properties: {grid_position: 'UKAIXF,QSQQHQ', full_width_row: true}
   components:
@@ -241,8 +243,13 @@ components:
     properties: {source: _/theme/New-Project-1.png, height: 88.5999755859375}
     name: image_16
     layout_properties: {x: 0, y: 399.8046875, width: 282.66925048828125}
+  - name: button_7
+    properties: {text: View Details, foreground: black, background: white, font_size: 18,
+      bold: true}
+    type: Button
+    layout_properties: {x: 42.74995136260986, y: 530.3875122070312, width: 200}
 - name: xy_panel_5
-  properties: {height: 488.79998779296875, background: '#094586', role: elevated-card}
+  properties: {height: 570.1999816894531, background: '#094586', role: elevated-card}
   type: XYPanel
   layout_properties: {grid_position: 'UKAIXF,HIVORL', full_width_row: true, row_background: ''}
   components:
@@ -264,6 +271,11 @@ components:
     properties: {source: _/theme/ML-urgent.png, height: 91}
     name: image_17
     layout_properties: {x: 0, y: 397.7994842529297, width: 282.66925048828125}
+  - name: button_6
+    properties: {text: View Details, bold: true, font_size: 18, background: white,
+      foreground: black}
+    type: Button
+    layout_properties: {x: 45.11250019073486, y: 530.2000122070312, width: 200}
 - name: spacer_3
   properties: {height: 50}
   type: Spacer
@@ -363,7 +375,7 @@ components:
   type: Spacer
   layout_properties: {grid_position: 'IDRRFC,FHRNWS'}
 - name: xy_panel_9
-  properties: {height: 554.6666870117188, background: '#Edf0f4'}
+  properties: {height: 589.7999877929688, background: '#Edf0f4'}
   type: XYPanel
   layout_properties: {grid_position: 'DUCRGR,KKDHDR', full_width_row: true}
   components:
@@ -438,6 +450,70 @@ components:
   properties: {height: 32}
   type: Spacer
   layout_properties: {grid_position: 'KPMSUL,IDNDNP'}
+- name: label_40
+  properties: {text: Kotak Minimizes Your Risk, bold: true, font_size: 29, align: center}
+  type: Label
+  layout_properties: {grid_position: 'PEXAFZ,QZNZUG'}
+- name: label_42
+  properties: {font_size: 22, text: 'At Kotak, you can build a strong and diverse
+      portfolio to ensure maximum returns at minimum risk.'}
+  type: Label
+  layout_properties: {grid_position: 'ICSCSG,GUECHA'}
+- name: spacer_22
+  properties: {height: 32}
+  type: Spacer
+  layout_properties: {grid_position: 'EEIWLL,KZPGTA'}
+- name: xy_panel_11
+  properties: {height: '211'}
+  type: XYPanel
+  layout_properties: {grid_position: 'FFODXR,YRTVLS LNZJQX,UAPIXD', full_width_row: false}
+  components:
+  - name: image_23
+    properties: {height: 89.55551147460938, vertical_align: top, source: _/theme/screening.png,
+      display_mode: original_size}
+    type: Image
+    layout_properties: {x: 18.874981690198183, y: 0, width: 81.37495649414062}
+- name: xy_panel_13
+  properties: {height: '211'}
+  type: XYPanel
+  layout_properties: {grid_position: 'FFODXR,YRTVLS JVDPAC,OQDJSF'}
+  components:
+  - name: image_24
+    properties: {height: 88.22222900390625, source: _/theme/money-arrow_bean.d0d0a86.png,
+      display_mode: original_size}
+    type: Image
+    layout_properties: {x: 23.81943766400218, y: 11, width: 110.33334350585938}
+  - name: label_45
+    properties: {}
+    type: Label
+    layout_properties: {x: 36.263865154236555, y: 175, width: 200}
+- name: xy_panel_12
+  properties: {height: 211}
+  type: XYPanel
+  layout_properties: {grid_position: 'FFODXR,UYCLKT AJZSXN,HNSTAO'}
+  components:
+  - name: image_25
+    properties: {height: 66.77777099609375, source: _/theme/manager.png, display_mode: original_size}
+    type: Image
+    layout_properties: {x: 0.5972086600959301, y: 11, width: 93.208283984375}
+  - name: label_43
+    properties: {}
+    type: Label
+    layout_properties: {x: 18.26386857032776, y: 175, width: 200}
+- name: xy_panel_14
+  properties: {height: '211'}
+  type: XYPanel
+  layout_properties: {grid_position: 'FFODXR,UYCLKT PLTTVV,AOXOXT'}
+  components:
+  - name: image_26
+    properties: {height: 64.99993896484375, source: _/theme/money-bag-hand_bean.2c2a2a6.png,
+      display_mode: original_size}
+    type: Image
+    layout_properties: {x: 22.37504069134593, y: 11, width: 81.33368701171875}
+  - name: label_44
+    properties: {}
+    type: Label
+    layout_properties: {x: 17.91672770306468, y: 175, width: 200}
 - name: label_8
   properties: {text: How it works​, role: headline, font_size: 30, align: center,
     bold: true, font: ''}
@@ -579,7 +655,7 @@ components:
     components:
     - name: label_1_copy_1
       properties: {role: null, align: center, tooltip: '', border: '', foreground: white,
-        visible: true, text: Personal Loan at Interest Rates Starting from 12%, font_size: 30,
+        visible: true, text: Personal Loan at Interest Rates Starting from 12%, font_size: 25,
         font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
         background: '', bold: true, underline: false, icon: ''}
       type: Label
@@ -609,7 +685,7 @@ components:
   components:
   - name: label_2_copy_1
     properties: {role: null, align: center, tooltip: '', border: '', foreground: white,
-      visible: true, text: Generate substantial profits for investors, font_size: 30,
+      visible: true, text: Generate substantial profits for investors, font_size: 25,
       font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
       background: '', bold: true, underline: false, icon: ''}
     type: Label
@@ -742,6 +818,31 @@ components:
       focus and target audience.', font_size: 20, visible: false}
   type: RichText
   layout_properties: {grid_position: 'CVDGOO,HJXPJG'}
+- name: spacer_20
+  properties: {height: 32}
+  type: Spacer
+  layout_properties: {grid_position: 'GARQWW,LDCTBY'}
+- name: xy_panel_10
+  properties: {height: 444.20001220703125}
+  type: XYPanel
+  layout_properties: {grid_position: 'ETYOFX,NPEIES', full_width_row: false}
+  components:
+  - name: image_22
+    properties: {height: 406.20001220703125, source: _/theme/india map.png, display_mode: shrink_to_fit}
+    type: Image
+    layout_properties: {x: 569.0875137336552, y: 0, width: 394.788}
+  - name: label_39
+    properties: {}
+    type: Label
+    layout_properties: {x: 319.97501831129193, y: 408.20001220703125, width: 200}
+  - name: label_41
+    properties: {}
+    type: Label
+    layout_properties: {x: 143.56943766400218, y: 408.1944580078125, width: 200}
+- name: spacer_21
+  properties: {height: 32}
+  type: Spacer
+  layout_properties: {grid_position: 'YGXHKC,CGUJLG'}
 - name: label_2_copy
   properties: {role: null, align: center, tooltip: '', border: '', foreground: black,
     visible: true, text: 'Hear from our investors

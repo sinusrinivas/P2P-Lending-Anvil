@@ -19,7 +19,19 @@ class main_form(main_formTemplate):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
     # Any code you write here will run before the form opens.
-    self.data_row_panel_1.background_color = None 
+    self.data_row_panel_1.background_color = None
+    # Set up event handlers
+    # self.button_1_click_event = self.button_1_click
+    self.dropdown_change_event = self.drop_down_1_change
+    # Set up event handlers
+    # dropdown_items = ["Invest Now", "Apply for Loan"]
+    # for item in dropdown_items:
+    #     Label = Label(text=item, role='dropdown_item', visible=False, **properties)
+    #     Label.set_event_handler('x-click', self.dropdown_item_click)
+    #     self.add_component(Label)
+        
+    #     # Set up event handlers
+    #     self.button_2_click_event = self.button_2_click
   
   def login_signup_button_click(self, **event_args):
         anvil.users.login_with_form()
@@ -106,10 +118,13 @@ class main_form(main_formTemplate):
     """This method is called when the button is clicked"""
     self.rich_text_2.visible = not self.rich_text_2.visible
 
-  def button_2_click(self, **event_args):
-    """This method is called when the button is clicked"""
-    self.link_7.visible = not self.link_7.visible
-    self.link_8.visible = not self.link_8.visible
+  # def button_2_click(self, **event_args):
+  #   """This method is called when the button is clicked"""
+  #   for component in self.get_components():
+  #       if isinstance(component, Label) and component.role == 'dropdown_item':
+  #           component.visible = True
+
+
 
   def link_7_click(self, **event_args):
     """This method is called when the link is clicked"""
@@ -123,12 +138,31 @@ class main_form(main_formTemplate):
     """This method is called when the button is clicked"""
     self.rich_text_3.visible = not self.rich_text_3.visible
 
+  # def dropdown_item_click(self, sender, **event_args):
+  #       """This method is called when a dropdown item is clicked"""
+  #       selected_option = sender.text
+  #       # Redirect to another page based on the selected option
+  #       if selected_option == "Invest Now":
+  #           open_form('bank_users.main_form.basic_registration_form')  # Replace 'Form1' with the name of your target form
+  #       elif selected_option == "Apply for Loan":
+  #           open_form('bank_users.main_form.about_main_form')
+
+  def drop_down_1_change(self, **event_args):
+    """This method is called when an item is selected"""
+    selected_option = self.drop_down_1.selected_value
+    if selected_option == "Invest Now":
+        open_form('bank_users.main_form.basic_registration_form')  # Replace 'Form1' with the name of your target form
+    elif selected_option == "Apply for Loan":
+        open_form('bank_users.main_form.about_main_form')
+
  
 
 
   
 
   
+
+
 
 
 
