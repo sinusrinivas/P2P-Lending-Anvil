@@ -18,7 +18,7 @@ class view_loans(view_loansTemplate):
         # Fetch data based on loan status and user ID
         open_loans = app_tables.fin_loan_details.search(
             loan_updated_status=q.like('approved%'), 
-            borrower_customer_id=self.user_id
+            # borrower_customer_id=self.user_id
         )
 
         borrower_profiles = []
