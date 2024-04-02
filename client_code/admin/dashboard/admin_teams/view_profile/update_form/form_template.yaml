@@ -21,7 +21,7 @@ components:
       grid_position: DHOVAP,SWQFIS
     components:
     - type: ColumnPanel
-      properties: {col_widths: '{"KRLZSH":20,"HLNDUJ":30,"IPXQDT":10}'}
+      properties: {col_widths: '{"KRLZSH":15,"HLNDUJ":40,"IPXQDT":5,"PYVLVK":35,"TVFUUB":25,"HKCYNP":35,"ZXAXZP":25,"YEZOLE":35,"IJBLZH":25,"UTHZRD":35,"LQMQNJ":25,"RWZBBQ":35,"SYRXRM":25,"WZFPPT":35,"GGADRT":25}'}
       name: content_panel_copy_2
       layout_properties:
         col_widths: {}
@@ -36,7 +36,7 @@ components:
         layout_properties: {grid_position: 'JHTLOW,RJVCQC'}
         event_bindings: {click: button_1_copy_click}
       - name: spacer_1
-        properties: {height: 32}
+        properties: {height: 247.9285888671875}
         type: Spacer
         layout_properties: {grid_position: 'EPTIXA,KRLZSH'}
       - type: Label
