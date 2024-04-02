@@ -673,7 +673,7 @@ components:
 - name: label_46
   properties: {text: 'We have a large pool of investors who are looking to invest
       in individual projects approved by Kotak. Once your loan project is listed on
-      Kotak, it gets funded within a few days', font_size: 18}
+      Kotak, it gets funded within a few days', font_size: 18, align: center}
   type: Label
   layout_properties: {grid_position: 'RUUBND,GEESPO GMIZKY,KKGPWJ'}
 - name: spacer_9
