@@ -463,16 +463,20 @@ components:
   properties: {height: 32}
   type: Spacer
   layout_properties: {grid_position: 'EEIWLL,KZPGTA'}
-- name: xy_panel_11
-  properties: {height: '211'}
-  type: XYPanel
-  layout_properties: {grid_position: 'FFODXR,YRTVLS LNZJQX,UAPIXD', full_width_row: false}
-  components:
-  - name: image_23
-    properties: {height: 74.60000610351562, vertical_align: top, source: _/theme/screening.png,
-      display_mode: original_size}
-    type: Image
-    layout_properties: {x: 18.874981690198183, y: 0, width: 81.37495649414062}
+- name: image_23
+  properties: {height: 74.60000610351562, vertical_align: top, source: _/theme/screening.png,
+    display_mode: shrink_to_fit, horizontal_align: left}
+  type: Image
+  layout_properties: {grid_position: 'SIPMDQ,UGNRVI MOFJMP,YHVAWV'}
+- name: label_43
+  properties: {text: msjmm}
+  type: Label
+  layout_properties: {grid_position: 'SIPMDQ,UGNRVI NCGCTT,WWEKLL'}
+- name: image_25
+  properties: {height: 66.77777099609375, source: _/theme/manager.png, display_mode: shrink_to_fit,
+    horizontal_align: left}
+  type: Image
+  layout_properties: {grid_position: 'SIPMDQ,DMBIXF'}
 - name: xy_panel_13
   properties: {height: '211'}
   type: XYPanel
@@ -483,25 +487,16 @@ components:
       display_mode: original_size}
     type: Image
     layout_properties: {x: 23.81943766400218, y: 11, width: 82.72499389648438}
-  - name: label_45
-    properties: {}
-    type: Label
-    layout_properties: {x: 36.263865154236555, y: 175, width: 200}
+  - name: rich_text_5
+    properties: {content: dbasbdnsabndbsnms}
+    type: RichText
+    layout_properties: {x: 8.999996948987246, y: 166, width: 200}
 - name: spacer_27
   properties: {height: 32}
   type: Spacer
   layout_properties: {grid_position: 'FFODXR,YRTVLS RXYULM,SWQFWN'}
-- name: xy_panel_12
-  properties: {height: 209}
-  type: XYPanel
-  layout_properties: {grid_position: 'FFODXR,UYCLKT AJZSXN,HNSTAO'}
-  components:
-  - name: image_25
-    properties: {height: 66.77777099609375, source: _/theme/manager.png, display_mode: original_size}
-    type: Image
-    layout_properties: {x: 0.5972086600959301, y: 11, width: 93.208283984375}
 - name: xy_panel_14
-  properties: {height: '211'}
+  properties: {height: 212.20001220703125}
   type: XYPanel
   layout_properties: {grid_position: 'FFODXR,UYCLKT PLTTVV,AOXOXT'}
   components:
@@ -513,7 +508,7 @@ components:
   - name: label_44
     properties: {}
     type: Label
-    layout_properties: {x: 17.91672770306468, y: 175, width: 200}
+    layout_properties: {x: 15.500073242932558, y: 176.1999969482422, width: 200}
 - name: spacer_28
   properties: {height: 32}
   type: Spacer
@@ -843,27 +838,33 @@ components:
   properties: {height: 32}
   type: Spacer
   layout_properties: {grid_position: 'GARQWW,LDCTBY'}
-- name: xy_panel_10
-  properties: {height: 444.20001220703125}
-  type: XYPanel
-  layout_properties: {grid_position: 'ETYOFX,NPEIES', full_width_row: false}
+- name: grid_panel_1
+  properties: {background: '#EBE1ED'}
+  type: GridPanel
+  layout_properties: {grid_position: 'FQBPSY,UMXIKL', full_width_row: true}
   components:
-  - name: image_22
-    properties: {height: 406.20001220703125, source: _/theme/india map.png, display_mode: shrink_to_fit}
-    type: Image
-    layout_properties: {x: 569.0875137336552, y: 0, width: 394.788}
+  - name: spacer_21
+    properties: {height: 32}
+    type: Spacer
+    layout_properties: {row: OOOZIM, width_xs: 3, col_xs: 2}
   - name: label_39
-    properties: {}
+    properties: {text: Join our expanding team as we grow!, font_size: 15}
     type: Label
-    layout_properties: {x: 319.97501831129193, y: 408.20001220703125, width: 200}
+    layout_properties: {row: ROSIKZ, width_xs: 3, col_xs: 1}
   - name: label_41
-    properties: {}
+    properties: {text: '"Join over 1 crore Indians who have already signed up. Will
+        you be next?"', bold: true, font_size: 35}
     type: Label
-    layout_properties: {x: 143.56943766400218, y: 408.1944580078125, width: 200}
-- name: spacer_21
-  properties: {height: 32}
-  type: Spacer
-  layout_properties: {grid_position: 'YGXHKC,CGUJLG'}
+    layout_properties: {row: KSGGGV, width_xs: 5, col_xs: 1}
+  - name: image_22
+    properties: {source: _/theme/india map.png, display_mode: original_size, height: '200'}
+    type: Image
+    layout_properties: {row: KSGGGV, width_xs: 4, col_xs: 7}
+  - name: button_2
+    properties: {text: Register Now, spacing_below: medium, background: '#094586',
+      foreground: White, role: filled-button}
+    type: Button
+    layout_properties: {row: QFGDEG, width_xs: 3, col_xs: 1}
 - name: label_2_copy
   properties: {role: null, align: center, tooltip: '', border: '', foreground: black,
     visible: true, text: 'Hear from our investors
@@ -955,9 +956,4 @@ components:
     type: Link
     components: []
     layout_properties: {row: JUWDTC, width_xs: 1, col_xs: 11, width: 93.6875}
-- name: data_row_panel_3_copy
-  properties: {}
-  type: DataRowPanel
-  layout_properties: {grid_position: 'NQBOEI,RWPYRW'}
-  components: []
 is_package: true
