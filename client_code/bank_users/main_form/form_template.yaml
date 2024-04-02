@@ -53,8 +53,8 @@ components:
     layout_properties: {}
     event_bindings: {click: link_6_click}
 - name: login_signup_button
-  properties: {role: null, align: right, tooltip: '', border: '', enabled: true, foreground: white,
-    visible: true, text: Sign In, font_size: null, font: '', spacing_above: small,
+  properties: {role: filled-button, align: right, tooltip: '', border: '', enabled: true,
+    foreground: white, visible: true, text: Sign In, font_size: null, font: '', spacing_above: small,
     icon_align: left, spacing_below: small, italic: false, background: '#013065',
     bold: true, underline: false, icon: ''}
   type: Button
@@ -62,7 +62,7 @@ components:
   layout_properties: {grid_position: 'IFJNGB,SYNJVB UAEYQF,SZJXCQ'}
 - name: drop_down_1
   properties:
-    role: input-error
+    role: outlined
     align: left
     placeholder: Sign Up
     border: ''
@@ -73,7 +73,7 @@ components:
     bold: true
     include_placeholder: true
   type: DropDown
-  layout_properties: {grid_position: 'IFJNGB,SYNJVB UAEYQF,WRNWWZ'}
+  layout_properties: {grid_position: 'IFJNGB,SYNJVB UAEYQF,WRNWWZ', full_width_row: false}
   data_bindings: []
   event_bindings: {change: drop_down_1_change}
 - name: spacer_1
@@ -224,7 +224,7 @@ components:
 - name: xy_panel_4
   properties: {height: 570.3999328613281, background: '#094586', role: elevated-card}
   type: XYPanel
-  layout_properties: {grid_position: 'UKAIXF,QSQQHQ', full_width_row: true}
+  layout_properties: {grid_position: 'UKAIXF,QSQQHQ', full_width_row: false}
   components:
   - type: Image
     properties: {source: _/theme/mip-monthly-income-p2p-lending.webp, height: 265}
@@ -487,8 +487,12 @@ components:
     properties: {}
     type: Label
     layout_properties: {x: 36.263865154236555, y: 175, width: 200}
+- name: spacer_27
+  properties: {height: 32}
+  type: Spacer
+  layout_properties: {grid_position: 'FFODXR,YRTVLS RXYULM,SWQFWN'}
 - name: xy_panel_12
-  properties: {height: 211}
+  properties: {height: 209}
   type: XYPanel
   layout_properties: {grid_position: 'FFODXR,UYCLKT AJZSXN,HNSTAO'}
   components:
@@ -496,10 +500,6 @@ components:
     properties: {height: 66.77777099609375, source: _/theme/manager.png, display_mode: original_size}
     type: Image
     layout_properties: {x: 0.5972086600959301, y: 11, width: 93.208283984375}
-  - name: label_43
-    properties: {}
-    type: Label
-    layout_properties: {x: 38.89998769760132, y: 175, width: 200}
 - name: xy_panel_14
   properties: {height: '211'}
   type: XYPanel
@@ -514,11 +514,19 @@ components:
     properties: {}
     type: Label
     layout_properties: {x: 17.91672770306468, y: 175, width: 200}
+- name: spacer_28
+  properties: {height: 32}
+  type: Spacer
+  layout_properties: {grid_position: 'FFODXR,UYCLKT VAFLGS,VUSRJU'}
 - name: label_8
   properties: {text: How it works​, role: headline, font_size: 30, align: center,
     bold: true, font: ''}
   type: Label
   layout_properties: {grid_position: 'LNLPBU,ZLMQPF'}
+- name: spacer_29
+  properties: {height: 13.399932861328125}
+  type: Spacer
+  layout_properties: {grid_position: 'OXKNLX,AGXXMG'}
 - name: label_9
   properties: {text: 'Kotak digital platform facilitates seamless connections between
       creditworthy businesses seeking funding and investors eager to fuel their expansion,
@@ -526,11 +534,11 @@ components:
   type: Label
   layout_properties: {grid_position: 'HBLVJB,WJZBTP'}
 - name: spacer_6
-  properties: {height: 41.79998779296875}
+  properties: {height: 21}
   type: Spacer
   layout_properties: {grid_position: 'FGAEGL,EDOHWZ'}
 - name: image_4
-  properties: {source: _/theme/icons8-laptop-100 (1).png, display_mode: shrink_to_fit,
+  properties: {source: _/theme/icons8-laptop-100 (1).png, display_mode: original_size,
     height: 97.41665649414062}
   type: Image
   layout_properties: {grid_position: 'BGOTWK,XXIPLN'}
@@ -539,8 +547,8 @@ components:
   type: Label
   layout_properties: {grid_position: 'BGOTWK,XXIPLN LDUNEZ,EMAVPJ'}
 - name: image_5
-  properties: {source: _/theme/icons8-approved-webpage-100.png, background: '', role: null,
-    visible: true, height: 98.58334350585938}
+  properties: {source: _/theme/icons8-approved-webpage-100 (1).png, background: '',
+    role: null, visible: true, height: 98.58334350585938, display_mode: original_size}
   type: Image
   layout_properties: {grid_position: 'BGOTWK,PRCSLT EVJEUH,SLMCTO'}
 - name: label_11
@@ -548,7 +556,7 @@ components:
   type: Label
   layout_properties: {grid_position: 'BGOTWK,PRCSLT OBEGGH,AVGGCR'}
 - name: image_6
-  properties: {source: _/theme/icons8-fund-100.png, height: 96.75}
+  properties: {source: _/theme/icons8-fund-100 (1).png, height: 96.75, display_mode: original_size}
   type: Image
   layout_properties: {grid_position: 'BGOTWK,PTRZYW BSEDZX,SAVEOO'}
 - name: label_12
@@ -557,7 +565,8 @@ components:
   type: Label
   layout_properties: {grid_position: 'BGOTWK,PTRZYW JEGIDN,XAPYYC'}
 - name: image_7
-  properties: {source: _/theme/icons8-business-goal-100.png, role: null, height: 95.91665649414062}
+  properties: {source: _/theme/icons8-business-goal-100 (1).png, role: null, height: 95.91665649414062,
+    display_mode: original_size}
   type: Image
   layout_properties: {grid_position: 'BGOTWK,FKRLFV NBOARJ,FCSFDI'}
 - name: label_13
@@ -582,9 +591,12 @@ components:
   properties: {height: '117', source: _/theme/icons8-mortgage-interest-100.png, display_mode: original_size}
   type: Image
   layout_properties: {grid_position: 'RUUBND,IGQGYE RUFKEB,CXYDDO'}
+- name: spacer_26
+  properties: {height: 32}
+  type: Spacer
+  layout_properties: {grid_position: 'RUUBND,IGQGYE MBHLEX,YNIZZX'}
 - name: label_17
-  properties: {text: Low-Interest Rates, font_size: 20, align: center, bold: true,
-    italic: false}
+  properties: {text: Low-Interest Rates, font_size: 20, align: left, bold: true, italic: false}
   type: Label
   layout_properties: {grid_position: 'RUUBND,IGQGYE SWCZMF,EGOYCS'}
 - name: label_20
@@ -597,8 +609,12 @@ components:
   properties: {source: _/theme/icons8-easy-100.png, height: '117', display_mode: original_size}
   type: Image
   layout_properties: {grid_position: 'RUUBND,WMRMLE FEKSPP,LLPDZJ'}
+- name: spacer_25
+  properties: {height: 32}
+  type: Spacer
+  layout_properties: {grid_position: 'RUUBND,WMRMLE NBGXKU,QEXBPQ'}
 - name: label_18
-  properties: {text: Quick and Hassle Free, bold: true, font_size: 20, align: center}
+  properties: {text: Quick and Hassle Free, bold: true, font_size: 20, align: left}
   type: Label
   layout_properties: {grid_position: 'RUUBND,WMRMLE ZIBFWQ,ETAAAQ'}
 - name: label_21
@@ -611,8 +627,12 @@ components:
   properties: {source: _/theme/icons8-law-100.png, height: '117', display_mode: original_size}
   type: Image
   layout_properties: {grid_position: 'RUUBND,UTGGPW GFNQED,ZHDEOY'}
+- name: spacer_24
+  properties: {height: 32}
+  type: Spacer
+  layout_properties: {grid_position: 'RUUBND,UTGGPW PFNGMU,FQYNFG'}
 - name: label_19
-  properties: {text: No Prepayment Penalty, align: center, font: '', bold: true, font_size: 20}
+  properties: {text: No Prepayment Penalty, align: left, font: '', bold: true, font_size: 20}
   type: Label
   layout_properties: {grid_position: 'RUUBND,UTGGPW GYXXKV,RVTSGV'}
 - name: label_22
@@ -624,7 +644,11 @@ components:
 - name: image_27
   properties: {height: '117', source: _/theme/icons8-get-cash-100.png, display_mode: original_size}
   type: Image
-  layout_properties: {grid_position: 'RUUBND,GEESPO BBNHAZ,RPZBVZ'}
+  layout_properties: {grid_position: 'RUUBND,GEESPO BBNHAZ,RPZBVZ', full_width_row: false}
+- name: spacer_23
+  properties: {height: 32}
+  type: Spacer
+  layout_properties: {grid_position: 'RUUBND,GEESPO UMFYMU,QSNDBO'}
 - name: label_16
   properties: {text: Funding in a Few Days, font_size: 20, bold: true}
   type: Label
@@ -641,7 +665,7 @@ components:
   layout_properties: {grid_position: 'OCHPMV,DVARFM'}
 - name: grid_panel_2_copy_1
   properties: {spacing_above: small, spacing_below: small, background: '#094586',
-    foreground: '', border: '', visible: true, role: null, tooltip: ''}
+    foreground: '', border: '', visible: true, role: outlined-card, tooltip: ''}
   type: GridPanel
   layout_properties: {grid_position: 'RFHNEJ,NBXHLS', full_width_row: true}
   components:
@@ -676,7 +700,7 @@ components:
     layout_properties: {row: QDSSCF, width_xs: 12, col_xs: 0, width: 470}
 - name: grid_panel_3_copy_1
   properties: {spacing_above: small, spacing_below: small, background: '#094586',
-    foreground: '', border: '', visible: true, role: null, tooltip: ''}
+    foreground: '', border: '', visible: true, role: outlined-card, tooltip: ''}
   type: GridPanel
   layout_properties: {grid_position: 'RFHNEJ,XZZDKH', full_width_row: false}
   components:
