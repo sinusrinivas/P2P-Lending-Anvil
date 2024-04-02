@@ -1,6 +1,6 @@
 container:
   type: ColumnPanel
-  properties: {col_widths: '{"NTLYHA":30,"YSIPZM":20,"YHWPJW":35,"LOBHBR":5}'}
+  properties: {col_widths: '{"NTLYHA":30,"YSIPZM":15,"YHWPJW":40,"LOBHBR":5,"BVVFUB":35,"CXBMIO":25,"FPAUEE":35,"QOUHQU":25,"OXAZWO":35,"PIYWAQ":25,"PUSQJZ":35,"OWWSTD":25}'}
 components:
 - type: Image
   properties: {role: null, vertical_align: center, height: 46, tooltip: '', border: '',
@@ -43,7 +43,7 @@ components:
     col_widths: {}
     grid_position: KDHAAT,CKVRJM
 - name: spacer_2
-  properties: {height: 32}
+  properties: {height: 392.78570556640625}
   type: Spacer
   layout_properties: {grid_position: 'ZAHTSU,YSIPZM'}
 - type: Label
@@ -186,7 +186,7 @@ components:
   type: Label
   layout_properties: {grid_position: 'ZAHTSU,YHWPJW AQXENP,CXBMIO GJXHNB,HYSADO'}
 - name: spacer_3
-  properties: {height: 32}
+  properties: {height: 384.21429443359375}
   type: Spacer
   layout_properties: {grid_position: 'ZAHTSU,LOBHBR'}
 is_package: true

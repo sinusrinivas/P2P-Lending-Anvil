@@ -36,7 +36,7 @@ components:
         grid_position: RDESLG,JELFWU
       event_bindings: {click: button_1_copy_click}
     - name: spacer_1
-      properties: {height: 3140.9998779296875}
+      properties: {height: 3081.0714111328125}
       type: Spacer
       layout_properties: {grid_position: 'NIPFIX,LDPRAL'}
     - type: Label

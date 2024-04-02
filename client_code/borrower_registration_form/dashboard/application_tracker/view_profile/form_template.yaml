@@ -1,6 +1,6 @@
 container:
   type: ColumnPanel
-  properties: {col_widths: '{"SASOPE":20,"BLPAKG":15,"ZKHZFF":15,"ZUMLRF":10}'}
+  properties: {col_widths: '{"SASOPE":15,"BLPAKG":25,"ZKHZFF":15,"ZUMLRF":5}'}
 components:
 - type: FlowPanel
   properties: {}
@@ -38,7 +38,7 @@ components:
     col_widths: {}
     grid_position: KDHAAT,CKVRJM
 - name: spacer_2
-  properties: {height: 139.71420288085938}
+  properties: {height: 244.78567504882812}
   type: Spacer
   layout_properties: {grid_position: 'FDIETG,SASOPE'}
 - name: label_7
@@ -110,7 +110,7 @@ components:
   data_bindings:
   - {property: text, code: 'self.item[''loan_updated_status'']', writeback: false}
 - name: spacer_3
-  properties: {height: 32}
+  properties: {height: 243.21429443359375}
   type: Spacer
   layout_properties: {grid_position: 'FDIETG,ZUMLRF'}
 - name: button_1
