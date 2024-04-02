@@ -469,7 +469,7 @@ components:
   layout_properties: {grid_position: 'FFODXR,YRTVLS LNZJQX,UAPIXD', full_width_row: false}
   components:
   - name: image_23
-    properties: {height: 89.55551147460938, vertical_align: top, source: _/theme/screening.png,
+    properties: {height: 74.60000610351562, vertical_align: top, source: _/theme/screening.png,
       display_mode: original_size}
     type: Image
     layout_properties: {x: 18.874981690198183, y: 0, width: 81.37495649414062}
@@ -482,7 +482,7 @@ components:
     properties: {height: 88.22222900390625, source: _/theme/money-arrow_bean.d0d0a86.png,
       display_mode: original_size}
     type: Image
-    layout_properties: {x: 23.81943766400218, y: 11, width: 110.33334350585938}
+    layout_properties: {x: 23.81943766400218, y: 11, width: 82.72499389648438}
   - name: label_45
     properties: {}
     type: Label
@@ -509,7 +509,7 @@ components:
     properties: {height: 64.99993896484375, source: _/theme/money-bag-hand_bean.2c2a2a6.png,
       display_mode: original_size}
     type: Image
-    layout_properties: {x: 22.37504069134593, y: 11, width: 81.33368701171875}
+    layout_properties: {x: 22.37504069134593, y: 11, width: 69.12498779296875}
   - name: label_44
     properties: {}
     type: Label
