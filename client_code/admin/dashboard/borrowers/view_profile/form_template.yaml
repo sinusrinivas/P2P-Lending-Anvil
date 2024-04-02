@@ -791,7 +791,7 @@ components:
     type: Image
     layout_properties: {grid_position: 'DKVFGO,KYKCVY TZLVQL,NTZFWR'}
   - name: spacer_2
-    properties: {height: 3162.8569946289062}
+    properties: {height: 3207.904754638672}
     type: Spacer
     layout_properties: {grid_position: 'DKVFGO,QKMAUD'}
   - name: content_panel
