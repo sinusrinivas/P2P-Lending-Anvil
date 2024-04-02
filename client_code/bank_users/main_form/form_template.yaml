@@ -469,50 +469,72 @@ components:
   type: Image
   layout_properties: {grid_position: 'SIPMDQ,UGNRVI MOFJMP,YHVAWV'}
 - name: label_43
-  properties: {text: msjmm}
+  properties: {text: Strong Borrower Screening, bold: true, font_size: 18}
   type: Label
-  layout_properties: {grid_position: 'SIPMDQ,UGNRVI NCGCTT,WWEKLL'}
+  layout_properties: {grid_position: 'SIPMDQ,UGNRVI HASWNH,RPTKYD'}
+- name: label_45
+  properties: {text: Lendbox screens a borrower across 200 parameters to check the creditworthiness of the borrowers to ensure the credibility of borrowers.,
+    font_size: 18}
+  type: Label
+  layout_properties: {grid_position: 'SIPMDQ,UGNRVI VYUESC,DCSWZB'}
+- name: spacer_31
+  properties: {height: 32}
+  type: Spacer
+  layout_properties: {grid_position: 'SIPMDQ,UGNRVI TNQOXS,WSCFEQ'}
+- name: image_24
+  properties: {height: 88.22222900390625, source: _/theme/money-arrow_bean.d0d0a86.png,
+    display_mode: original_size, horizontal_align: left}
+  type: Image
+  layout_properties: {grid_position: 'SIPMDQ,UGNRVI OEKGMC,MNAHIK'}
+- name: label_44
+  properties: {text: Easy Diversification, font_size: 19, bold: true}
+  type: Label
+  layout_properties: {grid_position: 'SIPMDQ,UGNRVI JWQKUE,HOZIVV'}
+- name: label_50
+  properties: {text: Diversify across range of investments products to minimize the associated risks.,
+    font_size: 18}
+  type: Label
+  layout_properties: {grid_position: 'SIPMDQ,UGNRVI TOKUSD,PCZZSD'}
 - name: image_25
   properties: {height: 66.77777099609375, source: _/theme/manager.png, display_mode: shrink_to_fit,
     horizontal_align: left}
   type: Image
-  layout_properties: {grid_position: 'SIPMDQ,DMBIXF'}
-- name: xy_panel_13
-  properties: {height: '211'}
-  type: XYPanel
-  layout_properties: {grid_position: 'FFODXR,YRTVLS JVDPAC,OQDJSF'}
-  components:
-  - name: image_24
-    properties: {height: 88.22222900390625, source: _/theme/money-arrow_bean.d0d0a86.png,
-      display_mode: original_size}
-    type: Image
-    layout_properties: {x: 23.81943766400218, y: 11, width: 82.72499389648438}
-  - name: rich_text_5
-    properties: {content: dbasbdnsabndbsnms}
-    type: RichText
-    layout_properties: {x: 8.999996948987246, y: 166, width: 200}
+  layout_properties: {grid_position: 'SIPMDQ,DMBIXF ATMFNF,NUZNKA'}
+- name: label_47
+  properties: {text: Dedicated Wealth Manager, bold: true, font_size: 18}
+  type: Label
+  layout_properties: {grid_position: 'SIPMDQ,DMBIXF XFNGRR,PYVRCZ'}
+- name: label_48
+  properties: {text: Experienced wealth managers are always there to help you understand the products and build a strong portfolio.,
+    font_size: 18}
+  type: Label
+  layout_properties: {grid_position: 'SIPMDQ,DMBIXF HBQKMR,OVQMDR'}
+- name: spacer_30
+  properties: {height: 64.60000610351562}
+  type: Spacer
+  layout_properties: {grid_position: 'SIPMDQ,DMBIXF HUQSMJ,CNLFXA'}
+- name: image_26
+  properties: {height: 64.99993896484375, source: _/theme/money-bag-hand_bean.2c2a2a6.png,
+    display_mode: original_size, horizontal_align: left}
+  type: Image
+  layout_properties: {grid_position: 'SIPMDQ,DMBIXF GITIAS,JGEWKK'}
+- name: label_49
+  properties: {text: Robust Collection Mechanism, font_size: 18, bold: true}
+  type: Label
+  layout_properties: {grid_position: 'SIPMDQ,DMBIXF BJNZVJ,BUQZFH'}
+- name: label_51
+  properties: {text: 'If needed, Lendbox has an in-house team for collection and an
+      RBI registered recovery agency.', font_size: 18}
+  type: Label
+  layout_properties: {grid_position: 'SIPMDQ,DMBIXF JALJWL,SEFEBM'}
 - name: spacer_27
   properties: {height: 32}
   type: Spacer
-  layout_properties: {grid_position: 'FFODXR,YRTVLS RXYULM,SWQFWN'}
-- name: xy_panel_14
-  properties: {height: 212.20001220703125}
-  type: XYPanel
-  layout_properties: {grid_position: 'FFODXR,UYCLKT PLTTVV,AOXOXT'}
-  components:
-  - name: image_26
-    properties: {height: 64.99993896484375, source: _/theme/money-bag-hand_bean.2c2a2a6.png,
-      display_mode: original_size}
-    type: Image
-    layout_properties: {x: 22.37504069134593, y: 11, width: 69.12498779296875}
-  - name: label_44
-    properties: {}
-    type: Label
-    layout_properties: {x: 15.500073242932558, y: 176.1999969482422, width: 200}
+  layout_properties: {grid_position: 'FFODXR,YRTVLS'}
 - name: spacer_28
   properties: {height: 32}
   type: Spacer
-  layout_properties: {grid_position: 'FFODXR,UYCLKT VAFLGS,VUSRJU'}
+  layout_properties: {grid_position: 'FFODXR,UYCLKT'}
 - name: label_8
   properties: {text: How it works​, role: headline, font_size: 30, align: center,
     bold: true, font: ''}
@@ -848,7 +870,7 @@ components:
     type: Spacer
     layout_properties: {row: OOOZIM, width_xs: 3, col_xs: 2}
   - name: label_39
-    properties: {text: Join our expanding team as we grow!, font_size: 15}
+    properties: {text: Join our expanding team as we grow!, font_size: 16}
     type: Label
     layout_properties: {row: ROSIKZ, width_xs: 3, col_xs: 1}
   - name: label_41
@@ -864,7 +886,7 @@ components:
     properties: {text: Register Now, spacing_below: medium, background: '#094586',
       foreground: White, role: filled-button}
     type: Button
-    layout_properties: {row: QFGDEG, width_xs: 3, col_xs: 1}
+    layout_properties: {row: ABBVHK, width_xs: 3, col_xs: 1}
 - name: label_2_copy
   properties: {role: null, align: center, tooltip: '', border: '', foreground: black,
     visible: true, text: 'Hear from our investors
