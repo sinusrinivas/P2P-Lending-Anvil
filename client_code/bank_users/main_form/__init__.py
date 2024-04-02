@@ -19,7 +19,6 @@ class main_form(main_formTemplate):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
     # Any code you write here will run before the form opens.
-    self.data_row_panel_1.background_color = None
     # Set up event handlers
     # self.button_1_click_event = self.button_1_click
     self.dropdown_change_event = self.drop_down_1_change
