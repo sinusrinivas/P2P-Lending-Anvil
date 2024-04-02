@@ -19,7 +19,7 @@ class ItemTemplate44(ItemTemplate44Template):
         lender_customer_id = row['lender_customer_id']
         borrower_profile = app_tables.fin_user_profile.get(customer_id=borrower_customer_id)
         lender_profile = app_tables.fin_user_profile.get(customer_id=lender_customer_id)
-        self.image_1.source = lender_profile['user_photo']
+        self.image_1.source = borrower_profile['user_photo']
 
 
     # Any code you write here will run before the form opens.
