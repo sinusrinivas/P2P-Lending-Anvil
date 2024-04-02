@@ -73,7 +73,7 @@ components:
           icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
           underline: false, icon: ''}
         name: label_user_id
-        layout_properties: {row: HPKKRX, width_xs: 3, col_xs: 6, width: 157.197}
+        layout_properties: {row: HPKKRX, width_xs: 3, col_xs: 7}
       - type: Label
         properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
           visible: true, text: 'Name :', font_size: null, font: '', spacing_above: small,
@@ -87,7 +87,7 @@ components:
           icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
           underline: false, icon: ''}
         name: label_name
-        layout_properties: {row: PAVMCF, width_xs: 3, col_xs: 6, width: 157.197}
+        layout_properties: {row: PAVMCF, width_xs: 3, col_xs: 7}
       - type: Label
         properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
           visible: true, text: 'Beseem Score:', font_size: null, font: '', spacing_above: small,
@@ -101,7 +101,7 @@ components:
           icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
           underline: false, icon: ''}
         name: label_beseem_score
-        layout_properties: {row: FUOHFR, width_xs: 3, col_xs: 6, width: 157.197}
+        layout_properties: {row: FUOHFR, width_xs: 3, col_xs: 7}
       - type: Label
         properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
           visible: true, text: 'Loan Tenure :', font_size: null, font: '', spacing_above: small,
@@ -115,7 +115,7 @@ components:
           icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
           underline: false, icon: ''}
         name: label_loan_tenure
-        layout_properties: {row: HYIUHK, width_xs: 3, col_xs: 6, width: 157.197}
+        layout_properties: {row: HYIUHK, width_xs: 3, col_xs: 7}
       - type: Label
         properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
           visible: true, text: 'Member ROM :', font_size: null, font: '', spacing_above: small,
@@ -129,7 +129,7 @@ components:
           icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
           underline: false, icon: ''}
         name: label_member_rom
-        layout_properties: {row: EHRDEQ, width_xs: 3, col_xs: 6, width: 157.197}
+        layout_properties: {row: EHRDEQ, width_xs: 3, col_xs: 7}
       - type: Label
         properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
           visible: true, text: 'Member Since :', font_size: null, font: '', spacing_above: small,
@@ -143,7 +143,7 @@ components:
           icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
           underline: false, icon: ''}
         name: label_member_since
-        layout_properties: {row: HFXCZR, width_xs: 3, col_xs: 6, width: 157.197}
+        layout_properties: {row: HFXCZR, width_xs: 3, col_xs: 7}
       - type: Label
         properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
           visible: true, text: 'Credit Limit :', font_size: null, font: '', spacing_above: small,
@@ -157,7 +157,7 @@ components:
           icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
           underline: false, icon: ''}
         name: label_credit_limit
-        layout_properties: {row: YOQBTM, width_xs: 3, col_xs: 6, width: 157.197}
+        layout_properties: {row: YOQBTM, width_xs: 3, col_xs: 7}
       - name: label_08
         properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
           visible: true, text: 'Interest Rate :', font_size: null, font: '', spacing_above: small,
@@ -171,7 +171,7 @@ components:
           icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
           underline: false, icon: ''}
         type: Label
-        layout_properties: {row: XTSSVD, width_xs: 3, col_xs: 6}
+        layout_properties: {row: XTSSVD, width_xs: 3, col_xs: 7}
       - type: Label
         properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
           visible: true, text: 'Loan Amount Applied :', font_size: null, font: '',
@@ -185,7 +185,7 @@ components:
           icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
           underline: false, icon: ''}
         name: label_loan_amount_applied
-        layout_properties: {row: IVSUIL, width_xs: 3, col_xs: 6, width: 157.197}
+        layout_properties: {row: IVSUIL, width_xs: 3, col_xs: 7}
       - type: Label
         properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
           visible: true, text: 'Loan_id :', font_size: null, font: '', spacing_above: small,
@@ -199,7 +199,7 @@ components:
           icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
           underline: false, icon: ''}
         name: label_loan_id
-        layout_properties: {row: TZEWKA, width_xs: 3, col_xs: 6, width: 157.197}
+        layout_properties: {row: TZEWKA, width_xs: 3, col_xs: 7}
       - type: Label
         properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
           visible: true, text: 'Bank Account Details :', font_size: null, font: '',
@@ -213,7 +213,7 @@ components:
           icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
           underline: false, icon: ''}
         name: label_bank_acc_details
-        layout_properties: {row: SUHGPG, width_xs: 3, col_xs: 6, width: 157.197}
+        layout_properties: {row: SUHGPG, width_xs: 3, col_xs: 7}
       - type: Label
         properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
           visible: true, text: 'Payment Details ', font_size: null, font: '', spacing_above: small,
@@ -228,7 +228,7 @@ components:
           spacing_below: small, italic: false, background: '', bold: true, underline: false,
           icon: ''}
         name: link_1
-        layout_properties: {row: SUVWIQ, width_xs: 3, col_xs: 6, width: 149.75}
+        layout_properties: {row: SUVWIQ, width_xs: 3, col_xs: 7}
         event_bindings: {click: link_1_click}
     - name: spacer_2
       properties: {height: 32}

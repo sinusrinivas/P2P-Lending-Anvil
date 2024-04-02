@@ -10,7 +10,7 @@ components:
   components:
   - type: ColumnPanel
     properties: {role: null, tooltip: '', border: '', foreground: '', visible: true,
-      wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{"PWLLJC":30,"JLUSGY":30,"VEUHUR":30,"THXISZ":20,"FOOZGC":15,"FVVEWJ":25}',
+      wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{"PWLLJC":30,"JLUSGY":35,"VEUHUR":25,"THXISZ":15,"FOOZGC":25,"FVVEWJ":20}',
       spacing_below: small, background: ''}
     name: content_panel_copy_2
     layout_properties:

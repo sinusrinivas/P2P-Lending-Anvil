@@ -1,6 +1,6 @@
 container:
   type: ColumnPanel
-  properties: {col_widths: '{"IKUKOK":20,"TILVKS":35,"MEDTTA":5}'}
+  properties: {col_widths: '{"IKUKOK":20,"TILVKS":37,"MEDTTA":3,"WSBVTG":25,"CVAONX":35,"URRJAH":25,"ZJTXKG":35,"WFEQPM":25,"KQJEUH":35,"ILOSRQ":25,"OXGBBK":35,"DLBFQK":25,"UKFMQA":35,"DPMEEG":25,"PGHMDD":35,"KJEMVT":25,"QAQXDC":35,"QVZHLH":25,"CAJPDY":35}'}
 components:
 - name: image_1_copy_1
   properties: {role: null, vertical_align: center, height: 48, tooltip: '', border: '',
@@ -27,7 +27,7 @@ components:
     col_widths: {}
     grid_position: FHCCYR,XQFXNC
 - name: spacer_1
-  properties: {height: 32}
+  properties: {height: 362.6428527832031}
   type: Spacer
   layout_properties: {grid_position: 'FFAZCJ,IKUKOK'}
 - type: Label

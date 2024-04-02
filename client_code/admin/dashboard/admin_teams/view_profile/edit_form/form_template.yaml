@@ -42,7 +42,7 @@ components:
           layout_properties: {grid_position: 'OIGLNV,VTBLUS'}
           event_bindings: {click: button_1_copy_click}
         - name: spacer_1
-          properties: {height: 32}
+          properties: {height: 269.0714416503906}
           type: Spacer
           layout_properties: {grid_position: 'WZNCPP,YHCYVB'}
         - type: Label
