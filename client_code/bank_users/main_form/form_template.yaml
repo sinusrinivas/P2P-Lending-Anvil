@@ -621,7 +621,8 @@ components:
   type: Spacer
   layout_properties: {grid_position: 'RUUBND,IGQGYE MBHLEX,YNIZZX'}
 - name: label_17
-  properties: {text: Low-Interest Rates, font_size: 20, align: left, bold: true, italic: false}
+  properties: {text: Low-Interest Rates, font_size: 20, align: center, bold: true,
+    italic: false}
   type: Label
   layout_properties: {grid_position: 'RUUBND,IGQGYE SWCZMF,EGOYCS'}
 - name: label_20
@@ -639,7 +640,7 @@ components:
   type: Spacer
   layout_properties: {grid_position: 'RUUBND,WMRMLE NBGXKU,QEXBPQ'}
 - name: label_18
-  properties: {text: Quick and Hassle Free, bold: true, font_size: 20, align: left}
+  properties: {text: Quick and Hassle Free, bold: true, font_size: 20, align: center}
   type: Label
   layout_properties: {grid_position: 'RUUBND,WMRMLE ZIBFWQ,ETAAAQ'}
 - name: label_21
@@ -657,7 +658,7 @@ components:
   type: Spacer
   layout_properties: {grid_position: 'RUUBND,UTGGPW PFNGMU,FQYNFG'}
 - name: label_19
-  properties: {text: No Prepayment Penalty, align: left, font: '', bold: true, font_size: 20}
+  properties: {text: No Prepayment Penalty, align: center, font: '', bold: true, font_size: 20}
   type: Label
   layout_properties: {grid_position: 'RUUBND,UTGGPW GYXXKV,RVTSGV'}
 - name: label_22
@@ -675,7 +676,7 @@ components:
   type: Spacer
   layout_properties: {grid_position: 'RUUBND,GEESPO UMFYMU,QSNDBO'}
 - name: label_16
-  properties: {text: Funding in a Few Days, font_size: 20, bold: true}
+  properties: {text: Funding in a Few Days, font_size: 20, bold: true, align: center}
   type: Label
   layout_properties: {grid_position: 'RUUBND,GEESPO EFOOBH,GOSWPG'}
 - name: label_46
@@ -712,7 +713,7 @@ components:
   type: Spacer
   layout_properties: {grid_position: 'JGZLAK,OYIVEL'}
 - name: label_55
-  properties: {text: . You must be more than 21 years old, bold: true, font_size: 17}
+  properties: {text: . You must be more than 18 years old, bold: true, font_size: 17}
   type: Label
   layout_properties: {grid_position: 'JGZLAK,RYPZCD'}
 - name: spacer_34
@@ -1045,7 +1046,7 @@ components:
   - name: label_75
     properties: {}
     type: Label
-    layout_properties: {row: WKGYWZ, width_xs: 3, col_xs: 1}
+    layout_properties: {row: BGLGUV, width_xs: 3, col_xs: 2}
   - name: button_2
     properties: {text: Register Now, spacing_below: medium, background: '#094586',
       foreground: White, role: filled-button, font_size: 20}
