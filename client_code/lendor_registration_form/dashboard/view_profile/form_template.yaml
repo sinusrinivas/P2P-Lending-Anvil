@@ -12,7 +12,7 @@ components:
   name: column_panel_6
   layout_properties: {slot: title}
 - name: content_panel
-  properties: {col_widths: '{"VTNEWW":20,"BMBMQP":47,"GLFLFL":3}'}
+  properties: {col_widths: '{"VTNEWW":15,"BMBMQP":52,"GLFLFL":3}'}
   type: ColumnPanel
   layout_properties: {slot: default}
   components:

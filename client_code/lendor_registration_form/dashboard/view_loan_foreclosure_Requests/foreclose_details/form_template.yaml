@@ -32,18 +32,18 @@ components:
       properties: {}
       name: navigation_bar_lender_dashbord_1
       layout_properties: {grid_position: 'QTEMHS,TNIUXR'}
-    - name: label_6
-      properties: {role: null, align: center, tooltip: '', border: '', foreground: White,
-        visible: true, text: Foreclosure details, font_size: 18, font: '', spacing_above: small,
-        icon_align: left, spacing_below: small, italic: false, background: '#0b2547',
-        bold: false, underline: true, icon: ''}
-      type: Label
-      layout_properties: {grid_position: 'ONDKNZ,NIZENP', full_width_row: true}
     - name: outlined_card_1
       properties: {role: outlined-card, col_widths: '{"DLTPUV":15,"WFAWEW":25,"UHNZLC":17,"FVVIBF":3}'}
       type: ColumnPanel
       layout_properties: {grid_position: 'DXXKIW,DSFWMH'}
       components:
+      - name: label_6
+        properties: {role: outlined-card, align: center, tooltip: '', border: '',
+          foreground: White, visible: true, text: Foreclosure details, font_size: 18,
+          font: '', spacing_above: small, icon_align: left, spacing_below: small,
+          italic: false, background: '#0b2547', bold: false, underline: true, icon: ''}
+        type: Label
+        layout_properties: {grid_position: 'ERORUW,NZLPXX'}
       - name: spacer_1
         properties: {height: 411.5}
         type: Spacer
