@@ -22,6 +22,7 @@ class view_admins(view_adminsTemplate):
                             'join_date': i['join_date'],
                             'admin_id': i['admin_id'],
                             'join_date': i['join_date'],
+                            'mobile_no': i['mobile_no'],
                            }
                            for i in self.data]
 

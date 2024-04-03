@@ -29,16 +29,16 @@ components:
   name: navigation_form_dashboard_1
   layout_properties: {grid_position: 'QKWYUF,RQFZQY', full_width_row: true}
 - name: label_1_copy_1_copy_1
-  properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
-    visible: true, text: View Profile, font_size: null, font: '', spacing_above: small,
-    icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-    underline: false, icon: ''}
+  properties: {role: outlined-card, align: center, tooltip: '', border: '', foreground: 'theme:On
+      Primary', visible: true, text: View Profile, font_size: 18, font: '', spacing_above: small,
+    icon_align: left, spacing_below: small, italic: false, background: '#05264d',
+    bold: true, underline: false, icon: ''}
   type: Label
   layout_properties:
     col_widths: {}
     grid_position: KDHAAT,CKVRJM
 - name: spacer_2
-  properties: {height: 244.78567504882812}
+  properties: {height: 287.85711669921875}
   type: Spacer
   layout_properties: {grid_position: 'FDIETG,SASOPE'}
 - name: label_7

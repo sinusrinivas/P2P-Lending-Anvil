@@ -12,7 +12,7 @@ components:
   name: column_panel_6
   layout_properties: {slot: title}
 - name: content_panel
-  properties: {col_widths: '{"VTNEWW":20,"BMBMQP":47,"GLFLFL":3}'}
+  properties: {col_widths: '{"VTNEWW":15,"BMBMQP":52,"GLFLFL":3}'}
   type: ColumnPanel
   layout_properties: {slot: default}
   components:
@@ -52,10 +52,10 @@ components:
     layout_properties: {grid_position: 'DQASRY,EZRQZQ'}
     event_bindings: {click: button_1_copy_click}
   - name: label_1
-    properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
-      visible: true, text: View Profile, font_size: null, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-      underline: false, icon: ''}
+    properties: {role: outlined-card, align: center, tooltip: '', border: '', foreground: 'theme:On
+        Primary', visible: true, text: View Profile, font_size: 18, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '#05264d',
+      bold: true, underline: false, icon: ''}
     type: Label
     layout_properties: {grid_position: 'JICCEY,UEHAQW'}
   - name: spacer_1
