@@ -33,7 +33,7 @@ class lenders(lendersTemplate):
                             loan_updated_status=q.any_of(
                                 q.like("disbursed loan%"),
                                 q.like("foreclosure%"),
-                                q.like("under process%")
+                                q.like("extension%")
                             )
                         ),
                         lender_customer_id=user_profile['customer_id']

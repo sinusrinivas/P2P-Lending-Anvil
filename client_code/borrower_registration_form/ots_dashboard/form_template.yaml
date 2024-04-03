@@ -93,7 +93,7 @@ components:
     border: ''
     foreground: ''
     rows_per_page: 20
-    visible: true
+    visible: false
     wrap_on: never
     show_page_controls: true
     spacing_above: large
@@ -106,4 +106,8 @@ components:
     properties: {spacing_above: none, spacing_below: none, item_template: borrower_registration_form.ots_dashboard.RowTemplate40}
     type: RepeatingPanel
     layout_properties: {}
+- name: repeating_panel_2
+  properties: {item_template: borrower_registration_form.ots_dashboard.ItemTemplate97}
+  type: RepeatingPanel
+  layout_properties: {grid_position: 'HKOJXX,TPOZJK'}
 is_package: true
