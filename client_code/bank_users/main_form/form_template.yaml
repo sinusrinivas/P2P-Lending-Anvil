@@ -66,11 +66,12 @@ components:
     align: left
     placeholder: Sign Up
     border: ''
-    foreground: black
+    foreground: white
     items: [Invest Now, Apply for Loan]
     visible: true
-    background: white
+    background: '#013065'
     bold: true
+    underline: false
     include_placeholder: true
   type: DropDown
   layout_properties: {grid_position: 'IFJNGB,SYNJVB UAEYQF,WRNWWZ', full_width_row: false}
