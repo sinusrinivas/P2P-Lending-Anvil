@@ -375,7 +375,7 @@ components:
   type: Spacer
   layout_properties: {grid_position: 'IDRRFC,FHRNWS'}
 - name: xy_panel_9
-  properties: {height: 589.7999877929688, background: '#Edf0f4'}
+  properties: {height: 575.6000061035156, background: '#Edf0f4'}
   type: XYPanel
   layout_properties: {grid_position: 'DUCRGR,KKDHDR', full_width_row: true}
   components:
@@ -445,7 +445,7 @@ components:
     properties: {text: Register Now, align: full, bold: true, role: filled-button,
       background: '#013065'}
     type: Button
-    layout_properties: {x: 652.3697910308838, y: 514.6614379882812, width: 200}
+    layout_properties: {x: 638.8625000007451, y: 528.1875, width: 200}
 - name: spacer_19
   properties: {height: 32}
   type: Spacer
@@ -1079,7 +1079,7 @@ components:
   type: Image
   layout_properties: {grid_position: 'UUAAMD,XEMJBS'}
 - type: Spacer
-  properties: {height: 40}
+  properties: {height: 14.399993896484375}
   name: spacer_5
   layout_properties: {grid_position: 'BMHMDX,VXLTQN', full_width_row: true}
 - name: label_76
@@ -1088,18 +1088,18 @@ components:
   type: Label
   layout_properties: {grid_position: 'UVNZCH,IZXSVV'}
 - name: spacer_40
-  properties: {height: 32}
+  properties: {height: 15.199981689453125}
   type: Spacer
   layout_properties: {grid_position: 'MQLTXK,CFPXXS'}
-- name: column_panel_3
-  properties: {}
-  type: ColumnPanel
-  layout_properties: {grid_position: 'XHVXTU,AHUMDC'}
+- name: xy_panel_10
+  properties: {height: 158.39993286132812, background: '#Edf0f4'}
+  type: XYPanel
+  layout_properties: {grid_position: 'MNONJR,SVBRAQ', full_width_row: true}
   components:
   - name: column_panel_2
     properties: {background: ''}
     type: ColumnPanel
-    layout_properties: {grid_position: 'ZPLUGY,AKKBPT', full_width_row: true, row_background: ''}
+    layout_properties: {x: 0, y: 0, width: 1167}
     components:
     - name: image_29
       properties: {vertical_align: center, height: 89.79998779296875, border: '',
@@ -1126,7 +1126,6 @@ components:
       properties: {text: Borrow, font_size: 16, bold: true, foreground: black, underline: true}
       type: Link
       layout_properties: {grid_position: 'MMFQSR,YBBTWP MOYVBC,DMAAWC'}
-      components: []
     - name: link_8
       properties: {text: Contact Us, foreground: black, underline: true, font_size: 16,
         bold: true, align: left}
@@ -1140,6 +1139,11 @@ components:
       properties: {text: Products, bold: true, font_size: 16, underline: true, foreground: black}
       type: Link
       layout_properties: {grid_position: 'MMFQSR,QNSOAB MCUKZK,LUZRLG'}
+- name: column_panel_3
+  properties: {}
+  type: ColumnPanel
+  layout_properties: {grid_position: 'XHVXTU,AHUMDC'}
+  components: []
 - name: grid_panel_2
   properties: {spacing_above: small, spacing_below: small, background: '#05264d',
     foreground: '', border: '', visible: true, role: null, tooltip: ''}
