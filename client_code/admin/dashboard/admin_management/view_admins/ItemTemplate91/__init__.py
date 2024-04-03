@@ -14,7 +14,7 @@ class ItemTemplate91(ItemTemplate91Template):
     self.init_components(**properties)
 
     # Any code you write here will run before the form opens.
-    self.user_id = main_form_module.userId
+    #self.user_id = main_form_module.userId
     
     user_data = app_tables.fin_admin_users.search()
         
