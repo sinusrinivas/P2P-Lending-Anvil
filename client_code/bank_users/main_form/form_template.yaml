@@ -355,7 +355,7 @@ components:
     name: image_20
     layout_properties: {x: 10, y: 16.3375244140625, width: 288.21599999999984}
   - type: Label
-    properties: {text: Monthly Cashflow, font_size: 21, bold: true}
+    properties: {text: Monthly Cashflow, font_size: 21, bold: true, align: center}
     name: label_34
     layout_properties: {x: 10, y: 94.3375244140625, width: 288.203}
   - name: label_36
@@ -551,7 +551,7 @@ components:
   type: Label
   layout_properties: {grid_position: 'HBLVJB,WJZBTP'}
 - name: spacer_6
-  properties: {height: 21}
+  properties: {height: 37}
   type: Spacer
   layout_properties: {grid_position: 'FGAEGL,EDOHWZ'}
 - name: image_4
@@ -560,7 +560,9 @@ components:
   type: Image
   layout_properties: {grid_position: 'BGOTWK,XXIPLN'}
 - name: label_10
-  properties: {text: Business applies for ﬁnance on Kotak, align: center, font_size: 20}
+  properties: {text: '
+
+      Business applies for ﬁnance on Kotak', align: center, font_size: 20}
   type: Label
   layout_properties: {grid_position: 'BGOTWK,XXIPLN LDUNEZ,EMAVPJ'}
 - name: image_5
@@ -569,7 +571,9 @@ components:
   type: Image
   layout_properties: {grid_position: 'BGOTWK,PRCSLT EVJEUH,SLMCTO'}
 - name: label_11
-  properties: {text: Approved business listed on our marketplace, align: center, font_size: 20}
+  properties: {text: '
+
+      Approved business listed on our marketplace', align: center, font_size: 20}
   type: Label
   layout_properties: {grid_position: 'BGOTWK,PRCSLT OBEGGH,AVGGCR'}
 - name: image_6
@@ -577,8 +581,10 @@ components:
   type: Image
   layout_properties: {grid_position: 'BGOTWK,PTRZYW BSEDZX,SAVEOO'}
 - name: label_12
-  properties: {text: Investors fund finance request on the platform, align: center,
-    bold: false, font_size: 20}
+  properties: {text: '
+
+      Investors fund finance request on the platform', align: center, bold: false,
+    font_size: 20}
   type: Label
   layout_properties: {grid_position: 'BGOTWK,PTRZYW JEGIDN,XAPYYC'}
 - name: image_7
@@ -587,8 +593,9 @@ components:
   type: Image
   layout_properties: {grid_position: 'BGOTWK,FKRLFV NBOARJ,FCSFDI'}
 - name: label_13
-  properties: {text: Business gets loan and investors get monthly returns, align: center,
-    font_size: 20}
+  properties: {text: '
+
+      Business gets loan and investors get monthly returns', align: center, font_size: 20}
   type: Label
   layout_properties: {grid_position: 'BGOTWK,FKRLFV DOZWJT,LZIAIC'}
 - name: spacer_2
