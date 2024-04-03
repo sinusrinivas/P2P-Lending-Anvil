@@ -15,7 +15,7 @@ components:
     type: Image
     layout_properties: {width: 255.8000030517578}
 - name: login_signup_button
-  properties: {text: 'Login/Signup       ', background: '#0770e8', foreground: white,
+  properties: {text: 'Login/Signup       ', background: '#05264d', foreground: white,
     bold: true, align: center}
   type: Button
   layout_properties: {grid_position: 'MZSSJU,RPSFHE'}
@@ -60,6 +60,11 @@ components:
   properties: {height: 32}
   type: Spacer
   layout_properties: {grid_position: 'GNWZUK,KTTIXH'}
+- name: label_1
+  properties: {text: "We\u2019re changing the way \nIndia builds wealth", bold: true,
+    font_size: 50, align: center}
+  type: Label
+  layout_properties: {grid_position: 'QEBYCM,WTHGLY'}
 - name: outlined_card_1
   properties: {role: outlined-card}
   type: ColumnPanel
