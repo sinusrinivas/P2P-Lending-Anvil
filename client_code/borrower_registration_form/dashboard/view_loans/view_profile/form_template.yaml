@@ -30,109 +30,100 @@ components:
   properties: {height: 19.00000762939453}
   name: spacer_2
   layout_properties: {grid_position: 'YZWVDJ,XOLGSO'}
-- name: grid_panel_1
-  properties: {spacing_above: small, spacing_below: small, background: '', foreground: '',
-    border: '', visible: true, role: outlined-card, tooltip: ''}
-  type: GridPanel
-  layout_properties: {grid_position: 'NNJYOF,PBWJHP'}
+- name: column_panel_1
+  properties: {col_widths: '{"THWOTZ":15,"PJAWYF":25,"JQWHVM":15,"EKQTIR":5}'}
+  type: ColumnPanel
+  layout_properties: {grid_position: 'PCKSGF,NNPJDD'}
   components:
   - name: label_1_copy_1_copy_1
     properties: {role: outlined-card, align: center, tooltip: '', border: '', foreground: white,
-      visible: true, text: Closed Profile, font_size: null, font: '25', spacing_above: medium,
+      visible: true, text: View Profile, font_size: null, font: '25', spacing_above: medium,
       icon_align: left, spacing_below: medium, italic: false, background: '#0b2547',
       bold: true, underline: false, icon: ''}
     type: Label
-    layout_properties:
-      col_widths: {}
-      grid_position: KDHAAT,CKVRJM
-      row: CEDYQW
-      width_xs: 12
-      col_xs: 0
-      width: 905.4282800000001
+    layout_properties: {grid_position: 'BYKSEF,RYWLWW'}
+  - name: spacer_3
+    properties: {height: 301.78570556640625}
+    type: Spacer
+    layout_properties: {grid_position: 'UHEIZN,THWOTZ'}
   - name: label_7
     properties: {role: null, align: left, tooltip: '', border: '', foreground: '#000337',
       visible: true, text: Loan Id, font_size: null, font: '', spacing_above: small,
       icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
       underline: false, icon: ''}
     type: Label
-    layout_properties: {row: BUAPCP, width_xs: 4, col_xs: 3}
-  - name: loan_id_label
-    properties: {}
-    type: Label
-    layout_properties: {grid_position: 'FDIETG,ZKHZFF', row: BUAPCP, width_xs: 4,
-      col_xs: 6}
+    layout_properties: {grid_position: 'UHEIZN,PJAWYF IANNZQ,RFRBYT'}
   - name: label_8
     properties: {role: null, align: left, tooltip: '', border: '', foreground: '#000337',
       visible: true, text: Loan Amount, font_size: null, font: '', spacing_above: small,
       icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
       underline: false, icon: ''}
     type: Label
-    layout_properties: {row: WXLWSH, width_xs: 4, col_xs: 3}
-  - name: loan_amount_label
-    properties: {}
-    type: Label
-    layout_properties: {grid_position: 'PTPWQV,CHJNQI', row: WXLWSH, width_xs: 4,
-      col_xs: 6}
+    layout_properties: {grid_position: 'UHEIZN,PJAWYF KIMOSY,SMJXQK'}
   - name: label_11
     properties: {role: null, align: left, tooltip: '', border: '', foreground: '#000337',
       visible: true, text: Intrest Rate, font_size: null, font: '', spacing_above: small,
       icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
       underline: false, icon: ''}
     type: Label
-    layout_properties: {row: QSOSST, width_xs: 4, col_xs: 3}
-  - name: intrest_rate_label
-    properties: {}
-    type: Label
-    layout_properties: {grid_position: 'DRPWYS,QYSBQC', row: QSOSST, width_xs: 4,
-      col_xs: 6}
+    layout_properties: {grid_position: 'UHEIZN,PJAWYF SMGBPO,LNYLYW'}
   - name: label_10
     properties: {role: null, align: left, tooltip: '', border: '', foreground: '#000337',
       visible: true, text: Tenure, font_size: null, font: '', spacing_above: small,
       icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
       underline: false, icon: ''}
     type: Label
-    layout_properties: {row: QOJXWT, width_xs: 4, col_xs: 3}
-  - name: tenure_label
-    properties: {}
-    type: Label
-    layout_properties: {grid_position: 'SGEVJA,UGWBFV', row: QOJXWT, width_xs: 4,
-      col_xs: 6}
+    layout_properties: {grid_position: 'UHEIZN,PJAWYF OUWKND,AYBIPD'}
   - name: label_12
     properties: {role: null, align: left, tooltip: '', border: '', foreground: '#000337',
       visible: true, text: Date Of Apply, font_size: null, font: '', spacing_above: small,
       icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
       underline: false, icon: ''}
     type: Label
-    layout_properties: {row: UQBGUB, width_xs: 4, col_xs: 3}
-  - name: date_of_apply_label
-    properties: {}
-    type: Label
-    layout_properties: {grid_position: 'SZRCOX,UWUPHU', row: UQBGUB, width_xs: 4,
-      col_xs: 6}
+    layout_properties: {grid_position: 'UHEIZN,PJAWYF LUOQZE,MGRHTX'}
   - name: label_2
     properties: {role: null, align: left, tooltip: '', border: '', foreground: '#000337',
       visible: true, text: Loan Updated Status, font_size: null, font: '', spacing_above: small,
       icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
       underline: false, icon: ''}
     type: Label
-    layout_properties: {row: SHWXPT, width_xs: 4, col_xs: 3}
-  - name: loan_updated_status_label
-    properties: {role: null, align: left, tooltip: '', border: '', foreground: green,
-      visible: true, text: '', font_size: null, font: '', spacing_above: small, icon_align: left,
-      spacing_below: small, italic: false, background: '', bold: false, underline: false,
-      icon: ''}
-    type: Label
-    layout_properties: {grid_position: 'FGTQBR,DMKNMB', row: SHWXPT, width_xs: 4,
-      col_xs: 6, width: 221.188}
-    data_bindings:
-    - {property: text, code: 'self.item[''loan_updated_status'']', writeback: false}
+    layout_properties: {grid_position: 'UHEIZN,PJAWYF SGURJS,PPTQAU'}
   - name: label_1
     properties: {role: null, align: left, tooltip: '', border: '', foreground: '#000337',
       visible: true, text: Payment Details, font_size: null, font: '', spacing_above: small,
       icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
       underline: false, icon: ''}
     type: Label
-    layout_properties: {row: MVZYDU, width_xs: 3, col_xs: 3, width: 132}
+    layout_properties: {grid_position: 'UHEIZN,PJAWYF ODXGXU,YXPBDQ'}
+  - name: loan_id_label
+    properties: {}
+    type: Label
+    layout_properties: {grid_position: 'UHEIZN,JQWHVM IALCQG,MVLIFD'}
+  - name: loan_amount_label
+    properties: {}
+    type: Label
+    layout_properties: {grid_position: 'UHEIZN,JQWHVM TIGTMN,DGZGVL'}
+  - name: intrest_rate_label
+    properties: {}
+    type: Label
+    layout_properties: {grid_position: 'UHEIZN,JQWHVM DWONWM,CCYMUQ'}
+  - name: tenure_label
+    properties: {}
+    type: Label
+    layout_properties: {grid_position: 'UHEIZN,JQWHVM XLBGEI,PMCDXW'}
+  - name: date_of_apply_label
+    properties: {}
+    type: Label
+    layout_properties: {grid_position: 'UHEIZN,JQWHVM AAFPRG,IXTWLC'}
+  - name: loan_updated_status_label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: green,
+      visible: true, text: '', font_size: null, font: '', spacing_above: small, icon_align: left,
+      spacing_below: small, italic: false, background: '', bold: false, underline: false,
+      icon: ''}
+    type: Label
+    layout_properties: {grid_position: 'UHEIZN,JQWHVM FYXHJV,BHOQYU'}
+    data_bindings:
+    - {property: text, code: 'self.item[''loan_updated_status'']', writeback: false}
   - name: link_1
     properties: {role: null, url: '', align: left, tooltip: '', border: '', foreground: blue,
       visible: true, text: view payment details here, font_size: null, wrap_on: mobile,
@@ -140,8 +131,12 @@ components:
       spacing_below: small, italic: false, background: '', bold: false, underline: false,
       icon: ''}
     type: Link
-    layout_properties: {row: MVZYDU, width_xs: 4, col_xs: 7}
+    layout_properties: {grid_position: 'UHEIZN,JQWHVM ILQDHJ,ZDNRHB'}
     event_bindings: {click: link_1_click}
+  - name: spacer_4
+    properties: {height: 300.21429443359375}
+    type: Spacer
+    layout_properties: {grid_position: 'UHEIZN,EKQTIR'}
 - name: button_1
   properties: {role: elevated-button, align: center, tooltip: '', border: '', enabled: true,
     foreground: 'theme:On Primary', visible: true, text: Back, font_size: null, font: '',
