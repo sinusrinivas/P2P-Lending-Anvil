@@ -1019,15 +1019,6 @@ components:
   properties: {height: 32}
   type: Spacer
   layout_properties: {grid_position: 'GARQWW,LDCTBY'}
-- name: xy_panel_10
-  properties: {height: 461.3999938964844}
-  type: XYPanel
-  layout_properties: {grid_position: 'TETRBQ,LGGHMF', full_width_row: true}
-  components:
-  - name: image_22_copy
-    properties: {source: _/theme/india map.png, display_mode: original_size, height: '200'}
-    type: Image
-    layout_properties: {x: 868.8999755866826, y: 37.600006103515625, width: 425.9749755859375}
 - name: grid_panel_1
   properties: {background: '#EBE1ED'}
   type: GridPanel
@@ -1053,7 +1044,7 @@ components:
   - name: label_75
     properties: {}
     type: Label
-    layout_properties: {row: QIYSLZ, width_xs: 3, col_xs: 1}
+    layout_properties: {row: RVFBPP, width_xs: 3, col_xs: 1}
   - name: button_2
     properties: {text: Register Now, spacing_below: medium, background: '#094586',
       foreground: White, role: filled-button}
@@ -1091,11 +1082,58 @@ components:
   properties: {height: 40}
   name: spacer_5
   layout_properties: {grid_position: 'BMHMDX,VXLTQN', full_width_row: true}
-- name: flow_panel_3
-  properties: {spacing_below: none}
-  type: FlowPanel
-  layout_properties: {grid_position: 'YELVKG,AVJXAU', full_width_row: true}
-  components: []
+- name: label_76
+  properties: {text: '* RBI does not guarantee any returns or principal for the amount
+      invested on the P2P platform.', font_size: 16}
+  type: Label
+  layout_properties: {grid_position: 'UVNZCH,IZXSVV'}
+- name: spacer_40
+  properties: {height: 32}
+  type: Spacer
+  layout_properties: {grid_position: 'MQLTXK,CFPXXS'}
+- name: column_panel_3
+  properties: {}
+  type: ColumnPanel
+  layout_properties: {grid_position: 'XHVXTU,AHUMDC'}
+  components:
+  - name: column_panel_2
+    properties: {background: ''}
+    type: ColumnPanel
+    layout_properties: {grid_position: 'ZPLUGY,AKKBPT'}
+    components:
+    - name: image_29
+      properties: {vertical_align: center, height: '150', border: '', display_mode: original_size,
+        spacing_above: none, source: _/theme/kotak.png, spacing_below: large, background: '#CBE9F3',
+        horizontal_align: left}
+      type: Image
+      layout_properties: {grid_position: 'MMFQSR,UGOQOI'}
+    - name: link_7
+      properties: {text: About, bold: true, font_size: 18, underline: true, foreground: black}
+      type: Link
+      layout_properties: {grid_position: 'MMFQSR,WNWVDK'}
+    - name: link_10
+      properties: {text: Investment, foreground: black, bold: true, font_size: 18,
+        underline: true}
+      type: Link
+      layout_properties: {grid_position: 'MMFQSR,WNWVDK NYPJXO,GZMCYD'}
+    - name: link_11
+      properties: {text: Borrow, font_size: 18, bold: true, foreground: black, underline: true}
+      type: Link
+      layout_properties: {grid_position: 'MMFQSR,YBBTWP MOYVBC,DMAAWC'}
+      components: []
+    - name: link_8
+      properties: {text: Contact Us, foreground: black, underline: true, font_size: 19,
+        bold: true, align: left}
+      type: Link
+      layout_properties: {grid_position: 'MMFQSR,YBBTWP KKGCYO,GSVXOQ'}
+    - name: link_12
+      properties: {text: Help, foreground: black, bold: true, font_size: 18, underline: true}
+      type: Link
+      layout_properties: {grid_position: 'MMFQSR,QNSOAB IRVWEK,HAZHMM'}
+    - name: link_9
+      properties: {text: Products, bold: true, font_size: 18, underline: true, foreground: black}
+      type: Link
+      layout_properties: {grid_position: 'MMFQSR,QNSOAB MCUKZK,LUZRLG'}
 - name: grid_panel_2
   properties: {spacing_above: small, spacing_below: small, background: '#05264d',
     foreground: '', border: '', visible: true, role: null, tooltip: ''}
