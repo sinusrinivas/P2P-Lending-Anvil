@@ -923,7 +923,7 @@ components:
   layout_properties: {grid_position: 'TVJZLT,AJIMAE'}
 - name: button_4
   properties: {text: 'What is Peer to Peer Lending?                                                                                          +',
-    foreground: black, bold: true, font: a, font_size: 23, align: left}
+    foreground: black, bold: true, font: a, font_size: 20, align: left}
   type: Button
   layout_properties: {grid_position: 'EBBCHI,DHGHAX'}
   event_bindings: {click: button_4_click}
@@ -933,12 +933,12 @@ components:
   layout_properties: {grid_position: 'VZQHCA,MJLLCS'}
 - name: rich_text_3
   properties: {content: Peer to peer lending is a method of lending capital to borrowers on a mutual interest rate through an online platform like kotak which act as a matchmaker,
-    font_size: 20, visible: false}
+    font_size: 18, visible: false, font: a}
   type: RichText
   layout_properties: {grid_position: 'VZQHCA,ETGUAR'}
 - name: button_4_copy
   properties: {text: 'Is Peer to peer lending safe?                                                                                              +',
-    foreground: black, bold: true, font: a, font_size: 23, align: left}
+    foreground: black, bold: true, font: a, font_size: 20, align: left}
   type: Button
   layout_properties: {grid_position: 'YMHUAU,LULQCV'}
   event_bindings: {click: button_4_copy_click}
@@ -951,12 +951,12 @@ components:
       direct lending between individuals, bypassing traditional financial institutions.
       While it''s a convenient and lucrative investment avenue, it carries inherent
       risks, chiefly borrower default. However, prudent risk management strategies
-      can effectively mitigate this concern.', font_size: 20, visible: false}
+      can effectively mitigate this concern.', font_size: 18, visible: false, font: a}
   type: RichText
   layout_properties: {grid_position: 'BNOUZX,BRNMJF'}
 - name: button_1
   properties: {text: 'What are the benefits of using P2P lending software?                                                     +',
-    foreground: black, align: left, font_size: 23, role: null, bold: true, font: a}
+    foreground: black, align: left, font_size: 20, role: null, bold: true, font: a}
   type: Button
   layout_properties: {grid_position: 'MBJAWJ,OZKRQT'}
   event_bindings: {click: button_1_click}
@@ -991,13 +991,13 @@ components:
 
       8. Built-in reports and dashboards powered by Amazon Quick Sight for data-driven
       decisions, enabling lenders to make informed decisions based on the platform’s
-      data.', font_size: 20, visible: false, background: ''}
+      data.', font_size: 18, visible: false, background: '', font: a}
   type: RichText
   layout_properties: {grid_position: 'RFIPML,GZEPAB'}
   components: []
 - name: button_1_copy
   properties: {text: 'What types of loans can be offered through peer-to-peer marketplace
-      software?        +', foreground: black, align: left, font_size: 23, role: null,
+      software?        +', foreground: black, align: left, font_size: 20, role: null,
     font: a, bold: true}
   type: Button
   layout_properties: {grid_position: 'DAMLNZ,ITXSQB'}
@@ -1011,7 +1011,7 @@ components:
       and commercial loans. These can include personal loans, business loans, education
       loans, home improvement loans, debt consolidation loans, and more. You are free
       to add specific loan types on a P2P lending platform depending on the platform’s
-      focus and target audience.', font_size: 20, visible: false}
+      focus and target audience.', font_size: 18, visible: false, font: a}
   type: RichText
   layout_properties: {grid_position: 'CVDGOO,HJXPJG'}
   components: []
@@ -1038,16 +1038,16 @@ components:
     type: Label
     layout_properties: {row: KSGGGV, width_xs: 5, col_xs: 1}
   - name: image_22
-    properties: {source: _/theme/india map.png, display_mode: original_size, height: '200'}
+    properties: {source: _/theme/india map.png, display_mode: original_size, height: 340.22222900390625}
     type: Image
     layout_properties: {row: KSGGGV, width_xs: 4, col_xs: 7}
   - name: label_75
     properties: {}
     type: Label
-    layout_properties: {row: RVFBPP, width_xs: 3, col_xs: 1}
+    layout_properties: {row: WKGYWZ, width_xs: 3, col_xs: 1}
   - name: button_2
     properties: {text: Register Now, spacing_below: medium, background: '#094586',
-      foreground: White, role: filled-button}
+      foreground: White, role: filled-button, font_size: 20}
     type: Button
     layout_properties: {row: ABBVHK, width_xs: 3, col_xs: 1}
 - name: label_2_copy
@@ -1097,21 +1097,26 @@ components:
   layout_properties: {grid_position: 'MNONJR,SVBRAQ', full_width_row: true}
   components:
   - name: column_panel_2
-    properties: {background: ''}
+    properties: {background: '', col_widths: '{"XHAILN":12,"SPJHOO":8,"WNWVDK":16,"YBBTWP":12,"QNSOAB":12}'}
     type: ColumnPanel
-    layout_properties: {x: 0, y: 0, width: 1167}
+    layout_properties: {x: 0, y: 0, width: 1672.5401708984375}
     components:
     - name: image_29
-      properties: {vertical_align: center, height: 89.79998779296875, border: '',
-        display_mode: zoom_to_fill, spacing_above: none, source: _/theme/titled-design.jpg,
-        spacing_below: large, background: '', horizontal_align: left}
+      properties: {vertical_align: center, height: 113, border: '', display_mode: zoom_to_fill,
+        spacing_above: none, source: _/theme/titled-design.jpg, spacing_below: large,
+        background: '', horizontal_align: left}
       type: Image
-      layout_properties: {grid_position: 'MMFQSR,UGOQOI'}
+      layout_properties: {grid_position: 'MMFQSR,XHAILN'}
       data_bindings: []
+    - name: spacer_41
+      properties: {height: 32}
+      type: Spacer
+      layout_properties: {grid_position: 'MMFQSR,SPJHOO'}
     - name: link_7
       properties: {text: About, bold: true, font_size: 16, underline: true, foreground: black}
       type: Link
       layout_properties: {grid_position: 'MMFQSR,WNWVDK'}
+      event_bindings: {click: link_7_click}
     - name: link_10
       properties: {text: Investment, foreground: black, bold: true, font_size: 16,
         underline: true}
@@ -1131,14 +1136,17 @@ components:
         bold: true, align: left}
       type: Link
       layout_properties: {grid_position: 'MMFQSR,YBBTWP KKGCYO,GSVXOQ'}
+      event_bindings: {click: link_8_click}
     - name: link_12
       properties: {text: Help, foreground: black, bold: true, font_size: 16, underline: true}
       type: Link
       layout_properties: {grid_position: 'MMFQSR,QNSOAB IRVWEK,HAZHMM', full_width_row: true}
+      event_bindings: {click: link_12_click}
     - name: link_9
       properties: {text: Products, bold: true, font_size: 16, underline: true, foreground: black}
       type: Link
       layout_properties: {grid_position: 'MMFQSR,QNSOAB MCUKZK,LUZRLG'}
+      event_bindings: {click: link_9_click}
 - name: column_panel_3
   properties: {}
   type: ColumnPanel

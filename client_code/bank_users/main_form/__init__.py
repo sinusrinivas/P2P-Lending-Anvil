@@ -127,7 +127,7 @@ class main_form(main_formTemplate):
 
   def link_7_click(self, **event_args):
     """This method is called when the link is clicked"""
-    open_form("bank_users.main_form.basic_registration_form")
+    open_form("bank_users.main_form.about_main_form")
 
   def button_4_copy_click(self, **event_args):
     """This method is called when the button is clicked"""
@@ -153,6 +153,18 @@ class main_form(main_formTemplate):
         open_form('bank_users.main_form.basic_registration_form')  # Replace 'Form1' with the name of your target form
     elif selected_option == "Apply for Loan":
         open_form('bank_users.main_form.about_main_form')
+
+  def link_8_click(self, **event_args):
+    """This method is called when the link is clicked"""
+    open_form("bank_users.main_form.contact_main_form")
+
+  def link_12_click(self, **event_args):
+    """This method is called when the link is clicked"""
+    open_form('admin.user_issue.user_bugreports')
+
+  def link_9_click(self, **event_args):
+    """This method is called when the link is clicked"""
+    open_form('bank_users.main_form.products_main_form')
 
  
 
