@@ -303,8 +303,6 @@ class payment_details_t(payment_details_tTemplate):
       # Initialize Total Repayment Beginning Balance (TRBB) and Total Repayment Ending Balance (TREB)
       beginning_loan_amount_balance = selected_row['loan_amount']
       total_tenure = selected_row['tenure']
-      processing_fee = selected_row['total_processing_fee_amount']
-      beginning_balance -=processing_fee
       
       # Check for extension months
       extension_rows = app_tables.fin_extends_loan.search(loan_id=selected_row['loan_id'])
@@ -335,8 +333,6 @@ class payment_details_t(payment_details_tTemplate):
       # Initialize Total Repayment Beginning Balance (TRBB) and Total Repayment Ending Balance (TREB)
       beginning_loan_amount_balance = selected_row['loan_amount']
       ending_loan_amount_balance = beginning_loan_amount_balance
-      processing_fee = selected_row['total_processing_fee_amount']
-      beginning_balance -=processing_fee
     
       # Since processing fee is a one-time charge, apply it only at the beginning
       processing_fee = selected_row['total_processing_fee_amount'] if selected_row['total_processing_fee_amount'] is not None else 0
@@ -377,8 +373,6 @@ class payment_details_t(payment_details_tTemplate):
       emi *= 6  # Multiply the monthly EMI by 6 for six-month EMI
       
       beginning_balance = selected_row['total_repayment_amount']
-      processing_fee = selected_row['total_processing_fee_amount']
-      beginning_balance -=processing_fee
     
       # Initialize Total Repayment Beginning Balance (TRBB) and Total Repayment Ending Balance (TREB)
       beginning_loan_amount_balance = selected_row['loan_amount']
@@ -413,8 +407,6 @@ class payment_details_t(payment_details_tTemplate):
         # Initialize Total Repayment Beginning Balance (TRBB) and Total Repayment Ending Balance (TREB)
         beginning_loan_amount_balance = selected_row['loan_amount']
         ending_loan_amount_balance = beginning_loan_amount_balance
-        processing_fee = selected_row['total_processing_fee_amount']
-        beginning_balance -=processing_fee
     
         # For one-time payment, calculate ending balance for the single payment
         interest_amount = beginning_loan_amount_balance * (selected_row['interest_rate'] / 100) / 12
