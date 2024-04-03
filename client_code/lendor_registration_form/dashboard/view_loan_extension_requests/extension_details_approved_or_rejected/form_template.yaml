@@ -26,21 +26,18 @@ components:
     properties: {}
     name: navigation_bar_lender_dashbord_1
     layout_properties: {grid_position: 'FJYVRL,WGPRBT'}
-  - name: label_6
-    properties: {role: null, align: center, tooltip: '', border: '', foreground: White,
-      visible: true, text: Loan Extension details, font_size: 18, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '#0b2547',
-      bold: false, underline: true, icon: ''}
-    type: Label
-    layout_properties:
-      col_widths: {}
-      grid_position: KDCQIP,GFMEWP
-      full_width_row: true
   - name: outlined_card_1
     properties: {role: outlined-card, col_widths: '{"AZOUQD":15,"WFAWEW":25,"UHNZLC":15,"PSKZVC":5}'}
     type: ColumnPanel
     layout_properties: {grid_position: 'FQSERC,BDYTYO'}
     components:
+    - name: label_6
+      properties: {role: outlined-card, align: center, tooltip: '', border: '', foreground: White,
+        visible: true, text: Loan Extension details, font_size: 18, font: '', spacing_above: small,
+        icon_align: left, spacing_below: small, italic: false, background: '#0b2547',
+        bold: false, underline: true, icon: ''}
+      type: Label
+      layout_properties: {grid_position: 'FJWJIG,BXDYZF'}
     - name: spacer_1
       properties: {height: 315.357177734375}
       type: Spacer

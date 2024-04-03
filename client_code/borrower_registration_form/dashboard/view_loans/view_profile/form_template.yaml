@@ -37,7 +37,7 @@ components:
   components:
   - name: label_1_copy_1_copy_1
     properties: {role: outlined-card, align: center, tooltip: '', border: '', foreground: white,
-      visible: true, text: View Profile, font_size: null, font: '25', spacing_above: medium,
+      visible: true, text: View Profile, font_size: 18, font: '25', spacing_above: medium,
       icon_align: left, spacing_below: medium, italic: false, background: '#0b2547',
       bold: true, underline: false, icon: ''}
     type: Label
