@@ -1,6 +1,6 @@
 container:
   type: ColumnPanel
-  properties: {col_widths: '{"UXWIME":15,"SYNJVB":45,"NSBNDL":30,"SZJXCQ":10,"HJXPJG":64,"ASUGOE":5,"GKGMVX":5,"GZEPAB":55,"YXEJAJ":5,"BRNMJF":55,"YCDQDS":5,"WRNWWZ":10,"JZUUWF":20,"RDWIZR":20,"AMTGYB":20,"ZMXVPS":2,"OHQTCG":58,"OYIVEL":2,"RYPZCD":58,"VURQFS":2,"KLQWYU":58,"NZODAV":2,"ATRLXT":58}',
+  properties: {col_widths: '{"UXWIME":15,"SYNJVB":45,"NSBNDL":30,"SZJXCQ":10,"HJXPJG":64,"ASUGOE":5,"GKGMVX":5,"GZEPAB":55,"YXEJAJ":5,"BRNMJF":55,"WRNWWZ":10,"JZUUWF":20,"RDWIZR":20,"AMTGYB":20,"ZMXVPS":2,"OHQTCG":58,"OYIVEL":2,"RYPZCD":58,"VURQFS":2,"KLQWYU":58,"NZODAV":2,"ATRLXT":58,"MJLLCS":5,"ETGUAR":55}',
     spacing_below: none, background: ''}
 components:
 - name: image_1_copy_copy_1
@@ -767,10 +767,6 @@ components:
   properties: {text: Contact Proof (any one of the following), font_size: 18, align: left}
   type: Label
   layout_properties: {grid_position: 'JJKMLG,CZUENQ TQPYOA,FEZCGI'}
-- name: spacer_37
-  properties: {height: 13.399993896484375}
-  type: Spacer
-  layout_properties: {grid_position: 'JJKMLG,CZUENQ FPBQGQ,YXSRBK'}
 - name: label_72
   properties: {text: Bank Statements, font_size: 18, align: left, background: '#E5E0E7 '}
   type: Label
@@ -809,8 +805,7 @@ components:
   type: Label
   layout_properties: {grid_position: 'JJKMLG,IBLJFP MXDGSI,AQWZUY'}
 - name: label_69
-  properties: {text: 'Post paid Mobile Bill (last month), Post paid Landline Bill
-      (last month)
+  properties: {text: 'Post paid Mobile Bill , Post paid Landline Bill (last month)
 
       ', font_size: 18}
   type: Label
@@ -827,6 +822,18 @@ components:
       ', font_size: 18}
   type: Label
   layout_properties: {grid_position: 'JJKMLG,IBLJFP VDACAJ,AEGOPI'}
+- name: spacer_37
+  properties: {height: 32}
+  type: Spacer
+  layout_properties: {grid_position: 'JEGYMW,JVNGBR'}
+- name: button_9
+  properties: {text: Register as Borrower, background: '#013065', foreground: white}
+  type: Button
+  layout_properties: {grid_position: 'DTMZYG,MSRJRI'}
+- name: spacer_39
+  properties: {height: 32}
+  type: Spacer
+  layout_properties: {grid_position: 'RSYMBZ,MHEQTQ'}
 - name: grid_panel_2_copy_1
   properties: {spacing_above: small, spacing_below: small, background: '#094586',
     foreground: '', border: '', visible: true, role: outlined-card, tooltip: ''}
@@ -910,21 +917,25 @@ components:
   properties: {text: FAQ, font_size: 30, font: '', bold: true}
   type: Label
   layout_properties: {grid_position: 'NLJPGR,IKJPKV'}
-- name: rich_text_3
-  properties: {content: Peer to peer lending is a method of lending capital to borrowers on a mutual interest rate through an online platform like kotak which act as a matchmaker,
-    font_size: 20, visible: false}
-  type: RichText
-  layout_properties: {grid_position: 'ZZJNLJ,SAIZGA'}
+- name: spacer_10
+  properties: {height: 32}
+  type: Spacer
+  layout_properties: {grid_position: 'TVJZLT,AJIMAE'}
 - name: button_4
   properties: {text: 'What is Peer to Peer Lending?                                                                                          +',
     foreground: black, bold: true, font: a, font_size: 23, align: left}
   type: Button
   layout_properties: {grid_position: 'EBBCHI,DHGHAX'}
   event_bindings: {click: button_4_click}
-- name: spacer_10
+- name: spacer_38
   properties: {height: 32}
   type: Spacer
-  layout_properties: {grid_position: 'XAUWPD,YCDQDS'}
+  layout_properties: {grid_position: 'VZQHCA,MJLLCS'}
+- name: rich_text_3
+  properties: {content: Peer to peer lending is a method of lending capital to borrowers on a mutual interest rate through an online platform like kotak which act as a matchmaker,
+    font_size: 20, visible: false}
+  type: RichText
+  layout_properties: {grid_position: 'VZQHCA,ETGUAR'}
 - name: button_4_copy
   properties: {text: 'Is Peer to peer lending safe?                                                                                              +',
     foreground: black, bold: true, font: a, font_size: 23, align: left}
@@ -1003,10 +1014,20 @@ components:
       focus and target audience.', font_size: 20, visible: false}
   type: RichText
   layout_properties: {grid_position: 'CVDGOO,HJXPJG'}
+  components: []
 - name: spacer_20
   properties: {height: 32}
   type: Spacer
   layout_properties: {grid_position: 'GARQWW,LDCTBY'}
+- name: xy_panel_10
+  properties: {height: 461.3999938964844}
+  type: XYPanel
+  layout_properties: {grid_position: 'TETRBQ,LGGHMF', full_width_row: true}
+  components:
+  - name: image_22_copy
+    properties: {source: _/theme/india map.png, display_mode: original_size, height: '200'}
+    type: Image
+    layout_properties: {x: 868.8999755866826, y: 37.600006103515625, width: 425.9749755859375}
 - name: grid_panel_1
   properties: {background: '#EBE1ED'}
   type: GridPanel
@@ -1029,6 +1050,10 @@ components:
     properties: {source: _/theme/india map.png, display_mode: original_size, height: '200'}
     type: Image
     layout_properties: {row: KSGGGV, width_xs: 4, col_xs: 7}
+  - name: label_75
+    properties: {}
+    type: Label
+    layout_properties: {row: QIYSLZ, width_xs: 3, col_xs: 1}
   - name: button_2
     properties: {text: Register Now, spacing_below: medium, background: '#094586',
       foreground: White, role: filled-button}
