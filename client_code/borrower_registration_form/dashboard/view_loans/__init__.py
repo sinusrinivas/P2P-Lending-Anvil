@@ -22,7 +22,7 @@ class view_loans(view_loansTemplate):
               loan_updated_status=q.any_of(
                   q.like('disbursed loan%'),
                   q.like('foreclosure%'),
-                  q.like('extension')
+                  q.like('extension%')
               )
           )
           self.repeating_panel_6.items = self.process_data(open_loans)

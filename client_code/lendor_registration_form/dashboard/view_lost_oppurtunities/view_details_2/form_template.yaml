@@ -34,11 +34,11 @@ components:
       col_widths: {}
       grid_position: NNDEBI,KYBXVH
   - name: label_1_copy_1_copy_1
-    properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
-      visible: true, text: 'View Details
+    properties: {role: outlined-card, align: center, tooltip: '', border: '', foreground: 'theme:On
+        Primary', visible: true, text: 'View Details
 
-        ', font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small,
-      italic: false, background: '', bold: true, underline: false, icon: ''}
+        ', font_size: 18, font: '', spacing_above: small, icon_align: left, spacing_below: small,
+      italic: false, background: '#05264d', bold: true, underline: false, icon: ''}
     type: Label
     layout_properties:
       col_widths: {}
