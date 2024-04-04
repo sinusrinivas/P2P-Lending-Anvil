@@ -1,7 +1,7 @@
 container: {type: DataRowPanel}
 components:
 - name: column_panel_1
-  properties: {role: outlined-card, col_widths: '{"DKKABI":40,"GGJQSS":20}'}
+  properties: {role: elevated-card, col_widths: '{"DKKABI":40,"GGJQSS":20}'}
   type: ColumnPanel
   layout_properties: {column: DAXAQF}
   components:

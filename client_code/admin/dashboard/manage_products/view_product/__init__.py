@@ -30,7 +30,7 @@ class view_product(view_productTemplate):
                            
                            for i in self.data]
 
-            self.repeating_panel_2.items = self.result
+            self.repeating_panel_1.items = self.result
 
     def link_1_click(self, **event_args):
         open_form('admin.dashboard.manage_products')

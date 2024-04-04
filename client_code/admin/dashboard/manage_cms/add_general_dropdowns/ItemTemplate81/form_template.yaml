@@ -1,7 +1,7 @@
 container: {type: ColumnPanel}
 components:
 - name: column_panel_1
-  properties: {role: outlined-card, col_widths: '{"BJTTNN":40,"BMTQPE":20}'}
+  properties: {role: elevated-card, col_widths: '{"BJTTNN":40,"BMTQPE":20}'}
   type: ColumnPanel
   layout_properties: {grid_position: 'HRYTFR,QSJTNU'}
   components:
