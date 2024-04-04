@@ -65,37 +65,6 @@ components:
     font_size: 50, align: center}
   type: Label
   layout_properties: {grid_position: 'QEBYCM,WTHGLY'}
-- name: outlined_card_1
-  properties: {role: outlined-card}
-  type: ColumnPanel
-  layout_properties: {grid_position: 'NWQQFJ,JGWEAT'}
-  components:
-  - name: label_3
-    properties: {text: P2P is a Leading Peer to Peer Lending Platform in India, bold: true,
-      font_size: 25, align: center, underline: true, font: a}
-    type: Label
-    layout_properties: {grid_position: 'CYVIXX,WKBQMI'}
-  - name: image_1
-    properties: {source: 'https://www.leadsquared.com/wp-content/uploads/2021/11/What-is-P2P-lending-Lending-Cycle.png'}
-    type: Image
-    layout_properties: {grid_position: 'KPEKWP,RCAWZV'}
-  - name: label_2
-    properties: {text: 'P2P is an online Peer to Peer Lending (P2P Lending) marketplace
-        which connects verified borrowers looking for unsecured loans with investors
-        looking for an investment opportunity to make higher risk-adjusted returns.The
-        entire process of the loan application to credit evaluation, investment, fund
-        transfer, and repayment is completely online to facilitate seamless operation.',
-      font_size: 20, italic: false, bold: false, font: a, align: center}
-    type: Label
-    layout_properties: {grid_position: 'SATUHG,JQEPZP'}
-  - name: spacer_3
-    properties: {height: 11}
-    type: Spacer
-    layout_properties: {grid_position: 'HPOLAI,OKUOFV'}
-- type: Spacer
-  properties: {height: 228}
-  name: spacer_1
-  layout_properties: {grid_position: 'NQMXAT,ICBWLC'}
 - name: spacer_4
   properties: {height: 34}
   type: Spacer
