@@ -22,13 +22,6 @@ components:
     type: Button
     layout_properties: {grid_position: 'SRJHKV,WLHSDT'}
     event_bindings: {click: back_btn_click}
-- name: label
-  properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
-    visible: true, text: All Transaction, font_size: 25, font: '', spacing_above: small,
-    icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-    underline: true, icon: ''}
-  type: Label
-  layout_properties: {grid_position: 'VSWVJE,DOXKQJ'}
 - name: outlined_card_2
   properties: {role: outlined-card, col_widths: '{}'}
   type: ColumnPanel
@@ -48,12 +41,61 @@ components:
       - {id: LSNYXW, data_key: column_2, title: Status}
       visible: false
     type: DataGrid
-    layout_properties: {grid_position: 'DGYOTQ,WZVZMW'}
+    layout_properties: {grid_position: 'SPDQWD,OCYRTM'}
     components:
     - name: repeating_panel_2
       properties: {item_template: wallet.wallet.all_transaction.RowTemplate29}
       type: RepeatingPanel
       event_bindings: {show: repeating_panel_2_show}
+  - name: label_1
+    properties: {role: outlined-card, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: All Trasactions, font_size: 25, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: 'theme:Disabled
+        Container', bold: false, underline: false, icon: ''}
+    type: Label
+    layout_properties: {grid_position: 'URUGRY,XSXLIG'}
+  - name: column_panel_1_copy
+    properties: {role: elevated-card, tooltip: '', border: '', foreground: '', visible: true,
+      wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{"WMAWGC":10,"TLBMAZ":15,"XWMMJZ":10,"UPVPFP":10,"MFIVTW":15}',
+      spacing_below: small, background: 'theme:Tertiary Container'}
+    type: ColumnPanel
+    layout_properties: {grid_position: 'ZEJVWH,BFAYJA'}
+    components:
+    - name: label_4
+      properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+        visible: true, text: 'Trasnsaction ID :', font_size: null, font: '', spacing_above: small,
+        icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+        underline: false, icon: ''}
+      type: Label
+      layout_properties: {x: 39.55358123779297, y: 102.5, width: 130, grid_position: 'CIHIWV,WMAWGC'}
+    - name: label_12
+      properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+        visible: true, text: 'Transaction Type :', font_size: null, font: '', spacing_above: small,
+        icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+        underline: false, icon: ''}
+      type: Label
+      layout_properties: {x: 179.55358123779297, y: 10.5, width: 280, grid_position: 'CIHIWV,TLBMAZ'}
+    - name: label_6
+      properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+        visible: true, text: Status, font_size: null, font: '', spacing_above: small,
+        icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+        underline: false, icon: ''}
+      type: Label
+      layout_properties: {x: 492.5536117553711, y: 10.5, width: 101, grid_position: 'CIHIWV,XWMMJZ'}
+    - name: label_8
+      properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+        visible: true, text: 'Amount :', font_size: null, font: '', spacing_above: small,
+        icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+        underline: false, icon: ''}
+      type: Label
+      layout_properties: {x: 603.5536117553711, y: 10.5, width: 98, grid_position: 'CIHIWV,UPVPFP'}
+    - name: label_5
+      properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+        visible: true, text: 'Date and Time :', font_size: null, font: '', spacing_above: small,
+        icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+        underline: false, icon: ''}
+      type: Label
+      layout_properties: {x: 715.7143173217773, y: 10.5, width: 200, grid_position: 'CIHIWV,MFIVTW'}
   - name: repeating_panel_1
     properties: {item_template: wallet.wallet.all_transaction.ItemTemplate99}
     type: RepeatingPanel
