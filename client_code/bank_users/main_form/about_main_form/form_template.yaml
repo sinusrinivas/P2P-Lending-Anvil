@@ -152,7 +152,7 @@ components:
   type: Label
   layout_properties: {grid_position: 'HLSGDP,XBKLNK'}
 - name: label_11
-  properties: {text: 'For Investors:', align: left, bold: true, font_size: 28}
+  properties: {text: 'For Investors:', align: left, bold: true, font_size: 28, underline: true}
   type: Label
   layout_properties: {grid_position: 'QCNGGK,HAFZET'}
 - name: spacer_8
@@ -279,7 +279,7 @@ components:
   type: Spacer
   layout_properties: {grid_position: 'SUWQYE,VUQNOR'}
 - name: label_23
-  properties: {text: 'For Borrowers:', bold: true, font_size: 28}
+  properties: {text: 'For Borrowers:', bold: true, font_size: 28, underline: true}
   type: Label
   layout_properties: {grid_position: 'IMKMLC,XZZFBD'}
 - name: spacer_12
