@@ -34,13 +34,45 @@ components:
       background: ''
     name: data_grid_1
     layout_properties: {grid_position: 'POSQKM,AJXXVP'}
+    components: []
+  - name: label_1
+    properties: {font_size: 25, align: center, background: 'theme:Disabled Container',
+      text: ' Product details', role: outlined-card}
+    type: Label
+    layout_properties: {grid_position: 'FJXCIM,TDGLEB'}
+  - name: column_panel_1
+    properties: {background: 'theme:Secondary Container', col_widths: '{"CJIRCR":10,"KEGSZU":10,"WUYSFB":10,"IHUKLD":10,"EMIVXP":20}',
+      role: elevated-card}
+    type: ColumnPanel
+    layout_properties: {grid_position: 'HSFBYO,OQVURQ'}
     components:
-    - type: RepeatingPanel
-      properties: {spacing_above: none, spacing_below: none, item_template: admin.dashboard.manage_products.view_product.RowTemplate5}
-      name: repeating_panel_1
-      layout_properties: {}
+    - name: label_3
+      properties: {text: Product ID}
+      type: Label
+      layout_properties: {grid_position: 'TQHUKS,CJIRCR'}
+    - name: label_4
+      properties: {text: Product Group}
+      type: Label
+      layout_properties: {grid_position: 'TQHUKS,KEGSZU'}
+    - name: label_5
+      properties: {text: Product Name}
+      type: Label
+      layout_properties: {grid_position: 'TQHUKS,WUYSFB'}
+    - name: label_6
+      properties: {text: Product Categories}
+      type: Label
+      layout_properties: {grid_position: 'TQHUKS,IHUKLD'}
+    - name: label_7
+      properties: {text: Product Description, align: left}
+      type: Label
+      layout_properties: {grid_position: 'TQHUKS,EMIVXP'}
+  - type: RepeatingPanel
+    properties: {spacing_above: none, spacing_below: none, item_template: admin.dashboard.manage_products.view_product.RowTemplate5}
+    name: repeating_panel_1
+    layout_properties: {grid_position: 'STVLCH,HUZXEA'}
   - name: repeating_panel_2
-    properties: {item_template: admin.dashboard.manage_products.view_product.ItemTemplate98}
+    properties: {item_template: admin.dashboard.manage_products.view_product.ItemTemplate98,
+      visible: false}
     type: RepeatingPanel
     layout_properties: {grid_position: 'XQXUEX,GHECIR'}
   - type: Button
