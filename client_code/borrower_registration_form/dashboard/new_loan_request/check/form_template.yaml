@@ -4,7 +4,7 @@ container:
   properties: {html: '@theme:standard-page.html'}
 components:
 - type: ColumnPanel
-  properties: {col_widths: '{"SEKFVG":10,"UCMLOY":15,"NJPWCG":20,"GWCLBN":30}'}
+  properties: {col_widths: '{}'}
   name: content_panel
   layout_properties: {slot: default}
   components:
@@ -44,48 +44,6 @@ components:
       background: '', bold: false, underline: false, icon: ''}
     type: Label
     layout_properties: {grid_position: 'VKMVQJ,XBNOMX'}
-  - type: Spacer
-    properties: {height: 32}
-    name: spacer_2
-    layout_properties: {grid_position: 'WTZFJQ,SEKFVG'}
-  - name: label_30
-    properties: {role: null, align: right, tooltip: '', border: '', foreground: '',
-      visible: true, text: Instalments, font_size: 18, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-      underline: false, icon: ''}
-    type: Label
-    layout_properties: {grid_position: 'WTZFJQ,UCMLOY'}
-  - name: dropdown_payment_numbers
-    properties:
-      role: null
-      align: full
-      tooltip: ''
-      placeholder: ''
-      border: ''
-      enabled: true
-      foreground: ''
-      items: []
-      visible: true
-      font_size: null
-      font: ''
-      spacing_above: small
-      spacing_below: small
-      italic: false
-      background: white
-      bold: false
-      underline: false
-      include_placeholder: true
-    type: DropDown
-    layout_properties: {grid_position: 'WTZFJQ,NJPWCG'}
-    event_bindings: {change: dropdown_payment_numbers_change}
-  - name: spacer_4
-    properties: {height: 32}
-    type: Spacer
-    layout_properties: {grid_position: 'WTZFJQ,GWCLBN'}
-  - name: repeating_panel_2
-    properties: {item_template: borrower_registration_form.dashboard.new_loan_request.check.ItemTemplate95}
-    type: RepeatingPanel
-    layout_properties: {grid_position: 'SRVKNH,PFOEBU'}
   - type: Button
     properties: {role: null, align: right, tooltip: '', border: '', enabled: true,
       foreground: 'theme:On Primary', visible: true, text: Back, font_size: null,
