@@ -1,6 +1,6 @@
 container:
   type: ColumnPanel
-  properties: {col_widths: '{"ODXPBD":50,"RPSFHE":10,"DPDILZ":40,"FFNWMN":20}'}
+  properties: {col_widths: '{"ODXPBD":50,"RPSFHE":10,"DPDILZ":40,"FFNWMN":20,"undefined":25,"ERTZBE":35,"VTZQBG":25,"MWEDAB":35,"DIRGNU":35,"XWFLXI":25,"QLSKDA":25,"MZBUKN":35,"CWPKWV":35,"MNUGRA":25,"SEEDDJ":25,"TCOENG":35,"OXCRMD":25,"KRXCWE":35,"XPMLRH":35,"UNDVYZ":25,"YBYIUP":25,"SEGFMP":35,"NDEQDJ":35,"NPYZII":25}'}
 components:
 - name: flow_panel_1
   properties: {align: justify}
@@ -80,7 +80,7 @@ components:
   type: Spacer
   layout_properties: {grid_position: 'TVWKGU,UKHPJA'}
 - name: image_1
-  properties: {height: 136.44442749023438, source: _/theme/aboutus-icon1.png, display_mode: shrink_to_fit}
+  properties: {height: 136.44442749023438, source: _/theme/aboutus-icon1.png, display_mode: original_size}
   type: Image
   layout_properties: {grid_position: 'QOSPLX,DPDILZ YAYFAC,RVZBEW'}
 - name: spacer_3
@@ -97,22 +97,282 @@ components:
   type: Spacer
   layout_properties: {grid_position: 'QOSPLX,DPDILZ ENFAOE,VMXTVO'}
 - name: image_2
-  properties: {height: 141.88888549804688, source: _/theme/aboutus-icon2.png, display_mode: shrink_to_fit}
+  properties: {height: 141.88888549804688, source: _/theme/aboutus-icon2.png, display_mode: original_size}
   type: Image
   layout_properties: {grid_position: 'QOSPLX,FFNWMN SRCSHA,GHMSJV'}
 - name: label_6
   properties: {text: High Returns for Investors up to 40%, font_size: 26, align: center}
   type: Label
   layout_properties: {grid_position: 'QOSPLX,FFNWMN ZBSECY,UGXXGV'}
+- name: spacer_5
+  properties: {height: 32}
+  type: Spacer
+  layout_properties: {grid_position: 'JYQKOZ,RAUEBS'}
+- name: label_7
+  properties: {text: About Kotak, align: center, bold: true, font_size: 30}
+  type: Label
+  layout_properties: {grid_position: 'WGOGKC,YFWYFJ'}
+- name: spacer_6
+  properties: {height: 18}
+  type: Spacer
+  layout_properties: {grid_position: 'IBRZQQ,MBSBHD'}
+- name: image_3
+  properties: {source: _/theme/icons8-exchange-rupee-100 (1).png, display_mode: shrink_to_fit,
+    height: 218.22222900390625}
+  type: Image
+  layout_properties: {grid_position: ',undefined'}
+- name: label_8
+  properties: {text: 'Kotak is more than just a place to borrow and lend money. We
+      carefully look at each loan to see how risky it is and suggest an interest rate
+      based on that. Borrowers can then borrow money at that rate or higher. This
+      helps borrowers get money at a fair price based on how risky their loan is.
+      It also helps investors earn more money compared to how risky the loans are.
+      If a borrower can''t pay back the money, we help investors with legal stuff
+      to get their money back
+
+      ', font_size: 19, align: left}
+  type: Label
+  layout_properties: {grid_position: ',ERTZBE TWOCQM,BVGNUV'}
+- name: label_9
+  properties: {text: 'Kotak is ready to shake up how we do money stuff. The old way
+      of doing things, like banks, costs a lot because they have fancy offices and
+      pay lots of staff. Because of this, they can''t really check each person''s
+      risk properly. So, they treat loans for regular people as just a big bunch of
+      business. This means people with good credit get mixed in with everyone else.
+      It''s not fair to people who are good with money, and it''s not good for using
+      money wisely', font_size: 19, align: left}
+  type: Label
+  layout_properties: {grid_position: ',ERTZBE USCEED,PWKHVK'}
 - name: spacer_1
-  properties: {height: 71.111083984375}
+  properties: {height: 44.5555419921875}
   type: Spacer
   layout_properties: {grid_position: 'MCHGHH,DOJNHQ'}
+- name: label_10
+  properties: {text: Our Role, bold: true, font_size: 35, align: center}
+  type: Label
+  layout_properties: {grid_position: 'HLSGDP,XBKLNK'}
+- name: label_11
+  properties: {text: 'For Investors:', align: left, bold: true, font_size: 28}
+  type: Label
+  layout_properties: {grid_position: 'QCNGGK,HAFZET'}
+- name: spacer_8
+  properties: {height: 17.555511474609375}
+  type: Spacer
+  layout_properties: {grid_position: 'OEGLXS,VTZQBG VXWRFU,THVHQM'}
+- name: image_4
+  properties: {source: _/theme/first.png, display_mode: shrink_to_fit, height: 160.33334350585938,
+    horizontal_align: center}
+  type: Image
+  layout_properties: {grid_position: 'OEGLXS,VTZQBG YJWRXB,HMKBBW'}
+- name: label_12
+  properties: {text: Borrower’s Profile Verification, font_size: 20, bold: true}
+  type: Label
+  layout_properties: {grid_position: 'OEGLXS,MWEDAB RLJEEO,TRFIKN'}
+- name: label_13
+  properties: {text: 'Kotak does the profile verification for each and every listing.
+      It collects personal, professional and financial data and verifies these to
+      the best extent possible from all available data sources such as government
+      databank, credit information bureau, social media etc. We take all due care
+      to safeguard the interests of both the borrowers and the investors through our
+      stringent verification process', font_size: 18}
+  type: Label
+  layout_properties: {grid_position: 'OEGLXS,MWEDAB YNZVDC,DJCSYS'}
+- name: label_14
+  properties: {text: '----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------',
+    background: '', foreground: '#E2E5E5'}
+  type: Label
+  layout_properties: {grid_position: 'WTMTKM,DZNXXZ'}
+- name: label_15
+  properties: {text: Credit Risk Assessment using kotak Beesem Score, font_size: 20,
+    bold: true}
+  type: Label
+  layout_properties: {grid_position: 'DETCYM,RXWHJU'}
+- name: label_16
+  properties: {text: 'Kotak has an in-house underwriting team which does the credit
+      analysis of each of the borrowers. Kotak has also developed a proprietary Credit
+      Score Model which incorporates a number of parameters such as credit history,
+      financial and another behavioral pattern of the borrower', font_size: 18}
+  type: Label
+  layout_properties: {grid_position: 'VISWWS,DIRGNU'}
+- name: image_4_copy
+  properties: {source: _/theme/second.png, display_mode: shrink_to_fit, height: 148.77777099609375,
+    horizontal_align: center}
+  type: Image
+  layout_properties: {grid_position: 'VISWWS,XWFLXI'}
+- name: label_14_copy
+  properties: {text: '----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------',
+    foreground: '#E2E5E5'}
+  type: Label
+  layout_properties: {grid_position: 'KMKQFV,AJUNFT'}
+- name: spacer_7
+  properties: {height: 32}
+  type: Spacer
+  layout_properties: {grid_position: 'LVZTKO,QLSKDA RZXBFT,VMGUCB'}
+- name: image_4_copy_copy
+  properties: {source: _/theme/third.png, display_mode: shrink_to_fit, height: 148.77777099609375,
+    horizontal_align: center}
+  type: Image
+  layout_properties: {grid_position: 'LVZTKO,QLSKDA DGAAUN,EROPUQ'}
+- name: label_17
+  properties: {text: Risk-Adjusted returns, bold: true, font_size: 20}
+  type: Label
+  layout_properties: {grid_position: 'LVZTKO,MZBUKN MZZVCY,RVNNKY'}
+- name: label_18
+  properties: {text: 'Based on the detailed credit analysis, the underwriting team
+      assigns a risk category  and provides an Kotak Recommended Interest Rate along
+      with an  Report for each of the loans. This acts as a benchmark for both the
+      borrowers and the investors to not only set the final interest rate but also
+      to understand the risks associated with each of the loans', font_size: 18}
+  type: Label
+  layout_properties: {grid_position: 'LVZTKO,MZBUKN DGXPOI,PHTJCO'}
+- name: label_14_copy_copy
+  properties: {text: '----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------',
+    foreground: '#E2E5E5'}
+  type: Label
+  layout_properties: {grid_position: 'OKTIBS,BSWRAH'}
+- name: label_19
+  properties: {text: Agreements & Contracts, font_size: 20, bold: true}
+  type: Label
+  layout_properties: {grid_position: 'NAHKHD,IIHDLH'}
+- name: label_20
+  properties: {text: 'Kotak has drafted detailed loan agreements where utmost care
+      has been taken to cover various scenarios along with suitable recourse. This
+      loan agreement is signed post payment of requisite stamp duty which is borne
+      by Kotak and hence, is legally enforceable in the court of law. In case, either
+      party seeks to enforce the agreement at any time, Kotak also helps that party
+      to seek legal opinion though at an additional cost as charged by the lawyer',
+    font_size: 18}
+  type: Label
+  layout_properties: {grid_position: 'ONUUJG,CWPKWV'}
+- name: image_4_copy_copy_copy
+  properties: {source: _/theme/4th.png, display_mode: shrink_to_fit, height: 148.77777099609375,
+    horizontal_align: center}
+  type: Image
+  layout_properties: {grid_position: 'ONUUJG,MNUGRA'}
+- name: label_14_copy_copy_copy
+  properties: {text: '----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------',
+    foreground: '#E2E5E5', role: body}
+  type: Label
+  layout_properties: {grid_position: 'RPSSYH,CWNHAF'}
+- name: spacer_9
+  properties: {height: 16.111053466796875}
+  type: Spacer
+  layout_properties: {grid_position: 'LPJRZM,SEEDDJ KVSEYX,HRUIQE'}
+- name: image_4_copy_copy_copy_copy
+  properties: {source: _/theme/Screenshot (129).png, display_mode: shrink_to_fit,
+    height: 148.77777099609375, horizontal_align: center}
+  type: Image
+  layout_properties: {grid_position: 'LPJRZM,SEEDDJ'}
+- name: label_21
+  properties: {text: Facilitating Fund Transfer, bold: true, font_size: 20}
+  type: Label
+  layout_properties: {grid_position: 'LPJRZM,TCOENG DOCQAZ,NATRXF'}
+- name: label_22
+  properties: {text: 'Kotak facilitates the fund transfer from investor to the borrower
+      through Escrow accounts. For investors, it becomes a seamless process as investors
+      can transfer funds to any borrower through the unique virtual account assigned
+      to them', font_size: 18}
+  type: Label
+  layout_properties: {grid_position: 'LPJRZM,TCOENG NIPAZA,GYMHDZ'}
+- name: spacer_10
+  properties: {height: 40.22222900390625}
+  type: Spacer
+  layout_properties: {grid_position: 'SUWQYE,VUQNOR'}
+- name: label_23
+  properties: {text: 'For Borrowers:', bold: true, font_size: 28}
+  type: Label
+  layout_properties: {grid_position: 'IMKMLC,XZZFBD'}
+- name: spacer_12
+  properties: {height: 32}
+  type: Spacer
+  layout_properties: {grid_position: 'UHFRVD,MQCDIK'}
+- name: image_4_copy_2
+  properties: {source: _/theme/first.png, display_mode: shrink_to_fit, height: 160.33334350585938,
+    horizontal_align: center}
+  type: Image
+  layout_properties: {grid_position: 'ONVAVF,OXCRMD'}
+- name: label_24
+  properties: {text: The online loan application process, font_size: 20, bold: true}
+  type: Label
+  layout_properties: {grid_position: 'ONVAVF,KRXCWE OGUNNZ,DTBYUD'}
+- name: label_25
+  properties: {text: Borrowers can easily apply for the loan from anywhere as the entire loan application process is online and does not require the borrower to visit any branch of i2i applying for the loan,
+    font_size: 18}
+  type: Label
+  layout_properties: {grid_position: 'ONVAVF,KRXCWE JMFPRS,LQHQXL'}
+- name: label_14_copy_copy_copy_2
+  properties: {text: '----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------',
+    foreground: '#E2E5E5'}
+  type: Label
+  layout_properties: {grid_position: 'IBZKEP,RHKDJL'}
+- name: label_26
+  properties: {text: Best possible interest rates, bold: true, font_size: 20}
+  type: Label
+  layout_properties: {grid_position: 'TNILRG,SDESZS'}
+- name: label_27
+  properties: {text: 'Each loan application is evaluated through a proprietary credit
+      evaluation model and the interest rate is determined based on the borrower’s
+      credit score generated from this model. Thus, interest rates are proportional
+      to risk involved and there are no negotiations between investor and borrower
+      on the loan interest rate', font_size: 18, underline: false}
+  type: Label
+  layout_properties: {grid_position: 'SEEQPC,XPMLRH'}
+- name: image_4_copy_copy_2
+  properties: {source: _/theme/second.png, display_mode: shrink_to_fit, height: 148.77777099609375,
+    horizontal_align: center}
+  type: Image
+  layout_properties: {grid_position: 'SEEQPC,UNDVYZ'}
+- name: label_14_copy_copy_copy_2_copy
+  properties: {text: '----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------',
+    foreground: '#E2E5E5'}
+  type: Label
+  layout_properties: {grid_position: 'FYFVDD,SGRARQ'}
+- name: image_4_copy_copy_copy_2
+  properties: {source: _/theme/third.png, display_mode: shrink_to_fit, height: 148.77777099609375,
+    horizontal_align: center}
+  type: Image
+  layout_properties: {grid_position: 'BSUBQA,YBYIUP'}
+- name: label_28
+  properties: {text: Loan Funding, bold: true, font_size: 20}
+  type: Label
+  layout_properties: {grid_position: 'BSUBQA,SEGFMP LGCYSH,OLCGGK'}
+- name: label_29
+  properties: {text: Approved loans are listed for investments where Kotak registered investors can show their interest. Once the loan is fully funded then Kotak completes other formalities to prior to fund transfer,
+    font_size: 18}
+  type: Label
+  layout_properties: {grid_position: 'BSUBQA,SEGFMP DFDUTQ,DIJWNY'}
+- name: label_14_copy_copy_copy_2_copy_copy
+  properties: {text: '----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------',
+    foreground: '#E2E5E5'}
+  type: Label
+  layout_properties: {grid_position: 'YWWVNE,KHTUQY'}
+- name: label_30
+  properties: {text: Facilitating Loan Disbursal and Repayments, bold: true, font_size: 20}
+  type: Label
+  layout_properties: {grid_position: 'SDFAEE,WLRBEB'}
+- name: label_31
+  properties: {text: 'Kotak operates two separate Escrow accounts for loan disbursal
+      and EMI repayment. Investors transfer the fund to the Disbursal escrow account
+      and from there it is transferred to the borrower. Similarly, borrowers transfer
+      funds to EMI repayment Escrow account and from there it is transferred to respective
+      investors. Process is seamless for borrowers as they don’t have to transfer
+      funds to multiple individual investors.', font_size: 18}
+  type: Label
+  layout_properties: {grid_position: 'CZBCNW,NDEQDJ'}
+- name: image_4_copy_copy_copy_2_copy
+  properties: {source: _/theme/last.png, display_mode: shrink_to_fit, height: 148.77777099609375,
+    horizontal_align: center}
+  type: Image
+  layout_properties: {grid_position: 'CZBCNW,NPYZII'}
+- name: spacer_11
+  properties: {height: 41.111083984375}
+  type: Spacer
+  layout_properties: {grid_position: 'ANJTGJ,NESGSY'}
 - name: grid_panel_2_copy
   properties: {spacing_above: small, spacing_below: small, background: '#05264d',
     foreground: '', border: '', visible: true, role: null, tooltip: ''}
   type: GridPanel
-  layout_properties: {grid_position: 'SUQRXE,KMOMTE', full_width_row: true}
+  layout_properties: {grid_position: 'KMOAUS,NUMYGE', full_width_row: true}
   components:
   - name: flow_panel_3_copy_1
     properties: {role: null, vertical_align: full, spacing: medium, align: left, tooltip: '',
