@@ -38,9 +38,22 @@ components:
     - type: RepeatingPanel
       properties: {spacing_above: none, spacing_below: none, item_template: admin.dashboard.manage_products.view_product.RowTemplate5}
       name: repeating_panel_1
-      layout_properties: {}
+  - name: label_1
+    properties: {font_size: 25, align: center}
+    type: Label
+    layout_properties: {grid_position: 'FJXCIM,TDGLEB'}
+  - name: column_panel_1
+    properties: {}
+    type: ColumnPanel
+    layout_properties: {grid_position: 'HSFBYO,OQVURQ'}
+    components:
+    - name: label_2
+      properties: {}
+      type: Label
+      layout_properties: {grid_position: 'TVAHCB,YDICXH'}
   - name: repeating_panel_2
-    properties: {item_template: admin.dashboard.manage_products.view_product.ItemTemplate98}
+    properties: {item_template: admin.dashboard.manage_products.view_product.ItemTemplate98,
+      visible: false}
     type: RepeatingPanel
     layout_properties: {grid_position: 'XQXUEX,GHECIR'}
   - type: Button
