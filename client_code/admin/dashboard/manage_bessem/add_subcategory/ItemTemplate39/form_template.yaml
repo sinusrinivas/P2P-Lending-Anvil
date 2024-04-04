@@ -1,22 +1,27 @@
 is_package: true
 container:
   type: ColumnPanel
-  properties: {col_widths: '{"XPDOBX":20,"CTFZCE":19,"DEPLSL":12}'}
+  properties: {col_widths: '{}'}
 components:
-- name: label_1
-  properties: {align: center}
-  type: Label
-  layout_properties: {grid_position: 'FELXKW,XPDOBX'}
-  data_bindings:
-  - {property: text, code: 'self.item[''sub_category'']'}
-- name: label_2
-  properties: {align: center}
-  type: Label
-  layout_properties: {grid_position: 'FELXKW,CTFZCE'}
-  data_bindings:
-  - {property: text, code: 'self.item[''min_points'']'}
-- name: link_1
-  properties: {text: Edit Details, align: left}
-  type: Link
-  layout_properties: {grid_position: 'FELXKW,DEPLSL'}
-  event_bindings: {click: link_1_click}
+- name: column_panel_1
+  properties: {role: outlined-card, col_widths: '{"VQBFLB":20,"OGPWGS":25,"UDWXRM":15}'}
+  type: ColumnPanel
+  layout_properties: {grid_position: 'GWMCAR,GHAORF'}
+  components:
+  - name: label_1
+    properties: {align: center}
+    type: Label
+    layout_properties: {grid_position: 'MUTIZQ,VQBFLB'}
+    data_bindings:
+    - {property: text, code: 'self.item[''sub_category'']'}
+  - name: label_2
+    properties: {align: center}
+    type: Label
+    layout_properties: {grid_position: 'MUTIZQ,OGPWGS'}
+    data_bindings:
+    - {property: text, code: 'self.item[''min_points'']'}
+  - name: link_1
+    properties: {text: Edit Details, align: left}
+    type: Link
+    layout_properties: {grid_position: 'MUTIZQ,UDWXRM'}
+    event_bindings: {click: link_1_click}
