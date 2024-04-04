@@ -17,7 +17,7 @@ services:
 - source: /runtime/services/anvil/secrets.yml
   client_config: {}
   server_config: {}
-startup: {type: form, module: wallet.wallet.all_transaction}
+startup: {type: form, module: admin.dashboard}
 package_name: bank_client
 allow_embedding: false
 name: P2P Lending App
