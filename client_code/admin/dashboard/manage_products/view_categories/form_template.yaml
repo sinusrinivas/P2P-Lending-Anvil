@@ -15,7 +15,8 @@ components:
     properties:
       role: null
       columns:
-      - {id: DAXAQF, title: Product Group, data_key: column_1, $$hashKey: 'object:19226'}
+      - {id: DAXAQF, title: Product Group, data_key: column_1, $$hashKey: 'object:19226',
+        width: 247.14288330078125, expand: false}
       - {id: NYOBWY, title: Product Categories, data_key: column_2, $$hashKey: 'object:19227'}
       - {id: LRZIGA, title: '', data_key: column_3, $$hashKey: 'object:17260'}
       auto_header: true
