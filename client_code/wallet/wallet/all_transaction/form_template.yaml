@@ -46,6 +46,7 @@ components:
       - {id: OQWUPG, data_key: column_1, title: Amount, width: 136, expand: false}
       - {id: ZOFOAV, data_key: column_1, title: Transaction Time, expand: false, width: 185.199951171875}
       - {id: LSNYXW, data_key: column_2, title: Status}
+      visible: false
     type: DataGrid
     layout_properties: {grid_position: 'DGYOTQ,WZVZMW'}
     components:
@@ -53,4 +54,8 @@ components:
       properties: {item_template: wallet.wallet.all_transaction.RowTemplate29}
       type: RepeatingPanel
       event_bindings: {show: repeating_panel_2_show}
+  - name: repeating_panel_1
+    properties: {item_template: wallet.wallet.all_transaction.ItemTemplate99}
+    type: RepeatingPanel
+    layout_properties: {grid_position: 'MGHNFD,UFOHYI'}
 is_package: true
