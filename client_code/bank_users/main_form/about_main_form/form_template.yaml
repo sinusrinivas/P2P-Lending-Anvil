@@ -1,6 +1,6 @@
 container:
   type: ColumnPanel
-  properties: {col_widths: '{"ODXPBD":50,"RPSFHE":10}'}
+  properties: {col_widths: '{"ODXPBD":50,"RPSFHE":10,"DPDILZ":40,"FFNWMN":20}'}
 components:
 - name: flow_panel_1
   properties: {align: justify}
@@ -71,8 +71,8 @@ components:
   type: Label
   layout_properties: {grid_position: 'IGSOPT,XIRLTP'}
 - name: label_1
-  properties: {text: "We\u2019re changing the way \nIndia builds wealth", bold: true,
-    font_size: 35, align: center, background: '#E8E5ED'}
+  properties: {text: We’re changing the way India builds wealth, bold: true, font_size: 40,
+    align: center, background: '#E8E5ED'}
   type: Label
   layout_properties: {grid_position: 'QEBYCM,WTHGLY', full_width_row: true}
 - name: spacer_4
@@ -80,7 +80,7 @@ components:
   type: Spacer
   layout_properties: {grid_position: 'TVWKGU,UKHPJA'}
 - name: image_1
-  properties: {height: 103.4444580078125, source: _/theme/aboutus-icon1.png, display_mode: shrink_to_fit}
+  properties: {height: 136.44442749023438, source: _/theme/aboutus-icon1.png, display_mode: shrink_to_fit}
   type: Image
   layout_properties: {grid_position: 'QOSPLX,DPDILZ YAYFAC,RVZBEW'}
 - name: spacer_3
@@ -88,16 +88,20 @@ components:
   type: Spacer
   layout_properties: {grid_position: 'QOSPLX,DPDILZ YAYFAC,KRYPUP'}
 - name: label_5
-  properties: {text: Personal Loan at Interest Rates Starting from 12%, font_size: 32,
+  properties: {text: Personal Loan at Interest Rates Starting from 12%, font_size: 26,
     font: '', bold: false, align: center}
   type: Label
   layout_properties: {grid_position: 'QOSPLX,DPDILZ ENFAOE,GWTYWV'}
+- name: spacer_3_copy
+  properties: {height: 32}
+  type: Spacer
+  layout_properties: {grid_position: 'QOSPLX,DPDILZ ENFAOE,VMXTVO'}
 - name: image_2
-  properties: {height: 98.6666259765625, source: _/theme/aboutus-icon2.png, display_mode: shrink_to_fit}
+  properties: {height: 141.88888549804688, source: _/theme/aboutus-icon2.png, display_mode: shrink_to_fit}
   type: Image
   layout_properties: {grid_position: 'QOSPLX,FFNWMN SRCSHA,GHMSJV'}
 - name: label_6
-  properties: {text: High Returns for Investors up to 40%, font_size: 32, align: center}
+  properties: {text: High Returns for Investors up to 40%, font_size: 26, align: center}
   type: Label
   layout_properties: {grid_position: 'QOSPLX,FFNWMN ZBSECY,UGXXGV'}
 - name: spacer_1
