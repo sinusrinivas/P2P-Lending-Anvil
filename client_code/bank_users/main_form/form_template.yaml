@@ -744,37 +744,40 @@ components:
   type: Label
   layout_properties: {grid_position: 'AUTUDX,QUJUZD'}
 - name: label_59
-  properties: {text: Photographs, font_size: 18, align: left, background: '#E5E0E7 '}
+  properties: {text: 'Photographs :', font_size: 18, align: left, background: '#E5E0E7 '}
   type: Label
   layout_properties: {grid_position: 'JJKMLG,CZUENQ VLFTHR,HFLLCA'}
 - name: label_61
-  properties: {text: Identity Proof (any one of the following), font_size: 18, align: left}
+  properties: {text: 'Identity Proof (any one of the following) :', font_size: 18,
+    align: left}
   type: Label
   layout_properties: {grid_position: 'JJKMLG,CZUENQ DRVART,GFVXBM'}
 - name: label_64
-  properties: {text: Date of Birth Proof (any one of the following), font_size: 18,
+  properties: {text: 'Date of Birth Proof (any one of the following) :', font_size: 18,
     align: left, background: '#E5E0E7 '}
   type: Label
   layout_properties: {grid_position: 'JJKMLG,CZUENQ WGZONM,TRVCDV'}
 - name: label_66
-  properties: {text: Signature Proof (any one of the following), font_size: 18, align: left}
+  properties: {text: 'Signature Proof (any one of the following) :', font_size: 18,
+    align: left}
   type: Label
   layout_properties: {grid_position: 'JJKMLG,CZUENQ ZAXVSD,CKSLPD'}
 - name: label_67
-  properties: {text: Address Proof (any one of the following), font_size: 18, align: left,
-    background: '#E5E0E7 '}
+  properties: {text: 'Address Proof (any one of the following) :', font_size: 18,
+    align: left, background: '#E5E0E7 '}
   type: Label
   layout_properties: {grid_position: 'JJKMLG,CZUENQ SAEYPG,SLSCGX'}
 - name: label_70
-  properties: {text: Contact Proof (any one of the following), font_size: 18, align: left}
+  properties: {text: 'Contact Proof (any one of the following) :', font_size: 18,
+    align: left}
   type: Label
   layout_properties: {grid_position: 'JJKMLG,CZUENQ TQPYOA,FEZCGI'}
 - name: label_72
-  properties: {text: Bank Statements, font_size: 18, align: left, background: '#E5E0E7 '}
+  properties: {text: 'Bank Statements :', font_size: 18, align: left, background: '#E5E0E7 '}
   type: Label
   layout_properties: {grid_position: 'JJKMLG,CZUENQ QPLOHR,EDDTHU'}
 - name: label_74
-  properties: {text: Proof of Income, font_size: 18, align: left}
+  properties: {text: 'Proof of Income :', font_size: 18, align: left}
   type: Label
   layout_properties: {grid_position: 'JJKMLG,CZUENQ PPTJZO,YPWOPJ'}
 - name: label_60
