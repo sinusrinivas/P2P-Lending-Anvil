@@ -2,94 +2,91 @@ is_package: true
 container: {type: ColumnPanel}
 components:
 - name: xy_panel_1
-  properties: {height: 491.28558349609375, role: outlined-card}
+  properties: {height: 365.28558349609375, role: outlined-card}
   type: XYPanel
-  layout_properties: {grid_position: 'RTJQRU,QDXEEL'}
+  layout_properties: {grid_position: 'GFTTDQ,TZCTZE'}
   components:
-  - name: image_1
-    properties: {height: 63.399932861328125, source: 'https://freesvg.org/img/abstract-user-flat-4.png'}
-    type: Image
-    layout_properties: {x: 3.050000000745058, y: 0, width: 66}
-    data_bindings:
-    - {property: source, code: 'self.item[''user_photo'']'}
-  - name: label_1
-    properties: {bold: true}
-    type: Label
-    layout_properties: {x: 78.48750000074506, y: 0, width: 200}
-    data_bindings:
-    - {property: text, code: 'self.item[''full_name'']', writeback: false}
-  - name: label_6
-    properties: {}
-    type: Label
-    layout_properties: {x: 78.53748779371381, y: 27.950009156018496, width: 200}
-    data_bindings:
-    - {property: text, code: 'self.item[''mobile'']', writeback: false}
+  - name: outlined_button_1
+    properties: {role: outlined-button, align: full, tooltip: '', border: '', enabled: true,
+      foreground: white, visible: true, text: Product Details, font_size: 18, font: '',
+      spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+      background: '#05264d', bold: true, underline: false, icon: ''}
+    type: Button
+    layout_properties: {x: -10.000007629394531, y: -0.857177734375, width: 937.679}
+    event_bindings: {click: outlined_button_1_click}
   - name: label_3
     properties: {role: null, align: left, tooltip: '', border: '', foreground: grey,
       visible: true, text: '--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------',
       font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small,
       italic: false, background: '', bold: false, underline: false, icon: ''}
     type: Label
-    layout_properties: {x: 0, y: 79.41071428731084, width: 937.71435546875}
+    layout_properties: {x: -10.000000000000114, y: 57.142822265625, width: 937.714}
   - name: label_4
     properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-      visible: true, text: 'Customer ID :', font_size: null, font: '', spacing_above: small,
+      visible: true, text: 'Product ID :', font_size: null, font: '', spacing_above: small,
       icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
       underline: false, icon: ''}
     type: Label
-    layout_properties: {x: 17.071465630084276, y: 130.8214503712952, width: 92.00000762939453}
+    layout_properties: {x: 61.55357360839844, y: 89.5, width: 92}
   - name: label_11
-    properties: {text: Adhar Number}
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: 'Product Group :', font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+      underline: false, icon: ''}
     type: Label
-    layout_properties: {x: 20.2321406789124, y: 181.53574480488896, width: 200.00001525878906}
-  - name: label_5
-    properties: {text: Total Open Loans}
-    type: Label
-    layout_properties: {x: 15.660668510943651, y: 329.7677394337952, width: 200.00001525878906}
+    layout_properties: {x: 61.55357360839844, y: 128.5, width: 200}
   - name: label_12
-    properties: {text: Credit Limit}
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: 'Product Name :', font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+      underline: false, icon: ''}
     type: Label
-    layout_properties: {x: 18.00002397969365, y: 233.0178309865296, width: 200.00001525878906}
+    layout_properties: {x: 61.55357360839844, y: 174.5, width: 200}
   - name: label_8
     properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-      visible: true, text: Beseem Score, font_size: null, font: '', spacing_above: small,
+      visible: true, text: Product Categories, font_size: null, font: '', spacing_above: small,
       icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
       underline: false, icon: ''}
     type: Label
-    layout_properties: {x: 20.6071406789124, y: 281.9642421193421, width: 92.00000762939453}
-  - name: label_2
+    layout_properties: {x: 61.55357360839844, y: 220.5, width: 127}
+  - name: label_5
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: Product Description, font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+      underline: false, icon: ''}
+    type: Label
+    layout_properties: {x: 61.55357360839844, y: 266.5, width: 200}
+  - name: group
     properties: {}
     type: Label
-    layout_properties: {x: 713.8572169728577, y: 333.2322169728577, width: 200.00001525878906}
+    layout_properties: {x: 690.7143096923828, y: 135.5, width: 200}
     data_bindings:
-    - {property: text, code: 'self.item[''loan_details_count'']', writeback: false}
-  - name: credit
+    - {property: text, code: 'self.item[''product_group'']', writeback: false}
+  - name: name
     properties: {}
     type: Label
-    layout_properties: {x: 717.3214503712952, y: 233.0357753224671, width: 200.00001525878906}
+    layout_properties: {x: 690.7143096923828, y: 181.5, width: 200}
     data_bindings:
-    - {property: text, code: 'self.item[''credit_limit'']', writeback: false}
-  - name: beseem
+    - {property: text, code: 'self.item[''product_name'']', writeback: false}
+  - name: category
     properties: {}
     type: Label
-    layout_properties: {x: 713.9286281056702, y: 281.0714503712952, width: 200.00001525878906}
+    layout_properties: {x: 690.7143096923828, y: 220.5, width: 200}
     data_bindings:
-    - {property: text, code: 'self.item[''beseem'']', writeback: false}
-  - name: adhar
-    properties: {}
-    type: Label
-    layout_properties: {x: 717.4106837697327, y: 188.55356707051396, width: 200.00001525878906}
+    - {property: text, code: 'self.item[''product_categories'']', writeback: false}
+  - name: text_area_1
+    properties: {role: outlined, align: left, height: 92.1429, tooltip: '', placeholder: '',
+      border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
+      auto_expand: false, font: '', spacing_above: small, spacing_below: small, italic: false,
+      background: white, bold: false, underline: false}
+    type: TextArea
+    layout_properties: {x: 669.6964263916016, y: 261.0535888671875, width: 274.7142333984375}
     data_bindings:
-    - {property: text, code: 'self.item[''adhar'']', writeback: false}
+    - {property: text, code: 'self.item[''product_description'']', writeback: false}
   - name: link_1
-    properties: {}
-    type: Label
-    layout_properties: {x: 712.7142726369202, y: 136.9464198537171, width: 200.00001525878906}
+    properties: {foreground: 'theme:Primary'}
+    type: Link
+    layout_properties: {x: 690.7143096923828, y: 89.5, width: 160}
     data_bindings:
-    - {property: text, code: 'self.item[''customer_id'']', writeback: false}
-  - name: outlined_button_1
-    properties: {text: View Loan Details, role: outlined-button, align: center, font_size: null,
-      background: '#05264d', foreground: white, bold: true}
-    type: Button
-    layout_properties: {x: 0, y: 423.16074480488896, width: 937.71435546875}
-    event_bindings: {click: outlined_button_1_click}
+    - {property: text, code: 'self.item[''product_id'']', writeback: false}
+    event_bindings: {click: link_1_click}
