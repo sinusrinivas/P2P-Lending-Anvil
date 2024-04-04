@@ -1,28 +1,33 @@
 is_package: true
 container:
   type: ColumnPanel
-  properties: {col_widths: '{"SJKBEE":20,"DPGQZE":20,"YKAVHI":15,"QDDRDX":20}'}
+  properties: {col_widths: '{}'}
 components:
-- name: label_1
-  properties: {align: center}
-  type: Label
-  layout_properties: {grid_position: 'YNGSBB,SJKBEE'}
-  data_bindings:
-  - {property: text, code: 'self.item[''sub_category'']'}
-- name: label_3
-  properties: {align: center}
-  type: Label
-  layout_properties: {grid_position: 'YNGSBB,QDDRDX'}
-  data_bindings:
-  - {property: text, code: 'self.item[''age'']'}
-- name: label_2
-  properties: {align: center}
-  type: Label
-  layout_properties: {grid_position: 'YNGSBB,DPGQZE'}
-  data_bindings:
-  - {property: text, code: 'self.item[''min_points'']'}
-- name: link_1
-  properties: {text: Edit Details}
-  type: Link
-  layout_properties: {grid_position: 'YNGSBB,YKAVHI'}
-  event_bindings: {click: link_1_click}
+- name: column_panel_1
+  properties: {col_widths: '{"XUGSTR":15,"DFFWEP":15,"GVVDXP":15,"MKJVJD":15}', role: outlined-card}
+  type: ColumnPanel
+  layout_properties: {grid_position: 'XJVKMM,DVBYAF'}
+  components:
+  - name: label_1
+    properties: {align: center}
+    type: Label
+    layout_properties: {grid_position: 'SMSCTQ,XUGSTR'}
+    data_bindings:
+    - {property: text, code: 'self.item[''sub_category'']'}
+  - name: label_3
+    properties: {align: center}
+    type: Label
+    layout_properties: {grid_position: 'SMSCTQ,DFFWEP'}
+    data_bindings:
+    - {property: text, code: 'self.item[''age'']'}
+  - name: label_2
+    properties: {align: center}
+    type: Label
+    layout_properties: {grid_position: 'SMSCTQ,GVVDXP'}
+    data_bindings:
+    - {property: text, code: 'self.item[''min_points'']'}
+  - name: link_1
+    properties: {text: Edit Details}
+    type: Link
+    layout_properties: {grid_position: 'SMSCTQ,MKJVJD'}
+    event_bindings: {click: link_1_click}

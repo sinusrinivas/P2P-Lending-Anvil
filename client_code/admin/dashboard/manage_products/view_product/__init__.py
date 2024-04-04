@@ -24,10 +24,13 @@ class view_product(view_productTemplate):
                             'product_group': i['product_group'],
                             'product_categories': i['product_categories'],
                             'processing_fee': i['processing_fee'],
+                            'product_name': i['product_name'],
+                            'product_description': i['product_description'],
                             'extension_fee': i['extension_fee']}
+                           
                            for i in self.data]
 
-            self.repeating_panel_1.items = self.result
+            self.repeating_panel_2.items = self.result
 
     def link_1_click(self, **event_args):
         open_form('admin.dashboard.manage_products')

@@ -25,7 +25,7 @@ components:
   data_bindings:
   - {property: text, code: 'self.item[''extension_fee'']'}
 - type: Link
-  properties: {}
+  properties: {foreground: 'theme:Primary Container'}
   name: link_1
   layout_properties: {column: MLIRND}
   data_bindings:
