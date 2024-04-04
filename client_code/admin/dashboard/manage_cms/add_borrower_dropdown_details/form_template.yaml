@@ -215,27 +215,25 @@ components:
   components:
   - name: column_panel_3
     properties: {role: null, tooltip: '', border: '', foreground: '', visible: false,
-      wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{"MYRYSU":10,"FMAEVI":35,"RJJXSS":15,"PXEDFC":10,"MDMWRX":50}',
+      wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{"FMAEVI":40,"RJJXSS":10,"MDMWRX":65,"EXKHYD":20,"AHHWWD":25}',
       spacing_below: small, background: ''}
     type: ColumnPanel
     layout_properties: {grid_position: 'BPEWPA,GPNRMI'}
     components:
     - name: label_11
-      properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
+      properties: {role: outlined-card, align: center, tooltip: '', border: '', foreground: '',
         visible: true, text: Add Marrital Status details, font_size: 18, font: '',
         spacing_above: small, icon_align: left, spacing_below: small, italic: false,
-        background: '', bold: true, underline: false, icon: ''}
+        background: 'theme:Disabled Container', bold: true, underline: false, icon: ''}
       type: Label
       layout_properties: {grid_position: 'SZCQOZ,KOOONE'}
     - name: label_2
       properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
         visible: true, text: Marrital status, font_size: null, font: '', spacing_above: small,
-        icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
-        underline: false, icon: ''}
+        icon_align: left, spacing_below: small, italic: false, background: 'theme:Tertiary
+          Container', bold: false, underline: false, icon: ''}
       type: Label
-      layout_properties:
-        col_widths: {}
-        grid_position: TCPJKI,MYRYSU
+      layout_properties: {grid_position: 'TCPJKI,EXKHYD'}
     - name: text_box_2
       properties: {role: outlined, align: left, hide_text: false, tooltip: '', placeholder: '',
         border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
@@ -245,7 +243,7 @@ components:
       layout_properties: {grid_position: 'TCPJKI,FMAEVI'}
       event_bindings: {}
     - name: marital_button
-      properties: {role: null, align: left, tooltip: '', border: '', enabled: true,
+      properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
         foreground: 'theme:On Primary', visible: true, text: ADD, font_size: null,
         font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
         background: '#0b2547', bold: true, underline: false, icon: ''}
@@ -254,33 +252,33 @@ components:
         col_widths: {}
         grid_position: TCPJKI,RJJXSS
       event_bindings: {click: marital_button_click}
-    - name: spacer_3
-      properties: {height: 138.42856979370117}
+    - name: spacer_1
+      properties: {height: 222.71420288085938}
       type: Spacer
-      layout_properties: {grid_position: 'THVHBG,PXEDFC'}
+      layout_properties: {grid_position: 'THVHBG,AHHWWD'}
     - name: repeating_panel_2
       properties: {item_template: admin.dashboard.manage_cms.add_borrower_dropdown_details.ItemTemplate4}
       type: RepeatingPanel
       layout_properties: {grid_position: 'THVHBG,MDMWRX'}
   - name: column_panel_4
     properties: {role: null, tooltip: '', border: '', foreground: '', visible: false,
-      wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{"YEWRHI":10,"OTDEUJ":50,"VNCDQW":10,"KGGDXI":35,"WUQBKZ":15}',
+      wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{"YEWRHI":15,"OTDEUJ":45,"VNCDQW":15,"KGGDXI":35,"WUQBKZ":10}',
       spacing_below: small, background: ''}
     type: ColumnPanel
     layout_properties: {grid_position: 'HUAZTL,ASIZQH'}
     components:
     - name: label_12
-      properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
+      properties: {role: outlined-card, align: center, tooltip: '', border: '', foreground: '',
         visible: true, text: Add Business Type details, font_size: 18, font: '', spacing_above: small,
-        icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-        underline: false, icon: ''}
+        icon_align: left, spacing_below: small, italic: false, background: 'theme:Disabled
+          Container', bold: true, underline: false, icon: ''}
       type: Label
       layout_properties: {grid_position: 'ZXISOC,XHRAXA'}
     - name: label_3
       properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
         visible: true, text: Business Type, font_size: null, font: '', spacing_above: small,
-        icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
-        underline: false, icon: ''}
+        icon_align: left, spacing_below: small, italic: false, background: 'theme:Secondary
+          Container', bold: false, underline: false, icon: ''}
       type: Label
       layout_properties: {grid_position: 'VUQPZH,VNCDQW'}
     - name: text_box_3
@@ -291,7 +289,7 @@ components:
       type: TextBox
       layout_properties: {grid_position: 'VUQPZH,KGGDXI'}
     - name: business_button
-      properties: {role: null, align: left, tooltip: '', border: '', enabled: true,
+      properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
         foreground: 'theme:On Primary', visible: true, text: ADD, font_size: null,
         font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
         background: '#0b2547', bold: true, underline: false, icon: ''}
@@ -307,23 +305,24 @@ components:
     - name: repeating_panel_3
       properties: {item_template: admin.dashboard.manage_cms.add_borrower_dropdown_details.ItemTemplate5}
       type: RepeatingPanel
-      layout_properties: {grid_position: 'XGLXMB,OTDEUJ DLOPJO,GQCIYP'}
+      layout_properties: {grid_position: 'XGLXMB,OTDEUJ FFLPQH,LGOAKW'}
   - name: column_panel_5
     properties: {role: null, tooltip: '', border: '', foreground: '', visible: false,
-      wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{"QDXMWC":10,"IKBKAY":50,"PNKEXG":10,"ETJZIO":35,"ZMUOEV":15}',
+      wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{"QDXMWC":15,"IKBKAY":45,"PNKEXG":15,"ETJZIO":35,"ZMUOEV":10}',
       spacing_below: small, background: ''}
     type: ColumnPanel
     layout_properties: {grid_position: 'JKERIG,RKCXYO'}
     components:
     - type: Label
-      properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
+      properties: {role: outlined-card, align: center, tooltip: '', border: '', foreground: '',
         visible: true, text: Add No of Employees details, font_size: 18, font: '',
         spacing_above: small, icon_align: left, spacing_below: small, italic: false,
-        background: '', bold: true, underline: false, icon: ''}
+        background: 'theme:Disabled Container', bold: true, underline: false, icon: ''}
       name: label_13
       layout_properties: {grid_position: 'MOHBLA,AZUZDZ'}
     - name: label_4
-      properties: {text: No of Employees, align: center}
+      properties: {text: No of Employees, align: center, background: 'theme:Secondary
+          Container'}
       type: Label
       layout_properties: {grid_position: 'QMFQUJ,PNKEXG'}
     - name: text_box_4
@@ -335,7 +334,7 @@ components:
       layout_properties: {grid_position: 'QMFQUJ,ETJZIO'}
       event_bindings: {pressed_enter: text_box_4_pressed_enter}
     - name: no_of_employee_button
-      properties: {role: null, align: left, tooltip: '', border: '', enabled: true,
+      properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
         foreground: 'theme:On Primary', visible: true, text: ADD, font_size: null,
         font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
         background: '#0b2547', bold: true, underline: false, icon: ''}
@@ -354,23 +353,23 @@ components:
       layout_properties: {grid_position: 'WYXHCY,IKBKAY'}
   - name: column_panel_6
     properties: {role: null, tooltip: '', border: '', foreground: '', visible: false,
-      wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{"DRKQUU":10,"EYVNEL":35,"ZLWYDP":15,"BIBMFR":10,"ZFHNOV":50}',
+      wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{"DRKQUU":15,"EYVNEL":35,"ZLWYDP":10,"BIBMFR":15,"ZFHNOV":45}',
       spacing_below: small, background: ''}
     type: ColumnPanel
     layout_properties: {grid_position: 'PJFWVO,VJSTFE'}
     components:
     - type: Label
-      properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
+      properties: {role: outlined-card, align: center, tooltip: '', border: '', foreground: '',
         visible: true, text: Add Profession details, font_size: 18, font: '', spacing_above: small,
-        icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-        underline: false, icon: ''}
+        icon_align: left, spacing_below: small, italic: false, background: 'theme:Disabled
+          Container', bold: true, underline: false, icon: ''}
       name: label_15
       layout_properties: {grid_position: 'YJMPEW,WMXJPX'}
     - name: label_5
       properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
         visible: true, text: Profession, font_size: null, font: '', spacing_above: small,
-        icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
-        underline: false, icon: ''}
+        icon_align: left, spacing_below: small, italic: false, background: 'theme:Secondary
+          Container', bold: false, underline: false, icon: ''}
       type: Label
       layout_properties: {grid_position: 'KBWQKY,DRKQUU'}
     - name: text_box_5
@@ -381,7 +380,7 @@ components:
       type: TextBox
       layout_properties: {grid_position: 'KBWQKY,EYVNEL'}
     - name: profession_button
-      properties: {role: null, align: left, tooltip: '', border: '', enabled: true,
+      properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
         foreground: 'theme:On Primary', visible: true, text: ADD, font_size: null,
         font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
         background: '#0b2547', bold: true, underline: false, icon: ''}
@@ -400,20 +399,21 @@ components:
       layout_properties: {grid_position: 'JBRVUS,ZFHNOV'}
   - name: column_panel_7
     properties: {role: null, tooltip: '', border: '', foreground: '', visible: false,
-      wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{"YGSFMU":10,"PRNBCJ":50,"INOOVX":10,"UVMZPY":35,"LVNQVQ":15}',
+      wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{"YGSFMU":15,"PRNBCJ":45,"INOOVX":15,"UVMZPY":35,"LVNQVQ":10}',
       spacing_below: small, background: ''}
     type: ColumnPanel
     layout_properties: {grid_position: 'AVTHQO,EJXJOA'}
     components:
     - type: Label
-      properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
+      properties: {role: outlined-card, align: center, tooltip: '', border: '', foreground: '',
         visible: true, text: Add Employee type details, font_size: 18, font: '', spacing_above: small,
-        icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-        underline: false, icon: ''}
+        icon_align: left, spacing_below: small, italic: false, background: 'theme:Disabled
+          Container', bold: true, underline: false, icon: ''}
       name: label_16
       layout_properties: {grid_position: 'YHDDSO,TZQSUK'}
     - name: label_6
-      properties: {text: Employee Type, align: center}
+      properties: {text: Employee Type, align: center, background: 'theme:Secondary
+          Container'}
       type: Label
       layout_properties: {grid_position: 'AKZUJT,INOOVX'}
     - name: text_box_6
@@ -424,7 +424,7 @@ components:
       type: TextBox
       layout_properties: {grid_position: 'AKZUJT,UVMZPY'}
     - name: emp_type_button
-      properties: {role: null, align: left, tooltip: '', border: '', enabled: true,
+      properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
         foreground: 'theme:On Primary', visible: true, text: ADD, font_size: null,
         font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
         background: '#0b2547', bold: true, underline: false, icon: ''}
@@ -443,20 +443,21 @@ components:
       layout_properties: {grid_position: 'EVZQPH,PRNBCJ'}
   - name: column_panel_8
     properties: {role: null, tooltip: '', border: '', foreground: '', visible: false,
-      wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{"CJZWDN":10,"YRGFHG":50,"VQAEKD":10,"YKSZRZ":35,"WULNCN":15}',
+      wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{"CJZWDN":15,"YRGFHG":45,"VQAEKD":15,"YKSZRZ":35,"WULNCN":10}',
       spacing_below: small, background: ''}
     type: ColumnPanel
     layout_properties: {grid_position: 'BQORIN,LCGKRO'}
     components:
     - type: Label
-      properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
+      properties: {role: outlined-card, align: center, tooltip: '', border: '', foreground: '',
         visible: true, text: Add Organization Type details, font_size: 18, font: '',
         spacing_above: small, icon_align: left, spacing_below: small, italic: false,
-        background: '', bold: true, underline: false, icon: ''}
+        background: 'theme:Disabled Container', bold: true, underline: false, icon: ''}
       name: label_17
       layout_properties: {grid_position: 'HTBTDP,UDQZHL'}
     - name: label_7
-      properties: {text: Organization Type, align: center}
+      properties: {text: Organization Type, align: center, background: 'theme:Secondary
+          Container'}
       type: Label
       layout_properties: {grid_position: 'PZTFHW,VQAEKD'}
     - name: text_box_7
@@ -467,7 +468,7 @@ components:
       type: TextBox
       layout_properties: {grid_position: 'PZTFHW,YKSZRZ'}
     - name: organization_button
-      properties: {role: null, align: left, tooltip: '', border: '', enabled: true,
+      properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
         foreground: 'theme:On Primary', visible: true, text: ADD, font_size: null,
         font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
         background: '#0b2547', bold: true, underline: false, icon: ''}
@@ -486,20 +487,21 @@ components:
       layout_properties: {grid_position: 'GGHQIC,YRGFHG'}
   - name: column_panel_9
     properties: {role: null, tooltip: '', border: '', foreground: '', visible: false,
-      wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{"GLARMC":10,"RBXEQX":50,"JJAESS":10,"SIQPBN":35,"SGYFIH":15}',
+      wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{"GLARMC":15,"RBXEQX":45,"JJAESS":15,"SIQPBN":35,"SGYFIH":10}',
       spacing_below: small, background: ''}
     type: ColumnPanel
     layout_properties: {grid_position: 'XYTGID,EKUAGS'}
     components:
     - type: Label
-      properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
+      properties: {role: outlined-card, align: center, tooltip: '', border: '', foreground: '',
         visible: true, text: Add Account Type details, font_size: 18, font: '', spacing_above: small,
-        icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-        underline: false, icon: ''}
+        icon_align: left, spacing_below: small, italic: false, background: 'theme:Disabled
+          Container', bold: true, underline: false, icon: ''}
       name: label_18
       layout_properties: {grid_position: 'PRGTZM,XPICGQ'}
     - name: label_8
-      properties: {text: Account Type, align: center}
+      properties: {text: Account Type, align: center, background: 'theme:Secondary
+          Container'}
       type: Label
       layout_properties: {grid_position: 'NZLWLF,JJAESS'}
     - name: text_box_8
@@ -510,7 +512,7 @@ components:
       type: TextBox
       layout_properties: {grid_position: 'NZLWLF,SIQPBN'}
     - name: accountbutton
-      properties: {role: null, align: left, tooltip: '', border: '', enabled: true,
+      properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
         foreground: 'theme:On Primary', visible: true, text: ADD, font_size: null,
         font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
         background: '#0b2547', bold: true, underline: false, icon: ''}
@@ -529,20 +531,21 @@ components:
       layout_properties: {grid_position: 'TGGETL,RBXEQX'}
   - name: column_panel_10
     properties: {role: null, tooltip: '', border: '', foreground: '', visible: false,
-      wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{"ACRDSD":10,"OXEFAE":35,"OZGSCX":15,"XOPJRZ":10,"FYGSMJ":50}',
+      wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{"ACRDSD":15,"OXEFAE":35,"OZGSCX":10,"XOPJRZ":15,"FYGSMJ":45}',
       spacing_below: small, background: ''}
     type: ColumnPanel
     layout_properties: {grid_position: 'IWWPLX,ZWDXQB'}
     components:
     - type: Label
-      properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
+      properties: {role: outlined-card, align: center, tooltip: '', border: '', foreground: '',
         visible: true, text: Add Qualification details, font_size: 18, font: '', spacing_above: small,
-        icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-        underline: false, icon: ''}
+        icon_align: left, spacing_below: small, italic: false, background: 'theme:Disabled
+          Container', bold: true, underline: false, icon: ''}
       name: label_14
       layout_properties: {grid_position: 'TPHGGJ,ZEPRGQ'}
     - name: label_9
-      properties: {text: Qualification, align: center}
+      properties: {text: Qualification, align: center, background: 'theme:Secondary
+          Container'}
       type: Label
       layout_properties: {grid_position: 'LOSRQA,ACRDSD'}
     - name: text_box_9
@@ -553,7 +556,7 @@ components:
       type: TextBox
       layout_properties: {grid_position: 'LOSRQA,OXEFAE'}
     - name: qualification
-      properties: {role: null, align: left, tooltip: '', border: '', enabled: true,
+      properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
         foreground: 'theme:On Primary', visible: true, text: ADD, font_size: null,
         font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
         background: '#0b2547', bold: true, underline: false, icon: ''}
@@ -572,20 +575,21 @@ components:
       layout_properties: {grid_position: 'VRTHOW,FYGSMJ'}
   - name: column_panel_10_copy
     properties: {role: null, tooltip: '', border: '', foreground: '', visible: false,
-      wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{"ACRDSD":10,"OXEFAE":40,"XOPJRZ":10,"NRUXTE":15,"EARFPK":42}',
+      wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{"ACRDSD":15,"OXEFAE":40,"XOPJRZ":15,"NRUXTE":10,"EARFPK":45}',
       spacing_below: small, background: ''}
     type: ColumnPanel
     layout_properties: {grid_position: 'KBHWGG,SVBISJ'}
     components:
     - name: label_14_copy
-      properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
+      properties: {role: outlined-card, align: center, tooltip: '', border: '', foreground: '',
         visible: true, text: Add Salary Type details, font_size: 18, font: '', spacing_above: small,
-        icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-        underline: false, icon: ''}
+        icon_align: left, spacing_below: small, italic: false, background: 'theme:Disabled
+          Container', bold: true, underline: false, icon: ''}
       type: Label
       layout_properties: {grid_position: 'VDAPOV,OCZSFC'}
     - name: label_9_copy
-      properties: {text: Salary Type, align: center}
+      properties: {text: Salary Type, align: center, background: 'theme:Secondary
+          Container'}
       type: Label
       layout_properties: {grid_position: 'LOSRQA,ACRDSD'}
     - name: text_box_9_copy
@@ -596,7 +600,7 @@ components:
       type: TextBox
       layout_properties: {grid_position: 'LOSRQA,OXEFAE'}
     - name: salary_button
-      properties: {role: null, align: left, tooltip: '', border: '', enabled: true,
+      properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
         foreground: 'theme:Tertiary Container', visible: true, text: ADD, font_size: null,
         font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
         background: '#0b2547', bold: true, underline: false, icon: ''}
@@ -615,23 +619,23 @@ components:
       layout_properties: {grid_position: 'VRTHOW,EARFPK'}
   - name: column_panel_04
     properties: {role: null, tooltip: '', border: '', foreground: '', visible: false,
-      wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{"MYRYSU":10,"FMAEVI":35,"RJJXSS":15,"PXEDFC":5}',
+      wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{"MYRYSU":15,"FMAEVI":35,"RJJXSS":10,"PXEDFC":10,"RWGYXC":29}',
       spacing_below: small, background: ''}
     type: ColumnPanel
     layout_properties: {grid_position: 'GLHQNR,JUWWSV'}
     components:
     - name: label_11_copy
-      properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
+      properties: {role: outlined-card, align: center, tooltip: '', border: '', foreground: '',
         visible: true, text: Self Employment, font_size: 18, font: '', spacing_above: small,
-        icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-        underline: false, icon: ''}
+        icon_align: left, spacing_below: small, italic: false, background: 'theme:Disabled
+          Container', bold: true, underline: false, icon: ''}
       type: Label
       layout_properties: {grid_position: 'SZCQOZ,KOOONE'}
     - name: label_2_copy
       properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
         visible: true, text: Self Employment, font_size: null, font: '', spacing_above: small,
-        icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
-        underline: false, icon: ''}
+        icon_align: left, spacing_below: small, italic: false, background: 'theme:Secondary
+          Container', bold: false, underline: false, icon: ''}
       type: Label
       layout_properties:
         col_widths: {}
@@ -645,7 +649,7 @@ components:
       layout_properties: {grid_position: 'TCPJKI,FMAEVI'}
       event_bindings: {}
     - name: marital_button_copy
-      properties: {role: null, align: left, tooltip: '', border: '', enabled: true,
+      properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
         foreground: 'theme:On Primary', visible: true, text: ADD, font_size: null,
         font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
         background: '#0b2547', bold: true, underline: false, icon: ''}
@@ -664,23 +668,23 @@ components:
       layout_properties: {grid_position: 'THVHBG,RWGYXC'}
   - name: column_panel_11
     properties: {role: null, tooltip: '', border: '', foreground: '', visible: false,
-      wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{"ZVWPOF":10,"SUKCJD":35,"CSNNJQ":15,"LIEPZE":5}',
+      wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{"ZVWPOF":15,"SUKCJD":35,"CSNNJQ":10,"LIEPZE":10,"JPALOD":31}',
       spacing_below: small, background: ''}
     type: ColumnPanel
     layout_properties: {grid_position: 'OGUIXC,FJFKHH'}
     components:
     - name: label_010_copy
-      properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
+      properties: {role: outlined-card, align: center, tooltip: '', border: '', foreground: '',
         visible: true, text: Add Spouse Profession, font_size: 18, font: '', spacing_above: small,
-        icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-        underline: false, icon: ''}
+        icon_align: left, spacing_below: small, italic: false, background: 'theme:Disabled
+          Container', bold: true, underline: false, icon: ''}
       type: Label
       layout_properties: {grid_position: 'HDLRVE,NMTFRV'}
     - name: label_1_copy
       properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
         visible: true, text: Spouse Profession, font_size: null, font: '', spacing_above: small,
-        icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
-        underline: false, icon: ''}
+        icon_align: left, spacing_below: small, italic: false, background: 'theme:Secondary
+          Container', bold: false, underline: false, icon: ''}
       type: Label
       layout_properties:
         col_widths: {}
@@ -694,7 +698,7 @@ components:
       layout_properties: {grid_position: 'JDKCYC,SUKCJD'}
       event_bindings: {pressed_enter: text_box_1_pressed_enter}
     - name: gender_button_1_copy
-      properties: {role: null, align: left, tooltip: '', border: '', enabled: true,
+      properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
         foreground: 'theme:On Primary', visible: true, text: ADD, font_size: null,
         font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
         background: '#0b2547', bold: true, underline: false, icon: ''}
