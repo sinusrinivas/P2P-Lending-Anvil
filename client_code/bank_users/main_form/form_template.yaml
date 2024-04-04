@@ -1043,10 +1043,6 @@ components:
     properties: {source: _/theme/india map.png, display_mode: original_size, height: 340.22222900390625}
     type: Image
     layout_properties: {row: KSGGGV, width_xs: 4, col_xs: 7}
-  - name: label_75
-    properties: {}
-    type: Label
-    layout_properties: {row: BGLGUV, width_xs: 3, col_xs: 2}
   - name: button_2
     properties: {text: Register Now, spacing_below: medium, background: '#094586',
       foreground: White, role: filled-button, font_size: 20}
@@ -1093,67 +1089,64 @@ components:
   properties: {height: 15.199981689453125}
   type: Spacer
   layout_properties: {grid_position: 'MQLTXK,CFPXXS'}
-- name: xy_panel_10
-  properties: {height: 158.39993286132812, background: '#Edf0f4'}
-  type: XYPanel
-  layout_properties: {grid_position: 'MNONJR,SVBRAQ', full_width_row: true}
-  components:
-  - name: column_panel_2
-    properties: {background: '', col_widths: '{"XHAILN":12,"SPJHOO":8,"WNWVDK":16,"YBBTWP":12,"QNSOAB":12}'}
-    type: ColumnPanel
-    layout_properties: {x: 0, y: 0, width: 1672.5401708984375}
-    components:
-    - name: image_29
-      properties: {vertical_align: center, height: 113, border: '', display_mode: zoom_to_fill,
-        spacing_above: none, source: _/theme/titled-design.jpg, spacing_below: large,
-        background: '', horizontal_align: left}
-      type: Image
-      layout_properties: {grid_position: 'MMFQSR,XHAILN'}
-      data_bindings: []
-    - name: spacer_41
-      properties: {height: 32}
-      type: Spacer
-      layout_properties: {grid_position: 'MMFQSR,SPJHOO'}
-    - name: link_7
-      properties: {text: About, bold: true, font_size: 16, underline: true, foreground: black}
-      type: Link
-      layout_properties: {grid_position: 'MMFQSR,WNWVDK'}
-      event_bindings: {click: link_7_click}
-    - name: link_10
-      properties: {text: Investment, foreground: black, bold: true, font_size: 16,
-        underline: true}
-      type: Link
-      layout_properties: {grid_position: 'MMFQSR,WNWVDK NYPJXO,GZMCYD'}
-    - name: link_13
-      properties: {text: How It Works, foreground: black, bold: true, font_size: 16,
-        underline: true}
-      type: Link
-      layout_properties: {grid_position: 'MMFQSR,WNWVDK KEVRNO,FAGUHN'}
-    - name: link_11
-      properties: {text: Borrow, font_size: 16, bold: true, foreground: black, underline: true}
-      type: Link
-      layout_properties: {grid_position: 'MMFQSR,YBBTWP MOYVBC,DMAAWC'}
-    - name: link_8
-      properties: {text: Contact Us, foreground: black, underline: true, font_size: 16,
-        bold: true, align: left}
-      type: Link
-      layout_properties: {grid_position: 'MMFQSR,YBBTWP KKGCYO,GSVXOQ'}
-      event_bindings: {click: link_8_click}
-    - name: link_12
-      properties: {text: Help, foreground: black, bold: true, font_size: 16, underline: true}
-      type: Link
-      layout_properties: {grid_position: 'MMFQSR,QNSOAB IRVWEK,HAZHMM', full_width_row: true}
-      event_bindings: {click: link_12_click}
-    - name: link_9
-      properties: {text: Products, bold: true, font_size: 16, underline: true, foreground: black}
-      type: Link
-      layout_properties: {grid_position: 'MMFQSR,QNSOAB MCUKZK,LUZRLG'}
-      event_bindings: {click: link_9_click}
-- name: column_panel_3
-  properties: {}
+- name: column_panel_2_copy
+  properties: {background: '#CBD5F3 ', col_widths: '{"XHAILN":12,"SPJHOO":8,"WNWVDK":16,"YBBTWP":12,"QNSOAB":12}'}
   type: ColumnPanel
-  layout_properties: {grid_position: 'XHVXTU,AHUMDC'}
-  components: []
+  layout_properties: {grid_position: 'VCGNBP,UPHTSU', full_width_row: true}
+  components:
+  - name: spacer_15_copy
+    properties: {height: 14.888885498046875}
+    type: Spacer
+    layout_properties: {grid_position: 'MMFQSR,XHAILN GZEMUS,BUIUBY'}
+  - name: image_29_copy
+    properties: {vertical_align: center, height: 113, border: '', display_mode: zoom_to_fill,
+      spacing_above: none, source: _/theme/titled-design.jpg, spacing_below: large,
+      background: '', horizontal_align: left}
+    type: Image
+    layout_properties: {grid_position: 'MMFQSR,XHAILN'}
+    data_bindings: []
+  - name: spacer_41_copy
+    properties: {height: 21.555511474609375}
+    type: Spacer
+    layout_properties: {grid_position: 'MMFQSR,SPJHOO'}
+  - name: link_7_copy
+    properties: {text: About Us, bold: true, font_size: 16, underline: true, foreground: black}
+    type: Link
+    layout_properties: {grid_position: 'MMFQSR,WNWVDK'}
+    event_bindings: {click: link_7_click}
+  - name: link_10_copy
+    properties: {text: Investment, foreground: black, bold: true, font_size: 16, underline: true}
+    type: Link
+    layout_properties: {grid_position: 'MMFQSR,WNWVDK NYPJXO,GZMCYD'}
+  - name: link_13_copy
+    properties: {text: How It Works, foreground: black, bold: true, font_size: 16,
+      underline: true}
+    type: Link
+    layout_properties: {grid_position: 'MMFQSR,WNWVDK KEVRNO,FAGUHN'}
+  - name: link_11_copy
+    properties: {text: Borrow, font_size: 16, bold: true, foreground: black, underline: true}
+    type: Link
+    layout_properties: {grid_position: 'MMFQSR,YBBTWP MOYVBC,DMAAWC'}
+  - name: link_8_copy
+    properties: {text: Contact Us, foreground: black, underline: true, font_size: 16,
+      bold: true, align: left}
+    type: Link
+    layout_properties: {grid_position: 'MMFQSR,YBBTWP KKGCYO,GSVXOQ'}
+    event_bindings: {click: link_8_click}
+  - name: link_12_copy
+    properties: {text: Help, foreground: black, bold: true, font_size: 16, underline: true}
+    type: Link
+    layout_properties: {grid_position: 'MMFQSR,QNSOAB IRVWEK,HAZHMM', full_width_row: true}
+    event_bindings: {click: link_12_click}
+  - name: link_9_copy
+    properties: {text: Products, bold: true, font_size: 16, underline: true, foreground: black}
+    type: Link
+    layout_properties: {grid_position: 'MMFQSR,QNSOAB MCUKZK,LUZRLG'}
+    event_bindings: {click: link_9_click}
+  - name: spacer_16_copy
+    properties: {height: '14'}
+    type: Spacer
+    layout_properties: {grid_position: 'EEWYZY,CQBPUE'}
 - name: grid_panel_2
   properties: {spacing_above: small, spacing_below: small, background: '#05264d',
     foreground: '', border: '', visible: true, role: null, tooltip: ''}
