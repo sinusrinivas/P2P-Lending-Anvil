@@ -71,8 +71,8 @@ class star_1_borrower_registration_form_4_loan(star_1_borrower_registration_form
      self.update_loan_status('home_loan', 'yes')
 
   def button_2_1_click(self, **event_args):
-     self.button_1_1.background = '#0a2346'
-     self.button_2_1.background = '#939191'
+     self.button_1_1.background = '#939191'
+     self.button_2_1.background = '#0a2346'
      self.update_loan_status('home_loan', 'no')
 
   def button_1_2_click(self, **event_args):
