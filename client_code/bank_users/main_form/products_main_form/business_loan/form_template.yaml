@@ -16,13 +16,17 @@ components:
     - name: label_1
       properties: {text: 'Instant, Unsecured Business
 
-          Funding Just a Click Away!', align: left, bold: true, font_size: 35}
+          Funding Just a Click Away!', align: left, bold: true, font_size: 40}
       type: Label
       layout_properties: {grid_position: 'AQSDCK,MRETIW'}
+    - name: spacer_8
+      properties: {height: '12'}
+      type: Spacer
+      layout_properties: {grid_position: 'JIZFNE,AEXDNX'}
     - name: label_2
       properties: {text: "Looking to grow your team, diversify your services, or finance\
           \ your next business milestone? \nExplore i2iFunding's peer-to-peer business\
-          \ loans in India.\n", bold: false, font_size: 20}
+          \ loans in India.\n", bold: false, font_size: 23}
       type: Label
       layout_properties: {grid_position: 'RPUBYC,GZZIWE'}
     - name: spacer_1
@@ -58,7 +62,8 @@ components:
       type: Label
       layout_properties: {grid_position: 'JLRIKH,GGXYID RVZGCL,VJPOPZ'}
     - name: image_4
-      properties: {source: _/theme/collateral.png, display_mode: shrink_to_fit, height: '80'}
+      properties: {source: _/theme/collateral.png, display_mode: shrink_to_fit, height: '80',
+        visible: true}
       type: Image
       layout_properties: {grid_position: 'JLRIKH,HLAVTK ENGADE,ZFSAEA'}
     - name: label_6
@@ -117,6 +122,10 @@ components:
       font_size: 20}
     type: Label
     layout_properties: {grid_position: 'LIADHX,IVQDGX'}
+  - name: spacer_10
+    properties: {height: '25'}
+    type: Spacer
+    layout_properties: {grid_position: 'DRXBML,RWKQQR'}
   - name: content_panel_copy_copy
     properties: {background: 'theme:Outline'}
     type: ColumnPanel
@@ -211,11 +220,89 @@ components:
       properties: {height: 22}
       type: Spacer
       layout_properties: {grid_position: 'ZWEBYU,TDEFNU'}
+  - name: spacer_9
+    properties: {height: '25'}
+    type: Spacer
+    layout_properties: {grid_position: 'NKFHNI,ZKVQHM'}
   - name: label_14
     properties: {text: Bank Loans Versus Online P2P Business Loans, bold: true, align: center,
       font_size: 30}
     type: Label
     layout_properties: {grid_position: 'YUPZOM,OVUMPJ'}
+  - name: label_15
+    properties: {text: 'Peer to Peer lending is a new and better way of taking business
+        loans – quicker, and more affordable, than banks or NBFCs!', align: left,
+      font_size: 17}
+    type: Label
+    layout_properties: {grid_position: 'RDUPQZ,UCBNXR'}
+  - name: label_16
+    properties: {text: 'If you’ve ever applied for a business loan at a bank, you’d
+        agree that the process is complicated, time-consuming, and confusing for all
+        — except for the bank staff! Besides, banks and other traditional lenders
+        are typically meant to cater to corporate customers or wealthy individuals.
+        Borrowers with small requirements automatically get lower priority.', font_size: 17}
+    type: Label
+    layout_properties: {grid_position: 'RPNKAT,OQWOFT'}
+  - name: label_17
+    properties: {text: 'On the other hand, private NBFCs with a clear focus on profitability
+        can burn a deep hole in your pocket. And then there are local money lenders,
+        the ‘Sharks’ of modern times, who provide doorstep services but at exorbitant
+        costs. Hence, the search for an easy yet affordable business loan is never-ending.',
+      font_size: 17}
+    type: Label
+    layout_properties: {grid_position: 'ANTVTN,KGIPOW'}
+  - name: label_18
+    properties: {text: 'But not anymore. With i2ifunding, getting a business loan
+        is quick, affordable, and hassle-free! On our platform, you can borrow:',
+      font_size: 17}
+    type: Label
+    layout_properties: {grid_position: 'FCIYWS,FTYIYF'}
+  - name: label_19
+    properties: {text: '> A fixed sum of money', font_size: 17}
+    type: Label
+    layout_properties: {grid_position: 'JBPNCT,IGCPMV'}
+  - name: label_20
+    properties: {text: '> For a fixed term', font_size: 17}
+    type: Label
+    layout_properties: {grid_position: 'KREQFE,BSANII'}
+  - name: label_21
+    properties: {text: '> At a fixed rate of interest', font_size: 17}
+    type: Label
+    layout_properties: {grid_position: 'RABKRX,FNYAJW'}
+  - name: label_22
+    properties: {text: …with just a few clicks on the mouse!…with just a few clicks on the mouse!,
+      font_size: 17}
+    type: Label
+    layout_properties: {grid_position: 'SWREOR,YTUILW'}
+  - name: label_23
+    properties: {text: 'Furthermore, funds are deposited into your account on the
+        next business day with minimal paperwork, sourced from peers rather than a
+        bank. This model often offers better interest rates and terms as individual
+        investors have lower overhead costs compared to banks, increasing the likelihood
+        of favorable rates and terms.
+
+        ', font_size: 17}
+    type: Label
+    layout_properties: {grid_position: 'KJDKZQ,VIFCAT'}
+  - name: label_24
+    properties: {text: 'Why choose GTPL for your business loan needs?
+
+        ', align: center, bold: true, font_size: 30}
+    type: Label
+    layout_properties: {grid_position: 'BRXMCD,XADSUA'}
+  - name: spacer_11
+    properties: {height: 32}
+    type: Spacer
+    layout_properties: {grid_position: 'ODOPHV,UILMGN'}
+  - name: content_panel_copy_copy_copy
+    properties: {background: 'theme:Outline'}
+    type: ColumnPanel
+    layout_properties: {grid_position: 'INCOTX,TNZFAG', full_width_row: true}
+    components:
+    - name: spacer_1_copy_copy
+      properties: {height: '32'}
+      type: Spacer
+      layout_properties: {grid_position: 'FTRYFN,KRRVLT'}
 - type: FlowPanel
   properties: {}
   name: navbar_links
