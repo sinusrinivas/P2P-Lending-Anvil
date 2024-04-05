@@ -89,38 +89,43 @@ def get_user_points(id):
         else:
            print("Qualification not found in categories.")
 
-        profession_search = app_tables.fin_admin_beseem_categories.search(group_name='profession', sub_category=profession.lower())
+        profession_search = app_tables.fin_admin_beseem_categories.search(group_name='profession')
         if profession_search:
-           profession_points = profession_search[0]['min_points']
-           print("Profession Points:", profession_points)
-           user_points += profession_points
+           for profession_item in profession_search:
+             if profession_item['sub_category'].lower() == profession.lower():
+               profession_points = profession_item['min_points']
+               print("Profession Points:", profession_points)
+               user_points += profession_points
+               break
+           else:
+             print("No matching profession found in the database")
         else:
-            print("No matching profession found in the database")
+         print("No professions found in the database")
 
-            if profession == 'self employment':
-                self_employment_search = app_tables.fin_admin_beseem_categories.search(group_name='profession', sub_category=self_employment.lower())
-                if self_employment_search:
-                    self_employment_points = self_employment_search[0]['min_points']
-                    print("self employment Points:", self_employment_points)
-                    user_points += self_employment_points
+            # if profession == 'self employment':
+            #     self_employment_search = app_tables.fin_admin_beseem_categories.search(group_name='profession', sub_category=self_employment.lower())
+            #     if self_employment_search:
+            #         self_employment_points = self_employment_search[0]['min_points']
+            #         print("self employment Points:", self_employment_points)
+            #         user_points += self_employment_points
                 
-            elif profession == 'employee':
-                organization_type_search = app_tables.fin_admin_beseem_categories.search(group_name='organization_type', sub_category=organization_type.lower())
-                if organization_type_search:
-                    organization_type_points = organization_type_search[0]['min_points']
-                    print("Organization type Points:", organization_type_points)
-                    user_points += organization_type_points
-                salary_type_search = app_tables.fin_admin_beseem_categories.search(group_name='salary_type', sub_category=salary_type.lower())
-                if salary_type_search:
-                    salary_type_points = salary_type_search[0]['min_points']
-                    print("Salary type Points:", salary_type_points)
+            # elif profession == 'employee':
+            #     organization_type_search = app_tables.fin_admin_beseem_categories.search(group_name='organization_type', sub_category=organization_type.lower())
+            #     if organization_type_search:
+            #         organization_type_points = organization_type_search[0]['min_points']
+            #         print("Organization type Points:", organization_type_points)
+            #         user_points += organization_type_points
+            #     salary_type_search = app_tables.fin_admin_beseem_categories.search(group_name='salary_type', sub_category=salary_type.lower())
+            #     if salary_type_search:
+            #         salary_type_points = salary_type_search[0]['min_points']
+            #         print("Salary type Points:", salary_type_points)
 
-            elif profession == 'business':
-                business_age_search = app_tables.fin_admin_beseem_categories.search(group_name='age_of_business', sub_category=age_of_business.lower())
-                if business_age_search:
-                    business_age_points = business_age_search[0]['min_points']
-                    print("Business Age Points:", business_age_points)
-                    user_points += business_age_points
+            # elif profession == 'business':
+            #     business_age_search = app_tables.fin_admin_beseem_categories.search(group_name='age_of_business', sub_category=age_of_business.lower())
+            #     if business_age_search:
+            #         business_age_points = business_age_search[0]['min_points']
+            #         print("Business Age Points:", business_age_points)
+            #         user_points += business_age_points
                   
         marital_status_search = app_tables.fin_admin_beseem_categories.search(group_name='marital_status', sub_category=marital_status.lower(), age=user_age_range)
         if marital_status_search:
