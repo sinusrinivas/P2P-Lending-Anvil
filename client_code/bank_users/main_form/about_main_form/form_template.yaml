@@ -1,6 +1,6 @@
 container:
   type: ColumnPanel
-  properties: {col_widths: '{"ODXPBD":50,"RPSFHE":10,"DPDILZ":40,"FFNWMN":20,"undefined":25,"ERTZBE":35,"VTZQBG":25,"MWEDAB":35,"DIRGNU":35,"XWFLXI":25,"QLSKDA":25,"MZBUKN":35,"CWPKWV":35,"MNUGRA":25,"SEEDDJ":25,"TCOENG":35,"OXCRMD":25,"KRXCWE":35,"XPMLRH":35,"UNDVYZ":25,"YBYIUP":25,"SEGFMP":35,"NDEQDJ":35,"NPYZII":25,"BZINVD":12,"HKZYDC":12,"EKJKUU":12,"MCZALC":12,"JIANGF":12}'}
+  properties: {col_widths: '{"ODXPBD":50,"RPSFHE":10,"DPDILZ":40,"FFNWMN":20,"undefined":25,"ERTZBE":35,"VTZQBG":25,"MWEDAB":35,"DIRGNU":35,"XWFLXI":25,"QLSKDA":25,"MZBUKN":35,"CWPKWV":35,"MNUGRA":25,"SEEDDJ":25,"TCOENG":35,"OXCRMD":25,"KRXCWE":35,"XPMLRH":35,"UNDVYZ":25,"YBYIUP":25,"SEGFMP":35,"NDEQDJ":35,"NPYZII":25,"BZINVD":12,"HKZYDC":12,"EKJKUU":12,"MCZALC":12,"JIANGF":12,"QJOEZY":15,"UGAQHF":20,"RHQTAG":10,"ARUQJT":17,"BQTJIG":10}'}
 components:
 - name: flow_panel_1
   properties: {align: justify}
@@ -61,17 +61,17 @@ components:
   type: Spacer
   layout_properties: {grid_position: 'GNWZUK,KTTIXH'}
 - name: label_2
-  properties: {text: Kotak is a Leading Peer to Peer Lending Platform in India, align: center,
+  properties: {text: GTPL is a Leading Peer to Peer Lending Platform in India, align: center,
     bold: true, font_size: 25}
   type: Label
   layout_properties: {grid_position: 'IRIMNO,KBDRET'}
 - name: label_3
-  properties: {text: Kotak offers non-traditional investment opportunities for investors and access to low-cost personal loans for borrowers,
+  properties: {text: GTPL offers non-traditional investment opportunities for investors and access to low-cost personal loans for borrowers,
     font_size: 23, align: center}
   type: Label
   layout_properties: {grid_position: 'IGSOPT,XIRLTP'}
 - name: label_1
-  properties: {text: We’re changing the way India builds wealth, bold: true, font_size: 40,
+  properties: {text: We’re changing the way India builds wealth, bold: true, font_size: 25,
     align: center, background: '#E8E5ED'}
   type: Label
   layout_properties: {grid_position: 'QEBYCM,WTHGLY', full_width_row: true}
@@ -109,7 +109,7 @@ components:
   type: Spacer
   layout_properties: {grid_position: 'JYQKOZ,RAUEBS'}
 - name: label_7
-  properties: {text: About Kotak, align: center, bold: true, font_size: 30}
+  properties: {text: About GTPL, align: center, bold: true, font_size: 30}
   type: Label
   layout_properties: {grid_position: 'WGOGKC,YFWYFJ'}
 - name: spacer_13
@@ -121,7 +121,7 @@ components:
   type: Spacer
   layout_properties: {grid_position: ',undefined BJMYSW,DVVHGW'}
 - name: image_3
-  properties: {source: _/theme/p2p.png, display_mode: shrink_to_fit, height: 318.6000061035156,
+  properties: {source: _/theme/p2p (2).png, display_mode: shrink_to_fit, height: 357.39996337890625,
     background: ''}
   type: Image
   layout_properties: {grid_position: ',undefined TKSFBE,XSHAZS'}
@@ -152,7 +152,7 @@ components:
   type: Spacer
   layout_properties: {grid_position: 'MCHGHH,DOJNHQ'}
 - name: label_41
-  properties: {text: Our Values, bold: true, font_size: 35, align: center}
+  properties: {text: Our Values, bold: true, font_size: 30, align: center}
   type: Label
   layout_properties: {grid_position: 'WHJGUG,VGWTZV'}
 - name: spacer_17
@@ -161,50 +161,50 @@ components:
   layout_properties: {grid_position: 'TAVMSK,EANJPG'}
 - name: image_10
   properties: {source: _/theme/integrity.svg, display_mode: original_size, height: 76.39993286132812,
-    horizontal_align: left}
+    horizontal_align: center}
   type: Image
   layout_properties: {grid_position: 'OHDPIG,BNCBLN IQLWEP,HXRYEW'}
 - name: label_42
-  properties: {text: Integrity, bold: true, font_size: 18}
+  properties: {text: Integrity, bold: true, font_size: 18, align: center}
   type: Label
   layout_properties: {grid_position: 'OHDPIG,BNCBLN IJPBCE,XTFLOX'}
 - name: label_45
   properties: {text: 'We adhere to the highest standards of integrity in our processes
       and product design. Our primary goal is to earn and maintain your ongoing trust.
 
-      ', font_size: 16}
+      ', font_size: 16, align: center}
   type: Label
   layout_properties: {grid_position: 'OHDPIG,BNCBLN HTDYOS,WYCOKI'}
 - name: image_11
-  properties: {source: _/theme/innovation.svg, height: 74.79998779296875, horizontal_align: left,
+  properties: {source: _/theme/innovation.svg, height: 74.79998779296875, horizontal_align: center,
     display_mode: original_size}
   type: Image
   layout_properties: {grid_position: 'OHDPIG,MNVHCC FUBTDG,SHTCGR'}
 - name: label_43
-  properties: {text: Innovation, font_size: 18, bold: true}
+  properties: {text: Innovation, font_size: 18, bold: true, align: center}
   type: Label
   layout_properties: {grid_position: 'OHDPIG,MNVHCC IRQMQN,JVBATI'}
 - name: label_46
   properties: {text: 'We set out to create innovative products that are not just different
       but also sector-defining. Generating high, impactful returns.
 
-      ', font_size: 16}
+      ', font_size: 16, align: center}
   type: Label
   layout_properties: {grid_position: 'OHDPIG,MNVHCC KKJVNC,FLPIWV'}
 - name: image_12
-  properties: {height: 72.79998779296875, source: _/theme/comunity.svg, horizontal_align: left,
+  properties: {height: 72.79998779296875, source: _/theme/comunity.svg, horizontal_align: center,
     display_mode: original_size}
   type: Image
-  layout_properties: {grid_position: 'OHDPIG,RCTUPN PISYCL,XXKKRB'}
+  layout_properties: {grid_position: 'OHDPIG,RCTUPN VWURYO,QEUVMI'}
 - name: label_44
-  properties: {text: Community, font_size: 18, bold: true}
+  properties: {text: Community, font_size: 18, bold: true, align: center}
   type: Label
   layout_properties: {grid_position: 'OHDPIG,RCTUPN BZBLCD,SLHDQU'}
 - name: label_47
   properties: {text: 'Our investment products reflect your values of progress and
       purpose, uniting our community for good.
 
-      ', font_size: 16}
+      ', font_size: 16, align: center}
   type: Label
   layout_properties: {grid_position: 'OHDPIG,RCTUPN XTHOIM,SNIJSN'}
 - name: spacer_19
@@ -212,7 +212,7 @@ components:
   type: Spacer
   layout_properties: {grid_position: 'PLDEUX,PCXIWI'}
 - name: label_32
-  properties: {text: Our Business Model, align: center, bold: true, font_size: 35}
+  properties: {text: Our Business Model, align: center, bold: true, font_size: 30}
   type: Label
   layout_properties: {grid_position: 'MOABXZ,KYNIVB'}
 - name: spacer_18
@@ -220,7 +220,7 @@ components:
   type: Spacer
   layout_properties: {grid_position: 'SIHKPS,IRVYPV'}
 - name: label_33
-  properties: {text: 'Kotak operates as an internet-based platform for Peer-to-Peer
+  properties: {text: 'GTPL operates as an internet-based platform for Peer-to-Peer
       Lending (P2P Lending), linking verified borrowers seeking unsecured loans with
       investors seeking higher risk-adjusted returns through investment opportunities.
 
@@ -262,7 +262,7 @@ components:
   type: Image
   layout_properties: {grid_position: 'LAZYRH,EKJKUU WUWVYB,CYQCZU'}
 - name: label_36
-  properties: {text: Kotak, align: center, font_size: 18, bold: true}
+  properties: {text: GTPL, align: center, font_size: 18, bold: true}
   type: Label
   layout_properties: {grid_position: 'LAZYRH,EKJKUU CBLPRW,BTKLIE'}
 - name: image_8
@@ -285,14 +285,22 @@ components:
       ', align: center, font_size: 18}
   type: Label
   layout_properties: {grid_position: 'YXOIZD,QJOEZY'}
+- name: spacer_23
+  properties: {height: 32}
+  type: Spacer
+  layout_properties: {grid_position: 'YXOIZD,BQTJIG'}
 - name: label_39
-  properties: {text: 'i2i conducts thorough credit evaluations of borrowers prior
+  properties: {text: 'GTPL conducts thorough credit evaluations of borrowers prior
       to approving loan proposals and provides support throughout the entire loan
       cycle, from approval to repayment.
 
       ', font_size: 18, align: center}
   type: Label
   layout_properties: {grid_position: 'YXOIZD,UGAQHF'}
+- name: spacer_22
+  properties: {height: 32}
+  type: Spacer
+  layout_properties: {grid_position: 'YXOIZD,RHQTAG'}
 - name: label_40
   properties: {text: 'Individuals can easily obtain personal loans through our platform
       via a streamlined online process, free of hassle.', align: center, font_size: 18}
@@ -303,11 +311,11 @@ components:
   type: Spacer
   layout_properties: {grid_position: 'TGKMKU,NZCOKZ'}
 - name: label_10
-  properties: {text: Our Role, bold: true, font_size: 35, align: center}
+  properties: {text: Our Role, bold: true, font_size: 30, align: center}
   type: Label
   layout_properties: {grid_position: 'HLSGDP,XBKLNK'}
 - name: label_11
-  properties: {text: 'For Investors:', align: left, bold: false, font_size: 28, underline: true}
+  properties: {text: 'For Investors:', align: left, bold: true, font_size: 28, underline: true}
   type: Label
   layout_properties: {grid_position: 'QCNGGK,HAFZET'}
 - name: spacer_8
@@ -434,7 +442,8 @@ components:
   type: Spacer
   layout_properties: {grid_position: 'SUWQYE,VUQNOR'}
 - name: label_23
-  properties: {text: 'For Borrowers:', bold: true, font_size: 28, underline: true}
+  properties: {text: 'For Borrowers:', bold: true, font_size: 28, underline: true,
+    visible: true}
   type: Label
   layout_properties: {grid_position: 'IMKMLC,XZZFBD'}
 - name: spacer_12
@@ -451,7 +460,7 @@ components:
   type: Label
   layout_properties: {grid_position: 'ONVAVF,KRXCWE OGUNNZ,DTBYUD'}
 - name: label_25
-  properties: {text: Borrowers can easily apply for the loan from anywhere as the entire loan application process is online and does not require the borrower to visit any branch of i2i applying for the loan,
+  properties: {text: Borrowers can easily apply for the loan from anywhere as the entire loan application process is online and does not require the borrower to visit any branch of Kotak applying for the loan,
     font_size: 18}
   type: Label
   layout_properties: {grid_position: 'ONVAVF,KRXCWE JMFPRS,LQHQXL'}
@@ -578,60 +587,60 @@ components:
     layout_properties: {grid_position: 'MMFQSR,QNSOAB MCUKZK,LUZRLG'}
     event_bindings: {click: link_9_click}
   - name: spacer_16
-    properties: {height: '14'}
+    properties: {height: 32.5999755859375}
     type: Spacer
     layout_properties: {grid_position: 'EEWYZY,CQBPUE'}
-- name: grid_panel_2_copy
-  properties: {spacing_above: small, spacing_below: small, background: '#05264d',
-    foreground: '', border: '', visible: true, role: null, tooltip: ''}
-  type: GridPanel
-  layout_properties: {grid_position: 'KMOAUS,NUMYGE', full_width_row: true}
-  components:
-  - name: flow_panel_3_copy_1
-    properties: {role: null, vertical_align: full, spacing: medium, align: left, tooltip: '',
-      border: '', foreground: '', visible: true, spacing_above: none, spacing_below: none,
-      background: '#05264d'}
-    type: FlowPanel
-    layout_properties: {row: JUWDTC, width_xs: 5, col_xs: 0, width: 198.328}
+  - name: grid_panel_2_copy
+    properties: {spacing_above: small, spacing_below: small, background: '#05264d',
+      foreground: '', border: '', visible: true, role: null, tooltip: ''}
+    type: GridPanel
+    layout_properties: {grid_position: 'RBHEDE,EWADTZ', full_width_row: true}
     components:
-    - type: Label
-      properties: {role: null, align: left, tooltip: '', border: '', foreground: white,
-        visible: true, text: '© 2023 - 2024, GTPL - All Rights    Reserved', font_size: null,
-        font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
-        background: '#05264d', bold: true, underline: false, icon: ''}
-      name: label_4
-      layout_properties: {}
-  - name: link_5_copy
-    properties: {role: null, url: 'https://in.linkedin.com/?src=go-pa&trk=sem-ga_campid.14650114788_asid.151761418307_crid.657403558718_kw.linkedin%20login_d.c_tid.kwd-12704335873_n.g_mt.e_geo.9179915&mcid=6844056167778418689&cid=&gclid=EAIaIQobChMI1pr54ZHVggMVF6dmAh2IxgGNEAAYASAAEgKqevD_BwE&gclsrc=aw.ds',
-      align: left, tooltip: '', border: '', foreground: white, visible: true, text: '',
-      font_size: 30, wrap_on: mobile, font: '', col_spacing: medium, spacing_above: small,
-      icon_align: left, col_widths: '', spacing_below: small, italic: false, background: '',
-      bold: false, underline: false, icon: 'fa:linkedin-square'}
-    type: Link
-    layout_properties: {row: JUWDTC, width_xs: 1, col_xs: 8, width: 93.6875}
-  - name: link_2
-    properties: {role: null, url: 'https://www.facebook.com/', align: left, tooltip: '',
-      border: '', foreground: white, visible: true, text: '', font_size: 30, wrap_on: mobile,
-      font: '', col_spacing: medium, spacing_above: small, icon_align: left, col_widths: '',
-      spacing_below: small, italic: false, background: '', bold: false, underline: false,
-      icon: 'fa:facebook-square'}
-    type: Link
-    layout_properties: {row: JUWDTC, width_xs: 1, col_xs: 9, width: 93.6875}
-  - name: link_4_copy
-    properties: {role: null, url: 'https://www.instagram.com/accounts/login/', align: left,
-      tooltip: '', border: '', foreground: white, visible: true, text: '', font_size: 30,
-      wrap_on: mobile, font: '', col_spacing: medium, spacing_above: small, icon_align: left,
-      col_widths: '', spacing_below: small, italic: false, background: '', bold: false,
-      underline: false, icon: 'fa:instagram'}
-    type: Link
-    layout_properties: {row: JUWDTC, width_xs: 1, col_xs: 10, width: 93.6875}
-  - name: link_3
-    properties: {role: null, url: 'https://twitter.com/i/flow/login?input_flow_data=%7B%22requested_variant%22%3A%22eyJsYW5nIjoiZW4ifQ%3D%3D%22%7D',
-      align: left, tooltip: '', border: '', foreground: white, visible: true, text: '',
-      font_size: 30, wrap_on: mobile, font: '', col_spacing: medium, spacing_above: small,
-      icon_align: left, col_widths: '', spacing_below: small, italic: false, background: th,
-      bold: false, underline: false, icon: 'fa:twitter'}
-    type: Link
-    components: []
-    layout_properties: {row: JUWDTC, width_xs: 1, col_xs: 11, width: 93.6875}
+    - name: flow_panel_3_copy_1
+      properties: {role: null, vertical_align: full, spacing: medium, align: left,
+        tooltip: '', border: '', foreground: '', visible: true, spacing_above: none,
+        spacing_below: none, background: '#05264d'}
+      type: FlowPanel
+      layout_properties: {row: JUWDTC, width_xs: 5, col_xs: 0, width: 198.328}
+      components:
+      - type: Label
+        properties: {role: null, align: left, tooltip: '', border: '', foreground: white,
+          visible: true, text: '© 2023 - 2024, GTPL - All Rights    Reserved', font_size: null,
+          font: '', spacing_above: small, icon_align: left, spacing_below: small,
+          italic: false, background: '#05264d', bold: true, underline: false, icon: ''}
+        name: label_4
+        layout_properties: {}
+    - name: link_5_copy
+      properties: {role: null, url: 'https://in.linkedin.com/?src=go-pa&trk=sem-ga_campid.14650114788_asid.151761418307_crid.657403558718_kw.linkedin%20login_d.c_tid.kwd-12704335873_n.g_mt.e_geo.9179915&mcid=6844056167778418689&cid=&gclid=EAIaIQobChMI1pr54ZHVggMVF6dmAh2IxgGNEAAYASAAEgKqevD_BwE&gclsrc=aw.ds',
+        align: left, tooltip: '', border: '', foreground: white, visible: true, text: '',
+        font_size: 30, wrap_on: mobile, font: '', col_spacing: medium, spacing_above: small,
+        icon_align: left, col_widths: '', spacing_below: small, italic: false, background: '',
+        bold: false, underline: false, icon: 'fa:linkedin-square'}
+      type: Link
+      layout_properties: {row: JUWDTC, width_xs: 1, col_xs: 8, width: 93.6875}
+    - name: link_2
+      properties: {role: null, url: 'https://www.facebook.com/', align: left, tooltip: '',
+        border: '', foreground: white, visible: true, text: '', font_size: 30, wrap_on: mobile,
+        font: '', col_spacing: medium, spacing_above: small, icon_align: left, col_widths: '',
+        spacing_below: small, italic: false, background: '', bold: false, underline: false,
+        icon: 'fa:facebook-square'}
+      type: Link
+      layout_properties: {row: JUWDTC, width_xs: 1, col_xs: 9, width: 93.6875}
+    - name: link_4_copy
+      properties: {role: null, url: 'https://www.instagram.com/accounts/login/', align: left,
+        tooltip: '', border: '', foreground: white, visible: true, text: '', font_size: 30,
+        wrap_on: mobile, font: '', col_spacing: medium, spacing_above: small, icon_align: left,
+        col_widths: '', spacing_below: small, italic: false, background: '', bold: false,
+        underline: false, icon: 'fa:instagram'}
+      type: Link
+      layout_properties: {row: JUWDTC, width_xs: 1, col_xs: 10, width: 93.6875}
+    - name: link_3
+      properties: {role: null, url: 'https://twitter.com/i/flow/login?input_flow_data=%7B%22requested_variant%22%3A%22eyJsYW5nIjoiZW4ifQ%3D%3D%22%7D',
+        align: left, tooltip: '', border: '', foreground: white, visible: true, text: '',
+        font_size: 30, wrap_on: mobile, font: '', col_spacing: medium, spacing_above: small,
+        icon_align: left, col_widths: '', spacing_below: small, italic: false, background: th,
+        bold: false, underline: false, icon: 'fa:twitter'}
+      type: Link
+      components: []
+      layout_properties: {row: JUWDTC, width_xs: 1, col_xs: 11, width: 93.6875}
 is_package: true

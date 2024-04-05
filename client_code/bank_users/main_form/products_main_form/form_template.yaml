@@ -64,31 +64,52 @@ components:
     properties: {height: 29}
     type: Spacer
     layout_properties: {width: 974}
-- name: grid_panel_1
-  properties: {}
-  type: GridPanel
-  layout_properties: {grid_position: 'DEOCAR,VGRCXP'}
-  components:
-  - name: label_4_copy_1
-    properties: {role: null, align: left, tooltip: '', border: '', foreground: '#030852',
-      visible: true, text: product main form, font_size: 30, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-      underline: false, icon: ''}
-    type: Label
-    layout_properties: {row: OOXUPD, width_xs: 12, col_xs: 0, width: 658}
-- name: spacer_4
-  properties: {height: 303.20001220703125}
-  type: Spacer
-  layout_properties: {grid_position: 'AIFBLC,STKBWN'}
-- name: spacer_3
-  properties: {height: 42}
-  type: Spacer
-  layout_properties: {grid_position: 'TMLWZN,OFPRBQ'}
-- name: column_panel_1
-  properties: {}
-  type: ColumnPanel
-  layout_properties: {grid_position: 'UUAAMD,PNSHYI'}
-  components: []
+  - name: outlined_card_1
+    properties: {role: outlined-card, tooltip: '', border: '', foreground: '', visible: true,
+      wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '',
+      spacing_below: small, background: '#05264d'}
+    type: ColumnPanel
+    components:
+    - name: gender
+      properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
+        foreground: 'theme:On Primary', visible: true, text: 'Personal Loan
+
+          ', font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small,
+        italic: false, background: '', bold: false, underline: false, icon: ''}
+      type: Button
+      layout_properties: {grid_position: 'YUTUEO,ZDKIXA'}
+      event_bindings: {click: gender_click}
+  - name: outlined_card_1_copy
+    properties: {role: outlined-card, tooltip: '', border: '', foreground: '', visible: true,
+      wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '',
+      spacing_below: small, background: '#05264d'}
+    type: ColumnPanel
+    components:
+    - name: gender_copy
+      properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
+        foreground: 'theme:On Primary', visible: true, text: 'Business Loan
+
+          ', font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small,
+        italic: false, background: '', bold: false, underline: false, icon: ''}
+      type: Button
+      layout_properties: {grid_position: 'YUTUEO,ZDKIXA'}
+      event_bindings: {click: gender_click}
+  - name: outlined_card_1_copy_2
+    properties: {role: outlined-card, tooltip: '', border: '', foreground: '', visible: true,
+      wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '',
+      spacing_below: small, background: '#05264d'}
+    type: ColumnPanel
+    components:
+    - name: gender_copy_2
+      properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
+        foreground: 'theme:On Primary', visible: true, text: 'Gender
+
+
+          ', font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small,
+        italic: false, background: '', bold: false, underline: false, icon: ''}
+      type: Button
+      layout_properties: {grid_position: 'YUTUEO,ZDKIXA'}
+      event_bindings: {click: gender_click}
 - type: Spacer
   properties: {height: 18}
   name: spacer_5
