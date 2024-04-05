@@ -3,7 +3,7 @@ components:
 - name: column_panel_1
   properties: {role: elevated-card, col_widths: '{"OGHQMI":5,"CNNKSU":5,"OWYBYL":5,"WRGBDS":5,"WXSDUC":5,"UMHSAC":5,"QXGANI":5,"EZRKCU":5,"QWWEWJ":4,"FKLWMW":4,"RTXVGO":4,"KDCDLL":4,"YORPRS":4}'}
   type: ColumnPanel
-  layout_properties: {column: XBGVMQ}
+  layout_properties: {column: ''}
   components:
   - type: Label
     properties: {}
