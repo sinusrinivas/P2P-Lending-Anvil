@@ -1,75 +1,80 @@
 container: {type: DataRowPanel}
 components:
-- type: Label
-  properties: {}
-  name: label_1
-  layout_properties: {column: HNDXMO}
-  data_bindings:
-  - {property: text, code: 'self.item[''PaymentNumber'']'}
-- type: Label
-  properties: {}
-  name: label_2
-  layout_properties: {column: UIVQZK}
-  data_bindings:
-  - {property: text, code: 'self.item[''PaymentDate'']'}
-- type: Label
-  properties: {}
-  name: label_3
-  layout_properties: {column: XBGVMQ}
-  data_bindings:
-  - {property: text, code: 'self.item[''BeginningBalance'']'}
-- type: Label
-  properties: {}
-  name: label_4
-  layout_properties: {column: WNDFRF}
-  data_bindings:
-  - {property: text, code: 'self.item[''ScheduledPayment'']'}
-- type: Label
-  properties: {}
-  name: label_5
-  layout_properties: {column: UAHJDF}
-  data_bindings:
-  - {property: text, code: 'self.item[''ExtraPayment'']'}
-- type: Label
-  properties: {}
-  name: label_6
-  layout_properties: {column: ITJKMG}
-  data_bindings:
-  - {property: text, code: 'self.item[''TotalPayment'']'}
-- type: Label
-  properties: {}
-  name: label_7
-  layout_properties: {column: QQKWIO}
-  data_bindings:
-  - {property: text, code: 'self.item[''Principal'']'}
-- type: Label
-  properties: {}
-  name: label_8
-  layout_properties: {column: HGKINV}
-  data_bindings:
-  - {property: text, code: 'self.item[''Interest'']'}
-- type: Label
-  properties: {}
-  name: label_9
-  layout_properties: {column: UNAPZX}
-  data_bindings:
-  - {property: text, code: 'self.item[''EndingBalance'']'}
-- type: Label
-  properties: {}
-  name: label_10
-  layout_properties: {column: HPIGBD}
-  data_bindings:
-  - {property: text, code: 'self.item[''EMIDate'']'}
-- type: Label
-  properties: {}
-  name: label_11
-  layout_properties: {column: LLZKZE}
-  data_bindings:
-  - {property: text, code: 'self.item[''EMITime'']'}
-- type: Label
-  properties: {}
-  name: label_12
-  layout_properties: {column: DOLXPH}
-  data_bindings:
-  - {property: text, code: 'self.item[''AccountNumber'']'}
+- name: column_panel_1
+  properties: {role: elevated-card}
+  type: ColumnPanel
+  layout_properties: {}
+  components:
+  - type: Label
+    properties: {}
+    name: label_1
+    layout_properties: {grid_position: 'KGFHKJ,PQKDOF'}
+    data_bindings:
+    - {property: text, code: 'self.item[''PaymentNumber'']'}
+  - type: Label
+    properties: {}
+    name: label_2
+    layout_properties: {grid_position: 'KGFHKJ,WAXAJJ'}
+    data_bindings:
+    - {property: text, code: 'self.item[''PaymentDate'']'}
+  - type: Label
+    properties: {}
+    name: label_3
+    layout_properties: {grid_position: 'KGFHKJ,UXTQBK'}
+    data_bindings:
+    - {property: text, code: 'self.item[''BeginningBalance'']'}
+  - type: Label
+    properties: {}
+    name: label_4
+    layout_properties: {grid_position: 'KGFHKJ,IYUMJT'}
+    data_bindings:
+    - {property: text, code: 'self.item[''ScheduledPayment'']'}
+  - type: Label
+    properties: {}
+    name: label_5
+    layout_properties: {grid_position: 'KGFHKJ,NVHHXO'}
+    data_bindings:
+    - {property: text, code: 'self.item[''ExtraPayment'']'}
+  - type: Label
+    properties: {}
+    name: label_6
+    layout_properties: {grid_position: 'KGFHKJ,FQEFQX'}
+    data_bindings:
+    - {property: text, code: 'self.item[''TotalPayment'']'}
+  - type: Label
+    properties: {}
+    name: label_7
+    layout_properties: {grid_position: 'KGFHKJ,VZBEGH'}
+    data_bindings:
+    - {property: text, code: 'self.item[''Principal'']'}
+  - type: Label
+    properties: {}
+    name: label_8
+    layout_properties: {grid_position: 'KGFHKJ,CWULXZ'}
+    data_bindings:
+    - {property: text, code: 'self.item[''Interest'']'}
+  - type: Label
+    properties: {}
+    name: label_9
+    layout_properties: {grid_position: 'KGFHKJ,LZTNAD'}
+    data_bindings:
+    - {property: text, code: 'self.item[''EndingBalance'']'}
+  - type: Label
+    properties: {}
+    name: label_10
+    layout_properties: {grid_position: 'KGFHKJ,DPIUMH'}
+    data_bindings:
+    - {property: text, code: 'self.item[''EMIDate'']'}
+  - type: Label
+    properties: {}
+    name: label_11
+    layout_properties: {grid_position: 'KGFHKJ,EIOZYJ'}
+    data_bindings:
+    - {property: text, code: 'self.item[''EMITime'']'}
+  - type: Label
+    properties: {}
+    name: label_12
+    layout_properties: {grid_position: 'KGFHKJ,NHFQMK'}
+    data_bindings:
+    - {property: text, code: 'self.item[''AccountNumber'']'}
 is_package: true
