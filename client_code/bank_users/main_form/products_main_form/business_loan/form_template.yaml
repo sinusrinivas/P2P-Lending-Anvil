@@ -778,7 +778,11 @@ components:
       type: Label
       layout_properties: {grid_position: 'CMBBVC,MUKVFZ INFOOA,CITUGO'}
     - name: label_56
-      properties: {font_size: 16, text: ''}
+      properties: {font_size: 16, text: 'Based on your credit report, you''ll be assigned
+          a risk category ranging from A to F, with A indicating the strongest credit
+          profile and F representing the weakest.
+
+          '}
       type: Label
       layout_properties: {grid_position: 'CMBBVC,MUKVFZ OLPFWC,ABKFVJ'}
     - name: label_57
