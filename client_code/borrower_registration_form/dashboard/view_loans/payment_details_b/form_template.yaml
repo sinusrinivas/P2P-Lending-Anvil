@@ -96,7 +96,7 @@ components:
     - name: label_3
       properties: {text: Payment Number}
       type: Label
-      layout_properties: {grid_position: 'MNINQY,FBJJCR'}
+      layout_properties: {grid_position: 'MNINQY,FBJJCR', full_width_row: true}
     - name: label_4
       properties: {text: Payment Date}
       type: Label
@@ -144,7 +144,7 @@ components:
   - type: RepeatingPanel
     properties: {spacing_above: none, spacing_below: none, item_template: borrower_registration_form.dashboard.view_loans.payment_details_b.RowTemplate36}
     name: repeating_panel_2
-    layout_properties: {grid_position: 'CYYDLZ,UMIDAY'}
+    layout_properties: {grid_position: 'CYYDLZ,UMIDAY', full_width_row: true}
   - type: Spacer
     properties: {height: 32}
     name: spacer_1
