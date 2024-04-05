@@ -52,6 +52,7 @@ unique_ids:
     admin.dashboard.manage_bessem: '170953922392368996895390.69653'
     admin.dashboard.manage_bessem.add_subcategory.ItemTemplate74: '1709734065080628871844250.8976'
     borrower_registration_form.dashboard.edit_profile: '1698653709394569134493869.6183'
+    lendor_registration_form.dashboard.view_transaction_history.ItemTemplate100: '1712308244698402395554355.8164'
     admin.dashboard.borrowers.ItemTemplate96: '1712062136716241415691586.34946'
     admin.dashboard.manage_bessem.add_subcategory.edit_other_loan: '1711089419826673065876154.861'
     admin.dashboard.manage_reports: '1699528696451136679061767.8162'
@@ -132,6 +133,7 @@ unique_ids:
     admin.dashboard.loan_management.loan_disbursed.view_profile_6: '1704878672712960872612311.6324'
     lendor_registration_form.dasboard_contact_lendor_registration_form: '1710749042563704662250748.9884'
     admin.dashboard.manage_cms.add_borrower_dropdown_details.ItemTemplate85: '1710495046477101407015295.04103'
+    borrower_registration_form.dashboard.view_transaction_history.ItemTemplate101: '1712309326106745678652717.9971'
     admin.dashboard.manage_bessem.add_subcategory.ItemTemplate92: '171108796269972522221607.73813'
     lendor_registration_form.dashboard.view_loan_extension_requests.extension_details: '1706448836532652081977126.0691'
     ? borrower_registration_form.star_1_borrower_registration_form_2_employment.star_1_borrower_registration_form_2_employment_business_3

@@ -1,80 +1,80 @@
+is_package: true
 container: {type: DataRowPanel}
 components:
-- name: column_panel_1
-  properties: {role: elevated-card}
+- properties: {role: elevated-card}
   type: ColumnPanel
   layout_properties: {}
+  name: column_panel_1
   components:
   - type: Label
     properties: {}
-    name: label_1
     layout_properties: {grid_position: 'KGFHKJ,PQKDOF', full_width_row: true}
     data_bindings:
-    - {property: text, code: 'self.item[''PaymentNumber'']'}
+    - {code: 'self.item[''PaymentNumber'']', property: text}
+    name: label_1
   - type: Label
     properties: {}
-    name: label_2
     layout_properties: {grid_position: 'KGFHKJ,WAXAJJ'}
     data_bindings:
-    - {property: text, code: 'self.item[''PaymentDate'']'}
+    - {code: 'self.item[''PaymentDate'']', property: text}
+    name: label_2
   - type: Label
     properties: {}
-    name: label_3
     layout_properties: {grid_position: 'KGFHKJ,UXTQBK'}
     data_bindings:
-    - {property: text, code: 'self.item[''BeginningBalance'']'}
+    - {code: 'self.item[''BeginningBalance'']', property: text}
+    name: label_3
   - type: Label
     properties: {}
-    name: label_4
     layout_properties: {grid_position: 'KGFHKJ,IYUMJT'}
     data_bindings:
-    - {property: text, code: 'self.item[''ScheduledPayment'']'}
+    - {code: 'self.item[''ScheduledPayment'']', property: text}
+    name: label_4
   - type: Label
     properties: {}
-    name: label_5
     layout_properties: {grid_position: 'KGFHKJ,NVHHXO'}
     data_bindings:
-    - {property: text, code: 'self.item[''ExtraPayment'']'}
+    - {code: 'self.item[''ExtraPayment'']', property: text}
+    name: label_5
   - type: Label
     properties: {}
-    name: label_6
     layout_properties: {grid_position: 'KGFHKJ,FQEFQX'}
     data_bindings:
-    - {property: text, code: 'self.item[''TotalPayment'']'}
+    - {code: 'self.item[''TotalPayment'']', property: text}
+    name: label_6
   - type: Label
     properties: {}
-    name: label_7
     layout_properties: {grid_position: 'KGFHKJ,VZBEGH'}
     data_bindings:
-    - {property: text, code: 'self.item[''Principal'']'}
+    - {code: 'self.item[''Principal'']', property: text}
+    name: label_7
   - type: Label
     properties: {}
-    name: label_8
     layout_properties: {grid_position: 'KGFHKJ,CWULXZ'}
     data_bindings:
-    - {property: text, code: 'self.item[''Interest'']'}
+    - {code: 'self.item[''Interest'']', property: text}
+    name: label_8
   - type: Label
     properties: {}
-    name: label_9
     layout_properties: {grid_position: 'KGFHKJ,LZTNAD'}
     data_bindings:
-    - {property: text, code: 'self.item[''EndingBalance'']'}
+    - {code: 'self.item[''EndingBalance'']', property: text}
+    name: label_9
   - type: Label
     properties: {}
-    name: label_10
     layout_properties: {grid_position: 'KGFHKJ,DPIUMH'}
     data_bindings:
-    - {property: text, code: 'self.item[''EMIDate'']'}
+    - {code: 'self.item[''EMIDate'']', property: text}
+    name: label_10
   - type: Label
     properties: {}
-    name: label_11
     layout_properties: {grid_position: 'KGFHKJ,EIOZYJ'}
     data_bindings:
-    - {property: text, code: 'self.item[''EMITime'']'}
+    - {code: 'self.item[''EMITime'']', property: text}
+    name: label_11
   - type: Label
     properties: {}
-    name: label_12
     layout_properties: {grid_position: 'KGFHKJ,NHFQMK'}
     data_bindings:
-    - {property: text, code: 'self.item[''AccountNumber'']'}
-is_package: true
+    - {code: 'self.item[''AccountNumber'']', property: text}
+    name: label_12
