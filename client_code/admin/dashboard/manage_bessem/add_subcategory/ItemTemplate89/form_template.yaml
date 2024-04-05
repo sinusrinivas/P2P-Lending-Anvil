@@ -1,22 +1,27 @@
 is_package: true
 container:
   type: ColumnPanel
-  properties: {col_widths: '{"SIPHWW":45,"KKZAKO":15}'}
+  properties: {col_widths: '{}'}
 components:
-- name: label_1
-  properties: {align: center}
-  type: Label
-  layout_properties: {grid_position: 'NFALJL,SIPHWW OAHEFC,QWEDCA WQIHDA,NAWGYG'}
-  data_bindings:
-  - {property: text, code: 'self.item[''sub_category'']'}
-- name: link_1
-  properties: {text: Edit Details}
-  type: Link
-  layout_properties: {grid_position: 'NFALJL,KKZAKO'}
-  event_bindings: {click: link_1_click}
-- name: label_2
-  properties: {align: center}
-  type: Label
-  layout_properties: {grid_position: 'NFALJL,SIPHWW OAHEFC,OGTDPI'}
-  data_bindings:
-  - {property: text, code: 'self.item[''min_points'']'}
+- name: column_panel_1
+  properties: {col_widths: '{"XITMRN":20,"EXTEAW":25,"GVSZBZ":15}', role: elevated-card}
+  type: ColumnPanel
+  layout_properties: {grid_position: 'NXJMII,GXGSNH'}
+  components:
+  - name: label_1
+    properties: {align: center}
+    type: Label
+    layout_properties: {grid_position: 'LSIJRL,XITMRN'}
+    data_bindings:
+    - {property: text, code: 'self.item[''sub_category'']'}
+  - name: label_2
+    properties: {align: center}
+    type: Label
+    layout_properties: {grid_position: 'LSIJRL,EXTEAW'}
+    data_bindings:
+    - {property: text, code: 'self.item[''min_points'']'}
+  - name: link_1
+    properties: {text: Edit Details}
+    type: Link
+    layout_properties: {grid_position: 'LSIJRL,GVSZBZ'}
+    event_bindings: {click: link_1_click}

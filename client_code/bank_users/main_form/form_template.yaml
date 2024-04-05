@@ -1,6 +1,6 @@
 container:
   type: ColumnPanel
-  properties: {col_widths: '{"UXWIME":15,"SYNJVB":45,"NSBNDL":30,"SZJXCQ":10,"HJXPJG":64,"ASUGOE":5,"GKGMVX":5,"GZEPAB":55,"YXEJAJ":5,"BRNMJF":55,"YCDQDS":5,"EGYCFU":55,"WRNWWZ":10,"JZUUWF":20,"RDWIZR":20,"AMTGYB":20}',
+  properties: {col_widths: '{"UXWIME":15,"SYNJVB":45,"NSBNDL":30,"SZJXCQ":10,"HJXPJG":64,"ASUGOE":5,"GKGMVX":5,"GZEPAB":55,"YXEJAJ":5,"BRNMJF":55,"WRNWWZ":10,"JZUUWF":20,"RDWIZR":20,"AMTGYB":20,"ZMXVPS":2,"OHQTCG":58,"OYIVEL":2,"RYPZCD":58,"VURQFS":2,"KLQWYU":58,"NZODAV":2,"ATRLXT":58,"MJLLCS":5,"ETGUAR":55}',
     spacing_below: none, background: ''}
 components:
 - name: image_1_copy_copy_1
@@ -53,32 +53,30 @@ components:
     layout_properties: {}
     event_bindings: {click: link_6_click}
 - name: login_signup_button
-  properties: {role: outlined-button, align: center, tooltip: '', border: '', enabled: true,
+  properties: {role: filled-button, align: right, tooltip: '', border: '', enabled: true,
     foreground: white, visible: true, text: Sign In, font_size: null, font: '', spacing_above: small,
     icon_align: left, spacing_below: small, italic: false, background: '#013065',
     bold: true, underline: false, icon: ''}
   type: Button
   event_bindings: {click: login_signup_button_click}
   layout_properties: {grid_position: 'IFJNGB,SYNJVB UAEYQF,SZJXCQ'}
-- name: button_2
-  properties: {text: Sign Up, role: outlined-button, background: '#013065', foreground: white,
-    bold: true, align: left}
-  type: Button
-  layout_properties: {grid_position: 'IFJNGB,SYNJVB UAEYQF,WRNWWZ CQIBAM,RUCCXK'}
-  event_bindings: {click: button_2_click}
-- name: link_7
-  properties: {text: Invest Now, foreground: black, align: left, font_size: 16, visible: false,
-    background: 'theme:On Primary', col_widths: '{}'}
-  type: Link
-  layout_properties: {grid_position: 'IFJNGB,SYNJVB UAEYQF,WRNWWZ KAQRQU,HANEYF'}
-  event_bindings: {click: link_7_click}
-  components:
-  - name: link_8
-    properties: {font_size: 16, text: Apply for a Loan, foreground: black, visible: false,
-      background: 'theme:On Primary'}
-    type: Link
-    layout_properties: {grid_position: 'VLERJJ,ZFSLGN', full_width_row: true}
-    event_bindings: {click: link_8_click}
+- name: drop_down_1
+  properties:
+    role: outlined
+    align: left
+    placeholder: Sign Up
+    border: ''
+    foreground: white
+    items: [Invest Now, Apply for Loan]
+    visible: true
+    background: '#013065'
+    bold: true
+    underline: false
+    include_placeholder: true
+  type: DropDown
+  layout_properties: {grid_position: 'IFJNGB,SYNJVB UAEYQF,WRNWWZ', full_width_row: false}
+  data_bindings: []
+  event_bindings: {change: drop_down_1_change}
 - name: spacer_1
   properties: {height: 4.8000030517578125}
   type: Spacer
@@ -196,7 +194,7 @@ components:
   type: Spacer
   layout_properties: {grid_position: 'JTHRJN,OMJPXC'}
 - name: xy_panel_3
-  properties: {height: 490.1999816894531, background: '#094586', spacing_above: small,
+  properties: {height: 572.3999328613281, background: '#094586', spacing_above: small,
     tooltip: '', role: elevated-card}
   type: XYPanel
   layout_properties: {grid_position: 'UKAIXF,VZAKIK', full_width_row: false}
@@ -210,39 +208,49 @@ components:
     properties: {text: Lumpsum, font_size: 28, font: '', foreground: white, align: center,
       bold: true}
     name: label_25
-    layout_properties: {x: 33, y: 82.42498779296875, width: 253.788}
+    layout_properties: {x: 33, y: 82.42498779296875, width: 237.59100000000004}
   - type: Image
     properties: {source: _/theme/lumpsum-p2p-lending.webp, height: 255.19998168945312}
     name: image_2
-    layout_properties: {x: 10, y: 149.20000000000005, width: 301.79998779296875}
+    layout_properties: {x: 10, y: 149.20000000000005, width: 272.669}
   - type: Image
     properties: {source: _/theme/invest 1.png, height: 88.20001220703125}
     name: image_15
-    layout_properties: {x: 0, y: 390.38801220703135, width: 311.788}
+    layout_properties: {x: 0, y: 402.00521087646484, width: 282.66925048828125}
+  - name: button_8
+    properties: {text: View Details, role: filled-button, bold: true, font_size: 18,
+      underline: false, background: white, foreground: black}
+    type: Button
+    layout_properties: {x: 36.349995613098145, y: 532.3875122070312, width: 200}
 - name: xy_panel_4
-  properties: {height: 488.39996337890625, background: '#094586', role: elevated-card}
+  properties: {height: 570.3999328613281, background: '#094586', role: elevated-card}
   type: XYPanel
-  layout_properties: {grid_position: 'UKAIXF,QSQQHQ', full_width_row: true}
+  layout_properties: {grid_position: 'UKAIXF,QSQQHQ', full_width_row: false}
   components:
   - type: Image
     properties: {source: _/theme/mip-monthly-income-p2p-lending.webp, height: 265}
     name: image_13
-    layout_properties: {x: 10, y: 145.20000000000005, width: 294.39996337890625}
-  - type: Image
-    properties: {source: _/theme/New-Project-1.png, height: 88.5999755859375}
-    name: image_16
-    layout_properties: {x: 0, y: 394.78753662109375, width: 310.5999755859375}
+    layout_properties: {x: 10, y: 145.20000000000005, width: 265.8594685058594}
   - type: Label
     properties: {text: Monthly Income, font: '', font_size: 28, align: center, bold: true,
       foreground: white}
     name: label_26
-    layout_properties: {x: 10, y: 83.48751220703127, width: 285.7999755859375}
+    layout_properties: {x: 10, y: 83.48751220703127, width: 265.85946850585935}
   - type: Label
     properties: {text: Earn monthly interest, font_size: 16, align: center, foreground: white}
     name: label_3
     layout_properties: {x: 29.662506103515625, y: 23.41253662109375, width: 246.2}
+  - type: Image
+    properties: {source: _/theme/New-Project-1.png, height: 88.5999755859375}
+    name: image_16
+    layout_properties: {x: 0, y: 399.8046875, width: 282.66925048828125}
+  - name: button_7
+    properties: {text: View Details, foreground: black, background: white, font_size: 18,
+      bold: true}
+    type: Button
+    layout_properties: {x: 42.74995136260986, y: 530.3875122070312, width: 200}
 - name: xy_panel_5
-  properties: {height: 488.79998779296875, background: '#094586', role: elevated-card}
+  properties: {height: 570.1999816894531, background: '#094586', role: elevated-card}
   type: XYPanel
   layout_properties: {grid_position: 'UKAIXF,HIVORL', full_width_row: true, row_background: ''}
   components:
@@ -259,11 +267,16 @@ components:
   - type: Image
     properties: {source: _/theme/Updated-Icon-01-1-1024x1024.png, height: 265}
     name: image_14
-    layout_properties: {x: 12.538000000000011, y: 143.4000000000001, width: 293.7999267578125}
+    layout_properties: {x: 12.538000000000011, y: 143.4000000000001, width: 245.9633740234375}
   - type: Image
     properties: {source: _/theme/ML-urgent.png, height: 91}
     name: image_17
-    layout_properties: {x: 0, y: 398.79999999999995, width: 306.32547558593745}
+    layout_properties: {x: 0, y: 397.7994842529297, width: 282.66925048828125}
+  - name: button_6
+    properties: {text: View Details, bold: true, font_size: 18, background: white,
+      foreground: black}
+    type: Button
+    layout_properties: {x: 45.11250019073486, y: 530.2000122070312, width: 200}
 - name: spacer_3
   properties: {height: 50}
   type: Spacer
@@ -298,19 +311,19 @@ components:
     properties: {height: 71.60000610351562, source: _/theme/register-bean.50e7dd2.png,
       display_mode: original_size}
     name: image_18
-    layout_properties: {x: 10, y: 16.3375244140625, width: 105.39999389648438}
+    layout_properties: {x: 10, y: 16.3375244140625, width: 285.7243435058594}
   - type: Label
-    properties: {text: Simple and Easy, font_size: 20, bold: true}
+    properties: {text: Simple and Easy, font_size: 20, bold: true, align: center}
     name: label_32
-    layout_properties: {x: 10, y: 93.3375244140625, width: 160}
+    layout_properties: {x: 10, y: 93.3375244140625, width: 291.66668701171875}
   - name: label_35
-    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+    properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
       visible: true, text: 'Kotak is an easy to use platform to invest money online,
         get your dedicated wealth manager to build and diversify your portfolio',
       font_size: 18, font: '', spacing_above: small, icon_align: left, spacing_below: small,
       italic: false, background: '', bold: false, underline: false, icon: ''}
     type: Label
-    layout_properties: {x: 10, y: 139.3375244140625, width: 221}
+    layout_properties: {x: 10, y: 139.3375244140625, width: 291.6669999999999}
 - name: xy_panel_7
   properties: {height: 293.1999816894531}
   type: XYPanel
@@ -319,20 +332,20 @@ components:
   - type: Image
     properties: {height: 116, source: _/theme/stats-rupee_bean.58bc41f.png, display_mode: original_size}
     name: image_19
-    layout_properties: {x: 10, y: 15.3375244140625, width: 90.39996337890625}
+    layout_properties: {x: 10, y: 15.3375244140625, width: 287.200375}
   - type: Label
-    properties: {text: Greater Returns, bold: true, font_size: 20}
+    properties: {text: Greater Returns, bold: true, font_size: 20, align: center}
     name: label_33
-    layout_properties: {x: 18.662506103515625, y: 95.3375244140625, width: 160}
+    layout_properties: {x: 18.662506103515625, y: 95.3375244140625, width: 270.5}
   - name: label_37
-    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+    properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
       visible: true, text: 'Earn up to 2.5 times more of your FD returns with Lendbox
         low risk investment investment options, a safer and smarter way to multiply
         your savings', font_size: 18, font: '', spacing_above: small, icon_align: left,
       spacing_below: small, italic: false, background: '', bold: false, underline: false,
       icon: ''}
     type: Label
-    layout_properties: {x: 13.362518310546875, y: 141.3375244140625, width: 259.20001220703125}
+    layout_properties: {x: 13.362518310546875, y: 141.3375244140625, width: 283.8513740234375}
 - name: xy_panel_8
   properties: {height: 292.1999816894531}
   type: XYPanel
@@ -341,11 +354,11 @@ components:
   - type: Image
     properties: {height: 113, source: _/theme/money-bag-hand_bean.2c2a2a6.png, display_mode: original_size}
     name: image_20
-    layout_properties: {x: 10, y: 16.3375244140625, width: 88.39996337890625}
+    layout_properties: {x: 10, y: 16.3375244140625, width: 288.21599999999984}
   - type: Label
-    properties: {text: Monthly Cashflow, font_size: 21, bold: true}
+    properties: {text: Monthly Cashflow, font_size: 21, bold: true, align: center}
     name: label_34
-    layout_properties: {x: 10, y: 94.3375244140625, width: 212.79998779296875}
+    layout_properties: {x: 10, y: 94.3375244140625, width: 288.203}
   - name: label_36
     properties: {underline: false, font_size: 18, text: Create passive income with regular monthly repayments as borrowers pay back with EMI's}
     type: Label
@@ -363,14 +376,14 @@ components:
   type: Spacer
   layout_properties: {grid_position: 'IDRRFC,FHRNWS'}
 - name: xy_panel_9
-  properties: {height: 554.6666870117188, background: '#Edf0f4'}
+  properties: {height: 575.6000061035156, background: '#Edf0f4'}
   type: XYPanel
   layout_properties: {grid_position: 'DUCRGR,KKDHDR', full_width_row: true}
   components:
   - name: label_38
     properties: {text: Get started today, align: center, bold: true, font_size: 30}
     type: Label
-    layout_properties: {grid_position: 'VFQQUF,RWHPEN', x: 68, y: 10, width: 1200}
+    layout_properties: {grid_position: 'VFQQUF,RWHPEN', x: 68, y: 10, width: 1351.1566259765625}
   - name: xy_panel_8_copy
     properties: {height: 295}
     type: XYPanel
@@ -379,35 +392,36 @@ components:
     - name: image_20_copy
       properties: {height: 113, source: _/theme/money-bag-hand_bean.2c2a2a6.png, display_mode: original_size}
       type: Image
-      layout_properties: {x: 10, y: 16.3375244140625, width: 88.39996337890625}
+      layout_properties: {x: 10, y: 16.3375244140625, width: 329.948}
     - name: label_34_copy
-      properties: {text: Get monthly repayments, font_size: 21, bold: true}
+      properties: {text: Get monthly repayments, font_size: 21, bold: true, align: center}
       type: Label
-      layout_properties: {x: 10, y: 94.3375244140625, width: 249.2364580078125}
+      layout_properties: {x: 10, y: 94.3375244140625, width: 329.94799999999987}
     - name: label_36_copy
-      properties: {underline: false, font_size: 18, text: Receive monthly returns from the borrower and start growing your wealth. You also have the option to reinvest your earnings.}
+      properties: {underline: false, font_size: 18, text: Receive monthly returns from the borrower and start growing your wealth. You also have the option to reinvest your earnings.,
+        align: center}
       type: Label
-      layout_properties: {x: 10, y: 140.3375244140625, width: 266.972083984375}
+      layout_properties: {x: 10, y: 140.3375244140625, width: 329.9533740234375}
   - name: xy_panel_6_copy
     properties: {height: 290.3999938964844}
     type: XYPanel
-    layout_properties: {x: 75.79165522381663, y: 127.15280151367188, width: 350}
+    layout_properties: {x: 75.79165522381663, y: 127.15280151367188, width: 318.8333435058594}
     components:
     - name: image_18_copy
       properties: {height: 71.60000610351562, source: _/theme/register.png, display_mode: original_size}
       type: Image
-      layout_properties: {x: 10, y: 16.3375244140625, width: 87.61122900390625}
+      layout_properties: {x: 10, y: 16.3375244140625, width: 294.167}
     - name: label_32_copy
-      properties: {text: Register, font_size: 20, bold: true}
+      properties: {text: Register, font_size: 20, bold: true, align: center}
       type: Label
-      layout_properties: {x: 10, y: 93.3375244140625, width: 160}
+      layout_properties: {x: 10, y: 93.3375244140625, width: 294.167}
     - name: label_35_copy
-      properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
         visible: true, text: Register as a lender by providing basic KYC information.,
         font_size: 18, font: '', spacing_above: small, icon_align: left, spacing_below: small,
         italic: false, background: '', bold: false, underline: false, icon: ''}
       type: Label
-      layout_properties: {x: 10, y: 139.3375244140625, width: 221}
+      layout_properties: {x: 10, y: 139.3375244140625, width: 294.167}
   - name: xy_panel_7_copy
     properties: {height: 293.1999816894531}
     type: XYPanel
@@ -416,32 +430,121 @@ components:
     - name: image_19_copy
       properties: {height: 116, source: _/theme/profile-cards_bean.6b9a100.png, display_mode: original_size}
       type: Image
-      layout_properties: {x: 10, y: 15.3375244140625, width: 87.61122900390625}
+      layout_properties: {x: 10, y: 15.3375244140625, width: 329.935}
     - name: label_33_copy
-      properties: {text: Choose your products, bold: true, font_size: 20}
+      properties: {text: Choose your products, bold: true, font_size: 20, align: center}
       type: Label
-      layout_properties: {x: 18.662506103515625, y: 95.3375244140625, width: 226}
+      layout_properties: {x: 18.662506103515625, y: 95.3375244140625, width: 286.1403740234375}
     - name: label_37_copy
-      properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
         visible: true, text: Invest across variety of products and build a diversified portfolio and better returns at lower risk.,
         font_size: 18, font: '', spacing_above: small, icon_align: left, spacing_below: small,
         italic: false, background: '', bold: false, underline: false, icon: ''}
       type: Label
-      layout_properties: {x: 13.362518310546875, y: 141.3375244140625, width: 225.74954199218752}
+      layout_properties: {x: 13.362518310546875, y: 141.3375244140625, width: 319.562}
   - name: button_5
     properties: {text: Register Now, align: full, bold: true, role: filled-button,
       background: '#013065'}
     type: Button
-    layout_properties: {x: 578.0277506522834, y: 481.20831298828125, width: 200}
+    layout_properties: {x: 638.8625000007451, y: 528.1875, width: 200}
 - name: spacer_19
   properties: {height: 32}
   type: Spacer
   layout_properties: {grid_position: 'KPMSUL,IDNDNP'}
+- name: label_40
+  properties: {text: Kotak Minimizes Your Risk, bold: true, font_size: 29, align: center}
+  type: Label
+  layout_properties: {grid_position: 'PEXAFZ,QZNZUG'}
+- name: label_42
+  properties: {font_size: 22, text: 'At Kotak, you can build a strong and diverse
+      portfolio to ensure maximum returns at minimum risk.'}
+  type: Label
+  layout_properties: {grid_position: 'ICSCSG,GUECHA'}
+- name: spacer_22
+  properties: {height: 32}
+  type: Spacer
+  layout_properties: {grid_position: 'EEIWLL,KZPGTA'}
+- name: image_23
+  properties: {height: 74.60000610351562, vertical_align: top, source: _/theme/screening.png,
+    display_mode: shrink_to_fit, horizontal_align: left}
+  type: Image
+  layout_properties: {grid_position: 'SIPMDQ,UGNRVI MOFJMP,YHVAWV'}
+- name: label_43
+  properties: {text: Strong Borrower Screening, bold: true, font_size: 18}
+  type: Label
+  layout_properties: {grid_position: 'SIPMDQ,UGNRVI HASWNH,RPTKYD'}
+- name: label_45
+  properties: {text: Lendbox screens a borrower across 200 parameters to check the creditworthiness of the borrowers to ensure the credibility of borrowers.,
+    font_size: 18}
+  type: Label
+  layout_properties: {grid_position: 'SIPMDQ,UGNRVI VYUESC,DCSWZB'}
+- name: spacer_31
+  properties: {height: 32}
+  type: Spacer
+  layout_properties: {grid_position: 'SIPMDQ,UGNRVI TNQOXS,WSCFEQ'}
+- name: image_24
+  properties: {height: 88.22222900390625, source: _/theme/money-arrow_bean.d0d0a86.png,
+    display_mode: original_size, horizontal_align: left}
+  type: Image
+  layout_properties: {grid_position: 'SIPMDQ,UGNRVI OEKGMC,MNAHIK'}
+- name: label_44
+  properties: {text: Easy Diversification, font_size: 19, bold: true}
+  type: Label
+  layout_properties: {grid_position: 'SIPMDQ,UGNRVI JWQKUE,HOZIVV'}
+- name: label_50
+  properties: {text: Diversify across range of investments products to minimize the associated risks.,
+    font_size: 18}
+  type: Label
+  layout_properties: {grid_position: 'SIPMDQ,UGNRVI TOKUSD,PCZZSD'}
+- name: image_25
+  properties: {height: 66.77777099609375, source: _/theme/manager.png, display_mode: shrink_to_fit,
+    horizontal_align: left}
+  type: Image
+  layout_properties: {grid_position: 'SIPMDQ,DMBIXF ATMFNF,NUZNKA'}
+- name: label_47
+  properties: {text: Dedicated Wealth Manager, bold: true, font_size: 18}
+  type: Label
+  layout_properties: {grid_position: 'SIPMDQ,DMBIXF XFNGRR,PYVRCZ'}
+- name: label_48
+  properties: {text: Experienced wealth managers are always there to help you understand the products and build a strong portfolio.,
+    font_size: 18}
+  type: Label
+  layout_properties: {grid_position: 'SIPMDQ,DMBIXF HBQKMR,OVQMDR'}
+- name: spacer_30
+  properties: {height: 64.60000610351562}
+  type: Spacer
+  layout_properties: {grid_position: 'SIPMDQ,DMBIXF HUQSMJ,CNLFXA'}
+- name: image_26
+  properties: {height: 64.99993896484375, source: _/theme/money-bag-hand_bean.2c2a2a6.png,
+    display_mode: original_size, horizontal_align: left}
+  type: Image
+  layout_properties: {grid_position: 'SIPMDQ,DMBIXF GITIAS,JGEWKK'}
+- name: label_49
+  properties: {text: Robust Collection Mechanism, font_size: 18, bold: true}
+  type: Label
+  layout_properties: {grid_position: 'SIPMDQ,DMBIXF BJNZVJ,BUQZFH'}
+- name: label_51
+  properties: {text: 'If needed, Lendbox has an in-house team for collection and an
+      RBI registered recovery agency.', font_size: 18}
+  type: Label
+  layout_properties: {grid_position: 'SIPMDQ,DMBIXF JALJWL,SEFEBM'}
+- name: spacer_27
+  properties: {height: 32}
+  type: Spacer
+  layout_properties: {grid_position: 'FFODXR,YRTVLS'}
+- name: spacer_28
+  properties: {height: 32}
+  type: Spacer
+  layout_properties: {grid_position: 'FFODXR,UYCLKT'}
 - name: label_8
   properties: {text: How it works​, role: headline, font_size: 30, align: center,
     bold: true, font: ''}
   type: Label
   layout_properties: {grid_position: 'LNLPBU,ZLMQPF'}
+- name: spacer_29
+  properties: {height: 13.399932861328125}
+  type: Spacer
+  layout_properties: {grid_position: 'OXKNLX,AGXXMG'}
 - name: label_9
   properties: {text: 'Kotak digital platform facilitates seamless connections between
       creditworthy businesses seeking funding and investors eager to fuel their expansion,
@@ -449,43 +552,51 @@ components:
   type: Label
   layout_properties: {grid_position: 'HBLVJB,WJZBTP'}
 - name: spacer_6
-  properties: {height: 41.79998779296875}
+  properties: {height: 37}
   type: Spacer
   layout_properties: {grid_position: 'FGAEGL,EDOHWZ'}
 - name: image_4
-  properties: {source: _/theme/icons8-laptop-100 (1).png, display_mode: shrink_to_fit,
-    height: 140.39999389648438}
+  properties: {source: _/theme/icons8-laptop-100 (1).png, display_mode: original_size,
+    height: 97.41665649414062}
   type: Image
   layout_properties: {grid_position: 'BGOTWK,XXIPLN'}
 - name: label_10
-  properties: {text: Business applies for ﬁnance on Kotak, align: center, font_size: 20}
+  properties: {text: '
+
+      Business applies for ﬁnance on Kotak', align: center, font_size: 20}
   type: Label
   layout_properties: {grid_position: 'BGOTWK,XXIPLN LDUNEZ,EMAVPJ'}
 - name: image_5
-  properties: {source: _/theme/icons8-approved-webpage-100.png, background: '', role: null,
-    visible: true, height: 140}
+  properties: {source: _/theme/icons8-approved-webpage-100 (1).png, background: '',
+    role: null, visible: true, height: 98.58334350585938, display_mode: original_size}
   type: Image
   layout_properties: {grid_position: 'BGOTWK,PRCSLT EVJEUH,SLMCTO'}
 - name: label_11
-  properties: {text: Approved business listed on our marketplace, align: center, font_size: 20}
+  properties: {text: '
+
+      Approved business listed on our marketplace', align: center, font_size: 20}
   type: Label
   layout_properties: {grid_position: 'BGOTWK,PRCSLT OBEGGH,AVGGCR'}
 - name: image_6
-  properties: {source: _/theme/icons8-fund-100.png, height: 140}
+  properties: {source: _/theme/icons8-fund-100 (1).png, height: 96.75, display_mode: original_size}
   type: Image
   layout_properties: {grid_position: 'BGOTWK,PTRZYW BSEDZX,SAVEOO'}
 - name: label_12
-  properties: {text: Investors fund finance request on the platform, align: center,
-    bold: false, font_size: 20}
+  properties: {text: '
+
+      Investors fund finance request on the platform', align: center, bold: false,
+    font_size: 20}
   type: Label
   layout_properties: {grid_position: 'BGOTWK,PTRZYW JEGIDN,XAPYYC'}
 - name: image_7
-  properties: {source: _/theme/icons8-business-goal-100.png, role: null, height: 141}
+  properties: {source: _/theme/icons8-business-goal-100 (1).png, role: null, height: 95.91665649414062,
+    display_mode: original_size}
   type: Image
   layout_properties: {grid_position: 'BGOTWK,FKRLFV NBOARJ,FCSFDI'}
 - name: label_13
-  properties: {text: Business gets loan and investors get monthly returns, align: center,
-    font_size: 20}
+  properties: {text: '
+
+      Business gets loan and investors get monthly returns', align: center, font_size: 20}
   type: Label
   layout_properties: {grid_position: 'BGOTWK,FKRLFV DOZWJT,LZIAIC'}
 - name: spacer_2
@@ -493,81 +604,244 @@ components:
   type: Spacer
   layout_properties: {grid_position: 'LCUPAG,KHUANQ'}
 - name: label_15
-  properties: {text: 'Why invest in P2P lending with Kotak?', align: center, font: '',
-    font_size: 25}
+  properties: {text: Why you should Borrow through Kotak, align: center, font: '',
+    font_size: 30, bold: true}
   type: Label
   layout_properties: {grid_position: 'GERKWX,DKAZVL'}
-- name: label_16
-  properties: {text: Investment opportunities crafted for best returns, font_size: 30,
-    font: '', bold: true, align: center}
-  type: Label
-  layout_properties: {grid_position: 'RRMBIW,UUROLK'}
 - name: spacer_8
   properties: {height: 45.199981689453125}
   type: Spacer
   layout_properties: {grid_position: 'GTTQDX,CSHUEV'}
-- name: data_row_panel_1
-  properties: {}
-  type: DataRowPanel
-  layout_properties: {grid_position: 'RUUBND,IGQGYE DAZLXX,OKHTQO', row_background: ''}
-  components:
-  - name: image_9
-    properties: {height: 142, source: _/theme/icons8-boxes-64.png}
-    type: Image
-    layout_properties: {}
+- name: image_9
+  properties: {height: '117', source: _/theme/icons8-mortgage-interest-100.png, display_mode: original_size}
+  type: Image
+  layout_properties: {grid_position: 'RUUBND,IGQGYE RUFKEB,CXYDDO'}
+- name: spacer_26
+  properties: {height: 32}
+  type: Spacer
+  layout_properties: {grid_position: 'RUUBND,IGQGYE MBHLEX,YNIZZX'}
 - name: label_17
-  properties: {text: Portfolio Diversification, font_size: 19, align: center, bold: true,
-    italic: true}
+  properties: {text: Low-Interest Rates, font_size: 20, align: center, bold: true,
+    italic: false}
   type: Label
   layout_properties: {grid_position: 'RUUBND,IGQGYE SWCZMF,EGOYCS'}
 - name: label_20
-  properties: {text: Think beyond the traditional market-linked instruments., font_size: 17,
-    align: center}
+  properties: {text: 'Borrowers can access P2P loans with competitive rates, evaluated
+      across 40+ metrics using our unique credit scoring model, surpassing standard
+      CIBIL assessments.', font_size: 18, align: center}
   type: Label
   layout_properties: {grid_position: 'RUUBND,IGQGYE DAIOZX,MZNFLK'}
-- name: data_row_panel_2
-  properties: {}
-  type: DataRowPanel
-  layout_properties: {grid_position: 'RUUBND,WMRMLE UHPRQJ,IEYUXN'}
-  components:
-  - name: image_8
-    properties: {source: _/theme/icons8-rupee-64.png, height: 137}
-    type: Image
-    layout_properties: {}
+- name: image_8
+  properties: {source: _/theme/icons8-easy-100.png, height: '117', display_mode: original_size}
+  type: Image
+  layout_properties: {grid_position: 'RUUBND,WMRMLE FEKSPP,LLPDZJ'}
+- name: spacer_25
+  properties: {height: 32}
+  type: Spacer
+  layout_properties: {grid_position: 'RUUBND,WMRMLE NBGXKU,QEXBPQ'}
 - name: label_18
-  properties: {text: Minimum Investment, bold: true, font_size: 18, align: center}
+  properties: {text: Quick and Hassle Free, bold: true, font_size: 20, align: center}
   type: Label
   layout_properties: {grid_position: 'RUUBND,WMRMLE ZIBFWQ,ETAAAQ'}
 - name: label_21
-  properties: {text: 'Start your investment journey with as low as ₹ 10,000. ', font_size: 16,
-    align: center}
+  properties: {text: 'Kotak provides a seamless user experience in terms of ease of
+      transaction, ability to view detailed account statements, transaction analysis,
+      and many more features', font_size: 18, align: center}
   type: Label
   layout_properties: {grid_position: 'RUUBND,WMRMLE XFLEEY,RNLVLX'}
-- name: data_row_panel_3
-  properties: {}
-  type: DataRowPanel
-  layout_properties: {grid_position: 'RUUBND,UTGGPW GFNQED,PMDARC'}
-  components:
-  - name: image_10
-    properties: {source: _/theme/icons8-percentage-64.png, height: 137}
-    type: Image
-    layout_properties: {}
+- name: image_10
+  properties: {source: _/theme/icons8-law-100.png, height: '117', display_mode: original_size}
+  type: Image
+  layout_properties: {grid_position: 'RUUBND,UTGGPW GFNQED,ZHDEOY'}
+- name: spacer_24
+  properties: {height: 32}
+  type: Spacer
+  layout_properties: {grid_position: 'RUUBND,UTGGPW PFNGMU,FQYNFG'}
 - name: label_19
-  properties: {text: Attractive Returns, align: center, font: '', bold: true, font_size: 18}
+  properties: {text: No Prepayment Penalty, align: center, font: '', bold: true, font_size: 20}
   type: Label
   layout_properties: {grid_position: 'RUUBND,UTGGPW GYXXKV,RVTSGV'}
 - name: label_22
-  properties: {text: FMPP investors have earned upto 15% p.a.* since launch, align: center,
-    font_size: 16}
+  properties: {text: 'At Kotak, the Borrowers can simply prepay their loans at their
+      own convenience without any charges whatsoever and as many times as they wish.',
+    align: center, font_size: 18}
   type: Label
   layout_properties: {grid_position: 'RUUBND,UTGGPW RLQOJA,BCFMPC'}
+- name: image_27
+  properties: {height: '117', source: _/theme/icons8-get-cash-100.png, display_mode: original_size}
+  type: Image
+  layout_properties: {grid_position: 'RUUBND,GEESPO BBNHAZ,RPZBVZ', full_width_row: false}
+- name: spacer_23
+  properties: {height: 32}
+  type: Spacer
+  layout_properties: {grid_position: 'RUUBND,GEESPO UMFYMU,QSNDBO'}
+- name: label_16
+  properties: {text: Funding in a Few Days, font_size: 20, bold: true, align: center}
+  type: Label
+  layout_properties: {grid_position: 'RUUBND,GEESPO EFOOBH,GOSWPG'}
+- name: label_46
+  properties: {text: 'We have a large pool of investors who are looking to invest
+      in individual projects approved by Kotak. Once your loan project is listed on
+      Kotak, it gets funded within a few days', font_size: 18, align: center}
+  type: Label
+  layout_properties: {grid_position: 'RUUBND,GEESPO GMIZKY,KKGPWJ'}
 - name: spacer_9
   properties: {height: 45}
   type: Spacer
   layout_properties: {grid_position: 'OCHPMV,DVARFM'}
+- name: label_52
+  properties: {text: Borrowers Eligibility, bold: true, font_size: 25, align: center}
+  type: Label
+  layout_properties: {grid_position: 'RNCYEY,OTFUIM'}
+- name: label_53
+  properties: {text: 'Kotak is a platform for people with non-traditional approach
+      to borrowing, which ultimately results in lower interest rates on the financing
+      amount. Borrowers must meet the following criteria to be considered for listing
+      on our platform', font_size: 20}
+  type: Label
+  layout_properties: {grid_position: 'WDHPFN,LMRXWN'}
+- name: spacer_32
+  properties: {height: 32}
+  type: Spacer
+  layout_properties: {grid_position: 'HJJAHT,ZMXVPS'}
+- name: label_54
+  properties: {text: . You must be an Indian Resident, align: left, bold: true, font_size: 17}
+  type: Label
+  layout_properties: {grid_position: 'HJJAHT,OHQTCG'}
+- name: spacer_33
+  properties: {height: 32}
+  type: Spacer
+  layout_properties: {grid_position: 'JGZLAK,OYIVEL'}
+- name: label_55
+  properties: {text: . You must be more than 18 years old, bold: true, font_size: 17}
+  type: Label
+  layout_properties: {grid_position: 'JGZLAK,RYPZCD'}
+- name: spacer_34
+  properties: {height: 32}
+  type: Spacer
+  layout_properties: {grid_position: 'APKAYF,VURQFS'}
+- name: label_56
+  properties: {text: . You must have valid Indian ID proof, bold: true, font_size: 17,
+    font: ''}
+  type: Label
+  layout_properties: {grid_position: 'APKAYF,KLQWYU'}
+- name: spacer_35
+  properties: {height: 32}
+  type: Spacer
+  layout_properties: {grid_position: 'CGFZUO,NZODAV'}
+- name: label_57
+  properties: {text: . You must have a valid Indian bank account, bold: true, font_size: 17}
+  type: Label
+  layout_properties: {grid_position: 'CGFZUO,ATRLXT'}
+- name: spacer_36
+  properties: {height: 28.399932861328125}
+  type: Spacer
+  layout_properties: {grid_position: 'KMQMXC,HBVVLU'}
+- name: label_58
+  properties: {text: 'If a prospective borrower fails to meet the aforementioned criteria,
+      they cannot become a member of Kotak unless specified otherwise in a written
+      legal agreement provided by Kotak', font_size: 18, font: ''}
+  type: Label
+  layout_properties: {grid_position: 'AUTUDX,QUJUZD'}
+- name: label_59
+  properties: {text: 'Photographs :', font_size: 18, align: left, background: '#E5E0E7 '}
+  type: Label
+  layout_properties: {grid_position: 'JJKMLG,CZUENQ VLFTHR,HFLLCA'}
+- name: label_61
+  properties: {text: 'Identity Proof (any one of the following) :', font_size: 18,
+    align: left}
+  type: Label
+  layout_properties: {grid_position: 'JJKMLG,CZUENQ DRVART,GFVXBM'}
+- name: label_64
+  properties: {text: 'Date of Birth Proof (any one of the following) :', font_size: 18,
+    align: left, background: '#E5E0E7 '}
+  type: Label
+  layout_properties: {grid_position: 'JJKMLG,CZUENQ WGZONM,TRVCDV'}
+- name: label_66
+  properties: {text: 'Signature Proof (any one of the following) :', font_size: 18,
+    align: left}
+  type: Label
+  layout_properties: {grid_position: 'JJKMLG,CZUENQ ZAXVSD,CKSLPD'}
+- name: label_67
+  properties: {text: 'Address Proof (any one of the following) :', font_size: 18,
+    align: left, background: '#E5E0E7 '}
+  type: Label
+  layout_properties: {grid_position: 'JJKMLG,CZUENQ SAEYPG,SLSCGX'}
+- name: label_70
+  properties: {text: 'Contact Proof (any one of the following) :', font_size: 18,
+    align: left}
+  type: Label
+  layout_properties: {grid_position: 'JJKMLG,CZUENQ TQPYOA,FEZCGI'}
+- name: label_72
+  properties: {text: 'Bank Statements :', font_size: 18, align: left, background: '#E5E0E7 '}
+  type: Label
+  layout_properties: {grid_position: 'JJKMLG,CZUENQ QPLOHR,EDDTHU'}
+- name: label_74
+  properties: {text: 'Proof of Income :', font_size: 18, align: left}
+  type: Label
+  layout_properties: {grid_position: 'JJKMLG,CZUENQ PPTJZO,YPWOPJ'}
+- name: label_60
+  properties: {text: 'Yes
+
+      ', font_size: 18, align: left, background: '#E5E0E7 '}
+  type: Label
+  layout_properties: {grid_position: 'JJKMLG,IBLJFP VPAFJO,HNFYBK'}
+- name: label_62
+  properties: {text: 'PAN Card, Aadhaar Card, Voter ID, Passport', font_size: 18,
+    align: left}
+  type: Label
+  layout_properties: {grid_position: 'JJKMLG,IBLJFP IUUWBO,ZSWIIV'}
+- name: label_63
+  properties: {text: 'PAN Card, Passport
+
+      ', font_size: 18, align: left, background: '#E5E0E7 '}
+  type: Label
+  layout_properties: {grid_position: 'JJKMLG,IBLJFP PKJMEE,AJYLWT'}
+- name: label_65
+  properties: {text: 'PAN Card, Signature verification from your bank, Passport
+
+      ', align: left, font_size: 18}
+  type: Label
+  layout_properties: {grid_position: 'JJKMLG,IBLJFP ZTYZJB,BLUYKO'}
+- name: label_68
+  properties: {text: 'Passport, Bank Statement, Voter ID
+
+      ', font_size: 18, background: '#E5E0E7 '}
+  type: Label
+  layout_properties: {grid_position: 'JJKMLG,IBLJFP MXDGSI,AQWZUY'}
+- name: label_69
+  properties: {text: 'Post paid Mobile Bill , Post paid Landline Bill (last month)
+
+      ', font_size: 18}
+  type: Label
+  layout_properties: {grid_position: 'JJKMLG,IBLJFP AWVTAS,HIHIRI'}
+- name: label_71
+  properties: {text: 'Last 4 months
+
+      ', font_size: 18, background: '#E5E0E7 '}
+  type: Label
+  layout_properties: {grid_position: 'JJKMLG,IBLJFP PDZCRT,BGQESW'}
+- name: label_73
+  properties: {text: 'Last year''s Business/Personal ITR or Income Declaration
+
+      ', font_size: 18}
+  type: Label
+  layout_properties: {grid_position: 'JJKMLG,IBLJFP VDACAJ,AEGOPI'}
+- name: spacer_37
+  properties: {height: 32}
+  type: Spacer
+  layout_properties: {grid_position: 'JEGYMW,JVNGBR'}
+- name: button_9
+  properties: {text: Register as Borrower, background: '#013065', foreground: white}
+  type: Button
+  layout_properties: {grid_position: 'DTMZYG,MSRJRI'}
+- name: spacer_39
+  properties: {height: 32}
+  type: Spacer
+  layout_properties: {grid_position: 'RSYMBZ,MHEQTQ'}
 - name: grid_panel_2_copy_1
   properties: {spacing_above: small, spacing_below: small, background: '#094586',
-    foreground: '', border: '', visible: true, role: null, tooltip: ''}
+    foreground: '', border: '', visible: true, role: outlined-card, tooltip: ''}
   type: GridPanel
   layout_properties: {grid_position: 'RFHNEJ,NBXHLS', full_width_row: true}
   components:
@@ -578,7 +852,7 @@ components:
     components:
     - name: label_1_copy_1
       properties: {role: null, align: center, tooltip: '', border: '', foreground: white,
-        visible: true, text: Personal Loan at Interest Rates Starting from 12%, font_size: 30,
+        visible: true, text: Personal Loan at Interest Rates Starting from 12%, font_size: 25,
         font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
         background: '', bold: true, underline: false, icon: ''}
       type: Label
@@ -602,13 +876,13 @@ components:
     layout_properties: {row: QDSSCF, width_xs: 12, col_xs: 0, width: 470}
 - name: grid_panel_3_copy_1
   properties: {spacing_above: small, spacing_below: small, background: '#094586',
-    foreground: '', border: '', visible: true, role: null, tooltip: ''}
+    foreground: '', border: '', visible: true, role: outlined-card, tooltip: ''}
   type: GridPanel
   layout_properties: {grid_position: 'RFHNEJ,XZZDKH', full_width_row: false}
   components:
   - name: label_2_copy_1
     properties: {role: null, align: center, tooltip: '', border: '', foreground: white,
-      visible: true, text: Generate substantial profits for investors, font_size: 30,
+      visible: true, text: Generate substantial profits for investors, font_size: 25,
       font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
       background: '', bold: true, underline: false, icon: ''}
     type: Label
@@ -648,24 +922,28 @@ components:
   properties: {text: FAQ, font_size: 30, font: '', bold: true}
   type: Label
   layout_properties: {grid_position: 'NLJPGR,IKJPKV'}
-- name: button_4
-  properties: {text: 'What is Peer to Peer Lending?                                                                                          +',
-    foreground: black, bold: true, font: a, font_size: 23, align: left}
-  type: Button
-  layout_properties: {grid_position: 'EBBCHI,DHGHAX'}
-  event_bindings: {click: button_4_click}
 - name: spacer_10
   properties: {height: 32}
   type: Spacer
-  layout_properties: {grid_position: 'XAUWPD,YCDQDS'}
+  layout_properties: {grid_position: 'TVJZLT,AJIMAE'}
+- name: button_4
+  properties: {text: 'What is Peer to Peer Lending?                                                                                          +',
+    foreground: black, bold: true, font: a, font_size: 20, align: left}
+  type: Button
+  layout_properties: {grid_position: 'EBBCHI,DHGHAX'}
+  event_bindings: {click: button_4_click}
+- name: spacer_38
+  properties: {height: 32}
+  type: Spacer
+  layout_properties: {grid_position: 'VZQHCA,MJLLCS'}
 - name: rich_text_3
   properties: {content: Peer to peer lending is a method of lending capital to borrowers on a mutual interest rate through an online platform like kotak which act as a matchmaker,
-    font_size: 20, visible: false}
+    font_size: 18, visible: false, font: a}
   type: RichText
-  layout_properties: {grid_position: 'XAUWPD,EGYCFU'}
+  layout_properties: {grid_position: 'VZQHCA,ETGUAR'}
 - name: button_4_copy
   properties: {text: 'Is Peer to peer lending safe?                                                                                              +',
-    foreground: black, bold: true, font: a, font_size: 23, align: left}
+    foreground: black, bold: true, font: a, font_size: 20, align: left}
   type: Button
   layout_properties: {grid_position: 'YMHUAU,LULQCV'}
   event_bindings: {click: button_4_copy_click}
@@ -678,12 +956,12 @@ components:
       direct lending between individuals, bypassing traditional financial institutions.
       While it''s a convenient and lucrative investment avenue, it carries inherent
       risks, chiefly borrower default. However, prudent risk management strategies
-      can effectively mitigate this concern.', font_size: 20, visible: false}
+      can effectively mitigate this concern.', font_size: 18, visible: false, font: a}
   type: RichText
   layout_properties: {grid_position: 'BNOUZX,BRNMJF'}
 - name: button_1
   properties: {text: 'What are the benefits of using P2P lending software?                                                     +',
-    foreground: black, align: left, font_size: 23, role: null, bold: true, font: a}
+    foreground: black, align: left, font_size: 20, role: null, bold: true, font: a}
   type: Button
   layout_properties: {grid_position: 'MBJAWJ,OZKRQT'}
   event_bindings: {click: button_1_click}
@@ -718,13 +996,13 @@ components:
 
       8. Built-in reports and dashboards powered by Amazon Quick Sight for data-driven
       decisions, enabling lenders to make informed decisions based on the platform’s
-      data.', font_size: 20, visible: false, background: ''}
+      data.', font_size: 18, visible: false, background: '', font: a}
   type: RichText
   layout_properties: {grid_position: 'RFIPML,GZEPAB'}
   components: []
 - name: button_1_copy
   properties: {text: 'What types of loans can be offered through peer-to-peer marketplace
-      software?        +', foreground: black, align: left, font_size: 23, role: null,
+      software?        +', foreground: black, align: left, font_size: 20, role: null,
     font: a, bold: true}
   type: Button
   layout_properties: {grid_position: 'DAMLNZ,ITXSQB'}
@@ -738,9 +1016,41 @@ components:
       and commercial loans. These can include personal loans, business loans, education
       loans, home improvement loans, debt consolidation loans, and more. You are free
       to add specific loan types on a P2P lending platform depending on the platform’s
-      focus and target audience.', font_size: 20, visible: false}
+      focus and target audience.', font_size: 18, visible: false, font: a}
   type: RichText
   layout_properties: {grid_position: 'CVDGOO,HJXPJG'}
+  components: []
+- name: spacer_20
+  properties: {height: 32}
+  type: Spacer
+  layout_properties: {grid_position: 'GARQWW,LDCTBY'}
+- name: grid_panel_1
+  properties: {background: '#EBE1ED'}
+  type: GridPanel
+  layout_properties: {grid_position: 'FQBPSY,UMXIKL', full_width_row: true}
+  components:
+  - name: spacer_21
+    properties: {height: 32}
+    type: Spacer
+    layout_properties: {row: OOOZIM, width_xs: 3, col_xs: 2}
+  - name: label_39
+    properties: {text: Join our expanding team as we grow!, font_size: 16}
+    type: Label
+    layout_properties: {row: ROSIKZ, width_xs: 3, col_xs: 1}
+  - name: label_41
+    properties: {text: '"Join over 1 crore Indians who have already signed up. Will
+        you be next?"', bold: true, font_size: 35}
+    type: Label
+    layout_properties: {row: KSGGGV, width_xs: 5, col_xs: 1}
+  - name: image_22
+    properties: {source: _/theme/india map.png, display_mode: original_size, height: 340.22222900390625}
+    type: Image
+    layout_properties: {row: KSGGGV, width_xs: 4, col_xs: 7}
+  - name: button_2
+    properties: {text: Register Now, spacing_below: medium, background: '#094586',
+      foreground: White, role: filled-button, font_size: 20}
+    type: Button
+    layout_properties: {row: ABBVHK, width_xs: 3, col_xs: 1}
 - name: label_2_copy
   properties: {role: null, align: center, tooltip: '', border: '', foreground: black,
     visible: true, text: 'Hear from our investors
@@ -770,14 +1080,76 @@ components:
   type: Image
   layout_properties: {grid_position: 'UUAAMD,XEMJBS'}
 - type: Spacer
-  properties: {height: 40}
+  properties: {height: 14.399993896484375}
   name: spacer_5
   layout_properties: {grid_position: 'BMHMDX,VXLTQN', full_width_row: true}
-- name: flow_panel_3
-  properties: {spacing_below: none}
-  type: FlowPanel
-  layout_properties: {grid_position: 'YELVKG,AVJXAU', full_width_row: true}
-  components: []
+- name: label_76
+  properties: {text: '* RBI does not guarantee any returns or principal for the amount
+      invested on the P2P platform.', font_size: 16}
+  type: Label
+  layout_properties: {grid_position: 'UVNZCH,IZXSVV'}
+- name: spacer_40
+  properties: {height: 15.199981689453125}
+  type: Spacer
+  layout_properties: {grid_position: 'MQLTXK,CFPXXS'}
+- name: column_panel_2_copy
+  properties: {background: '#CBD5F3 ', col_widths: '{"XHAILN":12,"SPJHOO":8,"WNWVDK":16,"YBBTWP":12,"QNSOAB":12}'}
+  type: ColumnPanel
+  layout_properties: {grid_position: 'VCGNBP,UPHTSU', full_width_row: true}
+  components:
+  - name: spacer_15_copy
+    properties: {height: 14.888885498046875}
+    type: Spacer
+    layout_properties: {grid_position: 'MMFQSR,XHAILN GZEMUS,BUIUBY'}
+  - name: image_29_copy
+    properties: {vertical_align: center, height: 113, border: '', display_mode: zoom_to_fill,
+      spacing_above: none, source: _/theme/titled-design.jpg, spacing_below: large,
+      background: '', horizontal_align: left}
+    type: Image
+    layout_properties: {grid_position: 'MMFQSR,XHAILN'}
+    data_bindings: []
+  - name: spacer_41_copy
+    properties: {height: 21.555511474609375}
+    type: Spacer
+    layout_properties: {grid_position: 'MMFQSR,SPJHOO'}
+  - name: link_7_copy
+    properties: {text: About Us, bold: true, font_size: 16, underline: true, foreground: black}
+    type: Link
+    layout_properties: {grid_position: 'MMFQSR,WNWVDK'}
+    event_bindings: {click: link_7_click}
+  - name: link_10_copy
+    properties: {text: Investment, foreground: black, bold: true, font_size: 16, underline: true}
+    type: Link
+    layout_properties: {grid_position: 'MMFQSR,WNWVDK NYPJXO,GZMCYD'}
+  - name: link_13_copy
+    properties: {text: How It Works, foreground: black, bold: true, font_size: 16,
+      underline: true}
+    type: Link
+    layout_properties: {grid_position: 'MMFQSR,WNWVDK KEVRNO,FAGUHN'}
+  - name: link_11_copy
+    properties: {text: Borrow, font_size: 16, bold: true, foreground: black, underline: true}
+    type: Link
+    layout_properties: {grid_position: 'MMFQSR,YBBTWP MOYVBC,DMAAWC'}
+  - name: link_8_copy
+    properties: {text: Contact Us, foreground: black, underline: true, font_size: 16,
+      bold: true, align: left}
+    type: Link
+    layout_properties: {grid_position: 'MMFQSR,YBBTWP KKGCYO,GSVXOQ'}
+    event_bindings: {click: link_8_click}
+  - name: link_12_copy
+    properties: {text: Help, foreground: black, bold: true, font_size: 16, underline: true}
+    type: Link
+    layout_properties: {grid_position: 'MMFQSR,QNSOAB IRVWEK,HAZHMM', full_width_row: true}
+    event_bindings: {click: link_12_click}
+  - name: link_9_copy
+    properties: {text: Products, bold: true, font_size: 16, underline: true, foreground: black}
+    type: Link
+    layout_properties: {grid_position: 'MMFQSR,QNSOAB MCUKZK,LUZRLG'}
+    event_bindings: {click: link_9_click}
+  - name: spacer_16_copy
+    properties: {height: '14'}
+    type: Spacer
+    layout_properties: {grid_position: 'EEWYZY,CQBPUE'}
 - name: grid_panel_2
   properties: {spacing_above: small, spacing_below: small, background: '#05264d',
     foreground: '', border: '', visible: true, role: null, tooltip: ''}

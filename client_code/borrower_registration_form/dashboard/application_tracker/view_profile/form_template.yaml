@@ -1,6 +1,6 @@
 container:
   type: ColumnPanel
-  properties: {col_widths: '{}'}
+  properties: {col_widths: '{"SASOPE":15,"BLPAKG":25,"ZKHZFF":15,"ZUMLRF":5}'}
 components:
 - type: FlowPanel
   properties: {}
@@ -29,82 +29,90 @@ components:
   name: navigation_form_dashboard_1
   layout_properties: {grid_position: 'QKWYUF,RQFZQY', full_width_row: true}
 - name: label_1_copy_1_copy_1
-  properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
-    visible: true, text: View Profile, font_size: null, font: '', spacing_above: small,
-    icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-    underline: false, icon: ''}
+  properties: {role: outlined-card, align: center, tooltip: '', border: '', foreground: 'theme:On
+      Primary', visible: true, text: View Profile, font_size: 18, font: '', spacing_above: small,
+    icon_align: left, spacing_below: small, italic: false, background: '#05264d',
+    bold: true, underline: false, icon: ''}
   type: Label
   layout_properties:
     col_widths: {}
     grid_position: KDHAAT,CKVRJM
+- name: spacer_2
+  properties: {height: 287.85711669921875}
+  type: Spacer
+  layout_properties: {grid_position: 'FDIETG,SASOPE'}
 - name: label_7
-  properties: {role: null, align: right, tooltip: '', border: '', foreground: '',
-    visible: true, text: 'Loan Id:', font_size: null, font: '', spacing_above: small,
+  properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
+    text: 'Loan Id:', font_size: null, font: '', spacing_above: small, icon_align: left,
+    spacing_below: small, italic: false, background: '', bold: true, underline: false,
+    icon: ''}
+  type: Label
+  layout_properties: {grid_position: 'FDIETG,BLPAKG GBRZSJ,MLNPUN'}
+- name: label_8
+  properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
+    text: 'Loan Amount:', font_size: null, font: '', spacing_above: small, icon_align: left,
+    spacing_below: small, italic: false, background: '', bold: true, underline: false,
+    icon: ''}
+  type: Label
+  layout_properties: {grid_position: 'FDIETG,BLPAKG YJRQSR,MEEPSL'}
+- name: label_11
+  properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
+    text: 'Intrest Rate:', font_size: null, font: '', spacing_above: small, icon_align: left,
+    spacing_below: small, italic: false, background: '', bold: true, underline: false,
+    icon: ''}
+  type: Label
+  layout_properties: {grid_position: 'FDIETG,BLPAKG UGMTGC,FJEAJH'}
+- name: label_10
+  properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
+    text: 'Tenure:', font_size: null, font: '', spacing_above: small, icon_align: left,
+    spacing_below: small, italic: false, background: '', bold: true, underline: false,
+    icon: ''}
+  type: Label
+  layout_properties: {grid_position: 'FDIETG,BLPAKG KCCKGD,POHEAU'}
+- name: label_12
+  properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
+    text: 'Date Of Apply:', font_size: null, font: '', spacing_above: small, icon_align: left,
+    spacing_below: small, italic: false, background: '', bold: true, underline: false,
+    icon: ''}
+  type: Label
+  layout_properties: {grid_position: 'FDIETG,BLPAKG QBWUEY,DCNKCX'}
+- name: label_2
+  properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
+    text: 'Loan Updated Status:', font_size: null, font: '', spacing_above: small,
     icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
     underline: false, icon: ''}
   type: Label
-  layout_properties: {grid_position: 'FDIETG,BLPAKG'}
+  layout_properties: {grid_position: 'FDIETG,BLPAKG RGKZQH,ZHRRRJ'}
 - name: loan_id_label
   properties: {}
   type: Label
-  layout_properties: {grid_position: 'FDIETG,ZKHZFF'}
-- name: label_8
-  properties: {role: null, align: right, tooltip: '', border: '', foreground: '',
-    visible: true, text: 'Loan Amount:', font_size: null, font: '', spacing_above: small,
-    icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-    underline: false, icon: ''}
-  type: Label
-  layout_properties: {grid_position: 'PTPWQV,CUOMKR'}
+  layout_properties: {grid_position: 'FDIETG,ZKHZFF PVAQBH,KYICAF'}
 - name: loan_amount_label
   properties: {}
   type: Label
-  layout_properties: {grid_position: 'PTPWQV,CHJNQI'}
-- name: label_11
-  properties: {role: null, align: right, tooltip: '', border: '', foreground: '',
-    visible: true, text: 'Intrest Rate:', font_size: null, font: '', spacing_above: small,
-    icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-    underline: false, icon: ''}
-  type: Label
-  layout_properties: {grid_position: 'DRPWYS,KHMDWY'}
+  layout_properties: {grid_position: 'FDIETG,ZKHZFF XBXEXY,QJHBYZ'}
 - name: intrest_rate_label
   properties: {}
   type: Label
-  layout_properties: {grid_position: 'DRPWYS,QYSBQC'}
-- name: label_10
-  properties: {role: null, align: right, tooltip: '', border: '', foreground: '',
-    visible: true, text: 'Tenure:', font_size: null, font: '', spacing_above: small,
-    icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-    underline: false, icon: ''}
-  type: Label
-  layout_properties: {grid_position: 'SGEVJA,NLZWBH'}
+  layout_properties: {grid_position: 'FDIETG,ZKHZFF LDTLWX,YEHSGQ'}
 - name: tenure_label
   properties: {}
   type: Label
-  layout_properties: {grid_position: 'SGEVJA,UGWBFV'}
-- name: label_12
-  properties: {role: null, align: right, tooltip: '', border: '', foreground: '',
-    visible: true, text: 'Date Of Apply:', font_size: null, font: '', spacing_above: small,
-    icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-    underline: false, icon: ''}
-  type: Label
-  layout_properties: {grid_position: 'SZRCOX,ONHLCB'}
+  layout_properties: {grid_position: 'FDIETG,ZKHZFF HCRKRS,YGODIG'}
 - name: date_of_apply_label
   properties: {}
   type: Label
-  layout_properties: {grid_position: 'SZRCOX,UWUPHU'}
-- name: label_2
-  properties: {role: null, align: right, tooltip: '', border: '', foreground: '',
-    visible: true, text: 'Loan Updated Status:', font_size: null, font: '', spacing_above: small,
-    icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-    underline: false, icon: ''}
-  type: Label
-  layout_properties: {grid_position: 'FGTQBR,TOEHRF'}
+  layout_properties: {grid_position: 'FDIETG,ZKHZFF SWIBWZ,VGKBSQ'}
 - name: loan_updated_status_label
   properties: {align: left}
   type: Label
-  layout_properties: {grid_position: 'FGTQBR,DMKNMB'}
+  layout_properties: {grid_position: 'FDIETG,ZKHZFF NHXQGA,BPQPJD'}
   data_bindings:
   - {property: text, code: 'self.item[''loan_updated_status'']', writeback: false}
+- name: spacer_3
+  properties: {height: 243.21429443359375}
+  type: Spacer
+  layout_properties: {grid_position: 'FDIETG,ZUMLRF'}
 - name: button_1
   properties: {role: elevated-button, align: center, tooltip: '', border: '', enabled: true,
     foreground: 'theme:On Primary', visible: true, text: Back, font_size: null, font: '',
