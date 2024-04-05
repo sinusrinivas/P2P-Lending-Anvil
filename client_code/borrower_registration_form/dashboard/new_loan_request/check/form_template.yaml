@@ -31,10 +31,10 @@ components:
     name: spacer_3
     layout_properties: {grid_position: 'SGUSCA,EFTYEF'}
   - name: label_2
-    properties: {role: title, align: center, tooltip: '', border: '', foreground: '',
-      visible: true, text: Payment Details, font_size: null, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-      underline: false, icon: ''}
+    properties: {role: outlined-card, align: center, tooltip: '', border: '', foreground: '',
+      visible: true, text: Payment Details, font_size: 25, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: 'theme:On
+        Disabled', bold: true, underline: false, icon: ''}
     type: Label
     layout_properties: {grid_position: 'XUHPMX,QLSZYQ'}
   - name: label_1
@@ -44,6 +44,94 @@ components:
       background: '', bold: false, underline: false, icon: ''}
     type: Label
     layout_properties: {grid_position: 'VKMVQJ,XBNOMX'}
+  - name: data_grid_1
+    properties:
+      role: null
+      columns:
+      - {id: IKQXMJ, title: Payment Number, data_key: column_1, $$hashKey: 'object:10339',
+        width: 78, expand: false}
+      - {id: CLPOBH, title: Payment Date, data_key: column_2, $$hashKey: 'object:10340',
+        width: 147, expand: false}
+      - {id: SSXXKU, title: Beginning Balance, data_key: column_3, $$hashKey: 'object:10341',
+        width: 137, expand: false}
+      - {id: XEXQGC, title: Scheduled  Payment, data_key: column_4, $$hashKey: 'object:10414',
+        width: 142, expand: false}
+      - {id: IBXUUB, title: Extra Payment, data_key: column_5, $$hashKey: 'object:10416',
+        width: 129, expand: false}
+      - {id: MHNLDT, title: Total Payment, data_key: column_6, $$hashKey: 'object:10418',
+        width: 131, expand: false}
+      - {id: ZSQFCF, title: Principal, data_key: column_7, $$hashKey: 'object:10420',
+        width: 120, expand: false}
+      - {id: ZZIPKX, title: Interest, data_key: column_8, $$hashKey: 'object:10422',
+        width: 115, expand: false}
+      - {id: BBAJUJ, title: Processing Fee, data_key: column_10, $$hashKey: 'object:426',
+        width: 125, expand: false}
+      - {id: BUUGHM, title: Ending Balance, data_key: column_9, $$hashKey: 'object:10424'}
+      auto_header: true
+      tooltip: ''
+      border: ''
+      foreground: ''
+      rows_per_page: 2000
+      visible: false
+      wrap_on: never
+      show_page_controls: false
+      spacing_above: small
+      spacing_below: small
+      background: ''
+    type: DataGrid
+    layout_properties: {grid_position: 'IDGGGM,FJNVIH'}
+    components: []
+  - name: column_panel_1
+    properties: {role: outlined-card, col_widths: '{"FZKRQG":5,"WVOLLT":7,"MBXDYI":6,"HECLOU":6,"RTFNVR":6,"KIRZBV":6,"MTMWIX":6,"ZLQWNB":6,"IDBVRU":6,"PBUNBR":6}',
+      background: 'theme:Secondary Container'}
+    type: ColumnPanel
+    layout_properties: {grid_position: 'OBNMNG,CWPGQO', full_width_row: true, row_background: 'theme:Secondary
+        Container'}
+    components:
+    - name: label_3
+      properties: {align: left, text: Payment Number}
+      type: Label
+      layout_properties: {grid_position: 'CORNNT,FZKRQG', full_width_row: true}
+    - name: label_4
+      properties: {text: Payment Date}
+      type: Label
+      layout_properties: {grid_position: 'CORNNT,WVOLLT'}
+    - name: label_5
+      properties: {text: Beginning Balance}
+      type: Label
+      layout_properties: {grid_position: 'CORNNT,MBXDYI'}
+    - name: label_6
+      properties: {text: Scheduled  Payment}
+      type: Label
+      layout_properties: {grid_position: 'CORNNT,HECLOU'}
+    - name: label_7
+      properties: {text: Extra Payment}
+      type: Label
+      layout_properties: {grid_position: 'CORNNT,RTFNVR'}
+    - name: label_8
+      properties: {text: Total Payment}
+      type: Label
+      layout_properties: {grid_position: 'CORNNT,KIRZBV'}
+    - name: label_9
+      properties: {text: Principal}
+      type: Label
+      layout_properties: {grid_position: 'CORNNT,MTMWIX'}
+    - name: label_10
+      properties: {text: Interest}
+      type: Label
+      layout_properties: {grid_position: 'CORNNT,ZLQWNB'}
+    - name: label_11
+      properties: {text: Processing Fee}
+      type: Label
+      layout_properties: {grid_position: 'CORNNT,IDBVRU'}
+    - name: label_12
+      properties: {text: Ending Balance}
+      type: Label
+      layout_properties: {grid_position: 'CORNNT,PBUNBR'}
+  - name: repeating_panel_1
+    properties: {spacing_above: none, spacing_below: none, item_template: borrower_registration_form.dashboard.new_loan_request.check.RowTemplate27}
+    type: RepeatingPanel
+    layout_properties: {grid_position: 'OXLBQQ,CGNAXH', full_width_row: true}
   - type: Button
     properties: {role: null, align: right, tooltip: '', border: '', enabled: true,
       foreground: 'theme:On Primary', visible: true, text: Back, font_size: null,
