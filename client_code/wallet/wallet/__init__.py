@@ -95,7 +95,7 @@ class wallet(walletTemplate):
         alert("Please enter a valid amount.")
         return
 
-    customer_id = 1000
+    customer_id = self.user_id
     email = self.email
 
     if anvil.server.call('deposit_money', email=email, deposit_amount=deposit_amount, customer_id=customer_id):
@@ -117,7 +117,7 @@ class wallet(walletTemplate):
     except ValueError:
         return  
     
-    customer_id = 1000
+    customer_id = self.user_id
     email = self.email  
     
     wallet_row = app_tables.fin_wallet.get(user_email=email)  
