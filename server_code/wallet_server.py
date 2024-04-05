@@ -17,8 +17,6 @@ def fetch_user_profile(email):
     user_profile = app_tables.fin_user_profile.get(email_user=email)
     return user_profile
 
-
-  
 @anvil.server.callable
 def fetch_profile_data_and_insert(email, customer_id):
     try:
@@ -425,4 +423,3 @@ def transfer_money_1(lender_id, borrower_id, transfer_amount):
             user_email=borrower_email,
         )
         return False
-

@@ -103,7 +103,7 @@ class star_1_borrower_registration_form_3_marital_married(star_1_borrower_regist
         self.button_submit_copy.visible = True
         self.button_submit_copy_2.visible = False
         self.button_submit_copy_3.visible = False
-        self.selected_radio_button = "Mother"
+        self.selected_radio_button = "mother"
         self.prev_1.visible = False
         self.prev_2.visible = True
         self.prev_3.visible = False
@@ -170,7 +170,7 @@ class star_1_borrower_registration_form_3_marital_married(star_1_borrower_regist
 
         # Spouse details
         spouse_name = self.spouse_name_text.text
-        spouse_dob = self.date_picker_3.date
+        spouse_mob = self.date_picker_3.date
         spouse_mbl_no_text = self.spouse_mbl_no_text.text
         spouse_mbl_no = int(spouse_mbl_no_text) if spouse_mbl_no_text.strip().isdigit() else None
         spouse_profession = self.drop_down_1.selected_value
@@ -200,7 +200,7 @@ class star_1_borrower_registration_form_3_marital_married(star_1_borrower_regist
             'mother_address': mother_address,
 
             'spouse_name': spouse_name,
-            'spouse_dob': spouse_dob,
+            'spouse_mob': spouse_mob,
             'spouse_mbl_no': spouse_mbl_no,
             'spouse_profession': spouse_profession,
             'spouse_company': spouse_company,
@@ -322,7 +322,7 @@ class star_1_borrower_registration_form_3_marital_married(star_1_borrower_regist
              new_row = app_tables.fin_guarantor_details.add_row(
                 customer_id=self.userId,
                 guarantor_name=details['spouse_name'],
-                guarantor_date_of_birth=details['spouse_dob'],
+                guarantor_date_of_marriage =details['spouse_mob'],
                 guarantor_mobile_no=details['spouse_mbl_no'],
                 guarantor_profession=details['spouse_profession'],
                 guarantor_company_name=details['spouse_company'],
@@ -334,7 +334,7 @@ class star_1_borrower_registration_form_3_marital_married(star_1_borrower_regist
              return
        else:
          existing_row['guarantor_name'] = details['spouse_name']
-         existing_row['guarantor_date_of_birth'] = details['spouse_dob']
+         existing_row['guarantor_date_of_marriage '] = details['spouse_mob']
          existing_row['guarantor_mobile_no'] = details['spouse_mbl_no']
          existing_row['guarantor_profession'] = details['spouse_profession']
          existing_row['guarantor_company_name'] = details['spouse_company']
@@ -351,10 +351,8 @@ class star_1_borrower_registration_form_3_marital_married(star_1_borrower_regist
        errors = []
        if not re.match(r'^[A-Za-z\s]+$', details['spouse_name']):
          errors.append("Enter a valid full name!")
-       if not details['spouse_dob'] or details['spouse_dob'] > datetime.now().date():
-         errors.append("Enter a valid date of birth!")
-       if datetime.now().date() - details['spouse_dob'] < timedelta(days=365 * 18):
-         errors.append("You must be at least 18 years old!")
+       if details['spouse_mob'] > datetime.now().date():
+         errors.append("Enter a valid date of marriage!")
        if not re.match(r'^\d{10}$', str(details['spouse_mbl_no'])):
          errors.append("Enter a valid mobile no!")
 
