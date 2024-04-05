@@ -12,19 +12,50 @@ components:
     properties: {}
     name: navigation_form_dashboard_1
     layout_properties: {grid_position: 'DFBSVE,GHFDCG', full_width_row: true}
-  - name: label_1
-    properties: {text: View Transaction History, foreground: white, background: '#0b2547',
-      align: center, bold: true, font_size: 18, italic: false, underline: false}
-    type: Label
-    layout_properties: {grid_position: 'KMEILD,BKYWJP'}
   - name: spacer_1
     properties: {height: 32}
     type: Spacer
     layout_properties: {grid_position: 'KZLBKG,TLRTOO'}
   - name: repeating_panel_1
-    properties: {item_template: borrower_registration_form.dashboard.view_transaction_history.ItemTemplate66}
+    properties: {item_template: borrower_registration_form.dashboard.view_transaction_history.ItemTemplate66,
+      visible: false}
     type: RepeatingPanel
-    layout_properties: {grid_position: 'SRAQHO,LQAEKR'}
+    layout_properties: {grid_position: 'SRAQHO,LQAEKR UBNWBW,FMVXMC'}
+  - name: label_1
+    properties: {role: outlined-card, align: center, foreground: '', text: ' Transaction
+        History', font_size: 25, italic: false, background: 'theme:Disabled Container',
+      bold: false, underline: false}
+    type: Label
+    layout_properties: {grid_position: 'ZXUKTS,SFEVZN'}
+  - name: column_panel_1
+    properties: {role: elevated-card, background: 'theme:Secondary Container', col_widths: '{"KHYZKC":10,"UJYQMF":15,"XOEYIQ":10,"PVELEK":10,"WQEHHG":15}'}
+    type: ColumnPanel
+    layout_properties: {grid_position: 'XWSJRW,ALJGHA'}
+    components:
+    - name: label_2
+      properties: {text: Transactioin Id}
+      type: Label
+      layout_properties: {grid_position: 'TWRYIO,KHYZKC'}
+    - name: label_3
+      properties: {text: User Email}
+      type: Label
+      layout_properties: {grid_position: 'TWRYIO,UJYQMF'}
+    - name: label_5
+      properties: {text: Status}
+      type: Label
+      layout_properties: {grid_position: 'TWRYIO,XOEYIQ'}
+    - name: label_7
+      properties: {text: Amount}
+      type: Label
+      layout_properties: {grid_position: 'TWRYIO,PVELEK'}
+    - name: label_6
+      properties: {text: Date and Time}
+      type: Label
+      layout_properties: {grid_position: 'TWRYIO,WQEHHG'}
+  - name: repeating_panel_2
+    properties: {item_template: borrower_registration_form.dashboard.view_transaction_history.ItemTemplate101}
+    type: RepeatingPanel
+    layout_properties: {grid_position: 'SMILZA,GNOUHR'}
 - type: FlowPanel
   properties: {}
   name: navbar_links

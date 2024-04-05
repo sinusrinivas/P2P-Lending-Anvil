@@ -65,6 +65,11 @@ class view_transaction_history(view_transaction_historyTemplate):
                     'lender_full_name': lender_profile['full_name'],
                     'amount': transaction_data['amount'],
                     'transaction_time_stamp': transaction_data['transaction_time_stamp'],
+                    'user_email': transaction_data['user_email'],
+                    'status': transaction_data['status'],
+                    # 'transaction_time_stamp': transaction_data['transaction_time_stamp'],
+                    'transaction_id': transaction_data['transaction_id'],
+                    'transaction_type': transaction_data['transaction_type'],
                     'borrower_mobile': borrower_profile['mobile'], 
                     'lender_mobile': lender_profile['mobile']             
                 })
@@ -76,10 +81,15 @@ class view_transaction_history(view_transaction_historyTemplate):
                 self.result.append({
                     'borrower_full_name': borrower_profile['full_name'],                    
                     'lender_full_name': lender_profile['full_name'],
-                    'amount': transaction_data['amount'],
+                     'amount': transaction_data['amount'],
                     'transaction_time_stamp': transaction_data['transaction_time_stamp'],
+                    'user_email': transaction_data['user_email'],
+                    'status': transaction_data['status'],
+                    # 'transaction_time_stamp': transaction_data['transaction_time_stamp'],
+                    'transaction_id': transaction_data['transaction_id'],
+                    'transaction_type': transaction_data['transaction_type'],
                     'borrower_mobile': borrower_profile['mobile'], 
                     'lender_mobile': lender_profile['mobile']             
                 })
 
-        self.repeating_panel_1.items = self.result
+        self.repeating_panel_2.items = self.result
