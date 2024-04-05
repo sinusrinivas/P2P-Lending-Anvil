@@ -27,22 +27,22 @@ components:
     name: navigation_form_dashboard_1
     layout_properties: {grid_position: 'LQBNNN,HPDRWB', full_width_row: true}
   - type: Spacer
+    properties: {height: 26.5714111328125}
+    name: spacer_2
+    layout_properties: {grid_position: 'PBIDRN,MDTPBK'}
+  - type: Spacer
     properties: {height: 6}
     name: spacer_3
     layout_properties: {grid_position: 'SGUSCA,EFTYEF'}
   - name: label_2
-    properties: {role: title, align: center, tooltip: '', border: '', foreground: '',
-      visible: true, text: Payment Details, font_size: null, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-      underline: false, icon: ''}
+    properties: {role: outlined-card, align: center, tooltip: '', border: '', foreground: '',
+      visible: true, text: Payment Details, font_size: 25, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: 'theme:Disabled
+        Container', bold: true, underline: false, icon: ''}
     type: Label
-    layout_properties: {grid_position: 'XUHPMX,QLSZYQ'}
-  - type: Spacer
-    properties: {height: 16}
-    name: spacer_2
-    layout_properties: {grid_position: 'WTZFJQ,SEKFVG'}
+    layout_properties: {grid_position: 'XUHPMX,QLSZYQ', full_width_row: true}
   - type: ColumnPanel
-    properties: {role: outlined-card, tooltip: '', border: '', foreground: '', visible: true,
+    properties: {role: outlined-card, tooltip: '', border: '', foreground: '', visible: false,
       wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
       spacing_below: small, background: ''}
     name: outlined_card_1
@@ -77,11 +77,64 @@ components:
         background: ''
       name: data_grid_1
       layout_properties: {grid_position: 'IWCTBP,KGGFFA', full_width_row: true}
-      components:
-      - type: RepeatingPanel
-        properties: {spacing_above: none, spacing_below: none, item_template: borrower_registration_form.dashboard.extension_loan_request.payment_details_extension.RowTemplate39}
-        name: repeating_panel_1
-        layout_properties: {}
+      components: []
+  - name: column_panel_1
+    properties: {role: elevated-card, background: 'theme:Secondary Container'}
+    type: ColumnPanel
+    layout_properties: {grid_position: 'YEGSVZ,YQEOVA', full_width_row: true}
+    components:
+    - name: label_1
+      properties: {text: Payment Number}
+      type: Label
+      layout_properties: {grid_position: 'ZXWMGT,EISIVD', full_width_row: true}
+    - name: label_3
+      properties: {text: Payment Date}
+      type: Label
+      layout_properties: {grid_position: 'ZXWMGT,DOCFCH'}
+    - name: label_4
+      properties: {text: Beginning Balance}
+      type: Label
+      layout_properties: {grid_position: 'ZXWMGT,VPBNMR'}
+    - name: label_5
+      properties: {text: Payment Due}
+      type: Label
+      layout_properties: {grid_position: 'ZXWMGT,ALSQOT'}
+    - name: label_6
+      properties: {text: Extra Payment}
+      type: Label
+      layout_properties: {grid_position: 'ZXWMGT,IHZWWS'}
+    - name: label_7
+      properties: {text: Total Payment}
+      type: Label
+      layout_properties: {grid_position: 'ZXWMGT,WPKJGC'}
+    - name: label_8
+      properties: {text: Principal}
+      type: Label
+      layout_properties: {grid_position: 'ZXWMGT,YFTFUF'}
+    - name: label_9
+      properties: {text: Interest}
+      type: Label
+      layout_properties: {grid_position: 'ZXWMGT,JQZKWU'}
+    - name: label_10
+      properties: {text: Ending Balance}
+      type: Label
+      layout_properties: {grid_position: 'ZXWMGT,KHGXFP'}
+    - name: label_11
+      properties: {text: Payment Date}
+      type: Label
+      layout_properties: {grid_position: 'ZXWMGT,ZURYQH'}
+    - name: label_12
+      properties: {text: Payment Time}
+      type: Label
+      layout_properties: {grid_position: 'ZXWMGT,RVRNIO'}
+    - name: label_13
+      properties: {text: Account Number}
+      type: Label
+      layout_properties: {grid_position: 'ZXWMGT,FQYHVG'}
+  - type: RepeatingPanel
+    properties: {spacing_above: none, spacing_below: none, item_template: borrower_registration_form.dashboard.extension_loan_request.payment_details_extension.RowTemplate39}
+    name: repeating_panel_1
+    layout_properties: {grid_position: 'OPYPVF,XSEGVJ', full_width_row: true}
   - type: Button
     properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
       foreground: 'theme:On Primary', visible: true, text: Back, font_size: null,
