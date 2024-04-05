@@ -30,11 +30,15 @@ components:
     properties: {height: 0}
     name: spacer_3
     layout_properties: {grid_position: 'SGUSCA,EFTYEF'}
+  - name: spacer_1
+    properties: {height: 32}
+    type: Spacer
+    layout_properties: {grid_position: 'SSLFTH,JDGEVN'}
   - name: label_2
     properties: {role: outlined-card, align: center, tooltip: '', border: '', foreground: '',
-      visible: true, text: Payment Details, font_size: 25, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: 'theme:On
-        Disabled', bold: true, underline: false, icon: ''}
+      visible: true, text: ' Payment Details', font_size: 25, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: 'theme:Disabled
+        Container', bold: true, underline: false, icon: ''}
     type: Label
     layout_properties: {grid_position: 'XUHPMX,QLSZYQ', full_width_row: true}
   - name: label_1
@@ -85,8 +89,7 @@ components:
     properties: {role: outlined-card, col_widths: '{"FZKRQG":5,"WVOLLT":7,"MBXDYI":6,"HECLOU":6,"RTFNVR":6,"KIRZBV":6,"MTMWIX":6,"ZLQWNB":6,"IDBVRU":6,"PBUNBR":6}',
       background: 'theme:Secondary Container'}
     type: ColumnPanel
-    layout_properties: {grid_position: 'OBNMNG,CWPGQO', full_width_row: true, row_background: 'theme:Secondary
-        Container'}
+    layout_properties: {grid_position: 'YCNQTA,LIWCEC', full_width_row: true}
     components:
     - name: label_3
       properties: {align: left, text: Payment Number}
