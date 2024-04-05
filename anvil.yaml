@@ -660,7 +660,7 @@ db_schema:
       admin_ui: {width: 200, order: 21}
       type: string
     - name: marital_status
-      admin_ui: {width: 200, order: 22}
+      admin_ui: {order: 0.78125, width: 200}
       type: string
     - name: usertype
       admin_ui: {order: -1.25, width: 200}
