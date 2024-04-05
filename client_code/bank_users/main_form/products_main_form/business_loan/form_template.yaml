@@ -291,18 +291,63 @@ components:
     type: Label
     layout_properties: {grid_position: 'BRXMCD,XADSUA'}
   - name: spacer_11
-    properties: {height: 32}
+    properties: {height: '20'}
     type: Spacer
     layout_properties: {grid_position: 'ODOPHV,UILMGN'}
   - name: content_panel_copy_copy_copy
-    properties: {background: 'theme:Outline'}
+    properties: {background: '', col_widths: '{"MYPGRO":20,"OSQOGP":40,"LPIEIZ":20,"JOUREZ":40}'}
     type: ColumnPanel
     layout_properties: {grid_position: 'INCOTX,TNZFAG', full_width_row: true}
     components:
-    - name: spacer_1_copy_copy
-      properties: {height: '32'}
+    - name: image_6
+      properties: {source: _/theme/interest-rate-online.png, display_mode: original_size,
+        horizontal_align: left}
+      type: Image
+      layout_properties: {grid_position: 'ZEXDKI,MYPGRO'}
+    - name: label_25
+      properties: {text: Easy online application process}
+      type: Label
+      layout_properties: {grid_position: 'ZEXDKI,OSQOGP XBZJXL,AFVPBV'}
+    - name: label_26
+      properties: {text: 'Experience a quick, seamless, and intuitive loan application
+          process on our platform. Simply fill out a single online application form
+          and upload your documents, and you''re all set!
+
+          '}
+      type: Label
+      layout_properties: {grid_position: 'ZEXDKI,OSQOGP RREVFM,MGXCMB'}
+    - name: spacer_12
+      properties: {height: '40'}
       type: Spacer
-      layout_properties: {grid_position: 'FTRYFN,KRRVLT'}
+      layout_properties: {grid_position: 'RASLLK,EBSQVF'}
+    - name: image_7
+      properties: {display_mode: original_size, source: _/theme/interest-rate-online.png}
+      type: Image
+      layout_properties: {grid_position: 'ISVYFH,LPIEIZ'}
+    - name: label_27
+      properties: {text: Lowest interest rates}
+      type: Label
+      layout_properties: {grid_position: 'ISVYFH,JOUREZ MGLXXA,UKLPUI'}
+    - name: label_28
+      properties: {text: 'Did you realize that for years, you''ve been inadvertently
+          covering your bank''s overhead costs?
+
+          Banks often employ highly-paid professionals to assess business loan applications,
+          and these expenses are ultimately passed on to you through higher interest
+          rates. However, at i2iFunding, we''ve streamlined our operations by leveraging
+          dependable technology to digitize the entire loan application process. Because
+          we prioritize our customers, we pass on the savings from reduced costs to
+          you in the form of lower interest rates, unmatched by banks or NBFCs.
+
+          Moreover, our P2P lending platform offers interest rates based on your credit
+          score. We calculate interest rates using intricate algorithms that evaluate
+          borrowers based on their creditworthiness. This approach allows our customers
+          to benefit from the credit profiles they''ve diligently built over years
+          of hard work and financial discipline.
+
+          '}
+      type: Label
+      layout_properties: {grid_position: 'ISVYFH,JOUREZ EPTCGL,ROANOZ'}
 - type: FlowPanel
   properties: {}
   name: navbar_links
