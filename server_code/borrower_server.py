@@ -468,13 +468,16 @@ def get_user_points(id):
             business_age_search = app_tables.fin_admin_beseem_categories.search(group_name='age_of_business', sub_category=age_of_business.lower())
             if business_age_search:
                 for row in business_age_search:
-                    user_points += row['min_points']
+                    business_age_points += row['min_points']
+                    print("Business Age Points:", business_age_point)
+                    user_points += business_age_points
                   
-        # Add points for marital status and spouse profession if applicable
         marital_status_search = app_tables.fin_admin_beseem_categories.search(group_name='marital_status', sub_category=marital_status.lower(), age=user_age_range)
         if marital_status_search:
             for row in marital_status_search:
-                user_points += row['min_points']
+                marital_status_points += row['min_points']
+                print("Marital status Points:", marital_status_points)
+                user_points += marital_status_points
     
             data = app_tables.fin_guarantor_details.search(customer_id=id)
             if data:
@@ -486,14 +489,17 @@ def get_user_points(id):
                         spouse_profession_search = app_tables.fin_admin_beseem_categories.search(group_name='spouse_profession', sub_category=spouse_profession.lower())
                         if spouse_profession_search:
                             for row in spouse_profession_search:
-                                user_points += row['min_points']       
+                                spouse_profession_points += row['min_points']
+                                print("Spouse profession:", spouse_profession_points)
+                                user_points += spouse_profession_points       
 
-        # Add points for loan categories
         for loan_category in ['home_loan', 'other_loan', 'credit_card_loan', 'vehicle_loan']:
             loan_search = app_tables.fin_admin_beseem_categories.search(group_name=loan_category, sub_category=locals()[loan_category])
             if loan_search:
                 for row in loan_search:
-                    user_points += row['min_points']
+                    loan_points += row['min_points']
+                    print("All loan:", loan_points)
+                    user_points += loan_points
 
         return user_points
     else:

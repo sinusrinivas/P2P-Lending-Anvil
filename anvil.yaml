@@ -942,13 +942,13 @@ db_schema:
       admin_ui: {order: 6.999996185302734, width: 200}
       type: string
     - name: business_age
-      admin_ui: {order: 6.75, width: 200}
+      admin_ui: {order: 0.958984375, width: 200}
       type: number
     - name: profession
       admin_ui: {order: 0.890625, width: 200}
       type: string
     - name: self_employment
-      admin_ui: {order: 0.999786376953125, width: 200}
+      admin_ui: {order: 0.91796875, width: 200}
       type: string
     - name: vehicle_loan
       admin_ui: {order: 0.9991455078125, width: 200}
