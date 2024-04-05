@@ -627,7 +627,7 @@ db_schema:
       admin_ui: {order: 0.125, width: 200}
       type: string
     - name: date_of_birth
-      admin_ui: {width: 200, order: 8}
+      admin_ui: {order: 6.875, width: 200}
       type: date
     - name: aadhaar_photo
       admin_ui: {order: 13, width: 200}
@@ -660,7 +660,7 @@ db_schema:
       admin_ui: {width: 200, order: 21}
       type: string
     - name: marital_status
-      admin_ui: {width: 200, order: 22}
+      admin_ui: {order: 0.78125, width: 200}
       type: string
     - name: usertype
       admin_ui: {order: -1.25, width: 200}
@@ -669,7 +669,7 @@ db_schema:
       admin_ui: {order: 14, width: 200}
       type: string
     - name: user_age
-      admin_ui: {order: 12.5, width: 200}
+      admin_ui: {order: 6.5, width: 200}
       type: number
     - name: registration_approve
       admin_ui: {width: 200, order: 31}
@@ -711,7 +711,7 @@ db_schema:
       admin_ui: {width: 200, order: 24.5625}
       type: string
     - name: street_adress_1
-      admin_ui: {width: 200, order: 10.5}
+      admin_ui: {order: 6.9375, width: 200}
       type: string
     - name: street_address_2
       admin_ui: {width: 200, order: 11.5}
@@ -780,19 +780,19 @@ db_schema:
       admin_ui: {width: 200, order: 64}
       type: string
     - name: home_loan
-      admin_ui: {order: 79, width: 200}
+      admin_ui: {order: 81.99609375, width: 200}
       type: string
     - name: other_loan
       admin_ui: {width: 200, order: 66}
       type: string
     - name: business_name
-      admin_ui: {width: 200, order: 69.5}
+      admin_ui: {order: 78.234375, width: 200}
       type: string
     - name: business_location
       admin_ui: {width: 200, order: 69.25}
       type: string
     - name: business_add
-      admin_ui: {width: 200, order: 69.125}
+      admin_ui: {order: 78.125, width: 200}
       type: string
     - name: branch_name
       admin_ui: {width: 200, order: 69.375}
@@ -801,16 +801,16 @@ db_schema:
       admin_ui: {width: 200, order: 69.4375}
       type: string
     - name: business_type
-      admin_ui: {width: 200, order: 69.46875}
+      admin_ui: {order: 78.21875, width: 200}
       type: string
     - name: employees_working
-      admin_ui: {width: 200, order: 69.453125}
+      admin_ui: {order: 78.1875, width: 200}
       type: string
     - name: industry_type
       admin_ui: {width: 200}
       type: string
     - name: six_month_turnover
-      admin_ui: {width: 200, order: 72}
+      admin_ui: {order: 81.9921875, width: 200}
       type: string
     - name: director_name
       admin_ui: {width: 200, order: 71.5}
@@ -822,13 +822,13 @@ db_schema:
       admin_ui: {width: 200, order: 71.625}
       type: string
     - name: registered_off_add
-      admin_ui: {width: 200, order: 71.875}
+      admin_ui: {order: 81.875, width: 200}
       type: string
     - name: off_add_proof
-      admin_ui: {width: 200, order: 71.9375}
+      admin_ui: {order: 81.96875, width: 200}
       type: string
     - name: proof_verification
-      admin_ui: {width: 200, order: 71.96875}
+      admin_ui: {order: 81.984375, width: 200}
       type: media
     - name: cin
       admin_ui: {width: 200, order: 71.5625}
@@ -840,7 +840,7 @@ db_schema:
       admin_ui: {order: 58.5, width: 200}
       type: string
     - name: form_count
-      admin_ui: {width: 200, order: 88.5}
+      admin_ui: {order: 81.9998779296875, width: 200}
       type: number
     - name: bessem_value
       admin_ui: {order: -0.75, width: 200}
@@ -861,10 +861,10 @@ db_schema:
       admin_ui: {width: 200, order: 100}
       type: media
     - name: one_time_settlement
-      admin_ui: {width: 200, order: 1.5}
+      admin_ui: {order: 18.5, width: 200}
       type: bool
     - name: company_pincode
-      admin_ui: {width: 200, order: 95}
+      admin_ui: {order: 81.99993896484375, width: 200}
       type: string
     - name: company_country
       admin_ui: {width: 200, order: 96}
@@ -915,34 +915,34 @@ db_schema:
       admin_ui: {width: 200}
       type: string
     - name: mother_age
-      admin_ui: {width: 200}
+      admin_ui: {order: 78.25, width: 200}
       type: string
     - name: father_age
-      admin_ui: {width: 200}
+      admin_ui: {order: 78.5, width: 200}
       type: string
     - name: father_name
-      admin_ui: {width: 200}
+      admin_ui: {order: 59.5, width: 200}
       type: string
     - name: father_number
-      admin_ui: {width: 200}
+      admin_ui: {order: 78.375, width: 200}
       type: string
     - name: father_occupation
-      admin_ui: {width: 200}
+      admin_ui: {order: 107.5, width: 200}
       type: string
     - name: duration_at_address
-      admin_ui: {order: 89.25, width: 200}
-      type: string
-    - name: present_address
-      admin_ui: {order: 89.5, width: 200}
-      type: string
-    - name: salary_type
       admin_ui: {order: 81.5, width: 200}
       type: string
+    - name: present_address
+      admin_ui: {order: 81.75, width: 200}
+      type: string
+    - name: salary_type
+      admin_ui: {order: 81.99951171875, width: 200}
+      type: string
     - name: company_type
-      admin_ui: {order: 81.875, width: 200}
+      admin_ui: {order: 81.999755859375, width: 200}
       type: string
     - name: business_age
-      admin_ui: {order: 2.9375, width: 200}
+      admin_ui: {order: 6.75, width: 200}
       type: number
     - name: profession
       admin_ui: {order: 81.9375, width: 200}
@@ -951,10 +951,10 @@ db_schema:
       admin_ui: {order: 104.998046875, width: 200}
       type: string
     - name: vehicle_loan
-      admin_ui: {order: 81.375, width: 200}
+      admin_ui: {order: 81.9990234375, width: 200}
       type: string
     - name: credit_card_loans
-      admin_ui: {order: 81.25, width: 200}
+      admin_ui: {order: 81.998046875, width: 200}
       type: string
     title: fin_user_profile
   fin_admin_beseem_categories:
