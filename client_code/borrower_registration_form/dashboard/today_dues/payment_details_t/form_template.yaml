@@ -30,26 +30,19 @@ components:
     properties: {height: 6}
     name: spacer_3
     layout_properties: {grid_position: 'SGUSCA,EFTYEF'}
-  - name: label_2
-    properties: {role: title, align: center, tooltip: '', border: '', foreground: '',
-      visible: true, text: Payment Details, font_size: null, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-      underline: false, icon: ''}
-    type: Label
-    layout_properties: {grid_position: 'XUHPMX,QLSZYQ'}
-  - name: label_1
-    properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
-      visible: true, text: '', font_size: null, font: '', spacing_above: small, icon_align: left,
-      spacing_below: small, italic: false, background: '', bold: false, underline: false,
-      icon: ''}
-    type: Label
-    layout_properties: {grid_position: 'VKMVQJ,XBNOMX'}
   - type: Spacer
-    properties: {height: 16}
+    properties: {height: 25.714202880859375}
     name: spacer_2
-    layout_properties: {grid_position: 'WTZFJQ,SEKFVG'}
+    layout_properties: {grid_position: 'DIEYDT,VDVKST'}
+  - name: label_2
+    properties: {role: display, align: center, tooltip: '', border: '', foreground: '',
+      visible: true, text: Payment Details, font_size: 25, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: 'theme:Disabled
+        Container', bold: true, underline: false, icon: ''}
+    type: Label
+    layout_properties: {grid_position: 'XUHPMX,QLSZYQ', full_width_row: true}
   - type: ColumnPanel
-    properties: {role: outlined-card, tooltip: '', border: '', foreground: '', visible: true,
+    properties: {role: outlined-card, tooltip: '', border: '', foreground: '', visible: false,
       wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
       spacing_below: small, background: ''}
     name: outlined_card_1
@@ -88,11 +81,68 @@ components:
         background: ''
       name: data_grid_1
       layout_properties: {grid_position: 'DRBSZC,PWRSQD', full_width_row: true}
-      components:
-      - type: RepeatingPanel
-        properties: {spacing_above: none, spacing_below: none, item_template: borrower_registration_form.dashboard.today_dues.payment_details_t.RowTemplate18}
-        name: repeating_panel_1
-        layout_properties: {slot: footer}
+      components: []
+  - name: column_panel_1
+    properties: {role: elevated-card, background: 'theme:Secondary Container', col_widths: '{"MMWWMH":5,"UTSGJT":5,"ZOTPME":5,"AHQLCD":5,"RRUYQH":5,"GTVNWQ":5,"AJMUOU":5,"XXEDKD":5,"QXCZAU":4,"VMFSKG":4,"CWIGGC":4,"ULNPXS":4,"OWEZII":4}'}
+    type: ColumnPanel
+    layout_properties: {grid_position: 'VDTTVN,HGRBIB', full_width_row: true}
+    components:
+    - name: label_3
+      properties: {text: Payment Number}
+      type: Label
+      layout_properties: {grid_position: 'QRXJTS,MMWWMH', full_width_row: true}
+    - name: label_4
+      properties: {text: Payment Date}
+      type: Label
+      layout_properties: {grid_position: 'QRXJTS,UTSGJT'}
+    - name: label_5
+      properties: {text: Beginning Balance}
+      type: Label
+      layout_properties: {grid_position: 'QRXJTS,ZOTPME'}
+    - name: label_6
+      properties: {text: Payment Due}
+      type: Label
+      layout_properties: {grid_position: 'QRXJTS,AHQLCD'}
+    - name: label_7
+      properties: {text: Extra Payment}
+      type: Label
+      layout_properties: {grid_position: 'QRXJTS,RRUYQH'}
+    - name: label_8
+      properties: {text: Total Payment}
+      type: Label
+      layout_properties: {grid_position: 'QRXJTS,GTVNWQ'}
+    - name: label_9
+      properties: {text: Principal}
+      type: Label
+      layout_properties: {grid_position: 'QRXJTS,AJMUOU'}
+    - name: label_10
+      properties: {text: Interest}
+      type: Label
+      layout_properties: {grid_position: 'QRXJTS,XXEDKD'}
+    - name: label_11
+      properties: {text: Ending Balance}
+      type: Label
+      layout_properties: {grid_position: 'QRXJTS,QXCZAU'}
+    - name: label_12
+      properties: {text: Payment Date}
+      type: Label
+      layout_properties: {grid_position: 'QRXJTS,VMFSKG'}
+    - name: label_13
+      properties: {text: Payment Time}
+      type: Label
+      layout_properties: {grid_position: 'QRXJTS,CWIGGC'}
+    - name: label_14
+      properties: {text: Account Number}
+      type: Label
+      layout_properties: {grid_position: 'QRXJTS,ULNPXS'}
+    - name: label_15
+      properties: {text: Processing Fee}
+      type: Label
+      layout_properties: {grid_position: 'QRXJTS,OWEZII'}
+  - type: RepeatingPanel
+    properties: {spacing_above: none, spacing_below: none, item_template: borrower_registration_form.dashboard.today_dues.payment_details_t.RowTemplate18}
+    name: repeating_panel_1
+    layout_properties: {grid_position: 'GFBJND,BAQFAQ', full_width_row: true}
   - type: Spacer
     properties: {height: 32}
     name: spacer_1
