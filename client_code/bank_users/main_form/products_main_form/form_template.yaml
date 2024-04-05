@@ -71,9 +71,9 @@ components:
   components:
   - name: label_4_copy_1
     properties: {role: null, align: left, tooltip: '', border: '', foreground: '#030852',
-      visible: true, text: product main form, font_size: 30, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-      underline: false, icon: ''}
+      visible: true, text: '', font_size: 30, font: '', spacing_above: small, icon_align: left,
+      spacing_below: small, italic: false, background: '', bold: true, underline: false,
+      icon: ''}
     type: Label
     layout_properties: {row: OOXUPD, width_xs: 12, col_xs: 0, width: 658}
 - name: spacer_4
