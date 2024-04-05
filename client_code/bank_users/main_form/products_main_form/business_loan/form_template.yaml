@@ -321,7 +321,8 @@ components:
       layout_properties: {grid_position: 'YIBNOX,OBGCPK'}
     - name: image_6
       properties: {source: _/theme/online-pocess.png, display_mode: shrink_to_fit,
-        horizontal_align: left, background: '', height: '80', vertical_align: center}
+        horizontal_align: center, background: 'theme:Primary Container', height: '80',
+        vertical_align: center}
       type: Image
       layout_properties: {grid_position: 'ZEXDKI,MYPGRO NXMSCH,KKKENU'}
     - name: spacer_17
