@@ -8,6 +8,14 @@ components:
   properties: {height: 32}
   type: Spacer
   layout_properties: {grid_position: 'FTDPPP,WJQZPI'}
+- name: button_1
+  properties: {role: filled-button, align: center, tooltip: '', border: '', enabled: true,
+    foreground: 'theme:On Primary', visible: true, text: Back, font_size: 15, font: '',
+    spacing_above: small, icon_align: left, spacing_below: small, italic: false, background: '#0b2547',
+    bold: false, underline: false, icon: 'fa:angle-double-left'}
+  type: Button
+  layout_properties: {grid_position: 'TCRJTL,KAZFXD'}
+  event_bindings: {click: button_1_click}
 - name: label_1
   properties: {text: Transaction Details, background: 'theme:Secondary Container',
     role: outlined-card, font_size: 25}
@@ -30,6 +38,10 @@ components:
     properties: {text: User Email}
     type: Label
     layout_properties: {grid_position: 'JDOKVK,IFXZIN CGYUCL,PJSYVG'}
+  - name: label_16
+    properties: {text: Receiver Email}
+    type: Label
+    layout_properties: {grid_position: 'JDOKVK,IFXZIN YPACRQ,QEQJPX'}
   - name: label_6
     properties: {text: Wallet Id}
     type: Label
@@ -38,6 +50,10 @@ components:
     properties: {}
     type: Label
     layout_properties: {grid_position: 'JDOKVK,MMUPNC NPMPME,OZOYJR'}
+  - name: label_17
+    properties: {}
+    type: Label
+    layout_properties: {grid_position: 'JDOKVK,MMUPNC LWCNCV,ILRMNK'}
   - name: label_7
     properties: {}
     type: Label
@@ -66,20 +82,12 @@ components:
     properties: {text: Status}
     type: Label
     layout_properties: {grid_position: 'VLDFIL,UVUAKW RXJOQY,CLBOAZ'}
-  - name: label_16
-    properties: {text: Receiver Email}
-    type: Label
-    layout_properties: {grid_position: 'VLDFIL,UVUAKW SPTAFQ,FIRZRW'}
   - name: label_13
     properties: {}
     type: Label
     layout_properties: {grid_position: 'VLDFIL,YXFMOJ QYOYGE,FSAYVU'}
   - name: label_15
-    properties: {}
+    properties: {foreground: green}
     type: Label
     layout_properties: {grid_position: 'VLDFIL,YXFMOJ ZSVDLQ,GYJNCW'}
-  - name: label_17
-    properties: {}
-    type: Label
-    layout_properties: {grid_position: 'VLDFIL,YXFMOJ TZOUCO,UKHKWN'}
 is_package: true
