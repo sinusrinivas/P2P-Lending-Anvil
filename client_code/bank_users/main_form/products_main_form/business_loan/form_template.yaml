@@ -954,7 +954,7 @@ components:
       type: Label
       layout_properties: {}
     - name: spacer_38
-      properties: {height: 96.333251953125}
+      properties: {height: 99.5555419921875}
       type: Spacer
       layout_properties: {}
   - name: linear_panel_2
@@ -1012,7 +1012,7 @@ components:
       type: Label
       layout_properties: {}
     - name: spacer_39
-      properties: {height: 44.44439697265625}
+      properties: {height: 47.77777099609375}
       type: Spacer
       layout_properties: {}
 - type: FlowPanel
