@@ -2,7 +2,7 @@ is_package: true
 container: {type: ColumnPanel}
 components:
 - name: column_panel_1
-  properties: {col_widths: '{"KFFVGY":40,"RLSTYL":20}', role: outlined-card}
+  properties: {col_widths: '{"KFFVGY":40,"RLSTYL":20}', role: elevated-card}
   type: ColumnPanel
   layout_properties: {grid_position: 'FGJDER,GNIHKT'}
   components:
