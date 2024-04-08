@@ -580,7 +580,6 @@ def get_user_points(id):
               user_points += basic_points
               print("Debug: user_points1 =", user_points)
 
-        # Points based on profession
         profession_search = app_tables.fin_admin_beseem_categories.search(group_name='profession',
                                                                            sub_category=profession)
         for row in profession_search:
@@ -616,7 +615,6 @@ def get_user_points(id):
                     user_points += business_age_points
                     print("Debug: user_points5 =", user_points)
 
-        # Points based on marital status and related information
         marital_status_search = app_tables.fin_admin_beseem_categories.search(group_name='marital_status',
                                                                               sub_category=marital_status.lower(),
                                                                               age=user_age_range)
@@ -640,7 +638,6 @@ def get_user_points(id):
                         user_points += spouse_profession_points
                         print("Debug: user_points7 =", user_points)
 
-        # Points based on loans
         loans_to_check = ['home_loan', 'other_loan', 'credit_card_loan', 'vehicle_loan']
         for loan_category in loans_to_check:
             loan_search = app_tables.fin_admin_beseem_categories.search(group_name=loan_category,
