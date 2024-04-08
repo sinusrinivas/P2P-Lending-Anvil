@@ -22,6 +22,7 @@ components:
   type: Button
   layout_properties: {grid_position: 'PKNEVQ,KRWNSR', full_width_row: true}
   event_bindings: {click: login_signup_button_click}
+  data_bindings: []
 - type: form:lendor_registration_form.Navigation_bar_lender_dashbord
   properties: {}
   name: navigation_bar_lender_dashbord_1
