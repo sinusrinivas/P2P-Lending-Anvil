@@ -624,6 +624,7 @@ def get_user_points(id):
             loan_search = app_tables.fin_admin_beseem_categories.search(group_name=loan_category, sub_category=locals()[loan_category])
             for row in loan_search:
                 loan_points = row['min_points']
+                print("Loan Points:", loan_points)
                 user_points += loan_points
 
         return user_points
