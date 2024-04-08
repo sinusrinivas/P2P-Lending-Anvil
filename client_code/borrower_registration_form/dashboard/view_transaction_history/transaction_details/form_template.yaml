@@ -1,0 +1,93 @@
+container: {type: ColumnPanel}
+components:
+- name: logout_1
+  properties: {prop: '', prop_2: ''}
+  type: form:borrower_registration_form.logout
+  layout_properties: {grid_position: 'NURRPM,ZXUSQL'}
+- name: navigation_form_dashboard_1
+  properties: {}
+  type: form:borrower_registration_form.dashboard.Navigation_form_dashboard
+  layout_properties: {grid_position: 'IDJVKE,MDYONK'}
+- name: button_1_copy_2
+  properties: {role: null, align: right, tooltip: '', border: '', enabled: true, foreground: 'theme:On
+      Primary', visible: true, text: Back, font_size: null, font: '', spacing_above: small,
+    icon_align: left, spacing_below: small, italic: false, background: '#0b2547',
+    bold: true, underline: false, icon: 'fa:angle-double-left'}
+  type: Button
+  layout_properties: {grid_position: 'RIXAYS,QGTIOQ'}
+  event_bindings: {click: button_1_copy_2_click}
+- name: label_1
+  properties: {text: Transaction Details, background: 'theme:Secondary Container',
+    role: outlined-card, font_size: 25}
+  type: Label
+  layout_properties: {grid_position: 'CTPUEG,VDTVEO'}
+- name: column_panel_1
+  properties: {role: elevated-card}
+  type: ColumnPanel
+  layout_properties: {grid_position: 'WJEILA,GCTQSN'}
+  components:
+  - name: label_2
+    properties: {text: Transaction Id}
+    type: Label
+    layout_properties: {grid_position: 'CWELKH,QPANHK'}
+  - name: label_3
+    properties: {}
+    type: Label
+    layout_properties: {grid_position: 'CWELKH,ZSJKFF'}
+  - name: label_4
+    properties: {text: User Email}
+    type: Label
+    layout_properties: {grid_position: 'UQUUYG,OXRVER ZKTBUJ,GIWTMA'}
+  - name: label_16
+    properties: {text: Receiver Email}
+    type: Label
+    layout_properties: {grid_position: 'UQUUYG,OXRVER LLNUXS,TWJVZB'}
+  - name: label_5
+    properties: {}
+    type: Label
+    layout_properties: {grid_position: 'UQUUYG,RTSSRA VMBTAP,WOEYOH'}
+  - name: label_17
+    properties: {}
+    type: Label
+    layout_properties: {grid_position: 'UQUUYG,RTSSRA WMWGLC,TIAITM'}
+  - name: label_6
+    properties: {text: Wallet Id}
+    type: Label
+    layout_properties: {grid_position: 'VXFYNI,IDQFIM'}
+  - name: label_7
+    properties: {}
+    type: Label
+    layout_properties: {grid_position: 'VXFYNI,EJIQRG'}
+  - name: label_8
+    properties: {text: Transaction Type}
+    type: Label
+    layout_properties: {grid_position: 'YOVLUQ,UQTVWE'}
+  - name: label_9
+    properties: {}
+    type: Label
+    layout_properties: {grid_position: 'YOVLUQ,BHTNRA'}
+  - name: label_10
+    properties: {text: Amount}
+    type: Label
+    layout_properties: {grid_position: 'BZBGCU,VIEKNE'}
+  - name: label_11
+    properties: {}
+    type: Label
+    layout_properties: {grid_position: 'BZBGCU,WFEDWP'}
+  - name: label_12
+    properties: {text: Date and Time}
+    type: Label
+    layout_properties: {grid_position: 'VLDFIL,UVUAKW CKOLEE,IQFXGZ'}
+  - name: label_14
+    properties: {text: Status}
+    type: Label
+    layout_properties: {grid_position: 'VLDFIL,UVUAKW RXJOQY,CLBOAZ'}
+  - name: label_13
+    properties: {}
+    type: Label
+    layout_properties: {grid_position: 'VLDFIL,YXFMOJ QYOYGE,FSAYVU'}
+  - name: label_15
+    properties: {background: '', foreground: green}
+    type: Label
+    layout_properties: {grid_position: 'VLDFIL,YXFMOJ ZSVDLQ,GYJNCW'}
+is_package: true

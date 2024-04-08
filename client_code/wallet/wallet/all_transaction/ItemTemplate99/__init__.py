@@ -14,3 +14,10 @@ class ItemTemplate99(ItemTemplate99Template):
     self.init_components(**properties)
 
     # Any code you write here will run before the form opens.
+
+  def link_1_click(self, **event_args):
+    """This method is called when the link is clicked"""
+    item_data = self.item
+    open_form('wallet.wallet.all_transaction.transaction_details', selected_row=item_data)
+
+
