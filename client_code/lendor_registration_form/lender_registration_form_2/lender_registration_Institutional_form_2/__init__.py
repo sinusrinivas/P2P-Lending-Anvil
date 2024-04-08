@@ -7,6 +7,7 @@ import anvil.users
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
+from datetime import datetime
 
 class lender_registration_Institutional_form_2(lender_registration_Institutional_form_2Template):
   def __init__(self, user_id,**properties):
@@ -54,7 +55,7 @@ class lender_registration_Institutional_form_2(lender_registration_Institutional
     else:
      today = datetime.today()
      months = today.year * 12 + today.month - year.year * 12 - year.month
-     anvil.server.call('add_lendor_institutional_form_2',business_type,empolyees_working,year,user_id)
+     anvil.server.call('add_lendor_institutional_form_2',business_type,empolyees_working,year,months,user_id)
      open_form('lendor_registration_form.lender_registration_form_2.lender_registration_Institutional_form_3',user_id = user_id)
     """This method is called when the button is clicked"""
 

@@ -17,32 +17,26 @@ class lender_registration_Institutional_form_1(lender_registration_Institutional
         
     if user_data:
             self.business_name = user_data.get('business_name', '')
-            # self.business_add = user_data.get('business_add', '')
-            self.business_location = user_data.get('business_location', '')
+            self.business_add = user_data.get('business_add', '')
             
             
     else:
         self.business_name = ''
-        # self.business_add = ''
-        self.business_location = ''
+        self.business_add = ''
             
     if self.business_name:
             self.text_box_1.text= self.business_name
-    # if self.business_add:
-    #         self.text_box_2.text= self.business_add
-    if self.business_location:
-            self.text_box_3.text= self.business_location
-
+    if self.business_add:
+            self.text_box_2.text= self.business_add
 
   def button_2_click(self, **event_args):
     business_name = self.text_box_1.text
-    # business_add = self.text_box_2.text
-    business_location = self.text_box_3.text
+    business_add = self.text_box_2.text
     user_id = self.userId
-    if not business_name or not business_location:
+    if not business_name or not business_add:
       Notification("Please fill all the fields").show()
     else:
-      anvil.server.call('add_lendor_institutional_form_1',business_name,business_location,user_id)
+      anvil.server.call('add_lendor_institutional_form_1',business_name,business_add,user_id)
       open_form('lendor_registration_form.lender_registration_form_2.lender_registration_Institutional_form_2',user_id=self.userId)
 
   def button_1_click(self, **event_args):
