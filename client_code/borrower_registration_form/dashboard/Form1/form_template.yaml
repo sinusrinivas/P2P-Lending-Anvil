@@ -4,7 +4,7 @@ container:
   properties: {html: '@theme:standard-page.html'}
 components:
 - type: ColumnPanel
-  properties: {}
+  properties: {col_widths: '{"TZYKJF":15,"CICCQS":45}'}
   name: content_panel
   layout_properties: {slot: default}
   components:
@@ -24,12 +24,45 @@ components:
     type: form:borrower_registration_form.dashboard.Navigation_form_dashboard
     layout_properties: {grid_position: 'VBSPQG,GULKOC'}
   - name: label_1_copy_1_copy_1
-    properties: {role: outlined-card, align: center, tooltip: '', border: '', foreground: 'theme:On
-        Primary', visible: true, text: Edit Profile, font_size: 25, font: '', spacing_above: small,
+    properties: {role: outlined-card, align: center, tooltip: '', border: '', foreground: '',
+      visible: true, text: Edit Profile, font_size: 25, font: '', spacing_above: small,
       icon_align: left, spacing_below: small, italic: false, background: 'theme:Disabled
         Container', bold: true, underline: false, icon: ''}
     type: Label
     layout_properties: {grid_position: 'NOQDDT,QYJRUX'}
+  - name: image_1
+    properties: {height: 199.142822265625, role: outlined-card}
+    type: Image
+    layout_properties: {grid_position: 'ZAYVLA,TZYKJF'}
+  - name: spacer_1
+    properties: {height: 101.8570556640625}
+    type: Spacer
+    layout_properties: {grid_position: 'ZAYVLA,CICCQS JUNDCX,PIZIOF'}
+  - name: label_1
+    properties: {font_size: 20, role: outlined-card}
+    type: Label
+    layout_properties: {grid_position: 'ZAYVLA,CICCQS BHNNVG,BFNMXD'}
+  - name: spacer_2
+    properties: {height: 38.428466796875}
+    type: Spacer
+    layout_properties: {grid_position: 'XLBTZF,JEJQXF'}
+  - name: column_panel_1
+    properties: {}
+    type: ColumnPanel
+    layout_properties: {grid_position: 'TFMQSU,CQCFYS'}
+    components:
+    - name: label_2
+      properties: {}
+      type: Label
+      layout_properties: {grid_position: 'NAHEIR,ZSJNRV'}
+    - name: label_3
+      properties: {}
+      type: Label
+      layout_properties: {grid_position: 'OTUKWQ,OAEWQE'}
+    - name: label_4
+      properties: {}
+      type: Label
+      layout_properties: {grid_position: 'BSYCJX,UFDTLY'}
 - type: FlowPanel
   properties: {}
   name: navbar_links
