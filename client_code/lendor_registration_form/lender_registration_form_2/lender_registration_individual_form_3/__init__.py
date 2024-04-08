@@ -33,11 +33,10 @@ class lender_registration_individual_form_3(lender_registration_individual_form_
     if self.designation:
        self.text_box_2.text= self.designation
 
-    options = app_tables.fin_borrower_salary_type.search()
-    option_strings = [str(option['borrower_salary_type']) for option in options]
+    options = app_tables.fin_lendor_salary_type.search()
+    option_strings = [str(option['lendor_salary_type']) for option in options]
     self.drop_down_1.items = option_strings
 
-    # Any code you write here will run before the form opens.
 
   def button_2_click(self, **event_args):
     #self.userId = user_id
