@@ -636,7 +636,7 @@ components:
     type: Spacer
     layout_properties: {grid_position: 'NAQQKD,FMRTTZ'}
   - name: content_panel_copy_copy_copy_2
-    properties: {background: '', col_widths: '{"DSABOJ":30,"LSMIUZ":10,"YRFHPN":20,"AYKUXY":10,"JKNNWL":50,"CTBEEE":10,"ZAJONL":50,"KFBCRI":10,"YVFWXA":50}'}
+    properties: {background: '', col_widths: '{"DSABOJ":30,"LSMIUZ":5,"YRFHPN":25,"AYKUXY":10,"JKNNWL":50,"CTBEEE":10,"ZAJONL":50,"KFBCRI":10,"YVFWXA":50,"YITJZM":5,"ZBFHKW":55,"OAJCLT":5,"MUKVFZ":55}'}
     type: ColumnPanel
     layout_properties: {grid_position: 'AYXHAD,MBELVY', full_width_row: true}
     components:
@@ -723,13 +723,26 @@ components:
       type: Image
       layout_properties: {grid_position: 'IEHCSV,LSMIUZ SYGRMJ,SWVNBZ'}
     - name: label_60
-      properties: {}
+      properties: {text: 'Post successful credit evaluation, you will receive a confirmation
+          email with your approved loan amount, interest rate, and applicable EMI.'}
       type: Label
       layout_properties: {grid_position: 'IEHCSV,YRFHPN XLTRFG,TQMOYB'}
     - name: label_61
-      properties: {}
+      properties: {text: 'If the terms meet your requirement, you simply log into
+          your account and post the pre-filled loan application to be listed in the
+          ‘Active Borrowers’ list.'}
       type: Label
       layout_properties: {grid_position: 'IEHCSV,YRFHPN WCDFCS,VAJLWC'}
+    - name: label_62
+      properties: {text: 'Now, you can choose the duration for which you''d like to
+          keep the proposal open for funding. This allows you to gain access to thousands
+          of verified investors across India.'}
+      type: Label
+      layout_properties: {grid_position: 'IEHCSV,YRFHPN KRPELD,YRDIIM'}
+    - name: label_63
+      properties: {text: Note that you can collect more than 100% of the proposed loan amount or close the funding once you reach half the targeted amount.}
+      type: Label
+      layout_properties: {grid_position: 'IEHCSV,YRFHPN PRAXCL,RPWEKW'}
     - name: label_54
       properties: {text: Step 2, bold: true, font_size: 18}
       type: Label
