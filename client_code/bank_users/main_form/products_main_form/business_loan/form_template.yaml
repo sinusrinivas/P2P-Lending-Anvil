@@ -1463,6 +1463,7 @@ components:
         background: '#013065', bold: true, underline: false, icon: ''}
       type: Button
       event_bindings: {click: login_signup_button_click}
+      layout_properties: {}
     - name: drop_down_1
       properties:
         role: outlined
