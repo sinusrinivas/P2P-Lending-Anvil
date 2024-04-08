@@ -7,6 +7,7 @@ import anvil.users
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
+from .. import main_form_module as main_form_module
 
 class Form1(Form1Template):
   def __init__(self, **properties):
@@ -14,7 +15,7 @@ class Form1(Form1Template):
     self.user_id=main_form_module.userId
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
-    user_profile=app_tables.user_profile.get(customer_id=self.user_id)
+    user_profile=app_tables.fin_user_profile.get(customer_id=self.user_id)
     if user_profile: 
       self.label_1.text=user_profile['full_name']
       self.email.text=user_profile['email_user']
