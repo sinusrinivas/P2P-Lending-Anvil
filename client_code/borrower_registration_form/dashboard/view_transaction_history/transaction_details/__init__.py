@@ -22,4 +22,8 @@ class transaction_details(transaction_detailsTemplate):
     self.label_13.text = selected_row['transaction_time_stamp']
     self.label_15.text = selected_row['status']
     self.label_17.text = selected_row['receiver_email']
+
+  def button_1_copy_2_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    open_form('lendor_registration_form.dashboard.view_transaction_history')
     

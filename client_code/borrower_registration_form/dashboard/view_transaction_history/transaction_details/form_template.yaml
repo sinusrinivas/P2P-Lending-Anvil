@@ -8,10 +8,14 @@ components:
   properties: {}
   type: form:borrower_registration_form.dashboard.Navigation_form_dashboard
   layout_properties: {grid_position: 'IDJVKE,MDYONK'}
-- name: spacer_1
-  properties: {height: 24.857086181640625}
-  type: Spacer
-  layout_properties: {grid_position: 'GUIYWY,HWJAFE'}
+- name: button_1_copy_2
+  properties: {role: null, align: right, tooltip: '', border: '', enabled: true, foreground: 'theme:On
+      Primary', visible: true, text: Back, font_size: null, font: '', spacing_above: small,
+    icon_align: left, spacing_below: small, italic: false, background: '#0b2547',
+    bold: true, underline: false, icon: 'fa:angle-double-left'}
+  type: Button
+  layout_properties: {grid_position: 'RIXAYS,QGTIOQ'}
+  event_bindings: {click: button_1_copy_2_click}
 - name: label_1
   properties: {text: Transaction Details, background: 'theme:Secondary Container',
     role: outlined-card, font_size: 25}
