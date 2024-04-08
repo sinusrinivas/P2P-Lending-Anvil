@@ -44,7 +44,7 @@ def add_lendor_six_form(lending_type, investment,lending_period, user_id):
   row = app_tables.fin_lender.add_row(investment=investment, lending_type=lending_type,lending_period=lending_period,customer_id = user_id)
     
 @anvil.server.callable
-def add_lendor_individual_form_1(emp_type,org_type,company_name,com_typeuser_id):
+def add_lendor_individual_form_1(emp_type,org_type,company_name,com_type,user_id):
   row = app_tables.fin_user_profile.search(customer_id=int(user_id))
   if row:
     row[0]['employment_type']=emp_type
