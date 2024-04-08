@@ -636,7 +636,7 @@ components:
     type: Spacer
     layout_properties: {grid_position: 'NAQQKD,FMRTTZ'}
   - name: content_panel_copy_copy_copy_2
-    properties: {background: '', col_widths: '{"DSABOJ":30,"LSMIUZ":5,"YRFHPN":25,"AYKUXY":10,"JKNNWL":50,"CTBEEE":10,"ZAJONL":50,"KFBCRI":10,"YVFWXA":50,"YITJZM":5,"ZBFHKW":55,"OAJCLT":5,"MUKVFZ":55}'}
+    properties: {background: '', col_widths: '{"DSABOJ":30,"LSMIUZ":5,"YRFHPN":25,"AYKUXY":10,"JKNNWL":50,"CTBEEE":10,"ZAJONL":50,"KFBCRI":10,"YVFWXA":50,"YITJZM":10,"ZBFHKW":35,"OAJCLT":5,"MUKVFZ":55,"LMEPEL":10,"DMJCBS":35}'}
     type: ColumnPanel
     layout_properties: {grid_position: 'AYXHAD,MBELVY', full_width_row: true}
     components:
@@ -667,7 +667,7 @@ components:
       type: Label
       layout_properties: {grid_position: 'KHHZDT,FPOAOE'}
     - name: label_58
-      properties: {text: Step 4}
+      properties: {text: Step 4, bold: true, font_size: 18}
       type: Label
       layout_properties: {grid_position: 'KHHZDT,ULSOQC'}
     - name: label_51
@@ -712,45 +712,72 @@ components:
         horizontal_align: right}
       type: Image
       layout_properties: {grid_position: 'IEHCSV,LSMIUZ XHCMTO,EJJZDO'}
+    - name: spacer_21
+      properties: {height: 46.25}
+      type: Spacer
+      layout_properties: {grid_position: 'IEHCSV,LSMIUZ BSLAQF,RLPLZL'}
     - name: image_11_copy_copy_6_copy_3_copy
       properties: {source: _/theme/right.jpg, display_mode: shrink_to_fit, height: '40',
         horizontal_align: right}
       type: Image
       layout_properties: {grid_position: 'IEHCSV,LSMIUZ TNBWVY,YYAQGH'}
+    - name: spacer_22
+      properties: {height: 69.25}
+      type: Spacer
+      layout_properties: {grid_position: 'IEHCSV,LSMIUZ XYRGNY,QOBGBK'}
     - name: image_11_copy_copy_6_copy_3_copy_copy
       properties: {source: _/theme/right.jpg, display_mode: shrink_to_fit, height: '40',
         horizontal_align: right}
       type: Image
       layout_properties: {grid_position: 'IEHCSV,LSMIUZ SYGRMJ,SWVNBZ'}
+    - name: spacer_23
+      properties: {height: 73.24993896484375}
+      type: Spacer
+      layout_properties: {grid_position: 'IEHCSV,LSMIUZ APTAMJ,QKPVQK'}
+    - name: image_11_copy_copy_6_copy_3_copy_copy_copy
+      properties: {source: _/theme/right.jpg, display_mode: shrink_to_fit, height: '40',
+        horizontal_align: right}
+      type: Image
+      layout_properties: {grid_position: 'IEHCSV,LSMIUZ LKGAXY,RVHQUN'}
     - name: label_60
       properties: {text: 'Post successful credit evaluation, you will receive a confirmation
-          email with your approved loan amount, interest rate, and applicable EMI.'}
+          email with your approved loan amount, interest rate, and applicable EMI.',
+        font_size: 18}
       type: Label
       layout_properties: {grid_position: 'IEHCSV,YRFHPN XLTRFG,TQMOYB'}
     - name: label_61
       properties: {text: 'If the terms meet your requirement, you simply log into
           your account and post the pre-filled loan application to be listed in the
-          ‘Active Borrowers’ list.'}
+          ‘Active Borrowers’ list.', font_size: 18}
       type: Label
       layout_properties: {grid_position: 'IEHCSV,YRFHPN WCDFCS,VAJLWC'}
     - name: label_62
       properties: {text: 'Now, you can choose the duration for which you''d like to
           keep the proposal open for funding. This allows you to gain access to thousands
-          of verified investors across India.'}
+          of verified investors across India.', font_size: 18}
       type: Label
       layout_properties: {grid_position: 'IEHCSV,YRFHPN KRPELD,YRDIIM'}
     - name: label_63
-      properties: {text: Note that you can collect more than 100% of the proposed loan amount or close the funding once you reach half the targeted amount.}
+      properties: {text: Note that you can collect more than 100% of the proposed loan amount or close the funding once you reach half the targeted amount.,
+        font_size: 18}
       type: Label
       layout_properties: {grid_position: 'IEHCSV,YRFHPN PRAXCL,RPWEKW'}
     - name: label_54
       properties: {text: Step 2, bold: true, font_size: 18}
       type: Label
       layout_properties: {grid_position: 'OZDOTP,UHEIDH'}
+    - name: label_64
+      properties: {text: Step 5, bold: true, font_size: 18}
+      type: Label
+      layout_properties: {grid_position: 'OZDOTP,SFNSPP'}
     - name: label_55
       properties: {text: Profile Verification, bold: true, font_size: 18}
       type: Label
       layout_properties: {grid_position: 'VECYJS,DLVUKW'}
+    - name: label_65
+      properties: {text: Document Verification, font_size: 18, bold: true}
+      type: Label
+      layout_properties: {grid_position: 'VECYJS,RCEYSW'}
     - name: image_11_copy_copy_6_copy_copy_copy
       properties: {source: _/theme/right.jpg, display_mode: shrink_to_fit, height: '40',
         horizontal_align: right}
@@ -761,10 +788,48 @@ components:
         font_size: 18}
       type: Label
       layout_properties: {grid_position: 'BDGYTZ,ZBFHKW'}
+    - name: image_11_copy_copy_6_copy_copy_copy_copy_2
+      properties: {source: _/theme/right.jpg, display_mode: shrink_to_fit, height: '40',
+        horizontal_align: right}
+      type: Image
+      layout_properties: {grid_position: 'BDGYTZ,LMEPEL YIRUTZ,HQELYE'}
+    - name: spacer_24
+      properties: {height: 45.24993896484375}
+      type: Spacer
+      layout_properties: {grid_position: 'BDGYTZ,LMEPEL LWAHSU,DSIRUW'}
+    - name: image_11_copy_copy_6_copy_copy_copy_copy_2_copy
+      properties: {source: _/theme/right.jpg, display_mode: shrink_to_fit, height: '40',
+        horizontal_align: right}
+      type: Image
+      layout_properties: {grid_position: 'BDGYTZ,LMEPEL IIJELQ,IZDSJN'}
+    - name: spacer_25
+      properties: {height: 75.25}
+      type: Spacer
+      layout_properties: {grid_position: 'BDGYTZ,LMEPEL OPAFRX,MGRVAV'}
+    - name: image_11_copy_copy_6_copy_copy_copy_copy_2_copy_2
+      properties: {source: _/theme/right.jpg, display_mode: shrink_to_fit, height: '40',
+        horizontal_align: right}
+      type: Image
+      layout_properties: {grid_position: 'BDGYTZ,LMEPEL JZFXNG,RUHMWH'}
+    - name: label_66
+      properties: {text: 'Post successful verification, you must sign a legally binding
+          agreement, called the ‘Loan Agreement’ with investors.', font_size: 18}
+      type: Label
+      layout_properties: {grid_position: 'BDGYTZ,DMJCBS BVVCZJ,RXOEDA'}
+    - name: label_67
+      properties: {text: The Loan Agreement will clearly outline the terms and conditions of the loan so that borrowers and lenders understand their duties and responsibilities properly.,
+        font_size: 18}
+      type: Label
+      layout_properties: {grid_position: 'BDGYTZ,DMJCBS EHZEQJ,TLJLPA'}
+    - name: label_68
+      properties: {text: You must also sign the mandate of the National Automated Clearing House (NACH) to ensure easy repayment and provide three blank cheques to i2i to be used in case of delay/default in repayment.,
+        font_size: 18}
+      type: Label
+      layout_properties: {grid_position: 'BDGYTZ,DMJCBS FNVVXQ,JEYLMH'}
     - name: label_54_copy
       properties: {text: Step 3, bold: true, font_size: 18}
       type: Label
-      layout_properties: {grid_position: 'XGZTKI,AOUGUM'}
+      layout_properties: {grid_position: 'NPXYDJ,GHJMMO'}
     - name: label_55_copy
       properties: {text: Business Loan Approval, bold: true, font_size: 18}
       type: Label
@@ -787,11 +852,11 @@ components:
     - name: label_52_copy_copy
       properties: {text: 'i2i will assess your credit using its proprietary credit
           evaluation model based on multiple parameters such as credit score, financial
-          history, outstanding debts, demographics, etc.', font_size: 16}
+          history, outstanding debts, demographics, etc.', font_size: 18}
       type: Label
       layout_properties: {grid_position: 'CMBBVC,MUKVFZ INFOOA,CITUGO'}
     - name: label_56
-      properties: {font_size: 16, text: 'Based on your credit report, you''ll be assigned
+      properties: {font_size: 18, text: 'Based on your credit report, you''ll be assigned
           a risk category ranging from A to F, with A indicating the strongest credit
           profile and F representing the weakest.
 
