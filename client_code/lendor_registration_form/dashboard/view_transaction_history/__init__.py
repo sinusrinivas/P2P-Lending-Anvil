@@ -71,7 +71,9 @@ class view_transaction_history(view_transaction_historyTemplate):
                     'transaction_id': transaction_data['transaction_id'],
                     'transaction_type': transaction_data['transaction_type'],
                     'borrower_mobile': borrower_profile['mobile'], 
-                    'lender_mobile': lender_profile['mobile']             
+                    'lender_mobile': lender_profile['mobile'] ,
+                    'wallet_id': transaction_data['wallet_id'],
+                    'receiver_email': transaction_data['receiver_email'],
                 })
         
         for transaction_data in transactions_transferred:
@@ -89,7 +91,9 @@ class view_transaction_history(view_transaction_historyTemplate):
                     'transaction_id': transaction_data['transaction_id'],
                     'transaction_type': transaction_data['transaction_type'],
                     'borrower_mobile': borrower_profile['mobile'], 
-                    'lender_mobile': lender_profile['mobile']             
+                    'lender_mobile': lender_profile['mobile'],
+                    'wallet_id': transaction_data['wallet_id'],
+                    'receiver_email': transaction_data['receiver_email'],
                 })
 
         self.repeating_panel_2.items = self.result

@@ -28,24 +28,6 @@ class view_transaction_history(view_transaction_historyTemplate):
             transaction_type = 'received from'
         )
         
-        for transaction_data in transactions_transferred:
-            lender_profile = app_tables.fin_user_profile.get(email_user=transaction_data['user_email'])
-            borrower_profile = app_tables.fin_user_profile.get(customer_id=transaction_data['receiver_customer_id'])
-            if borrower_profile is not None and lender_profile is not None:
-                self.result.append({
-                    'borrower_full_name': borrower_profile['full_name'],                    
-                    'lender_full_name': lender_profile['full_name'],
-                    'amount': transaction_data['amount'],
-                    'transaction_time_stamp': transaction_data['transaction_time_stamp'],
-                    'user_email': transaction_data['user_email'],
-                    'status': transaction_data['status'],
-                    # 'transaction_time_stamp': transaction_data['transaction_time_stamp'],
-                    'transaction_id': transaction_data['transaction_id'],
-                    'transaction_type': transaction_data['transaction_type'],
-                    'borrower_mobile': borrower_profile['mobile'], 
-                    'lender_mobile': lender_profile['mobile']             
-                })
-        
         for transaction_data in transactions_received:
             lender_profile = app_tables.fin_user_profile.get(email_user=transaction_data['user_email'])
             borrower_profile = app_tables.fin_user_profile.get(customer_id=transaction_data['receiver_customer_id'])
@@ -53,7 +35,7 @@ class view_transaction_history(view_transaction_historyTemplate):
                 self.result.append({
                     'borrower_full_name': borrower_profile['full_name'],                    
                     'lender_full_name': lender_profile['full_name'],
-                    'amount': transaction_data['amount'],
+                    'amount': "{:.2f}".format(transaction_data['amount']),
                     'transaction_time_stamp': transaction_data['transaction_time_stamp'],
                     'user_email': transaction_data['user_email'],
                     'status': transaction_data['status'],
@@ -61,7 +43,30 @@ class view_transaction_history(view_transaction_historyTemplate):
                     'transaction_id': transaction_data['transaction_id'],
                     'transaction_type': transaction_data['transaction_type'],
                     'borrower_mobile': borrower_profile['mobile'], 
-                    'lender_mobile': lender_profile['mobile']             
+                    'lender_mobile': lender_profile['mobile']  ,
+                    'wallet_id': transaction_data['wallet_id'],
+                    'receiver_email': transaction_data['receiver_email'],
+                    # 'transaction_id': transaction_data['transaction_id'],
+                })
+        
+        for transaction_data in transactions_transferred:
+            lender_profile = app_tables.fin_user_profile.get(email_user=transaction_data['user_email'])
+            borrower_profile = app_tables.fin_user_profile.get(customer_id=transaction_data['receiver_customer_id'])
+            if borrower_profile is not None and lender_profile is not None:
+                self.result.append({
+                    'borrower_full_name': borrower_profile['full_name'],                    
+                    'lender_full_name': lender_profile['full_name'],
+                    'amount': "{:.2f}".format(transaction_data['amount']),
+                    'transaction_time_stamp': transaction_data['transaction_time_stamp'],
+                    'user_email': transaction_data['user_email'],
+                    'status': transaction_data['status'],
+                    # 'transaction_time_stamp': transaction_data['transaction_time_stamp'],
+                    'transaction_id': transaction_data['transaction_id'],
+                    'transaction_type': transaction_data['transaction_type'],
+                    'borrower_mobile': borrower_profile['mobile'], 
+                    'lender_mobile': lender_profile['mobile']  ,
+                    'wallet_id': transaction_data['wallet_id'],
+                    'receiver_email': transaction_data['receiver_email'],
                 })
 
         self.repeating_panel_2.items = self.result
