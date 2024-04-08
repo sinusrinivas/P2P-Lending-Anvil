@@ -70,6 +70,7 @@ unique_ids:
     admin.dashboard.manage_cms.add_general_dropdowns.edit_company: '1710411462796305921760191.0538'
     admin.dashboard.manage_cms.add_lender_dropdown_details.edit_no_of_emp: '1706531881285776983025492.1349'
     admin.dashboard.manage_cms.add_borrower_dropdown_details.edit_spouse_profession: '1710495428888891993954718.6715'
+    lendor_registration_form.dashboard.view_transaction_history.transaction_details: '1712557890454882731894687.6028'
     lendor_registration_form.dashboard.lender_view_loans.RowTemplate24: '1703182023237906200953522.0261'
     borrower_registration_form.logout: '1706172316000574399103224.3589'
     bank_users.main_form.products_main_form.business_loan: '1712293285916683198578493.5657'
