@@ -12,6 +12,7 @@ components:
     layout_properties: {grid_position: 'BOOIZL,DELOUM'}
     data_bindings:
     - {property: text, code: 'self.item[''transaction_id'']', writeback: false}
+    event_bindings: {click: link_1_click}
   - name: label_2
     properties: {}
     type: Label
