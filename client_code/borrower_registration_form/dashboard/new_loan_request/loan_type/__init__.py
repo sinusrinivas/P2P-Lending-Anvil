@@ -111,7 +111,7 @@ class loan_type(loan_typeTemplate):
         return app_tables.fin_product_details.search(
             product_group=self.proctct_g,
             product_categories=self.prodct_cate,
-            product_name = 
+            product_name = self.product_name
         )
 
     def get_min_max_amount(self):
