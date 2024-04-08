@@ -79,10 +79,10 @@ def add_lendor_institutional_form_1(business_name,business_add,user_id):
     row[0]['business_add'] = business_add
 
 @anvil.server.callable
-def add_lendor_institutional_form_2(business_type,empolyees_working,year_estd,user_id,months):
+def add_lendor_institutional_form_2(business_type,empolyees_working,year_estd,months,user_id):
   row = app_tables.fin_user_profile.search(customer_id = user_id)
   if row:
-    #row[0]['nearest_location'] = nearest_loc
+    row[0]['nearest_location'] = nearest_loc
     row[0]['business_type'] = business_type
     row[0]['employees_working'] = empolyees_working
     row[0]['year_estd'] = year_estd

@@ -32,7 +32,14 @@ def add_borrwer_self_employment(status_of_user,user_id):
   if row:
     row[0]['self_employment']=status_of_user
     
-    
+def add_lendor_institutional_form_2(business_type,empolyees_working,year_estd,months,user_id):
+  row = app_tables.fin_user_profile.search(customer_id = user_id)
+  if row:
+    row[0]['nearest_location'] = nearest_loc
+    row[0]['business_type'] = business_type
+    row[0]['employees_working'] = empolyees_working
+    row[0]['year_estd'] = year_estd
+    row[0]['business_age'] = months   
 
 @anvil.server.callable
 def add_borrower_step3(marital_status,user_id):
