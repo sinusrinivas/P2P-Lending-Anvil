@@ -17,17 +17,25 @@ class lender_registration_individual_form_3(lender_registration_individual_form_
         
     if user_data:
             self.annual_salary = user_data.get('annual_salary', '')
+            self.salary_type = user_data.get('salary_type', '')
             self.designation = user_data.get('designation', '')
      
     else:
         self.annual_salary = ''
+        self.salary_type = ''
         self.designation = ''
 
        #Restore previously entered data if available
     if self.annual_salary:
        self.text_box_1.text= self.annual_salary
+    if self.salary_type:
+       self.drop_down_1.selected_value = self.salary_type
     if self.designation:
        self.text_box_2.text= self.designation
+
+    options = app_tables.fin_borrower_salary_type.search()
+    option_strings = [str(option['borrower_salary_type']) for option in options]
+    self.drop_down_1.items = option_strings
 
     # Any code you write here will run before the form opens.
 
@@ -42,16 +50,17 @@ class lender_registration_individual_form_3(lender_registration_individual_form_
       emp_id_proof = self.file_loader_1.file
       last_six_month = self.file_loader_2.file
       user_id = self.userId
+      salary_type = self.drop_down_1.selected_value
       
       # Validation: Check if any of the required fields is empty
-      if not annual_salary or not designation or not emp_id_proof or not last_six_month:
+      if not annual_salary or not designation or not emp_id_proof or not last_six_month or not salary_type:
           Notification("Please fill all the required fields").show()
       else:
           # Validation: Check if the uploaded files are not empty
           if not emp_id_proof or not last_six_month:
               Notification("Please upload all required documents").show()
           else:
-              anvil.server.call('add_lendor_individual_form_3', annual_salary, designation, emp_id_proof, last_six_month, user_id)
+              anvil.server.call('add_lendor_individual_form_3', annual_salary, designation, emp_id_proof, last_six_month, user_id, salary_type)
               open_form('lendor_registration_form.lender_registration_form_3_marital_details', user_id=self.userId)
   def button_3_click(self, **event_args):
     open_form("bank_users.user_form")
