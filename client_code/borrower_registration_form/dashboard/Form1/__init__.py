@@ -11,8 +11,7 @@ from anvil.tables import app_tables
 class Form1(Form1Template):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
-    self.user_id=main_form_module.userId
-    #self.user_id=1000  
+    # self.user_id=main_form_module.userId
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
     user_profile=app_tables.user_profile.get(customer_id=self.user_id)
