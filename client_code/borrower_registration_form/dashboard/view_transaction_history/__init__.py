@@ -28,7 +28,7 @@ class view_transaction_history(view_transaction_historyTemplate):
             transaction_type = 'received from'
         )
         
-        for transaction_data in transactions_transferred:
+        for transaction_data in transactions_received:
             lender_profile = app_tables.fin_user_profile.get(email_user=transaction_data['user_email'])
             borrower_profile = app_tables.fin_user_profile.get(customer_id=transaction_data['receiver_customer_id'])
             if borrower_profile is not None and lender_profile is not None:
@@ -49,7 +49,7 @@ class view_transaction_history(view_transaction_historyTemplate):
                     # 'transaction_id': transaction_data['transaction_id'],
                 })
         
-        for transaction_data in transactions_received:
+        for transaction_data in transactions_transferred:
             lender_profile = app_tables.fin_user_profile.get(email_user=transaction_data['user_email'])
             borrower_profile = app_tables.fin_user_profile.get(customer_id=transaction_data['receiver_customer_id'])
             if borrower_profile is not None and lender_profile is not None:

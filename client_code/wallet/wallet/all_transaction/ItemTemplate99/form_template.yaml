@@ -3,17 +3,18 @@ container: {type: ColumnPanel}
 components:
 - name: column_panel_2
   properties: {role: elevated-card, tooltip: '', border: '', foreground: '', visible: true,
-    wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{"ZCKDWH":10,"UBYHSW":15,"LDTHSK":10,"CBFKQA":10,"KDRMNF":15}',
+    wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{"UBYHSW":17,"LDTHSK":10,"CBFKQA":10,"KDRMNF":15,"RCLYPC":10}',
     spacing_below: small, background: ''}
   type: ColumnPanel
   layout_properties: {grid_position: 'HXCBCK,YIGGEI'}
   components:
-  - name: label_1
+  - name: link_1
     properties: {}
-    type: Label
-    layout_properties: {x: 24.553573608398438, y: 102.5, width: 118, grid_position: 'SRQSIS,ZCKDWH'}
+    type: Link
+    layout_properties: {grid_position: 'SRQSIS,RCLYPC'}
     data_bindings:
-    - {property: text, code: 'self.item[''transaction_id'']'}
+    - {property: text, code: 'self.item[''transaction_id'']', writeback: false}
+    event_bindings: {click: link_1_click}
   - name: type
     properties: {}
     type: Label

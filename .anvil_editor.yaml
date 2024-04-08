@@ -206,6 +206,7 @@ unique_ids:
     borrower_registration_form.dashboard.view_transaction_history.ItemTemplate66: '1710387924655530247981734.1659'
     admin.dashboard.manage_cms.add_lender_dropdown_details.ItemTemplate18: '1706531161313890698385999.5632'
     admin.dashboard.manage_cms.add_lender_dropdown_details.ItemTemplate22: '1707911848966564215954614.5051'
+    wallet.wallet.all_transaction.transaction_details: '171256881859895606245502.96715'
     admin.dashboard.loan_management.under_process.ItemTemplate34: '1710995292835497433832012.46826'
     bank_users.main_form.about_main_form: '1700562950795405574544713.0248'
     lendor_registration_form.dashboard.view_loan_extension_requests.ItemTemplate76: '1709795514432851964860166.374'
