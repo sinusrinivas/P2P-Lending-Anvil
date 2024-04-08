@@ -62,7 +62,7 @@ class lender_registration_individual_form_1(lender_registration_individual_form_
       if not emp_type or not org_type or not company_name or not com_type:
           Notification("Please fill in all required fields.").show()  
       else:
-          anvil.server.call('add_lendor_individual_form_1', company_name, org_type, emp_type, com_type, user_id)
+          anvil.server.call('add_lendor_individual_form_1', emp_type, org_type,company_name, com_type, user_id)
           open_form('lendor_registration_form.lender_registration_form_2.lender_registration_individual_form_2', user_id=self.userId)
     
   def button_1_click(self, **event_args):
@@ -72,5 +72,4 @@ class lender_registration_individual_form_1(lender_registration_individual_form_
   def button_3_click(self, **event_args):
     """This method is called when the button is clicked"""
     open_form("bank_users.user_form")
-   
-    
+
