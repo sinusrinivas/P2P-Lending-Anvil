@@ -265,6 +265,7 @@ unique_ids:
     borrower_registration_form.dashboard.view_loans.ItemTemplate43: '1709550415430451917284039.07904'
     lendor_registration_form.dashboard.view_or_download_portfolio: '1699963103625209878486803.42514'
     admin.dashboard.manage_cms: '1699528617179453409715572.5991'
+    borrower_registration_form.dashboard.view_transaction_history.transaction_details: '1712550392851181378478754.32578'
     lendor_registration_form.dashboard.view_loan_foreclosure_Requests.foreclose_details: '1700454637827919052628054.0963'
     ? borrower_registration_form.star_1_borrower_registration_form_2_employment.star_1_borrower_registration_form_2_employment_business_1
     : '1700570064478378100736204.996'
@@ -330,7 +331,6 @@ unique_ids:
     admin.dashboard.manage_bessem.add_subcategory.ItemTemplate89: '1710782088157662148014663.3049'
     ? borrower_registration_form.star_1_borrower_registration_form_2_employment.star_1_borrower_registration_form_2_employment_emp_detail_2
     : '1700037622301754064674185.6132'
-    borrower_registration_form.dashboard.view_transaction_history.ItemTemplate64: '171029751486061295714191.15587'
     admin.dashboard.risk_pool: '1699529482874413597143832.6982'
     admin.dashboard.manage_bessem.add_subcategory.edit_organization_type: '171050130673079906011390.08757'
     admin.dashboard.manage_bessem.add_subcategory.ItemTemplate70: '1709730869305610241592396.3871'

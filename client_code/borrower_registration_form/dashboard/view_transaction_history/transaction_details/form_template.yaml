@@ -1,0 +1,81 @@
+container: {type: ColumnPanel}
+components:
+- name: logout_1
+  properties: {prop: '', prop_2: ''}
+  type: form:borrower_registration_form.logout
+  layout_properties: {grid_position: 'NURRPM,ZXUSQL'}
+- name: navigation_form_dashboard_1
+  properties: {}
+  type: form:borrower_registration_form.dashboard.Navigation_form_dashboard
+  layout_properties: {grid_position: 'IDJVKE,MDYONK'}
+- name: spacer_1
+  properties: {height: 50.28570556640625}
+  type: Spacer
+  layout_properties: {grid_position: 'GUIYWY,HWJAFE'}
+- name: label_1
+  properties: {text: Transaction Details, background: 'theme:Secondary Container',
+    role: outlined-card, font_size: 25}
+  type: Label
+  layout_properties: {grid_position: 'CTPUEG,VDTVEO'}
+- name: column_panel_1
+  properties: {}
+  type: ColumnPanel
+  layout_properties: {grid_position: 'WJEILA,GCTQSN'}
+  components:
+  - name: label_2
+    properties: {}
+    type: Label
+    layout_properties: {grid_position: 'CWELKH,QPANHK'}
+  - name: label_3
+    properties: {}
+    type: Label
+    layout_properties: {grid_position: 'CWELKH,ZSJKFF'}
+  - name: label_4
+    properties: {}
+    type: Label
+    layout_properties: {grid_position: 'UQUUYG,OXRVER'}
+  - name: label_5
+    properties: {}
+    type: Label
+    layout_properties: {grid_position: 'UQUUYG,RTSSRA'}
+  - name: label_6
+    properties: {}
+    type: Label
+    layout_properties: {grid_position: 'HNBQBN,PGVRDR VXFYNI,IDQFIM'}
+  - name: label_7
+    properties: {}
+    type: Label
+    layout_properties: {grid_position: 'HNBQBN,PGVRDR VXFYNI,EJIQRG'}
+- name: label_8
+  properties: {}
+  type: Label
+  layout_properties: {grid_position: 'YEHOGB,MTOLGZ MTEBEV,UBENAT'}
+- name: label_10
+  properties: {}
+  type: Label
+  layout_properties: {grid_position: 'YEHOGB,MTOLGZ JFQVGX,WHYQLM'}
+- name: label_12
+  properties: {}
+  type: Label
+  layout_properties: {grid_position: 'YEHOGB,MTOLGZ IWTHTD,LYONLI'}
+- name: label_14
+  properties: {}
+  type: Label
+  layout_properties: {grid_position: 'YEHOGB,MTOLGZ ZZNKRW,FYGJNO'}
+- name: label_9
+  properties: {}
+  type: Label
+  layout_properties: {grid_position: 'YEHOGB,NKXVWY YNCYFT,TCPENM'}
+- name: label_11
+  properties: {}
+  type: Label
+  layout_properties: {grid_position: 'YEHOGB,NKXVWY XIPXHE,TFNHPX'}
+- name: label_13
+  properties: {}
+  type: Label
+  layout_properties: {grid_position: 'YEHOGB,NKXVWY LYEUHZ,NOOLHU'}
+- name: label_15
+  properties: {}
+  type: Label
+  layout_properties: {grid_position: 'YEHOGB,NKXVWY AQFKLR,BGLKMC'}
+is_package: true
