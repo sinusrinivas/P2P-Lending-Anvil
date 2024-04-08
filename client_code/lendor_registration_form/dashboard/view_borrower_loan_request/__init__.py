@@ -42,7 +42,7 @@ class view_borrower_loan_request(view_borrower_loan_requestTemplate):
                     'product_description': loan['product_description'],
                     'borrower_full_name': loan['borrower_full_name'],
                     'loan_id': loan['loan_id'],
-                    'beseem_score': loan['beseem_score'],
+                    'beseem_score': borrower_profile['bessem_value'],
                     'credit_limit': loan['credit_limit'],
                     'loan_updated_status': loan['loan_updated_status'],
                     'emi_payment_type': loan['emi_payment_type'],
