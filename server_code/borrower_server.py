@@ -569,7 +569,6 @@ def get_user_points(id):
         else:
             user_age_range = '51+'
 
-        # Calculate points for different categories
         categories_to_check = ['gender', 'present_address', 'duration_at_address', 'qualification']
         for category in categories_to_check:
            sub_category_value = locals()[category]
