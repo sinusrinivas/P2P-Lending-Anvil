@@ -1182,7 +1182,7 @@ components:
     type: Label
     layout_properties: {grid_position: 'XOSCCW,FOJPHU'}
   - name: content_panel_copy_copy_copy_3_copy_copy
-    properties: {background: '#34718D', col_widths: '{"XARKJE":55,"YEPPJU":5,"QXNAAZ":55,"UYKUWH":5,"DDZJZT":55,"SUFLIK":5,"MAZGSN":55,"VOVPFT":5,"WDEEKY":55,"VYCWVG":31,"HMRJJW":29}'}
+    properties: {background: '#34718D', col_widths: '{"XARKJE":55,"YEPPJU":5,"QXNAAZ":55,"UYKUWH":5,"DDZJZT":55,"SUFLIK":5,"MAZGSN":55,"WDEEKY":55,"VYCWVG":31,"HMRJJW":29}'}
     type: ColumnPanel
     layout_properties: {grid_position: 'IGFNMC,LTABGG', full_width_row: true}
     components:
@@ -1203,12 +1203,10 @@ components:
           ', font_size: 18, foreground: white}
       type: Label
       layout_properties: {grid_position: 'KWLPDO,VYCWVG TRRJOT,WDEEKY'}
-    - name: label_83_copy_copy
-      properties: {text: '    ✔', foreground: white}
-      type: Label
-      layout_properties: {grid_position: 'KWLPDO,VYCWVG IRSKRZ,SUFLIK'}
     - name: label_88_copy_copy
-      properties: {text: 'Having a valid Indian bank account
+      properties: {text: 'Current Address Proof (if different from permanent address)
+          - Passport / Voter ID / Aadhar Card / Driving License / Postpaid mobile
+          / Landline / Broadband / Valid Rent agreement
 
           ', font_size: 18, foreground: white}
       type: Label
