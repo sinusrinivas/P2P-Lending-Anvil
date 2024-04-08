@@ -24,8 +24,8 @@ components:
     type: form:borrower_registration_form.dashboard.Navigation_form_dashboard
     layout_properties: {grid_position: 'VBSPQG,GULKOC'}
   - name: label_1_copy_1_copy_1
-    properties: {role: outlined-card, align: center, tooltip: '', border: '', foreground: 'theme:On
-        Primary', visible: true, text: Edit Profile, font_size: 25, font: '', spacing_above: small,
+    properties: {role: outlined-card, align: center, tooltip: '', border: '', foreground: '',
+      visible: true, text: Edit Profile, font_size: 25, font: '', spacing_above: small,
       icon_align: left, spacing_below: small, italic: false, background: 'theme:Disabled
         Container', bold: true, underline: false, icon: ''}
     type: Label
