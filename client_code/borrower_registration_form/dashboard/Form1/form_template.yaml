@@ -42,27 +42,71 @@ components:
     type: Label
     layout_properties: {grid_position: 'ZAYVLA,CICCQS BHNNVG,BFNMXD'}
     name: label_1
-  - properties: {height: 38.428466796875}
+  - properties: {height: 22.28570556640625}
     type: Spacer
     layout_properties: {grid_position: 'XLBTZF,JEJQXF'}
     name: spacer_2
-  - properties: {}
+  - properties: {role: elevated-card}
     type: ColumnPanel
     layout_properties: {grid_position: 'TFMQSU,CQCFYS'}
     name: column_panel_1
     components:
-    - properties: {}
+    - properties: {role: title, text: 'Email :'}
       type: Label
       layout_properties: {grid_position: 'NAHEIR,ZSJNRV'}
       name: label_2
-    - properties: {}
+    - name: email
+      properties: {}
       type: Label
-      layout_properties: {grid_position: 'OTUKWQ,OAEWQE'}
+      layout_properties: {grid_position: 'NAHEIR,YIBXYE'}
+    - properties: {role: title, text: 'Mobile No :'}
+      type: Label
+      layout_properties: {grid_position: 'OXHLSY,MXRUDZ'}
       name: label_3
-    - properties: {}
+    - name: mobile
+      properties: {}
       type: Label
-      layout_properties: {grid_position: 'BSYCJX,UFDTLY'}
+      layout_properties: {grid_position: 'OXHLSY,IXTTYG'}
+    - properties: {role: title, text: 'Date Of Birth :'}
+      type: Label
+      layout_properties: {grid_position: 'ZACLMT,FIETLK'}
       name: label_4
+    - name: birh
+      properties: {}
+      type: Label
+      layout_properties: {grid_position: 'ZACLMT,ZOBFUW'}
+    - name: label_5
+      properties: {role: title, text: 'City :'}
+      type: Label
+      layout_properties: {grid_position: 'XXBUIO,QPSBXK'}
+    - name: city
+      properties: {}
+      type: Label
+      layout_properties: {grid_position: 'XXBUIO,VUDFAB'}
+    - name: label_6
+      properties: {role: title, text: 'Gender :'}
+      type: Label
+      layout_properties: {grid_position: 'NHMYWK,QRZNKL'}
+    - name: gender
+      properties: {}
+      type: Label
+      layout_properties: {grid_position: 'NHMYWK,WYAWBB'}
+    - name: label_12
+      properties: {role: title, text: 'Language :'}
+      type: Label
+      layout_properties: {grid_position: 'BOBNOJ,BKRRHB'}
+    - name: language
+      properties: {}
+      type: Label
+      layout_properties: {grid_position: 'BOBNOJ,JXUFJM'}
+    - name: label_7
+      properties: {role: title, text: Marrital Status}
+      type: Label
+      layout_properties: {grid_position: 'FXFFWV,ATTGOH'}
+    - name: status
+      properties: {}
+      type: Label
+      layout_properties: {grid_position: 'FXFFWV,EUAOBE'}
 - type: FlowPanel
   properties: {}
   layout_properties: {slot: nav-right}

@@ -157,3 +157,7 @@ class dashboard(dashboardTemplate):
 
     def Report_A_Problem_click(self, **event_args):
       open_form('borrower_registration_form.dashboard.dashboard_report_a_problem')
+
+    def view_profile(self, **event_args):
+      """This method is called when the button is clicked"""
+      open_form('admin.dashboard.form')
