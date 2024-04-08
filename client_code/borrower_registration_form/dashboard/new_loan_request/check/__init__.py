@@ -93,9 +93,9 @@ class check(checkTemplate):
             self.display_one_time_payment_details()
         elif self.entered_payment_type == "Monthly":
             self.display_monthly_payment_details()
-        elif self.entered_payment_type == "Three Month":
+        elif self.entered_payment_type == "Three Months":
             self.display_three_month_payment_details(total_interest_amount=self.total_interest)
-        elif self.entered_payment_type == "Six Month":
+        elif self.entered_payment_type == "Six Months":
             self.display_six_month_payment_details(total_interest_amount=self.total_interest)
 
     def display_one_time_payment_details(self):
