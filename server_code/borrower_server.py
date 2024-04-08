@@ -269,28 +269,26 @@ def get_user_points(id):
     if users:
         user = users[0]
         email = user['email_user']
-        gender = user['gender'].lower()
-        qualification = user['qualification'].lower()
-        marital_status = user['marital_status'].lower()
+        gender = user['gender'].lower() 
+        qualification = user['qualification'].lower()  
+        marital_status = user['marital_status'].lower()  
         profession = user['profession'].lower()
         user_age = user['user_age']
         organization_type = user['organization_type'].lower()
         present_address = user['present_address'].lower()
         duration_at_address = str(user['duration_at_address']).lower()
-        # self_employment = user['self_employment'].lower()
         self_employment = user['self_employment']
         if self_employment is not None:
-          self_employment = self_employment.lower()
+            self_employment = self_employment.lower()
         age_of_business = user['business_age']
         salary_type = user['salary_type'].lower()
         home_loan = user['home_loan'].lower()
         other_loan = user['other_loan'].lower()
         credit_card_loan = user['credit_card_loans'].lower()
         vehicle_loan = user['vehicle_loan'].lower()
-
+        
         user_points = 0
 
-        # Find the age range for the user_age
         user_age_range = None
         if 18 <= user_age <= 24:
             user_age_range = '18-24'
@@ -303,39 +301,82 @@ def get_user_points(id):
         elif 41 <= user_age <= 50:
             user_age_range = '41-50'
         else:
-            user_age_range = '51'
+            user_age_range = '51'      
+      
+        for category_row in app_tables.fin_admin_beseem_categories.search():
+            group_name = category_row['group_name']
+            sub_category = category_row['sub_category'].lower()
+            min_points = category_row['min_points']
 
-        for group_name in ['gender', 'present_address', 'duration_at_address', 'qualification', 'profession',
-                           'marital_status', 'home_loan', 'other_loan', 'credit_card_loan', 'vehicle_loan']:
-            # Check if user is a dictionary and handle missing key
-            if isinstance(user, dict):
-                sub_category = user.get(group_name, "").lower()
-            else:
-                sub_category = ""  # Set an empty sub_category if user is not a dictionary
+            if group_name == 'gender' and sub_category == gender:
+                print("Gender Points:", min_points)
+                user_points += min_points
 
-            search_result = app_tables.fin_admin_beseem_categories.search(group_name=group_name, sub_category=sub_category)
+            elif group_name == 'present_address' and sub_category == present_address:
+                print("Present address Points:", min_points)
+                user_points += min_points
 
-            total_category_points = 0
-            for item in search_result:  # Iterate over each dictionary in search_result
-                category_points = item['min_points']
-                print(f"{group_name.capitalize()} Points:", category_points)
-                total_category_points += category_points
+            elif group_name == 'duration_at_address' and sub_category == duration_at_address:
+                print("Duration at address Points:", min_points)
+                user_points += min_points
 
-            user_points += total_category_points  # Add total points for this category
+            elif group_name == 'qualification' and sub_category == qualification:
+                print("Qualification Points:", min_points)
+                user_points += min_points
 
-            # Logic for marital status and spouse profession (already within profession loop)
-            if group_name == 'marital_status' and marital_status == 'married':
+            elif group_name == 'profession' and sub_category == profession:
+                print("Profession Points:", min_points)
+                user_points += min_points
+
+                if profession == 'self employment':
+                    if self_employment == sub_category:
+                        print("Self Employment Points:", min_points)
+                        user_points += min_points
+
+                elif profession == 'employee':
+                    if organization_type == sub_category:
+                        print("Organization type Points:", min_points)
+                        user_points += min_points
+                    if salary_type == sub_category:
+                        print("Salary type Points:", min_points)
+                        user_points += min_points
+
+                elif profession == 'business':
+                    if age_of_business == sub_category:
+                        print("Business Age Points:", min_points)
+                        user_points += min_points
+                  
+            elif group_name == 'marital_status' and sub_category == marital_status:
+                marital_status_points = category_row['min_points']
+                print("Marital status Points:", marital_status_points)
+                user_points += marital_status_points
+    
                 data = app_tables.fin_guarantor_details.search(customer_id=id)
                 if data:
                     for item in data:
                         another_person = item['another_person'].lower()
                         spouse_profession = item['guarantor_profession'].lower()
-                        if another_person == 'spouse':
-                            spouse_profession_search = app_tables.fin_admin_beseem_categories.search(group_name='spouse_profession', sub_category=spouse_profession.lower())
-                            if spouse_profession_search:
-                                spouse_profession_points = spouse_profession_search[0]['min_points']
-                                print("Spouse profession:", spouse_profession_points)
-                                user_points += spouse_profession_points
+
+                        if marital_status == 'married' and another_person == 'spouse':
+                            if spouse_profession == sub_category:
+                                print("Spouse profession:", min_points)
+                                user_points += min_points        
+
+            elif group_name == 'home_loan' and sub_category == home_loan:
+                print("Home loan Points:", min_points)
+                user_points += min_points
+
+            elif group_name == 'other_loan' and sub_category == other_loan:
+                print("Other loan Points:", min_points)
+                user_points += min_points
+          
+            elif group_name == 'credit_card_loan' and sub_category == credit_card_loan:
+                print("Credit card loan Points:", min_points)
+                user_points += min_points
+
+            elif group_name == 'vehicle_loan' and sub_category == vehicle_loan:
+                print("Vehicle Points:", min_points)
+                user_points += min_points                     
 
         return user_points
     else:
