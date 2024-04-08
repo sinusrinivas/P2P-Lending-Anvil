@@ -298,7 +298,7 @@ def calculate_basic_points(gender, present_address, duration_at_address, qualifi
     basic_points = 0
     categories_to_check = ['gender', 'present_address', 'duration_at_address', 'qualification']
     for category in categories_to_check:
-        sub_category_value = locals()[category].lower()  # Convert to lowercase
+        sub_category_value = locals()[category].lower()
         category_search = app_tables.fin_admin_beseem_categories.search(group_name=category, sub_category=sub_category_value)
         print("Category:", category)
         print("Sub-category value:", sub_category_value)
