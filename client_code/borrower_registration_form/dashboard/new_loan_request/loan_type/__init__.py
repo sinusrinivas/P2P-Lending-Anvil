@@ -110,7 +110,7 @@ class loan_type(loan_typeTemplate):
     def fetch_product_data(self):
         return app_tables.fin_product_details.search(
             product_group=self.proctct_g,
-            product_categories=self.prodct_cate
+            product_categories=self.prodct_cate,
             product_name = 
         )
 
