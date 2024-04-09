@@ -583,18 +583,18 @@ def get_user_points(id):
             print("Gender Points:", gender_points)
             user_points += gender_points
 
-        # present_address_search = app_tables.fin_admin_beseem_categories.search(group_name='present_address', sub_category=present_address.lower())
-        # for row in present_address_search:
-        #     print("Size of present_address_search:", len(present_address_search))
-        #     present_address_points = row['min_points']
-        #     print("Present address Points:", present_address_points)
-        #     user_points += present_address_points
+        present_address_search = app_tables.fin_admin_beseem_categories.search(group_name='present_address', sub_category=present_address.lower())
+        for row in present_address_search:
+            print("Size of present_address_search:", len(present_address_search))
+            present_address_points = row['min_points']
+            print("Present address Points:", present_address_points)
+            user_points += present_address_points
 
-        # duration_at_address_search = app_tables.fin_admin_beseem_categories.search(group_name='duration_at_address', sub_category=duration_at_address.lower())
-        # for row in duration_at_address_search:
-        #     duration_at_address_points = row['min_points']
-        #     print("Duration_at_address Points:", duration_at_address_points)
-        #     user_points += duration_at_address_points
+        duration_at_address_search = app_tables.fin_admin_beseem_categories.search(group_name='duration_at_address', sub_category=duration_at_address.lower())
+        for row in duration_at_address_search:
+            duration_at_address_points = row['min_points']
+            print("Duration_at_address Points:", duration_at_address_points)
+            user_points += duration_at_address_points
       
         qualification_search = app_tables.fin_admin_beseem_categories.search(group_name='qualification', sub_category=qualification)
         for row in qualification_search:
