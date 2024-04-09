@@ -4,7 +4,7 @@ container:
   properties: {html: '@theme:standard-page.html'}
 components:
 - type: ColumnPanel
-  properties: {col_widths: '{"TZYKJF":15,"CICCQS":45}'}
+  properties: {col_widths: '{"TZYKJF":15,"CICCQS":39}', role: elevated-card}
   layout_properties: {slot: default}
   name: content_panel
   components:
@@ -23,90 +23,94 @@ components:
     type: form:borrower_registration_form.dashboard.Navigation_form_dashboard
     layout_properties: {grid_position: 'VBSPQG,GULKOC'}
     name: navigation_form_dashboard_1
-  - properties: {role: outlined-card, align: center, tooltip: '', border: '', foreground: '',
-      visible: true, text: View Profile, font_size: 25, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: 'theme:Disabled
-        Container', bold: true, underline: false, icon: ''}
-    type: Label
-    layout_properties: {grid_position: 'NOQDDT,QYJRUX'}
-    name: label_1_copy_1_copy_1
-  - properties: {height: 199.142822265625, role: outlined-card}
+  - properties: {height: 231.28570556640625, role: null}
     type: Image
     layout_properties: {grid_position: 'ZAYVLA,TZYKJF'}
     name: image_1
-  - properties: {height: 112.142822265625}
+  - properties: {height: 172.28570556640625}
     type: Spacer
-    layout_properties: {grid_position: 'ZAYVLA,CICCQS JUNDCX,PIZIOF'}
+    layout_properties: {grid_position: 'ZAYVLA,CICCQS HQVMHB,TTAKPC'}
     name: spacer_1
-  - properties: {font_size: 20, role: outlined-card}
+  - properties: {font_size: 30, role: null, text: ''}
     type: Label
-    layout_properties: {grid_position: 'ZAYVLA,CICCQS BHNNVG,BFNMXD'}
-    name: label_1
-  - properties: {height: 22.28570556640625}
-    type: Spacer
-    layout_properties: {grid_position: 'XLBTZF,JEJQXF'}
-    name: spacer_2
-  - properties: {role: elevated-card}
+    layout_properties: {grid_position: 'ZAYVLA,CICCQS SPCGTG,IPZFCD'}
+    name: label
+  - properties: {role: outlined-card, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: View Profile, font_size: 25, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: 'theme:Secondary
+        Container', bold: true, underline: false, icon: ''}
+    type: Label
+    layout_properties: {grid_position: 'KNDMSV,WRKCLN'}
+    name: label_1_copy_1_copy_1
+  - properties: {role: elevated-card, col_widths: '{"WFNJXR":15,"HFWFVL":45}'}
     type: ColumnPanel
     layout_properties: {grid_position: 'TFMQSU,CQCFYS'}
     name: column_panel_1
     components:
+    - name: label_8
+      properties: {role: title, text: 'Name :'}
+      type: Label
+      layout_properties: {grid_position: 'ZELVBX,FFWAID'}
+    - name: label_1
+      properties: {font_size: 18}
+      type: Label
+      layout_properties: {grid_position: 'ZELVBX,LIAWHO'}
     - properties: {role: title, text: 'Email :'}
       type: Label
-      layout_properties: {grid_position: 'NAHEIR,ZSJNRV'}
+      layout_properties: {grid_position: 'YRZWVR,HFWFVL NAHEIR,ZSJNRV'}
       name: label_2
     - name: email
-      properties: {}
+      properties: {font_size: 18}
       type: Label
-      layout_properties: {grid_position: 'NAHEIR,YIBXYE'}
+      layout_properties: {grid_position: 'YRZWVR,HFWFVL NAHEIR,YIBXYE'}
     - properties: {role: title, text: 'Mobile No :'}
       type: Label
-      layout_properties: {grid_position: 'OXHLSY,MXRUDZ'}
+      layout_properties: {grid_position: 'YRZWVR,HFWFVL OXHLSY,MXRUDZ'}
       name: label_3
     - name: mobile
-      properties: {}
+      properties: {font: '', font_size: 18}
       type: Label
-      layout_properties: {grid_position: 'OXHLSY,IXTTYG'}
+      layout_properties: {grid_position: 'YRZWVR,HFWFVL OXHLSY,IXTTYG'}
     - properties: {role: title, text: 'Date Of Birth :'}
       type: Label
-      layout_properties: {grid_position: 'ZACLMT,FIETLK'}
+      layout_properties: {grid_position: 'YRZWVR,HFWFVL ZACLMT,FIETLK'}
       name: label_4
     - name: birh
-      properties: {}
+      properties: {font_size: 18}
       type: Label
-      layout_properties: {grid_position: 'ZACLMT,ZOBFUW'}
+      layout_properties: {grid_position: 'YRZWVR,HFWFVL ZACLMT,ZOBFUW'}
     - name: label_5
       properties: {role: title, text: 'City :'}
       type: Label
-      layout_properties: {grid_position: 'XXBUIO,QPSBXK'}
+      layout_properties: {grid_position: 'YRZWVR,HFWFVL XXBUIO,QPSBXK'}
     - name: city
-      properties: {}
+      properties: {font_size: 18}
       type: Label
-      layout_properties: {grid_position: 'XXBUIO,VUDFAB'}
+      layout_properties: {grid_position: 'YRZWVR,HFWFVL XXBUIO,VUDFAB'}
     - name: label_6
       properties: {role: title, text: 'Gender :'}
       type: Label
-      layout_properties: {grid_position: 'NHMYWK,QRZNKL'}
+      layout_properties: {grid_position: 'YRZWVR,HFWFVL NHMYWK,QRZNKL'}
     - name: gender
-      properties: {}
+      properties: {font_size: 18}
       type: Label
-      layout_properties: {grid_position: 'NHMYWK,WYAWBB'}
+      layout_properties: {grid_position: 'YRZWVR,HFWFVL NHMYWK,WYAWBB'}
     - name: label_12
       properties: {role: title, text: 'Language :'}
       type: Label
-      layout_properties: {grid_position: 'BOBNOJ,BKRRHB'}
+      layout_properties: {grid_position: 'YRZWVR,HFWFVL BOBNOJ,BKRRHB'}
     - name: language
-      properties: {}
+      properties: {font_size: 18}
       type: Label
-      layout_properties: {grid_position: 'BOBNOJ,JXUFJM'}
+      layout_properties: {grid_position: 'YRZWVR,HFWFVL BOBNOJ,JXUFJM'}
     - name: label_7
       properties: {role: title, text: Marrital Status}
       type: Label
-      layout_properties: {grid_position: 'FXFFWV,ATTGOH'}
+      layout_properties: {grid_position: 'YRZWVR,HFWFVL FXFFWV,ATTGOH'}
     - name: status
-      properties: {}
+      properties: {font_size: 18}
       type: Label
-      layout_properties: {grid_position: 'FXFFWV,EUAOBE'}
+      layout_properties: {grid_position: 'YRZWVR,HFWFVL FXFFWV,EUAOBE'}
 - type: FlowPanel
   properties: {}
   layout_properties: {slot: nav-right}
