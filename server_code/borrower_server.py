@@ -566,16 +566,42 @@ def get_user_points(id):
         else:
             user_age_range = '51+'
 
-        categories_to_check = ['gender', 'present_address', 'duration_at_address', 'qualification']
-        for category in categories_to_check:
-            category_search = app_tables.fin_admin_beseem_categories.search(group_name=category, sub_category=category
-            print("Category_Search" ,category_search)
-            print("Size of Category_Search:", len(category_search))
-            for row in category_search:
-                basic_points = row['min_points']
-                print("Basic Points:", basic_points)
-                user_points += basic_points
+        # categories_to_check = ['gender', 'present_address', 'duration_at_address']
+        # for category in categories_to_check:
+        #     category_search = app_tables.fin_admin_beseem_categories.search(group_name=category, sub_category=locals()[category])
+        #     print("Category_Search" ,category_search)
+        #     print("Size of Category_Search:", len(category_search))
+        #     for row in category_search:
+        #         basic_points = row['min_points']
+        #         print("Basic Points:", basic_points)
+        #         user_points += basic_points
 
+        gender_search = app_tables.fin_admin_beseem_categories.search(group_name='gender', sub_category=gender.lower())
+        for row in gender_search:
+            print("Size of gender_search_search:", gender_search)
+            gender_points = row['min_points']
+            print("Gender Points:", gender_points)
+            user_points += gender_points
+
+        # present_address_search = app_tables.fin_admin_beseem_categories.search(group_name='present_address', sub_category=present_address.lower())
+        # for row in present_address_search:
+        #     print("Size of present_address_search:", len(present_address_search))
+        #     present_address_points = row['min_points']
+        #     print("Present address Points:", present_address_points)
+        #     user_points += present_address_points
+
+        # duration_at_address_search = app_tables.fin_admin_beseem_categories.search(group_name='duration_at_address', sub_category=duration_at_address.lower())
+        # for row in duration_at_address_search:
+        #     duration_at_address_points = row['min_points']
+        #     print("Duration_at_address Points:", duration_at_address_points)
+        #     user_points += duration_at_address_points
+      
+        qualification_search = app_tables.fin_admin_beseem_categories.search(group_name='qualification', sub_category=qualification)
+        for row in qualification_search:
+            qualification_points = row['min_points']
+            print("Qualification Points:", qualification_points)
+            user_points += qualification_points
+                 
         profession_search = app_tables.fin_admin_beseem_categories.search(group_name='profession', sub_category=profession)
         for row in profession_search:
             profession_points = row['min_points']
@@ -603,7 +629,7 @@ def get_user_points(id):
                     print("Business age Points:", business_age_points)
                     user_points += business_age_points
 
-        marital_status_search = app_tables.fin_admin_beseem_categories.search(group_name='marital_status', sub_category=marital_status.lower(), age=user_age_range)
+        marital_status_search = app_tables.fin_admin_beseem_categories.search(group_name='marital_status', sub_category=marital_status, age=user_age_range)
         for row in marital_status_search:
             marital_status_points = row['min_points']
             print("Marital Status Points:", marital_status_points)
