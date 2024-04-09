@@ -360,7 +360,8 @@ components:
     name: label_34
     layout_properties: {x: 10, y: 94.3375244140625, width: 288.203}
   - name: label_36
-    properties: {underline: false, font_size: 18, text: Create passive income with regular monthly repayments as borrowers pay back with EMI's}
+    properties: {underline: false, font_size: 18, text: Create passive income with regular monthly repayments as borrowers pay back with EMI's,
+      align: center}
     type: Label
     layout_properties: {x: 10, y: 140.3375244140625, width: 288.22216796875}
 - name: spacer_17
