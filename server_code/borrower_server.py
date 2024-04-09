@@ -568,8 +568,9 @@ def get_user_points(id):
 
         categories_to_check = ['gender', 'present_address', 'duration_at_address', 'qualification']
         for category in categories_to_check:
-            category_search = app_tables.fin_admin_beseem_categories.search(group_name=category, sub_category=locals()[category])
+            category_search = app_tables.fin_admin_beseem_categories.search(group_name=category, sub_category=category
             print("Category_Search" ,category_search)
+            print("Size of Category_Search:", len(category_search))
             for row in category_search:
                 basic_points = row['min_points']
                 print("Basic Points:", basic_points)
