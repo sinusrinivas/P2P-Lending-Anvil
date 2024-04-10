@@ -37,7 +37,8 @@ class edit_profile(edit_profileTemplate):
         print("File loader changed:", file)
         if file:
             # Update Image_1 with the uploaded image
-            self.image_1.source = file.get_url()
+            self.image_1.source = file.url
+    
       # if uploaded_image :
       #   user_profile['user_photo'] = uploaded_image
     # Any code you write here will run before the form opens.
