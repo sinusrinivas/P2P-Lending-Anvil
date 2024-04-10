@@ -25,14 +25,6 @@ class edit_profile(edit_profileTemplate):
       self.pan_text.text=user_profile['pan_number']
       self.image_1.source = user_profile['user_photo']
 
-      photo_1 = self.file_loader_1.file
-      if photo_1:
-        self.image_1.source = photo_1
-
-      self.image_1.re
-        
-      
-      
       
       options = app_tables.fin_gender.search()
       options_string = [str(option['gender']) for option in options]
@@ -40,7 +32,12 @@ class edit_profile(edit_profileTemplate):
       
       self.mother_label.text=user_profile['mouther_tounge']
       
-
+  def file_loader_1_change(self, file, **event_args):
+        """This method is called when the file_loader_1's value changes"""
+        print("File loader changed:", file)
+        if file:
+            # Update Image_1 with the uploaded image
+            self.image_1.source = file.get_url()
       # if uploaded_image :
       #   user_profile['user_photo'] = uploaded_image
     # Any code you write here will run before the form opens.

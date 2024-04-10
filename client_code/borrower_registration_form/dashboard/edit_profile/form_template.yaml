@@ -30,6 +30,7 @@ components:
     properties: {align: left}
     type: FileLoader
     layout_properties: {grid_position: 'QMTCIP,IXANMI PQFSVC,RLIFHB'}
+    event_bindings: {change: file_loader_1_change}
   - name: spacer_1
     properties: {height: 136.28570556640625}
     type: Spacer
