@@ -4,7 +4,7 @@ container:
   properties: {html: '@theme:standard-page.html'}
 components:
 - type: ColumnPanel
-  properties: {background: '', col_widths: '{"SJEJXH":20,"MVGHJB":20,"DDGXUI":20}'}
+  properties: {background: '', col_widths: '{"SJEJXH":20,"MVGHJB":20,"DDGXUI":20,"FWLUSG":15,"OTHXKY":45}'}
   name: content_panel
   layout_properties: {slot: default}
   components:
@@ -230,7 +230,7 @@ components:
     type: Label
     layout_properties: {grid_position: 'YUPZOM,OVUMPJ'}
   - name: label_101
-    properties: {text: Bank Loans, align: center, font_size: 18, bold: true}
+    properties: {text: Bank Loans, align: center, font_size: 22, bold: true}
     type: Label
     layout_properties: {grid_position: 'BHYIKZ,ZRQWTA HPJOFH,GNAAPA'}
   - name: label_103
@@ -258,7 +258,7 @@ components:
     type: Label
     layout_properties: {grid_position: 'BHYIKZ,ZRQWTA JZSLCO,ZIIQQT'}
   - name: label_102
-    properties: {text: P2P Business Loans, align: center, font_size: 18, bold: true}
+    properties: {text: P2P Business Loans, align: center, font_size: 22, bold: true}
     type: Label
     layout_properties: {grid_position: 'BHYIKZ,FQPESE GXEVXC,IAYRJC'}
   - name: label_104
@@ -282,61 +282,6 @@ components:
       font_size: 18}
     type: Label
     layout_properties: {grid_position: 'BHYIKZ,FQPESE JMKKMC,GXXXFQ'}
-  - name: label_15
-    properties: {text: 'Peer to Peer lending is a new and better way of taking business
-        loans – quicker, and more affordable, than banks or NBFCs!', align: center,
-      font_size: 18}
-    type: Label
-    layout_properties: {grid_position: 'CXIOBY,QDBVJH', full_width_row: true}
-  - name: label_16
-    properties: {text: 'If you’ve ever applied for a business loan at a bank, you’d
-        agree that the process is complicated, time-consuming, and confusing for all
-        — except for the bank staff! Besides, banks and other traditional lenders
-        are typically meant to cater to corporate customers or wealthy individuals.
-        Borrowers with small requirements automatically get lower priority.', font_size: 18}
-    type: Label
-    layout_properties: {grid_position: 'RPNKAT,OQWOFT'}
-  - name: label_17
-    properties: {text: 'On the other hand, private NBFCs with a clear focus on profitability
-        can burn a deep hole in your pocket. And then there are local money lenders,
-        the ‘Sharks’ of modern times, who provide doorstep services but at exorbitant
-        costs. Hence, the search for an easy yet affordable business loan is never-ending.',
-      font_size: 18}
-    type: Label
-    layout_properties: {grid_position: 'ANTVTN,KGIPOW'}
-  - name: label_18
-    properties: {text: 'But not anymore. With i2ifunding, getting a business loan
-        is quick, affordable, and hassle-free! On our platform, you can borrow:',
-      font_size: 18}
-    type: Label
-    layout_properties: {grid_position: 'FCIYWS,FTYIYF'}
-  - name: label_19
-    properties: {text: '> A fixed sum of money', font_size: 18}
-    type: Label
-    layout_properties: {grid_position: 'JBPNCT,IGCPMV'}
-  - name: label_20
-    properties: {text: '> For a fixed term', font_size: 18}
-    type: Label
-    layout_properties: {grid_position: 'KREQFE,BSANII'}
-  - name: label_21
-    properties: {text: '> At a fixed rate of interest', font_size: 18}
-    type: Label
-    layout_properties: {grid_position: 'RABKRX,FNYAJW'}
-  - name: label_22
-    properties: {text: …with just a few clicks on the mouse!…with just a few clicks on the mouse!,
-      font_size: 18}
-    type: Label
-    layout_properties: {grid_position: 'SWREOR,YTUILW'}
-  - name: label_23
-    properties: {text: 'Furthermore, funds are deposited into your account on the
-        next business day with minimal paperwork, sourced from peers rather than a
-        bank. This model often offers better interest rates and terms as individual
-        investors have lower overhead costs compared to banks, increasing the likelihood
-        of favorable rates and terms.
-
-        ', font_size: 18}
-    type: Label
-    layout_properties: {grid_position: 'KJDKZQ,VIFCAT'}
   - name: spacer_12
     properties: {height: '20'}
     type: Spacer
@@ -352,9 +297,9 @@ components:
     type: Spacer
     layout_properties: {grid_position: 'KPUGBM,FNOTVU'}
   - name: label_37
-    properties: {text: 'i2iFunding provides hassle-free, unsecured business loans
-        online at low-interest rates. Applying for a business loan on our platform
-        takes just ten minutes of your valuable time.
+    properties: {text: 'GTPL provides hassle-free, unsecured business loans online
+        at low-interest rates. Applying for a business loan on our platform takes
+        just ten minutes of your valuable time.
 
         ', align: center, font_size: 18}
     type: Label
@@ -699,6 +644,90 @@ components:
     properties: {height: '40'}
     type: Spacer
     layout_properties: {grid_position: 'NAQQKD,FMRTTZ'}
+  - name: label_15
+    properties: {text: Advantages of P2P Business Loans Over Bank Loans, align: center,
+      bold: true, font_size: 30}
+    type: Label
+    layout_properties: {grid_position: 'DDJDTF,GGVDJK'}
+  - name: label_16
+    properties: {text: 'Faster Approval Process:', bold: true, font_size: 18}
+    type: Label
+    layout_properties: {grid_position: 'HROZPU,FWLUSG BXXCWS,OSIZSG'}
+  - name: spacer_51
+    properties: {height: 110.22222900390625}
+    type: Spacer
+    layout_properties: {grid_position: 'HROZPU,FWLUSG VHJITY,WDCNUX'}
+  - name: label_18
+    properties: {text: 'Accessibility:', bold: true, font_size: 18}
+    type: Label
+    layout_properties: {grid_position: 'HROZPU,FWLUSG TGCTAT,PDBRAJ'}
+  - name: spacer_52
+    properties: {height: 32}
+    type: Spacer
+    layout_properties: {grid_position: 'HROZPU,FWLUSG YYNZXT,VYJMWL'}
+  - name: label_20
+    properties: {text: 'Flexibility: ', bold: true, font_size: 18}
+    type: Label
+    layout_properties: {grid_position: 'HROZPU,FWLUSG EYZJGS,ODDUVZ'}
+  - name: spacer_53
+    properties: {height: 32}
+    type: Spacer
+    layout_properties: {grid_position: 'HROZPU,FWLUSG FDJTRF,IKFJJK'}
+  - name: label_22
+    properties: {text: 'Less Stringent Requirements:', bold: true, font_size: 18}
+    type: Label
+    layout_properties: {grid_position: 'HROZPU,FWLUSG XIGGPP,NGJDRJ'}
+  - name: spacer_54
+    properties: {height: 32}
+    type: Spacer
+    layout_properties: {grid_position: 'HROZPU,FWLUSG IWQIXF,AKWPTI'}
+  - name: label_111
+    properties: {text: 'No Collateral Requirement:', bold: true, font_size: 18}
+    type: Label
+    layout_properties: {grid_position: 'HROZPU,FWLUSG BUHZWZ,BFTXCR'}
+  - name: spacer_55
+    properties: {height: 32}
+    type: Spacer
+    layout_properties: {grid_position: 'HROZPU,FWLUSG YBHZBZ,MDEFBI'}
+  - name: label_113
+    properties: {text: 'Diverse Funding Sources:', bold: true, font_size: 18}
+    type: Label
+    layout_properties: {grid_position: 'HROZPU,FWLUSG CHKKHH,XXKRDU'}
+  - name: label_17
+    properties: {text: 'P2P loans typically have quicker approval times compared to
+        banks, allowing businesses to access funds more rapidly for their needs.',
+      font_size: 18}
+    type: Label
+    layout_properties: {grid_position: 'HROZPU,OTHXKY XKIJGK,DZPYVX'}
+  - name: label_19
+    properties: {text: P2P lending platforms often provide financing options to businesses that may have difficulty obtaining loans from traditional banks due to factors such as limited credit history or smaller size.,
+      font_size: 18}
+    type: Label
+    layout_properties: {grid_position: 'HROZPU,OTHXKY AOFWGL,AJIPJK'}
+  - name: label_21
+    properties: {text: 'P2P loans may offer more flexible terms and repayment schedules
+        compared to traditional bank loans, allowing businesses to tailor the loan
+        to their specific needs.', font_size: 18}
+    type: Label
+    layout_properties: {grid_position: 'HROZPU,OTHXKY KQBKTD,NGPTOZ'}
+  - name: label_23
+    properties: {text: 'P2P lending platforms may have less stringent requirements
+        for loan approval compared to banks, making them more accessible to a broader
+        range of businesses and borrowers.', font_size: 18}
+    type: Label
+    layout_properties: {grid_position: 'HROZPU,OTHXKY AJASCQ,BKXFNA'}
+  - name: label_112
+    properties: {text: 'Some P2P loans may be available without the need for collateral,
+        which can be beneficial for businesses that lack significant assets to pledge
+        as security.', font_size: 18}
+    type: Label
+    layout_properties: {grid_position: 'HROZPU,OTHXKY HKOICP,DKGLGR'}
+  - name: label_114
+    properties: {text: 'P2P lending connects businesses with a diverse pool of investors,
+        potentially increasing the likelihood of securing funding compared to relying
+        solely on one bank lender.', font_size: 18}
+    type: Label
+    layout_properties: {grid_position: 'HROZPU,OTHXKY ZGZURK,QVMAHY'}
   - name: content_panel_copy_copy_copy_2
     properties: {background: '#Edf0f4', col_widths: '{"DSABOJ":30,"LSMIUZ":5,"YRFHPN":25,"AYKUXY":10,"JKNNWL":50,"CTBEEE":10,"ZAJONL":50,"KFBCRI":10,"YVFWXA":50,"ZINAJQ":10,"PMTGNO":50,"DWJQEH":10,"RWPUWU":50,"CCDNRQ":10,"YKHPWF":50,"BNIVBC":10,"CVZRMA":50,"FPOAOE":30,"EWQURH":2,"ULSOQC":28,"HXLMUZ":30,"NFYAKF":2,"OMGPJQ":28}'}
     type: ColumnPanel
