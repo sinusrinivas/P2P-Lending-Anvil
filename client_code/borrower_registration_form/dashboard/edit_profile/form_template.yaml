@@ -1,6 +1,6 @@
 container:
   type: ColumnPanel
-  properties: {col_widths: '{"IKUKOK":15,"TILVKS":42,"MEDTTA":3,"WSBVTG":25,"CVAONX":35,"URRJAH":25,"ZJTXKG":35,"WFEQPM":25,"KQJEUH":35,"ILOSRQ":25,"OXGBBK":35,"DLBFQK":25,"UKFMQA":35,"DPMEEG":25,"PGHMDD":35,"KJEMVT":25,"QAQXDC":35,"QVZHLH":25,"CAJPDY":35}'}
+  properties: {col_widths: '{"IKUKOK":15,"TILVKS":42,"MEDTTA":3,"WSBVTG":35,"CVAONX":25,"URRJAH":35,"ZJTXKG":25,"WFEQPM":35,"KQJEUH":25,"ILOSRQ":35,"OXGBBK":25,"DLBFQK":35,"UKFMQA":25,"DPMEEG":35,"PGHMDD":25,"KJEMVT":35,"QAQXDC":25,"QVZHLH":35,"CAJPDY":25}'}
 components:
 - name: image_1_copy_1
   properties: {role: null, vertical_align: center, height: 48, tooltip: '', border: '',
@@ -125,7 +125,7 @@ components:
   type: Label
   layout_properties: {grid_position: 'FFAZCJ,TILVKS OPEJFQ,CAJPDY'}
 - name: spacer_2
-  properties: {height: 32}
+  properties: {height: 205.28570556640625}
   type: Spacer
   layout_properties: {grid_position: 'FFAZCJ,MEDTTA'}
 - name: button_1_copy_1
