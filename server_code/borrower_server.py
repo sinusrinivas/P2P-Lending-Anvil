@@ -366,13 +366,13 @@ def get_user_points(id):
                     print(f"{category.capitalize()} Points:", row['min_points'])
                     break
 
-elif profession == 'business':
-    business_age_search = app_tables.fin_admin_beseem_categories.search(group_name='age_of_business')
-    for row in business_age_search:
-        if row['sub_category'].lower() == age_of_business.lower():
-            user_points += row['min_points']
-            print("Business Age Points:", row['min_points'])
-            break
+        elif profession == 'business':
+           business_age_search = app_tables.fin_admin_beseem_categories.search(group_name='age_of_business')
+           for row in business_age_search:
+              if row['sub_category'].lower() == age_of_business.lower():
+                 user_points += row['min_points']
+                 print("Business Age Points:", row['min_points'])
+                 break
 
 
         return user_points
