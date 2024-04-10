@@ -264,6 +264,85 @@ def final_points_update_bessem_table(user_id):
         return final_points
     return None
 
+
+def get_user_points(id):
+    users = app_tables.fin_user_profile.search(customer_id=id)
+
+    if users:
+        user = users[0]
+        user_points = 0
+        email = user['email_user']
+        gender = user['gender'].lower()
+        qualification = user['qualification'].lower()
+        marital_status = user['marital_status'].lower()
+        profession = user['profession'].lower()
+        user_age = user['user_age']
+        organization_type = user['organization_type'].lower()
+        present_address = user['present_address'].lower()
+        duration_at_address = str(user['duration_at_address']).lower()
+        self_employment = user['self_employment']
+        if self_employment is not None:
+            self_employment = self_employment.lower()
+        age_of_business = user['business_age']
+        salary_type = user['salary_type'].lower()
+        home_loan = user['home_loan'].lower()
+        other_loan = user['other_loan'].lower()
+        credit_card_loan = user['credit_card_loans'].lower()
+        vehicle_loan = user['vehicle_loan'].lower()
+
+        if 18 <= user_age <= 24:
+            user_age_range = '18-24'
+        elif 25 <= user_age <= 30:
+            user_age_range = '25-30'
+        elif 31 <= user_age <= 36:
+            user_age_range = '31-36'
+        elif 37 <= user_age <= 40:
+            user_age_range = '37-40'
+        elif 41 <= user_age <= 50:
+            user_age_range = '41-50'
+        else:
+            user_age_range = '51+'
+
+        search_categories = {
+            'gender': gender,
+            'present_address': present_address,
+            'duration_at_address': duration_at_address,
+            'qualification': qualification,
+            'profession': profession,
+            'organization_type': organization_type,
+            'salary_type': salary_type,
+            'home_loan': home_loan,
+            'other_loan': other_loan,
+            'credit_card_loan': credit_card_loan,
+            'vehicle_loan': vehicle_loan
+        }
+
+        # for category, value in search_categories.items():
+        #     category_search = app_tables.fin_admin_beseem_categories.search(group_name=category)
+        #     print(f"Size of {category}_search: {len(category_search)}")
+        #     for row in category_search:
+        #         if row['sub_category'] == value:
+        #             category_points = row['min_points']
+        #             print(f"{category.capitalize()} Points:", category_points)
+        #             user_points += category_points
+        #             break  
+
+        for category, value in search_categories.items():
+            category_search = app_tables.fin_admin_beseem_categories.search(group_name=category, sub_category=value)
+            print(f"Size of {category}_search: {len(category_search)}")
+            for row in category_search:
+                category_points = row['min_points']
+                print(f"{category.capitalize()} Points:", category_points)
+                user_points += category_points
+
+        # Process additional conditions based on profession, marital status, etc.
+
+        return user_points
+
+    else:
+        return None
+
+
 # def get_user_points(id):
 #     users = app_tables.fin_user_profile.search(customer_id=id)
 #     if users:
@@ -802,14 +881,6 @@ def final_points_update_bessem_table(user_id):
 #         return user_points
 #     else:
 #         return None
-
-
-
-
-
-
-
-
 
 # def get_user_points(id):
 #     users = app_tables.fin_user_profile.search(customer_id=id)
