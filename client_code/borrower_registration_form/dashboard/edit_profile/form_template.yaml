@@ -18,23 +18,23 @@ components:
   name: navigation_form_dashboard_1
   layout_properties: {grid_position: 'QGLXEE,PLIJYB', full_width_row: false}
 - name: column_panel_1
-  properties: {role: outlined-card, col_widths: '{"IXANMI":15,"XUVOGG":45}'}
+  properties: {role: outlined-card, col_widths: '{"IXANMI":15,"XUVOGG":45,"LUPRXM":30,"IBXBBY":15,"XDAOXD":15}'}
   type: ColumnPanel
   layout_properties: {grid_position: 'FFAZCJ,TILVKS'}
   components:
   - name: image_1
-    properties: {}
+    properties: {display_mode: zoom_to_fill}
     type: Image
-    layout_properties: {grid_position: 'QMTCIP,IXANMI YTKUAZ,XPJODJ'}
-  - name: file_loader_1
-    properties: {align: left}
-    type: FileLoader
-    layout_properties: {grid_position: 'QMTCIP,IXANMI PQFSVC,RLIFHB'}
-    event_bindings: {change: file_loader_1_change}
+    layout_properties: {grid_position: 'QMTCIP,IXANMI'}
   - name: spacer_1
     properties: {height: 136.28570556640625}
     type: Spacer
-    layout_properties: {grid_position: 'QMTCIP,XUVOGG'}
+    layout_properties: {grid_position: 'QMTCIP,XUVOGG ATDKFM,AVAVMI'}
+  - name: file_loader_1
+    properties: {align: left}
+    type: FileLoader
+    layout_properties: {grid_position: 'QMTCIP,XUVOGG MFRGEP,NIUGKB'}
+    event_bindings: {change: file_loader_1_change}
   - name: label_1_copy_1_copy_1
     properties: {role: outlined-card, align: left, tooltip: '', border: '', foreground: '',
       visible: true, text: Edit Details, font_size: 18, font: '', spacing_above: small,
@@ -86,6 +86,10 @@ components:
     properties: {background: white}
     type: Label
     layout_properties: {grid_position: 'UJJMBQ,IBXBBY'}
+  - name: date_picker_1
+    properties: {}
+    type: DatePicker
+    layout_properties: {grid_position: 'UJJMBQ,XDAOXD'}
   - type: Label
     properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
       visible: true, text: City, font_size: null, font: '', spacing_above: small,
@@ -97,17 +101,6 @@ components:
     properties: {background: white}
     type: TextBox
     layout_properties: {grid_position: 'XKKSLZ,DRFMWY'}
-  - type: Label
-    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-      visible: true, text: 'Your pan Card:', font_size: null, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
-      underline: false, icon: ''}
-    name: label_11
-    layout_properties: {grid_position: 'DNYDJK,NKLMYH'}
-  - name: pan_text
-    properties: {background: white}
-    type: Label
-    layout_properties: {grid_position: 'DNYDJK,VHEJFC'}
   - type: Label
     properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
       visible: true, text: 'Gender:', font_size: null, font: '', spacing_above: small,

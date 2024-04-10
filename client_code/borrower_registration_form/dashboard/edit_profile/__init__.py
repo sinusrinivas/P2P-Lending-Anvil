@@ -22,10 +22,13 @@ class edit_profile(edit_profileTemplate):
       self.mobile_text.text=user_profile['mobile']
       self.date_label.text=user_profile['date_of_birth']
       self.city_text.text=user_profile['city']
-      self.pan_text.text=user_profile['pan_number']
+      # self.pan_text.text=user_profile['pan_number']
       self.image_1.source = user_profile['user_photo']
 
-      
+      birth_date = self.date_picker_1.date
+      if birth_date:
+        self.date_label.text = birth_date
+        user_profile
       options = app_tables.fin_gender.search()
       options_string = [str(option['gender']) for option in options]
       self.gender_down.items = options_string
@@ -37,7 +40,7 @@ class edit_profile(edit_profileTemplate):
         print("File loader changed:", file)
         if file:
             # Update Image_1 with the uploaded image
-            self.image_1.source = file.url
+            self.image_1.source = self.file_loader_1.file
     
       # if uploaded_image :
       #   user_profile['user_photo'] = uploaded_image
@@ -51,7 +54,7 @@ class edit_profile(edit_profileTemplate):
      user_profile['mobile']=self.mobile_text.text
      user_profile['date_of_birth']=self.date_label.text
      user_profile['city']=self.city_text.text
-     user_profile['pan_number']=self.pan_text.text
+     # user_profile['pan_number']=self.pan_text.text
      user_profile['gender']=self.gender_down.selected_value
      user_profile['mouther_tounge']=self.mother_label.text
      photo = self.file_loader_1.file
