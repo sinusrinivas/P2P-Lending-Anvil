@@ -1,7 +1,7 @@
 container: {type: DataRowPanel}
 components:
 - name: column_panel_1
-  properties: {role: elevated-card, col_widths: '{"IBTIQB":5,"LSUEEL":7,"TBCIVY":6,"QLXXIR":6,"QWGAJZ":6,"RVDMTK":6,"MGPIUH":6,"SPYBIU":6,"CQSDIO":6,"PDSXPT":6}'}
+  properties: {role: elevated-card, col_widths: '{"IBTIQB":5,"LSUEEL":7,"TBCIVY":6,"QLXXIR":6,"QWGAJZ":6,"RVDMTK":6,"MGPIUH":6,"SPYBIU":6,"PDSXPT":6}'}
   type: ColumnPanel
   layout_properties: {column: IKQXMJ}
   components:
@@ -56,7 +56,7 @@ components:
   - type: Label
     properties: {}
     name: label_9
-    layout_properties: {grid_position: 'XOJUUE,CQSDIO'}
+    layout_properties: {grid_position: 'XOJUUE,GQYFSJ'}
     data_bindings:
     - {property: text, code: 'self.item[''EndingBalance'']'}
   - type: Label
