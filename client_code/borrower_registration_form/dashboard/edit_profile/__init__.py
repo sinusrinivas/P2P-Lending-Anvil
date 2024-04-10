@@ -25,10 +25,6 @@ class edit_profile(edit_profileTemplate):
       # self.pan_text.text=user_profile['pan_number']
       self.image_1.source = user_profile['user_photo']
 
-      birth_date = self.date_picker_1.date
-      if birth_date:
-        self.date_label.text = birth_date
-        user_profile
       options = app_tables.fin_gender.search()
       options_string = [str(option['gender']) for option in options]
       self.gender_down.items = options_string
@@ -47,6 +43,16 @@ class edit_profile(edit_profileTemplate):
     # Any code you write here will run before the form opens.
 
   def button_1_click(self, **event_args):
+    if (not self.borrower_full_name_text.text or 
+            not self.mail_text.text or 
+            not self.mobile_text.text or 
+            not self.date_label.text or 
+            not self.city_text.text or 
+            not self.gender_down.selected_value or 
+            not self.mother_label.text):
+            
+            alert("Please fill in all fields.")
+            return  # Stop execution if any field is empty
     user_profile=app_tables.fin_user_profile.get(customer_id=self.user_id)
     if user_profile: 
      user_profile['full_name']=self.borrower_full_name_text.text

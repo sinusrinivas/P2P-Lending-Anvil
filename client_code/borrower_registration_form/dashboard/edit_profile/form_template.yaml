@@ -18,7 +18,7 @@ components:
   name: navigation_form_dashboard_1
   layout_properties: {grid_position: 'QGLXEE,PLIJYB', full_width_row: false}
 - name: column_panel_1
-  properties: {role: outlined-card, col_widths: '{"IXANMI":15,"XUVOGG":45,"LUPRXM":30,"IBXBBY":15,"XDAOXD":15}'}
+  properties: {role: outlined-card, col_widths: '{"IXANMI":15,"XUVOGG":45}'}
   type: ColumnPanel
   layout_properties: {grid_position: 'FFAZCJ,TILVKS'}
   components:
@@ -81,15 +81,11 @@ components:
       icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
       underline: false, icon: ''}
     name: label_7
-    layout_properties: {grid_position: 'UJJMBQ,LUPRXM'}
+    layout_properties: {grid_position: 'MUBUVL,GCVFSW'}
   - name: date_label
     properties: {background: white}
     type: Label
-    layout_properties: {grid_position: 'UJJMBQ,IBXBBY'}
-  - name: date_picker_1
-    properties: {}
-    type: DatePicker
-    layout_properties: {grid_position: 'UJJMBQ,XDAOXD'}
+    layout_properties: {grid_position: 'MUBUVL,PTZWEJ'}
   - type: Label
     properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
       visible: true, text: City, font_size: null, font: '', spacing_above: small,
