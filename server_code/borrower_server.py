@@ -391,23 +391,23 @@ def get_user_points(id):
         marital_status_search = app_tables.fin_admin_beseem_categories.search(group_name='marital_status')
         print(f"Size of marital_status_search: {len(marital_status_search)}")
         for row in marital_status_search:
-         if row['sub_category'].split(","):
-           sub_categories = row['sub_category'].split(",")
-           min_points = row['min_points']
-           for sub_cat in sub_categories:
-             if sub_cat.strip().lower() == marital_status.lower() and any(age.strip().lower() == user_age_range.lower() for age in row['age'].split(",")):
-                marital_status_points = min_points
-                print("Marital Status Points:", marital_status_points)
-                user_points += marital_status_points
-                break
-         elif row['sub_category'].lower() == marital_status.lower() and any(age.strip().lower() == user_age_range.lower() for age in row['age'].split(",")):
-           marital_status_points = row['min_points']
-           print("Marital Status Points:", marital_status_points)
-           user_points += marital_status_points
-           break
+           if row['sub_category'].split(","):
+             sub_categories = row['sub_category'].split(",")
+             min_points = row['min_points']
+             for sub_cat in sub_categories:
+               if sub_cat.strip().lower() == marital_status.lower() and any(age.strip().lower() == user_age_range.lower() for age in row['age'].split(",")):
+                   marital_status_points = min_points
+                   print("Marital Status Points:", marital_status_points)
+                   user_points += marital_status_points
+                   break
+           elif row['sub_category'].lower() == marital_status.lower() and any(age.strip().lower() == user_age_range.lower() for age in row['age'].split(",")):
+               marital_status_points = row['min_points']
+               print("Marital Status Points:", marital_status_points)
+               user_points += marital_status_points
+               break
 
-         data = app_tables.fin_guarantor_details.search(customer_id=id)
-         for item in data:
+        data = app_tables.fin_guarantor_details.search(customer_id=id)
+        for item in data:
            another_person = item['another_person'].lower()
            spouse_profession = item['guarantor_profession'].lower()
 
@@ -439,6 +439,7 @@ def get_user_points(id):
 
     else:
         return None
+
 
 def get_group_points(customer_id):
     # Fetch user details
