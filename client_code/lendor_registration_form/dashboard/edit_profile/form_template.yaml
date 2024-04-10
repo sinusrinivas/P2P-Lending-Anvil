@@ -54,16 +54,16 @@ components:
     - name: image_1
       properties: {display_mode: zoom_to_fill}
       type: Image
-      layout_properties: {grid_position: 'QMTCIP,IXANMI'}
-    - name: spacer_1
-      properties: {height: 136.28570556640625}
-      type: Spacer
-      layout_properties: {grid_position: 'QMTCIP,XUVOGG ATDKFM,AVAVMI'}
+      layout_properties: {grid_position: 'QMTCIP,IXANMI GKXUAW,VBBRRE'}
     - name: file_loader_1
       properties: {align: left}
       type: FileLoader
-      layout_properties: {grid_position: 'QMTCIP,XUVOGG MFRGEP,NIUGKB'}
+      layout_properties: {grid_position: 'QMTCIP,IXANMI JBDFPQ,YNKYGG'}
       event_bindings: {change: file_loader_1_change}
+    - name: spacer_1
+      properties: {height: 136.28570556640625}
+      type: Spacer
+      layout_properties: {grid_position: 'QMTCIP,XUVOGG'}
     - name: label_1_copy_1_copy_1
       properties: {role: outlined-card, align: left, tooltip: '', border: '', foreground: '',
         visible: true, text: Edit Details, font_size: 18, font: '', spacing_above: small,

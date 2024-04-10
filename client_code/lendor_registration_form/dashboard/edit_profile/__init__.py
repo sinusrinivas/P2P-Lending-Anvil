@@ -8,6 +8,8 @@ import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 from ....bank_users.main_form import main_form_module
+import re
+
 class edit_profile(edit_profileTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
@@ -53,6 +55,16 @@ class edit_profile(edit_profileTemplate):
             
             alert("Please fill in all fields.")
             return  # Stop execution if any field is empty
+
+    if not self.validate_email(self.mail_text.text):
+            alert("Please enter a valid email address.")
+            return  # Stop execution if email is invalid
+
+        # Validate mobile number format
+    if not self.validate_mobile(self.mobile_text.text):
+            alert("Please enter a valid 10-digit mobile number.")
+            return  # Stop execution if mobile number is invalid
+          
     user_profile=app_tables.fin_user_profile.get(email_user=self.email)
     if user_profile: 
      user_profile['full_name']=self.borrower_full_name_text.text
@@ -70,4 +82,14 @@ class edit_profile(edit_profileTemplate):
     alert('saved sucessfully')
     open_form('lendor_registration_form.dashboard')
 
-  
+  def validate_email(self, email):
+        """Validate email format"""
+        # Regular expression for validating email
+        pattern = r'^[\w\.-]+@[\w\.-]+\.\w+$'
+        return re.match(pattern, email)
+
+  def validate_mobile(self, mobile):
+        """Validate mobile number format"""
+        # Regular expression for validating 10-digit mobile number
+        pattern = r'^\d{10}$'
+        return re.match(pattern, mobile)
