@@ -45,7 +45,7 @@ class star_1_borrower_registration_form_2_employment_emp_detail_1(star_1_borrowe
     if not emp_type or not org_type or not com_type or not company_name:
       Notification("please fill the required fields ").show()
     else:
-      anvil.server.call('add_lendor_individual_form_1', company_name,org_type,emp_type,user_id,com_type)
+      anvil.server.call('add_lendor_individual_form_1', company_name,org_type,emp_type,com_type,user_id)
       open_form('borrower_registration_form.star_1_borrower_registration_form_2_employment.star_1_borrower_registration_form_2_employment_emp_detail_2',user_id=self.userId)
 
 
