@@ -84,9 +84,175 @@ components:
     type: Label
     layout_properties: {grid_position: 'GOWNCH,YFLYGQ'}
   - name: spacer_2
-    properties: {height: 32}
+    properties: {height: '10'}
     type: Spacer
     layout_properties: {grid_position: 'DEYJDX,PEEUKS'}
+  - name: label_7
+    properties: {text: 'Peer-to-peer lending: A modern alternative for obtaining personal
+        loans, outshining traditional banking and NBFCs.', font_size: 20, align: center}
+    type: Label
+    layout_properties: {grid_position: 'QQRDIS,IWOEJC', full_width_row: true}
+  - name: label_8
+    properties: {text: 'If you''ve ever tried to get a personal loan from a bank,
+        you''ve probably found it to be a confusing and drawn-out process. It can
+        be overwhelming, especially for regular folks. Banks tend to give more attention
+        to big businesses and wealthy customers, which leaves people with smaller
+        loan requests feeling like they''re not as important. They often end up at
+        the bottom of the list when it comes to getting help from the bank.', font_size: 18,
+      align: center}
+    type: Label
+    layout_properties: {grid_position: 'UYXSWD,QCFEHH'}
+  - name: label_9
+    properties: {text: 'Meanwhile, private NBFCs, driven by profit, can be quite expensive,
+        leaving borrowers with significant costs. Then there are local money lenders
+        who offer doorstep services but at sky-high rates. Consequently, the quest
+        for a simple and affordable personal loan seems never-ending.1', font_size: 18,
+      align: center}
+    type: Label
+    layout_properties: {grid_position: 'EQDXZG,TPGCRD'}
+  - name: spacer_4
+    properties: {height: 32}
+    type: Spacer
+    layout_properties: {grid_position: 'TWARAA,ERKZKC'}
+  - name: label_10
+    properties: {text: Banks, align: center, font_size: 22}
+    type: Label
+    layout_properties: {grid_position: 'SGAGDP,MPTBCC GOFASJ,SOXPJD'}
+  - name: image_6
+    properties: {source: _/theme/banks.png}
+    type: Image
+    layout_properties: {grid_position: 'SGAGDP,MPTBCC SGVMZN,RQZWMV'}
+  - name: label_13
+    properties: {text: 'Focus only on
+
+        Large Customers', align: center, font_size: 20}
+    type: Label
+    layout_properties: {grid_position: 'SGAGDP,MPTBCC UGNFEB,QEFJWC'}
+  - name: label_11
+    properties: {text: NBFCs, align: center, font_size: 22}
+    type: Label
+    layout_properties: {grid_position: 'SGAGDP,QQLBLD CAAUOG,UPNYDY'}
+  - name: image_7
+    properties: {source: _/theme/nbfc1.jpg}
+    type: Image
+    layout_properties: {grid_position: 'SGAGDP,QQLBLD ZEJXNO,NFBJWO'}
+  - name: label_14
+    properties: {text: 'Focus on Profitability,Tough Process', align: center, font_size: 20}
+    type: Label
+    layout_properties: {grid_position: 'SGAGDP,QQLBLD TORJCO,OQSJBA'}
+  - name: label_12
+    properties: {text: Money Lenders, align: center, font_size: 22}
+    type: Label
+    layout_properties: {grid_position: 'SGAGDP,XOZQSZ WAUKZP,JPHWUX'}
+  - name: image_8
+    properties: {source: _/theme/money.png}
+    type: Image
+    layout_properties: {grid_position: 'SGAGDP,XOZQSZ OSPRGE,AYLMJG'}
+  - name: label_15
+    properties: {text: 'Very High Rates,
+
+        Exploitation', align: center, font_size: 20}
+    type: Label
+    layout_properties: {grid_position: 'SGAGDP,XOZQSZ VLWMEJ,TVRJGS'}
+  - name: spacer_5
+    properties: {height: 32}
+    type: Spacer
+    layout_properties: {grid_position: 'ATWDUM,MRPJMS'}
+  - name: content_panel_copy_copy
+    properties: {background: '#34718D'}
+    type: ColumnPanel
+    layout_properties: {grid_position: 'QGBTEZ,DZDBVR', full_width_row: true}
+    components:
+    - name: label_16
+      properties: {text: Not Anymore, align: center, bold: true, font_size: 30, foreground: white}
+      type: Label
+      layout_properties: {grid_position: 'MVJORB,WZHWFG'}
+    - name: label_17
+      properties: {text: 'In today''s digital era, where "seamless" is the mantra,
+          your quest for a personal loan concludes with i2iFunding. We specialize
+          in providing unsecured personal loans at reduced costs. At i2iFunding, our
+          goal is to simplify your experience, making it as effortless as ordering
+          a pizza online or calling a cab
+
+          ', align: center, font_size: 18, foreground: white}
+      type: Label
+      layout_properties: {grid_position: 'ITANLO,RHVZGJ'}
+    - name: image_1_copy
+      properties: {source: _/theme/digital.jpg, display_mode: shrink_to_fit, height: 145.33331298828125}
+      type: Image
+      layout_properties: {grid_position: 'YQJHLL,JSLKJH QOPWRQ,VUQYHT'}
+    - name: label_2_copy
+      properties: {text: 'Digital Revolution
+
+          ', align: center, font_size: 18, foreground: white}
+      type: Label
+      layout_properties: {grid_position: 'YQJHLL,JSLKJH XKSOFO,NQCZKY'}
+    - name: label_18
+      properties: {text: 'Peer-to-peer lending (P2P lending) stands out as a superior
+          alternative to traditional banks and NBFCs primarily due to its digital-friendly
+          approach, which streamlines the entire process. By embracing online platforms,
+          P2P lending facilitates swift collection and real-time processing of data.
+          This translates to borrowers effortlessly securing unsecured, collateral-free
+          personal loans directly deposited into their bank accounts, all accomplished
+          with just a few clicks of the mouse.
+
+          ', font_size: 18, foreground: white, align: center}
+      type: Label
+      layout_properties: {grid_position: 'YQJHLL,JSLKJH FHZPOS,IIRQLK'}
+    - name: image_2_copy
+      properties: {source: _/theme/evaluation.png, display_mode: shrink_to_fit, height: 142.66668701171875}
+      type: Image
+      layout_properties: {grid_position: 'YQJHLL,SMRPID GMDVPX,HPKDIM'}
+    - name: label_3_copy
+      properties: {text: 'Profile Evaluation Beyond CIBIL
+
+          ', font_size: 18, align: center, foreground: White}
+      type: Label
+      layout_properties: {grid_position: 'YQJHLL,SMRPID KBDYSY,STWLMS'}
+    - name: label_19
+      properties: {align: center, text: 'Our digital credit evaluation system serves
+          as a safeguard against the pitfalls of human error or subjective decision-making,
+          commonly encountered with traditional banks. Notably, even individuals declined
+          loans by banks have a significant chance of securing a personal loan through
+          our platform. Moreover, we extend our evaluation beyond the conventional
+          target CIBIL score of 750, providing a more inclusive approach to credit
+          assessment.
+
+          ', font_size: 18, foreground: white}
+      type: Label
+      layout_properties: {grid_position: 'YQJHLL,SMRPID QBQAVC,LEDUIR'}
+    - name: image_3_copy
+      properties: {source: _/theme/first.png, display_mode: shrink_to_fit, height: 144.33331298828125}
+      type: Image
+      layout_properties: {grid_position: 'YQJHLL,VQHVDK DVMGVA,VOUNDE'}
+    - name: label_4_copy
+      properties: {text: Focused Customer Service, font_size: 18, align: center, foreground: white}
+      type: Label
+      layout_properties: {grid_position: 'YQJHLL,VQHVDK HYDHDK,MNGNRA'}
+    - name: label_20
+      properties: {text: 'At our core, we prioritize our customers and dedicate ourselves
+          to delivering an exceptional experience. Our commitment extends to promptly
+          addressing your inquiries and providing ongoing support throughout your
+          loan journey. In essence, we aim to offer you affordable and hassle-free
+          loans, delivered right to your doorstep, in a manner that few others can
+          match.
+
+          ', visible: true, font_size: 18, foreground: white, align: center}
+      type: Label
+      layout_properties: {grid_position: 'YQJHLL,VQHVDK JFOCQR,GPOBJM'}
+    - name: spacer_7
+      properties: {height: '10'}
+      type: Spacer
+      layout_properties: {grid_position: 'ULFOFL,BWMOFI'}
+  - name: spacer_6
+    properties: {height: '20'}
+    type: Spacer
+    layout_properties: {grid_position: 'NJYHYQ,RTCAXZ'}
+  - name: link_1
+    properties: {text: Apply for Personal Loan Nowinterest rates starting from 12%,
+      underline: true, align: center}
+    type: Link
+    layout_properties: {grid_position: 'JBQFYR,VSIPEF'}
 - type: FlowPanel
   properties: {}
   name: navbar_links
