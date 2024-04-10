@@ -11,27 +11,39 @@ from .. import main_form_module as main_form_module
 
 class borrower_profile(borrower_profileTemplate):
   def __init__(self, **properties):
+    # Set Form properties and Data Bindings.
     self.user_id=main_form_module.userId
-    #self.user_id=1000
+    # Set Form properties and Data Bindings.
     self.init_components(**properties)
-    
-    # Any code you write here will run before the form opens.
-    user_profile=app_tables.user_profile.get(customer_id=self.user_id)
+    user_profile=app_tables.fin_user_profile.get(customer_id=self.user_id)
     if user_profile: 
-      
-      self.full_name_label.text=user_profile['full_name']
-      self.email_id_label.text=user_profile['email_user']
-      self.mobile_no_label.text=user_profile['mobile']
-      self.date_of_birth_label.text=user_profile['date_of_birth']
-      self.city_label.text=user_profile['city']
-      self.pan_no_label.text=user_profile['pan_number']
-      self.aadhaar_no_label.text=user_profile['aadhaar_no']
-      self.gender_label.text=user_profile['gender']
-      self.mother_tounge_label.text=user_profile['mouther_tounge']
-      self.marrital_status_label.text=user_profile['marital_status']
-      self.user_type_label.text=user_profile['usertype']
-  def button_1_click(self, **event_args):
-    open_form('bank_users.borrower_d.boorrower_edit_profile')
+      self.label_1.text=user_profile['full_name']
+      self.email.text=user_profile['email_user']
+      self.mobile.text=user_profile['mobile']
+      self.birh.text=user_profile['date_of_birth']
+      self.city.text=user_profile['city']
+      # self.pan_text.text=user_profile['pan_number']
+      self.gender.text=user_profile['gender']
+      self.language.text=user_profile['mouther_tounge']
+      self.image_1.source = user_profile['user_photo']
+      self.status.text=user_profile['marital_status']
+    # Any code you write here will run before the form opens.
 
-  def button_1_copy_click(self, **event_args):
-    open_form('borrower_registration_form.dashboard')
+  # def button_1_click(self, **event_args):
+  #   user_profile=app_tables.user_profile.get(customer_id=self.user_id)
+  #   if user_profile: 
+  #    user_profile['full_name']=self.borrower_full_name_text.text
+  #    user_profile['email_user']=self.mail_text.text
+  #    user_profile['mobile']=self.mobile_text.text
+  #    user_profile['date_of_birth']=self.date_label.text
+  #    user_profile['city']=self.city_text.text
+  #    user_profile['pan_number']=self.pan_text.text
+  #    user_profile['gender']=self.gender_down.text
+  #    user_profile['mouther_tounge']=self.mother_label.text
+  #    user_profile.update()
+  #   alert('saved sucessfully')
+  #   open_form('borrower_registration_form.dashboard')
+
+  def button_1_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    open_form('borrower_registration_form.dashboard.edit_profile')
