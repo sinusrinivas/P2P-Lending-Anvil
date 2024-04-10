@@ -74,6 +74,19 @@ components:
       properties: {height: 415.33331298828125, source: _/theme/money.jpg, display_mode: shrink_to_fit}
       type: Image
       layout_properties: {grid_position: 'OUDOFT,ZJWXYW'}
+  - name: spacer_3
+    properties: {height: 32}
+    type: Spacer
+    layout_properties: {grid_position: 'KVUONQ,BQZAID'}
+  - name: label_6
+    properties: {text: Online Personal Loan, align: center, bold: true, italic: false,
+      font_size: 30}
+    type: Label
+    layout_properties: {grid_position: 'GOWNCH,YFLYGQ'}
+  - name: spacer_2
+    properties: {height: 32}
+    type: Spacer
+    layout_properties: {grid_position: 'DEYJDX,PEEUKS'}
 - type: FlowPanel
   properties: {}
   name: navbar_links
