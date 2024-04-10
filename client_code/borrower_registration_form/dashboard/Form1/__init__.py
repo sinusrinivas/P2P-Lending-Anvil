@@ -43,3 +43,7 @@ class Form1(Form1Template):
   #    user_profile.update()
   #   alert('saved sucessfully')
   #   open_form('borrower_registration_form.dashboard')
+
+  def button_1_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    open_form('borrower_registration_form.dashboard.edit_profile')

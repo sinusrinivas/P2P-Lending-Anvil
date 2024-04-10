@@ -15,7 +15,7 @@ class edit_profile(edit_profileTemplate):
     #self.user_id=1000  
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
-    user_profile=app_tables.user_profile.get(customer_id=self.user_id)
+    user_profile=app_tables.fin_user_profile.get(customer_id=self.user_id)
     if user_profile: 
       self.borrower_full_name_text.text=user_profile['full_name']
       self.mail_text.text=user_profile['email_user']
@@ -28,7 +28,7 @@ class edit_profile(edit_profileTemplate):
     # Any code you write here will run before the form opens.
 
   def button_1_click(self, **event_args):
-    user_profile=app_tables.user_profile.get(customer_id=self.user_id)
+    user_profile=app_tables.fin_user_profile.get(customer_id=self.user_id)
     if user_profile: 
      user_profile['full_name']=self.borrower_full_name_text.text
      user_profile['email_user']=self.mail_text.text

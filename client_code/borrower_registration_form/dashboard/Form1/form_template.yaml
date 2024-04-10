@@ -4,7 +4,7 @@ container:
   properties: {html: '@theme:standard-page.html'}
 components:
 - type: ColumnPanel
-  properties: {col_widths: '{"TZYKJF":15,"CICCQS":39}', role: elevated-card}
+  properties: {col_widths: '{"TZYKJF":15,"CICCQS":45}', role: elevated-card}
   layout_properties: {slot: default}
   name: content_panel
   components:
@@ -23,7 +23,7 @@ components:
     type: form:borrower_registration_form.dashboard.Navigation_form_dashboard
     layout_properties: {grid_position: 'VBSPQG,GULKOC'}
     name: navigation_form_dashboard_1
-  - properties: {height: 243.142822265625, role: null, display_mode: zoom_to_fill}
+  - properties: {height: 206.428466796875, role: null, display_mode: zoom_to_fill}
     type: Image
     layout_properties: {grid_position: 'ZAYVLA,TZYKJF'}
     name: image_1
