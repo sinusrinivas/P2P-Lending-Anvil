@@ -44,7 +44,7 @@ components:
     type: Label
     layout_properties: {x: 10, y: 190.25001525878906, width: 200}
   - name: label_9
-    properties: {text: 'Invested on : ', bold: true}
+    properties: {text: Besseem Score, bold: false}
     type: Label
     layout_properties: {x: 13.803573608398438, y: 236.25001525878906, width: 103.554}
   - name: interest_rate
@@ -69,6 +69,8 @@ components:
     properties: {}
     type: Label
     layout_properties: {x: 735.3750152587891, y: 230.00001525878906, width: 200}
+    data_bindings:
+    - {property: text, code: 'self.item[''beseem_score'']', writeback: false}
   - name: label_3
     properties: {role: null, align: left, tooltip: '', border: '', foreground: grey,
       visible: true, text: '--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------',
