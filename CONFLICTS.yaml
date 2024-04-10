@@ -1,0 +1,21 @@
+merge:
+  parents: [16c0b3808265277abf8828b32ca1a3072c8b33ff, 04f772a9bf85fc0efa136d7226e2525f3bc5bc4a]
+  base: 1d1879e667cf8604ab73a4250be785088a24588e
+conflicting_items:
+- components:
+  - component: label_8
+    conflicts:
+    - type: [add, add]
+      b_change:
+        type: add
+        component: label_8
+        to:
+          properties: {role: title, text: 'Name :'}
+          type: Label
+          layout_properties: {grid_position: 'ZELVBX,FFWAID'}
+          data_bindings: {}
+          parent: column_panel_1
+          idx: 0
+        parent_type: ColumnPanel
+  item: [client_code, borrower_registration_form.dashboard.Form1]
+  app_path: [CODE, forms/borrower_registration_form.dashboard.Form1]
