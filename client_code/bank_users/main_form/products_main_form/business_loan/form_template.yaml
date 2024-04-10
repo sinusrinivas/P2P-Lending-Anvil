@@ -1346,7 +1346,11 @@ components:
     - name: spacer_41_copy_2
       properties: {height: 21.555511474609375}
       type: Spacer
-      layout_properties: {grid_position: 'MMFQSR,SPJHOO'}
+      layout_properties: {grid_position: 'MMFQSR,SPJHOO SCGGTB,GABWCY'}
+    - name: spacer_35
+      properties: {height: 32}
+      type: Spacer
+      layout_properties: {grid_position: 'MMFQSR,SPJHOO DARVGB,SPSXSM'}
     - name: link_7
       properties: {text: Home, bold: true, font_size: 16, underline: true, foreground: black}
       type: Link
