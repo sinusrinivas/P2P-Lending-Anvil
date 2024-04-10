@@ -23,7 +23,11 @@ class edit_profile(edit_profileTemplate):
       self.date_label.text=user_profile['date_of_birth']
       self.city_text.text=user_profile['city']
       self.pan_text.text=user_profile['pan_number']
-      self.gender_down.text=user_profile['gender']
+      
+      options = app_tables.fin_gender.search()
+      options_string = [str(option['gender']) for option in options]
+      self.gender_down.items = options_string
+      
       self.mother_label.text=user_profile['mouther_tounge']
     # Any code you write here will run before the form opens.
 
@@ -36,7 +40,7 @@ class edit_profile(edit_profileTemplate):
      user_profile['date_of_birth']=self.date_label.text
      user_profile['city']=self.city_text.text
      user_profile['pan_number']=self.pan_text.text
-     user_profile['gender']=self.gender_down.text
+     user_profile['gender']=self.gender_down.selected_value
      user_profile['mouther_tounge']=self.mother_label.text
      user_profile.update()
     alert('saved sucessfully')
