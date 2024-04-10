@@ -82,7 +82,7 @@ class dashboard(dashboardTemplate):
 
   def outlined_button_8_click(self, **event_args):
     """This method is called when the button is clicked"""
-    open_form("lendor_registration_form.dashboard.view_profile")
+    open_form("lendor_registration_form.dashboard.lender_profile")
 
   def outlined_button_9_click(self, **event_args):
     """This method is called when the button is clicked"""
