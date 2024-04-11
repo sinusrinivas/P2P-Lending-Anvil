@@ -1,6 +1,6 @@
 container:
   type: ColumnPanel
-  properties: {col_widths: '{}'}
+  properties: {col_widths: '{"XTTEDT":30,"XJWLNS":20,"PFCQLO":10}'}
 components:
 - name: image_1_copy_1_copy_1_copy_1_copy_1_copy_1
   properties: {role: null, vertical_align: center, height: 48, tooltip: '', border: '',
@@ -65,6 +65,11 @@ components:
   properties: {}
   type: FileLoader
   layout_properties: {grid_position: 'KNRAIO,XJWLNS'}
+  event_bindings: {change: file_loader_1_change}
+- name: image_1
+  properties: {height: 139.142822265625}
+  type: Image
+  layout_properties: {grid_position: 'KNRAIO,PFCQLO'}
 - name: button_1_copy_1
   properties: {role: elevated-button, align: right, tooltip: '', border: '', enabled: true,
     foreground: 'theme:On Primary', visible: true, text: Prev, font_size: null, font: '',
