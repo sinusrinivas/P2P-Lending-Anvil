@@ -1,6 +1,7 @@
 container:
   type: ColumnPanel
-  properties: {col_widths: '{}', visible: true}
+  properties: {col_widths: '{"UGSODQ":30,"GGXQEK":20,"XGTODO":10,"EMZAAK":30,"QISVDQ":20,"HJIBLA":10}',
+    visible: true}
 components:
 - type: FlowPanel
   properties: {}
