@@ -271,23 +271,23 @@ def get_user_points(id):
         user = users[0]
         user_points = 0
         email = user['email_user']
-        gender = user['gender'].lower()
-        qualification = user['qualification'].lower()
-        marital_status = user['marital_status'].lower()
+        gender = user['gender'].lower() if user['gender'] else None
+        qualification = user['qualification'].lower() if user['qualification'] else None
+        marital_status = user['marital_status'].lower() if user['marital_status'] else None
         profession = user['profession'].lower() if user['profession'] else None
         user_age = user['user_age']
         organization_type = user['organization_type'].lower() if user['organization_type'] else None
-        present_address = user['present_address'].lower()
-        duration_at_address = str(user['duration_at_address']).lower()
+        present_address = user['present_address'].lower() if user['present_address'] else None
+        duration_at_address = str(user['duration_at_address']).lower() if user['duration_at_address'] else None
         self_employment = user['self_employment']
         if self_employment is not None:
             self_employment = self_employment.lower()
         age_of_business = user['business_age']
-        salary_type = user['salary_type'].lower()
-        home_loan = user['home_loan'].lower()
-        other_loan = user['other_loan'].lower()
-        credit_card_loan = user['credit_card_loans'].lower()
-        vehicle_loan = user['vehicle_loan'].lower()
+        salary_type = user['salary_type'].lower() if user['salary_type'] else None
+        home_loan = user['home_loan'].lower() if user['home_loan'] else None
+        other_loan = user['other_loan'].lower() if user['other_loan'] else None
+        credit_card_loan = user['credit_card_loans'].lower() if user['credit_card_loans'] else None
+        vehicle_loan = user['vehicle_loan'].lower() if user['vehicle_loan'] else None
 
         if 18 <= user_age <= 24:
             user_age_range = '18-24'
@@ -445,8 +445,8 @@ def get_group_points(customer_id):
     # Fetch user details
     user = app_tables.fin_user_profile.get(customer_id=customer_id)
     if user:
-        profession = user['profession'].lower()
-        marital_status = user['marital_status'].lower()
+        profession = user['profession'].lower() if user['profession'] else None
+        marital_status = user['marital_status'].lower() if user['marital_status'] else None
         
         loans_data = app_tables.fin_guarantor_details.search(customer_id=customer_id)
         another_person = ''
