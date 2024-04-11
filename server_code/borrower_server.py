@@ -274,7 +274,7 @@ def get_user_points(id):
         gender = user['gender'].lower()
         qualification = user['qualification'].lower()
         marital_status = user['marital_status'].lower()
-        profession = user['profession'].lower()
+        profession = user['profession'].lower() if user['profession'] else None
         user_age = user['user_age']
         organization_type = user['organization_type'].lower() if user['organization_type'] else None
         present_address = user['present_address'].lower()
