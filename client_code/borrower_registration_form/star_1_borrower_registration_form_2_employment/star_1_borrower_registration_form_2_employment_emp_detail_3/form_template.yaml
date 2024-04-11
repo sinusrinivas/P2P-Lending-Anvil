@@ -104,6 +104,7 @@ components:
   properties: {}
   type: FileLoader
   layout_properties: {grid_position: 'OJCELP,GGXQEK'}
+  event_bindings: {change: file_loader_1_change}
 - name: image_1
   properties: {height: 119.28570556640625}
   type: Image
@@ -121,6 +122,7 @@ components:
   properties: {}
   type: FileLoader
   layout_properties: {grid_position: 'FGKBFF,QISVDQ'}
+  event_bindings: {change: file_loader_2_change}
 - name: image_2
   properties: {height: 128.5714111328125}
   type: Image

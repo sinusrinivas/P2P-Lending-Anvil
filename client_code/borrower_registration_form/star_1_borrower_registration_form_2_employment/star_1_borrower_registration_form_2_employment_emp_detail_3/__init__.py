@@ -47,3 +47,9 @@ class star_1_borrower_registration_form_2_employment_emp_detail_3(star_1_borrowe
 
   def button_3_click(self, **event_args):
     open_form("bank_users.user_form")
+
+  def file_loader_1_change(self, file, **event_args):
+    """This method is called when a new file is loaded into this FileLoader"""
+    if file:
+      self.image_1.source = self.file_loader_1.file
+
