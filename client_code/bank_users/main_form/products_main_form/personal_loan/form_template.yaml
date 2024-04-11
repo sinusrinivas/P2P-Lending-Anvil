@@ -371,8 +371,60 @@ components:
         font_size: 18, foreground: white}
       type: Label
       layout_properties: {grid_position: 'OKRYUA,ZIGZCV DHQJYE,OSVYWI'}
-  - name: content_panel_copy_copy_3
+  - name: content_panel_copy_copy_3_copy_2
     properties: {col_widths: '{"VOXBLD":15,"JGXCLA":45}', background: '#34718D'}
+    type: ColumnPanel
+    layout_properties: {grid_position: 'FGIXNV,IOGCIJ', full_width_row: true}
+    components:
+    - name: spacer_10_copy_2
+      properties: {height: '20'}
+      type: Spacer
+      layout_properties: {grid_position: 'OQSSZM,XQLQGF'}
+    - name: label_29_copy_2
+      properties: {text: Low-Interest Rates, align: center, font_size: 30, bold: true,
+        foreground: white}
+      type: Label
+      layout_properties: {grid_position: 'YIBYQM,USTSCN'}
+    - name: spacer_11_copy_2
+      properties: {height: '20'}
+      type: Spacer
+      layout_properties: {grid_position: 'JJFCGU,JFUOIJ'}
+    - name: spacer_9_copy_2
+      properties: {height: 44.22222900390625}
+      type: Spacer
+      layout_properties: {grid_position: 'LUSVQI,VOXBLD KUYBPQ,AWNGGP'}
+    - name: image_10_copy_2
+      properties: {height: 219.33328247070312, source: _/theme/interest.png, display_mode: shrink_to_fit}
+      type: Image
+      layout_properties: {grid_position: 'LUSVQI,VOXBLD FIJAEH,MGWVQZ'}
+    - name: label_31_copy_2
+      properties: {text: 'We facilitate customized online loans at remarkably low
+          interest rates, thanks to our digital processes. Unlike relying on highly-paid
+          employees, we leverage machines to manage our operations digitally, minimizing
+          costs significantly. For example, overhead expenses related to employees
+          and high rentals can inflate interest rates by 3%-5%. Why should borrowers
+          bear high interest rates when cheaper alternatives exist? This motivated
+          us to pioneer P2P lending in India, and we believe we''ve succeeded in offering
+          more affordable lending solutions to a certain extent.
+
+          ', font_size: 18, foreground: white}
+      type: Label
+      layout_properties: {grid_position: 'LUSVQI,JGXCLA PDVPGF,EGZPAF'}
+    - name: label_32_copy_2
+      properties: {text: '
+
+          We go above and beyond conventional practices by offering easy loans at
+          interest rates tailored to the creditworthiness of each borrower. This marks
+          a significant departure from the one-size-fits-all approach adopted by traditional
+          banks and NBFCs, where the same interest rate applies to everyone. Our computation
+          of interest rates is based on intricate rules that consider thousands of
+          data points, ensuring informed decision-making for each borrower.
+
+          ', font_size: 18, foreground: white}
+      type: Label
+      layout_properties: {grid_position: 'LUSVQI,JGXCLA OTOVIY,SEWBRY'}
+  - name: content_panel_copy_copy_3
+    properties: {col_widths: '{"JGXCLA":45}', background: '#395275'}
     type: ColumnPanel
     layout_properties: {grid_position: 'XPJVPP,XYUYES', full_width_row: true}
     components:
@@ -389,14 +441,6 @@ components:
       properties: {height: '20'}
       type: Spacer
       layout_properties: {grid_position: 'JJFCGU,JFUOIJ'}
-    - name: spacer_9
-      properties: {height: 44.22222900390625}
-      type: Spacer
-      layout_properties: {grid_position: 'LUSVQI,VOXBLD KUYBPQ,AWNGGP'}
-    - name: image_10
-      properties: {height: 374.22222900390625, source: _/theme/online-prsnl-process-icon2.png}
-      type: Image
-      layout_properties: {grid_position: 'LUSVQI,VOXBLD DKMBNY,XGJXWB'}
     - name: label_30
       properties: {text: 'Don''t provide your assets as mortgages for personal loans
 
@@ -425,6 +469,65 @@ components:
       type: Label
       layout_properties: {grid_position: 'LUSVQI,JGXCLA OTOVIY,SEWBRY'}
     - name: label_33
+      properties: {text: 'We tailor loan pricing to match each borrower''s credit
+          profile, ensuring fairness and transparency, with collateral playing no
+          role in the process.
+
+          ', font_size: 18, foreground: white}
+      type: Label
+      layout_properties: {grid_position: 'LUSVQI,JGXCLA ISHKQW,VIFFXN'}
+    - name: spacer_9
+      properties: {height: 102.33334350585938}
+      type: Spacer
+      layout_properties: {grid_position: 'LUSVQI,IGKDXY TKTHNE,WJXXNB'}
+    - name: image_10
+      properties: {height: 226.88885498046875, source: _/theme/online-prsnl-process-icon2.png}
+      type: Image
+      layout_properties: {grid_position: 'LUSVQI,IGKDXY PUTBGM,OYJTVV'}
+  - name: content_panel_copy_copy_3_copy_3
+    properties: {col_widths: '{"VOXBLD":15,"JGXCLA":45}', background: '#478BB0'}
+    type: ColumnPanel
+    layout_properties: {grid_position: 'NTJQFU,QXWWDV', full_width_row: true}
+    components:
+    - name: spacer_10_copy_3
+      properties: {height: '20'}
+      type: Spacer
+      layout_properties: {grid_position: 'OQSSZM,XQLQGF'}
+    - name: label_29_copy_3
+      properties: {text: Fast Disbursal of Loan Amount, align: center, font_size: 30,
+        bold: true, foreground: white}
+      type: Label
+      layout_properties: {grid_position: 'YIBYQM,USTSCN'}
+    - name: spacer_11_copy_3
+      properties: {height: '20'}
+      type: Spacer
+      layout_properties: {grid_position: 'JJFCGU,JFUOIJ'}
+    - name: spacer_9_copy_3
+      properties: {height: 44.22222900390625}
+      type: Spacer
+      layout_properties: {grid_position: 'LUSVQI,VOXBLD KUYBPQ,AWNGGP'}
+    - name: image_10_copy_3
+      properties: {height: 127.5555419921875, source: _/theme/disbursed.png, display_mode: shrink_to_fit}
+      type: Image
+      layout_properties: {grid_position: 'LUSVQI,VOXBLD DKMBNY,XGJXWB'}
+    - name: label_31_copy_3
+      properties: {text: 'At GTPL, every listed loan has successfully secured funding.
+          We boast a robust investor base eager to lend to borrowers, often resulting
+          in loans being fully funded within hours. This achievement is attributed
+          to our unwavering commitment to customer satisfaction, fostering strong
+          partnerships with our investors.
+
+          ', font_size: 18, foreground: white}
+      type: Label
+      layout_properties: {grid_position: 'LUSVQI,JGXCLA PDVPGF,EGZPAF'}
+    - name: label_32_copy_3
+      properties: {text: 'We provide collateral-free loans at reasonable rates, sparing
+          borrowers from resorting to loan sharks charging exorbitant interest rates.
+
+          ', font_size: 18, foreground: white}
+      type: Label
+      layout_properties: {grid_position: 'LUSVQI,JGXCLA OTOVIY,SEWBRY'}
+    - name: label_33_copy_3
       properties: {text: 'We tailor loan pricing to match each borrower''s credit
           profile, ensuring fairness and transparency, with collateral playing no
           role in the process.
@@ -493,7 +596,8 @@ components:
       type: Spacer
       layout_properties: {grid_position: 'LUSVQI,DOXMKV KLOKOD,BBEXPE'}
     - name: image_10_copy
-      properties: {height: 180.33331298828125, source: _/theme/online-Disbursement.png}
+      properties: {height: 180.33331298828125, source: _/theme/online-Disbursement.png,
+        role: null}
       type: Image
       layout_properties: {grid_position: 'LUSVQI,DOXMKV ZVRNPW,RBLBNX'}
 - type: FlowPanel
