@@ -520,7 +520,6 @@ class Borr_loan_request(Borr_loan_requestTemplate):
         self.output_label1.foreground = '#0000FF'  # Blue color
         self.output_label1.visible = True
         # Update the 'loan_updated_status' column in the 'loan_details' table to 'accepted'
-        self.selected_row['']
         self.selected_row['loan_updated_status'] = 'accepted'
         self.selected_row['lender_accepted_timestamp'] = datetime.now()
         # Save changes to the table
