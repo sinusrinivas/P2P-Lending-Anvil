@@ -69,7 +69,7 @@ class lender_registration_form_3_marital_married(lender_registration_form_3_mari
         return user_profile['marital_status'] == 'Married'
 
     def button_1_click(self, **event_args):
-        open_form('lendor_registration_form.lender_registration_form_2.lender_registration_form_3_marital_details',user_id=self.userId)
+        open_form('lendor_registration_form.lender_registration_form_3_marital_details',user_id=self.userId)
 
     def button_1_1_click(self, **event_args):
         """This method is called when this radio button is selected"""

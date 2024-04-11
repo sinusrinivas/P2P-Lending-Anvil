@@ -15,7 +15,7 @@ class dashboard(dashboardTemplate):
         email = main_form_module.email
         self.init_components(**properties)
         self.email = main_form_module.email
-        self.user_id=main_form_module.u
+        self.user_id=main_form_module.userId
         user_id = self.user_id
 
         # Fetch the user profile based on the current user's email
