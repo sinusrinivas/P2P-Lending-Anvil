@@ -1,6 +1,6 @@
 container:
   type: ColumnPanel
-  properties: {col_widths: '{}'}
+  properties: {col_widths: '{"RUKNLC":40,"MABORK":10,"AWAQBT":10,"QBZSHY":40,"UDIKJN":10,"BNNMOG":10,"UKDPZR":40,"NXMIOE":10,"HSUDHA":10,"CJWJBU":40,"TOBOFI":10,"MVRVIE":10,"VJMQBB":40,"WGQMPL":10,"GIIMWC":10}'}
 components:
 - type: FlowPanel
   properties: {}
@@ -44,6 +44,11 @@ components:
   properties: {}
   name: file_loader_1
   layout_properties: {grid_position: 'GCADCB,MABORK'}
+  event_bindings: {change: file_loader_1_change}
+- name: image_1
+  properties: {height: 139.8570556640625}
+  type: Image
+  layout_properties: {grid_position: 'GCADCB,AWAQBT'}
 - type: Label
   properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
     text: 12th Standard, font_size: null, font: '', spacing_above: small, icon_align: left,
@@ -55,6 +60,11 @@ components:
   properties: {}
   name: file_loader_2
   layout_properties: {grid_position: 'JDKXXI,UDIKJN'}
+  event_bindings: {change: file_loader_2_change}
+- name: image_2
+  properties: {height: 135.85711669921875}
+  type: Image
+  layout_properties: {grid_position: 'JDKXXI,BNNMOG'}
 - type: Label
   properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
     text: 'Bachelor''s degree
@@ -67,6 +77,11 @@ components:
   properties: {}
   name: file_loader_3
   layout_properties: {grid_position: 'IMTAFK,NXMIOE'}
+  event_bindings: {change: file_loader_3_change}
+- name: image_3
+  properties: {height: 126.5714111328125}
+  type: Image
+  layout_properties: {grid_position: 'IMTAFK,HSUDHA'}
 - type: Label
   properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
     text: Master's degree, font_size: null, font: '', spacing_above: small, icon_align: left,
@@ -78,6 +93,11 @@ components:
   properties: {}
   name: file_loader_4
   layout_properties: {grid_position: 'OJIHRV,TOBOFI'}
+  event_bindings: {change: file_loader_4_change}
+- name: image_4
+  properties: {height: 138.28570556640625}
+  type: Image
+  layout_properties: {grid_position: 'OJIHRV,MVRVIE'}
 - type: Label
   properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
     text: PhD, font_size: null, font: '', spacing_above: small, icon_align: left,
@@ -89,6 +109,11 @@ components:
   properties: {}
   name: file_loader_5
   layout_properties: {grid_position: 'HJZMUX,WGQMPL'}
+  event_bindings: {change: file_loader_5_change}
+- name: image_5
+  properties: {height: 127.5714111328125}
+  type: Image
+  layout_properties: {grid_position: 'HJZMUX,GIIMWC'}
 - name: button_1
   properties: {role: elevated-button, align: right, tooltip: '', border: '', enabled: true,
     foreground: 'theme:On Primary', visible: true, text: Prev, font_size: null, font: '',
