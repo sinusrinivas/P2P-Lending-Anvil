@@ -1259,11 +1259,14 @@ db_schema:
       admin_ui: {order: -1, width: 200}
       type: number
     - name: guarantor_person_relation
-      admin_ui: {width: 200, order: 8}
+      admin_ui: {order: 3.75, width: 200}
       type: string
     - name: another_person
       admin_ui: {order: -2, width: 200}
       type: string
+    - name: guarantor_marriage_date
+      admin_ui: {order: 3.5, width: 200}
+      type: date
     title: fin_guarantor_details
   fin_loan_details:
     client: full
