@@ -285,36 +285,6 @@ components:
     properties: {text: Find out why!, align: center, bold: true, font_size: 25}
     type: Label
     layout_properties: {grid_position: 'RNTFZC,JSZTTG'}
-  - name: content_panel_copy_copy_3_copy_2
-    properties: {col_widths: '{}', background: '#34718D'}
-    type: ColumnPanel
-    layout_properties: {grid_position: 'QSIPDO,RGKKGJ', full_width_row: true}
-    components:
-    - name: spacer_10_copy_2
-      properties: {height: '20'}
-      type: Spacer
-      layout_properties: {grid_position: 'OQSSZM,XQLQGF'}
-    - name: image_11
-      properties: {display_mode: shrink_to_fit, height: 196.99993896484375, source: _/theme/online-prsnl-process-icon1.png}
-      type: Image
-      layout_properties: {grid_position: 'LUSVQI,OZVPJU'}
-    - name: image_12
-      properties: {source: _/theme/interest-rate.png}
-      type: Image
-      layout_properties: {grid_position: 'LUSVQI,XMVBJM'}
-    - name: image_10_copy_2
-      properties: {height: 374.22222900390625, source: _/theme/online-prsnl-process-icon2.png,
-        display_mode: original_size}
-      type: Image
-      layout_properties: {grid_position: 'LUSVQI,BWZSGF'}
-    - name: image_13
-      properties: {}
-      type: Image
-      layout_properties: {grid_position: 'LUSVQI,OQQAND'}
-    - name: image_14
-      properties: {}
-      type: Image
-      layout_properties: {grid_position: 'LUSVQI,KXNCAP'}
   - name: label_38
     properties: {text: '  ✔ Hassle Free Online Application Process', font_size: 18}
     type: Label
