@@ -928,7 +928,7 @@ components:
   type: Spacer
   layout_properties: {grid_position: 'TVJZLT,AJIMAE'}
 - name: button_4
-  properties: {text: 'What is Peer to Peer Lending?                                                                                          +',
+  properties: {text: 'What is Peer to Peer Lending?                                                                                            +',
     foreground: black, bold: true, font: '', font_size: 20, align: left}
   type: Button
   layout_properties: {grid_position: 'EBBCHI,DHGHAX'}
@@ -943,7 +943,7 @@ components:
   type: RichText
   layout_properties: {grid_position: 'VZQHCA,ETGUAR'}
 - name: button_4_copy
-  properties: {text: 'Is Peer to peer lending safe?                                                                                              +',
+  properties: {text: 'Is Peer to peer lending safe?                                                                                               +',
     foreground: black, bold: true, font: '', font_size: 20, align: left}
   type: Button
   layout_properties: {grid_position: 'YMHUAU,LULQCV'}
