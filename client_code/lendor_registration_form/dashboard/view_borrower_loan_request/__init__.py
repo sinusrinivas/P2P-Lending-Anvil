@@ -47,7 +47,7 @@ class view_borrower_loan_request(view_borrower_loan_requestTemplate):
                     'loan_updated_status': loan['loan_updated_status'],
                     'emi_payment_type': loan['emi_payment_type'],
                      'borrower_customer_id': loan['borrower_customer_id'],
-                    # 'borrower_customer_id': loan['borrower_customer_id']
+                     # 'borrower_customer_id': loan['borrower_customer_id']
                     # Add other details you want to include
                                                   })
           

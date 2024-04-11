@@ -52,3 +52,8 @@ class star_1_borrower_registration_form_2_employment_student(star_1_borrower_reg
     else:
       anvil.server.call('add_borrower_student',college_name,college_id,college_proof,college_address,user_id)
       open_form('borrower_registration_form.star_1_borrower_registration_form_3_marital',user_id=user_id)
+
+  def borrower_college_proof_img_change(self, file, **event_args):
+    """This method is called when a new file is loaded into this FileLoader"""
+    if file:
+      self.image_1.source = self.borrower_college_proof_img.file
