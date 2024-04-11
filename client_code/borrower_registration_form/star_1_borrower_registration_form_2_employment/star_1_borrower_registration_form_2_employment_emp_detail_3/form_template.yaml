@@ -106,7 +106,7 @@ components:
   layout_properties: {grid_position: 'OJCELP,GGXQEK'}
   event_bindings: {change: file_loader_1_change}
 - name: image_1
-  properties: {height: 119.28570556640625}
+  properties: {height: 126.142822265625}
   type: Image
   layout_properties: {grid_position: 'OJCELP,XGTODO'}
 - name: label_2
