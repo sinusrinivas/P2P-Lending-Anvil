@@ -16,7 +16,7 @@ class navigation_bar_main_lender(navigation_bar_main_lenderTemplate):
     # Any code you write here will run before the form opens.
 
   def borrower_dashboard_home_linkhome_borrower_registration_button_copy_1_click(self, **event_args):
-    open_form("bank_users.user_form")
+    open_form("lendor_registration_form.dashboard")
 
 
   def report_problem_form_link_click(self, **event_args):
