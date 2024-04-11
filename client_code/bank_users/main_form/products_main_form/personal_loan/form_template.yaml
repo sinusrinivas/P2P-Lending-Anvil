@@ -748,45 +748,102 @@ components:
           your loan application.', font_size: 18, foreground: white, align: center}
       type: Label
       layout_properties: {grid_position: 'QVQQCN,TGLZVP'}
-    - name: label_23_copy
-      properties: {text: '  ✔ Filling in a simple online loan form', font_size: 18,
-        foreground: white}
+    - name: spacer_26
+      properties: {height: 4.22222900390625}
+      type: Spacer
+      layout_properties: {grid_position: 'OKRYUA,ZIGZCV KPEDWD,GSRDJS KVPAJL,FWJFZW'}
+    - name: label_51
+      properties: {align: center, text: Salaried Professional, foreground: white,
+        font_size: 22}
       type: Label
-      layout_properties: {grid_position: 'MFYQEN,GORIUB'}
-    - name: label_24_copy
-      properties: {text: '  ✔ Uploading KYC documents and bank account statement',
-        font_size: 18, foreground: white}
+      layout_properties: {grid_position: 'OKRYUA,ZIGZCV KPEDWD,GSRDJS CFJQJI,WZXBAV'}
+    - name: spacer_25
+      properties: {height: 51.4444580078125}
+      type: Spacer
+      layout_properties: {grid_position: 'OKRYUA,ZIGZCV KPEDWD,GSRDJS JLLDCS,YXJFEO'}
+    - name: label_54
+      properties: {}
       type: Label
-      layout_properties: {grid_position: 'FDLNCF,VVIOIE'}
-    - name: label_25_copy
-      properties: {text: 'We tailor our data collection process to your profile, minimizing
-          the information required from you. Unlike traditional lenders, we don''t
-          burden you with the task of submitting numerous physical copies of documents
-          or subjecting you to multiple rounds of verification. Additionally, our
-          customer care representatives are accessible via chat and phone, ensuring
-          you receive assistance in every possible way.', font_size: 17, foreground: white}
+      layout_properties: {grid_position: 'OKRYUA,ZIGZCV KPEDWD,GSRDJS MFMWOF,HOVJQS'}
+    - name: label_57
+      properties: {}
       type: Label
-      layout_properties: {grid_position: 'UEFDHR,SATHJL'}
-    - name: label_26_copy
-      properties: {text: 'Once you''ve submitted your application, your concerns come
-          to an end. We handle everything from there onward. Our meticulously designed
-          loan application process spares you from the arduous, convoluted, and often
-          perplexing procedures typically associated with obtaining loans from banks
-          and NBFCs. Depending on the approval of your loan application, funds are
-          automatically deposited into your account. This streamlined process alleviates
-          borrowers from enduring the challenging, burdensome, and bewildering experiences
-          often encountered when applying for bank loans.', font_size: 18, foreground: white}
+      layout_properties: {grid_position: 'OKRYUA,ZIGZCV KPEDWD,GSRDJS YPDSLH,FGQKTI'}
+    - name: label_52
+      properties: {align: center, text: Self Employed Professionals/Businessmen, foreground: white,
+        font_size: 22}
       type: Label
-      layout_properties: {grid_position: 'QDNMTX,GBYYRA'}
-    - name: label_27_copy
-      properties: {text: 'Isn’t this simple and easy, indeed?', font_size: 18, foreground: white}
+      layout_properties: {grid_position: 'OKRYUA,ZIGZCV KPEDWD,VOOJNX HXYOQS,DOSEGB'}
+    - name: spacer_24
+      properties: {height: 31.55548095703125}
+      type: Spacer
+      layout_properties: {grid_position: 'OKRYUA,ZIGZCV KPEDWD,VOOJNX CYZNKR,NXEPOO'}
+    - name: label_55
+      properties: {}
       type: Label
-      layout_properties: {grid_position: 'JNXKFD,RRWZWZ'}
-    - name: label_28_copy
-      properties: {text: We encourage borrowers to concentrate on resolving their immediate concerns while entrusting the financing aspect to us,
-        font_size: 18, foreground: white}
+      layout_properties: {grid_position: 'OKRYUA,ZIGZCV KPEDWD,VOOJNX BSXBPR,EFALJI'}
+    - name: label_58
+      properties: {}
       type: Label
-      layout_properties: {grid_position: 'DHQJYE,OSVYWI'}
+      layout_properties: {grid_position: 'OKRYUA,ZIGZCV KPEDWD,VOOJNX NMTOOW,VXOOLT'}
+    - name: label_61
+      properties: {}
+      type: Label
+      layout_properties: {grid_position: 'OKRYUA,ZIGZCV DIJUSN,UQVBCN JRPPNJ,ASDEJI'}
+    - name: label_63
+      properties: {}
+      type: Label
+      layout_properties: {grid_position: 'OKRYUA,ZIGZCV DIJUSN,UQVBCN MACFRJ,XYRQXY'}
+    - name: label_68
+      properties: {}
+      type: Label
+      layout_properties: {grid_position: 'OKRYUA,ZIGZCV DIJUSN,UQVBCN CXYOVD,RRAHWG'}
+    - name: label_62
+      properties: {}
+      type: Label
+      layout_properties: {grid_position: 'OKRYUA,ZIGZCV DIJUSN,JHDIUV EQYZSE,EPGQVE'}
+    - name: label_64
+      properties: {}
+      type: Label
+      layout_properties: {grid_position: 'OKRYUA,ZIGZCV DIJUSN,JHDIUV UPRVJM,TLLXUU'}
+    - name: label_67
+      properties: {}
+      type: Label
+      layout_properties: {grid_position: 'OKRYUA,ZIGZCV DIJUSN,JHDIUV RZLGDY,UKSDUU'}
+    - name: label_70
+      properties: {}
+      type: Label
+      layout_properties: {grid_position: 'OKRYUA,ZIGZCV DIJUSN,JHDIUV VSQILN,YVDSUE'}
+    - name: label_53
+      properties: {align: center, text: 'Apart from above mandatory documents, you
+          may submit the following documents to improve your credit profile. This
+          may help you save the interest rate cost.', foreground: white, font_size: 18}
+      type: Label
+      layout_properties: {grid_position: 'OKRYUA,PNCFFG LGRKPZ,HXWTAK'}
+    - name: label_56
+      properties: {}
+      type: Label
+      layout_properties: {grid_position: 'OKRYUA,PNCFFG VKHEEK,ISROYD'}
+    - name: label_59
+      properties: {}
+      type: Label
+      layout_properties: {grid_position: 'OKRYUA,PNCFFG ODLLPM,RKNQJQ'}
+    - name: label_60
+      properties: {}
+      type: Label
+      layout_properties: {grid_position: 'OKRYUA,PNCFFG MWCTMW,KJSOKK'}
+    - name: label_65
+      properties: {}
+      type: Label
+      layout_properties: {grid_position: 'OKRYUA,PNCFFG WFFTIQ,ZRWMTT'}
+    - name: label_66
+      properties: {}
+      type: Label
+      layout_properties: {grid_position: 'OKRYUA,PNCFFG LFAQJZ,GSNIFB'}
+    - name: label_69
+      properties: {}
+      type: Label
+      layout_properties: {grid_position: 'OKRYUA,PNCFFG UNLMYC,UDKKPI'}
 - type: FlowPanel
   properties: {}
   name: navbar_links
