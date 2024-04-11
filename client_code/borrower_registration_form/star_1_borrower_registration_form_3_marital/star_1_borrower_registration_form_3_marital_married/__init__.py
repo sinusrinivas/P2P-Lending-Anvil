@@ -322,7 +322,7 @@ class star_1_borrower_registration_form_3_marital_married(star_1_borrower_regist
              new_row = app_tables.fin_guarantor_details.add_row(
                 customer_id=self.userId,
                 guarantor_name=details['spouse_name'],
-                guarantor_date_of_marriage =details['spouse_mob'],
+                guarantor_marriage_date=details['spouse_mob'],
                 guarantor_mobile_no=details['spouse_mbl_no'],
                 guarantor_profession=details['spouse_profession'],
                 guarantor_company_name=details['spouse_company'],
@@ -334,7 +334,7 @@ class star_1_borrower_registration_form_3_marital_married(star_1_borrower_regist
              return
        else:
          existing_row['guarantor_name'] = details['spouse_name']
-         existing_row['guarantor_date_of_marriage '] = details['spouse_mob']
+         existing_row['guarantor_marriage_date'] = details['spouse_mob']
          existing_row['guarantor_mobile_no'] = details['spouse_mbl_no']
          existing_row['guarantor_profession'] = details['spouse_profession']
          existing_row['guarantor_company_name'] = details['spouse_company']
