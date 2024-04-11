@@ -516,7 +516,7 @@ class Borr_loan_request(Borr_loan_requestTemplate):
       
         self.accepted_btn.visible = False
         # Set the text of the Output Label with blue color
-        self.output_label1.text = "This Borrower Loan is Rejected"
+        self.output_label1.text = "This Borrower Loan is Accepted"
         self.output_label1.foreground = '#0000FF'  # Blue color
         self.output_label1.visible = True
         # Update the 'loan_updated_status' column in the 'loan_details' table to 'accepted'
