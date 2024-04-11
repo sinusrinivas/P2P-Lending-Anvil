@@ -242,6 +242,6 @@ components:
         icon_align: left, spacing_below: small, italic: false, background: '#0b2547',
         bold: false, underline: false, icon: ''}
       type: Button
-      event_bindings: {click: outlined_button_10_click}
+      event_bindings: {click: history_click}
 is_package: true
 custom_component: true
