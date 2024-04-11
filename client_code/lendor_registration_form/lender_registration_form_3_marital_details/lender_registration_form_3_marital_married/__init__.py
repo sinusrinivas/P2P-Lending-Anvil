@@ -337,7 +337,7 @@ class lender_registration_form_3_marital_married(lender_registration_form_3_mari
              return
        else:
          existing_row['guarantor_name'] = details['spouse_name']
-         existing_row['guarantor_date_of_marriage '] = details['spouse_mob']
+         existing_row['guarantor_marriage_date'] = details['spouse_mob']
          existing_row['guarantor_mobile_no'] = details['spouse_mbl_no']
          existing_row['guarantor_profession'] = details['spouse_profession']
          existing_row['guarantor_company_name'] = details['spouse_company']
