@@ -762,11 +762,11 @@ components:
       type: Spacer
       layout_properties: {grid_position: 'OKRYUA,ZIGZCV KPEDWD,GSRDJS JLLDCS,YXJFEO'}
     - name: label_54
-      properties: {}
+      properties: {text: PAN Card, bold: true}
       type: Label
       layout_properties: {grid_position: 'OKRYUA,ZIGZCV KPEDWD,GSRDJS MFMWOF,HOVJQS'}
     - name: label_57
-      properties: {}
+      properties: {text: Permanent Address Proof, bold: true}
       type: Label
       layout_properties: {grid_position: 'OKRYUA,ZIGZCV KPEDWD,GSRDJS YPDSLH,FGQKTI'}
     - name: label_52
@@ -787,17 +787,35 @@ components:
       type: Label
       layout_properties: {grid_position: 'OKRYUA,ZIGZCV KPEDWD,VOOJNX NMTOOW,VXOOLT'}
     - name: label_61
-      properties: {}
+      properties: {text: Electricity Bill / Gas Bill / Property Tax Receipt / Water Tax Receipt / House Registry Papers}
       type: Label
       layout_properties: {grid_position: 'OKRYUA,ZIGZCV DIJUSN,UQVBCN JRPPNJ,ASDEJI'}
     - name: label_63
-      properties: {}
+      properties: {text: Current Address Proof, bold: true}
       type: Label
       layout_properties: {grid_position: 'OKRYUA,ZIGZCV DIJUSN,UQVBCN MACFRJ,XYRQXY'}
     - name: label_68
-      properties: {}
+      properties: {text: 'If Different From Permanent Address: Passport / Voter ID
+          / Aadhaar Card / Driving License / Post-Paid Mobile Bill/ Land-Line Bill/
+          Broadband Bill/ Valid Rent Agreement'}
       type: Label
       layout_properties: {grid_position: 'OKRYUA,ZIGZCV DIJUSN,UQVBCN CXYOVD,RRAHWG'}
+    - name: label_71
+      properties: {text: Bank Account Statements, bold: true}
+      type: Label
+      layout_properties: {grid_position: 'OKRYUA,ZIGZCV DIJUSN,UQVBCN KKWUEH,YMVSWK'}
+    - name: label_72
+      properties: {text: Last 6 Months Statement of Salary Bank Account and Other Active Bank Accounts}
+      type: Label
+      layout_properties: {grid_position: 'OKRYUA,ZIGZCV DIJUSN,UQVBCN LIXRHO,ELWKQH'}
+    - name: label_73
+      properties: {text: Salary Slips}
+      type: Label
+      layout_properties: {grid_position: 'OKRYUA,ZIGZCV DIJUSN,UQVBCN SZMGZA,CJNCQV'}
+    - name: label_74
+      properties: {}
+      type: Label
+      layout_properties: {grid_position: 'OKRYUA,ZIGZCV DIJUSN,UQVBCN PKAGPP,RFPLEL'}
     - name: label_62
       properties: {}
       type: Label
