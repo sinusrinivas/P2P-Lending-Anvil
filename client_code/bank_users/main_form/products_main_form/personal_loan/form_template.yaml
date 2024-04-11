@@ -622,9 +622,30 @@ components:
     type: Label
     layout_properties: {grid_position: 'QIWBNF,YZJVWS'}
   - name: label_44
-    properties: {}
+    properties: {text: Easy and Hassle Free Online Application Process, font_size: 25,
+      align: center}
     type: Label
     layout_properties: {grid_position: 'JNVOEW,MKCRFE'}
+  - name: image_11
+    properties: {}
+    type: Image
+    layout_properties: {grid_position: 'FKQDTP,XDNGDK'}
+  - name: image_12
+    properties: {}
+    type: Image
+    layout_properties: {grid_position: 'FKQDTP,LUNDST'}
+  - name: image_13
+    properties: {source: _/theme/1.png}
+    type: Image
+    layout_properties: {grid_position: 'FKQDTP,UCIDRK'}
+  - name: image_14
+    properties: {source: _/theme/4.png}
+    type: Image
+    layout_properties: {grid_position: 'FKQDTP,MRHEGW'}
+  - name: image_15
+    properties: {}
+    type: Image
+    layout_properties: {grid_position: 'FKQDTP,XZHVVC'}
 - type: FlowPanel
   properties: {}
   name: navbar_links
