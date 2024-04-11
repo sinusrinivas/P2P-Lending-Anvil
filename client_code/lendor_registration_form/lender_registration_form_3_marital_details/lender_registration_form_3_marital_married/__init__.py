@@ -28,7 +28,7 @@ class lender_registration_form_3_marital_married(lender_registration_form_3_mari
             self.button_1_3.visible = False
             self.button_1.visible = True
 
-        options = app_tables.fin_spouse_profession.search()
+        options = app_tables.fin_lender_spouse_profession.search()
         option_strings = [str(option['spouse_profession']) for option in options]
         self.drop_down_1.items = option_strings
 
