@@ -1,7 +1,7 @@
 container: {type: ColumnPanel}
 components:
 - name: column_panel_2
-  properties: {col_widths: '{"MEFBCA":10,"PEMNOX":50,"IKDJGN":50,"APBAKJ":25,"RIQSRQ":35}',
+  properties: {col_widths: '{"MEFBCA":10,"PEMNOX":50,"IKDJGN":50,"APBAKJ":50,"RIQSRQ":10}',
     background: '#094586'}
   type: ColumnPanel
   layout_properties: {grid_position: 'YPABGV,OYTRQT', full_width_row: true}
