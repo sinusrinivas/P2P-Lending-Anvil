@@ -1,7 +1,8 @@
 container: {type: ColumnPanel}
 components:
 - name: column_panel_2
-  properties: {col_widths: '{"MEFBCA":10,"PEMNOX":50,"IKDJGN":55,"YVPAGY":5}', background: light blue}
+  properties: {col_widths: '{"MEFBCA":10,"PEMNOX":50,"IKDJGN":55,"YVPAGY":5}', background: 'theme:Primary
+      Container'}
   type: ColumnPanel
   layout_properties: {grid_position: 'YPABGV,OYTRQT', full_width_row: true}
   components:
@@ -18,7 +19,7 @@ components:
     type: Spacer
     layout_properties: {grid_position: 'JSTAKX,YVPAGY'}
   - name: column_panel_1
-    properties: {col_widths: '{"VLXIDZ":30,"JKENFA":30}', background: 'theme:Primary
+    properties: {col_widths: '{"VLXIDZ":30,"JKENFA":30,"TLVZWR":5,"RMPYYY":55}', background: 'theme:Primary
         Container'}
     type: ColumnPanel
     layout_properties: {grid_position: 'JSTAKX,IKDJGN NXZKCL,PEMNOX LOZESN,UCTVRM'}
@@ -31,42 +32,39 @@ components:
       type: Image
       layout_properties: {grid_position: 'DEAUDX,VLXIDZ HFXLUU,RMPYYY'}
     - name: spacer_1
-      properties: {height: 76.28570556640625}
+      properties: {height: 49.5714111328125}
       type: Spacer
-      layout_properties: {grid_position: 'DEAUDX,VLXIDZ AECDJT,XYTYXK'}
+      layout_properties: {grid_position: 'DEAUDX,VLXIDZ IBXTLW,FVGLWT'}
     - name: label_6
-      properties: {role: headline, text: '   Whelcome to......'}
+      properties: {role: headline, text: Welcome to......}
       type: Label
       layout_properties: {grid_position: 'DEAUDX,VLXIDZ AOADWA,CVRXAE'}
+    - name: label_9
+      properties: {text: 'Gp2p it is a Peer to Peer Lending platform. The company
+          uses technology to match borrowers and lenders and in the process eliminates
+          the margin which is charged by traditional banks and NBFCs, thus, making
+          borrowing cheaper and investing a more lucrative opportunity as compared
+          to traditional investment avenues.'}
+      type: Label
+      layout_properties: {grid_position: 'DEAUDX,VLXIDZ HGSUPN,REMHWW'}
     - name: column_panel_1_copy
       properties: {role: elevated-card, col_widths: '{"TIGKIG":25,"CQYWXR":20,"WLTEQM":5,"BJDXSL":55,"LGHLJP":55,"OTWMDU":5,"USWXXJ":15,"NZHORH":45,"EKYSFD":54,"EOHAME":6,"PKGYXY":54,"EBNTMA":6}'}
       type: ColumnPanel
       layout_properties: {grid_position: 'DEAUDX,JKENFA'}
       components:
       - name: spacer_4
-        properties: {height: 523.428466796875}
+        properties: {height: 474.28570556640625}
         type: Spacer
         layout_properties: {grid_position: 'BCREGJ,LGHLJP GASAMI,WLTEQM'}
-      - name: spacer_5
-        properties: {height: 20.428558349609375}
-        type: Spacer
-        layout_properties: {grid_position: 'BCREGJ,LGHLJP GASAMI,BJDXSL MPYCNK,TIGKIG
-            NYHHSR,UNXVWO'}
       - name: label_7
         properties: {role: display, text: Login, background: '', foreground: blue,
           bold: true, underline: false, italic: false}
         type: Label
-        layout_properties: {grid_position: 'BCREGJ,LGHLJP GASAMI,BJDXSL MPYCNK,TIGKIG
-            BCTQAV,LBAQBD'}
+        layout_properties: {grid_position: 'BCREGJ,LGHLJP GASAMI,BJDXSL MPYCNK,TIGKIG'}
       - name: spacer_6
         properties: {height: 32}
         type: Spacer
         layout_properties: {grid_position: 'BCREGJ,LGHLJP GASAMI,BJDXSL MPYCNK,CQYWXR'}
-      - name: label_1
-        properties: {align: left, role: title, text: Welcome Back!, underline: true,
-          bold: true, italic: false}
-        type: Label
-        layout_properties: {grid_position: 'BCREGJ,LGHLJP GASAMI,BJDXSL TOUMRI,BLDOBR'}
       - name: spacer_7
         properties: {height: 507.428466796875}
         type: Spacer
@@ -106,7 +104,7 @@ components:
         type: CheckBox
         layout_properties: {grid_position: 'BCREGJ,LGHLJP GASAMI,BJDXSL OOCTFV,JDAMWY'}
       - name: spacer_8
-        properties: {height: 32}
+        properties: {height: 47.5714111328125}
         type: Spacer
         layout_properties: {grid_position: 'BCREGJ,LGHLJP GASAMI,BJDXSL MPSRUO,NWBOAJ'}
       - name: button_1
@@ -115,7 +113,7 @@ components:
         layout_properties: {grid_position: 'BCREGJ,LGHLJP GASAMI,BJDXSL MPSRUO,XLAMBF',
           row_background: 'theme:Primary Container'}
       - name: label_8
-        properties: {text: 'New User?  '}
+        properties: {text: 'New User? '}
         type: Label
         layout_properties: {grid_position: 'HDPPQE,USWXXJ'}
       - name: link_2
