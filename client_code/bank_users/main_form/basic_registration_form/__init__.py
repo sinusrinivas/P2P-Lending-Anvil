@@ -30,7 +30,7 @@ class basic_registration_form(basic_registration_formTemplate):
         if user_data:
             self.full_name_text_box.text = user_data['full_name']
             self.gender_dd.selected_value = user_data['gender']
-            self.date_picker_1.date = user_data['date_of_birth']
+            self.date_picker_1.date = datetime.strptime(user_data['date_of_birth'], '%Y-%m-%d').date() if user_data['date_of_birth'] else None
             self.mobile_number_box.text = user_data['mobile']
             self.alternate_email_text_box.text = user_data['another_email']
             self.govt_id1_text_box.text = user_data['aadhaar_no']
@@ -61,7 +61,7 @@ class basic_registration_form(basic_registration_formTemplate):
         """This method is called when the button is clicked"""
         full_name = self.full_name_text_box.text
         gender = self.gender_dd.selected_value
-        dob = self.date_picker_1.date
+        dob = self.date_picker_1.date.strftime('%Y-%m-%d') if self.date_picker_1.date else None
         mobile_no = self.mobile_number_box.text
         user_photo = self.registration_img_file_loader.file
         alternate_email = self.alternate_email_text_box.text
@@ -88,10 +88,10 @@ class basic_registration_form(basic_registration_formTemplate):
         # Validate full name
         if not re.match(r'^[A-Za-z\s]+$', full_name):
             self.full_name_label.text = 'Enter a valid full name'
-        elif not dob or dob > datetime.now().date():
+        elif not dob or datetime.strptime(dob, '%Y-%m-%d').date() > datetime.now().date():
             self.dob_label.text = 'Enter a valid date of birth'
         # Validate age (must be 18 or older)
-        elif datetime.now().date() - dob < timedelta(days=365 * 18):
+        elif datetime.now().date() - datetime.strptime(dob, '%Y-%m-%d').date() < timedelta(days=365 * 18):
             self.dob_label.text = 'You must be at least 18 years old'
         elif not re.match(r'^\d{10}$', mobile_no):
             self.mobile_label.text = 'Enter valid mobile no'
@@ -104,7 +104,7 @@ class basic_registration_form(basic_registration_formTemplate):
         elif not full_name or not gender or not dob or not mobile_no or not alternate_email or not user_photo or not aadhar or not aadhar_card or not pan or not pan_card or not street_adress_1 and not street_address_2 or not city or not pincode or not state or not state or not country or not present or not duration:
             Notification('Please fill all details').show()
         else:
-            user_age = datetime.now().year - dob.year - ((datetime.now().month, datetime.now().day) < (dob.month, dob.day))
+            user_age = datetime.now().year - datetime.strptime(dob, '%Y-%m-%d').year - ((datetime.now().month, datetime.now().day) < (datetime.strptime(dob, '%Y-%m-%d').month, datetime.strptime(dob, '%Y-%m-%d').day))
             anvil.server.call('add_basic_details', full_name, gender, dob, mobile_no, user_photo, alternate_email,
                               aadhar, aadhar_card, pan, pan_card, street_adress_1, street_address_2, city, pincode,
                               state, country, user_id, user_age ,present, duration)
@@ -119,12 +119,12 @@ class basic_registration_form(basic_registration_formTemplate):
     def date_picker_1_change(self, **event_args):
         # This event is triggered when the date in the date picker changes.
         # Check if the date is valid and hide the error label if it is correct.
-        dob = self.date_picker_1.date
-        if not dob or dob > datetime.now().date():
+        dob = self.date_picker_1.date.strftime('%Y-%m-%d') if self.date_picker_1.date else None
+        if not dob or datetime.strptime(dob, '%Y-%m-%d').date() > datetime.now().date():
             self.dob_label.text = ''
         else:
             # Calculate user's age based on the selected date of birth
-            user_age = datetime.now().year - dob.year - ((datetime.now().month, datetime.now().day) < (dob.month, dob.day))
+            user_age = datetime.now().year - datetime.strptime(dob, '%Y-%m-%d').year - ((datetime.now().month, datetime.now().day) < (datetime.strptime(dob, '%Y-%m-%d').month, datetime.strptime(dob, '%Y-%m-%d').day))
             self.label_user_age.text = f'Age: {user_age} years'
 
     def registration_img_aadhar_file_loader_change(self, file, **event_args):
