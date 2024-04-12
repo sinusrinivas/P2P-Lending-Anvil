@@ -26,18 +26,19 @@ class lender_view_loans(lender_view_loansTemplate):
                 q.like('disbursed loan%'),
                 q.like('foreclosure%'),
                 q.like('extension%')
-            )
+            ),
+          lender_customer_id=self.user_id
         )
         self.repeating_panel_6.items = self.process_data(open_loans)
         self.label_5.text = str(len(self.repeating_panel_6.items))
 
         # Retrieve and display closed loans
-        closed_loans = app_tables.fin_loan_details.search(loan_updated_status=q.like('close%'))
+        closed_loans = app_tables.fin_loan_details.search(loan_updated_status=q.like('close%'),lender_customer_id=self.user_id)
         self.repeating_panel_7.items = self.process_data(closed_loans)
         self.label_6.text = str(len(self.repeating_panel_7.items))
 
         # Retrieve and display rejected loans
-        rejected_loans = app_tables.fin_loan_details.search(loan_updated_status=q.like('reject%'))
+        rejected_loans = app_tables.fin_loan_details.search(loan_updated_status=q.like('reject%'),lender_customer_id=self.user_id)
         self.repeating_panel_8.items = self.process_data(rejected_loans)
         self.label_7.text = str(len(self.repeating_panel_8.items))
 
@@ -47,17 +48,17 @@ class lender_view_loans(lender_view_loansTemplate):
         self.label_8.text = str(len(self.repeating_panel_9.items))
 
         # Retrieve and display foreclosure loans
-        foreclosure_loans = app_tables.fin_loan_details.search(loan_updated_status=q.like('foreclosure%'))
+        foreclosure_loans = app_tables.fin_loan_details.search(loan_updated_status=q.like('foreclosure%'),lender_customer_id=self.user_id)
         self.repeating_panel_10.items = self.process_data(foreclosure_loans)
         self.label_9.text = str(len(self.repeating_panel_10.items))
 
   def process_data(self, data):
     profiles_with_loans = []
     for loan in data:
-        user_profile = app_tables.fin_user_profile.get(customer_id=loan['borrower_customer_id'])
-        if user_profile is not None:
+        # user_profile = app_tables.fin_user_profile.get(customer_id=loan['borrower_customer_id'])
+        # if user_profile is not None:
             profiles_with_loans.append({
-                'mobile': user_profile['mobile'],
+                # 'mobile': user_profile['mobile'],
                 'interest_rate': loan['interest_rate'],
                 'loan_amount': loan['loan_amount'],
                 'tenure': loan['tenure'],

@@ -19,7 +19,7 @@ class ItemTemplate68(ItemTemplate68Template):
         lender_customer_id = row['lender_customer_id']
         borrower_profile = app_tables.fin_user_profile.get(customer_id=borrower_customer_id)
         lender_profile = app_tables.fin_user_profile.get(customer_id=lender_customer_id)
-        self.image_1.source = borrower_customer_id['user_photo']
+        self.image_1.source = borrower_profile['user_photo']
 
 
   def outlined_button_1_click(self, **event_args):
