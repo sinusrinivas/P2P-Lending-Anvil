@@ -53,7 +53,7 @@ components:
     layout_properties: {grid_position: 'AHCYIN,HBEZDY'}
     components:
     - name: label_8
-      properties: {role: null, text: 'Name :'}
+      properties: {role: null, text: 'Name :', bold: true}
       type: Label
       layout_properties: {grid_position: 'ZELVBX,FFWAID'}
     - name: label_1
@@ -61,7 +61,7 @@ components:
       type: Label
       layout_properties: {grid_position: 'ZELVBX,LIAWHO'}
     - name: label_2
-      properties: {role: null, text: 'Email :'}
+      properties: {role: null, text: 'Email :', bold: true}
       type: Label
       layout_properties: {grid_position: 'NAHEIR,ZSJNRV'}
     - name: email
@@ -69,7 +69,7 @@ components:
       type: Label
       layout_properties: {grid_position: 'NAHEIR,YIBXYE'}
     - name: label_3
-      properties: {role: null, text: 'Mobile No :'}
+      properties: {role: null, text: 'Mobile No :', bold: true}
       type: Label
       layout_properties: {grid_position: 'OXHLSY,MXRUDZ'}
     - name: mobile
@@ -77,7 +77,7 @@ components:
       type: Label
       layout_properties: {grid_position: 'OXHLSY,IXTTYG'}
     - name: label_4
-      properties: {role: null, text: 'Date Of Birth :'}
+      properties: {role: null, text: 'Date Of Birth :', bold: true}
       type: Label
       layout_properties: {grid_position: 'ZACLMT,FIETLK'}
     - name: birh
@@ -85,7 +85,7 @@ components:
       type: Label
       layout_properties: {grid_position: 'ZACLMT,ZOBFUW'}
     - name: label_5
-      properties: {role: null, text: 'City :'}
+      properties: {role: null, text: 'City :', bold: true}
       type: Label
       layout_properties: {grid_position: 'XXBUIO,QPSBXK'}
     - name: city
@@ -93,23 +93,15 @@ components:
       type: Label
       layout_properties: {grid_position: 'XXBUIO,VUDFAB'}
     - name: label_6
-      properties: {role: null, text: 'Gender :'}
+      properties: {role: null, text: 'Gender :', bold: true}
       type: Label
       layout_properties: {grid_position: 'NHMYWK,QRZNKL'}
     - name: gender
       properties: {font_size: null}
       type: Label
       layout_properties: {grid_position: 'NHMYWK,WYAWBB'}
-    - name: label_12
-      properties: {role: title, text: 'Language :'}
-      type: Label
-      layout_properties: {grid_position: 'BOBNOJ,BKRRHB'}
-    - name: language
-      properties: {font_size: null}
-      type: Label
-      layout_properties: {grid_position: 'BOBNOJ,JXUFJM'}
     - name: label_7
-      properties: {role: title, text: 'Marrital Status :'}
+      properties: {role: null, text: 'Marrital Status :', bold: true}
       type: Label
       layout_properties: {grid_position: 'FXFFWV,ATTGOH'}
     - name: status
