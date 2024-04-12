@@ -28,7 +28,7 @@ class lender_registration_form_3_marital_married(lender_registration_form_3_mari
             self.button_1_3.visible = False
             self.button_1.visible = True
 
-        options = app_tables.fin_spouse_profession.search()
+        options = app_tables.fin_lender_spouse_profession.search()
         option_strings = [str(option['spouse_profession']) for option in options]
         self.drop_down_1.items = option_strings
 
@@ -69,7 +69,7 @@ class lender_registration_form_3_marital_married(lender_registration_form_3_mari
         return user_profile['marital_status'] == 'Married'
 
     def button_1_click(self, **event_args):
-        open_form('lendor_registration_form.lender_registration_form_2.lender_registration_form_3_marital_details',user_id=self.userId)
+        open_form('lendor_registration_form.lender_registration_form_3_marital_details',user_id=self.userId)
 
     def button_1_1_click(self, **event_args):
         """This method is called when this radio button is selected"""
