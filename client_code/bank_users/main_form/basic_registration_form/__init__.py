@@ -131,22 +131,23 @@ class basic_registration_form(basic_registration_formTemplate):
         # Function to handle aadhar card file upload event
         if file is not None:
             # Display the image in an Image component
-            self.image_aadhar.display_mode = file
-            self.image_aadhar.visible = True
+            self.image_aadhar.source = self.registration_img_aadhar_file_loader.file
+            # self.image_aadhar.visible = True
 
     def registration_img_pan_file_loader_change(self, file, **event_args):
         # Function to handle pan card file upload event
         if file is not None:
             # Display the image in an Image component
-            self.image_pan.display_mode = file
-            self.image_pan.visible = True
+            self.image_pan.source = self.registration_img_pan_file_loader.file
+            # self.image_pan.visible = True
 
     def registration_img_file_loader_change(self, file, **event_args):
         # Function to handle user photo file upload event
         if file is not None:
             # Display the image in an Image component
-            self.image_profile.display_mode = file
-            self.image_profile.visible = True  
+            # self.image_profile.display_mode = file
+            # self.image_profile.visible = True  
+          self.image_profile.source = self.registration_img_file_loader.file
 
     def gender_dd_change(self, **event_args):
         """This method is called when an item is selected"""

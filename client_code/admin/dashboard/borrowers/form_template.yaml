@@ -14,10 +14,10 @@ components:
     properties: {}
     name: home_button_admin_1
     layout_properties: {grid_position: 'OIWWSN,IPOCYG', row_background: '', full_width_row: true}
-  - type: RepeatingPanel
-    properties: {item_template: admin.dashboard.borrowers.ItemTemplate83}
-    name: repeating_panel_2
-    layout_properties: {grid_position: 'RNEHSS,RTVZEA'}
+  - name: repeating_panel_1
+    properties: {item_template: admin.dashboard.borrowers.ItemTemplate96}
+    type: RepeatingPanel
+    layout_properties: {grid_position: 'CYMEHR,TEPTQS'}
 - type: FlowPanel
   properties: {}
   name: navbar_links

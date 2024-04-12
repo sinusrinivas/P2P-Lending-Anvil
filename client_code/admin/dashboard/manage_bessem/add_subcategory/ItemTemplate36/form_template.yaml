@@ -1,22 +1,27 @@
 is_package: true
 container:
   type: ColumnPanel
-  properties: {col_widths: '{"ISJFGB":25,"PSMZBB":20,"DEBEGI":15}'}
+  properties: {col_widths: '{}'}
 components:
-- name: label_1
-  properties: {align: center}
-  type: Label
-  layout_properties: {grid_position: 'RWMBXY,ISJFGB'}
-  data_bindings:
-  - {property: text, code: 'self.item[''sub_category'']'}
-- name: label_2
-  properties: {align: center}
-  type: Label
-  layout_properties: {grid_position: 'RWMBXY,PSMZBB'}
-  data_bindings:
-  - {property: text, code: 'self.item[''min_points'']'}
-- name: link_1
-  properties: {text: Edit Details}
-  type: Link
-  layout_properties: {grid_position: 'RWMBXY,DEBEGI'}
-  event_bindings: {click: link_1_click}
+- name: column_panel_1
+  properties: {col_widths: '{"DAZDNQ":20,"WIAPCZ":25,"XMPXVI":15}', role: elevated-card}
+  type: ColumnPanel
+  layout_properties: {grid_position: 'QUNXCK,NDGRBW'}
+  components:
+  - name: label_1
+    properties: {align: center}
+    type: Label
+    layout_properties: {grid_position: 'UZXVGP,DAZDNQ'}
+    data_bindings:
+    - {property: text, code: 'self.item[''sub_category'']'}
+  - name: label_2
+    properties: {align: center}
+    type: Label
+    layout_properties: {grid_position: 'UZXVGP,WIAPCZ'}
+    data_bindings:
+    - {property: text, code: 'self.item[''min_points'']'}
+  - name: link_1
+    properties: {text: Edit Details}
+    type: Link
+    layout_properties: {grid_position: 'UZXVGP,XMPXVI'}
+    event_bindings: {click: link_1_click}

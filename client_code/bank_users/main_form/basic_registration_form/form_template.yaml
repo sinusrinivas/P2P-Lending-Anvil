@@ -149,7 +149,7 @@ components:
   layout_properties: {grid_position: 'GAQQXD,OGRIDF'}
   event_bindings: {change: registration_img_file_loader_change}
 - name: image_profile
-  properties: {height: 39.39996337890625}
+  properties: {height: 142.85708618164062, display_mode: shrink_to_fit}
   type: Image
   layout_properties: {grid_position: 'GAQQXD,YKXHZL'}
 - name: label_06
@@ -184,8 +184,9 @@ components:
   properties: {}
   type: FileLoader
   layout_properties: {grid_position: 'MCCGKZ,ZYIAJQ'}
+  event_bindings: {change: registration_img_aadhar_file_loader_change}
 - name: image_aadhar
-  properties: {height: 39.39996337890625}
+  properties: {height: 151.99996948242188}
   type: Image
   layout_properties: {grid_position: 'MCCGKZ,YBEUGO'}
 - name: label_08
@@ -219,8 +220,9 @@ components:
   properties: {}
   type: FileLoader
   layout_properties: {grid_position: 'TNBITH,JJEMAQ'}
+  event_bindings: {change: registration_img_pan_file_loader_change}
 - name: image_pan
-  properties: {height: 39.39996337890625}
+  properties: {height: 145.142822265625}
   type: Image
   layout_properties: {grid_position: 'TNBITH,MYIECQ'}
 - name: spacer_1_copy_copy

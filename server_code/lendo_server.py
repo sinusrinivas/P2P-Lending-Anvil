@@ -44,12 +44,12 @@ def add_lendor_six_form(lending_type, investment,lending_period, user_id):
   row = app_tables.fin_lender.add_row(investment=investment, lending_type=lending_type,lending_period=lending_period,customer_id = user_id)
     
 @anvil.server.callable
-def add_lendor_individual_form_1(company_name,org_type,emp_type,user_id,com_type):
-  row = app_tables.fin_user_profile.search(customer_id=user_id)
+def add_lendor_individual_form_1(emp_type,org_type,company_name,com_type,user_id):
+  row = app_tables.fin_user_profile.search(customer_id=int(user_id))
   if row:
-    row[0]['company_name']=company_name
-    row[0]['organization_type']=org_type
     row[0]['employment_type']=emp_type
+    row[0]['organization_type']=org_type
+    row[0]['company_name']=company_name
     row[0]['company_type']=com_type
 
 @anvil.server.callable
@@ -75,14 +75,12 @@ def add_lendor_institutional_form_1(business_name,business_add,user_id):
   row = app_tables.fin_user_profile.search(customer_id = user_id)
   if row:
     row[0]['business_name'] = business_name
-    #row[0]['business_location'] = business_location
     row[0]['business_add'] = business_add
 
 @anvil.server.callable
-def add_lendor_institutional_form_2(business_type,empolyees_working,year_estd,user_id,months):
+def add_lendor_institutional_form_2(business_type,empolyees_working,year_estd,months,user_id):
   row = app_tables.fin_user_profile.search(customer_id = user_id)
   if row:
-    #row[0]['nearest_location'] = nearest_loc
     row[0]['business_type'] = business_type
     row[0]['employees_working'] = empolyees_working
     row[0]['year_estd'] = year_estd
@@ -305,7 +303,9 @@ def transfer_user_profile_to_loan_details(email,user_id):
     print(f"Fetching data for email: {email}")
 
     # Fetch distinct loan_id values for the given email from the loan_details table
-    distinct_loan_ids = app_tables.fin_loan_details.search()
+    distinct_loan_ids = app_tables.fin_loan_details.search(
+      loan_updated_status=q.like('under process%')
+    )
 
     # Fetch lender data from user_profile table
     lender_row = app_tables.fin_user_profile.get(email_user=email)

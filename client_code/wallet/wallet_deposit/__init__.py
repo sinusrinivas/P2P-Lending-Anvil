@@ -110,7 +110,7 @@ class wallet_deposit(wallet_depositTemplate):
         alert("Please enter a valid amount.")
         return
 
-    customer_id = 1000
+    customer_id = self.user_id
     email = self.email
     selected_row = self.selected_row
 
@@ -186,7 +186,7 @@ class wallet_deposit(wallet_depositTemplate):
     
   def loan_disbursment_btn_click(self, **event_args):
     """This method is called when the button is clicked"""
-    customer_id = 1000
+    customer_id = self.user_id
     email = self.email
     entered_loan_id = self.entered_loan_id 
     entered_borrower_customer_id = self.entered_borrower_customer_id

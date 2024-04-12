@@ -1,6 +1,6 @@
 container:
   type: ColumnPanel
-  properties: {col_widths: '{}'}
+  properties: {col_widths: '{"LJGCZG":15,"WHWYTV":25,"PBOQZF":20}'}
 components:
 - type: FlowPanel
   properties: {}
@@ -27,97 +27,81 @@ components:
   type: Spacer
   layout_properties: {grid_position: 'HCMAGJ,ONDGJJ'}
 - name: label_1_copy_1_copy_1
-  properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
-    visible: true, text: 'View Details
+  properties: {role: outlined-card, align: center, tooltip: '', border: '', foreground: 'theme:On
+      Primary', visible: true, text: 'View Details
 
-      ', font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small,
-    italic: false, background: '', bold: true, underline: false, icon: ''}
+      ', font_size: 18, font: '', spacing_above: small, icon_align: left, spacing_below: small,
+    italic: false, background: '#05264d', bold: true, underline: false, icon: ''}
   type: Label
   layout_properties:
     col_widths: {}
     grid_position: ZLTRFL,RNDIRN
+- name: spacer_2
+  properties: {height: 257.21429443359375}
+  type: Spacer
+  layout_properties: {grid_position: 'NHMAGI,LJGCZG'}
 - name: label_7
   properties: {text: 'Loan Id:', bold: true}
   type: Label
   layout_properties:
     col_widths: {}
-    grid_position: NHMAGI,WHWYTV
-- name: loan_id_label
-  properties: {}
-  type: Label
-  layout_properties:
-    col_widths: {}
-    grid_position: NHMAGI,PBOQZF
+    grid_position: NHMAGI,WHWYTV ZOAVNO,DMXNWO
 - name: label_8
   properties: {bold: true, text: 'Loan Amount:'}
   type: Label
-  layout_properties:
-    col_widths: {}
-    grid_position: XWKYLV,FRJUUV
-- name: loan_amount_label
-  properties: {}
-  type: Label
-  layout_properties:
-    col_widths: {}
-    grid_position: XWKYLV,RVMHRH
+  layout_properties: {grid_position: 'NHMAGI,WHWYTV SSJPBU,FRLWVZ'}
 - name: label_11
   properties: {bold: true, text: 'Intrest Rate:'}
   type: Label
-  layout_properties:
-    col_widths: {}
-    grid_position: IEKMUQ,EUJJCP
-- name: interest_rate_label
-  properties: {}
-  type: Label
-  layout_properties:
-    col_widths: {}
-    grid_position: IEKMUQ,JGNBMM
+  layout_properties: {grid_position: 'NHMAGI,WHWYTV BAYRIP,OKXJZM'}
 - name: label_10
   properties: {bold: true, text: 'Tenure:'}
   type: Label
-  layout_properties:
-    col_widths: {}
-    grid_position: ANBJQE,NTELJU
-- name: tenure_label
-  properties: {}
-  type: Label
-  layout_properties:
-    col_widths: {}
-    grid_position: ANBJQE,TROBNH
+  layout_properties: {grid_position: 'NHMAGI,WHWYTV WGNOWR,ROFIPJ'}
 - name: label_12
   properties: {bold: true, text: 'Date Of Apply:'}
   type: Label
-  layout_properties:
-    col_widths: {}
-    grid_position: SUHLHK,IIQNUL
-- name: date_of_apply_label
-  properties: {}
-  type: Label
-  layout_properties:
-    col_widths: {}
-    grid_position: SUHLHK,RUEBFD
-  data_bindings: []
+  layout_properties: {grid_position: 'NHMAGI,WHWYTV TJZFFT,AHXPPQ'}
 - name: label_2
   properties: {bold: true, text: 'Loan Updated Status:'}
   type: Label
-  layout_properties:
-    col_widths: {}
-    grid_position: BTTOHX,LSFTOA
-- name: loan_updated_status_label
-  properties: {}
-  type: Label
-  layout_properties:
-    col_widths: {}
-    grid_position: BTTOHX,RWVXAU
-  data_bindings:
-  - {property: text, code: 'self.item[''loan_updated_status'']', writeback: false}
+  layout_properties: {grid_position: 'NHMAGI,WHWYTV MRPOLS,JEDARR'}
 - type: Label
   properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
     text: 'Payment Details:', font_size: null, font: '', spacing_above: small, icon_align: left,
     spacing_below: small, italic: false, background: '', bold: true, underline: false,
     icon: ''}
   name: label_1
-  layout_properties: {grid_position: 'ZBXVUC,RYMRPX'}
+  layout_properties: {grid_position: 'NHMAGI,WHWYTV CIKOVI,DKQJEZ'}
+- name: loan_id_label
+  properties: {}
+  type: Label
+  layout_properties:
+    col_widths: {}
+    grid_position: NHMAGI,PBOQZF ZEHYPF,DKYIEK
+- name: loan_amount_label
+  properties: {}
+  type: Label
+  layout_properties: {grid_position: 'NHMAGI,PBOQZF YYUJQH,IBCUHK'}
+- name: interest_rate_label
+  properties: {}
+  type: Label
+  layout_properties: {grid_position: 'NHMAGI,PBOQZF TJFSFD,NASFLZ'}
+- name: tenure_label
+  properties: {}
+  type: Label
+  layout_properties: {grid_position: 'NHMAGI,PBOQZF QEMNYJ,HVVNDN'}
+- name: date_of_apply_label
+  properties: {}
+  type: Label
+  layout_properties: {grid_position: 'NHMAGI,PBOQZF GQJZKW,EGWBNL'}
+  data_bindings: []
+- name: loan_updated_status_label
+  properties: {}
+  type: Label
+  layout_properties: {grid_position: 'NHMAGI,PBOQZF FVGDBN,RQVJCL'}
+  data_bindings:
+  - {property: text, code: 'self.item[''loan_updated_status'']', writeback: false}
 - type: Link
   properties: {role: null, url: '', align: left, tooltip: '', border: '', foreground: blue,
     visible: true, text: view payment details here, font_size: null, wrap_on: mobile,
@@ -125,7 +109,7 @@ components:
     spacing_below: small, italic: false, background: '', bold: false, underline: false,
     icon: ''}
   name: link_1
-  layout_properties: {grid_position: 'ZBXVUC,VOBYPF'}
+  layout_properties: {grid_position: 'NHMAGI,PBOQZF GARTHA,IOPZMT'}
   event_bindings: {click: link_1_click}
 - name: button_1
   properties: {role: elevated-button, align: center, tooltip: '', border: '', enabled: true,

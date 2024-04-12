@@ -40,6 +40,7 @@ class view_profile(view_profileTemplate):
     self.npa_lst = []
     # self.dis_cou = []
     self.occupation_list = []
+    self.min_extension_list = []
 
     a = -1
     for i in self.data:
@@ -68,6 +69,7 @@ class view_profile(view_profileTemplate):
       self.npa_lst.append((i['npa']))
       # self.dis_cou.append(i['discount_coupons'])
       self.occupation_list.append((i['occupation']))
+      self.min_extension_list.append((i['min_extension_months']))
 
     if a == -1:
       alert("No Data Available Here!!")
@@ -98,6 +100,7 @@ class view_profile(view_profileTemplate):
         self.npa.text = self.npa_lst[b]
         # self.label_12.text = self.dis_cou[b]
         self.occupation.text = self.occupation_list[b]
+        self.label_27.text = self.min_extension_list[b]
 
         if self.int_type[b] == "Fixed":
                 self.button_1.visible = False

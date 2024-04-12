@@ -33,20 +33,20 @@ class dashboard(dashboardTemplate):
 
   def button_5_click(self, **event_args):
     """This method is called when the button is clicked"""
-    # open_form("lendor_registration_form.dashboard.view_borrower_loan_request")
-    email = main_form_module.email
-    user_profile = app_tables.fin_user_profile.get(email_user=email)
-    if user_profile:
-            user_id = user_profile['customer_id']
+    open_form("lendor_registration_form.dashboard.view_borrower_loan_request")
+    # email = main_form_module.email
+    # user_profile = app_tables.fin_user_profile.get(email_user=email)
+    # if user_profile:
+    #         user_id = user_profile['customer_id']
             
-            wallet_row = app_tables.fin_wallet.get(customer_id=user_id)
+    #         wallet_row = app_tables.fin_wallet.get(customer_id=user_id)
             
-            print(f"User ID: {user_id}")
+    #         print(f"User ID: {user_id}")
             
-            if wallet_row and wallet_row['wallet_id'] is not None:                
-                open_form('lendor_registration_form.dashboard.view_borrower_loan_request')
-            else:              
-                alert("Wallet not found. Do some transaction", title="Alert")
+    #         if wallet_row and wallet_row['wallet_id'] is not None:                
+    #             open_form('lendor_registration_form.dashboard.view_borrower_loan_request')
+    #         else:              
+    #             alert("Wallet not found. Do some transaction", title="Alert")
 
   def button_6_click(self, **event_args):
     """This method is called when the button is clicked"""
@@ -82,7 +82,7 @@ class dashboard(dashboardTemplate):
 
   def outlined_button_8_click(self, **event_args):
     """This method is called when the button is clicked"""
-    open_form("lendor_registration_form.dashboard.view_profile")
+    open_form("lendor_registration_form.dashboard.lender_profile")
 
   def outlined_button_9_click(self, **event_args):
     """This method is called when the button is clicked"""
@@ -90,11 +90,11 @@ class dashboard(dashboardTemplate):
 
   def outlined_button_10_click(self, **event_args):
     """This method is called when the button is clicked"""
-    open_form("lendor_registration_form.dashboard.view_transaction_history")
-
-  def history(self, **event_args):
-    """This method is called when the button is clicked"""
     open_form("lendor_registration_form.dashboard.change_password")
+
+  def history_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    open_form("lendor_registration_form.dashboard.view_transaction_history")
 
   def login_signup_button_click(self, **event_args):
     """This method is called when the button is clicked"""
@@ -153,4 +153,3 @@ class dashboard(dashboardTemplate):
 
   def wallet_dashboard_link_click(self, **event_args):
     open_form('wallet.wallet')
-  

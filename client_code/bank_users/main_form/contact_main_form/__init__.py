@@ -84,13 +84,13 @@ class contact_main_form(contact_main_formTemplate):
 
   def button_1_click(self, **event_args):
     """This method is called when the button is clicked"""
-    self.linear_panel_2.visible=True
-    self.linear_panel_3.visible=False
+    self.linear_panel_2.visible = not self.linear_panel_2.visible
+    # self.linear_panel_3.visible = not self.linear_panel_2.visible
+
 
   def button_2_click(self, **event_args):
     """This method is called when the button is clicked"""
-    self.linear_panel_3.visible=True
-    self.linear_panel_2.visible=False
+    self.linear_panel_3.visible = not self.linear_panel_3.visible
 
   def map_1_show(self, **event_args):
     """This method is called when the GoogleMap is shown on the screen"""

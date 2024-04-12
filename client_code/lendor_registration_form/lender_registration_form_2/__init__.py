@@ -25,7 +25,7 @@ class lender_registration_form_2(lender_registration_form_2Template):
         if user_data and len(user_data) > 0:
             lending_type = user_data[0]['lending_type']
             investment = user_data[0]['investment']
-            lending_period = user_data[0]['l']
+            lending_period = user_data[0]['lending_period']
 
         # Set selected values for dropdowns
         if lending_type:
@@ -49,18 +49,18 @@ class lender_registration_form_2(lender_registration_form_2Template):
 
     def button_2_click(self, **event_args):
         lending_type = self.lending_type_dropdown.selected_value
-        investment_str = self.text_box_1.text
+        investment = self.text_box_1.text
         lending_period = self.drop_down_2.selected_value
         user_id = self.userId
     
         # Check if all fields are filled
-        if not (lending_type and investment_str and lending_period):
+        if not (lending_type and investment and lending_period):
             alert("Please fill in all fields.")
             return
     
         # Validate investment input
         try:
-            investment = int(investment_str)
+            investment = int(investment)
             if investment <= 0:
                 # Show an error message or handle invalid input
                 alert("Please enter a valid positive number for investment.")

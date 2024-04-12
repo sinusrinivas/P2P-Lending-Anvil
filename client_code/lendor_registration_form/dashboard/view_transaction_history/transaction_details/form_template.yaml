@@ -1,0 +1,89 @@
+container: {type: ColumnPanel}
+components:
+- name: navigation_bar_main_lender_1
+  properties: {}
+  type: form:lendor_registration_form.navigation_bar_main_lender
+  layout_properties: {grid_position: 'KSCMNU,JNLUDQ'}
+- name: button_1
+  properties: {role: filled-button, align: right, tooltip: '', border: '', enabled: true,
+    foreground: 'theme:On Primary', visible: true, text: Back, font_size: 15, font: '',
+    spacing_above: small, icon_align: left, spacing_below: small, italic: false, background: '#0b2547',
+    bold: false, underline: false, icon: 'fa:angle-double-left'}
+  type: Button
+  layout_properties: {grid_position: 'TCRJTL,KAZFXD'}
+  event_bindings: {click: button_1_click}
+- name: label_1
+  properties: {text: Transaction Details, background: 'theme:Secondary Container',
+    role: outlined-card, font_size: 25}
+  type: Label
+  layout_properties: {grid_position: 'IWVPCJ,LCDMTH'}
+- name: column_panel_1
+  properties: {role: elevated-card, col_widths: '{"UVUAKW":30,"YXFMOJ":30,"AHTXVW":30,"WYFKXU":30}'}
+  type: ColumnPanel
+  layout_properties: {grid_position: 'IMPHQO,PBKUFC'}
+  components:
+  - name: label_2
+    properties: {text: Transaction Id}
+    type: Label
+    layout_properties: {grid_position: 'RMDMNO,MNVYQO'}
+  - name: label_3
+    properties: {}
+    type: Label
+    layout_properties: {grid_position: 'RMDMNO,ZZZRHE'}
+  - name: label_4
+    properties: {text: User Email}
+    type: Label
+    layout_properties: {grid_position: 'JDOKVK,IFXZIN CGYUCL,PJSYVG'}
+  - name: label_16
+    properties: {text: Receiver Email}
+    type: Label
+    layout_properties: {grid_position: 'JDOKVK,IFXZIN YPACRQ,QEQJPX'}
+  - name: label_6
+    properties: {text: Wallet Id}
+    type: Label
+    layout_properties: {grid_position: 'JDOKVK,IFXZIN FUUOQH,WZULIM'}
+  - name: label_5
+    properties: {}
+    type: Label
+    layout_properties: {grid_position: 'JDOKVK,MMUPNC NPMPME,OZOYJR'}
+  - name: label_17
+    properties: {}
+    type: Label
+    layout_properties: {grid_position: 'JDOKVK,MMUPNC LWCNCV,ILRMNK'}
+  - name: label_7
+    properties: {}
+    type: Label
+    layout_properties: {grid_position: 'JDOKVK,MMUPNC YUOONH,ZEHVUP'}
+  - name: label_8
+    properties: {text: Transaction Type}
+    type: Label
+    layout_properties: {grid_position: 'QAONXJ,AHTXVW XOZEPH,GZVTOT'}
+  - name: label_10
+    properties: {text: Amount}
+    type: Label
+    layout_properties: {grid_position: 'QAONXJ,AHTXVW RATYRO,BDXKWY'}
+  - name: label_9
+    properties: {}
+    type: Label
+    layout_properties: {grid_position: 'QAONXJ,WYFKXU FPHPNS,GPFMXA'}
+  - name: label_11
+    properties: {}
+    type: Label
+    layout_properties: {grid_position: 'QAONXJ,WYFKXU BFVKXQ,ICJNMF'}
+  - name: label_12
+    properties: {text: Date and Time}
+    type: Label
+    layout_properties: {grid_position: 'VLDFIL,UVUAKW CKOLEE,IQFXGZ'}
+  - name: label_14
+    properties: {text: Status}
+    type: Label
+    layout_properties: {grid_position: 'VLDFIL,UVUAKW RXJOQY,CLBOAZ'}
+  - name: label_13
+    properties: {}
+    type: Label
+    layout_properties: {grid_position: 'VLDFIL,YXFMOJ QYOYGE,FSAYVU'}
+  - name: label_15
+    properties: {foreground: green}
+    type: Label
+    layout_properties: {grid_position: 'VLDFIL,YXFMOJ ZSVDLQ,GYJNCW'}
+is_package: true

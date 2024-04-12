@@ -28,7 +28,7 @@ class lender_registration_form_3_marital_married(lender_registration_form_3_mari
             self.button_1_3.visible = False
             self.button_1.visible = True
 
-        options = app_tables.fin_spouse_profession.search()
+        options = app_tables.fin_lender_spouse_profession.search()
         option_strings = [str(option['spouse_profession']) for option in options]
         self.drop_down_1.items = option_strings
 
@@ -69,7 +69,7 @@ class lender_registration_form_3_marital_married(lender_registration_form_3_mari
         return user_profile['marital_status'] == 'Married'
 
     def button_1_click(self, **event_args):
-        open_form('lendor_registration_form.lender_registration_form_2.lender_registration_form_3_marital_details',user_id=self.userId)
+        open_form('lendor_registration_form.lender_registration_form_3_marital_details',user_id=self.userId)
 
     def button_1_1_click(self, **event_args):
         """This method is called when this radio button is selected"""
@@ -174,7 +174,7 @@ class lender_registration_form_3_marital_married(lender_registration_form_3_mari
 
         # Spouse details
         spouse_name = self.spouse_name_text.text
-        spouse_dob = self.date_picker_3.date
+        spouse_mob = self.date_picker_3.date
         spouse_mbl_no_text = self.spouse_mbl_no_text.text
         spouse_mbl_no = int(spouse_mbl_no_text) if spouse_mbl_no_text.strip().isdigit() else None
         spouse_profession = self.drop_down_1.selected_value
@@ -203,7 +203,7 @@ class lender_registration_form_3_marital_married(lender_registration_form_3_mari
             'mother_address': mother_address,
 
             'spouse_name': spouse_name,
-            'spouse_dob': spouse_dob,
+            'spouse_mob': spouse_mob,
             'spouse_mbl_no': spouse_mbl_no,
             'spouse_profession': spouse_profession,
             'spouse_company': spouse_company,
@@ -325,7 +325,7 @@ class lender_registration_form_3_marital_married(lender_registration_form_3_mari
              new_row = app_tables.fin_guarantor_details.add_row(
                 customer_id=self.userId,
                 guarantor_name=details['spouse_name'],
-                guarantor_date_of_birth=details['spouse_dob'],
+                guarantor_marriage_date=details['spouse_mob'],
                 guarantor_mobile_no=details['spouse_mbl_no'],
                 guarantor_profession=details['spouse_profession'],
                 guarantor_company_name=details['spouse_company'],
@@ -337,7 +337,7 @@ class lender_registration_form_3_marital_married(lender_registration_form_3_mari
              return
        else:
          existing_row['guarantor_name'] = details['spouse_name']
-         existing_row['guarantor_date_of_birth'] = details['spouse_dob']
+         existing_row['guarantor_marriage_date'] = details['spouse_mob']
          existing_row['guarantor_mobile_no'] = details['spouse_mbl_no']
          existing_row['guarantor_profession'] = details['spouse_profession']
          existing_row['guarantor_company_name'] = details['spouse_company']
@@ -354,10 +354,8 @@ class lender_registration_form_3_marital_married(lender_registration_form_3_mari
        errors = []
        if not re.match(r'^[A-Za-z\s]+$', details['spouse_name']):
          errors.append("Enter a valid full name!")
-       if not details['spouse_dob'] or details['spouse_dob'] > datetime.now().date():
-         errors.append("Enter a valid date of birth!")
-       if datetime.now().date() - details['spouse_dob'] < timedelta(days=365 * 18):
-         errors.append("You must be at least 18 years old!")
+       if details['spouse_mob'] > datetime.now().date():
+         errors.append("Enter a valid date of marriage!")
        if not re.match(r'^\d{10}$', str(details['spouse_mbl_no'])):
          errors.append("Enter a valid mobile no!")
 
@@ -414,23 +412,6 @@ class lender_registration_form_3_marital_married(lender_registration_form_3_mari
          Notification("\n".join(errors)).show()
        else:
          open_form('lendor_registration_form.lender_registration_form_4_bank_form_1', user_id=self.userId)
-      
-    def button_submit_copy_3_click(self, **event_args):
-        """This method is called when the button is clicked"""
-        details = self.collect_details()
-
-        # Insert details into the data table
-        app_tables.fin_guarantor_details.add_row(
-            customer_id=self.userId,
-            guarantor_name=details['related_person_name'],
-            guarantor_date_of_birth=details['related_person_dob'],
-            guarantor_mobile_no=details['related_person_mob'],
-            guarantor_profession=details['related_person_profession'],
-            guarantor_person_relation= details['related_person_relation'],
-            another_person=details['another_person']  
-        )
-     
-        open_form('lendor_registration_form.lender_registration_form_4_bank_form_1',user_id = self.userId)
 
     def prev_1_click(self, **event_args):
       """This method is called when the button is clicked"""

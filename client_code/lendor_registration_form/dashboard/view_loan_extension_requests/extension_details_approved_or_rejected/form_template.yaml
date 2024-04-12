@@ -26,121 +26,124 @@ components:
     properties: {}
     name: navigation_bar_lender_dashbord_1
     layout_properties: {grid_position: 'FJYVRL,WGPRBT'}
-  - name: label_6
-    properties: {role: null, align: center, tooltip: '', border: '', foreground: White,
-      visible: true, text: Loan Extension details, font_size: 18, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '#0b2547',
-      bold: false, underline: true, icon: ''}
-    type: Label
-    layout_properties:
-      col_widths: {}
-      grid_position: AXGPAD,WFMGFS
-      full_width_row: true
   - name: outlined_card_1
-    properties: {role: outlined-card, col_widths: '{}'}
+    properties: {role: outlined-card, col_widths: '{"AZOUQD":15,"WFAWEW":25,"UHNZLC":15,"PSKZVC":5}'}
     type: ColumnPanel
-    layout_properties:
-      col_widths: {}
-      grid_position: HZILQK,WELKDM
+    layout_properties: {grid_position: 'FQSERC,BDYTYO'}
     components:
+    - name: label_6
+      properties: {role: outlined-card, align: center, tooltip: '', border: '', foreground: White,
+        visible: true, text: Loan Extension details, font_size: 18, font: '', spacing_above: small,
+        icon_align: left, spacing_below: small, italic: false, background: '#0b2547',
+        bold: false, underline: true, icon: ''}
+      type: Label
+      layout_properties: {grid_position: 'FJWJIG,BXDYZF'}
+    - name: spacer_1
+      properties: {height: 315.357177734375}
+      type: Spacer
+      layout_properties: {grid_position: 'XIHJVG,AZOUQD'}
     - name: label_1
-      properties: {role: null, align: right, tooltip: '', border: '', foreground: '',
+      properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
         visible: true, text: 'Borrower Name :', font_size: null, font: '', spacing_above: small,
         icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
         underline: false, icon: ''}
       type: Label
-      layout_properties: {grid_position: 'XIHJVG,WFAWEW'}
-    - name: name
-      properties: {}
-      type: Label
-      layout_properties: {grid_position: 'XIHJVG,UHNZLC'}
-      data_bindings:
-      - {property: text, code: 'self.item[''borrower_name'']'}
+      layout_properties: {grid_position: 'XIHJVG,WFAWEW CAZYZC,XDJOYT'}
     - name: label_2
-      properties: {role: null, align: right, tooltip: '', border: '', foreground: '',
+      properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
         visible: true, text: 'Loan Amount :', font_size: null, font: '', spacing_above: small,
         icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
         underline: false, icon: ''}
       type: Label
-      layout_properties: {grid_position: 'VHNOTT,NQDCES'}
-    - name: loan
-      properties: {}
-      type: Label
-      layout_properties: {grid_position: 'VHNOTT,GHVJNX'}
-      data_bindings:
-      - {property: text, code: 'self.item[''loan_amount'']'}
-    - type: Label
-      properties: {role: null, align: right, tooltip: '', border: '', foreground: '',
+      layout_properties: {grid_position: 'XIHJVG,WFAWEW HQTBGK,FHZEAH'}
+    - name: label_7
+      properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
         visible: true, text: 'Extension Fee(%) :', font_size: null, font: '', spacing_above: small,
         icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
         underline: false, icon: ''}
-      name: label_7
-      layout_properties: {grid_position: 'HLGNAZ,FRQGCE'}
-    - type: Label
-      properties: {}
-      name: exten_fee
-      layout_properties: {grid_position: 'HLGNAZ,DBGXXF'}
-    - type: Label
-      properties: {role: null, align: right, tooltip: '', border: '', foreground: '',
+      type: Label
+      layout_properties: {grid_position: 'XIHJVG,WFAWEW VJJBXX,HGDSRX'}
+    - name: label_9
+      properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
         visible: true, text: 'Extension  Amount :', font_size: null, font: '', spacing_above: small,
         icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
         underline: false, icon: ''}
-      name: label_9
-      layout_properties: {grid_position: 'AEEINR,XXZFDQ'}
-    - type: Label
-      properties: {}
-      name: extension_amount
-      layout_properties: {grid_position: 'AEEINR,TZRLVC'}
+      type: Label
+      layout_properties: {grid_position: 'XIHJVG,WFAWEW OGUNSG,UBPIZM'}
     - name: label_5
-      properties: {role: null, align: right, tooltip: '', border: '', foreground: '',
+      properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
         visible: true, text: 'Total Paid Amount :', font_size: null, font: '', spacing_above: small,
         icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
         underline: false, icon: ''}
       type: Label
-      layout_properties: {grid_position: 'HBBYKS,OODKSL'}
-    - name: total
-      properties: {}
-      type: Label
-      layout_properties: {grid_position: 'HBBYKS,FVIWYP'}
-      data_bindings:
-      - {property: text, code: 'self.item[''paid_amont'']'}
+      layout_properties: {grid_position: 'XIHJVG,WFAWEW TAOMNC,DOESGU'}
     - name: label_4
-      properties: {role: null, align: right, tooltip: '', border: '', foreground: '',
+      properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
         visible: true, text: 'Remaining Amount :', font_size: null, font: '', spacing_above: small,
         icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
         underline: false, icon: ''}
       type: Label
-      layout_properties: {grid_position: 'YUZCYQ,RDHPNU'}
-    - name: ra
-      properties: {}
-      type: Label
-      layout_properties: {grid_position: 'YUZCYQ,DJUJRJ'}
-      data_bindings:
-      - {property: text, code: 'self.item[''outstanding_amount'']'}
+      layout_properties: {grid_position: 'XIHJVG,WFAWEW WQTRII,CKGMMH'}
     - name: label_3
-      properties: {role: null, align: right, tooltip: '', border: '', foreground: '',
+      properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
         visible: true, text: 'Reason for Extension :', font_size: null, font: '',
         spacing_above: small, icon_align: left, spacing_below: small, italic: false,
         background: '', bold: true, underline: false, icon: ''}
       type: Label
-      layout_properties: {grid_position: 'GNRKOW,HUVDTK'}
-    - name: reason
-      properties: {}
-      type: Label
-      layout_properties: {grid_position: 'GNRKOW,IKIXAN'}
-      data_bindings:
-      - {property: text, code: 'self.item[''reason'']'}
-    - type: Label
-      properties: {role: null, align: right, tooltip: '', border: '', foreground: '',
+      layout_properties: {grid_position: 'XIHJVG,WFAWEW DSTIPZ,JOWDMR'}
+    - name: label_10
+      properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
         visible: true, text: 'New Emi   :', font_size: null, font: '', spacing_above: small,
         icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
         underline: false, icon: ''}
-      name: label_10
-      layout_properties: {grid_position: 'AMZQUH,CBAGPH'}
-    - type: Label
+      type: Label
+      layout_properties: {grid_position: 'XIHJVG,WFAWEW KTVAKR,MCOUAJ'}
+    - name: name
       properties: {}
-      name: new_emi
-      layout_properties: {grid_position: 'AMZQUH,YGBOSR'}
+      type: Label
+      layout_properties: {grid_position: 'XIHJVG,UHNZLC DPSUYK,OPKTJM'}
+      data_bindings:
+      - {property: text, code: 'self.item[''borrower_name'']'}
+    - name: loan
+      properties: {}
+      type: Label
+      layout_properties: {grid_position: 'XIHJVG,UHNZLC JAGJUJ,SOLZQX'}
+      data_bindings:
+      - {property: text, code: 'self.item[''loan_amount'']'}
+    - name: exten_fee
+      properties: {}
+      type: Label
+      layout_properties: {grid_position: 'XIHJVG,UHNZLC YJNZJK,IWIPUX'}
+    - name: extension_amount
+      properties: {}
+      type: Label
+      layout_properties: {grid_position: 'XIHJVG,UHNZLC FQJTSH,WINWRN'}
+    - name: total
+      properties: {}
+      type: Label
+      layout_properties: {grid_position: 'XIHJVG,UHNZLC KSFQYC,BGYSVI'}
+      data_bindings:
+      - {property: text, code: 'self.item[''paid_amont'']'}
+    - name: ra
+      properties: {}
+      type: Label
+      layout_properties: {grid_position: 'XIHJVG,UHNZLC CKGNXN,WFVWJO'}
+      data_bindings:
+      - {property: text, code: 'self.item[''outstanding_amount'']'}
+    - name: reason
+      properties: {}
+      type: Label
+      layout_properties: {grid_position: 'XIHJVG,UHNZLC KRNXIG,HIWICT'}
+      data_bindings:
+      - {property: text, code: 'self.item[''reason'']'}
+    - name: new_emi
+      properties: {}
+      type: Label
+      layout_properties: {grid_position: 'XIHJVG,UHNZLC BFSNNU,DDYXNE'}
+    - name: spacer_2
+      properties: {height: 32}
+      type: Spacer
+      layout_properties: {grid_position: 'XIHJVG,PSKZVC'}
     - name: label_7_copy
       properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
         visible: false, text: This Loan Extension request is Approved, font_size: 18,

@@ -37,10 +37,10 @@ class dashboard(dashboardTemplate):
                     alert("No data found")
 
                 # Check if the user has at least 3 loans
-                if len(customer_loans) > 3:
-                    self.extended_loans.visible = True
-                else:
-                    self.extended_loans.visible = False
+                # if len(customer_loans) > 3:
+                #     self.extended_loans.visible = True
+                # else:
+                #     self.extended_loans.visible = False
 
 
     def home_main_form_link_click(self, **event_args):
@@ -157,3 +157,7 @@ class dashboard(dashboardTemplate):
 
     def Report_A_Problem_click(self, **event_args):
       open_form('borrower_registration_form.dashboard.dashboard_report_a_problem')
+
+    def view_profile(self, **event_args):
+      """This method is called when the button is clicked"""
+      open_form('borrower_registration_form.dashboard.borrower_profile')
