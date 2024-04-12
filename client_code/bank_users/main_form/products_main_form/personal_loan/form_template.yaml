@@ -120,7 +120,7 @@ components:
     type: Label
     layout_properties: {grid_position: 'SGAGDP,MPTBCC GOFASJ,SOXPJD'}
   - name: image_6
-    properties: {source: _/theme/banks.png}
+    properties: {source: _/theme/a.png, display_mode: original_size}
     type: Image
     layout_properties: {grid_position: 'SGAGDP,MPTBCC SGVMZN,RQZWMV'}
   - name: label_13
@@ -134,7 +134,7 @@ components:
     type: Label
     layout_properties: {grid_position: 'SGAGDP,QQLBLD CAAUOG,UPNYDY'}
   - name: image_7
-    properties: {source: _/theme/nbfc1.jpg}
+    properties: {source: _/theme/b.png, display_mode: original_size}
     type: Image
     layout_properties: {grid_position: 'SGAGDP,QQLBLD ZEJXNO,NFBJWO'}
   - name: label_14
@@ -146,7 +146,7 @@ components:
     type: Label
     layout_properties: {grid_position: 'SGAGDP,XOZQSZ WAUKZP,JPHWUX'}
   - name: image_8
-    properties: {source: _/theme/money.png}
+    properties: {source: _/theme/c.png, display_mode: original_size}
     type: Image
     layout_properties: {grid_position: 'SGAGDP,XOZQSZ OSPRGE,AYLMJG'}
   - name: label_15
@@ -575,9 +575,9 @@ components:
       type: Label
       layout_properties: {grid_position: 'LUSVQI,JGXCLA OTOVIY,SEWBRY'}
     - name: label_33_copy
-      properties: {text: 'With i2iFunding, you won''t encounter such issues. You can
-          prepay without any penalty as early as the next day.And here''s the kicker:
-          You can prepay as many times as you''d like, unlike other lenders. We handle
+      properties: {text: 'With GTPL, you won''t encounter such issues. You can prepay
+          without any penalty as early as the next day.And here''s the kicker: You
+          can prepay as many times as you''d like, unlike other lenders. We handle
           all prepayments efficiently because our goal is to keep our borrowers happy!
 
           ', font_size: 18, foreground: black}
