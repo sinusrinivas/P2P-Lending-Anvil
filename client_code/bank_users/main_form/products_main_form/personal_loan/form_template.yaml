@@ -1116,6 +1116,57 @@ components:
     properties: {text: Personal Loan Repayment, align: center, bold: true, font_size: 30}
     type: Label
     layout_properties: {grid_position: 'IHYKNF,TDMLBQ'}
+  - name: spacer_33
+    properties: {height: '12'}
+    type: Spacer
+    layout_properties: {grid_position: 'RUTNYS,HPGJIZ'}
+  - name: content_panel_copy_copy_3_copy_3_copy_2
+    properties: {col_widths: '{"VOXBLD":15,"JGXCLA":45}', background: '#478BB0'}
+    type: ColumnPanel
+    layout_properties: {grid_position: 'QIDELV,CIEGMA'}
+    components:
+    - name: spacer_10_copy_3_copy_2
+      properties: {height: '20'}
+      type: Spacer
+      layout_properties: {grid_position: 'OQSSZM,XQLQGF'}
+    - name: label_29_copy_3_copy_2
+      properties: {text: Fast Disbursal of Loan Amount, align: center, font_size: 30,
+        bold: true, foreground: white}
+      type: Label
+      layout_properties: {grid_position: 'YIBYQM,USTSCN'}
+    - name: spacer_11_copy_3_copy_2
+      properties: {height: '20'}
+      type: Spacer
+      layout_properties: {grid_position: 'JJFCGU,JFUOIJ'}
+    - name: image_10_copy_3_copy
+      properties: {height: 127.5555419921875, source: _/theme/disbursed.png, display_mode: shrink_to_fit}
+      type: Image
+      layout_properties: {grid_position: 'LUSVQI,VOXBLD'}
+    - name: label_31_copy_3_copy_2
+      properties: {text: 'At GTPL, every listed loan has successfully secured funding.
+          We boast a robust investor base eager to lend to borrowers, often resulting
+          in loans being fully funded within hours. This achievement is attributed
+          to our unwavering commitment to customer satisfaction, fostering strong
+          partnerships with our investors.
+
+          ', font_size: 18, foreground: white}
+      type: Label
+      layout_properties: {grid_position: 'LUSVQI,JGXCLA PDVPGF,EGZPAF'}
+    - name: label_32_copy_3_copy
+      properties: {text: 'We provide collateral-free loans at reasonable rates, sparing
+          borrowers from resorting to loan sharks charging exorbitant interest rates.
+
+          ', font_size: 18, foreground: white}
+      type: Label
+      layout_properties: {grid_position: 'LUSVQI,JGXCLA OTOVIY,SEWBRY'}
+    - name: label_33_copy_3_copy
+      properties: {text: 'We tailor loan pricing to match each borrower''s credit
+          profile, ensuring fairness and transparency, with collateral playing no
+          role in the process.
+
+          ', font_size: 18, foreground: white}
+      type: Label
+      layout_properties: {grid_position: 'LUSVQI,JGXCLA ISHKQW,VIFFXN'}
   - name: image_24
     properties: {source: _/theme/hehe.png, display_mode: original_size}
     type: Image
