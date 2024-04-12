@@ -4,7 +4,7 @@ container:
   properties: {html: '@theme:standard-page.html'}
 components:
 - type: ColumnPanel
-  properties: {}
+  properties: {col_widths: '{"DXHHWT":15,"GJCQJQ":45,"JQQCEI":15,"UPJROI":45,"EHUUCF":15,"NZRDPG":45,"GRGKMI":15,"OVDFTK":45,"MTEPWA":15,"THORQD":45,"NHLPOA":15,"IGIOFI":45,"PVJYOC":15,"YLFJWG":45}'}
   name: content_panel
   layout_properties: {slot: default}
   components:
@@ -926,6 +926,159 @@ components:
     properties: {text: Loan Application Process, align: center, bold: true, font_size: 30}
     type: Label
     layout_properties: {grid_position: 'IIIKKE,ANHNUT'}
+  - name: image_17
+    properties: {source: _/theme/p1.png, display_mode: original_size}
+    type: Image
+    layout_properties: {grid_position: 'CVZSYU,DXHHWT'}
+  - name: label_86
+    properties: {text: Create a Borrower's Account}
+    type: Label
+    layout_properties: {grid_position: 'CVZSYU,GJCQJQ YWTUFE,LDSUAD'}
+  - name: label_87
+    properties: {text: '
+
+        To initiate the personal loan application process, individuals must establish
+        a Borrower''s Account by completing a straightforward online form and submitting
+        scanned self-attested copies of necessary documents
+
+        '}
+    type: Label
+    layout_properties: {grid_position: 'CVZSYU,GJCQJQ RRTOVS,WAHIXZ'}
+  - name: label_88
+    properties: {}
+    type: Label
+    layout_properties: {grid_position: 'EBXYJX,LGQWVE'}
+  - name: image_18
+    properties: {source: _/theme/p2.png, display_mode: original_size}
+    type: Image
+    layout_properties: {grid_position: 'PUCGVT,JQQCEI'}
+  - name: label_89
+    properties: {text: Profile Verification by GTPL}
+    type: Label
+    layout_properties: {grid_position: 'PUCGVT,UPJROI IJCUSR,LJWGRJ'}
+  - name: label_90
+    properties: {text: '
+
+        Upon submission of the personal loan application, GTPL will conduct a thorough
+        verification of the applicant''s provided details and accompanying documents.
+        Should any clarification or additional documentation be necessary, we may
+        contact the borrower accordingly.
+
+        '}
+    type: Label
+    layout_properties: {grid_position: 'PUCGVT,UPJROI WSRWAA,PDCIYQ'}
+  - name: label_91
+    properties: {}
+    type: Label
+    layout_properties: {grid_position: 'PASYXK,MNFYJO'}
+  - name: image_19
+    properties: {source: _/theme/p3.png, display_mode: original_size}
+    type: Image
+    layout_properties: {grid_position: 'DVJQWN,EHUUCF'}
+  - name: label_92
+    properties: {text: Approval of Loan Application by i2i}
+    type: Label
+    layout_properties: {grid_position: 'DVJQWN,NZRDPG FTYJYP,JWALNO'}
+  - name: label_93
+    properties: {text: 'GTPL conducts an internal credit assessment of each borrower
+        utilizing its proprietary credit evaluation model. This assessment encompasses
+        various parameters including the borrower''s ability and willingness to repay,
+        personal credit score, behavioral patterns, demographics, and more. Subsequently,
+        each borrower is categorized into Risk Categories ranging from A to X, with
+        A representing the strongest credit profile and X indicating the weakest.
+        This rating is transparently displayed to both borrowers and investors. Utilizing
+        this classification alongside other output parameters from the credit evaluation
+        process, i2iFunding determines the applicable interest rate for each personal
+        loan.'}
+    type: Label
+    layout_properties: {grid_position: 'DVJQWN,NZRDPG FTDETP,XKYFMK'}
+  - name: label_94
+    properties: {}
+    type: Label
+    layout_properties: {grid_position: 'KKSXVF,GQRWRA'}
+  - name: image_20
+    properties: {source: _/theme/p4.png, display_mode: original_size}
+    type: Image
+    layout_properties: {grid_position: 'VTCDAX,GRGKMI'}
+  - name: label_95
+    properties: {text: Listing of Loan in 'Active Borrowers' List}
+    type: Label
+    layout_properties: {grid_position: 'VTCDAX,OVDFTK ULWRID,XQIDZQ'}
+  - name: label_96
+    properties: {text: 'Following a successful credit evaluation, the borrower will
+        receive a confirmation email detailing the approved loan amount, interest
+        rate, and the corresponding Equated Monthly Installment (EMI). To proceed
+        further, the borrower must log in to our website and post the loan application,
+        which will then be listed in the "Active Borrowers" section. The borrower
+        has the flexibility to set the loan''s interest rate equal to or higher than
+        the rate assigned by GTPL.'}
+    type: Label
+    layout_properties: {grid_position: 'VTCDAX,OVDFTK XVFZFK,VYJTFL'}
+  - name: label_97
+    properties: {}
+    type: Label
+    layout_properties: {grid_position: 'HFEPJS,SHVLUA'}
+  - name: image_21
+    properties: {source: _/theme/p5.png, display_mode: original_size}
+    type: Image
+    layout_properties: {grid_position: 'MTJIPB,MTEPWA'}
+  - name: label_98
+    properties: {text: Funding of Loan by Investors}
+    type: Label
+    layout_properties: {grid_position: 'MTJIPB,THORQD ZIIJOS,CJVGPB'}
+  - name: label_99
+    properties: {text: 'After taking your GTPL-evaluated loan application live on
+        our website, you gain access to thousands of verified investors throughout
+        India. Interested lenders can express their intent to fund your loan. You
+        can track the funding progress by accessing the ''My Account'' section on
+        our platform. To facilitate a quicker funding process, borrowers are empowered
+        to directly message active lenders.'}
+    type: Label
+    layout_properties: {grid_position: 'MTJIPB,THORQD XCGWQI,IZGQMT'}
+  - name: label_100
+    properties: {}
+    type: Label
+    layout_properties: {grid_position: 'VREPST,BSZEBS'}
+  - name: image_22
+    properties: {source: _/theme/p6.png, display_mode: original_size}
+    type: Image
+    layout_properties: {grid_position: 'ADIDAA,NHLPOA'}
+  - name: label_101
+    properties: {text: Document Verification}
+    type: Label
+    layout_properties: {grid_position: 'ADIDAA,IGIOFI ETSUUN,PTVPJE'}
+  - name: label_102
+    properties: {text: '
+
+        Once the loan application is closed, GTPL conducts thorough document verification
+        of the borrower''s submitted documents, ensuring they match the originals
+        provided. Any discrepancies discovered during this process result in the disqualification
+        of the borrower and the cancellation of the loan. Following successful document
+        verification, the borrower is required to sign legally binding agreements,
+        known as ''Loan Agreements,'' with investors. These agreements clearly outline
+        the terms and conditions, ensuring both borrowers and lenders comprehend their
+        duties and responsibilities. Additionally, the borrower must sign the mandate
+        of the National Automated Clearing House (NACH) to facilitate seamless repayment.
+
+        '}
+    type: Label
+    layout_properties: {grid_position: 'ADIDAA,IGIOFI RUSYPL,DAUMCS'}
+  - name: label_103
+    properties: {}
+    type: Label
+    layout_properties: {grid_position: 'HIBKOX,FYELJF'}
+  - name: image_23
+    properties: {source: _/theme/p7.png, display_mode: original_size}
+    type: Image
+    layout_properties: {grid_position: 'YCZGWL,PVJYOC'}
+  - name: label_104
+    properties: {text: Disbursal of Loan Amount}
+    type: Label
+    layout_properties: {grid_position: 'YCZGWL,YLFJWG KECDLA,QLCMZW'}
+  - name: label_105
+    properties: {}
+    type: Label
+    layout_properties: {grid_position: 'YCZGWL,YLFJWG JJJBFV,UIHQCP'}
 - type: FlowPanel
   properties: {}
   name: navbar_links
