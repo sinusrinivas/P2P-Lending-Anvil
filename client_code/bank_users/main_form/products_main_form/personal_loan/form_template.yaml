@@ -923,7 +923,7 @@ components:
     type: Spacer
     layout_properties: {grid_position: 'PWDXAN,DISBKR'}
   - name: label_85
-    properties: {}
+    properties: {text: Loan Application Process, align: center, bold: true, font_size: 30}
     type: Label
     layout_properties: {grid_position: 'IIIKKE,ANHNUT'}
 - type: FlowPanel
