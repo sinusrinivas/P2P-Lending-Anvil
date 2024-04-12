@@ -4,7 +4,7 @@ container:
   properties: {html: '@theme:standard-page.html'}
 components:
 - type: ColumnPanel
-  properties: {}
+  properties: {col_widths: '{"DXHHWT":15,"GJCQJQ":45,"JQQCEI":15,"UPJROI":45,"EHUUCF":15,"NZRDPG":45,"GRGKMI":15,"OVDFTK":45,"MTEPWA":15,"THORQD":45,"NHLPOA":15,"IGIOFI":45,"PVJYOC":15,"YLFJWG":45}'}
   name: content_panel
   layout_properties: {slot: default}
   components:
@@ -120,7 +120,7 @@ components:
     type: Label
     layout_properties: {grid_position: 'SGAGDP,MPTBCC GOFASJ,SOXPJD'}
   - name: image_6
-    properties: {source: _/theme/banks.png}
+    properties: {source: _/theme/a.png, display_mode: original_size}
     type: Image
     layout_properties: {grid_position: 'SGAGDP,MPTBCC SGVMZN,RQZWMV'}
   - name: label_13
@@ -134,7 +134,7 @@ components:
     type: Label
     layout_properties: {grid_position: 'SGAGDP,QQLBLD CAAUOG,UPNYDY'}
   - name: image_7
-    properties: {source: _/theme/nbfc1.jpg}
+    properties: {source: _/theme/b.png, display_mode: original_size}
     type: Image
     layout_properties: {grid_position: 'SGAGDP,QQLBLD ZEJXNO,NFBJWO'}
   - name: label_14
@@ -146,7 +146,7 @@ components:
     type: Label
     layout_properties: {grid_position: 'SGAGDP,XOZQSZ WAUKZP,JPHWUX'}
   - name: image_8
-    properties: {source: _/theme/money.png}
+    properties: {source: _/theme/c.png, display_mode: original_size}
     type: Image
     layout_properties: {grid_position: 'SGAGDP,XOZQSZ OSPRGE,AYLMJG'}
   - name: label_15
@@ -575,9 +575,9 @@ components:
       type: Label
       layout_properties: {grid_position: 'LUSVQI,JGXCLA OTOVIY,SEWBRY'}
     - name: label_33_copy
-      properties: {text: 'With i2iFunding, you won''t encounter such issues. You can
-          prepay without any penalty as early as the next day.And here''s the kicker:
-          You can prepay as many times as you''d like, unlike other lenders. We handle
+      properties: {text: 'With GTPL, you won''t encounter such issues. You can prepay
+          without any penalty as early as the next day.And here''s the kicker: You
+          can prepay as many times as you''d like, unlike other lenders. We handle
           all prepayments efficiently because our goal is to keep our borrowers happy!
 
           ', font_size: 18, foreground: black}
@@ -918,6 +918,425 @@ components:
         font_size: 17}
       type: Label
       layout_properties: {grid_position: 'OKRYUA,PNCFFG YCAHHH,KKIQQQ'}
+  - name: spacer_27
+    properties: {height: 32}
+    type: Spacer
+    layout_properties: {grid_position: 'PWDXAN,DISBKR'}
+  - name: label_85
+    properties: {text: Loan Application Process, align: center, bold: true, font_size: 30}
+    type: Label
+    layout_properties: {grid_position: 'IIIKKE,ANHNUT'}
+  - name: spacer_31
+    properties: {height: 32}
+    type: Spacer
+    layout_properties: {grid_position: 'PRWFNB,ACRXGK'}
+  - name: image_17
+    properties: {source: _/theme/p1.png, display_mode: original_size}
+    type: Image
+    layout_properties: {grid_position: 'CVZSYU,DXHHWT'}
+  - name: label_86
+    properties: {text: Create a Borrower's Account, font_size: 17, bold: true}
+    type: Label
+    layout_properties: {grid_position: 'CVZSYU,GJCQJQ YWTUFE,LDSUAD'}
+  - name: label_87
+    properties: {text: '
+
+        To initiate the personal loan application process, individuals must establish
+        a Borrower''s Account by completing a straightforward online form and submitting
+        scanned self-attested copies of necessary documents
+
+        ', italic: false, font_size: 17}
+    type: Label
+    layout_properties: {grid_position: 'CVZSYU,GJCQJQ RRTOVS,WAHIXZ'}
+  - name: label_88
+    properties: {text: '---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------'}
+    type: Label
+    layout_properties: {grid_position: 'EBXYJX,LGQWVE'}
+  - name: image_18
+    properties: {source: _/theme/p2.png, display_mode: original_size}
+    type: Image
+    layout_properties: {grid_position: 'PUCGVT,JQQCEI'}
+  - name: label_89
+    properties: {text: Profile Verification by GTPL, font_size: 17, bold: true}
+    type: Label
+    layout_properties: {grid_position: 'PUCGVT,UPJROI IJCUSR,LJWGRJ'}
+  - name: label_90
+    properties: {text: '
+
+        Upon submission of the personal loan application, GTPL will conduct a thorough
+        verification of the applicant''s provided details and accompanying documents.
+        Should any clarification or additional documentation be necessary, we may
+        contact the borrower accordingly.
+
+        ', font_size: 17}
+    type: Label
+    layout_properties: {grid_position: 'PUCGVT,UPJROI WSRWAA,PDCIYQ'}
+  - name: label_91
+    properties: {text: '---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------'}
+    type: Label
+    layout_properties: {grid_position: 'PASYXK,MNFYJO'}
+  - name: spacer_30
+    properties: {height: 32}
+    type: Spacer
+    layout_properties: {grid_position: 'DVJQWN,EHUUCF VXKCON,EOQUKF'}
+  - name: image_19
+    properties: {source: _/theme/p3.png, display_mode: original_size}
+    type: Image
+    layout_properties: {grid_position: 'DVJQWN,EHUUCF'}
+  - name: label_92
+    properties: {text: Approval of Loan Application by i2i, font_size: 17, bold: true}
+    type: Label
+    layout_properties: {grid_position: 'DVJQWN,NZRDPG FTYJYP,JWALNO'}
+  - name: label_93
+    properties: {text: 'GTPL conducts an internal credit assessment of each borrower
+        utilizing its proprietary credit evaluation model. This assessment encompasses
+        various parameters including the borrower''s ability and willingness to repay,
+        personal credit score, behavioral patterns, demographics, and more. Subsequently,
+        each borrower is categorized into Risk Categories ranging from A to X, with
+        A representing the strongest credit profile and X indicating the weakest.
+        This rating is transparently displayed to both borrowers and investors. Utilizing
+        this classification alongside other output parameters from the credit evaluation
+        process, i2iFunding determines the applicable interest rate for each personal
+        loan.', font_size: 17}
+    type: Label
+    layout_properties: {grid_position: 'DVJQWN,NZRDPG FTDETP,XKYFMK'}
+  - name: label_94
+    properties: {text: '---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------'}
+    type: Label
+    layout_properties: {grid_position: 'KKSXVF,GQRWRA'}
+  - name: image_20
+    properties: {source: _/theme/p4.png, display_mode: original_size}
+    type: Image
+    layout_properties: {grid_position: 'VTCDAX,GRGKMI'}
+  - name: label_95
+    properties: {text: Listing of Loan in 'Active Borrowers' List, font_size: 17,
+      bold: true}
+    type: Label
+    layout_properties: {grid_position: 'VTCDAX,OVDFTK ULWRID,XQIDZQ'}
+  - name: label_96
+    properties: {text: 'Following a successful credit evaluation, the borrower will
+        receive a confirmation email detailing the approved loan amount, interest
+        rate, and the corresponding Equated Monthly Installment (EMI). To proceed
+        further, the borrower must log in to our website and post the loan application,
+        which will then be listed in the "Active Borrowers" section. The borrower
+        has the flexibility to set the loan''s interest rate equal to or higher than
+        the rate assigned by GTPL.', font_size: 17}
+    type: Label
+    layout_properties: {grid_position: 'VTCDAX,OVDFTK XVFZFK,VYJTFL'}
+  - name: label_97
+    properties: {text: '---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------'}
+    type: Label
+    layout_properties: {grid_position: 'HFEPJS,SHVLUA'}
+  - name: image_21
+    properties: {source: _/theme/p5.png, display_mode: original_size}
+    type: Image
+    layout_properties: {grid_position: 'MTJIPB,MTEPWA'}
+  - name: label_98
+    properties: {text: Funding of Loan by Investors, font_size: 17, bold: true}
+    type: Label
+    layout_properties: {grid_position: 'MTJIPB,THORQD ZIIJOS,CJVGPB'}
+  - name: label_99
+    properties: {text: 'After taking your GTPL-evaluated loan application live on
+        our website, you gain access to thousands of verified investors throughout
+        India. Interested lenders can express their intent to fund your loan. You
+        can track the funding progress by accessing the ''My Account'' section on
+        our platform. To facilitate a quicker funding process, borrowers are empowered
+        to directly message active lenders.', font_size: 17}
+    type: Label
+    layout_properties: {grid_position: 'MTJIPB,THORQD XCGWQI,IZGQMT'}
+  - name: label_100
+    properties: {text: '---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------'}
+    type: Label
+    layout_properties: {grid_position: 'VREPST,BSZEBS'}
+  - name: spacer_29
+    properties: {height: 32}
+    type: Spacer
+    layout_properties: {grid_position: 'ADIDAA,NHLPOA ZKKJUX,KZFVRI'}
+  - name: image_22
+    properties: {source: _/theme/p6.png, display_mode: original_size}
+    type: Image
+    layout_properties: {grid_position: 'ADIDAA,NHLPOA ASPLDB,TPHDYA'}
+  - name: label_101
+    properties: {text: Document Verification, font_size: 17, bold: true}
+    type: Label
+    layout_properties: {grid_position: 'ADIDAA,IGIOFI ETSUUN,PTVPJE'}
+  - name: label_102
+    properties: {text: 'Once the loan application is closed, GTPL conducts thorough
+        document verification of the borrower''s submitted documents, ensuring they
+        match the originals provided. Any discrepancies discovered during this process
+        result in the disqualification of the borrower and the cancellation of the
+        loan. Following successful document verification, the borrower is required
+        to sign legally binding agreements, known as ''Loan Agreements,'' with investors.
+        These agreements clearly outline the terms and conditions, ensuring both borrowers
+        and lenders comprehend their duties and responsibilities. Additionally, the
+        borrower must sign the mandate of the National Automated Clearing House (NACH)
+        to facilitate seamless repayment.
+
+        ', font_size: 17}
+    type: Label
+    layout_properties: {grid_position: 'ADIDAA,IGIOFI RUSYPL,DAUMCS'}
+  - name: label_103
+    properties: {text: '---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------'}
+    type: Label
+    layout_properties: {grid_position: 'HIBKOX,FYELJF'}
+  - name: spacer_28
+    properties: {height: 54.399993896484375}
+    type: Spacer
+    layout_properties: {grid_position: 'YCZGWL,PVJYOC OPVHVJ,RFOBBK'}
+  - name: image_23
+    properties: {source: _/theme/p7.png, display_mode: original_size}
+    type: Image
+    layout_properties: {grid_position: 'YCZGWL,PVJYOC HKHKEP,EVIYRQ'}
+  - name: label_104
+    properties: {text: Disbursal of Loan Amount, font_size: 17, bold: true}
+    type: Label
+    layout_properties: {grid_position: 'YCZGWL,YLFJWG KECDLA,QLCMZW'}
+  - name: label_105
+    properties: {text: 'Once the loan agreement is signed and the document verification
+        process successfully concludes, investors initiate the transfer of funds to
+        the escrow account to fulfill their commitments. This escrow account does
+        not accrue interest. Subsequently, the funds from the escrow account are disbursed
+        to the borrower''s bank account on the next working day.The entire disbursement
+        process adheres strictly to pre-approved guidelines and is under the supervision
+        of a SEBI-appointed trustee. This ensures complete transparency, automation,
+        and a seamless experience for all parties involved.
+
+        However, due to variations in the timing of fund transfers by individual lenders,
+        it may take a few days for borrowers to receive the entire loan amount. This
+        delay is a natural consequence of the staggered nature of lender contributions
+        and is managed within the framework of the lending platform''s procedures.
+
+        ', font_size: 17}
+    type: Label
+    layout_properties: {grid_position: 'YCZGWL,YLFJWG JJJBFV,UIHQCP'}
+  - name: spacer_32
+    properties: {height: 32}
+    type: Spacer
+    layout_properties: {grid_position: 'GVXQJA,FHHCNS'}
+  - name: label_106
+    properties: {text: Personal Loan Repayment, align: center, bold: true, font_size: 30}
+    type: Label
+    layout_properties: {grid_position: 'IHYKNF,TDMLBQ'}
+  - name: spacer_33
+    properties: {height: '12'}
+    type: Spacer
+    layout_properties: {grid_position: 'RUTNYS,HPGJIZ'}
+  - name: content_panel_copy_copy_3_copy_3_copy_2
+    properties: {col_widths: '{"QDLVMT":20,"BMTJIC":40,"SJXKVU":15,"BJMMDX":15,"JSUQYH":15,"AHSFTP":15}',
+      background: '#EBE1ED'}
+    type: ColumnPanel
+    layout_properties: {grid_position: 'QIDELV,CIEGMA', full_width_row: true}
+    components:
+    - name: spacer_35
+      properties: {height: 38.199981689453125}
+      type: Spacer
+      layout_properties: {grid_position: 'GRBHLA,QDLVMT XQAEHS,EJDOZA'}
+    - name: image_24
+      properties: {source: _/theme/hehe.png, display_mode: shrink_to_fit, height: '161.20001220703125'}
+      type: Image
+      layout_properties: {grid_position: 'GRBHLA,QDLVMT NUQVZD,ARXQMG'}
+    - name: label_107
+      properties: {text: Loan Repayment, bold: true, font_size: 18}
+      type: Label
+      layout_properties: {grid_position: 'GRBHLA,BMTJIC DTVHFE,MEQZFF'}
+    - name: label_108
+      properties: {text: 'The borrower is required to repay the loan through equal
+          monthly installments (EMIs), as outlined in the Loan Agreement. Similar
+          to the disbursement process, repayment is facilitated through an escrow
+          account held with the same intermediary bank, ensuring security and transparency.Borrowers
+          have access to their complete repayment history, including details of all
+          transactions made to date, by simply logging into their GTPL account. This
+          feature enables borrowers to stay informed about their repayment status
+          and track their progress throughout the loan tenure.', font_size: 17}
+      type: Label
+      layout_properties: {grid_position: 'GRBHLA,BMTJIC QJVOZI,JNUGWW'}
+    - name: spacer_37
+      properties: {height: 32}
+      type: Spacer
+      layout_properties: {grid_position: 'JZCEHM,LWUDOG'}
+    - name: spacer_34
+      properties: {height: 32}
+      type: Spacer
+      layout_properties: {grid_position: 'DLLTSL,SJXKVU OLHICG,FKXERJ'}
+    - name: image_26
+      properties: {source: _/theme/loan_pre-removebg-preview.png, display_mode: shrink_to_fit,
+        height: 161.20001220703125, role: null}
+      type: Image
+      layout_properties: {grid_position: 'DLLTSL,SJXKVU MDJARC,SMJIYN'}
+    - name: label_109
+      properties: {text: Loan Pre-Payment, bold: true, font_size: 18}
+      type: Label
+      layout_properties: {grid_position: 'DLLTSL,BJMMDX TGCAEU,JMNHGT'}
+    - name: label_110
+      properties: {text: There are no pre-payment or foreclosure charges on personal loan prepayment. Borrowers can prepay smaller amounts multiple times as per their convenience.,
+        font_size: 17}
+      type: Label
+      layout_properties: {grid_position: 'DLLTSL,BJMMDX BXLPRB,EQTTWT'}
+    - name: spacer_36
+      properties: {height: 32}
+      type: Spacer
+      layout_properties: {grid_position: 'DLLTSL,JSUQYH VBSIBS,WYRAXF'}
+    - name: image_25
+      properties: {source: _/theme/3-removebg-preview.png, display_mode: shrink_to_fit,
+        height: '161.20001220703125'}
+      type: Image
+      layout_properties: {grid_position: 'DLLTSL,JSUQYH PZAITQ,XBTBZZ'}
+    - name: label_111
+      properties: {text: Loan Completion, bold: true, font_size: 18}
+      type: Label
+      layout_properties: {grid_position: 'DLLTSL,AHSFTP IHBSWU,ZOPKZH'}
+    - name: label_112
+      properties: {text: 'Once the personal loan gets repaid in full along with all
+          the dues, the loan closure certificate is issued to the borrower. The borrower
+          may either post a new requirement or can even become an investor.', font_size: 17}
+      type: Label
+      layout_properties: {grid_position: 'DLLTSL,AHSFTP CVGVQR,YTDRNH'}
+  - name: spacer_38
+    properties: {height: '12'}
+    type: Spacer
+    layout_properties: {grid_position: 'AMLIDX,FLKAQN'}
+  - name: label_113
+    properties: {text: Terms and Conditions, align: center, bold: true, font_size: 30}
+    type: Label
+    layout_properties: {grid_position: 'VNZWEV,XLBXXM'}
+  - name: label_114
+    properties: {align: center, text: 'Please read, understand and accept our Terms
+        and Conditions  and Privacy Policy to complete the registration process. 
+        We expect all the users to comply with our Terms and Conditions and the Privacy
+        Policy at all times and in the case of any conflict with any content on the
+        website, Terms, and Conditions and the Privacy Policy will prevail.', font_size: 17}
+    type: Label
+    layout_properties: {grid_position: 'HHYGPV,HKIJEN'}
+  - name: label_115
+    properties: {text: 'If you have any query about our processes or Terms And Conditions,
+        please contact us.', align: center, font_size: 17}
+    type: Label
+    layout_properties: {grid_position: 'TEVDNN,TNONLN'}
+  - name: button_4
+    properties: {text: "Apply for Personal Loan Now interest \nrates starting from\
+        \ 12%", role: filled-button, background: '#013065', foreground: white, bold: true,
+      font_size: 18, align: center}
+    type: Button
+    layout_properties: {grid_position: 'MAISQG,ISRESB', full_width_row: true}
+  - name: spacer_39
+    properties: {height: 46.79998779296875}
+    type: Spacer
+    layout_properties: {grid_position: 'GUKDWU,XGQAZX'}
+  - name: column_panel_2
+    properties: {background: white, col_widths: '{"XHAILN":12,"SPJHOO":8,"WNWVDK":16,"YBBTWP":12,"QNSOAB":12}'}
+    type: ColumnPanel
+    layout_properties: {grid_position: 'FRIZCG,TGMTNA', full_width_row: true}
+    components:
+    - name: spacer_15_copy
+      properties: {height: 14.888885498046875}
+      type: Spacer
+      layout_properties: {grid_position: 'MMFQSR,XHAILN GZEMUS,BUIUBY'}
+    - name: image_29
+      properties: {vertical_align: center, height: 113, border: '', display_mode: zoom_to_fill,
+        spacing_above: none, source: _/theme/titled-design.jpg, spacing_below: large,
+        background: '', horizontal_align: left}
+      type: Image
+      layout_properties: {grid_position: 'MMFQSR,XHAILN'}
+      data_bindings: []
+    - name: spacer_41_copy_2
+      properties: {height: 21.555511474609375}
+      type: Spacer
+      layout_properties: {grid_position: 'MMFQSR,SPJHOO SCGGTB,GABWCY'}
+    - name: spacer_35_copy
+      properties: {height: 32}
+      type: Spacer
+      layout_properties: {grid_position: 'MMFQSR,SPJHOO DARVGB,SPSXSM'}
+    - name: link_7
+      properties: {text: Home, bold: true, font_size: 16, underline: true, foreground: black}
+      type: Link
+      layout_properties: {grid_position: 'MMFQSR,WNWVDK'}
+      event_bindings: {click: link_7_click}
+    - name: link_10
+      properties: {text: Investment, foreground: black, bold: true, font_size: 16,
+        underline: true}
+      type: Link
+      layout_properties: {grid_position: 'MMFQSR,WNWVDK NYPJXO,GZMCYD'}
+    - name: link_13
+      properties: {text: How It Works, foreground: black, bold: true, font_size: 16,
+        underline: true}
+      type: Link
+      layout_properties: {grid_position: 'MMFQSR,WNWVDK KEVRNO,FAGUHN'}
+    - name: link_11
+      properties: {text: Borrow, font_size: 16, bold: true, foreground: black, underline: true}
+      type: Link
+      layout_properties: {grid_position: 'MMFQSR,YBBTWP MOYVBC,DMAAWC'}
+    - name: link_8
+      properties: {text: Contact Us, foreground: black, underline: true, font_size: 16,
+        bold: true, align: left}
+      type: Link
+      layout_properties: {grid_position: 'MMFQSR,YBBTWP KKGCYO,GSVXOQ'}
+      event_bindings: {click: link_8_click}
+    - name: link_12
+      properties: {text: Help, foreground: black, bold: true, font_size: 16, underline: true}
+      type: Link
+      layout_properties: {grid_position: 'MMFQSR,QNSOAB IRVWEK,HAZHMM', full_width_row: true}
+      event_bindings: {click: link_12_click}
+    - name: link_9
+      properties: {text: About Us, bold: true, font_size: 16, underline: true, foreground: black}
+      type: Link
+      layout_properties: {grid_position: 'MMFQSR,QNSOAB MCUKZK,LUZRLG'}
+      event_bindings: {click: link_9_click}
+    - name: spacer_16_copy
+      properties: {height: 32.5999755859375}
+      type: Spacer
+      layout_properties: {grid_position: 'EEWYZY,CQBPUE'}
+    - name: grid_panel_2_copy
+      properties: {spacing_above: small, spacing_below: small, background: '#05264d',
+        foreground: '', border: '', visible: true, role: null, tooltip: ''}
+      type: GridPanel
+      layout_properties: {grid_position: 'RBHEDE,EWADTZ', full_width_row: true}
+      components:
+      - name: flow_panel_3_copy_1
+        properties: {role: null, vertical_align: full, spacing: medium, align: left,
+          tooltip: '', border: '', foreground: '', visible: true, spacing_above: none,
+          spacing_below: none, background: '#05264d'}
+        type: FlowPanel
+        layout_properties: {row: JUWDTC, width_xs: 5, col_xs: 0, width: 198.328}
+        components:
+        - name: label_4_copy_2
+          properties: {role: null, align: left, tooltip: '', border: '', foreground: white,
+            visible: true, text: '© 2023 - 2024, GTPL - All Rights    Reserved', font_size: null,
+            font: '', spacing_above: small, icon_align: left, spacing_below: small,
+            italic: false, background: '#05264d', bold: true, underline: false, icon: ''}
+          type: Label
+          layout_properties: {}
+      - name: link_5_copy
+        properties: {role: null, url: 'https://in.linkedin.com/?src=go-pa&trk=sem-ga_campid.14650114788_asid.151761418307_crid.657403558718_kw.linkedin%20login_d.c_tid.kwd-12704335873_n.g_mt.e_geo.9179915&mcid=6844056167778418689&cid=&gclid=EAIaIQobChMI1pr54ZHVggMVF6dmAh2IxgGNEAAYASAAEgKqevD_BwE&gclsrc=aw.ds',
+          align: left, tooltip: '', border: '', foreground: white, visible: true,
+          text: '', font_size: 30, wrap_on: mobile, font: '', col_spacing: medium,
+          spacing_above: small, icon_align: left, col_widths: '', spacing_below: small,
+          italic: false, background: '', bold: false, underline: false, icon: 'fa:linkedin-square'}
+        type: Link
+        layout_properties: {row: JUWDTC, width_xs: 1, col_xs: 8, width: 93.6875}
+      - name: link_2
+        properties: {role: null, url: 'https://www.facebook.com/', align: left, tooltip: '',
+          border: '', foreground: white, visible: true, text: '', font_size: 30, wrap_on: mobile,
+          font: '', col_spacing: medium, spacing_above: small, icon_align: left, col_widths: '',
+          spacing_below: small, italic: false, background: '', bold: false, underline: false,
+          icon: 'fa:facebook-square'}
+        type: Link
+        layout_properties: {row: JUWDTC, width_xs: 1, col_xs: 9, width: 93.6875}
+      - name: link_4_copy
+        properties: {role: null, url: 'https://www.instagram.com/accounts/login/',
+          align: left, tooltip: '', border: '', foreground: white, visible: true,
+          text: '', font_size: 30, wrap_on: mobile, font: '', col_spacing: medium,
+          spacing_above: small, icon_align: left, col_widths: '', spacing_below: small,
+          italic: false, background: '', bold: false, underline: false, icon: 'fa:instagram'}
+        type: Link
+        layout_properties: {row: JUWDTC, width_xs: 1, col_xs: 10, width: 93.6875}
+      - name: link_3
+        properties: {role: null, url: 'https://twitter.com/i/flow/login?input_flow_data=%7B%22requested_variant%22%3A%22eyJsYW5nIjoiZW4ifQ%3D%3D%22%7D',
+          align: left, tooltip: '', border: '', foreground: white, visible: true,
+          text: '', font_size: 30, wrap_on: mobile, font: '', col_spacing: medium,
+          spacing_above: small, icon_align: left, col_widths: '', spacing_below: small,
+          italic: false, background: th, bold: false, underline: false, icon: 'fa:twitter'}
+        type: Link
+        layout_properties: {row: JUWDTC, width_xs: 1, col_xs: 11, width: 93.6875}
 - type: FlowPanel
   properties: {}
   name: navbar_links
