@@ -31,7 +31,7 @@ class application_tracker(application_trackerTemplate):
                     'loan_disbursed_timestamp': loan['loan_disbursed_timestamp'],
                     'product_name': loan['product_name'],
                     'product_description': loan['product_description'],
-                    'lender_full_name': loan['lender_full_name'],
+                    'borrower_full_name': loan['borrower_full_name'],
                     'product_id': loan['product_id'],
                     'loan_id': loan['loan_id'],
                     'borrower_loan_created_timestamp':loan['borrower_loan_created_timestamp'],

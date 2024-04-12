@@ -13,13 +13,13 @@ class ItemTemplate68(ItemTemplate68Template):
   def __init__(self, **properties):
     self.init_components(**properties)
     self.user_id = main_form_module.userId   
-    user_data = app_tables.fin_loan_details.search()
+    user_data = app_tables.fin_loan_details.search(loan_updated_status=q.like('under proces%'), borrower_customer_id=self.user_id)
     for row in user_data:
         borrower_customer_id = row['borrower_customer_id']
         lender_customer_id = row['lender_customer_id']
         borrower_profile = app_tables.fin_user_profile.get(customer_id=borrower_customer_id)
         lender_profile = app_tables.fin_user_profile.get(customer_id=lender_customer_id)
-        self.image_1.source = lender_profile['user_photo']
+        self.image_1.source = borrower_customer_id['user_photo']
 
 
   def outlined_button_1_click(self, **event_args):
