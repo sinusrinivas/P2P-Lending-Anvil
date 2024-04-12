@@ -621,9 +621,6 @@ db_schema:
     - name: gender
       admin_ui: {order: 0.125, width: 200}
       type: string
-    - name: date_of_birth
-      admin_ui: {order: 6.875, width: 200}
-      type: date
     - name: aadhaar_photo
       admin_ui: {order: 6.953125, width: 200}
       type: media
@@ -950,6 +947,9 @@ db_schema:
       type: string
     - name: credit_card_loans
       admin_ui: {order: 0.998291015625, width: 200}
+      type: string
+    - name: date_of_birth
+      admin_ui: {width: 200, order: 8.5}
       type: string
     title: fin_user_profile
   fin_admin_beseem_categories:
