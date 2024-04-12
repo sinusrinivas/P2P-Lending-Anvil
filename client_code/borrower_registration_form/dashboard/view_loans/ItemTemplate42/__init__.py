@@ -13,7 +13,7 @@ class ItemTemplate42(ItemTemplate42Template):
   def __init__(self, **properties):
     self.init_components(**properties)
     self.user_id = main_form_module.userId   
-    user_data = app_tables.fin_loan_details.search()
+    user_data = app_tables.fin_loan_details.search(loan_updated_status=q.like('close%'), borrower_customer_id=self.user_id)
     for row in user_data:
         borrower_customer_id = row['borrower_customer_id']
         lender_customer_id = row['lender_customer_id']

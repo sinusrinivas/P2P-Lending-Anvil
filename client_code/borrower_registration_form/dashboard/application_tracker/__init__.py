@@ -21,7 +21,7 @@ class application_tracker(application_trackerTemplate):
     under_process_items = app_tables.fin_loan_details.search(loan_updated_status=q.like('under proces%'), borrower_customer_id=self.user_id)
     borrower_profiles = []
     for loan in under_process_items:
-            user_profile = app_tables.fin_user_profile.get(customer_id=loan['lender_customer_id'])
+            user_profile = app_tables.fin_user_profile.get(customer_id=loan['borrower_customer_id'])
             if user_profile is not None:
                 borrower_profiles.append({
                     'mobile': user_profile['mobile'],
