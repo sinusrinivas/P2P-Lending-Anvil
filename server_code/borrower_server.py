@@ -85,10 +85,11 @@ def add_borrower_step6(bank_id, bank_branch, user_id):
         row[0]['bank_id'] = bank_id
         row[0]['account_bank_branch'] = bank_branch
         # bessem_value = bessemfunctions.final_points_update_bessem_table(user_id)
-        
+        bessem_value = final_points_update_bessem_table(user_id)
         if bessem_value is not None:
            row[0]['bessem_value'] = float(bessem_value)
         else:
+           row[0]['bessem_value'] = 0.0
            print("Warning: bessem_value is None for user_id:", user_id)
         
         # row[0]['bessem_value'] = float(bessem_value)
