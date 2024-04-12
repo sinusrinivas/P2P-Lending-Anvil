@@ -20,6 +20,7 @@ class ItemTemplate43(ItemTemplate43Template):
         borrower_profile = app_tables.fin_user_profile.get(customer_id=borrower_customer_id)
         lender_profile = app_tables.fin_user_profile.get(customer_id=lender_customer_id)
         self.image_1.source = lender_profile['user_photo']
+        self.mobile.text = lender_profile['mobile']
 
 
     # Any code you write here will run before the form opens.
