@@ -31,20 +31,7 @@ class star_1_borrower_registration_form_5_bank_2(star_1_borrower_registration_fo
     else:
         anvil.server.call('add_borrower_step6', bank_id, bank_branch, user_id)
         open_form('borrower_registration_form.dashboard')
-          
 
-  # def button_2_click(self, **event_args):
-  #   bank_id = self.text_box_1.text
-  #   # salary_type = self.drop_down_1.selected_value
-  #   bank_branch = self.text_box_2.text
-  #   user_id = self.userId
-
-  #   if not bank_id or not bank_branch:
-  #       Notification("Please fill all required fields").show()
-  #   else:
-  #       # Call server function to add borrower with updated credit_limit
-  #       anvil.server.call('add_borrower_step6', bank_id, bank_branch, user_id)
-  #       open_form('borrower_registration_form.dashboard')
 
   def button_1_click(self, **event_args):
     open_form('borrower_registration_form.star_1_borrower_registration_form_5_bank_1',user_id=self.userId)
