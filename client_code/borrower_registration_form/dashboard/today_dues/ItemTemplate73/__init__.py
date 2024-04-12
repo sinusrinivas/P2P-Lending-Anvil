@@ -25,7 +25,6 @@ class ItemTemplate73(ItemTemplate73Template):
         self.image_1.source = lender_profile['user_photo']
 
 
-
     # Any code you write here will run before the form opens.
 
   def outlined_button_1_click(self, **event_args):
