@@ -926,12 +926,16 @@ components:
     properties: {text: Loan Application Process, align: center, bold: true, font_size: 30}
     type: Label
     layout_properties: {grid_position: 'IIIKKE,ANHNUT'}
+  - name: spacer_31
+    properties: {height: 32}
+    type: Spacer
+    layout_properties: {grid_position: 'PRWFNB,ACRXGK'}
   - name: image_17
     properties: {source: _/theme/p1.png, display_mode: original_size}
     type: Image
     layout_properties: {grid_position: 'CVZSYU,DXHHWT'}
   - name: label_86
-    properties: {text: Create a Borrower's Account}
+    properties: {text: Create a Borrower's Account, font_size: 17}
     type: Label
     layout_properties: {grid_position: 'CVZSYU,GJCQJQ YWTUFE,LDSUAD'}
   - name: label_87
@@ -941,11 +945,11 @@ components:
         a Borrower''s Account by completing a straightforward online form and submitting
         scanned self-attested copies of necessary documents
 
-        '}
+        ', italic: false, font_size: 17}
     type: Label
     layout_properties: {grid_position: 'CVZSYU,GJCQJQ RRTOVS,WAHIXZ'}
   - name: label_88
-    properties: {}
+    properties: {text: '---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------'}
     type: Label
     layout_properties: {grid_position: 'EBXYJX,LGQWVE'}
   - name: image_18
@@ -953,7 +957,7 @@ components:
     type: Image
     layout_properties: {grid_position: 'PUCGVT,JQQCEI'}
   - name: label_89
-    properties: {text: Profile Verification by GTPL}
+    properties: {text: Profile Verification by GTPL, font_size: 17}
     type: Label
     layout_properties: {grid_position: 'PUCGVT,UPJROI IJCUSR,LJWGRJ'}
   - name: label_90
@@ -964,19 +968,23 @@ components:
         Should any clarification or additional documentation be necessary, we may
         contact the borrower accordingly.
 
-        '}
+        ', font_size: 17}
     type: Label
     layout_properties: {grid_position: 'PUCGVT,UPJROI WSRWAA,PDCIYQ'}
   - name: label_91
-    properties: {}
+    properties: {text: '---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------'}
     type: Label
     layout_properties: {grid_position: 'PASYXK,MNFYJO'}
+  - name: spacer_30
+    properties: {height: 32}
+    type: Spacer
+    layout_properties: {grid_position: 'DVJQWN,EHUUCF VXKCON,EOQUKF'}
   - name: image_19
     properties: {source: _/theme/p3.png, display_mode: original_size}
     type: Image
     layout_properties: {grid_position: 'DVJQWN,EHUUCF'}
   - name: label_92
-    properties: {text: Approval of Loan Application by i2i}
+    properties: {text: Approval of Loan Application by i2i, font_size: 17}
     type: Label
     layout_properties: {grid_position: 'DVJQWN,NZRDPG FTYJYP,JWALNO'}
   - name: label_93
@@ -989,11 +997,11 @@ components:
         This rating is transparently displayed to both borrowers and investors. Utilizing
         this classification alongside other output parameters from the credit evaluation
         process, i2iFunding determines the applicable interest rate for each personal
-        loan.'}
+        loan.', font_size: 17}
     type: Label
     layout_properties: {grid_position: 'DVJQWN,NZRDPG FTDETP,XKYFMK'}
   - name: label_94
-    properties: {}
+    properties: {text: '---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------'}
     type: Label
     layout_properties: {grid_position: 'KKSXVF,GQRWRA'}
   - name: image_20
@@ -1001,7 +1009,7 @@ components:
     type: Image
     layout_properties: {grid_position: 'VTCDAX,GRGKMI'}
   - name: label_95
-    properties: {text: Listing of Loan in 'Active Borrowers' List}
+    properties: {text: Listing of Loan in 'Active Borrowers' List, font_size: 17}
     type: Label
     layout_properties: {grid_position: 'VTCDAX,OVDFTK ULWRID,XQIDZQ'}
   - name: label_96
@@ -1011,11 +1019,11 @@ components:
         further, the borrower must log in to our website and post the loan application,
         which will then be listed in the "Active Borrowers" section. The borrower
         has the flexibility to set the loan''s interest rate equal to or higher than
-        the rate assigned by GTPL.'}
+        the rate assigned by GTPL.', font_size: 17}
     type: Label
     layout_properties: {grid_position: 'VTCDAX,OVDFTK XVFZFK,VYJTFL'}
   - name: label_97
-    properties: {}
+    properties: {text: '---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------'}
     type: Label
     layout_properties: {grid_position: 'HFEPJS,SHVLUA'}
   - name: image_21
@@ -1023,7 +1031,7 @@ components:
     type: Image
     layout_properties: {grid_position: 'MTJIPB,MTEPWA'}
   - name: label_98
-    properties: {text: Funding of Loan by Investors}
+    properties: {text: Funding of Loan by Investors, font_size: 17}
     type: Label
     layout_properties: {grid_position: 'MTJIPB,THORQD ZIIJOS,CJVGPB'}
   - name: label_99
@@ -1032,53 +1040,95 @@ components:
         India. Interested lenders can express their intent to fund your loan. You
         can track the funding progress by accessing the ''My Account'' section on
         our platform. To facilitate a quicker funding process, borrowers are empowered
-        to directly message active lenders.'}
+        to directly message active lenders.', font_size: 17}
     type: Label
     layout_properties: {grid_position: 'MTJIPB,THORQD XCGWQI,IZGQMT'}
   - name: label_100
-    properties: {}
+    properties: {text: '---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------'}
     type: Label
     layout_properties: {grid_position: 'VREPST,BSZEBS'}
+  - name: spacer_29
+    properties: {height: 32}
+    type: Spacer
+    layout_properties: {grid_position: 'ADIDAA,NHLPOA ZKKJUX,KZFVRI'}
   - name: image_22
     properties: {source: _/theme/p6.png, display_mode: original_size}
     type: Image
-    layout_properties: {grid_position: 'ADIDAA,NHLPOA'}
+    layout_properties: {grid_position: 'ADIDAA,NHLPOA ASPLDB,TPHDYA'}
   - name: label_101
-    properties: {text: Document Verification}
+    properties: {text: Document Verification, font_size: 17}
     type: Label
     layout_properties: {grid_position: 'ADIDAA,IGIOFI ETSUUN,PTVPJE'}
   - name: label_102
-    properties: {text: '
+    properties: {text: 'Once the loan application is closed, GTPL conducts thorough
+        document verification of the borrower''s submitted documents, ensuring they
+        match the originals provided. Any discrepancies discovered during this process
+        result in the disqualification of the borrower and the cancellation of the
+        loan. Following successful document verification, the borrower is required
+        to sign legally binding agreements, known as ''Loan Agreements,'' with investors.
+        These agreements clearly outline the terms and conditions, ensuring both borrowers
+        and lenders comprehend their duties and responsibilities. Additionally, the
+        borrower must sign the mandate of the National Automated Clearing House (NACH)
+        to facilitate seamless repayment.
 
-        Once the loan application is closed, GTPL conducts thorough document verification
-        of the borrower''s submitted documents, ensuring they match the originals
-        provided. Any discrepancies discovered during this process result in the disqualification
-        of the borrower and the cancellation of the loan. Following successful document
-        verification, the borrower is required to sign legally binding agreements,
-        known as ''Loan Agreements,'' with investors. These agreements clearly outline
-        the terms and conditions, ensuring both borrowers and lenders comprehend their
-        duties and responsibilities. Additionally, the borrower must sign the mandate
-        of the National Automated Clearing House (NACH) to facilitate seamless repayment.
-
-        '}
+        ', font_size: 17}
     type: Label
     layout_properties: {grid_position: 'ADIDAA,IGIOFI RUSYPL,DAUMCS'}
   - name: label_103
-    properties: {}
+    properties: {text: '---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------'}
     type: Label
     layout_properties: {grid_position: 'HIBKOX,FYELJF'}
+  - name: spacer_28
+    properties: {height: 54.399993896484375}
+    type: Spacer
+    layout_properties: {grid_position: 'YCZGWL,PVJYOC OPVHVJ,RFOBBK'}
   - name: image_23
     properties: {source: _/theme/p7.png, display_mode: original_size}
     type: Image
-    layout_properties: {grid_position: 'YCZGWL,PVJYOC'}
+    layout_properties: {grid_position: 'YCZGWL,PVJYOC HKHKEP,EVIYRQ'}
   - name: label_104
-    properties: {text: Disbursal of Loan Amount}
+    properties: {text: Disbursal of Loan Amount, font_size: 17}
     type: Label
     layout_properties: {grid_position: 'YCZGWL,YLFJWG KECDLA,QLCMZW'}
   - name: label_105
-    properties: {}
+    properties: {text: 'Once the loan agreement is signed and the document verification
+        process successfully concludes, investors initiate the transfer of funds to
+        the escrow account to fulfill their commitments. This escrow account does
+        not accrue interest. Subsequently, the funds from the escrow account are disbursed
+        to the borrower''s bank account on the next working day.The entire disbursement
+        process adheres strictly to pre-approved guidelines and is under the supervision
+        of a SEBI-appointed trustee. This ensures complete transparency, automation,
+        and a seamless experience for all parties involved.
+
+        However, due to variations in the timing of fund transfers by individual lenders,
+        it may take a few days for borrowers to receive the entire loan amount. This
+        delay is a natural consequence of the staggered nature of lender contributions
+        and is managed within the framework of the lending platform''s procedures.
+
+        ', font_size: 17}
     type: Label
     layout_properties: {grid_position: 'YCZGWL,YLFJWG JJJBFV,UIHQCP'}
+  - name: spacer_32
+    properties: {height: 32}
+    type: Spacer
+    layout_properties: {grid_position: 'GVXQJA,FHHCNS'}
+  - name: label_106
+    properties: {text: Personal Loan Repayment, align: center, bold: true, font_size: 30}
+    type: Label
+    layout_properties: {grid_position: 'IHYKNF,TDMLBQ'}
+  - name: image_24
+    properties: {source: _/theme/hehe.png, display_mode: original_size}
+    type: Image
+    layout_properties: {grid_position: 'IKGHUL,CKLQFB'}
+  - name: image_25
+    properties: {source: _/theme/3.png, display_mode: fill_width}
+    type: Image
+    layout_properties: {grid_position: 'IKGHUL,RGGNCB'}
+  - name: image_26
+    properties: {source: _/theme/loan pre.png, display_mode: shrink_to_fit, height: 172.4833984375,
+      role: null}
+    type: Image
+    layout_properties: {grid_position: 'IKGHUL,GTRYHW'}
 - type: FlowPanel
   properties: {}
   name: navbar_links
