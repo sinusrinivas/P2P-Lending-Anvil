@@ -216,7 +216,11 @@ class star_1_borrower_registration_form_3_marital_married(star_1_borrower_regist
   
     def button_submit_click(self, **event_args):
        details = self.collect_details()
-    
+
+       # Check if any required field is empty
+       # if not details['father_name'] or not details['father_dob'] or not details['father_mbl_no'] or not details['father_profession'] or not details['father_address']:
+       #    Notification("Please fill all the required fields").show()
+       #    return
        existing_row = app_tables.fin_guarantor_details.get(customer_id=self.userId)
     
        if existing_row is None:
@@ -249,14 +253,22 @@ class star_1_borrower_registration_form_3_marital_married(star_1_borrower_regist
     
        # Validations...
        errors = []
+       if not details['father_name'] or not details['father_dob'] or not details['father_mbl_no'] or not details['father_profession'] or not details['father_address']:
+          errors.append("Please fill all the required fields")
        if not re.match(r'^[A-Za-z\s]+$', details['father_name']):
          errors.append("Enter a valid full name!")
-       if not details['father_dob'] or details['father_dob'] > datetime.now().date():
+       elif details['father_dob'] > datetime.now().date():
+       #if not details['father_dob'] or details['father_dob'] > datetime.now().date():
          errors.append("Enter a valid date of birth!")
-       if datetime.now().date() - details['father_dob'] < timedelta(days=365 * 18):
-         errors.append("You must be at least 18 years old!")
+       else:
+           age = datetime.now().date() - details['father_dob']
+           if age.days < 365 * 18:
+            errors.append("You must be at least 18 years old!") 
+       # if datetime.now().date() - details['father_dob'] < timedelta(days=365 * 18):
+       #   errors.append("You must be at least 18 years old!")
        if not re.match(r'^\d{10}$', str(details['father_mbl_no'])):
          errors.append("Enter a valid mobile no!")
+       
 
        if errors:
          Notification("\n".join(errors)).show()
