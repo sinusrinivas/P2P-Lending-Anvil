@@ -216,7 +216,11 @@ class star_1_borrower_registration_form_3_marital_married(star_1_borrower_regist
   
     def button_submit_click(self, **event_args):
        details = self.collect_details()
-    
+
+       # Check if any required field is empty
+       if not details['father_name'] or not details['father_dob'] or not details['father_mbl_no'] or not details['father_profession'] or not details['father_address']:
+          Notification("Please fill all the required fields").show()
+          return
        existing_row = app_tables.fin_guarantor_details.get(customer_id=self.userId)
     
        if existing_row is None:
@@ -257,6 +261,8 @@ class star_1_borrower_registration_form_3_marital_married(star_1_borrower_regist
          errors.append("You must be at least 18 years old!")
        if not re.match(r'^\d{10}$', str(details['father_mbl_no'])):
          errors.append("Enter a valid mobile no!")
+       # if not details['father_name'] or not details['father_dob'] or not details['father_mbl_no'] or not details['father_profession'] or not details['father_address']:
+       #    errors.append("Please fill all the required fields")
 
        if errors:
          Notification("\n".join(errors)).show()
