@@ -16,27 +16,17 @@ class lender_registration_form_4_bank_form_2(lender_registration_form_4_bank_for
     user_data = anvil.server.call('get_user_data', user_id)
     if user_data:
             self.bank_id = user_data.get('bank_id', '')
-            # self.salary_type = user_data.get('salary_type', '')
             self.branch_name = user_data.get('account_bank_branch', '')
             
     else:
         self.bank_id = ''
-        # self.salary_type = ''
         self.branch_name = ''
 
        #Restore previously entered data if available
     if self.bank_id:
             self.text_box_1.text= self.bank_id
-    # if self.salary_type:
-    #         self.drop_down_1.selected_value = self.salary_type
     if self.branch_name:
           self.text_box_2.text = self.branch_name
-
-    # options = app_tables.fin_lendor_manage_dropdown.search()
-    # options_string =[str(option['salary_type']) for option in options]
-    # self.drop_down_1.items = options_string
-
-    # Any code you write here will run before the form opens.
 
   def button_2_click(self, **event_args):
     user_id = self.userId
