@@ -32,7 +32,7 @@ class star_1_borrower_registration_form_2_employment_emp_detail_2(star_1_borrowe
     elif not business_phone_number.isdigit():
         Notification("Business number should be valid").show()
     else:
-      anvil.server.call('add_lendor_individual_form_2',business_phone_number, landmark,comp_address,user_id)
+      anvil.server.call('add_lendor_individual_form_2',comp_address,landmark,business_phone_number,user_id)
       open_form('borrower_registration_form.star_1_borrower_registration_form_2_employment.star_1_borrower_registration_form_2_employment_emp_detail_3',user_id=user_id)
 
 
