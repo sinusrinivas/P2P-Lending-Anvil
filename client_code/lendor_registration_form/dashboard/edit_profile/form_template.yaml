@@ -74,7 +74,7 @@ components:
     - name: label_1
       properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
         visible: true, text: 'Full Name:', font_size: null, font: '', spacing_above: small,
-        icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+        icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
         underline: false, icon: ''}
       type: Label
       layout_properties: {grid_position: 'PGOSPX,UKHNHY'}
@@ -85,7 +85,7 @@ components:
     - name: label_3
       properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
         visible: true, text: 'Email ID:', font_size: null, font: '', spacing_above: small,
-        icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+        icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
         underline: false, icon: ''}
       type: Label
       layout_properties: {grid_position: 'FZDGBI,MMNRHP'}
@@ -96,7 +96,7 @@ components:
     - name: label_5
       properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
         visible: true, text: 'Mobile No:', font_size: null, font: '', spacing_above: small,
-        icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+        icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
         underline: false, icon: ''}
       type: Label
       layout_properties: {grid_position: 'EHABEP,NWHELF'}
@@ -107,7 +107,7 @@ components:
     - name: label_7
       properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
         visible: true, text: 'Your Date Of Birth:', font_size: null, font: '', spacing_above: small,
-        icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+        icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
         underline: false, icon: ''}
       type: Label
       layout_properties: {grid_position: 'MUBUVL,GCVFSW'}
@@ -118,7 +118,7 @@ components:
     - name: label_9
       properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
         visible: true, text: City, font_size: null, font: '', spacing_above: small,
-        icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+        icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
         underline: false, icon: ''}
       type: Label
       layout_properties: {grid_position: 'XKKSLZ,LXYJNB'}
@@ -129,7 +129,7 @@ components:
     - name: label_13
       properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
         visible: true, text: 'Gender:', font_size: null, font: '', spacing_above: small,
-        icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+        icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
         underline: false, icon: ''}
       type: Label
       layout_properties: {grid_position: 'FVSXOQ,QKUJFL'}
@@ -144,7 +144,7 @@ components:
     - name: label_15
       properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
         visible: true, text: 'Mother Tongue:', font_size: null, font: '', spacing_above: small,
-        icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+        icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
         underline: false, icon: ''}
       type: Label
       layout_properties: {grid_position: 'WEWYLI,NWHUNG'}

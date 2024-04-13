@@ -74,7 +74,7 @@ components:
     type: Label
     layout_properties: {x: 78.4749984741211, y: 0, width: 200}
     data_bindings:
-    - {property: text, code: 'self.item[''lender_full_name'']', writeback: false}
+    - {property: text, code: 'self.item[''borrower_full_name'']', writeback: false}
   - type: TextArea
     properties: {role: null, align: left, height: 56, tooltip: '', placeholder: '',
       border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,

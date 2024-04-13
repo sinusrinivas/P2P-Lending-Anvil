@@ -21,8 +21,9 @@ class ItemTemplate73(ItemTemplate73Template):
         borrower_customer_id = row['borrower_customer_id']
         lender_customer_id = row['lender_customer_id']
         borrower_profile = app_tables.fin_user_profile.get(customer_id=borrower_customer_id)
-        lender_profile = app_tables.fin_user_profile.search(customer_id=lender_customer_id)
-        self.image_1.source = lender_profile['user_photo']
+        lender_profile = app_tables.fin_user_profile.get(customer_id=lender_customer_id)
+        if lender_profile is not None:
+          self.image_1.source = lender_profile['user_photo']
 
 
     # Any code you write here will run before the form opens.
