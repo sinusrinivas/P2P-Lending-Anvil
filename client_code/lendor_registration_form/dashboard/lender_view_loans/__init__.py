@@ -7,7 +7,7 @@ import anvil.users
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
-from .. import lendor_main_form_module as main_form_module
+from .. import main_form_module as main_form_module
 
 
 class lender_view_loans(lender_view_loansTemplate):
@@ -27,7 +27,7 @@ class lender_view_loans(lender_view_loansTemplate):
                 q.like('foreclosure%'),
                 q.like('extension%')
             ),
-          lender_customer_id=self.user_id
+           lender_customer_id=self.user_id
         )
         self.repeating_panel_6.items = self.process_data(open_loans)
         self.label_5.text = str(len(self.repeating_panel_6.items))
@@ -55,8 +55,8 @@ class lender_view_loans(lender_view_loansTemplate):
   def process_data(self, data):
     profiles_with_loans = []
     for loan in data:
-        # user_profile = app_tables.fin_user_profile.get(customer_id=loan['borrower_customer_id'])
-        # if user_profile is not None:
+        user_profile = app_tables.fin_user_profile.get(customer_id=loan['borrower_customer_id'])
+        if user_profile is not None:
             profiles_with_loans.append({
                 # 'mobile': user_profile['mobile'],
                 'interest_rate': loan['interest_rate'],
