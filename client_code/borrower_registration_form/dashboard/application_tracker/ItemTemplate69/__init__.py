@@ -14,7 +14,7 @@ class ItemTemplate69(ItemTemplate69Template):
     self.init_components(**properties)
     self.user_id = main_form_module.userId 
     print(self.user_id)
-    user_data = app_tables.fin_loan_details.search()
+    user_data = app_tables.fin_loan_details.search(loan_updated_status=q.like('approved%'), borrower_customer_id=self.user_id)
     for row in user_data:
         borrower_customer_id = row['borrower_customer_id']
         lender_customer_id = row['lender_customer_id']

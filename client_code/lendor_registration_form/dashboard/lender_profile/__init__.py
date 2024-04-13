@@ -24,7 +24,7 @@ class lender_profile(lender_profileTemplate):
       self.city.text=user_profile['city']
       # self.pan_text.text=user_profile['pan_number']
       self.gender.text=user_profile['gender']
-      self.language.text=user_profile['mouther_tounge']
+      # self.language.text=user_profile['mouther_tounge']
       self.image_1.source = user_profile['user_photo']
       self.status.text=user_profile['marital_status']
 

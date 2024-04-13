@@ -17,7 +17,8 @@ class today_dues(today_duesTemplate):
 
         all_loans_disbursed = app_tables.fin_loan_details.search(
             loan_updated_status=q.any_of("disbursed loan", "extension", "foreclosure"),
-            first_emi_payment_due_date=q.less_than_or_equal_to(today_date)
+            first_emi_payment_due_date=q.less_than_or_equal_to(today_date),
+            borrower_customer_id=self.user_id
         )
         
         for loan in all_loans_disbursed:
