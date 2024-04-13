@@ -375,7 +375,7 @@ class Borr_loan_request(Borr_loan_requestTemplate):
         loan_deta = app_tables.fin_loan_details.get(loan_id=self.label_loan_id.text)
         if loan_deta is not None:
             self.lender_customer_id = loan_deta['lender_customer_id']
-            print("lenderrrrrrrrrrrrrrrrrrrrrrrrr", self.lender_customer_id)
+            print("lender", self.lender_customer_id)
           
         
         self.update_ui_based_on_status()
@@ -452,7 +452,7 @@ class Borr_loan_request(Borr_loan_requestTemplate):
             )
           
             num_existing_loans = len(existing_loans)
-            print("Existing Loans:", existing_loans)  
+            print("Existing Loans:", num_existing_loans)  
 
             closed_loans = app_tables.fin_loan_details.search(
                 borrower_customer_id=borrower_customer,
@@ -463,7 +463,7 @@ class Borr_loan_request(Borr_loan_requestTemplate):
                 ))
           
             num_closed_loans = len(closed_loans)
-            print("Closed Loans:", closed_loans)  
+            print("Closed Loans:", num_closed_loans)  
 
             # Avoid division by zero
             if num_existing_loans > 0:
@@ -509,7 +509,7 @@ class Borr_loan_request(Borr_loan_requestTemplate):
 
     def accepted_btn_click(self, **event_args):
         """This method is called when the button is clicked"""
-        
+        selected_row = self.selected_row 
         self.accepted_btn.visible = True
         self.rejected_btn.visible = False
         self.loan_disbursment_btn.visible = False
@@ -519,12 +519,12 @@ class Borr_loan_request(Borr_loan_requestTemplate):
         self.output_label1.text = "This Borrower Loan is Accepted"
         self.output_label1.foreground = '#0000FF'  # Blue color
         self.output_label1.visible = True
-        # Update the 'loan_updated_status' column in the 'loan_details' table to 'accepted'
-        self.selected_row['loan_updated_status'] = 'accepted'
-        self.selected_row['lender_accepted_timestamp'] = datetime.now()
-        # Save changes to the table
-        self.selected_row.update()
-        # Update UI based on the new status
+        loan_details = app_tables.fin_loan_details.get(loan_id=str(selected_row['loan_id']))
+        if loan_details is not None:
+           loan_details['loan_updated_status'] = 'accepted'
+           loan_details['lender_accepted_timestamp'] = datetime.now()
+           loan_details.update()
+        
         Notification("Borrower will get notified").show()
         self.update_ui_based_on_status()
         self.loan_disbursment_btn.visible = True
@@ -532,7 +532,7 @@ class Borr_loan_request(Borr_loan_requestTemplate):
 
     def rejected_btn_click(self, **event_args):
         """This method is called when the button is clicked"""
-        
+        selected_row = self.selected_row 
         self.accepted_btn.visible = False
         self.rejected_btn.visible = True
         self.loan_disbursment_btn.visible = False
@@ -542,11 +542,11 @@ class Borr_loan_request(Borr_loan_requestTemplate):
         self.output_label1.text = "This Borrower Loan is Rejected"
         self.output_label1.foreground = '#FF0000'  # Red color
         self.output_label1.visible = True
-        # Update the 'loan_updated_status' column in the 'loan_details' table to 'Rejected'
-        self.selected_row['loan_updated_status'] = 'rejected'
-        # Save changes to the table
-        self.selected_row.update()
-        # Update UI based on the new status
+        loan_details = app_tables.fin_loan_details.get(loan_id=str(selected_row['loan_id']))
+        if loan_details is not None:
+           loan_details['loan_updated_status'] = 'rejected'
+           loan_details.update()
+
         self.update_ui_based_on_status()
         
 
@@ -579,7 +579,6 @@ class Borr_loan_request(Borr_loan_requestTemplate):
 
     def loan_disbursment_btn_click(self, **event_args):
         """This method is called when the button is clicked"""
-        # Ensure that selected_row is not None before proceeding
         if self.selected_row is None:
           alert("Selected row is not available.")
           return
@@ -605,12 +604,10 @@ class Borr_loan_request(Borr_loan_requestTemplate):
             self.selected_row['loan_disbursed_timestamp'] = datetime.now()
             emi_payment_type = self.selected_row['emi_payment_type']
     
-            # Calculate and set the first EMI payment due date (only date portion)
             loan_disbursed_timestamp = self.selected_row['loan_disbursed_timestamp']
             first_emi_due_date = self.calculate_first_emi_due_date(emi_payment_type, loan_disbursed_timestamp, tenure)
             
             self.selected_row['first_emi_payment_due_date'] = first_emi_due_date
-    
             entered_borrower_customer_id = self.entered_borrower_customer_id
             # Convert entered_borrower_customer_id to integer
             try:
@@ -636,7 +633,7 @@ class Borr_loan_request(Borr_loan_requestTemplate):
               wallet_add.update()
 
               # Call the transfer_money function
-              
+              transfer_money(lender_id = self.lender_customer_id, borrower_id=entered_borrower_customer_id, transfer_amount=loan_amount)
     
               # You may want to update the loan_updated_status here if needed
               updated_loan_status = 'disbursed loan'

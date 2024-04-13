@@ -29,7 +29,7 @@ class view_borrower_loan_request(view_borrower_loan_requestTemplate):
 
         # Loop through each loan request and append additional details
     for loan in loan_requests:
-            # Example: Get borrower's profile based on borrower_customer_id
+
             borrower_profile = app_tables.fin_user_profile.get(customer_id=loan['borrower_customer_id'])
             if borrower_profile is not None:
                 loan_requests_with_details.append({
@@ -47,14 +47,15 @@ class view_borrower_loan_request(view_borrower_loan_requestTemplate):
                     'loan_updated_status': loan['loan_updated_status'],
                     'emi_payment_type': loan['emi_payment_type'],
                      'borrower_customer_id': loan['borrower_customer_id'],
+                     'lender_accepted_timestamp':loan['lender_accepted_timestamp'],
+                     'emi_payment_type':loan['emi_payment_type']
                      # 'borrower_customer_id': loan['borrower_customer_id']
                     # Add other details you want to include
-                                                  })
-          
+                                                  })          
 
-        # Set the items for the repeating panel
+    
     self.repeating_panel_2.items = loan_requests_with_details
-    anvil.server.call('transfer_user_profile_to_loan_details', email,self.user_id) 
+    anvil.server.call('transfer_user_profile_to_loan_details', email,user_id) 
 
   
   def button_1_click(self, **event_args):

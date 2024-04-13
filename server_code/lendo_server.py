@@ -428,16 +428,18 @@ def add_loan_details_data(loan_id, lender_customer_id, lender_email_id, lender_f
 ## Code for loan disbusement
 @anvil.server.callable
 def loan_disbursement_action(selected_row, email):
-    # Assuming 'selected_row' is the row from the loan_details table
     loan_amount = selected_row['loan_amount']
     print("Loan amount:", loan_amount)
     lender_accepted_timestamp = selected_row['lender_accepted_timestamp']
-    print("lender_accepted_timestamp timezone:", lender_accepted_timestamp.tzinfo)
+    if lender_accepted_timestamp is not None:
+        print("lender_accepted_timestamp timezone:", lender_accepted_timestamp.tzinfo)
 
-    # Convert lender_accepted_timestamp to UTC if it's not already
-    if lender_accepted_timestamp.tzinfo is None:
-        lender_accepted_timestamp = lender_accepted_timestamp.replace(tzinfo=timezone.utc)
-        print("lender_accepted_timestamp converted to UTC")
+        # Convert lender_accepted_timestamp to UTC if it's not already
+        if lender_accepted_timestamp.tzinfo is None:
+            lender_accepted_timestamp = lender_accepted_timestamp.replace(tzinfo=timezone.utc)
+            print("lender_accepted_timestamp converted to UTC")
+    else:
+        print("lender_accepted_timestamp is None, unable to proceed")
   
     # Retrieve the rows from the wallet table based on the user's email
     wallet_rows = app_tables.fin_wallet.search(user_email=email)

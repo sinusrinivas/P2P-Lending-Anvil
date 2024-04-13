@@ -94,7 +94,7 @@ class wallet(walletTemplate):
     except ValueError:
         alert("Please enter a valid amount.")
         return
-
+    amount_entered = ' '
     customer_id = self.user_id
     email = self.email
 
@@ -116,7 +116,7 @@ class wallet(walletTemplate):
         withdraw_amount = int(amount_entered)
     except ValueError:
         return  
-    
+    amount_entered = ' '
     customer_id = self.user_id
     email = self.email  
     
