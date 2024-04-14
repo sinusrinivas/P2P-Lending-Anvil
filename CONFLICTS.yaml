@@ -1,0 +1,11 @@
+merge:
+  parents: [b0d2c0389c8354499a72119fbaa76c7fd6952fb7, f729946fa78363ca0c08833e0a4de1ca1f2a2aae]
+  base: f85e03b1fbb32f946ac3d951b6aaad7139dd614e
+conflicting_items:
+- text_chunks:
+  - start: 603
+    alternatives:
+    - {s: E, l: 603, n: 0}
+    - {s: B, l: 603, n: 6}
+  item: [client_code, lendor_registration_form.dashboard.view_borrower_loan_request.Borr_loan_request]
+  app_path: [CODE, forms/lendor_registration_form.dashboard.view_borrower_loan_request.Borr_loan_request]

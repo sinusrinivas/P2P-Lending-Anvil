@@ -28,8 +28,6 @@ class wallet_deposit(wallet_depositTemplate):
     start_time = self.start_time
     
     self.check_time_difference()
-    
-    
 
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
@@ -193,7 +191,7 @@ class wallet_deposit(wallet_depositTemplate):
     loan_deta = app_tables.fin_loan_details.get(loan_id=entered_loan_id)
     if loan_deta is not None:
         self.lender_customer_id = loan_deta['lender_customer_id']
-        print("lenderrrrrrrrrrrrrrrrrrrrrrrrr", self.lender_customer_id)
+        print("lender", self.lender_customer_id)
     wallet_row = app_tables.fin_wallet.get(user_email=email)
     if wallet_row:
       entered_loan_id = self.entered_loan_id
