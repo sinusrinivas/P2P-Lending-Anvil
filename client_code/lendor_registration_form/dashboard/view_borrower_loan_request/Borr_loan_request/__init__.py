@@ -524,7 +524,8 @@ class Borr_loan_request(Borr_loan_requestTemplate):
            loan_details['loan_updated_status'] = 'accepted'
            loan_details['lender_accepted_timestamp'] = datetime.now()
            loan_details.update()
-        
+        lender_accepted_timestamp = loan_details['lender_accepted_timestamp'] 
+        print("Lender accepted timestamp1:", lender_accepted_timestamp)
         Notification("Borrower will get notified").show()
         self.update_ui_based_on_status()
         self.loan_disbursment_btn.visible = True

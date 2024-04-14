@@ -160,6 +160,7 @@ class wallet_deposit(wallet_depositTemplate):
 
             if wallet_row and loan_row:
                 loan_amount = loan_row['loan_amount']
+                lender_accepted_timestamp = loan_row['lender_accepted_timestamp']
                 wallet_amount = wallet_row['wallet_amount']
                 entered_loan_id = self.entered_loan_id 
                 entered_borrower_customer_id = self.entered_borrower_customer_id
@@ -200,6 +201,7 @@ class wallet_deposit(wallet_depositTemplate):
       if loan_row:
         # Get the loan_amount and subtract it from the wallet_amount
         loan_amount = loan_row['loan_amount']
+        lender_accepted_timestamp = loan_amount['lender_accepted_timestamp']
         loan_updated_status = loan_row["loan_updated_status"]
         loan_disbursed_timestamp = loan_row["loan_disbursed_timestamp"]
         new_balance = wallet_row['wallet_amount'] - loan_amount
