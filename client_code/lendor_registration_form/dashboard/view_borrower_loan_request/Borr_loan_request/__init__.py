@@ -610,7 +610,7 @@ class Borr_loan_request(Borr_loan_requestTemplate):
     
             loan_disbursed_timestamp = loan_row['loan_disbursed_timestamp']
             first_emi_due_date = self.calculate_first_emi_due_date(emi_payment_type, loan_disbursed_timestamp, tenure)
-            
+            loan_row['first_emi_payment_due_date'] = first_emi_due_date
             self.selected_row['first_emi_payment_due_date'] = first_emi_due_date
             entered_borrower_customer_id = self.entered_borrower_customer_id
             # Convert entered_borrower_customer_id to integer
