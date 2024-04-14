@@ -560,9 +560,9 @@ class Borr_loan_request(Borr_loan_requestTemplate):
     def calculate_first_emi_due_date(self, emi_payment_type, loan_disbursed_timestamp, tenure):
         if emi_payment_type == "Monthly":
             first_emi_due_date = (loan_disbursed_timestamp + timedelta(days=30)).date()
-        elif emi_payment_type == "Three Month":
+        elif emi_payment_type == "Three Months":
             first_emi_due_date = (loan_disbursed_timestamp + timedelta(days=90)).date()
-        elif emi_payment_type == "Six Month":
+        elif emi_payment_type == "Six Months":
             first_emi_due_date = (loan_disbursed_timestamp + timedelta(days=180)).date()
         elif emi_payment_type == "One Time":
             if tenure:
@@ -607,6 +607,10 @@ class Borr_loan_request(Borr_loan_requestTemplate):
                 emi_payment_type = loan_row['emi_payment_type']
                 tenure = loan_row['tenure']
                 loan_disbursed_timestamp = loan_row['loan_disbursed_timestamp']
+
+                print("emi_payment_type:", emi_payment_type)
+                print("loan_disbursed_timestamp:", loan_disbursed_timestamp)
+                print("tenure:", tenure)
 
                 first_emi_due_date = self.calculate_first_emi_due_date(emi_payment_type, loan_disbursed_timestamp, tenure)
                 

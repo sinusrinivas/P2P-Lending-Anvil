@@ -272,9 +272,9 @@ class wallet_deposit(wallet_depositTemplate):
   def calculate_first_emi_due_date(self, emi_payment_type, loan_disbursed_timestamp, tenure):
         if emi_payment_type == "Monthly":
             first_emi_due_date = (loan_disbursed_timestamp + timedelta(days=30)).date()
-        elif emi_payment_type == "Three Month":
+        elif emi_payment_type == "Three Months":
             first_emi_due_date = (loan_disbursed_timestamp + timedelta(days=90)).date()
-        elif emi_payment_type == "Six Month":
+        elif emi_payment_type == "Six Months":
             first_emi_due_date = (loan_disbursed_timestamp + timedelta(days=180)).date()
         elif emi_payment_type == "One Time":
             if tenure:
