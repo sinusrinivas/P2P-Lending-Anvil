@@ -558,30 +558,30 @@ class Borr_loan_request(Borr_loan_requestTemplate):
         signal = anvil.server.call('open_wallet_form')
 
     def calculate_first_emi_due_date(self, emi_payment_type, loan_disbursed_timestamp, tenure):
-      if emi_payment_type == "Monthly":
-        first_emi_due_date = (loan_disbursed_timestamp + timedelta(days=30)).date()
-      elif emi_payment_type == "Three Month":
-        first_emi_due_date = (loan_disbursed_timestamp + timedelta(days=90)).date()
-      elif emi_payment_type == "Six Month":
-        first_emi_due_date = (loan_disbursed_timestamp + timedelta(days=180)).date()
-      elif emi_payment_type == "One Time":
-        if tenure:
-            # Add the tenure in months to the loan_disbursed_timestamp
-            first_emi_due_date = (loan_disbursed_timestamp + timedelta(days=30 * tenure)).date()
+        if emi_payment_type == "Monthly":
+            first_emi_due_date = (loan_disbursed_timestamp + timedelta(days=30)).date()
+        elif emi_payment_type == "Three Month":
+            first_emi_due_date = (loan_disbursed_timestamp + timedelta(days=90)).date()
+        elif emi_payment_type == "Six Month":
+            first_emi_due_date = (loan_disbursed_timestamp + timedelta(days=180)).date()
+        elif emi_payment_type == "One Time":
+            if tenure:
+                # Add the tenure in months to the loan_disbursed_timestamp
+                first_emi_due_date = (loan_disbursed_timestamp + timedelta(days=30 * tenure)).date()
+            else:
+                # Handle the case where tenure is not provided (raise an exception or set to None)
+                first_emi_due_date = None
         else:
-            # Handle the case where tenure is not provided (raise an exception or set to None)
+            # Handle other cases or raise an exception as needed
             first_emi_due_date = None
-      else:
-        # Handle other cases or raise an exception as needed
-        first_emi_due_date = None
 
-      return first_emi_due_date
+        return first_emi_due_date
 
     def loan_disbursment_btn_click(self, **event_args):
         """This method is called when the button is clicked"""
         if self.selected_row is None:
-          alert("Selected row is not available.")
-          return
+            alert("Selected row is not available.")
+            return
         
         selected_row = self.selected_row  
         tenure = selected_row['tenure']
@@ -603,47 +603,50 @@ class Borr_loan_request(Borr_loan_requestTemplate):
             alert("Pay to Borrower")
             loan_row = app_tables.fin_loan_details.get(loan_id=entered_loan_id)
             if loan_row:
-              loan_row['loan_disbursed_timestamp'] = datetime.now()
-              emi_payment_type = loan_row['emi_payment_type']
-            # loan_disbursed_timestamp = datetime.now()
-            # emi_payment_type = self.selected_row['emi_payment_type']
-    
-            loan_disbursed_timestamp = loan_row['loan_disbursed_timestamp']
-            first_emi_due_date = self.calculate_first_emi_due_date(emi_payment_type, loan_disbursed_timestamp, tenure)
-            loan_row['first_emi_payment_due_date'] = first_emi_due_date
-            # self.selected_row['first_emi_payment_due_date'] = first_emi_due_date
+                loan_row['loan_disbursed_timestamp'] = datetime.now()
+                emi_payment_type = loan_row['emi_payment_type']
+                tenure = loan_row['tenure']
+                loan_disbursed_timestamp = loan_row['loan_disbursed_timestamp']
+
+                first_emi_due_date = self.calculate_first_emi_due_date(emi_payment_type, loan_disbursed_timestamp, tenure)
+                
+                # Check if first_emi_due_date is calculated successfully
+                if first_emi_due_date:
+                    loan_row['first_emi_payment_due_date'] = first_emi_due_date
+                    loan_row.update()
+                else:
+                    alert("Error calculating first EMI due date.")
+                    return
+            else:
+                alert("Loan row not found.")
+                return
+
             entered_borrower_customer_id = self.entered_borrower_customer_id
             # Convert entered_borrower_customer_id to integer
             try:
-              entered_borrower_customer_id = int(entered_borrower_customer_id)
-              print("entered_loan_id:", entered_loan_id)
-              print("entered_borrower_customer_id:", entered_borrower_customer_id)
-              
+                entered_borrower_customer_id = int(entered_borrower_customer_id)
+                print("entered_loan_id:", entered_loan_id)
+                print("entered_borrower_customer_id:", entered_borrower_customer_id)
+                
             except ValueError:
-              alert("Please enter a valid customer ID.")
-              return
-            # Search for the row in fin_wallet table
-            loan_row = app_tables.fin_loan_details.get(loan_id=entered_loan_id)
+                alert("Please enter a valid customer ID.")
+                return
             
-            if loan_row:
-              loan_amount = loan_row['loan_amount']
-              wallet_add = app_tables.fin_wallet.get(customer_id=entered_borrower_customer_id)
-              transfer_money(lender_id = self.lender_customer_id, borrower_id=entered_borrower_customer_id, transfer_amount=loan_amount)
-              if wallet_add:
+            # Search for the row in fin_wallet table
+            wallet_add = app_tables.fin_wallet.get(customer_id=entered_borrower_customer_id)       
+            if wallet_add:
+                loan_amount = loan_row['loan_amount']
                 wallet_add['wallet_amount'] += loan_amount
                 wallet_add.update()
-                loan_amount = loan_row['loan_amount']
-              wallet_add['wallet_amount'] += loan_amount
-              wallet_add.update()
+            
+            # Call the transfer_money function
+            transfer_money(lender_id=self.lender_customer_id, borrower_id=entered_borrower_customer_id, transfer_amount=loan_amount)
 
-              # Call the transfer_money function
-              transfer_money(lender_id = self.lender_customer_id, borrower_id=entered_borrower_customer_id, transfer_amount=loan_amount)
-    
-              # You may want to update the loan_updated_status here if needed
-              updated_loan_status = 'disbursed loan'
-              loan_row['loan_updated_status'] = updated_loan_status
-              # Save the changes to the loan_row
-              loan_row.update()
+            # You may want to update the loan_updated_status here if needed
+            updated_loan_status = 'disbursed loan'
+            loan_row['loan_updated_status'] = updated_loan_status
+            # Save the changes to the loan_row
+            loan_row.update()
 
             open_form("wallet.wallet")
 
