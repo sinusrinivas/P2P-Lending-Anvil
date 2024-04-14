@@ -601,11 +601,14 @@ class Borr_loan_request(Borr_loan_requestTemplate):
             open_form("wallet.wallet") 
         elif signal == "pay_to_borrower":
             alert("Pay to Borrower")
-            self.selected_row['em']
-            self.selected_row['loan_disbursed_timestamp'] = datetime.now()
-            emi_payment_type = self.selected_row['emi_payment_type']
+            loan_row = app_tables.fin_loan_details.get(loan_id=entered_loan_id)
+            if loan_row:
+              loan_row['loan_disbursed_timestamp'] = datetime.now()
+              emi_payment_type = loan_row['emi_payment_type']
+            # loan_disbursed_timestamp = datetime.now()
+            # emi_payment_type = self.selected_row['emi_payment_type']
     
-            loan_disbursed_timestamp = self.selected_row['loan_disbursed_timestamp']
+            loan_disbursed_timestamp = loan_row['loan_disbursed_timestamp']
             first_emi_due_date = self.calculate_first_emi_due_date(emi_payment_type, loan_disbursed_timestamp, tenure)
             
             self.selected_row['first_emi_payment_due_date'] = first_emi_due_date
