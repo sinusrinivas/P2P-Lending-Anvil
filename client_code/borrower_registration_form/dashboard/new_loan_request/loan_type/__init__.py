@@ -225,7 +225,7 @@ class loan_type(loan_typeTemplate):
                 self.label_30.text = f"₹ {interest_amount:.2f}"
                 processing_fee_amount = (self.processing_fee / 100) * p
                 self.label_32.text = f"₹ {processing_fee_amount:.2f}"
-                self.Total_Repayment_Amount = Monthly_EMI * t + interest_amount + processing_fee_amount
+                self.Total_Repayment_Amount = p + interest_amount + processing_fee_amount
                 self.label_34.text = f"₹ {self.Total_Repayment_Amount:.2f}"
 
                 # Pass monthly EMI value as well
