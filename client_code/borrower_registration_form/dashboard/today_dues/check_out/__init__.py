@@ -246,6 +246,8 @@ class check_out(check_outTemplate):
                     account_number = self.selected_row['account_number']
                     emi_payment_type = self.selected_row['emi_payment_type']
                     tenure = self.selected_row['tenure']
+                    borrower_id = self.selected_row['borrower_customer_id']
+                    lender_id = self.selected_row['lender_customer_id']
 
                     prev_scheduled_payment = self.selected_row['scheduled_payment']
                     prev_next_payment = self.selected_row['next_payment']
@@ -283,6 +285,8 @@ class check_out(check_outTemplate):
                         next_payment=next_next_payment,
                         amount_paid= total_emi_amount,
                         extra_fee=extra_fee,
+                        borrower_customer_id=borrower_id,
+                        lender_customer_id=lender_id
                        
                         
                         
