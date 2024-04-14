@@ -7,7 +7,7 @@ import anvil.users
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
-from .. import lendor_main_form_module as main_form_module
+from .. import main_form_module as main_form_module
 
 
 class view_lost_oppurtunities(view_lost_oppurtunitiesTemplate):
@@ -16,7 +16,7 @@ class view_lost_oppurtunities(view_lost_oppurtunitiesTemplate):
     self.init_components(**properties)
     self.user_id = main_form_module.userId
     #self.repeating_panel_1.items = app_tables.fin_loan_details.search(loan_updated_status=q.like('lost opportunities%'))
-    lost_opportunities = app_tables.fin_loan_details.search(loan_updated_status=q.like('lost opportunities%'))
+    lost_opportunities = app_tables.fin_loan_details.search(loan_updated_status=q.like('lost opportunities%'),lender_customer_id=self.user_id)
     borrower_profiles = []
     for loan in lost_opportunities:
             user_profile = app_tables.fin_user_profile.get(customer_id=loan['borrower_customer_id'])

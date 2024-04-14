@@ -71,8 +71,7 @@ components:
       type: Button
       layout_properties: {grid_position: 'OUDOFT,XKDOAA VQHNLQ,QGBKIN'}
     - name: image_5
-      properties: {height: 441.8888854980469, source: _/theme/online-personal-loan-hdr.png,
-        display_mode: fill_width}
+      properties: {height: 367.25, source: _/theme/online-personal-loan-hdr.png, display_mode: shrink_to_fit}
       type: Image
       layout_properties: {grid_position: 'OUDOFT,ZJWXYW'}
   - name: spacer_3
@@ -395,7 +394,8 @@ components:
       type: Spacer
       layout_properties: {grid_position: 'LUSVQI,VOXBLD KUYBPQ,AWNGGP'}
     - name: image_10_copy_2
-      properties: {height: 219.33328247070312, source: _/theme/interest.png, display_mode: shrink_to_fit}
+      properties: {height: 219.33328247070312, source: _/theme/interest-removebg-preview.png,
+        display_mode: shrink_to_fit}
       type: Image
       layout_properties: {grid_position: 'LUSVQI,VOXBLD FIJAEH,MGWVQZ'}
     - name: label_31_copy_2
@@ -508,7 +508,8 @@ components:
       type: Spacer
       layout_properties: {grid_position: 'LUSVQI,VOXBLD KUYBPQ,AWNGGP'}
     - name: image_10_copy_3
-      properties: {height: 127.5555419921875, source: _/theme/disbursed.png, display_mode: shrink_to_fit}
+      properties: {height: 150.2957763671875, source: _/theme/processing fee.png,
+        display_mode: shrink_to_fit, role: null}
       type: Image
       layout_properties: {grid_position: 'LUSVQI,VOXBLD DKMBNY,XGJXWB'}
     - name: label_31_copy_3
@@ -632,7 +633,7 @@ components:
     type: Spacer
     layout_properties: {grid_position: 'NXUARD,KHJPXF'}
   - name: image_11
-    properties: {source: _/theme/3rd.png}
+    properties: {source: _/theme/OAP.png, display_mode: shrink_to_fit}
     type: Image
     layout_properties: {grid_position: 'FKQDTP,XDNGDK XHGUUL,XBROFD'}
   - name: label_45
@@ -642,7 +643,7 @@ components:
     type: Label
     layout_properties: {grid_position: 'FKQDTP,XDNGDK OQCLNO,AOPELJ'}
   - name: image_12
-    properties: {source: _/theme/2nd.png}
+    properties: {source: _/theme/ELABG.png, display_mode: shrink_to_fit}
     type: Image
     layout_properties: {grid_position: 'FKQDTP,LUNDST AGHTYY,URAOUQ'}
   - name: label_46
@@ -651,37 +652,51 @@ components:
     type: Label
     layout_properties: {grid_position: 'FKQDTP,LUNDST ZYBNXO,FGEEHK'}
   - name: image_13
-    properties: {source: _/theme/1.png}
+    properties: {source: _/theme/LLABL.png, display_mode: shrink_to_fit, height: 157.25}
     type: Image
     layout_properties: {grid_position: 'FKQDTP,UCIDRK RTWJMA,QUZDPD'}
+  - name: spacer_20
+    properties: {height: 34.24993896484375}
+    type: Spacer
+    layout_properties: {grid_position: 'FKQDTP,UCIDRK OIKZOY,CPBJTN'}
   - name: label_47
     properties: {text: Loan Listed in ‘Active Borrowers’ List, align: center, font_size: 18,
       bold: true}
     type: Label
     layout_properties: {grid_position: 'FKQDTP,UCIDRK VYARJR,GSNOHL'}
   - name: image_14
-    properties: {source: _/theme/4.png}
+    properties: {source: _/theme/icons8-coins-100 (1).png, display_mode: shrink_to_fit,
+      height: 151.25}
     type: Image
     layout_properties: {grid_position: 'FKQDTP,MRHEGW BUBSBU,GLHKQX'}
+  - name: spacer_40
+    properties: {height: 37.25}
+    type: Spacer
+    layout_properties: {grid_position: 'FKQDTP,MRHEGW AYMWUQ,XICWMK'}
   - name: label_48
     properties: {text: "Funding of Loan\n by Investors", align: center, font_size: 18,
       bold: true}
     type: Label
     layout_properties: {grid_position: 'FKQDTP,MRHEGW TLWVOK,OJISZP'}
   - name: image_15
-    properties: {source: _/theme/disbursed.png}
+    properties: {source: _/theme/prepayment-removebg-preview.png, display_mode: shrink_to_fit,
+      height: 150.25}
     type: Image
     layout_properties: {grid_position: 'FKQDTP,XZHVVC VYOTEC,OEZRCC'}
+  - name: spacer_41
+    properties: {height: 36.25}
+    type: Spacer
+    layout_properties: {grid_position: 'FKQDTP,XZHVVC LBUEZL,LYTKOX'}
   - name: label_49
     properties: {text: 'Documentation & Disbursement of Loan
 
         ', align: center, font_size: 18, bold: true}
     type: Label
     layout_properties: {grid_position: 'FKQDTP,XZHVVC UTPOOY,VBQHYL'}
-  - name: spacer_20
+  - name: spacer_42
     properties: {height: '15'}
     type: Spacer
-    layout_properties: {grid_position: 'EKICIL,TLIDHQ'}
+    layout_properties: {grid_position: 'TTCIWR,GDSWIH'}
   - name: button_3
     properties: {text: Apply for Personal Loan Now, align: center, bold: true, font_size: 18,
       role: filled-button, background: '#013065'}
@@ -1043,7 +1058,7 @@ components:
         our platform. To facilitate a quicker funding process, borrowers are empowered
         to directly message active lenders.', font_size: 17}
     type: Label
-    layout_properties: {grid_position: 'MTJIPB,THORQD XCGWQI,IZGQMT'}
+    layout_properties: {grid_position: 'MTJIPB,THORQD SWFEXB,HRAKWI'}
   - name: label_100
     properties: {text: '---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------'}
     type: Label
@@ -1123,7 +1138,7 @@ components:
     layout_properties: {grid_position: 'RUTNYS,HPGJIZ'}
   - name: content_panel_copy_copy_3_copy_3_copy_2
     properties: {col_widths: '{"QDLVMT":20,"BMTJIC":40,"SJXKVU":15,"BJMMDX":15,"JSUQYH":15,"AHSFTP":15}',
-      background: '#EBE1ED'}
+      background: 'theme:Surface Variant'}
     type: ColumnPanel
     layout_properties: {grid_position: 'QIDELV,CIEGMA', full_width_row: true}
     components:
@@ -1191,37 +1206,51 @@ components:
           may either post a new requirement or can even become an investor.', font_size: 17}
       type: Label
       layout_properties: {grid_position: 'DLLTSL,AHSFTP CVGVQR,YTDRNH'}
-  - name: spacer_38
-    properties: {height: '12'}
-    type: Spacer
-    layout_properties: {grid_position: 'AMLIDX,FLKAQN'}
-  - name: label_113
-    properties: {text: Terms and Conditions, align: center, bold: true, font_size: 30}
-    type: Label
-    layout_properties: {grid_position: 'VNZWEV,XLBXXM'}
-  - name: label_114
-    properties: {align: center, text: 'Please read, understand and accept our Terms
-        and Conditions  and Privacy Policy to complete the registration process. 
-        We expect all the users to comply with our Terms and Conditions and the Privacy
-        Policy at all times and in the case of any conflict with any content on the
-        website, Terms, and Conditions and the Privacy Policy will prevail.', font_size: 17}
-    type: Label
-    layout_properties: {grid_position: 'HHYGPV,HKIJEN'}
-  - name: label_115
-    properties: {text: 'If you have any query about our processes or Terms And Conditions,
-        please contact us.', align: center, font_size: 17}
-    type: Label
-    layout_properties: {grid_position: 'TEVDNN,TNONLN'}
-  - name: button_4
-    properties: {text: "Apply for Personal Loan Now interest \nrates starting from\
-        \ 12%", role: filled-button, background: '#013065', foreground: white, bold: true,
-      font_size: 18, align: center}
-    type: Button
-    layout_properties: {grid_position: 'MAISQG,ISRESB', full_width_row: true}
-  - name: spacer_39
-    properties: {height: 46.79998779296875}
-    type: Spacer
-    layout_properties: {grid_position: 'GUKDWU,XGQAZX'}
+  - name: content_panel_copy_copy_3_copy_3_copy_3
+    properties: {col_widths: '{}', background: 'theme:Tertiary Container'}
+    type: ColumnPanel
+    layout_properties: {grid_position: 'SXTADD,HYKKTQ', full_width_row: true}
+    components:
+    - name: label_113
+      properties: {text: Terms and Conditions, align: center, bold: true, font_size: 30}
+      type: Label
+      layout_properties: {grid_position: 'FLDVBD,XTNXES'}
+    - name: spacer_38
+      properties: {height: '12'}
+      type: Spacer
+      layout_properties: {grid_position: 'TIBQUJ,IJEKEW'}
+    - name: label_114
+      properties: {align: center, text: 'Please read, understand and accept our Terms
+          and Conditions  and Privacy Policy to complete the registration process. 
+          We expect all the users to comply with our Terms and Conditions and the
+          Privacy Policy at all times and in the case of any conflict with any content
+          on the website, Terms, and Conditions and the Privacy Policy will prevail.',
+        font_size: 17}
+      type: Label
+      layout_properties: {grid_position: 'GFEGYG,PFJZIG'}
+    - name: spacer_43
+      properties: {height: '10'}
+      type: Spacer
+      layout_properties: {grid_position: 'KFCOAM,PXAZMU'}
+    - name: label_115
+      properties: {text: 'If you have any query about our processes or Terms And Conditions,
+          please contact us.', align: center, font_size: 17}
+      type: Label
+      layout_properties: {grid_position: 'VJPZSK,REVBTH'}
+    - name: spacer_44
+      properties: {height: '15'}
+      type: Spacer
+      layout_properties: {grid_position: 'KPMTCR,SPJYEM'}
+    - name: button_4
+      properties: {text: "Apply for Personal Loan Now interest  rates\n starting from\
+          \ 12%", role: filled-button, background: '#013065', foreground: white, bold: true,
+        font_size: 18, align: center}
+      type: Button
+      layout_properties: {grid_position: 'KDMZKP,KXWNQL', full_width_row: true}
+    - name: spacer_45
+      properties: {height: '12'}
+      type: Spacer
+      layout_properties: {grid_position: 'JURQGQ,XUENTH'}
   - name: column_panel_2
     properties: {background: white, col_widths: '{"XHAILN":12,"SPJHOO":8,"WNWVDK":16,"YBBTWP":12,"QNSOAB":12}'}
     type: ColumnPanel
