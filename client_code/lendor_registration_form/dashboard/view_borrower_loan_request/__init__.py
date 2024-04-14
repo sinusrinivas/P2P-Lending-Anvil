@@ -37,7 +37,6 @@ class view_borrower_loan_request(view_borrower_loan_requestTemplate):
                     'interest_rate': loan['interest_rate'],
                     'loan_amount': loan['loan_amount'],
                     'tenure': loan['tenure'],
-                    'loan_disbursed_timestamp': loan['loan_disbursed_timestamp'],
                     'product_name': loan['product_name'],
                     'product_description': loan['product_description'],
                     'borrower_full_name': loan['borrower_full_name'],
@@ -46,9 +45,10 @@ class view_borrower_loan_request(view_borrower_loan_requestTemplate):
                     'credit_limit': loan['credit_limit'],
                     'loan_updated_status': loan['loan_updated_status'],
                     'emi_payment_type': loan['emi_payment_type'],
-                     'borrower_customer_id': loan['borrower_customer_id'],
-                     'lender_accepted_timestamp':loan['lender_accepted_timestamp'],
-                     'emi_payment_type':loan['emi_payment_type']
+                    'borrower_customer_id': loan['borrower_customer_id'],
+                    'lender_accepted_timestamp':loan['lender_accepted_timestamp'],
+                    'loan_disbursed_timestamp':loan['loan_disbursed_timestamp'],
+                    'emi_payment_type':loan['emi_payment_type']
                      # 'borrower_customer_id': loan['borrower_customer_id']
                     # Add other details you want to include
                                                   })          
