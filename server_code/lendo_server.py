@@ -427,10 +427,11 @@ def add_loan_details_data(loan_id, lender_customer_id, lender_email_id, lender_f
 
 ## Code for loan disbusement
 @anvil.server.callable
-def loan_disbursement_action(selected_row, email):
+def loan_disbursement_action(selected_row, email,lender_accepted_timestamp):
     loan_amount = selected_row['loan_amount']
     print("Loan amount:", loan_amount)
-    lender_accepted_timestamp = selected_row['lender_accepted_timestamp']
+    lender_accepted_timestamp = lender_accepted_timestamp
+    # lender_accepted_timestamp = selected_row['lender_accepted_timestamp']
     print("Lender accepted timestamp:", lender_accepted_timestamp)
     if lender_accepted_timestamp is not None:
         print("lender_accepted_timestamp timezone:", lender_accepted_timestamp.tzinfo)

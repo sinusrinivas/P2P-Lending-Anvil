@@ -201,7 +201,6 @@ class wallet_deposit(wallet_depositTemplate):
       if loan_row:
         # Get the loan_amount and subtract it from the wallet_amount
         loan_amount = loan_row['loan_amount']
-        lender_accepted_timestamp = loan_amount['lender_accepted_timestamp']
         loan_updated_status = loan_row["loan_updated_status"]
         loan_disbursed_timestamp = loan_row["loan_disbursed_timestamp"]
         new_balance = wallet_row['wallet_amount'] - loan_amount

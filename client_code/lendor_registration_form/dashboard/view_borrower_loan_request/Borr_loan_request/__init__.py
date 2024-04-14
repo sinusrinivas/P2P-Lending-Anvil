@@ -352,6 +352,7 @@ class Borr_loan_request(Borr_loan_requestTemplate):
     def __init__(self, selected_row, **properties):
        # Set Form properties and Data Bindings.
         self.selected_row = selected_row
+        self.lender_accepted_timestamp = None
         self.init_components(**properties)
         self.user_id=main_form_1.userId
         use_id = self.user_id
@@ -525,11 +526,16 @@ class Borr_loan_request(Borr_loan_requestTemplate):
            loan_details['lender_accepted_timestamp'] = datetime.now()
            loan_details.update()
         lender_accepted_timestamp = loan_details['lender_accepted_timestamp'] 
-        print("Lender accepted timestamp1:", lender_accepted_timestamp)
+        self.lender_accepted_timestamp = lender_accepted_timestamp
         Notification("Borrower will get notified").show()
         self.update_ui_based_on_status()
         self.loan_disbursment_btn.visible = True
-        
+        # selected_row = self.selected_row  
+        # tenure = selected_row['tenure']
+        # email = main_form_module.email
+        # entered_loan_id = self.entered_loan_id
+        # entered_borrower_customer_id = self.entered_borrower_customer_id
+        # signal, time_difference_seconds = anvil.server.call('loan_disbursement_action', selected_row, email,lender_accepted_timestamp)
 
     def rejected_btn_click(self, **event_args):
         """This method is called when the button is clicked"""
@@ -589,9 +595,9 @@ class Borr_loan_request(Borr_loan_requestTemplate):
         email = main_form_module.email
         entered_loan_id = self.entered_loan_id
         entered_borrower_customer_id = self.entered_borrower_customer_id  
-        
+        lender_accepted_timestamp = self.lender_accepted_timestamp
         # Call the server-side function
-        signal, time_difference_seconds = anvil.server.call('loan_disbursement_action', selected_row, email)
+        signal, time_difference_seconds = anvil.server.call('loan_disbursement_action', selected_row, email,lender_accepted_timestamp)
     
         # Check the signal and perform actions accordingly
         if signal == "insufficient_balance":
