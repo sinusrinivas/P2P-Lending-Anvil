@@ -16,6 +16,7 @@ class products_main_form(products_main_formTemplate):
     self.init_components(**properties)
 
     # Any code you write here will run before the form opens.
+    self.drop_down_1.id = 'my-dropdown'
 
 
 
@@ -117,3 +118,6 @@ class products_main_form(products_main_formTemplate):
   def button_1_click(self, **event_args):
     """This method is called when the button is clicked"""
     open_form('bank_users.main_form.products_main_form.personal_loan')
+
+  
+    

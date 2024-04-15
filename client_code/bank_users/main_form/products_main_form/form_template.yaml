@@ -73,7 +73,8 @@ components:
         include_placeholder: true
       type: DropDown
       data_bindings: []
-      event_bindings: {change: drop_down_1_change}
+      event_bindings: {change: drop_down_1_change, show: drop_down_1_show}
+      layout_properties: {}
 - name: column_panel_1
   properties: {background: 'theme:Surface Variant'}
   type: ColumnPanel
