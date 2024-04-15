@@ -11,7 +11,7 @@ components:
   - type: ColumnPanel
     properties: {col_widths: '{}'}
     name: column_panel_1
-    layout_properties: {grid_position: 'LRGVLZ,YDSHFK'}
+    layout_properties: {grid_position: 'LRGVLZ,YDSHFK', full_width_row: true}
     components:
     - type: Image
       properties: {role: null, vertical_align: center, height: 54, tooltip: '', border: '',
@@ -22,6 +22,7 @@ components:
       layout_properties:
         col_widths: {}
         grid_position: SRJHKV,XSYXJM
+        full_width_row: true
     - type: form:borrower_registration_form.logout
       properties: {}
       name: logout_1
