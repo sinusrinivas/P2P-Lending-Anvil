@@ -53,9 +53,10 @@ class today_dues(today_duesTemplate):
                     total_repayment_amount = loan_detail['total_repayment_amount']
                     total_processing_fee_amount = loan_detail['total_processing_fee_amount']
                     mobile = user_profile['mobile']
+                    user_photo = user_profile['user_photo']
                     product_name = loan_detail['product_name']
                     product_description = loan_detail['product_description']
-                    lender_full_name = loan_detail['lender_full_name']
+                    borrower_full_name = loan_detail['borrower_full_name']
                     loan_state_status = loan_detail['loan_state_status']
                     product_id = loan_detail['product_id']
                     total_interest_amount = loan_detail['total_interest_amount']
@@ -82,25 +83,27 @@ class today_dues(today_duesTemplate):
                         'mobile': mobile,
                         'product_description': product_description,
                         'product_name': product_name,
-                        'lender_full_name': lender_full_name,
+                        'borrower_full_name': borrower_full_name,
                         'borrower_customer_id': borrower_customer_id,
                         'loan_state_status': loan_state_status,
                         'product_id':product_id,
                         'total_interest_amount':total_interest_amount,
                         'Scheduled_date':Scheduled_date,
+                        'user_photo':user_photo,
                     })
             else:
                 
                 # If there are no emi records, append loan details without checking next payment date
                 loan_detail = app_tables.fin_loan_details.get(loan_id=loan_id)
-                user_profile = app_tables.fin_user_profile.get(customer_id=loan_detail['lender_customer_id'])
+                user_profile = app_tables.fin_user_profile.get(customer_id=loan_detail['borrower_customer_id'])
                 if loan_detail is not None and user_profile is not None:
+                  user_photo = user_profile['user_photo']
                   loan_amount = loan_detail['loan_amount']
                   first_emi_payment_due_date = loan_detail['first_emi_payment_due_date']
                   days_left = (today_date - first_emi_payment_due_date).days
                   # Fetch account number from user profile table based on customer_id
-                  user_profile = app_tables.fin_user_profile.get(customer_id=loan_detail['borrower_customer_id'])
-                  if user_profile is not None:
+                  user_profile_1 = app_tables.fin_user_profile.get(customer_id=loan_detail['borrower_customer_id'])
+                  if user_profile_1 is not None:
                       account_number = user_profile['account_number']
                   else:
                       account_number = "N/A"
@@ -117,11 +120,11 @@ class today_dues(today_duesTemplate):
                   lender_customer_id = loan_detail['lender_customer_id']
                   total_repayment_amount = loan_detail['total_repayment_amount']
                   total_processing_fee_amount = loan_detail['total_processing_fee_amount']
-                  mobile = user_profile['mobile']
+                  mobile = user_profile_1['mobile']
                   product_name = loan_detail['product_name']
                   product_description = loan_detail['product_description']
                   borrower_customer_id = loan_detail['borrower_customer_id']
-                  lender_full_name = loan_detail['lender_full_name']
+                  borrower_full_name = loan_detail['borrower_full_name']
                   scheduled_payment = loan_disbursed_timestamp.date()
                   loan_state_status = loan_detail['loan_state_status']
                   product_id =loan_detail['product_id']
@@ -167,12 +170,13 @@ class today_dues(today_duesTemplate):
                       'mobile': mobile,
                       'product_description': product_description,
                       'product_name': product_name,
-                      'lender_full_name': lender_full_name,  
+                      'borrower_full_name': borrower_full_name,  
                       'borrower_customer_id': borrower_customer_id,
                       'loan_state_status':loan_state_status,
                       'product_id':product_id,
                       'total_interest_amount':total_interest_amount,
                       'Scheduled_date':Scheduled_date,
+                      'user_photo': user_photo,
                       
                   })
             self.repeating_panel_2.items = loan_details
