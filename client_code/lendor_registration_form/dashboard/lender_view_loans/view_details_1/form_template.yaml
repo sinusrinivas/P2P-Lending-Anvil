@@ -36,6 +36,7 @@ components:
   layout_properties:
     col_widths: {}
     grid_position: ZLTRFL,RNDIRN
+    full_width_row: true
 - name: spacer_2
   properties: {height: 257.21429443359375}
   type: Spacer
