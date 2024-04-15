@@ -37,7 +37,7 @@ components:
   - name: navigation_bar_lender_dashbord_1
     properties: {}
     type: form:lendor_registration_form.Navigation_bar_lender_dashbord
-    layout_properties: {grid_position: 'UKAWJC,QFBUOP'}
+    layout_properties: {grid_position: 'UKAWJC,QFBUOP', full_width_row: true}
   - name: button_1
     properties: {role: filled-button, align: right, tooltip: '', border: '', enabled: true,
       foreground: 'theme:On Primary', visible: true, text: Back, font_size: 15, font: '',
