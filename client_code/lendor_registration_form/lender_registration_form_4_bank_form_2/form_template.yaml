@@ -11,10 +11,11 @@ components:
   layout_properties:
     col_widths: {}
     grid_position: MUSUAK,YCTKQN
+    full_width_row: true
 - type: form:borrower_registration_form.logout
   properties: {}
   name: logout_1
-  layout_properties: {grid_position: 'MUSUAK,KPSXIR'}
+  layout_properties: {grid_position: 'MUSUAK,KPSXIR', full_width_row: true}
 - type: form:lendor_registration_form.navigation_bar_main_lender
   properties: {}
   name: navigation_bar_main_lender_1
