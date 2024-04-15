@@ -18,9 +18,6 @@ class products_main_form(products_main_formTemplate):
     # Any code you write here will run before the form opens.
     self.drop_down_1.tag = 'my-dropdown'
 
-
-
-
   def login_signup_button_click(self, **event_args):
     anvil.users.login_with_form()
     current_user = anvil.users.get_user()
