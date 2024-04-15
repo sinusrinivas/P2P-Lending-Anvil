@@ -81,3 +81,19 @@ class products_main_form(products_main_formTemplate):
   def gender_click(self, **event_args):
     """This method is called when the button is clicked"""
     open_form('bank_users.main_form.products_main_form.business_loan')
+
+  def personal_loan_click(self, **event_args):
+    """This method is called when the link is clicked"""
+    open_form('bank_users.main_form.products_main_form.personal_loan')
+
+  def business_loan_click(self, **event_args):
+    """This method is called when the link is clicked"""
+    open_form('bank_users.main_form.products_main_form.business_loan')
+
+  def link_1_click(self, **event_args):
+    """This method is called when the link is clicked"""
+    pass
+
+  def link_6_click(self, **event_args):
+    """This method is called when the link is clicked"""
+    open_form("admin.user_issue.user_bugreports")
