@@ -45,7 +45,7 @@ components:
       type: Label
       layout_properties: {grid_position: 'TWRYIO,KHYZKC'}
     - name: label_3
-      properties: {text: User Email}
+      properties: {text: Transaction Type}
       type: Label
       layout_properties: {grid_position: 'TWRYIO,UJYQMF'}
     - name: label_5
