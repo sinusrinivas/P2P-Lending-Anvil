@@ -22,9 +22,7 @@ class wallet(walletTemplate):
     self.withdraw_placeholder = "0.00"
     
     self.email=main_form_module.email
-    email = self.email
-
-    
+    email = self.email  
 
     wallet_row =app_tables.fin_wallet.get(user_email=email)
     if wallet_row:
@@ -94,7 +92,7 @@ class wallet(walletTemplate):
     except ValueError:
         alert("Please enter a valid amount.")
         return
-
+    amount_entered = ' '
     customer_id = self.user_id
     email = self.email
 
@@ -116,7 +114,7 @@ class wallet(walletTemplate):
         withdraw_amount = int(amount_entered)
     except ValueError:
         return  
-    
+    amount_entered = ' '
     customer_id = self.user_id
     email = self.email  
     
