@@ -17,13 +17,13 @@ class ItemTemplate62(ItemTemplate62Template):
       self.label_5.visible = True
       self.label_4.visible = True
     
-    user_data = app_tables.fin_loan_details.search()
-    for row in user_data:
-        borrower_customer_id = row['borrower_customer_id']
-        lender_customer_id = row['lender_customer_id']
-        borrower_profile = app_tables.fin_user_profile.get(customer_id=borrower_customer_id)
-        lender_profile = app_tables.fin_user_profile.get(customer_id=lender_customer_id)
-        self.image_1.source = borrower_profile['user_photo']
+    # user_data = app_tables.fin_loan_details.search()
+    # for row in user_data:
+    #     borrower_customer_id = row['borrower_customer_id']
+    #     lender_customer_id = row['lender_customer_id']
+    #     borrower_profile = app_tables.fin_user_profile.get(customer_id=borrower_customer_id)
+    #     lender_profile = app_tables.fin_user_profile.get(customer_id=lender_customer_id)
+    #     self.image_1.source = borrower_profile['user_photo']
 
 
   def outlined_button_1_click(self, **event_args):
