@@ -132,6 +132,9 @@ class dashboard(dashboardTemplate):
   
     # this button is work for wallet 
     def wallet_dashboard_link_click(self, **event_args):
+      customer_id = self.user_id
+      email = self.email
+      anvil.server.call('fetch_profile_data_and_insert', email, customer_id)
       open_form('wallet.wallet')
 
 

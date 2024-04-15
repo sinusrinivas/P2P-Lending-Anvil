@@ -17,7 +17,7 @@ services:
 - source: /runtime/services/anvil/secrets.yml
   client_config: {}
   server_config: {}
-startup: {type: form, module: bank_users.main_form.Form1}
+startup: {type: form, module: bank_users.main_form}
 package_name: bank_client
 allow_embedding: false
 name: P2P Lending App
@@ -1190,7 +1190,7 @@ db_schema:
     server: full
     columns:
     - name: account_id
-      admin_ui: {width: 200, order: 0}
+      admin_ui: {order: 9, width: 200}
       type: string
     - name: wallet_id
       admin_ui: {width: 200, order: 1}
