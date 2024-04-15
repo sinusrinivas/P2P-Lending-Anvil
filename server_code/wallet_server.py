@@ -29,7 +29,7 @@ def fetch_profile_data_and_insert(email, customer_id):
             
             if wallet_data is not None:
                 wallet_id = wallet_data['wallet_id']
-                account_id = wallet_data['account_id']
+                # account_id = wallet_data['account_id']
                 
                 # Check if account_number is a string before converting to number
                 account_number_value = int(profile['account_number']) if isinstance(profile['account_number'], str) else profile['account_number']
@@ -44,11 +44,11 @@ def fetch_profile_data_and_insert(email, customer_id):
                         account_name=profile['account_name'],
                         account_number=account_number_value,
                         bank_name=profile['bank_name'],  
-                        branch_name=profile['branch_name'],  
+                        branch_name=profile['account_bank_branch'],  
                         bank_id=profile['bank_id'],
                         account_type=profile['account_type'],
-                        wallet_id=wallet_id,
-                        account_id=account_id
+                        wallet_id=wallet_id
+                        # account_id=account_id
                     )
                     
                     return True
@@ -423,3 +423,4 @@ def transfer_money_1(lender_id, borrower_id, transfer_amount):
             user_email=borrower_email,
         )
         return False
+

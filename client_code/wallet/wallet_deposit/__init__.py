@@ -28,8 +28,6 @@ class wallet_deposit(wallet_depositTemplate):
     start_time = self.start_time
     
     self.check_time_difference()
-    
-    
 
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
@@ -162,6 +160,7 @@ class wallet_deposit(wallet_depositTemplate):
 
             if wallet_row and loan_row:
                 loan_amount = loan_row['loan_amount']
+                lender_accepted_timestamp = loan_row['lender_accepted_timestamp']
                 wallet_amount = wallet_row['wallet_amount']
                 entered_loan_id = self.entered_loan_id 
                 entered_borrower_customer_id = self.entered_borrower_customer_id
@@ -193,7 +192,7 @@ class wallet_deposit(wallet_depositTemplate):
     loan_deta = app_tables.fin_loan_details.get(loan_id=entered_loan_id)
     if loan_deta is not None:
         self.lender_customer_id = loan_deta['lender_customer_id']
-        print("lenderrrrrrrrrrrrrrrrrrrrrrrrr", self.lender_customer_id)
+        print("lender", self.lender_customer_id)
     wallet_row = app_tables.fin_wallet.get(user_email=email)
     if wallet_row:
       entered_loan_id = self.entered_loan_id
@@ -274,9 +273,9 @@ class wallet_deposit(wallet_depositTemplate):
   def calculate_first_emi_due_date(self, emi_payment_type, loan_disbursed_timestamp, tenure):
         if emi_payment_type == "Monthly":
             first_emi_due_date = (loan_disbursed_timestamp + timedelta(days=30)).date()
-        elif emi_payment_type == "Three Month":
+        elif emi_payment_type == "Three Months":
             first_emi_due_date = (loan_disbursed_timestamp + timedelta(days=90)).date()
-        elif emi_payment_type == "Six Month":
+        elif emi_payment_type == "Six Months":
             first_emi_due_date = (loan_disbursed_timestamp + timedelta(days=180)).date()
         elif emi_payment_type == "One Time":
             if tenure:

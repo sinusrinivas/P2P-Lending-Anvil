@@ -33,7 +33,6 @@ class star_1_borrower_registration_form_5_bank_2(star_1_borrower_registration_fo
         anvil.server.call('add_borrower_step6', bank_id, bank_branch, user_id)
         open_form('borrower_registration_form.dashboard')
 
-
   def button_1_click(self, **event_args):
     open_form('borrower_registration_form.star_1_borrower_registration_form_5_bank_1',user_id=self.userId)
 
