@@ -97,3 +97,23 @@ class products_main_form(products_main_formTemplate):
   def link_6_click(self, **event_args):
     """This method is called when the link is clicked"""
     open_form("admin.user_issue.user_bugreports")
+
+  def link_7_click(self, **event_args):
+    """This method is called when the link is clicked"""
+    open_form('bank_users.main_form')
+
+  def link_8_click(self, **event_args):
+    """This method is called when the link is clicked"""
+    open_form('bank_users.main_form.contact_main_form')
+
+  def link_9_click(self, **event_args):
+    """This method is called when the link is clicked"""
+    open_form('bank_users.main_form.about_main_form')
+
+  def button_2_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    open_form('bank_users.main_form.products_main_form.business_loan')
+
+  def button_1_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    open_form('bank_users.main_form.products_main_form.personal_loan')
