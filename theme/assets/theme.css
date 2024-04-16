@@ -1081,7 +1081,7 @@ div.plot-container.plotly svg.main-svg {
 /*rounding corners of dropdown  */
 select.form-control.to-disable{
   border-radius: 25px;
-  width: 100px;
+  width: 110px;
   text-align: center;
 }
 
