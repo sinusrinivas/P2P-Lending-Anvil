@@ -123,7 +123,7 @@ components:
     layout_properties: {x: 737.6375244148076, y: 397.6875, width: 318}
   - type: Button
     properties: {role: filled-button, align: center, tooltip: '', border: '', enabled: true,
-      foreground: white, visible: true, text: Start Investing, font_size: null, font: '',
+      foreground: white, visible: true, text: Start Investing, font_size: 16, font: '',
       spacing_above: small, icon_align: left, spacing_below: small, italic: false,
       background: '#05264d', bold: false, underline: false, icon: ''}
     name: button_3
