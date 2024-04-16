@@ -24,6 +24,7 @@ components:
       layout_properties:
         col_widths: {}
         grid_position: SRJHKV,XSYXJM
+        full_width_row: true
     - type: form:borrower_registration_form.logout
       properties: {}
       name: logout_1

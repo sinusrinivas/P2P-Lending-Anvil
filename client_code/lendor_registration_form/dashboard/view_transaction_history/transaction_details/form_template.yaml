@@ -3,14 +3,14 @@ components:
 - name: navigation_bar_main_lender_1
   properties: {}
   type: form:lendor_registration_form.navigation_bar_main_lender
-  layout_properties: {grid_position: 'KSCMNU,JNLUDQ'}
+  layout_properties: {grid_position: 'KSCMNU,JNLUDQ', full_width_row: true}
 - name: button_1
   properties: {role: filled-button, align: right, tooltip: '', border: '', enabled: true,
     foreground: 'theme:On Primary', visible: true, text: Back, font_size: 15, font: '',
     spacing_above: small, icon_align: left, spacing_below: small, italic: false, background: '#0b2547',
     bold: false, underline: false, icon: 'fa:angle-double-left'}
   type: Button
-  layout_properties: {grid_position: 'TCRJTL,KAZFXD'}
+  layout_properties: {grid_position: 'TCRJTL,KAZFXD', full_width_row: true}
   event_bindings: {click: button_1_click}
 - name: label_1
   properties: {text: Transaction Details, background: 'theme:Secondary Container',
