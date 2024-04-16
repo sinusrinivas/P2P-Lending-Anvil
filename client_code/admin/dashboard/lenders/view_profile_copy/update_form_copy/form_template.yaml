@@ -15,7 +15,7 @@ components:
       wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{"KDLEVS":15,"JTFJZJ":40,"NBXFFL":5}',
       spacing_below: small, background: ''}
     name: content_panel_copy
-    layout_properties: {grid_position: 'XFZFTE,LMYZRG'}
+    layout_properties: {grid_position: 'XFZFTE,LMYZRG', full_width_row: true}
     components:
     - type: form:admin.dashboard.home_button_admin
       properties: {}
@@ -24,7 +24,7 @@ components:
     - type: Label
       properties: {}
       name: label_43
-      layout_properties: {grid_position: 'RDESLG,LFHIOP'}
+      layout_properties: {grid_position: 'RDESLG,LFHIOP', full_width_row: true}
     - type: Button
       properties: {role: elevated-button, align: right, tooltip: '', border: '', enabled: true,
         foreground: 'theme:On Primary', visible: true, text: Back, font_size: null,

@@ -1,44 +1,44 @@
+is_package: true
 container:
   type: ColumnPanel
   properties: {col_widths: '{}'}
 components:
 - type: form:admin.dashboard.home_button_admin
   properties: {}
-  name: home_button_admin_1
   layout_properties: {grid_position: 'SXTVBF,NQRJLE', full_width_row: true}
-- name: column_panel_1
-  properties: {spacing_above: none, col_spacing: huge}
+  name: home_button_admin_1
+- properties: {spacing_above: none, col_spacing: huge}
   type: ColumnPanel
   layout_properties: {grid_position: 'FDPHVN,ITUKWN', full_width_row: true}
+  name: column_panel_1
   components:
-  - name: label_2
-    properties: {text: Manage Admins, bold: true, align: center, font_size: 20}
+  - properties: {text: Manage Admins, bold: true, align: center, font_size: 20}
     type: Label
     layout_properties: {grid_position: 'ZWGFRW,MFFSTN'}
-- name: content_panel
-  properties: {}
+    name: label_2
+- properties: {}
   type: ColumnPanel
   layout_properties: {grid_position: 'CDJUQY,UJKDJO', full_width_row: true}
-- name: add_people
-  properties: {role: elevated-button, align: center, tooltip: '', border: '', enabled: true,
+  name: content_panel
+- properties: {role: elevated-button, align: center, tooltip: '', border: '', enabled: true,
     foreground: 'theme:On Primary', visible: false, text: Add Admin, font_size: null,
     font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
     background: '#05264d', bold: true, underline: false, icon: ''}
   type: Button
   layout_properties: {grid_position: 'KQZUCT,FLOATQ'}
   event_bindings: {click: add_peopless}
-- name: button_1
-  properties: {role: elevated-button, align: center, tooltip: '', border: '', enabled: true,
+  name: add_people
+- properties: {role: elevated-button, align: center, tooltip: '', border: '', enabled: true,
     foreground: 'theme:On Primary', visible: false, text: View Admins, font_size: null,
     font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
     background: '#05264d', bold: true, underline: false, icon: ''}
   type: Button
   layout_properties: {grid_position: 'KQZUCT,RGTAYF'}
   event_bindings: {click: button_1_copy_click}
-- name: view_people
-  properties: {text: View Admins, background: '#05264d', foreground: white, bold: true,
+  name: button_1
+- properties: {text: View Admins, background: '#05264d', foreground: white, bold: true,
     visible: false}
   type: Button
   layout_properties: {grid_position: 'KQZUCT,IJEXLU'}
   event_bindings: {click: button_1_click}
-is_package: true
+  name: view_people
