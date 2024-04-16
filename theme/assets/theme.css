@@ -797,7 +797,6 @@ input.anvil-component, .anvil-component select, .anvil-datepicker input, textare
 
 .anvil-dropdown {
   position: relative;
-  border-radius: 50px;
 }
 /* Select arrow styling */
 .anvil-dropdown form:before {
@@ -806,7 +805,7 @@ input.anvil-component, .anvil-component select, .anvil-datepicker input, textare
     right: 0;
     font-size: 80%;
     line-height: calc(1.8em + 8px);
-    color: %color:Outline%;
+    color: #013065;
     pointer-events:none;
     padding: 4px 4px;
 }
@@ -1082,7 +1081,7 @@ div.plot-container.plotly svg.main-svg {
 /*rounding corners of dropdown  */
 select.form-control.to-disable{
   border-radius: 25px;
-  width: 150px;
+  width: 100px;
   text-align: center;
 }
 
