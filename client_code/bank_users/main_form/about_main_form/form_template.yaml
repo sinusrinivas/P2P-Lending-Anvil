@@ -15,11 +15,29 @@ components:
     type: Image
     layout_properties: {width: 255.8000030517578}
 - name: login_signup_button
-  properties: {text: 'Login/Signup       ', background: '#05264d', foreground: white,
-    bold: true, align: center}
+  properties: {text: 'Sign In       ', background: '#013065', foreground: white, bold: true,
+    align: right}
   type: Button
   layout_properties: {grid_position: 'MZSSJU,RPSFHE'}
   event_bindings: {click: login_signup_button_click}
+- name: drop_down_1
+  properties:
+    role: outlined
+    align: left
+    placeholder: Sign Up
+    border: ''
+    foreground: white
+    items: [Invest Now, Apply for Loan]
+    visible: true
+    font_size: 18
+    background: '#013065'
+    bold: false
+    underline: false
+    include_placeholder: true
+  type: DropDown
+  data_bindings: []
+  event_bindings: {change: drop_down_1_change, show: drop_down_1_show}
+  layout_properties: {grid_position: 'MZSSJU,NQPLIU'}
 - name: navbar_links_copy_1
   properties: {role: null, vertical_align: full, spacing: huge, align: center, tooltip: '',
     border: '', foreground: '', visible: true, spacing_above: none, spacing_below: small,
@@ -553,36 +571,36 @@ components:
     type: Spacer
     layout_properties: {grid_position: 'MMFQSR,SPJHOO'}
   - name: link_7
-    properties: {text: Home, bold: true, font_size: 16, underline: true, foreground: black}
+    properties: {text: Home, bold: true, font_size: 16, underline: false, foreground: black}
     type: Link
     layout_properties: {grid_position: 'MMFQSR,WNWVDK'}
     event_bindings: {click: link_7_click}
   - name: link_10
-    properties: {text: Investment, foreground: black, bold: true, font_size: 16, underline: true}
+    properties: {text: Investment, foreground: black, bold: true, font_size: 16, underline: false}
     type: Link
     layout_properties: {grid_position: 'MMFQSR,WNWVDK NYPJXO,GZMCYD'}
   - name: link_13
     properties: {text: How It Works, foreground: black, bold: true, font_size: 16,
-      underline: true}
+      underline: false}
     type: Link
     layout_properties: {grid_position: 'MMFQSR,WNWVDK KEVRNO,FAGUHN'}
   - name: link_11
-    properties: {text: Borrow, font_size: 16, bold: true, foreground: black, underline: true}
+    properties: {text: Borrow, font_size: 16, bold: true, foreground: black, underline: false}
     type: Link
     layout_properties: {grid_position: 'MMFQSR,YBBTWP MOYVBC,DMAAWC'}
   - name: link_8
-    properties: {text: Contact Us, foreground: black, underline: true, font_size: 16,
+    properties: {text: Contact Us, foreground: black, underline: false, font_size: 16,
       bold: true, align: left}
     type: Link
     layout_properties: {grid_position: 'MMFQSR,YBBTWP KKGCYO,GSVXOQ'}
     event_bindings: {click: link_8_click}
   - name: link_12
-    properties: {text: Help, foreground: black, bold: true, font_size: 16, underline: true}
+    properties: {text: Help, foreground: black, bold: true, font_size: 16, underline: false}
     type: Link
     layout_properties: {grid_position: 'MMFQSR,QNSOAB IRVWEK,HAZHMM', full_width_row: true}
     event_bindings: {click: link_12_click}
   - name: link_9
-    properties: {text: Products, bold: true, font_size: 16, underline: true, foreground: black}
+    properties: {text: Products, bold: true, font_size: 16, underline: false, foreground: black}
     type: Link
     layout_properties: {grid_position: 'MMFQSR,QNSOAB MCUKZK,LUZRLG'}
     event_bindings: {click: link_9_click}
