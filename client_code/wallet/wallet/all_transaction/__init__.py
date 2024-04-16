@@ -22,3 +22,19 @@ class all_transaction(all_transactionTemplate):
   def back_btn_click(self, **event_args):
     """This method is called when the button is clicked"""
     open_form("wallet.wallet")
+
+  def about_main_form_link_click(self, **event_args):
+    """This method is called when the link is clicked"""
+    open_form("lendor_registration_form.dashboard.dasboard_about")
+
+  def contact_main_form_link_click(self, **event_args):
+    """This method is called when the link is clicked"""
+    open_form("lendor_registration_form.dashboard.dasboard_contact")
+
+  def notification_link_click(self, **event_args):
+    """This method is called when the link is clicked"""
+    open_form('lendor_registration_form.dashboard.notification')
+
+  def wallet_dashboard_link_click(self, **event_args):
+    """This method is called when the link is clicked"""
+    open_form('wallet.wallet')

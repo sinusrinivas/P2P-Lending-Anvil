@@ -12,6 +12,7 @@ components:
   layout_properties:
     col_widths: {}
     grid_position: DVGLOS,KOEGEO
+    full_width_row: true
   components:
   - type: Button
     properties: {role: outlined-button, align: center, tooltip: '', border: '', enabled: true,
