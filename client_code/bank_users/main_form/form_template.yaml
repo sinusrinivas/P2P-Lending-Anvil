@@ -54,7 +54,7 @@ components:
     event_bindings: {click: link_6_click}
 - name: login_signup_button
   properties: {role: filled-button, align: right, tooltip: '', border: '', enabled: true,
-    foreground: white, visible: true, text: Sign In, font_size: null, font: '', spacing_above: small,
+    foreground: white, visible: true, text: Sign In, font_size: 16, font: '', spacing_above: small,
     icon_align: left, spacing_below: small, italic: false, background: '#013065',
     bold: true, underline: false, icon: ''}
   type: Button
@@ -69,9 +69,9 @@ components:
     foreground: white
     items: [Invest Now, Apply for Loan]
     visible: true
-    font_size: 14
+    font_size: 18
     background: '#013065'
-    bold: true
+    bold: false
     underline: false
     include_placeholder: true
   type: DropDown

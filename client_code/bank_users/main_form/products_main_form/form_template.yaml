@@ -58,10 +58,6 @@ components:
       type: Button
       event_bindings: {click: login_signup_button_click}
       layout_properties: {}
-    - name: button_3
-      properties: {text: SIgnUp, bold: true, background: '#013065', foreground: white}
-      type: Button
-      layout_properties: {}
     - name: drop_down_1
       properties:
         role: outlined
@@ -71,8 +67,9 @@ components:
         foreground: white
         items: [Invest Now, Apply for Loan]
         visible: true
+        font_size: 18
         background: '#013065'
-        bold: true
+        bold: false
         underline: false
         include_placeholder: true
       type: DropDown
