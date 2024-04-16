@@ -12,8 +12,8 @@ components:
   layout_properties: {grid_position: 'UACKEM,NTBJDA', full_width_row: true}
   name: column_panel_1
   components:
-  - properties: {text: Back, foreground: White, icon: 'fa:angle-double-left', background: '#05264d',
-      bold: true, align: right}
+  - properties: {text: Back, foreground: 'theme:On Primary', icon: 'fa:angle-double-left',
+      background: '#05264d', bold: true, align: right}
     type: Button
     layout_properties: {grid_position: 'FSSYHS,RKKUNA', full_width_row: true}
     name: button_1
@@ -23,7 +23,8 @@ components:
     layout_properties: {grid_position: 'WVVNBA,JKXLQZ', full_width_row: false}
     name: flow_panel_1
     components:
-    - properties: {text: 'Enter Admin Details ', bold: true, align: center, font_size: 18}
+    - properties: {text: 'Enter Admin Details ', bold: true, align: center, font_size: 18,
+        foreground: 'theme:On Primary'}
       type: Label
       layout_properties: {}
       name: label_1
@@ -135,13 +136,13 @@ components:
       layout_properties: {grid_position: 'WJWNQB,KVDHMP'}
       name: spacer_2
     - properties: {text: clear, bold: true, role: filled-button, background: '#05264d',
-        icon: clear, align: right}
+        icon: clear, align: right, foreground: 'theme:On Primary'}
       type: Button
       layout_properties: {grid_position: 'PKTVOO,JGTWGA'}
       event_bindings: {click: clear_function_click}
       name: clear_function
     - properties: {text: save, role: filled-button, background: '#05264d', bold: true,
-        icon: 'fa:save', align: left}
+        icon: 'fa:save', align: left, foreground: 'theme:On Primary'}
       type: Button
       layout_properties: {grid_position: 'PKTVOO,OAUSYI'}
       event_bindings: {click: save_all_fields_click}
