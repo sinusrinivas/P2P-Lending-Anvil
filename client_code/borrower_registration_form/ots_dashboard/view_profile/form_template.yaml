@@ -14,8 +14,8 @@ components:
     full_width_row: true
 - type: Button
   properties: {role: elevated-button, align: right, tooltip: '', border: '', enabled: true,
-    foreground: white, visible: true, text: Home, font_size: 18, font: '', spacing_above: small,
-    icon_align: left, spacing_below: small, italic: false, background: '#0b2547',
+    foreground: 'theme:On Primary', visible: true, text: Home, font_size: 18, font: '',
+    spacing_above: small, icon_align: left, spacing_below: small, italic: false, background: '#0b2547',
     bold: true, underline: false, icon: 'fa:home'}
   name: button_1
   layout_properties: {grid_position: 'RARYGR,QOXRPT', row: BCYNNR, width_xs: 12, col_xs: 0,
@@ -200,8 +200,8 @@ components:
     layout_properties: {grid_position: 'NESHTV,DCDWDF'}
 - type: Button
   properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
-    foreground: white, visible: true, text: Back, font_size: 17, font: '', spacing_above: small,
-    icon_align: left, spacing_below: small, italic: false, background: '#0b2547',
+    foreground: 'theme:On Primary', visible: true, text: Back, font_size: 17, font: '',
+    spacing_above: small, icon_align: left, spacing_below: small, italic: false, background: '#0b2547',
     bold: true, underline: false, icon: 'fa:backward'}
   name: button_2
   layout_properties: {grid_position: 'EBEOPW,SOTJVB'}
