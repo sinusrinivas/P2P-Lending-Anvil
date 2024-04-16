@@ -1048,6 +1048,6 @@ div.plot-container.plotly svg.main-svg {
   color: #fff; /* Button text color */
   border: 2px solid #007bff; /* Button border color */
   padding: 8px 16px; /* Adjust padding to match button */
-  border-radius: 4px; /* Optional: Add border radius for rounded corners */
+  border-radius: 50%; /* Optional: Add border radius for rounded corners */
   cursor: pointer; /* Change cursor to pointer on hover */
 }

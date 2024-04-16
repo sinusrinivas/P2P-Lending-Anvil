@@ -14,9 +14,10 @@ class products_main_form(products_main_formTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
-
+    # self.drop_down_1.tag = 'my-dropdown'
     # Any code you write here will run before the form opens.
-    self.drop_down_1.tag = 'my-dropdown'
+    self.drop_down_1.style = {'background-color': '#007bff', 'color': '#fff', 'border': '2px solid red', 'padding': '8px 16px', 'border-radius': '4px', 'cursor': 'pointer'}
+
 
   def login_signup_button_click(self, **event_args):
     anvil.users.login_with_form()
