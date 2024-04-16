@@ -5,7 +5,7 @@ components:
 - type: GridPanel
   properties: {}
   name: grid_panel_1
-  layout_properties: {grid_position: 'RWPLCY,NOMFMJ'}
+  layout_properties: {grid_position: 'RWPLCY,NOMFMJ', full_width_row: true}
   components:
   - type: Image
     properties: {role: null, vertical_align: center, height: 38, tooltip: '', border: '',

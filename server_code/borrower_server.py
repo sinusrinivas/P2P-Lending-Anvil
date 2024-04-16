@@ -255,7 +255,7 @@ def generate_emi_id():
 
 
 # bessem code
-
+@anvil.server.callable
 def final_points_update_bessem_table(user_id):
     user_points = get_user_points(user_id)
     group_points = get_group_points(user_id)
