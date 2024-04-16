@@ -204,36 +204,36 @@ components:
     type: Spacer
     layout_properties: {grid_position: 'MMFQSR,SPJHOO DARVGB,SPSXSM'}
   - name: link_7
-    properties: {text: Home, bold: true, font_size: 16, underline: true, foreground: black}
+    properties: {text: Home, bold: true, font_size: 16, underline: false, foreground: black}
     type: Link
     layout_properties: {grid_position: 'MMFQSR,WNWVDK'}
     event_bindings: {click: link_7_click}
   - name: link_10
-    properties: {text: Investment, foreground: black, bold: true, font_size: 16, underline: true}
+    properties: {text: Investment, foreground: black, bold: true, font_size: 16, underline: false}
     type: Link
     layout_properties: {grid_position: 'MMFQSR,WNWVDK NYPJXO,GZMCYD'}
   - name: link_13
     properties: {text: How It Works, foreground: black, bold: true, font_size: 16,
-      underline: true}
+      underline: false}
     type: Link
     layout_properties: {grid_position: 'MMFQSR,WNWVDK KEVRNO,FAGUHN'}
   - name: link_11
-    properties: {text: Borrow, font_size: 16, bold: true, foreground: black, underline: true}
+    properties: {text: Borrow, font_size: 16, bold: true, foreground: black, underline: false}
     type: Link
     layout_properties: {grid_position: 'MMFQSR,YBBTWP MOYVBC,DMAAWC'}
   - name: link_8
-    properties: {text: Contact Us, foreground: black, underline: true, font_size: 16,
+    properties: {text: Contact Us, foreground: black, underline: false, font_size: 16,
       bold: true, align: left}
     type: Link
     layout_properties: {grid_position: 'MMFQSR,YBBTWP KKGCYO,GSVXOQ'}
     event_bindings: {click: link_8_click}
   - name: link_12
-    properties: {text: Help, foreground: black, bold: true, font_size: 16, underline: true}
+    properties: {text: Help, foreground: black, bold: true, font_size: 16, underline: false}
     type: Link
     layout_properties: {grid_position: 'MMFQSR,QNSOAB IRVWEK,HAZHMM', full_width_row: true}
     event_bindings: {click: link_12_click}
   - name: link_9
-    properties: {text: About Us, bold: true, font_size: 16, underline: true, foreground: black}
+    properties: {text: About Us, bold: true, font_size: 16, underline: false, foreground: black}
     type: Link
     layout_properties: {grid_position: 'MMFQSR,QNSOAB MCUKZK,LUZRLG'}
     event_bindings: {click: link_9_click}
