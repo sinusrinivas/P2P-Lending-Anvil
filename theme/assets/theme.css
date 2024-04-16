@@ -787,6 +787,7 @@ input.anvil-component, .anvil-component select, .anvil-datepicker input, textare
   
   -webkit-appearance: none;
   -moz-appearance: none;
+  
 /*   padding: 8px 2em 4px 0; */
   
   /* ew ew ew - select elements are weird and don't obey line-height, so we just
@@ -1078,11 +1079,13 @@ div.plot-container.plotly svg.main-svg {
   transform: translateY(-5px); 
 }
 
-.to-disable{
+/* .to-disable{
   border-radius: 5px;
+} */
+
+select.form-control.to-disable{
+  border-radius: 15px;
 }
-
-
 
 
 
