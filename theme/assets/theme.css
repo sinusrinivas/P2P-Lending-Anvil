@@ -796,6 +796,7 @@ input.anvil-component, .anvil-component select, .anvil-datepicker input, textare
 
 .anvil-dropdown {
   position: relative;
+  border-radius: 50px;
 }
 /* Select arrow styling */
 .anvil-dropdown form:before {
@@ -1042,15 +1043,6 @@ div.plot-container.plotly svg.main-svg {
   box-shadow: 0px 0px 100px 100px %color:Surface Variant%;
 }
 
-.form-control.to-disable.anvil-dropdown {
-  /* Your custom styles here */
-  background-color: #red; /* Example background color */
-  border: 2px solid #ccc; /* Example border */
-  border-radius: 25px; /* Example border radius */
-  color: #333; /* Example text color */
-  font-size: 14px; /* Example font size */
-}
-
 .link-text {
   position: relative; /* Position relative for absolute positioning of the underline */
   font-size: 16px; /* Initial font size */
@@ -1068,7 +1060,7 @@ div.plot-container.plotly svg.main-svg {
   bottom: 0;
   width: 100%; /* Span the full width of the text */
   height: 2px; /* Height of the underline */
-  background-color: #2994bb; /* Color of the underline */
+  background-color: #013065; /* Color of the underline */
   transform: scaleX(0); /* Initially invisible */
   transition: transform 0.3s ease-in-out; /* Transition for underline animation */
 }
@@ -1076,6 +1068,7 @@ div.plot-container.plotly svg.main-svg {
 .link-text:hover::after {
   transform: scaleX(1); /* Scale the underline to full width on hover */
 }
+
 
 .btn-default {
   transition: transform 0.3s ease-in-out; /* Add smooth transition */
@@ -1085,9 +1078,13 @@ div.plot-container.plotly svg.main-svg {
   transform: translateY(-5px); 
 }
 
-.anvil-dropdown{
-  border-radius: 10px;
+.to-disable{
+  border-radius: 5px;
 }
+
+
+
+
 
 
 
