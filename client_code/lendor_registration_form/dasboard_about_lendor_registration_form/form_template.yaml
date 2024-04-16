@@ -23,13 +23,13 @@ components:
   name: navigation_bar_main_lender_1
   layout_properties: {grid_position: 'UWFKXX,VKRTKI', full_width_row: true}
 - name: outlined_card_1
-  properties: {role: outlined-card, col_widths: '{}'}
+  properties: {role: outlined-card, col_widths: '{}', foreground: ''}
   type: ColumnPanel
   layout_properties: {grid_position: 'BZBUAY,KLYYES', full_width_row: true}
   components:
   - name: label_1
-    properties: {role: title, align: center, tooltip: '', border: '', foreground: white,
-      visible: true, text: About Us, font_size: 24, font: a, spacing_above: small,
+    properties: {role: title, align: center, tooltip: '', border: '', foreground: 'theme:On
+        Primary', visible: true, text: About Us, font_size: 24, font: a, spacing_above: small,
       icon_align: left, spacing_below: small, italic: false, background: '#0b2547',
       bold: true, underline: true, icon: ''}
     type: Label
@@ -54,7 +54,7 @@ components:
     layout_properties: {grid_position: 'SATUHG,JQEPZP'}
   - name: label_4
     properties: {text: 'Why Invest At Kotak?', bold: true, align: center, underline: true,
-      font_size: 20, background: '#0b2547', foreground: white}
+      font_size: 20, background: '#0b2547', foreground: 'theme:On Primary'}
     type: Label
     layout_properties: {grid_position: 'LMIMLK,DETZVI', row_background: '#0b2547'}
   - name: grid_panel_1

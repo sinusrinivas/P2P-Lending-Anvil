@@ -28,10 +28,10 @@ components:
     layout_properties: {grid_position: 'FQSERC,BDYTYO'}
     name: outlined_card_1
     components:
-    - properties: {role: outlined-card, align: center, tooltip: '', border: '', foreground: White,
-        visible: true, text: Loan Extension details, font_size: 18, font: '', spacing_above: small,
-        icon_align: left, spacing_below: small, italic: false, background: '#0b2547',
-        bold: false, underline: true, icon: ''}
+    - properties: {role: outlined-card, align: center, tooltip: '', border: '', foreground: 'theme:On
+          Primary', visible: true, text: Loan Extension details, font_size: 18, font: '',
+        spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+        background: '#0b2547', bold: false, underline: true, icon: ''}
       type: Label
       layout_properties: {grid_position: 'FJWJIG,BXDYZF'}
       name: label_6
