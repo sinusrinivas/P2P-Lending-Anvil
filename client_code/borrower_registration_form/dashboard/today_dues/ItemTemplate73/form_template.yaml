@@ -46,15 +46,15 @@ components:
     - {property: text, code: 'self.item[''product_name'']', writeback: false}
   - name: outlined_button_1
     properties: {text: View Loan Details, role: outlined-button, align: center, font_size: null,
-      background: '#05264d', foreground: white, bold: true}
+      background: '#05264d', foreground: 'theme:On Primary', bold: true}
     type: Button
     layout_properties: {x: 127.82114721679687, y: 338.8392639160156, width: 360.429}
     event_bindings: {click: outlined_button_1_click}
   - type: Button
     properties: {role: outlined-button, align: center, tooltip: '', border: '', enabled: true,
-      foreground: white, visible: true, text: Pay, font_size: null, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '#05264d',
-      bold: true, underline: false, icon: ''}
+      foreground: 'theme:On Primary', visible: true, text: Pay, font_size: null, font: '',
+      spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+      background: '#05264d', bold: true, underline: false, icon: ''}
     name: button_1
     layout_properties: {x: 429.62501525878906, y: 338.83972721679686, width: 261}
     event_bindings: {click: button_1_click}
