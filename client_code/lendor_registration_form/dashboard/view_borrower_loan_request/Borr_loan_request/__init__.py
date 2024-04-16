@@ -530,12 +530,10 @@ class Borr_loan_request(Borr_loan_requestTemplate):
         Notification("Borrower will get notified").show()
         self.update_ui_based_on_status()
         self.loan_disbursment_btn.visible = True
-        # selected_row = self.selected_row  
-        # tenure = selected_row['tenure']
-        # email = main_form_module.email
-        # entered_loan_id = self.entered_loan_id
-        # entered_borrower_customer_id = self.entered_borrower_customer_id
-        # signal, time_difference_seconds = anvil.server.call('loan_disbursement_action', selected_row, email,lender_accepted_timestamp)
+
+        self.button_1.visible = False
+        self.navigation_bar_lender_dashbord_1.visible = False
+        self.logout_1.visible = False
 
     def rejected_btn_click(self, **event_args):
         """This method is called when the button is clicked"""
@@ -586,6 +584,7 @@ class Borr_loan_request(Borr_loan_requestTemplate):
 
     def loan_disbursment_btn_click(self, **event_args):
         """This method is called when the button is clicked"""
+        
         if self.selected_row is None:
             alert("Selected row is not available.")
             return
