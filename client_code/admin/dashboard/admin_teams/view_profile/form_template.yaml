@@ -28,7 +28,7 @@ components:
         font: '16', spacing_above: small, icon_align: left, spacing_below: small,
         italic: false, background: '#05264d', bold: true, underline: false, icon: 'fa:backward'}
       name: button_1_copy
-      layout_properties: {grid_position: 'YMAEOH,SUTUCQ'}
+      layout_properties: {grid_position: 'YMAEOH,SUTUCQ', full_width_row: true}
       event_bindings: {click: button_1_click}
     - type: Label
       properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
