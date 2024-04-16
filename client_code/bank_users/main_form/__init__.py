@@ -117,12 +117,6 @@ class main_form(main_formTemplate):
     """This method is called when the button is clicked"""
     self.rich_text_2.visible = not self.rich_text_2.visible
 
-  # def button_2_click(self, **event_args):
-  #   """This method is called when the button is clicked"""
-  #   for component in self.get_components():
-  #       if isinstance(component, Label) and component.role == 'dropdown_item':
-  #           component.visible = True
-
 
 
   def link_7_click(self, **event_args):
@@ -137,14 +131,7 @@ class main_form(main_formTemplate):
     """This method is called when the button is clicked"""
     self.rich_text_3.visible = not self.rich_text_3.visible
 
-  # def dropdown_item_click(self, sender, **event_args):
-  #       """This method is called when a dropdown item is clicked"""
-  #       selected_option = sender.text
-  #       # Redirect to another page based on the selected option
-  #       if selected_option == "Invest Now":
-  #           open_form('bank_users.main_form.basic_registration_form')  # Replace 'Form1' with the name of your target form
-  #       elif selected_option == "Apply for Loan":
-  #           open_form('bank_users.main_form.about_main_form')
+
 
   def drop_down_1_change(self, **event_args):
     """This method is called when an item is selected"""
