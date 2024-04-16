@@ -1042,9 +1042,9 @@ div.plot-container.plotly svg.main-svg {
   box-shadow: 0px 0px 100px 100px %color:Surface Variant%;
 }
 
-.form-control.to-disable.anvil-dropdown {
+.form-control .to-disable.anvil-dropdown {
   /* Your custom styles here */
-  background-color: #f0f0f0; /* Example background color */
+  background-color: #red; /* Example background color */
   border: 1px solid #ccc; /* Example border */
   border-radius: 25px; /* Example border radius */
   color: #333; /* Example text color */
