@@ -5,7 +5,7 @@ components:
 - type: GridPanel
   properties: {}
   name: grid_panel_1
-  layout_properties: {grid_position: 'LTHPFW,CDUJMR'}
+  layout_properties: {grid_position: 'LTHPFW,CDUJMR', full_width_row: true}
   components:
   - type: ColumnPanel
     properties: {col_widths: '{}'}
@@ -23,6 +23,7 @@ components:
       layout_properties:
         col_widths: {}
         grid_position: QDLPCD,HQATII
+        full_width_row: true
     - type: Button
       properties: {role: outlined-button, align: right, tooltip: '', border: '', enabled: true,
         foreground: White, visible: true, text: HOME, font_size: null, font: '', spacing_above: small,
@@ -34,18 +35,18 @@ components:
     - type: Spacer
       properties: {height: 27}
       name: spacer_1
-      layout_properties: {grid_position: 'ULRKNM,DPHWTB'}
+      layout_properties: {grid_position: 'ULRKNM,DPHWTB', full_width_row: true}
     - type: Label
       properties: {role: null, align: center, tooltip: '', border: '', foreground: white,
         visible: true, text: Report a Bug, font_size: 18, font: '', spacing_above: small,
         icon_align: left, spacing_below: small, italic: false, background: '#0b2547',
         bold: true, underline: true, icon: ''}
       name: label_1
-      layout_properties: {grid_position: 'WURXES,JBRDWC'}
+      layout_properties: {grid_position: 'WURXES,JBRDWC', full_width_row: true}
     - type: Spacer
       properties: {height: 41}
       name: spacer_2
-      layout_properties: {grid_position: 'QLGNKL,BHRPIM'}
+      layout_properties: {grid_position: 'QLGNKL,BHRPIM', full_width_row: true}
     - type: Label
       properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
         visible: true, text: '  Email', font_size: null, font: '', spacing_above: small,

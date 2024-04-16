@@ -962,14 +962,8 @@ db_schema:
     - name: min_points
       admin_ui: {order: 2, width: 200}
       type: number
-    - name: Modify Date
-      admin_ui: {width: 200, order: 5}
-      type: date
     - name: sub_category
       admin_ui: {order: 1, width: 220}
-      type: string
-    - name: is_liveloan
-      admin_ui: {width: 200, order: 3.5}
       type: string
     - name: age
       admin_ui: {order: 2.5, width: 200}
