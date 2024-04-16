@@ -8,7 +8,7 @@ import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 from anvil.js.window import navigator
-
+from anvil import css
 
 class products_main_form(products_main_formTemplate):
   def __init__(self, **properties):
@@ -16,7 +16,31 @@ class products_main_form(products_main_formTemplate):
     self.init_components(**properties)
     # self.drop_down_1.tag = 'my-dropdown'
     # Any code you write here will run before the form opens.
-    self.drop_down_1.style = {'background-color': '#007bff', 'color': '#fff', 'border': '2px solid red', 'padding': '8px 16px', 'border-radius': '4px', 'cursor': 'pointer'}
+    # self.drop_down_1.style = {'background-color': '#007bff', 'color': '#fff', 'border': '2px solid red', 'padding': '8px 16px', 'border-radius': '4px', 'cursor': 'pointer'}
+    # In your __init__ method or wherever you initialize your components:
+    
+
+    # In your __init__ method or wherever you initialize your components:
+    self.drop_down_1.foreground = 'white'  # Adjust text color
+    self.drop_down_1.background = '#007bff'  # Adjust background color
+    self.drop_down_1.border = '2px solid #007bff'  # Adjust border style
+    self.drop_down_1.padding = '8px 16px'  # Adjust padding
+    
+    # Inject custom CSS to style the dropdown
+    custom_css = """
+    /* Custom CSS to style the dropdown */
+    #anvil-component-my-dropdown {
+        background-color: #007bff;
+        color: white;
+        border: 2px solid #007bff;
+        padding: 8px 16px;
+        border-radius: 4px; /* Adjust border radius */
+        cursor: pointer;
+    }
+    """
+
+    css.add_class(custom_css)
+
 
 
   def login_signup_button_click(self, **event_args):
@@ -116,6 +140,3 @@ class products_main_form(products_main_formTemplate):
   def button_1_click(self, **event_args):
     """This method is called when the button is clicked"""
     open_form('bank_users.main_form.products_main_form.personal_loan')
-
-  
-    
