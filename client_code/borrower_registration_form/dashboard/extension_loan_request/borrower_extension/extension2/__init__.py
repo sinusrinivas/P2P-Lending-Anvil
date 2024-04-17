@@ -84,7 +84,7 @@ class extension2(extension2Template):
         print(outstanding_months)
 
         # Calculate the new EMI amount for the extended period
-        total_extension_months = tenure + self.extension_months  # Including the current month
+        total_extension_months =  self.extension_months  # Including the current month
 
         # if total_payments_made > 0:
         #     remaining_tenure = outstanding_months + self.extension_months
