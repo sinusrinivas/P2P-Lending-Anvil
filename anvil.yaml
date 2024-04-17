@@ -1068,6 +1068,9 @@ db_schema:
     - name: extra_fee
       admin_ui: {width: 200, order: 14}
       type: number
+    - name: status
+      admin_ui: {width: 200, order: 15}
+      type: bool
   fin_borrower_business_type:
     client: full
     server: full
@@ -1389,6 +1392,9 @@ db_schema:
     - name: loan_state_status
       admin_ui: {width: 200, order: 39}
       type: string
+    - name: payment_status
+      admin_ui: {width: 200, order: 40}
+      type: bool
     title: fin_loan_details
   fin_user_issues_bugreports:
     title: fin_user_issues_bugreports

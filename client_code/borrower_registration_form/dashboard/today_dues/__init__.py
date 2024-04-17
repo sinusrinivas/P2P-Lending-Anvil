@@ -98,6 +98,7 @@ class today_dues(today_duesTemplate):
                 # If there are no emi records, append loan details without checking next payment date
                 loan_detail = app_tables.fin_loan_details.get(loan_id=loan_id)
                 user_profile = app_tables.fin_user_profile.get(customer_id=loan_detail['lender_customer_id'])
+                emi_details = app_tables.fin_emi_table.get()
                 if loan_detail is not None and user_profile is not None:
                   user_photo = user_profile['user_photo']
                   loan_amount = loan_detail['loan_amount']
@@ -111,6 +112,9 @@ class today_dues(today_duesTemplate):
                       account_number = "N/A"
                   
                   # Set emi_number to 0
+                
+                    
+                  
                   emi_number = 0
                   
                   tenure = loan_detail['tenure']
