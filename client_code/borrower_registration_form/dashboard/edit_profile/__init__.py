@@ -30,7 +30,7 @@ class edit_profile(edit_profileTemplate):
       options_string = [str(option['gender']) for option in options]
       self.gender_down.items = options_string
       
-      self.mother_label.text=user_profile['mouther_tounge']
+      # self.mother_label.text=user_profile['mouther_tounge']
       
   def file_loader_1_change(self, file, **event_args):
         """This method is called when the file_loader_1's value changes"""
