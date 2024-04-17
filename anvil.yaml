@@ -605,11 +605,6 @@ db_schema:
       admin_ui: {width: 200, order: 0}
       type: string
     title: fin_borrower_profession
-  fin_users_device:
-    title: fin_users_device
-    client: full
-    server: full
-    columns: []
   fin_user_profile:
     client: full
     server: full
@@ -956,6 +951,9 @@ db_schema:
     - name: date_of_birth
       admin_ui: {order: 0.80859375, width: 200}
       type: string
+    - name: year_of_estd
+      admin_ui: {width: 200}
+      type: string
     title: fin_user_profile
   fin_admin_beseem_categories:
     client: full
@@ -972,9 +970,6 @@ db_schema:
       type: string
     - name: age
       admin_ui: {order: 2.5, width: 200}
-      type: string
-    - name: is_liveloan
-      admin_ui: {width: 200}
       type: string
     title: fin_admin_beseem_categories
   fin_wallet_transactions:
