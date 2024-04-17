@@ -34,3 +34,7 @@ class personal_loan(personal_loanTemplate):
   def link_6_click(self, **event_args):
     """This method is called when the link is clicked"""
     open_form('admin.user_issue.user_bugreports')
+
+  def link_4_click(self, **event_args):
+    """This method is called when the link is clicked"""
+    open_form('bank_users.main_form.products_main_form.personal_loan.marriage_loan')

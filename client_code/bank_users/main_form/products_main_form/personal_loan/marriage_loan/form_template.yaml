@@ -1,0 +1,50 @@
+is_package: true
+container:
+  type: HtmlTemplate
+  properties: {html: '@theme:standard-page.html'}
+components:
+- type: ColumnPanel
+  properties: {}
+  name: content_panel
+  layout_properties: {slot: default}
+  components:
+  - name: content_panel_copy
+    properties: {background: 'theme:Surface Variant'}
+    type: ColumnPanel
+    layout_properties: {grid_position: 'IXNVHK,EAQSQI', full_width_row: true}
+    components:
+    - name: label_1
+      properties: {text: 'Take out a loan for your wedding and make your big day unforgettable.
+
+          ', font_size: 40, bold: true, font: ''}
+      type: Label
+      layout_properties: {grid_position: 'EESJPX,ASVMZR MLIWBI,BIPCTW'}
+    - name: label_2
+      properties: {text: 'Your wedding day is one of the most special occasions in
+          your life. While money may come and go, moments like these are once-in-a-lifetime.
+          GTPL provides marriage loans to help make this day truly unforgettable.',
+        font_size: 19, align: left, bold: false}
+      type: Label
+      layout_properties: {grid_position: 'EESJPX,ASVMZR CRWGQV,RATEBI'}
+    - name: spacer_1
+      properties: {height: 32}
+      type: Spacer
+      layout_properties: {grid_position: 'EESJPX,ASVMZR KUOIAD,GMTBIO'}
+    - name: button_1
+      properties: {text: Apply Now, foreground: white, font_size: 17, background: '#013065',
+        align: left, role: tonal-button}
+      type: Button
+      layout_properties: {grid_position: 'EESJPX,ASVMZR LDBZPZ,OVJWQK'}
+    - name: image_1
+      properties: {height: 423.111083984375, source: _/theme/marriage loan pic.png,
+        display_mode: shrink_to_fit}
+      type: Image
+      layout_properties: {grid_position: 'EESJPX,UQUTQY'}
+- type: FlowPanel
+  properties: {}
+  name: navbar_links
+  layout_properties: {slot: nav-right}
+- name: content_panel_copy_2
+  properties: {}
+  type: ColumnPanel
+  layout_properties: {slot: title}
