@@ -183,33 +183,63 @@ components:
     type: Image
     layout_properties: {grid_position: 'JDZIXR,WNYNRD JIYFUW,JYAKPD'}
   - name: label_16
-    properties: {text: Create a Borrower Account, align: center}
+    properties: {text: "Create a Borrower \nAccount", align: center, font_size: 18,
+      bold: true}
     type: Label
     layout_properties: {grid_position: 'JDZIXR,WNYNRD TQZAIE,MYABKK'}
+  - name: label_20
+    properties: {text: 'Simply create a borrower account with us and upload the required
+        documents.
+
+        ', align: center, font_size: 18}
+    type: Label
+    layout_properties: {grid_position: 'JDZIXR,WNYNRD HEBUNT,WXENZM'}
   - name: image_7
     properties: {source: _/theme/hiw 2.png, display_mode: shrink_to_fit, height: '120'}
     type: Image
     layout_properties: {grid_position: 'JDZIXR,UHFJWD FGPKQR,IWNAAM'}
   - name: label_17
-    properties: {text: Loan assessment by i2iFunding, align: center}
+    properties: {text: "Loan assessment by\n GTPL", align: center, font_size: 18,
+      bold: true}
     type: Label
     layout_properties: {grid_position: 'JDZIXR,UHFJWD SMRPDW,IEIBSY'}
+  - name: label_21
+    properties: {text: 'Our credit evaluation team meticulously reviews your loan
+        proposal, assigning a risk grade and determining an appropriate interest rate.',
+      align: center, font_size: 18}
+    type: Label
+    layout_properties: {grid_position: 'JDZIXR,UHFJWD GSERUD,IKTQKS'}
   - name: image_8
     properties: {source: _/theme/hiw 3.png, display_mode: shrink_to_fit, height: '120'}
     type: Image
     layout_properties: {grid_position: 'JDZIXR,OBVUQB FTVZEY,ORTXZG'}
   - name: label_18
-    properties: {text: Quick funding from investors, align: center}
+    properties: {text: "Quick funding from\n investors", align: center, font_size: 18,
+      bold: true}
     type: Label
     layout_properties: {grid_position: 'JDZIXR,OBVUQB YWOUOD,JZHRQM'}
+  - name: label_22
+    properties: {text: 'Once your proposal is listed on the website for funding, active
+        investors from all over India swiftly facilitate disbursement.', align: center,
+      font_size: 18}
+    type: Label
+    layout_properties: {grid_position: 'JDZIXR,OBVUQB MVHOSL,RXKZYO'}
   - name: image_9
     properties: {source: _/theme/hiw 4.png, display_mode: shrink_to_fit, height: '120'}
     type: Image
     layout_properties: {grid_position: 'JDZIXR,AVCXNI HVNGLM,FMYRVO'}
   - name: label_19
-    properties: {text: Get the amount in your bank account directly, align: center}
+    properties: {text: Get the amount in your bank account directly, align: center,
+      font_size: 18, bold: true}
     type: Label
     layout_properties: {grid_position: 'JDZIXR,AVCXNI EMWFOG,JPVLMW'}
+  - name: label_23
+    properties: {text: 'Following a successful  verification of your documentation,
+        the loan amount is transferred directly to your bank account.
+
+        ', font_size: 18}
+    type: Label
+    layout_properties: {grid_position: 'JDZIXR,AVCXNI RQDAMI,CPUULS'}
 - type: FlowPanel
   properties: {}
   name: navbar_links
