@@ -114,7 +114,7 @@ class check_out(check_outTemplate):
         # Update other labels
         self.loan_id_label.text = str(selected_row['loan_id'])
         self.loan_amount_label.text = str(loan_amount)
-        self.interest_label.text = str(total_interest_amount)
+        self.interest_label.text = "{:.2f}".format(total_interest_amount)
         self.tenure_label.text = str(tenure)
         self.account_no_label.text = str(selected_row['account_number'])
       

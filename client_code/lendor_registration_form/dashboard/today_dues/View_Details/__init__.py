@@ -97,10 +97,10 @@ class View_Details(View_DetailsTemplate):
             self.label_6.visible = True
             self.label_3.visible = True
         else:
-            self.total_emi_amount_label.visible = False
+            self.total_emi_amount_label.visible = True
             self.extension_amount_label.visible = False
             self.label_6.visible = False
-            self.label_3.visible = False
+            self.label_3.visible = True
   
         # Update other labels
         self.loan_id_label.text = str(selected_row['loan_id'])
