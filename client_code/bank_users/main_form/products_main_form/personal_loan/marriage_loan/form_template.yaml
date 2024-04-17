@@ -171,7 +171,7 @@ components:
   - name: label_15
     properties: {text: 'Apply from anywhere with our straightforward online process
 
-        ', align: center, font_size: 18}
+        ', align: center, font_size: 20, bold: false}
     type: Label
     layout_properties: {grid_position: 'XDYOVY,CZIJEN'}
   - name: spacer_9
@@ -237,9 +237,14 @@ components:
     properties: {text: 'Following a successful  verification of your documentation,
         the loan amount is transferred directly to your bank account.
 
-        ', font_size: 18}
+        ', font_size: 18, align: center}
     type: Label
     layout_properties: {grid_position: 'JDZIXR,AVCXNI RQDAMI,CPUULS'}
+  - name: content_panel_copy_2_copy_2
+    properties: {}
+    type: ColumnPanel
+    layout_properties: {grid_position: 'UUDXOB,CFPZJR'}
+    components: []
 - type: FlowPanel
   properties: {}
   name: navbar_links
