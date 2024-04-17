@@ -279,7 +279,7 @@ db_schema:
       admin_ui: {order: 22, width: 341}
       type: string
     - name: min_months
-      admin_ui: {width: 200, order: 23}
+      admin_ui: {order: 17.5, width: 200}
       type: number
     - name: lapsed_fee
       admin_ui: {width: 200, order: 24}
@@ -297,7 +297,7 @@ db_schema:
       admin_ui: {width: 200}
       type: string
     - name: min_extension_months
-      admin_ui: {width: 200}
+      admin_ui: {order: 23.5, width: 200}
       type: number
     title: fin_product_details
   fin_borrower_organization_type:
