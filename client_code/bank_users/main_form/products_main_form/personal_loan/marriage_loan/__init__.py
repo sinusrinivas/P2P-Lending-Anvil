@@ -1,4 +1,4 @@
-from ._anvil_designer import personal_loanTemplate
+from ._anvil_designer import marriage_loanTemplate
 from anvil import *
 import anvil.server
 import anvil.google.auth, anvil.google.drive
@@ -8,7 +8,7 @@ import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 
-class personal_loan(personal_loanTemplate):
+class marriage_loan(marriage_loanTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
@@ -34,7 +34,3 @@ class personal_loan(personal_loanTemplate):
   def link_6_click(self, **event_args):
     """This method is called when the link is clicked"""
     open_form('admin.user_issue.user_bugreports')
-
-  def link_4_click(self, **event_args):
-    """This method is called when the link is clicked"""
-    open_form('bank_users.main_form.products_main_form.personal_loan.marriage_loan')
