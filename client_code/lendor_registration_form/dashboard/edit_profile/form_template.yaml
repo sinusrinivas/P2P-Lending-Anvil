@@ -141,18 +141,6 @@ components:
         placeholder: Select your gender
       type: DropDown
       layout_properties: {grid_position: 'FVSXOQ,FZRDOD'}
-    - name: label_15
-      properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-        visible: true, text: 'Mother Tongue:', font_size: null, font: '', spacing_above: small,
-        icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-        underline: false, icon: ''}
-      type: Label
-      layout_properties: {grid_position: 'WEWYLI,NWHUNG'}
-    - name: mother_label
-      properties: {background: white}
-      type: TextBox
-      layout_properties: {grid_position: 'WEWYLI,RVWINP'}
-      data_bindings: []
   - name: button_1_copy
     properties: {role: filled-button, align: center, tooltip: '', border: '', enabled: true,
       foreground: 'theme:On Primary', visible: true, text: Submit, font_size: 15,

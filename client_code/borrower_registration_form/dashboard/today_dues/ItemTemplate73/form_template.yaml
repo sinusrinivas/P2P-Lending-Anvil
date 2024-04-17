@@ -58,6 +58,7 @@ components:
     name: button_1
     layout_properties: {x: 429.62501525878906, y: 338.83972721679686, width: 261}
     event_bindings: {click: button_1_click}
+    data_bindings: []
   - name: label_9
     properties: {text: 'Invested on : ', bold: true}
     type: Label
