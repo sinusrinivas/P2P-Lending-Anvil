@@ -27,7 +27,7 @@ class foreclosure_request(foreclosure_requestTemplate):
                 print(user_id)
                 # Filter loan_details table based on the current user's ID and loan status
                 try:
-                    customer_loans = [loan for loan in app_tables.fin_loan_details.search(borrower_customer_id=user_id) if loan['loan_updated_status'] == 'disbursed']
+                    customer_loans = [loan for loan in app_tables.fin_loan_details.search(borrower_customer_id=user_id) if loan['loan_updated_status'] in ['disbursed loan', 'foreclosure']]
                     loans = []
                     for loan in customer_loans:
                         if user_profile is not None:
