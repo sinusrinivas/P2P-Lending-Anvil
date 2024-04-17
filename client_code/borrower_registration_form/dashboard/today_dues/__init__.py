@@ -98,11 +98,7 @@ class today_dues(today_duesTemplate):
                 # If there are no emi records, append loan details without checking next payment date
                 loan_detail = app_tables.fin_loan_details.get(loan_id=loan_id)
                 user_profile = app_tables.fin_user_profile.get(customer_id=loan_detail['lender_customer_id'])
-                emi_details = app_tables.fin_emi_table.search(borrower_customer_id=loan_detail['borrower_customer_id'],
-                                                             loan_id=loan_detail['loan_id'])
-                if emi
 
-                    self.repeating_panel_2.visible = False
                 if loan_detail is not None and user_profile is not None:
                   user_photo = user_profile['user_photo']
                   loan_amount = loan_detail['loan_amount']
@@ -140,7 +136,7 @@ class today_dues(today_duesTemplate):
                   product_id =loan_detail['product_id']
                   total_interest_amount  = loan_detail['total_interest_amount']
                   Scheduled_date = loan_detail['first_emi_payment_due_date']
-                  
+
                   
                   # Calculate next_payment based on first_payment_due_date
                   if emi_payment_type == 'One Time':
