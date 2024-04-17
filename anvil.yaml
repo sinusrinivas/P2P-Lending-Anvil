@@ -17,7 +17,7 @@ services:
 - source: /runtime/services/anvil/secrets.yml
   client_config: {}
   server_config: {}
-startup: {type: form, module: bank_users.main_form}
+startup: {type: form, module: bank_users.main_form.products_main_form.personal_loan.marriage_loan}
 package_name: bank_client
 allow_embedding: false
 name: P2P Lending App
@@ -234,7 +234,7 @@ db_schema:
       admin_ui: {width: 200, order: 6}
       type: string
     - name: product_id
-      admin_ui: {width: 200, order: 7}
+      admin_ui: {order: 16.5, width: 200}
       type: string
     - name: processing_fee
       admin_ui: {width: 200, order: 9}
@@ -279,7 +279,7 @@ db_schema:
       admin_ui: {order: 22, width: 341}
       type: string
     - name: min_months
-      admin_ui: {width: 200, order: 23}
+      admin_ui: {order: 17.5, width: 200}
       type: number
     - name: lapsed_fee
       admin_ui: {width: 200, order: 24}
@@ -297,7 +297,7 @@ db_schema:
       admin_ui: {width: 200}
       type: string
     - name: min_extension_months
-      admin_ui: {width: 200}
+      admin_ui: {order: 23.5, width: 200}
       type: number
     title: fin_product_details
   fin_borrower_organization_type:
@@ -1028,16 +1028,16 @@ db_schema:
       admin_ui: {order: 1.9375, width: 200}
       type: string
     - name: payment_number
-      admin_ui: {order: 7.5, width: 200}
+      admin_ui: {order: 15, width: 200}
       type: number
     - name: payment_date
-      admin_ui: {order: 7.75, width: 200}
+      admin_ui: {order: 14.5, width: 200}
       type: date
     - name: lender_customer_id
       admin_ui: {width: 200, order: 6}
       type: number
     - name: lender_email
-      admin_ui: {width: 200, order: 7}
+      admin_ui: {order: 10, width: 200}
       type: string
     - name: loan_id
       admin_ui: {order: 1.5, width: 200}
@@ -1052,7 +1052,7 @@ db_schema:
       admin_ui: {order: 1.875, width: 200}
       type: string
     - name: next_payment
-      admin_ui: {order: 10.5, width: 200}
+      admin_ui: {order: 3.5, width: 200}
       type: date
     - name: scheduled_payment
       admin_ui: {order: -1, width: 200}
@@ -1183,7 +1183,7 @@ db_schema:
       admin_ui: {order: 12, width: 200}
       type: string
   fin_wallet_bank_account_table:
-    client: none
+    client: full
     server: full
     columns:
     - name: account_id
