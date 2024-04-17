@@ -54,7 +54,7 @@ components:
       col_widths: {}
       grid_position: KSEEYY,IVLWPK XWJWYL,JOHGSD
   - name: label_11
-    properties: {bold: true, text: 'Interest Rate:', align: left}
+    properties: {bold: true, text: 'Interest Amount :', align: left}
     type: Label
     layout_properties:
       col_widths: {}
