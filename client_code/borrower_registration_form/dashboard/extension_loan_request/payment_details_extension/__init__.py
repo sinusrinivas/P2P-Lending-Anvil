@@ -68,10 +68,10 @@ class payment_details_extension(payment_details_extensionTemplate):
           emi = self.calculate_scheduled_payment(selected_row['loan_amount'], monthly_interest_rate, selected_row['tenure'])
         elif selected_row['emi_payment_type'] == 'One Time':
           pass
-        elif selected_row['emi_payment_type'] == 'Three Month':
+        elif selected_row['emi_payment_type'] == 'Three Months':
 
           emi = self.calculate_scheduled_payment(selected_row['loan_amount'], monthly_interest_rate, (selected_row['tenure']/3))
-        elif selected_row['emi_payment_type'] == 'Six Month':
+        elif selected_row['emi_payment_type'] == 'Six Months':
 
           emi = self.calculate_scheduled_payment(selected_row['loan_amount'], monthly_interest_rate, (selected_row['tenure']/6))
         total_payment = emi
