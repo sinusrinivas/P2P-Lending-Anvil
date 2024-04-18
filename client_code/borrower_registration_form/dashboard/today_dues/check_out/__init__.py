@@ -20,7 +20,6 @@ class check_out(check_outTemplate):
         self.init_components(**properties)
   
         loan_id = selected_row['loan_id']
-        borrower
         extension_months = self.get_extension_details(loan_id, selected_row['emi_number'])
         extension_amount = self.get_extension_details_1(loan_id,selected_row['emi_number'])
         loan_amount = selected_row['loan_amount']
@@ -153,8 +152,9 @@ class check_out(check_outTemplate):
             self.total_emi_amount_label.visible = True
             self.label_3.visible = True
 
-    def get_extension_details(self, loan_id, emi_number):
+    def get_extension_details(self, loan_id, emi_number,borrower_customer_id):
         extension_row = app_tables.fin_extends_loan.get(
+            borrower_customer_id = 
             loan_id=loan_id,
             emi_number=q.less_than_or_equal_to(emi_number)
         )
