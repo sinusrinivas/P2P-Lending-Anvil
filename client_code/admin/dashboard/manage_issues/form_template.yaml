@@ -12,6 +12,13 @@ components:
     properties: {}
     name: home_button_admin_1
     layout_properties: {grid_position: 'EMFUOQ,KUTSLQ', full_width_row: true}
+  - name: label_1_copy
+    properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
+      visible: true, text: Manage Issues, font_size: 18, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+      underline: false, icon: ''}
+    type: Label
+    layout_properties: {grid_position: 'FIZXVR,KVJMEQ'}
   - type: RepeatingPanel
     properties: {role: null, tooltip: '', border: '', foreground: '', items: null,
       visible: true, spacing_above: small, spacing_below: small, item_template: admin.dashboard.manage_issues.ItemTemplate82,
