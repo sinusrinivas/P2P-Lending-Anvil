@@ -53,7 +53,8 @@ class borrowers(borrowersTemplate):
                     'adhar': user_profile['aadhaar_no'],
                     'credit_limit': credit_limit,
                     'beseem' : beseem,
-                    'loan_details_count': loan_details_count
+                    'loan_details_count': loan_details_count,
+                    'user_photo':user_profile['user_photo']
                 })
 
         if not self.result:

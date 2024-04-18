@@ -104,9 +104,11 @@ components:
     data_bindings:
     - {property: text, code: 'self.item[''lender_mobile'']', writeback: false}
   - name: image_1_copy
-    properties: {height: 63.399932861328125, source: 'https://freesvg.org/img/abstract-user-flat-4.png'}
+    properties: {height: 63.399932861328125, source: 'self.item[''lender_photo'']'}
     type: Image
     layout_properties: {x: 840.6591339111328, y: 53.136479687500014, width: 85.1705}
+    data_bindings:
+    - {property: source, code: 'self.item[''lender_photo'']', writeback: false}
   - name: label_2
     properties: {text: 'Overall Return :', bold: true}
     type: Label
@@ -136,6 +138,8 @@ components:
     data_bindings:
     - {property: text, code: 'self.item[''loan_id'']', writeback: false}
   - name: image_1
-    properties: {height: 63.399932861328125, source: 'https://freesvg.org/img/abstract-user-flat-4.png'}
+    properties: {height: 63.399932861328125, source: 'self.item[''borrower_photo'']'}
     type: Image
     layout_properties: {x: -9.840911865234375, y: 51.38636779785156, width: 66}
+    data_bindings:
+    - {property: source, code: 'self.item[''borrower_photo'']', writeback: false}

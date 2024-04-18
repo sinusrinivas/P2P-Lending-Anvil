@@ -62,7 +62,7 @@ components:
     name: button_status
 - type: GridPanel
   properties: {}
-  layout_properties: {grid_position: 'PDPNFL,YIQSNN'}
+  layout_properties: {grid_position: 'BXKWQN,JNMJYB'}
   name: grid_panel_1
   components:
   - properties: {source: 'https://cdni.iconscout.com/illustration/premium/thumb/mutual-funds-allow-investors-to-pool-money-to-invest-in-a-variety-of-securities-8834128-7162631.png?f=webp',
@@ -155,34 +155,22 @@ components:
       layout_properties: {grid_position: 'OOVWBY,XCINXZ'}
       event_bindings: {click: outlined_button_2_click}
       name: outlined_button_2
-  - type: LinearPanel
-    properties: {}
+  - properties: {role: outlined-button, align: center, tooltip: '', border: '', enabled: true,
+      foreground: 'theme:On Primary', visible: true, text: 'Change Password                       ',
+      font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small,
+      italic: false, background: '#0b2547', bold: false, underline: false, icon: ''}
+    type: Button
     layout_properties: {row: UZTNPF, width_xs: 3, col_xs: 6}
-    name: linear_panel_7
-    components:
-    - properties: {role: outlined-button, align: center, tooltip: '', border: '',
-        enabled: true, foreground: 'theme:On Primary', visible: true, text: 'Request
-          Top-up Amount     ', font_size: null, font: '', spacing_above: small, icon_align: left,
-        spacing_below: small, italic: false, background: '#0b2547', bold: false, underline: false,
-        icon: ''}
-      type: Button
-      layout_properties: {grid_position: 'OOVWBY,OVGQFM'}
-      event_bindings: {click: outlined_button_6_click}
-      name: outlined_button_6
-  - type: LinearPanel
-    properties: {}
+    event_bindings: {click: outlined_button_10_click}
+    name: outlined_button_10
+  - properties: {role: outlined-button, align: center, tooltip: '', border: '', enabled: true,
+      foreground: 'theme:On Primary', visible: true, text: 'View Transaction History                ',
+      font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small,
+      italic: false, background: '#0b2547', bold: false, underline: false, icon: ''}
+    type: Button
+    event_bindings: {click: history_click}
     layout_properties: {row: UZTNPF, width_xs: 3, col_xs: 9}
-    name: linear_panel_8
-    components:
-    - properties: {role: outlined-button, align: center, tooltip: '', border: '',
-        enabled: true, foreground: 'theme:On Primary', visible: true, text: 'View/Download
-          Portfolio      ', font_size: null, font: '', spacing_above: small, icon_align: left,
-        spacing_below: small, italic: false, background: '#0b2547', bold: false, underline: false,
-        icon: ''}
-      type: Button
-      layout_properties: {grid_position: 'OOVWBY,MQPFTP'}
-      event_bindings: {click: outlined_button_7_click}
-      name: outlined_button_7
+    name: history
   - type: LinearPanel
     properties: {}
     layout_properties: {row: ZOEATB, width_xs: 3, col_xs: 0}
@@ -211,30 +199,3 @@ components:
       layout_properties: {grid_position: 'WKLSTO,OADNKX'}
       event_bindings: {click: outlined_button_9_click}
       name: outlined_button_9
-  - type: LinearPanel
-    properties: {}
-    layout_properties: {row: ZOEATB, width_xs: 3, col_xs: 6}
-    name: linear_panel_11
-    components:
-    - properties: {role: outlined-button, align: center, tooltip: '', border: '',
-        enabled: true, foreground: 'theme:On Primary', visible: true, text: 'Change
-          Password                       ', font_size: null, font: '', spacing_above: small,
-        icon_align: left, spacing_below: small, italic: false, background: '#0b2547',
-        bold: false, underline: false, icon: ''}
-      type: Button
-      layout_properties: {grid_position: 'WKLSTO,JDEXLX'}
-      event_bindings: {click: outlined_button_10_click}
-      name: outlined_button_10
-  - type: LinearPanel
-    properties: {}
-    layout_properties: {row: ZOEATB, width_xs: 3, col_xs: 9}
-    name: linear_panel_12
-    components:
-    - properties: {role: outlined-button, align: center, tooltip: '', border: '',
-        enabled: true, foreground: 'theme:On Primary', visible: true, text: 'View
-          Transaction History                ', font_size: null, font: '', spacing_above: small,
-        icon_align: left, spacing_below: small, italic: false, background: '#0b2547',
-        bold: false, underline: false, icon: ''}
-      type: Button
-      event_bindings: {click: history_click}
-      name: history
