@@ -1074,7 +1074,7 @@ db_schema:
     server: full
     columns:
     - name: loan_id
-      admin_ui: {width: 200, order: 0}
+      admin_ui: {order: -1, width: 200}
       type: string
     - name: lender_customer_id
       admin_ui: {width: 200, order: 3}
@@ -1110,7 +1110,7 @@ db_schema:
       admin_ui: {width: 200}
       type: number
     - name: borrower_full_name
-      admin_ui: {width: 200}
+      admin_ui: {order: -0.5, width: 200}
       type: string
     - name: borrower_email_id
       admin_ui: {width: 200}
@@ -1128,7 +1128,7 @@ db_schema:
       admin_ui: {width: 200, order: 18}
       type: number
     - name: borrower_customer_id
-      admin_ui: {width: 200}
+      admin_ui: {order: -0.25, width: 200}
       type: number
     title: fin_extends_loan
   fin_borrower_marrital_status:
