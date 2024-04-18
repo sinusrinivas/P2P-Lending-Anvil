@@ -24,6 +24,15 @@ class today_dues(today_duesTemplate):
         for loan in all_loans_disbursed:
             loan_id = loan['loan_id']
             borrower_customer_id = loan['borrower_customer_id']
+
+            payment_done = list(app_tables.fin_emi_table.search(
+                loan_id=loan_id,
+                next_payment=q.greater_than(today_date),
+                borrower_customer_id=borrower_customer_id
+            ))
+            if payment_done:
+              self.repeating_panel_2.visible = False
+              
             all_loans = list(app_tables.fin_emi_table.search(
                 loan_id=loan_id,
                 next_payment=q.less_than_or_equal_to(today_date),
@@ -94,10 +103,12 @@ class today_dues(today_duesTemplate):
                         'user_photo':user_photo
                     })
             else:
-                
+                if payment_done:
+                  self.repeating_panel_2.visible = False
                 # If there are no emi records, append loan details without checking next payment date
                 loan_detail = app_tables.fin_loan_details.get(loan_id=loan_id)
                 user_profile = app_tables.fin_user_profile.get(customer_id=loan_detail['lender_customer_id'])
+
                 if loan_detail is not None and user_profile is not None:
                   user_photo = user_profile['user_photo']
                   loan_amount = loan_detail['loan_amount']
@@ -111,6 +122,9 @@ class today_dues(today_duesTemplate):
                       account_number = "N/A"
                   
                   # Set emi_number to 0
+                
+                    
+                  
                   emi_number = 0
                   
                   tenure = loan_detail['tenure']
@@ -132,7 +146,7 @@ class today_dues(today_duesTemplate):
                   product_id =loan_detail['product_id']
                   total_interest_amount  = loan_detail['total_interest_amount']
                   Scheduled_date = loan_detail['first_emi_payment_due_date']
-                  
+
                   
                   # Calculate next_payment based on first_payment_due_date
                   if emi_payment_type == 'One Time':

@@ -114,7 +114,7 @@ class check_out(check_outTemplate):
         # Update other labels
         self.loan_id_label.text = str(selected_row['loan_id'])
         self.loan_amount_label.text = str(loan_amount)
-        self.interest_label.text = str(total_interest_amount)
+        self.interest_label.text = "{:.2f}".format(total_interest_amount)
         self.tenure_label.text = str(tenure)
         self.account_no_label.text = str(selected_row['account_number'])
       
@@ -241,6 +241,8 @@ class check_out(check_outTemplate):
                     lender_wallet['wallet_amount'] = lender_balance
                     lender_wallet.update()
 
+                    # self.update_payment_status()
+
                     loan_id = self.selected_row['loan_id']
                     current_emi_number = int(self.selected_row['emi_number'])
                     account_number = self.selected_row['account_number']
@@ -286,7 +288,8 @@ class check_out(check_outTemplate):
                         amount_paid= total_emi_amount,
                         extra_fee=extra_fee,
                         borrower_customer_id=borrower_id,
-                        lender_customer_id=lender_id
+                        lender_customer_id=lender_id,
+                        status=True,
                        
                         
                         
@@ -331,3 +334,14 @@ class check_out(check_outTemplate):
           foreclosure_emi_num=emi_number
       )
       return foreclosure_row is not None
+
+    # def update_payment_status(self):
+    # # Update payment status in loan details table for the given loan ID, borrower ID, and condition
+    #   loan_details = app_tables.fin_loan_details.search(
+    #     loan_id=self.selected_row['loan_id'],
+    #     borrower_customer_id=self.selected_row['borrower_customer_id'],
+    #     first_emi_payment_due_date=q.less_than_or_equal_to(datetime.now().date())
+    # )
+    #   for loan_detail in loan_details:
+    #     loan_detail['payment_status'] = True
+    #     loan_detail.update()

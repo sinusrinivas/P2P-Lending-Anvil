@@ -30,7 +30,7 @@ class edit_profile(edit_profileTemplate):
       options_string = [str(option['gender']) for option in options]
       self.gender_down.items = options_string
       
-      self.mother_label.text=user_profile['mouther_tounge']
+      # self.mother_label.text=user_profile['mouther_tounge']
       
   def file_loader_1_change(self, file, **event_args):
         """This method is called when the file_loader_1's value changes"""
@@ -49,8 +49,8 @@ class edit_profile(edit_profileTemplate):
             not self.mobile_text.text or 
             not self.date_label.text or 
             not self.city_text.text or 
-            not self.gender_down.selected_value or 
-            not self.mother_label.text):
+            not self.gender_down.selected_value  
+            ):
             
             alert("Please fill in all fields.")
             return  # Stop execution if any field is empty
@@ -73,7 +73,7 @@ class edit_profile(edit_profileTemplate):
      user_profile['city']=self.city_text.text
      # user_profile['pan_number']=self.pan_text.text
      user_profile['gender']=self.gender_down.selected_value
-     user_profile['mouther_tounge']=self.mother_label.text
+     # user_profile['mouther_tounge']=self.mother_label.text
      photo = self.file_loader_1.file
      if photo:
       user_profile['user_photo'] = photo
