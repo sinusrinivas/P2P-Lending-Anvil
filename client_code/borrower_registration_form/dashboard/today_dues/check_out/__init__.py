@@ -20,6 +20,7 @@ class check_out(check_outTemplate):
         self.init_components(**properties)
   
         loan_id = selected_row['loan_id']
+        borrower
         extension_months = self.get_extension_details(loan_id, selected_row['emi_number'])
         extension_amount = self.get_extension_details_1(loan_id,selected_row['emi_number'])
         loan_amount = selected_row['loan_amount']
