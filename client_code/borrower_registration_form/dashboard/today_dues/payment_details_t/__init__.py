@@ -47,7 +47,7 @@ class payment_details_t(payment_details_tTemplate):
           elif selected_row['emi_payment_type'] == 'Six Months':
               emi, interest_amount, ending_balance, ending_loan_amount_balance,processing_fee_per_month ,total_tenure = self.calculate_six_month_emi_and_balance(selected_row, month)
           elif selected_row['emi_payment_type'] == 'One Time':
-              emi, interest_amount, ending_balance, ending_loan_amount_balance,processing_fee_per_month = self.calculate_one_time_emi_and_balance(selected_row, month)
+              emi, interest_amount, ending_balance, ending_loan_amount_balance,processing_fee_per_month,total_tenure = self.calculate_one_time_emi_and_balance(selected_row, month)
           else:
               # Handle unsupported payment types
               emi, interest_amount, ending_balance, ending_loan_amount_balance,processing_fee_per_month ,total_tenure = 0, 0, 0
@@ -410,6 +410,12 @@ class payment_details_t(payment_details_tTemplate):
         # Initialize Total Repayment Beginning Balance (TRBB) and Total Repayment Ending Balance (TREB)
         beginning_loan_amount_balance = selected_row['loan_amount']
         ending_loan_amount_balance = beginning_loan_amount_balance
+
+        total_tenure = selected_row['tenure']
+        extension_rows = app_tables.fin_extends_loan.search(loan_id=selected_row['loan_id'],borrower_customer_id=selected_row['borrower_customer_id'])
+        for extension_row in extension_rows:
+            if current_month > extension_row['emi_number'] and extension_row['status'] == 'approved':
+                total_tenure += extension_row['total_extension_months']
     
         # For one-time payment, calculate ending balance for the single payment
         interest_amount = beginning_loan_amount_balance * (selected_row['interest_rate'] / 100) / 12
@@ -419,7 +425,7 @@ class payment_details_t(payment_details_tTemplate):
         beginning_balance -= emi  # Update beginning balance for the next iteration
         processing_fee_per_month = selected_row['total_processing_fee_amount']
         ending_balance = beginning_balance
-        return emi, interest_amount, ending_balance, ending_loan_amount_balance,processing_fee_per_month
+        return emi, interest_amount, ending_balance, ending_loan_amount_balance,processing_fee_per_month,total_tenure
         
     def calculate_num_payments(self, selected_row):
       tenure = selected_row['tenure']
