@@ -82,15 +82,10 @@ class view_loan_extension_requests(view_loan_extension_requestsTemplate):
   def button_3_click(self, **event_args):
     """This method is called when the button is clicked"""
     self.label_2.visible = True
-    #self.data_grid_2.visible = True
     self.label_3.visible = False
-    self.data_grid_2_copy.visible = False
-    self.label_4.visible = False
-    self.data_grid_3.visible = False
-    self.new.visible = False
-    self.data_grid_4.visible = False
-    self.label_1.visible = False
-    self.data_grid_4_copy.visible = False
+    self.label_4.visible = False    
+    self.new.visible = False    
+    self.label_1.visible = False    
     self.repeating_panel_5.visible = True
     self.repeating_panel_6.visible = False
     self.repeating_panel_7.visible =True
@@ -101,15 +96,11 @@ class view_loan_extension_requests(view_loan_extension_requestsTemplate):
   def button_2_click(self, **event_args):
     """This method is called when the button is clicked"""
     self.label_3.visible = True
-   # self.data_grid_2_copy.visible = True
-    self.label_4.visible = False
-    self.data_grid_3.visible = False
-    self.label_2.visible = False
-    self.data_grid_2.visible = False
-    self.new.visible = False
-    self.data_grid_4.visible = False
-    self.label_1.visible = False
-    self.data_grid_4_copy.visible = False
+   # self._copy.visible = True
+    self.label_4.visible = False    
+    self.label_2.visible = False    
+    self.new.visible = False    
+    self.label_1.visible = False    
     self.repeating_panel_5.visible = False
     self.repeating_panel_6.visible = False
     self.repeating_panel_7.visible =False
@@ -120,14 +111,10 @@ class view_loan_extension_requests(view_loan_extension_requestsTemplate):
     """This method is called when the button is clicked"""
     self.label_4.visible = True
    # self.data_grid_3.visible = True
-    self.label_2.visible = False
-    self.data_grid_2.visible = False
+    self.label_2.visible = False    
     self.label_3.visible = False
-    self.data_grid_2_copy.visible = False
-    self.new.visible = False
-    self.data_grid_4.visible = False
-    self.label_1.visible = False
-    self.data_grid_4_copy.visible = False
+    self.new.visible = False    
+    self.label_1.visible = False   
     self.repeating_panel_5.visible = False
     self.repeating_panel_6.visible = False
     self.repeating_panel_7.visible =False
@@ -139,14 +126,10 @@ class view_loan_extension_requests(view_loan_extension_requestsTemplate):
     # self.data_grid_1.visible = not self.data_grid_1.visible
     self.new.visible = True
     #self.data_grid_4.visible = True
-    self.label_4.visible = False
-    self.data_grid_3.visible = False
-    self.label_2.visible = False
-    self.data_grid_2.visible = False
+    self.label_4.visible = False   
+    self.label_2.visible = False    
     self.label_3.visible = False
-    self.data_grid_2_copy.visible = False
-    self.label_1.visible = False
-    self.data_grid_4_copy.visible = False
+    self.label_1.visible = False    
     self.repeating_panel_5.visible = True
     self.repeating_panel_6.visible = False
     self.repeating_panel_7.visible =False
@@ -157,14 +140,10 @@ class view_loan_extension_requests(view_loan_extension_requestsTemplate):
     """This method is called when the button is clicked"""
     #self.data_grid_4_copy.visible = True
     self.label_1.visible = True
-    self.label_4.visible = False
-    self.data_grid_3.visible = False
-    self.label_2.visible = False
-    self.data_grid_2.visible = False
+    self.label_4.visible = False    
+    self.label_2.visible = False   
     self.label_3.visible = False
-    self.data_grid_2_copy.visible = False
-    self.new.visible = False
-    self.data_grid_4.visible = False
+    self.new.visible = False    
     self.repeating_panel_5.visible = False
     self.repeating_panel_6.visible = True
     self.repeating_panel_7.visible =False
