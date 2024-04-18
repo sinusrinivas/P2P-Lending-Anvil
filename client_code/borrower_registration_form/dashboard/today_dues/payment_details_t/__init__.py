@@ -74,7 +74,7 @@ class payment_details_t(payment_details_tTemplate):
   
           # Fetch scheduled_payment_made and account_number from the emi_payments table
           emi_row = app_tables.fin_emi_table.get(
-               ,
+              borrower_customer_id=selected_row['borrower_customer_id'],
               loan_id=selected_row['loan_id'],
               emi_number=month
           )
@@ -166,6 +166,7 @@ class payment_details_t(payment_details_tTemplate):
           interest_amount = self.calculate_interest(beginning_balance, selected_row['interest_rate'], remaining_months)
         
           extension_row = app_tables.fin_extends_loan.get(
+            borrower_customer_id=selected_row['borrower_customer_id'],
           loan_id=selected_row['loan_id'],
           emi_number=num_payments + 1  # Assuming num_payments is the last paid EMIs count
              )
@@ -183,6 +184,7 @@ class payment_details_t(payment_details_tTemplate):
               processing_fee_per_month = 0
                     
           emi_row_remaining = app_tables.fin_emi_table.get(
+               borrower_customer_id=selected_row['borrower_customer_id'],
               loan_id=selected_row['loan_id'],
               emi_number=q.greater_than(num_payments)
           )
@@ -306,7 +308,7 @@ class payment_details_t(payment_details_tTemplate):
       total_tenure = selected_row['tenure']
       
       # Check for extension months
-      extension_rows = app_tables.fin_extends_loan.search(loan_id=selected_row['loan_id'])
+      extension_rows = app_tables.fin_extends_loan.search(loan_id=selected_row['loan_id'],borrower_customer_id=selected_row['borrower_customer_id'])
       for extension_row in extension_rows:
           if current_month > extension_row['emi_number'] and extension_row['status'] == 'approved':
               total_tenure += extension_row['total_extension_months']
@@ -340,7 +342,7 @@ class payment_details_t(payment_details_tTemplate):
       
       # Adjust processing fee based on total tenure
       total_tenure = selected_row['tenure']
-      extension_rows = app_tables.fin_extends_loan.search(loan_id=selected_row['loan_id'])
+      extension_rows = app_tables.fin_extends_loan.search(loan_id=selected_row['loan_id'],borrower_customer_id=selected_row['borrower_customer_id'])
       for extension_row in extension_rows:
           if current_month > extension_row['emi_number'] and extension_row['status'] == 'approved':
               total_tenure += extension_row['total_extension_months']
@@ -364,7 +366,7 @@ class payment_details_t(payment_details_tTemplate):
     def calculate_six_month_emi_and_balance(self, selected_row, current_month):
     # Calculate total tenure including extensions
       total_tenure = selected_row['tenure']
-      extension_rows = app_tables.fin_extends_loan.search(loan_id=selected_row['loan_id'])
+      extension_rows = app_tables.fin_extends_loan.search(loan_id=selected_row['loan_id'],borrower_customer_id=selected_row['borrower_customer_id'])
       for extension_row in extension_rows:
           if current_month > extension_row['emi_number'] and extension_row['status'] == 'approved':
               total_tenure += extension_row['total_extension_months']
@@ -467,7 +469,7 @@ class payment_details_t(payment_details_tTemplate):
 
     def calculate_extension_months(self, selected_row):
       # Query the fin_extends_loan table to find extension months for the given loan_id
-      extension_rows = app_tables.fin_extends_loan.search(loan_id=selected_row['loan_id'])
+      extension_rows = app_tables.fin_extends_loan.search(loan_id=selected_row['loan_id'],borrower_customer_id=selected_row['borrower_customer_id'])
       total_extension_months = sum(row['total_extension_months'] for row in extension_rows)
       return total_extension_months
 
@@ -475,7 +477,7 @@ class payment_details_t(payment_details_tTemplate):
     def calculate_emi(self, selected_row, current_month, repayment_amount=None):
     # Get the total tenure including extension months
       total_tenure = selected_row['tenure']
-      extension_rows = app_tables.fin_extends_loan.search(loan_id=selected_row['loan_id'])
+      extension_rows = app_tables.fin_extends_loan.search(loan_id=selected_row['loan_id'],borrower_customer_id=selected_row['borrower_customer_id'])
       for extension_row in extension_rows:
           if current_month > extension_row['emi_number'] and extension_row['status'] == 'approved':
               total_tenure += extension_row['total_extension_months']
