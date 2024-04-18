@@ -30,10 +30,10 @@ class view_loan_foreclosure_Requests(view_loan_foreclosure_RequestsTemplate):
         self.repeating_panel_8.items = self.process_data(rejected_foreclosures)
         self.label_6.text = str(len(self.repeating_panel_8.items))
 
-        # Retrieve and display foreclosure requests under process
-        under_process_foreclosures = app_tables.fin_foreclosure.search(status=q.like('under process%'))
-        self.repeating_panel_9.items = self.process_data(under_process_foreclosures)
-        self.label_5_copy.text = str(len(self.repeating_panel_9.items))
+        # # Retrieve and display foreclosure requests under process
+        # under_process_foreclosures = app_tables.fin_foreclosure.search(status=q.like('under process%'))
+        # self.repeating_panel_9.items = self.process_data(under_process_foreclosures)
+        # self.label_5_copy.text = str(len(self.repeating_panel_9.items))
 
         # Retrieve and display new foreclosure requests
         new_foreclosures = app_tables.fin_foreclosure.search(status=q.like('under process%'))
@@ -82,8 +82,6 @@ class view_loan_foreclosure_Requests(view_loan_foreclosure_RequestsTemplate):
     self.label_2.visible = True
     #self.data_grid_2.visible = True
     self.label_3.visible = False
-    self.data_grid_2_copy.visible = False
-    self.label_4.visible = False
     self.data_grid_3.visible = False
     self.new.visible = False
     self.data_grid_4.visible = False
@@ -101,7 +99,6 @@ class view_loan_foreclosure_Requests(view_loan_foreclosure_RequestsTemplate):
     #self.data_grid_2_copy.visible = True
     self.label_4.visible = False
     self.data_grid_3.visible = False
-    self.label_2.visible = False
     self.data_grid_2.visible = False
     self.new.visible = False
     self.data_grid_4.visible = False
@@ -152,9 +149,9 @@ class view_loan_foreclosure_Requests(view_loan_foreclosure_RequestsTemplate):
     """This method is called when the button is clicked"""
     #self.data_grid_1.visible = True
     self.label_1.visible = True
-    self.label_4.visible = False
+    
     self.data_grid_3.visible = False
-    self.label_2.visible = False
+    
     self.data_grid_2.visible = False
     self.label_3.visible = False
     self.data_grid_2_copy.visible = False

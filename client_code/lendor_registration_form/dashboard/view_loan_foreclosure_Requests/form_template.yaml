@@ -136,30 +136,6 @@ components:
       type: Label
       layout_properties: {grid_position: 'NZNCOP,SKGMZB'}
       name: all
-  - properties: {role: outlined-card, tooltip: '', border: '', foreground: '', visible: true,
-      wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
-      spacing_below: small, background: '#0b2547'}
-    type: ColumnPanel
-    layout_properties:
-      col_widths: {}
-      grid_position: JICCEY,MBOMKT
-    name: outlined_card_1_copy_2
-    components:
-    - type: Button
-      properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
-        foreground: 'theme:On Primary', visible: true, text: Under Process, font_size: null,
-        font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
-        background: '', bold: false, underline: false, icon: ''}
-      layout_properties: {grid_position: 'ASNEUQ,FZFEWO'}
-      event_bindings: {click: button_4_click}
-      name: button_4
-    - properties: {role: null, align: center, tooltip: '', border: '', foreground: 'theme:On
-          Primary', visible: true, text: '', font_size: null, font: '', spacing_above: small,
-        icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
-        underline: false, icon: ''}
-      type: Label
-      layout_properties: {grid_position: 'NZNCOP,SKGMZB'}
-      name: label_5_copy
   - type: Spacer
     properties: {height: 32}
     layout_properties: {grid_position: 'SMAQMY,EDHDQP'}
@@ -173,35 +149,6 @@ components:
       col_widths: {}
       grid_position: RWXMSJ,EIUUYU
     name: label_2
-  - properties:
-      role: tonal-data-grid
-      columns:
-      - {id: JKSDUP, title: Loan Id, data_key: column_1, $$hashKey: 'object:2857'}
-      - {id: VJQQOR, title: Loan Amount, data_key: column_2, $$hashKey: 'object:2858'}
-      - {id: OJLQEN, title: Foreclosure Status, data_key: column_3, $$hashKey: 'object:2859'}
-      auto_header: true
-      tooltip: ''
-      border: ''
-      foreground: ''
-      rows_per_page: 20
-      visible: false
-      wrap_on: never
-      show_page_controls: true
-      spacing_above: small
-      spacing_below: small
-      background: ''
-    type: DataGrid
-    layout_properties:
-      col_widths: {}
-      grid_position: HPIMTX,OUXKNC
-    name: data_grid_2
-    components:
-    - type: RepeatingPanel
-      properties: {role: null, tooltip: '', border: '', foreground: '', items: null,
-        visible: true, spacing_above: none, spacing_below: none, item_template: lendor_registration_form.dashboard.view_loan_foreclosure_Requests.RowTemplate7,
-        background: ''}
-      layout_properties: {}
-      name: repeating_panel_1
   - type: Label
     properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
       visible: false, text: Rejected Foreclosure Requests, font_size: 18, font: '',
@@ -209,72 +156,6 @@ components:
       background: '', bold: true, underline: true, icon: ''}
     layout_properties: {grid_position: 'JACKKU,BLMTVD'}
     name: label_3
-  - properties:
-      role: tonal-data-grid
-      columns:
-      - {id: JKSDUP, title: Loan Id, data_key: column_1, $$hashKey: 'object:2857'}
-      - {id: VJQQOR, title: Loan Amount, data_key: column_2, $$hashKey: 'object:2858'}
-      - {id: OJLQEN, title: Foreclosure Status, data_key: column_3, $$hashKey: 'object:2859'}
-      auto_header: true
-      tooltip: ''
-      border: ''
-      foreground: ''
-      rows_per_page: 20
-      visible: false
-      wrap_on: never
-      show_page_controls: true
-      spacing_above: small
-      spacing_below: small
-      background: ''
-    type: DataGrid
-    layout_properties:
-      col_widths: {}
-      grid_position: PSKVNC,XWCBBD
-    name: data_grid_2_copy
-    components:
-    - type: RepeatingPanel
-      properties: {role: null, tooltip: '', border: '', foreground: '', items: null,
-        visible: true, spacing_above: none, spacing_below: none, item_template: lendor_registration_form.dashboard.view_loan_foreclosure_Requests.RowTemplate7,
-        background: ''}
-      layout_properties: {}
-      name: repeating_panel_2
-  - type: Label
-    properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
-      visible: false, text: Under Process Foreclosure Requests, font_size: 18, font: '',
-      spacing_above: small, icon_align: left, spacing_below: small, italic: false,
-      background: '', bold: true, underline: true, icon: ''}
-    layout_properties: {grid_position: 'ATVBMG,AAVYTU'}
-    name: label_4
-  - properties:
-      role: tonal-data-grid
-      columns:
-      - {id: JKSDUP, title: Loan Id, data_key: column_1, $$hashKey: 'object:2857'}
-      - {id: VJQQOR, title: Loan Amount, data_key: column_2, $$hashKey: 'object:2858'}
-      - {id: OJLQEN, title: Foreclosure Status, data_key: column_3, $$hashKey: 'object:2859'}
-      auto_header: true
-      tooltip: ''
-      border: ''
-      foreground: ''
-      rows_per_page: 20
-      visible: false
-      wrap_on: never
-      show_page_controls: true
-      spacing_above: small
-      spacing_below: small
-      background: ''
-    type: DataGrid
-    layout_properties:
-      col_widths: {}
-      grid_position: ICVIXH,VMOVNC
-      slot: footer
-    name: data_grid_3
-    components:
-    - type: RepeatingPanel
-      properties: {role: null, tooltip: '', border: '', foreground: '', items: null,
-        visible: true, spacing_above: none, spacing_below: none, item_template: lendor_registration_form.dashboard.view_loan_foreclosure_Requests.RowTemplate7,
-        background: ''}
-      layout_properties: {}
-      name: repeating_panel_3
   - type: Label
     properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
       visible: false, text: New Foreclosure Requests, font_size: 18, font: '', spacing_above: small,
@@ -282,32 +163,6 @@ components:
       underline: true, icon: ''}
     layout_properties: {grid_position: 'INJHZV,FBQGWB'}
     name: new
-  - type: DataGrid
-    properties:
-      role: tonal-data-grid
-      columns:
-      - {id: TQGYUE, title: Loan ID, data_key: column_1, $$hashKey: 'object:36594'}
-      - {id: BXHZZF, title: Borrower Name, data_key: column_2, $$hashKey: 'object:36595'}
-      - {id: RRQQLR, title: Amount, data_key: column_3, $$hashKey: 'object:36596'}
-      - {id: NKUDSE, title: '', data_key: column_4, $$hashKey: 'object:36792'}
-      auto_header: true
-      tooltip: ''
-      border: ''
-      foreground: ''
-      rows_per_page: 20
-      visible: false
-      wrap_on: never
-      show_page_controls: true
-      spacing_above: small
-      spacing_below: small
-      background: ''
-    layout_properties: {grid_position: 'YYBTZH,EKNWYN'}
-    name: data_grid_4
-    components:
-    - type: RepeatingPanel
-      properties: {spacing_above: none, spacing_below: none, item_template: lendor_registration_form.dashboard.view_loan_foreclosure_Requests.RowTemplate30}
-      layout_properties: {}
-      name: repeating_panel_4
   - type: Label
     properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
       visible: false, text: View All Loan Foreclosure Requests, font_size: 20, font: '',
@@ -315,34 +170,6 @@ components:
       background: '', bold: true, underline: true, icon: ''}
     layout_properties: {grid_position: 'SPJKDA,RGQWFI'}
     name: label_1
-  - type: DataGrid
-    properties:
-      role: tonal-data-grid
-      columns:
-      - {id: HMMXCH, title: Loan ID, data_key: column_1, $$hashKey: 'object:209446'}
-      - {id: NJWVHM, title: Borrower Name, data_key: column_2, $$hashKey: 'object:209447'}
-      - {id: KIGYWK, title: Loan Amount, data_key: column_3, $$hashKey: 'object:209448'}
-      - {id: VYJEJW, title: '', data_key: column_4, $$hashKey: 'object:209505'}
-      auto_header: true
-      tooltip: ''
-      border: ''
-      foreground: ''
-      rows_per_page: 20
-      visible: false
-      wrap_on: never
-      show_page_controls: true
-      spacing_above: small
-      spacing_below: small
-      background: ''
-    layout_properties: {grid_position: 'OBKIKW,DCXDHR'}
-    name: data_grid_1
-    components:
-    - type: RepeatingPanel
-      properties: {role: null, tooltip: '', border: '', foreground: '', items: null,
-        visible: true, spacing_above: none, spacing_below: none, item_template: lendor_registration_form.dashboard.view_loan_foreclosure_Requests.RowTemplate32,
-        background: ''}
-      layout_properties: {}
-      name: repeating_panel
   - properties: {item_template: lendor_registration_form.dashboard.view_loan_foreclosure_Requests.ItemTemplate55,
       visible: false}
     type: RepeatingPanel

@@ -952,7 +952,6 @@ db_schema:
       admin_ui: {order: 0.80859375, width: 200}
       type: string
     - name: year_of_estd
-      admin_ui: {width: 200, order: 115}
       type: string
     title: fin_user_profile
   fin_admin_beseem_categories:
@@ -1183,7 +1182,7 @@ db_schema:
       admin_ui: {order: 12, width: 200}
       type: string
   fin_wallet_bank_account_table:
-    client: none
+    client: full
     server: full
     columns:
     - name: account_id
