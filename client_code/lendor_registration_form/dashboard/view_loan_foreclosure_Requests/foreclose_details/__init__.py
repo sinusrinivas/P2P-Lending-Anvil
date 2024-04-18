@@ -45,6 +45,7 @@ class foreclose_details(foreclose_detailsTemplate):
         """This method is called when the 'Decline' button is clicked"""
         self.selected_row['status'] = 'rejected'
         self.selected_row.update()
+        self.update_foreclosure_status('rejected')
         Notification("Borrower will get notified").show()
         open_form("lendor_registration_form.dashboard.view_loan_foreclosure_Requests")
       

@@ -175,3 +175,9 @@ components:
           background: '', bold: true, underline: false, icon: ''}
         type: Label
         layout_properties: {grid_position: 'QKOIEX,NHHLKY'}
+      - name: button_1
+        properties: {text: Back, bold: true, foreground: white, background: '#0b2547',
+          icon: 'fa:angle-double-left'}
+        type: Button
+        layout_properties: {grid_position: 'LSGCCV,CJTMUA'}
+        event_bindings: {click: button_1_click}
