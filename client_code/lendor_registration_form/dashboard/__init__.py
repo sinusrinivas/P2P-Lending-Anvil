@@ -72,14 +72,6 @@ class dashboard(dashboardTemplate):
     """This method is called when the button is clicked"""
     open_form("lendor_registration_form.dashboard.view_loan_foreclosure_Requests")
 
-  def outlined_button_6_click(self, **event_args):
-    """This method is called when the button is clicked"""
-    open_form("lendor_registration_form.dashboard.top_up_amount")
-
-  def outlined_button_7_click(self, **event_args):
-    """This method is called when the button is clicked"""
-    open_form("lendor_registration_form.dashboard.view_or_download_portfolio")
-
   def outlined_button_8_click(self, **event_args):
     """This method is called when the button is clicked"""
     open_form("lendor_registration_form.dashboard.lender_profile")
