@@ -74,6 +74,7 @@ class payment_details_t(payment_details_tTemplate):
   
           # Fetch scheduled_payment_made and account_number from the emi_payments table
           emi_row = app_tables.fin_emi_table.get(
+               ,
               loan_id=selected_row['loan_id'],
               emi_number=month
           )
