@@ -82,7 +82,7 @@ components:
     type: Label
     layout_properties: {grid_position: 'PLRYKL,ZJGNUR WXHRGI,CEXHPA'}
   - name: image_3
-    properties: {source: _/theme/dc3.jpg, display_mode: zoom_to_fill}
+    properties: {source: _/theme/dc8.png, display_mode: shrink_to_fit}
     type: Image
     layout_properties: {grid_position: 'PLRYKL,MTFOXO BPKUFO,STLQYB'}
   - name: label_7
@@ -94,7 +94,7 @@ components:
     type: Label
     layout_properties: {grid_position: 'PLRYKL,MTFOXO BPKUFO,CHQJYV SFMMMS,BDBVAX'}
   - name: image_5
-    properties: {}
+    properties: {source: _/theme/dc7.png, display_mode: shrink_to_fit}
     type: Image
     layout_properties: {grid_position: 'PLRYKL,MTFOXO JQKWVY,XEODAK'}
   - name: label_11
