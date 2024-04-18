@@ -167,35 +167,6 @@ components:
       col_widths: {}
       grid_position: JPZZFE,GNTMZE
     name: label_2
-  - properties:
-      role: tonal-data-grid
-      columns:
-      - {id: JKSDUP, title: Loan Id, data_key: column_1, $$hashKey: 'object:2857'}
-      - {id: VJQQOR, title: Loan Amount, data_key: column_2, $$hashKey: 'object:2858'}
-      - {id: OJLQEN, title: Loan Extension Status, data_key: column_3, $$hashKey: 'object:2859'}
-      auto_header: true
-      tooltip: ''
-      border: ''
-      foreground: ''
-      rows_per_page: 20
-      visible: false
-      wrap_on: never
-      show_page_controls: true
-      spacing_above: small
-      spacing_below: small
-      background: ''
-    type: DataGrid
-    layout_properties:
-      col_widths: {}
-      grid_position: YNAFML,RFFPBA
-    name: data_grid_2
-    components:
-    - type: RepeatingPanel
-      properties: {role: null, tooltip: '', border: '', foreground: '', items: null,
-        visible: true, spacing_above: none, spacing_below: none, item_template: lendor_registration_form.dashboard.view_loan_foreclosure_Requests.RowTemplate7,
-        background: ''}
-      layout_properties: {}
-      name: repeating_panel_1
   - type: Label
     properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
       visible: false, text: Rejected Loan Extension  Requests, font_size: 18, font: '',
@@ -205,35 +176,6 @@ components:
       col_widths: {}
       grid_position: FBABJK,OCKETI
     name: label_3
-  - properties:
-      role: tonal-data-grid
-      columns:
-      - {id: JKSDUP, title: Loan Id, data_key: column_1, $$hashKey: 'object:2857'}
-      - {id: VJQQOR, title: Loan Amount, data_key: column_2, $$hashKey: 'object:2858'}
-      - {id: OJLQEN, title: Loan Extension Status, data_key: column_3, $$hashKey: 'object:2859'}
-      auto_header: true
-      tooltip: ''
-      border: ''
-      foreground: ''
-      rows_per_page: 20
-      visible: false
-      wrap_on: never
-      show_page_controls: true
-      spacing_above: small
-      spacing_below: small
-      background: ''
-    type: DataGrid
-    layout_properties:
-      col_widths: {}
-      grid_position: EEVBHJ,BCYNZD
-    name: data_grid_2_copy
-    components:
-    - type: RepeatingPanel
-      properties: {role: null, tooltip: '', border: '', foreground: '', items: null,
-        visible: true, spacing_above: none, spacing_below: none, item_template: lendor_registration_form.dashboard.view_loan_foreclosure_Requests.RowTemplate7,
-        background: ''}
-      layout_properties: {}
-      name: repeating_panel_2
   - type: Label
     properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
       visible: false, text: Under Process Loan Extension  Requests, font_size: 18,
@@ -243,35 +185,6 @@ components:
       col_widths: {}
       grid_position: UUWETI,OYKXYD
     name: label_4
-  - properties:
-      role: tonal-data-grid
-      columns:
-      - {id: JKSDUP, title: Loan Id, data_key: column_1, $$hashKey: 'object:2857'}
-      - {id: VJQQOR, title: Loan Amount, data_key: column_2, $$hashKey: 'object:2858'}
-      - {id: OJLQEN, title: Loan Extension Status, data_key: column_3, $$hashKey: 'object:2859'}
-      auto_header: true
-      tooltip: ''
-      border: ''
-      foreground: ''
-      rows_per_page: 20
-      visible: false
-      wrap_on: never
-      show_page_controls: true
-      spacing_above: small
-      spacing_below: small
-      background: ''
-    type: DataGrid
-    layout_properties:
-      col_widths: {}
-      grid_position: XIHRMF,WEESZO
-    name: data_grid_3
-    components:
-    - type: RepeatingPanel
-      properties: {role: null, tooltip: '', border: '', foreground: '', items: null,
-        visible: true, spacing_above: none, spacing_below: none, item_template: lendor_registration_form.dashboard.view_loan_foreclosure_Requests.RowTemplate7,
-        background: ''}
-      layout_properties: {}
-      name: repeating_panel_3
   - type: Label
     properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
       visible: false, text: New Loan Extension  Requests, font_size: 18, font: '',
@@ -281,32 +194,6 @@ components:
       col_widths: {}
       grid_position: QHWSYK,HARUDK
     name: new
-  - type: DataGrid
-    properties:
-      role: tonal-data-grid
-      columns:
-      - {id: EAWHHN, title: Loan ID, data_key: column_1, $$hashKey: 'object:27609'}
-      - {id: XPJNCU, title: Borrower Name, data_key: column_2, $$hashKey: 'object:27610'}
-      - {id: XGRENL, title: Loan Amount, data_key: column_3, $$hashKey: 'object:27611'}
-      - {id: YLMJSB, title: '', data_key: column_4, $$hashKey: 'object:27691'}
-      auto_header: true
-      tooltip: ''
-      border: ''
-      foreground: ''
-      rows_per_page: 20
-      visible: false
-      wrap_on: never
-      show_page_controls: true
-      spacing_above: small
-      spacing_below: small
-      background: ''
-    layout_properties: {grid_position: 'CZDHSM,ICIHCL'}
-    name: data_grid_4
-    components:
-    - type: RepeatingPanel
-      properties: {spacing_above: none, spacing_below: none, item_template: lendor_registration_form.dashboard.view_loan_extension_requests.RowTemplate38}
-      layout_properties: {}
-      name: repeating_panel_4
   - type: Label
     properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
       visible: false, text: View All Loan  Extension  Requests, font_size: 20, font: '',
@@ -316,34 +203,6 @@ components:
       col_widths: {}
       grid_position: YGGCZE,VOBKGG
     name: label_1
-  - type: DataGrid
-    properties:
-      role: tonal-data-grid
-      columns:
-      - {id: EAWHHN, title: Loan ID, data_key: column_1, $$hashKey: 'object:27609'}
-      - {id: XPJNCU, title: Borrower Name, data_key: column_2, $$hashKey: 'object:27610'}
-      - {id: XGRENL, title: Loan Amount, data_key: column_3, $$hashKey: 'object:27611'}
-      - {id: YLMJSB, title: '', data_key: column_4, $$hashKey: 'object:27691'}
-      auto_header: true
-      tooltip: ''
-      border: ''
-      foreground: ''
-      rows_per_page: 20
-      visible: false
-      wrap_on: never
-      show_page_controls: true
-      spacing_above: small
-      spacing_below: small
-      background: ''
-    layout_properties:
-      col_widths: {}
-      grid_position: NRSBQM,IQUPMW
-    name: data_grid_4_copy
-    components:
-    - type: RepeatingPanel
-      properties: {spacing_above: none, spacing_below: none, item_template: lendor_registration_form.dashboard.view_loan_extension_requests.RowTemplate38}
-      layout_properties: {}
-      name: repeating_panel
   - properties: {item_template: lendor_registration_form.dashboard.view_loan_extension_requests.ItemTemplate76,
       visible: false}
     type: RepeatingPanel

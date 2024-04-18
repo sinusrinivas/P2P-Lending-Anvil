@@ -275,7 +275,6 @@ unique_ids:
     ? borrower_registration_form.star_1_borrower_registration_form_2_employment.star_1_borrower_registration_form_2_employment_business_1
     : '1700570064478378100736204.996'
     lendor_registration_form.dashboard.view_loan_extension_requests.ItemTemplate79: '1709795534095955316024149.9836'
-    lendor_registration_form.dashboard.view_loan_extension_requests.RowTemplate38: '170650256999669053578754.57318'
     borrower_registration_form.dashboard.foreclosure_request.ItemTemplate72: '1709719079370200168118421.90018'
     lendor_registration_form.lender_registration_form_2.lender_registration_individual_form_1: '169942903909778939193987.11401'
     admin.dashboard.manage_products.view_products_and_categories.RowTemplate28: '1704172157354836718833767.5173'
