@@ -182,3 +182,4 @@ components:
     italic: false, background: '#0b2547', bold: true, underline: false, icon: ''}
   type: Button
   layout_properties: {grid_position: 'PVLVVC,KTDSMW'}
+  event_bindings: {click: button_1_click}
