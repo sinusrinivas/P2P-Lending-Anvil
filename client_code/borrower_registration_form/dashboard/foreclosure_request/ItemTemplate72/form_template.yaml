@@ -11,7 +11,7 @@ components:
     type: Image
     layout_properties: {x: 3.050000000745058, y: 0, width: 66}
     data_bindings:
-    - {property: source, code: 'self.item[''user_photo'']'}
+    - {property: source, code: 'self.item[''user_photo'']', writeback: false}
   - name: lendor_name
     properties: {bold: true}
     type: Label
