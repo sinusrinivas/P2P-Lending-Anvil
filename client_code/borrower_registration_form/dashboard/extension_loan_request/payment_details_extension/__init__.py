@@ -68,10 +68,10 @@ class payment_details_extension(payment_details_extensionTemplate):
           emi = self.calculate_scheduled_payment(selected_row['loan_amount'], monthly_interest_rate, selected_row['tenure'])
         elif selected_row['emi_payment_type'] == 'One Time':
           pass
-        elif selected_row['emi_payment_type'] == 'Three Month':
+        elif selected_row['emi_payment_type'] == 'Three Months':
 
           emi = self.calculate_scheduled_payment(selected_row['loan_amount'], monthly_interest_rate, (selected_row['tenure']/3))
-        elif selected_row['emi_payment_type'] == 'Six Month':
+        elif selected_row['emi_payment_type'] == 'Six Months':
 
           emi = self.calculate_scheduled_payment(selected_row['loan_amount'], monthly_interest_rate, (selected_row['tenure']/6))
         total_payment = emi
@@ -81,10 +81,10 @@ class payment_details_extension(payment_details_extensionTemplate):
         elif selected_row['emi_payment_type'] == 'One Time':
                 self.generate_one_time_payment_details(selected_row, extension_fee_amount)
                 return
-        elif selected_row['emi_payment_type'] == 'Three Month':
+        elif selected_row['emi_payment_type'] == 'Three Months':
           if (month - last_paid_emi_number) % 3 == 0:
             emi = self.calculate_scheduled_payment(selected_row['loan_amount'], monthly_interest_rate, (total_tenure/3))
-        elif selected_row['emi_payment_type'] == 'Six Month':
+        elif selected_row['emi_payment_type'] == 'Six Months':
           if (month - last_paid_emi_number) % 6 == 0:
             emi = self.calculate_scheduled_payment(selected_row['loan_amount'], monthly_interest_rate, (total_tenure/6))
 
@@ -138,9 +138,9 @@ class payment_details_extension(payment_details_extensionTemplate):
 
                 if emi_payment_type == 'Monthly':
                     payment_date = loan_disbursed_timestamp + timedelta(days=30 * current_month)
-                elif emi_payment_type == 'Three Month':
+                elif emi_payment_type == 'Three Months':
                     payment_date = loan_disbursed_timestamp + timedelta(days=90 * (current_month // 3))
-                elif emi_payment_type == 'Six Month':
+                elif emi_payment_type == 'Six Months':
                     payment_date = loan_disbursed_timestamp + timedelta(days=180 * (current_month // 6))
                 else:
                     payment_date = None

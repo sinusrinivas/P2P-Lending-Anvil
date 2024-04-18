@@ -91,12 +91,13 @@ class extension_loan_request(extension_loan_requestTemplate):
                 user_id = user_profile['customer_id']
                 # Filter loan_details table based on the current user's ID
                 try:
-                    customer_loans = app_tables.fin_loan_details.search(borrower_customer_id=user_id)
+                    customer_loans = app_tables.fin_loan_details.search(loan_updated_status=q.any_of("disbursed loan", "extension", "foreclosure"),borrower_customer_id=user_id)
                     loans = []
                     for loan in customer_loans:
+                        lender_details = app_tables.fin_user_profile.get(customer_id=loan['lender_customer_id'])
                         if user_profile is not None:
                             loan_data = {
-                                'mobile': user_profile['mobile'],
+                                'mobile': lender_details['mobile'],
                                 'interest_rate': loan['interest_rate'],
                                 'loan_amount': loan['loan_amount'],
                                 'tenure': loan['tenure'],
@@ -109,7 +110,8 @@ class extension_loan_request(extension_loan_requestTemplate):
                                 'borrower_full_name': loan['borrower_full_name'],
                                 'loan_updated_status': loan['loan_updated_status'],
                                 'emi_payment_type': loan['emi_payment_type'],
-                                'eligible': self.is_loan_eligible(loan)
+                                'eligible': self.is_loan_eligible(loan),
+                                'user_photo': lender_details['user_photo']
                             }
                             loans.append(loan_data)
 

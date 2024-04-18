@@ -97,8 +97,8 @@ class borrower_extension(borrower_extensionTemplate):
             # Check if there are scheduled payments within 2 days before the due date
             today = datetime.now().date()
             scheduled_payment_found = any(
-                (emi_row['scheduled_payment'] - today).days <= 2
-                for emi_row in emi_rows if emi_row['scheduled_payment'] is not None
+                (emi_row['next_payment'] - today).days <= 2
+                for emi_row in emi_rows if emi_row['next_payment'] is not None
             )
             
             # Update visibility based on scheduled payments
