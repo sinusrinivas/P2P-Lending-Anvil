@@ -31,11 +31,12 @@ class foreclosure_request(foreclosure_requestTemplate):
                     loans = []
                     for loan in customer_loans:
                         if user_profile is not None:
+                            lender_photo = app_tables.fin_user_profile.get(customer_id=loan['lender_customer_id'])
                             # Check if the loan product is eligible for foreclosure
                             product_details_record = app_tables.fin_product_details.get(product_id=loan['product_id'])
                             if product_details_record['foreclose_type'] == 'Eligible':
                                 loan_data = {
-                                    'mobile': user_profile['mobile'],
+                                    'mobile': lender_photo['mobile'],
                                     'interest_rate': loan['interest_rate'],
                                     'loan_amount': loan['loan_amount'],
                                     'tenure': loan['tenure'],
@@ -50,6 +51,7 @@ class foreclosure_request(foreclosure_requestTemplate):
                                     'credit_limit' : loan['credit_limit'],
                                     'foreclosure_type' : loan['foreclosure_type'],
                                     'borrower_full_name' : loan['borrower_full_name'],
+                                    'user_photo':lender_photo['user_photo']
                                 }
                                 loans.append(loan_data)
 
