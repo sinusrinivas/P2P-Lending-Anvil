@@ -787,6 +787,7 @@ input.anvil-component, .anvil-component select, .anvil-datepicker input, textare
   
   -webkit-appearance: none;
   -moz-appearance: none;
+  
 /*   padding: 8px 2em 4px 0; */
   
   /* ew ew ew - select elements are weird and don't obey line-height, so we just
@@ -804,7 +805,7 @@ input.anvil-component, .anvil-component select, .anvil-datepicker input, textare
     right: 0;
     font-size: 80%;
     line-height: calc(1.8em + 8px);
-    color: %color:Outline%;
+    color: #013065;
     pointer-events:none;
     padding: 4px 4px;
 }
@@ -1042,12 +1043,54 @@ div.plot-container.plotly svg.main-svg {
   box-shadow: 0px 0px 100px 100px %color:Surface Variant%;
 }
 
-[anvil-component-tag="my-dropdown"] {
-    /* CSS rules for styling the dropdown */
-  background-color: #007bff; /* Button background color */
-  color: #fff; /* Button text color */
-  border: 2px solid #007bff; /* Button border color */
-  padding: 8px 16px; /* Adjust padding to match button */
-  border-radius: 50%; /* Optional: Add border radius for rounded corners */
-  cursor: pointer; /* Change cursor to pointer on hover */
+.link-text {
+  position: relative; /* Position relative for absolute positioning of the underline */
+  font-size: 16px; /* Initial font size */
+  transition: font-size 0.3s ease-in-out; /* Transition for font size change */
 }
+
+.link-text:hover {
+  font-size: 18px; /* Increase font size on hover */
+}
+
+.link-text::after {
+  content: ''; /* Create a pseudo-element for the underline */
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%; /* Span the full width of the text */
+  height: 2px; /* Height of the underline */
+  background-color: #013065; /* Color of the underline */
+  transform: scaleX(0); /* Initially invisible */
+  transition: transform 0.3s ease-in-out; /* Transition for underline animation */
+}
+
+.link-text:hover::after {
+  transform: scaleX(1); /* Scale the underline to full width on hover */
+}
+
+
+.btn-default {
+  transition: transform 0.3s ease-in-out; /* Add smooth transition */
+}
+
+.btn-default:hover{
+  transform: translateY(-3px); 
+}
+
+/*rounding corners of dropdown  */
+select.form-control.to-disable{
+  border-radius: 25px;
+  width: 110px;
+  text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
