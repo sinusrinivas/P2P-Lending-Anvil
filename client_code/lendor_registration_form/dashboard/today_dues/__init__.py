@@ -101,8 +101,17 @@ class today_dues(today_duesTemplate):
                         'user_photo':user_photo,
                     })
             else:
-                if payment_done:
-                  self.repeating_panel_2.visible = False
+                for loan in all_loans_disbursed:
+                  loan_id = loan['loan_id']
+                  lender_customer_id = loan['lender_customer_id']
+                  loan_detail = app_tables.fin_loan_details.get(loan_id=loan_id)
+                  payment_done_1 = list(app_tables.fin_emi_table.search(
+                      loan_id=loan_id,
+                      next_payment=q.greater_than(today_date),
+                      lender_customer_id=lender_customer_id
+                  ))
+                  if payment_done_1:
+                      continue
                 # If there are no emi records, append loan details without checking next payment date
                 loan_detail = app_tables.fin_loan_details.get(loan_id=loan_id)
                 user_profile = app_tables.fin_user_profile.get(customer_id=loan_detail['borrower_customer_id'])
