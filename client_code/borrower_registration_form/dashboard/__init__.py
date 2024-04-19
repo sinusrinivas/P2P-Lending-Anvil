@@ -47,9 +47,6 @@ class dashboard(dashboardTemplate):
         """This method is called when the link is clicked"""
         open_form("borrower_registration_form.dashboard")
 
-
-
-
     def button_3_click(self, **event_args):
         """This method is called when the button is clicked"""
         open_form('borrower_registration_form.dashboard.borrower_profile')
@@ -164,3 +161,7 @@ class dashboard(dashboardTemplate):
     def view_profile(self, **event_args):
       """This method is called when the button is clicked"""
       open_form('borrower_registration_form.dashboard.borrower_profile')
+
+    def outlined_button_06_click(self, **event_args):
+      """This method is called when the button is clicked"""
+      open_form('borrower_registration_form.dashboard.discount_coupons')

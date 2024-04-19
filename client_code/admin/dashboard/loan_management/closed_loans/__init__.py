@@ -20,7 +20,7 @@ class closed_loans(closed_loansTemplate):
     for loan in self.data:
         borrower_profile = app_tables.fin_user_profile.get(customer_id=loan['borrower_customer_id'])
         lender_profile = app_tables.fin_user_profile.get(customer_id=loan['lender_customer_id'])
-        if borrower_profile is not None:
+        if borrower_profile is not None and lender_profile is not None:
             self.result.append({
                 'loan_id': loan['loan_id'],
                 'customer_id': loan['borrower_customer_id'],
@@ -38,6 +38,8 @@ class closed_loans(closed_loansTemplate):
                 'product_name':loan['product_name'],
                 'product_description':loan['product_description'],
                 'loan_disbursed_timestamp':loan['loan_disbursed_timestamp'],
+                'borrower_photo':borrower_profile['user_photo'],
+                'lender_photo':lender_profile['user_photo']
             })
 
     if not self.result:

@@ -26,7 +26,7 @@ components:
     - {property: text, code: 'self.item[''mobile'']', writeback: false}
   - name: label_3
     properties: {role: null, align: left, tooltip: '', border: '', foreground: grey,
-      visible: true, text: '--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------',
+      visible: true, text: '------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------',
       font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small,
       italic: false, background: '', bold: false, underline: false, icon: ''}
     type: Label
@@ -37,7 +37,7 @@ components:
       icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
       underline: false, icon: ''}
     type: Label
-    layout_properties: {x: 17.071465630084276, y: 130.8214503712952, width: 92.00000762939453}
+    layout_properties: {x: 17.071465630084276, y: 130.8214503712952, width: 186.33334350585938}
   - name: label_11
     properties: {text: Adhar Number}
     type: Label
@@ -56,7 +56,7 @@ components:
       icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
       underline: false, icon: ''}
     type: Label
-    layout_properties: {x: 20.6071406789124, y: 281.9642421193421, width: 92.00000762939453}
+    layout_properties: {x: 20.6071406789124, y: 281.9642421193421, width: 171.11111450195312}
   - name: label_2
     properties: {}
     type: Label

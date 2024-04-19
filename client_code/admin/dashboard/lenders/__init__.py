@@ -75,7 +75,8 @@ class lenders(lendersTemplate):
                     # 'credit_limit': credit_limit,
                     'loan_details_count': loan_details_count,
                     'lost_apportunity_loans':lost_apportunity_loans,
-                    'close': closed_loans
+                    'close': closed_loans,
+                    'user_photo':user_profile['user_photo']
                 })
 
         if not self.result:
