@@ -59,7 +59,12 @@ components:
     bold: true, underline: false, icon: ''}
   type: Button
   event_bindings: {click: login_signup_button_click}
-  layout_properties: {grid_position: 'IFJNGB,SYNJVB UAEYQF,SZJXCQ', full_width_row: false}
+  layout_properties: {grid_position: 'IFJNGB,SYNJVB UAEYQF,SZJXCQ PMMBXN,QJFOXI',
+    full_width_row: false}
+- name: form1_1
+  properties: {}
+  type: form:bank_users.main_form.Form1
+  layout_properties: {grid_position: 'IFJNGB,SYNJVB UAEYQF,SZJXCQ LRKQOS,WXSEXN'}
 - name: drop_down_1
   properties:
     role: outlined
