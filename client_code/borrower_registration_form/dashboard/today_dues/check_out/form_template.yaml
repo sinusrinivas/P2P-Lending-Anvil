@@ -143,12 +143,12 @@ components:
     type: Label
     layout_properties: {grid_position: 'KSEEYY,LEWFZL JZRNDQ,CWDDHA'}
   - name: lapsed
-    properties: {align: left}
+    properties: {align: left, visible: false}
     type: Label
     layout_properties: {grid_position: 'KSEEYY,LEWFZL SMYIFK,QLDYHU'}
   - type: Label
     properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-      visible: true, text: '', font_size: null, font: '', spacing_above: small, icon_align: left,
+      visible: false, text: '', font_size: null, font: '', spacing_above: small, icon_align: left,
       spacing_below: small, italic: false, background: '', bold: false, underline: false,
       icon: ''}
     name: default
