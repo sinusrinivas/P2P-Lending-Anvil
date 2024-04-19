@@ -81,6 +81,9 @@ class borrower_extension(borrower_extensionTemplate):
             if len(existing_requests) == 0:
                 # If the loan ID is not in the foreclosure table, make "Foreclose" button and button2 visible                
                 self.button_2.visible = True
+                self.button_1_copy.visible = True
+                self.button_s.visible = False
+                self.button_1.visible = False
             else:
                 loan_details_row = loan_details_row['loan_extension_months']
                 self.text_box_1.text = str(loan_details_row)
@@ -91,23 +94,50 @@ class borrower_extension(borrower_extensionTemplate):
                 self.button_1.visible = False
             
             # Fetch scheduled payments from fin_emi_table
-            loan_id = selected_row['loan_id']
-            emi_rows = app_tables.fin_emi_table.search(loan_id=loan_id)
+        self.selected_row = selected_row
+  
+        product_id = selected_row['product_id']
+        product_details_row = app_tables.fin_product_details.get(product_id=product_id)
+        self.min_months = product_details_row['min_extension_months']
+        self.min_months = int(self.min_months)
+
+        loan_id = selected_row['loan_id']
+        # Fetching the last row data for the specified loan_id from the fin_emi_table
+        last_emi_rows = app_tables.fin_emi_table.search(loan_id=loan_id)
+        if last_emi_rows:
+    # Convert LiveObjectProxy to list
+            last_emi_list = list(last_emi_rows)
+            
+            if last_emi_list:
+                # Sort the list of rows based on the 'emi_number' column in reverse order
+                last_emi_list.sort(key=lambda x: x['emi_number'], reverse=True)
+                
+                # Extract the 'emi_number' from the first row, which represents the highest 'emi_number'
+                total_payments_made = last_emi_list[0]['emi_number']
+            else:
+                total_payments_made = 0
+        else:
+            total_payments_made = 0
+
+        print("total payment made", total_payments_made)
+        # Set the label text
+        # self.label_tpm.text = f"{total_payments_made} months"
+        self.total_payments_made = total_payments_made
             
             # Check if there are scheduled payments within 2 days before the due date
-            today = datetime.now().date()
-            scheduled_payment_found = any(
-                (emi_row['scheduled_payment'] - today).days <= 2
-                for emi_row in emi_rows if emi_row['scheduled_payment'] is not None
-            )
+            # today = datetime.now().date()
+            # scheduled_payment_found = any(
+            #     (emi_row['scheduled_payment'] - today).days <= 2
+            #     for emi_row in emi_rows if emi_row['scheduled_payment'] is not None
+            # )
             
-            # Update visibility based on scheduled payments
-            self.button_2.visible = self.button_2.visible and not scheduled_payment_found
-            self.button_1.visible = self.button_1.visible and scheduled_payment_found
+            # # Update visibility based on scheduled payments
+            # self.button_2.visible = self.button_2.visible and not scheduled_payment_found
+            # self.button_1.visible = self.button_1.visible and scheduled_payment_found
             
-            # Additional condition to make button_1 visible if there are no existing requests
-            if len(existing_requests) == 0:
-                self.button_1_copy.visible = True
+            # # Additional condition to make button_1 visible if there are no existing requests
+            # if len(existing_requests) == 0:
+            #     self.button_1_copy.visible = True
     
     def button_1_click(self, **event_args):
         """This method is called when the Back button is clicked"""
@@ -120,27 +150,34 @@ class borrower_extension(borrower_extensionTemplate):
     def button_2_click(self, **event_args):
         """This method is called when the Submit Extension Request button is clicked"""
         # Validate extension months before allowing the borrower to proceed
-        if self.validate_extension_months():
-            # Get the loan_id and extension months
-            loan_id = self.selected_row['loan_id']
-            loan_extension_months = int(self.text_box_1.text.strip())
-
-            # Check if a row with the specified loan_id already exists in loan_details
-            existing_row = app_tables.fin_loan_details.get(loan_id=loan_id)
-
-            if existing_row is not None:
-                # Update the existing row
-                existing_row.update(loan_extension_months=loan_extension_months)
-            else:
-                # Create a new row
-                app_tables.fin_loan_details.add_row(
-                    loan_id=loan_id,
-                    loan_extension_months=loan_extension_months
-                )
-            extension_fee_percentage = float(self.extension_fee.text)
-            # Close the current form or navigate to another form if needed
-            open_form('borrower_registration_form.dashboard.extension_loan_request.payment_details_extension', selected_row=self.selected_row, loan_extension_months=loan_extension_months, extension_fee=extension_fee_percentage)
-
+        if self.total_payments_made >=self.min_months:
+        
+        
+          if self.validate_extension_months():
+              # Get the loan_id and extension months
+              loan_id = self.selected_row['loan_id']
+              loan_extension_months = int(self.text_box_1.text.strip())
+  
+              # Check if a row with the specified loan_id already exists in loan_details
+              existing_row = app_tables.fin_loan_details.get(loan_id=loan_id)
+  
+              if existing_row is not None:
+                  # Update the existing row
+                  existing_row.update(loan_extension_months=loan_extension_months)
+              else:
+                  # Create a new row
+                  app_tables.fin_loan_details.add_row(
+                      loan_id=loan_id,
+                      loan_extension_months=loan_extension_months
+                  )
+              extension_fee_percentage = float(self.extension_fee.text)
+            
+              # Close the current form or navigate to another form if needed
+              open_form('borrower_registration_form.dashboard.extension_loan_request.payment_details_extension', selected_row=self.selected_row, loan_extension_months=loan_extension_months, extension_fee=extension_fee_percentage)
+        else:
+          alert(alert('You are not eligible for Extension! You have to pay at least ' + str(self.min_months) + ' months.'))
+          open_form('borrower_registration_form.dashboard.extension_loan_request')
+          
     def validate_extension_months(self):
         """Validate the extension months entered by the borrower"""
         extension_months = self.text_box_1.text.strip()
