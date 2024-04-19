@@ -1078,12 +1078,12 @@ div.plot-container.plotly svg.main-svg {
   transform: translateY(-3px); 
 }
 
-/*rounding corners of dropdown  */
-select.form-control.to-disable{
+/* /*rounding corners of dropdown  */
+/* select.form-control.to-disable{
   border-radius: 25px;
   width: 110px;
-  text-align: center;
-}
+  text-align: center; */
+} */
 
 
 
