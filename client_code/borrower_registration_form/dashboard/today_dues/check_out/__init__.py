@@ -154,6 +154,7 @@ class check_out(check_outTemplate):
 
     def get_extension_details(self, loan_id, emi_number):
         extension_row = app_tables.fin_extends_loan.get(
+            borrower_customer_id=self.selected_row['borrower_customer_id'],
             loan_id=loan_id,
             emi_number=q.less_than_or_equal_to(emi_number)
         )
@@ -164,6 +165,7 @@ class check_out(check_outTemplate):
 
     def get_extension_details_1(self, loan_id, emi_number):
         extension_row = app_tables.fin_extends_loan.get(
+            borrower_customer_id=self.selected_row['borrower_customer_id'],
             loan_id=loan_id,
             emi_number=emi_number
         )
