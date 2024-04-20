@@ -54,7 +54,7 @@ components:
       type: Image
       layout_properties: {grid_position: 'ZRRFMJ,FAHHZK ZIRCRQ,QXDJBG'}
   - name: content_panel_copy_2
-    properties: {col_widths: '{"KGORIJ":15,"KCWIQP":45,"SUZUSB":3,"MSBMLZ":57}', background: ''}
+    properties: {col_widths: '{"KGORIJ":15,"KCWIQP":45,"MSBMLZ":57}', background: ''}
     type: ColumnPanel
     layout_properties: {grid_position: 'BCGOTX,GKZFHU'}
     components:
@@ -185,6 +185,10 @@ components:
         underline: false, icon: ''}
       type: Label
       layout_properties: {grid_position: 'VJYOJJ,KGORIJ QCJUBY,CPGGHV'}
+    - name: spacer_12
+      properties: {height: -5}
+      type: Spacer
+      layout_properties: {grid_position: 'VJYOJJ,KGORIJ TTZYQN,IEYPYX'}
     - name: min_extension_label
       properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
         visible: false, text: '  Min Months For Extension', font_size: 17, font: '',
@@ -192,10 +196,6 @@ components:
         background: '', bold: true, underline: false, icon: ''}
       type: Label
       layout_properties: {grid_position: 'VJYOJJ,KGORIJ BTEDIM,GGDGYA'}
-    - name: spacer_8
-      properties: {height: '1'}
-      type: Spacer
-      layout_properties: {grid_position: 'VJYOJJ,KGORIJ BGTCAK,KMSHOY'}
     - name: label_12
       properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
         visible: true, text: '  Late payment fee (%)', font_size: 17, font: '', spacing_above: small,
@@ -204,23 +204,42 @@ components:
       type: Label
       layout_properties: {grid_position: 'VJYOJJ,KGORIJ KGROGI,CEFETK'}
     - name: label_16
-      properties: {}
+      properties: {text: '  Defaulters Fee', bold: true, font_size: 17}
       type: Label
       layout_properties: {grid_position: 'VJYOJJ,KGORIJ OZNZAI,WNRAGR'}
+    - name: spacer_14
+      properties: {height: -1}
+      type: Spacer
+      layout_properties: {grid_position: 'VJYOJJ,KGORIJ ZMBYTG,KNIPKE'}
+    - name: label_17
+      properties: {text: '  Defaulters Fee (%)', font_size: 17, bold: true, visible: false}
+      type: Label
+      layout_properties: {grid_position: 'VJYOJJ,KGORIJ ZMIGKY,BFQCAU'}
     - name: label_13
       properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-        visible: true, text: '  Defaulters Fee(%)', font_size: 17, font: '', spacing_above: small,
+        visible: false, text: '  Defaulters Fee (₹)', font_size: 17, font: '', spacing_above: small,
         icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
         underline: false, icon: ''}
       type: Label
-      layout_properties: {grid_position: 'VJYOJJ,KGORIJ FKIGVI,KWIRBW'}
+      layout_properties: {grid_position: 'VJYOJJ,KGORIJ OCPJRK,QRRWIL'}
+    - name: label_18
+      properties: {text: '  Non Performing Asset', font_size: 17, bold: true}
+      type: Label
+      layout_properties: {grid_position: 'VJYOJJ,KGORIJ FOFJMX,XUBUUK'}
     - name: label_14
       properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-        visible: true, text: '  Non Performing Asset(%)', font_size: 17, font: '',
+        visible: false, text: '  Non Performing Asset(%)', font_size: 17, font: '',
         spacing_above: small, icon_align: left, spacing_below: small, italic: false,
         background: '', bold: true, underline: false, icon: ''}
       type: Label
       layout_properties: {grid_position: 'VJYOJJ,KGORIJ FQTXUZ,NVQOGZ'}
+    - name: label_14_copy
+      properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+        visible: false, text: '  Non Performing Asset (₹)', font_size: 17, font: '',
+        spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+        background: '', bold: true, underline: false, icon: ''}
+      type: Label
+      layout_properties: {grid_position: 'VJYOJJ,KGORIJ TDZIOV,LEYHQW'}
     - name: label_1
       properties: {font_size: 17, role: null, text: ''}
       type: Label
@@ -571,26 +590,53 @@ components:
         visible: true, text: '', font_size: 17, font: '', spacing_above: small, type: text,
         spacing_below: small, italic: false, background: white, bold: false, underline: false}
       type: TextBox
-      layout_properties: {grid_position: 'VJYOJJ,KCWIQP BEHWBI,ZEVWCD'}
-    - name: text_box_1
-      properties: {}
-      type: TextBox
-      layout_properties: {grid_position: 'VJYOJJ,KCWIQP AXUSQT,YKLXQM'}
+      layout_properties: {grid_position: 'VJYOJJ,KCWIQP EIROAS,FRESKT'}
+    - name: drop_down_1
+      properties:
+        background: white
+        items: [Defaulters fee (%), Defaulters fee (₹)]
+        placeholder: Select One
+        include_placeholder: true
+      type: DropDown
+      layout_properties: {grid_position: 'VJYOJJ,KCWIQP RVVTAP,ABNDTD'}
+      event_bindings: {change: drop_down_1_change}
     - name: default_fee
       properties: {role: outlined-card, align: left, hide_text: false, tooltip: '',
         placeholder: Enter Defaulters Fee, border: '', enabled: true, foreground: '',
-        visible: true, text: '', font_size: 17, font: '', spacing_above: small, type: text,
+        visible: false, text: '', font_size: 17, font: '', spacing_above: small, type: text,
         spacing_below: small, italic: false, background: white, bold: false, underline: false}
       type: TextBox
-      layout_properties: {grid_position: 'VJYOJJ,KCWIQP XMHJLF,GZOJZE'}
+      layout_properties: {grid_position: 'VJYOJJ,KCWIQP WKOIDH,EQFCSL'}
       event_bindings: {pressed_enter: text_box_1_copy_pressed_enter}
+    - name: text_box_1
+      properties: {background: white, role: outlined-card, placeholder: Enter Fixed Defaulters Amount,
+        visible: false}
+      type: TextBox
+      layout_properties: {grid_position: 'VJYOJJ,KCWIQP IYFYXY,SYJEXQ'}
+    - name: drop_down_3
+      properties:
+        background: white
+        items: ['  Non Performing Asset (%) ', '  Non Performing Asset (₹)']
+        placeholder: Select One
+        include_placeholder: true
+      type: DropDown
+      layout_properties: {grid_position: 'VJYOJJ,KCWIQP GCZJTI,PYPKTE'}
+      event_bindings: {change: drop_down_3_change}
     - name: npa
       properties: {role: outlined-card, align: left, hide_text: false, tooltip: '',
         placeholder: Enter Non Performing Asset Fee, border: '', enabled: true, foreground: '',
-        visible: true, text: '', font_size: 17, font: '', spacing_above: small, type: text,
+        visible: false, text: '', font_size: 17, font: '', spacing_above: small, type: text,
         spacing_below: small, italic: false, background: white, bold: false, underline: false}
       type: TextBox
       layout_properties: {grid_position: 'VJYOJJ,KCWIQP FUQBPD,XHDZRY'}
+    - name: npa_copy
+      properties: {role: outlined-card, align: left, hide_text: false, tooltip: '',
+        placeholder: Enter Fixed Non Performing Asset Amount, border: '', enabled: true,
+        foreground: '', visible: false, text: '', font_size: 17, font: '', spacing_above: small,
+        type: text, spacing_below: small, italic: false, background: white, bold: false,
+        underline: false}
+      type: TextBox
+      layout_properties: {grid_position: 'VJYOJJ,KCWIQP BSNSJF,FDAEAI'}
     - name: spacer_11
       properties: {height: 32}
       type: Spacer

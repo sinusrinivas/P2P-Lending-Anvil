@@ -458,4 +458,32 @@ class manage_producs1(manage_producs1Template):
         else:
             self.employee.background = "#0a2346"
             self.occupation.append("Employee")
-    
+
+    def drop_down_1_change(self, **event_args):
+      """This method is called when an item is selected"""
+      selected_value = self.drop_down_1.selected_value
+      if selected_value == "Defaulters fee (%)":
+        self.label_17.visible = True
+        self.default_fee.visible = True
+        self.label_13.visible = False
+        self.text_box_1.visible = False
+      else:
+        self.label_13.visible = True
+        self.text_box_1.visible = True
+        self.label_17.visible = False
+        self.default_fee.visible = False
+
+    def drop_down_3_change(self, **event_args):
+      """This method is called when an item is selected"""
+      selected_value = self.drop_down_1.selected_value
+      if selected_value == " Non Performing Asset (%)":
+        self.label_14.visible = True
+        self.npa.visible = True
+        self.label_14_copy.visible = False
+        self.npa_copy.visible = False
+      else:
+        self.label_14_copy.visible = True
+        self.npa_copy.visible = True
+        self.label_14.visible = False
+        self.npa.visible = False
+        
