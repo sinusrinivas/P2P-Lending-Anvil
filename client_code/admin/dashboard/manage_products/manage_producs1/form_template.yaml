@@ -27,6 +27,10 @@ components:
     type: ColumnPanel
     layout_properties: {grid_position: 'YYXZAA,KLKMIR', full_width_row: true}
     components:
+    - name: spacer_13
+      properties: {height: 32}
+      type: Spacer
+      layout_properties: {grid_position: 'WNNYKO,CWVLPN'}
     - name: label_1_copy
       properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
         visible: true, text: ' ADD PRODUCT', font_size: 30, font: '', spacing_above: small,
@@ -46,7 +50,7 @@ components:
       layout_properties: {grid_position: 'ZRRFMJ,XEKQAY DTPQBE,OHTSIR'}
     - name: image_1
       properties: {source: _/theme/noun-shopping-cart-1723001.png, display_mode: shrink_to_fit,
-        height: 262.25}
+        height: 222.25}
       type: Image
       layout_properties: {grid_position: 'ZRRFMJ,FAHHZK'}
   - name: spacer_12_copy
