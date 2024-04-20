@@ -4,7 +4,7 @@ container:
   properties: {html: '@theme:standard-page.html'}
 components:
 - type: ColumnPanel
-  properties: {col_widths: '{"GKZFHU":55,"NZVJQM":5}'}
+  properties: {col_widths: '{"GKZFHU":76,"VTNHLC":2}'}
   name: content_panel
   layout_properties: {slot: default}
   components:
@@ -27,12 +27,8 @@ components:
     type: ColumnPanel
     layout_properties: {grid_position: 'YYXZAA,KLKMIR', full_width_row: true}
     components:
-    - name: spacer_13
-      properties: {height: 32}
-      type: Spacer
-      layout_properties: {grid_position: 'WNNYKO,CWVLPN'}
     - name: label_1_copy
-      properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
+      properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
         visible: true, text: ' ADD PRODUCT', font_size: 30, font: '', spacing_above: small,
         icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
         underline: false, icon: ''}
@@ -48,17 +44,17 @@ components:
         align: left, font_size: 18}
       type: Label
       layout_properties: {grid_position: 'ZRRFMJ,XEKQAY DTPQBE,OHTSIR'}
+    - name: spacer_13
+      properties: {height: 32}
+      type: Spacer
+      layout_properties: {grid_position: 'ZRRFMJ,FAHHZK OVPHEY,FMIXYH'}
     - name: image_1
       properties: {source: _/theme/noun-shopping-cart-1723001.png, display_mode: shrink_to_fit,
         height: 222.25}
       type: Image
-      layout_properties: {grid_position: 'ZRRFMJ,FAHHZK'}
-  - name: spacer_12_copy
-    properties: {height: 32}
-    type: Spacer
-    layout_properties: {grid_position: 'BCGOTX,VTNHLC'}
+      layout_properties: {grid_position: 'ZRRFMJ,FAHHZK ZIRCRQ,QXDJBG'}
   - name: content_panel_copy_2
-    properties: {col_widths: '{"KGORIJ":15,"KCWIQP":45}'}
+    properties: {col_widths: '{"KGORIJ":15,"KCWIQP":45,"SUZUSB":3,"MSBMLZ":57}'}
     type: ColumnPanel
     layout_properties: {grid_position: 'BCGOTX,GKZFHU'}
     components:
@@ -222,12 +218,12 @@ components:
       type: Label
       layout_properties: {grid_position: 'VJYOJJ,KGORIJ FQTXUZ,NVQOGZ'}
     - name: label_1
-      properties: {font_size: 17}
+      properties: {font_size: 17, role: null, text: ''}
       type: Label
       layout_properties: {grid_position: 'VJYOJJ,KCWIQP KJPSLQ,MSBMLZ'}
     - name: name
       properties:
-        role: outlined
+        role: null
         align: full
         tooltip: ''
         placeholder: Select Product Group
@@ -251,7 +247,7 @@ components:
       event_bindings: {change: name_change}
     - name: product_category
       properties:
-        role: outlined
+        role: null
         align: full
         tooltip: ''
         placeholder: Select Product Category
@@ -272,10 +268,10 @@ components:
       type: DropDown
       layout_properties: {grid_position: 'VJYOJJ,KCWIQP BOJJUJ,MUMMNK'}
     - name: product_name
-      properties: {role: outlined, align: left, hide_text: false, tooltip: '', placeholder: Enter Product Name,
-        border: '', enabled: true, foreground: '', visible: true, text: '', font_size: 17,
-        font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
-        background: white, bold: false, underline: false}
+      properties: {role: outlined-card, align: left, hide_text: false, tooltip: '',
+        placeholder: Enter Product Name, border: '', enabled: true, foreground: '',
+        visible: true, text: '', font_size: 17, font: '', spacing_above: small, type: text,
+        spacing_below: small, italic: false, background: white, bold: false, underline: false}
       type: TextBox
       layout_properties: {grid_position: 'VJYOJJ,KCWIQP YQIVIY,KCKRIC'}
     - name: text_area_1
@@ -305,7 +301,7 @@ components:
         layout_properties: {grid_position: 'CYKTAG,LNOYAV MMTRKO,KEBGAJ'}
       - name: drop_down_2
         properties:
-          role: outlined
+          role: null
           align: full
           tooltip: ''
           placeholder: Enter Type
@@ -355,10 +351,11 @@ components:
         type: Label
         layout_properties: {grid_position: 'CYKTAG,LNOYAV SVITEG,VDKAQD'}
       - name: text_box_5
-        properties: {role: outlined, align: left, hide_text: false, tooltip: '', placeholder: Enter Interest percentage,
-          border: '', enabled: true, foreground: '', visible: true, text: '', font_size: 17,
-          font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
-          background: White, bold: false, underline: false}
+        properties: {role: outlined-card, align: left, hide_text: false, tooltip: '',
+          placeholder: Enter Interest percentage, border: '', enabled: true, foreground: '',
+          visible: true, text: '', font_size: 17, font: '', spacing_above: small,
+          type: text, spacing_below: small, italic: false, background: White, bold: false,
+          underline: false}
         type: TextBox
         layout_properties: {grid_position: 'CYKTAG,LNOYAV SVITEG,YAJRWE'}
       - name: label_11_copy
@@ -369,10 +366,11 @@ components:
         type: Label
         layout_properties: {grid_position: 'CYKTAG,LNOYAV XWXDJJ,OWPNSY'}
       - name: min_amount
-        properties: {role: outlined, align: left, hide_text: false, tooltip: '', placeholder: Enter min amount,
-          border: '', enabled: true, foreground: '', visible: true, text: '', font_size: 17,
-          font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
-          background: white, bold: false, underline: false}
+        properties: {role: outlined-card, align: left, hide_text: false, tooltip: '',
+          placeholder: Enter min amount, border: '', enabled: true, foreground: '',
+          visible: true, text: '', font_size: 17, font: '', spacing_above: small,
+          type: text, spacing_below: small, italic: false, background: white, bold: false,
+          underline: false}
         type: TextBox
         layout_properties: {grid_position: 'CYKTAG,LNOYAV XWXDJJ,CAROUL'}
       - name: label_12_copy
@@ -383,10 +381,11 @@ components:
         type: Label
         layout_properties: {grid_position: 'CYKTAG,LNOYAV WNTQXR,ULAAXH'}
       - name: max_amount
-        properties: {role: outlined, align: left, hide_text: false, tooltip: '', placeholder: Enter max amount,
-          border: '', enabled: true, foreground: '', visible: true, text: '', font_size: 17,
-          font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
-          background: white, bold: false, underline: false}
+        properties: {role: outlined-card, align: left, hide_text: false, tooltip: '',
+          placeholder: Enter max amount, border: '', enabled: true, foreground: '',
+          visible: true, text: '', font_size: 17, font: '', spacing_above: small,
+          type: text, spacing_below: small, italic: false, background: white, bold: false,
+          underline: false}
         type: TextBox
         layout_properties: {grid_position: 'CYKTAG,LNOYAV WNTQXR,CLTPFV'}
       - name: label_3
@@ -404,10 +403,11 @@ components:
         type: Label
         layout_properties: {grid_position: 'CYKTAG,LNOYAV XYEYWQ,HHCLSZ KLHQOZ,SZCKXD'}
       - name: min_tenure
-        properties: {role: outlined, align: left, hide_text: false, tooltip: '', placeholder: Enter min tenure,
-          border: '', enabled: true, foreground: '', visible: true, text: '', font_size: 17,
-          font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
-          background: white, bold: false, underline: false}
+        properties: {role: outlined-card, align: left, hide_text: false, tooltip: '',
+          placeholder: Enter min tenure, border: '', enabled: true, foreground: '',
+          visible: true, text: '', font_size: 17, font: '', spacing_above: small,
+          type: text, spacing_below: small, italic: false, background: white, bold: false,
+          underline: false}
         type: TextBox
         layout_properties: {grid_position: 'CYKTAG,LNOYAV XYEYWQ,YVIEJJ TRVTPT,OQHPNH'}
       - name: spacer_10
@@ -415,15 +415,16 @@ components:
         type: Spacer
         layout_properties: {grid_position: 'CYKTAG,LNOYAV XYEYWQ,YVIEJJ EAFJTF,KIVCOJ'}
       - name: max_tenure
-        properties: {role: outlined, align: left, hide_text: false, tooltip: '', placeholder: Enter max tenure,
-          border: '', enabled: true, foreground: '', visible: true, text: '', font_size: 17,
-          font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
-          background: white, bold: false, underline: false}
+        properties: {role: outlined-card, align: left, hide_text: false, tooltip: '',
+          placeholder: Enter max tenure, border: '', enabled: true, foreground: '',
+          visible: true, text: '', font_size: 17, font: '', spacing_above: small,
+          type: text, spacing_below: small, italic: false, background: white, bold: false,
+          underline: false}
         type: TextBox
         layout_properties: {grid_position: 'CYKTAG,LNOYAV XYEYWQ,YVIEJJ JRWJMI,IRPPSM'}
     - name: button_1_1
       properties: {role: null, align: full, tooltip: '', border: '', enabled: true,
-        foreground: 'theme:On Primary', visible: true, text: One Time, font_size: 17,
+        foreground: 'theme:On Primary', visible: true, text: One Time, font_size: 16,
         font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
         background: '#939191', bold: false, underline: false, icon: ''}
       type: Button
@@ -431,7 +432,7 @@ components:
       event_bindings: {click: button_1_1_click}
     - name: button_2_1
       properties: {role: null, align: full, tooltip: '', border: '', enabled: true,
-        foreground: 'theme:On Primary', visible: true, text: Monthly, font_size: 17,
+        foreground: 'theme:On Primary', visible: true, text: Monthly, font_size: 16,
         font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
         background: '#939191', bold: false, underline: false, icon: ''}
       type: Button
@@ -439,7 +440,7 @@ components:
       event_bindings: {click: button_2_1_click}
     - name: button_3_1
       properties: {role: null, align: full, tooltip: '', border: '', enabled: true,
-        foreground: 'theme:On Primary', visible: true, text: Three Months, font_size: 17,
+        foreground: 'theme:On Primary', visible: true, text: Three Months, font_size: 16,
         font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
         background: '#939191', bold: false, underline: false, icon: ''}
       type: Button
@@ -447,7 +448,7 @@ components:
       event_bindings: {click: button_3_1_click}
     - name: button_4_1
       properties: {role: null, align: full, tooltip: '', border: '', enabled: true,
-        foreground: 'theme:On Primary', visible: true, text: Six Months, font_size: 17,
+        foreground: 'theme:On Primary', visible: true, text: Six Months, font_size: 16,
         font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
         background: '#939191', bold: false, underline: false, icon: ''}
       type: Button
@@ -455,7 +456,7 @@ components:
       event_bindings: {click: button_4_1_click}
     - name: business
       properties: {role: null, align: full, tooltip: '', border: '', enabled: true,
-        foreground: 'theme:On Primary', visible: true, text: Business, font_size: 17,
+        foreground: 'theme:On Primary', visible: true, text: Business, font_size: 16,
         font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
         background: '#939191', bold: false, underline: false, icon: ''}
       type: Button
@@ -463,7 +464,7 @@ components:
       event_bindings: {click: business_click}
     - name: student
       properties: {role: null, align: full, tooltip: '', border: '', enabled: true,
-        foreground: 'theme:On Primary', visible: true, text: Student, font_size: 17,
+        foreground: 'theme:On Primary', visible: true, text: Student, font_size: 16,
         font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
         background: '#939191', bold: false, underline: false, icon: ''}
       type: Button
@@ -471,7 +472,7 @@ components:
       event_bindings: {click: student_click}
     - name: employee
       properties: {role: null, align: full, tooltip: '', border: '', enabled: true,
-        foreground: 'theme:On Primary', visible: true, text: Employee, font_size: 17,
+        foreground: 'theme:On Primary', visible: true, text: Employee, font_size: 16,
         font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
         background: '#939191', bold: false, underline: false, icon: ''}
       type: Button
@@ -479,7 +480,7 @@ components:
       event_bindings: {click: employee_click}
     - name: foreclose_type
       properties:
-        role: outlined
+        role: null
         align: full
         tooltip: ''
         placeholder: Select Foreclosure
@@ -501,30 +502,30 @@ components:
       layout_properties: {grid_position: 'VJYOJJ,KCWIQP HJQGEJ,CNNJPY'}
       event_bindings: {change: foreclose_type_change}
     - name: foreclosure_fee
-      properties: {role: outlined, align: left, hide_text: false, tooltip: '', placeholder: Foreclosure fee,
-        border: '', enabled: true, foreground: '', visible: false, text: '', font_size: 17,
-        font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
-        background: '', bold: false, underline: false}
+      properties: {role: outlined-card, align: left, hide_text: false, tooltip: '',
+        placeholder: Foreclosure fee, border: '', enabled: true, foreground: '', visible: false,
+        text: '', font_size: 17, font: '', spacing_above: small, type: text, spacing_below: small,
+        italic: false, background: white, bold: false, underline: false}
       type: TextBox
       layout_properties: {grid_position: 'VJYOJJ,KCWIQP LZKNXW,OBSDPL'}
       event_bindings: {pressed_enter: foreclosure_fee_pressed_enter, change: foreclosure_fee_change}
     - name: min_months
-      properties: {role: outlined, align: left, hide_text: false, tooltip: '', placeholder: Enter min months,
-        border: '', enabled: true, foreground: '', visible: false, text: '', font_size: 17,
-        font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
-        background: '', bold: false, underline: false}
+      properties: {role: outlined-card, align: left, hide_text: false, tooltip: '',
+        placeholder: Enter min months, border: '', enabled: true, foreground: '',
+        visible: false, text: '', font_size: 17, font: '', spacing_above: small, type: text,
+        spacing_below: small, italic: false, background: white, bold: false, underline: false}
       type: TextBox
       layout_properties: {grid_position: 'VJYOJJ,KCWIQP QADKJY,NSVXBN'}
     - name: text_box_3
-      properties: {role: outlined, align: left, hide_text: false, tooltip: '', placeholder: Enter Processing fee,
-        border: '', enabled: true, foreground: '', visible: true, text: '', font_size: 17,
-        font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
-        background: '', bold: false, underline: false}
+      properties: {role: outlined-card, align: left, hide_text: false, tooltip: '',
+        placeholder: Enter Processing fee, border: '', enabled: true, foreground: '',
+        visible: true, text: '', font_size: 17, font: '', spacing_above: small, type: text,
+        spacing_below: small, italic: false, background: white, bold: false, underline: false}
       type: TextBox
       layout_properties: {grid_position: 'VJYOJJ,KCWIQP FYFAHQ,DKXNPS'}
     - name: extension_allowed
       properties:
-        role: outlined
+        role: null
         align: full
         tooltip: ''
         placeholder: Select One
@@ -546,39 +547,39 @@ components:
       layout_properties: {grid_position: 'VJYOJJ,KCWIQP OBCPCD,GLQNYM'}
       event_bindings: {change: extension_allowed_change}
     - name: text_box_4
-      properties: {role: outlined, align: left, hide_text: false, tooltip: '', placeholder: Enter Extension fee,
-        border: '', enabled: true, foreground: '', visible: false, text: '', font_size: 17,
-        font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
-        background: '', bold: false, underline: false}
+      properties: {role: outlined-card, align: left, hide_text: false, tooltip: '',
+        placeholder: Enter Extension fee, border: '', enabled: true, foreground: '',
+        visible: false, text: '', font_size: 17, font: '', spacing_above: small, type: text,
+        spacing_below: small, italic: false, background: white, bold: false, underline: false}
       type: TextBox
       layout_properties: {grid_position: 'VJYOJJ,KCWIQP RHHYRQ,EVHTSH'}
     - name: min_extension_month_text_box
-      properties: {role: outlined, align: left, hide_text: false, tooltip: '', placeholder: Enter min months,
-        border: '', enabled: true, foreground: '', visible: false, text: '', font_size: 17,
-        font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
-        background: '', bold: false, underline: false}
+      properties: {role: outlined-card, align: left, hide_text: false, tooltip: '',
+        placeholder: Enter min months, border: '', enabled: true, foreground: '',
+        visible: false, text: '', font_size: 17, font: '', spacing_above: small, type: text,
+        spacing_below: small, italic: false, background: white, bold: false, underline: false}
       type: TextBox
       layout_properties: {grid_position: 'VJYOJJ,KCWIQP ZMIFEK,NTIOKF'}
     - name: lapsed_fee
-      properties: {role: outlined, align: left, hide_text: false, tooltip: '', placeholder: Enter Lapsed Fee,
-        border: '', enabled: true, foreground: '', visible: true, text: '', font_size: 17,
-        font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
-        background: '', bold: false, underline: false}
+      properties: {role: outlined-card, align: left, hide_text: false, tooltip: '',
+        placeholder: Enter Lapsed Fee, border: '', enabled: true, foreground: '',
+        visible: true, text: '', font_size: 17, font: '', spacing_above: small, type: text,
+        spacing_below: small, italic: false, background: white, bold: false, underline: false}
       type: TextBox
       layout_properties: {grid_position: 'VJYOJJ,KCWIQP BEHWBI,ZEVWCD'}
     - name: default_fee
-      properties: {role: outlined, align: left, hide_text: false, tooltip: '', placeholder: Enter Defaulters Fee,
-        border: '', enabled: true, foreground: '', visible: true, text: '', font_size: 17,
-        font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
-        background: '', bold: false, underline: false}
+      properties: {role: outlined-card, align: left, hide_text: false, tooltip: '',
+        placeholder: Enter Defaulters Fee, border: '', enabled: true, foreground: '',
+        visible: true, text: '', font_size: 17, font: '', spacing_above: small, type: text,
+        spacing_below: small, italic: false, background: white, bold: false, underline: false}
       type: TextBox
       layout_properties: {grid_position: 'VJYOJJ,KCWIQP XMHJLF,GZOJZE'}
       event_bindings: {pressed_enter: text_box_1_copy_pressed_enter}
     - name: npa
-      properties: {role: outlined, align: left, hide_text: false, tooltip: '', placeholder: Enter Non Performing Asset Fee,
-        border: '', enabled: true, foreground: '', visible: true, text: '', font_size: 17,
-        font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
-        background: '', bold: false, underline: false}
+      properties: {role: outlined-card, align: left, hide_text: false, tooltip: '',
+        placeholder: Enter Non Performing Asset Fee, border: '', enabled: true, foreground: '',
+        visible: true, text: '', font_size: 17, font: '', spacing_above: small, type: text,
+        spacing_below: small, italic: false, background: white, bold: false, underline: false}
       type: TextBox
       layout_properties: {grid_position: 'VJYOJJ,KCWIQP FUQBPD,XHDZRY'}
     - name: spacer_11
@@ -601,10 +602,6 @@ components:
       type: Button
       layout_properties: {grid_position: 'YSSRYD,FOPCOL'}
       event_bindings: {click: button_1_click}
-  - name: spacer_12
-    properties: {height: 32}
-    type: Spacer
-    layout_properties: {grid_position: 'BCGOTX,NZVJQM'}
 - type: FlowPanel
   properties: {}
   name: navbar_links
