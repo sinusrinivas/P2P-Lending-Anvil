@@ -285,10 +285,10 @@ db_schema:
       admin_ui: {width: 200, order: 24}
       type: number
     - name: default_fee
-      admin_ui: {width: 200, order: 25}
+      admin_ui: {order: 26.25, width: 200}
       type: number
     - name: npa
-      admin_ui: {width: 200, order: 26}
+      admin_ui: {order: 27, width: 200}
       type: number
     - name: occupation
       admin_ui: {width: 200}
