@@ -179,7 +179,7 @@ components:
       type: Label
       layout_properties: {grid_position: 'VJYOJJ,KGORIJ BTEDIM,GGDGYA'}
     - name: spacer_8
-      properties: {height: '2'}
+      properties: {height: '1'}
       type: Spacer
       layout_properties: {grid_position: 'VJYOJJ,KGORIJ BGTCAK,KMSHOY'}
     - name: label_12
@@ -269,18 +269,22 @@ components:
       layout_properties: {grid_position: 'VJYOJJ,KCWIQP UGBZCT,ZHVIEV'}
     - name: column_panel_2
       properties: {role: null, tooltip: '', border: '', foreground: '', visible: true,
-        wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{"KEBGAJ":30,"JEVNRY":30}',
+        wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{"KEBGAJ":30,"JEVNRY":30,"OPVMZF":5,"LNOYAV":55}',
         spacing_below: small, background: '#CBCFD0'}
       type: ColumnPanel
       layout_properties: {grid_position: 'VJYOJJ,KCWIQP HDRMTC,YCKFOI'}
       components:
+      - name: spacer_9
+        properties: {height: 32}
+        type: Spacer
+        layout_properties: {grid_position: 'CYKTAG,OPVMZF'}
       - name: label_9_copy
         properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
           visible: true, text: '    Membership Type ', font_size: 17, font: '', spacing_above: small,
           icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
           underline: false, icon: ''}
         type: Label
-        layout_properties: {grid_position: 'MMTRKO,KEBGAJ'}
+        layout_properties: {grid_position: 'CYKTAG,LNOYAV MMTRKO,KEBGAJ'}
       - name: drop_down_2
         properties:
           role: outlined
@@ -302,99 +306,103 @@ components:
           underline: false
           include_placeholder: true
         type: DropDown
-        layout_properties: {grid_position: 'MMTRKO,JEVNRY'}
+        layout_properties: {grid_position: 'CYKTAG,LNOYAV MMTRKO,JEVNRY'}
       - name: label_10_copy
         properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
           visible: true, text: '    Interest Type ', font_size: 17, font: '', spacing_above: small,
           icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
           underline: false, icon: ''}
         type: Label
-        layout_properties: {grid_position: 'NLYEYP,NGJJWF'}
+        layout_properties: {grid_position: 'CYKTAG,LNOYAV NLYEYP,NGJJWF'}
       - name: radio_button_1
         properties: {role: null, selected: false, align: left, tooltip: '', border: '',
           enabled: true, foreground: '', value: '', visible: true, text: Fixed, font_size: 17,
           font: '', spacing_above: small, spacing_below: small, italic: false, background: '',
           bold: false, group_name: radioGroup1, underline: false}
         type: RadioButton
-        layout_properties: {grid_position: 'NLYEYP,ZYSBCI'}
+        layout_properties: {grid_position: 'CYKTAG,LNOYAV NLYEYP,ZYSBCI'}
       - name: radio_button_2
         properties: {role: null, selected: false, align: left, tooltip: '', border: '',
           enabled: true, foreground: '', value: '', visible: true, text: Variable,
           font_size: 17, font: '', spacing_above: small, spacing_below: small, italic: false,
           background: '', bold: false, group_name: radioGroup1, underline: false}
         type: RadioButton
-        layout_properties: {grid_position: 'NLYEYP,KHMPHR', x: 603.890625, y: 666,
-          width: 178.656}
+        layout_properties: {grid_position: 'CYKTAG,LNOYAV NLYEYP,KHMPHR', x: 603.890625,
+          y: 666, width: 178.656}
       - name: label_13_copy
         properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
           visible: true, text: '    Rate Of Interest (%)', font_size: 17, font: '',
           spacing_above: small, icon_align: left, spacing_below: small, italic: false,
           background: '', bold: false, underline: false, icon: ''}
         type: Label
-        layout_properties: {grid_position: 'SVITEG,VDKAQD'}
+        layout_properties: {grid_position: 'CYKTAG,LNOYAV SVITEG,VDKAQD'}
       - name: text_box_5
         properties: {role: outlined, align: left, hide_text: false, tooltip: '', placeholder: Enter Interest percentage,
           border: '', enabled: true, foreground: '', visible: true, text: '', font_size: 17,
           font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
           background: White, bold: false, underline: false}
         type: TextBox
-        layout_properties: {grid_position: 'SVITEG,YAJRWE'}
+        layout_properties: {grid_position: 'CYKTAG,LNOYAV SVITEG,YAJRWE'}
       - name: label_11_copy
         properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
           visible: true, text: '    Min Amount', font_size: 17, font: '', spacing_above: small,
           icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
           underline: false, icon: ''}
         type: Label
-        layout_properties: {grid_position: 'XWXDJJ,OWPNSY'}
+        layout_properties: {grid_position: 'CYKTAG,LNOYAV XWXDJJ,OWPNSY'}
       - name: min_amount
         properties: {role: outlined, align: left, hide_text: false, tooltip: '', placeholder: Enter min amount,
           border: '', enabled: true, foreground: '', visible: true, text: '', font_size: 17,
           font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
           background: white, bold: false, underline: false}
         type: TextBox
-        layout_properties: {grid_position: 'XWXDJJ,CAROUL'}
+        layout_properties: {grid_position: 'CYKTAG,LNOYAV XWXDJJ,CAROUL'}
       - name: label_12_copy
         properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
           visible: true, text: '    Max Amount', font_size: 17, font: '', spacing_above: small,
           icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
           underline: false, icon: ''}
         type: Label
-        layout_properties: {grid_position: 'WNTQXR,ULAAXH'}
+        layout_properties: {grid_position: 'CYKTAG,LNOYAV WNTQXR,ULAAXH'}
       - name: max_amount
         properties: {role: outlined, align: left, hide_text: false, tooltip: '', placeholder: Enter max amount,
           border: '', enabled: true, foreground: '', visible: true, text: '', font_size: 17,
           font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
           background: white, bold: false, underline: false}
         type: TextBox
-        layout_properties: {grid_position: 'WNTQXR,CLTPFV'}
+        layout_properties: {grid_position: 'CYKTAG,LNOYAV WNTQXR,CLTPFV'}
       - name: label_3
         properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
           visible: true, text: "    Min Tenure\n    (In months)", font_size: 17, font: '',
           spacing_above: small, icon_align: left, spacing_below: small, italic: false,
           background: '', bold: false, underline: false, icon: ''}
         type: Label
-        layout_properties: {grid_position: 'XYEYWQ,HHCLSZ MLSNJU,DBMMMV'}
+        layout_properties: {grid_position: 'CYKTAG,LNOYAV XYEYWQ,HHCLSZ MLSNJU,DBMMMV'}
       - name: label_4
         properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
           visible: true, text: "    Max Tenure\n    (In months)", font_size: 17, font: '',
           spacing_above: small, icon_align: left, spacing_below: small, italic: false,
           background: '', bold: false, underline: false, icon: ''}
         type: Label
-        layout_properties: {grid_position: 'XYEYWQ,HHCLSZ KLHQOZ,SZCKXD'}
+        layout_properties: {grid_position: 'CYKTAG,LNOYAV XYEYWQ,HHCLSZ KLHQOZ,SZCKXD'}
       - name: min_tenure
         properties: {role: outlined, align: left, hide_text: false, tooltip: '', placeholder: Enter min tenure,
           border: '', enabled: true, foreground: '', visible: true, text: '', font_size: 17,
           font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
           background: white, bold: false, underline: false}
         type: TextBox
-        layout_properties: {grid_position: 'XYEYWQ,YVIEJJ TRVTPT,OQHPNH'}
+        layout_properties: {grid_position: 'CYKTAG,LNOYAV XYEYWQ,YVIEJJ TRVTPT,OQHPNH'}
+      - name: spacer_10
+        properties: {height: '6'}
+        type: Spacer
+        layout_properties: {grid_position: 'CYKTAG,LNOYAV XYEYWQ,YVIEJJ EAFJTF,KIVCOJ'}
       - name: max_tenure
         properties: {role: outlined, align: left, hide_text: false, tooltip: '', placeholder: Enter max tenure,
           border: '', enabled: true, foreground: '', visible: true, text: '', font_size: 17,
           font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
           background: white, bold: false, underline: false}
         type: TextBox
-        layout_properties: {grid_position: 'XYEYWQ,YVIEJJ JRWJMI,IRPPSM'}
+        layout_properties: {grid_position: 'CYKTAG,LNOYAV XYEYWQ,YVIEJJ JRWJMI,IRPPSM'}
     - name: button_1_1
       properties: {role: null, align: full, tooltip: '', border: '', enabled: true,
         foreground: 'theme:On Primary', visible: true, text: One Time, font_size: 17,
