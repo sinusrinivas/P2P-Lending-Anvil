@@ -113,7 +113,7 @@ components:
   properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
     text: 'Upload Last Six Months Bank Statements
 
-      (Image size less-than 2MB)(Spouse)', font_size: null, font: '', spacing_above: small,
+      (Image size less-than 2MB)', font_size: null, font: '', spacing_above: small,
     icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
     underline: false, icon: ''}
   type: Label
