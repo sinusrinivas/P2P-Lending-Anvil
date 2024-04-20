@@ -167,10 +167,6 @@ components:
         underline: false, icon: ''}
       type: Label
       layout_properties: {grid_position: 'VJYOJJ,KGORIJ UUCAYA,BCOLOF'}
-    - name: spacer_7
-      properties: {height: '2'}
-      type: Spacer
-      layout_properties: {grid_position: 'VJYOJJ,KGORIJ RMGXEI,WBLNBN'}
     - name: label_7
       properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
         visible: true, text: '  Extension Allowed', font_size: 17, font: '', spacing_above: small,
@@ -255,7 +251,7 @@ components:
         spacing_above: small, icon_align: left, spacing_below: small, italic: false,
         background: '', bold: true, underline: false, icon: ''}
       type: Label
-      layout_properties: {grid_position: 'VJYOJJ,KGORIJ TDZIOV,LEYHQW'}
+      layout_properties: {grid_position: 'VJYOJJ,KGORIJ KUSRTJ,OSKHBU'}
     - name: label_1
       properties: {font_size: 17, role: null, text: ''}
       type: Label
@@ -636,7 +632,7 @@ components:
         placeholder: Select One
         include_placeholder: true
       type: DropDown
-      layout_properties: {grid_position: 'VJYOJJ,KCWIQP GCZJTI,PYPKTE'}
+      layout_properties: {grid_position: 'VJYOJJ,KCWIQP CBSBRG,HFSYQC'}
       event_bindings: {change: drop_down_3_change}
     - name: npa
       properties: {role: outlined-card, align: left, hide_text: false, tooltip: '',
@@ -652,7 +648,7 @@ components:
         type: text, spacing_below: small, italic: false, background: white, bold: false,
         underline: false}
       type: TextBox
-      layout_properties: {grid_position: 'VJYOJJ,KCWIQP BSNSJF,FDAEAI'}
+      layout_properties: {grid_position: 'VJYOJJ,KCWIQP BSNSJF,XQOYVB'}
     - name: spacer_11
       properties: {height: 32}
       type: Spacer
