@@ -299,6 +299,12 @@ db_schema:
     - name: min_extension_months
       admin_ui: {order: 17.75, width: 200}
       type: number
+    - name: default_fee_amount
+      admin_ui: {width: 200, order: 26.5}
+      type: number
+    - name: npa_amount
+      admin_ui: {width: 200, order: 27.5}
+      type: number
     title: fin_product_details
   fin_borrower_organization_type:
     client: full

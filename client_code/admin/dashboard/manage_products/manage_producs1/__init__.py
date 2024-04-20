@@ -296,6 +296,8 @@ class manage_producs1(manage_producs1Template):
                 
                 self.lapsed_fee.text.strip(),
                 self.default_fee.text.strip(),
+                self.text_box_1.text.strip(),
+                self.text_amount.text.strip(),
                 self.npa.text.strip()]):
                 
             Notification("Please fill in all the details").show()
@@ -310,10 +312,12 @@ class manage_producs1(manage_producs1Template):
             roi = float(self.text_box_5.text.strip())
             lapsed_fee = float(self.lapsed_fee.text.strip())
             default_fee = float(self.default_fee.text.strip())
+            default_fee_amount =float(self.text_box_1.text.strip()) 
             npa = float(self.npa.text.strip())
+            npa_amount = float(self.text_amount.text.strip())
     
             # Validate non-negative values
-            if processing_fee < 0 or min_amount < 0 or max_amount < 0 or min_tenure < 0 or max_tenure < 0 or roi < 0 or lapsed_fee < 0 or default_fee < 0 or npa < 0:
+            if processing_fee < 0 or min_amount < 0 or max_amount < 0 or min_tenure < 0 or max_tenure < 0 or roi < 0 or lapsed_fee < 0 or default_fee < 0 or default_fee_amount < 0 or npa < 0 or npa_amount < 0:
                 raise ValueError("Values cannot be negative")
     
         except ValueError:
@@ -366,7 +370,7 @@ class manage_producs1(manage_producs1Template):
         anvil.server.call('product_details', self.id, product_name, product_group, product_description,
                           product_categories, processing_fee, extension_fee, membership_type, interest_type, max_amount,
                           min_amount, min_tenure, max_tenure, roi, foreclose_type, foreclosure_fee, extension_allowed,
-                          emi_payment, min_months, lapsed_fee, default_fee, npa,occupation,min_extension_month )
+                          emi_payment, min_months, lapsed_fee, default_fee, default_fee_amount, npa, npa_amount, occupation,min_extension_month )
     
         # Update product ID and show success notification
         product_id = self.label_1.text
@@ -475,15 +479,15 @@ class manage_producs1(manage_producs1Template):
 
     def drop_down_3_change(self, **event_args):
       """This method is called when an item is selected"""
-      selected_value = self.drop_down_1.selected_value
-      if selected_value == " Non Performing Asset (%)":
+      selected_value = self.drop_down_3.selected_value
+      if selected_value == "Non Performing Asset (%)":
         self.label_14.visible = True
         self.npa.visible = True
-        self.label_14_copy.visible = False
-        self.npa_copy.visible = False
+        self.label_amount.visible = False
+        self.text_amount.visible = False
       else:
-        self.label_14_copy.visible = True
-        self.npa_copy.visible = True
+        self.label_amount.visible = True
+        self.text_amount.visible = True
         self.label_14.visible = False
         self.npa.visible = False
         
