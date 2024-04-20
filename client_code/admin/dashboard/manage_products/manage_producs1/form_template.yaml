@@ -245,6 +245,10 @@ components:
         background: '', bold: true, underline: false, icon: ''}
       type: Label
       layout_properties: {grid_position: 'VJYOJJ,KGORIJ FQTXUZ,NVQOGZ'}
+    - name: spacer_7
+      properties: {height: 11}
+      type: Spacer
+      layout_properties: {grid_position: 'VJYOJJ,KGORIJ IYBKXL,SUPWNN'}
     - name: label_amount
       properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
         visible: false, text: '  Non Performing Asset (₹)', font_size: 17, font: '',
