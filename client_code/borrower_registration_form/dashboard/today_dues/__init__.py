@@ -73,6 +73,8 @@ class today_dues(today_duesTemplate):
                     product_id = loan_detail['product_id']
                     total_interest_amount = loan_detail['total_interest_amount']
                     Scheduled_date = latest_loan['next_payment']
+                    lender_email_id = loan_detail['lender_email_id']
+                    borrower_email_id = loan_detail['borrower_email_id']
                   
                     loan_details.append({
                         'loan_id': loan_id,
@@ -101,7 +103,9 @@ class today_dues(today_duesTemplate):
                         'product_id':product_id,
                         'total_interest_amount':total_interest_amount,
                         'Scheduled_date':Scheduled_date,
-                        'user_photo':user_photo
+                        'user_photo':user_photo,
+                        'lender_email_id':lender_email_id,
+                        'borrower_email_id':borrower_email_id
                     })
             else:
                 for loan in all_loans_disbursed:
@@ -160,6 +164,8 @@ class today_dues(today_duesTemplate):
                   product_id =loan_detail['product_id']
                   total_interest_amount  = loan_detail['total_interest_amount']
                   Scheduled_date = loan_detail['first_emi_payment_due_date']
+                  lender_email_id = loan_detail['lender_email_id']
+                  borrower_email_id = loan_detail['borrower_email_id']
 
                   
                   # Calculate next_payment based on first_payment_due_date
@@ -207,6 +213,8 @@ class today_dues(today_duesTemplate):
                       'total_interest_amount':total_interest_amount,
                       'Scheduled_date':Scheduled_date,
                       'user_photo' : user_photo,
+                      'lender_email_id':lender_email_id,
+                      'borrower_email_id':borrower_email_id
                       
                   })
             self.repeating_panel_2.items = loan_details

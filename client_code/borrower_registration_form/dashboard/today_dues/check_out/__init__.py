@@ -20,6 +20,7 @@ class check_out(check_outTemplate):
         self.init_components(**properties)
   
         loan_id = selected_row['loan_id']
+        
         extension_months = self.get_extension_details(loan_id, selected_row['emi_number'])
         extension_amount = self.get_extension_details_1(loan_id,selected_row['emi_number'])
         loan_amount = selected_row['loan_amount']
@@ -252,6 +253,8 @@ class check_out(check_outTemplate):
                     tenure = self.selected_row['tenure']
                     borrower_id = self.selected_row['borrower_customer_id']
                     lender_id = self.selected_row['lender_customer_id']
+                    lender_email = self.selected_row['lender_email_id']
+                    borrower_email = self.selected_row['borrower_email_id']
 
                     prev_scheduled_payment = self.selected_row['scheduled_payment']
                     prev_next_payment = self.selected_row['next_payment']
@@ -291,7 +294,8 @@ class check_out(check_outTemplate):
                         extra_fee=extra_fee,
                         borrower_customer_id=borrower_id,
                         lender_customer_id=lender_id,
-                       
+                        borrower_email=borrower_email,
+                        lender_email=lender_email,
                         
                         
                     )
