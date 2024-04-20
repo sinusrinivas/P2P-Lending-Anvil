@@ -19,7 +19,7 @@
 #         self.name.items = option_strings
 #         self.name.selected_value = None
 
-#         # Any code you write here will run before the form opens.
+#         # Any code you write here will run before the form textopens.
 #         self.id = 'PD' + str(1000)
 #         self.label_1.text = self.id
 #         self.data = tables.app_tables.fin_product_details.search()
@@ -124,7 +124,7 @@
 #         if extension_allowed == "Yes":
 #             self.label_7_copy.visible = True
 #             self.text_box_4.visible = True
-#             extension_fee = int(self.text_box_4.text)
+#             extension_fee = float(self.text_box_4.text)
 #         else:
 #             self.label_7_copy.visible = False
 #             self.text_box_4.visible = False
@@ -334,7 +334,7 @@ class manage_producs1(manage_producs1Template):
         min_months = int(self.min_months.text.strip()) if foreclose_type == "Eligible" else 0
     
         extension_allowed = self.extension_allowed.selected_value
-        extension_fee = int(self.text_box_4.text.strip()) if extension_allowed == "Yes" else 0
+        extension_fee = float(self.text_box_4.text.strip()) if extension_allowed == "Yes" else 0
         min_extension_month = int(self.min_extension_month_text_box.text.strip()) if extension_allowed == "Yes" else 0
 
       
