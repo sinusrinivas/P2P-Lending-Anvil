@@ -4,7 +4,7 @@ container:
   properties: {html: '@theme:standard-page.html'}
 components:
 - type: ColumnPanel
-  properties: {col_widths: '{"GKZFHU":76,"VTNHLC":2}'}
+  properties: {col_widths: '{"GKZFHU":76,"VTNHLC":2}', background: 'theme:On Primary'}
   name: content_panel
   layout_properties: {slot: default}
   components:
@@ -54,7 +54,7 @@ components:
       type: Image
       layout_properties: {grid_position: 'ZRRFMJ,FAHHZK ZIRCRQ,QXDJBG'}
   - name: content_panel_copy_2
-    properties: {col_widths: '{"KGORIJ":15,"KCWIQP":45,"SUZUSB":3,"MSBMLZ":57}'}
+    properties: {col_widths: '{"KGORIJ":15,"KCWIQP":45,"SUZUSB":3,"MSBMLZ":57}', background: ''}
     type: ColumnPanel
     layout_properties: {grid_position: 'BCGOTX,GKZFHU'}
     components:
@@ -117,7 +117,7 @@ components:
       type: Label
       layout_properties: {grid_position: 'VJYOJJ,KGORIJ RNFKRV,PEICMK'}
     - name: spacer_4
-      properties: {height: 364.111083984375}
+      properties: {height: 387.4444274902344}
       type: Spacer
       layout_properties: {grid_position: 'VJYOJJ,KGORIJ KEHYJM,DMDVBH'}
     - name: label_8
@@ -282,11 +282,12 @@ components:
       type: TextArea
       layout_properties: {grid_position: 'VJYOJJ,KCWIQP UGBZCT,ZHVIEV'}
     - name: column_panel_2
-      properties: {role: null, tooltip: '', border: '', foreground: '', visible: true,
+      properties: {role: elevated-card, tooltip: '', border: '', foreground: '', visible: true,
         wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{"KEBGAJ":30,"JEVNRY":30,"OPVMZF":5,"LNOYAV":55}',
         spacing_below: small, background: '#E9ECEF'}
       type: ColumnPanel
-      layout_properties: {grid_position: 'VJYOJJ,KCWIQP HDRMTC,YCKFOI'}
+      layout_properties: {grid_position: 'VJYOJJ,KCWIQP HDRMTC,YCKFOI', full_width_row: false,
+        row_background: 'theme:On Primary'}
       components:
       - name: spacer_9
         properties: {height: 32}
