@@ -19,7 +19,7 @@
 #         self.name.items = option_strings
 #         self.name.selected_value = None
 
-#         # Any code you write here will run before the form opens.
+#         # Any code you write here will run before the form textopens.
 #         self.id = 'PD' + str(1000)
 #         self.label_1.text = self.id
 #         self.data = tables.app_tables.fin_product_details.search()
@@ -124,7 +124,7 @@
 #         if extension_allowed == "Yes":
 #             self.label_7_copy.visible = True
 #             self.text_box_4.visible = True
-#             extension_fee = int(self.text_box_4.text)
+#             extension_fee = float(self.text_box_4.text)
 #         else:
 #             self.label_7_copy.visible = False
 #             self.text_box_4.visible = False
@@ -295,8 +295,8 @@ class manage_producs1(manage_producs1Template):
                 (self.business.enabled or self.student.enabled or self.student.enabled ),
                 
                 self.lapsed_fee.text.strip(),
-                self.default_fee.text.strip(),
-                self.npa.text.strip()]):
+                (self.default_fee.text.strip() or self.text_box_1.text.strip()), # Either default_fee or text_box_1 should be filled
+                (self.text_amount.text.strip() or self.npa.text.strip())]):
                 
             Notification("Please fill in all the details").show()
             return
@@ -309,11 +309,14 @@ class manage_producs1(manage_producs1Template):
             max_tenure = float(self.max_tenure.text.strip())
             roi = float(self.text_box_5.text.strip())
             lapsed_fee = float(self.lapsed_fee.text.strip())
-            default_fee = float(self.default_fee.text.strip())
-            npa = float(self.npa.text.strip())
+            default_fee = float(self.default_fee.text.strip() if self.default_fee.text.strip() else 0)
+            default_fee_amount = float(self.text_box_1.text.strip() if self.text_box_1.text.strip() else 0)
+            npa = float(self.npa.text.strip() if self.npa.text.strip() else 0)
+            npa_amount = float(self.text_amount.text.strip() if self.text_amount.text.strip() else 0)
+
     
             # Validate non-negative values
-            if processing_fee < 0 or min_amount < 0 or max_amount < 0 or min_tenure < 0 or max_tenure < 0 or roi < 0 or lapsed_fee < 0 or default_fee < 0 or npa < 0:
+            if processing_fee < 0 or min_amount < 0 or max_amount < 0 or min_tenure < 0 or max_tenure < 0 or roi < 0 or lapsed_fee < 0 or default_fee < 0 or default_fee_amount < 0 or npa < 0 or npa_amount < 0:
                 raise ValueError("Values cannot be negative")
     
         except ValueError:
@@ -334,7 +337,7 @@ class manage_producs1(manage_producs1Template):
         min_months = int(self.min_months.text.strip()) if foreclose_type == "Eligible" else 0
     
         extension_allowed = self.extension_allowed.selected_value
-        extension_fee = int(self.text_box_4.text.strip()) if extension_allowed == "Yes" else 0
+        extension_fee = float(self.text_box_4.text.strip()) if extension_allowed == "Yes" else 0
         min_extension_month = int(self.min_extension_month_text_box.text.strip()) if extension_allowed == "Yes" else 0
 
       
@@ -366,7 +369,7 @@ class manage_producs1(manage_producs1Template):
         anvil.server.call('product_details', self.id, product_name, product_group, product_description,
                           product_categories, processing_fee, extension_fee, membership_type, interest_type, max_amount,
                           min_amount, min_tenure, max_tenure, roi, foreclose_type, foreclosure_fee, extension_allowed,
-                          emi_payment, min_months, lapsed_fee, default_fee, npa,occupation,min_extension_month )
+                          emi_payment, min_months, lapsed_fee, default_fee, default_fee_amount, npa, npa_amount, occupation,min_extension_month )
     
         # Update product ID and show success notification
         product_id = self.label_1.text
@@ -458,4 +461,32 @@ class manage_producs1(manage_producs1Template):
         else:
             self.employee.background = "#0a2346"
             self.occupation.append("Employee")
-    
+
+    def drop_down_1_change(self, **event_args):
+      """This method is called when an item is selected"""
+      selected_value = self.drop_down_1.selected_value
+      if selected_value == "Defaulters fee (%)":
+        self.label_17.visible = True
+        self.default_fee.visible = True
+        self.label_13.visible = False
+        self.text_box_1.visible = False
+      else:
+        self.label_13.visible = True
+        self.text_box_1.visible = True
+        self.label_17.visible = False
+        self.default_fee.visible = False
+
+    def drop_down_3_change(self, **event_args):
+      """This method is called when an item is selected"""
+      selected_value = self.drop_down_3.selected_value
+      if selected_value == "Non Performing Asset (%)":
+        self.label_14.visible = True
+        self.npa.visible = True
+        self.label_amount.visible = False
+        self.text_amount.visible = False
+      else:
+        self.label_amount.visible = True
+        self.text_amount.visible = True
+        self.label_14.visible = False
+        self.npa.visible = False
+        
