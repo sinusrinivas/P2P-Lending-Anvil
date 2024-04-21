@@ -41,7 +41,7 @@ components:
   type: Label
   layout_properties: {grid_position: 'GCADCB,RUKNLC'}
 - type: FileLoader
-  properties: {}
+  properties: {text: Upload Certificate}
   name: file_loader_1
   layout_properties: {grid_position: 'GCADCB,MABORK'}
   event_bindings: {change: file_loader_1_change}

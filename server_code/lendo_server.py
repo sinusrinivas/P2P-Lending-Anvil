@@ -71,41 +71,30 @@ def add_lendor_individual_form_3(annual_salary, designation,emp_id_proof,last_si
     row[0]['salary_type']=salary_type
 
 @anvil.server.callable
-def add_lendor_institutional_form_1(business_name,business_add,user_id):
+def add_lendor_institutional_form_1(business_name,business_add,business_type,empolyees_working,user_id):
   row = app_tables.fin_user_profile.search(customer_id = user_id)
   if row:
     row[0]['business_name'] = business_name
     row[0]['business_add'] = business_add
-
+    row[0]['business_type'] = business_type
+    row[0]['employees_working'] = empolyees_working    
+   
 @anvil.server.callable
-def add_lendor_institutional_form_2(business_type,empolyees_working,year_estd,months,user_id):
+def add_lendor_institutional_form_3(year_estd,months,industry_type,six_monthturnover,last_six_statments,user_id):
   row = app_tables.fin_user_profile.search(customer_id = user_id)
   if row:
-    row[0]['business_type'] = business_type
-    row[0]['employees_working'] = empolyees_working
     row[0]['year_estd'] = year_estd
     row[0]['business_age'] = months
-@anvil.server.callable
-def add_lendor_institutional_form_3(industry_type,six_monthturnover,last_six_statments,user_id):
-  row = app_tables.fin_user_profile.search(customer_id = user_id)
-  if row:
     row[0]['industry_type'] = industry_type
     row[0]['six_month_turnover'] = six_monthturnover
     row[0]['last_six_month_bank_proof'] = last_six_statments
 
-# @anvil.server.callable
-# def add_lendor_institutional_form_4(director_name,director_no,din,cin,user_id):
-#   row = app_tables.fin_user_profile.search(customer_id = user_id)
-#   if row:
-#     row[0]['director_name'] = director_name
-#     row[0]['director_no'] = director_no
-#     row[0]['din'] = din
-#     row[0]['cin'] = cin
-
 @anvil.server.callable
-def add_lendor_institutional_form_5(reg_office_add,off_add_proof,proof_verification,user_id):
+def add_lendor_institutional_form_5(din,cin,reg_office_add,off_add_proof,proof_verification,user_id):
   row = app_tables.fin_user_profile.search(customer_id = user_id)
   if row:
+    row[0]['din'] = din
+    row[0]['cin'] = cin
     row[0]['registered_off_add'] = reg_office_add
     row[0]['off_add_proof'] = off_add_proof
     row[0]['proof_verification'] = proof_verification

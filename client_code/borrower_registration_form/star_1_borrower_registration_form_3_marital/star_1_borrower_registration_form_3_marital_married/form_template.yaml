@@ -17,8 +17,15 @@ components:
   properties: {prop: ''}
   type: form:borrower_registration_form.navigation_bar_main
   layout_properties: {grid_position: 'NBBYPI,RNCSPZ', full_width_row: true}
+- name: label_1_copy_1
+  properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
+    visible: true, text: Marital Details, font_size: 16, font: '', spacing_above: small,
+    icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+    underline: false, icon: ''}
+  type: Label
+  layout_properties: {grid_position: 'XAIPPR,EJGPIX'}
 - name: spacer_1_copy_1
-  properties: {height: 51.666656494140625}
+  properties: {height: 35.999969482421875}
   type: Spacer
   layout_properties: {grid_position: 'KAHPVT,WZOCTR'}
 - name: flow_panel_1
@@ -99,9 +106,9 @@ components:
     layout_properties: {row: AUFPKE, width_xs: 12, col_xs: 0, width: 937.714}
   - name: label_3_copy_1_copy_1
     properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-      visible: true, text: 'Full Father Name :', font_size: null, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-      underline: false, icon: ''}
+      visible: true, text: 'Enter Full Father Name :', font_size: null, font: '',
+      spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+      background: '', bold: true, underline: false, icon: ''}
     type: Label
     layout_properties: {row: ORTIVE, width_xs: 4, col_xs: 2}
   - name: father_name_text
@@ -113,7 +120,7 @@ components:
     layout_properties: {row: ORTIVE, width_xs: 5, col_xs: 6}
   - name: label_3_copy_1_copy_1_copy_1
     properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-      visible: true, text: 'Father DOB :', font_size: null, font: '', spacing_above: small,
+      visible: true, text: 'Select Father DOB :', font_size: null, font: '', spacing_above: small,
       icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
       underline: false, icon: ''}
     type: Label
@@ -124,9 +131,9 @@ components:
     layout_properties: {row: LEIWZK, width_xs: 5, col_xs: 6}
   - name: label_2_copy_1_copy_1
     properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-      visible: true, text: 'Father mobile Number :', font_size: null, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-      underline: false, icon: ''}
+      visible: true, text: 'Enter Father mobile Number :', font_size: null, font: '',
+      spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+      background: '', bold: true, underline: false, icon: ''}
     type: Label
     layout_properties: {row: CEITXX, width_xs: 4, col_xs: 2}
   - name: father_mbl_no_text
@@ -138,9 +145,9 @@ components:
     layout_properties: {row: CEITXX, width_xs: 5, col_xs: 6}
   - name: label_3_copy_1
     properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-      visible: true, text: 'Father Profession :', font_size: null, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-      underline: false, icon: ''}
+      visible: true, text: 'Enter Father Profession :', font_size: null, font: '',
+      spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+      background: '', bold: true, underline: false, icon: ''}
     type: Label
     layout_properties: {row: HBHHFF, width_xs: 4, col_xs: 2}
   - name: father_profession_text
@@ -152,7 +159,7 @@ components:
     layout_properties: {row: HBHHFF, width_xs: 5, col_xs: 6}
   - name: label_3_copy_1_copy_2
     properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-      visible: true, text: 'Father Address :', font_size: null, font: '', spacing_above: small,
+      visible: true, text: 'Enter Father Address :', font_size: null, font: '', spacing_above: small,
       icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
       underline: false, icon: ''}
     type: Label
@@ -199,9 +206,9 @@ components:
     layout_properties: {row: AUFPKE, width_xs: 12, col_xs: 0, width: 937.714}
   - name: label_3_copy_1_copy_1_copy
     properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-      visible: true, text: 'Full Mother Name :', font_size: null, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-      underline: false, icon: ''}
+      visible: true, text: 'Enter Full Mother Name :', font_size: null, font: '',
+      spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+      background: '', bold: true, underline: false, icon: ''}
     type: Label
     layout_properties: {row: ORTIVE, width_xs: 4, col_xs: 2}
   - name: mother_name_text_copy
@@ -213,7 +220,7 @@ components:
     layout_properties: {row: ORTIVE, width_xs: 5, col_xs: 6}
   - name: label_3_copy_1_copy_1_copy_1_copy
     properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-      visible: true, text: 'Mother DOB:', font_size: null, font: '', spacing_above: small,
+      visible: true, text: 'Select Mother DOB:', font_size: null, font: '', spacing_above: small,
       icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
       underline: false, icon: ''}
     type: Label
@@ -224,9 +231,9 @@ components:
     layout_properties: {row: LEIWZK, width_xs: 5, col_xs: 6}
   - name: label_2_copy_1_copy_1_copy
     properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-      visible: true, text: 'Mother mobile Number :', font_size: null, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-      underline: false, icon: ''}
+      visible: true, text: 'Enter Mother mobile Number :', font_size: null, font: '',
+      spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+      background: '', bold: true, underline: false, icon: ''}
     type: Label
     layout_properties: {row: CEITXX, width_xs: 4, col_xs: 2}
   - name: mother_mbl_no_text
@@ -238,9 +245,9 @@ components:
     layout_properties: {row: CEITXX, width_xs: 5, col_xs: 6}
   - name: label_3_copy_1_copy
     properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-      visible: true, text: 'Mother Profession :', font_size: null, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-      underline: false, icon: ''}
+      visible: true, text: 'Enter Mother Profession :', font_size: null, font: '',
+      spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+      background: '', bold: true, underline: false, icon: ''}
     type: Label
     layout_properties: {row: HBHHFF, width_xs: 4, col_xs: 2}
   - name: mother_profession_text

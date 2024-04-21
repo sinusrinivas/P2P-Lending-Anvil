@@ -17,15 +17,22 @@ components:
   properties: {prop: ''}
   type: form:borrower_registration_form.navigation_bar_main
   layout_properties: {grid_position: 'WYZTIL,FEXKET', full_width_row: true}
+- name: label_1_copy_1_copy_1
+  properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
+    visible: true, text: Employment Details, font_size: 16, font: '', spacing_above: small,
+    icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+    underline: false, icon: ''}
+  type: Label
+  layout_properties: {grid_position: 'JDZXTB,GDAEHH'}
 - type: Spacer
-  properties: {height: 32}
+  properties: {height: 16.599945068359375}
   name: spacer_1
   layout_properties: {grid_position: 'YRUSPG,CMQUWY'}
 - name: label_2_copy_1
   properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
-    text: Self Employment, font_size: null, font: '', spacing_above: small, icon_align: left,
-    spacing_below: small, italic: false, background: '', bold: true, underline: false,
-    icon: ''}
+    text: Choose Type of Self Employment, font_size: null, font: '', spacing_above: small,
+    icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+    underline: false, icon: ''}
   type: Label
   layout_properties: {grid_position: 'CXILOH,JKKZYZ'}
 - type: DropDown
@@ -66,11 +73,4 @@ components:
   type: Button
   layout_properties: {grid_position: 'MZVLRW,FFFNLQ'}
   event_bindings: {click: button_2_click}
-- name: label_1_copy_1_copy_1
-  properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
-    visible: true, text: Employment Details, font_size: 16, font: '', spacing_above: small,
-    icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-    underline: false, icon: ''}
-  type: Label
-  layout_properties: {grid_position: 'MZVLRW,IFGUGF'}
 is_package: true
