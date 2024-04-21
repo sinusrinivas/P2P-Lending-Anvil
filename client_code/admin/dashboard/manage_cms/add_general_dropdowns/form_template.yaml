@@ -84,18 +84,18 @@ components:
     type: ColumnPanel
     layout_properties: {x: 749.75, y: 21.75, width: 168}
     components:
-    - name: button_1_copy_10_copy
+    - name: occupation_type
       properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
         foreground: 'theme:On Primary', visible: true, text: '
 
-          Company Type
+          Occupation Type
 
 
           ', font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small,
         italic: false, background: '', bold: false, underline: false, icon: ''}
       type: Button
       layout_properties: {grid_position: 'YUTUEO,DGPVZF'}
-      event_bindings: {click: company}
+      event_bindings: {click: occupation_type}
 - type: ColumnPanel
   properties: {col_widths: '{}'}
   name: column_panel_1
@@ -265,14 +265,14 @@ components:
     components:
     - name: label_11
       properties: {role: outlined-card, align: center, tooltip: '', border: '', foreground: '',
-        visible: true, text: Add Company Type, font_size: 18, font: '', spacing_above: small,
+        visible: true, text: Add OccupationType, font_size: 18, font: '', spacing_above: small,
         icon_align: left, spacing_below: small, italic: false, background: 'theme:Disabled
           Container', bold: true, underline: false, icon: ''}
       type: Label
       layout_properties: {grid_position: 'SZCQOZ,KOOONE'}
     - name: label_2
       properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
-        visible: true, text: Company Type, font_size: null, font: '', spacing_above: small,
+        visible: true, text: Occupation Type, font_size: null, font: '', spacing_above: small,
         icon_align: left, spacing_below: small, italic: false, background: 'theme:Secondary
           Container', bold: false, underline: false, icon: ''}
       type: Label
@@ -287,7 +287,7 @@ components:
       type: TextBox
       layout_properties: {grid_position: 'TCPJKI,FMAEVI'}
       event_bindings: {}
-    - name: marital_button
+    - name: occupation
       properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
         foreground: 'theme:On Primary', visible: true, text: ADD, font_size: null,
         font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
@@ -296,7 +296,7 @@ components:
       layout_properties:
         col_widths: {}
         grid_position: TCPJKI,RJJXSS
-      event_bindings: {click: company_click}
+      event_bindings: {click: occupation_click}
     - name: spacer_3
       properties: {height: 138.42856979370117}
       type: Spacer

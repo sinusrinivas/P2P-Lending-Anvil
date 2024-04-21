@@ -14,7 +14,7 @@ class star_1_borrower_registration_form_2_employment_emp_detail_1(star_1_borrowe
     user_data=app_tables.fin_user_profile.get(customer_id=user_id)
     if user_data:
       self.text_box_1.text=user_data['company_name']
-      self.drop_down_3.selected_value = user_data['company_type']
+      self.drop_down_3.selected_value = user_data['occupation_type']
       self.drop_down_1.selected_value=user_data['employment_type']
       self.drop_down_2.selected_value=user_data['organization_type']
       self.drop_down_3.selected_value = user_data['business_age']
@@ -29,8 +29,8 @@ class star_1_borrower_registration_form_2_employment_emp_detail_1(star_1_borrowe
     option_strings_2 = [str(option['borrower_organization_type']) for option in options_2]
     self.drop_down_2.items = option_strings_2
 
-    options = app_tables.fin_company_type.search()
-    option_strings = [str(option['company_type']) for option in options]
+    options = app_tables.fin_occupation_type.search()
+    option_strings = [str(option['occupation_type']) for option in options]
     self.drop_down_3.items = option_strings
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
@@ -39,13 +39,13 @@ class star_1_borrower_registration_form_2_employment_emp_detail_1(star_1_borrowe
   def button_2_click(self, **event_args):
     emp_type = self.drop_down_1.selected_value
     org_type = self.drop_down_2.selected_value
-    com_type = self.drop_down_3.selected_value
+    occupation_type = self.drop_down_3.selected_value
     company_name = self.text_box_1.text
     user_id = self.userId
-    if not emp_type or not org_type or not com_type or not company_name:
+    if not emp_type or not org_type or not occupation_type or not company_name:
       Notification("please fill the required fields ").show()
     else:
-      anvil.server.call('add_lendor_individual_form_1', company_name,org_type,emp_type,com_type,user_id)
+      anvil.server.call('add_lendor_individual_form_1', company_name,org_type,emp_type,occupation_type,user_id)
       open_form('borrower_registration_form.star_1_borrower_registration_form_2_employment.star_1_borrower_registration_form_2_employment_emp_detail_2',user_id=self.userId)
 
 
