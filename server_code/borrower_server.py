@@ -340,19 +340,20 @@ def get_user_points(id):
                     user_points += category_points
                     break
 
-        if profession == 'self employment' or profession.lower() == 'employee':
+        if profession.lower() == 'self employment' or profession.lower() == 'employee':
            self_employment_search = app_tables.fin_admin_beseem_categories.search(group_name='profession')
            print(f"Size of self_employment_search: {len(self_employment_search)}")
            for row in self_employment_search:
-              if row['sub_category'].split(","): 
-                sub_categories = row['sub_category'].split(",")
-                min_points = row['min_points']
-                for sub_cat in sub_categories:
-                   if sub_cat.strip().lower() == self_employment.lower():
-                      user_points += min_points
-                      print("Self Employment Points:", min_points)
-                      break
-                   elif row['sub_category'].lower() == self_employment.lower():
+             if row['sub_category']: 
+               sub_categories = row['sub_category'].split(",")
+               min_points = row['min_points']
+               for sub_cat in sub_categories:
+                 if sub_cat.strip().lower() == profession.lower() or sub_cat.strip().lower() == occupation_type.lower():
+                    user_points += min_points
+                    print("Self Employment Points:", min_points)
+                    break
+                 else: 
+                   if row['sub_category'].lower() == profession.lower() or row['sub_category'].lower() == occupation_type.lower():
                      user_points += row['min_points']
                      print("Self Employment Points:", row['min_points'])
                      break
