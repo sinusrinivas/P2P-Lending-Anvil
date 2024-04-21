@@ -288,6 +288,7 @@ def get_user_points(id):
         self_employment = user['self_employment']
         if self_employment is not None:
             self_employment = self_employment.lower()
+        occupation_type = user['occupation_type']
         age_of_business = user['business_age']
         salary_type = user['salary_type'].lower() if user['salary_type'] else None
         home_loan = user['home_loan'].lower() if user['home_loan'] else None
@@ -339,7 +340,7 @@ def get_user_points(id):
                     user_points += category_points
                     break
 
-        if profession == 'self employment':
+        if profession == 'self employment' or profession.lower() == 'employee':
            self_employment_search = app_tables.fin_admin_beseem_categories.search(group_name='profession')
            print(f"Size of self_employment_search: {len(self_employment_search)}")
            for row in self_employment_search:
