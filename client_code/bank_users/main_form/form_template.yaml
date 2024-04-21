@@ -1,6 +1,6 @@
 container:
   type: ColumnPanel
-  properties: {col_widths: '{"UXWIME":15,"SYNJVB":45,"NSBNDL":30,"HJXPJG":64,"ASUGOE":5,"GKGMVX":5,"GZEPAB":55,"YXEJAJ":5,"BRNMJF":55,"JZUUWF":20,"RDWIZR":20,"AMTGYB":20,"ZMXVPS":2,"OHQTCG":58,"OYIVEL":2,"RYPZCD":58,"VURQFS":2,"KLQWYU":58,"NZODAV":2,"ATRLXT":58,"MJLLCS":5,"ETGUAR":55,"UXGMIB":35,"UMBUKW":10,"HXPQRE":15}',
+  properties: {col_widths: '{"UXWIME":15,"SYNJVB":45,"HJXPJG":64,"ASUGOE":5,"GKGMVX":5,"GZEPAB":55,"YXEJAJ":5,"BRNMJF":55,"JZUUWF":20,"RDWIZR":20,"AMTGYB":20,"ZMXVPS":2,"OHQTCG":58,"OYIVEL":2,"RYPZCD":58,"VURQFS":2,"KLQWYU":58,"NZODAV":2,"ATRLXT":58,"MJLLCS":5,"ETGUAR":55,"UXGMIB":35,"UMBUKW":10,"HXPQRE":15}',
     spacing_below: none, background: ''}
 components:
 - name: image_1_copy_copy_1
