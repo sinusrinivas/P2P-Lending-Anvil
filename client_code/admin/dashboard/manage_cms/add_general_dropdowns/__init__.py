@@ -76,17 +76,17 @@ class add_general_dropdowns(add_general_dropdownsTemplate):
     self.column_panel_03.visible = True
     self.column_panel_04.visible = False
 
-  def company_click(self, **event_args):
+  def occupation_click(self, **event_args):
     """This method is called when the button is clicked"""
     entered_data = self.text_box_2.text.strip()
     if not entered_data:
         alert("Please enter a valid data.")
         return
-    new_row = app_tables.fin_company_type.add_row(company_type=entered_data)
+    new_row = app_tables.fin_occupation_type.add_row(occupation_type=entered_data)
     self.text_box_2.text = ' '
     self.refresh()
 
-  def company(self, **event_args):
+  def occupation_type(self, **event_args):
     """This method is called when the button is clicked"""
     self.column_panel_01.visible = False
     self.column_panel_02.visible = False
@@ -96,3 +96,4 @@ class add_general_dropdowns(add_general_dropdownsTemplate):
   def button_1_copy_3_click(self, **event_args):
     """This method is called when the button is clicked"""
     open_form('admin.dashboard.manage_cms.manage_dropdowns')
+

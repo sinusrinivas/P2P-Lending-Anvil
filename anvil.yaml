@@ -76,6 +76,14 @@ db_schema:
       admin_ui: {width: 200, order: 0}
       type: string
     title: fin_lendor_business_type
+  fin_occupation_type:
+    title: fin_occupation_type
+    client: full
+    server: full
+    columns:
+    - name: occupation_type
+      admin_ui: {order: 0, width: 200}
+      type: string
   fin_admin_users:
     client: full
     server: full
@@ -477,14 +485,6 @@ db_schema:
       admin_ui: {width: 200, order: 21}
       type: number
     title: fin_user_beseem_score
-  fin_company_type:
-    title: fin_company_type
-    client: full
-    server: full
-    columns:
-    - name: company_type
-      admin_ui: {width: 200}
-      type: string
   fin_borrower_employee_type:
     client: full
     server: full
@@ -810,12 +810,6 @@ db_schema:
     - name: six_month_turnover
       admin_ui: {order: 6.999999999996362, width: 200}
       type: string
-    - name: director_name
-      admin_ui: {width: 200, order: 71.5}
-      type: string
-    - name: director_no
-      admin_ui: {width: 200, order: 71.25}
-      type: string
     - name: din
       admin_ui: {width: 200, order: 71.625}
       type: string
@@ -936,8 +930,8 @@ db_schema:
     - name: salary_type
       admin_ui: {order: 0.99957275390625, width: 200}
       type: string
-    - name: company_type
-      admin_ui: {order: 6.999996185302734, width: 200}
+    - name: occupation_type
+      admin_ui: {order: 6.999995231628418, width: 200}
       type: string
     - name: business_age
       admin_ui: {order: 0.958984375, width: 200}
@@ -1178,7 +1172,7 @@ db_schema:
       admin_ui: {order: 12, width: 200}
       type: string
   fin_wallet_bank_account_table:
-    client: none
+    client: full
     server: full
     columns:
     - name: account_id
