@@ -34,16 +34,20 @@ components:
   layout_properties: {grid_position: 'EAAWNV,AIKINF'}
 - name: label_5_copy_1
   properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
-    visible: true, text: 'Empolyment  Details ', font_size: null, font: '', spacing_above: small,
+    visible: true, text: 'Empolyment  Details ', font_size: 16, font: '', spacing_above: small,
     icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
     underline: false, icon: ''}
   type: Label
   layout_properties: {grid_position: ''}
+- name: spacer_1
+  properties: {height: 15.28570556640625}
+  type: Spacer
+  layout_properties: {grid_position: 'EHCTYD,YCYGQZ'}
 - name: label_2_copy_1
   properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
-    text: Company Address, font_size: null, font: '', spacing_above: small, icon_align: left,
-    spacing_below: small, italic: false, background: '', bold: true, underline: false,
-    icon: ''}
+    text: Enter Your Company Address, font_size: null, font: '', spacing_above: small,
+    icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+    underline: false, icon: ''}
   type: Label
   layout_properties: {grid_position: 'KVOWYF,HIRSFZ'}
 - name: text_box_1
@@ -55,7 +59,7 @@ components:
   layout_properties: {grid_position: 'KVOWYF,LAIQNE'}
 - name: label_3_copy_1
   properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
-    text: Landmark, font_size: null, font: '', spacing_above: small, icon_align: left,
+    text: Enter Your Landmark, font_size: null, font: '', spacing_above: small, icon_align: left,
     spacing_below: small, italic: false, background: '', bold: true, underline: false,
     icon: ''}
   type: Label
@@ -69,7 +73,7 @@ components:
   layout_properties: {grid_position: 'TCPQDD,AIRHIA'}
 - name: label_1
   properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
-    text: Business Phone number, font_size: null, font: '', spacing_above: small,
+    text: Enter Your Business Phone number, font_size: null, font: '', spacing_above: small,
     icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
     underline: false, icon: ''}
   type: Label
@@ -81,6 +85,10 @@ components:
     background: 'theme:On Primary', bold: false, underline: false}
   type: TextBox
   layout_properties: {grid_position: 'WAEDTG,RXMYGB'}
+- name: spacer_2
+  properties: {height: 14.5714111328125}
+  type: Spacer
+  layout_properties: {grid_position: 'YAENNQ,WEZGAZ'}
 - name: button_1
   properties: {role: elevated-button, align: right, tooltip: '', border: '', enabled: true,
     foreground: 'theme:On Primary', visible: true, text: Prev, font_size: null, font: '',
