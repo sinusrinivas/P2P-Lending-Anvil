@@ -27,11 +27,15 @@ components:
   layout_properties: {grid_position: 'WTGSNR,YLBPOO', full_width_row: true}
 - name: label_1_copy_1
   properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
-    visible: true, text: Lender Registration, font_size: null, font: '', spacing_above: small,
+    visible: true, text: Lender Registration, font_size: 16, font: '', spacing_above: small,
     icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
     underline: false, icon: ''}
   type: Label
   layout_properties: {grid_position: ',undefined'}
+- name: spacer_2
+  properties: {height: 20.42852783203125}
+  type: Spacer
+  layout_properties: {grid_position: 'HEZNOI,KHGDQN'}
 - name: label_2_copy_1
   properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
     text: Lending Type, font_size: null, font: '', spacing_above: small, icon_align: left,
@@ -105,6 +109,10 @@ components:
     include_placeholder: true
   name: drop_down_2
   layout_properties: {grid_position: 'HULYYQ,FYJUTX'}
+- name: spacer_1
+  properties: {height: 21.42852783203125}
+  type: Spacer
+  layout_properties: {grid_position: 'WDHSZT,FSOLXB'}
 - name: button_1
   properties: {role: elevated-button, align: right, tooltip: '', border: '', enabled: true,
     foreground: 'theme:On Primary', visible: true, text: Prev, font_size: null, font: '',
