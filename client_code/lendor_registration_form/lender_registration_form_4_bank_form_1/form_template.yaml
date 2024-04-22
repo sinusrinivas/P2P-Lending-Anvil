@@ -19,16 +19,20 @@ components:
   layout_properties: {grid_position: 'XCTKMQ,YDSKRS', full_width_row: true}
 - name: label_1_copy_1
   properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
-    visible: true, text: Applicant Bank Details, font_size: null, font: '', spacing_above: small,
+    visible: true, text: Applicant Bank Details, font_size: 16, font: '', spacing_above: small,
     icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
     underline: false, icon: ''}
   type: Label
   layout_properties: {grid_position: ''}
+- name: spacer_1
+  properties: {height: 15.999969482421875}
+  type: Spacer
+  layout_properties: {grid_position: 'QOKVGI,CZJAXU'}
 - name: label_2_copy_1
   properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
-    text: Account Holder Name, font_size: null, font: '', spacing_above: small, icon_align: left,
-    spacing_below: small, italic: false, background: '', bold: true, underline: false,
-    icon: ''}
+    text: Enter Your Account Holder Name, font_size: null, font: '', spacing_above: small,
+    icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+    underline: false, icon: ''}
   type: Label
   layout_properties: {grid_position: 'KKJCHU,RRDFDS'}
 - name: text_box_1
@@ -40,9 +44,9 @@ components:
   layout_properties: {grid_position: 'KKJCHU,ECNPSI'}
 - name: label_3_copy_1
   properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
-    text: Account Type, font_size: null, font: '', spacing_above: small, icon_align: left,
-    spacing_below: small, italic: false, background: '', bold: true, underline: false,
-    icon: ''}
+    text: Select Your Account Type, font_size: null, font: '', spacing_above: small,
+    icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+    underline: false, icon: ''}
   type: Label
   layout_properties: {grid_position: 'XDKRAU,HIJJOA'}
 - type: DropDown
@@ -71,9 +75,9 @@ components:
   event_bindings: {change: drop_down_1_change}
 - name: label_1
   properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
-    text: Account Number, font_size: null, font: '', spacing_above: small, icon_align: left,
-    spacing_below: small, italic: false, background: '', bold: true, underline: false,
-    icon: ''}
+    text: Enter Your Account Number, font_size: null, font: '', spacing_above: small,
+    icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+    underline: false, icon: ''}
   type: Label
   layout_properties: {grid_position: 'GAJRYD,ZHDQST'}
 - type: TextBox
@@ -85,7 +89,7 @@ components:
   layout_properties: {grid_position: 'GAJRYD,AURLKZ'}
 - name: label_2
   properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
-    text: Bank Name, font_size: null, font: '', spacing_above: small, icon_align: left,
+    text: Enter Your Bank Name, font_size: null, font: '', spacing_above: small, icon_align: left,
     spacing_below: small, italic: false, background: '', bold: true, underline: false,
     icon: ''}
   type: Label
@@ -97,6 +101,10 @@ components:
     background: 'theme:On Primary', bold: false, underline: false}
   name: text_box_3
   layout_properties: {grid_position: 'UYAFUK,EXQENR'}
+- name: spacer_2
+  properties: {height: 15.428466796875}
+  type: Spacer
+  layout_properties: {grid_position: 'KPMCJT,BZRYNM'}
 - name: button_1
   properties: {role: elevated-button, align: right, tooltip: '', border: '', enabled: true,
     foreground: 'theme:On Primary', visible: true, text: Prev, font_size: null, font: '',
