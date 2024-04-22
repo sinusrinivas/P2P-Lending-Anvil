@@ -352,6 +352,14 @@ db_schema:
     - name: max_amount
       admin_ui: {width: 200}
       type: number
+  fin_borrower_land_type:
+    client: none
+    server: full
+    columns:
+    - name: land_type
+      admin_ui: {width: 200, order: 0}
+      type: string
+    title: fin_borrower_land_type
   fin_borrower_qualification:
     title: fin_borrower_qualification
     client: full
@@ -952,6 +960,18 @@ db_schema:
       admin_ui: {order: 0.80859375, width: 200}
       type: string
     - {name: year_of_estd, type: string}
+    - name: total_acres
+      admin_ui: {width: 200, order: 115}
+      type: number
+    - name: land_type
+      admin_ui: {width: 200, order: 116}
+      type: string
+    - name: crop_name
+      admin_ui: {width: 200, order: 117}
+      type: string
+    - name: farmer_earnings
+      admin_ui: {width: 200, order: 118}
+      type: string
     title: fin_user_profile
   fin_admin_beseem_categories:
     client: full
@@ -1172,7 +1192,7 @@ db_schema:
       admin_ui: {order: 12, width: 200}
       type: string
   fin_wallet_bank_account_table:
-    client: none
+    client: full
     server: full
     columns:
     - name: account_id

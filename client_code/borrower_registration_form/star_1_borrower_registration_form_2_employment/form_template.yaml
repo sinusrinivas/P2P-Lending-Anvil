@@ -34,7 +34,7 @@ components:
   layout_properties: {grid_position: 'EZHUHG,ERHLQM', full_width_row: true}
 - name: label_3_copy_1_copy_1
   properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
-    visible: true, text: 'Choose Your Profession : ', font_size: null, font: '', spacing_above: small,
+    visible: true, text: 'Choose your Profession : ', font_size: null, font: '', spacing_above: small,
     icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
     underline: false, icon: ''}
   type: Label

@@ -325,6 +325,20 @@ class add_borrower_dropdown_details(add_borrower_dropdown_detailsTemplate):
     self.text_box_01_copy.text = ' '
     self.refresh()
 
+  def land_type(self, **event_args):
+    """This method is called when the button is clicked"""
+    self.column_panel_7.visible = False
+    self.column_panel_8.visible = False
+    self.column_panel_9.visible = False
+    self.column_panel_11.visible = False
+    self.column_panel_6.visible = False
+    self.column_panel_5.visible = False   
+    self.column_panel_4.visible = False
+    self.column_panel_3.visible = False
+    self.column_panel_10_copy.visible = False
+    self.column_panel_10.visible = False    
+    self.column_panel_04.visible = False
+
 
 
 
