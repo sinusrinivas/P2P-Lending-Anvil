@@ -353,7 +353,7 @@ db_schema:
       admin_ui: {width: 200}
       type: number
   fin_borrower_land_type:
-    client: none
+    client: full
     server: full
     columns:
     - name: land_type

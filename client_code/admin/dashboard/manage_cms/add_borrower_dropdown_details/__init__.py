@@ -29,7 +29,7 @@ class add_borrower_dropdown_details(add_borrower_dropdown_detailsTemplate):
         self.repeating_panel_9.items = app_tables.fin_borrower_qualification.search()
         self.repeating_panel_1.items = app_tables.fin_self_employment.search()
         self.repeating_panel_11.items = app_tables.fin_spouse_profession.search()
-        self.repeating_panel_12.items = app_tables.fi
+        self.repeating_panel_12.items = app_tables.fin_borrower_land_type.search()
 
     
   def marrital_button_click(self, **event_args):
