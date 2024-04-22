@@ -16,7 +16,8 @@ class star_1_borrower_registration_form_2_employment_business_3(star_1_borrower_
       self.text_box_3.text=user_data['din']
       self.text_box_4.text=user_data['cin']
       self.text_box_1.text=user_data['registered_off_add']
-      self.file_loader_1.file=user_data['proof_verification']
+      if user_data['proof_verification']:
+         self.file_loader_1.url = anvil.media.get_url(user_data['proof_verification'])
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
 
@@ -30,7 +31,7 @@ class star_1_borrower_registration_form_2_employment_business_3(star_1_borrower_
     if not din or not cin or not reg_off_add or not proof_verification:
       Notification("Please all the fields").show()
     else:
-     anvil.server.call('add_lendor_institutional_form_5',reg_off_add,proof_verification,user_id)
+     anvil.server.call('add_lendor_institutional_form_5',din,cin,reg_off_add,proof_verification,user_id)
      open_form('borrower_registration_form.star_1_borrower_registration_form_3_marital',user_id=user_id)
 
   def button_1_click(self, **event_args):
