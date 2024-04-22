@@ -15,31 +15,31 @@ class lender_registration_Institutional_form_3(lender_registration_Institutional
     self.userId = user_id
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
-    # user_data = anvil.server.call('get_user_data', user_id)
+    user_data = anvil.server.call('get_user_data', user_id)
         
-    # if user_data:
-    #         self.industry_type = user_data.get('industry_type', '')
-    #         self.turn_over = user_data.get('six_month_turnover', '')
-    #         self.year = user_data.get('year_estd', '')
-    
-    # else:
-    #     self.industry_type = ''
-    #     self.turn_over = ''
-    #     self.year = ''
-
-    user_data=app_tables.fin_user_profile.get(customer_id=user_id)
     if user_data:
-      self.date_picker_1.date = user_data['year_estd']
-      self.text_box_1.text=user_data['industry_type']
-      self.text_box_2.text=user_data['six_month_turnover']
-       #Restore previously entered data if available
-    # if self.industry_type:
-    #         self.text_box_1.text= self.industry_type
-    # if self.turn_over:
-    #         self.text_box_2.text= self.turn_over
+            self.industry_type = user_data.get('industry_type', '')
+            self.turn_over = user_data.get('six_month_turnover', '')
+            self.year = user_data.get('year_estd', '')
+    
+    else:
+        self.industry_type = ''
+        self.turn_over = ''
+        self.year = ''
 
-    # if self.year:
-    #        self.date_picker_1.date = self.year
+    # user_data=app_tables.fin_user_profile.get(customer_id=user_id)
+    # if user_data:
+    #   self.date_picker_1.date = user_data['year_estd']
+    #   self.text_box_1.text=user_data['industry_type']
+    #   self.text_box_2.text=user_data['six_month_turnover']
+    #    #Restore previously entered data if available
+    if self.industry_type:
+            self.text_box_1.text= self.industry_type
+    if self.turn_over:
+            self.text_box_2.text= self.turn_over
+
+    if self.year:
+           self.date_picker_1.date = self.year
     
     # Any code you write here will run before the form opens.
 
@@ -54,7 +54,7 @@ class lender_registration_Institutional_form_3(lender_registration_Institutional
     else:
      today = datetime.today()
      months = today.year * 12 + today.month - year.year * 12 - year.month
-     anvil.server.call('add_lendor_institutional_form_3',industry_type,turn_over,year,last_six_statements,months,user_id)
+     anvil.server.call('add_lendor_institutional_form_3',year,months,industry_type,turn_over,last_six_statements,user_id)
      open_form('lendor_registration_form.lender_registration_form_2.lender_registration_Institutional_form_5',user_id = user_id)
     """This method is called when the button is clicked"""
 

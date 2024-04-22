@@ -92,7 +92,7 @@ def add_lendor_institutional_form_3(year,months,industry_type,six_monthturnover,
     row[0]['last_six_month_bank_proof'] = last_six_statments
 
 @anvil.server.callable
-def add_lendor_institutional_form_5(din,cin,reg_office_add,off_add_proof,proof_verification,user_id):
+def add_lendor_institutional_form_5(din,cin,reg_office_add,proof_verification,user_id):
   row = app_tables.fin_user_profile.search(customer_id = user_id)
   if row:
     row[0]['din'] = din
