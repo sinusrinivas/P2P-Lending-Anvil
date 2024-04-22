@@ -1,0 +1,21 @@
+is_package: true
+container:
+  type: ColumnPanel
+  properties: {col_widths: '{"VNZTIG":40}'}
+components:
+- name: column_panel_1
+  properties: {col_widths: '{"HXJYTW":40,"CPZEVH":20}', role: outlined-card}
+  type: ColumnPanel
+  layout_properties: {grid_position: 'NLOMGD,VNZTIG'}
+  components:
+  - name: label_1
+    properties: {text: ''}
+    type: Label
+    layout_properties: {grid_position: 'IECLPC,HXJYTW'}
+    data_bindings:
+    - {property: text, code: 'self.item[''land_type'']', writeback: false}
+  - name: link_1
+    properties: {text: Edit details}
+    type: Link
+    layout_properties: {grid_position: 'IECLPC,CPZEVH'}
+    event_bindings: {click: link_1_click}
