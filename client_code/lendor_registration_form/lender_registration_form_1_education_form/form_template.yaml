@@ -28,16 +28,20 @@ components:
   layout_properties: {grid_position: 'ZKFPBI,PYYBUP', full_width_row: true}
 - name: label_1_copy_1
   properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
-    visible: true, text: Education Details, font_size: null, font: '', spacing_above: small,
+    visible: true, text: Education Details, font_size: 16, font: '', spacing_above: small,
     icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
     underline: false, icon: ''}
   type: Label
   layout_properties: {grid_position: ''}
+- name: spacer_1
+  properties: {height: 15.28570556640625}
+  type: Spacer
+  layout_properties: {grid_position: 'FHDOQC,PSJVWS'}
 - name: label_1
   properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
-    text: Qualification, font_size: null, font: '', spacing_above: small, icon_align: left,
-    spacing_below: small, italic: false, background: '', bold: true, underline: false,
-    icon: ''}
+    text: Choose the Qualification, font_size: null, font: '', spacing_above: small,
+    icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+    underline: false, icon: ''}
   type: Label
   layout_properties: {grid_position: 'GCADCB,RUKNLC'}
 - type: DropDown
@@ -62,6 +66,10 @@ components:
     include_placeholder: true
   name: drop_down_1
   layout_properties: {grid_position: 'GCADCB,OQGGDP'}
+- name: spacer_2
+  properties: {height: 11.42852783203125}
+  type: Spacer
+  layout_properties: {grid_position: 'RVXRNM,ICOZLH'}
 - name: button_2
   properties: {role: elevated-button, align: center, tooltip: '', border: '', enabled: true,
     foreground: 'theme:On Primary', visible: true, text: Next, font_size: null, font: '',
