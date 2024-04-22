@@ -1,0 +1,11 @@
+merge:
+  parents: [b09f79293c785598e00a73f6421c92a035564615, a5cb328f2c8c8b819a2b6468e20c998b6ab57800]
+  base: 0047522325a5414bdf494638693f02d9ca2e2360
+conflicting_items:
+- text_chunks:
+  - start: 100
+    alternatives:
+    - {s: A, l: 100, n: 1}
+    - {s: B, l: 101, n: 0}
+  item: [server_code, lendo_server]
+  app_path: [CODE, server_modules/lendo_server]
