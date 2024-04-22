@@ -53,12 +53,14 @@ def add_lendor_individual_form_1(emp_type,org_type,company_name,occupation_type,
     row[0]['occupation_type']=occupation_type
 
 @anvil.server.callable
-def add_lendor_individual_form_2(comp_address,landmark,business_phone_number,user_id):
+def add_lendor_individual_form_2(comp_address,business_phone_number,business_add,business_name,user_id):
   row = app_tables.fin_user_profile.search(customer_id = user_id)
   if row:
     row[0]['company_address']=comp_address
-    row[0]['company_landmark']=landmark
+    # row[0]['company_landmark']=landmark
     row[0]['business_no']=business_phone_number
+    row[0]['business_add']=business_add
+    row[0]['business_name']=business_name
     
 @anvil.server.callable
 def add_lendor_individual_form_3(annual_salary, designation,emp_id_proof,last_six_month,user_id,salary_type):
@@ -80,10 +82,10 @@ def add_lendor_institutional_form_1(business_name,business_add,business_type,emp
     row[0]['employees_working'] = empolyees_working    
    
 @anvil.server.callable
-def add_lendor_institutional_form_3(year_estd,months,industry_type,six_monthturnover,last_six_statments,user_id):
+def add_lendor_institutional_form_3(year,months,industry_type,six_monthturnover,last_six_statments,user_id):
   row = app_tables.fin_user_profile.search(customer_id = user_id)
   if row:
-    row[0]['year_estd'] = year_estd
+    row[0]['year_estd'] = year
     row[0]['business_age'] = months
     row[0]['industry_type'] = industry_type
     row[0]['six_month_turnover'] = six_monthturnover
@@ -253,8 +255,8 @@ def get_user_data(user_id):
             'year_estd': user['year_estd'],
             'industry_type': user['industry_type'],
             'six_month_turnover': user['six_month_turnover'],
-            'director_name': user['director_name'],
-            'director_no': user['director_no'],
+            # 'director_name': user['director_name'],
+            # 'director_no': user['director_no'],
             'din': user['din'],
             'cin': user['cin'],
             'registered_off_add': user['registered_off_add'],
@@ -267,6 +269,7 @@ def get_user_data(user_id):
             # 'salary_type': user['salary_type'],
             'branch_name': user['branch_name'],
             # 'net_bank': user['net_bank']
+            'occupation_type' : user['occupation_type']
           
             
         }
