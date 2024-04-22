@@ -29,23 +29,23 @@ components:
   layout_properties: {grid_position: 'HMTFCW,MHBTNB', full_width_row: true}
 - name: label_1_copy_1
   properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
-    visible: true, text: 'Employment Information:', font_size: null, font: '', spacing_above: small,
+    visible: true, text: 'Employment Information:', font_size: 16, font: '', spacing_above: small,
     icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
     underline: false, icon: ''}
   type: Label
   layout_properties: {grid_position: ''}
 - name: label_2_copy_1
   properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
-    text: Annual Salary, font_size: null, font: '', spacing_above: small, icon_align: left,
-    spacing_below: small, italic: false, background: '', bold: true, underline: false,
-    icon: ''}
+    text: Enter Your Annual Salary, font_size: null, font: '', spacing_above: small,
+    icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+    underline: false, icon: ''}
   type: Label
   layout_properties: {grid_position: 'GUHTRC,SIRBDK VDXOQS,VFAHXV'}
 - type: Label
   properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
-    text: Salary type, font_size: null, font: '', spacing_above: small, icon_align: left,
-    spacing_below: small, italic: false, background: '', bold: true, underline: false,
-    icon: ''}
+    text: Select Your Salary type, font_size: null, font: '', spacing_above: small,
+    icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+    underline: false, icon: ''}
   name: label_3
   layout_properties: {grid_position: 'GUHTRC,SIRBDK PTUVYD,EVIYDQ'}
 - name: text_box_1
@@ -60,7 +60,7 @@ components:
     role: null
     align: full
     tooltip: ''
-    placeholder: Select salary type
+    placeholder: Select one
     border: ''
     enabled: true
     foreground: ''
@@ -79,9 +79,9 @@ components:
   layout_properties: {grid_position: 'GUHTRC,BCBQBT GJSXQS,MXHORH'}
 - name: label_3_copy_1
   properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
-    text: Designation, font_size: null, font: '', spacing_above: small, icon_align: left,
-    spacing_below: small, italic: false, background: '', bold: true, underline: false,
-    icon: ''}
+    text: Enter Your Designation, font_size: null, font: '', spacing_above: small,
+    icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+    underline: false, icon: ''}
   type: Label
   layout_properties: {grid_position: 'UTMAFU,OZAOYV'}
 - name: text_box_2
@@ -101,7 +101,7 @@ components:
   type: Label
   layout_properties: {grid_position: 'OJCELP,UGSODQ'}
 - name: file_loader_1
-  properties: {}
+  properties: {text: Upload Employee Id}
   type: FileLoader
   layout_properties: {grid_position: 'OJCELP,GGXQEK'}
   event_bindings: {change: file_loader_1_change}
@@ -113,13 +113,13 @@ components:
   properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
     text: 'Upload Last Six Months Bank Statements
 
-      (Image size less-than 2MB)(Spouse)', font_size: null, font: '', spacing_above: small,
+      (Image size less-than 2MB)', font_size: null, font: '', spacing_above: small,
     icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
     underline: false, icon: ''}
   type: Label
   layout_properties: {grid_position: 'FGKBFF,EMZAAK'}
 - name: file_loader_2
-  properties: {}
+  properties: {text: Upload Bank Statements}
   type: FileLoader
   layout_properties: {grid_position: 'FGKBFF,QISVDQ'}
   event_bindings: {change: file_loader_2_change}

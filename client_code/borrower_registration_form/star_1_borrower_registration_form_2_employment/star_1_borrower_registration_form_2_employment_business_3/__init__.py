@@ -13,31 +13,34 @@ class star_1_borrower_registration_form_2_employment_business_3(star_1_borrower_
     self.userId = user_id
     user_data=app_tables.fin_user_profile.get(customer_id=user_id)
     if user_data:
-      self.text_box_1.text=user_data['industry_type']
-      self.text_box_2.text=user_data['six_month_turnover']
+      self.text_box_3.text=user_data['din']
+      self.text_box_4.text=user_data['cin']
+      self.text_box_1.text=user_data['registered_off_add']
+      self.text_box_2.text=user_data['off_add_proof']
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
 
     # Any code you write here will run before the form opens.
   def button_2_click(self, **event_args):
-    industry_type = self.text_box_1.text
-    turn_over = self.text_box_2.text
-    last_six_statements = self.file_loader_1.file
+    din = self.text_box_3.text
+    cin = self.text_box_4.text
+    reg_off_add = self.text_box_1.text
+    off_add_proof = self.text_box_2.text
+    proof_verification = self.file_loader_1.file
     user_id = self.userId
-    if not industry_type or not turn_over or not last_six_statements:
-      Notification("Please fill all the fields").show()
+    if not din or not cin or not reg_off_add or not off_add_proof or not proof_verification:
+      Notification("Please all the fields").show()
     else:
-     anvil.server.call('add_lendor_institutional_form_3',industry_type,turn_over,last_six_statements,user_id)
-     open_form('borrower_registration_form.star_1_borrower_registration_form_2_employment.star_1_borrower_registration_form_2_employment_business_5',user_id = user_id)
+     anvil.server.call('add_lendor_institutional_form_5',reg_off_add,off_add_proof,proof_verification,user_id)
+     open_form('borrower_registration_form.star_1_borrower_registration_form_3_marital',user_id=user_id)
 
   def button_1_click(self, **event_args):
     user_id = self.userId
-    open_form('borrower_registration_form.star_1_borrower_registration_form_2_employment.star_1_borrower_registration_form_2_employment_business_2',user_id = user_id)
-    """This method is called when the button is clicked"""
+    open_form('borrower_registration_form.star_1_borrower_registration_form_2_employment.star_1_borrower_registration_form_2_employment_business_2',user_id=user_id)
+    
 
-  def home_borrower_registration_form_copy_1_click(self, **event_args):
-    """This method is called when the button is clicked"""
-    open_form('bank_users.user_form')
+  def button_3_click(self, **event_args):
+    open_form("bank_users.user_form")
 
   def file_loader_1_change(self, file, **event_args):
     """This method is called when a new file is loaded into this FileLoader"""

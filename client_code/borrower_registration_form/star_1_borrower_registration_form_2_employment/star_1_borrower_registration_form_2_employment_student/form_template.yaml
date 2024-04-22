@@ -19,13 +19,13 @@ components:
   layout_properties: {grid_position: 'ELKTWQ,TQETEU', full_width_row: true}
 - name: label_1_copy_1_copy_1_copy_1
   properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
-    visible: true, text: Student Details, font_size: null, font: '', spacing_above: small,
+    visible: true, text: Student Details, font_size: 16, font: '', spacing_above: small,
     icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
     underline: false, icon: ''}
   type: Label
   layout_properties: {grid_position: 'KUSTUQ,UEUGAG'}
 - name: label_1
-  properties: {text: 'College Name:', align: center, bold: true}
+  properties: {text: 'Enter Your College Name:', align: center, bold: true}
   type: Label
   layout_properties: {grid_position: 'JJRAJQ,WPNTZU'}
 - name: borrower_college_name_text
@@ -37,7 +37,7 @@ components:
   type: Label
   layout_properties: {grid_position: 'JJRAJQ,OVIRZH BQSXBW,HIWWRK'}
 - name: label_2
-  properties: {text: 'College Id:', align: center, bold: true}
+  properties: {text: 'Enter Your College Id:', align: center, bold: true}
   type: Label
   layout_properties: {grid_position: 'ETIKUL,OQZJVW'}
 - name: borrower_college_id_text
@@ -49,11 +49,11 @@ components:
   type: Label
   layout_properties: {grid_position: 'ETIKUL,OBTINV PQEXWP,YAJQSF'}
 - name: label_3
-  properties: {text: 'College Proof:', align: center, bold: true}
+  properties: {text: 'Provide College Proof:', align: center, bold: true}
   type: Label
   layout_properties: {grid_position: 'EIUQCI,SNVTWO'}
 - name: borrower_college_proof_img
-  properties: {}
+  properties: {text: Upload Proof}
   type: FileLoader
   layout_properties: {grid_position: 'EIUQCI,PJYIKM GQURKN,TKMIXM'}
   event_bindings: {change: borrower_college_proof_img_change}
@@ -66,7 +66,7 @@ components:
   type: Label
   layout_properties: {grid_position: 'EIUQCI,PJYIKM YTPPHH,RZEGMR'}
 - name: label_4
-  properties: {text: 'College Address:', align: center, bold: true}
+  properties: {text: 'Enter Your College Address:', align: center, bold: true}
   type: Label
   layout_properties: {grid_position: 'CESJQI,RDIOWV'}
 - name: borrower_college_address_text

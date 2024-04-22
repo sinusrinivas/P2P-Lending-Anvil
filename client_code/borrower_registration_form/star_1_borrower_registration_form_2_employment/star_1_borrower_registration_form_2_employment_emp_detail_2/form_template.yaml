@@ -28,16 +28,16 @@ components:
   layout_properties: {grid_position: 'FQDZKV,YMPKPB', full_width_row: true}
 - name: label_1_copy_1
   properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
-    visible: true, text: 'Employment Information:', font_size: null, font: '', spacing_above: small,
+    visible: true, text: 'Employment Information:', font_size: 16, font: '', spacing_above: small,
     icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
     underline: false, icon: ''}
   type: Label
   layout_properties: {grid_position: ',undefined'}
 - name: label_2_copy_1
   properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
-    text: Company Address, font_size: null, font: '', spacing_above: small, icon_align: left,
-    spacing_below: small, italic: false, background: '', bold: true, underline: false,
-    icon: ''}
+    text: Enter Your Company Address, font_size: null, font: '', spacing_above: small,
+    icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+    underline: false, icon: ''}
   type: Label
   layout_properties: {grid_position: 'KVOWYF,HIRSFZ'}
 - name: text_box_1
@@ -49,7 +49,7 @@ components:
   layout_properties: {grid_position: 'KVOWYF,LAIQNE'}
 - name: label_3_copy_1
   properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
-    text: Landmark, font_size: null, font: '', spacing_above: small, icon_align: left,
+    text: Enter Your Landmark, font_size: null, font: '', spacing_above: small, icon_align: left,
     spacing_below: small, italic: false, background: '', bold: true, underline: false,
     icon: ''}
   type: Label
@@ -63,7 +63,7 @@ components:
   layout_properties: {grid_position: 'TCPQDD,AIRHIA'}
 - name: label_1
   properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
-    text: Business Phone Number, font_size: null, font: '', spacing_above: small,
+    text: Enter Business Phone Number, font_size: null, font: '', spacing_above: small,
     icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
     underline: false, icon: ''}
   type: Label

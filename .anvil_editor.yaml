@@ -28,8 +28,6 @@ unique_ids:
     borrower_registration_form.star_1_borrower_registration_form_3_marital.star_1_borrower_registration_form_3_marital_married: '1706804611456403853788462.94586'
     admin.dashboard.manage_bessem.add_subcategory.edit_duration_address: '1710502756250627123721187.6564'
     borrower_registration_form.borrower_registration_last_check_out_form: '1699374444060167172815541.79663'
-    ? borrower_registration_form.star_1_borrower_registration_form_2_employment.star_1_borrower_registration_form_2_employment_business_4
-    : '1700571978274780031857795.3887'
     admin.dashboard.manage_bessem.add_subcategory.ItemTemplate39: '1709541962560913219390819.0338'
     admin.dashboard.admin_management.view_admins.RowTemplate41: '1710420306485720908695007.752'
     borrower_registration_form.ots_dashboard.RowTemplate40: '1707824718203149163284237.14175'
@@ -142,8 +140,6 @@ unique_ids:
     admin.dashboard.manage_bessem.add_subcategory.ItemTemplate92: '171108796269972522221607.73813'
     lendor_registration_form.dashboard.view_loan_extension_requests.extension_details: '1706448836532652081977126.0691'
     ? borrower_registration_form.star_1_borrower_registration_form_2_employment.star_1_borrower_registration_form_2_employment_business_3
-    : '1700126739765126145778650.8795'
-    ? borrower_registration_form.star_1_borrower_registration_form_2_employment.star_1_borrower_registration_form_2_employment_business_5
     : '17005720020403876226355.3249187'
     admin.dashboard.loan_management.open_loans.ItemTemplate3: '171101040560926993222468.07667'
     lendor_registration_form.dashboard.view_loan_foreclosure_Requests: '169996304408474987603925.53683'
@@ -376,7 +372,7 @@ unique_ids:
     borrower_registration_form.dashboard.application_tracker.ItemTemplate69: '1709621198298979722498909.3445'
     borrower_registration_form.dashboard.view_loans.payment_details_b.RowTemplate36: '1705553457787678152376814.2659'
     ? borrower_registration_form.star_1_borrower_registration_form_2_employment.star_1_borrower_registration_form_2_employment_business_2
-    : '1700570068782198167271670.87088'
+    : '1700126739765126145778650.8795'
     lendor_registration_form.dashboard.view_loan_extension_requests.ItemTemplate48: '1709708663142951055530736.5425'
     admin.dashboard.borrowers.RowTemplate3: '1700662180254721391598758.9972'
     borrower_registration_form.dashboard.discount_coupons: '1699009614633438440466451.8109'

@@ -22,16 +22,16 @@ components:
   layout_properties: {grid_position: 'OLJJRL,XSGSCU', full_width_row: true}
 - name: label_1_copy_1
   properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
-    visible: true, text: Business Details, font_size: null, font: '', spacing_above: small,
+    visible: true, text: Business Details, font_size: 16, font: '', spacing_above: small,
     icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
     underline: false, icon: ''}
   type: Label
   layout_properties: {grid_position: ',undefined'}
 - name: label_2_copy_1
   properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
-    text: Business Name, font_size: null, font: '', spacing_above: small, icon_align: left,
-    spacing_below: small, italic: false, background: '', bold: true, underline: false,
-    icon: ''}
+    text: Enter Your Business Name, font_size: null, font: '', spacing_above: small,
+    icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+    underline: false, icon: ''}
   type: Label
   layout_properties: {grid_position: 'TBSTAV,AJFNNQ'}
 - name: text_box_1
@@ -43,9 +43,9 @@ components:
   layout_properties: {grid_position: 'TBSTAV,GRNRYA'}
 - name: label_1
   properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
-    text: Business Address, font_size: null, font: '', spacing_above: small, icon_align: left,
-    spacing_below: small, italic: false, background: '', bold: true, underline: false,
-    icon: ''}
+    text: Enter Your Business Address, font_size: null, font: '', spacing_above: small,
+    icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+    underline: false, icon: ''}
   type: Label
   layout_properties: {grid_position: 'MNLDHN,CHOCJJ'}
 - name: text_box_3
@@ -55,6 +55,64 @@ components:
     background: 'theme:On Primary', bold: false, underline: false}
   type: TextBox
   layout_properties: {grid_position: 'MNLDHN,BMRFNN'}
+- name: label_3_copy_1
+  properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
+    text: Select Your Business Type, font_size: null, font: '', spacing_above: small,
+    icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+    underline: false, icon: ''}
+  type: Label
+  layout_properties: {grid_position: 'CVKAHC,SRHPPY'}
+- name: drop_down_1
+  properties:
+    role: null
+    align: full
+    tooltip: ''
+    placeholder: Select One
+    border: ''
+    enabled: true
+    foreground: ''
+    items: [Private, Government]
+    visible: true
+    font_size: null
+    font: ''
+    spacing_above: small
+    spacing_below: small
+    italic: false
+    background: theme:On Primary
+    bold: false
+    underline: false
+    include_placeholder: true
+  type: DropDown
+  layout_properties: {grid_position: 'CVKAHC,FIFJXL'}
+- name: label_1_copy
+  properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
+    text: Select No of Employees Working, font_size: null, font: '', spacing_above: small,
+    icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+    underline: false, icon: ''}
+  type: Label
+  layout_properties: {grid_position: 'AHGSUY,HUBCHH'}
+- name: drop_down_2
+  properties:
+    role: null
+    align: full
+    tooltip: ''
+    placeholder: Select One
+    border: ''
+    enabled: true
+    foreground: ''
+    items: [1-10, 11-15, 16-25, 26-40, 41-60, 61-75, 76-100, 100 above]
+    visible: true
+    font_size: null
+    font: ''
+    spacing_above: small
+    spacing_below: small
+    italic: false
+    background: theme:On Primary
+    bold: false
+    underline: false
+    include_placeholder: true
+  type: DropDown
+  layout_properties: {grid_position: 'AHGSUY,OBIHOO'}
 - name: button_1
   properties: {role: elevated-button, align: right, tooltip: '', border: '', enabled: true,
     foreground: 'theme:On Primary', visible: true, text: Prev, font_size: null, font: '',
