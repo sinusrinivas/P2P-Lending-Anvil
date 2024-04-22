@@ -223,43 +223,10 @@ components:
       properties: {height: -1}
       type: Spacer
       layout_properties: {grid_position: 'VJYOJJ,KGORIJ DNDLNK,TTTZXS'}
-    - name: label_13
-      properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-        visible: false, text: '  Defaulters Fee (₹)', font_size: 17, font: '', spacing_above: small,
-        icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-        underline: false, icon: ''}
-      type: Label
-      layout_properties: {grid_position: 'VJYOJJ,KGORIJ ZLZGYF,JEININ'}
     - name: spacer_16
       properties: {height: -40}
       type: Spacer
       layout_properties: {grid_position: 'VJYOJJ,KGORIJ MOVBIS,LAJNUK'}
-    - name: label_18
-      properties: {text: '  Non Performing Asset', font_size: 17, bold: true}
-      type: Label
-      layout_properties: {grid_position: 'VJYOJJ,KGORIJ BPGKKD,QOVAJZ'}
-    - name: spacer_18
-      properties: {height: 32}
-      type: Spacer
-      layout_properties: {grid_position: 'VJYOJJ,KGORIJ TBNEFG,UEZNWM'}
-    - name: label_14
-      properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-        visible: false, text: '  Non Performing Asset(%)', font_size: 17, font: '',
-        spacing_above: small, icon_align: left, spacing_below: small, italic: false,
-        background: '', bold: true, underline: false, icon: ''}
-      type: Label
-      layout_properties: {grid_position: 'VJYOJJ,KGORIJ FQTXUZ,NVQOGZ'}
-    - name: spacer_7
-      properties: {height: 11}
-      type: Spacer
-      layout_properties: {grid_position: 'VJYOJJ,KGORIJ IYBKXL,SUPWNN'}
-    - name: label_amount
-      properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-        visible: false, text: '  Non Performing Asset (₹)', font_size: 17, font: '',
-        spacing_above: small, icon_align: left, spacing_below: small, italic: false,
-        background: '', bold: true, underline: false, icon: ''}
-      type: Label
-      layout_properties: {grid_position: 'VJYOJJ,KGORIJ KUSRTJ,OSKHBU'}
     - name: label_1
       properties: {font_size: 17, role: null, text: ''}
       type: Label
@@ -628,35 +595,77 @@ components:
       type: TextBox
       layout_properties: {grid_position: 'VJYOJJ,KCWIQP WKOIDH,EQFCSL'}
       event_bindings: {pressed_enter: text_box_1_copy_pressed_enter}
-    - name: text_box_1
-      properties: {background: white, role: outlined-card, placeholder: Enter Fixed Defaulters Amount,
-        visible: false}
-      type: TextBox
-      layout_properties: {grid_position: 'VJYOJJ,KCWIQP IYFYXY,SYJEXQ'}
-    - name: drop_down_3
-      properties:
-        background: white
-        items: [Non Performing Asset (%), Non Performing Asset (₹)]
-        placeholder: Select One
-        include_placeholder: true
-      type: DropDown
-      layout_properties: {grid_position: 'VJYOJJ,KCWIQP CBSBRG,HFSYQC'}
-      event_bindings: {change: drop_down_3_change}
-    - name: npa
-      properties: {role: outlined-card, align: left, hide_text: false, tooltip: '',
-        placeholder: Enter Non Performing Asset Fee, border: '', enabled: true, foreground: '',
-        visible: false, text: '', font_size: 17, font: '', spacing_above: small, type: text,
-        spacing_below: small, italic: false, background: white, bold: false, underline: false}
-      type: TextBox
-      layout_properties: {grid_position: 'VJYOJJ,KCWIQP FUQBPD,XHDZRY'}
-    - name: text_amount
-      properties: {role: outlined-card, align: left, hide_text: false, tooltip: '',
-        placeholder: Enter Fixed Non Performing Asset Amount, border: '', enabled: true,
-        foreground: '', visible: false, text: '', font_size: 17, font: '', spacing_above: small,
-        type: text, spacing_below: small, italic: false, background: white, bold: false,
-        underline: false}
-      type: TextBox
-      layout_properties: {grid_position: 'VJYOJJ,KCWIQP BSNSJF,XQOYVB'}
+    - name: flow_panel_4
+      properties: {}
+      type: FlowPanel
+      layout_properties: {grid_position: 'DLUDFX,CSTENW'}
+      components:
+      - name: label_13
+        properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+          visible: false, text: '  Defaulters Fee (₹)', font_size: 17, font: '', spacing_above: small,
+          icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+          underline: false, icon: ''}
+        type: Label
+      - name: text_box_1
+        properties: {background: white, role: outlined-card, placeholder: Enter Fixed Defaulters Amount,
+          visible: false}
+        type: TextBox
+        layout_properties: {width: 801}
+    - name: flow_panel_3
+      properties: {}
+      type: FlowPanel
+      layout_properties: {grid_position: 'WXJSHM,JGQVXT'}
+      components:
+      - name: label_18
+        properties: {text: '  Non Performing Asset', font_size: 17, bold: true}
+        type: Label
+      - name: drop_down_3
+        properties:
+          background: white
+          items: [Non Performing Asset (%), Non Performing Asset (₹)]
+          placeholder: Select One
+          include_placeholder: true
+        type: DropDown
+        layout_properties: {width: 767}
+        event_bindings: {change: drop_down_3_change}
+    - name: flow_panel_2
+      properties: {}
+      type: FlowPanel
+      layout_properties: {grid_position: 'RYJLRW,TSYFMP'}
+      components:
+      - name: label_14
+        properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+          visible: false, text: '  Non Performing Asset(%)', font_size: 17, font: '',
+          spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+          background: '', bold: true, underline: false, icon: ''}
+        type: Label
+      - name: npa
+        properties: {role: outlined-card, align: left, hide_text: false, tooltip: '',
+          placeholder: Enter Non Performing Asset Fee, border: '', enabled: true,
+          foreground: '', visible: false, text: '', font_size: 17, font: '', spacing_above: small,
+          type: text, spacing_below: small, italic: false, background: white, bold: false,
+          underline: false}
+        type: TextBox
+        layout_properties: {width: 741}
+    - name: flow_panel_1
+      properties: {}
+      type: FlowPanel
+      layout_properties: {grid_position: 'HSWSJV,FVVODF'}
+      components:
+      - name: label_amount
+        properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+          visible: false, text: '  Non Performing Asset (₹)', font_size: 17, font: '',
+          spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+          background: '', bold: true, underline: false, icon: ''}
+        type: Label
+      - name: text_amount
+        properties: {role: outlined-card, align: left, hide_text: false, tooltip: '',
+          placeholder: Enter Fixed Non Performing Asset Amount, border: '', enabled: true,
+          foreground: '', visible: false, text: '', font_size: 17, font: '', spacing_above: small,
+          type: text, spacing_below: small, italic: false, background: white, bold: false,
+          underline: false}
+        type: TextBox
+        layout_properties: {width: 744}
     - name: spacer_11
       properties: {height: 32}
       type: Spacer
