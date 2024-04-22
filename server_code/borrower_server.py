@@ -31,12 +31,14 @@ def add_borrwer_self_employment(status_of_user,user_id):
   row=app_tables.fin_user_profile.search(customer_id=user_id)
   if row:
     row[0]['self_employment']=status_of_user
-    
+
+@anvil.server.callable
 def add_borrower_farmer(land_type,total_acres,crop_name,farmer_earnings,user_id):
+  total_acres_numeric = float(total_acres)
   row = app_tables.fin_user_profile.search(customer_id = user_id)
   if row:
     row[0]['land_type'] = land_type
-    row[0]['total_acres'] = total_acres
+    row[0]['total_acres'] = total_acres_numeric
     row[0]['crop_name'] = crop_name
     row[0]['farmer_earnings'] = farmer_earnings 
 

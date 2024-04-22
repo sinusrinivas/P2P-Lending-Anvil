@@ -36,7 +36,7 @@ class star_1_borrower_registration_form_2_self_employment(star_1_borrower_regist
     if status_of_user == 'Business':
        open_form('borrower_registration_form.star_1_borrower_registration_form_2_employment.star_1_borrower_registration_form_2_employment_business_1',user_id=user_id)
     elif status_of_user == 'Farmer':
-      open_form('borrower_registration_form.star_1_borrower_registration_form_3_marital',user_id=user_id)
+      open_form('borrower_registration_form.star_1_borrower_registration_form_2_employment.star_1_borrower_registration_form_2_employment_farmer',user_id=user_id)
 
   def button_1_click(self, **event_args):
     """This method is called when the button is clicked"""
