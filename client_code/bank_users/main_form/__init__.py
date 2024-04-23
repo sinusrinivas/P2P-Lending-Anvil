@@ -63,6 +63,9 @@ class main_form(main_formTemplate):
                             open_form('borrower_registration_form.dashboard')
                         elif user_profile_e['one_time_settlement'] == True:
                             open_form('borrower_registration_form.ots_dashboard')
+                    elif user_profile_e['form_count'] is not None and user_profile_e['form_count'] >= 0:
+                      open_form('bank_users.user_form')
+                      
                     else:
                         open_form('bank_users.main_form.basic_registration_form')
                 else:
