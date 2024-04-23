@@ -3,7 +3,7 @@ components:
 - name: content_panel
   properties: {background: '', col_widths: '{"FWLUSG":15,"OTHXKY":45}'}
   type: ColumnPanel
-  layout_properties: {grid_position: 'FZRLGK,RVGYUA', full_width_row: true}
+  layout_properties: {grid_position: 'ZYGJIY,UTWSWJ', full_width_row: true}
   components:
   - name: flow_panel_2
     properties: {align: justify}
