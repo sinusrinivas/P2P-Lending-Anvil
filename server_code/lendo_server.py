@@ -53,14 +53,13 @@ def add_lendor_individual_form_1(emp_type,org_type,company_name,occupation_type,
     row[0]['occupation_type']=occupation_type
 
 @anvil.server.callable
-def add_lendor_individual_form_2(comp_address,business_phone_number,business_add,business_name,user_id):
+def add_lendor_individual_form_2(business_type,empolyees_working,business_name,business_add,user_id):
   row = app_tables.fin_user_profile.search(customer_id = user_id)
   if row:
-    row[0]['company_address']=comp_address
-    # row[0]['company_landmark']=landmark
-    row[0]['business_no']=business_phone_number
-    row[0]['business_add']=business_add
-    row[0]['business_name']=business_name
+    row[0]['business_name'] = business_name
+    row[0]['business_add'] = business_add
+    row[0]['business_type'] = business_type
+    row[0]['employees_working'] = empolyees_working  
     
 @anvil.server.callable
 def add_lendor_individual_form_3(annual_salary, designation,emp_id_proof,last_six_month,user_id,salary_type):
@@ -100,6 +99,15 @@ def add_lendor_institutional_form_5(din,cin,reg_office_add,proof_verification,us
     row[0]['registered_off_add'] = reg_office_add
     # row[0]['off_add_proof'] = off_add_proof
     row[0]['proof_verification'] = proof_verification
+
+@anvil.server.callable
+def add_lendor_individual_form_6(comp_address, landmark, business_phone_number, user_id):
+  row = app_tables.fin_user_profile.search(customer_id = user_id)
+  if row:
+    row[0]['company_address'] = comp_address
+    row[0]['company_landmark'] = landmark
+    row[0]['business_no'] = business_phone_number
+
 
 @anvil.server.callable
 def add_lendor_marital(marital_status,user_id):
