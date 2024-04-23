@@ -14,29 +14,36 @@ class lender_registration_form_4_bank_form_1(lender_registration_form_4_bank_for
     self.userId = user_id
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
-    user_data = anvil.server.call('get_user_data', user_id)
+    user_data=app_tables.fin_user_profile.get(customer_id=user_id)
     if user_data:
-            self.account_name = user_data.get('account_name', '')
-            self.account_type = user_data.get('account_type', '')
-            self.account_number = user_data.get('account_number', '')
-            self.bank_name = user_data.get('bank_name', '')
+      self.text_box_1.text=user_data['account_name']
+      self.drop_down_1.selected_value=user_data['account_type']
+      self.text_box_2.text=user_data['account_number']
+      self.text_box_3.text=user_data['bank_name']
+      user_data.update()
+    # user_data = anvil.server.call('get_user_data', user_id)
+    # if user_data:
+    #         self.account_name = user_data.get('account_name', '')
+    #         self.account_type = user_data.get('account_type', '')
+    #         self.account_number = user_data.get('account_number', '')
+    #         self.bank_name = user_data.get('bank_name', '')
             
-    else:
-        self.account_name = ''
-        self.account_type = ''
-        self.account_number = ''
-        self.bank_name = ''
+    # else:
+    #     self.account_name = ''
+    #     self.account_type = ''
+    #     self.account_number = ''
+    #     self.bank_name = ''
         
 
-       #Restore previously entered data if available
-    if self.account_name:
-            self.text_box_1.text= self.account_name
-    if self.account_type:
-            self.drop_down_1.selected_value = self.account_type
-    if self.account_number:
-          self.text_box_2.text = self.account_number
-    if self.bank_name:
-           self.text_box_3.text = self.bank_name
+    #    #Restore previously entered data if available
+    # if self.account_name:
+    #         self.text_box_1.text= self.account_name
+    # if self.account_type:
+    #         self.drop_down_1.selected_value = self.account_type
+    # if self.account_number:
+    #       self.text_box_2.text = self.account_number
+    # if self.bank_name:
+    #        self.text_box_3.text = self.bank_name
       
     options = app_tables.fin_lendor_account_type.search()
     options_string =[str(option['lendor_account_type']) for option in options]

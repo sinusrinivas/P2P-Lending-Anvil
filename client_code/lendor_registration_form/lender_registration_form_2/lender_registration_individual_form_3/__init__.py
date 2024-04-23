@@ -13,25 +13,32 @@ class lender_registration_individual_form_3(lender_registration_individual_form_
     self.userId = user_id
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
-    user_data = anvil.server.call('get_user_data', user_id)
-        
+    user_data=app_tables.fin_user_profile.get(customer_id=user_id)
     if user_data:
-            self.annual_salary = user_data.get('annual_salary', '')
-            self.salary_type = user_data.get('salary_type', '')
-            self.designation = user_data.get('designation', '')
+      self.text_box_1.text=user_data['annual_salary']
+      self.text_box_2.text=user_data['designation']
+      self.drop_down_1.selected_value = user_data['salary_type']
+      
+      user_data.update()
+    # user_data = anvil.server.call('get_user_data', user_id)
+        
+    # if user_data:
+    #         self.annual_salary = user_data.get('annual_salary', '')
+    #         self.salary_type = user_data.get('salary_type', '')
+    #         self.designation = user_data.get('designation', '')
      
-    else:
-        self.annual_salary = ''
-        self.salary_type = ''
-        self.designation = ''
+    # else:
+    #     self.annual_salary = ''
+    #     self.salary_type = ''
+    #     self.designation = ''
 
-       #Restore previously entered data if available
-    if self.annual_salary:
-       self.text_box_1.text= self.annual_salary
-    if self.salary_type:
-       self.drop_down_1.selected_value = self.salary_type
-    if self.designation:
-       self.text_box_2.text= self.designation
+    #    #Restore previously entered data if available
+    # if self.annual_salary:
+    #    self.text_box_1.text= self.annual_salary
+    # if self.salary_type:
+    #    self.drop_down_1.selected_value = self.salary_type
+    # if self.designation:
+    #    self.text_box_2.text= self.designation
 
     options = app_tables.fin_lendor_salary_type.search()
     option_strings = [str(option['lendor_salary_type']) for option in options]
