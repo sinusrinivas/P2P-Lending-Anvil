@@ -46,7 +46,7 @@ components:
       type: Spacer
       layout_properties: {grid_position: 'WUAZDP,FZHHNU'}
     - name: column_panel_1_copy_copy
-      properties: {role: elevated-card, col_widths: '{"CQYWXR":10,"WLTEQM":5,"BJDXSL":55,"LGHLJP":55,"OTWMDU":5,"EKYSFD":54,"EOHAME":6,"PKGYXY":54,"EBNTMA":6,"CBJOWY":20,"VXLYLN":40,"IKUFXQ":10,"UXCVZV":40}'}
+      properties: {role: elevated-card, col_widths: '{"CQYWXR":10,"WLTEQM":5,"BJDXSL":55,"LGHLJP":55,"OTWMDU":5,"EKYSFD":54,"EOHAME":6,"PKGYXY":54,"EBNTMA":6,"VXLYLN":40,"IKUFXQ":10,"UXCVZV":40}'}
       type: ColumnPanel
       layout_properties: {grid_position: 'WUAZDP,LLBEDS', full_width_row: false}
       components:
@@ -101,8 +101,14 @@ components:
         properties: {placeholder: '', background: white, visible: true, enabled: true,
           role: outlined, hide_text: true}
         type: TextBox
-        layout_properties: {grid_position: 'BCREGJ,LGHLJP GASAMI,BJDXSL JHGYMR,PKGYXY'}
+        layout_properties: {grid_position: 'BCREGJ,LGHLJP GASAMI,BJDXSL JHGYMR,PKGYXY
+            KVQAVW,YTARFE'}
         event_bindings: {pressed_enter: text_box_2_pressed_enter}
+      - name: error_label
+        properties: {foreground: red}
+        type: Label
+        layout_properties: {grid_position: 'BCREGJ,LGHLJP GASAMI,BJDXSL JHGYMR,PKGYXY
+            VFLNWH,LISDRA'}
       - name: label_2
         properties: {icon: 'fa:lock', font_size: 20}
         type: Label
@@ -126,12 +132,8 @@ components:
         properties: {height: 15.28558349609375}
         type: Spacer
         layout_properties: {grid_position: 'BCREGJ,LGHLJP GASAMI,BJDXSL PRAHQB,TEAATI'}
-      - name: label_8
-        properties: {text: 'New User? '}
-        type: Label
-        layout_properties: {grid_position: 'BCREGJ,LGHLJP GASAMI,BJDXSL ETWHQH,CBJOWY'}
       - name: link_2
-        properties: {text: Sign Up, foreground: blue}
+        properties: {text: 'New user ?  Click here to SignUp', foreground: blue}
         type: Link
         layout_properties: {grid_position: 'BCREGJ,LGHLJP GASAMI,BJDXSL ETWHQH,VXLYLN'}
     - name: spacer_10
