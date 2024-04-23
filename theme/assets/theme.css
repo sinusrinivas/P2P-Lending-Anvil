@@ -1075,7 +1075,7 @@ div.plot-container.plotly svg.main-svg {
 }
 
 .btn-default:hover{
-  transform: translateY(-3px); 
+  transform: translateY(-2px); 
 }
 
 /* /*rounding corners of dropdown  */
