@@ -56,6 +56,9 @@ class login_page(login_pageTemplate):
                                 open_form('borrower_registration_form.dashboard')
                             elif user_profile_e['one_time_settlement'] == True:
                                 open_form('borrower_registration_form.ots_dashboard')
+
+                        elif user_profile_e['form_count'] >= 0:
+                          open_form('bank_users.user_form')
                         else:
                             open_form('bank_users.main_form.basic_registration_form')
                     else:
@@ -67,7 +70,9 @@ class login_page(login_pageTemplate):
 
 
     else:
-      alert('invalid email or password')
+      self.error_label.text = 'Invalid email or password'
+      self.error_label.visible = True
+
 
   def check_box_1_change(self, **event_args):
    #  """This method is called when this checkbox is checked or unchecked"""
