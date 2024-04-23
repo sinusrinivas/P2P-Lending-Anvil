@@ -58,6 +58,7 @@ unique_ids:
     admin.user_issue.user_buganalysis.RowTemplate17: '1701189107287981500115093.1753'
     lendor_registration_form.dashboard.lender_view_loans.RowTemplate21: '1703140075771292076881029.6881'
     lendor_registration_form.dashboard.lender_view_loans.ItemTemplate52: '1709612227020162730100778.72473'
+    bank_users.main_form.products_main_form.personal_loan.credit_card_loan: '171384952041557143596093.337524'
     lendor_registration_form.dashboard.view_transaction_history: '1710298356353940920789065.449'
     ? borrower_registration_form.star_1_borrower_registration_form_1_education.star_1_borrower_registration_form_education_intermediate
     : '1706674264490661669917930.6699'
@@ -448,6 +449,7 @@ unique_ids:
     money lenders.png: '171274530655679078680187.06288'
     pic5.png: '171153710205672657396696.9959'
     processing fee.png: '171255994143884088588492.80132'
+    credit card loan.png: '1713850238587452173531541.9086'
     theme.css: JY2QQGLXUJWK7GCNGLNVTEX4BU36LTNX
     rbi-registered-1.svg: '1711625340182904575401418.6937'
     icons8-get-cash-100.png: '1712035827507960042752507.3192'

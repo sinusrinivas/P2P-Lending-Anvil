@@ -1,0 +1,48 @@
+is_package: true
+container:
+  type: HtmlTemplate
+  properties: {html: '@theme:standard-page.html'}
+components:
+- type: ColumnPanel
+  properties: {}
+  name: content_panel
+  layout_properties: {slot: default}
+  components:
+  - name: content_panel_copy_2
+    properties: {}
+    type: ColumnPanel
+    layout_properties: {grid_position: 'VFMWUW,LMUGVD', full_width_row: true}
+    components:
+    - name: label_1
+      properties: {text: "Free Yourself from \nCredit Card Debt", bold: true, font_size: 35}
+      type: Label
+      layout_properties: {grid_position: 'QTNQBN,OPOTBI WUQDPS,DPVFAQ'}
+    - name: label_2
+      properties: {text: 'credit card consolidation loans boast full transparency,
+          providing borrowers with clear terms and justifiable interest rates that
+          make financial sense.
+
+          ', font_size: 22}
+      type: Label
+      layout_properties: {grid_position: 'QTNQBN,OPOTBI YLFEOI,FVWLFL'}
+    - name: spacer_1
+      properties: {height: 32}
+      type: Spacer
+      layout_properties: {grid_position: 'QTNQBN,OPOTBI SSEHLE,IKLMTS DBHHQV,NPFFKF'}
+    - name: button_1
+      properties: {text: Apply Now, foreground: white, font_size: 17, background: '#013065',
+        align: left, role: tonal-button}
+      type: Button
+      layout_properties: {grid_position: 'QTNQBN,OPOTBI TECORI,LIWIMN'}
+    - name: image_1
+      properties: {height: 376.11102294921875, source: _/theme/credit card loan.png}
+      type: Image
+      layout_properties: {grid_position: 'QTNQBN,JBTPFF'}
+- type: FlowPanel
+  properties: {}
+  name: navbar_links
+  layout_properties: {slot: nav-right}
+- name: content_panel_copy
+  properties: {}
+  type: ColumnPanel
+  layout_properties: {slot: title}
