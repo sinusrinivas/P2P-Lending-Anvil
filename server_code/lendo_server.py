@@ -97,7 +97,6 @@ def add_lendor_institutional_form_5(din,cin,reg_office_add,proof_verification,us
     row[0]['din'] = din
     row[0]['cin'] = cin
     row[0]['registered_off_add'] = reg_office_add
-    # row[0]['off_add_proof'] = off_add_proof
     row[0]['proof_verification'] = proof_verification
 
 @anvil.server.callable
