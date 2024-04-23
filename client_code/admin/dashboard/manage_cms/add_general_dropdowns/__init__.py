@@ -20,7 +20,7 @@ class add_general_dropdowns(add_general_dropdownsTemplate):
         self.repeating_panel_1.items = app_tables.fin_gender.search()
         self.repeating_panel_2.items = app_tables.fin_present_address.search()
         self.repeating_panel_3.items = app_tables.fin_duration_at_address.search()
-        self.repeating_panel_4.items = app_tables.fin_company_type.search()
+        self.repeating_panel_4.items = app_tables.fin_occupation_type.search()
 
 
 
