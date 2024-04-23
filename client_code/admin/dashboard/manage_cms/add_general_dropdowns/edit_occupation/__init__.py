@@ -1,4 +1,4 @@
-from ._anvil_designer import edit_companyTemplate
+from ._anvil_designer import edit_occupationTemplate
 from anvil import *
 import anvil.server
 import anvil.google.auth, anvil.google.drive
@@ -8,7 +8,7 @@ import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 
-class edit_company(edit_companyTemplate):
+class edit_occupation(edit_occupationTemplate):
   def __init__(self,selected_row, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
