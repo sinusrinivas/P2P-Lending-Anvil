@@ -69,6 +69,15 @@ class login_page(login_pageTemplate):
     else:
       alert('invalid email or password')
 
+  def check_box_1_change(self, **event_args):
+   #  """This method is called when this checkbox is checked or unchecked"""
+        self.password_visible = self.check_box_1.checked
+        if self.password_visible:
+            self.text_box_2.hide_text = False  # Show decrypted password
+        else:
+            self.text_box_2.hide_text = True
+
+
 
 
 

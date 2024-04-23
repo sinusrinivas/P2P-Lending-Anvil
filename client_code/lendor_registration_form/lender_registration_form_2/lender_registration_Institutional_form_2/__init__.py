@@ -22,6 +22,7 @@ class lender_registration_Institutional_form_2(lender_registration_Institutional
             # self.year = user_data.get('year_estd', '')
             self.business_name = user_data.get('business_name', '')
             self.business_add = user_data.get('business_add', '')
+  
             
     else:
         self.business_type = ''
@@ -33,9 +34,9 @@ class lender_registration_Institutional_form_2(lender_registration_Institutional
 
        #Restore previously entered data if available
     if self.business_type:
-            self.drop_down_1.selected_value = self.business_type
+            self.drop_down_1.items = self.business_type
     if self.empolyees_working:
-           self.drop_down_2.selected_value = self.empolyees_working
+           self.drop_down_2.items = self.empolyees_working
     # if self.year:
     #        self.date_picker_1.date = self.year
 
