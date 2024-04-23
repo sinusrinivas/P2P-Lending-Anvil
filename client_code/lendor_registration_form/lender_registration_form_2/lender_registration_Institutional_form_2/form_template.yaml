@@ -1,11 +1,11 @@
 container:
   type: ColumnPanel
-  properties: {col_widths: '{}'}
+  properties: {col_widths: '{"RUKNLC":30,"IIFXYA":20,"WZHHJU":10}'}
 components:
 - type: FlowPanel
   properties: {}
   name: flow_panel_1
-  layout_properties: {grid_position: 'LNVBXO,DNMSIQ', full_width_row: true}
+  layout_properties: {grid_position: 'HZQEFD,BBTOLR', full_width_row: true}
   components:
   - name: image_1_copy_1_copy_1
     properties: {role: null, vertical_align: center, height: 48, tooltip: '', border: '',
@@ -15,16 +15,16 @@ components:
     type: Image
     layout_properties:
       col_widths: {}
-      grid_position: ',FXWRAD'
-      width: 486
+      grid_position: TIYFPR,YGXTOI
+      width: 296
 - type: form:borrower_registration_form.logout
   properties: {}
   name: logout_1
-  layout_properties: {grid_position: 'LNVBXO,BJMBNA'}
+  layout_properties: {grid_position: 'HZQEFD,EGDQMK', full_width_row: true}
 - type: form:lendor_registration_form.navigation_bar_main_lender
   properties: {}
   name: navigation_bar_main_lender_1
-  layout_properties: {grid_position: 'EXCZML,VSXRMI', full_width_row: true}
+  layout_properties: {grid_position: 'YEBRTN,TKAOBZ', full_width_row: true}
 - name: label_1_copy_1
   properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
     visible: true, text: Institutional Type, font_size: null, font: '', spacing_above: small,
@@ -38,108 +38,71 @@ components:
     icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
     underline: false, icon: ''}
   type: Label
-  layout_properties: {grid_position: 'WRBAFI,YGPUEO'}
-- name: spacer_1
-  properties: {height: 10.857086181640625}
-  type: Spacer
-  layout_properties: {grid_position: 'FWDRTA,HBBODP'}
+  layout_properties: {grid_position: 'THEESX,ICFHYX'}
+- name: label_2
+  properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
+    text: Select Year of Establishment, font_size: null, font: '', spacing_above: small,
+    icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+    underline: false, icon: ''}
+  type: Label
+  layout_properties: {grid_position: 'ZMTDYA,KUWOOK'}
+- name: date_picker_1
+  properties: {background: 'theme:On Primary'}
+  type: DatePicker
+  layout_properties: {grid_position: 'ZMTDYA,LLVHTR'}
 - name: label_2_copy_1
   properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
-    text: Enter Business Name, font_size: null, font: '', spacing_above: small, icon_align: left,
-    spacing_below: small, italic: false, background: '', bold: true, underline: false,
-    icon: ''}
+    text: Enter Your Industry Type, font_size: null, font: '', spacing_above: small,
+    icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+    underline: false, icon: ''}
   type: Label
-  layout_properties: {grid_position: 'IXTWNR,XHYGIL'}
+  layout_properties: {grid_position: 'IQLKEP,LAJECL'}
 - name: text_box_1
   properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: '',
     border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
     font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
     background: 'theme:On Primary', bold: false, underline: false}
   type: TextBox
-  layout_properties: {grid_position: 'IXTWNR,ZBDPWB'}
-- name: label_1_copy
+  layout_properties: {grid_position: 'IQLKEP,TIFASU'}
+- name: label_3_copy_1
   properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
-    text: Enter Business Address, font_size: null, font: '', spacing_above: small,
+    text: Enter Last Six month's turnover, font_size: null, font: '', spacing_above: small,
     icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
     underline: false, icon: ''}
   type: Label
-  layout_properties: {grid_position: 'NPWCHV,UVBLHO'}
+  layout_properties: {grid_position: 'GZGDEB,IFGWDK'}
 - name: text_box_2
   properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: '',
     border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
     font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
     background: 'theme:On Primary', bold: false, underline: false}
   type: TextBox
-  layout_properties: {grid_position: 'NPWCHV,TYZNXG'}
-- name: label_3_copy_1
+  layout_properties: {grid_position: 'GZGDEB,MSERKJ'}
+- name: label_1
   properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
-    text: Select Business Type, font_size: null, font: '', spacing_above: small, icon_align: left,
+    text: 'Last 6 month''s bank statements
+
+      (less than 2MB)', font_size: null, font: '', spacing_above: small, icon_align: left,
     spacing_below: small, italic: false, background: '', bold: true, underline: false,
     icon: ''}
   type: Label
-  layout_properties: {grid_position: 'EEFOZT,VYPRYQ'}
-- name: drop_down_1
-  properties:
-    role: null
-    align: full
-    tooltip: ''
-    placeholder: Select one
-    border: ''
-    enabled: true
-    foreground: ''
-    items: [Private, Government]
-    visible: true
-    font_size: null
-    font: ''
-    spacing_above: small
-    spacing_below: small
-    italic: false
-    background: theme:On Primary
-    bold: false
-    underline: false
-    include_placeholder: true
-  type: DropDown
-  layout_properties: {grid_position: 'EEFOZT,VSTVRN'}
-- name: label_1
-  properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
-    text: Select No of Employees Working, font_size: null, font: '', spacing_above: small,
-    icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-    underline: false, icon: ''}
-  type: Label
-  layout_properties: {grid_position: 'OMUYBH,OACGYJ'}
-- name: drop_down_2
-  properties:
-    role: null
-    align: full
-    tooltip: ''
-    placeholder: Select one
-    border: ''
-    enabled: true
-    foreground: ''
-    items: [1-10, 11-15, 16-25, 26-40, 41-60, 61-75, 76-100, 100 above]
-    visible: true
-    font_size: null
-    font: ''
-    spacing_above: small
-    spacing_below: small
-    italic: false
-    background: theme:On Primary
-    bold: false
-    underline: false
-    include_placeholder: true
-  type: DropDown
-  layout_properties: {grid_position: 'OMUYBH,CNFOWZ'}
-- name: spacer_2
-  properties: {height: 14.71417236328125}
-  type: Spacer
-  layout_properties: {grid_position: 'QMUKCR,OIRCQP'}
+  layout_properties: {grid_position: 'GCADCB,RUKNLC'}
+- name: file_loader_1
+  properties: {text: Upload Bank Statement}
+  type: FileLoader
+  layout_properties: {grid_position: 'GCADCB,IIFXYA'}
+  event_bindings: {change: file_loader_1_change}
+- name: image_1
+  properties: {height: 136.9998779296875}
+  type: Image
+  layout_properties: {grid_position: 'GCADCB,WZHHJU'}
 - name: button_1
   properties: {role: elevated-button, align: right, tooltip: '', border: '', enabled: true,
     foreground: 'theme:On Primary', visible: true, text: Prev, font_size: null, font: '',
     spacing_above: small, icon_align: left, spacing_below: small, italic: false, background: '#0b2547',
     bold: true, underline: false, icon: 'fa:angle-double-left'}
   type: Button
-  layout_properties: {grid_position: 'YUSGER,VDZHQR'}
+  layout_properties: {grid_position: 'RJFHAY,XEFCAP'}
   event_bindings: {click: button_1_click}
 - name: button_2
   properties: {role: elevated-button, align: left, tooltip: '', border: '', enabled: true,
@@ -147,6 +110,6 @@ components:
     spacing_above: small, icon_align: right, spacing_below: small, italic: false,
     background: '#0b2547', bold: true, underline: false, icon: 'fa:angle-double-right'}
   type: Button
-  layout_properties: {grid_position: 'YUSGER,EZGIMB'}
+  layout_properties: {grid_position: 'RJFHAY,SJKWCZ'}
   event_bindings: {click: button_2_click}
 is_package: true
