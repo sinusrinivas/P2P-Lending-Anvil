@@ -54,9 +54,10 @@ class main_form(main_formTemplate):
                 main_form_module.userId = user_module.find_user_id(user_email)
                 if user_profile_e is not None:
                     user_type = user_profile_e['usertype']
+                    last_confirm = user_profile_e['last_confirm']
                     if user_type == 'admin' or user_type == 'super admin':
                         open_form('admin.dashboard')
-                    elif user_type == 'lender':
+                    elif user_type == 'lender' and last_confirm:
                         open_form('lendor_registration_form.dashboard')
                     elif user_type == 'borrower':
                         if user_profile_e['one_time_settlement'] != True:

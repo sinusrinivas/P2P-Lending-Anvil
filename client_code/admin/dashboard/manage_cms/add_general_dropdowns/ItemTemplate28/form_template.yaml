@@ -1,26 +1,19 @@
 is_package: true
-container:
-  type: ColumnPanel
-  data_bindings:
-  - {property: tag, code: 'self.item[''company_type'']'}
+container: {type: ColumnPanel}
 components:
 - name: column_panel_1
-  properties: {col_widths: '{"UPDMKY":40,"LOEVYH":20}', role: elevated-card}
+  properties: {col_widths: '{"PGRSIA":40,"MEVRDW":20}', role: elevated-card}
   type: ColumnPanel
-  layout_properties: {grid_position: 'UONRFB,ISSLMS'}
+  layout_properties: {grid_position: 'LHVIHW,JJLIQM'}
   components:
   - name: label_1
     properties: {}
     type: Label
-    layout_properties: {grid_position: 'TGLQCM,UPDMKY'}
+    layout_properties: {grid_position: 'BICWGR,PGRSIA'}
     data_bindings:
-    - {property: text, code: 'self.item[''company_type'']', writeback: false}
+    - {property: text, code: 'self.item[''occupation_type'']', writeback: false}
   - name: link_1
-    properties: {role: null, url: '', align: left, tooltip: '', border: '', foreground: '',
-      visible: true, text: Edit details, font_size: null, wrap_on: mobile, font: '',
-      col_spacing: medium, spacing_above: small, icon_align: left, col_widths: '',
-      spacing_below: small, italic: false, background: '', bold: false, underline: false,
-      icon: ''}
+    properties: {text: Edit Details}
     type: Link
-    layout_properties: {grid_position: 'TGLQCM,LOEVYH'}
+    layout_properties: {grid_position: 'BICWGR,MEVRDW'}
     event_bindings: {click: link_1_click}
