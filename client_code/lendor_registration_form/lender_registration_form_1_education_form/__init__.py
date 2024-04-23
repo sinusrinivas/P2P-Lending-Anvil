@@ -13,7 +13,11 @@ class lender_registration_form_1_education_form(lender_registration_form_1_educa
     self.userId = user_id
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
-    user_data = anvil.server.call('get_user_data', user_id)
+    user_data = app_tables.fin_user_profile.get(customer_id=user_id)
+    if user_data:
+      self.drop_down_1.selected_value = user_data['qualification']
+      user_data.update()
+    
     
     options = app_tables.fin_lendor_qualification.search()
     options_string = [str(option['lendor_qualification']) for option in options]

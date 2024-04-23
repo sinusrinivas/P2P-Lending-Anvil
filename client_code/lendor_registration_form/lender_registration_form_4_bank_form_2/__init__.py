@@ -13,20 +13,24 @@ class lender_registration_form_4_bank_form_2(lender_registration_form_4_bank_for
     self.userId = user_id
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
-    user_data = anvil.server.call('get_user_data', user_id)
+    user_data=app_tables.fin_user_profile.get(customer_id=user_id)
     if user_data:
-            self.bank_id = user_data.get('bank_id', '')
-            self.branch_name = user_data.get('account_bank_branch', '')
+      self.text_box_1.text=user_data['bank_id']
+      self.text_box_2.text=user_data['account_bank_branch']
+    # user_data = anvil.server.call('get_user_data', user_id)
+    # if user_data:
+    #         self.bank_id = user_data.get('bank_id', '')
+    #         self.branch_name = user_data.get('account_bank_branch', '')
             
-    else:
-        self.bank_id = ''
-        self.branch_name = ''
+    # else:
+    #     self.bank_id = ''
+    #     self.branch_name = ''
 
-       #Restore previously entered data if available
-    if self.bank_id:
-            self.text_box_1.text= self.bank_id
-    if self.branch_name:
-          self.text_box_2.text = self.branch_name
+    #    #Restore previously entered data if available
+    # if self.bank_id:
+    #         self.text_box_1.text= self.bank_id
+    # if self.branch_name:
+    #       self.text_box_2.text = self.branch_name
 
   def button_2_click(self, **event_args):
     user_id = self.userId

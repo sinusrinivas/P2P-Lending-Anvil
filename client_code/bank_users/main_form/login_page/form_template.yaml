@@ -71,8 +71,13 @@ components:
         properties: {height: 478.28558349609375}
         type: Spacer
         layout_properties: {grid_position: 'BCREGJ,OTWMDU'}
+      - name: label_1
+        properties: {text: To keep connected with us please login with your personal info....,
+          italic: true}
+        type: Label
+        layout_properties: {grid_position: 'BCREGJ,LGHLJP GASAMI,BJDXSL MEXANL,ASFDAL'}
       - name: spacer_2
-        properties: {height: 35.142791748046875}
+        properties: {height: 16.28570556640625}
         type: Spacer
         layout_properties: {grid_position: 'BCREGJ,LGHLJP GASAMI,BJDXSL LQLIWA,YEFPHW'}
       - name: label_4
@@ -94,9 +99,10 @@ components:
         layout_properties: {grid_position: 'BCREGJ,LGHLJP GASAMI,BJDXSL VLFKXH,ZGCZXK'}
       - name: text_box_2
         properties: {placeholder: '', background: white, visible: true, enabled: true,
-          role: outlined}
+          role: outlined, hide_text: true}
         type: TextBox
         layout_properties: {grid_position: 'BCREGJ,LGHLJP GASAMI,BJDXSL JHGYMR,PKGYXY'}
+        event_bindings: {pressed_enter: text_box_2_pressed_enter}
       - name: label_2
         properties: {icon: 'fa:lock', font_size: 20}
         type: Label
@@ -105,6 +111,7 @@ components:
         properties: {text: Show Password}
         type: CheckBox
         layout_properties: {grid_position: 'BCREGJ,LGHLJP GASAMI,BJDXSL OOCTFV,JDAMWY'}
+        event_bindings: {change: check_box_1_change}
       - name: spacer_8
         properties: {height: 14.428466796875}
         type: Spacer

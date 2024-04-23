@@ -14,31 +14,39 @@ class lender_registration_individual_form_1(lender_registration_individual_form_
     user_id = int(user_id)
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
-    user_data = anvil.server.call('get_user_data', user_id)
-        
+    user_data=app_tables.fin_user_profile.get(customer_id=user_id)
     if user_data:
-            self.company_name = user_data.get('company_name', '')
-            self.org_type = user_data.get('organization_type', '')
-            self.emp_type = user_data.get('employment_type', '')
-            self.com_type = user_data.get('occupation_type', '')
+      self.text_box_1.text=user_data['company_name']
+      self.drop_down_3.selected_value = user_data['occupation_type']
+      self.drop_down_1.selected_value=user_data['employment_type']
+      self.drop_down_2.selected_value=user_data['organization_type']
+      # self.drop_down_3.selected_value = user_data['business_age']
+      user_data.update()
+    # user_data = anvil.server.call('get_user_data', user_id)
+        
+    # if user_data:
+    #         self.company_name = user_data.get('company_name', '')
+    #         self.org_type = user_data.get('organization_type', '')
+    #         self.emp_type = user_data.get('employment_type', '')
+    #         self.com_type = user_data.get('occupation_type', '')
             
             
-    else:
-        self.company_name = ''
-        self.org_type = ''
-        self.emp_type = ''
-        self.com_type = ''
+    # else:
+    #     self.company_name = ''
+    #     self.org_type = ''
+    #     self.emp_type = ''
+    #     self.com_type = ''
         
 
-       #Restore previously entered data if available
-    if self.emp_type:
-            self.drop_down_1.selected_value = self.emp_type
-    if self.org_type:
-            self.drop_down_2.selected_value = self.org_type
-    if self.company_name:
-            self.text_box_1.text= self.company_name
-    if self.com_type:
-            self.drop_down_3.selected_value = self.com_type
+    #    #Restore previously entered data if available
+    # if self.emp_type:
+    #         self.drop_down_1.selected_value = self.emp_type
+    # if self.org_type:
+    #         self.drop_down_2.selected_value = self.org_type
+    # if self.company_name:
+    #         self.text_box_1.text= self.company_name
+    # if self.com_type:
+    #         self.drop_down_3.selected_value = self.com_type
 
     options = app_tables.fin_lendor_employee_type.search()
     options_string = [str(option['lendor_employee_type']) for option in options]
@@ -60,7 +68,7 @@ class lender_registration_individual_form_1(lender_registration_individual_form_
       occupation_type = self.drop_down_3.selected_value
       user_id = int(self.userId)
       
-      if not emp_type or not org_type or not company_name or not com_type:
+      if not emp_type or not org_type or not company_name or not occupation_type:
           Notification("Please fill in all required fields.").show()  
       else:
           anvil.server.call('add_lendor_individual_form_1', emp_type, org_type,company_name,occupation_type , user_id)
