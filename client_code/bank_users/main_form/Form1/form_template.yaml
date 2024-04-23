@@ -13,9 +13,9 @@ container:
       \  padding: 12px 16px;\n  z-index: 999999999999999; \n  font-size: 16px;\n}\n\
       \n.dropdown:hover .dropdown-content {\n  display: block;\n}\n</style>\n</head>\n\
       <body>\n\n<div class=\"dropdown-container\">\n  <div class=\"dropdown\">\n \
-      \   Sign Up \n    <div class=\"dropdown-content\">\n      <a href=\"#\">Invest\
-      \ Now</a><br>\n      <a href=\"#\">Apply for a Loan</a>\n    </div>\n  </div>\n\
-      </div>\n\n\n</body>\n</html>\n"}
+      \   Sign Up \n    <div class=\"dropdown-content\">\n      <a href=\"https://anvil.works/build/apps/3KITHOHKSDA52I2F/code/forms/bank_users.main_form.basic_registration_form\"\
+      >Invest Now</a><br>\n      <a href=\"#\">Apply for a Loan</a>\n    </div>\n\
+      \  </div>\n</div>\n\n\n</body>\n</html>\n"}
   data_bindings: []
 components: []
 is_package: true
