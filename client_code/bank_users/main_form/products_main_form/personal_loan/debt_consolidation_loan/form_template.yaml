@@ -245,8 +245,7 @@ components:
     type: Spacer
     layout_properties: {grid_position: 'JIEFQU,HELFWJ'}
   - name: content_panel_copy_2_copy_2
-    properties: {col_widths: '{"YOEJEA":15,"BUGIAU":15,"JPINZB":15,"undefined":15,"OVSPJR":15,"DUGFNU":50}',
-      background: '#395275'}
+    properties: {col_widths: '{"BUGIAU":15,"JPINZB":15,"undefined":15}', background: '#395275'}
     type: ColumnPanel
     layout_properties: {grid_position: 'FWTHTB,XUHBDC', full_width_row: true}
     components:
@@ -279,11 +278,6 @@ components:
         font_size: 17, foreground: white}
       type: Label
       layout_properties: {grid_position: 'FVTKQE,OUERBJ'}
-    - name: label_32
-      properties: {text: ' ✔  Beesem Score :  -1, 1 to 5 or More than 600', bold: false,
-        font_size: 17, foreground: white}
-      type: Label
-      layout_properties: {grid_position: 'DTLQJJ,WQEJBA'}
     - name: label_34
       properties: {text: Self Employed Business Men/Professionals, font_size: 22,
         bold: false, foreground: white, underline: true}
@@ -299,11 +293,6 @@ components:
         font_size: 17, foreground: white}
       type: Label
       layout_properties: {grid_position: ',undefined'}
-    - name: label_26_copy_2
-      properties: {text: ' ✔ Beesem Score :  More than 700', bold: false, font_size: 17,
-        foreground: white}
-      type: Label
-      layout_properties: {grid_position: 'KZBFXO,OVSPJR'}
     - name: spacer_18
       properties: {height: 32}
       type: Spacer
