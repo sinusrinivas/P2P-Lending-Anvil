@@ -42,7 +42,9 @@ class star_1_borrower_registration_form_2_employment_emp_detail_1(star_1_borrowe
     occupation_type = self.drop_down_3.selected_value
     company_name = self.text_box_1.text
     user_id = self.userId
-    if not emp_type or not org_type or not occupation_type or not company_name:
+    if not re.match(r'^[A-Za-z\s]+$', business_name):
+      alert('Enter valid business name')
+    elif not emp_type or not org_type or not occupation_type or not company_name:
       Notification("please fill the required fields ").show()
     else:
       anvil.server.call('add_lendor_individual_form_1', company_name,org_type,emp_type,occupation_type,user_id)
