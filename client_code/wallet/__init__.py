@@ -32,3 +32,5 @@ def find_user_update_type(user_id, user_name, user_type):
         user[0]['user_name'] = user_name
         user[0]['user_type'] = user_type
         user[0]['status'] = True
+    else:
+        print("User not found with user_id:", user_id)
