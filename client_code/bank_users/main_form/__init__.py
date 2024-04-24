@@ -59,7 +59,7 @@ class main_form(main_formTemplate):
                         open_form('admin.dashboard')
                     elif user_type == 'lender' and last_confirm:
                         open_form('lendor_registration_form.dashboard')
-                    elif user_type == 'borrower':
+                    elif user_type == 'borrower' and last_confirm:
                         if user_profile_e['one_time_settlement'] != True:
                             open_form('borrower_registration_form.dashboard')
                         elif user_profile_e['one_time_settlement'] == True:
