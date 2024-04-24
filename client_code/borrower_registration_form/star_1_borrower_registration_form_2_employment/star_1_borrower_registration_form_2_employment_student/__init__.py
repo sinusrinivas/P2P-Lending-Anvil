@@ -37,16 +37,20 @@ class star_1_borrower_registration_form_2_employment_student(star_1_borrower_reg
     college_address=self.borrower_college_address_text.text
     user_id=self.user_id
     if not re.match(r'^[A-Za-z\s]+$', college_name):
-      self.label_5.text='enter valid college name'
-      self.label_5.visible=True
-    elif not college_address:
-      self.label_6.text='enter valid college address'
-      self.label_6.visible=True
-    elif not college_id:
-      self.label_7.text='please enter valid id'
-      self.label_7.visible=True
-    elif not college_proof or not isinstance(college_proof, anvil.BlobMedia):
-      self.label_8.text='enter valid college proof'
+      alert('enter valid college name')
+      # self.label_5.text='enter valid college name'
+      # self.label_5.visible=True
+    # elif not college_address:
+    #   alert('enter valid college address')
+    #   # self.label_6.text='enter valid college address'
+    #   # self.label_6.visible=True
+    # elif not college_id:
+    #   alert('please enter valid id')
+    #   # self.label_7.text='please enter valid id'
+    #   # self.label_7.visible=True
+    # elif not college_proof or not isinstance(college_proof, anvil.BlobMedia):
+    #   alert('enter valid college proof')
+      # self.label_8.text='enter valid college proof'
     elif not college_name or not college_id or not college_proof or not college_address:
       Notification("please fill all requrired fields").show()
     else:

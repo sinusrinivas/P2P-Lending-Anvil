@@ -7,6 +7,7 @@ import anvil.users
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
+import re
 
 class star_1_borrower_registration_form_2_employment_farmer(star_1_borrower_registration_form_2_employment_farmerTemplate):
     def __init__(self, user_id, **properties):
@@ -32,7 +33,9 @@ class star_1_borrower_registration_form_2_employment_farmer(star_1_borrower_regi
         crop_name = self.text_box_2.text
         farmer_earnings = self.text_box_3.text
         user_id = self.userId
-        if not land_type or not total_acres or not crop_name or not farmer_earnings:
+        if not re.match(r'^[A-Za-z\s]+$', crop_name):
+          alert('Enter valid crop name')
+        elif not land_type or not total_acres or not crop_name or not farmer_earnings:
             Notification("Please fill all the fields").show()
         else:
             anvil.server.call('add_borrower_farmer', land_type, total_acres, crop_name, farmer_earnings, user_id)

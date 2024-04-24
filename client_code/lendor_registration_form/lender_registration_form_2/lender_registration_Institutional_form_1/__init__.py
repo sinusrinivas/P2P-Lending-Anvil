@@ -8,6 +8,7 @@ import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 from datetime import datetime
+import re
 
 class lender_registration_Institutional_form_1(lender_registration_Institutional_form_1Template):
   def __init__(self, user_id,**properties):
@@ -72,7 +73,9 @@ class lender_registration_Institutional_form_1(lender_registration_Institutional
     business_name = self.text_box_1.text
     business_add = self.text_box_2.text
     user_id = self.userId
-    if not business_type or not empolyees_working or not business_add or not business_add:
+    if not re.match(r'^[A-Za-z\s]+$', business_name):
+      alert('enter valid college name')
+    elif not business_type or not empolyees_working or not business_add or not business_add:
       Notification("Please fill all the fields").show()
     else:
      # today = datetime.today()
