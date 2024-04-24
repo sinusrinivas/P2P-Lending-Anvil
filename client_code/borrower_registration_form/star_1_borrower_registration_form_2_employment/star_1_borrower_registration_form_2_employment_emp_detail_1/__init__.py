@@ -7,6 +7,7 @@ import anvil.users
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
+import re
 
 class star_1_borrower_registration_form_2_employment_emp_detail_1(star_1_borrower_registration_form_2_employment_emp_detail_1Template):
   def __init__(self,user_id, **properties):
@@ -42,7 +43,7 @@ class star_1_borrower_registration_form_2_employment_emp_detail_1(star_1_borrowe
     occupation_type = self.drop_down_3.selected_value
     company_name = self.text_box_1.text
     user_id = self.userId
-    if not re.match(r'^[A-Za-z\s]+$', business_name):
+    if not re.match(r'^[A-Za-z\s]+$', company_name):
       alert('Enter valid business name')
     elif not emp_type or not org_type or not occupation_type or not company_name:
       Notification("please fill the required fields ").show()
