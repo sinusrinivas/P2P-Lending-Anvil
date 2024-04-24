@@ -145,6 +145,7 @@ unique_ids:
     lendor_registration_form.dashboard.view_loan_foreclosure_Requests: '169996304408474987603925.53683'
     bank_users.main_form.products_main_form: '1700563558734712481921773.0997'
     admin.dashboard.loan_management.not_payable_amount.view_profile_9: '1707203080661303272266486.02234'
+    bank_users.main_form.products_main_form.personal_loan.medical_loan: '1713932648213367619462010.7378'
     admin.dashboard.manage_cms.add_lender_dropdown_details.edit_account_type: '1706531522383955942257997.2303'
     admin.dashboard.manage_cms.add_borrower_dropdown_details.edit_gender: '1706116919205605080192138.0746'
     lendor_registration_form.dashboard: '1699430548405125074156774.3141'
@@ -440,6 +441,7 @@ unique_ids:
     toggle-switch.html: '1701328671136540227032965.07666'
     ELABG.png: '1712919571690191695476983.53262'
     business-loan-1.jpg: '1712293634712557322745931.5127'
+    medical_loan_icon-removebg-preview.png: '1713932957751866540607457.7733'
     hiw 3.png: '171334472778416215964591.33401'
     icons8-business-goal-100 (1).png: '1712040389692229159110821.56293'
     tl7.png: '1713507410190342162335757.42413'
@@ -620,5 +622,6 @@ unique_ids:
     workplace.png: '1712296840037242049912935.01553'
     icons8-law-100.png: '1712035809785207990018018.92758'
     ml1.jpg: '1713339793595336329288038.8786'
+    medical_loan_icon-removebg-preview-transformed (1).png: '1713933125477521284696289.0898'
     home renovation.png: '1713331821371942896792005.2495'
   scripts: {}
