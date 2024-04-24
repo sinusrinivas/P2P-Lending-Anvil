@@ -101,12 +101,16 @@ components:
         align: left, role: tonal-button}
       type: Button
       layout_properties: {grid_position: 'QTNQBN,OPOTBI TECORI,LIWIMN'}
+    - name: spacer_24
+      properties: {height: '20'}
+      type: Spacer
+      layout_properties: {grid_position: 'QTNQBN,OPOTBI OYTOEN,IJRVRK'}
     - name: spacer_22
       properties: {height: 38.111114501953125}
       type: Spacer
       layout_properties: {grid_position: 'QTNQBN,JBTPFF OJAYXT,BPJSLJ'}
     - name: image_1
-      properties: {height: 400, source: _/theme/home loan 4.png, display_mode: shrink_to_fit}
+      properties: {height: 371.66668701171875, source: _/theme/home loan 4.png, display_mode: shrink_to_fit}
       type: Image
       layout_properties: {grid_position: 'QTNQBN,JBTPFF MEKAAK,YRBNLX'}
   - name: spacer_2
@@ -131,6 +135,16 @@ components:
           ', align: center, font_size: 18}
       type: Label
       layout_properties: {grid_position: 'TEGBXJ,PMTTUT'}
+    - name: label_5
+      properties: {text: 'Transform your home renovation dreams into reality without
+          delay. While embarking on a renovation project brings excitement, neglecting
+          timely repayment of your home renovation loan could sour the experience.
+          Delaying payment can expose you to accrued interest and fees, complicating
+          your financial situation. Understanding the intricacies of interest rates
+          and repayment terms is crucial to avoid unnecessary stress and financial
+          strain.', align: center, font_size: 18}
+      type: Label
+      layout_properties: {grid_position: 'DBAHUC,QGPHTO'}
     - name: spacer_21
       properties: {height: 32}
       type: Spacer
@@ -225,16 +239,14 @@ components:
       type: Spacer
       layout_properties: {grid_position: 'MCVWLG,BTWACI'}
     - name: label_14
-      properties: {text: 'Avoid the hassle of relying solely on traditional banks
-          for emergency funding. GTPL offers a streamlined process for obtaining medical
-          loans, ensuring swift access to funds for any urgent medical situation.
-          Unlike conventional banks, GTPL employs a comprehensive evaluation process,
-          considering over 50 parameters to assess loan applications. This thorough
-          approach increases the likelihood of approval for genuine borrowers, all
-          while offering affordable interest rates. With GTPL, you can secure the
-          financial support you need without delay, providing peace of mind during
-          challenging times.', align: center, bold: false, font_size: 18, background: '',
-        foreground: white}
+      properties: {text: 'Absolutely! If you''re fond of your current home but feel
+          it needs a fresh look and improved interiors, GTPL''s house renovation loans
+          are tailored just for you. Unlike traditional banks, we prioritize your
+          creditworthiness over collateral, empowering you to utilize the loan according
+          to your preferences. We value your intent and discipline in repayment, which
+          significantly enhances your approval chances with GTPL. So, if you''re an
+          honest borrower seeking to revitalize your home, we''ve got you covered.',
+        align: center, bold: false, font_size: 18, background: '', foreground: white}
       type: Label
       layout_properties: {grid_position: 'GPVPSI,TZKMDD'}
     - name: spacer_6
@@ -388,44 +400,23 @@ components:
     type: Spacer
     layout_properties: {grid_position: 'EQUOKF,JCACKC'}
   - name: label_27
-    properties: {text: 'Keep Yourself Prepared for any Medical Crisis.
+    properties: {text: 'How Does it Stand Apart from Home Improvement Loans?
 
         ', align: center, bold: true, font_size: 30}
     type: Label
     layout_properties: {grid_position: 'XSEEKM,QMDRMM'}
   - name: label_29
-    properties: {text: 'Facing a medical emergency without adequate preparation can
-        be daunting. Whether it''s a sudden illness or an unforeseen injury, the financial
-        burden can be overwhelming, especially without proper health insurance or
-        savings in place. Unfortunately, many individuals in India find themselves
-        in this predicament, either because they haven''t planned for such emergencies
-        or because their low CIBIL scores hinder their ability to obtain timely loans
-        from banks. As a result, they''re left vulnerable and in need of urgent financial
-        assistance during critical times', font_size: 18}
+    properties: {text: 'You''re not bound by the inflexible and unfair terms of traditional
+        Home Improvement Loans. Our process spares you from the extensive paperwork
+        and bureaucracy typically associated with securing such loans from banks and
+        other financial entities. With us, you enjoy greater flexibility in spending
+        your funds. We don''t dictate how you use the borrowed amount; instead, we
+        empower you to decide how much and when to invest in enhancing your home.
+        Plus, we don''t impose any prepayment penalties or concealed fees.
+
+        ', font_size: 18}
     type: Label
     layout_properties: {grid_position: 'VAUIWL,UYPFGJ'}
-  - name: label_31
-    properties: {text: 'In this case, you have these options…', align: left, bold: true,
-      font_size: 18}
-    type: Label
-    layout_properties: {grid_position: 'VWZYYT,AXGAHZ'}
-  - name: label_33
-    properties: {text: ✔  Opting to use credit cards for covering expenses may lead to paying higher interest rates in the long run.,
-      font_size: 18}
-    type: Label
-    layout_properties: {grid_position: 'RJIYZW,YFSIRB'}
-  - name: label_33_copy_2
-    properties: {text: ✔ Approach other financial institutions for credit assistance that usually charge you slightly higher interest than banks do.,
-      font_size: 18}
-    type: Label
-    layout_properties: {grid_position: 'SWWAMX,IBQDCP'}
-  - name: label_33_copy
-    properties: {text: '✔ Obtaining loans from private money lenders may exacerbate
-        your financial struggles and push you further into a debt cycle. Additionally,
-        the challenges persist as many health insurance policies impose strict waiting
-        periods, delaying reimbursement for immediate medical treatments.', font_size: 18}
-    type: Label
-    layout_properties: {grid_position: 'QGDXXG,TQJJTF'}
   - name: spacer_10
     properties: {height: 32}
     type: Spacer
@@ -446,15 +437,17 @@ components:
       type: Label
       layout_properties: {grid_position: 'SGOEDR,AKMYBP'}
     - name: label_36
-      properties: {text: 'When it comes to situations like these, Peer-to-Peer (P2P)
-          loans offered by GTPL are your optimal solution.
+      properties: {text: 'Why offer an asset valued at Rs 25 lakh as collateral for
+          a loan of Rs 4 lakh? If you find this practice burdensome for borrowers,
+          you don''t need to search elsewhere. Our collateral-free house improvement
+          loans are the solution you''ve been seeking.
 
-          ', foreground: white, font_size: 18, bold: true}
+          ', foreground: white, font_size: 18, bold: false}
       type: Label
       layout_properties: {grid_position: 'DQAJCV,XZPXSD'}
     - name: label_40
-      properties: {text: '✔ GTPL provides fixed-rate loans of up to Rs 3 lakh, allowing
-          for repayment over a period of up to 2 years.', font_size: 18, foreground: white}
+      properties: {text: '✔ GTPL provides fixed-rate loans of up to Rs 4 lakh, allowing
+          for repayment over a period of up to 2-3 years.', font_size: 18, foreground: white}
       type: Label
       layout_properties: {grid_position: 'MNIJKL,ERDTHU'}
     - name: label_41
@@ -494,45 +487,43 @@ components:
       type: Label
       layout_properties: {grid_position: 'UBCVVE,JHVQVP'}
     - name: label_44
-      properties: {text: 'What is a medical emergency loan?', font_size: 18, background: '#E9ECEF'}
+      properties: {text: 'What is a Home Renovation loan?', font_size: 18, background: '#E9ECEF'}
       type: Label
       layout_properties: {grid_position: 'NUSJFG,DJUOPI'}
     - name: label_45
-      properties: {text: 'The medical loan can be utilized to cover emergency medical
-          expenses, functioning much like any other unsecured personal loan, without
-          the need for collateral.
+      properties: {text: 'A Home Renovation loan is a financial product designed to
+          provide funds for renovating, remodeling, or improving residential properties.
 
           ', font_size: 18}
       type: Label
       layout_properties: {grid_position: 'KGQLIW,GPOOCM'}
     - name: label_44_copy
-      properties: {text: 'What interest rate, will I have to pay for the medical emergency
-          loan?', font_size: 18, background: '#E9ECEF'}
+      properties: {text: 'Why should I take home renovation loan for my home improvement?',
+        font_size: 18, background: '#E9ECEF'}
       type: Label
       layout_properties: {grid_position: 'NSZPEZ,IHWRIS'}
     - name: label_45_copy
-      properties: {text: 'You can get medical emergency loan at GTPL from 12% to 30%
-          interest rates. It is contingent on your overall credit profile.
+      properties: {text: 'GTPL''s house renovation loan process is swift and straightforward,
+          requiring less paperwork compared to a home loan top-up. You won''t need
+          to undergo a property assessment again or pledge your home as collateral
 
           ', font_size: 18}
       type: Label
       layout_properties: {grid_position: 'NSOAVV,PHWKJW'}
     - name: label_44_copy_copy
-      properties: {text: 'How can I get the medical emergency loan?', font_size: 18,
-        background: '#E9ECEF'}
+      properties: {text: 'What would be interest rate for my home renovation loan?',
+        font_size: 18, background: '#E9ECEF'}
       type: Label
       layout_properties: {grid_position: 'HKJNAQ,KMDLAL'}
     - name: label_45_copy_copy
-      properties: {text: 'To access a medical emergency loan, you''ll need to register
-          as a borrower on our platform and submit your loan application. After approval
-          by GTPL and funding by investors, the loan amount is promptly disbursed
-          directly into your bank account.
+      properties: {text: 'Interest rates for home renovation loan start from 12% per
+          annum and go up to 30%.
 
           ', font_size: 18}
       type: Label
       layout_properties: {grid_position: 'AYNVGK,JCKYTR'}
     - name: label_44_copy_copy_copy
-      properties: {text: 'In how many days will I get the medical emergency loan amount?',
+      properties: {text: 'In how many days will I get the Home Renovation loan amount?',
         font_size: 18, background: '#E9ECEF'}
       type: Label
       layout_properties: {grid_position: 'IIFOSQ,XZINOK'}
@@ -543,6 +534,19 @@ components:
           ', font_size: 18}
       type: Label
       layout_properties: {grid_position: 'JNWZSX,ISUVYU'}
+    - name: label_44_copy_copy_copy_copy_2
+      properties: {text: 'How will I get house renovation loan through GTPL?', font_size: 18,
+        background: '#E9ECEF'}
+      type: Label
+      layout_properties: {grid_position: 'IOXXRQ,PGMXOO'}
+    - name: label_45_copy_copy_2_copy_2
+      properties: {text: 'Once your loan application is approved by our credit team
+          and funded by investors, the loan amount will be swiftly disbursed directly
+          into your bank account.
+
+          ', font_size: 18}
+      type: Label
+      layout_properties: {grid_position: 'RZLCFU,VOGBWP'}
     - name: label_44_copy_copy_copy_copy
       properties: {text: 'How will I repay the credit card consolidation loan amount?',
         font_size: 18, background: '#E9ECEF'}
