@@ -3,7 +3,7 @@ components:
 - name: content_panel
   properties: {}
   type: ColumnPanel
-  layout_properties: {grid_position: 'DMQAHF,ZGOWTG', full_width_row: true}
+  layout_properties: {grid_position: 'IEHKPY,ASRHTQ', full_width_row: true}
   components:
   - name: flow_panel_2
     properties: {align: justify}
@@ -81,13 +81,13 @@ components:
     layout_properties: {grid_position: 'VFMWUW,LMUGVD', full_width_row: true}
     components:
     - name: label_1
-      properties: {text: "Free Yourself from \nCredit Card Debt", bold: true, font_size: 35}
+      properties: {text: Revamp Your Old Home With a Home Renovation Loan and Give it a Fresh New Look.,
+        bold: true, font_size: 35}
       type: Label
       layout_properties: {grid_position: 'QTNQBN,OPOTBI WUQDPS,DPVFAQ'}
     - name: label_2
-      properties: {text: 'credit card consolidation loans boast full transparency,
-          providing borrowers with clear terms and justifiable interest rates that
-          make financial sense.
+      properties: {text: 'Apply for collateral-free home renovation loans through
+          GTPL and revitalize your house without worrying about budget constraints.
 
           ', font_size: 22}
       type: Label
@@ -101,112 +101,128 @@ components:
         align: left, role: tonal-button}
       type: Button
       layout_properties: {grid_position: 'QTNQBN,OPOTBI TECORI,LIWIMN'}
+    - name: spacer_24
+      properties: {height: '20'}
+      type: Spacer
+      layout_properties: {grid_position: 'QTNQBN,OPOTBI OYTOEN,IJRVRK'}
+    - name: spacer_22
+      properties: {height: 38.111114501953125}
+      type: Spacer
+      layout_properties: {grid_position: 'QTNQBN,JBTPFF OJAYXT,BPJSLJ'}
     - name: image_1
-      properties: {height: 376.11102294921875, source: _/theme/credit card loan.png}
+      properties: {height: 371.66668701171875, source: _/theme/home loan 4.png, display_mode: shrink_to_fit}
       type: Image
-      layout_properties: {grid_position: 'QTNQBN,JBTPFF'}
+      layout_properties: {grid_position: 'QTNQBN,JBTPFF MEKAAK,YRBNLX'}
   - name: spacer_2
     properties: {height: 32}
     type: Spacer
     layout_properties: {grid_position: 'DASUWR,ARUNQG'}
   - name: content_panel_copy_copy
-    properties: {col_widths: '{"RVPVBV":30,"LJZNTF":25,"ASIZUQ":35,"CUJPAX":25,"CACREY":35,"NGKNGF":25,"ONMGVQ":35,"AZJCAO":25,"PNHGMR":35}'}
+    properties: {col_widths: '{"RVPVBV":30,"LJZNTF":20,"ASIZUQ":40,"NGKNGF":20,"ONMGVQ":40,"AZJCAO":20,"PNHGMR":40,"CUJPAX":20,"CACREY":40}'}
     type: ColumnPanel
     layout_properties: {grid_position: 'DTGLVR,TDSXYI', full_width_row: true}
     components:
     - name: label_3
-      properties: {text: 'Why Take Loan to Pay your Credit Card Dues?', align: center,
-        bold: true, font_size: 30}
+      properties: {text: 'Why Should You Apply for a Home Renovation Loan?
+
+          ', align: center, bold: true, font_size: 30}
       type: Label
       layout_properties: {grid_position: 'MAHCVL,KPERZV'}
     - name: label_4
-      properties: {text: Ease your financial load by securing a loan with a reduced interest rate to settle your credit card dues.,
-        align: center, font_size: 18}
-      type: Label
-      layout_properties: {grid_position: 'TEGBXJ,PMTTUT'}
-    - name: label_5
-      properties: {text: 'Settle your credit card balance immediately: While credit
-          cards offer convenience, they can turn unfriendly once you miss the grace
-          period for payment. If you delay clearing your outstanding balance, you''ll
-          encounter their true nature. Navigating through the complex calculations
-          of interest and charges can be bewildering and unclear, potentially leading
-          to financial stress.
+      properties: {text: 'Benefit from a collateral-free loan that provides exceptional
+          flexibility and the most competitive interest rates available.
 
           ', align: center, font_size: 18}
       type: Label
-      layout_properties: {grid_position: 'YIEPON,PLDKQA'}
+      layout_properties: {grid_position: 'TEGBXJ,PMTTUT'}
+    - name: label_5
+      properties: {text: 'Transform your home renovation dreams into reality without
+          delay. While embarking on a renovation project brings excitement, neglecting
+          timely repayment of your home renovation loan could sour the experience.
+          Delaying payment can expose you to accrued interest and fees, complicating
+          your financial situation. Understanding the intricacies of interest rates
+          and repayment terms is crucial to avoid unnecessary stress and financial
+          strain.', align: center, font_size: 18}
+      type: Label
+      layout_properties: {grid_position: 'DBAHUC,QGPHTO'}
+    - name: spacer_21
+      properties: {height: 32}
+      type: Spacer
+      layout_properties: {grid_position: 'BBBPBM,GUMJWM'}
+    - name: spacer_23
+      properties: {height: 15.77777099609375}
+      type: Spacer
+      layout_properties: {grid_position: 'JCXBOH,LNZARM GCIUXW,LJZNTF QTHIAD,TWOGUD'}
     - name: image_2
-      properties: {source: _/theme/digital.jpg, height: '100'}
+      properties: {source: _/theme/hm1.png, height: '80', display_mode: shrink_to_fit}
       type: Image
-      layout_properties: {grid_position: 'JCXBOH,LNZARM GCIUXW,LJZNTF'}
+      layout_properties: {grid_position: 'JCXBOH,LNZARM GCIUXW,LJZNTF HRUGGH,SEWTQQ'}
     - name: label_6
-      properties: {text: 'Streamlined Online Procedure
+      properties: {text: 'Turn your dream home into a reality.
 
           ', bold: true, font_size: 18}
       type: Label
       layout_properties: {grid_position: 'JCXBOH,LNZARM GCIUXW,ASIZUQ UCEIZJ,SZEVOS'}
     - name: label_7
-      properties: {text: 'Secure a credit card consolidation loan swiftly with a seamless
-          online application process, all from the comfort of your own home.', font_size: 17}
+      properties: {text: 'Have you ever envisioned enhancing your living space by
+          renovating your current home rather than purchasing a new one?', font_size: 18}
       type: Label
       layout_properties: {grid_position: 'JCXBOH,LNZARM GCIUXW,ASIZUQ JJFYER,BWMLUZ'}
     - name: spacer_3
-      properties: {height: 64.11105346679688}
+      properties: {height: 35.444427490234375}
       type: Spacer
       layout_properties: {grid_position: 'JCXBOH,LNZARM VTDJNX,CUJPAX SJHBVG,JYWMXU'}
     - name: image_4
-      properties: {source: _/theme/stats-rupee_bean.58bc41f.png, height: '100'}
+      properties: {source: _/theme/hm3.png, height: '70', display_mode: shrink_to_fit}
       type: Image
       layout_properties: {grid_position: 'JCXBOH,LNZARM VTDJNX,CUJPAX JKVOHS,KMYLPS'}
-    - name: spacer_20
-      properties: {height: 17.88885498046875}
-      type: Spacer
-      layout_properties: {grid_position: 'JCXBOH,LNZARM VTDJNX,CACREY CENWVJ,UQTGFW'}
     - name: label_12
-      properties: {text: 'Improve your Credit Score ', bold: true, font_size: 18}
+      properties: {text: Handle emergency repairs effectively., bold: true, font_size: 18}
       type: Label
       layout_properties: {grid_position: 'JCXBOH,LNZARM VTDJNX,CACREY VGGMYS,LPIFCI'}
     - name: label_13
-      properties: {text: 'Timely settlement of your credit card dues not only clears
-          your financial obligations but also boosts your credit score with credit
-          reporting agencies.
+      properties: {text: 'Build a new kitchen, renovate the existing bathroom, and
+          address significant maintenance issues.
 
-          ', font_size: 17}
+          ', font_size: 18}
       type: Label
       layout_properties: {grid_position: 'JCXBOH,LNZARM VTDJNX,CACREY PRXNIT,GLTKDV'}
     - name: image_3
-      properties: {source: _/theme/collateral_2.png, height: '100', display_mode: shrink_to_fit}
+      properties: {source: _/theme/hm2.png, height: '130', display_mode: zoom_to_fill}
       type: Image
       layout_properties: {grid_position: 'JCXBOH,VIJATW PTZVFW,NGKNGF'}
     - name: label_8
-      properties: {text: Flexible Repayment Options, bold: true, font_size: 18}
+      properties: {text: Construct a New Floor, bold: true, font_size: 18}
       type: Label
       layout_properties: {grid_position: 'JCXBOH,VIJATW PTZVFW,ONMGVQ QZUEDN,UBOMPQ'}
     - name: label_9
-      properties: {text: 'Choose your preferred loan tenure ranging from 3 to 36 months
-          and repay at your convenience, without worrying about any prepayment penalties.
+      properties: {text: 'Upgrade the flooring in your current home and generate additional
+          rental revenue.
 
-          ', font_size: 17}
+          ', font_size: 18}
       type: Label
       layout_properties: {grid_position: 'JCXBOH,VIJATW PTZVFW,ONMGVQ WVWDTF,UQNYXM'}
     - name: spacer_15
-      properties: {height: 46.111114501953125}
+      properties: {height: 19.22222900390625}
       type: Spacer
-      layout_properties: {grid_position: 'JCXBOH,VIJATW UYOEXC,AZJCAO DZJHJE,MMOLWQ'}
+      layout_properties: {grid_position: 'JCXBOH,VIJATW BRGNNG,KGDAKL'}
+    - name: spacer_20
+      properties: {height: 21.4444580078125}
+      type: Spacer
+      layout_properties: {grid_position: 'JCXBOH,VIJATW UYOEXC,AZJCAO XZIYMW,IIOTRX'}
     - name: image_5
-      properties: {source: _/theme/tl5.jpg, height: '100'}
+      properties: {source: _/theme/hm4.png, height: '100', display_mode: shrink_to_fit}
       type: Image
-      layout_properties: {grid_position: 'JCXBOH,VIJATW UYOEXC,AZJCAO QWXZHR,NBHTMS'}
+      layout_properties: {grid_position: 'JCXBOH,VIJATW UYOEXC,AZJCAO NYGOWC,JDNPSO'}
     - name: label_10
-      properties: {text: Fixed Monthly EMI, bold: true, font_size: 18}
+      properties: {text: Collateral Free Loan, bold: true, font_size: 18}
       type: Label
       layout_properties: {grid_position: 'JCXBOH,VIJATW UYOEXC,PNHGMR SNLSPR,HHVXDX'}
     - name: label_11
-      properties: {text: 'Acquire a loan at a reasonable interest rate with fixed
-          Equated Monthly Installments (EMIs), providing stability to your monthly
-          budgets and facilitating effective financial management.
+      properties: {text: 'Home renovation loans offer affordability with a fixed interest
+          rate.
 
-          ', font_size: 17}
+          ', font_size: 18}
       type: Label
       layout_properties: {grid_position: 'JCXBOH,VIJATW UYOEXC,PNHGMR FWXFFG,RVPVBV'}
   - name: spacer_4
@@ -223,15 +239,14 @@ components:
       type: Spacer
       layout_properties: {grid_position: 'MCVWLG,BTWACI'}
     - name: label_14
-      properties: {text: 'Unlike conventional banks, where loan denials are common,
-          our platform operates differently. While we strictly reject individuals
-          with a history of deliberate defaults, we offer a chance to those who have
-          been turned down by banks to showcase their loan proposals. We believe in
-          providing opportunities and evaluating each case on its merits rather than
-          dismissing applicants outright. This inclusive approach allows us to consider
-          a broader range of borrowers and potentially help those who have faced challenges
-          obtaining financing elsewhere.', align: center, bold: false, font_size: 18,
-        background: '', foreground: white}
+      properties: {text: 'Absolutely! If you''re fond of your current home but feel
+          it needs a fresh look and improved interiors, GTPL''s house renovation loans
+          are tailored just for you. Unlike traditional banks, we prioritize your
+          creditworthiness over collateral, empowering you to utilize the loan according
+          to your preferences. We value your intent and discipline in repayment, which
+          significantly enhances your approval chances with GTPL. So, if you''re an
+          honest borrower seeking to revitalize your home, we''ve got you covered.',
+        align: center, bold: false, font_size: 18, background: '', foreground: white}
       type: Label
       layout_properties: {grid_position: 'GPVPSI,TZKMDD'}
     - name: spacer_6
@@ -385,43 +400,23 @@ components:
     type: Spacer
     layout_properties: {grid_position: 'EQUOKF,JCACKC'}
   - name: label_27
-    properties: {text: 'Stay away from getting stuck in credit card debt.
+    properties: {text: 'How Does it Stand Apart from Home Improvement Loans?
 
         ', align: center, bold: true, font_size: 30}
     type: Label
     layout_properties: {grid_position: 'XSEEKM,QMDRMM'}
   - name: label_29
-    properties: {text: 'Credit cards let you cover your expenses now, using money
-        you''ll earn later. But if you spend too much on things you don''t really
-        need, especially with high-interest loans, it can cause problems. Whether
-        it''s for fun or emergencies, using credit cards without thinking can lead
-        to a debt trap. Once you go past the free period, banks and credit card companies
-        start charging you a lot of interest (usually between 30% and 42% per year)
-        on what you owe. Simply put, if you can''t pay off your credit card bills
-        on time, it can become a real nightmare.', font_size: 18}
+    properties: {text: 'You''re not bound by the inflexible and unfair terms of traditional
+        Home Improvement Loans. Our process spares you from the extensive paperwork
+        and bureaucracy typically associated with securing such loans from banks and
+        other financial entities. With us, you enjoy greater flexibility in spending
+        your funds. We don''t dictate how you use the borrowed amount; instead, we
+        empower you to decide how much and when to invest in enhancing your home.
+        Plus, we don''t impose any prepayment penalties or concealed fees.
+
+        ', font_size: 18}
     type: Label
     layout_properties: {grid_position: 'VAUIWL,UYPFGJ'}
-  - name: label_31
-    properties: {text: 'In this case, you have these options…', align: left, bold: true}
-    type: Label
-    layout_properties: {grid_position: 'VWZYYT,AXGAHZ'}
-  - name: label_33
-    properties: {text: ✔  Consider getting a personal loan from a bank with an interest rate ranging from 12% to 18%.,
-      font_size: 18}
-    type: Label
-    layout_properties: {grid_position: 'RJIYZW,YFSIRB'}
-  - name: label_33_copy_2
-    properties: {text: ✔ Approach other financial institutions for credit assistance that usually charge you slightly higher interest than banks do.,
-      font_size: 18}
-    type: Label
-    layout_properties: {grid_position: 'SWWAMX,IBQDCP'}
-  - name: label_33_copy
-    properties: {text: '✔ If you turn to private money lenders for help, they might
-        not ease your financial distress. What''s more, if your credit score is low,
-        banks and financial institutions might not approve you for personal loans
-        either.', font_size: 18}
-    type: Label
-    layout_properties: {grid_position: 'QGDXXG,TQJJTF'}
   - name: spacer_10
     properties: {height: 32}
     type: Spacer
@@ -436,13 +431,23 @@ components:
       type: Spacer
       layout_properties: {grid_position: 'LFHSZT,ZZYTUZ'}
     - name: label_32
-      properties: {text: 'Peer-to-peer (P2P) loans offered by GTPL can be your top
-          choice in such circumstances. Here''s why:', font_size: 30, foreground: white}
+      properties: {text: 'Choose Peer-To-Peer (P2P) loans through GTPL and concentrate
+          solely on what''s essential. Curious to understand why?', font_size: 30,
+        foreground: white}
       type: Label
       layout_properties: {grid_position: 'SGOEDR,AKMYBP'}
+    - name: label_36
+      properties: {text: 'Why offer an asset valued at Rs 25 lakh as collateral for
+          a loan of Rs 4 lakh? If you find this practice burdensome for borrowers,
+          you don''t need to search elsewhere. Our collateral-free house improvement
+          loans are the solution you''ve been seeking.
+
+          ', foreground: white, font_size: 18, bold: false}
+      type: Label
+      layout_properties: {grid_position: 'DQAJCV,XZPXSD'}
     - name: label_40
-      properties: {text: '✔ GTPL provides fixed-rate loans of up to Rs 3 lakh, allowing
-          for repayment over a period of up to 2 years.', font_size: 18, foreground: white}
+      properties: {text: '✔ GTPL provides fixed-rate loans of up to Rs 4 lakh, allowing
+          for repayment over a period of up to 2-3 years.', font_size: 18, foreground: white}
       type: Label
       layout_properties: {grid_position: 'MNIJKL,ERDTHU'}
     - name: label_41
@@ -450,11 +455,9 @@ components:
       type: Label
       layout_properties: {grid_position: 'RAQVPR,LBJOOU'}
     - name: label_35
-      properties: {text: '✔  depending on your risk category, the rate of interest
-          charged on loan varies from 14% to 30% p.a. that too on the reducing balance
-          method. Put differently, availing a credit card consolidation loan at i2iFunding
-          helps you save up to 18% p.a. on interest and allows you a breathing space
-          to repay your loan.', font_size: 18, foreground: white}
+      properties: {text: '✔  Based on your risk category, the interest rate charged
+          on medical loan ranges from 14% to 30% p.a., on reducing balance method.',
+        font_size: 18, foreground: white}
       type: Label
       layout_properties: {grid_position: 'MDXAZX,CNPZMS'}
     - name: spacer_12
@@ -484,49 +487,44 @@ components:
       type: Label
       layout_properties: {grid_position: 'UBCVVE,JHVQVP'}
     - name: label_44
-      properties: {text: 'What is a credit card consolidation loan?', font_size: 18,
-        background: '#E9ECEF'}
+      properties: {text: 'What is a Home Renovation loan?', font_size: 18, background: '#E9ECEF'}
       type: Label
       layout_properties: {grid_position: 'NUSJFG,DJUOPI'}
     - name: label_45
-      properties: {text: 'A credit card consolidation loan, also known as a credit
-          card payment loan, falls under the category of unsecured personal loans.
-          It doesn''t necessitate any collateral. This type of loan allows you to
-          settle existing credit card debts, especially those with high-interest rates.
+      properties: {text: 'A Home Renovation loan is a financial product designed to
+          provide funds for renovating, remodeling, or improving residential properties.
 
           ', font_size: 18}
       type: Label
       layout_properties: {grid_position: 'KGQLIW,GPOOCM'}
     - name: label_44_copy
-      properties: {text: 'At what interest rate, I can get credit card consolidation
-          loan?', font_size: 18, background: '#E9ECEF'}
+      properties: {text: 'Why should I take home renovation loan for my home improvement?',
+        font_size: 18, background: '#E9ECEF'}
       type: Label
       layout_properties: {grid_position: 'NSZPEZ,IHWRIS'}
     - name: label_45_copy
-      properties: {text: 'You can get credit card consolidation loan at GTPL from
-          12% to 30% interest rates. It is contingent on your overall credit profile.
+      properties: {text: 'GTPL''s house renovation loan process is swift and straightforward,
+          requiring less paperwork compared to a home loan top-up. You won''t need
+          to undergo a property assessment again or pledge your home as collateral
 
           ', font_size: 18}
       type: Label
       layout_properties: {grid_position: 'NSOAVV,PHWKJW'}
     - name: label_44_copy_copy
-      properties: {text: 'How do I get credit card consolidation loan?', font_size: 18,
-        background: '#E9ECEF'}
+      properties: {text: 'What would be interest rate for my home renovation loan?',
+        font_size: 18, background: '#E9ECEF'}
       type: Label
       layout_properties: {grid_position: 'HKJNAQ,KMDLAL'}
     - name: label_45_copy_copy
-      properties: {text: 'At GTPL, once your credit card consolidation loan request
-          is approved and supported by investors, the loan amount is directly transferred
-          to your bank account. Subsequently, you can utilize this amount to clear
-          the outstanding balances on your credit cards, according to your preferences
-          and convenience.
+      properties: {text: 'Interest rates for home renovation loan start from 12% per
+          annum and go up to 30%.
 
           ', font_size: 18}
       type: Label
       layout_properties: {grid_position: 'AYNVGK,JCKYTR'}
     - name: label_44_copy_copy_copy
-      properties: {text: 'In how many days will I get the credit card consolidation
-          loan amount?', font_size: 18, background: '#E9ECEF'}
+      properties: {text: 'In how many days will I get the Home Renovation loan amount?',
+        font_size: 18, background: '#E9ECEF'}
       type: Label
       layout_properties: {grid_position: 'IIFOSQ,XZINOK'}
     - name: label_45_copy_copy_2
@@ -536,6 +534,19 @@ components:
           ', font_size: 18}
       type: Label
       layout_properties: {grid_position: 'JNWZSX,ISUVYU'}
+    - name: label_44_copy_copy_copy_copy_2
+      properties: {text: 'How will I get house renovation loan through GTPL?', font_size: 18,
+        background: '#E9ECEF'}
+      type: Label
+      layout_properties: {grid_position: 'IOXXRQ,PGMXOO'}
+    - name: label_45_copy_copy_2_copy_2
+      properties: {text: 'Once your loan application is approved by our credit team
+          and funded by investors, the loan amount will be swiftly disbursed directly
+          into your bank account.
+
+          ', font_size: 18}
+      type: Label
+      layout_properties: {grid_position: 'RZLCFU,VOGBWP'}
     - name: label_44_copy_copy_copy_copy
       properties: {text: 'How will I repay the credit card consolidation loan amount?',
         font_size: 18, background: '#E9ECEF'}

@@ -7,6 +7,18 @@ import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 import anvil.server
+from anvil import *
+
+
+# Define server function to navigate to the Invest Now form
+@anvil.server.callable
+def open_invest_now_form():
+    open_form("bank_users.main_form.basic_registration_form")
+
+# @anvil.server.callable
+# def open_apply_for_loan_form():
+#     open_form("bank_users.main_form.basic_registration_form")
+
 
 
 @anvil.server.callable
