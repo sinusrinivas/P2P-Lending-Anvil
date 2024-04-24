@@ -130,13 +130,17 @@ components:
           Collateral Free Loans', font_size: 16, align: center}
       type: Label
       layout_properties: {grid_position: 'OUDOFT,XKDOAA YQJHLL,KBFZLQ FQVAAH,AQCURM'}
+    - name: spacer_51
+      properties: {height: 32}
+      type: Spacer
+      layout_properties: {grid_position: 'OUDOFT,XKDOAA PQHOOL,BXLFQR'}
     - name: button_1
       properties: {text: Apply for Online Personal Loan, align: left, bold: true,
         font_size: 16, role: filled-button, background: '#013065'}
       type: Button
       layout_properties: {grid_position: 'OUDOFT,XKDOAA VQHNLQ,QGBKIN'}
     - name: image_5
-      properties: {height: 384.33331298828125, source: _/theme/online-personal-loan-hdr.png,
+      properties: {height: 481.66668701171875, source: _/theme/online-personal-loan-hdr_2.png,
         display_mode: shrink_to_fit}
       type: Image
       layout_properties: {grid_position: 'OUDOFT,ZJWXYW'}
