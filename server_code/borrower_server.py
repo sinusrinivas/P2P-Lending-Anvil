@@ -97,7 +97,9 @@ def add_borrower_step6(bank_id, bank_branch, user_id):
         row[0]['form_count'] = 6
         row[0]['usertype'] = 'borrower'
         row[0]['last_confirm'] = True
-        wallet.find_user_update_type(user_id,row[0]['full_name'],"borrower")        
+        user_exists = app_tables.fin_wallet.search(customer_id=user_id)
+        if user_exists:
+            wallet.find_user_update_type(user_id, row[0]['full_name'], "borrower")      
 
         # Search for an existing row with the same email_id in fin_borrower table
         existing_borrower_row = app_tables.fin_borrower.get(email_id=row[0]['email_user'])
@@ -349,15 +351,15 @@ def get_user_points(id):
                sub_categories = row['sub_category'].split(",")
                min_points = row['min_points']
                for sub_cat in sub_categories:
-                 if sub_cat.strip().lower() == profession.lower() or sub_cat.strip().lower() == occupation_type.lower():
+                 if profession and sub_cat.strip().lower() == profession.lower() or occupation_type and sub_cat.strip().lower() == occupation_type.lower():
                     user_points += min_points
                     print("Self Employment Points:", min_points)
                     break
-                 else: 
-                   if row['sub_category'].lower() == profession.lower() or row['sub_category'].lower() == occupation_type.lower():
-                     user_points += row['min_points']
-                     print("Self Employment Points:", row['min_points'])
-                     break
+             else: 
+                if profession and row['sub_category'].lower() == profession.lower() or occupation_type and row['sub_category'].lower() == occupation_type.lower():
+                   user_points += row['min_points']
+                   print("Self Employment Points:", row['min_points'])
+                   break
 
         elif profession == 'employee':
            for category in ['organization_type', 'salary_type']:
