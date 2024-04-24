@@ -7,6 +7,14 @@ import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 import anvil.server
+from anvil import open_form
+
+def navigate_to_registration_form():
+    open_form("bank_users.main_form.basic_registration_form")
+
+def navigate_to_loan_application_form():
+    open_form("bank_users.main_form.basic_registration_form")
+
 
 
 @anvil.server.callable
