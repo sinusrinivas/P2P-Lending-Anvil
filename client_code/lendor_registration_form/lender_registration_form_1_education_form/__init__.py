@@ -46,7 +46,7 @@ class lender_registration_form_1_education_form(lender_registration_form_1_educa
       open_form('lendor_registration_form.lender_registration_form_1_education_form.lender_registration_education_Btech',user_id=user_id)
     elif qualification == "Master's degree":
       open_form('lendor_registration_form.lender_registration_form_1_education_form.lender_registration_education_Mtech',user_id = user_id)
-    elif qualification == 'Phd':
+    elif qualification == 'PhD':
       open_form('lendor_registration_form.lender_registration_form_1_education_form.lender_registration_education_Phd',user_id = user_id)
     else:
       open_form('lendor_registration_form.lender_registration_form_1_education_form',user_id=user_id)

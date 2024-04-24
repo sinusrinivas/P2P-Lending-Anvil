@@ -7,6 +7,7 @@ import anvil.users
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
+import re
 
 class star_1_borrower_registration_form_2_employment_business_1(star_1_borrower_registration_form_2_employment_business_1Template):
   def __init__(self,user_id, **properties):
@@ -37,7 +38,9 @@ class star_1_borrower_registration_form_2_employment_business_1(star_1_borrower_
     business_type = self.drop_down_1.selected_value
     empolyees_working = self.drop_down_2.selected_value
     user_id = self.userId
-    if not business_name or not business_add or not business_type or not empolyees_working:
+    if not re.match(r'^[A-Za-z\s]+$', business_name):
+      alert('Enter valid business name')
+    elif not business_name or not business_add or not business_type or not empolyees_working:
         Notification("Please fill all the fields").show()
     else:
       anvil.server.call('add_lendor_institutional_form_1',business_name,business_add,business_type,empolyees_working,user_id)
