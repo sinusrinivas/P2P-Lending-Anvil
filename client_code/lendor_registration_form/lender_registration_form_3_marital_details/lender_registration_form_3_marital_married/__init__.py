@@ -219,6 +219,10 @@ class lender_registration_form_3_marital_married(lender_registration_form_3_mari
 
     def button_submit_click(self, **event_args):
        details = self.collect_details()
+       # if details:
+       #   details['father_name']=father_name
+       #   details['father_dob'] = father_dob
+       #   details['father_mbl_no'] =father_mbl_no
     
        existing_row = app_tables.fin_guarantor_details.get(customer_id=self.userId)
     
@@ -313,6 +317,7 @@ class lender_registration_form_3_marital_married(lender_registration_form_3_mari
        if errors:
          Notification("\n".join(errors)).show()
        else:
+         # anvil.server.call('add_lendor_father_details',another_person,father_name,father_dob,father_mbl_no,father_profession,father_address,user_id)
          open_form('lendor_registration_form.lender_registration_form_4_bank_form_1', user_id=self.userId)
 
     def button_submit_copy_2_click(self, **event_args):
