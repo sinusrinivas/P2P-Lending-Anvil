@@ -1071,6 +1071,7 @@ div.plot-container.plotly svg.main-svg {
 
 
 .btn-default {
+  text-align: center;
   transition: transform 0.3s ease-in-out; /* Add smooth transition */
 }
 
@@ -1079,6 +1080,9 @@ div.plot-container.plotly svg.main-svg {
 }
 
 button.btn.btn-default.to-disable{
+  text-align: center;
+}
+span.btn-text{
   text-align: center;
 }
 

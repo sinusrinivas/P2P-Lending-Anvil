@@ -399,7 +399,6 @@ unique_ids:
     admin.dashboard.manage_products.edit_form: '1700713167379525299380252.5991'
     admin.dashboard.loan_management.default_loans.view_profile_7: '1707111678276505013469002.38684'
   modules:
-    bank_users.main_form.mouse_hover_effect: '1711537847989388612178159.8819'
     wallet: '1700205175437199558140953.65286'
     bank_users: '1697785066420255019039536.32742'
     borrower_registration_form: '1697801606303980155019216.2473'
