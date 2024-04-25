@@ -1,9 +1,9 @@
 container: {type: ColumnPanel}
 components:
 - name: column_panel_2
-  properties: {col_widths: '{"QCZGCQ":35,"AGIDMN":25}', background: '#2994bb'}
+  properties: {col_widths: '{"QCZGCQ":35,"AGIDMN":25}', background: '#094586'}
   type: ColumnPanel
-  layout_properties: {grid_position: 'KKHBEL,SZNWZU', full_width_row: true}
+  layout_properties: {grid_position: 'DPFEDX,NQLMWD', full_width_row: true}
   components:
   - name: spacer_1
     properties: {height: 58.428558349609375}
@@ -32,12 +32,12 @@ components:
       type: Label
       layout_properties: {grid_position: 'LOUJDS,RTKSOW DTKDRV,TRBCQS'}
     - name: image_1
-      properties: {source: _/theme/1520244320558.jpeg, display_mode: zoom_to_fill,
-        height: 252.857177734375}
+      properties: {source: _/theme/image_2022_12_12T06_58_30_890Z.webp, display_mode: zoom_to_fill,
+        height: 347.99993896484375}
       type: Image
       layout_properties: {grid_position: 'LOUJDS,RTKSOW IYLGEA,XVBVAK'}
   - name: column_panel_1
-    properties: {background: '#2994bb', col_widths: '{"LLBEDS":32,"FZHHNU":10,"TSUFAE":15}'}
+    properties: {background: '#094586', col_widths: '{"LLBEDS":34,"FZHHNU":10,"TSUFAE":16}'}
     type: ColumnPanel
     layout_properties: {grid_position: 'AUEKVR,AGIDMN UVWPRW,XZEJHL', full_width_row: false}
     components:
@@ -59,7 +59,7 @@ components:
         type: Spacer
         layout_properties: {grid_position: 'BCREGJ,LGHLJP GASAMI,BJDXSL MPYCNK,IKUFXQ'}
       - name: label_7
-        properties: {role: display, text: Login, background: '', foreground: '#2994bb',
+        properties: {role: display, text: Login, background: '', foreground: '#094586',
           bold: true, underline: false, italic: false}
         type: Label
         layout_properties: {grid_position: 'BCREGJ,LGHLJP GASAMI,BJDXSL MPYCNK,UXCVZV'}
@@ -75,11 +75,7 @@ components:
         properties: {text: To keep connected with us please login with your personal info....,
           italic: true}
         type: Label
-        layout_properties: {grid_position: 'BCREGJ,LGHLJP GASAMI,BJDXSL MEXANL,ASFDAL'}
-      - name: spacer_2
-        properties: {height: 16.28570556640625}
-        type: Spacer
-        layout_properties: {grid_position: 'BCREGJ,LGHLJP GASAMI,BJDXSL LQLIWA,YEFPHW'}
+        layout_properties: {grid_position: 'BCREGJ,LGHLJP GASAMI,BJDXSL DKYHUW,NVBTUB'}
       - name: label_4
         properties: {text: Email, bold: true}
         type: Label
@@ -102,13 +98,13 @@ components:
           role: outlined, hide_text: true}
         type: TextBox
         layout_properties: {grid_position: 'BCREGJ,LGHLJP GASAMI,BJDXSL JHGYMR,PKGYXY
-            KVQAVW,YTARFE'}
+            ASCLYG,SZRTGJ'}
         event_bindings: {pressed_enter: text_box_2_pressed_enter}
       - name: error_label
-        properties: {foreground: red}
+        properties: {visible: false, foreground: red}
         type: Label
         layout_properties: {grid_position: 'BCREGJ,LGHLJP GASAMI,BJDXSL JHGYMR,PKGYXY
-            VFLNWH,LISDRA'}
+            VPELKX,RRRHGT'}
       - name: label_2
         properties: {icon: 'fa:lock', font_size: 20}
         type: Label
@@ -123,7 +119,7 @@ components:
         type: Spacer
         layout_properties: {grid_position: 'BCREGJ,LGHLJP GASAMI,BJDXSL OEDXIR,ERUJBC'}
       - name: button_1
-        properties: {text: Login, background: '#2994bb', foreground: white, align: full}
+        properties: {text: Login, background: '#094586', foreground: white, align: full}
         type: Button
         layout_properties: {grid_position: 'BCREGJ,LGHLJP GASAMI,BJDXSL MPSRUO,XLAMBF',
           row_background: 'theme:Primary Container'}
@@ -133,9 +129,10 @@ components:
         type: Spacer
         layout_properties: {grid_position: 'BCREGJ,LGHLJP GASAMI,BJDXSL PRAHQB,TEAATI'}
       - name: link_2
-        properties: {text: 'New user ?  Click here to SignUp', foreground: blue}
+        properties: {text: 'New user ?  Click here to SignUp', foreground: blue, font_size: null}
         type: Link
         layout_properties: {grid_position: 'BCREGJ,LGHLJP GASAMI,BJDXSL ETWHQH,VXLYLN'}
+        event_bindings: {click: link_2_click}
     - name: spacer_10
       properties: {height: 463.7142028808594}
       type: Spacer

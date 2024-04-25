@@ -24,7 +24,7 @@ class signup_page(signup_pageTemplate):
     password = self.text_box_2.text.strip()
     retype_password = self.text_box_3.text.strip()
     if password != retype_password:
-            self.retype_password_error_label.text = 'Password do not match'
+            self.retype_password_error_label.text = 'Passwords do not match. Please re-enter.'
             self.retype_password_error_label.visible = True
             return
 
@@ -48,3 +48,7 @@ class signup_page(signup_pageTemplate):
          self.text_box_3.hide_text = False  # Show decrypted password
     else:
         self.text_box_3.hide_text = True
+
+  def link_2_click(self, **event_args):
+    """This method is called when the link is clicked"""
+    open_form('bank_users.main_form.login_page')
