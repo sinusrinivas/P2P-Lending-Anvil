@@ -50,7 +50,7 @@ class lender_registration_Institutional_form_3(lender_registration_Institutional
     if not reg_office_add  or not proof_verification or not din or not cin:
       Notification("Please all the fields").show()
     else:
-     anvil.server.call('add_lendor_institutional_form_5',din, cin,reg_office_add,proof_verification, user_id)
+     anvil.server.call('add_lendor_institutional_form_3',din, cin,reg_office_add,proof_verification, user_id)
      open_form('lendor_registration_form.lender_registration_form_3_marital_details',user_id=user_id)
     """This method is called when the button is clicked"""
 

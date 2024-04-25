@@ -17,6 +17,7 @@ class star_1_borrower_registration_form_2_employment_business_2(star_1_borrower_
       self.date_picker_1.date = user_data['year_estd']
       self.text_box_1.text=user_data['industry_type']
       self.text_box_2.text=user_data['six_month_turnover']
+      self.file_loader_1.file = user_data['last_six_month_bank_proof']
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
 
@@ -32,7 +33,7 @@ class star_1_borrower_registration_form_2_employment_business_2(star_1_borrower_
     else:
      today = datetime.today()
      months = today.year * 12 + today.month - year.year * 12 - year.month
-     anvil.server.call('add_lendor_institutional_form_3',year,months,industry_type,turn_over,last_six_statements,user_id)
+     anvil.server.call('add_lendor_institutional_form_2',year,months,industry_type,turn_over,last_six_statements,user_id)
      open_form('borrower_registration_form.star_1_borrower_registration_form_2_employment.star_1_borrower_registration_form_2_employment_business_3',user_id = user_id)
 
   def button_1_click(self, **event_args):

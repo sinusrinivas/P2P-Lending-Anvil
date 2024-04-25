@@ -78,6 +78,37 @@ def add_lender_step2(lending_type,investment,lending_period,user_id):
     
 
 @anvil.server.callable
+def add_lendor_institutional_form_1(business_name,business_add,business_type,empolyees_working,user_id):
+  row = app_tables.fin_user_profile.search(customer_id = user_id)
+  if row:
+    row[0]['business_name'] = business_name
+    row[0]['business_add'] = business_add
+    row[0]['business_type'] = business_type
+    row[0]['employees_working'] = empolyees_working
+    row[0]['form_count'] = 2.21
+
+@anvil.server.callable
+def add_lendor_institutional_form_2(year,months,industry_type,six_monthturnover,last_six_statments,user_id):
+  row = app_tables.fin_user_profile.search(customer_id = user_id)
+  if row:
+    row[0]['year_estd'] = year
+    row[0]['business_age'] = months
+    row[0]['industry_type'] = industry_type
+    row[0]['six_month_turnover'] = six_monthturnover
+    row[0]['last_six_month_bank_proof'] = last_six_statments
+    row[0]['form_count'] = 2.22
+
+@anvil.server.callable
+def add_lendor_institutional_form_3(din,cin,reg_office_add,proof_verification,user_id):
+  row = app_tables.fin_user_profile.search(customer_id = user_id)
+  if row:
+    row[0]['din'] = din
+    row[0]['cin'] = cin
+    row[0]['registered_off_add'] = reg_office_add
+    row[0]['proof_verification'] = proof_verification
+    row[0]['form_count']=2.23
+
+@anvil.server.callable
 def add_lendor_education_form(qualification,certificate,user_id):
   row = app_tables.fin_user_profile.search(customer_id = user_id)
   if row:
@@ -118,33 +149,9 @@ def add_lendor_individual_form_3(annual_salary, designation,emp_id_proof,last_si
     row[0]['last_six_month_bank_proof']=last_six_month
     row[0]['salary_type']=salary_type
 
-@anvil.server.callable
-def add_lendor_institutional_form_1(business_name,business_add,business_type,empolyees_working,user_id):
-  row = app_tables.fin_user_profile.search(customer_id = user_id)
-  if row:
-    row[0]['business_name'] = business_name
-    row[0]['business_add'] = business_add
-    row[0]['business_type'] = business_type
-    row[0]['employees_working'] = empolyees_working    
-   
-@anvil.server.callable
-def add_lendor_institutional_form_3(year,months,industry_type,six_monthturnover,last_six_statments,user_id):
-  row = app_tables.fin_user_profile.search(customer_id = user_id)
-  if row:
-    row[0]['year_estd'] = year
-    row[0]['business_age'] = months
-    row[0]['industry_type'] = industry_type
-    row[0]['six_month_turnover'] = six_monthturnover
-    row[0]['last_six_month_bank_proof'] = last_six_statments
 
-@anvil.server.callable
-def add_lendor_institutional_form_5(din,cin,reg_office_add,proof_verification,user_id):
-  row = app_tables.fin_user_profile.search(customer_id = user_id)
-  if row:
-    row[0]['din'] = din
-    row[0]['cin'] = cin
-    row[0]['registered_off_add'] = reg_office_add
-    row[0]['proof_verification'] = proof_verification
+   
+
 
 @anvil.server.callable
 def add_lendor_individual_form_6(comp_address, landmark, business_phone_number, user_id):
