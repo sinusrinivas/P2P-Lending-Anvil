@@ -840,7 +840,7 @@ db_schema:
       admin_ui: {order: 6.999999998137355, width: 200}
       type: string
     - name: form_count
-      admin_ui: {order: 6.999999999998636, width: 200}
+      admin_ui: {order: -1.59375, width: 200}
       type: number
     - name: bessem_value
       admin_ui: {order: -1.5625, width: 200}

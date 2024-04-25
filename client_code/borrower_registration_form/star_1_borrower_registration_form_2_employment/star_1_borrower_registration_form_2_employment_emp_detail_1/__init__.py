@@ -15,10 +15,11 @@ class star_1_borrower_registration_form_2_employment_emp_detail_1(star_1_borrowe
     user_data=app_tables.fin_user_profile.get(customer_id=user_id)
     if user_data:
       self.text_box_1.text=user_data['company_name']
-      self.drop_down_3.selected_value = user_data['occupation_type']
-      self.drop_down_1.selected_value=user_data['employment_type']
       self.drop_down_2.selected_value=user_data['organization_type']
-      # self.drop_down_3.selected_value = user_data['business_age']
+      self.drop_down_1.selected_value=user_data['employment_type']
+      self.drop_down_3.selected_value = user_data['occupation_type']
+      
+      
       user_data.update()
 
     options_1 = app_tables.fin_borrower_employee_type.search()
@@ -38,14 +39,15 @@ class star_1_borrower_registration_form_2_employment_emp_detail_1(star_1_borrowe
 
 
   def button_2_click(self, **event_args):
-    emp_type = self.drop_down_1.selected_value
+    company_name = self.text_box_1.text    
     org_type = self.drop_down_2.selected_value
+    emp_type = self.drop_down_1.selected_value
     occupation_type = self.drop_down_3.selected_value
-    company_name = self.text_box_1.text
+    
     user_id = self.userId
     if not re.match(r'^[A-Za-z\s]+$', company_name):
       alert('Enter valid business name')
-    elif not emp_type or not org_type or not occupation_type or not company_name:
+    elif not company_name or not org_type or not emp_type or not occupation_type:
       Notification("please fill the required fields ").show()
     else:
       anvil.server.call('add_lendor_individual_form_1', company_name,org_type,emp_type,occupation_type,user_id)

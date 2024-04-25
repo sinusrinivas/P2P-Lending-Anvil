@@ -23,13 +23,17 @@ class star_1_borrower_registration_form_education_10th_class(star_1_borrower_reg
     
 
   def button_2_click(self, **event_args):
-        """This method is called when the button is clicked"""
-        if self.file_loader_1.file:
-            user_id = self.userId
-            open_form('borrower_registration_form.star_1_borrower_registration_form_2_employment', user_id=user_id)
-        else:
-            # Display a message or handle the case where the file is not uploaded.
-            alert("Please upload a file.")
+     """This method is called when the button is clicked"""
+     user_id = self.userId
+     tenth_class = self.file_loader_1.file
+    
+     if not tenth_class:
+       Notification('Please upload file.').show()
+
+     else:
+       anvil.server.call('add_education_tenth',tenth_class,user_id)
+       open_form('borrower_registration_form.star_1_borrower_registration_form_2_employment', user_id=user_id)
+       
   def button_3_click(self, **event_args):
     """This method is called when the button is clicked"""
     open_form("bank_users.user_form")
