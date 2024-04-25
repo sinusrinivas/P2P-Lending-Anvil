@@ -2,7 +2,8 @@ properties: []
 is_package: true
 events:
 - {name: click, default_event: true, description: when the component is clicked}
-custom_component: false
+toolbox_item: {group: html_component}
+custom_component: true
 components: []
 container:
   type: HtmlTemplate
@@ -21,8 +22,12 @@ container:
       <body>\n\n<div class=\"dropdown-container\">\n  <div class=\"dropdown1\">\n\
       \    Sign Up \n    <div class=\"dropdown-content\">\n      <a href=\"#\" onclick=\"\
       openInvestNowForm()\">Invest Now</a> <br>\n      <a  id=\"apply-for-loan-link\"\
-      >Apply for a Loan</a>\n\n    </div>\n  </div>\n</div>\n  <script>\n  function\
-      \ openInvestNowForm() {\n    // Redirect to the desired URL\n    window.location.href\
-      \ = \"https://3kithohksda52i2f.anvil.app/debug/3RL5C3DXBLVV6S524PI4CEIQFKW3QD3Y%3DTSVHP2EN77V6DVI56LDTDVUW/_/debug\"\
-      ;\n  }\n</script>\n\n\n</body>\n</html>\n"}
+      >Apply for a Loan</a>\n    </div>\n  </div>\n</div>\n\n<script>\n\nfunction\
+      \ openInvestNowForm() {\n  // Call the Anvil server function to navigate to\
+      \ borrower_registration_form.dashboard\n  anvil.server.call('open_invest_now_form')\n\
+      \    .then(function() {\n        // Optional: Handle success, if needed\n  \
+      \  })\n    .catch(function(err) {\n        // Optional: Handle error, if needed\n\
+      \        console.error(\"Error opening Invest Now form:\", err);\n    });\n\
+      }\n</script>\n\n</body>\n</html>"}
   data_bindings: []
+custom_component_container: true
