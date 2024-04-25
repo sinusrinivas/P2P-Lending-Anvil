@@ -17,7 +17,6 @@ class lender_registration_Institutional_form_3(lender_registration_Institutional
         
     if user_data:
             self.reg_off_add = user_data.get('registered_off_add', '')
-            # self.off_add_proof= user_data.get('off_add_proof', '')
             self.din = user_data.get('din', '')
             self.cin= user_data.get('cin', '')
             
@@ -30,9 +29,6 @@ class lender_registration_Institutional_form_3(lender_registration_Institutional
        #Restore previously entered data if available
     if self.reg_off_add:
             self.text_box_1.text= self.reg_off_add
-    # if self.off_add_proof:
-    #         self.text_box_2.text= self.off_add_proof
-
     if self.din:
             self.text_box_3.text= self.din
     if self.cin:
@@ -42,7 +38,6 @@ class lender_registration_Institutional_form_3(lender_registration_Institutional
 
   def button_2_click(self, **event_args):
     reg_office_add = self.text_box_1.text
-    # off_add_proof = self.text_box_2.text
     din = self.text_box_3.text
     cin = self.text_box_4.text
     proof_verification = self.file_loader_1.file

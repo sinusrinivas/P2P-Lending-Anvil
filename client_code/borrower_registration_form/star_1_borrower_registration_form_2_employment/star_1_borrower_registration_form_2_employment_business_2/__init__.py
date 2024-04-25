@@ -17,7 +17,8 @@ class star_1_borrower_registration_form_2_employment_business_2(star_1_borrower_
       self.date_picker_1.date = user_data['year_estd']
       self.text_box_1.text=user_data['industry_type']
       self.text_box_2.text=user_data['six_month_turnover']
-      self.file_loader_1.file = user_data['last_six_month_bank_proof']
+      # if user_data['last_six_month_bank_proof']:
+      #   self.file_loader_1.file = user_data['last_six_month_bank_proof']
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
 

@@ -16,8 +16,8 @@ class star_1_borrower_registration_form_2_employment_business_3(star_1_borrower_
       self.text_box_3.text=user_data['din']
       self.text_box_4.text=user_data['cin']
       self.text_box_1.text=user_data['registered_off_add']
-      if user_data['proof_verification']:
-         self.file_loader_1.url = anvil.media.get_url(user_data['proof_verification'])
+      # if user_data['proof_verification']:
+      #    self.file_loader_1.url = anvil.media.get_url(user_data['proof_verification'])
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
 

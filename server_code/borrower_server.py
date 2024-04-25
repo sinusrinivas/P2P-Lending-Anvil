@@ -27,10 +27,21 @@ def add_borrower_step2(status_of_user,user_id):
     row[0]['form_count']=2
 
 @anvil.server.callable
+def add_borrower_student(college_name,college_id,college_proof,college_address,user_id):
+  row=app_tables.fin_user_profile.search(customer_id=user_id)
+  if row:
+    row[0]['college_name']=college_name
+    row[0]['college_id']=college_id
+    row[0]['college_address']=college_address
+    row[0]['college_proof']=college_proof
+    row[0]['form_count']=2.1
+
+@anvil.server.callable
 def add_borrwer_self_employment(status_of_user,user_id):
   row=app_tables.fin_user_profile.search(customer_id=user_id)
   if row:
     row[0]['self_employment']=status_of_user
+    row[0]['form_count']=2.2
 
 @anvil.server.callable
 def add_borrower_farmer(land_type,total_acres,crop_name,farmer_earnings,user_id):
@@ -41,6 +52,7 @@ def add_borrower_farmer(land_type,total_acres,crop_name,farmer_earnings,user_id)
     row[0]['total_acres'] = total_acres_numeric
     row[0]['crop_name'] = crop_name
     row[0]['farmer_earnings'] = farmer_earnings 
+    row[0]['form_count'] = 2.4
 
 @anvil.server.callable
 def add_borrower_step3(marital_status,user_id):
@@ -49,14 +61,7 @@ def add_borrower_step3(marital_status,user_id):
     row[0]['marital_status']=marital_status
     row[0]['form_count']=3
 
-@anvil.server.callable
-def add_borrower_student(college_name,college_id,college_proof,college_address,user_id):
-  row=app_tables.fin_user_profile.search(customer_id=user_id)
-  if row:
-    row[0]['college_name']=college_name
-    row[0]['college_id']=college_id
-    row[0]['college_address']=college_address
-    row[0]['college_proof']=college_proof
+
 
 @anvil.server.callable
 def add_borrower_step4(home_loan,other_loan,user_id,credit_card,vehicle):
@@ -133,7 +138,9 @@ def add_borrower_step6(bank_id, bank_branch, user_id):
     else:
         # If user not found in fin_user_profile table
         raise ValueError("User not found in fin_user_profile table")
-      
+
+
+
 @anvil.server.callable
 def update_loan_details(loan_id, emi, total_repayment_amount, interest_rate):
     rows = app_tables.fin_loan_details.search(loan_id=loan_id)

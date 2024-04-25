@@ -63,8 +63,6 @@ def add_education_phd(tenth_class,intermediate,btech,mtech,phd,user_id):
     row[0]['phd']=phd
     row[0]['form_count']=1.5
 
-
-
 @anvil.server.callable
 def add_lender_step2(lending_type,investment,lending_period,user_id):
   row = app_tables.fin_lender.search(customer_id=user_id)
@@ -107,6 +105,7 @@ def add_lendor_institutional_form_3(din,cin,reg_office_add,proof_verification,us
     row[0]['registered_off_add'] = reg_office_add
     row[0]['proof_verification'] = proof_verification
     row[0]['form_count']=2.23
+
 
 @anvil.server.callable
 def add_lendor_education_form(qualification,certificate,user_id):
@@ -234,10 +233,6 @@ def search_user(query):
   return result
 
   
-# In your Anvil server module (e.g., server_module.py)
-
-import anvil.server
-from anvil.tables import app_tables
 
 @anvil.server.callable
 def get_user_data(user_id):

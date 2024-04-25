@@ -33,7 +33,7 @@ class lender_registration_Institutional_form_2(lender_registration_Institutional
       self.date_picker_1.date = user_data['year_estd']
       self.text_box_1.text=user_data['industry_type']
       self.text_box_2.text=user_data['six_month_turnover']
-      self.file_loader_1.file = user_data['last_six_month_bank_proof']
+      # self.file_loader_1.file = user_data['last_six_month_bank_proof']
        #Restore previously entered data if available
     if self.industry_type:
             self.text_box_1.text= self.industry_type
@@ -43,8 +43,8 @@ class lender_registration_Institutional_form_2(lender_registration_Institutional
     if self.year:
            self.date_picker_1.date = self.year
 
-    if self.last_six_statements:
-        self.file_loader_1.file = self.last_six_statements
+    # if self.last_six_statements:
+    #     self.file_loader_1.file = self.last_six_statements
     
     # Any code you write here will run before the form opens.
 
