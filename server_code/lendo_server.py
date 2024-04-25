@@ -152,7 +152,7 @@ def add_lendor_marital(marital_status,user_id):
     row[0]['form_count']=3
 
 @anvil.server.callable
-def add_father_details(father_name,user_id):
+def add_lendor_father_details(father_name,user_id):
    row = app_tables.fin_guarantor_details.search(customer_id=user_id, another_person='father')
    if row:
      row[0]['guarantor_name'] = father_name
