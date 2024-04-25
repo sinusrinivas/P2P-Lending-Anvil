@@ -22,6 +22,6 @@ container:
       \   Sign Up \n    <div class=\"dropdown-content\">\n      <a href=\"#\" onclick=\"\
       openInvestNowForm()\">Invest Now</a>\n      <a  id=\"apply-for-loan-link\">Apply\
       \ for a Loan</a>\n\n    </div>\n  </div>\n</div>\n  <script>\n  function openInvestNowForm()\
-      \ {\n    // Redirect to the desired URL\n    window.location.href = \"https://anvil.works/build/apps/3KITHOHKSDA52I2F/code/forms/bank_users.main_form.basic_registration_form\"\
+      \ {\n    // Redirect to the desired URL\n    window.location.href = \"https://3kithohksda52i2f.anvil.app/debug/3RL5C3DXBLVV6S524PI4CEIQFKW3QD3Y%3DTSVHP2EN77V6DVI56LDTDVUW/_/debug\"\
       ;\n  }\n</script>\n\n\n</body>\n</html>\n"}
   data_bindings: []
