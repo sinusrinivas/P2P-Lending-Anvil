@@ -13,8 +13,6 @@ class lender_registration_education_Phd(lender_registration_education_PhdTemplat
     self.userId = user_id
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
-    
-
 
 
     # Any code you write here will run before the form opens.
