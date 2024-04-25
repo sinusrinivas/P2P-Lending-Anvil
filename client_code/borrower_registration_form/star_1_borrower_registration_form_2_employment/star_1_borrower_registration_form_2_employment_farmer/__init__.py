@@ -35,6 +35,10 @@ class star_1_borrower_registration_form_2_employment_farmer(star_1_borrower_regi
         user_id = self.userId
         if not re.match(r'^[A-Za-z\s]+$', crop_name):
           alert('Enter valid crop name')
+        elif not total_acres.isdigit():
+          Notification("Acres of Land should be valid").show()
+        elif not farmer_earnings.isdigit():
+           Notification("Yearly Income should be valid").show()
         elif not land_type or not total_acres or not crop_name or not farmer_earnings:
             Notification("Please fill all the fields").show()
         else:

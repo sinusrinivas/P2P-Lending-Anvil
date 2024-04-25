@@ -26,13 +26,16 @@ class star_1_borrower_registration_form_education_intermediate(star_1_borrower_r
     
 
   def button_2_click(self, **event_args):
-        """This method is called when the button is clicked"""
-        if all(loader.file for loader in [self.file_loader_1, self.file_loader_2]):
-            user_id = self.userId
-            open_form('borrower_registration_form.star_1_borrower_registration_form_2_employment', user_id=user_id)
-        else:
-            # Display a message or handle the case where any file is not uploaded.
-            alert("Please upload both files before proceeding.")
+     """This method is called when the button is clicked"""
+     user_id = self.userId
+     tenth_class = self.file_loader_1.file
+     intermediate = self.file_loader_2.file
+    
+     if not tenth_class or not intermediate:
+       Notification('Please upload both files before proceed.').show()
+     else:
+       anvil.server.call('add_education_int',tenth_class,intermediate,user_id)
+       open_form('borrower_registration_form.star_1_borrower_registration_form_2_employment',user_id=user_id)
 
   def button_3_click(self, **event_args):
     """This method is called when the button is clicked"""

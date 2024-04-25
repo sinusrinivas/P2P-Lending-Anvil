@@ -27,12 +27,14 @@ class star_1_borrower_registration_form_2_employment_emp_detail_2(star_1_borrowe
     landmark = self.text_box_2.text
     business_phone_number = self.text_box_3.text
     user_id = self.userId
-    if not comp_address or not landmark or not business_phone_number:
-      Notification("please fill the required fields").show()
-    elif not business_phone_number.isdigit():
+
+    if not business_phone_number.isdigit():
         Notification("Business number should be valid").show()
+    elif not comp_address or not landmark or not business_phone_number:
+      Notification("please fill the required fields").show()
+    
     else:
-      anvil.server.call('add_lendor_individual_form_6',comp_address,landmark,business_phone_number,user_id)
+      anvil.server.call('add_lendor_individual_form_2',comp_address,landmark,business_phone_number,user_id)
       open_form('borrower_registration_form.star_1_borrower_registration_form_2_employment.star_1_borrower_registration_form_2_employment_emp_detail_3',user_id=user_id)
 
 

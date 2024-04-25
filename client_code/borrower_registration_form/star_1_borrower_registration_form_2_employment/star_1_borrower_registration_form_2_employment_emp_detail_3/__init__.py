@@ -36,7 +36,7 @@ class star_1_borrower_registration_form_2_employment_emp_detail_3(star_1_borrowe
       
   
       # Check if all fields are filled
-      if not (annual_salary and designation and emp_id_proof and last_six_month):
+      if not (annual_salary and designation and emp_id_proof and last_six_month and salary_type):
           Notification("Please fill in all required fields.").show()
       else:
           anvil.server.call('add_lendor_individual_form_3', annual_salary, designation, emp_id_proof, last_six_month, user_id,salary_type )
