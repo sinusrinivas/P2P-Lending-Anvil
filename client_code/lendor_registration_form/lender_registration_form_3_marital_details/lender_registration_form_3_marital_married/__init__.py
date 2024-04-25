@@ -227,22 +227,22 @@ class lender_registration_form_3_marital_married(lender_registration_form_3_mari
          father_address = details.get('father_address', '')
          another_person = details.get('another_person', '')
 
-      existing_row = app_tables.fin_guarantor_details.get(customer_id=self.userId)
-      if existing_row is None:
-         try:
-           new_row = app_tables.fin_guarantor_details.add_row(
-              customer_id=self.userId,
-              guarantor_name=father_name,
-              guarantor_date_of_birth=father_dob,
-              guarantor_mobile_no=father_mbl_no,
-              guarantor_profession=father_profession,
-              guarantor_address=father_address,
-              another_person=another_person
-           )
-         except Exception as e:
-             Notification(f"Failed to submit form: {e}").show()
-             return
-      else:
+         existing_row = app_tables.fin_guarantor_details.get(customer_id=self.userId)
+         if existing_row is None:
+            try:
+                new_row = app_tables.fin_guarantor_details.add_row(
+                    customer_id=self.userId,
+                    guarantor_name=father_name,
+                    guarantor_date_of_birth=father_dob,
+                    guarantor_mobile_no=father_mbl_no,
+                    guarantor_profession=father_profession,
+                    guarantor_address=father_address,
+                    another_person=another_person
+                )
+            except Exception as e:
+                Notification(f"Failed to submit form: {e}").show()
+                return
+         else:
             existing_row['guarantor_name'] = father_name
             existing_row['guarantor_date_of_birth'] = father_dob
             existing_row['guarantor_mobile_no'] = father_mbl_no
@@ -256,20 +256,20 @@ class lender_registration_form_3_marital_married(lender_registration_form_3_mari
                 Notification(f"Failed to update form: {e}").show()
                 return
 
-      # Validations...
-      errors = []
-      if not re.match(r'^[A-Za-z\s]+$', father_name):
-            errors.append("Enter a valid full name!")
-      if not father_dob or father_dob > datetime.now().date():
-            errors.append("Enter a valid date of birth!")
-      if datetime.now().date() - father_dob < timedelta(days=365 * 18):
-            errors.append("You must be at least 18 years old!")
-      if not re.match(r'^\d{10}$', str(father_mbl_no)):
-            errors.append("Enter a valid mobile no!")
+         # Validations...
+         errors = []
+         if not re.match(r'^[A-Za-z\s]+$', father_name):
+             errors.append("Enter a valid full name!")
+         if not father_dob or father_dob > datetime.now().date():
+             errors.append("Enter a valid date of birth!")
+         if datetime.now().date() - father_dob < timedelta(days=365 * 18):
+             errors.append("You must be at least 18 years old!")
+         if not re.match(r'^\d{10}$', str(father_mbl_no)):
+             errors.append("Enter a valid mobile no!")
 
-      if errors:
+         if errors:
             Notification("\n".join(errors)).show()
-      else:
+         else:
             # Call server code add_lendor_father_details
             anvil.server.call('add_lendor_father_details', 
                               another_person, father_name, father_dob, 

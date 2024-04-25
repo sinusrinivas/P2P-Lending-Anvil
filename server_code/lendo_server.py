@@ -152,15 +152,21 @@ def add_lendor_marital(marital_status,user_id):
     row[0]['form_count']=3
 
 @anvil.server.callable
-def add_lendor_father_details(another_person,father_name,father_dob,father_mbl_no,father_profession,father_address,user_id):
-   row = app_tables.fin_guarantor_details.search(customer_id=user_id)
-   if row:
-     row[0]['another_person'] =another_person
-     row[0]['guarantor_name'] = father_name
-     row[0]['guarantor_date_of_birth'] = father_dob
-     row[0]['guarantor_mobile_no'] = father_mbl_no
-     row[0]['guarantor_profession'] = father_profession
-     row[0]['guarantor_address'] = father_address
+def add_lendor_father_details(another_person, father_name, father_dob, father_mbl_no, father_profession, father_address, user_id):
+    row = app_tables.fin_guarantor_details.search(customer_id=user_id)
+    if row:
+        row[0]['another_person'] = another_person
+        row[0]['guarantor_name'] = father_name
+        row[0]['guarantor_date_of_birth'] = father_dob
+        row[0]['guarantor_mobile_no'] = father_mbl_no
+        row[0]['guarantor_profession'] = father_profession
+        row[0]['guarantor_address'] = father_address
+        row[0].update()  # Update the row
+
+        user = app_tables.fin_user_profile.get(customer_id=user_id)
+        if user:
+            user['form_count'] = 3.1
+            user.update()  # Update the user profile
      
 
 @anvil.server.callable

@@ -15,25 +15,25 @@ class lender_registration_Institutional_form_2(lender_registration_Institutional
     self.userId = user_id
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
-    # user_data = anvil.server.call('get_user_data', user_id)
+    user_data = anvil.server.call('get_user_data', user_id)
         
-    # if user_data:
-    #         self.industry_type = user_data.get('industry_type', '')
-    #         self.turn_over = user_data.get('six_month_turnover', '')
-    #         self.year = user_data.get('year_estd', '')
-    #        
-    
-    # else:
-    #     self.industry_type = ''
-    #     self.turn_over = ''
-    #     self.year = ''
-
-    user_data=app_tables.fin_user_profile.get(customer_id=user_id)
     if user_data:
-      self.date_picker_1.date = user_data['year_estd']
-      self.text_box_1.text=user_data['industry_type']
-      self.text_box_2.text=user_data['six_month_turnover']
-      # self.file_loader_1.file = user_data['last_six_month_bank_proof']
+            self.industry_type = user_data.get('industry_type', '')
+            self.turn_over = user_data.get('six_month_turnover', '')
+            self.year = user_data.get('year_estd', '')
+           
+    
+    else:
+        self.industry_type = ''
+        self.turn_over = ''
+        self.year = ''
+
+    # user_data=app_tables.fin_user_profile.get(customer_id=user_id)
+    # if user_data:
+    #   self.date_picker_1.date = user_data['year_estd']
+    #   self.text_box_1.text=user_data['industry_type']
+    #   self.text_box_2.text=user_data['six_month_turnover']
+    #   # self.file_loader_1.file = user_data['last_six_month_bank_proof']
        #Restore previously entered data if available
     if self.industry_type:
             self.text_box_1.text= self.industry_type
@@ -43,8 +43,8 @@ class lender_registration_Institutional_form_2(lender_registration_Institutional
     if self.year:
            self.date_picker_1.date = self.year
 
-    # if self.last_six_statements:
-    #     self.file_loader_1.file = self.last_six_statements
+    if self.last_six_statements:
+        self.file_loader_1.file = self.last_six_statements
     
     # Any code you write here will run before the form opens.
 
