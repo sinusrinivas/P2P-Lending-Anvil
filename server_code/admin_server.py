@@ -15,9 +15,9 @@ from anvil import *
 def open_invest_now_form():
     open_form("bank_users.main_form.basic_registration_form")
 
-# @anvil.server.callable
-# def open_apply_for_loan_form():
-#     open_form("bank_users.main_form.basic_registration_form")
+@anvil.server.callable
+def open_apply_for_loan_form():
+    open_form("bank_users.main_form.basic_registration_form")
 
 
 
