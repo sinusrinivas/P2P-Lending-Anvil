@@ -44,8 +44,36 @@ class user_form(user_formTemplate):
       print("")
       if actual_count==1:
         open_form('borrower_registration_form.star_1_borrower_registration_form_1_education',user_id=userid)
+      elif actual_count==1.1:
+        open_form('borrower_registration_form.star_1_borrower_registration_form_1_education.star_1_borrower_registration_form_education_10th_class',user_id=userid) 
+      elif actual_count==1.2:
+        open_form('borrower_registration_form.star_1_borrower_registration_form_1_education.star_1_borrower_registration_form_education_intermediate',user_id=userid) 
+      elif actual_count==1.3:
+        open_form('borrower_registration_form.star_1_borrower_registration_form_1_education.star_1_borrower_registration_form_education_btech',user_id=userid)   
+      elif actual_count==1.4:
+        open_form('borrower_registration_form.star_1_borrower_registration_form_1_education.star_1_borrower_registration_form_education_mtech',user_id=userid)
+      elif actual_count==1.5:
+        open_form('borrower_registration_form.star_1_borrower_registration_form_1_education.star_1_borrower_registration_form_education_phd',user_id=userid)
       elif actual_count==2:
         open_form('borrower_registration_form.star_1_borrower_registration_form_2_employment',user_id=userid)
+      elif actual_count==2.1:
+        open_form('borrower_registration_form.star_1_borrower_registration_form_2_employment.star_1_borrower_registration_form_2_employment_student',user_id=userid)
+      elif actual_count==2.2:
+        open_form('borrower_registration_form.star_1_borrower_registration_form_2_employment.star_1_borrower_registration_form_2_self_employment',user_id=userid)
+      elif actual_count==2.21:
+        open_form('borrower_registration_form.star_1_borrower_registration_form_2_employment.star_1_borrower_registration_form_2_employment_business_1',user_id=userid)
+      elif actual_count==2.22:
+        open_form('borrower_registration_form.star_1_borrower_registration_form_2_employment.star_1_borrower_registration_form_2_employment_business_2',user_id=userid)
+      elif actual_count==2.23:
+        open_form('borrower_registration_form.star_1_borrower_registration_form_2_employment.star_1_borrower_registration_form_2_employment_business_3',user_id=userid)
+      elif actual_count==2.31:
+        open_form('borrower_registration_form.star_1_borrower_registration_form_2_employment.star_1_borrower_registration_form_2_employment_emp_detail_1',user_id=userid)
+      elif actual_count==2.32:
+        open_form('borrower_registration_form.star_1_borrower_registration_form_2_employment.star_1_borrower_registration_form_2_employment_emp_detail_2',user_id=userid)
+      elif actual_count==2.33:
+        open_form('borrower_registration_form.star_1_borrower_registration_form_2_employment.star_1_borrower_registration_form_2_employment_emp_detail_3',user_id=userid)
+      elif actual_count==2.4:
+        open_form('borrower_registration_form.star_1_borrower_registration_form_2_employment.star_1_borrower_registration_form_2_employment_farmer',user_id=userid)
       elif actual_count==3:
         open_form('borrower_registration_form.star_1_borrower_registration_form_3_marital',user_id=userid)
       elif actual_count==4:
@@ -76,8 +104,30 @@ class user_form(user_formTemplate):
       print("")
       if actual_count==1:
         open_form('lendor_registration_form.lender_registration_form_1_education_form',user_id=userid)
+      elif actual_count==1.1:
+        open_form('lendor_registration_form.lender_registration_form_1_education_form.lender_registration_education_10th_class',user_id=userid) 
+      elif actual_count==1.2:
+        open_form('lendor_registration_form.lender_registration_form_1_education_form.lender_registration_education_Intermediate',user_id=userid) 
+      elif actual_count==1.3:
+        open_form('lendor_registration_form.lender_registration_form_1_education_form.lender_registration_education_Btech',user_id=userid)   
+      elif actual_count==1.4:
+        open_form('lendor_registration_form.lender_registration_form_1_education_form.lender_registration_education_Mtech',user_id=userid)
+      elif actual_count==1.5:
+        open_form('lendor_registration_form.lender_registration_form_1_education_form.lender_registration_education_Phd',user_id=userid)
       elif actual_count==2:
         open_form('lendor_registration_form.lender_registration_form_2',user_id=userid)
+      elif actual_count==2.21:
+        open_form('lendor_registration_form.lender_registration_form_2.lender_registration_Institutional_form_1',user_id=userid)
+      elif actual_count==2.22:
+        open_form('lendor_registration_form.lender_registration_form_2.lender_registration_Institutional_form_2',user_id=userid)
+      elif actual_count==2.23:
+        open_form('lendor_registration_form.lender_registration_form_2.lender_registration_Institutional_form_3',user_id=userid)
+      elif actual_count==2.31:
+        open_form('lendor_registration_form.lender_registration_form_2.lender_registration_individual_form_1',user_id=userid)
+      elif actual_count==2.32:
+        open_form('lendor_registration_form.lender_registration_form_2.lender_registration_individual_form_2',user_id=userid)
+      elif actual_count==2.33:
+        open_form('lendor_registration_form.lender_registration_form_2.lender_registration_individual_form_3',user_id=userid)
       elif actual_count==3:
         open_form('lendor_registration_form.lender_registration_form_3_marital_details',user_id=userid)
       elif actual_count==4:

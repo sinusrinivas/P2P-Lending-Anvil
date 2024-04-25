@@ -86,7 +86,7 @@ def add_borrower_step5(account_name, account_type,account_number,bank_name, user
 @anvil.server.callable
 def add_borrower_step6(bank_id, bank_branch, user_id):
     row = app_tables.fin_user_profile.search(customer_id=user_id)
-    
+    _user_type = "borrower"
     if row:
         row[0]['bank_id'] = bank_id
         row[0]['account_bank_branch'] = bank_branch
@@ -97,14 +97,14 @@ def add_borrower_step6(bank_id, bank_branch, user_id):
         else:
            row[0]['bessem_value'] = 0.0
            print("Warning: bessem_value is None for user_id:", user_id)
-        
-        # row[0]['bessem_value'] = float(bessem_value)
-        row[0]['form_count'] = 6
+
         row[0]['usertype'] = 'borrower'
         row[0]['last_confirm'] = True
-        user_exists = app_tables.fin_wallet.search(customer_id=user_id)
-        if user_exists:
-            wallet.find_user_update_type(user_id, row[0]['full_name'], "borrower")      
+        row[0]['form_count'] = 6
+        wallet.find_user_update_type(user_id,row[0]['full_name'],_user_type)
+        # user_exists = app_tables.fin_wallet.search(customer_id=user_id)
+        # if user_exists:
+        #     wallet.find_user_update_type(user_id, row[0]['full_name'],_user_type)      
 
         # Search for an existing row with the same email_id in fin_borrower table
         existing_borrower_row = app_tables.fin_borrower.get(email_id=row[0]['email_user'])

@@ -73,7 +73,7 @@ def add_lender_step2(lending_type,investment,lending_period,user_id):
     user = app_tables.fin_user_profile.get(customer_id = user_id)
     if user:
       user['form_count'] = 2
-    
+
 
 @anvil.server.callable
 def add_lendor_institutional_form_1(business_name,business_add,business_type,empolyees_working,user_id):
@@ -106,38 +106,25 @@ def add_lendor_institutional_form_3(din,cin,reg_office_add,proof_verification,us
     row[0]['proof_verification'] = proof_verification
     row[0]['form_count']=2.23
 
-
-@anvil.server.callable
-def add_lendor_education_form(qualification,certificate,user_id):
-  row = app_tables.fin_user_profile.search(customer_id = user_id)
-  if row:
-    
-    row[0]['qualification'] = qualification
-    row[0]['education_certificate'] = certificate
-    
-
-@anvil.server.callable
-def add_lendor_six_form(lending_type, investment,lending_period, user_id):
-  row = app_tables.fin_lender.add_row(investment=investment, lending_type=lending_type,lending_period=lending_period,customer_id = user_id)
-    
 @anvil.server.callable
 def add_lendor_individual_form_1(company_name,org_type,emp_type,occupation_type,user_id):
   row = app_tables.fin_user_profile.search(customer_id=int(user_id))
   if row:
-    row[0]['employment_type']=emp_type
-    row[0]['organization_type']=org_type
     row[0]['company_name']=company_name
+    row[0]['organization_type']=org_type
+    row[0]['employment_type']=emp_type
     row[0]['occupation_type']=occupation_type
+    row[0]['form_count']=2.31
 
 @anvil.server.callable
-def add_lendor_individual_form_2(business_type,empolyees_working,business_name,business_add,user_id):
+def add_lendor_individual_form_2(comp_address, landmark, business_phone_number, user_id):
   row = app_tables.fin_user_profile.search(customer_id = user_id)
   if row:
-    row[0]['business_name'] = business_name
-    row[0]['business_add'] = business_add
-    row[0]['business_type'] = business_type
-    row[0]['employees_working'] = empolyees_working  
-    
+    row[0]['company_address'] = comp_address
+    row[0]['company_landmark'] = landmark
+    row[0]['business_no'] = business_phone_number
+    row[0]['form_count']=2.32
+
 @anvil.server.callable
 def add_lendor_individual_form_3(annual_salary, designation,emp_id_proof,last_six_month,user_id,salary_type):
   row = app_tables.fin_user_profile.search(customer_id = user_id)
@@ -147,19 +134,15 @@ def add_lendor_individual_form_3(annual_salary, designation,emp_id_proof,last_si
     row[0]['emp_id_proof']=emp_id_proof
     row[0]['last_six_month_bank_proof']=last_six_month
     row[0]['salary_type']=salary_type
-
-
-   
-
+    row[0]['form_count'] = 2.33
 
 @anvil.server.callable
-def add_lendor_individual_form_6(comp_address, landmark, business_phone_number, user_id):
+def add_lendor_education_form(qualification,certificate,user_id):
   row = app_tables.fin_user_profile.search(customer_id = user_id)
   if row:
-    row[0]['company_address'] = comp_address
-    row[0]['company_landmark'] = landmark
-    row[0]['business_no'] = business_phone_number
-
+    
+    row[0]['qualification'] = qualification
+    row[0]['education_certificate'] = certificate
 
 @anvil.server.callable
 def add_lendor_marital(marital_status,user_id):
@@ -168,6 +151,11 @@ def add_lendor_marital(marital_status,user_id):
     row[0]['marital_status']=marital_status
     row[0]['form_count']=3
 
+@anvil.server.callable
+def add_father_details(father_name,user_id):
+   row = app_tables.fin_guarantor_details.search(customer_id=user_id, another_person='father')
+   if row:
+     row[0]['guarantor_name'] = father_name
 
 @anvil.server.callable
 def add_lendor_bank_details_form_1(account_name, account_type,account_number,bank_name, user_id):
@@ -179,17 +167,16 @@ def add_lendor_bank_details_form_1(account_name, account_type,account_number,ban
     row[0]['bank_name'] = bank_name
     row[0]['form_count'] = 4
 
-
 @anvil.server.callable
 def add_lendor_bank_details_form_2(bank_id,branch_name, user_id):
   row = app_tables.fin_user_profile.search(customer_id = user_id)
   _user_type = "lender"
   if row:
     row[0]['bank_id'] = bank_id
-    row[0]['account_bank_branch'] = branch_name
-    row[0]['form_count'] = 5
+    row[0]['account_bank_branch'] = branch_name   
     row[0]['usertype'] = _user_type
     row[0]['last_confirm'] = True
+    row[0]['form_count'] = 5
     wallet.find_user_update_type(user_id,row[0]['full_name'],_user_type)
     
     
