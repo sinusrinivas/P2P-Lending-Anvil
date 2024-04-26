@@ -302,22 +302,46 @@ class manage_producs1(manage_producs1Template):
             return
         # Retrieve and validate input values
         try:
-            processing_fee = float(self.text_box_3.text.strip())
-            min_amount = float(self.min_amount.text.strip())
-            max_amount = float(self.max_amount.text.strip())
-            min_tenure = float(self.min_tenure.text.strip())
-            max_tenure = float(self.max_tenure.text.strip())
-            roi = float(self.text_box_5.text.strip())
-            lapsed_fee = float(self.lapsed_fee.text.strip())
-            default_fee = float(self.default_fee.text.strip() if self.default_fee.text.strip() else None)
-            default_fee_amount = float(self.text_box_1.text.strip() if self.text_box_1.text.strip() else 0)
-            npa = float(self.npa.text.strip() if self.npa.text.strip() else None)
-            npa_amount = float(self.text_amount.text.strip() if self.text_amount.text.strip() else 0)
+    # Convert input values to float
+    processing_fee = float(self.text_box_3.text.strip())
+    min_amount = float(self.min_amount.text.strip())
+    max_amount = float(self.max_amount.text.strip())
+    min_tenure = float(self.min_tenure.text.strip())
+    max_tenure = float(self.max_tenure.text.strip())
+    roi = float(self.text_box_5.text.strip())
+    lapsed_fee = float(self.lapsed_fee.text.strip())
+    default_fee = float(self.default_fee.text.strip()) if self.default_fee.text.strip() else None
+    default_fee_amount = float(self.text_box_1.text.strip()) if self.text_box_1.text.strip() else 0
+    npa = float(self.npa.text.strip()) if self.npa.text.strip() else None
+    npa_amount = float(self.text_amount.text.strip()) if self.text_amount.text.strip() else 0
 
-    
+    # Check if any of the values are negative
+    if processing_fee < 0 or min_amount < 0 or max_amount < 0 or min_tenure < 0 or max_tenure < 0 or roi < 0 or lapsed_fee < 0 or default_fee_amount < 0 or npa_amount < 0:
+        raise ValueError("Values cannot be negative")
+
+    # Check if default_fee is not None and less than 0
+    if default_fee is not None and default_fee < 0:
+        raise ValueError("Default fee cannot be negative")
+        
+    # Check if npa is not None and less than 0
+    if npa is not None and npa < 0:
+        raise ValueError("NPA cannot be negative")
+
+except ValueError:
+    # Handle the case where conversion to float fails or negative values are entered
+    Notification("Please enter valid non-negative numeric values").show()
+    return
+            
+            # Check if extension_fee is not None before comparing
+            # if extension_fee < 0:
+            #     raise ValueError("Extension fee cannot be negative")
+            
+            # # Check if min_extension_month is not None before comparing
+            # if min_extension_month < 0:
+            #     raise ValueError("Minimum extension month cannot be negative")
             # Validate non-negative values
-            if processing_fee < 0 or min_amount < 0 or max_amount < 0 or min_tenure < 0 or max_tenure < 0 or roi < 0 or lapsed_fee < 0 or default_fee < 0 or default_fee_amount < 0 or npa < 0 or npa_amount < 0:
-                raise ValueError("Values cannot be negative")
+            # if processing_fee < 0 or min_amount < 0 or max_amount < 0 or min_tenure < 0 or max_tenure < 0 or roi < 0 or lapsed_fee < 0 or default_fee < 0 or default_fee_amount < 0 or npa < 0 or npa_amount < 0:
+            #     raise ValueError("Values cannot be negative")
     
         except ValueError:
             Notification("Please enter valid integer values").show()
