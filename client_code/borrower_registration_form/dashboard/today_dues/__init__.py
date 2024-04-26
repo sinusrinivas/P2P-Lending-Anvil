@@ -237,9 +237,9 @@ class today_dues(today_duesTemplate):
               elif loan_detail_1['days_left'] > 98:
                   print("Updating status to 'default loan'")
                   loan_detail_1['loan_state_status'] = 'NPA'
-                  loan_row = app_tables.fin_loan_details.get(loan_id=loan_detail['loan_id'])
+                  loan_row = app_tables.fin_loan_details.get(loan_id=loan_detail_1['loan_id'])
                   if loan_row is not None:
-                      loan_row['loan_updated_status'] = 'NPA'
+                      loan_row['loan_state_status'] = 'NPA'
                       loan_row.update()
 
     def home_borrower_registration_form_copy_1_click(self, **event_args):

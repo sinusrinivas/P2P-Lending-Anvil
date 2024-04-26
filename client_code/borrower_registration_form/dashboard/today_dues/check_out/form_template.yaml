@@ -101,6 +101,10 @@ components:
       underline: false, icon: ''}
     name: label_9
     layout_properties: {grid_position: 'KSEEYY,IVLWPK GOQVUM,ZQEUHY'}
+  - name: label_12
+    properties: {text: NPA  Amounr}
+    type: Label
+    layout_properties: {grid_position: 'KSEEYY,IVLWPK JOSMBU,RGGYIP'}
   - name: loan_id_label
     properties: {align: left}
     type: Label
@@ -153,6 +157,10 @@ components:
       icon: ''}
     name: default
     layout_properties: {grid_position: 'KSEEYY,LEWFZL TDIKTC,GCKCWR'}
+  - name: npa
+    properties: {}
+    type: Label
+    layout_properties: {grid_position: 'KSEEYY,LEWFZL EWZDPL,NTPHBT'}
   - type: Spacer
     properties: {height: 380.1428508758545}
     name: spacer_5
