@@ -76,7 +76,7 @@ components:
     type: Spacer
     layout_properties: {grid_position: 'DTNZFL,GFWOUA'}
   - name: content_panel_copy_2
-    properties: {background: 'theme:Surface Variant'}
+    properties: {background: 'theme:Surface Variant', col_widths: '{"OPOTBI":35,"JBTPFF":25}'}
     type: ColumnPanel
     layout_properties: {grid_position: 'VFMWUW,LMUGVD', full_width_row: true}
     components:
@@ -94,7 +94,7 @@ components:
       type: Label
       layout_properties: {grid_position: 'QTNQBN,OPOTBI YLFEOI,FVWLFL'}
     - name: spacer_1
-      properties: {height: '25'}
+      properties: {height: 24.25}
       type: Spacer
       layout_properties: {grid_position: 'QTNQBN,OPOTBI SSEHLE,IKLMTS DBHHQV,NPFFKF'}
     - name: button_1
@@ -102,11 +102,14 @@ components:
         align: left, role: tonal-button}
       type: Button
       layout_properties: {grid_position: 'QTNQBN,OPOTBI TECORI,LIWIMN'}
+    - name: spacer_22
+      properties: {height: 47.249969482421875}
+      type: Spacer
+      layout_properties: {grid_position: 'QTNQBN,JBTPFF HJBGBI,EFZKCT'}
     - name: image_1
-      properties: {height: 449.25335693359375, source: _/theme/medical_loan_icon-removebg-preview-transformed (1).png,
-        display_mode: shrink_to_fit}
+      properties: {height: 313.25, source: _/theme/ml-removebg-preview.png, display_mode: shrink_to_fit}
       type: Image
-      layout_properties: {grid_position: 'QTNQBN,JBTPFF'}
+      layout_properties: {grid_position: 'QTNQBN,JBTPFF GEQTMM,QXVDRA'}
   - name: spacer_2
     properties: {height: 32}
     type: Spacer
