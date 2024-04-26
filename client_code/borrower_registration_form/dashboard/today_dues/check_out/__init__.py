@@ -60,36 +60,110 @@ class check_out(check_outTemplate):
             total_emi = emi + extension_amount + processing_fee # Add extension amount to monthly EMI
 
 
+        print(processing_fee)
         loan_state_status = app_tables.fin_loan_details.get(loan_id=loan_id)['loan_state_status']
+      
         if loan_state_status == 'lapsed loan' and selected_row['days_left'] > 6:
             # Fetch the lapsed fee from product details table
             product_id = selected_row['product_id']
-            lapsed_fee = app_tables.fin_product_details.get(product_id=product_id)['lapsed_fee']
+            lapsed_fee_1 = app_tables.fin_product_details.get(product_id=product_id)['lapsed_fee']
+            total_lapsed_amount = lapsed_fee_1 * emi/100
+            days_left = selected_row['days_left']
+            days_difference = days_left - 6
+            lapsed_fee = (days_difference * total_lapsed_amount)
             total_emi += lapsed_fee
             self.lapsed.text = "{:.2f}".format(lapsed_fee)
             self.lapsed.visible = True
             self.label_5.visible = True
             self.default.visible = False
             self.label_9.visible = False
-        elif loan_state_status == 'default loan' and selected_row['days_left'] > 8:
-            # Calculate the number of days between today's date and the selected schedule payment date
-            days_left = selected_row['days_left']
-            days_difference = days_left - 8 #(selected_payment_date - date.today()).days
-            
-            # Subtract 8 from the days difference and ensure it's not negative
-            #remaining_days = max(days_difference - 8, 0)
-            
-            # Fetch the default fee from product details table
-            product_id = selected_row['product_id']
-            default_fee = app_tables.fin_product_details.get(product_id=product_id)['default_fee']
-            total_default_fee = days_difference * default_fee
-            # Multiply the remaining days with the default fee and add to the total EMI
-            total_emi += total_default_fee
-            self.default.text = "{:.2f}".format(total_default_fee)
-            self.default.visible = True
-            self.label_9.visible = True
-            self.lapsed.visible = False
-            self.label_5.visible = False
+          
+        if loan_state_status == 'default loan' and selected_row['days_left'] > 16:
+          product_id = selected_row['product_id']
+    # Fetch default fee details from product details table
+          product_details = app_tables.fin_product_details.get(product_id=product_id)
+          
+          # Check if default_fee or default_fee_amount should be used
+          if product_details['default_fee'] != 0:
+              # Calculate the number of days between today's date and the selected schedule payment date
+              days_left = selected_row['days_left']
+              days_difference = days_left - 16
+      
+              # Fetch default fee percentage and amount from product details table
+              default_fee_percentage = product_details['default_fee']
+              default_fee_decimal = default_fee_percentage * emi / 100
+      
+              # Calculate total default fee
+              total_default_fee = days_difference * default_fee_decimal
+      
+          elif product_details['default_fee_amount'] != 0:
+              # Fetch default fee amount from product details table
+              default_fee_amount = product_details['default_fee_amount']
+      
+              # Calculate the number of days between today's date and the selected schedule payment date
+              days_left = selected_row['days_left']
+              days_difference = days_left - 16
+      
+              # Multiply default fee amount by days_difference
+              total_default_fee = days_difference * default_fee_amount
+      
+          else:
+              # Neither default_fee nor default_fee_amount is set, so default fee is zero
+              total_default_fee = 0
+      
+          # Add default fee to total EMI
+          total_emi += total_default_fee
+          self.default.text = "{:.2f}".format(total_default_fee)
+          self.default.visible = True
+          self.label_9.visible = True
+          self.lapsed.visible = False
+          self.label_5.visible = False
+
+        if loan_state_status == 'NPA' and selected_row['days_left'] > 106:
+    # Fetch NPA fee details from product details table
+          product_id = selected_row['product_id']
+          product_details = app_tables.fin_product_details.get(product_id=product_id)
+          
+          # Check if npa or npa_amount should be used
+          if product_details['npa'] != 0:
+              # Calculate the number of days between today's date and the selected schedule payment date
+              days_left = selected_row['days_left']
+              days_difference = days_left - 106
+      
+              # Fetch NPA fee percentage and amount from product details table
+              npa_percentage = product_details['npa']
+              npa_decimal = npa_percentage * emi/ 100
+      
+              # Calculate total NPA fee
+              total_npa_fee = days_difference * npa_decimal
+      
+          elif product_details['npa_amount'] != 0:
+              # Fetch NPA fee amount from product details table
+              npa_amount = product_details['npa_amount']
+      
+              # Calculate the number of days between today's date and the selected schedule payment date
+              days_left = selected_row['days_left']
+              days_difference = days_left - 106
+      
+              # Multiply NPA fee amount by days_difference
+              total_npa_fee = days_difference * npa_amount
+      
+          else:
+              # Neither npa nor npa_amount is set, so NPA fee is zero
+              total_npa_fee = 0
+      
+          # Add NPA fee to total EMI
+          total_emi += total_npa_fee
+      
+          # Update UI
+          self.npa.text = "{:.2f}".format(total_npa_fee)
+          self.npa.visible = True
+          self.label_12.visible = True
+          # Hide default and lapsed fee labels
+          self.default.visible = False
+          self.label_9.visible = False
+          self.lapsed.visible = False
+          self.label_5.visible = False
 
 
         # Display the calculated EMI amount in the EMI amount label
@@ -213,7 +287,13 @@ class check_out(check_outTemplate):
             extra_amount = 0.0
 
        # extra_amount = float(self.extension_amount_label.text)
-        extra_fee = lapsed_fee + default_fee + extra_amount
+        try:
+            npa = float(self.npa.text)
+        except ValueError:
+            npa = 0.0
+
+       # extra_amount = float(self.extension_amount_label.text)
+        extra_fee = lapsed_fee + default_fee + extra_amount + npa
       
         total_emi_amount = float(self.total_emi_amount_label.text)  # Fetch total EMI amount including extra payment
         borrower_wallet = app_tables.fin_wallet.get(customer_id=self.user_id)

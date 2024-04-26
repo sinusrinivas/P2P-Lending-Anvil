@@ -531,7 +531,7 @@ components:
       layout_properties: {grid_position: 'QXXDSK,HKRRQQ'}
     - name: lapsed_fee
       properties: {role: outlined-card, align: left, hide_text: false, tooltip: '',
-        placeholder: Enter Lapsed Fee, border: '', enabled: true, foreground: '',
+        placeholder: Enter Late payment Fee, border: '', enabled: true, foreground: '',
         visible: true, text: '', font_size: 17, font: '', spacing_above: small, type: text,
         spacing_below: small, italic: false, background: white, bold: false, underline: false}
       type: TextBox
@@ -581,7 +581,7 @@ components:
       properties:
         background: white
         items: [Non Performing Asset (%), Non Performing Asset (₹)]
-        placeholder: Select NPA fee type
+        placeholder: Select   Non Performing Asset fee type
         include_placeholder: true
       type: DropDown
       layout_properties: {grid_position: 'RQXERZ,BCDMZG'}
