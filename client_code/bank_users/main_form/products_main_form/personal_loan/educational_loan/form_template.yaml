@@ -976,13 +976,17 @@ components:
       type: Spacer
       layout_properties: {grid_position: 'RLFOJZ,UMRLDK'}
     - name: column_panel_2_copy
-      properties: {background: ' #999900', col_widths: '{}'}
+      properties: {background: '#0047b3', col_widths: '{}'}
       type: ColumnPanel
       layout_properties: {grid_position: 'YHYFES,TEJKLX', full_width_row: true}
       components:
+      - name: spacer_39
+        properties: {height: '15'}
+        type: Spacer
+        layout_properties: {grid_position: 'WUJJOP,HBKWAZ'}
       - name: label_83
         properties: {text: 'GTPL: Your Partner in Educational Excellence!', align: center,
-          bold: true, font_size: 30}
+          bold: true, font_size: 30, foreground: white}
         type: Label
         layout_properties: {grid_position: 'BMGQPY,MVTVHZ'}
       - name: label_84
@@ -991,16 +995,21 @@ components:
             not only offer competitive interest rates but also tailor our loan products
             to align with your unique career aspirations. Enjoy a flexible repayment
             schedule and zero penal charges on prepayment, ensuring that our education
-            loan maximizes the value of your investment!'}
+            loan maximizes the value of your investment!', foreground: white}
         type: Label
         layout_properties: {grid_position: 'YULURJ,SGQATX'}
       - name: label_85
         properties: {text: 'Indeed, education is more than just a financial transaction;
             it''s an investment that enriches your present and secures your future.
             That''s why obtaining an education loan should be approached as a carefully
-            considered and well-informed decision.', align: center, font_size: 18}
+            considered and well-informed decision.', align: center, font_size: 18,
+          foreground: white}
         type: Label
         layout_properties: {grid_position: 'NBIFKO,LVDYFY'}
+      - name: spacer_40
+        properties: {height: '15'}
+        type: Spacer
+        layout_properties: {grid_position: 'DANJXH,VIXWFN'}
   - name: column_panel_2
     properties: {background: white, col_widths: '{"XHAILN":12,"SPJHOO":8,"WNWVDK":16,"YBBTWP":12,"QNSOAB":12}'}
     type: ColumnPanel
