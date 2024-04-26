@@ -578,6 +578,11 @@ components:
     properties: {height: 32}
     type: Spacer
     layout_properties: {grid_position: 'VWRYGI,IDHHLM'}
+  - name: label_50
+    properties: {text: 'Are you Eligible for an Education Loan?', align: center, bold: true,
+      font_size: 30}
+    type: Label
+    layout_properties: {grid_position: 'UMUTOS,OXMWFF'}
   - name: content_panel_copy_copy_3
     properties: {background: '#22549C'}
     type: ColumnPanel
