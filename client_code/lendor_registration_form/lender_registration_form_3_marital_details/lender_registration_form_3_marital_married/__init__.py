@@ -41,9 +41,6 @@ class lender_registration_form_3_marital_married(lender_registration_form_3_mari
            self.father_profession_text.text = user_data['guarantor_profession']
            self.father_address_text.text = user_data['guarantor_address']
 
-           
-
-
     def show_spouse_controls(self):
         # Show the spouse radio button and related panels
         self.grid_panel_1.visible = False
