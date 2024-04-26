@@ -24,6 +24,11 @@ class signup_page(signup_pageTemplate):
         # Get the password
     password = self.text_box_2.text.strip()
     retype_password = self.text_box_3.text.strip()
+    if not email or not password:
+            self.retype_password_error_label.text = 'Please enter email and password'
+            self.retype_password_error_label.visible = True
+            return
+
 
     if not re.match(r'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$', email):
             self.retype_password_error_label.text = ' Please enter a valid email address.'

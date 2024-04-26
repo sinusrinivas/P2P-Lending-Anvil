@@ -150,6 +150,15 @@ def get_admin_details(email):
         return None
 
 
+@anvil.server.callable
+def get_user_for_login(email):
+  user_by_username = app_tables.users.get(email=email)
+
+  if user_by_username:
+            return user_by_username
+  else:
+            return None
+
 
 @anvil.server.callable
 def hash_password_1(password ,password_hash):
