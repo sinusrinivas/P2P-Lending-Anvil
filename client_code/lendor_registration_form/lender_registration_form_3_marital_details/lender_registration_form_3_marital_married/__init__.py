@@ -32,6 +32,18 @@ class lender_registration_form_3_marital_married(lender_registration_form_3_mari
         option_strings = [str(option['spouse_profession']) for option in options]
         self.drop_down_1.items = option_strings
 
+        user_data=app_tables.fin_guarantor_details.get(customer_id=user_id)
+        if user_data:
+           self.selected_radio_button = user_data['another_person']
+           self.father_name_text.text=user_data['guarantor_name']
+           self.date_picker_1.date =user_data['guarantor_date_of_birth']
+           self.father_mbl_no_text.text=user_data['guarantor_mobile_no']
+           self.father_profession_text.text = user_data['guarantor_profession']
+           self.father_address_text.text = user_data['guarantor_address']
+
+
+
+        
     def show_spouse_controls(self):
         # Show the spouse radio button and related panels
         self.grid_panel_1.visible = False
