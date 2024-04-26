@@ -1071,6 +1071,7 @@ div.plot-container.plotly svg.main-svg {
 
 
 .btn-default {
+  text-align: center;
   transition: transform 0.3s ease-in-out; /* Add smooth transition */
 }
 
@@ -1078,12 +1079,13 @@ div.plot-container.plotly svg.main-svg {
   transform: translateY(-2px); 
 }
 
-/* /*rounding corners of dropdown  */
-/* select.form-control.to-disable{
-  border-radius: 25px;
-  width: 110px;
-  text-align: center; */
-} */
+button.btn.btn-default.to-disable{
+  text-align: center;
+}
+span.btn-text{
+  text-align: center;
+}
+
 
 
 
