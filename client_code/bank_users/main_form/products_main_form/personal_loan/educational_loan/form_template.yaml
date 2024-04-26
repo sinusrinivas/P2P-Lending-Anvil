@@ -329,7 +329,7 @@ components:
       type: Label
       layout_properties: {grid_position: 'WIXPBY,ZHAAYA'}
     - name: column_panel_1
-      properties: {background: 'theme:Secondary Container'}
+      properties: {background: '#E9ECEF'}
       type: ColumnPanel
       layout_properties: {grid_position: 'JACSWU,RXUUNL'}
       components:
@@ -344,8 +344,7 @@ components:
             and their lengthy procedures; with just a simple registration, you can
             secure an education loan swiftly, transparently, and effortlessly!"
 
-            ', bold: false, font_size: 18, foreground: black, align: center, background: 'theme:Secondary
-            Container'}
+            ', bold: false, font_size: 18, foreground: black, align: center, background: '#E9ECEF'}
         type: Label
         layout_properties: {grid_position: 'IFSMFI,MAIQWW'}
       - name: spacer_23
