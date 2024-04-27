@@ -313,6 +313,12 @@ db_schema:
     - name: npa_amount
       admin_ui: {width: 200, order: 27.5}
       type: number
+    - name: default_select_percentage_amount
+      admin_ui: {width: 200, order: 26.125}
+      type: string
+    - name: npa_select_percentage_amount
+      admin_ui: {width: 200, order: 26.75}
+      type: string
     title: fin_product_details
   fin_borrower_organization_type:
     client: full
