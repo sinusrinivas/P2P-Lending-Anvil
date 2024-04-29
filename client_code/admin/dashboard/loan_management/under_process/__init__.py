@@ -19,8 +19,8 @@ class under_process(under_processTemplate):
     self.result = []
     for loan in self.data:
         borrower_profile = app_tables.fin_user_profile.get(customer_id=loan['borrower_customer_id'])
-        lender_profile = app_tables.fin_user_profile.get(customer_id=loan['lender_customer_id'])
-        if borrower_profile is not None and lender_profile is not None:
+        # lender_profile = app_tables.fin_user_profile.get(customer_id=loan['lender_customer_id'])
+        if borrower_profile is not None :
             self.result.append({
                 'loan_id': loan['loan_id'],
                 'customer_id': loan['borrower_customer_id'],
@@ -34,12 +34,12 @@ class under_process(under_processTemplate):
                 'loan_amount': loan['loan_amount'],
                 'lender_timestamp': loan['lender_accepted_timestamp'],
                 'borrower_mobile': borrower_profile['mobile'],  # Include additional profile details here
-                'lender_mobile': lender_profile['mobile']  ,
+                # 'lender_mobile': lender_profile['mobile']  ,
                 'product_name':loan['product_name'],
                 'product_description':loan['product_description'],
                 'loan_disbursed_timestamp':loan['loan_disbursed_timestamp'],
                 'borrower_photo':borrower_profile['user_photo'],
-                'lender_photo':lender_profile['user_photo']
+                # 'lender_photo':lender_profile['user_photo']
             })
 
     if not self.result:
