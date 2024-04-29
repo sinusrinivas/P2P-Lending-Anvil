@@ -13,9 +13,10 @@ import re
 
 
 class signup_page(signup_pageTemplate):
-  def __init__(self, **properties):
+  def __init__(self, user_type = None,  **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
+    self.user_type = user_type
 
     # Any code you write here will run before the form opens.
 
@@ -47,7 +48,7 @@ class signup_page(signup_pageTemplate):
       check_user_already_exist = user_module.check_user_profile(email)
       if check_user_already_exist is None:
                 print("main if statement was executed")
-                user_module.add_email_and_user_id(email ,password)
+                user_module.add_email_and_user_id(email ,password, self.user_type)
                 main_form_module.email = email
                 main_form_module.flag = True
                 open_form('bank_users.main_form.basic_registration_form')

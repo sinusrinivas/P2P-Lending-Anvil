@@ -18,8 +18,8 @@ class investNow_applyForLoan(investNow_applyForLoanTemplate):
 
   def button_1_click(self, **event_args):
     """This method is called when the button is clicked"""
-    open_form('bank_users.main_form.login_page')
+    open_form('bank_users.main_form.signup_page', user_type='lender')
 
   def button_2_click(self, **event_args):
     """This method is called when the button is clicked"""
-    open_form('bank_users.main_form.login_page')
+    open_form('bank_users.main_form.signup_page', user_type='borrower')
