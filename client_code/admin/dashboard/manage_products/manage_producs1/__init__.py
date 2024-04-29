@@ -482,13 +482,13 @@ class manage_producs1(manage_producs1Template):
         self.default_fee.visible = True
         self.label_13.visible = False
         self.text_box_1.visible = False
-        self.default_select_percentage_amount = "Defaulters fee (%)"
+        self.default_select_percentage_amount = "Default fee (%)"
       else:
         self.label_13.visible = True
         self.text_box_1.visible = True
         self.label_17.visible = False
         self.default_fee.visible = False
-        self.default_select_percentage_amount = "Defaulters Fee (₹)"
+        self.default_select_percentage_amount = "Default Fee (₹)"
         
     def drop_down_3_change(self, **event_args):
       """This method is called when an item is selected"""
