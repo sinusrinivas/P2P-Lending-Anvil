@@ -72,8 +72,9 @@ class main_form(main_formTemplate):
                             open_form('borrower_registration_form.dashboard')
                         elif user_profile_e['one_time_settlement'] == True:
                             open_form('borrower_registration_form.ots_dashboard')
-                    elif actual_count is not None and actual_count >= 0:
+                    elif actual_count is not None and actual_count == 0:
                       open_form('bank_users.user_form')
+                    # For Borrower Registration Form  
                     elif user_type == 'borrower' and actual_count==1:
                       open_form('borrower_registration_form.star_1_borrower_registration_form_1_education',user_id=userid)
                     elif user_type == 'borrower' and actual_count==1.1:
@@ -116,41 +117,41 @@ class main_form(main_formTemplate):
                       open_form('borrower_registration_form.star_1_borrower_registration_form_5_bank_1',user_id=userid)
                     elif user_type == 'borrower' and actual_count==6:
                       open_form('borrower_registration_form.star_1_borrower_registration_form_5_bank_2',user_id=userid)
-
+                    # For Lender Registration Form  
                     elif user_type == 'lender' and actual_count==1:
                        open_form('lendor_registration_form.lender_registration_form_1_education_form',user_id=userid)
                     elif user_type == 'lender' and actual_count==1.1:
-        open_form('lendor_registration_form.lender_registration_form_1_education_form.lender_registration_education_10th_class',user_id=userid) 
-      elif user_type == 'lender' and actual_count==1.2:
-        open_form('lendor_registration_form.lender_registration_form_1_education_form.lender_registration_education_Intermediate',user_id=userid) 
-      elif user_type == 'lender' and actual_count==1.3:
-        open_form('lendor_registration_form.lender_registration_form_1_education_form.lender_registration_education_Btech',user_id=userid)   
-      elif user_type == 'lender' and actual_count==1.4:
-        open_form('lendor_registration_form.lender_registration_form_1_education_form.lender_registration_education_Mtech',user_id=userid)
-      elif user_type == 'lender' and actual_count==1.5:
-        open_form('lendor_registration_form.lender_registration_form_1_education_form.lender_registration_education_Phd',user_id=userid)
-      elif user_type == 'lender' and actual_count==2:
-        open_form('lendor_registration_form.lender_registration_form_2',user_id=userid)
-      elif user_type == 'lender' and actual_count==2.21:
-        open_form('lendor_registration_form.lender_registration_form_2.lender_registration_Institutional_form_1',user_id=userid)
-      elif user_type == 'lender' and actual_count==2.22:
-        open_form('lendor_registration_form.lender_registration_form_2.lender_registration_Institutional_form_2',user_id=userid)
-      elif user_type == 'lender' and actual_count==2.23:
-        open_form('lendor_registration_form.lender_registration_form_2.lender_registration_Institutional_form_3',user_id=userid)
-      elif user_type == 'lender' and actual_count==2.31:
-        open_form('lendor_registration_form.lender_registration_form_2.lender_registration_individual_form_1',user_id=userid)
-      elif user_type == 'lender' and actual_count==2.32:
-        open_form('lendor_registration_form.lender_registration_form_2.lender_registration_individual_form_2',user_id=userid)
-      elif user_type == 'lender' and actual_count==2.33:
-        open_form('lendor_registration_form.lender_registration_form_2.lender_registration_individual_form_3',user_id=userid)
-      elif user_type == 'lender' and actual_count==3:
-        open_form('lendor_registration_form.lender_registration_form_3_marital_details',user_id=userid)
-      elif user_type == 'lender' and actual_count==3.1:
-        open_form('lendor_registration_form.lender_registration_form_3_marital_details.lender_registration_form_3_marital_married',user_id=userid,marital_status = marital_status)
-      elif actual_count==4:
-        open_form('lendor_registration_form.lender_registration_form_4_bank_form_1',user_id=userid)
-      elif actual_count==5:
-        open_form('lendor_registration_form.lender_registration_form_4_bank_form_2',user_id=userid)
+                       open_form('lendor_registration_form.lender_registration_form_1_education_form.lender_registration_education_10th_class',user_id=userid) 
+                    elif user_type == 'lender' and actual_count==1.2:
+                       open_form('lendor_registration_form.lender_registration_form_1_education_form.lender_registration_education_Intermediate',user_id=userid) 
+                    elif user_type == 'lender' and actual_count==1.3:
+                       open_form('lendor_registration_form.lender_registration_form_1_education_form.lender_registration_education_Btech',user_id=userid)   
+                    elif user_type == 'lender' and actual_count==1.4:
+                       open_form('lendor_registration_form.lender_registration_form_1_education_form.lender_registration_education_Mtech',user_id=userid)
+                    elif user_type == 'lender' and actual_count==1.5:
+                       open_form('lendor_registration_form.lender_registration_form_1_education_form.lender_registration_education_Phd',user_id=userid)
+                    elif user_type == 'lender' and actual_count==2:
+                       open_form('lendor_registration_form.lender_registration_form_2',user_id=userid)
+                    elif user_type == 'lender' and actual_count==2.21:
+                       open_form('lendor_registration_form.lender_registration_form_2.lender_registration_Institutional_form_1',user_id=userid)
+                    elif user_type == 'lender' and actual_count==2.22:
+                       open_form('lendor_registration_form.lender_registration_form_2.lender_registration_Institutional_form_2',user_id=userid)
+                    elif user_type == 'lender' and actual_count==2.23:
+                       open_form('lendor_registration_form.lender_registration_form_2.lender_registration_Institutional_form_3',user_id=userid)
+                    elif user_type == 'lender' and actual_count==2.31:
+                       open_form('lendor_registration_form.lender_registration_form_2.lender_registration_individual_form_1',user_id=userid)
+                    elif user_type == 'lender' and actual_count==2.32:
+                       open_form('lendor_registration_form.lender_registration_form_2.lender_registration_individual_form_2',user_id=userid)
+                    elif user_type == 'lender' and actual_count==2.33:
+                       open_form('lendor_registration_form.lender_registration_form_2.lender_registration_individual_form_3',user_id=userid)
+                    elif user_type == 'lender' and actual_count==3:
+                       open_form('lendor_registration_form.lender_registration_form_3_marital_details',user_id=userid)
+                    elif user_type == 'lender' and actual_count==3.1:
+                       open_form('lendor_registration_form.lender_registration_form_3_marital_details.lender_registration_form_3_marital_married',user_id=userid,marital_status = marital_status)
+                    elif actual_count==4:
+                       open_form('lendor_registration_form.lender_registration_form_4_bank_form_1',user_id=userid)
+                    elif actual_count==5:
+                       open_form('lendor_registration_form.lender_registration_form_4_bank_form_2',user_id=userid)
      
                     else:
                         open_form('bank_users.main_form.basic_registration_form')
