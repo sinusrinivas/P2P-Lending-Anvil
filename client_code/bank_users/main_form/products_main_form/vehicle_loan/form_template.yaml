@@ -1,4 +1,6 @@
-container: {type: ColumnPanel}
+container:
+  type: ColumnPanel
+  properties: {col_widths: '{"LHOGCA":35,"YKTXSO":25}'}
 components:
 - name: content_panel_copy_2
   properties: {background: 'theme:Surface'}
@@ -193,13 +195,13 @@ components:
   properties: {text: 'Why choose GTPL for your Vehicle loan needs?', align: center,
     bold: true, font_size: 30}
   type: Label
-  layout_properties: {grid_position: 'MIJJKQ,UMFNJD XMRQMP,WCOFXY'}
+  layout_properties: {grid_position: 'XMRQMP,WCOFXY'}
 - name: label_13
   properties: {text: 'GTPL provides hassle-free, unsecured business loans online at
       low-interest rates. Applying for a business loan on our platform takes just
       ten minutes of your valuable time.', align: center, font_size: 18}
   type: Label
-  layout_properties: {grid_position: 'MIJJKQ,UMFNJD JLINJA,RBZBEB'}
+  layout_properties: {grid_position: 'JLINJA,RBZBEB'}
 - name: content_panel_copy_2_copy_copy
   properties: {background: 'theme:Primary Container'}
   type: ColumnPanel
@@ -456,4 +458,63 @@ components:
         ', font_size: 18, foreground: '#Edf0f4'}
     type: Label
     layout_properties: {grid_position: 'JGUDEZ,FZVWNJ CCTHVD,HYSRWT'}
+  - name: spacer_7
+    properties: {height: '15'}
+    type: Spacer
+    layout_properties: {grid_position: 'JWJMWS,RUFMWM'}
+- name: spacer_6
+  properties: {height: 32}
+  type: Spacer
+  layout_properties: {grid_position: 'QOULUH,WYAGRA'}
+- name: label_14
+  properties: {text: 'Discover a Range of Benefits with Our Website. With Competitive
+      Rates, Flexible Terms, and Expedited Approval Processes, We Make Your Vehicle
+      Financing Journey Seamless. So Why Stress? Let Us Handle the Details While You
+      Focus on Finding Your Perfect Ride.', align: left, font_size: 20, bold: true}
+  type: Label
+  layout_properties: {grid_position: 'KNZTCW,ISUYJC'}
+- name: label_15
+  properties: {text: 'Your choice of vehicle mirrors your personality and way of life.
+      With sky-high car loan rates prevailing in the market and the burden of accumulating
+      debt, purchasing a car may appear out of reach. However, with RupeeCircle''s
+      auto finance loans, turning that dream into reality is now within grasp.', align: left,
+    font_size: 18}
+  type: Label
+  layout_properties: {grid_position: 'FQZWHW,LHOGCA MYNCMS,FGAXVX'}
+- name: label_15_copy
+  properties: {text: 'At GTPL, we offer borrowers flexible car finance options with
+      affordable loan rates that won''t break the bank. Our custom-tailored car finance
+      plans cater to your specific needs, providing some of the most competitive rates
+      in the market.', align: left, font_size: 18}
+  type: Label
+  layout_properties: {grid_position: 'FQZWHW,LHOGCA CMNWMC,RUGFUB'}
+- name: label_15_copy_2
+  properties: {text: 'With our fully online and paperless application process, applying
+      for a vehicle loan is seamless. Once you submit your application, expect quick
+      processing times, with funds disbursed directly to your bank account within
+      just a few working days.', align: left, font_size: 18}
+  type: Label
+  layout_properties: {grid_position: 'FQZWHW,LHOGCA QUBRCW,BWMFDF'}
+- name: label_15_copy_3
+  properties: {text: 'With our fixed but low Vehicle Loan interest rates, you can
+      comfortably repay what you borrow through affordable EMIs.', align: left, font_size: 18}
+  type: Label
+  layout_properties: {grid_position: 'FQZWHW,LHOGCA VNGQYE,EJJRIC'}
+- name: image_11
+  properties: {height: 483.25, source: _/theme/auto-loan.png, display_mode: shrink_to_fit}
+  type: Image
+  layout_properties: {grid_position: 'FQZWHW,YKTXSO'}
+- name: spacer_9
+  properties: {height: '15'}
+  type: Spacer
+  layout_properties: {grid_position: 'ZXRPDM,LYHKJT'}
+- name: button_2
+  properties: {text: Apply for Vehicle Loan, bold: true, background: '#013065', foreground: white,
+    align: left}
+  type: Button
+  layout_properties: {grid_position: 'IUWYWT,SDVBJW'}
+- name: spacer_8
+  properties: {height: '32'}
+  type: Spacer
+  layout_properties: {grid_position: 'EULUJK,HFRSMP'}
 is_package: true
