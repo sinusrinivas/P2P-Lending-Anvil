@@ -1148,8 +1148,8 @@ db_schema:
       admin_ui: {width: 200, order: 14.5}
       type: string
     - name: lender_customer_id
-      admin_ui: {width: 200, order: 14.25}
-      type: number
+      admin_ui: {width: 200}
+      type: string
     title: fin_extends_loan
   fin_borrower_marrital_status:
     client: full
