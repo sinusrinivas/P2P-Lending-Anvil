@@ -32,7 +32,7 @@ components:
     type: Label
     layout_properties: {grid_position: 'UWSCBP,TJHWVT'}
   - type: Spacer
-    properties: {height: 374}
+    properties: {height: 305.4999694824219}
     name: spacer_4
     layout_properties: {grid_position: 'KSEEYY,BGADMX'}
   - name: label_7
@@ -162,7 +162,7 @@ components:
     type: Label
     layout_properties: {grid_position: 'KSEEYY,LEWFZL EWZDPL,NTPHBT'}
   - type: Spacer
-    properties: {height: 380.1428508758545}
+    properties: {height: 299.6428527832031}
     name: spacer_5
     layout_properties: {grid_position: 'KSEEYY,KZXJUD'}
   - name: button_1_copy_2

@@ -28,7 +28,7 @@ components:
     type: Label
     layout_properties: {grid_position: 'UWSCBP,TJHWVT', full_width_row: true}
   - type: Spacer
-    properties: {height: 391.61903381347656}
+    properties: {height: 263.21429443359375}
     name: spacer_4
     layout_properties: {grid_position: 'KSEEYY,KIETYU'}
   - name: label_7
