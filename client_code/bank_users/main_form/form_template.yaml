@@ -850,14 +850,11 @@ components:
         background: '', bold: true, underline: false, icon: ''}
       type: Label
       layout_properties: {}
-    - name: outlined_button_1_copy_1
-      properties: {role: tonal-button, align: center, tooltip: '', border: '', enabled: true,
-        foreground: Black, visible: true, text: 'Apply now                 ', font_size: 20,
-        font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
-        background: white, bold: true, underline: false, icon: ''}
-      type: Button
-      layout_properties: {}
-      event_bindings: {click: outlined_button_1_copy_1_click}
+  - name: button_10
+    properties: {text: Apply Now, align: center, foreground: black, bold: true, background: white,
+      font_size: 18}
+    type: Button
+    layout_properties: {row: SRGGXF, width_xs: 6, col_xs: 2}
   - name: label_3_copy_1
     properties: {role: null, align: center, tooltip: '', border: '', foreground: white,
       visible: true, text: 'Total Loan Amount Applied by Borrowers:
@@ -873,6 +870,11 @@ components:
   type: GridPanel
   layout_properties: {grid_position: 'RFHNEJ,XZZDKH', full_width_row: false}
   components:
+  - name: button_11
+    properties: {text: Invest Now, align: center, font_size: 18, background: white,
+      foreground: black, bold: true}
+    type: Button
+    layout_properties: {row: UQFLUZ, width_xs: 12, col_xs: 0}
   - name: label_2_copy_1
     properties: {role: null, align: center, tooltip: '', border: '', foreground: white,
       visible: true, text: Generate substantial profits for investors, font_size: 25,
@@ -880,19 +882,6 @@ components:
       background: '', bold: true, underline: false, icon: ''}
     type: Label
     layout_properties: {row: QSFIAM, width_xs: 12, col_xs: 0}
-  - name: linear_panel_2_copy_1
-    properties: {}
-    type: LinearPanel
-    layout_properties: {row: QSFIAM, width_xs: 12, col_xs: 0}
-    components:
-    - name: outlined_button_2_copy_1
-      properties: {role: elevated-button, align: center, tooltip: '', border: '',
-        enabled: true, foreground: Black, visible: true, text: 'Invest Now               ',
-        font_size: 20, font: '', spacing_above: small, icon_align: left, spacing_below: small,
-        italic: false, background: white, bold: true, underline: false, icon: ''}
-      type: Button
-      layout_properties: {}
-      event_bindings: {click: outlined_button_2_copy_1_click}
   - name: linear_panel_5_copy_1
     properties: {}
     type: LinearPanel
