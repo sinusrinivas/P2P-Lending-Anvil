@@ -60,10 +60,11 @@ components:
         background: '#013065', bold: true, underline: false, icon: ''}
       type: Button
       event_bindings: {click: login_signup_button_click}
-    - name: form1_1
-      properties: {}
-      type: form:bank_users.main_form.Form1
-      layout_properties: {width: 138.64100000000002}
+    - name: button_10_copy
+      properties: {text: Sign Up, background: '#013065', foreground: white, bold: true,
+        font_size: 16}
+      type: Button
+      event_bindings: {click: button_10_copy_click}
 - name: content_panel
   properties: {col_widths: '{"DXHHWT":15,"GJCQJQ":45,"JQQCEI":15,"UPJROI":45,"EHUUCF":15,"NZRDPG":45,"GRGKMI":15,"OVDFTK":45,"MTEPWA":15,"THORQD":45,"NHLPOA":15,"IGIOFI":45,"PVJYOC":15,"YLFJWG":45}'}
   type: ColumnPanel
@@ -1338,6 +1339,7 @@ components:
     properties: {text: Home Renovation Loan, align: center, bold: true, foreground: black}
     type: Link
     layout_properties: {grid_position: 'UMIEBZ,FILYJT SAFIPT,WQHYEO'}
+    event_bindings: {click: link_15_click}
   - name: image_32
     properties: {source: _/theme/travel loan.png, height: '180'}
     type: Image
@@ -1355,6 +1357,7 @@ components:
     properties: {text: Medical, align: center, bold: true, foreground: black}
     type: Link
     layout_properties: {grid_position: 'UMIEBZ,QAZPRB ZYITJI,WRBKVF'}
+    event_bindings: {click: link_17_click}
   - name: spacer_48
     properties: {height: '10'}
     type: Spacer
@@ -1368,6 +1371,7 @@ components:
       foreground: black}
     type: Link
     layout_properties: {grid_position: 'LNQDNC,XNPEPC MDOIKG,TFOTVP'}
+    event_bindings: {click: link_18_click}
   - name: image_34
     properties: {source: _/theme/instant loan.png, height: '180'}
     type: Image
@@ -1376,6 +1380,7 @@ components:
     properties: {text: Instant Loan, align: center, bold: true, font_size: 18, foreground: black}
     type: Link
     layout_properties: {grid_position: 'LNQDNC,HJBGGR GQFFSC,TWDCXL'}
+    event_bindings: {click: link_19_click}
   - name: image_36
     properties: {source: _/theme/business loann.png, height: '180'}
     type: Image
@@ -1385,6 +1390,7 @@ components:
       foreground: black}
     type: Link
     layout_properties: {grid_position: 'LNQDNC,XDBLLP GQZOXN,VARFVR'}
+    event_bindings: {click: link_20_click}
   - name: spacer_49
     properties: {height: 32}
     type: Spacer

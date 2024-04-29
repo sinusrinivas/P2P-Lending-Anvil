@@ -143,6 +143,7 @@ unique_ids:
     lendor_registration_form.dashboard.view_loan_extension_requests.extension_details: '1706448836532652081977126.0691'
     ? borrower_registration_form.star_1_borrower_registration_form_2_employment.star_1_borrower_registration_form_2_employment_business_3
     : '17005720020403876226355.3249187'
+    bank_users.main_form.products_main_form.vehicle_loan: '1714373140105534036320579.5613'
     admin.dashboard.loan_management.open_loans.ItemTemplate3: '171101040560926993222468.07667'
     lendor_registration_form.dashboard.view_loan_foreclosure_Requests: '169996304408474987603925.53683'
     bank_users.main_form.products_main_form: '1700563558734712481921773.0997'

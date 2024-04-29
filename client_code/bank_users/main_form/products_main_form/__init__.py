@@ -91,9 +91,6 @@ class products_main_form(products_main_formTemplate):
     """This method is called when the link is clicked"""
     open_form('bank_users.main_form.products_main_form.business_loan')
 
-  def link_1_click(self, **event_args):
-    """This method is called when the link is clicked"""
-    pass
 
   def link_6_click(self, **event_args):
     """This method is called when the link is clicked"""
@@ -111,10 +108,14 @@ class products_main_form(products_main_formTemplate):
     """This method is called when the link is clicked"""
     open_form('bank_users.main_form.about_main_form')
 
-  def button_2_click(self, **event_args):
+  def button_10_copy_click(self, **event_args):
     """This method is called when the button is clicked"""
-    open_form('bank_users.main_form.products_main_form.business_loan')
+    open_form('bank_users.main_form.investNow_applyForLoan')
 
   def button_1_click(self, **event_args):
     """This method is called when the button is clicked"""
-    open_form('bank_users.main_form.products_main_form.personal_loan')
+    open_form('bank_users.main_form.investNow_applyForLoan')
+
+  def button_2_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    open_form('bank_users.main_form.investNow_applyForLoan')

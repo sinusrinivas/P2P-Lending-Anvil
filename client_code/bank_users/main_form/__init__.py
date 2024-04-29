@@ -247,6 +247,10 @@ class main_form(main_formTemplate):
     """This method is called when the button is clicked"""
     open_form('bank_users.main_form.investNow_applyForLoan')
 
+  def button_10_copy_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    open_form('bank_users.main_form.investNow_applyForLoan')
+
  
 
 
