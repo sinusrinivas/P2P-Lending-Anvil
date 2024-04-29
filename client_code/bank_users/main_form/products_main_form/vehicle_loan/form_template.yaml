@@ -206,7 +206,7 @@ components:
   layout_properties: {grid_position: 'EOXPCN,RFWCTY'}
   components: []
 - name: content_panel_copy_copy_copy
-  properties: {background: '#AEB6BF', col_widths: '{"MYPGRO":15,"OSQOGP":45,"LPIEIZ":15,"JOUREZ":45,"QNBESR":15,"HFTTOG":45,"SMBLNO":15,"MSBQFS":45,"ZZLXJK":15,"FZVWNJ":45,"UPSKYV":10,"GQJMGR":50,"TZUGOF":10,"NHFTUT":50,"UJWJDU":10,"OYVJHA":50,"BMEHKG":10,"CJYLGM":50}'}
+  properties: {background: '#0047b3', col_widths: '{"MYPGRO":15,"OSQOGP":45,"LPIEIZ":15,"JOUREZ":45,"QNBESR":15,"HFTTOG":45,"SMBLNO":15,"MSBQFS":45,"ZZLXJK":15,"FZVWNJ":45,"UPSKYV":10,"GQJMGR":50,"TZUGOF":10,"NHFTUT":50,"UJWJDU":10,"OYVJHA":50,"BMEHKG":10,"CJYLGM":50}'}
   type: ColumnPanel
   layout_properties: {grid_position: 'DZMIIK,KPHFZS', full_width_row: true}
   components:
@@ -389,27 +389,7 @@ components:
     type: Spacer
     layout_properties: {grid_position: 'KCHXXB,SMBLNO GZLVBS,TZUGOF'}
   - name: label_35_copy
-    properties: {text: 'ʌ
-
-        |
-
-        |
-
-        |
-
-        |
-
-        |
-
-        |
-
-        |
-
-        |
-
-        |
-
-        v', foreground: white}
+    properties: {text: '', foreground: white}
     type: Label
     layout_properties: {grid_position: 'KCHXXB,SMBLNO GZLVBS,NHFTUT'}
   - name: label_31
