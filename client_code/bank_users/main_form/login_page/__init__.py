@@ -13,7 +13,7 @@ from datetime import datetime
 
 
 class login_page(login_pageTemplate):
-  def __init__(self, **properties):
+  def __init__(self,  **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
     # login_date = datetime.now()
