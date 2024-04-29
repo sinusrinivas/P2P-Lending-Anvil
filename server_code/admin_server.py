@@ -22,7 +22,7 @@ def open_apply_for_loan_form():
 
 
 @anvil.server.callable
-def product_details(product_id, product_name, product_group,product_description, product_categories,processing_fee,  extension_fee, membership_type, interest_type, max_amount, min_amount, min_tenure, max_tenure, roi, foreclose_type, foreclosure_fee, extension_allowed, emi_payment, min_months,lapsed_fee, default_fee, default_fee_amount, npa , npa_amount, occupation,min_extension_month):
+def product_details(product_id, product_name, product_group,product_description, product_categories,processing_fee,  extension_fee, membership_type, interest_type, max_amount, min_amount, min_tenure, max_tenure, roi, foreclose_type, foreclosure_fee, extension_allowed, emi_payment, min_months,lapsed_fee, default_fee, default_fee_amount, npa , npa_amount, occupation,min_extension_month ,default_status):
   row = app_tables.fin_product_details.add_row(product_id=product_id,
                                            product_name = product_name,
                                            product_group=product_group,
@@ -52,7 +52,8 @@ def product_details(product_id, product_name, product_group,product_description,
                                            npa=npa,
                                            npa_amount=npa_amount,
                                            occupation=occupation,
-                                           min_extension_months=min_extension_month
+                                           min_extension_months=min_extension_month,
+                                           default_select_percentage_amount = default_status
                                           )
 
 
