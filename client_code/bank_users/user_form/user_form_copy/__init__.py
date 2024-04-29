@@ -36,7 +36,7 @@ class user_form_copy(user_form_copyTemplate):
 
   def home_main_form_link_click(self, **event_args):
     """This method is called when the link is clicked"""
-    open_form("bank_users.user_form1")
+    open_form("bank_users.main_form")
 
   def borrower_button_click(self, **event_args):
     userid = self.user_id
@@ -45,3 +45,15 @@ class user_form_copy(user_form_copyTemplate):
   def lendor_button_click(self, **event_args):
     userid = self.user_id
     open_form('lendor_registration_form.lender_reg_form_1_education_form',user_id=userid)
+
+  def link_1_click(self, **event_args):
+    """This method is called when the link is clicked"""
+    open_form('bank_users.main_form.products_main_form')
+
+  def contact_main_form_link_click(self, **event_args):
+    """This method is called when the link is clicked"""
+    open_form('bank_users.main_form.contact_main_form')
+
+  def link_6_click(self, **event_args):
+    """This method is called when the link is clicked"""
+    open_form('admin.user_issue.user_bugreports')
