@@ -29,6 +29,37 @@ class star_1_borrower_registration_form_3_marital_married(star_1_borrower_regist
         option_strings = [str(option['spouse_profession']) for option in options]
         self.drop_down_1.items = option_strings
 
+        user_data=app_tables.fin_guarantor_details.get(customer_id=user_id)
+        if user_data:
+           self.selected_radio_button = user_data['another_person']
+           self.father_name_text.text=user_data['guarantor_name']
+           self.date_picker_1.date =user_data['guarantor_date_of_birth']
+           self.father_mbl_no_text.text=user_data['guarantor_mobile_no']
+           self.father_profession_text.text = user_data['guarantor_profession']
+           self.father_address_text.text = user_data['guarantor_address']
+
+           self.selected_radio_button = user_data['another_person']
+           self.mother_name_text_copy.text=user_data['guarantor_name']
+           self.date_picker_2.date =user_data['guarantor_date_of_birth']
+           self.mother_mbl_no_text.text=user_data['guarantor_mobile_no']
+           self.mother_profession_text.text = user_data['guarantor_profession']
+           self.mother_address_text.text = user_data['guarantor_address']
+
+           self.selected_radio_button = user_data['another_person']
+           self.spouse_name_text.text=user_data['guarantor_name']
+           self.date_picker_3.date =user_data['guarantor_date_of_birth']
+           self.spouse_mbl_no_text.text=user_data['guarantor_mobile_no']
+           self.drop_down_1.selected_value = user_data['guarantor_profession']
+           self.spouse_companyname_text.text = user_data['guarantor_company_name']
+           self.annual_earning_text.text = user_data['guarantor_annual_earning']
+
+           self.selected_radio_button = user_data['another_person']
+           self.related_person_text.text = user_data['guarantor_person_relation']
+           self.name_text_copy.text=user_data['guarantor_name']
+           self.date_picker_3_copy.date =user_data['guarantor_date_of_birth']
+           self.mbl_no_text_copy.text=user_data['guarantor_mobile_no']
+           self.profession_text_copy.text = user_data['guarantor_profession']
+
     def show_spouse_controls(self):
         # Show the spouse radio button and related panels
         self.grid_panel_1.visible = False
