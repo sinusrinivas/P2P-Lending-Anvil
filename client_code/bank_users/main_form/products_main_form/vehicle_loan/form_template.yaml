@@ -197,7 +197,7 @@ components:
 - name: label_13
   properties: {text: 'GTPL provides hassle-free, unsecured business loans online at
       low-interest rates. Applying for a business loan on our platform takes just
-      ten minutes of your valuable time.', align: center}
+      ten minutes of your valuable time.', align: center, font_size: 18}
   type: Label
   layout_properties: {grid_position: 'MIJJKQ,UMFNJD JLINJA,RBZBEB'}
 - name: content_panel_copy_2_copy_copy
@@ -206,7 +206,7 @@ components:
   layout_properties: {grid_position: 'EOXPCN,RFWCTY'}
   components: []
 - name: content_panel_copy_copy_copy
-  properties: {background: '#0047b3', col_widths: '{"MYPGRO":15,"OSQOGP":45,"LPIEIZ":15,"JOUREZ":45,"QNBESR":15,"HFTTOG":45,"SMBLNO":15,"MSBQFS":45,"ZZLXJK":15,"FZVWNJ":45,"UPSKYV":10,"GQJMGR":50,"TZUGOF":10,"NHFTUT":50,"UJWJDU":10,"OYVJHA":50,"BMEHKG":10,"CJYLGM":50}'}
+  properties: {background: '#006699', col_widths: '{"MYPGRO":15,"OSQOGP":45,"LPIEIZ":15,"JOUREZ":45,"QNBESR":15,"HFTTOG":45,"SMBLNO":15,"MSBQFS":45,"ZZLXJK":15,"FZVWNJ":45,"UPSKYV":10,"GQJMGR":50,"TZUGOF":10,"NHFTUT":50,"UJWJDU":10,"OYVJHA":50,"BMEHKG":10,"CJYLGM":50}'}
   type: ColumnPanel
   layout_properties: {grid_position: 'DZMIIK,KPHFZS', full_width_row: true}
   components:
@@ -235,7 +235,7 @@ components:
     layout_properties: {grid_position: 'ZEXDKI,MYPGRO LXCOPZ,GQJMGR'}
   - name: label_25
     properties: {text: Easy online application process, font_size: 20, bold: true,
-      foreground: ''}
+      foreground: white, background: ''}
     type: Label
     layout_properties: {grid_position: 'ZEXDKI,OSQOGP XBZJXL,AFVPBV'}
   - name: label_26
@@ -243,12 +243,12 @@ components:
         process on our platform. Simply fill out a single online application form
         and upload your documents, and you''re all set!
 
-        ', font_size: 18, align: left}
+        ', font_size: 18, align: left, foreground: '#Edf0f4'}
     type: Label
     layout_properties: {grid_position: 'ZEXDKI,OSQOGP RREVFM,MGXCMB'}
   - name: label_47
-    properties: {text: '------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------',
-      foreground: 'theme:On Disabled'}
+    properties: {text: '-----------------------------------------------------------------------------------------------------------------------------------------------------------',
+      foreground: 'theme:Surface Variant'}
     type: Label
     layout_properties: {grid_position: 'ZEXDKI,OSQOGP NBYNKM,SDMQNO'}
   - name: image_7
@@ -297,7 +297,7 @@ components:
     type: Label
     layout_properties: {grid_position: 'ISVYFH,LPIEIZ LQMNUY,OYVJHA'}
   - name: label_27
-    properties: {text: Lowest interest rates, font_size: 20, bold: true}
+    properties: {text: Lowest interest rates, font_size: 20, bold: true, foreground: white}
     type: Label
     layout_properties: {grid_position: 'ISVYFH,JOUREZ MGLXXA,UKLPUI'}
   - name: label_28
@@ -317,12 +317,12 @@ components:
         to benefit from the credit profiles they''ve diligently built over years of
         hard work and financial discipline.
 
-        ', font_size: 18}
+        ', font_size: 18, foreground: '#Edf0f4'}
     type: Label
     layout_properties: {grid_position: 'ISVYFH,JOUREZ EPTCGL,ROANOZ'}
   - name: label_47_copy_2
-    properties: {text: '------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------',
-      background: '', foreground: 'theme:On Disabled'}
+    properties: {text: '-----------------------------------------------------------------------------------------------------------------------------------------------------------',
+      background: '', foreground: 'theme:Surface Variant'}
     type: Label
     layout_properties: {grid_position: 'ISVYFH,JOUREZ BWOFAD,YWPXQF'}
   - name: image_8
@@ -359,7 +359,7 @@ components:
     type: Label
     layout_properties: {grid_position: 'XQMMMY,QNBESR ZHAXMB,CJYLGM'}
   - name: label_29
-    properties: {text: Fast Disbursal of Loan Amount, font_size: 20, bold: true}
+    properties: {text: Fast Disbursal of Loan Amount, font_size: 20, bold: true, foreground: white}
     type: Label
     layout_properties: {grid_position: 'XQMMMY,HFTTOG BDOSTW,BWFMNA'}
   - name: label_30
@@ -371,12 +371,12 @@ components:
         GTPL and overseen by a SEBI-approved trustee. Subsequently, the funds are
         directly transferred to your account.This entire process is digital and seamless,
         ensuring that you can access your business capital upfront within a few hours
-        of applying on GTPL.', font_size: 18}
+        of applying on GTPL.', font_size: 18, foreground: '#Edf0f4'}
     type: Label
     layout_properties: {grid_position: 'XQMMMY,HFTTOG KMLKJU,FOIKIA'}
   - name: label_47_copy
-    properties: {text: '------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------',
-      foreground: 'theme:On Disabled'}
+    properties: {text: '-----------------------------------------------------------------------------------------------------------------------------------------------------------',
+      foreground: 'theme:Surface Variant'}
     type: Label
     layout_properties: {grid_position: 'XQMMMY,HFTTOG DVEVJP,LOVFKC'}
   - name: image_9
@@ -389,12 +389,32 @@ components:
     type: Spacer
     layout_properties: {grid_position: 'KCHXXB,SMBLNO GZLVBS,TZUGOF'}
   - name: label_35_copy
-    properties: {text: '', foreground: white}
+    properties: {text: 'ʌ
+
+        |
+
+        |
+
+        |
+
+        |
+
+        |
+
+        |
+
+        |
+
+        |
+
+        |
+
+        v', foreground: white}
     type: Label
     layout_properties: {grid_position: 'KCHXXB,SMBLNO GZLVBS,NHFTUT'}
   - name: label_31
     properties: {text: Free Prepayment and Early Repayment Facility, font_size: 20,
-      bold: true}
+      bold: true, foreground: white}
     type: Label
     layout_properties: {grid_position: 'KCHXXB,MSBQFS QJEQTF,QJQXKX'}
   - name: label_32
@@ -406,12 +426,12 @@ components:
         or settle your loan the very next day, the choice is yours – it''s your money,
         after all!Simply reach out to GTPL support and select from various modes to
         prepay. Once the process is complete, we''ll promptly send you a revised account
-        statement online.', font_size: 18}
+        statement online.', font_size: 18, foreground: '#Edf0f4'}
     type: Label
     layout_properties: {grid_position: 'KCHXXB,MSBQFS KMGPNY,AJNJCE'}
   - name: label_47_copy_3
-    properties: {text: '------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------',
-      foreground: 'theme:On Disabled'}
+    properties: {text: '-----------------------------------------------------------------------------------------------------------------------------------------------------------',
+      foreground: 'theme:Surface Variant'}
     type: Label
     layout_properties: {grid_position: 'KCHXXB,MSBQFS BJPHQV,JZPHWY'}
   - name: image_10
@@ -421,7 +441,7 @@ components:
     layout_properties: {grid_position: 'JGUDEZ,ZZLXJK'}
   - name: label_33
     properties: {text: Secure and transparent P2P lending platform, font_size: 20,
-      bold: true}
+      bold: true, foreground: white}
     type: Label
     layout_properties: {grid_position: 'JGUDEZ,FZVWNJ OLTCXH,MGFAMU'}
   - name: label_34
@@ -433,7 +453,7 @@ components:
         that all fees and costs are clearly stated upfront. There are no hidden fees
         or surprises awaiting our customers.
 
-        ', font_size: 18}
+        ', font_size: 18, foreground: '#Edf0f4'}
     type: Label
     layout_properties: {grid_position: 'JGUDEZ,FZVWNJ CCTHVD,HYSRWT'}
 is_package: true
