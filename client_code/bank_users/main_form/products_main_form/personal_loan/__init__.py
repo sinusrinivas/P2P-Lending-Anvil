@@ -31,3 +31,19 @@ class personal_loan(personal_loanTemplate):
   def link_14_click(self, **event_args):
     """This method is called when the link is clicked"""
     open_form('bank_users.main_form.products_main_form.personal_loan.credit_card_loan')
+
+  def link_15_click(self, **event_args):
+    """This method is called when the link is clicked"""
+    open_form('bank_users.main_form.products_main_form.personal_loan.home_renovation_loan')
+
+  def link_17_click(self, **event_args):
+    """This method is called when the link is clicked"""
+    open_form('bank_users.main_form.products_main_form.personal_loan.medical_loan')
+
+  def link_18_click(self, **event_args):
+    """This method is called when the link is clicked"""
+    open_form('bank_users.main_form.products_main_form.personal_loan.educational_loan')
+
+  def link_20_click(self, **event_args):
+    """This method is called when the link is clicked"""
+    open_form('bank_users.main_form.products_main_form.business_loan')
