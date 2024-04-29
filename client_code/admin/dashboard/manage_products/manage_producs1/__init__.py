@@ -196,6 +196,7 @@ class manage_producs1(manage_producs1Template):
         # Set Form properties and Data Bindings.
         self.init_components(**properties)
         self.default_select_percentage_amount = None
+        self.npa_status = None
         self.occupation = []
         self.emi_payment = []
       
@@ -351,6 +352,7 @@ class manage_producs1(manage_producs1Template):
         min_extension_month = int(self.min_extension_month_text_box.text.strip()) if extension_allowed == "Yes" else 0
 
         default_status = self.default_select_percentage_amount
+        npa_status = self.npa_status
       #   emi_payment = [
       #       "Monthly" if self.button_1_1.enabled else "",
       #       "One Time" if self.button_2_1.enabled else "",
@@ -379,7 +381,7 @@ class manage_producs1(manage_producs1Template):
         anvil.server.call('product_details', self.id, product_name, product_group, product_description,
                           product_categories, processing_fee, extension_fee, membership_type, interest_type, max_amount,
                           min_amount, min_tenure, max_tenure, roi, foreclose_type, foreclosure_fee, extension_allowed,
-                          emi_payment, min_months, lapsed_fee, default_fee, default_fee_amount, npa, npa_amount, occupation,min_extension_month ,default_status )
+                          emi_payment, min_months, lapsed_fee, default_fee, default_fee_amount, npa, npa_amount, occupation,min_extension_month ,default_status , npa_status)
     
         # Update product ID and show success notification
         product_id = self.label_1.text
@@ -496,10 +498,10 @@ class manage_producs1(manage_producs1Template):
         self.npa.visible = True
         self.label_amount.visible = False
         self.text_amount.visible = False
-        self.npa_status
+        self.npa_status = "Non Performing Asset (%)"
       else:
         self.label_amount.visible = True
         self.text_amount.visible = True
         self.label_14.visible = False
         self.npa.visible = False
-        
+        self.npa_status = "Non Performing Asset (₹)"
