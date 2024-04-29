@@ -1,6 +1,6 @@
 container:
   type: ColumnPanel
-  properties: {col_widths: '{"HJXPJG":64,"ASUGOE":5,"GKGMVX":5,"GZEPAB":55,"YXEJAJ":5,"BRNMJF":55,"JZUUWF":20,"RDWIZR":20,"AMTGYB":20,"ZMXVPS":2,"OHQTCG":58,"OYIVEL":2,"RYPZCD":58,"VURQFS":2,"KLQWYU":58,"NZODAV":2,"ATRLXT":58,"MJLLCS":5,"ETGUAR":55}',
+  properties: {col_widths: '{"HJXPJG":67,"ASUGOE":2,"GKGMVX":2,"GZEPAB":58,"YXEJAJ":2,"BRNMJF":58,"JZUUWF":20,"RDWIZR":20,"AMTGYB":20,"ZMXVPS":2,"OHQTCG":58,"OYIVEL":2,"RYPZCD":58,"VURQFS":2,"KLQWYU":58,"NZODAV":2,"ATRLXT":58,"MJLLCS":2,"ETGUAR":58}',
     spacing_below: none, background: ''}
 components:
 - name: spacer_1
@@ -850,14 +850,15 @@ components:
         background: '', bold: true, underline: false, icon: ''}
       type: Label
       layout_properties: {}
-    - name: outlined_button_1_copy_1
-      properties: {role: tonal-button, align: center, tooltip: '', border: '', enabled: true,
-        foreground: Black, visible: true, text: 'Apply now                 ', font_size: 20,
-        font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
-        background: white, bold: true, underline: false, icon: ''}
-      type: Button
-      layout_properties: {}
-      event_bindings: {click: outlined_button_1_copy_1_click}
+  - name: spacer_41
+    properties: {height: '3'}
+    type: Spacer
+    layout_properties: {row: QDSSCF, width_xs: 4, col_xs: 6}
+  - name: button_10
+    properties: {text: Apply Now, align: center, foreground: black, bold: true, background: white,
+      font_size: 18}
+    type: Button
+    layout_properties: {row: QDSSCF, width_xs: 12, col_xs: 0}
   - name: label_3_copy_1
     properties: {role: null, align: center, tooltip: '', border: '', foreground: white,
       visible: true, text: 'Total Loan Amount Applied by Borrowers:
@@ -880,19 +881,11 @@ components:
       background: '', bold: true, underline: false, icon: ''}
     type: Label
     layout_properties: {row: QSFIAM, width_xs: 12, col_xs: 0}
-  - name: linear_panel_2_copy_1
-    properties: {}
-    type: LinearPanel
-    layout_properties: {row: QSFIAM, width_xs: 12, col_xs: 0}
-    components:
-    - name: outlined_button_2_copy_1
-      properties: {role: elevated-button, align: center, tooltip: '', border: '',
-        enabled: true, foreground: Black, visible: true, text: 'Invest Now               ',
-        font_size: 20, font: '', spacing_above: small, icon_align: left, spacing_below: small,
-        italic: false, background: white, bold: true, underline: false, icon: ''}
-      type: Button
-      layout_properties: {}
-      event_bindings: {click: outlined_button_2_copy_1_click}
+  - name: button_11
+    properties: {text: Invest Now, align: center, font_size: 18, background: white,
+      foreground: black, bold: true}
+    type: Button
+    layout_properties: {row: DMDWRR, width_xs: 12, col_xs: 0}
   - name: linear_panel_5_copy_1
     properties: {}
     type: LinearPanel
