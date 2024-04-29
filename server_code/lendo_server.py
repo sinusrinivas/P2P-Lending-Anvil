@@ -161,12 +161,11 @@ def add_lendor_father_details(another_person, father_name, father_dob, father_mb
         row[0]['guarantor_mobile_no'] = father_mbl_no
         row[0]['guarantor_profession'] = father_profession
         row[0]['guarantor_address'] = father_address
-        row[0].update()  # Update the row
-
+        row[0].update() 
         user = app_tables.fin_user_profile.get(customer_id=user_id)
         if user:
             user['form_count'] = 3.1
-            user.update()  # Update the user profile
+            user.update() 
      
 
 @anvil.server.callable
