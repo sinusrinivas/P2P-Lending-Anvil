@@ -99,7 +99,7 @@ components:
       type: Image
       layout_properties: {grid_position: 'UUTJMS,HMTBTZ AVMQZH,MAAPRH VFJNUL,OVLLLL'}
     - name: label_4
-      properties: {text: "Intrest Rate Starting as \nLow as 12%", align: center, font_size: 16}
+      properties: {text: Rates as low as 12%., align: center, font_size: 16}
       type: Label
       layout_properties: {grid_position: 'UUTJMS,HMTBTZ AVMQZH,MAAPRH GFYBGR,VWYBAV'}
     - name: image_4
@@ -125,12 +125,12 @@ components:
       layout_properties: {grid_position: 'UUTJMS,HMTBTZ DZSMGK,AQELZD'}
     - name: button_1
       properties: {text: Apply Now, align: left, bold: true, background: '#013065',
-        foreground: white}
+        foreground: white, font_size: 16}
       type: Button
       layout_properties: {grid_position: 'UUTJMS,HMTBTZ OBUWDM,NXWVGJ'}
     - name: image_2
       properties: {source: _/theme/vehicle_loan-removebg-preview.png, display_mode: shrink_to_fit,
-        height: 465.7777099609375, background: ''}
+        height: 456.25, background: ''}
       type: Image
       layout_properties: {grid_position: 'UUTJMS,LWCAPY'}
 - name: spacer_2
@@ -509,8 +509,8 @@ components:
   type: Spacer
   layout_properties: {grid_position: 'ZXRPDM,LYHKJT'}
 - name: button_2
-  properties: {text: Apply for Vehicle Loan, bold: true, background: '#013065', foreground: white,
-    align: left}
+  properties: {text: Apply for Car Loan, bold: true, background: '#013065', foreground: white,
+    align: left, font_size: 16}
   type: Button
   layout_properties: {grid_position: 'IUWYWT,SDVBJW'}
 - name: spacer_8

@@ -437,7 +437,7 @@ components:
       layout_properties: {x: 13.362518310546875, y: 141.3375244140625, width: 319.562}
   - name: button_5
     properties: {text: Register Now, align: full, bold: true, role: filled-button,
-      background: '#013065'}
+      background: '#013065', font_size: 16}
     type: Button
     layout_properties: {x: 638.8625000007451, y: 528.1875, width: 200}
 - name: spacer_19
@@ -856,7 +856,7 @@ components:
     layout_properties: {row: QDSSCF, width_xs: 4, col_xs: 6}
   - name: button_10
     properties: {text: Apply Now, align: center, foreground: black, bold: true, background: white,
-      font_size: 18}
+      font_size: 18, role: filled-button}
     type: Button
     layout_properties: {row: QDSSCF, width_xs: 12, col_xs: 0}
   - name: label_3_copy_1
@@ -1020,18 +1020,18 @@ components:
     type: Spacer
     layout_properties: {row: OOOZIM, width_xs: 3, col_xs: 2}
   - name: label_39
-    properties: {text: Join our expanding team as we grow!, font_size: 16}
+    properties: {text: Join our expanding team as we grow!, font_size: 18}
     type: Label
     layout_properties: {row: ROSIKZ, width_xs: 3, col_xs: 1}
   - name: label_41
     properties: {text: '"Join over 1 crore Indians who have already signed up. Will
         you be next?"', bold: true, font_size: 35}
     type: Label
-    layout_properties: {row: KSGGGV, width_xs: 5, col_xs: 1}
+    layout_properties: {row: SEEBTL, width_xs: 5, col_xs: 1}
   - name: image_22
-    properties: {source: _/theme/india map.png, display_mode: original_size, height: 340.22222900390625}
+    properties: {height: 350.24993896484375, source: _/theme/india map.png}
     type: Image
-    layout_properties: {row: KSGGGV, width_xs: 4, col_xs: 7}
+    layout_properties: {row: SEEBTL, width_xs: 4, col_xs: 7}
   - name: button_2
     properties: {text: Register Now, spacing_below: medium, background: '#094586',
       foreground: White, role: filled-button, font_size: 20}
