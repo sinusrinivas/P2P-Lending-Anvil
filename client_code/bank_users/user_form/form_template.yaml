@@ -110,12 +110,14 @@ components:
   type: Spacer
   layout_properties: {grid_position: 'BGBSFM,VCURYI'}
 - name: button_1
-  properties: {text: Borrower, bold: true, foreground: black, role: outlined-button}
+  properties: {text: Borrower, bold: true, foreground: black, role: outlined-button,
+    align: full}
   type: Button
   layout_properties: {grid_position: 'HWGPHQ,YGZKDB'}
   event_bindings: {click: button_1_click}
 - name: button_2
-  properties: {text: Lender, foreground: black, bold: true, role: outlined-button}
+  properties: {text: Lender, foreground: black, bold: true, role: outlined-button,
+    align: full}
   type: Button
   layout_properties: {grid_position: 'HWGPHQ,CRDTMV'}
   event_bindings: {click: button_2_click}
@@ -330,7 +332,7 @@ components:
     layout_properties: {row: SVNNKV, width_xs: 3, col_xs: 8, width: 141.25}
   - name: lendor_button
     properties: {text: 'Continue As  A Lendor         ', role: outlined-button, background: white,
-      foreground: Black, bold: true, font_size: 16}
+      foreground: Black, bold: true, font_size: 16, italic: false}
     type: Button
     layout_properties: {row: JIMUGO, width_xs: 8, col_xs: 2}
     event_bindings: {click: lendor_button_click}

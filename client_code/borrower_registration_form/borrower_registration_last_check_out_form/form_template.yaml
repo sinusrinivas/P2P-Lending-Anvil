@@ -104,7 +104,7 @@ components:
 - name: checkout_borrower_submit_button
   properties: {role: elevated-button, align: left, tooltip: '', border: '', enabled: true,
     foreground: 'theme:On Primary', visible: true, text: Submit, font_size: null,
-    font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+    font: '', spacing_above: small, icon_align: right, spacing_below: small, italic: false,
     background: '#0b2547', bold: true, underline: false, icon: 'fa:angle-double-right'}
   type: Button
   layout_properties: {grid_position: 'CDBLHM,ETZZOJ'}
