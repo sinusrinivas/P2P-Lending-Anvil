@@ -166,7 +166,55 @@ def add_lendor_father_details(another_person, father_name, father_dob, father_mb
         if user:
             user['form_count'] = 3.1
             user.update() 
-     
+
+@anvil.server.callable
+def add_lendor_mother_details(another_person, mother_name, mother_dob, mother_mbl_no, mother_profession, mother_address, user_id):
+    row = app_tables.fin_guarantor_details.search(customer_id=user_id)
+    if row:
+        row[0]['another_person'] = another_person
+        row[0]['guarantor_name'] = mother_name
+        row[0]['guarantor_date_of_birth'] = mother_dob
+        row[0]['guarantor_mobile_no'] = mother_mbl_no
+        row[0]['guarantor_profession'] = mother_profession
+        row[0]['guarantor_address'] = mother_address
+        row[0].update() 
+        user = app_tables.fin_user_profile.get(customer_id=user_id)
+        if user:
+            user['form_count'] = 3.1
+            user.update() 
+
+@anvil.server.callable
+def add_lendor_spouse_details(another_person, spouse_name, spouse_mob, spouse_mbl_no, spouse_profession, spouse_company, annual_earning, user_id):
+    row = app_tables.fin_guarantor_details.search(customer_id=user_id)
+    if row:
+        row[0]['another_person'] = another_person
+        row[0]['guarantor_name'] = spouse_name
+        row[0]['guarantor_date_of_birth'] = spouse_mob
+        row[0]['guarantor_mobile_no'] = spouse_mbl_no
+        row[0]['guarantor_profession'] = spouse_profession
+        row[0]['guarantor_company_name'] = spouse_company
+        row[0]['guarantor_annual_earning'] = annual_earning
+        row[0].update() 
+        user = app_tables.fin_user_profile.get(customer_id=user_id)
+        if user:
+            user['form_count'] = 3.1
+            user.update() 
+          
+@anvil.server.callable
+def add_lendor_anotherperson_details(another_person, related_person_name, related_person_dob, related_person_mob, related_person_profession, related_person_relation,user_id):
+    row = app_tables.fin_guarantor_details.search(customer_id=user_id)
+    if row:
+        row[0]['another_person'] = another_person
+        row[0]['related_person_name'] = related_person_name
+        row[0]['related_person_dob'] = related_person_dob
+        row[0]['guarantor_mobile_no'] = related_person_mob
+        row[0]['guarantor_profession'] = related_person_profession
+        row[0]['guarantor_person_relation'] = related_person_relation
+        row[0].update() 
+        user = app_tables.fin_user_profile.get(customer_id=user_id)
+        if user:
+            user['form_count'] = 3.1
+            user.update() 
 
 @anvil.server.callable
 def add_lendor_bank_details_form_1(account_name, account_type,account_number,bank_name, user_id):
