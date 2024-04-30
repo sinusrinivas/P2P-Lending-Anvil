@@ -6,21 +6,22 @@ import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 from .add_admin import add_admin
+from ....borrower_registration_form.dashboard import main_form_module
 
 class admin_management(admin_managementTemplate):
     def __init__(self, **properties):
         # Set Form properties and Data Bindings.
         self.init_components(**properties)
+        self.user_id = main_form_module.userId
+        print("aaaa", self.user_id)
         self.user_type = self.get_user_type()  # Fetch user_type based on customer_id
         self.check_user_type()
 
-    def get_user_type(self):
-        user = anvil.users.get_user()
-        if user:
-            email = user['email']
-            profile = app_tables.fin_user_profile.get(email_user=email)
-            if profile:
-                return profile['usertype']
+    def get_user_type(self):        
+        profile = app_tables.fin_user_profile.get(customer_id=self.user_id)
+        if profile:
+            print("userrrrrrrrrrrrrrrrrr", profile['usertype'])
+            return profile['usertype']
         return None
 
     def check_user_type(self):
