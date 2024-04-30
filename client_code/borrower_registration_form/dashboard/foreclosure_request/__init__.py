@@ -7,6 +7,7 @@ import anvil.users
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
+from .. import main_form_module as main_form_module
 
 
 class foreclosure_request(foreclosure_requestTemplate):
@@ -14,10 +15,7 @@ class foreclosure_request(foreclosure_requestTemplate):
         # Set Form properties and Data Bindings.
         self.init_components(**properties)
 
-        # Fetch the current user during form initialization
-        user = anvil.users.get_user()
-        # Check if a user is logged in
-        if user:
+        
             # Fetch the userprofile record based on the current user's email
             user_profile = app_tables.fin_user_profile.get(email_user=user['email'])
             # Check if the user profile record is found

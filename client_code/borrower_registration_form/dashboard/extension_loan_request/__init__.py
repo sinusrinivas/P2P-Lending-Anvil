@@ -12,6 +12,7 @@ class extension_loan_request(extension_loan_requestTemplate):
         # Set Form properties and Data Bindings.
         self.init_components(**properties)
         self.user_id = main_form_module.userId
+        print("user", self.user_id)
         
 
         # Fetch theuser profile record based on the current user's email
