@@ -126,7 +126,10 @@ class check(checkTemplate):
 
     def display_monthly_payment_details(self):
         # Display payment details for monthly payment
-        monthly_interest_rate = float(int(self.interest_rate) / 100) / 12
+        monthly_interest_rate = float(self.interest_rate / 100) / 12
+
+        print("Monthly Interest Rate:", monthly_interest_rate)
+      
         emi_denominator = ((1 + monthly_interest_rate) ** self.tenure_months) - 1
         emi_numerator = self.loan_amount * monthly_interest_rate * ((1 + monthly_interest_rate) ** self.tenure_months)
         emi = emi_numerator / emi_denominator
