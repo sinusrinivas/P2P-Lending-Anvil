@@ -1,6 +1,6 @@
 container:
   type: ColumnPanel
-  properties: {col_widths: '{"CLQEYE":30,"NVFGOU":4}'}
+  properties: {col_widths: '{"CLQEYE":30}'}
 components:
 - name: flow_panel_1
   properties: {role: null, vertical_align: full, spacing: huge, align: left, tooltip: '',
@@ -64,6 +64,9 @@ components:
         type: Link
         layout_properties: {}
         event_bindings: {click: link_6_click}
+    - name: logout_1
+      properties: {}
+      type: form:borrower_registration_form.logout
 - name: spacer_4
   properties: {height: 8}
   type: Spacer
@@ -109,21 +112,17 @@ components:
   properties: {height: 15.399932861328125}
   type: Spacer
   layout_properties: {grid_position: 'BGBSFM,VCURYI'}
-- name: button_3
-  properties: {role: outlined-button, align: right, tooltip: '', border: '', enabled: true,
-    foreground: black, visible: true, text: 'Borrower               ', font_size: 16,
-    font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
-    background: White, bold: true, underline: false, icon: ''}
+- name: button_1
+  properties: {text: Borrower, bold: true, foreground: black, role: outlined-button,
+    align: full}
   type: Button
-  layout_properties: {grid_position: 'HWGPHQ,JZJJYZ'}
-  event_bindings: {click: button_3_click}
+  layout_properties: {grid_position: 'HWGPHQ,YGZKDB'}
+  event_bindings: {click: button_1_click}
 - name: button_2
-  properties: {role: outlined-button, align: left, tooltip: '', border: '', enabled: true,
-    foreground: black, visible: true, text: 'Lendor                   ', font_size: 16,
-    font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
-    background: '', bold: true, underline: false, icon: ''}
+  properties: {text: Lender, foreground: black, bold: true, role: outlined-button,
+    align: full}
   type: Button
-  layout_properties: {grid_position: 'HWGPHQ,BNMTBH'}
+  layout_properties: {grid_position: 'HWGPHQ,CRDTMV'}
   event_bindings: {click: button_2_click}
 - type: Spacer
   properties: {height: 31}
@@ -336,7 +335,7 @@ components:
     layout_properties: {row: SVNNKV, width_xs: 3, col_xs: 8, width: 141.25}
   - name: lendor_button
     properties: {text: 'Continue As  A Lendor         ', role: outlined-button, background: white,
-      foreground: Black, bold: true, font_size: 16}
+      foreground: Black, bold: true, font_size: 16, italic: false}
     type: Button
     layout_properties: {row: JIMUGO, width_xs: 8, col_xs: 2}
     event_bindings: {click: lendor_button_click}

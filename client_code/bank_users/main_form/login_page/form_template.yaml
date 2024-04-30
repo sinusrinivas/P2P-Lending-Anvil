@@ -53,13 +53,12 @@ components:
       type: Link
       layout_properties: {}
       event_bindings: {click: link_6_click}
-    - name: login_signup_button_copy
-      properties: {role: filled-button, align: right, tooltip: '', border: '', enabled: true,
-        foreground: white, visible: true, text: Sign In, font_size: 16, font: '',
-        spacing_above: small, icon_align: left, spacing_below: small, italic: false,
-        background: '#013065', bold: true, underline: false, icon: ''}
+      components: []
+    - name: button_10_copy
+      properties: {text: Sign Up, background: '#013065', foreground: white, bold: true,
+        font_size: 16}
       type: Button
-      event_bindings: {click: login_signup_button_click}
+      event_bindings: {click: button_10_copy_click}
 - name: column_panel_2
   properties: {col_widths: '{"QCZGCQ":35,"AGIDMN":25}', background: '#094586'}
   type: ColumnPanel

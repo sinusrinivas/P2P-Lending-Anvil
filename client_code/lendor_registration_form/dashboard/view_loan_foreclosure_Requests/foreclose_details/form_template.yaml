@@ -175,10 +175,10 @@ components:
         layout_properties: {grid_position: 'BDOFIL,JJIDRT'}
         event_bindings: {click: decline_click}
         name: decline
-      - properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
-          foreground: 'theme:On Primary', visible: true, text: 'Back   ', font_size: null,
-          font: '', spacing_above: small, icon_align: right_edge, spacing_below: small,
-          italic: false, background: '#0b2547', bold: true, underline: false, icon: ''}
+      - properties: {role: elevated-button, align: center, tooltip: '', border: '',
+          enabled: true, foreground: white, visible: true, text: 'Back   ', font_size: null,
+          font: '', spacing_above: small, icon_align: left, spacing_below: small,
+          italic: false, background: '#0b2547', bold: true, underline: false, icon: 'fa:angle-double-left'}
         type: Button
         layout_properties: {grid_position: 'OSFMYP,JGWBFZ'}
         event_bindings: {click: button_1_click}

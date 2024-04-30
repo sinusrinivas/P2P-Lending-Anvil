@@ -28,9 +28,8 @@ class user_form(user_formTemplate):
     # Any code you write here will run before the form opens.
 
   def button_1_click(self, **event_args):
-     alert("Logged out sucessfully")
-     anvil.users.logout()
-     open_form('bank_users.main_form')
+    self.grid_panel_3.visible = True
+    self.grid_panel_3_copy_1.visible = False
 
   def home_main_form_link_click(self, **event_args):
     open_form("bank_users.user_form")
@@ -149,11 +148,7 @@ class user_form(user_formTemplate):
     self.grid_panel_3.visible = True
     self.grid_panel_3_copy_1.visible = False
 
-  def button_2_click(self, **event_args):
-    """This method is called when the button is clicked"""
-
-    self.grid_panel_3.visible = False
-    self.grid_panel_3_copy_1.visible = True
+  
 
   def image_2_copy_mouse_enter(self, x, y, **event_args):
     """This method is called when the mouse cursor enters this component"""
@@ -268,6 +263,11 @@ class user_form(user_formTemplate):
   def contact_main_form_link_click(self, **event_args):
     """This method is called when the link is clicked"""
     open_form('bank_users.main_form.contact_main_form')
+
+  def button_2_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    self.grid_panel_3.visible = False
+    self.grid_panel_3_copy_1.visible = True
 
 
   
