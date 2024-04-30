@@ -15,12 +15,11 @@ components:
     type: Image
     layout_properties: {width: 211.39999389648438}
     name: image_1_copy_copy_1
-- properties: {text: ' Logout           ', background: '#05264d', foreground: white,
-    bold: true, align: center}
+- name: button_1
+  properties: {text: Log Out, role: filled-button, background: '#0b2547', align: right}
   type: Button
-  layout_properties: {grid_position: 'LFJREP,WTXBXV'}
-  event_bindings: {click: logout_click}
-  name: logout
+  layout_properties: {grid_position: 'LFJREP,VPHKWG'}
+  event_bindings: {click: button_1_click}
 - properties: {role: null, vertical_align: top, spacing: huge, align: center, tooltip: '',
     border: '', foreground: '', visible: true, spacing_above: none, spacing_below: none,
     background: '#05264d'}

@@ -165,3 +165,9 @@ class dashboard(dashboardTemplate):
     def outlined_button_06_click(self, **event_args):
       """This method is called when the button is clicked"""
       open_form('borrower_registration_form.dashboard.discount_coupons')
+
+    def button_1_click(self, **event_args):
+      """This method is called when the button is clicked"""
+      alert("Logged out successfully")
+      anvil.users.logout()
+      open_form('bank_users.main_form')
