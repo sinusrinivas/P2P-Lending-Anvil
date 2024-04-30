@@ -245,14 +245,14 @@ components:
       layout_properties: {grid_position: 'TISPBT,BFUQZJ'}
       name: spacer_2
     - properties: {text: Rejected, align: right, background: '#FF0000', foreground: BLACK,
-        bold: true}
+        bold: true, font_size: 16}
       type: Button
       layout_properties: {grid_position: 'TISPBT,ZWPHOA'}
       event_bindings: {click: rejected_btn_click}
       name: rejected_btn
     - type: Button
       properties: {role: null, align: left, tooltip: '', border: '', enabled: true,
-        foreground: 'theme:On Primary', visible: true, text: Accepted, font_size: null,
+        foreground: 'theme:On Primary', visible: true, text: Accepted, font_size: 16,
         font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
         background: '#0b2547', bold: true, underline: false, icon: ''}
       layout_properties: {grid_position: 'TISPBT,ONLKVG'}
