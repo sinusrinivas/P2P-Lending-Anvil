@@ -16,11 +16,14 @@ class admin_management(admin_managementTemplate):
 
     def get_user_type(self):
         user = anvil.users.get_user()
+        print("userrrrrrrrrrrrrrrrrr", user)
         if user:
             email = user['email']
+            print("userrrrrrrrrrrrrrrrrr", email)
             profile = app_tables.fin_user_profile.get(email_user=email)
             if profile:
                 return profile['usertype']
+                print("userrrrrrrrrrrrrrrrrr", profile['usertype'])
         return None
 
     def check_user_type(self):
