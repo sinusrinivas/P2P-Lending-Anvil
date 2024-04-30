@@ -82,7 +82,7 @@ components:
   properties: {role: elevated-button, align: left, tooltip: '', border: '', enabled: true,
     foreground: 'theme:On Primary', visible: true, text: Submit, font_size: null,
     font: '', spacing_above: small, icon_align: right, spacing_below: small, italic: false,
-    background: '#0b2547', bold: true, underline: false, icon: 'fa:angle-double-right'}
+    background: '#0b2547', bold: true, underline: false, icon: ''}
   type: Button
   layout_properties: {grid_position: 'TWREMW,KCLPXL'}
   event_bindings: {click: button_2_click}

@@ -20,6 +20,7 @@ components:
   - name: logout_1
     properties: {}
     type: form:borrower_registration_form.logout
+    layout_properties: {expand: true}
 - type: ColumnPanel
   properties: {role: outlined-card, col_widths: '{"EJEVIJ":18,"KVDELN":37,"RWJHGP":20,"EWXFBB":40,"KKRGQQ":20,"QUTBBB":40,"ZFYWQR":20,"THCDRO":40,"ELRYCE":20,"JGHWBK":40}',
     wrap_on: mobile}
