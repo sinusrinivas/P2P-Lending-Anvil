@@ -107,7 +107,7 @@ components:
   layout_properties: {grid_position: 'ZMBEDP,GXCQQH'}
 - name: label_1
   properties: {align: center, text: Borrower, bold: true, font_size: 21, role: null,
-    underline: true}
+    underline: false}
   type: Label
   layout_properties: {grid_position: 'LXWAQB,RZQDBA'}
 - name: grid_panel_3
@@ -179,7 +179,7 @@ components:
   type: Spacer
   layout_properties: {grid_position: 'DQEHMX,CYPRVQ'}
 - name: label_10
-  properties: {align: center, text: Lendor, underline: true, bold: true, font_size: 21}
+  properties: {align: center, text: Lendor, underline: false, bold: true, font_size: 21}
   type: Label
   layout_properties: {grid_position: 'ESIXCB,ZOKLMN'}
 - name: grid_panel_3_copy_1

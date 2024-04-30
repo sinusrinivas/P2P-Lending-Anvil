@@ -213,3 +213,7 @@ class login_page(login_pageTemplate):
     """This method is called when the link is clicked"""
     open_form('admin.user_issue.user_bugreports')
 
+  def button_10_copy_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    open_form('bank_users.main_form.investNow_applyForLoan')
+

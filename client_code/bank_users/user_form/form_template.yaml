@@ -1,6 +1,6 @@
 container:
   type: ColumnPanel
-  properties: {col_widths: '{"CLQEYE":30,"NVFGOU":4}'}
+  properties: {col_widths: '{"CLQEYE":30}'}
 components:
 - name: flow_panel_1
   properties: {role: null, vertical_align: full, spacing: huge, align: left, tooltip: '',
@@ -109,21 +109,15 @@ components:
   properties: {height: 15.399932861328125}
   type: Spacer
   layout_properties: {grid_position: 'BGBSFM,VCURYI'}
-- name: button_3
-  properties: {role: outlined-button, align: right, tooltip: '', border: '', enabled: true,
-    foreground: black, visible: true, text: 'Borrower               ', font_size: 16,
-    font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
-    background: White, bold: true, underline: false, icon: ''}
+- name: button_1
+  properties: {text: Borrower, bold: true, foreground: black, role: outlined-button}
   type: Button
-  layout_properties: {grid_position: 'HWGPHQ,JZJJYZ'}
-  event_bindings: {click: button_3_click}
+  layout_properties: {grid_position: 'HWGPHQ,YGZKDB'}
+  event_bindings: {click: button_1_click}
 - name: button_2
-  properties: {role: outlined-button, align: left, tooltip: '', border: '', enabled: true,
-    foreground: black, visible: true, text: 'Lendor                   ', font_size: 16,
-    font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
-    background: '', bold: true, underline: false, icon: ''}
+  properties: {text: Lender, foreground: black, bold: true, role: outlined-button}
   type: Button
-  layout_properties: {grid_position: 'HWGPHQ,BNMTBH'}
+  layout_properties: {grid_position: 'HWGPHQ,CRDTMV'}
   event_bindings: {click: button_2_click}
 - type: Spacer
   properties: {height: 31}
