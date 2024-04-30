@@ -8,13 +8,14 @@ from anvil.tables import app_tables
 from datetime import date, datetime
 from ..... import admin
 import re
-
+from .....borrower_registration_form.dashboard import main_form_module
 
 class add_admin(add_adminTemplate):
     def __init__(self, **properties):
         # Set Form properties and Data Bindings.
         self.init_components(**properties)
         # self.user_id = main_form_module.userId
+        self.user_id = main_form_module.userId
         self.date_lable.text = date.today().strftime('%d %b %Y')
         self.customer_id = anvil.server.call('generate_admin_id')
         print(self.customer_id)
@@ -25,18 +26,18 @@ class add_admin(add_adminTemplate):
         role_options = [row['role'] for row in app_tables.fin_admin_role.search()]
         # Set the dropdown options
         self.role.items = role_options
-        user = anvil.users.get_user()
+        # user = anvil.users.get_user()
         # Check if a user is logged in
-        if user:
+        # if user:
             # Fetch the user profile record based on the current user's email
-            user_profile = app_tables.fin_user_profile.get(email_user=user['email'])
+        user_profile = app_tables.fin_user_profile.get(customer_id=self.user_id)
             # Check if the user profile record is found
-            if user_profile:
+        if user_profile:
                 # Access the user ID from the user profile record
-                self.user_mail = user_profile['email_user']
-                self.user_name = user_profile['full_name']
-                print(self.user_mail)
-                print(self.user_name)
+            self.user_mail = user_profile['email_user']
+            self.user_name = user_profile['full_name']
+            print(self.user_mail)
+            print(self.user_name)
 
     def save_all_fields_click(self, **event_args):
         email = self.admin_email.text 

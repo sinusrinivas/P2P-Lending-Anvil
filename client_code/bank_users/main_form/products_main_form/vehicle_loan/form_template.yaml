@@ -466,11 +466,19 @@ components:
   properties: {height: 32}
   type: Spacer
   layout_properties: {grid_position: 'QOULUH,WYAGRA'}
+- name: label_16
+  properties: {text: Vehicle Loan Overview, bold: true, align: center, font_size: 30}
+  type: Label
+  layout_properties: {grid_position: 'BSBPDZ,SBZVNB'}
+- name: label_17
+  properties: {text: Car Loan, align: left, bold: true, font_size: 30}
+  type: Label
+  layout_properties: {grid_position: 'MKCVWY,MQBVCR'}
 - name: label_14
   properties: {text: 'Discover a Range of Benefits with Our Website. With Competitive
       Rates, Flexible Terms, and Expedited Approval Processes, We Make Your Vehicle
       Financing Journey Seamless. So Why Stress? Let Us Handle the Details While You
-      Focus on Finding Your Perfect Ride.', align: left, font_size: 20, bold: true}
+      Focus on Finding Your Perfect Ride.', align: left, font_size: 18, bold: false}
   type: Label
   layout_properties: {grid_position: 'KNZTCW,ISUYJC'}
 - name: label_15
@@ -517,4 +525,8 @@ components:
   properties: {height: '32'}
   type: Spacer
   layout_properties: {grid_position: 'EULUJK,HFRSMP'}
+- name: label_18
+  properties: {text: Two-Wheeler Loans, bold: true}
+  type: Label
+  layout_properties: {grid_position: 'CWJYFR,OJEUKI'}
 is_package: true
