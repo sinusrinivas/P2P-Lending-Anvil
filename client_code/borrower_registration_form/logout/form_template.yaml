@@ -5,12 +5,12 @@ is_package: true
 toolbox_item: {title: Logout}
 custom_component: true
 components:
-- name: login_signup_button
-  properties: {text: 'Logout                   ', background: '#05264d', foreground: 'theme:On
-      Primary', bold: true, align: right}
+- name: button_1
+  properties: {text: Log Out, background: '#05264d', foreground: white, bold: true,
+    font_size: null, align: right}
   type: Button
-  layout_properties: {grid_position: 'QHZLDR,FYLPQM'}
-  event_bindings: {click: login_signup_button_click}
+  layout_properties: {grid_position: 'CGFXEG,NWWOPW'}
+  event_bindings: {click: button_1_click}
 container:
   type: ColumnPanel
   properties: {visible: true, col_spacing: huge}
