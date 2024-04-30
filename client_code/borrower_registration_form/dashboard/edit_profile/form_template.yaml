@@ -9,10 +9,10 @@ components:
     spacing_below: small, background: '', horizontal_align: left}
   type: Image
   layout_properties: {grid_position: 'SIKYXE,UKKXTI', full_width_row: true}
-- type: form:borrower_registration_form.logout
+- name: logout_1
   properties: {}
-  name: logout_1
-  layout_properties: {grid_position: 'SIKYXE,EBGNBO', full_width_row: true}
+  type: form:borrower_registration_form.logout
+  layout_properties: {grid_position: 'SIKYXE,AWZDHY'}
 - type: form:borrower_registration_form.dashboard.Navigation_form_dashboard
   properties: {}
   name: navigation_form_dashboard_1

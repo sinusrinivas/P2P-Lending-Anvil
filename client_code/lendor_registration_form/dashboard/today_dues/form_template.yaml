@@ -18,7 +18,7 @@ components:
   - type: form:borrower_registration_form.logout
     properties: {}
     name: logout_1
-    layout_properties: {grid_position: 'DSJUSS,TBQDDG'}
+    layout_properties: {grid_position: 'DSJUSS,TBQDDG', full_width_row: true}
   - type: form:lendor_registration_form.Navigation_bar_lender_dashbord
     properties: {}
     name: navigation_bar_lender_dashbord_1

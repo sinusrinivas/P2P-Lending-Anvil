@@ -12,14 +12,10 @@ components:
       spacing_below: small, background: '', horizontal_align: left}
     type: Image
     layout_properties: {grid_position: 'LRGVLZ,DVGZYJ', full_width_row: true}
-  - name: column_panel_1
-    properties: {}
-    type: ColumnPanel
-    layout_properties: {grid_position: 'LRGVLZ,YDSHFK'}
   - name: logout_1
     properties: {}
     type: form:borrower_registration_form.logout
-    layout_properties: {grid_position: 'LRGVLZ,CCGUYA'}
+    layout_properties: {grid_position: 'LRGVLZ,CCGUYA', full_width_row: true}
   - name: navigation_bar_lender_dashbord_1
     properties: {}
     type: form:lendor_registration_form.Navigation_bar_lender_dashbord

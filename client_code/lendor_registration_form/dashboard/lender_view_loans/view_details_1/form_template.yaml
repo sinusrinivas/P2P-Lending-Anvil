@@ -17,7 +17,7 @@ components:
   - type: form:borrower_registration_form.logout
     properties: {}
     name: logout_1
-    layout_properties: {width: 185.025, grid_position: 'ASDWEI,YREKHQ'}
+    layout_properties: {width: 185.025, grid_position: 'ASDWEI,YREKHQ', expand: true}
 - type: form:lendor_registration_form.Navigation_bar_lender_dashbord
   properties: {}
   name: navigation_bar_lender_dashbord_1

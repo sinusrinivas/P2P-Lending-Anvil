@@ -18,7 +18,7 @@ components:
   - name: logout_1
     properties: {}
     type: form:borrower_registration_form.logout
-    layout_properties: {grid_position: 'SRJHKV,TKIBTN'}
+    layout_properties: {grid_position: 'SRJHKV,TKIBTN', full_width_row: true}
 - name: navigation_bar_main_lender_1
   properties: {}
   type: form:lendor_registration_form.navigation_bar_main_lender

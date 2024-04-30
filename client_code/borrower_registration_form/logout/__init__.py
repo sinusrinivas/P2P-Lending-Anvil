@@ -14,8 +14,9 @@ class logout(logoutTemplate):
     self.init_components(**properties)
 
     # Any code you write here will run before the form opens.
+    
 
-  def login_signup_button_click(self, **event_args):
+  def button_1_click(self, **event_args):
     """This method is called when the button is clicked"""
     alert("Logged out sucessfully")
     anvil.users.logout()
