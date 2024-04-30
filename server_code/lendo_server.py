@@ -180,7 +180,7 @@ def add_lendor_mother_details(another_person, mother_name, mother_dob, mother_mb
         row[0].update() 
         user = app_tables.fin_user_profile.get(customer_id=user_id)
         if user:
-            user['form_count'] = 3.2
+            user['form_count'] = 3.1
             user.update() 
 
 @anvil.server.callable
@@ -197,7 +197,7 @@ def add_lendor_spouse_details(another_person, spouse_name, spouse_mob, spouse_mb
         row[0].update() 
         user = app_tables.fin_user_profile.get(customer_id=user_id)
         if user:
-            user['form_count'] = 3.3
+            user['form_count'] = 3.1
             user.update() 
           
 @anvil.server.callable
@@ -213,7 +213,7 @@ def add_lendor_anotherperson_details(another_person, related_person_name, relate
         row[0].update() 
         user = app_tables.fin_user_profile.get(customer_id=user_id)
         if user:
-            user['form_count'] = 3.4
+            user['form_count'] = 3.1
             user.update() 
 
 @anvil.server.callable
