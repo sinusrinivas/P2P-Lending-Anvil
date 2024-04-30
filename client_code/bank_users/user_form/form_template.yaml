@@ -64,6 +64,9 @@ components:
         type: Link
         layout_properties: {}
         event_bindings: {click: link_6_click}
+    - name: logout_1
+      properties: {}
+      type: form:borrower_registration_form.logout
 - name: spacer_4
   properties: {height: 8}
   type: Spacer
