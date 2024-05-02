@@ -21,6 +21,7 @@ class add_general_dropdowns(add_general_dropdownsTemplate):
         self.repeating_panel_2.items = app_tables.fin_present_address.search()
         self.repeating_panel_3.items = app_tables.fin_duration_at_address.search()
         self.repeating_panel_4.items = app_tables.fin_occupation_type.search()
+        self.repeating_panel_5.items = app_tables.fin_occupation_type.search()
   
   def gender_button_click(self, **event_args):
     """This method is called when the button is clicked"""
@@ -93,4 +94,14 @@ class add_general_dropdowns(add_general_dropdownsTemplate):
   def button_1_copy_3_click(self, **event_args):
     """This method is called when the button is clicked"""
     open_form('admin.dashboard.manage_cms.manage_dropdowns')
+
+  def choose_role_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    entered_data = self.text_box_5.text.strip()
+    if not entered_data:
+        alert("Please enter a valid data.")
+        return
+    new_row = app_tables.fin_admin_role.add_row( role=entered_data)
+    self.text_box_5.text = ' '
+    self.refresh()
 
