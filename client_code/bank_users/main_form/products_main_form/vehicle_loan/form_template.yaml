@@ -1012,6 +1012,10 @@ components:
     properties: {height: '12'}
     type: Spacer
     layout_properties: {grid_position: 'JURQGQ,XUENTH'}
+- name: spacer_35
+  properties: {height: '15'}
+  type: Spacer
+  layout_properties: {grid_position: 'MCCOWI,GGKPYA'}
 - name: column_panel_2
   properties: {background: white, col_widths: '{"XHAILN":12,"SPJHOO":8,"WNWVDK":16,"YBBTWP":12,"QNSOAB":12}'}
   type: ColumnPanel
