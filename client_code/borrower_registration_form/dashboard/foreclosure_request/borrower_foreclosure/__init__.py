@@ -96,32 +96,32 @@ class borrower_foreclosure(borrower_foreclosureTemplate):
         self.min_months = int(self.min_months)
 
         loan_id = selected_row['loan_id']
-      # Fetching the last row data for the specified loan_id from the fin_emi_table
-      last_emi_rows = app_tables.fin_emi_table.search(loan_id=loan_id)
-      try:
-          if last_emi_rows:
-              # Convert LiveObjectProxy to list
-              last_emi_list = list(last_emi_rows)
-              
-              # Sort the list of rows based on the 'emi_number' column in reverse order
-              last_emi_list.sort(key=lambda x: x['emi_number'], reverse=True)
-              
-              # Extract the 'emi_number' from the first row, which represents the highest 'emi_number'
-              total_payments_made = last_emi_list[0]['emi_number']
-          else:
-              total_payments_made = 0
-              raise ValueError("No EMIs found for this loan.")
-          
-          print("total payment made", total_payments_made)
-          # Set the label text
-          self.label_tpm.text = f"{total_payments_made} months"
-          self.total_payments_made = total_payments_made
-      
-      except ValueError as e:
-          alert(str(e))
-
-
-
+        # Fetching the last row data for the specified loan_id from the fin_emi_table
+        last_emi_rows = app_tables.fin_emi_table.search(loan_id=loan_id)
+        try:
+            if last_emi_rows:
+                # Convert LiveObjectProxy to list
+                last_emi_list = list(last_emi_rows)
+                
+                if last_emi_list:
+                    # Sort the list of rows based on the 'emi_number' column in reverse order
+                    last_emi_list.sort(key=lambda x: x['emi_number'], reverse=True)
+                    
+                    # Extract the 'emi_number' from the first row, which represents the highest 'emi_number'
+                    total_payments_made = last_emi_list[0]['emi_number']
+                    
+                    print("Total payment made:", total_payments_made)
+                    # Set the label text
+                    self.label_tpm.text = f"{total_payments_made} months"
+                    self.total_payments_made = total_payments_made
+                else:
+                    total_payments_made = 0
+                    alert("No EMIs found for this loan.")                    
+            else:
+                total_payments_made = 0
+                alert("No EMIs found for this loan.")                
+        except ValueError as e:
+            alert(str(e))
         
     def button_foreclose_click(self, **event_args):
         selected_row = self.selected_row
