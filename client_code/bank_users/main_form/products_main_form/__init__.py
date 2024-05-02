@@ -13,7 +13,7 @@ from anvil.js.window import navigator
 class products_main_form(products_main_formTemplate):
   def __init__(self, **properties):
     
-    init_components(**properties)
+    self.init_components(**properties)
     
 
   def login_signup_button_click(self, **event_args):
