@@ -306,18 +306,20 @@ def get_user_points(id):
         credit_card_loan = user['credit_card_loans'].lower() if user['credit_card_loans'] else None
         vehicle_loan = user['vehicle_loan'].lower() if user['vehicle_loan'] else None
 
-        if 18 <= user_age <= 24:
-            user_age_range = '18-24'
-        elif 25 <= user_age <= 30:
-            user_age_range = '25-30'
-        elif 31 <= user_age <= 36:
-            user_age_range = '31-36'
-        elif 37 <= user_age <= 40:
-            user_age_range = '37-40'
-        elif 41 <= user_age <= 50:
-            user_age_range = '41-50'
-        else:
-            user_age_range = '51+'
+        user_age_range = None
+        if user_age is not None:
+           if 18 <= user_age <= 24:
+              user_age_range = '18-24'
+           elif 25 <= user_age <= 30:
+              user_age_range = '25-30'
+           elif 31 <= user_age <= 36:
+              user_age_range = '31-36'
+           elif 37 <= user_age <= 40:
+              user_age_range = '37-40'
+           elif 41 <= user_age <= 50:
+              user_age_range = '41-50'
+           else:
+              user_age_range = '51+'
 
         search_categories = {
             'gender': gender,
