@@ -14,7 +14,7 @@ class edit_occupation(edit_occupationTemplate):
     self.init_components(**properties)
 
     # Any code you write here will run before the form opens.
-    self.text_box_1.text = selected_row['company_type']
+    self.text_box_1.text = selected_row['occupation_type']
         # Store the selected row for later use
     self.selected_row = selected_row
     
@@ -27,7 +27,7 @@ class edit_occupation(edit_occupationTemplate):
         return
 
         # Update the 'borrower_gender' field in the database
-    self.selected_row['company_type'] = updated_gender
+    self.selected_row['occupation_type'] = updated_gender
     self.selected_row.update()
         # Close the form
     alert("Changes saved successfully!")
@@ -42,7 +42,7 @@ class edit_occupation(edit_occupationTemplate):
         )
     if confirmation:
             # Get the name of the group to be deleted
-            group_name = self.selected_row['company_type']
+            group_name = self.selected_row['occupation_type']
 
             # Delete the rows from the product_group table
             self.selected_row.delete()

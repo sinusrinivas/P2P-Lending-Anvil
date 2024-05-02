@@ -82,6 +82,10 @@ components:
         Container', bold: true, underline: false, icon: ''}
     type: Label
     layout_properties: {grid_position: 'ODRYFP,ZZJKMB', full_width_row: true}
+  - name: label_1
+    properties: {align: center}
+    type: Label
+    layout_properties: {grid_position: 'OKPXQP,SVBMOW'}
   - name: column_panel_1
     properties: {role: elevated-card, col_widths: '{"HHHSPC":5,"WEIOJZ":5,"QWMZYK":5,"MFMGKL":5,"USBOTC":5,"WLDUEO":5,"MGIMBO":5,"VZWXTC":5,"ESGBBP":5,"TNGHPY":5,"ISKHHZ":5,"XUPYMU":5}',
       background: 'theme:Secondary Container'}
