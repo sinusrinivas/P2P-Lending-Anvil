@@ -3,7 +3,7 @@ container:
   type: ColumnPanel
   properties: {col_widths: '{"VNZTIG":40}'}
 components:
-- properties: {col_widths: '{"HXJYTW":40,"CPZEVH":20}', role: outlined-card}
+- properties: {col_widths: '{"HXJYTW":40,"CPZEVH":20}', role: elevated-card}
   type: ColumnPanel
   layout_properties: {grid_position: 'NLOMGD,VNZTIG'}
   name: column_panel_1
