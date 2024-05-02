@@ -471,12 +471,12 @@ components:
   type: Label
   layout_properties: {grid_position: 'GOCANU,ZYEKGP'}
 - name: content_panel_copy_2_copy_copy_copy
-  properties: {background: 'theme:Primary Container', col_widths: '{"MHPMOV":35,"FXLGRW":25}'}
+  properties: {background: '#3d3d5c', col_widths: '{"MHPMOV":35,"FXLGRW":25}'}
   type: ColumnPanel
   layout_properties: {grid_position: 'LIBFWY,ELOJCP', full_width_row: true}
   components:
   - name: label_17
-    properties: {text: Car Loans, align: left, bold: true, font_size: 30}
+    properties: {text: Car Loans, align: center, bold: true, font_size: 30, foreground: white}
     type: Label
     layout_properties: {grid_position: 'XPSOJE,XYFIKW'}
   - name: label_15
@@ -484,27 +484,27 @@ components:
         life. With sky-high car loan rates prevailing in the market and the burden
         of accumulating debt, purchasing a car may appear out of reach. However, with
         GTPL''s Vehicle loans, turning that dream into reality is now within grasp.',
-      align: left, font_size: 18}
+      align: left, font_size: 18, foreground: white}
     type: Label
     layout_properties: {grid_position: 'GQBPSE,MHPMOV WZJSEF,EKGSAT'}
   - name: label_15_copy
     properties: {text: 'At GTPL, we offer borrowers flexible Car Loans options with
         affordable loan rates that won''t break the bank. Our custom-tailored car
         finance plans cater to your specific needs, providing some of the most competitive
-        rates in the market.', align: left, font_size: 18}
+        rates in the market.', align: left, font_size: 18, foreground: white}
     type: Label
     layout_properties: {grid_position: 'GQBPSE,MHPMOV WZDSBI,JXTWCE'}
   - name: label_15_copy_2
     properties: {text: 'With our fully online and paperless application process, applying
         for a vehicle loan is seamless. Once you submit your application, expect quick
         processing times, with funds disbursed directly to your bank account within
-        just a few working days.', align: left, font_size: 18}
+        just a few working days.', align: left, font_size: 18, foreground: white}
     type: Label
     layout_properties: {grid_position: 'GQBPSE,MHPMOV PFATPN,BOXULC'}
   - name: label_15_copy_3
     properties: {text: 'With our fixed but low Vehicle Loan interest rates, you can
         comfortably repay what you borrow through affordable EMIs.', align: left,
-      font_size: 18}
+      font_size: 18, foreground: white}
     type: Label
     layout_properties: {grid_position: 'GQBPSE,MHPMOV APLKOJ,ZUXJKR'}
   - name: image_11
@@ -525,12 +525,12 @@ components:
   type: Spacer
   layout_properties: {grid_position: 'EULUJK,HFRSMP'}
 - name: content_panel_copy_2_copy_copy_copy_2
-  properties: {background: white, col_widths: '{"TRVCAL":25,"KFODCZ":35}'}
+  properties: {background: 'theme:Dark Overlay 2', col_widths: '{"TRVCAL":25,"KFODCZ":35}'}
   type: ColumnPanel
   layout_properties: {grid_position: 'CWJYFR,QFGNPT', full_width_row: true}
   components:
   - name: label_18
-    properties: {text: Two-Wheeler Loans, bold: true, font_size: 30, align: right}
+    properties: {text: Two-Wheeler Loans, bold: true, font_size: 30, align: center}
     type: Label
     layout_properties: {grid_position: 'AYGWGY,ODLAXH'}
   - name: image_12
@@ -581,40 +581,41 @@ components:
   type: Spacer
   layout_properties: {grid_position: 'XHGHYY,PTPCAX'}
 - name: content_panel_copy_2_copy_copy_copy_2_copy
-  properties: {background: 'theme:Primary Container'}
+  properties: {background: '#0047b3', col_widths: '{"CDWLJQ":35,"VGAVHR":25}'}
   type: ColumnPanel
   layout_properties: {grid_position: 'MFGUYH,WAMXPP', full_width_row: true}
   components:
   - name: label_18_copy
-    properties: {text: Pre-Owned Car Loans, bold: true, font_size: 30}
+    properties: {text: Pre-Owned Car Loans, bold: true, font_size: 30, background: '',
+      foreground: white, align: center}
     type: Label
     layout_properties: {grid_position: 'ELNYCA,VQGYFZ'}
   - name: label_22
     properties: {text: 'Looking to purchase a pre-owned car? GTPL offers flexible
         loans with competitive rates, making it easier to turn your dream of owning
-        a pre-owned vehicle into reality.', font_size: 18}
+        a pre-owned vehicle into reality.', font_size: 18, foreground: white}
     type: Label
     layout_properties: {grid_position: 'XVPHKG,CDWLJQ OWKLSE,EBXCCW'}
   - name: label_23
     properties: {text: 'Our streamlined online application process ensures a hassle-free
         experience, with quick processing times and funds disbursed directly to your
-        bank account within days.', font_size: 18}
+        bank account within days.', font_size: 18, foreground: white}
     type: Label
     layout_properties: {grid_position: 'XVPHKG,CDWLJQ GVWJYJ,MVESGJ'}
   - name: label_24
     properties: {text: ' With our fixed but low-interest rates, you can comfortably
         repay what you borrow through affordable EMIs, ensuring that your financial
-        commitments remain manageable.', font_size: 18}
+        commitments remain manageable.', font_size: 18, foreground: white}
     type: Label
     layout_properties: {grid_position: 'XVPHKG,CDWLJQ JKITMB,JSSJIB'}
   - name: label_37
     properties: {text: 'Choose GTPL for your pre-owned car financing needs and embark
         on the journey to owning the perfect vehicle for your lifestyle, without the
-        burden of excessive debt.', font_size: 18}
+        burden of excessive debt.', font_size: 18, foreground: white}
     type: Label
     layout_properties: {grid_position: 'XVPHKG,CDWLJQ JDIZQW,EBHQFO'}
   - name: image_13
-    properties: {source: _/theme/car loan.png, display_mode: original_size}
+    properties: {source: _/theme/car loan.png, display_mode: shrink_to_fit, height: 350.77777099609375}
     type: Image
     layout_properties: {grid_position: 'XVPHKG,VGAVHR'}
 - name: spacer_12
