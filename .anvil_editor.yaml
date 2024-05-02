@@ -143,6 +143,7 @@ unique_ids:
     ? borrower_registration_form.star_1_borrower_registration_form_2_employment.star_1_borrower_registration_form_2_employment_business_3
     : '17005720020403876226355.3249187'
     bank_users.main_form.products_main_form.vehicle_loan: '1714373140105534036320579.5613'
+    admin.dashboard.manage_cms.add_general_dropdowns.edit_role: '1714630291881120023489371.63876'
     admin.dashboard.loan_management.open_loans.ItemTemplate3: '171101040560926993222468.07667'
     lendor_registration_form.dashboard.view_loan_foreclosure_Requests: '169996304408474987603925.53683'
     bank_users.main_form.products_main_form: '1700563558734712481921773.0997'
@@ -392,6 +393,7 @@ unique_ids:
     admin.dashboard.manage_bessem.add_subcategory.ItemTemplate61: '1709809594197903989799556.9601'
     admin.dashboard.manage_cms.add_general_dropdowns.ItemTemplate81: '1710398615966170714845760.2745'
     borrower_registration_form.dashboard.today_dues.ItemTemplate22: '1706717092294394749212131.0225'
+    admin.dashboard.manage_cms.add_general_dropdowns.ItemTemplate103: '1714630088370458312306521.9559'
     borrower_registration_form.dashboard.application_tracker.ItemTemplate68: '1709621192303999275960211.7518'
     admin.dashboard.manage_cms.add_general_dropdowns.edit_occupation: '1710411462796305921760191.0538'
     admin.dashboard.loan_management.approved_loans.RowTemplate2: '1700739710762570959395619.5336'
