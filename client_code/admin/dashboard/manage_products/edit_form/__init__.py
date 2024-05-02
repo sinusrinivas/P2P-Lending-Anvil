@@ -123,7 +123,7 @@ class edit_form(edit_formTemplate):
           else:
               # Update only if interest type is Variable
               #if self.radio_button_2.selected:  # Checking if interest type is Variable
-                  data['roi'] = int(self.roi.text)  # Update the interest rate
+                  data['roi'] = float(self.roi.text)  # Update the interest rate
                   Notification("Details updated successfully").show()
                   open_form('admin.dashboard.manage_products')
               # else:
