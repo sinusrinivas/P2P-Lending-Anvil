@@ -312,7 +312,7 @@ components:
       layout_properties: {grid_position: 'THVHBG,XHENYW'}
   - name: column_panel_05
     properties: {role: null, tooltip: '', border: '', foreground: '', visible: false,
-      wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{"DRKQUU":15,"EYVNEL":35,"ZLWYDP":10,"BIBMFR":15,"LRLEPV":36}',
+      wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{"DRKQUU":15,"EYVNEL":35,"ZLWYDP":10,"BIBMFR":15,"LRLEPV":44}',
       spacing_below: small, background: ''}
     type: ColumnPanel
     layout_properties: {grid_position: 'UYUVXO,TYXXAV'}

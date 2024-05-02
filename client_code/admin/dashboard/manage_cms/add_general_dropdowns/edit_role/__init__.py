@@ -15,7 +15,7 @@ class edit_role(edit_roleTemplate):
     self.init_components(**properties)
 
     # Any code you write here will run before the form opens.
-    self.text_box_1.text = selected_row['gender']
+    self.text_box_1.text = selected_row['role']
         # Store the selected row for later use
     self.selected_row = selected_row
     
@@ -28,7 +28,7 @@ class edit_role(edit_roleTemplate):
         return
 
         # Update the 'borrower_gender' field in the database
-    self.selected_row['gender'] = updated_gender
+    self.selected_row['role'] = updated_gender
     self.selected_row.update()
         # Close the form
     alert("Changes saved successfully!")
@@ -43,7 +43,7 @@ class edit_role(edit_roleTemplate):
         )
     if confirmation:
             # Get the name of the group to be deleted
-            group_name = self.selected_row['gender']
+            group_name = self.selected_row['role']
 
             # Delete the rows from the product_group table
             self.selected_row.delete()
