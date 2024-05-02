@@ -21,6 +21,7 @@ class add_general_dropdowns(add_general_dropdownsTemplate):
         self.repeating_panel_2.items = app_tables.fin_present_address.search()
         self.repeating_panel_3.items = app_tables.fin_duration_at_address.search()
         self.repeating_panel_4.items = app_tables.fin_occupation_type.search()
+        self.repeating_panel_5.items = app_tables.fin_admin_role.search()
   
   def gender_button_click(self, **event_args):
     """This method is called when the button is clicked"""
@@ -58,6 +59,7 @@ class add_general_dropdowns(add_general_dropdownsTemplate):
     self.column_panel_02.visible = False
     self.column_panel_03.visible = False
     self.column_panel_04.visible = False
+    self.column_panel_05.visible = False
 
   def present(self, **event_args):
     """This method is called when the button is clicked"""
@@ -65,6 +67,7 @@ class add_general_dropdowns(add_general_dropdownsTemplate):
     self.column_panel_02.visible = True
     self.column_panel_03.visible = False
     self.column_panel_04.visible = False
+    self.column_panel_05.visible = False
 
   def duration(self, **event_args):
     """This method is called when the button is clicked"""
@@ -72,6 +75,7 @@ class add_general_dropdowns(add_general_dropdownsTemplate):
     self.column_panel_02.visible = False
     self.column_panel_03.visible = True
     self.column_panel_04.visible = False
+    self.column_panel_05.visible = False
 
   def occupation_click(self, **event_args):
     """This method is called when the button is clicked"""
@@ -89,8 +93,27 @@ class add_general_dropdowns(add_general_dropdownsTemplate):
     self.column_panel_02.visible = False
     self.column_panel_03.visible = False
     self.column_panel_04.visible = True
+    self.column_panel_05.visible = False
 
   def button_1_copy_3_click(self, **event_args):
     """This method is called when the button is clicked"""
     open_form('admin.dashboard.manage_cms.manage_dropdowns')
+
+  def choose_role_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    entered_data = self.text_box_5.text.strip()
+    if not entered_data:
+        alert("Please enter a valid data.")
+        return
+    new_row = app_tables.fin_admin_role.add_row( role=entered_data)
+    self.text_box_5.text = ' '
+    self.refresh()
+
+  def role(self, **event_args):
+    """This method is called when the button is clicked"""
+    self.column_panel_01.visible = False
+    self.column_panel_02.visible = False
+    self.column_panel_03.visible = False
+    self.column_panel_04.visible = False
+    self.column_panel_05.visible = True
 

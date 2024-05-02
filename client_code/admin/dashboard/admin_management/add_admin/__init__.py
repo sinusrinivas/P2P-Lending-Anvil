@@ -104,4 +104,8 @@ class add_admin(add_adminTemplate):
         self.role.selected_value = None
         self.create_password_text.text = ""
         self.re_enter_password.text = ""
+
+    def button_1_click(self, **event_args):
+      """This method is called when the button is clicked"""
+      open_form('admin.dashboard.admin_management')
       
