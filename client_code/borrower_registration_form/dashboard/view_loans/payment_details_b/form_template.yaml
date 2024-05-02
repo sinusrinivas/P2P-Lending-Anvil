@@ -81,7 +81,7 @@ components:
     layout_properties: {grid_position: 'JSMWLK,OYOLEB', full_width_row: true}
     name: label_2
   - name: label_1
-    properties: {}
+    properties: {align: center}
     type: Label
     layout_properties: {grid_position: 'CCKVVW,BHVHUH'}
   - properties: {role: elevated-card, background: 'theme:Secondary Container'}
