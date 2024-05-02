@@ -116,16 +116,12 @@ class borrower_foreclosure(borrower_foreclosureTemplate):
                     self.total_payments_made = total_payments_made
                 else:
                     total_payments_made = 0
-                    alert("No EMIs found for this loan.")
-                    open_form('borrower_registration_form.dashboard.foreclosure_request')
+                    alert("No EMIs found for this loan.")                    
             else:
                 total_payments_made = 0
-                alert("No EMIs found for this loan.")
-                open_form('borrower_registration_form.dashboard.foreclosure_request')
+                alert("No EMIs found for this loan.")                
         except ValueError as e:
             alert(str(e))
-            # open_form('borrower_registration_form.dashboard.foreclosure_request')
-
         
     def button_foreclose_click(self, **event_args):
         selected_row = self.selected_row
