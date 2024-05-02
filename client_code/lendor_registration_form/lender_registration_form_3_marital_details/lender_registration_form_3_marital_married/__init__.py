@@ -50,7 +50,7 @@ class lender_registration_form_3_marital_married(lender_registration_form_3_mari
 
            self.selected_radio_button = user_data['another_person']
            self.spouse_name_text.text=user_data['guarantor_name']
-           self.date_picker_3.date =user_data['guarantor_date_of_birth']
+           self.date_picker_3.date =user_data['guarantor_marriage_date']
            self.spouse_mbl_no_text.text=user_data['guarantor_mobile_no']
            self.drop_down_1.selected_value = user_data['guarantor_profession']
            self.spouse_companyname_text.text = user_data['guarantor_company_name']
