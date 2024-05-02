@@ -51,7 +51,6 @@ components:
       properties: {role: tonal-button, align: full, tooltip: '', border: '', enabled: true,
         foreground: 'theme:On Primary', visible: true, text: 'MANAGE PRODUCTS
 
-
           ', font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small,
         italic: false, background: '#05264d', bold: false, underline: false, icon: ''}
       name: button_1_copy
