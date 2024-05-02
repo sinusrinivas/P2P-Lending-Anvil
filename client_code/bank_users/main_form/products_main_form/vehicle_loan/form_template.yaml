@@ -2,6 +2,10 @@ container:
   type: ColumnPanel
   properties: {col_widths: '{}'}
 components:
+- name: spacer_20
+  properties: {height: ''}
+  type: Spacer
+  layout_properties: {grid_position: 'MVQMLO,AZKEFS'}
 - name: content_panel_copy_2
   properties: {background: 'theme:Surface'}
   type: ColumnPanel
@@ -525,7 +529,7 @@ components:
   type: Spacer
   layout_properties: {grid_position: 'EULUJK,HFRSMP'}
 - name: content_panel_copy_2_copy_copy_copy_2
-  properties: {background: 'theme:Dark Overlay 2', col_widths: '{"TRVCAL":25,"KFODCZ":35}'}
+  properties: {background: 'theme:Primary Overlay 2', col_widths: '{"TRVCAL":25,"KFODCZ":35}'}
   type: ColumnPanel
   layout_properties: {grid_position: 'CWJYFR,QFGNPT', full_width_row: true}
   components:
@@ -627,4 +631,139 @@ components:
     foreground: white, align: left, font_size: 14}
   type: Button
   layout_properties: {grid_position: 'VNIYEC,PRRFHY'}
+- name: spacer_13
+  properties: {height: 32}
+  type: Spacer
+  layout_properties: {grid_position: 'BCYPKU,OUYIYS'}
+- name: label_38
+  properties: {text: How to Apply for Vehicle Loans, align: center, bold: true, font_size: 30}
+  type: Label
+  layout_properties: {grid_position: 'CNOJKO,ONSKGC'}
+- name: label_44
+  properties: {text: Easy and Hassle Free Online Application Process, font_size: 28,
+    align: center}
+  type: Label
+  layout_properties: {grid_position: 'GTTRXZ,XBCZXP'}
+- name: spacer_23
+  properties: {height: '15'}
+  type: Spacer
+  layout_properties: {grid_position: 'BSSFOT,XPBDEN'}
+- name: image_11_copy
+  properties: {source: _/theme/OAP.png, display_mode: shrink_to_fit}
+  type: Image
+  layout_properties: {grid_position: 'XBKMRH,XQNCBI YGCYZT,LDNNZA'}
+- name: label_45
+  properties: {text: 'Complete Online
+
+      Application Form', align: center, font_size: 18, bold: true}
+  type: Label
+  layout_properties: {grid_position: 'XBKMRH,XQNCBI VNCBSY,LYNYOO'}
+- name: image_12_copy
+  properties: {source: _/theme/ELABG.png, display_mode: shrink_to_fit}
+  type: Image
+  layout_properties: {grid_position: 'XBKMRH,ZCMATI HHLBNU,NDMPEI'}
+- name: label_46
+  properties: {text: Evaluation of Loan Application by GTPL, align: center, font_size: 18,
+    bold: true}
+  type: Label
+  layout_properties: {grid_position: 'XBKMRH,ZCMATI BMDJNJ,KQSQDM'}
+- name: image_13_copy
+  properties: {source: _/theme/LLABL.png, display_mode: shrink_to_fit, height: 157.25}
+  type: Image
+  layout_properties: {grid_position: 'XBKMRH,WEGYDI XFRPZD,BUSELU'}
+- name: spacer_14
+  properties: {height: '34.24993896484375'}
+  type: Spacer
+  layout_properties: {grid_position: 'XBKMRH,WEGYDI DNQHGL,NOGANQ'}
+- name: label_47_copy_4
+  properties: {text: Loan Listed in ‘Active Borrowers’ List, align: center, font_size: 18,
+    bold: true}
+  type: Label
+  layout_properties: {grid_position: 'XBKMRH,WEGYDI PXXVSK,UMTYTZ'}
+- name: spacer_25
+  properties: {height: '10'}
+  type: Spacer
+  layout_properties: {grid_position: 'XBKMRH,WEGYDI IWUSHQ,KZFCOI'}
+- name: image_14
+  properties: {source: _/theme/icons8-coins-100 (1).png, display_mode: shrink_to_fit,
+    height: 151.25}
+  type: Image
+  layout_properties: {grid_position: 'XBKMRH,UZJKPE YMCNAE,QOEJGM'}
+- name: spacer_21
+  properties: {height: '38'}
+  type: Spacer
+  layout_properties: {grid_position: 'XBKMRH,UZJKPE NHUYYD,HMBXNX'}
+- name: label_48
+  properties: {text: "Funding of Loan\n by Investors", align: center, font_size: 18,
+    bold: true}
+  type: Label
+  layout_properties: {grid_position: 'XBKMRH,UZJKPE QHVNXP,MPDKVK'}
+- name: image_15
+  properties: {source: _/theme/prepayment-removebg-preview.png, display_mode: shrink_to_fit,
+    height: 150.25}
+  type: Image
+  layout_properties: {grid_position: 'XBKMRH,GDPYYC AZQVDM,EYQRME'}
+- name: spacer_22
+  properties: {height: '37.25'}
+  type: Spacer
+  layout_properties: {grid_position: 'XBKMRH,GDPYYC VFZMNK,PAXVIW'}
+- name: label_49
+  properties: {text: 'Documentation & Disbursement of Loan
+
+      ', align: center, font_size: 18, bold: true}
+  type: Label
+  layout_properties: {grid_position: 'XBKMRH,GDPYYC ZPCKCR,YKDOAW'}
+- name: button_2_copy_copy_copy
+  properties: {text: Apply Now, bold: true, background: '#013065', foreground: white,
+    align: center, font_size: 14}
+  type: Button
+  layout_properties: {grid_position: 'VBWGPP,WAJWGV'}
+- name: spacer_24
+  properties: {height: 32}
+  type: Spacer
+  layout_properties: {grid_position: 'KUZNMG,HYZBJT'}
+- name: label_50
+  properties: {text: Eligibility Criteria, align: center, font_size: 30, bold: true}
+  type: Label
+  layout_properties: {grid_position: 'BMBZVI,OBXOEV'}
+- name: spacer_26
+  properties: {height: 32}
+  type: Spacer
+  layout_properties: {grid_position: ''}
+- name: content_panel_copy_copy_3_copy_3_copy
+  properties: {col_widths: '{"UXYOZO":2,"undefined":53,"SRATKM":25}', background: 'theme:Surface
+      Variant'}
+  type: ColumnPanel
+  layout_properties: {grid_position: 'RTYSVY,HHWBLD', full_width_row: true}
+  components:
+  - name: spacer_10_copy_3_copy
+    properties: {height: '20'}
+    type: Spacer
+    layout_properties: {grid_position: 'OQSSZM,XQLQGF'}
+  - name: label_29_copy_3_copy
+    properties: {text: 'Vehicle Loans Eligibility - Who can apply for a Vehicle Loans?',
+      align: center, font_size: 22, bold: true, foreground: black}
+    type: Label
+    layout_properties: {grid_position: 'YIBYQM,USTSCN'}
+  - name: spacer_11_copy_3_copy
+    properties: {height: '20'}
+    type: Spacer
+    layout_properties: {grid_position: 'JJFCGU,JFUOIJ'}
+  - name: spacer_22_copy
+    properties: {height: 32}
+    type: Spacer
+    layout_properties: {grid_position: ',UXYOZO'}
+  - name: label_31_copy_3_copy
+    properties: {text: "    \u2714  Resident of India\n\n    \u2714 Age between 21\
+        \ years to 60 years\n\n    \u2714 Have a valid bank account in India\n\n \
+        \   \u2714 Have a minimum monthly income of Rs. 20,000\n\n    \u2714 Have\
+        \ a valid PAN and Aadhar card\n\n    \u2714 Should not be a wilful defaulter\n",
+      font_size: 18, foreground: black}
+    type: Label
+    layout_properties: {grid_position: ''}
+  - name: image_16
+    properties: {source: _/theme/icons8-business-goal-100.png, height: 251.66668701171875,
+      role: null}
+    type: Image
+    layout_properties: {grid_position: ',SRATKM'}
 is_package: true
