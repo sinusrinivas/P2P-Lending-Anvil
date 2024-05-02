@@ -525,7 +525,7 @@ components:
   type: Spacer
   layout_properties: {grid_position: 'EULUJK,HFRSMP'}
 - name: content_panel_copy_2_copy_copy_copy_2
-  properties: {background: 'theme:Primary Container', col_widths: '{"TRVCAL":25,"KFODCZ":35}'}
+  properties: {background: white, col_widths: '{"TRVCAL":25,"KFODCZ":35}'}
   type: ColumnPanel
   layout_properties: {grid_position: 'CWJYFR,QFGNPT', full_width_row: true}
   components:
@@ -589,6 +589,34 @@ components:
     properties: {text: Pre-Owned Car Loans, bold: true, font_size: 30}
     type: Label
     layout_properties: {grid_position: 'ELNYCA,VQGYFZ'}
+  - name: label_22
+    properties: {text: 'Looking to purchase a pre-owned car? GTPL offers flexible
+        loans with competitive rates, making it easier to turn your dream of owning
+        a pre-owned vehicle into reality.', font_size: 18}
+    type: Label
+    layout_properties: {grid_position: 'XVPHKG,CDWLJQ OWKLSE,EBXCCW'}
+  - name: label_23
+    properties: {text: 'Our streamlined online application process ensures a hassle-free
+        experience, with quick processing times and funds disbursed directly to your
+        bank account within days.', font_size: 18}
+    type: Label
+    layout_properties: {grid_position: 'XVPHKG,CDWLJQ GVWJYJ,MVESGJ'}
+  - name: label_24
+    properties: {text: ' With our fixed but low-interest rates, you can comfortably
+        repay what you borrow through affordable EMIs, ensuring that your financial
+        commitments remain manageable.', font_size: 18}
+    type: Label
+    layout_properties: {grid_position: 'XVPHKG,CDWLJQ JKITMB,JSSJIB'}
+  - name: label_37
+    properties: {text: 'Choose GTPL for your pre-owned car financing needs and embark
+        on the journey to owning the perfect vehicle for your lifestyle, without the
+        burden of excessive debt.', font_size: 18}
+    type: Label
+    layout_properties: {grid_position: 'XVPHKG,CDWLJQ JDIZQW,EBHQFO'}
+  - name: image_13
+    properties: {source: _/theme/car loan.png, display_mode: original_size}
+    type: Image
+    layout_properties: {grid_position: 'XVPHKG,VGAVHR'}
 - name: spacer_12
   properties: {height: '10'}
   type: Spacer
