@@ -17,6 +17,7 @@ components:
     type: Button
     layout_properties: {grid_position: 'FSSYHS,RKKUNA', full_width_row: true}
     name: button_1
+    event_bindings: {click: button_1_click}
   - properties: {role: outlined-card, spacing: huge, align: center, background: '#05264d',
       foreground: 'theme:On Primary'}
     type: FlowPanel
