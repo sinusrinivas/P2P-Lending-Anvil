@@ -20,7 +20,7 @@ components:
   event_bindings: {click: button_2_click}
 - name: button_2_copy
   properties: {role: outlined-button, align: full, tooltip: '', border: '', enabled: true,
-    foreground: 'theme:On Primary', visible: true, text: ' CHOOSE CATEGORIES            ',
+    foreground: 'theme:On Primary', visible: true, text: ' ADD CATEGORIES            ',
     font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small,
     italic: false, background: '#05264d', bold: true, underline: false, icon: 'fa:cube'}
   type: Button
