@@ -100,8 +100,8 @@ components:
       event_bindings: {click: button_10_click}
       name: button_10
     - properties: {role: outlined-button, align: center, tooltip: '', border: '',
-        enabled: true, foreground: 'theme:On Primary', visible: true, text: '     Manage
-          Bessem         ', font_size: null, font: '', spacing_above: small, icon_align: left,
+        enabled: true, foreground: 'theme:On Primary', visible: true, text: '    Manage
+          Ascend Score', font_size: null, font: '', spacing_above: small, icon_align: left,
         spacing_below: small, italic: false, background: '#0b2547', bold: true, underline: false,
         icon: 'fa:edit'}
       type: Button
