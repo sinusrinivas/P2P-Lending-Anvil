@@ -274,7 +274,7 @@ components:
   type: Spacer
   layout_properties: {grid_position: 'CZXDIW,HTBLRL'}
 - name: label_30
-  properties: {text: Why you should invest through Kotak, bold: true, align: center,
+  properties: {text: Why you should invest through GTPL, bold: true, align: center,
     font_size: 30}
   type: Label
   layout_properties: {grid_position: 'ZLEBRM,CWWZBJ'}
@@ -439,18 +439,18 @@ components:
     properties: {text: Register Now, align: full, bold: true, role: filled-button,
       background: '#013065', font_size: 16}
     type: Button
-    layout_properties: {x: 638.8625000007451, y: 528.1875, width: 200}
+    layout_properties: {x: 633.5694990158081, y: 532.7500076293945, width: 200}
 - name: spacer_19
   properties: {height: 32}
   type: Spacer
   layout_properties: {grid_position: 'KPMSUL,IDNDNP'}
 - name: label_40
-  properties: {text: Kotak Minimizes Your Risk, bold: true, font_size: 29, align: center}
+  properties: {text: GTPL Minimizes Your Risk, bold: true, font_size: 29, align: center}
   type: Label
   layout_properties: {grid_position: 'PEXAFZ,QZNZUG'}
 - name: label_42
-  properties: {font_size: 22, text: 'At Kotak, you can build a strong and diverse
-      portfolio to ensure maximum returns at minimum risk.'}
+  properties: {font_size: 22, text: 'At GTPL, you can build a strong and diverse portfolio
+      to ensure maximum returns at minimum risk.'}
   type: Label
   layout_properties: {grid_position: 'ICSCSG,GUECHA'}
 - name: spacer_22
@@ -517,8 +517,8 @@ components:
   type: Label
   layout_properties: {grid_position: 'SIPMDQ,DMBIXF BJNZVJ,BUQZFH'}
 - name: label_51
-  properties: {text: 'If needed, Lendbox has an in-house team for collection and an
-      RBI registered recovery agency.', font_size: 18}
+  properties: {text: 'If needed, GTPL has an in-house team for collection and an RBI
+      registered recovery agency.', font_size: 18}
   type: Label
   layout_properties: {grid_position: 'SIPMDQ,DMBIXF JALJWL,SEFEBM'}
 - name: spacer_27
@@ -539,7 +539,7 @@ components:
   type: Spacer
   layout_properties: {grid_position: 'OXKNLX,AGXXMG'}
 - name: label_9
-  properties: {text: 'Kotak digital platform facilitates seamless connections between
+  properties: {text: 'GTPL digital platform facilitates seamless connections between
       creditworthy businesses seeking funding and investors eager to fuel their expansion,
       fostering a vibrant ecosystem of growth and opportunity', align: center, font_size: 20}
   type: Label
@@ -556,7 +556,7 @@ components:
 - name: label_10
   properties: {text: '
 
-      Business applies for ﬁnance on Kotak', align: center, font_size: 20}
+      Borrower applies for Loan on GTPL', align: center, font_size: 20}
   type: Label
   layout_properties: {grid_position: 'BGOTWK,XXIPLN LDUNEZ,EMAVPJ'}
 - name: image_5
@@ -567,7 +567,7 @@ components:
 - name: label_11
   properties: {text: '
 
-      Approved business listed on our marketplace', align: center, font_size: 20}
+      Approved Loan listed on our marketplace', align: center, font_size: 20}
   type: Label
   layout_properties: {grid_position: 'BGOTWK,PRCSLT OBEGGH,AVGGCR'}
 - name: image_6
@@ -577,8 +577,7 @@ components:
 - name: label_12
   properties: {text: '
 
-      Investors fund finance request on the platform', align: center, bold: false,
-    font_size: 20}
+      Investors fund Loan request on the platform', align: center, bold: false, font_size: 20}
   type: Label
   layout_properties: {grid_position: 'BGOTWK,PTRZYW JEGIDN,XAPYYC'}
 - name: image_7
@@ -589,7 +588,7 @@ components:
 - name: label_13
   properties: {text: '
 
-      Business gets loan and investors get monthly returns', align: center, font_size: 20}
+      Borrower gets loan and Investors get monthly returns', align: center, font_size: 20}
   type: Label
   layout_properties: {grid_position: 'BGOTWK,FKRLFV DOZWJT,LZIAIC'}
 - name: spacer_2
@@ -597,7 +596,7 @@ components:
   type: Spacer
   layout_properties: {grid_position: 'LCUPAG,KHUANQ'}
 - name: label_15
-  properties: {text: Why you should Borrow through Kotak, align: center, font: '',
+  properties: {text: Why you should Borrow through GTPL, align: center, font: '',
     font_size: 30, bold: true}
   type: Label
   layout_properties: {grid_position: 'GERKWX,DKAZVL'}
@@ -637,7 +636,7 @@ components:
   type: Label
   layout_properties: {grid_position: 'RUUBND,WMRMLE ZIBFWQ,ETAAAQ'}
 - name: label_21
-  properties: {text: 'Kotak provides a seamless user experience in terms of ease of
+  properties: {text: 'GTPL provides a seamless user experience in terms of ease of
       transaction, ability to view detailed account statements, transaction analysis,
       and many more features', font_size: 18, align: center}
   type: Label
@@ -655,7 +654,7 @@ components:
   type: Label
   layout_properties: {grid_position: 'RUUBND,UTGGPW GYXXKV,RVTSGV'}
 - name: label_22
-  properties: {text: 'At Kotak, the Borrowers can simply prepay their loans at their
+  properties: {text: 'At GTPL, the Borrowers can simply prepay their loans at their
       own convenience without any charges whatsoever and as many times as they wish.',
     align: center, font_size: 18}
   type: Label
@@ -674,8 +673,8 @@ components:
   layout_properties: {grid_position: 'RUUBND,GEESPO EFOOBH,GOSWPG'}
 - name: label_46
   properties: {text: 'We have a large pool of investors who are looking to invest
-      in individual projects approved by Kotak. Once your loan project is listed on
-      Kotak, it gets funded within a few days', font_size: 18, align: center}
+      in individual projects approved by GTPL. Once your loan project is listed on
+      GTPL, it gets funded within a few days', font_size: 18, align: center}
   type: Label
   layout_properties: {grid_position: 'RUUBND,GEESPO GMIZKY,KKGPWJ'}
 - name: spacer_9
@@ -687,7 +686,7 @@ components:
   type: Label
   layout_properties: {grid_position: 'RNCYEY,OTFUIM'}
 - name: label_53
-  properties: {text: 'Kotak is a platform for people with non-traditional approach
+  properties: {text: 'GTPL is a platform for people with non-traditional approach
       to borrowing, which ultimately results in lower interest rates on the financing
       amount. Borrowers must meet the following criteria to be considered for listing
       on our platform', font_size: 20}
@@ -1011,33 +1010,33 @@ components:
   properties: {height: 32}
   type: Spacer
   layout_properties: {grid_position: 'GARQWW,LDCTBY'}
-- name: grid_panel_1
-  properties: {background: '#EBE1ED'}
-  type: GridPanel
-  layout_properties: {grid_position: 'FQBPSY,UMXIKL', full_width_row: true}
+- name: column_panel_1_copy
+  properties: {background: '#EBE1ED', col_widths: '{"IDTHWJ":35,"YLEZQD":25}'}
+  type: ColumnPanel
+  layout_properties: {grid_position: 'ZLZRBP,CQMBXR', full_width_row: true}
   components:
-  - name: spacer_21
-    properties: {height: 32}
-    type: Spacer
-    layout_properties: {row: OOOZIM, width_xs: 3, col_xs: 2}
   - name: label_39
     properties: {text: Join our expanding team as we grow!, font_size: 18}
     type: Label
-    layout_properties: {row: ROSIKZ, width_xs: 3, col_xs: 1}
+    layout_properties: {grid_position: 'XUVRAM,ACYTUF'}
   - name: label_41
     properties: {text: '"Join over 1 crore Indians who have already signed up. Will
-        you be next?"', bold: true, font_size: 35}
+        you be next?"', bold: true, font_size: 40}
     type: Label
-    layout_properties: {row: SEEBTL, width_xs: 5, col_xs: 1}
-  - name: image_22
-    properties: {height: 350.24993896484375, source: _/theme/india map.png}
-    type: Image
-    layout_properties: {row: SEEBTL, width_xs: 4, col_xs: 7}
+    layout_properties: {grid_position: 'RTEJIV,IDTHWJ KRVIXW,YFFNWG'}
+  - name: spacer_21
+    properties: {height: 186.39996337890625}
+    type: Spacer
+    layout_properties: {grid_position: 'RTEJIV,IDTHWJ TOABYD,WSPWJQ'}
   - name: button_2
     properties: {text: Register Now, spacing_below: medium, background: '#094586',
-      foreground: White, role: filled-button, font_size: 20}
+      foreground: White, role: filled-button, font_size: 20, align: left}
     type: Button
-    layout_properties: {row: ABBVHK, width_xs: 3, col_xs: 1}
+    layout_properties: {grid_position: 'RTEJIV,IDTHWJ YHWQMV,XNIINL'}
+  - name: image_22
+    properties: {height: 452, source: _/theme/india map.png, display_mode: zoom_to_fill}
+    type: Image
+    layout_properties: {grid_position: 'RTEJIV,YLEZQD'}
 - name: label_2_copy
   properties: {role: null, align: center, tooltip: '', border: '', foreground: black,
     visible: true, text: 'Hear from our investors
