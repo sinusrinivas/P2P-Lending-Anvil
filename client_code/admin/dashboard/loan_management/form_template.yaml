@@ -109,3 +109,7 @@ components:
     properties: {height: 32}
     name: spacer_1
     layout_properties: {grid_position: 'CZYROF,UDGJOQ'}
+  - name: spacer_3
+    properties: {height: 32}
+    type: Spacer
+    layout_properties: {grid_position: 'NQKSIL,CTTITZ'}
