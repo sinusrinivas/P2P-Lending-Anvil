@@ -130,8 +130,8 @@ components:
       layout_properties: {x: 0, y: 0, width: 970.0000610351562}
       name: label_1
 - name: content_panel_copy_copy_3_copy_3_copy
-  properties: {col_widths: '{"RAQZHX":20,"HBXSQZ":20,"FQUOWV":20}', background: '#Edf0f4',
-    visible: true}
+  properties: {col_widths: '{"RAQZHX":20,"HBXSQZ":20,"FQUOWV":20,"TJPHYC":30,"KWEVVW":30}',
+    background: '#Edf0f4', visible: true}
   type: ColumnPanel
   layout_properties: {grid_position: 'YXSOFH,DLFMGI', full_width_row: true}
   components:
@@ -157,6 +157,7 @@ components:
       properties: {text: Manage Admins, bold: true, foreground: black, font_size: 16}
       type: Button
       layout_properties: {grid_position: 'LFNPCJ,OTMDIA'}
+      event_bindings: {click: button_14_click}
   - name: spacer_14
     properties: {height: '1.5'}
     type: Spacer
@@ -175,6 +176,7 @@ components:
       properties: {text: Loan Management, bold: true, foreground: black, font_size: 16}
       type: Button
       layout_properties: {grid_position: 'WBDDAG,QOALFI'}
+      event_bindings: {click: button_15_click}
   - name: spacer_19
     properties: {height: '1.5'}
     type: Spacer
@@ -193,6 +195,7 @@ components:
       properties: {text: Manage Revenue Share, foreground: black, bold: true, font_size: 16}
       type: Button
       layout_properties: {grid_position: 'KZEJQV,HXGEOK'}
+      event_bindings: {click: button_20_click}
   - name: spacer_20
     properties: {height: '1.5'}
     type: Spacer
@@ -211,6 +214,7 @@ components:
       properties: {text: Manage Issues, foreground: black, bold: true, font_size: 16}
       type: Button
       layout_properties: {grid_position: 'VXGGJT,QMFGMX'}
+      event_bindings: {click: button_21_click}
   - name: content_panel_copy_copy_3_copy_3_copy_copy_copy_3
     properties: {col_widths: '{}', background: white, role: elevated-card}
     type: ColumnPanel
@@ -224,6 +228,7 @@ components:
       properties: {text: Manage Borrowers, foreground: black, bold: true, font_size: 16}
       type: Button
       layout_properties: {grid_position: 'KISNYU,FEDRLJ'}
+      event_bindings: {click: button_12_click}
   - name: spacer_15
     properties: {height: '1.5'}
     type: Spacer
@@ -242,6 +247,7 @@ components:
       properties: {text: Manage Products, foreground: black, bold: true, font_size: 16}
       type: Button
       layout_properties: {grid_position: 'DQWJPZ,XLLMWG'}
+      event_bindings: {click: button_16_click}
   - name: spacer_18
     properties: {height: '3'}
     type: Spacer
@@ -261,6 +267,7 @@ components:
         font_size: 16}
       type: Button
       layout_properties: {grid_position: 'GCPECZ,OWFQHQ'}
+      event_bindings: {click: button_19_click}
   - name: spacer_21
     properties: {height: '1.5'}
     type: Spacer
@@ -279,6 +286,7 @@ components:
       properties: {text: Performance Tracker, foreground: black, bold: true, font_size: 16}
       type: Button
       layout_properties: {grid_position: 'XATRPB,LFKIEK'}
+      event_bindings: {click: button_22_click}
   - name: content_panel_copy_copy_3_copy_3_copy_copy_copy_6
     properties: {col_widths: '{}', background: white, role: elevated-card}
     type: ColumnPanel
@@ -289,10 +297,11 @@ components:
         height: '100'}
       type: Image
       layout_properties: {grid_position: 'YIGLKI,KSUAYJ'}
-    - name: button_1
+    - name: manage_lender
       properties: {text: Manage Lenders, foreground: black, bold: true, font_size: 16}
       type: Button
       layout_properties: {grid_position: 'HWUTYO,BMGPHA'}
+      event_bindings: {click: manage_lender_click}
   - name: spacer_16
     properties: {height: '1.5'}
     type: Spacer
@@ -310,6 +319,7 @@ components:
       properties: {text: Manage Settings, foreground: black, bold: true, font_size: 16}
       type: Button
       layout_properties: {grid_position: 'QNOGIE,OOAQVF'}
+      event_bindings: {click: button_18_click}
   - name: spacer_17
     properties: {height: '1.5'}
     type: Spacer
@@ -327,6 +337,7 @@ components:
       properties: {text: Manage CMS, foreground: black, bold: true, font_size: 16}
       type: Button
       layout_properties: {grid_position: 'HTLBLJ,LNMXIO'}
+      event_bindings: {click: button_17_click}
   - name: spacer_22
     properties: {height: '1.5'}
     type: Spacer
@@ -344,6 +355,7 @@ components:
       properties: {text: Manage Ascend Score, foreground: black, bold: true, font_size: 16}
       type: Button
       layout_properties: {grid_position: 'CMCGJO,QEJJZP'}
+      event_bindings: {click: button_23_click}
   - name: spacer_23
     properties: {height: '4'}
     type: Spacer
