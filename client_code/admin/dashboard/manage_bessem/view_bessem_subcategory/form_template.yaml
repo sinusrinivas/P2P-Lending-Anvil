@@ -24,9 +24,14 @@ components:
     type: DataGrid
     components: []
     layout_properties: {grid_position: 'PCZEDG,SNPCKJ'}
+  - name: label_1_copy
+    properties: {font_size: 25, align: center, background: '#98c1d9', text: Ascend Score Subcategories,
+      role: outlined-card}
+    type: Label
+    layout_properties: {grid_position: 'ENIIBY,FSCMBS'}
   - name: column_panel_1
     properties: {col_widths: '{"TKCQPH":20,"DOKEZW":15,"KAHZQW":10,"JUYOLL":15}',
-      role: outlined-card, background: 'theme:Secondary Container'}
+      role: outlined-card, background: '#98c1d9'}
     type: ColumnPanel
     layout_properties: {grid_position: 'ATGXMY,DBZQDK'}
     components:
