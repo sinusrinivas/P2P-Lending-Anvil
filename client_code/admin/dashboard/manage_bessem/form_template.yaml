@@ -19,7 +19,7 @@ components:
     layout_properties: {grid_position: 'RZOWVD,JBQYLV', full_width_row: true}
   - name: label_1
     properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
-      visible: true, text: Manage Beseem, font_size: 18, font: '', spacing_above: small,
+      visible: true, text: Manage Ascend Score, font_size: 18, font: '', spacing_above: small,
       icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
       underline: false, icon: ''}
     type: Label
