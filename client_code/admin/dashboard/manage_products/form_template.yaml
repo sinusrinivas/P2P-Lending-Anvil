@@ -4,7 +4,7 @@ container:
   properties: {html: ''}
 components:
 - type: ColumnPanel
-  properties: {col_widths: '{"WDNEWN":25,"KBGBNQ":20,"NOFGMI":15,"GTAYKJ":25,"FCKWYS":20,"TLAFLU":15}'}
+  properties: {col_widths: '{"WDNEWN":20,"KBGBNQ":20,"NOFGMI":20,"GTAYKJ":20,"FCKWYS":20,"TLAFLU":20}'}
   name: column_panel_1
   layout_properties: {slot: default}
   components:
@@ -36,6 +36,7 @@ components:
     properties: {role: outlined-button, align: full, tooltip: '', border: '', enabled: true,
       foreground: 'theme:On Primary', visible: true, text: 'ADD PRODUCTS
 
+
         ', font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small,
       italic: false, background: '#05264d', bold: false, underline: false, icon: ''}
     name: button_1
@@ -44,6 +45,7 @@ components:
   - type: Button
     properties: {role: tonal-button, align: full, tooltip: '', border: '', enabled: true,
       foreground: 'theme:On Primary', visible: true, text: 'MANAGE PRODUCTS
+
 
         ', font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small,
       italic: false, background: '#05264d', bold: false, underline: false, icon: ''}
@@ -54,6 +56,7 @@ components:
     properties: {role: tonal-button, align: full, tooltip: '', border: '', enabled: true,
       foreground: 'theme:On Primary', visible: true, text: 'MANAGE PRODUCT GROUP
 
+
         ', font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small,
       italic: false, background: '#05264d', bold: false, underline: false, icon: ''}
     name: button_1_copy_3
@@ -62,6 +65,7 @@ components:
   - type: Button
     properties: {role: tonal-button, align: full, tooltip: '', border: '', enabled: true,
       foreground: 'theme:On Primary', visible: true, text: 'MANAGE PRODUCT CATEGORIES
+
 
         ', font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small,
       italic: false, background: '#05264d', bold: false, underline: false, icon: ''}
