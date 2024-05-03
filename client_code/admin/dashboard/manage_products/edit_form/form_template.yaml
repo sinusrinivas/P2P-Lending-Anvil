@@ -4,7 +4,7 @@ container:
   properties: {html: ''}
 components:
 - type: ColumnPanel
-  properties: {col_widths: '{}'}
+  properties: {col_widths: '{"URFMBU":60}'}
   name: content_panel
   layout_properties: {slot: default}
   components:
