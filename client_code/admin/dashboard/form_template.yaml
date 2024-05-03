@@ -9,13 +9,17 @@ components:
   properties: {}
   layout_properties: {grid_position: 'LIFSTH,ZLYVUF', full_width_row: true}
   name: home_button_admin_1
+- name: content_panel_copy_copy_3_copy_3_copy_copy
+  properties: {col_widths: '{}', background: ''}
+  type: ColumnPanel
+  layout_properties: {grid_position: 'UHXYPP,SHSCNI'}
 - type: ColumnPanel
   properties: {col_widths: '{}', visible: true}
   layout_properties: {grid_position: 'DFGUZJ,OGACIN'}
   name: content_panel
   components:
   - type: XYPanel
-    properties: {height: 505, visible: true}
+    properties: {height: 367.22222900390625, visible: true}
     layout_properties: {grid_position: 'AJQHBW,XCADDT'}
     name: xy_panel_1
     components:
@@ -130,3 +134,164 @@ components:
       layout_properties: {x: 636.6606227345765, y: 72.51786150410771, width: 240.98214721679688}
       event_bindings: {click: button_4_click}
       name: button_4
+- name: content_panel_copy_copy_3_copy_3_copy
+  properties: {col_widths: '{}', background: '', visible: true}
+  type: ColumnPanel
+  layout_properties: {grid_position: 'YXSOFH,DLFMGI', full_width_row: true}
+  components:
+  - name: content_panel_copy_copy_3_copy_3_copy_copy_copy
+    properties: {col_widths: '{}', background: ''}
+    type: ColumnPanel
+    layout_properties: {grid_position: 'AEVTNB,RAQZHX DGBMNL,DWGBUW'}
+    components:
+    - name: image_1
+      properties: {}
+      type: Image
+      layout_properties: {grid_position: 'GNRRDW,FEOFAR'}
+    - name: link_1
+      properties: {text: Manage Admins, align: center}
+      type: Link
+      layout_properties: {grid_position: 'FWWVAY,SIKKGW'}
+  - name: content_panel_copy_copy_3_copy_3_copy_copy_copy_2
+    properties: {col_widths: '{}', background: ''}
+    type: ColumnPanel
+    layout_properties: {grid_position: 'AEVTNB,RAQZHX QOBYGH,TZELPF'}
+    components:
+    - name: image_4
+      properties: {source: _/theme/loan management.png, display_mode: shrink_to_fit}
+      type: Image
+      layout_properties: {grid_position: 'QGZTNW,PVJEPO'}
+    - name: link_6
+      properties: {text: Loan Management, align: center}
+      type: Link
+      layout_properties: {grid_position: 'BGJTMP,HZJUKB'}
+  - name: content_panel_copy_copy_3_copy_3_copy_copy_copy_4
+    properties: {col_widths: '{}', background: ''}
+    type: ColumnPanel
+    layout_properties: {grid_position: 'AEVTNB,RAQZHX MVYZJL,OBXBRN'}
+    components:
+    - name: image_7
+      properties: {}
+      type: Image
+      layout_properties: {grid_position: 'VUAHMV,NIXMZO'}
+    - name: link_9
+      properties: {text: Manage Revenue Share, align: center}
+      type: Link
+      layout_properties: {grid_position: 'KRTOST,JONWZQ'}
+  - name: content_panel_copy_copy_3_copy_3_copy_copy_copy_9
+    properties: {col_widths: '{}', background: ''}
+    type: ColumnPanel
+    layout_properties: {grid_position: 'AEVTNB,RAQZHX VHYXNN,YDNJVV'}
+    components:
+    - name: image_10
+      properties: {}
+      type: Image
+      layout_properties: {grid_position: 'YGLFNC,ASARUK'}
+    - name: link_10
+      properties: {text: Manage Issues, align: center}
+      type: Link
+      layout_properties: {grid_position: 'GGWVRW,PQIOXU'}
+  - name: content_panel_copy_copy_3_copy_3_copy_copy_copy_3
+    properties: {col_widths: '{}', background: ''}
+    type: ColumnPanel
+    layout_properties: {grid_position: 'AEVTNB,HBXSQZ XTQZQD,PBZHHY'}
+    components:
+    - name: image_2
+      properties: {}
+      type: Image
+      layout_properties: {grid_position: 'YBAGYO,PALCTI'}
+    - name: link_2
+      properties: {text: Manage Borrowers, align: center}
+      type: Link
+      layout_properties: {grid_position: 'GFYCMV,HFXEAC'}
+  - name: content_panel_copy_copy_3_copy_3_copy_copy_copy_5
+    properties: {col_widths: '{}', background: ''}
+    type: ColumnPanel
+    layout_properties: {grid_position: 'AEVTNB,HBXSQZ WZCZGO,KSZMOL'}
+    components:
+    - name: image_5
+      properties: {}
+      type: Image
+      layout_properties: {grid_position: 'JYCCOD,PNTHNW'}
+    - name: link_5
+      properties: {text: Manage Products, align: center}
+      type: Link
+      layout_properties: {grid_position: 'NFYDUS,AUCIFL'}
+  - name: content_panel_copy_copy_3_copy_3_copy_copy_copy_7
+    properties: {col_widths: '{}', background: ''}
+    type: ColumnPanel
+    layout_properties: {grid_position: 'AEVTNB,HBXSQZ GMTZDO,OKCFXZ'}
+    components:
+    - name: image_8
+      properties: {}
+      type: Image
+      layout_properties: {grid_position: 'ICIFRL,RFVFAL'}
+    - name: link_8
+      properties: {text: 'Manage Risk Pool(FLDGB)  ', align: center}
+      type: Link
+      layout_properties: {grid_position: 'DLPAVY,QAANCR'}
+  - name: content_panel_copy_copy_3_copy_3_copy_copy_copy_12
+    properties: {col_widths: '{}', background: ''}
+    type: ColumnPanel
+    layout_properties: {grid_position: 'AEVTNB,HBXSQZ WRZOQP,ZGEQTI'}
+    components:
+    - name: image_11
+      properties: {}
+      type: Image
+      layout_properties: {grid_position: 'RBAQZF,WYVSVW'}
+    - name: link_11
+      properties: {text: Performance Tracker, align: center}
+      type: Link
+      layout_properties: {grid_position: 'DYWHHX,GVQZGM'}
+  - name: content_panel_copy_copy_3_copy_3_copy_copy_copy_6
+    properties: {col_widths: '{}', background: ''}
+    type: ColumnPanel
+    layout_properties: {grid_position: 'AEVTNB,FQUOWV VOXZKL,RFFBFH'}
+    components:
+    - name: image_3
+      properties: {}
+      type: Image
+      layout_properties: {grid_position: 'YIGLKI,KSUAYJ'}
+    - name: link_3
+      properties: {text: Manage Lenders, align: center}
+      type: Link
+      layout_properties: {grid_position: 'QYAHGV,OXRIPG'}
+  - name: content_panel_copy_copy_3_copy_3_copy_copy_copy_11
+    properties: {col_widths: '{}', background: ''}
+    type: ColumnPanel
+    layout_properties: {grid_position: 'AEVTNB,FQUOWV MZESRE,GYUATW'}
+    components:
+    - name: image_6
+      properties: {}
+      type: Image
+      layout_properties: {grid_position: 'HFFRPH,KRPCBO'}
+    - name: link_4
+      properties: {text: Manage Settings, align: center}
+      type: Link
+      layout_properties: {grid_position: 'QYPKSX,QRRPPH'}
+  - name: content_panel_copy_copy_3_copy_3_copy_copy_copy_8
+    properties: {col_widths: '{}', background: ''}
+    type: ColumnPanel
+    layout_properties: {grid_position: 'AEVTNB,FQUOWV DLHYJN,RDDUKF'}
+    components:
+    - name: image_9
+      properties: {}
+      type: Image
+      layout_properties: {grid_position: 'HQRYUT,UOATCO'}
+    - name: link_7
+      properties: {text: Manage CMS, align: center}
+      type: Link
+      layout_properties: {grid_position: 'PIXMEF,YVGVUL'}
+  - name: content_panel_copy_copy_3_copy_3_copy_copy_copy_10
+    properties: {col_widths: '{}', background: ''}
+    type: ColumnPanel
+    layout_properties: {grid_position: 'AEVTNB,FQUOWV TYUINS,MTMTFA'}
+    components:
+    - name: image_12
+      properties: {}
+      type: Image
+      layout_properties: {grid_position: 'OHJMBF,WSMZVF'}
+    - name: link_12
+      properties: {align: center, text: Manage Ascend Score}
+      type: Link
+      layout_properties: {grid_position: 'LHZEVJ,KSYNKZ'}
