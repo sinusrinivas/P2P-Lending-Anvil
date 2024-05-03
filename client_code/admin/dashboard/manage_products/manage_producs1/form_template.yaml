@@ -4,7 +4,7 @@ container:
   properties: {html: ''}
 components:
 - type: ColumnPanel
-  properties: {col_widths: '{}', background: 'theme:On Primary'}
+  properties: {col_widths: '{}', background: ''}
   name: content_panel
   layout_properties: {slot: default}
   components:
@@ -23,7 +23,7 @@ components:
       name: home_button_admin_1
       layout_properties: {grid_position: 'DOMPHM,BHIETF', full_width_row: true}
   - name: content_panel_copy_3
-    properties: {background: 'theme:Surface Variant'}
+    properties: {background: '#98c1d9'}
     type: ColumnPanel
     layout_properties: {grid_position: 'IIPXCD,ROWFST', full_width_row: true}
     components:
@@ -172,7 +172,7 @@ components:
     - name: column_panel_2
       properties: {role: elevated-card, tooltip: '', border: '', foreground: '', visible: true,
         wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{"KEBGAJ":30,"JEVNRY":30,"OPVMZF":5,"LNOYAV":55,"NGJJWF":30,"ZYSBCI":15,"KHMPHR":15}',
-        spacing_below: small, background: '#E9ECEF'}
+        spacing_below: small, background: '#98c1d9'}
       type: ColumnPanel
       layout_properties: {grid_position: 'ZTSUGH,SGESUN'}
       components:
@@ -180,11 +180,18 @@ components:
         properties: {height: 32}
         type: Spacer
         layout_properties: {grid_position: 'CYKTAG,OPVMZF'}
+      - name: label_3
+        properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+          visible: true, text: "    Min Tenure\n    (In months)", font_size: 17, font: '',
+          spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+          background: '', bold: false, underline: false, icon: ''}
+        type: Label
+        layout_properties: {grid_position: 'CYKTAG,RSMUYG'}
       - name: label_9_copy
         properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-          visible: true, text: '    Membership Type ', font_size: 17, font: '', spacing_above: small,
-          icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
-          underline: false, icon: ''}
+          visible: true, text: '    Lender Membership Type', font_size: 17, font: '',
+          spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+          background: '', bold: false, underline: false, icon: ''}
         type: Label
         layout_properties: {grid_position: 'CYKTAG,LNOYAV MMTRKO,KEBGAJ'}
       - name: drop_down_2
@@ -276,20 +283,13 @@ components:
           underline: false}
         type: TextBox
         layout_properties: {grid_position: 'CYKTAG,LNOYAV WNTQXR,CLTPFV'}
-      - name: label_3
-        properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-          visible: true, text: "    Min Tenure\n    (In months)", font_size: 17, font: '',
-          spacing_above: small, icon_align: left, spacing_below: small, italic: false,
-          background: '', bold: false, underline: false, icon: ''}
-        type: Label
-        layout_properties: {grid_position: 'CYKTAG,LNOYAV XYEYWQ,HHCLSZ MLSNJU,DBMMMV'}
       - name: label_4
         properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
           visible: true, text: "    Max Tenure\n    (In months)", font_size: 17, font: '',
           spacing_above: small, icon_align: left, spacing_below: small, italic: false,
           background: '', bold: false, underline: false, icon: ''}
         type: Label
-        layout_properties: {grid_position: 'CYKTAG,LNOYAV XYEYWQ,HHCLSZ KLHQOZ,SZCKXD'}
+        layout_properties: {grid_position: 'CYKTAG,LNOYAV XYEYWQ,HHCLSZ'}
       - name: min_tenure
         properties: {role: outlined-card, align: left, hide_text: false, tooltip: '',
           placeholder: Enter min tenure, border: '', enabled: true, foreground: '',
@@ -310,6 +310,7 @@ components:
           underline: false}
         type: TextBox
         layout_properties: {grid_position: 'CYKTAG,LNOYAV XYEYWQ,YVIEJJ JRWJMI,IRPPSM'}
+      data_bindings: []
     - name: label_8
       properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
         visible: true, text: '  EMI Payment', font_size: 17, font: '', spacing_above: small,
@@ -390,6 +391,14 @@ components:
         type: Button
         layout_properties: {grid_position: 'UNLDSP,NRTAHK'}
         event_bindings: {click: employee_click}
+      - name: Others
+        properties: {role: null, align: full, tooltip: '', border: '', enabled: true,
+          foreground: 'theme:On Primary', visible: true, text: Others, font_size: 16,
+          font: '', spacing_above: small, icon_align: left, spacing_below: small,
+          italic: false, background: '#939191', bold: false, underline: false, icon: ''}
+        type: Button
+        layout_properties: {grid_position: 'UNLDSP,KRYFTV'}
+        event_bindings: {click: Others_click}
     - name: label_6
       properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
         visible: true, text: '  Foreclosure Type', font_size: 17, font: '', spacing_above: small,
@@ -451,9 +460,9 @@ components:
       layout_properties: {grid_position: 'UBWJVE,XQNRAL'}
     - name: label_6_copy
       properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-        visible: true, text: '  Processing Fee(%)', font_size: 17, font: '', spacing_above: small,
-        icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-        underline: false, icon: ''}
+        visible: true, text: '  Loan Processing Fee(%)', font_size: 17, font: '',
+        spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+        background: '', bold: true, underline: false, icon: ''}
       type: Label
       layout_properties: {grid_position: 'HPEEEU,NKBTBS'}
     - name: text_box_3
