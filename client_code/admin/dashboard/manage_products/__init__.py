@@ -41,7 +41,32 @@ class manage_products(manage_productsTemplate):
 
   def button_2_click(self, **event_args):
     """This method is called when the button is clicked"""
-    open_form("admin.dashboard")
+    open_form('admin.dashboard.manage_products.view_products_and_categories')
+
+
+  def button_9_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    open_form('admin.dashboard.manage_products.choose_grooup_categoris')
+
+  def button_14_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    open_form('admin.dashboard.manage_products.manage_producs1')
+
+
+  def button_11_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    open_form('admin.dashboard.manage_products.view_product')
+
+
+  def button_13_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    open_form('admin.dashboard.manage_products.view_products_and_categories')
+
+
+  def button_10_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    open_form('admin.dashboard.manage_products.view_categories')
+
 
 
 
