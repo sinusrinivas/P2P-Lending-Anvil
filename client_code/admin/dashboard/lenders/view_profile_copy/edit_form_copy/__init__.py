@@ -149,7 +149,7 @@ class edit_form_copy(edit_form_copyTemplate):
       self.set_textbox_visibility(self.text_box_3,self.label_4, str(self.status_list[c]))
       self.set_textbox_visibility(self.text_box_4,self.label_5, self.gender_list[c])
       self.set_textbox_visibility(self.text_box_5,self.label_6, self.age_list[c])
-      self.set_textbox_visibility(self.date_picker_1,self.label_7, self.dob_list[c])
+      self.set_textbox_visibility(self.text_box,self.label_7, self.dob_list[c])
       self.set_textbox_visibility(self.text_box_7,self.label_10, self.mobile_list[c])
       self.set_textbox_visibility(self.text_box_8,self.label_11, self.aadhar_list[c])
       self.set_textbox_visibility(self.text_box_9,self.label_12, self.pan_list[c])
@@ -286,7 +286,7 @@ class edit_form_copy(edit_form_copyTemplate):
       data[a]['profile_status'] = bool(self.text_box_3.text)
       data[a]['gender'] = self.text_box_4.text
       data[a]['user_age'] = int(self.text_box_5.text)
-      data[a]['date_of_birth'] = self.date_picker_1.date
+      # data[a]['date_of_birth'] = self.date_picker_1.date
       data[a]['mobile'] = self.text_box_7.text
       data[a]['aadhaar_no'] = self.text_box_8.text
       data[a]['pan_number'] = self.text_box_9.text

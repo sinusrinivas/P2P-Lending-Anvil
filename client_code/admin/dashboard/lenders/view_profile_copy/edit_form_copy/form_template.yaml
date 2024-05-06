@@ -90,13 +90,10 @@ components:
       underline: false, icon: ''}
     type: Label
     layout_properties: {grid_position: 'NIPFIX,JTFJZJ CJLCWH,YIIGZL'}
-  - name: date_picker_1
-    properties: {role: outlined, align: left, max_date: '', pick_time: false, tooltip: '',
-      placeholder: '', border: '', enabled: true, foreground: '', visible: true, font_size: null,
-      font: '', spacing_above: small, spacing_below: small, italic: false, date: '',
-      min_date: '', background: '', bold: false, underline: false, format: ''}
-    type: DatePicker
-    layout_properties: {grid_position: 'NIPFIX,JTFJZJ CJLCWH,PVMHNP'}
+  - name: text_box
+    properties: {}
+    type: Label
+    layout_properties: {grid_position: 'NIPFIX,JTFJZJ CJLCWH,ZQBYHW'}
   - name: label_10
     properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
       visible: false, text: '   Mobile', font_size: null, font: '', spacing_above: small,
