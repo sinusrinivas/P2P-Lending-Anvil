@@ -136,21 +136,36 @@ components:
     layout_properties: {grid_position: 'ERCHQY,YUAUSJ'}
     components:
     - name: image_1
-      properties: {height: 31.20001220703125}
+      properties: {height: 38.199981689453125, display_mode: shrink_to_fit, source: _/theme/1.png}
       type: Image
       layout_properties: {grid_position: 'FHZWVZ,PQPPZT'}
     - name: label_2
-      properties: {icon: ''}
+      properties: {icon: '', text: 'My Installment
+
+          '}
       type: Label
       layout_properties: {grid_position: 'FHZWVZ,WLAJCK CGZQZP,FKOEII'}
     - name: label_3
       properties: {}
       type: Label
-      layout_properties: {grid_position: 'FHZWVZ,WLAJCK YXFGTF,SHMODN'}
+      layout_properties: {grid_position: 'FHZWVZ,WLAJCK KJAPCT,ITCNGP'}
   - name: column_panel_4
     properties: {role: elevated-card}
     type: ColumnPanel
     layout_properties: {grid_position: 'ERCHQY,NETDIR'}
+    components:
+    - name: image_2
+      properties: {height: 46.79998779296875}
+      type: Image
+      layout_properties: {grid_position: 'LIIRFK,KRHWBD'}
+    - name: label_4
+      properties: {}
+      type: Label
+      layout_properties: {grid_position: 'LIIRFK,ZHEDGR PIXTGE,WWPOAT'}
+    - name: label_5
+      properties: {}
+      type: Label
+      layout_properties: {grid_position: 'LIIRFK,ZHEDGR GPTTVY,SQOBSC'}
   - name: column_panel_5
     properties: {role: elevated-card}
     type: ColumnPanel
