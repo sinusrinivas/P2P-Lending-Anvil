@@ -141,66 +141,132 @@ class edit_form(edit_formTemplate):
     print(self.company_adress_list)
     if get_customer_id_value in self.id_list:
       c = self.id_list.index(get_customer_id_value)
-      self.text_box_2.text = self.name_list[c]
-      self.text_box_3.text = bool(self.status_list[c])
-      self.text_box_4.text= self.gender_list[c]
-      self.text_box_5.text = self.age_list[c]
-      self.date_picker_1.text = self.dob_list[c]
-      self.text_box_7.text = self.mobile_list[c]
-      self.text_box_8.text = self.aadhar_list[c]
-      self.text_box_9.text = self.pan_list[c]
-      self.text_box_10.text = self.city_list[c]
-      self.text_box_12.text = bool(self.last_confirm_list[c])
-      self.text_box_13.text = bool(self.mobile_check_list[c])
-      self.text_box_14.text = self.mother_tongue_list[c]
-      self.text_box_15.text = self.mother_status_list[c]
-      # self.date_picker_2.text = self.date_marrige_list[c]
-      self.text_box_17.text = self.space_name_list[c]
-      self.text_box_24.text = self.about_list[c]
-      self.text_box_26.text = bool(self.alets_list[c])
-      self.text_box_35.text = bool(self.terms_list[c])
-      self.text_box_32.text = self.qualification_list[c]
-      self.text_box_25.text = self.address_type_list[c]
-      self.text_box_34.text = self.street_list[c]
-      self.text_box_27.text = self.build_name_list[c]
-      self.text_box_29.text = self.house_no_list[c]
-      self.text_box_28.text = self.landmark_list[c]
-      self.text_box_30.text = self.pincode_list[c]
-      self.text_box_33.text = self.state_list[c]
-      self.text_box_18.text = self.spouse_number_list[c]
-      self.text_box_19.text = self.company_name_list[c]
-      self.text_box_20.text = self.company_adress_list[c]
-      self.text_box_21.text =  self.proffic_list[c]
-      self.text_box_22.text = self.user_type_list[c]
-      self.text_box_23.text = bool(self.approve_list[c])
-      self.text_box_1.text = self.another_email[c]
-      self.text_box_6.text = self.company_name[c]
-      self.text_box_11.text = self.organization_type[c]
-      self.text_box_16.text = self.employment_type[c]
-      self.text_box_31.text = self.business_no[c]
-      self.text_box_36.text = self.company_landmark[c]
-      self.text_box_37.text = self.company_address[c]
-      self.text_box_38.text = self.annual_salary[c]
-      self.text_box_39.text = self.designation[c]
-      self.text_box_40.text = self.account_name[c]
-      self.text_box_41.text = self.account_type[c]
-      self.text_box_42.text = self.account_number[c]
-      self.text_box_43.text = self.account_bank_branch[c]
-      # self.text_box_44.text = self.ifsc_code[c]
-      self.text_box_45.text = self.salary_type[c]
-      # self.text_box_46.text = self.select_bank[c]
-      # self.text_box_47.text = self.net_bank[c]
-      self.text_box_48.text = self.father_name[c]
-      self.text_box_49.text = self.father_age[c]
-      self.text_box_50.text = self.mother_name[c]
-      self.text_box_51.text = self.mother_age[c]
-      self.text_box_52.text = self.college_name[c]
-      self.text_box_53.text = self.college_id[c]
-      self.text_box_54.text = self.college_address[c]
-      # self.text_box_55.text = self.running_loan[c]
-    
+
+      self.set_textbox_visibility(self.text_box_2,self.label_2,self.name_list[c])
+      self.set_textbox_visibility(self.text_box_3,self.label_4, str(self.status_list[c]))
+      self.set_textbox_visibility(self.text_box_4,self.label_5, self.gender_list[c])
+      self.set_textbox_visibility(self.text_box_5,self.label_6, self.age_list[c])
+      self.set_textbox_visibility(self.date_picker_1,self.label_7, self.dob_list[c])
+      self.set_textbox_visibility(self.text_box_7,self.label_10, self.mobile_list[c])
+      self.set_textbox_visibility(self.text_box_8,self.label_11, self.aadhar_list[c])
+      self.set_textbox_visibility(self.text_box_9,self.label_12, self.pan_list[c])
+      self.set_textbox_visibility(self.text_box_10,self.label_13, self.city_list[c])
+      self.set_textbox_visibility(self.text_box_12,self.label_15, str(self.last_confirm_list[c]))
+      self.set_textbox_visibility(self.text_box_13,self.label_16, str(self.mobile_check_list[c]))
+      self.set_textbox_visibility(self.text_box_14,self.label_17, self.mother_tongue_list[c])
+      self.set_textbox_visibility(self.text_box_15,self.label_18, self.mother_status_list[c])
+      self.set_textbox_visibility(self.text_box_17,self.label_20, self.space_name_list[c])
+      self.set_textbox_visibility(self.text_box_24,self.label_27, self.about_list[c])
+      self.set_textbox_visibility(self.text_box_26,self.label_29, str(self.alets_list[c]))
+      self.set_textbox_visibility(self.text_box_35,self.label_38, str(self.terms_list[c]))
+      self.set_textbox_visibility(self.text_box_32,self.label_35, self.qualification_list[c])
+      self.set_textbox_visibility(self.text_box_25,self.label_28, self.address_type_list[c])
+      self.set_textbox_visibility(self.text_box_34,self.label_37, self.street_list[c])
+      self.set_textbox_visibility(self.text_box_27,self.label_30, self.build_name_list[c])
+      self.set_textbox_visibility(self.text_box_29,self.label_32, self.house_no_list[c])
+      self.set_textbox_visibility(self.text_box_28,self.label_31, self.landmark_list[c])
+      self.set_textbox_visibility(self.text_box_30, self.label_34,self.pincode_list[c])
+      self.set_textbox_visibility(self.text_box_33,self.label_36, self.state_list[c])
+      self.set_textbox_visibility(self.text_box_18,self.label_21, self.spouse_number_list[c])
+      self.set_textbox_visibility(self.text_box_19,self.label_22, self.company_name_list[c])
+      self.set_textbox_visibility(self.text_box_20,self.label_23, self.company_adress_list[c])
+      self.set_textbox_visibility(self.text_box_21, self.label_24,self.proffic_list[c])
+      self.set_textbox_visibility(self.text_box_22,self.label_25, self.user_type_list[c])
+      self.set_textbox_visibility(self.text_box_23,self.label_26, str(self.approve_list[c]))
+      self.set_textbox_visibility(self.text_box_1,self.label_1, self.another_email[c])
+      self.set_textbox_visibility(self.text_box_6,self.label_3, self.company_name[c])
+      self.set_textbox_visibility(self.text_box_11,self.label_9, self.organization_type[c])
+      self.set_textbox_visibility(self.text_box_16,self.label_8, self.employment_type[c])
+      self.set_textbox_visibility(self.text_box_31, self.label_14,self.business_no[c])
+      self.set_textbox_visibility(self.text_box_36,self.label_33, self.company_landmark[c])
+      self.set_textbox_visibility(self.text_box_37,self.label_39, self.company_address[c])
+      self.set_textbox_visibility(self.text_box_38,self.label_40, self.annual_salary[c])
+      self.set_textbox_visibility(self.text_box_39,self.label_41, self.designation[c])
+      self.set_textbox_visibility(self.text_box_40,self.label_44, self.account_name[c])
+      self.set_textbox_visibility(self.text_box_41,self.label_45, self.account_type[c])
+      self.set_textbox_visibility(self.text_box_42,self.label_46, self.account_number[c])
+      self.set_textbox_visibility(self.text_box_43,self.label_47, self.account_bank_branch[c])
+      self.set_textbox_visibility(self.text_box_45,self.label_49, self.salary_type[c])
+      self.set_textbox_visibility(self.text_box_48,self.label_52, self.father_name[c])
+      self.set_textbox_visibility(self.text_box_49,self.label_53, self.father_age[c])
+      self.set_textbox_visibility(self.text_box_50,self.label_54, self.mother_name[c])
+      self.set_textbox_visibility(self.text_box_51,self.label_55, self.mother_age[c])
+      self.set_textbox_visibility(self.text_box_52,self.label_56, self.college_name[c])
+      self.set_textbox_visibility(self.text_box_53,self.label_57, self.college_id[c])
+      self.set_textbox_visibility(self.text_box_54,self.label_58,self.college_address[c])
+      # Add more textbox visibility settings here
 
     self.get = get_customer_id_value
+
+
+  def set_textbox_visibility(self, textbox, label, data):
+    if data:
+        textbox.text = data
+        textbox.visible = True
+        label.visible = True
+    else:
+        textbox.visible = False
+        label.visible = False
+      # self.text_box_2.text = self.name_list[c]
+      # self.text_box_3.text = bool(self.status_list[c])
+      # self.text_box_4.text= self.gender_list[c]
+      # self.text_box_5.text = self.age_list[c]
+      # self.date_picker_1.text = self.dob_list[c]
+      # self.text_box_7.text = self.mobile_list[c]
+      # self.text_box_8.text = self.aadhar_list[c]
+      # self.text_box_9.text = self.pan_list[c]
+      # self.text_box_10.text = self.city_list[c]
+      # self.text_box_12.text = bool(self.last_confirm_list[c])
+      # self.text_box_13.text = bool(self.mobile_check_list[c])
+      # self.text_box_14.text = self.mother_tongue_list[c]
+      # self.text_box_15.text = self.mother_status_list[c]
+      # # self.date_picker_2.text = self.date_marrige_list[c]
+      # self.text_box_17.text = self.space_name_list[c]
+      # self.text_box_24.text = self.about_list[c]
+      # self.text_box_26.text = bool(self.alets_list[c])
+      # self.text_box_35.text = bool(self.terms_list[c])
+      # self.text_box_32.text = self.qualification_list[c]
+      # self.text_box_25.text = self.address_type_list[c]
+      # self.text_box_34.text = self.street_list[c]
+      # self.text_box_27.text = self.build_name_list[c]
+      # self.text_box_29.text = self.house_no_list[c]
+      # self.text_box_28.text = self.landmark_list[c]
+      # self.text_box_30.text = self.pincode_list[c]
+      # self.text_box_33.text = self.state_list[c]
+      # self.text_box_18.text = self.spouse_number_list[c]
+      # self.text_box_19.text = self.company_name_list[c]
+      # self.text_box_20.text = self.company_adress_list[c]
+      # self.text_box_21.text =  self.proffic_list[c]
+      # self.text_box_22.text = self.user_type_list[c]
+      # self.text_box_23.text = bool(self.approve_list[c])
+      # self.text_box_1.text = self.another_email[c]
+      # self.text_box_6.text = self.company_name[c]
+      # self.text_box_11.text = self.organization_type[c]
+      # self.text_box_16.text = self.employment_type[c]
+      # self.text_box_31.text = self.business_no[c]
+      # self.text_box_36.text = self.company_landmark[c]
+      # self.text_box_37.text = self.company_address[c]
+      # self.text_box_38.text = self.annual_salary[c]
+      # self.text_box_39.text = self.designation[c]
+      # self.text_box_40.text = self.account_name[c]
+      # self.text_box_41.text = self.account_type[c]
+      # self.text_box_42.text = self.account_number[c]
+      # self.text_box_43.text = self.account_bank_branch[c]
+      # # self.text_box_44.text = self.ifsc_code[c]
+      # self.text_box_45.text = self.salary_type[c]
+      # # self.text_box_46.text = self.select_bank[c]
+      # # self.text_box_47.text = self.net_bank[c]
+      # self.text_box_48.text = self.father_name[c]
+      # self.text_box_49.text = self.father_age[c]
+      # self.text_box_50.text = self.mother_name[c]
+      # self.text_box_51.text = self.mother_age[c]
+      # self.text_box_52.text = self.college_name[c]
+      # self.text_box_53.text = self.college_id[c]
+      # self.text_box_54.text = self.college_address[c]
+      # # self.text_box_55.text = self.running_loan[c]
+    
+
+    # self.get = get_customer_id_value
 
 
   def button_2_click(self, **event_args):
