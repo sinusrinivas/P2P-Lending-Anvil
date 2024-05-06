@@ -60,7 +60,54 @@ class loan_management(loan_managementTemplate):
 
 
 
-  # new  dashboard buttons
-  def button_15_click(self, **event_args):
+  # new buttons
+  def button_19_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    open_form('admin.dashboard.loan_management.one_time_settlement')
+
+  def button_18_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    open_form('admin.dashboard.loan_management.not_payable_amount')
+
+  def button_9_click(self, **event_args):
     """This method is called when the button is clicked"""
     open_form('admin.dashboard.loan_management.approved_loans')
+
+  def button_10_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    open_form('admin.dashboard.loan_management.rejected_loans')
+
+  def button_11_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    open_form('admin.dashboard.loan_management.under_process')
+
+  def button_12_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    open_form('admin.dashboard.loan_management.open_loans')
+
+  def button_13_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    open_form('admin.dashboard.loan_management.loan_disbursed')
+
+  def button_14_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    open_form('admin.dashboard.loan_management.lapsed_loans')
+
+  def button_16_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    open_form('admin.dashboard.loan_management.default_loans')
+
+  def button_17_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    open_form('admin.dashboard.loan_management.closed_loans')
+
+
+
+
+
+
+
+    
+
+ 
+
