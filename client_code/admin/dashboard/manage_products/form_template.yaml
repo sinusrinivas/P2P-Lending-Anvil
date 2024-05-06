@@ -113,10 +113,10 @@ components:
         layout_properties: {grid_position: 'TFDFVQ,VTCDTE'}
         event_bindings: {click: button_14_click}
         name: button_14
-    - properties: {height: '1.5'}
-      type: Spacer
-      layout_properties: {grid_position: 'LKTWOF,PPLSYB ECAHCE,GABOJS'}
-      name: spacer_8
+      - properties: {height: '1.5'}
+        type: Spacer
+        layout_properties: {grid_position: 'XDOWNN,JHSKRG'}
+        name: spacer_8
     - properties: {height: '3'}
       type: Spacer
       layout_properties: {grid_position: 'LXEPFH,FVTVHC'}
