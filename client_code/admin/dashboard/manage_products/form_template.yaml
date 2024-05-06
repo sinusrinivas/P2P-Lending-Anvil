@@ -4,7 +4,7 @@ container:
   properties: {html: ''}
 components:
 - type: ColumnPanel
-  properties: {col_widths: '{}'}
+  properties: {col_widths: '{"WDNEWN":20,"KBGBNQ":20,"NOFGMI":20,"GTAYKJ":20,"FCKWYS":20,"TLAFLU":20}'}
   name: column_panel_1
   layout_properties: {slot: default}
   components:
@@ -25,9 +25,7 @@ components:
     layout_properties: {grid_position: 'OUPQEJ,CTDJFP'}
   - type: Button
     properties: {role: tonal-button, align: full, tooltip: '', border: '', enabled: true,
-      foreground: 'theme:On Primary', visible: true, text: '
-
-        ADD PRODUCT GROUP  & CATEGORIES
+      foreground: 'theme:On Primary', visible: true, text: 'ADD PRODUCT GROUP  & CATEGORIES
 
         ', font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small,
       italic: false, background: '#05264d', bold: false, underline: false, icon: ''}
@@ -36,17 +34,17 @@ components:
     event_bindings: {click: button_1_copy_2_click}
   - type: Button
     properties: {role: outlined-button, align: full, tooltip: '', border: '', enabled: true,
-      foreground: 'theme:On Primary', visible: true, text: "\n ADD PRODUCTS\n\n",
-      font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small,
+      foreground: 'theme:On Primary', visible: true, text: 'ADD PRODUCTS
+
+
+        ', font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small,
       italic: false, background: '#05264d', bold: false, underline: false, icon: ''}
     name: button_1
     layout_properties: {grid_position: 'KZKBCS,KBGBNQ'}
     event_bindings: {click: button_1_click}
   - type: Button
     properties: {role: tonal-button, align: full, tooltip: '', border: '', enabled: true,
-      foreground: 'theme:On Primary', visible: true, text: '
-
-        MANAGE PRODUCTS
+      foreground: 'theme:On Primary', visible: true, text: 'MANAGE PRODUCTS
 
 
         ', font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small,
@@ -56,9 +54,7 @@ components:
     event_bindings: {click: button_1_copy_click}
   - type: Button
     properties: {role: tonal-button, align: full, tooltip: '', border: '', enabled: true,
-      foreground: 'theme:On Primary', visible: true, text: '
-
-        MANAGE PRODUCT GROUP
+      foreground: 'theme:On Primary', visible: true, text: 'MANAGE PRODUCT GROUP
 
 
         ', font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small,
@@ -68,9 +64,7 @@ components:
     event_bindings: {click: button_1_copy_3_click}
   - type: Button
     properties: {role: tonal-button, align: full, tooltip: '', border: '', enabled: true,
-      foreground: 'theme:On Primary', visible: true, text: '
-
-        MANAGE PRODUCT CATEGORIES
+      foreground: 'theme:On Primary', visible: true, text: 'MANAGE PRODUCT CATEGORIES
 
 
         ', font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small,

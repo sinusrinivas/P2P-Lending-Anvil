@@ -171,7 +171,7 @@ components:
       layout_properties: {grid_position: 'ZTSUGH,BDNNPF'}
     - name: column_panel_2
       properties: {role: elevated-card, tooltip: '', border: '', foreground: '', visible: true,
-        wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{"KEBGAJ":30,"JEVNRY":30,"OPVMZF":5,"LNOYAV":55,"NGJJWF":30,"ZYSBCI":15,"KHMPHR":15}',
+        wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{"OPVMZF":5,"LNOYAV":55,"NGJJWF":30,"ZYSBCI":15,"KHMPHR":15}',
         spacing_below: small, background: '#98c1d9'}
       type: ColumnPanel
       layout_properties: {grid_position: 'ZTSUGH,SGESUN'}
@@ -180,20 +180,13 @@ components:
         properties: {height: 32}
         type: Spacer
         layout_properties: {grid_position: 'CYKTAG,OPVMZF'}
-      - name: label_3
-        properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-          visible: true, text: "    Min Tenure\n    (In months)", font_size: 17, font: '',
-          spacing_above: small, icon_align: left, spacing_below: small, italic: false,
-          background: '', bold: false, underline: false, icon: ''}
-        type: Label
-        layout_properties: {grid_position: 'CYKTAG,RSMUYG'}
       - name: label_9_copy
         properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
           visible: true, text: '    Lender Membership Type', font_size: 17, font: '',
           spacing_above: small, icon_align: left, spacing_below: small, italic: false,
           background: '', bold: false, underline: false, icon: ''}
         type: Label
-        layout_properties: {grid_position: 'CYKTAG,LNOYAV MMTRKO,KEBGAJ'}
+        layout_properties: {grid_position: 'CYKTAG,LNOYAV UZLANK,HHWCVA'}
       - name: drop_down_2
         properties:
           role: null
@@ -215,7 +208,7 @@ components:
           underline: false
           include_placeholder: true
         type: DropDown
-        layout_properties: {grid_position: 'CYKTAG,LNOYAV MMTRKO,JEVNRY'}
+        layout_properties: {grid_position: 'CYKTAG,LNOYAV UZLANK,KQJBQI'}
       - name: label_10_copy
         properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
           visible: true, text: '    Interest Type ', font_size: 17, font: '', spacing_above: small,
@@ -244,7 +237,7 @@ components:
           spacing_above: small, icon_align: left, spacing_below: small, italic: false,
           background: '', bold: false, underline: false, icon: ''}
         type: Label
-        layout_properties: {grid_position: 'CYKTAG,LNOYAV SVITEG,VDKAQD'}
+        layout_properties: {grid_position: 'CYKTAG,LNOYAV EWIZAM,GXQVNM'}
       - name: text_box_5
         properties: {role: outlined-card, align: left, hide_text: false, tooltip: '',
           placeholder: Enter Interest percentage, border: '', enabled: true, foreground: '',
@@ -252,14 +245,14 @@ components:
           type: text, spacing_below: small, italic: false, background: White, bold: false,
           underline: false}
         type: TextBox
-        layout_properties: {grid_position: 'CYKTAG,LNOYAV SVITEG,YAJRWE'}
+        layout_properties: {grid_position: 'CYKTAG,LNOYAV EWIZAM,MJGVZA'}
       - name: label_11_copy
         properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
           visible: true, text: '    Min Amount', font_size: 17, font: '', spacing_above: small,
           icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
           underline: false, icon: ''}
         type: Label
-        layout_properties: {grid_position: 'CYKTAG,LNOYAV XWXDJJ,OWPNSY'}
+        layout_properties: {grid_position: 'CYKTAG,LNOYAV QDKZDM,HVMKYM'}
       - name: min_amount
         properties: {role: outlined-card, align: left, hide_text: false, tooltip: '',
           placeholder: Enter min amount, border: '', enabled: true, foreground: '',
@@ -267,14 +260,14 @@ components:
           type: text, spacing_below: small, italic: false, background: white, bold: false,
           underline: false}
         type: TextBox
-        layout_properties: {grid_position: 'CYKTAG,LNOYAV XWXDJJ,CAROUL'}
+        layout_properties: {grid_position: 'CYKTAG,LNOYAV QDKZDM,YYDZKI'}
       - name: label_12_copy
         properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
           visible: true, text: '    Max Amount', font_size: 17, font: '', spacing_above: small,
           icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
           underline: false, icon: ''}
         type: Label
-        layout_properties: {grid_position: 'CYKTAG,LNOYAV WNTQXR,ULAAXH'}
+        layout_properties: {grid_position: 'CYKTAG,LNOYAV JXSZWB,RBCWFQ'}
       - name: max_amount
         properties: {role: outlined-card, align: left, hide_text: false, tooltip: '',
           placeholder: Enter max amount, border: '', enabled: true, foreground: '',
@@ -282,14 +275,18 @@ components:
           type: text, spacing_below: small, italic: false, background: white, bold: false,
           underline: false}
         type: TextBox
-        layout_properties: {grid_position: 'CYKTAG,LNOYAV WNTQXR,CLTPFV'}
+        layout_properties: {grid_position: 'CYKTAG,LNOYAV JXSZWB,CDPMPV'}
       - name: label_4
         properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
           visible: true, text: "    Max Tenure\n    (In months)", font_size: 17, font: '',
           spacing_above: small, icon_align: left, spacing_below: small, italic: false,
           background: '', bold: false, underline: false, icon: ''}
         type: Label
-        layout_properties: {grid_position: 'CYKTAG,LNOYAV XYEYWQ,HHCLSZ'}
+        layout_properties: {grid_position: 'CYKTAG,LNOYAV YCSXIC,HXGWPT'}
+      - name: spacer_10
+        properties: {height: '6'}
+        type: Spacer
+        layout_properties: {grid_position: 'CYKTAG,LNOYAV YCSXIC,JVNLXI YZDXUE,UUJOXM'}
       - name: min_tenure
         properties: {role: outlined-card, align: left, hide_text: false, tooltip: '',
           placeholder: Enter min tenure, border: '', enabled: true, foreground: '',
@@ -297,11 +294,18 @@ components:
           type: text, spacing_below: small, italic: false, background: white, bold: false,
           underline: false}
         type: TextBox
-        layout_properties: {grid_position: 'CYKTAG,LNOYAV XYEYWQ,YVIEJJ TRVTPT,OQHPNH'}
-      - name: spacer_10
-        properties: {height: '6'}
+        layout_properties: {grid_position: 'CYKTAG,LNOYAV YCSXIC,JVNLXI'}
+      - name: label_3
+        properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+          visible: true, text: "    Min Tenure\n    (In months)", font_size: 17, font: '',
+          spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+          background: '', bold: false, underline: false, icon: ''}
+        type: Label
+        layout_properties: {grid_position: 'CYKTAG,LNOYAV CLBDWB,NLOKEP'}
+      - name: spacer_2
+        properties: {height: 6.28570556640625}
         type: Spacer
-        layout_properties: {grid_position: 'CYKTAG,LNOYAV XYEYWQ,YVIEJJ EAFJTF,KIVCOJ'}
+        layout_properties: {grid_position: 'CYKTAG,LNOYAV CLBDWB,BFKWKQ XGEYEZ,IIOXED'}
       - name: max_tenure
         properties: {role: outlined-card, align: left, hide_text: false, tooltip: '',
           placeholder: Enter max tenure, border: '', enabled: true, foreground: '',
@@ -309,7 +313,7 @@ components:
           type: text, spacing_below: small, italic: false, background: white, bold: false,
           underline: false}
         type: TextBox
-        layout_properties: {grid_position: 'CYKTAG,LNOYAV XYEYWQ,YVIEJJ JRWJMI,IRPPSM'}
+        layout_properties: {grid_position: 'CYKTAG,LNOYAV CLBDWB,BFKWKQ VHDNVX,MAVJZZ'}
       data_bindings: []
     - name: label_8
       properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
