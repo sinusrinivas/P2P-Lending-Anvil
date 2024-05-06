@@ -59,3 +59,18 @@ class admin_management(admin_managementTemplate):
     def button_1_click(self, **event_args):
       """This method is called when the button is clicked"""
       open_form('admin.dashboard.admin_management.view_admins')
+
+    def button_9_click(self, **event_args):
+      """This method is called when the button is clicked"""
+      open_form('admin.dashboard.admin_management.add_admin')
+
+    def button_14_click(self, **event_args):
+      """This method is called when the button is clicked"""
+      open_form('admin.dashboard.admin_management.view_admins')
+
+    def button_11_click(self, **event_args):
+      """This method is called when the button is clicked"""
+      open_form('admin.dashboard.admin_management.view_admins')
+
+
+
