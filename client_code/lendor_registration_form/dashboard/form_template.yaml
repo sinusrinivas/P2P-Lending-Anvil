@@ -84,10 +84,14 @@ components:
   data_bindings:
   - {property: spacing_below, code: 'self.item['''']', writeback: false}
 - name: column_panel_1
-  properties: {role: elevated-card}
+  properties: {role: elevated-card, col_widths: '{"UJNXWF":5,"BREYKS":19,"RDAAZD":12,"FVJJOH":12,"JQYOUY":12}'}
   type: ColumnPanel
   layout_properties: {grid_position: 'CCIIXU,HUNYKM VDNJEZ,JDVETN'}
   components:
+  - name: image_5
+    properties: {height: 51.399932861328125, source: _/theme/connection.png}
+    type: Image
+    layout_properties: {grid_position: 'ZGTDIJ,UJNXWF'}
   - type: Label
     properties: {role: null, align: right, tooltip: '', border: '', foreground: '',
       visible: true, text: Make Visibilty, font_size: 20, font: '', spacing_above: medium,
@@ -191,7 +195,7 @@ components:
     layout_properties: {grid_position: 'ERCHQY,KVCNSJ'}
     components:
     - name: image_4
-      properties: {height: 48.20001220703125, source: _/theme/loan.png}
+      properties: {height: 67.60000610351562, source: _/theme/personal.png}
       type: Image
       layout_properties: {grid_position: 'QAERLY,CUOOLO'}
     - name: label_8
