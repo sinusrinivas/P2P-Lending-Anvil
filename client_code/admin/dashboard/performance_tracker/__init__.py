@@ -74,3 +74,7 @@ class performance_tracker(performance_trackerTemplate):
     """This method is called when the button is clicked"""
     open_form('admin.dashboard.manage_settings')
 
+  def link_6_click(self, **event_args):
+    """This method is called when the link is clicked"""
+    pass
+
