@@ -484,7 +484,7 @@ class star_1_borrower_registration_form_3_marital_married(star_1_borrower_regist
         Notification("\n".join(errors)).show()
      else:
        another_person, related_person_name, related_person_dob, related_person_mob, related_person_profession, related_person_relation,self.userId
-       anvil.server.call('add_lendor_spouse_details', 
+       anvil.server.call('add_lendor_anotherperson_details', 
                               another_person, related_person_name, related_person_dob, 
                               related_person_mob, related_person_profession, 
                               related_person_relation, self.userId) 
