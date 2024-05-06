@@ -157,7 +157,15 @@ class view_profile(view_profileTemplate):
       if value_to_display in self.id_list:
         b = self.id_list.index(value_to_display)
         self.label_3.text = value_to_display
-        self.label_8.text = self.name_list[b]
+        
+        if self.name_list[b]:
+          self.label_8.text = self.name_list[b]
+          self.label_8.visible = True
+          self.label_2.visible = True
+        else:
+          self.label_8.visible =  False
+          self.label_2.visible = False
+          
         self.label_9.text = bool(self.status_list[b])
         self.label_39.text= self.gender_list[b]
         self.label_40.text = (self.age_list[b])
@@ -173,6 +181,14 @@ class view_profile(view_profileTemplate):
         self.label_52.text = self.mother_status_list[b]
         #self.label_53.text = self.date_marrige_list[b]
         self.label_54.text = self.space_name_list[b]
+
+        if self.name_list[b]:
+          self.label_8.text = self.name_list[b]
+          self.label_8.visible = True
+          self.label_2.visible = True
+        else:
+          self.label_8.visible =  False
+          self.label_2.visible = False
         self.label_61.text = self.about_list[b]
         self.label_63.text = bool(self.alets_list[b])
         self.label_72.text = bool(self.terms_list[b])
