@@ -5,358 +5,242 @@ container:
     wrap_on: tablet, col_spacing: medium, spacing_above: small, col_widths: '{}',
     spacing_below: small, background: ''}
 components:
-- type: form:admin.dashboard.home_button_admin
-  properties: {}
-  layout_properties: {grid_position: 'LIFSTH,ZLYVUF', full_width_row: true}
-  name: home_button_admin_1
-- type: ColumnPanel
-  properties: {col_widths: '{}', visible: true}
-  layout_properties: {grid_position: 'DFGUZJ,OGACIN'}
-  name: content_panel
-  components:
-  - type: XYPanel
-    properties: {height: 367.22222900390625, visible: false}
-    layout_properties: {grid_position: 'AJQHBW,XCADDT'}
-    name: xy_panel_1
-    components:
-    - type: Button
-      properties: {role: outlined-button, align: center, tooltip: '', border: '',
-        enabled: true, foreground: 'theme:On Primary', visible: true, text: '     Manage
-          Borrowers              ', font_size: null, font: '', spacing_above: small,
-        icon_align: left, spacing_below: small, italic: false, background: '#05264d',
-        bold: true, underline: false, icon: 'fa:align-left'}
-      layout_properties: {x: 316, y: 74, width: 277}
-      event_bindings: {click: button_3_click}
-      name: button_3
-    - type: Button
-      properties: {role: outlined-button, align: center, tooltip: '', border: '',
-        enabled: true, foreground: 'theme:On Primary', visible: true, text: '     Manage
-          Products                ', font_size: null, font: '', spacing_above: small,
-        icon_align: left, spacing_below: small, italic: false, background: '#05264d',
-        bold: true, underline: false, icon: 'fa:exclamation-triangle'}
-      layout_properties: {x: 316.984375, y: 145.984375, width: 275.016}
-      event_bindings: {click: button_6_click}
-      name: button_6
-    - type: Button
-      properties: {role: outlined-button, align: center, tooltip: '', border: '',
-        enabled: true, foreground: 'theme:On Primary', visible: true, text: '  Manage
-          Risk Pool (FLDGB)     ', font_size: null, font: '', spacing_above: small,
-        icon_align: left, spacing_below: small, italic: false, background: '#05264d',
-        bold: true, underline: false, icon: 'fa:stumbleupon'}
-      layout_properties: {x: 315.984375, y: 214.984375, width: 276.016}
-      event_bindings: {click: button_9_click}
-      name: button_9
-    - type: Button
-      properties: {role: outlined-button, align: center, tooltip: '', border: '',
-        enabled: true, foreground: 'theme:On Primary', visible: true, text: '  Manage
-          Revenu Share         ', font_size: null, font: '', spacing_above: small,
-        icon_align: left, spacing_below: small, italic: false, background: '#05264d',
-        bold: true, underline: false, icon: 'fa:inr'}
-      layout_properties: {x: 9.984375, y: 214.984375, width: 244.984}
-      event_bindings: {click: button_8_click}
-      name: button_8
-    - type: Button
-      properties: {role: outlined-button, align: center, tooltip: '', border: '',
-        enabled: true, foreground: 'theme:On Primary', visible: true, text: '  Loan  Management               ',
-        font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small,
-        italic: false, background: '#05264d', bold: true, underline: false, icon: 'fa:trello'}
-      layout_properties: {x: 10, y: 146, width: 245}
-      event_bindings: {click: button_5_click}
-      name: button_5
-    - type: Button
-      properties: {role: outlined-button, align: center, tooltip: '', border: '',
-        enabled: true, foreground: 'theme:On Primary', visible: true, text: 'Manage
-          Admins                 ', font_size: null, font: '', spacing_above: small,
-        icon_align: left, spacing_below: small, italic: false, background: '#05264d',
-        bold: true, underline: false, icon: 'fa:cube'}
-      layout_properties: {x: 9.984375, y: 73.984375, width: 244.984}
-      event_bindings: {click: button_2_click}
-      name: button_2
-    - type: Button
-      properties: {role: outlined-button, align: center, tooltip: '', border: '',
-        enabled: true, foreground: 'theme:On Primary', visible: true, text: '     Manage
-          issues              ', font_size: null, font: '', spacing_above: small,
-        icon_align: left, spacing_below: small, italic: false, background: '#05264d',
-        bold: true, underline: false, icon: 'fa:newspaper-o'}
-      layout_properties: {x: 9.984375, y: 277.984375, width: 244.984}
-      event_bindings: {click: button_11_click}
-      name: button_11
-    - type: Button
-      properties: {role: outlined-button, align: center, tooltip: '', border: '',
-        enabled: true, foreground: 'theme:On Primary', visible: true, text: '      Performance
-          Tracker           ', font_size: null, font: '', spacing_above: small, icon_align: left,
-        spacing_below: small, italic: false, background: '#05264d', bold: true, underline: false,
-        icon: 'fa:compass'}
-      layout_properties: {x: 316.984375, y: 281.375, width: 275.016}
-      event_bindings: {click: button_13_click}
-      name: button_13
-    - type: Button
-      properties: {role: outlined-button, align: center, tooltip: '', border: '',
-        enabled: true, foreground: 'theme:On Primary', visible: true, text: '     Manage
-          CMS                      ', font_size: null, font: '', spacing_above: small,
-        icon_align: left, spacing_below: small, italic: false, background: '#0b2547',
-        bold: true, underline: false, icon: 'fa:dribbble'}
-      layout_properties: {x: 633.3000152595341, y: 213.48749237135053, width: 240}
-      event_bindings: {click: button_10_click}
-      name: button_10
-    - properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
-        foreground: white, visible: true, text: '    Manage Ascend Score', font_size: null,
-        font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
-        background: '#0b2547', bold: true, underline: false, icon: 'fa:edit'}
-      type: Button
-      layout_properties: {x: 636.2500274665654, y: 280.67502288892865, width: 242.5619755859375}
-      event_bindings: {click: manage_bessem_click}
-      name: manage_bessem
-    - type: Button
-      properties: {role: outlined-button, align: center, tooltip: '', border: '',
-        enabled: true, foreground: 'theme:On Primary', visible: true, text: '      Manage
-          Settings               ', font_size: null, font: '', spacing_above: small,
-        icon_align: left, spacing_below: small, italic: false, background: '#0b2547',
-        bold: true, underline: false, icon: 'fa:cogs'}
-      layout_properties: {x: 634.1000030525029, y: 146.08749847486615, width: 240}
-      event_bindings: {click: button_7_click}
-      name: button_7
-    - type: Button
-      properties: {role: outlined-button, align: center, tooltip: '', border: '',
-        enabled: true, foreground: 'theme:On Primary', visible: true, text: '     Manage
-          Lenders                ', font_size: null, font: '', spacing_above: small,
-        icon_align: left, spacing_below: small, italic: false, background: '#0b2547',
-        bold: true, underline: false, icon: 'fa:chain-broken'}
-      layout_properties: {x: 636.6606227345765, y: 72.51786150410771, width: 240.98214721679688}
-      event_bindings: {click: button_4_click}
-      name: button_4
-    - properties: {text: Admin Dashboard, bold: true, align: center, font_size: 25}
-      type: Label
-      layout_properties: {x: 0, y: 0, width: 970.0000610351562}
-      name: label_1
-- name: content_panel_copy_copy_3_copy_3_copy
-  properties: {col_widths: '{"RAQZHX":20,"HBXSQZ":20,"FQUOWV":20,"TJPHYC":30,"KWEVVW":30}',
+- properties: {col_widths: '{"RAQZHX":20,"HBXSQZ":20,"FQUOWV":20,"TJPHYC":30,"KWEVVW":30}',
     background: '#Edf0f4', visible: true}
   type: ColumnPanel
   layout_properties: {grid_position: 'YXSOFH,DLFMGI', full_width_row: true}
+  name: content_panel_copy_copy_3_copy_3_copy
   components:
-  - name: label_1_copy
-    properties: {text: Admin Dashboard, bold: true, align: center, font_size: 30,
+  - type: form:admin.dashboard.home_button_admin
+    properties: {}
+    layout_properties: {grid_position: 'VEWFGJ,YLOPXO', full_width_row: true}
+    name: home_button_admin_1
+  - properties: {height: '15'}
+    type: Spacer
+    layout_properties: {grid_position: 'ZQVFUD,LMOIPB'}
+    name: spacer_1
+  - properties: {text: Admin Dashboard, bold: true, align: center, font_size: 30,
       visible: true}
     type: Label
     layout_properties: {grid_position: 'FIIARN,AYRDTA'}
-  - name: spacer_13
-    properties: {height: '4'}
+    name: label_1_copy
+  - properties: {height: '4'}
     type: Spacer
     layout_properties: {grid_position: 'AZNQSG,IVTMJU'}
-  - name: content_panel_copy_copy_3_copy_3_copy_copy_copy
-    properties: {col_widths: '{}', background: white, role: elevated-card}
+    name: spacer_13
+  - properties: {col_widths: '{}', background: white, role: elevated-card}
     type: ColumnPanel
     layout_properties: {grid_position: 'AEVTNB,RAQZHX DGBMNL,DWGBUW'}
+    name: content_panel_copy_copy_3_copy_3_copy_copy_copy
     components:
-    - name: image_1
-      properties: {source: _/theme/ELABG.png, height: '100'}
+    - properties: {source: _/theme/ELABG.png, height: '100'}
       type: Image
       layout_properties: {grid_position: 'GNRRDW,FEOFAR'}
-    - name: button_14
-      properties: {text: Manage Admins, bold: true, foreground: black, font_size: 16}
+      name: image_1
+    - properties: {text: Manage Admins, bold: true, foreground: black, font_size: 16}
       type: Button
       layout_properties: {grid_position: 'LFNPCJ,OTMDIA'}
       event_bindings: {click: button_14_click}
-  - name: spacer_14
-    properties: {height: '1.5'}
+      name: button_14
+  - properties: {height: '1.5'}
     type: Spacer
     layout_properties: {grid_position: 'AEVTNB,RAQZHX ZLKQEQ,ZVDQMV'}
-  - name: content_panel_copy_copy_3_copy_3_copy_copy_copy_2
-    properties: {col_widths: '{}', background: white, role: elevated-card}
+    name: spacer_14
+  - properties: {col_widths: '{}', background: white, role: elevated-card}
     type: ColumnPanel
     layout_properties: {grid_position: 'AEVTNB,RAQZHX QOBYGH,TZELPF'}
+    name: content_panel_copy_copy_3_copy_3_copy_copy_copy_2
     components:
-    - name: image_4
-      properties: {source: _/theme/loan management.png, display_mode: shrink_to_fit,
+    - properties: {source: _/theme/loan management.png, display_mode: shrink_to_fit,
         height: '100'}
       type: Image
       layout_properties: {grid_position: 'QGZTNW,PVJEPO'}
-    - name: button_15
-      properties: {text: Loan Management, bold: true, foreground: black, font_size: 16}
+      name: image_4
+    - properties: {text: Loan Management, bold: true, foreground: black, font_size: 16}
       type: Button
       layout_properties: {grid_position: 'WBDDAG,QOALFI'}
       event_bindings: {click: button_15_click}
-  - name: spacer_19
-    properties: {height: '1.5'}
+      name: button_15
+  - properties: {height: '1.5'}
     type: Spacer
     layout_properties: {grid_position: 'AEVTNB,RAQZHX OJBXAQ,KPYDMQ'}
-  - name: content_panel_copy_copy_3_copy_3_copy_copy_copy_4
-    properties: {col_widths: '{}', background: white, role: elevated-card}
+    name: spacer_19
+  - properties: {col_widths: '{}', background: white, role: elevated-card}
     type: ColumnPanel
     layout_properties: {grid_position: 'AEVTNB,RAQZHX MVYZJL,OBXBRN'}
+    name: content_panel_copy_copy_3_copy_3_copy_copy_copy_4
     components:
-    - name: image_7
-      properties: {source: _/theme/compensation.png, display_mode: shrink_to_fit,
+    - properties: {source: _/theme/compensation.png, display_mode: shrink_to_fit,
         height: '100'}
       type: Image
       layout_properties: {grid_position: 'VUAHMV,NIXMZO'}
-    - name: button_20
-      properties: {text: Manage Revenue Share, foreground: black, bold: true, font_size: 16}
+      name: image_7
+    - properties: {text: Manage Revenue Share, foreground: black, bold: true, font_size: 16}
       type: Button
       layout_properties: {grid_position: 'KZEJQV,HXGEOK'}
       event_bindings: {click: button_20_click}
-  - name: spacer_20
-    properties: {height: '1.5'}
+      name: button_20
+  - properties: {height: '1.5'}
     type: Spacer
     layout_properties: {grid_position: 'AEVTNB,RAQZHX OCQMGF,PENBHW'}
-  - name: content_panel_copy_copy_3_copy_3_copy_copy_copy_9
-    properties: {col_widths: '{}', background: white, role: elevated-card}
+    name: spacer_20
+  - properties: {col_widths: '{}', background: white, role: elevated-card}
     type: ColumnPanel
     layout_properties: {grid_position: 'AEVTNB,RAQZHX VHYXNN,YDNJVV'}
+    name: content_panel_copy_copy_3_copy_3_copy_copy_copy_9
     components:
-    - name: image_10
-      properties: {source: _/theme/manage issues.png, display_mode: shrink_to_fit,
+    - properties: {source: _/theme/manage issues.png, display_mode: shrink_to_fit,
         height: '100'}
       type: Image
       layout_properties: {grid_position: 'YGLFNC,ASARUK'}
-    - name: button_21
-      properties: {text: Manage Issues, foreground: black, bold: true, font_size: 16}
+      name: image_10
+    - properties: {text: Manage Issues, foreground: black, bold: true, font_size: 16}
       type: Button
       layout_properties: {grid_position: 'VXGGJT,QMFGMX'}
       event_bindings: {click: button_21_click}
-  - name: content_panel_copy_copy_3_copy_3_copy_copy_copy_3
-    properties: {col_widths: '{}', background: white, role: elevated-card}
+      name: button_21
+  - properties: {col_widths: '{}', background: white, role: elevated-card}
     type: ColumnPanel
     layout_properties: {grid_position: 'AEVTNB,HBXSQZ XTQZQD,PBZHHY'}
+    name: content_panel_copy_copy_3_copy_3_copy_copy_copy_3
     components:
-    - name: image_2
-      properties: {source: _/theme/group.png, display_mode: shrink_to_fit, height: '100'}
+    - properties: {source: _/theme/group.png, display_mode: shrink_to_fit, height: '100'}
       type: Image
       layout_properties: {grid_position: 'YBAGYO,PALCTI'}
-    - name: button_12
-      properties: {text: Manage Borrowers, foreground: black, bold: true, font_size: 16}
+      name: image_2
+    - properties: {text: Manage Borrowers, foreground: black, bold: true, font_size: 16}
       type: Button
       layout_properties: {grid_position: 'KISNYU,FEDRLJ'}
       event_bindings: {click: button_12_click}
-  - name: spacer_15
-    properties: {height: '1.5'}
+      name: button_12
+  - properties: {height: '1.5'}
     type: Spacer
     layout_properties: {grid_position: 'AEVTNB,HBXSQZ DKTIHZ,FSBIQB'}
-  - name: content_panel_copy_copy_3_copy_3_copy_copy_copy_5
-    properties: {col_widths: '{}', background: white, role: elevated-card}
+    name: spacer_15
+  - properties: {col_widths: '{}', background: white, role: elevated-card}
     type: ColumnPanel
     layout_properties: {grid_position: 'AEVTNB,HBXSQZ WZCZGO,KSZMOL'}
+    name: content_panel_copy_copy_3_copy_3_copy_copy_copy_5
     components:
-    - name: image_5
-      properties: {source: _/theme/manage product.png, display_mode: shrink_to_fit,
+    - properties: {source: _/theme/manage product.png, display_mode: shrink_to_fit,
         height: '100'}
       type: Image
       layout_properties: {grid_position: 'JYCCOD,PNTHNW'}
-    - name: button_16
-      properties: {text: Manage Products, foreground: black, bold: true, font_size: 16}
+      name: image_5
+    - properties: {text: Manage Products, foreground: black, bold: true, font_size: 16}
       type: Button
       layout_properties: {grid_position: 'DQWJPZ,XLLMWG'}
       event_bindings: {click: button_16_click}
-  - name: spacer_18
-    properties: {height: '3'}
+      name: button_16
+  - properties: {height: '3'}
     type: Spacer
     layout_properties: {grid_position: 'AEVTNB,HBXSQZ YCYPEA,ZXAFZW'}
-  - name: content_panel_copy_copy_3_copy_3_copy_copy_copy_7
-    properties: {col_widths: '{}', background: white, role: elevated-card}
+    name: spacer_18
+  - properties: {col_widths: '{}', background: white, role: elevated-card}
     type: ColumnPanel
     layout_properties: {grid_position: 'AEVTNB,HBXSQZ GMTZDO,OKCFXZ'}
+    name: content_panel_copy_copy_3_copy_3_copy_copy_copy_7
     components:
-    - name: image_8
-      properties: {source: _/theme/manage risk pool.png, display_mode: shrink_to_fit,
+    - properties: {source: _/theme/manage risk pool.png, display_mode: shrink_to_fit,
         height: '100'}
       type: Image
       layout_properties: {grid_position: 'ICIFRL,RFVFAL'}
-    - name: button_19
-      properties: {text: 'Manage Risk Pool(FLDGB)  ', foreground: black, bold: true,
+      name: image_8
+    - properties: {text: 'Manage Risk Pool(FLDGB)  ', foreground: black, bold: true,
         font_size: 16}
       type: Button
       layout_properties: {grid_position: 'GCPECZ,OWFQHQ'}
       event_bindings: {click: button_19_click}
-  - name: spacer_21
-    properties: {height: '1.5'}
+      name: button_19
+  - properties: {height: '1.5'}
     type: Spacer
     layout_properties: {grid_position: 'AEVTNB,HBXSQZ ZKWQLY,ZXACIV'}
-  - name: content_panel_copy_copy_3_copy_3_copy_copy_copy_12
-    properties: {col_widths: '{}', background: white, role: elevated-card}
+    name: spacer_21
+  - properties: {col_widths: '{}', background: white, role: elevated-card}
     type: ColumnPanel
     layout_properties: {grid_position: 'AEVTNB,HBXSQZ WRZOQP,ZGEQTI'}
+    name: content_panel_copy_copy_3_copy_3_copy_copy_copy_12
     components:
-    - name: image_11
-      properties: {source: _/theme/performance tracker.png, display_mode: shrink_to_fit,
+    - properties: {source: _/theme/performance tracker.png, display_mode: shrink_to_fit,
         height: '100'}
       type: Image
       layout_properties: {grid_position: 'RBAQZF,WYVSVW'}
-    - name: button_22
-      properties: {text: Performance Tracker, foreground: black, bold: true, font_size: 16}
+      name: image_11
+    - properties: {text: Performance Tracker, foreground: black, bold: true, font_size: 16}
       type: Button
       layout_properties: {grid_position: 'XATRPB,LFKIEK'}
       event_bindings: {click: button_22_click}
-  - name: content_panel_copy_copy_3_copy_3_copy_copy_copy_6
-    properties: {col_widths: '{}', background: white, role: elevated-card}
+      name: button_22
+  - properties: {col_widths: '{}', background: white, role: elevated-card}
     type: ColumnPanel
     layout_properties: {grid_position: 'AEVTNB,FQUOWV VOXZKL,RFFBFH'}
+    name: content_panel_copy_copy_3_copy_3_copy_copy_copy_6
     components:
-    - name: image_3
-      properties: {display_mode: shrink_to_fit, source: _/theme/manage lender.png,
+    - properties: {display_mode: shrink_to_fit, source: _/theme/manage lender.png,
         height: '100'}
       type: Image
       layout_properties: {grid_position: 'YIGLKI,KSUAYJ'}
-    - name: manage_lender
-      properties: {text: Manage Lenders, foreground: black, bold: true, font_size: 16}
+      name: image_3
+    - properties: {text: Manage Lenders, foreground: black, bold: true, font_size: 16}
       type: Button
       layout_properties: {grid_position: 'HWUTYO,BMGPHA'}
       event_bindings: {click: manage_lender_click}
-  - name: spacer_16
-    properties: {height: '1.5'}
+      name: manage_lender
+  - properties: {height: '1.5'}
     type: Spacer
     layout_properties: {grid_position: 'AEVTNB,FQUOWV HLTKQL,WLMDWA'}
-  - name: content_panel_copy_copy_3_copy_3_copy_copy_copy_11
-    properties: {col_widths: '{}', background: white, role: elevated-card}
+    name: spacer_16
+  - properties: {col_widths: '{}', background: white, role: elevated-card}
     type: ColumnPanel
     layout_properties: {grid_position: 'AEVTNB,FQUOWV MZESRE,GYUATW'}
+    name: content_panel_copy_copy_3_copy_3_copy_copy_copy_11
     components:
-    - name: image_6
-      properties: {source: _/theme/user.png, display_mode: shrink_to_fit, height: '100'}
+    - properties: {source: _/theme/user.png, display_mode: shrink_to_fit, height: '100'}
       type: Image
       layout_properties: {grid_position: 'HFFRPH,KRPCBO'}
-    - name: button_18
-      properties: {text: Manage Settings, foreground: black, bold: true, font_size: 16}
+      name: image_6
+    - properties: {text: Manage Settings, foreground: black, bold: true, font_size: 16}
       type: Button
       layout_properties: {grid_position: 'QNOGIE,OOAQVF'}
       event_bindings: {click: button_18_click}
-  - name: spacer_17
-    properties: {height: '1.5'}
+      name: button_18
+  - properties: {height: '1.5'}
     type: Spacer
     layout_properties: {grid_position: 'AEVTNB,FQUOWV RSYLPT,WPKOON'}
-  - name: content_panel_copy_copy_3_copy_3_copy_copy_copy_8
-    properties: {col_widths: '{}', background: white, role: elevated-card}
+    name: spacer_17
+  - properties: {col_widths: '{}', background: white, role: elevated-card}
     type: ColumnPanel
     layout_properties: {grid_position: 'AEVTNB,FQUOWV DLHYJN,RDDUKF'}
+    name: content_panel_copy_copy_3_copy_3_copy_copy_copy_8
     components:
-    - name: image_9
-      properties: {source: _/theme/cms.png, display_mode: shrink_to_fit, height: '100'}
+    - properties: {source: _/theme/cms.png, display_mode: shrink_to_fit, height: '100'}
       type: Image
       layout_properties: {grid_position: 'HQRYUT,UOATCO'}
-    - name: button_17
-      properties: {text: Manage CMS, foreground: black, bold: true, font_size: 16}
+      name: image_9
+    - properties: {text: Manage CMS, foreground: black, bold: true, font_size: 16}
       type: Button
       layout_properties: {grid_position: 'HTLBLJ,LNMXIO'}
       event_bindings: {click: button_17_click}
-  - name: spacer_22
-    properties: {height: '1.5'}
+      name: button_17
+  - properties: {height: '1.5'}
     type: Spacer
     layout_properties: {grid_position: 'AEVTNB,FQUOWV OSLBYN,DSFJVC'}
-  - name: content_panel_copy_copy_3_copy_3_copy_copy_copy_10
-    properties: {col_widths: '{}', background: white, role: elevated-card}
+    name: spacer_22
+  - properties: {col_widths: '{}', background: white, role: elevated-card}
     type: ColumnPanel
     layout_properties: {grid_position: 'AEVTNB,FQUOWV TYUINS,MTMTFA'}
+    name: content_panel_copy_copy_3_copy_3_copy_copy_copy_10
     components:
-    - name: image_12
-      properties: {source: _/theme/manage ascend score.png, height: '100'}
+    - properties: {source: _/theme/manage ascend score.png, height: '100'}
       type: Image
       layout_properties: {grid_position: 'OHJMBF,WSMZVF'}
-    - name: button_23
-      properties: {text: Manage Ascend Score, foreground: black, bold: true, font_size: 16}
+      name: image_12
+    - properties: {text: Manage Ascend Score, foreground: black, bold: true, font_size: 16}
       type: Button
       layout_properties: {grid_position: 'CMCGJO,QEJJZP'}
       event_bindings: {click: button_23_click}
-  - name: spacer_23
-    properties: {height: '4'}
+      name: button_23
+  - properties: {height: '4'}
     type: Spacer
     layout_properties: {grid_position: 'YCXZUQ,TJPHYC'}
+    name: spacer_23
