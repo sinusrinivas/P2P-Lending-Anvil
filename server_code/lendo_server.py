@@ -207,8 +207,8 @@ def add_lendor_anotherperson_details(another_person, related_person_name, relate
     row = app_tables.fin_guarantor_details.search(customer_id=user_id)
     if row:
         row[0]['another_person'] = another_person
-        row[0]['related_person_name'] = related_person_name
-        row[0]['related_person_dob'] = related_person_dob
+        row[0]['guarantor_name'] = related_person_name
+        row[0]['guarantor_date_of_birth'] = related_person_dob
         row[0]['guarantor_mobile_no'] = related_person_mob
         row[0]['guarantor_profession'] = related_person_profession
         row[0]['guarantor_person_relation'] = related_person_relation
