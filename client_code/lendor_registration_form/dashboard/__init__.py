@@ -145,3 +145,29 @@ class dashboard(dashboardTemplate):
 
   def wallet_dashboard_link_click(self, **event_args):
     open_form('wallet.wallet')
+
+    def calculate_rom(self):
+      email = self.email
+      borrower_customer = self.selected_row['borrower_customer_id']
+      user_profile = app_tables.fin_user_profile.get(email_user=email)
+
+      if user_profile:
+        user_id = user_profile['customer_id']
+        
+        # Count the number of loans the user already has (based on specific patterns)
+        try:
+            existing_loans = app_tables.fin_loan_details.search(
+                borrower_customer_id=borrower_customer,
+                loan_updated_status=q.any_of(
+                    q.like('under process%'),
+                    q.like('Under Process%')
+                )
+            )          
+            num_existing_loans = len(existing_loans)
+            print("Existing Loans:", num_existing_loans)  
+        except anvil.tables.TableError as e:
+            print(f"Error fetching loan details: {e}")
+            return "0/0"
+      else:
+        print("0")
+        return "0/0"
