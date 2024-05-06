@@ -2,7 +2,7 @@ is_package: true
 custom_component: true
 container:
   type: ColumnPanel
-  properties: {col_widths: '{"NWEWRG":30,"YOWMGS":10,"BWDLLE":40}'}
+  properties: {col_widths: '{"QFGZTD":10,"HUNYKM":33}'}
 components:
 - properties: {role: null, vertical_align: top, height: '48', tooltip: '', border: '',
     foreground: '', visible: true, display_mode: shrink_to_fit, spacing_above: small,
@@ -19,179 +19,186 @@ components:
   properties: {}
   layout_properties: {grid_position: 'MARHAX,AJPGYE', full_width_row: true}
   name: navigation_bar_lender_dashbord_1
-- type: Label
-  properties: {role: null, align: right, tooltip: '', border: '', foreground: '',
-    visible: true, text: Make Visibilty, font_size: 20, font: '', spacing_above: medium,
-    icon_align: top, spacing_below: none, italic: false, background: '', bold: true,
-    underline: false, icon: ''}
-  layout_properties: {grid_position: 'STNFCM,NWEWRG'}
-  name: label_status
-- properties: {role: null, align: center, enabled: true, allow_indeterminate: false,
-    visible: true, text: '', spacing_above: medium, spacing_below: none, background: '',
-    bold: true, checked: false}
-  type: CheckBox
-  layout_properties: {grid_position: 'STNFCM,YOWMGS', full_width_row: true}
-  name: check_box_1
-- properties: {text: Offline, bold: true, align: left, role: title}
-  type: Label
-  layout_properties: {grid_position: 'STNFCM,BWDLLE'}
-  name: label_1
-- type: FlowPanel
-  properties: {role: null, vertical_align: full, spacing: medium, align: center, tooltip: '',
-    border: '', foreground: '', visible: false, spacing_above: small, spacing_below: small,
-    background: ''}
-  layout_properties: {grid_position: 'WVFJGA,RDOSGB'}
-  name: flow_panel_2
+- name: linear_panel_7
+  properties: {role: elevated-card, spacing_above: none, spacing_below: none}
+  type: LinearPanel
+  layout_properties: {grid_position: 'CCIIXU,QFGZTD', full_width_row: true}
   components:
-  - type: form:lendor_registration_form.Toggleswitch
-    properties: {checked: false, enabled: true}
-    layout_properties: {width: 61}
-    event_bindings: {x_change: toggleswitch_1_x_change}
-    name: toggleswitch_1
-  - type: Button
-    properties: {role: outlined-button, align: center, tooltip: '', border: '', enabled: true,
-      foreground: '', visible: true, text: '', font_size: 15, font: '', spacing_above: none,
-      icon_align: left, spacing_below: none, italic: false, background: '', bold: true,
-      underline: false, icon: ''}
+  - name: View_Loan_Extension
+    properties: {text: View Loan Extension, role: body, underline: true, italic: true,
+      spacing_below: none, spacing_above: none}
+    type: Link
+    components: []
     layout_properties: {}
-    event_bindings: {click: button_click, show: button_show, hide: button_hide}
-    name: button_status
-- type: GridPanel
-  properties: {}
-  layout_properties: {grid_position: 'BXKWQN,JNMJYB'}
-  name: grid_panel_1
+    event_bindings: {click: View_Loan_Extension_click}
+  - name: View_Loan_Foreclosure
+    properties: {text: View Loan Foreclosure, underline: true, italic: true, role: body}
+    type: Link
+    layout_properties: {}
+    components: []
+    event_bindings: {click: View_Loan_Foreclosure_click}
+  - name: View_Loan_Requests
+    properties: {text: View Loan Requests, italic: true, underline: true, role: body}
+    type: Link
+    layout_properties: {}
+    event_bindings: {click: View_Loan_Requests_click}
+  - name: Todays_Due
+    properties: {text: Today's Due, italic: true, underline: true, role: body}
+    type: Link
+    layout_properties: {}
+    event_bindings: {click: Todays_Due_click}
+  - name: View_Loans
+    properties: {text: View Loans, italic: true, underline: true, role: body}
+    type: Link
+    layout_properties: {}
+    event_bindings: {click: View_Loans_click}
+  - name: View_Lost_Opportunities
+    properties: {text: 'View Lost Opportunities ', underline: true, italic: true,
+      role: body}
+    type: Link
+    layout_properties: {}
+    event_bindings: {click: View_Lost_Opportunities_click}
+  - name: Change_Password
+    properties: {text: Change Password, col_spacing: tiny, underline: true, italic: true,
+      role: body}
+    type: Link
+    layout_properties: {}
+    event_bindings: {click: Change_Password_click}
+  - name: historyView_Transaction_History
+    properties: {text: 'View Transaction History ', underline: true, italic: true,
+      role: body}
+    type: Link
+    layout_properties: {}
+    event_bindings: {click: historyView_Transaction_History_click}
+  - name: View_Edit_Profile
+    properties: {text: View/Edit Profile, italic: true, underline: true, role: body}
+    type: Link
+    layout_properties: {}
+    event_bindings: {click: View_Edit_Profile_click}
+  - name: View_Send_Notifications
+    properties: {text: ' View/Send Notifications', spacing_above: none, spacing_below: none,
+      col_spacing: tiny, italic: true, underline: true, role: body}
+    type: Link
+    layout_properties: {}
+    event_bindings: {click: View_Send_Notifications_click}
+  data_bindings:
+  - {property: spacing_below, code: 'self.item['''']', writeback: false}
+- name: column_panel_1
+  properties: {role: elevated-card}
+  type: ColumnPanel
+  layout_properties: {grid_position: 'CCIIXU,HUNYKM VDNJEZ,JDVETN'}
   components:
-  - properties: {source: 'https://cdni.iconscout.com/illustration/premium/thumb/mutual-funds-allow-investors-to-pool-money-to-invest-in-a-variety-of-securities-8834128-7162631.png?f=webp',
-      height: 208}
-    type: Image
-    layout_properties: {row: VNSVWA, width_xs: 12, col_xs: 0}
-    name: image_1
-  - type: LinearPanel
-    properties: {}
-    layout_properties: {row: VNSVWA, width_xs: 3, col_xs: 0}
-    name: linear_panel_2
+  - type: Label
+    properties: {role: null, align: right, tooltip: '', border: '', foreground: '',
+      visible: true, text: Make Visibilty, font_size: 20, font: '', spacing_above: medium,
+      icon_align: top, spacing_below: none, italic: false, background: '', bold: true,
+      underline: false, icon: ''}
+    layout_properties: {grid_position: 'ZGTDIJ,BREYKS'}
+    name: label_status
+  - properties: {role: null, align: center, enabled: true, allow_indeterminate: false,
+      visible: true, text: '', spacing_above: medium, spacing_below: none, background: '',
+      bold: true, checked: false}
+    type: CheckBox
+    layout_properties: {grid_position: 'ZGTDIJ,RDAAZD'}
+    name: check_box_1
+  - type: FlowPanel
+    properties: {role: null, vertical_align: full, spacing: medium, align: center,
+      tooltip: '', border: '', foreground: '', visible: false, spacing_above: small,
+      spacing_below: small, background: ''}
+    layout_properties: {grid_position: 'ZGTDIJ,FVJJOH'}
+    name: flow_panel_2
     components:
-    - properties: {role: outlined-button, align: center, tooltip: '', border: '',
-        enabled: true, foreground: 'theme:On Primary', visible: true, text: '  View
-          Loan Extension             ', font_size: null, font: '', spacing_above: small,
-        icon_align: left, spacing_below: small, italic: false, background: '#0b2547',
-        bold: false, underline: false, icon: ''}
-      type: Button
-      layout_properties: {grid_position: 'SPNLTZ,GGCOHO'}
-      event_bindings: {click: outlined_button_4_click}
-      name: outlined_button_4
-  - type: LinearPanel
-    properties: {}
-    layout_properties: {row: VNSVWA, width_xs: 3, col_xs: 0}
-    name: linear_panel_1
+    - type: form:lendor_registration_form.Toggleswitch
+      properties: {checked: false, enabled: true}
+      layout_properties: {width: 61}
+      event_bindings: {x_change: toggleswitch_1_x_change}
+      name: toggleswitch_1
+    - type: Button
+      properties: {role: outlined-button, align: center, tooltip: '', border: '',
+        enabled: true, foreground: '', visible: true, text: '', font_size: 15, font: '',
+        spacing_above: none, icon_align: left, spacing_below: none, italic: false,
+        background: '', bold: true, underline: false, icon: ''}
+      layout_properties: {}
+      event_bindings: {click: button_click, show: button_show, hide: button_hide}
+      name: button_status
+  - properties: {text: Offline, bold: true, align: left, role: title}
+    type: Label
+    layout_properties: {grid_position: 'ZGTDIJ,JQYOUY'}
+    name: label_1
+- name: column_panel_2
+  properties: {}
+  type: ColumnPanel
+  layout_properties: {grid_position: 'CCIIXU,HUNYKM GMQTUG,KNKICZ'}
+  components:
+  - name: column_panel_3
+    properties: {role: elevated-card, col_widths: '{"PQPPZT":20,"WLAJCK":40}'}
+    type: ColumnPanel
+    layout_properties: {grid_position: 'ERCHQY,YUAUSJ'}
     components:
-    - properties: {role: outlined-button, align: center, tooltip: '', border: '',
-        enabled: true, foreground: 'theme:On Primary', visible: true, text: '  View
-          Loan Foreclosure               ', font_size: null, font: '', spacing_above: small,
-        icon_align: left, spacing_below: small, italic: false, background: '#0b2547',
-        bold: false, underline: false, icon: ''}
-      type: Button
-      layout_properties: {grid_position: 'SPNLTZ,TRGJPZ'}
-      event_bindings: {click: outlined_button_5_click}
-      name: outlined_button_5
-  - type: LinearPanel
-    properties: {}
-    layout_properties: {row: VNSVWA, width_xs: 3, col_xs: 6}
-    name: linear_panel_3
+    - name: image_1
+      properties: {height: 38.199981689453125, display_mode: shrink_to_fit, source: _/theme/1.png}
+      type: Image
+      layout_properties: {grid_position: 'FHZWVZ,PQPPZT'}
+    - name: label_2
+      properties: {icon: '', text: 'My Installment
+
+          '}
+      type: Label
+      layout_properties: {grid_position: 'FHZWVZ,WLAJCK CGZQZP,FKOEII'}
+    - name: label_3
+      properties: {}
+      type: Label
+      layout_properties: {grid_position: 'FHZWVZ,WLAJCK KJAPCT,ITCNGP'}
+  - name: column_panel_4
+    properties: {role: elevated-card, col_widths: '{"KRHWBD":20,"ZHEDGR":40}'}
+    type: ColumnPanel
+    layout_properties: {grid_position: 'ERCHQY,NETDIR'}
     components:
-    - properties: {role: outlined-button, align: center, tooltip: '', border: '',
-        enabled: true, foreground: 'theme:On Primary', visible: true, text: 'View
-          Loan Requests             ', font_size: null, font: '', spacing_above: small,
-        icon_align: left, spacing_below: small, italic: false, background: '#0b2547',
-        bold: false, underline: false, icon: ''}
-      type: Button
-      layout_properties: {grid_position: 'FFRNUM,RQFISK'}
-      event_bindings: {click: button_5_click}
-      name: button_5
-  - type: LinearPanel
-    properties: {spacing_above: small, spacing_below: small, background: '', foreground: '',
-      border: '', visible: true, role: null, tooltip: ''}
-    layout_properties: {row: VNSVWA, width_xs: 3, col_xs: 9, width: 165}
-    name: linear_panel_4
+    - name: image_2
+      properties: {height: 46.79998779296875, source: _/theme/profits.png}
+      type: Image
+      layout_properties: {grid_position: 'LIIRFK,KRHWBD'}
+    - name: label_4
+      properties: {text: 'Opening Balance
+
+          '}
+      type: Label
+      layout_properties: {grid_position: 'LIIRFK,ZHEDGR PIXTGE,WWPOAT'}
+    - name: label_5
+      properties: {}
+      type: Label
+      layout_properties: {grid_position: 'LIIRFK,ZHEDGR GPTTVY,SQOBSC'}
+  - name: column_panel_5
+    properties: {role: elevated-card, col_widths: '{"UKYYYV":20,"UPASZV":40}'}
+    type: ColumnPanel
+    layout_properties: {grid_position: 'ERCHQY,IXNAVP'}
     components:
-    - properties: {role: outlined-button, align: center, tooltip: '', border: '',
-        enabled: true, foreground: 'theme:On Primary', visible: true, text: 'Today''s
-          Due                                        ', font_size: null, font: '',
-        spacing_above: small, icon_align: left, spacing_below: small, italic: false,
-        background: '#0b2547', bold: false, underline: false, icon: ''}
-      type: Button
-      layout_properties: {grid_position: 'FFRNUM,QDDEAN'}
-      event_bindings: {click: outlined_button_1_click}
-      name: outlined_button_1
-  - type: LinearPanel
-    properties: {}
-    layout_properties: {row: UZTNPF, width_xs: 3, col_xs: 0}
-    name: linear_panel_5
+    - name: image_3
+      properties: {height: 43.399932861328125, source: _/theme/piggy-bank.png}
+      type: Image
+      layout_properties: {grid_position: 'HVNINY,UKYYYV'}
+    - name: label_6
+      properties: {text: My Returns}
+      type: Label
+      layout_properties: {grid_position: 'HVNINY,UPASZV OMUQHW,ZECQCD'}
+    - name: label_7
+      properties: {}
+      type: Label
+      layout_properties: {grid_position: 'HVNINY,UPASZV EEYXZV,GWYXLY'}
+  - name: column_panel_6
+    properties: {role: elevated-card, col_widths: '{"CUOOLO":15,"ZYDTNB":45}'}
+    type: ColumnPanel
+    layout_properties: {grid_position: 'ERCHQY,KVCNSJ'}
     components:
-    - properties: {role: outlined-button, align: center, tooltip: '', border: '',
-        enabled: true, foreground: 'theme:On Primary', visible: true, text: 'View
-          Loans                                        ', font_size: null, font: '',
-        spacing_above: small, icon_align: left, spacing_below: small, italic: false,
-        background: '#0b2547', bold: false, underline: false, icon: ''}
-      type: Button
-      layout_properties: {grid_position: 'FFRNUM,QDDEAN'}
-      event_bindings: {click: outlined_button_3_click}
-      name: outlined_button_3
-  - type: LinearPanel
-    properties: {}
-    layout_properties: {row: UZTNPF, width_xs: 3, col_xs: 3}
-    name: linear_panel_6
-    components:
-    - properties: {role: outlined-button, align: center, tooltip: '', border: '',
-        enabled: true, foreground: 'theme:On Primary', visible: true, text: 'View
-          Lost Opportunities     ', font_size: null, font: '', spacing_above: small,
-        icon_align: left, spacing_below: small, italic: false, background: '#0b2547',
-        bold: false, underline: false, icon: ''}
-      type: Button
-      layout_properties: {grid_position: 'OOVWBY,XCINXZ'}
-      event_bindings: {click: outlined_button_2_click}
-      name: outlined_button_2
-  - properties: {role: outlined-button, align: center, tooltip: '', border: '', enabled: true,
-      foreground: 'theme:On Primary', visible: true, text: 'Change Password                       ',
-      font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small,
-      italic: false, background: '#0b2547', bold: false, underline: false, icon: ''}
-    type: Button
-    layout_properties: {row: UZTNPF, width_xs: 3, col_xs: 6}
-    event_bindings: {click: outlined_button_10_click}
-    name: outlined_button_10
-  - properties: {role: outlined-button, align: center, tooltip: '', border: '', enabled: true,
-      foreground: 'theme:On Primary', visible: true, text: 'View Transaction History                ',
-      font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small,
-      italic: false, background: '#0b2547', bold: false, underline: false, icon: ''}
-    type: Button
-    event_bindings: {click: history_click}
-    layout_properties: {row: UZTNPF, width_xs: 3, col_xs: 9}
-    name: history
-  - type: LinearPanel
-    properties: {}
-    layout_properties: {row: ZOEATB, width_xs: 3, col_xs: 0}
-    name: linear_panel_9
-    components:
-    - properties: {role: outlined-button, align: center, tooltip: '', border: '',
-        enabled: true, foreground: 'theme:On Primary', visible: true, text: 'View/Edit
-          Profile                      ', font_size: null, font: '', spacing_above: small,
-        icon_align: left, spacing_below: small, italic: false, background: '#0b2547',
-        bold: false, underline: false, icon: ''}
-      type: Button
-      layout_properties: {grid_position: 'WKLSTO,NJIISR'}
-      event_bindings: {click: outlined_button_8_click}
-      name: outlined_button_8
-  - type: LinearPanel
-    properties: {}
-    layout_properties: {row: ZOEATB, width_xs: 3, col_xs: 3}
-    name: linear_panel_10
-    components:
-    - properties: {role: outlined-button, align: center, tooltip: '', border: '',
-        enabled: true, foreground: 'theme:On Primary', visible: true, text: ' View/Send
-          Notifications     ', font_size: null, font: '', spacing_above: small, icon_align: left,
-        spacing_below: small, italic: false, background: '#0b2547', bold: false, underline: false,
-        icon: ''}
-      type: Button
-      layout_properties: {grid_position: 'WKLSTO,OADNKX'}
-      event_bindings: {click: outlined_button_9_click}
-      name: outlined_button_9
+    - name: image_4
+      properties: {height: 48.20001220703125, source: _/theme/loan.png}
+      type: Image
+      layout_properties: {grid_position: 'QAERLY,CUOOLO'}
+    - name: label_8
+      properties: {text: New Loan Request}
+      type: Label
+      layout_properties: {grid_position: 'QAERLY,ZYDTNB IFVDXW,KISYOU'}
+    - name: label_9
+      properties: {}
+      type: Label
+      layout_properties: {grid_position: 'QAERLY,ZYDTNB YYWHSJ,POJDAN'}

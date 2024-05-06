@@ -1,84 +1,123 @@
 is_package: true
 container:
   type: HtmlTemplate
-  properties: {html: ''}
+  properties: {html: '', background: ''}
 components:
 - type: ColumnPanel
-  properties: {col_widths: '{}'}
-  name: column_panel_1
+  properties: {col_widths: '{"WDNEWN":20,"KBGBNQ":20,"NOFGMI":20,"GTAYKJ":20,"FCKWYS":20,"TLAFLU":20}'}
   layout_properties: {slot: default}
+  name: column_panel_1
   components:
-  - type: form:admin.dashboard.home_button_admin
-    properties: {}
-    name: home_button_admin_1
-    layout_properties: {grid_position: 'YDSFJP,VMBZFT', full_width_row: true}
-  - name: label_1_copy
-    properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
-      visible: true, text: Manage Products, font_size: 18, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-      underline: false, icon: ''}
-    type: Label
-    layout_properties: {grid_position: 'VPTESA,BRRIEZ'}
-  - name: spacer_2
-    properties: {height: 17.142791748046875}
-    type: Spacer
-    layout_properties: {grid_position: 'OUPQEJ,CTDJFP'}
-  - type: Button
-    properties: {role: tonal-button, align: full, tooltip: '', border: '', enabled: true,
-      foreground: 'theme:On Primary', visible: true, text: '
+  - properties: {col_widths: '{"LRMGVL":11,"PPLSYB":11,"FPVXBC":11}', background: '#Edf0f4',
+      role: null}
+    type: ColumnPanel
+    layout_properties: {grid_position: 'CDZMDJ,TKQKYQ', full_width_row: true}
+    name: content_panel_copy_copy_3_copy_3_copy_copy_copy_copy
+    components:
+    - type: form:admin.dashboard.home_button_admin
+      properties: {}
+      layout_properties: {grid_position: 'KPIBYN,GISMLM', full_width_row: true}
+      name: home_button_admin_1
+    - properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
+        visible: true, text: Manage Products, font_size: 30, font: '', spacing_above: small,
+        icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+        underline: false, icon: ''}
+      type: Label
+      layout_properties: {grid_position: 'EQXMGV,YVCYTL'}
+      name: label_1_copy
+    - properties: {height: '3'}
+      type: Spacer
+      layout_properties: {grid_position: 'UEOLFA,AWCGTS'}
+      name: spacer_4
+    - properties: {height: '1.5'}
+      type: Spacer
+      layout_properties: {grid_position: 'LKTWOF,LRMGVL WPCQYC,IUVQAZ'}
+      name: spacer_6
+    - properties: {col_widths: '{}', background: white, role: elevated-card}
+      type: ColumnPanel
+      layout_properties: {grid_position: 'LKTWOF,PPLSYB JREUIR,TGCNTG'}
+      name: content_panel_copy_copy_3_copy_3_copy_copy_copy_2_copy_3
+      components:
+      - properties: {source: _/theme/manage categories.png, display_mode: shrink_to_fit,
+          height: '100'}
+        type: Image
+        layout_properties: {grid_position: 'QGZTNW,PVJEPO'}
+        name: image_4_copy_3
+      - properties: {text: MANAGE PRODUCT CATEGORIES, font_size: 16, foreground: black,
+          bold: true}
+        type: Button
+        layout_properties: {grid_position: 'TSDWZF,VCNTGA'}
+        event_bindings: {click: button_10_click}
+        name: button_10
+    - properties: {col_widths: '{}', background: white, role: elevated-card}
+      type: ColumnPanel
+      layout_properties: {grid_position: 'LKTWOF,LRMGVL TFYOZD,THGIQV'}
+      name: content_panel_copy_copy_3_copy_3_copy_copy_copy_2_copy
+      components:
+      - properties: {source: _/theme/add product gp and categories.png, display_mode: shrink_to_fit,
+          height: '100'}
+        type: Image
+        layout_properties: {grid_position: 'QGZTNW,PVJEPO'}
+        name: image_4_copy
+      - properties: {text: 'ADD PRODUCT GROUP  & CATEGORIES
 
-        ADD PRODUCT GROUP  & CATEGORIES
-
-        ', font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small,
-      italic: false, background: '#05264d', bold: false, underline: false, icon: ''}
-    name: button_1_copy_2
-    layout_properties: {grid_position: 'KZKBCS,WDNEWN'}
-    event_bindings: {click: button_1_copy_2_click}
-  - type: Button
-    properties: {role: outlined-button, align: full, tooltip: '', border: '', enabled: true,
-      foreground: 'theme:On Primary', visible: true, text: "\n ADD PRODUCTS\n\n",
-      font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small,
-      italic: false, background: '#05264d', bold: false, underline: false, icon: ''}
-    name: button_1
-    layout_properties: {grid_position: 'KZKBCS,KBGBNQ'}
-    event_bindings: {click: button_1_click}
-  - type: Button
-    properties: {role: tonal-button, align: full, tooltip: '', border: '', enabled: true,
-      foreground: 'theme:On Primary', visible: true, text: '
-
-        MANAGE PRODUCTS
-
-
-        ', font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small,
-      italic: false, background: '#05264d', bold: false, underline: false, icon: ''}
-    name: button_1_copy
-    layout_properties: {grid_position: 'KZKBCS,NOFGMI'}
-    event_bindings: {click: button_1_copy_click}
-  - type: Button
-    properties: {role: tonal-button, align: full, tooltip: '', border: '', enabled: true,
-      foreground: 'theme:On Primary', visible: true, text: '
-
-        MANAGE PRODUCT GROUP
-
-
-        ', font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small,
-      italic: false, background: '#05264d', bold: false, underline: false, icon: ''}
-    name: button_1_copy_3
-    layout_properties: {grid_position: 'DKDXHA,GTAYKJ'}
-    event_bindings: {click: button_1_copy_3_click}
-  - type: Button
-    properties: {role: tonal-button, align: full, tooltip: '', border: '', enabled: true,
-      foreground: 'theme:On Primary', visible: true, text: '
-
-        MANAGE PRODUCT CATEGORIES
-
-
-        ', font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small,
-      italic: false, background: '#05264d', bold: false, underline: false, icon: ''}
-    name: button_1_copy_4
-    layout_properties: {grid_position: 'DKDXHA,FCKWYS'}
-    event_bindings: {click: button_1_copy_4_click}
-  - name: spacer_1
-    properties: {height: 32}
-    type: Spacer
-    layout_properties: {grid_position: 'DKDXHA,TLAFLU'}
+            ', font_size: 16, foreground: black, bold: true}
+        type: Button
+        layout_properties: {grid_position: 'GMECOB,ATAMRQ'}
+        event_bindings: {click: button_9_click}
+        name: button_9
+    - properties: {col_widths: '{}', background: white, role: elevated-card}
+      type: ColumnPanel
+      layout_properties: {grid_position: 'LKTWOF,FPVXBC'}
+      name: content_panel_copy_copy_3_copy_3_copy_copy_copy_2_copy_5
+      components:
+      - properties: {source: _/theme/manage product.png, display_mode: shrink_to_fit,
+          height: '100'}
+        type: Image
+        layout_properties: {grid_position: 'QGZTNW,PVJEPO'}
+        name: image_4_copy_5
+      - properties: {text: "MANAGE \nPRODUCTS\n", font_size: 16, foreground: black,
+          bold: true}
+        type: Button
+        layout_properties: {grid_position: 'TNRHQQ,HOQMDP'}
+        event_bindings: {click: button_11_click}
+        name: button_11
+    - properties: {col_widths: '{}', background: white, role: elevated-card}
+      type: ColumnPanel
+      layout_properties: {grid_position: 'LKTWOF,LRMGVL QAKCZK,TLIDIT'}
+      name: content_panel_copy_copy_3_copy_3_copy_copy_copy_2_copy_2
+      components:
+      - properties: {source: _/theme/manage product gp.png, display_mode: shrink_to_fit,
+          height: '100'}
+        type: Image
+        layout_properties: {grid_position: 'QGZTNW,PVJEPO'}
+        name: image_4_copy_2
+      - properties: {text: "MANAGE PRODUCT \nGROUP\n", align: center, foreground: black,
+          font_size: 16, bold: true}
+        type: Button
+        layout_properties: {grid_position: 'RVCVIZ,SJZUBG'}
+        event_bindings: {click: button_2_click}
+        name: button_2
+    - properties: {col_widths: '{}', background: white, role: elevated-card}
+      type: ColumnPanel
+      layout_properties: {grid_position: 'LKTWOF,PPLSYB HSZEDN,NYOZZB'}
+      name: content_panel_copy_copy_3_copy_3_copy_copy_copy_2_copy_10
+      components:
+      - properties: {source: _/theme/add product 2.png, display_mode: shrink_to_fit,
+          height: '100'}
+        type: Image
+        layout_properties: {grid_position: 'QGZTNW,PVJEPO'}
+        name: image_4_copy_10
+      - properties: {text: "ADD\n PRODUCTS\n", font_size: 16, foreground: black, bold: true}
+        type: Button
+        layout_properties: {grid_position: 'TFDFVQ,VTCDTE'}
+        event_bindings: {click: button_14_click}
+        name: button_14
+      - properties: {height: '1.5'}
+        type: Spacer
+        layout_properties: {grid_position: 'XDOWNN,JHSKRG'}
+        name: spacer_8
+    - properties: {height: '3'}
+      type: Spacer
+      layout_properties: {grid_position: 'LXEPFH,FVTVHC'}
+      name: spacer_5
