@@ -144,7 +144,7 @@ components:
       type: Image
       layout_properties: {grid_position: 'FHZWVZ,PQPPZT'}
     - name: label_2
-      properties: {icon: '', text: 'My Installment
+      properties: {icon: '', text: 'My Investment
 
           '}
       type: Label
@@ -190,12 +190,12 @@ components:
       type: Label
       layout_properties: {grid_position: 'HVNINY,UPASZV EEYXZV,GWYXLY'}
   - name: column_panel_6
-    properties: {role: elevated-card, col_widths: '{"CUOOLO":15,"ZYDTNB":45}'}
+    properties: {role: elevated-card, col_widths: '{"CUOOLO":20,"ZYDTNB":40}'}
     type: ColumnPanel
     layout_properties: {grid_position: 'ERCHQY,KVCNSJ'}
     components:
     - name: image_4
-      properties: {height: 67.60000610351562, source: _/theme/personal.png}
+      properties: {height: 55.79998779296875, source: _/theme/personal.png}
       type: Image
       layout_properties: {grid_position: 'QAERLY,CUOOLO'}
     - name: label_8
