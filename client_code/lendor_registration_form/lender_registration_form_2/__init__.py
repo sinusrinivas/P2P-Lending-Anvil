@@ -69,6 +69,17 @@ class lender_registration_form_2(lender_registration_form_2Template):
             # Show an error message for non-integer input
             alert("Please enter a valid number for investment.")
             return
+
+        membership_data = app_tables.fin_membership.search(tables.order_by('min_amount'))
+        membership_type = None
+        for membership_row in membership_data:
+            if membership_row['min_amount'] <= investment <= membership_row['max_amount']:
+                membership_type = membership_row['membership_type']
+                break
+        
+        if not membership_type:
+            alert("Could not determine membership type for the entered investment amount.")
+            return
     
         # Search for existing user data in the lender table
         user_data = app_tables.fin_lender.search(customer_id=user_id)
@@ -79,12 +90,13 @@ class lender_registration_form_2(lender_registration_form_2Template):
             user_row['lending_type'] = lending_type
             user_row['investment'] = int(investment)
             user_row['lending_period'] = lending_period
-            user_row['membership'] = self.calculate_membership(float(investment))
+            # user_row['membership'] = self.calculate_membership(float(investment))
+            user_row['membership'] = membership_type
             user_row.update()
         else:
             # If the row doesn't exist, add a new row
             app_tables.fin_lender.add_row(customer_id=user_id, lending_type=lending_type, investment=int(investment),
-                                          lending_period=lending_period, membership=self.calculate_membership(float(investment)))
+                                          lending_period=lending_period, membership=membership_type)
     
         if lending_type == 'Individual':
             open_form('lendor_registration_form.lender_registration_form_2.lender_registration_individual_form_1',
@@ -106,12 +118,12 @@ class lender_registration_form_2(lender_registration_form_2Template):
         open_form("bank_users.user_form")
 
     # Function to calculate membership based on investment
-    def calculate_membership(self, investment):
-        if investment <= 500000:
-            return 'Silver'
-        elif investment <= 1000000:
-            return 'Gold'
-        else:
-            return 'Platinum'
+    # def calculate_membership(self, investment):
+    #     if investment <= 500000:
+    #         return 'Silver'
+    #     elif investment <= 1000000:
+    #         return 'Gold'
+    #     else:
+    #         return 'Platinum'
 
     
