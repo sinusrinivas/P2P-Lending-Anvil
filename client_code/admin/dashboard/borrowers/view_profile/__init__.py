@@ -182,13 +182,13 @@ class view_profile(view_profileTemplate):
         #self.label_53.text = self.date_marrige_list[b]
         self.label_54.text = self.space_name_list[b]
 
-        if self.name_list[b]:
-          self.label_8.text = self.name_list[b]
-          self.label_8.visible = True
-          self.label_2.visible = True
+        if self.space_name_list[b]:
+          self.label_54.text = self.space_name_list[b]
+          self.label_54.visible = True
+          self.label_20.visible = True
         else:
-          self.label_8.visible =  False
-          self.label_2.visible = False
+          self.label_54.visible =  False
+          self.label_20.visible = False
         self.label_61.text = self.about_list[b]
         self.label_63.text = bool(self.alets_list[b])
         self.label_72.text = bool(self.terms_list[b])
