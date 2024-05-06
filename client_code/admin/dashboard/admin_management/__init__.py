@@ -28,14 +28,24 @@ class admin_management(admin_managementTemplate):
         if self.user_type == 'super admin':
             self.add_people.visible = True
             self.view_people.visible = True
+            self.image_4_copy.visible = True
+            self.image_4_copy_5.visible = True
             self.button_1.visible = False
+            self.content_panel_copy_copy_3_copy_3_copy_copy_copy_2_copy.visible = True
+            self.content_panel_copy_copy_3_copy_3_copy_copy_copy_2_copy_5.visible = True
+            self.content_panel_copy_copy_3_copy_3_copy_copy_copy_2_copy_10.visible = False
         elif self.user_type == 'admin':
             self.add_people.visible = False
             self.view_people.visible = False
             self.button_1.visible = True
+            self.image_4_copy_10.visible = True
+            self.content_panel_copy_copy_3_copy_3_copy_copy_copy_2_copy.visible = False
+            self.content_panel_copy_copy_3_copy_3_copy_copy_copy_2_copy_5.visible = False
+            self.content_panel_copy_copy_3_copy_3_copy_copy_copy_2_copy_10.visible = True
         else:
             self.add_people.visible = False
             self.view_people.visible = False
+            
 
     def home_click(self, **event_args):
         open_form('admin.dashboard')
