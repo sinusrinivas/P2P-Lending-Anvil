@@ -186,7 +186,7 @@ components:
       type: Label
       layout_properties: {grid_position: 'HVNINY,UPASZV EEYXZV,GWYXLY'}
   - name: column_panel_6
-    properties: {role: elevated-card, col_widths: '{"CUOOLO":20,"ZYDTNB":40}'}
+    properties: {role: elevated-card, col_widths: '{"CUOOLO":15,"ZYDTNB":45}'}
     type: ColumnPanel
     layout_properties: {grid_position: 'ERCHQY,KVCNSJ'}
     components:
