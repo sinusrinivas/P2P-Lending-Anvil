@@ -11,8 +11,8 @@ from anvil.js.window import navigator
 from ..user_form import user_module
 from . import main_form_module
 # from ..borrower_dashboard import borrower_main_form_module
-from ...borrower_registration_form.dashboard import main_form_module
-
+# from ...borrower_registration_form.dashboard import main_form_module
+from ...borrower.dashboard import main_form_module
 
 class main_form(main_formTemplate):
   def __init__(self, **properties):

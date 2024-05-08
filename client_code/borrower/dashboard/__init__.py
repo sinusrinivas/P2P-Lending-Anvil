@@ -45,11 +45,11 @@ class dashboard(dashboardTemplate):
 
     def home_main_form_link_click(self, **event_args):
         """This method is called when the link is clicked"""
-        open_form("borrower_registration_form.dashboard")
+        open_form("borrower.dashboard")
 
     def button_3_click(self, **event_args):
         """This method is called when the button is clicked"""
-        open_form('borrower_registration_form.dashboard.borrower_profile')
+        open_form('borrower.dashboard.borrower_profile')
 
     def button_4_click(self, **event_args):
         """This method is called when the button is clicked"""
@@ -89,7 +89,7 @@ class dashboard(dashboardTemplate):
                     wallet_row = app_tables.fin_wallet.get(customer_id=user_id)
     
                     if wallet_row and wallet_row['wallet_id'] is not None:
-                        open_form('borrower_registration_form.dashboard.new_loan_request')
+                        open_form('borrower.dashboard.new_loan_request')
                     else:
                         alert("Wallet not found. Please create a wallet.")
     
@@ -103,28 +103,28 @@ class dashboard(dashboardTemplate):
                     alert("Error fetching existing loans.")
 
     def button_6_click(self, **event_args):
-      open_form('borrower_registration_form.dashboard.view_loans')
+      open_form('borrower.dashboard.view_loans')
 
     def outlined_button_1_click(self, **event_args):
-      open_form('borrower_registration_form.dashboard.today_dues')
+      open_form('borrower.dashboard.today_dues')
 
     def outlined_button_3_click(self, **event_args):
-      open_form('borrower_registration_form.dashboard.application_tracker')
+      open_form('borrower.dashboard.application_tracker')
 
     def outlined_button_2_click(self, **event_args):
-      open_form('borrower_registration_form.dashboard.foreclosure_request')
+      open_form('borrower.dashboard.foreclosure_request')
 
     # def outlined_button_6_click(self, **event_args):
     #   open_form('borrower_registration_form.dashboard.dashboard_report_a_problem')
 
     def outlined_button_7_click(self, **event_args):
-      open_form('borrower_registration_form.dashboard.view_transaction_history')
+      open_form('borrower.dashboard.view_transaction_history')
 
     def about_main_form_link_click(self, **event_args):
-      open_form('borrower_registration_form.dashboard.dashboard_about')
+      open_form('borrower.dashboard.dashboard_about')
 
     def notification_link_click(self, **event_args):
-      open_form('borrower_registration_form.dashboard.notification')
+      open_form('borrower.dashboard.notification')
 
   
     # this button is work for wallet 
@@ -136,10 +136,10 @@ class dashboard(dashboardTemplate):
 
 
     def extended_loans_click(self, **event_args):
-      open_form('borrower_registration_form.dashboard.extension_loan_request')
+      open_form('borrower.dashboard.extension_loan_request')
 
     def outlined_button_1_copy_3_click(self, **event_args):
-      open_form('borrower_registration_form.dashboard.foreclosure_request')
+      open_form('borrower.dashboard.foreclosure_request')
 
 
     # this is for logout
@@ -153,18 +153,18 @@ class dashboard(dashboardTemplate):
       pass
 
     def contact_main_form_link_click(self, **event_args):
-      open_form('borrower_registration_form.dashboard.dashboard_contact')
+      open_form('borrower.dashboard.dashboard_contact')
 
     def Report_A_Problem_click(self, **event_args):
-      open_form('borrower_registration_form.dashboard.dashboard_report_a_problem')
+      open_form('borrower.dashboard.dashboard_report_a_problem')
 
     def view_profile(self, **event_args):
       """This method is called when the button is clicked"""
-      open_form('borrower_registration_form.dashboard.borrower_profile')
+      open_form('borrower.dashboard.borrower_profile')
 
     def outlined_button_06_click(self, **event_args):
       """This method is called when the button is clicked"""
-      open_form('borrower_registration_form.dashboard.discount_coupons')
+      open_form('borrower.dashboard.discount_coupons')
 
     def button_1_click(self, **event_args):
       """This method is called when the button is clicked"""
