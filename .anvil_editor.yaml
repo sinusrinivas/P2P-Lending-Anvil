@@ -178,6 +178,7 @@ unique_ids:
     admin.dashboard.manage_products.view_categories: '1704370878451440341230872.3722'
     lendor.dashboard.lender_view_loans.ItemTemplate27: '1709109515529752639226290.7712'
     admin.dashboard.loan_management.closed_loans.ItemTemplate30: '1709543132804988775190862.8821'
+    lendor.dashboard.RowTemplate9: '1715159663259330073006305.8728'
     lendor.dashboard.view_lost_oppurtunities.ItemTemplate53: '1709713876840119677681353.71126'
     admin.dashboard.manage_cms.add_lender_dropdown_details: '1706498596425173377770038.75598'
     borrower.dashboard.application_tracker.ItemTemplate69: '1709621198298979722498909.3445'
