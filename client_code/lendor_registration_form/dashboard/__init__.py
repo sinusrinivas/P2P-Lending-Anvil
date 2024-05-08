@@ -157,3 +157,4 @@ class dashboard(dashboardTemplate):
         open_form('wallet.wallet')
         # Call calculate_rom function here
         self.calculate_rom()
+
