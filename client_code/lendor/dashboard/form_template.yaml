@@ -39,6 +39,10 @@ components:
       background: '#0b2547', bold: false, underline: false, icon: ''}
     type: Button
     event_bindings: {click: withdraw_money_btn_click}
+  - name: button_1
+    properties: {text: View Loan Extension}
+    type: Button
+    layout_properties: {}
   - name: View_Loan_Extension
     properties: {text: View Loan Extension, role: body, underline: true, italic: true,
       spacing_below: none, spacing_above: none}
