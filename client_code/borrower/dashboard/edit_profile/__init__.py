@@ -79,11 +79,11 @@ class edit_profile(edit_profileTemplate):
       user_profile['user_photo'] = photo
      user_profile.update()
     alert('saved sucessfully')
-    open_form('borrower_registration_form.dashboard')
+    open_form('borrower.dashboard')
 
   def home_borrower_registration_form_click(self, **event_args):
     """This method is called when the button is clicked"""
-    open_form('borrower_registration_form.dashboard')
+    open_form('borrower.dashboard')
 
   def validate_email(self, email):
         """Validate email format"""
