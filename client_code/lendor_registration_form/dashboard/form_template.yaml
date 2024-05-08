@@ -213,36 +213,35 @@ components:
   type: Label
   layout_properties: {grid_position: 'CCIIXU,HUNYKM BGPDWN,BOZZRM'}
 - name: grid_panel_1
-  properties: {}
+  properties: {spacing_above: none, spacing_below: none}
   type: GridPanel
   layout_properties: {grid_position: 'CCIIXU,HUNYKM WUNBGA,QAWSBG'}
   components:
   - name: button_1
-    properties: {text: New Loan Requests(), foreground: white, role: elevated-button,
-      align: left, background: '#007FFF', border: '', bold: true}
+    properties: {text: New Loan Requests(), foreground: black, role: null, align: left,
+      background: '', border: '', bold: true}
     type: Button
-    layout_properties: {row: SLZQMV, width_xs: 3, col_xs: 0}
+    layout_properties: {row: SLZQMV, width_xs: 2, col_xs: 0}
     data_bindings: []
-  - name: button_5
-    properties: {text: Defaulter (), foreground: white, align: center, role: elevated-button,
-      background: '#E52B50', bold: true, enabled: true}
-    type: Button
-    layout_properties: {row: SLZQMV, width_xs: 3, col_xs: 9}
   - name: button_2
     properties: {text: Loan Disbursed(), foreground: white, role: elevated-button,
       background: '#FEBE10', bold: true}
     type: Button
-    layout_properties: {row: ONGSGE, width_xs: 2, col_xs: 2}
+    layout_properties: {row: SLZQMV, width_xs: 2, col_xs: 2}
   - name: button_3
-    properties: {text: Lost Opportunities (), foreground: white, align: center, role: elevated-button,
+    properties: {text: Lost Opportunities (), foreground: white, align: center, role: null,
       background: '#800080', bold: true}
     type: Button
-    layout_properties: {row: ONGSGE, width_xs: 3, col_xs: 4}
+    layout_properties: {row: SLZQMV, width_xs: 2, col_xs: 4}
   - name: button_4
-    properties: {text: Closed (), foreground: white, align: center, role: elevated-button,
-      background: '#4CBB17'}
+    properties: {text: Closed (), foreground: white, align: center, role: null, background: '#4CBB17'}
     type: Button
-    layout_properties: {row: ONGSGE, width_xs: 2, col_xs: 7}
+    layout_properties: {row: SLZQMV, width_xs: 2, col_xs: 6}
+  - name: button_5
+    properties: {text: Defaulter (), foreground: white, align: center, role: elevated-button,
+      background: '#E52B50', bold: true, enabled: true}
+    type: Button
+    layout_properties: {row: SLZQMV, width_xs: 2, col_xs: 8}
 - name: column_panel_7
   properties: {col_widths: '{}', background: '', col_spacing: none}
   type: ColumnPanel
