@@ -39,10 +39,10 @@ class view_profile(view_profileTemplate):
             self.label_32.text = self.loan_data['loan_updated_status']
 
     def button_1_click(self, **event_args):
-      open_form('borrower_registration_form.ots_dashboard')
+      open_form('borrower.ots_dashboard')
   
     # def button_1_copy_click(self, **event_args):
     #   open_form('borrower_registration_form.ots_dashboard.my_loans')
 
     def button_2_click(self, **event_args):
-      open_form('borrower_registration_form.ots_dashboard')
+      open_form('borrower.ots_dashboard')
