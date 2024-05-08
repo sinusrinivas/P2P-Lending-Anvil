@@ -15,15 +15,15 @@ class notification(notificationTemplate):
 
   def home_main_form_link_click(self, **event_args):
     """This method is called when the link is clicked"""
-    open_form("lendor_registration_form.dashboard")
+    open_form("lendor.dashboard")
 
   def about_main_form_link_click(self, **event_args):
     """This method is called when the link is clicked"""
-    open_form("lendor_registration_form.dashboard.dasboard_about")
+    open_form("lendor.dashboard.dasboard_about")
 
   def contact_main_form_link_click(self, **event_args):
     """This method is called when the link is clicked"""
-    open_form("lendor_registration_form.dashboard.dasboard_contact")
+    open_form("lendor.dashboard.dasboard_contact")
 
   def notification_link_click(self, **event_args):
     """This method is called when the link is clicked"""

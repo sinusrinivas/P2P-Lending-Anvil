@@ -99,7 +99,7 @@ class star_1_borrower_registration_form_3_marital_married(star_1_borrower_regist
         return user_profile['marital_status'] == 'Married'
   
     def button_1_click(self, **event_args):
-        open_form('borrower_registration_form.star_1_borrower_registration_form_3_marital', user_id=self.userId)
+        open_form('borrower.borrower_registration_forms.star_1_borrower_registration_form_3_marital', user_id=self.userId)
 
     def button_1_1_click(self, **event_args):
         """This method is called when this radio button is selected"""
@@ -305,7 +305,7 @@ class star_1_borrower_registration_form_3_marital_married(star_1_borrower_regist
                               another_person, father_name, father_dob, 
                               father_mbl_no, father_profession, 
                               father_address, self.userId)
-            open_form('borrower_registration_form.star_1_borrower_registration_form_4_loan', 
+            open_form('borrower.borrower_registration_forms.star_1_borrower_registration_form_4_loan', 
                       user_id=self.userId)
 
     def button_submit_copy_click(self, **event_args):
@@ -366,7 +366,7 @@ class star_1_borrower_registration_form_3_marital_married(star_1_borrower_regist
                               another_person, mother_name, mother_dob, 
                               mother_mbl_no, mother_profession, 
                               mother_address, self.userId)
-        open_form('borrower_registration_form.star_1_borrower_registration_form_4_loan', user_id=self.userId)
+        open_form('borrower.borrower_registration_forms.star_1_borrower_registration_form_4_loan', user_id=self.userId)
 
     def button_submit_copy_2_click(self, **event_args):
      details = self.collect_details()
@@ -427,7 +427,7 @@ class star_1_borrower_registration_form_3_marital_married(star_1_borrower_regist
                               another_person, spouse_name, spouse_mob, 
                               spouse_mbl_no, spouse_profession, 
                               spouse_company, annual_earning, self.userId)
-         open_form('borrower_registration_form.star_1_borrower_registration_form_4_loan', user_id=self.userId)
+         open_form('borrower.borrower_registration_forms.star_1_borrower_registration_form_4_loan', user_id=self.userId)
 
     def button_submit_copy_3_click(self, **event_args):
      details = self.collect_details()
@@ -488,7 +488,7 @@ class star_1_borrower_registration_form_3_marital_married(star_1_borrower_regist
                               another_person, related_person_name, related_person_dob, 
                               related_person_mob, related_person_profession, 
                               related_person_relation, self.userId) 
-       open_form('borrower_registration_form.star_1_borrower_registration_form_4_loan', user_id=self.userId)
+       open_form('borrower.borrower_registration_forms.star_1_borrower_registration_form_4_loan', user_id=self.userId)
        
     # def button_submit_click(self, **event_args):
     #    details = self.collect_details()
@@ -700,16 +700,16 @@ class star_1_borrower_registration_form_3_marital_married(star_1_borrower_regist
     
     def prev_1_click(self, **event_args):
       """This method is called when the button is clicked"""
-      open_form('borrower_registration_form.star_1_borrower_registration_form_3_marital', user_id=self.userId)
+      open_form('borrower.borrower_registration_forms.star_1_borrower_registration_form_3_marital', user_id=self.userId)
 
     def prev_2_click(self, **event_args):
       """This method is called when the button is clicked"""
-      open_form('borrower_registration_form.star_1_borrower_registration_form_3_marital', user_id=self.userId)
+      open_form('borrower.borrower_registration_forms.star_1_borrower_registration_form_3_marital', user_id=self.userId)
 
     def prev_3_click(self, **event_args):
       """This method is called when the button is clicked"""
-      open_form('borrower_registration_form.star_1_borrower_registration_form_3_marital', user_id=self.userId)
+      open_form('borrower.borrower_registration_forms.star_1_borrower_registration_form_3_marital', user_id=self.userId)
 
     def prev_4_click(self, **event_args):
       """This method is called when the button is clicked"""
-      open_form('borrower_registration_form.star_1_borrower_registration_form_3_marital', user_id=self.userId)
+      open_form('borrower.borrower_registration_forms.star_1_borrower_registration_form_3_marital', user_id=self.userId)

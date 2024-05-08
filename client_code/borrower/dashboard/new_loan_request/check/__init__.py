@@ -70,10 +70,10 @@ class check(checkTemplate):
 
         # Show alert and navigate to the borrower dashboard
         alert("Request Submitted")
-        open_form('borrower_registration_form.dashboard')
+        open_form('borrower.dashboard')
 
     def button_2_click(self, **event_args):
-        open_form('borrower_registration_form.dashboard.new_loan_request.loan_type',
+        open_form('borrower.dashboard.new_loan_request.loan_type',
                   self.product_group,
                   self.product_cat,
                   self.product_name,
@@ -86,7 +86,7 @@ class check(checkTemplate):
                   })
 
     def button_1_click(self, **event_args):
-        open_form('borrower_registration_form.dashboard')
+        open_form('borrower.dashboard')
 
     def calculate_and_display_payment_details(self):
         # Calculate and display payment details based on the selected payment type

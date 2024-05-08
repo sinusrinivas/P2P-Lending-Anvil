@@ -24,12 +24,12 @@ class Navigation_form_dashboard(Navigation_form_dashboardTemplate):
       self.user_type = user_request['usertype']
 
     if self.user_type == "borrower":
-        open_form("borrower_registration_form.dashboard")
+        open_form("borrower.dashboard")
     else:
         open_form("bank_users.user_form")
 
   def contact_main_form_link_click(self, **event_args):
-    open_form("borrower_registration_form.dashboard.dashboard_contact")
+    open_form("borrower.dashboard.dashboard_contact")
 
 
   def wallet_dashboard_link_click(self, **event_args):
@@ -41,7 +41,7 @@ class Navigation_form_dashboard(Navigation_form_dashboardTemplate):
 
 
   def About_Us_click(self, **event_args):
-    open_form("borrower_registration_form.dashboard.dashboard_about")
+    open_form("borrower.dashboard.dashboard_about")
 
   def Report_A_Problem_click(self, **event_args):
-    open_form('borrower_registration_form.dashboard.dashboard_report_a_problem')
+    open_form('borrower.dashboard.dashboard_report_a_problem')

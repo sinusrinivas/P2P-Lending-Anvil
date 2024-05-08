@@ -78,7 +78,7 @@ class loan_type(loan_typeTemplate):
         open_form('borrower_registration_form.dashboard')
 
     def button_2_click(self, **event_args):
-        open_form('borrower_registration_form.dashboard.new_loan_request')
+        open_form('borrower.dashboard.new_loan_request')
 
     def button_3_click(self, **event_args):
         loan_amount = self.loan_amount_tb.text
@@ -91,7 +91,7 @@ class loan_type(loan_typeTemplate):
         self.membership_type = self.membership_type
 
         if not any([self.label_22.text, self.label_23.text]):
-            open_form('borrower_registration_form.dashboard.new_loan_request.check',
+            open_form('borrower.dashboard.new_loan_request.check',
                       self.proctct_g, self.prodct_cate, self.product_name, str(loan_amount), tenure,
                       self.user_id, self.roi, self.processing_fee,
                       self.membership_type, self.product_id,self.product_desc,

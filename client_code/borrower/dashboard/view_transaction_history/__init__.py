@@ -73,4 +73,4 @@ class view_transaction_history(view_transaction_historyTemplate):
 
     def back_btn_click(self, **event_args):
       """This method is called when the button is clicked"""
-      open_form('borrower_registration_form.dashboard')
+      open_form('borrower.dashboard')

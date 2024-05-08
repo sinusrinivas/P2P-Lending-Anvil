@@ -37,7 +37,7 @@ class star_1_borrower_registration_form_3_marital(star_1_borrower_registration_f
           # Call the server function before opening the next form
           anvil.server.call('add_borrower_step3', marital_status, user_id)
   
-          open_form('borrower_registration_form.star_1_borrower_registration_form_3_marital.star_1_borrower_registration_form_3_marital_married',
+          open_form('borrower.borrower_registration_forms.star_1_borrower_registration_form_3_marital.star_1_borrower_registration_form_3_marital_married',
                     user_id=user_id, marital_status=marital_status)
 
       # else:
@@ -46,7 +46,7 @@ class star_1_borrower_registration_form_3_marital(star_1_borrower_registration_f
 
   
   def button_1_click(self, **event_args):
-    open_form('borrower_registration_form.star_1_borrower_registration_form_2_employment',user_id=self.userId)
+    open_form('borrower.borrower_registration_forms.star_1_borrower_registration_form_2_employment',user_id=self.userId)
 
 
     
