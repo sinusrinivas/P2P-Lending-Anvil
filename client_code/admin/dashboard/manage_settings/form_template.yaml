@@ -1,7 +1,7 @@
 is_package: true
 container:
   type: HtmlTemplate
-  properties: {html: ''}
+  properties: {html: '', background: '#Edf0f4'}
 components:
 - type: ColumnPanel
   properties: {col_widths: '{}'}
@@ -67,3 +67,12 @@ components:
         properties: {height: '3'}
         type: Spacer
         layout_properties: {grid_position: 'LXEPFH,FVTVHC'}
+  - name: content_panel_copy_copy_3_copy_3_copy_copy_copy
+    properties: {col_widths: '{}', background: '#Edf0f4', role: null}
+    type: ColumnPanel
+    layout_properties: {grid_position: 'CDNLZJ,ZCAYBB'}
+    components:
+    - name: spacer_3
+      properties: {height: 199.24993896484375}
+      type: Spacer
+      layout_properties: {grid_position: 'WGIXRF,FGKPND'}
