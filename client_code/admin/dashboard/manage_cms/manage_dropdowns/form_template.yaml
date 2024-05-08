@@ -91,6 +91,6 @@ components:
     event_bindings: {click: button_1_copy_3_click}
     name: button_1_copy_3
   - name: spacer_1
-    properties: {height: 263.13330078125}
+    properties: {height: '350'}
     type: Spacer
     layout_properties: {grid_position: 'ITZVHR,ZNJWVS'}

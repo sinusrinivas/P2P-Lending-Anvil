@@ -18,7 +18,7 @@ components:
   properties: {col_widths: '{"LRMGVL":13,"PPLSYB":13,"FPVXBC":13}', background: '#Edf0f4',
     role: null}
   type: ColumnPanel
-  layout_properties: {grid_position: 'LLDVXJ,XWODUU'}
+  layout_properties: {grid_position: 'LLDVXJ,XWODUU', full_width_row: true}
   components:
   - name: label_1_copy_copy
     properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
@@ -93,6 +93,10 @@ components:
       type: Button
       layout_properties: {grid_position: 'TNRHQQ,HOQMDP'}
       event_bindings: {click: button_11_click}
+  - name: spacer_5
+    properties: {height: '3'}
+    type: Spacer
+    layout_properties: {grid_position: 'LKTWOF,FPVXBC BKYENM,PYVMUU'}
   - name: spacer_2
     properties: {height: '1.5'}
     type: Spacer
@@ -111,6 +115,10 @@ components:
       type: Button
       layout_properties: {grid_position: 'TSDWZF,VCNTGA'}
       event_bindings: {click: button_10_click}
+  - name: spacer_7
+    properties: {height: '3'}
+    type: Spacer
+    layout_properties: {grid_position: 'LKTWOF,LRMGVL CUNBGT,WICXYT'}
   - name: spacer_3_copy
     properties: {height: '1.5'}
     type: Spacer
@@ -131,97 +139,6 @@ components:
       type: Button
       layout_properties: {grid_position: 'RVCVIZ,SJZUBG'}
       event_bindings: {click: button_2_click}
-  - name: spacer_5
-    properties: {height: 278.50006103515625}
-    type: Spacer
-    layout_properties: {grid_position: 'LXEPFH,FVTVHC'}
-- type: XYPanel
-  properties: {height: 157.9998779296875}
-  name: xy_panel_1
-  layout_properties: {grid_position: 'GDNBOG,BBYZXG'}
-  components:
-  - name: outlined_card_1_copy_9_copy_2
-    properties: {role: outlined-card, tooltip: '', border: '', foreground: '', visible: true,
-      wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
-      spacing_below: small, background: '#05264d'}
-    type: ColumnPanel
-    layout_properties: {x: 764.3750392384827, y: 34.392861504107714, width: 192.7142333984375}
-    components:
-    - name: button_1_copy_10_copy
-      properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
-        foreground: 'theme:On Primary', visible: true, text: 'Choose role
-
-
-          ', font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small,
-        italic: false, background: '', bold: false, underline: false, icon: ''}
-      type: Button
-      layout_properties: {grid_position: 'YUTUEO,DGPVZF'}
-      event_bindings: {click: role}
-  - name: outlined_card_1_copy_9_copy
-    properties: {role: outlined-card, tooltip: '', border: '', foreground: '', visible: true,
-      wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
-      spacing_below: small, background: '#05264d'}
-    type: ColumnPanel
-    layout_properties: {x: 590.9821559377015, y: 34.4285518117249, width: 156.4107208251953}
-    components:
-    - name: occupation_type
-      properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
-        foreground: 'theme:On Primary', visible: true, text: 'Occupation Type
-
-          ', font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small,
-        italic: false, background: '', bold: false, underline: false, icon: ''}
-      type: Button
-      layout_properties: {grid_position: 'YUTUEO,DGPVZF'}
-      event_bindings: {click: occupation_type}
-  - name: outlined_card_1_copy_8
-    properties: {role: outlined-card, tooltip: '', border: '', foreground: '', visible: true,
-      wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
-      spacing_below: small, background: '#05264d'}
-    type: ColumnPanel
-    layout_properties: {x: 389.5178615041077, y: 36.28571428731084, width: 181.2678680419922}
-    components:
-    - name: button_1_copy_9
-      properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
-        foreground: 'theme:On Primary', visible: true, text: 'Duration at Address
-
-          ', font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small,
-        italic: false, background: '', bold: false, underline: false, icon: ''}
-      type: Button
-      layout_properties: {grid_position: 'YUTUEO,KCIYPZ'}
-      event_bindings: {click: duration}
-  - name: outlined_card_1_copy_7
-    properties: {role: outlined-card, tooltip: '', border: '', foreground: '', visible: true,
-      wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '',
-      spacing_below: small, background: '#05264d'}
-    type: ColumnPanel
-    layout_properties: {x: 193.87494768574834, y: 39.660744804888964, width: 172.00001525878906}
-    components:
-    - name: button_1_copy_8
-      properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
-        foreground: 'theme:On Primary', visible: true, text: 'Present Address
-
-          ', font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small,
-        italic: false, background: '', bold: false, underline: false, icon: ''}
-      type: Button
-      layout_properties: {grid_position: 'YUTUEO,ZDKIXA'}
-      event_bindings: {click: present}
-  - name: outlined_card_1_copy_9
-    properties: {role: outlined-card, tooltip: '', border: '', foreground: '', visible: true,
-      wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
-      spacing_below: small, background: '#05264d'}
-    type: ColumnPanel
-    layout_properties: {x: 24.46430315449834, y: 39.089287895709276, width: 146.125}
-    components:
-    - name: button_1_copy_10
-      properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
-        foreground: 'theme:On Primary', visible: true, text: 'Gender
-
-
-          ', font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small,
-        italic: false, background: '', bold: false, underline: false, icon: ''}
-      type: Button
-      layout_properties: {grid_position: 'YUTUEO,DGPVZF'}
-      event_bindings: {click: gender}
 - type: ColumnPanel
   properties: {col_widths: '{}'}
   name: column_panel_1
