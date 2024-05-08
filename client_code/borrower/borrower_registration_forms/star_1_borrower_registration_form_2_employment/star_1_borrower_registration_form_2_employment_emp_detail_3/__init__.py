@@ -40,10 +40,10 @@ class star_1_borrower_registration_form_2_employment_emp_detail_3(star_1_borrowe
           Notification("Please fill in all required fields.").show()
       else:
           anvil.server.call('add_lendor_individual_form_3', annual_salary, designation, emp_id_proof, last_six_month, user_id,salary_type )
-          open_form('borrower_registration_form.star_1_borrower_registration_form_3_marital', user_id=user_id)
+          open_form('borrower.borrower_registration_forms.star_1_borrower_registration_form_3_marital', user_id=user_id)
 
   def button_1_click(self, **event_args):
-    open_form('borrower_registration_form.star_1_borrower_registration_form_2_employment.star_1_borrower_registration_form_2_employment_emp_detail_2',user_id=self.userId)
+    open_form('borrower.borrower_registration_forms.star_1_borrower_registration_form_2_employment.star_1_borrower_registration_form_2_employment_emp_detail_2',user_id=self.userId)
 
   def button_3_click(self, **event_args):
     open_form("bank_users.user_form")

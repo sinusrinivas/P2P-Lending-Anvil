@@ -25,7 +25,7 @@ class star_1_borrower_registration_form_2_employment_student(star_1_borrower_reg
 
   def button_1_copy_1_copy_1_copy_1_click(self, **event_args):
     """This method is called when the button is clicked"""
-    open_form('borrower_registration_form.star_1_borrower_registration_form_2_employment',user_id=self.user_id)
+    open_form('borrower.borrower_registration_forms.star_1_borrower_registration_form_2_employment',user_id=self.user_id)
 
   def home_borrower_registration_form_copy_1_click(self, **event_args):
     open_form('bank_users.user_form')
@@ -43,7 +43,7 @@ class star_1_borrower_registration_form_2_employment_student(star_1_borrower_reg
       Notification("please fill all requrired fields").show()
     else:
       anvil.server.call('add_borrower_student',college_name,college_id,college_proof,college_address,user_id)
-      open_form('borrower_registration_form.star_1_borrower_registration_form_3_marital',user_id=user_id)
+      open_form('borrower.borrower_registration_forms.star_1_borrower_registration_form_3_marital',user_id=user_id)
 
   def borrower_college_proof_img_change(self, file, **event_args):
     """This method is called when a new file is loaded into this FileLoader"""

@@ -17,7 +17,7 @@ class dashboard_about_borrower_registration_form(dashboard_about_borrower_regist
 
   def home_main_form_link_click(self, **event_args):
     """This method is called when the link is clicked"""
-    open_form("borrower_registration_form.dashboard")
+    open_form("borrower.dashboard")
 
   def login_signup_button_click(self, **event_args):
     """This method is called when the button is clicked"""
@@ -28,7 +28,7 @@ class dashboard_about_borrower_registration_form(dashboard_about_borrower_regist
 
   def about_main_form_link_click(self, **event_args):
     """This method is called when the link is clicked"""
-    open_form('borrower_registration_form.dashboard.borrower_dashboard_about')
+    open_form('borrower.dashboard.borrower_dashboard_about')
 
   def image_2_mouse_enter(self, x, y, **event_args):
     """This method is called when the mouse cursor enters this component"""
@@ -64,11 +64,11 @@ class dashboard_about_borrower_registration_form(dashboard_about_borrower_regist
 
   def contact_main_form_link_click(self, **event_args):
     """This method is called when the link is clicked"""
-    open_form("borrower_registration_form.dashboard.borrower_dashboard_contact")
+    open_form("borrower.dashboard.borrower_dashboard_contact")
 
   def notification_link_click(self, **event_args):
     """This method is called when the link is clicked"""
-    open_form('lendor_registration_form.dashboard.notification')
+    open_form('lendor.dashboard.notification')
 
   def wallet_dashboard_link_click(self, **event_args):
     """This method is called when the link is clicked"""

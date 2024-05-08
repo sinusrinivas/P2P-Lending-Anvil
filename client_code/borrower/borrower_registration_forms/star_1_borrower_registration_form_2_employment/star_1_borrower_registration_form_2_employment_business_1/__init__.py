@@ -44,12 +44,12 @@ class star_1_borrower_registration_form_2_employment_business_1(star_1_borrower_
         Notification("Please fill all the fields").show()
     else:
       anvil.server.call('add_lendor_institutional_form_1',business_name,business_add,business_type,empolyees_working,user_id)
-      open_form('borrower_registration_form.star_1_borrower_registration_form_2_employment.star_1_borrower_registration_form_2_employment_business_2',user_id=self.userId)
+      open_form('borrower.borrower_registration_forms.star_1_borrower_registration_form_2_employment.star_1_borrower_registration_form_2_employment_business_2',user_id=self.userId)
 
 
   def button_1_click(self, **event_args):
     user_id = self.userId
-    open_form('borrower_registration_form.star_1_borrower_registration_form_2_employment',user_id=self.userId)
+    open_form('borrower.borrower_registration_forms.star_1_borrower_registration_form_2_employment',user_id=self.userId)
     
 
   def button_3_click(self, **event_args):

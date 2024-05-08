@@ -19,7 +19,7 @@ class star_1_borrower_registration_form_education_10th_class(star_1_borrower_reg
   def button_1_click(self, **event_args):
     """This method is called when the button is clicked"""
     user_id = self.userId
-    open_form('borrower_registration_form.star_1_borrower_registration_form_1_education',user_id=user_id)
+    open_form('borrower.borrower_registration_forms.star_1_borrower_registration_form_1_education',user_id=user_id)
     
 
   def button_2_click(self, **event_args):
@@ -32,7 +32,7 @@ class star_1_borrower_registration_form_education_10th_class(star_1_borrower_reg
 
      else:
        anvil.server.call('add_education_tenth',tenth_class,user_id)
-       open_form('borrower_registration_form.star_1_borrower_registration_form_2_employment', user_id=user_id)
+       open_form('borrower.borrower_registration_forms.star_1_borrower_registration_form_2_employment', user_id=user_id)
        
   def button_3_click(self, **event_args):
     """This method is called when the button is clicked"""

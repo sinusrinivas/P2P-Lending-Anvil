@@ -37,10 +37,10 @@ class view_profile(view_profileTemplate):
             self.loan_updated_status_label.foreground = 'red'
 
     def button_1_copy_click(self, **event_args):
-        open_form('borrower_registration_form.dashboard')
+        open_form('borrower.dashboard')
 
     def button_1_click(self, **event_args):
-        open_form('borrower_registration_form.dashboard.view_loans')
+        open_form('borrower.dashboard.view_loans')
 
     def link_1_click(self, **event_args):
-      open_form('borrower_registration_form.dashboard.view_loans.payment_details_b', selected_row=self.selected_row, entered_values=None)
+      open_form('borrower.dashboard.view_loans.payment_details_b', selected_row=self.selected_row, entered_values=None)

@@ -125,9 +125,9 @@ class basic_registration_form(basic_registration_formTemplate):
                                   state, country, user_id, user_age ,present, duration)
                 Notification("Basic details form filled up submitted successfully").show()
                 if user_data['usertype']=='lender':
-                  open_form('lendor_registration_form.lender_registration_form_1_education_form',user_id=user_id)
+                  open_form('lendor.lendor_registration_forms.lender_registration_form_1_education_form',user_id=user_id)
                 elif user_data['usertype']=='borrower':
-                  open_form('borrower_registration_form.star_1_borrower_registration_form_1_education',user_id=user_id)
+                  open_form('borrower.borrower_registration_forms.star_1_borrower_registration_form_1_education',user_id=user_id)
                 else:
                   open_form('bank_users.user_form')
               

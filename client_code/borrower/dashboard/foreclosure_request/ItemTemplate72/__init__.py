@@ -35,7 +35,7 @@ class ItemTemplate72(ItemTemplate72Template):
     print("loannnnnnnnnnnnnnnnnnn", loan_id)
     emi_rows = app_tables.fin_emi_table.get(loan_id=loan_id)
     if emi_rows:
-        open_form('borrower_registration_form.dashboard.foreclosure_request.borrower_foreclosure', selected_row=selected_row)
+        open_form('borrower.dashboard.foreclosure_request.borrower_foreclosure', selected_row=selected_row)
     else:
         alert("No EMIs have been paid for this loan.")
-        open_form('borrower_registration_form.dashboard.foreclosure_request')
+        open_form('borrower.dashboard.foreclosure_request')

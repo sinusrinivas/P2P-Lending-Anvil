@@ -18,5 +18,5 @@ class ItemTemplate101(ItemTemplate101Template):
   def link_1_click(self, **event_args):
     """This method is called when the link is clicked"""
     item_data = self.item
-    open_form('borrower_registration_form.dashboard.view_transaction_history.transaction_details', selected_row=item_data)
+    open_form('borrower.dashboard.view_transaction_history.transaction_details', selected_row=item_data)
 
