@@ -186,7 +186,7 @@ class payment_details_extension(payment_details_extensionTemplate):
     else:
         alert("Extension fee not found in payment details.")
   def button_2_click(self, **event_args):
-    open_form('borrower_registration_form.dashboard.extension_loan_request.borrower_extension', selected_row=self.selected_row)
+    open_form('borrower.dashboard.extension_loan_request.borrower_extension', selected_row=self.selected_row)
   def generate_one_time_payment_details(self, selected_row, extension_fee_amount):
     # Fetch required details from loan_details_table for one-time payment
     loan_details_row = app_tables.fin_loan_details.get(loan_id=selected_row['loan_id'])

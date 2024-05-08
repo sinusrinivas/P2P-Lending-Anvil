@@ -28,5 +28,5 @@ class ItemTemplate75(ItemTemplate75Template):
   def outlined_button_1_click(self, **event_args):
         """This method is called when the button is clicked"""
         selected_row = self.item
-        open_form('borrower_registration_form.dashboard.extension_loan_request.borrower_extension', selected_row=selected_row)
+        open_form('borrower.dashboard.extension_loan_request.borrower_extension', selected_row=selected_row)
 

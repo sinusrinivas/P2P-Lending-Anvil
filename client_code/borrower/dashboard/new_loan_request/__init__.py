@@ -66,7 +66,7 @@ class new_loan_request(new_loan_requestTemplate):
                 self.drop_down_1.selected_value = None
 
     def button_2_click(self, **event_args):
-        open_form('borrower_registration_form.dashboard')
+        open_form('borrower.dashboard')
 
     def button_1_copy_click(self, **event_args):
         name = self.name.selected_value
@@ -100,7 +100,7 @@ class new_loan_request(new_loan_requestTemplate):
                 self.product_description = product_details['product_description']
 
                 # Open the next form and pass the required parameters
-                open_form('borrower_registration_form.dashboard.new_loan_request.loan_type',
+                open_form('borrower.dashboard.new_loan_request.loan_type',
                           name, category, product_name, self.max_amount_lb.text, self.product_description)
             else:
                 # Handle the case where product details are not found
@@ -118,7 +118,7 @@ class new_loan_request(new_loan_requestTemplate):
         self.max_amount_lb.text = data1_strings[0] if data1_strings else None
 
     def button_1_click(self, **event_args):
-        open_form("borrower_registration_form.dashboard")
+        open_form("borrower.dashboard")
 
     def drop_down_1_change(self, **event_args):
         selected_product_name = self.drop_down_1.selected_value
