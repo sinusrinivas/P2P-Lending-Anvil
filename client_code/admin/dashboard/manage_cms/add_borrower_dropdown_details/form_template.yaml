@@ -10,220 +10,246 @@ components:
     properties: {}
     layout_properties: {grid_position: 'JJMMBB,INZFIW', full_width_row: true}
     name: home_button_admin_1
-- properties: {height: 384.8570556640625}
-  type: XYPanel
-  layout_properties: {grid_position: 'VRKXUU,ZEZDHM'}
-  name: xy_panel_1
-  components:
-  - properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
-      foreground: 'theme:On Primary', visible: true, text: "Gender\n  ", font_size: null,
-      font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
-      background: '', bold: false, underline: false, icon: ''}
-    type: Button
-    layout_properties: {grid_position: 'JHFMCI,HYXZID', x: 346.8482131958008, y: 23.607131958007812,
-      width: 95.2634}
-    event_bindings: {click: button_1_click}
-    name: button_1_copy_2
-  - properties: {role: outlined-card, tooltip: '', border: '', foreground: '', visible: true,
-      wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '',
-      spacing_below: small, background: '#05264d'}
+  - name: content_panel_copy_copy
+    properties: {col_widths: '{}', background: '#Edf0f4'}
     type: ColumnPanel
-    layout_properties: {x: 22.671875, y: 140.125, width: 156.875}
-    name: outlined_card_1_copy_3
+    layout_properties: {grid_position: 'MDOZID,ARJTDD', full_width_row: true}
     components:
-    - properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
-        foreground: 'theme:On Primary', visible: true, text: 'Employee
-
-          Type', font_size: null, font: '', spacing_above: small, icon_align: left,
-        spacing_below: small, italic: false, background: '', bold: false, underline: false,
-        icon: ''}
-      type: Button
-      layout_properties: {grid_position: 'YUTUEO,ZDKIXA'}
-      event_bindings: {click: emp_type_button}
-      name: button_1_copy_6
-  - properties: {role: outlined-card, tooltip: '', border: '', foreground: '', visible: true,
-      wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
-      spacing_below: small, background: '#05264d'}
-    type: ColumnPanel
-    layout_properties: {grid_position: 'NLMVZE,NDTUKL', x: 214.9375, y: 21.875, width: 158.859}
-    name: outlined_card_1_copy_4
-    components:
-    - properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
-        foreground: 'theme:On Primary', visible: true, text: 'Marrital
-
-          status', font_size: null, font: '', spacing_above: small, icon_align: left,
-        spacing_below: small, italic: false, background: '', bold: false, underline: false,
-        icon: ''}
-      type: Button
-      layout_properties: {grid_position: 'ZFWKHG,FNBPFP'}
-      event_bindings: {click: marrital_button_click}
-      name: marrital_button
-  - properties: {role: outlined-card, tooltip: '', border: '', foreground: '', visible: true,
-      wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '',
-      spacing_below: small, background: '#05264d'}
-    type: ColumnPanel
-    layout_properties: {x: 26.65625, y: 23.578125, width: 159.328}
-    name: outlined_card_1_copy_7
-    components:
-    - properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
-        foreground: 'theme:On Primary', visible: true, text: 'Qualification
-
-
-          ', font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small,
-        italic: false, background: '', bold: false, underline: false, icon: ''}
-      type: Button
-      layout_properties: {grid_position: 'YUTUEO,ZDKIXA'}
-      event_bindings: {click: Qualifications_click}
-      name: button_1_copy_8
-  - properties: {role: outlined-card, tooltip: '', border: '', foreground: '', visible: true,
-      wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
-      spacing_below: small, background: '#05264d'}
-    type: ColumnPanel
-    layout_properties: {x: 211.78125, y: 141.453125, width: 162.0337055664062}
-    name: outlined_card_1_copy_6
-    components:
-    - properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
-        foreground: 'theme:On Primary', visible: true, text: 'Organization
-
-          Type', font_size: null, font: '', spacing_above: small, icon_align: left,
-        spacing_below: small, italic: false, background: '', bold: false, underline: false,
-        icon: ''}
-      type: Button
-      layout_properties: {grid_position: 'YUTUEO,HTHJEB'}
-      event_bindings: {click: organization_click}
-      name: button_1_copy_7
-  - properties: {role: outlined-card, tooltip: '', border: '', foreground: '', visible: true,
-      wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
-      spacing_below: small, background: '#05264d'}
-    type: ColumnPanel
-    layout_properties: {x: 399.03125, y: 138.6875, width: 162.6585583496093}
-    name: outlined_card_1_copy
-    components:
-    - properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
-        foreground: 'theme:On Primary', visible: true, text: 'Account
-
-          Type', font_size: null, font: '', spacing_above: small, icon_align: left,
-        spacing_below: small, italic: false, background: '', bold: false, underline: false,
-        icon: ''}
-      type: Button
-      layout_properties: {grid_position: 'YUTUEO,ZDKIXA'}
-      event_bindings: {click: account_click}
-      name: button_1_copy_5
-  - properties: {role: outlined-card, tooltip: '', border: '', foreground: '', visible: true,
-      wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '',
-      spacing_below: small, background: '#0b2547'}
-    type: ColumnPanel
-    layout_properties: {x: 770.0758383572102, y: 21.910715371370316, width: 155.9330291748047}
-    name: outlined_card_1
-    components:
-    - properties: {role: null, align: left, tooltip: '', border: '', enabled: true,
-        foreground: 'theme:On Primary', visible: true, text: 'Profession
-
-
-          ', font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small,
-        italic: false, background: '', bold: false, underline: false, icon: ''}
-      type: Button
-      layout_properties: {grid_position: 'YUTUEO,ZDKIXA'}
-      event_bindings: {click: professioon_click}
-      name: button_1
-  - properties: {role: outlined-card, tooltip: '', border: '', foreground: '', visible: true,
-      wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
-      spacing_below: small, background: '#05264d'}
-    type: ColumnPanel
-    layout_properties: {x: 592.90625, y: 20.359375, width: 155.172}
-    name: outlined_card_2
-    components:
-    - properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
-        foreground: 'theme:On Primary', visible: true, text: "No of \nemployees",
-        font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small,
-        italic: false, background: '', bold: false, underline: false, icon: ''}
-      type: Button
-      layout_properties: {grid_position: 'FNHLVB,HIUDPT'}
-      event_bindings: {click: No_of_emp_click}
-      name: button_2
-  - properties: {role: outlined-card, tooltip: '', border: '', foreground: '', visible: true,
-      wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
-      spacing_below: small, background: '#05264d'}
-    type: ColumnPanel
-    layout_properties: {x: 402.703125, y: 20.359375, width: 158.969}
-    name: outlined_card_1_copy_5
-    components:
-    - properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
-        foreground: 'theme:On Primary', visible: true, text: 'Business
-
-          Type', font_size: null, font: '', spacing_above: small, icon_align: left,
-        spacing_below: small, italic: false, background: '', bold: false, underline: false,
-        icon: ''}
-      type: Button
-      layout_properties: {grid_position: 'JHOYUM,RXDVOZ'}
-      event_bindings: {click: business_click}
-      name: button_1_copy_4
-  - properties: {role: outlined-card, tooltip: '', border: '', foreground: '', visible: true,
-      wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '',
-      spacing_below: small, background: '#05264d'}
-    type: ColumnPanel
-    layout_properties: {x: 594.21875, y: 139.046875, width: 148.641}
-    name: outlined_card_1_copy_7_copy
-    components:
-    - properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
-        foreground: 'theme:On Primary', visible: true, text: 'Salary
-
-          Type', font_size: null, font: '', spacing_above: small, icon_align: left,
-        spacing_below: small, italic: false, background: '', bold: false, underline: false,
-        icon: ''}
-      type: Button
-      layout_properties: {grid_position: 'YUTUEO,ZDKIXA'}
-      event_bindings: {click: salary_click}
-      name: button_1_copy_8_copy
-  - properties: {role: outlined-card, tooltip: '', border: '', foreground: '', visible: true,
-      wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '',
-      spacing_below: small, background: '#0b2547'}
-    type: ColumnPanel
-    layout_properties: {x: 766.8929538726807, y: 138.32148088887334, width: 165.28564453125}
-    name: outlined_card_1_copy_7_copy_copy
-    components:
-    - properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
-        foreground: 'theme:On Primary', visible: true, text: 'Self
-
-          Employment', font_size: null, font: '', spacing_above: small, icon_align: left,
-        spacing_below: small, italic: false, background: '', bold: false, underline: false,
-        icon: ''}
-      type: Button
-      layout_properties: {grid_position: 'YUTUEO,ZDKIXA'}
-      event_bindings: {click: self}
-      name: button_1_copy_8_copy_copy
-  - properties: {role: outlined-card, tooltip: '', border: '', foreground: '', visible: true,
-      wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '',
-      spacing_below: small, background: '#05264d'}
-    type: ColumnPanel
-    layout_properties: {x: 26.328125, y: 260.625, width: 153.21927917480468}
-    name: outlined_card_1_copy_7_copy_copy_copy
-    components:
-    - properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
-        foreground: 'theme:On Primary', visible: true, text: "Spouse \nProfession",
-        font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small,
-        italic: false, background: '', bold: false, underline: false, icon: ''}
-      type: Button
-      layout_properties: {grid_position: 'YUTUEO,ZDKIXA'}
-      event_bindings: {click: spose}
-      name: button_1_copy_8_copy_copy_copy
-  - properties: {role: outlined-card, tooltip: '', border: '', foreground: '', visible: true,
-      wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '',
-      spacing_below: small, background: '#05264d'}
-    type: ColumnPanel
-    layout_properties: {x: 212.41669159382582, y: 256.15002136677504, width: 162.0337055664062}
-    name: outlined_card_1_copy_7_copy_copy_copy_copy
-    components:
-    - properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
-        foreground: 'theme:On Primary', visible: true, text: 'Land
-
-          Type', font_size: null, font: '', spacing_above: small, icon_align: left,
-        spacing_below: small, italic: false, background: '', bold: false, underline: false,
-        icon: ''}
-      type: Button
-      layout_properties: {grid_position: 'YUTUEO,ZDKIXA'}
-      event_bindings: {click: land_type}
-      name: land_type
+    - name: label_1_copy_copy_2
+      properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
+        visible: true, text: Borrower Dropdowns, font_size: 30, font: '', spacing_above: small,
+        icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+        underline: false, icon: ''}
+      type: Label
+      layout_properties: {grid_position: 'JTDJCQ,DACOSY'}
+    - name: spacer_2
+      properties: {height: '10'}
+      type: Spacer
+      layout_properties: {grid_position: 'XSOJPU,SERFZX'}
+    - name: content_panel_copy_copy_3_copy_3_copy_copy_copy_copy
+      properties: {col_widths: '{"LRMGVL":11,"PPLSYB":11,"FPVXBC":11,"GBAJZY":10}',
+        background: '', role: null}
+      type: ColumnPanel
+      layout_properties: {grid_position: 'QNLRML,GKQLYE'}
+      components:
+      - name: spacer_4_copy
+        properties: {height: '3'}
+        type: Spacer
+        layout_properties: {grid_position: 'UEOLFA,AWCGTS'}
+      - name: content_panel_copy_copy_3_copy_3_copy_copy_copy_2_copy
+        properties: {col_widths: '{}', background: white, role: elevated-card}
+        type: ColumnPanel
+        layout_properties: {grid_position: 'LKTWOF,LRMGVL TFYOZD,THGIQV'}
+        components:
+        - name: image_4_copy
+          properties: {source: _/theme/guarantee.png, display_mode: shrink_to_fit,
+            height: '100'}
+          type: Image
+          layout_properties: {grid_position: 'QGZTNW,PVJEPO'}
+        - name: button_9
+          properties: {text: Qualification, font_size: 16, foreground: black, bold: true}
+          type: Button
+          layout_properties: {grid_position: 'GMECOB,ATAMRQ'}
+          event_bindings: {click: button_9_click}
+      - name: spacer_6_copy
+        properties: {height: '1.5'}
+        type: Spacer
+        layout_properties: {grid_position: 'LKTWOF,LRMGVL WPCQYC,IUVQAZ'}
+      - name: content_panel_copy_copy_3_copy_3_copy_copy_copy_2_copy_2
+        properties: {col_widths: '{}', background: white, role: elevated-card}
+        type: ColumnPanel
+        layout_properties: {grid_position: 'LKTWOF,LRMGVL QAKCZK,TLIDIT'}
+        components:
+        - name: image_4_copy_2
+          properties: {source: _/theme/occupation.png, display_mode: shrink_to_fit,
+            height: '100'}
+          type: Image
+          layout_properties: {grid_position: 'QGZTNW,PVJEPO'}
+        - name: button_13
+          properties: {text: Profession, font_size: 16, foreground: black, bold: true}
+          type: Button
+          layout_properties: {grid_position: 'ZXJWQX,SIHDON'}
+          event_bindings: {click: button_13_click}
+      - name: spacer_10_copy_2
+        properties: {height: '1.5'}
+        type: Spacer
+        layout_properties: {grid_position: 'LKTWOF,LRMGVL WPTCUO,JYHIHE'}
+      - name: content_panel_copy_copy_3_copy_3_copy_copy_copy_2_copy_8
+        properties: {col_widths: '{}', background: white, role: elevated-card}
+        type: ColumnPanel
+        layout_properties: {grid_position: 'LKTWOF,LRMGVL OVIPEI,UZGIWM'}
+        components:
+        - name: image_4_copy_8
+          properties: {source: _/theme/self-employed.png, display_mode: shrink_to_fit,
+            height: '100'}
+          type: Image
+          layout_properties: {grid_position: 'QGZTNW,PVJEPO'}
+        - name: button_18
+          properties: {text: Self Employment, foreground: black, font_size: 16, bold: true}
+          type: Button
+          layout_properties: {grid_position: 'WRFQMH,UOAKCG'}
+          event_bindings: {click: button_18_click}
+      - name: content_panel_copy_copy_3_copy_3_copy_copy_copy_2_copy_3
+        properties: {col_widths: '{}', background: white, role: elevated-card}
+        type: ColumnPanel
+        layout_properties: {grid_position: 'LKTWOF,PPLSYB IRSXYL,KKSDLA'}
+        components:
+        - name: image_4_copy_3
+          properties: {source: _/theme/business type.png, display_mode: shrink_to_fit,
+            height: '100'}
+          type: Image
+          layout_properties: {grid_position: 'QGZTNW,PVJEPO'}
+        - name: button_10
+          properties: {text: Business Type, font_size: 16, foreground: black, bold: true}
+          type: Button
+          layout_properties: {grid_position: 'TSDWZF,VCNTGA'}
+          event_bindings: {click: button_10_click}
+      - name: spacer_7_copy
+        properties: {height: '1.5'}
+        type: Spacer
+        layout_properties: {grid_position: 'LKTWOF,PPLSYB UZPNDU,PHHFXP'}
+      - name: content_panel_copy_copy_3_copy_3_copy_copy_copy_2_copy_10
+        properties: {col_widths: '{}', background: white, role: elevated-card}
+        type: ColumnPanel
+        layout_properties: {grid_position: 'LKTWOF,PPLSYB KKXABX,ZHURYQ'}
+        components:
+        - name: image_4_copy_10
+          properties: {source: _/theme/computer-workers.png, display_mode: shrink_to_fit,
+            height: '100'}
+          type: Image
+          layout_properties: {grid_position: 'QGZTNW,PVJEPO'}
+        - name: button_14
+          properties: {text: Employee Type, font_size: 16, foreground: black, bold: true}
+          type: Button
+          layout_properties: {grid_position: 'TFDFVQ,VTCDTE'}
+          event_bindings: {click: button_14_click}
+      - name: spacer_11
+        properties: {height: '1.5'}
+        type: Spacer
+        layout_properties: {grid_position: 'LKTWOF,PPLSYB IDEJMV,HVMDWE'}
+      - name: content_panel_copy_copy_3_copy_3_copy_copy_copy_2
+        properties: {col_widths: '{}', background: white, role: elevated-card}
+        type: ColumnPanel
+        layout_properties: {grid_position: 'LKTWOF,PPLSYB WFLIIA,WAOXLB'}
+        components:
+        - name: image_4
+          properties: {source: _/theme/1.png, display_mode: shrink_to_fit, height: '100'}
+          type: Image
+          layout_properties: {grid_position: 'QGZTNW,PVJEPO'}
+        - name: button_19
+          properties: {text: Salary Type, foreground: black, font_size: 16, bold: true}
+          type: Button
+          layout_properties: {grid_position: 'ZUVZTI,JKDJWH'}
+          event_bindings: {click: button_19_click}
+      - name: content_panel_copy_copy_3_copy_3_copy_copy_copy_2_copy_5
+        properties: {col_widths: '{}', background: white, role: elevated-card}
+        type: ColumnPanel
+        layout_properties: {grid_position: 'LKTWOF,FPVXBC FZRSVY,NIONJZ'}
+        components:
+        - name: image_4_copy_5
+          properties: {source: _/theme/wedding.png, display_mode: shrink_to_fit, height: '100'}
+          type: Image
+          layout_properties: {grid_position: 'QIIGJK,CGUSVX'}
+        - name: button_11
+          properties: {text: Marital Status, font_size: 16, foreground: black, bold: true}
+          type: Button
+          layout_properties: {grid_position: 'TNRHQQ,HOQMDP'}
+          event_bindings: {click: button_11_click}
+      - name: spacer_8_copy
+        properties: {height: '1.5'}
+        type: Spacer
+        layout_properties: {grid_position: 'LKTWOF,FPVXBC SMRVPC,RVWJUG'}
+      - name: content_panel_copy_copy_3_copy_3_copy_copy_copy_2_copy_6
+        properties: {col_widths: '{}', background: white, role: elevated-card}
+        type: ColumnPanel
+        layout_properties: {grid_position: 'LKTWOF,FPVXBC RWZWDC,AYIQOP'}
+        components:
+        - name: image_4_copy_6
+          properties: {source: _/theme/organization.png, display_mode: shrink_to_fit,
+            height: '100'}
+          type: Image
+          layout_properties: {grid_position: 'QGZTNW,PVJEPO'}
+        - name: button_16
+          properties: {text: Organization Type, font_size: 16, foreground: black,
+            bold: true, align: center}
+          type: Button
+          layout_properties: {grid_position: 'FYGZDA,EXGKRV'}
+          event_bindings: {click: button_16_click}
+      - name: spacer_12
+        properties: {height: '1.5'}
+        type: Spacer
+        layout_properties: {grid_position: 'LKTWOF,FPVXBC UIZCET,GCLVJB'}
+      - name: content_panel_copy_copy_3_copy_3_copy_copy_copy_2_copy_4
+        properties: {col_widths: '{}', background: white, role: elevated-card}
+        type: ColumnPanel
+        layout_properties: {grid_position: 'LKTWOF,FPVXBC UTZLWC,RUHZYU'}
+        components:
+        - name: image_4_copy_4
+          properties: {source: _/theme/spouse profession.png, display_mode: shrink_to_fit,
+            height: '100'}
+          type: Image
+          layout_properties: {grid_position: 'QGZTNW,PVJEPO'}
+        - name: button_3
+          properties: {text: Spouse Profession, foreground: black, bold: true, font_size: 16}
+          type: Button
+          layout_properties: {grid_position: 'XKAOYX,AMHDBB'}
+          event_bindings: {click: button_3_click}
+      - name: content_panel_copy_copy_3_copy_3_copy_copy_copy_2_copy_7
+        properties: {col_widths: '{}', background: white, role: elevated-card}
+        type: ColumnPanel
+        layout_properties: {grid_position: 'LKTWOF,GBAJZY ZQQIVR,ENGAGN'}
+        components:
+        - name: image_4_copy_7
+          properties: {source: _/theme/recruitment.png, display_mode: shrink_to_fit,
+            height: '100'}
+          type: Image
+          layout_properties: {grid_position: 'QGZTNW,PVJEPO'}
+        - name: button_12
+          properties: {text: No of Employees, font_size: 16, foreground: black, bold: true}
+          type: Button
+          layout_properties: {grid_position: 'PLJBIP,TZWJMO'}
+          event_bindings: {click: button_12_click}
+      - name: spacer_9_copy
+        properties: {height: '1.5'}
+        type: Spacer
+        layout_properties: {grid_position: 'LKTWOF,GBAJZY XUYDCC,MWCXYV'}
+      - name: content_panel_copy_copy_3_copy_3_copy_copy_copy_2_copy_9
+        properties: {col_widths: '{}', background: white, role: elevated-card}
+        type: ColumnPanel
+        layout_properties: {grid_position: 'LKTWOF,GBAJZY UXTNEX,HGFJSQ'}
+        components:
+        - name: image_4_copy_9
+          properties: {source: _/theme/account-icon-25511.png, display_mode: shrink_to_fit,
+            height: '100'}
+          type: Image
+          layout_properties: {grid_position: 'QGZTNW,PVJEPO'}
+        - name: button_17
+          properties: {text: Account Type, font_size: 16, foreground: black, bold: true}
+          type: Button
+          layout_properties: {grid_position: 'TUUVBB,DDDLOX'}
+          event_bindings: {click: button_17_click}
+      - name: spacer_13
+        properties: {height: '1.5'}
+        type: Spacer
+        layout_properties: {grid_position: 'LKTWOF,GBAJZY EFSTJY,KQCTUB'}
+      - name: content_panel_copy_copy_3_copy_3_copy_copy_copy_2_copy_4_copy
+        properties: {col_widths: '{}', background: white, role: elevated-card}
+        type: ColumnPanel
+        layout_properties: {grid_position: 'LKTWOF,GBAJZY NSFFKA,HFXNWX'}
+        components:
+        - name: image_4_copy_4_copy
+          properties: {source: _/theme/land.png, display_mode: shrink_to_fit, height: '100'}
+          type: Image
+          layout_properties: {grid_position: 'QGZTNW,PVJEPO'}
+        - name: button_4
+          properties: {text: Land Type, bold: true, font_size: 16, foreground: black}
+          type: Button
+          layout_properties: {grid_position: 'ZJAMPA,WZFXFR'}
+          event_bindings: {click: button_4_click}
+      - name: spacer_5_copy
+        properties: {height: '3'}
+        type: Spacer
+        layout_properties: {grid_position: 'LXEPFH,FVTVHC'}
 - properties: {role: null, tooltip: '', border: '', foreground: '', visible: true,
     wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
     spacing_below: small, background: ''}
