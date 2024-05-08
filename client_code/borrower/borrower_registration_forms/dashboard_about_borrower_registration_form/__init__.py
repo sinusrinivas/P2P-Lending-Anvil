@@ -17,7 +17,7 @@ class dashboard_about_borrower_registration_form(dashboard_about_borrower_regist
 
   def home_main_form_link_click(self, **event_args):
     """This method is called when the link is clicked"""
-    open_form("borrower_registration_form.dashboard")
+    open_form("borrower.dashboard")
 
   def login_signup_button_click(self, **event_args):
     """This method is called when the button is clicked"""
