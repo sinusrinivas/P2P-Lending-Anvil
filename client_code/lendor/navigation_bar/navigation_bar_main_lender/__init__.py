@@ -25,7 +25,7 @@ class navigation_bar_main_lender(navigation_bar_main_lenderTemplate):
       self.user_type = user_request['usertype']
 
     if self.user_type == "lender":
-        open_form("lendor_registration_form.dashboard")
+        open_form("lendor.dashboard")
     else:
         open_form("bank_users.user_form")
 
@@ -34,12 +34,12 @@ class navigation_bar_main_lender(navigation_bar_main_lenderTemplate):
     pass
 
   def contact_main_form_link_click(self, **event_args):
-    open_form("lendor_registration_form.dasboard_contact_lendor_registration_form")
+    open_form("lendor.lendor_registration_forms.dasboard_contact_lendor_registration_form")
 
   def help_link_click(self, **event_args):
     """This method is called when the link is clicked"""
     pass
 
   def About_Us_click(self, **event_args):
-    open_form('lendor_registration_form.dasboard_about_lendor_registration_form')
+    open_form('lendor.lendor_registration_forms.dasboard_about_lendor_registration_form')
     

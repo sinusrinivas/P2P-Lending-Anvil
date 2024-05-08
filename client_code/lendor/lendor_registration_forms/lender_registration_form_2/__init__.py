@@ -45,7 +45,7 @@ class lender_registration_form_2(lender_registration_form_2Template):
         # Any code you write here will run before the form opens.
 
     def button_1_click(self, **event_args):
-        open_form('lendor_registration_form.lender_registration_form_1_education_form', user_id=self.userId)
+        open_form('lendor.lendor_registration_forms.lender_registration_form_1_education_form', user_id=self.userId)
 
     def button_2_click(self, **event_args):
         lending_type = self.lending_type_dropdown.selected_value
@@ -99,19 +99,19 @@ class lender_registration_form_2(lender_registration_form_2Template):
                                           lending_period=lending_period, membership=membership_type)
     
         if lending_type == 'Individual':
-            open_form('lendor_registration_form.lender_registration_form_2.lender_registration_individual_form_1',
+            open_form('lendor.lendor_registration_forms.lender_registration_form_2.lender_registration_individual_form_1',
                       user_id=user_id)
         elif lending_type == 'Institutional':
-            open_form('lendor_registration_form.lender_registration_form_2.lender_registration_Institutional_form_1',
+            open_form('lendor.lendor_registration_forms.lender_registration_form_2.lender_registration_Institutional_form_1',
                       user_id=user_id)
         else:
             # Your existing code in the else block
             anvil.server.call('add_lender_step2', lending_type, investment, lending_period, user_id)
             if lending_type == 'Individual':
-                open_form('lendor_registration_form.lender_registration_form_2.lender_registration_individual_form_1',
+                open_form('lendor.lendor_registration_forms.lender_registration_form_2.lender_registration_individual_form_1',
                           user_id=user_id)
             elif lending_type == 'Institutional':
-                open_form('lendor_registration_form.lender_registration_form_2.lender_registration_Institutional_form_1',
+                open_form('lendor.lendor_registration_forms.lender_registration_form_2.lender_registration_Institutional_form_1',
                           user_id=user_id)
               
     def button_3_click(self, **event_args):

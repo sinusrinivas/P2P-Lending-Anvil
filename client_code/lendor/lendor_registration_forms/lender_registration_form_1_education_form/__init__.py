@@ -39,17 +39,17 @@ class lender_registration_form_1_education_form(lender_registration_form_1_educa
       anvil.server.call('add_lender_step1',qualification,user_id)
       
     if qualification == '10th standard':
-      open_form('lendor_registration_form.lender_registration_form_1_education_form.lender_registration_education_10th_class',user_id=user_id)
+      open_form('lendor.lendor_registration_forms.lender_registration_form_1_education_form.lender_registration_education_10th_class',user_id=user_id)
     elif qualification == '12th standard':
-      open_form('lendor_registration_form.lender_registration_form_1_education_form.lender_registration_education_Intermediate',user_id = user_id)
+      open_form('lendor.lendor_registration_forms.lender_registration_form_1_education_form.lender_registration_education_Intermediate',user_id = user_id)
     elif qualification == "Bachelor's degree":
-      open_form('lendor_registration_form.lender_registration_form_1_education_form.lender_registration_education_Btech',user_id=user_id)
+      open_form('lendor.lendor_registration_forms.lender_registration_form_1_education_form.lender_registration_education_Btech',user_id=user_id)
     elif qualification == "Master's degree":
-      open_form('lendor_registration_form.lender_registration_form_1_education_form.lender_registration_education_Mtech',user_id = user_id)
+      open_form('lendor.lendor_registration_forms.lender_registration_form_1_education_form.lender_registration_education_Mtech',user_id = user_id)
     elif qualification == 'PhD':
-      open_form('lendor_registration_form.lender_registration_form_1_education_form.lender_registration_education_Phd',user_id = user_id)
+      open_form('lendor.lendor_registration_forms.lender_registration_form_1_education_form.lender_registration_education_Phd',user_id = user_id)
     else:
-      open_form('lendor_registration_form.lender_registration_form_1_education_form',user_id=user_id)
+      open_form('lendor.lendor_registration_forms.lender_registration_form_1_education_form',user_id=user_id)
 
   def button_3_click(self, **event_args):
     """This method is called when the button is clicked"""

@@ -61,12 +61,12 @@ class lender_registration_Institutional_form_2(lender_registration_Institutional
      today = datetime.today()
      months = today.year * 12 + today.month - year.year * 12 - year.month
      anvil.server.call('add_lendor_institutional_form_2',year,months,industry_type,turn_over,last_six_statements,user_id)
-     open_form('lendor_registration_form.lender_registration_form_2.lender_registration_Institutional_form_3',user_id = user_id)
+     open_form('lendor.lendor_registration_forms.lender_registration_form_2.lender_registration_Institutional_form_3',user_id = user_id)
      """This method is called when the button is clicked"""
 
   def button_1_click(self, **event_args):
     user_id = self.userId
-    open_form('lendor_registration_form.lender_registration_form_2.lender_registration_Institutional_form_1',user_id = user_id)
+    open_form('lendor.lendor_registration_forms.lender_registration_form_2.lender_registration_Institutional_form_1',user_id = user_id)
     """This method is called when the button is clicked"""
 
   def button_3_click(self, **event_args):

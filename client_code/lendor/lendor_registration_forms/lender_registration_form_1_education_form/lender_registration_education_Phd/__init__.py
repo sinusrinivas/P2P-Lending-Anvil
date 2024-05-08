@@ -20,7 +20,7 @@ class lender_registration_education_Phd(lender_registration_education_PhdTemplat
   def button_1_click(self, **event_args):
     """This method is called when the button is clicked"""
     user_id = self.userId
-    open_form('lendor_registration_form.lender_registration_form_1_education_form',user_id=user_id)
+    open_form('lendor.lendor_registration_forms.lender_registration_form_1_education_form',user_id=user_id)
     
   def button_2_click(self, **event_args):
     """This method is called when the button is clicked"""
@@ -35,7 +35,7 @@ class lender_registration_education_Phd(lender_registration_education_PhdTemplat
       Notification('Please upload all five files before proceed.').show()
     else:
       anvil.server.call('add_education_phd',tenth_class,intermediate,btech,mtech,phd,user_id)
-      open_form('lendor_registration_form.lender_registration_form_2',user_id=user_id)
+      open_form('lendor.lendor_registration_forms.lender_registration_form_2',user_id=user_id)
 
   def button_3_click(self, **event_args):
     """This method is called when the button is clicked"""
