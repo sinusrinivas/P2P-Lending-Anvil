@@ -212,32 +212,42 @@ components:
   properties: {text: Loan History, foreground: black, bold: true, font_size: 20}
   type: Label
   layout_properties: {grid_position: 'CCIIXU,HUNYKM BGPDWN,BOZZRM'}
-- name: column_panel_7
-  properties: {col_widths: '{"RPYTGD":12,"KYBXVK":12,"ZGEKHR":12,"UROFRT":12,"NXOTEH":12}'}
-  type: ColumnPanel
-  layout_properties: {grid_position: 'CCIIXU,HUNYKM VRAHCR,KZLSIU'}
+- name: grid_panel_1
+  properties: {}
+  type: GridPanel
+  layout_properties: {grid_position: 'CCIIXU,HUNYKM WUNBGA,QAWSBG'}
   components:
   - name: button_1
-    properties: {text: New Loan Requests (), foreground: black, role: null, align: left,
-      background: '#007FFF', border: square}
+    properties: {text: New Loan Requests(), foreground: white, role: elevated-button,
+      align: left, background: '#007FFF', border: '', bold: true}
     type: Button
-    layout_properties: {grid_position: 'UHLLFM,RPYTGD'}
-  - name: button_2
-    properties: {text: Loan Disbursed (), foreground: black}
-    type: Button
-    layout_properties: {grid_position: 'UHLLFM,KYBXVK'}
-  - name: button_3
-    properties: {text: Lost Opportunities (), foreground: black, align: left}
-    type: Button
-    layout_properties: {grid_position: 'UHLLFM,ZGEKHR'}
-  - name: button_4
-    properties: {text: Closed(), foreground: black, align: left}
-    type: Button
-    layout_properties: {grid_position: 'UHLLFM,UROFRT'}
+    layout_properties: {row: SLZQMV, width_xs: 3, col_xs: 0}
+    data_bindings: []
   - name: button_5
-    properties: {text: Defaulter (), foreground: black, align: left}
+    properties: {text: Defaulter (), foreground: white, align: center, role: elevated-button,
+      background: '#E52B50', bold: true, enabled: true}
     type: Button
-    layout_properties: {grid_position: 'UHLLFM,NXOTEH'}
+    layout_properties: {row: SLZQMV, width_xs: 3, col_xs: 9}
+  - name: button_2
+    properties: {text: Loan Disbursed(), foreground: white, role: elevated-button,
+      background: '#FEBE10', bold: true}
+    type: Button
+    layout_properties: {row: ONGSGE, width_xs: 2, col_xs: 2}
+  - name: button_3
+    properties: {text: Lost Opportunities (), foreground: white, align: center, role: elevated-button,
+      background: '#800080', bold: true}
+    type: Button
+    layout_properties: {row: ONGSGE, width_xs: 3, col_xs: 4}
+  - name: button_4
+    properties: {text: Closed (), foreground: white, align: center, role: elevated-button,
+      background: '#4CBB17'}
+    type: Button
+    layout_properties: {row: ONGSGE, width_xs: 2, col_xs: 7}
+- name: column_panel_7
+  properties: {col_widths: '{}', background: '', col_spacing: none}
+  type: ColumnPanel
+  layout_properties: {grid_position: 'CCIIXU,HUNYKM VRAHCR,KZLSIU'}
+  components: []
 - name: data_grid_1
   properties:
     columns:
