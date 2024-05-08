@@ -24,6 +24,21 @@ components:
   type: LinearPanel
   layout_properties: {grid_position: 'CCIIXU,QFGZTD', full_width_row: true}
   components:
+  - name: deposit_money_btn
+    properties: {role: null, align: left, tooltip: '', border: '', enabled: true,
+      foreground: 'theme:On Primary', visible: true, text: DEPOSIT MONEY, font_size: null,
+      font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+      background: '#0b2547', bold: false, underline: false, icon: ''}
+    type: Button
+    layout_properties: {}
+    event_bindings: {click: deposit_money_btn_click}
+  - name: withdraw_money_btn
+    properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
+      foreground: 'theme:On Primary', visible: false, text: WITHDRAW MONEY, font_size: null,
+      font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+      background: '#0b2547', bold: false, underline: false, icon: ''}
+    type: Button
+    event_bindings: {click: withdraw_money_btn_click}
   - name: View_Loan_Extension
     properties: {text: View Loan Extension, role: body, underline: true, italic: true,
       spacing_below: none, spacing_above: none}
