@@ -43,11 +43,11 @@ class star_1_borrower_registration_form_2_employment_farmer(star_1_borrower_regi
             Notification("Please fill all the fields").show()
         else:
             anvil.server.call('add_borrower_farmer', land_type, total_acres, crop_name, farmer_earnings, user_id)
-            open_form('borrower_registration_form.star_1_borrower_registration_form_3_marital', user_id=self.userId)
+            open_form('borrower.borrower_registration_forms.star_1_borrower_registration_form_3_marital', user_id=self.userId)
 
     def button_1_click(self, **event_args):
         user_id = self.userId
-        open_form('borrower_registration_form.star_1_borrower_registration_form_2_employment', user_id=self.userId)
+        open_form('borrower.borrower_registration_forms.star_1_borrower_registration_form_2_employment', user_id=self.userId)
 
     def button_3_click(self, **event_args):
         open_form("bank_users.user_form")

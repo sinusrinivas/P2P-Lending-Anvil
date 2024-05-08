@@ -29,7 +29,7 @@ class star_1_borrower_registration_form_2_employment(star_1_borrower_registratio
     open_form('bank_users.user_form')
 
   def button_1_click(self, **event_args):
-    open_form('borrower_registration_form.star_1_borrower_registration_form_1_education',user_id=self.userId)
+    open_form('borrower.borrower_registration_forms.star_1_borrower_registration_form_1_education',user_id=self.userId)
 
   def button_1_next_click(self, **event_args):
     status_of_user = self.Profesion_borrower_registration_form_drop_down.selected_value
@@ -41,11 +41,11 @@ class star_1_borrower_registration_form_2_employment(star_1_borrower_registratio
     else:
      anvil.server.call('add_borrower_step2',status_of_user,user_id)
     if status_of_user == 'Student':
-      open_form('borrower_registration_form.star_1_borrower_registration_form_2_employment.star_1_borrower_registration_form_2_employment_student',user_id=user_id)
+      open_form('borrower.borrower_registration_forms.star_1_borrower_registration_form_2_employment.star_1_borrower_registration_form_2_employment_student',user_id=user_id)
     elif status_of_user == 'Employee':
-      open_form('borrower_registration_form.star_1_borrower_registration_form_2_employment.star_1_borrower_registration_form_2_employment_emp_detail_1',user_id=user_id)
+      open_form('borrower.borrower_registration_forms.star_1_borrower_registration_form_2_employment.star_1_borrower_registration_form_2_employment_emp_detail_1',user_id=user_id)
     elif status_of_user == 'Self employment':
-      open_form('borrower_registration_form.star_1_borrower_registration_form_2_employment.star_1_borrower_registration_form_2_self_employment',user_id=user_id) 
+      open_form('borrower.borrower_registration_forms.star_1_borrower_registration_form_2_employment.star_1_borrower_registration_form_2_self_employment',user_id=user_id) 
     # else:
     #   open_form('borrower_registration_form.star_1_borrower_registration_form_2_employment',user_id=user_id)
     #   alert('Please select a valid Profesion')

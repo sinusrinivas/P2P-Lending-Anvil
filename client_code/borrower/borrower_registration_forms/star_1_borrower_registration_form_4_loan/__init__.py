@@ -116,10 +116,10 @@ class star_1_borrower_registration_form_4_loan(star_1_borrower_registration_form
       Notification("Please enter 'yes' or 'no' for all fields").show()
     else:
       anvil.server.call('add_borrower_step4',home_loan,other_loan,user_id,credit_card,vehicle)
-      open_form('borrower_registration_form.star_1_borrower_registration_form_5_bank_1',user_id=user_id)
+      open_form('borrower.borrower_registration_forms.star_1_borrower_registration_form_5_bank_1',user_id=user_id)
 
   def button_1_click(self, **event_args):
-    open_form('borrower_registration_form.star_1_borrower_registration_form_3_marital',user_id = self.user_id)
+    open_form('borrower.borrower_registration_forms.star_1_borrower_registration_form_3_marital',user_id = self.user_id)
 
   def home_borrower_registration_form_click(self, **event_args):
     open_form('bank_users.user_form')
