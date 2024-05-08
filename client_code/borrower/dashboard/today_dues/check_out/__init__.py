@@ -391,7 +391,7 @@ class check_out(check_outTemplate):
                     #self.status_label.text = "Payment successfully done..."
                     self.button_1_copy_3.visible = False
                     alert('Payment successfully done...')
-                    open_form('borrower_registration_form.dashboard')
+                    open_form('borrower.dashboard')
                 else:
                     alert( "Lender's wallet not found.")
             else:
@@ -402,7 +402,7 @@ class check_out(check_outTemplate):
 
     def button_1_copy_2_click(self, **event_args):
         """This method is called when the button is clicked"""
-        open_form('borrower_registration_form.dashboard.today_dues')
+        open_form('borrower.dashboard.today_dues')
 
     def update_loan_status(self, loan_id, new_status):
     # Update loan status in the loan details table for the given loan ID

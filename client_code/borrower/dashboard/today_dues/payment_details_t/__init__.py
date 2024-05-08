@@ -465,11 +465,11 @@ class payment_details_t(payment_details_tTemplate):
 
     def button_1_click(self, **event_args):
         """This method is called when the button is clicked"""
-        open_form('borrower_registration_form.dashboard')
+        open_form('borrower.dashboard')
 
     def button_2_click(self, **event_args):
         """This method is called when the button is clicked"""
-        open_form('borrower_registration_form.dashboard.today_dues', selected_row=self.selected_row)
+        open_form('borrower.dashboard.today_dues', selected_row=self.selected_row)
 
 
     def calculate_extension_months(self, selected_row):

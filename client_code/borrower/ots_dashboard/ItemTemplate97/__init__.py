@@ -27,5 +27,5 @@ class ItemTemplate97(ItemTemplate97Template):
   def outlined_button_1_click(self, **event_args):
     """This method is called when the button is clicked"""
     value_to_pass = self.label_1.text
-    open_form('borrower_registration_form.ots_dashboard.view_profile', value_to_pass)
+    open_form('borrower.ots_dashboard.view_profile', value_to_pass)
 

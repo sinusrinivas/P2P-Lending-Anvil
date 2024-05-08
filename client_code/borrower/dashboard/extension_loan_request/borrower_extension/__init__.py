@@ -141,11 +141,11 @@ class borrower_extension(borrower_extensionTemplate):
     
     def button_1_click(self, **event_args):
         """This method is called when the Back button is clicked"""
-        open_form('borrower_registration_form.dashboard.extension_loan_request')
+        open_form('borrower.dashboard.extension_loan_request')
 
     def button_s_click(self, **event_args):
         """This method is called when the Close button is clicked"""
-        open_form('borrower_registration_form.dashboard.extension_loan_request')
+        open_form('borrower.dashboard.extension_loan_request')
 
     def button_2_click(self, **event_args):
         """This method is called when the Submit Extension Request button is clicked"""
@@ -173,10 +173,10 @@ class borrower_extension(borrower_extensionTemplate):
               extension_fee_percentage = float(self.extension_fee.text)
             
               # Close the current form or navigate to another form if needed
-              open_form('borrower_registration_form.dashboard.extension_loan_request.payment_details_extension', selected_row=self.selected_row, loan_extension_months=loan_extension_months, extension_fee=extension_fee_percentage)
+              open_form('borrower.dashboard.extension_loan_request.payment_details_extension', selected_row=self.selected_row, loan_extension_months=loan_extension_months, extension_fee=extension_fee_percentage)
         else:
           alert(alert('You are not eligible for Extension! You have to pay at least ' + str(self.min_months) + ' months.'))
-          open_form('borrower_registration_form.dashboard.extension_loan_request')
+          open_form('borrower.dashboard.extension_loan_request')
           
     def validate_extension_months(self):
         """Validate the extension months entered by the borrower"""
@@ -195,7 +195,7 @@ class borrower_extension(borrower_extensionTemplate):
 
     def button_1_copy_click(self, **event_args):
       """This method is called when the button is clicked"""
-      open_form('borrower_registration_form.dashboard.extension_loan_request')
+      open_form('borrower.dashboard.extension_loan_request')
 
 
 

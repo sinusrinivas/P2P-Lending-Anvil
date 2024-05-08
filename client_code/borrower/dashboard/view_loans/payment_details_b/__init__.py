@@ -137,8 +137,8 @@ class payment_details_b(payment_details_bTemplate):
 
     def button_1_click(self, **event_args):
         """This method is called when the button is clicked"""
-        open_form('borrower_registration_form.dashboard')
+        open_form('borrower.dashboard')
 
     def button_2_click(self, **event_args):
         """This method is called when the button is clicked"""
-        open_form('borrower_registration_form.dashboard.view_loans.view_profile', selected_row=self.selected_row)
+        open_form('borrower.dashboard.view_loans.view_profile', selected_row=self.selected_row)

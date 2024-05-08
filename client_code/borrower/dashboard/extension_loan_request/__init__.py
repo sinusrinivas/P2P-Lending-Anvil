@@ -63,4 +63,4 @@ class extension_loan_request(extension_loan_requestTemplate):
 
     def button_1_click(self, **event_args):
         """This method is called when the button is clicked"""
-        open_form('borrower_registration_form.dashboard')
+        open_form('borrower.dashboard')

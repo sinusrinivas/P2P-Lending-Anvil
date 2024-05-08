@@ -35,11 +35,11 @@ class star_1_borrower_registration_form_2_employment_emp_detail_2(star_1_borrowe
     
     else:
       anvil.server.call('add_lendor_individual_form_2',comp_address,landmark,business_phone_number,user_id)
-      open_form('borrower_registration_form.star_1_borrower_registration_form_2_employment.star_1_borrower_registration_form_2_employment_emp_detail_3',user_id=user_id)
+      open_form('borrower.borrower_registration_forms.star_1_borrower_registration_form_2_employment.star_1_borrower_registration_form_2_employment_emp_detail_3',user_id=user_id)
 
 
   def button_1_click(self, **event_args):
-    open_form('borrower_registration_form.star_1_borrower_registration_form_2_employment.star_1_borrower_registration_form_2_employment_emp_detail_1',user_id=self.userId)
+    open_form('borrower.borrower_registration_forms.star_1_borrower_registration_form_2_employment.star_1_borrower_registration_form_2_employment_emp_detail_1',user_id=self.userId)
 
   def button_3_click(self, **event_args):
     open_form("bank_users.user_form")

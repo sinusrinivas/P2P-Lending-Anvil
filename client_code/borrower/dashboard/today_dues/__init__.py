@@ -244,4 +244,4 @@ class today_dues(today_duesTemplate):
 
     def home_borrower_registration_form_copy_1_click(self, **event_args):
         """This method is called when the button is clicked"""
-        open_form('borrower_registration_form.dashboard')
+        open_form('borrower.dashboard')

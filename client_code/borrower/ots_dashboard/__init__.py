@@ -136,16 +136,16 @@ class ots_dashboard(ots_dashboardTemplate):
             self.repeating_panel_2.items = self.result
 
     def home_main_form_link_click(self, **event_args):
-        open_form("borrower_registration_form.ots_dashboard")
+        open_form("borrower.ots_dashboard")
 
     def about_main_form_link_click(self, **event_args):
-        open_form('borrower_registration_form.dashboard.dashboard_about')
+        open_form('borrower.dashboard.dashboard_about')
 
     def contact_main_form_link_click(self, **event_args):
-        open_form("borrower_registration_form.dashboard.dashboard_contact")
+        open_form("borrower.dashboard.dashboard_contact")
 
     def notification_link_click(self, **event_args):
-        open_form('lender_registration_form.dashboard.notification')
+        open_form('lendor.dashboard.notification')
 
     def wallet_dashboard_link_click(self, **event_args):
         user_profiles = server.call('fetch_user_profiles')
@@ -168,4 +168,4 @@ class ots_dashboard(ots_dashboardTemplate):
         anvil.server.call('fetch_profile_data_and_insert', email, customer_id)
 
     def button_4_click(self, **event_args):
-        open_form('borrower_registration_form.ots_dashboard.my_loans')
+        open_form('borrower.ots_dashboard.my_loans')

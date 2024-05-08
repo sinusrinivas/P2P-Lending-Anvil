@@ -52,7 +52,7 @@ class my_loans(my_loansTemplate):
       print(a)
 
   def button_1_click(self, **event_args):
-      open_form('borrower_registration_form.ots_dashboard')
+      open_form('borrower.ots_dashboard')
   
   def button_1_copy_click(self, **event_args):
-      open_form('borrower_registration_form.ots_dashboard')
+      open_form('borrower.ots_dashboard')

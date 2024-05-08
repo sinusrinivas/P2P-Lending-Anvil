@@ -19,8 +19,8 @@ class view_profile(view_profileTemplate):
         self.date_of_apply_label.text=f"{selected_row['borrower_loan_created_timestamp']}"
         self.loan_updated_status_label.text=f"{selected_row['loan_updated_status']}"
     def button_1_copy_click(self, **event_args):
-        open_form('borrower_registration_form.dashboard')
+        open_form('borrower.dashboard')
 
     def button_1_click(self, **event_args):
         """This method is called when the button is clicked"""
-        open_form('borrower_registration_form.dashboard.application_tracker')
+        open_form('borrower.dashboard.application_tracker')

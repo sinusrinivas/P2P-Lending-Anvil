@@ -34,10 +34,10 @@ class star_1_borrower_registration_form_2_self_employment(star_1_borrower_regist
     else:
      anvil.server.call('add_borrwer_self_employment',status_of_user,user_id)
     if status_of_user == 'Business':
-       open_form('borrower_registration_form.star_1_borrower_registration_form_2_employment.star_1_borrower_registration_form_2_employment_business_1',user_id=user_id)
+       open_form('borrower.borrower_registration_forms.star_1_borrower_registration_form_2_employment.star_1_borrower_registration_form_2_employment_business_1',user_id=user_id)
     elif status_of_user == 'Farmer':
-      open_form('borrower_registration_form.star_1_borrower_registration_form_2_employment.star_1_borrower_registration_form_2_employment_farmer',user_id=user_id)
+      open_form('borrower.borrower_registration_forms.star_1_borrower_registration_form_2_employment.star_1_borrower_registration_form_2_employment_farmer',user_id=user_id)
 
   def button_1_click(self, **event_args):
     """This method is called when the button is clicked"""
-    open_form('borrower_registration_form.star_1_borrower_registration_form_2_employment',user_id=self.userId)
+    open_form('borrower.borrower_registration_forms.star_1_borrower_registration_form_2_employment',user_id=self.userId)

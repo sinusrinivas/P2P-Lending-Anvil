@@ -42,10 +42,10 @@ class star_1_borrower_registration_form_5_bank_1(star_1_borrower_registration_fo
         Notification("Account number should be valid").show()
     else:
         anvil.server.call('add_borrower_step5', account_name, account_type, account_number, bank_name, user_id)
-        open_form('borrower_registration_form.star_1_borrower_registration_form_5_bank_2', user_id=self.userId)
+        open_form('borrower.borrower_registration_forms.star_1_borrower_registration_form_5_bank_2', user_id=self.userId)
 
   def button_1_click(self, **event_args):
-    open_form('borrower_registration_form.star_1_borrower_registration_form_4_loan',user_id=self.userId)
+    open_form('borrower.borrower_registration_forms.star_1_borrower_registration_form_4_loan',user_id=self.userId)
 
   def button_3_click(self, **event_args):
     open_form("bank_users.user_form")
