@@ -17,7 +17,7 @@ class dasboard_about_lendor_registration_form(dasboard_about_lendor_registration
 
   def home_main_form_link_click(self, **event_args):
     """This method is called when the link is clicked"""
-    open_form("lendor_registration_form.dashboard")
+    open_form("lendor.dashboard")
 
   def login_signup_button_click(self, **event_args):
     """This method is called when the button is clicked"""
@@ -28,7 +28,7 @@ class dasboard_about_lendor_registration_form(dasboard_about_lendor_registration
 
   def contact_main_form_link_click(self, **event_args):
     """This method is called when the link is clicked"""
-    open_form("lendor_registration_form.dashboard.dasboard_contact")
+    open_form("lendor.dashboard.dasboard_contact")
 
   def about_main_form_link_click(self, **event_args):
     """This method is called when the link is clicked"""
@@ -36,7 +36,7 @@ class dasboard_about_lendor_registration_form(dasboard_about_lendor_registration
 
   def notification_link_click(self, **event_args):
     """This method is called when the link is clicked"""
-    open_form('lendor_registration_form.dashboard.notification')
+    open_form('lendor.dashboard.notification')
 
   def wallet_dashboard_link_click(self, **event_args):
     """This method is called when the link is clicked"""

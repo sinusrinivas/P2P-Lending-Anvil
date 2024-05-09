@@ -64,11 +64,11 @@ class lender_registration_form_4_bank_form_1(lender_registration_form_4_bank_for
         Notification("Account number should be valid").show()
     else:
       anvil.server.call('add_lendor_bank_details_form_1', account_name, account_type,account_number,bank_name, user_id)
-      open_form('lendor_registration_form.lender_registration_form_4_bank_form_2',user_id=self.userId)
+      open_form('lendor.lendor_registration_forms.lender_registration_form_4_bank_form_2',user_id=self.userId)
 
   def button_1_click(self, **event_args):
     user_id = self.userId
-    open_form('lendor_registration_form.lender_registration_form_3_marital_details',user_id=self.userId)
+    open_form('lendor.lendor_registration_forms.lender_registration_form_3_marital_details',user_id=self.userId)
 
   def button_3_click(self, **event_args):
     open_form("bank_users.user_form")

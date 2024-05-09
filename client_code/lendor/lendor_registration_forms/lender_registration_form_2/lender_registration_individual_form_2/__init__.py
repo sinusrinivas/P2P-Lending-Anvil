@@ -55,11 +55,11 @@ class lender_registration_individual_form_2(lender_registration_individual_form_
       
       else:
           anvil.server.call('add_lendor_individual_form_2', comp_address, landmark, business_phone_number, user_id)
-          open_form('lendor_registration_form.lender_registration_form_2.lender_registration_individual_form_3', user_id=self.userId)
+          open_form('lendor.lendor_registration_forms.lender_registration_form_2.lender_registration_individual_form_3', user_id=self.userId)
 
   def button_1_click(self, **event_args):
      user_id = self.userId
-     open_form('lendor_registration_form.lender_registration_form_2.lender_registration_individual_form_1', user_id=self.userId)
+     open_form('lendor.lendor_registration_forms.lender_registration_form_2.lender_registration_individual_form_1', user_id=self.userId)
 
   def button_3_click(self, **event_args):
     open_form("bank_users.user_form")

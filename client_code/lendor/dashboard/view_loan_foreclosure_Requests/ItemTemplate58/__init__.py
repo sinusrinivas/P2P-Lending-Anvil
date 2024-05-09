@@ -28,6 +28,6 @@ class ItemTemplate58(ItemTemplate58Template):
     """This method is called when the button is clicked"""
     selected_row = self.item
 
-    open_form("lendor_registration_form.dashboard.view_loan_foreclosure_Requests.foreclose_details_approved_and_rejected", selected_row=selected_row)
+    open_form("lendor.dashboard.view_loan_foreclosure_Requests.foreclose_details_approved_and_rejected", selected_row=selected_row)
 
 

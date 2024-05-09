@@ -15,7 +15,7 @@ class view_or_send_notifications(view_or_send_notificationsTemplate):
   
   def button_1_click(self, **event_args):
     """This method is called when the button is clicked"""
-    open_form("lendor_registration_form.dashboard")
+    open_form("lendor.dashboard")
 
   
 

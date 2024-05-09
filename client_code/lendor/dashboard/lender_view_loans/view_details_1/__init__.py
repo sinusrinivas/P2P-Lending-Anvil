@@ -31,11 +31,11 @@ class view_details_1(view_details_1Template):
         self.loan_updated_status_label.text = f"{selected_row['loan_updated_status']}"
 
     def button_1_click(self, **event_args):
-        open_form("lendor_registration_form.dashboard.lender_view_loans")
+        open_form("lendor.dashboard.lender_view_loans")
 
     def button_1_copy_click(self, **event_args):
-        open_form('lendor_registration_form.dashboard')
+        open_form('lendor.dashboard')
 
     def link_1_click(self, **event_args):
         # Pass the selected_row to payment_details_l form
-        open_form('lendor_registration_form.dashboard.lender_view_loans.payment_details_l', selected_row=self.selected_row)
+        open_form('lendor.dashboard.lender_view_loans.payment_details_l', selected_row=self.selected_row)

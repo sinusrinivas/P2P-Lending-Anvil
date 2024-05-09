@@ -34,7 +34,7 @@ class lender_registration_form_3_marital_details(lender_registration_form_3_mari
           # Call the server function before opening the next form
           anvil.server.call('add_lendor_marital', marital_status, user_id)
   
-          open_form('lendor_registration_form.lender_registration_form_3_marital_details.lender_registration_form_3_marital_married',
+          open_form('lendor.lendor_registration_forms.lender_registration_form_3_marital_details.lender_registration_form_3_marital_married',
                     user_id=user_id, marital_status=marital_status)
   
   # def button_next_click(self, **event_args):
@@ -55,7 +55,7 @@ class lender_registration_form_3_marital_details(lender_registration_form_3_mari
   #       alert('Please select a valid marital status')
 
   def button_1_click(self, **event_args):
-    open_form('lendor_registration_form.lender_registration_form_2',user_id=self.userId)
+    open_form('lendor.lendor_registration_forms.lender_registration_form_2',user_id=self.userId)
     # Any code you write here will run before the form opens.
 
   def marital_status_borrower_registration_dropdown_change(self, **event_args):

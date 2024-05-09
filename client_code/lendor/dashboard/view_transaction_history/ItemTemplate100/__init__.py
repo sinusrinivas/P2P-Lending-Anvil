@@ -18,6 +18,6 @@ class ItemTemplate100(ItemTemplate100Template):
   def link_1_click(self, **event_args):
     """This method is called when the link is clicked"""
     item_data = self.item
-    open_form('lendor_registration_form.dashboard.view_transaction_history.transaction_details', selected_row=item_data)
+    open_form('lendor.dashboard.view_transaction_history.transaction_details', selected_row=item_data)
 
 
