@@ -92,6 +92,7 @@ unique_ids:
     lendor.dashboard.lender_view_loans.RowTemplate23: '1703141182461211155517631.55914'
     lendor.dashboard.view_borrower_loan_request.RowTemplate10: '1700542200026541460267637.76886'
     admin.dashboard.manage_bessem.add_subcategory.edit_all_loans: '1710222862958473841917188.2917'
+    lendor.dashboard.RowTemplate13: '1715227710043217201182815.06174'
     borrower.dashboard.view_loans.RowTemplate15: '1701149147768679142681951.7627'
     admin.dashboard.manage_bessem.add_subcategory.edit_qualification: '170973382597126282095202.1523'
     wallet.wallet.all_transaction.ItemTemplate99: '1712210109572218685580049.6752'

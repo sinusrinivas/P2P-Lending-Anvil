@@ -87,10 +87,14 @@ components:
   data_bindings:
   - {property: spacing_below, code: 'self.item['''']', writeback: false}
 - name: column_panel_1
-  properties: {role: elevated-card}
+  properties: {role: elevated-card, col_widths: '{"VOWHYF":5,"BREYKS":15,"RDAAZD":10,"FVJJOH":10,"JQYOUY":20}'}
   type: ColumnPanel
   layout_properties: {grid_position: 'CCIIXU,HUNYKM VDNJEZ,JDVETN', row_background: ''}
   components:
+  - name: image_5
+    properties: {height: 42, source: _/theme/connection.png}
+    type: Image
+    layout_properties: {grid_position: 'ZGTDIJ,VOWHYF'}
   - type: Label
     properties: {role: null, align: right, tooltip: '', border: '', foreground: '',
       visible: true, text: Make Visibilty, font_size: 20, font: '', spacing_above: medium,
@@ -136,7 +140,7 @@ components:
   - name: column_panel_3
     properties: {role: elevated-card, col_widths: '{"PQPPZT":20,"WLAJCK":40}'}
     type: ColumnPanel
-    layout_properties: {grid_position: 'ERCHQY,YUAUSJ'}
+    layout_properties: {grid_position: 'ERCHQY,YUAUSJ', full_width_row: true}
     components:
     - name: image_1
       properties: {height: 38.199981689453125, display_mode: shrink_to_fit, source: _/theme/1.png}
@@ -213,48 +217,48 @@ components:
   properties: {text: Loan History, bold: true, foreground: black, font_size: 20}
   type: Label
   layout_properties: {grid_position: 'CCIIXU,HUNYKM JJBDUV,ZEQSOR'}
-- name: column_panel_7
-  properties: {col_spacing: tiny, role: outlined-card, wrap_on: mobile, tooltip: '',
-    background: white, border: black}
+- name: column_panel_7_copy
+  properties: {col_widths: '{}', background: '', col_spacing: none, spacing_below: medium,
+    spacing_above: medium}
   type: ColumnPanel
-  layout_properties: {grid_position: 'CCIIXU,HUNYKM WABKRW,MCXHPM', full_width_row: false}
+  layout_properties: {grid_position: 'CCIIXU,HUNYKM EOKIOO,DZMIIN'}
   components:
-  - name: button_1
-    properties: {role: null, align: center, enabled: true, foreground: white, text: New Loan Request(),
-      spacing_above: small, spacing_below: small, background: '#3457D5', bold: true}
+  - name: button_1_copy
+    properties: {text: New Loan Requests(), foreground: white, role: null, align: full,
+      background: '#007FFF', border: '', bold: true}
     type: Button
-    layout_properties: {grid_position: 'TFVCGS,GJBHET', full_width_row: true, row_background: 'theme:On
-        Primary'}
+    layout_properties: {grid_position: 'GWOXFQ,YPNAHH', full_width_row: true}
     data_bindings: []
-  - name: button_2
-    properties: {text: Loan Disbursed (), background: '#FFC72C', foreground: white,
-      role: null, align: center, bold: true, spacing_above: small, spacing_below: small}
+  - name: button_2_copy
+    properties: {text: Loan Disbursed(), foreground: white, role: elevated-button,
+      background: '#FEBE10', bold: true, align: full}
     type: Button
-    layout_properties: {grid_position: 'TFVCGS,XUDBDL', full_width_row: true}
-  - name: button_3
-    properties: {text: Lost Opportunities (), background: '#800080', foreground: white,
-      align: center, bold: true, spacing_above: small, spacing_below: small, role: null}
+    layout_properties: {grid_position: 'GWOXFQ,DXKIFN', full_width_row: true}
+  - name: button_3_copy
+    properties: {text: Lost Opportunities (), foreground: white, align: full, role: null,
+      background: '#800080', bold: true}
     type: Button
-    layout_properties: {grid_position: 'TFVCGS,PSTYMC', full_width_row: true}
-  - name: button_4
-    properties: {text: Closed (), background: '#03C03C', foreground: white, align: center,
-      bold: true, spacing_above: small, spacing_below: small, role: null}
+    layout_properties: {grid_position: 'GWOXFQ,ULDUEY'}
+  - name: button_4_copy
+    properties: {text: Closed (), foreground: white, align: full, role: null, background: '#4CBB17',
+      bold: true}
     type: Button
-    layout_properties: {grid_position: 'TFVCGS,OVGVGC', full_width_row: true}
-  - name: button_5
-    properties: {text: Defaulter (), background: '#DE3163', foreground: white, align: center,
-      bold: true, spacing_above: small, spacing_below: small, role: null}
+    layout_properties: {grid_position: 'GWOXFQ,BOZZYE'}
+  - name: button_5_copy
+    properties: {text: Defaulter (), foreground: white, align: full, role: elevated-button,
+      background: '#E52B50', bold: true, enabled: true}
     type: Button
-    layout_properties: {grid_position: 'TFVCGS,TOKRDZ', full_width_row: true}
+    layout_properties: {grid_position: 'GWOXFQ,UNJZMC'}
 - name: data_grid_1
   properties:
     columns:
-    - {id: JKSDUP, title: Column 1, data_key: column_1}
-    - {id: VJQQOR, title: Column 2, data_key: column_2}
-    - {id: OJLQEN, title: Column 3, data_key: column_3}
+    - {id: VJQQOR, title: Loan ID, data_key: column_2}
+    - {id: JKSDUP, title: Loan Amount, data_key: column_1}
+    - {id: OJLQEN, title: Loan Status, data_key: column_3}
+    - {id: NFYNZM, data_key: column_4, title: ''}
   type: DataGrid
   components:
   - name: repeating_panel_1
-    properties: {item_template: lendor.dashboard.RowTemplate9}
+    properties: {item_template: lendor.dashboard.RowTemplate13}
     type: RepeatingPanel
-  layout_properties: {grid_position: 'CCIIXU,HUNYKM QXZUZF,WCTAVY'}
+  layout_properties: {grid_position: 'CCIIXU,HUNYKM GIDYBW,OYBULT'}
