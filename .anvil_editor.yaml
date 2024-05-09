@@ -12,7 +12,6 @@ unique_ids:
     lendor.dashboard.view_transaction_history.ItemTemplate65: '1710298383231796088123967.8053'
     ? borrower.borrower_registration_forms.star_1_borrower_registration_form_1_education.star_1_borrower_registration_form_education_10th_class
     : '1706674255415664927025189.0149'
-    borrower.borrower_registration_forms.borrower_registration_nagivation: '1715236774097274261607244.83008'
     borrower.borrower_registration_forms.borrower_registration_last_check_out_form: '1699374444060167172815541.79663'
     admin.dashboard.manage_bessem.add_subcategory.ItemTemplate86: '1710501688800355680302234.22766'
     borrower.dashboard.application_tracker: '1698927021026141533584098.39868'
@@ -130,6 +129,7 @@ unique_ids:
     ? borrower.borrower_registration_forms.star_1_borrower_registration_form_2_employment.star_1_borrower_registration_form_2_employment_student
     : '1700126702884606423685481.6467'
     admin.dashboard.manage_bessem.view_bessem_group: '1709796304196496012609333.1965'
+    borrower.dashboard.borrower_portfolio: '171524801668710027541032.377796'
     admin.dashboard.manage_bessem.add_subcategory.ItemTemplate37: '1711087717699357608740554.9464'
     borrower.dashboard.dashboard_contact: '1701024135120380095014250.6585'
     admin.dashboard.loan_management.default_loans: '1701349219800657114662317.6571'
@@ -375,6 +375,7 @@ unique_ids:
     admin.dashboard.manage_bessem.add_subcategory.ItemTemplate87: '1710502229577864903127030.588'
     admin.dashboard.manage_products.add_group: '1703758557054939760657519.5975'
     borrower.ots_dashboard.ItemTemplate97: '1712122358046587469434273.9945'
+    lendor.dashboard.lender_portfolio: '1715250231366538983216292.9'
     admin.dashboard.loan_management.closed_loans.view_profile_5: '1701079991010941258272977.0447'
     admin.dashboard.loan_management.lapsed_loans.ItemTemplate23: '170712932240636529702505.68765'
     admin.dashboard.manage_bessem.view_bessem_subcategory.ItemTemplate38: '17095388729813876844709.4927883'
@@ -399,6 +400,7 @@ unique_ids:
     lendor.dashboard.view_loan_extension_requests.ItemTemplate80: '1709795538539334652841228.1964'
     admin.dashboard.manage_bessem.add_subcategory.ItemTemplate61: '1709809594197903989799556.9601'
     lendor.dashboard.view_loan_foreclosure_Requests.ItemTemplate60: '1709614621560488265881879.254'
+    borrower.dashboard1: '1715252802117453790172391.0529'
     lendor.dashboard.lender_view_loans.RowTemplate21: '1703140075771292076881029.6881'
     borrower.dashboard.today_dues.ItemTemplate46: '1709722913535335409689375.16394'
     admin.dashboard.manage_cms.add_general_dropdowns.ItemTemplate81: '1710398615966170714845760.2745'
