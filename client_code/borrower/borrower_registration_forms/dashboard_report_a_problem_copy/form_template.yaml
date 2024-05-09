@@ -7,11 +7,7 @@ components:
   properties: {col_widths: '{}'}
   name: content_panel
   layout_properties: {slot: default}
-  components:
-  - type: form:borrower.dashboard.Navigation_form_dashboard
-    properties: {}
-    name: navigation_form_dashboard_1
-    layout_properties: {grid_position: 'BJJQVM,LWRTNM', full_width_row: true}
+  components: []
 - type: FlowPanel
   properties: {}
   name: navbar_links
