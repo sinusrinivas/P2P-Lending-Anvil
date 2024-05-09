@@ -87,7 +87,7 @@ components:
   data_bindings:
   - {property: spacing_below, code: 'self.item['''']', writeback: false}
 - name: column_panel_1
-  properties: {role: elevated-card, col_widths: '{"VOWHYF":5,"BREYKS":15,"RDAAZD":10,"FVJJOH":10,"JQYOUY":20}'}
+  properties: {role: elevated-card, col_widths: '{"VOWHYF":5,"BREYKS":37,"RDAAZD":4,"FVJJOH":14}'}
   type: ColumnPanel
   layout_properties: {grid_position: 'CCIIXU,HUNYKM VDNJEZ,JDVETN', row_background: ''}
   components:
@@ -96,10 +96,10 @@ components:
     type: Image
     layout_properties: {grid_position: 'ZGTDIJ,VOWHYF'}
   - type: Label
-    properties: {role: null, align: right, tooltip: '', border: '', foreground: '',
-      visible: true, text: Make Visibilty, font_size: 20, font: '', spacing_above: medium,
-      icon_align: top, spacing_below: none, italic: false, background: '', bold: true,
-      underline: false, icon: ''}
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: Please Make your availability visible by Turning On/Off button.,
+      font_size: 16, font: '', spacing_above: medium, icon_align: top, spacing_below: none,
+      italic: false, background: '', bold: true, underline: false, icon: ''}
     layout_properties: {grid_position: 'ZGTDIJ,BREYKS'}
     name: label_status
   - properties: {role: null, align: center, enabled: true, allow_indeterminate: false,
@@ -128,10 +128,6 @@ components:
       layout_properties: {}
       event_bindings: {click: button_click, show: button_show, hide: button_hide}
       name: button_status
-  - properties: {text: Offline, bold: true, align: left, role: title}
-    type: Label
-    layout_properties: {grid_position: 'ZGTDIJ,JQYOUY'}
-    name: label_1
 - name: column_panel_2
   properties: {}
   type: ColumnPanel
@@ -143,7 +139,7 @@ components:
     layout_properties: {grid_position: 'ERCHQY,YUAUSJ', full_width_row: true}
     components:
     - name: image_1
-      properties: {height: 38.199981689453125, display_mode: shrink_to_fit, source: _/theme/1.png}
+      properties: {height: 45.399932861328125, display_mode: shrink_to_fit, source: _/theme/1.png}
       type: Image
       layout_properties: {grid_position: 'FHZWVZ,PQPPZT'}
     - name: label_2
@@ -162,7 +158,7 @@ components:
     layout_properties: {grid_position: 'ERCHQY,NETDIR'}
     components:
     - name: image_2
-      properties: {height: 46.79998779296875, source: _/theme/profits.png}
+      properties: {height: 48.79998779296875, source: _/theme/profits.png}
       type: Image
       layout_properties: {grid_position: 'LIIRFK,KRHWBD'}
     - name: label_4
@@ -181,7 +177,7 @@ components:
     layout_properties: {grid_position: 'ERCHQY,IXNAVP'}
     components:
     - name: image_3
-      properties: {height: 43.399932861328125, source: _/theme/piggy-bank.png}
+      properties: {height: 43.79998779296875, source: _/theme/piggy-bank.png}
       type: Image
       layout_properties: {grid_position: 'HVNINY,UKYYYV'}
     - name: label_6
@@ -198,7 +194,7 @@ components:
     layout_properties: {grid_position: 'ERCHQY,KVCNSJ'}
     components:
     - name: image_4
-      properties: {height: 48.20001220703125, source: _/theme/loan.png}
+      properties: {height: 48.20001220703125, source: _/theme/personal.png}
       type: Image
       layout_properties: {grid_position: 'QAERLY,CUOOLO'}
     - name: label_8
@@ -245,7 +241,7 @@ components:
     type: Button
     layout_properties: {grid_position: 'GWOXFQ,BOZZYE'}
   - name: button_5_copy
-    properties: {text: Defaulter (), foreground: white, align: full, role: elevated-button,
+    properties: {text: Extended (), foreground: white, align: full, role: elevated-button,
       background: '#E52B50', bold: true, enabled: true}
     type: Button
     layout_properties: {grid_position: 'GWOXFQ,UNJZMC'}
@@ -253,7 +249,10 @@ components:
   properties:
     columns:
     - {id: VJQQOR, title: Loan ID, data_key: column_2}
+    - {id: JNEVFU, data_key: column_1, title: Name}
     - {id: JKSDUP, title: Loan Amount, data_key: column_1}
+    - {id: RFMHCZ, data_key: column_1, title: Ascend Score}
+    - {id: GUBYWD, data_key: column_1, title: Tenure}
     - {id: OJLQEN, title: Loan Status, data_key: column_3}
     - {id: NFYNZM, data_key: column_4, title: ''}
   type: DataGrid
