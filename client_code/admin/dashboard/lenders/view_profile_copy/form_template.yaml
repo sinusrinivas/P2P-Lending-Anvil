@@ -813,19 +813,11 @@ components:
       col_widths: {}
       grid_position: GXUVGX,OOIVZJ
   - name: button_2
-    properties: {role: null, align: right, tooltip: '', border: '', enabled: true,
+    properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
       foreground: 'theme:On Primary', visible: true, text: Edit, font_size: null,
       font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
       background: '#0b2547', bold: false, underline: false, icon: ''}
     type: Button
     layout_properties: {grid_position: 'TSKUXZ,EFCTTQ'}
     event_bindings: {click: button_2_click}
-  - name: button_3
-    properties: {role: null, align: left, tooltip: '', border: '', enabled: true,
-      foreground: 'theme:On Primary', visible: true, text: Update, font_size: null,
-      font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
-      background: '#0b2547', bold: false, underline: false, icon: ''}
-    type: Button
-    layout_properties: {grid_position: 'TSKUXZ,ODHLUP'}
-    event_bindings: {click: button_3_click}
 is_package: true
