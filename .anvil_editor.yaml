@@ -130,6 +130,7 @@ unique_ids:
     ? borrower.borrower_registration_forms.star_1_borrower_registration_form_2_employment.star_1_borrower_registration_form_2_employment_student
     : '1700126702884606423685481.6467'
     admin.dashboard.manage_bessem.view_bessem_group: '1709796304196496012609333.1965'
+    borrower.dashboard.borrower_portfolio: '171524801668710027541032.377796'
     admin.dashboard.manage_bessem.add_subcategory.ItemTemplate37: '1711087717699357608740554.9464'
     borrower.dashboard.dashboard_contact: '1701024135120380095014250.6585'
     admin.dashboard.loan_management.default_loans: '1701349219800657114662317.6571'
