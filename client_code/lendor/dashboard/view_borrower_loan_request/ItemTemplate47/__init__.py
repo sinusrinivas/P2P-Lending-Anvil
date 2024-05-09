@@ -27,4 +27,4 @@ class ItemTemplate47(ItemTemplate47Template):
     """This method is called when the button is clicked"""
     selected_row = self.item
         # Open the Borr_loan_request form with the selected row data
-    open_form("lendor_registration_form.dashboard.view_borrower_loan_request.Borr_loan_request", selected_row=selected_row)
+    open_form("lendor.dashboard.view_borrower_loan_request.Borr_loan_request", selected_row=selected_row)

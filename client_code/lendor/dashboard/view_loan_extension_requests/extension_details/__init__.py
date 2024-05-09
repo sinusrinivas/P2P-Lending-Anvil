@@ -34,7 +34,7 @@ class extension_details(extension_detailsTemplate):
                 self.selected_row['status'] = 'approved'
                 self.selected_row.update()
                 Notification("Borrower request has been automatically approved.").show()
-                open_form("lendor_registration_form.dashboard.view_loan_extension_requests")
+                open_form("lendor.dashboard.view_loan_extension_requests")
 
 
     def approve_click(self, **event_args):
@@ -48,14 +48,14 @@ class extension_details(extension_detailsTemplate):
 
         loan = app_tables.fin_loan_details.get(loan_id=self.selected_row['loan_id'])
         loan['loan_updated_status'] = "extension"
-        open_form("lendor_registration_form.dashboard.view_loan_extension_requests")
+        open_form("lendor.dashboard.view_loan_extension_requests")
 
     def decline_click(self, **event_args):
         """This method is called when the 'Decline' button is clicked"""
         self.selected_row['status'] = 'rejected'
         self.selected_row.update()
         Notification("Borrower will get notified").show()
-        open_form("lendor_registration_form.dashboard.view_loan_extension_requests")
+        open_form("lendor.dashboard.view_loan_extension_requests")
 
     def update_extension_status(self, new_status):
         """Update the status in the fin_foreclosure table"""
@@ -66,12 +66,12 @@ class extension_details(extension_detailsTemplate):
 
     def button_1_click(self, **event_args):
         """This method is called when the button is clicked"""
-        open_form('lendor_registration_form.dashboard.view_loan_extension_requests')
+        open_form('lendor.dashboard.view_loan_extension_requests')
 
     def button_1_copy_click(self, **event_args):
         """This method is called when the button is clicked"""
-        open_form('lendor_registration_form.dashboard')
+        open_form('lendor.dashboard')
 
     def approve_copy_click(self, **event_args):
       """This method is called when the button is clicked"""
-      open_form('lendor_registration_form.dashboard.view_loan_extension_requests')
+      open_form('lendor.dashboard.view_loan_extension_requests')

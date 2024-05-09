@@ -25,9 +25,9 @@ class view_details_2(view_details_2Template):
 
   def button_1_copy_click(self, **event_args):
     """This method is called when the button is clicked"""
-    open_form('lendor_registration_form.dashboard')
+    open_form('lendor.dashboard')
 
   def button_1_click(self, **event_args):
     """This method is called when the button is clicked"""
-    open_form("lendor_registration_form.dashboard.view_lost_oppurtunities")
+    open_form("lendor.dashboard.view_lost_oppurtunities")
 

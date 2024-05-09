@@ -25,4 +25,4 @@ class transaction_details(transaction_detailsTemplate):
 
   def button_1_click(self, **event_args):
     """This method is called when the button is clicked"""
-    open_form('lendor_registration_form.dashboard.view_transaction_history')
+    open_form('lendor.dashboard.view_transaction_history')

@@ -27,9 +27,9 @@ class ItemTemplate55(ItemTemplate55Template):
     """This method is called when the button is clicked"""
     selected_row = self.item
     print(f"Selected row status: {selected_row['status']}")
-    open_form("lendor_registration_form.dashboard.view_loan_foreclosure_Requests.foreclose_details", selected_row=selected_row)
+    open_form("lendor.dashboard.view_loan_foreclosure_Requests.foreclose_details", selected_row=selected_row)
     if selected_row['status'] == 'approved' or selected_row['status'] == 'rejected':
-        open_form("lendor_registration_form.dashboard.view_loan_foreclosure_Requests.foreclose_details_approved_and_rejected", selected_row=selected_row)
+        open_form("lendor.dashboard.view_loan_foreclosure_Requests.foreclose_details_approved_and_rejected", selected_row=selected_row)
     else:
         # open_form("lendor_registration_form.dashboard.vlfr.foreclose_details")
        None

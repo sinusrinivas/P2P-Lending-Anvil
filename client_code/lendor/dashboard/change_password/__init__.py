@@ -15,6 +15,6 @@ class change_password(change_passwordTemplate):
   
   def button_1_click(self, **event_args):
     """This method is called when the button is clicked"""
-    open_form("lendor_registration_form.dashboard")
+    open_form("lendor.dashboard")
 
   

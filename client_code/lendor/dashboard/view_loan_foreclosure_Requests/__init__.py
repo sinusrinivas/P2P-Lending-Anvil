@@ -75,7 +75,7 @@ class view_loan_foreclosure_Requests(view_loan_foreclosure_RequestsTemplate):
   
   def button_1_click(self, **event_args):
     """This method is called when the button is clicked"""
-    open_form("lendor_registration_form.dashboard")  
+    open_form("lendor.dashboard")  
 
   def button_3_click(self, **event_args):
     """This method is called when the button is clicked"""

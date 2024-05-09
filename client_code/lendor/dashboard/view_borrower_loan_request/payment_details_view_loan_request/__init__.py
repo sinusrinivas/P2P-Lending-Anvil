@@ -76,8 +76,8 @@ class payment_details_view_loan_request(payment_details_view_loan_requestTemplat
       self.entered_payment_type = entered_values.get('payment_type', None)
 
   def button_1_click(self, **event_args):
-    open_form('lendor_registration_form.dashboard')
+    open_form('lendor.dashboard')
 
   def button_2_click(self, **event_args):
     # Pass the selected_row to view_details_1 form
-    open_form('lendor_registration_form.dashboard.view_borrower_loan_request.Borr_loan_request', selected_row=self.selected_row)
+    open_form('lendor.dashboard.view_borrower_loan_request.Borr_loan_request', selected_row=self.selected_row)

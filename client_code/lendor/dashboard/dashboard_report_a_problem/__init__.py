@@ -60,4 +60,4 @@ class dashboard_report_a_problem(dashboard_report_a_problemTemplate):
     alert('Problem reported successfully. Thank you for your feedback!')
 
     # Open dashboard form or any other form
-    open_form('borrower_registration_form.dashboard')
+    open_form('lendor.dashboard'.dashboard')
