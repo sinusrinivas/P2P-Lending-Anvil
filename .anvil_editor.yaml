@@ -376,6 +376,7 @@ unique_ids:
     admin.dashboard.manage_bessem.add_subcategory.ItemTemplate87: '1710502229577864903127030.588'
     admin.dashboard.manage_products.add_group: '1703758557054939760657519.5975'
     borrower.ots_dashboard.ItemTemplate97: '1712122358046587469434273.9945'
+    lendor.dashboard.lender_portfolio: '1715250231366538983216292.9'
     admin.dashboard.loan_management.closed_loans.view_profile_5: '1701079991010941258272977.0447'
     admin.dashboard.loan_management.lapsed_loans.ItemTemplate23: '170712932240636529702505.68765'
     admin.dashboard.manage_bessem.view_bessem_subcategory.ItemTemplate38: '17095388729813876844709.4927883'
