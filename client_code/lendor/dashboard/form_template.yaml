@@ -218,8 +218,8 @@ components:
   type: Label
   layout_properties: {grid_position: 'CCIIXU,HUNYKM JJBDUV,ZEQSOR'}
 - name: column_panel_7_copy
-  properties: {col_widths: '{}', background: '', col_spacing: none, spacing_below: small,
-    spacing_above: small, role: elevated-card}
+  properties: {col_widths: '{}', background: '', col_spacing: none, spacing_below: medium,
+    spacing_above: medium}
   type: ColumnPanel
   layout_properties: {grid_position: 'CCIIXU,HUNYKM EOKIOO,DZMIIN'}
   components:
@@ -252,12 +252,13 @@ components:
 - name: data_grid_1
   properties:
     columns:
-    - {id: JKSDUP, title: Column 1, data_key: column_1}
-    - {id: VJQQOR, title: Column 2, data_key: column_2}
-    - {id: OJLQEN, title: Column 3, data_key: column_3}
+    - {id: VJQQOR, title: Loan ID, data_key: column_2}
+    - {id: JKSDUP, title: Loan Amount, data_key: column_1}
+    - {id: OJLQEN, title: Loan Status, data_key: column_3}
+    - {id: NFYNZM, data_key: column_4, title: ''}
   type: DataGrid
   components:
   - name: repeating_panel_1
-    properties: {item_template: lendor.dashboard.RowTemplate9}
+    properties: {item_template: lendor.dashboard.RowTemplate13}
     type: RepeatingPanel
-  layout_properties: {grid_position: 'CCIIXU,HUNYKM QXZUZF,WCTAVY'}
+  layout_properties: {grid_position: 'CCIIXU,HUNYKM GIDYBW,OYBULT'}
