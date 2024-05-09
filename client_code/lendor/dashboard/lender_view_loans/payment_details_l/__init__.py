@@ -137,4 +137,4 @@ class payment_details_l(payment_details_lTemplate):
 
     def button_2_click(self, **event_args):
         # Pass the selected_row to view_details_1 form
-        open_form('lendor_registration_form.dashboard.lender_view_loans.view_details_1', selected_row=self.selected_row)
+        open_form('lendor.dashboard.lender_view_loans.view_details_1', selected_row=self.selected_row)

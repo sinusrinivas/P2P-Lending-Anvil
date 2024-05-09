@@ -166,4 +166,4 @@ class lender_view_loans(lender_view_loansTemplate):
 
   def home_lender_registration_form_copy_1_click(self, **event_args):
     """This method is called when the button is clicked"""
-    open_form("lendor_registration_form.dashboard")
+    open_form("lendor.dashboard")

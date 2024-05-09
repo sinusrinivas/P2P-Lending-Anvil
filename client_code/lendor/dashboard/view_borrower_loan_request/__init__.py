@@ -60,4 +60,4 @@ class view_borrower_loan_request(view_borrower_loan_requestTemplate):
   
   def button_1_click(self, **event_args):
     """This method is called when the button is clicked"""
-    open_form("lendor_registration_form.dashboard")
+    open_form("lendor.dashboard")
