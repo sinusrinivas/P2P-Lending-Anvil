@@ -34,21 +34,21 @@ class transaction_details(transaction_detailsTemplate):
       self.user_type = user_request['usertype']
 
     if self.user_type == "lender":
-        open_form("lendor_registration_form.dashboard")
+        open_form("lendor.dashboard")
     else:
-        open_form("borrower_registration_form.dashboard")
+        open_form("borrower.dashboard")
 
   def about_main_form_link_click(self, **event_args):
     """This method is called when the link is clicked"""
-    open_form("lendor_registration_form.dashboard.dasboard_about")
+    open_form("lendor.dashboard.dasboard_about")
 
   def contact_main_form_link_click(self, **event_args):
     """This method is called when the link is clicked"""
-    open_form("lendor_registration_form.dashboard.dasboard_contact")
+    open_form("lendor.dashboard.dasboard_contact")
 
   def notification_link_click(self, **event_args):
     """This method is called when the link is clicked"""
-    open_form('lendor_registration_form.dashboard.notification')
+    open_form('lendor.dashboard.notification')
 
   def wallet_dashboard_link_click(self, **event_args):
     """This method is called when the link is clicked"""
