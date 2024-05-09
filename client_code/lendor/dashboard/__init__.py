@@ -19,16 +19,18 @@ class dashboard(dashboardTemplate):
         existing_loans = app_tables.fin_loan_details.search(loan_updated_status=q.any_of(
                             q.like('under process%'),
                             q.like('Under Process%'),
-                            q,like('under process'))
-        self.label_9.text = str(len(existing_loans)))
-
+                            q.like('under process')))  # Corrected syntax
+        self.label_9.text = str(len(existing_loans))
+        investment = app_tables.fin_lender.get(customer_id=self.user_id)
+        if investment:
+            self.label_3.text = investment['investment']
     def button_3_click(self, **event_args):
         """This method is called when the button is clicked"""
-        open_form("lendor_registration_form.dashboard.view_opening_balance")
+        open_form("lendor.dashboard.view_opening_balance")
 
     def button_4_click(self, **event_args):
         """This method is called when the button is clicked"""
-        open_form("lendor_registration_form.dashboard.view_available_balance")
+        open_form("lendor.dashboard.view_available_balance")
 
     def View_Loan_Requests_click(self, **event_args):
         """This method is called when the button is clicked"""
@@ -36,11 +38,11 @@ class dashboard(dashboardTemplate):
 
     def button_6_click(self, **event_args):
         """This method is called when the button is clicked"""
-        open_form("lendor_registration_form.dashboard.loan_disbursement")
+        open_form("lendor.dashboard.loan_disbursement")
 
     def Todays_Due_click(self, **event_args):
         """This method is called when the button is clicked"""
-        open_form("lendor_registration_form.dashboard.today_dues")
+        open_form("lendor.dashboard.today_dues")
 
     def View_Lost_Opportunities_click(self, **event_args):
         """This method is called when the button is clicked"""
@@ -126,12 +128,3 @@ class dashboard(dashboardTemplate):
 
     def wallet_dashboard_link_click(self, **event_args):
         open_form('wallet.wallet')
-
-    # def calculate_rom(self):
-    #     email = self.email
-    #     existing_loans = app_tables.fin_loan_details.search(loan_updated_status=q.any_of(
-    #                         q.like('under process%'),
-    #                         q.like('Under Process%'),
-    #                         q,like('under process'))
-    #     num_existing_loans = len(existing_loans)
-    #     print("Existing Loans:", num_existing_loans)
