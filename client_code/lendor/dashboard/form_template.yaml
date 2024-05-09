@@ -143,7 +143,7 @@ components:
     layout_properties: {grid_position: 'ERCHQY,YUAUSJ', full_width_row: true}
     components:
     - name: image_1
-      properties: {height: 38.199981689453125, display_mode: shrink_to_fit, source: _/theme/1.png}
+      properties: {height: 45.399932861328125, display_mode: shrink_to_fit, source: _/theme/1.png}
       type: Image
       layout_properties: {grid_position: 'FHZWVZ,PQPPZT'}
     - name: label_2
@@ -162,7 +162,7 @@ components:
     layout_properties: {grid_position: 'ERCHQY,NETDIR'}
     components:
     - name: image_2
-      properties: {height: 46.79998779296875, source: _/theme/profits.png}
+      properties: {height: 48.79998779296875, source: _/theme/profits.png}
       type: Image
       layout_properties: {grid_position: 'LIIRFK,KRHWBD'}
     - name: label_4
@@ -181,7 +181,7 @@ components:
     layout_properties: {grid_position: 'ERCHQY,IXNAVP'}
     components:
     - name: image_3
-      properties: {height: 43.399932861328125, source: _/theme/piggy-bank.png}
+      properties: {height: 43.79998779296875, source: _/theme/piggy-bank.png}
       type: Image
       layout_properties: {grid_position: 'HVNINY,UKYYYV'}
     - name: label_6
