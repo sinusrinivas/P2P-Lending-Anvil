@@ -13,6 +13,7 @@ class add_subcategory(add_subcategoryTemplate):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
     self.refresh()
+    self.contenttt.visible = False
 
     # Any code you write here will run before the form opens.
 
@@ -385,22 +386,61 @@ class add_subcategory(add_subcategoryTemplate):
   
   def salary_type_click(self, **event_args):
     """This method is called when the button is clicked"""
-    self.grid_panel_1.visible = False
-    self.grid_panel_2.visible = False
-    self.grid_panel_3.visible = False
-    self.grid_panel_4.visible = False
-    self.grid_panel_6.visible = False
-    self.grid_panel_7.visible = False
-    self.grid_panel_8.visible = False
-    self.grid_panel_9.visible = True
-    self.grid_panel_10.visible = False
-    self.grid_panel_11.visible = False
-    self.grid_panel_12.visible = False
-    self.grid_panel_13.visible = False
-    self.grid_panel_14.visible = False
-    self.grid_panel_15.visible = False
+    
     
   def gender_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    
+
+  def qualification_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    
+
+  def marrital_status_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    
+
+  def profession_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    
+
+  def organization_type_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    
+
+  def present_address_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    
+
+  def duration_at_address_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    
+
+  def spouse_profession_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    
+
+  def age_of_business_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    
+
+  def home_loan_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    
+
+  def other_loan_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    
+
+  def credit_card_loan_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    
+
+  def vehicle_loan_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    
+
+  def button_9_click(self, **event_args):
     """This method is called when the button is clicked"""
     self.grid_panel_1.visible = True
     self.grid_panel_2.visible = False
@@ -417,7 +457,7 @@ class add_subcategory(add_subcategoryTemplate):
     self.grid_panel_14.visible = False
     self.grid_panel_15.visible = False
 
-  def qualification_click(self, **event_args):
+  def button_10_click(self, **event_args):
     """This method is called when the button is clicked"""
     self.grid_panel_1.visible = False
     self.grid_panel_2.visible = True
@@ -434,7 +474,7 @@ class add_subcategory(add_subcategoryTemplate):
     self.grid_panel_14.visible = False
     self.grid_panel_15.visible = False
 
-  def marrital_status_click(self, **event_args):
+  def button_11_click(self, **event_args):
     """This method is called when the button is clicked"""
     self.grid_panel_1.visible = False
     self.grid_panel_2.visible = False
@@ -451,95 +491,7 @@ class add_subcategory(add_subcategoryTemplate):
     self.grid_panel_14.visible = False
     self.grid_panel_15.visible = False
 
-  def profession_click(self, **event_args):
-    """This method is called when the button is clicked"""
-    self.grid_panel_1.visible = False
-    self.grid_panel_2.visible = False
-    self.grid_panel_3.visible = False
-    self.grid_panel_4.visible = True
-    self.grid_panel_6.visible = False
-    self.grid_panel_7.visible = False
-    self.grid_panel_8.visible = False
-    self.grid_panel_9.visible = False
-    self.grid_panel_10.visible = False
-    self.grid_panel_11.visible = False
-    self.grid_panel_12.visible = False
-    self.grid_panel_13.visible = False
-    self.grid_panel_14.visible = False
-    self.grid_panel_15.visible = False
-
-  def organization_type_click(self, **event_args):
-    """This method is called when the button is clicked"""
-    self.grid_panel_1.visible = False
-    self.grid_panel_2.visible = False
-    self.grid_panel_3.visible = False
-    self.grid_panel_4.visible = False
-    self.grid_panel_6.visible = True
-    self.grid_panel_7.visible = False
-    self.grid_panel_8.visible = False
-    self.grid_panel_9.visible = False
-    self.grid_panel_10.visible = False
-    self.grid_panel_11.visible = False
-    self.grid_panel_12.visible = False
-    self.grid_panel_13.visible = False
-    self.grid_panel_14.visible = False
-    self.grid_panel_15.visible = False
-
-  def present_address_click(self, **event_args):
-    """This method is called when the button is clicked"""
-    self.grid_panel_1.visible = False
-    self.grid_panel_2.visible = False
-    self.grid_panel_3.visible = False
-    self.grid_panel_4.visible = False
-    self.grid_panel_5.visible = False
-    self.grid_panel_6.visible = False
-    self.grid_panel_7.visible = True
-    self.grid_panel_8.visible = False
-    self.grid_panel_9.visible = False
-    self.grid_panel_10.visible = False
-    self.grid_panel_11.visible = False
-    self.grid_panel_12.visible = False
-    self.grid_panel_13.visible = False
-    self.grid_panel_14.visible = False
-    self.grid_panel_15.visible = False
-
-  def duration_at_address_click(self, **event_args):
-    """This method is called when the button is clicked"""
-    self.grid_panel_1.visible = False
-    self.grid_panel_2.visible = False
-    self.grid_panel_3.visible = False
-    self.grid_panel_4.visible = False
-    self.grid_panel_5.visible = False
-    self.grid_panel_6.visible = False
-    self.grid_panel_7.visible = False
-    self.grid_panel_8.visible = True
-    self.grid_panel_9.visible = False
-    self.grid_panel_10.visible = False
-    self.grid_panel_11.visible = False
-    self.grid_panel_12.visible = False
-    self.grid_panel_13.visible = False
-    self.grid_panel_14.visible = False
-    self.grid_panel_15.visible = False
-
-  def spouse_profession_click(self, **event_args):
-    """This method is called when the button is clicked"""
-    self.grid_panel_1.visible = False
-    self.grid_panel_2.visible = False
-    self.grid_panel_3.visible = False
-    self.grid_panel_4.visible = False
-    self.grid_panel_5.visible = False
-    self.grid_panel_6.visible = False
-    self.grid_panel_7.visible = False
-    self.grid_panel_8.visible = False
-    self.grid_panel_9.visible = False
-    self.grid_panel_10.visible = True
-    self.grid_panel_11.visible = False
-    self.grid_panel_12.visible = False
-    self.grid_panel_13.visible = False
-    self.grid_panel_14.visible = False
-    self.grid_panel_15.visible = False
-
-  def age_of_business_click(self, **event_args):
+  def button_12_click(self, **event_args):
     """This method is called when the button is clicked"""
     self.grid_panel_1.visible = False
     self.grid_panel_2.visible = False
@@ -557,7 +509,112 @@ class add_subcategory(add_subcategoryTemplate):
     self.grid_panel_14.visible = False
     self.grid_panel_15.visible = False
 
-  def home_loan_click(self, **event_args):
+  def button_13_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    self.grid_panel_1.visible = False
+    self.grid_panel_2.visible = False
+    self.grid_panel_3.visible = False
+    self.grid_panel_4.visible = True
+    self.grid_panel_6.visible = False
+    self.grid_panel_7.visible = False
+    self.grid_panel_8.visible = False
+    self.grid_panel_9.visible = False
+    self.grid_panel_10.visible = False
+    self.grid_panel_11.visible = False
+    self.grid_panel_12.visible = False
+    self.grid_panel_13.visible = False
+    self.grid_panel_14.visible = False
+    self.grid_panel_15.visible = False
+
+  def button_14_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    self.grid_panel_1.visible = False
+    self.grid_panel_2.visible = False
+    self.grid_panel_3.visible = False
+    self.grid_panel_4.visible = False
+    self.grid_panel_5.visible = False
+    self.grid_panel_6.visible = False
+    self.grid_panel_7.visible = True
+    self.grid_panel_8.visible = False
+    self.grid_panel_9.visible = False
+    self.grid_panel_10.visible = False
+    self.grid_panel_11.visible = False
+    self.grid_panel_12.visible = False
+    self.grid_panel_13.visible = False
+    self.grid_panel_14.visible = False
+    self.grid_panel_15.visible = False
+
+  def button_16_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    self.grid_panel_1.visible = False
+    self.grid_panel_2.visible = False
+    self.grid_panel_3.visible = False
+    self.grid_panel_4.visible = False
+    self.grid_panel_6.visible = True
+    self.grid_panel_7.visible = False
+    self.grid_panel_8.visible = False
+    self.grid_panel_9.visible = False
+    self.grid_panel_10.visible = False
+    self.grid_panel_11.visible = False
+    self.grid_panel_12.visible = False
+    self.grid_panel_13.visible = False
+    self.grid_panel_14.visible = False
+    self.grid_panel_15.visible = False
+
+  def button_17_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    self.grid_panel_1.visible = False
+    self.grid_panel_2.visible = False
+    self.grid_panel_3.visible = False
+    self.grid_panel_4.visible = False
+    self.grid_panel_5.visible = False
+    self.grid_panel_6.visible = False
+    self.grid_panel_7.visible = False
+    self.grid_panel_8.visible = True
+    self.grid_panel_9.visible = False
+    self.grid_panel_10.visible = False
+    self.grid_panel_11.visible = False
+    self.grid_panel_12.visible = False
+    self.grid_panel_13.visible = False
+    self.grid_panel_14.visible = False
+    self.grid_panel_15.visible = False
+
+  def button_19_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    self.grid_panel_1.visible = False
+    self.grid_panel_2.visible = False
+    self.grid_panel_3.visible = False
+    self.grid_panel_4.visible = False
+    self.grid_panel_6.visible = False
+    self.grid_panel_7.visible = False
+    self.grid_panel_8.visible = False
+    self.grid_panel_9.visible = True
+    self.grid_panel_10.visible = False
+    self.grid_panel_11.visible = False
+    self.grid_panel_12.visible = False
+    self.grid_panel_13.visible = False
+    self.grid_panel_14.visible = False
+    self.grid_panel_15.visible = False
+
+  def button_3_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    self.grid_panel_1.visible = False
+    self.grid_panel_2.visible = False
+    self.grid_panel_3.visible = False
+    self.grid_panel_4.visible = False
+    self.grid_panel_5.visible = False
+    self.grid_panel_6.visible = False
+    self.grid_panel_7.visible = False
+    self.grid_panel_8.visible = False
+    self.grid_panel_9.visible = False
+    self.grid_panel_10.visible = True
+    self.grid_panel_11.visible = False
+    self.grid_panel_12.visible = False
+    self.grid_panel_13.visible = False
+    self.grid_panel_14.visible = False
+    self.grid_panel_15.visible = False
+
+  def button_1_click(self, **event_args):
     """This method is called when the button is clicked"""
     self.grid_panel_1.visible = False
     self.grid_panel_2.visible = False
@@ -575,7 +632,7 @@ class add_subcategory(add_subcategoryTemplate):
     self.grid_panel_14.visible = False
     self.grid_panel_15.visible = False
 
-  def other_loan_click(self, **event_args):
+  def button_4_click(self, **event_args):
     """This method is called when the button is clicked"""
     self.grid_panel_1.visible = False
     self.grid_panel_2.visible = False
@@ -593,7 +650,7 @@ class add_subcategory(add_subcategoryTemplate):
     self.grid_panel_14.visible = False
     self.grid_panel_15.visible = False
 
-  def credit_card_loan_click(self, **event_args):
+  def button_18_click(self, **event_args):
     """This method is called when the button is clicked"""
     self.grid_panel_1.visible = False
     self.grid_panel_2.visible = False
@@ -611,7 +668,7 @@ class add_subcategory(add_subcategoryTemplate):
     self.grid_panel_14.visible = True
     self.grid_panel_15.visible = False
 
-  def vehicle_loan_click(self, **event_args):
+  def button_2_click(self, **event_args):
     """This method is called when the button is clicked"""
     self.grid_panel_1.visible = False
     self.grid_panel_2.visible = False
