@@ -18,6 +18,10 @@ components:
   properties: {}
   type: form:borrower.logout
   layout_properties: {grid_position: 'LFJREP,TYSQEG'}
+- name: borrwer_registration_navigation_bar_1
+  properties: {}
+  type: form:borrower.borrower_registration_forms.borrwer_registration_navigation_bar
+  layout_properties: {grid_position: 'QLLZMA,USSVAD', full_width_row: true}
 - name: spacer_1
   properties: {height: 0}
   type: Spacer

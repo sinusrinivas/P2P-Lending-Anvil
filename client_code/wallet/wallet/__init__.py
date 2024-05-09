@@ -8,7 +8,7 @@ import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 from anvil import open_form, server
-from ...borrower_registration_form.dashboard import main_form_module
+from ...borrower.dashboard import main_form_module
 from datetime import datetime
 
 
@@ -40,9 +40,9 @@ class wallet(walletTemplate):
       self.user_type = user_request['usertype']
 
     if self.user_type == "lender":
-        open_form("lendor_registration_form.dashboard")
+        open_form("lendor.dashboard")
     else:
-        open_form("borrower_registration_form.dashboard")
+        open_form("borrower.dashboard")
 
   def about_main_form_link_click(self, **event_args):
     user_request = app_tables.fin_user_profile.get(customer_id=self.user_id)
@@ -50,9 +50,9 @@ class wallet(walletTemplate):
       self.user_type = user_request['usertype']
 
     if self.user_type == "lender":
-      open_form("lendor_registration_form.dashboard.dasboard_about")
+      open_form("lendor.dashboard.dasboard_about")
     else:
-      open_form("borrower_registration_form.dashboard.dashboard_about")
+      open_form("borrower.dashboard.dashboard_about")
 
   def contact_main_form_link_click(self, **event_args):
     user_request = app_tables.fin_user_profile.get(customer_id=self.user_id)
@@ -60,9 +60,9 @@ class wallet(walletTemplate):
       self.user_type = user_request['usertype']
 
     if self.user_type == "lender":
-      open_form("lendor_registration_form.dashboard.dasboard_contact")
+      open_form("lendor.dashboard.dasboard_contact")
     else:
-      open_form("borrower_registration_form.dashboard.dashboard_contact")
+      open_form("borrower.dashboard.dashboard_contact")
 
   def notification_link_click(self, **event_args):
     user_request = app_tables.fin_user_profile.get(customer_id=self.user_id)
@@ -70,9 +70,9 @@ class wallet(walletTemplate):
       self.user_type = user_request['usertype']
 
     if self.user_type == "lender":
-      open_form('lendor_registration_form.dashboard.notification')
+      open_form('lendor.dashboard.notification')
     else:
-      open_form('borrower_registration_form.dashboard.notification')
+      open_form('borrower.dashboard.notification')
 
   def button_2_click(self, **event_args):
     """This method is called when the button is clicked"""

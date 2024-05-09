@@ -19,7 +19,7 @@ class navigation_bar_main(navigation_bar_mainTemplate):
     open_form('bank_users.user_form')
 
   def contact_main_form_link_click(self, **event_args):
-    open_form("borrower.dashboard_contact_borrower_registration_form")
+    open_form("borrower.borrower_registration_forms.dashboard_contact_copy")
 
   def notification_link_click(self, **event_args):
     """This method is called when the link is clicked"""

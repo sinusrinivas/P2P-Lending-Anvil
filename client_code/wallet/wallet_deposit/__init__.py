@@ -10,7 +10,7 @@ from anvil.tables import app_tables
 from anvil import open_form, server
 # from .. import bmain_form_module as main_form_module
 # from ...lendor_registration_form.dashboard import lendor_main_form_module as main_form_module
-from ...borrower_registration_form.dashboard import main_form_module
+from ...borrower.dashboard import main_form_module
 from datetime import datetime, timezone
 from datetime import timedelta
 import time
@@ -54,9 +54,9 @@ class wallet_deposit(wallet_depositTemplate):
       self.user_type = user_request['usertype']
 
     if self.user_type == "lender":
-      open_form("lendor_registration_form.dashboard")
+      open_form("lendor.dashboard")
     else:
-      open_form("borrower_registration_form.dashboard")
+      open_form("borrower.dashboard")
 
 
   # def about_main_form_link_click(self, **event_args):
@@ -171,10 +171,10 @@ class wallet_deposit(wallet_depositTemplate):
                     loan_row.update()
                     print("loan_updated_status as lost opportunities")
                     alert("The designated time has passed. The loan has moved to the 'Lost Opportunities' status.")
-                    open_form('lendor_registration_form.dashboard')
+                    open_form('lendor.dashboard')
                 else:
                     alert("Time has passed, but wallet_amount is sufficient. No change in loan status.")
-                    open_form('lendor_registration_form.dashboard')
+                    open_form('lendor.dashboard')
             else:
                 alert("Error: Wallet or loan details not found.")
 
@@ -254,7 +254,7 @@ class wallet_deposit(wallet_depositTemplate):
           self.check_time_difference()
                   
           alert(f"Loan Amount Paid to Borrower\nWallet Amount Updated")
-          open_form('lendor_registration_form.dashboard')
+          open_form('lendor.dashboard')
           return
         else:
             alert("Wallet not found for the entered borrower customer ID.") 
