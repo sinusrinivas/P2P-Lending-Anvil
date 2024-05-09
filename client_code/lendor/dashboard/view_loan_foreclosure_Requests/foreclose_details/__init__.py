@@ -25,7 +25,7 @@ class foreclose_details(foreclose_detailsTemplate):
 
     def button_1_click(self, **event_args):
         """This method is called when the button is clicked"""
-        open_form("lendor_registration_form.dashboard.view_loan_foreclosure_Requests")
+        open_form("lendor.dashboard.view_loan_foreclosure_Requests")
 
     def approve_click(self, **event_args):
         """This method is called when the 'Approve' button is clicked"""      
@@ -39,7 +39,7 @@ class foreclose_details(foreclose_detailsTemplate):
 
         loan = app_tables.fin_loan_details.get(loan_id=self.selected_row['loan_id'])
         loan['loan_updated_status'] = "foreclosure"
-        open_form("lendor_registration_form.dashboard.view_loan_foreclosure_Requests")
+        open_form("lendor.dashboard.view_loan_foreclosure_Requests")
 
     def decline_click(self, **event_args):
         """This method is called when the 'Decline' button is clicked"""
@@ -47,7 +47,7 @@ class foreclose_details(foreclose_detailsTemplate):
         self.selected_row.update()
         self.update_foreclosure_status('rejected')
         Notification("Borrower will get notified").show()
-        open_form("lendor_registration_form.dashboard.view_loan_foreclosure_Requests")
+        open_form("lendor.dashboard.view_loan_foreclosure_Requests")
       
     def update_foreclosure_status(self, new_status):
         """Update the status in the fin_foreclosure table"""

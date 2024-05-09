@@ -26,5 +26,5 @@ class ItemTemplate53(ItemTemplate53Template):
   def outlined_button_1_click(self, **event_args):
     """This method is called when the button is clicked"""
     selcted_row=self.item
-    open_form('lendor_registration_form.dashboard.view_lost_oppurtunities.view_details_2',selected_row=selcted_row)
+    open_form('lendor.dashboard.view_lost_oppurtunities.view_details_2',selected_row=selcted_row)
 
