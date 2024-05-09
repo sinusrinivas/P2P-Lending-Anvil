@@ -19,11 +19,14 @@ class manage_bessem(manage_bessemTemplate):
     """This method is called when the button is clicked"""
     open_form('admin.dashboard.manage_bessem.view_bessem_subcategory')
 
-  def button_3_click(self, **event_args):
+
+  def button_9_click(self, **event_args):
     """This method is called when the button is clicked"""
     open_form('admin.dashboard.manage_bessem.add_subcategory')
 
-  def button_4_click(self, **event_args):
+  def button_14_click(self, **event_args):
     """This method is called when the button is clicked"""
     open_form('admin.dashboard.manage_bessem.view_bessem_group')
+
+
 
