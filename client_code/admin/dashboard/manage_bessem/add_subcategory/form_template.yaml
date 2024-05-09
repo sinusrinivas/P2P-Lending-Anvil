@@ -94,8 +94,7 @@ components:
       layout_properties: {grid_position: 'LKTWOF,PPLSYB IRSXYL,KKSDLA'}
       components:
       - name: image_4_copy_3
-        properties: {source: _/theme/business type.png, display_mode: shrink_to_fit,
-          height: '100'}
+        properties: {source: _/theme/guarantee.png, display_mode: shrink_to_fit, height: '100'}
         type: Image
         layout_properties: {grid_position: 'QGZTNW,PVJEPO'}
       - name: button_10
@@ -113,7 +112,7 @@ components:
       layout_properties: {grid_position: 'LKTWOF,PPLSYB KKXABX,ZHURYQ'}
       components:
       - name: image_4_copy_10
-        properties: {source: _/theme/computer-workers.png, display_mode: shrink_to_fit,
+        properties: {source: _/theme/home-address.png, display_mode: shrink_to_fit,
           height: '100'}
         type: Image
         layout_properties: {grid_position: 'QGZTNW,PVJEPO'}
@@ -225,8 +224,7 @@ components:
       layout_properties: {grid_position: 'LKTWOF,GBAJZY ZQQIVR,ENGAGN'}
       components:
       - name: image_4_copy_7
-        properties: {source: _/theme/recruitment.png, display_mode: shrink_to_fit,
-          height: '100'}
+        properties: {source: _/theme/meeting.png, display_mode: shrink_to_fit, height: '100'}
         type: Image
         layout_properties: {grid_position: 'QGZTNW,PVJEPO'}
       - name: button_12
@@ -244,7 +242,7 @@ components:
       layout_properties: {grid_position: 'LKTWOF,GBAJZY UXTNEX,HGFJSQ'}
       components:
       - name: image_4_copy_9
-        properties: {source: _/theme/account-icon-25511.png, display_mode: shrink_to_fit,
+        properties: {source: _/theme/hourglass_2.png, display_mode: shrink_to_fit,
           height: '100'}
         type: Image
         layout_properties: {grid_position: 'QGZTNW,PVJEPO'}
