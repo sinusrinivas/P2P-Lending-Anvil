@@ -12,7 +12,6 @@ unique_ids:
     lendor.dashboard.view_transaction_history.ItemTemplate65: '1710298383231796088123967.8053'
     ? borrower.borrower_registration_forms.star_1_borrower_registration_form_1_education.star_1_borrower_registration_form_education_10th_class
     : '1706674255415664927025189.0149'
-    borrower.borrower_registration_forms.borrower_registration_nagivation: '1715236774097274261607244.83008'
     borrower.borrower_registration_forms.borrower_registration_last_check_out_form: '1699374444060167172815541.79663'
     admin.dashboard.manage_bessem.add_subcategory.ItemTemplate86: '1710501688800355680302234.22766'
     borrower.dashboard.application_tracker: '1698927021026141533584098.39868'
@@ -74,6 +73,7 @@ unique_ids:
     : '1700570064478378100736204.996'
     bank_users.main_form.products_main_form.personal_loan.credit_card_loan: '1713872914654662428552963.6232'
     lendor.dashboard.view_loan_foreclosure_Requests.foreclose_details_approved_and_rejected: '1701257788689491739663188.68726'
+    borrower.borrower_registration_forms.borrower_registration_forms_nagivation: '1715236774097274261607244.83008'
     admin.dashboard.admin_management.view_admins.ItemTemplate91: '1712062627271930406124276.6708'
     admin.dashboard.manage_cms.add_general_dropdowns.ItemTemplate67: '1710398612422247001502472.58334'
     borrower.dashboard.application_tracker.RowTemplate1: '1698928474442141604886683.00064'
