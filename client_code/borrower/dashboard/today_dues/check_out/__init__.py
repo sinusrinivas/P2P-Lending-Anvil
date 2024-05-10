@@ -274,7 +274,7 @@ class check_out(check_outTemplate):
             return None  # or handle the case where the loan ID is not found
 
     def pay_now_click(self, **event_args):
-        
+        total_emi_amount = float(self.total_emi_amount_label.text)
         # Calculate total EMI amount including processing fees
         emi_amount = float(self.emi_amount_label.text)
         
@@ -296,7 +296,10 @@ class check_out(check_outTemplate):
         print(remaining_amount)
         loan_details = app_tables.fin_loan_details.get(loan_id=self.selected_row['loan_id'])
         if loan_details is not None:
+            if loan_details['total_amount_paid'] is None:
+                loan_details['total_amount_paid'] = 0
             loan_details['remaining_amount'] = remaining_amount
+            loan_details['total_amount_paid'] += total_emi_amount
             loan_details.update()
       
         try:
