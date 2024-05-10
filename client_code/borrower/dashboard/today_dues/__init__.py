@@ -75,6 +75,8 @@ class today_dues(today_duesTemplate):
                     Scheduled_date = latest_loan['next_payment']
                     lender_email_id = loan_detail['lender_email_id']
                     borrower_email_id = loan_detail['borrower_email_id']
+                    total_amount_paid = loan_detail['total_amount_paid']
+                    remaining_amount = loan_detail['remaining_amount']
                   
                     loan_details.append({
                         'loan_id': loan_id,
@@ -105,7 +107,9 @@ class today_dues(today_duesTemplate):
                         'Scheduled_date':Scheduled_date,
                         'user_photo':user_photo,
                         'lender_email_id':lender_email_id,
-                        'borrower_email_id':borrower_email_id
+                        'borrower_email_id':borrower_email_id,
+                        'total_amount_paid':total_amount_paid,
+                        'remaining_amount':remaining_amount,
                     })
             else:
                 for loan in all_loans_disbursed:
@@ -166,6 +170,8 @@ class today_dues(today_duesTemplate):
                   Scheduled_date = loan_detail['first_emi_payment_due_date']
                   lender_email_id = loan_detail['lender_email_id']
                   borrower_email_id = loan_detail['borrower_email_id']
+                  total_amount_paid = loan_detail['total_amount_paid']
+                  remaining_amount = loan_detail['remaining_amount']
 
                   
                   # Calculate next_payment based on first_payment_due_date
@@ -214,7 +220,9 @@ class today_dues(today_duesTemplate):
                       'Scheduled_date':Scheduled_date,
                       'user_photo' : user_photo,
                       'lender_email_id':lender_email_id,
-                      'borrower_email_id':borrower_email_id
+                      'borrower_email_id':borrower_email_id,
+                      'total_amount_paid':total_amount_paid,
+                      'remaining_amount':remaining_amount
                       
                   })
             self.repeating_panel_2.items = loan_details

@@ -161,6 +161,10 @@ components:
     properties: {visible: false}
     type: Label
     layout_properties: {grid_position: 'KSEEYY,LEWFZL EWZDPL,NTPHBT'}
+  - name: processing_fee
+    properties: {visible: false}
+    type: Label
+    layout_properties: {grid_position: 'KSEEYY,LEWFZL UCGAPT,TOWKFE'}
   - type: Spacer
     properties: {height: 299.6428527832031}
     name: spacer_5
