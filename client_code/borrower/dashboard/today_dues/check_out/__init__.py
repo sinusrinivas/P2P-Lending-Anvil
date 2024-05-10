@@ -20,7 +20,8 @@ class check_out(check_outTemplate):
         self.init_components(**properties)
   
         loan_id = selected_row['loan_id']
-        
+        remaining_amount = selected_row['remaining_amount']
+        total_paid_amount = selected_row['total_amount_paid']
         extension_months = self.get_extension_details(loan_id, selected_row['emi_number'])
         extension_amount = self.get_extension_details_1(loan_id,selected_row['emi_number'])
         loan_amount = selected_row['loan_amount']
@@ -33,7 +34,8 @@ class check_out(check_outTemplate):
         monthly_interest_rate = interest_rate / 12 / 100
         total_payments = tenure * 12
         total_repayment_amount = selected_row['total_repayment_amount']
-  
+
+      
         if emi_payment_type == 'One Time':
             emi = total_repayment_amount
             #total_emi += emi  # Add extension amount to 12-month EMI total
@@ -271,6 +273,27 @@ class check_out(check_outTemplate):
             return None  # or handle the case where the loan ID is not found
 
     def pay_now_click(self, **event_args):
+        
+        # Calculate total EMI amount including processing fees
+        total_emi_amount = float(self.total_emi_amount_label.text)
+        
+        # Retrieve total repayment amount from loan details table
+        total_repayment_amount = self.selected_row['total_repayment_amount']
+        
+        # Retrieve processing fee
+        processing_fee = float(self.label_9.text)  # Assuming processing fee is shown in label_9
+        
+        # Calculate remaining amount
+        if self.selected_row['remaining_amount'] is not None:
+            remaining_amount = self.selected_row['remaining_amount'] - (total_emi_amount + processing_fee)
+        else:
+            remaining_amount = total_repayment_amount - (total_emi_amount + processing_fee)
+        
+        # Update remaining_amount column in fin_loan_details table
+        self.selected_row['remaining_amount'] = remaining_amount
+        self.selected_row.update()
+
+      
         try:
             lapsed_fee = float(self.lapsed.text)
         except ValueError:
