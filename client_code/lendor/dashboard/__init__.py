@@ -37,7 +37,7 @@ class dashboard(dashboardTemplate):
         self.repeating_panel_1.items = self.process_data(disbursed_loans)
 
       elif status == 'under process':
-        underprocess_loans = app_tables.fin_loan_details.search(loan_updated_status=q.any_of(q.like('under process%'),q.like('under process')), lender_customer_id=self.user_id)
+        underprocess_loans = app_tables.fin_loan_details.search(loan_updated_status=q.any_of(q.like('under process%'),q.like('under process')))
         self.repeating_panel_1.items = self.process_data(underprocess_loans)
 
       elif status == 'lost opportunities':
@@ -52,13 +52,14 @@ class dashboard(dashboardTemplate):
         profiles_with_loans = []
         for loan in data:
             user_profile = app_tables.fin_user_profile.get(customer_id=loan['borrower_customer_id'])
+            
             if user_profile is not None:
                 profiles_with_loans.append({
                     'loan_amount': loan['loan_amount'],
                     'tenure': loan['tenure'],
                     'borrower_full_name': loan['borrower_full_name'],
                     'loan_id': loan['loan_id'],
-                    'bessem_score': loan['beseem_score'],
+                    'bessem_value': user_profile['bessem_value'],
                     'loan_updated_status': loan['loan_updated_status']
                 })
         return profiles_with_loans

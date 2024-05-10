@@ -13,7 +13,7 @@ class RowTemplate13(RowTemplate13Template):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
-    self.user_id = main_form_module.userId
+    # self.user_id = main_form_module.userId
     
 
     # Any code you write here will run before the form opens.

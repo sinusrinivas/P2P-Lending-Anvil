@@ -34,7 +34,7 @@ components:
   type: Label
   layout_properties: {column: RFMHCZ}
   data_bindings:
-  - {property: text, code: 'self.item[''beseem_score'']', writeback: false}
+  - {property: text, code: 'self.item[''bessem_value'']', writeback: false}
 - name: label_6
   properties: {}
   type: Label
