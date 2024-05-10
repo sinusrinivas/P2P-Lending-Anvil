@@ -44,34 +44,34 @@ class view_loan_foreclosure_Requests(view_loan_foreclosure_RequestsTemplate):
         profiles_with_foreclosure = []
         for foreclosure in data:
             loan_details = app_tables.fin_loan_details.get(loan_id=foreclosure['loan_id'])
-            user_profile = app_tables.fin_user_profile.get(customer_id=loan_details['borrower_customer_id'])
-            # loan_details = app_tables.fin_loan_details.get(loan_id=foreclosure['loan_id'])
-            if user_profile is not None and loan_details is not None:
-                profiles_with_foreclosure.append({
-                    'mobile': user_profile['mobile'],
-                    'status': foreclosure['status'],
-                    'loan_id': foreclosure['loan_id'],
-                    'interest_rate': foreclosure['interest_rate'],
-                    'loan_amount': foreclosure['loan_amount'],
-                    'tenure': loan_details['tenure'],
-                    'loan_disbursed_timestamp': loan_details['loan_disbursed_timestamp'],
-                    'product_name': loan_details['product_name'],
-                    'product_description': loan_details['product_description'],
-                    'borrower_full_name': loan_details['borrower_full_name'],
-                    'lender_accepted_timestamp': loan_details['lender_accepted_timestamp'],
-                    'loan_updated_status': loan_details['loan_updated_status'],
-                    'foreclose_fee': foreclosure['foreclose_fee'],
-                    'foreclose_amount': foreclosure['foreclose_amount'],
-                    'outstanding_amount': foreclosure['outstanding_amount'],
-                    'reason': foreclosure['reason'],
-                    'total_due_amount': foreclosure['total_due_amount'],
-                    'borrower_name': foreclosure['borrower_name'],
-                    'paid_amount': foreclosure['paid_amount'],
-                    'penalty_amount': foreclosure['penalty_amount'],
-                    
-                    # Include other relevant details from the foreclosure request
-                })
+            if loan_details is not None:
+                user_profile = app_tables.fin_user_profile.get(customer_id=loan_details['borrower_customer_id'])
+                if user_profile is not None:
+                    profiles_with_foreclosure.append({
+                        'mobile': user_profile['mobile'],
+                        'status': foreclosure['status'],
+                        'loan_id': foreclosure['loan_id'],
+                        'interest_rate': foreclosure['interest_rate'],
+                        'loan_amount': foreclosure['loan_amount'],
+                        'tenure': loan_details['tenure'],
+                        'loan_disbursed_timestamp': loan_details['loan_disbursed_timestamp'],
+                        'product_name': loan_details['product_name'],
+                        'product_description': loan_details['product_description'],
+                        'borrower_full_name': loan_details['borrower_full_name'],
+                        'lender_accepted_timestamp': loan_details['lender_accepted_timestamp'],
+                        'loan_updated_status': loan_details['loan_updated_status'],
+                        'foreclose_fee': foreclosure['foreclose_fee'],
+                        'foreclose_amount': foreclosure['foreclose_amount'],
+                        'outstanding_amount': foreclosure['outstanding_amount'],
+                        'reason': foreclosure['reason'],
+                        'total_due_amount': foreclosure['total_due_amount'],
+                        'borrower_name': foreclosure['borrower_name'],
+                        'paid_amount': foreclosure['paid_amount'],
+                        'penalty_amount': foreclosure['penalty_amount'],
+                        # Include other relevant details from the foreclosure request
+                    })
         return profiles_with_foreclosure
+
   
   def button_1_click(self, **event_args):
     """This method is called when the button is clicked"""

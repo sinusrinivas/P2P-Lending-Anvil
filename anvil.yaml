@@ -17,7 +17,7 @@ services:
 - source: /runtime/services/anvil/secrets.yml
   client_config: {}
   server_config: {}
-startup: {type: form, module: borrower.dashboard1}
+startup: {type: form, module: bank_users.main_form}
 package_name: bank_client
 allow_embedding: false
 name: P2P Lending App
@@ -1408,6 +1408,12 @@ db_schema:
     - name: loan_state_status
       admin_ui: {width: 200, order: 39}
       type: string
+    - name: total_amount_paid
+      admin_ui: {width: 200, order: 8.5}
+      type: number
+    - name: remaining_amount
+      admin_ui: {width: 200, order: 8.75}
+      type: number
     title: fin_loan_details
   fin_user_issues_bugreports:
     title: fin_user_issues_bugreports

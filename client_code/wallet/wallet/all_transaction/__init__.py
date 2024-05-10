@@ -16,7 +16,8 @@ class all_transaction(all_transactionTemplate):
     self.init_components(**properties)
     # self.repeating_panel_1.items = app_tables.fin_wallet_transactions.search()
     self.repeating_panel_1.items = app_tables.fin_wallet_transactions.search(
-    transaction_type=q.any_of('deposit', 'withdraw'))
+    transaction_type=q.any_of('deposit', 'withdraw'),
+    customer_id=self.user_id)
     # Any code you write here will run before the form opens.
 
   
@@ -60,7 +61,7 @@ class all_transaction(all_transactionTemplate):
 
   def wallet_dashboard_link_click(self, **event_args):
     """This method is called when the link is clicked"""
-    pass
+    open_form('wallet.wallet')
 
   def home_main_form_link_click(self, **event_args):
     """This method is called when the link is clicked"""

@@ -14,7 +14,7 @@ from ...borrower.dashboard import main_form_module
 from datetime import datetime, timezone
 from datetime import timedelta
 import time
-from ...lendor_registration_form.dashboard.Module1 import transfer_money
+from ...lendor.dashboard.Module1 import transfer_money
 
 class wallet_deposit(wallet_depositTemplate):
   def __init__(self,entered_loan_id,entered_borrower_customer_id,time_difference_seconds, **properties):
