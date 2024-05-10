@@ -23,6 +23,7 @@ components:
   properties: {text: View Details}
   type: Link
   layout_properties: {column: NFYNZM}
+  event_bindings: {click: link_1_click}
 - name: label_4
   properties: {}
   type: Label
