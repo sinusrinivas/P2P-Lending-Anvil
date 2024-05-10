@@ -32,7 +32,7 @@ class view_details_1_copy(view_details_1_copyTemplate):
     self.loan_updated_status_label.text = f"{selected_row['loan_updated_status']}"
 
   def button_1_click(self, **event_args):
-    open_form("lendor.dashboard.lender_view_loans")
+    open_form("lendor.dashboard")
 
   def button_1_copy_click(self, **event_args):
     open_form("lendor.dashboard")

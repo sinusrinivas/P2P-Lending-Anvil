@@ -60,7 +60,9 @@ class dashboard(dashboardTemplate):
                     'borrower_full_name': loan['borrower_full_name'],
                     'loan_id': loan['loan_id'],
                     'bessem_value': user_profile['bessem_value'],
-                    'loan_updated_status': loan['loan_updated_status']
+                    'loan_updated_status': loan['loan_updated_status'],
+                    'interest_rate': loan['interest_rate'],
+                    'borrower_loan_created_timestamp': loan['borrower_loan_created_timestamp']
                 })
         return profiles_with_loans
 
