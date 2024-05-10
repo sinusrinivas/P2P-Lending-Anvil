@@ -261,6 +261,9 @@ components:
     - {id: OJLQEN, title: Loan Status, data_key: column_3}
     - {id: NFYNZM, data_key: column_4, title: ''}
     visible: false
+    wrap_on: mobile
+    auto_header: true
+    show_page_controls: true
   type: DataGrid
   components:
   - name: repeating_panel_1

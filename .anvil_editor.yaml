@@ -208,6 +208,7 @@ unique_ids:
     admin.dashboard.manage_cms.add_borrower_dropdown_details.ItemTemplate5: '1706093183750571249667783.6285'
     borrower.dashboard.new_loan_request.check.ItemTemplate94: '1712032258771277415112018.0319'
     bank_users.repeating_panels.admin: '1709112105377660130915300.5139'
+    lendor.dashboard.ItemTemplate104: '1715333528417553774326874.7397'
     borrower.dashboard.today_dues.ItemTemplate22: '1706717092294394749212131.0225'
     admin.dashboard.loan_management.rejected_loans: '1699528958889169021462649.09222'
     admin.dashboard.loan_management.rejected_loans.view_profile_2: '1700812221243295088415002.8101'
