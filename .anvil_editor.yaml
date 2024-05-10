@@ -326,6 +326,7 @@ unique_ids:
     ? borrower.borrower_registration_forms.star_1_borrower_registration_form_2_employment.star_1_borrower_registration_form_2_employment_emp_detail_3
     : '170003767984838881190201.539795'
     admin.dashboard.manage_cms.add_lender_dropdown_details.ItemTemplate17: '1706531151384463353076695.9948'
+    borrower.dashboard.part_payment.part_payment_details.part_payment_a: '1715335646829954225882328.9269'
     lendor.dashboard.view_or_send_notifications: '1699967294797596075787674.3921'
     lendor.lendor_registration_forms.lender_registration_form_2.lender_registration_Institutional_form_2: '1699430137541808903451295.2183'
     lendor.lendor_registration_forms.lender_registration_form_1_education_form.lender_registration_education_Intermediate: '1700756697390552428798704.9375'
@@ -425,7 +426,6 @@ unique_ids:
     bank_users.main_form.main_form_module: '1697797787236242664445.2286908'
     admin: '1699514471148539926976957.9367'
     lendor.dashboard.lendor_main_form_module: '170318098592113732883314.555355'
-    bessem: '1700205325910571001573598.9252'
     lendor.dashboard.Module1: '1710298420283738669524687.402'
     lendor.navigation_bar: '1715149468671718335479658.7123'
     lendor.lendor_registration_forms: '171514914700815236317065.591587'
