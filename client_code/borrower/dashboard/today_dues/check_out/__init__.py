@@ -294,6 +294,10 @@ class check_out(check_outTemplate):
         # self.selected_row['remaining_amount'] = remaining_amount
         # self.selected_row.update()
         print(remaining_amount)
+        loan_details = app_tables.fin_loan_details.get(loan_id=self.selected_row['loan_id'])
+        if loan_details is not None:
+            loan_details['remaining_amount'] = remaining_amount
+            loan_details.update()
       
         try:
             lapsed_fee = float(self.lapsed.text)
@@ -319,7 +323,7 @@ class check_out(check_outTemplate):
        # extra_amount = float(self.extension_amount_label.text)
         extra_fee = lapsed_fee + default_fee + extra_amount + npa
       
-        total_emi_amount = float(self.total_emi_amount_label.text)  # Fetch total EMI amount including extra payment
+        # total_emi_amount = float(self.total_emi_amount_label.text)  # Fetch total EMI amount including extra payment
         borrower_wallet = app_tables.fin_wallet.get(customer_id=self.user_id)
         print(self.selected_row['lender_customer_id'])
         print(self.selected_row['borrower_customer_id'])
