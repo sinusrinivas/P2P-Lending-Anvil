@@ -36,16 +36,9 @@ components:
     layout_properties: {grid_position: 'TNAJOY,YOWCEE'}
     components:
     - name: spacer_1
-      properties: {height: 350.50001525878906}
+      properties: {height: 376.39996337890625}
       type: Spacer
       layout_properties: {grid_position: 'NSFBBW,MUKVFA'}
-    - name: label_2
-      properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-        visible: true, text: 'Loan Id :', font_size: null, font: '', spacing_above: small,
-        icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-        underline: false, icon: ''}
-      type: Label
-      layout_properties: {grid_position: 'NSFBBW,IKTOGX OQLDLW,NSWXRL'}
     - name: label_4
       properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
         visible: true, text: 'Name :', font_size: null, font: '', spacing_above: small,
@@ -81,13 +74,6 @@ components:
         underline: false, icon: ''}
       type: Label
       layout_properties: {grid_position: 'NSFBBW,IKTOGX ITSALG,PQIJQG'}
-    - name: label_7
-      properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-        visible: true, text: 'Foreclosure Type :', font_size: null, font: '', spacing_above: small,
-        icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-        underline: false, icon: ''}
-      type: Label
-      layout_properties: {grid_position: 'NSFBBW,IKTOGX GRFGIF,SJVGMY'}
     - name: label_16
       properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
         visible: true, text: 'Total payments Made :', font_size: null, font: '', spacing_above: small,
@@ -95,13 +81,27 @@ components:
         underline: false, icon: ''}
       type: Label
       layout_properties: {grid_position: 'NSFBBW,IKTOGX PUKXRL,ATGQCU'}
-    - name: label_loan_id
+    - name: label_7
       properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-        visible: true, text: '', font_size: null, font: '', spacing_above: small,
+        visible: true, text: 'Total amount paid :', font_size: null, font: '', spacing_above: small,
         icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
         underline: false, icon: ''}
       type: Label
-      layout_properties: {grid_position: 'NSFBBW,FBKSUO VAFKQU,MQJKBZ'}
+      layout_properties: {grid_position: 'NSFBBW,IKTOGX WMPQMB,PGVQOL'}
+    - name: label_7_copy
+      properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+        visible: true, text: 'Remaining amount :', font_size: null, font: '', spacing_above: small,
+        icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+        underline: false, icon: ''}
+      type: Label
+      layout_properties: {grid_position: 'NSFBBW,IKTOGX UEQELX,DPUILY'}
+    - name: label_3_copy
+      properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+        visible: true, text: 'Enter Part Payment Amount:', font_size: null, font: '',
+        spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+        background: '', bold: true, underline: false, icon: ''}
+      type: Label
+      layout_properties: {grid_position: 'NSFBBW,IKTOGX VTLWDP,BHTNJV'}
     - name: label_name
       properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
         visible: true, text: '', font_size: null, font: '', spacing_above: small,
@@ -137,13 +137,6 @@ components:
         underline: false, icon: ''}
       type: Label
       layout_properties: {grid_position: 'NSFBBW,FBKSUO AAKQMG,MBAXJL'}
-    - name: foreclose_type
-      properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-        visible: true, text: '', font_size: null, font: '', spacing_above: small,
-        icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-        underline: false, icon: ''}
-      type: Label
-      layout_properties: {grid_position: 'NSFBBW,FBKSUO KIAMOG,OWKGMX'}
     - name: label_tpm
       properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
         visible: true, text: '', font_size: null, font: '', spacing_above: small,
@@ -151,8 +144,29 @@ components:
         underline: false, icon: ''}
       type: Label
       layout_properties: {grid_position: 'NSFBBW,FBKSUO ZQBYVQ,WXQEYL'}
+    - name: label_tap
+      properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+        visible: true, text: '', font_size: null, font: '', spacing_above: small,
+        icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+        underline: false, icon: ''}
+      type: Label
+      layout_properties: {grid_position: 'NSFBBW,FBKSUO PRWBUS,GLZCUN'}
+    - name: label_remaining_amount
+      properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+        visible: true, text: '', font_size: null, font: '', spacing_above: small,
+        icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+        underline: false, icon: ''}
+      type: Label
+      layout_properties: {grid_position: 'NSFBBW,FBKSUO KDJLFP,EKNCPH'}
+    - name: text_box_1
+      properties: {role: outlined, align: left, hide_text: false, tooltip: '', placeholder: 'Enter
+          Part Payment Amount:', border: '', enabled: true, foreground: '', visible: true,
+        text: '', font_size: null, font: '', spacing_above: small, type: text, spacing_below: small,
+        italic: false, background: '', bold: false, underline: false}
+      type: TextBox
+      layout_properties: {grid_position: 'NSFBBW,FBKSUO ALUHSE,EFRLGQ'}
     - name: spacer_2
-      properties: {height: 154.9285888671875}
+      properties: {height: 385.7333068847656}
       type: Spacer
       layout_properties: {grid_position: 'NSFBBW,IYMNWJ'}
     - name: label_3
