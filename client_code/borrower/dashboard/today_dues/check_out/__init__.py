@@ -313,23 +313,23 @@ class check_out(check_outTemplate):
             loan_details['total_amount_paid'] += total_emi_amount
             loan_details.update()
 
-        lender_customer_id = self.selected_row['lender_customer_id']
+        # lender_customer_id = self.selected_row['lender_customer_id']
 
-        # Query loan details table to find all loan IDs associated with the lender's customer ID
-        loan_ids = [row['loan_id'] for row in app_tables.fin_loan_details.search(lender_customer_id=lender_customer_id)]
+        # # Query loan details table to find all loan IDs associated with the lender's customer ID
+        # loan_ids = [row['loan_id'] for row in app_tables.fin_loan_details.search(lender_customer_id=lender_customer_id)]
 
-        # Initialize total lender returns
-        total_lender_returns = 0
+        # # Initialize total lender returns
+        # total_lender_returns = 0.0
 
-        # Iterate over each loan ID and retrieve the lender returns from the loan details table
-        for loan_id in loan_ids:
-            lender_returns_row = app_tables.fin_loan_details.get(loan_id=loan_id)['lender_returns']
-            if lender_returns_row is not None:
-              lender_returns = lender_returns_row['lender_returns']
-              if lender_returns is not None:
-                  total_lender_returns += lender_returns
-            else :
-                pass
+        # # Iterate over each loan ID and retrieve the lender returns from the loan details table
+        # for loan_id in loan_ids:
+        #     lender_returns_row = app_tables.fin_loan_details.get(loan_id=loan_id)['lender_returns']
+        #     if lender_returns_row is not None:
+        #       lender_returns = lender_returns_row['lender_returns']
+        #       if lender_returns is not None:
+        #           total_lender_returns += lender_returns
+        #     else :
+        #         pass
       
 
         # Store total lender returns in the fin lender table under the lender's customer ID
