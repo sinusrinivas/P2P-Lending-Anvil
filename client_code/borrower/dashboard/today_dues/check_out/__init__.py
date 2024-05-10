@@ -31,6 +31,7 @@ class check_out(check_outTemplate):
         total_interest_amount = selected_row['total_interest_amount']
         total_processing_fee_amount = selected_row['total_processing_fee_amount']
         processing_fee = total_processing_fee_amount/ tenure
+        self.processing_fee.text = "{:.2f}".format(processing_fee)
         monthly_interest_rate = interest_rate / 12 / 100
         total_payments = tenure * 12
         total_repayment_amount = selected_row['total_repayment_amount']
@@ -281,7 +282,7 @@ class check_out(check_outTemplate):
         total_repayment_amount = self.selected_row['total_repayment_amount']
         
         # Retrieve processing fee
-        # processing_fee = float(self.label_9.text)  # Assuming processing fee is shown in label_9
+        processing_fee = float(self.processing_fee.text)  # Assuming processing fee is shown in label_9
         
         # Calculate remaining amount
         if self.selected_row['remaining_amount'] is not None:
@@ -289,10 +290,10 @@ class check_out(check_outTemplate):
         else:
             remaining_amount = total_repayment_amount - (total_emi_amount + processing_fee)
         
-        # Update remaining_amount column in fin_loan_details table
-        self.selected_row['remaining_amount'] = remaining_amount
-        self.selected_row.update()
-
+        # # Update remaining_amount column in fin_loan_details table
+        # self.selected_row['remaining_amount'] = remaining_amount
+        # self.selected_row.update()
+        print(remaining_amount)
       
         try:
             lapsed_fee = float(self.lapsed.text)
