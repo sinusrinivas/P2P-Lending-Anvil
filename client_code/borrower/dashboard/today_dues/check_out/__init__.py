@@ -276,7 +276,7 @@ class check_out(check_outTemplate):
     def pay_now_click(self, **event_args):
         
         # Calculate total EMI amount including processing fees
-        total_emi_amount = float(self.total_emi_amount_label.text)
+        emi_amount = float(self.emi_amount_label.text)
         
         # Retrieve total repayment amount from loan details table
         total_repayment_amount = self.selected_row['total_repayment_amount']
@@ -286,9 +286,9 @@ class check_out(check_outTemplate):
         
         # Calculate remaining amount
         if self.selected_row['remaining_amount'] is not None:
-            remaining_amount = self.selected_row['remaining_amount'] - (total_emi_amount + processing_fee)
+            remaining_amount = self.selected_row['remaining_amount'] - (emi_amount + processing_fee)
         else:
-            remaining_amount = total_repayment_amount - (total_emi_amount + processing_fee)
+            remaining_amount = total_repayment_amount - (emi_amount + processing_fee)
         
         # # Update remaining_amount column in fin_loan_details table
         # self.selected_row['remaining_amount'] = remaining_amount
