@@ -66,6 +66,7 @@ class dashboard(dashboardTemplate):
                 })
         return profiles_with_loans
 
+
     def button_3_click(self, **event_args):
         open_form("lendor.dashboard.view_opening_balance")
 
