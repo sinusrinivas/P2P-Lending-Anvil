@@ -5,27 +5,40 @@ components:
   properties: {}
   type: Label
   layout_properties: {column: VJQQOR}
+  data_bindings:
+  - {property: text, code: 'self.item[''loan_id'']', writeback: false}
 - name: label_2
   properties: {}
   type: Label
   layout_properties: {column: JKSDUP}
+  data_bindings:
+  - {property: text, code: 'self.item[''loan_amount'']', writeback: false}
 - name: label_3
   properties: {}
   type: Label
   layout_properties: {column: OJLQEN}
+  data_bindings:
+  - {property: text, code: 'self.item[''loan_updated_status'']', writeback: false}
 - name: link_1
   properties: {text: View Details}
   type: Link
   layout_properties: {column: NFYNZM}
+  event_bindings: {click: link_1_click}
 - name: label_4
   properties: {}
   type: Label
   layout_properties: {column: JNEVFU}
+  data_bindings:
+  - {property: text, code: 'self.item[''borrower_full_name'']', writeback: false}
 - name: label_5
   properties: {}
   type: Label
   layout_properties: {column: RFMHCZ}
+  data_bindings:
+  - {property: text, code: 'self.item[''bessem_value'']', writeback: false}
 - name: label_6
   properties: {}
   type: Label
   layout_properties: {column: GUBYWD}
+  data_bindings:
+  - {property: text, code: 'self.item[''tenure'']', writeback: false}
