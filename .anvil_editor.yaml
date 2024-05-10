@@ -266,6 +266,7 @@ unique_ids:
     admin.user_issue.user_viewprofile: '1701187753190491873666760.6118'
     borrower.dashboard.new_loan_request.check.ItemTemplate93: '1712032184378433077018917.46265'
     bank_users.repeating_panels: '1709016242855472268200759.52313'
+    borrower.dashboard.part_payment.part_payment_details.part_payment_payment: '1715335646829954225882328.9269'
     ? borrower.borrower_registration_forms.star_1_borrower_registration_form_1_education.star_1_borrower_registration_form_education_btech
     : '1706674259391248612457294.9111'
     borrower.dashboard.foreclosure_request.borrower_foreclosure: '1700465774321790534045777.5126'
@@ -328,7 +329,6 @@ unique_ids:
     ? borrower.borrower_registration_forms.star_1_borrower_registration_form_2_employment.star_1_borrower_registration_form_2_employment_emp_detail_3
     : '170003767984838881190201.539795'
     admin.dashboard.manage_cms.add_lender_dropdown_details.ItemTemplate17: '1706531151384463353076695.9948'
-    borrower.dashboard.part_payment.part_payment_details.part_payment_a: '1715335646829954225882328.9269'
     lendor.dashboard.view_or_send_notifications: '1699967294797596075787674.3921'
     lendor.lendor_registration_forms.lender_registration_form_2.lender_registration_Institutional_form_2: '1699430137541808903451295.2183'
     lendor.lendor_registration_forms.lender_registration_form_1_education_form.lender_registration_education_Intermediate: '1700756697390552428798704.9375'

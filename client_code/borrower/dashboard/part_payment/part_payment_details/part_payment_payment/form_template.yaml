@@ -25,9 +25,9 @@ components:
     layout_properties: {grid_position: 'RETVYY,WNWIWS', full_width_row: true}
   - type: Label
     properties: {role: outlined-card, align: center, tooltip: '', border: '', foreground: 'theme:On
-        Primary', visible: true, text: Foreclosure Details, font_size: 20, font: '',
+        Primary', visible: true, text: Part Payment Details, font_size: 20, font: '',
       spacing_above: small, icon_align: left, spacing_below: small, italic: false,
-      background: '#05264d', bold: true, underline: true, icon: ''}
+      background: '#05264d', bold: true, underline: false, icon: ''}
     name: label_1
     layout_properties: {grid_position: 'EJRVTI,HMSFTX'}
   - type: ColumnPanel

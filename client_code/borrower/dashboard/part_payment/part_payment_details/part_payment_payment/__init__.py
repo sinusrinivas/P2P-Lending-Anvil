@@ -1,7 +1,7 @@
 
 
 
-from ._anvil_designer import part_payment_aTemplate
+from ._anvil_designer import part_payment_paymentTemplate
 from anvil import *
 import anvil.server
 import anvil.google.auth, anvil.google.drive
@@ -13,7 +13,7 @@ from anvil.tables import app_tables
 from datetime import datetime
 
 
-class part_payment_a(part_payment_aTemplate):
+class part_payment_payment(part_payment_paymentTemplate):
   def __init__(self, selected_row, total_payments_made, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)

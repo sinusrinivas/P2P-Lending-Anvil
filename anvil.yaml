@@ -1361,7 +1361,7 @@ db_schema:
       admin_ui: {order: 15.5, width: 244}
       type: date
     - name: total_payments_made
-      admin_ui: {width: 200, order: 29}
+      admin_ui: {order: 22.9375, width: 200}
       type: number
     - name: membership_type
       admin_ui: {order: 6.25, width: 139}
@@ -1409,10 +1409,10 @@ db_schema:
       admin_ui: {width: 200, order: 39}
       type: string
     - name: total_amount_paid
-      admin_ui: {width: 200, order: 8.5}
+      admin_ui: {order: 22.96875, width: 200}
       type: number
     - name: remaining_amount
-      admin_ui: {width: 200, order: 8.75}
+      admin_ui: {order: 22.984375, width: 200}
       type: number
     title: fin_loan_details
   fin_user_issues_bugreports:

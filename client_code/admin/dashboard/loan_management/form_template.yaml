@@ -21,11 +21,6 @@ components:
       underline: false, icon: ''}
     type: Label
     layout_properties: {grid_position: 'JTDJCQ,DACOSY'}
-  - name: content_panel_copy_copy_3_copy_3_copy_copy_copy
-    properties: {col_widths: '{}', background: white, role: elevated-card}
-    type: ColumnPanel
-    layout_properties: {grid_position: 'NQKSIL,QPWAXE'}
-    components: []
   - name: content_panel_copy_copy_3_copy_3_copy_copy_copy_copy
     properties: {col_widths: '{"LRMGVL":12,"PPLSYB":12,"FPVXBC":12,"GBAJZY":11}',
       background: '', role: null}

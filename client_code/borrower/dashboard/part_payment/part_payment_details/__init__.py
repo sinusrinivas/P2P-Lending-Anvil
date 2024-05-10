@@ -15,15 +15,15 @@ class part_payment_details(part_payment_detailsTemplate):
   def __init__(self, selected_row, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
-    self.label_loan_id.text = f"{selected_row['loan_id']}"
     self.label_name.text = f"{selected_row['borrower_full_name']}"
+    self.label_credit_limit.text = f"{selected_row['credit_limit']}"
     self.label_loan_amount.text = f"{selected_row['loan_amount']}"
     self.label_loan_tenure.text = f"{selected_row['tenure']} Months"
     self.label_interest_rate.text = f"{selected_row['interest_rate']} % pa"
     self.label_credit_limit.text = f"{selected_row['credit_limit']}"
-    self.label_3.text = "Foreclosure Request Under Process......"
-    self.label_5.text = "Foreclosure Request Rejected"
-    self.label_8.text = "Foreclosure is not available for this product.."
+    self.label_3.text = "Part Payment Request Under Process......"
+    self.label_5.text = "Part Payment Request Rejected"
+    self.label_8.text = "Part Payment is not available for this product.."
     product_id_to_search = selected_row["product_id"]
     data = tables.app_tables.fin_product_details.search(product_id=product_id_to_search)
     self.foreclosure_type_lst = []
