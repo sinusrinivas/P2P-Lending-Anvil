@@ -35,23 +35,27 @@ class check_out(check_outTemplate):
         monthly_interest_rate = interest_rate / 12 / 100
         total_payments = tenure * 12
         total_repayment_amount = selected_row['total_repayment_amount']
-
+        total_i_a = total_interest_amount / tenure
       
         if emi_payment_type == 'One Time':
             emi = total_repayment_amount
+            interest_amount = total_interest_amount
             #total_emi += emi  # Add extension amount to 12-month EMI total
             total_emi = emi +  extension_amount + total_processing_fee_amount
         elif emi_payment_type == 'Monthly':
             # Calculate monthly EMI amount
+            interest_amount = total_i_a
             emi = (loan_amount * monthly_interest_rate * ((1 + monthly_interest_rate) ** tenure)) / (((1 + monthly_interest_rate) ** tenure) - 1)
             total_emi = emi + extension_amount + processing_fee  # Add extension amount to monthly EMI
         elif emi_payment_type == 'Three Months':
             # Calculate EMI amount for 3 months
+            interest_amount = total_i_a * 3
             processing_fee = processing_fee * 3
             emi = (loan_amount * monthly_interest_rate * ((1 + monthly_interest_rate) ** (tenure ))) / (((1 + monthly_interest_rate) ** (tenure)) - 1)
             emi*=3
             total_emi = emi + extension_amount + processing_fee # Add extension amount to 3-month EMI
         elif emi_payment_type == 'Six Months':
+            interest_amount = total_i_a * 6
             processing_fee = processing_fee * 6
             # Calculate EMI amount for 6 months
             emi = (loan_amount * monthly_interest_rate * ((1 + monthly_interest_rate) ** (tenure ))) / (((1 + monthly_interest_rate) ** (tenure)) - 1)
@@ -62,7 +66,8 @@ class check_out(check_outTemplate):
             emi = (loan_amount * monthly_interest_rate * (1 + monthly_interest_rate) ** total_payments) / ((1 + monthly_interest_rate) ** total_payments - 1)
             total_emi = emi + extension_amount + processing_fee # Add extension amount to monthly EMI
 
-
+        self.i_r.text = "{:.2f}".format(interest_amount)
+      
         print(processing_fee)
         loan_state_status = app_tables.fin_loan_details.get(loan_id=loan_id)['loan_state_status']
       
@@ -274,6 +279,9 @@ class check_out(check_outTemplate):
             return None  # or handle the case where the loan ID is not found
 
     def pay_now_click(self, **event_args):
+        
+        i_r = float(self.i_r.text)
+      
         total_emi_amount = float(self.total_emi_amount_label.text)
         # Calculate total EMI amount including processing fees
         emi_amount = float(self.emi_amount_label.text)
@@ -296,11 +304,42 @@ class check_out(check_outTemplate):
         print(remaining_amount)
         loan_details = app_tables.fin_loan_details.get(loan_id=self.selected_row['loan_id'])
         if loan_details is not None:
-            if loan_details['total_amount_paid'] is None:
+            if loan_details['total_amount_paid'] is None :
                 loan_details['total_amount_paid'] = 0
+            if loan_details['lender_returns'] is None :
+                loan_details['lender_returns'] = 0
+            loan_details['lender_returns'] += i_r
             loan_details['remaining_amount'] = remaining_amount
             loan_details['total_amount_paid'] += total_emi_amount
             loan_details.update()
+
+        lender_customer_id = self.selected_row['lender_customer_id']
+
+        # Query loan details table to find all loan IDs associated with the lender's customer ID
+        loan_ids = [row['loan_id'] for row in app_tables.fin_loan_details.search(lender_customer_id=lender_customer_id)]
+
+        # Initialize total lender returns
+        total_lender_returns = 0
+
+        # Iterate over each loan ID and retrieve the lender returns from the loan details table
+        for loan_id in loan_ids:
+            lender_returns_row = app_tables.fin_loan_details.get(loan_id=loan_id)['lender_returns']
+            if lender_returns_row is not None:
+              lender_returns = lender_returns_row['lender_returns']
+              if lender_returns is not None:
+                  total_lender_returns += lender_returns
+            else :
+                pass
+      
+
+        # Store total lender returns in the fin lender table under the lender's customer ID
+        lender_row = app_tables.fin_lender.get(customer_id=lender_customer_id)
+        if lender_row is not None:
+            lender_row['total_returns'] = total_lender_returns
+            lender_row.update()
+        else:
+            # If lender row doesn't exist, create a new row
+            app_tables.fin_lender.add_row(customer_id=lender_customer_id, total_returns=total_lender_returns)
       
         try:
             lapsed_fee = float(self.lapsed.text)

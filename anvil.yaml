@@ -1200,6 +1200,9 @@ db_schema:
     - name: wallet_id
       admin_ui: {order: 12, width: 200}
       type: string
+    - name: return_on_investment
+      admin_ui: {width: 200, order: 3.5}
+      type: number
   fin_wallet_bank_account_table:
     client: none
     server: full
@@ -1413,6 +1416,9 @@ db_schema:
       type: number
     - name: remaining_amount
       admin_ui: {width: 200, order: 8.75}
+      type: number
+    - name: lender_returns
+      admin_ui: {width: 200, order: 8.875}
       type: number
     title: fin_loan_details
   fin_user_issues_bugreports:
