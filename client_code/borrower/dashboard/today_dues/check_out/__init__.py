@@ -447,9 +447,13 @@ class check_out(check_outTemplate):
     # Check if foreclosure details are returned for the given loan and EMIs
       foreclosure_row = app_tables.fin_foreclosure.get(
           loan_id=loan_id,
-          foreclosure_emi_num=emi_number
+          foreclosure_emi_num=emi_number,
+        
       )
-      return foreclosure_row is not None
+      if foreclosure_row is not None and foreclosure_row['status'] == 'approved':
+          return foreclosure_row
+      else:
+          return None
 
     # def update_payment_status(self):
     # # Update payment status in loan details table for the given loan ID, borrower ID, and condition
