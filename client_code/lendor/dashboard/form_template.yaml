@@ -98,7 +98,7 @@ components:
   - type: Label
     properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
       visible: true, text: Please Make your availability visible by Turning On/Off button.,
-      font_size: 16, font: '', spacing_above: medium, icon_align: top, spacing_below: none,
+      font_size: 18, font: '', spacing_above: medium, icon_align: top, spacing_below: none,
       italic: false, background: '', bold: true, underline: false, icon: ''}
     layout_properties: {grid_position: 'ZGTDIJ,BREYKS'}
     name: label_status
@@ -129,33 +129,33 @@ components:
       event_bindings: {click: button_click, show: button_show, hide: button_hide}
       name: button_status
 - name: column_panel_2
-  properties: {}
+  properties: {col_widths: '{"NETDIR":15,"IXNAVP":15,"KVCNSJ":15}'}
   type: ColumnPanel
   layout_properties: {grid_position: 'CCIIXU,HUNYKM GMQTUG,KNKICZ'}
   components:
-  - name: column_panel_3
-    properties: {role: elevated-card, col_widths: '{"PQPPZT":20,"WLAJCK":40}'}
+  - name: column_panel_7
+    properties: {role: elevated-card}
     type: ColumnPanel
-    layout_properties: {grid_position: 'ERCHQY,YUAUSJ', full_width_row: true}
+    layout_properties: {grid_position: 'ERCHQY,NETDIR', full_width_row: true}
     components:
     - name: image_1
-      properties: {height: 45.399932861328125, display_mode: shrink_to_fit, source: _/theme/1.png}
+      properties: {height: 49.79998779296875, display_mode: shrink_to_fit, source: _/theme/1.png}
       type: Image
-      layout_properties: {grid_position: 'FHZWVZ,PQPPZT'}
+      layout_properties: {grid_position: 'BJUXXD,EITWZQ'}
     - name: label_2
-      properties: {icon: '', text: 'My Installment
+      properties: {icon: '', text: 'My Investement
 
           '}
       type: Label
-      layout_properties: {grid_position: 'FHZWVZ,WLAJCK CGZQZP,FKOEII'}
+      layout_properties: {grid_position: 'BJUXXD,DMUXBO GGORVD,QGVFNC'}
     - name: label_3
       properties: {}
       type: Label
-      layout_properties: {grid_position: 'FHZWVZ,WLAJCK KJAPCT,ITCNGP'}
+      layout_properties: {grid_position: 'BJUXXD,DMUXBO ZCKWPG,MKRQYJ'}
   - name: column_panel_4
     properties: {role: elevated-card, col_widths: '{"KRHWBD":20,"ZHEDGR":40}'}
     type: ColumnPanel
-    layout_properties: {grid_position: 'ERCHQY,NETDIR'}
+    layout_properties: {grid_position: 'ERCHQY,PNJZIQ'}
     components:
     - name: image_2
       properties: {height: 48.79998779296875, source: _/theme/profits.png}
@@ -166,11 +166,11 @@ components:
 
           '}
       type: Label
-      layout_properties: {grid_position: 'LIIRFK,ZHEDGR PIXTGE,WWPOAT'}
+      layout_properties: {grid_position: 'LIIRFK,ZHEDGR AXQTMV,AFQALW'}
     - name: label_5
       properties: {}
       type: Label
-      layout_properties: {grid_position: 'LIIRFK,ZHEDGR GPTTVY,SQOBSC'}
+      layout_properties: {grid_position: 'LIIRFK,ZHEDGR YVDJCL,QQHYRO'}
   - name: column_panel_5
     properties: {role: elevated-card, col_widths: '{"UKYYYV":20,"UPASZV":40}'}
     type: ColumnPanel
@@ -225,27 +225,32 @@ components:
     type: Button
     layout_properties: {grid_position: 'GWOXFQ,YPNAHH', full_width_row: true}
     data_bindings: []
+    event_bindings: {click: button_1_copy_click}
   - name: button_2_copy
     properties: {text: Loan Disbursed(), foreground: white, role: elevated-button,
       background: '#FEBE10', bold: true, align: full}
     type: Button
     layout_properties: {grid_position: 'GWOXFQ,DXKIFN', full_width_row: true}
+    event_bindings: {click: button_2_copy_click}
   - name: button_3_copy
     properties: {text: Lost Opportunities (), foreground: white, align: full, role: null,
       background: '#800080', bold: true}
     type: Button
     layout_properties: {grid_position: 'GWOXFQ,ULDUEY'}
+    event_bindings: {click: button_3_copy_click}
   - name: button_4_copy
     properties: {text: Closed (), foreground: white, align: full, role: null, background: '#4CBB17',
       bold: true}
     type: Button
     layout_properties: {grid_position: 'GWOXFQ,BOZZYE'}
+    event_bindings: {click: button_4_copy_click}
   - name: button_5_copy
     properties: {text: Extended (), foreground: white, align: full, role: elevated-button,
       background: '#E52B50', bold: true, enabled: true}
     type: Button
     layout_properties: {grid_position: 'GWOXFQ,UNJZMC'}
-- name: data_grid_1
+    event_bindings: {click: button_5_copy_click}
+- name: data_grid_new_loan_request
   properties:
     columns:
     - {id: VJQQOR, title: Loan ID, data_key: column_2}
@@ -255,9 +260,13 @@ components:
     - {id: GUBYWD, data_key: column_1, title: Tenure}
     - {id: OJLQEN, title: Loan Status, data_key: column_3}
     - {id: NFYNZM, data_key: column_4, title: ''}
+    visible: false
+    wrap_on: mobile
+    auto_header: true
+    show_page_controls: true
   type: DataGrid
   components:
   - name: repeating_panel_1
     properties: {item_template: lendor.dashboard.RowTemplate13}
     type: RepeatingPanel
-  layout_properties: {grid_position: 'CCIIXU,HUNYKM GIDYBW,OYBULT'}
+  layout_properties: {grid_position: 'CCIIXU,HUNYKM POIVKA,YJAKVL'}
