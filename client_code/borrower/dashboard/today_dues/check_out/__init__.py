@@ -281,7 +281,7 @@ class check_out(check_outTemplate):
         total_repayment_amount = self.selected_row['total_repayment_amount']
         
         # Retrieve processing fee
-        processing_fee = float(self.label_9.text)  # Assuming processing fee is shown in label_9
+        # processing_fee = float(self.label_9.text)  # Assuming processing fee is shown in label_9
         
         # Calculate remaining amount
         if self.selected_row['remaining_amount'] is not None:
