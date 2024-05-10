@@ -225,27 +225,32 @@ components:
     type: Button
     layout_properties: {grid_position: 'GWOXFQ,YPNAHH', full_width_row: true}
     data_bindings: []
+    event_bindings: {click: button_1_copy_click}
   - name: button_2_copy
     properties: {text: Loan Disbursed(), foreground: white, role: elevated-button,
       background: '#FEBE10', bold: true, align: full}
     type: Button
     layout_properties: {grid_position: 'GWOXFQ,DXKIFN', full_width_row: true}
+    event_bindings: {click: button_2_copy_click}
   - name: button_3_copy
     properties: {text: Lost Opportunities (), foreground: white, align: full, role: null,
       background: '#800080', bold: true}
     type: Button
     layout_properties: {grid_position: 'GWOXFQ,ULDUEY'}
+    event_bindings: {click: button_3_copy_click}
   - name: button_4_copy
     properties: {text: Closed (), foreground: white, align: full, role: null, background: '#4CBB17',
       bold: true}
     type: Button
     layout_properties: {grid_position: 'GWOXFQ,BOZZYE'}
+    event_bindings: {click: button_4_copy_click}
   - name: button_5_copy
     properties: {text: Extended (), foreground: white, align: full, role: elevated-button,
       background: '#E52B50', bold: true, enabled: true}
     type: Button
     layout_properties: {grid_position: 'GWOXFQ,UNJZMC'}
-- name: data_grid_1
+    event_bindings: {click: button_5_copy_click}
+- name: data_grid_new_loan_request
   properties:
     columns:
     - {id: VJQQOR, title: Loan ID, data_key: column_2}
@@ -255,9 +260,80 @@ components:
     - {id: GUBYWD, data_key: column_1, title: Tenure}
     - {id: OJLQEN, title: Loan Status, data_key: column_3}
     - {id: NFYNZM, data_key: column_4, title: ''}
+    visible: false
   type: DataGrid
   components:
   - name: repeating_panel_1
     properties: {item_template: lendor.dashboard.RowTemplate13}
     type: RepeatingPanel
-  layout_properties: {grid_position: 'CCIIXU,HUNYKM GIDYBW,OYBULT'}
+  layout_properties: {grid_position: 'CCIIXU,HUNYKM POIVKA,YJAKVL'}
+- name: data_grid_loan_disbursed
+  properties:
+    columns:
+    - {id: VJQQOR, title: Loan ID, data_key: column_2}
+    - {id: JNEVFU, data_key: column_1, title: Name}
+    - {id: JKSDUP, title: Loan Amount, data_key: column_1}
+    - {id: RFMHCZ, data_key: column_1, title: Ascend Score}
+    - {id: GUBYWD, data_key: column_1, title: Tenure}
+    - {id: OJLQEN, title: Loan Status, data_key: column_3}
+    - {id: NFYNZM, data_key: column_4, title: ''}
+    visible: false
+  type: DataGrid
+  layout_properties: {grid_position: 'CCIIXU,HUNYKM XVXMOY,ZXYJSP'}
+  components:
+  - name: repeating_panel_2
+    properties: {item_template: lendor.dashboard.RowTemplate13}
+    type: RepeatingPanel
+- name: data_grid_lost_opportunities
+  properties:
+    columns:
+    - {id: VJQQOR, title: Loan ID, data_key: column_2, width: 124.39999389648438,
+      expand: false}
+    - {id: JNEVFU, data_key: column_1, title: Name, width: 121.60000610351562, expand: false}
+    - {id: JKSDUP, title: Loan Amount, data_key: column_1}
+    - {id: RFMHCZ, data_key: column_1, title: Ascend Score}
+    - {id: GUBYWD, data_key: column_1, title: Tenure}
+    - {id: OJLQEN, title: Loan Status, data_key: column_3}
+    - {id: NFYNZM, data_key: column_4, title: ''}
+    visible: false
+  type: DataGrid
+  layout_properties: {grid_position: 'CCIIXU,HUNYKM UOWXWO,HRLNYU'}
+  components:
+  - name: repeating_panel_3
+    properties: {item_template: lendor.dashboard.RowTemplate13}
+    type: RepeatingPanel
+- name: data_grid_closed
+  properties:
+    columns:
+    - {id: VJQQOR, title: Loan ID, data_key: column_2, width: 123.19998168945312,
+      expand: false}
+    - {id: JNEVFU, data_key: column_1, title: Name}
+    - {id: JKSDUP, title: Loan Amount, data_key: column_1}
+    - {id: RFMHCZ, data_key: column_1, title: Ascend Score}
+    - {id: GUBYWD, data_key: column_1, title: Tenure}
+    - {id: OJLQEN, title: Loan Status, data_key: column_3}
+    - {id: NFYNZM, data_key: column_4, title: ''}
+    visible: false
+  type: DataGrid
+  layout_properties: {grid_position: 'CCIIXU,HUNYKM DDJDCM,ZWRMGU'}
+  components:
+  - name: repeating_panel_4
+    properties: {item_template: lendor.dashboard.RowTemplate13}
+    type: RepeatingPanel
+- name: data_grid_extended
+  properties:
+    columns:
+    - {id: VJQQOR, title: Loan ID, data_key: column_2}
+    - {id: JNEVFU, data_key: column_1, title: Name}
+    - {id: JKSDUP, title: Loan Amount, data_key: column_1}
+    - {id: RFMHCZ, data_key: column_1, title: Ascend Score}
+    - {id: GUBYWD, data_key: column_1, title: Tenure}
+    - {id: OJLQEN, title: Loan Status, data_key: column_3}
+    - {id: NFYNZM, data_key: column_4, title: ''}
+    visible: false
+  type: DataGrid
+  layout_properties: {grid_position: 'CCIIXU,HUNYKM AMCAZP,NMWWAB'}
+  components:
+  - name: repeating_panel_5
+    properties: {item_template: lendor.dashboard.RowTemplate13}
+    type: RepeatingPanel
