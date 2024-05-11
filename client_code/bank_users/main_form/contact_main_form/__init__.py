@@ -44,7 +44,7 @@ class contact_main_form(contact_main_formTemplate):
           if user_profile_e is not  None:
             user_type = user_profile_e['usertype']
             if user_type == 'lender':
-              open_form('lendor_registration_form.dashboard')
+              open_form('lendor.dashboard')
             elif user_type == 'borrower':
               open_form('bank_users.borrower_rgistration_form')
             elif user_type == 'admin':

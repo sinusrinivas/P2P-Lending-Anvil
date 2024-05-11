@@ -53,29 +53,8 @@ class add_general_dropdowns(add_general_dropdownsTemplate):
     self.text_box_01_copy_2.text = ' '
     self.refresh()
 
-  def gender(self, **event_args):
-    """This method is called when the button is clicked"""
-    self.column_panel_01.visible = True
-    self.column_panel_02.visible = False
-    self.column_panel_03.visible = False
-    self.column_panel_04.visible = False
-    self.column_panel_05.visible = False
 
-  def present(self, **event_args):
-    """This method is called when the button is clicked"""
-    self.column_panel_01.visible = False
-    self.column_panel_02.visible = True
-    self.column_panel_03.visible = False
-    self.column_panel_04.visible = False
-    self.column_panel_05.visible = False
 
-  def duration(self, **event_args):
-    """This method is called when the button is clicked"""
-    self.column_panel_01.visible = False
-    self.column_panel_02.visible = False
-    self.column_panel_03.visible = True
-    self.column_panel_04.visible = False
-    self.column_panel_05.visible = False
 
   def occupation_click(self, **event_args):
     """This method is called when the button is clicked"""
@@ -87,13 +66,7 @@ class add_general_dropdowns(add_general_dropdownsTemplate):
     self.text_box_2.text = ' '
     self.refresh()
 
-  def occupation_type(self, **event_args):
-    """This method is called when the button is clicked"""
-    self.column_panel_01.visible = False
-    self.column_panel_02.visible = False
-    self.column_panel_03.visible = False
-    self.column_panel_04.visible = True
-    self.column_panel_05.visible = False
+  
 
   def button_1_copy_3_click(self, **event_args):
     """This method is called when the button is clicked"""
@@ -117,3 +90,43 @@ class add_general_dropdowns(add_general_dropdownsTemplate):
     self.column_panel_04.visible = False
     self.column_panel_05.visible = True
 
+
+  def button_9_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    self.column_panel_01.visible = True
+    self.column_panel_02.visible = False
+    self.column_panel_03.visible = False
+    self.column_panel_04.visible = False
+    self.column_panel_05.visible = False
+
+  def button_14_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    self.column_panel_01.visible = False
+    self.column_panel_02.visible = True
+    self.column_panel_03.visible = False
+    self.column_panel_04.visible = False
+    self.column_panel_05.visible = False
+
+  def button_2_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    self.column_panel_01.visible = False
+    self.column_panel_02.visible = False
+    self.column_panel_03.visible = True
+    self.column_panel_04.visible = False
+    self.column_panel_05.visible = False
+
+  def button_10_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    self.column_panel_01.visible = False
+    self.column_panel_02.visible = False
+    self.column_panel_03.visible = False
+    self.column_panel_04.visible = True
+    self.column_panel_05.visible = False
+
+  def button_11_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    self.column_panel_01.visible = False
+    self.column_panel_02.visible = False
+    self.column_panel_03.visible = False
+    self.column_panel_04.visible = False
+    self.column_panel_05.visible = True

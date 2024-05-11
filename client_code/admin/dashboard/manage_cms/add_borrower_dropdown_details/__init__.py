@@ -30,135 +30,7 @@ class add_borrower_dropdown_details(add_borrower_dropdown_detailsTemplate):
         self.repeating_panel_1.items = app_tables.fin_self_employment.search()
         self.repeating_panel_11.items = app_tables.fin_spouse_profession.search()
         self.repeating_panel_12.items = app_tables.fin_borrower_land_type.search()
-
-    
-  def marrital_button_click(self, **event_args):
-    """This method is called when the button is clicked"""
-    self.column_panel_7.visible = False
-    self.column_panel_8.visible = False
-    self.column_panel_9.visible = False
-    self.column_panel_10.visible = False
-    self.column_panel_6.visible = False
-    self.column_panel_5.visible = False   
-    self.column_panel_4.visible = False
-    self.column_panel_3.visible = True
-    self.column_panel_10_copy.visible = False
-    # self.column_panel_2.visible = False
-    self.column_panel_04.visible = False
-    self.column_panel_11.visible = False
-    self.column_panel_12.visible = False
-
-  def business_click(self, **event_args):
-    """This method is called when the button is clicked"""
-    self.column_panel_7.visible = False
-    self.column_panel_8.visible = False
-    self.column_panel_9.visible = False
-    self.column_panel_10.visible = False
-    self.column_panel_6.visible = False
-    self.column_panel_5.visible = False   
-    self.column_panel_4.visible = True
-    self.column_panel_3.visible = False
-    self.column_panel_10_copy.visible = False
-    # self.column_panel_2.visible = False
-    self.column_panel_04.visible = False
-    self.column_panel_11.visible = False
-    self.column_panel_12.visible = False
-
-
-  def professioon_click(self, **event_args):
-    """This method is called when the button is clicked"""
-    self.column_panel_7.visible = False
-    self.column_panel_8.visible = False
-    self.column_panel_9.visible = False
-    self.column_panel_10.visible = False
-    self.column_panel_6.visible = True
-    self.column_panel_5.visible = False   
-    self.column_panel_4.visible = False
-    self.column_panel_10_copy.visible = False
-    self.column_panel_3.visible = False
-    # self.column_panel_2.visible = False   
-    self.column_panel_04.visible = False
-    self.column_panel_12.visible = False
-
-  def No_of_emp_click(self, **event_args):
-    """This method is called when the button is clicked"""
-    self.column_panel_7.visible = False
-    self.column_panel_8.visible = False
-    self.column_panel_9.visible = False
-    self.column_panel_10.visible = False
-    self.column_panel_6.visible = False
-    self.column_panel_5.visible = True   
-    self.column_panel_4.visible = False
-    self.column_panel_10_copy.visible = False
-    self.column_panel_3.visible = False
-    # self.column_panel_2.visible = False
-    self.column_panel_04.visible = False
-    self.column_panel_11.visible = False
-    self.column_panel_12.visible = False
-
-  def emp_type_button(self, **event_args):
-    """This method is called when the button is clicked"""
-    self.column_panel_7.visible = True
-    self.column_panel_8.visible = False
-    self.column_panel_9.visible = False
-    self.column_panel_10.visible = False
-    self.column_panel_6.visible = False
-    self.column_panel_5.visible = False   
-    self.column_panel_4.visible = False
-    self.column_panel_3.visible = False
-    # self.column_panel_2.visible = False
-    self.column_panel_10_copy.visible = False
-    self.column_panel_04.visible = False
-    self.column_panel_11.visible = False
-    self.column_panel_12.visible = False
-
-  def organization_click(self, **event_args):
-    """This method is called when the button is clicked"""
-    self.column_panel_7.visible = False
-    self.column_panel_8.visible = True
-    self.column_panel_9.visible = False
-    self.column_panel_10.visible = False
-    self.column_panel_6.visible = False
-    self.column_panel_5.visible = False   
-    self.column_panel_4.visible = False
-    self.column_panel_3.visible = False
-    # self.column_panel_2.visible = False
-    self.column_panel_10_copy.visible = False
-    self.column_panel_04.visible = False
-    self.column_panel_11.visible = False
-    self.column_panel_12.visible = False
-
-  def account_click(self, **event_args):
-    """This method is called when the button is clicked"""
-    self.column_panel_7.visible = False
-    self.column_panel_8.visible = False
-    self.column_panel_9.visible = True
-    self.column_panel_10.visible = False
-    self.column_panel_6.visible = False
-    self.column_panel_5.visible = False   
-    self.column_panel_4.visible = False
-    self.column_panel_3.visible = False
-    # self.column_panel_2.visible = False
-    self.column_panel_10_copy.visible = False
-    self.column_panel_04.visible = False
-    self.column_panel_11.visible = False
-    self.column_panel_12.visible = False
-
-  def salary_click(self, **event_args):
-    """This method is called when the button is clicked"""
-    self.column_panel_7.visible = False
-    self.column_panel_8.visible = False
-    self.column_panel_9.visible = False
-    self.column_panel_10.visible = False
-    self.column_panel_6.visible = False
-    self.column_panel_5.visible = False   
-    self.column_panel_4.visible = False
-    self.column_panel_3.visible = False
-    # self.column_panel_2.visible = False
-    self.column_panel_10_copy.visible = True
-    self.column_panel_04.visible = False
-    self.column_panel_11.visible = False
-    self.column_panel_12.visible = False
+  
 
   def marital_button_click(self, **event_args):
     """This method is called when the button is clicked"""
@@ -266,7 +138,49 @@ class add_borrower_dropdown_details(add_borrower_dropdown_detailsTemplate):
     self.text_box_9_copy.text = ' '
     self.refresh()
 
-  def Qualifications_click(self, **event_args):
+  
+   
+
+  def self_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    entered_data = self.text_box_2_copy.text
+    valid_statuses = ['Business', 'Farmer']
+    if entered_data not in valid_statuses:
+        alert("Please enter a valid marital status: 'Business', 'Farmer'.")
+        return
+    new_row = app_tables.fin_self_employment.add_row(self_employment=entered_data)
+    self.text_box_2_copy.text = ' '
+    self.refresh()
+
+  
+   
+
+
+  def spouse_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    entered_data = self.text_box_01_copy.text.strip()
+    if not entered_data:
+        alert("Please enter a valid data.")
+        return
+    new_row = app_tables.fin_spouse_profession.add_row(spouse_profession=entered_data)
+    self.text_box_01_copy.text = ' '
+    self.refresh()
+
+  def land_type(self, **event_args):
+    """This method is called when the button is clicked"""
+   
+
+  def land_type_btn_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    entered_data = self.text_box_01_copy_copy.text.strip()
+    if not entered_data:
+        alert("Please enter a valid data.")
+        return
+    new_row = app_tables.fin_borrower_land_type.add_row(land_type=entered_data)
+    self.text_box_01_copy_copy.text = ' '
+    self.refresh()
+
+  def button_9_click(self, **event_args):
     """This method is called when the button is clicked"""
     self.column_panel_7.visible = False
     self.column_panel_8.visible = False
@@ -281,9 +195,119 @@ class add_borrower_dropdown_details(add_borrower_dropdown_detailsTemplate):
     self.column_panel_04.visible = False
     self.column_panel_11.visible = False
     self.column_panel_12.visible = False
-    
 
-  def self(self, **event_args):
+  def button_10_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    self.column_panel_7.visible = False
+    self.column_panel_8.visible = False
+    self.column_panel_9.visible = False
+    self.column_panel_10.visible = False
+    self.column_panel_6.visible = False
+    self.column_panel_5.visible = False   
+    self.column_panel_4.visible = True
+    self.column_panel_3.visible = False
+    self.column_panel_10_copy.visible = False
+    # self.column_panel_2.visible = False
+    self.column_panel_04.visible = False
+    self.column_panel_11.visible = False
+    self.column_panel_12.visible = False
+
+  def button_11_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    self.column_panel_7.visible = False
+    self.column_panel_8.visible = False
+    self.column_panel_9.visible = False
+    self.column_panel_10.visible = False
+    self.column_panel_6.visible = False
+    self.column_panel_5.visible = False   
+    self.column_panel_4.visible = False
+    self.column_panel_3.visible = True
+    self.column_panel_10_copy.visible = False
+    # self.column_panel_2.visible = False
+    self.column_panel_04.visible = False
+    self.column_panel_11.visible = False
+    self.column_panel_12.visible = False
+
+  def button_12_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    self.column_panel_7.visible = False
+    self.column_panel_8.visible = False
+    self.column_panel_9.visible = False
+    self.column_panel_10.visible = False
+    self.column_panel_6.visible = False
+    self.column_panel_5.visible = True   
+    self.column_panel_4.visible = False
+    self.column_panel_10_copy.visible = False
+    self.column_panel_3.visible = False
+    # self.column_panel_2.visible = False
+    self.column_panel_04.visible = False
+    self.column_panel_11.visible = False
+    self.column_panel_12.visible = False
+
+  def button_13_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    self.column_panel_7.visible = False
+    self.column_panel_8.visible = False
+    self.column_panel_9.visible = False
+    self.column_panel_10.visible = False
+    self.column_panel_6.visible = True
+    self.column_panel_5.visible = False   
+    self.column_panel_4.visible = False
+    self.column_panel_10_copy.visible = False
+    self.column_panel_3.visible = False
+    # self.column_panel_2.visible = False   
+    self.column_panel_04.visible = False
+    self.column_panel_12.visible = False
+
+  def button_14_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    self.column_panel_7.visible = True
+    self.column_panel_8.visible = False
+    self.column_panel_9.visible = False
+    self.column_panel_10.visible = False
+    self.column_panel_6.visible = False
+    self.column_panel_5.visible = False   
+    self.column_panel_4.visible = False
+    self.column_panel_3.visible = False
+    # self.column_panel_2.visible = False
+    self.column_panel_10_copy.visible = False
+    self.column_panel_04.visible = False
+    self.column_panel_11.visible = False
+    self.column_panel_12.visible = False
+
+  def button_16_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    self.column_panel_7.visible = False
+    self.column_panel_8.visible = True
+    self.column_panel_9.visible = False
+    self.column_panel_10.visible = False
+    self.column_panel_6.visible = False
+    self.column_panel_5.visible = False   
+    self.column_panel_4.visible = False
+    self.column_panel_3.visible = False
+    # self.column_panel_2.visible = False
+    self.column_panel_10_copy.visible = False
+    self.column_panel_04.visible = False
+    self.column_panel_11.visible = False
+    self.column_panel_12.visible = False
+
+  def button_17_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    self.column_panel_7.visible = False
+    self.column_panel_8.visible = False
+    self.column_panel_9.visible = True
+    self.column_panel_10.visible = False
+    self.column_panel_6.visible = False
+    self.column_panel_5.visible = False   
+    self.column_panel_4.visible = False
+    self.column_panel_3.visible = False
+    # self.column_panel_2.visible = False
+    self.column_panel_10_copy.visible = False
+    self.column_panel_04.visible = False
+    self.column_panel_11.visible = False
+    self.column_panel_12.visible = False
+
+  def button_18_click(self, **event_args):
     """This method is called when the button is clicked"""
     self.column_panel_7.visible = False
     self.column_panel_8.visible = False
@@ -299,18 +323,23 @@ class add_borrower_dropdown_details(add_borrower_dropdown_detailsTemplate):
     self.column_panel_11.visible = False
     self.column_panel_12.visible = False
 
-  def self_click(self, **event_args):
+  def button_19_click(self, **event_args):
     """This method is called when the button is clicked"""
-    entered_data = self.text_box_2_copy.text
-    valid_statuses = ['Business', 'Farmer']
-    if entered_data not in valid_statuses:
-        alert("Please enter a valid marital status: 'Business', 'Farmer'.")
-        return
-    new_row = app_tables.fin_self_employment.add_row(self_employment=entered_data)
-    self.text_box_2_copy.text = ' '
-    self.refresh()
+    self.column_panel_7.visible = False
+    self.column_panel_8.visible = False
+    self.column_panel_9.visible = False
+    self.column_panel_10.visible = False
+    self.column_panel_6.visible = False
+    self.column_panel_5.visible = False   
+    self.column_panel_4.visible = False
+    self.column_panel_3.visible = False
+    # self.column_panel_2.visible = False
+    self.column_panel_10_copy.visible = True
+    self.column_panel_04.visible = False
+    self.column_panel_11.visible = False
+    self.column_panel_12.visible = False
 
-  def spose(self, **event_args):
+  def button_3_click(self, **event_args):
     """This method is called when the button is clicked"""
     self.column_panel_7.visible = False
     self.column_panel_8.visible = False
@@ -326,18 +355,7 @@ class add_borrower_dropdown_details(add_borrower_dropdown_detailsTemplate):
     self.column_panel_04.visible = False
     self.column_panel_12.visible = False
 
-
-  def spouse_click(self, **event_args):
-    """This method is called when the button is clicked"""
-    entered_data = self.text_box_01_copy.text.strip()
-    if not entered_data:
-        alert("Please enter a valid data.")
-        return
-    new_row = app_tables.fin_spouse_profession.add_row(spouse_profession=entered_data)
-    self.text_box_01_copy.text = ' '
-    self.refresh()
-
-  def land_type(self, **event_args):
+  def button_4_click(self, **event_args):
     """This method is called when the button is clicked"""
     self.column_panel_7.visible = False
     self.column_panel_8.visible = False
@@ -351,16 +369,6 @@ class add_borrower_dropdown_details(add_borrower_dropdown_detailsTemplate):
     self.column_panel_10.visible = False    
     self.column_panel_04.visible = False
     self.column_panel_12.visible = True
-
-  def land_type_btn_click(self, **event_args):
-    """This method is called when the button is clicked"""
-    entered_data = self.text_box_01_copy_copy.text.strip()
-    if not entered_data:
-        alert("Please enter a valid data.")
-        return
-    new_row = app_tables.fin_borrower_land_type.add_row(land_type=entered_data)
-    self.text_box_01_copy_copy.text = ' '
-    self.refresh()
 
 
 

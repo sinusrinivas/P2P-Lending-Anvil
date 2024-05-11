@@ -27,7 +27,7 @@ components:
     layout_properties: {grid_position: 'NQKSIL,QPWAXE'}
     components: []
   - name: content_panel_copy_copy_3_copy_3_copy_copy_copy_copy
-    properties: {col_widths: '{"LRMGVL":11,"PPLSYB":11,"FPVXBC":11,"GBAJZY":10}',
+    properties: {col_widths: '{"LRMGVL":12,"PPLSYB":12,"FPVXBC":12,"GBAJZY":11}',
       background: '', role: null}
     type: ColumnPanel
     layout_properties: {grid_position: 'SLHNUD,AETVQH', full_width_row: true, row_background: '#Edf0f4'}
@@ -42,8 +42,7 @@ components:
       layout_properties: {grid_position: 'LKTWOF,LRMGVL TFYOZD,THGIQV'}
       components:
       - name: image_4_copy
-        properties: {source: _/theme/approved loans.jpg, display_mode: shrink_to_fit,
-          height: '100'}
+        properties: {source: _/theme/bank_2.png, display_mode: shrink_to_fit, height: '100'}
         type: Image
         layout_properties: {grid_position: 'QGZTNW,PVJEPO'}
       - name: button_9
@@ -94,7 +93,7 @@ components:
       layout_properties: {grid_position: 'LKTWOF,PPLSYB IRSXYL,KKSDLA'}
       components:
       - name: image_4_copy_3
-        properties: {source: _/theme/Rejected loans.png, display_mode: shrink_to_fit,
+        properties: {source: _/theme/loan rejeted.jpg, display_mode: shrink_to_fit,
           height: '100'}
         type: Image
         layout_properties: {grid_position: 'QGZTNW,PVJEPO'}
@@ -113,7 +112,7 @@ components:
       layout_properties: {grid_position: 'LKTWOF,PPLSYB KKXABX,ZHURYQ'}
       components:
       - name: image_4_copy_10
-        properties: {source: _/theme/lapsed loan.png, display_mode: shrink_to_fit,
+        properties: {source: _/theme/loan_5955575.png, display_mode: shrink_to_fit,
           height: '100'}
         type: Image
         layout_properties: {grid_position: 'QGZTNW,PVJEPO'}
@@ -132,7 +131,8 @@ components:
       layout_properties: {grid_position: 'LKTWOF,PPLSYB WFLIIA,WAOXLB'}
       components:
       - name: image_4
-        properties: {source: _/theme/ots.png, display_mode: shrink_to_fit, height: '100'}
+        properties: {source: _/theme/trustworthiness.png, display_mode: shrink_to_fit,
+          height: '100'}
         type: Image
         layout_properties: {grid_position: 'QGZTNW,PVJEPO'}
       - name: button_19
@@ -147,7 +147,7 @@ components:
       layout_properties: {grid_position: 'LKTWOF,FPVXBC FZRSVY,NIONJZ'}
       components:
       - name: image_4_copy_5
-        properties: {source: _/theme/under process loan2.png, display_mode: shrink_to_fit,
+        properties: {source: _/theme/under process loanss.jpg, display_mode: shrink_to_fit,
           height: '100'}
         type: Image
         layout_properties: {grid_position: 'QGZTNW,PVJEPO'}
@@ -186,7 +186,8 @@ components:
       layout_properties: {grid_position: 'LKTWOF,GBAJZY ZQQIVR,ENGAGN'}
       components:
       - name: image_4_copy_7
-        properties: {source: _/theme/open loan.png, display_mode: shrink_to_fit, height: '100'}
+        properties: {source: _/theme/unsecured-loan.png, display_mode: shrink_to_fit,
+          height: '100'}
         type: Image
         layout_properties: {grid_position: 'QGZTNW,PVJEPO'}
       - name: button_12
