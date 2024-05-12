@@ -94,15 +94,15 @@ components:
     layout_properties: {x: 419, y: 302.984375, width: 184.89998474121091}
   - name: label_4_copy_1_copy
     properties: {role: null, align: left, tooltip: '', border: '', foreground: white,
-      visible: true, text: Now invest with the largest P2P Lending platform in India. Go with the most preferred non-market linked investment instrument that gives you risk adjusted returns.,
+      visible: true, text: Now invest with the largest Ascends P2P Lending platform in India. Go with the most preferred non-market linked investment instrument that gives you risk adjusted returns.,
       font_size: 25, font: '', spacing_above: small, icon_align: left, spacing_below: small,
       italic: false, background: '', bold: false, underline: false, icon: ''}
     type: Label
     layout_properties: {x: 732.800048828125, y: 170.3499984741211, width: 616}
   - name: label_4_copy_1
     properties: {role: null, align: left, tooltip: '', border: '', foreground: white,
-      visible: true, text: Earn up to 15% p.a.* with P2P Lending, font_size: 35, font: '',
-      spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+      visible: true, text: Earn up to 15% p.a.* with Ascends P2P Lending, font_size: 35,
+      font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
       background: '', bold: false, underline: false, icon: ''}
     type: Label
     layout_properties: {x: 733.8499877937138, y: 41.15000610426068, width: 555.7999877929688}
@@ -283,7 +283,7 @@ components:
   type: Spacer
   layout_properties: {grid_position: 'IVNNMQ,PTSXGH'}
 - name: label_31
-  properties: {text: 'With GTPL, you can lend capital to borrowers and earn fixed
+  properties: {text: 'With Ascend, you can lend capital to borrowers and earn fixed
       returns on your investments, invest across multiple products and earn up to
       15.4% in ROI and for flexible tenure from just 3 months to 36 months and create
       a seamless passive income with regular monthly repayments.', font_size: 25,
@@ -310,7 +310,7 @@ components:
     layout_properties: {x: 10, y: 93.3375244140625, width: 291.66668701171875}
   - name: label_35
     properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
-      visible: true, text: 'Kotak is an easy to use platform to invest money online,
+      visible: true, text: 'Ascend is an easy to use platform to invest money online,
         get your dedicated wealth manager to build and diversify your portfolio',
       font_size: 18, font: '', spacing_above: small, icon_align: left, spacing_below: small,
       italic: false, background: '', bold: false, underline: false, icon: ''}
@@ -331,7 +331,7 @@ components:
     layout_properties: {x: 18.662506103515625, y: 95.3375244140625, width: 270.5}
   - name: label_37
     properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
-      visible: true, text: 'Earn up to 2.5 times more of your FD returns with Lendbox
+      visible: true, text: 'Earn up to 2.5 times more of your FD returns with Ascend
         low risk investment investment options, a safer and smarter way to multiply
         your savings', font_size: 18, font: '', spacing_above: small, icon_align: left,
       spacing_below: small, italic: false, background: '', bold: false, underline: false,
