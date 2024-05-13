@@ -421,7 +421,8 @@ class check_out(check_outTemplate):
                         else:
                             # Create a new row if lender doesn't exist
                             app_tables.fin_lender.add_row(customer_id=lender_id, return_on_investment=total_returns)
-                          
+
+                      
 
                     # self.update_payment_status()
 
@@ -484,6 +485,13 @@ class check_out(check_outTemplate):
                     self.selected_row['next_payment'] = next_next_payment
                     self.selected_row.update()
 
+                    foreclosure_row = 
+                    if foreclosure_row is not None and foreclosure_row['status'] == 'under process':
+                        # Update status to 'rejected'
+                        foreclosure_row['status'] = 'rejected'
+                        foreclosure_row.update()
+
+                  
                     if self.foreclosure_condition_satisfied(loan_id, current_emi_number):
                       self.update_loan_status(loan_id, 'close')
 
@@ -533,3 +541,15 @@ class check_out(check_outTemplate):
     #   for loan_detail in loan_details:
     #     loan_detail['payment_status'] = True
     #     loan_detail.update()
+
+
+    # def get_foreclosure_details_for_status_rejection(self, loan_id, emi_number):
+    #   foreclosure_row = app_tables.fin_foreclosure.get(
+    #       loan_id=loan_id,
+    #       foreclosure_emi_num=emi_number,
+    #   )
+      
+    #   if foreclosure_row is not None :
+    #       return foreclosure_row
+    #   else:
+    #       return None
