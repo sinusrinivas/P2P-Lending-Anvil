@@ -61,7 +61,9 @@ class borrower_foreclosure(borrower_foreclosureTemplate):
             self.button_2.visible = False
             self.button_3.visible = False
             self.label_5.visible = True
-            self.button_5.visible = True
+            self.button_5.visible = False
+            self.foreclose_again.visible = True
+            self.foreclose_back.visible = True
         else:
             # If there is no approved or reject status, check if the loan ID is in foreclosure table
             existing_requests = app_tables.fin_foreclosure.search(loan_id=loan_id)
@@ -148,3 +150,18 @@ class borrower_foreclosure(borrower_foreclosureTemplate):
     def button_5_click(self, **event_args):
         """This method is called when the button is clicked"""
         open_form('borrower.dashboard.foreclosure_request')
+
+    def foreclose_again_click(self, **event_args):
+        """This method is called when the button is clicked"""
+        selected_row = self.selected_row
+        # loan_id = selected_row['loan_id']
+        # total_payments_made = self.loan_details_row['total_payments_made']
+        if self.total_payments_made >= self.min_months:
+            open_form('borrower.dashboard.foreclosure_request.borrower_foreclosure.foreclose',  selected_row=selected_row, total_payments_made=self.total_payments_made)
+        else:
+            alert('You are not eligible for foreclosure! You have to pay at least ' + str(self.min_months) + ' months.')
+            open_form('borrower.dashboard.foreclosure_request')
+
+    def again_back_click(self, **event_args):
+      """This method is called when the button is clicked"""
+      open_form('borrower.dashboard.foreclosure_request')

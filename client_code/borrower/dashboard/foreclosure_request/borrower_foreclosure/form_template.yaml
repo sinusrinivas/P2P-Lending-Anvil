@@ -211,6 +211,22 @@ components:
     name: button_3
     layout_properties: {grid_position: 'EPMBBH,THMKIF'}
     event_bindings: {click: button_3_click}
+  - name: foreclose_back
+    properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
+      foreground: 'theme:On Primary', visible: false, text: Back, font_size: null,
+      font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+      background: '#0b2547', bold: true, underline: false, icon: 'fa:angle-double-left'}
+    type: Button
+    layout_properties: {grid_position: 'MWLAGS,YPXXLN'}
+    event_bindings: {click: again_back_click}
+  - name: foreclose_again
+    properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
+      foreground: 'theme:On Primary', visible: false, text: FORECLOSE AGAIN, font_size: null,
+      font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+      background: '#0b2547', bold: true, underline: false, icon: ''}
+    type: Button
+    layout_properties: {grid_position: 'MWLAGS,AZVKKM'}
+    event_bindings: {click: foreclose_again_click}
 - type: FlowPanel
   properties: {}
   name: navbar_links
