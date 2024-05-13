@@ -1,7 +1,7 @@
 is_package: true
 container:
   type: ColumnPanel
-  properties: {col_widths: '{"VBIRYZ":50,"MCLQCM":60,"SKVUZK":10,"EICYCB":50}'}
+  properties: {col_widths: '{"VBIRYZ":50,"MCLQCM":60,"SKVUZK":10,"EICYCB":38,"NBRPEU":45,"LYBPDC":7,"YKHSER":8,"RFJCAF":10,"LWORUH":50,"BHOXKV":15,"UBGOIF":45,"HUCKZQ":20}'}
 components:
 - properties: {align: justify, spacing_above: none, spacing_below: none}
   type: FlowPanel
@@ -93,130 +93,187 @@ components:
   layout_properties: {grid_position: 'YQPTRQ,ZFVSXX', full_width_row: true}
   name: spacer_1
 - name: content_panel_copy_3
-  properties: {col_widths: '{}'}
+  properties: {col_widths: '{"YXQMZU":45,"CHNNLA":15,"OHZSYC":45,"EOEYGI":15,"YNUSTO":45,"TGYSCZ":15,"TRRXRD":45,"EGWXJB":15,"SFHJNS":45,"TZYAXL":15,"PGYUMF":45,"SRZLUY":15,"VEOGOV":45,"LUXDGV":15,"PCKMGS":45,"HWFJNP":15,"QTCHNM":45}'}
   type: ColumnPanel
   layout_properties: {grid_position: 'XJNATW,SKVUZK', full_width_row: true}
   components:
-  - name: button_9
-    properties: {text: Dashboard, align: left, foreground: black, bold: true, icon: ''}
-    type: Button
-    layout_properties: {grid_position: 'TVVDON,YXQMZU', full_width_row: true}
+  - name: content_panel_copy_2_copy
+    properties: {col_widths: '{"IIHFDZ":60,"JIORHO":20}'}
+    type: ColumnPanel
+    layout_properties: {grid_position: 'TVVDON,YXQMZU'}
+    components:
+    - name: image_2
+      properties: {height: '40', source: _/theme/data-strategy.png, display_mode: shrink_to_fit}
+      type: Image
+      layout_properties: {grid_position: 'CULWTZ,JIORHO'}
+    - name: button_9
+      properties: {text: Dashboard, align: left, foreground: black, bold: true, icon: ''}
+      type: Button
+      layout_properties: {grid_position: 'CULWTZ,IIHFDZ JTHVIE,WMTUUU'}
+  - name: image_3
+    properties: {height: '40', source: _/theme/other loan.png}
+    type: Image
+    layout_properties: {grid_position: 'JRTGWO,CHNNLA'}
   - name: button_1
     properties: {text: New Loan Request, align: left, foreground: black, bold: true,
       icon: '', visible: true}
     type: Button
     layout_properties: {grid_position: 'JRTGWO,OHZSYC', full_width_row: true}
+  - name: image_4
+    properties: {height: '40'}
+    type: Image
+    layout_properties: {grid_position: 'KMQVGZ,EOEYGI'}
   - name: button_2
     properties: {text: Today's  Due, align: left, bold: true, foreground: black}
     type: Button
     layout_properties: {grid_position: 'KMQVGZ,YNUSTO', full_width_row: true}
+  - name: image_5
+    properties: {height: '40'}
+    type: Image
+    layout_properties: {grid_position: 'BBNVSF,TGYSCZ'}
   - name: button_3
     properties: {text: 'View  Loans ', align: left, foreground: black, bold: true}
     type: Button
     layout_properties: {grid_position: 'BBNVSF,TRRXRD', full_width_row: true}
+  - name: image_7
+    properties: {height: '40'}
+    type: Image
+    layout_properties: {grid_position: 'IXDBCZ,EGWXJB'}
   - name: button_4_copy
     properties: {text: ' Loan Foreclosure', align: left, bold: true, foreground: black}
     type: Button
     layout_properties: {grid_position: 'IXDBCZ,SFHJNS', full_width_row: true}
+  - name: image_6
+    properties: {height: '40'}
+    type: Image
+    layout_properties: {grid_position: 'OQIIWH,TZYAXL'}
   - name: button_5
     properties: {text: 'Application Tracker ', align: left, foreground: black, bold: true}
     type: Button
     layout_properties: {grid_position: 'OQIIWH,PGYUMF', full_width_row: true}
+  - name: image_8
+    properties: {height: '40'}
+    type: Image
+    layout_properties: {grid_position: 'RKKUUW,SRZLUY'}
   - name: button_6_copy
     properties: {text: 'Loan  Extension  ', align: left, foreground: black, bold: true}
     type: Button
     layout_properties: {grid_position: 'RKKUUW,VEOGOV', full_width_row: true}
+  - name: image_9
+    properties: {height: '40'}
+    type: Image
+    layout_properties: {grid_position: 'QHSUTS,LUXDGV'}
   - name: button_7
     properties: {text: View Transaction History, align: left, bold: true, foreground: black}
     type: Button
     layout_properties: {grid_position: 'QHSUTS,PCKMGS', full_width_row: true}
+  - name: image_10
+    properties: {height: '40'}
+    type: Image
+    layout_properties: {grid_position: 'TRWKIA,HWFJNP'}
   - name: button_8
     properties: {text: Discount Coupons, align: left, bold: true, foreground: black}
     type: Button
     layout_properties: {grid_position: 'TRWKIA,QTCHNM', full_width_row: true}
-- name: content_panel_copy_3_copy
-  properties: {col_widths: '{"STBGUY":50,"QKUMHD":55}'}
-  type: ColumnPanel
-  layout_properties: {grid_position: 'XJNATW,EICYCB FXZWOG,VWJSUA'}
-  components:
-  - name: button_10
-    properties: {text: '', icon: 'fa:bell', foreground: black, font_size: 32, bold: true,
-      align: right}
-    type: Button
-    layout_properties: {grid_position: 'ZJPBXU,QCGWUZ'}
-- name: content_panel
-  properties: {col_widths: '{"STBGUY":85,"QKUMHD":75,"CIGREG":15,"DAAKUC":10}'}
-  type: ColumnPanel
-  layout_properties: {grid_position: 'XJNATW,EICYCB KWWGCH,BYSITV', full_width_row: true}
-  components:
-  - name: spacer_1_copy
-    properties: {height: '2'}
-    type: Spacer
-    layout_properties: {grid_position: 'PZLECF,STBGUY LYRXWC,QKUMHD'}
-  - name: image_1
-    properties: {height: 77.25, source: _/theme/add-product.png, horizontal_align: right}
-    type: Image
-    layout_properties: {grid_position: 'PZLECF,STBGUY LYRXWC,DAAKUC'}
-  - name: name
-    properties: {text: Rahul Ganiger, align: right}
-    type: Label
-    layout_properties: {grid_position: 'PZLECF,CIGREG KRRTGP,IPVWFB'}
-  - name: label_1
-    properties: {text: Borrower, align: right}
-    type: Label
-    layout_properties: {grid_position: 'PZLECF,CIGREG OGFRRG,TJWJRV'}
+- name: button_10
+  properties: {text: '', icon: 'fa:bell', foreground: black, font_size: 32, bold: true,
+    align: right}
+  type: Button
+  layout_properties: {grid_position: 'XJNATW,EICYCB OLAXPQ,NBRPEU'}
+- name: image_1
+  properties: {height: '60', source: _/theme/add-product.png, horizontal_align: center}
+  type: Image
+  layout_properties: {grid_position: 'XJNATW,EICYCB OLAXPQ,LYBPDC'}
+- name: spacer_2
+  properties: {height: 5.25}
+  type: Spacer
+  layout_properties: {grid_position: 'XJNATW,EICYCB OLAXPQ,YKHSER RRGJGX,MNNZWQ'}
+- name: name
+  properties: {text: Rahul Ganiger, align: left, font_size: 16, bold: true}
+  type: Label
+  layout_properties: {grid_position: 'XJNATW,EICYCB OLAXPQ,YKHSER DNJCUN,EHLUVZ'}
+- name: image_1_copy_copy
+  properties: {height: 143.25, source: _/theme/add-product.png, horizontal_align: center}
+  type: Image
+  layout_properties: {grid_position: 'XJNATW,EICYCB GDHSWL,RFJCAF QNIDJV,AEDETS'}
+- name: button_12
+  properties: {text: View profile, bold: false, foreground: Black, font_size: 16}
+  type: Button
+  layout_properties: {grid_position: 'XJNATW,EICYCB GDHSWL,RFJCAF JHNJQY,ZSAVAQ'}
+- name: label_2_copy
+  properties: {text: Welcome Rahul Ganiger, align: left, bold: true, font_size: 26}
+  type: Label
+  layout_properties: {grid_position: 'XJNATW,EICYCB GDHSWL,LWORUH IEEIQV,NJVGEL'}
+- name: label_6
+  properties: {text: 'Mobile No :', bold: true, font_size: 16}
+  type: Label
+  layout_properties: {grid_position: 'XJNATW,EICYCB GDHSWL,LWORUH PATSWD,BHOXKV SEMPGY,RNRKGL'}
+- name: label_2
+  properties: {text: 'Member Since :', bold: true, font_size: 16}
+  type: Label
+  layout_properties: {grid_position: 'XJNATW,EICYCB GDHSWL,LWORUH PATSWD,BHOXKV DPRJTX,UVQLFS'}
+- name: label_3
+  properties: {text: '7026542951', font_size: 16}
+  type: Label
+  layout_properties: {grid_position: 'XJNATW,EICYCB GDHSWL,LWORUH PATSWD,UBGOIF XMNMGS,QKJAYB
+      QOEMYD,PHXFAC'}
+- name: label_7
+  properties: {text: 1 sep 2022, font_size: 16}
+  type: Label
+  layout_properties: {grid_position: 'XJNATW,EICYCB GDHSWL,LWORUH PATSWD,UBGOIF XMNMGS,QKJAYB
+      VEPOLP,JFTIRZ'}
+- name: label_4
+  properties: {text: 'Credit Limit :', bold: true, font_size: 16}
+  type: Label
+  layout_properties: {grid_position: 'XJNATW,EICYCB GDHSWL,LWORUH PATSWD,UBGOIF XMNMGS,DCWODV
+      NEGQGP,CVCAKM'}
+- name: label_1
+  properties: {text: 'Available Balance :', bold: true, font_size: 16}
+  type: Label
+  layout_properties: {grid_position: 'XJNATW,EICYCB GDHSWL,LWORUH PATSWD,UBGOIF XMNMGS,DCWODV
+      WKWXGE,HMVRJG'}
+- name: label_5
+  properties: {text: '500000', font_size: 16}
+  type: Label
+  layout_properties: {grid_position: 'XJNATW,EICYCB GDHSWL,LWORUH PATSWD,UBGOIF XMNMGS,GVQREJ
+      YOSMCJ,DZTVRG'}
+- name: label_8
+  properties: {text: '10000', font_size: 16}
+  type: Label
+  layout_properties: {grid_position: 'XJNATW,EICYCB GDHSWL,LWORUH PATSWD,UBGOIF XMNMGS,GVQREJ
+      VXFYDN,JQAYXD'}
+- name: spacer_3
+  properties: {height: 11.249969482421875}
+  type: Spacer
+  layout_properties: {grid_position: 'XJNATW,EICYCB GDHSWL,LWORUH PATSWD,HUCKZQ GPJHZI,YLRAMC'}
+- name: button_11
+  properties: {text: New Loan Request, role: filled-button, align: left, font_size: 16}
+  type: Button
+  layout_properties: {grid_position: 'XJNATW,EICYCB GDHSWL,LWORUH PATSWD,HUCKZQ ZFWXBA,WKCVOT'}
 - name: content_panel_copy_2
-  properties: {col_widths: '{"PIZGCZ":15,"EQEFWQ":25,"MCQYSV":40,"UGPTKN":30,"HPFPXO":30,"OBGGYQ":30,"SZEUZI":30}'}
+  properties: {col_widths: '{"MCQYSV":40}'}
   type: ColumnPanel
-  layout_properties: {grid_position: 'XJNATW,EICYCB LBOUSA,PBPXQN', full_width_row: true}
+  layout_properties: {grid_position: 'XJNATW,EICYCB LBOUSA,PBPXQN', full_width_row: false}
+  components: []
+- name: data_grid_1
+  properties:
+    columns:
+    - {id: JKSDUP, title: Loan Id, data_key: column_1}
+    - {id: VJQQOR, title: Loan Amount, data_key: column_2}
+    - {id: OJLQEN, title: Tenure, data_key: column_3}
+    - {id: GAVKHZ, data_key: column_4, title: 'Interest  '}
+    - {id: NJWOLU, data_key: column_5, title: Repayment Amount}
+    - {id: LMSEMV, data_key: column_6, title: Due Date}
+    - {id: RNOHUR, data_key: column_7, title: Actions}
+  type: DataGrid
   components:
-  - name: image_1_copy_copy
-    properties: {height: 143.25, source: _/theme/add-product.png, horizontal_align: center}
-    type: Image
-    layout_properties: {grid_position: 'ZRYIQN,PIZGCZ VZGNHO,EIDZWP'}
-  - name: label_2_copy
-    properties: {text: Welcome Rahul Ganiger}
-    type: Label
-    layout_properties: {grid_position: 'ZRYIQN,EQEFWQ HLWCOB,MCOLHJ'}
-  - name: label_6
-    properties: {text: 'Mobile No :'}
-    type: Label
-    layout_properties: {grid_position: 'ZRYIQN,EQEFWQ YZDROB,ZOCEXQ'}
-  - name: label_3
-    properties: {text: '7026542951'}
-    type: Label
-    layout_properties: {grid_position: 'ZRYIQN,EQEFWQ YZDROB,RRJSIP'}
-  - name: label_2
-    properties: {text: 'Member Since :'}
-    type: Label
-    layout_properties: {grid_position: 'ZRYIQN,EQEFWQ PSEQCW,OBGGYQ'}
-  - name: label_7
-    properties: {text: 1 sep 2022}
-    type: Label
-    layout_properties: {grid_position: 'ZRYIQN,EQEFWQ PSEQCW,SZEUZI'}
-  - name: label_4
-    properties: {text: 'Credit Limit :'}
-    type: Label
-    layout_properties: {grid_position: 'ZRYIQN,EQEFWQ XPBJON,UGPTKN'}
-  - name: label_5
-    properties: {text: '500000'}
-    type: Label
-    layout_properties: {grid_position: 'ZRYIQN,EQEFWQ XPBJON,HPFPXO'}
-  - name: borrower_name_copy
-    properties: {align: center, text: View Profile}
-    type: Label
-    layout_properties: {grid_position: 'ZRYIQN,PIZGCZ OLYQKL,YGWYGM'}
-  - name: label_3_copy
-    properties: {text: ''}
-    type: Label
-    layout_properties: {grid_position: 'ZRYIQN,MCQYSV MCTVSB,OBPBUV'}
-  - name: button_11
-    properties: {text: New Loan Request, role: filled-button}
-    type: Button
-    layout_properties: {grid_position: 'ZRYIQN,MCQYSV LPOSJJ,FYFLSC'}
+  - name: repeating_panel_1
+    properties: {item_template: borrower.dashboard.RowTemplate7}
+    type: RepeatingPanel
+  layout_properties: {grid_position: 'XJNATW,EICYCB WYXQXG,WVXVAQ'}
 - properties: {}
   type: GridPanel
-  layout_properties: {grid_position: 'IYGSYO,LDYVMS', full_width_row: false}
+  layout_properties: {grid_position: 'XJNATW,EICYCB RCNMIR,HYOBDM'}
   name: grid_panel_2
   components:
   - properties: {role: outlined-button, align: center, tooltip: '', border: '', enabled: true,

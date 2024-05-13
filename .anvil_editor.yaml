@@ -382,6 +382,7 @@ unique_ids:
     borrower.ots_dashboard.ItemTemplate97: '1712122358046587469434273.9945'
     lendor.dashboard.lender_portfolio: '1715250231366538983216292.9'
     admin.dashboard.loan_management.closed_loans.view_profile_5: '1701079991010941258272977.0447'
+    borrower.dashboard.RowTemplate7: '1715581693472383574972751.3131'
     admin.dashboard.loan_management.lapsed_loans.ItemTemplate23: '170712932240636529702505.68765'
     admin.dashboard.manage_bessem.view_bessem_subcategory.ItemTemplate38: '17095388729813876844709.4927883'
     admin.dashboard.manage_cms.add_lender_dropdown_details.lending_type: '1706532092749385411492768.6154'
@@ -742,6 +743,7 @@ unique_ids:
     term-loan.png: '1715162710428483487208974.1711'
     india map.png: '1711965661355978149188211.9548'
     icons8-exchange-rupee-100 (1).png: '1712205769260984137365930.8503'
+    data-strategy.png: '1715582445833417032744668.0615'
     prepayment.png: '1712901334533389689194545.02'
     ots.png: '1714739838107963908665181.7563'
     add product gp and categories.png: 4V2UI2IK7ETQ6LZOBC2GTAP7EZVUQP42
