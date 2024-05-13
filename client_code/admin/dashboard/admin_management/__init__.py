@@ -6,7 +6,7 @@ import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 from .add_admin import add_admin
-from ....borrower_registration_form.dashboard import main_form_module
+from ....borrower.dashboard import main_form_module
 
 class admin_management(admin_managementTemplate):
     def __init__(self, **properties):
