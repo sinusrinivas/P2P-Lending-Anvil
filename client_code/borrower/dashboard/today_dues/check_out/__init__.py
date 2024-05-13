@@ -485,7 +485,7 @@ class check_out(check_outTemplate):
                     self.selected_row['next_payment'] = next_next_payment
                     self.selected_row.update()
 
-                    foreclosure_row = 
+                    foreclosure_row = app_tables.fin_fo
                     if foreclosure_row is not None and foreclosure_row['status'] == 'under process':
                         # Update status to 'rejected'
                         foreclosure_row['status'] = 'rejected'
