@@ -233,7 +233,7 @@ components:
     event_bindings: {click: button_2_copy_click}
   - name: button_3_copy
     properties: {text: Lost Opportunities (), foreground: white, align: full, role: null,
-      background: '#800080', bold: true}
+      background: '#800080', bold: true, tooltip: ''}
     type: Button
     layout_properties: {grid_position: 'GWOXFQ,ULDUEY'}
     event_bindings: {click: button_3_copy_click}
