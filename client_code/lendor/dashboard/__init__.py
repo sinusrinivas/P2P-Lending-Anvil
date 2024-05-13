@@ -35,10 +35,13 @@ class dashboard(dashboardTemplate):
         # Set the column_panel_3 to full height initially
         # self.column_panel_3.height = '100%'
         # self.spacer_2.height = '100%'
+        
+        
 
     def load_data(self,status):
         if status == 'close':
             closed_loans = app_tables.fin_loan_details.search(loan_updated_status=q.like('close%'), lender_customer_id=self.user_id)
+            self.new_loan =len(closed_loans)
             self.repeating_panel_1.items = self.process_data(closed_loans)
         elif status == 'disbursed loan':
             disbursed_loans = app_tables.fin_loan_details.search(loan_updated_status=q.like('disbursed loan%'), lender_customer_id=self.user_id)
