@@ -8,7 +8,7 @@ from anvil.tables import app_tables
 from datetime import date, datetime
 from ..... import admin
 import re
-from .....borrower_registration_form.dashboard import main_form_module
+from .....borrower.dashboard import main_form_module
 
 class add_admin(add_adminTemplate):
     def __init__(self, **properties):
