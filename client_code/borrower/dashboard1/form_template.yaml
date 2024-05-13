@@ -12,53 +12,15 @@ components:
     properties: {}
     type: form:borrower.logout
 - name: column_panel_1
-  properties: {col_widths: '{"UGMJQM":50,"PUYYDU":50,"RLHAOX":50,"XUABTX":50,"FDHHDM":50,"MKLJAL":50,"LYYLFM":10,"PALORM":50,"AEXEGV":50,"QCJFYS":51}',
-    role: null}
+  properties: {col_widths: '{"PALORM":50}', role: null}
   type: ColumnPanel
   layout_properties: {slot: left-nav}
   components:
   - name: content_panel_copy
-    properties: {col_widths: '{"XMODLI":9,"FDXXBX":51}'}
+    properties: {col_widths: '{"FDXXBX":51}'}
     type: ColumnPanel
     layout_properties: {grid_position: 'UXLHHC,LDUNPY'}
-    components:
-    - name: button_9
-      properties: {text: Dashboard, align: left, foreground: black, bold: true, icon: ''}
-      type: Button
-      layout_properties: {grid_position: 'PEOWCO,FDXXBX'}
-  - name: button_1
-    properties: {text: New Loan Request, align: left, foreground: black, bold: true,
-      icon: '', visible: true}
-    type: Button
-    layout_properties: {grid_position: 'JLNIOV,AEXEGV'}
-  - name: button_2
-    properties: {text: Today's  Due, align: left, bold: true, foreground: black}
-    type: Button
-    layout_properties: {grid_position: 'EZOLKQ,UGMJQM'}
-  - name: button_3
-    properties: {text: 'View  Loans ', align: left, foreground: black, bold: true}
-    type: Button
-    layout_properties: {grid_position: 'BQSZQM,PUYYDU'}
-  - name: button_4
-    properties: {text: ' Loan Foreclosure', align: left, bold: true, foreground: black}
-    type: Button
-    layout_properties: {grid_position: 'XXJRMN,RLHAOX'}
-  - name: button_5
-    properties: {text: 'Application Tracker ', align: left, foreground: black, bold: true}
-    type: Button
-    layout_properties: {grid_position: 'BLCQRB,XUABTX'}
-  - name: button_6
-    properties: {text: 'Loan  Extension  ', align: left, foreground: black, bold: true}
-    type: Button
-    layout_properties: {grid_position: 'NTFRHL,FDHHDM'}
-  - name: button_7
-    properties: {text: View Transaction History, align: left, bold: true, foreground: black}
-    type: Button
-    layout_properties: {grid_position: 'MGOLUZ,MKLJAL'}
-  - name: button_8
-    properties: {text: Discount Coupons, align: left, bold: true, foreground: black}
-    type: Button
-    layout_properties: {grid_position: 'IRLZKK,PALORM', full_width_row: false}
+    components: []
 - type: ColumnPanel
   properties: {col_widths: '{"STBGUY":50,"AJQRHV":10,"QKUMHD":55,"MTQXHM":5}'}
   name: content_panel
@@ -85,6 +47,11 @@ components:
     properties: {text: Borrower, align: left}
     type: Label
     layout_properties: {grid_position: 'PZLECF,AJQRHV OVKVJU,GBJPXK'}
+- name: content_panel_copy_3
+  properties: {col_widths: '{"STBGUY":50,"QKUMHD":55}'}
+  type: ColumnPanel
+  layout_properties: {slot: default}
+  components: []
 - name: image_1_copy_copy_1_copy
   properties: {role: null, vertical_align: center, height: 39, tooltip: '', border: '',
     foreground: '', visible: true, display_mode: shrink_to_fit, spacing_above: small,
@@ -92,57 +59,3 @@ components:
     spacing_below: small, background: '', horizontal_align: left}
   type: Image
   layout_properties: {slot: title}
-- name: content_panel_copy_2
-  properties: {col_widths: '{"PIZGCZ":20,"EQEFWQ":20,"MCQYSV":40,"BDYJNG":40,"UGPTKN":30,"HPFPXO":30,"OBGGYQ":30,"SZEUZI":30}'}
-  type: ColumnPanel
-  layout_properties: {slot: default}
-  components:
-  - name: image_1_copy_copy
-    properties: {height: 143.25, source: _/theme/add-product.png, horizontal_align: center}
-    type: Image
-    layout_properties: {grid_position: 'ZRYIQN,PIZGCZ VZGNHO,EIDZWP'}
-  - name: label_2_copy
-    properties: {text: Welcome Rahul Ganiger}
-    type: Label
-    layout_properties: {grid_position: 'ZRYIQN,EQEFWQ HLWCOB,MCOLHJ'}
-  - name: label_6
-    properties: {text: 'Mobile No :'}
-    type: Label
-    layout_properties: {grid_position: 'ZRYIQN,EQEFWQ YZDROB,ZOCEXQ'}
-  - name: label_3
-    properties: {text: '7026542951'}
-    type: Label
-    layout_properties: {grid_position: 'ZRYIQN,EQEFWQ YZDROB,RRJSIP'}
-  - name: label_2
-    properties: {text: 'Member Since :'}
-    type: Label
-    layout_properties: {grid_position: 'ZRYIQN,EQEFWQ PSEQCW,OBGGYQ'}
-  - name: label_7
-    properties: {text: 1 sep 2022}
-    type: Label
-    layout_properties: {grid_position: 'ZRYIQN,EQEFWQ PSEQCW,SZEUZI'}
-  - name: label_4
-    properties: {text: 'Credit Limit :'}
-    type: Label
-    layout_properties: {grid_position: 'ZRYIQN,EQEFWQ XPBJON,UGPTKN'}
-  - name: label_5
-    properties: {text: '500000'}
-    type: Label
-    layout_properties: {grid_position: 'ZRYIQN,EQEFWQ XPBJON,HPFPXO'}
-  - name: borrower_name_copy
-    properties: {align: center, text: View Profile}
-    type: Label
-    layout_properties: {grid_position: 'ZRYIQN,PIZGCZ OLYQKL,YGWYGM'}
-  - name: label_3_copy
-    properties: {text: ''}
-    type: Label
-    layout_properties: {grid_position: 'ZRYIQN,MCQYSV MCTVSB,OBPBUV'}
-  - name: button_11
-    properties: {text: New Loan Request, role: filled-button}
-    type: Button
-    layout_properties: {grid_position: 'ZRYIQN,MCQYSV LPOSJJ,FYFLSC'}
-- name: content_panel_copy_3
-  properties: {col_widths: '{"STBGUY":50,"QKUMHD":55}'}
-  type: ColumnPanel
-  layout_properties: {slot: default}
-  components: []
