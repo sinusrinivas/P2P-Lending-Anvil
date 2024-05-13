@@ -1,3 +1,4 @@
+
 from ._anvil_designer import dashboardTemplate
 from anvil import *
 import anvil.tables as tables
@@ -178,3 +179,12 @@ class dashboard(dashboardTemplate):
         self.repeating_panel_1.visible = True
         self.load_data('extension')
 
+    def button_1_click(self, **event_args):
+      self.View_Loan_Requests.visible = True
+      self.View_Loan_Extension.visible = True
+      self.View_Loan_Foreclosure.visible = True
+      self.Todays_Due.visible = True
+      self.View_Loans.visible = True
+      self.View_Lost_Opportunities.visible = True
+      self.Change_Password.visible = True
+      self.
