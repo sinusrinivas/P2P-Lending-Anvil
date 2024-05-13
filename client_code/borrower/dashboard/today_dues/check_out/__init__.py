@@ -11,6 +11,8 @@ from datetime import datetime, timedelta
 from .. import main_form_module as main_form_module
 from datetime import date
 from ...Module1 import transfer_money_1
+from collections import defaultdict
+
 
 
 class check_out(check_outTemplate):
@@ -313,34 +315,31 @@ class check_out(check_outTemplate):
             loan_details['total_amount_paid'] += total_emi_amount
             loan_details.update()
 
-        # lender_customer_id = self.selected_row['lender_customer_id']
-
-        # # Query loan details table to find all loan IDs associated with the lender's customer ID
-        # loan_ids = [row['loan_id'] for row in app_tables.fin_loan_details.search(lender_customer_id=lender_customer_id)]
-
-        # # Initialize total lender returns
-        # total_lender_returns = 0.0
-
-        # # Iterate over each loan ID and retrieve the lender returns from the loan details table
-        # for loan_id in loan_ids:
-        #     lender_returns_row = app_tables.fin_loan_details.get(loan_id=loan_id)['lender_returns']
-        #     if lender_returns_row is not None:
-        #       lender_returns = lender_returns_row['lender_returns']
-        #       if lender_returns is not None:
-        #           total_lender_returns += lender_returns
-        #     else :
-        #         pass
+       
       
 
-        # Store total lender returns in the fin lender table under the lender's customer ID
-        lender_row = app_tables.fin_lender.get(customer_id=lender_customer_id)
-        if lender_row is not None:
-            lender_row['total_returns'] = total_lender_returns
-            lender_row.update()
-        else:
-            # If lender row doesn't exist, create a new row
-            app_tables.fin_lender.add_row(customer_id=lender_customer_id, total_returns=total_lender_returns)
-      
+        lender_returns_dict = defaultdict(float)
+
+        borrower_loans = app_tables.fin_loan_details.search(borrower_customer_id=self.selected_row['borrower_customer_id'])
+        for loan in borrower_loans:
+            lender_id = loan['lender_customer_id']
+            lender_returns = loan['lender_returns']
+            # Convert None to 0 for lender returns
+            if lender_returns is None:
+                lender_returns = 0
+            lender_returns_dict[lender_id] += lender_returns
+
+        # Update lender returns in the fin_lender table
+        for lender_id, total_returns in lender_returns_dict.items():
+            lender_row = app_tables.fin_lender.get(customer_id=lender_id)
+            if lender_row is not None:
+                if lender_row['return_on_investment'] is None:
+                    lender_row['return_on_investment'] = 0
+                lender_row['return_on_investment'] = total_returns
+                lender_row.update()
+            else:
+                # Create a new row if lender doesn't exist
+                app_tables.fin_lender.add_row(customer_id=lender_id, return_on_investment=total_returns)
         try:
             lapsed_fee = float(self.lapsed.text)
         except ValueError:
