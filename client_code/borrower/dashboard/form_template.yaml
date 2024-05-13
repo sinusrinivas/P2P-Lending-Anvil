@@ -88,35 +88,19 @@ components:
     type: Link
     event_bindings: {click: wallet_dashboard_link_click}
     name: wallet_dashboard_link
-- properties: {height: '20'}
-  type: Spacer
-  layout_properties: {grid_position: 'YQPTRQ,ZFVSXX', full_width_row: true}
-  name: spacer_1
 - name: content_panel_copy_3
-  properties: {col_widths: '{"YXQMZU":45,"CHNNLA":15,"OHZSYC":45,"EOEYGI":15,"YNUSTO":45,"TGYSCZ":15,"TRRXRD":45,"EGWXJB":15,"SFHJNS":45,"TZYAXL":15,"PGYUMF":45,"SRZLUY":15,"VEOGOV":45,"LUXDGV":15,"PCKMGS":45,"HWFJNP":15,"QTCHNM":45}'}
+  properties: {col_widths: '{"YXQMZU":45,"CHNNLA":15,"OHZSYC":45,"EOEYGI":15,"YNUSTO":45,"TGYSCZ":15,"TRRXRD":45,"EGWXJB":15,"SFHJNS":45,"TZYAXL":15,"PGYUMF":45,"SRZLUY":15,"VEOGOV":45,"LUXDGV":15,"PCKMGS":45,"HWFJNP":15,"QTCHNM":45}',
+    background: '#05264d'}
   type: ColumnPanel
   layout_properties: {grid_position: 'XJNATW,SKVUZK', full_width_row: true}
   components:
-  - name: content_panel_copy_2_copy
-    properties: {col_widths: '{"IIHFDZ":60,"JIORHO":20}'}
-    type: ColumnPanel
-    layout_properties: {grid_position: 'TVVDON,YXQMZU'}
-    components:
-    - name: image_2
-      properties: {height: '40', source: _/theme/data-strategy.png, display_mode: shrink_to_fit}
-      type: Image
-      layout_properties: {grid_position: 'CULWTZ,JIORHO'}
-    - name: button_9
-      properties: {text: Dashboard, align: left, foreground: black, bold: true, icon: ''}
-      type: Button
-      layout_properties: {grid_position: 'CULWTZ,IIHFDZ JTHVIE,WMTUUU'}
   - name: image_3
     properties: {height: '40', source: _/theme/other loan.png}
     type: Image
     layout_properties: {grid_position: 'JRTGWO,CHNNLA'}
   - name: button_1
-    properties: {text: New Loan Request, align: left, foreground: black, bold: true,
-      icon: '', visible: true}
+    properties: {text: New Loan Request, align: left, foreground: white, bold: true,
+      icon: '', visible: true, font_size: 16}
     type: Button
     layout_properties: {grid_position: 'JRTGWO,OHZSYC', full_width_row: true}
   - name: image_4
@@ -124,7 +108,7 @@ components:
     type: Image
     layout_properties: {grid_position: 'KMQVGZ,EOEYGI'}
   - name: button_2
-    properties: {text: Today's  Due, align: left, bold: true, foreground: black}
+    properties: {text: Today's  Due, align: left, bold: true, foreground: white, font_size: 16}
     type: Button
     layout_properties: {grid_position: 'KMQVGZ,YNUSTO', full_width_row: true}
   - name: image_5
@@ -132,7 +116,8 @@ components:
     type: Image
     layout_properties: {grid_position: 'BBNVSF,TGYSCZ'}
   - name: button_3
-    properties: {text: 'View  Loans ', align: left, foreground: black, bold: true}
+    properties: {text: 'View  Loans ', align: left, foreground: white, bold: true,
+      font_size: 16}
     type: Button
     layout_properties: {grid_position: 'BBNVSF,TRRXRD', full_width_row: true}
   - name: image_7
@@ -140,7 +125,8 @@ components:
     type: Image
     layout_properties: {grid_position: 'IXDBCZ,EGWXJB'}
   - name: button_4_copy
-    properties: {text: ' Loan Foreclosure', align: left, bold: true, foreground: black}
+    properties: {text: ' Loan Foreclosure', align: left, bold: true, foreground: white,
+      font_size: 16}
     type: Button
     layout_properties: {grid_position: 'IXDBCZ,SFHJNS', full_width_row: true}
   - name: image_6
@@ -148,7 +134,8 @@ components:
     type: Image
     layout_properties: {grid_position: 'OQIIWH,TZYAXL'}
   - name: button_5
-    properties: {text: 'Application Tracker ', align: left, foreground: black, bold: true}
+    properties: {text: 'Application Tracker ', align: left, foreground: white, bold: true,
+      font_size: 16}
     type: Button
     layout_properties: {grid_position: 'OQIIWH,PGYUMF', full_width_row: true}
   - name: image_8
@@ -156,7 +143,8 @@ components:
     type: Image
     layout_properties: {grid_position: 'RKKUUW,SRZLUY'}
   - name: button_6_copy
-    properties: {text: 'Loan  Extension  ', align: left, foreground: black, bold: true}
+    properties: {text: 'Loan  Extension  ', align: left, foreground: white, bold: true,
+      font_size: 16}
     type: Button
     layout_properties: {grid_position: 'RKKUUW,VEOGOV', full_width_row: true}
   - name: image_9
@@ -164,7 +152,8 @@ components:
     type: Image
     layout_properties: {grid_position: 'QHSUTS,LUXDGV'}
   - name: button_7
-    properties: {text: View Transaction History, align: left, bold: true, foreground: black}
+    properties: {text: View Transaction History, align: left, bold: true, foreground: white,
+      font_size: 16}
     type: Button
     layout_properties: {grid_position: 'QHSUTS,PCKMGS', full_width_row: true}
   - name: image_10
@@ -172,7 +161,8 @@ components:
     type: Image
     layout_properties: {grid_position: 'TRWKIA,HWFJNP'}
   - name: button_8
-    properties: {text: Discount Coupons, align: left, bold: true, foreground: black}
+    properties: {text: Discount Coupons, align: left, bold: true, foreground: white,
+      font_size: 16}
     type: Button
     layout_properties: {grid_position: 'TRWKIA,QTCHNM', full_width_row: true}
 - name: button_10
