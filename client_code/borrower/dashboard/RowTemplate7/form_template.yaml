@@ -1,3 +1,31 @@
 is_package: true
 container: {type: DataRowPanel}
-components: []
+components:
+- name: id
+  properties: {text: LA001, align: center}
+  type: Label
+  layout_properties: {column: JKSDUP}
+- name: amount
+  properties: {text: '100000', align: center}
+  type: Label
+  layout_properties: {column: VJQQOR}
+- name: tenure
+  properties: {text: '36', align: center}
+  type: Label
+  layout_properties: {column: OJLQEN}
+- name: interest
+  properties: {text: '12', align: center}
+  type: Label
+  layout_properties: {column: GAVKHZ}
+- name: repayment_amount
+  properties: {text: '50000', align: center}
+  type: Label
+  layout_properties: {column: NJWOLU}
+- name: due_date
+  properties: {text: 2 may 2023, align: center}
+  type: Label
+  layout_properties: {column: LMSEMV}
+- name: actions
+  properties: {text: Open Loan, align: center}
+  type: Label
+  layout_properties: {column: RNOHUR}
