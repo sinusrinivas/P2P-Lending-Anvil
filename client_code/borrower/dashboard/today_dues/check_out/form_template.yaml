@@ -105,6 +105,10 @@ components:
     properties: {text: Non Performing Asset Amount, visible: false, bold: true}
     type: Label
     layout_properties: {grid_position: 'KSEEYY,IVLWPK JOSMBU,RGGYIP'}
+  - name: i_r
+    properties: {}
+    type: Label
+    layout_properties: {grid_position: 'KSEEYY,IVLWPK OGQCRV,DXYIAB'}
   - name: loan_id_label
     properties: {align: left}
     type: Label
