@@ -1,4 +1,4 @@
-from ._anvil_designer import dashboard1Template
+from ._anvil_designer import RowTemplate7Template
 from anvil import *
 import anvil.server
 import anvil.google.auth, anvil.google.drive
@@ -9,7 +9,7 @@ import anvil.tables.query as q
 from anvil.tables import app_tables
 
 
-class dashboard1(dashboard1Template):
+class RowTemplate7(RowTemplate7Template):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
