@@ -106,7 +106,7 @@ components:
     type: Label
     layout_properties: {grid_position: 'KSEEYY,IVLWPK JOSMBU,RGGYIP'}
   - name: i_r
-    properties: {}
+    properties: {visible: false}
     type: Label
     layout_properties: {grid_position: 'KSEEYY,IVLWPK OGQCRV,DXYIAB'}
   - name: loan_id_label
