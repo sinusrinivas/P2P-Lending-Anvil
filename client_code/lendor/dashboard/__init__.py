@@ -66,6 +66,7 @@ class dashboard(dashboardTemplate):
                 })
         return profiles_with_loans
 
+
     def button_3_click(self, **event_args):
         open_form("lendor.dashboard.view_opening_balance")
 
@@ -177,3 +178,14 @@ class dashboard(dashboardTemplate):
         self.repeating_panel_1.visible = True
         self.load_data('extension')
 
+    def button_1_click(self, **event_args):
+      self.View_Loan_Requests.visible = True
+      self.View_Loan_Extension.visible = True
+      self.View_Loan_Foreclosure.visible = True
+      self.Todays_Due.visible = True
+      self.View_Loans.visible = True
+      self.View_Lost_Opportunities.visible = True
+      self.Change_Password.visible = True
+      self.historyView_Transaction_History.visible = True
+      self.View_Edit_Profile.visible = True
+      self.View_Send_Notifications.visible = True
