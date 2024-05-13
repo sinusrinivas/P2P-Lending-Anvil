@@ -1,4 +1,3 @@
-
 from ._anvil_designer import dashboardTemplate
 from anvil import *
 import anvil.tables as tables
@@ -187,4 +186,6 @@ class dashboard(dashboardTemplate):
       self.View_Loans.visible = True
       self.View_Lost_Opportunities.visible = True
       self.Change_Password.visible = True
-      self.
+      self.historyView_Transaction_History.visible = True
+      self.View_Edit_Profile.visible = True
+      self.View_Send_Notifications.visible = True
