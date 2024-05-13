@@ -287,22 +287,16 @@ class check_out(check_outTemplate):
         total_emi_amount = float(self.total_emi_amount_label.text)
         # Calculate total EMI amount including processing fees
         emi_amount = float(self.emi_amount_label.text)
-        
         # Retrieve total repayment amount from loan details table
         total_repayment_amount = self.selected_row['total_repayment_amount']
-        
         # Retrieve processing fee
         processing_fee = float(self.processing_fee.text)  # Assuming processing fee is shown in label_9
-        
         # Calculate remaining amount
         if self.selected_row['remaining_amount'] is not None:
             remaining_amount = self.selected_row['remaining_amount'] - (emi_amount + processing_fee)
         else:
             remaining_amount = total_repayment_amount - (emi_amount + processing_fee)
-        
-        # # Update remaining_amount column in fin_loan_details table
-        # self.selected_row['remaining_amount'] = remaining_amount
-        # self.selected_row.update()
+
         print(remaining_amount)
         loan_details = app_tables.fin_loan_details.get(loan_id=self.selected_row['loan_id'])
         if loan_details is not None:
@@ -314,12 +308,8 @@ class check_out(check_outTemplate):
             loan_details['remaining_amount'] = remaining_amount
             loan_details['total_amount_paid'] += total_emi_amount
             loan_details.update()
-
-       
-      
-
+ 
         lender_returns_dict = defaultdict(float)
-
         borrower_loans = app_tables.fin_loan_details.search(borrower_customer_id=self.selected_row['borrower_customer_id'])
         for loan in borrower_loans:
             lender_id = loan['lender_customer_id']
@@ -328,7 +318,6 @@ class check_out(check_outTemplate):
             if lender_returns is None:
                 lender_returns = 0
             lender_returns_dict[lender_id] += lender_returns
-
         # Update lender returns in the fin_lender table
         for lender_id, total_returns in lender_returns_dict.items():
             lender_row = app_tables.fin_lender.get(customer_id=lender_id)
@@ -340,6 +329,7 @@ class check_out(check_outTemplate):
             else:
                 # Create a new row if lender doesn't exist
                 app_tables.fin_lender.add_row(customer_id=lender_id, return_on_investment=total_returns)
+              
         try:
             lapsed_fee = float(self.lapsed.text)
         except ValueError:
