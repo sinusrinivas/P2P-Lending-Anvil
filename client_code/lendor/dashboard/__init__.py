@@ -21,29 +21,20 @@ class dashboard(dashboardTemplate):
                             q.like('under process%'),
                             q.like('Under Process%'),
                             q.like('under process')))
-        if existing_loans:
-          self.label_9.text = str(len(existing_loans))
-        else:
-          self.label_9.text = '0'
+        self.label_9.text = str(len(existing_loans) or 0)
+        
         investment = app_tables.fin_lender.get(customer_id=self.user_id)
-        if investment:
-            self.label_3.text = investment['investment']
-        else:
-          self.label_3.text = '0'
+        self.label_3.text = str(investment['investment'] or 0)
+
         opening_bal = app_tables.fin_wallet.get(customer_id=self.user_id)
-        if opening_bal:
-            self.label_5.text = opening_bal['wallet_amount']
-        else:
-          self.label_5.text = '0'
+        self.label_5.text = str(opening_bal['wallet_amount'] or 0)
 
         my_returns = app_tables.fin_lender.get(customer_id=self.user_id)
-        if my_returns:
-          self.label_7.text = 
+        self.label_7.text = str(my_returns['return_on_investment'] or 0)
 
-        
-        
         # Set the column_panel_3 to full height initially
-        self.column_panel_3.height = '100%'
+        # self.column_panel_3.height = '100%'
+        # self.spacer_2.height = '100%'
 
     def load_data(self,status):
         if status == 'close':
@@ -94,6 +85,8 @@ class dashboard(dashboardTemplate):
         self.historyView_Transaction_History.visible = self.components_visible
         self.View_Edit_Profile.visible = self.components_visible
         self.View_Send_Notifications.visible = self.components_visible
+        # self.spacer_2.visible = self.components_visible
+        # self.column_panel_3.visible = self.components_visible
 
     def button_1_click(self, **event_args):
         self.components_visible = not self.components_visible  # Toggle visibility flag
@@ -209,9 +202,6 @@ class dashboard(dashboardTemplate):
         self.data_grid_new_loan_request.visible = True
         self.repeating_panel_1.visible = True
         self.load_data('extension')
-
-
-
 
 
 
