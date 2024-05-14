@@ -1,7 +1,7 @@
 is_package: true
 container:
   type: ColumnPanel
-  properties: {col_widths: '{"VBIRYZ":50,"MCLQCM":60,"SKVUZK":10,"EICYCB":38,"LYBPDC":2,"RFJCAF":10,"LWORUH":50,"BHOXKV":15,"UBGOIF":45,"HUCKZQ":20,"FSEXYY":36}'}
+  properties: {col_widths: '{"VBIRYZ":50,"MCLQCM":60,"SKVUZK":10,"EICYCB":38,"LYBPDC":2,"RFJCAF":10,"LWORUH":50,"BHOXKV":15,"UBGOIF":45,"HUCKZQ":20,"FSEXYY":38}'}
 components:
 - properties: {align: justify, spacing_above: none, spacing_below: none}
   type: FlowPanel
@@ -72,7 +72,7 @@ components:
     properties: {role: null, url: '', align: left, tooltip: '', border: '', foreground: white,
       visible: true, text: Report A Problem, font_size: 15, wrap_on: mobile, font: '',
       col_spacing: medium, spacing_above: small, icon_align: left, col_widths: '',
-      spacing_below: small, italic: false, background: '', bold: true, underline: false,
+      spacing_below: small, italic: false, background: '', bold: false, underline: false,
       icon: 'fa:comment'}
     layout_properties: {}
     event_bindings: {click: Report_A_Problem_click}
@@ -222,16 +222,20 @@ components:
     properties: {height: '5'}
     type: Spacer
     layout_properties: {grid_position: 'BGTBAA,JGZFPN'}
+- name: spacer_11
+  properties: {height: '2'}
+  type: Spacer
+  layout_properties: {grid_position: 'XJNATW,EICYCB OLAXPQ,FSEXYY CIVIBA,ZIOOXV'}
 - name: label_9
   properties: {align: right}
   type: Label
-  layout_properties: {grid_position: 'XJNATW,EICYCB OLAXPQ,FSEXYY'}
+  layout_properties: {grid_position: 'XJNATW,EICYCB OLAXPQ,FSEXYY NIJYKC,EWKVDT'}
 - name: image_1
-  properties: {height: '45', source: _/theme/add-product.png, horizontal_align: right}
+  properties: {height: '45', source: '', horizontal_align: right, role: null}
   type: Image
   layout_properties: {grid_position: 'XJNATW,EICYCB OLAXPQ,LYBPDC'}
 - name: image_1_copy_copy
-  properties: {height: 143.25, source: _/theme/add-product.png, horizontal_align: center}
+  properties: {height: '140', source: '', horizontal_align: center, role: null}
   type: Image
   layout_properties: {grid_position: 'XJNATW,EICYCB GDHSWL,RFJCAF QNIDJV,AEDETS'}
 - name: button_12
@@ -267,7 +271,7 @@ components:
   layout_properties: {grid_position: 'XJNATW,EICYCB GDHSWL,LWORUH PATSWD,UBGOIF XMNMGS,DCWODV
       NEGQGP,CVCAKM'}
 - name: label_1
-  properties: {text: 'Available Balance :', bold: true, font_size: 16}
+  properties: {text: 'Customer Id :', bold: true, font_size: 16}
   type: Label
   layout_properties: {grid_position: 'XJNATW,EICYCB GDHSWL,LWORUH PATSWD,UBGOIF XMNMGS,DCWODV
       WKWXGE,HMVRJG'}
@@ -286,7 +290,7 @@ components:
   type: Spacer
   layout_properties: {grid_position: 'XJNATW,EICYCB GDHSWL,LWORUH PATSWD,HUCKZQ'}
 - name: spacer_10
-  properties: {height: '40'}
+  properties: {height: '30'}
   type: Spacer
   layout_properties: {grid_position: 'XJNATW,EICYCB XTPPNN,OTRAWO'}
 - name: data_grid_1
@@ -297,7 +301,6 @@ components:
     - {id: OJLQEN, title: Tenure, data_key: column_3}
     - {id: GAVKHZ, data_key: column_4, title: 'Interest  '}
     - {id: NJWOLU, data_key: column_5, title: Repayment Amount}
-    - {id: LMSEMV, data_key: column_6, title: Due Date}
     - {id: RNOHUR, data_key: column_7, title: Actions}
     role: tonal-data-grid
   type: DataGrid
