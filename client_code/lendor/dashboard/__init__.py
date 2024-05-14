@@ -75,13 +75,13 @@ class dashboard(dashboardTemplate):
                     'borrower_full_name': loan['borrower_full_name'],
                     'loan_id': loan['loan_id'],
                     'bessem_value': user_profile['bessem_value'],
-                    'loan_updated_status': loan['loan_updated_status'],
-                    'interest_rate': loan['interest_rate'],
+                    'loan_updated_status': loan['loan_updated_status'
                     'borrower_loan_created_timestamp': loan['borrower_loan_created_timestamp']
                 })
         return profiles_with_loans
 
-    def toggle_components_visibility(self):
+    def toggle_components_visibility(self):],
+                    'interest_rate': loan['interest_rate'],
       
         self.column_panel_3.visible = self.components_visible
         self.View_Loan_Requests.visible = self.components_visible
