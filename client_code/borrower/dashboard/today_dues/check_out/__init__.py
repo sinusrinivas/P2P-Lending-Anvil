@@ -38,6 +38,10 @@ class check_out(check_outTemplate):
         total_payments = tenure * 12
         total_repayment_amount = selected_row['total_repayment_amount']
         total_i_a = total_interest_amount / tenure
+        if remaining_amount is None:
+          self.remainining_amount.text = "{:.2f}".format(total_repayment_amount)
+        else:
+          self.remainining_amount.text =  "{:.2f}".format(remaining_amount)
       
         if emi_payment_type == 'One Time':
             emi = total_repayment_amount
