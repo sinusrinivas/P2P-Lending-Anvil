@@ -385,9 +385,9 @@ class check_out(check_outTemplate):
 
 
                     if self.selected_row['remaining_amount'] is not None:
-                        remaining_amount = self.selected_row['remaining_amount'] - (emi_amount + processing_fee)
+                        remaining_amount = self.selected_row['remaining_amount'] - (emi_amount + processing_fee + extra_amount)
                     else:
-                        remaining_amount = total_repayment_amount - (emi_amount + processing_fee)
+                        remaining_amount = total_repayment_amount - (emi_amount + processing_fee + extra_amount)
             
                     print(remaining_amount)
                     loan_details = app_tables.fin_loan_details.get(loan_id=self.selected_row['loan_id'])

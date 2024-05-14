@@ -181,7 +181,7 @@ class payment_details_extension(payment_details_extensionTemplate):
         print(f"Extension applied in month number: {extension_month_number}")
 
         # Pass the new EMI and extension month number to the extension2 form
-        open_form('borrower_registration_form.dashboard.extension_loan_request.borrower_extension.extension2',
+        open_form('borrower.dashboard.extension_loan_request.borrower_extension.extension2',
                     selected_row=self.selected_row, loan_extension_months=self.loan_extension_months, new_emi=new_emi_amount, emi_number=extension_month_number)
     else:
         alert("Extension fee not found in payment details.")
