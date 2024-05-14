@@ -232,6 +232,26 @@ class dashboard(dashboardTemplate):
             customer_loans = []  # Handle the case when no row is found
             alert("No data found")
 
+    def populate_loan_history(self):
+        
+        self.data = tables.app_tables.fin_loan_details.get(borrower_customer_id=self.user_Id)
+
+        if not self.data:
+            Notification("No Data Available Here!").show()
+        else:
+            self.result = [{'loan_id': i['loan_id'],
+                            'loan_amount': i['loan_amount'],
+                            'admin_role': i['admin_role'],
+                            'ref_admin_name': i['ref_admin_name'],
+                            'join_date': i['join_date'],
+                            'admin_id': i['admin_id'], 
+                            'mobile_no': i['mobile_no'],
+                           }
+                           for i in self.data]
+
+            self.repeating_panel_1.items = self.result
+
+  
     def home_main_form_link_click(self, **event_args):
         """This method is called when the link is clicked"""
         open_form("borrower.dashboard")
