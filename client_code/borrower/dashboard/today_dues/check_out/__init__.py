@@ -571,9 +571,8 @@ class check_out(check_outTemplate):
         'account_no': self.account_no_label.text,
         'interest_amount': self.interest_label.text,
         'remainining_amount': self.remainining_amount.text,
-        # 'interest_amount': self.,
-        # 'remainining_amount': self.remainining_amount.text,
-        # Add more details here as needed
+        'borrower_customer_id': self.selected_row['borrower_customer_id'],
+        'lender_customer_id': self.selected_row['lender_customer_id']
     }
     
     # Open the part_payment form and pass loan_details as a parameter
