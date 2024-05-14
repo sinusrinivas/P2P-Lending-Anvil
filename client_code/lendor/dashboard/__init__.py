@@ -33,6 +33,8 @@ class dashboard(dashboardTemplate):
         my_returns = app_tables.fin_lender.get(customer_id=self.user_id)
         self.label_7.text = str(my_returns['return_on_investment'] or 0)
 
+        # self.button_1_click.text = f"New Loan Requests({len(existing_loans)})"
+
         # Set the column_panel_3 to full height initially
         # self.column_panel_3.height = '100%'
         # self.spacer_2.height = '100%'
@@ -51,6 +53,7 @@ class dashboard(dashboardTemplate):
         elif status == 'under process':
             underprocess_loans = app_tables.fin_loan_details.search(loan_updated_status=q.any_of(q.like('under process%'),q.like('under process')))
             self.repeating_panel_1.items = self.process_data(underprocess_loans)
+            
 
         elif status == 'lost opportunities':
             lost_opportunities = app_tables.fin_loan_details.search(loan_updated_status=q.like('lost opportunities%'), lender_customer_id=self.user_id)
@@ -72,13 +75,15 @@ class dashboard(dashboardTemplate):
                     'borrower_full_name': loan['borrower_full_name'],
                     'loan_id': loan['loan_id'],
                     'bessem_value': user_profile['bessem_value'],
-                    'loan_updated_status': loan['loan_updated_status'],
-                    'interest_rate': loan['interest_rate'],
+                    'loan_updated_status': loan['loan_updated_status'
                     'borrower_loan_created_timestamp': loan['borrower_loan_created_timestamp']
                 })
         return profiles_with_loans
 
-    def toggle_components_visibility(self):
+    def toggle_components_visibility(self):],
+                    'interest_rate': loan['interest_rate'],
+      
+        self.column_panel_3.visible = self.components_visible
         self.View_Loan_Requests.visible = self.components_visible
         self.View_Loan_Extension.visible = self.components_visible
         self.View_Loan_Foreclosure.visible = self.components_visible
@@ -91,8 +96,21 @@ class dashboard(dashboardTemplate):
         self.View_Send_Notifications.visible = self.components_visible
         # self.part_payment.visible = self.components_visible
         self.spacer_4.visible = self.components_visible
-        # self.spacer_2.visible = self.components_visible
-        # self.column_panel_3.visible = self.components_visible
+        self.image_6.visible = self.components_visible
+        self.image_7.visible = self.components_visible
+        self.image_8.visible = self.components_visible
+        self.image_9.visible = self.components_visible
+        self.image_10.visible = self.components_visible
+        self.image_11.visible = self.components_visible
+        self.image_12.visible = self.components_visible
+        self.image_13.visible = self.components_visible
+        self.image_14.visible = self.components_visible
+        self.image_15.visible = self.components_visible
+        # self.column_panel_3.width = '0%'
+        # self.column_panel_1.width = '100%'
+        
+        
+      
 
     def button_1_click(self, **event_args):
         self.components_visible = not self.components_visible  # Toggle visibility flag
@@ -186,6 +204,7 @@ class dashboard(dashboardTemplate):
         open_form("wallet.wallet")
 
     def button_1_copy_click(self, **event_args):
+        
         self.data_grid_new_loan_request.visible = True
         self.repeating_panel_1.visible = True
         self.load_data('under process')
