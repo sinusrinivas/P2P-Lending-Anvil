@@ -33,6 +33,8 @@ class dashboard(dashboardTemplate):
         my_returns = app_tables.fin_lender.get(customer_id=self.user_id)
         self.label_7.text = str(my_returns['return_on_investment'] or 0)
 
+        # self.button_1_click.text = f"New Loan Requests({len(existing_loans)})"
+
         # Set the column_panel_3 to full height initially
         # self.column_panel_3.height = '100%'
         # self.spacer_2.height = '100%'
@@ -51,6 +53,7 @@ class dashboard(dashboardTemplate):
         elif status == 'under process':
             underprocess_loans = app_tables.fin_loan_details.search(loan_updated_status=q.any_of(q.like('under process%'),q.like('under process')))
             self.repeating_panel_1.items = self.process_data(underprocess_loans)
+            
 
         elif status == 'lost opportunities':
             lost_opportunities = app_tables.fin_loan_details.search(loan_updated_status=q.like('lost opportunities%'), lender_customer_id=self.user_id)
@@ -201,6 +204,7 @@ class dashboard(dashboardTemplate):
         open_form("wallet.wallet")
 
     def button_1_copy_click(self, **event_args):
+        
         self.data_grid_new_loan_request.visible = True
         self.repeating_panel_1.visible = True
         self.load_data('under process')

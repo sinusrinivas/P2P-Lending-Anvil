@@ -347,8 +347,8 @@ components:
   layout_properties: {grid_position: 'CCIIXU,HUNYKM EOKIOO,DZMIIN', full_width_row: true}
   name: column_panel_7_copy
   components:
-  - properties: {text: New Loan Requests, foreground: white, role: null, align: full,
-      background: '#007FFF', border: '', bold: true}
+  - properties: {text: '', foreground: white, role: null, align: full, background: '#007FFF',
+      border: '', bold: true}
     type: Button
     layout_properties: {grid_position: 'GWOXFQ,YPNAHH', full_width_row: true}
     event_bindings: {click: button_1_copy_click}
