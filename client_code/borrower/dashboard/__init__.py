@@ -212,23 +212,17 @@ class dashboard(dashboardTemplate):
         self.user_Id = main_form_module.userId
         user_id = self.user_Id
 
-        # Fetch the user profile based on the current user's email
-        user = anvil.users.get_user()
-        # Check if a user is logged in
-        if user:
+        
             # Fetch the user profile record based on the current user's email
-            user_profile = app_tables.fin_user_profile.get(email_user=user['email'])
+        user_profile = app_tables.fin_user_profile.get(customer_id=user_id)
             # Check if the user profile record is found
-            if user_profile:
-                # Access the user ID from the user profile record
-                user_id = user_profile['customer_id']
-                # Filter loan_details table based on the current user's ID
-                try:
-                    customer_loans = app_tables.fin_loan_details.search(borrower_customer_id=user_id)
-                    print(len(customer_loans))
-                except anvil.tables.NoSuchRow:
-                    customer_loans = []  # Handle the case when no row is found
-                    alert("No data found")
+        
+        try:
+            customer_loans = app_tables.fin_loan_details.search(borrower_customer_id=user_id)
+            print(len(customer_loans))
+        except anvil.tables.NoSuchRow:
+            customer_loans = []  # Handle the case when no row is found
+            alert("No data found")
 
     def home_main_form_link_click(self, **event_args):
         """This method is called when the link is clicked"""
