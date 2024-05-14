@@ -2,7 +2,7 @@ is_package: true
 custom_component: true
 container:
   type: ColumnPanel
-  properties: {col_widths: '{"QFGZTD":10,"HUNYKM":49}', background: ''}
+  properties: {col_widths: '{"QFGZTD":11,"HUNYKM":49}', background: ''}
 components:
 - properties: {role: null, vertical_align: top, height: '48', tooltip: '', border: '',
     foreground: '', visible: true, display_mode: shrink_to_fit, spacing_above: small,
