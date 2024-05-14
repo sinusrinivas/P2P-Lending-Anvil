@@ -126,15 +126,11 @@ class borrower_foreclosure(borrower_foreclosureTemplate):
             alert(str(e))
         
     def button_foreclose_click(self, **event_args):
-        selected_row = self.selected_row
-        # loan_id = selected_row['loan_id']
-        # total_payments_made = self.loan_details_row['total_payments_made']
-        if self.total_payments_made >= self.min_months:
-            open_form('borrower.dashboard.foreclosure_request.borrower_foreclosure.foreclose',  selected_row=selected_row, total_payments_made=self.total_payments_made)
-        else:
-            alert('You are not eligible for foreclosure! You have to pay at least ' + str(self.min_months) + ' months.')
-            open_form('borrower.dashboard.foreclosure_request')
+        pass
 
+
+
+  
     def button_2_click(self, **event_args):
         """This method is called when the button is clicked"""
         open_form('borrower.dashboard.foreclosure_request')
