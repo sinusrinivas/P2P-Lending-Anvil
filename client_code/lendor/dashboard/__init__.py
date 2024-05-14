@@ -1,5 +1,6 @@
 from ._anvil_designer import dashboardTemplate
 from anvil import *
+import anvil.server
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
@@ -88,6 +89,8 @@ class dashboard(dashboardTemplate):
         self.historyView_Transaction_History.visible = self.components_visible
         self.View_Edit_Profile.visible = self.components_visible
         self.View_Send_Notifications.visible = self.components_visible
+        self.part_payment.visible = self.components_visible
+        self.spacer_4.visible = self.components_visible
         # self.spacer_2.visible = self.components_visible
         # self.column_panel_3.visible = self.components_visible
 
@@ -177,7 +180,10 @@ class dashboard(dashboardTemplate):
         open_form('lendor.dashboard.notification')
 
     def wallet_dashboard_link_click(self, **event_args):
-        open_form('wallet.wallet')
+        customer_id = self.user_id
+        email = self.email
+        anvil.server.call('fetch_profile_data_and_insert', email, customer_id)
+        open_form("wallet.wallet")
 
     def button_1_copy_click(self, **event_args):
         self.data_grid_new_loan_request.visible = True
@@ -205,6 +211,21 @@ class dashboard(dashboardTemplate):
         self.data_grid_new_loan_request.visible = True
         self.repeating_panel_1.visible = True
         self.load_data('extension')
+
+    def borrower_dashboard_home_linkhome_borrower_registration_button_copy_1_click(self, **event_args):
+      """This method is called when the link is clicked"""
+      open_form("lendor.dashboard")
+
+    def About_Us_click(self, **event_args):
+      open_form('lendor.dashboard.dasboard_about')
+
+    def Report_A_Problem_click(self, **event_args):
+      """This method is called when the link is clicked"""
+      open_form('lendor.dashboard.dashboard_report_a_problem')
+
+    def help_link_click(self, **event_args):
+      """This method is called when the link is clicked"""
+      pass
 
 
 
@@ -405,3 +426,6 @@ class dashboard(dashboardTemplate):
 #         self.historyView_Transaction_History.visible = True
 #         self.View_Edit_Profile.visible = True
 #         self.View_Send_Notifications.visible = True
+
+
+
