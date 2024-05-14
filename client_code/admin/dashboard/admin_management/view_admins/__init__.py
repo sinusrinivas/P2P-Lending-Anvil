@@ -20,8 +20,7 @@ class view_admins(view_adminsTemplate):
                             'admin_role': i['admin_role'],
                             'ref_admin_name': i['ref_admin_name'],
                             'join_date': i['join_date'],
-                            'admin_id': i['admin_id'],
-                            'join_date': i['join_date'],
+                            'admin_id': i['admin_id'], 
                             'mobile_no': i['mobile_no'],
                            }
                            for i in self.data]
