@@ -278,16 +278,11 @@ class dashboard(dashboardTemplate):
         pass  # Placeholder
 
     def button_1_click(self, **event_args):
-        email = main_form_module.email
-
-        user_profile = app_tables.fin_user_profile.get(email_user=email)
-
-        if user_profile:
-            user_id = user_profile['customer_id']
+      
 
             try:
                 existing_loans = app_tables.fin_loan_details.search(
-                    borrower_customer_id=user_id,
+                    borrower_customer_id=self.user_Id,
                     loan_updated_status=q.any_of(
                         q.like('accept%'),
                         q.like('Approved%'),
@@ -300,12 +295,12 @@ class dashboard(dashboardTemplate):
                     )
                 )
                 num_existing_loans = len(existing_loans)
-                print(f"User ID: {user_id}, Existing Loans: {num_existing_loans}")
+                print(f"User ID: {self.user_Id}, Existing Loans: {num_existing_loans}")
 
                 if num_existing_loans >= 5:
                     alert("You already have 5 loans. Cannot open a new loan request.")
                 else:
-                    wallet_row = app_tables.fin_wallet.get(customer_id=user_id)
+                    wallet_row = app_tables.fin_wallet.get(customer_id=self.user_Id)
 
                     if wallet_row and wallet_row['wallet_id'] is not None:
                         open_form('borrower.dashboard.new_loan_request')
