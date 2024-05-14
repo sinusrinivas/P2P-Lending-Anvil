@@ -540,3 +540,29 @@ class dashboard(dashboardTemplate):
 
     def button_12_click(self, **event_args):
         open_form('borrower.dashboard.borrower_profile')
+
+    # def toggle_components_visibility(self):
+    #     # self.View_Loan_Requests.visible = self.components_visible
+    #     # self.View_Loan_Extension.visible = self.components_visible
+    #     # self.View_Loan_Foreclosure.visible = self.components_visible
+    #     # self.Todays_Due.visible = self.components_visible
+    #     # self.View_Loans.visible = self.components_visible
+    #     # self.View_Lost_Opportunities.visible = self.components_visible
+    #     # self.Change_Password.visible = self.components_visible
+    #     # self.historyView_Transaction_History.visible = self.components_visible
+    #     # self.View_Edit_Profile.visible = self.components_visible
+    #     # self.View_Send_Notifications.visible = self.components_visible
+    #     # # self.part_payment.visible = self.components_visible
+    #     # self.spacer_4.visible = self.components_visible
+    #     self.content_panel_copy_3.visible = self.components_visible
+
+    def toggle_panel_visibility(self):
+        # Toggle the visibility of content_panel_copy_3
+        self.content_panel_copy_3.visible = not self.content_panel_copy_3.visible
+        # Update the state of the boolean variable
+        self.panel_visible = self.content_panel_copy_3.visible
+      
+    def button_9_click(self, **event_args):
+      """This method is called when the button is clicked"""
+      self.toggle_panel_visibility()
+      
