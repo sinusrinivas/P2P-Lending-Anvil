@@ -219,7 +219,10 @@ class dashboard(dashboardTemplate):
         
         try:
             customer_loans = app_tables.fin_loan_details.search(borrower_customer_id=user_id)
-            print(len(customer_loans))
+            if customer_loans:
+                print(len(customer_loans))
+                self.label_2_copy.text = "Welcome" +" " + customer_loans[0]['borrower_full_name']
+                self.label_7.text = 
         except anvil.tables.NoSuchRow:
             customer_loans = []  # Handle the case when no row is found
             alert("No data found")
