@@ -432,6 +432,20 @@ class dashboard(dashboardTemplate):
         self.user_Id = main_form_module.userId
         user_id = self.user_Id
         self.populate_loan_history()
+      
+        # Define a CSS class to create a round shape for the image
+        CSS = """
+        .round-image {
+            border-radius: 50%;
+        }
+        """
+        
+        # Apply the CSS class to the Media object
+        self.image_1.style = {"class": "round-image"}
+        
+        # Add the CSS to your form
+        self.add_component(CSS, parent=self)
+      
 
         user_profile = app_tables.fin_user_profile.get(customer_id=user_id)
         if user_profile:
