@@ -219,7 +219,7 @@ class dashboard(dashboardTemplate):
             self.label_3.text = user_profile['mobile']
             self.image_1_copy_copy.source = user_profile['user_photo']
             self.image_1.source = user_profile['user_photo']
-            self.label_9.text = user_profile['']
+            self.label_9.text = user_profile['full_name']
         
         try:
             customer_loans = app_tables.fin_loan_details.search(borrower_customer_id=user_id)
