@@ -89,7 +89,7 @@ class dashboard(dashboardTemplate):
         self.historyView_Transaction_History.visible = self.components_visible
         self.View_Edit_Profile.visible = self.components_visible
         self.View_Send_Notifications.visible = self.components_visible
-        self.part_payment.visible = self.components_visible
+        # self.part_payment.visible = self.components_visible
         self.spacer_4.visible = self.components_visible
         # self.spacer_2.visible = self.components_visible
         # self.column_panel_3.visible = self.components_visible

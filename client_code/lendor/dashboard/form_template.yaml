@@ -149,11 +149,6 @@ components:
     layout_properties: {grid_position: 'LLSDQQ,ZPIOTE', full_width_row: false}
     event_bindings: {click: View_Send_Notifications_click}
     name: View_Send_Notifications
-  - name: part_payment
-    properties: {text: ' Part Payment', visible: false, bold: true, font_size: 16,
-      foreground: white, align: left}
-    type: Button
-    layout_properties: {grid_position: 'GTUHTT,ABJZHP'}
   - properties: {height: '', visible: false}
     type: Spacer
     layout_properties: {grid_position: 'ICVZXD,RUHEWA', full_width_row: true}
@@ -334,13 +329,16 @@ components:
     - {id: JNEVFU, data_key: column_1, title: Name}
     - {id: JKSDUP, title: Loan Amount, data_key: column_1}
     - {id: RFMHCZ, data_key: column_1, title: Ascend Score}
-    - {id: GUBYWD, data_key: column_1, title: Tenure}
+    - {id: GUBYWD, data_key: column_1, title: Tenure, width: 166.5999755859375, expand: false}
     - {id: OJLQEN, title: Loan Status, data_key: column_3}
     - {id: NFYNZM, data_key: column_4, title: ''}
     visible: false
     wrap_on: mobile
     auto_header: true
-    show_page_controls: true
+    show_page_controls: false
+    role: tonal-data-grid
+    background: ''
+    foreground: bla
   type: DataGrid
   layout_properties: {grid_position: 'CCIIXU,HUNYKM POIVKA,YJAKVL'}
   name: data_grid_new_loan_request
