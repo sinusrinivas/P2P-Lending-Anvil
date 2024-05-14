@@ -126,8 +126,14 @@ class borrower_foreclosure(borrower_foreclosureTemplate):
             alert(str(e))
         
     def button_foreclose_click(self, **event_args):
-        pass
-
+        selected_row = self.selected_row
+        # loan_id = selected_row['loan_id']
+        # total_payments_made = self.loan_details_row['total_payments_made']
+        if self.total_payments_made >= self.min_months:
+            open_form('borrower.dashboard.foreclosure_request.borrower_foreclosure.foreclose',  selected_row=selected_row, total_payments_made=self.total_payments_made)
+        else:
+            alert('You are not eligible for foreclosure! You have to pay at least ' + str(self.min_months) + ' months.')
+            open_form('borrower.dashboard.foreclosure_request')
 
 
   
@@ -149,15 +155,34 @@ class borrower_foreclosure(borrower_foreclosureTemplate):
 
     def foreclose_again_click(self, **event_args):
         """This method is called when the button is clicked"""
-        selected_row = self.selected_row
-        # loan_id = selected_row['loan_id']
-        # total_payments_made = self.loan_details_row['total_payments_made']
-        if self.total_payments_made >= self.min_months:
-            open_form('borrower.dashboard.foreclosure_request.borrower_foreclosure.foreclose',  selected_row=selected_row, total_payments_made=self.total_payments_made)
-        else:
-            alert('You are not eligible for foreclosure! You have to pay at least ' + str(self.min_months) + ' months.')
-            open_form('borrower.dashboard.foreclosure_request')
+        loan_id = self.selected_row['loan_id']
+    
+        # Search for the corresponding row in the fin_foreclosure table
+        foreclosure_row = app_tables.fin_foreclosure.get(loan_id=loan_id)
+        
+        # Update the status to "Under Process"
+        foreclosure_row['status'] = 'under process'
+        
+        # Update the requested_on column with today's date and time
+        foreclosure_row['requested_on'] = datetime.now()
+        
+        # Save the changes
+        foreclosure_row.update()
+        alert("Your Foreclosure request is submitted.")
+        open_form('borrower.dashboard')
+  
+        # selected_row = self.selected_row
+        # # loan_id = selected_row['loan_id']
+        # # total_payments_made = self.loan_details_row['total_payments_made']
+        # if self.total_payments_made >= self.min_months:
+        #     open_form('borrower.dashboard.foreclosure_request.borrower_foreclosure.foreclose',  selected_row=selected_row, total_payments_made=self.total_payments_made)
+        # else:
+        #     alert('You are not eligible for foreclosure! You have to pay at least ' + str(self.min_months) + ' months.')
+        #     open_form('borrower.dashboard.foreclosure_request')
 
     def again_back_click(self, **event_args):
       """This method is called when the button is clicked"""
       open_form('borrower.dashboard.foreclosure_request')
+
+
+
