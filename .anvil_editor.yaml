@@ -367,6 +367,7 @@ unique_ids:
     admin.dashboard.admin_management: '1710137073478106144301812.80077'
     admin.dashboard.manage_cms.add_borrower_dropdown_details.edit_no_of_emp: '1706120037135577895213286.9022'
     borrower.dashboard.part_payment.part_payment_details: '1715257048180381775672088.9316'
+    borrower.dashboard.today_dues.check_out.part_payment: '1715685081128557532012861.8107'
     admin.dashboard.manage_products.view_products_and_categories: '1704167249914614596278152.911'
     admin.dashboard.lenders.RowTemplate4: '1700737487916312936831844.4892'
     lendor.dashboard.view_borrower_loan_request.payment_details_view_loan_request.RowTemplate35: '1705561334179381905338612.4869'

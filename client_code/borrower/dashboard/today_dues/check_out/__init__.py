@@ -480,6 +480,7 @@ class check_out(check_outTemplate):
                         lender_customer_id=lender_id,
                         borrower_email=borrower_email,
                         lender_email=lender_email,
+                        payment_type='pay now',
                         
                         
                     )
@@ -557,3 +558,23 @@ class check_out(check_outTemplate):
           return foreclosure_row
       else:
           return None
+
+    def part_payment_click(self, **event_args):
+      """This method is called when the button is clicked"""
+      loan_details = {
+        'i_r': self.i_r.text,
+        'total_emi_amount': self.total_emi_amount_label.text,
+        'emi_amount': self.emi_amount_label.text,
+        'loan_id': self.loan_id_label.text,
+        'loan_amount': self.loan_amount_label.text,
+        'tenure': self.tenure_label.text,
+        'account_no': self.account_no_label.text,
+        'interest_amount': self.interest_label.text,
+        'remainining_amount': self.remainining_amount.text,
+        # 'interest_amount': self.,
+        # 'remainining_amount': self.remainining_amount.text,
+        # Add more details here as needed
+    }
+    
+    # Open the part_payment form and pass loan_details as a parameter
+      open_form('borrower.dashboard.today_dues.check_out.part_payment', loan_details=loan_details)
