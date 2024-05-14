@@ -79,6 +79,8 @@ class dashboard(dashboardTemplate):
         return profiles_with_loans
 
     def toggle_components_visibility(self):
+      
+        self.column_panel_3.visible = self.components_visible
         self.View_Loan_Requests.visible = self.components_visible
         self.View_Loan_Extension.visible = self.components_visible
         self.View_Loan_Foreclosure.visible = self.components_visible
@@ -91,8 +93,21 @@ class dashboard(dashboardTemplate):
         self.View_Send_Notifications.visible = self.components_visible
         # self.part_payment.visible = self.components_visible
         self.spacer_4.visible = self.components_visible
-        # self.spacer_2.visible = self.components_visible
-        # self.column_panel_3.visible = self.components_visible
+        self.image_6.visible = self.components_visible
+        self.image_7.visible = self.components_visible
+        self.image_8.visible = self.components_visible
+        self.image_9.visible = self.components_visible
+        self.image_10.visible = self.components_visible
+        self.image_11.visible = self.components_visible
+        self.image_12.visible = self.components_visible
+        self.image_13.visible = self.components_visible
+        self.image_14.visible = self.components_visible
+        self.image_15.visible = self.components_visible
+        # self.column_panel_3.width = '0%'
+        # self.column_panel_1.width = '100%'
+        
+        
+      
 
     def button_1_click(self, **event_args):
         self.components_visible = not self.components_visible  # Toggle visibility flag
