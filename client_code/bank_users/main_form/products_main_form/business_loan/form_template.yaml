@@ -71,10 +71,10 @@ components:
         properties: {}
         type: form:bank_users.main_form.Form1
         layout_properties: {width: 138.64100000000002}
-  - name: navbar_links
-    properties: {}
-    type: FlowPanel
-    layout_properties: {grid_position: 'LGSDKH,PUDYZM'}
+  - name: spacer_37
+    properties: {height: '10'}
+    type: Spacer
+    layout_properties: {grid_position: 'WRJCYS,GFCVGQ'}
   - name: content_panel_copy
     properties: {background: 'theme:Surface Variant'}
     type: ColumnPanel
@@ -827,7 +827,7 @@ components:
       type: Spacer
       layout_properties: {grid_position: 'FTRYFN,KRRVLT'}
     - name: label_48
-      properties: {text: 'Getting a business loan through i2i is swift, effortless,
+      properties: {text: 'Getting a business loan through GTPL is swift, effortless,
           and smooth. You can complete the application process in just ten minutes
           on our entirely digital platform.
 
@@ -924,7 +924,7 @@ components:
       type: Image
       layout_properties: {grid_position: 'IEHCSV,DSABOJ GRUMXZ,DWJQEH'}
     - name: label_52_copy_copy
-      properties: {text: 'i2i will assess your credit using its proprietary credit
+      properties: {text: 'GTPL will assess your credit using its proprietary credit
           evaluation model based on multiple parameters such as credit score, financial
           history, outstanding debts, demographics, etc.', font_size: 18}
       type: Label
