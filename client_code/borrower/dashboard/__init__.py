@@ -212,23 +212,25 @@ class dashboard(dashboardTemplate):
         self.user_Id = main_form_module.userId
         user_id = self.user_Id
 
-        # Fetch the user profile based on the current user's email
-        user = anvil.users.get_user()
-        # Check if a user is logged in
-        if user:
+        
             # Fetch the user profile record based on the current user's email
-            user_profile = app_tables.fin_user_profile.get(email_user=user['email'])
-            # Check if the user profile record is found
-            if user_profile:
-                # Access the user ID from the user profile record
-                user_id = user_profile['customer_id']
-                # Filter loan_details table based on the current user's ID
-                try:
-                    customer_loans = app_tables.fin_loan_details.search(borrower_customer_id=user_id)
-                    print(len(customer_loans))
-                except anvil.tables.NoSuchRow:
-                    customer_loans = []  # Handle the case when no row is found
-                    alert("No data found")
+        user_profile = app_tables.fin_user_profile.get(customer_id=user_id)
+        if user_profile:
+            self.label_3.text = user_profile['mobile']
+            self.image_1_copy_copy.source = user_profile['user_photo']
+            self.image_1.source = user_profile['user_photo']
+            self.label_9.text = user_profile['full_name']
+        
+        try:
+            customer_loans = app_tables.fin_loan_details.search(borrower_customer_id=user_id)
+            if customer_loans:
+                print(len(customer_loans))
+                self.label_2_copy.text = "Welcome" +" " + customer_loans[0]['borrower_full_name']
+                self.label_7.text = customer_loans[0]['member_since']
+                self.label_5.text = customer_loans[0]['credit_limit']
+        except anvil.tables.NoSuchRow:
+            customer_loans = []  # Handle the case when no row is found
+            alert("No data found")
 
     def home_main_form_link_click(self, **event_args):
         """This method is called when the link is clicked"""
@@ -284,16 +286,11 @@ class dashboard(dashboardTemplate):
         pass  # Placeholder
 
     def button_1_click(self, **event_args):
-        email = main_form_module.email
-
-        user_profile = app_tables.fin_user_profile.get(email_user=email)
-
-        if user_profile:
-            user_id = user_profile['customer_id']
+      
 
             try:
                 existing_loans = app_tables.fin_loan_details.search(
-                    borrower_customer_id=user_id,
+                    borrower_customer_id=self.user_Id,
                     loan_updated_status=q.any_of(
                         q.like('accept%'),
                         q.like('Approved%'),
@@ -306,12 +303,12 @@ class dashboard(dashboardTemplate):
                     )
                 )
                 num_existing_loans = len(existing_loans)
-                print(f"User ID: {user_id}, Existing Loans: {num_existing_loans}")
+                print(f"User ID: {self.user_Id}, Existing Loans: {num_existing_loans}")
 
                 if num_existing_loans >= 5:
                     alert("You already have 5 loans. Cannot open a new loan request.")
                 else:
-                    wallet_row = app_tables.fin_wallet.get(customer_id=user_id)
+                    wallet_row = app_tables.fin_wallet.get(customer_id=self.user_Id)
 
                     if wallet_row and wallet_row['wallet_id'] is not None:
                         open_form('borrower.dashboard.new_loan_request')
