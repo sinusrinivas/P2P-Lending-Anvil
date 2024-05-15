@@ -1,7 +1,7 @@
 is_package: true
 container:
   type: ColumnPanel
-  properties: {col_widths: '{"VBIRYZ":50,"SKVUZK":10,"EICYCB":38,"LYBPDC":2,"RFJCAF":10,"LWORUH":50,"BHOXKV":15,"UBGOIF":45,"HUCKZQ":20,"FSEXYY":38}'}
+  properties: {col_widths: '{"VBIRYZ":50,"SKVUZK":10,"EICYCB":38,"RFJCAF":10,"LWORUH":50,"BHOXKV":15,"UBGOIF":45,"HUCKZQ":20,"FSEXYY":38,"WPIOHO":15,"RNRKGL":45,"XEZVML":15,"UVQLFS":45,"DNPTOC":15,"CVCAKM":45,"RKLYJE":15,"HMVRJG":45,"QKJAYB":20,"DCWODV":25,"GVQREJ":15}'}
 components:
 - properties: {align: justify, spacing_above: none, spacing_below: none}
   type: FlowPanel
@@ -146,6 +146,10 @@ components:
     type: Button
     layout_properties: {grid_position: 'TRWKIA,QTCHNM', full_width_row: true}
     event_bindings: {click: button_8_click}
+  - name: spacer_14
+    properties: {height: '5'}
+    type: Spacer
+    layout_properties: {grid_position: 'WXNFDS,XPWNAX'}
   - name: image_10_copy
     properties: {height: '40', source: _/theme/down-payment.png, display_mode: shrink_to_fit}
     type: Image
@@ -155,6 +159,10 @@ components:
       align: left}
     type: Button
     layout_properties: {grid_position: 'GJHBNI,CCTMMS'}
+  - name: spacer_13
+    properties: {height: '5'}
+    type: Spacer
+    layout_properties: {grid_position: 'BTBIWF,ETBOEP'}
   - name: image_10_copy_copy
     properties: {height: '40', source: _/theme/portfolio (2).png, display_mode: shrink_to_fit}
     type: Image
@@ -170,15 +178,11 @@ components:
 - name: spacer_11
   properties: {height: '2'}
   type: Spacer
-  layout_properties: {grid_position: 'XJNATW,EICYCB OLAXPQ,FSEXYY CIVIBA,ZIOOXV'}
-- name: label_9
-  properties: {align: right}
-  type: Label
-  layout_properties: {grid_position: 'XJNATW,EICYCB OLAXPQ,FSEXYY NIJYKC,EWKVDT'}
-- name: image_1
-  properties: {height: '45', source: '', horizontal_align: right, role: null}
-  type: Image
-  layout_properties: {grid_position: 'XJNATW,EICYCB OLAXPQ,LYBPDC'}
+  layout_properties: {grid_position: 'XJNATW,EICYCB CIVIBA,ZIOOXV'}
+- name: spacer_12
+  properties: {height: '20'}
+  type: Spacer
+  layout_properties: {grid_position: 'XJNATW,EICYCB OLAXPQ,FSEXYY UTOTGO,IMYQDO'}
 - name: image_1_copy_copy
   properties: {height: '140', source: '', horizontal_align: center, role: null}
   type: Image
@@ -192,41 +196,81 @@ components:
   properties: {text: '', align: left, bold: true, font_size: 26}
   type: Label
   layout_properties: {grid_position: 'XJNATW,EICYCB GDHSWL,LWORUH IEEIQV,NJVGEL'}
+- name: spacer_16
+  properties: {height: '3'}
+  type: Spacer
+  layout_properties: {grid_position: 'XJNATW,EICYCB GDHSWL,LWORUH PATSWD,BHOXKV SEMPGY,WPIOHO
+      TUVEVM,PQDGRF'}
+- name: image_1
+  properties: {height: '20', source: _/theme/telephone.png, display_mode: shrink_to_fit}
+  type: Image
+  layout_properties: {grid_position: 'XJNATW,EICYCB GDHSWL,LWORUH PATSWD,BHOXKV SEMPGY,WPIOHO
+      HXZJES,QQSKGX'}
 - name: label_6
-  properties: {text: 'Mobile No :', bold: true, font_size: 16}
+  properties: {text: 'Mobile No :', bold: true, font_size: 16, icon: ''}
   type: Label
   layout_properties: {grid_position: 'XJNATW,EICYCB GDHSWL,LWORUH PATSWD,BHOXKV SEMPGY,RNRKGL'}
+- name: spacer_17
+  properties: {height: '3'}
+  type: Spacer
+  layout_properties: {grid_position: 'XJNATW,EICYCB GDHSWL,LWORUH PATSWD,BHOXKV DPRJTX,XEZVML
+      XDVKVD,VSLEJE'}
+- name: image_2
+  properties: {height: '20', source: _/theme/user (1).png, display_mode: shrink_to_fit}
+  type: Image
+  layout_properties: {grid_position: 'XJNATW,EICYCB GDHSWL,LWORUH PATSWD,BHOXKV DPRJTX,XEZVML
+      OATRJL,SWIBVK'}
 - name: label_2
-  properties: {text: 'Member Since :', bold: true, font_size: 16}
+  properties: {text: 'Member Since :', bold: true, font_size: 16, icon: ''}
   type: Label
   layout_properties: {grid_position: 'XJNATW,EICYCB GDHSWL,LWORUH PATSWD,BHOXKV DPRJTX,UVQLFS'}
 - name: label_3
-  properties: {text: '7026542951', font_size: 16}
+  properties: {text: '', font_size: 16}
   type: Label
   layout_properties: {grid_position: 'XJNATW,EICYCB GDHSWL,LWORUH PATSWD,UBGOIF XMNMGS,QKJAYB
       QOEMYD,PHXFAC'}
 - name: label_7
-  properties: {text: 1 sep 2022, font_size: 16}
+  properties: {text: '', font_size: 16}
   type: Label
   layout_properties: {grid_position: 'XJNATW,EICYCB GDHSWL,LWORUH PATSWD,UBGOIF XMNMGS,QKJAYB
       VEPOLP,JFTIRZ'}
+- name: spacer_15
+  properties: {height: ''}
+  type: Spacer
+  layout_properties: {grid_position: 'XJNATW,EICYCB GDHSWL,LWORUH PATSWD,UBGOIF XMNMGS,DCWODV
+      NEGQGP,DNPTOC ZBLSPD,OPGEHY'}
+- name: image_11
+  properties: {height: '20', source: _/theme/credit-limit (1).png, display_mode: shrink_to_fit}
+  type: Image
+  layout_properties: {grid_position: 'XJNATW,EICYCB GDHSWL,LWORUH PATSWD,UBGOIF XMNMGS,DCWODV
+      NEGQGP,DNPTOC XAQFFC,CPBMQH'}
 - name: label_4
-  properties: {text: 'Credit Limit :', bold: true, font_size: 16}
+  properties: {text: 'Credit Limit :', bold: true, font_size: 16, icon: ''}
   type: Label
   layout_properties: {grid_position: 'XJNATW,EICYCB GDHSWL,LWORUH PATSWD,UBGOIF XMNMGS,DCWODV
       NEGQGP,CVCAKM'}
+- name: spacer_18
+  properties: {height: '3'}
+  type: Spacer
+  layout_properties: {grid_position: 'XJNATW,EICYCB GDHSWL,LWORUH PATSWD,UBGOIF XMNMGS,DCWODV
+      WKWXGE,RKLYJE TWETSP,OKCLZL'}
+- name: image_12
+  properties: {height: '20', source: _/theme/icons8-coins-100 (1).png}
+  type: Image
+  layout_properties: {grid_position: 'XJNATW,EICYCB GDHSWL,LWORUH PATSWD,UBGOIF XMNMGS,DCWODV
+      WKWXGE,RKLYJE GJIDHC,YUGOTA'}
 - name: label_1
-  properties: {text: 'Customer Id :', bold: true, font_size: 16}
+  properties: {text: 'Available Balance :', bold: true, font_size: 16, icon: ''}
   type: Label
   layout_properties: {grid_position: 'XJNATW,EICYCB GDHSWL,LWORUH PATSWD,UBGOIF XMNMGS,DCWODV
       WKWXGE,HMVRJG'}
 - name: label_5
-  properties: {text: '500000', font_size: 16}
+  properties: {text: '', font_size: 16}
   type: Label
   layout_properties: {grid_position: 'XJNATW,EICYCB GDHSWL,LWORUH PATSWD,UBGOIF XMNMGS,GVQREJ
       YOSMCJ,DZTVRG'}
 - name: label_8
-  properties: {text: '10000', font_size: 16}
+  properties: {text: '', font_size: 16}
   type: Label
   layout_properties: {grid_position: 'XJNATW,EICYCB GDHSWL,LWORUH PATSWD,UBGOIF XMNMGS,GVQREJ
       VXFYDN,JQAYXD'}

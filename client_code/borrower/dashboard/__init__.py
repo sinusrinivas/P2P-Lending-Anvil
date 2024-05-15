@@ -432,15 +432,16 @@ class dashboard(dashboardTemplate):
         self.user_Id = main_form_module.userId
         user_id = self.user_Id
         self.populate_loan_history()
-      
+
+        wallet = app_tables.fin_wallet.get(customer_id=self.user_Id)
+        if wallet:
+          self.label_8.text = wallet['wallet_amount']
 
         user_profile = app_tables.fin_user_profile.get(customer_id=user_id)
         if user_profile:
             self.label_3.text = user_profile['mobile']
             self.image_1_copy_copy.source = user_profile['user_photo']
-            self.image_1.source = user_profile['user_photo']
-            self.label_9.text = user_profile['full_name']
-            self.label_8.text = user_profile['customer_id']
+            
 
     def populate_loan_history(self):
         try:
