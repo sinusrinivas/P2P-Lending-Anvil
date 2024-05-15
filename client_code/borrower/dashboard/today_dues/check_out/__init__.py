@@ -572,7 +572,11 @@ class check_out(check_outTemplate):
         'interest_amount': self.interest_label.text,
         'remainining_amount': self.remainining_amount.text,
         'borrower_customer_id': self.selected_row['borrower_customer_id'],
-        'lender_customer_id': self.selected_row['lender_customer_id']
+        'lender_customer_id': self.selected_row['lender_customer_id'],
+        'lender_email' : self.selected_row['lender_email_id'],
+        'borrower_email' : self.selected_row['borrower_email_id'],
+        'emi_payment_type' : self.selected_row['emi_payment_type']
+        
     }
     
     # Open the part_payment form and pass loan_details as a parameter
