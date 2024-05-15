@@ -42,6 +42,7 @@ components:
         properties: {source: _/theme/menu.png, display_mode: shrink_to_fit, height: '100'}
         type: Image
         layout_properties: {grid_position: 'QGZTNW,PVJEPO'}
+        event_bindings: {mouse_up: image_4_copy_mouse_up}
       - name: button_9
         properties: {text: "ADD SUB \nCATEGORIES\n", font_size: 16, foreground: black,
           bold: true}
@@ -62,6 +63,7 @@ components:
           height: '100'}
         type: Image
         layout_properties: {grid_position: 'QGZTNW,PVJEPO'}
+        event_bindings: {mouse_up: image_4_copy_10_mouse_up}
       - name: button_14
         properties: {text: "VIEW ASCEND SCORE\n GROUPS\n", font_size: 16, foreground: black,
           bold: true}
@@ -90,6 +92,7 @@ components:
           height: '100'}
         type: Image
         layout_properties: {grid_position: 'QGZTNW,PVJEPO'}
+        event_bindings: {mouse_up: image_4_copy_2_mouse_up}
       - name: button_2_copy
         properties: {text: 'VIEW ASCEND SCORE SUBCATEGORIES
 

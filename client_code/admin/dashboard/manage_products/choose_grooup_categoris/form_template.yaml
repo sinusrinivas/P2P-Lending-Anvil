@@ -37,6 +37,7 @@ components:
         visible: true}
       type: Image
       layout_properties: {grid_position: 'QGZTNW,PVJEPO'}
+      event_bindings: {mouse_up: image_4_copy_mouse_up}
     - name: add_people
       properties: {text: "Add Product \nGroup\n", font_size: 16, foreground: black,
         bold: true, visible: true, font: ''}
@@ -53,6 +54,7 @@ components:
         visible: true}
       type: Image
       layout_properties: {grid_position: 'QGZTNW,PVJEPO'}
+      event_bindings: {mouse_up: image_4_copy_10_mouse_up}
     - name: button_1
       properties: {text: 'Add Product Categories
 
