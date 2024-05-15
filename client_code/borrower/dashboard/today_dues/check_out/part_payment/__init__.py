@@ -69,6 +69,17 @@ class part_payment(part_paymentTemplate):
                 loan_row['total_amount_paid'] = total_paid
                 loan_row.update()
 
+                current_emi_number = self.loan_details['current_emi_number']
+                extra_fee = self.loan_details['extra_fee']
+                prev_next_payment = self.loan_details['prev_next_payment']
+                prev_scheduled_payment = self.loan_details['prev_scheduled_payment']
+                borrower_email = self.loan_details['borrower_email']
+                lender_email = self.loan_details['lender_email']
+                emi_payment_type = self.loan_details['emi_payment_type']
+                borrower_customer_id = self.loan_details['borrower_customer_id']
+                lender_customer_id = self.loan_details['lender_customer_id']
+                account_no = self.loan_details['account_no']
+
                 if emi_payment_type in ['One Time', 'Monthly', 'Three Months', 'Six Months']:
                         
                   if emi_payment_type == 'Monthly':
@@ -94,25 +105,26 @@ class part_payment(part_paymentTemplate):
                 new_emi_row = app_tables.fin_emi_table.add_row(
                         loan_id=loan_id,
                         emi_number=current_emi_number + 1,
-                        account_number=account_number,
+                        account_number=account_no,
                         scheduled_payment_made=datetime.now(),
                         scheduled_payment=next_scheduled_payment,
                         next_payment=next_next_payment,
-                        amount_paid= total_emi_amount,
+                        amount_paid= entered_amount,
                         extra_fee=extra_fee,
-                        borrower_customer_id=borrower_id,
-                        lender_customer_id=lender_id,
+                        borrower_customer_id=borrower_customer_id,
+                        lender_customer_id=lender_customer_id,
                         borrower_email=borrower_email,
                         lender_email=lender_email,
-                        payment_type='pay now',
+                        payment_type='part payment',
+                        part_payment_date=datetime.today().date(),
                         
                         
                     )
 
                     # Update the emi_number and next_payment in the selected_row
-                self.selected_row['emi_number'] = current_emi_number + 1
-                self.selected_row['next_payment'] = next_next_payment
-                self.selected_row.update()
+                self.loan_details['emi_number'] = current_emi_number + 1
+                self.loan_details['next_payment'] = next_next_payment
+                self.loan_details.update()
                
 
             alert("Payment successful!")
