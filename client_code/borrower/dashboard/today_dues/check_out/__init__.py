@@ -604,6 +604,8 @@ class check_out(check_outTemplate):
         'extra_fee':extra_fee,
         'prev_scheduled_payment' : self.selected_row['scheduled_payment'],
         'prev_next_payment' : self.selected_row['next_payment'],
+        'part_payment_date' : self.selected_row['part_payment_date'],
+        'payment_type' : self.selected_row['payment_type'],
         
     }
     

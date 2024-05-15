@@ -62,6 +62,8 @@ class part_payment(part_paymentTemplate):
             # Update remaining amount in loan details table
             remaining_amount = float(self.loan_details['remainining_amount']) - entered_amount
             loan_id = self.loan_details['loan_id']
+
+   
             loan_row = app_tables.fin_loan_details.get(loan_id=loan_id)
             if loan_row is not None:
                 loan_row['remaining_amount'] = remaining_amount

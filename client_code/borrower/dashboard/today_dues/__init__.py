@@ -78,6 +78,7 @@ class today_dues(today_duesTemplate):
                     total_amount_paid = loan_detail['total_amount_paid']
                     remaining_amount = loan_detail['remaining_amount']
                     payment_type = latest_loan['payment_type']
+                    part_payment_date = latest_loan['part_payment_date']
                   
                     loan_details.append({
                         'loan_id': loan_id,
@@ -112,6 +113,7 @@ class today_dues(today_duesTemplate):
                         'total_amount_paid':total_amount_paid,
                         'remaining_amount':remaining_amount,
                         'payment_type': payment_type,
+                        'part_payment_date':part_payment_date,
                     })
             else:
                 for loan in all_loans_disbursed:
