@@ -24,6 +24,7 @@ class part_payment(part_paymentTemplate):
     self.tenure_label.text = loan_details['tenure']
     self.interest_label.text = loan_details['interest_amount']
     self.remainining_amount.text = loan_details['remainining_amount']
+    current_emi_number = loan_details['current_emi_number']
 
   def pay_now_click(self, **event_args):
     """This method is called when the button is clicked"""
