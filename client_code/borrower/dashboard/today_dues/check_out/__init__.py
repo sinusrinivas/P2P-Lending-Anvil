@@ -38,6 +38,10 @@ class check_out(check_outTemplate):
         total_payments = tenure * 12
         total_repayment_amount = selected_row['total_repayment_amount']
         total_i_a = total_interest_amount / tenure
+        if remaining_amount is None:
+          self.remainining_amount.text = "{:.2f}".format(total_repayment_amount)
+        else:
+          self.remainining_amount.text =  "{:.2f}".format(remaining_amount)
       
         if emi_payment_type == 'One Time':
             emi = total_repayment_amount
@@ -237,6 +241,14 @@ class check_out(check_outTemplate):
             self.total_emi_amount_label.visible = True
             self.label_3.visible = True
 
+        emi_row = app_tables.fin_emi_table.get(
+            loan_id=loan_id,
+            emi_number=selected_row['emi_number'] + 1
+        )
+
+        if emi_row is not None and emi_row['payment_type'] == 'part payment':
+          self.button_1_copy_3.visible = False
+  
     def get_extension_details(self, loan_id, emi_number):
         extension_row = app_tables.fin_extends_loan.get(
             borrower_customer_id=self.selected_row['borrower_customer_id'],
@@ -476,6 +488,7 @@ class check_out(check_outTemplate):
                         lender_customer_id=lender_id,
                         borrower_email=borrower_email,
                         lender_email=lender_email,
+                        payment_type='pay now',
                         
                         
                     )
@@ -553,3 +566,56 @@ class check_out(check_outTemplate):
           return foreclosure_row
       else:
           return None
+
+    def part_payment_click(self, **event_args):
+      """This method is called when the button is clicked"""
+
+      try:
+        # Try to convert and get the values, and calculate the extra fee
+        lapsed_fee = float(self.lapsed.text)
+      except ValueError:
+          lapsed_fee = 0.0
+          
+      try:
+          default_fee = float(self.default.text)
+      except ValueError:
+          default_fee = 0.0
+          
+      try:
+          extension_amount = float(self.extension_amount_label.text)
+      except ValueError:
+          extension_amount = 0.0
+          
+      try:
+          npa_fee = float(self.npa.text)
+      except ValueError:
+          npa_fee = 0.0
+      
+      # Calculate the extra fee
+      extra_fee = lapsed_fee + default_fee + extension_amount + npa_fee
+      loan_details = {
+        'i_r': self.i_r.text,
+        'total_emi_amount': self.total_emi_amount_label.text,
+        'emi_amount': self.emi_amount_label.text,
+        'loan_id': self.loan_id_label.text,
+        'loan_amount': self.loan_amount_label.text,
+        'tenure': self.tenure_label.text,
+        'account_no': self.account_no_label.text,
+        'interest_amount': self.interest_label.text,
+        'remainining_amount': self.remainining_amount.text,
+        'borrower_customer_id': self.selected_row['borrower_customer_id'],
+        'lender_customer_id': self.selected_row['lender_customer_id'],
+        'lender_email' : self.selected_row['lender_email_id'],
+        'borrower_email' : self.selected_row['borrower_email_id'],
+        'emi_payment_type' : self.selected_row['emi_payment_type'],
+        'current_emi_number' : int(self.selected_row['emi_number']),
+        'extra_fee':extra_fee,
+        'prev_scheduled_payment' : self.selected_row['scheduled_payment'],
+        'prev_next_payment' : self.selected_row['next_payment'],
+        # 'part_payment_date' : self.selected_row['part_payment_date'],
+        # 'payment_type' : self.selected_row['payment_type'],
+        
+    }
+    
+    # Open the part_payment form and pass loan_details as a parameter
+      open_form('borrower.dashboard.today_dues.check_out.part_payment', loan_details=loan_details)
