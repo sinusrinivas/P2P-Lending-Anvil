@@ -32,7 +32,7 @@ components:
   - name: spacer_3
     properties: {height: 32}
     type: Spacer
-    layout_properties: {width: 200.79998779296875}
+    layout_properties: {width: 256.6000061035156}
   - name: borrower_dashboard_home_linkhome_borrower_registration_button_copy_1
     properties: {role: null, url: '', align: right, tooltip: Home, border: '', foreground: 'theme:On
         Primary', visible: true, text: Home, font_size: 15, wrap_on: mobile, font: '',
@@ -347,31 +347,31 @@ components:
   layout_properties: {grid_position: 'CCIIXU,HUNYKM EOKIOO,DZMIIN', full_width_row: true}
   name: column_panel_7_copy
   components:
-  - properties: {text: New Loan Requests, foreground: white, role: null, align: full,
-      background: '#007FFF', border: '', bold: true}
+  - properties: {text: '', foreground: white, role: null, align: full, background: '#007FFF',
+      border: '', bold: true}
     type: Button
     layout_properties: {grid_position: 'GWOXFQ,YPNAHH', full_width_row: true}
     event_bindings: {click: button_1_copy_click}
     name: button_1_copy
-  - properties: {text: Loan Disbursed, foreground: white, role: elevated-button, background: '#FEBE10',
+  - properties: {text: '', foreground: white, role: elevated-button, background: '#FEBE10',
       bold: true, align: full}
     type: Button
     layout_properties: {grid_position: 'GWOXFQ,DXKIFN', full_width_row: true}
     event_bindings: {click: button_2_copy_click}
     name: button_2_copy
-  - properties: {text: 'Lost Opportunities ', foreground: white, align: full, role: null,
-      background: '#800080', bold: true, tooltip: ''}
+  - properties: {text: '', foreground: white, align: full, role: null, background: '#800080',
+      bold: true, tooltip: ''}
     type: Button
     layout_properties: {grid_position: 'GWOXFQ,ULDUEY'}
     event_bindings: {click: button_3_copy_click}
     name: button_3_copy
-  - properties: {text: 'Closed ', foreground: white, align: full, role: null, background: '#4CBB17',
+  - properties: {text: '', foreground: white, align: full, role: null, background: '#4CBB17',
       bold: true}
     type: Button
     layout_properties: {grid_position: 'GWOXFQ,BOZZYE'}
     event_bindings: {click: button_4_copy_click}
     name: button_4_copy
-  - properties: {text: 'Extended ', foreground: white, align: full, role: elevated-button,
+  - properties: {text: '', foreground: white, align: full, role: elevated-button,
       background: '#E52B50', bold: true, enabled: true}
     type: Button
     layout_properties: {grid_position: 'GWOXFQ,UNJZMC'}
