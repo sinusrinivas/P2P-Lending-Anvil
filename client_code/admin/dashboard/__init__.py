@@ -60,7 +60,6 @@ class dashboard(dashboardTemplate):
   def manage_lender_click(self, **event_args):
     open_form('admin.dashboard.lenders')
 
-
   def manage_bessem_click(self, **event_args):
     open_form('admin.dashboard.manage_bessem')
 
