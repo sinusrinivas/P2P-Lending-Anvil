@@ -34,26 +34,28 @@ class part_payment(part_paymentTemplate):
     borrower_email = loan_details['borrower_email']
     lender_email = loan_details['lender_email']
     emi_payment_type = loan_details['emi_payment_type']
+    print(current_emi_number)
 
 
-    if self.loan_details['payment_type'] == 'part payment':
-        # Fetch part payment amount from fin_emi_table based on loan ID and emi number
-        loan_id = self.loan_details['loan_id']
-        emi_number = self.loan_details['current_emi_number']
-        print(emi_number)
-        emi_row = app_tables.fin_emi_table.get(
+    loan_id = self.loan_details['loan_id']
+    emi_number = self.loan_details['current_emi_number']
+    emi_row = app_tables.fin_emi_table.get(
             loan_id=loan_id,
             emi_number=emi_number + 1
         )
-        part_payment_amount = emi_row['part_payment_amount']
-        total_emi_amount = float(self.total_emi_amount_label.text)
 
-        # Calculate the remaining amount after deducting the part payment amount
-        remaining_part_payment_amount = total_emi_amount - part_payment_amount
+    if emi_row['payment_type'] == 'part payment':
+            # Now we have the emi_row, proceed with the rest of the code
+            part_payment_amount = emi_row['part_payment_amount']
+            total_emi_amount = float(self.total_emi_amount_label.text)
 
-        # Display the remaining amount in the text box
-        self.text_box_1.text = str(remaining_part_payment_amount)
-        self.text_box_1.enabled = False
+            # Calculate the remaining amount after deducting the part payment amount
+            remaining_part_payment_amount = total_emi_amount - part_payment_amount
+
+            # Display the remaining amount in the text box
+            self.text_box_1.text = str(remaining_part_payment_amount)
+            self.text_box_1.enabled = False
+
 
   def pay_now_click(self, **event_args):
     """This method is called when the button is clicked"""
