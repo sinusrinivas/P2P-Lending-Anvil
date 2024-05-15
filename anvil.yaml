@@ -1084,6 +1084,9 @@ db_schema:
     - name: part_payment_date
       admin_ui: {width: 200, order: 16}
       type: date
+    - name: part_payment_amount
+      admin_ui: {width: 200, order: 17}
+      type: number
   fin_borrower_business_type:
     client: full
     server: full
