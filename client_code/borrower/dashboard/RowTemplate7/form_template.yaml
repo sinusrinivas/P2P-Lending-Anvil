@@ -5,27 +5,35 @@ components:
   properties: {text: LA001, align: center}
   type: Label
   layout_properties: {column: JKSDUP}
+  data_bindings:
+  - {property: text, code: 'self.item[''loan_id'']', writeback: false}
 - name: amount
   properties: {text: '100000', align: center}
   type: Label
   layout_properties: {column: VJQQOR}
+  data_bindings:
+  - {property: text, code: 'self.item[''loan_amount'']', writeback: false}
 - name: tenure
   properties: {text: '36', align: center}
   type: Label
   layout_properties: {column: OJLQEN}
+  data_bindings:
+  - {property: text, code: 'self.item[''tenure'']', writeback: false}
 - name: interest
   properties: {text: '12', align: center}
   type: Label
   layout_properties: {column: GAVKHZ}
+  data_bindings:
+  - {property: text, code: 'self.item[''interest_rate'']', writeback: false}
 - name: repayment_amount
   properties: {text: '50000', align: center}
   type: Label
   layout_properties: {column: NJWOLU}
-- name: due_date
-  properties: {text: 2 may 2023, align: center}
-  type: Label
-  layout_properties: {column: LMSEMV}
+  data_bindings:
+  - {property: text, code: 'self.item[''total_repayment_amount'']', writeback: false}
 - name: actions
   properties: {text: Open Loan, align: center}
   type: Label
   layout_properties: {column: RNOHUR}
+  data_bindings:
+  - {property: text, code: 'self.item[''loan_updated_status'']', writeback: false}
