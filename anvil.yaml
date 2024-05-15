@@ -1078,6 +1078,15 @@ db_schema:
     - name: extra_fee
       admin_ui: {width: 200, order: 14}
       type: number
+    - name: payment_type
+      admin_ui: {width: 200, order: 15}
+      type: string
+    - name: part_payment_date
+      admin_ui: {width: 200, order: 16}
+      type: date
+    - name: part_payment_amount
+      admin_ui: {width: 200, order: 17}
+      type: number
   fin_borrower_business_type:
     client: full
     server: full
@@ -1204,7 +1213,7 @@ db_schema:
       admin_ui: {width: 200, order: 3.5}
       type: number
   fin_wallet_bank_account_table:
-    client: full
+    client: none
     server: full
     columns:
     - name: account_id

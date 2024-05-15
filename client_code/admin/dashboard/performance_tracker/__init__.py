@@ -103,5 +103,29 @@ class performance_tracker(performance_trackerTemplate):
     """This method is called when the link is clicked"""
     pass
 
+  def image_4_copy_mouse_up(self, x, y, button, **event_args):
+    """This method is called when a mouse button is released on this component"""
+    open_form('admin.dashboard.loan_management.approved_loans')
+
+  def image_4_copy_10_mouse_up(self, x, y, button, **event_args):
+    """This method is called when a mouse button is released on this component"""
+    open_form('admin.dashboard.loan_management.rejected_loans')
+
+  def image_4_copy_5_mouse_up(self, x, y, button, **event_args):
+    """This method is called when a mouse button is released on this component"""
+    open_form('admin.dashboard.loan_management.open_loans')
+
+  def image_4_copy_2_mouse_up(self, x, y, button, **event_args):
+    """This method is called when a mouse button is released on this component"""
+    open_form('admin.dashboard.loan_management.closed_loans')
+
+  def image_4_copy_3_mouse_up(self, x, y, button, **event_args):
+    """This method is called when a mouse button is released on this component"""
+    open_form('admin.dashboard.loan_management.under_process')
+
+  def button_3_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    pass
+
 
 

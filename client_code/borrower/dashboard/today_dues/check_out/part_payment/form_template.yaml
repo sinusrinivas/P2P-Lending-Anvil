@@ -1,9 +1,9 @@
 container: {type: ColumnPanel}
 components:
 - name: column_panel_1
-  properties: {col_widths: '{"BGADMX":15,"IVLWPK":25,"LEWFZL":10,"KZXJUD":10,"FEBQYX":25,"CVYNIK":15,"UXFHVV":20}'}
+  properties: {col_widths: '{"BGADMX":15,"IVLWPK":25,"LEWFZL":15,"KZXJUD":5,"FEBQYX":25,"UXFHVV":20}'}
   type: ColumnPanel
-  layout_properties: {grid_position: 'UHUIMT,WMUGOV', full_width_row: true}
+  layout_properties: {grid_position: 'CMILPI,LJKKAN'}
   components:
   - name: image_1
     properties: {role: null, vertical_align: center, height: '45', tooltip: '', border: '',
@@ -16,9 +16,9 @@ components:
     properties: {}
     type: form:borrower.logout
     layout_properties: {grid_position: 'NGCAVN,MPZVUL', full_width_row: true}
-  - type: form:borrower.dashboard.Navigation_form_dashboard
+  - name: navigation_form_dashboard_1
     properties: {}
-    name: navigation_form_dashboard_1
+    type: form:borrower.dashboard.Navigation_form_dashboard
     layout_properties: {grid_position: 'JLGAUO,AQQKFO', full_width_row: true}
   - name: spacer_1
     properties: {height: 32}
@@ -31,9 +31,9 @@ components:
       bold: true, underline: false, icon: ''}
     type: Label
     layout_properties: {grid_position: 'UWSCBP,TJHWVT'}
-  - type: Spacer
+  - name: spacer_4
     properties: {height: 305.4999694824219}
-    name: spacer_4
+    type: Spacer
     layout_properties: {grid_position: 'KSEEYY,BGADMX'}
   - name: label_7
     properties: {text: 'Loan Id:', bold: true, align: left}
@@ -77,13 +77,6 @@ components:
       underline: false, icon: ''}
     type: Label
     layout_properties: {grid_position: 'KSEEYY,IVLWPK YQRQCE,OBXRSC'}
-  - name: label_6
-    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-      visible: true, text: Extra Amount, font_size: null, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-      underline: false, icon: ''}
-    type: Label
-    layout_properties: {grid_position: 'KSEEYY,IVLWPK PKFLFI,RQKTRY'}
   - name: label_3
     properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
       visible: true, text: Total  Amount, font_size: null, font: '', spacing_above: small,
@@ -92,27 +85,9 @@ components:
     type: Label
     layout_properties: {grid_position: 'KSEEYY,IVLWPK TJCKXB,LJHLGB'}
   - name: label_5
-    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-      visible: false, text: Late payment fee Fee, font_size: null, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-      underline: false, icon: ''}
+    properties: {text: Amount, bold: true}
     type: Label
-    layout_properties: {grid_position: 'KSEEYY,IVLWPK LEFJKV,LHUFSM'}
-  - type: Label
-    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-      visible: false, text: Default Fee, font_size: null, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-      underline: false, icon: ''}
-    name: label_9
-    layout_properties: {grid_position: 'KSEEYY,IVLWPK GOQVUM,ZQEUHY'}
-  - name: label_12
-    properties: {text: Non Performing Asset Amount, visible: false, bold: true}
-    type: Label
-    layout_properties: {grid_position: 'KSEEYY,IVLWPK JOSMBU,RGGYIP'}
-  - name: i_r
-    properties: {visible: false}
-    type: Label
-    layout_properties: {grid_position: 'KSEEYY,IVLWPK OGQCRV,DXYIAB'}
+    layout_properties: {grid_position: 'KSEEYY,IVLWPK LTVRMD,BUTKKA'}
   - name: loan_id_label
     properties: {align: left}
     type: Label
@@ -144,13 +119,6 @@ components:
       icon: ''}
     type: Label
     layout_properties: {grid_position: 'KSEEYY,LEWFZL MTLAPN,BGFFQL'}
-  - name: extension_amount_label
-    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-      visible: true, text: '', font_size: null, font: '', spacing_above: small, icon_align: left,
-      spacing_below: small, italic: false, background: '', bold: false, underline: false,
-      icon: ''}
-    type: Label
-    layout_properties: {grid_position: 'KSEEYY,LEWFZL CNROEZ,THPNKQ'}
   - name: total_emi_amount_label
     properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
       visible: true, text: '', font_size: null, font: '', spacing_above: small, icon_align: left,
@@ -158,28 +126,13 @@ components:
       icon: ''}
     type: Label
     layout_properties: {grid_position: 'KSEEYY,LEWFZL JZRNDQ,CWDDHA'}
-  - name: lapsed
-    properties: {align: left, visible: false}
-    type: Label
-    layout_properties: {grid_position: 'KSEEYY,LEWFZL SMYIFK,QLDYHU'}
-  - type: Label
-    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-      visible: false, text: '', font_size: null, font: '', spacing_above: small, icon_align: left,
-      spacing_below: small, italic: false, background: '', bold: false, underline: false,
-      icon: ''}
-    name: default
-    layout_properties: {grid_position: 'KSEEYY,LEWFZL TDIKTC,GCKCWR'}
-  - name: npa
-    properties: {visible: false}
-    type: Label
-    layout_properties: {grid_position: 'KSEEYY,LEWFZL EWZDPL,NTPHBT'}
-  - name: processing_fee
-    properties: {visible: false}
-    type: Label
-    layout_properties: {grid_position: 'KSEEYY,LEWFZL UCGAPT,TOWKFE'}
-  - type: Spacer
+  - name: text_box_1
+    properties: {background: white, placeholder: Enter Amount}
+    type: TextBox
+    layout_properties: {grid_position: 'KSEEYY,LEWFZL TRWDZU,QPVQKP'}
+  - name: spacer_5
     properties: {height: 299.6428527832031}
-    name: spacer_5
+    type: Spacer
     layout_properties: {grid_position: 'KSEEYY,KZXJUD'}
   - name: button_1_copy_2
     properties: {role: null, align: right, tooltip: '', border: '', enabled: true,
@@ -191,14 +144,6 @@ components:
       col_widths: {}
       grid_position: MSEXQT,FEBQYX
     event_bindings: {click: button_1_copy_2_click}
-  - name: part_payment
-    properties: {role: null, align: full, tooltip: '', border: '', enabled: true,
-      foreground: 'theme:On Primary', visible: true, text: ' PART  PAYMENT', font_size: null,
-      font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
-      background: '#0b2547', bold: true, underline: false, icon: ''}
-    type: Button
-    layout_properties: {grid_position: 'MSEXQT,CVYNIK'}
-    event_bindings: {click: part_payment_click}
   - name: button_1_copy_3
     properties: {role: null, align: left, tooltip: '', border: '', enabled: true,
       foreground: 'theme:On Primary', visible: true, text: PAY NOW, font_size: null,

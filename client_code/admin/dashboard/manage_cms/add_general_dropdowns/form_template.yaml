@@ -44,6 +44,7 @@ components:
       properties: {source: _/theme/lesbian.png, display_mode: shrink_to_fit, height: '100'}
       type: Image
       layout_properties: {grid_position: 'QGZTNW,PVJEPO'}
+      event_bindings: {mouse_up: image_4_copy_mouse_up}
     - name: button_9
       properties: {text: 'Gender
 
@@ -65,6 +66,7 @@ components:
         height: '100'}
       type: Image
       layout_properties: {grid_position: 'QGZTNW,PVJEPO'}
+      event_bindings: {mouse_up: image_4_copy_10_mouse_up}
     - name: button_14
       properties: {text: 'Present Address
 
@@ -86,6 +88,7 @@ components:
         height: '100'}
       type: Image
       layout_properties: {grid_position: 'QGZTNW,PVJEPO'}
+      event_bindings: {mouse_up: image_4_copy_5_mouse_up}
     - name: button_11
       properties: {text: 'Choose Role
 
@@ -110,6 +113,7 @@ components:
       properties: {source: _/theme/occupation.png, display_mode: shrink_to_fit, height: '100'}
       type: Image
       layout_properties: {grid_position: 'QGZTNW,PVJEPO'}
+      event_bindings: {mouse_up: image_4_copy_3_mouse_up}
     - name: button_10
       properties: {text: Occupation Type, font_size: 16, foreground: black, bold: true}
       type: Button
@@ -132,6 +136,7 @@ components:
       properties: {source: _/theme/hourglass.png, display_mode: shrink_to_fit, height: '100'}
       type: Image
       layout_properties: {grid_position: 'QGZTNW,PVJEPO'}
+      event_bindings: {mouse_up: image_4_copy_2_mouse_up}
     - name: button_2
       properties: {text: 'Duration at Address
 
