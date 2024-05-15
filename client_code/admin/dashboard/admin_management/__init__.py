@@ -82,5 +82,17 @@ class admin_management(admin_managementTemplate):
       """This method is called when the button is clicked"""
       open_form('admin.dashboard.admin_management.view_admins')
 
+    def image_4_copy_mouse_up(self, x, y, button, **event_args):
+      """This method is called when a mouse button is released on this component"""
+      open_form('admin.dashboard.admin_management.add_admin')
+
+    def image_4_copy_10_mouse_up(self, x, y, button, **event_args):
+      """This method is called when a mouse button is released on this component"""
+      open_form('admin.dashboard.admin_management.view_admins')
+
+    def image_4_copy_5_mouse_up(self, x, y, button, **event_args):
+      """This method is called when a mouse button is released on this component"""
+      open_form('admin.dashboard.admin_management.view_admins')
+
 
 

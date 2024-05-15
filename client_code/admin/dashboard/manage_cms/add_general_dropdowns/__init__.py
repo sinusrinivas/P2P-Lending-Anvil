@@ -130,3 +130,43 @@ class add_general_dropdowns(add_general_dropdownsTemplate):
     self.column_panel_03.visible = False
     self.column_panel_04.visible = False
     self.column_panel_05.visible = True
+
+  def image_4_copy_mouse_up(self, x, y, button, **event_args):
+    """This method is called when a mouse button is released on this component"""
+    self.column_panel_01.visible = True
+    self.column_panel_02.visible = False
+    self.column_panel_03.visible = False
+    self.column_panel_04.visible = False
+    self.column_panel_05.visible = False
+
+  def image_4_copy_10_mouse_up(self, x, y, button, **event_args):
+    """This method is called when a mouse button is released on this component"""
+    self.column_panel_01.visible = False
+    self.column_panel_02.visible = True
+    self.column_panel_03.visible = False
+    self.column_panel_04.visible = False
+    self.column_panel_05.visible = False
+
+  def image_4_copy_2_mouse_up(self, x, y, button, **event_args):
+    """This method is called when a mouse button is released on this component"""
+    self.column_panel_01.visible = False
+    self.column_panel_02.visible = False
+    self.column_panel_03.visible = True
+    self.column_panel_04.visible = False
+    self.column_panel_05.visible = False
+
+  def image_4_copy_3_mouse_up(self, x, y, button, **event_args):
+    """This method is called when a mouse button is released on this component"""
+    self.column_panel_01.visible = False
+    self.column_panel_02.visible = False
+    self.column_panel_03.visible = False
+    self.column_panel_04.visible = True
+    self.column_panel_05.visible = False
+
+  def image_4_copy_5_mouse_up(self, x, y, button, **event_args):
+    """This method is called when a mouse button is released on this component"""
+    self.column_panel_01.visible = False
+    self.column_panel_02.visible = False
+    self.column_panel_03.visible = False
+    self.column_panel_04.visible = False
+    self.column_panel_05.visible = True

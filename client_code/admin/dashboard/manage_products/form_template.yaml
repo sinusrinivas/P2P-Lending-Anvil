@@ -43,6 +43,7 @@ components:
         type: Image
         layout_properties: {grid_position: 'QGZTNW,PVJEPO'}
         name: image_4_copy
+        event_bindings: {mouse_up: image_4_copy_mouse_up}
       - properties: {text: 'ADD PRODUCT GROUP  & CATEGORIES
 
             ', font_size: 16, foreground: black, bold: true}
@@ -64,6 +65,7 @@ components:
         type: Image
         layout_properties: {grid_position: 'QGZTNW,PVJEPO'}
         name: image_4_copy_10
+        event_bindings: {mouse_up: image_4_copy_10_mouse_up}
       - properties: {text: "ADD\n PRODUCTS\n", font_size: 16, foreground: black, bold: true}
         type: Button
         layout_properties: {grid_position: 'TFDFVQ,VTCDTE'}
@@ -83,6 +85,7 @@ components:
         type: Image
         layout_properties: {grid_position: 'QGZTNW,PVJEPO'}
         name: image_4_copy_5
+        event_bindings: {mouse_up: image_4_copy_5_mouse_up}
       - properties: {text: "MANAGE \nPRODUCTS\n", font_size: 16, foreground: black,
           bold: true}
         type: Button
@@ -103,6 +106,7 @@ components:
         type: Image
         layout_properties: {grid_position: 'QGZTNW,PVJEPO'}
         name: image_4_copy_3
+        event_bindings: {mouse_up: image_4_copy_3_mouse_up}
       - properties: {text: MANAGE PRODUCT CATEGORIES, font_size: 16, foreground: black,
           bold: true}
         type: Button
@@ -123,6 +127,7 @@ components:
         type: Image
         layout_properties: {grid_position: 'QGZTNW,PVJEPO'}
         name: image_4_copy_2
+        event_bindings: {mouse_up: image_4_copy_2_mouse_up}
       - properties: {text: "MANAGE PRODUCT \nGROUP\n", align: center, foreground: black,
           font_size: 16, bold: true}
         type: Button

@@ -34,6 +34,7 @@ components:
       type: Image
       layout_properties: {grid_position: 'QGZTNW,PVJEPO'}
       name: image_4_copy
+      event_bindings: {mouse_up: image_4_copy_mouse_up}
     - properties: {text: 'Borrower Dropdowns
 
           ', font_size: 16, foreground: black, bold: true, visible: true, font: ''}
@@ -51,6 +52,7 @@ components:
       type: Image
       layout_properties: {grid_position: 'QGZTNW,PVJEPO'}
       name: image_4_copy_10
+      event_bindings: {mouse_up: image_4_copy_10_mouse_up}
     - properties: {text: 'Lender Dropdowns
 
           ', font_size: 16, foreground: black, bold: true, visible: true}
@@ -68,6 +70,7 @@ components:
       type: Image
       layout_properties: {grid_position: 'QGZTNW,PVJEPO'}
       name: image_4_copy_5
+      event_bindings: {mouse_up: image_4_copy_5_mouse_up}
     - properties: {text: General Dropdowns, font_size: 16, foreground: black, bold: true,
         visible: true}
       type: Button
