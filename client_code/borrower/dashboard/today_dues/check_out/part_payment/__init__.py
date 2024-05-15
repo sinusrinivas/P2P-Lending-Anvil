@@ -7,6 +7,9 @@ import anvil.users
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
+from datetime import datetime, timedelta
+from .. import main_form_module as main_form_module
+from datetime import date
 
 
 class part_payment(part_paymentTemplate):
@@ -25,6 +28,13 @@ class part_payment(part_paymentTemplate):
     self.interest_label.text = loan_details['interest_amount']
     self.remainining_amount.text = loan_details['remainining_amount']
     current_emi_number = loan_details['current_emi_number']
+    extra_fee = loan_details['extra_fee']
+    prev_next_payment = loan_details['prev_next_payment']
+    prev_scheduled_payment = loan_details['prev_scheduled_payment']
+    borrower_email = loan_details['borrower_email']
+    lender_email = loan_details['lender_email']
+    emi_payment_type = loan_details['emi_payment_type']
+    
 
   def pay_now_click(self, **event_args):
     """This method is called when the button is clicked"""
@@ -58,6 +68,51 @@ class part_payment(part_paymentTemplate):
                 total_paid = float(loan_row['total_amount_paid']) + entered_amount
                 loan_row['total_amount_paid'] = total_paid
                 loan_row.update()
+
+                if emi_payment_type in ['One Time', 'Monthly', 'Three Months', 'Six Months']:
+                        
+                  if emi_payment_type == 'Monthly':
+                            next_scheduled_payment = prev_scheduled_payment + timedelta(days=30)
+                            next_next_payment = prev_next_payment + timedelta(days=30)
+                  elif emi_payment_type == 'Three Months':
+                            next_scheduled_payment = prev_scheduled_payment + timedelta(days=90)
+                            next_next_payment = prev_next_payment + timedelta(days=90)
+                     
+                  elif emi_payment_type == 'Six Months':
+                            next_scheduled_payment = prev_scheduled_payment + timedelta(days=180)
+                            next_next_payment = prev_next_payment + timedelta(days=180)
+                  elif emi_payment_type == 'One Time':
+                          if tenure:
+                            next_scheduled_payment = prev_scheduled_payment + timedelta(days=30 * tenure)
+                            next_next_payment = self.selected_row['next_payment'] + timedelta(days=30 * tenure)                
+                else:
+                        # Default to monthly calculation
+                        next_scheduled_payment = prev_scheduled_payment + timedelta(days=30)
+                        next_next_payment = prev_next_payment + timedelta(days=30)
+
+                    # Add a new row to fin_emi_table
+                new_emi_row = app_tables.fin_emi_table.add_row(
+                        loan_id=loan_id,
+                        emi_number=current_emi_number + 1,
+                        account_number=account_number,
+                        scheduled_payment_made=datetime.now(),
+                        scheduled_payment=next_scheduled_payment,
+                        next_payment=next_next_payment,
+                        amount_paid= total_emi_amount,
+                        extra_fee=extra_fee,
+                        borrower_customer_id=borrower_id,
+                        lender_customer_id=lender_id,
+                        borrower_email=borrower_email,
+                        lender_email=lender_email,
+                        payment_type='pay now',
+                        
+                        
+                    )
+
+                    # Update the emi_number and next_payment in the selected_row
+                self.selected_row['emi_number'] = current_emi_number + 1
+                self.selected_row['next_payment'] = next_next_payment
+                self.selected_row.update()
                
 
             alert("Payment successful!")

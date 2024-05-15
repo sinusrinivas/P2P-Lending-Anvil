@@ -602,6 +602,8 @@ class check_out(check_outTemplate):
         'emi_payment_type' : self.selected_row['emi_payment_type'],
         'current_emi_number' : int(self.selected_row['emi_number']),
         'extra_fee':extra_fee,
+        'prev_scheduled_payment' : self.selected_row['scheduled_payment'],
+        'prev_next_payment' : self.selected_row['next_payment'],
         
     }
     
