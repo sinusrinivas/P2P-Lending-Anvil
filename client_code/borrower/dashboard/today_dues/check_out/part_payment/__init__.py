@@ -34,6 +34,7 @@ class part_payment(part_paymentTemplate):
     borrower_email = loan_details['borrower_email']
     lender_email = loan_details['lender_email']
     emi_payment_type = loan_details['emi_payment_type']
+    
     print(current_emi_number)
 
 
@@ -180,18 +181,26 @@ class part_payment(part_paymentTemplate):
     
                 # Add to lender's wallet
                 lender_balance = lender_wallet['wallet_amount']
-                new_lender_balance = lender_balance + entered_amount
+                new_lender_balance = lender_balance + text_amount
                 lender_wallet['wallet_amount'] = new_lender_balance
                 lender_wallet.update()
     
                 # Update remaining amount in loan details table
-                remaining_amount = float(self.loan_details['remainining_amount']) - entered_amount
+                remaining_amount = float(self.loan_details['remainining_amount']) - text_amount
                 loan_id = self.loan_details['loan_id']
     
       
                 loan_row = app_tables.fin_loan_details.get(loan_id=loan_id)
                 if loan_row is not None:
                     loan_row['remaining_amount'] = remaining_amount
-                    total_paid = float(loan_row['total_amount_paid']) + entered_amount
+                    total_paid = float(loan_row['total_amount_paid']) + text_amount
                     loan_row['total_amount_paid'] = total_paid
+                    loan_row['lender_returns'] += float(self.loan_details['i_r'])
                     loan_row.update()
+
+                if emi_row :
+                  emi_row['payment_type'] = 'pay now'
+                  emi_row['part_payment_amount'] += text_amount
+                  emi_row['amount_paid'] += text_amount
+                  emi_row['extra_fee'] += float(self.loan_details['extra_fee'])
+                  emi_row.update()
