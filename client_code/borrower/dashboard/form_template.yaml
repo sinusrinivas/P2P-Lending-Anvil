@@ -197,12 +197,12 @@ components:
   type: Label
   layout_properties: {grid_position: 'XJNATW,EICYCB GDHSWL,LWORUH PATSWD,BHOXKV DPRJTX,UVQLFS'}
 - name: label_3
-  properties: {text: '7026542951', font_size: 16}
+  properties: {text: '', font_size: 16}
   type: Label
   layout_properties: {grid_position: 'XJNATW,EICYCB GDHSWL,LWORUH PATSWD,UBGOIF XMNMGS,QKJAYB
       QOEMYD,PHXFAC'}
 - name: label_7
-  properties: {text: 1 sep 2022, font_size: 16}
+  properties: {text: '', font_size: 16}
   type: Label
   layout_properties: {grid_position: 'XJNATW,EICYCB GDHSWL,LWORUH PATSWD,UBGOIF XMNMGS,QKJAYB
       VEPOLP,JFTIRZ'}
@@ -217,12 +217,12 @@ components:
   layout_properties: {grid_position: 'XJNATW,EICYCB GDHSWL,LWORUH PATSWD,UBGOIF XMNMGS,DCWODV
       WKWXGE,HMVRJG'}
 - name: label_5
-  properties: {text: '500000', font_size: 16}
+  properties: {text: '', font_size: 16}
   type: Label
   layout_properties: {grid_position: 'XJNATW,EICYCB GDHSWL,LWORUH PATSWD,UBGOIF XMNMGS,GVQREJ
       YOSMCJ,DZTVRG'}
 - name: label_8
-  properties: {text: '10000', font_size: 16}
+  properties: {text: '', font_size: 16}
   type: Label
   layout_properties: {grid_position: 'XJNATW,EICYCB GDHSWL,LWORUH PATSWD,UBGOIF XMNMGS,GVQREJ
       VXFYDN,JQAYXD'}
