@@ -159,6 +159,8 @@ class dashboard(dashboardTemplate):
     """This method is called when a mouse button is released on this component"""
     open_form('admin.dashboard.manage_bessem')
 
+ 
+
   
 
     
