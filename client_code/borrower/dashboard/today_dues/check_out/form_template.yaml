@@ -192,8 +192,8 @@ components:
       grid_position: MSEXQT,FEBQYX
     event_bindings: {click: button_1_copy_2_click}
   - name: part_payment
-    properties: {role: null, align: right, tooltip: '', border: '', enabled: true,
-      foreground: 'theme:On Primary', visible: true, text: '  PART  PAYMENT', font_size: null,
+    properties: {role: null, align: full, tooltip: '', border: '', enabled: true,
+      foreground: 'theme:On Primary', visible: true, text: ' PART  PAYMENT', font_size: null,
       font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
       background: '#0b2547', bold: true, underline: false, icon: ''}
     type: Button

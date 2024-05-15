@@ -241,6 +241,14 @@ class check_out(check_outTemplate):
             self.total_emi_amount_label.visible = True
             self.label_3.visible = True
 
+        emi_row = app_tables.fin_emi_table.get(
+            loan_id=loan_id,
+            emi_number=selected_row['emi_number'] + 1
+        )
+
+        if emi_row is not None and emi_row['payment_type'] == 'part payment':
+          self.button_1_copy_3.visible = False
+  
     def get_extension_details(self, loan_id, emi_number):
         extension_row = app_tables.fin_extends_loan.get(
             borrower_customer_id=self.selected_row['borrower_customer_id'],
@@ -604,8 +612,8 @@ class check_out(check_outTemplate):
         'extra_fee':extra_fee,
         'prev_scheduled_payment' : self.selected_row['scheduled_payment'],
         'prev_next_payment' : self.selected_row['next_payment'],
-        'part_payment_date' : self.selected_row['part_payment_date'],
-        'payment_type' : self.selected_row['payment_type'],
+        # 'part_payment_date' : self.selected_row['part_payment_date'],
+        # 'payment_type' : self.selected_row['payment_type'],
         
     }
     
