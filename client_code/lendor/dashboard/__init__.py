@@ -33,7 +33,13 @@ class dashboard(dashboardTemplate):
         my_returns = app_tables.fin_lender.get(customer_id=self.user_id)
         self.label_7.text = str(my_returns['return_on_investment'] or 0)
 
-        # self.button_1_click.text = f"New Loan Requests({len(existing_loans)})"
+        disbursed_loan = app_tables.fin_loan_details.search(loan_updated_status=q.like('disbursed loan%'), lender_customer_id=self.user_id)
+        Lost_Opportunities =app_tables.fin_loan_details.search(loan_updated_status=q.like('lost opportunities%'), lender_customer_id=self.user_id)
+        Closed = app_tables.fin_loan_details.search(loan_updated_status=q.like('close%'), lender_customer_id=self.user_id)
+        self.button_1_copy.text = f"New Loan Requests({len(existing_loans)})"
+        self.button_2_copy.text = f"Loan Disbursed({len(disbursed_loan)})"
+        self.button_3_copy.text = f"Lost Opportunities ({len(Lost_Opportunities)})"
+        self.button_4_copy.text = f"Closed ({len(Closed)})"
 
         # Set the column_panel_3 to full height initially
         # self.column_panel_3.height = '100%'
