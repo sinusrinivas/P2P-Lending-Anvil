@@ -61,7 +61,8 @@ class part_payment(part_paymentTemplate):
     """This method is called when the button is clicked"""
     entered_amount = float(self.text_box_1.text)  # Get the amount entered by the user
     total_emi_amount = float(self.total_emi_amount_label.text)  # Get the total EMI amount
-
+    loan_id = self.loan_details['loan_id']
+    emi_number = self.loan_details['current_emi_number']
     emi_row = app_tables.fin_emi_table.get(
             loan_id=loan_id,
             emi_number=emi_number + 1
@@ -164,3 +165,33 @@ class part_payment(part_paymentTemplate):
             # Show an alert if the entered amount is greater than the total EMI amount
             alert("Entered amount exceeds the total EMI amount. Please enter a valid amount.")
 
+    else:
+            text_amount = float(self.text_box_1.text)
+
+            borrower_wallet = app_tables.fin_wallet.get(customer_id=self.loan_details['borrower_customer_id'])
+            lender_wallet = app_tables.fin_wallet.get(customer_id=self.loan_details['lender_customer_id'])
+    
+            if borrower_wallet is not None and lender_wallet is not None:
+                # Deduct from borrower's wallet
+                borrower_balance = borrower_wallet['wallet_amount']
+                new_borrower_balance = borrower_balance - text_amount
+                borrower_wallet['wallet_amount'] = new_borrower_balance
+                borrower_wallet.update()
+    
+                # Add to lender's wallet
+                lender_balance = lender_wallet['wallet_amount']
+                new_lender_balance = lender_balance + entered_amount
+                lender_wallet['wallet_amount'] = new_lender_balance
+                lender_wallet.update()
+    
+                # Update remaining amount in loan details table
+                remaining_amount = float(self.loan_details['remainining_amount']) - entered_amount
+                loan_id = self.loan_details['loan_id']
+    
+      
+                loan_row = app_tables.fin_loan_details.get(loan_id=loan_id)
+                if loan_row is not None:
+                    loan_row['remaining_amount'] = remaining_amount
+                    total_paid = float(loan_row['total_amount_paid']) + entered_amount
+                    loan_row['total_amount_paid'] = total_paid
+                    loan_row.update()
