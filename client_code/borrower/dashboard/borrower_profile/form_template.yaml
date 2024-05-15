@@ -21,7 +21,7 @@ components:
     layout_properties: {grid_position: 'FNESXT,VREUPY', full_width_row: true}
   - properties: {}
     type: form:borrower.dashboard.Navigation_form_dashboard
-    layout_properties: {grid_position: 'VBSPQG,GULKOC'}
+    layout_properties: {grid_position: 'VBSPQG,GULKOC', full_width_row: true}
     name: navigation_form_dashboard_1
   - properties: {height: 206.428466796875, role: null, display_mode: zoom_to_fill}
     type: Image
