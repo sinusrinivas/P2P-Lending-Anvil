@@ -44,7 +44,7 @@ class part_payment(part_paymentTemplate):
             emi_number=emi_number + 1
         )
 
-    if emi_row['payment_type'] == 'part payment':
+    if emi_row is not None and emi_row['payment_type'] == 'part payment':
             # Now we have the emi_row, proceed with the rest of the code
             part_payment_amount = emi_row['part_payment_amount']
             total_emi_amount = float(self.total_emi_amount_label.text)
@@ -62,7 +62,11 @@ class part_payment(part_paymentTemplate):
     entered_amount = float(self.text_box_1.text)  # Get the amount entered by the user
     total_emi_amount = float(self.total_emi_amount_label.text)  # Get the total EMI amount
 
-    if self.loan_details['payment_type'] == 'pay now':
+    emi_row = app_tables.fin_emi_table.get(
+            loan_id=loan_id,
+            emi_number=emi_number + 1
+        )
+    if self.loan_details['payment_type'] == 'pay now' and emi_row is None:
       
         if entered_amount <= total_emi_amount:
             # Proceed with the payment process
@@ -142,6 +146,7 @@ class part_payment(part_paymentTemplate):
                             lender_email=lender_email,
                             payment_type='part payment',
                             part_payment_date=datetime.today().date(),
+                            part_payment_amount=entered_amount,
                             
                             
                         )
