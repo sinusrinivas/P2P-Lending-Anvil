@@ -204,6 +204,7 @@ class part_payment(part_paymentTemplate):
                   
     
                 alert("Payment successful!")
+                open_form('borrower.dashboard')
                 
             else:
                 alert("Error: Wallet record not found.")
