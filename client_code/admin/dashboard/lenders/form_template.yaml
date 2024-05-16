@@ -46,7 +46,7 @@ components:
           columns:
           - {id: JKSDUP, title: Customer ID, data_key: column_1}
           - {id: VJQQOR, title: Name, data_key: column_2}
-          - {id: OJLQEN, title: Phone NO, data_key: column_3}
+          - {id: OJLQEN, title: Phone No, data_key: column_3}
           - {id: DKNZDV, data_key: column_1, title: Mail ID}
           visible: false
           role: tonal-data-grid
