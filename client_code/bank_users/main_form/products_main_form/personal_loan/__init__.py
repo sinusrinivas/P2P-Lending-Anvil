@@ -71,3 +71,36 @@ class personal_loan(personal_loanTemplate):
   def button_10_copy_click(self, **event_args):
     """This method is called when the button is clicked"""
     open_form('bank_users.main_form.investNow_applyForLoan')
+
+  def image_27_mouse_up(self, x, y, button, **event_args):
+    """This method is called when a mouse button is released on this component"""
+    open_form('bank_users.main_form.products_main_form.personal_loan.marriage_loan')
+
+  def image_28_mouse_up(self, x, y, button, **event_args):
+    """This method is called when a mouse button is released on this component"""
+    open_form('bank_users.main_form.products_main_form.personal_loan.debt_consolidation_loan')
+
+  def image_30_mouse_up(self, x, y, button, **event_args):
+    """This method is called when a mouse button is released on this component"""
+    open_form('bank_users.main_form.products_main_form.personal_loan.credit_card_loan')
+
+  def image_31_mouse_up(self, x, y, button, **event_args):
+    """This method is called when a mouse button is released on this component"""
+    open_form('bank_users.main_form.products_main_form.personal_loan.home_renovation_loan')
+
+  def image_32_mouse_up(self, x, y, button, **event_args):
+    """This method is called when a mouse button is released on this component"""
+    open_form('bank_users.main_form.products_main_form.personal_loan.travel_loan')
+
+  def image_33_mouse_up(self, x, y, button, **event_args):
+    """This method is called when a mouse button is released on this component"""
+    open_form('bank_users.main_form.products_main_form.personal_loan.medical_loan')
+
+  def image_35_mouse_up(self, x, y, button, **event_args):
+    """This method is called when a mouse button is released on this component"""
+    open_form('bank_users.main_form.products_main_form.personal_loan.educational_loan')
+
+
+  def image_36_mouse_up(self, x, y, button, **event_args):
+    """This method is called when a mouse button is released on this component"""
+    open_form('bank_users.main_form.products_main_form.business_loan')
