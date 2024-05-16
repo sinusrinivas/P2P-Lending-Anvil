@@ -551,4 +551,64 @@ class dashboard(dashboardTemplate):
     def button_9_click(self, **event_args):
       """This method is called when the button is clicked"""
       self.toggle_panel_visibility()
+
+    def image_3_mouse_up(self, x, y, button, **event_args):
+      """This method is called when a mouse button is released on this component"""
+      try:
+            existing_loans = app_tables.fin_loan_details.search(
+                borrower_customer_id=self.user_Id,
+                loan_updated_status=q.any_of(
+                    q.like('accept%'),
+                    q.like('Approved%'),
+                    q.like('approved%'),
+                    q.like('under process%'),
+                    q.like('foreclosure%'),
+                    q.like('disbursed loan%'),
+                    q.like('Disbursed loan%'),
+                    q.like('Under Process%')
+                )
+            )
+            num_existing_loans = len(existing_loans)
+            if num_existing_loans >= 5:
+                alert("You already have 5 loans. Cannot open a new loan request.")
+            else:
+                wallet_row = app_tables.fin_wallet.get(customer_id=self.user_Id)
+                if wallet_row and wallet_row['wallet_id'] is not None:
+                    open_form('borrower.dashboard.new_loan_request')
+                else:
+                    alert("Wallet not found. Please create a wallet.")
+      except anvil.tables.TableError as e:
+          alert("Error fetching existing loans.")
+
+    def image_4_mouse_up(self, x, y, button, **event_args):
+      """This method is called when a mouse button is released on this component"""
+      open_form('borrower.dashboard.today_dues')
+
+    def image_5_mouse_up(self, x, y, button, **event_args):
+      """This method is called when a mouse button is released on this component"""
+      open_form('borrower.dashboard.view_loans')
+
+    def image_7_mouse_up(self, x, y, button, **event_args):
+      """This method is called when a mouse button is released on this component"""
+      open_form('borrower.dashboard.foreclosure_request')
+
+    def image_6_mouse_up(self, x, y, button, **event_args):
+      """This method is called when a mouse button is released on this component"""
+      open_form('borrower.dashboard.application_tracker')
+
+    def image_8_mouse_up(self, x, y, button, **event_args):
+      """This method is called when a mouse button is released on this component"""
+      open_form('borrower.dashboard.extension_loan_request')
+
+    def image_9_mouse_up(self, x, y, button, **event_args):
+      """This method is called when a mouse button is released on this component"""
+      open_form('borrower.dashboard.view_transaction_history')
+
+    def image_10_mouse_up(self, x, y, button, **event_args):
+      """This method is called when a mouse button is released on this component"""
+      open_form('borrower.dashboard.discount_coupons')
+
+    def button_4_click(self, **event_args):
+      """This method is called when the button is clicked"""
+      pass
       
