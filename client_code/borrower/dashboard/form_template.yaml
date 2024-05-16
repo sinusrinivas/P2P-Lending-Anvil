@@ -43,6 +43,7 @@ components:
     properties: {height: '40', source: _/theme/other loan.png}
     type: Image
     layout_properties: {grid_position: 'JRTGWO,CHNNLA'}
+    event_bindings: {mouse_up: image_3_mouse_up}
   - name: button_1
     properties: {text: New Loan Request, align: left, foreground: white, bold: true,
       icon: '', visible: true, font_size: 16}
@@ -57,6 +58,7 @@ components:
     properties: {height: '40', source: _/theme/todays due.png, display_mode: shrink_to_fit}
     type: Image
     layout_properties: {grid_position: 'KMQVGZ,EOEYGI'}
+    event_bindings: {mouse_up: image_4_mouse_up}
   - name: button_2
     properties: {text: Today's  Due, align: left, bold: true, foreground: white, font_size: 16}
     type: Button
@@ -70,6 +72,7 @@ components:
     properties: {height: '40', source: _/theme/business-credit-score (1).png}
     type: Image
     layout_properties: {grid_position: 'BBNVSF,TGYSCZ'}
+    event_bindings: {mouse_up: image_5_mouse_up}
   - name: button_3
     properties: {text: 'View  Loans ', align: left, foreground: white, bold: true,
       font_size: 16}
@@ -84,6 +87,7 @@ components:
     properties: {height: '40', source: _/theme/foreclosure.png, display_mode: shrink_to_fit}
     type: Image
     layout_properties: {grid_position: 'IXDBCZ,EGWXJB'}
+    event_bindings: {mouse_up: image_7_mouse_up}
   - name: button_4_copy
     properties: {text: ' Loan Foreclosure', align: left, bold: true, foreground: white,
       font_size: 16}
@@ -98,6 +102,7 @@ components:
     properties: {height: '40', source: _/theme/tracking.png, display_mode: shrink_to_fit}
     type: Image
     layout_properties: {grid_position: 'OQIIWH,TZYAXL'}
+    event_bindings: {mouse_up: image_6_mouse_up}
   - name: button_5
     properties: {text: 'Application Tracker ', align: left, foreground: white, bold: true,
       font_size: 16}
@@ -112,6 +117,7 @@ components:
     properties: {height: '40', source: _/theme/lapsed loan.png}
     type: Image
     layout_properties: {grid_position: 'RKKUUW,SRZLUY'}
+    event_bindings: {mouse_up: image_8_mouse_up}
   - name: button_6_copy
     properties: {text: 'Loan  Extension  ', align: left, foreground: white, bold: true,
       font_size: 16}
@@ -126,6 +132,7 @@ components:
     properties: {height: '40', source: _/theme/transaction-history-icon.png, display_mode: shrink_to_fit}
     type: Image
     layout_properties: {grid_position: 'QHSUTS,LUXDGV'}
+    event_bindings: {mouse_up: image_9_mouse_up}
   - name: button_7
     properties: {text: View Transaction History, align: left, bold: true, foreground: white,
       font_size: 16}
@@ -140,6 +147,7 @@ components:
     properties: {height: '40', source: _/theme/coupon.png, display_mode: shrink_to_fit}
     type: Image
     layout_properties: {grid_position: 'TRWKIA,HWFJNP'}
+    event_bindings: {mouse_up: image_10_mouse_up}
   - name: button_8
     properties: {text: Discount Coupons, align: left, bold: true, foreground: white,
       font_size: 16}
@@ -159,6 +167,7 @@ components:
       align: left}
     type: Button
     layout_properties: {grid_position: 'GJHBNI,CCTMMS'}
+    event_bindings: {click: button_4_click}
   - name: spacer_13
     properties: {height: '5'}
     type: Spacer

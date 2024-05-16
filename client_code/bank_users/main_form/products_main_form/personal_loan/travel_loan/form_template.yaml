@@ -102,6 +102,7 @@ components:
         align: left, role: tonal-button}
       type: Button
       layout_properties: {grid_position: 'BIIHRQ,PQJXFJ WAUPCN,PHTVWZ'}
+      event_bindings: {click: button_1_click}
     - name: image_1
       properties: {source: _/theme/tl-removebg-preview.png, display_mode: zoom_to_fill,
         height: 423.25}
