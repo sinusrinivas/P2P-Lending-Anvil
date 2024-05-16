@@ -102,6 +102,7 @@ components:
         align: left, role: tonal-button}
       type: Button
       layout_properties: {grid_position: 'QTNQBN,OPOTBI TECORI,LIWIMN'}
+      event_bindings: {click: button_1_click}
     - name: spacer_22
       properties: {height: 47.249969482421875}
       type: Spacer

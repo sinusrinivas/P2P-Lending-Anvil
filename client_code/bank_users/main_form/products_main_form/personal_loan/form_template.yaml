@@ -66,7 +66,8 @@ components:
       type: Button
       event_bindings: {click: button_10_copy_click}
 - name: content_panel
-  properties: {col_widths: '{"DXHHWT":15,"GJCQJQ":45,"JQQCEI":15,"UPJROI":45,"EHUUCF":15,"NZRDPG":45,"GRGKMI":15,"OVDFTK":45,"MTEPWA":15,"THORQD":45,"NHLPOA":15,"IGIOFI":45,"PVJYOC":15,"YLFJWG":45}'}
+  properties: {col_widths: '{"DXHHWT":15,"GJCQJQ":45,"JQQCEI":15,"UPJROI":45,"EHUUCF":15,"NZRDPG":45,"GRGKMI":15,"OVDFTK":45,"MTEPWA":15,"THORQD":45,"NHLPOA":15,"IGIOFI":45,"PVJYOC":15,"YLFJWG":45}',
+    foreground: black}
   type: ColumnPanel
   layout_properties: {grid_position: 'QKARCC,NCODDU', full_width_row: true}
   components:
@@ -132,7 +133,7 @@ components:
       type: Label
       layout_properties: {grid_position: 'OUDOFT,XKDOAA YQJHLL,KBFZLQ FQVAAH,AQCURM'}
     - name: spacer_51
-      properties: {height: '25'}
+      properties: {height: '20'}
       type: Spacer
       layout_properties: {grid_position: 'OUDOFT,XKDOAA PQHOOL,BXLFQR'}
     - name: button_1
@@ -140,6 +141,7 @@ components:
         font_size: 16, role: filled-button, background: '#013065'}
       type: Button
       layout_properties: {grid_position: 'OUDOFT,XKDOAA VQHNLQ,QGBKIN'}
+      event_bindings: {click: button_1_click}
     - name: spacer_52
       properties: {height: 54.999969482421875}
       type: Spacer
@@ -323,11 +325,21 @@ components:
     properties: {height: '20'}
     type: Spacer
     layout_properties: {grid_position: 'NJYHYQ,RTCAXZ'}
+  - name: spacer_53
+    properties: {height: 32}
+    type: Spacer
+    layout_properties: {grid_position: 'NRHVAU,KCOBNX'}
   - name: link_1
     properties: {text: Apply for Personal Loan Now                                                                                                                                                                                                                                                         interest rates starting from 12%,
-      underline: false, align: center, font_size: 20, role: title}
+      align: center, font_size: 16, foreground: white, background: '#013065', role: null,
+      icon: ''}
     type: Link
-    layout_properties: {grid_position: 'JBQFYR,VSIPEF'}
+    layout_properties: {grid_position: 'NRHVAU,IRSAJS'}
+    event_bindings: {click: link_1_click}
+  - name: spacer_42
+    properties: {height: 32}
+    type: Spacer
+    layout_properties: {grid_position: 'NRHVAU,CHVPWH'}
   - name: spacer_12
     properties: {height: '32'}
     type: Spacer
@@ -676,19 +688,20 @@ components:
         role: null}
       type: Image
       layout_properties: {grid_position: 'LUSVQI,DOXMKV ZVRNPW,RBLBNX'}
-    - name: spacer_16
-      properties: {height: '10'}
-      type: Spacer
-      layout_properties: {grid_position: 'RBRKHR,KZXXCI'}
-    - name: button_2
-      properties: {text: Apply Now, bold: true, font_size: 16, role: filled-button,
-        background: '#013065'}
-      type: Button
-      layout_properties: {grid_position: 'HXXSZN,LRQCFO'}
     - name: spacer_17
       properties: {height: '12'}
       type: Spacer
       layout_properties: {grid_position: 'AZOVLY,GWMKHL'}
+  - name: spacer_16
+    properties: {height: '10'}
+    type: Spacer
+    layout_properties: {grid_position: 'HHMOPM,EGHTLG'}
+  - name: button_2
+    properties: {text: Apply Now, bold: true, font_size: 16, role: filled-button,
+      background: '#013065'}
+    type: Button
+    layout_properties: {grid_position: 'UNIBEA,ESILHD'}
+    event_bindings: {click: button_2_click}
   - name: spacer_18
     properties: {height: 32}
     type: Spacer
@@ -1421,6 +1434,7 @@ components:
         font_size: 18, align: center}
       type: Button
       layout_properties: {grid_position: 'KDMZKP,KXWNQL', full_width_row: true}
+      event_bindings: {click: button_4_click}
     - name: spacer_45
       properties: {height: '12'}
       type: Spacer

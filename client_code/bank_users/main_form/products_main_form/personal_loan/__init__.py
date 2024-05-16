@@ -58,7 +58,8 @@ class personal_loan(personal_loanTemplate):
 
   def link_1_click(self, **event_args):
     """This method is called when the link is clicked"""
-    open_form('bank_users.main_form.products_main_form')
+    open_form('bank_users.main_form.signup_page', user_type='borrower')
+    
 
   def contact_main_form_link_click(self, **event_args):
     """This method is called when the link is clicked"""
@@ -104,3 +105,11 @@ class personal_loan(personal_loanTemplate):
   def image_36_mouse_up(self, x, y, button, **event_args):
     """This method is called when a mouse button is released on this component"""
     open_form('bank_users.main_form.products_main_form.business_loan')
+
+  def button_1_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    open_form('bank_users.main_form.signup_page', user_type='borrower')
+
+  def button_2_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    open_form('bank_users.main_form.signup_page', user_type='borrower'

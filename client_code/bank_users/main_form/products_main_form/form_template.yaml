@@ -203,12 +203,11 @@ components:
   properties: {height: '10'}
   type: Spacer
   layout_properties: {grid_position: 'DIODIK,GWSEYQ'}
-- name: button_2_copy
-  properties: {text: Apply for Vehicle Loan, bold: false, font_size: null, role: filled-button,
-    background: '#013065'}
+- name: button_6
+  properties: {text: Apply for Vehicle Loan, background: '#013065', foreground: white}
   type: Button
-  layout_properties: {grid_position: 'UACKQF,UETAVQ'}
-  event_bindings: {click: button_2_click}
+  layout_properties: {grid_position: 'BJZPPQ,KGQKFO'}
+  event_bindings: {click: button_6_click}
 - name: spacer_6_copy_copy
   properties: {height: '10'}
   type: Spacer

@@ -152,6 +152,7 @@ components:
         align: left, foreground: '', background: '#013065'}
       type: Button
       layout_properties: {grid_position: 'LWNYXH,REELEV'}
+      event_bindings: {click: button_1_click}
     - name: spacer_4
       properties: {height: 22}
       type: Spacer
@@ -1082,6 +1083,7 @@ components:
         align: center, foreground: '', background: '#013065'}
       type: Button
       layout_properties: {grid_position: 'EZWLXQ,FLQVLK'}
+      event_bindings: {click: button_1_copy_2_click}
     - name: spacer_46
       properties: {height: '12'}
       type: Spacer
@@ -1389,6 +1391,7 @@ components:
           Variant', foreground: black}
       type: Button
       layout_properties: {grid_position: 'IBBARD,XHPTAP'}
+      event_bindings: {click: button_2_click}
     - name: spacer_33
       properties: {height: '20'}
       type: Spacer
