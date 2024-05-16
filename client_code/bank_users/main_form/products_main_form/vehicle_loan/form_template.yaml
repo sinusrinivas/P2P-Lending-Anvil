@@ -132,6 +132,7 @@ components:
         foreground: white, font_size: 16}
       type: Button
       layout_properties: {grid_position: 'UUTJMS,HMTBTZ OBUWDM,NXWVGJ'}
+      event_bindings: {click: button_1_click}
     - name: image_2
       properties: {source: _/theme/vehicle_loan-removebg-preview.png, display_mode: shrink_to_fit,
         height: 448.5555419921875, background: ''}
@@ -519,6 +520,7 @@ components:
       align: left, font_size: 14}
     type: Button
     layout_properties: {grid_position: 'GQBPSE,MHPMOV DDFZYB,CSKKHU'}
+    event_bindings: {click: button_2_click}
   - name: spacer_9
     properties: {height: '10'}
     type: Spacer
@@ -583,6 +585,7 @@ components:
       foreground: white, align: left, font_size: 14}
     type: Button
     layout_properties: {grid_position: 'STRUWO,AUKWBP'}
+    event_bindings: {click: button_2_copy_click}
   - name: spacer_10
     properties: {height: '10'}
     type: Spacer
@@ -634,6 +637,7 @@ components:
       foreground: white, align: left, font_size: 14}
     type: Button
     layout_properties: {grid_position: 'XVPHKG,CDWLJQ TEAJUJ,LLVPRX'}
+    event_bindings: {click: button_2_copy_copy_click}
   - name: spacer_34
     properties: {height: '10'}
     type: Spacer
@@ -998,6 +1002,7 @@ components:
       font_size: 18, align: center}
     type: Button
     layout_properties: {grid_position: 'KDMZKP,KXWNQL', full_width_row: true}
+    event_bindings: {click: button_4_click}
   - name: spacer_45
     properties: {height: '12'}
     type: Spacer

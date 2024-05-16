@@ -120,6 +120,7 @@ components:
       background: '#05264d', bold: false, underline: false, icon: ''}
     name: button_3
     layout_properties: {x: 723.4375122077763, y: 333.9750099182129, width: 159}
+    event_bindings: {click: button_3_click}
 - name: spacer_7
   properties: {height: 32}
   type: Spacer
@@ -440,6 +441,7 @@ components:
       background: '#013065', font_size: 16}
     type: Button
     layout_properties: {x: 633.5694990158081, y: 532.7500076293945, width: 200}
+    event_bindings: {click: button_5_click}
 - name: spacer_19
   properties: {height: 32}
   type: Spacer
@@ -888,6 +890,7 @@ components:
       foreground: black, bold: true}
     type: Button
     layout_properties: {row: DMDWRR, width_xs: 12, col_xs: 0}
+    event_bindings: {click: button_11_click}
   - name: linear_panel_5_copy_1
     properties: {}
     type: LinearPanel
@@ -1035,6 +1038,7 @@ components:
       foreground: White, role: filled-button, font_size: 20, align: left}
     type: Button
     layout_properties: {grid_position: 'RTEJIV,IDTHWJ YHWQMV,XNIINL'}
+    event_bindings: {click: button_2_click}
   - name: image_22
     properties: {height: 452, source: _/theme/india map.png, display_mode: zoom_to_fill}
     type: Image

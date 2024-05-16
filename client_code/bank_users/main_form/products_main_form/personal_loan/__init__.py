@@ -112,4 +112,4 @@ class personal_loan(personal_loanTemplate):
 
   def button_2_click(self, **event_args):
     """This method is called when the button is clicked"""
-    open_form('bank_users.main_form.signup_page', user_type='borrower'
+    open_form('bank_users.main_form.signup_page', user_type='borrower')

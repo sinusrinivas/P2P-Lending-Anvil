@@ -41,5 +41,5 @@ class travel_loan(travel_loanTemplate):
 
   def button_1_click(self, **event_args):
     """This method is called when the button is clicked"""
-    pass
+    open_form('bank_users.main_form.signup_page', user_type='borrower')
 

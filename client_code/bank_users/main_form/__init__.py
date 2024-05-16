@@ -256,6 +256,22 @@ class main_form(main_formTemplate):
     """This method is called when the button is clicked"""
     open_form('bank_users.main_form.signup_page', user_type='borrower')
 
+  def button_3_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    open_form('bank_users.main_form.signup_page', user_type='lender')
+
+  def button_11_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    open_form('bank_users.main_form.signup_page', user_type='lender')
+
+  def button_5_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    open_form('bank_users.main_form.investNow_applyForLoan')
+
+  def button_2_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    open_form('bank_users.main_form.investNow_applyForLoan')
+
  
 
 
