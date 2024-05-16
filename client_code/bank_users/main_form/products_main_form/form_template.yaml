@@ -75,13 +75,25 @@ components:
     properties: {source: _/theme/personal loan1.jpg, display_mode: shrink_to_fit,
       height: '200', alt_text: '       '}
     type: Image
-    layout_properties: {grid_position: 'LSOMZO,CQXTFU'}
+    layout_properties: {grid_position: 'LSOMZO,CQXTFU ISGDEJ,NOKSZQ'}
     data_bindings: []
+    event_bindings: {mouse_up: image_1_mouse_up}
+  - name: button_3
+    properties: {text: Personal Loan, bold: true, foreground: black, font_size: 20}
+    type: Button
+    layout_properties: {grid_position: 'LSOMZO,CQXTFU HJKVPC,LSSOKG'}
+    event_bindings: {click: button_3_click}
   - name: image_2
     properties: {source: _/theme/business loan1.jpg, display_mode: shrink_to_fit,
       height: '200'}
     type: Image
-    layout_properties: {grid_position: 'LSOMZO,NAXNQD'}
+    layout_properties: {grid_position: 'LSOMZO,NAXNQD IZNXEK,HKNPYR'}
+    event_bindings: {mouse_up: image_2_mouse_up}
+  - name: button_4
+    properties: {text: Business Loan, bold: true, font_size: 20, foreground: black}
+    type: Button
+    layout_properties: {grid_position: 'LSOMZO,NAXNQD WQIISX,PVMWXF'}
+    event_bindings: {click: button_4_click}
   - name: spacer_7
     properties: {height: 5.22222900390625}
     type: Spacer
@@ -90,22 +102,16 @@ components:
     properties: {source: _/theme/vehicle laon1.png, display_mode: zoom_to_fill, height: 176.33328247070312}
     type: Image
     layout_properties: {grid_position: 'LSOMZO,RQBBNV LPPRNG,SYTOSG'}
-  - name: personal_loan
-    properties: {text: Personal Loan, align: center, bold: true, font_size: 22}
-    type: Link
-    layout_properties: {grid_position: 'UNKXPI,PHZADV'}
-    event_bindings: {click: personal_loan_click}
-    data_bindings: []
-  - name: business_loan
-    properties: {text: Business Loan, align: center, bold: true, font_size: 22}
-    type: Link
-    layout_properties: {grid_position: 'UNKXPI,FPIDOY'}
-    event_bindings: {click: business_loan_click}
-  - name: link_1
-    properties: {text: Vehicle Loan, align: center, font_size: 22, bold: true}
-    type: Link
-    layout_properties: {grid_position: 'UNKXPI,BHNRQH'}
-    event_bindings: {click: link_1_click}
+    event_bindings: {mouse_up: image_3_mouse_up}
+  - name: spacer_8
+    properties: {height: '3'}
+    type: Spacer
+    layout_properties: {grid_position: 'LSOMZO,RQBBNV KVOAIM,JIZKLZ'}
+  - name: button_5
+    properties: {text: Vehicle Loan, bold: true, font_size: 20, foreground: black}
+    type: Button
+    layout_properties: {grid_position: 'LSOMZO,RQBBNV EPEDGI,TDLWKG'}
+    event_bindings: {click: button_5_click}
 - name: spacer_2
   properties: {height: '10'}
   type: Spacer
@@ -197,12 +203,11 @@ components:
   properties: {height: '10'}
   type: Spacer
   layout_properties: {grid_position: 'DIODIK,GWSEYQ'}
-- name: button_2_copy
-  properties: {text: Apply for Vehicle Loan, bold: false, font_size: null, role: filled-button,
-    background: '#013065'}
+- name: button_6
+  properties: {text: Apply for Vehicle Loan, background: '#013065', foreground: white}
   type: Button
-  layout_properties: {grid_position: 'UACKQF,UETAVQ'}
-  event_bindings: {click: button_2_click}
+  layout_properties: {grid_position: 'BJZPPQ,KGQKFO'}
+  event_bindings: {click: button_6_click}
 - name: spacer_6_copy_copy
   properties: {height: '10'}
   type: Spacer

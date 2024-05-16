@@ -103,6 +103,7 @@ components:
         align: left, role: tonal-button}
       type: Button
       layout_properties: {grid_position: 'EESJPX,ASVMZR LDBZPZ,OVJWQK'}
+      event_bindings: {click: button_1_click}
     - name: image_1
       properties: {height: 423.111083984375, source: _/theme/marriage loan pic.png,
         display_mode: shrink_to_fit}
@@ -464,10 +465,11 @@ components:
       type: Spacer
       layout_properties: {grid_position: 'BQAUCY,ZVZVCJ'}
     - name: button_1_copy
-      properties: {text: Apply Now, foreground: white, font_size: 17, background: '#013065',
-        align: center, role: tonal-button}
+      properties: {text: Apply Marriage Loan Now, foreground: white, font_size: 17,
+        background: '#013065', align: center, role: tonal-button}
       type: Button
       layout_properties: {grid_position: 'FYEDAM,GPMKYX'}
+      event_bindings: {click: button_1_copy_click}
     - name: spacer_15
       properties: {height: '20'}
       type: Spacer

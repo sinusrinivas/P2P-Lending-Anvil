@@ -387,8 +387,8 @@ components:
 - name: submit_btn
   properties: {role: elevated-button, align: center, tooltip: '', border: '', enabled: true,
     foreground: 'theme:On Primary', visible: true, text: Submit, font_size: 14, font: '',
-    spacing_above: small, icon_align: right, spacing_below: small, italic: false,
-    background: '#012146', bold: true, underline: false, icon: ''}
+    spacing_above: small, icon_align: left, spacing_below: small, italic: false, background: '#012146',
+    bold: true, underline: false, icon: 'fa:save'}
   type: Button
   layout_properties: {grid_position: 'JDOPUY,TRZNKH'}
   event_bindings: {click: submit_btn_click}
