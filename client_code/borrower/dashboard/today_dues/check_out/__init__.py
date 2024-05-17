@@ -73,6 +73,7 @@ class check_out(check_outTemplate):
             total_emi = emi + extension_amount + processing_fee # Add extension amount to monthly EMI
 
         self.i_r.text = "{:.2f}".format(interest_amount)
+        self.emi.text = "{:.2f}".format(emi)
       
         print(processing_fee)
         loan_state_status = app_tables.fin_loan_details.get(loan_id=loan_id)['loan_state_status']
@@ -595,6 +596,7 @@ class check_out(check_outTemplate):
       extra_fee = lapsed_fee + default_fee + extension_amount + npa_fee
       loan_details = {
         'i_r': self.i_r.text,
+        'emi': self.emi.text,
         'total_emi_amount': self.total_emi_amount_label.text,
         'emi_amount': self.emi_amount_label.text,
         'loan_id': self.loan_id_label.text,
@@ -612,9 +614,11 @@ class check_out(check_outTemplate):
         'extra_fee':extra_fee,
         'prev_scheduled_payment' : self.selected_row['scheduled_payment'],
         'prev_next_payment' : self.selected_row['next_payment'],
+        'product_id' : self.selected_row['product_id'],
+        'loan_state_status' : self.selected_row['loan_state_status'],
         # 'part_payment_date' : self.selected_row['part_payment_date'],
         # 'payment_type' : self.selected_row['payment_type'],
-        
+        'tenure':self.tenure_label.text,
     }
     
     # Open the part_payment form and pass loan_details as a parameter
