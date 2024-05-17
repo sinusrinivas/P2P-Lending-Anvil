@@ -450,7 +450,7 @@ class dashboard(dashboardTemplate):
                 self.label_2_copy.text = "Welcome" + " " + customer_loans[0]['borrower_full_name']
                 self.label_7.text = customer_loans[0]['member_since']
                 self.label_5.text = customer_loans[0]['credit_limit']
-                self.data = [{'loan_id': loan['loan_id'], 'loan_amount': loan['loan_amount'],
+                self.data = [{'loan_id': loan['product_name'], 'loan_amount': loan['loan_amount'],
                               'tenure': loan['tenure'], 'interest_rate': loan['interest_rate'],
                               'total_repayment_amount': round(loan['total_repayment_amount'], 2),
                               'loan_updated_status': loan['loan_updated_status']} for loan in customer_loans]

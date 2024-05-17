@@ -293,7 +293,7 @@ components:
   name: spacer_10
 - properties:
     columns:
-    - {id: JKSDUP, title: Loan Id, data_key: column_1}
+    - {id: JKSDUP, title: Product Name, data_key: column_1}
     - {id: VJQQOR, title: Loan Amount, data_key: column_2}
     - {id: OJLQEN, title: Tenure, data_key: column_3}
     - {id: GAVKHZ, data_key: column_4, title: 'Interest  '}
