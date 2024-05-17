@@ -4,6 +4,9 @@ import anvil.server
 import anvil.google.auth, anvil.google.drive
 from anvil.google.drive import app_files
 import anvil.users
+import anvil.tables as tables
+import anvil.tables.query as q
+from anvil.tables import app_tables
 
 class view_profile(view_profileTemplate):
   def __init__(self, value_to_display, **properties):
@@ -11,7 +14,7 @@ class view_profile(view_profileTemplate):
     self.init_components(**properties)
 
     # Any code you write here will run before the form opens.
-    self.data = tables.app_tables.fin_user_profile.search()
+    self.data =app_tables.fin_user_profile.search()
     
     self.id_list = []
     self.name_list = []

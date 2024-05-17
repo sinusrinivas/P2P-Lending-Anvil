@@ -40,11 +40,13 @@ components:
         - {id: OJLQEN, title: PhoneNo, data_key: column_3}
         - {id: SRMJQI, data_key: column_1, title: Mail ID}
         - {id: HDDZYG, data_key: column_2, title: ''}
+        visible: false
       type: DataGrid
       components:
       - name: repeating_panel_2
-        properties: {item_template: admin.dashboard.borrowers.RowTemplate14}
+        properties: {item_template: admin.dashboard.borrowers.RowTemplate14, visible: true}
         type: RepeatingPanel
+        layout_properties: {}
       layout_properties: {grid_position: 'YBKSAK,BEBYQS'}
     layout_properties: {grid_position: 'ACQPTG,ZCOIZR'}
   - name: label_1_copy

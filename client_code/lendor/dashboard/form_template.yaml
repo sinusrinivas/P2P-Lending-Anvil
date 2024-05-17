@@ -96,6 +96,7 @@ components:
       spacing_above: large, spacing_below: medium, visible: false}
     type: Image
     layout_properties: {grid_position: 'XJDGCR,HHWUAS', full_width_row: true}
+    event_bindings: {mouse_up: image_6_mouse_up}
   - properties: {text: View Loan Requests, foreground: white, spacing_above: large,
       spacing_below: large, align: left, bold: true, visible: false, font_size: 16}
     type: Button
@@ -107,6 +108,7 @@ components:
       spacing_above: medium, spacing_below: medium, visible: false}
     type: Image
     layout_properties: {grid_position: 'RVAYXR,TSZKPJ', full_width_row: true}
+    event_bindings: {mouse_up: image_7_mouse_up}
   - properties: {role: null, align: left, foreground: white, visible: false, text: View Loan Extension,
       font_size: 16, font: '', spacing_above: medium, spacing_below: medium, bold: true}
     type: Button
@@ -118,6 +120,7 @@ components:
       spacing_above: medium, spacing_below: medium, visible: false}
     type: Image
     layout_properties: {grid_position: 'HEXDCB,CWXWOL', full_width_row: true}
+    event_bindings: {mouse_up: image_8_mouse_up}
   - properties: {text: View Loan Foreclosure, foreground: white, spacing_above: medium,
       spacing_below: medium, align: left, bold: true, visible: false, font_size: 16}
     type: Button
@@ -129,6 +132,7 @@ components:
       spacing_above: medium, spacing_below: medium, visible: false}
     type: Image
     layout_properties: {grid_position: 'ZXGAPS,RBVPNX', full_width_row: true}
+    event_bindings: {mouse_up: image_9_mouse_up}
   - properties: {text: Today's Due, foreground: white, spacing_above: medium, spacing_below: medium,
       align: left, bold: true, visible: false, font_size: 16}
     type: Button
@@ -140,6 +144,7 @@ components:
       spacing_above: medium, spacing_below: medium, visible: false}
     type: Image
     layout_properties: {grid_position: 'OXGMXJ,IGVEGE', full_width_row: true}
+    event_bindings: {mouse_up: image_10_mouse_up}
   - properties: {text: View Loans, foreground: white, spacing_above: medium, align: left,
       bold: true, visible: false, font_size: 16, spacing_below: medium}
     type: Button
@@ -151,6 +156,7 @@ components:
       spacing_above: medium, spacing_below: medium, visible: false}
     type: Image
     layout_properties: {grid_position: 'STBYEZ,LGSJLQ', full_width_row: true}
+    event_bindings: {mouse_up: image_11_mouse_up}
   - properties: {text: 'View Lost Opportunities ', foreground: white, spacing_above: medium,
       spacing_below: medium, align: left, bold: true, visible: false, font_size: 16}
     type: Button
@@ -162,6 +168,7 @@ components:
       spacing_above: medium, spacing_below: medium, visible: false}
     type: Image
     layout_properties: {grid_position: 'VRIJDG,BZXLWI', full_width_row: true}
+    event_bindings: {mouse_up: image_12_mouse_up}
   - properties: {text: Change Password, foreground: white, spacing_above: medium,
       spacing_below: medium, align: left, bold: true, visible: false, font_size: 16}
     type: Button
@@ -173,6 +180,7 @@ components:
       horizontal_align: right, spacing_above: medium, spacing_below: medium, visible: false}
     type: Image
     layout_properties: {grid_position: 'VPJCAA,VJCHUS', full_width_row: true}
+    event_bindings: {mouse_up: image_13_mouse_up}
   - properties: {text: 'View Transaction History ', foreground: white, spacing_above: medium,
       spacing_below: medium, align: left, bold: true, visible: false, font_size: 16}
     type: Button
@@ -184,6 +192,7 @@ components:
       spacing_above: medium, spacing_below: medium, visible: false}
     type: Image
     layout_properties: {grid_position: 'FBRZJC,ULYWCK', full_width_row: true}
+    event_bindings: {mouse_up: image_14_mouse_up}
   - properties: {text: View/Edit Profile, foreground: white, spacing_above: medium,
       spacing_below: medium, align: left, bold: true, visible: false, font_size: 16}
     type: Button
@@ -196,6 +205,7 @@ components:
       visible: false}
     type: Image
     layout_properties: {grid_position: 'LLSDQQ,KTFBWN', full_width_row: true}
+    event_bindings: {mouse_up: image_15_mouse_up}
   - properties: {text: ' View/Send Notifications', foreground: white, spacing_above: medium,
       spacing_below: large, align: left, bold: true, visible: false, font_size: 16}
     type: Button
