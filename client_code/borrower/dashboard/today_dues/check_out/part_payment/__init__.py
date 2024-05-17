@@ -122,7 +122,7 @@ class part_payment(part_paymentTemplate):
                       loan_row['lender_returns'] += float(self.loan_details['i_r']) /2
                       loan_row.update()
                     
-                  
+                  schedule_payment  = emi_row['scheduled_payment']
                   emi_payment_type = self.loan_details['emi_payment_type']
                   if emi_payment_type in ['One Time', 'Monthly', 'Three Months', 'Six Months']:
                               if emi_payment_type == 'Monthly':
@@ -136,20 +136,21 @@ class part_payment(part_paymentTemplate):
                                   next_next_payment = schedule_payment + timedelta(days=180)
                               elif emi_payment_type == 'One Time':
                                   if self.loan_details['tenure']:
-                                      next_scheduled_payment = prev_scheduled_payment + timedelta(days=30 * tenure)
-                                      next_next_payment = self.selected_row['next_payment'] + timedelta(days=30 * tenure)
-                                      next_scheduled_payment = prev_scheduled_payment + timedelta(days=30 * self.loan_details['tenure'])
-                                      next_next_payment = self.selected_row['next_payment'] + timedelta(days=30 * self.loan_details['tenure'])
-                              else:
+                                      # next_scheduled_payment = prev_scheduled_payment + timedelta(days=30 * tenure)
+                                      # next_next_payment = self.selected_row['next_payment'] + timedelta(days=30 * tenure)
+                                      # next_scheduled_payment = prev_scheduled_payment + timedelta(days=30 * self.loan_details['tenure'])
+                                      next_next_payment = schedule_payment + timedelta(days=30 * self.loan_details['tenure'])
+                  else:
                                   # Default to monthly calculation
-                                  next_scheduled_payment = prev_scheduled_payment + timedelta(days=30)
-                                  next_next_payment = prev_next_payment + timedelta(days=30)
+                                  # next_scheduled_payment = prev_scheduled_payment + timedelta(days=30)
+                                  next_next_payment = schedule_payment + timedelta(days=30)
   
                   # Update emi_row if it exists
                   if emi_row:
                       emi_row['payment_type'] = 'pay now'
                       emi_row['part_payment_amount'] -= text_amount
                       emi_row['amount_paid'] += text_amount
+                      emi_row['next_payment'] = next_next_payment
                       emi_row.update()
   
                   alert("Payment successful!")
@@ -224,8 +225,8 @@ class part_payment(part_paymentTemplate):
                                   next_next_payment = prev_next_payment + timedelta(days=180)
                               elif emi_payment_type == 'One Time':
                                   if self.loan_details['tenure']:
-                                      next_scheduled_payment = prev_scheduled_payment + timedelta(days=30 * tenure)
-                                      next_next_payment = self.selected_row['next_payment'] + timedelta(days=30 * tenure)
+                                      # next_scheduled_payment = prev_scheduled_payment + timedelta(days=30 * tenure)
+                                      # next_next_payment = self.selected_row['next_payment'] + timedelta(days=30 * tenure)
                                       next_scheduled_payment = prev_scheduled_payment + timedelta(days=30 * self.loan_details['tenure'])
                                       next_next_payment = self.selected_row['next_payment'] + timedelta(days=30 * self.loan_details['tenure'])
                           else:
@@ -240,7 +241,7 @@ class part_payment(part_paymentTemplate):
                               account_number=account_no,
                               scheduled_payment_made=datetime.now(),
                               scheduled_payment=next_scheduled_payment,
-                              next_payment=next_next_payment,
+                              # next_payment=next_next_payment,
                               amount_paid=entered_amount,
                               extra_fee=extra_fee,
                               borrower_customer_id=borrower_customer_id,
