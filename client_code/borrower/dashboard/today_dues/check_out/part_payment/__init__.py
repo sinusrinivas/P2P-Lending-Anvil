@@ -166,11 +166,13 @@ class part_payment(part_paymentTemplate):
                       if loan_row is not None:
                           loan_row['remaining_amount'] = remaining_amount
                           if loan_row['total_amount_paid'] is None:
-                            loan_row['total_amount_paid'] = 0
+                            loan_row['total_amount_paid'] = 0.0
                             total_paid = loan_row['total_amount_paid']
                           else:
                             total_paid = loan_row['total_amount_paid'] + entered_amount
                           loan_row['total_amount_paid'] = total_paid
+                          if loan_row['lender_returns'] is None:
+                            loan_row['lender_returns'] = 0
                           loan_row['lender_returns'] += float(self.loan_details['i_r']) /2
                           loan_row.update()
   
