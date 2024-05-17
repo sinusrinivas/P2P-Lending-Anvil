@@ -188,7 +188,7 @@ class part_payment(part_paymentTemplate):
                                   next_scheduled_payment = prev_scheduled_payment + timedelta(days=180)
                                   next_next_payment = prev_next_payment + timedelta(days=180)
                               elif emi_payment_type == 'One Time':
-                                  if tenure:
+                                  # if tenure:
                                       next_scheduled_payment = prev_scheduled_payment + timedelta(days=30 * tenure)
                                       next_next_payment = self.selected_row['next_payment'] + timedelta(days=30 * tenure)
                           else:
@@ -233,6 +233,7 @@ class part_payment(part_paymentTemplate):
   
   def calculate_date_difference(self,date_to_subtract, today_date):
     return (today_date - date_to_subtract).days
+    print ((today_date - date_to_subtract).days)
 
   def calculate_additional_fees(self, emi_row):
         # Retrieve the part_payment_date from emi_row
@@ -240,6 +241,7 @@ class part_payment(part_paymentTemplate):
 
         # Calculate the difference in days between part_payment_date and today's date
         days_elapsed = self.calculate_date_difference(part_payment_date, datetime.now().date())
+        print(days_elapsed)
 
         # Fetch necessary fee details based on loan state status and product ID
         product_id = self.loan_details['product_id']
@@ -250,25 +252,35 @@ class part_payment(part_paymentTemplate):
         total_additional_fees = 0
 
         # Check loan state status and calculate additional fees accordingly
-        if loan_state_status == 'lapsed loan' and days_elapsed > 6:
+        if  days_elapsed > 6:
+            days_elapsed -= 6
             lapsed_fee_percentage = product_details['lapsed_fee']
             total_additional_fees += days_elapsed * (lapsed_fee_percentage * float(self.loan_details['emi']) / 100)
+            print(total_additional_fees)
+            print(self.loan_details['emi'])
 
-        elif loan_state_status == 'default loan' and days_elapsed > 16:
+        elif  days_elapsed > 16:
+            days_elapsed -=16
             default_fee = product_details['default_fee']
             default_fee_amount = product_details['default_fee_amount']
             if default_fee != 0:
                 total_additional_fees += days_elapsed * (default_fee * float(self.loan_details['emi']) / 100)
             elif default_fee_amount != 0:
                 total_additional_fees += days_elapsed * default_fee_amount
+            print(total_additional_fees)
+            print(self.loan_details['emi'])
 
-        elif loan_state_status == 'NPA' and days_elapsed > 106:
+        elif  days_elapsed > 106:
+            days_elapsed -=106
             npa_fee = product_details['npa']
             npa_fee_amount = product_details['npa_amount']
             if npa_fee != 0:
                 total_additional_fees += days_elapsed * (npa_fee * float(self.loan_details['emi']) / 100)
             elif npa_fee_amount != 0:
                 total_additional_fees += days_elapsed * npa_fee_amount
+
+            print(total_additional_fees)
+            print(self.loan_details['emi'])
 
         return total_additional_fees
 
