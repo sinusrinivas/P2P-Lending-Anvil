@@ -1,0 +1,11 @@
+merge:
+  parents: [9aff9630d86f60727f54c24a091997e50534b490, 643f29bd0fd3b533c60d41c0e76e4b770f9d95cf]
+  base: a3d81fe441f649a8cfdbfd6d8512a26fed9c6fb3
+conflicting_items:
+- text_chunks:
+  - start: 200
+    alternatives:
+    - {s: A, l: 200, n: 2}
+    - {s: B, l: 202, n: 2}
+  item: [client_code, borrower.dashboard.today_dues.check_out.part_payment]
+  app_path: [CODE, forms/borrower.dashboard.today_dues.check_out.part_payment]
