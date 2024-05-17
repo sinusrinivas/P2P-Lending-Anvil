@@ -3,7 +3,7 @@ container: {type: ColumnPanel}
 components:
 - properties: {col_widths: '{"BGADMX":15,"IVLWPK":25,"LEWFZL":15,"KZXJUD":5,"FEBQYX":25,"UXFHVV":20}'}
   type: ColumnPanel
-  layout_properties: {grid_position: 'CMILPI,LJKKAN'}
+  layout_properties: {grid_position: 'CMILPI,LJKKAN', full_width_row: true}
   name: column_panel_1
   components:
   - properties: {role: null, vertical_align: center, height: '45', tooltip: '', border: '',
