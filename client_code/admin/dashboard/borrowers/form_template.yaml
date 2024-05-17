@@ -40,6 +40,7 @@ components:
       - {id: VJQQOR, title: Name, data_key: column_2}
       - {id: OJLQEN, title: Phone No, data_key: column_3}
       - {id: DKNZDV, data_key: column_1, title: Mail ID}
+      - {id: JCOGQI, data_key: column_1, title: ''}
       visible: false
       role: tonal-data-grid
     type: DataGrid
