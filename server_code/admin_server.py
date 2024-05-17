@@ -181,7 +181,7 @@ def search_borrower(query):
     result = [
       x for x in result
       if query in str(x['customer_id'])
-      or query in x['full_name']
+      or query in str(x['full_name'])
       or query in str(x['mobile'])
       or query in str(x['email_user'])
     ]
@@ -194,7 +194,7 @@ def search_lender(query):
     result = [
       x for x in result
       if query in str(x['customer_id'])
-      or query in x['full_name']
+      or query in str(x['full_name'])
       or query in str(x['mobile'])
       or query in str(x['email_user'])
     ]
