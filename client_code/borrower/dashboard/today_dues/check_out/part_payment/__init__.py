@@ -54,6 +54,11 @@ class part_payment(part_paymentTemplate):
             # remaining_part_payment_amount = total_emi_amount - part_payment_amount
 
             # Display the remaining amount in the text box
+            additional_fees = self.calculate_additional_fees(emi_row)
+            if additional_fees is not None:
+              part_payment_amount += additional_fees
+            else:
+              return part_payment_amount
             self.text_box_1.text ="{:.2f}".format(part_payment_amount)
             self.text_box_1.enabled = False
 
@@ -76,7 +81,12 @@ class part_payment(part_paymentTemplate):
       # Check if the payment type is 'part payment' and process the payment accordingly
       if emi_row and emi_row['payment_type'] == 'part payment':
           # text_amount = float(self.text_box_1.text)
-          text_amount = emi_row['part_payment_amount']
+          additional_fees = self.calculate_additional_fees(emi_row)
+          if additional_fees is not None:
+            text_amount = emi_row['part_payment_amount'] + additional_fees
+          else:
+            text_amount = emi_row['part_payment_amount']
+        
           borrower_wallet = app_tables.fin_wallet.get(customer_id=self.loan_details['borrower_customer_id'])
           lender_wallet = app_tables.fin_wallet.get(customer_id=self.loan_details['lender_customer_id'])
   
@@ -221,9 +231,48 @@ class part_payment(part_paymentTemplate):
               # Show an alert if the entered amount is greater than the total EMI amount
               alert("Entered amount exceeds the total EMI amount. Please enter a valid amount.")
   
-  
+  def calculate_date_difference(self,date_to_subtract, today_date):
+    return (today_date - date_to_subtract).days
 
+  def calculate_additional_fees(self, emi_row):
+        # Retrieve the part_payment_date from emi_row
+        part_payment_date = emi_row['part_payment_date']
 
+        # Calculate the difference in days between part_payment_date and today's date
+        days_elapsed = self.calculate_date_difference(part_payment_date, datetime.now().date())
+
+        # Fetch necessary fee details based on loan state status and product ID
+        product_id = self.loan_details['product_id']
+        loan_state_status = self.loan_details['loan_state_status']
+        product_details = app_tables.fin_product_details.get(product_id=product_id)
+
+        # Initialize total additional fees
+        total_additional_fees = 0
+
+        # Check loan state status and calculate additional fees accordingly
+        if loan_state_status == 'lapsed loan' and days_elapsed > 6:
+            lapsed_fee_percentage = product_details['lapsed_fee']
+            total_additional_fees += days_elapsed * (lapsed_fee_percentage * emi_row['emi_amount'] / 100)
+
+        elif loan_state_status == 'default loan' and days_elapsed > 16:
+            default_fee = product_details['default_fee']
+            default_fee_amount = product_details['default_fee_amount']
+            if default_fee != 0:
+                total_additional_fees += days_elapsed * (default_fee * emi_row['emi_amount'] / 100)
+            elif default_fee_amount != 0:
+                total_additional_fees += days_elapsed * default_fee_amount
+
+        elif loan_state_status == 'NPA' and days_elapsed > 106:
+            npa_fee = product_details['npa']
+            npa_fee_amount = product_details['npa_amount']
+            if npa_fee != 0:
+                total_additional_fees += days_elapsed * (npa_fee * emi_row['emi_amount'] / 100)
+            elif npa_fee_amount != 0:
+                total_additional_fees += days_elapsed * npa_fee_amount
+
+        return total_additional_fees
+
+            
 
   # def pay_now_click(self, **event_args):
   #   """This method is called when the button is clicked"""
