@@ -382,7 +382,8 @@ components:
     - {id: VJQQOR, title: Loan ID, data_key: column_2}
     - {id: JNEVFU, data_key: column_1, title: Name}
     - {id: JKSDUP, title: Loan Amount, data_key: column_1}
-    - {id: RFMHCZ, data_key: column_1, title: Ascend Score}
+    - {id: RFMHCZ, data_key: column_1, title: Ascend Score, width: 70.39996337890625,
+      expand: false}
     - {id: GUBYWD, data_key: column_1, title: Tenure, width: 166.5999755859375, expand: false}
     - {id: OJLQEN, title: Loan Status, data_key: column_3}
     - {id: NFYNZM, data_key: column_4, title: ''}

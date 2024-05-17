@@ -17,5 +17,6 @@ class RowTemplate8(RowTemplate8Template):
     # Any code you write here will run before the form opens.
 
   def link_1_click(self, **event_args):
-    selcted_row=self.item
-    open_form('admin.dashboard.borrowers.view_profile',selected_row=selcted_row)
+    selected_row = self.item
+    value_to_display = selected_row['customer_id']  # Replace 'some_key' with the appropriate key
+    open_form('admin.dashboard.lenders.view_profile_copy', value_to_display=value_to_display)

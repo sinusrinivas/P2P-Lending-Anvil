@@ -28,7 +28,7 @@ components:
   data_bindings:
   - {property: text, code: 'self.item[''email_user'']', writeback: false}
 - name: link_1
-  properties: {text: View Loan Details}
+  properties: {text: View Loan Details, align: center}
   type: Link
   layout_properties: {column: JDYXIT}
   event_bindings: {click: link_1_click}
