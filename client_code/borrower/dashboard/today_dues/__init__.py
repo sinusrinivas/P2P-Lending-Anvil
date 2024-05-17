@@ -135,7 +135,7 @@ class today_dues(today_duesTemplate):
                   
                 user_profile = app_tables.fin_user_profile.get(customer_id=loan_detail['lender_customer_id'])
 
-                if loan_detail is not None and user_profile is not None:
+                if loan_detail is not None and user_profile is not None and (loan_detail['remaining_amount'] is  None or loan_detail['remaining_amount'] > 0):
                   user_photo = user_profile['user_photo']
                   loan_amount = loan_detail['loan_amount']
                   first_emi_payment_due_date = loan_detail['first_emi_payment_due_date']
