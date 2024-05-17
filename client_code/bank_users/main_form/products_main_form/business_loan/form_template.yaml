@@ -69,7 +69,7 @@ components:
         event_bindings: {click: login_signup_button_click}
       - name: form1_1
         properties: {}
-        type: form:bank_users.main_form.Form1
+        type: form:bank_users.main_form.main_header
         layout_properties: {width: 138.64100000000002}
   - name: spacer_37
     properties: {height: '10'}
