@@ -137,6 +137,7 @@ class part_payment(part_paymentTemplate):
           else:
               alert("Error: Wallet record not found.")
       else:
+          
           if entered_amount <= total_emi_amount:
               # Proceed with the payment process
               borrower_wallet = app_tables.fin_wallet.get(customer_id=self.loan_details['borrower_customer_id'])
@@ -164,7 +165,10 @@ class part_payment(part_paymentTemplate):
                       loan_row = app_tables.fin_loan_details.get(loan_id=loan_id)
                       if loan_row is not None:
                           loan_row['remaining_amount'] = remaining_amount
-                          total_paid = float(loan_row['total_amount_paid']) + float(entered_amount)
+                          if loan_row['total_amount_paid'] is None:
+                            loan_row['total_amount_paid'] = 0
+                          else:
+                            total_paid = loan_row['total_amount_paid'] + entered_amount
                           loan_row['total_amount_paid'] = total_paid
                           loan_row['lender_returns'] += float(self.loan_details['i_r']) /2
                           loan_row.update()
