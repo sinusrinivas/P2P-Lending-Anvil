@@ -75,8 +75,8 @@ class part_payment(part_paymentTemplate):
   
       # Check if the payment type is 'part payment' and process the payment accordingly
       if emi_row and emi_row['payment_type'] == 'part payment':
-          text_amount = float(self.text_box_1.text)
-  
+          # text_amount = float(self.text_box_1.text)
+          text_amount = emi_row['part_payment_amount']
           borrower_wallet = app_tables.fin_wallet.get(customer_id=self.loan_details['borrower_customer_id'])
           lender_wallet = app_tables.fin_wallet.get(customer_id=self.loan_details['lender_customer_id'])
   
