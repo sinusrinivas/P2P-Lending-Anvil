@@ -167,6 +167,7 @@ class part_payment(part_paymentTemplate):
                           loan_row['remaining_amount'] = remaining_amount
                           if loan_row['total_amount_paid'] is None:
                             loan_row['total_amount_paid'] = 0
+                            total_paid = loan_row['total_amount_paid']
                           else:
                             total_paid = loan_row['total_amount_paid'] + entered_amount
                           loan_row['total_amount_paid'] = total_paid
