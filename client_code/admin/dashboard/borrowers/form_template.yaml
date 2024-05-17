@@ -19,7 +19,7 @@ components:
     type: ColumnPanel
     components:
     - name: spacer_1
-      properties: {height: 50.600006103515625}
+      properties: {height: 57.199981689453125}
       type: Spacer
       layout_properties: {grid_position: 'KYEEZZ,VSKFQK'}
     - name: text_box_1
@@ -32,22 +32,23 @@ components:
       type: Button
       layout_properties: {grid_position: 'KYEEZZ,QOMVMS'}
       event_bindings: {click: search_borrower}
+    - name: data_grid_1
+      properties:
+        columns:
+        - {id: JKSDUP, title: Customer ID, data_key: column_1}
+        - {id: VJQQOR, title: Name, data_key: column_2}
+        - {id: OJLQEN, title: PhoneNo, data_key: column_3}
+        - {id: SRMJQI, data_key: column_1, title: Mail ID}
+        - {id: HDDZYG, data_key: column_2, title: ''}
+        visible: false
+      type: DataGrid
+      components:
+      - name: repeating_panel_2
+        properties: {item_template: admin.dashboard.borrowers.RowTemplate14, visible: true}
+        type: RepeatingPanel
+        layout_properties: {}
+      layout_properties: {grid_position: 'YBKSAK,BEBYQS'}
     layout_properties: {grid_position: 'ACQPTG,ZCOIZR'}
-  - name: data_grid_1
-    properties:
-      columns:
-      - {id: JKSDUP, title: Customer ID, data_key: column_1}
-      - {id: VJQQOR, title: Name, data_key: column_2}
-      - {id: OJLQEN, title: Phone NO, data_key: column_3}
-      - {id: DKNZDV, data_key: column_1, title: Mail ID}
-      visible: false
-      role: tonal-data-grid
-    type: DataGrid
-    components:
-    - name: repeating_panel_2
-      properties: {item_template: admin.dashboard.borrowers.RowTemplate8}
-      type: RepeatingPanel
-    layout_properties: {grid_position: 'CJHHYE,ZMNYME', full_width_row: false}
   - name: label_1_copy
     properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
       visible: true, text: Manage Borrower, font_size: 18, font: '', spacing_above: small,
