@@ -121,6 +121,8 @@ class part_payment(part_paymentTemplate):
                       loan_row['total_amount_paid'] = total_paid
                       loan_row['lender_returns'] += float(self.loan_details['i_r']) /2
                       loan_row.update()
+
+                  additional_fees = self.calculate_additional_fees(emi_row)
                     
                   schedule_payment  = emi_row['scheduled_payment']
                   emi_payment_type = self.loan_details['emi_payment_type']
@@ -151,6 +153,7 @@ class part_payment(part_paymentTemplate):
                       emi_row['part_payment_amount'] -= text_amount
                       emi_row['amount_paid'] += text_amount
                       emi_row['next_payment'] = next_next_payment
+                      emi_row['extra_fee'] += additional_fees
                       emi_row.update()
   
                   alert("Payment successful!")
@@ -195,7 +198,7 @@ class part_payment(part_paymentTemplate):
                           else:
                             total_paid = loan_row['total_amount_paid'] + entered_amount
                           loan_row['total_amount_paid'] = total_paid
-                          if la
+                          # if la
                           if loan_row['lender_returns'] is None:
                             loan_row['lender_returns'] = 0
                           loan_row['lender_returns'] += float(self.loan_details['i_r']) /2
@@ -251,7 +254,8 @@ class part_payment(part_paymentTemplate):
                               lender_email=lender_email,
                               payment_type='part payment',
                               part_payment_date=datetime.today().date(),
-                              part_payment_amount=total_emi_amount - entered_amount
+                              part_payment_amount=total_emi_amount - entered_amount,
+                              
                           )
   
                           # Update the emi_number and next_payment in the loan_details
