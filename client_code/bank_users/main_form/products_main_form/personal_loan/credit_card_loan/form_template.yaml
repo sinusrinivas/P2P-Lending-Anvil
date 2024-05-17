@@ -9,10 +9,6 @@ components:
     properties: {}
     type: form:bank_users.main_form.main_header
     layout_properties: {grid_position: 'TNOURZ,LQQDDY', full_width_row: true}
-  - name: spacer_14
-    properties: {height: 32}
-    type: Spacer
-    layout_properties: {grid_position: 'DTNZFL,GFWOUA'}
   - name: content_panel_copy_2
     properties: {background: 'theme:Surface Variant'}
     type: ColumnPanel

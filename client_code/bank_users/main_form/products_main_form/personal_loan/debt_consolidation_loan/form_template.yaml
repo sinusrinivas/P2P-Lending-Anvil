@@ -4,10 +4,6 @@ components:
   properties: {}
   type: form:bank_users.main_form.main_header
   layout_properties: {grid_position: 'IMKMLQ,HYUQCJ', full_width_row: true}
-- name: spacer_23
-  properties: {height: 32}
-  type: Spacer
-  layout_properties: {grid_position: 'EPOWNX,KOMEGH'}
 - name: content_panel
   properties: {col_widths: '{"YGAVZK":15,"OVZUMZ":15,"PYJVUQ":15,"ATGAMW":15}'}
   type: ColumnPanel
