@@ -252,13 +252,13 @@ class part_payment(part_paymentTemplate):
         # Check loan state status and calculate additional fees accordingly
         if loan_state_status == 'lapsed loan' and days_elapsed > 6:
             lapsed_fee_percentage = product_details['lapsed_fee']
-            total_additional_fees += days_elapsed * (lapsed_fee_percentage * emi_row['emi_amount'] / 100)
+            total_additional_fees += days_elapsed * (lapsed_fee_percentage * float(self.loan_details['emi']) / 100)
 
         elif loan_state_status == 'default loan' and days_elapsed > 16:
             default_fee = product_details['default_fee']
             default_fee_amount = product_details['default_fee_amount']
             if default_fee != 0:
-                total_additional_fees += days_elapsed * (default_fee * emi_row['emi_amount'] / 100)
+                total_additional_fees += days_elapsed * (default_fee * float(self.loan_details['emi']) / 100)
             elif default_fee_amount != 0:
                 total_additional_fees += days_elapsed * default_fee_amount
 
@@ -266,7 +266,7 @@ class part_payment(part_paymentTemplate):
             npa_fee = product_details['npa']
             npa_fee_amount = product_details['npa_amount']
             if npa_fee != 0:
-                total_additional_fees += days_elapsed * (npa_fee * emi_row['emi_amount'] / 100)
+                total_additional_fees += days_elapsed * (npa_fee * float(self.loan_details['emi']) / 100)
             elif npa_fee_amount != 0:
                 total_additional_fees += days_elapsed * npa_fee_amount
 

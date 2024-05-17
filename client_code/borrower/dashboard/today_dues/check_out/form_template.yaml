@@ -113,6 +113,10 @@ components:
     properties: {visible: false}
     type: Label
     layout_properties: {grid_position: 'KSEEYY,IVLWPK OGQCRV,DXYIAB'}
+  - name: emi
+    properties: {visible: false}
+    type: Label
+    layout_properties: {grid_position: 'KSEEYY,IVLWPK DLIVPK,AOQQZF'}
   - name: loan_id_label
     properties: {align: left}
     type: Label
