@@ -121,6 +121,29 @@ class part_payment(part_paymentTemplate):
                       loan_row['total_amount_paid'] = total_paid
                       loan_row['lender_returns'] += float(self.loan_details['i_r']) /2
                       loan_row.update()
+                    
+                  
+                  emi_payment_type = self.loan_details['emi_payment_type']
+                  if emi_payment_type in ['One Time', 'Monthly', 'Three Months', 'Six Months']:
+                              if emi_payment_type == 'Monthly':
+                                  # next_scheduled_payment = prev_scheduled_payment + timedelta(days=30)
+                                  next_next_payment = schedule_payment + timedelta(days=30)
+                              elif emi_payment_type == 'Three Months':
+                                  # next_scheduled_payment = prev_scheduled_payment + timedelta(days=90)
+                                  next_next_payment = schedule_payment + timedelta(days=90)
+                              elif emi_payment_type == 'Six Months':
+                                  # next_scheduled_payment = prev_scheduled_payment + timedelta(days=180)
+                                  next_next_payment = schedule_payment + timedelta(days=180)
+                              elif emi_payment_type == 'One Time':
+                                  if self.loan_details['tenure']:
+                                      next_scheduled_payment = prev_scheduled_payment + timedelta(days=30 * tenure)
+                                      next_next_payment = self.selected_row['next_payment'] + timedelta(days=30 * tenure)
+                                      next_scheduled_payment = prev_scheduled_payment + timedelta(days=30 * self.loan_details['tenure'])
+                                      next_next_payment = self.selected_row['next_payment'] + timedelta(days=30 * self.loan_details['tenure'])
+                              else:
+                                  # Default to monthly calculation
+                                  next_scheduled_payment = prev_scheduled_payment + timedelta(days=30)
+                                  next_next_payment = prev_next_payment + timedelta(days=30)
   
                   # Update emi_row if it exists
                   if emi_row:
