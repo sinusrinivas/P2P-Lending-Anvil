@@ -173,3 +173,29 @@ def hash_password_2(password):
     # Hash the password using bcrypt
     hashed_password = bcrypt.hashpw(password.encode(), bcrypt.gensalt())
     return hashed_password.decode()
+
+@anvil.server.callable
+def search_borrower(query):
+  result = app_tables.fin_user_profile.search(usertype=q.like('borrower'))
+  if query:
+    result = [
+      x for x in result
+      if query in str(x['customer_id'])
+      or query in str(x['full_name'])
+      or query in str(x['mobile'])
+      or query in str(x['email_user'])
+    ]
+  return result
+
+@anvil.server.callable
+def search_lender(query):
+  result = app_tables.fin_user_profile.search(usertype=q.like('lender'))
+  if query:
+    result = [
+      x for x in result
+      if query in str(x['customer_id'])
+      or query in str(x['full_name'])
+      or query in str(x['mobile'])
+      or query in str(x['email_user'])
+    ]
+  return result

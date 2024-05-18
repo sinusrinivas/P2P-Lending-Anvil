@@ -7,7 +7,7 @@ import anvil.users
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
-from ......borrower_registration_form.dashboard import main_form_module
+from ......borrower.dashboard import main_form_module
 
 class ItemTemplate26(ItemTemplate26Template):
   def __init__(self, **properties):

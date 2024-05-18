@@ -38,6 +38,10 @@ class check_out(check_outTemplate):
         total_payments = tenure * 12
         total_repayment_amount = selected_row['total_repayment_amount']
         total_i_a = total_interest_amount / tenure
+        if remaining_amount is None:
+          self.remainining_amount.text = "{:.2f}".format(total_repayment_amount)
+        else:
+          self.remainining_amount.text =  "{:.2f}".format(remaining_amount)
       
         if emi_payment_type == 'One Time':
             emi = total_repayment_amount
@@ -69,6 +73,7 @@ class check_out(check_outTemplate):
             total_emi = emi + extension_amount + processing_fee # Add extension amount to monthly EMI
 
         self.i_r.text = "{:.2f}".format(interest_amount)
+        self.emi.text = "{:.2f}".format(emi)
       
         print(processing_fee)
         loan_state_status = app_tables.fin_loan_details.get(loan_id=loan_id)['loan_state_status']
@@ -237,6 +242,14 @@ class check_out(check_outTemplate):
             self.total_emi_amount_label.visible = True
             self.label_3.visible = True
 
+        emi_row = app_tables.fin_emi_table.get(
+            loan_id=loan_id,
+            emi_number=selected_row['emi_number'] + 1
+        )
+
+        if emi_row is not None and emi_row['payment_type'] == 'part payment':
+          self.button_1_copy_3.visible = False
+  
     def get_extension_details(self, loan_id, emi_number):
         extension_row = app_tables.fin_extends_loan.get(
             borrower_customer_id=self.selected_row['borrower_customer_id'],
@@ -292,43 +305,43 @@ class check_out(check_outTemplate):
         # Retrieve processing fee
         processing_fee = float(self.processing_fee.text)  # Assuming processing fee is shown in label_9
         # Calculate remaining amount
-        if self.selected_row['remaining_amount'] is not None:
-            remaining_amount = self.selected_row['remaining_amount'] - (emi_amount + processing_fee)
-        else:
-            remaining_amount = total_repayment_amount - (emi_amount + processing_fee)
+        # if self.selected_row['remaining_amount'] is not None:
+        #     remaining_amount = self.selected_row['remaining_amount'] - (emi_amount + processing_fee)
+        # else:
+        #     remaining_amount = total_repayment_amount - (emi_amount + processing_fee)
 
-        print(remaining_amount)
-        loan_details = app_tables.fin_loan_details.get(loan_id=self.selected_row['loan_id'])
-        if loan_details is not None:
-            if loan_details['total_amount_paid'] is None :
-                loan_details['total_amount_paid'] = 0
-            if loan_details['lender_returns'] is None :
-                loan_details['lender_returns'] = 0
-            loan_details['lender_returns'] += i_r
-            loan_details['remaining_amount'] = remaining_amount
-            loan_details['total_amount_paid'] += total_emi_amount
-            loan_details.update()
+        # print(remaining_amount)
+        # loan_details = app_tables.fin_loan_details.get(loan_id=self.selected_row['loan_id'])
+        # if loan_details is not None:
+        #     if loan_details['total_amount_paid'] is None :
+        #         loan_details['total_amount_paid'] = 0
+        #     if loan_details['lender_returns'] is None :
+        #         loan_details['lender_returns'] = 0
+        #     loan_details['lender_returns'] += i_r
+        #     loan_details['remaining_amount'] = remaining_amount
+        #     loan_details['total_amount_paid'] += total_emi_amount
+        #     loan_details.update()
  
-        lender_returns_dict = defaultdict(float)
-        borrower_loans = app_tables.fin_loan_details.search(borrower_customer_id=self.selected_row['borrower_customer_id'])
-        for loan in borrower_loans:
-            lender_id = loan['lender_customer_id']
-            lender_returns = loan['lender_returns']
-            # Convert None to 0 for lender returns
-            if lender_returns is None:
-                lender_returns = 0
-            lender_returns_dict[lender_id] += lender_returns
-        # Update lender returns in the fin_lender table
-        for lender_id, total_returns in lender_returns_dict.items():
-            lender_row = app_tables.fin_lender.get(customer_id=lender_id)
-            if lender_row is not None:
-                if lender_row['return_on_investment'] is None:
-                    lender_row['return_on_investment'] = 0
-                lender_row['return_on_investment'] = total_returns
-                lender_row.update()
-            else:
-                # Create a new row if lender doesn't exist
-                app_tables.fin_lender.add_row(customer_id=lender_id, return_on_investment=total_returns)
+        # lender_returns_dict = defaultdict(float)
+        # borrower_loans = app_tables.fin_loan_details.search(borrower_customer_id=self.selected_row['borrower_customer_id'])
+        # for loan in borrower_loans:
+        #     lender_id = loan['lender_customer_id']
+        #     lender_returns = loan['lender_returns']
+        #     # Convert None to 0 for lender returns
+        #     if lender_returns is None:
+        #         lender_returns = 0
+        #     lender_returns_dict[lender_id] += lender_returns
+        # # Update lender returns in the fin_lender table
+        # for lender_id, total_returns in lender_returns_dict.items():
+        #     lender_row = app_tables.fin_lender.get(customer_id=lender_id)
+        #     if lender_row is not None:
+        #         if lender_row['return_on_investment'] is None:
+        #             lender_row['return_on_investment'] = 0
+        #         lender_row['return_on_investment'] = total_returns
+        #         lender_row.update()
+        #     else:
+        #         # Create a new row if lender doesn't exist
+        #         app_tables.fin_lender.add_row(customer_id=lender_id, return_on_investment=total_returns)
               
         try:
             lapsed_fee = float(self.lapsed.text)
@@ -383,6 +396,47 @@ class check_out(check_outTemplate):
                     lender_wallet['wallet_amount'] = lender_balance
                     lender_wallet.update()
 
+
+                    if self.selected_row['remaining_amount'] is not None:
+                        remaining_amount = self.selected_row['remaining_amount'] - (emi_amount + processing_fee + extra_amount)
+                    else:
+                        remaining_amount = total_repayment_amount - (emi_amount + processing_fee + extra_amount)
+            
+                    print(remaining_amount)
+                    loan_details = app_tables.fin_loan_details.get(loan_id=self.selected_row['loan_id'])
+                    if loan_details is not None:
+                        if loan_details['total_amount_paid'] is None :
+                            loan_details['total_amount_paid'] = 0
+                        if loan_details['lender_returns'] is None :
+                            loan_details['lender_returns'] = 0
+                        loan_details['lender_returns'] += i_r
+                        loan_details['remaining_amount'] = remaining_amount
+                        loan_details['total_amount_paid'] += total_emi_amount
+                        loan_details.update()
+            
+                    lender_returns_dict = defaultdict(float)
+                    borrower_loans = app_tables.fin_loan_details.search(borrower_customer_id=self.selected_row['borrower_customer_id'])
+                    for loan in borrower_loans:
+                        lender_id = loan['lender_customer_id']
+                        lender_returns = loan['lender_returns']
+                        # Convert None to 0 for lender returns
+                        if lender_returns is None:
+                            lender_returns = 0
+                        lender_returns_dict[lender_id] += lender_returns
+                    # Update lender returns in the fin_lender table
+                    for lender_id, total_returns in lender_returns_dict.items():
+                        lender_row = app_tables.fin_lender.get(customer_id=lender_id)
+                        if lender_row is not None:
+                            if lender_row['return_on_investment'] is None:
+                                lender_row['return_on_investment'] = 0
+                            lender_row['return_on_investment'] = total_returns
+                            lender_row.update()
+                        else:
+                            # Create a new row if lender doesn't exist
+                            app_tables.fin_lender.add_row(customer_id=lender_id, return_on_investment=total_returns)
+
+                      
+
                     # self.update_payment_status()
 
                     loan_id = self.selected_row['loan_id']
@@ -435,6 +489,7 @@ class check_out(check_outTemplate):
                         lender_customer_id=lender_id,
                         borrower_email=borrower_email,
                         lender_email=lender_email,
+                        payment_type='pay now',
                         
                         
                     )
@@ -444,6 +499,13 @@ class check_out(check_outTemplate):
                     self.selected_row['next_payment'] = next_next_payment
                     self.selected_row.update()
 
+                    foreclosure_row = self.get_foreclosure_details_for_status_rejection(self.selected_row['loan_id'], self.selected_row['emi_number'])
+                    if foreclosure_row is not None and foreclosure_row['status'] == 'under process':
+                        # Update status to 'rejected'
+                        foreclosure_row['status'] = 'rejected'
+                        foreclosure_row.update()
+
+                  
                     if self.foreclosure_condition_satisfied(loan_id, current_emi_number):
                       self.update_loan_status(loan_id, 'close')
 
@@ -493,3 +555,71 @@ class check_out(check_outTemplate):
     #   for loan_detail in loan_details:
     #     loan_detail['payment_status'] = True
     #     loan_detail.update()
+
+
+    def get_foreclosure_details_for_status_rejection(self, loan_id, emi_number):
+      foreclosure_row = app_tables.fin_foreclosure.get(
+          loan_id=loan_id,
+          foreclosure_emi_num=emi_number - 1,
+      )
+      
+      if foreclosure_row is not None :
+          return foreclosure_row
+      else:
+          return None
+
+    def part_payment_click(self, **event_args):
+      """This method is called when the button is clicked"""
+
+      try:
+        # Try to convert and get the values, and calculate the extra fee
+        lapsed_fee = float(self.lapsed.text)
+      except ValueError:
+          lapsed_fee = 0.0
+          
+      try:
+          default_fee = float(self.default.text)
+      except ValueError:
+          default_fee = 0.0
+          
+      try:
+          extension_amount = float(self.extension_amount_label.text)
+      except ValueError:
+          extension_amount = 0.0
+          
+      try:
+          npa_fee = float(self.npa.text)
+      except ValueError:
+          npa_fee = 0.0
+      
+      # Calculate the extra fee
+      extra_fee = lapsed_fee + default_fee + extension_amount + npa_fee
+      loan_details = {
+        'i_r': self.i_r.text,
+        'emi': self.emi.text,
+        'total_emi_amount': self.total_emi_amount_label.text,
+        'emi_amount': self.emi_amount_label.text,
+        'loan_id': self.loan_id_label.text,
+        'loan_amount': self.loan_amount_label.text,
+        'tenure': self.tenure_label.text,
+        'account_no': self.account_no_label.text,
+        'interest_amount': self.interest_label.text,
+        'remainining_amount': self.remainining_amount.text,
+        'borrower_customer_id': self.selected_row['borrower_customer_id'],
+        'lender_customer_id': self.selected_row['lender_customer_id'],
+        'lender_email' : self.selected_row['lender_email_id'],
+        'borrower_email' : self.selected_row['borrower_email_id'],
+        'emi_payment_type' : self.selected_row['emi_payment_type'],
+        'current_emi_number' : int(self.selected_row['emi_number']),
+        'extra_fee':extra_fee,
+        'prev_scheduled_payment' : self.selected_row['scheduled_payment'],
+        'prev_next_payment' : self.selected_row['next_payment'],
+        'product_id' : self.selected_row['product_id'],
+        'loan_state_status' : self.selected_row['loan_state_status'],
+        # 'part_payment_date' : self.selected_row['part_payment_date'],
+        # 'payment_type' : self.selected_row['payment_type'],
+        'tenure':self.tenure_label.text,
+    }
+    
+    # Open the part_payment form and pass loan_details as a parameter
+      open_form('borrower.dashboard.today_dues.check_out.part_payment', loan_details=loan_details)

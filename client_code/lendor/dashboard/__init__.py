@@ -1,5 +1,6 @@
 from ._anvil_designer import dashboardTemplate
 from anvil import *
+import anvil.server
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
@@ -13,40 +14,62 @@ class dashboard(dashboardTemplate):
         self.init_components(**properties)
         self.email = main_form_module.email
         self.user_id = main_form_module.userId
-        email = self.email
+        self.email = self.email
+        self.user_id = self.user_id
+        self.components_visible = False  # Flag to keep track of component visibility
         self.load_data(None)
         existing_loans = app_tables.fin_loan_details.search(loan_updated_status=q.any_of(
                             q.like('under process%'),
                             q.like('Under Process%'),
-                            q.like('under process')))  
-        self.label_9.text = str(len(existing_loans))
+                            q.like('under process')))
+        self.label_9.text = str(len(existing_loans) or 0)
+        
         investment = app_tables.fin_lender.get(customer_id=self.user_id)
-        if investment:
-            self.label_3.text = investment['investment']
+        self.label_3.text = str(investment['investment'] or 0)
+
         opening_bal = app_tables.fin_wallet.get(customer_id=self.user_id)
-        if opening_bal:
-            self.label_5.text = opening_bal['wallet_amount']
+        self.label_5.text = str(opening_bal['wallet_amount'] or 0)
+
+        my_returns = app_tables.fin_lender.get(customer_id=self.user_id)
+        self.label_7.text = str(my_returns['return_on_investment'] or 0)
+
+        disbursed_loan = app_tables.fin_loan_details.search(loan_updated_status=q.like('disbursed loan%'), lender_customer_id=self.user_id)
+        Lost_Opportunities =app_tables.fin_loan_details.search(loan_updated_status=q.like('lost opportunities%'), lender_customer_id=self.user_id)
+        Closed = app_tables.fin_loan_details.search(loan_updated_status=q.like('close%'), lender_customer_id=self.user_id)
+        Extended = app_tables.fin_loan_details.search(loan_updated_status=q.like('extension%'), lender_customer_id= self.user_id)
+        self.button_1_copy.text = f"New Loan Requests ({len(existing_loans)})"
+        self.button_2_copy.text = f"Loan Disbursed ({len(disbursed_loan)})"
+        self.button_3_copy.text = f"Lost Opportunities ({len(Lost_Opportunities)})"
+        self.button_4_copy.text = f"Closed ({len(Closed)})"
+        self.button_5_copy.text = f"Extended ({len(Extended)})"
+
+        # Set the column_panel_3 to full height initially
+        # self.column_panel_3.height = '100%'
+        # self.spacer_2.height = '100%'
+        
         
 
     def load_data(self,status):
-      if status == 'close':
-        closed_loans = app_tables.fin_loan_details.search(loan_updated_status=q.like('close%'), lender_customer_id=self.user_id)
-        self.repeating_panel_1.items = self.process_data(closed_loans)
-      elif status == 'disbursed loan':
-        disbursed_loans = app_tables.fin_loan_details.search(loan_updated_status=q.like('disbursed loan%'), lender_customer_id=self.user_id)
-        self.repeating_panel_1.items = self.process_data(disbursed_loans)
+        if status == 'close':
+            closed_loans = app_tables.fin_loan_details.search(loan_updated_status=q.like('close%'), lender_customer_id=self.user_id)
+            self.new_loan =len(closed_loans)
+            self.repeating_panel_1.items = self.process_data(closed_loans)
+        elif status == 'disbursed loan':
+            disbursed_loans = app_tables.fin_loan_details.search(loan_updated_status=q.like('disbursed loan%'), lender_customer_id=self.user_id)
+            self.repeating_panel_1.items = self.process_data(disbursed_loans)
 
-      elif status == 'under process':
-        underprocess_loans = app_tables.fin_loan_details.search(loan_updated_status=q.any_of(q.like('under process%'),q.like('under process')))
-        self.repeating_panel_1.items = self.process_data(underprocess_loans)
+        elif status == 'under process':
+            underprocess_loans = app_tables.fin_loan_details.search(loan_updated_status=q.any_of(q.like('under process%'),q.like('under process')))
+            self.repeating_panel_1.items = self.process_data(underprocess_loans)
+            
 
-      elif status == 'lost opportunities':
-        lost_opportunities = app_tables.fin_loan_details.search(loan_updated_status=q.like('lost opportunities%'), lender_customer_id=self.user_id)
-        self.repeating_panel_1.items = self.process_data(lost_opportunities)
+        elif status == 'lost opportunities':
+            lost_opportunities = app_tables.fin_loan_details.search(loan_updated_status=q.like('lost opportunities%'), lender_customer_id=self.user_id)
+            self.repeating_panel_1.items = self.process_data(lost_opportunities)
 
-      elif status == 'extension':
-        extension_loans = app_tables.fin_loan_details.search(loan_updated_status=q.like('extension%'), lender_customer_id=self.user_id)
-        self.repeating_panel_1.items = self.process_data(extension_loans)
+        elif status == 'extension':
+            extension_loans = app_tables.fin_loan_details.search(loan_updated_status=q.like('extension%'), lender_customer_id=self.user_id)
+            self.repeating_panel_1.items = self.process_data(extension_loans)
 
     def process_data(self, data):
         profiles_with_loans = []
@@ -62,10 +85,42 @@ class dashboard(dashboardTemplate):
                     'bessem_value': user_profile['bessem_value'],
                     'loan_updated_status': loan['loan_updated_status'],
                     'interest_rate': loan['interest_rate'],
-                    'borrower_loan_created_timestamp': loan['borrower_loan_created_timestamp']
-                })
+                    'borrower_loan_created_timestamp': loan['borrower_loan_created_timestamp']})
         return profiles_with_loans
 
+    def toggle_components_visibility(self):      
+        self.column_panel_3.visible = self.components_visible
+        self.View_Loan_Requests.visible = self.components_visible
+        self.View_Loan_Extension.visible = self.components_visible
+        self.View_Loan_Foreclosure.visible = self.components_visible
+        self.Todays_Due.visible = self.components_visible
+        self.View_Loans.visible = self.components_visible
+        self.View_Lost_Opportunities.visible = self.components_visible
+        self.Change_Password.visible = self.components_visible
+        self.historyView_Transaction_History.visible = self.components_visible
+        self.View_Edit_Profile.visible = self.components_visible
+        self.View_Send_Notifications.visible = self.components_visible
+        # self.part_payment.visible = self.components_visible
+        self.spacer_4.visible = self.components_visible
+        self.image_6.visible = self.components_visible
+        self.image_7.visible = self.components_visible
+        self.image_8.visible = self.components_visible
+        self.image_9.visible = self.components_visible
+        self.image_10.visible = self.components_visible
+        self.image_11.visible = self.components_visible
+        self.image_12.visible = self.components_visible
+        self.image_13.visible = self.components_visible
+        self.image_14.visible = self.components_visible
+        self.image_15.visible = self.components_visible
+        # self.column_panel_3.width = '0%'
+        # self.column_panel_1.width = '100%'
+        
+        
+      
+
+    def button_1_click(self, **event_args):
+        self.components_visible = not self.components_visible  # Toggle visibility flag
+        self.toggle_components_visibility()
 
     def button_3_click(self, **event_args):
         open_form("lendor.dashboard.view_opening_balance")
@@ -149,9 +204,13 @@ class dashboard(dashboardTemplate):
         open_form('lendor.dashboard.notification')
 
     def wallet_dashboard_link_click(self, **event_args):
-        open_form('wallet.wallet')
+        customer_id = self.user_id
+        email = self.email
+        anvil.server.call('fetch_profile_data_and_insert', email, customer_id)
+        open_form("wallet.wallet")
 
     def button_1_copy_click(self, **event_args):
+        
         self.data_grid_new_loan_request.visible = True
         self.repeating_panel_1.visible = True
         self.load_data('under process')
@@ -178,14 +237,60 @@ class dashboard(dashboardTemplate):
         self.repeating_panel_1.visible = True
         self.load_data('extension')
 
-    def button_1_click(self, **event_args):
-      self.View_Loan_Requests.visible = True
-      self.View_Loan_Extension.visible = True
-      self.View_Loan_Foreclosure.visible = True
-      self.Todays_Due.visible = True
-      self.View_Loans.visible = True
-      self.View_Lost_Opportunities.visible = True
-      self.Change_Password.visible = True
-      self.historyView_Transaction_History.visible = True
-      self.View_Edit_Profile.visible = True
-      self.View_Send_Notifications.visible = True
+    def borrower_dashboard_home_linkhome_borrower_registration_button_copy_1_click(self, **event_args):
+      """This method is called when the link is clicked"""
+      open_form("lendor.dashboard")
+
+    def About_Us_click(self, **event_args):
+      open_form('lendor.dashboard.dasboard_about')
+
+    def Report_A_Problem_click(self, **event_args):
+      """This method is called when the link is clicked"""
+      open_form('lendor.dashboard.dashboard_report_a_problem')
+
+    def help_link_click(self, **event_args):
+      """This method is called when the link is clicked"""
+      pass
+
+
+    def image_6_mouse_up(self, x, y, button, **event_args):
+      open_form("lendor.dashboard.view_borrower_loan_request")
+
+    def image_7_mouse_up(self, x, y, button, **event_args):
+      """This method is called when a mouse button is released on this component"""
+      open_form("lendor.dashboard.view_loan_extension_requests")
+
+    def image_8_mouse_up(self, x, y, button, **event_args):
+      """This method is called when a mouse button is released on this component"""
+      open_form("lendor.dashboard.view_loan_foreclosure_Requests")
+
+    def image_9_mouse_up(self, x, y, button, **event_args):
+      """This method is called when a mouse button is released on this component"""
+      open_form("lendor.dashboard.today_dues")
+
+    def image_10_mouse_up(self, x, y, button, **event_args):
+      """This method is called when a mouse button is released on this component"""
+      open_form("lendor.dashboard.lender_view_loans")
+
+    def image_11_mouse_up(self, x, y, button, **event_args):
+      """This method is called when a mouse button is released on this component"""
+      open_form("lendor.dashboard.view_lost_oppurtunities")
+
+    def image_12_mouse_up(self, x, y, button, **event_args):
+      """This method is called when a mouse button is released on this component"""
+      open_form("lendor.dashboard.change_password")
+
+    def image_13_mouse_up(self, x, y, button, **event_args):
+      """This method is called when a mouse button is released on this component"""
+      open_form("lendor.dashboard.view_transaction_history")
+
+    def image_14_mouse_up(self, x, y, button, **event_args):
+      """This method is called when a mouse button is released on this component"""
+      open_form("lendor.dashboard.lender_profile")
+
+    def image_15_mouse_up(self, x, y, button, **event_args):
+      """This method is called when a mouse button is released on this component"""
+      open_form("lendor.dashboard.view_or_send_notifications")
+
+
+

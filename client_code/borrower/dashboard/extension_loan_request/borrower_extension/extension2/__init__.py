@@ -119,6 +119,7 @@ class extension2(extension2Template):
                 borrower_full_name = None
             final_repayment_numeric = float(self.final_repayment.text.replace('₹', '').replace(',', '').strip())
             new_emi_numeric = float(self.new_emii.text.replace('₹', '').replace(',', '').strip())
+            # extension_amount_numeric = float(self.extension_amountt.text)
             if borrower_customer_id is not None and borrower_email_id is not None and borrower_full_name is not None and reason:
                 app_tables.fin_extends_loan.add_row(
                     loan_id=self.selected_row['loan_id'],
@@ -136,6 +137,8 @@ class extension2(extension2Template):
                     emi_number=self.emi_number,
                     extension_request_date=datetime.now()
                 )
+                # updated_remaining_amount = loan_details_row['remaining_amount'] + extension_amount_numeric
+                # loan_details_row['remaining_amount'] = updated_remaining_amount
                 alert("Extension request submitted successfully!", title="Success")
                 open_form('borrower.dashboard.extension_loan_request')
             elif not reason:

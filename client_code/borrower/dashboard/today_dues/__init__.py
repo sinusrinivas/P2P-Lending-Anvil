@@ -45,7 +45,7 @@ class today_dues(today_duesTemplate):
                 latest_loan = all_loans[0]
                 loan_detail = app_tables.fin_loan_details.get(loan_id=latest_loan['loan_id'])
                 user_profile = app_tables.fin_user_profile.get(customer_id=loan_detail['lender_customer_id'])
-                if loan_detail is not None and user_profile is not None:
+                if loan_detail is not None and user_profile is not None  and (loan_detail['remaining_amount'] is  None or loan_detail['remaining_amount'] > 0):        
                     loan_amount = loan_detail['loan_amount']
                     scheduled_payment = latest_loan['scheduled_payment']
                     next_payment = latest_loan['next_payment']
@@ -77,6 +77,8 @@ class today_dues(today_duesTemplate):
                     borrower_email_id = loan_detail['borrower_email_id']
                     total_amount_paid = loan_detail['total_amount_paid']
                     remaining_amount = loan_detail['remaining_amount']
+                    payment_type = latest_loan['payment_type']
+                    part_payment_date = latest_loan['part_payment_date']
                   
                     loan_details.append({
                         'loan_id': loan_id,
@@ -110,6 +112,8 @@ class today_dues(today_duesTemplate):
                         'borrower_email_id':borrower_email_id,
                         'total_amount_paid':total_amount_paid,
                         'remaining_amount':remaining_amount,
+                        'payment_type': payment_type,
+                        'part_payment_date':part_payment_date,
                     })
             else:
                 for loan in all_loans_disbursed:
@@ -123,15 +127,15 @@ class today_dues(today_duesTemplate):
                   ))
                   if payment_done_1:
                       continue
-                # if payment_done:
-                #   self.repeating_panel_2.visible = False
+              
+
                 # If there are no emi records, append loan details without checking next payment date
                 loan_detail = app_tables.fin_loan_details.get(loan_id=loan_id)
 
                   
                 user_profile = app_tables.fin_user_profile.get(customer_id=loan_detail['lender_customer_id'])
 
-                if loan_detail is not None and user_profile is not None:
+                if loan_detail is not None and user_profile is not None and (loan_detail['remaining_amount'] is  None or loan_detail['remaining_amount'] > 0):
                   user_photo = user_profile['user_photo']
                   loan_amount = loan_detail['loan_amount']
                   first_emi_payment_due_date = loan_detail['first_emi_payment_due_date']

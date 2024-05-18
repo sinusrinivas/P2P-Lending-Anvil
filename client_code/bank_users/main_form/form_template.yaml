@@ -3,10 +3,6 @@ container:
   properties: {col_widths: '{"HJXPJG":67,"ASUGOE":2,"GKGMVX":2,"GZEPAB":58,"YXEJAJ":2,"BRNMJF":58,"JZUUWF":20,"RDWIZR":20,"AMTGYB":20,"ZMXVPS":2,"OHQTCG":58,"OYIVEL":2,"RYPZCD":58,"VURQFS":2,"KLQWYU":58,"NZODAV":2,"ATRLXT":58,"MJLLCS":2,"ETGUAR":58}',
     spacing_below: none, background: ''}
 components:
-- name: spacer_1
-  properties: {height: 4.8000030517578125}
-  type: Spacer
-  layout_properties: {grid_position: 'SIFLFT,HNDGOE'}
 - name: flow_panel_2
   properties: {align: justify}
   type: FlowPanel
@@ -120,6 +116,7 @@ components:
       background: '#05264d', bold: false, underline: false, icon: ''}
     name: button_3
     layout_properties: {x: 723.4375122077763, y: 333.9750099182129, width: 159}
+    event_bindings: {click: button_3_click}
 - name: spacer_7
   properties: {height: 32}
   type: Spacer
@@ -172,107 +169,6 @@ components:
   properties: {height: 40.727264404296875}
   type: Spacer
   layout_properties: {grid_position: 'CEVIWJ,CAZEVF'}
-- name: label_28
-  properties: {text: Some of our Products, align: center, bold: false, font_size: 18}
-  type: Label
-  layout_properties: {grid_position: 'XUBDPO,ORCRQI'}
-- name: label_29
-  properties: {text: Lending options to meet your financial goals, bold: true, font: '',
-    font_size: 25, align: center}
-  type: Label
-  layout_properties: {grid_position: 'TXMMRW,HJUHLW'}
-- name: spacer_14
-  properties: {height: 32}
-  type: Spacer
-  layout_properties: {grid_position: 'JTHRJN,OMJPXC'}
-- name: xy_panel_3
-  properties: {height: 572.3999328613281, background: '#094586', spacing_above: small,
-    tooltip: '', role: elevated-card}
-  type: XYPanel
-  layout_properties: {grid_position: 'UKAIXF,VZAKIK', full_width_row: false}
-  components:
-  - type: Label
-    properties: {text: Long term wealth creation fund, foreground: white, align: center,
-      font_size: 15}
-    name: label_14
-    layout_properties: {x: 33, y: 23.42498779296875, width: 237.60000610351562}
-  - type: Label
-    properties: {text: Lumpsum, font_size: 28, font: '', foreground: white, align: center,
-      bold: true}
-    name: label_25
-    layout_properties: {x: 33, y: 82.42498779296875, width: 237.59100000000004}
-  - type: Image
-    properties: {source: _/theme/lumpsum-p2p-lending.webp, height: 255.19998168945312}
-    name: image_2
-    layout_properties: {x: 10, y: 149.20000000000005, width: 272.669}
-  - type: Image
-    properties: {source: _/theme/invest 1.png, height: 88.20001220703125}
-    name: image_15
-    layout_properties: {x: 0, y: 402.00521087646484, width: 282.66925048828125}
-  - name: button_8
-    properties: {text: View Details, role: filled-button, bold: true, font_size: 18,
-      underline: false, background: white, foreground: black}
-    type: Button
-    layout_properties: {x: 36.349995613098145, y: 532.3875122070312, width: 200}
-- name: xy_panel_4
-  properties: {height: 570.3999328613281, background: '#094586', role: elevated-card}
-  type: XYPanel
-  layout_properties: {grid_position: 'UKAIXF,QSQQHQ', full_width_row: false}
-  components:
-  - type: Image
-    properties: {source: _/theme/mip-monthly-income-p2p-lending.webp, height: 265}
-    name: image_13
-    layout_properties: {x: 10, y: 145.20000000000005, width: 265.8594685058594}
-  - type: Label
-    properties: {text: Monthly Income, font: '', font_size: 28, align: center, bold: true,
-      foreground: white}
-    name: label_26
-    layout_properties: {x: 10, y: 83.48751220703127, width: 265.85946850585935}
-  - type: Label
-    properties: {text: Earn monthly interest, font_size: 16, align: center, foreground: white}
-    name: label_3
-    layout_properties: {x: 29.662506103515625, y: 23.41253662109375, width: 246.2}
-  - type: Image
-    properties: {source: _/theme/New-Project-1.png, height: 88.5999755859375}
-    name: image_16
-    layout_properties: {x: 0, y: 399.8046875, width: 282.66925048828125}
-  - name: button_7
-    properties: {text: View Details, foreground: black, background: white, font_size: 18,
-      bold: true}
-    type: Button
-    layout_properties: {x: 42.74995136260986, y: 530.3875122070312, width: 200}
-- name: xy_panel_5
-  properties: {height: 570.1999816894531, background: '#094586', role: elevated-card}
-  type: XYPanel
-  layout_properties: {grid_position: 'UKAIXF,HIVORL', full_width_row: true, row_background: ''}
-  components:
-  - type: Label
-    properties: {text: Invest based on your preference, foreground: white, align: center,
-      font_size: 15}
-    name: label_2
-    layout_properties: {x: 35.32501220703125, y: 20.42498779296875, width: 252.39996337890625}
-  - type: Label
-    properties: {text: Manual Lending, foreground: white, align: center, font: '',
-      font_size: 28, bold: true}
-    name: label_27
-    layout_properties: {x: 35.32501220703125, y: 84.42498779296875, width: 217.20001220703125}
-  - type: Image
-    properties: {source: _/theme/Updated-Icon-01-1-1024x1024.png, height: 265}
-    name: image_14
-    layout_properties: {x: 12.538000000000011, y: 143.4000000000001, width: 245.9633740234375}
-  - type: Image
-    properties: {source: _/theme/ML-urgent.png, height: 91}
-    name: image_17
-    layout_properties: {x: 0, y: 397.7994842529297, width: 282.66925048828125}
-  - name: button_6
-    properties: {text: View Details, bold: true, font_size: 18, background: white,
-      foreground: black}
-    type: Button
-    layout_properties: {x: 45.11250019073486, y: 530.2000122070312, width: 200}
-- name: spacer_3
-  properties: {height: 50}
-  type: Spacer
-  layout_properties: {grid_position: 'CZXDIW,HTBLRL'}
 - name: label_30
   properties: {text: Why you should invest through Acend, bold: true, align: center,
     font_size: 30}
@@ -440,6 +336,7 @@ components:
       background: '#013065', font_size: 16}
     type: Button
     layout_properties: {x: 633.5694990158081, y: 532.7500076293945, width: 200}
+    event_bindings: {click: button_5_click}
 - name: spacer_19
   properties: {height: 32}
   type: Spacer
@@ -556,7 +453,7 @@ components:
 - name: label_10
   properties: {text: '
 
-      Borrower applies for Loan on GTPL', align: center, font_size: 20}
+      Borrower applies for Loan on Ascend', align: center, font_size: 20}
   type: Label
   layout_properties: {grid_position: 'BGOTWK,XXIPLN LDUNEZ,EMAVPJ'}
 - name: image_5
@@ -596,7 +493,7 @@ components:
   type: Spacer
   layout_properties: {grid_position: 'LCUPAG,KHUANQ'}
 - name: label_15
-  properties: {text: Why you should Borrow through GTPL, align: center, font: '',
+  properties: {text: 'Why you should Borrow through Ascends ', align: center, font: '',
     font_size: 30, bold: true}
   type: Label
   layout_properties: {grid_position: 'GERKWX,DKAZVL'}
@@ -636,8 +533,8 @@ components:
   type: Label
   layout_properties: {grid_position: 'RUUBND,WMRMLE ZIBFWQ,ETAAAQ'}
 - name: label_21
-  properties: {text: 'GTPL provides a seamless user experience in terms of ease of
-      transaction, ability to view detailed account statements, transaction analysis,
+  properties: {text: 'Ascends provides a seamless user experience in terms of ease
+      of transaction, ability to view detailed account statements, transaction analysis,
       and many more features', font_size: 18, align: center}
   type: Label
   layout_properties: {grid_position: 'RUUBND,WMRMLE XFLEEY,RNLVLX'}
@@ -654,9 +551,9 @@ components:
   type: Label
   layout_properties: {grid_position: 'RUUBND,UTGGPW GYXXKV,RVTSGV'}
 - name: label_22
-  properties: {text: 'At GTPL, the Borrowers can simply prepay their loans at their
-      own convenience without any charges whatsoever and as many times as they wish.',
-    align: center, font_size: 18}
+  properties: {text: 'At Ascends , the Borrowers can simply prepay their loans at
+      their own convenience without any charges whatsoever and as many times as they
+      wish.', align: center, font_size: 18}
   type: Label
   layout_properties: {grid_position: 'RUUBND,UTGGPW RLQOJA,BCFMPC'}
 - name: image_27
@@ -673,8 +570,8 @@ components:
   layout_properties: {grid_position: 'RUUBND,GEESPO EFOOBH,GOSWPG'}
 - name: label_46
   properties: {text: 'We have a large pool of investors who are looking to invest
-      in individual projects approved by GTPL. Once your loan project is listed on
-      GTPL, it gets funded within a few days', font_size: 18, align: center}
+      in individual projects approved by Ascends. Once your loan project is listed
+      on Ascends, it gets funded within a few days', font_size: 18, align: center}
   type: Label
   layout_properties: {grid_position: 'RUUBND,GEESPO GMIZKY,KKGPWJ'}
 - name: spacer_9
@@ -686,7 +583,7 @@ components:
   type: Label
   layout_properties: {grid_position: 'RNCYEY,OTFUIM'}
 - name: label_53
-  properties: {text: 'GTPL is a platform for people with non-traditional approach
+  properties: {text: 'Ascends is a platform for people with non-traditional approach
       to borrowing, which ultimately results in lower interest rates on the financing
       amount. Borrowers must meet the following criteria to be considered for listing
       on our platform', font_size: 20}
@@ -731,8 +628,8 @@ components:
   layout_properties: {grid_position: 'KMQMXC,HBVVLU'}
 - name: label_58
   properties: {text: 'If a prospective borrower fails to meet the aforementioned criteria,
-      they cannot become a member of Kotak unless specified otherwise in a written
-      legal agreement provided by GTPL', font_size: 18, font: ''}
+      they cannot become a member of Ascends unless specified. otherwise in a written
+      legal agreement provided by Ascends', font_size: 18, font: ''}
   type: Label
   layout_properties: {grid_position: 'AUTUDX,QUJUZD'}
 - name: label_59
@@ -828,6 +725,7 @@ components:
     bold: true}
   type: Button
   layout_properties: {grid_position: 'DTMZYG,MSRJRI'}
+  event_bindings: {click: button_9_click}
 - name: spacer_39
   properties: {height: 32}
   type: Spacer
@@ -859,6 +757,7 @@ components:
       font_size: 18, role: filled-button}
     type: Button
     layout_properties: {row: QDSSCF, width_xs: 12, col_xs: 0}
+    event_bindings: {click: button_10_click}
   - name: label_3_copy_1
     properties: {role: null, align: center, tooltip: '', border: '', foreground: white,
       visible: true, text: 'Total Loan Amount Applied by Borrowers:
@@ -886,6 +785,7 @@ components:
       foreground: black, bold: true}
     type: Button
     layout_properties: {row: DMDWRR, width_xs: 12, col_xs: 0}
+    event_bindings: {click: button_11_click}
   - name: linear_panel_5_copy_1
     properties: {}
     type: LinearPanel
@@ -923,7 +823,7 @@ components:
   type: Spacer
   layout_properties: {grid_position: 'VZQHCA,MJLLCS'}
 - name: rich_text_3
-  properties: {content: Peer to peer lending is a method of lending capital to borrowers on a mutual interest rate through an online platform like kotak which act as a matchmaker,
+  properties: {content: Peer to peer lending is a method of lending capital to borrowers on a mutual interest rate through an online platform like Ascends which act as a matchmaker,
     font_size: 18, visible: false, font: ''}
   type: RichText
   layout_properties: {grid_position: 'VZQHCA,ETGUAR'}
@@ -998,7 +898,7 @@ components:
   type: Spacer
   layout_properties: {grid_position: 'CVDGOO,ASUGOE'}
 - name: rich_text_2
-  properties: {content: 'Investors can use Kotak  lending software to issue both consumer
+  properties: {content: 'Investors can use Ascend lending software to issue both consumer
       and commercial loans. These can include personal loans, business loans, education
       loans, home improvement loans, debt consolidation loans, and more. You are free
       to add specific loan types on a P2P lending platform depending on the platform’s
@@ -1033,6 +933,7 @@ components:
       foreground: White, role: filled-button, font_size: 20, align: left}
     type: Button
     layout_properties: {grid_position: 'RTEJIV,IDTHWJ YHWQMV,XNIINL'}
+    event_bindings: {click: button_2_click}
   - name: image_22
     properties: {height: 452, source: _/theme/india map.png, display_mode: zoom_to_fill}
     type: Image
@@ -1151,7 +1052,7 @@ components:
       components:
       - type: Label
         properties: {role: null, align: left, tooltip: '', border: '', foreground: white,
-          visible: true, text: '© 2023 - 2024, GTPL - All Rights Reserved', font_size: null,
+          visible: true, text: '© 2023 - 2024, Ascend - All Rights Reserved', font_size: null,
           font: '', spacing_above: small, icon_align: left, spacing_below: small,
           italic: false, background: '#05264d', bold: true, underline: false, icon: ''}
         name: label_4

@@ -28,5 +28,17 @@ class manage_bessem(manage_bessemTemplate):
     """This method is called when the button is clicked"""
     open_form('admin.dashboard.manage_bessem.view_bessem_group')
 
+  def image_4_copy_mouse_up(self, x, y, button, **event_args):
+    """This method is called when a mouse button is released on this component"""
+    open_form('admin.dashboard.manage_bessem.add_subcategory')
+
+  def image_4_copy_10_mouse_up(self, x, y, button, **event_args):
+    """This method is called when a mouse button is released on this component"""
+    open_form('admin.dashboard.manage_bessem.view_bessem_group')
+
+  def image_4_copy_2_mouse_up(self, x, y, button, **event_args):
+    """This method is called when a mouse button is released on this component"""
+    open_form('admin.dashboard.manage_bessem.view_bessem_subcategory')
+
 
 

@@ -6,7 +6,7 @@ import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 from .add_admin import add_admin
-from ....borrower_registration_form.dashboard import main_form_module
+from ....borrower.dashboard import main_form_module
 
 class admin_management(admin_managementTemplate):
     def __init__(self, **properties):
@@ -80,6 +80,18 @@ class admin_management(admin_managementTemplate):
 
     def button_11_click(self, **event_args):
       """This method is called when the button is clicked"""
+      open_form('admin.dashboard.admin_management.view_admins')
+
+    def image_4_copy_mouse_up(self, x, y, button, **event_args):
+      """This method is called when a mouse button is released on this component"""
+      open_form('admin.dashboard.admin_management.add_admin')
+
+    def image_4_copy_10_mouse_up(self, x, y, button, **event_args):
+      """This method is called when a mouse button is released on this component"""
+      open_form('admin.dashboard.admin_management.view_admins')
+
+    def image_4_copy_5_mouse_up(self, x, y, button, **event_args):
+      """This method is called when a mouse button is released on this component"""
       open_form('admin.dashboard.admin_management.view_admins')
 
 

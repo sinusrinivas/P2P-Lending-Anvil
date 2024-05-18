@@ -44,21 +44,6 @@ components:
     layout_properties: {x: 368.92501068115234, y: 10, width: 200}
     data_bindings:
     - {property: text, code: 'self.item[''product_name'']', writeback: false}
-  - name: outlined_button_1
-    properties: {text: View Loan Details, role: outlined-button, align: center, font_size: null,
-      background: '#05264d', foreground: 'theme:On Primary', bold: true}
-    type: Button
-    layout_properties: {x: 127.82114721679687, y: 338.8392639160156, width: 360.429}
-    event_bindings: {click: outlined_button_1_click}
-  - type: Button
-    properties: {role: outlined-button, align: center, tooltip: '', border: '', enabled: true,
-      foreground: 'theme:On Primary', visible: true, text: Pay, font_size: null, font: '',
-      spacing_above: small, icon_align: left, spacing_below: small, italic: false,
-      background: '#05264d', bold: true, underline: false, icon: ''}
-    name: button_1
-    layout_properties: {x: 429.62501525878906, y: 338.83972721679686, width: 261}
-    event_bindings: {click: button_1_click}
-    data_bindings: []
   - name: label_9
     properties: {text: 'Invested on : ', bold: true}
     type: Label
@@ -125,3 +110,18 @@ components:
     layout_properties: {x: 719.6967208251954, y: 171.23214721679688, width: 200}
     data_bindings:
     - {property: text, code: 'self.item[''tenure'']', writeback: false}
+  - type: Button
+    properties: {role: outlined-button, align: full, tooltip: '', border: '', enabled: true,
+      foreground: 'theme:On Primary', visible: true, text: Pay, font_size: null, font: '',
+      spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+      background: '#05264d', bold: true, underline: false, icon: ''}
+    name: button_1
+    layout_properties: {x: 481.0891658253968, y: 348.6964302062988, width: 209.4107208251953}
+    event_bindings: {click: button_1_click}
+    data_bindings: []
+  - name: outlined_button_1
+    properties: {text: View Loan Details, role: outlined-button, align: center, font_size: null,
+      background: '#05264d', foreground: 'theme:On Primary', bold: true}
+    type: Button
+    layout_properties: {x: 127.83928789570928, y: 348.6964302062988, width: 350.429}
+    event_bindings: {click: outlined_button_1_click}
