@@ -83,7 +83,7 @@ components:
     type: Label
     layout_properties: {}
   - name: label_6
-    properties: {icon: 'fa:envelope', text: '  Kotakinvestment@p2p.coom', align: center,
+    properties: {icon: 'fa:envelope', text: '  Ascendsinvestment@p2p.coom', align: center,
       bold: true, font_size: 19}
     type: Label
     layout_properties: {}
@@ -98,8 +98,8 @@ components:
     type: Label
     layout_properties: {}
   - name: label_6_copy
-    properties: {icon: 'fa:envelope', text: '  Kotakloan@p2p.coom', align: center,
-      bold: true, font_size: 20}
+    properties: {icon: 'fa:envelope', text: Ascendsloan@p2p.coom, align: center, bold: true,
+      font_size: 20}
     type: Label
     layout_properties: {}
 - name: xy_panel_2
