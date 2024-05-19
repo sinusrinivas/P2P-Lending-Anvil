@@ -402,11 +402,11 @@ components:
   type: Label
   layout_properties: {grid_position: 'NAHKHD,IIHDLH'}
 - name: label_20
-  properties: {text: 'Kotak has drafted detailed loan agreements where utmost care
+  properties: {text: 'Ascends has drafted detailed loan agreements where utmost care
       has been taken to cover various scenarios along with suitable recourse. This
       loan agreement is signed post payment of requisite stamp duty which is borne
-      by Kotak and hence, is legally enforceable in the court of law. In case, either
-      party seeks to enforce the agreement at any time, Kotak also helps that party
+      by Ascends and hence, is legally enforceable in the court of law. In case, either
+      party seeks to enforce the agreement at any time, Ascends also helps that party
       to seek legal opinion though at an additional cost as charged by the lawyer',
     font_size: 18}
   type: Label
