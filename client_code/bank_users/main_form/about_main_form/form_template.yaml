@@ -61,10 +61,6 @@ components:
       type: Button
       layout_properties: {}
       event_bindings: {click: button_10_copy_click}
-- name: spacer_2
-  properties: {height: 32}
-  type: Spacer
-  layout_properties: {grid_position: 'GNWZUK,KTTIXH'}
 - name: label_2
   properties: {text: Ascends is a Leading Peer to Peer Lending Platform in India,
     align: center, bold: true, font_size: 25}

@@ -15,286 +15,285 @@ components:
     type: Image
     layout_properties: {width: 211.39999389648438}
     name: image_1_copy_copy_1
-- name: logout_1
-  properties: {}
+- properties: {}
   type: form:borrower.logout
   layout_properties: {grid_position: 'LFJREP,WHPFJH', full_width_row: true}
-- name: column_panel_1
-  properties: {role: null, col_widths: '{"AJWSNT":75,"GWXDDK":10}', background: '#05264d'}
+  name: logout_1
+- properties: {role: null, col_widths: '{"AJWSNT":75,"GWXDDK":10}', background: '#05264d'}
   type: ColumnPanel
   layout_properties: {grid_position: 'XQSVFB,DDDFWM', full_width_row: true}
+  name: column_panel_1
   components:
-  - name: button_9
-    properties: {text: '', icon: 'fa:bars', foreground: White, font_size: 20, align: left}
+  - properties: {text: '', icon: 'fa:bars', foreground: White, font_size: 20, align: left}
     type: Button
     layout_properties: {grid_position: 'IPYSRE,GWXDDK', full_width_row: true}
     event_bindings: {click: button_9_click}
-  - name: navigation_form_dashboard_1
-    properties: {}
+    name: button_9
+  - properties: {}
     type: form:borrower.dashboard.Navigation_form_dashboard
     layout_properties: {grid_position: 'IPYSRE,AJWSNT'}
-- name: content_panel_copy_3
-  properties: {col_widths: '{"CHNNLA":15,"OHZSYC":45,"EOEYGI":15,"YNUSTO":45,"TGYSCZ":15,"TRRXRD":45,"EGWXJB":15,"SFHJNS":45,"TZYAXL":15,"PGYUMF":45,"SRZLUY":15,"VEOGOV":45,"LUXDGV":15,"PCKMGS":45,"HWFJNP":15,"QTCHNM":45,"CDLMBO":15,"CCTMMS":45,"KDXING":15,"ZHMDPW":45}',
+    name: navigation_form_dashboard_1
+- properties: {col_widths: '{"CHNNLA":15,"OHZSYC":45,"EOEYGI":15,"YNUSTO":45,"TGYSCZ":15,"TRRXRD":45,"EGWXJB":15,"SFHJNS":45,"TZYAXL":15,"PGYUMF":45,"SRZLUY":15,"VEOGOV":45,"LUXDGV":15,"PCKMGS":45,"HWFJNP":15,"QTCHNM":45,"CDLMBO":15,"CCTMMS":45,"KDXING":15,"ZHMDPW":45}',
     background: '#05264d', visible: true}
   type: ColumnPanel
   layout_properties: {grid_position: 'XJNATW,SKVUZK', full_width_row: true}
+  name: content_panel_copy_3
   components:
-  - name: image_3
-    properties: {height: '40', source: _/theme/other loan.png}
+  - properties: {height: '40', source: _/theme/other loan.png}
     type: Image
     layout_properties: {grid_position: 'JRTGWO,CHNNLA'}
     event_bindings: {mouse_up: image_3_mouse_up}
-  - name: button_1
-    properties: {text: New Loan Request, align: left, foreground: white, bold: true,
+    name: image_3
+  - properties: {text: New Loan Request, align: left, foreground: white, bold: true,
       icon: '', visible: true, font_size: 16}
     type: Button
     layout_properties: {grid_position: 'JRTGWO,OHZSYC', full_width_row: true}
     event_bindings: {click: button_1_click}
-  - name: spacer_1
-    properties: {height: '5'}
+    name: button_1
+  - properties: {height: '5'}
     type: Spacer
     layout_properties: {grid_position: 'TOTPEB,CXTVER'}
-  - name: image_4
-    properties: {height: '40', source: _/theme/todays due.png, display_mode: shrink_to_fit}
+    name: spacer_1
+  - properties: {height: '40', source: _/theme/todays due.png, display_mode: shrink_to_fit}
     type: Image
     layout_properties: {grid_position: 'KMQVGZ,EOEYGI'}
     event_bindings: {mouse_up: image_4_mouse_up}
-  - name: button_2
-    properties: {text: Today's  Due, align: left, bold: true, foreground: white, font_size: 16}
+    name: image_4
+  - properties: {text: Today's  Due, align: left, bold: true, foreground: white, font_size: 16}
     type: Button
     layout_properties: {grid_position: 'KMQVGZ,YNUSTO', full_width_row: true}
     event_bindings: {click: button_2_click}
-  - name: spacer_2
-    properties: {height: '5'}
+    name: button_2
+  - properties: {height: '5'}
     type: Spacer
     layout_properties: {grid_position: 'AMTWDO,YZYCFL'}
-  - name: image_5
-    properties: {height: '40', source: _/theme/business-credit-score (1).png}
+    name: spacer_2
+  - properties: {height: '40', source: _/theme/business-credit-score (1).png}
     type: Image
     layout_properties: {grid_position: 'BBNVSF,TGYSCZ'}
     event_bindings: {mouse_up: image_5_mouse_up}
-  - name: button_3
-    properties: {text: 'View  Loans ', align: left, foreground: white, bold: true,
+    name: image_5
+  - properties: {text: 'View  Loans ', align: left, foreground: white, bold: true,
       font_size: 16}
     type: Button
     layout_properties: {grid_position: 'BBNVSF,TRRXRD', full_width_row: true}
     event_bindings: {click: button_3_click}
-  - name: spacer_4
-    properties: {height: '5'}
+    name: button_3
+  - properties: {height: '5'}
     type: Spacer
     layout_properties: {grid_position: 'NQTAWA,PNQZNW'}
-  - name: image_7
-    properties: {height: '40', source: _/theme/foreclosure.png, display_mode: shrink_to_fit}
+    name: spacer_4
+  - properties: {height: '40', source: _/theme/foreclosure.png, display_mode: shrink_to_fit}
     type: Image
     layout_properties: {grid_position: 'IXDBCZ,EGWXJB'}
     event_bindings: {mouse_up: image_7_mouse_up}
-  - name: button_4_copy
-    properties: {text: ' Loan Foreclosure', align: left, bold: true, foreground: white,
+    name: image_7
+  - properties: {text: ' Loan Foreclosure', align: left, bold: true, foreground: white,
       font_size: 16}
     type: Button
     layout_properties: {grid_position: 'IXDBCZ,SFHJNS', full_width_row: true}
     event_bindings: {click: button_4_copy_click}
-  - name: spacer_5
-    properties: {height: '5'}
+    name: button_4_copy
+  - properties: {height: '5'}
     type: Spacer
     layout_properties: {grid_position: 'APGMFV,SDOASL'}
-  - name: image_6
-    properties: {height: '40', source: _/theme/tracking.png, display_mode: shrink_to_fit}
+    name: spacer_5
+  - properties: {height: '40', source: _/theme/tracking.png, display_mode: shrink_to_fit}
     type: Image
     layout_properties: {grid_position: 'OQIIWH,TZYAXL'}
     event_bindings: {mouse_up: image_6_mouse_up}
-  - name: button_5
-    properties: {text: 'Application Tracker ', align: left, foreground: white, bold: true,
+    name: image_6
+  - properties: {text: 'Application Tracker ', align: left, foreground: white, bold: true,
       font_size: 16}
     type: Button
     layout_properties: {grid_position: 'OQIIWH,PGYUMF', full_width_row: true}
     event_bindings: {click: button_5_click}
-  - name: spacer_6
-    properties: {height: '5'}
+    name: button_5
+  - properties: {height: '5'}
     type: Spacer
     layout_properties: {grid_position: 'THTAHO,RANIIM'}
-  - name: image_8
-    properties: {height: '40', source: _/theme/lapsed loan.png}
+    name: spacer_6
+  - properties: {height: '40', source: _/theme/lapsed loan.png}
     type: Image
     layout_properties: {grid_position: 'RKKUUW,SRZLUY'}
     event_bindings: {mouse_up: image_8_mouse_up}
-  - name: button_6_copy
-    properties: {text: 'Loan  Extension  ', align: left, foreground: white, bold: true,
+    name: image_8
+  - properties: {text: 'Loan  Extension  ', align: left, foreground: white, bold: true,
       font_size: 16}
     type: Button
     layout_properties: {grid_position: 'RKKUUW,VEOGOV', full_width_row: true}
     event_bindings: {click: button_6_copy_click}
-  - name: spacer_7
-    properties: {height: '5'}
+    name: button_6_copy
+  - properties: {height: '5'}
     type: Spacer
     layout_properties: {grid_position: 'TCKTRA,BDOOWM'}
-  - name: image_9
-    properties: {height: '40', source: _/theme/transaction-history-icon.png, display_mode: shrink_to_fit}
+    name: spacer_7
+  - properties: {height: '40', source: _/theme/transaction-history-icon.png, display_mode: shrink_to_fit}
     type: Image
     layout_properties: {grid_position: 'QHSUTS,LUXDGV'}
     event_bindings: {mouse_up: image_9_mouse_up}
-  - name: button_7
-    properties: {text: View Transaction History, align: left, bold: true, foreground: white,
+    name: image_9
+  - properties: {text: View Transaction History, align: left, bold: true, foreground: white,
       font_size: 16}
     type: Button
     layout_properties: {grid_position: 'QHSUTS,PCKMGS', full_width_row: true}
     event_bindings: {click: button_7_click}
-  - name: spacer_8
-    properties: {height: '5'}
+    name: button_7
+  - properties: {height: '5'}
     type: Spacer
     layout_properties: {grid_position: 'DXEAVR,IAUQLP'}
-  - name: image_10
-    properties: {height: '40', source: _/theme/coupon.png, display_mode: shrink_to_fit}
+    name: spacer_8
+  - properties: {height: '40', source: _/theme/coupon.png, display_mode: shrink_to_fit}
     type: Image
     layout_properties: {grid_position: 'TRWKIA,HWFJNP'}
     event_bindings: {mouse_up: image_10_mouse_up}
-  - name: button_8
-    properties: {text: Discount Coupons, align: left, bold: true, foreground: white,
+    name: image_10
+  - properties: {text: Discount Coupons, align: left, bold: true, foreground: white,
       font_size: 16}
     type: Button
     layout_properties: {grid_position: 'TRWKIA,QTCHNM', full_width_row: true}
     event_bindings: {click: button_8_click}
-  - name: spacer_14
-    properties: {height: '5'}
+    name: button_8
+  - properties: {height: '5'}
     type: Spacer
     layout_properties: {grid_position: 'WXNFDS,XPWNAX'}
-  - name: image_10_copy
-    properties: {height: '40', source: _/theme/down-payment.png, display_mode: shrink_to_fit}
+    name: spacer_14
+  - properties: {height: '40', source: _/theme/down-payment.png, display_mode: shrink_to_fit}
     type: Image
     layout_properties: {grid_position: 'GJHBNI,CDLMBO'}
-  - name: button_4
-    properties: {text: Part Payment, bold: true, foreground: white, font_size: 16,
+    name: image_10_copy
+  - properties: {text: Part Payment, bold: true, foreground: white, font_size: 16,
       align: left}
     type: Button
     layout_properties: {grid_position: 'GJHBNI,CCTMMS'}
     event_bindings: {click: button_4_click}
-  - name: spacer_13
-    properties: {height: '5'}
+    name: button_4
+  - properties: {height: '5'}
     type: Spacer
     layout_properties: {grid_position: 'BTBIWF,ETBOEP'}
-  - name: image_10_copy_copy
-    properties: {height: '40', source: _/theme/portfolio (2).png, display_mode: shrink_to_fit}
+    name: spacer_13
+  - properties: {height: '40', source: _/theme/portfolio (2).png, display_mode: shrink_to_fit}
     type: Image
     layout_properties: {grid_position: 'TGHKYS,KDXING'}
-  - name: button_6
-    properties: {text: Portfolio, font_size: 16, bold: true, foreground: white, align: left}
+    name: image_10_copy_copy
+  - properties: {text: Portfolio, font_size: 16, bold: true, foreground: white, align: left}
     type: Button
     layout_properties: {grid_position: 'TGHKYS,ZHMDPW'}
-  - name: spacer_9
-    properties: {height: '5'}
+    name: button_6
+  - properties: {height: '5'}
     type: Spacer
     layout_properties: {grid_position: 'BGTBAA,JGZFPN'}
-- name: spacer_11
-  properties: {height: '2'}
+    name: spacer_9
+- properties: {height: '2'}
   type: Spacer
   layout_properties: {grid_position: 'XJNATW,EICYCB CIVIBA,ZIOOXV'}
-- name: spacer_12
-  properties: {height: '20'}
+  name: spacer_11
+- properties: {height: '20'}
   type: Spacer
   layout_properties: {grid_position: 'XJNATW,EICYCB OLAXPQ,FSEXYY UTOTGO,IMYQDO'}
-- name: image_1_copy_copy
-  properties: {height: '140', source: '', horizontal_align: center, role: null}
+  name: spacer_12
+- properties: {height: '140', source: '', horizontal_align: center, role: null}
   type: Image
   layout_properties: {grid_position: 'XJNATW,EICYCB GDHSWL,RFJCAF QNIDJV,AEDETS'}
-- name: button_12
-  properties: {text: View profile, bold: true, foreground: Black, font_size: 16}
+  name: image_1_copy_copy
+- properties: {text: View profile, bold: true, foreground: Black, font_size: 16}
   type: Button
   layout_properties: {grid_position: 'XJNATW,EICYCB GDHSWL,RFJCAF JHNJQY,ZSAVAQ'}
   event_bindings: {click: button_12_click}
-- name: label_2_copy
-  properties: {text: '', align: left, bold: true, font_size: 26}
+  name: button_12
+- properties: {text: '', align: left, bold: true, font_size: 26}
   type: Label
   layout_properties: {grid_position: 'XJNATW,EICYCB GDHSWL,LWORUH IEEIQV,NJVGEL'}
-- name: spacer_16
-  properties: {height: '3'}
+  name: label_2_copy
+- properties: {height: '3'}
   type: Spacer
   layout_properties: {grid_position: 'XJNATW,EICYCB GDHSWL,LWORUH PATSWD,BHOXKV SEMPGY,WPIOHO
       TUVEVM,PQDGRF'}
-- name: image_1
-  properties: {height: '20', source: _/theme/telephone.png, display_mode: shrink_to_fit}
+  name: spacer_16
+- properties: {height: '20', source: _/theme/telephone.png, display_mode: shrink_to_fit}
   type: Image
   layout_properties: {grid_position: 'XJNATW,EICYCB GDHSWL,LWORUH PATSWD,BHOXKV SEMPGY,WPIOHO
       HXZJES,QQSKGX'}
-- name: label_6
-  properties: {text: 'Mobile No :', bold: true, font_size: 16, icon: ''}
+  name: image_1
+- properties: {text: 'Mobile No :', bold: true, font_size: 16, icon: ''}
   type: Label
   layout_properties: {grid_position: 'XJNATW,EICYCB GDHSWL,LWORUH PATSWD,BHOXKV SEMPGY,RNRKGL'}
-- name: spacer_17
-  properties: {height: '3'}
+  name: label_6
+- properties: {height: '3'}
   type: Spacer
   layout_properties: {grid_position: 'XJNATW,EICYCB GDHSWL,LWORUH PATSWD,BHOXKV DPRJTX,XEZVML
       XDVKVD,VSLEJE'}
-- name: image_2
-  properties: {height: '20', source: _/theme/user (1).png, display_mode: shrink_to_fit}
+  name: spacer_17
+- properties: {height: '20', source: _/theme/user (1).png, display_mode: shrink_to_fit}
   type: Image
   layout_properties: {grid_position: 'XJNATW,EICYCB GDHSWL,LWORUH PATSWD,BHOXKV DPRJTX,XEZVML
       OATRJL,SWIBVK'}
-- name: label_2
-  properties: {text: 'Member Since :', bold: true, font_size: 16, icon: ''}
+  name: image_2
+- properties: {text: 'Member Since :', bold: true, font_size: 16, icon: ''}
   type: Label
   layout_properties: {grid_position: 'XJNATW,EICYCB GDHSWL,LWORUH PATSWD,BHOXKV DPRJTX,UVQLFS'}
-- name: label_3
-  properties: {text: '', font_size: 16}
+  name: label_2
+- properties: {text: '', font_size: 16}
   type: Label
   layout_properties: {grid_position: 'XJNATW,EICYCB GDHSWL,LWORUH PATSWD,UBGOIF XMNMGS,QKJAYB
       QOEMYD,PHXFAC'}
-- name: label_7
-  properties: {text: '', font_size: 16}
+  name: label_3
+- properties: {text: '', font_size: 16}
   type: Label
   layout_properties: {grid_position: 'XJNATW,EICYCB GDHSWL,LWORUH PATSWD,UBGOIF XMNMGS,QKJAYB
       VEPOLP,JFTIRZ'}
-- name: spacer_15
-  properties: {height: ''}
+  name: label_7
+- properties: {height: ''}
   type: Spacer
   layout_properties: {grid_position: 'XJNATW,EICYCB GDHSWL,LWORUH PATSWD,UBGOIF XMNMGS,DCWODV
       NEGQGP,DNPTOC ZBLSPD,OPGEHY'}
-- name: image_11
-  properties: {height: '20', source: _/theme/credit-limit (1).png, display_mode: shrink_to_fit}
+  name: spacer_15
+- properties: {height: '20', source: _/theme/credit-limit (1).png, display_mode: shrink_to_fit}
   type: Image
   layout_properties: {grid_position: 'XJNATW,EICYCB GDHSWL,LWORUH PATSWD,UBGOIF XMNMGS,DCWODV
       NEGQGP,DNPTOC XAQFFC,CPBMQH'}
-- name: label_4
-  properties: {text: 'Credit Limit :', bold: true, font_size: 16, icon: ''}
+  name: image_11
+- properties: {text: 'Credit Limit :', bold: true, font_size: 16, icon: ''}
   type: Label
   layout_properties: {grid_position: 'XJNATW,EICYCB GDHSWL,LWORUH PATSWD,UBGOIF XMNMGS,DCWODV
       NEGQGP,CVCAKM'}
-- name: spacer_18
-  properties: {height: '3'}
+  name: label_4
+- properties: {height: '3'}
   type: Spacer
   layout_properties: {grid_position: 'XJNATW,EICYCB GDHSWL,LWORUH PATSWD,UBGOIF XMNMGS,DCWODV
       WKWXGE,RKLYJE TWETSP,OKCLZL'}
-- name: image_12
-  properties: {height: '20', source: _/theme/icons8-coins-100 (1).png}
+  name: spacer_18
+- properties: {height: '20', source: _/theme/icons8-coins-100 (1).png}
   type: Image
   layout_properties: {grid_position: 'XJNATW,EICYCB GDHSWL,LWORUH PATSWD,UBGOIF XMNMGS,DCWODV
       WKWXGE,RKLYJE GJIDHC,YUGOTA'}
-- name: label_1
-  properties: {text: 'Available Balance :', bold: true, font_size: 16, icon: ''}
+  name: image_12
+- properties: {text: 'Available Balance :', bold: true, font_size: 16, icon: ''}
   type: Label
   layout_properties: {grid_position: 'XJNATW,EICYCB GDHSWL,LWORUH PATSWD,UBGOIF XMNMGS,DCWODV
       WKWXGE,HMVRJG'}
-- name: label_5
-  properties: {text: '', font_size: 16}
+  name: label_1
+- properties: {text: '', font_size: 16}
   type: Label
   layout_properties: {grid_position: 'XJNATW,EICYCB GDHSWL,LWORUH PATSWD,UBGOIF XMNMGS,GVQREJ
       YOSMCJ,DZTVRG'}
-- name: label_8
-  properties: {text: '', font_size: 16}
+  name: label_5
+- properties: {text: '', font_size: 16}
   type: Label
   layout_properties: {grid_position: 'XJNATW,EICYCB GDHSWL,LWORUH PATSWD,UBGOIF XMNMGS,GVQREJ
       VXFYDN,JQAYXD'}
-- name: spacer_3
-  properties: {height: 11.249969482421875}
+  name: label_8
+- properties: {height: 11.249969482421875}
   type: Spacer
   layout_properties: {grid_position: 'XJNATW,EICYCB GDHSWL,LWORUH PATSWD,HUCKZQ'}
-- name: spacer_10
-  properties: {height: '30'}
+  name: spacer_3
+- properties: {height: '30'}
   type: Spacer
   layout_properties: {grid_position: 'XJNATW,EICYCB XTPPNN,OTRAWO'}
-- name: data_grid_1
-  properties:
+  name: spacer_10
+- properties:
     columns:
-    - {id: JKSDUP, title: Loan Id, data_key: column_1}
+    - {id: JKSDUP, title: Product Name, data_key: column_1}
     - {id: VJQQOR, title: Loan Amount, data_key: column_2}
     - {id: OJLQEN, title: Tenure, data_key: column_3}
     - {id: GAVKHZ, data_key: column_4, title: 'Interest  '}
@@ -302,9 +301,10 @@ components:
     - {id: RNOHUR, data_key: column_7, title: Actions}
     role: tonal-data-grid
   type: DataGrid
+  layout_properties: {grid_position: 'XJNATW,EICYCB WYXQXG,WVXVAQ', full_width_row: true}
+  name: data_grid_1
   components:
-  - name: repeating_panel_1
-    properties: {item_template: borrower.dashboard.RowTemplate7, role: null}
+  - properties: {item_template: borrower.dashboard.RowTemplate7, role: null}
     type: RepeatingPanel
     layout_properties: {pinned: false}
-  layout_properties: {grid_position: 'XJNATW,EICYCB WYXQXG,WVXVAQ', full_width_row: true}
+    name: repeating_panel_1
