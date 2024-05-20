@@ -137,3 +137,9 @@ components:
     layout_properties: {x: 840.7142878957093, y: 9.767846245318651, width: 87.82136535644541}
     data_bindings:
     - {property: source, code: 'self.item[''lender_photo'']', writeback: false}
+  - name: loan_id
+    properties: {visible: false}
+    type: Label
+    layout_properties: {x: 451.5714416503906, y: 49.4285888671875, width: 57.85693359375}
+    data_bindings:
+    - {property: text, code: 'self.item[''loan_id'']', writeback: false}

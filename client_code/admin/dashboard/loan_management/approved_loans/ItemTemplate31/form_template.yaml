@@ -95,12 +95,6 @@ components:
     data_bindings:
     - {property: text, code: 'self.item[''product_description'']', writeback: true}
     event_bindings: {}
-  - name: loan_id
-    properties: {visible: false}
-    type: Label
-    layout_properties: {x: 182.63638930022717, y: 405, width: 200}
-    data_bindings:
-    - {property: text, code: 'self.item[''loan_id'']', writeback: false}
   - name: lendor_name
     properties: {bold: true, align: right}
     type: Label
@@ -142,4 +136,10 @@ components:
     layout_properties: {x: 843.0000544972718, y: 16.607110161334276, width: 85.16072082519531}
     data_bindings:
     - {property: source, code: 'self.item[''lender_photo'']', writeback: false}
+  - name: loan_id
+    properties: {visible: false}
+    type: Label
+    layout_properties: {x: 440.1785060353577, y: 38.6071406789124, width: 43.7142333984375}
+    data_bindings:
+    - {property: text, code: 'self.item[''loan_id'']', writeback: false}
 is_package: true

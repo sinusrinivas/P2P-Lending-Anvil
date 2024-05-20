@@ -137,3 +137,9 @@ components:
       foreground: grey, align: center}
     type: Label
     layout_properties: {x: 0, y: 94.96430315449834, width: 937.71435546875}
+  - name: loan_id
+    properties: {visible: false}
+    type: Label
+    layout_properties: {x: 445.8571472167969, y: 47.142852783203125, width: 41.7142333984375}
+    data_bindings:
+    - {property: text, code: 'self.item[''loan_id'']', writeback: false}
