@@ -80,14 +80,6 @@ components:
       source: _/theme/main.png, spacing_below: small, background: '', horizontal_align: center}
     type: Image
     layout_properties: {x: 146.75, y: -9.299999999999955, width: 457.15}
-  - type: Image
-    properties: {height: 46, source: _/theme/rbi-registered-1.svg}
-    name: image_11
-    layout_properties: {x: 159, y: 366.984375, width: 230.60000610351562}
-  - type: Image
-    properties: {height: 39, source: _/theme/12-300x94.png}
-    name: image_12
-    layout_properties: {x: 419, y: 302.984375, width: 184.89998474121091}
   - name: label_4_copy_1_copy
     properties: {role: null, align: left, tooltip: '', border: '', foreground: white,
       visible: true, text: Now invest with the largest Ascends P2P Lending platform in India. Go with the most preferred non-market linked investment instrument that gives you risk adjusted returns.,
@@ -117,6 +109,19 @@ components:
     name: button_3
     layout_properties: {x: 723.4375122077763, y: 333.9750099182129, width: 159}
     event_bindings: {click: button_3_click}
+  - name: image_2
+    properties: {height: 399.24993896484375, source: _/theme/bank_users/main_form/main.png,
+      display_mode: zoom_to_fill}
+    type: Image
+    layout_properties: {x: 149.23435974121094, y: 43.015625, width: 265}
+  - type: Image
+    properties: {height: 39, source: _/theme/bank_users/main_form/12-300x94.png}
+    name: image_12
+    layout_properties: {x: 298.140625, y: 280.296875, width: 184.890625}
+  - type: Image
+    properties: {height: 46, source: _/theme/bank_users/main_form/rbi-registered-1.svg}
+    name: image_11
+    layout_properties: {x: 80.234375, y: 365.296875, width: 230.59375}
 - name: spacer_7
   properties: {height: 32}
   type: Spacer
@@ -257,7 +262,8 @@ components:
   type: Spacer
   layout_properties: {grid_position: 'ONFDSS,EMMEBO'}
 - name: image_21
-  properties: {height: 322.3999938964844, source: _/theme/graph.png, display_mode: original_size}
+  properties: {height: 322.3999938964844, source: _/theme/bank_users/main_form/graph.png,
+    display_mode: original_size}
   type: Image
   layout_properties: {grid_position: 'UJFNFY,RICQYA'}
 - name: spacer_18
