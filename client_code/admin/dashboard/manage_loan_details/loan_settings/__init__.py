@@ -15,6 +15,7 @@ class loan_settings(loan_settingsTemplate):
     self.init_components(**properties)
     self.current_entry_id = None
     self.current_default_entry_id = None
+    self.current_npa_entry_id = None
 
     # Display the latest loan settings when the form opens.
     self.display_latest_settings()
@@ -24,10 +25,10 @@ class loan_settings(loan_settingsTemplate):
     """This method is called when the button is clicked"""
     value1 = int(self.text_box_1.text)
     value2 = int(self.text_box_2.text)
-    value3 = int(self.text_box_3.text)
-    value4 = int(self.text_box_4.text)
-    value5 = int(self.text_box_5.text)
-    value6 = int(self.text_box_6.text)
+    default_value1 = int(self.text_box_3.text)
+    default_value2 = int(self.text_box_4.text)
+    npa_value1 = int(self.text_box_5.text)
+    npa_value2 = int(self.text_box_6.text)
 
     if self.current_entry_id:
       # Update the existing entry
@@ -47,25 +48,42 @@ class loan_settings(loan_settingsTemplate):
 
     if self.current_default_entry_id:
       # Update the existing default fee entry
-      default_entry = app_tables.fin_loan_settings.get_by_id(self.current_default_entry_id)
+      default_entry = app_tables.fin_loan_settings.get(loans='default fee')
       if default_entry:
         default_entry.update(
-          column1=default_value1,
-          column2=default_value2
+          minimum_days=default_value1,
+          maximum_days=default_value2
         )
     else:
       # Insert new default fee values into the fin_loan_settings table
       default_entry = app_tables.fin_loan_settings.add_row(
-        column1=default_value1,
-        column2=default_value2,
+        minimum_days=default_value1,
+        maximum_days=default_value2,
         loans="default fee"
       )
       self.current_default_entry_id = default_entry.get_id()
+
+    if self.current_npa_entry_id:
+      # Update the existing NPA fee entry
+      npa_entry = app_tables.fin_loan_settings.get(loans='NPA fee')
+      if npa_entry:
+        npa_entry.update(
+          minimum_days=npa_value1,
+          maximum_days=npa_value2
+        )
+    else:
+      # Insert new NPA fee values into the fin_loan_settings table
+      npa_entry = app_tables.fin_loan_settings.add_row(
+        minimum_days=npa_value1,
+        maximum_days=npa_value2,
+        loans="NPA fee"
+      )
+      self.current_npa_entry_id = npa_entry.get_id()
     # Display the latest settings and make the text boxes non-editable
     self.display_latest_settings()
 
     # Optionally, display a success message
-    alert("Loan settings saved successfully!")
+    alert("Loan dates saved successfully!")
 
 
   def display_latest_settings(self):
@@ -85,7 +103,40 @@ class loan_settings(loan_settingsTemplate):
       self.text_box_1.enabled = True
       self.text_box_2.enabled = True
 
+    default_entry = app_tables.fin_loan_settings.get(loans="default fee")
+    if default_entry:
+      self.current_default_entry_id = default_entry.get_id()
+      self.text_box_3.text = default_entry['minimum_days']
+      self.text_box_4.text = default_entry['maximum_days']
+      self.text_box_3.enabled = False
+      self.text_box_4.enabled = False
+    else:
+      self.current_default_entry_id = None
+      self.text_box_3.text = ""
+      self.text_box_4.text = ""
+      self.text_box_3.enabled = True
+      self.text_box_4.enabled = True
+
+    npa_entry = app_tables.fin_loan_settings.get(loans="NPA fee")
+    if npa_entry:
+      self.current_npa_entry_id = npa_entry.get_id()
+      self.text_box_5.text = npa_entry['minimum_days']
+      self.text_box_6.text = npa_entry['maximum_days']
+      self.text_box_5.enabled = False
+      self.text_box_6.enabled = False
+    else:
+      self.current_npa_entry_id = None
+      self.text_box_5.text = ""
+      self.text_box_6.text = ""
+      self.text_box_5.enabled = True
+      self.text_box_6.enabled = True
+
   def edit_button(self, **event_args):
     """This method is called when the button is clicked"""
     self.text_box_1.enabled = True
     self.text_box_2.enabled = True
+    self.text_box_3.enabled = True
+    self.text_box_4.enabled = True
+    self.text_box_5.enabled = True
+    self.text_box_6.enabled = True
+

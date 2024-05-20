@@ -15,3 +15,11 @@ class manage_loan_details(manage_loan_detailsTemplate):
     self.init_components(**properties)
 
     # Any code you write here will run before the form opens.
+
+  def loan_settings(self, **event_args):
+    """This method is called when the button is clicked"""
+    open_form('admin.dashboard.manage_loan_details.loan_settings')
+
+  def view_loans(self, **event_args):
+    """This method is called when the button is clicked"""
+    open_form('admin.dashboard.loan_management')
