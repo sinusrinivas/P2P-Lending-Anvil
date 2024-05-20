@@ -286,6 +286,9 @@ class part_payment(part_paymentTemplate):
         days_elapsed = self.calculate_date_difference(part_payment_date, datetime.now().date())
         print(days_elapsed)
 
+        lapsed_settings = app_tables.fin_loan_settings.get(loans="lapsed fee")
+        default_settings = app_tables.fin_loan_settings.get(loans="default fee")
+        npa_settings = app_tables.fin_loan_settings.get(loans="NPA fee")
         # Fetch necessary fee details based on loan state status and product ID
         product_id = self.loan_details['product_id']
         # loan_state_status = self.loan_details['loan_state_status']
