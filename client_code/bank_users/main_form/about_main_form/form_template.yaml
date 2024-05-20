@@ -398,11 +398,11 @@ components:
   type: Label
   layout_properties: {grid_position: 'NAHKHD,IIHDLH'}
 - name: label_20
-  properties: {text: 'Kotak has drafted detailed loan agreements where utmost care
+  properties: {text: 'Ascends has drafted detailed loan agreements where utmost care
       has been taken to cover various scenarios along with suitable recourse. This
       loan agreement is signed post payment of requisite stamp duty which is borne
-      by Kotak and hence, is legally enforceable in the court of law. In case, either
-      party seeks to enforce the agreement at any time, Kotak also helps that party
+      by Ascends and hence, is legally enforceable in the court of law. In case, either
+      party seeks to enforce the agreement at any time, Ascends also helps that party
       to seek legal opinion though at an additional cost as charged by the lawyer',
     font_size: 18}
   type: Label
@@ -431,7 +431,7 @@ components:
   type: Label
   layout_properties: {grid_position: 'LPJRZM,TCOENG DOCQAZ,NATRXF'}
 - name: label_22
-  properties: {text: 'Kotak facilitates the fund transfer from investor to the borrower
+  properties: {text: 'Ascends facilitates the fund transfer from investor to the borrower
       through Escrow accounts. For investors, it becomes a seamless process as investors
       can transfer funds to any borrower through the unique virtual account assigned
       to them', font_size: 18}
@@ -460,7 +460,7 @@ components:
   type: Label
   layout_properties: {grid_position: 'ONVAVF,KRXCWE OGUNNZ,DTBYUD'}
 - name: label_25
-  properties: {text: Borrowers can easily apply for the loan from anywhere as the entire loan application process is online and does not require the borrower to visit any branch of Kotak applying for the loan,
+  properties: {text: Borrowers can easily apply for the loan from anywhere as the entire loan application process is online and does not require the borrower to visit any branch of Ascends applying for the loan,
     font_size: 18}
   type: Label
   layout_properties: {grid_position: 'ONVAVF,KRXCWE JMFPRS,LQHQXL'}
@@ -501,7 +501,7 @@ components:
   type: Label
   layout_properties: {grid_position: 'BSUBQA,SEGFMP LGCYSH,OLCGGK'}
 - name: label_29
-  properties: {text: Approved loans are listed for investments where Kotak registered investors can show their interest. Once the loan is fully funded then Kotak completes other formalities to prior to fund transfer,
+  properties: {text: Approved loans are listed for investments where Ascends registered investors can show their interest. Once the loan is fully funded then Ascends completes other formalities to prior to fund transfer,
     font_size: 18}
   type: Label
   layout_properties: {grid_position: 'BSUBQA,SEGFMP DFDUTQ,DIJWNY'}
@@ -515,7 +515,7 @@ components:
   type: Label
   layout_properties: {grid_position: 'SDFAEE,WLRBEB'}
 - name: label_31
-  properties: {text: 'Kotak operates two separate Escrow accounts for loan disbursal
+  properties: {text: 'Ascends operates two separate Escrow accounts for loan disbursal
       and EMI repayment. Investors transfer the fund to the Disbursal escrow account
       and from there it is transferred to the borrower. Similarly, borrowers transfer
       funds to EMI repayment Escrow account and from there it is transferred to respective
@@ -605,8 +605,8 @@ components:
       components:
       - type: Label
         properties: {role: null, align: left, tooltip: '', border: '', foreground: white,
-          visible: true, text: '© 2023 - 2024, GTPL - All Rights    Reserved', font_size: null,
-          font: '', spacing_above: small, icon_align: left, spacing_below: small,
+          visible: true, text: '© 2023 - 2024, Ascends - All Rights    Reserved',
+          font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small,
           italic: false, background: '#05264d', bold: true, underline: false, icon: ''}
         name: label_4
         layout_properties: {}
