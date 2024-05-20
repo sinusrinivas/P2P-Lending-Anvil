@@ -81,7 +81,8 @@ components:
   type: Spacer
   layout_properties: {grid_position: 'TVWKGU,UKHPJA'}
 - name: image_1
-  properties: {height: 136.44442749023438, source: _/theme/aboutus-icon1.png, display_mode: original_size}
+  properties: {height: 136.44442749023438, source: _/theme/bank_users/main_form/about_us/aboutus-icon1.png,
+    display_mode: original_size}
   type: Image
   layout_properties: {grid_position: 'QOSPLX,DPDILZ YAYFAC,RVZBEW'}
 - name: spacer_3
@@ -98,7 +99,8 @@ components:
   type: Spacer
   layout_properties: {grid_position: 'QOSPLX,DPDILZ ENFAOE,VMXTVO'}
 - name: image_2
-  properties: {height: 141.88888549804688, source: _/theme/aboutus-icon2.png, display_mode: original_size}
+  properties: {height: 141.88888549804688, source: _/theme/bank_users/main_form/about_us/aboutus-icon2.png,
+    display_mode: original_size}
   type: Image
   layout_properties: {grid_position: 'QOSPLX,FFNWMN SRCSHA,GHMSJV'}
 - name: label_6
@@ -122,8 +124,8 @@ components:
   type: Spacer
   layout_properties: {grid_position: ',undefined BJMYSW,DVVHGW'}
 - name: image_3
-  properties: {source: _/theme/p2p (2).png, display_mode: shrink_to_fit, height: 357.39996337890625,
-    background: ''}
+  properties: {source: _/theme/bank_users/main_form/about_us/about_ascends.png, display_mode: shrink_to_fit,
+    height: 357.39996337890625, background: ''}
   type: Image
   layout_properties: {grid_position: ',undefined TKSFBE,XSHAZS'}
 - name: label_8
@@ -161,8 +163,8 @@ components:
   type: Spacer
   layout_properties: {grid_position: 'TAVMSK,EANJPG'}
 - name: image_10
-  properties: {source: _/theme/integrity.svg, display_mode: original_size, height: 76.39993286132812,
-    horizontal_align: center}
+  properties: {source: _/theme/bank_users/main_form/about_us/integrity.svg, display_mode: original_size,
+    height: 76.39993286132812, horizontal_align: center}
   type: Image
   layout_properties: {grid_position: 'OHDPIG,BNCBLN IQLWEP,HXRYEW'}
 - name: label_42
@@ -177,8 +179,8 @@ components:
   type: Label
   layout_properties: {grid_position: 'OHDPIG,BNCBLN HTDYOS,WYCOKI'}
 - name: image_11
-  properties: {source: _/theme/innovation.svg, height: 74.79998779296875, horizontal_align: center,
-    display_mode: original_size}
+  properties: {source: _/theme/bank_users/main_form/about_us/innovation.svg, height: 74.79998779296875,
+    horizontal_align: center, display_mode: original_size}
   type: Image
   layout_properties: {grid_position: 'OHDPIG,MNVHCC FUBTDG,SHTCGR'}
 - name: label_43
@@ -193,8 +195,8 @@ components:
   type: Label
   layout_properties: {grid_position: 'OHDPIG,MNVHCC KKJVNC,FLPIWV'}
 - name: image_12
-  properties: {height: 72.79998779296875, source: _/theme/comunity.svg, horizontal_align: center,
-    display_mode: original_size}
+  properties: {height: 72.79998779296875, source: _/theme/bank_users/main_form/comunity.svg,
+    horizontal_align: center, display_mode: original_size}
   type: Image
   layout_properties: {grid_position: 'OHDPIG,RCTUPN VWURYO,QEUVMI'}
 - name: label_44
@@ -245,7 +247,8 @@ components:
   type: Spacer
   layout_properties: {grid_position: 'GRAQBC,ELUPGK'}
 - name: image_5
-  properties: {source: _/theme/2nd.png, display_mode: shrink_to_fit, height: 134.4444580078125}
+  properties: {source: _/theme/bank_users/main_form/about_us/au-borrowers-lenders.png,
+    display_mode: shrink_to_fit, height: 134.4444580078125}
   type: Image
   layout_properties: {grid_position: 'LAZYRH,BZINVD VWNKCJ,LJAKBL'}
 - name: label_37
@@ -253,12 +256,12 @@ components:
   type: Label
   layout_properties: {grid_position: 'LAZYRH,BZINVD BHMOVA,QUAMIR'}
 - name: image_6
-  properties: {source: _/theme/icons8-sorting-arrows-100.png, display_mode: shrink_to_fit,
-    height: 132.66668701171875}
+  properties: {source: _/theme/bank_users/main_form/about_us/icons8-sorting-arrows-100.png,
+    display_mode: shrink_to_fit, height: 132.66668701171875}
   type: Image
   layout_properties: {grid_position: 'LAZYRH,HKZYDC'}
 - name: image_7
-  properties: {source: _/theme/icons8-laptop-100 (1).png, display_mode: shrink_to_fit,
+  properties: {source: _/theme/bank_users/main_form/laptop_icon.png, display_mode: shrink_to_fit,
     height: 134.5555419921875}
   type: Image
   layout_properties: {grid_position: 'LAZYRH,EKJKUU WUWVYB,CYQCZU'}
@@ -267,12 +270,13 @@ components:
   type: Label
   layout_properties: {grid_position: 'LAZYRH,EKJKUU CBLPRW,BTKLIE'}
 - name: image_8
-  properties: {source: _/theme/icons8-sorting-arrows-100.png, display_mode: shrink_to_fit,
-    height: 135.22222900390625}
+  properties: {source: _/theme/bank_users/main_form/about_us/icons8-sorting-arrows-100.png,
+    display_mode: shrink_to_fit, height: 135.22222900390625}
   type: Image
   layout_properties: {grid_position: 'LAZYRH,MCZALC'}
 - name: image_9
-  properties: {source: _/theme/2nd.png, display_mode: shrink_to_fit, height: 133.88885498046875}
+  properties: {source: _/theme/bank_users/main_form/about_us/au-borrowers-lenders.png,
+    display_mode: shrink_to_fit, height: 133.88885498046875}
   type: Image
   layout_properties: {grid_position: 'LAZYRH,JIANGF CIFCKW,CCCXMU'}
 - name: label_35
@@ -324,8 +328,8 @@ components:
   type: Spacer
   layout_properties: {grid_position: 'OEGLXS,VTZQBG VXWRFU,THVHQM'}
 - name: image_4
-  properties: {source: _/theme/first.png, display_mode: shrink_to_fit, height: 160.33334350585938,
-    horizontal_align: center}
+  properties: {source: _/theme/bank_users/personal_loan/first.png, display_mode: shrink_to_fit,
+    height: 160.33334350585938, horizontal_align: center}
   type: Image
   layout_properties: {grid_position: 'OEGLXS,VTZQBG YJWRXB,HMKBBW'}
 - name: label_12
@@ -358,8 +362,8 @@ components:
   type: Label
   layout_properties: {grid_position: 'VISWWS,DIRGNU'}
 - name: image_4_copy
-  properties: {source: _/theme/second.png, display_mode: shrink_to_fit, height: 148.77777099609375,
-    horizontal_align: center}
+  properties: {source: _/theme/bank_users/main_form/about_us/credit-risk-assesment.png,
+    display_mode: shrink_to_fit, height: 148.77777099609375, horizontal_align: center}
   type: Image
   layout_properties: {grid_position: 'VISWWS,XWFLXI'}
 - name: label_14_copy
@@ -372,8 +376,8 @@ components:
   type: Spacer
   layout_properties: {grid_position: 'LVZTKO,QLSKDA RZXBFT,VMGUCB'}
 - name: image_4_copy_copy
-  properties: {source: _/theme/third.png, display_mode: shrink_to_fit, height: 148.77777099609375,
-    horizontal_align: center}
+  properties: {source: _/theme/bank_users/main_form/about_us/risk_adjusted_returns.png,
+    display_mode: shrink_to_fit, height: 148.77777099609375, horizontal_align: center}
   type: Image
   layout_properties: {grid_position: 'LVZTKO,QLSKDA DGAAUN,EROPUQ'}
 - name: label_17
@@ -408,8 +412,8 @@ components:
   type: Label
   layout_properties: {grid_position: 'ONUUJG,CWPKWV'}
 - name: image_4_copy_copy_copy
-  properties: {source: _/theme/4th.png, display_mode: shrink_to_fit, height: 148.77777099609375,
-    horizontal_align: center}
+  properties: {source: _/theme/bank_users/main_form/about_us/aggrement-contracts.png,
+    display_mode: shrink_to_fit, height: 148.77777099609375, horizontal_align: center}
   type: Image
   layout_properties: {grid_position: 'ONUUJG,MNUGRA'}
 - name: label_14_copy_copy_copy
@@ -422,7 +426,7 @@ components:
   type: Spacer
   layout_properties: {grid_position: 'LPJRZM,SEEDDJ KVSEYX,HRUIQE'}
 - name: image_4_copy_copy_copy_copy
-  properties: {source: _/theme/Screenshot (129).png, display_mode: shrink_to_fit,
+  properties: {source: _/theme/bank_users/main_form/about_us/fund-transfer.png, display_mode: shrink_to_fit,
     height: 148.77777099609375, horizontal_align: center}
   type: Image
   layout_properties: {grid_position: 'LPJRZM,SEEDDJ'}
@@ -451,8 +455,8 @@ components:
   type: Spacer
   layout_properties: {grid_position: 'UHFRVD,MQCDIK'}
 - name: image_4_copy_2
-  properties: {source: _/theme/first.png, display_mode: shrink_to_fit, height: 160.33334350585938,
-    horizontal_align: center}
+  properties: {source: _/theme/bank_users/personal_loan/first.png, display_mode: shrink_to_fit,
+    height: 160.33334350585938, horizontal_align: center}
   type: Image
   layout_properties: {grid_position: 'ONVAVF,OXCRMD'}
 - name: label_24
@@ -482,8 +486,8 @@ components:
   type: Label
   layout_properties: {grid_position: 'SEEQPC,XPMLRH'}
 - name: image_4_copy_copy_2
-  properties: {source: _/theme/second.png, display_mode: shrink_to_fit, height: 148.77777099609375,
-    horizontal_align: center}
+  properties: {source: _/theme/bank_users/main_form/about_us/credit-risk-assesment.png,
+    display_mode: shrink_to_fit, height: 148.77777099609375, horizontal_align: center}
   type: Image
   layout_properties: {grid_position: 'SEEQPC,UNDVYZ'}
 - name: label_14_copy_copy_copy_2_copy
@@ -492,8 +496,8 @@ components:
   type: Label
   layout_properties: {grid_position: 'FYFVDD,SGRARQ'}
 - name: image_4_copy_copy_copy_2
-  properties: {source: _/theme/third.png, display_mode: shrink_to_fit, height: 148.77777099609375,
-    horizontal_align: center}
+  properties: {source: _/theme/bank_users/main_form/about_us/risk_adjusted_returns.png,
+    display_mode: shrink_to_fit, height: 148.77777099609375, horizontal_align: center}
   type: Image
   layout_properties: {grid_position: 'BSUBQA,YBYIUP'}
 - name: label_28
@@ -524,8 +528,8 @@ components:
   type: Label
   layout_properties: {grid_position: 'CZBCNW,NDEQDJ'}
 - name: image_4_copy_copy_copy_2_copy
-  properties: {source: _/theme/last.png, display_mode: shrink_to_fit, height: 148.77777099609375,
-    horizontal_align: center}
+  properties: {source: _/theme/bank_users/main_form/about_us/disbursal-repayment.png,
+    display_mode: shrink_to_fit, height: 148.77777099609375, horizontal_align: center}
   type: Image
   layout_properties: {grid_position: 'CZBCNW,NPYZII'}
 - name: spacer_11

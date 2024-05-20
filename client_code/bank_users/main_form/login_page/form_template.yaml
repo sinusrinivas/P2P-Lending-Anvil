@@ -91,8 +91,8 @@ components:
       type: Label
       layout_properties: {grid_position: 'LOUJDS,RTKSOW DTKDRV,TRBCQS'}
     - name: image_1
-      properties: {source: _/theme/image_2022_12_12T06_58_30_890Z.webp, display_mode: zoom_to_fill,
-        height: 347.99993896484375}
+      properties: {source: _/theme/bank_users/main_form/login_page/login-image.webp,
+        display_mode: shrink_to_fit, height: 347.99993896484375}
       type: Image
       layout_properties: {grid_position: 'LOUJDS,RTKSOW IYLGEA,XVBVAK'}
   - name: column_panel_1

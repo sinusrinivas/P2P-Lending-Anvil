@@ -989,8 +989,8 @@ components:
   type: Image
   layout_properties: {grid_position: 'UUAAMD,EPLFYI'}
 - name: image_1_copy
-  properties: {height: 291, source: _/theme/Screenshot 2024-02-19 152705.png, display_mode: shrink_to_fit,
-    background: 'theme:On Primary'}
+  properties: {height: 291, source: _/theme/bank_users/main_form/hear%20from%20our%20investors%203.png,
+    display_mode: shrink_to_fit, background: 'theme:On Primary'}
   type: Image
   layout_properties: {grid_position: 'UUAAMD,XEMJBS'}
 - type: Spacer
