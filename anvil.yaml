@@ -1213,7 +1213,7 @@ db_schema:
       admin_ui: {width: 200, order: 3.5}
       type: number
   fin_loan_settings:
-    client: none
+    client: full
     server: full
     columns:
     - name: loans

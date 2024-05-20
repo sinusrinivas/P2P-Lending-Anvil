@@ -14,6 +14,7 @@ class loan_settings(loan_settingsTemplate):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
     self.current_entry_id = None
+    self.current_default_entry_id = None
 
     # Display the latest loan settings when the form opens.
     self.display_latest_settings()
@@ -21,12 +22,16 @@ class loan_settings(loan_settingsTemplate):
 
   def save_button(self, **event_args):
     """This method is called when the button is clicked"""
-    value1 = self.text_box_1.text
-    value2 = self.text_box_2.text
+    value1 = int(self.text_box_1.text)
+    value2 = int(self.text_box_2.text)
+    value3 = int(self.text_box_3.text)
+    value4 = int(self.text_box_4.text)
+    value5 = int(self.text_box_5.text)
+    value6 = int(self.text_box_6.text)
 
     if self.current_entry_id:
       # Update the existing entry
-      entry = app_tables.fin_loan_settings.get(self.current_entry_id)
+      entry = app_tables.fin_loan_settings.get(loans='lapsed fee')
       entry.update(
         minimum_days=value1,
         maximum_days=value2
@@ -40,6 +45,22 @@ class loan_settings(loan_settingsTemplate):
       )
       self.current_entry_id = entry.get_id()
 
+    if self.current_default_entry_id:
+      # Update the existing default fee entry
+      default_entry = app_tables.fin_loan_settings.get_by_id(self.current_default_entry_id)
+      if default_entry:
+        default_entry.update(
+          column1=default_value1,
+          column2=default_value2
+        )
+    else:
+      # Insert new default fee values into the fin_loan_settings table
+      default_entry = app_tables.fin_loan_settings.add_row(
+        column1=default_value1,
+        column2=default_value2,
+        loans="default fee"
+      )
+      self.current_default_entry_id = default_entry.get_id()
     # Display the latest settings and make the text boxes non-editable
     self.display_latest_settings()
 
