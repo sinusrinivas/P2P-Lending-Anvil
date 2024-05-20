@@ -764,7 +764,8 @@ components:
     type: Label
     layout_properties: {grid_position: 'FKQDTP,UCIDRK VYARJR,GSNOHL'}
   - name: image_14
-    properties: {source: '', display_mode: shrink_to_fit, height: 151.25}
+    properties: {source: _/theme/bank_users/main_form/icons8-coins-100.png, display_mode: shrink_to_fit,
+      height: 151.25}
     type: Image
     layout_properties: {grid_position: 'FKQDTP,MRHEGW BUBSBU,GLHKQX'}
   - name: spacer_40
@@ -830,7 +831,8 @@ components:
       type: Label
       layout_properties: {grid_position: ''}
     - name: image_16
-      properties: {source: _/theme/icons8-business-goal-100.png, height: 251.66668701171875}
+      properties: {source: _/theme/bank_users/main_form/icons8-business-goal.png,
+        height: 251.66668701171875}
       type: Image
       layout_properties: {grid_position: ',SRATKM'}
   - name: spacer_23
@@ -1030,7 +1032,8 @@ components:
     type: Spacer
     layout_properties: {grid_position: 'PRWFNB,ACRXGK'}
   - name: image_17
-    properties: {source: _/theme/p1.png, display_mode: original_size}
+    properties: {source: _/theme/bank_users/main_form/vehicle_loan/application_process1.png,
+      display_mode: original_size}
     type: Image
     layout_properties: {grid_position: 'CVZSYU,DXHHWT'}
   - name: label_86
@@ -1052,7 +1055,8 @@ components:
     type: Label
     layout_properties: {grid_position: 'EBXYJX,LGQWVE'}
   - name: image_18
-    properties: {source: _/theme/p2.png, display_mode: original_size}
+    properties: {source: _/theme/bank_users/main_form/vehicle_loan/application_process2.png,
+      display_mode: original_size}
     type: Image
     layout_properties: {grid_position: 'PUCGVT,JQQCEI'}
   - name: label_89
@@ -1079,7 +1083,8 @@ components:
     type: Spacer
     layout_properties: {grid_position: 'DVJQWN,EHUUCF VXKCON,EOQUKF'}
   - name: image_19
-    properties: {source: _/theme/p3.png, display_mode: original_size}
+    properties: {source: _/theme/bank_users/main_form/vehicle_loan/application_process3.png,
+      display_mode: original_size}
     type: Image
     layout_properties: {grid_position: 'DVJQWN,EHUUCF'}
   - name: label_92
@@ -1104,7 +1109,8 @@ components:
     type: Label
     layout_properties: {grid_position: 'KKSXVF,GQRWRA'}
   - name: image_20
-    properties: {source: _/theme/p4.png, display_mode: original_size}
+    properties: {source: _/theme/bank_users/main_form/vehicle_loan/application_process4.png,
+      display_mode: original_size}
     type: Image
     layout_properties: {grid_position: 'VTCDAX,GRGKMI'}
   - name: label_95
@@ -1127,7 +1133,8 @@ components:
     type: Label
     layout_properties: {grid_position: 'HFEPJS,SHVLUA'}
   - name: image_21
-    properties: {source: _/theme/p5.png, display_mode: original_size}
+    properties: {source: _/theme/bank_users/main_form/vehicle_loan/application_process5.png,
+      display_mode: original_size}
     type: Image
     layout_properties: {grid_position: 'MTJIPB,MTEPWA'}
   - name: label_98
@@ -1152,7 +1159,8 @@ components:
     type: Spacer
     layout_properties: {grid_position: 'ADIDAA,NHLPOA ZKKJUX,KZFVRI'}
   - name: image_22
-    properties: {source: _/theme/p6.png, display_mode: original_size}
+    properties: {source: _/theme/bank_users/main_form/vehicle_loan/application_process6.png,
+      display_mode: original_size}
     type: Image
     layout_properties: {grid_position: 'ADIDAA,NHLPOA ASPLDB,TPHDYA'}
   - name: label_101
@@ -1183,7 +1191,8 @@ components:
     type: Spacer
     layout_properties: {grid_position: 'YCZGWL,PVJYOC OPVHVJ,RFOBBK'}
   - name: image_23
-    properties: {source: _/theme/p7.png, display_mode: original_size}
+    properties: {source: _/theme/bank_users/main_form/vehicle_loan/application_process7.png,
+      display_mode: original_size}
     type: Image
     layout_properties: {grid_position: 'YCZGWL,PVJYOC HKHKEP,EVIYRQ'}
   - name: label_104

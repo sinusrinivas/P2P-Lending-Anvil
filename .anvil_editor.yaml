@@ -463,7 +463,6 @@ unique_ids:
     bank_users/main_form/business_loan/free-payment-repayment.png: '1712311688880535906169424.0588'
     3.png: '1712901578340952902869702.2155'
     bank_users/personal_loan/marriage_loan/ml1.jpg: '1713339793595336329288038.8786'
-    bank_users/main_form/business_loan/borrow-apply-icon5.png: '1712311530923806331025157.7153'
     menu.png: '1715227866202786040189997.6686'
     disbursed-removebg-preview.png: '1712917485354106325976061.06554'
     self-employed.png: '1715169568885280131439628.496'
@@ -486,7 +485,6 @@ unique_ids:
     group.png: '1714723659402745578609087.7406'
     lapsed loan.png: '1714740066133373200477503.87354'
     money lenders.png: '171274530655679078680187.06288'
-    bank_users/main_form/business_loan/business loan1.jpg: '171315886734383074444704.66917'
     bank_users/main_form/about_us/innovation.svg: '1712231914240955344600747.8785'
     credit-card.png: '1715230482955311162026176.09125'
     bank_users/main_form/about_us/aggrement-contracts.png: '1712210627946499521288713.12354'
@@ -551,6 +549,7 @@ unique_ids:
     under process loan2.png: KOZJJVLCHEYSSXQVTJLPWUKKORRXZBRB
     bank_users/main_form/business_loan/loan-duration-icon.png: '1712294742598191351127754.13022'
     product manage.png: WTLIJKD5BY64DQ2AIWYSJ3RF66IWG2IP
+    bank_users/main_form/business_loan/fast_disbursal.png: '1712311530923806331025157.7153'
     coupon.png: '1715600070812673525850752.805'
     foreclosure.png: '1715598873196631404926610.9268'
     bank_users/personal_loan/home_renovation_loan/home loan 4.png: '1713938943738803837298821.44'
@@ -568,6 +567,7 @@ unique_ids:
     people.png: SSRQM5PLH2HGL3MUVBEEHTTITT5JHA7H
     Screenshot 2023-11-26 225256.png: '1701019678831231799094647.61584'
     bank_users/main_form/stats-rupee_bean.58bc41f.png: '1711696413415791942659053.2217'
+    bank_users/main_form/business_loan/business-loan-pic.jpg: '171315886734383074444704.66917'
     bank_users/main_form/choose your product.png: '1711704465672660384570250.994'
     manage product.png: '1714722808794229054953703.57376'
     bank_users/personal_loan/education_loan/el4.png: '1714043516829653233481539.4509'

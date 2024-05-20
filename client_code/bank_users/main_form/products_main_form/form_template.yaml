@@ -28,7 +28,7 @@ components:
     layout_properties: {grid_position: 'LSOMZO,CQXTFU HJKVPC,LSSOKG'}
     event_bindings: {click: button_3_click}
   - name: image_2
-    properties: {source: _/theme/bank_users/main_form/business_loan/business%20loan1.jpg,
+    properties: {source: _/theme/bank_users/main_form/business_loan/business-loan-pic.jpg,
       display_mode: shrink_to_fit, height: 198.77777099609375}
     type: Image
     layout_properties: {grid_position: 'LSOMZO,NAXNQD IZNXEK,HKNPYR'}

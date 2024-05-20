@@ -429,8 +429,8 @@ components:
       type: Label
       layout_properties: {grid_position: 'ISVYFH,JOUREZ BWOFAD,YWPXQF'}
     - name: image_8
-      properties: {source: _/theme/borrow-apply-icon5.png, display_mode: shrink_to_fit,
-        horizontal_align: left, height: '80'}
+      properties: {source: _/theme/bank_users/main_form/business_loan/fast_disbursal.png,
+        display_mode: shrink_to_fit, horizontal_align: left, height: '80'}
       type: Image
       layout_properties: {grid_position: 'XQMMMY,QNBESR TFRCXQ,XOAIHX'}
     - name: spacer_19
@@ -483,8 +483,8 @@ components:
       type: Label
       layout_properties: {grid_position: 'XQMMMY,HFTTOG DVEVJP,LOVFKC'}
     - name: image_9
-      properties: {source: _/theme/borrowimg6.png, display_mode: shrink_to_fit, horizontal_align: left,
-        height: '80'}
+      properties: {source: _/theme/bank_users/main_form/business_loan/free-payment-repayment.png,
+        display_mode: shrink_to_fit, horizontal_align: left, height: '80'}
       type: Image
       layout_properties: {grid_position: 'KCHXXB,SMBLNO HGWNUG,CIEDTR'}
     - name: spacer_18
@@ -538,8 +538,8 @@ components:
       type: Label
       layout_properties: {grid_position: 'KCHXXB,MSBQFS BJPHQV,JZPHWY'}
     - name: image_10
-      properties: {source: _/theme/borrow-money-online-icon13.png, display_mode: shrink_to_fit,
-        horizontal_align: left, height: '80'}
+      properties: {source: _/theme/bank_users/main_form/business_loan/secure-transperent.png,
+        display_mode: shrink_to_fit, horizontal_align: left, height: '80'}
       type: Image
       layout_properties: {grid_position: 'JGUDEZ,ZZLXJK'}
     - name: label_33
