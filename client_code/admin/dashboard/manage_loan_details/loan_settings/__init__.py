@@ -20,6 +20,20 @@ class loan_settings(loan_settingsTemplate):
     # Display the latest loan settings when the form opens.
     self.display_latest_settings()
     # Any code you write here will run before the form opens.
+    self.text_box_2.set_event_handler('change', self.update_text_box_3)
+    self.text_box_4.set_event_handler('change', self.update_text_box_5)
+
+  def update_text_box_3(self, **event_args):
+        value = self.text_box_2.text
+        if value:
+            next_value = int(value) + 1
+            self.text_box_3.text = str(next_value)
+
+  def update_text_box_5(self, **event_args):
+        value = self.text_box_4.text
+        if value:
+            next_value = int(value) + 1
+            self.text_box_5.text = str(next_value)
 
   def save_button(self, **event_args):
     """This method is called when the button is clicked"""
