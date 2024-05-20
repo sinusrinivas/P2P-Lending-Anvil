@@ -264,78 +264,79 @@ components:
   properties: {height: 32}
   type: Spacer
   layout_properties: {grid_position: 'IDRRFC,FHRNWS'}
-- name: xy_panel_9
-  properties: {height: 575.6000061035156, background: '#Edf0f4'}
-  type: XYPanel
-  layout_properties: {grid_position: 'DUCRGR,KKDHDR', full_width_row: true}
+- name: content_panel_copy_copy_3_copy_3_copy_copy_copy_2_copy
+  properties: {col_widths: '{}', background: '#Edf0f4', role: elevated-card}
+  type: ColumnPanel
+  layout_properties: {grid_position: 'HOQKAX,ILOJZL', full_width_row: true}
   components:
   - name: label_38
-    properties: {text: Get started today, align: center, bold: true, font_size: 30}
+    properties: {text: Get started today, align: center, bold: true, font_size: 30,
+      background: ''}
     type: Label
-    layout_properties: {grid_position: 'VFQQUF,RWHPEN', x: 68, y: 10, width: 1351.1566259765625}
-  - name: xy_panel_8_copy
-    properties: {height: 295}
-    type: XYPanel
-    layout_properties: {x: 986.8750406913459, y: 125.34722900390625, width: 350}
+    layout_properties: {grid_position: 'FOMTSX,EOGALV', full_width_row: true}
+  - name: content_panel_copy_copy_3_copy_3_copy_copy_copy_2_copy_copy
+    properties: {col_widths: '{}', background: white, role: elevated-card}
+    type: ColumnPanel
+    layout_properties: {grid_position: 'DYBEYE,DWXCGB'}
     components:
-    - name: image_20_copy
-      properties: {height: 113, source: _/theme/money-bag-hand_bean.2c2a2a6.png, display_mode: original_size}
-      type: Image
-      layout_properties: {x: 10, y: 16.3375244140625, width: 329.948}
-    - name: label_34_copy
-      properties: {text: Get monthly repayments, font_size: 21, bold: true, align: center}
-      type: Label
-      layout_properties: {x: 10, y: 94.3375244140625, width: 329.94799999999987}
-    - name: label_36_copy
-      properties: {underline: false, font_size: 18, text: Receive monthly returns from the borrower and start growing your wealth. You also have the option to reinvest your earnings.,
-        align: center}
-      type: Label
-      layout_properties: {x: 10, y: 140.3375244140625, width: 329.9533740234375}
-  - name: xy_panel_6_copy
-    properties: {height: 290.3999938964844}
-    type: XYPanel
-    layout_properties: {x: 75.79165522381663, y: 127.15280151367188, width: 318.8333435058594}
-    components:
-    - name: image_18_copy
-      properties: {height: 71.60000610351562, source: _/theme/register.png, display_mode: original_size}
-      type: Image
-      layout_properties: {x: 10, y: 16.3375244140625, width: 294.167}
     - name: label_32_copy
       properties: {text: Register, font_size: 20, bold: true, align: center}
       type: Label
-      layout_properties: {x: 10, y: 93.3375244140625, width: 294.167}
+      layout_properties: {grid_position: 'ITODMF,AUYRBN'}
     - name: label_35_copy
       properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
         visible: true, text: Register as a lender by providing basic KYC information.,
         font_size: 18, font: '', spacing_above: small, icon_align: left, spacing_below: small,
         italic: false, background: '', bold: false, underline: false, icon: ''}
       type: Label
-      layout_properties: {x: 10, y: 139.3375244140625, width: 294.167}
-  - name: xy_panel_7_copy
-    properties: {height: 293.1999816894531}
-    type: XYPanel
-    layout_properties: {x: 533.5278727225959, y: 124.34722900390625, width: 350}
+      layout_properties: {grid_position: 'NVRULS,IHZRBD'}
+    - name: spacer_1
+      properties: {height: '46.5'}
+      type: Spacer
+      layout_properties: {grid_position: 'JDHXTU,FLLSDK'}
+  - name: content_panel_copy_copy_3_copy_3_copy_copy_copy_2_copy_copy_3
+    properties: {col_widths: '{}', background: white, role: elevated-card}
+    type: ColumnPanel
+    layout_properties: {grid_position: 'DYBEYE,BAEGYX HAXBKF,WVREIF'}
     components:
-    - name: image_19_copy
-      properties: {height: 116, source: _/theme/profile-cards_bean.6b9a100.png, display_mode: original_size}
-      type: Image
-      layout_properties: {x: 10, y: 15.3375244140625, width: 329.935}
     - name: label_33_copy
       properties: {text: Choose your products, bold: true, font_size: 20, align: center}
       type: Label
-      layout_properties: {x: 18.662506103515625, y: 95.3375244140625, width: 286.1403740234375}
+      layout_properties: {grid_position: 'MTPYOJ,LDBIXN'}
     - name: label_37_copy
       properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
         visible: true, text: Invest across variety of products and build a diversified portfolio and better returns at lower risk.,
         font_size: 18, font: '', spacing_above: small, icon_align: left, spacing_below: small,
         italic: false, background: '', bold: false, underline: false, icon: ''}
       type: Label
-      layout_properties: {x: 13.362518310546875, y: 141.3375244140625, width: 319.562}
+      layout_properties: {grid_position: 'NXACHM,SZWZBJ'}
+    - name: spacer_3
+      properties: {height: '21.5'}
+      type: Spacer
+      layout_properties: {grid_position: 'FWGDQR,FHRCFZ'}
+  - name: spacer_14
+    properties: {height: 32}
+    type: Spacer
+    layout_properties: {grid_position: 'DYBEYE,BAEGYX ZQKKJA,IIIOEP'}
+  - name: content_panel_copy_copy_3_copy_3_copy_copy_copy_2_copy_copy_2
+    properties: {col_widths: '{}', background: white, role: elevated-card}
+    type: ColumnPanel
+    layout_properties: {grid_position: 'DYBEYE,NZXWWU'}
+    components:
+    - name: label_34_copy
+      properties: {text: Get monthly repayments, font_size: 21, bold: true, align: center}
+      type: Label
+      layout_properties: {grid_position: 'UKNKNW,LQVFUU'}
+    - name: label_36_copy
+      properties: {underline: false, font_size: 18, text: Receive monthly returns from the borrower and start growing your wealth. You also have the option to reinvest your earnings.,
+        align: center}
+      type: Label
+      layout_properties: {grid_position: 'BCZZKB,LNEBCE'}
   - name: button_5
-    properties: {text: Register Now, align: full, bold: true, role: filled-button,
+    properties: {text: Register Now, align: center, bold: true, role: filled-button,
       background: '#013065', font_size: 16}
     type: Button
-    layout_properties: {x: 633.5694990158081, y: 532.7500076293945, width: 200}
+    layout_properties: {grid_position: 'LERMRW,IMTSKY'}
     event_bindings: {click: button_5_click}
 - name: spacer_19
   properties: {height: 32}
