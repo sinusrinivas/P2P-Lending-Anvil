@@ -14,13 +14,14 @@ components:
     layout_properties: {grid_position: 'BOKEGP,SIKHLN', full_width_row: true}
     components:
     - name: image_1
-      properties: {source: _/theme/invest now.jpg, display_mode: shrink_to_fit, height: '350'}
+      properties: {source: _/theme/bank_users/main_form/investnow-applyforloan/invest%20now.jpg,
+        display_mode: shrink_to_fit, height: '350'}
       type: Image
       layout_properties: {grid_position: 'NWKRKV,XYOUNL LIQKKP,IAADSA'}
       event_bindings: {mouse_up: image_1_mouse_up}
     - name: button_1
-      properties: {text: Invest Now, bold: true, font_size: 18, role: outlined-button,
-        background: '#013065', foreground: white}
+      properties: {text: Invest Now, bold: true, font_size: 16, role: outlined-button,
+        background: '#013065', foreground: white, align: full}
       type: Button
       layout_properties: {grid_position: 'NWKRKV,XYOUNL SMPHQP,XVXQNS'}
       event_bindings: {click: button_1_click}
@@ -29,8 +30,8 @@ components:
       type: Spacer
       layout_properties: {grid_position: 'NWKRKV,XUBCMZ HBDWTE,ZFJHXH'}
     - name: image_2
-      properties: {source: _/theme/apply for loan.jpg, display_mode: shrink_to_fit,
-        height: '300'}
+      properties: {source: _/theme/bank_users/main_form/investnow-applyforloan/apply%20for%20loan.jpg,
+        display_mode: shrink_to_fit, height: '300'}
       type: Image
       layout_properties: {grid_position: 'NWKRKV,XUBCMZ UUTJMS,LWCAPY'}
       event_bindings: {mouse_up: image_2_mouse_up}
@@ -39,8 +40,8 @@ components:
       type: Spacer
       layout_properties: {grid_position: 'NWKRKV,XUBCMZ RBVMHR,HPYNTH'}
     - name: button_2
-      properties: {text: Apply for Loan, bold: true, font_size: 18, role: outlined-button,
-        background: '#013065', foreground: white}
+      properties: {text: Apply for Loan, bold: true, font_size: 16, role: outlined-button,
+        background: '#013065', foreground: white, align: full}
       type: Button
       layout_properties: {grid_position: 'NWKRKV,XUBCMZ MMFZYL,OANXEA'}
       event_bindings: {click: button_2_click}
