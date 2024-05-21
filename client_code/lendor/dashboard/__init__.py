@@ -211,8 +211,8 @@ class dashboard(dashboardTemplate):
 
     def button_1_copy_click(self, **event_args):
         
-        self.data_grid_new_loan_request.visible = True
-        self.repeating_panel_1.visible = True
+        self.data_grid_1.visible = True
+        self.repeating_panel_2.visible = True
         self.load_data('under process')
 
     def button_2_copy_click(self, **event_args):

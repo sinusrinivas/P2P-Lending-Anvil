@@ -83,6 +83,7 @@ unique_ids:
     admin.dashboard.manage_cms.add_general_dropdowns.ItemTemplate67: '1710398612422247001502472.58334'
     borrower.dashboard.application_tracker.RowTemplate1: '1698928474442141604886683.00064'
     admin.dashboard: '1699523403306752264878574.3744'
+    lendor.dashboard.RowTemplate30: '1716268894345241938027492.90372'
     lendor.dashboard.change_password: '1699967346365452645084641.901'
     admin.dashboard.manage_loan_details.loan_management.lapsed_loans.view_profile_8: '1707112019942105707469109.15863'
     admin.dashboard.manage_cms.add_lender_dropdown_details.edit_no_of_emp: '1706531881285776983025492.1349'
