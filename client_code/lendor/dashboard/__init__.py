@@ -82,10 +82,11 @@ class dashboard(dashboardTemplate):
                     'tenure': loan['tenure'],
                     'borrower_full_name': loan['borrower_full_name'],
                     'loan_id': loan['loan_id'],
-                    'bessem_value': user_profile['bessem_value'],
+                    'bessem_score': user_profile['bessem_value'],
                     'loan_updated_status': loan['loan_updated_status'],
                     'interest_rate': loan['interest_rate'],
-                    'borrower_loan_created_timestamp': loan['borrower_loan_created_timestamp']})
+                    'borrower_loan_created_timestamp': loan['borrower_loan_created_timestamp'],
+                    'borrower_customer_id': loan['borrower_customer_id']})
         return profiles_with_loans
 
     def toggle_components_visibility(self):      
