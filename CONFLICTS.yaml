@@ -1,0 +1,12 @@
+merge:
+  parents: [fc55a2ed30e550b82984ea0fea630ea8cfdfc6b1, 54bea864614f879cbd8d560245dc323336e20320]
+  base: 57fa0e3360f8c3d0e949d2e1a346aa431b881c5a
+conflicting_items:
+- text_chunks:
+  - start: 226
+    alternatives:
+    - {s: A, l: 226, n: 1}
+    - {s: B, l: 227, n: 1}
+  components: []
+  item: [client_code, lendor.dashboard.today_dues.View_Details]
+  app_path: [CODE, forms/lendor.dashboard.today_dues.View_Details]

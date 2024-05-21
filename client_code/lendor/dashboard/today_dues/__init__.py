@@ -41,7 +41,7 @@ class today_dues(today_duesTemplate):
                 all_loans.sort(key=lambda x: x['next_payment'], reverse=True)
                 latest_loan = all_loans[0]
                 loan_detail = app_tables.fin_loan_details.get(loan_id=latest_loan['loan_id'])
-                user_profile = app_tables.fin_user_profile.get(customer_id=loan_detail['lender_customer_id'])
+                user_profile = app_tables.fin_user_profile.get(customer_id=loan_detail['borrower_customer_id'])
                 if loan_detail is not None and user_profile is not None and (loan_detail['remaining_amount'] is  None or loan_detail['remaining_amount'] > 0):
                     loan_amount = loan_detail['loan_amount']
                     scheduled_payment = latest_loan['scheduled_payment']
@@ -65,7 +65,7 @@ class today_dues(today_duesTemplate):
                     user_photo = user_profile['user_photo']
                     product_name = loan_detail['product_name']
                     product_description = loan_detail['product_description']
-                    lender_full_name = loan_detail['lender_full_name']
+                    borrower_full_name = loan_detail['borrower_full_name']
                     loan_state_status = loan_detail['loan_state_status']
                     product_id = loan_detail['product_id']
                     total_interest_amount = loan_detail['total_interest_amount']
@@ -98,7 +98,7 @@ class today_dues(today_duesTemplate):
                         'mobile': mobile,
                         'product_description': product_description,
                         'product_name': product_name,
-                        'lender_full_name': lender_full_name,
+                        'borrower_full_name': borrower_full_name,
                         'borrower_customer_id': borrower_customer_id,
                         'loan_state_status': loan_state_status,
                         'product_id':product_id,

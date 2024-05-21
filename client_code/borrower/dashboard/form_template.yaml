@@ -29,11 +29,11 @@ components:
     layout_properties: {grid_position: 'IPYSRE,GWXDDK', full_width_row: true}
     event_bindings: {click: button_9_click}
     name: button_9
-  - name: image_13
-    properties: {height: '72', source: _/theme/bank_users/main_form/about_us/icons8-sorting-arrows-100.png,
+  - properties: {height: '72', source: _/theme/bank_users/main_form/about_us/icons8-sorting-arrows-100.png,
       background: ''}
     type: Image
     layout_properties: {grid_position: 'IPYSRE,SYWIAU'}
+    name: image_13
   - properties: {}
     type: form:borrower.dashboard.Navigation_form_dashboard
     layout_properties: {grid_position: 'IPYSRE,AJWSNT'}
