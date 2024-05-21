@@ -21,5 +21,6 @@ class RowTemplate30(RowTemplate30Template):
     open_form('lendor.dashboard.view_details_1_copy',selected_row=selcted_row)
 
   def link_2_click(self, **event_args):
-      selected_row = self.item
-      open_form("lendor.dashboard.Borr_loan_request_copy", selected_row=selected_row)
+      borrower_customer_id = self.userId
+      open_form("lendor.dashboard.view_borrower_loan_request.Borr_loan_request", selected_row=borrower_customer_id)
+    
