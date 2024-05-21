@@ -375,9 +375,11 @@ class View_Details(View_DetailsTemplate):
         'prev_scheduled_payment' : self.selected_row['scheduled_payment'],
         'prev_next_payment' : self.selected_row['next_payment'],
         'product_id' : self.selected_row['product_id'],
-        'loan_state_status' : self.selected_row['loan_state_status']
+        'loan_state_status' : self.selected_row['loan_state_status'],
         # 'part_payment_date' : self.selected_row['part_payment_date'],
         # 'payment_type' : self.selected_row['payment_type'],
+        'tenure':self.tenure_label.text,
+        'borrower_full_name':  self.selected_row['borrower_full_name']
     }
     
     # Open the part_payment form and pass loan_details as a parameter

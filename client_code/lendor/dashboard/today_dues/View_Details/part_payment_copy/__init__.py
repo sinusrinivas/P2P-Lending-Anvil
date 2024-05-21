@@ -371,7 +371,7 @@ class part_payment_copy(part_payment_copyTemplate):
     print(f"Total Additional Fees: {total_additional_fees}")
     return total_additional_fees
 
-  # def button_1_copy_2_click(self, **event_args):
-  #   """This method is called when the button is clicked"""
-  #   open_form('borrower.dashboard.today_dues')
+  def button_1_copy_2_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    open_form('lendor.dashboard.today_dues.View_Details',self.selected_row)
 
