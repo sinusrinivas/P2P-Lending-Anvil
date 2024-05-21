@@ -80,14 +80,6 @@ components:
       source: _/theme/main.png, spacing_below: small, background: '', horizontal_align: center}
     type: Image
     layout_properties: {x: 146.75, y: -9.299999999999955, width: 457.15}
-  - type: Image
-    properties: {height: 46, source: _/theme/rbi-registered-1.svg}
-    name: image_11
-    layout_properties: {x: 159, y: 366.984375, width: 230.60000610351562}
-  - type: Image
-    properties: {height: 39, source: _/theme/12-300x94.png}
-    name: image_12
-    layout_properties: {x: 419, y: 302.984375, width: 184.89998474121091}
   - name: label_4_copy_1_copy
     properties: {role: null, align: left, tooltip: '', border: '', foreground: white,
       visible: true, text: Now invest with the largest Ascends P2P Lending platform in India. Go with the most preferred non-market linked investment instrument that gives you risk adjusted returns.,
@@ -117,6 +109,18 @@ components:
     name: button_3
     layout_properties: {x: 723.4375122077763, y: 333.9750099182129, width: 159}
     event_bindings: {click: button_3_click}
+  - name: image_2
+    properties: {height: 404.25, source: _/theme/bank_users/main_form/main.png, display_mode: zoom_to_fill}
+    type: Image
+    layout_properties: {x: 149.23435974121094, y: 43.015625, width: 265}
+  - type: Image
+    properties: {height: 39, source: _/theme/bank_users/main_form/12-300x94.png}
+    name: image_12
+    layout_properties: {x: 298.140625, y: 280.296875, width: 184.890625}
+  - type: Image
+    properties: {height: 46, source: _/theme/bank_users/main_form/rbi-registered-1.svg}
+    name: image_11
+    layout_properties: {x: 80.234375, y: 365.296875, width: 230.59375}
 - name: spacer_7
   properties: {height: 32}
   type: Spacer
@@ -196,7 +200,7 @@ components:
   layout_properties: {grid_position: 'ELJQFW,JZUUWF'}
   components:
   - type: Image
-    properties: {height: 71.60000610351562, source: _/theme/register-bean.50e7dd2.png,
+    properties: {height: 71.60000610351562, source: _/theme/bank_users/main_form/register.png,
       display_mode: original_size}
     name: image_18
     layout_properties: {x: 10, y: 16.3375244140625, width: 285.7243435058594}
@@ -218,7 +222,8 @@ components:
   layout_properties: {grid_position: 'ELJQFW,RDWIZR'}
   components:
   - type: Image
-    properties: {height: 116, source: _/theme/stats-rupee_bean.58bc41f.png, display_mode: original_size}
+    properties: {height: 116, source: _/theme/bank_users/main_form/stats-rupee_bean.58bc41f.png,
+      display_mode: original_size}
     name: image_19
     layout_properties: {x: 10, y: 15.3375244140625, width: 287.200375}
   - type: Label
@@ -240,7 +245,8 @@ components:
   layout_properties: {grid_position: 'ELJQFW,AMTGYB'}
   components:
   - type: Image
-    properties: {height: 113, source: _/theme/money-bag-hand_bean.2c2a2a6.png, display_mode: original_size}
+    properties: {height: 113, source: _/theme/bank_users/main_form/monthly_cashflow.png,
+      display_mode: original_size}
     name: image_20
     layout_properties: {x: 10, y: 16.3375244140625, width: 288.21599999999984}
   - type: Label
@@ -257,85 +263,99 @@ components:
   type: Spacer
   layout_properties: {grid_position: 'ONFDSS,EMMEBO'}
 - name: image_21
-  properties: {height: 322.3999938964844, source: _/theme/graph.png, display_mode: original_size}
+  properties: {height: 322.3999938964844, source: _/theme/bank_users/main_form/graph.png,
+    display_mode: original_size}
   type: Image
   layout_properties: {grid_position: 'UJFNFY,RICQYA'}
 - name: spacer_18
   properties: {height: 32}
   type: Spacer
   layout_properties: {grid_position: 'IDRRFC,FHRNWS'}
-- name: xy_panel_9
-  properties: {height: 575.6000061035156, background: '#Edf0f4'}
-  type: XYPanel
-  layout_properties: {grid_position: 'DUCRGR,KKDHDR', full_width_row: true}
+- name: content_panel_copy_copy_3_copy_3_copy_copy_copy_2_copy
+  properties: {col_widths: '{}', background: '#Edf0f4', role: elevated-card}
+  type: ColumnPanel
+  layout_properties: {grid_position: 'HOQKAX,ILOJZL', full_width_row: true}
   components:
   - name: label_38
-    properties: {text: Get started today, align: center, bold: true, font_size: 30}
+    properties: {text: Get started today, align: center, bold: true, font_size: 30,
+      background: ''}
     type: Label
-    layout_properties: {grid_position: 'VFQQUF,RWHPEN', x: 68, y: 10, width: 1351.1566259765625}
-  - name: xy_panel_8_copy
-    properties: {height: 295}
-    type: XYPanel
-    layout_properties: {x: 986.8750406913459, y: 125.34722900390625, width: 350}
+    layout_properties: {grid_position: 'FOMTSX,EOGALV', full_width_row: true}
+  - name: content_panel_copy_copy_3_copy_3_copy_copy_copy_2_copy_copy
+    properties: {col_widths: '{}', background: white, role: elevated-card}
+    type: ColumnPanel
+    layout_properties: {grid_position: 'DYBEYE,DWXCGB'}
     components:
-    - name: image_20_copy
-      properties: {height: 113, source: _/theme/money-bag-hand_bean.2c2a2a6.png, display_mode: original_size}
+    - name: image_13
+      properties: {source: _/theme/bank_users/main_form/register.png, height: '75'}
       type: Image
-      layout_properties: {x: 10, y: 16.3375244140625, width: 329.948}
-    - name: label_34_copy
-      properties: {text: Get monthly repayments, font_size: 21, bold: true, align: center}
-      type: Label
-      layout_properties: {x: 10, y: 94.3375244140625, width: 329.94799999999987}
-    - name: label_36_copy
-      properties: {underline: false, font_size: 18, text: Receive monthly returns from the borrower and start growing your wealth. You also have the option to reinvest your earnings.,
-        align: center}
-      type: Label
-      layout_properties: {x: 10, y: 140.3375244140625, width: 329.9533740234375}
-  - name: xy_panel_6_copy
-    properties: {height: 290.3999938964844}
-    type: XYPanel
-    layout_properties: {x: 75.79165522381663, y: 127.15280151367188, width: 318.8333435058594}
-    components:
-    - name: image_18_copy
-      properties: {height: 71.60000610351562, source: _/theme/register.png, display_mode: original_size}
-      type: Image
-      layout_properties: {x: 10, y: 16.3375244140625, width: 294.167}
+      layout_properties: {grid_position: 'CNSXUR,FJQAJE'}
     - name: label_32_copy
       properties: {text: Register, font_size: 20, bold: true, align: center}
       type: Label
-      layout_properties: {x: 10, y: 93.3375244140625, width: 294.167}
+      layout_properties: {grid_position: 'ITODMF,AUYRBN'}
     - name: label_35_copy
       properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
         visible: true, text: Register as a lender by providing basic KYC information.,
         font_size: 18, font: '', spacing_above: small, icon_align: left, spacing_below: small,
         italic: false, background: '', bold: false, underline: false, icon: ''}
       type: Label
-      layout_properties: {x: 10, y: 139.3375244140625, width: 294.167}
-  - name: xy_panel_7_copy
-    properties: {height: 293.1999816894531}
-    type: XYPanel
-    layout_properties: {x: 533.5278727225959, y: 124.34722900390625, width: 350}
+      layout_properties: {grid_position: 'NVRULS,IHZRBD'}
+    - name: spacer_1
+      properties: {height: 46.181793212890625}
+      type: Spacer
+      layout_properties: {grid_position: 'JDHXTU,FLLSDK'}
+  - name: content_panel_copy_copy_3_copy_3_copy_copy_copy_2_copy_copy_3
+    properties: {col_widths: '{}', background: white, role: elevated-card}
+    type: ColumnPanel
+    layout_properties: {grid_position: 'DYBEYE,BAEGYX HAXBKF,WVREIF'}
     components:
-    - name: image_19_copy
-      properties: {height: 116, source: _/theme/profile-cards_bean.6b9a100.png, display_mode: original_size}
+    - name: image_14
+      properties: {source: _/theme/bank_users/main_form/screening.png, height: '75'}
       type: Image
-      layout_properties: {x: 10, y: 15.3375244140625, width: 329.935}
+      layout_properties: {grid_position: 'TZJSYL,UCWSYL'}
     - name: label_33_copy
       properties: {text: Choose your products, bold: true, font_size: 20, align: center}
       type: Label
-      layout_properties: {x: 18.662506103515625, y: 95.3375244140625, width: 286.1403740234375}
+      layout_properties: {grid_position: 'MTPYOJ,LDBIXN'}
     - name: label_37_copy
       properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
         visible: true, text: Invest across variety of products and build a diversified portfolio and better returns at lower risk.,
         font_size: 18, font: '', spacing_above: small, icon_align: left, spacing_below: small,
         italic: false, background: '', bold: false, underline: false, icon: ''}
       type: Label
-      layout_properties: {x: 13.362518310546875, y: 141.3375244140625, width: 319.562}
+      layout_properties: {grid_position: 'NXACHM,SZWZBJ'}
+    - name: spacer_3
+      properties: {height: 19.727264404296875}
+      type: Spacer
+      layout_properties: {grid_position: 'FWGDQR,FHRCFZ'}
+  - name: spacer_14
+    properties: {height: 32}
+    type: Spacer
+    layout_properties: {grid_position: 'DYBEYE,BAEGYX ZQKKJA,IIIOEP'}
+  - name: content_panel_copy_copy_3_copy_3_copy_copy_copy_2_copy_copy_2
+    properties: {col_widths: '{}', background: white, role: elevated-card}
+    type: ColumnPanel
+    layout_properties: {grid_position: 'DYBEYE,NZXWWU'}
+    components:
+    - name: image_15
+      properties: {height: '75', source: _/theme/bank_users/main_form/monthly_cashflow.png}
+      type: Image
+      layout_properties: {grid_position: 'CJKLEL,YEAVIE'}
+    - name: label_34_copy
+      properties: {text: Get monthly repayments, font_size: 21, bold: true, align: center}
+      type: Label
+      layout_properties: {grid_position: 'UKNKNW,LQVFUU'}
+    - name: label_36_copy
+      properties: {underline: false, font_size: 18, text: Receive monthly returns from the borrower and start growing your wealth. You also have the option to reinvest your earnings.,
+        align: center}
+      type: Label
+      layout_properties: {grid_position: 'BCZZKB,LNEBCE'}
   - name: button_5
-    properties: {text: Register Now, align: full, bold: true, role: filled-button,
+    properties: {text: Register Now, align: center, bold: true, role: filled-button,
       background: '#013065', font_size: 16}
     type: Button
-    layout_properties: {x: 633.5694990158081, y: 532.7500076293945, width: 200}
+    layout_properties: {grid_position: 'LERMRW,IMTSKY'}
     event_bindings: {click: button_5_click}
 - name: spacer_19
   properties: {height: 32}
@@ -355,7 +375,7 @@ components:
   type: Spacer
   layout_properties: {grid_position: 'EEIWLL,KZPGTA'}
 - name: image_23
-  properties: {height: 74.60000610351562, vertical_align: top, source: _/theme/screening.png,
+  properties: {height: '75', vertical_align: top, source: _/theme/bank_users/main_form/screening.png,
     display_mode: shrink_to_fit, horizontal_align: left}
   type: Image
   layout_properties: {grid_position: 'SIPMDQ,UGNRVI MOFJMP,YHVAWV'}
@@ -373,7 +393,7 @@ components:
   type: Spacer
   layout_properties: {grid_position: 'SIPMDQ,UGNRVI TNQOXS,WSCFEQ'}
 - name: image_24
-  properties: {height: 88.22222900390625, source: _/theme/money-arrow_bean.d0d0a86.png,
+  properties: {height: 88.22222900390625, source: _/theme/bank_users/main_form/easy_diversification.png,
     display_mode: original_size, horizontal_align: left}
   type: Image
   layout_properties: {grid_position: 'SIPMDQ,UGNRVI OEKGMC,MNAHIK'}
@@ -387,7 +407,7 @@ components:
   type: Label
   layout_properties: {grid_position: 'SIPMDQ,UGNRVI TOKUSD,PCZZSD'}
 - name: image_25
-  properties: {height: 66.77777099609375, source: _/theme/manager.png, display_mode: shrink_to_fit,
+  properties: {height: '75', source: _/theme/bank_users/main_form/manager.png, display_mode: shrink_to_fit,
     horizontal_align: left}
   type: Image
   layout_properties: {grid_position: 'SIPMDQ,DMBIXF ATMFNF,NUZNKA'}
@@ -401,11 +421,11 @@ components:
   type: Label
   layout_properties: {grid_position: 'SIPMDQ,DMBIXF HBQKMR,OVQMDR'}
 - name: spacer_30
-  properties: {height: 64.60000610351562}
+  properties: {height: 55.25}
   type: Spacer
   layout_properties: {grid_position: 'SIPMDQ,DMBIXF HUQSMJ,CNLFXA'}
 - name: image_26
-  properties: {height: 64.99993896484375, source: _/theme/money-bag-hand_bean.2c2a2a6.png,
+  properties: {height: 64.99993896484375, source: _/theme/bank_users/main_form/monthly_cashflow.png,
     display_mode: original_size, horizontal_align: left}
   type: Image
   layout_properties: {grid_position: 'SIPMDQ,DMBIXF GITIAS,JGEWKK'}
@@ -446,7 +466,7 @@ components:
   type: Spacer
   layout_properties: {grid_position: 'FGAEGL,EDOHWZ'}
 - name: image_4
-  properties: {source: _/theme/icons8-laptop-100 (1).png, display_mode: original_size,
+  properties: {source: _/theme/bank_users/main_form/laptop_icon.png, display_mode: original_size,
     height: 97.41665649414062}
   type: Image
   layout_properties: {grid_position: 'BGOTWK,XXIPLN'}
@@ -457,7 +477,7 @@ components:
   type: Label
   layout_properties: {grid_position: 'BGOTWK,XXIPLN LDUNEZ,EMAVPJ'}
 - name: image_5
-  properties: {source: _/theme/icons8-approved-webpage-100 (1).png, background: '',
+  properties: {source: _/theme/bank_users/main_form/icons8-approved.png, background: '',
     role: null, visible: true, height: 98.58334350585938, display_mode: original_size}
   type: Image
   layout_properties: {grid_position: 'BGOTWK,PRCSLT EVJEUH,SLMCTO'}
@@ -468,7 +488,8 @@ components:
   type: Label
   layout_properties: {grid_position: 'BGOTWK,PRCSLT OBEGGH,AVGGCR'}
 - name: image_6
-  properties: {source: _/theme/icons8-fund-100 (1).png, height: 96.75, display_mode: original_size}
+  properties: {source: _/theme/bank_users/main_form/icons8-fund.png, height: 96.75,
+    display_mode: original_size}
   type: Image
   layout_properties: {grid_position: 'BGOTWK,PTRZYW BSEDZX,SAVEOO'}
 - name: label_12
@@ -478,8 +499,8 @@ components:
   type: Label
   layout_properties: {grid_position: 'BGOTWK,PTRZYW JEGIDN,XAPYYC'}
 - name: image_7
-  properties: {source: _/theme/icons8-business-goal-100 (1).png, role: null, height: 95.91665649414062,
-    display_mode: original_size}
+  properties: {source: _/theme/bank_users/main_form/icons8-business-goal.png, role: null,
+    height: 95.91665649414062, display_mode: original_size}
   type: Image
   layout_properties: {grid_position: 'BGOTWK,FKRLFV NBOARJ,FCSFDI'}
 - name: label_13
@@ -502,7 +523,8 @@ components:
   type: Spacer
   layout_properties: {grid_position: 'GTTQDX,CSHUEV'}
 - name: image_9
-  properties: {height: '117', source: _/theme/icons8-mortgage-interest-100.png, display_mode: original_size}
+  properties: {height: 19.24993896484375, source: _/theme/bank_users/main_form/icons8-mortgage-interest.png,
+    display_mode: original_size}
   type: Image
   layout_properties: {grid_position: 'RUUBND,IGQGYE RUFKEB,CXYDDO'}
 - name: spacer_26
@@ -521,7 +543,8 @@ components:
   type: Label
   layout_properties: {grid_position: 'RUUBND,IGQGYE DAIOZX,MZNFLK'}
 - name: image_8
-  properties: {source: _/theme/icons8-easy-100.png, height: '117', display_mode: original_size}
+  properties: {source: _/theme/bank_users/main_form/icons8-easy-100.png, height: '117',
+    display_mode: original_size}
   type: Image
   layout_properties: {grid_position: 'RUUBND,WMRMLE FEKSPP,LLPDZJ'}
 - name: spacer_25
@@ -539,7 +562,8 @@ components:
   type: Label
   layout_properties: {grid_position: 'RUUBND,WMRMLE XFLEEY,RNLVLX'}
 - name: image_10
-  properties: {source: _/theme/icons8-law-100.png, height: '117', display_mode: original_size}
+  properties: {source: _/theme/bank_users/main_form/icons8-penalty.png, height: '117',
+    display_mode: original_size}
   type: Image
   layout_properties: {grid_position: 'RUUBND,UTGGPW GFNQED,ZHDEOY'}
 - name: spacer_24
@@ -557,7 +581,8 @@ components:
   type: Label
   layout_properties: {grid_position: 'RUUBND,UTGGPW RLQOJA,BCFMPC'}
 - name: image_27
-  properties: {height: '117', source: _/theme/icons8-get-cash-100.png, display_mode: original_size}
+  properties: {height: '117', source: _/theme/bank_users/main_form/icons8-get-cash.png,
+    display_mode: original_size}
   type: Image
   layout_properties: {grid_position: 'RUUBND,GEESPO BBNHAZ,RPZBVZ', full_width_row: false}
 - name: spacer_23
@@ -935,7 +960,8 @@ components:
     layout_properties: {grid_position: 'RTEJIV,IDTHWJ YHWQMV,XNIINL'}
     event_bindings: {click: button_2_click}
   - name: image_22
-    properties: {height: 452, source: _/theme/india map.png, display_mode: zoom_to_fill}
+    properties: {height: 452, source: _/theme/bank_users/main_form/india%20map.png,
+      display_mode: zoom_to_fill}
     type: Image
     layout_properties: {grid_position: 'RTEJIV,YLEZQD'}
 - name: label_2_copy
@@ -952,18 +978,19 @@ components:
   layout_properties: {grid_position: 'UUAAMD,PNSHYI'}
   components:
   - name: image_1
-    properties: {height: 291, source: _/theme/Screenshot 2024-02-19 152401.png, display_mode: shrink_to_fit,
-      background: 'theme:On Primary'}
+    properties: {height: 291, source: _/theme/bank_users/main_form/customer%20review%202.png,
+      display_mode: shrink_to_fit, background: 'theme:On Primary'}
     type: Image
     layout_properties: {grid_position: 'KCBRJR,FZDYJO'}
 - name: image_1_copy_2
-  properties: {height: 254, source: _/theme/Screenshot 2024-02-19 152812.png, display_mode: shrink_to_fit,
-    horizontal_align: center, spacing_above: large, background: 'theme:On Primary'}
+  properties: {height: 254, source: _/theme/bank_users/main_form/customer%20review%203.png,
+    display_mode: shrink_to_fit, horizontal_align: center, spacing_above: large, background: 'theme:On
+      Primary'}
   type: Image
   layout_properties: {grid_position: 'UUAAMD,EPLFYI'}
 - name: image_1_copy
-  properties: {height: 291, source: _/theme/Screenshot 2024-02-19 152705.png, display_mode: shrink_to_fit,
-    background: 'theme:On Primary'}
+  properties: {height: 291, source: _/theme/bank_users/main_form/hear%20from%20our%20investors%203.png,
+    display_mode: shrink_to_fit, background: 'theme:On Primary'}
   type: Image
   layout_properties: {grid_position: 'UUAAMD,XEMJBS'}
 - type: Spacer

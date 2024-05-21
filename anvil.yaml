@@ -1212,6 +1212,20 @@ db_schema:
     - name: return_on_investment
       admin_ui: {width: 200, order: 3.5}
       type: number
+  fin_loan_settings:
+    client: full
+    server: full
+    columns:
+    - name: loans
+      admin_ui: {width: 200, order: 0}
+      type: string
+    - name: minimum_days
+      admin_ui: {width: 200, order: 1}
+      type: number
+    - name: maximum_days
+      admin_ui: {width: 200, order: 2}
+      type: number
+    title: fin_loan_settings
   fin_wallet_bank_account_table:
     client: none
     server: full

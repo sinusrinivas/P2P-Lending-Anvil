@@ -84,6 +84,6 @@ class user_bugreports(user_bugreportsTemplate):
 
   def button_2_click(self, **event_args):
     """This method is called when the button is clicked"""
-    open_form('bank_users.main_form.about_main_form')
+    open_form('bank_users.main_form')
 
     
