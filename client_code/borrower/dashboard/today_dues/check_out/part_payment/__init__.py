@@ -308,7 +308,7 @@ class part_payment(part_paymentTemplate):
         if lapsed_settings :
             lapsed_start = lapsed_settings['minimum_days']  # Assuming column1 stores the start day
             lapsed_end = lapsed_settings['maximum_days']
-            if  lapsed_start <= days_elapsed <= lapsed_end:
+            if  lapsed_start < days_elapsed <= lapsed_end:
                 days_elapsed -= lapsed_start
                 lapsed_fee_percentage = product_details['lapsed_fee']
                 total_additional_fees += days_elapsed * (lapsed_fee_percentage * float(self.loan_details['emi']) / 100)
@@ -318,7 +318,7 @@ class part_payment(part_paymentTemplate):
         if default_settings:
           default_start = default_settings['minimum_days']
           default_end = default_settings['maximum_days']
-          if default_start <= days_elapsed <= default_end:
+          if default_start < days_elapsed <= default_end:
               # product_id = selected_row['product_id']
               # Fetch default fee details from product details table
               product_details = app_tables.fin_product_details.get(product_id=product_id)
@@ -340,7 +340,7 @@ class part_payment(part_paymentTemplate):
         if npa_settings:
           npa_start = npa_settings['minimum_days']
           npa_end = npa_settings['maximum_days']
-          if npa_start <= days_elapsed <= npa_end:
+          if npa_start < days_elapsed <= npa_end:
               # product_id = selected_row['product_id']
               product_details = app_tables.fin_product_details.get(product_id=product_id)
               

@@ -85,7 +85,7 @@ class check_out(check_outTemplate):
         if lapsed_settings:
             lapsed_start = lapsed_settings['minimum_days']  # Assuming column1 stores the start day
             lapsed_end = lapsed_settings['maximum_days']    # Assuming column2 stores the end day
-            if lapsed_start <= days_left <= lapsed_end:
+            if lapsed_start < days_left <= lapsed_end:
                 # Fetch the lapsed fee from product details table
                 product_id = selected_row['product_id']
                 lapsed_fee_1 = app_tables.fin_product_details.get(product_id=product_id)['lapsed_fee']
@@ -103,7 +103,7 @@ class check_out(check_outTemplate):
         if default_settings:
           default_start = int(default_settings['minimum_days'])  # Assuming column1 stores the start day
           default_end = int(default_settings['maximum_days'])    # Assuming column2 stores the end day
-          if default_start <= days_left <= default_end:
+          if default_start < days_left <= default_end:
               product_id = selected_row['product_id']
               # Fetch default fee details from product details table
               product_details = app_tables.fin_product_details.get(product_id=product_id)
@@ -131,7 +131,7 @@ class check_out(check_outTemplate):
         if npa_settings:
           npa_start = int(npa_settings['minimum_days'])  # Assuming column1 stores the start day
           npa_end = int(npa_settings['maximum_days'])    # Assuming column2 stores the end day
-          if npa_start <= days_left <= npa_end:
+          if npa_start < days_left <= npa_end:
               product_id = selected_row['product_id']
               product_details = app_tables.fin_product_details.get(product_id=product_id)
               
