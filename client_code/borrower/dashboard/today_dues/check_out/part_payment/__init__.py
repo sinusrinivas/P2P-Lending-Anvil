@@ -61,6 +61,10 @@ class part_payment(part_paymentTemplate):
             additional_fees = self.calculate_additional_fees(emi_row)
             if additional_fees is not None:
               part_payment_amount += additional_fees
+              if additional_fees > 0:
+                self.additional_fee_label.visible = True
+                self.additional_fee.visible = True
+                self.additional_fee.text ="{:.2f}".format(additional_fees)
             else:
               return part_payment_amount
             self.text_box_1.text ="{:.2f}".format(part_payment_amount)
@@ -313,7 +317,7 @@ class part_payment(part_paymentTemplate):
         if default_settings:
           default_start = default_settings['minimum_days']
           default_end = default_settings['maximum_days']
-          if default_start < days_elapsed <= default_end:
+          if default_start <= days_elapsed <= default_end:
               days_elapsed_for_default = days_elapsed - default_start
               default_fee_percentage = product_details.get('default_fee', 0)
               default_fee_amount = product_details.get('default_fee_amount', 0)
@@ -326,7 +330,8 @@ class part_payment(part_paymentTemplate):
 
         if npa_settings:
           npa_start = npa_settings['minimum_days']
-          if days_elapsed > npa_start:
+          npa_end = npa_settings['maximum_days']
+          if npa_start <= days_elapsed <= npa_end:
               days_elapsed_for_npa = days_elapsed - npa_start
               npa_fee_percentage = product_details.get('npa_fee', 0)
               npa_fee_amount = product_details.get('npa_amount', 0)
