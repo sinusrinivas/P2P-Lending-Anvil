@@ -345,9 +345,9 @@ class part_payment(part_paymentTemplate):
         print(f"Total Additional Fees: {total_additional_fees}")
         return total_additional_fees
 
-  def button_1_copy_2_click(self, **event_args):
-    """This method is called when the button is clicked"""
-    open_form('borrower.dashboard.today_dues.check_out')
+  # def button_1_copy_2_click(self, **event_args):
+  #   """This method is called when the button is clicked"""
+  #   open_form('borrower.dashboard.today_dues')
 
             
 
