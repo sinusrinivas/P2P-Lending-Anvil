@@ -42,6 +42,7 @@ class dashboard(dashboardTemplate):
         self.button_3_copy.text = f"Lost Opportunities ({len(Lost_Opportunities)})"
         self.button_4_copy.text = f"Closed ({len(Closed)})"
         self.button_5_copy.text = f"Extended ({len(Extended)})"
+        self.column_panel_8.width = '100%'
 
         # Set the column_panel_3 to full height initially
         # self.column_panel_3.height = '100%'
@@ -82,11 +83,13 @@ class dashboard(dashboardTemplate):
                     'tenure': loan['tenure'],
                     'borrower_full_name': loan['borrower_full_name'],
                     'loan_id': loan['loan_id'],
-                    'bessem_score': user_profile['bessem_value'],
+                    'bessem_value': user_profile['bessem_value'],
                     'loan_updated_status': loan['loan_updated_status'],
                     'interest_rate': loan['interest_rate'],
                     'borrower_loan_created_timestamp': loan['borrower_loan_created_timestamp'],
-                    'borrower_customer_id': loan['borrower_customer_id']})
+                    'borrower_customer_id': loan['borrower_customer_id'],
+                    'beseem_score': user_profile['bessem_value'],
+                    'credit_limit': loan['credit_limit']})
         return profiles_with_loans
 
     def toggle_components_visibility(self):      
