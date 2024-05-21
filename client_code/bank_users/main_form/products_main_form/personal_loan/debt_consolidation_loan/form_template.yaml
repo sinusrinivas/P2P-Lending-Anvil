@@ -182,7 +182,8 @@ components:
     type: Spacer
     layout_properties: {grid_position: 'ZQYRIY,SVKPAN'}
   - name: image_6
-    properties: {source: _/theme/hiw 1.png, display_mode: shrink_to_fit, height: '120'}
+    properties: {source: _/theme/bank_users/personal_loan/how_it_works/creaeate-account.png,
+      display_mode: shrink_to_fit, height: '120'}
     type: Image
     layout_properties: {grid_position: 'SNCZOY,YGAVZK NLUQRH,YCBBHP'}
   - name: label_16
@@ -198,7 +199,8 @@ components:
     type: Label
     layout_properties: {grid_position: 'SNCZOY,YGAVZK MDYMSJ,YLTDVU'}
   - name: image_7
-    properties: {source: _/theme/hiw 2.png, display_mode: shrink_to_fit, height: '120'}
+    properties: {source: _/theme/bank_users/personal_loan/how_it_works/loan_assesment.png,
+      display_mode: shrink_to_fit, height: '120'}
     type: Image
     layout_properties: {grid_position: 'SNCZOY,OVZUMZ HPKIIW,VRYLBR'}
   - name: label_17
@@ -213,7 +215,8 @@ components:
     type: Label
     layout_properties: {grid_position: 'SNCZOY,OVZUMZ IICBJK,BREHMT'}
   - name: image_8
-    properties: {source: _/theme/hiw 3.png, display_mode: shrink_to_fit, height: '120'}
+    properties: {source: _/theme/bank_users/personal_loan/how_it_works/quick_funding.png,
+      display_mode: shrink_to_fit, height: '120'}
     type: Image
     layout_properties: {grid_position: 'SNCZOY,PYJVUQ TKIFZB,MZQASR'}
   - name: label_18
@@ -228,7 +231,8 @@ components:
     type: Label
     layout_properties: {grid_position: 'SNCZOY,PYJVUQ RPHZIE,ZWYBWT'}
   - name: image_9
-    properties: {source: _/theme/hiw 4.png, display_mode: shrink_to_fit, height: '120'}
+    properties: {source: _/theme/bank_users/personal_loan/how_it_works/get%20amount.png,
+      display_mode: shrink_to_fit, height: '120'}
     type: Image
     layout_properties: {grid_position: 'SNCZOY,ATGAMW SCUUZH,LIWVQO'}
   - name: label_19
