@@ -1,12 +1,6 @@
 is_package: true
 container: {type: DataRowPanel}
 components:
-- name: label_1
-  properties: {align: center}
-  type: Label
-  layout_properties: {column: VJQQOR}
-  data_bindings:
-  - {property: text, code: 'self.item[''loan_id'']', writeback: false}
 - name: label_2
   properties: {align: center}
   type: Label
