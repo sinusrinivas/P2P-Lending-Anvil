@@ -60,7 +60,7 @@ class dashboard(dashboardTemplate):
 
         elif status == 'under process':
             underprocess_loans = app_tables.fin_loan_details.search(loan_updated_status=q.any_of(q.like('under process%'),q.like('under process')))
-            self.repeating_panel_1.items = self.process_data(underprocess_loans)
+            self.repeating_panel_2.items = self.process_data(underprocess_loans)
             
 
         elif status == 'lost opportunities':
@@ -210,29 +210,38 @@ class dashboard(dashboardTemplate):
         open_form("wallet.wallet")
 
     def button_1_copy_click(self, **event_args):
-        
+        self.data_grid_new_loan_request.visible = False
+        self.repeating_panel_1.visible = False
         self.data_grid_1.visible = True
         self.repeating_panel_2.visible = True
         self.load_data('under process')
 
     def button_2_copy_click(self, **event_args):
+        self.data_grid_1.visible = False
+        self.repeating_panel_2.visible = False
         self.data_grid_new_loan_request.visible = True
         self.repeating_panel_1.visible = True
         self.load_data('disbursed loan')
 
 
     def button_3_copy_click(self, **event_args):
+        self.data_grid_1.visible = False
+        self.repeating_panel_2.visible = False
         self.data_grid_new_loan_request.visible = True
         self.repeating_panel_1.visible = True
         self.load_data('lost opportunities')
 
     def button_4_copy_click(self, **event_args):
+        self.data_grid_1.visible = False
+        self.repeating_panel_2.visible = False
         self.data_grid_new_loan_request.visible = True
         self.repeating_panel_1.visible = True
         self.load_data('close')
 
 
     def button_5_copy_click(self, **event_args):
+        self.data_grid_1.visible = False
+        self.repeating_panel_2.visible = False
         self.data_grid_new_loan_request.visible = True
         self.repeating_panel_1.visible = True
         self.load_data('extension')
