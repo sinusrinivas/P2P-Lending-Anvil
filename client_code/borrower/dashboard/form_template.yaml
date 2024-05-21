@@ -224,7 +224,8 @@ components:
   layout_properties: {grid_position: 'XJNATW,EICYCB GDHSWL,LWORUH PATSWD,BHOXKV SEMPGY,WPIOHO
       TUVEVM,PQDGRF'}
   name: spacer_16
-- properties: {height: '20', source: _/theme/telephone.png, display_mode: shrink_to_fit}
+- properties: {height: '20', source: _/theme/borrower/dashboard/borrower_mobile.png,
+    display_mode: zoom_to_fill}
   type: Image
   layout_properties: {grid_position: 'XJNATW,EICYCB GDHSWL,LWORUH PATSWD,BHOXKV SEMPGY,WPIOHO
       HXZJES,QQSKGX'}
@@ -279,7 +280,8 @@ components:
   layout_properties: {grid_position: 'XJNATW,EICYCB GDHSWL,LWORUH PATSWD,UBGOIF XMNMGS,DCWODV
       WKWXGE,RKLYJE TWETSP,OKCLZL'}
   name: spacer_18
-- properties: {height: 19.999969482421875, source: _/theme/icons8-coins-100 (1).png}
+- properties: {height: 19.999969482421875, source: _/theme/borrower/dashboard/borrower_balance.png,
+    display_mode: zoom_to_fill}
   type: Image
   layout_properties: {grid_position: 'XJNATW,EICYCB GDHSWL,LWORUH PATSWD,UBGOIF XMNMGS,DCWODV
       WKWXGE,RKLYJE GJIDHC,YUGOTA'}
