@@ -310,7 +310,7 @@ class View_Details(View_DetailsTemplate):
         )
 
         if emi_row is not None and emi_row['payment_type'] == 'part payment':
-          self.button_1_copy_3.visible = False
+          self.p.visible = False
           self.label_3.visible = False
           self.label_5.visible = False
           self.label_9.visible = False
