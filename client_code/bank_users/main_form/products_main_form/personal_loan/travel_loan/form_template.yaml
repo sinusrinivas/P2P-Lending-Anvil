@@ -38,8 +38,8 @@ components:
       layout_properties: {grid_position: 'BIIHRQ,PQJXFJ WAUPCN,PHTVWZ'}
       event_bindings: {click: button_1_click}
     - name: image_1
-      properties: {source: _/theme/tl-removebg-preview.png, display_mode: zoom_to_fill,
-        height: 423.25}
+      properties: {source: _/theme/bank_users/personal_loan/travel_loan/travel%20loan%20main.png,
+        display_mode: zoom_to_fill, height: 423.25}
       type: Image
       layout_properties: {grid_position: 'BIIHRQ,NQDPIF'}
   - name: spacer_2
@@ -66,7 +66,8 @@ components:
       type: Spacer
       layout_properties: {grid_position: 'ZFJLLZ,SEODIM'}
     - name: image_2
-      properties: {source: _/theme/tl7.png, display_mode: shrink_to_fit, height: '120'}
+      properties: {source: _/theme/bank_users/personal_loan/travel_loan/travel_loan5.png,
+        display_mode: shrink_to_fit, height: '120'}
       type: Image
       layout_properties: {grid_position: 'EOGDPB,QHKJNM ALMYKC,XSBQCP'}
     - name: label_5
@@ -83,7 +84,8 @@ components:
       type: Spacer
       layout_properties: {grid_position: 'EOGDPB,QHKJNM XWEFZD,KDLWZB'}
     - name: image_4
-      properties: {source: _/theme/tl2.png, display_mode: shrink_to_fit, height: '120'}
+      properties: {source: _/theme/bank_users/personal_loan/travel_loan/travel_loan2.png,
+        display_mode: shrink_to_fit, height: '120'}
       type: Image
       layout_properties: {grid_position: 'EOGDPB,QHKJNM YPSNBP,CARSKF'}
     - name: label_9
@@ -96,7 +98,8 @@ components:
       type: Label
       layout_properties: {grid_position: 'EOGDPB,QHKJNM YPSNBP,EXLTER NEQXRO,UATSHM'}
     - name: image_3
-      properties: {source: _/theme/tl3.png, display_mode: shrink_to_fit, height: '130'}
+      properties: {source: _/theme/bank_users/personal_loan/travel_loan/travel_loan3.png,
+        display_mode: shrink_to_fit, height: '130'}
       type: Image
       layout_properties: {grid_position: 'EOGDPB,CQQLAS UDFSOS,IKFTIV'}
     - name: label_7
@@ -113,7 +116,8 @@ components:
       type: Spacer
       layout_properties: {grid_position: 'EOGDPB,CQQLAS BLVNSO,URNQKL'}
     - name: image_5
-      properties: {source: _/theme/tl6.png, display_mode: shrink_to_fit, height: '90'}
+      properties: {source: _/theme/bank_users/personal_loan/travel_loan/travel_loan4.png,
+        display_mode: shrink_to_fit, height: '90'}
       type: Image
       layout_properties: {grid_position: 'EOGDPB,CQQLAS VRMIQI,CYWJIO'}
     - name: label_11

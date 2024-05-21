@@ -71,7 +71,7 @@ components:
       type: Spacer
       layout_properties: {grid_position: 'QTNQBN,JBTPFF OJAYXT,BPJSLJ'}
     - name: image_1
-      properties: {height: 375.5555419921875, source: _/theme/Screenshot__154_-removebg-preview.png,
+      properties: {height: 375.5555419921875, source: _/theme/bank_users/personal_loan/education_loan/education-loan-main.png,
         display_mode: zoom_to_fill}
       type: Image
       layout_properties: {grid_position: 'QTNQBN,JBTPFF CKRAJG,VHGQUZ'}
@@ -242,7 +242,8 @@ components:
       type: Spacer
       layout_properties: {grid_position: 'BFMUDJ,FDAXVJ CZDVUM,ZYBOQD'}
     - name: image_2
-      properties: {height: 302.77777099609375, source: _/theme/el7.webp, display_mode: zoom_to_fill}
+      properties: {height: 302.77777099609375, source: _/theme/bank_users/personal_loan/education_loan/education%20loan%20.webp,
+        display_mode: zoom_to_fill}
       type: Image
       layout_properties: {grid_position: 'BFMUDJ,FDAXVJ SHQBNO,DJWPTH'}
   - name: spacer_8
