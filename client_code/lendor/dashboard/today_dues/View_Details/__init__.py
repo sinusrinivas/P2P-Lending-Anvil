@@ -154,93 +154,7 @@ class View_Details(View_DetailsTemplate):
               self.label_9.visible = False
               self.lapsed.visible = False
               self.label_5.visible = False
-                
-    #     if loan_state_status == 'default loan' and selected_row['days_left'] > 16:
-    #       product_id = selected_row['product_id']
-    # # Fetch default fee details from product details table
-    #       product_details = app_tables.fin_product_details.get(product_id=product_id)
-          
-    #       # Check if default_fee or default_fee_amount should be used
-    #       if product_details['default_fee'] != 0:
-    #           # Calculate the number of days between today's date and the selected schedule payment date
-    #           days_left = selected_row['days_left']
-    #           days_difference = days_left - 16
-      
-    #           # Fetch default fee percentage and amount from product details table
-    #           default_fee_percentage = product_details['default_fee']
-    #           default_fee_decimal = default_fee_percentage * emi / 100
-      
-    #           # Calculate total default fee
-    #           total_default_fee = days_difference * default_fee_decimal
-      
-    #       elif product_details['default_fee_amount'] != 0:
-    #           # Fetch default fee amount from product details table
-    #           default_fee_amount = product_details['default_fee_amount']
-      
-    #           # Calculate the number of days between today's date and the selected schedule payment date
-    #           days_left = selected_row['days_left']
-    #           days_difference = days_left - 16
-      
-    #           # Multiply default fee amount by days_difference
-    #           total_default_fee = days_difference * default_fee_amount
-      
-    #       else:
-    #           # Neither default_fee nor default_fee_amount is set, so default fee is zero
-    #           total_default_fee = 0
-      
-    #       # Add default fee to total EMI
-    #       total_emi += total_default_fee
-    #       self.default.text = "{:.2f}".format(total_default_fee)
-    #       self.default.visible = True
-    #       self.label_9.visible = True
-    #       self.lapsed.visible = False
-    #       self.label_5.visible = False
 
-    #     if loan_state_status == 'NPA' and selected_row['days_left'] > 106:
-    # # Fetch NPA fee details from product details table
-    #       product_id = selected_row['product_id']
-    #       product_details = app_tables.fin_product_details.get(product_id=product_id)
-          
-    #       # Check if npa or npa_amount should be used
-    #       if product_details['npa'] != 0:
-    #           # Calculate the number of days between today's date and the selected schedule payment date
-    #           days_left = selected_row['days_left']
-    #           days_difference = days_left - 106
-      
-    #           # Fetch NPA fee percentage and amount from product details table
-    #           npa_percentage = product_details['npa']
-    #           npa_decimal = npa_percentage * emi/ 100
-      
-    #           # Calculate total NPA fee
-    #           total_npa_fee = days_difference * npa_decimal
-      
-    #       elif product_details['npa_amount'] != 0:
-    #           # Fetch NPA fee amount from product details table
-    #           npa_amount = product_details['npa_amount']
-      
-    #           # Calculate the number of days between today's date and the selected schedule payment date
-    #           days_left = selected_row['days_left']
-    #           days_difference = days_left - 106
-      
-    #           # Multiply NPA fee amount by days_difference
-    #           total_npa_fee = days_difference * npa_amount
-      
-    #       else:
-    #           # Neither npa nor npa_amount is set, so NPA fee is zero
-    #           total_npa_fee = 0
-      
-    #       # Add NPA fee to total EMI
-    #       total_emi += total_npa_fee
-      
-    #       # Update UI
-    #       self.npa.text = "{:.2f}".format(total_npa_fee)
-    #       self.npa.visible = True
-    #       self.label_12.visible = True
-    #       # Hide default and lapsed fee labels
-    #       self.default.visible = False
-    #       self.label_9.visible = False
-    #       self.lapsed.visible = False
-    #       self.label_5.visible = False
 
 
         # Display the calculated EMI amount in the EMI amount label
@@ -310,7 +224,7 @@ class View_Details(View_DetailsTemplate):
         )
 
         if emi_row is not None and emi_row['payment_type'] == 'part payment':
-          self.button_1_copy_3.visible = False
+          self.part_payment.visible = True
           self.label_3.visible = False
           self.label_5.visible = False
           self.label_9.visible = False
@@ -464,7 +378,8 @@ class View_Details(View_DetailsTemplate):
         # 'part_payment_date' : self.selected_row['part_payment_date'],
         # 'payment_type' : self.selected_row['payment_type'],
         'tenure':self.tenure_label.text,
+        'borrower_full_name':self.selected_row['borrower_full_name']
     }
     
     # Open the part_payment form and pass loan_details as a parameter
-      open_form('lendor.dashboard.today_dues.View_Details.part_payment_copy', loan_details=loan_details)
+      open_form('lendor.dashboard.today_dues.View_Details.part_payment_copy', loan_details=loan_details , selected_row=self.selected_row)

@@ -13,13 +13,14 @@ from datetime import date
 
 
 class part_payment(part_paymentTemplate):
-  def __init__(self,loan_details, **properties):
+  def __init__(self,loan_details,selected_row, **properties):
     self.loan_details = loan_details
+    self.selected_row = selected_row
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
 
     # Any code you write here will run before the form opens.
-    self.loan_id_label.text = loan_details['loan_id']
+    self.loan_id_label.text = loan_details['lender_full_name']
     self.loan_amount_label.text = loan_details['loan_amount']
     self.total_emi_amount_label.text = loan_details['total_emi_amount']
     self.emi_amount_label.text = loan_details['emi_amount']
@@ -345,9 +346,9 @@ class part_payment(part_paymentTemplate):
         print(f"Total Additional Fees: {total_additional_fees}")
         return total_additional_fees
 
-  # def button_1_copy_2_click(self, **event_args):
-  #   """This method is called when the button is clicked"""
-  #   open_form('borrower.dashboard.today_dues')
+  def button_1_copy_2_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    open_form('borrower.dashboard.today_dues.check_out',self.selected_row)
 
             
 
