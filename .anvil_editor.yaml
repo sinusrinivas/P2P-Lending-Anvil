@@ -258,6 +258,7 @@ unique_ids:
     admin.dashboard.manage_issues.ItemTemplate82: '1710855913749748810930595.378'
     admin.dashboard.manage_cms.add_borrower_dropdown_details: '1706089777259168249194386.92175'
     lendor.navigation_bar.Navigation_bar_lender_dashbord: '1706506675442701459967197.9349'
+    lendor.dashboard.Borr_loan_request_copy: '1716278604370582629645996.6898'
     borrower.borrower_registration_forms.dashboard_about_borrower_registration_form: '1710758076230153367761627.2733'
     borrower.dashboard.dashboard_report_a_problem: '1710855550274204496555616.77304'
     lendor.dashboard.view_borrower_loan_request: '1699960229158369964369354.56226'

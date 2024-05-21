@@ -22,4 +22,4 @@ class RowTemplate30(RowTemplate30Template):
 
   def link_2_click(self, **event_args):
       selected_row = self.item
-      open_form("lendor.dashboard.view_borrower_loan_request.Borr_loan_request", selected_row=selected_row)
+      open_form("lendor.dashboard.Borr_loan_request_copy", selected_row=selected_row)
