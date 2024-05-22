@@ -35,7 +35,7 @@ components:
     name: navigation_form_dashboard_1
 - properties: {col_widths: '{"CHNNLA":15,"OHZSYC":45,"EOEYGI":15,"YNUSTO":45,"TGYSCZ":15,"TRRXRD":45,"EGWXJB":15,"SFHJNS":45,"TZYAXL":15,"PGYUMF":45,"SRZLUY":15,"VEOGOV":45,"LUXDGV":15,"PCKMGS":45,"HWFJNP":15,"QTCHNM":45,"CDLMBO":15,"CCTMMS":45,"KDXING":15,"ZHMDPW":45}',
     background: '#05264d ', visible: true, spacing_above: none, spacing_below: none,
-    role: null, foreground: '', border: 2.5px solid white}
+    role: null, foreground: '', border: 1px solid white}
   type: ColumnPanel
   layout_properties: {grid_position: 'XJNATW,SKVUZK', full_width_row: true}
   name: content_panel_copy_3
@@ -211,6 +211,7 @@ components:
   type: Image
   layout_properties: {grid_position: 'XJNATW,EICYCB GDHSWL,RFJCAF QNIDJV,AEDETS'}
   name: image_1_copy_copy
+  event_bindings: {mouse_up: image_1_copy_copy_mouse_up}
 - properties: {text: View profile, bold: true, foreground: Black, font_size: 16}
   type: Button
   layout_properties: {grid_position: 'XJNATW,EICYCB GDHSWL,RFJCAF JHNJQY,ZSAVAQ'}
@@ -312,19 +313,20 @@ components:
   name: spacer_10
 - properties:
     columns:
-    - {id: JKSDUP, title: Product Name, data_key: column_1}
+    - {id: JKSDUP, title: Product Name, data_key: column_1, width: 155.2666015625,
+      expand: false}
     - {id: VJQQOR, title: Loan Amount, data_key: column_2}
     - {id: OJLQEN, title: Tenure, data_key: column_3}
     - {id: GAVKHZ, data_key: column_4, title: 'Interest  '}
-    - {id: NJWOLU, data_key: column_5, title: Repayment Amount}
+    - {id: NJWOLU, data_key: column_5, title: Repayment Amount, expand: true}
     - {id: RNOHUR, data_key: column_7, title: Actions}
     role: tonal-data-grid
-    border: 1px solid black
+    border: 0.1px solid black
   type: DataGrid
   layout_properties: {grid_position: 'XJNATW,EICYCB WYXQXG,WVXVAQ', full_width_row: true}
   name: data_grid_1
   components:
-  - properties: {item_template: borrower.dashboard.RowTemplate7, role: null}
+  - properties: {item_template: borrower.dashboard.RowTemplate7, role: null, border: 0.1px solid black}
     type: RepeatingPanel
     layout_properties: {pinned: false}
     name: repeating_panel_1
