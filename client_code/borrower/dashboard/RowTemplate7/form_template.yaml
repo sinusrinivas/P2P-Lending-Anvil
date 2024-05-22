@@ -1,5 +1,7 @@
 is_package: true
-container: {type: DataRowPanel}
+container:
+  type: DataRowPanel
+  properties: {border: 0.1px solid black}
 components:
 - name: id
   properties: {text: LA001, align: center}
