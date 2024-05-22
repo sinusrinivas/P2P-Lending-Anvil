@@ -194,8 +194,8 @@ components:
         layout_properties: {grid_position: 'LKTWOF,FPVXBC UTZLWC,RUHZYU'}
         components:
         - name: image_4_copy_4
-          properties: {source: _/theme/spouse profession.png, display_mode: shrink_to_fit,
-            height: '100'}
+          properties: {source: _/theme/admin/dashboard/manage_cms/spouse%20profession.png,
+            display_mode: shrink_to_fit, height: '100'}
           type: Image
           layout_properties: {grid_position: 'QGZTNW,PVJEPO'}
           event_bindings: {mouse_up: image_4_copy_4_mouse_up}
@@ -210,8 +210,8 @@ components:
         layout_properties: {grid_position: 'LKTWOF,GBAJZY ZQQIVR,ENGAGN'}
         components:
         - name: image_4_copy_7
-          properties: {source: _/theme/recruitment.png, display_mode: shrink_to_fit,
-            height: '100'}
+          properties: {source: _/theme/admin/dashboard/manage_cms/no%20of%20employees.png,
+            display_mode: shrink_to_fit, height: '100'}
           type: Image
           layout_properties: {grid_position: 'QGZTNW,PVJEPO'}
           event_bindings: {mouse_up: image_4_copy_7_mouse_up}
