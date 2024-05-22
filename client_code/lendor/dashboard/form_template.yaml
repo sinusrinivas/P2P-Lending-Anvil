@@ -92,8 +92,8 @@ components:
   layout_properties: {grid_position: 'CCIIXU,QFGZTD', full_width_row: true, row_background: ''}
   name: column_panel_3
   components:
-  - properties: {height: 46, source: _/theme/other loan.png, horizontal_align: right,
-      spacing_above: large, spacing_below: medium, visible: false}
+  - properties: {height: 46, source: _/theme/borrower/dashboard/new%20loan%20request%202.png,
+      horizontal_align: right, spacing_above: large, spacing_below: medium, visible: false}
     type: Image
     layout_properties: {grid_position: 'XJDGCR,HHWUAS', full_width_row: true}
     event_bindings: {mouse_up: image_6_mouse_up}
@@ -104,8 +104,8 @@ components:
     layout_properties: {grid_position: 'XJDGCR,PHFXOI', full_width_row: true}
     event_bindings: {click: View_Loan_Requests_click}
     name: View_Loan_Requests
-  - properties: {height: 45.20001220703125, source: _/theme/lapsed loan.png, horizontal_align: right,
-      spacing_above: medium, spacing_below: medium, visible: false}
+  - properties: {height: 45.20001220703125, source: _/theme/borrower/dashboard/loan%20extension1.png,
+      horizontal_align: right, spacing_above: medium, spacing_below: medium, visible: false}
     type: Image
     layout_properties: {grid_position: 'RVAYXR,TSZKPJ', full_width_row: true}
     event_bindings: {mouse_up: image_7_mouse_up}
@@ -116,8 +116,8 @@ components:
     layout_properties: {grid_position: 'RVAYXR,SXSDMG', full_width_row: true}
     event_bindings: {click: View_Loan_Extension_click}
     name: View_Loan_Extension
-  - properties: {height: 41.39996337890625, source: _/theme/foreclosure.png, horizontal_align: right,
-      spacing_above: medium, spacing_below: medium, visible: false}
+  - properties: {height: 41.39996337890625, source: _/theme/borrower/dashboard/foreclosure.png,
+      horizontal_align: right, spacing_above: medium, spacing_below: medium, visible: false}
     type: Image
     layout_properties: {grid_position: 'HEXDCB,CWXWOL', full_width_row: true}
     event_bindings: {mouse_up: image_8_mouse_up}
@@ -152,8 +152,8 @@ components:
     layout_properties: {grid_position: 'OXGMXJ,PQPAOD', full_width_row: true}
     event_bindings: {click: View_Loans_click}
     name: View_Loans
-  - properties: {height: 41.79998779296875, source: _/theme/hesitate.png, horizontal_align: right,
-      spacing_above: medium, spacing_below: medium, visible: false}
+  - properties: {height: 41.79998779296875, source: _/theme/lender/dashboard/View%20Lost%20Opportunities%20(2).png,
+      horizontal_align: right, spacing_above: medium, spacing_below: medium, visible: false}
     type: Image
     layout_properties: {grid_position: 'STBYEZ,LGSJLQ', full_width_row: true}
     event_bindings: {mouse_up: image_11_mouse_up}
@@ -164,8 +164,8 @@ components:
     layout_properties: {grid_position: 'STBYEZ,WNGBSR', full_width_row: true}
     event_bindings: {click: View_Lost_Opportunities_click}
     name: View_Lost_Opportunities
-  - properties: {height: 41, source: _/theme/reset-password.png, horizontal_align: right,
-      spacing_above: medium, spacing_below: medium, visible: false}
+  - properties: {height: 41, source: _/theme/lender/dashboard/Change%20Password.png,
+      horizontal_align: right, spacing_above: medium, spacing_below: medium, visible: false}
     type: Image
     layout_properties: {grid_position: 'VRIJDG,BZXLWI', full_width_row: true}
     event_bindings: {mouse_up: image_12_mouse_up}
@@ -176,7 +176,7 @@ components:
     layout_properties: {grid_position: 'VRIJDG,LPUDZC', full_width_row: true}
     event_bindings: {click: Change_Password_click}
     name: Change_Password
-  - properties: {height: 46.5999755859375, source: _/theme/transaction-history-icon.png,
+  - properties: {height: 46.5999755859375, source: _/theme/borrower/dashboard/view%20transaction%20history.png,
       horizontal_align: right, spacing_above: medium, spacing_below: medium, visible: false}
     type: Image
     layout_properties: {grid_position: 'VPJCAA,VJCHUS', full_width_row: true}
@@ -188,8 +188,8 @@ components:
     layout_properties: {grid_position: 'VPJCAA,BQXFAA', full_width_row: true}
     event_bindings: {click: historyView_Transaction_History_click}
     name: historyView_Transaction_History
-  - properties: {height: 40.79998779296875, source: _/theme/resume.png, horizontal_align: right,
-      spacing_above: medium, spacing_below: medium, visible: false}
+  - properties: {height: 40.79998779296875, source: _/theme/lender/dashboard/ViewEdit%20Profile.png,
+      horizontal_align: right, spacing_above: medium, spacing_below: medium, visible: false}
     type: Image
     layout_properties: {grid_position: 'FBRZJC,ULYWCK', full_width_row: true}
     event_bindings: {mouse_up: image_14_mouse_up}
@@ -200,7 +200,7 @@ components:
     layout_properties: {grid_position: 'FBRZJC,HHJFGS', full_width_row: true}
     event_bindings: {click: View_Edit_Profile_click}
     name: View_Edit_Profile
-  - properties: {height: 52.600006103515625, source: _/theme/push-notification.png,
+  - properties: {height: 52.600006103515625, source: _/theme/lender/dashboard/ViewSend%20Notifications%20(2).png,
       vertical_align: center, horizontal_align: right, spacing_above: medium, spacing_below: large,
       visible: false}
     type: Image
@@ -233,7 +233,7 @@ components:
     layout_properties: {grid_position: 'JFQOKW,BEZLBA', full_width_row: true}
     name: column_panel_1
     components:
-    - properties: {height: 42, source: _/theme/connection.png}
+    - properties: {height: 42, source: _/theme/lender/dashboard/connection%20(2).png}
       type: Image
       layout_properties: {grid_position: 'ZGTDIJ,VOWHYF'}
       name: image_5
@@ -275,12 +275,12 @@ components:
     layout_properties: {grid_position: 'IUDCVR,GTMDUJ', full_width_row: true}
     name: column_panel_2
     components:
-    - properties: {role: elevated-card}
+    - properties: {role: elevated-card, col_widths: '{"EITWZQ":25,"DMUXBO":35}'}
       type: ColumnPanel
       layout_properties: {grid_position: 'ERCHQY,NETDIR', full_width_row: true}
       name: column_panel_7
       components:
-      - properties: {height: 49.79998779296875, display_mode: shrink_to_fit, source: _/theme/1.png}
+      - properties: {height: 48.199981689453125, display_mode: shrink_to_fit, source: _/theme/bank_users/personal_loan/loan listing.png}
         type: Image
         layout_properties: {grid_position: 'BJUXXD,EITWZQ'}
         name: image_1
@@ -299,7 +299,7 @@ components:
       layout_properties: {grid_position: 'ERCHQY,PNJZIQ'}
       name: column_panel_4
       components:
-      - properties: {height: 48.79998779296875, source: _/theme/profits.png}
+      - properties: {height: 53, source: _/theme/lender/dashboard/Opening%20Balance%20(2).png}
         type: Image
         layout_properties: {grid_position: 'LIIRFK,KRHWBD'}
         name: image_2
@@ -318,7 +318,7 @@ components:
       layout_properties: {grid_position: 'ERCHQY,IXNAVP'}
       name: column_panel_5
       components:
-      - properties: {height: 43.79998779296875, source: _/theme/piggy-bank.png}
+      - properties: {height: 52, source: _/theme/lender/dashboard/My%20returns%20(2).png}
         type: Image
         layout_properties: {grid_position: 'HVNINY,UKYYYV'}
         name: image_3
@@ -330,12 +330,12 @@ components:
         type: Label
         layout_properties: {grid_position: 'HVNINY,UPASZV EEYXZV,GWYXLY'}
         name: label_7
-    - properties: {role: elevated-card, col_widths: '{"CUOOLO":15,"ZYDTNB":45}'}
+    - properties: {role: elevated-card, col_widths: '{"CUOOLO":20,"ZYDTNB":40}'}
       type: ColumnPanel
       layout_properties: {grid_position: 'ERCHQY,KVCNSJ'}
       name: column_panel_6
       components:
-      - properties: {height: 48.20001220703125, source: _/theme/personal.png}
+      - properties: {height: 61.399993896484375, source: _/theme/lender/dashboard/New%20Loan%20Request%20(2).png}
         type: Image
         layout_properties: {grid_position: 'QAERLY,CUOOLO'}
         name: image_4
