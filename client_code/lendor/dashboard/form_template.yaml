@@ -117,8 +117,8 @@ components:
     event_bindings: {click: View_Loan_Extension_click}
     name: View_Loan_Extension
   - name: image_8
-    properties: {height: 41.39996337890625, source: _/theme/foreclosure.png, horizontal_align: right,
-      spacing_above: medium, spacing_below: medium, visible: false}
+    properties: {height: 41.39996337890625, source: _/theme/borrower/dashboard/foreclosure.png,
+      horizontal_align: right, spacing_above: medium, spacing_below: medium, visible: false}
     type: Image
     layout_properties: {grid_position: 'HEXDCB,CWXWOL', full_width_row: true}
     event_bindings: {mouse_up: image_8_mouse_up}
@@ -177,7 +177,7 @@ components:
     event_bindings: {click: Change_Password_click}
     name: Change_Password
   - name: image_13
-    properties: {height: 46.5999755859375, source: _/theme/transaction-history-icon.png,
+    properties: {height: 46.5999755859375, source: _/theme/borrower/dashboard/view%20transaction%20history.png,
       horizontal_align: right, spacing_above: medium, spacing_below: medium, visible: false}
     type: Image
     layout_properties: {grid_position: 'VPJCAA,VJCHUS', full_width_row: true}
