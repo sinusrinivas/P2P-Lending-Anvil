@@ -1,0 +1,11 @@
+merge:
+  parents: [19a97bac73fe82d78419514e09480c8791752de8, 951265358efe9f84abaeb3fdfd5b7256190a2167]
+  base: 6a030dcdb29010678a64115be15135d574d0c268
+conflicting_items:
+- text_chunks:
+  - start: 24
+    alternatives:
+    - {s: A, l: 24, n: 3}
+    - {s: B, l: 27, n: 5}
+  item: [client_code, lendor.dashboard.RowTemplate30]
+  app_path: [CODE, forms/lendor.dashboard.RowTemplate30]
