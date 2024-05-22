@@ -280,26 +280,91 @@ class check_out(check_outTemplate):
             
             total_due_amount = foreclosure_details['total_due_amount']
             foreclosure_amount = foreclosure_details['foreclose_amount']
-        
-            # Check if lapsed fee or default fee is applicable
-            loan_state_status = app_tables.fin_loan_details.get(loan_id=loan_id)['loan_state_status']
-            if loan_state_status == 'lapsed loan' and selected_row['days_left'] > 6:
-                # Fetch the lapsed fee from product details table
-                product_id = selected_row['product_id']
-                lapsed_fee = app_tables.fin_product_details.get(product_id=product_id)['lapsed_fee']
-                total_due_amount += lapsed_fee
-        
-            elif loan_state_status == 'default loan' and selected_row['days_left'] > 8:
-                # Calculate the number of days between today's date and the selected schedule payment date
-                days_left = selected_row['days_left']
-                days_difference = days_left - 8
-        
-                # Fetch the default fee from product details table
-                product_id = selected_row['product_id']
-                default_fee = app_tables.fin_product_details.get(product_id=product_id)['default_fee']
-                total_default_fee = days_difference * default_fee
-                total_due_amount += total_default_fee
-            # Update labels with foreclosure details
+
+
+            lapsed_settings = app_tables.fin_loan_settings.get(loans="lapsed fee")
+            default_settings = app_tables.fin_loan_settings.get(loans="default fee")
+            npa_settings = app_tables.fin_loan_settings.get(loans="NPA fee")
+            
+            days_left = self.selected_row['days_left']
+            
+            if lapsed_settings:
+                lapsed_start = lapsed_settings['minimum_days']  # Assuming column1 stores the start day
+                lapsed_end = lapsed_settings['maximum_days']    # Assuming column2 stores the end day
+                if lapsed_start < days_left <= lapsed_end:
+                    # Fetch the lapsed fee from product details table
+                    product_id = selected_row['product_id']
+                    lapsed_fee_1 = app_tables.fin_product_details.get(product_id=product_id)['lapsed_fee']
+                    total_lapsed_amount = lapsed_fee_1 * emi / 100
+                    days_difference = days_left - lapsed_start
+                    lapsed_fee = days_difference * total_lapsed_amount
+                    total_due_amount += lapsed_fee
+                   
+            if default_settings:
+              default_start = int(default_settings['minimum_days'])  # Assuming column1 stores the start day
+              default_end = int(default_settings['maximum_days'])    # Assuming column2 stores the end day
+              if default_start < days_left <= default_end:
+                  product_id = selected_row['product_id']
+                  # Fetch default fee details from product details table
+                  product_details = app_tables.fin_product_details.get(product_id=product_id)
+                  
+                  # Check if default_fee or default_fee_amount should be used
+                  if product_details['default_fee'] != 0:
+                      days_difference = days_left - default_start
+                      default_fee_percentage = product_details['default_fee']
+                      default_fee_decimal = default_fee_percentage * emi / 100
+                      total_default_fee = days_difference * default_fee_decimal
+                  elif product_details['default_fee_amount'] != 0:
+                      default_fee_amount = product_details['default_fee_amount']
+                      days_difference = days_left - default_start
+                      total_default_fee = days_difference * default_fee_amount
+                  else:
+                      total_default_fee = 0
+          
+                  total_due_amount += total_default_fee
+                  
+            if npa_settings:
+              npa_start = int(npa_settings['minimum_days'])  # Assuming column1 stores the start day
+              npa_end = int(npa_settings['maximum_days'])    # Assuming column2 stores the end day
+              if npa_start < days_left <= npa_end:
+                  product_id = selected_row['product_id']
+                  product_details = app_tables.fin_product_details.get(product_id=product_id)
+                  
+                  # Check if npa or npa_amount should be used
+                  if product_details['npa'] != 0:
+                      days_difference = days_left - npa_start
+                      npa_percentage = product_details['npa']
+                      npa_decimal = npa_percentage * emi / 100
+                      total_npa_fee = days_difference * npa_decimal
+                  elif product_details['npa_amount'] != 0:
+                      npa_amount = product_details['npa_amount']
+                      days_difference = days_left - npa_start
+                      total_npa_fee = days_difference * npa_amount
+                  else:
+                      total_npa_fee = 0
+          
+                  total_due_amount += total_npa_fee
+
+            adding_remaining_part_payment = app_tables.fin_emi_table.get(
+            loan_id=loan_id,
+            emi_number=selected_row['emi_number']
+            )
+            if adding_remaining_part_payment:
+              part_pay = adding_remaining_part_payment['payment_type']
+              if part_pay == 'part payment':
+                remaining_part_payment = adding_remaining_part_payment['part_payment_amount']
+                # total_due_amount += remaining_part_payment
+                additional_fees = self.calculate_additional_fees(adding_remaining_part_payment)
+                print(additional_fees)
+                self.label_14.text = additional_fees + remaining_part_payment
+                # total_due_amount +=additional_fees
+    
+                total_due_amount += remaining_part_payment
+                total_due_amount +=additional_fees
+                self.part_payment.enabled = False
+                self.label_14.visible = True
+                self.label_15.visible = True
+ 
             self.emi_amount_label.text = "{:.2f}".format(total_due_amount)
             self.extension_amount_label.text = "{:.2f}".format(foreclosure_amount)
             self.total_emi_amount_label.text = "{:.2f}".format(total_due_amount + foreclosure_amount)
@@ -314,13 +379,13 @@ class check_out(check_outTemplate):
         if emi_row is not None and emi_row['payment_type'] == 'part payment':
           self.button_1_copy_3.visible = False
           self.label_3.visible = False
-          self.label_5.visible = False
-          self.label_9.visible = False
-          self.label_12.visible = False
+          # self.label_5.visible = False
+          # self.label_9.visible = False
+          # self.label_12.visible = False
           self.total_emi_amount_label.visible = False
-          self.lapsed.visible = False
-          self.default.visible = False
-          self.npa.visible = False
+          # self.lapsed.visible = False
+          # self.default.visible = False
+          # self.npa.visible = False
 
         adding_remaining_part_payment = app_tables.fin_emi_table.get(
             loan_id=loan_id,
@@ -339,6 +404,8 @@ class check_out(check_outTemplate):
             total_emi += remaining_part_payment
             total_emi +=additional_fees
             self.part_payment.enabled = False
+            self.label_14.visible = True
+            self.label_15.visible = True
         self.update_total_emi_amount(total_emi)
 
     def calculate_date_difference(self,date_to_subtract, today_date):

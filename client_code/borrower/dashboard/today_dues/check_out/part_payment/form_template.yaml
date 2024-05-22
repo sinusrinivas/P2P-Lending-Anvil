@@ -89,7 +89,7 @@ components:
     properties: {text: Extra fee, bold: true, visible: false}
     type: Label
     layout_properties: {grid_position: 'KSEEYY,IVLWPK XEYSAT,BKWSMF'}
-  - properties: {text: Amount, bold: true}
+  - properties: {text: Part Payment Amount, bold: true, visible: true}
     type: Label
     layout_properties: {grid_position: 'KSEEYY,IVLWPK LTVRMD,BUTKKA'}
     name: label_5
@@ -135,10 +135,10 @@ components:
     properties: {visible: false}
     type: Label
     layout_properties: {grid_position: 'KSEEYY,LEWFZL SACBZI,AMQAOD'}
-  - properties: {background: white, placeholder: Enter Amount}
-    type: TextBox
-    layout_properties: {grid_position: 'KSEEYY,LEWFZL TRWDZU,QPVQKP'}
-    name: text_box_1
+  - name: label_6
+    properties: {}
+    type: Label
+    layout_properties: {grid_position: 'KSEEYY,LEWFZL ZYKHDE,IQBDPX'}
   - properties: {height: 299.6428527832031}
     type: Spacer
     layout_properties: {grid_position: 'KSEEYY,KZXJUD'}

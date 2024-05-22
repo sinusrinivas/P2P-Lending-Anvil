@@ -1087,6 +1087,12 @@ db_schema:
     - name: part_payment_amount
       admin_ui: {width: 200, order: 17}
       type: number
+    - name: total_amount_pay
+      admin_ui: {width: 200, order: 18}
+      type: number
+    - name: part_payment_done
+      admin_ui: {width: 200, order: 19}
+      type: number
   fin_borrower_business_type:
     client: full
     server: full
