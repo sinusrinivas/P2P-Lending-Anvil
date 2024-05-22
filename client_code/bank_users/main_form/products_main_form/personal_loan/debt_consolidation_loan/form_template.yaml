@@ -38,8 +38,8 @@ components:
       layout_properties: {grid_position: 'NROBLP,CZAKDO MBZJBS,NDOICY'}
       event_bindings: {click: button_1_click}
     - name: image_1
-      properties: {source: _/theme/women1-removebg-preview.png, height: 409.66668701171875,
-        display_mode: shrink_to_fit}
+      properties: {source: _/theme/bank_users/personal_loan/debt_consolidation_loan/debt-consolidation-main.png,
+        height: 409.66668701171875, display_mode: shrink_to_fit}
       type: Image
       layout_properties: {grid_position: 'NROBLP,IUEWEM'}
   - name: spacer_2
@@ -61,7 +61,7 @@ components:
     type: Spacer
     layout_properties: {grid_position: 'MAHWVT,BFQVBE'}
   - name: image_2
-    properties: {source: _/theme/ml2.png, height: '100'}
+    properties: {source: _/theme/bank_users/personal_loan/marriage_loan/ml2.png, height: '100'}
     type: Image
     layout_properties: {grid_position: 'PLRYKL,ZJGNUR UAQUTB,NICUXP EDUCAN,OXZLLQ'}
   - name: spacer_4
@@ -69,7 +69,8 @@ components:
     type: Spacer
     layout_properties: {grid_position: 'PLRYKL,ZJGNUR UAQUTB,NICUXP RTWXZF,WUJBOW'}
   - name: image_4
-    properties: {source: _/theme/dc4.png, display_mode: shrink_to_fit, height: '80'}
+    properties: {source: _/theme/bank_users/personal_loan/debt_consolidation_loan/no%20penalty.png,
+      display_mode: shrink_to_fit, height: '80'}
     type: Image
     layout_properties: {grid_position: 'PLRYKL,ZJGNUR UAQUTB,NICUXP BSGCXJ,TGERPY'}
   - name: label_5
@@ -96,7 +97,8 @@ components:
     type: Label
     layout_properties: {grid_position: 'PLRYKL,ZJGNUR UAQUTB,TTYXST ZXRRLZ,YNVCHE'}
   - name: image_3
-    properties: {source: _/theme/dc8.png, display_mode: shrink_to_fit, height: '80'}
+    properties: {source: _/theme/bank_users/personal_loan/debt_consolidation_loan/comfortable%20timeframe.png,
+      display_mode: shrink_to_fit, height: '80'}
     type: Image
     layout_properties: {grid_position: 'PLRYKL,MTFOXO BPKUFO,STLQYB'}
   - name: label_7
@@ -113,7 +115,8 @@ components:
     type: Spacer
     layout_properties: {grid_position: 'PLRYKL,MTFOXO FHHSVZ,OZZQGU'}
   - name: image_5
-    properties: {source: _/theme/dc7.png, display_mode: shrink_to_fit, height: '80'}
+    properties: {source: _/theme/bank_users/personal_loan/debt_consolidation_loan/fixed%20interest.png,
+      display_mode: shrink_to_fit, height: '80'}
     type: Image
     layout_properties: {grid_position: 'PLRYKL,MTFOXO JQKWVY,XEODAK'}
   - name: label_11
@@ -182,7 +185,8 @@ components:
     type: Spacer
     layout_properties: {grid_position: 'ZQYRIY,SVKPAN'}
   - name: image_6
-    properties: {source: _/theme/hiw 1.png, display_mode: shrink_to_fit, height: '120'}
+    properties: {source: _/theme/bank_users/personal_loan/how_it_works/creaeate-account.png,
+      display_mode: shrink_to_fit, height: '120'}
     type: Image
     layout_properties: {grid_position: 'SNCZOY,YGAVZK NLUQRH,YCBBHP'}
   - name: label_16
@@ -198,7 +202,8 @@ components:
     type: Label
     layout_properties: {grid_position: 'SNCZOY,YGAVZK MDYMSJ,YLTDVU'}
   - name: image_7
-    properties: {source: _/theme/hiw 2.png, display_mode: shrink_to_fit, height: '120'}
+    properties: {source: _/theme/bank_users/personal_loan/how_it_works/loan_assesment.png,
+      display_mode: shrink_to_fit, height: '120'}
     type: Image
     layout_properties: {grid_position: 'SNCZOY,OVZUMZ HPKIIW,VRYLBR'}
   - name: label_17
@@ -213,7 +218,8 @@ components:
     type: Label
     layout_properties: {grid_position: 'SNCZOY,OVZUMZ IICBJK,BREHMT'}
   - name: image_8
-    properties: {source: _/theme/hiw 3.png, display_mode: shrink_to_fit, height: '120'}
+    properties: {source: _/theme/bank_users/personal_loan/how_it_works/quick_funding.png,
+      display_mode: shrink_to_fit, height: '120'}
     type: Image
     layout_properties: {grid_position: 'SNCZOY,PYJVUQ TKIFZB,MZQASR'}
   - name: label_18
@@ -228,7 +234,8 @@ components:
     type: Label
     layout_properties: {grid_position: 'SNCZOY,PYJVUQ RPHZIE,ZWYBWT'}
   - name: image_9
-    properties: {source: _/theme/hiw 4.png, display_mode: shrink_to_fit, height: '120'}
+    properties: {source: _/theme/bank_users/personal_loan/how_it_works/get%20amount.png,
+      display_mode: shrink_to_fit, height: '120'}
     type: Image
     layout_properties: {grid_position: 'SNCZOY,ATGAMW SCUUZH,LIWVQO'}
   - name: label_19

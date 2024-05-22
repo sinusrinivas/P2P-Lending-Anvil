@@ -45,7 +45,8 @@ components:
       type: Spacer
       layout_properties: {grid_position: 'QTNQBN,JBTPFF OJAYXT,BPJSLJ'}
     - name: image_1
-      properties: {height: 371.66668701171875, source: _/theme/home loan 4.png, display_mode: shrink_to_fit}
+      properties: {height: 371.66668701171875, source: _/theme/bank_users/personal_loan/home_renovation_loan/home%20loan%204.png,
+        display_mode: shrink_to_fit}
       type: Image
       layout_properties: {grid_position: 'QTNQBN,JBTPFF MEKAAK,YRBNLX'}
   - name: spacer_2
@@ -89,7 +90,8 @@ components:
       type: Spacer
       layout_properties: {grid_position: 'JCXBOH,LNZARM GCIUXW,LJZNTF QTHIAD,TWOGUD'}
     - name: image_2
-      properties: {source: _/theme/hm1.png, height: '80', display_mode: shrink_to_fit}
+      properties: {source: _/theme/bank_users/personal_loan/home_renovation_loan/hm1.png,
+        height: '80', display_mode: shrink_to_fit}
       type: Image
       layout_properties: {grid_position: 'JCXBOH,LNZARM GCIUXW,LJZNTF HRUGGH,SEWTQQ'}
     - name: label_6
@@ -108,7 +110,8 @@ components:
       type: Spacer
       layout_properties: {grid_position: 'JCXBOH,LNZARM VTDJNX,CUJPAX SJHBVG,JYWMXU'}
     - name: image_4
-      properties: {source: _/theme/hm3.png, height: '70', display_mode: shrink_to_fit}
+      properties: {source: _/theme/bank_users/personal_loan/home_renovation_loan/hm3.png,
+        height: '70', display_mode: shrink_to_fit}
       type: Image
       layout_properties: {grid_position: 'JCXBOH,LNZARM VTDJNX,CUJPAX JKVOHS,KMYLPS'}
     - name: label_12
@@ -123,7 +126,8 @@ components:
       type: Label
       layout_properties: {grid_position: 'JCXBOH,LNZARM VTDJNX,CACREY PRXNIT,GLTKDV'}
     - name: image_3
-      properties: {source: _/theme/hm2.png, height: '130', display_mode: zoom_to_fill}
+      properties: {source: _/theme/bank_users/personal_loan/home_renovation_loan/hm2.png,
+        height: '130', display_mode: zoom_to_fill}
       type: Image
       layout_properties: {grid_position: 'JCXBOH,VIJATW PTZVFW,NGKNGF'}
     - name: label_8
@@ -146,7 +150,8 @@ components:
       type: Spacer
       layout_properties: {grid_position: 'JCXBOH,VIJATW UYOEXC,AZJCAO XZIYMW,IIOTRX'}
     - name: image_5
-      properties: {source: _/theme/hm4.png, height: '100', display_mode: shrink_to_fit}
+      properties: {source: _/theme/bank_users/personal_loan/home_renovation_loan/hm4.png,
+        height: '100', display_mode: shrink_to_fit}
       type: Image
       layout_properties: {grid_position: 'JCXBOH,VIJATW UYOEXC,AZJCAO NYGOWC,JDNPSO'}
     - name: label_10
@@ -212,7 +217,8 @@ components:
       type: Spacer
       layout_properties: {grid_position: 'XNHMZY,OQOQKV'}
     - name: image_6
-      properties: {source: _/theme/hiw 1.png, display_mode: shrink_to_fit, height: '120'}
+      properties: {source: _/theme/bank_users/personal_loan/how_it_works/creaeate-account.png,
+        display_mode: shrink_to_fit, height: '120'}
       type: Image
       layout_properties: {grid_position: 'YMIKOX,SCWMIP LAUMIK,KASORE'}
     - name: label_16
@@ -228,7 +234,8 @@ components:
       type: Label
       layout_properties: {grid_position: 'YMIKOX,SCWMIP CGNPFM,NEGSIX'}
     - name: image_7
-      properties: {source: _/theme/hiw 2.png, display_mode: shrink_to_fit, height: '120'}
+      properties: {source: _/theme/bank_users/personal_loan/how_it_works/loan_assesment.png,
+        display_mode: shrink_to_fit, height: '120'}
       type: Image
       layout_properties: {grid_position: 'YMIKOX,QUZALW ERQTXQ,BEGYNC'}
     - name: label_17
@@ -243,7 +250,8 @@ components:
       type: Label
       layout_properties: {grid_position: 'YMIKOX,QUZALW ZVAGPN,FVFAJV'}
     - name: image_8
-      properties: {source: _/theme/hiw 3.png, display_mode: shrink_to_fit, height: '120'}
+      properties: {source: _/theme/bank_users/personal_loan/how_it_works/quick_funding.png,
+        display_mode: shrink_to_fit, height: '120'}
       type: Image
       layout_properties: {grid_position: 'YMIKOX,OBENAF MSDYBF,KIWYQJ'}
     - name: label_18
@@ -258,7 +266,8 @@ components:
       type: Label
       layout_properties: {grid_position: 'YMIKOX,OBENAF ZTCRGA,DPNLAR'}
     - name: image_9
-      properties: {source: _/theme/hiw 4.png, display_mode: shrink_to_fit, height: '120'}
+      properties: {source: _/theme/bank_users/personal_loan/how_it_works/get%20amount.png,
+        display_mode: shrink_to_fit, height: '120'}
       type: Image
       layout_properties: {grid_position: 'YMIKOX,HSSJDI FJABFX,HJIIMQ'}
     - name: label_19

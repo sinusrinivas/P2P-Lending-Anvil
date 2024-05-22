@@ -764,7 +764,7 @@ components:
     type: Label
     layout_properties: {grid_position: 'FKQDTP,UCIDRK VYARJR,GSNOHL'}
   - name: image_14
-    properties: {source: _/theme/bank_users/main_form/icons8-coins-100.png, display_mode: shrink_to_fit,
+    properties: {source: _/theme/bank_users/personal_loan/funding of loan.png, display_mode: shrink_to_fit,
       height: 151.25}
     type: Image
     layout_properties: {grid_position: 'FKQDTP,MRHEGW BUBSBU,GLHKQX'}
@@ -1240,7 +1240,8 @@ components:
       type: Spacer
       layout_properties: {grid_position: 'GRBHLA,QDLVMT XQAEHS,EJDOZA'}
     - name: image_24
-      properties: {source: _/theme/hehe.png, display_mode: shrink_to_fit, height: '161.20001220703125'}
+      properties: {source: _/theme/bank_users/personal_loan/loan_repayment.png, display_mode: shrink_to_fit,
+        height: '161.20001220703125'}
       type: Image
       layout_properties: {grid_position: 'GRBHLA,QDLVMT NUQVZD,ARXQMG'}
     - name: label_107
@@ -1267,8 +1268,8 @@ components:
       type: Spacer
       layout_properties: {grid_position: 'DLLTSL,SJXKVU OLHICG,FKXERJ'}
     - name: image_26
-      properties: {source: _/theme/loan_pre-removebg-preview.png, display_mode: shrink_to_fit,
-        height: 161.20001220703125, role: null}
+      properties: {source: _/theme/bank_users/personal_loan/loan_pre_payment.png,
+        display_mode: shrink_to_fit, height: 161.20001220703125, role: null}
       type: Image
       layout_properties: {grid_position: 'DLLTSL,SJXKVU MDJARC,SMJIYN'}
     - name: label_109
@@ -1285,7 +1286,7 @@ components:
       type: Spacer
       layout_properties: {grid_position: 'DLLTSL,JSUQYH VBSIBS,WYRAXF'}
     - name: image_25
-      properties: {source: _/theme/3-removebg-preview.png, display_mode: shrink_to_fit,
+      properties: {source: _/theme/bank_users/personal_loan/loan-completion.png, display_mode: shrink_to_fit,
         height: '161.20001220703125'}
       type: Image
       layout_properties: {grid_position: 'DLLTSL,JSUQYH PZAITQ,XBTBZZ'}
@@ -1320,7 +1321,8 @@ components:
     type: Spacer
     layout_properties: {grid_position: 'FRWZKN,MWBFZG'}
   - name: image_27
-    properties: {source: _/theme/marriage loan.png, display_mode: shrink_to_fit, height: '180'}
+    properties: {source: _/theme/bank_users/personal_loan/marriage_loan/marriage%20loan.png,
+      display_mode: shrink_to_fit, height: '180'}
     type: Image
     layout_properties: {grid_position: 'HKRWDU,OIWFFR YCTVWY,VEWUCL'}
     event_bindings: {mouse_up: image_27_mouse_up}
@@ -1330,7 +1332,8 @@ components:
     layout_properties: {grid_position: 'HKRWDU,OIWFFR OQTSCP,GHBZEO'}
     event_bindings: {click: link_4_click}
   - name: image_28
-    properties: {source: _/theme/debt consoidation.png, height: '180'}
+    properties: {source: _/theme/bank_users/personal_loan/debt_consolidation_loan/debt%20consoidation.png,
+      height: '180'}
     type: Image
     layout_properties: {grid_position: 'HKRWDU,RJKTGO WCSJMM,RHUHGL'}
     event_bindings: {mouse_up: image_28_mouse_up}
@@ -1340,7 +1343,8 @@ components:
     layout_properties: {grid_position: 'HKRWDU,RJKTGO MRLEBN,EYPKGI'}
     event_bindings: {click: link_5_click}
   - name: image_30
-    properties: {source: _/theme/credit card payment.png, height: '180'}
+    properties: {source: _/theme/bank_users/personal_loan/credit_card_loan/credit%20card%20payment.png,
+      height: '180'}
     type: Image
     layout_properties: {grid_position: 'HKRWDU,BIWRJN KLEEGB,GJKYDY'}
     event_bindings: {mouse_up: image_30_mouse_up}
@@ -1354,7 +1358,8 @@ components:
     type: Spacer
     layout_properties: {grid_position: 'YGJAXD,MAMFWX'}
   - name: image_31
-    properties: {source: _/theme/home renovation.png, height: '180'}
+    properties: {source: _/theme/bank_users/personal_loan/home_renovation_loan/home%20renovation.png,
+      height: '180'}
     type: Image
     layout_properties: {grid_position: 'UMIEBZ,FILYJT TDXYIX,QDTACS'}
     event_bindings: {mouse_up: image_31_mouse_up}
@@ -1364,7 +1369,8 @@ components:
     layout_properties: {grid_position: 'UMIEBZ,FILYJT SAFIPT,WQHYEO'}
     event_bindings: {click: link_15_click}
   - name: image_32
-    properties: {source: _/theme/travel loan.png, height: '180'}
+    properties: {source: _/theme/bank_users/personal_loan/travel_loan/personal-travel%20loan.png,
+      height: '180'}
     type: Image
     layout_properties: {grid_position: 'UMIEBZ,OQXVNP OKLHOI,VOXNPE'}
     event_bindings: {mouse_up: image_32_mouse_up}
@@ -1374,7 +1380,8 @@ components:
     layout_properties: {grid_position: 'UMIEBZ,OQXVNP XHZNZQ,UMRCTQ'}
     event_bindings: {click: link_16_click}
   - name: image_33
-    properties: {source: _/theme/medical loan.png, height: '180'}
+    properties: {source: _/theme/bank_users/personal_loan/medical_loan/medical%20loan_2.png,
+      height: '180'}
     type: Image
     layout_properties: {grid_position: 'UMIEBZ,QAZPRB WKKDUO,ZMVCDL'}
     event_bindings: {mouse_up: image_33_mouse_up}
@@ -1388,7 +1395,8 @@ components:
     type: Spacer
     layout_properties: {grid_position: 'UBFWNY,KVRMVI'}
   - name: image_35
-    properties: {source: _/theme/education loan.png, height: '180'}
+    properties: {source: _/theme/bank_users/personal_loan/education_loan/education%20loan.png,
+      height: '180'}
     type: Image
     layout_properties: {grid_position: 'LNQDNC,XNPEPC BPRZZM,ADAKPS'}
     event_bindings: {mouse_up: image_35_mouse_up}
@@ -1399,7 +1407,8 @@ components:
     layout_properties: {grid_position: 'LNQDNC,XNPEPC MDOIKG,TFOTVP'}
     event_bindings: {click: link_18_click}
   - name: image_36
-    properties: {source: _/theme/business loann.png, height: '180'}
+    properties: {source: _/theme/bank_users/main_form/business_loan/business%20loann.png,
+      height: '180'}
     type: Image
     layout_properties: {grid_position: 'LNQDNC,XDBLLP JCNNMW,VQJIWD'}
     event_bindings: {mouse_up: image_36_mouse_up}

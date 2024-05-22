@@ -335,7 +335,7 @@ components:
     type: Label
     layout_properties: {grid_position: 'ISVYFH,JOUREZ BWOFAD,YWPXQF'}
   - name: image_8
-    properties: {source: _/theme/bank_users/main_form/business_loan/borrow-apply-icon5.png,
+    properties: {source: _/theme/bank_users/main_form/business_loan/fast_disbursal.png,
       display_mode: shrink_to_fit, horizontal_align: left, height: '80'}
     type: Image
     layout_properties: {grid_position: 'XQMMMY,QNBESR TFRCXQ,XOAIHX'}
@@ -446,8 +446,8 @@ components:
     type: Label
     layout_properties: {grid_position: 'KCHXXB,MSBQFS BJPHQV,JZPHWY'}
   - name: image_10
-    properties: {source: _/theme/borrow-money-online-icon13.png, display_mode: shrink_to_fit,
-      horizontal_align: left, height: '80'}
+    properties: {source: _/theme/bank_users/main_form/business_loan/secure-transperent.png,
+      display_mode: shrink_to_fit, horizontal_align: left, height: '80'}
     type: Image
     layout_properties: {grid_position: 'JGUDEZ,ZZLXJK'}
   - name: label_33
@@ -707,7 +707,7 @@ components:
   type: Label
   layout_properties: {grid_position: 'XBKMRH,WEGYDI PXXVSK,UMTYTZ'}
 - name: image_14
-  properties: {source: _/theme/bank_users/main_form/icons8-coins-100.png, display_mode: shrink_to_fit,
+  properties: {source: _/theme/bank_users/personal_loan/funding of loan.png, display_mode: shrink_to_fit,
     height: 151.25}
   type: Image
   layout_properties: {grid_position: 'XBKMRH,UZJKPE YMCNAE,QOEJGM'}

@@ -29,11 +29,6 @@ components:
     layout_properties: {grid_position: 'IPYSRE,GWXDDK', full_width_row: true}
     event_bindings: {click: button_9_click}
     name: button_9
-  - name: image_13
-    properties: {height: '72', source: _/theme/bank_users/main_form/about_us/icons8-sorting-arrows-100.png,
-      background: ''}
-    type: Image
-    layout_properties: {grid_position: 'IPYSRE,SYWIAU'}
   - properties: {}
     type: form:borrower.dashboard.Navigation_form_dashboard
     layout_properties: {grid_position: 'IPYSRE,AJWSNT'}
@@ -45,9 +40,14 @@ components:
   layout_properties: {grid_position: 'XJNATW,SKVUZK', full_width_row: true}
   name: content_panel_copy_3
   components:
-  - properties: {height: '70', source: _/theme/unnamed (5).png, display_mode: shrink_to_fit}
+  - name: spacer_1
+    properties: {height: '2'}
+    type: Spacer
+    layout_properties: {grid_position: 'JRTGWO,CHNNLA IGFOHU,UQPSPN'}
+  - properties: {height: '30', source: _/theme/borrower/dashboard/new%20loan%20request%202.png,
+      display_mode: shrink_to_fit}
     type: Image
-    layout_properties: {grid_position: 'JRTGWO,CHNNLA'}
+    layout_properties: {grid_position: 'JRTGWO,CHNNLA GNTEIC,HYLQUM'}
     event_bindings: {mouse_up: image_3_mouse_up}
     name: image_3
   - properties: {text: New Loan Request, align: left, foreground: white, bold: true,
@@ -56,11 +56,12 @@ components:
     layout_properties: {grid_position: 'JRTGWO,OHZSYC', full_width_row: true}
     event_bindings: {click: button_1_click}
     name: button_1
-  - properties: {height: '5'}
+  - name: spacer_4
+    properties: {height: '1'}
     type: Spacer
-    layout_properties: {grid_position: 'TOTPEB,CXTVER'}
-    name: spacer_1
-  - properties: {height: '70', source: _/theme/unnamed (6).png, display_mode: shrink_to_fit}
+    layout_properties: {grid_position: 'WYKKLQ,EOSGHO'}
+  - properties: {height: '50', source: _/theme/borrower/dashboard/todays%20dues.png,
+      display_mode: shrink_to_fit}
     type: Image
     layout_properties: {grid_position: 'KMQVGZ,EOEYGI'}
     event_bindings: {mouse_up: image_4_mouse_up}
@@ -70,11 +71,12 @@ components:
     layout_properties: {grid_position: 'KMQVGZ,YNUSTO', full_width_row: true}
     event_bindings: {click: button_2_click}
     name: button_2
-  - properties: {height: '5'}
+  - name: spacer_2
+    properties: {height: '1'}
     type: Spacer
-    layout_properties: {grid_position: 'AMTWDO,YZYCFL'}
-    name: spacer_2
-  - properties: {height: '40', source: _/theme/business-credit-score (1).png}
+    layout_properties: {grid_position: 'CWCSUC,NFGRHL'}
+  - properties: {height: '45', source: _/theme/borrower/dashboard/borrower_view_loans.png,
+      display_mode: shrink_to_fit}
     type: Image
     layout_properties: {grid_position: 'BBNVSF,TGYSCZ'}
     event_bindings: {mouse_up: image_5_mouse_up}
@@ -85,11 +87,12 @@ components:
     layout_properties: {grid_position: 'BBNVSF,TRRXRD', full_width_row: true}
     event_bindings: {click: button_3_click}
     name: button_3
-  - properties: {height: '5'}
+  - name: spacer_5
+    properties: {height: '1'}
     type: Spacer
-    layout_properties: {grid_position: 'NQTAWA,PNQZNW'}
-    name: spacer_4
-  - properties: {height: '40', source: _/theme/foreclosure.png, display_mode: shrink_to_fit}
+    layout_properties: {grid_position: 'QNNOCC,LGBASS'}
+  - properties: {height: '50', source: _/theme/borrower/dashboard/foreclosure.png,
+      display_mode: shrink_to_fit}
     type: Image
     layout_properties: {grid_position: 'IXDBCZ,EGWXJB'}
     event_bindings: {mouse_up: image_7_mouse_up}
@@ -100,11 +103,12 @@ components:
     layout_properties: {grid_position: 'IXDBCZ,SFHJNS', full_width_row: true}
     event_bindings: {click: button_4_copy_click}
     name: button_4_copy
-  - properties: {height: '5'}
+  - name: spacer_6
+    properties: {height: '1'}
     type: Spacer
-    layout_properties: {grid_position: 'APGMFV,SDOASL'}
-    name: spacer_5
-  - properties: {height: '40', source: _/theme/tracking.png, display_mode: shrink_to_fit}
+    layout_properties: {grid_position: 'IOLHML,FZHPZW'}
+  - properties: {height: '50', source: _/theme/borrower/dashboard/application%20tracker.png,
+      display_mode: shrink_to_fit}
     type: Image
     layout_properties: {grid_position: 'OQIIWH,TZYAXL'}
     event_bindings: {mouse_up: image_6_mouse_up}
@@ -115,11 +119,12 @@ components:
     layout_properties: {grid_position: 'OQIIWH,PGYUMF', full_width_row: true}
     event_bindings: {click: button_5_click}
     name: button_5
-  - properties: {height: '5'}
+  - name: spacer_7
+    properties: {height: '1'}
     type: Spacer
-    layout_properties: {grid_position: 'THTAHO,RANIIM'}
-    name: spacer_6
-  - properties: {height: '40', source: _/theme/lapsed loan.png}
+    layout_properties: {grid_position: 'QDQQQK,NUVJGL'}
+  - properties: {height: '50', source: _/theme/borrower/dashboard/loan%20extension1.png,
+      display_mode: shrink_to_fit}
     type: Image
     layout_properties: {grid_position: 'RKKUUW,SRZLUY'}
     event_bindings: {mouse_up: image_8_mouse_up}
@@ -130,11 +135,12 @@ components:
     layout_properties: {grid_position: 'RKKUUW,VEOGOV', full_width_row: true}
     event_bindings: {click: button_6_copy_click}
     name: button_6_copy
-  - properties: {height: '5'}
+  - name: spacer_11
+    properties: {height: '1'}
     type: Spacer
-    layout_properties: {grid_position: 'TCKTRA,BDOOWM'}
-    name: spacer_7
-  - properties: {height: '40', source: _/theme/transaction-history-icon.png, display_mode: shrink_to_fit}
+    layout_properties: {grid_position: 'BHJZHG,LKOHHE'}
+  - properties: {height: '40', source: _/theme/borrower/dashboard/view%20transaction%20history.png,
+      display_mode: shrink_to_fit}
     type: Image
     layout_properties: {grid_position: 'QHSUTS,LUXDGV'}
     event_bindings: {mouse_up: image_9_mouse_up}
@@ -145,11 +151,16 @@ components:
     layout_properties: {grid_position: 'QHSUTS,PCKMGS', full_width_row: true}
     event_bindings: {click: button_7_click}
     name: button_7
-  - properties: {height: '5'}
+  - name: spacer_13
+    properties: {height: '1'}
+    type: Spacer
+    layout_properties: {grid_position: 'RXSOBG,VOIZVA'}
+  - properties: {height: ''}
     type: Spacer
     layout_properties: {grid_position: 'DXEAVR,IAUQLP'}
     name: spacer_8
-  - properties: {height: '40', source: _/theme/coupon.png, display_mode: shrink_to_fit}
+  - properties: {height: '50', source: _/theme/borrower/dashboard/discount%20coupons.png,
+      display_mode: shrink_to_fit}
     type: Image
     layout_properties: {grid_position: 'TRWKIA,HWFJNP'}
     event_bindings: {mouse_up: image_10_mouse_up}
@@ -160,11 +171,12 @@ components:
     layout_properties: {grid_position: 'TRWKIA,QTCHNM', full_width_row: true}
     event_bindings: {click: button_8_click}
     name: button_8
-  - properties: {height: '5'}
+  - name: spacer_14
+    properties: {height: '1'}
     type: Spacer
-    layout_properties: {grid_position: 'WXNFDS,XPWNAX'}
-    name: spacer_14
-  - properties: {height: '40', source: _/theme/down-payment.png, display_mode: shrink_to_fit}
+    layout_properties: {grid_position: 'OCCMCT,LXNASM'}
+  - properties: {height: '45', source: _/theme/borrower/dashboard/borrower_partpayment.png,
+      display_mode: shrink_to_fit}
     type: Image
     layout_properties: {grid_position: 'GJHBNI,CDLMBO'}
     name: image_10_copy
@@ -174,11 +186,12 @@ components:
     layout_properties: {grid_position: 'GJHBNI,CCTMMS'}
     event_bindings: {click: button_4_click}
     name: button_4
-  - properties: {height: '5'}
+  - name: spacer_19
+    properties: {height: '1'}
     type: Spacer
-    layout_properties: {grid_position: 'BTBIWF,ETBOEP'}
-    name: spacer_13
-  - properties: {height: '40', source: _/theme/portfolio (2).png, display_mode: shrink_to_fit}
+    layout_properties: {grid_position: 'NGWGKF,AGVJIF'}
+  - properties: {height: '50', source: _/theme/borrower/dashboard/borrower_portfolio.png,
+      display_mode: shrink_to_fit}
     type: Image
     layout_properties: {grid_position: 'TGHKYS,KDXING'}
     name: image_10_copy_copy
@@ -186,7 +199,7 @@ components:
     type: Button
     layout_properties: {grid_position: 'TGHKYS,ZHMDPW'}
     name: button_6
-  - properties: {height: '5'}
+  - properties: {height: '1'}
     type: Spacer
     layout_properties: {grid_position: 'BGTBAA,JGZFPN'}
     name: spacer_9
@@ -212,7 +225,8 @@ components:
   layout_properties: {grid_position: 'XJNATW,EICYCB GDHSWL,LWORUH PATSWD,BHOXKV SEMPGY,WPIOHO
       TUVEVM,PQDGRF'}
   name: spacer_16
-- properties: {height: '20', source: _/theme/telephone.png, display_mode: shrink_to_fit}
+- properties: {height: '20', source: _/theme/borrower/dashboard/borrower_mobile.png,
+    display_mode: zoom_to_fill}
   type: Image
   layout_properties: {grid_position: 'XJNATW,EICYCB GDHSWL,LWORUH PATSWD,BHOXKV SEMPGY,WPIOHO
       HXZJES,QQSKGX'}
@@ -226,7 +240,8 @@ components:
   layout_properties: {grid_position: 'XJNATW,EICYCB GDHSWL,LWORUH PATSWD,BHOXKV DPRJTX,XEZVML
       XDVKVD,VSLEJE'}
   name: spacer_17
-- properties: {height: '20', source: _/theme/user (1).png, display_mode: shrink_to_fit}
+- properties: {height: '20', source: _/theme/borrower/dashboard/borrower_member_since.png,
+    display_mode: zoom_to_fill}
   type: Image
   layout_properties: {grid_position: 'XJNATW,EICYCB GDHSWL,LWORUH PATSWD,BHOXKV DPRJTX,XEZVML
       OATRJL,SWIBVK'}
@@ -250,7 +265,8 @@ components:
   layout_properties: {grid_position: 'XJNATW,EICYCB GDHSWL,LWORUH PATSWD,UBGOIF XMNMGS,DCWODV
       NEGQGP,DNPTOC ZBLSPD,OPGEHY'}
   name: spacer_15
-- properties: {height: '20', source: _/theme/credit-limit (1).png, display_mode: shrink_to_fit}
+- properties: {height: '20', source: _/theme/borrower/dashboard/borrower_credit_limit.png,
+    display_mode: zoom_to_fill}
   type: Image
   layout_properties: {grid_position: 'XJNATW,EICYCB GDHSWL,LWORUH PATSWD,UBGOIF XMNMGS,DCWODV
       NEGQGP,DNPTOC XAQFFC,CPBMQH'}
@@ -265,7 +281,8 @@ components:
   layout_properties: {grid_position: 'XJNATW,EICYCB GDHSWL,LWORUH PATSWD,UBGOIF XMNMGS,DCWODV
       WKWXGE,RKLYJE TWETSP,OKCLZL'}
   name: spacer_18
-- properties: {height: '20', source: _/theme/icons8-coins-100 (1).png}
+- properties: {height: 19.999969482421875, source: _/theme/borrower/dashboard/borrower_balance.png,
+    display_mode: zoom_to_fill}
   type: Image
   layout_properties: {grid_position: 'XJNATW,EICYCB GDHSWL,LWORUH PATSWD,UBGOIF XMNMGS,DCWODV
       WKWXGE,RKLYJE GJIDHC,YUGOTA'}
