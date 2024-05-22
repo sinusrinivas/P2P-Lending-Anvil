@@ -61,6 +61,16 @@ class loan_settings(loan_settingsTemplate):
             npa_value1 = int(npa_value1)
             npa_value2 = int(npa_value2)
 
+            if value1 >= value2:
+                alert("Late Payment Minimum Days must be less than Late Payment Maximum Days.")
+                return
+            if default_value1 >= default_value2:
+                alert("default Minimum Days must be less than default Maximum Days.")
+                return
+            if npa_value1 >= npa_value2:
+                alert("NPA Minimum Days must be less than NPA Maximum Days.")
+                return
+
             if self.current_entry_id:
                 # Update the existing entry
                 entry = app_tables.fin_loan_settings.get(loans='lapsed fee')
@@ -115,7 +125,7 @@ class loan_settings(loan_settingsTemplate):
             self.display_latest_settings()
 
             # Optionally, display a success message
-            alert("Loan dates saved successfully!")
+            alert("Loan days saved successfully!")
         else:
             alert("Please enter valid integer values for all fields.")
 
