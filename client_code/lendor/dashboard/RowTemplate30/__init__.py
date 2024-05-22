@@ -25,3 +25,8 @@ class RowTemplate30(RowTemplate30Template):
       selcted_row=self.item
       open_form("lendor.dashboard.view_borrower_loan_request.Borr_loan_request", selected_row=selcted_row)
     
+      selected_row = self.item
+      
+
+        # Open the Borr_loan_request form with the selected row data
+      open_form("lendor.dashboard.view_borrower_loan_request.Borr_loan_request", selected_row=selected_row)
