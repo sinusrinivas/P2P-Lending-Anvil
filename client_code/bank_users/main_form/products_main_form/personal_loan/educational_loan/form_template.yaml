@@ -15,7 +15,7 @@ components:
     layout_properties: {grid_position: 'VFMWUW,LMUGVD', full_width_row: true}
     components:
     - name: label_1
-      properties: {text: GTPL - Your go-to for Education Loans Tailored for Working Professionals.,
+      properties: {text: Ascends - Your go-to for Education Loans Tailored for Working Professionals.,
         bold: true, font_size: 35}
       type: Label
       layout_properties: {grid_position: 'QTNQBN,OPOTBI WUQDPS,DPVFAQ'}
@@ -237,7 +237,7 @@ components:
       type: Label
       layout_properties: {grid_position: 'BFMUDJ,POSEEM RHPUBB,KBETOS'}
     - name: label_10
-      properties: {text: This is precisely what GTPL has to offer., font_size: 17,
+      properties: {text: This is precisely what Ascends has to offer., font_size: 17,
         bold: true}
       type: Label
       layout_properties: {grid_position: 'BFMUDJ,POSEEM LRQRDD,QVFHOY'}
@@ -301,7 +301,7 @@ components:
         type: Spacer
         layout_properties: {grid_position: 'CSAAOX,RAPODP'}
       - name: label_30
-        properties: {text: 'Utilizing our exclusive Beesem scoring system, we assess
+        properties: {text: 'Utilizing our exclusive Ascends scoring system, we assess
             your profile, gauge your creditworthiness, propose an appropriate interest
             rate, and devise a customizable repayment plan tailored to your needs.
 
@@ -532,7 +532,7 @@ components:
     layout_properties: {grid_position: 'UMUTOS,OXMWFF'}
   - name: label_51
     properties: {text: 'To qualify for an education loan, it''s crucial to ensure
-        you meet all the eligibility criteria. At i2iFunding, when we receive an application
+        you meet all the eligibility criteria. At Ascends, when we receive an application
         for an education loan, we typically start by evaluating the following factors:
 
         ', font_size: 18, align: center}
@@ -918,7 +918,7 @@ components:
       properties: {text: '
 
           It''s clear why education loans are in high demand among the offerings provided
-          by i2iFunding.
+          by Ascends.
 
           ', align: center, bold: true, font_size: 18}
       type: Label
@@ -937,7 +937,7 @@ components:
         type: Spacer
         layout_properties: {grid_position: 'WUJJOP,HBKWAZ'}
       - name: label_83
-        properties: {text: 'GTPL: Your Partner in Educational Excellence!', align: center,
+        properties: {text: 'Ascends: Your Partner in Educational Excellence!', align: center,
           bold: true, font_size: 30, foreground: white}
         type: Label
         layout_properties: {grid_position: 'BMGQPY,MVTVHZ'}
@@ -1052,8 +1052,8 @@ components:
         components:
         - name: label_4_copy_2
           properties: {role: null, align: left, tooltip: '', border: '', foreground: white,
-            visible: true, text: '© 2023 - 2024, GTPL - All Rights    Reserved', font_size: null,
-            font: '', spacing_above: small, icon_align: left, spacing_below: small,
+            visible: true, text: '© 2023 - 2024, Ascends - All Rights    Reserved',
+            font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small,
             italic: false, background: '#05264d', bold: true, underline: false, icon: ''}
           type: Label
           layout_properties: {}
