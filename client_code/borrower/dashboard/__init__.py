@@ -611,4 +611,8 @@ class dashboard(dashboardTemplate):
     def button_4_click(self, **event_args):
       """This method is called when the button is clicked"""
       pass
+
+    def image_1_copy_copy_mouse_up(self, x, y, button, **event_args):
+      """This method is called when a mouse button is released on this component"""
+      open_form('borrower.dashboard.borrower_profile')
       
