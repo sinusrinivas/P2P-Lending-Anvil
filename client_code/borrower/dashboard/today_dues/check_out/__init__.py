@@ -82,81 +82,93 @@ class check_out(check_outTemplate):
         npa_settings = app_tables.fin_loan_settings.get(loans="NPA fee")
         
         days_left = selected_row['days_left']
+        product_id = selected_row['product_id']        
+        # Initialize variables for different fees
+        total_lapsed_amount = 0
+        total_default_fee = 0
+        total_npa_fee = 0
         
         if lapsed_settings:
-            lapsed_start = lapsed_settings['minimum_days']  # Assuming column1 stores the start day
-            lapsed_end = lapsed_settings['maximum_days']    # Assuming column2 stores the end day
+            lapsed_start = lapsed_settings['minimum_days']
+            lapsed_end = lapsed_settings['maximum_days']
             if lapsed_start < days_left <= lapsed_end:
-                # Fetch the lapsed fee from product details table
-                product_id = selected_row['product_id']
-                lapsed_fee_1 = app_tables.fin_product_details.get(product_id=product_id)['lapsed_fee']
-                total_lapsed_amount = lapsed_fee_1 * emi / 100
+                lapsed_fee_percentage = app_tables.fin_product_details.get(product_id=product_id)['lapsed_fee']
                 days_difference = days_left - lapsed_start
-                lapsed_fee = days_difference * total_lapsed_amount
-                total_emi += lapsed_fee
-                self.lapsed.text = "{:.2f}".format(lapsed_fee)
+                total_lapsed_amount = days_difference * (lapsed_fee_percentage * emi / 100)
+                total_emi += total_lapsed_amount
+                self.lapsed.text = "{:.2f}".format(total_lapsed_amount)
                 self.lapsed.visible = True
                 self.label_5.visible = True
                 self.default.visible = False
                 self.label_9.visible = False
-
-
+        
         if default_settings:
-          default_start = int(default_settings['minimum_days'])  # Assuming column1 stores the start day
-          default_end = int(default_settings['maximum_days'])    # Assuming column2 stores the end day
-          if default_start < days_left <= default_end:
-              product_id = selected_row['product_id']
-              # Fetch default fee details from product details table
-              product_details = app_tables.fin_product_details.get(product_id=product_id)
-              
-              # Check if default_fee or default_fee_amount should be used
-              if product_details['default_fee'] != 0:
-                  days_difference = days_left - default_start
-                  default_fee_percentage = product_details['default_fee']
-                  default_fee_decimal = default_fee_percentage * emi / 100
-                  total_default_fee = days_difference * default_fee_decimal
-              elif product_details['default_fee_amount'] != 0:
-                  default_fee_amount = product_details['default_fee_amount']
-                  days_difference = days_left - default_start
-                  total_default_fee = days_difference * default_fee_amount
-              else:
-                  total_default_fee = 0
-      
-              total_emi += total_default_fee
-              self.default.text = "{:.2f}".format(total_default_fee)
-              self.default.visible = True
-              self.label_9.visible = True
-              self.lapsed.visible = False
-              self.label_5.visible = False
-
+            default_start = int(default_settings['minimum_days'])
+            default_end = int(default_settings['maximum_days'])
+            if default_start < days_left <= default_end:
+                product_details = app_tables.fin_product_details.get(product_id=product_id)
+                if product_details['default_fee'] != 0:
+                    days_difference = days_left - default_start
+                    default_fee_percentage = product_details['default_fee']
+                    total_default_fee = days_difference * (default_fee_percentage * emi / 100)
+                elif product_details['default_fee_amount'] != 0:
+                    days_difference = days_left - default_start
+                    total_default_fee = days_difference * product_details['default_fee_amount']
+                
+                # Include lapsed fee during default period
+                if days_left > lapsed_end:
+                    lapsed_fee_percentage = app_tables.fin_product_details.get(product_id=product_id)['lapsed_fee']
+                    days_in_lapsed = lapsed_end - lapsed_start
+                    total_lapsed_amount = days_in_lapsed * (lapsed_fee_percentage * emi / 100)
+                    total_default_fee += total_lapsed_amount
+                
+                total_emi += total_default_fee
+                self.default.text = "{:.2f}".format(total_default_fee)
+                self.default.visible = True
+                self.label_9.visible = True
+                self.lapsed.visible = False
+                self.label_5.visible = False
+        
         if npa_settings:
-          npa_start = int(npa_settings['minimum_days'])  # Assuming column1 stores the start day
-          npa_end = int(npa_settings['maximum_days'])    # Assuming column2 stores the end day
-          if npa_start < days_left <= npa_end:
-              product_id = selected_row['product_id']
-              product_details = app_tables.fin_product_details.get(product_id=product_id)
-              
-              # Check if npa or npa_amount should be used
-              if product_details['npa'] != 0:
-                  days_difference = days_left - npa_start
-                  npa_percentage = product_details['npa']
-                  npa_decimal = npa_percentage * emi / 100
-                  total_npa_fee = days_difference * npa_decimal
-              elif product_details['npa_amount'] != 0:
-                  npa_amount = product_details['npa_amount']
-                  days_difference = days_left - npa_start
-                  total_npa_fee = days_difference * npa_amount
-              else:
-                  total_npa_fee = 0
-      
-              total_emi += total_npa_fee
-              self.npa.text = "{:.2f}".format(total_npa_fee)
-              self.npa.visible = True
-              self.label_12.visible = True
-              self.default.visible = False
-              self.label_9.visible = False
-              self.lapsed.visible = False
-              self.label_5.visible = False
+            npa_start = int(npa_settings['minimum_days'])
+            npa_end = int(npa_settings['maximum_days'])
+            if npa_start < days_left <= npa_end:
+                product_details = app_tables.fin_product_details.get(product_id=product_id)
+                if product_details['npa'] != 0:
+                    days_difference = days_left - npa_start
+                    npa_percentage = product_details['npa']
+                    total_npa_fee = days_difference * (npa_percentage * emi / 100)
+                elif product_details['npa_amount'] != 0:
+                    days_difference = days_left - npa_start
+                    total_npa_fee = days_difference * product_details['npa_amount']
+                
+                # Include lapsed and default fees during NPA period
+                if days_left > lapsed_end:
+                    lapsed_fee_percentage = app_tables.fin_product_details.get(product_id=product_id)['lapsed_fee']
+                    days_in_lapsed = lapsed_end - lapsed_start
+                    total_lapsed_amount = days_in_lapsed * (lapsed_fee_percentage * emi / 100)
+                    total_npa_fee += total_lapsed_amount
+                
+                if days_left > default_end:
+                    default_fee_amount = 0
+                    product_details = app_tables.fin_product_details.get(product_id=product_id)
+                    if product_details['default_fee'] != 0:
+                        days_in_default = default_end - default_start
+                        default_fee_percentage = product_details['default_fee']
+                        default_fee_amount = days_in_default * (default_fee_percentage * emi / 100)
+                    elif product_details['default_fee_amount'] != 0:
+                        days_in_default = days_left - default_start
+                        default_fee_amount = days_in_default * product_details['default_fee_amount']
+                    total_npa_fee += default_fee_amount
+        
+                total_emi += total_npa_fee
+                self.npa.text = "{:.2f}".format(total_npa_fee)
+                self.npa.visible = True
+                self.label_12.visible = True
+                self.default.visible = False
+                self.label_9.visible = False
+                self.lapsed.visible = False
+                self.label_5.visible = False
                 
     #     if loan_state_status == 'default loan' and selected_row['days_left'] > 16:
     #       product_id = selected_row['product_id']

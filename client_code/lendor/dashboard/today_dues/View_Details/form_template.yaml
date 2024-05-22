@@ -110,6 +110,10 @@ components:
     type: Label
     layout_properties: {grid_position: 'KSEEYY,IVLWPK HWCPBM,ZDDVKD'}
     name: label_12
+  - name: label_15
+    properties: {text: Previous Emi  Amount, bold: true, visible: false}
+    type: Label
+    layout_properties: {grid_position: 'KSEEYY,IVLWPK PVSTZR,FGLOXR'}
   - properties: {visible: false}
     type: Label
     layout_properties: {grid_position: 'KSEEYY,IVLWPK AEBKUS,AMYLJI'}
@@ -175,6 +179,10 @@ components:
     type: Label
     layout_properties: {grid_position: 'KSEEYY,LEWFZL CNOZYO,RYVVGE'}
     name: npa
+  - name: label_14
+    properties: {align: left, visible: false}
+    type: Label
+    layout_properties: {grid_position: 'KSEEYY,LEWFZL ZLTJWY,NPUEDR'}
   - properties: {visible: false}
     type: Label
     layout_properties: {grid_position: 'KSEEYY,LEWFZL IPVSDG,ELKTWX'}
@@ -197,7 +205,7 @@ components:
       grid_position: MSEXQT,FEBQYX
     event_bindings: {click: button_1_copy_2_click}
     name: button_1_copy_2
-  - properties: {role: null, align: left, tooltip: '', border: '', enabled: true,
+  - properties: {role: null, align: left, tooltip: '', border: '', enabled: false,
       foreground: 'theme:On Primary', visible: true, text: ' PART  PAYMENT', font_size: null,
       font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
       background: '#0b2547', bold: true, underline: false, icon: ''}
