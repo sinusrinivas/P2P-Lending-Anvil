@@ -93,8 +93,8 @@ components:
   name: column_panel_3
   components:
   - name: image_6
-    properties: {height: 46, source: _/theme/other loan.png, horizontal_align: right,
-      spacing_above: large, spacing_below: medium, visible: false}
+    properties: {height: 46, source: _/theme/borrower/dashboard/new%20loan%20request%202.png,
+      horizontal_align: right, spacing_above: large, spacing_below: medium, visible: false}
     type: Image
     layout_properties: {grid_position: 'XJDGCR,HHWUAS', full_width_row: true}
     event_bindings: {mouse_up: image_6_mouse_up}
