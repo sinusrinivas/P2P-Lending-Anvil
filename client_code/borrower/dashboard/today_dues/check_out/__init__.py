@@ -74,6 +74,7 @@ class check_out(check_outTemplate):
 
         self.i_r.text = "{:.2f}".format(interest_amount)
         self.emi.text = "{:.2f}".format(emi)
+        print(float(self.emi.text))
       
       
         lapsed_settings = app_tables.fin_loan_settings.get(loans="lapsed fee")
@@ -493,7 +494,7 @@ class check_out(check_outTemplate):
                 if lapsed_settings and days_elapsed > lapsed_end:
                     days_in_lapsed = lapsed_end - lapsed_start
                     lapsed_fee_percentage = product_details['lapsed_fee']
-                    lapsed_fee_amount = days_in_lapsed * (lapsed_fee_percentage * float(self.loan_details['emi']) / 100)
+                    lapsed_fee_amount = days_in_lapsed * (lapsed_fee_percentage * float(self.emi.text) / 100)
                     npa_fee_amount += lapsed_fee_amount
     
                 # Include default end fee if applicable
@@ -501,7 +502,7 @@ class check_out(check_outTemplate):
                     days_in_default = default_end - default_start
                     if product_details['default_fee'] != 0:
                         default_fee_percentage = product_details['default_fee']
-                        default_fee_amount = days_in_default * (default_fee_percentage * float(self.loan_details['emi']) / 100)
+                        default_fee_amount = days_in_default * (default_fee_percentage * float(self.emi.text) / 100)
                         npa_fee_amount += default_fee_amount
                     elif product_details['default_fee_amount'] != 0:
                         default_fee_amount = days_in_default * product_details['default_fee_amount']
