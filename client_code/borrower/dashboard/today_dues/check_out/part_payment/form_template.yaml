@@ -36,7 +36,7 @@ components:
     type: Spacer
     layout_properties: {grid_position: 'KSEEYY,BGADMX'}
     name: spacer_4
-  - properties: {text: 'Loan Id:', bold: true, align: left}
+  - properties: {text: 'Lender Name :', bold: true, align: left}
     type: Label
     layout_properties:
       col_widths: {}
@@ -85,6 +85,10 @@ components:
     type: Label
     layout_properties: {grid_position: 'KSEEYY,IVLWPK TJCKXB,LJHLGB'}
     name: label_3
+  - name: additional_fee_label
+    properties: {text: Extra fee, bold: true, visible: false}
+    type: Label
+    layout_properties: {grid_position: 'KSEEYY,IVLWPK XEYSAT,BKWSMF'}
   - properties: {text: Amount, bold: true}
     type: Label
     layout_properties: {grid_position: 'KSEEYY,IVLWPK LTVRMD,BUTKKA'}
@@ -127,6 +131,10 @@ components:
     type: Label
     layout_properties: {grid_position: 'KSEEYY,LEWFZL JZRNDQ,CWDDHA'}
     name: total_emi_amount_label
+  - name: additional_fee
+    properties: {visible: false}
+    type: Label
+    layout_properties: {grid_position: 'KSEEYY,LEWFZL SACBZI,AMQAOD'}
   - properties: {background: white, placeholder: Enter Amount}
     type: TextBox
     layout_properties: {grid_position: 'KSEEYY,LEWFZL TRWDZU,QPVQKP'}

@@ -266,7 +266,7 @@ class check_out(check_outTemplate):
             self.label_3.visible = True
   
         # Update other labels
-        self.loan_id_label.text = str(selected_row['loan_id'])
+        self.loan_id_label.text = str(selected_row['lender_full_name'])
         self.loan_amount_label.text = str(loan_amount)
         self.interest_label.text = "{:.2f}".format(total_interest_amount)
         self.tenure_label.text = str(tenure)
@@ -672,7 +672,7 @@ class check_out(check_outTemplate):
         'emi': self.emi.text,
         'total_emi_amount': self.total_emi_amount_label.text,
         'emi_amount': self.emi_amount_label.text,
-        'loan_id': self.loan_id_label.text,
+        'loan_id': self.selected_row['loan_id'],
         'loan_amount': self.loan_amount_label.text,
         'tenure': self.tenure_label.text,
         'account_no': self.account_no_label.text,
@@ -692,7 +692,8 @@ class check_out(check_outTemplate):
         # 'part_payment_date' : self.selected_row['part_payment_date'],
         # 'payment_type' : self.selected_row['payment_type'],
         'tenure':self.tenure_label.text,
+        'lender_full_name' : self.selected_row['lender_full_name']
     }
     
     # Open the part_payment form and pass loan_details as a parameter
-      open_form('borrower.dashboard.today_dues.check_out.part_payment', loan_details=loan_details)
+      open_form('borrower.dashboard.today_dues.check_out.part_payment', loan_details=loan_details, selected_row=self.selected_row)
