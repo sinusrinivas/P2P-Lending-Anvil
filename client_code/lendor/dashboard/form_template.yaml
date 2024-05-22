@@ -319,7 +319,7 @@ components:
       layout_properties: {grid_position: 'ERCHQY,IXNAVP'}
       name: column_panel_5
       components:
-      - properties: {height: 43.79998779296875, source: _/theme/piggy-bank.png}
+      - properties: {height: 43.79998779296875, source: _/theme/lender/dashboard/My%20returns%20(2).png}
         type: Image
         layout_properties: {grid_position: 'HVNINY,UKYYYV'}
         name: image_3
