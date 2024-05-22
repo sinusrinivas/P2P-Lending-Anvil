@@ -123,19 +123,21 @@ class products_main_form(products_main_formTemplate):
   def button_5_click(self, **event_args):
     """This method is called when the button is clicked"""
     open_form('bank_users.main_form.products_main_form.vehicle_loan')
-
-  def image_3_mouse_up(self, x, y, button, **event_args):
-    """This method is called when a mouse button is released on this component"""
-    open_form('bank_users.main_form.products_main_form.vehicle_loan')
-
-  def image_2_mouse_up(self, x, y, button, **event_args):
-    """This method is called when a mouse button is released on this component"""
-    open_form('bank_users.main_form.products_main_form.business_loan')
-
-  def image_1_mouse_up(self, x, y, button, **event_args):
-    """This method is called when a mouse button is released on this component"""
-    open_form('bank_users.main_form.products_main_form.personal_loan')
+   
 
   def button_6_click(self, **event_args):
     """This method is called when the button is clicked"""
     open_form('bank_users.main_form.signup_page', user_type='borrower')
+
+  def image_13_mouse_up(self, x, y, button, **event_args):
+    """This method is called when a mouse button is released on this component"""
+    open_form('bank_users.main_form.products_main_form.personal_loan')
+
+  def image_14_mouse_up(self, x, y, button, **event_args):
+    """This method is called when a mouse button is released on this component"""
+    open_form('bank_users.main_form.products_main_form.business_loan')
+
+  def image_15_mouse_up(self, x, y, button, **event_args):
+    """This method is called when a mouse button is released on this component"""
+    open_form('bank_users.main_form.products_main_form.vehicle_loan')
+
