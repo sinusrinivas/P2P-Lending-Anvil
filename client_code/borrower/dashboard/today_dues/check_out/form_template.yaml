@@ -36,7 +36,7 @@ components:
     properties: {height: 305.4999694824219}
     layout_properties: {grid_position: 'KSEEYY,BGADMX'}
     name: spacer_4
-  - properties: {text: 'Loan Id:', bold: true, align: left}
+  - properties: {text: Lender Name, bold: true, align: left}
     type: Label
     layout_properties:
       col_widths: {}
