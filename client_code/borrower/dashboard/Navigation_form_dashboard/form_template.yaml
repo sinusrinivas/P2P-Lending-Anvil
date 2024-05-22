@@ -5,7 +5,7 @@ components:
 - name: navbar_links_copy_1
   properties: {role: null, vertical_align: top, spacing: huge, align: center, tooltip: '',
     border: '', foreground: '', visible: true, spacing_above: none, spacing_below: none,
-    background: '#0b2547'}
+    background: '#05264d '}
   type: FlowPanel
   layout_properties:
     col_widths: {}
