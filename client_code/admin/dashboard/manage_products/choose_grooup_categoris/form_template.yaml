@@ -33,8 +33,8 @@ components:
     layout_properties: {grid_position: 'LKTWOF,LRMGVL'}
     components:
     - name: image_4_copy
-      properties: {source: _/theme/add-product.png, display_mode: shrink_to_fit, height: '120',
-        visible: true}
+      properties: {source: _/theme/admin/dashboard/manage_products/add-product%20(1).png,
+        display_mode: shrink_to_fit, height: '120', visible: true}
       type: Image
       layout_properties: {grid_position: 'QGZTNW,PVJEPO'}
       event_bindings: {mouse_up: image_4_copy_mouse_up}
