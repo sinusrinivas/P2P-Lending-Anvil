@@ -85,13 +85,6 @@ components:
     type: Label
     layout_properties: {grid_position: 'KSEEYY,IVLWPK XDLAZA,QLFPFW'}
     name: label_6
-  - properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-      visible: true, text: Total Emi Amount, font_size: null, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-      underline: false, icon: ''}
-    type: Label
-    layout_properties: {grid_position: 'KSEEYY,IVLWPK UJYTNE,MPSHVZ'}
-    name: label_3
   - type: Label
     properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
       visible: false, text: Late payment fee Fee, font_size: null, font: '', spacing_above: small,
@@ -114,6 +107,13 @@ components:
     properties: {text: Previous Emi  Amount, bold: true, visible: false}
     type: Label
     layout_properties: {grid_position: 'KSEEYY,IVLWPK PVSTZR,FGLOXR'}
+  - properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: Total Emi Amount, font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+      underline: false, icon: ''}
+    type: Label
+    layout_properties: {grid_position: 'KSEEYY,IVLWPK YPBVEJ,EOUCBO'}
+    name: label_3
   - properties: {visible: false}
     type: Label
     layout_properties: {grid_position: 'KSEEYY,IVLWPK AEBKUS,AMYLJI'}
@@ -160,13 +160,6 @@ components:
     type: Label
     layout_properties: {grid_position: 'KSEEYY,LEWFZL AAVOYQ,XHSALS'}
     name: extension_amount_label
-  - properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-      visible: true, text: '', font_size: null, font: '', spacing_above: small, icon_align: left,
-      spacing_below: small, italic: false, background: '', bold: false, underline: false,
-      icon: ''}
-    type: Label
-    layout_properties: {grid_position: 'KSEEYY,LEWFZL UYEZKW,XPBOHG'}
-    name: total_emi_amount_label
   - type: Label
     properties: {visible: false}
     layout_properties: {grid_position: 'KSEEYY,LEWFZL QWRGLL,UNVGPY'}
@@ -183,6 +176,13 @@ components:
     properties: {align: left, visible: false}
     type: Label
     layout_properties: {grid_position: 'KSEEYY,LEWFZL ZLTJWY,NPUEDR'}
+  - properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: '', font_size: null, font: '', spacing_above: small, icon_align: left,
+      spacing_below: small, italic: false, background: '', bold: false, underline: false,
+      icon: ''}
+    type: Label
+    layout_properties: {grid_position: 'KSEEYY,LEWFZL VCSNSR,DRVRMF'}
+    name: total_emi_amount_label
   - properties: {visible: false}
     type: Label
     layout_properties: {grid_position: 'KSEEYY,LEWFZL IPVSDG,ELKTWX'}

@@ -441,6 +441,7 @@ class check_out(check_outTemplate):
         if foreclosure_details is not None:
           total_due_amount = foreclosure_details['total_due_amount']
           foreclosure_amount = foreclosure_details['foreclose_amount']
+          foreclosure_emi_amount = foreclosure_details['total_due_amount']
       
           lapsed_settings = app_tables.fin_loan_settings.get(loans="lapsed fee")
           default_settings = app_tables.fin_loan_settings.get(loans="default fee")
@@ -542,7 +543,7 @@ class check_out(check_outTemplate):
                   self.label_14.visible = True
                   self.label_15.visible = True
       
-          self.emi_amount_label.text = "{:.2f}".format(total_due_amount)
+          self.emi_amount_label.text = "{:.2f}".format(foreclosure_emi_amount)
           self.extension_amount_label.text = "{:.2f}".format(foreclosure_amount)
           self.total_emi_amount_label.text = "{:.2f}".format(total_due_amount + foreclosure_amount)
           self.total_emi_amount_label.visible = True
