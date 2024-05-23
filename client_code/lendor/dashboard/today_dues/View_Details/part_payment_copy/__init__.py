@@ -67,8 +67,8 @@ class part_payment_copy(part_payment_copyTemplate):
         return part_payment_amount
       self.label_6.text = "{:.2f}".format(part_payment_amount)
       self.label_6.enabled = False
-      # self.label_3.visible = False
-      # self.total_emi_amount_label.visible = False
+      self.label_3.visible = False
+      self.total_emi_amount_label.visible = False
 
   def pay_now_click(self, **event_args):
     """This method is called when the button is clicked"""

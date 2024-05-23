@@ -136,7 +136,7 @@ components:
     layout_properties: {grid_position: 'KSEEYY,LEWFZL BHNWCT,AZQARS'}
     name: total_emi_amount_label
   - name: label_6
-    properties: {}
+    properties: {bold: true}
     type: Label
     layout_properties: {grid_position: 'KSEEYY,LEWFZL UBQUFK,HUDEPG'}
   - properties: {height: 299.6428527832031}
