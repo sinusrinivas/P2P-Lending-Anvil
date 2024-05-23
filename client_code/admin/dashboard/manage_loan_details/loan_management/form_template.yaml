@@ -77,7 +77,8 @@ components:
       layout_properties: {grid_position: 'LKTWOF,LRMGVL OVIPEI,UZGIWM'}
       components:
       - name: image_4_copy_8
-        properties: {source: _/theme/npa2.png, display_mode: shrink_to_fit, height: '100'}
+        properties: {source: _/theme/admin/dashboard/loan_management/npa.png, display_mode: shrink_to_fit,
+          height: '100'}
         type: Image
         layout_properties: {grid_position: 'QGZTNW,PVJEPO'}
         event_bindings: {mouse_up: image_4_copy_8_mouse_up}
@@ -150,8 +151,8 @@ components:
       layout_properties: {grid_position: 'LKTWOF,FPVXBC FZRSVY,NIONJZ'}
       components:
       - name: image_4_copy_5
-        properties: {source: _/theme/under process loanss.jpg, display_mode: shrink_to_fit,
-          height: '100'}
+        properties: {source: _/theme/admin/dashboard/loan_management/under%20process%20loanss.jpg,
+          display_mode: shrink_to_fit, height: '100'}
         type: Image
         layout_properties: {grid_position: 'QGZTNW,PVJEPO'}
         event_bindings: {mouse_up: image_4_copy_5_mouse_up}
