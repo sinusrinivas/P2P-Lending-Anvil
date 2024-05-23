@@ -40,8 +40,8 @@ class part_payment_copy(part_payment_copyTemplate):
 
     total_emi_amount = float(loan_details["total_emi_amount"])
     half_emi_amount = total_emi_amount / 2
-    self.text_box_1.text = "{:.2f}".format(half_emi_amount)
-    self.text_box_1.enabled = False
+    self.label_6.text = "{:.2f}".format(half_emi_amount)
+    self.label_6.enabled = False
 
     loan_id = self.loan_details["loan_id"]
     emi_number = self.loan_details["current_emi_number"]
@@ -65,14 +65,14 @@ class part_payment_copy(part_payment_copyTemplate):
           self.additional_fee.text = "{:.2f}".format(additional_fees)
       else:
         return part_payment_amount
-      self.text_box_1.text = "{:.2f}".format(part_payment_amount)
-      self.text_box_1.enabled = False
+      self.label_6.text = "{:.2f}".format(part_payment_amount)
+      self.label_6.enabled = False
       # self.label_3.visible = False
       # self.total_emi_amount_label.visible = False
 
   def pay_now_click(self, **event_args):
     """This method is called when the button is clicked"""
-    entered_amount = float(self.text_box_1.text)  # Get the amount entered by the user
+    entered_amount = float(self.label_6.text)  # Get the amount entered by the user
     total_emi_amount = float(
       self.total_emi_amount_label.text
     )  # Get the total EMI amount
