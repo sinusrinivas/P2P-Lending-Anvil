@@ -190,7 +190,7 @@ class View_Details(View_DetailsTemplate):
             self.label_3.visible = True
   
         # Update other labels
-        self.loan_id_label.text = str(selected_row['loan_id'])
+        self.loan_id_label.text = str(selected_row['borrower_full_name'])
         self.loan_amount_label.text = str(loan_amount)
         self.interest_label.text = "{:.2f}".format(total_interest_amount)
         self.tenure_label.text = str(tenure)
@@ -199,6 +199,46 @@ class View_Details(View_DetailsTemplate):
         # Display total EMI amount including extension amount
         self.update_total_emi_amount(total_emi)
       
+        
+
+        emi_row = app_tables.fin_emi_table.get(
+            loan_id=loan_id,
+            emi_number=selected_row['emi_number'] + 1
+        )
+
+        if emi_row is not None and emi_row['payment_type'] == 'part payment':
+
+          self.part_payment.visible = True
+          self.label_3.visible = False
+          # self.label_5.visible = False
+          # self.label_9.visible = False
+          # self.label_12.visible = False
+          self.total_emi_amount_label.visible = False
+          # self.lapsed.visible = False
+          # self.default.visible = False
+          # self.npa.visible = False
+
+        adding_remaining_part_payment = app_tables.fin_emi_table.get(
+            loan_id=loan_id,
+            emi_number=selected_row['emi_number']
+        )
+        if adding_remaining_part_payment:
+          part_pay = adding_remaining_part_payment['payment_type']
+          if part_pay == 'part payment':
+            remaining_part_payment = adding_remaining_part_payment['part_payment_amount']
+            # total_due_amount += remaining_part_payment
+            additional_fees = self.calculate_additional_fees(adding_remaining_part_payment)
+            print(additional_fees)
+            self.label_14.text = additional_fees + remaining_part_payment
+            # total_due_amount +=additional_fees
+
+            total_emi += remaining_part_payment
+            total_emi +=additional_fees
+            self.part_payment.enabled = False
+            self.label_14.visible = True
+            self.label_15.visible = True
+        self.update_total_emi_amount(total_emi)
+
         foreclosure_details = self.get_foreclosure_details(loan_id, selected_row['emi_number'])
         if foreclosure_details is not None:
           total_due_amount = foreclosure_details['total_due_amount']
@@ -309,44 +349,6 @@ class View_Details(View_DetailsTemplate):
           self.total_emi_amount_label.text = "{:.2f}".format(total_due_amount + foreclosure_amount)
           self.total_emi_amount_label.visible = True
           self.label_3.visible = True
-
-        emi_row = app_tables.fin_emi_table.get(
-            loan_id=loan_id,
-            emi_number=selected_row['emi_number'] + 1
-        )
-
-        if emi_row is not None and emi_row['payment_type'] == 'part payment':
-
-          self.part_payment.visible = True
-          self.label_3.visible = False
-          # self.label_5.visible = False
-          # self.label_9.visible = False
-          # self.label_12.visible = False
-          self.total_emi_amount_label.visible = False
-          # self.lapsed.visible = False
-          # self.default.visible = False
-          # self.npa.visible = False
-
-        adding_remaining_part_payment = app_tables.fin_emi_table.get(
-            loan_id=loan_id,
-            emi_number=selected_row['emi_number']
-        )
-        if adding_remaining_part_payment:
-          part_pay = adding_remaining_part_payment['payment_type']
-          if part_pay == 'part payment':
-            remaining_part_payment = adding_remaining_part_payment['part_payment_amount']
-            # total_due_amount += remaining_part_payment
-            additional_fees = self.calculate_additional_fees(adding_remaining_part_payment)
-            print(additional_fees)
-            self.label_14.text = additional_fees + remaining_part_payment
-            # total_due_amount +=additional_fees
-
-            total_emi += remaining_part_payment
-            total_emi +=additional_fees
-            self.part_payment.enabled = False
-            self.label_14.visible = True
-            self.label_15.visible = True
-        self.update_total_emi_amount(total_emi)
 
     def calculate_date_difference(self,date_to_subtract, today_date):
       return (today_date - date_to_subtract).days
