@@ -92,29 +92,25 @@ class new_loan_request(new_loan_requestTemplate):
             self.label_7.text = ""
 
         if name and category and product_name:
-            # Check for duplicate product_name in the loan_details table for the current user
-            existing_loans = app_tables.fin_loan_details.search(
-                product_name=product_name,
-                borrower_customer_id=self.user_id                
-            )
-            if existing_loans:
-                alert("This product has already existed loan.", title="Duplicate Product Loan")
-                return
 
-            # Fetch product details based on the selected product name
-            product_details = app_tables.fin_product_details.get(product_name=product_name)
-
-            if product_details:
-                # Set product_description as a class attribute
-                self.product_description = product_details['product_description']
-
-                # Open the next form and pass the required parameters
-                open_form('borrower.dashboard.new_loan_request.loan_type',
-                          name, category, product_name, self.max_amount_lb.text, self.product_description)
+            if any(row['product_name']==product_name for row in app_tables.fin_loan_details.search(borrower_customer_id=self.user_id)):
+              alert(f'Product "{product_name}" already exists. Please choose a different Product name.')
             else:
-                # Handle the case where product details are not found
-                self.label_8.visible = True
-                self.product_description_label.text = "Product description not available"
+  
+              # Fetch product details based on the selected product name
+              product_details = app_tables.fin_product_details.get(product_name=product_name)
+  
+              if product_details:
+                  # Set product_description as a class attribute
+                  self.product_description = product_details['product_description']
+  
+                  # Open the next form and pass the required parameters
+                  open_form('borrower.dashboard.new_loan_request.loan_type',
+                            name, category, product_name, self.max_amount_lb.text, self.product_description)
+              else:
+                  # Handle the case where product details are not found
+                  self.label_8.visible = True
+                  self.product_description_label.text = "Product description not available"
         else:
             # Handle the case where no product is selected
             self.label_8.visible = False
