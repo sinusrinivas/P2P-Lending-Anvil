@@ -32,7 +32,7 @@ components:
     event_bindings: {click: button_1_click}
     name: button_1
   - properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
-      visible: true, text: Today Dues, font_size: null, font: '', spacing_above: small,
+      visible: true, text: Today  Dues, font_size: 18, font: '', spacing_above: small,
       icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
       underline: false, icon: ''}
     type: Label
