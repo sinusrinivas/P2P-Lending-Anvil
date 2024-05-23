@@ -406,11 +406,11 @@ class check_out(check_outTemplate):
 
         if emi_row is not None and emi_row['payment_type'] == 'part payment':
           self.button_1_copy_3.visible = False
-          self.label_3.visible = False
+          # self.label_3.visible = False
           # self.label_5.visible = False
           # self.label_9.visible = False
           # self.label_12.visible = False
-          self.total_emi_amount_label.visible = False
+          # self.total_emi_amount_label.visible = False
           # self.lapsed.visible = False
           # self.default.visible = False
           # self.npa.visible = False

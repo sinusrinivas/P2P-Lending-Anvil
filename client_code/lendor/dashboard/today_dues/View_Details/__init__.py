@@ -209,11 +209,13 @@ class View_Details(View_DetailsTemplate):
         if emi_row is not None and emi_row['payment_type'] == 'part payment':
 
           self.part_payment.visible = True
-          self.label_3.visible = False
+          self.back.visible = True
+          self.back_copy.visible = False
+          # self.label_3.visible = False
           # self.label_5.visible = False
           # self.label_9.visible = False
           # self.label_12.visible = False
-          self.total_emi_amount_label.visible = False
+          # self.total_emi_amount_label.visible = False
           # self.lapsed.visible = False
           # self.default.visible = False
           # self.npa.visible = False
@@ -234,7 +236,8 @@ class View_Details(View_DetailsTemplate):
 
             total_emi += remaining_part_payment
             total_emi +=additional_fees
-            self.part_payment.enabled = False
+            self.part_payment.visible = False
+            self.back.visible = False
             self.label_14.visible = True
             self.label_15.visible = True
         self.update_total_emi_amount(total_emi)
@@ -497,7 +500,7 @@ class View_Details(View_DetailsTemplate):
         else:
             return None  # or handle the case where the loan ID is not found
 
-    def button_1_copy_2_click(self, **event_args):
+    def back_click(self, **event_args):
       """This method is called when the button is clicked"""
       open_form('lendor.dashboard.today_dues')
 
