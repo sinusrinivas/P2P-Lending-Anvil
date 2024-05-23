@@ -362,7 +362,7 @@ components:
   type: Spacer
   layout_properties: {grid_position: 'KPMSUL,IDNDNP'}
 - name: label_40
-  properties: {text: Ascends Minimizes Your Risk, bold: true, font_size: 29, align: center}
+  properties: {text: Ascend Minimizes Your Risk, bold: true, font_size: 29, align: center}
   type: Label
   layout_properties: {grid_position: 'PEXAFZ,QZNZUG'}
 - name: label_42
