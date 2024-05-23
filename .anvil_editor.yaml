@@ -550,13 +550,13 @@ unique_ids:
     bank_users/main_form/.gitkeep: '1715930244250306915103367.4311'
     emi interest.png: '1712559954163931926473073.8877'
     admin/dashboard/.gitkeep: ZKVELNCIMFS2P3P62TUNFB4MU2A2YB5P
-    admin/dashboard/performance tracker.png: FZMEVEP5344I6ACGHW26PRPKPICYLOSQ
     compensation.png: '1714725458555798302312321.8007'
     bank_users/main_form/icons8-rupee-64.png: '1711615881739244587558406.51892'
     lender/dashboard/connection (2).png: '1716368753704543815423554.1137'
     admin/dashboard/manage_cms/gender.png: EMWCTRQNMLH4YUAAVDNRQBNF55ZUHABZ
     membership.png: '1715154452691515784482307.8128'
     bank_users/personal_loan/marriage_loan/marriage loan.png: '171333172833041770260564.35662'
+    admin/dashboard/manage-ascendscore.png: '1716445401631929284846447.4408'
     bank_users/main_form/icons8-fund.png: '1712040473720801943413138.333'
     1.png: '1712829089199496946998113.3874'
     bank_users/personal_loan/marriage_loan/marriage loan pic.png: '1713335041235807448509665.6434'
@@ -576,6 +576,7 @@ unique_ids:
     borrower/dashboard/borrower_credit_limit.png: '1716286643090611547656559.6545'
     interace.png: '1715154128192424877879498.7'
     bank_users/personal_loan/education_loan/EL-eligibility3.png: '1714131852200225274930182.27673'
+    admin/dashboard/manage-borrowers.png: '1716445042570720571001477.6041'
     admin/dashboard/manage_cms/.gitkeep: O5ODCAZ3GJUXRX3TZYNSWRQEL6S3NLCA
     bank_users/personal_loan/education_loan/education-loan-main.png: '1714044409579837401469162.1505'
     bank_users/personal_loan/home_renovation_loan/hm2.png: '1713939904750741669506611.7522'
@@ -617,9 +618,11 @@ unique_ids:
     bank_users/personal_loan/home_renovation_loan/hm3.png: '1713939918996216828287885.85895'
     kotak.png: '1699332885238145537031245.1496'
     bank_users/personal_loan/travel_loan/travel_loan4.png: '1713507191162190706654517.28662'
+    admin/dashboard/manage-settings.png: DY3H3MH2XM4PCQJL2ZF47E3OJIRNHZFB
     bank_users/personal_loan/debt_consolidation_loan/comfortable timeframe.png: '1713430903146761342586392.4226'
     profits.png: '1714984129823321040287031.78186'
     lender/.gitkeep: '1716351081235349135311657.8153'
+    admin/dashboard/risk-management.png: '1716446408741656665521807.3905'
     borrower/dashboard/borrower_portfolio.png: '1716286690531384102695139.9158'
     bank_users/main_form/icons8-boxes-64.png: '1711616114911923729180785.5709'
     approved.png: '1715165618141693265994182.5768'
@@ -631,6 +634,7 @@ unique_ids:
     bank_users/personal_loan/loan_pre_payment.png: '1712904444215648149161367.5237'
     admin/dashboard/manage_cms/account-type.png: CAOMCQBYNMXGK7L5TPW7N66YS4JZH3SU
     bank_users/personal_loan/education_loan/EL-Prerequisites3.png: '1714132047112428076259794.0906'
+    admin/dashboard/loan-management.png: DWWYJWH6BRN2HNZSS3SNW63GCBZE3NRP
     loan disbursed.png: '1714740035462708108954907.5226'
     bank_users/user_form/Screenshot 2023-11-26 151804.png: '1700992268058634985056423.6241'
     pic3.webp: '1711534194525278677947107.07526'
@@ -644,6 +648,7 @@ unique_ids:
     1520244320558.jpeg: '171326114332719928533248.894764'
     p2p (3).png: '1715162252700862474179030.6436'
     bank_users/personal_loan/medical_loan/medical loan_2.png: '1716266624599194936901805.50894'
+    admin/dashboard/manage-lenders.png: '1716445053498690562718118.2135'
     bank_users/main_form/icons8-easy-100.png: '1712035666385980850535544.071'
     trustworthiness.png: '1715166849824916360380821.0945'
     borrower/dashboard/discount coupons.png: '1716279145637296790344380.23553'
@@ -656,10 +661,12 @@ unique_ids:
     meeting.png: '1715232975148990968865425.9962'
     bank_users/main_form/business_loan/secure-transperent.png: '1712311830461531300402875.7742'
     admin/dashboard/manage_cms/borrower-dropdown.png: E7J6AUNQKP4WB422AJZ46IGZ4C665AC6
+    admin/dashboard/performance-tracker.png: '1716445689645580790487924.6168'
     bank_users/personal_loan/education_loan/EL-eligibility4.png: '1714131863856713795876533.8322'
     mip-monthly-income-p2p-lending.webp: '1711688568853983274469669.5383'
     loan-application-rejected-icon.png: DCR6RK6Y5CRVQ75UHXZPSHZD2BHEF2I5
     admin/dashboard/manage_cms/spouse profession.png: 37WMWAN3YM4E5U3RWMEIBIX2XEBIZHOL
+    admin/dashboard/manage-risk-pool.png: '1716446146665319795416848.1196'
     bank_users/main_form/vehicle_loan/vehicle_loan_main.png: '171438581851234147800509.94204'
     bank_users/personal_loan/evaluation of loan.png: '1712919571690191695476983.53262'
     bank_users/main_form/icons8-get-cash.png: '1712035827507960042752507.3192'
@@ -692,6 +699,7 @@ unique_ids:
     bank_users/main_form/ customer review 1.png: '1708336519517309719494368.74225'
     bank_users/main_form/vehicle_loan/application_process6.png: '1712897025082357081707040.6491'
     credit-score.png: '1715227629248600807619790.156'
+    admin/dashboard/manage-admins.png: P2UXLVLNIOQPK6UVSEOUKUCHBC3BPMXU
     bank_users/main_form/main.png: '1711624157660893221707804.2021'
     business type.png: '171516138691861010605757.98378'
     home-address.png: '1715155177041259352856446.57526'
@@ -718,6 +726,7 @@ unique_ids:
     borrower/dashboard/view transaction history.png: '1716279125927383416849629.84247'
     admin/dashboard/manage_cms/choose-role.png: U5TYT7AUEW2EZEAHJIXLFWOVKPY7G4VY
     bank_users/main_form/sign_up image.webp: '1714030469363622781270221.2003'
+    admin/dashboard/manage-setting.png: ABSKDTCJDL7KD6X5OGKXTNHX6QVVPLVI
     manage lender.png: '171472476411175984222093.73079'
     bank_users/personal_loan/education_loan/EL-eligibility2.png: '1714131800631489046320864.79663'
     bank_users/main_form/investnow-applyforloan/.gitkeep: '1715945495545641324672393.1399'
@@ -816,6 +825,7 @@ unique_ids:
     bank_users/personal_loan/travel_loan/travel_loan6.jpg: '1713506929391821373031589.568'
     bank_users/personal_loan/education_loan/el_benifits4.png: '171413193126938983249849.53594'
     loan.png: '1714985021165554606508078.3351'
+    admin/dashboard/manage-products.png: LVSBHG3BEYT62E5A2NO4HP33KXGD3MN4
     bank_users/personal_loan/disbursal_of_amount.png: '171255994143884088588492.80132'
     bank_users/personal_loan/education_loan/el6.png: '1714043540196966020713451.6456'
     bank_users/personal_loan/online-personal-loan-hdr.png: '1713931739634589907263379.9539'
