@@ -59,7 +59,7 @@ components:
       layout_properties: {grid_position: 'LKTWOF,FPVXBC NYJWVU,OENCYG'}
       components:
       - name: image_4_copy_10
-        properties: {source: _/theme/credit-score.png, display_mode: shrink_to_fit,
+        properties: {source: _/theme/admin/dashboard/manage-ascendscore.png, display_mode: shrink_to_fit,
           height: '100'}
         type: Image
         layout_properties: {grid_position: 'QGZTNW,PVJEPO'}
