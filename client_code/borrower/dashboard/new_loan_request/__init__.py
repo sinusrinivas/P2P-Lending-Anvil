@@ -93,7 +93,7 @@ class new_loan_request(new_loan_requestTemplate):
 
         if name and category and product_name:
             # Check for duplicate product_name in the loan_details table for the current user
-            existing_loan = app_tables.fin_loan_details.search(borrower_customer_id=self.user_id, product_name=product_name)
+            existing_loan = app_tables.fin_loan_details.search(product_name=q.like(str(self.drop_down_1)),borrower_customer_id=self.user_id)
             if existing_loan:
                 alert("This product has already existed loan.", title="Duplicate Product Loan")
                 return
