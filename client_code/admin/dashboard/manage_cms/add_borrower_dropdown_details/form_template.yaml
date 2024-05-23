@@ -194,7 +194,7 @@ components:
         layout_properties: {grid_position: 'LKTWOF,FPVXBC UTZLWC,RUHZYU'}
         components:
         - name: image_4_copy_4
-          properties: {source: _/theme/admin/dashboard/manage_cms/spouse%20profession.png,
+          properties: {source: _/theme/admin/dashboard/manage_cms/spouse-profession.png,
             display_mode: shrink_to_fit, height: '100'}
           type: Image
           layout_properties: {grid_position: 'QGZTNW,PVJEPO'}
@@ -230,7 +230,7 @@ components:
         layout_properties: {grid_position: 'LKTWOF,GBAJZY UXTNEX,HGFJSQ'}
         components:
         - name: image_4_copy_9
-          properties: {source: _/theme/admin/dashboard/manage_cms/account-type.png,
+          properties: {source: _/theme/admin/dashboard/manage_cms/account-type_2.png,
             display_mode: shrink_to_fit, height: '100'}
           type: Image
           layout_properties: {grid_position: 'QGZTNW,PVJEPO'}

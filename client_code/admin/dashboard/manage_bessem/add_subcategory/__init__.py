@@ -686,6 +686,252 @@ class add_subcategory(add_subcategoryTemplate):
     self.grid_panel_14.visible = False
     self.grid_panel_15.visible = True
 
+  def image_4_copy_mouse_up(self, x, y, button, **event_args):
+    """This method is called when a mouse button is released on this component"""
+    self.grid_panel_1.visible = True
+    self.grid_panel_2.visible = False
+    self.grid_panel_3.visible = False
+    self.grid_panel_4.visible = False
+    self.grid_panel_6.visible = False
+    self.grid_panel_7.visible = False
+    self.grid_panel_8.visible = False
+    self.grid_panel_9.visible = False
+    self.grid_panel_10.visible = False
+    self.grid_panel_11.visible = False
+    self.grid_panel_12.visible = False
+    self.grid_panel_13.visible = False
+    self.grid_panel_14.visible = False
+    self.grid_panel_15.visible = False
+
+  def image_4_copy_3_mouse_up(self, x, y, button, **event_args):
+    """This method is called when a mouse button is released on this component"""
+    self.grid_panel_1.visible = False
+    self.grid_panel_2.visible = True
+    self.grid_panel_3.visible = False
+    self.grid_panel_4.visible = False
+    self.grid_panel_6.visible = False
+    self.grid_panel_7.visible = False
+    self.grid_panel_8.visible = False
+    self.grid_panel_9.visible = False
+    self.grid_panel_10.visible = False
+    self.grid_panel_11.visible = False
+    self.grid_panel_12.visible = False
+    self.grid_panel_13.visible = False
+    self.grid_panel_14.visible = False
+    self.grid_panel_15.visible = False
+
+  def image_4_copy_5_mouse_up(self, x, y, button, **event_args):
+    """This method is called when a mouse button is released on this component"""
+    self.grid_panel_1.visible = False
+    self.grid_panel_2.visible = False
+    self.grid_panel_3.visible = True
+    self.grid_panel_4.visible = False
+    self.grid_panel_6.visible = False
+    self.grid_panel_7.visible = False
+    self.grid_panel_8.visible = False
+    self.grid_panel_9.visible = False
+    self.grid_panel_10.visible = False
+    self.grid_panel_11.visible = False
+    self.grid_panel_12.visible = False
+    self.grid_panel_13.visible = False
+    self.grid_panel_14.visible = False
+    self.grid_panel_15.visible = False
+
+  def image_4_copy_7_mouse_up(self, x, y, button, **event_args):
+    """This method is called when a mouse button is released on this component"""
+    self.grid_panel_1.visible = False
+    self.grid_panel_2.visible = False
+    self.grid_panel_3.visible = False
+    self.grid_panel_4.visible = False
+    self.grid_panel_5.visible = False
+    self.grid_panel_6.visible = False
+    self.grid_panel_7.visible = False
+    self.grid_panel_8.visible = False
+    self.grid_panel_9.visible = False
+    self.grid_panel_10.visible = False
+    self.grid_panel_11.visible = True
+    self.grid_panel_12.visible = False
+    self.grid_panel_13.visible = False
+    self.grid_panel_14.visible = False
+    self.grid_panel_15.visible = False
+
+  def image_4_copy_2_mouse_up(self, x, y, button, **event_args):
+    """This method is called when a mouse button is released on this component"""
+    self.grid_panel_1.visible = False
+    self.grid_panel_2.visible = False
+    self.grid_panel_3.visible = False
+    self.grid_panel_4.visible = True
+    self.grid_panel_6.visible = False
+    self.grid_panel_7.visible = False
+    self.grid_panel_8.visible = False
+    self.grid_panel_9.visible = False
+    self.grid_panel_10.visible = False
+    self.grid_panel_11.visible = False
+    self.grid_panel_12.visible = False
+    self.grid_panel_13.visible = False
+    self.grid_panel_14.visible = False
+    self.grid_panel_15.visible = False
+
+  def image_4_copy_10_mouse_up(self, x, y, button, **event_args):
+    """This method is called when a mouse button is released on this component"""
+    self.grid_panel_1.visible = False
+    self.grid_panel_2.visible = False
+    self.grid_panel_3.visible = False
+    self.grid_panel_4.visible = False
+    self.grid_panel_5.visible = False
+    self.grid_panel_6.visible = False
+    self.grid_panel_7.visible = True
+    self.grid_panel_8.visible = False
+    self.grid_panel_9.visible = False
+    self.grid_panel_10.visible = False
+    self.grid_panel_11.visible = False
+    self.grid_panel_12.visible = False
+    self.grid_panel_13.visible = False
+    self.grid_panel_14.visible = False
+    self.grid_panel_15.visible = False
+
+  def image_4_copy_6_mouse_up(self, x, y, button, **event_args):
+    """This method is called when a mouse button is released on this component"""
+    self.grid_panel_1.visible = False
+    self.grid_panel_2.visible = False
+    self.grid_panel_3.visible = False
+    self.grid_panel_4.visible = False
+    self.grid_panel_6.visible = True
+    self.grid_panel_7.visible = False
+    self.grid_panel_8.visible = False
+    self.grid_panel_9.visible = False
+    self.grid_panel_10.visible = False
+    self.grid_panel_11.visible = False
+    self.grid_panel_12.visible = False
+    self.grid_panel_13.visible = False
+    self.grid_panel_14.visible = False
+    self.grid_panel_15.visible = False
+
+  def image_4_copy_9_mouse_up(self, x, y, button, **event_args):
+    """This method is called when a mouse button is released on this component"""
+    self.grid_panel_1.visible = False
+    self.grid_panel_2.visible = False
+    self.grid_panel_3.visible = False
+    self.grid_panel_4.visible = False
+    self.grid_panel_5.visible = False
+    self.grid_panel_6.visible = False
+    self.grid_panel_7.visible = False
+    self.grid_panel_8.visible = True
+    self.grid_panel_9.visible = False
+    self.grid_panel_10.visible = False
+    self.grid_panel_11.visible = False
+    self.grid_panel_12.visible = False
+    self.grid_panel_13.visible = False
+    self.grid_panel_14.visible = False
+    self.grid_panel_15.visible = False
+
+  def image_4_mouse_up(self, x, y, button, **event_args):
+    """This method is called when a mouse button is released on this component"""
+    self.grid_panel_1.visible = False
+    self.grid_panel_2.visible = False
+    self.grid_panel_3.visible = False
+    self.grid_panel_4.visible = False
+    self.grid_panel_6.visible = False
+    self.grid_panel_7.visible = False
+    self.grid_panel_8.visible = False
+    self.grid_panel_9.visible = True
+    self.grid_panel_10.visible = False
+    self.grid_panel_11.visible = False
+    self.grid_panel_12.visible = False
+    self.grid_panel_13.visible = False
+    self.grid_panel_14.visible = False
+    self.grid_panel_15.visible = False
+
+  def image_4_copy_4_mouse_up(self, x, y, button, **event_args):
+    """This method is called when a mouse button is released on this component"""
+    self.grid_panel_1.visible = False
+    self.grid_panel_2.visible = False
+    self.grid_panel_3.visible = False
+    self.grid_panel_4.visible = False
+    self.grid_panel_5.visible = False
+    self.grid_panel_6.visible = False
+    self.grid_panel_7.visible = False
+    self.grid_panel_8.visible = False
+    self.grid_panel_9.visible = False
+    self.grid_panel_10.visible = True
+    self.grid_panel_11.visible = False
+    self.grid_panel_12.visible = False
+    self.grid_panel_13.visible = False
+    self.grid_panel_14.visible = False
+    self.grid_panel_15.visible = False
+
+  def image_4_copy_4_copy_copy_mouse_up(self, x, y, button, **event_args):
+    """This method is called when a mouse button is released on this component"""
+    self.grid_panel_1.visible = False
+    self.grid_panel_2.visible = False
+    self.grid_panel_3.visible = False
+    self.grid_panel_4.visible = False
+    self.grid_panel_5.visible = False
+    self.grid_panel_6.visible = False
+    self.grid_panel_7.visible = False
+    self.grid_panel_8.visible = False
+    self.grid_panel_9.visible = False
+    self.grid_panel_10.visible = False
+    self.grid_panel_11.visible = False
+    self.grid_panel_12.visible = True
+    self.grid_panel_13.visible = False
+    self.grid_panel_14.visible = False
+    self.grid_panel_15.visible = False
+
+  def image_4_copy_4_copy_mouse_up(self, x, y, button, **event_args):
+    """This method is called when a mouse button is released on this component"""
+    self.grid_panel_1.visible = False
+    self.grid_panel_2.visible = False
+    self.grid_panel_3.visible = False
+    self.grid_panel_4.visible = False
+    self.grid_panel_5.visible = False
+    self.grid_panel_6.visible = False
+    self.grid_panel_7.visible = False
+    self.grid_panel_8.visible = False
+    self.grid_panel_9.visible = False
+    self.grid_panel_10.visible = False
+    self.grid_panel_11.visible = False
+    self.grid_panel_12.visible = False
+    self.grid_panel_13.visible = True
+    self.grid_panel_14.visible = False
+    self.grid_panel_15.visible = False
+
+  def image_4_copy_8_mouse_up(self, x, y, button, **event_args):
+    """This method is called when a mouse button is released on this component"""
+    self.grid_panel_1.visible = False
+    self.grid_panel_2.visible = False
+    self.grid_panel_3.visible = False
+    self.grid_panel_4.visible = False
+    self.grid_panel_5.visible = False
+    self.grid_panel_6.visible = False
+    self.grid_panel_7.visible = False
+    self.grid_panel_8.visible = False
+    self.grid_panel_9.visible = False
+    self.grid_panel_10.visible = False
+    self.grid_panel_11.visible = False
+    self.grid_panel_12.visible = False
+    self.grid_panel_13.visible = False
+    self.grid_panel_14.visible = True
+    self.grid_panel_15.visible = False
+
+  def image_4_copy_4_copy_copy_2_mouse_up(self, x, y, button, **event_args):
+    """This method is called when a mouse button is released on this component"""
+    self.grid_panel_1.visible = False
+    self.grid_panel_2.visible = False
+    self.grid_panel_3.visible = False
+    self.grid_panel_4.visible = False
+    self.grid_panel_5.visible = False
+    self.grid_panel_6.visible = False
+    self.grid_panel_7.visible = False
+    self.grid_panel_8.visible = False
+    self.grid_panel_9.visible = False
+    self.grid_panel_10.visible = False
+    self.grid_panel_11.visible = False
+    self.grid_panel_12.visible = False
+    self.grid_panel_13.visible = False
+    self.grid_panel_14.visible = False
+    self.grid_panel_15.visible = True
+
   
 
   
