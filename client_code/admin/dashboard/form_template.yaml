@@ -33,12 +33,12 @@ components:
     layout_properties: {grid_position: 'AEVTNB,RAQZHX DGBMNL,DWGBUW'}
     name: content_panel_copy_copy_3_copy_3_copy_copy_copy
     components:
-    - properties: {source: _/theme/ELABG.png, height: '100'}
+    - properties: {source: _/theme/admin/dashboard/manage-admins.png, height: '100'}
       type: Image
       layout_properties: {grid_position: 'GNRRDW,FEOFAR'}
-      name: image_1
       event_bindings: {mouse_enter: image_1_mouse_enter, mouse_down: image_1_mouse_down,
         mouse_up: image_1_mouse_up}
+      name: image_1
     - properties: {text: Manage Admins, bold: true, foreground: black, font_size: 16}
       type: Button
       layout_properties: {grid_position: 'LFNPCJ,OTMDIA'}
@@ -53,11 +53,12 @@ components:
     layout_properties: {grid_position: 'AEVTNB,RAQZHX QOBYGH,TZELPF'}
     name: content_panel_copy_copy_3_copy_3_copy_copy_copy_2
     components:
-    - properties: {source: _/theme/unnamed (5).png, display_mode: shrink_to_fit, height: '100'}
+    - properties: {source: _/theme/admin/dashboard/loan-management.png, display_mode: shrink_to_fit,
+        height: '100'}
       type: Image
       layout_properties: {grid_position: 'QGZTNW,PVJEPO'}
-      name: image_4
       event_bindings: {mouse_up: image_4_mouse_up}
+      name: image_4
     - properties: {text: Loan Management, bold: true, foreground: black, font_size: 16}
       type: Button
       layout_properties: {grid_position: 'WBDDAG,QOALFI'}
@@ -76,8 +77,8 @@ components:
         height: '100'}
       type: Image
       layout_properties: {grid_position: 'VUAHMV,NIXMZO'}
-      name: image_7
       event_bindings: {mouse_up: image_7_mouse_up}
+      name: image_7
     - properties: {text: Manage Revenue Share, foreground: black, bold: true, font_size: 16}
       type: Button
       layout_properties: {grid_position: 'KZEJQV,HXGEOK'}
@@ -96,8 +97,8 @@ components:
         height: '100'}
       type: Image
       layout_properties: {grid_position: 'YGLFNC,ASARUK'}
-      name: image_10
       event_bindings: {mouse_up: image_10_mouse_up}
+      name: image_10
     - properties: {text: Manage Issues, foreground: black, bold: true, font_size: 16}
       type: Button
       layout_properties: {grid_position: 'VXGGJT,QMFGMX'}
@@ -111,8 +112,8 @@ components:
     - properties: {source: _/theme/group.png, display_mode: shrink_to_fit, height: '100'}
       type: Image
       layout_properties: {grid_position: 'YBAGYO,PALCTI'}
-      name: image_2
       event_bindings: {mouse_up: image_2_mouse_up}
+      name: image_2
     - properties: {text: Manage Borrowers, foreground: black, bold: true, font_size: 16}
       type: Button
       layout_properties: {grid_position: 'KISNYU,FEDRLJ'}
@@ -131,8 +132,8 @@ components:
         height: '100'}
       type: Image
       layout_properties: {grid_position: 'JYCCOD,PNTHNW'}
-      name: image_5
       event_bindings: {mouse_up: image_5_mouse_up}
+      name: image_5
     - properties: {text: Manage Products, foreground: black, bold: true, font_size: 16}
       type: Button
       layout_properties: {grid_position: 'DQWJPZ,XLLMWG'}
@@ -151,8 +152,8 @@ components:
         height: '100'}
       type: Image
       layout_properties: {grid_position: 'ICIFRL,RFVFAL'}
-      name: image_8
       event_bindings: {mouse_up: image_8_mouse_up}
+      name: image_8
     - properties: {text: 'Manage Risk Pool(FLDGB)  ', foreground: black, bold: true,
         font_size: 16}
       type: Button
@@ -172,8 +173,8 @@ components:
         height: '100'}
       type: Image
       layout_properties: {grid_position: 'RBAQZF,WYVSVW'}
-      name: image_11
       event_bindings: {mouse_up: image_11_mouse_up}
+      name: image_11
     - properties: {text: Performance Tracker, foreground: black, bold: true, font_size: 16}
       type: Button
       layout_properties: {grid_position: 'XATRPB,LFKIEK'}
@@ -188,8 +189,8 @@ components:
         height: '100'}
       type: Image
       layout_properties: {grid_position: 'YIGLKI,KSUAYJ'}
-      name: image_3
       event_bindings: {mouse_up: image_3_mouse_up}
+      name: image_3
     - properties: {text: Manage Lenders, foreground: black, bold: true, font_size: 16}
       type: Button
       layout_properties: {grid_position: 'HWUTYO,BMGPHA'}
@@ -204,11 +205,12 @@ components:
     layout_properties: {grid_position: 'AEVTNB,FQUOWV MZESRE,GYUATW'}
     name: content_panel_copy_copy_3_copy_3_copy_copy_copy_11
     components:
-    - properties: {source: _/theme/user.png, display_mode: shrink_to_fit, height: '100'}
+    - properties: {source: _/theme/admin/dashboard/manage-setting.png, display_mode: shrink_to_fit,
+        height: '100'}
       type: Image
       layout_properties: {grid_position: 'HFFRPH,KRPCBO'}
-      name: image_6
       event_bindings: {mouse_leave: image_6_mouse_leave, mouse_up: image_6_mouse_up}
+      name: image_6
     - properties: {text: Manage Settings, foreground: black, bold: true, font_size: 16}
       type: Button
       layout_properties: {grid_position: 'QNOGIE,OOAQVF'}
@@ -227,8 +229,8 @@ components:
         height: '100'}
       type: Image
       layout_properties: {grid_position: 'HQRYUT,UOATCO'}
-      name: image_9
       event_bindings: {mouse_up: image_9_mouse_up}
+      name: image_9
     - properties: {text: Manage CMS, foreground: black, bold: true, font_size: 16}
       type: Button
       layout_properties: {grid_position: 'HTLBLJ,LNMXIO'}
@@ -246,8 +248,8 @@ components:
     - properties: {source: _/theme/manage ascend score.png, height: '100'}
       type: Image
       layout_properties: {grid_position: 'OHJMBF,WSMZVF'}
-      name: image_12
       event_bindings: {mouse_move: image_12_mouse_move, mouse_up: image_12_mouse_up}
+      name: image_12
     - properties: {text: Manage Ascend Score, foreground: black, bold: true, font_size: 16}
       type: Button
       layout_properties: {grid_position: 'CMCGJO,QEJJZP'}

@@ -89,7 +89,8 @@ class dashboard(dashboardTemplate):
                     'borrower_loan_created_timestamp': loan['borrower_loan_created_timestamp'],
                     'borrower_customer_id': loan['borrower_customer_id'],
                     'beseem_score': user_profile['bessem_value'],
-                    'credit_limit': loan['credit_limit']})
+                    'credit_limit': loan['credit_limit'],
+                    'product_name': loan['product_name']})
         return profiles_with_loans
 
     def toggle_components_visibility(self):      
