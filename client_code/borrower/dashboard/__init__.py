@@ -441,13 +441,14 @@ class dashboard(dashboardTemplate):
         if user_profile:
             self.label_3.text = user_profile['mobile']
             self.image_1_copy_copy.source = user_profile['user_photo']
+            self.label_2_copy.text = "Welcome" + " " + user_profile['full_name']
             
 
     def populate_loan_history(self):
         try:
             customer_loans = app_tables.fin_loan_details.search(borrower_customer_id=self.user_Id)
             if customer_loans:
-                self.label_2_copy.text = "Welcome" + " " + customer_loans[0]['borrower_full_name']
+                
                 self.label_7.text = customer_loans[0]['member_since']
                 self.label_5.text = customer_loans[0]['credit_limit']
                 self.data = [{'loan_id': loan['product_name'], 'loan_amount': loan['loan_amount'],
