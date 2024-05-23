@@ -37,7 +37,8 @@ components:
       layout_properties: {grid_position: 'LKTWOF,LRMGVL TFYOZD,THGIQV'}
       components:
       - name: image_4_copy
-        properties: {source: _/theme/bank_2.png, display_mode: shrink_to_fit, height: '100'}
+        properties: {source: _/theme/admin/dashboard/loan_management/approved-loan.png,
+          display_mode: shrink_to_fit, height: '100'}
         type: Image
         layout_properties: {grid_position: 'QGZTNW,PVJEPO'}
         event_bindings: {mouse_up: image_4_copy_mouse_up}
@@ -56,7 +57,8 @@ components:
       layout_properties: {grid_position: 'LKTWOF,LRMGVL QAKCZK,TLIDIT'}
       components:
       - name: image_4_copy_2
-        properties: {source: _/theme/hehe.png, display_mode: shrink_to_fit, height: '100'}
+        properties: {source: _/theme/admin/dashboard/loan_management/disbursed-loan.png,
+          display_mode: shrink_to_fit, height: '100'}
         type: Image
         layout_properties: {grid_position: 'QGZTNW,PVJEPO'}
         event_bindings: {mouse_up: image_4_copy_2_mouse_up}
@@ -91,8 +93,8 @@ components:
       layout_properties: {grid_position: 'LKTWOF,PPLSYB IRSXYL,KKSDLA'}
       components:
       - name: image_4_copy_3
-        properties: {source: _/theme/loan rejeted.jpg, display_mode: shrink_to_fit,
-          height: '100'}
+        properties: {source: _/theme/admin/dashboard/loan_management/rejected-loan.png,
+          display_mode: shrink_to_fit, height: '100'}
         type: Image
         layout_properties: {grid_position: 'QGZTNW,PVJEPO'}
         event_bindings: {mouse_up: image_4_copy_3_mouse_up}
@@ -111,8 +113,8 @@ components:
       layout_properties: {grid_position: 'LKTWOF,PPLSYB KKXABX,ZHURYQ'}
       components:
       - name: image_4_copy_10
-        properties: {source: _/theme/loan_5955575.png, display_mode: shrink_to_fit,
-          height: '100'}
+        properties: {source: _/theme/admin/dashboard/loan_management/lapsed-loans.png,
+          display_mode: shrink_to_fit, height: '100'}
         type: Image
         layout_properties: {grid_position: 'QGZTNW,PVJEPO'}
         event_bindings: {mouse_up: image_4_copy_10_mouse_up}
@@ -131,7 +133,7 @@ components:
       layout_properties: {grid_position: 'LKTWOF,PPLSYB WFLIIA,WAOXLB'}
       components:
       - name: image_4
-        properties: {source: _/theme/trustworthiness.png, display_mode: shrink_to_fit,
+        properties: {source: _/theme/admin/dashboard/loan_management/ots.png, display_mode: shrink_to_fit,
           height: '100'}
         type: Image
         layout_properties: {grid_position: 'QGZTNW,PVJEPO'}
@@ -169,8 +171,8 @@ components:
       layout_properties: {grid_position: 'LKTWOF,FPVXBC RWZWDC,AYIQOP'}
       components:
       - name: image_4_copy_6
-        properties: {source: _/theme/default loans.png, display_mode: shrink_to_fit,
-          height: '100'}
+        properties: {source: _/theme/admin/dashboard/loan_management/default-loans.png,
+          display_mode: shrink_to_fit, height: '100'}
         type: Image
         layout_properties: {grid_position: 'QGZTNW,PVJEPO'}
         event_bindings: {mouse_up: image_4_copy_6_mouse_up}
@@ -189,8 +191,8 @@ components:
       layout_properties: {grid_position: 'LKTWOF,GBAJZY ZQQIVR,ENGAGN'}
       components:
       - name: image_4_copy_7
-        properties: {source: _/theme/unsecured-loan.png, display_mode: shrink_to_fit,
-          height: '100'}
+        properties: {source: _/theme/admin/dashboard/loan_management/open-loans.png,
+          display_mode: shrink_to_fit, height: '100'}
         type: Image
         layout_properties: {grid_position: 'QGZTNW,PVJEPO'}
         event_bindings: {mouse_up: image_4_copy_7_mouse_up}
@@ -211,8 +213,8 @@ components:
       layout_properties: {grid_position: 'LKTWOF,GBAJZY UXTNEX,HGFJSQ'}
       components:
       - name: image_4_copy_9
-        properties: {source: _/theme/closed loans.png, display_mode: shrink_to_fit,
-          height: '100'}
+        properties: {source: _/theme/admin/dashboard/loan_management/closed-loans.png,
+          display_mode: shrink_to_fit, height: '100'}
         type: Image
         layout_properties: {grid_position: 'QGZTNW,PVJEPO'}
         event_bindings: {mouse_up: image_4_copy_9_mouse_up}
