@@ -93,7 +93,7 @@ components:
     layout_properties: {grid_position: 'AEVTNB,RAQZHX VHYXNN,YDNJVV'}
     name: content_panel_copy_copy_3_copy_3_copy_copy_copy_9
     components:
-    - properties: {source: _/theme/manage issues.png, display_mode: shrink_to_fit,
+    - properties: {source: _/theme/admin/dashboard/risk-management.png, display_mode: shrink_to_fit,
         height: '100'}
       type: Image
       layout_properties: {grid_position: 'YGLFNC,ASARUK'}
@@ -109,7 +109,8 @@ components:
     layout_properties: {grid_position: 'AEVTNB,HBXSQZ XTQZQD,PBZHHY'}
     name: content_panel_copy_copy_3_copy_3_copy_copy_copy_3
     components:
-    - properties: {source: _/theme/group.png, display_mode: shrink_to_fit, height: '100'}
+    - properties: {source: _/theme/admin/dashboard/manage-borrowers.png, display_mode: shrink_to_fit,
+        height: '100'}
       type: Image
       layout_properties: {grid_position: 'YBAGYO,PALCTI'}
       event_bindings: {mouse_up: image_2_mouse_up}
@@ -148,7 +149,7 @@ components:
     layout_properties: {grid_position: 'AEVTNB,HBXSQZ GMTZDO,OKCFXZ'}
     name: content_panel_copy_copy_3_copy_3_copy_copy_copy_7
     components:
-    - properties: {source: _/theme/manage risk pool.png, display_mode: shrink_to_fit,
+    - properties: {source: _/theme/admin/dashboard/manage-risk-pool.png, display_mode: shrink_to_fit,
         height: '100'}
       type: Image
       layout_properties: {grid_position: 'ICIFRL,RFVFAL'}
@@ -169,7 +170,7 @@ components:
     layout_properties: {grid_position: 'AEVTNB,HBXSQZ WRZOQP,ZGEQTI'}
     name: content_panel_copy_copy_3_copy_3_copy_copy_copy_12
     components:
-    - properties: {source: _/theme/admin/dashboard/performance%20tracker.png, display_mode: shrink_to_fit,
+    - properties: {source: _/theme/admin/dashboard/performance-tracker.png, display_mode: shrink_to_fit,
         height: '100'}
       type: Image
       layout_properties: {grid_position: 'RBAQZF,WYVSVW'}
@@ -185,7 +186,7 @@ components:
     layout_properties: {grid_position: 'AEVTNB,FQUOWV VOXZKL,RFFBFH'}
     name: content_panel_copy_copy_3_copy_3_copy_copy_copy_6
     components:
-    - properties: {display_mode: shrink_to_fit, source: _/theme/manage lender.png,
+    - properties: {display_mode: shrink_to_fit, source: _/theme/admin/dashboard/manage-lenders.png,
         height: '100'}
       type: Image
       layout_properties: {grid_position: 'YIGLKI,KSUAYJ'}
@@ -245,7 +246,7 @@ components:
     layout_properties: {grid_position: 'AEVTNB,FQUOWV TYUINS,MTMTFA'}
     name: content_panel_copy_copy_3_copy_3_copy_copy_copy_10
     components:
-    - properties: {source: _/theme/manage ascend score.png, height: '100'}
+    - properties: {source: _/theme/admin/dashboard/manage-ascendscore.png, height: '100'}
       type: Image
       layout_properties: {grid_position: 'OHJMBF,WSMZVF'}
       event_bindings: {mouse_move: image_12_mouse_move, mouse_up: image_12_mouse_up}
