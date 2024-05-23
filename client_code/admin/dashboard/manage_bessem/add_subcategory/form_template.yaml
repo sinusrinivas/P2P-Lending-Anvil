@@ -28,7 +28,8 @@ components:
       layout_properties: {grid_position: 'LKTWOF,LRMGVL TFYOZD,THGIQV'}
       components:
       - name: image_4_copy
-        properties: {source: _/theme/lesbian.png, display_mode: shrink_to_fit, height: '100'}
+        properties: {source: _/theme/admin/dashboard/manage_cms/gender.png, display_mode: shrink_to_fit,
+          height: '100'}
         type: Image
         layout_properties: {grid_position: 'QGZTNW,PVJEPO'}
       - name: button_9
@@ -46,7 +47,7 @@ components:
       layout_properties: {grid_position: 'LKTWOF,LRMGVL QAKCZK,TLIDIT'}
       components:
       - name: image_4_copy_2
-        properties: {source: _/theme/occupation.png, display_mode: shrink_to_fit,
+        properties: {source: _/theme/admin/dashboard/manage_cms/profession.png, display_mode: shrink_to_fit,
           height: '100'}
         type: Image
         layout_properties: {grid_position: 'QGZTNW,PVJEPO'}
@@ -94,7 +95,8 @@ components:
       layout_properties: {grid_position: 'LKTWOF,PPLSYB IRSXYL,KKSDLA'}
       components:
       - name: image_4_copy_3
-        properties: {source: _/theme/guarantee.png, display_mode: shrink_to_fit, height: '100'}
+        properties: {source: _/theme/admin/dashboard/manage_cms/qualification.png,
+          display_mode: shrink_to_fit, height: '100'}
         type: Image
         layout_properties: {grid_position: 'QGZTNW,PVJEPO'}
       - name: button_10
@@ -112,8 +114,8 @@ components:
       layout_properties: {grid_position: 'LKTWOF,PPLSYB KKXABX,ZHURYQ'}
       components:
       - name: image_4_copy_10
-        properties: {source: _/theme/home-address.png, display_mode: shrink_to_fit,
-          height: '100'}
+        properties: {source: _/theme/admin/dashboard/manage_cms/present-adress.png,
+          display_mode: shrink_to_fit, height: '100'}
         type: Image
         layout_properties: {grid_position: 'QGZTNW,PVJEPO'}
       - name: button_14
@@ -131,8 +133,8 @@ components:
       layout_properties: {grid_position: 'LKTWOF,PPLSYB CCVDTH,SQAEZT'}
       components:
       - name: image_4_copy_4
-        properties: {source: _/theme/spouse profession.png, display_mode: shrink_to_fit,
-          height: '100'}
+        properties: {source: _/theme/admin/dashboard/manage_cms/spouse%20profession.png,
+          display_mode: shrink_to_fit, height: '100'}
         type: Image
         layout_properties: {grid_position: 'QGZTNW,PVJEPO'}
       - name: button_3
@@ -146,7 +148,8 @@ components:
       layout_properties: {grid_position: 'LKTWOF,PPLSYB EUZKJT,FVHWID'}
       components:
       - name: image_4_copy_4_copy_copy_2
-        properties: {source: _/theme/car_2.png, display_mode: shrink_to_fit, height: '100'}
+        properties: {source: _/theme/admin/dashboard/manage_ascend_score/vehicle-loan.png,
+          display_mode: shrink_to_fit, height: '100'}
         type: Image
         layout_properties: {grid_position: 'QGZTNW,PVJEPO'}
       - name: button_2
@@ -160,7 +163,8 @@ components:
       layout_properties: {grid_position: 'LKTWOF,FPVXBC FZRSVY,NIONJZ'}
       components:
       - name: image_4_copy_5
-        properties: {source: _/theme/wedding.png, display_mode: shrink_to_fit, height: '100'}
+        properties: {source: _/theme/admin/dashboard/manage_cms/marital%20status.png,
+          display_mode: shrink_to_fit, height: '100'}
         type: Image
         layout_properties: {grid_position: 'QIIGJK,CGUSVX'}
       - name: button_11
@@ -178,8 +182,8 @@ components:
       layout_properties: {grid_position: 'LKTWOF,FPVXBC RWZWDC,AYIQOP'}
       components:
       - name: image_4_copy_6
-        properties: {source: _/theme/organization.png, display_mode: shrink_to_fit,
-          height: '100'}
+        properties: {source: _/theme/admin/dashboard/manage_cms/organization%20(1).png,
+          display_mode: shrink_to_fit, height: '100'}
         type: Image
         layout_properties: {grid_position: 'QGZTNW,PVJEPO'}
       - name: button_16
@@ -244,7 +248,7 @@ components:
       layout_properties: {grid_position: 'LKTWOF,GBAJZY UXTNEX,HGFJSQ'}
       components:
       - name: image_4_copy_9
-        properties: {source: _/theme/hourglass_2.png, display_mode: shrink_to_fit,
+        properties: {source: _/theme/admin/dashboard/manage_cms/hourglass.png, display_mode: shrink_to_fit,
           height: '100'}
         type: Image
         layout_properties: {grid_position: 'QGZTNW,PVJEPO'}
@@ -264,8 +268,8 @@ components:
       layout_properties: {grid_position: 'LKTWOF,GBAJZY NSFFKA,HFXNWX'}
       components:
       - name: image_4_copy_4_copy
-        properties: {source: _/theme/other loan.png, display_mode: shrink_to_fit,
-          height: '100'}
+        properties: {source: _/theme/admin/dashboard/manage_ascend_score/other-loan.png,
+          display_mode: shrink_to_fit, height: '100'}
         type: Image
         layout_properties: {grid_position: 'QGZTNW,PVJEPO'}
       - name: button_4
