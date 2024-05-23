@@ -31,7 +31,7 @@ components:
     name: button_1
   - properties: {height: 32}
     type: Spacer
-    layout_properties: {width: 256.6000061035156}
+    layout_properties: {width: 328.79998779296875}
     name: spacer_3
   - properties: {role: null, url: '', align: right, tooltip: Home, border: '', foreground: 'theme:On
         Primary', visible: true, text: Home, font_size: 15, wrap_on: mobile, font: '',
