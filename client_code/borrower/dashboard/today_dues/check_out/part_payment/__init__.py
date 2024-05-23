@@ -40,8 +40,8 @@ class part_payment(part_paymentTemplate):
 
     total_emi_amount = float(loan_details['total_emi_amount'])
     half_emi_amount = total_emi_amount / 2
-    self.text_box_1.text = "{:.2f}".format(half_emi_amount)
-    self.text_box_1.enabled = False
+    self.label_6.text = "{:.2f}".format(half_emi_amount)
+    self.label_6.enabled = False
 
     loan_id = self.loan_details['loan_id']
     emi_number = self.loan_details['current_emi_number']
@@ -68,15 +68,15 @@ class part_payment(part_paymentTemplate):
                 self.additional_fee.text ="{:.2f}".format(additional_fees)
             else:
               return part_payment_amount
-            self.text_box_1.text ="{:.2f}".format(part_payment_amount)
-            self.text_box_1.enabled = False
+            self.label_6.text ="{:.2f}".format(part_payment_amount)
+            self.label_6.enabled = False
             self.label_3.visible = False
             self.total_emi_amount_label.visible = False
 
 
   def pay_now_click(self, **event_args):
       """This method is called when the button is clicked"""
-      entered_amount = float(self.text_box_1.text)  # Get the amount entered by the user
+      entered_amount = float(self.label_6.text)  # Get the amount entered by the user
       total_emi_amount = float(self.total_emi_amount_label.text)  # Get the total EMI amount
       loan_id = self.loan_details['loan_id']
       emi_number = self.loan_details['current_emi_number']
@@ -161,6 +161,7 @@ class part_payment(part_paymentTemplate):
                       emi_row['amount_paid'] += text_amount
                       # emi_row['next_payment'] = next_next_payment
                       emi_row['extra_fee'] += additional_fees
+                      emi_row['part_payment_done'] = 2
                       emi_row.update()
   
                   alert("Payment successful!")
@@ -262,6 +263,9 @@ class part_payment(part_paymentTemplate):
                               payment_type='part payment',
                               part_payment_date=datetime.today().date(),
                               part_payment_amount=total_emi_amount - entered_amount,
+                              part_payment_done= 1,
+                              total_amount_pay= float(self.loan_details['total_emi_amount'])
+                              
                               
                           )
   
@@ -287,7 +291,8 @@ class part_payment(part_paymentTemplate):
 
   def calculate_additional_fees(self, emi_row):
         # Retrieve the part_payment_date from emi_row
-        part_payment_date = self.loan_details['next_payment']
+        part_payment_date = emi_row['scheduled_payment']
+        print(part_payment_date)
         
 
         # Calculate the difference in days between part_payment_date and today's date
@@ -320,44 +325,58 @@ class part_payment(part_paymentTemplate):
           default_start = default_settings['minimum_days']
           default_end = default_settings['maximum_days']
           if default_start < days_elapsed <= default_end:
-              # product_id = selected_row['product_id']
-              # Fetch default fee details from product details table
-              product_details = app_tables.fin_product_details.get(product_id=product_id)
-              
-              # Check if default_fee or default_fee_amount should be used
+              days_in_default = days_elapsed - default_start
+              default_fee_amount = 0
+  
+              # Include lapsed end fee if applicable
+              if lapsed_settings and days_elapsed > lapsed_end:
+                  days_in_lapsed = lapsed_end - lapsed_start
+                  lapsed_fee_percentage = product_details['lapsed_fee']
+                  lapsed_fee_amount = days_in_lapsed * (lapsed_fee_percentage * float(self.loan_details['emi']) / 100)
+                  default_fee_amount += lapsed_fee_amount
+  
               if product_details['default_fee'] != 0:
-                  days_difference = days_elapsed - default_start
                   default_fee_percentage = product_details['default_fee']
-                  default_fee_decimal = default_fee_percentage * float(self.loan_details['emi']) / 100
-                  total_additional_fees = days_difference * default_fee_decimal
+                  default_fee_amount += days_in_default * (default_fee_percentage * float(self.loan_details['emi']) / 100)
               elif product_details['default_fee_amount'] != 0:
-                  default_fee_amount = product_details['default_fee_amount']
-                  days_difference = days_elapsed - default_start
-                  total_additional_fees = days_difference * default_fee_amount
-              else:
-                  total_additional_fees = 0
-              print(f"Default Fee: {total_additional_fees}")
+                  default_fee_amount += days_in_default * product_details['default_fee_amount']
+              
+              total_additional_fees += default_fee_amount
+              print(f"Default Fee: {default_fee_amount}")
 
         if npa_settings:
           npa_start = npa_settings['minimum_days']
           npa_end = npa_settings['maximum_days']
           if npa_start < days_elapsed <= npa_end:
-              # product_id = selected_row['product_id']
-              product_details = app_tables.fin_product_details.get(product_id=product_id)
-              
-              # Check if npa or npa_amount should be used
+              days_in_npa = days_elapsed - npa_start
+              npa_fee_amount = 0
+  
+              # Include lapsed end fee if applicable
+              if lapsed_settings and days_elapsed > lapsed_end:
+                  days_in_lapsed = lapsed_end - lapsed_start
+                  lapsed_fee_percentage = product_details['lapsed_fee']
+                  lapsed_fee_amount = days_in_lapsed * (lapsed_fee_percentage * float(self.loan_details['emi']) / 100)
+                  npa_fee_amount += lapsed_fee_amount
+  
+              # Include default end fee if applicable
+              if default_settings and days_elapsed > default_end:
+                  days_in_default = default_end - default_start
+                  if product_details['default_fee'] != 0:
+                      default_fee_percentage = product_details['default_fee']
+                      default_fee_amount = days_in_default * (default_fee_percentage * float(self.loan_details['emi']) / 100)
+                      npa_fee_amount += default_fee_amount
+                  elif product_details['default_fee_amount'] != 0:
+                      default_fee_amount = days_in_default * product_details['default_fee_amount']
+                      npa_fee_amount += default_fee_amount
+  
               if product_details['npa'] != 0:
-                  days_difference = days_elapsed - npa_start
-                  npa_percentage = product_details['npa']
-                  npa_decimal = npa_percentage * float(self.loan_details['emi']) / 100
-                  total_additional_fees = days_difference * npa_decimal
+                  npa_fee_percentage = product_details['npa']
+                  npa_fee_amount += days_in_npa * (npa_fee_percentage * float(self.loan_details['emi']) / 100)
               elif product_details['npa_amount'] != 0:
-                  npa_amount = product_details['npa_amount']
-                  days_difference = days_elapsed - npa_start
-                  total_additional_fees = days_difference * npa_amount
-              else:
-                  total_additional_fees = 0
-              print(f"NPA Fee: {total_additional_fees}")
+                  npa_fee_amount += days_in_npa * product_details['npa_amount']
+              
+              total_additional_fees += npa_fee_amount
+              print(f"NPA Fee: {npa_fee_amount}")
   
         print(f"Total Additional Fees: {total_additional_fees}")
         return total_additional_fees
