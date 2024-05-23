@@ -394,14 +394,17 @@ components:
       name: button_5_copy
   - properties:
       columns:
-      - {id: JNEVFU, data_key: column_1, title: Name}
-      - {id: JKSDUP, title: Loan Amount, data_key: column_1, width: 130.20001220703125,
+      - {id: JNEVFU, data_key: column_1, title: Borrower Name, width: 149.39999389648438,
         expand: false}
-      - {id: RFMHCZ, data_key: column_1, title: Ascend Score, width: 143.39996337890625,
+      - {id: JKSDUP, title: Loan Amount, data_key: column_1, width: 130.39996337890625,
         expand: false}
-      - {id: GUBYWD, data_key: column_1, title: Tenure, width: 166.5999755859375,
+      - {id: OOZQUT, data_key: column_1, title: Product Name, width: 173.39996337890625,
         expand: false}
-      - {id: OJLQEN, title: Loan Status, data_key: column_3}
+      - {id: RFMHCZ, data_key: column_1, title: Ascend Score, width: 134.79998779296875,
+        expand: false}
+      - {id: GUBYWD, data_key: column_1, title: Tenure, width: 127, expand: false}
+      - {id: OJLQEN, title: Loan Status, data_key: column_3, width: 158.7999267578125,
+        expand: false}
       - {id: NFYNZM, data_key: column_4, title: ''}
       visible: false
       wrap_on: mobile
@@ -419,11 +422,18 @@ components:
       name: repeating_panel_1
   - properties:
       columns:
-      - {id: VJQQOR, title: Name, data_key: column_2, width: 124.39999389648438, expand: false}
-      - {id: OJLQEN, title: Loan Amount, data_key: column_3}
-      - {id: SVPJYH, data_key: column_1, title: Ascend Score}
-      - {id: QNAINS, data_key: column_2, title: Tenure}
-      - {id: NMZHFS, data_key: column_3, title: Loan Status}
+      - {id: VJQQOR, title: Borrower Name, data_key: column_2, width: 147.39996337890625,
+        expand: false}
+      - {id: OJLQEN, title: Loan Amount, data_key: column_3, width: 132.39996337890625,
+        expand: false}
+      - {id: GTJQQX, data_key: column_1, title: Product Name, width: 187.20001220703125,
+        expand: false}
+      - {id: SVPJYH, data_key: column_1, title: Ascend Score, width: 135.39996337890625,
+        expand: false}
+      - {id: QNAINS, data_key: column_2, title: Tenure, width: 106.7999267578125,
+        expand: false}
+      - {id: NMZHFS, data_key: column_3, title: Loan Status, width: 122.5999755859375,
+        expand: false}
       - {id: WMKNBI, data_key: column_4, title: ''}
       - {id: TSHUFR, data_key: column_5, title: ''}
       role: tonal-data-grid
