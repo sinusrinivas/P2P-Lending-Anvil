@@ -62,12 +62,12 @@ components:
       layout_properties: {}
       event_bindings: {click: button_10_copy_click}
 - name: label_2
-  properties: {text: Ascends is a Leading Peer to Peer Lending Platform in India,
-    align: center, bold: true, font_size: 25}
+  properties: {text: Ascend is a Leading Peer to Peer Lending Platform in India, align: center,
+    bold: true, font_size: 25}
   type: Label
   layout_properties: {grid_position: 'IRIMNO,KBDRET'}
 - name: label_3
-  properties: {text: Ascends offers non-traditional investment opportunities for investors and access to low-cost personal loans for borrowers,
+  properties: {text: Ascend offers non-traditional investment opportunities for investors and access to low-cost personal loans for borrowers,
     font_size: 23, align: center}
   type: Label
   layout_properties: {grid_position: 'IGSOPT,XIRLTP'}
@@ -112,7 +112,7 @@ components:
   type: Spacer
   layout_properties: {grid_position: 'JYQKOZ,RAUEBS'}
 - name: label_7
-  properties: {text: 'About Ascends ', align: center, bold: true, font_size: 30}
+  properties: {text: About Ascend, align: center, bold: true, font_size: 30}
   type: Label
   layout_properties: {grid_position: 'WGOGKC,YFWYFJ'}
 - name: spacer_13
@@ -129,21 +129,21 @@ components:
   type: Image
   layout_properties: {grid_position: ',undefined TKSFBE,XSHAZS'}
 - name: label_8
-  properties: {text: 'Ascends is more than just a place to borrow and lend money.
-      We carefully look at each loan to see how risky it is and suggest an interest
-      rate based on that. Borrowers can then borrow money at that rate or higher.
-      This helps borrowers get money at a fair price based on how risky their loan
-      is. It also helps investors earn more money compared to how risky the loans
-      are. If a borrower can''t pay back the money, we help investors with legal stuff
+  properties: {text: 'Ascend is more than just a place to borrow and lend money. We
+      carefully look at each loan to see how risky it is and suggest an interest rate
+      based on that. Borrowers can then borrow money at that rate or higher. This
+      helps borrowers get money at a fair price based on how risky their loan is.
+      It also helps investors earn more money compared to how risky the loans are.
+      If a borrower can''t pay back the money, we help investors with legal stuff
       to get their money back
 
       ', font_size: 19, align: left}
   type: Label
   layout_properties: {grid_position: ',ERTZBE TWOCQM,BVGNUV'}
 - name: label_9
-  properties: {text: 'Ascends is ready to shake up how we do money stuff. The old
-      way of doing things, like banks, costs a lot because they have fancy offices
-      and pay lots of staff. Because of this, they can''t really check each person''s
+  properties: {text: 'Ascend is ready to shake up how we do money stuff. The old way
+      of doing things, like banks, costs a lot because they have fancy offices and
+      pay lots of staff. Because of this, they can''t really check each person''s
       risk properly. So, they treat loans for regular people as just a big bunch of
       business. This means people with good credit get mixed in with everyone else.
       It''s not fair to people who are good with money, and it''s not good for using
@@ -223,7 +223,7 @@ components:
   type: Spacer
   layout_properties: {grid_position: 'SIHKPS,IRVYPV'}
 - name: label_33
-  properties: {text: 'Ascends operates as an internet-based platform for Peer-to-Peer
+  properties: {text: 'Ascend operates as an internet-based platform for Peer-to-Peer
       Lending (P2P Lending), linking verified borrowers seeking unsecured loans with
       investors seeking higher risk-adjusted returns through investment opportunities.
 
@@ -266,7 +266,7 @@ components:
   type: Image
   layout_properties: {grid_position: 'LAZYRH,EKJKUU WUWVYB,CYQCZU'}
 - name: label_36
-  properties: {text: 'Ascends ', align: center, font_size: 18, bold: true}
+  properties: {text: Ascend, align: center, font_size: 18, bold: true}
   type: Label
   layout_properties: {grid_position: 'LAZYRH,EKJKUU CBLPRW,BTKLIE'}
 - name: image_8
@@ -295,7 +295,7 @@ components:
   type: Spacer
   layout_properties: {grid_position: 'YXOIZD,BQTJIG'}
 - name: label_39
-  properties: {text: 'Ascends conducts thorough credit evaluations of borrowers prior
+  properties: {text: 'Ascend conducts thorough credit evaluations of borrowers prior
       to approving loan proposals and provides support throughout the entire loan
       cycle, from approval to repayment.
 
