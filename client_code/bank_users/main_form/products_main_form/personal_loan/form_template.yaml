@@ -249,10 +249,10 @@ components:
       layout_properties: {grid_position: 'MVJORB,WZHWFG'}
     - name: label_17
       properties: {text: 'In today''s digital era, where "seamless" is the mantra,
-          your quest for a personal loan concludes with Ascends. We specialize in
-          providing unsecured personal loans at reduced costs. At Ascends, our goal
-          is to simplify your experience, making it as effortless as ordering a pizza
-          online or calling a cab
+          your quest for a personal loan concludes with Ascend. We specialize in providing
+          unsecured personal loans at reduced costs. At Ascend, our goal is to simplify
+          your experience, making it as effortless as ordering a pizza online or calling
+          a cab
 
           ', align: center, font_size: 18, foreground: white}
       type: Label
@@ -1066,7 +1066,7 @@ components:
   - name: label_90
     properties: {text: '
 
-        Upon submission of the personal loan application, Ascends will conduct a thorough
+        Upon submission of the personal loan application, Ascend will conduct a thorough
         verification of the applicant''s provided details and accompanying documents.
         Should any clarification or additional documentation be necessary, we may
         contact the borrower accordingly.
@@ -1092,7 +1092,7 @@ components:
     type: Label
     layout_properties: {grid_position: 'DVJQWN,NZRDPG FTYJYP,JWALNO'}
   - name: label_93
-    properties: {text: 'Ascends conducts an internal credit assessment of each borrower
+    properties: {text: 'Ascend conducts an internal credit assessment of each borrower
         utilizing its proprietary credit evaluation model. This assessment encompasses
         various parameters including the borrower''s ability and willingness to repay,
         personal credit score, behavioral patterns, demographics, and more. Subsequently,
@@ -1254,7 +1254,7 @@ components:
           to the disbursement process, repayment is facilitated through an escrow
           account held with the same intermediary bank, ensuring security and transparency.Borrowers
           have access to their complete repayment history, including details of all
-          transactions made to date, by simply logging into their Ascends account.
+          transactions made to date, by simply logging into their Ascend account.
           This feature enables borrowers to stay informed about their repayment status
           and track their progress throughout the loan tenure.', font_size: 17}
       type: Label
@@ -1546,7 +1546,7 @@ components:
         components:
         - name: label_4_copy_2
           properties: {role: null, align: left, tooltip: '', border: '', foreground: white,
-            visible: true, text: '© 2023 - 2024, Ascends - All Rights    Reserved',
+            visible: true, text: '© 2023 - 2024, Ascends- All Rights    Reserved',
             font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small,
             italic: false, background: '#05264d', bold: true, underline: false, icon: ''}
           type: Label
