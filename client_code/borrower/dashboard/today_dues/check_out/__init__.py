@@ -460,6 +460,8 @@ class check_out(check_outTemplate):
                   total_lapsed_amount = days_difference * (lapsed_fee_percentage * emi / 100)
                   total_due_amount += total_lapsed_amount
                   print(f"Lapsed Fee: {total_lapsed_amount}")
+                  self.lapsed.visible = True
+                  self.label_5.visible = True
       
           if default_settings:
               default_start = default_settings['minimum_days']
@@ -485,6 +487,8 @@ class check_out(check_outTemplate):
                   
                   total_due_amount += default_fee_amount
                   print(f"Default Fee: {default_fee_amount}")
+                  self.default.visible = True
+                  self.label_9.visible = True
       
           if npa_settings:
               npa_start = npa_settings['minimum_days']
@@ -525,6 +529,9 @@ class check_out(check_outTemplate):
                   
                   total_due_amount += npa_fee_amount
                   print(f"NPA Fee: {npa_fee_amount}")
+                  self.npa.visible = True
+                  self.label_12.visible = True
+                  
       
           adding_remaining_part_payment = app_tables.fin_emi_table.get(
               loan_id=loan_id,
