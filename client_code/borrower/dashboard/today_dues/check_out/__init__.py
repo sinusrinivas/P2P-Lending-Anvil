@@ -406,11 +406,11 @@ class check_out(check_outTemplate):
 
         if emi_row is not None and emi_row['payment_type'] == 'part payment':
           self.button_1_copy_3.visible = False
-          self.label_3.visible = False
+          # self.label_3.visible = False
           # self.label_5.visible = False
           # self.label_9.visible = False
           # self.label_12.visible = False
-          self.total_emi_amount_label.visible = False
+          # self.total_emi_amount_label.visible = False
           # self.lapsed.visible = False
           # self.default.visible = False
           # self.npa.visible = False
@@ -441,6 +441,7 @@ class check_out(check_outTemplate):
         if foreclosure_details is not None:
           total_due_amount = foreclosure_details['total_due_amount']
           foreclosure_amount = foreclosure_details['foreclose_amount']
+          foreclosure_emi_amount = foreclosure_details['total_due_amount']
       
           lapsed_settings = app_tables.fin_loan_settings.get(loans="lapsed fee")
           default_settings = app_tables.fin_loan_settings.get(loans="default fee")
@@ -459,6 +460,8 @@ class check_out(check_outTemplate):
                   total_lapsed_amount = days_difference * (lapsed_fee_percentage * emi / 100)
                   total_due_amount += total_lapsed_amount
                   print(f"Lapsed Fee: {total_lapsed_amount}")
+                  self.lapsed.visible = True
+                  self.label_5.visible = True
       
           if default_settings:
               default_start = default_settings['minimum_days']
@@ -484,6 +487,8 @@ class check_out(check_outTemplate):
                   
                   total_due_amount += default_fee_amount
                   print(f"Default Fee: {default_fee_amount}")
+                  self.default.visible = True
+                  self.label_9.visible = True
       
           if npa_settings:
               npa_start = npa_settings['minimum_days']
@@ -524,6 +529,9 @@ class check_out(check_outTemplate):
                   
                   total_due_amount += npa_fee_amount
                   print(f"NPA Fee: {npa_fee_amount}")
+                  self.npa.visible = True
+                  self.label_12.visible = True
+                  
       
           adding_remaining_part_payment = app_tables.fin_emi_table.get(
               loan_id=loan_id,
@@ -542,7 +550,7 @@ class check_out(check_outTemplate):
                   self.label_14.visible = True
                   self.label_15.visible = True
       
-          self.emi_amount_label.text = "{:.2f}".format(total_due_amount)
+          self.emi_amount_label.text = "{:.2f}".format(foreclosure_emi_amount)
           self.extension_amount_label.text = "{:.2f}".format(foreclosure_amount)
           self.total_emi_amount_label.text = "{:.2f}".format(total_due_amount + foreclosure_amount)
           self.total_emi_amount_label.visible = True
