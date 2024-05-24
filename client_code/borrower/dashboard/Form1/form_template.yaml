@@ -4,7 +4,7 @@ container:
   properties: {html: ''}
 components:
 - type: ColumnPanel
-  properties: {}
+  properties: {role: null, wrap_on: tablet}
   name: content_panel
   layout_properties: {slot: default}
   components:
@@ -492,3 +492,5 @@ components:
     type: ColumnPanel
     layout_properties: {grid_position: 'LDSAOX,MTDQOE'}
     components: []
+  data_bindings:
+  - {property: tag, code: 'self.item['''']', writeback: false}
