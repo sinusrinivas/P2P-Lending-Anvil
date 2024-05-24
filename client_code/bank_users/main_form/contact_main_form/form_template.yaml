@@ -17,11 +17,6 @@ components:
         here to help!', font_size: 50, bold: true}
     type: Label
     layout_properties: {x: 19.050000000745058, y: 63.05000000074506, width: 491.175}
-  - name: image_1
-    properties: {height: 103.19998168945312, source: _/theme/vault-insurance-about-accent-image-1.webp,
-      display_mode: shrink_to_fit}
-    type: Image
-    layout_properties: {x: 725.3499649055302, y: 99.13749389722943, width: 200}
 - name: label_7
   properties: {text: Registered Office, font_size: 35, bold: true, underline: false,
     align: center, font: '', background: ''}
