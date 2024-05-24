@@ -1087,6 +1087,14 @@ span.btn-text{
 }
 
 
+.align-left {
+  margin-left: 0 !important;
+}
+
+.align-center {
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
 
 
 

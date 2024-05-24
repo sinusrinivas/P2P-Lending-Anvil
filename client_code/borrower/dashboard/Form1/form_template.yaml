@@ -1,0 +1,9 @@
+container:
+  type: HtmlTemplate
+  properties: {html: ''}
+components:
+- name: navigation_form_dashboard_1
+  properties: {}
+  type: form:borrower.dashboard.Navigation_form_dashboard
+  layout_properties: {slot: default}
+is_package: true
