@@ -7,14 +7,14 @@ import anvil.users
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
-from ....bank_users.main_form import main_form_module
+# from ....bank_users.main_form import main_form_module
 
 class navigation_bar_main_lender(navigation_bar_main_lenderTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
-    self.user_id=main_form_module.userId
-    user_id = self.user_id
+    # self.user_id=main_form_module.userId
+    # user_id = self.user_id
 
     # Any code you write here will run before the form opens.
 
