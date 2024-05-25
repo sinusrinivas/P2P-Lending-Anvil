@@ -15,7 +15,7 @@ components:
     layout_properties: {grid_position: 'VFMWUW,LMUGVD', full_width_row: true}
     components:
     - name: label_1
-      properties: {text: GTPL - Your go-to for Education Loans Tailored for Working Professionals.,
+      properties: {text: Ascends - Your go-to for Education Loans Tailored for Working Professionals.,
         bold: true, font_size: 35}
       type: Label
       layout_properties: {grid_position: 'QTNQBN,OPOTBI WUQDPS,DPVFAQ'}
@@ -24,7 +24,8 @@ components:
       type: Spacer
       layout_properties: {grid_position: 'QTNQBN,OPOTBI'}
     - name: image_10
-      properties: {source: _/theme/el3.png, height: '100', display_mode: original_size}
+      properties: {source: _/theme/bank_users/personal_loan/education_loan/el3.png,
+        height: '100', display_mode: original_size}
       type: Image
       layout_properties: {grid_position: 'QTNQBN,OPOTBI SSEHLE,IKLMTS DNKEXJ,NUNJNB'}
     - name: label_2
@@ -33,7 +34,8 @@ components:
       type: Label
       layout_properties: {grid_position: 'QTNQBN,OPOTBI SSEHLE,IKLMTS QWUDKA,ZOTMLP'}
     - name: image_12
-      properties: {source: _/theme/el4.png, height: '100', display_mode: original_size}
+      properties: {source: _/theme/bank_users/personal_loan/education_loan/el4.png,
+        height: '100', display_mode: original_size}
       type: Image
       layout_properties: {grid_position: 'QTNQBN,OPOTBI SSEHLE,XKXGWE FGLOLS,HVTNPP'}
     - name: label_31
@@ -41,7 +43,8 @@ components:
       type: Label
       layout_properties: {grid_position: 'QTNQBN,OPOTBI SSEHLE,XKXGWE HBSPER,XVCZIW'}
     - name: image_13
-      properties: {source: _/theme/el5.png, height: '100', display_mode: original_size}
+      properties: {source: _/theme/bank_users/personal_loan/education_loan/el5.png,
+        height: '100', display_mode: original_size}
       type: Image
       layout_properties: {grid_position: 'QTNQBN,OPOTBI SSEHLE,DQQWBI JYJYFM,MGUSWX'}
     - name: label_33
@@ -49,7 +52,8 @@ components:
       type: Label
       layout_properties: {grid_position: 'QTNQBN,OPOTBI SSEHLE,DQQWBI ZWDRSQ,NCVHKT'}
     - name: image_11
-      properties: {source: _/theme/el6.png, height: '100', display_mode: original_size}
+      properties: {source: _/theme/bank_users/personal_loan/education_loan/el6.png,
+        height: '100', display_mode: original_size}
       type: Image
       layout_properties: {grid_position: 'QTNQBN,OPOTBI SSEHLE,ZSQUHE WMTQFK,BFUGNG'}
     - name: label_37
@@ -57,7 +61,7 @@ components:
       type: Label
       layout_properties: {grid_position: 'QTNQBN,OPOTBI SSEHLE,ZSQUHE CMTAFX,VQIGFC'}
     - name: spacer_24
-      properties: {height: 10.33331298828125}
+      properties: {height: 14.25}
       type: Spacer
       layout_properties: {grid_position: 'QTNQBN,OPOTBI THGHBD,EZSFCM'}
     - name: button_1
@@ -71,7 +75,7 @@ components:
       type: Spacer
       layout_properties: {grid_position: 'QTNQBN,JBTPFF OJAYXT,BPJSLJ'}
     - name: image_1
-      properties: {height: 375.5555419921875, source: _/theme/Screenshot__154_-removebg-preview.png,
+      properties: {height: 375.5555419921875, source: _/theme/bank_users/personal_loan/education_loan/education-loan-main.png,
         display_mode: zoom_to_fill}
       type: Image
       layout_properties: {grid_position: 'QTNQBN,JBTPFF CKRAJG,VHGQUZ'}
@@ -233,7 +237,7 @@ components:
       type: Label
       layout_properties: {grid_position: 'BFMUDJ,POSEEM RHPUBB,KBETOS'}
     - name: label_10
-      properties: {text: This is precisely what GTPL has to offer., font_size: 17,
+      properties: {text: This is precisely what Ascends has to offer., font_size: 17,
         bold: true}
       type: Label
       layout_properties: {grid_position: 'BFMUDJ,POSEEM LRQRDD,QVFHOY'}
@@ -242,7 +246,8 @@ components:
       type: Spacer
       layout_properties: {grid_position: 'BFMUDJ,FDAXVJ CZDVUM,ZYBOQD'}
     - name: image_2
-      properties: {height: 302.77777099609375, source: _/theme/el7.webp, display_mode: zoom_to_fill}
+      properties: {height: 302.77777099609375, source: _/theme/bank_users/personal_loan/education_loan/education%20loan%20.webp,
+        display_mode: zoom_to_fill}
       type: Image
       layout_properties: {grid_position: 'BFMUDJ,FDAXVJ SHQBNO,DJWPTH'}
   - name: spacer_8
@@ -296,7 +301,7 @@ components:
         type: Spacer
         layout_properties: {grid_position: 'CSAAOX,RAPODP'}
       - name: label_30
-        properties: {text: 'Utilizing our exclusive Beesem scoring system, we assess
+        properties: {text: 'Utilizing our exclusive Ascends scoring system, we assess
             your profile, gauge your creditworthiness, propose an appropriate interest
             rate, and devise a customizable repayment plan tailored to your needs.
 
@@ -338,7 +343,8 @@ components:
     type: Label
     layout_properties: {grid_position: 'FRPQAC,WXQNXX'}
   - name: image_3
-    properties: {source: _/theme/pri1.png, height: '85', display_mode: shrink_to_fit}
+    properties: {source: _/theme/bank_users/personal_loan/education_loan/EL-Prerequisites1.png,
+      height: '85', display_mode: shrink_to_fit}
     type: Image
     layout_properties: {grid_position: 'VAUIWL,HCNQRM UENZJO,WTSGJS'}
   - name: label_34
@@ -352,7 +358,8 @@ components:
     type: Label
     layout_properties: {grid_position: 'VAUIWL,HCNQRM UENZJO,MHIHCK'}
   - name: image_4
-    properties: {source: _/theme/pri2.png, height: '85', display_mode: shrink_to_fit}
+    properties: {source: _/theme/bank_users/personal_loan/education_loan/EL-Prerequisites2.png,
+      height: '85', display_mode: shrink_to_fit}
     type: Image
     layout_properties: {grid_position: 'VAUIWL,HCNQRM YZARXF,HUVPOX'}
   - name: label_38
@@ -366,7 +373,8 @@ components:
     type: Label
     layout_properties: {grid_position: 'VAUIWL,HCNQRM YZARXF,RVMKVG'}
   - name: image_5
-    properties: {source: _/theme/pri3.png, display_mode: shrink_to_fit, height: '85'}
+    properties: {source: _/theme/bank_users/personal_loan/education_loan/EL-Prerequisites3.png,
+      display_mode: shrink_to_fit, height: '85'}
     type: Image
     layout_properties: {grid_position: 'VAUIWL,HCNQRM EKTQHT,BTYKBY'}
   - name: label_39
@@ -380,7 +388,8 @@ components:
     type: Label
     layout_properties: {grid_position: 'VAUIWL,HCNQRM EKTQHT,LEWVYU'}
   - name: image_6
-    properties: {source: _/theme/pri4.png, height: '85', display_mode: shrink_to_fit}
+    properties: {source: _/theme/bank_users/personal_loan/education_loan/EL-Prerequisites4.png,
+      height: '85', display_mode: shrink_to_fit}
     type: Image
     layout_properties: {grid_position: 'VAUIWL,HCNQRM XZOWHL,NUKUZD'}
   - name: label_46
@@ -394,7 +403,8 @@ components:
     type: Label
     layout_properties: {grid_position: 'VAUIWL,HCNQRM XZOWHL,OZDPXD'}
   - name: image_7
-    properties: {source: _/theme/pri5.png, height: '85', display_mode: shrink_to_fit}
+    properties: {source: _/theme/bank_users/personal_loan/education_loan/EL-Prerequisites5.png,
+      height: '85', display_mode: shrink_to_fit}
     type: Image
     layout_properties: {grid_position: 'VAUIWL,HCNQRM BWDGHO,GQGTQZ'}
   - name: label_47
@@ -408,7 +418,8 @@ components:
     type: Label
     layout_properties: {grid_position: 'VAUIWL,HCNQRM BWDGHO,FEIDKK'}
   - name: image_8
-    properties: {source: _/theme/pri6.png, height: '85', display_mode: shrink_to_fit}
+    properties: {source: _/theme/bank_users/personal_loan/education_loan/EL-Prerequisites6.png,
+      height: '85', display_mode: shrink_to_fit}
     type: Image
     layout_properties: {grid_position: 'VAUIWL,HCNQRM FHCBFX,FWFHIH'}
   - name: label_48
@@ -422,7 +433,8 @@ components:
     type: Label
     layout_properties: {grid_position: 'VAUIWL,HCNQRM FHCBFX,AIQPTR'}
   - name: image_9
-    properties: {source: _/theme/el3.png, height: '75', display_mode: shrink_to_fit}
+    properties: {source: _/theme/bank_users/personal_loan/education_loan/el3.png,
+      height: '75', display_mode: shrink_to_fit}
     type: Image
     layout_properties: {grid_position: 'VAUIWL,HCNQRM SUDLQQ,HAALVD'}
   - name: label_49
@@ -520,14 +532,15 @@ components:
     layout_properties: {grid_position: 'UMUTOS,OXMWFF'}
   - name: label_51
     properties: {text: 'To qualify for an education loan, it''s crucial to ensure
-        you meet all the eligibility criteria. At i2iFunding, when we receive an application
+        you meet all the eligibility criteria. At Ascends, when we receive an application
         for an education loan, we typically start by evaluating the following factors:
 
         ', font_size: 18, align: center}
     type: Label
     layout_properties: {grid_position: 'UASOQS,LNMHLD'}
   - name: image_14
-    properties: {source: _/theme/eel1.png, height: '85'}
+    properties: {source: _/theme/bank_users/personal_loan/education_loan/EL-eligibility1.png,
+      height: '85'}
     type: Image
     layout_properties: {grid_position: 'PHJGUM,MKCEIV'}
   - name: label_52
@@ -543,7 +556,8 @@ components:
     type: Label
     layout_properties: {grid_position: 'PHJGUM,MIQGDM CCZRMY,LQWFGA'}
   - name: image_15
-    properties: {source: _/theme/eel2.png, display_mode: shrink_to_fit, height: '85'}
+    properties: {source: _/theme/bank_users/personal_loan/education_loan/EL-eligibility2.png,
+      display_mode: shrink_to_fit, height: '85'}
     type: Image
     layout_properties: {grid_position: 'RSSLAJ,PYMPNQ'}
   - name: label_53
@@ -560,7 +574,8 @@ components:
     type: Label
     layout_properties: {grid_position: 'RSSLAJ,FOTLFZ DOQWTE,GXTKRK'}
   - name: image_16
-    properties: {source: _/theme/ee3.png, height: '85', display_mode: shrink_to_fit}
+    properties: {source: _/theme/bank_users/personal_loan/education_loan/EL-eligibility3.png,
+      height: '85', display_mode: shrink_to_fit}
     type: Image
     layout_properties: {grid_position: 'BDUDZQ,VKURAG'}
   - name: label_55
@@ -577,7 +592,8 @@ components:
     type: Label
     layout_properties: {grid_position: 'BDUDZQ,TIWNID KARDFV,XZWSFU'}
   - name: image_17
-    properties: {source: _/theme/eel4.png, height: '85', display_mode: shrink_to_fit}
+    properties: {source: _/theme/bank_users/personal_loan/education_loan/EL-eligibility4.png,
+      height: '85', display_mode: shrink_to_fit}
     type: Image
     layout_properties: {grid_position: 'JXSNRH,YARKFF'}
   - name: label_56
@@ -594,7 +610,8 @@ components:
     type: Label
     layout_properties: {grid_position: 'JXSNRH,XUSTDU NQIFRI,DQMJFU'}
   - name: image_18
-    properties: {source: _/theme/eel5.png, height: '85', display_mode: shrink_to_fit}
+    properties: {source: _/theme/bank_users/personal_loan/education_loan/EL-eligibility5.png,
+      height: '85', display_mode: shrink_to_fit}
     type: Image
     layout_properties: {grid_position: 'NBIOMA,QAZCGV'}
   - name: label_57
@@ -813,8 +830,8 @@ components:
       type: Spacer
       layout_properties: {grid_position: 'DFARFI,DFEMVZ'}
     - name: image_19
-      properties: {source: _/theme/be1.png, display_mode: shrink_to_fit, background: 'theme:Primary',
-        height: '100'}
+      properties: {source: _/theme/bank_users/personal_loan/education_loan/el_benifits1.png,
+        display_mode: shrink_to_fit, background: 'theme:Primary', height: '100'}
       type: Image
       layout_properties: {grid_position: 'NUSJFG,BACOJQ'}
     - name: label_45
@@ -837,8 +854,8 @@ components:
       type: Label
       layout_properties: {grid_position: 'NSOAVV,PHWKJW'}
     - name: image_20
-      properties: {source: _/theme/be2.png, display_mode: shrink_to_fit, background: 'theme:Primary',
-        height: '100'}
+      properties: {source: _/theme/bank_users/personal_loan/education_loan/el_benifits2.png,
+        display_mode: shrink_to_fit, background: 'theme:Primary', height: '100'}
       type: Image
       layout_properties: {grid_position: 'NSOAVV,BFXPOI'}
     - name: spacer_35
@@ -846,8 +863,8 @@ components:
       type: Spacer
       layout_properties: {grid_position: 'UDCSJJ,NJPAND'}
     - name: image_21
-      properties: {display_mode: shrink_to_fit, source: _/theme/be3.png, background: 'theme:Primary',
-        height: '100'}
+      properties: {display_mode: shrink_to_fit, source: _/theme/bank_users/personal_loan/education_loan/el_benifits3.png,
+        background: 'theme:Primary', height: '100'}
       type: Image
       layout_properties: {grid_position: 'AYNVGK,NVYYIU'}
     - name: label_45_copy_copy
@@ -876,13 +893,13 @@ components:
       type: Spacer
       layout_properties: {grid_position: 'JNWZSX,ISUVYU LQGHJV,JQVJTN'}
     - name: image_22
-      properties: {source: _/theme/be4.png, display_mode: shrink_to_fit, background: 'theme:Primary',
-        height: '100'}
+      properties: {source: _/theme/bank_users/personal_loan/education_loan/el_benifits4.png,
+        display_mode: shrink_to_fit, background: 'theme:Primary', height: '100'}
       type: Image
       layout_properties: {grid_position: 'JNWZSX,OTJFUF'}
     - name: image_23
-      properties: {source: _/theme/be5.png, display_mode: shrink_to_fit, background: 'theme:Primary',
-        height: '100'}
+      properties: {source: _/theme/bank_users/personal_loan/education_loan/el_benifits5.png,
+        display_mode: shrink_to_fit, background: 'theme:Primary', height: '100'}
       type: Image
       layout_properties: {grid_position: 'RZLCFU,ACMUHW'}
     - name: label_45_copy_copy_2_copy_2
@@ -901,7 +918,7 @@ components:
       properties: {text: '
 
           It''s clear why education loans are in high demand among the offerings provided
-          by i2iFunding.
+          by Ascends.
 
           ', align: center, bold: true, font_size: 18}
       type: Label
@@ -920,7 +937,7 @@ components:
         type: Spacer
         layout_properties: {grid_position: 'WUJJOP,HBKWAZ'}
       - name: label_83
-        properties: {text: 'GTPL: Your Partner in Educational Excellence!', align: center,
+        properties: {text: 'Ascends: Your Partner in Educational Excellence!', align: center,
           bold: true, font_size: 30, foreground: white}
         type: Label
         layout_properties: {grid_position: 'BMGQPY,MVTVHZ'}
@@ -1035,8 +1052,8 @@ components:
         components:
         - name: label_4_copy_2
           properties: {role: null, align: left, tooltip: '', border: '', foreground: white,
-            visible: true, text: '© 2023 - 2024, GTPL - All Rights    Reserved', font_size: null,
-            font: '', spacing_above: small, icon_align: left, spacing_below: small,
+            visible: true, text: '© 2023 - 2024, Ascends - All Rights    Reserved',
+            font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small,
             italic: false, background: '#05264d', bold: true, underline: false, icon: ''}
           type: Label
           layout_properties: {}

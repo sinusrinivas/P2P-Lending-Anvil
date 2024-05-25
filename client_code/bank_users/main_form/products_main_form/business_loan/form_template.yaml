@@ -1,7 +1,7 @@
 container: {type: ColumnPanel}
 components:
 - name: content_panel
-  properties: {background: '', col_widths: '{"FWLUSG":15,"OTHXKY":45,"ABXTTY":30,"QCUTVM":30}'}
+  properties: {background: '', col_widths: '{"FWLUSG":15,"OTHXKY":45,"ABXTTY":20,"QCUTVM":40,"FDMMWA":20,"TEEFFJ":40,"GBEMRY":20,"EKZFMT":40,"PZYVTP":20,"GMVWWY":40,"OCTFDV":20,"VEYWJT":40,"GQDYZG":20,"QATFAM":40,"FUSFQW":20,"XEQAAC":40}'}
   type: ColumnPanel
   layout_properties: {grid_position: 'FZRLGK,RVGYUA', full_width_row: true}
   components:
@@ -27,8 +27,8 @@ components:
       layout_properties: {grid_position: 'JIZFNE,AEXDNX'}
     - name: label_2
       properties: {text: "Looking to grow your team, diversify your services, or finance\
-          \ your next business milestone? \nExplore GTPL peer-to-peer business loans\
-          \ in India.\n", bold: false, font_size: 23}
+          \ your next business milestone? \nExplore Ascends peer-to-peer business\
+          \ loans in India.\n", bold: false, font_size: 23}
       type: Label
       layout_properties: {grid_position: 'RPUBYC,GZZIWE'}
     - name: spacer_1
@@ -36,8 +36,8 @@ components:
       type: Spacer
       layout_properties: {grid_position: 'FTRYFN,KRRVLT'}
     - name: image_1
-      properties: {height: '80', source: _/theme/online-Disbursement.png, display_mode: shrink_to_fit,
-        border: '', role: null}
+      properties: {height: '80', source: _/theme/bank_users/personal_loan/online-Disbursement.png,
+        display_mode: shrink_to_fit, border: '', role: null}
       type: Image
       layout_properties: {grid_position: 'JLRIKH,IQSKIX HELTWU,BJASSC'}
     - name: label_3
@@ -45,8 +45,8 @@ components:
       type: Label
       layout_properties: {grid_position: 'JLRIKH,IQSKIX NQAGWC,BVANDC'}
     - name: image_2
-      properties: {source: _/theme/interest-rate.png, display_mode: shrink_to_fit,
-        height: '80'}
+      properties: {source: _/theme/bank_users/main_form/business_loan/interest-rate.png,
+        display_mode: shrink_to_fit, height: '80'}
       type: Image
       layout_properties: {grid_position: 'JLRIKH,IEDONF ULYTVY,ZGQWOH'}
     - name: label_4
@@ -54,8 +54,8 @@ components:
       type: Label
       layout_properties: {grid_position: 'JLRIKH,IEDONF KALMVG,BUUKQJ'}
     - name: image_3
-      properties: {source: _/theme/loan-duration-icon.png, display_mode: shrink_to_fit,
-        height: '80'}
+      properties: {source: _/theme/bank_users/main_form/business_loan/loan-duration-icon.png,
+        display_mode: shrink_to_fit, height: '80'}
       type: Image
       layout_properties: {grid_position: 'JLRIKH,GGXYID CYXKXT,TDSJQY'}
     - name: label_5
@@ -64,8 +64,8 @@ components:
       type: Label
       layout_properties: {grid_position: 'JLRIKH,GGXYID RVZGCL,VJPOPZ'}
     - name: image_4
-      properties: {source: _/theme/collateral.png, display_mode: shrink_to_fit, height: '80',
-        visible: true}
+      properties: {source: _/theme/bank_users/main_form/business_loan/collateral.png,
+        display_mode: shrink_to_fit, height: '80', visible: true}
       type: Image
       layout_properties: {grid_position: 'JLRIKH,HLAVTK ENGADE,ZFSAEA'}
     - name: label_6
@@ -143,8 +143,8 @@ components:
       type: Spacer
       layout_properties: {grid_position: 'FTRYFN,KRRVLT'}
     - name: image_1_copy
-      properties: {height: '80', source: _/theme/funds-icon.png, display_mode: shrink_to_fit,
-        border: '', role: null}
+      properties: {height: '80', source: _/theme/bank_users/main_form/business_loan/funds-icon.png,
+        display_mode: shrink_to_fit, border: '', role: null}
       type: Image
       layout_properties: {grid_position: 'JLRIKH,IQSKIX HELTWU,BJASSC'}
     - name: label_3_copy
@@ -152,7 +152,8 @@ components:
       type: Label
       layout_properties: {grid_position: 'JLRIKH,IQSKIX NQAGWC,BVANDC'}
     - name: image_2_copy
-      properties: {source: _/theme/workplace.png, display_mode: shrink_to_fit, height: '80'}
+      properties: {source: _/theme/bank_users/main_form/business_loan/workplace.png,
+        display_mode: shrink_to_fit, height: '80'}
       type: Image
       layout_properties: {grid_position: 'JLRIKH,IEDONF ULYTVY,ZGQWOH'}
     - name: label_4_copy
@@ -161,8 +162,8 @@ components:
       type: Label
       layout_properties: {grid_position: 'JLRIKH,IEDONF KALMVG,BUUKQJ'}
     - name: image_3_copy
-      properties: {source: _/theme/Office-equipment.png, display_mode: shrink_to_fit,
-        height: '80'}
+      properties: {source: _/theme/bank_users/main_form/business_loan/Office-equipment.png,
+        display_mode: shrink_to_fit, height: '80'}
       type: Image
       layout_properties: {grid_position: 'JLRIKH,GGXYID CYXKXT,TDSJQY'}
     - name: label_5_copy
@@ -171,8 +172,8 @@ components:
       type: Label
       layout_properties: {grid_position: 'JLRIKH,GGXYID RVZGCL,VJPOPZ'}
     - name: image_4_copy
-      properties: {source: _/theme/office-staff-icon.png, display_mode: shrink_to_fit,
-        height: '80'}
+      properties: {source: _/theme/bank_users/main_form/business_loan/business_loan-office-staff-icon.png,
+        display_mode: shrink_to_fit, height: '80'}
       type: Image
       layout_properties: {grid_position: 'JLRIKH,HLAVTK ENGADE,ZFSAEA'}
     - name: label_6_copy
@@ -181,7 +182,8 @@ components:
       type: Label
       layout_properties: {grid_position: 'JLRIKH,HLAVTK IBWJID,DZNMQM'}
     - name: image_5
-      properties: {height: '80', source: _/theme/grow.png, display_mode: shrink_to_fit}
+      properties: {height: '80', source: _/theme/bank_users/main_form/business_loan/grow.png,
+        display_mode: shrink_to_fit}
       type: Image
       layout_properties: {grid_position: 'JLRIKH,ZXAMEJ HQVBFI,VLLZVA'}
     - name: label_11
@@ -193,7 +195,7 @@ components:
       type: Spacer
       layout_properties: {grid_position: 'ARPCUW,XDKEFC'}
     - name: label_12
-      properties: {text: 'At GTPL, we empower businesses of every scale to propel
+      properties: {text: 'At Ascends, we empower businesses of every scale to propel
           forward. Secure your business''s growth with our online P2P business loans,
           starting from just 12% per annum.', align: center, font_size: 18, foreground: white}
       type: Label
@@ -284,17 +286,17 @@ components:
     type: Spacer
     layout_properties: {grid_position: 'IGFUMH,ZYKFOT'}
   - name: label_24
-    properties: {text: 'Why choose GTPL for your business loan needs?
+    properties: {text: 'Why choose Ascends for your business loan needs?
 
         ', align: center, bold: true, font_size: 30}
     type: Label
-    layout_properties: {grid_position: 'BRXMCD,XADSUA'}
+    layout_properties: {grid_position: 'BXCWOI,TSYNDI'}
   - name: spacer_13
     properties: {height: '10'}
     type: Spacer
     layout_properties: {grid_position: 'KPUGBM,FNOTVU'}
   - name: label_37
-    properties: {text: 'GTPL provides hassle-free, unsecured business loans online
+    properties: {text: 'Ascends provides hassle-free, unsecured business loans online
         at low-interest rates. Applying for a business loan on our platform takes
         just ten minutes of your valuable time.
 
@@ -315,8 +317,9 @@ components:
       type: Spacer
       layout_properties: {grid_position: 'YIBNOX,OBGCPK'}
     - name: image_6
-      properties: {source: _/theme/online-pocess.png, display_mode: shrink_to_fit,
-        horizontal_align: left, background: '', height: '80', vertical_align: center}
+      properties: {source: _/theme/bank_users/main_form/business_loan/online-pocess.png,
+        display_mode: shrink_to_fit, horizontal_align: left, background: '', height: '80',
+        vertical_align: center}
       type: Image
       layout_properties: {grid_position: 'ZEXDKI,MYPGRO NXMSCH,KKKENU'}
     - name: spacer_17
@@ -352,7 +355,7 @@ components:
       type: Label
       layout_properties: {grid_position: 'ZEXDKI,OSQOGP NBYNKM,SDMQNO'}
     - name: image_7
-      properties: {display_mode: shrink_to_fit, source: _/theme/interest-rate-online.png,
+      properties: {display_mode: shrink_to_fit, source: _/theme/bank_users/main_form/business_loan/interest-rate-online.png,
         horizontal_align: left, height: '80', background: ''}
       type: Image
       layout_properties: {grid_position: 'ISVYFH,LPIEIZ ZDWXEK,NRDDJA'}
@@ -406,7 +409,7 @@ components:
 
           Banks often employ highly-paid professionals to assess business loan applications,
           and these expenses are ultimately passed on to you through higher interest
-          rates. However, at GTPL, we''ve streamlined our operations by leveraging
+          rates. However, at Ascends, we''ve streamlined our operations by leveraging
           dependable technology to digitize the entire loan application process. Because
           we prioritize our customers, we pass on the savings from reduced costs to
           you in the form of lower interest rates, unmatched by banks or NBFCs.
@@ -426,8 +429,8 @@ components:
       type: Label
       layout_properties: {grid_position: 'ISVYFH,JOUREZ BWOFAD,YWPXQF'}
     - name: image_8
-      properties: {source: _/theme/borrow-apply-icon5.png, display_mode: shrink_to_fit,
-        horizontal_align: left, height: '80'}
+      properties: {source: _/theme/bank_users/main_form/business_loan/fast_disbursal.png,
+        display_mode: shrink_to_fit, horizontal_align: left, height: '80'}
       type: Image
       layout_properties: {grid_position: 'XQMMMY,QNBESR TFRCXQ,XOAIHX'}
     - name: spacer_19
@@ -463,15 +466,15 @@ components:
       type: Label
       layout_properties: {grid_position: 'XQMMMY,HFTTOG BDOSTW,BWFMNA'}
     - name: label_30
-      properties: {text: 'At GTPL, we boast a vast network of hundreds of investors
+      properties: {text: 'At Ascends, we boast a vast network of hundreds of investors
           ready to support your aspirations. Once your business loan application receives
           approval from our system, it''s listed on our platform for funding. Typically,
           5-10 investors participate in funding every lakh rupees raised on the platform.
           Once committed, investors transfer funds into an escrow account managed
-          by GTPL and overseen by a SEBI-approved trustee. Subsequently, the funds
+          by Ascends and overseen by a SEBI-approved trustee. Subsequently, the funds
           are directly transferred to your account.This entire process is digital
           and seamless, ensuring that you can access your business capital upfront
-          within a few hours of applying on GTPL.', font_size: 18}
+          within a few hours of applying on Ascends.', font_size: 18}
       type: Label
       layout_properties: {grid_position: 'XQMMMY,HFTTOG KMLKJU,FOIKIA'}
     - name: label_47_copy
@@ -480,8 +483,8 @@ components:
       type: Label
       layout_properties: {grid_position: 'XQMMMY,HFTTOG DVEVJP,LOVFKC'}
     - name: image_9
-      properties: {source: _/theme/borrowimg6.png, display_mode: shrink_to_fit, horizontal_align: left,
-        height: '80'}
+      properties: {source: _/theme/bank_users/main_form/business_loan/free-payment-repayment.png,
+        display_mode: shrink_to_fit, horizontal_align: left, height: '80'}
       type: Image
       layout_properties: {grid_position: 'KCHXXB,SMBLNO HGWNUG,CIEDTR'}
     - name: spacer_18
@@ -518,13 +521,13 @@ components:
       type: Label
       layout_properties: {grid_position: 'KCHXXB,MSBQFS QJEQTF,QJQXKX'}
     - name: label_32
-      properties: {text: 'Discover the concept of equitable business loans at GTPL
+      properties: {text: 'Discover the concept of equitable business loans at Ascends
           – a customer-centric lending platform committed to providing the best terms
-          for both borrowers and investors.When you borrow from GTPL, you have the
-          freedom to prepay your loan at your convenience. Unlike banks and NBFCs,
+          for both borrowers and investors.When you borrow from Ascends, you have
+          the freedom to prepay your loan at your convenience. Unlike banks and NBFCs,
           we don''t impose any prepayment penalties. Whether you prefer to make early
           repayments or settle your loan the very next day, the choice is yours –
-          it''s your money, after all!Simply reach out to GTPL support and select
+          it''s your money, after all!Simply reach out to Ascends support and select
           from various modes to prepay. Once the process is complete, we''ll promptly
           send you a revised account statement online.', font_size: 18}
       type: Label
@@ -535,8 +538,8 @@ components:
       type: Label
       layout_properties: {grid_position: 'KCHXXB,MSBQFS BJPHQV,JZPHWY'}
     - name: image_10
-      properties: {source: _/theme/borrow-money-online-icon13.png, display_mode: shrink_to_fit,
-        horizontal_align: left, height: '80'}
+      properties: {source: _/theme/bank_users/main_form/business_loan/secure-transperent.png,
+        display_mode: shrink_to_fit, horizontal_align: left, height: '80'}
       type: Image
       layout_properties: {grid_position: 'JGUDEZ,ZZLXJK'}
     - name: label_33
@@ -545,8 +548,8 @@ components:
       type: Label
       layout_properties: {grid_position: 'JGUDEZ,FZVWNJ OLTCXH,MGFAMU'}
     - name: label_34
-      properties: {text: 'At GTPL, we prioritize our customers'' interests above all
-          else. Our core values revolve around honesty, fairness, and transparency
+      properties: {text: 'At Ascends, we prioritize our customers'' interests above
+          all else. Our core values revolve around honesty, fairness, and transparency
           in all our dealings.For every financial product offered on our platform,
           you''ll find comprehensive information regarding the applicable interest
           rates, processing fees, repayment terms, and any associated penalties, if
@@ -579,8 +582,8 @@ components:
     type: Label
     layout_properties: {grid_position: 'WZKAJW,DXRULX'}
   - name: image_11
-    properties: {source: _/theme/right.jpg, display_mode: shrink_to_fit, height: '40',
-      horizontal_align: right, vertical_align: center}
+    properties: {source: _/theme/bank_users/main_form/business_loan/right.jpg, display_mode: shrink_to_fit,
+      height: '40', horizontal_align: right, vertical_align: center}
     type: Image
     layout_properties: {grid_position: 'WZKAJW,PMOMBX JXCMZK,ABXTTY'}
   - name: label_40
@@ -588,8 +591,8 @@ components:
     type: Label
     layout_properties: {grid_position: 'WZKAJW,PMOMBX JXCMZK,QCUTVM'}
   - name: image_11_copy
-    properties: {source: _/theme/right.jpg, display_mode: shrink_to_fit, height: '40',
-      horizontal_align: right}
+    properties: {source: _/theme/bank_users/main_form/business_loan/right.jpg, display_mode: shrink_to_fit,
+      height: '40', horizontal_align: right}
     type: Image
     layout_properties: {grid_position: 'WZKAJW,PMOMBX ZILWLG,FDMMWA'}
   - name: label_42
@@ -597,8 +600,8 @@ components:
     type: Label
     layout_properties: {grid_position: 'WZKAJW,PMOMBX ZILWLG,TEEFFJ'}
   - name: image_11_copy_copy
-    properties: {source: _/theme/right.jpg, display_mode: shrink_to_fit, height: '40',
-      horizontal_align: right}
+    properties: {source: _/theme/bank_users/main_form/business_loan/right.jpg, display_mode: shrink_to_fit,
+      height: '40', horizontal_align: right}
     type: Image
     layout_properties: {grid_position: 'WZKAJW,PMOMBX VRZFAA,GBEMRY'}
   - name: label_44
@@ -606,8 +609,8 @@ components:
     type: Label
     layout_properties: {grid_position: 'WZKAJW,PMOMBX VRZFAA,EKZFMT'}
   - name: image_11_copy_copy_2
-    properties: {source: _/theme/right.jpg, display_mode: shrink_to_fit, height: '40',
-      horizontal_align: right}
+    properties: {source: _/theme/bank_users/main_form/business_loan/right.jpg, display_mode: shrink_to_fit,
+      height: '40', horizontal_align: right}
     type: Image
     layout_properties: {grid_position: 'WZKAJW,PMOMBX ANTHNX,PZYVTP'}
   - name: label_46
@@ -615,8 +618,8 @@ components:
     type: Label
     layout_properties: {grid_position: 'WZKAJW,PMOMBX ANTHNX,GMVWWY'}
   - name: image_11_copy_copy_3
-    properties: {source: _/theme/right.jpg, display_mode: shrink_to_fit, height: '40',
-      horizontal_align: right}
+    properties: {source: _/theme/bank_users/main_form/business_loan/right.jpg, display_mode: shrink_to_fit,
+      height: '40', horizontal_align: right}
     type: Image
     layout_properties: {grid_position: 'WZKAJW,GVYAON XPPSJB,OCTFDV'}
   - name: label_41
@@ -624,8 +627,8 @@ components:
     type: Label
     layout_properties: {grid_position: 'WZKAJW,GVYAON XPPSJB,VEYWJT'}
   - name: image_11_copy_copy_4
-    properties: {source: _/theme/right.jpg, display_mode: shrink_to_fit, height: '40',
-      horizontal_align: right}
+    properties: {source: _/theme/bank_users/main_form/business_loan/right.jpg, display_mode: shrink_to_fit,
+      height: '40', horizontal_align: right}
     type: Image
     layout_properties: {grid_position: 'WZKAJW,GVYAON YHYOSD,GQDYZG'}
   - name: label_43
@@ -633,8 +636,8 @@ components:
     type: Label
     layout_properties: {grid_position: 'WZKAJW,GVYAON YHYOSD,QATFAM'}
   - name: image_11_copy_copy_5
-    properties: {source: _/theme/right.jpg, display_mode: shrink_to_fit, height: '40',
-      horizontal_align: right}
+    properties: {source: _/theme/bank_users/main_form/business_loan/right.jpg, display_mode: shrink_to_fit,
+      height: '40', horizontal_align: right}
     type: Image
     layout_properties: {grid_position: 'WZKAJW,GVYAON DWVPAC,FUSFQW'}
   - name: label_45
@@ -757,7 +760,7 @@ components:
       type: Spacer
       layout_properties: {grid_position: 'FTRYFN,KRRVLT'}
     - name: label_48
-      properties: {text: 'Getting a business loan through GTPL is swift, effortless,
+      properties: {text: 'Getting a business loan through Ascends is swift, effortless,
           and smooth. You can complete the application process in just ten minutes
           on our entirely digital platform.
 
@@ -795,8 +798,8 @@ components:
       type: Label
       layout_properties: {grid_position: 'JAOVJB,OMGPJQ'}
     - name: image_11_copy_copy_6
-      properties: {source: _/theme/right.jpg, display_mode: shrink_to_fit, height: '40',
-        horizontal_align: right}
+      properties: {source: _/theme/bank_users/main_form/business_loan/right.jpg, display_mode: shrink_to_fit,
+        height: '40', horizontal_align: right}
       type: Image
       layout_properties: {grid_position: 'IEHCSV,DSABOJ OOPYTZ,AYKUXY'}
     - name: label_52
@@ -804,8 +807,8 @@ components:
       type: Label
       layout_properties: {grid_position: 'IEHCSV,DSABOJ OOPYTZ,JKNNWL'}
     - name: image_11_copy_copy_6_copy
-      properties: {source: _/theme/right.jpg, display_mode: shrink_to_fit, height: '40',
-        horizontal_align: right}
+      properties: {source: _/theme/bank_users/main_form/business_loan/right.jpg, display_mode: shrink_to_fit,
+        height: '40', horizontal_align: right}
       type: Image
       layout_properties: {grid_position: 'IEHCSV,DSABOJ PQMQNN,CTBEEE'}
     - name: label_53
@@ -813,8 +816,8 @@ components:
       type: Label
       layout_properties: {grid_position: 'IEHCSV,DSABOJ PQMQNN,ZAJONL'}
     - name: image_11_copy_copy_6_copy_copy
-      properties: {source: _/theme/right.jpg, display_mode: shrink_to_fit, height: '40',
-        horizontal_align: right}
+      properties: {source: _/theme/bank_users/main_form/business_loan/right.jpg, display_mode: shrink_to_fit,
+        height: '40', horizontal_align: right}
       type: Image
       layout_properties: {grid_position: 'IEHCSV,DSABOJ BGRJIM,KFBCRI'}
     - name: label_53_copy
@@ -831,12 +834,12 @@ components:
       type: Label
       layout_properties: {grid_position: 'IEHCSV,DSABOJ LZGUAK,SYWQGS'}
     - name: image_11_copy_copy_6_copy_copy_copy
-      properties: {source: _/theme/right.jpg, display_mode: shrink_to_fit, height: '40',
-        horizontal_align: right}
+      properties: {source: _/theme/bank_users/main_form/business_loan/right.jpg, display_mode: shrink_to_fit,
+        height: '40', horizontal_align: right}
       type: Image
       layout_properties: {grid_position: 'IEHCSV,DSABOJ YSIHXX,ZINAJQ'}
     - name: label_52_copy
-      properties: {text: GTPL will verify your details and documents online. We may reach out to you in case any clarification or additional documents are needed.,
+      properties: {text: Ascends will verify your details and documents online. We may reach out to you in case any clarification or additional documents are needed.,
         font_size: 18}
       type: Label
       layout_properties: {grid_position: 'IEHCSV,DSABOJ YSIHXX,PMTGNO'}
@@ -849,19 +852,19 @@ components:
       type: Label
       layout_properties: {grid_position: 'IEHCSV,DSABOJ HKSWWE,EIYWXI'}
     - name: image_11_copy_copy_6_copy_copy_copy_copy
-      properties: {source: _/theme/right.jpg, display_mode: shrink_to_fit, height: '40',
-        horizontal_align: right}
+      properties: {source: _/theme/bank_users/main_form/business_loan/right.jpg, display_mode: shrink_to_fit,
+        height: '40', horizontal_align: right}
       type: Image
       layout_properties: {grid_position: 'IEHCSV,DSABOJ GRUMXZ,DWJQEH'}
     - name: label_52_copy_copy
-      properties: {text: 'GTPL will assess your credit using its proprietary credit
+      properties: {text: 'Ascends will assess your credit using its proprietary credit
           evaluation model based on multiple parameters such as credit score, financial
           history, outstanding debts, demographics, etc.', font_size: 18}
       type: Label
       layout_properties: {grid_position: 'IEHCSV,DSABOJ GRUMXZ,RWPUWU'}
     - name: image_11_copy_copy_6_copy_copy_copy_copy_copy
-      properties: {source: _/theme/right.jpg, display_mode: shrink_to_fit, height: '40',
-        horizontal_align: right}
+      properties: {source: _/theme/bank_users/main_form/business_loan/right.jpg, display_mode: shrink_to_fit,
+        height: '40', horizontal_align: right}
       type: Image
       layout_properties: {grid_position: 'IEHCSV,DSABOJ ASMQKK,CCDNRQ'}
     - name: label_56
@@ -873,8 +876,8 @@ components:
       type: Label
       layout_properties: {grid_position: 'IEHCSV,DSABOJ ASMQKK,YKHPWF'}
     - name: image_11_copy_copy_6_copy_copy_copy_copy_copy_copy
-      properties: {source: _/theme/right.jpg, display_mode: shrink_to_fit, height: '40',
-        horizontal_align: right}
+      properties: {source: _/theme/bank_users/main_form/business_loan/right.jpg, display_mode: shrink_to_fit,
+        height: '40', horizontal_align: right}
       type: Image
       layout_properties: {grid_position: 'IEHCSV,DSABOJ ZFRRTN,BNIVBC'}
     - name: label_57
@@ -884,8 +887,8 @@ components:
       type: Label
       layout_properties: {grid_position: 'IEHCSV,DSABOJ ZFRRTN,CVZRMA'}
     - name: image_11_copy_copy_6_copy_3
-      properties: {source: _/theme/right.jpg, display_mode: shrink_to_fit, height: '40',
-        horizontal_align: right}
+      properties: {source: _/theme/bank_users/main_form/business_loan/right.jpg, display_mode: shrink_to_fit,
+        height: '40', horizontal_align: right}
       type: Image
       layout_properties: {grid_position: 'IEHCSV,LSMIUZ XHCMTO,EJJZDO'}
     - name: spacer_21
@@ -893,8 +896,8 @@ components:
       type: Spacer
       layout_properties: {grid_position: 'IEHCSV,LSMIUZ BSLAQF,RLPLZL'}
     - name: image_11_copy_copy_6_copy_3_copy
-      properties: {source: _/theme/right.jpg, display_mode: shrink_to_fit, height: '40',
-        horizontal_align: right}
+      properties: {source: _/theme/bank_users/main_form/business_loan/right.jpg, display_mode: shrink_to_fit,
+        height: '40', horizontal_align: right}
       type: Image
       layout_properties: {grid_position: 'IEHCSV,LSMIUZ TNBWVY,YYAQGH'}
     - name: spacer_22
@@ -902,8 +905,8 @@ components:
       type: Spacer
       layout_properties: {grid_position: 'IEHCSV,LSMIUZ XYRGNY,QOBGBK'}
     - name: image_11_copy_copy_6_copy_3_copy_copy
-      properties: {source: _/theme/right.jpg, display_mode: shrink_to_fit, height: '40',
-        horizontal_align: right}
+      properties: {source: _/theme/bank_users/main_form/business_loan/right.jpg, display_mode: shrink_to_fit,
+        height: '40', horizontal_align: right}
       type: Image
       layout_properties: {grid_position: 'IEHCSV,LSMIUZ SYGRMJ,SWVNBZ'}
     - name: spacer_23
@@ -911,8 +914,8 @@ components:
       type: Spacer
       layout_properties: {grid_position: 'IEHCSV,LSMIUZ APTAMJ,QKPVQK'}
     - name: image_11_copy_copy_6_copy_3_copy_copy_copy
-      properties: {source: _/theme/right.jpg, display_mode: shrink_to_fit, height: '40',
-        horizontal_align: right}
+      properties: {source: _/theme/bank_users/main_form/business_loan/right.jpg, display_mode: shrink_to_fit,
+        height: '40', horizontal_align: right}
       type: Image
       layout_properties: {grid_position: 'IEHCSV,LSMIUZ LKGAXY,RVHQUN'}
     - name: spacer_26
@@ -920,8 +923,8 @@ components:
       type: Spacer
       layout_properties: {grid_position: 'IEHCSV,LSMIUZ SKEPNE,IGXDVR'}
     - name: image_11_copy_copy_6_copy_3_copy_copy_copy_copy
-      properties: {source: _/theme/right.jpg, display_mode: shrink_to_fit, height: '40',
-        horizontal_align: right}
+      properties: {source: _/theme/bank_users/main_form/business_loan/right.jpg, display_mode: shrink_to_fit,
+        height: '40', horizontal_align: right}
       type: Image
       layout_properties: {grid_position: 'IEHCSV,LSMIUZ HHJOZJ,DWOAJA'}
     - name: spacer_27
@@ -929,8 +932,8 @@ components:
       type: Spacer
       layout_properties: {grid_position: 'IEHCSV,LSMIUZ ODFWXO,WCSOYO'}
     - name: image_11_copy_copy_6_copy_copy_copy_copy_2
-      properties: {source: _/theme/right.jpg, display_mode: shrink_to_fit, height: '40',
-        horizontal_align: right}
+      properties: {source: _/theme/bank_users/main_form/business_loan/right.jpg, display_mode: shrink_to_fit,
+        height: '40', horizontal_align: right}
       type: Image
       layout_properties: {grid_position: 'IEHCSV,LSMIUZ IVHYBW,KFUFPQ'}
     - name: spacer_24
@@ -938,8 +941,8 @@ components:
       type: Spacer
       layout_properties: {grid_position: 'IEHCSV,LSMIUZ XMIFLU,FDMTMR'}
     - name: image_11_copy_copy_6_copy_copy_copy_copy_2_copy
-      properties: {source: _/theme/right.jpg, display_mode: shrink_to_fit, height: '40',
-        horizontal_align: right}
+      properties: {source: _/theme/bank_users/main_form/business_loan/right.jpg, display_mode: shrink_to_fit,
+        height: '40', horizontal_align: right}
       type: Image
       layout_properties: {grid_position: 'IEHCSV,LSMIUZ YGSHLO,OOQLCZ'}
     - name: spacer_28
@@ -988,7 +991,7 @@ components:
       type: Label
       layout_properties: {grid_position: 'IEHCSV,YRFHPN CYLGOJ,RCVKTO'}
     - name: label_68
-      properties: {text: You must also sign the mandate of the National Automated Clearing House (NACH) to ensure easy repayment and provide three blank cheques to i2i to be used in case of delay/default in repayment.,
+      properties: {text: You must also sign the mandate of the National Automated Clearing House (NACH) to ensure easy repayment and provide three blank cheques to Ascends to be used in case of delay/default in repayment.,
         font_size: 18}
       type: Label
       layout_properties: {grid_position: 'IEHCSV,YRFHPN VEWHWD,WCWLWI'}
@@ -1033,7 +1036,7 @@ components:
     layout_properties: {grid_position: 'LZHUWO,RPQZEQ'}
   - name: label_80
     properties: {text: 'Experience the convenience of fixed repayments with flexible
-        terms, only on GTPL
+        terms, only on Ascends
 
         ', align: center, font_size: 18}
     type: Label
@@ -1097,13 +1100,13 @@ components:
       type: Label
       layout_properties: {grid_position: 'KWLPDO,VYCWVG QFPSFA,YEPPJU'}
     - name: label_89
-      properties: {text: Access to full repayment history available on your GTPL account,
+      properties: {text: Access to full repayment history available on your Ascends account,
         font_size: 18, foreground: white}
       type: Label
       layout_properties: {grid_position: 'KWLPDO,VYCWVG QFPSFA,QXNAAZ'}
     - name: image_15
-      properties: {source: _/theme/repayment.jpeg, display_mode: shrink_to_fit, horizontal_align: center,
-        height: 416}
+      properties: {source: _/theme/bank_users/main_form/business_loan/repayment.jpeg,
+        display_mode: shrink_to_fit, horizontal_align: center, height: 416}
       type: Image
       layout_properties: {grid_position: 'KWLPDO,HMRJJW'}
   - name: spacer_42
@@ -1111,7 +1114,7 @@ components:
     type: Spacer
     layout_properties: {grid_position: 'GBCPBB,QNMXRM'}
   - name: label_91
-    properties: {text: 'Who can Apply for a Business Loan on GTPL?', align: center,
+    properties: {text: 'Who can Apply for a Business Loan on Ascends?', align: center,
       bold: true, font_size: 30}
     type: Label
     layout_properties: {grid_position: 'FCLBBK,WIZBPK'}
@@ -1183,8 +1186,8 @@ components:
       type: Label
       layout_properties: {grid_position: 'KWLPDO,VYCWVG QFPSFA,QXNAAZ'}
     - name: image_15_copy
-      properties: {source: _/theme/bca.jpg, display_mode: shrink_to_fit, horizontal_align: center,
-        height: 416}
+      properties: {source: _/theme/bank_users/main_form/business_loan/business_loan_eligibility.jpg,
+        display_mode: shrink_to_fit, horizontal_align: center, height: 416}
       type: Image
       layout_properties: {grid_position: 'KWLPDO,HMRJJW', full_width_row: true}
   - name: spacer_43
@@ -1246,12 +1249,13 @@ components:
       type: Label
       layout_properties: {grid_position: 'KWLPDO,VYCWVG UOJEDI,IVQTNM'}
     - name: image_16
-      properties: {source: _/theme/atm.jpg, display_mode: shrink_to_fit, height: 439.22222900390625}
+      properties: {source: _/theme/bank_users/main_form/business_loan/atm.jpg, display_mode: shrink_to_fit,
+        height: 439.22222900390625}
       type: Image
       layout_properties: {grid_position: 'KWLPDO,VYCWVG MGHXRF,BOFIYK'}
     - name: image_15_copy_copy
-      properties: {source: _/theme/checkablity.jpg, display_mode: shrink_to_fit, horizontal_align: center,
-        height: 448.77777099609375}
+      properties: {source: _/theme/bank_users/main_form/business_loan/checkablity.jpg,
+        display_mode: shrink_to_fit, horizontal_align: center, height: 448.77777099609375}
       type: Image
       layout_properties: {grid_position: 'KWLPDO,HMRJJW HPOTJE,THNTJX', full_width_row: true}
     - name: label_95
@@ -1408,8 +1412,8 @@ components:
         components:
         - name: label_4_copy_2
           properties: {role: null, align: left, tooltip: '', border: '', foreground: white,
-            visible: true, text: '© 2023 - 2024, GTPL - All Rights    Reserved', font_size: null,
-            font: '', spacing_above: small, icon_align: left, spacing_below: small,
+            visible: true, text: '© 2023 - 2024, Ascends - All Rights    Reserved',
+            font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small,
             italic: false, background: '#05264d', bold: true, underline: false, icon: ''}
           type: Label
           layout_properties: {}

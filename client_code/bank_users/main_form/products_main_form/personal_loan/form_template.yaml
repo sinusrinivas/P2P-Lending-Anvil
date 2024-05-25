@@ -87,7 +87,8 @@ components:
       type: Spacer
       layout_properties: {grid_position: 'OUDOFT,XKDOAA ZGUDVW,IXNOGT'}
     - name: image_1
-      properties: {source: _/theme/interest-rate.png, display_mode: original_size}
+      properties: {source: _/theme/bank_users/main_form/business_loan/interest-rate.png,
+        display_mode: original_size}
       type: Image
       layout_properties: {grid_position: 'OUDOFT,XKDOAA YQJHLL,JSLKJH QOPWRQ,VUQYHT'}
     - name: label_2
@@ -97,7 +98,8 @@ components:
       type: Label
       layout_properties: {grid_position: 'OUDOFT,XKDOAA YQJHLL,JSLKJH XKSOFO,NQCZKY'}
     - name: image_2
-      properties: {source: _/theme/online-Disbursement.png, display_mode: original_size}
+      properties: {source: _/theme/bank_users/personal_loan/online-Disbursement.png,
+        display_mode: original_size}
       type: Image
       layout_properties: {grid_position: 'OUDOFT,XKDOAA YQJHLL,SMRPID GMDVPX,HPKDIM'}
     - name: label_3
@@ -109,7 +111,8 @@ components:
       type: Label
       layout_properties: {grid_position: 'OUDOFT,XKDOAA YQJHLL,SMRPID KBDYSY,STWLMS'}
     - name: image_3
-      properties: {source: _/theme/loan-duration-icon.png, display_mode: original_size}
+      properties: {source: _/theme/bank_users/main_form/business_loan/loan-duration-icon.png,
+        display_mode: original_size}
       type: Image
       layout_properties: {grid_position: 'OUDOFT,XKDOAA YQJHLL,VQHVDK DVMGVA,VOUNDE'}
     - name: label_4
@@ -119,7 +122,8 @@ components:
       type: Label
       layout_properties: {grid_position: 'OUDOFT,XKDOAA YQJHLL,VQHVDK HYDHDK,MNGNRA'}
     - name: image_4
-      properties: {source: _/theme/collateral.png, display_mode: original_size}
+      properties: {source: _/theme/bank_users/main_form/business_loan/collateral.png,
+        display_mode: original_size}
       type: Image
       layout_properties: {grid_position: 'OUDOFT,XKDOAA YQJHLL,KBFZLQ BSGZJU,LWHFZG'}
     - name: label_5
@@ -143,7 +147,7 @@ components:
       type: Spacer
       layout_properties: {grid_position: 'OUDOFT,CQDQCF IDWBTP,NACQEY'}
     - name: image_5
-      properties: {height: 481.66668701171875, source: _/theme/online-personal-loan-hdr_2.png,
+      properties: {height: 452, source: _/theme/bank_users/personal_loan/online-personal-loan-hdr.png,
         display_mode: fill_width}
       type: Image
       layout_properties: {grid_position: 'OUDOFT,CQDQCF GOITUY,AMIMUT'}
@@ -192,7 +196,8 @@ components:
     type: Label
     layout_properties: {grid_position: 'SGAGDP,MPTBCC GOFASJ,SOXPJD'}
   - name: image_6
-    properties: {source: _/theme/a.png, display_mode: original_size}
+    properties: {source: _/theme/bank_users/personal_loan/banks.png, display_mode: shrink_to_fit,
+      height: '120'}
     type: Image
     layout_properties: {grid_position: 'SGAGDP,MPTBCC SGVMZN,RQZWMV'}
   - name: label_13
@@ -206,7 +211,8 @@ components:
     type: Label
     layout_properties: {grid_position: 'SGAGDP,QQLBLD CAAUOG,UPNYDY'}
   - name: image_7
-    properties: {source: _/theme/b.png, display_mode: original_size}
+    properties: {source: _/theme/bank_users/personal_loan/nbfcs.png, display_mode: shrink_to_fit,
+      height: '120'}
     type: Image
     layout_properties: {grid_position: 'SGAGDP,QQLBLD ZEJXNO,NFBJWO'}
   - name: label_14
@@ -218,7 +224,8 @@ components:
     type: Label
     layout_properties: {grid_position: 'SGAGDP,XOZQSZ WAUKZP,JPHWUX'}
   - name: image_8
-    properties: {source: _/theme/c.png, display_mode: original_size}
+    properties: {source: _/theme/bank_users/personal_loan/money_lenders.png, display_mode: shrink_to_fit,
+      height: '120'}
     type: Image
     layout_properties: {grid_position: 'SGAGDP,XOZQSZ OSPRGE,AYLMJG'}
   - name: label_15
@@ -242,16 +249,17 @@ components:
       layout_properties: {grid_position: 'MVJORB,WZHWFG'}
     - name: label_17
       properties: {text: 'In today''s digital era, where "seamless" is the mantra,
-          your quest for a personal loan concludes with i2iFunding. We specialize
-          in providing unsecured personal loans at reduced costs. At i2iFunding, our
-          goal is to simplify your experience, making it as effortless as ordering
-          a pizza online or calling a cab
+          your quest for a personal loan concludes with Ascends. We specialize in
+          providing unsecured personal loans at reduced costs. At Ascends, our goal
+          is to simplify your experience, making it as effortless as ordering a pizza
+          online or calling a cab
 
           ', align: center, font_size: 18, foreground: white}
       type: Label
       layout_properties: {grid_position: 'ITANLO,RHVZGJ'}
     - name: image_1_copy
-      properties: {source: _/theme/digital.jpg, display_mode: shrink_to_fit, height: 145.33331298828125}
+      properties: {source: _/theme/bank_users/personal_loan/digital.jpg, display_mode: shrink_to_fit,
+        height: 145.33331298828125}
       type: Image
       layout_properties: {grid_position: 'YQJHLL,JSLKJH QOPWRQ,VUQYHT'}
     - name: label_2_copy
@@ -273,7 +281,8 @@ components:
       type: Label
       layout_properties: {grid_position: 'YQJHLL,JSLKJH FHZPOS,IIRQLK'}
     - name: image_2_copy
-      properties: {source: _/theme/evaluation.png, display_mode: shrink_to_fit, height: 142.66668701171875}
+      properties: {source: _/theme/bank_users/personal_loan/evaluation.png, display_mode: shrink_to_fit,
+        height: 146.77777099609375}
       type: Image
       layout_properties: {grid_position: 'YQJHLL,SMRPID GMDVPX,HPKDIM'}
     - name: label_3_copy
@@ -295,7 +304,8 @@ components:
       type: Label
       layout_properties: {grid_position: 'YQJHLL,SMRPID QBQAVC,LEDUIR'}
     - name: image_3_copy
-      properties: {source: _/theme/first.png, display_mode: shrink_to_fit, height: 144.33331298828125}
+      properties: {source: _/theme/bank_users/personal_loan/first.png, display_mode: shrink_to_fit,
+        height: 144.33331298828125}
       type: Image
       layout_properties: {grid_position: 'YQJHLL,VQHVDK DVMGVA,VOUNDE'}
     - name: label_4_copy
@@ -447,7 +457,7 @@ components:
       type: Spacer
       layout_properties: {grid_position: 'OKRYUA,HRSHAZ YLMMOB,SUFGDX'}
     - name: image_9
-      properties: {height: 415.1111145019531, source: _/theme/online-prsnl-process-icon1.png}
+      properties: {height: 415.1111145019531, source: _/theme/bank_users/personal_loan/online-prsnl-process-icon1.png}
       type: Image
       layout_properties: {grid_position: 'OKRYUA,HRSHAZ GMKLTO,NKOBLD'}
     - name: label_28
@@ -478,7 +488,7 @@ components:
       type: Spacer
       layout_properties: {grid_position: 'LUSVQI,VOXBLD KUYBPQ,AWNGGP'}
     - name: image_10_copy_2
-      properties: {height: 219.33328247070312, source: _/theme/interest-removebg-preview.png,
+      properties: {height: 219.33328247070312, source: _/theme/bank_users/personal_loan/interest-preview.png,
         display_mode: shrink_to_fit}
       type: Image
       layout_properties: {grid_position: 'LUSVQI,VOXBLD FIJAEH,MGWVQZ'}
@@ -566,7 +576,7 @@ components:
       type: Spacer
       layout_properties: {grid_position: 'LUSVQI,IGKDXY TKTHNE,WJXXNB'}
     - name: image_10
-      properties: {height: 226.88885498046875, source: _/theme/online-prsnl-process-icon2.png}
+      properties: {height: 226.88885498046875, source: _/theme/bank_users/personal_loan/online-prsnl-process-icon2.png}
       type: Image
       layout_properties: {grid_position: 'LUSVQI,IGKDXY PUTBGM,OYJTVV'}
   - name: content_panel_copy_copy_3_copy_3
@@ -592,7 +602,7 @@ components:
       type: Spacer
       layout_properties: {grid_position: 'LUSVQI,VOXBLD KUYBPQ,AWNGGP'}
     - name: image_10_copy_3
-      properties: {height: 150.2957763671875, source: _/theme/processing fee.png,
+      properties: {height: 150.2957763671875, source: _/theme/bank_users/personal_loan/processing%20fee.png,
         display_mode: shrink_to_fit, role: null}
       type: Image
       layout_properties: {grid_position: 'LUSVQI,VOXBLD DKMBNY,XGJXWB'}
@@ -683,8 +693,8 @@ components:
       type: Spacer
       layout_properties: {grid_position: 'LUSVQI,DOXMKV KLOKOD,BBEXPE'}
     - name: image_10_copy
-      properties: {height: 180.33331298828125, source: _/theme/online-Disbursement.png,
-        role: null}
+      properties: {height: 180.33331298828125, source: _/theme/bank_users/personal_loan/online-Disbursement.png,
+        role: null, display_mode: shrink_to_fit}
       type: Image
       layout_properties: {grid_position: 'LUSVQI,DOXMKV ZVRNPW,RBLBNX'}
     - name: spacer_17
@@ -719,7 +729,8 @@ components:
     type: Spacer
     layout_properties: {grid_position: 'NXUARD,KHJPXF'}
   - name: image_11
-    properties: {source: _/theme/OAP.png, display_mode: shrink_to_fit}
+    properties: {source: _/theme/bank_users/personal_loan/online-application-process.png,
+      display_mode: shrink_to_fit}
     type: Image
     layout_properties: {grid_position: 'FKQDTP,XDNGDK XHGUUL,XBROFD'}
   - name: label_45
@@ -729,7 +740,8 @@ components:
     type: Label
     layout_properties: {grid_position: 'FKQDTP,XDNGDK OQCLNO,AOPELJ'}
   - name: image_12
-    properties: {source: _/theme/ELABG.png, display_mode: shrink_to_fit}
+    properties: {source: _/theme/bank_users/personal_loan/evaluation%20of%20loan.png,
+      display_mode: shrink_to_fit}
     type: Image
     layout_properties: {grid_position: 'FKQDTP,LUNDST AGHTYY,URAOUQ'}
   - name: label_46
@@ -738,7 +750,8 @@ components:
     type: Label
     layout_properties: {grid_position: 'FKQDTP,LUNDST ZYBNXO,FGEEHK'}
   - name: image_13
-    properties: {source: _/theme/LLABL.png, display_mode: shrink_to_fit, height: 157.25}
+    properties: {source: _/theme/bank_users/personal_loan/loan%20listing.png, display_mode: shrink_to_fit,
+      height: 157.25}
     type: Image
     layout_properties: {grid_position: 'FKQDTP,UCIDRK RTWJMA,QUZDPD'}
   - name: spacer_20
@@ -751,7 +764,7 @@ components:
     type: Label
     layout_properties: {grid_position: 'FKQDTP,UCIDRK VYARJR,GSNOHL'}
   - name: image_14
-    properties: {source: _/theme/icons8-coins-100 (1).png, display_mode: shrink_to_fit,
+    properties: {source: _/theme/bank_users/personal_loan/funding of loan.png, display_mode: shrink_to_fit,
       height: 151.25}
     type: Image
     layout_properties: {grid_position: 'FKQDTP,MRHEGW BUBSBU,GLHKQX'}
@@ -765,8 +778,8 @@ components:
     type: Label
     layout_properties: {grid_position: 'FKQDTP,MRHEGW TLWVOK,OJISZP'}
   - name: image_15
-    properties: {source: _/theme/prepayment-removebg-preview.png, display_mode: shrink_to_fit,
-      height: 150.25}
+    properties: {source: _/theme/bank_users/personal_loan/documentation and disbursal.png,
+      display_mode: shrink_to_fit, height: 150.25}
     type: Image
     layout_properties: {grid_position: 'FKQDTP,XZHVVC VYOTEC,OEZRCC'}
   - name: spacer_41
@@ -818,7 +831,8 @@ components:
       type: Label
       layout_properties: {grid_position: ''}
     - name: image_16
-      properties: {source: _/theme/icons8-business-goal-100.png, height: 251.66668701171875}
+      properties: {source: _/theme/bank_users/main_form/icons8-business-goal.png,
+        height: 251.66668701171875}
       type: Image
       layout_properties: {grid_position: ',SRATKM'}
   - name: spacer_23
@@ -837,7 +851,7 @@ components:
       layout_properties: {grid_position: 'ODLNBA,GOHLJH'}
     - name: label_22_copy
       properties: {text: 'At Ascend, we evaluate a borrower on various parameters
-          and not just on the Beseem score. Following documents are required to complete
+          and not just on the Ascends score. Following documents are required to complete
           your loan application.', font_size: 18, foreground: white, align: center}
       type: Label
       layout_properties: {grid_position: 'QVQQCN,TGLZVP'}
@@ -1018,7 +1032,8 @@ components:
     type: Spacer
     layout_properties: {grid_position: 'PRWFNB,ACRXGK'}
   - name: image_17
-    properties: {source: _/theme/p1.png, display_mode: original_size}
+    properties: {source: _/theme/bank_users/main_form/vehicle_loan/application_process1.png,
+      display_mode: original_size}
     type: Image
     layout_properties: {grid_position: 'CVZSYU,DXHHWT'}
   - name: label_86
@@ -1040,7 +1055,8 @@ components:
     type: Label
     layout_properties: {grid_position: 'EBXYJX,LGQWVE'}
   - name: image_18
-    properties: {source: _/theme/p2.png, display_mode: original_size}
+    properties: {source: _/theme/bank_users/main_form/vehicle_loan/application_process2.png,
+      display_mode: original_size}
     type: Image
     layout_properties: {grid_position: 'PUCGVT,JQQCEI'}
   - name: label_89
@@ -1050,7 +1066,7 @@ components:
   - name: label_90
     properties: {text: '
 
-        Upon submission of the personal loan application, GTPL will conduct a thorough
+        Upon submission of the personal loan application, Ascends will conduct a thorough
         verification of the applicant''s provided details and accompanying documents.
         Should any clarification or additional documentation be necessary, we may
         contact the borrower accordingly.
@@ -1067,7 +1083,8 @@ components:
     type: Spacer
     layout_properties: {grid_position: 'DVJQWN,EHUUCF VXKCON,EOQUKF'}
   - name: image_19
-    properties: {source: _/theme/p3.png, display_mode: original_size}
+    properties: {source: _/theme/bank_users/main_form/vehicle_loan/application_process3.png,
+      display_mode: original_size}
     type: Image
     layout_properties: {grid_position: 'DVJQWN,EHUUCF'}
   - name: label_92
@@ -1075,7 +1092,7 @@ components:
     type: Label
     layout_properties: {grid_position: 'DVJQWN,NZRDPG FTYJYP,JWALNO'}
   - name: label_93
-    properties: {text: 'GTPL conducts an internal credit assessment of each borrower
+    properties: {text: 'Ascends conducts an internal credit assessment of each borrower
         utilizing its proprietary credit evaluation model. This assessment encompasses
         various parameters including the borrower''s ability and willingness to repay,
         personal credit score, behavioral patterns, demographics, and more. Subsequently,
@@ -1083,7 +1100,7 @@ components:
         A representing the strongest credit profile and X indicating the weakest.
         This rating is transparently displayed to both borrowers and investors. Utilizing
         this classification alongside other output parameters from the credit evaluation
-        process, i2iFunding determines the applicable interest rate for each personal
+        process, Ascends determines the applicable interest rate for each personal
         loan.', font_size: 17}
     type: Label
     layout_properties: {grid_position: 'DVJQWN,NZRDPG FTDETP,XKYFMK'}
@@ -1092,7 +1109,8 @@ components:
     type: Label
     layout_properties: {grid_position: 'KKSXVF,GQRWRA'}
   - name: image_20
-    properties: {source: _/theme/p4.png, display_mode: original_size}
+    properties: {source: _/theme/bank_users/main_form/vehicle_loan/application_process4.png,
+      display_mode: original_size}
     type: Image
     layout_properties: {grid_position: 'VTCDAX,GRGKMI'}
   - name: label_95
@@ -1115,7 +1133,8 @@ components:
     type: Label
     layout_properties: {grid_position: 'HFEPJS,SHVLUA'}
   - name: image_21
-    properties: {source: _/theme/p5.png, display_mode: original_size}
+    properties: {source: _/theme/bank_users/main_form/vehicle_loan/application_process5.png,
+      display_mode: original_size}
     type: Image
     layout_properties: {grid_position: 'MTJIPB,MTEPWA'}
   - name: label_98
@@ -1140,7 +1159,8 @@ components:
     type: Spacer
     layout_properties: {grid_position: 'ADIDAA,NHLPOA ZKKJUX,KZFVRI'}
   - name: image_22
-    properties: {source: _/theme/p6.png, display_mode: original_size}
+    properties: {source: _/theme/bank_users/main_form/vehicle_loan/application_process6.png,
+      display_mode: original_size}
     type: Image
     layout_properties: {grid_position: 'ADIDAA,NHLPOA ASPLDB,TPHDYA'}
   - name: label_101
@@ -1171,7 +1191,8 @@ components:
     type: Spacer
     layout_properties: {grid_position: 'YCZGWL,PVJYOC OPVHVJ,RFOBBK'}
   - name: image_23
-    properties: {source: _/theme/p7.png, display_mode: original_size}
+    properties: {source: _/theme/bank_users/main_form/vehicle_loan/application_process7.png,
+      display_mode: original_size}
     type: Image
     layout_properties: {grid_position: 'YCZGWL,PVJYOC HKHKEP,EVIYRQ'}
   - name: label_104
@@ -1219,7 +1240,8 @@ components:
       type: Spacer
       layout_properties: {grid_position: 'GRBHLA,QDLVMT XQAEHS,EJDOZA'}
     - name: image_24
-      properties: {source: _/theme/hehe.png, display_mode: shrink_to_fit, height: '161.20001220703125'}
+      properties: {source: _/theme/bank_users/personal_loan/loan_repayment.png, display_mode: shrink_to_fit,
+        height: '161.20001220703125'}
       type: Image
       layout_properties: {grid_position: 'GRBHLA,QDLVMT NUQVZD,ARXQMG'}
     - name: label_107
@@ -1232,8 +1254,8 @@ components:
           to the disbursement process, repayment is facilitated through an escrow
           account held with the same intermediary bank, ensuring security and transparency.Borrowers
           have access to their complete repayment history, including details of all
-          transactions made to date, by simply logging into their GTPL account. This
-          feature enables borrowers to stay informed about their repayment status
+          transactions made to date, by simply logging into their Ascends account.
+          This feature enables borrowers to stay informed about their repayment status
           and track their progress throughout the loan tenure.', font_size: 17}
       type: Label
       layout_properties: {grid_position: 'GRBHLA,BMTJIC QJVOZI,JNUGWW'}
@@ -1246,8 +1268,8 @@ components:
       type: Spacer
       layout_properties: {grid_position: 'DLLTSL,SJXKVU OLHICG,FKXERJ'}
     - name: image_26
-      properties: {source: _/theme/loan_pre-removebg-preview.png, display_mode: shrink_to_fit,
-        height: 161.20001220703125, role: null}
+      properties: {source: _/theme/bank_users/personal_loan/loan_pre_payment.png,
+        display_mode: shrink_to_fit, height: 161.20001220703125, role: null}
       type: Image
       layout_properties: {grid_position: 'DLLTSL,SJXKVU MDJARC,SMJIYN'}
     - name: label_109
@@ -1264,7 +1286,7 @@ components:
       type: Spacer
       layout_properties: {grid_position: 'DLLTSL,JSUQYH VBSIBS,WYRAXF'}
     - name: image_25
-      properties: {source: _/theme/3-removebg-preview.png, display_mode: shrink_to_fit,
+      properties: {source: _/theme/bank_users/personal_loan/loan-completion.png, display_mode: shrink_to_fit,
         height: '161.20001220703125'}
       type: Image
       layout_properties: {grid_position: 'DLLTSL,JSUQYH PZAITQ,XBTBZZ'}
@@ -1290,8 +1312,8 @@ components:
   - name: label_117
     properties: {text: 'You might have various motivations for choosing a personal
         loan, recognizing it as a convenient solution for accessing extra funds swiftly.
-        At Ascend, our loans offer a more cost-effective alternative compared to relying
-        solely on credit cards.', align: center, font_size: 18}
+        At Ascends, our loans offer a more cost-effective alternative compared to
+        relying solely on credit cards.', align: center, font_size: 18}
     type: Label
     layout_properties: {grid_position: 'NQYBSJ,ZYMJSZ'}
   - name: spacer_46
@@ -1299,7 +1321,8 @@ components:
     type: Spacer
     layout_properties: {grid_position: 'FRWZKN,MWBFZG'}
   - name: image_27
-    properties: {source: _/theme/marriage loan.png, display_mode: shrink_to_fit, height: '180'}
+    properties: {source: _/theme/bank_users/personal_loan/marriage_loan/marriage%20loan.png,
+      display_mode: shrink_to_fit, height: '180'}
     type: Image
     layout_properties: {grid_position: 'HKRWDU,OIWFFR YCTVWY,VEWUCL'}
     event_bindings: {mouse_up: image_27_mouse_up}
@@ -1309,7 +1332,8 @@ components:
     layout_properties: {grid_position: 'HKRWDU,OIWFFR OQTSCP,GHBZEO'}
     event_bindings: {click: link_4_click}
   - name: image_28
-    properties: {source: _/theme/debt consoidation.png, height: '180'}
+    properties: {source: _/theme/bank_users/personal_loan/debt_consolidation_loan/debt%20consoidation.png,
+      height: '180'}
     type: Image
     layout_properties: {grid_position: 'HKRWDU,RJKTGO WCSJMM,RHUHGL'}
     event_bindings: {mouse_up: image_28_mouse_up}
@@ -1319,7 +1343,8 @@ components:
     layout_properties: {grid_position: 'HKRWDU,RJKTGO MRLEBN,EYPKGI'}
     event_bindings: {click: link_5_click}
   - name: image_30
-    properties: {source: _/theme/credit card payment.png, height: '180'}
+    properties: {source: _/theme/bank_users/personal_loan/credit_card_loan/credit%20card%20payment.png,
+      height: '180'}
     type: Image
     layout_properties: {grid_position: 'HKRWDU,BIWRJN KLEEGB,GJKYDY'}
     event_bindings: {mouse_up: image_30_mouse_up}
@@ -1333,7 +1358,8 @@ components:
     type: Spacer
     layout_properties: {grid_position: 'YGJAXD,MAMFWX'}
   - name: image_31
-    properties: {source: _/theme/home renovation.png, height: '180'}
+    properties: {source: _/theme/bank_users/personal_loan/home_renovation_loan/home%20renovation.png,
+      height: '180'}
     type: Image
     layout_properties: {grid_position: 'UMIEBZ,FILYJT TDXYIX,QDTACS'}
     event_bindings: {mouse_up: image_31_mouse_up}
@@ -1343,7 +1369,8 @@ components:
     layout_properties: {grid_position: 'UMIEBZ,FILYJT SAFIPT,WQHYEO'}
     event_bindings: {click: link_15_click}
   - name: image_32
-    properties: {source: _/theme/travel loan.png, height: '180'}
+    properties: {source: _/theme/bank_users/personal_loan/travel_loan/personal-travel%20loan.png,
+      height: '180'}
     type: Image
     layout_properties: {grid_position: 'UMIEBZ,OQXVNP OKLHOI,VOXNPE'}
     event_bindings: {mouse_up: image_32_mouse_up}
@@ -1353,7 +1380,8 @@ components:
     layout_properties: {grid_position: 'UMIEBZ,OQXVNP XHZNZQ,UMRCTQ'}
     event_bindings: {click: link_16_click}
   - name: image_33
-    properties: {source: _/theme/medical loan.png, height: '180'}
+    properties: {source: _/theme/bank_users/personal_loan/medical_loan/medical%20loan_2.png,
+      height: '180'}
     type: Image
     layout_properties: {grid_position: 'UMIEBZ,QAZPRB WKKDUO,ZMVCDL'}
     event_bindings: {mouse_up: image_33_mouse_up}
@@ -1367,7 +1395,8 @@ components:
     type: Spacer
     layout_properties: {grid_position: 'UBFWNY,KVRMVI'}
   - name: image_35
-    properties: {source: _/theme/education loan.png, height: '180'}
+    properties: {source: _/theme/bank_users/personal_loan/education_loan/education%20loan.png,
+      height: '180'}
     type: Image
     layout_properties: {grid_position: 'LNQDNC,XNPEPC BPRZZM,ADAKPS'}
     event_bindings: {mouse_up: image_35_mouse_up}
@@ -1378,7 +1407,8 @@ components:
     layout_properties: {grid_position: 'LNQDNC,XNPEPC MDOIKG,TFOTVP'}
     event_bindings: {click: link_18_click}
   - name: image_36
-    properties: {source: _/theme/business loann.png, height: '180'}
+    properties: {source: _/theme/bank_users/main_form/business_loan/business%20loann.png,
+      height: '180'}
     type: Image
     layout_properties: {grid_position: 'LNQDNC,XDBLLP JCNNMW,VQJIWD'}
     event_bindings: {mouse_up: image_36_mouse_up}
@@ -1516,8 +1546,8 @@ components:
         components:
         - name: label_4_copy_2
           properties: {role: null, align: left, tooltip: '', border: '', foreground: white,
-            visible: true, text: '© 2023 - 2024, GTPL - All Rights    Reserved', font_size: null,
-            font: '', spacing_above: small, icon_align: left, spacing_below: small,
+            visible: true, text: '© 2023 - 2024, Ascends - All Rights    Reserved',
+            font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small,
             italic: false, background: '#05264d', bold: true, underline: false, icon: ''}
           type: Label
           layout_properties: {}

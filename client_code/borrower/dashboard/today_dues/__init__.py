@@ -25,14 +25,14 @@ class today_dues(today_duesTemplate):
             loan_id = loan['loan_id']
             borrower_customer_id = loan['borrower_customer_id']
 
-            payment_done = list(app_tables.fin_emi_table.search(
-                loan_id=loan_id,
-                next_payment=q.greater_than(today_date),
-                borrower_customer_id=borrower_customer_id
-            ))
-            if payment_done:
-              # self.repeating_panel_2.visible = False
-              continue
+            # payment_done = list(app_tables.fin_emi_table.search(
+            #     loan_id=loan_id,
+            #     next_payment=q.greater_than(today_date),
+            #     borrower_customer_id=borrower_customer_id
+            # ))
+            # if payment_done:
+            #   # self.repeating_panel_2.visible = False
+            #   continue
               
             all_loans = list(app_tables.fin_emi_table.search(
                 loan_id=loan_id,
@@ -116,20 +116,7 @@ class today_dues(today_duesTemplate):
                         'part_payment_date':part_payment_date,
                     })
             else:
-                for loan in all_loans_disbursed:
-                  loan_id = loan['loan_id']
-                  borrower_customer_id = loan['borrower_customer_id']
-                  loan_detail = app_tables.fin_loan_details.get(loan_id=loan_id)
-                  payment_done_1 = list(app_tables.fin_emi_table.search(
-                      loan_id=loan_id,
-                      next_payment=q.greater_than(today_date),
-                      borrower_customer_id=borrower_customer_id
-                  ))
-                  if payment_done_1:
-                      continue
-              
 
-                # If there are no emi records, append loan details without checking next payment date
                 loan_detail = app_tables.fin_loan_details.get(loan_id=loan_id)
 
                   
@@ -230,29 +217,29 @@ class today_dues(today_duesTemplate):
                       
                   })
             self.repeating_panel_2.items = loan_details
-            for loan_detail_1 in loan_details:
-              print("Processing loan:", loan_detail_1)
-              if loan_detail_1['days_left'] > 6 and loan_detail_1['days_left'] <= 16:
-                  print("Updating status to 'lapsed loan'")
-                  loan_detail_1['loan_state_status'] = 'lapsed loan'
-                  loan_row = app_tables.fin_loan_details.get(loan_id=loan_detail_1['loan_id'])
-                  if loan_row is not None:
-                      loan_row['loan_state_status'] = 'lapsed loan'
-                      loan_row.update()
-              elif loan_detail_1['days_left'] > 16 and loan_detail_1['days_left'] <= 106:
-                  print("Updating status to 'default loan'")
-                  loan_detail_1['loan_state_status'] = 'default loan'
-                  loan_row = app_tables.fin_loan_details.get(loan_id=loan_detail_1['loan_id'])
-                  if loan_row is not None:
-                      loan_row['loan_state_status'] = 'default loan'
-                      loan_row.update()
-              elif loan_detail_1['days_left'] > 106:
-                  print("Updating status to 'default loan'")
-                  loan_detail_1['loan_state_status'] = 'NPA'
-                  loan_row = app_tables.fin_loan_details.get(loan_id=loan_detail_1['loan_id'])
-                  if loan_row is not None:
-                      loan_row['loan_state_status'] = 'NPA'
-                      loan_row.update()
+            # for loan_detail_1 in loan_details:
+            #   print("Processing loan:", loan_detail_1)
+            #   if loan_detail_1['days_left'] > 6 and loan_detail_1['days_left'] <= 16:
+            #       print("Updating status to 'lapsed loan'")
+            #       loan_detail_1['loan_state_status'] = 'lapsed loan'
+            #       loan_row = app_tables.fin_loan_details.get(loan_id=loan_detail_1['loan_id'])
+            #       if loan_row is not None:
+            #           loan_row['loan_state_status'] = 'lapsed loan'
+            #           loan_row.update()
+            #   elif loan_detail_1['days_left'] > 16 and loan_detail_1['days_left'] <= 106:
+            #       print("Updating status to 'default loan'")
+            #       loan_detail_1['loan_state_status'] = 'default loan'
+            #       loan_row = app_tables.fin_loan_details.get(loan_id=loan_detail_1['loan_id'])
+            #       if loan_row is not None:
+            #           loan_row['loan_state_status'] = 'default loan'
+            #           loan_row.update()
+            #   elif loan_detail_1['days_left'] > 106:
+            #       print("Updating status to 'default loan'")
+            #       loan_detail_1['loan_state_status'] = 'NPA'
+            #       loan_row = app_tables.fin_loan_details.get(loan_id=loan_detail_1['loan_id'])
+            #       if loan_row is not None:
+            #           loan_row['loan_state_status'] = 'NPA'
+            #           loan_row.update()
 
     def home_borrower_registration_form_copy_1_click(self, **event_args):
         """This method is called when the button is clicked"""

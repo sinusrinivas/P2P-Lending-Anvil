@@ -6,56 +6,71 @@ components:
   properties: {}
   type: form:bank_users.main_form.main_header
   layout_properties: {grid_position: 'XSDWWI,PEBPAZ', full_width_row: true}
-- name: column_panel_1
-  properties: {background: 'theme:Surface Variant'}
+- name: content_panel_copy_copy_3_copy_3_copy_copy_copy_2_copy
+  properties: {col_widths: '{}', background: '#Edf0f4', role: null}
   type: ColumnPanel
-  layout_properties: {grid_position: 'LANXJG,EXDPQB', full_width_row: true}
+  layout_properties: {grid_position: 'JZNURZ,ZOPFYD', full_width_row: true}
   components:
-  - name: spacer_1
-    properties: {height: 35.22222900390625}
-    type: Spacer
-    layout_properties: {grid_position: 'LNHJTW,VWQVNH'}
-  - name: image_1
-    properties: {source: _/theme/personal loan1.jpg, display_mode: shrink_to_fit,
-      height: '200', alt_text: '       '}
-    type: Image
-    layout_properties: {grid_position: 'LSOMZO,CQXTFU ISGDEJ,NOKSZQ'}
-    data_bindings: []
-    event_bindings: {mouse_up: image_1_mouse_up}
-  - name: button_3
-    properties: {text: Personal Loan, bold: true, foreground: black, font_size: 20}
-    type: Button
-    layout_properties: {grid_position: 'LSOMZO,CQXTFU HJKVPC,LSSOKG'}
-    event_bindings: {click: button_3_click}
-  - name: image_2
-    properties: {source: _/theme/business loan1.jpg, display_mode: shrink_to_fit,
-      height: '200'}
-    type: Image
-    layout_properties: {grid_position: 'LSOMZO,NAXNQD IZNXEK,HKNPYR'}
-    event_bindings: {mouse_up: image_2_mouse_up}
-  - name: button_4
-    properties: {text: Business Loan, bold: true, font_size: 20, foreground: black}
-    type: Button
-    layout_properties: {grid_position: 'LSOMZO,NAXNQD WQIISX,PVMWXF'}
-    event_bindings: {click: button_4_click}
-  - name: spacer_7
-    properties: {height: 5.22222900390625}
-    type: Spacer
-    layout_properties: {grid_position: 'LSOMZO,RQBBNV JXIFZB,QWTYDW'}
-  - name: image_3
-    properties: {source: _/theme/vehicle laon1.png, display_mode: zoom_to_fill, height: 176.33328247070312}
-    type: Image
-    layout_properties: {grid_position: 'LSOMZO,RQBBNV LPPRNG,SYTOSG'}
-    event_bindings: {mouse_up: image_3_mouse_up}
-  - name: spacer_8
-    properties: {height: '3'}
-    type: Spacer
-    layout_properties: {grid_position: 'LSOMZO,RQBBNV KVOAIM,JIZKLZ'}
-  - name: button_5
-    properties: {text: Vehicle Loan, bold: true, font_size: 20, foreground: black}
-    type: Button
-    layout_properties: {grid_position: 'LSOMZO,RQBBNV EPEDGI,TDLWKG'}
-    event_bindings: {click: button_5_click}
+  - name: content_panel_copy_copy_3_copy_3_copy_copy_copy_2_copy_copy
+    properties: {col_widths: '{}', background: 'theme:Surface Variant', role: elevated-card}
+    type: ColumnPanel
+    layout_properties: {grid_position: 'DYBEYE,DWXCGB'}
+    components:
+    - name: image_13
+      properties: {source: _/theme/bank_users/personal_loan/personal%20loan1.jpg,
+        height: '200'}
+      type: Image
+      layout_properties: {grid_position: 'CNSXUR,FJQAJE'}
+      event_bindings: {mouse_up: image_13_mouse_up}
+    - name: button_3
+      properties: {text: Personal Loan, bold: true, foreground: black, font_size: 20}
+      type: Button
+      layout_properties: {grid_position: 'RKTBKN,QKEDVY'}
+      event_bindings: {click: button_3_click}
+  - name: content_panel_copy_copy_3_copy_3_copy_copy_copy_2_copy_copy_3
+    properties: {col_widths: '{}', background: 'theme:Surface Variant', role: elevated-card}
+    type: ColumnPanel
+    layout_properties: {grid_position: 'DYBEYE,BAEGYX'}
+    components:
+    - name: image_14
+      properties: {source: _/theme/bank_users/main_form/business_loan/business-loan-pic.jpg,
+        height: '200'}
+      type: Image
+      layout_properties: {grid_position: 'TZJSYL,UCWSYL'}
+      event_bindings: {mouse_up: image_14_mouse_up}
+    - name: button_4
+      properties: {text: Business Loan, bold: true, font_size: 20, foreground: black}
+      type: Button
+      layout_properties: {grid_position: 'WXLHXI,ZPCSZF'}
+      event_bindings: {click: button_4_click}
+  - name: content_panel_copy_copy_3_copy_3_copy_copy_copy_2_copy_copy_2
+    properties: {col_widths: '{}', background: 'theme:Surface Variant', role: elevated-card}
+    type: ColumnPanel
+    layout_properties: {grid_position: 'DYBEYE,NZXWWU'}
+    components:
+    - name: spacer_1
+      properties: {height: 12.133331298828125}
+      type: Spacer
+      layout_properties: {grid_position: 'MROKWF,BGEFWD'}
+    - name: image_15
+      properties: {height: 159.46664428710938, source: _/theme/bank_users/main_form/vehicle_loan/vehicle%20laon1.png,
+        display_mode: zoom_to_fill}
+      type: Image
+      layout_properties: {grid_position: 'CJKLEL,YEAVIE'}
+      event_bindings: {mouse_up: image_15_mouse_up}
+    - name: spacer_8
+      properties: {height: '11'}
+      type: Spacer
+      layout_properties: {grid_position: 'VBRBWB,XXUCXU'}
+    - name: button_5
+      properties: {text: Vehicle Loan, bold: true, font_size: 20, foreground: black}
+      type: Button
+      layout_properties: {grid_position: 'RHBIPV,DQFGUU'}
+      event_bindings: {click: button_5_click}
+    - name: spacer_7
+      properties: {height: -4.46673583984375}
+      type: Spacer
+      layout_properties: {grid_position: 'FZHFDZ,CFPCDK'}
 - name: spacer_2
   properties: {height: '10'}
   type: Spacer
@@ -233,8 +248,8 @@ components:
       components:
       - name: label_4_copy_2
         properties: {role: null, align: left, tooltip: '', border: '', foreground: white,
-          visible: true, text: '© 2023 - 2024, GTPL - All Rights    Reserved', font_size: null,
-          font: '', spacing_above: small, icon_align: left, spacing_below: small,
+          visible: true, text: '© 2023 - 2024, Ascends - All Rights    Reserved',
+          font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small,
           italic: false, background: '#05264d', bold: true, underline: false, icon: ''}
         type: Label
         layout_properties: {}

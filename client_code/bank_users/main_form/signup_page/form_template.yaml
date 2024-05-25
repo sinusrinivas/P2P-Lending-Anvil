@@ -79,7 +79,7 @@ components:
       type: Spacer
       layout_properties: {grid_position: 'LOUJDS,QSUOUY'}
     - name: label_6
-      properties: {role: display, text: Welcome to GP2P, foreground: white}
+      properties: {role: display, text: Welcome to Ascends P2P, foreground: white}
       type: Label
       layout_properties: {grid_position: 'LOUJDS,RTKSOW XFQEHB,XJKBDX'}
     - name: label_1
@@ -91,8 +91,8 @@ components:
       type: Label
       layout_properties: {grid_position: 'LOUJDS,RTKSOW XGLERH,EVCEYC'}
     - name: image_1
-      properties: {source: _/theme/Tracing-the-Journey-Applications-of-P2P-Lending-1.webp,
-        display_mode: zoom_to_fill, height: 388.57135009765625, background: '#00555'}
+      properties: {source: _/theme/bank_users/main_form/sign_up%20image.webp, display_mode: shrink_to_fit,
+        height: 388.57135009765625, background: '#00555'}
       type: Image
       layout_properties: {grid_position: 'LOUJDS,RTKSOW IYLGEA,XVBVAK'}
   - name: column_panel_1

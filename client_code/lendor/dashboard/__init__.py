@@ -42,6 +42,7 @@ class dashboard(dashboardTemplate):
         self.button_3_copy.text = f"Lost Opportunities ({len(Lost_Opportunities)})"
         self.button_4_copy.text = f"Closed ({len(Closed)})"
         self.button_5_copy.text = f"Extended ({len(Extended)})"
+        self.column_panel_8.width = '100%'
 
         # Set the column_panel_3 to full height initially
         # self.column_panel_3.height = '100%'
@@ -60,7 +61,7 @@ class dashboard(dashboardTemplate):
 
         elif status == 'under process':
             underprocess_loans = app_tables.fin_loan_details.search(loan_updated_status=q.any_of(q.like('under process%'),q.like('under process')))
-            self.repeating_panel_1.items = self.process_data(underprocess_loans)
+            self.repeating_panel_2.items = self.process_data(underprocess_loans)
             
 
         elif status == 'lost opportunities':
@@ -85,7 +86,11 @@ class dashboard(dashboardTemplate):
                     'bessem_value': user_profile['bessem_value'],
                     'loan_updated_status': loan['loan_updated_status'],
                     'interest_rate': loan['interest_rate'],
-                    'borrower_loan_created_timestamp': loan['borrower_loan_created_timestamp']})
+                    'borrower_loan_created_timestamp': loan['borrower_loan_created_timestamp'],
+                    'borrower_customer_id': loan['borrower_customer_id'],
+                    'beseem_score': user_profile['bessem_value'],
+                    'credit_limit': loan['credit_limit'],
+                    'product_name': loan['product_name']})
         return profiles_with_loans
 
     def toggle_components_visibility(self):      
@@ -210,29 +215,38 @@ class dashboard(dashboardTemplate):
         open_form("wallet.wallet")
 
     def button_1_copy_click(self, **event_args):
-        
-        self.data_grid_new_loan_request.visible = True
-        self.repeating_panel_1.visible = True
+        self.data_grid_new_loan_request.visible = False
+        self.repeating_panel_1.visible = False
+        self.data_grid_1.visible = True
+        self.repeating_panel_2.visible = True
         self.load_data('under process')
 
     def button_2_copy_click(self, **event_args):
+        self.data_grid_1.visible = False
+        self.repeating_panel_2.visible = False
         self.data_grid_new_loan_request.visible = True
         self.repeating_panel_1.visible = True
         self.load_data('disbursed loan')
 
 
     def button_3_copy_click(self, **event_args):
+        self.data_grid_1.visible = False
+        self.repeating_panel_2.visible = False
         self.data_grid_new_loan_request.visible = True
         self.repeating_panel_1.visible = True
         self.load_data('lost opportunities')
 
     def button_4_copy_click(self, **event_args):
+        self.data_grid_1.visible = False
+        self.repeating_panel_2.visible = False
         self.data_grid_new_loan_request.visible = True
         self.repeating_panel_1.visible = True
         self.load_data('close')
 
 
     def button_5_copy_click(self, **event_args):
+        self.data_grid_1.visible = False
+        self.repeating_panel_2.visible = False
         self.data_grid_new_loan_request.visible = True
         self.repeating_panel_1.visible = True
         self.load_data('extension')

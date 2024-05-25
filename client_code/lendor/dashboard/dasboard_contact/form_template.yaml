@@ -66,11 +66,11 @@ components:
     type: Label
     layout_properties: {grid_position: 'WNGQOY,YOBWAO'}
   - name: label_6
-    properties: {icon: 'fa:envelope', text: '  Kotakinvestment@p2p.coom'}
+    properties: {icon: 'fa:envelope', text: '  Ascendsinvestment@p2p.coom'}
     type: Label
     layout_properties: {grid_position: 'GULBBQ,VSSLMU'}
   - name: label_6_copy
-    properties: {icon: 'fa:envelope', text: '  Kotakloan@p2p.coom'}
+    properties: {icon: 'fa:envelope', text: '  Ascendsoan@p2p.coom'}
     type: Label
     layout_properties: {grid_position: 'GULBBQ,LYIMGS'}
   - name: label_3_copy_2
@@ -83,7 +83,7 @@ components:
     type: Label
     layout_properties: {grid_position: 'UIZIXJ,BCVWLG'}
   - name: label_6_copy_copy
-    properties: {icon: 'fa:envelope', text: '  Kotakfunding@p2p.coom', align: center}
+    properties: {icon: 'fa:envelope', text: '  Ascendsfunding@p2p.coom', align: center}
     type: Label
     layout_properties: {grid_position: 'DVAXOA,BMHVNJ'}
 is_package: true

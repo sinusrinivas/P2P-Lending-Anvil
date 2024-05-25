@@ -1,0 +1,49 @@
+is_package: true
+container: {type: DataRowPanel}
+components:
+- properties: {align: center}
+  type: Label
+  layout_properties: {column: VJQQOR}
+  data_bindings:
+  - {code: 'self.item[''borrower_full_name'']', writeback: false, property: text}
+  name: label_2
+- properties: {align: center}
+  type: Label
+  layout_properties: {column: OJLQEN}
+  data_bindings:
+  - {code: 'self.item[''loan_amount'']', writeback: false, property: text}
+  name: label_3
+- properties: {align: center}
+  type: Label
+  layout_properties: {column: SVPJYH}
+  data_bindings:
+  - {code: 'self.item[''bessem_value'']', writeback: false, property: text}
+  name: label_4
+- properties: {align: center}
+  type: Label
+  layout_properties: {column: QNAINS}
+  data_bindings:
+  - {code: 'self.item[''tenure'']', writeback: false, property: text}
+  name: label_5
+- properties: {align: center}
+  type: Label
+  layout_properties: {column: NMZHFS}
+  data_bindings:
+  - {code: 'self.item[''loan_updated_status'']', writeback: false, property: text}
+  name: label_6
+- properties: {text: View Details, align: center}
+  type: Link
+  layout_properties: {column: WMKNBI}
+  event_bindings: {click: link_1_click}
+  name: link_1
+- properties: {text: Invest Now, align: center}
+  type: Link
+  layout_properties: {column: TSHUFR}
+  event_bindings: {click: link_2_click}
+  name: link_2
+- name: label_1
+  properties: {align: center}
+  type: Label
+  layout_properties: {column: GTJQQX}
+  data_bindings:
+  - {property: text, code: 'self.item[''product_name'']', writeback: false}

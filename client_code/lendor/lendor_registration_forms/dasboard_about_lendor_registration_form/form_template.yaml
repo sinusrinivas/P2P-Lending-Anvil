@@ -35,7 +35,7 @@ components:
     type: Label
     layout_properties: {grid_position: 'LTJKUA,UAZQOO', full_width_row: true}
   - name: label_3
-    properties: {text: Kotak is a Leading Peer to Peer Lending Platform in India,
+    properties: {text: Ascendsis a Leading Peer to Peer Lending Platform in India,
       bold: true, font_size: 25, align: center, underline: true}
     type: Label
     layout_properties: {grid_position: 'CYVIXX,WKBQMI'}
@@ -44,7 +44,7 @@ components:
     type: Image
     layout_properties: {grid_position: 'KPEKWP,RCAWZV'}
   - name: label_2
-    properties: {text: 'Kotak is an online Peer to Peer Lending (P2P Lending) marketplace
+    properties: {text: 'Ascends is an online Peer to Peer Lending (P2P Lending) marketplace
         which connects verified borrowers looking for unsecured loans with investors
         looking for an investment opportunity to make higher risk-adjusted returns.The
         entire process of the loan application to credit evaluation, investment, fund
@@ -53,7 +53,7 @@ components:
     type: Label
     layout_properties: {grid_position: 'SATUHG,JQEPZP'}
   - name: label_4
-    properties: {text: 'Why Invest At Kotak?', bold: true, align: center, underline: false,
+    properties: {text: 'Why Invest At Ascends?', bold: true, align: center, underline: false,
       font_size: 20, background: '#0b2547', foreground: 'theme:On Primary'}
     type: Label
     layout_properties: {grid_position: 'LMIMLK,DETZVI', row_background: '#0b2547'}
