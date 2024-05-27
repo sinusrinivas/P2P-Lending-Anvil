@@ -411,8 +411,10 @@ color: %color:On Primary Container%;
   -webkit-transition: background-color 250ms;
   -moz-transition: background-color 250ms;
   -o-transition: background-color 250ms;
-  
+  color: white;
   z-index: 1;
+  
+  /* 4dp */ box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
 }
 
 .app-bar.scrolled {
@@ -1049,9 +1051,9 @@ div.plot-container.plotly svg.main-svg {
   transition: font-size 0.3s ease-in-out; /* Transition for font size change */
 }
 
-.link-text:hover {
+/* .link-text:hover {
   font-size: 18px; /* Increase font size on hover */
-}
+} */
 
 .link-text::after {
   content: ''; /* Create a pseudo-element for the underline */
@@ -1060,14 +1062,14 @@ div.plot-container.plotly svg.main-svg {
   bottom: 0;
   width: 100%; /* Span the full width of the text */
   height: 2px; /* Height of the underline */
-  background-color: #013065; /* Color of the underline */
-  transform: scaleX(0); /* Initially invisible */
-  transition: transform 0.3s ease-in-out; /* Transition for underline animation */
+  /* background-color: #013065; /* Color of the underline */
+  /* transform: scaleX(0); /* Initially invisible */
+  /* transition: transform 0.3s ease-in-out; /* Transition for underline animation */ */ */ */
 }
 
-.link-text:hover::after {
+/* .link-text:hover::after {
   transform: scaleX(1); /* Scale the underline to full width on hover */
-}
+} */
 
 
 .btn-default {
