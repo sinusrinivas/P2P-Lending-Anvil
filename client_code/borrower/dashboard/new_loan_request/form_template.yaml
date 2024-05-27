@@ -1,6 +1,6 @@
 container:
   type: ColumnPanel
-  properties: {col_widths: '{"JLWSFC":25,"JNFGNN":35,"FXDAEC":25,"WXMQBR":35,"PHHBWB":25,"FTDFJY":35,"HSNNKG":25,"AQSEPS":35,"EBSVCE":25,"UYSBHV":35}'}
+  properties: {col_widths: '{"JLWSFC":15,"JNFGNN":20,"FXDAEC":15,"WXMQBR":20,"PHHBWB":15,"FTDFJY":20,"HSNNKG":15,"AQSEPS":20,"EBSVCE":15,"UYSBHV":45,"ZJZNHY":45,"FIFZAE":45,"MXEQTF":45,"ZMWIDC":20,"NCVUVL":45}'}
 components:
 - name: image_1_copy_1_copy_1_copy_1_copy_1_copy_1
   properties: {role: null, vertical_align: center, height: 48, tooltip: '', border: '',
@@ -20,7 +20,7 @@ components:
 - type: Spacer
   properties: {height: 27}
   name: spacer_1
-  layout_properties: {grid_position: 'GAQDQF,NOUIYL'}
+  layout_properties: {grid_position: 'GAQDQF,NOUIYL', full_width_row: true}
 - type: Label
   properties: {role: headline, align: left, tooltip: '', border: '', foreground: '',
     visible: true, text: Credit Limit, font_size: null, font: '', spacing_above: small,
@@ -30,28 +30,33 @@ components:
   layout_properties:
     col_widths: {}
     grid_position: RIFDPA,FXDAEC
+    full_width_row: true
 - name: max_amount_lb
   properties: {role: headline, align: left, tooltip: '', border: '', foreground: green,
     visible: true, text: '', font_size: null, font: '', spacing_above: small, icon_align: left,
-    spacing_below: small, italic: false, background: white, bold: false, underline: false,
-    icon: ''}
+    spacing_below: small, italic: false, background: white, bold: true, underline: false,
+    icon: 'fa:rupee'}
   type: Label
-  layout_properties: {grid_position: 'RIFDPA,WXMQBR'}
+  layout_properties: {grid_position: 'RIFDPA,WXMQBR', full_width_row: true}
   event_bindings: {show: max_amount_lb_show}
+- name: spacer_2_copy_5
+  properties: {height: 32}
+  type: Spacer
+  layout_properties: {grid_position: 'RIFDPA,NCVUVL'}
 - type: Spacer
   properties: {height: 32}
   name: spacer_2
-  layout_properties: {grid_position: 'NJMYBL,OMVYHI'}
+  layout_properties: {grid_position: 'NJMYBL,OMVYHI', full_width_row: true}
 - type: Label
-  properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
-    text: Product Group, font_size: 20, font: '', spacing_above: small, icon_align: left,
-    spacing_below: small, italic: false, background: '', bold: true, underline: false,
-    icon: ''}
+  properties: {role: headline, align: left, tooltip: '', border: '', foreground: '',
+    visible: true, text: Product Group, font_size: 20, font: '', spacing_above: small,
+    icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+    underline: false, icon: ''}
   name: label_1
-  layout_properties: {grid_position: 'ADFVSS,JLWSFC'}
+  layout_properties: {grid_position: 'ADFVSS,JLWSFC', full_width_row: true}
 - type: DropDown
   properties:
-    role: null
+    role: outlined
     align: full
     tooltip: ''
     placeholder: Select Product Group
@@ -70,7 +75,7 @@ components:
     underline: false
     include_placeholder: true
   name: name
-  layout_properties: {grid_position: 'ADFVSS,JNFGNN GDAPSK,LTBWCT'}
+  layout_properties: {grid_position: 'ADFVSS,JNFGNN GDAPSK,LTBWCT', full_width_row: true}
   data_bindings: []
   event_bindings: {change: name_change}
 - type: Label
@@ -78,17 +83,21 @@ components:
     text: '', font_size: null, font: '', spacing_above: none, icon_align: left, spacing_below: small,
     italic: false, background: '', bold: false, underline: false, icon: ''}
   name: label_3
-  layout_properties: {grid_position: 'ADFVSS,JNFGNN IUDENR,DWXZPJ'}
+  layout_properties: {grid_position: 'ADFVSS,JNFGNN IUDENR,DWXZPJ', full_width_row: true}
+- name: spacer_2_copy
+  properties: {height: 32}
+  type: Spacer
+  layout_properties: {grid_position: 'ADFVSS,ZJZNHY'}
 - type: Label
   properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: false,
     text: Product Categories, font_size: 20, font: '', spacing_above: small, icon_align: left,
     spacing_below: small, italic: false, background: '', bold: true, underline: false,
     icon: ''}
   name: label_2
-  layout_properties: {grid_position: 'LNCQEK,HSNNKG'}
+  layout_properties: {grid_position: 'LNCQEK,HSNNKG', full_width_row: true}
 - type: DropDown
   properties:
-    role: null
+    role: outlined
     align: full
     tooltip: ''
     placeholder: Select Product Categories
@@ -107,24 +116,28 @@ components:
     underline: false
     include_placeholder: true
   name: drop_down_2
-  layout_properties: {grid_position: 'LNCQEK,AQSEPS IGISWJ,OIEUHQ'}
+  layout_properties: {grid_position: 'LNCQEK,AQSEPS IGISWJ,OIEUHQ', full_width_row: true}
   event_bindings: {change: drop_down_2_change}
 - type: Label
   properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: false,
     text: '', font_size: null, font: '', spacing_above: none, icon_align: left, spacing_below: small,
     italic: false, background: '', bold: false, underline: false, icon: ''}
   name: label_4
-  layout_properties: {grid_position: 'LNCQEK,AQSEPS YCGANG,DJYAVH'}
+  layout_properties: {grid_position: 'LNCQEK,AQSEPS YCGANG,DJYAVH', full_width_row: true}
+- name: spacer_2_copy_2
+  properties: {height: 32}
+  type: Spacer
+  layout_properties: {grid_position: 'LNCQEK,FIFZAE'}
 - type: Label
   properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: false,
     text: Product Name, font_size: 20, font: '', spacing_above: small, icon_align: left,
     spacing_below: small, italic: false, background: '', bold: true, underline: false,
     icon: ''}
   name: label_6
-  layout_properties: {grid_position: 'CZUMNX,PHHBWB'}
+  layout_properties: {grid_position: 'CZUMNX,PHHBWB', full_width_row: true}
 - type: DropDown
   properties:
-    role: null
+    role: outlined
     align: full
     tooltip: ''
     placeholder: Select Product Name
@@ -143,39 +156,48 @@ components:
     underline: false
     include_placeholder: true
   name: drop_down_1
-  layout_properties: {grid_position: 'CZUMNX,FTDFJY ACKBZZ,PRVDAC'}
+  layout_properties: {grid_position: 'CZUMNX,FTDFJY ACKBZZ,PRVDAC', full_width_row: true}
   event_bindings: {change: drop_down_1_change}
 - type: Label
   properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: false,
     text: '', font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small,
     italic: false, background: '', bold: false, underline: false, icon: ''}
   name: label_7
-  layout_properties: {grid_position: 'CZUMNX,FTDFJY TIJCZH,CKYEYI'}
+  layout_properties: {grid_position: 'CZUMNX,FTDFJY TIJCZH,CKYEYI', full_width_row: true}
+- name: spacer_2_copy_3
+  properties: {height: 32}
+  type: Spacer
+  layout_properties: {grid_position: 'CZUMNX,MXEQTF'}
 - type: Label
   properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: false,
     text: Product Description, font_size: 20, font: '', spacing_above: small, icon_align: left,
     spacing_below: small, italic: false, background: '', bold: true, underline: false,
     icon: ''}
   name: label_8
-  layout_properties: {grid_position: 'EPGENU,EBSVCE', full_width_row: false}
+  layout_properties: {grid_position: 'EPGENU,EBSVCE', full_width_row: true}
 - type: Label
   properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
     text: '', font_size: 17, font: '', spacing_above: small, icon_align: left, spacing_below: small,
     italic: false, background: '', bold: false, underline: false, icon: ''}
   name: product_description_label
-  layout_properties: {grid_position: 'EPGENU,UYSBHV', full_width_row: false}
+  layout_properties: {grid_position: 'EPGENU,UYSBHV', full_width_row: true}
+- name: spacer_2_copy_4
+  properties: {height: 32}
+  type: Spacer
+  layout_properties: {grid_position: 'EPGENU,ZMWIDC'}
 - type: Spacer
   properties: {height: 24}
   name: spacer_3
-  layout_properties: {grid_position: 'BWNJEM,UWWRKW'}
+  layout_properties: {grid_position: 'BWNJEM,UWWRKW', full_width_row: true}
 - type: Button
   properties: {role: elevated-button, align: center, tooltip: '', border: '', enabled: true,
-    foreground: 'theme:On Primary', visible: true, text: Next, font_size: null, font: '',
-    spacing_above: small, icon_align: left, spacing_below: small, italic: false, background: '#05264d',
-    bold: true, underline: false, icon: 'fa:angle-double-right'}
+    foreground: 'theme:On Primary', visible: true, text: Apply, font_size: null, font: '',
+    spacing_above: small, icon_align: right, spacing_below: small, italic: false,
+    background: '#05264d', bold: true, underline: false, icon: 'fa:angle-double-right'}
   name: button_1_copy
   layout_properties:
     col_widths: {}
     grid_position: DUFTTD,RERXNC
+    full_width_row: true
   event_bindings: {click: button_1_copy_click}
 is_package: true
