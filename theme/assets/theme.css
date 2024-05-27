@@ -1118,6 +1118,13 @@ span.btn-text{
  */
 
 
+.left-nav a, .left-nav .anvil-label.left_edge-icon, .left-nav .anvil-label.right_edge-icon {
+    color: rgba(0, 0, 0, 0.87);
+    margin: 0 -16px;
+    padding: 4px 16px;
+}
+
+
 
 
 
