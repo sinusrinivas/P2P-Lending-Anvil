@@ -16,35 +16,35 @@ components:
     type: Link
     layout_properties: {grid_position: 'NTKYDV,NZWJWC'}
   - name: link_3
-    properties: {text: 'View  Loans ', foreground: '#013065'}
+    properties: {text: 'View  Loans ', foreground: '#013065', icon: 'fa:500px'}
     type: Link
     layout_properties: {grid_position: 'MXQUQD,YUURJO'}
   - name: link_4
-    properties: {text: ' Loan Foreclosure', foreground: '#013065'}
+    properties: {text: ' Loan Foreclosure', foreground: '#013065', icon: 'fa:briefcase'}
     type: Link
     layout_properties: {grid_position: 'YHFXID,GCZLON'}
   - name: link_5
-    properties: {text: 'Application Tracker ', foreground: '#013065'}
+    properties: {text: 'Application Tracker ', foreground: '#013065', icon: 'fa:cc-diners-club'}
     type: Link
     layout_properties: {grid_position: 'GQWULI,HWLYWE'}
   - name: link_6
-    properties: {text: 'Loan  Extension  ', foreground: '#013065'}
+    properties: {text: 'Loan  Extension  ', foreground: '#013065', icon: 'fa:close'}
     type: Link
     layout_properties: {grid_position: 'ITIRRY,ATCGEZ'}
   - name: link_7
-    properties: {text: View Transaction History, foreground: '#013065'}
+    properties: {text: Transaction History, foreground: '#013065', icon: 'fa:ils'}
     type: Link
     layout_properties: {grid_position: 'DMVTCF,WPGNOU'}
   - name: link_8
-    properties: {text: Discount Coupons, foreground: '#013065'}
+    properties: {text: Discount Coupons, foreground: '#013065', icon: 'fa:fort-awesome'}
     type: Link
     layout_properties: {grid_position: 'KGQFZZ,ZWOTRZ'}
   - name: link_10
-    properties: {text: Portfolio, foreground: '#013065'}
+    properties: {text: Portfolio, foreground: '#013065', icon: 'fa:css3'}
     type: Link
     layout_properties: {grid_position: 'AEPNUT,OMVPMJ'}
 - name: column_panel_2
-  properties: {col_widths: '{"ICHEBR":10,"ZBHZPI":50,"GFOSTO":2,"KRZPIS":13,"QIOHZF":15,"TMHEQE":2,"RWRETV":13,"DCSWXM":15}'}
+  properties: {col_widths: '{"ICHEBR":10,"ZBHZPI":50,"GFOSTO":2,"KRZPIS":8,"QIOHZF":20,"TMHEQE":2,"RWRETV":8,"DCSWXM":20}'}
   type: ColumnPanel
   layout_properties: {slot: default}
   components:
@@ -53,7 +53,8 @@ components:
     type: Label
     layout_properties: {grid_position: 'HQTFXG,HHCUBH', full_width_row: true}
   - name: image_1_copy_copy
-    properties: {height: '140', source: '', horizontal_align: center, role: null}
+    properties: {height: '140', source: _/theme/borrower/dashboard/borrower_member_since.png,
+      horizontal_align: center, role: null}
     type: Image
     layout_properties: {grid_position: 'BRLAXK,ICHEBR DZAJRQ,WNKNBN', full_width_row: true}
     event_bindings: {mouse_up: image_1_copy_copy_mouse_up}
@@ -85,7 +86,7 @@ components:
     layout_properties: {grid_position: 'BRLAXK,ZBHZPI CFFCZA,GFOSTO QRIROO,UZBYBJ'}
   - name: image_3
     properties: {height: '25', source: _/theme/borrower/dashboard/borrower_member_since.png,
-      display_mode: shrink_to_fit}
+      display_mode: zoom_to_fill}
     type: Image
     layout_properties: {grid_position: 'BRLAXK,ZBHZPI CFFCZA,GFOSTO LKRUOZ,OPRCLQ'}
   - name: label_2
@@ -93,7 +94,7 @@ components:
     type: Label
     layout_properties: {grid_position: 'BRLAXK,ZBHZPI CFFCZA,KRZPIS AWTOFC,IMAGKM'}
   - name: spacer_3
-    properties: {height: '15'}
+    properties: {height: '10'}
     type: Spacer
     layout_properties: {grid_position: 'BRLAXK,ZBHZPI CFFCZA,KRZPIS EOMMKQ,VMBXGC'}
   - name: label_6
@@ -101,15 +102,15 @@ components:
     type: Label
     layout_properties: {grid_position: 'BRLAXK,ZBHZPI CFFCZA,KRZPIS GEPGCZ,GXENVG'}
   - name: label_3
-    properties: {}
+    properties: {text: '7026542951', align: left}
     type: Label
     layout_properties: {grid_position: 'BRLAXK,ZBHZPI CFFCZA,QIOHZF JVPHLH,BZAZHQ'}
   - name: spacer_4
-    properties: {height: '15'}
+    properties: {height: '10'}
     type: Spacer
     layout_properties: {grid_position: 'BRLAXK,ZBHZPI CFFCZA,QIOHZF REMARR,DBLYMQ'}
   - name: label_7
-    properties: {}
+    properties: {text: 1 aug 2022, align: left}
     type: Label
     layout_properties: {grid_position: 'BRLAXK,ZBHZPI CFFCZA,QIOHZF IFJRZE,FPUVFR'}
   - name: spacer_9
@@ -118,7 +119,7 @@ components:
     layout_properties: {grid_position: 'BRLAXK,ZBHZPI CFFCZA,TMHEQE MHNBNA,AGWURC'}
   - name: image_2
     properties: {height: '25', source: _/theme/borrower/dashboard/borrower_credit_limit.png,
-      display_mode: shrink_to_fit}
+      display_mode: zoom_to_fill}
     type: Image
     layout_properties: {grid_position: 'BRLAXK,ZBHZPI CFFCZA,TMHEQE KQQHIE,WXRJKU'}
   - name: spacer_10
@@ -127,7 +128,7 @@ components:
     layout_properties: {grid_position: 'BRLAXK,ZBHZPI CFFCZA,TMHEQE KRNUBY,YTDWCD'}
   - name: image_4
     properties: {height: '25', source: _/theme/borrower/dashboard/borrower_balance.png,
-      display_mode: shrink_to_fit}
+      display_mode: zoom_to_fill}
     type: Image
     layout_properties: {grid_position: 'BRLAXK,ZBHZPI CFFCZA,TMHEQE WHMPOF,PQMFHZ'}
   - name: label_4
@@ -135,7 +136,7 @@ components:
     type: Label
     layout_properties: {grid_position: 'BRLAXK,ZBHZPI CFFCZA,RWRETV URBVWU,OOQVBO'}
   - name: spacer_6
-    properties: {height: '15'}
+    properties: {height: '10'}
     type: Spacer
     layout_properties: {grid_position: 'BRLAXK,ZBHZPI CFFCZA,RWRETV RYUAOR,RDNBOC'}
   - name: label_8
@@ -143,15 +144,15 @@ components:
     type: Label
     layout_properties: {grid_position: 'BRLAXK,ZBHZPI CFFCZA,RWRETV ZOQKOU,VBJGJM'}
   - name: label_5
-    properties: {}
+    properties: {text: '500000'}
     type: Label
     layout_properties: {grid_position: 'BRLAXK,ZBHZPI CFFCZA,DCSWXM RBAIUE,TBHGTF'}
   - name: spacer_7
-    properties: {height: '15'}
+    properties: {height: '10'}
     type: Spacer
     layout_properties: {grid_position: 'BRLAXK,ZBHZPI CFFCZA,DCSWXM WBGNLE,DVSVUB'}
   - name: label_9
-    properties: {}
+    properties: {text: '5000'}
     type: Label
     layout_properties: {grid_position: 'BRLAXK,ZBHZPI CFFCZA,DCSWXM OBZVXW,IOPGFQ'}
   - name: spacer_1
@@ -163,16 +164,16 @@ components:
       columns:
       - {id: JKSDUP, title: Product Name, data_key: column_1, width: 155.2666015625,
         expand: false}
-      - {id: VJQQOR, title: Loan Amount, data_key: column_2}
-      - {id: OJLQEN, title: Tenure, data_key: column_3}
+      - {id: VJQQOR, title: Loan Amount, data_key: column_2, expand: false}
+      - {id: OJLQEN, title: Tenure, data_key: column_3, expand: true}
       - {id: GAVKHZ, data_key: column_4, title: 'Interest  ', width: 124.3333740234375,
         expand: false}
-      - {id: NJWOLU, data_key: column_5, title: Repayment Amount, expand: true}
-      - {id: RNOHUR, data_key: column_7, title: Actions}
+      - {id: NJWOLU, data_key: column_5, title: Repayment Amount, expand: false}
+      - {id: RNOHUR, data_key: column_7, title: Actions, expand: false}
       role: tonal-data-grid
       border: ''
     type: DataGrid
-    layout_properties: {grid_position: 'ZSVLWJ,FTSZNU', full_width_row: true}
+    layout_properties: {grid_position: 'ZSVLWJ,FTSZNU', full_width_row: false}
     components:
     - name: repeating_panel_1_copy
       properties: {item_template: borrower.dashboard.RowTemplate7, role: null, border: ''}
@@ -193,5 +194,8 @@ components:
   properties: {}
   type: FlowPanel
   layout_properties: {slot: nav-right}
-  components: []
+  components:
+  - name: logout_1
+    properties: {}
+    type: form:borrower.logout
 is_package: true
