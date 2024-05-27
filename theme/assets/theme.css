@@ -171,7 +171,7 @@ color: %color:On Primary Container%;
 
 .app-bar {
   z-index: 1000;
-  position: fixed;
+  /* position: fixed; */
   top: 0;
   top: %anvil-banner-height%;
   right: 0;
@@ -326,10 +326,15 @@ color: %color:On Primary Container%;
 
 /* Make all the sidebar icons look nice */
 
+.left-nav .anvil-component-icon {
+  font-size: 160%;
+}
+
 .left-nav .anvil-component-icon.left-icon {
   width: 0;
-  margin-right: 24px;
+  margin-right: 56px;
   position: relative;
+  top: 0.15em;
 }
 
 .left-nav .anvil-component-icon.left_edge-icon, .left-nav .anvil-component-icon.right_edge-icon {
@@ -350,10 +355,10 @@ color: %color:On Primary Container%;
 */
 
 .left-nav a, .left-nav .anvil-label, .left-nav .anvil-label.left_edge-icon, .left-nav .anvil-label.right_edge-icon {
-  color: %color:On Surface Variant%;
-  margin: 0 -8px;
+  color: rgba(0,0,0,0.87);
+  margin: 0 -16px;
   padding: 4px 16px;
-  border-radius: 100px;
+  
 }
 
 .left-nav .anvil-component.left_edge-icon {
@@ -398,7 +403,7 @@ color: %color:On Primary Container%;
 
 /* Components: App Bar */
 .app-bar {
-  min-height: 56px;
+  /* min-height: 56px;
   padding: 0 16px 0 72px;
   position: fixed;
   width: 100%;
@@ -413,7 +418,18 @@ color: %color:On Primary Container%;
   -o-transition: background-color 250ms;
   color: white;
   z-index: 1;
+   box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.2); */
+
+  min-height: 56px;
+  line-height: 40px;
+  padding: 0 16px 0 72px;
+
+  font-size: 20px;
+  font-weight: 500;
+  color: white;
+  background-color: %color:Primary 500%;
   
+  z-index: 1;
   /* 4dp */ box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
 }
 
@@ -499,6 +515,11 @@ color: %color:On Primary Container%;
 }
 .app-bar a.has-text .anvil-component-icon.right {
   margin-left: 4px;
+}
+
+.app-bar a:hover, .app-bar a:active {
+  color: #eee; text-decoration: none;
+  background-color: %color:Primary 700%;
 }
 
 
@@ -722,7 +743,8 @@ button.close > span, button.close {
   border-radius: 12px;
   background-color: %color:Surface%;
   border: solid 1px %color:Outline%;
-  padding: 15px;
+  padding: 8px 12px;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
 }
 
 .anvil-role-elevated-card {
@@ -829,13 +851,13 @@ input.anvil-component::placeholder, textarea.anvil-component::placeholder  {
 }
 
 .app-bar input.anvil-component::-webkit-input-placeholder, .app-bar textarea.anvil-component::-webkit-input-placeholder {
-  color: %color:On Surface%;
+  color: rgba(255,255,255,0.8)
 }
 .app-bar input.anvil-component::-moz-placeholder, .app-bar textarea.anvil-component::-moz-placeholder {
-  color: %color:On Surface%;
+  color: rgba(255,255,255,0.8);
 }
 .app-bar input.anvil-component::placeholder, .app-bar textarea.anvil-component::placeholder  {
-  color: %color:On Surface%;
+  color: rgba(255,255,255,0.8);
 }
 
 input.anvil-component:hover, input.anvil-component:focus, textarea.anvil-component:hover, textarea.anvil-component:focus, 
