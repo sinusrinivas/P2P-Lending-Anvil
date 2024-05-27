@@ -1110,6 +1110,13 @@ span.btn-text{
   text-align: center;
 }
 
+i.fa.fa-bars {
+    visibility: hidden; /* Initially hidden */
+}
+
+i.fa.fa-bars {
+    visibility: visible; /* Visible on hover */
+}
 
 
 
