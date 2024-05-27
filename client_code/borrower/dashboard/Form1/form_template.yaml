@@ -44,7 +44,7 @@ components:
     type: Link
     layout_properties: {grid_position: 'AEPNUT,OMVPMJ'}
 - name: column_panel_2
-  properties: {col_widths: '{"ICHEBR":10,"ZBHZPI":50,"GFOSTO":5,"KRZPIS":10,"QIOHZF":15,"TMHEQE":5,"RWRETV":10,"DCSWXM":15}'}
+  properties: {col_widths: '{"ICHEBR":10,"ZBHZPI":50,"GFOSTO":2,"KRZPIS":13,"QIOHZF":15,"TMHEQE":2,"RWRETV":13,"DCSWXM":15}'}
   type: ColumnPanel
   layout_properties: {slot: default}
   components:
@@ -76,7 +76,7 @@ components:
     layout_properties: {grid_position: 'BRLAXK,ZBHZPI CFFCZA,GFOSTO HEQOJZ,QTPDEO'}
   - name: image_1
     properties: {height: '25', source: _/theme/borrower/dashboard/borrower_mobile.png,
-      display_mode: shrink_to_fit}
+      display_mode: zoom_to_fill}
     type: Image
     layout_properties: {grid_position: 'BRLAXK,ZBHZPI CFFCZA,GFOSTO DEPNHD,BLURTD'}
   - name: spacer_8
