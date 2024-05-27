@@ -86,145 +86,147 @@ components:
     event_bindings: {click: wallet_dashboard_link_click}
     name: wallet_dashboard_link
 - properties: {background: '#0b2547', col_spacing: huge, wrap_on: mobile, visible: false,
-    col_widths: '{"TSZKPJ":15,"SXSDMG":45,"CWXWOL":15,"CJTGKC":45,"RBVPNX":15,"MLUZQH":45,"IGVEGE":15,"PQPAOD":45,"LGSJLQ":15,"WNGBSR":45,"BZXLWI":15,"LPUDZC":45,"VJCHUS":15,"BQXFAA":45,"ULYWCK":15,"HHJFGS":45,"KTFBWN":15,"ZPIOTE":45,"SPACCD":55,"IBLJIN":20}',
+    col_widths: '{"HHWUAS":15,"PHFXOI":45,"TSZKPJ":15,"SXSDMG":45,"CWXWOL":15,"CJTGKC":45,"RBVPNX":15,"MLUZQH":45,"IGVEGE":15,"PQPAOD":45,"LGSJLQ":15,"WNGBSR":45,"BZXLWI":15,"LPUDZC":45,"VJCHUS":15,"BQXFAA":45,"ULYWCK":15,"HHJFGS":45,"KTFBWN":15,"ZPIOTE":45}',
     spacing_above: none, role: null}
   type: ColumnPanel
   layout_properties: {grid_position: 'CCIIXU,QFGZTD', full_width_row: true, row_background: ''}
   name: column_panel_3
   components:
-  - name: image_6
-    properties: {height: '38', spacing_above: large, spacing_below: none, source: _/theme/borrower/dashboard/new%20loan%20request%202.png}
+  - properties: {height: 24.800003051757812, source: _/theme/borrower/dashboard/new%20loan%20request%202.png,
+      horizontal_align: center, spacing_above: large, spacing_below: medium, visible: true,
+      vertical_align: center, display_mode: shrink_to_fit}
     type: Image
-    layout_properties: {grid_position: 'ABVJGY,KIRNGS DCLDCE,IBLJIN'}
+    layout_properties: {grid_position: 'XJDGCR,HHWUAS', full_width_row: true}
+    event_bindings: {mouse_up: image_6_mouse_up}
+    name: image_6
   - properties: {align: left, foreground: white, visible: true, text: View Loan Requests,
       font_size: 16, spacing_above: large, icon_align: left, spacing_below: large,
       bold: true, icon: ''}
     type: Button
-    layout_properties: {grid_position: 'ABVJGY,KIRNGS DCLDCE,SPACCD'}
+    layout_properties: {grid_position: 'XJDGCR,PHFXOI', full_width_row: true}
     event_bindings: {click: View_Loan_Requests_click}
     name: View_Loan_Requests
     data_bindings:
     - {property: icon, code: 'self.item['''']', writeback: false}
-  - properties: {height: '60', source: _/theme/borrower/dashboard/loan%20extension1.png,
-      horizontal_align: right, spacing_above: none, spacing_below: none, visible: true,
-      vertical_align: bottom, role: null}
+  - properties: {height: 39, source: _/theme/borrower/dashboard/loan%20extension1.png,
+      horizontal_align: right, spacing_above: medium, spacing_below: medium, visible: true}
     type: Image
-    layout_properties: {grid_position: 'ABVJGY,KIRNGS RVAYXR,TSZKPJ', full_width_row: true}
+    layout_properties: {grid_position: 'RVAYXR,TSZKPJ', full_width_row: true}
     event_bindings: {mouse_up: image_7_mouse_up}
     name: image_7
   - properties: {role: null, align: left, foreground: white, visible: true, text: View Loan Extension,
       font_size: 16, font: '', spacing_above: medium, spacing_below: medium, bold: true}
     type: Button
-    layout_properties: {grid_position: 'ABVJGY,KIRNGS RVAYXR,SXSDMG', full_width_row: true}
+    layout_properties: {grid_position: 'RVAYXR,SXSDMG', full_width_row: true}
     event_bindings: {click: View_Loan_Extension_click}
     name: View_Loan_Extension
-  - properties: {height: '60', source: _/theme/borrower/dashboard/foreclosure.png,
+  - properties: {height: '50', source: _/theme/borrower/dashboard/foreclosure.png,
       horizontal_align: right, spacing_above: none, spacing_below: none, visible: true,
       vertical_align: center}
     type: Image
-    layout_properties: {grid_position: 'ABVJGY,KIRNGS HEXDCB,CWXWOL', full_width_row: true}
+    layout_properties: {grid_position: 'HEXDCB,CWXWOL', full_width_row: true}
     event_bindings: {mouse_up: image_8_mouse_up}
     name: image_8
   - properties: {text: View Loan Foreclosure, foreground: white, spacing_above: none,
       spacing_below: medium, align: left, bold: true, visible: true, font_size: 16}
     type: Button
-    layout_properties: {grid_position: 'ABVJGY,KIRNGS HEXDCB,CJTGKC', full_width_row: true}
+    layout_properties: {grid_position: 'HEXDCB,CJTGKC', full_width_row: true}
     event_bindings: {click: View_Loan_Foreclosure_click}
     name: View_Loan_Foreclosure
-  - properties: {height: '55', source: _/theme/borrower/dashboard/todays%20dues.png,
-      horizontal_align: center, spacing_above: medium, spacing_below: medium, visible: true}
+  - properties: {height: '50', source: _/theme/borrower/dashboard/todays%20dues.png,
+      horizontal_align: right, spacing_above: medium, spacing_below: medium, visible: true}
     type: Image
-    layout_properties: {grid_position: 'ABVJGY,KIRNGS ZXGAPS,RBVPNX', full_width_row: true}
+    layout_properties: {grid_position: 'ZXGAPS,RBVPNX', full_width_row: true}
     event_bindings: {mouse_up: image_9_mouse_up}
     name: image_9
   - properties: {text: Today's Due, foreground: white, spacing_above: medium, spacing_below: medium,
       align: left, bold: true, visible: true, font_size: 16}
     type: Button
-    layout_properties: {grid_position: 'ABVJGY,KIRNGS ZXGAPS,MLUZQH', full_width_row: true}
+    layout_properties: {grid_position: 'ZXGAPS,MLUZQH', full_width_row: true}
     event_bindings: {click: Todays_Due_click}
     name: Todays_Due
-  - properties: {height: '45', source: _/theme/borrower/dashboard/borrower_view_loans.png,
-      horizontal_align: center, spacing_above: medium, spacing_below: medium, visible: true}
+  - properties: {height: 36.79998779296875, source: _/theme/borrower/dashboard/borrower_view_loans.png,
+      horizontal_align: right, spacing_above: medium, spacing_below: medium, visible: true}
     type: Image
-    layout_properties: {grid_position: 'ABVJGY,KIRNGS OXGMXJ,IGVEGE', full_width_row: true}
+    layout_properties: {grid_position: 'OXGMXJ,IGVEGE', full_width_row: true}
     event_bindings: {mouse_up: image_10_mouse_up}
     name: image_10
   - properties: {text: View Loans, foreground: white, spacing_above: medium, align: left,
       bold: true, visible: true, font_size: 16, spacing_below: medium}
     type: Button
-    layout_properties: {grid_position: 'ABVJGY,KIRNGS OXGMXJ,PQPAOD', full_width_row: true}
+    layout_properties: {grid_position: 'OXGMXJ,PQPAOD', full_width_row: true}
     event_bindings: {click: View_Loans_click}
     name: View_Loans
-  - properties: {height: '40', source: _/theme/lender/dashboard/View%20Lost%20Opportunities%20(2).png,
-      horizontal_align: center, spacing_above: medium, spacing_below: medium, visible: true}
+  - properties: {height: '35', source: _/theme/lender/dashboard/View%20Lost%20Opportunities%20(2).png,
+      horizontal_align: right, spacing_above: medium, spacing_below: medium, visible: true}
     type: Image
-    layout_properties: {grid_position: 'ABVJGY,KIRNGS STBYEZ,LGSJLQ', full_width_row: true}
+    layout_properties: {grid_position: 'STBYEZ,LGSJLQ', full_width_row: true}
     event_bindings: {mouse_up: image_11_mouse_up}
     name: image_11
   - properties: {text: 'View Lost Opportunities ', foreground: white, spacing_above: medium,
       spacing_below: medium, align: left, bold: true, visible: true, font_size: 16}
     type: Button
-    layout_properties: {grid_position: 'ABVJGY,KIRNGS STBYEZ,WNGBSR', full_width_row: true}
+    layout_properties: {grid_position: 'STBYEZ,WNGBSR', full_width_row: true}
     event_bindings: {click: View_Lost_Opportunities_click}
     name: View_Lost_Opportunities
-  - properties: {height: '38', source: _/theme/lender/dashboard/Change%20Password.png,
-      horizontal_align: center, spacing_above: medium, spacing_below: medium, visible: true}
+  - properties: {height: '30', source: _/theme/lender/dashboard/Change%20Password.png,
+      horizontal_align: right, spacing_above: medium, spacing_below: medium, visible: true}
     type: Image
-    layout_properties: {grid_position: 'ABVJGY,KIRNGS VRIJDG,BZXLWI', full_width_row: true}
+    layout_properties: {grid_position: 'VRIJDG,BZXLWI', full_width_row: true}
     event_bindings: {mouse_up: image_12_mouse_up}
     name: image_12
   - properties: {text: Change Password, foreground: white, spacing_above: medium,
       spacing_below: medium, align: left, bold: true, visible: true, font_size: 16}
     type: Button
-    layout_properties: {grid_position: 'ABVJGY,KIRNGS VRIJDG,LPUDZC', full_width_row: true}
+    layout_properties: {grid_position: 'VRIJDG,LPUDZC', full_width_row: true}
     event_bindings: {click: Change_Password_click}
     name: Change_Password
-  - properties: {height: '40', source: _/theme/borrower/dashboard/view%20transaction%20history.png,
-      horizontal_align: center, spacing_above: medium, spacing_below: medium, visible: true}
+  - properties: {height: '35', source: _/theme/borrower/dashboard/view%20transaction%20history.png,
+      horizontal_align: right, spacing_above: medium, spacing_below: medium, visible: true}
     type: Image
-    layout_properties: {grid_position: 'ABVJGY,KIRNGS VPJCAA,VJCHUS', full_width_row: true}
+    layout_properties: {grid_position: 'VPJCAA,VJCHUS', full_width_row: true}
     event_bindings: {mouse_up: image_13_mouse_up}
     name: image_13
   - properties: {text: 'View Transaction History ', foreground: white, spacing_above: medium,
       spacing_below: medium, align: left, bold: true, visible: true, font_size: 16}
     type: Button
-    layout_properties: {grid_position: 'ABVJGY,KIRNGS VPJCAA,BQXFAA', full_width_row: true}
+    layout_properties: {grid_position: 'VPJCAA,BQXFAA', full_width_row: true}
     event_bindings: {click: historyView_Transaction_History_click}
     name: historyView_Transaction_History
-  - properties: {height: '33', source: _/theme/lender/dashboard/ViewEdit%20Profile.png,
-      horizontal_align: center, spacing_above: medium, spacing_below: medium, visible: true}
+  - properties: {height: '30', source: _/theme/lender/dashboard/ViewEdit%20Profile.png,
+      horizontal_align: right, spacing_above: medium, spacing_below: medium, visible: true}
     type: Image
-    layout_properties: {grid_position: 'ABVJGY,KIRNGS FBRZJC,ULYWCK', full_width_row: true}
+    layout_properties: {grid_position: 'FBRZJC,ULYWCK', full_width_row: true}
     event_bindings: {mouse_up: image_14_mouse_up}
     name: image_14
   - properties: {text: View/Edit Profile, foreground: white, spacing_above: medium,
       spacing_below: medium, align: left, bold: true, visible: true, font_size: 16}
     type: Button
-    layout_properties: {grid_position: 'ABVJGY,KIRNGS FBRZJC,HHJFGS', full_width_row: true}
+    layout_properties: {grid_position: 'FBRZJC,HHJFGS', full_width_row: true}
     event_bindings: {click: View_Edit_Profile_click}
     name: View_Edit_Profile
-  - properties: {height: '35', source: _/theme/lender/dashboard/ViewSend%20Notifications%20(2).png,
-      vertical_align: center, horizontal_align: center, spacing_above: medium, spacing_below: large,
+  - properties: {height: '30', source: _/theme/lender/dashboard/ViewSend%20Notifications%20(2).png,
+      vertical_align: center, horizontal_align: right, spacing_above: medium, spacing_below: large,
       visible: true}
     type: Image
-    layout_properties: {grid_position: 'ABVJGY,KIRNGS LLSDQQ,KTFBWN', full_width_row: true}
+    layout_properties: {grid_position: 'LLSDQQ,KTFBWN', full_width_row: true}
     event_bindings: {mouse_up: image_15_mouse_up}
     name: image_15
   - properties: {text: ' View/Send Notifications', foreground: white, spacing_above: medium,
       spacing_below: large, align: left, bold: true, visible: true, font_size: 16}
     type: Button
-    layout_properties: {grid_position: 'ABVJGY,KIRNGS LLSDQQ,ZPIOTE', full_width_row: true}
+    layout_properties: {grid_position: 'LLSDQQ,ZPIOTE', full_width_row: true}
     event_bindings: {click: View_Send_Notifications_click}
     name: View_Send_Notifications
   - properties: {height: '', visible: false}
     type: Spacer
-    layout_properties: {grid_position: 'ABVJGY,KIRNGS ICVZXD,RUHEWA', full_width_row: true}
+    layout_properties: {grid_position: 'ICVZXD,RUHEWA', full_width_row: true}
     data_bindings:
     - {code: 'self.item[''100%'']', writeback: false, property: height}
     name: spacer_2
   - properties: {height: 287.5999755859375, visible: true}
     type: Spacer
-    layout_properties: {grid_position: 'ABVJGY,KIRNGS HOQYUH,XYFLOM'}
+    layout_properties: {grid_position: 'HOQYUH,XYFLOM'}
     name: spacer_4
 - properties: {wrap_on: mobile}
   type: ColumnPanel
