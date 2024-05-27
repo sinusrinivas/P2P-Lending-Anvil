@@ -8,12 +8,12 @@ components:
   layout_properties: {slot: left-nav}
   components:
   - name: link_1
-    properties: {text: New Loan Request, icon: 'fa:address-card', foreground: '#013065'}
+    properties: {text: New Loan Request, icon: 'fa:calendar', foreground: '#013065'}
     type: Link
     layout_properties: {grid_position: 'BZNSXQ,TUEPQZ'}
     event_bindings: {click: link_1_click}
   - name: link_2
-    properties: {align: left, text: Today's  Due, foreground: '#013065', icon: 'fa:american-sign-language-interpreting'}
+    properties: {align: left, text: Today's  Due, foreground: '#013065', icon: 'fa:calendar'}
     type: Link
     layout_properties: {grid_position: 'NTKYDV,NZWJWC'}
     event_bindings: {click: link_2_click}
@@ -33,7 +33,6 @@ components:
     layout_properties: {grid_position: 'GQWULI,HWLYWE'}
     event_bindings: {click: link_5_click}
   - name: link_6
-    properties: {text: 'Loan  Extension  ', foreground: '#013065', icon: 'fa:street-view'}
     type: Link
     layout_properties: {grid_position: 'ITIRRY,ATCGEZ'}
     event_bindings: {click: link_6_click}
