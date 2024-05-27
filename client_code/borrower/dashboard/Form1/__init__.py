@@ -51,7 +51,7 @@ class Form1(Form1Template):
 
   def link_1_click(self, **event_args):
     """This method is called when the link is clicked"""
-    try:
+        try:
             existing_loans = app_tables.fin_loan_details.search(
                 borrower_customer_id=self.user_Id,
                 loan_updated_status=q.any_of(
