@@ -93,7 +93,7 @@ components:
   name: column_panel_3
   components:
   - name: image_6
-    properties: {height: '38', spacing_above: large, spacing_below: none, source: _/theme/borrower/dashboard/new%20loan%20request%202.png}
+    properties: {height: '35', spacing_above: large, spacing_below: none, source: _/theme/borrower/dashboard/new%20loan%20request%202.png}
     type: Image
     layout_properties: {grid_position: 'ABVJGY,KIRNGS DCLDCE,IBLJIN'}
   - properties: {align: left, foreground: white, visible: true, text: View Loan Requests,
