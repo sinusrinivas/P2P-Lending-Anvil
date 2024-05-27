@@ -44,7 +44,7 @@ components:
     type: Link
     layout_properties: {grid_position: 'AEPNUT,OMVPMJ'}
 - name: column_panel_2
-  properties: {col_widths: '{"ICHEBR":10,"ZBHZPI":50,"GFOSTO":5,"KRZPIS":10,"QIOHZF":15,"TMHEQE":5,"RWRETV":10,"DCSWXM":15}'}
+  properties: {col_widths: '{"ICHEBR":10,"ZBHZPI":50,"GFOSTO":2,"KRZPIS":13,"QIOHZF":15,"TMHEQE":2,"RWRETV":13,"DCSWXM":15}'}
   type: ColumnPanel
   layout_properties: {slot: default}
   components:
@@ -66,50 +66,90 @@ components:
     properties: {text: '', align: left, bold: true, font_size: 26}
     type: Label
     layout_properties: {grid_position: 'BRLAXK,ZBHZPI OWJNKD,RUADLG', full_width_row: true}
+  - name: spacer_5
+    properties: {height: -0.77777099609375}
+    type: Spacer
+    layout_properties: {grid_position: 'BRLAXK,ZBHZPI CFFCZA,GFOSTO FNBIKW,JKAJZA'}
+  - name: spacer_2
+    properties: {height: -2.555572509765625}
+    type: Spacer
+    layout_properties: {grid_position: 'BRLAXK,ZBHZPI CFFCZA,GFOSTO HEQOJZ,QTPDEO'}
   - name: image_1
-    properties: {height: '30', source: _/theme/borrower/dashboard/borrower_mobile.png}
+    properties: {height: '25', source: _/theme/borrower/dashboard/borrower_mobile.png,
+      display_mode: shrink_to_fit}
     type: Image
     layout_properties: {grid_position: 'BRLAXK,ZBHZPI CFFCZA,GFOSTO DEPNHD,BLURTD'}
+  - name: spacer_8
+    properties: {height: 21.5555419921875}
+    type: Spacer
+    layout_properties: {grid_position: 'BRLAXK,ZBHZPI CFFCZA,GFOSTO QRIROO,UZBYBJ'}
   - name: image_3
-    properties: {height: '30', source: _/theme/borrower/dashboard/borrower_member_since.png}
+    properties: {height: '25', source: _/theme/borrower/dashboard/borrower_member_since.png,
+      display_mode: shrink_to_fit}
     type: Image
     layout_properties: {grid_position: 'BRLAXK,ZBHZPI CFFCZA,GFOSTO LKRUOZ,OPRCLQ'}
   - name: label_2
-    properties: {text: 'Mobile No:'}
+    properties: {text: 'Mobile No:', bold: true, font_size: 16}
     type: Label
     layout_properties: {grid_position: 'BRLAXK,ZBHZPI CFFCZA,KRZPIS AWTOFC,IMAGKM'}
+  - name: spacer_3
+    properties: {height: '15'}
+    type: Spacer
+    layout_properties: {grid_position: 'BRLAXK,ZBHZPI CFFCZA,KRZPIS EOMMKQ,VMBXGC'}
   - name: label_6
-    properties: {text: 'Member Since:'}
+    properties: {text: 'Member Since:', bold: true, font_size: 16}
     type: Label
     layout_properties: {grid_position: 'BRLAXK,ZBHZPI CFFCZA,KRZPIS GEPGCZ,GXENVG'}
   - name: label_3
     properties: {}
     type: Label
     layout_properties: {grid_position: 'BRLAXK,ZBHZPI CFFCZA,QIOHZF JVPHLH,BZAZHQ'}
+  - name: spacer_4
+    properties: {height: '15'}
+    type: Spacer
+    layout_properties: {grid_position: 'BRLAXK,ZBHZPI CFFCZA,QIOHZF REMARR,DBLYMQ'}
   - name: label_7
     properties: {}
     type: Label
     layout_properties: {grid_position: 'BRLAXK,ZBHZPI CFFCZA,QIOHZF IFJRZE,FPUVFR'}
+  - name: spacer_9
+    properties: {height: 0.22222900390625}
+    type: Spacer
+    layout_properties: {grid_position: 'BRLAXK,ZBHZPI CFFCZA,TMHEQE MHNBNA,AGWURC'}
   - name: image_2
-    properties: {height: '30', source: _/theme/borrower/dashboard/borrower_credit_limit.png}
+    properties: {height: '25', source: _/theme/borrower/dashboard/borrower_credit_limit.png,
+      display_mode: shrink_to_fit}
     type: Image
     layout_properties: {grid_position: 'BRLAXK,ZBHZPI CFFCZA,TMHEQE KQQHIE,WXRJKU'}
+  - name: spacer_10
+    properties: {height: 21.77777099609375}
+    type: Spacer
+    layout_properties: {grid_position: 'BRLAXK,ZBHZPI CFFCZA,TMHEQE KRNUBY,YTDWCD'}
   - name: image_4
-    properties: {height: '30', source: _/theme/borrower/dashboard/borrower_balance.png}
+    properties: {height: '25', source: _/theme/borrower/dashboard/borrower_balance.png,
+      display_mode: zoom_to_fill}
     type: Image
     layout_properties: {grid_position: 'BRLAXK,ZBHZPI CFFCZA,TMHEQE WHMPOF,PQMFHZ'}
   - name: label_4
-    properties: {text: Credit Limit}
+    properties: {text: Credit Limit, bold: true, font_size: 16}
     type: Label
     layout_properties: {grid_position: 'BRLAXK,ZBHZPI CFFCZA,RWRETV URBVWU,OOQVBO'}
+  - name: spacer_6
+    properties: {height: '15'}
+    type: Spacer
+    layout_properties: {grid_position: 'BRLAXK,ZBHZPI CFFCZA,RWRETV RYUAOR,RDNBOC'}
   - name: label_8
-    properties: {text: 'Available Balance:'}
+    properties: {text: 'Available Balance:', bold: true, font_size: 16}
     type: Label
     layout_properties: {grid_position: 'BRLAXK,ZBHZPI CFFCZA,RWRETV ZOQKOU,VBJGJM'}
   - name: label_5
     properties: {}
     type: Label
     layout_properties: {grid_position: 'BRLAXK,ZBHZPI CFFCZA,DCSWXM RBAIUE,TBHGTF'}
+  - name: spacer_7
+    properties: {height: '15'}
+    type: Spacer
+    layout_properties: {grid_position: 'BRLAXK,ZBHZPI CFFCZA,DCSWXM WBGNLE,DVSVUB'}
   - name: label_9
     properties: {}
     type: Label
