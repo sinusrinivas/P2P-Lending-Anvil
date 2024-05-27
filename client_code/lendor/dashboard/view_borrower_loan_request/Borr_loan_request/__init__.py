@@ -363,10 +363,10 @@ class Borr_loan_request(Borr_loan_requestTemplate):
         self.lender_customer_id = None
         
         # Populate labels with the selected row details
-        self.label_user_id.text = f"{selected_row['borrower_customer_id']}"
+        # self.label_user_id.text = f"{selected_row['borrower_customer_id']}"
         self.label_name.text = f"{selected_row['borrower_full_name']}"
         self.label_loan_amount_applied.text = f"{selected_row['loan_amount']}"
-        self.label_loan_id.text = f"{selected_row['loan_id']}"
+        # self.label_loan_id.text = f"{selected_row['loan_id']}"
         self.label_beseem_score.text = f"{selected_row['beseem_score']}"
         self.label_loan_tenure.text = f"{selected_row['tenure']}"
         self.label_credit_limit.text = f"{selected_row['credit_limit']}"

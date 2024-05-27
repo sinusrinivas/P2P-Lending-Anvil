@@ -54,7 +54,7 @@ components:
       properties: {role: outlined-card, align: center, tooltip: '', border: '', foreground: 'theme:On
           Primary', visible: true, text: Borrower Loan Details, font_size: 25, font: '',
         spacing_above: small, icon_align: left, spacing_below: small, italic: false,
-        background: '#05264d', bold: true, underline: true, icon: ''}
+        background: '#05264d', bold: true, underline: false, icon: ''}
       layout_properties: {grid_position: 'MYUDSN,HSNNFB', full_width_row: true}
       name: label_1
     - properties: {col_widths: '{"HTYHIR":15,"DNHZSW":25,"UHOCXU":15,"BMUVEY":5}'}

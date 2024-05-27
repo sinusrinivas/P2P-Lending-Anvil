@@ -14,7 +14,7 @@ class view_details_2(view_details_2Template):
     self.init_components(**properties)
 
     # Any code you write here will run before the form opens.
-    self.loan_id_label.text = f"{selected_row['loan_id']}"
+    self.loan_id_label.text = f"{selected_row['borrower_full_name']}"
     self.loan_amount_label.text=f"{selected_row['loan_amount']}"
     self.intrest_rate_label.text=f"{selected_row['interest_rate']}"
     self.tenure_label.text=f"{selected_row['tenure']}"
