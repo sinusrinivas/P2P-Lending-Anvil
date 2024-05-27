@@ -415,3 +415,7 @@ class dashboard(dashboardTemplate):
 
 #     def image_1_copy_copy_mouse_up(self, x, y, button, **event_args):
 #         open_form('borrower.dashboard.borrower_profile')
+
+    def outlined_button_1_click(self, **event_args):
+      """This method is called when the button is clicked"""
+      open_form('borrower.dashboard.Form1')

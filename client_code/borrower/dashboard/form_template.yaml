@@ -457,6 +457,11 @@ components:
     type: RepeatingPanel
     layout_properties: {pinned: false}
     name: repeating_panel_1
+- name: outlined_button_1
+  properties: {text: form1, role: outlined-button}
+  type: Button
+  layout_properties: {grid_position: 'XJNATW,EICYCB EWUFOT,PHNRDJ'}
+  event_bindings: {click: outlined_button_1_click}
 - name: spacer_20
   properties: {height: 108.99996948242188}
   type: Spacer
