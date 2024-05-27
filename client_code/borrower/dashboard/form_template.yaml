@@ -204,7 +204,7 @@ components:
     layout_properties: {grid_position: 'BGTBAA,JGZFPN'}
     name: spacer_9
 - name: content_panel_copy_3_copy
-  properties: {col_widths: '{"CHNNLA":15,"OHZSYC":45,"YNUSTO":45,"TRRXRD":45,"SFHJNS":45,"PGYUMF":45,"VEOGOV":45,"PCKMGS":45,"QTCHNM":45,"CCTMMS":45,"ZHMDPW":45}',
+  properties: {col_widths: '{"OHZSYC":45,"YNUSTO":45,"TRRXRD":45,"SFHJNS":45,"PGYUMF":45,"VEOGOV":45,"PCKMGS":45,"QTCHNM":45,"CCTMMS":45,"ZHMDPW":45}',
     background: '', visible: true, spacing_above: none, spacing_below: none, role: null,
     foreground: '', border: 1px solid white}
   type: ColumnPanel
@@ -317,11 +317,19 @@ components:
     properties: {height: '1'}
     type: Spacer
     layout_properties: {grid_position: 'BGTBAA,JGZFPN'}
-  - name: link_1
-    properties: {text: Portoflio, icon: _/theme/borrower/dashboard/new%20loan%20request%202.png,
-      align: left, icon_align: left}
-    type: Link
-    layout_properties: {grid_position: 'OPHDWJ,CLLOPZ'}
+  - name: button_10
+    properties: {text: abc, icon: _/theme/borrower/dashboard/borrower_partpayment.png,
+      align: left}
+    type: Button
+    layout_properties: {grid_position: 'WLWLOV,JCPCZU'}
+- name: button_11
+  properties: {text: abc, align: left, icon: _/theme/borrower/dashboard/borrower_partpayment.png}
+  type: Button
+  layout_properties: {grid_position: 'XJNATW,SKVUZK SZKBJI,VSVZXD'}
+- name: link_1
+  properties: {text: me, icon: 'fa:address-book', align: left}
+  type: Link
+  layout_properties: {grid_position: 'XJNATW,SKVUZK VGKRRK,HLGOSV'}
 - properties: {height: '20'}
   type: Spacer
   layout_properties: {grid_position: 'XJNATW,EICYCB'}
