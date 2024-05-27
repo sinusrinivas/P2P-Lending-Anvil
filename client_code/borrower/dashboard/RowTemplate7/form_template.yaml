@@ -8,7 +8,7 @@ components:
   type: Label
   layout_properties: {column: JKSDUP}
   data_bindings:
-  - {property: text, code: 'self.item[''loan_id'']', writeback: false}
+  - {property: text, code: 'self.item[''product_id'']', writeback: false}
 - name: amount
   properties: {text: '100000', align: center}
   type: Label
