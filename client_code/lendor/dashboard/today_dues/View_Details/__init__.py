@@ -207,10 +207,11 @@ class View_Details(View_DetailsTemplate):
         )
 
         if emi_row is not None and emi_row['payment_type'] == 'part payment':
-
-          self.part_payment.visible = True
+          amount = emi_row['part_payment_amount']
+          self.part_payment_label.text = "{:.2f}".format(amount)
+          self.part_payment_amount.visible = True
           self.back.visible = True
-          self.back_copy.visible = False
+          self.part_payment_label.visible = True
           # self.label_3.visible = False
           # self.label_5.visible = False
           # self.label_9.visible = False
@@ -236,8 +237,8 @@ class View_Details(View_DetailsTemplate):
 
             total_emi += remaining_part_payment
             total_emi +=additional_fees
-            self.part_payment.visible = False
-            self.back.visible = False
+            # self.part_payment.visible = False
+            # self.back.visible = False
             self.label_14.visible = True
             self.label_15.visible = True
         self.update_total_emi_amount(total_emi)
@@ -350,7 +351,7 @@ class View_Details(View_DetailsTemplate):
                   self.label_14.text = additional_fees + remaining_part_payment
                   total_due_amount += remaining_part_payment
                   total_due_amount += additional_fees
-                  self.part_payment.enabled = False
+                  # self.part_payment.enabled = False
                   self.label_14.visible = True
                   self.label_15.visible = True
       
