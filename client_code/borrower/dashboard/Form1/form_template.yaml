@@ -8,43 +8,39 @@ components:
   layout_properties: {slot: left-nav}
   components:
   - name: link_1
-    properties: {text: New Loan Request, icon: _/theme/borrower/dashboard/new%20loan%20request%202.png}
+    properties: {text: New Loan Request, icon: 'fa:address-card', foreground: '#013065'}
     type: Link
     layout_properties: {grid_position: 'BZNSXQ,TUEPQZ'}
   - name: link_2
-    properties: {align: left, text: Today's  Due}
+    properties: {align: left, text: Today's  Due, foreground: '#013065', icon: 'fa:american-sign-language-interpreting'}
     type: Link
     layout_properties: {grid_position: 'NTKYDV,NZWJWC'}
   - name: link_3
-    properties: {text: 'View  Loans '}
+    properties: {text: 'View  Loans ', foreground: '#013065'}
     type: Link
     layout_properties: {grid_position: 'MXQUQD,YUURJO'}
   - name: link_4
-    properties: {text: ' Loan Foreclosure'}
+    properties: {text: ' Loan Foreclosure', foreground: '#013065'}
     type: Link
     layout_properties: {grid_position: 'YHFXID,GCZLON'}
   - name: link_5
-    properties: {text: 'Application Tracker '}
+    properties: {text: 'Application Tracker ', foreground: '#013065'}
     type: Link
     layout_properties: {grid_position: 'GQWULI,HWLYWE'}
   - name: link_6
-    properties: {text: 'Loan  Extension  '}
+    properties: {text: 'Loan  Extension  ', foreground: '#013065'}
     type: Link
     layout_properties: {grid_position: 'ITIRRY,ATCGEZ'}
   - name: link_7
-    properties: {text: View Transaction History}
+    properties: {text: View Transaction History, foreground: '#013065'}
     type: Link
     layout_properties: {grid_position: 'DMVTCF,WPGNOU'}
   - name: link_8
-    properties: {text: Discount Coupons}
+    properties: {text: Discount Coupons, foreground: '#013065'}
     type: Link
     layout_properties: {grid_position: 'KGQFZZ,ZWOTRZ'}
-  - name: link_9
-    properties: {text: Part Payment}
-    type: Link
-    layout_properties: {grid_position: 'SLWTMA,FLEJBG'}
   - name: link_10
-    properties: {text: Portfolio}
+    properties: {text: Portfolio, foreground: '#013065'}
     type: Link
     layout_properties: {grid_position: 'AEPNUT,OMVPMJ'}
 - name: column_panel_2
@@ -81,7 +77,8 @@ components:
         expand: false}
       - {id: VJQQOR, title: Loan Amount, data_key: column_2}
       - {id: OJLQEN, title: Tenure, data_key: column_3}
-      - {id: GAVKHZ, data_key: column_4, title: 'Interest  '}
+      - {id: GAVKHZ, data_key: column_4, title: 'Interest  ', width: 124.3333740234375,
+        expand: false}
       - {id: NJWOLU, data_key: column_5, title: Repayment Amount, expand: true}
       - {id: RNOHUR, data_key: column_7, title: Actions}
       role: tonal-data-grid
