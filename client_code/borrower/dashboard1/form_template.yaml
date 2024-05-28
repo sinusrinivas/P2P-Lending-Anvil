@@ -453,7 +453,7 @@ components:
   layout_properties: {grid_position: 'XJNATW,EICYCB WYXQXG,WVXVAQ', full_width_row: true}
   name: data_grid_1
   components:
-  - properties: {item_template: borrower.dashboard1.RowTemplate7, role: null, border: ''}
+  - properties: {item_template: borrower.dashboard.RowTemplate7, role: null, border: ''}
     type: RepeatingPanel
     layout_properties: {pinned: false}
     name: repeating_panel_1
@@ -585,6 +585,6 @@ components:
   layout_properties: {grid_position: 'XJNATW,EICYCB VQSAZU,XMEUJF'}
   components:
   - name: repeating_panel_1_copy
-    properties: {item_template: borrower.dashboard1.RowTemplate7, role: null, border: ''}
+    properties: {item_template: borrower.dashboard.RowTemplate7, role: null, border: ''}
     type: RepeatingPanel
     layout_properties: {pinned: false}

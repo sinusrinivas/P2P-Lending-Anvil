@@ -191,7 +191,7 @@ components:
     layout_properties: {grid_position: 'ZSVLWJ,FTSZNU', full_width_row: true}
     components:
     - name: repeating_panel_1
-      properties: {item_template: borrower.dashboard1.RowTemplate7, role: null, border: '',
+      properties: {item_template: borrower.dashboard.RowTemplate7, role: null, border: '',
         foreground: black}
       type: RepeatingPanel
       layout_properties: {pinned: false}

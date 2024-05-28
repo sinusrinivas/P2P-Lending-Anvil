@@ -27,15 +27,15 @@ components:
     name: navigation_form_dashboard_1
     layout_properties: {grid_position: 'LQBNNN,HPDRWB', full_width_row: true}
   - type: Spacer
+    properties: {height: 26.5714111328125}
+    name: spacer_2
+    layout_properties: {grid_position: 'PBIDRN,MDTPBK'}
+  - type: Spacer
     properties: {height: 6}
     name: spacer_3
     layout_properties: {grid_position: 'SGUSCA,EFTYEF'}
-  - type: Spacer
-    properties: {height: 25.714202880859375}
-    name: spacer_2
-    layout_properties: {grid_position: 'DIEYDT,VDVKST'}
   - name: label_2
-    properties: {role: display, align: center, tooltip: '', border: '', foreground: '',
+    properties: {role: outlined-card, align: center, tooltip: '', border: '', foreground: '',
       visible: true, text: Payment Details, font_size: 25, font: '', spacing_above: small,
       icon_align: left, spacing_below: small, italic: false, background: 'theme:Disabled
         Container', bold: true, underline: false, icon: ''}
@@ -52,22 +52,18 @@ components:
       properties:
         role: null
         columns:
-        - {id: HNDXMO, title: Payment Number, data_key: column_1, $$hashKey: 'object:8226',
-          width: 75, expand: false}
-        - {id: UIVQZK, title: Payment Date, data_key: column_2, $$hashKey: 'object:8227'}
-        - {id: XBGVMQ, title: Beginning Balance, data_key: column_3, $$hashKey: 'object:8228'}
-        - {id: WNDFRF, title: Payment Due, data_key: column_4, $$hashKey: 'object:8300'}
-        - {id: UAHJDF, title: Extra Payment, data_key: column_5, $$hashKey: 'object:8302'}
-        - {id: ITJKMG, title: Total Payment, data_key: column_6, $$hashKey: 'object:8304'}
-        - {id: QQKWIO, title: Principal, data_key: column_7, $$hashKey: 'object:8306',
-          width: 91, expand: false}
-        - {id: HGKINV, title: Interest, data_key: column_8, $$hashKey: 'object:8308',
-          width: 85, expand: false}
-        - {id: UNAPZX, title: Ending Balance, data_key: column_9, $$hashKey: 'object:8310'}
-        - {id: HPIGBD, title: Scheduled Payment Date, data_key: column_10, $$hashKey: 'object:1501'}
-        - {id: LLZKZE, title: Scheduled Payment Time, data_key: column_11, $$hashKey: 'object:1503'}
-        - {id: DOLXPH, title: Account Number, data_key: column_12, $$hashKey: 'object:1505'}
-        - {id: RDQBRB, data_key: column_1, title: Processing Fee}
+        - {id: BRPDJV, title: Payment Number, data_key: column_1, $$hashKey: 'object:2201'}
+        - {id: JUNDSP, title: Payment Date, data_key: column_2, $$hashKey: 'object:2202'}
+        - {id: QJNTUE, title: Beginning Balance, data_key: column_3, $$hashKey: 'object:2203'}
+        - {id: NBBFQW, title: Payment Due, data_key: column_4, $$hashKey: 'object:2241'}
+        - {id: VSQOWI, title: Extra Payment, data_key: column_5, $$hashKey: 'object:2243'}
+        - {id: PQWTEP, title: Total Payment, data_key: column_6, $$hashKey: 'object:2245'}
+        - {id: HFNVUA, title: Principal, data_key: column_7, $$hashKey: 'object:2247'}
+        - {id: LNBEYW, title: Interest, data_key: column_8, $$hashKey: 'object:2433'}
+        - {id: WJRULN, title: Ending Balance, data_key: column_9, $$hashKey: 'object:2435'}
+        - {id: YWRBQW, title: Scheduled Payment Date, data_key: column_10, $$hashKey: 'object:2437'}
+        - {id: KQUJKL, title: Scheduled Payment Time, data_key: column_11, $$hashKey: 'object:2439'}
+        - {id: GKXTPQ, title: Account Number, data_key: column_12, $$hashKey: 'object:2441'}
         auto_header: true
         tooltip: ''
         border: ''
@@ -80,81 +76,81 @@ components:
         spacing_below: small
         background: ''
       name: data_grid_1
-      layout_properties: {grid_position: 'DRBSZC,PWRSQD', full_width_row: true}
+      layout_properties: {grid_position: 'IWCTBP,KGGFFA', full_width_row: true}
       components: []
   - name: column_panel_1
-    properties: {role: elevated-card, background: 'theme:Secondary Container', col_widths: '{"MMWWMH":5,"UTSGJT":5,"ZOTPME":5,"AHQLCD":5,"RRUYQH":5,"GTVNWQ":5,"AJMUOU":5,"XXEDKD":5,"QXCZAU":4,"VMFSKG":4,"CWIGGC":4,"ULNPXS":4,"OWEZII":4}'}
+    properties: {role: elevated-card, background: 'theme:Secondary Container'}
     type: ColumnPanel
-    layout_properties: {grid_position: 'VDTTVN,HGRBIB', full_width_row: true}
+    layout_properties: {grid_position: 'YEGSVZ,YQEOVA', full_width_row: true}
     components:
-    - name: label_3
+    - name: label_1
       properties: {text: Payment Number}
       type: Label
-      layout_properties: {grid_position: 'QRXJTS,MMWWMH', full_width_row: true}
-    - name: label_4
+      layout_properties: {grid_position: 'ZXWMGT,EISIVD', full_width_row: true}
+    - name: label_3
       properties: {text: Payment Date}
       type: Label
-      layout_properties: {grid_position: 'QRXJTS,UTSGJT'}
-    - name: label_5
+      layout_properties: {grid_position: 'ZXWMGT,DOCFCH'}
+    - name: label_4
       properties: {text: Beginning Balance}
       type: Label
-      layout_properties: {grid_position: 'QRXJTS,ZOTPME'}
-    - name: label_6
+      layout_properties: {grid_position: 'ZXWMGT,VPBNMR'}
+    - name: label_5
       properties: {text: Payment Due}
       type: Label
-      layout_properties: {grid_position: 'QRXJTS,AHQLCD'}
-    - name: label_7
+      layout_properties: {grid_position: 'ZXWMGT,ALSQOT'}
+    - name: label_6
       properties: {text: Extra Payment}
       type: Label
-      layout_properties: {grid_position: 'QRXJTS,RRUYQH'}
-    - name: label_8
+      layout_properties: {grid_position: 'ZXWMGT,IHZWWS'}
+    - name: label_7
       properties: {text: Total Payment}
       type: Label
-      layout_properties: {grid_position: 'QRXJTS,GTVNWQ'}
-    - name: label_9
+      layout_properties: {grid_position: 'ZXWMGT,WPKJGC'}
+    - name: label_8
       properties: {text: Principal}
       type: Label
-      layout_properties: {grid_position: 'QRXJTS,AJMUOU'}
-    - name: label_10
+      layout_properties: {grid_position: 'ZXWMGT,YFTFUF'}
+    - name: label_9
       properties: {text: Interest}
       type: Label
-      layout_properties: {grid_position: 'QRXJTS,XXEDKD'}
-    - name: label_11
+      layout_properties: {grid_position: 'ZXWMGT,JQZKWU'}
+    - name: label_10
       properties: {text: Ending Balance}
       type: Label
-      layout_properties: {grid_position: 'QRXJTS,QXCZAU'}
-    - name: label_12
+      layout_properties: {grid_position: 'ZXWMGT,KHGXFP'}
+    - name: label_11
       properties: {text: Payment Date}
       type: Label
-      layout_properties: {grid_position: 'QRXJTS,VMFSKG'}
-    - name: label_13
+      layout_properties: {grid_position: 'ZXWMGT,ZURYQH'}
+    - name: label_12
       properties: {text: Payment Time}
       type: Label
-      layout_properties: {grid_position: 'QRXJTS,CWIGGC'}
-    - name: label_14
+      layout_properties: {grid_position: 'ZXWMGT,RVRNIO'}
+    - name: label_13
       properties: {text: Account Number}
       type: Label
-      layout_properties: {grid_position: 'QRXJTS,ULNPXS'}
-    - name: label_15
-      properties: {text: Processing Fee}
-      type: Label
-      layout_properties: {grid_position: 'QRXJTS,OWEZII'}
+      layout_properties: {grid_position: 'ZXWMGT,FQYHVG'}
   - type: RepeatingPanel
-    properties: {spacing_above: none, spacing_below: none, item_template: borrower.dashboard1.today_dues.payment_details_t.RowTemplate18}
+    properties: {spacing_above: none, spacing_below: none, item_template: borrower.dashboard.extension_loan_request.payment_details_extension.RowTemplate39}
     name: repeating_panel_1
-    layout_properties: {grid_position: 'GFBJND,BAQFAQ', full_width_row: true}
-  - type: Spacer
-    properties: {height: 32}
-    name: spacer_1
-    layout_properties: {grid_position: 'QIKCJY,ZISDOY'}
+    layout_properties: {grid_position: 'OPYPVF,XSEGVJ', full_width_row: true}
   - type: Button
     properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
       foreground: 'theme:On Primary', visible: true, text: Back, font_size: null,
       font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
       background: '#0b2547', bold: false, underline: false, icon: 'fa:angle-double-left'}
     name: button_2
-    layout_properties: {grid_position: 'ZJSLXK,WDKOQC'}
+    layout_properties: {grid_position: 'DJSMRG,THFTIP'}
     event_bindings: {click: button_2_click}
+  - type: Button
+    properties: {role: filled-button, align: center, tooltip: '', border: '', enabled: true,
+      foreground: 'theme:On Primary', visible: true, text: Next, font_size: null,
+      font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+      background: '#0b2547', bold: false, underline: false, icon: 'fa:angle-double-right'}
+    name: button_1
+    layout_properties: {grid_position: 'DJSMRG,TXVVYR'}
+    event_bindings: {click: button_1_click}
 - type: FlowPanel
   properties: {}
   name: navbar_links
