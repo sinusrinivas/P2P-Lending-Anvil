@@ -24,7 +24,7 @@ components:
   - name: content_panel_copy_2
     properties: {}
     type: ColumnPanel
-    layout_properties: {grid_position: 'PVBFCJ,DXAMZP'}
+    layout_properties: {grid_position: 'AWIDNX,RRETOQ'}
     components:
     - name: column_panel_1_copy_2
       properties: {}
@@ -34,8 +34,4 @@ components:
       properties: {}
       type: ColumnPanel
       layout_properties: {grid_position: 'AUMAYT,RRSLXP'}
-      components:
-      - name: column_panel_1_copy_copy
-        properties: {}
-        type: ColumnPanel
-        layout_properties: {grid_position: 'EUQLHV,ZVYOKL'}
+      components: []
