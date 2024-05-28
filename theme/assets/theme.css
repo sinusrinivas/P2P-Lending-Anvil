@@ -403,7 +403,7 @@ color: %color:On Primary Container%;
 
 /* Components: App Bar */
 .app-bar {
-  min-height: 56px;
+  min-height: 65px;
   padding: 0 16px 0 72px;
   position: fixed;
   width: 100%;
@@ -434,7 +434,7 @@ color: %color:On Primary Container%;
 }
 
 .app-bar.scrolled {
-  background: linear-gradient(0deg, %color:Primary Overlay 2%, %color:Primary Overlay 2%), %color:Background%;
+  background: white;
   transition: background 250ms;
   -webkit-transition: background 250ms;
   -moz-transition: background 250ms;
