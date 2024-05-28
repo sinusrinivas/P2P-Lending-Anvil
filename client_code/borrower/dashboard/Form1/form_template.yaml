@@ -259,10 +259,6 @@ components:
       type: Link
       layout_properties: {}
       event_bindings: {click: link_9_click}
-    - name: spacer_11
-      properties: {height: 32}
-      type: Spacer
-      layout_properties: {width: 38}
     - name: logout_1
       properties: {}
       type: form:borrower.logout
