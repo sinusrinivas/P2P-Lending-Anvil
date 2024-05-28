@@ -134,3 +134,7 @@ class dashboard(dashboardTemplate):
   def link_11_click(self, **event_args):
     """This method is called when the link is clicked"""
     open_form('borrower.dashboard.dashboard_report_a_problem')
+
+  def link_12_click(self, **event_args):
+    """This method is called when the link is clicked"""
+    pass
