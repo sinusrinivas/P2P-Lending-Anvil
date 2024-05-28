@@ -306,5 +306,11 @@ class dashboard(dashboardTemplate):
       """This method is called when a mouse button is released on this component"""
       open_form("lendor.dashboard.view_or_send_notifications")
 
+    def label_6_click(self, **event_args):
+      """This method is called when the button is clicked"""
+      open_form('lendor.dashboard.my_returns')
 
+    def image_3_mouse_up(self, x, y, button, **event_args):
+      """This method is called when a mouse button is released on this component"""
+      open_form('lendor.dashboard.my_returns')
 
