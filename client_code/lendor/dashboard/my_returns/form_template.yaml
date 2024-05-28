@@ -24,7 +24,7 @@ components:
   - name: content_panel_copy_2
     properties: {}
     type: ColumnPanel
-    layout_properties: {grid_position: 'AUMAYT,LYDJLX'}
+    layout_properties: {grid_position: 'PVBFCJ,DXAMZP'}
     components:
     - name: column_panel_1_copy_2
       properties: {}
