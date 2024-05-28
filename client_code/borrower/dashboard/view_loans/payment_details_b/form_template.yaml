@@ -138,7 +138,7 @@ components:
       layout_properties: {grid_position: 'MNINQY,BDRCYV'}
       name: label_14
   - type: RepeatingPanel
-    properties: {spacing_above: none, spacing_below: none, item_template: borrower.dashboard1.view_loans.payment_details_b.RowTemplate36}
+    properties: {spacing_above: none, spacing_below: none, item_template: borrower.dashboard.view_loans.payment_details_b.RowTemplate36}
     layout_properties: {grid_position: 'CYYDLZ,UMIDAY', full_width_row: true}
     name: repeating_panel_2
   - type: Spacer
