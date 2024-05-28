@@ -14,7 +14,7 @@ class borrower_foreclosure(borrower_foreclosureTemplate):
     def __init__(self, selected_row, **properties):
         # Set Form properties and Data Bindings.
         self.init_components(**properties)
-        self.label_loan_id.text = f"{selected_row['loan_id']}"
+        # self.label_loan_id.text = f"{selected_row['loan_id']}"
         self.label_name.text = f"{selected_row['borrower_full_name']}"
         self.label_loan_amount.text = f"{selected_row['loan_amount']}"
         self.label_loan_tenure.text = f"{selected_row['tenure']} Months"

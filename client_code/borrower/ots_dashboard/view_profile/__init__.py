@@ -21,7 +21,7 @@ class view_profile(view_profileTemplate):
             if user_profile_data:
                 self.label_34.text = user_profile_data['usertype']
 
-            self.label_2.text = self.loan_data['loan_id']
+            # self.label_2.text = self.loan_data['loan_id']
             self.label_4.text = self.loan_data['borrower_customer_id']
             self.label_6.text = self.loan_data['borrower_full_name']
             self.label_8.text = self.loan_data['loan_status']

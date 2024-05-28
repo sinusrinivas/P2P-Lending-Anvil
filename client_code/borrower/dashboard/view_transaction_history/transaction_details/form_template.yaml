@@ -65,14 +65,6 @@ components:
     properties: {}
     type: Label
     layout_properties: {grid_position: 'UQUUYG,RTSSRA WMWGLC,TIAITM'}
-  - name: label_6
-    properties: {text: Wallet Id}
-    type: Label
-    layout_properties: {grid_position: 'VXFYNI,IDQFIM'}
-  - name: label_7
-    properties: {}
-    type: Label
-    layout_properties: {grid_position: 'VXFYNI,EJIQRG'}
   - name: label_8
     properties: {text: Transaction Type}
     type: Label

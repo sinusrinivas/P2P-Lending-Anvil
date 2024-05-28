@@ -43,7 +43,7 @@ components:
   layout_properties: {grid_position: 'FDIETG,SASOPE'}
 - name: label_7
   properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
-    text: 'Loan Id:', font_size: null, font: '', spacing_above: small, icon_align: left,
+    text: 'Name:', font_size: null, font: '', spacing_above: small, icon_align: left,
     spacing_below: small, italic: false, background: '', bold: true, underline: false,
     icon: ''}
   type: Label
@@ -83,7 +83,7 @@ components:
     underline: false, icon: ''}
   type: Label
   layout_properties: {grid_position: 'FDIETG,BLPAKG RGKZQH,ZHRRRJ'}
-- name: loan_id_label
+- name: name_label
   properties: {}
   type: Label
   layout_properties: {grid_position: 'FDIETG,ZKHZFF PVAQBH,KYICAF'}
