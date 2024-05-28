@@ -97,6 +97,7 @@ components:
       spacing_above: large, vertical_align: bottom}
     type: Image
     layout_properties: {grid_position: 'XJDGCR,FNYWMX'}
+    event_bindings: {mouse_up: image_6_mouse_up}
   - properties: {align: left, foreground: white, visible: true, text: View Loan Requests,
       font_size: 16, spacing_above: large, icon_align: left, spacing_below: large,
       bold: true, icon: ''}
@@ -326,13 +327,15 @@ components:
         type: Image
         layout_properties: {grid_position: 'HVNINY,UKYYYV'}
         name: image_3
-      - properties: {text: My Returns}
+        event_bindings: {mouse_up: image_3_mouse_up}
+      - name: label_6
+        properties: {text: My Returns, align: left, background: white, foreground: black}
+        type: Button
+        layout_properties: {grid_position: 'HVNINY,UPASZV BFGCWY,ADJHYM', full_width_row: true}
+        event_bindings: {click: label_6_click}
+      - properties: {align: left}
         type: Label
-        layout_properties: {grid_position: 'HVNINY,UPASZV OMUQHW,ZECQCD'}
-        name: label_6
-      - properties: {}
-        type: Label
-        layout_properties: {grid_position: 'HVNINY,UPASZV EEYXZV,GWYXLY'}
+        layout_properties: {grid_position: 'HVNINY,UPASZV'}
         name: label_7
     - properties: {role: elevated-card, col_widths: '{"CUOOLO":20,"ZYDTNB":40}'}
       type: ColumnPanel

@@ -20,8 +20,8 @@ components:
     - name: plot_1
       properties: {}
       type: Plot
-      layout_properties: {grid_position: 'TDDTZO,CIGWKG'}
-      event_bindings: {click: plot_1_click}
+      layout_properties: {grid_position: 'TDDTZO,CIGWKG', full_width_row: true}
+      event_bindings: {}
     - name: column_panel_1_copy
       properties: {}
       type: ColumnPanel
