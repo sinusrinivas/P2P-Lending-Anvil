@@ -132,7 +132,7 @@ components:
       type: Label
       layout_properties: {grid_position: 'ZXWMGT,FQYHVG'}
   - type: RepeatingPanel
-    properties: {spacing_above: none, spacing_below: none, item_template: borrower.dashboard1.extension_loan_request.payment_details_extension.RowTemplate39}
+    properties: {spacing_above: none, spacing_below: none, item_template: borrower.dashboard.extension_loan_request.payment_details_extension.RowTemplate39}
     name: repeating_panel_1
     layout_properties: {grid_position: 'OPYPVF,XSEGVJ', full_width_row: true}
   - type: Button

@@ -5,8 +5,8 @@ import anvil.users
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
-from ....bank_users.main_form import main_form_module
-from ....bank_users.user_form import user_form
+from ...bank_users.main_form import main_form_module
+from ...bank_users.user_form import user_form
 
 class dashboard(dashboardTemplate):
   def __init__(self, **properties):
@@ -134,3 +134,7 @@ class dashboard(dashboardTemplate):
   def link_11_click(self, **event_args):
     """This method is called when the link is clicked"""
     open_form('borrower.dashboard.dashboard_report_a_problem')
+
+  def link_12_click(self, **event_args):
+    """This method is called when the link is clicked"""
+    pass
