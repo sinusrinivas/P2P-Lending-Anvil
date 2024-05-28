@@ -79,7 +79,7 @@ components:
       type: Spacer
       layout_properties: {grid_position: 'LOUJDS,QSUOUY'}
     - name: label_6
-      properties: {role: display, text: Welcome to Ascends P2P, foreground: white}
+      properties: {role: display, text: Welcome to Ascend's P2P, foreground: white}
       type: Label
       layout_properties: {grid_position: 'LOUJDS,RTKSOW XFQEHB,XJKBDX'}
     - name: label_1

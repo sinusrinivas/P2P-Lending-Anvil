@@ -386,9 +386,8 @@ components:
       type: Label
       layout_properties: {grid_position: 'SGOEDR,AKMYBP'}
     - name: label_40
-      properties: {text: '✔ Ascends provides fixed-rate loans of up to Rs 3 lakh,
-          allowing for repayment over a period of up to 2 years.', font_size: 18,
-        foreground: white}
+      properties: {text: '✔ Ascend provides fixed-rate loans of up to Rs 3 lakh, allowing
+          for repayment over a period of up to 2 years.', font_size: 18, foreground: white}
       type: Label
       layout_properties: {grid_position: 'MNIJKL,ERDTHU'}
     - name: label_41
@@ -396,7 +395,7 @@ components:
       type: Label
       layout_properties: {grid_position: 'RAQVPR,LBJOOU'}
     - name: label_35
-      properties: {text: '✔  depending on your risk category, the rate of interest
+      properties: {text: '✔  Depending on your risk category, the rate of interest
           charged on loan varies from 14% to 30% p.a. that too on the reducing balance
           method. Put differently, availing a credit card consolidation loan at i2iFunding
           helps you save up to 18% p.a. on interest and allows you a breathing space
@@ -449,7 +448,7 @@ components:
       type: Label
       layout_properties: {grid_position: 'NSZPEZ,IHWRIS'}
     - name: label_45_copy
-      properties: {text: 'You can get credit card consolidation loan at Ascends from
+      properties: {text: 'You can get credit card consolidation loan at Ascend from
           12% to 30% interest rates. It is contingent on your overall credit profile.
 
           ', font_size: 18}
@@ -461,7 +460,7 @@ components:
       type: Label
       layout_properties: {grid_position: 'HKJNAQ,KMDLAL'}
     - name: label_45_copy_copy
-      properties: {text: 'At Ascends, once your credit card consolidation loan request
+      properties: {text: 'At Ascend once your credit card consolidation loan request
           is approved and supported by investors, the loan amount is directly transferred
           to your bank account. Subsequently, you can utilize this amount to clear
           the outstanding balances on your credit cards, according to your preferences
@@ -580,7 +579,7 @@ components:
         components:
         - name: label_4_copy_2
           properties: {role: null, align: left, tooltip: '', border: '', foreground: white,
-            visible: true, text: '© 2023 - 2024, Ascends - All Rights    Reserved',
+            visible: true, text: '© 2023 - 2024, Ascend - All Rights    Reserved',
             font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small,
             italic: false, background: '#05264d', bold: true, underline: false, icon: ''}
           type: Label
