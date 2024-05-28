@@ -1,0 +1,63 @@
+is_package: true
+container:
+  type: HtmlTemplate
+  properties: {html: '@theme:standard-page.html'}
+components:
+- type: ColumnPanel
+  properties: {}
+  name: content_panel
+  layout_properties: {slot: default}
+  components:
+  - name: column_panel_2
+    properties: {}
+    type: ColumnPanel
+    layout_properties: {grid_position: 'QQTWLU,WFFRDJ', full_width_row: true}
+- type: FlowPanel
+  properties: {}
+  name: navbar_links
+  layout_properties: {slot: nav-right}
+- name: column_panel_1
+  properties: {}
+  type: ColumnPanel
+  layout_properties: {slot: left-nav}
+  components:
+  - name: link_1
+    properties: {text: View Loan Requests}
+    type: Link
+    layout_properties: {grid_position: 'IVSPJZ,CGCMKH'}
+  - name: link_2
+    properties: {text: View Loan Extension}
+    type: Link
+    layout_properties: {grid_position: 'KHYFFC,KZXOQH'}
+  - name: link_3
+    properties: {text: View Loan Foreclosure}
+    type: Link
+    layout_properties: {grid_position: 'VREEBW,MZTWLG'}
+  - name: link_4
+    properties: {text: Today's Due}
+    type: Link
+    layout_properties: {grid_position: 'LUOUJT,THQHKK'}
+  - name: link_5
+    properties: {text: View Loans}
+    type: Link
+    layout_properties: {grid_position: 'MVZQCY,AGOEAE'}
+  - name: link_6
+    properties: {text: 'View Lost Opportunities '}
+    type: Link
+    layout_properties: {grid_position: 'VMHQGO,XPSZVU'}
+  - name: link_7
+    properties: {text: Change Password}
+    type: Link
+    layout_properties: {grid_position: 'ITKRMA,TYEGCL'}
+  - name: link_8
+    properties: {text: View Transaction History}
+    type: Link
+    layout_properties: {grid_position: 'PLPJSN,CVKLEM'}
+  - name: link_9
+    properties: {text: View/Edit Profile}
+    type: Link
+    layout_properties: {grid_position: 'PKJUSV,HEVUDX'}
+  - name: link_10
+    properties: {text: View/Send Notifications}
+    type: Link
+    layout_properties: {grid_position: 'NHSQFL,VRYRNY'}
