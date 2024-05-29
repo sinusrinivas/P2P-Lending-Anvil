@@ -34,7 +34,11 @@ class star_1_borrower_registration_form_2_employment_emp_detail_3(star_1_borrowe
       salary_type = self.drop_down_1.selected_value
       user_id = self.userId
       
-  
+
+      if annual_salary.startswith(" "):
+          alert("Annual salarty should not start with space, please enter a valid annual salary")
+          return
+        
       # Check if all fields are filled
       if not (annual_salary and designation and emp_id_proof and last_six_month and salary_type):
           Notification("Please fill in all required fields.").show()
@@ -42,6 +46,9 @@ class star_1_borrower_registration_form_2_employment_emp_detail_3(star_1_borrowe
           anvil.server.call('add_lendor_individual_form_3', annual_salary, designation, emp_id_proof, last_six_month, user_id,salary_type )
           open_form('borrower.borrower_registration_forms.star_1_borrower_registration_form_3_marital', user_id=user_id)
 
+      
+
+  
   def button_1_click(self, **event_args):
     open_form('borrower.borrower_registration_forms.star_1_borrower_registration_form_2_employment.star_1_borrower_registration_form_2_employment_emp_detail_2',user_id=self.userId)
 
