@@ -49,50 +49,46 @@ class Form1(Form1Template):
     # self.column_panel_8.width = '100%'
 
     # Any code you write here will run before the form opens.
-  def load_data(self,status):
-        if status == 'close':
-            closed_loans = app_tables.fin_loan_details.search(loan_updated_status=q.like('close%'), lender_customer_id=self.user_id)
-            self.new_loan =len(closed_loans)
-            self.repeating_panel_1.items = self.process_data(closed_loans)
-        elif status == 'disbursed loan':
-            disbursed_loans = app_tables.fin_loan_details.search(loan_updated_status=q.like('disbursed loan%'), lender_customer_id=self.user_id)
-            self.repeating_panel_1.items = self.process_data(disbursed_loans)
 
-        elif status == 'under process':
-            underprocess_loans = app_tables.fin_loan_details.search(loan_updated_status=q.any_of(q.like('under process%'),q.like('under process')))
-            self.repeating_panel_2.items = self.process_data(underprocess_loans)
-            
-
-        elif status == 'lost opportunities':
-            lost_opportunities = app_tables.fin_loan_details.search(loan_updated_status=q.like('lost opportunities%'), lender_customer_id=self.user_id)
-            self.repeating_panel_1.items = self.process_data(lost_opportunities)
-
-        elif status == 'extension':
-            extension_loans = app_tables.fin_loan_details.search(loan_updated_status=q.like('extension%'), lender_customer_id=self.user_id)
-            self.repeating_panel_1.items = self.process_data(extension_loans)
+  def load_data(self, status):
+    if status == 'close':
+      closed_loans = app_tables.fin_loan_details.search(loan_updated_status=q.like('close%'), lender_customer_id=self.user_id)
+      self.new_loan = len(closed_loans)
+      self.repeating_panel_1.items = self.process_data(closed_loans)
+    elif status == 'disbursed loan':
+      disbursed_loans = app_tables.fin_loan_details.search(loan_updated_status=q.like('disbursed loan%'), lender_customer_id=self.user_id)
+      self.repeating_panel_1.items = self.process_data(disbursed_loans)
+    elif status == 'under process':
+      underprocess_loans = app_tables.fin_loan_details.search(loan_updated_status=q.any_of(q.like('under process%'), q.like('under process')))
+      self.repeating_panel_2.items = self.process_data(underprocess_loans)
+    elif status == 'lost opportunities':
+      lost_opportunities = app_tables.fin_loan_details.search(loan_updated_status=q.like('lost opportunities%'), lender_customer_id=self.user_id)
+      self.repeating_panel_1.items = self.process_data(lost_opportunities)
+    elif status == 'extension':
+      extension_loans = app_tables.fin_loan_details.search(loan_updated_status=q.like('extension%'), lender_customer_id=self.user_id)
+      self.repeating_panel_1.items = self.process_data(extension_loans)
 
   def process_data(self, data):
-        profiles_with_loans = []
-        for loan in data:
-            user_profile = app_tables.fin_user_profile.get(customer_id=loan['borrower_customer_id'])
-            
-            if user_profile is not None:
-                profiles_with_loans.append({
-                    'loan_amount': loan['loan_amount'],
-                    'tenure': loan['tenure'],
-                    'borrower_full_name': loan['borrower_full_name'],
-                    'loan_id': loan['loan_id'],
-                    'bessem_value': user_profile['bessem_value'],
-                    'loan_updated_status': loan['loan_updated_status'],
-                    'interest_rate': loan['interest_rate'],
-                    'borrower_loan_created_timestamp': loan['borrower_loan_created_timestamp'],
-                    'borrower_customer_id': loan['borrower_customer_id'],
-                    'beseem_score': user_profile['bessem_value'],
-                    'credit_limit': loan['credit_limit'],
-                    'product_name': loan['product_name']})
-        return profiles_with_loans
+    profiles_with_loans = []
+    for loan in data:
+      user_profile = app_tables.fin_user_profile.get(customer_id=loan['borrower_customer_id'])
+      if user_profile is not None:
+        profiles_with_loans.append({
+          'loan_amount': loan['loan_amount'],
+          'tenure': loan['tenure'],
+          'borrower_full_name': loan['borrower_full_name'],
+          'loan_id': loan['loan_id'],
+          'bessem_value': user_profile['bessem_value'],
+          'loan_updated_status': loan['loan_updated_status'],
+          'interest_rate': loan['interest_rate'],
+          'borrower_loan_created_timestamp': loan['borrower_loan_created_timestamp'],
+          'borrower_customer_id': loan['borrower_customer_id'],
+          'beseem_score': user_profile['bessem_value'],
+          'credit_limit': loan['credit_limit'],
+          'product_name': loan['product_name']
+        })
+    return profiles_with_loans
 
-  
   def home_main_form_link_click(self, **event_args):
     """This method is called when the link is clicked"""
     open_form('lendor.dashboard')
@@ -112,7 +108,6 @@ class Form1(Form1Template):
   def link_9_click(self, **event_args):
     """This method is called when the link is clicked"""
     open_form("lendor.dashboard.lender_profile")
-    
 
   def link_1_click(self, **event_args):
     """This method is called when the link is clicked"""
@@ -172,3 +167,27 @@ class Form1(Form1Template):
     self.data_grid_new_loan_request.visible = True
     self.repeating_panel_1.visible = True
     self.load_data('disbursed loan')
+
+  def button_3_copy_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    self.data_grid_1.visible = False
+    self.repeating_panel_2.visible = False
+    self.data_grid_new_loan_request.visible = True
+    self.repeating_panel_1.visible = True
+    self.load_data('lost opportunities')
+
+  def button_4_copy_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    self.data_grid_1.visible = False
+    self.repeating_panel_2.visible = False
+    self.data_grid_new_loan_request.visible = True
+    self.repeating_panel_1.visible = True
+    self.load_data('close')
+
+  def button_5_copy_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    self.data_grid_1.visible = False
+    self.repeating_panel_2.visible = False
+    self.data_grid_new_loan_request.visible = True
+    self.repeating_panel_1.visible = True
+    self.load_data('extension')
