@@ -488,6 +488,18 @@ db_schema:
     - name: lender_customer_id
       admin_ui: {width: 200, order: 15}
       type: number
+    - name: lender_full_name
+      admin_ui: {width: 200, order: 16}
+      type: string
+    - name: lender_email_id
+      admin_ui: {width: 200, order: 17}
+      type: string
+    - name: 'status_timestamp '
+      admin_ui: {width: 200, order: 18}
+      type: datetime
+    - name: product_name
+      admin_ui: {width: 200, order: 19}
+      type: string
   fin_admin_ascend_categories:
     client: full
     server: full
@@ -1164,6 +1176,12 @@ db_schema:
       type: string
     - name: lender_customer_id
       admin_ui: {width: 200}
+      type: string
+    - name: 'status_timestamp '
+      admin_ui: {width: 200, order: 20}
+      type: datetime
+    - name: product_name
+      admin_ui: {width: 200, order: 21}
       type: string
     title: fin_extends_loan
   fin_borrower_marrital_status:
