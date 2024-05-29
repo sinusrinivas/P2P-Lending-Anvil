@@ -524,6 +524,7 @@ unique_ids:
     borrower/dashboard/.gitkeep: '1716279048080736696121139.0288'
     bank_users/main_form/about_us/icons8-sorting-arrows-100.png: '1712223437104345206119987.41614'
     bank_users/personal_loan/education_loan/el3.png: '1714043505119585668477269.2882'
+    bank_users/personal_loan/marriage_loan/ml3.png: '1716982803389979023272210.3141'
     bank_users/personal_loan/interest-preview.png: '171291749987594471816462.38567'
     admin/dashboard/manage_cms/self-employed .png: HMNRUYUMBDQQKYGSWV5V37M7V2TLTBBR
     bank_users/main_form/easy_diversification.png: '1711971492167386061159661.37366'
@@ -590,6 +591,7 @@ unique_ids:
     bank_users/main_form/business_loan/.gitkeep: '1715929841876415485076513.2696'
     admin/dashboard/manage-revenue-share.png: LB5YP6KQC2ISYYPXWHUBHSSCFLTJERWQ
     loan-icon-6.jpg: '1715230337813305369836725.1021'
+    bank_users/personal_loan/marriage_loan/ml4.png: '1716982791345699420499296.9971'
     bank_users/main_form/login_page/login-image.webp: '1714030514861461350776375.884'
     bank_users/main_form/laptop_icon.png: '1711685551798386670382732.40204'
     bank_users/personal_loan/how_it_works/get amount.png: '1713344741139713966096203.6858'
@@ -666,12 +668,14 @@ unique_ids:
     admin/dashboard/manage_cms/choose-role1.png: URA3O6T2WCDWKEDSYW5P46KTDCP3OBMK
     bank_users/main_form/about_us/credit-risk-assesment.png: '171220964259413899497656.246096'
     bank_users/personal_loan/education_loan/el_benifits3.png: '1714131918278897036560733.772'
+    bank_users/personal_loan/marriage_loan/ml2.png: '1716982817358675817691203.8005'
     bank_users/personal_loan/education_loan/EL-Prerequisites1.png: '1714132022958489684769761.1333'
     bank_users/personal_loan/education_loan/el_benifits1.png: '1714131897526497600837714.9874'
     bank_users/main_form/ customer review 1.png: '1708336519517309719494368.74225'
     admin/dashboard/manage_products/.gitkeep: WGT6OWEAD7VLWK33LVXGOFM5SNBPYHGQ
     bank_users/personal_loan/money-lenders.png: '1716536289980407018916236.23364'
     bank_users/main_form/vehicle_loan/application_process6.png: '1712897025082357081707040.6491'
+    bank_users/personal_loan/marriage_loan/ml1.png: '1716982841660765475573068.2274'
     admin/dashboard/manage-admins.png: YX7HKJ37RPQC4IRMZ2LIKWRENAVDPVYZ
     bank_users/personal_loan/profile-evaluation.png: '1716536720141990936194421.7559'
     bank_users/main_form/main.png: '1711624157660893221707804.2021'
