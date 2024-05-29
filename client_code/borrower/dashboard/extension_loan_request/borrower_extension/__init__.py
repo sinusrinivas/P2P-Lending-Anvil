@@ -18,7 +18,7 @@ class borrower_extension(borrower_extensionTemplate):
 
         # Any code you write here will run before the form opens.
         self.selected_row = selected_row
-        self.label_loan_id.text = f"{selected_row['loan_id']}"
+        # self.label_loan_id.text = f"{selected_row['loan_id']}"
         self.label_name.text = f"{selected_row['borrower_full_name']}"
         self.label_loan_amount.text = f"{selected_row['loan_amount']}"
         self.label_loan_tenure.text = f"{selected_row['tenure']} Months"

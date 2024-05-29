@@ -39,13 +39,6 @@ components:
       properties: {height: 350.50001525878906}
       type: Spacer
       layout_properties: {grid_position: 'NSFBBW,MUKVFA'}
-    - name: label_2
-      properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-        visible: true, text: 'Loan Id :', font_size: null, font: '', spacing_above: small,
-        icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-        underline: false, icon: ''}
-      type: Label
-      layout_properties: {grid_position: 'NSFBBW,IKTOGX OQLDLW,NSWXRL'}
     - name: label_4
       properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
         visible: true, text: 'Name :', font_size: null, font: '', spacing_above: small,
@@ -95,13 +88,6 @@ components:
         underline: false, icon: ''}
       type: Label
       layout_properties: {grid_position: 'NSFBBW,IKTOGX PUKXRL,ATGQCU'}
-    - name: label_loan_id
-      properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-        visible: true, text: '', font_size: null, font: '', spacing_above: small,
-        icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-        underline: false, icon: ''}
-      type: Label
-      layout_properties: {grid_position: 'NSFBBW,FBKSUO VAFKQU,MQJKBZ'}
     - name: label_name
       properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
         visible: true, text: '', font_size: null, font: '', spacing_above: small,
@@ -217,16 +203,30 @@ components:
       font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
       background: '#0b2547', bold: true, underline: false, icon: 'fa:angle-double-left'}
     type: Button
-    layout_properties: {grid_position: 'MWLAGS,YPXXLN'}
+    layout_properties: {grid_position: 'MWLAGS,YPXXLN EEFQRD,JUFINS'}
     event_bindings: {click: again_back_click}
+  - name: label_2
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: false, text: 'Loan Id :', font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+      underline: false, icon: ''}
+    type: Label
+    layout_properties: {grid_position: 'MWLAGS,YPXXLN MQVGJJ,BEGNKC'}
   - name: foreclose_again
     properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
       foreground: 'theme:On Primary', visible: false, text: FORECLOSE AGAIN, font_size: null,
       font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
       background: '#0b2547', bold: true, underline: false, icon: ''}
     type: Button
-    layout_properties: {grid_position: 'MWLAGS,AZVKKM'}
+    layout_properties: {grid_position: 'MWLAGS,AZVKKM DJGWBB,DOJDSD'}
     event_bindings: {click: foreclose_again_click}
+  - name: label_loan_id
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: false, text: '', font_size: null, font: '', spacing_above: small, icon_align: left,
+      spacing_below: small, italic: false, background: '', bold: true, underline: false,
+      icon: ''}
+    type: Label
+    layout_properties: {grid_position: 'MWLAGS,AZVKKM XCEAZI,RPSGRD'}
 - type: FlowPanel
   properties: {}
   name: navbar_links

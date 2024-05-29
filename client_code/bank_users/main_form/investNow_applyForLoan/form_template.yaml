@@ -59,12 +59,10 @@ components:
       type: Label
       layout_properties: {grid_position: 'SVZYRK,TPIZXM'}
   - name: label_2
-    properties: {text: '
-
-        "Invest Now" allows users to fund loans directly on our P2P lending platform.
-        Users can browse loan listings, choose a loan to invest in, and provide funds
-        to borrowers. This feature enables users to earn returns on their investments
-        by collecting interest payments from borrowers over time
+    properties: {text: '"Invest Now" allows users to fund loans directly on our P2P
+        lending platform. Users can browse loan listings, choose a loan to invest
+        in, and provide funds to borrowers. This feature enables users to earn returns
+        on their investments by collecting interest payments from borrowers over time
 
         ', align: left, font_size: 18}
     type: Label
@@ -74,13 +72,11 @@ components:
     type: Label
     layout_properties: {grid_position: 'TCUZCG,AWNWSZ'}
   - name: label_4
-    properties: {text: '
-
-        Apply for Loan" allows borrowers to request financing directly from our platform.
-        They submit loan applications with details like loan amount and purpose. Once
-        approved, the loan becomes available for investors to fund. This feature streamlines
-        the borrowing process and connects borrowers with potential lenders on our
-        platform.', font_size: 18, align: left}
+    properties: {text: 'Apply for Loan" allows borrowers to request financing directly
+        from our platform. They submit loan applications with details like loan amount
+        and purpose. Once approved, the loan becomes available for investors to fund.
+        This feature streamlines the borrowing process and connects borrowers with
+        potential lenders on our platform.', font_size: 18, align: left}
     type: Label
     layout_properties: {grid_position: 'YCSGYQ,WBJGJA'}
 - type: FlowPanel
