@@ -159,4 +159,16 @@ class Form1(Form1Template):
 
   def button_1_copy_click(self, **event_args):
     """This method is called when the button is clicked"""
-    pass
+    self.data_grid_new_loan_request.visible = False
+    self.repeating_panel_1.visible = False
+    self.data_grid_1.visible = True
+    self.repeating_panel_2.visible = True
+    self.load_data('under process')
+
+  def button_2_copy_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    self.data_grid_1.visible = False
+    self.repeating_panel_2.visible = False
+    self.data_grid_new_loan_request.visible = True
+    self.repeating_panel_1.visible = True
+    self.load_data('disbursed loan')
