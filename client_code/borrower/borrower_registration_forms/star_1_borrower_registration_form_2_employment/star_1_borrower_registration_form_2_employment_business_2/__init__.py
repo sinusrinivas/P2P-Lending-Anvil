@@ -7,7 +7,7 @@ import anvil.users
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
-from datetime import datetime
+from datetime import datetime, date
 
 class star_1_borrower_registration_form_2_employment_business_2(star_1_borrower_registration_form_2_employment_business_2Template):
   def __init__(self, user_id, **properties):
@@ -32,17 +32,23 @@ class star_1_borrower_registration_form_2_employment_business_2(star_1_borrower_
     user_id = self.userId
     
     # Get today's date
-    today = datetime.today()
+    today = date.today()
     
     # Check if the selected date is in the future
-    if year and year > today:
+    if year and year.year > today.year:
+      alert("The year cannot be in the future. Please select a valid year.", title="Invalid Year")
+      return
+    elif year and year.year == today.year and year.month > today.month:
+      alert("The month cannot be in the future. Please select a valid month.", title="Invalid Month")
+      return
+    elif year and year.year == today.year and year.month == today.month and year.day > today.day:
       alert("The date cannot be in the future. Please select a valid date.", title="Invalid Date")
       return
 
     if not year or not industry_type or not turn_over or not last_six_statements:
       alert("Please fill all the fields", title="Missing Information")
     else:
-      months = today.year * 12 + today.month - year.year * 12 - year.month
+      months = (datetime.now().year - year.year) * 12 + (datetime.now().month - year.month)
       anvil.server.call('add_lendor_institutional_form_2', year, months, industry_type, turn_over, last_six_statements, user_id)
       open_form('borrower.borrower_registration_forms.star_1_borrower_registration_form_2_employment.star_1_borrower_registration_form_2_employment_business_3', user_id=user_id)
 
