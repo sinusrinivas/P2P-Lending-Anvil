@@ -17,7 +17,7 @@ components:
   type: Label
   layout_properties: {column: SVPJYH}
   data_bindings:
-  - {code: 'self.item[''bessem_value'']', writeback: false, property: text}
+  - {property: text, code: 'self.item[''ascend_value'']', writeback: false}
   name: label_4
 - properties: {align: center}
   type: Label
