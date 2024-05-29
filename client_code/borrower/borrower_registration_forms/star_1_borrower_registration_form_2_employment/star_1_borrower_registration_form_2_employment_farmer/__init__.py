@@ -14,10 +14,10 @@ class star_1_borrower_registration_form_2_employment_farmer(star_1_borrower_regi
         self.userId = user_id
         user_data = app_tables.fin_user_profile.get(customer_id=user_id)
         if user_data:
-            self.drop_down_1.selected_value = user_data['land_type']
-            self.text_box_1.text = str(user_data['total_acres'])  # Convert to string
-            self.text_box_2.text = user_data['crop_name']
-            self.text_box_3.text = user_data['farmer_earnings']
+            self.drop_down_1.selected_value = user_data.get('land_type', "")
+            self.text_box_1.text = str(user_data.get('total_acres', ""))  # Convert to string and handle None
+            self.text_box_2.text = user_data.get('crop_name', "")
+            self.text_box_3.text = user_data.get('farmer_earnings', "")
 
             options_2 = app_tables.fin_borrower_land_type.search()
             option_strings_2 = [str(option['land_type']) for option in options_2]
@@ -33,12 +33,23 @@ class star_1_borrower_registration_form_2_employment_farmer(star_1_borrower_regi
         crop_name = self.text_box_2.text
         farmer_earnings = self.text_box_3.text
         user_id = self.userId
-        if not re.match(r'^[A-Za-z\s]+$', crop_name):
-          alert('Enter valid crop name')
+        
+        # Validate inputs
+        if crop_name.startswith(" "):
+            alert('Crop name should not start with a space. Please enter a valid crop name.')
+            return
+        elif total_acres.startswith(" "):
+            alert('Total acres should not start with a space. Please enter a valid total acres.')
+            return
+        elif farmer_earnings.startswith(" "):
+            alert('Farmer earnings should not start with a space. Please enter a valid farmer earnings.')
+            return
+        elif not re.match(r'^[A-Za-z\s]+$', crop_name):
+            alert('Enter a valid crop name.')
         elif not total_acres.isdigit():
-          Notification("Acres of Land should be valid").show()
+            Notification("Acres of Land should be valid").show()
         elif not farmer_earnings.isdigit():
-           Notification("Yearly Income should be valid").show()
+            Notification("Yearly Income should be valid").show()
         elif not land_type or not total_acres or not crop_name or not farmer_earnings:
             Notification("Please fill all the fields").show()
         else:
@@ -51,3 +62,13 @@ class star_1_borrower_registration_form_2_employment_farmer(star_1_borrower_regi
 
     def button_3_click(self, **event_args):
         open_form("bank_users.user_form")
+
+    def file_loader_1_change(self, file, **event_args):
+        """This method is called when a new file is loaded into this FileLoader"""
+        if file:
+            self.image_1.source = self.file_loader_1.file
+
+    def file_loader_2_change(self, file, **event_args):
+        """This method is called when a new file is loaded into this FileLoader"""
+        if file:
+            self.image_2.source = self.file_loader_2.file
