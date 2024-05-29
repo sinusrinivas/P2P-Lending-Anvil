@@ -60,14 +60,16 @@ class lender_registration_individual_form_3(lender_registration_individual_form_
       
       # Validation: Check if any of the required fields is empty
       if not annual_salary or not designation or not emp_id_proof or not last_six_month or not salary_type:
-          Notification("Please fill all the required fields").show()
+        Notification("Please fill all the required fields").show()
+      elif ' ' in annual_salary:
+        Notification("Annual Salary should not contain spaces").show()  
       else:
-          # Validation: Check if the uploaded files are not empty
-          if not emp_id_proof or not last_six_month:
-              Notification("Please upload all required documents").show()
-          else:
-              anvil.server.call('add_lendor_individual_form_3', annual_salary, designation, emp_id_proof, last_six_month, user_id, salary_type)
-              open_form('lendor.lendor_registration_forms.lender_registration_form_3_marital_details', user_id=self.userId)
+        # Validation: Check if the uploaded files are not empty
+        if not emp_id_proof or not last_six_month:
+          Notification("Please upload all required documents").show()
+        else:
+          anvil.server.call('add_lendor_individual_form_3', annual_salary, designation, emp_id_proof, last_six_month, user_id, salary_type)
+          open_form('lendor.lendor_registration_forms.lender_registration_form_3_marital_details', user_id=self.userId)
   def button_3_click(self, **event_args):
     open_form("bank_users.user_form")
 

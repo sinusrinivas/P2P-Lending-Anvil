@@ -58,6 +58,8 @@ class lender_registration_Institutional_form_2(lender_registration_Institutional
     
     if not year or not industry_type or not turn_over or not last_six_statements:
       Notification("Please fill all the fields").show()
+    elif ' ' in turn_over:
+      Notification("Turn Over should not contain spaces").show()  
     else:
       today = datetime.today()
       if year > today.date():
