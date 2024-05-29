@@ -66,3 +66,11 @@ class my_returns(my_returnsTemplate):
 
     # Debugging: Check if the plot is assigned correctly
     print(f"Assigned figure to plot_1: {self.plot_1.data}")
+
+  def button_1_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    open_form('lendor.dashboard')
+
+  def plot_1_click(self, points, **event_args):
+    """This method is called when a data point is clicked."""
+    self.create_bar_chart()
