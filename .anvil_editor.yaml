@@ -457,6 +457,7 @@ unique_ids:
     bank_users/personal_loan/debt_consolidation_loan/.gitkeep: '1715930074425195366075162.74863'
     bank_users/personal_loan/online-prsnl-process-icon1.png: '171274865291374898641856.82738'
     bank_users/personal_loan/medical_loan/.gitkeep: '171593011778866831156652.6747'
+    bank_users/personal_loan/home_renovation_loan/wall.png: '1716977951450159227287968.56677'
     bank_users/main_form/business_loan/Office-equipment.png: '1712296865172584464655789.9768'
     bank_users/main_form/comunity.svg: '1712231946149404997536751.5215'
     bank_users/personal_loan/home_renovation_loan/home renovation.png: '1713331821371942896792005.2495'
@@ -486,7 +487,6 @@ unique_ids:
     bank_users/personal_loan/education_loan/el5.png: '1714043528103272267993261.8495'
     admin/dashboard/manage_cms/employee-type.png: GRZLR4FJQOJOW5D7SPE2HRXJYREHOFZ3
     bank_users/personal_loan/debt_consolidation_loan/debt consoidation.png: '1713331759982640710281843.7773'
-    bank_users/personal_loan/home_renovation_loan/hm4.png: '1713939928580345009782378.44037'
     admin/dashboard/manage_cms/account-type_2.png: AR5MZKB7GIBPHUSHANC5NR6AKDYJRPQ4
     bank_users/personal_loan/how_it_works/creaeate-account.png: '1713344703989362782560832.99866'
     admin/dashboard/loan_management/open-loans.png: '1716461553603469675191763.20294'
@@ -525,7 +525,6 @@ unique_ids:
     borrower/dashboard/loan-extension.png: '1716813914800471058883096.9624'
     borrower/dashboard/.gitkeep: '1716279048080736696121139.0288'
     bank_users/main_form/about_us/icons8-sorting-arrows-100.png: '1712223437104345206119987.41614'
-    bank_users/personal_loan/home_renovation_loan/hm1.png: '171393988902634988042578.47476'
     bank_users/personal_loan/education_loan/el3.png: '1714043505119585668477269.2882'
     bank_users/personal_loan/marriage_loan/ml3.png: '1713339816792572035302085.9706'
     bank_users/personal_loan/interest-preview.png: '171291749987594471816462.38567'
@@ -560,7 +559,6 @@ unique_ids:
     admin/dashboard/manage_cms/.gitkeep: O5ODCAZ3GJUXRX3TZYNSWRQEL6S3NLCA
     admin/dashboard/loan_management/lapsed-loans.png: '1716462393193726519058525.8013'
     bank_users/personal_loan/education_loan/education-loan-main.png: '1714044409579837401469162.1505'
-    bank_users/personal_loan/home_renovation_loan/hm2.png: '1713939904750741669506611.7522'
     admin/dashboard/loan_management/rejected-loan.png: '1716459847060376205175777.48956'
     bank_users/personal_loan/travel_loan/travel_loan2.png: '1713506586441441090614383.27734'
     admin/dashboard/loan_management/approved-loan.png: '1716459554417660183352487.7041'
@@ -598,9 +596,9 @@ unique_ids:
     bank_users/main_form/laptop_icon.png: '1711685551798386670382732.40204'
     bank_users/personal_loan/how_it_works/get amount.png: '1713344741139713966096203.6858'
     admin/dashboard/manage_ascend_score/vehicle-loan.png: 3CGDSVRILC3EXN3BKQOXOSVLNMSGTGOD
-    bank_users/personal_loan/home_renovation_loan/hm3.png: '1713939918996216828287885.85895'
     bank_users/personal_loan/digital-revolution.png: '1716536694687263160437197.04794'
     borrower/dashboard/ new loan request.png: '1716813544118489005520199.7015'
+    bank_users/personal_loan/home_renovation_loan/house-with-one-frontal-window.png: '1716977974447632048773693.9388'
     kotak.png: '1699332885238145537031245.1496'
     bank_users/personal_loan/travel_loan/travel_loan4.png: '1713507191162190706654517.28662'
     admin/dashboard/manage-settings.png: BTVB4SL3CUDGF24V6CXTN4CRTSBIKOK4
@@ -621,10 +619,12 @@ unique_ids:
     bank_users/user_form/Screenshot 2023-11-26 151804.png: '1700992268058634985056423.6241'
     pic3.webp: '1711534194525278677947107.07526'
     bank_users/personal_loan/loan listing.png: '1712919750982834990289511.2853'
+    bank_users/personal_loan/home_renovation_loan/collateral-free.png: '1716977793130761679046101.1473'
     loan pre.png: '1712901472396198771007766.29718'
     admin/dashboard/manage_cms/qualification1.png: JEBDVIXF5IC3TVXREA33YZBIJAOJRDE2
     bank_users/main_form/monthly_cashflow.png: '1711696464420955121532728.395'
     bank_users/personal_loan/credit_card_loan/credit card loan.png: '1713850238587452173531541.9086'
+    bank_users/personal_loan/home_renovation_loan/repair-tools-cross.png: '1716977908405604701667173.2119'
     p2p (3).png: '1715162252700862474179030.6436'
     bank_users/personal_loan/medical_loan/medical loan_2.png: '1716266624599194936901805.50894'
     admin/dashboard/manage-lenders.png: R7M7LA3AVH63NEHK3HUV6SYY7AXKL56U
@@ -763,7 +763,6 @@ unique_ids:
     bank_users/main_form/business_loan/business_loan_eligibility.jpg: '1712570144615137088612855.17049'
     admin/dashboard/loan_management/under-process.png: '1716529940233658397128003.2078'
     admin/dashboard/performance_tracker/rejected-applications.png: '1716531020279952700515919.4996'
-    bank_users/personal_loan/home_renovation_loan/hand-shake.png: '1716977793130761679046101.1473'
     bank_users/personal_loan/funding of loan.png: '1712920651850992879320942.7269'
     bank_users/main_form/business_loan/checkablity.jpg: '1712570763083136290886491.20247'
     borrower/.gitkeep: '1716279022834697001340956.5668'
