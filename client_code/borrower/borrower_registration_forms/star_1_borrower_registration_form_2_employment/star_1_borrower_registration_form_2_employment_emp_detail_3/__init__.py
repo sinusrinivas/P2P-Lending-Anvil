@@ -36,7 +36,7 @@ class star_1_borrower_registration_form_2_employment_emp_detail_3(star_1_borrowe
       
 
       if annual_salary.startswith(" "):
-          alert("Annual salarty should not start with space, please enter a valid annual salary")
+          alert("Annual salary should not start with space, please enter a valid annual salary")
           return
         
       # Check if all fields are filled
