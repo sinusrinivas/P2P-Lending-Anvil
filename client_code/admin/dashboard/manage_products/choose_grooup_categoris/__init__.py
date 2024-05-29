@@ -31,7 +31,7 @@ class choose_grooup_categoris(choose_grooup_categorisTemplate):
 
   def image_4_copy_mouse_up(self, x, y, button, **event_args):
     """This method is called when a mouse button is released on this component"""
-    pen_form('admin.dashboard.manage_products.add_group')
+    open_form('admin.dashboard.manage_products.add_group')
 
   def image_4_copy_10_mouse_up(self, x, y, button, **event_args):
     """This method is called when a mouse button is released on this component"""

@@ -831,7 +831,7 @@ components:
       layout_properties: {grid_position: 'DFARFI,DFEMVZ'}
     - name: image_19
       properties: {source: _/theme/bank_users/personal_loan/education_loan/el_benifits1.png,
-        display_mode: shrink_to_fit, background: 'theme:Primary', height: '100'}
+        display_mode: shrink_to_fit, background: '#0b2547', height: '100'}
       type: Image
       layout_properties: {grid_position: 'NUSJFG,BACOJQ'}
     - name: label_45
@@ -855,7 +855,7 @@ components:
       layout_properties: {grid_position: 'NSOAVV,PHWKJW'}
     - name: image_20
       properties: {source: _/theme/bank_users/personal_loan/education_loan/el_benifits2.png,
-        display_mode: shrink_to_fit, background: 'theme:Primary', height: '100'}
+        display_mode: shrink_to_fit, background: '#0b2547', height: '100'}
       type: Image
       layout_properties: {grid_position: 'NSOAVV,BFXPOI'}
     - name: spacer_35
@@ -864,7 +864,7 @@ components:
       layout_properties: {grid_position: 'UDCSJJ,NJPAND'}
     - name: image_21
       properties: {display_mode: shrink_to_fit, source: _/theme/bank_users/personal_loan/education_loan/el_benifits3.png,
-        background: 'theme:Primary', height: '100'}
+        background: '#0b2547', height: '100'}
       type: Image
       layout_properties: {grid_position: 'AYNVGK,NVYYIU'}
     - name: label_45_copy_copy
@@ -894,12 +894,12 @@ components:
       layout_properties: {grid_position: 'JNWZSX,ISUVYU LQGHJV,JQVJTN'}
     - name: image_22
       properties: {source: _/theme/bank_users/personal_loan/education_loan/el_benifits4.png,
-        display_mode: shrink_to_fit, background: 'theme:Primary', height: '100'}
+        display_mode: shrink_to_fit, background: '#0b2547', height: '100'}
       type: Image
       layout_properties: {grid_position: 'JNWZSX,OTJFUF'}
     - name: image_23
       properties: {source: _/theme/bank_users/personal_loan/education_loan/el_benifits5.png,
-        display_mode: shrink_to_fit, background: 'theme:Primary', height: '100'}
+        display_mode: shrink_to_fit, background: '#0b2547', height: '100'}
       type: Image
       layout_properties: {grid_position: 'RZLCFU,ACMUHW'}
     - name: label_45_copy_copy_2_copy_2
