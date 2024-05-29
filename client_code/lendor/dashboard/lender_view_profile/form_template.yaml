@@ -522,7 +522,7 @@ components:
         type: Spacer
         layout_properties: {grid_position: 'NQDUFW,KLESAL UTGDVH,IMNUVQ'}
       - name: edit_business_details_button
-        properties: {text: edit, background: '#0b2547', align: right, foreground: 'theme:On
+        properties: {text: E, background: '#0b2547', align: right, foreground: 'theme:On
             Primary'}
         type: Button
         layout_properties: {grid_position: 'FEQCWG,TPCPSD'}
@@ -586,7 +586,7 @@ components:
         type: TextBox
         layout_properties: {grid_position: 'NQDUFW,KLESAL DDRTFJ,SAQKJQ'}
       - name: edit_land_farming_details_button
-        properties: {text: edit, background: '#0b2547', align: right, foreground: 'theme:On
+        properties: {text: Edit Details, background: '#0b2547', align: right, foreground: 'theme:On
             Primary'}
         type: Button
         layout_properties: {grid_position: 'AURCIS,MFXVGA'}
@@ -732,7 +732,7 @@ components:
         type: Spacer
         layout_properties: {grid_position: 'NQDUFW,KLESAL UHAUTE,XYEZYU'}
       - name: edit_company_employment_details_button
-        properties: {text: edit, background: '#0b2547', align: right, foreground: 'theme:On
+        properties: {text: Edit Details, background: '#0b2547', align: right, foreground: 'theme:On
             Primary'}
         type: Button
         layout_properties: {grid_position: 'KROHZI,EGPGPA'}
