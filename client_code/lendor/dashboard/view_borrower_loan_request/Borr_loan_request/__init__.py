@@ -367,7 +367,7 @@ class Borr_loan_request(Borr_loan_requestTemplate):
         self.label_name.text = f"{selected_row['borrower_full_name']}"
         self.label_loan_amount_applied.text = f"{selected_row['loan_amount']}"
         self.label_10.text = f"{selected_row['loan_id']}"
-        self.label_beseem_score.text = f"{selected_row['beseem_score']}"
+        self.label_beseem_score.text = f"{selected_row['ascend_score']}"
         self.label_loan_tenure.text = f"{selected_row['tenure']}"
         self.label_credit_limit.text = f"{selected_row['credit_limit']}"
         self.label_interest_rate.text = f"{selected_row['interest_rate']}"

@@ -29,7 +29,7 @@ components:
   type: Label
   layout_properties: {column: RFMHCZ}
   data_bindings:
-  - {property: text, code: 'self.item[''bessem_value'']', writeback: false}
+  - {property: text, code: 'self.item[''ascend_value'']', writeback: false}
 - name: label_6
   properties: {align: center}
   type: Label
