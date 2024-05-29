@@ -78,12 +78,12 @@ class dashboard(dashboardTemplate):
           'tenure': loan['tenure'],
           'borrower_full_name': loan['borrower_full_name'],
           'loan_id': loan['loan_id'],
-          'bessem_value': user_profile['bessem_value'],
+          'ascend_value': user_profile['ascend_value'],
           'loan_updated_status': loan['loan_updated_status'],
           'interest_rate': loan['interest_rate'],
           'borrower_loan_created_timestamp': loan['borrower_loan_created_timestamp'],
           'borrower_customer_id': loan['borrower_customer_id'],
-          'beseem_score': user_profile['bessem_value'],
+          'ascend_score': user_profile['ascend_value'],
           'credit_limit': loan['credit_limit'],
           'product_name': loan['product_name']
         })
@@ -191,3 +191,7 @@ class dashboard(dashboardTemplate):
     self.data_grid_new_loan_request.visible = True
     self.repeating_panel_1.visible = True
     self.load_data('extension')
+
+  def label_6_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    open_form('lendor.dashboard.my_returns')
