@@ -156,3 +156,7 @@ class Form1(Form1Template):
   def link_10_click(self, **event_args):
     """This method is called when the link is clicked"""
     open_form("lendor.dashboard.view_or_send_notifications")
+
+  def button_1_copy_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    pass
