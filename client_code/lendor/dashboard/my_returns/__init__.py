@@ -100,7 +100,7 @@ class my_returns(my_returnsTemplate):
       title='Investment and Returns for User',
       xaxis=dict(title='Category'),
       yaxis=dict(title='Amount'),
-      barmode='group'  # Use group mode to display bars side by side
+      barmode=''  # Use group mode to display bars side by side
     )
 
     # Create a figure
@@ -120,6 +120,6 @@ class my_returns(my_returnsTemplate):
     """This method is called when the button is clicked"""
     open_form('lendor.dashboard')
 
-  def plot_1_click(self, points, **event_args):
-    """This method is called when a data point is clicked."""
-    self.create_bar_chart()
+  # def plot_1_click(self, points, **event_args):
+  #   """This method is called when a data point is clicked."""
+  #   self.create_bar_chart()
