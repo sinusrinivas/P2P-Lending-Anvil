@@ -1,14 +1,3 @@
-from ._anvil_designer import star_1_borrower_registration_form_2_employment_business_2Template
-from anvil import *
-import anvil.server
-import anvil.google.auth, anvil.google.drive
-from anvil.google.drive import app_files
-import anvil.users
-import anvil.tables as tables
-import anvil.tables.query as q
-from anvil.tables import app_tables
-from datetime import datetime, date
-
 class star_1_borrower_registration_form_2_employment_business_2(star_1_borrower_registration_form_2_employment_business_2Template):
   def __init__(self, user_id, **properties):
     self.userId = user_id
@@ -33,7 +22,7 @@ class star_1_borrower_registration_form_2_employment_business_2(star_1_borrower_
     # Get today's date
     today = date.today()
     
-    
+    # Validate the date
     if year and year.year > today.year:
       alert("The year cannot be in the future. Please select a valid year.", title="Invalid Year")
       return
@@ -44,12 +33,24 @@ class star_1_borrower_registration_form_2_employment_business_2(star_1_borrower_
       alert("The date cannot be in the future. Please select a valid date.", title="Invalid Date")
       return
 
+    # Validate required fields
     if not year or not industry_type or not turn_over or not last_six_statements:
       alert("Please fill all the fields", title="Missing Information")
-    else:
-      months = (datetime.now().year - year.year) * 12 + (datetime.now().month - year.month)
-      anvil.server.call('add_lendor_institutional_form_2', year, months, industry_type, turn_over, last_six_statements, user_id)
-      open_form('borrower.borrower_registration_forms.star_1_borrower_registration_form_2_employment.star_1_borrower_registration_form_2_employment_business_3', user_id=user_id)
+      return
+    
+    # Validate turnover input
+    if turn_over.startswith(" "):
+      alert("Six month turnover should not start with a space. Please enter a valid turnover.", title="Invalid Turnover")
+      return
+    
+    # Calculate the number of months since the establishment date
+    months = (datetime.now().year - year.year) * 12 + (datetime.now().month - year.month)
+    
+    # Call server function
+    anvil.server.call('add_lendor_institutional_form_2', year, months, industry_type, turn_over, last_six_statements, user_id)
+    
+    # Open the next form
+    open_form('borrower.borrower_registration_forms.star_1_borrower_registration_form_2_employment.star_1_borrower_registration_form_2_employment_business_3', user_id=user_id)
 
   def button_1_click(self, **event_args):
     user_id = self.userId
