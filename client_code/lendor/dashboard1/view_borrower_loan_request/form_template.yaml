@@ -3,15 +3,17 @@ container:
   type: HtmlTemplate
   properties: {html: '@theme:standard-page.html'}
 components:
+- type: FlowPanel
+  properties: {}
+  layout_properties: {slot: nav-right}
+  name: navbar_links
 - type: ColumnPanel
   properties: {col_widths: '{}'}
   layout_properties: {slot: default}
   name: content_panel
   components:
   - type: ColumnPanel
-    properties: {role: null, tooltip: '', border: '', foreground: '', visible: true,
-      wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
-      spacing_below: small, background: ''}
+    properties: {col_widths: '{}'}
     layout_properties: {grid_position: 'LRGVLZ,YDSHFK', full_width_row: true}
     name: column_panel_1
     components:
@@ -27,175 +29,62 @@ components:
       name: image_1_copy
     - type: form:borrower.logout
       properties: {}
-      layout_properties: {grid_position: 'SRJHKV,FCJZQL', full_width_row: true}
+      layout_properties: {grid_position: 'SRJHKV,TKIBTN', full_width_row: true}
       name: logout_1
   - type: form:lendor.navigation_bar.Navigation_bar_lender_dashbord
     properties: {}
-    layout_properties: {grid_position: 'ZTLMWI,ETMKRJ', full_width_row: true}
+    layout_properties: {grid_position: 'UIECVG,RUNXWZ', full_width_row: true}
     name: navigation_bar_lender_dashbord_1
   - type: Button
     properties: {role: filled-button, align: right, tooltip: '', border: '', enabled: true,
       foreground: 'theme:On Primary', visible: true, text: Back, font_size: 15, font: '',
       spacing_above: small, icon_align: left, spacing_below: small, italic: false,
       background: '#0b2547', bold: false, underline: false, icon: 'fa:angle-double-left'}
-    layout_properties: {grid_position: 'SIYIWA,PILWXC', full_width_row: true}
+    layout_properties: {grid_position: 'RTPPIT,CGCKJL', full_width_row: true}
     event_bindings: {click: button_1_click}
     name: button_1
-  - properties: {role: outlined-card, tooltip: '', border: '', foreground: '', visible: true,
-      wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
-      spacing_below: small, background: '#0b2547'}
-    type: ColumnPanel
-    layout_properties: {grid_position: 'JICCEY,ZDTBDG'}
-    name: outlined_card_1_copy
-    components:
-    - type: Button
-      properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
-        foreground: 'theme:On Primary', visible: true, text: Approved, font_size: null,
-        font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
-        background: '', bold: false, underline: false, icon: ''}
-      layout_properties: {grid_position: 'QWVOIW,EVANHD'}
-      event_bindings: {click: button_3_click}
-      name: button_3
-    - properties: {role: null, align: center, tooltip: '', border: '', foreground: 'theme:On
-          Primary', visible: true, text: '', font_size: null, font: '', spacing_above: small,
-        icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
-        underline: false, icon: ''}
-      type: Label
-      layout_properties: {grid_position: 'NZNCOP,SKGMZB'}
-      name: label_5
-  - properties: {role: outlined-card, tooltip: '', border: '', foreground: '', visible: true,
-      wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
-      spacing_below: small, background: '#0b2547'}
-    type: ColumnPanel
-    layout_properties:
-      col_widths: {}
-      grid_position: JICCEY,QDTKXN
-    name: outlined_card_2
-    components:
-    - properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
-        foreground: 'theme:On Primary', visible: true, text: Rejected, font_size: null,
-        font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
-        background: '', bold: false, underline: false, icon: ''}
-      type: Button
-      layout_properties: {grid_position: 'FNHLVB,HDEYKB'}
-      event_bindings: {click: button_2_click}
-      name: button_2
-    - properties: {role: null, align: center, tooltip: '', border: '', foreground: 'theme:On
-          Primary', visible: true, text: '', font_size: null, font: '', spacing_above: small,
-        icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
-        underline: false, icon: ''}
-      type: Label
-      layout_properties: {grid_position: 'UZVEOM,KGCRHE'}
-      name: label_6
-  - properties: {role: outlined-card, tooltip: '', border: '', foreground: '', visible: true,
-      wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
-      spacing_below: small, background: '#0b2547'}
-    type: ColumnPanel
-    layout_properties:
-      col_widths: {}
-      grid_position: JICCEY,VTJOWK
-    name: outlined_card_1_copy_3
-    components:
-    - type: Button
-      properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
-        foreground: 'theme:On Primary', visible: true, text: New Request, font_size: null,
-        font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
-        background: '', bold: false, underline: false, icon: ''}
-      layout_properties: {grid_position: 'MOULNU,LEUJAU'}
-      event_bindings: {click: button_5_click}
-      name: button_5
-    - properties: {role: null, align: center, tooltip: '', border: '', foreground: 'theme:On
-          Primary', visible: true, text: '', font_size: null, font: '', spacing_above: small,
-        icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
-        underline: false, icon: ''}
-      type: Label
-      layout_properties: {grid_position: 'NZNCOP,SKGMZB'}
-      name: new_request
-  - properties: {role: outlined-card, tooltip: '', border: '', foreground: '', visible: true,
-      wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
-      spacing_below: small, background: '#0b2547'}
-    type: ColumnPanel
-    layout_properties:
-      col_widths: {}
-      grid_position: JICCEY,PEMETO
-      full_width_row: true
-    name: outlined_card_1_copy_4
-    components:
-    - type: Button
-      properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
-        foreground: 'theme:On Primary', visible: true, text: All, font_size: null,
-        font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
-        background: '', bold: false, underline: false, icon: ''}
-      layout_properties: {grid_position: 'LKUHOB,XESJNJ'}
-      event_bindings: {click: button_6_click}
-      name: button_6
-    - properties: {role: null, align: center, tooltip: '', border: '', foreground: 'theme:On
-          Primary', visible: true, text: '', font_size: null, font: '', spacing_above: small,
-        icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
-        underline: false, icon: ''}
-      type: Label
-      layout_properties: {grid_position: 'NZNCOP,SKGMZB'}
-      name: all
-  - type: Spacer
-    properties: {height: 32}
-    layout_properties: {grid_position: 'SMAQMY,EDHDQP'}
-    name: spacer_1
   - type: Label
     properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
-      visible: false, text: Approved Foreclosure Requests, font_size: 18, font: '',
-      spacing_above: small, icon_align: left, spacing_below: small, italic: false,
-      background: '', bold: true, underline: false, icon: ''}
-    layout_properties:
-      col_widths: {}
-      grid_position: RWXMSJ,EIUUYU
-    name: label_2
-  - type: Label
-    properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
-      visible: false, text: Rejected Foreclosure Requests, font_size: 18, font: '',
-      spacing_above: small, icon_align: left, spacing_below: small, italic: false,
-      background: '', bold: true, underline: false, icon: ''}
-    layout_properties: {grid_position: 'JACKKU,BLMTVD'}
-    name: label_3
-  - type: Label
-    properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
-      visible: false, text: New Foreclosure Requests, font_size: 18, font: '', spacing_above: small,
+      visible: true, text: View Borrower Loan Requests, font_size: 25, font: '', spacing_above: small,
       icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
       underline: false, icon: ''}
-    layout_properties: {grid_position: 'INJHZV,FBQGWB'}
-    name: new
-  - type: Label
-    properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
-      visible: false, text: View All Loan Foreclosure Requests, font_size: 20, font: '',
-      spacing_above: small, icon_align: left, spacing_below: small, italic: false,
-      background: '', bold: true, underline: false, icon: ''}
-    layout_properties: {grid_position: 'SPJKDA,RGQWFI'}
+    layout_properties: {grid_position: 'ZGDUVI,SNEJOR', full_width_row: true}
     name: label_1
-  - properties: {item_template: lendor.dashboard.view_loan_foreclosure_Requests.ItemTemplate55,
-      visible: false}
+  - type: ColumnPanel
+    properties: {role: outlined-card, col_widths: '{}', visible: false}
+    layout_properties: {grid_position: 'FKJJQW,RRWXJL'}
+    name: outlined_card_1
+    components:
+    - type: DataGrid
+      properties:
+        role: null
+        columns:
+        - {id: QLOWGE, title: Product Name, data_key: column_1, $$hashKey: 'object:3833'}
+        - {id: FIZMCQ, title: Loan Amount, data_key: column_2, $$hashKey: 'object:3834',
+          expand: false}
+        - {id: GYGCMD, title: Borrower Full Name, data_key: column_3, $$hashKey: 'object:3835',
+          expand: false}
+        - {id: XQSISW, title: Ascend Score, data_key: column_5, $$hashKey: 'object:918'}
+        - {id: IZHOQY, title: '', data_key: column_4, $$hashKey: 'object:3876'}
+        auto_header: true
+        tooltip: ''
+        border: ''
+        foreground: ''
+        rows_per_page: 20
+        visible: true
+        wrap_on: never
+        show_page_controls: true
+        spacing_above: small
+        spacing_below: small
+        background: ''
+      layout_properties: {grid_position: 'XBOTVE,CJLLNF'}
+      name: data_grid_1
+      components:
+      - type: RepeatingPanel
+        properties: {spacing_above: none, spacing_below: none, item_template: lendor.dashboard1.view_borrower_loan_request.RowTemplate10}
+        layout_properties: {}
+        name: repeating_panel_1
+  - properties: {item_template: lendor.dashboard1.view_borrower_loan_request.ItemTemplate47}
     type: RepeatingPanel
-    layout_properties: {grid_position: 'AHXIVM,EFDMFZ'}
-    name: repeating_panel_5
-  - properties: {item_template: lendor.dashboard.view_loan_foreclosure_Requests.ItemTemplate56,
-      visible: false}
-    type: RepeatingPanel
-    layout_properties: {grid_position: 'ZQAYKK,NZRGRZ'}
-    name: repeating_panel_6
-  - properties: {item_template: lendor.dashboard.view_loan_foreclosure_Requests.ItemTemplate57,
-      visible: false}
-    type: RepeatingPanel
-    layout_properties: {grid_position: 'FIFAKF,OVQJFJ'}
-    name: repeating_panel_7
-  - properties: {item_template: lendor.dashboard.view_loan_foreclosure_Requests.ItemTemplate58,
-      visible: false}
-    type: RepeatingPanel
-    layout_properties: {grid_position: 'WIQYHZ,UANFQW'}
-    name: repeating_panel_8
-  - properties: {item_template: lendor.dashboard.view_loan_foreclosure_Requests.ItemTemplate60,
-      visible: false}
-    type: RepeatingPanel
-    layout_properties: {grid_position: 'ADYQUZ,NCAEOT'}
-    name: repeating_panel_9
-- type: FlowPanel
-  properties: {}
-  layout_properties: {slot: nav-right}
-  name: navbar_links
+    layout_properties: {grid_position: 'RAEAKV,PPBFGC'}
+    name: repeating_panel_2

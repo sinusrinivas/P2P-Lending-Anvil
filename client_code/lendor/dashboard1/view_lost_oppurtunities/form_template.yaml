@@ -3,10 +3,6 @@ container:
   type: HtmlTemplate
   properties: {html: '@theme:standard-page.html'}
 components:
-- type: FlowPanel
-  properties: {}
-  layout_properties: {slot: nav-right}
-  name: navbar_links
 - type: ColumnPanel
   properties: {col_widths: '{}'}
   layout_properties: {slot: default}
@@ -29,62 +25,58 @@ components:
       name: image_1_copy
     - type: form:borrower.logout
       properties: {}
-      layout_properties: {grid_position: 'SRJHKV,TKIBTN', full_width_row: true}
+      layout_properties: {grid_position: 'SRJHKV,HAUHDR'}
       name: logout_1
   - type: form:lendor.navigation_bar.Navigation_bar_lender_dashbord
     properties: {}
-    layout_properties: {grid_position: 'UIECVG,RUNXWZ', full_width_row: true}
+    layout_properties: {grid_position: 'GKHHXD,WQYTKE', full_width_row: true}
     name: navigation_bar_lender_dashbord_1
   - type: Button
     properties: {role: filled-button, align: right, tooltip: '', border: '', enabled: true,
       foreground: 'theme:On Primary', visible: true, text: Back, font_size: 15, font: '',
       spacing_above: small, icon_align: left, spacing_below: small, italic: false,
       background: '#0b2547', bold: false, underline: false, icon: 'fa:angle-double-left'}
-    layout_properties: {grid_position: 'RTPPIT,CGCKJL', full_width_row: true}
+    layout_properties: {grid_position: 'AUUAZJ,FQVZON', full_width_row: true}
     event_bindings: {click: button_1_click}
     name: button_1
   - type: Label
     properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
-      visible: true, text: View Borrower Loan Requests, font_size: 25, font: '', spacing_above: small,
+      visible: true, text: View Lost Oppurtunities, font_size: 16, font: '', spacing_above: small,
       icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
       underline: false, icon: ''}
-    layout_properties: {grid_position: 'ZGDUVI,SNEJOR', full_width_row: true}
+    layout_properties: {grid_position: 'JICCEY,UEHAQW', full_width_row: true}
     name: label_1
-  - type: ColumnPanel
-    properties: {role: outlined-card, col_widths: '{}', visible: false}
-    layout_properties: {grid_position: 'FKJJQW,RRWXJL'}
-    name: outlined_card_1
+  - type: DataGrid
+    properties:
+      role: null
+      columns:
+      - {id: JUPHMF, title: Borrower Full Name, data_key: column_1, $$hashKey: 'object:2363'}
+      - {id: VWOLXX, title: Loan Amount, data_key: column_2, $$hashKey: 'object:2364'}
+      - {id: CFQYPT, title: Loan_status, data_key: column_3, $$hashKey: 'object:2365'}
+      - {id: ZTUHWY, title: '', data_key: column_4, $$hashKey: 'object:7800'}
+      auto_header: true
+      tooltip: ''
+      border: ''
+      foreground: ''
+      rows_per_page: 20
+      visible: false
+      wrap_on: never
+      show_page_controls: true
+      spacing_above: small
+      spacing_below: small
+      background: ''
+    layout_properties: {grid_position: 'FACUZE,QHILWB'}
+    name: data_grid_2
     components:
-    - type: DataGrid
-      properties:
-        role: null
-        columns:
-        - {id: QLOWGE, title: Product Name, data_key: column_1, $$hashKey: 'object:3833'}
-        - {id: FIZMCQ, title: Loan Amount, data_key: column_2, $$hashKey: 'object:3834',
-          expand: false}
-        - {id: GYGCMD, title: Borrower Full Name, data_key: column_3, $$hashKey: 'object:3835',
-          expand: false}
-        - {id: XQSISW, title: Ascend Score, data_key: column_5, $$hashKey: 'object:918'}
-        - {id: IZHOQY, title: '', data_key: column_4, $$hashKey: 'object:3876'}
-        auto_header: true
-        tooltip: ''
-        border: ''
-        foreground: ''
-        rows_per_page: 20
-        visible: true
-        wrap_on: never
-        show_page_controls: true
-        spacing_above: small
-        spacing_below: small
-        background: ''
-      layout_properties: {grid_position: 'XBOTVE,CJLLNF'}
-      name: data_grid_1
-      components:
-      - type: RepeatingPanel
-        properties: {spacing_above: none, spacing_below: none, item_template: lendor.dashboard.view_borrower_loan_request.RowTemplate10}
-        layout_properties: {}
-        name: repeating_panel_1
-  - properties: {item_template: lendor.dashboard.view_borrower_loan_request.ItemTemplate47}
+    - type: RepeatingPanel
+      properties: {spacing_above: none, spacing_below: none, item_template: lendor.dashboard1.view_lost_oppurtunities.RowTemplate34}
+      layout_properties: {}
+      name: repeating_panel_2
+  - properties: {item_template: lendor.dashboard1.view_lost_oppurtunities.ItemTemplate53}
     type: RepeatingPanel
-    layout_properties: {grid_position: 'RAEAKV,PPBFGC'}
-    name: repeating_panel_2
+    layout_properties: {grid_position: 'XHHXDQ,XYPCKL'}
+    name: repeating_panel_1
+- type: FlowPanel
+  properties: {}
+  layout_properties: {slot: nav-right}
+  name: navbar_links
