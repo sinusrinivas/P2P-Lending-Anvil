@@ -48,7 +48,7 @@ components:
     layout_properties: {grid_position: 'UHEIZN,THWOTZ'}
   - name: label_7
     properties: {role: null, align: left, tooltip: '', border: '', foreground: '#000337',
-      visible: true, text: Loan Id, font_size: null, font: '', spacing_above: small,
+      visible: true, text: Name, font_size: null, font: '', spacing_above: small,
       icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
       underline: false, icon: ''}
     type: Label
@@ -95,7 +95,7 @@ components:
       underline: false, icon: ''}
     type: Label
     layout_properties: {grid_position: 'UHEIZN,PJAWYF ODXGXU,YXPBDQ'}
-  - name: loan_id_label
+  - name: name_label
     properties: {}
     type: Label
     layout_properties: {grid_position: 'UHEIZN,JQWHVM IALCQG,MVLIFD'}

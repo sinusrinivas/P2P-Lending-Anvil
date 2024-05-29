@@ -227,12 +227,12 @@ components:
     name: label_26
     layout_properties: {row: LIJSZJ, width_xs: 12, col_xs: 0, width: 645}
   - type: Label
-    properties: {role: null, align: right, tooltip: '', border: '', foreground: '',
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
       visible: true, text: Loan Amount, font_size: 15, font: '', spacing_above: small,
       icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
       underline: false, icon: ''}
     name: label_27
-    layout_properties: {row: OTEILU, width_xs: 4, col_xs: 2, width: 219.462}
+    layout_properties: {row: OTEILU, width_xs: 2, col_xs: 3}
   - type: Label
     properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
       visible: true, text: '', font_size: 15, font: '', spacing_above: small, icon_align: left,
@@ -241,7 +241,7 @@ components:
     name: label_28
     layout_properties: {row: OTEILU, width_xs: 3, col_xs: 6, width: 157.1}
   - type: Label
-    properties: {role: null, align: right, tooltip: '', border: '', foreground: '',
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
       visible: true, text: Total Interest Amount, font_size: 15, font: '', spacing_above: small,
       icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
       underline: false, icon: ''}
@@ -255,7 +255,7 @@ components:
     name: label_30
     layout_properties: {row: FHKFTV, width_xs: 3, col_xs: 6, width: 157.1}
   - type: Label
-    properties: {role: null, align: right, tooltip: '', border: '', foreground: '',
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
       visible: true, text: Processing fee Amount, font_size: 15, font: '', spacing_above: small,
       icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
       underline: false, icon: ''}
@@ -269,7 +269,7 @@ components:
     name: label_32
     layout_properties: {row: YFKQRV, width_xs: 3, col_xs: 6, width: 157.1}
   - type: Label
-    properties: {role: null, align: right, tooltip: '', border: '', foreground: '',
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
       visible: true, text: Monthly EMI, font_size: 15, font: '', spacing_above: small,
       icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
       underline: false, icon: ''}
@@ -283,12 +283,12 @@ components:
     name: label_36
     layout_properties: {row: YXRTVR, width_xs: 3, col_xs: 6, width: 157.1}
   - type: Label
-    properties: {role: null, align: right, tooltip: '', border: '', foreground: '',
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
       visible: true, text: Total Repayment Amount, font_size: 15, font: '', spacing_above: small,
       icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
       underline: false, icon: ''}
     name: label_33
-    layout_properties: {row: ZRTKDP, width_xs: 4, col_xs: 2, width: 219.462}
+    layout_properties: {row: ZRTKDP, width_xs: 3, col_xs: 3}
   - type: Label
     properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
       visible: true, text: '', font_size: 15, font: '', spacing_above: small, icon_align: left,

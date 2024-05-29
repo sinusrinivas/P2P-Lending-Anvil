@@ -24,7 +24,7 @@ components:
     - name: label_2
       properties: {text: 'Your wedding day is one of the most special occasions in
           your life. While money may come and go, moments like these are once-in-a-lifetime.
-          Ascends provides marriage loans to help make this day truly unforgettable.',
+          Ascend provides marriage loans to help make this day truly unforgettable.',
         font_size: 19, align: left, bold: false}
       type: Label
       layout_properties: {grid_position: 'EESJPX,ASVMZR CRWGQV,RATEBI'}
@@ -158,17 +158,16 @@ components:
       type: Spacer
       layout_properties: {grid_position: 'ZOHGXI,BAPYIF'}
     - name: label_13
-      properties: {text: 'Our marriage loans at Ascends are designed to make your
-          special day truly memorable without the burden of financial worries. With
-          minimal paperwork and competitive interest rates, obtaining the funds you
-          need is hassle-free. We understand that you deserve to celebrate your wedding
-          day in style, and we''re here to ensure that your dreams become a reality.
-          Whether it''s splurging on decorations, booking the venue of your dreams,
-          or treating yourself to a luxurious honeymoon, our loans provide you with
-          the flexibility to make it happen. Don''t let financial constraints dim
-          the joy of your wedding preparations. Choose Ascends and focus on creating
-          beautiful memories while we take care of the rest.', align: center, font_size: 20,
-        foreground: white}
+      properties: {text: 'Our marriage loans at Ascend are designed to make your special
+          day truly memorable without the burden of financial worries. With minimal
+          paperwork and competitive interest rates, obtaining the funds you need is
+          hassle-free. We understand that you deserve to celebrate your wedding day
+          in style, and we''re here to ensure that your dreams become a reality. Whether
+          it''s splurging on decorations, booking the venue of your dreams, or treating
+          yourself to a luxurious honeymoon, our loans provide you with the flexibility
+          to make it happen. Don''t let financial constraints dim the joy of your
+          wedding preparations. Choose Ascend and focus on creating beautiful memories
+          while we take care of the rest.', align: center, font_size: 20, foreground: white}
       type: Label
       layout_properties: {grid_position: 'YCQKBL,DKSFKP'}
     - name: spacer_20
@@ -221,7 +220,7 @@ components:
       type: Image
       layout_properties: {grid_position: 'YMIKOX,QUZALW ERQTXQ,BEGYNC'}
     - name: label_17
-      properties: {text: "Loan assessment by\n Ascends", align: center, font_size: 18,
+      properties: {text: "Loan assessment by\n Ascend", align: center, font_size: 18,
         bold: true}
       type: Label
       layout_properties: {grid_position: 'YMIKOX,QUZALW KJRHNQ,KOJXZC'}
@@ -378,13 +377,13 @@ components:
       type: Spacer
       layout_properties: {grid_position: 'BYVGSG,GWHCDO'}
     - name: label_37
-      properties: {text: Choose a Peer-To-Peer (P2P) loan from Ascends and make unforgettable memories for your wedding.,
+      properties: {text: Choose a Peer-To-Peer (P2P) loan from Ascend and make unforgettable memories for your wedding.,
         bold: true, font_size: 30}
       type: Label
       layout_properties: {grid_position: 'BMRFNT,GJVDVP'}
     - name: label_38
-      properties: {text: 'Why burden your parents'' retirement savings for your wedding
-          when Ascends is here to assist you?', font_size: 22}
+      properties: {text: 'Why burden your parent''s retirement savings for your wedding
+          when Ascend is here to assist you?', font_size: 22}
       type: Label
       layout_properties: {grid_position: 'KHPXEA,XFFJWE'}
     - name: label_39
@@ -451,19 +450,19 @@ components:
       type: Label
       layout_properties: {grid_position: 'KGQLIW,GPOOCM'}
     - name: label_44_copy
-      properties: {text: 'What’s the rate of interest Ascends charges on marriage
-          loans?', font_size: 18, background: '#E9ECEF'}
+      properties: {text: 'What’s the rate of interest Ascend charges on marriage loans?',
+        font_size: 18, background: '#E9ECEF'}
       type: Label
       layout_properties: {grid_position: 'NSZPEZ,IHWRIS'}
     - name: label_45_copy
-      properties: {text: 'At Ascends, you can secure a marriage loan starting from
+      properties: {text: 'At Ascend, you can secure a marriage loan starting from
           an interest rate of 12% per annu
 
           ', font_size: 18}
       type: Label
       layout_properties: {grid_position: 'NSOAVV,PHWKJW'}
     - name: label_44_copy_copy
-      properties: {text: 'How should I get the personal loan at the platform of Ascends?',
+      properties: {text: 'How should I get the personal loan at the platform of Ascend?',
         font_size: 18, background: '#E9ECEF'}
       type: Label
       layout_properties: {grid_position: 'HKJNAQ,KMDLAL'}
@@ -477,7 +476,7 @@ components:
       type: Label
       layout_properties: {grid_position: 'AYNVGK,JCKYTR'}
     - name: label_44_copy_copy_copy
-      properties: {text: 'How fast are the loans are approved at Ascends?', font_size: 18,
+      properties: {text: 'How fast are the loans are approved at Ascend?', font_size: 18,
         background: '#E9ECEF'}
       type: Label
       layout_properties: {grid_position: 'IIFOSQ,XZINOK'}
@@ -561,20 +560,20 @@ components:
       type: GridPanel
       layout_properties: {grid_position: 'RBHEDE,EWADTZ', full_width_row: true}
       components:
+      - name: label_4_copy_2
+        properties: {role: null, align: left, tooltip: '', border: '', foreground: white,
+          visible: true, text: '© 2023 - 2024, Ascend - All Rights    Reserved', font_size: null,
+          font: '', spacing_above: small, icon_align: left, spacing_below: small,
+          italic: false, background: '#05264d', bold: true, underline: false, icon: ''}
+        type: Label
+        layout_properties: {row: JUWDTC, width_xs: 3, col_xs: 0}
       - name: flow_panel_3_copy_1
         properties: {role: null, vertical_align: full, spacing: medium, align: left,
           tooltip: '', border: '', foreground: '', visible: true, spacing_above: none,
           spacing_below: none, background: '#05264d'}
         type: FlowPanel
         layout_properties: {row: JUWDTC, width_xs: 5, col_xs: 0, width: 198.328}
-        components:
-        - name: label_4_copy_2
-          properties: {role: null, align: left, tooltip: '', border: '', foreground: white,
-            visible: true, text: '© 2023 - 2024, Ascends - All Rights    Reserved',
-            font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small,
-            italic: false, background: '#05264d', bold: true, underline: false, icon: ''}
-          type: Label
-          layout_properties: {}
+        components: []
       - name: link_5_copy
         properties: {role: null, url: 'https://in.linkedin.com/?src=go-pa&trk=sem-ga_campid.14650114788_asid.151761418307_crid.657403558718_kw.linkedin%20login_d.c_tid.kwd-12704335873_n.g_mt.e_geo.9179915&mcid=6844056167778418689&cid=&gclid=EAIaIQobChMI1pr54ZHVggMVF6dmAh2IxgGNEAAYASAAEgKqevD_BwE&gclsrc=aw.ds',
           align: left, tooltip: '', border: '', foreground: white, visible: true,

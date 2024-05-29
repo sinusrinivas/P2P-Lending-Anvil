@@ -16,7 +16,7 @@ class view_profile(view_profileTemplate):
         self.init_components(**properties)
 
         # Display loan details
-        self.loan_id_label.text = f"{selected_row['loan_id']}"
+        self.name_label.text = f"{selected_row['borrower_full_name']}"
         self.loan_amount_label.text = f"{selected_row['loan_amount']}"
         self.intrest_rate_label.text = f"{selected_row['interest_rate']}"
         self.tenure_label.text = f"{selected_row['tenure']}"
