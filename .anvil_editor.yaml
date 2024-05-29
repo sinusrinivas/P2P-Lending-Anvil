@@ -657,7 +657,6 @@ unique_ids:
     admin/dashboard/manage_products/manage-product gp.png: '1716453968146850983657022.9779'
     bank_users/personal_loan/travel_loan/travel_loan5.png: '1713507410190342162335757.42413'
     bank_users/main_form/about_us/disbursal-repayment.png: '1712213133803165762374137.75742'
-    bank_users/personal_loan/education_loan/unnamed (7).png: '1716981795046761618398015.4827'
     bank_users/main_form/icons8-university-100.png: '171274847841444797213735.88852'
     bank_users/personal_loan/processing fee.png: '1716202644341950244772367.5392'
     admin/dashboard/manage_products/add-product-gp-categories.png: UAOJ7VYSDRP6XJ3CDZMYM67Q2UVT3XA4
@@ -725,6 +724,7 @@ unique_ids:
     bank_users/personal_loan/online-prsnl-process-icon2.png: '1712749481995208167326546.47073'
     bank_users/main_form/business_loan/interest-rate.png: '1712294718365678752445033.3591'
     bank_users/personal_loan/education_loan/.gitkeep: '1715929863534472661618535.68445'
+    bank_users/personal_loan/education_loan/EL-eligibility1.png: '1716981865308595757354628.2024'
     borrower/dashboard/borrower_mobile.png: '1716289925232798289409000.5735'
     admin/dashboard/manage_cms/no of employees.png: FLOTECLUWDFHSBJWEZYJ5LV7I3VX2T5R
     bank_users/personal_loan/.gitkeep: '1715929813883346807521390.8377'
@@ -757,7 +757,6 @@ unique_ids:
     bank_users/main_form/about_us/3rd1.jpg: '1716186777146571825492134.7399'
     bank_users/main_form/about_us/aboutus-icon1.png: '1712202957904792631434040.2339'
     Kotak.jpg: '1701090430646530302017735.53534'
-    bank_users/personal_loan/education_loan/Untitled design (82).png: '1716981865308595757354628.2024'
     bank_users/main_form/business_loan/business_loan_eligibility.jpg: '1712570144615137088612855.17049'
     admin/dashboard/loan_management/under-process.png: '1716529940233658397128003.2078'
     admin/dashboard/performance_tracker/rejected-applications.png: '1716531020279952700515919.4996'
