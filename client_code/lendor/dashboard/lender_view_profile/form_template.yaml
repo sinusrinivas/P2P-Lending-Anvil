@@ -92,7 +92,7 @@ components:
     layout_properties: {grid_position: 'DXTZII,WCIGSN'}
     components:
     - name: personal_information_panel
-      properties: {col_widths: '{"JMWRZL":25,"JNUESH":35,"XQSWFO":25,"QJAPZN":25,"IXDCZJ":25,"TLNBEN":25,"EGSFLR":25,"KGQXHY":5,"KLESAL":55,"ZCPZRF":35,"DATHWX":35,"LVJSXW":25,"HYVXAC":35,"NFSLAK":25,"JFBSNP":35,"ZFFVFA":25,"PJCMGZ":35,"DUACGL":25,"ZFULZJ":35,"VAVODZ":25,"NCNLMF":25,"BEMUDH":35,"SPMTQD":25,"YYVQHV":35,"LPGPDR":25,"TLJQVF":35,"DLXMPU":25,"KTXPQT":35,"JRYIFF":25,"FFEKIU":35,"KHSZQT":25,"USYQIB":25,"RUGPEC":35,"UICXOL":25,"GIEGUE":35,"BZAMHW":25,"ESNGXI":35,"SSGVTB":35,"LETFXN":25,"YNBCAU":35,"IMHPVD":35,"ORARGK":35,"LBAQLI":20,"GJDUAS":35,"HFIOKG":20,"FBVMCM":35,"VGTTOU":35,"VSZMEF":35,"DEKDAY":25,"MRDKCO":25}',
+      properties: {col_widths: '{"JMWRZL":25,"JNUESH":35,"XQSWFO":25,"QJAPZN":25,"IXDCZJ":25,"TLNBEN":25,"EGSFLR":25,"KGQXHY":5,"KLESAL":55,"ZCPZRF":35,"DATHWX":35,"LVJSXW":25,"HYVXAC":35,"NFSLAK":25,"JFBSNP":35,"ZFFVFA":25,"PJCMGZ":35,"DUACGL":25,"ZFULZJ":35,"VAVODZ":25,"NCNLMF":25,"BEMUDH":35,"SPMTQD":25,"YYVQHV":35,"LPGPDR":25,"TLJQVF":35,"KTXPQT":35,"JRYIFF":25,"FFEKIU":35,"KHSZQT":25,"USYQIB":25,"RUGPEC":35,"UICXOL":25,"GIEGUE":35,"BZAMHW":25,"ESNGXI":35,"SSGVTB":35,"LETFXN":25,"YNBCAU":35,"IMHPVD":35,"ORARGK":35,"LBAQLI":20,"GJDUAS":35,"HFIOKG":20,"FBVMCM":35,"VGTTOU":35,"VSZMEF":35,"DEKDAY":25,"MRDKCO":25}',
         role: elevated-card, visible: true}
       type: ColumnPanel
       layout_properties: {grid_position: 'VNYQWZ,XCYJCJ', full_width_row: true}
@@ -250,7 +250,7 @@ components:
         type: DropDown
         layout_properties: {grid_position: 'NQDUFW,KLESAL AUCDTK,SSGVTB'}
       - name: label_4_copy_4_copy
-        properties: {text: 'Address 2 :', bold: true, font_size: 16, icon: ''}
+        properties: {text: 'Address 1 :', bold: true, font_size: 16, icon: ''}
         type: Label
         layout_properties: {grid_position: 'NQDUFW,KLESAL GMJQFG,NCNLMF'}
       - name: address_1_tx
@@ -274,14 +274,6 @@ components:
         properties: {background: 'theme:On Primary', role: outlined, text: ''}
         type: TextBox
         layout_properties: {grid_position: 'NQDUFW,KLESAL UMFKMW,TLJQVF'}
-      - name: label_3_copy
-        properties: {text: 'Profession :', bold: true, font_size: 16}
-        type: Label
-        layout_properties: {grid_position: 'NQDUFW,KLESAL MLFVJH,DLXMPU'}
-      - name: profession_dropdown
-        properties: {role: outlined}
-        type: DropDown
-        layout_properties: {grid_position: 'NQDUFW,KLESAL MLFVJH,KTXPQT'}
       - name: label_3_copy_copy
         properties: {text: 'Qualification :', bold: true, font_size: 16}
         type: Label

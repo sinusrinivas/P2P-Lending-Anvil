@@ -58,7 +58,7 @@ class lender_view_profile(lender_view_profileTemplate):
       self.vehicle_loan_tx.text = user_profile["vehicle_loan"]
       self.credit_tx.text = user_profile["credit_card_loans"]
       self.qualification_dropdown.selected_value = user_profile["qualification"]
-      self.profession_dropdown.selected_value = user_profile["profession"]
+      # self.profession_dropdown.selected_value = user_profile["profession"]
       self.company_name_tx.text = user_profile["company_name"]
       self.occupation_dropdown.selected_value = user_profile["occupation_type"]
       self.employee_dropdown.selected_value = user_profile["employment_type"]
@@ -125,10 +125,6 @@ class lender_view_profile(lender_view_profileTemplate):
         str(option["present_address"]) for option in options
       ]
 
-      options = app_tables.fin_borrower_profession.search()
-      self.profession_dropdown.items = [
-        str(option["borrower_profession"]) for option in options
-      ]
 
       # options = app_tables.fin_borrower_qualification.search()
       # self.qualification_dropdown.items = [
@@ -198,7 +194,7 @@ class lender_view_profile(lender_view_profileTemplate):
     self.vehicle_loan_tx.enabled = False
     self.credit_tx.enabled = False
     self.qualification_dropdown.enabled = False
-    self.profession_dropdown.enabled = False
+    # self.profession_dropdown.enabled = False
 
   def enable_personal_fields(self):
     self.name_text_box.enabled = True
@@ -221,7 +217,7 @@ class lender_view_profile(lender_view_profileTemplate):
     self.vehicle_loan_tx.enabled = True
     self.credit_tx.enabled = True
     self.qualification_dropdown.enabled = True
-    self.profession_dropdown.enabled = True
+    # self.profession_dropdown.enabled = True
 
   def edit_personal_details_click(self, **event_args):
     self.enable_personal_fields()
@@ -258,7 +254,7 @@ class lender_view_profile(lender_view_profileTemplate):
         "Vehicle Loan": self.vehicle_loan_tx.text,
         "Credit Card Loans": self.credit_tx.text,
         "Qualification": self.qualification_dropdown.selected_value,
-        "Profession": self.profession_dropdown.selected_value,
+        # "Profession": self.profession_dropdown.selected_value,
         "Other Loan": self.Language_tx.text,
     }
 
@@ -295,7 +291,7 @@ class lender_view_profile(lender_view_profileTemplate):
         user_profile["vehicle_loan"] = self.vehicle_loan_tx.text
         user_profile["credit_card_loans"] = self.credit_tx.text
         user_profile["qualification"] = self.qualification_dropdown.selected_value
-        user_profile["profession"] = self.profession_dropdown.selected_value
+        # user_profile["profession"] = self.profession_dropdown.selected_value
         user_profile["other_loan"] = self.Language_tx.text
         self.govt_1_file_loader_1.visible = False
         self.govt_2_file_loader_2.visible = False
