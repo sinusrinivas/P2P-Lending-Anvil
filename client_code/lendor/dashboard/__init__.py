@@ -107,7 +107,7 @@ class dashboard(dashboardTemplate):
 
   def link_9_click(self, **event_args):
     """This method is called when the link is clicked"""
-    open_form("lendor.dashboard.lender_profile")
+    open_form("lendor.dashboard.lender_view_profile")
 
   def link_1_click(self, **event_args):
     """This method is called when the link is clicked"""
