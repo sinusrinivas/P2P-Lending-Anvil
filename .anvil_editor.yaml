@@ -176,7 +176,7 @@ unique_ids:
     bank_users.main_form.products_main_form.personal_loan.medical_loan: '1713932648213367619462010.7378'
     admin.dashboard.manage_cms.add_lender_dropdown_details.edit_account_type: '1706531522383955942257997.2303'
     admin.dashboard.manage_cms.add_borrower_dropdown_details.edit_gender: '1706116919205605080192138.0746'
-    lendor.dashboard: '1699430548405125074156774.3141'
+    lendor.dashboard: NG3HCRHYC4LZM65T2DCV2WECDSQFIYVI
     admin.dashboard.manage_loan_details.loan_settings: '1716187237329321150784189.6111'
     admin.dashboard.manage_settings.manage_membership: '1699529102487124802777625.46121'
     bank_users.main_form.products_main_form.personal_loan.travel_loan: '1713873106225872134618243.9493'
@@ -295,6 +295,7 @@ unique_ids:
     lendor.dashboard.view_loan_foreclosure_Requests.foreclose_details: '1700454637827919052628054.0963'
     lendor.dashboard.lender_view_loans.RowTemplate22: '1703141013007184309847389.77017'
     admin.dashboard.manage_cms.add_general_dropdowns: '1710397494541671512734929.8624'
+    lendor.dashboard1: '1699430548405125074156774.3141'
     lendor.dashboard.lender_view_loans.ItemTemplate49: '1709611089771787997070325.4371'
     lendor.dashboard.view_borrower_loan_request.Borr_loan_request: '1700542763128106365112272.9714'
     admin.dashboard.manage_bessem.add_subcategory.ItemTemplate36: '17110873489172627637088.8769217'
@@ -352,7 +353,6 @@ unique_ids:
     borrower.dashboard.foreclosure_request.ItemTemplate72: TWYJYGOELP2FFVN3ALNCEBKNODLORVDW
     admin.dashboard.lenders.ItemTemplate83: '1712062291870884018092572.6067'
     admin.dashboard.manage_cms.add_borrower_dropdown_details.ItemTemplate9: '1706093219174862056427246.7545'
-    lendor.Form1: NG3HCRHYC4LZM65T2DCV2WECDSQFIYVI
     admin.dashboard.manage_products.view_product.RowTemplate5: '1700713251863745364072386.9193'
     admin.dashboard.manage_products.view_categories.editDetails: '1704371947758235068117859.1696'
     lendor.dashboard.view_loan_foreclosure_Requests: '169996304408474987603925.53683'
@@ -389,7 +389,7 @@ unique_ids:
     admin.dashboard.manage_bessem.add_subcategory.ItemTemplate87: '1710502229577864903127030.588'
     admin.dashboard.manage_products.add_group: '1703758557054939760657519.5975'
     borrower.ots_dashboard.ItemTemplate97: '1712122358046587469434273.9945'
-    lendor.dashboard.lender_portfolio: '1715250231366538983216292.9'
+    lendor.dashboard.lender_portfolio: '1716968660461688344879676.6324'
     lendor.dashboard.my_returns: 4IEF7M5W2HNGQTDKZOOF4RFXFAGAJB5S
     borrower.dashboard.RowTemplate7: T3FUXLYGRAVXJ3IHK72RQZ2D33FIBR42
     admin.dashboard.manage_bessem.view_bessem_subcategory.ItemTemplate38: '17095388729813876844709.4927883'
