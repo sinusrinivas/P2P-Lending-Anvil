@@ -37,7 +37,7 @@ class dashboard(dashboardTemplate):
     try:
       customer_loans = app_tables.fin_loan_details.search(borrower_customer_id=self.user_Id)
       if customer_loans:
-        self.data = [{'product_id': loan['product_name'], 'loan_amount': loan['loan_amount'],
+        self.data = [{'product_name': loan['product_name'], 'loan_amount': loan['loan_amount'],
                       'tenure': loan['tenure'], 'interest_rate': loan['interest_rate'],
                       'total_repayment_amount': round(loan['total_repayment_amount'], 2),
                       'loan_updated_status': loan['loan_updated_status']} for loan in customer_loans]
