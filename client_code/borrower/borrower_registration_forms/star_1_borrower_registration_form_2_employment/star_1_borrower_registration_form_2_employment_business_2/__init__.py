@@ -22,7 +22,6 @@ class star_1_borrower_registration_form_2_employment_business_2(star_1_borrower_
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
 
-    # Any code you write here will run before the form opens.
 
   def button_2_click(self, **event_args):
     year = self.date_picker_1.date
@@ -34,7 +33,7 @@ class star_1_borrower_registration_form_2_employment_business_2(star_1_borrower_
     # Get today's date
     today = date.today()
     
-    # Check if the selected date is in the future
+    
     if year and year.year > today.year:
       alert("The year cannot be in the future. Please select a valid year.", title="Invalid Year")
       return
