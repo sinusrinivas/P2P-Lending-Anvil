@@ -177,7 +177,9 @@ class borrower_view_profile(borrower_view_profileTemplate):
 
       if borrower_details:
         self.credit_limit_tx.text = borrower_details['credit_limit']
+        self.credit_label.text = borrower_details['credit_limit']
         self.member_since_date_picker_1.date = borrower_details['borrower_since']
+        self.membership_since_label.text = borrower_details['borrower_since']
 
   def disable_personal_fields(self):
       self.name_text_box.enabled = False

@@ -3,7 +3,7 @@ components:
 - name: content_panel_copy
   properties: {col_widths: '{"XHHUAF":15,"WCIGSN":32}', role: elevated-card}
   type: ColumnPanel
-  layout_properties: {grid_position: 'FMJCVV,WKIHQO', full_width_row: true}
+  layout_properties: {grid_position: 'RWVWKH,XXAANT', full_width_row: true}
   components:
   - name: image_1_copy
     properties: {role: null, vertical_align: center, height: '48', tooltip: '', border: '',
@@ -92,7 +92,7 @@ components:
     layout_properties: {grid_position: 'DXTZII,WCIGSN'}
     components:
     - name: personal_information_panel
-      properties: {col_widths: '{"JMWRZL":25,"JNUESH":35,"XQSWFO":25,"QJAPZN":25,"IXDCZJ":25,"TLNBEN":25,"EGSFLR":25,"KGQXHY":5,"KLESAL":55,"ZCPZRF":35,"DATHWX":35,"LVJSXW":25,"HYVXAC":35,"NFSLAK":25,"JFBSNP":35,"ZFFVFA":25,"PJCMGZ":35,"DUACGL":25,"ZFULZJ":35,"VAVODZ":25,"NCNLMF":25,"BEMUDH":35,"SPMTQD":25,"YYVQHV":35,"LPGPDR":25,"TLJQVF":35,"KTXPQT":35,"JRYIFF":25,"FFEKIU":35,"KHSZQT":25,"USYQIB":25,"RUGPEC":35,"UICXOL":25,"GIEGUE":35,"BZAMHW":25,"ESNGXI":35,"SSGVTB":35,"LETFXN":25,"YNBCAU":35,"IMHPVD":35,"ORARGK":35,"LBAQLI":20,"GJDUAS":35,"HFIOKG":20,"FBVMCM":35,"VGTTOU":35,"VSZMEF":35,"DEKDAY":25,"MRDKCO":25}',
+      properties: {col_widths: '{"JMWRZL":25,"JNUESH":35,"XQSWFO":25,"QJAPZN":25,"IXDCZJ":25,"TLNBEN":25,"EGSFLR":25,"KGQXHY":5,"KLESAL":55,"ZCPZRF":35,"DATHWX":35,"LVJSXW":25,"HYVXAC":35,"NFSLAK":25,"JFBSNP":35,"ZFFVFA":25,"PJCMGZ":35,"DUACGL":25,"ZFULZJ":35,"VAVODZ":25,"NCNLMF":25,"BEMUDH":35,"SPMTQD":25,"YYVQHV":35,"LPGPDR":25,"TLJQVF":35,"JRYIFF":25,"FFEKIU":35,"KHSZQT":25,"USYQIB":25,"RUGPEC":35,"UICXOL":25,"GIEGUE":35,"BZAMHW":25,"ESNGXI":35,"SSGVTB":35,"YNBCAU":35,"IMHPVD":35,"ORARGK":35,"LBAQLI":20,"GJDUAS":35,"HFIOKG":20,"FBVMCM":35,"VGTTOU":35,"VSZMEF":35,"DEKDAY":25,"MRDKCO":25}',
         role: elevated-card, visible: true}
       type: ColumnPanel
       layout_properties: {grid_position: 'VNYQWZ,XCYJCJ', full_width_row: true}
@@ -159,14 +159,6 @@ components:
         properties: {role: outlined}
         type: DropDown
         layout_properties: {grid_position: 'NQDUFW,KLESAL TKAGKT,VSZMEF'}
-      - name: label_3_copy_copy_copy_copy
-        properties: {text: 'Age :', bold: true, font_size: 16}
-        type: Label
-        layout_properties: {grid_position: 'NQDUFW,KLESAL WSPWCU,LETFXN'}
-      - name: age_tx
-        properties: {background: 'theme:On Primary', role: outlined, text: ''}
-        type: TextBox
-        layout_properties: {grid_position: 'NQDUFW,KLESAL WSPWCU,YNBCAU'}
       - name: label_4_copy_5
         properties: {text: 'Govt Id 1 :', bold: true, font_size: 16, icon: ''}
         type: Label
@@ -266,7 +258,7 @@ components:
         type: TextBox
         layout_properties: {grid_position: 'NQDUFW,KLESAL TRNDKU,YYVQHV'}
       - name: label_2_copy
-        properties: {text: 'how long you are staying at this address :', bold: true,
+        properties: {text: 'How long you are staying at this address :', bold: true,
           font_size: 16}
         type: Label
         layout_properties: {grid_position: 'NQDUFW,KLESAL UMFKMW,LPGPDR'}
@@ -337,7 +329,7 @@ components:
         type: Spacer
         layout_properties: {grid_position: 'NQDUFW,KLESAL YCAEKK,OVVUQA'}
       - name: label_3_copy_copy_copy_2_copy
-        properties: {text: 'investment  :', bold: true, font_size: 16}
+        properties: {text: 'Investment  :', bold: true, font_size: 16}
         type: Label
         layout_properties: {grid_position: 'NQDUFW,KLESAL TONORL,JDKFUH'}
       - name: investment_tx
@@ -345,7 +337,7 @@ components:
         type: TextBox
         layout_properties: {grid_position: 'NQDUFW,KLESAL TONORL,JRMWGQ'}
       - name: label_3_copy_copy_copy_2_copy_4
-        properties: {text: 'membership type :', bold: true, font_size: 16}
+        properties: {text: 'Membership type :', bold: true, font_size: 16}
         type: Label
         layout_properties: {grid_position: 'NQDUFW,KLESAL YCEHQN,GOQRCH'}
       - name: membership_tx
@@ -353,7 +345,7 @@ components:
         type: TextBox
         layout_properties: {grid_position: 'NQDUFW,KLESAL YCEHQN,HZMVWE'}
       - name: label_3_copy_copy_copy_2_copy_2
-        properties: {text: 'lender returns(return_on_investment) :', bold: true, font_size: 16}
+        properties: {text: 'Lender returns(return_on_investment) :', bold: true, font_size: 16}
         type: Label
         layout_properties: {grid_position: 'NQDUFW,KLESAL JDXZKD,CKOQHE'}
       - name: lender_returns_tx
@@ -361,7 +353,7 @@ components:
         type: TextBox
         layout_properties: {grid_position: 'NQDUFW,KLESAL JDXZKD,OYXVJD'}
       - name: label_3_copy_copy_copy_2_copy_3
-        properties: {text: 'lending period :', bold: true, font_size: 16}
+        properties: {text: 'Lending period :', bold: true, font_size: 16}
         type: Label
         layout_properties: {grid_position: 'NQDUFW,KLESAL AXYVOX,IKSJTJ'}
       - name: lending_period_dropdown
@@ -370,7 +362,7 @@ components:
         layout_properties: {grid_position: 'NQDUFW,KLESAL AXYVOX,WUFDTX'}
       - name: edit_lender_details_button
         properties: {text: Edit Details, background: '#0b2547', align: right, foreground: 'theme:On
-            Primary'}
+            Primary', visible: false}
         type: Button
         layout_properties: {grid_position: 'IOCHXL,LMDVFP'}
         event_bindings: {click: edit_lender_details_click}
@@ -514,7 +506,7 @@ components:
         type: Spacer
         layout_properties: {grid_position: 'NQDUFW,KLESAL UTGDVH,IMNUVQ'}
       - name: edit_business_details_button
-        properties: {text: Edit Details, background: '#0b2547', align: right, foreground: 'theme:On
+        properties: {text: edit, background: '#0b2547', align: right, foreground: 'theme:On
             Primary'}
         type: Button
         layout_properties: {grid_position: 'FEQCWG,TPCPSD'}
@@ -578,7 +570,7 @@ components:
         type: TextBox
         layout_properties: {grid_position: 'NQDUFW,KLESAL DDRTFJ,SAQKJQ'}
       - name: edit_land_farming_details_button
-        properties: {text: Edit Details, background: '#0b2547', align: right, foreground: 'theme:On
+        properties: {text: edit, background: '#0b2547', align: right, foreground: 'theme:On
             Primary'}
         type: Button
         layout_properties: {grid_position: 'AURCIS,MFXVGA'}
@@ -609,7 +601,7 @@ components:
         type: Spacer
         layout_properties: {grid_position: 'NQDUFW,KLESAL YCAEKK,OVVUQA'}
       - name: label_4_copy_copy_copy_copy_copy
-        properties: {text: 'company name :', bold: true, font_size: 16, icon: ''}
+        properties: {text: 'Company name :', bold: true, font_size: 16, icon: ''}
         type: Label
         layout_properties: {grid_position: 'NQDUFW,KLESAL NGTOCT,EYUVDS'}
       - name: company_name_tx
@@ -625,7 +617,7 @@ components:
         type: DropDown
         layout_properties: {grid_position: 'NQDUFW,KLESAL YCJUMM,PJRDRR'}
       - name: label_4_copy_3_copy_copy_copy_copy_copy
-        properties: {text: 'employment type :', bold: true, font_size: 16, icon: ''}
+        properties: {text: 'Employment type :', bold: true, font_size: 16, icon: ''}
         type: Label
         layout_properties: {grid_position: 'NQDUFW,KLESAL SQBAVF,XQSWFO'}
       - name: employee_dropdown
@@ -641,7 +633,7 @@ components:
         type: DropDown
         layout_properties: {grid_position: 'NQDUFW,KLESAL WHIKUG,ZRXTMG'}
       - name: label_4_copy_5_copy_copy_copy_copy_copy
-        properties: {text: company address, bold: true, font_size: 16, icon: ''}
+        properties: {text: Company address, bold: true, font_size: 16, icon: ''}
         type: Label
         layout_properties: {grid_position: 'NQDUFW,KLESAL HJFUYQ,IXDCZJ'}
       - name: company_address_tx
@@ -649,7 +641,7 @@ components:
         type: TextBox
         layout_properties: {grid_position: 'NQDUFW,KLESAL HJFUYQ,JPIBNI'}
       - name: label_2_copy_copy_copy_copy_copy
-        properties: {text: 'landmark :', bold: true, font_size: 16}
+        properties: {text: 'Landmark :', bold: true, font_size: 16}
         type: Label
         layout_properties: {grid_position: 'NQDUFW,KLESAL VTZCTS,EGSFLR'}
       - name: landmark_tx
@@ -657,7 +649,7 @@ components:
         type: TextBox
         layout_properties: {grid_position: 'NQDUFW,KLESAL VTZCTS,IHVXBU'}
       - name: label_4_copy_5_copy_copy_copy_copy_copy_copy
-        properties: {text: company phone number, bold: true, font_size: 16, icon: ''}
+        properties: {text: Company phone number, bold: true, font_size: 16, icon: ''}
         type: Label
         layout_properties: {grid_position: 'NQDUFW,KLESAL LPZUYW,MNSTRU'}
       - name: company_no_tx
@@ -673,7 +665,7 @@ components:
         type: TextBox
         layout_properties: {grid_position: 'NQDUFW,KLESAL XFHEMZ,PZOSCC'}
       - name: label_4_copy_5_copy_copy_copy_copy_copy_copy_2
-        properties: {text: 'salary type :', bold: true, font_size: 16, icon: ''}
+        properties: {text: 'Salary type :', bold: true, font_size: 16, icon: ''}
         type: Label
         layout_properties: {grid_position: 'NQDUFW,KLESAL SKNZJG,IJGDYM'}
       - name: salary_type_dropdown
@@ -681,7 +673,7 @@ components:
         type: DropDown
         layout_properties: {grid_position: 'NQDUFW,KLESAL SKNZJG,XJTGGM'}
       - name: label_4_copy_5_copy_copy_copy_copy_copy_copy_2_copy
-        properties: {text: 'designation :', bold: true, font_size: 16, icon: ''}
+        properties: {text: 'Designation :', bold: true, font_size: 16, icon: ''}
         type: Label
         layout_properties: {grid_position: 'NQDUFW,KLESAL RANHZH,GHLGSS'}
       - name: designation_tx
@@ -689,7 +681,7 @@ components:
         type: TextBox
         layout_properties: {grid_position: 'NQDUFW,KLESAL RANHZH,TZZALR'}
       - name: label_4_copy_5_copy_copy_copy_copy_copy_copy_2_copy_3
-        properties: {text: 'employee id :', bold: true, font_size: 16, icon: ''}
+        properties: {text: 'Employee id :', bold: true, font_size: 16, icon: ''}
         type: Label
         layout_properties: {grid_position: 'NQDUFW,KLESAL FVHFPC,QANZQS'}
       - name: emp_id_proof
@@ -706,7 +698,7 @@ components:
         type: Spacer
         layout_properties: {grid_position: 'NQDUFW,KLESAL FVHFPC,ONOXFJ'}
       - name: label_4_copy_5_copy_copy_copy_copy_copy_copy_2_copy_2
-        properties: {text: 'last six months bank statement :', bold: true, font_size: 16,
+        properties: {text: 'Last six months bank statement :', bold: true, font_size: 16,
           icon: ''}
         type: Label
         layout_properties: {grid_position: 'NQDUFW,KLESAL UHAUTE,ZWVXZO'}
@@ -724,7 +716,7 @@ components:
         type: Spacer
         layout_properties: {grid_position: 'NQDUFW,KLESAL UHAUTE,XYEZYU'}
       - name: edit_company_employment_details_button
-        properties: {text: Edit Details, background: '#0b2547', align: right, foreground: 'theme:On
+        properties: {text: edit, background: '#0b2547', align: right, foreground: 'theme:On
             Primary'}
         type: Button
         layout_properties: {grid_position: 'KROHZI,EGPGPA'}
@@ -803,7 +795,7 @@ components:
         type: TextBox
         layout_properties: {grid_position: 'NQDUFW,KLESAL VTZCTS,IHVXBU'}
       - name: edit_bank_details_button
-        properties: {text: Edit Details, background: '#0b2547', align: right, foreground: 'theme:On
+        properties: {text: edit, background: '#0b2547', align: right, foreground: 'theme:On
             Primary'}
         type: Button
         layout_properties: {grid_position: 'NQDUFW,KLESAL ARRRNY,HZRXNA'}
