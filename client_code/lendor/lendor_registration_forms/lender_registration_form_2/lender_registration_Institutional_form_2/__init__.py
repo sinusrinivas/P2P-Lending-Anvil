@@ -7,11 +7,11 @@ import anvil.users
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
-from datetime import datetime
+from datetime import datetime, timedelta
 
 
 class lender_registration_Institutional_form_2(lender_registration_Institutional_form_2Template):
-  def __init__(self,user_id, **properties):
+  def _init_(self,user_id, **properties):
     self.userId = user_id
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
@@ -78,4 +78,12 @@ class lender_registration_Institutional_form_2(lender_registration_Institutional
     """This method is called when a new file is loaded into this FileLoader"""
     if file:
       self.image_1.source = self.file_loader_1.file
+
+  def date_picker_1_change(self, **event_args):
+    """This method is called when the selected date changes"""
+    selected_date = self.date_picker_1.date
+    today = datetime.today().date()
+    two_days_before = today - timedelta(days=2)
     
+    if selected_date and selected_date <= two_days_before:
+      Notification("The selected date is within two days before today. Please choose a valid date.").show()
