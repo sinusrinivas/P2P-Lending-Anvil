@@ -31,12 +31,12 @@ class star_1_borrower_registration_form_2_employment_business_3(star_1_borrower_
         user_id = self.userId
 
         # CIN Validation
-        if len(cin) < 21 or len(cin) > 21 or not cin.isalnum():
+        if len(cin) != 21 or len(cin) > 21 or not cin.isalnum():
             Notification("Please enter a valid 21-character alphanumeric CIN").show()
             return
 
         # DIN Validation
-        if len(din) < 8 or len(din) > 8 or not din.isdigit():
+        if len(din) != 8 or len(din) > 8 or not din.isdigit():
             Notification("Please enter a valid 8-digit DIN").show()
             return
 
