@@ -13,8 +13,8 @@ class star_1_borrower_registration_form_2_employment_business_3(star_1_borrower_
         self.userId = user_id
         user_data = app_tables.fin_user_profile.get(customer_id=user_id)
         if user_data:
-            self.text_box_3.text = user_data['din']
-            self.text_box_4.text = user_data['cin']
+            self.text_box_3.text = user_data['din'].replace(' ', '')
+            self.text_box_4.text = user_data['cin'].replace(' ', '')
             self.text_box_1.text = user_data['registered_off_add']
             # if user_data['proof_verification']:
             #    self.file_loader_1.url = anvil.media.get_url(user_data['proof_verification'])
@@ -31,13 +31,13 @@ class star_1_borrower_registration_form_2_employment_business_3(star_1_borrower_
         user_id = self.userId
 
         # CIN Validation
-        if len(cin) != 21 or len(cin) > 21 or not cin.isalnum():
-            Notification("Please enter a valid 21-character alphanumeric CIN").show()
+        if ' ' in cin:
+            Notification("Spaces are not allowed in the CIN input").show()
             return
 
         # DIN Validation
-        if len(din) != 8 or len(din) > 8 or not din.isdigit():
-            Notification("Please enter a valid 8-digit DIN").show()
+        if ' ' in din:
+            Notification("Spaces are not allowed in the DIN input").show()
             return
 
         # Other field validations
