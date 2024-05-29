@@ -145,7 +145,7 @@ components:
     properties: {col_widths: '{}', background: '', col_spacing: none, spacing_below: medium,
       spacing_above: medium}
     type: ColumnPanel
-    layout_properties: {grid_position: 'DYDFYF,WQUGPE'}
+    layout_properties: {grid_position: 'EDHDBF,FSOFVC', full_width_row: true}
     components:
     - name: button_1_copy
       properties: {text: '', foreground: white, role: null, align: full, background: '#007FFF',
