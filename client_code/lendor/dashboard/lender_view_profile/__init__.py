@@ -54,7 +54,7 @@ class lender_view_profile(lender_view_profileTemplate):
       self.address_2_tx.text = user_profile["street_address_2"]
       self.how_long_stay_tx.text = user_profile["duration_at_address"]
       self.pincode_tx.text = user_profile["pincode"]
-      self.age_tx.text = user_profile["user_age"]
+      # self.age_tx.text = user_profile["user_age"]
       self.vehicle_loan_tx.text = user_profile["vehicle_loan"]
       self.credit_tx.text = user_profile["credit_card_loans"]
       self.qualification_dropdown.selected_value = user_profile["qualification"]
@@ -190,7 +190,7 @@ class lender_view_profile(lender_view_profileTemplate):
     self.address_2_tx.enabled = False
     self.how_long_stay_tx.enabled = False
     self.pincode_tx.enabled = False
-    self.age_tx.enabled = False
+    # self.age_tx.enabled = False
     self.vehicle_loan_tx.enabled = False
     self.credit_tx.enabled = False
     self.qualification_dropdown.enabled = False
@@ -213,7 +213,7 @@ class lender_view_profile(lender_view_profileTemplate):
     self.address_2_tx.enabled = True
     self.how_long_stay_tx.enabled = True
     self.pincode_tx.enabled = True
-    self.age_tx.enabled = True
+    # self.age_tx.enabled = True
     self.vehicle_loan_tx.enabled = True
     self.credit_tx.enabled = True
     self.qualification_dropdown.enabled = True
@@ -229,6 +229,15 @@ class lender_view_profile(lender_view_profileTemplate):
   def save_personal_details_click(self, **event_args):
     def is_valid(value):
         return value and not value.isspace()
+
+    def is_alpha(value):
+        return all(char.isalpha() or char.isspace() for char in value)
+
+    def is_numeric(value):
+        return value.isdigit()
+
+    def is_valid_mobile(value):
+        return value.isdigit() and len(value) == 10
 
     # Collect error messages
     error_messages = []
@@ -247,10 +256,10 @@ class lender_view_profile(lender_view_profileTemplate):
         "State": self.state_tx.text,
         "Present Address": self.present_addres_dropdown.selected_value,
         "Street Address 1": self.address_1_tx.text,
-        "Street Address 2": self.address_2_tx.text,
+        # "Street Address 2": self.address_2_tx.text,
         "Duration at Address": self.how_long_stay_tx.text,
         "Pincode": self.pincode_tx.text,
-        "Age": self.age_tx.text,
+        # "Age": self.age_tx.text,
         "Vehicle Loan": self.vehicle_loan_tx.text,
         "Credit Card Loans": self.credit_tx.text,
         "Qualification": self.qualification_dropdown.selected_value,
@@ -262,6 +271,21 @@ class lender_view_profile(lender_view_profileTemplate):
         if not is_valid(field_value):
             error_messages.append(f"{field_name} is required and cannot be empty or contain only spaces.")
 
+    numeric_fields = {
+        "Mobile Number": self.mobile_tx.text,
+        "How long": self.how_long_stay_tx.text,
+        "Pincode": self.pincode_tx.text,
+
+    }
+    if not is_alpha(self.name_text_box.text):
+        error_messages.append(" Name must contain only alphabetic characters and spaces.")
+    # Mobile number validation
+    if not is_valid_mobile(self.mobile_tx.text):
+        error_messages.append("Mobile Number must be a valid 10-digit number.")
+
+    for field_name, field_value in numeric_fields.items():
+        if not is_numeric(field_value):
+            error_messages.append(f"{field_name} must be a valid number.")
     # Check if there are any validation errors
     if error_messages:
         # Display error messages (customize as per your UI framework)
@@ -361,6 +385,11 @@ class lender_view_profile(lender_view_profileTemplate):
     def is_valid(value):
         return value and not value.isspace()
 
+    def is_alpha(value):
+        return all(char.isalpha() or char.isspace() for char in value)
+
+    def is_numeric(value):
+        return value.isdigit()
     # Collect error messages
     error_messages = []
 
@@ -380,10 +409,21 @@ class lender_view_profile(lender_view_profileTemplate):
         "Last Six Months Bank Proof": self.last_six_month_proof.source
     }
 
+    if not is_alpha(self.company_name_tx.text):
+        error_messages.append("Company Name must contain only alphabetic characters and spaces.")
+    
     for field_name, field_value in required_fields.items():
         if not is_valid(field_value):
             error_messages.append(f"{field_name} is required and cannot be empty or contain only spaces.")
 
+    numeric_fields = {
+        "Business Number": self.company_no_tx.text,
+        "Annual Salary": self.annual_salary_tx.text
+    }
+
+    for field_name, field_value in numeric_fields.items():
+        if not is_numeric(field_value):
+            error_messages.append(f"{field_name} must be a valid number.")
     # Check if there are any validation errors
     if error_messages:
         # Display error messages (customize as per your UI framework)
@@ -464,6 +504,9 @@ class lender_view_profile(lender_view_profileTemplate):
     def is_valid(value):
         return value and not value.isspace()
 
+    def is_alpha(value):
+        return all(char.isalpha() or char.isspace() for char in value)
+
     # Collect error messages
     error_messages = []
 
@@ -481,6 +524,8 @@ class lender_view_profile(lender_view_profileTemplate):
         "Registered Office Address": self.office_address_tx.text,
         # "Proof Verification": self.proof_varification.source
     }
+    if not is_alpha(self.business_name_tex.text):
+        error_messages.append("Company Name must contain only alphabetic characters and spaces.")
 
     for field_name, field_value in required_fields.items():
         if not is_valid(field_value):
@@ -547,6 +592,12 @@ class lender_view_profile(lender_view_profileTemplate):
     def is_valid(value):
         return value and not value.isspace()
 
+    def is_alpha(value):
+        return all(char.isalpha() or char.isspace() for char in value)
+
+    def is_numeric(value):
+        return value.isdigit()
+
     # Collect error messages
     error_messages = []
 
@@ -564,6 +615,19 @@ class lender_view_profile(lender_view_profileTemplate):
     if not is_valid(self.acccount_type_dropdown.selected_value):
         error_messages.append("Account type is required and cannot be empty or contain only spaces.")
 
+    numeric_fields = {
+        "Account Number ": self.account_no_tx.text,
+        # "Annual Salary": self.annual_salary_tx.text
+    }
+    if not is_alpha(self.holder_name_tx.text) :
+        error_messages.append("Company Name must contain only alphabetic characters and spaces.")
+
+    if not is_alpha(self.brach_name_tx.text) :
+        error_messages.append("branch Name must contain only alphabetic characters and spaces.")
+
+    for field_name, field_value in numeric_fields.items():
+        if not is_numeric(field_value):
+            error_messages.append(f"{field_name} must be a valid number.")
     # Check if there are any validation errors
     if error_messages:
         # Display error messages (customize as per your UI framework)
