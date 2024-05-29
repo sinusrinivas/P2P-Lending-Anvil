@@ -115,8 +115,8 @@ components:
     type: Spacer
     layout_properties: {grid_position: 'PLRYKL,MTFOXO FHHSVZ,OZZQGU'}
   - name: image_5
-    properties: {source: _/theme/bank_users/personal_loan/debt_consolidation_loan/fixed-interest-rate.png,
-      display_mode: shrink_to_fit, height: '80'}
+    properties: {source: _/theme/bank_users/main_form/icons8-percentage-64.png, display_mode: shrink_to_fit,
+      height: '80'}
     type: Image
     layout_properties: {grid_position: 'PLRYKL,MTFOXO JQKWVY,XEODAK'}
   - name: label_11

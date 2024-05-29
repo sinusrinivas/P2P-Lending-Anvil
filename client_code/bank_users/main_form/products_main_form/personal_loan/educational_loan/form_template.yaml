@@ -539,7 +539,7 @@ components:
     type: Label
     layout_properties: {grid_position: 'UASOQS,LNMHLD'}
   - name: image_14
-    properties: {source: _/theme/bank_users/personal_loan/education_loan/EL-eligibility1.png,
+    properties: {source: _/theme/bank_users/personal_loan/education_loan/Untitled%20design%20(82).png,
       height: '85'}
     type: Image
     layout_properties: {grid_position: 'PHJGUM,MKCEIV'}
