@@ -9,6 +9,8 @@ import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 from .. import main_form_module as main_form_module
+from datetime import datetime, timedelta
+
 
 
 class borrower_view_profile(borrower_view_profileTemplate):
@@ -84,7 +86,7 @@ class borrower_view_profile(borrower_view_profileTemplate):
       self.business_address_tex.text = user_profile['business_add']
       self.business_type_dropdown.selected_value = user_profile['business_type']
       self.no_of_emp_dropdown.selected_value = user_profile['employees_working']
-      self.year_of_yest_tx.text = user_profile['year_estd']
+      self.year_estimate_date_picker_1.date = user_profile['year_estd']
       self.industry_type_tx.text = user_profile['industry_type']
       self.last_six_turnover_tx.text = user_profile['six_month_turnover']
       self.last_six_month_for_business.source = user_profile['last_six_month_bank_proof']
@@ -175,7 +177,7 @@ class borrower_view_profile(borrower_view_profileTemplate):
 
       if borrower_details:
         self.credit_limit_tx.text = borrower_details['credit_limit']
-        self.member_since_tx.text = borrower_details['borrower_since']
+        self.member_since_date_picker_1.date = borrower_details['borrower_since']
 
   def disable_personal_fields(self):
       self.name_text_box.enabled = False
@@ -231,41 +233,82 @@ class borrower_view_profile(borrower_view_profileTemplate):
       self.govt_2_file_loader_2.visible = True
 
   def save_personal_details_click(self, **event_args):
+    def is_valid(value):
+        return value and not value.isspace()
+
+    # Collect error messages
+    error_messages = []
+
+    # Validate each field
+    required_fields = {
+        "Full Name": self.name_text_box.text,
+        "Mobile Number": self.mobile_tx.text,
+        "Date of Birth": self.d_o_b_text_box.text,
+        "City": self.city_tx.text,
+        "Aadhaar Number": self.g_i_1_tx.text,
+        "PAN Number": self.g_i_2_tx.text,
+        "Gender": self.gender_dropdown.selected_value,
+        "Mother Tongue": self.Language_tx.text,
+        "Marital Status": self.marrital_dropdown.selected_value,
+        "State": self.state_tx.text,
+        "Present Address": self.present_addres_dropdown.selected_value,
+        "Street Address 1": self.address_1_tx.text,
+        "Street Address 2": self.address_2_tx.text,
+        "Duration at Address": self.how_long_stay_tx.text,
+        "Pincode": self.pincode_tx.text,
+        "Age": self.age_tx.text,
+        "Vehicle Loan": self.vehicle_loan_tx.text,
+        "Credit Card Loans": self.credit_tx.text,
+        "Qualification": self.qualification_dropdown.selected_value,
+        "Profession": self.profession_dropdown.selected_value,
+        "Other Loan": self.Language_tx.text,
+    }
+
+    for field_name, field_value in required_fields.items():
+        if not is_valid(field_value):
+            error_messages.append(f"{field_name} is required and cannot be empty or contain only spaces.")
+
+    # Check if there are any validation errors
+    if error_messages:
+        alert("\n".join(error_messages))
+        return
+
+    # If no validation errors, proceed with saving
     user_profile = app_tables.fin_user_profile.get(customer_id=self.user_id)
     if user_profile:
-      user_profile['full_name'] = self.name_text_box.text
-      # user_profile['email_user'] = self.email_tx.text
-      user_profile['mobile'] = self.mobile_tx.text
-      user_profile['date_of_birth'] = self.d_o_b_text_box.text
-      user_profile['city'] = self.city_tx.text
-      user_profile['aadhaar_no'] = self.g_i_1_tx.text
-      user_profile['pan_number'] = self.g_i_2_tx.text
-      user_profile['gender'] = self.gender_dropdown.selected_value
-      user_profile['mouther_tounge'] = self.Language_tx.text
-      user_profile['marital_status'] = self.marrital_dropdown.selected_value
-      user_profile['state'] = self.state_tx.text
-      user_profile['present_address'] = self.present_addres_dropdown.selected_value
-      user_profile['street_adress_1'] = self.address_1_tx.text
-      user_profile['street_address_2'] = self.address_2_tx.text
-      user_profile['duration_at_address'] = self.how_long_stay_tx.text
-      user_profile['pincode'] = self.pincode_tx.text
-      user_profile['user_age'] = int(self.age_tx.text)
-      user_profile['vehicle_loan'] = self.vehicle_loan_tx.text
-      user_profile['credit_card_loans'] = self.credit_tx.text
-      user_profile['qualification'] = self.qualification_dropdown.selected_value
-      user_profile['profession'] = self.profession_dropdown.selected_value
-      user_profile['other_loan'] = self.Language_tx.text
-      self.govt_1_file_loader_1.visible = False
-      self.govt_2_file_loader_2.visible = False
-      self.name_label.text = self.name_text_box.text
-      
-      photo = self.govt_1_file_loader_1.file
-      if photo:
-        user_profile['aadhaar_photo'] = photo
+        user_profile["full_name"] = self.name_text_box.text
+        # user_profile['email_user'] = self.email_tx.text
+        user_profile["mobile"] = self.mobile_tx.text
+        user_profile["date_of_birth"] = self.d_o_b_text_box.text
+        user_profile["city"] = self.city_tx.text
+        user_profile["aadhaar_no"] = self.g_i_1_tx.text
+        user_profile["pan_number"] = self.g_i_2_tx.text
+        user_profile["gender"] = self.gender_dropdown.selected_value
+        user_profile["mouther_tounge"] = self.Language_tx.text
+        user_profile["marital_status"] = self.marrital_dropdown.selected_value
+        user_profile["state"] = self.state_tx.text
+        user_profile["present_address"] = self.present_addres_dropdown.selected_value
+        user_profile["street_adress_1"] = self.address_1_tx.text
+        user_profile["street_address_2"] = self.address_2_tx.text
+        user_profile["duration_at_address"] = self.how_long_stay_tx.text
+        user_profile["pincode"] = self.pincode_tx.text
+        user_profile["user_age"] = int(self.age_tx.text)
+        user_profile["vehicle_loan"] = self.vehicle_loan_tx.text
+        user_profile["credit_card_loans"] = self.credit_tx.text
+        user_profile["qualification"] = self.qualification_dropdown.selected_value
+        user_profile["profession"] = self.profession_dropdown.selected_value
+        user_profile["other_loan"] = self.Language_tx.text
+        self.govt_1_file_loader_1.visible = False
+        self.govt_2_file_loader_2.visible = False
+        self.name_label.text = self.name_text_box.text
 
-      photo = self.govt_2_file_loader_2.file
-      if photo:
-        user_profile['pan_photo'] = photo
+        photo = self.govt_1_file_loader_1.file
+        if photo:
+            user_profile["aadhaar_photo"] = photo
+
+        photo = self.govt_2_file_loader_2.file
+        if photo:
+            user_profile["pan_photo"] = photo
       # user_profile.update()
 
       # wallet = app_tables.fin_wallet.get(customer_id=self.user_id)
@@ -321,28 +364,58 @@ class borrower_view_profile(borrower_view_profileTemplate):
     self.employee_last_six_bank_state_image.visible = True
 
   def save_company_employment_details_click(self, **event_args):
+    def is_valid(value):
+        return value and not value.isspace()
+
+    # Collect error messages
+    error_messages = []
+
+    # Validate each field
+    required_fields = {
+        "Company Name": self.company_name_tx.text,
+        "Occupation Type": self.occupation_dropdown.selected_value,
+        "Employment Type": self.employee_dropdown.selected_value,
+        "Organization Type": self.organization_dropdown.selected_value,
+        "Company Address": self.company_address_tx.text,
+        "Company Landmark": self.landmark_tx.text,
+        "Business Number": self.company_no_tx.text,
+        "Annual Salary": self.annual_salary_tx.text,
+        "Salary Type": self.salary_type_dropdown.selected_value,
+        "Designation": self.designation_tx.text
+    }
+
+    for field_name, field_value in required_fields.items():
+        if not is_valid(field_value):
+            error_messages.append(f"{field_name} is required and cannot be empty or contain only spaces.")
+
+    # Check if there are any validation errors
+    if error_messages:
+        alert("\n".join(error_messages))
+        return
+
+    # If no validation errors, proceed with saving
     user_profile = app_tables.fin_user_profile.get(customer_id=self.user_id)
     if user_profile:
-      user_profile['company_name'] = self.company_name_tx.text
-      user_profile['occupation_type'] = self.occupation_dropdown.selected_value
-      user_profile['employment_type'] = self.employee_dropdown.selected_value
-      user_profile['organization_type'] = self.organization_dropdown.selected_value
-      user_profile['company_address'] = self.company_address_tx.text
-      user_profile['company_landmark'] = self.landmark_tx.text
-      user_profile['business_no'] = self.company_no_tx.text
-      user_profile['annual_salary'] = self.annual_salary_tx.text
-      user_profile['salary_type'] = self.salary_type_dropdown.selected_value
-      user_profile['designation'] = self.designation_tx.text
-      user_profile['emp_id_proof'] = self.emp_id_proof.source
-      user_profile['last_six_month_bank_proof'] = self.last_six_month_proof.source
+        user_profile['company_name'] = self.company_name_tx.text
+        user_profile['occupation_type'] = self.occupation_dropdown.selected_value
+        user_profile['employment_type'] = self.employee_dropdown.selected_value
+        user_profile['organization_type'] = self.organization_dropdown.selected_value
+        user_profile['company_address'] = self.company_address_tx.text
+        user_profile['company_landmark'] = self.landmark_tx.text
+        user_profile['business_no'] = self.company_no_tx.text
+        user_profile['annual_salary'] = self.annual_salary_tx.text
+        user_profile['salary_type'] = self.salary_type_dropdown.selected_value
+        user_profile['designation'] = self.designation_tx.text
+        user_profile['emp_id_proof'] = self.emp_id_proof.source
+        user_profile['last_six_month_bank_proof'] = self.last_six_month_proof.source
 
-      photo = self.employee_id_image.file
-      if photo:
-        user_profile['emp_id_proof'] = photo
+        photo = self.employee_id_image.file
+        if photo:
+            user_profile['emp_id_proof'] = photo
 
-      photo = self.employee_last_six_bank_state_image.file
-      if photo:
-        user_profile['last_six_month_bank_proof'] = photo
+        photo = self.employee_last_six_bank_state_image.file
+        if photo:
+            user_profile['last_six_month_bank_proof'] = photo
 
     self.disable_company_employment_fields()
     self.save_company_employment_details_button.visible = False
@@ -372,16 +445,35 @@ class borrower_view_profile(borrower_view_profileTemplate):
     self.college_proof_image.visible = True
 
   def save_college_details_click(self, **event_args):
+    def is_valid(value):
+        return value and not value.isspace()
+
+    # Collect error messages
+    error_messages = []
+
+    # Validate each field
+    required_fields = {
+        "College Name": self.college_name_tx.text,
+        "College ID": self.college_id_tx.text,
+        "College Address": self.college_address_tx.text
+    }
+
+    for field_name, field_value in required_fields.items():
+        if not is_valid(field_value):
+            error_messages.append(f"{field_name} is required and cannot be empty or contain only spaces.")
+
+    # Check if there are any validation errors
+    if error_messages:
+        alert("\n".join(error_messages))
+        return
+
+    # If no validation errors, proceed with saving
     user_profile = app_tables.fin_user_profile.get(customer_id=self.user_id)
     if user_profile:
-      user_profile['college_name'] = self.college_name_tx.text
-      user_profile['college_id'] = self.college_id_tx.text
-      user_profile['college_address'] = self.college_address_tx.text
-      user_profile['college_proof'] = self.college_proof.source
-
-      photo = self.college_proof_image.file
-      if photo:
-        user_profile['college_proof'] = photo
+        user_profile['college_name'] = self.college_name_tx.text
+        user_profile['college_id'] = self.college_id_tx.text
+        user_profile['college_address'] = self.college_address_tx.text
+        user_profile['college_proof'] = self.college_proof.source
 
     self.disable_college_details_fields()
     self.save_college_details_button.visible = False
@@ -408,24 +500,47 @@ class borrower_view_profile(borrower_view_profileTemplate):
     self.edit_land_farming_details_button.visible = False
 
   def save_land_farming_details_click(self, **event_args):
+    def is_valid(value):
+        return value and not value.isspace()
+
+    # Collect error messages
+    error_messages = []
+
+    # Validate each field
+    required_fields = {
+        "Type of Land": self.type_of_land_dropdown.selected_value,
+        "Total Acres": self.no_of_acers.text,
+        "Crop Name": self.crop_name.text,
+        "Yearly Income": self.yearly_income.text
+    }
+
+    for field_name, field_value in required_fields.items():
+        if not is_valid(field_value):
+            error_messages.append(f"{field_name} is required and cannot be empty or contain only spaces.")
+
+    # Check if there are any validation errors
+    if error_messages:
+        alert("\n".join(error_messages))
+        return
+
+    # If no validation errors, proceed with saving
     user_profile = app_tables.fin_user_profile.get(customer_id=self.user_id)
     if user_profile:
-      user_profile['land_type'] = self.type_of_land_dropdown.selected_value
-      user_profile['total_acres'] = float(self.no_of_acers.text)
-      user_profile['crop_name'] = self.crop_name.text
-      user_profile['farmer_earnings'] = self.yearly_income.text
-
+        user_profile['land_type'] = self.type_of_land_dropdown.selected_value
+        user_profile['total_acres'] = float(self.no_of_acers.text)
+        user_profile['crop_name'] = self.crop_name.text
+        user_profile['farmer_earnings'] = self.yearly_income.text
     self.disable_land_farming_details_fields()
     self.save_land_farming_details_button.visible = False
     self.edit_land_farming_details_button.visible = True
 
   def disable_borrower_profile_info_fields(self):
     self.credit_limit_tx.enabled = False
-    self.member_since_tx.enabled = False
+    self.member_since_date_picker_1.enabled = False
 
   def enable_borrower_profile_info_fields(self):
     self.credit_limit_tx.enabled = True
-    # self.member_since_tx.enabled = True
+    self.member_since_date_picker_1.enabled = True
 
   def edit_borrower_profile_info_click(self, **event_args):
     self.enable_borrower_profile_info_fields()
@@ -433,10 +548,32 @@ class borrower_view_profile(borrower_view_profileTemplate):
     self.edit_borrower_profile_info_button.visible = False
 
   def save_borrower_profile_info_click(self, **event_args):
+    def is_valid(value):
+        return value and not value.isspace()
+
+    # Collect error messages
+    error_messages = []
+
+    # Validate each field
+    required_fields = {
+        "Credit Limit": self.credit_limit_tx.text,
+        # "Member Since": self.member_since_date_picker_1.date
+    }
+
+    for field_name, field_value in required_fields.items():
+        if not is_valid(field_value):
+            error_messages.append(f"{field_name} is required and cannot be empty or contain only spaces.")
+
+    # Check if there are any validation errors
+    if error_messages:
+        alert("\n".join(error_messages))
+        return
+
+    # If no validation errors, proceed with saving
     borrower_details = app_tables.fin_borrower.get(customer_id=self.user_id)
     if borrower_details:
-      borrower_details['credit_limit'] = float(self.credit_limit_tx.text)
-      # borrower_details['borrower_since'] = self.member_since_tx.text
+        borrower_details['credit_limit'] = float(self.credit_limit_tx.text)
+        borrower_details['borrower_since'] = self.member_since_date_picker_1.date
 
     self.disable_borrower_profile_info_fields()
     self.save_borrower_profile_info_button.visible = False
@@ -447,7 +584,7 @@ class borrower_view_profile(borrower_view_profileTemplate):
     self.business_address_tex.enabled = False
     self.business_type_dropdown.enabled = False
     self.no_of_emp_dropdown.enabled = False
-    self.year_of_yest_tx.enabled = False
+    self.year_estimate_date_picker_1.enabled = False
     self.industry_type_tx.enabled = False
     self.last_six_turnover_tx.enabled = False
     self.last_six_month_for_business.enabled = False
@@ -461,7 +598,7 @@ class borrower_view_profile(borrower_view_profileTemplate):
     self.business_address_tex.enabled = True
     self.business_type_dropdown.enabled = True
     self.no_of_emp_dropdown.enabled = True
-    # self.year_of_yest_tx.enabled = True
+    self.year_estimate_date_picker_1.enabled = True
     self.industry_type_tx.enabled = True
     self.last_six_turnover_tx.enabled = True
     self.last_six_month_for_business.enabled = True
@@ -478,28 +615,58 @@ class borrower_view_profile(borrower_view_profileTemplate):
     self.business_proof_varificaions_image.visible = True
 
   def save_business_details_click(self, **event_args):
+    def is_valid(value):
+        return value and not value.isspace()
+
+    # Collect error messages
+    error_messages = []
+
+    # Validate each field
+    required_fields = {
+        "Business Name": self.business_name_tex.text,
+        "Business Address": self.business_address_tex.text,
+        "Business Type": self.business_type_dropdown.selected_value,
+        "Employees Working": self.no_of_emp_dropdown.selected_value,
+        # "Year Established": self.year_estimate_date_picker_1.date,
+        "Industry Type": self.industry_type_tx.text,
+        "Six Month Turnover": self.last_six_turnover_tx.text,
+        "DIN": self.din_tx.text,
+        "CIN": self.cin_tx.text,
+        "Registered Office Address": self.office_address_tx.text
+    }
+
+    for field_name, field_value in required_fields.items():
+        if not is_valid(field_value):
+            error_messages.append(f"{field_name} is required and cannot be empty or contain only spaces.")
+
+    # Check if there are any validation errors
+    if error_messages:
+        alert("\n".join(error_messages))
+        return
+
+    # If no validation errors, proceed with saving
     user_profile = app_tables.fin_user_profile.get(customer_id=self.user_id)
     if user_profile:
-      user_profile['business_name'] = self.business_name_tex.text
-      user_profile['business_add'] = self.business_address_tex.text
-      user_profile['business_type'] = self.business_type_dropdown.selected_value
-      user_profile['employees_working'] = self.no_of_emp_dropdown.selected_value
-      # user_profile['year_estd'] = self.year_of_yest_tx.text
-      user_profile['industry_type'] = self.industry_type_tx.text
-      user_profile['six_month_turnover'] = self.last_six_turnover_tx.text
-      user_profile['last_six_month_bank_proof'] = self.last_six_month_for_business.source
-      user_profile['din'] = self.din_tx.text
-      user_profile['cin'] = self.cin_tx.text
-      user_profile['registered_off_add'] = self.office_address_tx.text
-      user_profile['proof_verification'] = self.proof_varification.source
+        user_profile['business_name'] = self.business_name_tex.text
+        user_profile['business_add'] = self.business_address_tex.text
+        user_profile['business_type'] = self.business_type_dropdown.selected_value
+        user_profile['employees_working'] = self.no_of_emp_dropdown.selected_value
+        user_profile['year_estd'] = self.year_estimate_date_picker_1.date
+        user_profile['industry_type'] = self.industry_type_tx.text
+        user_profile['six_month_turnover'] = self.last_six_turnover_tx.text
+        user_profile['last_six_month_bank_proof'] = self.last_six_month_for_business.source
+        user_profile['din'] = self.din_tx.text
+        user_profile['cin'] = self.cin_tx.text
+        user_profile['registered_off_add'] = self.office_address_tx.text
+        user_profile['proof_verification'] = self.proof_varification.source
 
-      photo = self.business_bank_st_image.file
-      if photo:
-        user_profile['last_six_month_bank_proof'] = photo
+        photo = self.business_bank_st_image.file
+        if photo:
+            user_profile['last_six_month_bank_proof'] = photo
 
-      photo = self.business_proof_varificaions_image.file
-      if photo:
-        user_profile['proof_verification'] = photo
+        photo = self.business_proof_varificaions_image.file
+        if photo:
+            user_profile['proof_verification'] = photo
 
     self.disable_business_details_fields()
     self.save_business_details_button.visible = False
@@ -529,15 +696,49 @@ class borrower_view_profile(borrower_view_profileTemplate):
     self.edit_bank_details_button.visible = False
 
   def save_bank_details_click(self, **event_args):
+    # user_profile = app_tables.fin_user_profile.get(customer_id=self.user_id)
+    # if user_profile:
+    #   user_profile['account_name'] = self.holder_name_tx.text
+    #   user_profile['account_number'] = self.account_no_tx.text
+    #   user_profile['account_bank_branch'] = self.brach_name_tx.text
+    #   user_profile['bank_id'] = self.bank_id_tx.text
+    #   user_profile['bank_name'] = self.bank_name_tx.text
+    #   user_profile['account_type'] = self.acccount_type_dropdown.selected_value
+    def is_valid(value):
+        return value and not value.isspace()
+
+    # Collect error messages
+    error_messages = []
+
+    # Validate each field
+    if not is_valid(self.holder_name_tx.text):
+        error_messages.append("Account holder name is required and cannot be empty or contain only spaces.")
+    if not is_valid(self.account_no_tx.text):
+        error_messages.append("Account number is required and cannot be empty or contain only spaces.")
+    if not is_valid(self.brach_name_tx.text):
+        error_messages.append("Branch name is required and cannot be empty or contain only spaces.")
+    if not is_valid(self.bank_id_tx.text):
+        error_messages.append("Bank ID is required and cannot be empty or contain only spaces.")
+    if not is_valid(self.bank_name_tx.text):
+        error_messages.append("Bank name is required and cannot be empty or contain only spaces.")
+    if not is_valid(self.acccount_type_dropdown.selected_value):
+        error_messages.append("Account type is required and cannot be empty or contain only spaces.")
+
+    # Check if there are any validation errors
+    if error_messages:
+        # Display error messages (customize as per your UI framework)
+        alert("\n".join(error_messages))
+        return
+
+    # If no validation errors, proceed with saving
     user_profile = app_tables.fin_user_profile.get(customer_id=self.user_id)
     if user_profile:
-      user_profile['account_name'] = self.holder_name_tx.text
-      user_profile['account_number'] = self.account_no_tx.text
-      user_profile['account_bank_branch'] = self.brach_name_tx.text
-      user_profile['bank_id'] = self.bank_id_tx.text
-      user_profile['bank_name'] = self.bank_name_tx.text
-      user_profile['account_type'] = self.acccount_type_dropdown.selected_value
-
+        user_profile["account_name"] = self.holder_name_tx.text
+        user_profile["account_number"] = self.account_no_tx.text
+        user_profile["account_bank_branch"] = self.brach_name_tx.text
+        user_profile["bank_id"] = self.bank_id_tx.text
+        user_profile["bank_name"] = self.bank_name_tx.text
+        user_profile["account_type"] = self.acccount_type_dropdown.selected_value
     self.disable_bank_details_fields()
     self.save_bank_details_button.visible = False
     self.edit_bank_details_button.visible = True
@@ -578,7 +779,7 @@ class borrower_view_profile(borrower_view_profileTemplate):
   def Employee_Information_click(self, **event_args):
     """This method is called when the button is clicked"""
     self.personal_information_panel.visible = False
-    self.employee_information_panel.visible = False
+    self.profile_information_paenl.visible = False
     self.business_information_panel.visible = False
     self.professional_information_paenl.visible = False
     self.employee_information_panel.visible = True

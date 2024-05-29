@@ -3,7 +3,7 @@ components:
 - name: content_panel_copy
   properties: {col_widths: '{"XHHUAF":15,"WCIGSN":34}', role: elevated-card}
   type: ColumnPanel
-  layout_properties: {grid_position: 'DADAHP,NLNBLJ', full_width_row: true}
+  layout_properties: {grid_position: 'GEIMFJ,CVUQJT', full_width_row: true}
   components:
   - name: flow_panel_1
     properties: {align: justify, spacing_above: none, spacing_below: none}
@@ -57,40 +57,44 @@ components:
       type: Label
       layout_properties: {grid_position: 'AQPMDH,XPUZFG'}
     - name: button_1_copy_6
-      properties: {text: Personal Information, align: full, background: 'theme:On
-          Disabled', border: '#0b2547'}
+      properties: {text: Personal Information, align: full, background: '#0b2547',
+        border: '', foreground: 'theme:On Primary'}
       type: Button
       layout_properties: {grid_position: 'SLFWWB,FYUCMX'}
       event_bindings: {click: personal_information_click}
     - name: button_1_copy_9
-      properties: {text: Profile Information, align: full, background: 'theme:On Disabled'}
+      properties: {text: Profile Information, align: full, background: '#0b2547',
+        foreground: 'theme:On Primary'}
       type: Button
       layout_properties: {grid_position: 'EVVWUP,QNNLJZ'}
       event_bindings: {click: Profile_Information_click}
     - name: student_button
-      properties: {text: Student_information, align: full, background: 'theme:On Disabled'}
+      properties: {text: Student_information, align: full, background: '#0b2547',
+        foreground: 'theme:On Primary'}
       type: Button
       layout_properties: {grid_position: 'CQGEJR,GWTKUB'}
       event_bindings: {click: Student_information_click}
     - name: employee_button
-      properties: {text: Employee Information, align: full, background: 'theme:On
-          Disabled'}
+      properties: {text: Employee Information, align: full, background: '#0b2547',
+        foreground: 'theme:On Primary'}
       type: Button
       layout_properties: {grid_position: 'XPLRWF,NQPABL'}
       event_bindings: {click: Employee_Information_click}
     - name: farmer_button
-      properties: {text: farmer_infromation, align: full, background: 'theme:On Disabled'}
+      properties: {text: farmer_infromation, align: full, background: '#0b2547', foreground: 'theme:On
+          Primary'}
       type: Button
       layout_properties: {grid_position: 'WFVZSE,MIEXUX'}
       event_bindings: {click: farmer_infromation_click}
     - name: business_button
-      properties: {text: Business Information, align: full, background: 'theme:On
-          Disabled'}
+      properties: {text: Business Information, align: full, background: '#0b2547',
+        foreground: 'theme:On Primary'}
       type: Button
       layout_properties: {grid_position: 'RJDASP,JFFAES'}
       event_bindings: {click: Business_Information_click}
     - name: bank_button
-      properties: {text: Bank Details, align: full, background: 'theme:On Disabled'}
+      properties: {text: Bank Details, align: full, background: '#0b2547', foreground: 'theme:On
+          Primary'}
       type: Button
       layout_properties: {grid_position: 'NEMQIC,GRKKUO'}
       event_bindings: {click: Bank_Details_click}
@@ -104,7 +108,7 @@ components:
     layout_properties: {grid_position: 'DXTZII,WCIGSN'}
     components:
     - name: personal_information_panel
-      properties: {col_widths: '{"JMWRZL":25,"JNUESH":35,"XQSWFO":25,"QJAPZN":25,"IXDCZJ":25,"TLNBEN":25,"EGSFLR":25,"KGQXHY":5,"KLESAL":55,"ZCPZRF":35,"DATHWX":35,"LVJSXW":25,"HYVXAC":35,"NFSLAK":25,"JFBSNP":35,"ZFFVFA":25,"PJCMGZ":35,"DUACGL":25,"ZFULZJ":35,"VAVODZ":25,"NCNLMF":25,"BEMUDH":35,"SPMTQD":25,"YYVQHV":35,"LPGPDR":25,"TLJQVF":35,"DLXMPU":25,"KTXPQT":35,"JRYIFF":25,"FFEKIU":35,"KHSZQT":25,"USYQIB":25,"RUGPEC":35,"UICXOL":25,"GIEGUE":35,"BZAMHW":25,"ESNGXI":35,"SSGVTB":35,"LETFXN":25,"YNBCAU":35,"IMHPVD":35,"ORARGK":25,"LBAQLI":35,"GJDUAS":25,"HFIOKG":35,"FBVMCM":35,"VGTTOU":35,"RNPDXV":35}',
+      properties: {col_widths: '{"JMWRZL":25,"JNUESH":35,"XQSWFO":25,"QJAPZN":25,"IXDCZJ":25,"TLNBEN":25,"EGSFLR":25,"KGQXHY":5,"KLESAL":55,"ZCPZRF":35,"DATHWX":35,"LVJSXW":25,"HYVXAC":35,"NFSLAK":25,"JFBSNP":35,"ZFFVFA":25,"PJCMGZ":35,"DUACGL":25,"ZFULZJ":35,"VAVODZ":25,"NCNLMF":25,"BEMUDH":35,"SPMTQD":25,"YYVQHV":35,"LPGPDR":25,"TLJQVF":35,"DLXMPU":25,"KTXPQT":35,"JRYIFF":25,"FFEKIU":35,"KHSZQT":25,"USYQIB":25,"RUGPEC":35,"UICXOL":25,"GIEGUE":35,"BZAMHW":25,"ESNGXI":35,"SSGVTB":35,"LETFXN":25,"YNBCAU":35,"IMHPVD":35,"ORARGK":35,"LBAQLI":20,"GJDUAS":35,"HFIOKG":20,"FBVMCM":35,"VGTTOU":35,"RNPDXV":35,"HRBWNJ":25,"KYREAQ":25}',
         role: elevated-card, visible: true}
       type: ColumnPanel
       layout_properties: {grid_position: 'VNYQWZ,XCYJCJ', full_width_row: true}
@@ -200,6 +204,10 @@ components:
         type: FileLoader
         layout_properties: {grid_position: 'NQDUFW,KLESAL NKNCPO,LBAQLI ZMECWG,QUPXSJ'}
         event_bindings: {change: govt_1_file_loader_1_change}
+      - name: spacer_7
+        properties: {height: 183.28570556640625}
+        type: Spacer
+        layout_properties: {grid_position: 'NQDUFW,KLESAL NKNCPO,HRBWNJ'}
       - name: label_2
         properties: {text: 'Govt Id 2 :', bold: true, font_size: 16}
         type: Label
@@ -221,6 +229,10 @@ components:
         type: FileLoader
         layout_properties: {grid_position: 'NQDUFW,KLESAL CVMOXV,HFIOKG BCTRAA,MUUUGL'}
         event_bindings: {change: govt_2_file_loader_2_change}
+      - name: spacer_8
+        properties: {height: 109.42852783203125}
+        type: Spacer
+        layout_properties: {grid_position: 'NQDUFW,KLESAL CVMOXV,KYREAQ'}
       - name: label_3
         properties: {text: 'City :', bold: true, font_size: 16}
         type: Label
@@ -319,13 +331,14 @@ components:
         type: TextBox
         layout_properties: {grid_position: 'NQDUFW,KLESAL LYDAHE,ESNGXI'}
       - name: edit_personal_details_button
-        properties: {text: Edit Details, background: 'theme:On Disabled', align: right}
+        properties: {text: Edit Details, background: '#0b2547', align: right, foreground: 'theme:On
+            Primary'}
         type: Button
         layout_properties: {grid_position: 'EZWNNW,KUNIRM'}
         event_bindings: {click: edit_personal_details_click}
       - name: save_personal_details_button
-        properties: {text: '    Save     ', background: 'theme:On Disabled', align: left,
-          visible: false}
+        properties: {text: '    Save     ', background: '#0b2547', align: left, visible: false,
+          foreground: 'theme:On Primary'}
         type: Button
         layout_properties: {grid_position: 'EZWNNW,POYCFW'}
         event_bindings: {click: save_personal_details_click}
@@ -384,10 +397,10 @@ components:
         properties: {text: 'Year of Establishment :', bold: true, font_size: 16}
         type: Label
         layout_properties: {grid_position: 'NQDUFW,KLESAL HJFUYQ,BARDJM'}
-      - name: year_of_yest_tx
-        properties: {background: 'theme:On Primary', role: outlined, text: ''}
-        type: TextBox
-        layout_properties: {grid_position: 'NQDUFW,KLESAL HJFUYQ,JPIBNI'}
+      - name: year_estimate_date_picker_1
+        properties: {role: outlined}
+        type: DatePicker
+        layout_properties: {grid_position: 'NQDUFW,KLESAL HJFUYQ,NMZMGS'}
       - name: label_10
         properties: {text: 'Industry Type :', bold: true, font_size: 16}
         type: Label
@@ -463,13 +476,14 @@ components:
         type: Spacer
         layout_properties: {grid_position: 'NQDUFW,KLESAL UTGDVH,IMNUVQ'}
       - name: edit_business_details_button
-        properties: {text: edit, background: 'theme:On Disabled', align: right}
+        properties: {text: edit, background: '#0b2547', align: right, foreground: 'theme:On
+            Primary'}
         type: Button
         layout_properties: {grid_position: 'FEQCWG,TPCPSD'}
         event_bindings: {click: edit_business_details_click}
       - name: save_business_details_button
-        properties: {text: '    Save     ', background: 'theme:On Disabled', align: left,
-          visible: false}
+        properties: {text: '    Save     ', background: '#0b2547', align: left, visible: false,
+          foreground: 'theme:On Primary'}
         type: Button
         layout_properties: {grid_position: 'FEQCWG,PRRLQI'}
         event_bindings: {click: save_business_details_click}
@@ -526,18 +540,19 @@ components:
         type: TextBox
         layout_properties: {grid_position: 'NQDUFW,KLESAL DDRTFJ,SAQKJQ'}
       - name: edit_land_farming_details_button
-        properties: {text: edit, background: 'theme:On Disabled', align: right}
+        properties: {text: edit, background: '#0b2547', align: right, foreground: 'theme:On
+            Primary'}
         type: Button
         layout_properties: {grid_position: 'AURCIS,MFXVGA'}
         event_bindings: {click: edit_land_farming_details_click}
       - name: save_land_farming_details_button
-        properties: {text: '    Save     ', background: 'theme:On Disabled', align: left,
-          visible: false}
+        properties: {text: '    Save     ', background: '#0b2547', align: left, visible: false,
+          foreground: 'theme:On Primary'}
         type: Button
         layout_properties: {grid_position: 'AURCIS,DDHVMK'}
         event_bindings: {click: save_land_farming_details_click}
     - name: employee_information_panel
-      properties: {col_widths: '{"EYUVDS":30,"JMWRZL":30,"XQSWFO":30,"QJAPZN":30,"IXDCZJ":30,"EGSFLR":30,"KGQXHY":5,"KLESAL":55,"LTYSQY":30,"JPIBNI":30,"IHVXBU":30,"MNSTRU":30,"VJUZWW":30,"PZOSCC":30,"ZWVXZO":30,"CEGBWH":30,"QANZQS":30,"BUJJIC":30,"GHLGSS":30,"TZZALR":30,"SBEZLO":30,"ZRXTMG":30,"KGUBQO":30,"PJRDRR":30}',
+      properties: {col_widths: '{"EYUVDS":30,"JMWRZL":30,"XQSWFO":30,"QJAPZN":30,"IXDCZJ":30,"EGSFLR":30,"KGQXHY":5,"KLESAL":55,"LTYSQY":30,"JPIBNI":30,"IHVXBU":30,"MNSTRU":30,"VJUZWW":30,"PZOSCC":30,"ZWVXZO":40,"CEGBWH":20,"QANZQS":40,"BUJJIC":20,"GHLGSS":30,"TZZALR":30,"SBEZLO":30,"ZRXTMG":30,"KGUBQO":30,"PJRDRR":30,"IDDZAA":20,"VLDHFB":20}',
         role: elevated-card, visible: false}
       type: ColumnPanel
       layout_properties: {grid_position: 'JNOBDG,XWGBKV', full_width_row: true}
@@ -648,6 +663,10 @@ components:
         type: FileLoader
         layout_properties: {grid_position: 'NQDUFW,KLESAL FVHFPC,BUJJIC RVNVZZ,UJAMMA'}
         event_bindings: {change: employee_id_image_change}
+      - name: spacer_9
+        properties: {height: 32}
+        type: Spacer
+        layout_properties: {grid_position: 'NQDUFW,KLESAL FVHFPC,IDDZAA'}
       - name: label_4_copy_5_copy_copy_copy_copy_copy_copy_2_copy_2
         properties: {text: 'last six months bank statement :', bold: true, font_size: 16,
           icon: ''}
@@ -662,14 +681,19 @@ components:
         type: FileLoader
         layout_properties: {grid_position: 'NQDUFW,KLESAL UHAUTE,CEGBWH UCWZUE,WDZZTV'}
         event_bindings: {change: employee_last_six_bank_state_image_change}
+      - name: spacer_10
+        properties: {height: 32}
+        type: Spacer
+        layout_properties: {grid_position: 'NQDUFW,KLESAL UHAUTE,VLDHFB'}
       - name: edit_company_employment_details_button
-        properties: {text: edit, background: 'theme:On Disabled', align: right}
+        properties: {text: edit, background: '#0b2547', align: right, foreground: 'theme:On
+            Primary'}
         type: Button
         layout_properties: {grid_position: 'KROHZI,EGPGPA'}
         event_bindings: {click: edit_company_employment_details_click}
       - name: save_company_employment_details_button
-        properties: {text: '    Save     ', background: 'theme:On Disabled', align: left,
-          visible: false}
+        properties: {text: '    Save     ', background: '#0b2547', align: left, visible: false,
+          foreground: 'theme:On Primary'}
         type: Button
         layout_properties: {grid_position: 'KROHZI,QZMEWQ'}
         event_bindings: {click: save_company_employment_details_click}
@@ -705,18 +729,19 @@ components:
           icon: ''}
         type: Label
         layout_properties: {grid_position: 'NQDUFW,KLESAL YCJUMM,JMWRZL'}
-      - name: member_since_tx
-        properties: {background: 'theme:On Primary', role: outlined, text: ''}
-        type: TextBox
-        layout_properties: {grid_position: 'NQDUFW,KLESAL YCJUMM,JNUESH'}
+      - name: member_since_date_picker_1
+        properties: {role: outlined}
+        type: DatePicker
+        layout_properties: {grid_position: 'NQDUFW,KLESAL YCJUMM,JLPBJM'}
       - name: edit_borrower_profile_info_button
-        properties: {text: edit, background: 'theme:On Disabled', align: right}
+        properties: {text: edit, background: '#0b2547', align: right, foreground: 'theme:On
+            Primary'}
         type: Button
         layout_properties: {grid_position: 'BZZGWY,FTQEKT'}
         event_bindings: {click: edit_borrower_profile_info_click}
       - name: save_borrower_profile_info_button
-        properties: {text: '    Save     ', background: 'theme:On Disabled', align: left,
-          visible: false}
+        properties: {text: '    Save     ', background: '#0b2547', align: left, visible: false,
+          foreground: 'theme:On Primary'}
         type: Button
         layout_properties: {grid_position: 'BZZGWY,GWAHSV'}
         event_bindings: {click: save_borrower_profile_info_click}
@@ -748,7 +773,7 @@ components:
         type: TextBox
         layout_properties: {grid_position: 'NQDUFW,KLESAL NGTOCT,LTYSQY'}
       - name: label_1_copy_copy_copy_copy_copy
-        properties: {text: 'Account type Account :', bold: true, font_size: 16, icon: ''}
+        properties: {text: 'Account type :', bold: true, font_size: 16, icon: ''}
         type: Label
         layout_properties: {grid_position: 'NQDUFW,KLESAL YCJUMM,JMWRZL'}
       - name: acccount_type_dropdown
@@ -788,18 +813,19 @@ components:
         type: TextBox
         layout_properties: {grid_position: 'NQDUFW,KLESAL VTZCTS,IHVXBU'}
       - name: edit_bank_details_button
-        properties: {text: edit, background: 'theme:On Disabled', align: right}
+        properties: {text: edit, background: '#0b2547', align: right, foreground: 'theme:On
+            Primary'}
         type: Button
         layout_properties: {grid_position: 'NQDUFW,KLESAL ARRRNY,HZRXNA'}
         event_bindings: {click: edit_bank_details_click}
       - name: save_bank_details_button
-        properties: {text: '    Save     ', background: 'theme:On Disabled', align: left,
-          visible: false}
+        properties: {text: '    Save     ', background: '#0b2547', align: left, visible: false,
+          foreground: 'theme:On Primary'}
         type: Button
         layout_properties: {grid_position: 'NQDUFW,KLESAL ARRRNY,SLBBUV'}
         event_bindings: {click: save_bank_details_click}
     - name: professional_information_paenl
-      properties: {col_widths: '{"EYUVDS":30,"JMWRZL":30,"KGQXHY":5,"KLESAL":55,"BGUZEE":30,"ZNLJDO":30,"IUFHGQ":30,"ZPGTQV":30,"IIBTJV":30,"CECQCA":20,"KXDMFM":10}',
+      properties: {col_widths: '{"EYUVDS":30,"JMWRZL":30,"KGQXHY":5,"KLESAL":55,"BGUZEE":30,"ZNLJDO":30,"IUFHGQ":30,"ZPGTQV":30,"IIBTJV":30,"CECQCA":15,"KXDMFM":15}',
         role: elevated-card, visible: false}
       type: ColumnPanel
       layout_properties: {grid_position: 'VJEFFN,KKSDKE', full_width_row: true}
@@ -859,13 +885,14 @@ components:
         type: Spacer
         layout_properties: {grid_position: 'NQDUFW,KLESAL DDRTFJ,KXDMFM'}
       - name: edit_college_details_button
-        properties: {text: edit, background: 'theme:On Disabled', align: right}
+        properties: {text: edit, background: '#0b2547', align: right, foreground: 'theme:On
+            Primary'}
         type: Button
         layout_properties: {grid_position: 'AURCIS,MFXVGA'}
         event_bindings: {click: edit_college_details_click}
       - name: save_college_details_button
-        properties: {text: '    Save     ', background: 'theme:On Disabled', align: left,
-          visible: false}
+        properties: {text: '    Save     ', background: '#0b2547', align: left, visible: false,
+          foreground: 'theme:On Primary'}
         type: Button
         layout_properties: {grid_position: 'AURCIS,JALJOF'}
         event_bindings: {click: save_college_details_click}
