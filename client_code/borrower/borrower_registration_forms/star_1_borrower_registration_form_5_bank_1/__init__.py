@@ -36,9 +36,10 @@ class star_1_borrower_registration_form_5_bank_1(star_1_borrower_registration_fo
     user_id = self.userId
     
     if account_number.startswith(" "):
-        alert("Space values are not accepted in account_number")
+        alert("account number doesn't take space value please add the correct number")
         return
-    elif not account_name or not account_type or not account_number or not bank_name:
+      
+    if not account_name or not account_type or not account_number or not bank_name:
         Notification("Please fill all the required fields").show()
     elif not re.match(r'^[A-Za-z\s]+$', account_name):
         Notification("Account name should be valid").show()

@@ -27,6 +27,10 @@ class star_1_borrower_registration_form_5_bank_2(star_1_borrower_registration_fo
     user_id = self.userId
     t_and_c = self.check_box_1_copy_2 
 
+    if bank_branch.startswith(" "):
+        alert("bank_brach doesn't take space value please add the correct branch name")
+        return
+    
     if not bank_id or not bank_branch or not t_and_c:
         Notification("Please fill all required fields").show()
     else:

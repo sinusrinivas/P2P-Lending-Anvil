@@ -13,17 +13,11 @@ class star_1_borrower_registration_form_2_employment_farmer(star_1_borrower_regi
     def __init__(self, user_id, **properties):
         self.userId = user_id
         user_data = app_tables.fin_user_profile.get(customer_id=user_id)
-        
         if user_data:
-            self.drop_down_1.selected_value = user_data.get('land_type', "")
-            total_acres = user_data.get('total_acres')
-            print(f"Total Acres from DB: {total_acres}")  # Debug print to check value
-
-            # Handle total_acres being None or a valid value
-            self.text_box_1.text = str(total_acres) if total_acres is not None else ""
-
-            self.text_box_2.text = user_data.get('crop_name', "")
-            self.text_box_3.text = user_data.get('farmer_earnings', "")
+            self.drop_down_1.selected_value = user_data['land_type']
+            self.text_box_1.text = str(user_data['total_acres'])  # Convert to string
+            self.text_box_2.text = user_data['crop_name']
+            self.text_box_3.text = user_data['farmer_earnings']
 
             options_2 = app_tables.fin_borrower_land_type.search()
             option_strings_2 = [str(option['land_type']) for option in options_2]
