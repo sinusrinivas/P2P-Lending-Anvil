@@ -19,20 +19,20 @@ class add_subcategory(add_subcategoryTemplate):
 
   def refresh(self):
     """Refresh repeating panels with the latest data"""
-    self.repeating_panel_1.items = app_tables.fin_admin_beseem_categories.search(group_name="gender")
-    self.repeating_panel_2.items = app_tables.fin_admin_beseem_categories.search(group_name="qualification")
-    self.repeating_panel_3.items = app_tables.fin_admin_beseem_categories.search(group_name="marital_status")
-    self.repeating_panel_5.items = app_tables.fin_admin_beseem_categories.search(group_name="profession")
-    self.repeating_panel_6.items = app_tables.fin_admin_beseem_categories.search(group_name="organization_type")
-    self.repeating_panel_7.items = app_tables.fin_admin_beseem_categories.search(group_name="present_address")
-    self.repeating_panel_8.items = app_tables.fin_admin_beseem_categories.search(group_name="duration_at_address")
-    self.repeating_panel_9.items = app_tables.fin_admin_beseem_categories.search(group_name="salary_type")
-    self.repeating_panel_10.items = app_tables.fin_admin_beseem_categories.search(group_name='spouse_profession')
-    self.repeating_panel_11.items = app_tables.fin_admin_beseem_categories.search(group_name='age_of_business')
-    self.repeating_panel_12.items = app_tables.fin_admin_beseem_categories.search(group_name="home_loan")
-    self.repeating_panel_13.items = app_tables.fin_admin_beseem_categories.search(group_name="other_loan")
-    self.repeating_panel_14.items = app_tables.fin_admin_beseem_categories.search(group_name="credit_card_loan")
-    self.repeating_panel_15.items = app_tables.fin_admin_beseem_categories.search(group_name="vehicle_loan")
+    self.repeating_panel_1.items = app_tables.fin_admin_ascend_categories.search(group_name="gender")
+    self.repeating_panel_2.items = app_tables.fin_admin_ascend_categories.search(group_name="qualification")
+    self.repeating_panel_3.items = app_tables.fin_admin_ascend_categories.search(group_name="marital_status")
+    self.repeating_panel_5.items = app_tables.fin_admin_ascend_categories.search(group_name="profession")
+    self.repeating_panel_6.items = app_tables.fin_admin_ascend_categories.search(group_name="organization_type")
+    self.repeating_panel_7.items = app_tables.fin_admin_ascend_categories.search(group_name="present_address")
+    self.repeating_panel_8.items = app_tables.fin_admin_ascend_categories.search(group_name="duration_at_address")
+    self.repeating_panel_9.items = app_tables.fin_admin_ascend_categories.search(group_name="salary_type")
+    self.repeating_panel_10.items = app_tables.fin_admin_ascend_categories.search(group_name='spouse_profession')
+    self.repeating_panel_11.items = app_tables.fin_admin_ascend_categories.search(group_name='age_of_business')
+    self.repeating_panel_12.items = app_tables.fin_admin_ascend_categories.search(group_name="home_loan")
+    self.repeating_panel_13.items = app_tables.fin_admin_ascend_categories.search(group_name="other_loan")
+    self.repeating_panel_14.items = app_tables.fin_admin_ascend_categories.search(group_name="credit_card_loan")
+    self.repeating_panel_15.items = app_tables.fin_admin_ascend_categories.search(group_name="vehicle_loan")
   
   def back_btn_click(self, **event_args):
     """This method is called when the button is clicked"""
@@ -42,22 +42,22 @@ class add_subcategory(add_subcategoryTemplate):
     """This method is called when the button is clicked"""
     entered_sub = self.text_box_1.text.lower()
     entered_min_pts = int(self.text_box_2.text)
-    new_row = app_tables.fin_admin_beseem_categories.add_row(group_name='gender',sub_category=entered_sub,min_points=entered_min_pts)
+    new_row = app_tables.fin_admin_ascend_categories.add_row(group_name='gender',sub_category=entered_sub,min_points=entered_min_pts)
     self.text_box_1.text = ' '
     self.text_box_2.text = ' '
     self.refresh()
 
-    existing_min_points = [row["min_points"] for row in app_tables.fin_admin_beseem_categories.search(group_name='gender')]
+    existing_min_points = [row["min_points"] for row in app_tables.fin_admin_ascend_categories.search(group_name='gender')]
 
     max_points = max(existing_min_points + [entered_min_pts])
 
-    existing_group_row  = app_tables.fin_admin_beseem_groups.get(group_name="gender")
+    existing_group_row  = app_tables.fin_admin_ascend_groups.get(group_name="gender")
     if existing_group_row:
       existing_group_row['max_points'] = max_points
       existing_group_row.update()
 
     else:
-      new_group_row = app_tables.fin_admin_beseem_groups.add_row(
+      new_group_row = app_tables.fin_admin_ascend_groups.add_row(
             group_name="gender", max_points=max_points
         )
 
@@ -65,22 +65,22 @@ class add_subcategory(add_subcategoryTemplate):
     """This method is called when the button is clicked"""
     entered_sub = self.text_box_3.text.lower()
     entered_min_pts = int(self.text_box_4.text)
-    new_row = app_tables.fin_admin_beseem_categories.add_row(group_name='qualification',sub_category=entered_sub,min_points=entered_min_pts)
+    new_row = app_tables.fin_admin_ascend_categories.add_row(group_name='qualification',sub_category=entered_sub,min_points=entered_min_pts)
     self.text_box_3.text = ' '
     self.text_box_4.text = ' '
     self.refresh()
 
-    existing_min_points = [row["min_points"] for row in app_tables.fin_admin_beseem_categories.search(group_name='qualification')]
+    existing_min_points = [row["min_points"] for row in app_tables.fin_admin_ascend_categories.search(group_name='qualification')]
 
     max_points = max(existing_min_points + [entered_min_pts])
 
-    existing_group_row  = app_tables.fin_admin_beseem_groups.get(group_name="qualification")
+    existing_group_row  = app_tables.fin_admin_ascend_groups.get(group_name="qualification")
     if existing_group_row:
       existing_group_row['max_points'] = max_points
       existing_group_row.update()
 
     else:
-      new_group_row = app_tables.fin_admin_beseem_groups.add_row(
+      new_group_row = app_tables.fin_admin_ascend_groups.add_row(
             group_name="qualification", max_points=max_points
         )
 
@@ -89,23 +89,23 @@ class add_subcategory(add_subcategoryTemplate):
     entered_sub = self.text_box_5.text.lower()
     entered_age = self.text_box_5a.text.lower()
     entered_min_pts = int(self.text_box_6.text)
-    new_row = app_tables.fin_admin_beseem_categories.add_row(group_name='marital_status',sub_category=entered_sub,min_points=entered_min_pts,age=entered_age)
+    new_row = app_tables.fin_admin_ascend_categories.add_row(group_name='marital_status',sub_category=entered_sub,min_points=entered_min_pts,age=entered_age)
     self.text_box_5.text = ' '
     self.text_box_5a.text = ' '
     self.text_box_6.text = ' '
     self.refresh()
 
-    existing_min_points = [row["min_points"] for row in app_tables.fin_admin_beseem_categories.search(group_name='marital_status')]
+    existing_min_points = [row["min_points"] for row in app_tables.fin_admin_ascend_categories.search(group_name='marital_status')]
 
     max_points = max(existing_min_points + [entered_min_pts])
 
-    existing_group_row  = app_tables.fin_admin_beseem_groups.get(group_name="marital_status")
+    existing_group_row  = app_tables.fin_admin_ascend_groups.get(group_name="marital_status")
     if existing_group_row:
       existing_group_row['max_points'] = max_points
       existing_group_row.update()
 
     else:
-      new_group_row = app_tables.fin_admin_beseem_groups.add_row(
+      new_group_row = app_tables.fin_admin_ascend_groups.add_row(
             group_name="marital_status", max_points=max_points
         )
 
@@ -117,22 +117,22 @@ class add_subcategory(add_subcategoryTemplate):
     #     alert("Please enter a valid profession: 'Student', 'Employee', 'Self employment'.")
     #     return
     entered_min_pts = int(self.text_box_8.text)
-    new_row = app_tables.fin_admin_beseem_categories.add_row(group_name='profession',sub_category=entered_sub,min_points=entered_min_pts)
+    new_row = app_tables.fin_admin_ascend_categories.add_row(group_name='profession',sub_category=entered_sub,min_points=entered_min_pts)
     self.text_box_7.text = ' '
     self.text_box_8.text = ' '
     self.refresh()
 
-    existing_min_points = [row["min_points"] for row in app_tables.fin_admin_beseem_categories.search(group_name='profession')]
+    existing_min_points = [row["min_points"] for row in app_tables.fin_admin_ascend_categories.search(group_name='profession')]
 
     max_points = max(existing_min_points + [entered_min_pts])
 
-    existing_group_row  = app_tables.fin_admin_beseem_groups.get(group_name="profession")
+    existing_group_row  = app_tables.fin_admin_ascend_groups.get(group_name="profession")
     if existing_group_row:
       existing_group_row['max_points'] = max_points
       existing_group_row.update()
 
     else:
-      new_group_row = app_tables.fin_admin_beseem_groups.add_row(
+      new_group_row = app_tables.fin_admin_ascend_groups.add_row(
             group_name="profession", max_points=max_points
         )
     
@@ -141,22 +141,22 @@ class add_subcategory(add_subcategoryTemplate):
     """This method is called when the button is clicked"""
     entered_sub = self.text_box_12.text.lower()
     entered_min_pts = int(self.text_box_13.text)
-    new_row = app_tables.fin_admin_beseem_categories.add_row(group_name='organization_type',sub_category=entered_sub,min_points=entered_min_pts)
+    new_row = app_tables.fin_admin_ascend_categories.add_row(group_name='organization_type',sub_category=entered_sub,min_points=entered_min_pts)
     self.text_box_12.text = ' '
     self.text_box_13.text = ' '
     self.refresh()
 
-    existing_min_points = [row["min_points"] for row in app_tables.fin_admin_beseem_categories.search(group_name='organization_type')]
+    existing_min_points = [row["min_points"] for row in app_tables.fin_admin_ascend_categories.search(group_name='organization_type')]
 
     max_points = max(existing_min_points + [entered_min_pts])
 
-    existing_group_row  = app_tables.fin_admin_beseem_groups.get(group_name="organization_type")
+    existing_group_row  = app_tables.fin_admin_ascend_groups.get(group_name="organization_type")
     if existing_group_row:
       existing_group_row['max_points'] = max_points
       existing_group_row.update()
 
     else:
-      new_group_row = app_tables.fin_admin_beseem_groups.add_row(
+      new_group_row = app_tables.fin_admin_ascend_groups.add_row(
             group_name="organization_type", max_points=max_points
         )
 
@@ -164,22 +164,22 @@ class add_subcategory(add_subcategoryTemplate):
     """This method is called when the button is clicked"""
     entered_sub = self.text_box_14.text.lower()
     entered_min_pts = int(self.text_box_15.text)
-    new_row = app_tables.fin_admin_beseem_categories.add_row(group_name='present_address',sub_category=entered_sub,min_points=entered_min_pts)
+    new_row = app_tables.fin_admin_ascend_categories.add_row(group_name='present_address',sub_category=entered_sub,min_points=entered_min_pts)
     self.text_box_14.text = ' '
     self.text_box_15.text = ' '
     self.refresh()
 
-    existing_min_points = [row["min_points"] for row in app_tables.fin_admin_beseem_categories.search(group_name='present_address')]
+    existing_min_points = [row["min_points"] for row in app_tables.fin_admin_ascend_categories.search(group_name='present_address')]
 
     max_points = max(existing_min_points + [entered_min_pts])
 
-    existing_group_row  = app_tables.fin_admin_beseem_groups.get(group_name="present_address")
+    existing_group_row  = app_tables.fin_admin_ascend_groups.get(group_name="present_address")
     if existing_group_row:
       existing_group_row['max_points'] = max_points
       existing_group_row.update()
 
     else:
-      new_group_row = app_tables.fin_admin_beseem_groups.add_row(
+      new_group_row = app_tables.fin_admin_ascend_groups.add_row(
             group_name="present_address", max_points=max_points
         )
 
@@ -187,22 +187,22 @@ class add_subcategory(add_subcategoryTemplate):
     """This method is called when the button is clicked"""
     entered_sub = self.text_box_16.text.lower()
     entered_min_pts = int(self.text_box_17.text)
-    new_row = app_tables.fin_admin_beseem_categories.add_row(group_name='duration_at_address',sub_category=entered_sub,min_points=entered_min_pts)
+    new_row = app_tables.fin_admin_ascend_categories.add_row(group_name='duration_at_address',sub_category=entered_sub,min_points=entered_min_pts)
     self.text_box_16.text = ' '
     self.text_box_17.text = ' '
     self.refresh()
 
-    existing_min_points = [row["min_points"] for row in app_tables.fin_admin_beseem_categories.search(group_name='duration_at_address')]
+    existing_min_points = [row["min_points"] for row in app_tables.fin_admin_ascend_categories.search(group_name='duration_at_address')]
 
     max_points = max(existing_min_points + [entered_min_pts])
 
-    existing_group_row  = app_tables.fin_admin_beseem_groups.get(group_name="duration_at_address")
+    existing_group_row  = app_tables.fin_admin_ascend_groups.get(group_name="duration_at_address")
     if existing_group_row:
       existing_group_row['max_points'] = max_points
       existing_group_row.update()
 
     else:
-      new_group_row = app_tables.fin_admin_beseem_groups.add_row(
+      new_group_row = app_tables.fin_admin_ascend_groups.add_row(
             group_name="duration_at_address", max_points=max_points
         )
 
@@ -210,22 +210,22 @@ class add_subcategory(add_subcategoryTemplate):
     """This method is called when the button is clicked"""
     entered_sub = self.text_box_18.text.lower()
     entered_min_pts = int(self.text_box_19.text)
-    new_row = app_tables.fin_admin_beseem_categories.add_row(group_name='salary_type',sub_category=entered_sub,min_points=entered_min_pts)
+    new_row = app_tables.fin_admin_ascend_categories.add_row(group_name='salary_type',sub_category=entered_sub,min_points=entered_min_pts)
     self.text_box_18.text = ' '
     self.text_box_19.text = ' '
     self.refresh()
 
-    existing_min_points = [row["min_points"] for row in app_tables.fin_admin_beseem_categories.search(group_name='salary_type')]
+    existing_min_points = [row["min_points"] for row in app_tables.fin_admin_ascend_categories.search(group_name='salary_type')]
 
     max_points = max(existing_min_points + [entered_min_pts])
 
-    existing_group_row  = app_tables.fin_admin_beseem_groups.get(group_name="salary_type")
+    existing_group_row  = app_tables.fin_admin_ascend_groups.get(group_name="salary_type")
     if existing_group_row:
       existing_group_row['max_points'] = max_points
       existing_group_row.update()
 
     else:
-      new_group_row = app_tables.fin_admin_beseem_groups.add_row(
+      new_group_row = app_tables.fin_admin_ascend_groups.add_row(
             group_name="salary_type", max_points=max_points
         )
 
@@ -234,22 +234,22 @@ class add_subcategory(add_subcategoryTemplate):
     
     entered_sub = self.text_box_20.text.lower()
     entered_min_pts = int(self.text_box_21.text)
-    new_row = app_tables.fin_admin_beseem_categories.add_row(group_name='spouse_profession',sub_category=entered_sub,min_points=entered_min_pts)
+    new_row = app_tables.fin_admin_ascend_categories.add_row(group_name='spouse_profession',sub_category=entered_sub,min_points=entered_min_pts)
     self.text_box_20.text = ' '
     self.text_box_21.text = ' '
     self.refresh()
 
-    existing_min_points = [row["min_points"] for row in app_tables.fin_admin_beseem_categories.search(group_name='spouse_profession')]
+    existing_min_points = [row["min_points"] for row in app_tables.fin_admin_ascend_categories.search(group_name='spouse_profession')]
 
     max_points = max(existing_min_points + [entered_min_pts])
 
-    existing_group_row  = app_tables.fin_admin_beseem_groups.get(group_name="spouse_profession")
+    existing_group_row  = app_tables.fin_admin_ascend_groups.get(group_name="spouse_profession")
     if existing_group_row:
       existing_group_row['max_points'] = max_points
       existing_group_row.update()
 
     else:
-      new_group_row = app_tables.fin_admin_beseem_groups.add_row(
+      new_group_row = app_tables.fin_admin_ascend_groups.add_row(
             group_name="spouse_profession", max_points=max_points
         )
 
@@ -257,22 +257,22 @@ class add_subcategory(add_subcategoryTemplate):
     """This method is called when the button is clicked"""
     entered_sub = self.text_box_22.text.lower()
     entered_min_pts = int(self.text_box_23.text)
-    new_row = app_tables.fin_admin_beseem_categories.add_row(group_name='age_of_business',sub_category=entered_sub,min_points=entered_min_pts)
+    new_row = app_tables.fin_admin_ascend_categories.add_row(group_name='age_of_business',sub_category=entered_sub,min_points=entered_min_pts)
     self.text_box_22.text = ' '
     self.text_box_23.text = ' '
     self.refresh()
 
-    existing_min_points = [row["min_points"] for row in app_tables.fin_admin_beseem_categories.search(group_name='age_of_business')]
+    existing_min_points = [row["min_points"] for row in app_tables.fin_admin_ascend_categories.search(group_name='age_of_business')]
 
     max_points = max(existing_min_points + [entered_min_pts])
 
-    existing_group_row  = app_tables.fin_admin_beseem_groups.get(group_name="age_of_business")
+    existing_group_row  = app_tables.fin_admin_ascend_groups.get(group_name="age_of_business")
     if existing_group_row:
       existing_group_row['max_points'] = max_points
       existing_group_row.update()
 
     else:
-      new_group_row = app_tables.fin_admin_beseem_groups.add_row(
+      new_group_row = app_tables.fin_admin_ascend_groups.add_row(
             group_name="age_of_business", max_points=max_points
         )
 
@@ -284,22 +284,22 @@ class add_subcategory(add_subcategoryTemplate):
         alert("Kindly input either 'yes' or 'no'.")
         return
     entered_min_pts = int(self.text_box_25.text)
-    new_row = app_tables.fin_admin_beseem_categories.add_row(group_name='home_loan',sub_category=entered_sub,min_points=entered_min_pts)
+    new_row = app_tables.fin_admin_ascend_categories.add_row(group_name='home_loan',sub_category=entered_sub,min_points=entered_min_pts)
     self.text_box_24.text = ' '
     self.text_box_25.text = ' '
     self.refresh()
 
-    existing_min_points = [row["min_points"] for row in app_tables.fin_admin_beseem_categories.search(group_name='home_loan')]
+    existing_min_points = [row["min_points"] for row in app_tables.fin_admin_ascend_categories.search(group_name='home_loan')]
 
     max_points = max(existing_min_points + [entered_min_pts])
 
-    existing_group_row  = app_tables.fin_admin_beseem_groups.get(group_name="home_loan")
+    existing_group_row  = app_tables.fin_admin_ascend_groups.get(group_name="home_loan")
     if existing_group_row:
       existing_group_row['max_points'] = max_points
       existing_group_row.update()
 
     else:
-      new_group_row = app_tables.fin_admin_beseem_groups.add_row(
+      new_group_row = app_tables.fin_admin_ascend_groups.add_row(
             group_name="home_loan", max_points=max_points
         )
 
@@ -311,22 +311,22 @@ class add_subcategory(add_subcategoryTemplate):
         alert("Kindly input either 'yes' or 'no'.")
         return
     entered_min_pts = int(self.text_box_27.text)
-    new_row = app_tables.fin_admin_beseem_categories.add_row(group_name='other_loan',sub_category=entered_sub,min_points=entered_min_pts)
+    new_row = app_tables.fin_admin_ascend_categories.add_row(group_name='other_loan',sub_category=entered_sub,min_points=entered_min_pts)
     self.text_box_26.text = ' '
     self.text_box_27.text = ' '
     self.refresh()
 
-    existing_min_points = [row["min_points"] for row in app_tables.fin_admin_beseem_categories.search(group_name='other_loan')]
+    existing_min_points = [row["min_points"] for row in app_tables.fin_admin_ascend_categories.search(group_name='other_loan')]
 
     max_points = max(existing_min_points + [entered_min_pts])
 
-    existing_group_row  = app_tables.fin_admin_beseem_groups.get(group_name="other_loan")
+    existing_group_row  = app_tables.fin_admin_ascend_groups.get(group_name="other_loan")
     if existing_group_row:
       existing_group_row['max_points'] = max_points
       existing_group_row.update()
 
     else:
-      new_group_row = app_tables.fin_admin_beseem_groups.add_row(
+      new_group_row = app_tables.fin_admin_ascend_groups.add_row(
             group_name="other_loan", max_points=max_points
         )
 
@@ -338,22 +338,22 @@ class add_subcategory(add_subcategoryTemplate):
         alert("Kindly input either 'yes' or 'no'.")
         return
     entered_min_pts = int(self.text_box_29.text)
-    new_row = app_tables.fin_admin_beseem_categories.add_row(group_name='credit_card_loan',sub_category=entered_sub,min_points=entered_min_pts)
+    new_row = app_tables.fin_admin_ascend_categories.add_row(group_name='credit_card_loan',sub_category=entered_sub,min_points=entered_min_pts)
     self.text_box_28.text = ' '
     self.text_box_29.text = ' '
     self.refresh()
 
-    existing_min_points = [row["min_points"] for row in app_tables.fin_admin_beseem_categories.search(group_name='credit_card_loan')]
+    existing_min_points = [row["min_points"] for row in app_tables.fin_admin_ascend_categories.search(group_name='credit_card_loan')]
 
     max_points = max(existing_min_points + [entered_min_pts])
 
-    existing_group_row  = app_tables.fin_admin_beseem_groups.get(group_name="credit_card_loan")
+    existing_group_row  = app_tables.fin_admin_ascend_groups.get(group_name="credit_card_loan")
     if existing_group_row:
       existing_group_row['max_points'] = max_points
       existing_group_row.update()
 
     else:
-      new_group_row = app_tables.fin_admin_beseem_groups.add_row(
+      new_group_row = app_tables.fin_admin_ascend_groups.add_row(
             group_name="credit_card_loan", max_points=max_points
         )
 
@@ -365,22 +365,22 @@ class add_subcategory(add_subcategoryTemplate):
         alert("Kindly input either 'yes' or 'no'.")
         return
     entered_min_pts = int(self.text_box_31.text)
-    new_row = app_tables.fin_admin_beseem_categories.add_row(group_name='vehicle_loan',sub_category=entered_sub,min_points=entered_min_pts)
+    new_row = app_tables.fin_admin_ascend_categories.add_row(group_name='vehicle_loan',sub_category=entered_sub,min_points=entered_min_pts)
     self.text_box_30.text = ' '
     self.text_box_31.text = ' '
     self.refresh()
 
-    existing_min_points = [row["min_points"] for row in app_tables.fin_admin_beseem_categories.search(group_name='vehicle_loan')]
+    existing_min_points = [row["min_points"] for row in app_tables.fin_admin_ascend_categories.search(group_name='vehicle_loan')]
 
     max_points = max(existing_min_points + [entered_min_pts])
 
-    existing_group_row  = app_tables.fin_admin_beseem_groups.get(group_name="vehicle_loan")
+    existing_group_row  = app_tables.fin_admin_ascend_groups.get(group_name="vehicle_loan")
     if existing_group_row:
       existing_group_row['max_points'] = max_points
       existing_group_row.update()
 
     else:
-      new_group_row = app_tables.fin_admin_beseem_groups.add_row(
+      new_group_row = app_tables.fin_admin_ascend_groups.add_row(
             group_name="vehicle_loan", max_points=max_points
         )
   

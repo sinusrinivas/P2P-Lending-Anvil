@@ -14,7 +14,7 @@ class view_bessem_group(view_bessem_groupTemplate):
     self.fetch_data()
 
   def fetch_data(self):
-    self.data = app_tables.fin_admin_beseem_groups.search()
+    self.data = app_tables.fin_admin_ascend_groups.search()
     if not self.data:
       Notification("No Data Available Here!").show()
     else:
