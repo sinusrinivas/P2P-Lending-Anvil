@@ -25,14 +25,18 @@ class today_dues(today_duesTemplate):
             loan_id = loan['loan_id']
             borrower_customer_id = loan['borrower_customer_id']
 
-            # payment_done = list(app_tables.fin_emi_table.search(
-            #     loan_id=loan_id,
-            #     next_payment=q.greater_than(today_date),
-            #     borrower_customer_id=borrower_customer_id
-            # ))
-            # if payment_done:
-            #   # self.repeating_panel_2.visible = False
-            #   continue
+            payment_done = list(app_tables.fin_emi_table.search(
+                loan_id=loan_id,
+                next_payment=q.greater_than(today_date),
+                payment_type ='pay now',
+                borrower_customer_id=borrower_customer_id
+            ))
+            if payment_done:
+              payment_done.sort(key=lambda x: x['next_payment'], reverse=True)
+              latest_payment_done = payment_done[0]
+              if latest_payment_done:
+              # self.repeating_panel_2.visible = False
+                continue
               
             all_loans = list(app_tables.fin_emi_table.search(
                 loan_id=loan_id,
@@ -116,6 +120,12 @@ class today_dues(today_duesTemplate):
                         'part_payment_date':part_payment_date,
                     })
             else:
+                pay_now_loan = app_tables.fin_emi_table.search(
+                    loan_id=loan_id,
+                    payment_type="pay now"
+                )
+                if any(pay_now_loan):
+                    continue
 
                 loan_detail = app_tables.fin_loan_details.get(loan_id=loan_id)
 
