@@ -139,7 +139,7 @@ unique_ids:
     ? borrower.borrower_registration_forms.star_1_borrower_registration_form_2_employment.star_1_borrower_registration_form_2_employment_student
     : '1700126702884606423685481.6467'
     admin.dashboard.manage_bessem.view_bessem_group: '1709796304196496012609333.1965'
-    borrower.dashboard.borrower_portfolio: AZZMBU2GBRJVZVL7FL2IXSOBDYEPGPYP
+    borrower.dashboard.borrower_portfolio: '1717040406764475919330947.1772'
     admin.dashboard.manage_bessem.add_subcategory.ItemTemplate37: '1711087717699357608740554.9464'
     borrower.dashboard.dashboard_contact: FIR5BFHIYOQWYLKGMJEOPHHQ4NCLSFIP
     borrower.dashboard.foreclosure_request: NSTHITAYUUWSXBJKK5RVW4OD4LDYZDWR
@@ -297,7 +297,6 @@ unique_ids:
     lendor.dashboard.view_loan_foreclosure_Requests.foreclose_details: '1700454637827919052628054.0963'
     lendor.dashboard.lender_view_loans.RowTemplate22: '1703141013007184309847389.77017'
     admin.dashboard.manage_cms.add_general_dropdowns: '1710397494541671512734929.8624'
-    lendor.dashboard1: '1699430548405125074156774.3141'
     lendor.dashboard.lender_view_loans.ItemTemplate49: '1709611089771787997070325.4371'
     lendor.dashboard.view_borrower_loan_request.Borr_loan_request: '1700542763128106365112272.9714'
     admin.dashboard.manage_bessem.add_subcategory.ItemTemplate36: '17110873489172627637088.8769217'

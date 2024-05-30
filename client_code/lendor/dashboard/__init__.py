@@ -18,7 +18,6 @@ class dashboard(dashboardTemplate):
     self.user_id = main_form_module.userId
     self.email = self.email
     self.user_id = self.user_id
-    self.components_visible = False  # Flag to keep track of component visibility
     self.load_data(None)
 
     existing_loans = app_tables.fin_loan_details.search(loan_updated_status=q.any_of(
