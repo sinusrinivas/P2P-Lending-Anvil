@@ -570,7 +570,7 @@ def get_group_points(customer_id):
 #         else:
 #             user_age_range = '51'      
       
-#         gender_search = app_tables.fin_admin_beseem_categories.search(group_name='gender', sub_category=gender.lower())
+#         gender_search = app_tables.fin_admin_ascend_categories.search(group_name='gender', sub_category=gender.lower())
 #         if gender_search:
 #             gender_points = gender_search[0]['min_points']
 #             print("Gender Points:", gender_points)
