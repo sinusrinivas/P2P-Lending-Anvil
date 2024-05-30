@@ -477,29 +477,15 @@ color: %color:On Primary Container%;
   height: 43px; /* 30px line height + 12px padding + 1px border */
 }
 
-/* Initial state */
-.app-bar .anvil-component-icon-present .anvil-component-icon, 
-.app-bar .sidebar-toggle .fa {
+ .app-bar .anvil-component-icon-present .anvil-component-icon, .app-bar .sidebar-toggle .fa {
   width: 30px;
   text-align: center;
-  color: #013065;
-  visibility: hidden;
-  border: 1px solid transparent; /* Add transparent border for consistent sizing */
+  color:#013065;
+  visibility: visible;
 }
 
-/* Hover state */
-.app-bar .anvil-component-icon-present .anvil-component-icon:hover, 
-.app-bar .sidebar-toggle .fa:hover {
-  visibility: visible !important;
-  border: 1px solid red; /* Temporary border for debugging */
-}
 
-/* Focus-visible state */
-.app-bar .anvil-component-icon-present .anvil-component-icon:focus-visible, 
-.app-bar .sidebar-toggle .fa:focus-visible {
-  visibility: visible !important;
-  border: 1px solid blue; /* Temporary border for debugging */
-}
+
 
 
 /* Don't put spacing on the top-level container (eg FlowPanel) */
