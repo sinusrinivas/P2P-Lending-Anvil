@@ -488,7 +488,7 @@ color: %color:On Primary Container%;
   width: 30px;
   text-align: center;
   color:#013065;
-  visibility: hidden;
+  visibility: visible;
 }
 
 
