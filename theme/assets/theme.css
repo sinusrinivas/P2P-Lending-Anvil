@@ -532,10 +532,8 @@ color: %color:On Primary Container%;
 }
 
 .app-bar a:hover, .app-bar a:active {
-  color: #eee; 
+  color: #013065; 
   background-color:#Edf0f4;
-  transform: scaleX(1); /* Initially invisible */
-  transition: transform 0.3s ease-in-out; 
 }
 
 
