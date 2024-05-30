@@ -63,7 +63,7 @@ class extension_details(extension_detailsTemplate):
         open_form("lendor.dashboard.view_loan_extension_requests")
 
     def decline_click(self, **event_args):
-        """This method is called when the 'Decline' button is clicked"""
+        """This method is called when the 'Decline' button zis clicked"""
         self.selected_row['status'] = 'rejected'
         self.selected_row['status_timestamp '] = datetime.now()
         self.selected_row.update()

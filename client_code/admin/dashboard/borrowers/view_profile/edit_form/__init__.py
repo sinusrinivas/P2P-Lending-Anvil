@@ -4,6 +4,8 @@ import anvil.server
 import anvil.google.auth, anvil.google.drive
 from anvil.google.drive import app_files
 import anvil.users
+import anvil.tables as tables
+from anvil.tables import app_tables
 
 class edit_form(edit_formTemplate):
   def __init__(self, get_customer_id_value, **properties):
@@ -343,10 +345,12 @@ class edit_form(edit_formTemplate):
         if ascend_value is not None:
             user_data['ascend_value'] = float(ascend_value)
 
-        # Save the updated data
-        tables.app_tables.fin_user_profile.update(user_data)
-
-        print(f"Updated user profile for customer_id: {self.get}")
+            borrower = app_tables.fin_borrower.get(customer_id=self.get)
+            if borrower:
+                borrower['ascend_score'] = ascend_value
+       
+        # data.update()
+        print(f"Updated user profile and borrower table for customer_id: {self.get}")
         open_form('admin.dashboard.borrowers.view_profile', self.get)
 
   # def button_2_click(self, **event_args):
