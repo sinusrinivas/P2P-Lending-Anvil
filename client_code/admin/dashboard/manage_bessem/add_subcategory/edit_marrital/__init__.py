@@ -41,15 +41,15 @@ class edit_marrital(edit_marritalTemplate):
       # Save changes to the database
       self.selected_row.update()
 
-      existing_min_points = [row["min_points"] for row in app_tables.fin_admin_beseem_categories.search(group_name="marital_status")]
+      existing_min_points = [row["min_points"] for row in app_tables.fin_admin_ascend_categories.search(group_name="marital_status")]
       max_points = max(existing_min_points + [updated_points])
 
-      existing_group_row  = app_tables.fin_admin_beseem_groups.get(group_name="marital_status")
+      existing_group_row  = app_tables.fin_admin_ascend_groups.get(group_name="marital_status")
       if existing_group_row:
         existing_group_row['max_points'] = max_points
         existing_group_row.update()
       else:
-        new_group_row = app_tables.fin_admin_beseem_groups.add_row(
+        new_group_row = app_tables.fin_admin_ascend_groups.add_row(
           group_name="marital_status", max_points=max_points)
 
       alert("Changes saved successfully!")
@@ -62,15 +62,15 @@ class edit_marrital(edit_marritalTemplate):
       # Delete the row directly on the client side
       self.selected_row.delete()
 
-      existing_min_points = [row["min_points"] for row in app_tables.fin_admin_beseem_categories.search(group_name='marital_status')]
+      existing_min_points = [row["min_points"] for row in app_tables.fin_admin_ascend_categories.search(group_name='marital_status')]
       max_points = max(existing_min_points)
 
-      existing_group_row  = app_tables.fin_admin_beseem_groups.get(group_name="marital_status")
+      existing_group_row  = app_tables.fin_admin_ascend_groups.get(group_name="marital_status")
       if existing_group_row:
         existing_group_row['max_points'] = max_points
         existing_group_row.update()
       else:
-        new_group_row = app_tables.fin_admin_beseem_groups.add_row(
+        new_group_row = app_tables.fin_admin_ascend_groups.add_row(
           group_name="marital_status", max_points=max_points)
 
       # Optionally, navigate to a different form or perform other actions
