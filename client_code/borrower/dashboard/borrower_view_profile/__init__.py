@@ -10,6 +10,7 @@ import anvil.tables.query as q
 from anvil.tables import app_tables
 from .. import main_form_module as main_form_module
 from datetime import datetime, timedelta
+import re
 
 
 
@@ -206,7 +207,7 @@ class borrower_view_profile(borrower_view_profileTemplate):
 
   def enable_personal_fields(self):
       self.name_text_box.enabled = True
-      # self.email_tx.enabled = True
+      self.email_tx.enabled = True
       self.mobile_tx.enabled = True
       # self.d_o_b_text_box.enabled = True
       self.city_tx.enabled = True
@@ -235,6 +236,10 @@ class borrower_view_profile(borrower_view_profileTemplate):
       self.govt_2_file_loader_2.visible = True
 
   def save_personal_details_click(self, **event_args):
+
+    def is_valid_email(value):
+        return re.match(r'^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$', value)
+  
     def is_valid(value):
         return value and not value.isspace()
 
@@ -285,11 +290,23 @@ class borrower_view_profile(borrower_view_profileTemplate):
         "Pincode": self.pincode_tx.text,
 
     }
+    if not is_valid_email(self.email_tx.text):
+        error_messages.append('Enter a valid email address.')
+
     if not is_alpha(self.name_text_box.text) :
         error_messages.append(" Name must contain only alphabetic characters and spaces.")
     # Mobile number validation
     if not is_valid_mobile(self.mobile_tx.text):
         error_messages.append("Mobile Number must be a valid 10-digit number.")
+
+    if not is_alpha(self.city_tx.text) :
+        error_messages.append(" city must contain only alphabetic characters and spaces.")
+
+    if not is_alpha(self.state_tx.text) :
+        error_messages.append(" state must contain only alphabetic characters and spaces.")
+
+    if not is_alpha(self.Language_tx.text) :
+        error_messages.append(" language must contain only alphabetic characters and spaces.")
 
     for field_name, field_value in numeric_fields.items():
         if not is_numeric(field_value):
@@ -299,11 +316,72 @@ class borrower_view_profile(borrower_view_profileTemplate):
         alert("\n".join(error_messages))
         return
 
+    user_profile = app_tables.fin_user_profile.get(customer_id=self.user_id)
+    if user_profile:
+      # borrower_details = app_tables.fin_borrower.get(customer_id=self.user_id)
+      old_email = user_profile['email_user']  
+      new_email = self.email_tx.text
+      new_full_name = self.name_text_box.text
+        
+      Walet_transations = app_tables.fin_wallet_transactions.search(customer_id=self.user_id)
+      if Walet_transations:
+            for loans in Walet_transations:
+              loans['user_email'] = new_email
+              loans.update()
+  
+      wallet_bank_account_table = app_tables.fin_wallet_bank_account_table.get(user_email=old_email)
+      if wallet_bank_account_table:
+            wallet_bank_account_table['user_email'] = new_email
+            wallet_bank_account_table.update()
+  
+      wallet = app_tables.fin_wallet.get(customer_id=self.user_id)
+      if wallet:
+            wallet['user_email'] = new_email
+            wallet['user_name'] = new_full_name
+            wallet.update()
+    
+      emi_details = app_tables.fin_emi_table.search(borrower_customer_id=self.user_id)
+      if emi_details:
+            for loans in emi_details:
+              loans['borrower_email'] = new_email
+              loans.update()
+  
+      extends_table = app_tables.fin_extends_loan.search(borrower_customer_id=self.user_id)
+      if Walet_transations:
+            for loans in extends_table:
+              loans['borrower_email_id'] = new_email
+              loans['borrower_full_name'] = new_full_name
+              loans.update()
+  
+      fin_borrower = app_tables.fin_borrower.get(customer_id=self.user_id)
+      if fin_borrower:
+            fin_borrower['email_id'] = new_email
+            fin_borrower['user_name'] = new_full_name
+            fin_borrower.update()
+  
+  
+      loan_details = app_tables.fin_loan_details.search(borrower_customer_id=self.user_id)
+      if loan_details:
+            for loans in loan_details:
+              loans['borrower_email_id'] = new_email
+              loans['borrower_full_name'] = new_full_name
+              loans.update()
+  
+      ascend_score = app_tables.fin_admin_ascend_groups.get(borrower_customer_id=self.user_id)
+      if ascend_score:
+            ascend_score['borrower_email_id'] = new_email
+            ascend_score.update()
+  
+      user_table = app_tables.users.get(email= old_email)
+      if user_table:
+            user_table['email'] = new_email
+            user_table.update()
+        
     # If no validation errors, proceed with saving
     user_profile = app_tables.fin_user_profile.get(customer_id=self.user_id)
     if user_profile:
         user_profile["full_name"] = self.name_text_box.text
-        # user_profile['email_user'] = self.email_tx.text
+        user_profile['email_user'] = self.email_tx.text
         user_profile["mobile"] = self.mobile_tx.text
         user_profile["date_of_birth"] = self.d_o_b_text_box.text
         user_profile["city"] = self.city_tx.text
@@ -335,17 +413,8 @@ class borrower_view_profile(borrower_view_profileTemplate):
         photo = self.govt_2_file_loader_2.file
         if photo:
             user_profile["pan_photo"] = photo
-      # user_profile.update()
 
-      # wallet = app_tables.fin_wallet.get(customer_id=self.user_id)
-      # if wallet:
-      #   wallet['user_email'] = self.email_tx.text
-      #   wallet.update()
-
-      # wallet = app_tables.fin_wallet.get(customer_id=self.user_id)
-      # if wallet:
-      #   wallet['user_email'] = self.email_tx.text
-      #   wallet.update()
+        
 
     self.disable_personal_fields()
     self.save_personal_details_button.visible = False
