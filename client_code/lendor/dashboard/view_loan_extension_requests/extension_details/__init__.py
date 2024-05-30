@@ -40,6 +40,7 @@ class extension_details(extension_detailsTemplate):
     def approve_click(self, **event_args):
         """This method is called when the 'Approve' button is clicked"""      
         self.selected_row['status'] = 'approved'
+        self.selected_row['status_timestamp '] = datetime.now()
         # Save changes to the table
         self.selected_row.update()
         Notification("Borrower will get notified").show()
