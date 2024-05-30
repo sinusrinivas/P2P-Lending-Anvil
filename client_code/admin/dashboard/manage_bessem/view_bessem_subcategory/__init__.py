@@ -14,7 +14,7 @@ class view_bessem_subcategory(view_bessem_subcategoryTemplate):
     self.fetch_data()
 
   def fetch_data(self):
-    self.data = app_tables.fin_admin_beseem_categories.search()
+    self.data = app_tables.fin_admin_ascend_categories.search()
     if not self.data:
         Notification("No Data Available Here!").show()
     else:
