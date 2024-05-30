@@ -116,6 +116,17 @@ class borrower_foreclosure(borrower_foreclosureTemplate):
                     # Set the label text
                     self.label_tpm.text = f"{total_payments_made} months"
                     self.total_payments_made = total_payments_made
+
+                    next_payment_date = last_emi_list[0]['next_payment']
+                    if next_payment_date:
+                        if (next_payment_date - timedelta(days=2)) > datetime.now().date():
+                            self.is_payment_date_valid = True
+                        else:
+                            self.is_payment_date_valid = False
+                            alert("The next payment date must be at least two days before today's date for foreclosure.")
+                    else:
+                        self.is_payment_date_valid = False
+                        alert("Next payment date not found.")
                 else:
                     total_payments_made = 0
                     alert("No EMIs found for this loan.")                    
@@ -129,12 +140,14 @@ class borrower_foreclosure(borrower_foreclosureTemplate):
         selected_row = self.selected_row
         # loan_id = selected_row['loan_id']
         # total_payments_made = self.loan_details_row['total_payments_made']
-        if self.total_payments_made >= self.min_months:
-            open_form('borrower.dashboard.foreclosure_request.borrower_foreclosure.foreclose',  selected_row=selected_row, total_payments_made=self.total_payments_made)
+        if self.total_payments_made >= self.min_months and self.is_payment_date_valid:
+            open_form('borrower.dashboard.foreclosure_request.borrower_foreclosure.foreclose', selected_row=selected_row, total_payments_made=self.total_payments_made)
         else:
-            alert('You are not eligible for foreclosure! You have to pay at least ' + str(self.min_months) + ' months.')
+            if not self.is_payment_date_valid:
+                alert('The next payment date must be at least two days before today\'s date for foreclosure.')
+            else:
+                alert('You are not eligible for foreclosure! You have to pay at least ' + str(self.min_months) + ' months.')
             open_form('borrower.dashboard.foreclosure_request')
-
 
   
     def button_2_click(self, **event_args):
