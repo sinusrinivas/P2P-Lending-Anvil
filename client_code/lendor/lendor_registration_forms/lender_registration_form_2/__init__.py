@@ -57,6 +57,10 @@ class lender_registration_form_2(lender_registration_form_2Template):
         if not (lending_type and investment and lending_period):
             alert("Please fill in all fields.")
             return
+         # Validate that investment does not contain spaces
+        if ' ' in investment:
+            alert("Investment should not contain spaces.")
+            return  
     
         # Validate investment input
         try:
