@@ -15,12 +15,12 @@ class star_1_borrower_registration_form_2_employment_farmer(star_1_borrower_regi
         user_data = app_tables.fin_user_profile.get(customer_id=user_id)
         if user_data:
             self.drop_down_1.selected_value = user_data['land_type']
-            self.text_box_1.text = str(user_data['total_acres'])  # Convert to string
+            self.text_box_1.text = int(user_data['total_acres'])  # Convert to string
             self.text_box_2.text = user_data['crop_name']
             self.text_box_3.text = user_data['farmer_earnings']
 
             options_2 = app_tables.fin_borrower_land_type.search()
-            option_strings_2 = [str(option['land_type']) for option in options_2]
+            option_strings_2 = [int(option['land_type']) for option in options_2]
             self.drop_down_1.items = option_strings_2
 
             user_data.update()
