@@ -481,6 +481,7 @@ def get_group_points(customer_id):
             for group_row in groups:
                 group_name = group_row['group_name'].lower()
                 max_points = group_row['max_points']
+              
                 
                 if group_name == 'gender':
                     group_points += max_points
