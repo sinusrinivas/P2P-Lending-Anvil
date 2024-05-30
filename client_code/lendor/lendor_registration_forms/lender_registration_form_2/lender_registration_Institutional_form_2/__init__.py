@@ -11,7 +11,7 @@ from datetime import datetime, timedelta
 
 
 class lender_registration_Institutional_form_2(lender_registration_Institutional_form_2Template):
-  def _init_(self,user_id, **properties):
+  def __init__(self,user_id, **properties):
     self.userId = user_id
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
@@ -58,12 +58,17 @@ class lender_registration_Institutional_form_2(lender_registration_Institutional
     
     if not year or not industry_type or not turn_over or not last_six_statements:
       Notification("Please fill all the fields").show()
+    elif ' ' in turn_over:
+      Notification("Turn Over should not contain spaces").show()  
     else:
-     today = datetime.today()
-     months = today.year * 12 + today.month - year.year * 12 - year.month
-     anvil.server.call('add_lendor_institutional_form_2',year,months,industry_type,turn_over,last_six_statements,user_id)
-     open_form('lendor.lendor_registration_forms.lender_registration_form_2.lender_registration_Institutional_form_3',user_id = user_id)
-     """This method is called when the button is clicked"""
+      today = datetime.today()
+      if year > today.date():
+        Notification("Future date is not valid. Please select a date in the past or present.").show()
+        return
+      months = today.year * 12 + today.month - year.year * 12 - year.month
+      anvil.server.call('add_lendor_institutional_form_2',year,months,industry_type,turn_over,last_six_statements,user_id)
+      open_form('lendor.lendor_registration_forms.lender_registration_form_2.lender_registration_Institutional_form_3',user_id = user_id)
+      """This method is called when the button is clicked"""
 
   def button_1_click(self, **event_args):
     user_id = self.userId
@@ -79,11 +84,4 @@ class lender_registration_Institutional_form_2(lender_registration_Institutional
     if file:
       self.image_1.source = self.file_loader_1.file
 
-  def date_picker_1_change(self, **event_args):
-    """This method is called when the selected date changes"""
-    selected_date = self.date_picker_1.date
-    today = datetime.today().date()
-    two_days_before = today - timedelta(days=2)
-    
-    if selected_date and selected_date <= two_days_before:
-      Notification("The selected date is within two days before today. Please choose a valid date.").show()
+  

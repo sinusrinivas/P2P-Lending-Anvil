@@ -40,6 +40,10 @@ class lender_registration_form_4_bank_form_2(lender_registration_form_4_bank_for
     
     if not bank_id  or not branch_name or not t_and_c:
       Notification("please fill all required fields").show()
+    elif ' ' in bank_id:
+      Notification("Bank ID should not contain spaces").show()
+    elif ' ' in branch_name:
+      Notification("Branch Name should not contain spaces").show()  
     else:
       anvil.server.call('add_lendor_bank_details_form_2', bank_id,branch_name, user_id)
       open_form('lendor.dashboard')
