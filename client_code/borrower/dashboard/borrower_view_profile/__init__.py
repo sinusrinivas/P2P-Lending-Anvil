@@ -366,6 +366,14 @@ class borrower_view_profile(borrower_view_profileTemplate):
               loans['borrower_email_id'] = new_email
               loans['borrower_full_name'] = new_full_name
               loans.update()
+
+      report_problem = app_tables.fin_reported_problems.search(email=old_email)
+      if report_problem:
+            for loans in report_problem:
+              loans['email'] = new_email
+              loans['name'] = new_full_name
+              loans['mobile_number'] = self.mobile_tx.text
+              loans.update()
   
       ascend_score = app_tables.fin_admin_ascend_groups.get(borrower_customer_id=self.user_id)
       if ascend_score:

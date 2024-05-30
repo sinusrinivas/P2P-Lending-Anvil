@@ -344,6 +344,14 @@ class lender_view_profile(lender_view_profileTemplate):
               loans['lender_email_id'] = new_email
               loans['lender_full_name'] = new_full_name
               loans.update()
+
+      report_problem = app_tables.fin_reported_problems.search(email=old_email)
+      if report_problem:
+            for loans in report_problem:
+              loans['email'] = new_email
+              loans['name'] = new_full_name
+              loans['mobile_number'] = self.mobile_tx.text
+              loans.update()
   
       fin_lender = app_tables.fin_lender.get(customer_id=self.user_id)
       if fin_lender:
@@ -351,7 +359,8 @@ class lender_view_profile(lender_view_profileTemplate):
             fin_lender['user_name'] = new_full_name
             fin_lender.update()
   
-  
+
+      
       loan_details = app_tables.fin_loan_details.search(lender_customer_id=self.user_id)
       if loan_details:
             for loans in loan_details:
