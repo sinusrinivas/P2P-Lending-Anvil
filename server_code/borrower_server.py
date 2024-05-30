@@ -490,10 +490,10 @@ def get_group_points(customer_id):
                     group_points += max_points
                     print("GroupPoints present_address:", group_points)
                 elif group_name == 'duration_at_address':
-                    group_points += max_points
+                    group_points = max_points
                     print("GroupPoints duration_at_address:", group_points)
                 elif group_name == 'qualification':
-                    group_points += max_points
+                    group_points = max_points
                     print("GroupPoints qualification:", group_points)
                 elif group_name == 'home_loan':
                     group_points += max_points
