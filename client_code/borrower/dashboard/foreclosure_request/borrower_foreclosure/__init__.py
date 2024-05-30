@@ -7,7 +7,7 @@ import anvil.users
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
-from datetime import datetime
+from datetime import datetime ,timedelta
 import sys as sys
 
 class borrower_foreclosure(borrower_foreclosureTemplate):
