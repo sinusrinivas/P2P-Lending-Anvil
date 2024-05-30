@@ -483,46 +483,46 @@ def get_group_points(customer_id):
                 max_points = group_row['max_points']
                 
                 if group_name == 'gender':
-                    group_points += max_points
+                    group_points = max_points
                     print("GroupPoints Gender:", group_points)
                 elif group_name == 'present_address':
-                    group_points += max_points
+                    group_points = max_points
                     print("GroupPoints present_address:", group_points)
                 elif group_name == 'duration_at_address':
-                    group_points += max_points
+                    group_points = max_points
                     print("GroupPoints duration_at_address:", group_points)
                 elif group_name == 'qualification':
-                    group_points += max_points
+                    group_points = max_points
                     print("GroupPoints qualification:", group_points)
                 elif group_name == 'home_loan':
-                    group_points += max_points
+                    group_points = max_points
                     print("GroupPoints home_loan:", group_points)
                 elif group_name == 'other_loan':
-                    group_points += max_points
+                    group_points = max_points
                     print("GroupPoints other_loan:", group_points)
                 elif group_name == 'credit_card_loan':
-                    group_points += max_points
+                    group_points = max_points
                     print("GroupPoints credit_card_loan:", group_points)
                 elif group_name == 'vehicle_loan':
-                    group_points += max_points
+                    group_points = max_points
                     print("GroupPoints vehicle_loan:", group_points)
                 elif group_name == 'profession':
-                    group_points += max_points
+                    group_points = max_points
                     print("GroupPoints profession:", group_points)
                 elif group_name == 'organization_type' and profession == 'employee':
-                    group_points += max_points
+                    group_points = max_points
                     print("GroupPoints organization_type:", group_points)
                 elif group_name == 'salary_type' and profession == 'employee':
-                    group_points += max_points
+                    group_points = max_points
                     print("GroupPoints salary_type:", group_points)
                 elif group_name == 'age_of_business' and profession == 'business':
-                    group_points += max_points
+                    group_points = max_points
                     print("GroupPoints age_of_business:", group_points)
                 elif group_name == 'marital_status':
-                    group_points += max_points
+                    group_points = max_points
                     print("GroupPoints marital_status:", group_points)
                 elif group_name == 'spouse_profession' and marital_status == 'married' and another_person == 'spouse':
-                    group_points += max_points
+                    group_points = max_points
                     print("GroupPoints spouse_profession:", group_points)
 
             return group_points
