@@ -56,6 +56,7 @@ from ._anvil_designer import my_returnsTemplate
 from anvil import *
 import plotly.graph_objects as go
 from anvil.tables import app_tables
+import anvil.tables.query as q
 from .. import main_form_module as main_form_module
 
 class my_returns(my_returnsTemplate):
@@ -72,7 +73,7 @@ class my_returns(my_returnsTemplate):
 
   def create_bar_chart(self):
     # Fetch investment data for the specific user
-    investments = app_tables.fin_lender.search(customer_id=self.user_id)
+    investments = app_tables.fin_loan_details.search(loan_updated_status=q.like('close%'),lender_customer_id=self.user_id)
     
     # Debugging: Print fetched investments
     print(f"Fetched investments for user {self.user_id}: {list(investments)}")
@@ -82,8 +83,8 @@ class my_returns(my_returnsTemplate):
     total_returns = 0
     
     for investment in investments:
-      total_investment += investment['investment']
-      total_returns += investment['return_on_investment']
+      total_investment += investment['loan_amount']
+      total_returns += investment['lender_returns']
 
     # Debugging: Print aggregated values
     print(f"Total Investment: {total_investment}, Total Returns: {total_returns}")
@@ -100,7 +101,7 @@ class my_returns(my_returnsTemplate):
       title='Investment and Returns for User',
       xaxis=dict(title='Category'),
       yaxis=dict(title='Amount'),
-      barmode='stack'  # Use group mode to display bars side by side
+      barmode='group'  # Use group mode to display bars side by side
     )
 
     # Create a figure
