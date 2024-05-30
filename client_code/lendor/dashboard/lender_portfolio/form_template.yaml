@@ -1,4 +1,6 @@
-container: {type: ColumnPanel}
+container:
+  type: ColumnPanel
+  properties: {col_widths: '{"RKZTQI":33,"KEITWY":45,"SUNSAU":2}'}
 components:
 - name: image_1_copy
   properties: {role: null, vertical_align: center, height: '48', tooltip: '', border: '',
@@ -19,43 +21,75 @@ components:
   properties: {}
   type: form:lendor.navigation_bar.Navigation_bar_lender_dashbord
   layout_properties: {grid_position: 'QDJLKG,RKXSZQ', full_width_row: true}
+- name: spacer_7
+  properties: {height: 32}
+  type: Spacer
+  layout_properties: {grid_position: 'WDQQUR,SUNSAU', full_width_row: true}
 - name: column_panel_7
-  properties: {role: null, col_widths: '{"CZPYDN":85,"JLLGYN":10,"QXGKNE":10}', background: '#2994bb'}
+  properties: {role: null, col_widths: '{"CZPYDN":90,"JLLGYN":5,"QXGKNE":10,"JRXWNO":55,"PBZDAB":3,"LGBPSD":57,"XBQUGG":3,"AMNWCP":57}',
+    background: '#2994bb'}
   type: ColumnPanel
   layout_properties: {grid_position: 'WDQQUR,RKZTQI', full_width_row: true}
   components:
+  - name: spacer_5
+    properties: {height: 32}
+    type: Spacer
+    layout_properties: {grid_position: 'YJMYDP,JRXWNO VNQVSA,PBZDAB'}
   - name: link_1
-    properties: {text: Ascend Wallet Balance                          >, bold: true,
-      foreground: white}
+    properties: {text: Ascend Wallet Balance                                                                                     >,
+      bold: true, foreground: white, font_size: 16}
     type: Link
-    layout_properties: {grid_position: 'VNQVSA,LGBPSD', full_width_row: true}
+    layout_properties: {grid_position: 'YJMYDP,JRXWNO VNQVSA,LGBPSD', full_width_row: true}
+  - name: spacer_6
+    properties: {height: 32}
+    type: Spacer
+    layout_properties: {grid_position: 'YJMYDP,JRXWNO IFNKBM,XBQUGG'}
   - name: label_2
-    properties: {icon: 'fa:rupee', text: '0', foreground: white}
+    properties: {icon: 'fa:rupee', text: '0', foreground: white, font_size: 16}
     type: Label
-    layout_properties: {grid_position: 'IFNKBM,AMNWCP', full_width_row: true}
+    layout_properties: {grid_position: 'YJMYDP,JRXWNO IFNKBM,AMNWCP', full_width_row: true}
   - name: spacer_1
     properties: {height: 31.86663818359375}
     type: Spacer
-    layout_properties: {grid_position: 'AOORRV,JLLGYN', full_width_row: true}
+    layout_properties: {grid_position: 'YJMYDP,JRXWNO AOORRV,JLLGYN', full_width_row: true}
   - name: column_panel_7_copy_copy
     properties: {role: elevated-card, col_widths: '{"EITWZQ":25}', background: '#2994bb'}
     type: ColumnPanel
-    layout_properties: {grid_position: 'AOORRV,CZPYDN', full_width_row: true}
+    layout_properties: {grid_position: 'YJMYDP,JRXWNO AOORRV,CZPYDN LTIVQI,CGALMQ',
+      full_width_row: true}
     components:
     - name: label_3
-      properties: {role: null, text: Available To Withdraw, bold: true, foreground: white}
+      properties: {role: null, text: Available To Withdraw, bold: true, foreground: white,
+        font_size: 16}
       type: Label
       layout_properties: {grid_position: 'PZDLNQ,NVPFML', full_width_row: true}
     - name: label_4
-      properties: {icon: 'fa:rupee', text: '0', foreground: white}
+      properties: {icon: 'fa:rupee', text: '0', foreground: white, font_size: 16}
       type: Label
       layout_properties: {grid_position: 'ZZGHAZ,IKHPMG', full_width_row: true}
+  - name: spacer_4
+    properties: {height: '2'}
+    type: Spacer
+    layout_properties: {grid_position: 'YJMYDP,JRXWNO AOORRV,CZPYDN QZBALS,QPNUUY'}
+  - name: button_1
+    properties: {text: Add Funds, bold: true, background: white, align: full, foreground: blue,
+      role: elevated-button}
+    type: Button
+    layout_properties: {grid_position: 'YJMYDP,JRXWNO AOORRV,CZPYDN GVYVHX,HVHHIX'}
   - name: spacer_3
     properties: {height: 32}
     type: Spacer
-    layout_properties: {grid_position: 'AOORRV,QXGKNE'}
+    layout_properties: {grid_position: 'YJMYDP,JRXWNO AOORRV,QXGKNE'}
 - name: spacer_2
   properties: {height: 32}
   type: Spacer
   layout_properties: {grid_position: 'WDQQUR,KEITWY'}
+- name: spacer_8
+  properties: {height: '40'}
+  type: Spacer
+  layout_properties: {grid_position: 'VNYMNE,AIXJUL'}
+- name: label_1
+  properties: {text: Your Ascend Port}
+  type: Label
+  layout_properties: {grid_position: 'DZCWCJ,OUEYNE'}
 is_package: true
