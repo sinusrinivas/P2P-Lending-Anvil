@@ -480,6 +480,20 @@ color: %color:On Primary Container%;
 .app-bar .anvil-component-icon-present .anvil-component-icon, .app-bar .sidebar-toggle .fa {
   width: 30px;
   text-align: center;
+  color:#013065;
+  visibility: visible;
+}
+
+/* Show visibility on hover */
+.app-bar .anvil-component-icon-present .anvil-component-icon::hover, 
+.app-bar .sidebar-toggle .fa::hover {
+  visibility: visible !important; /* Force visibility on hover */
+}
+
+.app-bar .anvil-component-icon-present .anvil-component-icon:focus-visible, 
+.app-bar .sidebar-toggle .fa:focus-visible {
+  border: 2px solid black;
+  visibility: visible !important; /* Force visibility on focus-visible */
 }
 
 /* Don't put spacing on the top-level container (eg FlowPanel) */
@@ -518,8 +532,10 @@ color: %color:On Primary Container%;
 }
 
 .app-bar a:hover, .app-bar a:active {
-  color: #eee; text-decoration: none;
-  background-color: %color:Primary 700%;
+  color: #eee; 
+  background-color:#Edf0f4;
+  transform: scaleX(1); /* Initially invisible */
+  transition: transform 0.3s ease-in-out; 
 }
 
 
@@ -1110,13 +1126,6 @@ span.btn-text{
   text-align: center;
 }
 
-i.fa.fa-bars {
-    visibility: hidden; /* Initially hidden */
-}
-
-i.fa.fa-bars {
-    visibility: visible; /* Visible on hover */
-}
 
 
 
