@@ -805,7 +805,7 @@ components:
         type: TextBox
         layout_properties: {grid_position: 'NQDUFW,KLESAL WHIKUG,BSYPUV'}
       - name: label_4_copy_5_copy_copy_copy_copy
-        properties: {text: 'bank id :', bold: true, font_size: 16, icon: ''}
+        properties: {text: 'Bank id :', bold: true, font_size: 16, icon: ''}
         type: Label
         layout_properties: {grid_position: 'NQDUFW,KLESAL HJFUYQ,IXDCZJ'}
       - name: bank_id_tx
@@ -813,7 +813,7 @@ components:
         type: TextBox
         layout_properties: {grid_position: 'NQDUFW,KLESAL HJFUYQ,JPIBNI'}
       - name: label_2_copy_copy_copy_copy
-        properties: {text: 'branch name :', bold: true, font_size: 16}
+        properties: {text: 'Branch name :', bold: true, font_size: 16}
         type: Label
         layout_properties: {grid_position: 'NQDUFW,KLESAL VTZCTS,EGSFLR'}
       - name: brach_name_tx
