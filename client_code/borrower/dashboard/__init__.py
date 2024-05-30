@@ -15,6 +15,7 @@ class dashboard(dashboardTemplate):
     
     self.email = main_form_module.email
     self.user_Id = main_form_module.userId
+    self.email = self.email
     user_id = self.user_Id
     self.populate_loan_history()
 
@@ -117,7 +118,10 @@ class dashboard(dashboardTemplate):
 
   def link_9_click(self, **event_args):
     """This method is called when the link is clicked"""
-    open_form('wallet.wallet')
+    customer_id = self.user_Id
+    email = self.email
+    anvil.server.call('fetch_profile_data_and_insert', email, customer_id)
+    open_form("wallet.wallet")
 
   def home_main_form_link_click(self, **event_args):
     """This method is called when the link is clicked"""
