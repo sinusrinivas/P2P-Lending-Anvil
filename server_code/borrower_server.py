@@ -576,19 +576,19 @@ def get_group_points(customer_id):
 #             print("Gender Points:", gender_points)
 #             user_points += gender_points
 
-#         present_address_search = app_tables.fin_admin_beseem_categories.search(group_name='present_address', sub_category=present_address.lower())
+#         present_address_search = app_tables.fin_admin_ascend_categories.search(group_name='present_address', sub_category=present_address.lower())
 #         if present_address_search:
 #             present_address_points = present_address_search[0]['min_points']
 #             print("Present address Points:", present_address_points)
 #             user_points += present_address_points
 
-#         duration_at_address_search = app_tables.fin_admin_beseem_categories.search(group_name='duration_at_address', sub_category=duration_at_address.lower())
+#         duration_at_address_search = app_tables.fin_admin_ascend_categories.search(group_name='duration_at_address', sub_category=duration_at_address.lower())
 #         if duration_at_address_search:
 #             duration_at_address_points = duration_at_address_search[0]['min_points']
 #             print("Duration at address Points:", duration_at_address_points)
 #             user_points += duration_at_address_points
 
-#         qualification_search = app_tables.fin_admin_beseem_categories.search(group_name='qualification', sub_category=qualification.lower())
+#         qualification_search = app_tables.fin_admin_ascend_categories.search(group_name='qualification', sub_category=qualification.lower())
 #         if qualification_search:
 #            qualification_points = qualification_search[0]['min_points']
 #            print("Qualification Points:", qualification_points)
@@ -596,38 +596,38 @@ def get_group_points(customer_id):
 #         else:
 #            print("Qualification not found in categories.")
 
-        # profession_search = app_tables.fin_admin_beseem_categories.search(group_name='profession', sub_category=profession.lower())
+        # profession_search = app_tables.fin_admin_ascend_categories.search(group_name='profession', sub_category=profession.lower())
         # if profession_search:
         #     profession_points = profession_search[0]['min_points']
         #     print("Profession Points:", profession_points)
         #     user_points += profession_points
 
         #     if profession == 'self employment':
-        #         self_employment_search = app_tables.fin_admin_beseem_categories.search(group_name='profession', sub_category=self_employment.lower())
+        #         self_employment_search = app_tables.fin_admin_ascend_categories.search(group_name='profession', sub_category=self_employment.lower())
         #         if self_employment_search:
         #             self_employment_points = self_employment_search[0]['min_points']
         #             print("self employment Points:", self_employment_points)
         #             user_points += self_employment_points
                 
         #     elif profession == 'employee':
-        #         organization_type_search = app_tables.fin_admin_beseem_categories.search(group_name='organization_type', sub_category=organization_type.lower())
+        #         organization_type_search = app_tables.fin_admin_ascend_categories.search(group_name='organization_type', sub_category=organization_type.lower())
         #         if organization_type_search:
         #             organization_type_points = organization_type_search[0]['min_points']
         #             print("Organization type Points:", organization_type_points)
         #             user_points += organization_type_points
-        #         salary_type_search = app_tables.fin_admin_beseem_categories.search(group_name='salary_type', sub_category=salary_type.lower())
+        #         salary_type_search = app_tables.fin_admin_ascend_categories.search(group_name='salary_type', sub_category=salary_type.lower())
         #         if salary_type_search:
         #             salary_type_points = salary_type_search[0]['min_points']
         #             print("Salary type Points:", salary_type_points)
 
         #     elif profession == 'business':
-        #         business_age_search = app_tables.fin_admin_beseem_categories.search(group_name='age_of_business', sub_category=age_of_business.lower())
+        #         business_age_search = app_tables.fin_admin_ascend_categories.search(group_name='age_of_business', sub_category=age_of_business.lower())
         #         if business_age_search:
         #             business_age_points = business_age_search[0]['min_points']
         #             print("Business Age Points:", business_age_points)
         #             user_points += business_age_points
                   
-        # marital_status_search = app_tables.fin_admin_beseem_categories.search(group_name='marital_status', sub_category=marital_status.lower(), age=user_age_range)
+        # marital_status_search = app_tables.fin_admin_ascend_categories.search(group_name='marital_status', sub_category=marital_status.lower(), age=user_age_range)
         # if marital_status_search:
         #     marital_status_points = marital_status_search[0]['min_points']
         #     print("Marital status Points:", marital_status_points)
@@ -640,31 +640,31 @@ def get_group_points(customer_id):
         #             spouse_profession = item['guarantor_profession'].lower()
 
         #             if marital_status == 'married' and another_person == 'spouse':
-        #                 spouse_profession_search = app_tables.fin_admin_beseem_categories.search(group_name='spouse_profession', sub_category=spouse_profession.lower())
+        #                 spouse_profession_search = app_tables.fin_admin_ascend_categories.search(group_name='spouse_profession', sub_category=spouse_profession.lower())
         #                 if spouse_profession_search:
         #                     spouse_profession_points = spouse_profession_search[0]['min_points']
         #                     print("Spouse profession:", spouse_profession_points)
         #                     user_points += spouse_profession_points        
 
-#         home_loan_search = app_tables.fin_admin_beseem_categories.search(group_name='home_loan', sub_category=home_loan.lower())
+#         home_loan_search = app_tables.fin_admin_ascend_categories.search(group_name='home_loan', sub_category=home_loan.lower())
 #         if home_loan_search:
 #             home_loan_points = home_loan_search[0]['min_points']
 #             print("Home loan Points:", home_loan_points)
 #             user_points += home_loan_points
 
-#         other_loan_search = app_tables.fin_admin_beseem_categories.search(group_name='other_loan', sub_category=other_loan.lower())
+#         other_loan_search = app_tables.fin_admin_ascend_categories.search(group_name='other_loan', sub_category=other_loan.lower())
 #         if other_loan_search:
 #             other_loan_points = other_loan_search[0]['min_points']
 #             print("Other loan Points:", other_loan_points)
 #             user_points += other_loan_points
           
-#         credit_card_loan_search = app_tables.fin_admin_beseem_categories.search(group_name='credit_card_loan', sub_category=credit_card_loan.lower())
+#         credit_card_loan_search = app_tables.fin_admin_ascend_categories.search(group_name='credit_card_loan', sub_category=credit_card_loan.lower())
 #         if credit_card_loan_search:
 #             credit_card_loan_points = credit_card_loan_search[0]['min_points']
 #             print("Credit card loan Points:", credit_card_loan_points)
 #             user_points += credit_card_loan_points
 
-#         vehicle_loan_search = app_tables.fin_admin_beseem_categories.search(group_name='vehicle_loan', sub_category=vehicle_loan.lower())
+#         vehicle_loan_search = app_tables.fin_admin_ascend_categories.search(group_name='vehicle_loan', sub_category=vehicle_loan.lower())
 #         if vehicle_loan_search:
 #             vehicle_loan_points = vehicle_loan_search[0]['min_points']
 #             print("Vehicle Points:", vehicle_loan_points)
@@ -716,47 +716,47 @@ def get_group_points(customer_id):
 
 #         # categories_to_check = ['gender', 'present_address', 'duration_at_address']
 #         # for category in categories_to_check:
-#         #     category_search = app_tables.fin_admin_beseem_categories.search(group_name=category, sub_category=locals()[category])
+#         #     category_search = app_tables.fin_admin_ascend_categories.search(group_name=category, sub_category=locals()[category])
 #         #     print("Category_Search" ,category_search)
 #         #     for row in category_search:
 #         #         basic_points = row['min_points']
 #         #         print("Basic Points:", basic_points)
 #         #         user_points += basic_points
 
-#         gender_search = app_tables.fin_admin_beseem_categories.search(group_name='gender', sub_category=gender.lower())
+#         gender_search = app_tables.fin_admin_ascend_categories.search(group_name='gender', sub_category=gender.lower())
 #         for row in gender_search:
 #             print("Size of gender_search_search:", gender_search)
 #             gender_points = row['min_points']
 #             print("Gender Points:", gender_points)
 #             user_points += gender_points
 
-#         present_address_search = app_tables.fin_admin_beseem_categories.search(group_name='present_address', sub_category=present_address.lower())
+#         present_address_search = app_tables.fin_admin_ascend_categories.search(group_name='present_address', sub_category=present_address.lower())
 #         for row in present_address_search:
 #             print("Size of present_address_search:", len(present_address_search))
 #             present_address_points = row['min_points']
 #             print("Present address Points:", present_address_points)
 #             user_points += present_address_points
 
-#         duration_at_address_search = app_tables.fin_admin_beseem_categories.search(group_name='duration_at_address', sub_category=duration_at_address.lower())
+#         duration_at_address_search = app_tables.fin_admin_ascend_categories.search(group_name='duration_at_address', sub_category=duration_at_address.lower())
 #         for row in duration_at_address_search:
 #             duration_at_address_points = row['min_points']
 #             print("Duration_at_address Points:", duration_at_address_points)
 #             user_points += duration_at_address_points
       
-#         qualification_search = app_tables.fin_admin_beseem_categories.search(group_name='qualification', sub_category=qualification)
+#         qualification_search = app_tables.fin_admin_ascend_categories.search(group_name='qualification', sub_category=qualification)
 #         for row in qualification_search:
 #             qualification_points = row['min_points']
 #             print("Qualification Points:", qualification_points)
 #             user_points += qualification_points
                  
-#         profession_search = app_tables.fin_admin_beseem_categories.search(group_name='profession', sub_category=profession)
+#         profession_search = app_tables.fin_admin_ascend_categories.search(group_name='profession', sub_category=profession)
 #         for row in profession_search:
 #             profession_points = row['min_points']
 #             print("Profession Points:", profession_points)
 #             user_points += profession_points
 
 #             if profession == 'self employment':
-#                 self_employment_search = app_tables.fin_admin_beseem_categories.search(group_name='profession', sub_category=self_employment)
+#                 self_employment_search = app_tables.fin_admin_ascend_categories.search(group_name='profession', sub_category=self_employment)
 #                 for row in self_employment_search:
 #                     self_employment_points = row['min_points']
 #                     print("Self employment Points:", self_employment_points)
@@ -764,19 +764,19 @@ def get_group_points(customer_id):
 #             elif profession == 'employee':
 #                 categories_to_check = ['organization_type', 'salary_type']
 #                 for category in categories_to_check:
-#                     category_search = app_tables.fin_admin_beseem_categories.search(group_name=category, sub_category=locals()[category])
+#                     category_search = app_tables.fin_admin_ascend_categories.search(group_name=category, sub_category=locals()[category])
 #                     for row in category_search:
 #                         employee_points = row['min_points']
 #                         print("Employee Points:", employee_points)
 #                         user_points += employee_points
 #             elif profession == 'business':
-#                 business_age_search = app_tables.fin_admin_beseem_categories.search(group_name='age_of_business', sub_category=age_of_business)
+#                 business_age_search = app_tables.fin_admin_ascend_categories.search(group_name='age_of_business', sub_category=age_of_business)
 #                 for row in business_age_search:
 #                     business_age_points = row['min_points']
 #                     print("Business age Points:", business_age_points)
 #                     user_points += business_age_points
 
-#         marital_status_search = app_tables.fin_admin_beseem_categories.search(group_name='marital_status', sub_category=marital_status, age=user_age_range)
+#         marital_status_search = app_tables.fin_admin_ascend_categories.search(group_name='marital_status', sub_category=marital_status, age=user_age_range)
 #         for row in marital_status_search:
 #             marital_status_points = row['min_points']
 #             print("Marital Status Points:", marital_status_points)
@@ -788,7 +788,7 @@ def get_group_points(customer_id):
 #                 spouse_profession = item['guarantor_profession'].lower()
 
 #                 if marital_status == 'married' and another_person == 'spouse':
-#                     spouse_profession_search = app_tables.fin_admin_beseem_categories.search(group_name='spouse_profession', sub_category=spouse_profession.lower())
+#                     spouse_profession_search = app_tables.fin_admin_ascend_categories.search(group_name='spouse_profession', sub_category=spouse_profession.lower())
 #                     for row in spouse_profession_search:
 #                         spouse_profession_points = row['min_points']
 #                         print("Spouse profession Points:", spouse_profession_points)
@@ -796,7 +796,7 @@ def get_group_points(customer_id):
 
 #         loans_to_check = ['home_loan', 'other_loan', 'credit_card_loan', 'vehicle_loan']
 #         for loan_category in loans_to_check:
-#             loan_search = app_tables.fin_admin_beseem_categories.search(group_name=loan_category, sub_category=locals()[loan_category])
+#             loan_search = app_tables.fin_admin_ascend_categories.search(group_name=loan_category, sub_category=locals()[loan_category])
 #             for row in loan_search:
 #                 loan_points = row['min_points']
 #                 print("Loan Points:", loan_points)
@@ -809,7 +809,7 @@ def get_group_points(customer_id):
 
 
 # def get_group_points():
-#     groups = app_tables.fin_admin_beseem_groups.search()
+#     groups = app_tables.fin_admin_ascend_groups.search()
 
 #     if groups:
 #         group_points = 0
