@@ -446,7 +446,7 @@ color: %color:On Primary Container%;
   margin-bottom: 0;
 }
 
-.app-bar > .sidebar-toggle { display:block; float:left;  margin-left: -61px; visibility:hidden}
+.app-bar > .sidebar-toggle { display:block; float:left;  margin-left: -61px; }
 .app-bar > .top-left-btn { float: left; margin-left: -60px; margin-right: -40px; }
 .app-bar > .title { float: left; }
 .app-bar > .title > .placeholder { outline: 1px dotted; padding-left: 16px; padding-right: 16px; margin: 8px 8px 0; display:none; }
@@ -484,6 +484,12 @@ color: %color:On Primary Container%;
   visibility: visible;
 }
 
+.app-bar .sidebar-toggle .fa-bars {
+  width: 30px;
+  text-align: center;
+  color:#013065;
+  visibility: hidden;
+}
 
 
 /* Don't put spacing on the top-level container (eg FlowPanel) */
@@ -524,6 +530,7 @@ color: %color:On Primary Container%;
 .app-bar a:hover, .app-bar a:active {
   color: #013065; 
   background-color:#Edf0f4;
+  visibility:visible;
 }
 
 
