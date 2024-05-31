@@ -20,6 +20,12 @@ class dashboard(dashboardTemplate):
     self.user_id = self.user_id
     self.load_data(None)
 
+
+    user_profile = app_tables.fin_user_profile.get(customer_id=self.user_id)
+    if user_profile:
+      self.image_5.source = user_profile['user_photo']
+      self.label_11.text = "Welcome " + user_profile['full_name']
+      
     existing_loans = app_tables.fin_loan_details.search(loan_updated_status=q.any_of(
                           q.like('under process%'),
                           q.like('Under Process%'),
@@ -28,9 +34,12 @@ class dashboard(dashboardTemplate):
 
     investment = app_tables.fin_lender.get(customer_id=self.user_id)
     self.label_3.text = str(investment['investment'] or 0)
+    self.label_13.text = str(investment['membership'])
+    self.label_15.text = str(investment['member_since'])
 
-    opening_bal = app_tables.fin_wallet.get(customer_id=self.user_id)
-    self.label_5.text = str(opening_bal['wallet_amount'] or 0)
+    opening_bal = app_tables.fin_wallet.get(customer_id=self.user_id)   
+    self.label_2_copy.text = "{:.2f}".format((opening_bal['wallet_amount'] or 0))
+    self.label_4_copy.text =  "{:.2f}".format((opening_bal['wallet_amount'] or 0))
 
     my_returns = app_tables.fin_lender.get(customer_id=self.user_id)
     self.label_7.text = str(my_returns['return_on_investment'] or 0)
@@ -194,3 +203,28 @@ class dashboard(dashboardTemplate):
   def label_6_click(self, **event_args):
     """This method is called when the button is clicked"""
     open_form('lendor.dashboard.my_returns')
+
+  def link_1_copy_click(self, **event_args):
+    """This method is called when the link is clicked"""
+    customer_id = self.user_id
+    email = self.email
+    anvil.server.call('fetch_profile_data_and_insert', email, customer_id)
+    open_form("wallet.wallet")
+
+  def link_14_click(self, **event_args):
+    """This method is called when the link is clicked"""
+    customer_id = self.user_id
+    email = self.email
+    anvil.server.call('fetch_profile_data_and_insert', email, customer_id)
+    open_form("wallet.wallet")
+
+  def button_1_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    customer_id = self.user_id
+    email = self.email
+    anvil.server.call('fetch_profile_data_and_insert', email, customer_id)
+    open_form("wallet.wallet")
+
+  def link_15_click(self, **event_args):
+    """This method is called when the link is clicked"""
+    open_form("lendor.dashboard.lender_view_profile")
