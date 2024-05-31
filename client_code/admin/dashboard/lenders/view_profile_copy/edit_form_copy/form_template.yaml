@@ -63,12 +63,9 @@ components:
     type: Label
     layout_properties: {grid_position: 'NIPFIX,JTFJZJ GENCVA,YFODNE'}
   - name: text_box_4
-    properties: {role: outlined, align: left, hide_text: false, tooltip: '', placeholder: ' Enter
-        your Gender', border: '', enabled: true, foreground: '', visible: false, text: '',
-      font_size: null, font: '', spacing_above: small, type: text, spacing_below: small,
-      italic: false, background: '', bold: false, underline: false}
+    properties: {}
     type: TextBox
-    layout_properties: {grid_position: 'NIPFIX,JTFJZJ GENCVA,QSKCPW'}
+    layout_properties: {grid_position: 'NIPFIX,JTFJZJ GENCVA,DPTIYF'}
   - name: label_6
     properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
       visible: false, text: '   User Age', font_size: null, font: '', spacing_above: small,
