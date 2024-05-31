@@ -62,10 +62,10 @@ components:
       underline: false, icon: ''}
     type: Label
     layout_properties: {grid_position: 'NIPFIX,JTFJZJ GENCVA,YFODNE'}
-  - name: drop_down_1
+  - name: text_box_4
     properties: {}
-    type: DropDown
-    layout_properties: {grid_position: 'NIPFIX,JTFJZJ GENCVA,IRSJSF'}
+    type: TextBox
+    layout_properties: {grid_position: 'NIPFIX,JTFJZJ GENCVA,NQJQCG'}
   - name: label_6
     properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
       visible: false, text: '   User Age', font_size: null, font: '', spacing_above: small,
@@ -196,10 +196,10 @@ components:
       underline: false, icon: ''}
     type: Label
     layout_properties: {grid_position: 'NIPFIX,JTFJZJ FIXTFF,BJYFWH'}
-  - name: drop_down_2
+  - name: text_box_15
     properties: {}
-    type: DropDown
-    layout_properties: {grid_position: 'NIPFIX,JTFJZJ FIXTFF,OCXOKC'}
+    type: TextBox
+    layout_properties: {grid_position: 'NIPFIX,JTFJZJ FIXTFF,DLLEZL'}
   - name: label_19
     properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
       visible: false, text: '   Marriage Date', font_size: null, font: '', spacing_above: small,
@@ -333,10 +333,10 @@ components:
       underline: false, icon: ''}
     type: Label
     layout_properties: {grid_position: 'NIPFIX,JTFJZJ YXXXNI,PGJGSO'}
-  - name: drop_down_3
+  - name: text_box_25
     properties: {}
-    type: DropDown
-    layout_properties: {grid_position: 'NIPFIX,JTFJZJ YXXXNI,PYHXUO'}
+    type: TextBox
+    layout_properties: {grid_position: 'NIPFIX,JTFJZJ YXXXNI,WNVZDV'}
   - name: label_29
     properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
       visible: false, text: '   Alerts', font_size: null, font: '', spacing_above: small,
@@ -414,10 +414,10 @@ components:
       underline: false, icon: ''}
     type: Label
     layout_properties: {grid_position: 'NIPFIX,JTFJZJ FQGEMN,CVMIEY'}
-  - name: drop_down_4
+  - name: text_box_32
     properties: {}
-    type: DropDown
-    layout_properties: {grid_position: 'NIPFIX,JTFJZJ FQGEMN,PYAOHV'}
+    type: TextBox
+    layout_properties: {grid_position: 'NIPFIX,JTFJZJ FQGEMN,FOBJTV'}
   - name: label_36
     properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
       visible: false, text: '   State', font_size: null, font: '', spacing_above: small,
@@ -496,10 +496,13 @@ components:
       underline: false, icon: ''}
     type: Label
     layout_properties: {grid_position: 'NIPFIX,JTFJZJ DALOOR,QTOIWN'}
-  - name: drop_down_5
-    properties: {}
-    type: DropDown
-    layout_properties: {grid_position: 'NIPFIX,JTFJZJ DALOOR,TGPNLQ'}
+  - name: text_box_11
+    properties: {role: outlined, align: left, hide_text: false, tooltip: '', placeholder: '',
+      border: '', enabled: true, foreground: '', visible: false, text: '', font_size: null,
+      font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
+      background: '', bold: false, underline: false}
+    type: TextBox
+    layout_properties: {grid_position: 'NIPFIX,JTFJZJ DALOOR,QXPZAC'}
   - name: label_8
     properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
       visible: false, text: '   Employment type', font_size: null, font: '', spacing_above: small,
@@ -507,10 +510,13 @@ components:
       underline: false, icon: ''}
     type: Label
     layout_properties: {grid_position: 'NIPFIX,JTFJZJ UKLWIW,ANVUKV'}
-  - name: drop_down_6
-    properties: {}
-    type: DropDown
-    layout_properties: {grid_position: 'NIPFIX,JTFJZJ UKLWIW,UPIUGP'}
+  - name: text_box_16
+    properties: {role: outlined, align: left, hide_text: false, tooltip: '', placeholder: '',
+      border: '', enabled: true, foreground: '', visible: false, text: '', font_size: null,
+      font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
+      background: '', bold: false, underline: false}
+    type: TextBox
+    layout_properties: {grid_position: 'NIPFIX,JTFJZJ UKLWIW,HKKUXC'}
   - name: label_14
     properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
       visible: false, text: '   Business no', font_size: null, font: '', spacing_above: small,
