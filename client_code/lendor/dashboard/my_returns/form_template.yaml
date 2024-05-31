@@ -34,11 +34,32 @@ components:
       bold: true, align: center, font_size: 22}
     type: Label
     layout_properties: {grid_position: 'FOVGBP,RDGWCT'}
+  - name: column_panel_1
+    properties: {role: elevated-card}
+    type: ColumnPanel
+    layout_properties: {grid_position: 'TVBWLP,DWIRTP', full_width_row: false}
+    components:
+    - name: button_2
+      properties: {text: My Returns, background: '#05264d', foreground: white, role: elevated-button,
+        bold: true, align: full}
+      type: Button
+      layout_properties: {grid_position: 'NZRYNQ,OPVKXB'}
+      event_bindings: {click: button_2_click}
+    - name: button_3
+      properties: {text: My Returns base on Users, background: '#05264d', foreground: white,
+        role: elevated-button, bold: true, align: full}
+      type: Button
+      layout_properties: {grid_position: 'NZRYNQ,LDMGVG'}
+      event_bindings: {click: button_3_click}
   - name: plot_1
-    properties: {height: '600', spacing_above: large}
+    properties: {height: '600', spacing_above: large, visible: false}
     type: Plot
     layout_properties: {grid_position: 'AZZTXL,KFPSZF', full_width_row: false}
     event_bindings: {click: plot_1_click}
+  - name: plot_2
+    properties: {visible: false, spacing_above: large, spacing_below: large, height: '600'}
+    type: Plot
+    layout_properties: {grid_position: 'HJWWGF,KNKJFU'}
 - type: FlowPanel
   properties: {}
   name: navbar_links
