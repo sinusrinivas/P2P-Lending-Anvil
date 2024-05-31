@@ -4,6 +4,8 @@ import anvil.server
 import anvil.google.auth, anvil.google.drive
 from anvil.google.drive import app_files
 import anvil.users
+import anvil.tables as tables
+from anvil.tables import app_tables
 
 class edit_form(edit_formTemplate):
   def __init__(self, get_customer_id_value, **properties):
@@ -273,71 +275,153 @@ class edit_form(edit_formTemplate):
     """This method is called when the button is clicked"""
     data = tables.app_tables.fin_user_profile.search()
 
-    id_list = []
-    for i in self.data:
-      id_list.append(i['customer_id'])
+    id_list = [i['customer_id'] for i in data]
 
     if self.get in id_list:
-      a = id_list.index(self.get)
-      data[a]['full_name'] = self.text_box_2.text
-      data[a]['profile_status'] = bool(self.text_box_3.text)
-      data[a]['gender'] = self.text_box_4.text
-      data[a]['user_age'] = int(self.text_box_5.text)
-      # data[a]['date_of_birth'] = self.date_picker_1.date
-      data[a]['mobile'] = self.text_box_7.text
-      data[a]['aadhaar_no'] = self.text_box_8.text
-      data[a]['pan_number'] = self.text_box_9.text
-      data[a]['city'] = self.text_box_10.text
-      data[a]['last_confirm'] = bool(self.text_box_12.text)
-      data[a]['mobile_check'] = bool(self.text_box_13.text)
-      data[a]['mouther_tounge'] = self.text_box_14.text
-      data[a]['marital_status'] = self.text_box_15.text
-      # data[a]['Date_mariage'] = self.date_picker_2.date
-      data[a]['spouse_name'] = self.text_box_17.text
-      data[a]['spouse_mobile'] = self.text_box_18.text
-      data[a]['spouse_company_name'] = self.text_box_19.text
-      data[a]['spouse_company_address'] = self.text_box_20.text
-      data[a]['spouse_profession'] = self.text_box_21.text
-      data[a]['usertype'] = self.text_box_22.text
-      data[a]['registration_approve'] = bool(self.text_box_23.text)
-      data[a]['about'] = self.text_box_24.text
-      data[a]['address_type'] = self.text_box_25.text
-      data[a]['alerts'] = bool(self.text_box_26.text)
-      data[a]['building_name'] = self.text_box_27.text
-      data[a]['house_landmark'] = self.text_box_28.text
-      data[a]['house_no'] = self.text_box_29.text
-      data[a]['pincode'] = self.text_box_30.text
-      data[a]['business_no'] = self.text_box_31.text
-      data[a]['qualification'] = self.text_box_32.text
-      data[a]['state'] = self.text_box_33.text
-      data[a]['street'] = self.text_box_34.text
-      data[a]['terms'] = bool(self.text_box_35.text)
-      data[a]['another_email'] = self.text_box_1.text
-      data[a]['company_name'] = self.text_box_6.text
-      data[a]['organization_type'] = self.text_box_11.text
-      data[a]['employment_type'] = self.text_box_16.text
-      data[a]['company_landmark'] = self.text_box_36.text
-      data[a]['company_address'] = self.text_box_37.text
-      data[a]['annual_salary'] = self.text_box_38.text
-      data[a]['designation'] = self.text_box_39.text
-      data[a]['account_name'] = self.text_box_40.text
-      data[a]['account_type'] = self.text_box_41.text
-      data[a]['account_number'] = self.text_box_42.text
-      data[a]['account_bank_branch'] = self.text_box_43.text
-      # data[a]['ifsc_code'] = self.text_box_44.text
-      data[a]['salary_type'] = self.text_box_45.text
-      # data[a]['select_bank'] = self.text_box_46.text
-      # data[a]['net_bank'] = self.text_box_47.text
-      data[a]['father_name'] = self.text_box_48.text
-      data[a]['father_age'] = self.text_box_49.text
-      data[a]['mother_name'] = self.text_box_50.text
-      data[a]['mother_age'] = self.text_box_51.text
-      data[a]['college_name'] = self.text_box_52.text
-      data[a]['college_id'] = self.text_box_53.text
-      data[a]['college_address'] = self.text_box_54.text
-      # data[a]['running_Home_Loan'] = self.text_box_55.text
-      print(a)
-      open_form('admin.dashboard.borrowers.view_profile', self.get)
+        a = id_list.index(self.get)
+        user_data = data[a]
+
+        # Update user profile data with values from the text boxes
+        user_data['full_name'] = self.text_box_2.text
+        user_data['profile_status'] = bool(self.text_box_3.text)
+        user_data['gender'] = self.text_box_4.text
+        user_data['user_age'] = int(self.text_box_5.text)
+        # user_data['date_of_birth'] = self.date_picker_1.date
+        user_data['mobile'] = self.text_box_7.text
+        user_data['aadhaar_no'] = self.text_box_8.text
+        user_data['pan_number'] = self.text_box_9.text
+        user_data['city'] = self.text_box_10.text
+        user_data['last_confirm'] = bool(self.text_box_12.text)
+        user_data['mobile_check'] = bool(self.text_box_13.text)
+        user_data['mouther_tounge'] = self.text_box_14.text
+        user_data['marital_status'] = self.text_box_15.text
+        # user_data['Date_mariage'] = self.date_picker_2.date
+        user_data['spouse_name'] = self.text_box_17.text
+        user_data['spouse_mobile'] = self.text_box_18.text
+        user_data['spouse_company_name'] = self.text_box_19.text
+        user_data['spouse_company_address'] = self.text_box_20.text
+        user_data['spouse_profession'] = self.text_box_21.text
+        user_data['usertype'] = self.text_box_22.text
+        user_data['registration_approve'] = bool(self.text_box_23.text)
+        user_data['about'] = self.text_box_24.text
+        user_data['address_type'] = self.text_box_25.text
+        user_data['alerts'] = bool(self.text_box_26.text)
+        user_data['building_name'] = self.text_box_27.text
+        user_data['house_landmark'] = self.text_box_28.text
+        user_data['house_no'] = self.text_box_29.text
+        user_data['pincode'] = self.text_box_30.text
+        user_data['business_no'] = self.text_box_31.text
+        user_data['qualification'] = self.text_box_32.text
+        user_data['state'] = self.text_box_33.text
+        user_data['street'] = self.text_box_34.text
+        user_data['terms'] = bool(self.text_box_35.text)
+        user_data['another_email'] = self.text_box_1.text
+        user_data['company_name'] = self.text_box_6.text
+        user_data['organization_type'] = self.text_box_11.text
+        user_data['employment_type'] = self.text_box_16.text
+        user_data['company_landmark'] = self.text_box_36.text
+        user_data['company_address'] = self.text_box_37.text
+        user_data['annual_salary'] = self.text_box_38.text
+        user_data['designation'] = self.text_box_39.text
+        user_data['account_name'] = self.text_box_40.text
+        user_data['account_type'] = self.text_box_41.text
+        user_data['account_number'] = self.text_box_42.text
+        user_data['account_bank_branch'] = self.text_box_43.text
+        # user_data['ifsc_code'] = self.text_box_44.text
+        user_data['salary_type'] = self.text_box_45.text
+        # user_data['select_bank'] = self.text_box_46.text
+        # user_data['net_bank'] = self.text_box_47.text
+        user_data['father_name'] = self.text_box_48.text
+        user_data['father_age'] = self.text_box_49.text
+        user_data['mother_name'] = self.text_box_50.text
+        user_data['mother_age'] = self.text_box_51.text
+        user_data['college_name'] = self.text_box_52.text
+        user_data['college_id'] = self.text_box_53.text
+        user_data['college_address'] = self.text_box_54.text
+        # user_data['running_Home_Loan'] = self.text_box_55.text
+
+        # Calculate ascend score and update
+        ascend_value = anvil.server.call('final_points_update_ascend_table', self.get)
+        if ascend_value is not None:
+            user_data['ascend_value'] = float(ascend_value)
+
+            borrower = app_tables.fin_borrower.get(customer_id=self.get)
+            if borrower:
+                borrower['ascend_score'] = ascend_value
+       
+        # data.update()
+        print(f"Updated user profile and borrower table for customer_id: {self.get}")
+        open_form('admin.dashboard.borrowers.view_profile', self.get)
+
+  # def button_2_click(self, **event_args):
+  #   """This method is called when the button is clicked"""
+  #   data = tables.app_tables.fin_user_profile.search()
+
+  #   id_list = []
+  #   for i in self.data:
+  #     id_list.append(i['customer_id'])
+
+  #   if self.get in id_list:
+  #     a = id_list.index(self.get)
+  #     data[a]['full_name'] = self.text_box_2.text
+  #     data[a]['profile_status'] = bool(self.text_box_3.text)
+  #     data[a]['gender'] = self.text_box_4.text
+  #     data[a]['user_age'] = int(self.text_box_5.text)
+  #     # data[a]['date_of_birth'] = self.date_picker_1.date
+  #     data[a]['mobile'] = self.text_box_7.text
+  #     data[a]['aadhaar_no'] = self.text_box_8.text
+  #     data[a]['pan_number'] = self.text_box_9.text
+  #     data[a]['city'] = self.text_box_10.text
+  #     data[a]['last_confirm'] = bool(self.text_box_12.text)
+  #     data[a]['mobile_check'] = bool(self.text_box_13.text)
+  #     data[a]['mouther_tounge'] = self.text_box_14.text
+  #     data[a]['marital_status'] = self.text_box_15.text
+  #     # data[a]['Date_mariage'] = self.date_picker_2.date
+  #     data[a]['spouse_name'] = self.text_box_17.text
+  #     data[a]['spouse_mobile'] = self.text_box_18.text
+  #     data[a]['spouse_company_name'] = self.text_box_19.text
+  #     data[a]['spouse_company_address'] = self.text_box_20.text
+  #     data[a]['spouse_profession'] = self.text_box_21.text
+  #     data[a]['usertype'] = self.text_box_22.text
+  #     data[a]['registration_approve'] = bool(self.text_box_23.text)
+  #     data[a]['about'] = self.text_box_24.text
+  #     data[a]['address_type'] = self.text_box_25.text
+  #     data[a]['alerts'] = bool(self.text_box_26.text)
+  #     data[a]['building_name'] = self.text_box_27.text
+  #     data[a]['house_landmark'] = self.text_box_28.text
+  #     data[a]['house_no'] = self.text_box_29.text
+  #     data[a]['pincode'] = self.text_box_30.text
+  #     data[a]['business_no'] = self.text_box_31.text
+  #     data[a]['qualification'] = self.text_box_32.text
+  #     data[a]['state'] = self.text_box_33.text
+  #     data[a]['street'] = self.text_box_34.text
+  #     data[a]['terms'] = bool(self.text_box_35.text)
+  #     data[a]['another_email'] = self.text_box_1.text
+  #     data[a]['company_name'] = self.text_box_6.text
+  #     data[a]['organization_type'] = self.text_box_11.text
+  #     data[a]['employment_type'] = self.text_box_16.text
+  #     data[a]['company_landmark'] = self.text_box_36.text
+  #     data[a]['company_address'] = self.text_box_37.text
+  #     data[a]['annual_salary'] = self.text_box_38.text
+  #     data[a]['designation'] = self.text_box_39.text
+  #     data[a]['account_name'] = self.text_box_40.text
+  #     data[a]['account_type'] = self.text_box_41.text
+  #     data[a]['account_number'] = self.text_box_42.text
+  #     data[a]['account_bank_branch'] = self.text_box_43.text
+  #     # data[a]['ifsc_code'] = self.text_box_44.text
+  #     data[a]['salary_type'] = self.text_box_45.text
+  #     # data[a]['select_bank'] = self.text_box_46.text
+  #     # data[a]['net_bank'] = self.text_box_47.text
+  #     data[a]['father_name'] = self.text_box_48.text
+  #     data[a]['father_age'] = self.text_box_49.text
+  #     data[a]['mother_name'] = self.text_box_50.text
+  #     data[a]['mother_age'] = self.text_box_51.text
+  #     data[a]['college_name'] = self.text_box_52.text
+  #     data[a]['college_id'] = self.text_box_53.text
+  #     data[a]['college_address'] = self.text_box_54.text
+  #     # data[a]['running_Home_Loan'] = self.text_box_55.text
+  #     print(a)
+  #     open_form('admin.dashboard.borrowers.view_profile', self.get)
 
   def button_1_copy_click(self, **event_args):
     open_form('admin.dashboard.borrowers.view_profile', self.get)
