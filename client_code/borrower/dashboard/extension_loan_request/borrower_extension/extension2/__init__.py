@@ -135,6 +135,7 @@ class extension2(extension2Template):
                     reason=reason,
                     status='under process',
                     emi_number=self.emi_number,
+                  
                     extension_request_date=datetime.now()
                 )
                 # updated_remaining_amount = loan_details_row['remaining_amount'] + extension_amount_numeric
