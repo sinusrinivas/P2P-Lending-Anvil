@@ -23,7 +23,7 @@ class borrower_view_profile(borrower_view_profileTemplate):
     # self.disable_profession_fields()
     self.disable_college_details_fields()
     self.disable_land_farming_details_fields()
-    self.disable_borrower_profile_info_fields()
+    # self.disable_borrower_profile_info_fields()
     self.disable_business_details_fields()
     self.disable_bank_details_fields()
     self.load_user_profile()
@@ -56,7 +56,7 @@ class borrower_view_profile(borrower_view_profileTemplate):
       self.present_addres_dropdown.selected_value = user_profile['present_address']
       self.address_1_tx.text = user_profile['street_adress_1']
       self.address_2_tx.text = user_profile['street_address_2']
-      self.how_long_stay_tx.text = user_profile['duration_at_address']
+      self.how_long_drop_down.selected_value = user_profile['duration_at_address']
       self.pincode_tx.text = user_profile['pincode']
       # self.age_tx.text = user_profile['user_age']
       self.vehicle_loan_tx.text = user_profile['vehicle_loan']
@@ -101,6 +101,8 @@ class borrower_view_profile(borrower_view_profileTemplate):
       self.bank_id_tx.text = user_profile['bank_id']
       self.bank_name_tx.text = user_profile['bank_name']
       self.acccount_type_dropdown.selected_value = user_profile['account_type']
+      self.other_loans_tx.text = user_profile['other_loan']
+      self.home_loan_tx.text = user_profile['vehicle_loan']
 
       if user_profile['profession'] == 'Employee' :
         self.student_button.visible = False
@@ -176,10 +178,14 @@ class borrower_view_profile(borrower_view_profileTemplate):
       option_strings_2 = [str(option['borrower_no_of_employees']) for option in options_2]
       self.no_of_emp_dropdown.items = option_strings_2
 
+      options = app_tables.fin_duration_at_address.search()
+      option_strings = [str(option['duration_at_address']) for option in options]
+      self.how_long_drop_down.items = option_strings
+
       if borrower_details:
-        self.credit_limit_tx.text = borrower_details['credit_limit']
+        # self.credit_limit_tx.text = borrower_details['credit_limit']
         self.credit_label.text = borrower_details['credit_limit']
-        self.member_since_date_picker_1.date = borrower_details['borrower_since']
+        # self.member_since_date_picker_1.date = borrower_details['borrower_since']
         self.membership_since_label.text = borrower_details['borrower_since']
 
   def disable_personal_fields(self):
@@ -197,13 +203,15 @@ class borrower_view_profile(borrower_view_profileTemplate):
       self.present_addres_dropdown.enabled = False
       self.address_1_tx.enabled = False
       self.address_2_tx.enabled = False
-      self.how_long_stay_tx.enabled = False
+      self.how_long_drop_down.enabled = False
       self.pincode_tx.enabled = False
       # self.age_tx.enabled = False
       self.vehicle_loan_tx.enabled = False
       self.credit_tx.enabled = False
       self.qualification_dropdown.enabled = False
       self.profession_dropdown.enabled = False
+      self.other_loans_tx.enabled = False
+      self.home_loan_tx.enabled = False
 
   def enable_personal_fields(self):
       self.name_text_box.enabled = True
@@ -220,13 +228,15 @@ class borrower_view_profile(borrower_view_profileTemplate):
       self.present_addres_dropdown.enabled = True
       self.address_1_tx.enabled = True
       self.address_2_tx.enabled = True
-      self.how_long_stay_tx.enabled = True
+      self.how_long_drop_down.enabled = True
       self.pincode_tx.enabled = True
       # self.age_tx.enabled = True
       self.vehicle_loan_tx.enabled = True
       self.credit_tx.enabled = True
       self.qualification_dropdown.enabled = True
       self.profession_dropdown.enabled = True
+      self.other_loans_tx.enabled = True
+      self.home_loan_tx.enabled = True
 
   def edit_personal_details_click(self, **event_args):
       self.enable_personal_fields()
@@ -270,14 +280,16 @@ class borrower_view_profile(borrower_view_profileTemplate):
         "Present Address": self.present_addres_dropdown.selected_value,
         "Street Address 1": self.address_1_tx.text,
         "Street Address 2": self.address_2_tx.text,
-        "Duration at Address": self.how_long_stay_tx.text,
+        "Duration at Address": self.how_long_drop_down.selected_value,
         "Pincode": self.pincode_tx.text,
         # "Age": self.age_tx.text,
         "Vehicle Loan": self.vehicle_loan_tx.text,
         "Credit Card Loans": self.credit_tx.text,
         "Qualification": self.qualification_dropdown.selected_value,
         "Profession": self.profession_dropdown.selected_value,
-        "Other Loan": self.Language_tx.text,
+        "Other Loan": self.other_loans_tx.text,
+        "Home Loan": self.home_loan_tx.text,
+        # "other Loans": self.other_loans_tx.text,
     }
 
     for field_name, field_value in required_fields.items():
@@ -286,7 +298,7 @@ class borrower_view_profile(borrower_view_profileTemplate):
 
     numeric_fields = {
         "Mobile Number": self.mobile_tx.text,
-        "How long": self.how_long_stay_tx.text,
+        # "How long": self.how_long_stay_tx.text,
         "Pincode": self.pincode_tx.text,
 
     }
@@ -347,7 +359,7 @@ class borrower_view_profile(borrower_view_profileTemplate):
               loans.update()
   
       extends_table = app_tables.fin_extends_loan.search(borrower_customer_id=self.user_id)
-      if extends_table:
+      if Walet_transations:
             for loans in extends_table:
               loans['borrower_email_id'] = new_email
               loans['borrower_full_name'] = new_full_name
@@ -359,7 +371,7 @@ class borrower_view_profile(borrower_view_profileTemplate):
               loans['borrower_email_id'] = new_email
               loans['borrower_name'] = new_full_name
               loans.update()
-  
+              
       fin_borrower = app_tables.fin_borrower.get(customer_id=self.user_id)
       if fin_borrower:
             fin_borrower['email_id'] = new_email
@@ -382,7 +394,7 @@ class borrower_view_profile(borrower_view_profileTemplate):
               loans['mobile_number'] = self.mobile_tx.text
               loans.update()
   
-      ascend_score = app_tables.fin_admin_ascend_groups.get(borrower_customer_id=self.user_id)
+      ascend_score = app_tables.fin_user_beseem_score.get(borrower_customer_id=self.user_id)
       if ascend_score:
             ascend_score['borrower_email_id'] = new_email
             ascend_score.update()
@@ -409,11 +421,13 @@ class borrower_view_profile(borrower_view_profileTemplate):
         user_profile["present_address"] = self.present_addres_dropdown.selected_value
         user_profile["street_adress_1"] = self.address_1_tx.text
         user_profile["street_address_2"] = self.address_2_tx.text
-        user_profile["duration_at_address"] = self.how_long_stay_tx.text
+        user_profile["duration_at_address"] = self.how_long_drop_down.selected_value
         user_profile["pincode"] = self.pincode_tx.text
         # user_profile["user_age"] = int(self.age_tx.text)
         user_profile["vehicle_loan"] = self.vehicle_loan_tx.text
         user_profile["credit_card_loans"] = self.credit_tx.text
+        user_profile["other_loan"] = self.other_loans_tx.text
+        user_profile["home_loan"] = self.home_loan_tx.text
         user_profile["qualification"] = self.qualification_dropdown.selected_value
         user_profile["profession"] = self.profession_dropdown.selected_value
         user_profile["other_loan"] = self.Language_tx.text
@@ -682,50 +696,7 @@ class borrower_view_profile(borrower_view_profileTemplate):
     self.save_land_farming_details_button.visible = False
     self.edit_land_farming_details_button.visible = True
 
-  def disable_borrower_profile_info_fields(self):
-    self.credit_limit_tx.enabled = False
-    self.member_since_date_picker_1.enabled = False
 
-  def enable_borrower_profile_info_fields(self):
-    self.credit_limit_tx.enabled = True
-    self.member_since_date_picker_1.enabled = True
-
-  def edit_borrower_profile_info_click(self, **event_args):
-    self.enable_borrower_profile_info_fields()
-    self.save_borrower_profile_info_button.visible = True
-    self.edit_borrower_profile_info_button.visible = False
-
-  def save_borrower_profile_info_click(self, **event_args):
-    def is_valid(value):
-        return value and not value.isspace()
-
-    # Collect error messages
-    error_messages = []
-
-    # Validate each field
-    required_fields = {
-        "Credit Limit": self.credit_limit_tx.text,
-        # "Member Since": self.member_since_date_picker_1.date
-    }
-
-    for field_name, field_value in required_fields.items():
-        if not is_valid(field_value):
-            error_messages.append(f"{field_name} is required and cannot be empty or contain only spaces.")
-
-    # Check if there are any validation errors
-    if error_messages:
-        alert("\n".join(error_messages))
-        return
-
-    # If no validation errors, proceed with saving
-    borrower_details = app_tables.fin_borrower.get(customer_id=self.user_id)
-    if borrower_details:
-        borrower_details['credit_limit'] = float(self.credit_limit_tx.text)
-        borrower_details['borrower_since'] = self.member_since_date_picker_1.date
-
-    self.disable_borrower_profile_info_fields()
-    self.save_borrower_profile_info_button.visible = False
-    self.edit_borrower_profile_info_button.visible = True
 
   def disable_business_details_fields(self):
     self.business_name_tex.enabled = False
@@ -921,21 +892,13 @@ class borrower_view_profile(borrower_view_profileTemplate):
     self.employee_information_panel.visible = False
     self.business_information_panel.visible = False
     self.professional_information_paenl.visible = False
-    self.profile_information_paenl.visible = False
+    # self.profile_information_paenl.visible = False
     self.farmer_information_panel.visible = False
     self.bank_details_panel.visible = False
 
 
 
-  def Profile_Information_click(self, **event_args):
-    """This method is called when the button is clicked"""
-    self.personal_information_panel.visible = False
-    self.employee_information_panel.visible = False
-    self.business_information_panel.visible = False
-    self.professional_information_paenl.visible = False
-    self.profile_information_paenl.visible = True
-    self.farmer_information_panel.visible = False
-    self.bank_details_panel.visible = False
+ 
 
   def Student_information_click(self, **event_args):
     """This method is called when the button is clicked"""
@@ -950,7 +913,7 @@ class borrower_view_profile(borrower_view_profileTemplate):
   def Employee_Information_click(self, **event_args):
     """This method is called when the button is clicked"""
     self.personal_information_panel.visible = False
-    self.profile_information_paenl.visible = False
+    # self.profile_information_paenl.visible = False
     self.business_information_panel.visible = False
     self.professional_information_paenl.visible = False
     self.employee_information_panel.visible = True
@@ -962,7 +925,7 @@ class borrower_view_profile(borrower_view_profileTemplate):
     self.personal_information_panel.visible = False
     self.professional_information_paenl.visible = False
     self.business_information_panel.visible = False
-    self.profile_information_paenl.visible = False
+    # self.profile_information_paenl.visible = False
     self.employee_information_panel.visible = False
     self.farmer_information_panel.visible = True
     self.bank_details_panel.visible = False
@@ -972,7 +935,7 @@ class borrower_view_profile(borrower_view_profileTemplate):
     self.personal_information_panel.visible = False
     self.professional_information_paenl.visible = False
     self.business_information_panel.visible = True
-    self.profile_information_paenl.visible = False
+    # self.profile_information_paenl.visible = False
     self.employee_information_panel.visible = False
     self.farmer_information_panel.visible = False
     self.bank_details_panel.visible = False
@@ -982,7 +945,7 @@ class borrower_view_profile(borrower_view_profileTemplate):
     self.personal_information_panel.visible = False
     self.professional_information_paenl.visible = False
     self.business_information_panel.visible = False
-    self.profile_information_paenl.visible = False
+    # self.profile_information_paenl.visible = False
     self.employee_information_panel.visible = False
     self.farmer_information_panel.visible = False
     self.bank_details_panel.visible = True
