@@ -16,6 +16,9 @@ class edit_form_copy(edit_form_copyTemplate):
     # Any code you write here will run before the form opens.
     self.data = tables.app_tables.fin_user_profile.search()
 
+     # Populate the gender dropdown from the database
+    self.populate_gender_dropdown()
+
 
     self.id_list = []
     self.name_list = []
@@ -342,6 +345,17 @@ class edit_form_copy(edit_form_copyTemplate):
       print(a)
       open_form('admin.dashboard.lenders.view_profile_copy', self.get)
 
+      def populate_gender_dropdown(self):
+          # Fetch gender options from the database
+          gender_options = [row['gender'] for row in app_tables.fin_gender.search()]
+          
+          # Clear existing items in dropdown
+          self.gender_dropdown.items = []
+          
+          # Populate dropdown with gender options
+          self.gender_dropdown.items = gender_options
+
+
   def button_1_click(self, **event_args):
     """This method is called when the button is clicked"""
     open_form('admin.dashboard.lenders.view_profile_copy', self.get)
@@ -349,3 +363,7 @@ class edit_form_copy(edit_form_copyTemplate):
   def button_1_copy_click(self, **event_args):
     """This method is called when the button is clicked"""
     open_form('admin.dashboard.lenders.view_profile_copy', self.get)
+
+    selected_gender = self.gender_dropdown.selected_value
+
+  
