@@ -1242,6 +1242,9 @@ db_schema:
     - name: return_on_investment
       admin_ui: {width: 200, order: 3.5}
       type: number
+    - name: member_since
+      admin_ui: {width: 200, order: 13}
+      type: date
   fin_loan_settings:
     client: full
     server: full
