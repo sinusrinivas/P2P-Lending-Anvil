@@ -31,6 +31,8 @@ class dashboard(dashboardTemplate):
 
     opening_bal = app_tables.fin_wallet.get(customer_id=self.user_id)
     self.label_5.text = str(opening_bal['wallet_amount'] or 0)
+    self.label_2_copy.text = str(opening_bal['wallet_amount'] or 0)
+    self.label_4_copy.text = str(opening_bal['wallet_amount'] or 0)
 
     my_returns = app_tables.fin_lender.get(customer_id=self.user_id)
     self.label_7.text = str(my_returns['return_on_investment'] or 0)
@@ -194,3 +196,24 @@ class dashboard(dashboardTemplate):
   def label_6_click(self, **event_args):
     """This method is called when the button is clicked"""
     open_form('lendor.dashboard.my_returns')
+
+  def link_1_copy_click(self, **event_args):
+    """This method is called when the link is clicked"""
+    customer_id = self.user_id
+    email = self.email
+    anvil.server.call('fetch_profile_data_and_insert', email, customer_id)
+    open_form("wallet.wallet")
+
+  def link_14_click(self, **event_args):
+    """This method is called when the link is clicked"""
+    customer_id = self.user_id
+    email = self.email
+    anvil.server.call('fetch_profile_data_and_insert', email, customer_id)
+    open_form("wallet.wallet")
+
+  def button_1_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    customer_id = self.user_id
+    email = self.email
+    anvil.server.call('fetch_profile_data_and_insert', email, customer_id)
+    open_form("wallet.wallet")

@@ -4,13 +4,13 @@ container:
   properties: {html: '@theme:standard-page.html'}
 components:
 - type: ColumnPanel
-  properties: {col_widths: '{"GNZXGH":25,"QWLISW":35}'}
+  properties: {col_widths: '{"GNZXGH":20,"QWLISW":40}'}
   layout_properties: {slot: default}
   name: content_panel
   components:
   - name: column_panel_7_copy_2
     properties: {role: outlined-card, col_widths: '{"CZPYDN":90,"JLLGYN":5,"QXGKNE":10,"JRXWNO":55,"PBZDAB":3,"LGBPSD":57,"XBQUGG":3,"AMNWCP":57}',
-      background: '#2994bb'}
+      background: '#094586'}
     type: ColumnPanel
     layout_properties: {grid_position: 'OJFLUV,GNZXGH', full_width_row: true}
     components:
@@ -19,10 +19,17 @@ components:
       type: Spacer
       layout_properties: {grid_position: 'VNQVSA,PBZDAB'}
     - name: link_1_copy
-      properties: {text: Ascend Wallet Balance                                                                                     >,
+      properties: {text: 'Ascend Wallet Balance                                                                                     ',
         bold: true, foreground: white, font_size: 16}
       type: Link
       layout_properties: {grid_position: 'VNQVSA,LGBPSD', full_width_row: true}
+      event_bindings: {click: link_1_copy_click}
+    - name: link_14
+      properties: {icon: '', icon_align: right, foreground: White, text: '>', bold: true,
+        font_size: 18, align: right}
+      type: Link
+      layout_properties: {grid_position: 'VNQVSA,PCVRCH'}
+      event_bindings: {click: link_14_click}
     - name: spacer_6
       properties: {height: 32}
       type: Spacer
@@ -36,7 +43,7 @@ components:
       type: Spacer
       layout_properties: {grid_position: 'AOORRV,JLLGYN', full_width_row: true}
     - name: column_panel_7_copy_copy
-      properties: {role: outlined-card, col_widths: '{"EITWZQ":25}', background: '#2994bb'}
+      properties: {role: outlined-card, col_widths: '{"EITWZQ":25}', background: '#094586'}
       type: ColumnPanel
       layout_properties: {grid_position: 'AOORRV,CZPYDN LTIVQI,CGALMQ', full_width_row: true}
       components:
@@ -58,6 +65,7 @@ components:
         role: elevated-button}
       type: Button
       layout_properties: {grid_position: 'AOORRV,CZPYDN GVYVHX,HVHHIX'}
+      event_bindings: {click: button_1_click}
     - name: spacer_3_copy
       properties: {height: 32}
       type: Spacer
@@ -66,6 +74,10 @@ components:
     properties: {height: 32}
     type: Spacer
     layout_properties: {grid_position: 'OJFLUV,QWLISW'}
+  - name: spacer_8
+    properties: {height: '15'}
+    type: Spacer
+    layout_properties: {grid_position: 'XGUQGL,BDZCMG'}
   - properties: {col_widths: '{"NETDIR":15,"IXNAVP":15,"KVCNSJ":15,"PNJZIQ":15}'}
     type: ColumnPanel
     layout_properties: {grid_position: 'XIBORR,NXKDOZ', full_width_row: true}
@@ -150,7 +162,7 @@ components:
         type: Label
         layout_properties: {grid_position: 'QAERLY,ZYDTNB YYWHSJ,POJDAN'}
         name: label_9
-  - properties: {height: 32}
+  - properties: {height: '15'}
     type: Spacer
     layout_properties: {grid_position: 'DNHBZU,EVWJVA'}
     name: spacer_2
@@ -158,7 +170,7 @@ components:
     type: Label
     layout_properties: {grid_position: 'ZFKXTT,RIITMI', full_width_row: true}
     name: label_10
-  - properties: {height: 32}
+  - properties: {height: '10'}
     type: Spacer
     layout_properties: {grid_position: 'DYDFYF,RPSLCX'}
     name: spacer_3
@@ -226,7 +238,7 @@ components:
     - properties: {item_template: lendor.dashboard.RowTemplate13}
       type: RepeatingPanel
       name: repeating_panel_1
-  - properties: {height: 32}
+  - properties: {height: '15'}
     type: Spacer
     layout_properties: {grid_position: 'IRNDZJ,HFIJWP'}
     name: spacer_4
@@ -360,7 +372,7 @@ components:
     layout_properties: {grid_position: 'NHSQFL,VRYRNY'}
     event_bindings: {click: link_10_click}
     name: link_10
-  - properties: {height: 335}
+  - properties: {height: 159.2666015625}
     type: Spacer
     layout_properties: {grid_position: 'OYUVDZ,AROLIJ'}
     name: spacer_1
