@@ -16,10 +16,7 @@ class edit_form_copy(edit_form_copyTemplate):
         # Any code you write here will run before the form opens.
         self.data = tables.app_tables.fin_user_profile.search()
 
-        # Populate the gender and marital status dropdowns
-        self.populate_gender_dropdown()
-        self.populate_marital_status_dropdown()
-
+      
         self.id_list = []
         self.name_list = []
         self.status_list = []
@@ -152,8 +149,8 @@ class edit_form_copy(edit_form_copyTemplate):
 
     def populate_textboxes(self, c):
         self.set_textbox_visibility(self.text_box_2, self.label_2, self.name_list[c])
-        self.set_textbox_visibility(self.text_box_3, self.label_4, str(self.status_list[c]))
-        self.gender_dropdown.selected_value = self.gender_list[c]
+        self.set_textbox_visibility(self.text_box_3, self.label_4, str(self.status_list[c]))      
+        self.set_textbox_visibility(self.text_box_4, self.label_5, self.gender_list[c])
         self.set_textbox_visibility(self.text_box_5, self.label_6, self.age_list[c])
         self.set_textbox_visibility(self.text_box, self.label_7, self.dob_list[c])
         self.set_textbox_visibility(self.text_box_7, self.label_10, self.mobile_list[c])
@@ -163,8 +160,8 @@ class edit_form_copy(edit_form_copyTemplate):
         self.set_textbox_visibility(self.text_box_12, self.label_15, str(self.last_confirm_list[c]))
         self.set_textbox_visibility(self.text_box_13, self.label_16, str(self.mobile_check_list[c]))
         self.set_textbox_visibility(self.text_box_14, self.label_17, self.mother_tongue_list[c])
-        self.marital_status_dropdown.selected_value = self.mother_status_list[c]
-        #self.set_textbox_visibility(self.text_box_15, self.label_18, self.mother_status_list[c])
+        # self.marital_status_dropdown.selected_value = self.mother_status_list[c]
+        self.set_textbox_visibility(self.text_box_15, self.label_18, self.mother_status_list[c])
         self.set_textbox_visibility(self.text_box_17, self.label_20, self.space_name_list[c])
         self.set_textbox_visibility(self.text_box_24, self.label_27, self.about_list[c])
         self.set_textbox_visibility(self.text_box_26, self.label_29, str(self.alets_list[c]))
@@ -214,26 +211,7 @@ class edit_form_copy(edit_form_copyTemplate):
             textbox.visible = False
             label.visible = False
 
-    def populate_gender_dropdown(self):
-        # Fetch gender options from the database
-        gender_options = [row['gender'] for row in app_tables.fin_gender.search()]
-          
-        # Clear existing items in dropdown
-        self.gender_dropdown.items = []
-          
-        # Populate dropdown with gender options
-        self.gender_dropdown.items = gender_options
-
-    def populate_marital_status_dropdown(self):
-        # Fetch marital status options from the database
-        marital_options = [row['marital_status'] for row in app_tables.fin_marital_status.search()]
-          
-        # Clear existing items in dropdown
-        self.marital_status_dropdown.items = []
-          
-        # Populate dropdown with marital status options
-        self.marital_status_dropdown.items = marital_options
-
+    
     def button_2_click(self, **event_args):
         """This method is called when the button is clicked"""
         data = tables.app_tables.fin_user_profile.search()
@@ -246,7 +224,7 @@ class edit_form_copy(edit_form_copyTemplate):
             a = id_list.index(self.get)
             data[a]['full_name'] = self.text_box_2.text
             data[a]['profile_status'] = bool(self.text_box_3.text)
-            data[a]['gender'] = self.gender_dropdown.selected_value
+            data[a]['gender'] = self.text_box_4.text
             data[a]['user_age'] = int(self.text_box_5.text)
             # data[a]['date_of_birth'] = self.date_picker_1.date
             data[a]['mobile'] = self.text_box_7.text
@@ -256,7 +234,7 @@ class edit_form_copy(edit_form_copyTemplate):
             data[a]['last_confirm'] = bool(self.text_box_12.text)
             data[a]['mobile_check'] = bool(self.text_box_13.text)
             data[a]['mouther_tounge'] = self.text_box_14.text
-            data[a]['marital_status'] = self.marital_status_dropdown.selected_value
+            data[a]['marital_status'] = self.text_box_15.text
             #data[a]['Date_mariage'] = self.date_picker_2.date
             data[a]['spouse_name'] = self.text_box_17.text
             data[a]['spouse_mobile'] = self.text_box_18.text
