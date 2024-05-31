@@ -36,8 +36,8 @@ class home_button_admin(home_button_adminTemplate):
   def CMS_click(self, **event_args):
     open_form('admin.dashboard.manage_cms')
 
-  def Bessem_click(self, **event_args):
-    open_form('admin.dashboard.manage_bessem')
+  def ascend_click(self, **event_args):
+    open_form('admin.dashboard.manage_ascend')
 
   def Settings_click(self, **event_args):
     open_form('admin.dashboard.manage_settings')
