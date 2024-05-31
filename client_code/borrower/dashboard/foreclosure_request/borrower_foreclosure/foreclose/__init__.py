@@ -346,7 +346,13 @@ class foreclose(forecloseTemplate):
                     foreclose_fee = float(self.foreclose_fee),
                     interest_rate = float(self.interest_rate),
                     status="under process",
-                    foreclosure_emi_num=self.total_payments_made
+                    foreclosure_emi_num=self.total_payments_made,
+                    lender_customer_id=self.selected_row['lender_customer_id'],
+                    lender_email_id=self.selected_row['lender_email_id'],
+                    lender_full_name=self.selected_row['lender_full_name'],
+                    product_name=self.selected_row['product_name'],
+                    borrower_customer_id=self.selected_row['borrower_customer_id'],
+                    borrower_email_id=self.selected_row['borrower_email_id'],
                 )
 
                 alert("The Foreclosure Statement will be processed within 15 working days from the date of request. Please place this request to know the principal amount outstanding for closure of loan and applicable charges. If you have provided your mobile number or email, we will inform you about the closure of your request by SMS or email respectively. Providing the mobile number or email here will not result in an update of your mobile number or email as recorded with us. KOTAK Bank does not take any responsibility, and will also not be liable, for your claims if the details provided by you are incorrect/incomplete.")

@@ -480,8 +480,11 @@ color: %color:On Primary Container%;
  .app-bar .anvil-component-icon-present .anvil-component-icon, .app-bar .sidebar-toggle .fa {
   width: 30px;
   text-align: center;
-  color:#013065;
   visibility: visible;
+}
+
+.app-bar .anvil-component-icon-present .anvil-component-icon:hover{
+  color:#013065;
 }
 
 .app-bar .sidebar-toggle .fa-bars {
@@ -519,6 +522,12 @@ color: %color:On Primary Container%;
 
 .app-bar a .link-text {
   padding: 0 4px;
+}
+
+.app-bar a .link-text:hover {
+  color: #013065;
+  transform: scale(1);
+  text-shadow: none;
 }
 .app-bar a.has-text .anvil-component-icon.left {
   margin-right: 4px;
