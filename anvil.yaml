@@ -1174,15 +1174,15 @@ db_schema:
     - name: lender_full_name
       admin_ui: {width: 200, order: 14.5}
       type: string
-    - name: lender_customer_id
-      admin_ui: {width: 200}
-      type: string
     - name: 'status_timestamp '
       admin_ui: {width: 200, order: 20}
       type: datetime
     - name: product_name
       admin_ui: {width: 200, order: 21}
       type: string
+    - name: lender_customer_id
+      admin_ui: {width: 200, order: 7.5}
+      type: number
     title: fin_extends_loan
   fin_borrower_marrital_status:
     client: full
