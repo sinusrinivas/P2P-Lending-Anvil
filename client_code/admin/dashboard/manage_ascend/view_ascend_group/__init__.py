@@ -1,4 +1,4 @@
-from ._anvil_designer import view_bessem_groupTemplate
+from ._anvil_designer import view_ascend_groupTemplate
 from anvil import *
 import anvil.server
 import anvil.google.auth, anvil.google.drive
@@ -8,7 +8,7 @@ import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 
-class view_bessem_group(view_bessem_groupTemplate):
+class view_ascend_group(view_ascend_groupTemplate):
   def __init__(self, **properties):
     self.init_components(**properties)
     self.fetch_data()
@@ -24,4 +24,4 @@ class view_bessem_group(view_bessem_groupTemplate):
       self.repeating_panel_1.items = self.result
 
   def back_btn_click(self, **event_args):
-    open_form('admin.dashboard.manage_bessem')
+    open_form('admin.dashboard.manage_ascend')

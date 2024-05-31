@@ -15,35 +15,46 @@ components:
   - name: data_grid_1
     properties:
       columns:
-      - {id: VJQQOR, title: Group Names, data_key: column_2, width: 437.39996337890625,
+      - {id: VJQQOR, title: Group Names, data_key: column_2, width: 263.33331298828125,
         expand: false}
-      - {id: UWQTPT, data_key: column_4, title: Max Points}
+      - {id: OJLQEN, title: Sub Category, data_key: column_3}
+      - {id: UWQTPT, data_key: column_4, title: Min Points}
+      - {id: TRHWNK, data_key: column_1, title: Age}
       visible: false
     type: DataGrid
     components: []
     layout_properties: {grid_position: 'PCZEDG,SNPCKJ'}
   - name: label_1_copy
-    properties: {font_size: 25, align: center, background: '#98c1d9', text: Ascend Score Groups,
+    properties: {font_size: 25, align: center, background: '#98c1d9', text: Ascend Score Subcategories,
       role: outlined-card}
     type: Label
-    layout_properties: {grid_position: 'MHJDYQ,XEPMDJ'}
+    layout_properties: {grid_position: 'ENIIBY,FSCMBS'}
   - name: column_panel_1
-    properties: {role: outlined-card, background: '#98c1d9'}
+    properties: {col_widths: '{"TKCQPH":20,"DOKEZW":15,"KAHZQW":10,"JUYOLL":15}',
+      role: outlined-card, background: '#98c1d9'}
     type: ColumnPanel
-    layout_properties: {grid_position: 'YNPTMQ,HGEXRG'}
+    layout_properties: {grid_position: 'ATGXMY,DBZQDK'}
     components:
     - name: label_1
       properties: {text: Group Names}
       type: Label
-      layout_properties: {grid_position: 'TQNLKQ,WGDEPV'}
+      layout_properties: {grid_position: 'UVBYSO,TKCQPH'}
     - name: label_2
-      properties: {text: Max Points}
+      properties: {text: Sub Category}
       type: Label
-      layout_properties: {grid_position: 'TQNLKQ,JWOVXJ'}
+      layout_properties: {grid_position: 'UVBYSO,DOKEZW'}
+    - name: label_3
+      properties: {text: Min Points}
+      type: Label
+      layout_properties: {grid_position: 'UVBYSO,KAHZQW'}
+    - name: label_4
+      properties: {text: Age}
+      type: Label
+      layout_properties: {grid_position: 'UVBYSO,JUYOLL'}
   - name: repeating_panel_1
-    properties: {item_template: admin.dashboard.manage_ascend.view_bessem_group.ItemTemplate76}
+    properties: {item_template: admin.dashboard.manage_ascend.view_ascend_subcategory.ItemTemplate38}
     type: RepeatingPanel
-    layout_properties: {grid_position: 'ZIAURU,YGSSHV'}
+    layout_properties: {grid_position: 'KTKNSA,RXIIUL'}
   - type: Button
     properties: {role: elevated-button, align: center, tooltip: '', border: '', enabled: true,
       foreground: 'theme:On Primary', visible: true, text: Back, font_size: null,
