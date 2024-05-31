@@ -35,7 +35,6 @@ class today_dues(today_duesTemplate):
               payment_done.sort(key=lambda x: x['next_payment'], reverse=True)
               latest_payment_done = payment_done[0]
               if latest_payment_done:
-              # self.repeating_panel_2.visible = False
                 continue
               
             all_loans = list(app_tables.fin_emi_table.search(
