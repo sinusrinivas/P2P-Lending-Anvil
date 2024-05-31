@@ -20,7 +20,7 @@ components:
   type: form:borrower.dashboard.Navigation_form_dashboard
   layout_properties: {grid_position: 'ZRVLTI,JMGFQZ', full_width_row: true}
 - name: column_panel_7_copy_copy
-  properties: {role: null, col_widths: '{"RBZWXR":1,"WCBRQE":14,"ULOSOM":1,"DRTUYB":15,"INTDZY":15,"IZWFXP":65}'}
+  properties: {role: null, col_widths: '{"RBZWXR":1,"WCBRQE":14,"DRTUYB":60,"IZWFXP":65,"VNRYEV":1}'}
   type: ColumnPanel
   layout_properties: {grid_position: 'ZIZNMI,PIRYUO', full_width_row: true}
   components:
@@ -39,11 +39,11 @@ components:
   - name: spacer_1
     properties: {height: 32}
     type: Spacer
-    layout_properties: {grid_position: 'QNZBUD,ULOSOM', full_width_row: true}
+    layout_properties: {grid_position: 'QNZBUD,VNRYEV', full_width_row: true}
   - name: column_panel_4
     properties: {role: elevated-card, col_widths: '{"KRHWBD":20,"ZHEDGR":40}', background: '#Edf0f4'}
     type: ColumnPanel
-    layout_properties: {grid_position: 'QNZBUD,DRTUYB', full_width_row: true}
+    layout_properties: {grid_position: 'QNZBUD,DRTUYB YTOEXT,TNJAMT', full_width_row: true}
     components:
     - name: label_4_copy
       properties: {text: 'Running Loans
@@ -59,10 +59,27 @@ components:
       properties: {icon: '', text: '0'}
       type: Label
       layout_properties: {grid_position: 'HXGBDO,PIHYRS LIIRFK,ZHEDGR YVDJCL,QQHYRO'}
-  - name: column_panel_7_copy_2
-    properties: {role: elevated-card, col_widths: '{"EITWZQ":25,"DMUXBO":35}', background: '#Edf0f4'}
+  - name: column_panel_6
+    properties: {role: elevated-card, col_widths: '{"ZYDTNB":40}', background: '#Edf0f4'}
     type: ColumnPanel
-    layout_properties: {grid_position: 'QNZBUD,ZYAPLJ'}
+    layout_properties: {grid_position: 'QNZBUD,DRTUYB YTOEXT,KJTPND'}
+    components:
+    - name: label_8
+      properties: {text: Closed Loans, bold: true}
+      type: Label
+      layout_properties: {grid_position: 'QAERLY,ZYDTNB IFVDXW,KISYOU'}
+    - name: label_9
+      properties: {icon: 'fa:rupee', text: '0'}
+      type: Label
+      layout_properties: {grid_position: 'QAERLY,ZYDTNB YYWHSJ,POJDAN'}
+    - name: image_3
+      properties: {height: '50', source: _/theme/lender/dashboard/net%20asset%20value.svg}
+      type: Image
+      layout_properties: {grid_position: 'QAERLY,AEITXQ'}
+  - name: column_panel_7_copy_2
+    properties: {role: elevated-card, col_widths: '{"DMUXBO":35}', background: '#Edf0f4'}
+    type: ColumnPanel
+    layout_properties: {grid_position: 'QNZBUD,DRTUYB YTOEXT,XMYFCK'}
     components:
     - name: label_2_copy
       properties: {icon: '', text: 'Total Number Loans Disbursed
@@ -78,20 +95,20 @@ components:
       properties: {height: '50', source: _/theme/lender/dashboard/total%20funds%20deposited.svg}
       type: Image
       layout_properties: {grid_position: 'BJUXXD,OLEPQK'}
-  - name: column_panel_6
+  - name: column_panel_6_copy
     properties: {role: elevated-card, col_widths: '{"CUOOLO":20,"ZYDTNB":40}', background: '#Edf0f4'}
     type: ColumnPanel
-    layout_properties: {grid_position: 'QNZBUD,INTDZY', full_width_row: true}
+    layout_properties: {grid_position: 'QNZBUD,DRTUYB YTOEXT,RHTFXY'}
     components:
-    - name: label_8
+    - name: label_8_copy
       properties: {text: Total Value of Loan Disbursed, bold: true}
       type: Label
       layout_properties: {grid_position: 'QAERLY,ZYDTNB IFVDXW,KISYOU'}
-    - name: label_9
+    - name: label_9_copy
       properties: {icon: 'fa:rupee', text: '0'}
       type: Label
       layout_properties: {grid_position: 'QAERLY,ZYDTNB YYWHSJ,POJDAN'}
-    - name: image_3
+    - name: image_3_copy
       properties: {height: '50', source: _/theme/lender/dashboard/net%20asset%20value.svg}
       type: Image
       layout_properties: {grid_position: 'QAERLY,AEITXQ'}
