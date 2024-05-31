@@ -14,14 +14,10 @@ class dashboard(dashboardTemplate):
     self.init_components(**properties)
     
     self.email = main_form_module.email
-    self.user_id = main_form_module
+    self.user_Id = main_form_module.userId
     self.email = self.email
-    user_id = self.user_id
+    user_id = self.user_Id
     self.populate_loan_history()
-
-
-
-
 
     wallet = app_tables.fin_wallet.get(customer_id=self.user_Id)
     if wallet:
