@@ -339,8 +339,15 @@ class lender_view_profile(lender_view_profileTemplate):
               loans.update()
   
       extends_table = app_tables.fin_extends_loan.search(lender_customer_id=self.user_id)
-      if Walet_transations:
+      if extends_table:
             for loans in extends_table:
+              loans['lender_email_id'] = new_email
+              loans['lender_full_name'] = new_full_name
+              loans.update()
+
+      foreclosure = app_tables.fin_foreclosure.search(lender_customer_id=self.user_id)
+      if foreclosure:
+            for loans in foreclosure:
               loans['lender_email_id'] = new_email
               loans['lender_full_name'] = new_full_name
               loans.update()
