@@ -23,7 +23,7 @@ class borrowers(borrowersTemplate):
                 borrower_record = app_tables.fin_borrower.get(customer_id=user_profile['customer_id'])
                 if borrower_record is not None:
                     credit_limit = borrower_record['credit_limit']
-                    beseem = borrower_record['beseem_score']
+                    beseem = borrower_record['ascend_score']
                 else:
                     credit_limit = None
                     beseem = None
