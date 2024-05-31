@@ -4,19 +4,64 @@ container:
   properties: {html: '@theme:standard-page.html'}
 components:
 - type: ColumnPanel
-  properties: {col_widths: '{"GNZXGH":20}'}
+  properties: {col_widths: '{"GNZXGH":35,"MOFLSQ":10,"SPBVNP":45,"NAIERL":25,"MABBUH":20,"UEXFLG":40,"NGTYLL":10}'}
   layout_properties: {slot: default}
   name: content_panel
   components:
+  - name: label_1
+    properties: {text: '                Profile Overview :', bold: true, font_size: 20}
+    type: Label
+    layout_properties: {grid_position: 'JNKTYE,SPBVNP SXIJES,TWGPZL', full_width_row: true}
   - name: image_5
-    properties: {}
+    properties: {height: 158.73330688476562}
     type: Image
-    layout_properties: {grid_position: 'OJFLUV,EMCPFQ', full_width_row: true}
+    layout_properties: {grid_position: 'JNKTYE,SPBVNP RWAKXS,MABBUH YIETUV,JICMTU'}
+  - name: link_15
+    properties: {text: View Profile, align: center, bold: true, foreground: black}
+    type: Link
+    layout_properties: {grid_position: 'JNKTYE,SPBVNP RWAKXS,MABBUH RJEIMU,QUTJYY'}
+    event_bindings: {click: link_15_click}
+  - name: label_11
+    properties: {bold: true, font_size: 22, align: left}
+    type: Label
+    layout_properties: {grid_position: 'JNKTYE,SPBVNP RWAKXS,UEXFLG XMCULO,YESLWH'}
+  - name: spacer_11
+    properties: {height: '10'}
+    type: Spacer
+    layout_properties: {grid_position: 'JNKTYE,SPBVNP RWAKXS,UEXFLG PYLMVC,DPRWEL'}
+  - name: label_12
+    properties: {text: 'Membership Type :', bold: true, font_size: 16}
+    type: Label
+    layout_properties: {grid_position: 'JNKTYE,SPBVNP RWAKXS,UEXFLG HHHSYY,MQLQFR
+        UTMQWV,ITAWWO'}
+  - name: spacer_9
+    properties: {height: '10'}
+    type: Spacer
+    layout_properties: {grid_position: 'JNKTYE,SPBVNP RWAKXS,UEXFLG HHHSYY,MQLQFR
+        MHWBKQ,CNUXAQ'}
+  - name: label_13
+    properties: {font_size: 16}
+    type: Label
+    layout_properties: {grid_position: 'JNKTYE,SPBVNP RWAKXS,UEXFLG HHHSYY,MICZHI
+        CKNCTK,LFQOVQ'}
+  - name: spacer_10
+    properties: {height: '10'}
+    type: Spacer
+    layout_properties: {grid_position: 'JNKTYE,SPBVNP RWAKXS,UEXFLG HHHSYY,MICZHI
+        EHCJMG,CACKEC'}
+  - name: label_14
+    properties: {text: 'Joined  Date :', bold: true, font_size: 16}
+    type: Label
+    layout_properties: {grid_position: 'JNKTYE,SPBVNP RWAKXS,UEXFLG TJFJNT,KKSSMZ'}
+  - name: label_15
+    properties: {font_size: 16}
+    type: Label
+    layout_properties: {grid_position: 'JNKTYE,SPBVNP RWAKXS,UEXFLG TJFJNT,VTJPNV'}
   - name: column_panel_7_copy_2
     properties: {role: outlined-card, col_widths: '{"CZPYDN":90,"JLLGYN":5,"QXGKNE":10,"JRXWNO":55,"PBZDAB":3,"LGBPSD":57,"XBQUGG":3,"AMNWCP":57}',
       background: '#094586'}
     type: ColumnPanel
-    layout_properties: {grid_position: 'OJFLUV,GNZXGH', full_width_row: true}
+    layout_properties: {grid_position: 'JNKTYE,NAIERL', full_width_row: true}
     components:
     - name: spacer_5_copy
       properties: {height: 32}
@@ -24,7 +69,7 @@ components:
       layout_properties: {grid_position: 'VNQVSA,PBZDAB'}
     - name: link_1_copy
       properties: {text: 'Ascend Wallet Balance                                                                                     ',
-        bold: true, foreground: white, font_size: 16}
+        bold: true, foreground: white, font_size: 14}
       type: Link
       layout_properties: {grid_position: 'VNQVSA,LGBPSD', full_width_row: true}
       event_bindings: {click: link_1_copy_click}
@@ -39,7 +84,7 @@ components:
       type: Spacer
       layout_properties: {grid_position: 'IFNKBM,XBQUGG'}
     - name: label_2_copy
-      properties: {icon: 'fa:rupee', text: '0', foreground: white, font_size: 16}
+      properties: {icon: 'fa:rupee', text: '0', foreground: white, font_size: 14}
       type: Label
       layout_properties: {grid_position: 'IFNKBM,AMNWCP', full_width_row: true}
     - name: spacer_1_copy
@@ -53,11 +98,12 @@ components:
       components:
       - name: label_3_copy
         properties: {role: null, text: Available To Withdraw, bold: true, foreground: white,
-          font_size: 16}
+          font_size: 14}
         type: Label
         layout_properties: {grid_position: 'PZDLNQ,NVPFML', full_width_row: true}
       - name: label_4_copy
-        properties: {icon: 'fa:rupee', text: '0', foreground: white, font_size: 16}
+        properties: {icon: 'fa:rupee', text: '0', foreground: white, font_size: 14,
+          background: ''}
         type: Label
         layout_properties: {grid_position: 'ZZGHAZ,IKHPMG', full_width_row: true}
     - name: spacer_4_copy
@@ -74,6 +120,18 @@ components:
       properties: {height: 32}
       type: Spacer
       layout_properties: {grid_position: 'AOORRV,QXGKNE'}
+  - name: spacer_13
+    properties: {height: 32}
+    type: Spacer
+    layout_properties: {grid_position: 'JNKTYE,NGTYLL', full_width_row: true}
+  - name: spacer_12
+    properties: {height: 21.86663818359375}
+    type: Spacer
+    layout_properties: {grid_position: 'OJFLUV,GNZXGH'}
+  - name: spacer_7
+    properties: {height: 32}
+    type: Spacer
+    layout_properties: {grid_position: 'OJFLUV,MOFLSQ'}
   - name: spacer_8
     properties: {height: '15'}
     type: Spacer
@@ -83,12 +141,12 @@ components:
     layout_properties: {grid_position: 'XIBORR,NXKDOZ', full_width_row: true}
     name: column_panel_2
     components:
-    - properties: {role: elevated-card, col_widths: '{"EITWZQ":25,"DMUXBO":35}'}
+    - properties: {role: elevated-card, col_widths: '{"EITWZQ":25,"DMUXBO":35}', background: '#Edf0f4'}
       type: ColumnPanel
       layout_properties: {grid_position: 'ERCHQY,NETDIR', full_width_row: true}
       name: column_panel_7
       components:
-      - properties: {height: 48.199981689453125, display_mode: shrink_to_fit, source: _/theme/lender/dashboard/my%20investment.png}
+      - properties: {height: 48.199981689453125, display_mode: shrink_to_fit, source: _/theme/lender/dashboard/total%20funds%20deposited.svg}
         type: Image
         layout_properties: {grid_position: 'BJUXXD,EITWZQ'}
         name: image_1
@@ -102,36 +160,18 @@ components:
         type: Label
         layout_properties: {grid_position: 'BJUXXD,DMUXBO ZCKWPG,MKRQYJ'}
         name: label_3
-    - properties: {role: elevated-card, col_widths: '{"KRHWBD":20,"ZHEDGR":40}'}
-      type: ColumnPanel
-      layout_properties: {grid_position: 'ERCHQY,PNJZIQ'}
-      name: column_panel_4
-      components:
-      - properties: {height: 53, source: _/theme/lender/dashboard/Opening%20Balance%20(2).png}
-        type: Image
-        layout_properties: {grid_position: 'LIIRFK,KRHWBD'}
-        name: image_2
-      - properties: {text: 'Opening Balance
-
-            ', bold: true}
-        type: Label
-        layout_properties: {grid_position: 'LIIRFK,ZHEDGR AXQTMV,AFQALW'}
-        name: label_4
-      - properties: {}
-        type: Label
-        layout_properties: {grid_position: 'LIIRFK,ZHEDGR YVDJCL,QQHYRO'}
-        name: label_5
-    - properties: {role: elevated-card, col_widths: '{"UKYYYV":20,"UPASZV":40,"NTQYEL":11,"ZBZGBO":49}'}
+    - properties: {role: elevated-card, col_widths: '{"UKYYYV":20,"UPASZV":40,"NTQYEL":6,"ZBZGBO":54}',
+        background: '#Edf0f4'}
       type: ColumnPanel
       layout_properties: {grid_position: 'ERCHQY,IXNAVP'}
       name: column_panel_5
       components:
-      - properties: {height: 52, source: _/theme/lender/dashboard/my%20returns%20(3).png}
+      - properties: {height: 52, source: _/theme/lender/dashboard/interest%20earned.svg}
         type: Image
         layout_properties: {grid_position: 'HVNINY,UKYYYV'}
         event_bindings: {mouse_up: image_3_mouse_up}
         name: image_3
-      - properties: {text: My Returns, align: left, background: white, foreground: black,
+      - properties: {text: My Returns, align: left, background: '', foreground: black,
           bold: true}
         type: Button
         layout_properties: {grid_position: 'HVNINY,UPASZV BFGCWY,XUTGCC'}
@@ -145,12 +185,12 @@ components:
         type: Label
         layout_properties: {grid_position: 'HVNINY,UPASZV UEXIXL,ZBZGBO'}
         name: label_7
-    - properties: {role: elevated-card, col_widths: '{"CUOOLO":20,"ZYDTNB":40}'}
+    - properties: {role: elevated-card, col_widths: '{"CUOOLO":20,"ZYDTNB":40}', background: '#Edf0f4'}
       type: ColumnPanel
       layout_properties: {grid_position: 'ERCHQY,KVCNSJ'}
       name: column_panel_6
       components:
-      - properties: {height: 61.399993896484375, source: _/theme/lender/dashboard/New%20Loan%20Request%20(2).png}
+      - properties: {height: 61.399993896484375, source: _/theme/lender/dashboard/net%20asset%20value.svg}
         type: Image
         layout_properties: {grid_position: 'QAERLY,CUOOLO'}
         name: image_4
@@ -372,7 +412,7 @@ components:
     layout_properties: {grid_position: 'NHSQFL,VRYRNY'}
     event_bindings: {click: link_10_click}
     name: link_10
-  - properties: {height: 159.2666015625}
+  - properties: {height: 266.0999755859375}
     type: Spacer
     layout_properties: {grid_position: 'OYUVDZ,AROLIJ'}
     name: spacer_1
