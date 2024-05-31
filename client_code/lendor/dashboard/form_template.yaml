@@ -61,7 +61,7 @@ components:
       type: Spacer
       layout_properties: {grid_position: 'AOORRV,CZPYDN QZBALS,QPNUUY'}
     - name: button_1
-      properties: {text: Add Funds, bold: true, background: white, align: full, foreground: blue,
+      properties: {text: Add Funds, bold: true, background: white, align: full, foreground: '#013065',
         role: elevated-button}
       type: Button
       layout_properties: {grid_position: 'AOORRV,CZPYDN GVYVHX,HVHHIX'}
