@@ -78,6 +78,52 @@ class my_returns(my_returnsTemplate):
         # Debugging: Check if the plot is assigned correctly
         print(f"Assigned figure to plot_1: {self.plot_1.data}")
 
+
+  def create_user_bar_chart(self):
+    # Fetch investment data for the specific user
+    investments = app_tables.fin_lender.search(customer_id=self.user_id)
+    
+    # Debugging: Print fetched investments
+    print(f"Fetched investments for user {self.user_id}: {list(investments)}")
+    
+    # Initialize variables to store total investments and returns
+    total_investment = 0
+    total_returns = 0
+    
+    for investment in investments:
+      total_investment += investment['investment']
+      total_returns += investment['return_on_investment']
+
+    # Debugging: Print aggregated values
+    print(f"Total Investment: {total_investment}, Total Returns: {total_returns}")
+
+    # Prepare data for bar chart
+    categories = ['Investment', 'Returns']
+    values = [total_investment, total_returns]
+
+    # Create bar chart trace
+    trace = go.Bar(x=categories, y=values, marker_color=['blue', 'green'])
+
+    # Create a layout
+    layout = go.Layout(
+      title='Investment and Returns for User',
+      xaxis=dict(title='Category'),
+      yaxis=dict(title='Amount'),
+      barmode='group'  # Use group mode to display bars side by side
+    )
+
+    # Create a figure
+    fig = go.Figure(data=[trace], layout=layout)
+
+    # Debugging: Print the figure to ensure it's created
+    print(f"Created figure: {fig}")
+
+    # Set the plot in the Plot component
+    self.plot_1.figure = fig
+
+    # Debugging: Check if the plot is assigned correctly
+    print(f"Assigned figure to plot_1: {self.plot_1.figure}")
+
     def button_1_click(self, **event_args):
         """This method is called when the button is clicked"""
         open_form('lendor.dashboard')
