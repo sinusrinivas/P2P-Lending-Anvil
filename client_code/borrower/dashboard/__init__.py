@@ -16,20 +16,20 @@ class dashboard(dashboardTemplate):
     self.email = main_form_module.email
     self.user_Id = main_form_module.userId
     self.email = self.email
-    self.user_id = self.user_Id
+    user_id = self.user_Id
     self.populate_loan_history()
 
     wallet = app_tables.fin_wallet.get(customer_id=self.user_Id)
     if wallet:
       self.label_9.text = wallet['wallet_amount']
 
-    user_profile = app_tables.fin_user_profile.get(customer_id=self.user_id)
+    user_profile = app_tables.fin_user_profile.get(customer_id=user_id)
     if user_profile:
       self.label_3.text = user_profile['mobile']
       self.image_1_copy_copy.source = user_profile['user_photo']
       self.label_2_copy.text = "Welcome " + user_profile['full_name']
       
-    borrower = app_tables.fin_borrower.get(customer_id=self.user_id)
+    borrower = app_tables.fin_borrower.get(customer_id=user_id)
     if borrower:
       self.label_7.text = borrower['borrower_since']
       self.label_5.text = borrower['credit_limit']
