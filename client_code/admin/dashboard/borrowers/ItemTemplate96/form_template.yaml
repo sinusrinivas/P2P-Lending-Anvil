@@ -62,12 +62,12 @@ components:
     layout_properties: {x: 717.3214503712952, y: 233.0357753224671, width: 200.00001525878906}
     data_bindings:
     - {property: text, code: 'self.item[''credit_limit'']', writeback: false}
-  - name: beseem
+  - name: ascend
     properties: {}
     type: Label
     layout_properties: {x: 713.9286281056702, y: 281.0714503712952, width: 200.00001525878906}
     data_bindings:
-    - {property: text, code: 'self.item[''beseem'']', writeback: false}
+    - {property: text, code: 'self.item[''ascend'']', writeback: false}
   - name: adhar
     properties: {}
     type: Label

@@ -40,6 +40,7 @@ class extension_details(extension_detailsTemplate):
     def approve_click(self, **event_args):
         """This method is called when the 'Approve' button is clicked"""      
         self.selected_row['status'] = 'approved'
+        self.selected_row['status_timestamp '] = datetime.now()
         # Save changes to the table
         self.selected_row.update()
         Notification("Borrower will get notified").show()
@@ -62,10 +63,12 @@ class extension_details(extension_detailsTemplate):
         open_form("lendor.dashboard.view_loan_extension_requests")
 
     def decline_click(self, **event_args):
-        """This method is called when the 'Decline' button is clicked"""
+        """This method is called when the 'Decline' button zis clicked"""
         self.selected_row['status'] = 'rejected'
+        self.selected_row['status_timestamp '] = datetime.now()
         self.selected_row.update()
         Notification("Borrower will get notified").show()
+        
         open_form("lendor.dashboard.view_loan_extension_requests")
 
     def update_extension_status(self, new_status):
