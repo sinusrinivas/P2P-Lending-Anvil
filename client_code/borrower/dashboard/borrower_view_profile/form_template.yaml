@@ -118,7 +118,7 @@ components:
     layout_properties: {grid_position: 'DXTZII,WCIGSN'}
     components:
     - name: personal_information_panel
-      properties: {col_widths: '{"JMWRZL":25,"JNUESH":35,"XQSWFO":25,"QJAPZN":25,"IXDCZJ":25,"TLNBEN":25,"EGSFLR":25,"KGQXHY":5,"KLESAL":55,"ZCPZRF":35,"DATHWX":35,"LVJSXW":25,"HYVXAC":35,"NFSLAK":25,"JFBSNP":35,"ZFFVFA":25,"PJCMGZ":35,"DUACGL":25,"ZFULZJ":35,"VAVODZ":25,"NCNLMF":25,"BEMUDH":35,"SPMTQD":25,"YYVQHV":35,"LPGPDR":25,"DLXMPU":25,"KTXPQT":35,"JRYIFF":25,"FFEKIU":35,"KHSZQT":25,"USYQIB":25,"RUGPEC":35,"UICXOL":25,"GIEGUE":35,"BZAMHW":25,"ESNGXI":35,"SSGVTB":35,"IMHPVD":35,"ORARGK":35,"LBAQLI":20,"GJDUAS":35,"HFIOKG":20,"FBVMCM":35,"VGTTOU":35,"RNPDXV":35,"HRBWNJ":25,"KYREAQ":25,"JLUSNR":35,"GVGWOM":25,"HDCVSC":35,"CJVNVS":25,"RDAFQC":35}',
+      properties: {col_widths: '{"JMWRZL":25,"JNUESH":35,"XQSWFO":25,"QJAPZN":25,"IXDCZJ":25,"TLNBEN":25,"EGSFLR":25,"KGQXHY":5,"KLESAL":55,"ZCPZRF":35,"DATHWX":35,"LVJSXW":25,"HYVXAC":35,"NFSLAK":25,"JFBSNP":35,"PJCMGZ":35,"DUACGL":25,"ZFULZJ":35,"VAVODZ":25,"NCNLMF":25,"BEMUDH":35,"SPMTQD":25,"YYVQHV":35,"LPGPDR":25,"DLXMPU":25,"KTXPQT":35,"JRYIFF":25,"FFEKIU":35,"KHSZQT":25,"USYQIB":25,"RUGPEC":35,"UICXOL":25,"GIEGUE":35,"BZAMHW":25,"ESNGXI":35,"SSGVTB":35,"IMHPVD":35,"ORARGK":35,"LBAQLI":20,"GJDUAS":35,"HFIOKG":20,"FBVMCM":35,"VGTTOU":35,"RNPDXV":35,"HRBWNJ":25,"KYREAQ":25,"JLUSNR":35,"GVGWOM":25,"HDCVSC":35,"CJVNVS":25,"RDAFQC":35}',
         role: elevated-card, visible: true}
       type: ColumnPanel
       layout_properties: {grid_position: 'VNYQWZ,XCYJCJ', full_width_row: true}
@@ -251,14 +251,6 @@ components:
         properties: {background: 'theme:On Primary', role: outlined, text: ''}
         type: TextBox
         layout_properties: {grid_position: 'NQDUFW,KLESAL XAKUGP,HYVXAC'}
-      - name: label_6_copy
-        properties: {text: 'Language :', bold: true, font_size: 16}
-        type: Label
-        layout_properties: {grid_position: 'NQDUFW,KLESAL TOVHKN,ZFFVFA'}
-      - name: Language_tx
-        properties: {background: 'theme:On Primary', role: outlined, text: ''}
-        type: TextBox
-        layout_properties: {grid_position: 'NQDUFW,KLESAL TOVHKN,PJCMGZ'}
       - name: label_4_copy_3_copy
         properties: {text: Type of Addres, bold: true, font_size: 16, icon: ''}
         type: Label

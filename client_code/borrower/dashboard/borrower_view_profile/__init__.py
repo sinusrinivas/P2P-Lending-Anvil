@@ -49,7 +49,7 @@ class borrower_view_profile(borrower_view_profileTemplate):
       self.govt_id_1_image.source = user_profile['aadhaar_photo']
       self.govt_id_2_image.source = user_profile['pan_photo']
       self.gender_dropdown.selected_value = user_profile['gender']
-      self.Language_tx.text = user_profile['mouther_tounge']
+      # self.Language_tx.text = user_profile['mouther_tounge']
       self.image_1.source = user_profile['user_photo']
       self.marrital_dropdown.selected_value = user_profile['marital_status']
       self.state_tx.text = user_profile['state']
@@ -197,7 +197,7 @@ class borrower_view_profile(borrower_view_profileTemplate):
       self.g_i_1_tx.enabled = False
       self.g_i_2_tx.enabled = False
       self.gender_dropdown.enabled = False
-      self.Language_tx.enabled = False
+      # self.Language_tx.enabled = False
       self.marrital_dropdown.enabled = False
       self.state_tx.enabled = False
       self.present_addres_dropdown.enabled = False
@@ -222,7 +222,7 @@ class borrower_view_profile(borrower_view_profileTemplate):
       # self.g_i_1_tx.enabled = True
       # self.g_i_2_tx.enabled = True
       self.gender_dropdown.enabled = True
-      self.Language_tx.enabled = True
+      # self.Language_tx.enabled = True
       self.marrital_dropdown.enabled = True
       self.state_tx.enabled = True
       self.present_addres_dropdown.enabled = True
@@ -274,7 +274,7 @@ class borrower_view_profile(borrower_view_profileTemplate):
         "Aadhaar Number": self.g_i_1_tx.text,
         "PAN Number": self.g_i_2_tx.text,
         "Gender": self.gender_dropdown.selected_value,
-        "Mother Tongue": self.Language_tx.text,
+        # "Mother Tongue": self.Language_tx.text,
         "Marital Status": self.marrital_dropdown.selected_value,
         "State": self.state_tx.text,
         "Present Address": self.present_addres_dropdown.selected_value,
@@ -317,8 +317,8 @@ class borrower_view_profile(borrower_view_profileTemplate):
     if not is_alpha(self.state_tx.text) :
         error_messages.append(" state must contain only alphabetic characters and spaces.")
 
-    if not is_alpha(self.Language_tx.text) :
-        error_messages.append(" language must contain only alphabetic characters and spaces.")
+    # if not is_alpha(self.Language_tx.text) :
+    #     error_messages.append(" language must contain only alphabetic characters and spaces.")
 
     for field_name, field_value in numeric_fields.items():
         if not is_numeric(field_value):
@@ -415,7 +415,7 @@ class borrower_view_profile(borrower_view_profileTemplate):
         user_profile["aadhaar_no"] = self.g_i_1_tx.text
         user_profile["pan_number"] = self.g_i_2_tx.text
         user_profile["gender"] = self.gender_dropdown.selected_value
-        user_profile["mouther_tounge"] = self.Language_tx.text
+        # user_profile["mouther_tounge"] = self.Language_tx.text
         user_profile["marital_status"] = self.marrital_dropdown.selected_value
         user_profile["state"] = self.state_tx.text
         user_profile["present_address"] = self.present_addres_dropdown.selected_value
@@ -434,6 +434,7 @@ class borrower_view_profile(borrower_view_profileTemplate):
         self.govt_1_file_loader_1.visible = False
         self.govt_2_file_loader_2.visible = False
         self.name_label.text = self.name_text_box.text
+        self.email_id_label.text =self.email_tx.text
 
         photo = self.govt_1_file_loader_1.file
         if photo:
