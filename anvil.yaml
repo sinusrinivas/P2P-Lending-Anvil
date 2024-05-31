@@ -20,7 +20,7 @@ services:
 startup: {type: form, module: bank_users.main_form}
 package_name: bank_client
 allow_embedding: false
-name: P2P Lending App
+name: P2P Lending App clonesinu
 runtime_options:
   version: 3
   client_version: '3'
