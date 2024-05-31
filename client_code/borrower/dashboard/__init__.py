@@ -19,7 +19,7 @@ class dashboard(dashboardTemplate):
     user_id = self.user_Id
     self.populate_loan_history()
 
-    wallet = app_tables.fin_wallet.get(customer_id=self.user_Id)
+    wallet = app_tables.fin_wallet.get(customer_id=user_id)
     if wallet:
       self.label_9.text = wallet['wallet_amount']
 
