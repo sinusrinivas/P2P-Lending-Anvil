@@ -45,18 +45,18 @@ class lender_view_profile(lender_view_profileTemplate):
       self.govt_id_1_image.source = user_profile["aadhaar_photo"]
       self.govt_id_2_image.source = user_profile["pan_photo"]
       self.gender_dropdown.selected_value = user_profile["gender"]
-      self.Language_tx.text = user_profile["mouther_tounge"]
+      # self.Language_tx.text = user_profile["mouther_tounge"]
       self.image_1.source = user_profile["user_photo"]
       self.marrital_status_dropdown.selected_value = user_profile["marital_status"]
       self.state_tx.text = user_profile["state"]
       self.present_addres_dropdown.selected_value = user_profile["present_address"]
       self.address_1_tx.text = user_profile["street_adress_1"]
       self.address_2_tx.text = user_profile["street_address_2"]
-      self.how_long_stay_tx.text = user_profile["duration_at_address"]
+      self.how_long_dropdown.selected_value = user_profile["duration_at_address"]
       self.pincode_tx.text = user_profile["pincode"]
       # self.age_tx.text = user_profile["user_age"]
-      self.vehicle_loan_tx.text = user_profile["vehicle_loan"]
-      self.credit_tx.text = user_profile["credit_card_loans"]
+      # self.vehicle_loan_tx.text = user_profile["vehicle_loan"]
+      # self.credit_tx.text = user_profile["credit_card_loans"]
       self.qualification_dropdown.selected_value = user_profile["qualification"]
       # self.profession_dropdown.selected_value = user_profile["profession"]
       self.company_name_tx.text = user_profile["company_name"]
@@ -162,6 +162,10 @@ class lender_view_profile(lender_view_profileTemplate):
       options_string = [str(option['lendor_no_of_employees']) for option in options]
       self.no_of_emp_dropdown.items = options_string
 
+      options = app_tables.fin_duration_at_address.search()
+      option_strings = [str(option['duration_at_address']) for option in options]
+      self.how_long_dropdown.items = option_strings
+
       lender_details = app_tables.fin_lender.get(customer_id=self.user_id)
       if lender_details:
         self.investment_tx.text = lender_details["investment"]
@@ -182,17 +186,17 @@ class lender_view_profile(lender_view_profileTemplate):
     self.g_i_1_tx.enabled = False
     self.g_i_2_tx.enabled = False
     self.gender_dropdown.enabled = False
-    self.Language_tx.enabled = False
+    # self.Language_tx.enabled = False
     self.marrital_status_dropdown.enabled = False
     self.state_tx.enabled = False
     self.present_addres_dropdown.enabled = False
     self.address_1_tx.enabled = False
     self.address_2_tx.enabled = False
-    self.how_long_stay_tx.enabled = False
+    self.how_long_dropdown.enabled = False
     self.pincode_tx.enabled = False
     # self.age_tx.enabled = False
-    self.vehicle_loan_tx.enabled = False
-    self.credit_tx.enabled = False
+    # self.vehicle_loan_tx.enabled = False
+    # self.credit_tx.enabled = False
     self.qualification_dropdown.enabled = False
     # self.profession_dropdown.enabled = False
 
@@ -205,17 +209,17 @@ class lender_view_profile(lender_view_profileTemplate):
     # self.g_i_1_tx.enabled = True
     # self.g_i_2_tx.enabled = True
     self.gender_dropdown.enabled = True
-    self.Language_tx.enabled = True
+    # self.Language_tx.enabled = True
     self.marrital_status_dropdown.enabled = True
     self.state_tx.enabled = True
     self.present_addres_dropdown.enabled = True
     self.address_1_tx.enabled = True
     self.address_2_tx.enabled = True
-    self.how_long_stay_tx.enabled = True
+    self.how_long_dropdown.enabled = True
     self.pincode_tx.enabled = True
     # self.age_tx.enabled = True
-    self.vehicle_loan_tx.enabled = True
-    self.credit_tx.enabled = True
+    # self.vehicle_loan_tx.enabled = True
+    # self.credit_tx.enabled = True
     self.qualification_dropdown.enabled = True
     # self.profession_dropdown.enabled = True
 
@@ -255,20 +259,20 @@ class lender_view_profile(lender_view_profileTemplate):
         "Aadhaar Number": self.g_i_1_tx.text,
         "PAN Number": self.g_i_2_tx.text,
         "Gender": self.gender_dropdown.selected_value,
-        "Mother Tongue": self.Language_tx.text,
+        # "Mother Tongue": self.Language_tx.text,
         "Marital Status": self.marrital_status_dropdown.selected_value,
         "State": self.state_tx.text,
         "Present Address": self.present_addres_dropdown.selected_value,
         "Street Address 1": self.address_1_tx.text,
         # "Street Address 2": self.address_2_tx.text,
-        "Duration at Address": self.how_long_stay_tx.text,
+        "Duration at Address": self.how_long_dropdown.selected_value,
         "Pincode": self.pincode_tx.text,
         # "Age": self.age_tx.text,
-        "Vehicle Loan": self.vehicle_loan_tx.text,
-        "Credit Card Loans": self.credit_tx.text,
+        # "Vehicle Loan": self.vehicle_loan_tx.text,
+        # "Credit Card Loans": self.credit_tx.text,
         "Qualification": self.qualification_dropdown.selected_value,
         # "Profession": self.profession_dropdown.selected_value,
-        "Other Loan": self.Language_tx.text,
+        # "Other Loan": self.Language_tx.text,
     }
 
     for field_name, field_value in required_fields.items():
@@ -277,7 +281,7 @@ class lender_view_profile(lender_view_profileTemplate):
 
     numeric_fields = {
         "Mobile Number": self.mobile_tx.text,
-        "How long": self.how_long_stay_tx.text,
+        # "How long": self.how_long_stay_tx.text,
         "Pincode": self.pincode_tx.text,
 
     }
@@ -290,9 +294,6 @@ class lender_view_profile(lender_view_profileTemplate):
     if not is_alpha(self.state_tx.text) :
         error_messages.append(" state must contain only alphabetic characters and spaces.")
 
-    if not is_alpha(self.Language_tx.text) :
-        error_messages.append(" language must contain only alphabetic characters and spaces.")
-      
     if not is_alpha(self.name_text_box.text):
         error_messages.append(" Name must contain only alphabetic characters and spaces.")
     # Mobile number validation
@@ -351,6 +352,12 @@ class lender_view_profile(lender_view_profileTemplate):
               loans['lender_email_id'] = new_email
               loans['lender_full_name'] = new_full_name
               loans.update()
+  
+      fin_lender = app_tables.fin_lender.get(customer_id=self.user_id)
+      if fin_lender:
+            fin_lender['email_id'] = new_email
+            fin_lender['user_name'] = new_full_name
+            fin_lender.update()
 
       report_problem = app_tables.fin_reported_problems.search(email=old_email)
       if report_problem:
@@ -360,14 +367,6 @@ class lender_view_profile(lender_view_profileTemplate):
               loans['mobile_number'] = self.mobile_tx.text
               loans.update()
   
-      fin_lender = app_tables.fin_lender.get(customer_id=self.user_id)
-      if fin_lender:
-            fin_lender['email_id'] = new_email
-            fin_lender['user_name'] = new_full_name
-            fin_lender.update()
-  
-
-      
       loan_details = app_tables.fin_loan_details.search(lender_customer_id=self.user_id)
       if loan_details:
             for loans in loan_details:
@@ -396,20 +395,20 @@ class lender_view_profile(lender_view_profileTemplate):
         user_profile["aadhaar_no"] = self.g_i_1_tx.text
         user_profile["pan_number"] = self.g_i_2_tx.text
         user_profile["gender"] = self.gender_dropdown.selected_value
-        user_profile["mouther_tounge"] = self.Language_tx.text
+        # user_profile["mouther_tounge"] = self.Language_tx.text
         user_profile["marital_status"] = self.marrital_status_dropdown.selected_value
         user_profile["state"] = self.state_tx.text
         user_profile["present_address"] = self.present_addres_dropdown.selected_value
         user_profile["street_adress_1"] = self.address_1_tx.text
         user_profile["street_address_2"] = self.address_2_tx.text
-        user_profile["duration_at_address"] = self.how_long_stay_tx.text
+        user_profile["duration_at_address"] = self.how_long_dropdown.selected_value
         user_profile["pincode"] = self.pincode_tx.text
         # user_profile["user_age"] = int(self.age_tx.text)
-        user_profile["vehicle_loan"] = self.vehicle_loan_tx.text
-        user_profile["credit_card_loans"] = self.credit_tx.text
+        # user_profile["vehicle_loan"] = self.vehicle_loan_tx.text
+        # user_profile["credit_card_loans"] = self.credit_tx.text
         user_profile["qualification"] = self.qualification_dropdown.selected_value
         # user_profile["profession"] = self.profession_dropdown.selected_value
-        user_profile["other_loan"] = self.Language_tx.text
+        # user_profile["other_loan"] = self.Language_tx.text
         self.govt_1_file_loader_1.visible = False
         self.govt_2_file_loader_2.visible = False
         self.name_label.text = self.name_text_box.text

@@ -7,6 +7,8 @@ import anvil.tables.query as q
 from anvil.tables import app_tables
 from ...bank_users.main_form import main_form_module
 from ...bank_users.user_form import user_form
+from ...bank_users.user_form import user_module
+
 
 class dashboard(dashboardTemplate):
   def __init__(self, **properties):
@@ -14,12 +16,12 @@ class dashboard(dashboardTemplate):
     self.init_components(**properties)
     
     self.email = main_form_module.email
-    self.user_Id = main_form_module.userId
+    self.user_id = main_form_module.userId
     self.email = self.email
-    user_id = self.user_Id
+    user_id = self.user_id
     self.populate_loan_history()
 
-    wallet = app_tables.fin_wallet.get(customer_id=self.user_Id)
+    wallet = app_tables.fin_wallet.get(customer_id=user_id)
     if wallet:
       self.label_9.text = wallet['wallet_amount']
 
