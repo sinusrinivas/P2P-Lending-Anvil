@@ -11,10 +11,9 @@ from ...bank_users.user_form import user_module
 
 
 class dashboard(dashboardTemplate):
-  def __init__(self, user_id, **properties):
+  def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
-    self.id = user_id
     self.email = main_form_module.email
     self.user_id = main_form_module.userId
     self.email = self.email
