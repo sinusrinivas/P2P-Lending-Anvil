@@ -36,7 +36,7 @@ class add_subcategory(add_subcategoryTemplate):
   
   def back_btn_click(self, **event_args):
     """This method is called when the button is clicked"""
-    open_form("admin.dashboard.manage_bessem")
+    open_form("admin.dashboard.manage_ascend")
     
   def gender_button_click(self, **event_args):
     """This method is called when the button is clicked"""

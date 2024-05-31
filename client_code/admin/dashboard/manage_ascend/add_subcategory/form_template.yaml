@@ -365,7 +365,7 @@ components:
         type: Spacer
         layout_properties: {row: XGQZYH, width_xs: 1, col_xs: 0}
       - name: repeating_panel_1
-        properties: {item_template: admin.dashboard.manage_bessem.add_subcategory.ItemTemplate39}
+        properties: {item_template: admin.dashboard.manage_ascend.add_subcategory.ItemTemplate39}
         type: RepeatingPanel
         layout_properties: {row: XGQZYH, width_xs: 11, col_xs: 1}
     - name: grid_panel_2
@@ -420,7 +420,7 @@ components:
         type: Spacer
         layout_properties: {row: XGQZYH, width_xs: 1, col_xs: 0}
       - name: repeating_panel_2
-        properties: {item_template: admin.dashboard.manage_bessem.add_subcategory.ItemTemplate70}
+        properties: {item_template: admin.dashboard.manage_ascend.add_subcategory.ItemTemplate70}
         type: RepeatingPanel
         layout_properties: {row: XGQZYH, width_xs: 11, col_xs: 1}
     - name: grid_panel_3
@@ -484,7 +484,7 @@ components:
         layout_properties: {row: UJISFO, width_xs: 2, col_xs: 9, width: 95.1562}
         event_bindings: {click: marrital_button_click}
       - name: repeating_panel_3
-        properties: {item_template: admin.dashboard.manage_bessem.add_subcategory.ItemTemplate74}
+        properties: {item_template: admin.dashboard.manage_ascend.add_subcategory.ItemTemplate74}
         type: RepeatingPanel
         layout_properties: {row: XGQZYH, width_xs: 12, col_xs: 0}
     - name: grid_panel_4
@@ -539,7 +539,7 @@ components:
         type: Spacer
         layout_properties: {row: XGQZYH, width_xs: 1, col_xs: 0}
       - name: repeating_panel_5
-        properties: {item_template: admin.dashboard.manage_bessem.add_subcategory.ItemTemplate63}
+        properties: {item_template: admin.dashboard.manage_ascend.add_subcategory.ItemTemplate63}
         type: RepeatingPanel
         layout_properties: {row: XGQZYH, width_xs: 11, col_xs: 1}
     - name: grid_panel_6
@@ -594,7 +594,7 @@ components:
         type: Spacer
         layout_properties: {row: XGQZYH, width_xs: 1, col_xs: 0}
       - name: repeating_panel_6
-        properties: {item_template: admin.dashboard.manage_bessem.add_subcategory.ItemTemplate85}
+        properties: {item_template: admin.dashboard.manage_ascend.add_subcategory.ItemTemplate85}
         type: RepeatingPanel
         layout_properties: {row: XGQZYH, width_xs: 11, col_xs: 1}
     - name: grid_panel_7
@@ -649,7 +649,7 @@ components:
         type: Spacer
         layout_properties: {row: XGQZYH, width_xs: 1, col_xs: 0}
       - name: repeating_panel_7
-        properties: {item_template: admin.dashboard.manage_bessem.add_subcategory.ItemTemplate86}
+        properties: {item_template: admin.dashboard.manage_ascend.add_subcategory.ItemTemplate86}
         type: RepeatingPanel
         layout_properties: {row: XGQZYH, width_xs: 11, col_xs: 1}
     - name: grid_panel_8
@@ -704,7 +704,7 @@ components:
         type: Spacer
         layout_properties: {row: XGQZYH, width_xs: 1, col_xs: 0}
       - name: repeating_panel_8
-        properties: {item_template: admin.dashboard.manage_bessem.add_subcategory.ItemTemplate87}
+        properties: {item_template: admin.dashboard.manage_ascend.add_subcategory.ItemTemplate87}
         type: RepeatingPanel
         layout_properties: {row: XGQZYH, width_xs: 11, col_xs: 1}
     - name: grid_panel_9
@@ -759,7 +759,7 @@ components:
         type: Spacer
         layout_properties: {row: XGQZYH, width_xs: 1, col_xs: 0}
       - name: repeating_panel_9
-        properties: {item_template: admin.dashboard.manage_bessem.add_subcategory.ItemTemplate88}
+        properties: {item_template: admin.dashboard.manage_ascend.add_subcategory.ItemTemplate88}
         type: RepeatingPanel
         layout_properties: {row: XGQZYH, width_xs: 11, col_xs: 1}
     - name: grid_panel_10
@@ -814,7 +814,7 @@ components:
         type: Spacer
         layout_properties: {row: XGQZYH, width_xs: 1, col_xs: 0}
       - name: repeating_panel_10
-        properties: {item_template: admin.dashboard.manage_bessem.add_subcategory.ItemTemplate89}
+        properties: {item_template: admin.dashboard.manage_ascend.add_subcategory.ItemTemplate89}
         type: RepeatingPanel
         layout_properties: {row: XGQZYH, width_xs: 11, col_xs: 1}
     - name: grid_panel_11
@@ -869,7 +869,7 @@ components:
         type: Spacer
         layout_properties: {row: XGQZYH, width_xs: 1, col_xs: 0}
       - name: repeating_panel_11
-        properties: {item_template: admin.dashboard.manage_bessem.add_subcategory.ItemTemplate90}
+        properties: {item_template: admin.dashboard.manage_ascend.add_subcategory.ItemTemplate90}
         type: RepeatingPanel
         layout_properties: {row: XGQZYH, width_xs: 11, col_xs: 1}
     - name: grid_panel_5
@@ -933,7 +933,7 @@ components:
         layout_properties: {row: BMWBRB, width_xs: 2, col_xs: 10, width: 95.1562}
         event_bindings: {click: all_loan_button_click}
       - name: repeating_panel_4
-        properties: {item_template: admin.dashboard.manage_bessem.add_subcategory.ItemTemplate61}
+        properties: {item_template: admin.dashboard.manage_ascend.add_subcategory.ItemTemplate61}
         type: RepeatingPanel
         layout_properties: {row: XGQZYH, width_xs: 12, col_xs: 0}
     - name: grid_panel_12
@@ -988,7 +988,7 @@ components:
         type: Spacer
         layout_properties: {row: XGQZYH, width_xs: 1, col_xs: 0}
       - name: repeating_panel_12
-        properties: {item_template: admin.dashboard.manage_bessem.add_subcategory.ItemTemplate29}
+        properties: {item_template: admin.dashboard.manage_ascend.add_subcategory.ItemTemplate29}
         type: RepeatingPanel
         layout_properties: {row: XGQZYH, width_xs: 11, col_xs: 1}
     - name: grid_panel_13
@@ -1043,7 +1043,7 @@ components:
         type: Spacer
         layout_properties: {row: XGQZYH, width_xs: 1, col_xs: 0}
       - name: repeating_panel_13
-        properties: {item_template: admin.dashboard.manage_bessem.add_subcategory.ItemTemplate36}
+        properties: {item_template: admin.dashboard.manage_ascend.add_subcategory.ItemTemplate36}
         type: RepeatingPanel
         layout_properties: {row: XGQZYH, width_xs: 11, col_xs: 1}
     - name: grid_panel_14
@@ -1098,7 +1098,7 @@ components:
         type: Spacer
         layout_properties: {row: XGQZYH, width_xs: 1, col_xs: 0}
       - name: repeating_panel_14
-        properties: {item_template: admin.dashboard.manage_bessem.add_subcategory.ItemTemplate37}
+        properties: {item_template: admin.dashboard.manage_ascend.add_subcategory.ItemTemplate37}
         type: RepeatingPanel
         layout_properties: {row: XGQZYH, width_xs: 11, col_xs: 1}
     - name: grid_panel_15
@@ -1153,7 +1153,7 @@ components:
         type: Spacer
         layout_properties: {row: XGQZYH, width_xs: 1, col_xs: 0}
       - name: repeating_panel_15
-        properties: {item_template: admin.dashboard.manage_bessem.add_subcategory.ItemTemplate92}
+        properties: {item_template: admin.dashboard.manage_ascend.add_subcategory.ItemTemplate92}
         type: RepeatingPanel
         layout_properties: {row: XGQZYH, width_xs: 11, col_xs: 1}
   - name: spacer_1_copy

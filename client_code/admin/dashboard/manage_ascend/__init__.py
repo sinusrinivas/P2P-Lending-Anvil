@@ -1,4 +1,4 @@
-from ._anvil_designer import manage_bessemTemplate
+from ._anvil_designer import manage_ascendTemplate
 from anvil import *
 import anvil.server
 import anvil.google.auth, anvil.google.drive
@@ -8,7 +8,7 @@ import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 
-class manage_bessem(manage_bessemTemplate):
+class manage_ascend(manage_ascendTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
@@ -17,28 +17,28 @@ class manage_bessem(manage_bessemTemplate):
 
   def button_2_click(self, **event_args):
     """This method is called when the button is clicked"""
-    open_form('admin.dashboard.manage_bessem.view_bessem_subcategory')
+    open_form('admin.dashboard.manage_ascend.view_ascend_subcategory')
 
 
   def button_9_click(self, **event_args):
     """This method is called when the button is clicked"""
-    open_form('admin.dashboard.manage_bessem.add_subcategory')
+    open_form('admin.dashboard.manage_ascend.add_subcategory')
 
   def button_14_click(self, **event_args):
     """This method is called when the button is clicked"""
-    open_form('admin.dashboard.manage_bessem.view_bessem_group')
+    open_form('admin.dashboard.manage_ascend.view_ascend_group')
 
   def image_4_copy_mouse_up(self, x, y, button, **event_args):
     """This method is called when a mouse button is released on this component"""
-    open_form('admin.dashboard.manage_bessem.add_subcategory')
+    open_form('admin.dashboard.manage_ascend.add_subcategory')
 
   def image_4_copy_10_mouse_up(self, x, y, button, **event_args):
     """This method is called when a mouse button is released on this component"""
-    open_form('admin.dashboard.manage_bessem.view_bessem_group')
+    open_form('admin.dashboard.manage_ascend.view_ascend_group')
 
   def image_4_copy_2_mouse_up(self, x, y, button, **event_args):
     """This method is called when a mouse button is released on this component"""
-    open_form('admin.dashboard.manage_bessem.view_bessem_subcategory')
+    open_form('admin.dashboard.manage_ascend.view_ascend_subcategory')
 
 
 
