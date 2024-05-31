@@ -16,7 +16,6 @@ class Navigation_bar_lender_dashbord(Navigation_bar_lender_dashbordTemplate):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
     self.user_id=main_form_module.userId
-    user_id = self.user_id
     self.email = main_form_module.email
     email = self.email
     # Any code you write here will run before the form opens.

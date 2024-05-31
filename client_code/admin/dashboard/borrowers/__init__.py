@@ -23,10 +23,10 @@ class borrowers(borrowersTemplate):
                 borrower_record = app_tables.fin_borrower.get(customer_id=user_profile['customer_id'])
                 if borrower_record is not None:
                     credit_limit = borrower_record['credit_limit']
-                    beseem = borrower_record['beseem_score']
+                    ascend = borrower_record['ascend_score']
                 else:
                     credit_limit = None
-                    beseem = None
+                    ascend = None
                 
                 loan_details_count = len(
                     app_tables.fin_loan_details.search(
@@ -52,7 +52,7 @@ class borrowers(borrowersTemplate):
                     'registration_approve': user_profile['registration_approve'],
                     'adhar': user_profile['aadhaar_no'],
                     'credit_limit': credit_limit,
-                    'beseem' : beseem,
+                    'ascend' : ascend,
                     'loan_details_count': loan_details_count,
                     'user_photo':user_profile['user_photo']
                 })
