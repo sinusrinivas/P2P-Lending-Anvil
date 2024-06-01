@@ -7,7 +7,7 @@ import anvil.users
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
-from datetime import datetime
+from datetime import datetime ,timedelta
 import sys as sys
 
 class borrower_foreclosure(borrower_foreclosureTemplate):
@@ -34,6 +34,28 @@ class borrower_foreclosure(borrower_foreclosureTemplate):
 
         # Check status for the selected loan ID
         loan_id = selected_row['loan_id']
+        foreclosure_rows = app_tables.fin_foreclosure.search(loan_id=loan_id)
+
+        if foreclosure_rows:
+          for extend_row in foreclosure_rows :
+            if extend_row['status'] not in ('approved', 'rejected'):
+              approval_days_row = app_tables.fin_approval_days.get(loans='Extension')
+            
+              if approval_days_row:
+                  approval_days = approval_days_row['days_for_approval']
+                  
+                  # Calculate the time difference between now and the request date
+                  print("Extension Request Date:", extend_row['requested_on'])
+                  time_difference = datetime.now() - datetime.combine(extend_row['requested_on'], datetime.min.time())
+                  print("Time Difference (seconds):", time_difference.total_seconds())
+      
+                  # Check if the time difference is more than the approval days
+                  if time_difference.total_seconds() > (approval_days * 86400):  # 86400 seconds in a day
+                      extend_row['status'] = 'approved'
+                      extend_row['status_timestamp '] = datetime.now()
+                      extend_row.update()
+
+      
         foreclosure_rows = app_tables.fin_foreclosure.search(loan_id=loan_id)
 
         approved_status = False
@@ -116,6 +138,17 @@ class borrower_foreclosure(borrower_foreclosureTemplate):
                     # Set the label text
                     self.label_tpm.text = f"{total_payments_made} months"
                     self.total_payments_made = total_payments_made
+
+                    next_payment_date = last_emi_list[0]['next_payment']
+                    if next_payment_date:
+                        if (next_payment_date - timedelta(days=2)) > datetime.now().date():
+                            self.is_payment_date_valid = True
+                        else:
+                            self.is_payment_date_valid = False
+                            alert("The next payment date must be at least two days before today's date for foreclosure.")
+                    else:
+                        self.is_payment_date_valid = False
+                        alert("Next payment date not found.")
                 else:
                     total_payments_made = 0
                     alert("No EMIs found for this loan.")                    
@@ -129,12 +162,14 @@ class borrower_foreclosure(borrower_foreclosureTemplate):
         selected_row = self.selected_row
         # loan_id = selected_row['loan_id']
         # total_payments_made = self.loan_details_row['total_payments_made']
-        if self.total_payments_made >= self.min_months:
-            open_form('borrower.dashboard.foreclosure_request.borrower_foreclosure.foreclose',  selected_row=selected_row, total_payments_made=self.total_payments_made)
+        if self.total_payments_made >= self.min_months and self.is_payment_date_valid:
+            open_form('borrower.dashboard.foreclosure_request.borrower_foreclosure.foreclose', selected_row=selected_row, total_payments_made=self.total_payments_made)
         else:
-            alert('You are not eligible for foreclosure! You have to pay at least ' + str(self.min_months) + ' months.')
+            if not self.is_payment_date_valid:
+                alert('The next payment date must be at least two days before today\'s date for foreclosure.')
+            else:
+                alert('You are not eligible for foreclosure! You have to pay at least ' + str(self.min_months) + ' months.')
             open_form('borrower.dashboard.foreclosure_request')
-
 
   
     def button_2_click(self, **event_args):

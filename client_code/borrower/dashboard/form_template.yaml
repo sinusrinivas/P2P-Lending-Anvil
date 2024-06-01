@@ -9,7 +9,7 @@ components:
   layout_properties: {slot: left-nav}
   components:
   - name: link_1
-    properties: {text: New Loan Request, icon: _/theme/borrower/dashboard/loan%20(6).png,
+    properties: {text: New Loan Request, icon: _/theme/borrower/dashboard/%20new%20loan%20request.png,
       foreground: '#013065'}
     type: Link
     layout_properties: {grid_position: 'BZNSXQ,TUEPQZ'}
@@ -20,7 +20,7 @@ components:
     layout_properties: {grid_position: 'NTKYDV,NZWJWC'}
     event_bindings: {click: link_2_click}
   - name: link_3
-    properties: {text: 'View  Loans ', foreground: '#013065', icon: _/theme/borrower/dashboard/file.png}
+    properties: {text: 'View  Loans ', foreground: '#013065', icon: _/theme/borrower/dashboard/view%20loans.png}
     type: Link
     layout_properties: {grid_position: 'MXQUQD,YUURJO'}
     event_bindings: {click: link_3_click}
@@ -30,7 +30,7 @@ components:
     layout_properties: {grid_position: 'YHFXID,GCZLON'}
     event_bindings: {click: link_4_click}
   - name: link_5
-    properties: {text: 'Application Tracker ', foreground: '#013065', icon: _/theme/borrower/dashboard/mobile-app.png}
+    properties: {text: 'Application Tracker ', foreground: '#013065', icon: _/theme/borrower/dashboard/application-tracking.png}
     type: Link
     layout_properties: {grid_position: 'GQWULI,HWLYWE'}
     event_bindings: {click: link_5_click}
@@ -38,7 +38,7 @@ components:
     type: Link
     layout_properties: {grid_position: 'ITIRRY,ATCGEZ'}
     event_bindings: {click: link_6_click}
-    properties: {text: Loan Extension, icon: _/theme/borrower/dashboard/banking.png,
+    properties: {text: Loan Extension, icon: _/theme/borrower/dashboard/loan-extension.png,
       foreground: '#013065'}
   - name: link_7
     properties: {text: Transaction History, foreground: '#013065', icon: 'fa:history'}
@@ -51,7 +51,7 @@ components:
     layout_properties: {grid_position: 'KGQFZZ,ZWOTRZ'}
     event_bindings: {click: link_8_click}
   - name: link_10
-    properties: {text: Portfolio, foreground: '#013065', icon: _/theme/borrower/dashboard/resume.png}
+    properties: {text: Portfolio, foreground: '#013065', icon: _/theme/borrower/dashboard/portfolio.png}
     type: Link
     layout_properties: {grid_position: 'AEPNUT,OMVPMJ'}
     event_bindings: {click: link_10_click}
@@ -65,7 +65,7 @@ components:
   layout_properties: {slot: default}
   components:
   - name: label_1
-    properties: {text: '        Account Overview :', bold: true, font_size: 18, align: left}
+    properties: {text: '     Account Overview :', bold: true, font_size: 20, align: left}
     type: Label
     layout_properties: {grid_position: 'HQTFXG,HHCUBH', full_width_row: true}
   - name: image_1_copy_copy
@@ -249,7 +249,7 @@ components:
       layout_properties: {}
       event_bindings: {click: link_11_click}
     - name: link_12
-      properties: {text: Help, foreground: black, bold: true, icon: 'fa:support'}
+      properties: {text: Help, foreground: black, bold: true, icon: 'fa:question-circle'}
       type: Link
       layout_properties: {}
       event_bindings: {click: link_12_click}

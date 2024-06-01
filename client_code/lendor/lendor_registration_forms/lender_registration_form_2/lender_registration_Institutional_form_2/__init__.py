@@ -7,7 +7,7 @@ import anvil.users
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
-from datetime import datetime
+from datetime import datetime, timedelta
 
 
 class lender_registration_Institutional_form_2(lender_registration_Institutional_form_2Template):
@@ -58,12 +58,17 @@ class lender_registration_Institutional_form_2(lender_registration_Institutional
     
     if not year or not industry_type or not turn_over or not last_six_statements:
       Notification("Please fill all the fields").show()
+    elif ' ' in turn_over:
+      Notification("Turn Over should not contain spaces").show()  
     else:
-     today = datetime.today()
-     months = today.year * 12 + today.month - year.year * 12 - year.month
-     anvil.server.call('add_lendor_institutional_form_2',year,months,industry_type,turn_over,last_six_statements,user_id)
-     open_form('lendor.lendor_registration_forms.lender_registration_form_2.lender_registration_Institutional_form_3',user_id = user_id)
-     """This method is called when the button is clicked"""
+      today = datetime.today()
+      if year > today.date():
+        Notification("Future date is not valid. Please select a date in the past or present.").show()
+        return
+      months = today.year * 12 + today.month - year.year * 12 - year.month
+      anvil.server.call('add_lendor_institutional_form_2',year,months,industry_type,turn_over,last_six_statements,user_id)
+      open_form('lendor.lendor_registration_forms.lender_registration_form_2.lender_registration_Institutional_form_3',user_id = user_id)
+      """This method is called when the button is clicked"""
 
   def button_1_click(self, **event_args):
     user_id = self.userId
@@ -78,4 +83,5 @@ class lender_registration_Institutional_form_2(lender_registration_Institutional
     """This method is called when a new file is loaded into this FileLoader"""
     if file:
       self.image_1.source = self.file_loader_1.file
-    
+
+  

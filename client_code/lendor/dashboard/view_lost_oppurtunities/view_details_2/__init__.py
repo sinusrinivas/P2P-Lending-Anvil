@@ -45,7 +45,6 @@ from anvil.tables import app_tables
 # If view_details_2Template is in the same module, it should be imported correctly
 # Assuming it's in the same file or appropriately referenced
 from ._anvil_designer import view_details_2Template
-
 class view_details_2(view_details_2Template):
   def __init__(self, selected_row, **properties):
     # Set Form properties and Data Bindings.

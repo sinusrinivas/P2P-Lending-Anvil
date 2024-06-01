@@ -111,7 +111,11 @@ class foreclosure_request(foreclosure_requestTemplate):
                                     'credit_limit' : loan['credit_limit'],
                                     'foreclosure_type' : loan['foreclosure_type'],
                                     'borrower_full_name' : loan['borrower_full_name'],
-                                    'user_photo': lender_photo['user_photo']
+                                    'user_photo': lender_photo['user_photo'],
+                                    'lender_customer_id' : loan['lender_customer_id'],
+                                    'borrower_customer_id' : loan['borrower_customer_id'],
+                                    'lender_email_id' : loan['lender_email_id'],
+                                    'borrower_email_id' : loan['borrower_email_id'],
                                 }
                                 loans.append(loan_data)
 

@@ -7,6 +7,8 @@ import anvil.tables.query as q
 from anvil.tables import app_tables
 from ...bank_users.main_form import main_form_module
 from ...bank_users.user_form import user_form
+from ...bank_users.user_form import user_module
+
 
 class dashboard(dashboardTemplate):
   def __init__(self, **properties):
@@ -14,11 +16,12 @@ class dashboard(dashboardTemplate):
     self.init_components(**properties)
     
     self.email = main_form_module.email
-    self.user_Id = main_form_module.userId
-    user_id = self.user_Id
+    self.user_id = main_form_module.userId
+    self.email = self.email
+    user_id = self.user_id
     self.populate_loan_history()
 
-    wallet = app_tables.fin_wallet.get(customer_id=self.user_Id)
+    wallet = app_tables.fin_wallet.get(customer_id=user_id)
     if wallet:
       self.label_9.text = wallet['wallet_amount']
 
@@ -37,7 +40,7 @@ class dashboard(dashboardTemplate):
     try:
       customer_loans = app_tables.fin_loan_details.search(borrower_customer_id=self.user_Id)
       if customer_loans:
-        self.data = [{'product_id': loan['product_name'], 'loan_amount': loan['loan_amount'],
+        self.data = [{'product_name': loan['product_name'], 'loan_amount': loan['loan_amount'],
                       'tenure': loan['tenure'], 'interest_rate': loan['interest_rate'],
                       'total_repayment_amount': round(loan['total_repayment_amount'], 2),
                       'loan_updated_status': loan['loan_updated_status']} for loan in customer_loans]
@@ -109,7 +112,7 @@ class dashboard(dashboardTemplate):
 
   def button_12_click(self, **event_args):
     """This method is called when the button is clicked"""
-    open_form('borrower.dashboard.borrower_profile')
+    open_form('borrower.dashboard.borrower_view_profile')
 
   def image_1_copy_copy_mouse_up(self, x, y, button, **event_args):
     """This method is called when a mouse button is released on this component"""
@@ -117,7 +120,10 @@ class dashboard(dashboardTemplate):
 
   def link_9_click(self, **event_args):
     """This method is called when the link is clicked"""
-    open_form('wallet.wallet')
+    customer_id = self.user_Id
+    email = self.email
+    anvil.server.call('fetch_profile_data_and_insert', email, customer_id)
+    open_form("wallet.wallet")
 
   def home_main_form_link_click(self, **event_args):
     """This method is called when the link is clicked"""

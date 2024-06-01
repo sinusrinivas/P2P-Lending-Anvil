@@ -42,8 +42,12 @@ class lender_registration_Institutional_form_3(lender_registration_Institutional
     cin = self.text_box_4.text
     proof_verification = self.file_loader_1.file
     user_id = self.userId
-    if not reg_office_add  or not proof_verification or not din or not cin:
+    if not reg_office_add or not proof_verification or not din or not cin:
       Notification("Please all the fields").show()
+    elif ' ' in din:
+      Notification("DIN should not contain spaces").show()
+    elif ' ' in cin:
+      Notification("CIN should not contain spaces").show()
     else:
      anvil.server.call('add_lendor_institutional_form_3',din, cin,reg_office_add,proof_verification, user_id)
      open_form('lendor.lendor_registration_forms.lender_registration_form_3_marital_details',user_id=user_id)

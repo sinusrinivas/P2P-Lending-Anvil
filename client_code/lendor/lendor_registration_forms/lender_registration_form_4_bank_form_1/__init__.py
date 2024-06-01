@@ -60,6 +60,8 @@ class lender_registration_form_4_bank_form_1(lender_registration_form_4_bank_for
       Notification("please fill the all required fields").show()
     elif not re.match(r'^[A-Za-z\s]+$', account_name):
         Notification("Account name should be valid").show()
+    elif ' ' in account_number:
+        Notification("Account number should not contain spaces").show()  
     elif not account_number.isdigit():
         Notification("Account number should be valid").show()
     else:

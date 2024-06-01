@@ -446,7 +446,7 @@ color: %color:On Primary Container%;
   margin-bottom: 0;
 }
 
-.app-bar > .sidebar-toggle { display:block; float:left;  margin-left: -61px; visibility:hidden}
+.app-bar > .sidebar-toggle { display:block; float:left;  margin-left: -61px; }
 .app-bar > .top-left-btn { float: left; margin-left: -60px; margin-right: -40px; }
 .app-bar > .title { float: left; }
 .app-bar > .title > .placeholder { outline: 1px dotted; padding-left: 16px; padding-right: 16px; margin: 8px 8px 0; display:none; }
@@ -477,10 +477,23 @@ color: %color:On Primary Container%;
   height: 43px; /* 30px line height + 12px padding + 1px border */
 }
 
-.app-bar .anvil-component-icon-present .anvil-component-icon, .app-bar .sidebar-toggle .fa {
+ .app-bar .anvil-component-icon-present .anvil-component-icon, .app-bar .sidebar-toggle .fa {
   width: 30px;
   text-align: center;
+  visibility: visible;
 }
+
+.app-bar .anvil-component-icon-present .anvil-component-icon:hover{
+  color:#013065;
+}
+
+.app-bar .sidebar-toggle .fa-bars {
+  width: 30px;
+  text-align: center;
+  color:#013065;
+  visibility: visible;
+}
+
 
 /* Don't put spacing on the top-level container (eg FlowPanel) */
 .app-bar-nav > .anvil-container {
@@ -510,6 +523,12 @@ color: %color:On Primary Container%;
 .app-bar a .link-text {
   padding: 0 4px;
 }
+
+.app-bar a .link-text:hover {
+  color: #013065;
+  transform: scale(1);
+  text-shadow: none;
+}
 .app-bar a.has-text .anvil-component-icon.left {
   margin-right: 4px;
 }
@@ -518,8 +537,9 @@ color: %color:On Primary Container%;
 }
 
 .app-bar a:hover, .app-bar a:active {
-  color: #eee; text-decoration: none;
-  background-color: %color:Primary 700%;
+  color: #013065; 
+  background-color:#Edf0f4;
+  visibility:visible;
 }
 
 
@@ -1110,13 +1130,6 @@ span.btn-text{
   text-align: center;
 }
 
-i.fa.fa-bars {
-    visibility: hidden; /* Initially hidden */
-}
-
-i.fa.fa-bars {
-    visibility: visible; /* Visible on hover */
-}
 
 
 

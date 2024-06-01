@@ -60,8 +60,8 @@ class dashboard(dashboardTemplate):
   def manage_lender_click(self, **event_args):
     open_form('admin.dashboard.lenders')
 
-  def manage_bessem_click(self, **event_args):
-    open_form('admin.dashboard.manage_bessem')
+  def manage_ascend_click(self, **event_args):
+    open_form('admin.dashboard.manage_ascend')
 
   def logout__click(self, **event_args):
     anvil.users.logout()
@@ -109,7 +109,7 @@ class dashboard(dashboardTemplate):
 
   def button_23_click(self, **event_args):
     """This method is called when the button is clicked"""
-    open_form('admin.dashboard.manage_bessem')
+    open_form('admin.dashboard.manage_ascend')
 
   def image_9_mouse_up(self, x, y, button, **event_args):
     """This method is called when a mouse button is released on this component"""
@@ -157,7 +157,7 @@ class dashboard(dashboardTemplate):
 
   def image_12_mouse_up(self, x, y, button, **event_args):
     """This method is called when a mouse button is released on this component"""
-    open_form('admin.dashboard.manage_bessem')
+    open_form('admin.dashboard.manage_ascend')
 
  
 

@@ -1,12 +1,8 @@
 is_package: true
 container:
   type: HtmlTemplate
-  properties: {html: '@theme:standard-page.html'}
+  properties: {html: ''}
 components:
-- type: FlowPanel
-  properties: {}
-  layout_properties: {slot: nav-right}
-  name: navbar_links
 - type: ColumnPanel
   properties: {col_widths: '{}'}
   layout_properties: {slot: default}
