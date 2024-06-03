@@ -76,7 +76,7 @@ components:
       name: label_5
       layout_properties: {grid_position: 'NIPFIX,JTFJZJ GENCVA,YFODNE'}
     - name: drop_down_1
-      properties: {}
+      properties: {role: outlined}
       type: DropDown
       layout_properties: {grid_position: 'NIPFIX,JTFJZJ GENCVA,ZMPAOM'}
     - type: Label
@@ -210,7 +210,7 @@ components:
       name: label_18
       layout_properties: {grid_position: 'NIPFIX,JTFJZJ FIXTFF,BJYFWH'}
     - name: drop_down_2
-      properties: {}
+      properties: {role: outlined}
       type: DropDown
       layout_properties: {grid_position: 'NIPFIX,JTFJZJ FIXTFF,ZOHMHR'}
     - type: Label
@@ -348,7 +348,7 @@ components:
       name: label_28
       layout_properties: {grid_position: 'NIPFIX,JTFJZJ YXXXNI,PGJGSO'}
     - name: drop_down_8
-      properties: {}
+      properties: {role: outlined}
       type: DropDown
       layout_properties: {grid_position: 'NIPFIX,JTFJZJ YXXXNI,SHAUGB'}
     - type: Label
@@ -429,7 +429,7 @@ components:
       name: label_35
       layout_properties: {grid_position: 'NIPFIX,JTFJZJ FQGEMN,CVMIEY'}
     - name: drop_down_3
-      properties: {}
+      properties: {role: outlined}
       type: DropDown
       layout_properties: {grid_position: 'NIPFIX,JTFJZJ FQGEMN,VKDOKV'}
     - type: Label
@@ -511,7 +511,7 @@ components:
       name: label_9
       layout_properties: {grid_position: 'NIPFIX,JTFJZJ DALOOR,QTOIWN'}
     - name: drop_down_4
-      properties: {}
+      properties: {role: outlined}
       type: DropDown
       layout_properties: {grid_position: 'NIPFIX,JTFJZJ DALOOR,NVWYII'}
     - type: Label
@@ -522,7 +522,7 @@ components:
       name: label_8
       layout_properties: {grid_position: 'NIPFIX,JTFJZJ UKLWIW,ANVUKV'}
     - name: drop_down_5
-      properties: {visible: true}
+      properties: {visible: true, role: outlined}
       type: DropDown
       layout_properties: {grid_position: 'NIPFIX,JTFJZJ UKLWIW,NLFWDY'}
     - type: Label
@@ -617,7 +617,7 @@ components:
       name: label_45
       layout_properties: {grid_position: 'NIPFIX,JTFJZJ NBYDDG,IPOCEL'}
     - name: drop_down_6
-      properties: {}
+      properties: {role: outlined}
       type: DropDown
       layout_properties: {grid_position: 'NIPFIX,JTFJZJ NBYDDG,HDABIC'}
     - type: Label
@@ -670,7 +670,7 @@ components:
       name: label_49
       layout_properties: {grid_position: 'NIPFIX,JTFJZJ QFFCBE,WFEOWK'}
     - name: drop_down_7
-      properties: {}
+      properties: {role: outlined}
       type: DropDown
       layout_properties: {grid_position: 'NIPFIX,JTFJZJ QFFCBE,XPFDBX'}
     - type: Label
