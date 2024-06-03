@@ -14,6 +14,7 @@ class edit_form(edit_formTemplate):
 
     # Any code you write here will run before the form opens.
     self.data = tables.app_tables.fin_user_profile.search()
+    
     self.genders=tables.app_tables.fin_gender.search()
     self.marital_statuses = tables.app_tables.fin_borrower_marrital_status.search()
     self.qualification = tables.app_tables.fin_borrower_qualification.search()
@@ -22,6 +23,10 @@ class edit_form(edit_formTemplate):
     self.employment_type = tables.app_tables.fin_borrower_employee_type.search()
     self.account_type = tables.app_tables.fin_borrower_account_type.search()
     self.salary_type = tables.app_tables.fin_borrower_salary_type.search()
+    self.user_profile = tables.app_tables.fin_user_profile.search()
+    self.borrower = tables.app_tables.fin_borrower.search()
+    self.wallet = tables.app_tables.fin_wallet.search()
+    self.wallet_bank_account = tables.app_tables.fin_wallet_bank_account_table.search()
     
   
 
@@ -85,7 +90,7 @@ class edit_form(edit_formTemplate):
     self.college_id = []
     self.college_address = []
     self.running_loan = []
-   
+
     self.drop_down_1.items=[(g['gender'],g['gender']) for g in self.genders]
     self.drop_down_2.items = [(ms['borrower_marrital_status'], ms['borrower_marrital_status']) for ms in self.marital_statuses]
     self.drop_down_3.items = [(q['borrower_qualification'], q['borrower_qualification']) for q in self.qualification]
