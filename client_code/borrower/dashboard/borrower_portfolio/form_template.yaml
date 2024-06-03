@@ -46,9 +46,7 @@ components:
     layout_properties: {grid_position: 'QNZBUD,DRTUYB YTOEXT,TNJAMT', full_width_row: true}
     components:
     - name: label_4_copy
-      properties: {text: 'Running Loans
-
-          ', bold: true}
+      properties: {text: "Running \nLoans\n", bold: true}
       type: Label
       layout_properties: {grid_position: 'HXGBDO,PIHYRS LIIRFK,ZHEDGR AXQTMV,AFQALW'}
     - name: image_2
@@ -65,11 +63,11 @@ components:
     layout_properties: {grid_position: 'QNZBUD,DRTUYB YTOEXT,KJTPND'}
     components:
     - name: label_8
-      properties: {text: Closed Loans, bold: true}
+      properties: {text: "Closed\n Loans", bold: true}
       type: Label
       layout_properties: {grid_position: 'QAERLY,ZYDTNB IFVDXW,KISYOU'}
     - name: label_9
-      properties: {icon: 'fa:rupee', text: '0'}
+      properties: {icon: '', text: '0'}
       type: Label
       layout_properties: {grid_position: 'QAERLY,ZYDTNB YYWHSJ,POJDAN'}
     - name: image_3
@@ -82,9 +80,7 @@ components:
     layout_properties: {grid_position: 'QNZBUD,DRTUYB YTOEXT,XMYFCK'}
     components:
     - name: label_2_copy
-      properties: {icon: '', text: 'Total Number Loans Disbursed
-
-          ', bold: true}
+      properties: {icon: '', text: "Total Number of \nLoans Disbursed\n", bold: true}
       type: Label
       layout_properties: {grid_position: 'BJUXXD,DMUXBO GGORVD,QGVFNC'}
     - name: label_3_copy
@@ -101,7 +97,7 @@ components:
     layout_properties: {grid_position: 'QNZBUD,DRTUYB YTOEXT,RHTFXY'}
     components:
     - name: label_8_copy
-      properties: {text: Total Value of Loan Disbursed, bold: true}
+      properties: {text: "Total Value of \nLoan Disbursed", bold: true}
       type: Label
       layout_properties: {grid_position: 'QAERLY,ZYDTNB IFVDXW,KISYOU'}
     - name: label_9_copy
