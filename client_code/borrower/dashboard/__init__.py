@@ -37,7 +37,7 @@ class dashboard(dashboardTemplate):
 
   def populate_loan_history(self):
     try:
-      customer_loans = app_tables.fin_loan_details.search(borrower_customer_id=self.user_d)
+      customer_loans = app_tables.fin_loan_details.search(borrower_customer_id=self.user_Id)
       if customer_loans:
         self.data = [{'product_name': loan['product_name'], 'loan_amount': loan['loan_amount'],
                       'tenure': loan['tenure'], 'interest_rate': loan['interest_rate'],
