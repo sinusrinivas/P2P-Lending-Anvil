@@ -92,7 +92,7 @@ class edit_form_copy(edit_form_copyTemplate):
         self.drop_down_4.items = [(ot['lendor_organization_type'], ot['lendor_organization_type']) for ot in self.organization_types]
         self.drop_down_5.items = [(et['lendor_employee_type'], et['lendor_employee_type']) for et in self.employment_types]
         self.drop_down_6.items = [(sa['lendor_salary_type'], sa['lendor_salary_type']) for sa in self.salary_types]
-        self.drop_down_7.items = [(pa['present_address'], pa['present_address']) for pa ]
+        self.drop_down_7.items = [(pa['present_address'], pa['present_address']) for pa in self.address_types]
         self.drop_down_8.items = [(qa['lendor_qualification'], qa['lendor_qualification']) for qa in self.qualification_types]
 
         # Fill in user profile details
@@ -192,7 +192,7 @@ class edit_form_copy(edit_form_copyTemplate):
         # self.set_textbox_visibility(self.text_box_32, self.label_35, self.qualification_list[c])
         self.drop_down_8.selected_value = self.qualification_list[c]
         # self.set_textbox_visibility(self.text_box_25, self.label_28, self.address_type_list[c])
-        self.drop_down_7.selected_value = self.address_type_list[c]
+        self.drop_down_7.selected_value = self.add
         self.set_textbox_visibility(self.text_box_34, self.label_37, self.street_list[c])
         self.set_textbox_visibility(self.text_box_27, self.label_30, self.build_name_list[c])
         self.set_textbox_visibility(self.text_box_29, self.label_32, self.house_no_list[c])
