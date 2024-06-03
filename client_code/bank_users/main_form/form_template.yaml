@@ -116,7 +116,7 @@ components:
     name: image_2
   - type: Image
     properties: {height: 39, source: _/theme/bank_users/main_form/12-300x94.png}
-    layout_properties: {x: 298.140625, y: 280.296875, width: 184.890625}
+    layout_properties: {x: 298.140625, y: 280.296875, width: 181.891}
     name: image_12
   - type: Image
     properties: {height: 46, source: _/theme/bank_users/main_form/rbi-registered-1.svg}
