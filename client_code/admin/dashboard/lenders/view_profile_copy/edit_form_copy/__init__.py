@@ -15,7 +15,6 @@ class edit_form_copy(edit_form_copyTemplate):
 
     # Any code you write here will run before the form opens.
     self.data = tables.app_tables.fin_user_profile.search()
-    self.genders=tables.app_tables.fin_gender.search()
 
 
     self.id_list = []
@@ -78,8 +77,6 @@ class edit_form_copy(edit_form_copyTemplate):
     self.college_id = []
     self.college_address = []
     self.running_loan = []
-
-    self.drop_down_1.items=[(g['gender'],g['gender']) for g in self.genders]
     
     a = -1
     for i in self.data:
@@ -151,9 +148,8 @@ class edit_form_copy(edit_form_copyTemplate):
 
       self.set_textbox_visibility(self.text_box_2,self.label_2,self.name_list[c])
       self.set_textbox_visibility(self.text_box_3,self.label_4, str(self.status_list[c]))
-      self.drop_down_1.selected_value=self.gender_list[c]
       # self.set_dropdown_visibility(self.drop_down_gender, self.label_5, self.gender_list[c], self.gender_options)
-      # self.set_textbox_visibility(self.text_box_4,self.label_5, self.gender_list[c])
+      self.set_textbox_visibility(self.text_box_4,self.label_5, self.gender_list[c])
       self.set_textbox_visibility(self.text_box_5,self.label_6, self.age_list[c])
       self.set_textbox_visibility(self.text_box,self.label_7, self.dob_list[c])
       self.set_textbox_visibility(self.text_box_7,self.label_10, self.mobile_list[c])
@@ -290,8 +286,7 @@ class edit_form_copy(edit_form_copyTemplate):
       a = id_list.index(self.get)
       data[a]['full_name'] = self.text_box_2.text
       data[a]['profile_status'] = bool(self.text_box_3.text)
-      data[a]['gender'] = self.drop_down_1.selected_value
-      # data[a]['gender'] = self.text_box_4.text
+      data[a]['gender'] = self.text_box_4.text
       data[a]['user_age'] = int(self.text_box_5.text)
       # data[a]['date_of_birth'] = self.date_picker_1.date
       data[a]['mobile'] = self.text_box_7.text

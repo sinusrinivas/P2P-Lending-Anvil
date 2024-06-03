@@ -17,7 +17,7 @@ class edit_form(edit_formTemplate):
     self.genders=tables.app_tables.fin_gender.search()
     self.marital_statuses = tables.app_tables.fin_borrower_marrital_status.search()
     self.qualification = tables.app_tables.fin_borrower_qualification.search()
-    # self.address_type = tables.app_tables.fin_borrower_land_type
+    self.address_type = tables.app_tables.fin_borrower_land_type.search()
     self.organization_type = tables.app_tables.fin_borrower_organization_type.search()
     self.employment_type = tables.app_tables.fin_borrower_employee_type.search()
     self.account_type = tables.app_tables.fin_borrower_account_type.search()
@@ -89,7 +89,7 @@ class edit_form(edit_formTemplate):
     self.drop_down_1.items=[(g['gender'],g['gender']) for g in self.genders]
     self.drop_down_2.items = [(ms['borrower_marrital_status'], ms['borrower_marrital_status']) for ms in self.marital_statuses]
     self.drop_down_3.items = [(q['borrower_qualification'], q['borrower_qualification']) for q in self.qualification]
-    # self.drop_down_4.items = [(lt['borrower_land_type'], lt['borrower_land_type']) for lt in self.address_type]
+    self.drop_down_8.items = [(lt['land_type'], lt['land_type']) for lt in self.address_type]
     self.drop_down_4.items = [(ot['borrower_organization_type'], ot['borrower_organization_type']) for ot in self.organization_type]
     self.drop_down_5.items = [(et['borrower_employee_type'], et['borrower_employee_type']) for et in self.employment_type]
     self.drop_down_6.items = [(at['borrower_account_type'], at['borrower_account_type']) for at in self.account_type]
@@ -184,8 +184,8 @@ class edit_form(edit_formTemplate):
       self.set_textbox_visibility(self.text_box_35,self.label_38, str(self.terms_list[c]))
       self.drop_down_3.selected_value = self.qualification_list[c]
       # self.set_textbox_visibility(self.text_box_32,self.label_35, self.qualification_list[c])
-      # self.drop_down_4.selected_value = self.address_type_list[c]
-      self.set_textbox_visibility(self.text_box_25,self.label_28, self.address_type_list[c])
+      self.drop_down_4.selected_value = self.address_type_list[c]
+      # self.set_textbox_visibility(self.text_box_25,self.label_28, self.address_type_list[c])
       self.set_textbox_visibility(self.text_box_34,self.label_37, self.street_list[c])
       self.set_textbox_visibility(self.text_box_27,self.label_30, self.build_name_list[c])
       self.set_textbox_visibility(self.text_box_29,self.label_32, self.house_no_list[c])
@@ -333,8 +333,8 @@ class edit_form(edit_formTemplate):
         user_data['usertype'] = self.text_box_22.text
         user_data['registration_approve'] = bool(self.text_box_23.text)
         user_data['about'] = self.text_box_24.text
-        # user_data['address_type'] = self.drop_down_4.selected_value
-        user_data['address_type'] = self.text_box_25.text
+        user_data['address_type'] = self.drop_down_8.selected_value
+        # user_data['address_type'] = self.text_box_25.text
         user_data['alerts'] = bool(self.text_box_26.text)
         user_data['building_name'] = self.text_box_27.text
         user_data['house_landmark'] = self.text_box_28.text
@@ -361,7 +361,7 @@ class edit_form(edit_formTemplate):
         user_data['account_number'] = self.text_box_42.text
         user_data['account_bank_branch'] = self.text_box_43.text
         # user_data['ifsc_code'] = self.text_box_44.text
-        user_data['salary_type'] = self.drop_down_7
+        user_data['salary_type'] = self.drop_down_7.selected_value
         # user_data['select_bank'] = self.text_box_46.text
         # user_data['net_bank'] = self.text_box_47.text
         user_data['father_name'] = self.text_box_48.text
@@ -374,16 +374,16 @@ class edit_form(edit_formTemplate):
         # user_data['running_Home_Loan'] = self.text_box_55.text
 
         # Calculate ascend score and update
-        # ascend_value = anvil.server.call('final_points_update_ascend_table', self.get)
-        # if ascend_value is not None:
-        #     user_data['ascend_value'] = float(ascend_value)
+        ascend_value = anvil.server.call('final_points_update_ascend_table', self.get)
+        if ascend_value is not None:
+            user_data['ascend_value'] = float(ascend_value)
 
-        #     borrower = app_tables.fin_borrower.get(customer_id=self.get)
-        #     if borrower:
-        #         borrower['ascend_score'] = ascend_value
+            borrower = app_tables.fin_borrower.get(customer_id=self.get)
+            if borrower:
+                borrower['ascend_score'] = ascend_value
        
-        # # data.update()
-        # print(f"Updated user profile and borrower table for customer_id: {self.get}")
+        # data.update()
+        print(f"Updated user profile and borrower table for customer_id: {self.get}")
         open_form('admin.dashboard.borrowers.view_profile', self.get)
 
   # def button_2_click(self, **event_args):
