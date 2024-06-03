@@ -85,7 +85,7 @@ class edit_form(edit_formTemplate):
     self.college_id = []
     self.college_address = []
     self.running_loan = []
-
+   
     self.drop_down_1.items=[(g['gender'],g['gender']) for g in self.genders]
     self.drop_down_2.items = [(ms['borrower_marrital_status'], ms['borrower_marrital_status']) for ms in self.marital_statuses]
     self.drop_down_3.items = [(q['borrower_qualification'], q['borrower_qualification']) for q in self.qualification]
