@@ -15,6 +15,8 @@ class edit_form(edit_formTemplate):
     # Any code you write here will run before the form opens.
     self.data = tables.app_tables.fin_user_profile.search()
     self.genders=tables.app_tables.fin_gender.search()
+    self.marital_statuses = tables.app_tables.fin_borrower_marrital_status.search()
+    self.qualification = tables.app_tables.fin_borrower_qualification.search()
   
 
     self.id_list = []
@@ -79,6 +81,8 @@ class edit_form(edit_formTemplate):
     self.running_loan = []
 
     self.drop_down_1.items=[(g['gender'],g['gender']) for g in self.genders]
+    self.drop_down_2.items = [(ms['borrower_marrital_status'], ms['borrower_marrital_status']) for ms in self.marital_statuses]
+    self.drop_down_3.items = [(q['borrower_qualification'], q['borrower_qualification']) for q in self.qualification]
     
     a = -1
     for i in self.data:
@@ -161,12 +165,14 @@ class edit_form(edit_formTemplate):
       self.set_textbox_visibility(self.text_box_12,self.label_15, str(self.last_confirm_list[c]))
       self.set_textbox_visibility(self.text_box_13,self.label_16, str(self.mobile_check_list[c]))
       self.set_textbox_visibility(self.text_box_14,self.label_17, self.mother_tongue_list[c])
-      self.set_textbox_visibility(self.text_box_15,self.label_18, self.mother_status_list[c])
+      self.drop_down_2.selected_value = self.mother_status_list[c]
+      # self.set_textbox_visibility(self.text_box_15,self.label_18, self.mother_status_list[c])
       self.set_textbox_visibility(self.text_box_17,self.label_20, self.space_name_list[c])
       self.set_textbox_visibility(self.text_box_24,self.label_27, self.about_list[c])
       self.set_textbox_visibility(self.text_box_26,self.label_29, str(self.alets_list[c]))
       self.set_textbox_visibility(self.text_box_35,self.label_38, str(self.terms_list[c]))
-      self.set_textbox_visibility(self.text_box_32,self.label_35, self.qualification_list[c])
+      self.drop_down_3.selected_value = self
+      # self.set_textbox_visibility(self.text_box_32,self.label_35, self.qualification_list[c])
       self.set_textbox_visibility(self.text_box_25,self.label_28, self.address_type_list[c])
       self.set_textbox_visibility(self.text_box_34,self.label_37, self.street_list[c])
       self.set_textbox_visibility(self.text_box_27,self.label_30, self.build_name_list[c])
@@ -300,7 +306,8 @@ class edit_form(edit_formTemplate):
         user_data['last_confirm'] = bool(self.text_box_12.text)
         user_data['mobile_check'] = bool(self.text_box_13.text)
         user_data['mouther_tounge'] = self.text_box_14.text
-        user_data['marital_status'] = self.text_box_15.text
+        user_data['marital_status'] = self.drop_down_2.selected_value
+        # user_data['marital_status'] = self.text_box_15.text
         # user_data['Date_mariage'] = self.date_picker_2.date
         user_data['spouse_name'] = self.text_box_17.text
         user_data['spouse_mobile'] = self.text_box_18.text
@@ -347,16 +354,16 @@ class edit_form(edit_formTemplate):
         # user_data['running_Home_Loan'] = self.text_box_55.text
 
         # Calculate ascend score and update
-        ascend_value = anvil.server.call('final_points_update_ascend_table', self.get)
-        if ascend_value is not None:
-            user_data['ascend_value'] = float(ascend_value)
+        # ascend_value = anvil.server.call('final_points_update_ascend_table', self.get)
+        # if ascend_value is not None:
+        #     user_data['ascend_value'] = float(ascend_value)
 
-            borrower = app_tables.fin_borrower.get(customer_id=self.get)
-            if borrower:
-                borrower['ascend_score'] = ascend_value
+        #     borrower = app_tables.fin_borrower.get(customer_id=self.get)
+        #     if borrower:
+        #         borrower['ascend_score'] = ascend_value
        
-        # data.update()
-        print(f"Updated user profile and borrower table for customer_id: {self.get}")
+        # # data.update()
+        # print(f"Updated user profile and borrower table for customer_id: {self.get}")
         open_form('admin.dashboard.borrowers.view_profile', self.get)
 
   # def button_2_click(self, **event_args):
