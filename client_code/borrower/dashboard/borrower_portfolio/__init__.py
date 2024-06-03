@@ -17,6 +17,4 @@ class borrower_portfolio(borrower_portfolioTemplate):
 
     # Any code you write here will run before the form opens.
 
-  def plot_1_click(self, points, **event_args):
-    """This method is called when a data point is clicked."""
-    pass
+ 
