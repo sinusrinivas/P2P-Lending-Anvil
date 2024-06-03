@@ -816,6 +816,8 @@ class check_out(check_outTemplate):
                         loan_details['lender_returns'] += i_r
                         loan_details['remaining_amount'] = remaining_amount
                         loan_details['total_amount_paid'] += total_emi_amount
+                        if loan_details['remaining_amount'] <= 0:
+                          loan_details['loan_updated_status'] = 'close'
                         loan_details.update()
             
                     lender_returns_dict = defaultdict(float)
