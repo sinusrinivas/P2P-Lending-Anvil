@@ -14,7 +14,6 @@ class edit_form(edit_formTemplate):
 
     # Any code you write here will run before the form opens.
     self.data = tables.app_tables.fin_user_profile.search()
-    
     self.genders=tables.app_tables.fin_gender.search()
     self.marital_statuses = tables.app_tables.fin_borrower_marrital_status.search()
     self.qualification = tables.app_tables.fin_borrower_qualification.search()
@@ -23,10 +22,10 @@ class edit_form(edit_formTemplate):
     self.employment_type = tables.app_tables.fin_borrower_employee_type.search()
     self.account_type = tables.app_tables.fin_borrower_account_type.search()
     self.salary_type = tables.app_tables.fin_borrower_salary_type.search()
-    self.user_profile = tables.app_tables.fin_user_profile.search()
-    self.borrower = tables.app_tables.fin_borrower.search()
-    self.wallet = tables.app_tables.fin_wallet.search()
-    self.wallet_bank_account = tables.app_tables.fin_wallet_bank_account_table.search()
+    # self.user_profile_data = tables.app_tables.fin_user_profile.search()
+    # self.borrower_data = tables.app_tables.fin_borrower.search()
+    # self.wallet_data = tables.app_tables.fin_wallet.search()
+    # self.wallet_bank_account_data = tables.app_tables.fin_wallet_bank_account_table.search()
     
   
 
