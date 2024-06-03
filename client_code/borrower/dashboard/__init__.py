@@ -14,7 +14,6 @@ class dashboard(dashboardTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
-    
     self.email = main_form_module.email
     self.user_id = main_form_module.userId
     self.email = self.email
@@ -47,7 +46,7 @@ class dashboard(dashboardTemplate):
         self.repeating_panel_1.items = self.data
       else:
         Notification("No Data Available Here!").show()
-    except anvil.tables.NoSuchRow:
+    except anvil.tables.TableError:
       alert("No data found")
 
   def link_1_click(self, **event_args):
