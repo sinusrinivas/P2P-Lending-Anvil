@@ -92,7 +92,7 @@ class edit_form_copy(edit_form_copyTemplate):
         self.drop_down_4.items = [(ot['lendor_organization_type'], ot['lendor_organization_type']) for ot in self.organization_types]
         self.drop_down_5.items = [(et['lendor_employee_type'], et['lendor_employee_type']) for et in self.employment_types]
         self.drop_down_6.items = [(sa['lendor_salary_type'], sa['lendor_salary_type']) for sa in self.salary_types]
-        self.drop_down_7.items = [(pa['present_address'], pa['present_address']) for pa ]
+        self.drop_down_7.items = [(pa['present_address'], pa['present_address']) for pa in self.address_types]
         self.drop_down_8.items = [(qa['lendor_qualification'], qa['lendor_qualification']) for qa in self.qualification_types]
 
         # Fill in user profile details
