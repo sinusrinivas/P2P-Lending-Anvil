@@ -20,10 +20,66 @@ components:
   type: form:borrower.dashboard.Navigation_form_dashboard
   layout_properties: {grid_position: 'ZRVLTI,JMGFQZ', full_width_row: true}
 - name: column_panel_7_copy_copy
-  properties: {role: null, col_widths: '{"RBZWXR":1,"WCBRQE":14,"DRTUYB":60,"IZWFXP":65,"VNRYEV":1}'}
+  properties: {role: null, col_widths: '{"RBZWXR":1,"WCBRQE":14,"DRTUYB":60,"IZWFXP":65,"VNRYEV":1,"GPDXDQ":2,"SIUEQJ":13,"VHKJQC":45}'}
   type: ColumnPanel
   layout_properties: {grid_position: 'ZIZNMI,PIRYUO', full_width_row: true}
   components:
+  - name: spacer_4
+    properties: {height: 32}
+    type: Spacer
+    layout_properties: {grid_position: 'YNFSJO,GPDXDQ', full_width_row: true}
+  - name: column_panel_7_copy_2_copy
+    properties: {role: outlined-card, col_widths: '{"CZPYDN":90,"JLLGYN":5,"QXGKNE":10,"PBZDAB":3,"LGBPSD":57,"XBQUGG":3,"AMNWCP":57}',
+      background: '#094586'}
+    type: ColumnPanel
+    layout_properties: {grid_position: 'YNFSJO,SIUEQJ', full_width_row: true}
+    components:
+    - name: spacer_5_copy
+      properties: {height: 32}
+      type: Spacer
+      layout_properties: {grid_position: 'VNQVSA,PBZDAB'}
+    - name: link_1_copy
+      properties: {text: 'Ascend Wallet Balance                                                                                     ',
+        bold: true, foreground: white, font_size: 14}
+      type: Link
+      layout_properties: {grid_position: 'VNQVSA,LGBPSD', full_width_row: true}
+      event_bindings: {click: link_1_copy_click}
+    - name: link_14
+      properties: {icon: '', icon_align: right, foreground: White, text: '>', bold: true,
+        font_size: 18, align: right}
+      type: Link
+      layout_properties: {grid_position: 'VNQVSA,PCVRCH'}
+      event_bindings: {click: link_14_click}
+    - name: spacer_6
+      properties: {height: 32}
+      type: Spacer
+      layout_properties: {grid_position: 'IFNKBM,XBQUGG'}
+    - name: label_2_copy_copy
+      properties: {icon: 'fa:rupee', text: '0', foreground: white, font_size: 14}
+      type: Label
+      layout_properties: {grid_position: 'IFNKBM,AMNWCP', full_width_row: true}
+    - name: spacer_1_copy
+      properties: {height: 31.86663818359375}
+      type: Spacer
+      layout_properties: {grid_position: 'AOORRV,JLLGYN', full_width_row: true}
+    - name: spacer_4_copy
+      properties: {height: '2'}
+      type: Spacer
+      layout_properties: {grid_position: 'AOORRV,CZPYDN QZBALS,QPNUUY'}
+    - name: button_1
+      properties: {text: Add Funds, bold: true, background: white, align: full, foreground: '#013065',
+        role: elevated-button}
+      type: Button
+      layout_properties: {grid_position: 'AOORRV,CZPYDN GVYVHX,HVHHIX'}
+      event_bindings: {click: button_1_click}
+    - name: spacer_3_copy
+      properties: {height: 32}
+      type: Spacer
+      layout_properties: {grid_position: 'AOORRV,QXGKNE'}
+  - name: spacer_3
+    properties: {height: 32}
+    type: Spacer
+    layout_properties: {grid_position: 'YNFSJO,VHKJQC'}
   - name: spacer_2
     properties: {height: 32}
     type: Spacer
@@ -108,4 +164,9 @@ components:
       properties: {height: '50', source: _/theme/lender/dashboard/net%20asset%20value.svg}
       type: Image
       layout_properties: {grid_position: 'QAERLY,AEITXQ'}
+  - name: plot_1
+    properties: {}
+    type: Plot
+    layout_properties: {grid_position: 'VYPEXD,NKHIMC'}
+    event_bindings: {click: plot_1_click}
 is_package: true
