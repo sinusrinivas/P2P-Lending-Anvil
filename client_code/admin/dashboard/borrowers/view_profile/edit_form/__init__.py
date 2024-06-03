@@ -376,11 +376,14 @@ class edit_form(edit_formTemplate):
         # Calculate ascend score and update
         ascend_value = anvil.server.call('final_points_update_ascend_table', self.get)
         if ascend_value is not None:
-            user_data['ascend_value'] = float(ascend_value)
+    # Convert ascend_value to float before assigning it to ascend_score
+         user_data['ascend_value'] = float(ascend_value)
 
-            borrower = app_tables.fin_borrower.get(customer_id=self.get)
-            if borrower:
-                borrower['ascend_score'] = ascend_value
+         borrower = app_tables.fin_borrower.get(customer_id=self.get)
+         if borrower:
+              # Assign the converted value to ascend_score
+             borrower['ascend_score'] = float(ascend_value)
+
        
         # data.update()
         print(f"Updated user profile and borrower table for customer_id: {self.get}")
