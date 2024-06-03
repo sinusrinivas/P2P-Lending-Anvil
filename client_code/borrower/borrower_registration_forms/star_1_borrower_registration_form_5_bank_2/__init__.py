@@ -31,7 +31,7 @@ class star_1_borrower_registration_form_5_bank_2(star_1_borrower_registration_fo
         Notification("Please fill all required fields").show()
     else:
         anvil.server.call('add_borrower_step6', bank_id, bank_branch, user_id)
-        open_form('borrower.dashboard',user_id=self.userId)
+        open_form('borrower.dashboard')
 
   def button_1_click(self, **event_args):
     open_form('borrower.borrower_registration_forms.star_1_borrower_registration_form_5_bank_1',user_id=self.userId)
