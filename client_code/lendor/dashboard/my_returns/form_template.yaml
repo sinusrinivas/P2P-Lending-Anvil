@@ -46,7 +46,7 @@ components:
       layout_properties: {grid_position: 'NZRYNQ,OPVKXB'}
       event_bindings: {click: button_2_click}
     - name: button_3
-      properties: {text: My Returns base on Users, background: '#05264d', foreground: white,
+      properties: {text: My Returns based on Users, background: '#05264d', foreground: white,
         role: elevated-button, bold: true, align: full}
       type: Button
       layout_properties: {grid_position: 'NZRYNQ,LDMGVG'}
