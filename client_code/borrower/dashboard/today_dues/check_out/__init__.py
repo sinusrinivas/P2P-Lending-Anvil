@@ -74,6 +74,7 @@ class check_out(check_outTemplate):
 
         self.i_r.text = "{:.2f}".format(interest_amount)
         self.emi.text = "{:.2f}".format(emi)
+        self.emi_processing_extension.text = "{:.2f}".format(total_emi)
         print(float(self.emi.text))
       
       
@@ -1025,7 +1026,8 @@ class check_out(check_outTemplate):
         # 'part_payment_date' : self.selected_row['part_payment_date'],
         # 'payment_type' : self.selected_row['payment_type'],
         'tenure':self.tenure_label.text,
-        'lender_full_name' : self.selected_row['lender_full_name']
+        'lender_full_name' : self.selected_row['lender_full_name'],
+        'for_remaining_amount_calculation': self.emi_processing_extension.text,
     }
     
     # Open the part_payment form and pass loan_details as a parameter
