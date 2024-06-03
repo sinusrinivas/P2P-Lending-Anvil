@@ -74,6 +74,7 @@ class check_out(check_outTemplate):
 
         self.i_r.text = "{:.2f}".format(interest_amount)
         self.emi.text = "{:.2f}".format(emi)
+        self.emi_processing_extension.text = "{:.2f}".format(total_emi)
         print(float(self.emi.text))
       
       
@@ -457,7 +458,7 @@ class check_out(check_outTemplate):
               if lapsed_start < days_left <= lapsed_end:
                   lapsed_fee_percentage = app_tables.fin_product_details.get(product_id=product_id)['lapsed_fee']
                   days_difference = days_left - lapsed_start
-                  total_lapsed_amount = days_difference * (lapsed_fee_percentage * emi / 100)
+                  total_lapsed_amount = days_difference * (lapsed_fee_percentage * total_due_amount / 100)
                   total_due_amount += total_lapsed_amount
                   print(f"Lapsed Fee: {total_lapsed_amount}")
                   self.lapsed.visible = True
@@ -473,14 +474,14 @@ class check_out(check_outTemplate):
                   if lapsed_settings and days_left > lapsed_end:
                       days_in_lapsed = lapsed_end - lapsed_start
                       lapsed_fee_percentage = app_tables.fin_product_details.get(product_id=product_id)['lapsed_fee']
-                      total_lapsed_amount = days_in_lapsed * (lapsed_fee_percentage * emi / 100)
+                      total_lapsed_amount = days_in_lapsed * (lapsed_fee_percentage * total_due_amount / 100)
                       default_fee_amount += total_lapsed_amount
       
                   product_details = app_tables.fin_product_details.get(product_id=product_id)
                   if product_details['default_fee'] != 0:
                       days_in_default = days_left - default_start
                       default_fee_percentage = product_details['default_fee']
-                      default_fee_amount += days_in_default * (default_fee_percentage * emi / 100)
+                      default_fee_amount += days_in_default * (default_fee_percentage * total_due_amount / 100)
                   elif product_details['default_fee_amount'] != 0:
                       days_in_default = days_left - default_start
                       default_fee_amount += days_in_default * product_details['default_fee_amount']
@@ -500,7 +501,7 @@ class check_out(check_outTemplate):
                   if lapsed_settings and days_left > lapsed_end:
                       days_in_lapsed = lapsed_end - lapsed_start
                       lapsed_fee_percentage = app_tables.fin_product_details.get(product_id=product_id)['lapsed_fee']
-                      total_lapsed_amount = days_in_lapsed * (lapsed_fee_percentage * emi / 100)
+                      total_lapsed_amount = days_in_lapsed * (lapsed_fee_percentage * total_due_amount / 100)
                       npa_fee_amount += total_lapsed_amount
       
                   # Include default end fee if applicable
@@ -509,7 +510,7 @@ class check_out(check_outTemplate):
                       product_details = app_tables.fin_product_details.get(product_id=product_id)
                       if product_details['default_fee'] != 0:
                           default_fee_percentage = product_details['default_fee']
-                          default_fee_amount = days_in_default * (default_fee_percentage * emi / 100)
+                          default_fee_amount = days_in_default * (default_fee_percentage * total_due_amount / 100)
                           npa_fee_amount += default_fee_amount
                       elif product_details['default_fee_amount'] != 0:
                           default_fee_amount = product_details['default_fee_amount']
@@ -521,7 +522,7 @@ class check_out(check_outTemplate):
                   if product_details['npa'] != 0:
                       days_difference = days_left - npa_start
                       npa_percentage = product_details['npa']
-                      npa_fee_amount += days_difference * (npa_percentage * emi / 100)
+                      npa_fee_amount += days_difference * (npa_percentage * total_due_amount / 100)
                   elif product_details['npa_amount'] != 0:
                       npa_amount = product_details['npa_amount']
                       days_difference = days_left - npa_start
@@ -816,6 +817,8 @@ class check_out(check_outTemplate):
                         loan_details['lender_returns'] += i_r
                         loan_details['remaining_amount'] = remaining_amount
                         loan_details['total_amount_paid'] += total_emi_amount
+                        if loan_details['remaining_amount'] <= 0:
+                          loan_details['loan_updated_status'] = 'close'
                         loan_details.update()
             
                     lender_returns_dict = defaultdict(float)
@@ -1023,7 +1026,8 @@ class check_out(check_outTemplate):
         # 'part_payment_date' : self.selected_row['part_payment_date'],
         # 'payment_type' : self.selected_row['payment_type'],
         'tenure':self.tenure_label.text,
-        'lender_full_name' : self.selected_row['lender_full_name']
+        'lender_full_name' : self.selected_row['lender_full_name'],
+        'for_remaining_amount_calculation': self.emi_processing_extension.text,
     }
     
     # Open the part_payment form and pass loan_details as a parameter
