@@ -38,5 +38,5 @@ class manage_loan_details(manage_loan_detailsTemplate):
 
   def day_approval(self, **event_args):
     """This method is called when the button is clicked"""
-        open_form('admin.dashboard.manage_loan_details.approval_days')
+    open_form('admin.dashboard.manage_loan_details.approval_days')
 
