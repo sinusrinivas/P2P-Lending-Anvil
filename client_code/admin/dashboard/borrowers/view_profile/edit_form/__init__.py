@@ -17,6 +17,9 @@ class edit_form(edit_formTemplate):
     self.genders=tables.app_tables.fin_gender.search()
     self.marital_statuses = tables.app_tables.fin_borrower_marrital_status.search()
     self.qualification = tables.app_tables.fin_borrower_qualification.search()
+    # self.address_type = tables.app_tables.fin_borrower_land_type
+    self.organization_type = tables.app_tables.fin_borrower_organization_type.search()
+    self.employment_type = tables.app_tables.fin_borrower_employee_type.search()
   
 
     self.id_list = []
@@ -83,7 +86,9 @@ class edit_form(edit_formTemplate):
     self.drop_down_1.items=[(g['gender'],g['gender']) for g in self.genders]
     self.drop_down_2.items = [(ms['borrower_marrital_status'], ms['borrower_marrital_status']) for ms in self.marital_statuses]
     self.drop_down_3.items = [(q['borrower_qualification'], q['borrower_qualification']) for q in self.qualification]
-    
+    # self.drop_down_4.items = [(lt['borrower_land_type'], lt['borrower_land_type']) for lt in self.address_type]
+    self.drop_down_4.items = [(ot['borrower_organization_type'], ot['borrower_organization_type']) for ot in self.organization_type]
+    self.drop_down_5.items = [(et['borrower_employee_type'], et['borrower_employee_type']) for et in self.employment_type]
     a = -1
     for i in self.data:
       a+=1
@@ -171,8 +176,9 @@ class edit_form(edit_formTemplate):
       self.set_textbox_visibility(self.text_box_24,self.label_27, self.about_list[c])
       self.set_textbox_visibility(self.text_box_26,self.label_29, str(self.alets_list[c]))
       self.set_textbox_visibility(self.text_box_35,self.label_38, str(self.terms_list[c]))
-      self.drop_down_3.selected_value = self
+      self.drop_down_3.selected_value = self.qualification_list[c]
       # self.set_textbox_visibility(self.text_box_32,self.label_35, self.qualification_list[c])
+      # self.drop_down_4.selected_value = self.address_type_list[c]
       self.set_textbox_visibility(self.text_box_25,self.label_28, self.address_type_list[c])
       self.set_textbox_visibility(self.text_box_34,self.label_37, self.street_list[c])
       self.set_textbox_visibility(self.text_box_27,self.label_30, self.build_name_list[c])
@@ -188,8 +194,10 @@ class edit_form(edit_formTemplate):
       self.set_textbox_visibility(self.text_box_23,self.label_26, str(self.approve_list[c]))
       self.set_textbox_visibility(self.text_box_1,self.label_1, self.another_email[c])
       self.set_textbox_visibility(self.text_box_6,self.label_3, self.company_name[c])
-      self.set_textbox_visibility(self.text_box_11,self.label_9, self.organization_type[c])
-      self.set_textbox_visibility(self.text_box_16,self.label_8, self.employment_type[c])
+      self.drop_down_4.selected_value=self.organization_type
+      # self.set_textbox_visibility(self.text_box_11,self.label_9, self.organization_type[c])
+      self.drop_down_5.selected_value = self.employment_type
+      # self.set_textbox_visibility(self.text_box_16,self.label_8, self.employment_type[c])
       self.set_textbox_visibility(self.text_box_31, self.label_14,self.business_no[c])
       self.set_textbox_visibility(self.text_box_36,self.label_33, self.company_landmark[c])
       self.set_textbox_visibility(self.text_box_37,self.label_39, self.company_address[c])
@@ -317,6 +325,7 @@ class edit_form(edit_formTemplate):
         user_data['usertype'] = self.text_box_22.text
         user_data['registration_approve'] = bool(self.text_box_23.text)
         user_data['about'] = self.text_box_24.text
+        # user_data['address_type'] = self.drop_down_4.selected_value
         user_data['address_type'] = self.text_box_25.text
         user_data['alerts'] = bool(self.text_box_26.text)
         user_data['building_name'] = self.text_box_27.text
@@ -324,14 +333,17 @@ class edit_form(edit_formTemplate):
         user_data['house_no'] = self.text_box_29.text
         user_data['pincode'] = self.text_box_30.text
         user_data['business_no'] = self.text_box_31.text
-        user_data['qualification'] = self.text_box_32.text
+        user_data['qualification'] = self.drop_down_3.selected_value
+        # user_data['qualification'] = self.text_box_32.text
         user_data['state'] = self.text_box_33.text
         user_data['street'] = self.text_box_34.text
         user_data['terms'] = bool(self.text_box_35.text)
         user_data['another_email'] = self.text_box_1.text
         user_data['company_name'] = self.text_box_6.text
-        user_data['organization_type'] = self.text_box_11.text
-        user_data['employment_type'] = self.text_box_16.text
+        user_data['organization_type'] = self.drop_down_4.selected_value
+        # user_data['organization_type'] = self.text_box_11.text
+        user_data['employment_type'] = self.drop_down_5
+        # user_data['employment_type'] = self.text_box_16.text
         user_data['company_landmark'] = self.text_box_36.text
         user_data['company_address'] = self.text_box_37.text
         user_data['annual_salary'] = self.text_box_38.text
