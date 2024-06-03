@@ -170,8 +170,8 @@ class my_returns(my_returnsTemplate):
         total_returns = []
         tenures = []
         
-        for investment in investments:
-            product = investment['product_name']
+        for index, investment in enumerate(investments):
+            product = f"{investment['product_name']} ({index + 1})"
             products.append(product)
             total_investments.append(investment['loan_amount'])
             total_returns.append(investment['lender_returns'])
