@@ -20,6 +20,9 @@ class edit_form(edit_formTemplate):
     # self.address_type = tables.app_tables.fin_borrower_land_type
     self.organization_type = tables.app_tables.fin_borrower_organization_type.search()
     self.employment_type = tables.app_tables.fin_borrower_employee_type.search()
+    self.account_type = tables.app_tables.fin_borrower_account_type.search()
+    self.salary_type = tables.app_tables.fin_borrower_salary_type.search()
+    
   
 
     self.id_list = []
@@ -59,19 +62,19 @@ class edit_form(edit_formTemplate):
     self.mobile_list = []
     self.another_email = []
     self.company_name = []
-    self.organization_type = []
-    self.employment_type = []
+    self.organization_type_list = []
+    self.employment_type_list = []
     self.business_no = []
     self.company_landmark = []
     self.company_address = []
     self.annual_salary = []
     self.designation = []
     self.account_name = []
-    self.account_type = []
+    self.account_type_list = []
     self.account_number = []
     self.account_bank_branch = []
     self.ifsc_code = []
-    self.salary_type = []
+    self.salary_type_list = []
     self.select_bank = []
     self.net_bank = []
     self.father_name = []
@@ -89,6 +92,9 @@ class edit_form(edit_formTemplate):
     # self.drop_down_4.items = [(lt['borrower_land_type'], lt['borrower_land_type']) for lt in self.address_type]
     self.drop_down_4.items = [(ot['borrower_organization_type'], ot['borrower_organization_type']) for ot in self.organization_type]
     self.drop_down_5.items = [(et['borrower_employee_type'], et['borrower_employee_type']) for et in self.employment_type]
+    self.drop_down_6.items = [(at['borrower_account_type'], at['borrower_account_type']) for at in self.account_type]
+    self.drop_down_7.items = [(st['borrower_salary_type'], st['borrower_salary_type']) for st in self.salary_type]
+    
     a = -1
     for i in self.data:
       a+=1
@@ -129,19 +135,19 @@ class edit_form(edit_formTemplate):
       self.mobile_list.append(i['mobile'])
       self.another_email.append(i['another_email'])
       self.company_name.append(i['company_name'])
-      self.organization_type.append(i['organization_type'])
-      self.employment_type.append(i['employment_type'])
+      self.organization_type_list.append(i['organization_type'])
+      self.employment_type_list.append(i['employment_type'])
       self.business_no.append(i['business_no'])
       self.company_landmark.append(i['company_landmark'])
       self.company_address.append(i['company_address'])
       self.annual_salary.append(i['annual_salary'])
       self.designation.append(i['designation'])
       self.account_name.append(i['account_name'])
-      self.account_type.append(i['account_type'])
+      self.account_type_list.append(i['account_type'])
       self.account_number.append(i['account_number'])
       self.account_bank_branch.append(i['account_bank_branch'])
       # self.ifsc_code.append(i['ifsc_code'])
-      self.salary_type.append(i['salary_type'])
+      self.salary_type_list.append(i['salary_type'])
       # self.select_bank.append(i['select_bank'])
       # self.net_bank.append(i['net_bank'])
       self.father_name.append(i['father_name'])
@@ -194,9 +200,9 @@ class edit_form(edit_formTemplate):
       self.set_textbox_visibility(self.text_box_23,self.label_26, str(self.approve_list[c]))
       self.set_textbox_visibility(self.text_box_1,self.label_1, self.another_email[c])
       self.set_textbox_visibility(self.text_box_6,self.label_3, self.company_name[c])
-      self.drop_down_4.selected_value=self.organization_type
+      self.drop_down_4.selected_value=self.organization_type_list[c]
       # self.set_textbox_visibility(self.text_box_11,self.label_9, self.organization_type[c])
-      self.drop_down_5.selected_value = self.employment_type
+      self.drop_down_5.selected_value = self.employment_type_list[c]
       # self.set_textbox_visibility(self.text_box_16,self.label_8, self.employment_type[c])
       self.set_textbox_visibility(self.text_box_31, self.label_14,self.business_no[c])
       self.set_textbox_visibility(self.text_box_36,self.label_33, self.company_landmark[c])
@@ -204,10 +210,12 @@ class edit_form(edit_formTemplate):
       self.set_textbox_visibility(self.text_box_38,self.label_40, self.annual_salary[c])
       self.set_textbox_visibility(self.text_box_39,self.label_41, self.designation[c])
       self.set_textbox_visibility(self.text_box_40,self.label_44, self.account_name[c])
-      self.set_textbox_visibility(self.text_box_41,self.label_45, self.account_type[c])
+      self.drop_down_6.selected_value = self.account_type_list[c]
+      # self.set_textbox_visibility(self.text_box_41,self.label_45, self.account_type_list[c])
       self.set_textbox_visibility(self.text_box_42,self.label_46, self.account_number[c])
       self.set_textbox_visibility(self.text_box_43,self.label_47, self.account_bank_branch[c])
-      self.set_textbox_visibility(self.text_box_45,self.label_49, self.salary_type[c])
+      self.drop_down_7.selected_value = self.salary_type_list[c]
+      # self.set_textbox_visibility(self.text_box_45,self.label_49, self.salary_type_list[c])
       self.set_textbox_visibility(self.text_box_48,self.label_52, self.father_name[c])
       self.set_textbox_visibility(self.text_box_49,self.label_53, self.father_age[c])
       self.set_textbox_visibility(self.text_box_50,self.label_54, self.mother_name[c])
@@ -342,18 +350,18 @@ class edit_form(edit_formTemplate):
         user_data['company_name'] = self.text_box_6.text
         user_data['organization_type'] = self.drop_down_4.selected_value
         # user_data['organization_type'] = self.text_box_11.text
-        user_data['employment_type'] = self.drop_down_5
+        user_data['employment_type'] = self.drop_down_5.selected_value
         # user_data['employment_type'] = self.text_box_16.text
         user_data['company_landmark'] = self.text_box_36.text
         user_data['company_address'] = self.text_box_37.text
         user_data['annual_salary'] = self.text_box_38.text
         user_data['designation'] = self.text_box_39.text
         user_data['account_name'] = self.text_box_40.text
-        user_data['account_type'] = self.text_box_41.text
+        user_data['account_type'] = self.drop_down_6.selected_value
         user_data['account_number'] = self.text_box_42.text
         user_data['account_bank_branch'] = self.text_box_43.text
         # user_data['ifsc_code'] = self.text_box_44.text
-        user_data['salary_type'] = self.text_box_45.text
+        user_data['salary_type'] = self.drop_down_7
         # user_data['select_bank'] = self.text_box_46.text
         # user_data['net_bank'] = self.text_box_47.text
         user_data['father_name'] = self.text_box_48.text
