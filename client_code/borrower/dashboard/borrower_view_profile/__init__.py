@@ -394,7 +394,7 @@ class borrower_view_profile(borrower_view_profileTemplate):
               loans['mobile_number'] = self.mobile_tx.text
               loans.update()
   
-      ascend_score = app_tables.fin_user_beseem_score.get(borrower_customer_id=self.user_id)
+      ascend_score = app_tables.fin_user_ascend_score.get(borrower_customer_id=self.user_id)
       if ascend_score:
             ascend_score['borrower_email_id'] = new_email
             ascend_score.update()
@@ -430,7 +430,6 @@ class borrower_view_profile(borrower_view_profileTemplate):
         user_profile["home_loan"] = self.home_loan_tx.text
         user_profile["qualification"] = self.qualification_dropdown.selected_value
         user_profile["profession"] = self.profession_dropdown.selected_value
-        user_profile["other_loan"] = self.Language_tx.text
         self.govt_1_file_loader_1.visible = False
         self.govt_2_file_loader_2.visible = False
         self.name_label.text = self.name_text_box.text
