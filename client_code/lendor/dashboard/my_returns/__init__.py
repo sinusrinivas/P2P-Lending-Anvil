@@ -190,13 +190,13 @@ class my_returns(my_returnsTemplate):
                 y=max_value + (max(total_investments + total_returns) * 0.05),  # Position above the highest bar
                 text=f"Tenure: {tenures[i]} months",
                 showarrow=False,
-                font=dict(color='black', size=14, weight='bold')  # Set the color of the text to dark black and bold
+                font=dict(color='black', size=11, weight='bold')  # Set the color of the text to dark black and bold
             ))
 
         # Create a layout with annotations
         layout = go.Layout(
             title='Investment and Returns by Product',
-            xaxis=dict(title='Product'),
+            xaxis=dict(title='Product Details'),
             yaxis=dict(title='Amount (0.1M=100000)'),
             barmode='group',  # Use group mode to display bars side by side
             annotations=annotations
