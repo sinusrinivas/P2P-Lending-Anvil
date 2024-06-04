@@ -28,7 +28,7 @@ class borrower_portfolio(borrower_portfolioTemplate):
     ascend = app_tables.fin_user_profile.get(customer_id=self.user_Id)
     if ascend:
         self.ascend_score_label.text = ascend['ascend_value']  # Assuming data binding for score
-        self.ascend_score_label.background_color = self.ascend_score_background_color  # Optional binding for background color
+        self.ascend_score_label.background_color = self.ascend_score_label  # Optional binding for background color
 
         # Update background color based on score range (using a dictionary for readability)
         color_map = {
@@ -41,23 +41,6 @@ class borrower_portfolio(borrower_portfolioTemplate):
             ]
         }
         self.ascend_score_background_color = color_map.get(self.user_ascend_score, "red")  # Default to red if score not found
-
-    # Event handler to update label text and background color dynamically (if not using data binding)
-  def update_score_and_color(self):
-      self.ascend_score_label.text = str(self.user_ascend_score)
-      self.ascend_score_background_color = self.calculate_background_color(self.user_ascend_score)  # Call a separate function for clarity (optional)
-
-  def calculate_background_color(self, score):
-      color_map = {
-          score: color
-          for score, color in [
-                (score, "green") if score > 65 else
-                (score, "orange") if 50 <= score <= 65 else
-                (score, "lightcoral") if 25 <= score < 50 else
-                (score, "red")
-            ]
-        }
-        return color_map.get(score, "red")
 
     rows = app_tables.fin_loan_details.search(borrower_customer_id=self.user_Id, loan_updated_status=q.any_of(
           q.like('accept%'),
@@ -96,7 +79,6 @@ class borrower_portfolio(borrower_portfolioTemplate):
         print("No disbursed loans found for this borrower.")
 
       
-    
     # Fetch the loan status data for the given customer_id
     loan_status_data = self.get_loan_status_data(self.user_Id)
     
@@ -130,6 +112,23 @@ class borrower_portfolio(borrower_portfolioTemplate):
     
     # Bind the plotly figure to the Plot component
     self.plot_1.figure = fig
+
+  def calculate_background_color(self, score):
+      color_map = {
+          score: color
+          for score, color in [
+                (score, "green") if score > 65 else
+                (score, "orange") if 50 <= score <= 65 else
+                (score, "lightcoral") if 25 <= score < 50 else
+                (score, "red")
+            ]
+        }
+      return color_map.get(score, "red")
+
+    # Event handler to update label text and background color dynamically (if not using data binding)
+  def update_score_and_color(self):
+      self.ascend_score_label.text = str(self.user_ascend_score)
+      self.ascend_score_label = self.calculate_background_color(self.user_ascend_score)  # Call a separate function for clarity (optional)
 
 
 # class borrower_portfolio(borrower_portfolioTemplate):
