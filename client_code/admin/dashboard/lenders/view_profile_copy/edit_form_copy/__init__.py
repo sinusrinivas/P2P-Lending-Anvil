@@ -175,19 +175,6 @@ class edit_form_copy(edit_form_copyTemplate):
         self.get = get_customer_id_value
 
     def populate_form(self, c):
-         # Calculate the user's age
-        dob = datetime.datetime.strptime(self.dob_list[c], '%Y-%m-%d')
-        today = datetime.datetime.today()
-        age = today.year - dob.year - ((today.month, today.day) < (dob.month, dob.day))
-    
-        # Set the age in the form
-        self.set_textbox_visibility(self.text_box, self.label_7, str(age))
-    
-        # Validate the age
-        if age > int(self.age_list[c]):
-            # If the age is greater than the current age, show an error message
-            self.show_alert("Error", "Age cannot be in the future.")
-            return
 
         self.set_textbox_visibility(self.text_box_2, self.label_2, self.name_list[c])
         self.set_textbox_visibility(self.text_box_3, self.label_4, str(self.status_list[c]))      
