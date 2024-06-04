@@ -51,8 +51,8 @@ class my_returns(my_returnsTemplate):
                 y=max_value + (max(total_investments + total_returns) * 0.05),  # Position above the highest bar
                 text=annotation_text,
                 showarrow=False,
-                font=dict(color='black', size=8, weight='bold'),  # Set the color of the text to dark black and bold
-                xanchor="left"
+                font=dict(color='black', size=8, weight='bold')  # Set the color of the text to dark black and bold
+                # xanchor="right"
             ))
             # Position the percentage above the returns bar
             annotations.append(dict(
