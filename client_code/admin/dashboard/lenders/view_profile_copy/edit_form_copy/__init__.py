@@ -309,6 +309,17 @@ class edit_form_copy(edit_form_copyTemplate):
             data[a]['college_id'] = self.text_box_53.text
             data[a]['college_address'] = self.text_box_54.text
 
+
+           
+            lender = app_tables.fin_borrower.get(customer_id=self.get)
+            if lender:
+                lender['user_name'] = self.text_box_2.text
+            # Update the wallet data
+            wallet = app_tables.fin_wallet.get(customer_id=self.get)
+            if wallet:
+                wallet['user_name'] = self.text_box_2.text
+               
+          
             print(a)
             open_form('admin.dashboard.lenders.view_profile_copy', self.get)
           
