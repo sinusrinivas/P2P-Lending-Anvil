@@ -31,8 +31,7 @@ class update_form(update_formTemplate):
         data[a]['profile_status'] = bool(self.text_box_3.text)
         data[a]['gender'] = self.text_box_4.text
         data[a]['user_age'] = int(self.text_box_5.text)
-       
-          # data[a]['date_of_birth'] = self.date_picker_1.date
+        # data[a]['date_of_birth'] = self.date_picker_1.date
         data[a]['mobile'] = self.text_box_7.text
         data[a]['aadhaar_no'] = self.text_box_8.text
         data[a]['pan_number'] = self.text_box_9.text

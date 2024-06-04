@@ -6,7 +6,10 @@ from anvil.google.drive import app_files
 import anvil.users
 import anvil.tables as tables
 from anvil.tables import app_tables
+from datetime import datetime, timedelta
 from datetime import date
+
+
 
 class edit_form(edit_formTemplate):
   def __init__(self, get_customer_id_value, **properties):
@@ -288,20 +291,6 @@ class edit_form(edit_formTemplate):
     
 
     # self.get = get_customer_id_value
-  def calculate_dob_from_age(self, age):
-    """Calculate date of birth from age"""
-    today = date.today()
-    year_of_birth = today.year - age
-    dob = date(year_of_birth, today.month, today.day)
-    # Adjust if the birthdate is not valid (e.g., leap year)
-    while True:
-      try:
-        dob = dob.replace(year=year_of_birth)
-        break
-      except ValueError:
-        year_of_birth -= 1
-    return dob  
-
   def button_2_click(self, **event_args):
     """This method is called when the button is clicked"""
     Notification("You cannot edit the user age.").show()
@@ -322,8 +311,9 @@ class edit_form(edit_formTemplate):
         dob = self.calculate_dob_from_age(int(self.text_box_5.text))
         if dob > date.today():
           Notification("Date of Birth cannot be in the future.").show()
-        else:
-          data[a]['date_of_birth'] = dob
+          return
+        
+        user_data['date_of_birth'] = dob.strftime('%Y-%m-%d')
         # user_data['date_of_birth'] = self.date_picker_1
         user_data['mobile'] = self.text_box_7.text
         user_data['aadhaar_no'] = self.text_box_8.text
@@ -376,6 +366,20 @@ class edit_form(edit_formTemplate):
         user_data['college_name'] = self.text_box_52.text
         user_data['college_id'] = self.text_box_53.text
         user_data['college_address'] = self.text_box_54.text
+        
+  def calculate_dob_from_age(self, age):
+      """Calculate date of birth from age"""
+      today = date.today()
+      year_of_birth = today.year - age
+      dob = date(year_of_birth, today.month, today.day)
+      # Adjust if the birthdate is not valid (e.g., leap year)
+      while True:
+        try:
+          dob = dob.replace(year=year_of_birth)
+          break
+        except ValueError:
+          year_of_birth -= 1
+      return dob
         # user_data['running_Home_Loan'] = self.text_box_55.text
         # borrower_data = data[a]
         # borrower_data['user_name'] = self.text_box_2.text
