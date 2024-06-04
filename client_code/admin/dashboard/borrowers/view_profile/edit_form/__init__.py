@@ -369,15 +369,6 @@ class edit_form(edit_formTemplate):
         user_data['college_name'] = self.text_box_52.text
         user_data['college_id'] = self.text_box_53.text
         user_data['college_address'] = self.text_box_54.text
-        
-        # user_data['running_Home_Loan'] = self.text_box_55.text
-        # borrower_data = data[a]
-        # borrower_data['user_name'] = self.text_box_2.text
-
-        # wallet_data = data[a]
-        # wallet_data['user_name'] = self.text_box_2.text
-
-
         # Calculate ascend score and update
         ascend_value = anvil.server.call('final_points_update_ascend_table', self.get)
         if ascend_value is not None:
@@ -393,9 +384,9 @@ class edit_form(edit_formTemplate):
             wallet['user_name'] = self.text_box_2.text  
   
               # Assign the converted value to ascend_score
-        #      borrower['ascend_score'] = float(ascend_value)
-        # # data.update()
-        # print(f"Updated user profile and borrower table for customer_id: {self.get}")
+            borrower['ascend_score'] = float(ascend_value)
+        # data.update()
+        print(f"Updated user profile and borrower table for customer_id: {self.get}")
         open_form('admin.dashboard.borrowers.view_profile', self.get)
   def calculate_dob_from_age(self, age):
       """Calculate date of birth from age"""
