@@ -311,6 +311,7 @@ class edit_form(edit_formTemplate):
     if self.get in id_list:
         a = id_list.index(self.get)
         user_data = data[a]
+        borrower_data = data[a]
 
         # Update user profile data with values from the text boxes
         user_data['full_name'] = self.text_box_2.text
