@@ -4,6 +4,9 @@ import anvil.server
 import anvil.google.auth, anvil.google.drive
 from anvil.google.drive import app_files
 import anvil.users
+from datetime import date
+import anvil.tables as tables
+from anvil.tables import app_tables
 
 class update_form(update_formTemplate):
   def __init__(self, get_customer_id_value, **properties):
@@ -17,8 +20,21 @@ class update_form(update_formTemplate):
     """This method is called when the button is clicked"""
     if self.text_box_2.text == "" or  self.text_box_3.text == "" or self.text_box_4.text == "" or self.text_box_5.text == ""  or self.text_box_7.text == "" or self.text_box_8.text == "" or self.text_box_9.text == "" or self.text_box_10.text == "" or self.text_box_12.text == "" or self.text_box_13.text == "" or self.text_box_14.text == "" or self.text_box_15.text == "" or self.text_box_17.text == "" or self.text_box_18.text == "" or self.text_box_19.text == "" or self.text_box_20.text == "" or self.text_box_21.text == "" or self.text_box_22.text == "" or self.text_box_23.text == "" or self.text_box_24.text == "" or self.text_box_25.text == "" or self.text_box_26.text == "" or self.text_box_27.text == "" or self.text_box_28.text == "" or self.text_box_29.text == "" or self.text_box_30.text == "" or self.text_box_32.text == "" or self.text_box_33.text == "" or self.text_box_34.text == "" or self.text_box_35.text == "" :
       Notification("Fill All Required Details").show()
-    else:
-      data = tables.app_tables.fin_user_profi.search()
+      return
+    # Validate date of birth
+    dob = self.date_picker_1.date
+    if dob is None:
+      Notification("Please select a valid Date of Birth").show()
+      return
+    
+    # Check if user is at least 18 years old
+    today = date.today()
+    age = today.year - dob.year - ((today.month, today.day) < (dob.month, dob.day))
+    if age < 18:
+      Notification("User must be at least 18 years old").show()
+      return  
+    
+      data = tables.app_tables.fin_user_profile.search()
       id_list = []
       for i in data:
         id_list.append(i['customer_id'])
