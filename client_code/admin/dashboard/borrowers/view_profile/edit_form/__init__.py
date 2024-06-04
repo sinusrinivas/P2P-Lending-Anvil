@@ -305,13 +305,16 @@ class edit_form(edit_formTemplate):
   def button_2_click(self, **event_args):
     """This method is called when the button is clicked"""
     data = tables.app_tables.fin_user_profile.search()
+    data = tables.app_tables.fin_borrower.search()
+    data = tables.app_tables.fin_wallet.search()
+    # data = tables.app_tables.
 
     id_list = [i['customer_id'] for i in data]
 
     if self.get in id_list:
         a = id_list.index(self.get)
         user_data = data[a]
-        borrower_data = data[a]
+    
 
         # Update user profile data with values from the text boxes
         user_data['full_name'] = self.text_box_2.text
@@ -377,6 +380,12 @@ class edit_form(edit_formTemplate):
         user_data['college_id'] = self.text_box_53.text
         user_data['college_address'] = self.text_box_54.text
         # user_data['running_Home_Loan'] = self.text_box_55.text
+        borrower_data = data[a]
+        borrower_data['full_name'] = self.text_box_2.text
+
+        wallet_data = data[a]
+        wallet_data['full_name'] = self.text_box_2.text
+
 
         # Calculate ascend score and update
         ascend_value = anvil.server.call('final_points_update_ascend_table', self.get)
