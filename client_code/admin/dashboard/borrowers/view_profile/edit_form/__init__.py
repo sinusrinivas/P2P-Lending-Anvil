@@ -295,6 +295,9 @@ class edit_form(edit_formTemplate):
     """This method is called when the button is clicked"""
     Notification("You cannot edit the user age.").show()
     data = tables.app_tables.fin_user_profile.search()
+    # data = tables.app_tables.fin_borrower.search()
+    # data = tables.app_tables.fin_wallet.search()
+    # data = tables.app_tables.fin_wallet_bank_account_table.search()
 
     id_list = [i['customer_id'] for i in data]
 
@@ -367,19 +370,6 @@ class edit_form(edit_formTemplate):
         user_data['college_id'] = self.text_box_53.text
         user_data['college_address'] = self.text_box_54.text
         
-  def calculate_dob_from_age(self, age):
-      """Calculate date of birth from age"""
-      today = date.today()
-      year_of_birth = today.year - age
-      dob = date(year_of_birth, today.month, today.day)
-      # Adjust if the birthdate is not valid (e.g., leap year)
-      while True:
-        try:
-          dob = dob.replace(year=year_of_birth)
-          break
-        except ValueError:
-          year_of_birth -= 1
-      return dob
         # user_data['running_Home_Loan'] = self.text_box_55.text
         # borrower_data = data[a]
         # borrower_data['user_name'] = self.text_box_2.text
@@ -398,11 +388,22 @@ class edit_form(edit_formTemplate):
          if borrower:
               # Assign the converted value to ascend_score
              borrower['ascend_score'] = float(ascend_value)
-
-       
         # data.update()
         print(f"Updated user profile and borrower table for customer_id: {self.get}")
         open_form('admin.dashboard.borrowers.view_profile', self.get)
+  def calculate_dob_from_age(self, age):
+      """Calculate date of birth from age"""
+      today = date.today()
+      year_of_birth = today.year - age
+      dob = date(year_of_birth, today.month, today.day)
+      # Adjust if the birthdate is not valid (e.g., leap year)
+      while True:
+        try:
+          dob = dob.replace(year=year_of_birth)
+          break
+        except ValueError:
+          year_of_birth -= 1
+      return dob    
 
   # def button_2_click(self, **event_args):
   #   """This method is called when the button is clicked"""
