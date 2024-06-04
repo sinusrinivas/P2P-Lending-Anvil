@@ -127,7 +127,7 @@ class my_returns(my_returnsTemplate):
   
         # Create a layout with annotations
         layout = go.Layout(
-            title=dict(text='Investment and Returns for User', font=dict(size=16, weight='bold')),
+            title=dict(text='Investment and Returns ', font=dict(size=16, weight='bold')),
             xaxis=dict(title='Category', tickfont=dict(size=10, weight='bold')),
             yaxis=dict(title='Amount (0.1M=100000)'),
             barmode='group',  # Use group mode to display bars side by side
