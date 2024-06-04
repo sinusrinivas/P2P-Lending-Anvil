@@ -1,6 +1,6 @@
 container:
   type: ColumnPanel
-  properties: {col_widths: '{"XNVIUS":2,"IIAZST":8,"COJRWN":50,"BWFARX":5,"DOHLTI":2,"UEBHXH":5,"YWOVQM":5,"QCINLN":55}'}
+  properties: {col_widths: '{"XNVIUS":2,"IIAZST":8,"COJRWN":50,"BWFARX":5,"YWOVQM":5}'}
 components:
 - name: image_1_copy_1_copy_1_copy_1_copy_1
   properties: {role: null, vertical_align: center, height: 42.33332824707031, tooltip: '',
@@ -45,19 +45,19 @@ components:
 - name: label_5
   properties: {text: 'Mobile No :'}
   type: Label
-  layout_properties: {grid_position: 'VUSJAF,COJRWN TDZWTQ,BWFARX'}
-- name: label_15
-  properties: {}
-  type: Label
-  layout_properties: {grid_position: 'VUSJAF,COJRWN TDZWTQ,UXBEHY'}
+  layout_properties: {grid_position: 'VUSJAF,COJRWN TDZWTQ,BWFARX KQHGPH,EOETLH'}
 - name: label_6
   properties: {text: 'Date of Birth:'}
   type: Label
-  layout_properties: {grid_position: 'VUSJAF,COJRWN LBFZVW,DOHLTI'}
+  layout_properties: {grid_position: 'VUSJAF,COJRWN TDZWTQ,BWFARX KWPUNT,ZWGRKU'}
+- name: label_15
+  properties: {}
+  type: Label
+  layout_properties: {grid_position: 'VUSJAF,COJRWN TDZWTQ,UXBEHY AXHSRB,QCSJGW'}
 - name: label_16
   properties: {}
   type: Label
-  layout_properties: {grid_position: 'VUSJAF,COJRWN LBFZVW,YPXPAY'}
+  layout_properties: {grid_position: 'VUSJAF,COJRWN TDZWTQ,UXBEHY HLPATE,WBVZDS'}
 - name: label_7
   properties: {text: 'Gender :'}
   type: Label
