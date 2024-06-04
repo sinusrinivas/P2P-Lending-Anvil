@@ -118,7 +118,7 @@ class part_payment(part_paymentTemplate):
                   lender_wallet.update()
   
                   # Update remaining amount in loan details table
-                  remaining_amount = float(self.loan_details['remainining_amount']) - text_amount
+                  remaining_amount = float(self.loan_details['remainining_amount']) - float(self.loan_details['for_remaining_amount_calculation']) /2
                   loan_id = self.loan_details['loan_id']
   
                   loan_row = app_tables.fin_loan_details.get(loan_id=loan_id)
@@ -127,6 +127,8 @@ class part_payment(part_paymentTemplate):
                       total_paid = float(loan_row['total_amount_paid']) + text_amount
                       loan_row['total_amount_paid'] = total_paid
                       loan_row['lender_returns'] += float(self.loan_details['i_r']) /2
+                      if loan_row['remaining_amount'] <= 0:
+                        loan_row['loan_updated_status'] = 'close'
                       loan_row.update()
 
                   additional_fees = self.calculate_additional_fees(emi_row)
@@ -194,7 +196,7 @@ class part_payment(part_paymentTemplate):
                       lender_wallet.update()
   
                       # Update remaining amount in loan details table
-                      remaining_amount = float(self.loan_details['remainining_amount']) - entered_amount
+                      remaining_amount = float(self.loan_details['remainining_amount']) - float(self.loan_details['for_remaining_amount_calculation']) /2
                       loan_id = self.loan_details['loan_id']
   
                       loan_row = app_tables.fin_loan_details.get(loan_id=loan_id)
@@ -210,6 +212,7 @@ class part_payment(part_paymentTemplate):
                           if loan_row['lender_returns'] is None:
                             loan_row['lender_returns'] = 0
                           loan_row['lender_returns'] += float(self.loan_details['i_r']) /2
+                          
                           loan_row.update()
   
                           # Update current_emi_number, next_payment, and add a new row to fin_emi_table
