@@ -1,4 +1,6 @@
-container: {type: ColumnPanel}
+container:
+  type: ColumnPanel
+  properties: {col_widths: '{"XNVIUS":2,"IIAZST":8,"COJRWN":50,"BWFARX":5,"DOHLTI":2,"UEBHXH":5,"YWOVQM":5,"QCINLN":55}'}
 components:
 - name: image_1_copy_1_copy_1_copy_1_copy_1
   properties: {role: null, vertical_align: center, height: 42.33332824707031, tooltip: '',
@@ -24,6 +26,54 @@ components:
   properties: {}
   type: form:borrower.dashboard.Navigation_form_dashboard
   layout_properties: {grid_position: 'ZRVLTI,JMGFQZ', full_width_row: true}
+- name: spacer_8
+  properties: {height: '10'}
+  type: Spacer
+  layout_properties: {grid_position: 'NZACFG,YYQBVX'}
+- name: spacer_6
+  properties: {height: 32}
+  type: Spacer
+  layout_properties: {grid_position: 'VUSJAF,XNVIUS', full_width_row: true}
+- name: image_4
+  properties: {}
+  type: Image
+  layout_properties: {grid_position: 'VUSJAF,IIAZST', full_width_row: true}
+- name: label_4
+  properties: {font: '', font_size: 25, bold: true}
+  type: Label
+  layout_properties: {grid_position: 'VUSJAF,COJRWN VLYSBD,UKZMFK'}
+- name: label_5
+  properties: {text: 'Mobile No :'}
+  type: Label
+  layout_properties: {grid_position: 'VUSJAF,COJRWN TDZWTQ,BWFARX'}
+- name: label_6
+  properties: {text: 'Date of Birth:'}
+  type: Label
+  layout_properties: {grid_position: 'VUSJAF,COJRWN LBFZVW,DOHLTI'}
+- name: label_7
+  properties: {text: 'Gender :'}
+  type: Label
+  layout_properties: {grid_position: 'VUSJAF,COJRWN JHAFES,YWOVQM'}
+- name: label_13
+  properties: {text: 'Marital Status :'}
+  type: Label
+  layout_properties: {grid_position: 'VUSJAF,COJRWN HZMBHP,IBMAJV'}
+- name: label_10
+  properties: {text: 'Type of Address :'}
+  type: Label
+  layout_properties: {grid_position: 'VUSJAF,COJRWN NBIATP,OOUPAD'}
+- name: label_11
+  properties: {text: 'Qualification :'}
+  type: Label
+  layout_properties: {grid_position: 'VUSJAF,COJRWN CELBQN,FCRIUF'}
+- name: label_12
+  properties: {text: 'Profession :'}
+  type: Label
+  layout_properties: {grid_position: 'VUSJAF,COJRWN NPGAII,UHVACH'}
+- name: label_14
+  properties: {text: 'Annual salary :'}
+  type: Label
+  layout_properties: {grid_position: 'VUSJAF,COJRWN LMOCMD,UIRGRB'}
 - name: column_panel_7_copy_copy
   properties: {role: null, col_widths: '{"RBZWXR":2,"WCBRQE":18,"DRTUYB":59,"IZWFXP":60,"VNRYEV":2,"JBNEBD":15,"XOZZRG":20,"KSHQHI":45}'}
   type: ColumnPanel
@@ -134,7 +184,7 @@ components:
     type: Label
     layout_properties: {grid_position: 'QNZBUD,DRTUYB IIXNCD,JBNEBD'}
   - name: ascend_score_label
-    properties: {}
+    properties: {align: center}
     type: Label
     layout_properties: {grid_position: 'QNZBUD,DRTUYB IIXNCD,XOZZRG'}
   - name: spacer_4

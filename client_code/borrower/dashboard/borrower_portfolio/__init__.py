@@ -12,6 +12,7 @@ from ....bank_users.main_form import main_form_module
 from ....bank_users.user_form import user_form
 from ....bank_users.user_form import user_module
 import datetime
+# from kivy.utils import get_color_from_hex
 
 class borrower_portfolio(borrower_portfolioTemplate):
   def __init__(self, **properties):
@@ -25,20 +26,32 @@ class borrower_portfolio(borrower_portfolioTemplate):
     self.label_2.text = "As on " + today_date
 
 
+    # Retrieve user profile based on user_Id
     ascend = app_tables.fin_user_profile.get(customer_id=self.user_Id)
+    
+    # Check if the profile exists and the ascend value is valid
     if ascend:
-        # Assuming you have a label named 'ascend_score_label' and a variable named 'user_ascend_score'
-        self.ascend_score_label.text = ascend['ascend_value']  # Set the label text
-
-        # Update background color based on score range
-        if ascend['ascend_value'] > 65:
-            self.ascend_score_label.background_color = "#00FF00"
-        elif 50 <= ascend['ascend_value'] <= 65:
-            self.ascend_score_label.background_color = "#FFA500"  # Good
-        elif 25 <= ascend['ascend_value'] < 50:
-            self.ascend_score_label.background_color = "#F08080"  # Average (adjusted to lightcoral for better contrast)
+        ascend_value = ascend['ascend_value']
+        
+        # Ensure ascend_value is a number
+        if isinstance(ascend_value, (int, float)):
+            # Set the label text to the ascend value
+            self.ascend_score_label.text = str(ascend_value)
+            
+            # Update background color based on score range
+            if ascend_value > 65:
+                self.ascend_score_label.background = "#00FF00"  # Green
+            elif 50 <= ascend_value <= 65:
+                self.ascend_score_label.background = "#FFA500"  # Orange
+            elif 25 <= ascend_value < 50:
+                self.ascend_score_label.background = "#F08080"  # Light coral
+            else:
+                self.ascend_score_label.background = "#FF0000"  # Red
         else:
-            self.ascend_score_label.background_color = "#FF0000"  # Bad
+            print("Ascend value is not a number.")
+    else:
+        print("No profile found or 'ascend_value' not in profile.")
+
 
 
     rows = app_tables.fin_loan_details.search(borrower_customer_id=self.user_Id, loan_updated_status=q.any_of(
