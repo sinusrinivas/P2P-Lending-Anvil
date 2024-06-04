@@ -29,7 +29,7 @@ class borrower_portfolio(borrower_portfolioTemplate):
     # Retrieve user profile based on user_Id
     ascend = app_tables.fin_user_profile.get(customer_id=self.user_Id)
     self.image_4.source = ascend['user_photo']
-    self.label_4.text = "Welcome" " " + ascend['full_name']
+    self.label_4.text = "Hello" " " + ascend['full_name']
     self.label_15.text = ascend['mobile']
     self.label_16.text = ascend['date_of_birth']
     self.label_17.text = ascend['gender']
