@@ -1,6 +1,6 @@
 container:
   type: ColumnPanel
-  properties: {col_widths: '{"XNVIUS":2,"IIAZST":8,"COJRWN":50,"BWFARX":5,"YWOVQM":5}'}
+  properties: {col_widths: '{"XNVIUS":2,"IIAZST":13,"COJRWN":45,"BWFARX":5,"QCSJGW":20,"IEZLKL":15,"CBDBLB":25}'}
 components:
 - name: image_1_copy_1_copy_1_copy_1_copy_1
   properties: {role: null, vertical_align: center, height: 42.33332824707031, tooltip: '',
@@ -26,6 +26,10 @@ components:
   properties: {}
   type: form:borrower.dashboard.Navigation_form_dashboard
   layout_properties: {grid_position: 'ZRVLTI,JMGFQZ', full_width_row: true}
+- name: label_23
+  properties: {align: center, text: Profile Overview, bold: true, font_size: 22}
+  type: Label
+  layout_properties: {grid_position: 'SATFTX,ZQDKWG'}
 - name: spacer_8
   properties: {height: '10'}
   type: Spacer
@@ -39,55 +43,75 @@ components:
   type: Image
   layout_properties: {grid_position: 'VUSJAF,IIAZST', full_width_row: true}
 - name: label_4
-  properties: {font: '', font_size: 25, bold: true}
+  properties: {font: '', font_size: 22, bold: true}
   type: Label
   layout_properties: {grid_position: 'VUSJAF,COJRWN VLYSBD,UKZMFK'}
 - name: label_5
-  properties: {text: 'Mobile No :'}
+  properties: {text: 'Mobile No :', bold: true}
   type: Label
   layout_properties: {grid_position: 'VUSJAF,COJRWN TDZWTQ,BWFARX KQHGPH,EOETLH'}
 - name: label_6
-  properties: {text: 'Date of Birth:'}
+  properties: {text: 'Date of Birth:', bold: true}
   type: Label
   layout_properties: {grid_position: 'VUSJAF,COJRWN TDZWTQ,BWFARX KWPUNT,ZWGRKU'}
+- name: label_7
+  properties: {text: 'Gender :', bold: true}
+  type: Label
+  layout_properties: {grid_position: 'VUSJAF,COJRWN TDZWTQ,BWFARX GROUCS,BGLMAP'}
+- name: label_13
+  properties: {text: 'Marital Status :', bold: true}
+  type: Label
+  layout_properties: {grid_position: 'VUSJAF,COJRWN TDZWTQ,BWFARX GAPCYV,TSURYB'}
 - name: label_15
   properties: {}
   type: Label
-  layout_properties: {grid_position: 'VUSJAF,COJRWN TDZWTQ,UXBEHY AXHSRB,QCSJGW'}
+  layout_properties: {grid_position: 'VUSJAF,COJRWN TDZWTQ,UXBEHY AXHSRB,QCSJGW QSUKDP,JUGYDU'}
 - name: label_16
   properties: {}
   type: Label
-  layout_properties: {grid_position: 'VUSJAF,COJRWN TDZWTQ,UXBEHY HLPATE,WBVZDS'}
-- name: label_7
-  properties: {text: 'Gender :'}
-  type: Label
-  layout_properties: {grid_position: 'VUSJAF,COJRWN JHAFES,YWOVQM'}
+  layout_properties: {grid_position: 'VUSJAF,COJRWN TDZWTQ,UXBEHY AXHSRB,QCSJGW MUFGUP,LCUZDG'}
 - name: label_17
   properties: {}
   type: Label
-  layout_properties: {grid_position: 'VUSJAF,COJRWN JHAFES,MDNVQK'}
-- name: label_13
-  properties: {text: 'Marital Status :'}
+  layout_properties: {grid_position: 'VUSJAF,COJRWN TDZWTQ,UXBEHY AXHSRB,QCSJGW BPKWVY,QXTYBQ'}
+- name: label_18
+  properties: {}
   type: Label
-  layout_properties: {grid_position: 'VUSJAF,COJRWN HZMBHP,IBMAJV'}
+  layout_properties: {grid_position: 'VUSJAF,COJRWN TDZWTQ,UXBEHY AXHSRB,QCSJGW NEUXQE,ASITSK'}
 - name: label_10
-  properties: {text: 'Type of Address :'}
+  properties: {text: 'Type of Address :', bold: true}
   type: Label
-  layout_properties: {grid_position: 'VUSJAF,COJRWN NBIATP,OOUPAD'}
+  layout_properties: {grid_position: 'VUSJAF,COJRWN TDZWTQ,UXBEHY AXHSRB,IEZLKL WSGSTD,ITYGMH'}
 - name: label_11
-  properties: {text: 'Qualification :'}
+  properties: {text: 'Qualification :', bold: true}
   type: Label
-  layout_properties: {grid_position: 'VUSJAF,COJRWN CELBQN,FCRIUF'}
+  layout_properties: {grid_position: 'VUSJAF,COJRWN TDZWTQ,UXBEHY AXHSRB,IEZLKL VWJYXP,KTORJG'}
 - name: label_12
-  properties: {text: 'Profession :'}
+  properties: {text: 'Profession :', bold: true}
   type: Label
-  layout_properties: {grid_position: 'VUSJAF,COJRWN NPGAII,UHVACH'}
+  layout_properties: {grid_position: 'VUSJAF,COJRWN TDZWTQ,UXBEHY AXHSRB,IEZLKL IHAISS,UACVFV'}
 - name: label_14
-  properties: {text: 'Annual salary :'}
+  properties: {text: 'Annual salary :', bold: true}
   type: Label
-  layout_properties: {grid_position: 'VUSJAF,COJRWN LMOCMD,UIRGRB'}
+  layout_properties: {grid_position: 'VUSJAF,COJRWN TDZWTQ,UXBEHY AXHSRB,IEZLKL WFLGMA,AWXPHZ'}
+- name: label_19
+  properties: {}
+  type: Label
+  layout_properties: {grid_position: 'VUSJAF,COJRWN TDZWTQ,UXBEHY AXHSRB,CBDBLB YADGYD,YBQDYQ'}
+- name: label_20
+  properties: {}
+  type: Label
+  layout_properties: {grid_position: 'VUSJAF,COJRWN TDZWTQ,UXBEHY AXHSRB,CBDBLB FDEXQF,PGBTDT'}
+- name: label_21
+  properties: {}
+  type: Label
+  layout_properties: {grid_position: 'VUSJAF,COJRWN TDZWTQ,UXBEHY AXHSRB,CBDBLB NTDBQK,LSUXPH'}
+- name: label_22
+  properties: {}
+  type: Label
+  layout_properties: {grid_position: 'VUSJAF,COJRWN TDZWTQ,UXBEHY AXHSRB,CBDBLB QAAOTZ,PZSKFZ'}
 - name: column_panel_7_copy_copy
-  properties: {role: null, col_widths: '{"RBZWXR":2,"WCBRQE":18,"DRTUYB":59,"IZWFXP":60,"VNRYEV":2,"JBNEBD":15,"XOZZRG":20,"KSHQHI":45}'}
+  properties: {role: null, col_widths: '{"RBZWXR":2,"WCBRQE":18,"DRTUYB":59,"IZWFXP":60,"VNRYEV":2,"XOZZRG":25,"KSHQHI":45,"QELBJL":15}'}
   type: ColumnPanel
   layout_properties: {grid_position: 'ZIZNMI,PIRYUO', full_width_row: true}
   components:
@@ -194,7 +218,7 @@ components:
   - name: label_3
     properties: {text: 'Your Ascend Score :', bold: true, font_size: 20}
     type: Label
-    layout_properties: {grid_position: 'QNZBUD,DRTUYB IIXNCD,JBNEBD'}
+    layout_properties: {grid_position: 'QNZBUD,DRTUYB IIXNCD,QELBJL'}
   - name: ascend_score_label
     properties: {align: center}
     type: Label
@@ -207,13 +231,9 @@ components:
     properties: {role: null, col_widths: '{}'}
     type: ColumnPanel
     layout_properties: {grid_position: 'QNZBUD,DRTUYB AYYUEK,TSWZQO'}
-    components:
-    - name: plot_1
-      properties: {}
-      type: Plot
-      layout_properties: {grid_position: 'GNKLXG,NFNPWI', full_width_row: true}
-    - name: plot_2
-      properties: {}
-      type: Plot
-      layout_properties: {grid_position: 'GNKLXG,YUWDYU', full_width_row: true}
+    components: []
+  - name: plot_1
+    properties: {}
+    type: Plot
+    layout_properties: {grid_position: 'XJEAEW,FDBKCF'}
 is_package: true

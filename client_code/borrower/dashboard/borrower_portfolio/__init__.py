@@ -28,6 +28,17 @@ class borrower_portfolio(borrower_portfolioTemplate):
 
     # Retrieve user profile based on user_Id
     ascend = app_tables.fin_user_profile.get(customer_id=self.user_Id)
+    self.image_4.source = ascend['user_photo']
+    self.label_4.text = "Welcome" " " + ascend['full_name']
+    self.label_15.text = ascend['mobile']
+    self.label_16.text = ascend['date_of_birth']
+    self.label_17.text = ascend['gender']
+    self.label_18.text = ascend['marital_status']
+    self.label_19.text = ascend['address_type']
+    self.label_20.text = ascend['qualification']
+    self.label_21.text = ascend['profession']
+    self.label_22.text = ascend['annual_salary']
+    
     
     # Check if the profile exists and the ascend value is valid
     if ascend:
