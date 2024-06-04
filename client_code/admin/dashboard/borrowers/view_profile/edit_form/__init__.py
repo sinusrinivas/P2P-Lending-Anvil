@@ -383,22 +383,22 @@ class edit_form(edit_formTemplate):
          if wallet:
             wallet['user_name'] = self.text_box_2.text 
          # update the foreclosure
-         foreclosure = app_tables.fin_foreclosure.get(customer_id=self.get)
+         foreclosure = app_tables.fin_foreclosure.get(borrower_customer_id=self.get)
          if foreclosure:
             foreclosure['borrower_name']=self.text_box_2.text
          # update the extends
-         extends_loan = app_tables.fin_extends_loan.get(customer_id=self.get)
+         extends_loan = app_tables.fin_extends_loan.get(borrower_customer_id=self.get)
          if extends_loan:
             extends_loan['borrower_full_name']=self.text_box_2.text  
          # update the loan_details 
-         loan_details = app_tables.fin_loan_details.get(customer_id=self.get)
+         loan_details = app_tables.fin_loan_details.get(borrower_customer_id=self.get)
          if loan_details:
             loan_details['borrower_full_name']=self.text_box_2.text    
   
               # Assign the converted value to ascend_score
             borrower['ascend_score'] = float(ascend_value)
         # data.update()
-        print(f"Updated user profile, borrower, foreclosure, extends loan, loan_details and wallet table for customer_id: {self.get}")
+        print(f"Updated user profile, borrower, foreclosure, extends loan, loand etails and wallet table for customer_id: {self.get}")
         open_form('admin.dashboard.borrowers.view_profile', self.get)
   def calculate_dob_from_age(self, age):
       """Calculate date of birth from age"""
