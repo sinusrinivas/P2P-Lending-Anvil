@@ -8,7 +8,25 @@ import anvil.tables.query as q
 from anvil.tables import app_tables
 import anvil.server
 from anvil import *
+import anvil.server
+import datetime
 
+@anvil.server.background_task
+def update_ages():
+    # Get all users
+    users = tables.app_tables.fin_user_profile.search()
+
+    # Update each user's age
+    for user in users:
+        dob = datetime.datetime.strptime(user['date_of_birth'], '%Y-%m-%d')
+        today = datetime.datetime.today()
+        age = today.year - dob.year - ((today.month, today.day) < (dob.month, dob.day))
+
+        # Update the user's age
+        user['user_age'] = age
+
+    # Save the changes
+    tables.app_tables.fin_user_profile.commit()
 
 # Define server function to navigate to the Invest Now form
 @anvil.server.callable
