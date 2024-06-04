@@ -24,6 +24,41 @@ class borrower_portfolio(borrower_portfolioTemplate):
     today_date = datetime.datetime.now().strftime("%Y-%m-%d")
     self.label_2.text = "As on " + today_date
 
+    # Assuming you have a label named 'ascend_score_label' and a variable named 'user_ascend_score'
+    ascend = app_tables.fin_user_profile.get(customer_id=self.user_Id)
+    if ascend:
+        self.ascend_score_label.text = ascend['ascend_value']  # Assuming data binding for score
+        self.ascend_score_label.background_color = self.ascend_score_background_color  # Optional binding for background color
+
+        # Update background color based on score range (using a dictionary for readability)
+        color_map = {
+            score: color
+            for score, color in [
+                (score, "green") if score > 65 else
+                (score, "orange") if 50 <= score <= 65 else
+                (score, "lightcoral") if 25 <= score < 50 else
+                (score, "red")
+            ]
+        }
+        self.ascend_score_background_color = color_map.get(self.user_ascend_score, "red")  # Default to red if score not found
+
+    # Event handler to update label text and background color dynamically (if not using data binding)
+  def update_score_and_color(self):
+      self.ascend_score_label.text = str(self.user_ascend_score)
+      self.ascend_score_background_color = self.calculate_background_color(self.user_ascend_score)  # Call a separate function for clarity (optional)
+
+  def calculate_background_color(self, score):
+      color_map = {
+          score: color
+          for score, color in [
+                (score, "green") if score > 65 else
+                (score, "orange") if 50 <= score <= 65 else
+                (score, "lightcoral") if 25 <= score < 50 else
+                (score, "red")
+            ]
+        }
+        return color_map.get(score, "red")
+
     rows = app_tables.fin_loan_details.search(borrower_customer_id=self.user_Id, loan_updated_status=q.any_of(
           q.like('accept%'),
           q.like('Approved%'),
