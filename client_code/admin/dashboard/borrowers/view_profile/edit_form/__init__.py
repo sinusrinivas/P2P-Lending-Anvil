@@ -305,8 +305,8 @@ class edit_form(edit_formTemplate):
   def button_2_click(self, **event_args):
     """This method is called when the button is clicked"""
     data = tables.app_tables.fin_user_profile.search()
-    data = tables.app_tables.fin_borrower.search()
-    data = tables.app_tables.fin_wallet.search()
+    # data = tables.app_tables.fin_borrower.search()
+    # data = tables.app_tables.fin_wallet.search()
     # data = tables.app_tables.
 
     id_list = [i['customer_id'] for i in data]
@@ -321,8 +321,8 @@ class edit_form(edit_formTemplate):
         user_data['profile_status'] = bool(self.text_box_3.text)
         user_data['gender'] = self.drop_down_1.selected_value
         # user_data['gender'] = self.text_box_4.text
-        user_data['user_age'] = int(self.text_box_5.text)
-        # user_data['date_of_birth'] = self.date_picker_1.date
+        user_data['user_age'] = int(self.text_box_5.text) if self.text_box_5.text else None
+        user_data['date_of_birth'] = self.d
         user_data['mobile'] = self.text_box_7.text
         user_data['aadhaar_no'] = self.text_box_8.text
         user_data['pan_number'] = self.text_box_9.text
@@ -380,11 +380,11 @@ class edit_form(edit_formTemplate):
         user_data['college_id'] = self.text_box_53.text
         user_data['college_address'] = self.text_box_54.text
         # user_data['running_Home_Loan'] = self.text_box_55.text
-        borrower_data = data[a]
-        borrower_data['full_name'] = self.text_box_2.text
+        # borrower_data = data[a]
+        # borrower_data['full_name'] = self.text_box_2.text
 
-        wallet_data = data[a]
-        wallet_data['full_name'] = self.text_box_2.text
+        # wallet_data = data[a]
+        # wallet_data['full_name'] = self.text_box_2.text
 
 
         # Calculate ascend score and update
