@@ -24,7 +24,31 @@ class borrower_portfolio(borrower_portfolioTemplate):
     today_date = datetime.datetime.now().strftime("%Y-%m-%d")
     self.label_2.text = "As on " + today_date
 
-    # Any code you write here will run before the form opens.
+
+    rows = app_tables.fin_loan_details.search(borrower_customer_id=self.user_Id, loan_updated_status=q.any_of(
+          q.like('accept%'),
+          q.like('Approved%'),
+          q.like('approved%'),
+          q.like('foreclosure%'),
+          q.like('disbursed loan%'),
+          q.like('Disbursed loan%'),
+        ))
+    self.label_5_copy.text = len(rows)
+
+
+    no_of_disbursed_loans = app_tables.fin_loan_details.search(borrower_customer_id=self.user_Id, loan_updated_status=q.any_of(
+          q.like('disbursed loan%'),
+          q.like('Disbursed loan%'),
+        ))
+    self.label_3_copy.text = len(no_of_disbursed_loans)
+    
+    row = app_tables.fin_loan_details.search(borrower_customer_id=self.user_Id, loan_updated_status=q.any_of(
+          q.like('closed%'),
+          q.like('Closed%'),
+          q.like('CLOSED%'),
+        ))
+    self.label_9.text = len(row)
+    
     # Fetch the loan status data for the given customer_id
     loan_status_data = self.get_loan_status_data(self.user_Id)
     

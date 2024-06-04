@@ -25,82 +25,14 @@ components:
   type: form:borrower.dashboard.Navigation_form_dashboard
   layout_properties: {grid_position: 'ZRVLTI,JMGFQZ', full_width_row: true}
 - name: column_panel_7_copy_copy
-  properties: {role: null, col_widths: '{"RBZWXR":2,"WCBRQE":18,"DRTUYB":59,"IZWFXP":60,"VNRYEV":2,"SIUEQJ":22,"UQSRXK":23,"YUQMVT":55,"YIAQLD":2}'}
+  properties: {role: null, col_widths: '{"RBZWXR":2,"WCBRQE":13,"DRTUYB":59,"IZWFXP":65,"VNRYEV":2}'}
   type: ColumnPanel
   layout_properties: {grid_position: 'ZIZNMI,PIRYUO', full_width_row: true}
   components:
-  - name: spacer_4
-    properties: {height: 32}
-    type: Spacer
-    layout_properties: {grid_position: 'YNFSJO,SIUEQJ HRPECS,YIAQLD', full_width_row: true}
-  - name: column_panel_7_copy_2_copy
-    properties: {role: outlined-card, col_widths: '{"CZPYDN":90,"JLLGYN":5,"QXGKNE":10,"PBZDAB":3,"LGBPSD":57,"XBQUGG":3,"AMNWCP":57}',
-      background: '#094586'}
-    type: ColumnPanel
-    layout_properties: {grid_position: 'YNFSJO,SIUEQJ HRPECS,UQSRXK', full_width_row: true}
-    components:
-    - name: spacer_10
-      properties: {height: '5'}
-      type: Spacer
-      layout_properties: {grid_position: 'CTHHIM,WPEXBH'}
-    - name: spacer_5_copy
-      properties: {height: 32}
-      type: Spacer
-      layout_properties: {grid_position: 'VNQVSA,PBZDAB'}
-    - name: link_1_copy
-      properties: {text: 'Ascend Wallet Balance                                                                                     ',
-        bold: true, foreground: white, font_size: 14}
-      type: Link
-      layout_properties: {grid_position: 'VNQVSA,LGBPSD', full_width_row: true}
-      event_bindings: {click: link_1_copy_click}
-    - name: link_14
-      properties: {icon: '', icon_align: right, foreground: White, text: '>', bold: true,
-        font_size: 18, align: right}
-      type: Link
-      layout_properties: {grid_position: 'VNQVSA,PCVRCH'}
-      event_bindings: {click: link_14_click}
-    - name: spacer_6
-      properties: {height: 32}
-      type: Spacer
-      layout_properties: {grid_position: 'IFNKBM,XBQUGG'}
-    - name: label_2_copy_copy
-      properties: {icon: 'fa:rupee', text: '0', foreground: white, font_size: 14}
-      type: Label
-      layout_properties: {grid_position: 'IFNKBM,AMNWCP', full_width_row: true}
-    - name: spacer_9
-      properties: {height: '10'}
-      type: Spacer
-      layout_properties: {grid_position: 'MQLPNZ,IRJWJB'}
-    - name: spacer_1_copy
-      properties: {height: 31.86663818359375}
-      type: Spacer
-      layout_properties: {grid_position: 'AOORRV,JLLGYN', full_width_row: true}
-    - name: spacer_4_copy
-      properties: {height: '2'}
-      type: Spacer
-      layout_properties: {grid_position: 'AOORRV,CZPYDN QZBALS,QPNUUY'}
-    - name: button_1
-      properties: {text: Add Funds, bold: true, background: white, align: full, foreground: '#013065',
-        role: elevated-button}
-      type: Button
-      layout_properties: {grid_position: 'AOORRV,CZPYDN GVYVHX,HVHHIX'}
-      event_bindings: {click: button_1_click}
-    - name: spacer_11
-      properties: {height: '5'}
-      type: Spacer
-      layout_properties: {grid_position: 'AOORRV,CZPYDN GVEFIY,ZRVNUB'}
-    - name: spacer_3_copy
-      properties: {height: 32}
-      type: Spacer
-      layout_properties: {grid_position: 'AOORRV,QXGKNE'}
-  - name: spacer_8
-    properties: {height: 32}
-    type: Spacer
-    layout_properties: {grid_position: 'YNFSJO,SIUEQJ HRPECS,YUQMVT'}
   - name: spacer_5
     properties: {height: '25'}
     type: Spacer
-    layout_properties: {grid_position: 'YNFSJO,SIUEQJ JBHBGX,KKCDNK'}
+    layout_properties: {grid_position: 'JBHBGX,KKCDNK'}
   - name: spacer_2
     properties: {height: 32}
     type: Spacer
