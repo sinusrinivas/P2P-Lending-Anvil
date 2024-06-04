@@ -25,7 +25,7 @@ components:
   type: form:borrower.dashboard.Navigation_form_dashboard
   layout_properties: {grid_position: 'ZRVLTI,JMGFQZ', full_width_row: true}
 - name: column_panel_7_copy_copy
-  properties: {role: null, col_widths: '{"RBZWXR":2,"WCBRQE":13,"DRTUYB":59,"IZWFXP":65,"VNRYEV":2}'}
+  properties: {role: null, col_widths: '{"RBZWXR":2,"WCBRQE":18,"DRTUYB":59,"IZWFXP":60,"VNRYEV":2}'}
   type: ColumnPanel
   layout_properties: {grid_position: 'ZIZNMI,PIRYUO', full_width_row: true}
   components:
@@ -42,11 +42,11 @@ components:
     type: Label
     layout_properties: {grid_position: 'OVWMTR,WCBRQE', full_width_row: true}
   - name: spacer_12
-    properties: {height: 10.22222900390625}
+    properties: {height: 6.25}
     type: Spacer
     layout_properties: {grid_position: 'OVWMTR,IZWFXP KEVBKP,GNOYZR'}
   - name: label_2
-    properties: {}
+    properties: {font_size: 16}
     type: Label
     layout_properties: {grid_position: 'OVWMTR,IZWFXP NZDKHT,TDYBJL', full_width_row: true}
   - name: spacer_7
@@ -138,4 +138,8 @@ components:
       properties: {}
       type: Plot
       layout_properties: {grid_position: 'LNFLUZ,VBBXDY'}
+    - name: plot_2
+      properties: {}
+      type: Plot
+      layout_properties: {grid_position: 'QOIVWW,MXLZIS'}
 is_package: true

@@ -41,11 +41,26 @@ class borrower_portfolio(borrower_portfolioTemplate):
         ))
     self.label_9.text = len(row)
     
-    no_of_disbursed_loans = app_tables.fin_loan_details.get(borrower_customer_id=self.user_Id, loan_updated_status=q.any_of(
-      q.like('disbursed loan%'),
-      q.like('Disbursed loan%'),
-    ))
+    no_of_disbursed_loans = app_tables.fin_loan_details.search(borrower_customer_id=self.user_Id, loan_updated_status=q.any_of(
+          q.like('disbursed loan%'),
+          q.like('Disbursed loan%')
+        ))
     self.label_3_copy.text = len(no_of_disbursed_loans)
+
+    amount_of_disbursed_loans = app_tables.fin_loan_details.search(
+    borrower_customer_id=self.user_Id,
+    loan_updated_status="disbursed loan"
+)
+
+    if amount_of_disbursed_loans:
+        # Calculate total loan amount
+        total_amount = sum(loan['loan_amount'] for loan in amount_of_disbursed_loans)
+        self.label_9_copy.text=total_amount
+        print("Total disbursed loan amount:", total_amount)
+    else:
+        print("No disbursed loans found for this borrower.")
+
+      
     
     # Fetch the loan status data for the given customer_id
     loan_status_data = self.get_loan_status_data(self.user_Id)
