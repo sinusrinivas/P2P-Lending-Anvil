@@ -6,6 +6,7 @@ from anvil.google.drive import app_files
 import anvil.users
 import anvil.tables as tables
 from anvil.tables import app_tables
+from datetime import date
 
 class edit_form(edit_formTemplate):
   def __init__(self, get_customer_id_value, **properties):
@@ -287,14 +288,24 @@ class edit_form(edit_formTemplate):
     
 
     # self.get = get_customer_id_value
-
+  def calculate_dob_from_age(self, age):
+    """Calculate date of birth from age"""
+    today = date.today()
+    year_of_birth = today.year - age
+    dob = date(year_of_birth, today.month, today.day)
+    # Adjust if the birthdate is not valid (e.g., leap year)
+    while True:
+      try:
+        dob = dob.replace(year=year_of_birth)
+        break
+      except ValueError:
+        year_of_birth -= 1
+    return dob  
 
   def button_2_click(self, **event_args):
     """This method is called when the button is clicked"""
+    Notification("You cannot edit the user age.").show()
     data = tables.app_tables.fin_user_profile.search()
-    # data = tables.app_tables.fin_borrower.search()
-    # data = tables.app_tables.fin_wallet.search()
-    # data = tables.app_tables.
 
     id_list = [i['customer_id'] for i in data]
 
@@ -308,6 +319,11 @@ class edit_form(edit_formTemplate):
         user_data['profile_status'] = bool(self.text_box_3.text)
         user_data['gender'] = self.drop_down_1.selected_value
         user_data['user_age'] = int(self.text_box_5.text) 
+        dob = self.calculate_dob_from_age(int(self.text_box_5.text))
+        if dob > date.today():
+          Notification("Date of Birth cannot be in the future.").show()
+        else:
+          data[a]['date_of_birth'] = dob
         # user_data['date_of_birth'] = self.date_picker_1
         user_data['mobile'] = self.text_box_7.text
         user_data['aadhaar_no'] = self.text_box_8.text
