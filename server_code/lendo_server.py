@@ -240,8 +240,9 @@ def add_lendor_bank_details_form_2(bank_id,branch_name, user_id):
     row[0]['form_count'] = 5
     wallet.find_user_update_type(user_id,row[0]['full_name'],_user_type)
     
-    lende_row = app_tables.fin_borrower.get(email_id=row[0]['email_user'])
-    if existing_borrower_row:
+    lende_row = app_tables.fin_lender.get(email_id=row[0]['email_user'])
+    if row[0]['last_confirm']:
+      lende_row['member_since'] = datetime.now().date()
     
     
 
