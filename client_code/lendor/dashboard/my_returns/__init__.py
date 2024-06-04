@@ -21,21 +21,18 @@
 #         # Debugging: Print fetched investments
 #         print(f"Fetched investments for user {self.user_id}: {list(investments)}")
         
-#         # Initialize a dictionary to store total investments, returns, and tenure by product
-#         product_data = {}
+#         # Initialize lists to store data for the bar chart
+#         products = []
+#         total_investments = []
+#         total_returns = []
+#         tenures = []
         
-#         for investment in investments:
-#             product = investment['product_name']
-#             if product not in product_data:
-#                 product_data[product] = {'total_investment': 0, 'total_returns': 0, 'tenure': investment['tenure']}
-#             product_data[product]['total_investment'] += investment['loan_amount']
-#             product_data[product]['total_returns'] += investment['lender_returns']
-
-#         # Prepare data for bar chart
-#         products = list(product_data.keys())
-#         total_investments = [product_data[product]['total_investment'] for product in products]
-#         total_returns = [product_data[product]['total_returns'] for product in products]
-#         tenures = [product_data[product]['tenure'] for product in products]
+#         for index, investment in enumerate(investments):
+#             product = f"{investment['product_name']} ({index + 1})"
+#             products.append(product)
+#             total_investments.append(investment['loan_amount'])
+#             total_returns.append(investment['lender_returns'])
+#             tenures.append(investment['tenure'])
 
 #         # Create bar chart traces
 #         investment_trace = go.Bar(x=products, y=total_investments, name='Investment', marker_color='blue')
@@ -50,13 +47,13 @@
 #                 y=max_value + (max(total_investments + total_returns) * 0.05),  # Position above the highest bar
 #                 text=f"Tenure: {tenures[i]} months",
 #                 showarrow=False,
-#                 font=dict(color='black', size=14, weight='bold')  # Set the color of the text to dark black and bold
+#                 font=dict(color='black', size=8, weight='bold')  # Set the color of the text to dark black and bold
 #             ))
 
 #         # Create a layout with annotations
 #         layout = go.Layout(
-#             title='Investment and Returns by Product',
-#             xaxis=dict(title='Product'),
+#             title=dict(text='Investment and Returns by Product', font=dict(size=16, weight='bold')),
+#             xaxis=dict(title='Product Details'),
 #             yaxis=dict(title='Amount (0.1M=100000)'),
 #             barmode='group',  # Use group mode to display bars side by side
 #             annotations=annotations
@@ -75,7 +72,6 @@
 #         # Debugging: Check if the plot is assigned correctly
 #         print(f"Assigned figure to plot_1: {self.plot_1.data}")
 
-  
 #     def create_user_bar_chart(self):
 #         # Fetch investment data for the specific user
 #         investments = app_tables.fin_lender.search(customer_id=self.user_id)
@@ -103,7 +99,7 @@
   
 #         # Create a layout
 #         layout = go.Layout(
-#             title='Investment and Returns for User',
+#             title=dict(text='Investment and Returns for User', font=dict(size=16, weight='bold')),
 #             xaxis=dict(title='Category'),
 #             yaxis=dict(title='Amount (0.1M=100000)'),
 #             barmode='group'  # Use group mode to display bars side by side
@@ -139,14 +135,13 @@
 
 
 
-
-
 from ._anvil_designer import my_returnsTemplate
 from anvil import *
 import plotly.graph_objects as go
 from anvil.tables import app_tables
 import anvil.tables.query as q
 from .. import main_form_module as main_form_module
+
 
 class my_returns(my_returnsTemplate):
     def __init__(self, **properties):
@@ -169,6 +164,7 @@ class my_returns(my_returnsTemplate):
         total_investments = []
         total_returns = []
         tenures = []
+        percentages = []
         
         for index, investment in enumerate(investments):
             product = f"{investment['product_name']} ({index + 1})"
@@ -176,27 +172,37 @@ class my_returns(my_returnsTemplate):
             total_investments.append(investment['loan_amount'])
             total_returns.append(investment['lender_returns'])
             tenures.append(investment['tenure'])
+            percentages.append((investment['lender_returns'] / investment['loan_amount']) * 100)
 
         # Create bar chart traces
         investment_trace = go.Bar(x=products, y=total_investments, name='Investment', marker_color='blue')
         returns_trace = go.Bar(x=products, y=total_returns, name='Returns', marker_color='green')
 
-        # Create annotations for tenure with bold and dark black color
+        # Create annotations for tenure and percentage returns with bold text
         annotations = []
         for i, product in enumerate(products):
             max_value = max(total_investments[i], total_returns[i])
+            annotation_text = f"Tenure: {tenures[i]} months"
             annotations.append(dict(
                 x=product,
                 y=max_value + (max(total_investments + total_returns) * 0.05),  # Position above the highest bar
-                text=f"Tenure: {tenures[i]} months",
+                text=annotation_text,
+                showarrow=False,
+                font=dict(color='black', size=8, weight='bold')  # Set the color of the text to dark black and bold
+            ))
+            # Position the percentage above the returns bar
+            annotations.append(dict(
+                x=product,
+                y=total_returns[i] + (max(total_investments + total_returns) * 0.05),  # Position above the returns bar
+                text=f"{percentages[i]:.2f}%",
                 showarrow=False,
                 font=dict(color='black', size=8, weight='bold')  # Set the color of the text to dark black and bold
             ))
 
         # Create a layout with annotations
         layout = go.Layout(
-            title='Investment and Returns by Product',
-            xaxis=dict(title='Product Details'),
+            title=dict(text='Investment and Returns by Product', font=dict(size=16, weight='bold')),
+            xaxis=dict(title='Product Details', tickfont=dict(size=10, weight='bold')),
             yaxis=dict(title='Amount (0.1M=100000)'),
             barmode='group',  # Use group mode to display bars side by side
             annotations=annotations
@@ -230,8 +236,11 @@ class my_returns(my_returnsTemplate):
             total_investment += investment['investment']
             total_returns += investment['return_on_investment']
   
+        # Calculate the percentage return
+        percentage_return = (total_returns / total_investment) * 100 if total_investment != 0 else 0
+
         # Debugging: Print aggregated values
-        print(f"Total Investment: {total_investment}, Total Returns: {total_returns}")
+        print(f"Total Investment: {total_investment}, Total Returns: {total_returns}, Percentage Return: {percentage_return:.2f}%")
   
         # Prepare data for bar chart
         categories = ['Investment', 'Returns']
@@ -240,12 +249,23 @@ class my_returns(my_returnsTemplate):
         # Create bar chart trace
         trace = go.Bar(x=categories, y=values, marker_color=['blue', 'green'])
   
-        # Create a layout
+        # Create annotations
+        annotations = []
+        annotations.append(dict(
+            x='Returns',
+            y=total_returns + (max(values) * 0.05),  # Position above the returns bar
+            text=f"{percentage_return:.2f}%",
+            showarrow=False,
+            font=dict(color='black', size=8, weight='bold')  # Set the color of the text to dark black and bold
+        ))
+  
+        # Create a layout with annotations
         layout = go.Layout(
-            title='Investment and Returns for User',
-            xaxis=dict(title='Category'),
+            title=dict(text='Investment and Returns for User', font=dict(size=16, weight='bold')),
+            xaxis=dict(title='Category', tickfont=dict(size=10, weight='bold')),
             yaxis=dict(title='Amount (0.1M=100000)'),
-            barmode='group'  # Use group mode to display bars side by side
+            barmode='group',  # Use group mode to display bars side by side
+            annotations=annotations
         )
   
         # Create a figure
