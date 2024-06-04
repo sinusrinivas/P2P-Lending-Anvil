@@ -293,8 +293,8 @@ def transfer_money(lender_id, borrower_id, transfer_amount):
     
     except Exception as e:
         print(f"Transfer failed: {e}")
-        lender_transaction_id = generate_transaction_id()  # Assign here
-        borrower_transaction_id = generate_transaction_id()  # Assign here
+        lender_transaction_id = generate_transaction_id() 
+        borrower_transaction_id = generate_transaction_id() 
         # Log the failed transaction in wallet_transactions table
         app_tables.fin_wallet_transactions.add_row(
             transaction_id=lender_transaction_id,
