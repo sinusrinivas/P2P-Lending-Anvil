@@ -383,13 +383,19 @@ class edit_form(edit_formTemplate):
         if ascend_value is not None:
     # Convert ascend_value to float before assigning it to ascend_score
          user_data['ascend_value'] = float(ascend_value)
-
+         # Fetch the borrower data
          borrower = app_tables.fin_borrower.get(customer_id=self.get)
          if borrower:
+            borrower['user_name'] = self.text_box_2.text
+         # Update the wallet data
+         wallet = app_tables.fin_wallet.get(customer_id=self.get)
+         if wallet:
+            wallet['user_name'] = self.text_box_2.text  
+  
               # Assign the converted value to ascend_score
-             borrower['ascend_score'] = float(ascend_value)
-        # data.update()
-        print(f"Updated user profile and borrower table for customer_id: {self.get}")
+        #      borrower['ascend_score'] = float(ascend_value)
+        # # data.update()
+        # print(f"Updated user profile and borrower table for customer_id: {self.get}")
         open_form('admin.dashboard.borrowers.view_profile', self.get)
   def calculate_dob_from_age(self, age):
       """Calculate date of birth from age"""
