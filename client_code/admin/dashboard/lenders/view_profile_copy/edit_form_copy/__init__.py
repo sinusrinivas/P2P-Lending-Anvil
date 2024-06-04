@@ -16,25 +16,7 @@ class edit_form_copy(edit_form_copyTemplate):
         # Set Form properties and Data Bindings.
         self.init_components(**properties)
       
-       # Schedule the update_ages function to run daily
-        # anvil.server.schedule(self.update_ages, interval=1, unit='day')
-        self.timer_1.interval = 86400000  # 1 day in milliseconds
-        self.timer_1.start()
-        # Any code you write here will run before the form opens.
-        self.data = tables.app_tables.fin_user_profile.search()
-    def timer_1_tick(self, **event_args):
-        # Get all users
-        users = tables.app_tables.fin_user_profile.search()
-    
-        # Update each user's age
-        for user in users:
-            dob = datetime.datetime.strptime(user['date_of_birth'], '%d/%m/%Y')
-            today = datetime.datetime.today()
-            age = today.year - dob.year - ((today.month, today.day) < (dob.month, dob.day))
-    
-            # Update the user's age
-            user['user_age'] = age
-    
+       
         # Save the changes
         tables.app_tables.fin_user_profile.commit()
       
