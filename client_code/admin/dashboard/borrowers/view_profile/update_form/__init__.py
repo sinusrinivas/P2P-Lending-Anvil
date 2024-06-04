@@ -15,24 +15,24 @@ class update_form(update_formTemplate):
 
     # Any code you write here will run before the form opens.
     self.get = get_customer_id_value
+  def calculate_dob_from_age(self, age):
+    """Calculate date of birth from age"""
+    today = date.today()
+    year_of_birth = today.year - age
+    dob = date(year_of_birth, today.month, today.day)
+    # Adjust if the birthdate is not valid (e.g., leap year)
+    while True:
+      try:
+        dob = dob.replace(year=year_of_birth)
+        break
+      except ValueError:
+        year_of_birth -= 1
+    return dob  
 
   def button_2_click(self, **event_args):
     """This method is called when the button is clicked"""
     if self.text_box_2.text == "" or  self.text_box_3.text == "" or self.text_box_4.text == "" or self.text_box_5.text == ""  or self.text_box_7.text == "" or self.text_box_8.text == "" or self.text_box_9.text == "" or self.text_box_10.text == "" or self.text_box_12.text == "" or self.text_box_13.text == "" or self.text_box_14.text == "" or self.text_box_15.text == "" or self.text_box_17.text == "" or self.text_box_18.text == "" or self.text_box_19.text == "" or self.text_box_20.text == "" or self.text_box_21.text == "" or self.text_box_22.text == "" or self.text_box_23.text == "" or self.text_box_24.text == "" or self.text_box_25.text == "" or self.text_box_26.text == "" or self.text_box_27.text == "" or self.text_box_28.text == "" or self.text_box_29.text == "" or self.text_box_30.text == "" or self.text_box_32.text == "" or self.text_box_33.text == "" or self.text_box_34.text == "" or self.text_box_35.text == "" :
       Notification("Fill All Required Details").show()
-      return
-    # Validate date of birth
-    dob = self.date_picker_1.date
-    if dob is None:
-      Notification("Please select a valid Date of Birth").show()
-      return
-    
-    # Check if user is at least 18 years old
-    today = date.today()
-    age = today.year - dob.year - ((today.month, today.day) < (dob.month, dob.day))
-    if age < 18:
-      Notification("User must be at least 18 years old").show()
-      return  
     
       data = tables.app_tables.fin_user_profile.search()
       id_list = []
@@ -41,7 +41,7 @@ class update_form(update_formTemplate):
 
       if self.get in id_list:
         a = id_list.index(self.get)
-        data[a]['full_name'] = self.text_box_2.text
+    
         data[a]['profile_status'] = bool(self.text_box_3.text)
         data[a]['gender'] = self.text_box_4.text
         data[a]['user_age'] = int(self.text_box_5.text)
