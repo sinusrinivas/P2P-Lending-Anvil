@@ -46,14 +46,26 @@ components:
   properties: {text: 'Mobile No :'}
   type: Label
   layout_properties: {grid_position: 'VUSJAF,COJRWN TDZWTQ,BWFARX'}
+- name: label_15
+  properties: {}
+  type: Label
+  layout_properties: {grid_position: 'VUSJAF,COJRWN TDZWTQ,UXBEHY'}
 - name: label_6
   properties: {text: 'Date of Birth:'}
   type: Label
   layout_properties: {grid_position: 'VUSJAF,COJRWN LBFZVW,DOHLTI'}
+- name: label_16
+  properties: {}
+  type: Label
+  layout_properties: {grid_position: 'VUSJAF,COJRWN LBFZVW,YPXPAY'}
 - name: label_7
   properties: {text: 'Gender :'}
   type: Label
   layout_properties: {grid_position: 'VUSJAF,COJRWN JHAFES,YWOVQM'}
+- name: label_17
+  properties: {}
+  type: Label
+  layout_properties: {grid_position: 'VUSJAF,COJRWN JHAFES,MDNVQK'}
 - name: label_13
   properties: {text: 'Marital Status :'}
   type: Label
