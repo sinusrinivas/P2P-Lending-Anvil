@@ -33,15 +33,14 @@ class update_form(update_formTemplate):
     """This method is called when the button is clicked"""
     if self.text_box_2.text == "" or  self.text_box_3.text == "" or self.text_box_4.text == "" or self.text_box_5.text == ""  or self.text_box_7.text == "" or self.text_box_8.text == "" or self.text_box_9.text == "" or self.text_box_10.text == "" or self.text_box_12.text == "" or self.text_box_13.text == "" or self.text_box_14.text == "" or self.text_box_15.text == "" or self.text_box_17.text == "" or self.text_box_18.text == "" or self.text_box_19.text == "" or self.text_box_20.text == "" or self.text_box_21.text == "" or self.text_box_22.text == "" or self.text_box_23.text == "" or self.text_box_24.text == "" or self.text_box_25.text == "" or self.text_box_26.text == "" or self.text_box_27.text == "" or self.text_box_28.text == "" or self.text_box_29.text == "" or self.text_box_30.text == "" or self.text_box_32.text == "" or self.text_box_33.text == "" or self.text_box_34.text == "" or self.text_box_35.text == "" :
       Notification("Fill All Required Details").show()
-    
+    else:
       data = tables.app_tables.fin_user_profile.search()
       id_list = []
       for i in data:
         id_list.append(i['customer_id'])
 
       if self.get in id_list:
-        a = id_list.index(self.get)
-    
+        a = id_list.index(self.get)    
         data[a]['profile_status'] = bool(self.text_box_3.text)
         data[a]['gender'] = self.text_box_4.text
         data[a]['user_age'] = int(self.text_box_5.text)
