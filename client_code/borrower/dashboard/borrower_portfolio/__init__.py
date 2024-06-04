@@ -24,23 +24,22 @@ class borrower_portfolio(borrower_portfolioTemplate):
     today_date = datetime.datetime.now().strftime("%Y-%m-%d")
     self.label_2.text = "As on " + today_date
 
-    # Assuming you have a label named 'ascend_score_label' and a variable named 'user_ascend_score'
+
     ascend = app_tables.fin_user_profile.get(customer_id=self.user_Id)
     if ascend:
-        self.ascend_score_label.text = ascend['ascend_value']  # Assuming data binding for score
-        self.ascend_score_label.background_color = self.ascend_score_label  # Optional binding for background color
+        # Assuming you have a label named 'ascend_score_label' and a variable named 'user_ascend_score'
+        self.ascend_score_label.text = ascend['ascend_value']  # Set the label text
 
-        # Update background color based on score range (using a dictionary for readability)
-        color_map = {
-            score: color
-            for score, color in [
-                (score, "green") if score > 65 else
-                (score, "orange") if 50 <= score <= 65 else
-                (score, "lightcoral") if 25 <= score < 50 else
-                (score, "red")
-            ]
-        }
-        self.ascend_score_background_color = color_map.get(self.user_ascend_score, "red")  # Default to red if score not found
+        # Update background color based on score range
+        if ascend['ascend_value'] > 65:
+            self.ascend_score_label.background_color = "#00FF00"
+        elif 50 <= ascend['ascend_value'] <= 65:
+            self.ascend_score_label.background_color = "#FFA500"  # Good
+        elif 25 <= ascend['ascend_value'] < 50:
+            self.ascend_score_label.background_color = "#F08080"  # Average (adjusted to lightcoral for better contrast)
+        else:
+            self.ascend_score_label.background_color = "#FF0000"  # Bad
+
 
     rows = app_tables.fin_loan_details.search(borrower_customer_id=self.user_Id, loan_updated_status=q.any_of(
           q.like('accept%'),
@@ -113,115 +112,5 @@ class borrower_portfolio(borrower_portfolioTemplate):
     # Bind the plotly figure to the Plot component
     self.plot_1.figure = fig
 
-  def calculate_background_color(self, score):
-      color_map = {
-          score: color
-          for score, color in [
-                (score, "green") if score > 65 else
-                (score, "orange") if 50 <= score <= 65 else
-                (score, "lightcoral") if 25 <= score < 50 else
-                (score, "red")
-            ]
-        }
-      return color_map.get(score, "red")
+ 
 
-    # Event handler to update label text and background color dynamically (if not using data binding)
-  def update_score_and_color(self):
-      self.ascend_score_label.text = str(self.user_ascend_score)
-      self.ascend_score_label = self.calculate_background_color(self.user_ascend_score)  # Call a separate function for clarity (optional)
-
-
-# class borrower_portfolio(borrower_portfolioTemplate):
-#   def __init__(self, **properties):
-#     # Set Form properties and Data Bindings.
-#     self.init_components(**properties)
-#     self.email = main_form_module.email
-#     self.user_Id = main_form_module.userId
-
-#     # Set the label text with today's date
-#     today_date = datetime.datetime.now().strftime("%Y-%m-%d")
-#     self.label_2.text = "As on " + today_date
-
-    # no_of_disbursed_loans = app_tables.fin_loan_details.search(borrower_customer_id=self.user_Id, loan_updated_status=q.any_of(
-    #   q.like('disbursed loan%'),
-    #   q.like('Disbursed loan%'),
-    # ))
-#     self.label_3_copy.text = len(no_of_disbursed_loans)
-
-#     # Any code you write here will run before the form opens.
-#     # Fetch the loan status data for the given customer_id
-#     self.update_loan_status_data(self.user_Id)
-
-#   def update_loan_status_data(self, borrower_customer_id):
-#     # Define status categories and their corresponding queries
-#     status_queries = {
-#         'Running Loans': q.any_of(
-#             q.like('accept%'),
-#             q.like('Approved%'),
-#             q.like('approved%'),
-#             q.like('foreclosure%'),
-#             q.like('foreclosure%'),
-#             q.like('disbursed loan%'),
-#             q.like('Disbursed loan%'),
-#             q.like('extension%'),
-#             q.like('Extension%')
-#         ),
-        
-#         'Closed Loans': q.any_of(
-#             q.like('closed%'),
-#             q.like('Closed%'),
-#             q.like('CLOSED%')
-#         ),
-#         'Under Process Loans': q.any_of(
-#             q.like('under process%'),
-#             q.like('Under Process%'),
-#             q.like('UNDER PROCESS%')
-#         ),
-        
-#         'Total Loans': q.any_of(
-#             q.like('accept%'),
-#             q.like('Accept%'),
-#             q.like('Approved%'),
-#             q.like('approved%'),
-#             q.like('foreclosure%'),
-#             q.like('Foreclosure%'),
-#             q.like('disbursed loan%'),
-#             q.like('Disbursed loan%'),
-#             q.like('Rejected%'),
-#             q.like('rejected%'),
-#             q.like('extension%'),
-#             q.like('Extension%'),
-#         ),
-#     }
-
-#     # Initialize counts
-#     loan_status_counts = {}
-
-#     # Query and count each status category
-#     for status, query in status_queries.items():
-#         rows = app_tables.fin_loan_details.search(borrower_customer_id=borrower_customer_id, loan_updated_status=query)
-#         loan_status_counts[status] = len(rows)
-
-#     # Update labels with the counts
-#     self.label_5_copy.text = loan_status_counts['Running Loans']
-#     self.label_9.text = loan_status_counts['Closed Loans']
-#     # You can add similar label updates for 'Under Process Loans' and 'Open Loans' if needed
-
-#     # Create the pie chart with the counts
-#     self.create_pie_chart(loan_status_counts)
-
-#   def create_pie_chart(self, data):
-#     # Remove 'Total Loans' from pie chart data
-#     del data['Total Loans']
-
-#     labels = list(data.keys())
-#     values = list(data.values())
-    
-#     # Create the pie chart
-#     fig = go.Figure(data=[go.Pie(labels=labels, values=values, 
-#                                  textinfo='label+percent', insidetextorientation='radial', hole=.3)])
-    
-#     fig.update_layout(title_text='Loan Status Distribution')
-    
-#     # Bind the plotly figure to the Plot component
-#     self.plot_1.figure = fig
