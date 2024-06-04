@@ -410,7 +410,7 @@ class borrower_foreclosure(borrower_foreclosureTemplate):
     
                 if product_details['npa'] != 0:
                     npa_fee_percentage = product_details['npa']
-                    npa_fee_amount += days_in_npa * (npa_fee_percentage * float(self.emi.text) / 100)
+                    npa_fee_amount += days_in_npa * (npa_fee_percentage * float(self.due_amount.text) / 100)
                 elif product_details['npa_amount'] != 0:
                     npa_fee_amount += days_in_npa * product_details['npa_amount']
                 
