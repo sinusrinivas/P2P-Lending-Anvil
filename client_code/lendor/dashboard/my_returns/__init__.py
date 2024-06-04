@@ -48,7 +48,7 @@ class my_returns(my_returnsTemplate):
             annotation_text = f"Tenure: {tenures[i]} months"
             annotations.append(dict(
                 x=product,
-                y=max_value + (max(total_investments + total_returns) * 0.05),  # Position above the highest bar
+                y=max_value + (max(total_investments + total_returns) * 0.02),  # Position above the highest bar
                 text=annotation_text,
                 showarrow=False,
                 font=dict(color='black', size=8, weight='bold')  # Set the color of the text to dark black and bold
@@ -57,7 +57,7 @@ class my_returns(my_returnsTemplate):
             # Position the percentage above the returns bar
             annotations.append(dict(
                 x=product,
-                y=total_returns[i] + (max(total_investments + total_returns) * 0.05),  # Position above the returns bar
+                y=total_returns[i] + (max(total_investments + total_returns) * 0.01),  # Position above the returns bar
                 text=f"{percentages[i]:.2f}%",
                 showarrow=False,
                 font=dict(color='black', size=8, weight='bold'),  # Set the color of the text to dark black and bold
@@ -118,7 +118,7 @@ class my_returns(my_returnsTemplate):
         annotations = []
         annotations.append(dict(
             x='Returns',
-            y=total_returns + (max(values) * 0.05),  # Position above the returns bar
+            y=total_returns + (max(values) * 0.01),  # Position above the returns bar
             text=f"{percentage_return:.2f}%",
             showarrow=False,
             font=dict(color='black', size=8, weight='bold'),  # Set the color of the text to dark black and bold
