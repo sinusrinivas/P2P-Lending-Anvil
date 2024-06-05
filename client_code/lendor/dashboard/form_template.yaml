@@ -8,134 +8,134 @@ components:
   layout_properties: {slot: default}
   name: content_panel
   components:
-  - name: label_1
-    properties: {text: '                Profile Overview :', bold: true, font_size: 20}
+  - properties: {text: '                Profile Overview :', bold: true, font_size: 20}
     type: Label
     layout_properties: {grid_position: 'JNKTYE,SPBVNP SXIJES,TWGPZL', full_width_row: true}
-  - name: image_5
-    properties: {height: 158.73330688476562}
+    name: label_1
+  - properties: {height: 158.73330688476562}
     type: Image
     layout_properties: {grid_position: 'JNKTYE,SPBVNP RWAKXS,MABBUH YIETUV,JICMTU'}
-  - name: link_15
-    properties: {text: View Profile, align: center, bold: true, foreground: black}
+    name: image_5
+  - properties: {text: View Profile, align: center, bold: true, foreground: black}
     type: Link
     layout_properties: {grid_position: 'JNKTYE,SPBVNP RWAKXS,MABBUH RJEIMU,QUTJYY'}
     event_bindings: {click: link_15_click}
-  - name: label_11
-    properties: {bold: true, font_size: 22, align: left}
+    name: link_15
+  - properties: {bold: true, font_size: 22, align: left}
     type: Label
     layout_properties: {grid_position: 'JNKTYE,SPBVNP RWAKXS,UEXFLG XMCULO,YESLWH'}
-  - name: spacer_11
-    properties: {height: '10'}
+    name: label_11
+  - properties: {height: '10'}
     type: Spacer
     layout_properties: {grid_position: 'JNKTYE,SPBVNP RWAKXS,UEXFLG PYLMVC,DPRWEL'}
-  - name: label_12
-    properties: {text: 'Membership Type :', bold: true, font_size: 16}
+    name: spacer_11
+  - properties: {text: 'Membership Type :', bold: true, font_size: 16}
     type: Label
     layout_properties: {grid_position: 'JNKTYE,SPBVNP RWAKXS,UEXFLG HHHSYY,MQLQFR
         UTMQWV,ITAWWO'}
-  - name: spacer_9
-    properties: {height: '10'}
+    name: label_12
+  - properties: {height: '10'}
     type: Spacer
     layout_properties: {grid_position: 'JNKTYE,SPBVNP RWAKXS,UEXFLG HHHSYY,MQLQFR
         MHWBKQ,CNUXAQ'}
-  - name: label_13
-    properties: {font_size: 16}
+    name: spacer_9
+  - properties: {font_size: 16}
     type: Label
     layout_properties: {grid_position: 'JNKTYE,SPBVNP RWAKXS,UEXFLG HHHSYY,MICZHI
         CKNCTK,LFQOVQ'}
-  - name: spacer_10
-    properties: {height: '10'}
+    name: label_13
+  - properties: {height: '10'}
     type: Spacer
     layout_properties: {grid_position: 'JNKTYE,SPBVNP RWAKXS,UEXFLG HHHSYY,MICZHI
         EHCJMG,CACKEC'}
-  - name: label_14
-    properties: {text: 'Joined  Date :', bold: true, font_size: 16}
+    name: spacer_10
+  - properties: {text: 'Joined  Date :', bold: true, font_size: 16}
     type: Label
     layout_properties: {grid_position: 'JNKTYE,SPBVNP RWAKXS,UEXFLG TJFJNT,KKSSMZ'}
-  - name: label_15
-    properties: {font_size: 16}
+    name: label_14
+  - properties: {font_size: 16}
     type: Label
     layout_properties: {grid_position: 'JNKTYE,SPBVNP RWAKXS,UEXFLG TJFJNT,VTJPNV'}
-  - name: column_panel_7_copy_2
-    properties: {role: outlined-card, col_widths: '{"CZPYDN":90,"JLLGYN":5,"QXGKNE":10,"JRXWNO":55,"PBZDAB":3,"LGBPSD":57,"XBQUGG":3,"AMNWCP":57}',
+    name: label_15
+  - properties: {role: outlined-card, col_widths: '{"CZPYDN":90,"JLLGYN":5,"QXGKNE":10,"JRXWNO":55,"PBZDAB":3,"LGBPSD":57,"XBQUGG":3,"AMNWCP":57}',
       background: '#094586'}
     type: ColumnPanel
     layout_properties: {grid_position: 'JNKTYE,NAIERL', full_width_row: true}
+    name: column_panel_7_copy_2
     components:
-    - name: spacer_5_copy
-      properties: {height: 32}
+    - properties: {height: 32}
       type: Spacer
       layout_properties: {grid_position: 'VNQVSA,PBZDAB'}
-    - name: link_1_copy
-      properties: {text: 'Ascend Wallet Balance                                                                                     ',
+      name: spacer_5_copy
+    - properties: {text: 'Ascend Wallet Balance                                                                                     ',
         bold: true, foreground: white, font_size: 14}
       type: Link
       layout_properties: {grid_position: 'VNQVSA,LGBPSD', full_width_row: true}
       event_bindings: {click: link_1_copy_click}
-    - name: link_14
-      properties: {icon: '', icon_align: right, foreground: White, text: '>', bold: true,
+      name: link_1_copy
+    - properties: {icon: '', icon_align: right, foreground: White, text: '>', bold: true,
         font_size: 18, align: right}
       type: Link
       layout_properties: {grid_position: 'VNQVSA,PCVRCH'}
       event_bindings: {click: link_14_click}
-    - name: spacer_6
-      properties: {height: 32}
+      name: link_14
+    - properties: {height: 32}
       type: Spacer
       layout_properties: {grid_position: 'IFNKBM,XBQUGG'}
-    - name: label_2_copy
-      properties: {icon: 'fa:rupee', text: '0', foreground: white, font_size: 14}
+      name: spacer_6
+    - properties: {icon: 'fa:rupee', text: '0', foreground: white, font_size: 14}
       type: Label
       layout_properties: {grid_position: 'IFNKBM,AMNWCP', full_width_row: true}
-    - name: spacer_1_copy
-      properties: {height: 31.86663818359375}
+      name: label_2_copy
+    - properties: {height: 31.86663818359375}
       type: Spacer
       layout_properties: {grid_position: 'AOORRV,JLLGYN', full_width_row: true}
-    - name: column_panel_7_copy_copy
-      properties: {role: outlined-card, col_widths: '{"EITWZQ":25}', background: '#094586'}
+      name: spacer_1_copy
+    - properties: {role: outlined-card, col_widths: '{"EITWZQ":25}', background: '#094586'}
       type: ColumnPanel
       layout_properties: {grid_position: 'AOORRV,CZPYDN LTIVQI,CGALMQ', full_width_row: true}
+      name: column_panel_7_copy_copy
       components:
-      - name: label_3_copy
-        properties: {role: null, text: Available To Withdraw, bold: true, foreground: white,
+      - properties: {role: null, text: Available To Withdraw, bold: true, foreground: white,
           font_size: 14}
         type: Label
         layout_properties: {grid_position: 'PZDLNQ,NVPFML', full_width_row: true}
-      - name: label_4_copy
-        properties: {icon: 'fa:rupee', text: '0', foreground: white, font_size: 14,
+        name: label_3_copy
+      - properties: {icon: 'fa:rupee', text: '0', foreground: white, font_size: 14,
           background: ''}
         type: Label
         layout_properties: {grid_position: 'ZZGHAZ,IKHPMG', full_width_row: true}
-    - name: spacer_4_copy
-      properties: {height: '2'}
+        name: label_4_copy
+    - properties: {height: '2'}
       type: Spacer
       layout_properties: {grid_position: 'AOORRV,CZPYDN QZBALS,QPNUUY'}
-    - name: button_1
-      properties: {text: Add Funds, bold: true, background: white, align: full, foreground: '#013065',
+      name: spacer_4_copy
+    - properties: {text: Add Funds, bold: true, background: white, align: full, foreground: '#013065',
         role: elevated-button}
       type: Button
       layout_properties: {grid_position: 'AOORRV,CZPYDN GVYVHX,HVHHIX'}
       event_bindings: {click: button_1_click}
-    - name: spacer_3_copy
-      properties: {height: 32}
+      name: button_1
+    - properties: {height: 32}
       type: Spacer
       layout_properties: {grid_position: 'AOORRV,QXGKNE'}
-  - name: spacer_13
-    properties: {height: 32}
+      name: spacer_3_copy
+  - properties: {height: 32}
     type: Spacer
     layout_properties: {grid_position: 'JNKTYE,NGTYLL', full_width_row: true}
-  - name: spacer_12
-    properties: {height: 21.86663818359375}
+    name: spacer_13
+  - properties: {height: 21.86663818359375}
     type: Spacer
     layout_properties: {grid_position: 'OJFLUV,GNZXGH'}
-  - name: spacer_7
-    properties: {height: 32}
+    name: spacer_12
+  - properties: {height: 32}
     type: Spacer
     layout_properties: {grid_position: 'OJFLUV,MOFLSQ'}
-  - name: spacer_8
-    properties: {height: '15'}
+    name: spacer_7
+  - properties: {height: '15'}
     type: Spacer
     layout_properties: {grid_position: 'XGUQGL,BDZCMG'}
+    name: spacer_8
   - properties: {col_widths: '{"NETDIR":15,"IXNAVP":15,"KVCNSJ":15,"PNJZIQ":15}'}
     type: ColumnPanel
     layout_properties: {grid_position: 'XIBORR,NXKDOZ', full_width_row: true}
