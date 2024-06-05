@@ -33,7 +33,7 @@ class check_out(check_outTemplate):
         total_interest_amount = selected_row['total_interest_amount']
         total_processing_fee_amount = selected_row['total_processing_fee_amount']
         processing_fee = total_processing_fee_amount/ tenure
-        self.processing_fee.text = "{:.2f}".format(processing_fee)
+        # self.processing_fee.text = "{:.2f}".format(processing_fee)
         monthly_interest_rate = interest_rate / 12 / 100
         total_payments = tenure * 12
         total_repayment_amount = selected_row['total_repayment_amount']
@@ -72,6 +72,7 @@ class check_out(check_outTemplate):
             emi = (loan_amount * monthly_interest_rate * (1 + monthly_interest_rate) ** total_payments) / ((1 + monthly_interest_rate) ** total_payments - 1)
             total_emi = emi + extension_amount + processing_fee # Add extension amount to monthly EMI
 
+        self.processing_fee.text = "{:.2f}".format(processing_fee)
         self.i_r.text = "{:.2f}".format(interest_amount)
         self.emi.text = "{:.2f}".format(emi)
         self.emi_processing_extension.text = "{:.2f}".format(total_emi)
