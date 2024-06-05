@@ -22,7 +22,8 @@ class dashboard(dashboardTemplate):
 
     wallet = app_tables.fin_wallet.get(customer_id=self.user_Id)
     if wallet:
-      self.label_9.text = wallet['wallet_amount']
+      self.label_9.text = "{:.2f}".format((wallet['wallet_amount'] or 0))
+      self.label_2_copy_copy.text = "{:.2f}".format((wallet['wallet_amount'] or 0))
 
     user_profile = app_tables.fin_user_profile.get(customer_id=self.user_Id)
     if user_profile:
@@ -60,9 +61,11 @@ class dashboard(dashboardTemplate):
           q.like('approved%'),
           q.like('under process%'),
           q.like('foreclosure%'),
-          q.like('disbursed loan%'),
-          q.like('Disbursed loan%'),
-          q.like('Under Process%')
+          q.like('extension'),
+          q.like('disbursed%'),
+          q.like('Disbursed%'),
+          q.like('Under Process%'),
+          q.like('rejected')
         )
       )
       num_existing_loans = len(existing_loans)
@@ -143,3 +146,10 @@ class dashboard(dashboardTemplate):
   def link_12_click(self, **event_args):
     """This method is called when the link is clicked"""
     pass
+
+  def button_1_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    customer_id = self.user_Id
+    email = self.email
+    anvil.server.call('fetch_profile_data_and_insert', email, customer_id)
+    open_form("wallet.wallet")
