@@ -205,10 +205,13 @@ class part_payment(part_paymentTemplate):
                       loan_id = self.loan_details['loan_id']
 
                       remaining_tenure = float(self.loan_details['remaining_tenure'])
-                      if remaining_tenure is not None:
+                      print(remaining_tenure)
+                      if remaining_tenure != 0:
                         remaining_tenure = remaining_tenure
+                        
                       else:
-                        remaining_tenure = self.loan_details['tenure']
+                        remaining_tenure = float(self.loan_details['tenure'])
+                        print(remaining_tenure)
                     
                       loan_row = app_tables.fin_loan_details.get(loan_id=loan_id)
                       if loan_row is not None:

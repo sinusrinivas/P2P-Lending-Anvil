@@ -461,7 +461,10 @@ class check_out(check_outTemplate):
         )
         if adding_remaining_part_payment:
           part_pay = adding_remaining_part_payment['payment_type']
+          part_lender_returns = adding_remaining_part_payment['part_lender_returns']
+          part_remaining_amount = adding_remaining_part_payment['part_remaining_amount']
           if part_pay == 'part payment':
+            
             remaining_part_payment = adding_remaining_part_payment['part_payment_amount']
             # total_due_amount += remaining_part_payment
             additional_fees = self.calculate_additional_fees(adding_remaining_part_payment)
@@ -473,7 +476,10 @@ class check_out(check_outTemplate):
             total_emi +=additional_fees
             self.part_payment.enabled = False
             self.label_14.visible = True
-            self.label_15.visible = True
+            self.label_15.visible = True 
+
+            self.i_r.text = part_lender_returns + float(self.i_r.text)
+            print(self.i_r.text)
         self.update_total_emi_amount(total_emi)
 
 
@@ -740,7 +746,10 @@ class check_out(check_outTemplate):
     def pay_now_click(self, **event_args):
         remaining_tenure = self.remaining_tenure.text
         i_r = float(self.i_r.text)
-      
+        print('lender return')
+        print(i_r)
+
+        emi_amount_for_remaining_amount = float(self.emi_processing_extension.text)
         total_emi_amount = float(self.total_emi_amount_label.text)
         # Calculate total EMI amount including processing fees
         emi_amount = float(self.emi_amount_label.text)
@@ -842,9 +851,9 @@ class check_out(check_outTemplate):
 
 
                     if self.selected_row['remaining_amount'] is not None:
-                        remaining_amount = self.selected_row['remaining_amount'] - (emi_amount + processing_fee + extra_amount)
+                        remaining_amount = self.selected_row['remaining_amount'] - emi_amount_for_remaining_amount#(emi_amount + processing_fee + extra_amount)
                     else:
-                        remaining_amount = total_repayment_amount - (emi_amount + processing_fee + extra_amount)
+                        remaining_amount = total_repayment_amount - emi_amount_for_remaining_amount #(emi_amount + processing_fee + extra_amount)
             
                     print(remaining_amount)
                     loan_details = app_tables.fin_loan_details.get(loan_id=self.selected_row['loan_id'])
