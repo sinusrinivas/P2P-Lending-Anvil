@@ -123,7 +123,7 @@ class part_payment(part_paymentTemplate):
   
                   loan_row = app_tables.fin_loan_details.get(loan_id=loan_id)
                   if loan_row is not None:
-                      loan_row['remaining_amount'] = remaining_amount
+                      loan_row['remaining_amount'] = round(remaining_amount ,2)
                       total_paid = float(loan_row['total_amount_paid']) + text_amount
                       loan_row['total_amount_paid'] = total_paid
                       loan_row['lender_returns'] += float(self.loan_details['i_r']) /2
@@ -198,10 +198,16 @@ class part_payment(part_paymentTemplate):
                       # Update remaining amount in loan details table
                       remaining_amount = float(self.loan_details['remainining_amount']) - float(self.loan_details['for_remaining_amount_calculation']) /2
                       loan_id = self.loan_details['loan_id']
-  
+
+                      remaining_tenure = float(self.loan_details['remaining_tenure'])
+                      if remaining_tenure is not None:
+                        remaining_tenure = remaining_tenure
+                      else:
+                        remaining_tenure = self.loan_details['tenure']
+                    
                       loan_row = app_tables.fin_loan_details.get(loan_id=loan_id)
                       if loan_row is not None:
-                          loan_row['remaining_amount'] = remaining_amount
+                          loan_row['remaining_amount'] = round(remaining_amount , 2)
                           if loan_row['total_amount_paid'] is None:
                             loan_row['total_amount_paid'] = 0.0
                             total_paid = loan_row['total_amount_paid'] + entered_amount
@@ -226,16 +232,20 @@ class part_payment(part_paymentTemplate):
                           borrower_customer_id = self.loan_details['borrower_customer_id']
                           lender_customer_id = self.loan_details['lender_customer_id']
                           account_no = self.loan_details['account_no']
+                          # remaining_tenure = self.loan_details['remaining_tenure']
   
                           # Calculate next_scheduled_payment and next_next_payment based on emi_payment_type
                           if emi_payment_type in ['One Time', 'Monthly', 'Three Months', 'Six Months']:
                               if emi_payment_type == 'Monthly':
+                                  remaining_tenure -=1
                                   next_scheduled_payment = prev_scheduled_payment + timedelta(days=30)
                                   next_next_payment = prev_next_payment + timedelta(days=30)
                               elif emi_payment_type == 'Three Months':
+                                  remaining_tenure -=3
                                   next_scheduled_payment = prev_scheduled_payment + timedelta(days=90)
                                   next_next_payment = prev_next_payment + timedelta(days=90)
                               elif emi_payment_type == 'Six Months':
+                                  remaining_tenure -=6
                                   next_scheduled_payment = prev_scheduled_payment + timedelta(days=180)
                                   next_next_payment = prev_next_payment + timedelta(days=180)
                               elif emi_payment_type == 'One Time':
@@ -267,7 +277,9 @@ class part_payment(part_paymentTemplate):
                               part_payment_date=datetime.today().date(),
                               part_payment_amount=total_emi_amount - entered_amount,
                               part_payment_done= 1,
-                              total_amount_pay= float(self.loan_details['total_emi_amount'])
+                              total_amount_pay= float(self.loan_details['total_emi_amount']),
+                              remaining_tenure=remaining_tenure,
+                            
                               
                               
                           )
