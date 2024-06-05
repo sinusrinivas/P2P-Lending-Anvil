@@ -816,7 +816,7 @@ class check_out(check_outTemplate):
                         if loan_details['lender_returns'] is None :
                             loan_details['lender_returns'] = 0
                         loan_details['lender_returns'] += i_r
-                        loan_details['remaining_amount'] = remaining_amount
+                        loan_details['remaining_amount'] = round(remaining_amount ,2)
                         loan_details['total_amount_paid'] += total_emi_amount
                         if loan_details['remaining_amount'] <= 0:
                           loan_details['loan_updated_status'] = 'close'
