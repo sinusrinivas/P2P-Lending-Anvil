@@ -103,7 +103,7 @@ components:
   - name: column_panel_1_copy
     properties: {role: elevated-card, tooltip: '', border: '', foreground: '', visible: true,
       wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{"WMAWGC":10,"TLBMAZ":15,"XWMMJZ":10,"UPVPFP":10,"MFIVTW":15}',
-      spacing_below: small, background: 'theme:Tertiary Container'}
+      spacing_below: small, background: 'theme:Secondary Container'}
     type: ColumnPanel
     layout_properties: {grid_position: 'ZEJVWH,BFAYJA', full_width_row: true}
     components:
