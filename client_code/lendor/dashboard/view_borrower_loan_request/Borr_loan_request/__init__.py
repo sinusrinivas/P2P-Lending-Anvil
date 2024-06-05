@@ -657,6 +657,7 @@ class Borr_loan_request(Borr_loan_requestTemplate):
             loan_row['loan_updated_status'] = updated_loan_status
             # Save the changes to the loan_row
             loan_row.update()
+            alert(f"Loan Amount Paid to Borrower\nWallet Amount Updated")
 
             open_form("wallet.wallet")
 
