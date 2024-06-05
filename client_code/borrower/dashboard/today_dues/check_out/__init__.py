@@ -33,11 +33,16 @@ class check_out(check_outTemplate):
         total_interest_amount = selected_row['total_interest_amount']
         total_processing_fee_amount = selected_row['total_processing_fee_amount']
         processing_fee = total_processing_fee_amount/ tenure
-        self.processing_fee.text = "{:.2f}".format(processing_fee)
+        # self.processing_fee.text = "{:.2f}".format(processing_fee)
         monthly_interest_rate = interest_rate / 12 / 100
         total_payments = tenure * 12
         total_repayment_amount = selected_row['total_repayment_amount']
         total_i_a = total_interest_amount / tenure
+
+        remaining_tenure = selected_row['remaining_tenure'] + extension_months
+        if remaining_tenure == 0:
+          remaining_tenure = tenure
+          
         if remaining_amount is None:
           self.remainining_amount.text = "{:.2f}".format(total_repayment_amount)
         else:
@@ -45,38 +50,72 @@ class check_out(check_outTemplate):
       
         if emi_payment_type == 'One Time':
             emi = total_repayment_amount
+            remaining_tenure = 0
             interest_amount = total_interest_amount
             #total_emi += emi  # Add extension amount to 12-month EMI total
             total_emi = emi +  extension_amount + total_processing_fee_amount
         elif emi_payment_type == 'Monthly':
             # Calculate monthly EMI amount
-            interest_amount = total_i_a
-            emi = (loan_amount * monthly_interest_rate * ((1 + monthly_interest_rate) ** tenure)) / (((1 + monthly_interest_rate) ** tenure) - 1)
+            if remaining_tenure == 1:
+              emi = remaining_amount
+              remaining_tenure = 0
+              interest_amount = 0
+              processing_fee = 0
+            else:
+              remaining_tenure -= 1 
+              emi = (loan_amount * monthly_interest_rate * ((1 + monthly_interest_rate) ** tenure)) / (((1 + monthly_interest_rate) ** tenure) - 1)
+              interest_amount = total_i_a
             total_emi = emi + extension_amount + processing_fee  # Add extension amount to monthly EMI
         elif emi_payment_type == 'Three Months':
             # Calculate EMI amount for 3 months
-            interest_amount = total_i_a * 3
-            processing_fee = processing_fee * 3
-            emi = (loan_amount * monthly_interest_rate * ((1 + monthly_interest_rate) ** (tenure ))) / (((1 + monthly_interest_rate) ** (tenure)) - 1)
-            emi*=3
+            if remaining_tenure < 3:
+              emi = remaining_amount
+              remaining_tenure = 0
+              interest_amount = 0
+              processing_fee = 0
+            elif remaining_tenure == 3:
+              emi = remaining_amount
+              remaining_tenure = 0
+              interest_amount = 0
+              processing_fee = 0
+            else:
+              remaining_tenure -= 3 
+              emi = (loan_amount * monthly_interest_rate * ((1 + monthly_interest_rate) ** (tenure ))) / (((1 + monthly_interest_rate) ** (tenure)) - 1)
+              emi*=3
+            # Calculate EMI amount for 3 months
+              interest_amount = total_i_a * 3
+              processing_fee = processing_fee * 3
             total_emi = emi + extension_amount + processing_fee # Add extension amount to 3-month EMI
         elif emi_payment_type == 'Six Months':
-            interest_amount = total_i_a * 6
-            processing_fee = processing_fee * 6
-            # Calculate EMI amount for 6 months
-            emi = (loan_amount * monthly_interest_rate * ((1 + monthly_interest_rate) ** (tenure ))) / (((1 + monthly_interest_rate) ** (tenure)) - 1)
-            emi*=6
+            if remaining_tenure < 6:
+              emi = remaining_amount
+              remaining_tenure = 0
+              interest_amount = 0
+              processing_fee = 0
+            elif remaining_tenure == 6:
+              emi = remaining_amount
+              remaining_tenure = 0
+              interest_amount = 0
+              processing_fee = 0
+            else:
+              remaining_tenure -= 6 
+              emi = (loan_amount * monthly_interest_rate * ((1 + monthly_interest_rate) ** (tenure ))) / (((1 + monthly_interest_rate) ** (tenure)) - 1)
+              emi*=6
+            # Calculate EMI amount for 3 months
+              interest_amount = total_i_a * 6
+              processing_fee = processing_fee * 6
             total_emi = emi + extension_amount+ processing_fee  # Add extension amount to 6-month EMI
         else:
             # Default to monthly calculation
             emi = (loan_amount * monthly_interest_rate * (1 + monthly_interest_rate) ** total_payments) / ((1 + monthly_interest_rate) ** total_payments - 1)
             total_emi = emi + extension_amount + processing_fee # Add extension amount to monthly EMI
 
+        self.processing_fee.text = "{:.2f}".format(processing_fee)
         self.i_r.text = "{:.2f}".format(interest_amount)
         self.emi.text = "{:.2f}".format(emi)
         self.emi_processing_extension.text = "{:.2f}".format(total_emi)
         print(float(self.emi.text))
-      
+        self.remaining_tenure.text = remaining_tenure
       
         lapsed_settings = app_tables.fin_loan_settings.get(loans="lapsed fee")
         default_settings = app_tables.fin_loan_settings.get(loans="default fee")
@@ -699,7 +738,7 @@ class check_out(check_outTemplate):
             return None  # or handle the case where the loan ID is not found
 
     def pay_now_click(self, **event_args):
-        
+        remaining_tenure = self.remaining_tenure.text
         i_r = float(self.i_r.text)
       
         total_emi_amount = float(self.total_emi_amount_label.text)
@@ -815,7 +854,10 @@ class check_out(check_outTemplate):
                         if loan_details['lender_returns'] is None :
                             loan_details['lender_returns'] = 0
                         loan_details['lender_returns'] += i_r
-                        loan_details['remaining_amount'] = remaining_amount
+                        if remaining_tenure == 0:
+                          loan_details['remaining_amount'] -= emi_amount
+                        else:
+                          loan_details['remaining_amount'] = round(remaining_amount ,2)
                         loan_details['total_amount_paid'] += total_emi_amount
                         if loan_details['remaining_amount'] <= 0:
                           loan_details['loan_updated_status'] = 'close'
@@ -897,6 +939,7 @@ class check_out(check_outTemplate):
                         borrower_email=borrower_email,
                         lender_email=lender_email,
                         payment_type='pay now',
+                        remaining_tenure=remaining_tenure,
                         
                         
                     )
@@ -1028,6 +1071,8 @@ class check_out(check_outTemplate):
         'tenure':self.tenure_label.text,
         'lender_full_name' : self.selected_row['lender_full_name'],
         'for_remaining_amount_calculation': self.emi_processing_extension.text,
+        # 'remaining_tenure': self.tenure_label.text,
+        'remaining_tenure' : self.selected_row['remaining_tenure'],
     }
     
     # Open the part_payment form and pass loan_details as a parameter
