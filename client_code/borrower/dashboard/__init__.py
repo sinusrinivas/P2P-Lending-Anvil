@@ -22,7 +22,8 @@ class dashboard(dashboardTemplate):
 
     wallet = app_tables.fin_wallet.get(customer_id=self.user_Id)
     if wallet:
-      self.label_9.text = wallet['wallet_amount']
+      self.label_9.text = "{:.2f}".format((wallet['wallet_amount'] or 0))
+      self.label_2_copy_copy.text = "{:.2f}".format((wallet['wallet_amount'] or 0))
 
     user_profile = app_tables.fin_user_profile.get(customer_id=self.user_Id)
     if user_profile:
@@ -143,3 +144,10 @@ class dashboard(dashboardTemplate):
   def link_12_click(self, **event_args):
     """This method is called when the link is clicked"""
     pass
+
+  def button_1_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    customer_id = self.user_Id
+    email = self.email
+    anvil.server.call('fetch_profile_data_and_insert', email, customer_id)
+    open_form("wallet.wallet")

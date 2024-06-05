@@ -60,7 +60,7 @@ components:
     type: Spacer
     layout_properties: {grid_position: 'YAJAFA,RLWNPJ'}
 - name: column_panel_2
-  properties: {col_widths: '{"ICHEBR":10,"ZBHZPI":55,"GFOSTO":2,"KRZPIS":13,"QIOHZF":15,"TMHEQE":2,"RWRETV":13,"DCSWXM":15,"XTGGQT":25,"OKJARZ":5}'}
+  properties: {col_widths: '{"ICHEBR":15,"ZBHZPI":50,"GFOSTO":2,"KRZPIS":13,"QIOHZF":15,"TMHEQE":2,"RWRETV":13,"DCSWXM":15,"XTGGQT":25,"OKJARZ":5}'}
   type: ColumnPanel
   layout_properties: {slot: default}
   components:
@@ -121,7 +121,7 @@ components:
     type: Label
     layout_properties: {grid_position: 'BRLAXK,ZBHZPI CFFCZA,QIOHZF JVPHLH,BZAZHQ'}
   - name: spacer_4
-    properties: {height: '10'}
+    properties: {height: 15.25}
     type: Spacer
     layout_properties: {grid_position: 'BRLAXK,ZBHZPI CFFCZA,QIOHZF REMARR,DBLYMQ'}
   - name: label_7
@@ -147,7 +147,7 @@ components:
     type: Image
     layout_properties: {grid_position: 'BRLAXK,ZBHZPI CFFCZA,TMHEQE WHMPOF,PQMFHZ'}
   - name: label_4
-    properties: {text: Credit Limit, bold: true, font_size: 16}
+    properties: {text: 'Credit Limit :', bold: true, font_size: 16}
     type: Label
     layout_properties: {grid_position: 'BRLAXK,ZBHZPI CFFCZA,RWRETV URBVWU,OOQVBO'}
   - name: spacer_6
@@ -163,7 +163,7 @@ components:
     type: Label
     layout_properties: {grid_position: 'BRLAXK,ZBHZPI CFFCZA,DCSWXM RBAIUE,TBHGTF'}
   - name: spacer_7
-    properties: {height: '10'}
+    properties: {height: 15.25}
     type: Spacer
     layout_properties: {grid_position: 'BRLAXK,ZBHZPI CFFCZA,DCSWXM WBGNLE,DVSVUB'}
   - name: label_9
