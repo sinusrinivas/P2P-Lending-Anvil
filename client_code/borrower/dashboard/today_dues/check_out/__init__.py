@@ -59,51 +59,58 @@ class check_out(check_outTemplate):
             if remaining_tenure == 1:
               emi = remaining_amount
               remaining_tenure = 0
-              interest_amount = 0
+              # interest_amount = 0
               processing_fee = 0
+              ending_monthly_interest = total_i_a 
             else:
               remaining_tenure -= 1 
               emi = (loan_amount * monthly_interest_rate * ((1 + monthly_interest_rate) ** tenure)) / (((1 + monthly_interest_rate) ** tenure) - 1)
-              interest_amount = total_i_a
+            interest_amount = total_i_a
             total_emi = emi + extension_amount + processing_fee  # Add extension amount to monthly EMI
         elif emi_payment_type == 'Three Months':
             # Calculate EMI amount for 3 months
             if remaining_tenure < 3:
               emi = remaining_amount
+              ending_monthly_interest = total_i_a * remaining_tenure
               remaining_tenure = 0
-              interest_amount = 0
+              # interest_amount = 0
               processing_fee = 0
             elif remaining_tenure == 3:
               emi = remaining_amount
               remaining_tenure = 0
-              interest_amount = 0
+              # interest_amount = 0
               processing_fee = 0
+              ending_monthly_interest = total_i_a * 3
             else:
               remaining_tenure -= 3 
               emi = (loan_amount * monthly_interest_rate * ((1 + monthly_interest_rate) ** (tenure ))) / (((1 + monthly_interest_rate) ** (tenure)) - 1)
               emi*=3
             # Calculate EMI amount for 3 months
-              interest_amount = total_i_a * 3
+              # interest_amount = total_i_a * 3
               processing_fee = processing_fee * 3
+            interest_amount = total_i_a * 3
             total_emi = emi + extension_amount + processing_fee # Add extension amount to 3-month EMI
         elif emi_payment_type == 'Six Months':
             if remaining_tenure < 6:
               emi = remaining_amount
+              ending_monthly_interest = total_i_a * remaining_tenure
               remaining_tenure = 0
-              interest_amount = 0
+              # interest_amount = 0
               processing_fee = 0
             elif remaining_tenure == 6:
               emi = remaining_amount
+              ending_monthly_interest = total_i_a * remaining_tenure
               remaining_tenure = 0
-              interest_amount = 0
+              # interest_amount = 0
               processing_fee = 0
             else:
               remaining_tenure -= 6 
               emi = (loan_amount * monthly_interest_rate * ((1 + monthly_interest_rate) ** (tenure ))) / (((1 + monthly_interest_rate) ** (tenure)) - 1)
               emi*=6
             # Calculate EMI amount for 3 months
-              interest_amount = total_i_a * 6
+              # interest_amount = total_i_a * 6
               processing_fee = processing_fee * 6
+            interest_amount = total_i_a * 6
             total_emi = emi + extension_amount+ processing_fee  # Add extension amount to 6-month EMI
         else:
             # Default to monthly calculation
