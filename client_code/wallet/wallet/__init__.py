@@ -26,10 +26,10 @@ class wallet(walletTemplate):
 
     wallet_row =app_tables.fin_wallet.get(user_email=email)
     if wallet_row:
-      wallet_amount = wallet_row['wallet_amount']
-      formatted_amount = round(wallet_amount, 2)
-      self.balance_label.text = str(formatted_amount)
-      # self.balance_lable.text = wallet_row['wallet_amount']
+      # wallet_amount = wallet_row['wallet_amount']
+      # formatted_amount = round(wallet_amount, 2)
+      # self.balance_label.text = str(formatted_amount)
+      self.balance_lable.text = wallet_row['wallet_amount']
   
     # self.user_id = main_form_module.userId
     # user_id = self.user_id
