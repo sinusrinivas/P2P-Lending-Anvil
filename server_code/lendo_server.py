@@ -244,6 +244,7 @@ def add_lendor_bank_details_form_2(bank_id,branch_name, user_id):
     if lender_row:
       if row[0]['last_confirm']:
         lender_row['member_since'] = datetime.now().date()
+        lender_row.update()
       else:
         print("No matching lender record found for the provided email.")
     
