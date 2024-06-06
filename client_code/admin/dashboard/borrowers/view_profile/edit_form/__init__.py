@@ -6,6 +6,10 @@ from anvil.google.drive import app_files
 import anvil.users
 import anvil.tables as tables
 from anvil.tables import app_tables
+from datetime import datetime, timedelta
+from datetime import date
+
+
 
 class edit_form(edit_formTemplate):
   def __init__(self, get_customer_id_value, **properties):
@@ -14,6 +18,14 @@ class edit_form(edit_formTemplate):
 
     # Any code you write here will run before the form opens.
     self.data = tables.app_tables.fin_user_profile.search()
+    self.genders=tables.app_tables.fin_gender.search()
+    self.marital_statuses = tables.app_tables.fin_borrower_marrital_status.search()
+    self.qualification = tables.app_tables.fin_borrower_qualification.search()
+    self.address_type = tables.app_tables.fin_borrower_land_type.search()
+    self.organization_type = tables.app_tables.fin_borrower_organization_type.search()
+    self.employment_type = tables.app_tables.fin_borrower_employee_type.search()
+    self.account_type = tables.app_tables.fin_borrower_account_type.search()
+    self.salary_type = tables.app_tables.fin_borrower_salary_type.search()
   
 
     self.id_list = []
@@ -53,19 +65,19 @@ class edit_form(edit_formTemplate):
     self.mobile_list = []
     self.another_email = []
     self.company_name = []
-    self.organization_type = []
-    self.employment_type = []
+    self.organization_type_list = []
+    self.employment_type_list = []
     self.business_no = []
     self.company_landmark = []
     self.company_address = []
     self.annual_salary = []
     self.designation = []
     self.account_name = []
-    self.account_type = []
+    self.account_type_list = []
     self.account_number = []
     self.account_bank_branch = []
     self.ifsc_code = []
-    self.salary_type = []
+    self.salary_type_list = []
     self.select_bank = []
     self.net_bank = []
     self.father_name = []
@@ -76,6 +88,16 @@ class edit_form(edit_formTemplate):
     self.college_id = []
     self.college_address = []
     self.running_loan = []
+
+    self.drop_down_1.items=[(g['gender'],g['gender']) for g in self.genders]
+    self.drop_down_2.items = [(ms['borrower_marrital_status'], ms['borrower_marrital_status']) for ms in self.marital_statuses]
+    self.drop_down_3.items = [(q['borrower_qualification'], q['borrower_qualification']) for q in self.qualification]
+    self.drop_down_8.items = [(lt['land_type'], lt['land_type']) for lt in self.address_type]
+    self.drop_down_4.items = [(ot['borrower_organization_type'], ot['borrower_organization_type']) for ot in self.organization_type]
+    self.drop_down_5.items = [(et['borrower_employee_type'], et['borrower_employee_type']) for et in self.employment_type]
+    self.drop_down_6.items = [(at['borrower_account_type'], at['borrower_account_type']) for at in self.account_type]
+    self.drop_down_7.items = [(st['borrower_salary_type'], st['borrower_salary_type']) for st in self.salary_type]
+    
     a = -1
     for i in self.data:
       a+=1
@@ -116,19 +138,19 @@ class edit_form(edit_formTemplate):
       self.mobile_list.append(i['mobile'])
       self.another_email.append(i['another_email'])
       self.company_name.append(i['company_name'])
-      self.organization_type.append(i['organization_type'])
-      self.employment_type.append(i['employment_type'])
+      self.organization_type_list.append(i['organization_type'])
+      self.employment_type_list.append(i['employment_type'])
       self.business_no.append(i['business_no'])
       self.company_landmark.append(i['company_landmark'])
       self.company_address.append(i['company_address'])
       self.annual_salary.append(i['annual_salary'])
       self.designation.append(i['designation'])
       self.account_name.append(i['account_name'])
-      self.account_type.append(i['account_type'])
+      self.account_type_list.append(i['account_type'])
       self.account_number.append(i['account_number'])
       self.account_bank_branch.append(i['account_bank_branch'])
       # self.ifsc_code.append(i['ifsc_code'])
-      self.salary_type.append(i['salary_type'])
+      self.salary_type_list.append(i['salary_type'])
       # self.select_bank.append(i['select_bank'])
       # self.net_bank.append(i['net_bank'])
       self.father_name.append(i['father_name'])
@@ -146,7 +168,7 @@ class edit_form(edit_formTemplate):
 
       self.set_textbox_visibility(self.text_box_2,self.label_2,self.name_list[c])
       self.set_textbox_visibility(self.text_box_3,self.label_4, str(self.status_list[c]))
-      self.set_textbox_visibility(self.text_box_4,self.label_5, self.gender_list[c])
+      self.drop_down_1.selected_value=self.gender_list[c]
       self.set_textbox_visibility(self.text_box_5,self.label_6, self.age_list[c])
       self.set_textbox_visibility(self.text_box,self.label_7, self.dob_list[c])
       self.set_textbox_visibility(self.text_box_7,self.label_10, self.mobile_list[c])
@@ -156,13 +178,13 @@ class edit_form(edit_formTemplate):
       self.set_textbox_visibility(self.text_box_12,self.label_15, str(self.last_confirm_list[c]))
       self.set_textbox_visibility(self.text_box_13,self.label_16, str(self.mobile_check_list[c]))
       self.set_textbox_visibility(self.text_box_14,self.label_17, self.mother_tongue_list[c])
-      self.set_textbox_visibility(self.text_box_15,self.label_18, self.mother_status_list[c])
+      self.drop_down_2.selected_value = self.mother_status_list[c]
       self.set_textbox_visibility(self.text_box_17,self.label_20, self.space_name_list[c])
       self.set_textbox_visibility(self.text_box_24,self.label_27, self.about_list[c])
       self.set_textbox_visibility(self.text_box_26,self.label_29, str(self.alets_list[c]))
       self.set_textbox_visibility(self.text_box_35,self.label_38, str(self.terms_list[c]))
-      self.set_textbox_visibility(self.text_box_32,self.label_35, self.qualification_list[c])
-      self.set_textbox_visibility(self.text_box_25,self.label_28, self.address_type_list[c])
+      self.drop_down_3.selected_value = self.qualification_list[c]
+      self.drop_down_4.selected_value = self.address_type_list[c]
       self.set_textbox_visibility(self.text_box_34,self.label_37, self.street_list[c])
       self.set_textbox_visibility(self.text_box_27,self.label_30, self.build_name_list[c])
       self.set_textbox_visibility(self.text_box_29,self.label_32, self.house_no_list[c])
@@ -177,18 +199,18 @@ class edit_form(edit_formTemplate):
       self.set_textbox_visibility(self.text_box_23,self.label_26, str(self.approve_list[c]))
       self.set_textbox_visibility(self.text_box_1,self.label_1, self.another_email[c])
       self.set_textbox_visibility(self.text_box_6,self.label_3, self.company_name[c])
-      self.set_textbox_visibility(self.text_box_11,self.label_9, self.organization_type[c])
-      self.set_textbox_visibility(self.text_box_16,self.label_8, self.employment_type[c])
+      self.drop_down_4.selected_value=self.organization_type_list[c]
+      self.drop_down_5.selected_value = self.employment_type_list[c]
       self.set_textbox_visibility(self.text_box_31, self.label_14,self.business_no[c])
       self.set_textbox_visibility(self.text_box_36,self.label_33, self.company_landmark[c])
       self.set_textbox_visibility(self.text_box_37,self.label_39, self.company_address[c])
       self.set_textbox_visibility(self.text_box_38,self.label_40, self.annual_salary[c])
       self.set_textbox_visibility(self.text_box_39,self.label_41, self.designation[c])
       self.set_textbox_visibility(self.text_box_40,self.label_44, self.account_name[c])
-      self.set_textbox_visibility(self.text_box_41,self.label_45, self.account_type[c])
+      self.drop_down_6.selected_value = self.account_type_list[c]
       self.set_textbox_visibility(self.text_box_42,self.label_46, self.account_number[c])
       self.set_textbox_visibility(self.text_box_43,self.label_47, self.account_bank_branch[c])
-      self.set_textbox_visibility(self.text_box_45,self.label_49, self.salary_type[c])
+      self.drop_down_7.selected_value = self.salary_type_list[c]
       self.set_textbox_visibility(self.text_box_48,self.label_52, self.father_name[c])
       self.set_textbox_visibility(self.text_box_49,self.label_53, self.father_age[c])
       self.set_textbox_visibility(self.text_box_50,self.label_54, self.mother_name[c])
@@ -269,24 +291,33 @@ class edit_form(edit_formTemplate):
     
 
     # self.get = get_customer_id_value
-
-
   def button_2_click(self, **event_args):
     """This method is called when the button is clicked"""
+    Notification("You cannot edit the user age.").show()
     data = tables.app_tables.fin_user_profile.search()
+    # data = tables.app_tables.fin_borrower.search()
+    # data = tables.app_tables.fin_wallet.search()
+    # data = tables.app_tables.fin_wallet_bank_account_table.search()
 
     id_list = [i['customer_id'] for i in data]
 
     if self.get in id_list:
         a = id_list.index(self.get)
         user_data = data[a]
+    
 
         # Update user profile data with values from the text boxes
         user_data['full_name'] = self.text_box_2.text
         user_data['profile_status'] = bool(self.text_box_3.text)
-        user_data['gender'] = self.text_box_4.text
-        user_data['user_age'] = int(self.text_box_5.text)
-        # user_data['date_of_birth'] = self.date_picker_1.date
+        user_data['gender'] = self.drop_down_1.selected_value
+        user_data['user_age'] = int(self.text_box_5.text) 
+        dob = self.calculate_dob_from_age(int(self.text_box_5.text))
+        if dob > date.today():
+          Notification("Date of Birth cannot be in the future.").show()
+          return
+        
+        user_data['date_of_birth'] = dob.strftime('%Y-%m-%d')
+        # user_data['date_of_birth'] = self.date_picker_1
         user_data['mobile'] = self.text_box_7.text
         user_data['aadhaar_no'] = self.text_box_8.text
         user_data['pan_number'] = self.text_box_9.text
@@ -294,7 +325,7 @@ class edit_form(edit_formTemplate):
         user_data['last_confirm'] = bool(self.text_box_12.text)
         user_data['mobile_check'] = bool(self.text_box_13.text)
         user_data['mouther_tounge'] = self.text_box_14.text
-        user_data['marital_status'] = self.text_box_15.text
+        user_data['marital_status'] = self.drop_down_2.selected_value
         # user_data['Date_mariage'] = self.date_picker_2.date
         user_data['spouse_name'] = self.text_box_17.text
         user_data['spouse_mobile'] = self.text_box_18.text
@@ -304,31 +335,31 @@ class edit_form(edit_formTemplate):
         user_data['usertype'] = self.text_box_22.text
         user_data['registration_approve'] = bool(self.text_box_23.text)
         user_data['about'] = self.text_box_24.text
-        user_data['address_type'] = self.text_box_25.text
+        user_data['address_type'] = self.drop_down_8.selected_value
         user_data['alerts'] = bool(self.text_box_26.text)
         user_data['building_name'] = self.text_box_27.text
         user_data['house_landmark'] = self.text_box_28.text
         user_data['house_no'] = self.text_box_29.text
         user_data['pincode'] = self.text_box_30.text
         user_data['business_no'] = self.text_box_31.text
-        user_data['qualification'] = self.text_box_32.text
+        user_data['qualification'] = self.drop_down_3.selected_value
         user_data['state'] = self.text_box_33.text
         user_data['street'] = self.text_box_34.text
         user_data['terms'] = bool(self.text_box_35.text)
         user_data['another_email'] = self.text_box_1.text
         user_data['company_name'] = self.text_box_6.text
-        user_data['organization_type'] = self.text_box_11.text
-        user_data['employment_type'] = self.text_box_16.text
+        user_data['organization_type'] = self.drop_down_4.selected_value
+        user_data['employment_type'] = self.drop_down_5.selected_value
         user_data['company_landmark'] = self.text_box_36.text
         user_data['company_address'] = self.text_box_37.text
         user_data['annual_salary'] = self.text_box_38.text
         user_data['designation'] = self.text_box_39.text
         user_data['account_name'] = self.text_box_40.text
-        user_data['account_type'] = self.text_box_41.text
+        user_data['account_type'] = self.drop_down_6.selected_value
         user_data['account_number'] = self.text_box_42.text
         user_data['account_bank_branch'] = self.text_box_43.text
         # user_data['ifsc_code'] = self.text_box_44.text
-        user_data['salary_type'] = self.text_box_45.text
+        user_data['salary_type'] = self.drop_down_7.selected_value
         # user_data['select_bank'] = self.text_box_46.text
         # user_data['net_bank'] = self.text_box_47.text
         user_data['father_name'] = self.text_box_48.text
@@ -338,20 +369,50 @@ class edit_form(edit_formTemplate):
         user_data['college_name'] = self.text_box_52.text
         user_data['college_id'] = self.text_box_53.text
         user_data['college_address'] = self.text_box_54.text
-        # user_data['running_Home_Loan'] = self.text_box_55.text
-
         # Calculate ascend score and update
         ascend_value = anvil.server.call('final_points_update_ascend_table', self.get)
         if ascend_value is not None:
-            user_data['ascend_value'] = float(ascend_value)
-
-            borrower = app_tables.fin_borrower.get(customer_id=self.get)
-            if borrower:
-                borrower['ascend_score'] = ascend_value
-       
+    # Convert ascend_value to float before assigning it to ascend_score
+         user_data['ascend_value'] = float(ascend_value)
+         # Fetch the borrower data
+         borrower = app_tables.fin_borrower.get(customer_id=self.get)
+         if borrower:
+            borrower['user_name'] = self.text_box_2.text
+         # Update the wallet data
+         wallet = app_tables.fin_wallet.get(customer_id=self.get)
+         if wallet:
+            wallet['user_name'] = self.text_box_2.text 
+         # update the foreclosure
+         foreclosure = app_tables.fin_foreclosure.get(borrower_customer_id=self.get)
+         if foreclosure:
+            foreclosure['borrower_name']=self.text_box_2.text
+         # update the extends
+         extends_loan = app_tables.fin_extends_loan.get(borrower_customer_id=self.get)
+         if extends_loan:
+            extends_loan['borrower_full_name']=self.text_box_2.text  
+         # update the loan_details 
+         loan_details = app_tables.fin_loan_details.get(borrower_customer_id=self.get)
+         if loan_details:
+            loan_details['borrower_full_name']=self.text_box_2.text    
+  
+              # Assign the converted value to ascend_score
+            borrower['ascend_score'] = float(ascend_value)
         # data.update()
-        print(f"Updated user profile and borrower table for customer_id: {self.get}")
+        print(f"Updated user profile, borrower, foreclosure, extends loan, loand etails and wallet table for customer_id: {self.get}")
         open_form('admin.dashboard.borrowers.view_profile', self.get)
+  def calculate_dob_from_age(self, age):
+      """Calculate date of birth from age"""
+      today = date.today()
+      year_of_birth = today.year - age
+      dob = date(year_of_birth, today.month, today.day)
+      # Adjust if the birthdate is not valid (e.g., leap year)
+      while True:
+        try:
+          dob = dob.replace(year=year_of_birth)
+          break
+        except ValueError:
+          year_of_birth -= 1
+      return dob    
 
   # def button_2_click(self, **event_args):
   #   """This method is called when the button is clicked"""
