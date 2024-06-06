@@ -29,8 +29,4 @@ class borrower_portfolio_first_page(borrower_portfolio_first_pageTemplate):
 
             self.repeating_panel_1.items = self.result
 
-    def link_1_click(self, **event_args):
-        """This method is called when the link is clicked"""
-        # Retrieve the customer_id associated with the clicked link
-        customer_id = event_args['sender'].item['customer_id']
-        open_form('borrower.dashboard.borrower_portfolio', customer_id=customer_id)
+            

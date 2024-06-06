@@ -27,7 +27,7 @@ components:
   layout_properties: {column: SBDNUU}
   event_bindings: {click: link_1_click}
 - name: label_4
-  properties: {}
+  properties: {align: center}
   type: Label
   layout_properties: {column: DCUOBI}
   data_bindings:

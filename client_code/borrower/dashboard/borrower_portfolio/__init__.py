@@ -16,12 +16,13 @@ import anvil.media
 # from kivy.utils import get_color_from_hex
 
 class borrower_portfolio(borrower_portfolioTemplate):
-  def __init__(self, **properties):
+  def __init__(self, selected_row, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
+    self.id= selected_row['customer_id']
     self.email = main_form_module.email
     print(self.email)
-    self.user_Id = main_form_module.userId
+    # self.id = main_form_module.userId
     self.create_bar_chart()
 
     # Set the label text with today's date
@@ -30,7 +31,7 @@ class borrower_portfolio(borrower_portfolioTemplate):
 
 
     # Retrieve user profile based on user_Id
-    ascend = app_tables.fin_user_profile.get(customer_id=self.user_Id)
+    ascend = app_tables.fin_user_profile.get(customer_id=self.id)
     self.image_4.source = ascend['user_photo']
     self.label_4.text = "Hello" " " + ascend['full_name']
     self.name = ascend['full_name']
@@ -86,7 +87,7 @@ class borrower_portfolio(borrower_portfolioTemplate):
 
 
 
-    rows = app_tables.fin_loan_details.search(borrower_customer_id=self.user_Id, loan_updated_status=q.any_of(
+    rows = app_tables.fin_loan_details.search(borrower_customer_id=self.id, loan_updated_status=q.any_of(
           q.like('accept%'),
           q.like('Approved%'),
           q.like('approved%'),
@@ -96,21 +97,21 @@ class borrower_portfolio(borrower_portfolioTemplate):
         ))
     self.label_5_copy.text = len(rows)
     
-    row = app_tables.fin_loan_details.search(borrower_customer_id=self.user_Id, loan_updated_status=q.any_of(
+    row = app_tables.fin_loan_details.search(borrower_customer_id=self.id, loan_updated_status=q.any_of(
           q.like('closed%'),
           q.like('Closed%'),
           q.like('CLOSED%'),
         ))
     self.label_9.text = len(row)
     
-    no_of_disbursed_loans = app_tables.fin_loan_details.search(borrower_customer_id=self.user_Id, loan_updated_status=q.any_of(
+    no_of_disbursed_loans = app_tables.fin_loan_details.search(borrower_customer_id=self.id, loan_updated_status=q.any_of(
           q.like('disbursed loan%'),
           q.like('Disbursed loan%')
         ))
     self.label_3_copy.text = len(no_of_disbursed_loans)
 
     amount_of_disbursed_loans = app_tables.fin_loan_details.search(
-    borrower_customer_id=self.user_Id,
+    borrower_customer_id=self.id,
     loan_updated_status="disbursed loan"
 )
 
@@ -124,7 +125,7 @@ class borrower_portfolio(borrower_portfolioTemplate):
 
       
     # Fetch the loan status data for the given customer_id
-    loan_status_data = self.get_loan_status_data(self.user_Id)
+    loan_status_data = self.get_loan_status_data(self.id)
     
     # Create the pie chart with the fetched data
     self.create_pie_chart(loan_status_data)
