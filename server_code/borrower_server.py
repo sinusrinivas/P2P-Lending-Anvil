@@ -536,20 +536,26 @@ def get_group_points(customer_id):
 
 
 @anvil.server.callable
-def generate_portfolio_pdf():
-    # Create an instance of the PDFTemplate form
-    pdf_template =PDFTemplate()
-    
-    # Here, you can populate the form with data
-    pdf_template.label_name.text = "John Doe"
-    pdf_template.label_project.text = "Example Project"
-    # Add more data to the form as needed
-    
-    # Generate the PDF from the form
-    pdf_file = anvil.pdf.render_form(pdf_template)
-    
-    return pdf_file
+def generate_pdf(form_data):
+    """
+    Renders the form as a PDF and returns the Media object.
 
+    Args:
+        form_data (dict): A dictionary containing form field values.
+
+    Returns:
+        anvil.media.Media: The Media object representing the generated PDF.
+    """
+
+    # Extract data from the dictionary for clarity
+    name = form_data.get("name")
+    email = form_data.get("email")
+    # ... (add more variables as needed)
+
+    # Create a PDF using the form name and any additional data you want to include
+    pdf = anvil.pdf.render_form("borrower_portfolio", name, email)  # Replace "Form1" with your form's name
+
+    return pdf
 
 # second
 # def get_user_points(id):

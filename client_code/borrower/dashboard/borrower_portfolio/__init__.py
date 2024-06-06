@@ -31,6 +31,7 @@ class borrower_portfolio(borrower_portfolioTemplate):
     ascend = app_tables.fin_user_profile.get(customer_id=self.user_Id)
     self.image_4.source = ascend['user_photo']
     self.label_4.text = "Hello" " " + ascend['full_name']
+    self.name = ascend['full_name']
     self.label_15.text = ascend['mobile']
     self.label_16.text = ascend['date_of_birth']
     self.label_17.text = ascend['gender']
@@ -202,12 +203,14 @@ class borrower_portfolio(borrower_portfolioTemplate):
 
   def button_1_click(self, **event_args):
     """This method is called when the button is clicked"""
-    # Call the server function to generate the PDF
-    pdf = anvil.server.call('generate_portfolio_pdf')
-        # Trigger the download
-    download(pdf)
+    form_data = {
+        "name": self.name,
+        "email": self.email,
+        # ... (add more fields as needed)
+    }
 
-  
+    # Send a request to the server to generate the PDF
+    media_object = anvil.server.call("generate_pdf", form_data)
 
-  
-  
+    # Download the PDF using anvil.media.download
+    anvil.media.download(media_object)
