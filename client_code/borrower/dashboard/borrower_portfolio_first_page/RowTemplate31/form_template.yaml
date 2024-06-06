@@ -4,7 +4,7 @@ container:
   properties: {align: center}
 components:
 - name: label_1
-  properties: {}
+  properties: {align: center}
   type: Label
   layout_properties: {column: JKSDUP}
   data_bindings:
