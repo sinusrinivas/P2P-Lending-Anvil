@@ -413,7 +413,8 @@ components:
     event_bindings: {click: link_10_click}
     name: link_10
   - name: link_16
-    properties: {text: lender Portfolio}
+    properties: {text: Portfolio, icon: _/theme/borrower/dashboard/portfolio.png,
+      foreground: '#013065'}
     type: Link
     layout_properties: {grid_position: 'AMEFUQ,ARGBGO'}
     event_bindings: {click: link_16_click}

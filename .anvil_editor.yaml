@@ -294,6 +294,7 @@ unique_ids:
     borrower.dashboard.today_dues.payment_details_t: Z2HBMIARMVXDAUCI63IT56ARRGJKDSV2
     bank_users.main_form.products_main_form.personal_loan.home_renovation_loan: '1713938826548976634706020.7678'
     borrower.dashboard.new_loan_request: YEMASWKVMGUFBFTK4UDB7RNEIXH4XV64
+    borrower.dashboard.borrower_portfolio_first_page.RowTemplate31: '1717671802810266637024000.58243'
     admin.dashboard.manage_cms.add_general_dropdowns.edit_present_address: '171040037015774293132137.13895'
     borrower.dashboard.extension_loan_request.ItemTemplate75: NKSJCQVDYQAQURMW6GFWGEYLX46WKZG3
     borrower.dashboard.extension_loan_request.payment_details_extension.RowTemplate39: S3VFLC5NDKKOGKHRTN7HZVE4DEZRMQRH
@@ -368,6 +369,7 @@ unique_ids:
     admin.dashboard.manage_ascend.add_subcategory.ItemTemplate74: '1709734065080628871844250.8976'
     borrower.dashboard.view_loans.ItemTemplate45: 4JRZRQ7FWWIMPHC7XGTMTEDIFOQNNZ3G
     admin.dashboard.risk_pool: '1699529482874413597143832.6982'
+    borrower.dashboard.borrower_portfolio_first_page: '1717671611958813432017046.4667'
     admin.dashboard.manage_ascend.add_subcategory.ItemTemplate90: '1710783183831809212349578.099'
     admin.dashboard.performance_tracker: '1701242878909114559440962.97266'
     bank_users.user_form: '1700630694974484249170019.45953'

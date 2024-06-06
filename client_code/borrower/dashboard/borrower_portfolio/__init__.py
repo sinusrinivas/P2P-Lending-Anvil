@@ -12,6 +12,7 @@ from ....bank_users.main_form import main_form_module
 from ....bank_users.user_form import user_form
 from ....bank_users.user_form import user_module
 import datetime
+import anvil.media
 # from kivy.utils import get_color_from_hex
 
 class borrower_portfolio(borrower_portfolioTemplate):
@@ -19,6 +20,7 @@ class borrower_portfolio(borrower_portfolioTemplate):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
     self.email = main_form_module.email
+    print(self.email)
     self.user_Id = main_form_module.userId
     self.create_bar_chart()
 
@@ -200,17 +202,10 @@ class borrower_portfolio(borrower_portfolioTemplate):
 
         # Display the chart in an Anvil component
         self.plot_2.figure = fig
+     
 
   def button_1_click(self, **event_args):
     """This method is called when the button is clicked"""
-    form_data = {
-        "name": self.name,
-        "email": self.email,
-        # ... (add more fields as needed)
-    }
-
-    # Send a request to the server to generate the PDF
-    media_object = anvil.server.call("generate_pdf", form_data)
-
-    # Download the PDF using anvil.media.download
+    media_object = anvil.server.call('create_zaphod_pdf')
     anvil.media.download(media_object)
+    

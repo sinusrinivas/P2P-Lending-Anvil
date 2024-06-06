@@ -532,30 +532,10 @@ def get_group_points(customer_id):
     return None
 
 
-
-
-
 @anvil.server.callable
-def generate_pdf(form_data):
-    """
-    Renders the form as a PDF and returns the Media object.
-
-    Args:
-        form_data (dict): A dictionary containing form field values.
-
-    Returns:
-        anvil.media.Media: The Media object representing the generated PDF.
-    """
-
-    # Extract data from the dictionary for clarity
-    name = form_data.get("name")
-    email = form_data.get("email")
-    # ... (add more variables as needed)
-
-    # Create a PDF using the form name and any additional data you want to include
-    pdf = anvil.pdf.render_form("borrower_portfolio", name, email)  # Replace "Form1" with your form's name
-
-    return pdf
+def create_zaphod_pdf():
+  media_object = anvil.pdf.render_form('borrower.dashboard.borrower_portfolio')
+  return media_object
 
 # second
 # def get_user_points(id):
