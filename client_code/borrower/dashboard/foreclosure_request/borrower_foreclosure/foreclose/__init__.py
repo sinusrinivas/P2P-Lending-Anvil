@@ -260,55 +260,94 @@ class foreclose(forecloseTemplate):
     # total_payments_made = selected_row['total_payments_made']
     tenure = selected_row['tenure']  # Assuming tenure is given in months
     tenure = int(tenure)
+    emi_payment_type = selected_row['emi_payment_type']
+    loan_id = selected_row['loan_id']
+    extension_months = self.get_extension_details(loan_id, total_payments_made)
+    tenure = tenure + extension_months
+    print(tenure)
+    
     self.interest_rate = selected_row['interest_rate']
-    monthly_interest_rate = selected_row['interest_rate'] / (12 * 100)  # Assuming interest rate is in percentage
-    factor = (1 + monthly_interest_rate) ** tenure  # Calculate (1 + r)^t without using pow
-    emi = loan_amount * monthly_interest_rate * factor / (factor - 1)
-    emi = int(emi)
-    monthly_installment = loan_amount / tenure
-    monthly_installment = int(monthly_installment)
-    print(f"loan_amount: {loan_amount}")
-    print(f"emi: {emi}")
-    print(f"factor: {factor}")
-    # print(f"total payments made: {total_payments_made}")
-    paid_amount = emi * self.total_payments_made
-    print(f"emi: {emi}")
-    paid_amount = int(paid_amount)
-    monthly_interest_amount=emi-monthly_installment
-    monthly_interest_amount=int( monthly_interest_amount)
+    
+    monthly_interest_rate = selected_row['interest_rate'] / 12 / 100
+    if emi_payment_type == 'Monthly':
+              self.label_11.text = "Monthly EMI  :"
+              total_payments_made = total_payments_made
+              emi = (loan_amount * monthly_interest_rate * ((1 + monthly_interest_rate) ** tenure)) / (((1 + monthly_interest_rate) ** tenure) - 1)
+    elif emi_payment_type == 'Three Months':
+              self.label_11.text = "Three Months EMI  :"
+              total_payments_made = total_payments_made * 3
+              emi = (loan_amount * monthly_interest_rate * ((1 + monthly_interest_rate) ** (tenure ))) / (((1 + monthly_interest_rate) ** (tenure)) - 1)
+              emi*=3
+    elif emi_payment_type == 'Six Months':
+              self.label_11.text = "Six Months EMI  :"
+              total_payments_made = total_payments_made * 6
+              emi = (loan_amount * monthly_interest_rate * ((1 + monthly_interest_rate) ** (tenure ))) / (((1 + monthly_interest_rate) ** (tenure)) - 1)
+              emi*=6
+    else:
+            # Default to monthly calculation
+            emi = (loan_amount * monthly_interest_rate * ((1 + monthly_interest_rate) ** tenure)) / (((1 + monthly_interest_rate) ** tenure) - 1)
 
-    outstanding_amount= loan_amount - (monthly_installment*self.total_payments_made)
-    outstanding_amount = int(outstanding_amount)
-    oustanding_month = tenure-self.total_payments_made
-    outstanding_amount_i_amount = monthly_interest_amount*oustanding_month
+    # monthly_interest_rate = selected_row['interest_rate'] / (12 * 100)  # Assuming interest rate is in percentage
+    # factor = (1 + monthly_interest_rate) ** tenure  # Calculate (1 + r)^t without using pow
+    # emi = loan_amount * monthly_interest_rate * factor / (factor - 1)
+    # emi = int(emi)
+    # monthly_installment = loan_amount / tenure
+    # monthly_installment = int(monthly_installment)
+    # print(f"loan_amount: {loan_amount}")
+    # print(f"emi: {emi}")
+    # print(f"factor: {factor}")
+    # # print(f"total payments made: {total_payments_made}")
+    paid_amount = self.selected_row['total_repayment_amount'] - self.selected_row['remaining_amount']
+    # print(f"emi: {emi}")
+    # paid_amount = int(paid_amount)
+    # monthly_interest_amount=emi-monthly_installment
+    # monthly_interest_amount=int( monthly_interest_amount)
+
+    paid_interest_amount = self.selected_row['lender_returns']
+    
+    outstanding_amount= self.selected_row['remaining_amount']
+    outstanding_amount = round(int(outstanding_amount) ,2)
+    oustanding_month = tenure - total_payments_made
+    outstanding_amount_i_amount = self.selected_row['total_interest_amount'] - self.selected_row['lender_returns']
     outstanding_amount_i_amount = int(outstanding_amount_i_amount)
     total_outstanding_amount = outstanding_amount+outstanding_amount_i_amount
     
     product_id_to_search = selected_row['product_id']
     data = tables.app_tables.fin_product_details.search(product_id=product_id_to_search)
-    self.foreclosure_fee_lst = []    
-    for i in data:
-        self.foreclosure_fee_lst.append(i['foreclosure_fee'])
+    for data_1 in data:
+      forclosure_fee = data_1['foreclosure_fee']
+      if forclosure_fee:
+        foreclose_amount =  self.selected_row['remaining_amount'] * forclosure_fee  / 100
+        print(foreclose_amount)
+        self.foreclose_fee_component.text = forclosure_fee
+    # self.foreclosure_fee_lst = []    
+    # for i in data:
+    #     self.foreclosure_fee_lst.append(i['foreclosure_fee'])
       
-    foreclosure_fee_str = ', '.join(map(str, self.foreclosure_fee_lst))
-    self.foreclose_fee_component.text = foreclosure_fee_str
+    # foreclosure_fee_str = ', '.join(map(str, self.foreclosure_fee_lst))
+    # self.foreclose_fee_component.text = foreclose_amount
+    
+    # self.foreclose_fee = float(self.foreclose_fee_component.text)
+    # foreclose_amount = outstanding_amount * (self.foreclose_fee/100)
+
+    # self.foreclose_fee_component.text = foreclose_amount
     self.foreclose_fee = float(self.foreclose_fee_component.text)
-    foreclose_amount = outstanding_amount * (self.foreclose_fee/100)
     foreclose_amount = float(foreclose_amount)
+    print(foreclose_amount)
+    
     total_due_amount = outstanding_amount + foreclose_amount
     total_due_amount = float(total_due_amount)
 
-    self.ra_label.text = f"{outstanding_amount}"
-    self.tda_label.text = f"{total_due_amount}"
-    self.emi_label.text = f"{emi}"
-    self.pa_label.text = f"{foreclose_amount}"
-    self.paid_label.text = f"{paid_amount}"
-    self.mi_label.text = f"{monthly_installment}"
-    self.fir_label.text = f"{monthly_interest_amount}"
-    self.label_20.text = f"{monthly_installment}"
-    self.label_8.text = f"{outstanding_amount_i_amount}"
-    self.label_18.text = f"{total_outstanding_amount} "
-    self.label_17.text = f"{outstanding_amount}"
+    self.ra_label.text = f"{outstanding_amount:.2f}"
+    self.tda_label.text = f"{total_due_amount:.2f}"
+    self.emi_label.text = f"{emi:.2f}"
+    self.pa_label.text = f"{foreclose_amount:.2f}"
+    self.paid_label.text = f"{paid_amount:.2f}"
+    self.fir_label.text = f"{paid_interest_amount:.2f}"
+    self.label_20.text = f"{emi:.2f}"
+    self.label_8.text = f"{outstanding_amount_i_amount:.2f}"
+    self.label_18.text = f"{total_outstanding_amount:.2f} "
+    self.label_17.text = f"{outstanding_amount:.2f}"
     self.label_23.text = f"({total_payments_made} months)"
     self.label_24.text = f"({oustanding_month} months)"
     
@@ -362,3 +401,17 @@ class foreclose(forecloseTemplate):
             alert('Please enter a reason for foreclosure.')
     else:
         alert('Please accept the Terms and Conditions.')
+
+
+
+
+  def get_extension_details(self, loan_id, emi_number):
+        extension_row = app_tables.fin_extends_loan.get(
+            borrower_customer_id=self.selected_row['borrower_customer_id'],
+            loan_id=loan_id,
+            emi_number=q.less_than_or_equal_to(emi_number)
+        )
+        extension_months = 0
+        if extension_row is not None and extension_row['status'] == 'approved':
+            extension_months = extension_row['total_extension_months']
+        return  extension_months

@@ -18,7 +18,7 @@ services:
   client_config: {}
   server_config: {}
 startup: {type: form, module: bank_users.main_form}
-package_name: bank_client
+package_name: pip_install_reportlab
 allow_embedding: false
 name: P2P Lending App
 runtime_options:
@@ -1206,15 +1206,15 @@ db_schema:
     - name: lender_full_name
       admin_ui: {width: 200, order: 14.5}
       type: string
-    - name: lender_customer_id
-      admin_ui: {width: 200}
-      type: string
     - name: 'status_timestamp '
       admin_ui: {width: 200, order: 20}
       type: datetime
     - name: product_name
       admin_ui: {width: 200, order: 21}
       type: string
+    - name: lender_customer_id
+      admin_ui: {width: 200, order: 10.5}
+      type: number
     title: fin_extends_loan
   fin_borrower_marrital_status:
     client: full

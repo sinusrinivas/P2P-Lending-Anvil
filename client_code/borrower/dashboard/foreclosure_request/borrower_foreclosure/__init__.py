@@ -199,18 +199,22 @@ class borrower_foreclosure(borrower_foreclosureTemplate):
                         open_form('borrower.dashboard.foreclosure_request')
                 else:
                     total_payments_made = 0
+                    self.label_tpm.text = 0
                     self.button_2.visible = False
                     self.button_foreclose.visible = False
                     self.button_5.visible = True
+                    # self.label_tpm.text = 0
                     alert("No EMIs found for this loan.") 
                     open_form('borrower.dashboard')
             else:
                 total_payments_made = 0
+                # self.label_tpm.text = 0
                 alert("No EMIs found for this loan.")   
-                open_form('borrower.dashboard')
+                # open_form('borrower.dashboard')
         except ValueError as e:
             alert(str(e))
-
+            
+            
         foreclosure_row = app_tables.fin_foreclosure.get(loan_id=loan_id)
         if foreclosure_row:
                                 foreclosure_amount = foreclosure_row['foreclose_amount']
@@ -325,7 +329,7 @@ class borrower_foreclosure(borrower_foreclosureTemplate):
           
         foreclosure_amount = foreclosure_row['foreclose_amount']
         total_due_amount = foreclosure_row['total_due_amount']
-        total_amount = foreclosure_amount + total_due_amount + extra_fee
+        total_amount =  total_due_amount + extra_fee
         total_extra_fee = foreclosure_amount + float(self.extra_fee.text)
 
         # self.foreclose_amount.text ="{:.2f}".format(foreclosure_amount)
@@ -349,7 +353,7 @@ class borrower_foreclosure(borrower_foreclosureTemplate):
                 # Update remaining amount in loan details
                 loan_row = app_tables.fin_loan_details.get(loan_id=loan_id)
                 if loan_row:
-                    loan_row['remaining_amount'] -= total_due_amount
+                    loan_row['remaining_amount'] = 0
                     loan_row['total_amount_paid'] += total_amount
                     loan_row['lender_returns'] += foreclosure_amount
                     loan_row['loan_updated_status'] = 'closed'

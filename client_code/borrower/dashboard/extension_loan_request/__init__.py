@@ -44,7 +44,11 @@ class extension_loan_request(extension_loan_requestTemplate):
                             'loan_updated_status': loan['loan_updated_status'],
                             'emi_payment_type': loan['emi_payment_type'],
                             'eligible': self.is_loan_eligible(loan),
-                            'user_photo': lender_details['user_photo']
+                            'user_photo': lender_details['user_photo'],
+                            'lender_returns' : loan['lender_returns'],
+                              'remaining_amount' : loan['remaining_amount'],
+                              'total_repayment_amount' : loan['total_repayment_amount'],
+                              'total_interest_amount' : loan['total_interest_amount'],
                         }
                         loans.append(loan_data)
 

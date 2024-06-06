@@ -39,6 +39,16 @@ class extension_details(extension_detailsTemplate):
                   # self.selected_row['status'] = 'approved'
                   # self.selected_row.update()
                   self.update_extension_status('approved')
+                  loan = app_tables.fin_loan_details.get(loan_id=self.selected_row['loan_id'])
+                  if loan is not None:
+                      # Get the current remaining amount
+                      current_remaining_amount = loan['remaining_amount'] or 0  # If remaining amount is None, default to 0
+                      # Add the extension amount to the current remaining amount
+                      new_remaining_amount = current_remaining_amount + self.selected_row['extension_amount']
+                      # Update the remaining amount in the loan details table
+                      loan['remaining_amount'] = new_remaining_amount
+                      loan.update()
+                    
                   Notification("Borrower request has been automatically approved.").show()
                   open_form("lendor.dashboard.view_loan_extension_requests")
 
