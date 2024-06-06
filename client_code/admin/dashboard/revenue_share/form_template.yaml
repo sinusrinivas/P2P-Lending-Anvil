@@ -22,9 +22,17 @@ components:
   - name: data_grid_1
     properties:
       columns:
-      - {id: JKSDUP, title: Customer ID, data_key: column_1}
-      - {id: VJQQOR, title: Amount Deposited, data_key: column_2}
-      - {id: OJLQEN, title: Column 3, data_key: column_3}
+      - {id: JKSDUP, title: Customer ID, data_key: column_1, width: 123.5555419921875,
+        expand: false}
+      - {id: VJQQOR, title: Amount Deposited, data_key: column_2, width: 145.33334350585938,
+        expand: false}
+      - {id: OJLQEN, title: Lender ROI, data_key: column_3, width: 117.111083984375,
+        expand: false}
+      - {id: PEKWCK, data_key: column_1, title: Platform ROI, width: 111.88885498046875,
+        expand: false}
+      - {id: ELZCXA, data_key: column_2, title: TDS 10% on(Lender ROI), width: 200.22222900390625,
+        expand: false}
+      - {id: DORFXB, data_key: column_3, title: Lender Commission(Lender ROI-TDS)}
     type: DataGrid
     components:
     - name: repeating_panel_1
