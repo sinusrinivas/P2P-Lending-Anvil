@@ -200,3 +200,14 @@ class borrower_portfolio(borrower_portfolioTemplate):
         # Display the chart in an Anvil component
         self.plot_2.figure = fig
 
+  def button_1_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    # Call the server function to generate the PDF
+    pdf = anvil.server.call('generate_portfolio_pdf')
+        # Trigger the download
+    download(pdf)
+
+  
+
+  
+  

@@ -10,6 +10,8 @@ import anvil.server
 from datetime import datetime
 # from . import bessem as bessemfunctions
 from . import wallet
+import anvil.pdf
+
 
 
 @anvil.server.callable
@@ -529,6 +531,26 @@ def get_group_points(customer_id):
 
     return None
 
+
+
+
+
+@anvil.server.callable
+def generate_portfolio_pdf():
+    # Create an instance of the PDFTemplate form
+    pdf_template =PDFTemplate()
+    
+    # Here, you can populate the form with data
+    pdf_template.label_name.text = "John Doe"
+    pdf_template.label_project.text = "Example Project"
+    # Add more data to the form as needed
+    
+    # Generate the PDF from the form
+    pdf_file = anvil.pdf.render_form(pdf_template)
+    
+    return pdf_file
+
+
 # second
 # def get_user_points(id):
 #     users = app_tables.fin_user_profile.search(customer_id=id)
@@ -819,3 +841,11 @@ def get_group_points(customer_id):
 
 #         return group_points
 #     return None
+
+
+
+
+
+
+
+

@@ -245,4 +245,14 @@ components:
       properties: {}
       type: Plot
       layout_properties: {grid_position: 'GAMHRN,ESDVWM'}
+    - name: spacer_4
+      properties: {height: 32}
+      type: Spacer
+      layout_properties: {grid_position: 'BQCPNL,CHIQFV'}
+    - name: button_1
+      properties: {text: Download Portfolio, bold: true, foreground: white, role: outlined-button,
+        background: '#013065'}
+      type: Button
+      layout_properties: {grid_position: 'RCBGAD,AYSDUL'}
+      event_bindings: {click: button_1_click}
 is_package: true
