@@ -116,6 +116,10 @@ class foreclosure_request(foreclosure_requestTemplate):
                                     'borrower_customer_id' : loan['borrower_customer_id'],
                                     'lender_email_id' : loan['lender_email_id'],
                                     'borrower_email_id' : loan['borrower_email_id'],
+                                    'lender_returns' : loan['lender_returns'],
+                                    'remaining_amount' : loan['remaining_amount'],
+                                    'total_repayment_amount' : loan['total_repayment_amount'],
+                                    'total_interest_amount' : loan['total_interest_amount'],
                                 }
                                 loans.append(loan_data)
 
