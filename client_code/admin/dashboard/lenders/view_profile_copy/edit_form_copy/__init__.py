@@ -77,6 +77,7 @@ class edit_form_copy(edit_form_copyTemplate):
     self.college_id = []
     self.college_address = []
     self.running_loan = []
+    
     a = -1
     for i in self.data:
       a+=1
@@ -147,6 +148,7 @@ class edit_form_copy(edit_form_copyTemplate):
 
       self.set_textbox_visibility(self.text_box_2,self.label_2,self.name_list[c])
       self.set_textbox_visibility(self.text_box_3,self.label_4, str(self.status_list[c]))
+      # self.set_dropdown_visibility(self.drop_down_gender, self.label_5, self.gender_list[c], self.gender_options)
       self.set_textbox_visibility(self.text_box_4,self.label_5, self.gender_list[c])
       self.set_textbox_visibility(self.text_box_5,self.label_6, self.age_list[c])
       self.set_textbox_visibility(self.text_box,self.label_7, self.dob_list[c])
