@@ -1,6 +1,6 @@
 container:
   type: ColumnPanel
-  properties: {col_widths: '{"RMRWIX":2,"OUEYNE":13,"YDDOXA":65,"TWCNJW":2,"YMXIKM":13,"IKOCWN":65,"HJQSXJ":2}'}
+  properties: {col_widths: '{"RMRWIX":2,"OUEYNE":13,"YDDOXA":65,"TWCNJW":2,"YMXIKM":13,"IKOCWN":65,"HJQSXJ":2,"JBDYON":2,"BFUINO":13,"UYDNXL":12,"OECEIH":12}'}
 components:
 - name: image_1_copy
   properties: {role: null, vertical_align: center, height: 45.79998779296875, tooltip: '',
@@ -134,6 +134,10 @@ components:
   properties: {height: '20'}
   type: Spacer
   layout_properties: {grid_position: 'OAKTUL,UVBHCD'}
+- name: spacer_4
+  properties: {height: 32}
+  type: Spacer
+  layout_properties: {grid_position: 'QHYMRE,JBDYON', full_width_row: true}
 - name: column_panel_7_copy_2
   properties: {role: elevated-card, col_widths: '{"EITWZQ":25,"DMUXBO":35}', background: '#Edf0f4'}
   type: ColumnPanel
@@ -156,7 +160,7 @@ components:
 - name: column_panel_4
   properties: {role: elevated-card, col_widths: '{"KRHWBD":20,"ZHEDGR":40}', background: '#Edf0f4'}
   type: ColumnPanel
-  layout_properties: {grid_position: 'QHYMRE,KZILVI', full_width_row: true}
+  layout_properties: {grid_position: 'QHYMRE,HUOAPR'}
   components:
   - name: label_4_copy
     properties: {text: 'Interest Earned
