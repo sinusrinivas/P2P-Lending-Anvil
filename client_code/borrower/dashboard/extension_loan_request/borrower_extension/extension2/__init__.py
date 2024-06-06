@@ -15,11 +15,12 @@ class extension2(extension2Template):
         self.selected_row = selected_row
         self.extension_months = loan_extension_months
         self.new_emi = new_emi
-        self.emi_number = emi_number 
+        # self.emi_number = emi_number 
         self.label_23.text = f"{selected_row['loan_id']}"
         self.mi_label.text = f"{selected_row['loan_amount']}"
 
         loan_id = selected_row['loan_id']
+        emi_payment_type = selected_row['emi_payment_type']
 
         # Fetching the total_repayment_amount from the loan_details table
         fin_loan_details_row = app_tables.fin_loan_details.get(loan_id=loan_id)
@@ -48,34 +49,55 @@ class extension2(extension2Template):
             print("No rows found for the given loan_id in 'fin_emi_table'")
 
         print("total payment made", total_payments_made)
+        
         loan_amount = int(self.mi_label.text)
-
         # Additional initialization code
         tenure = selected_row['tenure']
         tenure = int(tenure)
-        self.interest_rate = selected_row['interest_rate']
-        monthly_interest_rate = selected_row['interest_rate'] / (12 * 100)
-        factor = (1 + monthly_interest_rate) ** tenure
-        emi = loan_amount * monthly_interest_rate * factor / (factor - 1)
-        emi = int(emi)
-        monthly_installment = loan_amount / tenure
-        monthly_installment = int(monthly_installment)
-        print(f"loan_amount: {loan_amount}")
-        print(f"emi: {emi}")
-        print(f"monthly installment: {monthly_installment}")
 
+        
+        print("tenure", tenure)
+      
+        self.interest_rate = selected_row['interest_rate']
+        monthly_interest_rate = selected_row['interest_rate'] / 12 / 100
+        if emi_payment_type == 'Monthly':
+                  emi = (loan_amount * monthly_interest_rate * ((1 + monthly_interest_rate) ** tenure)) / (((1 + monthly_interest_rate) ** tenure) - 1)
+        elif emi_payment_type == 'Three Months':
+                  emi = (loan_amount * monthly_interest_rate * ((1 + monthly_interest_rate) ** (tenure ))) / (((1 + monthly_interest_rate) ** (tenure)) - 1)
+                  emi*=3
+        elif emi_payment_type == 'Six Months':
+                  emi = (loan_amount * monthly_interest_rate * ((1 + monthly_interest_rate) ** (tenure ))) / (((1 + monthly_interest_rate) ** (tenure)) - 1)
+                  emi*=6
+        else:
+                # Default to monthly calculation
+                emi = (loan_amount * monthly_interest_rate * ((1 + monthly_interest_rate) ** tenure)) / (((1 + monthly_interest_rate) ** tenure) - 1)
+        # monthly_interest_rate = selected_row['interest_rate'] / (12 * 100)
+        # factor = (1 + monthly_interest_rate) ** tenure
+        # emi = loan_amount * monthly_interest_rate * factor / (factor - 1)
+        # emi = int(emi)
+        # monthly_installment = loan_amount / tenure
+        # monthly_installment = int(monthly_installment)
+        # print(f"loan_amount: {loan_amount}")
+        # print(f"emi: {emi}")
+        # print(f"monthly installment: {monthly_installment}")
+
+        tenure = tenure + self.extension_months
         product_id_to_search = selected_row['product_id']
         data = tables.app_tables.fin_product_details.search(product_id=product_id_to_search)
-        self.extension_fee_lst = []
-        for i in data:
-            self.extension_fee_lst.append(i['extension_fee'])
+        for data_1 in data:
+          extension_fees = data_1['extension_fee']
+          if extension_fees:
+            extension_amount =  total_loan_amount * extension_fees  / 100
+            print(extension_amount)
+            self.extension_fee.text = extension_fees
 
-        self.extension_fee.text = self.extension_fee_lst[0]
+        # self.extension_fee.text = self.extension_fee_lst[0]
         extension_fee = int(self.extension_fee.text)
         loan_amount = int(self.mi_label.text)
-        extension_amount = (extension_fee * loan_amount) / 100
+        # extension_amount = (extension_fee * loan_amount) / 100
         print('extension_amount', extension_amount)
-        self.extension_amountt.text = extension_amount
+        self.extension_amountt.text = round(extension_amount , 2)
+      
         emi_paid = total_payments_made * emi
         print('emi_paid', emi_paid)
         remaining_loan_amount = (total_loan_amount - emi_paid) + extension_amount
@@ -94,6 +116,7 @@ class extension2(extension2Template):
         new_emi_amount = self.new_emi  # Use the provided new_emi value
 
         # Save the calculated values as instance variables for later use
+        self.emi_number = total_payments_made
         self.total_extension_months = total_extension_months
         self.extension_fee_comp_value = extension_fee
         self.remaining_loan_amount = remaining_loan_amount
