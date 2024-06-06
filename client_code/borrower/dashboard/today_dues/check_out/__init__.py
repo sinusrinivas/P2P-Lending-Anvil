@@ -872,6 +872,10 @@ class check_out(check_outTemplate):
                         loan_details['total_amount_paid'] += round(total_emi_amount ,2)
                         if loan_details['remaining_amount'] <= 0:
                           loan_details['loan_updated_status'] = 'close'
+                          # lender_data = app_tables.fin_lender.get(customer_id=lender_customer_id)
+                          # if lender_data:
+                          #   lender_data['present_commitments'] -= loan_amount
+                          #   lender_data.update()
                         loan_details.update()
             
                     lender_returns_dict = defaultdict(float)
