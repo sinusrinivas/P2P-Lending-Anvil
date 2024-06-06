@@ -114,10 +114,6 @@ components:
     properties: {height: 32}
     type: Spacer
     layout_properties: {x: 1289.888916015625, y: 403.1111145019531, width: 200}
-  - properties: {height: 404.25, source: _/theme/bank_users/main_form/main.png, display_mode: zoom_to_fill}
-    type: Image
-    layout_properties: {x: 327.93056742474437, y: 38, width: 265}
-    name: image_2
   - type: Image
     properties: {height: 39, source: _/theme/bank_users/main_form/12-300x94.png}
     layout_properties: {x: 485.8055521659553, y: 283.08332316204906, width: 181.88888549804688}
@@ -126,6 +122,10 @@ components:
     properties: {height: 46, source: _/theme/bank_users/main_form/rbi-registered-1.svg}
     layout_properties: {x: 251.90278116986156, y: 382.3055216483772, width: 230.5833282470703}
     name: image_11
+  - properties: {height: 404.25, source: _/theme/bank_users/main_form/main.png, display_mode: zoom_to_fill}
+    type: Image
+    layout_properties: {x: 108.96871948242188, y: 38, width: 265}
+    name: image_2
 - properties: {height: 32}
   type: Spacer
   layout_properties: {grid_position: 'DRLNYG,CDSYSD'}
