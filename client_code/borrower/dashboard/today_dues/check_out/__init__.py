@@ -453,14 +453,7 @@ class check_out(check_outTemplate):
 
         if emi_row is not None and emi_row['payment_type'] == 'part payment':
           self.button_1_copy_3.visible = False
-          # self.label_3.visible = False
-          # self.label_5.visible = False
-          # self.label_9.visible = False
-          # self.label_12.visible = False
-          # self.total_emi_amount_label.visible = False
-          # self.lapsed.visible = False
-          # self.default.visible = False
-          # self.npa.visible = False
+
 
         adding_remaining_part_payment = app_tables.fin_emi_table.get(
             loan_id=loan_id,
@@ -871,12 +864,12 @@ class check_out(check_outTemplate):
                             loan_details['total_amount_paid'] = 0
                         if loan_details['lender_returns'] is None :
                             loan_details['lender_returns'] = 0
-                        loan_details['lender_returns'] += i_r
+                        loan_details['lender_returns'] += round(i_r ,2)
                         if remaining_tenure == 0:
                           loan_details['remaining_amount'] -= emi_amount
                         else:
                           loan_details['remaining_amount'] = round(remaining_amount ,2)
-                        loan_details['total_amount_paid'] += total_emi_amount
+                        loan_details['total_amount_paid'] += round(total_emi_amount ,2)
                         if loan_details['remaining_amount'] <= 0:
                           loan_details['loan_updated_status'] = 'close'
                         loan_details.update()

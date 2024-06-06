@@ -225,7 +225,7 @@ class part_payment(part_paymentTemplate):
                           # if la
                           if loan_row['lender_returns'] is None:
                             loan_row['lender_returns'] = 0
-                          loan_row['lender_returns'] += float(self.loan_details['i_r']) /2
+                          loan_row['lender_returns'] += round(float(self.loan_details['i_r']) /2 ,2)
 
                           
                           loan_row.update()
