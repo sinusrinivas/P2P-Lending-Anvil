@@ -1266,11 +1266,17 @@ db_schema:
       admin_ui: {order: 12, width: 200}
       type: string
     - name: return_on_investment
-      admin_ui: {order: 4.8125, width: 200}
+      admin_ui: {order: 5.5, width: 200}
       type: number
     - name: member_since
       admin_ui: {order: 4.90625, width: 200}
       type: date
+    - name: 'lender_total_commitments '
+      admin_ui: {order: 4.953125, width: 200}
+      type: number
+    - name: present_commitments
+      admin_ui: {order: 4.9765625, width: 200}
+      type: number
   fin_loan_settings:
     client: full
     server: full

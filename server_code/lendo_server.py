@@ -240,7 +240,7 @@ def add_lendor_bank_details_form_2(bank_id,branch_name, user_id):
     row[0]['form_count'] = 5
     wallet.find_user_update_type(user_id,row[0]['full_name'],_user_type)
     
-    lender_row = app_tables.fin_lender.get(email_id=row[0]['email_user'])
+    lender_row = app_tables.fin_lender.get(customer_id = user_id)
     if lender_row:
       if row[0]['last_confirm']:
         lender_row['member_since'] = datetime.now().date()
