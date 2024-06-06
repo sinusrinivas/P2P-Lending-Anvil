@@ -1,6 +1,6 @@
 container:
   type: ColumnPanel
-  properties: {col_widths: '{"XNVIUS":2,"IIAZST":13,"COJRWN":45}'}
+  properties: {col_widths: '{"XNVIUS":2,"IIAZST":13,"COJRWN":55,"AFZZIY":5}'}
 components:
 - name: image_1_copy_1_copy_1_copy_1_copy_1
   properties: {role: null, vertical_align: center, height: 42.33332824707031, tooltip: '',
@@ -111,6 +111,10 @@ components:
     properties: {visible: false, role: null}
     type: Label
     layout_properties: {grid_position: 'CGRWHR,QVCYNC'}
+- name: spacer_9
+  properties: {height: 32}
+  type: Spacer
+  layout_properties: {grid_position: 'VUSJAF,AFZZIY'}
 - name: column_panel_7_copy_copy
   properties: {role: null, col_widths: '{"RBZWXR":2,"WCBRQE":18,"DRTUYB":59,"IZWFXP":60,"VNRYEV":2,"XOZZRG":15,"QELBJL":10,"OAWFST":35,"TJJMGQ":15}'}
   type: ColumnPanel
