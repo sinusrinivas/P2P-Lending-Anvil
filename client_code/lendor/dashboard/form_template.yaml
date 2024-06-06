@@ -412,7 +412,13 @@ components:
     layout_properties: {grid_position: 'NHSQFL,VRYRNY'}
     event_bindings: {click: link_10_click}
     name: link_10
-  - properties: {height: 266.0999755859375}
+  - name: link_16
+    properties: {text: Portfolio, icon: _/theme/borrower/dashboard/portfolio.png,
+      foreground: '#013065'}
+    type: Link
+    layout_properties: {grid_position: 'AMEFUQ,ARGBGO'}
+    event_bindings: {click: link_16_click}
+  - properties: {height: 87.19989013671875}
     type: Spacer
     layout_properties: {grid_position: 'OYUVDZ,AROLIJ'}
     name: spacer_1

@@ -18,7 +18,7 @@ services:
   client_config: {}
   server_config: {}
 startup: {type: form, module: bank_users.main_form}
-package_name: bank_client
+package_name: pip_install_reportlab
 allow_embedding: false
 name: P2P Lending App
 runtime_options:
