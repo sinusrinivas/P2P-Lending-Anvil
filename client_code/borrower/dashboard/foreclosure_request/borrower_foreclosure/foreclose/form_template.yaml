@@ -78,20 +78,6 @@ components:
             layout_properties: {row: MPVXLB, width_xs: 2, col_xs: 8}
           - type: Label
             properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-              visible: true, text: 'Monthly Installment :', font_size: null, font: '',
-              spacing_above: small, icon_align: left, spacing_below: small, italic: false,
-              background: '', bold: false, underline: false, icon: ''}
-            name: label_13
-            layout_properties: {row: CULTKB, width_xs: 4, col_xs: 1, width: 149.656}
-          - type: Label
-            properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-              visible: true, text: '', font_size: null, font: '', spacing_above: small,
-              icon_align: left, spacing_below: small, italic: false, background: '',
-              bold: false, underline: false, icon: ''}
-            name: mi_label
-            layout_properties: {row: CULTKB, width_xs: 4, col_xs: 6, width: 149.656}
-          - type: Label
-            properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
               visible: true, text: 'Interest Amount :', font_size: null, font: '',
               spacing_above: small, icon_align: left, spacing_below: small, italic: false,
               background: '', bold: false, underline: false, icon: ''}
