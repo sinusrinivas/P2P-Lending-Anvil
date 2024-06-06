@@ -487,7 +487,7 @@ class check_out(check_outTemplate):
 
             self.i_r.text = part_lender_returns + float(self.i_r.text)
             self.emi_processing_extension.text = part_remaining_amount + float(self.emi_processing_extension.text)
-            
+            print(self.emi_processing_extension.text)
             print(self.i_r.text)
         self.update_total_emi_amount(total_emi)
 
