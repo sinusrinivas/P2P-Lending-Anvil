@@ -21,13 +21,21 @@ class revenue_share(revenue_shareTemplate):
 
     for lender in lenders:
       customer_id = lender['customer_id']
-      loan_count = app_tables.fin_loan_details.search(q.fetch_only('loan_id'), lender_customer_id=customer_id).length()
+      loans = app_tables.fin_loan_details.search(lender_customer_id=customer_id)
+      loan_count = len(loans)
+      
+      # Fetch mobile number from the fin_user_profile table
+      user_profile = app_tables.fin_user_profile.get(customer_id=customer_id)
+      mobile_no = user_profile['mobile'] if user_profile else None
+      email = user_profile['email_user'] if user_profile else None
+      
       customer_details.append({
         'customer_id': customer_id,
         'name': lender['user_name'],
-        'email': lender['email_id'],
+        'email': email,
         'return_on_investment': lender['return_on_investment'],
-        'loan_count': loan_count
+        'loan_count': loan_count,
+        'mobile_no': mobile_no,
       })
     
     self.repeating_panel_1.items = customer_details
@@ -38,6 +46,11 @@ class revenue_share(revenue_shareTemplate):
 
   def button_1_copy_3_click(self, **event_args):
     open_form('admin.dashboard.manage_settings')
+
+
+
+
+
 
 
 

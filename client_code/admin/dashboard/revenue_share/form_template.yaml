@@ -26,19 +26,21 @@ components:
   - name: data_grid_1
     properties:
       columns:
-      - {id: JKSDUP, title: Customer ID, data_key: column_1, width: 146.88885498046875,
+      - {id: JKSDUP, title: Customer ID, data_key: column_1, width: 132.5555419921875,
         expand: false}
-      - {id: VJQQOR, title: Name, data_key: column_2, width: 164.33331298828125, expand: false}
-      - {id: OJLQEN, title: 'Mobile No ', data_key: column_3, width: 124.7777099609375,
+      - {id: VJQQOR, title: Name, data_key: column_2, width: 140.7777099609375, expand: false}
+      - {id: OJLQEN, title: 'Mobile No ', data_key: column_3, width: 133.4444580078125,
         expand: false}
-      - {id: PEKWCK, data_key: column_1, title: Email Id, width: 149, expand: false}
+      - {id: PEKWCK, data_key: column_1, title: Email Id, width: 181.88885498046875,
+        expand: false}
       - {id: ELZCXA, data_key: column_2, title: No of Loans on Lender, expand: false,
-        width: 192.5555419921875}
+        width: 191.5555419921875}
       - {id: DORFXB, data_key: column_3, title: Total Lender Returns, expand: false,
-        width: 176.7777099609375}
+        width: 187.7777099609375}
       show_page_controls: false
       auto_header: true
       role: tonal-data-grid
+      visible: true
     type: DataGrid
     components:
     - name: repeating_panel_1
