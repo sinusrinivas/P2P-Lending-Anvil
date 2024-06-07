@@ -57,8 +57,10 @@ class RowTemplate31(RowTemplate31Template):
       self.status = None
 
     # Set visibility based on the status
-    self.link_1.visible = self.status == "disbursed loan"
-    self.lender_portfolio_component.visible = not self.link_1.visible
+    if self.status == "disbursed loan":
+      self.link_1.visible = True
+    else:
+      self.link_1.visible = False
 
   def link_1_click(self, **event_args):
     """This method is called when the link is clicked"""
