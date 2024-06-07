@@ -110,7 +110,7 @@ class dashboard(dashboardTemplate):
 
   def link_10_click(self, **event_args):
     """This method is called when the link is clicked"""
-    open_form('borrower.dashboard.borrower_portfolio')
+    open_form('lendor.dashboard.lender_portfolio_first_page')
 
   def button_12_click(self, **event_args):
     """This method is called when the button is clicked"""
