@@ -129,6 +129,11 @@ class part_payment(part_paymentTemplate):
                       loan_row['lender_returns'] += float(self.loan_details['i_r']) /2
                       if loan_row['remaining_amount'] <= 0:
                         loan_row['loan_updated_status'] = 'close'
+                        
+                        lender_data = app_tables.fin_lender.get(customer_id=self.loan_details['lender_customer_id'])
+                        if lender_data:
+                            lender_data['present_commitments'] -= self.selected_row['loan_amount']
+                            lender_data.update()
                       loan_row.update()
 
                   part_lender_returns = float(self.loan_details['i_r']) /2
