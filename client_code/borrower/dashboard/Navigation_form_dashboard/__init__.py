@@ -35,9 +35,6 @@ class Navigation_form_dashboard(Navigation_form_dashboardTemplate):
   def wallet_dashboard_link_click(self, **event_args):
     open_form("wallet.wallet")
 
-  
-
-
   def About_Us_click(self, **event_args):
     open_form("borrower.dashboard.dashboard_about")
 
