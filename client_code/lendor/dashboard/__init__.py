@@ -33,7 +33,7 @@ class dashboard(dashboardTemplate):
     self.label_9.text = str(len(existing_loans) or 0)
 
     investment = app_tables.fin_lender.get(customer_id=self.user_id)
-    self.label_3.text = str(investment['investment'] or 0)
+    self.label_3.text = str(investment['present_commitments'] or 0)
     self.label_13.text = str(investment['membership'])
     self.label_15.text = str(investment['member_since'])
 
