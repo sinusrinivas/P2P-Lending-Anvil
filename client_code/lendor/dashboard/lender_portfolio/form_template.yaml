@@ -148,7 +148,7 @@ components:
   layout_properties: {grid_position: 'QHYMRE,BFUINO', full_width_row: true}
   components:
   - name: label_2_copy
-    properties: {icon: '', text: 'Total Funds Deposited
+    properties: {icon: '', text: 'Total Commitments
 
         ', bold: true}
     type: Label
@@ -186,7 +186,7 @@ components:
   layout_properties: {grid_position: 'QHYMRE,UYDNXL', full_width_row: true}
   components:
   - name: label_8
-    properties: {text: Net Asset Value, bold: true}
+    properties: {text: Total Returns, bold: true}
     type: Label
     layout_properties: {grid_position: 'QAERLY,ZYDTNB IFVDXW,KISYOU'}
   - name: label_9
@@ -195,23 +195,6 @@ components:
     layout_properties: {grid_position: 'QAERLY,ZYDTNB YYWHSJ,POJDAN'}
   - name: image_3
     properties: {height: '50', source: _/theme/lender/dashboard/net%20asset%20value.svg}
-    type: Image
-    layout_properties: {grid_position: 'QAERLY,AEITXQ'}
-- name: column_panel_6_copy
-  properties: {role: elevated-card, col_widths: '{"CUOOLO":20,"ZYDTNB":40}', background: '#Edf0f4'}
-  type: ColumnPanel
-  layout_properties: {grid_position: 'QHYMRE,OECEIH', full_width_row: true}
-  components:
-  - name: label_8_copy
-    properties: {text: Withdrawn, bold: true}
-    type: Label
-    layout_properties: {grid_position: 'QAERLY,ZYDTNB IFVDXW,KISYOU'}
-  - name: label_9_copy
-    properties: {icon: 'fa:rupee', text: '0'}
-    type: Label
-    layout_properties: {grid_position: 'QAERLY,ZYDTNB YYWHSJ,POJDAN'}
-  - name: image_3_copy
-    properties: {height: '50', source: _/theme/lender/dashboard/withdraw%20(2).png}
     type: Image
     layout_properties: {grid_position: 'QAERLY,AEITXQ'}
 - name: spacer_11

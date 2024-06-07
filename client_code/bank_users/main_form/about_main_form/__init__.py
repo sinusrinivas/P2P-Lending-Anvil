@@ -116,5 +116,3 @@ class about_main_form(about_main_formTemplate):
     
     pdf = anvil.server.call('create_pdf',"rahul","self.image_1.source")
     anvil.media.download(pdf)
-    
-

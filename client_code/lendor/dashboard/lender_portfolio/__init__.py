@@ -40,4 +40,5 @@ class lender_portfolio(lender_portfolioTemplate):
 
     lendor = app_tables.fin_lender.get(customer_id=self.user_Id)
     self.label_3.text = lendor['membership']
+    self.label_3_copy.text = lendor['lender_total_commitments']
     
