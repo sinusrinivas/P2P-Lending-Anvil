@@ -5,23 +5,35 @@ components:
   properties: {}
   type: Label
   layout_properties: {column: JKSDUP}
+  data_bindings:
+  - {property: text, code: 'self.item[''customer_id'']', writeback: false}
 - name: label_2
   properties: {}
   type: Label
   layout_properties: {column: VJQQOR}
+  data_bindings:
+  - {property: text, code: 'self.item[''name'']', writeback: false}
 - name: label_3
   properties: {}
   type: Label
   layout_properties: {column: OJLQEN}
+  data_bindings:
+  - {property: text, code: 'self.item['''']', writeback: false}
 - name: label_4
   properties: {}
   type: Label
   layout_properties: {column: PEKWCK}
+  data_bindings:
+  - {property: text, code: 'self.item[''email'']', writeback: false}
 - name: label_5
   properties: {}
   type: Label
   layout_properties: {column: ELZCXA}
+  data_bindings:
+  - {property: text, code: 'self.item[''loan_count'']', writeback: false}
 - name: label_6
   properties: {}
   type: Label
   layout_properties: {column: DORFXB}
+  data_bindings:
+  - {property: text, code: 'self.item[''return_on_investment'']', writeback: false}
