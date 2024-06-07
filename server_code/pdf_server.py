@@ -11,11 +11,9 @@ import anvil.pdf
 
 @anvil.server.callable
 def create_pdf(name, image_source):
-    try:
-        # Your PDF creation logic here
-        pdf = anvil.pdf.PDFRenderer("bank_users.main_form.about_main_form")  # Replace with your actual PDF creation code
-        return pdf
-    except Exception as e:
-        print(f"Error creating PDF: {e}")
-        raise
+    
+    # Your PDF creation logic here
+    pdf = anvil.pdf.PDFRenderer(page_size='A4').render_form("bank_users.main_form.about_main_form")  # Replace with your actual PDF creation code
+    return pdf
+    
 
