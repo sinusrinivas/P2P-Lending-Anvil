@@ -102,11 +102,11 @@ class lender_registration_form_2(lender_registration_form_2Template):
             app_tables.fin_lender.add_row(customer_id=user_id, lending_type=lending_type, investment=int(investment),
                                           lending_period=lending_period, membership=membership_type)
 
-        user_profile = app_tables.fin_user_profile.search(customer_id=user_id)
+        user_profile = app_tables.fin_user_profile.get(customer_id=user_id)   
         if user_profile:
           email_user = user_profile['email_user']
           full_name = user_profile['full_name']
-          lender_data = app_tables.fin_lender.search(customer_id=user_id)
+          lender_data = app_tables.fin_lender.get(customer_id=user_id)
           if lender_data:
             lender_data['email_id'] = email_user
             lender_data['user_name'] = full_name
