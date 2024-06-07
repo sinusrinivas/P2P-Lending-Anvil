@@ -103,6 +103,7 @@ class borrower_view_profile(borrower_view_profileTemplate):
       self.acccount_type_dropdown.selected_value = user_profile['account_type']
       self.other_loans_tx.text = user_profile['other_loan']
       self.home_loan_tx.text = user_profile['home_loan']
+      self.alternate_email.text = user_profile['another_email']
 
       if user_profile['profession'] == 'Employee' :
         self.student_button.visible = False
@@ -212,6 +213,7 @@ class borrower_view_profile(borrower_view_profileTemplate):
       self.profession_dropdown.enabled = False
       self.other_loans_tx.enabled = False
       self.home_loan_tx.enabled = False
+      self.alternate_email.enabled = False
 
   def enable_personal_fields(self):
       self.name_text_box.enabled = True
@@ -237,6 +239,7 @@ class borrower_view_profile(borrower_view_profileTemplate):
       self.profession_dropdown.enabled = True
       self.other_loans_tx.enabled = True
       self.home_loan_tx.enabled = True
+      self.alternate_email.enabled = True
 
   def edit_personal_details_click(self, **event_args):
       self.enable_personal_fields()
@@ -289,6 +292,7 @@ class borrower_view_profile(borrower_view_profileTemplate):
         "Profession": self.profession_dropdown.selected_value,
         "Other Loan": self.other_loans_tx.text,
         "Home Loan": self.home_loan_tx.text,
+        "Alternate email": self.alternate_email.text,
         # "other Loans": self.other_loans_tx.text,
     }
 
@@ -303,6 +307,8 @@ class borrower_view_profile(borrower_view_profileTemplate):
 
     }
     if not is_valid_email(self.email_tx.text):
+        error_messages.append('Enter a valid email address.')
+    if not is_valid_email(self.alternate_email.text):
         error_messages.append('Enter a valid email address.')
 
     if not is_alpha(self.name_text_box.text) :
@@ -428,6 +434,7 @@ class borrower_view_profile(borrower_view_profileTemplate):
         user_profile["credit_card_loans"] = self.credit_tx.text
         user_profile["other_loan"] = self.other_loans_tx.text
         user_profile["home_loan"] = self.home_loan_tx.text
+        user_profile["another_email"] = self.alternate_email.text
         user_profile["qualification"] = self.qualification_dropdown.selected_value
         user_profile["profession"] = self.profession_dropdown.selected_value
         self.govt_1_file_loader_1.visible = False
