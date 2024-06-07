@@ -106,14 +106,14 @@ def add_borrower_step6(bank_id, bank_branch, user_id):
         #     wallet.find_user_update_type(user_id, row[0]['full_name'],_user_type)      
 
         # Search for an existing row with the same email_id in fin_borrower table
-        existing_borrower_row = app_tables.fin_borrower.get(email_id=row[0]['email_user'])
+        existing_borrower_row = app_tables.fin_borrower.get(email_id=-*[0]['email_user'])
         
         if existing_borrower_row:
             # If a row exists, update the existing row
             existing_borrower_row['user_name'] = row[0]['full_name']
             existing_borrower_row['bank_acc_details'] = row[0]['account_number']
             existing_borrower_row['ascend_score'] = row[0]['ascend_value']
-            existing_borrower_row['credit_limit'] = 1000000
+            existing_borrower_row['credit_limit'] = 1000000d
 
             if row[0]['last_confirm']:
                 existing_borrower_row['borrower_since'] = datetime.now().date()
