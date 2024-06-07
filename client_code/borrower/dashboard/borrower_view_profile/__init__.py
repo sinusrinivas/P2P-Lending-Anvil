@@ -102,7 +102,7 @@ class borrower_view_profile(borrower_view_profileTemplate):
       self.bank_name_tx.text = user_profile['bank_name']
       self.acccount_type_dropdown.selected_value = user_profile['account_type']
       self.other_loans_tx.text = user_profile['other_loan']
-      self.home_loan_tx.text = user_profile['vehicle_loan']
+      self.home_loan_tx.text = user_profile['home_loan']
 
       if user_profile['profession'] == 'Employee' :
         self.student_button.visible = False
