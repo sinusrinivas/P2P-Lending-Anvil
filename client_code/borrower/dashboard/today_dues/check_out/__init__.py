@@ -873,10 +873,10 @@ class check_out(check_outTemplate):
                         if loan_details['remaining_amount'] <= 0:
                           loan_details['loan_updated_status'] = 'close'
                           
-                          # lender_data = app_tables.fin_lender.get(customer_id=self.selected_row['lender_customer_id'])
-                          # if lender_data:
-                          #   lender_data['present_commitments'] -= self.selected_row['loan_amount']
-                          #   lender_data.update()
+                          lender_data = app_tables.fin_lender.get(customer_id=self.selected_row['lender_customer_id'])
+                          if lender_data:
+                            lender_data['present_commitments'] -= self.selected_row['loan_amount']
+                            lender_data.update()
                             
                         loan_details.update()
             
