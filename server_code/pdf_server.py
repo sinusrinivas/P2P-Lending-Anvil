@@ -13,8 +13,7 @@ import anvil.pdf
 def create_pdf(name, image_source):
     try:
         # Your PDF creation logic here
-        print(f"Creating PDF for {name} with image {image_source}")
-        pdf = anvil.pdf.render_form("bank_users.main_form.about_main_form",name, image_source)  # Replace with your actual PDF creation code
+        pdf = anvil.pdf.PDFRenderer("bank_users.main_form.about_main_form")  # Replace with your actual PDF creation code
         return pdf
     except Exception as e:
         print(f"Error creating PDF: {e}")

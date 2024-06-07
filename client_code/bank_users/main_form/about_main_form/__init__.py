@@ -114,7 +114,7 @@ class about_main_form(about_main_formTemplate):
   def button_1_click(self, **event_args):
     """This method is called when the button is clicked"""   
     try:
-        pdf = anvil.server.call('create_pdf', "rahul", self.image_1.source)
+        pdf = anvil.server.call('create_pdf')
         anvil.media.download(pdf)
     except anvil.server.RuntimeUnavailableError:
         anvil.Notification("Server connection lost. Please try again.").show()
