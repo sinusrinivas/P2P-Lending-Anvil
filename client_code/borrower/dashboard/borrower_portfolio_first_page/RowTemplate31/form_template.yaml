@@ -20,7 +20,7 @@ components:
   type: Label
   layout_properties: {column: OJLQEN}
   data_bindings:
-  - {property: text, code: 'self.item[''member_since'']', writeback: false}
+  - {property: text, code: 'self.item[''membership'']', writeback: false}
 - name: link_1
   properties: {align: center, text: View Portfolio, visible: false}
   type: Link
@@ -31,4 +31,4 @@ components:
   type: Label
   layout_properties: {column: DCUOBI}
   data_bindings:
-  - {property: text, code: 'self.item[''ascend'']', writeback: false}
+  - {property: text, code: 'self.item[''lending_type'']', writeback: false}

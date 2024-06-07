@@ -27,19 +27,12 @@ class lender_portfolio_first_page(lender_portfolio_first_pageTemplate):
         else:
             self.result = [{'name': i['user_name'],
                             'email': i['email_id'],
-                            'ascend': i['ascend_score'],
-                            'member_since': i['borrower_since'],
+                            'lending_type': i['lending_type'],
+                            'membership': i['membership'],
                             'customer_id': i['customer_id']
                            }
                           for i in self.data]
 
             self.repeating_panel_1.items = self.result
 
-        disbursed = app_tables.fin_loan_details.get(lender_customer_id=self.user_Id)
-        if disbursed:
-            self.status = disbursed['loan_updated_status']
-
-        if getattr(self, 'status', None) == "disbursed loan":
-            self.lender_portfolio_component.visible = True
-        else:
-            self.lender_portfolio_component.visible = False
+        
