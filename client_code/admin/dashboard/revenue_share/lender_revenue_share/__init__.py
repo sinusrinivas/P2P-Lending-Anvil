@@ -22,13 +22,7 @@ class lender_revenue_share(lender_revenue_shareTemplate):
     loans = app_tables.fin_loan_details.search(lender_customer_id=customer_id)
     
     if loans:
-      # Assuming you want to display the first loan's details
-      loan = loans[0]
-
-
-      self.label_1.text = loan['loan_id']
-      self.label_2.text = loan['loan_amount']
-      self.label_3.text = loan['lender_returns']
+      self.repeating_panel_1.items = loans
 
   def button_1_click(self, **event_args):
     open_form("admin.dashboard.revenue_share.lender_revenue_share")
