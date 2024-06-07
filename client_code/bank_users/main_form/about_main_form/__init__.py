@@ -11,6 +11,7 @@ from anvil.js.window import navigator
 # from ..user_form import user_module
 # from . import main_form_module
 # from ..borrower_dashboard import borrower_main_form_module
+import anvil.media
 
 class about_main_form(about_main_formTemplate):
   def __init__(self, **properties):
@@ -109,3 +110,14 @@ class about_main_form(about_main_formTemplate):
   def login_signup_button_click(self, **event_args):
     """This method is called when the button is clicked"""
     open_form('bank_users.main_form.login_page')
+
+  def button_1_click(self, **event_args):
+    """This method is called when the button is clicked"""   
+    try:
+        pdf = anvil.server.call('create_pdf', "rahul", self.image_1.source)
+        anvil.media.download(pdf)
+    except anvil.server.RuntimeUnavailableError:
+        anvil.Notification("Server connection lost. Please try again.").show()
+    except Exception as e:
+        anvil.Notification(f"An error occurred: {e}").show()
+

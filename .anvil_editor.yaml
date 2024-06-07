@@ -454,6 +454,7 @@ unique_ids:
     borrower_server: '169816543913997904134922.20096'
     lendo_server: '1699507662691410806325953.31323'
     mobile_server: '1706689030546954662276811.4379'
+    pdf_server: '1717739623398735940659120.8473'
     wallet_server: '1704193595074149997969994.77243'
   assets:
     admin/dashboard/product-management.png: 53W45PJ2DI45KGTAQLRNZB24S7TWHIAB

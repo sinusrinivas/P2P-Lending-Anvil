@@ -22,7 +22,7 @@ components:
   data_bindings:
   - {property: text, code: 'self.item[''member_since'']', writeback: false}
 - name: link_1
-  properties: {align: center, text: Borrower Portfolio}
+  properties: {align: center, text: View Portfolio}
   type: Link
   layout_properties: {column: SBDNUU}
   event_bindings: {click: link_1_click}
