@@ -19,6 +19,14 @@ class lender_portfolio_first_page(lender_portfolio_first_pageTemplate):
     self.email = main_form_module.email
     self.user_Id = main_form_module.userId
 
+    disbursed = app_tables.fin_loan_details.get(lender_customer_id=self.user_Id)
+    if disbursed:
+      self.status = disbursed['loan_updated_status']
+
+    if self.status == "disbursed loan":
+      self.
+      
+
     
 
     
