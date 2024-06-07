@@ -64,6 +64,7 @@ unique_ids:
     admin.dashboard.borrowers.ItemTemplate96: '1712062136716241415691586.34946'
     bank_users.main_form.investNow_applyForLoan: '1714366810236923651939721.386'
     lendor.dashboard.view_loan_foreclosure_Requests.ItemTemplate59: '1709797526719604321418306.3726'
+    lendor.dashboard.lender_portfolio_first_page: '1717737755235602939757176.6377'
     lendor.lendor_registration_forms.lender_registration_form_2.lender_registration_individual_form_2: '1699429198901172624943660.5969'
     admin.dashboard.manage_reports: '1699528696451136679061767.8162'
     admin.user_issue.user_buganalysis.RowTemplate17: '1701189107287981500115093.1753'
