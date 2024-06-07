@@ -342,6 +342,14 @@ db_schema:
       admin_ui: {order: 0, width: 243}
       type: string
     title: fin_borrower_organization_type
+  fin_manage_credit_limit:
+    client: none
+    server: full
+    columns:
+    - name: credit_limit
+      admin_ui: {width: 200, order: 0}
+      type: number
+    title: fin_manage_credit_limit
   fin_lender_spouse_profession:
     title: fin_lender_spouse_profession
     client: full

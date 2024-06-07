@@ -38,3 +38,12 @@ class manage_settings(manage_settingsTemplate):
   def image_4_copy_5_mouse_up(self, x, y, button, **event_args):
     """This method is called when a mouse button is released on this component"""
     open_form('admin.dashboard.manage_settings.manage_membership')
+
+
+  def image_1_mouse_up(self, x, y, button, **event_args):
+    """This method is called when a mouse button is released on this component"""
+    open_form('admin.dashboard.manage_settings.manage_credit_limit')
+
+  def button_m1_manage_1_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    open_form('admin.dashboard.manage_settings.manage_credit_limit')

@@ -1,0 +1,57 @@
+container:
+  type: ColumnPanel
+  properties: {col_widths: '{"OGQDUG":30,"ZXCCKN":30}'}
+components:
+- name: home_button_admin_1_copy
+  properties: {}
+  type: form:admin.dashboard.home_button_admin
+  layout_properties: {grid_position: 'DYTMBB,IUETTW'}
+- name: content_panel_copy
+  properties: {col_widths: '{"DCBBZO":17,"ZBGJEI":20}'}
+  type: ColumnPanel
+  layout_properties: {grid_position: 'JFTJPS,ZXCCKN'}
+  components:
+  - name: spacer_1_copy
+    properties: {height: 21.75}
+    type: Spacer
+    layout_properties: {grid_position: 'CYDQGZ,AGCXZA'}
+  - name: label_3
+    properties: {text: Manage Credit Limit, bold: true, align: center, role: title}
+    type: Label
+    layout_properties: {grid_position: 'FXEPKP,IPRRFQ'}
+  - name: label_1
+    properties: {role: title, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: '  Credit limit', font_size: 17, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+      underline: false, icon: ''}
+    type: Label
+    layout_properties: {grid_position: 'SQUNEH,ZBGJEI'}
+  - name: text_box_1
+    properties: {role: outlined, placeholder: Enter credit limit}
+    type: TextBox
+    layout_properties: {grid_position: 'SQUNEH,PHTVMA'}
+  - name: spacer_2
+    properties: {height: 14}
+    type: Spacer
+    layout_properties: {grid_position: 'TWLJBO,KIKITB'}
+  - name: spacer_3
+    properties: {height: 16}
+    type: Spacer
+    layout_properties: {grid_position: 'RGGRLJ,DOLJQB'}
+  - name: edit_button
+    properties: {role: filled-button, align: right, tooltip: '', border: '', enabled: true,
+      foreground: 'theme:On Primary', visible: true, text: Edit, font_size: null,
+      font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+      background: '#05264d', bold: false, underline: false, icon: ''}
+    type: Button
+    layout_properties: {grid_position: 'RLGNZM,FPHZOX', full_width_row: false}
+    event_bindings: {click: button_1_click}
+  - name: save_button
+    properties: {role: null, align: left, tooltip: '', border: '', enabled: true,
+      foreground: 'theme:On Primary', visible: true, text: Save, font_size: null,
+      font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+      background: '#05264d', bold: false, underline: false, icon: ''}
+    type: Button
+    layout_properties: {grid_position: 'RLGNZM,BLUBIC', full_width_row: false}
+    event_bindings: {click: button_2_click}
+is_package: true

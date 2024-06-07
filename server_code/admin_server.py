@@ -217,3 +217,11 @@ def search_lender(query):
       or query in str(x['email_user'])
     ]
   return result
+
+# Server module: manage_credit_limit.py
+import anvil.server
+from anvil.tables import app_tables
+
+@anvil.server.callable
+def save_credit_limit(value):
+    app_tables.fin_manage_credit_limit.add_row(credit_limit=value)
