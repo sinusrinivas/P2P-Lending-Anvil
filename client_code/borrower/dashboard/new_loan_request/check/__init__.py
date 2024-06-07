@@ -149,7 +149,7 @@ class check(checkTemplate):
             interest_amount = loan_amount_beginning_balance * monthly_interest_rate
             principal_amount = emi - interest_amount
 
-            total_payment = emi + interest_amount + processing_fee_per_month
+            total_payment = emi  + processing_fee_per_month
             loan_amount_ending_balance = loan_amount_beginning_balance - principal_amount
 
             payment_schedule.append({
@@ -235,7 +235,7 @@ class check(checkTemplate):
                 # Calculate principal for this row
                 principal = scheduled_payment - total_interest
                 # Calculate total payment for this row
-                total_payment = scheduled_payment + total_processing_fee ?+ total_interest
+                total_payment = scheduled_payment + total_processing_fee #+ total_interest
     
                 # Calculate ending balance and loan amount ending balance
                 ending_balance = beginning_balance - total_payment
@@ -321,7 +321,7 @@ class check(checkTemplate):
                 # Calculate principal for this row
                 principal = scheduled_payment - total_interest
                 # Calculate total payment for this row
-                total_payment = scheduled_payment + total_processing_fee + total_interest
+                total_payment = scheduled_payment + total_processing_fee #+ total_interest
     
                 # Calculate ending balance and loan amount ending balance
                 ending_balance = beginning_balance - total_payment
