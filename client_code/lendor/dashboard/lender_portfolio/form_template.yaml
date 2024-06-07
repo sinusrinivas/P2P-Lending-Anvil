@@ -1,6 +1,6 @@
 container:
   type: ColumnPanel
-  properties: {col_widths: '{"RMRWIX":2,"OUEYNE":13,"YDDOXA":65,"TWCNJW":2,"YMXIKM":13,"IKOCWN":70,"HJQSXJ":2,"JBDYON":2,"BFUINO":13,"UYDNXL":12,"OECEIH":12,"LKGPNQ":10}'}
+  properties: {col_widths: '{"RMRWIX":2,"OUEYNE":13,"YDDOXA":65,"TWCNJW":2,"YMXIKM":13,"IKOCWN":70,"HJQSXJ":2,"JBDYON":2,"BFUINO":13,"UYDNXL":12,"LKGPNQ":10}'}
 components:
 - name: image_1_copy
   properties: {role: null, vertical_align: center, height: 45.79998779296875, tooltip: '',
@@ -10,9 +10,10 @@ components:
   type: Image
   layout_properties: {grid_position: 'QUVUVP,FIQRFW', full_width_row: true}
 - name: column_panel_7_copy
-  properties: {role: null, col_widths: '{"EITWZQ":25}'}
+  properties: {role: null, col_widths: '{}'}
   type: ColumnPanel
   layout_properties: {grid_position: 'QUVUVP,CXBBNM'}
+  components: []
 - name: logout_1
   properties: {}
   type: form:borrower.logout
@@ -20,7 +21,7 @@ components:
 - name: navigation_bar_lender_dashbord_1
   properties: {}
   type: form:lendor.navigation_bar.Navigation_bar_lender_dashbord
-  layout_properties: {grid_position: 'QDJLKG,RKXSZQ', full_width_row: true}
+  layout_properties: {grid_position: 'DAPXRC,ZKFMRU', full_width_row: true}
 - name: label_23
   properties: {align: center, text: Profile Overview, bold: true, font_size: 22}
   type: Label
