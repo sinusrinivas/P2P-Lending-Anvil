@@ -12,6 +12,12 @@ components:
     properties: {}
     name: home_button_admin_1
     layout_properties: {grid_position: 'HUGZIO,VCCNTV', full_width_row: true}
+  - name: button_1
+    properties: {text: Back, foreground: white, role: elevated-button, icon: 'fa:angle-double-left',
+      background: '#05264d', bold: true, font_size: 15, align: right}
+    type: Button
+    layout_properties: {grid_position: 'EJDZOU,ERVTEG', full_width_row: true}
+    event_bindings: {click: button_1_click}
   - name: label_1
     properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
       visible: true, text: Manage Revenue Share, font_size: 18, font: '', spacing_above: small,
