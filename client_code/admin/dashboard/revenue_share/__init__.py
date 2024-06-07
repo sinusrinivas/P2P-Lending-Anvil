@@ -35,7 +35,7 @@ class revenue_share(revenue_shareTemplate):
             'loan_id': loan['loan_id'],
             'loan_updated_status': loan['loan_updated_status'],
             'interest_rate': loan['interest_rate'],
-            'lender_customer_id': lender_customer_id
+            'lender_customer_id': loan['lender_customer_id']
           })
           
     return profiles_with_loans
