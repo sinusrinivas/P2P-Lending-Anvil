@@ -357,6 +357,10 @@ class borrower_foreclosure(borrower_foreclosureTemplate):
                     loan_row['total_amount_paid'] += total_amount
                     loan_row['lender_returns'] += foreclosure_amount
                     loan_row['loan_updated_status'] = 'closed'
+                    lender_data = app_tables.fin_lender.get(customer_id=loan_row['lender_customer_id'])
+                    if lender_data:
+                            lender_data['present_commitments'] -= loan_row['loan_amount']
+                            lender_data.update()
                     loan_row.update()
 
                 app_tables.fin_emi_table.add_row(
