@@ -246,3 +246,7 @@ class manage_ascend_score_range(manage_ascend_score_rangeTemplate):
         self.save_ascend_score_range(ascend_category)
     open_form('admin.dashboard.manage_settings.manage_ascend_score_range')
 
+  def button_3_copy_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    open_form('admin.dashboard.manage_settings')
+
