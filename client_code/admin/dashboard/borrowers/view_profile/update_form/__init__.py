@@ -4,6 +4,9 @@ import anvil.server
 import anvil.google.auth, anvil.google.drive
 from anvil.google.drive import app_files
 import anvil.users
+from datetime import date
+import anvil.tables as tables
+from anvil.tables import app_tables
 
 class update_form(update_formTemplate):
   def __init__(self, get_customer_id_value, **properties):
@@ -12,24 +15,23 @@ class update_form(update_formTemplate):
 
     # Any code you write here will run before the form opens.
     self.get = get_customer_id_value
-
+    
   def button_2_click(self, **event_args):
     """This method is called when the button is clicked"""
     if self.text_box_2.text == "" or  self.text_box_3.text == "" or self.text_box_4.text == "" or self.text_box_5.text == ""  or self.text_box_7.text == "" or self.text_box_8.text == "" or self.text_box_9.text == "" or self.text_box_10.text == "" or self.text_box_12.text == "" or self.text_box_13.text == "" or self.text_box_14.text == "" or self.text_box_15.text == "" or self.text_box_17.text == "" or self.text_box_18.text == "" or self.text_box_19.text == "" or self.text_box_20.text == "" or self.text_box_21.text == "" or self.text_box_22.text == "" or self.text_box_23.text == "" or self.text_box_24.text == "" or self.text_box_25.text == "" or self.text_box_26.text == "" or self.text_box_27.text == "" or self.text_box_28.text == "" or self.text_box_29.text == "" or self.text_box_30.text == "" or self.text_box_32.text == "" or self.text_box_33.text == "" or self.text_box_34.text == "" or self.text_box_35.text == "" :
       Notification("Fill All Required Details").show()
     else:
-      data = tables.app_tables.fin_user_profi.search()
+      data = tables.app_tables.fin_user_profile.search()
       id_list = []
       for i in data:
         id_list.append(i['customer_id'])
 
       if self.get in id_list:
-        a = id_list.index(self.get)
-        data[a]['full_name'] = self.text_box_2.text
+        a = id_list.index(self.get)   
         data[a]['profile_status'] = bool(self.text_box_3.text)
         data[a]['gender'] = self.text_box_4.text
         data[a]['user_age'] = int(self.text_box_5.text)
-        data[a]['date_of_birth'] = self.date_picker_1.date
+        # data[a]['date_of_birth'] = self.date_picker_1.date
         data[a]['mobile'] = self.text_box_7.text
         data[a]['aadhaar_no'] = self.text_box_8.text
         data[a]['pan_number'] = self.text_box_9.text
@@ -38,7 +40,7 @@ class update_form(update_formTemplate):
         data[a]['mobile_check'] = bool(self.text_box_13.text)
         data[a]['mouther_tounge'] = self.text_box_14.text
         data[a]['marital_status'] = self.text_box_15.text
-        #data[a]['Date_mariage'] = self.date_picker_2.date
+          #data[a]['Date_mariage'] = self.date_picker_2.date
         data[a]['spouse_name'] = self.text_box_17.text
         data[a]['spouse_mobile'] = self.text_box_18.text
         data[a]['spouse_company_name'] = self.text_box_19.text

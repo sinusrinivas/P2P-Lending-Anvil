@@ -1,5 +1,6 @@
 from ._anvil_designer import today_duesTemplate
 from anvil import *
+import anvil.server
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
@@ -82,6 +83,7 @@ class today_dues(today_duesTemplate):
                     remaining_amount = loan_detail['remaining_amount']
                     payment_type = latest_loan['payment_type']
                     part_payment_date = latest_loan['part_payment_date']
+                    remaining_tenure = latest_loan['remaining_tenure']
                   
                     loan_details.append({
                         'loan_id': loan_id,
@@ -117,6 +119,7 @@ class today_dues(today_duesTemplate):
                         'remaining_amount':remaining_amount,
                         'payment_type': payment_type,
                         'part_payment_date':part_payment_date,
+                        'remaining_tenure':remaining_tenure,
                     })
             else:
                 pay_now_loan = app_tables.fin_emi_table.search(
@@ -148,7 +151,7 @@ class today_dues(today_duesTemplate):
                     
                   
                   emi_number = 0
-                  
+                  remaining_tenure = 0
                   tenure = loan_detail['tenure']
                   interest_rate = loan_detail['interest_rate']
                   borrower_loan_created_timestamp = loan_detail['borrower_loan_created_timestamp']
@@ -222,7 +225,8 @@ class today_dues(today_duesTemplate):
                       'lender_email_id':lender_email_id,
                       'borrower_email_id':borrower_email_id,
                       'total_amount_paid':total_amount_paid,
-                      'remaining_amount':remaining_amount
+                      'remaining_amount':remaining_amount,
+                      'remaining_tenure':remaining_tenure
                       
                   })
             self.repeating_panel_2.items = loan_details

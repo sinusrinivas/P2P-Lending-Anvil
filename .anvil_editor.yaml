@@ -60,9 +60,11 @@ unique_ids:
     admin.dashboard.manage_ascend.view_ascend_subcategory.RowTemplate19: '1709635189882215361568053.49905'
     lendor.dashboard.view_loan_extension_requests.extension_details_approved_or_rejected: '1706449063565318739229397.3752'
     borrower.dashboard: '171654657221485665663770.40962'
+    admin.dashboard.manage_loan_details.approval_days: '171738656206145864182938.08747'
     admin.dashboard.borrowers.ItemTemplate96: '1712062136716241415691586.34946'
     bank_users.main_form.investNow_applyForLoan: '1714366810236923651939721.386'
     lendor.dashboard.view_loan_foreclosure_Requests.ItemTemplate59: '1709797526719604321418306.3726'
+    lendor.dashboard.lender_portfolio_first_page: '1717737755235602939757176.6377'
     lendor.lendor_registration_forms.lender_registration_form_2.lender_registration_individual_form_2: '1699429198901172624943660.5969'
     admin.dashboard.manage_reports: '1699528696451136679061767.8162'
     admin.user_issue.user_buganalysis.RowTemplate17: '1701189107287981500115093.1753'
@@ -293,6 +295,7 @@ unique_ids:
     borrower.dashboard.today_dues.payment_details_t: Z2HBMIARMVXDAUCI63IT56ARRGJKDSV2
     bank_users.main_form.products_main_form.personal_loan.home_renovation_loan: '1713938826548976634706020.7678'
     borrower.dashboard.new_loan_request: YEMASWKVMGUFBFTK4UDB7RNEIXH4XV64
+    borrower.dashboard.borrower_portfolio_first_page.RowTemplate31: '1717671802810266637024000.58243'
     admin.dashboard.manage_cms.add_general_dropdowns.edit_present_address: '171040037015774293132137.13895'
     borrower.dashboard.extension_loan_request.ItemTemplate75: NKSJCQVDYQAQURMW6GFWGEYLX46WKZG3
     borrower.dashboard.extension_loan_request.payment_details_extension.RowTemplate39: S3VFLC5NDKKOGKHRTN7HZVE4DEZRMQRH
@@ -301,6 +304,7 @@ unique_ids:
     admin.dashboard.manage_ascend.add_subcategory.ItemTemplate39: '1709541962560913219390819.0338'
     admin.dashboard.manage_cms.add_general_dropdowns: '1710397494541671512734929.8624'
     lendor.dashboard.lender_view_loans.ItemTemplate49: '1709611089771787997070325.4371'
+    admin.dashboard.revenue_share.RowTemplate31: '17176618475036133093088.2324'
     lendor.dashboard.view_borrower_loan_request.Borr_loan_request: '1700542763128106365112272.9714'
     lendor.dashboard.view_transaction_history.ItemTemplate100: '1712308244698402395554355.8164'
     lendor.dashboard.lender_view_loans.RowTemplate20: '1703139972848360547706878.1784'
@@ -367,6 +371,7 @@ unique_ids:
     admin.dashboard.manage_ascend.add_subcategory.ItemTemplate74: '1709734065080628871844250.8976'
     borrower.dashboard.view_loans.ItemTemplate45: 4JRZRQ7FWWIMPHC7XGTMTEDIFOQNNZ3G
     admin.dashboard.risk_pool: '1699529482874413597143832.6982'
+    borrower.dashboard.borrower_portfolio_first_page: '1717671611958813432017046.4667'
     admin.dashboard.manage_ascend.add_subcategory.ItemTemplate90: '1710783183831809212349578.099'
     admin.dashboard.performance_tracker: '1701242878909114559440962.97266'
     bank_users.user_form: '1700630694974484249170019.45953'
@@ -449,6 +454,7 @@ unique_ids:
     borrower_server: '169816543913997904134922.20096'
     lendo_server: '1699507662691410806325953.31323'
     mobile_server: '1706689030546954662276811.4379'
+    pdf_server: '1717739623398735940659120.8473'
     wallet_server: '1704193595074149997969994.77243'
   assets:
     admin/dashboard/product-management.png: 53W45PJ2DI45KGTAQLRNZB24S7TWHIAB

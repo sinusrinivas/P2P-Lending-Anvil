@@ -118,6 +118,10 @@ components:
     type: Label
     layout_properties: {grid_position: 'KSEEYY,IVLWPK OGQCRV,DXYIAB'}
     name: i_r
+  - properties: {visible: false, align: center}
+    type: Label
+    layout_properties: {grid_position: 'KSEEYY,IVLWPK OBMRTL,TJTUQQ'}
+    name: emi
   - properties: {align: left}
     type: Label
     layout_properties: {grid_position: 'KSEEYY,LEWFZL WWDIMX,XNEXBN'}
@@ -186,14 +190,18 @@ components:
     type: Label
     layout_properties: {grid_position: 'KSEEYY,LEWFZL UCGAPT,TOWKFE'}
     name: processing_fee
+  - name: emi_processing_extension
+    properties: {visible: false}
+    type: Label
+    layout_properties: {grid_position: 'KSEEYY,LEWFZL EKBDAW,AAHUZD'}
+  - name: remaining_tenure
+    properties: {visible: false}
+    type: Label
+    layout_properties: {grid_position: 'KSEEYY,LEWFZL NCZXGA,JQLHAO'}
   - type: Spacer
     properties: {height: 299.6428527832031}
     layout_properties: {grid_position: 'KSEEYY,KZXJUD'}
     name: spacer_5
-  - properties: {visible: false, align: center}
-    type: Label
-    layout_properties: {grid_position: 'FHOVLD,WMODWO'}
-    name: emi
   - properties: {role: null, align: right, tooltip: '', border: '', enabled: true,
       foreground: 'theme:On Primary', visible: true, text: '             Back             ',
       font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small,

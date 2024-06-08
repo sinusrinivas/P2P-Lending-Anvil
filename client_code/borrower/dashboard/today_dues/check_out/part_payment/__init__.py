@@ -93,11 +93,15 @@ class part_payment(part_paymentTemplate):
       if emi_row and emi_row['payment_type'] == 'part payment':
           # text_amount = float(self.text_box_1.text)
           additional_fees = self.calculate_additional_fees(emi_row)
+          
           if additional_fees is not None:
             text_amount = emi_row['part_payment_amount'] + additional_fees
           else:
             text_amount = emi_row['part_payment_amount']
-        
+
+          part_payment_date = emi_row['scheduled_payment']
+          days_elapsed = self.calculate_date_difference(part_payment_date, datetime.now().date())
+          print(days_elapsed)
           borrower_wallet = app_tables.fin_wallet.get(customer_id=self.loan_details['borrower_customer_id'])
           lender_wallet = app_tables.fin_wallet.get(customer_id=self.loan_details['lender_customer_id'])
   
@@ -118,16 +122,26 @@ class part_payment(part_paymentTemplate):
                   lender_wallet.update()
   
                   # Update remaining amount in loan details table
-                  remaining_amount = float(self.loan_details['remainining_amount']) - text_amount
+                  remaining_amount = float(self.loan_details['remainining_amount']) - float(self.loan_details['for_remaining_amount_calculation']) /2
                   loan_id = self.loan_details['loan_id']
   
                   loan_row = app_tables.fin_loan_details.get(loan_id=loan_id)
                   if loan_row is not None:
-                      loan_row['remaining_amount'] = remaining_amount
+                      loan_row['remaining_amount'] = round(remaining_amount ,2)
                       total_paid = float(loan_row['total_amount_paid']) + text_amount
                       loan_row['total_amount_paid'] = total_paid
                       loan_row['lender_returns'] += float(self.loan_details['i_r']) /2
+                      if loan_row['remaining_amount'] <= 0:
+                        loan_row['loan_updated_status'] = 'close'
+                        
+                        lender_data = app_tables.fin_lender.get(customer_id=self.loan_details['lender_customer_id'])
+                        if lender_data:
+                            lender_data['present_commitments'] -= self.selected_row['loan_amount']
+                            lender_data.update()
                       loan_row.update()
+
+                  part_lender_returns = float(self.loan_details['i_r']) /2
+                  part_remaining_amount = float(self.loan_details['for_remaining_amount_calculation']) /2
 
                   additional_fees = self.calculate_additional_fees(emi_row)
                     
@@ -162,6 +176,9 @@ class part_payment(part_paymentTemplate):
                       # emi_row['next_payment'] = next_next_payment
                       emi_row['extra_fee'] += additional_fees
                       emi_row['part_payment_done'] = 2
+                      emi_row['part_lender_returns'] += part_lender_returns
+                      emi_row['part_remaining_amount'] += part_remaining_amount
+                      emi_row['days_left'] = days_elapsed
                       emi_row.update()
   
                   alert("Payment successful!")
@@ -194,12 +211,21 @@ class part_payment(part_paymentTemplate):
                       lender_wallet.update()
   
                       # Update remaining amount in loan details table
-                      remaining_amount = float(self.loan_details['remainining_amount']) - entered_amount
+                      remaining_amount = float(self.loan_details['remainining_amount']) - float(self.loan_details['for_remaining_amount_calculation']) /2
                       loan_id = self.loan_details['loan_id']
-  
+
+                      remaining_tenure = float(self.loan_details['remaining_tenure'])
+                      print(remaining_tenure)
+                      if remaining_tenure != 0:
+                        remaining_tenure = remaining_tenure
+                        
+                      else:
+                        remaining_tenure = float(self.loan_details['tenure'])
+                        print(remaining_tenure)
+                    
                       loan_row = app_tables.fin_loan_details.get(loan_id=loan_id)
                       if loan_row is not None:
-                          loan_row['remaining_amount'] = remaining_amount
+                          loan_row['remaining_amount'] = round(remaining_amount , 2)
                           if loan_row['total_amount_paid'] is None:
                             loan_row['total_amount_paid'] = 0.0
                             total_paid = loan_row['total_amount_paid'] + entered_amount
@@ -209,7 +235,9 @@ class part_payment(part_paymentTemplate):
                           # if la
                           if loan_row['lender_returns'] is None:
                             loan_row['lender_returns'] = 0
-                          loan_row['lender_returns'] += float(self.loan_details['i_r']) /2
+                          loan_row['lender_returns'] += round(float(self.loan_details['i_r']) /2 ,2)
+
+                          
                           loan_row.update()
   
                           # Update current_emi_number, next_payment, and add a new row to fin_emi_table
@@ -223,16 +251,20 @@ class part_payment(part_paymentTemplate):
                           borrower_customer_id = self.loan_details['borrower_customer_id']
                           lender_customer_id = self.loan_details['lender_customer_id']
                           account_no = self.loan_details['account_no']
+                          # remaining_tenure = self.loan_details['remaining_tenure']
   
                           # Calculate next_scheduled_payment and next_next_payment based on emi_payment_type
                           if emi_payment_type in ['One Time', 'Monthly', 'Three Months', 'Six Months']:
                               if emi_payment_type == 'Monthly':
+                                  remaining_tenure -=1
                                   next_scheduled_payment = prev_scheduled_payment + timedelta(days=30)
                                   next_next_payment = prev_next_payment + timedelta(days=30)
                               elif emi_payment_type == 'Three Months':
+                                  remaining_tenure -=3
                                   next_scheduled_payment = prev_scheduled_payment + timedelta(days=90)
                                   next_next_payment = prev_next_payment + timedelta(days=90)
                               elif emi_payment_type == 'Six Months':
+                                  remaining_tenure -=6
                                   next_scheduled_payment = prev_scheduled_payment + timedelta(days=180)
                                   next_next_payment = prev_next_payment + timedelta(days=180)
                               elif emi_payment_type == 'One Time':
@@ -245,7 +277,10 @@ class part_payment(part_paymentTemplate):
                               # Default to monthly calculation
                               next_scheduled_payment = prev_scheduled_payment + timedelta(days=30)
                               next_next_payment = prev_next_payment + timedelta(days=30)
-  
+
+                          
+                          lender_returns_in_emi_table = float(self.loan_details['i_r']) /2
+                          remaining_amount_in_emi_table = float(self.loan_details['for_remaining_amount_calculation']) /2
                           # Add a new row to fin_emi_table
                           new_emi_row = app_tables.fin_emi_table.add_row(
                               loan_id=loan_id,
@@ -264,7 +299,12 @@ class part_payment(part_paymentTemplate):
                               part_payment_date=datetime.today().date(),
                               part_payment_amount=total_emi_amount - entered_amount,
                               part_payment_done= 1,
-                              total_amount_pay= float(self.loan_details['total_emi_amount'])
+                              total_amount_pay= float(self.loan_details['total_emi_amount']),
+                              remaining_tenure=remaining_tenure,
+                              part_lender_returns=lender_returns_in_emi_table,
+                              part_remaining_amount=remaining_amount_in_emi_table,
+                              days_left=days_left,
+                            
                               
                               
                           )

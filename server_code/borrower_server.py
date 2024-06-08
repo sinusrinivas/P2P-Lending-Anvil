@@ -10,6 +10,8 @@ import anvil.server
 from datetime import datetime
 # from . import bessem as bessemfunctions
 from . import wallet
+import anvil.pdf
+
 
 
 @anvil.server.callable
@@ -192,7 +194,8 @@ def add_loan_details(loan_amount, tenure,user_id,interest_rate, total_repayment_
           total_processing_fee_amount = processing_fee_amount,
           total_interest_amount = total_interest,
           product_description = product_description,
-          monthly_emi = emi
+          monthly_emi = emi,
+          remaining_amount=total_repayment_amount
          )
 
         # Return the generated loan ID to the client
@@ -529,6 +532,12 @@ def get_group_points(customer_id):
 
     return None
 
+
+@anvil.server.callable
+def create_zaphod_pdf():
+  media_object = anvil.pdf.render_form('borrower.dashboard.borrower_portfolio')
+  return media_object
+
 # second
 # def get_user_points(id):
 #     users = app_tables.fin_user_profile.search(customer_id=id)
@@ -819,3 +828,11 @@ def get_group_points(customer_id):
 
 #         return group_points
 #     return None
+
+
+
+
+
+
+
+

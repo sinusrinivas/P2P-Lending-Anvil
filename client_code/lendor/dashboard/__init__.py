@@ -16,6 +16,7 @@ class dashboard(dashboardTemplate):
     self.init_components(**properties)
     self.email = main_form_module.email
     self.user_id = main_form_module.userId
+    print(self.user_id, "user_ID")
     self.email = self.email
     self.user_id = self.user_id
     self.load_data(None)
@@ -33,7 +34,7 @@ class dashboard(dashboardTemplate):
     self.label_9.text = str(len(existing_loans) or 0)
 
     investment = app_tables.fin_lender.get(customer_id=self.user_id)
-    self.label_3.text = str(investment['investment'] or 0)
+    self.label_3.text = investment['present_commitments'] or 0
     self.label_13.text = str(investment['membership'])
     self.label_15.text = str(investment['member_since'])
 
@@ -228,3 +229,7 @@ class dashboard(dashboardTemplate):
   def link_15_click(self, **event_args):
     """This method is called when the link is clicked"""
     open_form("lendor.dashboard.lender_view_profile")
+
+  def link_16_click(self, **event_args):
+    """This method is called when the link is clicked"""
+    open_form('borrower.dashboard.borrower_portfolio_first_page')

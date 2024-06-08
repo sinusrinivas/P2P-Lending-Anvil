@@ -1,6 +1,6 @@
 container:
   type: ColumnPanel
-  properties: {col_widths: '{"RKZTQI":28,"KEITWY":50,"SUNSAU":2,"RMRWIX":2,"OUEYNE":18,"YDDOXA":60,"TWCNJW":2}'}
+  properties: {col_widths: '{"RMRWIX":2,"OUEYNE":13,"YDDOXA":65,"TWCNJW":2,"YMXIKM":13,"IKOCWN":70,"HJQSXJ":2,"JBDYON":2,"BFUINO":13,"UYDNXL":12,"LKGPNQ":10}'}
 components:
 - name: image_1_copy
   properties: {role: null, vertical_align: center, height: 45.79998779296875, tooltip: '',
@@ -10,83 +10,111 @@ components:
   type: Image
   layout_properties: {grid_position: 'QUVUVP,FIQRFW', full_width_row: true}
 - name: column_panel_7_copy
-  properties: {role: null, col_widths: '{"EITWZQ":25}'}
+  properties: {role: null, col_widths: '{}'}
   type: ColumnPanel
   layout_properties: {grid_position: 'QUVUVP,CXBBNM'}
+  components: []
 - name: logout_1
   properties: {}
   type: form:borrower.logout
   layout_properties: {grid_position: 'QUVUVP,ICSLBE', full_width_row: true}
-- name: navigation_bar_lender_dashbord_1
+- name: navigation_form_dashboard_1
   properties: {}
-  type: form:lendor.navigation_bar.Navigation_bar_lender_dashbord
-  layout_properties: {grid_position: 'QDJLKG,RKXSZQ', full_width_row: true}
-- name: spacer_12
-  properties: {height: '15'}
-  type: Spacer
-  layout_properties: {grid_position: 'OOEMCZ,LUFVQX'}
-- name: spacer_7
+  type: form:borrower.dashboard.Navigation_form_dashboard
+  layout_properties: {grid_position: 'DLVVVC,SUFPQK', full_width_row: true}
+- name: label_23
+  properties: {align: center, text: Profile Overview, bold: true, font_size: 22}
+  type: Label
+  layout_properties: {grid_position: 'LPCMYT,HCBVJP'}
+- name: spacer_1
   properties: {height: 32}
   type: Spacer
-  layout_properties: {grid_position: 'WDQQUR,SUNSAU', full_width_row: true}
-- name: column_panel_7
-  properties: {role: outlined-card, col_widths: '{"CZPYDN":90,"JLLGYN":5,"QXGKNE":10,"JRXWNO":55,"PBZDAB":3,"LGBPSD":57,"XBQUGG":3,"AMNWCP":57}',
-    background: '#2994bb'}
-  type: ColumnPanel
-  layout_properties: {grid_position: 'WDQQUR,RKZTQI', full_width_row: true}
-  components:
-  - name: spacer_5
-    properties: {height: 32}
-    type: Spacer
-    layout_properties: {grid_position: 'VNQVSA,PBZDAB'}
-  - name: link_1
-    properties: {text: Ascend Wallet Balance                                                                                     >,
-      bold: true, foreground: white, font_size: 16}
-    type: Link
-    layout_properties: {grid_position: 'VNQVSA,LGBPSD', full_width_row: true}
-  - name: spacer_6
-    properties: {height: 32}
-    type: Spacer
-    layout_properties: {grid_position: 'IFNKBM,XBQUGG'}
-  - name: label_2
-    properties: {icon: 'fa:rupee', text: '0', foreground: white, font_size: 16}
-    type: Label
-    layout_properties: {grid_position: 'IFNKBM,AMNWCP', full_width_row: true}
-  - name: spacer_1
-    properties: {height: 31.86663818359375}
-    type: Spacer
-    layout_properties: {grid_position: 'AOORRV,JLLGYN', full_width_row: true}
-  - name: column_panel_7_copy_copy
-    properties: {role: outlined-card, col_widths: '{"EITWZQ":25}', background: '#2994bb'}
-    type: ColumnPanel
-    layout_properties: {grid_position: 'AOORRV,CZPYDN LTIVQI,CGALMQ', full_width_row: true}
-    components:
-    - name: label_3
-      properties: {role: null, text: Available To Withdraw, bold: true, foreground: white,
-        font_size: 16}
-      type: Label
-      layout_properties: {grid_position: 'PZDLNQ,NVPFML', full_width_row: true}
-    - name: label_4
-      properties: {icon: 'fa:rupee', text: '0', foreground: white, font_size: 16}
-      type: Label
-      layout_properties: {grid_position: 'ZZGHAZ,IKHPMG', full_width_row: true}
-  - name: spacer_4
-    properties: {height: '2'}
-    type: Spacer
-    layout_properties: {grid_position: 'AOORRV,CZPYDN QZBALS,QPNUUY'}
-  - name: button_1
-    properties: {text: Add Funds, bold: true, background: white, align: full, foreground: blue,
-      role: elevated-button}
-    type: Button
-    layout_properties: {grid_position: 'AOORRV,CZPYDN GVYVHX,HVHHIX'}
-  - name: spacer_3
-    properties: {height: 32}
-    type: Spacer
-    layout_properties: {grid_position: 'AOORRV,QXGKNE'}
+  layout_properties: {grid_position: 'JZFQMR,HJQSXJ', full_width_row: true}
 - name: spacer_2
+  properties: {height: 19.25}
+  type: Spacer
+  layout_properties: {grid_position: 'JZFQMR,YMXIKM SHOTBR,TOUHVT'}
+- name: image_4
+  properties: {}
+  type: Image
+  layout_properties: {grid_position: 'JZFQMR,YMXIKM WKZJHS,CMHYZE', full_width_row: true}
+- name: column_panel_7_copy_copy_2_copy_2
+  properties: {role: elevated-card, col_widths: '{"OQHHFK":10,"SHLPAC":20,"FSQEUT":10,"GBOCYP":20,"RRXPEA":10,"HJSBQR":20,"HCVUZC":10,"CTZOTA":20,"ZYKKAZ":10,"LURHMG":20,"CSQSCZ":10,"LWVPIC":20}'}
+  type: ColumnPanel
+  layout_properties: {grid_position: 'JZFQMR,IKOCWN', full_width_row: true}
+  components:
+  - name: label_4
+    properties: {font: '', font_size: 22, bold: true}
+    type: Label
+    layout_properties: {grid_position: 'GJUXUE,OKMYVT'}
+  - name: label_5_copy_2
+    properties: {text: 'Mobile No :', bold: true, role: null}
+    type: Label
+    layout_properties: {grid_position: 'UTZAKM,OQHHFK'}
+  - name: label_15
+    properties: {role: null}
+    type: Label
+    layout_properties: {grid_position: 'UTZAKM,SHLPAC'}
+  - name: label_10
+    properties: {text: 'Type of Address :', bold: true, role: null}
+    type: Label
+    layout_properties: {grid_position: 'UTZAKM,FSQEUT'}
+  - name: label_19
+    properties: {role: null}
+    type: Label
+    layout_properties: {grid_position: 'UTZAKM,GBOCYP'}
+  - name: label_6
+    properties: {text: 'Date of Birth:', bold: true, role: null}
+    type: Label
+    layout_properties: {grid_position: 'CTBXQX,RRXPEA'}
+  - name: label_16
+    properties: {role: null}
+    type: Label
+    layout_properties: {grid_position: 'CTBXQX,HJSBQR'}
+  - name: label_11
+    properties: {text: 'Qualification :', bold: true, role: null}
+    type: Label
+    layout_properties: {grid_position: 'CTBXQX,HCVUZC'}
+  - name: label_20
+    properties: {role: null}
+    type: Label
+    layout_properties: {grid_position: 'CTBXQX,CTZOTA'}
+  - name: label_7
+    properties: {text: 'Gender :', bold: true, role: null}
+    type: Label
+    layout_properties: {grid_position: 'AEGTVN,ZYKKAZ UVCCJX,LKCGVG'}
+  - name: label_13
+    properties: {text: 'Marital Status :', bold: true, role: null}
+    type: Label
+    layout_properties: {grid_position: 'AEGTVN,ZYKKAZ HSOKAV,QLNOUH'}
+  - name: label_17
+    properties: {role: null}
+    type: Label
+    layout_properties: {grid_position: 'AEGTVN,LURHMG IYKXWL,NMJITA'}
+  - name: label_18
+    properties: {role: null}
+    type: Label
+    layout_properties: {grid_position: 'AEGTVN,LURHMG CMWCHG,AABREC'}
+  - name: label_12
+    properties: {text: occupation_type, bold: true, role: null}
+    type: Label
+    layout_properties: {grid_position: 'AEGTVN,CSQSCZ YTMSZS,ZARLAE'}
+  - name: label_2
+    properties: {text: 'Membership Type :', bold: true}
+    type: Label
+    layout_properties: {grid_position: 'AEGTVN,CSQSCZ ABBSLR,WJLHAT'}
+  - name: label_21
+    properties: {role: null}
+    type: Label
+    layout_properties: {grid_position: 'AEGTVN,LWVPIC MSHMVX,SQRWXI'}
+  - name: label_3
+    properties: {}
+    type: Label
+    layout_properties: {grid_position: 'AEGTVN,LWVPIC TKFFLV,FRLTCS'}
+- name: spacer_5
   properties: {height: 32}
   type: Spacer
-  layout_properties: {grid_position: 'WDQQUR,KEITWY'}
+  layout_properties: {grid_position: 'JZFQMR,LKGPNQ'}
 - name: spacer_8
   properties: {height: '40'}
   type: Spacer
@@ -96,24 +124,32 @@ components:
   type: Spacer
   layout_properties: {grid_position: 'DZCWCJ,RMRWIX', full_width_row: true}
 - name: label_1
-  properties: {text: Your Ascend Portfolio, bold: true, font_size: 22}
+  properties: {text: 'Your Ascend Portfolio :', bold: true, font_size: 22}
   type: Label
   layout_properties: {grid_position: 'DZCWCJ,OUEYNE', full_width_row: true}
+- name: spacer_3
+  properties: {height: 0.99993896484375}
+  type: Spacer
+  layout_properties: {grid_position: 'DZCWCJ,YDDOXA KVNAGK,TXTXZE'}
 - name: label_5
   properties: {}
   type: Label
-  layout_properties: {grid_position: 'DZCWCJ,YDDOXA'}
+  layout_properties: {grid_position: 'DZCWCJ,YDDOXA FQLFQM,FSQAUK'}
 - name: spacer_10
   properties: {height: '20'}
   type: Spacer
   layout_properties: {grid_position: 'OAKTUL,UVBHCD'}
+- name: spacer_4
+  properties: {height: 32}
+  type: Spacer
+  layout_properties: {grid_position: 'QHYMRE,JBDYON', full_width_row: true}
 - name: column_panel_7_copy_2
   properties: {role: elevated-card, col_widths: '{"EITWZQ":25,"DMUXBO":35}', background: '#Edf0f4'}
   type: ColumnPanel
   layout_properties: {grid_position: 'QHYMRE,BFUINO', full_width_row: true}
   components:
   - name: label_2_copy
-    properties: {icon: '', text: 'Total Funds Deposited
+    properties: {icon: '', text: 'Total Commitments
 
         ', bold: true}
     type: Label
@@ -129,7 +165,7 @@ components:
 - name: column_panel_4
   properties: {role: elevated-card, col_widths: '{"KRHWBD":20,"ZHEDGR":40}', background: '#Edf0f4'}
   type: ColumnPanel
-  layout_properties: {grid_position: 'QHYMRE,KZILVI', full_width_row: true}
+  layout_properties: {grid_position: 'QHYMRE,HUOAPR'}
   components:
   - name: label_4_copy
     properties: {text: 'Interest Earned
@@ -151,7 +187,7 @@ components:
   layout_properties: {grid_position: 'QHYMRE,UYDNXL', full_width_row: true}
   components:
   - name: label_8
-    properties: {text: Net Asset Value, bold: true}
+    properties: {text: Total Returns, bold: true}
     type: Label
     layout_properties: {grid_position: 'QAERLY,ZYDTNB IFVDXW,KISYOU'}
   - name: label_9
@@ -160,23 +196,6 @@ components:
     layout_properties: {grid_position: 'QAERLY,ZYDTNB YYWHSJ,POJDAN'}
   - name: image_3
     properties: {height: '50', source: _/theme/lender/dashboard/net%20asset%20value.svg}
-    type: Image
-    layout_properties: {grid_position: 'QAERLY,AEITXQ'}
-- name: column_panel_6_copy
-  properties: {role: elevated-card, col_widths: '{"CUOOLO":20,"ZYDTNB":40}', background: '#Edf0f4'}
-  type: ColumnPanel
-  layout_properties: {grid_position: 'QHYMRE,OECEIH', full_width_row: true}
-  components:
-  - name: label_8_copy
-    properties: {text: Withdrawn, bold: true}
-    type: Label
-    layout_properties: {grid_position: 'QAERLY,ZYDTNB IFVDXW,KISYOU'}
-  - name: label_9_copy
-    properties: {icon: 'fa:rupee', text: '0'}
-    type: Label
-    layout_properties: {grid_position: 'QAERLY,ZYDTNB YYWHSJ,POJDAN'}
-  - name: image_3_copy
-    properties: {height: '50', source: _/theme/lender/dashboard/withdraw%20(2).png}
     type: Image
     layout_properties: {grid_position: 'QAERLY,AEITXQ'}
 - name: spacer_11

@@ -18,7 +18,7 @@ services:
   client_config: {}
   server_config: {}
 startup: {type: form, module: bank_users.main_form}
-package_name: bank_client
+package_name: pip_install_reportlab
 allow_embedding: false
 name: P2P Lending App
 runtime_options:
@@ -60,6 +60,23 @@ db_schema:
       admin_ui: {width: 200, order: 7}
       type: media
     title: fin_reported_problems
+  fin_ascend_score_range:
+    title: fin_ascend_score_range
+    client: full
+    server: full
+    columns:
+    - name: max_ascend_score_range
+      admin_ui: {width: 200}
+      type: number
+    - name: min_ascend_score_range
+      admin_ui: {width: 200}
+      type: number
+    - name: ascend_category
+      admin_ui: {width: 200}
+      type: string
+    - name: color
+      admin_ui: {width: 200}
+      type: string
   fin_gender:
     client: full
     server: full
@@ -1079,7 +1096,7 @@ db_schema:
       admin_ui: {order: 1.625, width: 200}
       type: datetime
     - name: emi_number
-      admin_ui: {order: 1.6875, width: 200}
+      admin_ui: {order: 6.25, width: 200}
       type: number
     - name: account_number
       admin_ui: {order: 1.875, width: 200}
@@ -1088,7 +1105,7 @@ db_schema:
       admin_ui: {order: 3.5, width: 200}
       type: date
     - name: scheduled_payment
-      admin_ui: {order: -1, width: 200}
+      admin_ui: {order: 6.5, width: 200}
       type: date
     - name: amount_paid
       admin_ui: {order: 13, width: 200}
@@ -1110,6 +1127,18 @@ db_schema:
       type: number
     - name: part_payment_done
       admin_ui: {width: 200, order: 19}
+      type: number
+    - name: remaining_tenure
+      admin_ui: {width: 200, order: 6.125}
+      type: number
+    - name: part_lender_returns
+      admin_ui: {width: 200, order: 17}
+      type: number
+    - name: part_remaining_amount
+      admin_ui: {width: 200, order: 18}
+      type: number
+    - name: days_left
+      admin_ui: {width: 200, order: 6.1875}
       type: number
   fin_borrower_business_type:
     client: full
@@ -1180,15 +1209,15 @@ db_schema:
     - name: lender_full_name
       admin_ui: {width: 200, order: 14.5}
       type: string
-    - name: lender_customer_id
-      admin_ui: {width: 200}
-      type: string
     - name: 'status_timestamp '
       admin_ui: {width: 200, order: 20}
       type: datetime
     - name: product_name
       admin_ui: {width: 200, order: 21}
       type: string
+    - name: lender_customer_id
+      admin_ui: {width: 200, order: 10.5}
+      type: number
     title: fin_extends_loan
   fin_borrower_marrital_status:
     client: full
@@ -1236,15 +1265,18 @@ db_schema:
     - name: lender_accepted_timestamp
       admin_ui: {order: 8, width: 228}
       type: date
-    - name: wallet_id
-      admin_ui: {order: 12, width: 200}
-      type: string
     - name: return_on_investment
-      admin_ui: {width: 200, order: 3.5}
+      admin_ui: {order: 4.98828125, width: 200}
       type: number
     - name: member_since
-      admin_ui: {width: 200, order: 13}
+      admin_ui: {order: 5.5, width: 200}
       type: date
+    - name: lender_total_commitments
+      admin_ui: {order: 4.953125, width: 200}
+      type: number
+    - name: present_commitments
+      admin_ui: {order: 4.9765625, width: 200}
+      type: number
   fin_loan_settings:
     client: full
     server: full
@@ -1471,12 +1503,23 @@ db_schema:
       admin_ui: {order: 22.96875, width: 200}
       type: number
     - name: remaining_amount
-      admin_ui: {order: 22.984375, width: 200}
+      admin_ui: {order: 15.5, width: 200}
       type: number
     - name: lender_returns
       admin_ui: {width: 200, order: 8.875}
       type: number
     title: fin_loan_details
+  fin_approval_days:
+    client: full
+    server: full
+    columns:
+    - name: days_for_approval
+      admin_ui: {width: 200, order: 0}
+      type: number
+    - name: loans
+      admin_ui: {width: 200, order: 1}
+      type: string
+    title: fin_approval_days
   fin_user_issues_bugreports:
     title: fin_user_issues_bugreports
     client: full
