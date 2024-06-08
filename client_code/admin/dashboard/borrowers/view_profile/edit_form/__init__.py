@@ -12,7 +12,7 @@ from datetime import date
 
 
 class edit_form(edit_formTemplate):
-  def _init_(self, get_customer_id_value, **properties):
+  def __init__(self, get_customer_id_value, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
 
@@ -421,10 +421,6 @@ class edit_form(edit_formTemplate):
          if loan_details:
             loan_details['borrower_full_name']=self.text_box_2.text 
             loan_details.update()
-         # update the wallet_bank_account_table
-         wallet_bank_account_table = app_tables.fin_wallet_bank_account_table.get(customer_id=self.get)
-         if wallet_bank_account_table:
-            wallet_bank_account_table['account_name']=self.text_box_40.text  
  
               # Assign the converted value to ascend_score
             borrower['ascend_score'] = float(ascend_value)

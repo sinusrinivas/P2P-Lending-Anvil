@@ -13,7 +13,10 @@ components:
   - type: ColumnPanel
     properties: {col_widths: '{"LDPRAL":10,"JTFJZJ":28}'}
     name: content_panel_copy
-    layout_properties: {grid_position: 'SAHHUN,IRMVRD'}
+    layout_properties:
+      col_widths: {}
+      grid_position: QDVYPV,ZRJAZD
+      full_width_row: true
     components:
     - type: form:admin.dashboard.home_button_admin
       properties: {}
@@ -102,13 +105,9 @@ components:
       type: Label
       layout_properties: {grid_position: 'NIPFIX,JTFJZJ CJLCWH,VMZZIJ'}
     - name: label_60
-      properties: {text: '   Email User', bold: true, visible: false}
+      properties: {text: '   Email User', bold: true, visible: true}
       type: Label
       layout_properties: {grid_position: 'NIPFIX,JTFJZJ YIDJUM,WIIOAA'}
-    - name: label_64
-      properties: {text: text_box_4, visible: false}
-      type: Label
-      layout_properties: {grid_position: 'NIPFIX,JTFJZJ YIDJUM,UFSKOI'}
     - type: Label
       properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
         visible: false, text: '   Mobile', font_size: null, font: '', spacing_above: small,
@@ -130,10 +129,13 @@ components:
         underline: false, icon: ''}
       name: label_11
       layout_properties: {grid_position: 'NIPFIX,JTFJZJ OFLXSO,PLCNDF'}
-    - name: label_65
-      properties: {text: text_box_8, visible: false}
-      type: Label
-      layout_properties: {grid_position: 'NIPFIX,JTFJZJ OFLXSO,RWRQZH'}
+    - type: TextBox
+      properties: {role: outlined, align: left, hide_text: false, tooltip: '', placeholder: ' Enter
+          your Aadhaar_no', border: '', enabled: true, foreground: '', visible: false,
+        text: '', font_size: null, font: '', spacing_above: small, type: text, spacing_below: small,
+        italic: false, background: '', bold: false, underline: false}
+      name: text_box_8
+      layout_properties: {grid_position: 'NIPFIX,JTFJZJ OFLXSO,YXEAQM'}
     - type: Label
       properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
         visible: false, text: '   Govt Id2', font_size: null, font: '', spacing_above: small,
@@ -141,16 +143,19 @@ components:
         underline: false, icon: ''}
       name: label_12
       layout_properties: {grid_position: 'NIPFIX,JTFJZJ GGAROP,ULVBAH'}
-    - name: label_66
-      properties: {text: text_box_9, visible: false}
-      type: Label
-      layout_properties: {grid_position: 'NIPFIX,JTFJZJ GGAROP,ORYPPR'}
+    - type: TextBox
+      properties: {role: outlined, align: left, hide_text: false, tooltip: '', placeholder: ' Enter
+          your Pan_number', border: '', enabled: true, foreground: '', visible: false,
+        text: '', font_size: null, font: '', spacing_above: small, type: text, spacing_below: small,
+        italic: false, background: '', bold: false, underline: false}
+      name: text_box_9
+      layout_properties: {grid_position: 'NIPFIX,JTFJZJ GGAROP,ZIRQGF'}
     - name: label_61
       properties: {text: '   Address', bold: true, visible: false}
       type: Label
       layout_properties: {grid_position: 'NIPFIX,JTFJZJ ENBFSJ,EVMUNJ'}
     - name: text_box_11
-      properties: {role: outlined, enabled: true, visible: false}
+      properties: {role: outlined}
       type: TextBox
       layout_properties: {grid_position: 'NIPFIX,JTFJZJ ENBFSJ,PMXXEU'}
     - type: Label
