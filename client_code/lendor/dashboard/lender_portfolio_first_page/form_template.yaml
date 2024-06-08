@@ -13,10 +13,6 @@ components:
   properties: {}
   type: form:borrower.logout
   layout_properties: {grid_position: 'JABGBM,NHVYJS', full_width_row: true}
-- name: navigation_bar_lender_dashbord_1
-  properties: {}
-  type: form:lendor.navigation_bar.Navigation_bar_lender_dashbord
-  layout_properties: {grid_position: 'IAGOOF,TOKQXL', full_width_row: true}
 - name: label_1
   properties: {align: center, text: Lenders List, font_size: 20, bold: true}
   type: Label
