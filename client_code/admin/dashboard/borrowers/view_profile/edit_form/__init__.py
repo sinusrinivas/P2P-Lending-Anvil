@@ -180,13 +180,13 @@ class edit_form(edit_formTemplate):
       self.drop_down_1.selected_value=self.gender_list[c]
       self.set_textbox_visibility(self.text_box_5,self.label_6, self.age_list[c])
       self.set_textbox_visibility(self.text_box,self.label_7, self.dob_list[c])
-      self.set_textbox_visibility(self.text_box_4,self.label_60,self.email_user_list[c])
+      self.set_textbox_visibility(self.label_64,self.label_60,self.email_user_list[c])
       self.set_textbox_visibility(self.text_box_11,self.label_61,self.address_list[c])
       self.set_textbox_visibility(self.text_box_15,self.label_63,self.country_list[c])
       self.drop_down_9.selected_value=self.profession_type_list[c]
       self.set_textbox_visibility(self.text_box_7,self.label_10, self.mobile_list[c])
-      self.set_textbox_visibility(self.text_box_8,self.label_11, self.aadhar_list[c])
-      self.set_textbox_visibility(self.text_box_9,self.label_12, self.pan_list[c])
+      self.set_textbox_visibility(self.label_65,self.label_11, self.aadhar_list[c])
+      self.set_textbox_visibility(self.label_66,self.label_12, self.pan_list[c])
       self.set_textbox_visibility(self.text_box_10,self.label_13, self.city_list[c])
       self.set_textbox_visibility(self.text_box_12,self.label_15, str(self.last_confirm_list[c]))
       self.set_textbox_visibility(self.text_box_13,self.label_16, str(self.mobile_check_list[c]))
@@ -326,13 +326,13 @@ class edit_form(edit_formTemplate):
         user_data['gender'] = self.drop_down_1.selected_value
         user_data['user_age'] = int(self.text_box_5.text) 
         user_data['date_of_birth'] = self.text_box.text
-        user_data['email_user'] = self.text_box_4.text
+        user_data['email_user'] = self.label_64.text
         user_data['street_adress_1'] = self.text_box_11.text
         user_data['country'] = self.text_box_15.text
         user_data['profession'] = self.drop_down_9.selected_value
         user_data['mobile'] = self.text_box_7.text
-        user_data['aadhaar_no'] = self.text_box_8.text
-        user_data['pan_number'] = self.text_box_9.text
+        user_data['aadhaar_no'] = self.label_65.text
+        user_data['pan_number'] = self.label_66.text
         user_data['city'] = self.text_box_10.text
         user_data['last_confirm'] = bool(self.text_box_12.text)
         user_data['mobile_check'] = bool(self.text_box_13.text)
