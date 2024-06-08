@@ -10,7 +10,7 @@ import anvil.tables.query as q
 from anvil.tables import app_tables
 
 class view_profile(view_profileTemplate):
-  def __init__(self, value_to_display, **properties):
+  def _init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
 
@@ -38,16 +38,13 @@ class view_profile(view_profileTemplate):
     self.terms_list = []
     self.mail_id_list = []
     self.qualification_list = []
-    self.address_list = []
     self.address_type_list = []
-    self.profession_type_list = []
     self.street_list = []
     self.build_name_list = []
     self.house_no_list = []
     self.landmark_list = []
     self.pincode_list = []
     self.state_list = []
-    self.country_list = []
     self.spouse_number_list = []
     self.company_name_list = []
     self.company_adress_list = []
@@ -68,7 +65,7 @@ class view_profile(view_profileTemplate):
     self.account_type = []
     self.account_number = []
     self.account_bank_branch = []
-    self.bank_id = []
+    self.ifsc_code = []
     self.salary_type = []
     self.select_bank = []
     self.net_bank = []
@@ -96,9 +93,6 @@ class view_profile(view_profileTemplate):
       self.gender_list.append(i['gender'])
       self.age_list.append(i['user_age'])
       self.dob_list.append(i['date_of_birth'])
-      self.address_list.append(i['address'])
-      self.country_list.append(i['country'])
-      self.profession_type_list.append(i['profession_type'])
       self.aadhar_list.append(i['aadhaar_no'])
       self.pan_list.append(i['pan_number'])
       self.city_list.append(i['city'])
@@ -173,9 +167,6 @@ class view_profile(view_profileTemplate):
         self.set_label_visibility(self.label_39,self.label_5, self.gender_list[b])
         self.set_label_visibility(self.label_40, self.label_6,str(self.age_list[b]) if self.age_list[b] else '')
         self.set_label_visibility(self.label_41,self.label_7, self.dob_list[b])
-        self.set_label_visibility(self.label_129,self.label_130,self.address_list[b])
-        self.set_label_visibility(self.label_131,self.label_132,self.country_list[b])
-        self.set_label_visibility(self.label_133,self.label_134,self.profession_type_list[b])
         self.set_label_visibility(self.label_44,self.label_10, self.mobile_list[b])
         self.set_label_visibility(self.label_45,self.label_11, self.aadhar_list[b])
         self.set_label_visibility(self.label_46,self.label_12, self.pan_list[b])

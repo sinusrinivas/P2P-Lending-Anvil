@@ -13,10 +13,7 @@ components:
   - type: ColumnPanel
     properties: {col_widths: '{"LDPRAL":10,"JTFJZJ":28}'}
     name: content_panel_copy
-    layout_properties:
-      col_widths: {}
-      grid_position: QDVYPV,ZRJAZD
-      full_width_row: true
+    layout_properties: {grid_position: 'SAHHUN,IRMVRD'}
     components:
     - type: form:admin.dashboard.home_button_admin
       properties: {}
@@ -108,10 +105,10 @@ components:
       properties: {text: '   Email User', bold: true, visible: false}
       type: Label
       layout_properties: {grid_position: 'NIPFIX,JTFJZJ YIDJUM,WIIOAA'}
-    - name: text_box_4
-      properties: {}
-      type: TextBox
-      layout_properties: {grid_position: 'NIPFIX,JTFJZJ YIDJUM,CUGPDP'}
+    - name: label_64
+      properties: {text: text_box_4, visible: false}
+      type: Label
+      layout_properties: {grid_position: 'NIPFIX,JTFJZJ YIDJUM,UFSKOI'}
     - type: Label
       properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
         visible: false, text: '   Mobile', font_size: null, font: '', spacing_above: small,
@@ -133,13 +130,10 @@ components:
         underline: false, icon: ''}
       name: label_11
       layout_properties: {grid_position: 'NIPFIX,JTFJZJ OFLXSO,PLCNDF'}
-    - type: TextBox
-      properties: {role: outlined, align: left, hide_text: false, tooltip: '', placeholder: ' Enter
-          your Aadhaar_no', border: '', enabled: true, foreground: '', visible: false,
-        text: '', font_size: null, font: '', spacing_above: small, type: text, spacing_below: small,
-        italic: false, background: '', bold: false, underline: false}
-      name: text_box_8
-      layout_properties: {grid_position: 'NIPFIX,JTFJZJ OFLXSO,YXEAQM'}
+    - name: label_65
+      properties: {text: text_box_8, visible: false}
+      type: Label
+      layout_properties: {grid_position: 'NIPFIX,JTFJZJ OFLXSO,RWRQZH'}
     - type: Label
       properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
         visible: false, text: '   Govt Id2', font_size: null, font: '', spacing_above: small,
@@ -147,19 +141,16 @@ components:
         underline: false, icon: ''}
       name: label_12
       layout_properties: {grid_position: 'NIPFIX,JTFJZJ GGAROP,ULVBAH'}
-    - type: TextBox
-      properties: {role: outlined, align: left, hide_text: false, tooltip: '', placeholder: ' Enter
-          your Pan_number', border: '', enabled: true, foreground: '', visible: false,
-        text: '', font_size: null, font: '', spacing_above: small, type: text, spacing_below: small,
-        italic: false, background: '', bold: false, underline: false}
-      name: text_box_9
-      layout_properties: {grid_position: 'NIPFIX,JTFJZJ GGAROP,ZIRQGF'}
+    - name: label_66
+      properties: {text: text_box_9, visible: false}
+      type: Label
+      layout_properties: {grid_position: 'NIPFIX,JTFJZJ GGAROP,ORYPPR'}
     - name: label_61
       properties: {text: '   Address', bold: true, visible: false}
       type: Label
       layout_properties: {grid_position: 'NIPFIX,JTFJZJ ENBFSJ,EVMUNJ'}
     - name: text_box_11
-      properties: {role: outlined}
+      properties: {role: outlined, enabled: true, visible: false}
       type: TextBox
       layout_properties: {grid_position: 'NIPFIX,JTFJZJ ENBFSJ,PMXXEU'}
     - type: Label
@@ -201,6 +192,14 @@ components:
         italic: false, background: '', bold: false, underline: false}
       name: text_box_33
       layout_properties: {grid_position: 'NIPFIX,JTFJZJ WNVCST,LKKHVV'}
+    - name: label_62
+      properties: {text: '   Country', bold: true, visible: false}
+      type: Label
+      layout_properties: {grid_position: 'NIPFIX,JTFJZJ FNMRSN,LMHNQP'}
+    - name: text_box_15
+      properties: {role: outlined}
+      type: TextBox
+      layout_properties: {grid_position: 'NIPFIX,JTFJZJ FNMRSN,FXJVNP'}
     - type: Label
       properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
         visible: false, text: '   Pincode', font_size: null, font: '', spacing_above: small,
@@ -226,6 +225,14 @@ components:
       properties: {role: outlined}
       type: DropDown
       layout_properties: {grid_position: 'NIPFIX,JTFJZJ CRHJQI,XKETDZ'}
+    - name: label_63
+      properties: {text: '   Profession Type', bold: true, visible: true}
+      type: Label
+      layout_properties: {grid_position: 'NIPFIX,JTFJZJ HUQWKU,PYZBAB'}
+    - name: drop_down_9
+      properties: {role: outlined}
+      type: DropDown
+      layout_properties: {grid_position: 'NIPFIX,JTFJZJ HUQWKU,BGZNKU'}
     - type: Label
       properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
         visible: false, text: '   Mouther Tounge', font_size: null, font: '', spacing_above: small,
