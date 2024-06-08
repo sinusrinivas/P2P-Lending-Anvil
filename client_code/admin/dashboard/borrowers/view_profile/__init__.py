@@ -10,7 +10,7 @@ import anvil.tables.query as q
 from anvil.tables import app_tables
 
 class view_profile(view_profileTemplate):
-  def _init__(self, **properties):
+  def __init__(self, value_to_display, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
 
