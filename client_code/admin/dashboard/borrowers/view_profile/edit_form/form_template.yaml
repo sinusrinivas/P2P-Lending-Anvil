@@ -208,6 +208,13 @@ components:
         italic: false, background: '', bold: false, underline: false}
       name: text_box_12
       layout_properties: {grid_position: 'NIPFIX,JTFJZJ NHPRVB,MIFFBJ'}
+    - type: TextBox
+      properties: {role: outlined, align: left, hide_text: false, tooltip: '', placeholder: ' Enter
+          your State ', border: '', enabled: true, foreground: '', visible: false,
+        text: '', font_size: null, font: '', spacing_above: small, type: text, spacing_below: small,
+        italic: false, background: '', bold: false, underline: false}
+      name: text_box_33
+      layout_properties: {grid_position: 'NIPFIX,JTFJZJ HMTSYE,KXSWDC'}
     - type: Label
       properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
         visible: false, text: '   Mobile Check', font_size: null, font: '', spacing_above: small,
@@ -455,13 +462,6 @@ components:
       properties: {role: outlined}
       type: DropDown
       layout_properties: {grid_position: 'NIPFIX,JTFJZJ FQGEMN,VKDOKV'}
-    - type: TextBox
-      properties: {role: outlined, align: left, hide_text: false, tooltip: '', placeholder: ' Enter
-          your State ', border: '', enabled: true, foreground: '', visible: false,
-        text: '', font_size: null, font: '', spacing_above: small, type: text, spacing_below: small,
-        italic: false, background: '', bold: false, underline: false}
-      name: text_box_33
-      layout_properties: {grid_position: 'NIPFIX,JTFJZJ OVGSBN,PHMQQA'}
     - type: Label
       properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
         visible: false, text: '   Street', font_size: null, font: '', spacing_above: small,
