@@ -37,7 +37,7 @@ components:
     layout_properties: {grid_position: 'DKVFGO,KOUUCZ'}
   - name: label_1
     properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-      visible: false, text: '   Coustmer ID', font_size: null, font: '', spacing_above: small,
+      visible: false, text: '   Customer ID', font_size: null, font: '', spacing_above: small,
       icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
       underline: false, icon: ''}
     type: Label
@@ -77,6 +77,13 @@ components:
       underline: false, icon: ''}
     type: Label
     layout_properties: {grid_position: 'DKVFGO,OSCEES RUMYHO,JTNJNM'}
+  - name: label_14
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: false, text: '   Email User', font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+      underline: false, icon: ''}
+    type: Label
+    layout_properties: {grid_position: 'DKVFGO,OSCEES UYGTXJ,SSQCNM'}
   - name: label_10
     properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
       visible: false, text: '   Mobile', font_size: null, font: '', spacing_above: small,
@@ -86,7 +93,7 @@ components:
     layout_properties: {grid_position: 'DKVFGO,OSCEES FQCQZO,HFQOSB'}
   - name: label_11
     properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-      visible: false, text: '  Govt Id 1 ', font_size: null, font: '', spacing_above: small,
+      visible: false, text: '   Govt Id 1 ', font_size: null, font: '', spacing_above: small,
       icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
       underline: false, icon: ''}
     type: Label
@@ -105,13 +112,6 @@ components:
       underline: false, icon: ''}
     type: Label
     layout_properties: {grid_position: 'DKVFGO,OSCEES DNHJVS,SWTANI'}
-  - name: label_14
-    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-      visible: false, text: '   Email User', font_size: null, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-      underline: false, icon: ''}
-    type: Label
-    layout_properties: {grid_position: 'DKVFGO,OSCEES GENKHD,VGFSLQ'}
   - name: label_15
     properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
       visible: false, text: '   Last Confirm', font_size: null, font: '', spacing_above: small,
@@ -541,6 +541,10 @@ components:
     properties: {visible: false}
     type: Label
     layout_properties: {grid_position: 'DKVFGO,KYKCVY HLDTLQ,JWODAV'}
+  - name: label_48
+    properties: {visible: false}
+    type: Label
+    layout_properties: {grid_position: 'DKVFGO,KYKCVY GJGTLK,UYZMYE'}
   - name: label_44
     properties: {visible: false}
     type: Label
@@ -557,10 +561,6 @@ components:
     properties: {visible: false}
     type: Label
     layout_properties: {grid_position: 'DKVFGO,KYKCVY OXVGBH,AIQPMD'}
-  - name: label_48
-    properties: {visible: false}
-    type: Label
-    layout_properties: {grid_position: 'DKVFGO,KYKCVY LEZAXF,VXAPRD'}
   - name: label_49
     properties: {visible: false}
     type: Label
