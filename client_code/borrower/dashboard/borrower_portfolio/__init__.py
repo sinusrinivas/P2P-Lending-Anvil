@@ -19,9 +19,10 @@ class borrower_portfolio(borrower_portfolioTemplate):
   def __init__(self, selected_row, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
+    self.selected_row=selected_row
     self.id= selected_row['customer_id']
-    self.email = main_form_module.email
-    print(self.email)
+    # self.email = main_form_module.email
+    # print(self.email)
     # self.id = main_form_module.userId
     self.create_bar_chart()
 
@@ -207,6 +208,6 @@ class borrower_portfolio(borrower_portfolioTemplate):
 
   def button_1_click(self, **event_args):
     """This method is called when the button is clicked"""
-    pdf = anvil.server.call('create_pdf1',"My Portfolio","self.image_2.source")
+    pdf = anvil.server.call('create_pdf1',"My Portfolio","self.image_2.source",self.selected_row)
     anvil.media.download(pdf)
     
