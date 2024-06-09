@@ -143,12 +143,21 @@ class manage_ascend_score_range(manage_ascend_score_rangeTemplate):
         min_ascend_score_range = int(self.text_box_1.text)
         max_ascend_score_range = int(self.text_box_2.text)
         color = self.text_box_3.text
-        if min_ascend_score_range <= 0:
-            alert("verygood Minimum amount must be greater than zero!", title="Error")
+        if min_ascend_score_range <= 0: #or min_ascend_score_range < 80:
+            alert("verygood Minimum ascend score range must be greater than zero!", title="Error")
             return
         if min_ascend_score_range >= max_ascend_score_range:
-            alert("verygood Minimum ascend score range must be less than verygood maximum ascend score range!", title="Error")
+            alert("VeryGood Minimum ascend score range must be less than VeryGood Maximum ascend score range!", title="Error")
             return
+        # if min_ascend_score_range < 81:
+        #     alert("VeryGood Minimum ascend score range must be at least 80!", title="Error")
+        #     return
+        verygood_row = app_tables.fin_ascend_score_range.get(ascend_category='VeryGood')
+        if verygood_row is not None:
+            verygood_row.update(min_ascend_score_range=min_ascend_score_range, max_ascend_score_range=max_ascend_score_range, color=color)
+        else:
+            app_tables.fin_ascend_score_range.append(ascend_category=ascend_category, min_ascend_score_range=min_ascend_score_range, max_ascend_score_range=max_ascend_score_range, color=color)
+        
         
     elif ascend_category == 'Good':
         min_ascend_score_range = int(self.text_box_4.text)
@@ -158,18 +167,34 @@ class manage_ascend_score_range(manage_ascend_score_rangeTemplate):
             alert("Good Minimum ascend score range can't be set as zero, it should be lessthan than verygood max_ascend_score_range and greater than Good max_ascend_score_range!", title="Error")
             return
         if min_ascend_score_range >= max_ascend_score_range:
-            alert("good Minimum ascend score range must be less than good maximum ascend score range!", title="Error")
+            alert("Good Minimum ascend score range must be less than Good Maximum ascend score range!", title="Error")
             return
+       
+        
         verygood_row = app_tables.fin_ascend_score_range.get(ascend_category='VeryGood')
         if verygood_row is not None:
             if max_ascend_score_range <= verygood_row['min_ascend_score_range']+1:
-                verygood_row.update(min_ascend_score_range=max_ascend_score_range , color=color)
+                verygood_row.update(min_ascend_score_range=max_ascend_score_range+1, color=color)
             else:
                 alert("Good Maximum ascend score range must be greater than VeryGood Minimum ascend score range!", title="Error")
                 return
         else:
             app_tables.fin_ascend_score_range.append(ascend_category='VeryGood', min_ascend_score_range=max_ascend_score_range , max_ascend_score_range=max_ascend_score_range, color=color)
-         
+        # if max_ascend_score_range <= 80:
+        #     # Set the minimum value for VeryGood to match Good's maximum value
+        #     verygood_min_ascend_score_range = 80 if min_ascend_score_range <= 80 else min_ascend_score_range
+        #     verygood_min_ascend_score_range = max_ascend_score_range + 1
+        #     verygood_row = app_tables.fin_ascend_score_range.get(ascend_category='VeryGood')
+        #     if verygood_row is not None:
+        #         verygood_row.update(min_ascend_score_range=verygood_min_ascend_score_range, color=color)
+        #     else:
+        #         app_tables.fin_ascend_score_range.append(ascend_category='VeryGood', min_ascend_score_range=verygood_min_ascend_score, max_ascend_score_range=max_ascend_score_range, color=color)
+       
+        good_row = app_tables.fin_ascend_score_range.get(ascend_category='Good')
+        if good_row is not None:
+            good_row.update(min_ascend_score_range=min_ascend_score_range, max_ascend_score_range=max_ascend_score_range, color=color)
+        else:
+            app_tables.fin_ascend_score_range.append(ascend_category=ascend_category, min_ascend_score_range=min_ascend_score_range, max_ascend_score_range=max_ascend_score_range, color=color)
         
     elif ascend_category == 'Average':
         min_ascend_score_range = int(self.text_box_7.text)
@@ -184,14 +209,20 @@ class manage_ascend_score_range(manage_ascend_score_rangeTemplate):
         good_row = app_tables.fin_ascend_score_range.get(ascend_category='Good')
         if good_row is not None:
             if max_ascend_score_range <= good_row['min_ascend_score_range']+1:
-                good_row.update(min_ascend_score_range=max_ascend_score_range , color=color)
+                good_row.update(min_ascend_score_range=max_ascend_score_range+1, color=color)
             else:
                 alert("Average Maximum ascend score range must be greater than Good Minimum ascend score range!", title="Error")
                 return
         else:
             app_tables.fin_ascend_score_range.append(ascend_category='Good', min_ascend_score_range=max_ascend_score_range , max_ascend_score_range=max_ascend_score_range, color=color)
-        
-      
+       
+        average_row = app_tables.fin_ascend_score_range.get(ascend_category='Average')
+        if average_row is not None:
+            average_row.update(min_ascend_score_range=min_ascend_score_range, max_ascend_score_range=max_ascend_score_range, color=color)
+        else:
+            app_tables.fin_ascend_score_range.append(ascend_category=ascend_category, min_ascend_score_range=min_ascend_score_range, max_ascend_score_range=max_ascend_score_range, color=color)
+       
+    elif ascend_category == 'Bad':
         min_ascend_score_range = int(self.text_box_10.text)
         max_ascend_score_range = int(self.text_box_11.text)
         color = self.text_box_12.text
@@ -201,22 +232,22 @@ class manage_ascend_score_range(manage_ascend_score_rangeTemplate):
         if min_ascend_score_range >= max_ascend_score_range:
             alert("bad Minimum ascend score range must be less than bad maximum ascend score range!", title="Error")
             return
-        average_row = app_tables.fin_ascend_score_range.get(ascend_category='Good')
+        average_row = app_tables.fin_ascend_score_range.get(ascend_category='Average')
         if average_row is not None:
             if max_ascend_score_range <= average_row['min_ascend_score_range']+1:
-                average_row.update(min_ascend_score_range=max_ascend_score_range , color=color)
+                average_row.update(min_ascend_score_range=max_ascend_score_range+1, color=color)
             else:
-                alert("Good Maximum ascend score range must be greater than Average Minimum ascend score range!", title="Error")
+                alert("Bad Maximum ascend score range must be greater than Average Minimum ascend score range!", title="Error")
                 return
         else:
             app_tables.fin_ascend_score_range.append(ascend_category='Average', min_ascend_score_range=max_ascend_score_range , max_ascend_score_range=max_ascend_score_range, color=color)
-          
+       
         bad_row = app_tables.fin_ascend_score_range.get(ascend_category='Bad')
         if bad_row is not None:
             bad_row.update(min_ascend_score_range=min_ascend_score_range, max_ascend_score_range=max_ascend_score_range, color=color)
         else:
             app_tables.fin_ascend_score_range.append(ascend_category=ascend_category, min_ascend_score_range=min_ascend_score_range, max_ascend_score_range=max_ascend_score_range, color=color)
-      
+        
         # Check if Bad's max_ascend_score_range exceeds any other ascend score range
         for category in ['VeryGood', 'Good', 'Average']:
             if category != ascend_category:
