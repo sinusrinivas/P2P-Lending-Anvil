@@ -161,6 +161,7 @@ class manage_ascend_score_range(manage_ascend_score_rangeTemplate):
             alert("good Minimum ascend score range must be less than good maximum ascend score range!", title="Error")
             return
         verygood_max_ascend_score_range = int(self.text_box_2.text)
+        
         if min_ascend_score_range >= verygood_max_ascend_score_range:
             alert("Good's min_ascend_score_range must be lessthan than verygood max_ascend_score_range!", title="Error")
             return  
