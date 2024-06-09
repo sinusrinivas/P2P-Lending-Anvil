@@ -1038,6 +1038,9 @@ db_schema:
     - name: farmer_earnings
       admin_ui: {order: 49.9921875, width: 200}
       type: string
+    - name: lendor_lending_type
+      admin_ui: {width: 200, order: 117}
+      type: string
     title: fin_user_profile
   fin_wallet_transactions:
     title: fin_wallet_transactions
@@ -1214,15 +1217,15 @@ db_schema:
     - name: lender_full_name
       admin_ui: {width: 200, order: 14.5}
       type: string
-    - name: lender_customer_id
-      admin_ui: {width: 200}
-      type: string
     - name: 'status_timestamp '
       admin_ui: {width: 200, order: 20}
       type: datetime
     - name: product_name
       admin_ui: {width: 200, order: 21}
       type: string
+    - name: lender_customer_id
+      admin_ui: {width: 200, order: 22}
+      type: number
     title: fin_extends_loan
   fin_borrower_marrital_status:
     client: full
@@ -1324,6 +1327,9 @@ db_schema:
     - name: account_type
       admin_ui: {width: 200, order: 8}
       type: string
+    - name: customer_id
+      admin_ui: {order: 0.5, width: 200}
+      type: number
     title: fin_wallet_bank_account_table
   fin_product_group:
     client: full
