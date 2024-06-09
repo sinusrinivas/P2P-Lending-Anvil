@@ -33,7 +33,7 @@ class manage_credit_limit(manage_credit_limitTemplate):
         if ' ' in value:
             value = value.replace(' ', '')
             self.text_box_1.text = value
-            alert("Spaces are not allowed in the input.")
+            alert("Spaces are not allowed in the input")
       
     def save_button_click(self, **event_args):
         """This method is called when the save button is clicked."""

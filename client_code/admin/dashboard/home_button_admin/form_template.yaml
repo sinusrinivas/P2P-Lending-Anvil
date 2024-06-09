@@ -1,6 +1,6 @@
 container:
   type: ColumnPanel
-  properties: {col_widths: '{}'}
+  properties: {col_widths: '{"IYQNLB":30,"FBDRGL":30}', wrap_on: never}
 components:
 - name: image_1
   properties: {role: null, vertical_align: center, height: '34', tooltip: '', border: '',
