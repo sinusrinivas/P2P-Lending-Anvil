@@ -35,6 +35,7 @@ unique_ids:
     admin.dashboard.manage_loan_details.loan_management.not_payable_amount: '1707202505340461905881878.67584'
     lendor.dashboard.today_dues.View_Details: '170356566713748309638072.5887'
     admin.dashboard.manage_ascend.add_subcategory.edit_marrital: '1709734215763733851464964.1079'
+    lendor.dashboard.lender_portfolio_first_page.RowTemplate32: '1717855347011920897652934.3423'
     borrower.dashboard.foreclosure_request.RowTemplate6: YBFSJTOFTEGFT4ZJPHFUWUB2XZGJCGFO
     admin.dashboard.manage_products.view_product.ItemTemplate98: '1712203277869528162715613.7563'
     admin.dashboard.manage_cms.add_borrower_dropdown_details.edit_business: '170612001569349532041523.716156'
@@ -332,6 +333,7 @@ unique_ids:
     bank_users.main_form.basic_registration_form: '1706530260736283711618019.2678'
     admin.dashboard.lenders.view_profile_copy.update_form_copy: '1700738460105764132450536.1031'
     borrower.dashboard.borrower_profile: M4GBTRWVQV7UYNVPLA2V5R2QAYH5JVCM
+    borrower.dashboard.borrower_portfolio_first_page.RowTemplate38: '1717855403590411855234461.318'
     admin.dashboard.borrowers.view_profile: '1699967781060728634256553.5089'
     admin.dashboard.borrowers.view_profile.edit_form: '169996780467215868230296.983032'
     borrower.logout: '1706172316000574399103224.3589'
