@@ -13,8 +13,7 @@ components:
     type: form:admin.dashboard.home_button_admin
     layout_properties: {grid_position: 'IZZNJE,ESGVLN', full_width_row: true}
   - name: content_panel_copy_copy_3_copy_3_copy_copy_copy_copy
-    properties: {col_widths: '{"LRMGVL":11,"PPLSYB":11,"FPVXBC":11,"GBAJZY":10}',
-      background: '', role: null}
+    properties: {col_widths: '{"LRMGVL":11,"PPLSYB":11,"FPVXBC":11,"GBAJZY":10}', background: '', role: null}
     type: ColumnPanel
     layout_properties: {grid_position: 'MUZGYU,IATHIB'}
     components:
@@ -28,8 +27,7 @@ components:
       layout_properties: {grid_position: 'LKTWOF,LRMGVL TFYOZD,THGIQV'}
       components:
       - name: image_4_copy
-        properties: {source: _/theme/admin/dashboard/manage_cms/gender.png, display_mode: shrink_to_fit,
-          height: '100'}
+        properties: {source: _/theme/admin/dashboard/manage_cms/gender.png, display_mode: shrink_to_fit, height: '100'}
         type: Image
         layout_properties: {grid_position: 'QGZTNW,PVJEPO'}
         event_bindings: {mouse_up: image_4_copy_mouse_up}
@@ -48,8 +46,7 @@ components:
       layout_properties: {grid_position: 'LKTWOF,LRMGVL QAKCZK,TLIDIT'}
       components:
       - name: image_4_copy_2
-        properties: {source: _/theme/admin/dashboard/manage_cms/profession.png, display_mode: shrink_to_fit,
-          height: '100'}
+        properties: {source: _/theme/admin/dashboard/manage_cms/profession.png, display_mode: shrink_to_fit, height: '100'}
         type: Image
         layout_properties: {grid_position: 'QGZTNW,PVJEPO'}
         event_bindings: {mouse_up: image_4_copy_2_mouse_up}
@@ -68,8 +65,7 @@ components:
       layout_properties: {grid_position: 'LKTWOF,LRMGVL TJQWWL,OLBMNE'}
       components:
       - name: image_4
-        properties: {source: _/theme/admin/dashboard/manage_ascend_score/salary_type.png,
-          display_mode: shrink_to_fit, height: '100'}
+        properties: {source: _/theme/admin/dashboard/manage_ascend_score/salary_type.png, display_mode: shrink_to_fit, height: '100'}
         type: Image
         layout_properties: {grid_position: 'QGZTNW,PVJEPO'}
         event_bindings: {mouse_up: image_4_mouse_up}
@@ -84,8 +80,7 @@ components:
       layout_properties: {grid_position: 'LKTWOF,LRMGVL XEBUVO,ECFCFC'}
       components:
       - name: image_4_copy_8
-        properties: {source: _/theme/credit-card.png, display_mode: shrink_to_fit,
-          height: '100'}
+        properties: {source: _/theme/credit-card.png, display_mode: shrink_to_fit, height: '100'}
         type: Image
         layout_properties: {grid_position: 'QGZTNW,PVJEPO'}
         event_bindings: {mouse_up: image_4_copy_8_mouse_up}
@@ -100,8 +95,7 @@ components:
       layout_properties: {grid_position: 'LKTWOF,PPLSYB IRSXYL,KKSDLA'}
       components:
       - name: image_4_copy_3
-        properties: {source: _/theme/admin/dashboard/manage_cms/qualification.png,
-          display_mode: shrink_to_fit, height: '100'}
+        properties: {source: _/theme/admin/dashboard/manage_cms/qualification.png, display_mode: shrink_to_fit, height: '100'}
         type: Image
         layout_properties: {grid_position: 'QGZTNW,PVJEPO'}
         event_bindings: {mouse_up: image_4_copy_3_mouse_up}
@@ -120,8 +114,7 @@ components:
       layout_properties: {grid_position: 'LKTWOF,PPLSYB KKXABX,ZHURYQ'}
       components:
       - name: image_4_copy_10
-        properties: {source: _/theme/admin/dashboard/manage_cms/present-adress.png,
-          display_mode: shrink_to_fit, height: '100'}
+        properties: {source: _/theme/admin/dashboard/manage_cms/present-adress.png, display_mode: shrink_to_fit, height: '100'}
         type: Image
         layout_properties: {grid_position: 'QGZTNW,PVJEPO'}
         event_bindings: {mouse_up: image_4_copy_10_mouse_up}
@@ -140,8 +133,7 @@ components:
       layout_properties: {grid_position: 'LKTWOF,PPLSYB CCVDTH,SQAEZT'}
       components:
       - name: image_4_copy_4
-        properties: {source: _/theme/admin/dashboard/manage_cms/spouse-profession.png,
-          display_mode: shrink_to_fit, height: '100'}
+        properties: {source: _/theme/admin/dashboard/manage_cms/spouse-profession.png, display_mode: shrink_to_fit, height: '100'}
         type: Image
         layout_properties: {grid_position: 'QGZTNW,PVJEPO'}
         event_bindings: {mouse_up: image_4_copy_4_mouse_up}
@@ -156,8 +148,7 @@ components:
       layout_properties: {grid_position: 'LKTWOF,PPLSYB EUZKJT,FVHWID'}
       components:
       - name: image_4_copy_4_copy_copy_2
-        properties: {source: _/theme/admin/dashboard/manage_ascend_score/vehicle-loan.png,
-          display_mode: shrink_to_fit, height: '100'}
+        properties: {source: _/theme/admin/dashboard/manage_ascend_score/vehicle-loan.png, display_mode: shrink_to_fit, height: '100'}
         type: Image
         layout_properties: {grid_position: 'QGZTNW,PVJEPO'}
         event_bindings: {mouse_up: image_4_copy_4_copy_copy_2_mouse_up}
@@ -172,8 +163,7 @@ components:
       layout_properties: {grid_position: 'LKTWOF,FPVXBC FZRSVY,NIONJZ'}
       components:
       - name: image_4_copy_5
-        properties: {source: _/theme/admin/dashboard/manage_cms/marital%20status.png,
-          display_mode: shrink_to_fit, height: '100'}
+        properties: {source: _/theme/admin/dashboard/manage_cms/marital%20status.png, display_mode: shrink_to_fit, height: '100'}
         type: Image
         layout_properties: {grid_position: 'QIIGJK,CGUSVX'}
         event_bindings: {mouse_up: image_4_copy_5_mouse_up}
@@ -192,14 +182,12 @@ components:
       layout_properties: {grid_position: 'LKTWOF,FPVXBC RWZWDC,AYIQOP'}
       components:
       - name: image_4_copy_6
-        properties: {source: _/theme/admin/dashboard/manage_cms/organization%20(1).png,
-          display_mode: shrink_to_fit, height: '100'}
+        properties: {source: _/theme/admin/dashboard/manage_cms/organization%20(1).png, display_mode: shrink_to_fit, height: '100'}
         type: Image
         layout_properties: {grid_position: 'QGZTNW,PVJEPO'}
         event_bindings: {mouse_up: image_4_copy_6_mouse_up}
       - name: button_16
-        properties: {text: Organization Type, font_size: 16, foreground: black, bold: true,
-          align: center}
+        properties: {text: Organization Type, font_size: 16, foreground: black, bold: true, align: center}
         type: Button
         layout_properties: {grid_position: 'FYGZDA,EXGKRV'}
         event_bindings: {click: button_16_click}
@@ -213,8 +201,7 @@ components:
       layout_properties: {grid_position: 'LKTWOF,FPVXBC HBONGV,TCALEI'}
       components:
       - name: image_4_copy_4_copy_copy
-        properties: {source: _/theme/admin/dashboard/manage_ascend_score/home-loan.png,
-          display_mode: shrink_to_fit, height: '100'}
+        properties: {source: _/theme/admin/dashboard/manage_ascend_score/home-loan.png, display_mode: shrink_to_fit, height: '100'}
         type: Image
         layout_properties: {grid_position: 'QGZTNW,PVJEPO'}
         event_bindings: {mouse_up: image_4_copy_4_copy_copy_mouse_up}
@@ -229,8 +216,7 @@ components:
       layout_properties: {grid_position: 'LKTWOF,FPVXBC BVFFRC,NMXPNE'}
       components:
       - name: image_4_copy_4_copy_copy_3
-        properties: {source: _/theme/loan-icon-6.jpg, display_mode: shrink_to_fit,
-          height: '100'}
+        properties: {source: _/theme/loan-icon-6.jpg, display_mode: shrink_to_fit, height: '100'}
         type: Image
         layout_properties: {grid_position: 'QGZTNW,PVJEPO'}
       - name: button_5
@@ -243,8 +229,7 @@ components:
       layout_properties: {grid_position: 'LKTWOF,GBAJZY ZQQIVR,ENGAGN'}
       components:
       - name: image_4_copy_7
-        properties: {source: _/theme/admin/dashboard/manage_ascend_score/age-of-business.png,
-          display_mode: shrink_to_fit, height: '100'}
+        properties: {source: _/theme/admin/dashboard/manage_ascend_score/age-of-business.png, display_mode: shrink_to_fit, height: '100'}
         type: Image
         layout_properties: {grid_position: 'QGZTNW,PVJEPO'}
         event_bindings: {mouse_up: image_4_copy_7_mouse_up}
@@ -263,14 +248,12 @@ components:
       layout_properties: {grid_position: 'LKTWOF,GBAJZY UXTNEX,HGFJSQ'}
       components:
       - name: image_4_copy_9
-        properties: {source: _/theme/admin/dashboard/manage_cms/hourglass.png, display_mode: shrink_to_fit,
-          height: '100'}
+        properties: {source: _/theme/admin/dashboard/manage_cms/hourglass.png, display_mode: shrink_to_fit, height: '100'}
         type: Image
         layout_properties: {grid_position: 'QGZTNW,PVJEPO'}
         event_bindings: {mouse_up: image_4_copy_9_mouse_up}
       - name: button_17
-        properties: {text: Duration at Address, font_size: 14, foreground: black,
-          bold: true, align: center}
+        properties: {text: Duration at Address, font_size: 14, foreground: black, bold: true, align: center}
         type: Button
         layout_properties: {grid_position: 'TUUVBB,DDDLOX'}
         event_bindings: {click: button_17_click}
@@ -284,8 +267,7 @@ components:
       layout_properties: {grid_position: 'LKTWOF,GBAJZY NSFFKA,HFXNWX'}
       components:
       - name: image_4_copy_4_copy
-        properties: {source: _/theme/admin/dashboard/manage_ascend_score/other-loan.png,
-          display_mode: shrink_to_fit, height: '100'}
+        properties: {source: _/theme/admin/dashboard/manage_ascend_score/other-loan.png, display_mode: shrink_to_fit, height: '100'}
         type: Image
         layout_properties: {grid_position: 'QGZTNW,PVJEPO'}
         event_bindings: {mouse_up: image_4_copy_4_copy_mouse_up}
@@ -303,9 +285,7 @@ components:
     type: Spacer
     layout_properties: {grid_position: 'UDXDKX,QBKADR'}
   - name: column_panel_01
-    properties: {role: null, tooltip: '', border: '', foreground: '', visible: true,
-      wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
-      spacing_below: small, background: ''}
+    properties: {role: null, tooltip: '', border: '', foreground: '', visible: true, wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}', spacing_below: small, background: ''}
     type: ColumnPanel
     layout_properties: {grid_position: 'WIXYET,PYNUVF'}
     components:
@@ -315,21 +295,15 @@ components:
       layout_properties: {grid_position: 'NYITEB,NVZFWU'}
       components:
       - name: label_010
-        properties: {role: outlined-card, align: center, tooltip: '', border: '',
-          foreground: '', visible: true, text: Add Gender Details, font_size: 18,
-          font: '', spacing_above: small, icon_align: left, spacing_below: small,
-          italic: false, background: 'theme:Disabled Container', bold: true, underline: false,
-          icon: ''}
+        properties: {role: outlined-card, align: center, tooltip: '', border: '', foreground: '', visible: true, text: Add Gender Details, font_size: 18, font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false, background: 'theme:Disabled Container', bold: true, underline: false, icon: ''}
         type: Label
         layout_properties: {row: TQZTXO, width_xs: 12, col_xs: 0}
       - name: label_1
-        properties: {text: Add Subcategory, bold: true, align: center, background: 'theme:Secondary
-            Container'}
+        properties: {text: Add Subcategory, bold: true, align: center, background: 'theme:Secondary Container'}
         type: Label
         layout_properties: {row: ZEZCYX, width_xs: 4, col_xs: 1}
       - name: label_2
-        properties: {text: Add Points, bold: true, align: center, background: 'theme:Secondary
-            Container'}
+        properties: {text: Add Points, bold: true, align: center, background: 'theme:Secondary Container'}
         type: Label
         layout_properties: {row: ZEZCYX, width_xs: 4, col_xs: 5}
       - name: spacer_4
@@ -337,26 +311,17 @@ components:
         type: Spacer
         layout_properties: {row: ZEZCYX, width_xs: 3, col_xs: 9}
       - name: text_box_1
-        properties: {role: outlined, align: center, hide_text: false, tooltip: '',
-          placeholder: '', border: '', enabled: true, foreground: '', visible: true,
-          text: '', font_size: null, font: '', spacing_above: small, type: text, spacing_below: small,
-          italic: false, background: '', bold: false, underline: false}
+        properties: {role: outlined, align: center, hide_text: false, tooltip: '', placeholder: '', border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null, font: '', spacing_above: small, type: text, spacing_below: small, italic: false, background: '', bold: false, underline: false}
         type: TextBox
         layout_properties: {row: QDOTVC, width_xs: 4, col_xs: 1}
         event_bindings: {pressed_enter: text_box_1_pressed_enter}
       - name: text_box_2
-        properties: {role: outlined, align: center, hide_text: false, tooltip: '',
-          placeholder: '', border: '', enabled: true, foreground: '', visible: true,
-          text: '', font_size: null, font: '', spacing_above: small, type: text, spacing_below: small,
-          italic: false, background: '', bold: false, underline: false}
+        properties: {role: outlined, align: center, hide_text: false, tooltip: '', placeholder: '', border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null, font: '', spacing_above: small, type: text, spacing_below: small, italic: false, background: '', bold: false, underline: false}
         type: TextBox
         layout_properties: {row: QDOTVC, width_xs: 4, col_xs: 5}
         event_bindings: {pressed_enter: text_box_1_pressed_enter}
       - name: gender_button
-        properties: {role: null, align: full, tooltip: '', border: '', enabled: true,
-          foreground: 'theme:On Primary', visible: true, text: ADD, font_size: null,
-          font: '', spacing_above: small, icon_align: left, spacing_below: small,
-          italic: false, background: '#05264d', bold: true, underline: false, icon: ''}
+        properties: {role: null, align: full, tooltip: '', border: '', enabled: true, foreground: 'theme:On Primary', visible: true, text: ADD, font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false, background: '#05264d', bold: true, underline: false, icon: ''}
         type: Button
         layout_properties: {row: QDOTVC, width_xs: 2, col_xs: 9, width: 95.1562}
         event_bindings: {click: gender_button_click}
@@ -374,44 +339,29 @@ components:
       layout_properties: {grid_position: 'CKGBOY,KVWYKW'}
       components:
       - name: label_010_copy
-        properties: {role: outlined-card, align: center, tooltip: '', border: '',
-          foreground: '', visible: true, text: Add Qualification Details, font_size: 18,
-          font: '', spacing_above: small, icon_align: left, spacing_below: small,
-          italic: false, background: 'theme:Disabled Container', bold: true, underline: false,
-          icon: ''}
+        properties: {role: outlined-card, align: center, tooltip: '', border: '', foreground: '', visible: true, text: Add Qualification Details, font_size: 18, font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false, background: 'theme:Disabled Container', bold: true, underline: false, icon: ''}
         type: Label
         layout_properties: {row: TQZTXO, width_xs: 12, col_xs: 0}
       - name: label_1_copy
-        properties: {text: Add Subcategory, bold: true, align: center, background: 'theme:Secondary
-            Container'}
+        properties: {text: Add Subcategory, bold: true, align: center, background: 'theme:Secondary Container'}
         type: Label
         layout_properties: {row: ZEZCYX, width_xs: 4, col_xs: 1}
       - name: label_2_copy
-        properties: {text: Add Points, bold: true, align: center, background: 'theme:Secondary
-            Container'}
+        properties: {text: Add Points, bold: true, align: center, background: 'theme:Secondary Container'}
         type: Label
         layout_properties: {row: ZEZCYX, width_xs: 4, col_xs: 5}
       - name: text_box_3
-        properties: {role: outlined, align: center, hide_text: false, tooltip: '',
-          placeholder: '', border: '', enabled: true, foreground: '', visible: true,
-          text: '', font_size: null, font: '', spacing_above: small, type: text, spacing_below: small,
-          italic: false, background: '', bold: false, underline: false}
+        properties: {role: outlined, align: center, hide_text: false, tooltip: '', placeholder: '', border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null, font: '', spacing_above: small, type: text, spacing_below: small, italic: false, background: '', bold: false, underline: false}
         type: TextBox
         layout_properties: {row: QDOTVC, width_xs: 4, col_xs: 1}
         event_bindings: {pressed_enter: text_box_1_pressed_enter}
       - name: text_box_4
-        properties: {role: outlined, align: center, hide_text: false, tooltip: '',
-          placeholder: '', border: '', enabled: true, foreground: '', visible: true,
-          text: '', font_size: null, font: '', spacing_above: small, type: text, spacing_below: small,
-          italic: false, background: '', bold: false, underline: false}
+        properties: {role: outlined, align: center, hide_text: false, tooltip: '', placeholder: '', border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null, font: '', spacing_above: small, type: text, spacing_below: small, italic: false, background: '', bold: false, underline: false}
         type: TextBox
         layout_properties: {row: QDOTVC, width_xs: 4, col_xs: 5}
         event_bindings: {pressed_enter: text_box_1_pressed_enter}
       - name: qualification_button
-        properties: {role: null, align: full, tooltip: '', border: '', enabled: true,
-          foreground: 'theme:On Primary', visible: true, text: ADD, font_size: null,
-          font: '', spacing_above: small, icon_align: left, spacing_below: small,
-          italic: false, background: '#05264d', bold: true, underline: false, icon: ''}
+        properties: {role: null, align: full, tooltip: '', border: '', enabled: true, foreground: 'theme:On Primary', visible: true, text: ADD, font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false, background: '#05264d', bold: true, underline: false, icon: ''}
         type: Button
         layout_properties: {row: QDOTVC, width_xs: 2, col_xs: 9, width: 95.1562}
         event_bindings: {click: qualification_button_click}
@@ -429,57 +379,38 @@ components:
       layout_properties: {grid_position: 'KIKVLQ,LMDVOL'}
       components:
       - name: label_010_copy_copy
-        properties: {role: outlined-card, align: center, tooltip: '', border: '',
-          foreground: '', visible: true, text: Add Marrital Details, font_size: 18,
-          font: '', spacing_above: small, icon_align: left, spacing_below: small,
-          italic: false, background: 'theme:Disabled Container', bold: true, underline: false,
-          icon: ''}
+        properties: {role: outlined-card, align: center, tooltip: '', border: '', foreground: '', visible: true, text: Add Marrital Details, font_size: 18, font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false, background: 'theme:Disabled Container', bold: true, underline: false, icon: ''}
         type: Label
         layout_properties: {row: TQZTXO, width_xs: 12, col_xs: 0}
       - name: label_01
-        properties: {text: Add Subcategory, bold: true, align: center, background: 'theme:Secondary
-            Container'}
+        properties: {text: Add Subcategory, bold: true, align: center, background: 'theme:Secondary Container'}
         type: Label
         layout_properties: {row: ZEZCYX, width_xs: 3, col_xs: 0}
       - name: label_1_copy_copy
-        properties: {text: Add Age, bold: true, align: center, background: 'theme:Secondary
-            Container'}
+        properties: {text: Add Age, bold: true, align: center, background: 'theme:Secondary Container'}
         type: Label
         layout_properties: {row: ZEZCYX, width_xs: 3, col_xs: 1}
       - name: label_2_copy_copy
-        properties: {text: Add Points, bold: true, align: center, background: 'theme:Secondary
-            Container'}
+        properties: {text: Add Points, bold: true, align: center, background: 'theme:Secondary Container'}
         type: Label
         layout_properties: {row: ZEZCYX, width_xs: 3, col_xs: 6}
       - name: text_box_5
-        properties: {role: outlined, align: center, hide_text: false, tooltip: '',
-          placeholder: '', border: '', enabled: true, foreground: '', visible: true,
-          text: '', font_size: null, font: '', spacing_above: small, type: text, spacing_below: small,
-          italic: false, background: '', bold: false, underline: false}
+        properties: {role: outlined, align: center, hide_text: false, tooltip: '', placeholder: '', border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null, font: '', spacing_above: small, type: text, spacing_below: small, italic: false, background: '', bold: false, underline: false}
         type: TextBox
         layout_properties: {row: UJISFO, width_xs: 3, col_xs: 0}
         event_bindings: {pressed_enter: text_box_1_pressed_enter}
       - name: text_box_5a
-        properties: {role: outlined, align: center, hide_text: false, tooltip: '',
-          placeholder: '', border: '', enabled: true, foreground: '', visible: true,
-          text: '', font_size: null, font: '', spacing_above: small, type: text, spacing_below: small,
-          italic: false, background: '', bold: false, underline: false}
+        properties: {role: outlined, align: center, hide_text: false, tooltip: '', placeholder: '', border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null, font: '', spacing_above: small, type: text, spacing_below: small, italic: false, background: '', bold: false, underline: false}
         type: TextBox
         layout_properties: {row: UJISFO, width_xs: 3, col_xs: 3}
         event_bindings: {pressed_enter: text_box_1_pressed_enter}
       - name: text_box_6
-        properties: {role: outlined, align: center, hide_text: false, tooltip: '',
-          placeholder: '', border: '', enabled: true, foreground: '', visible: true,
-          text: '', font_size: null, font: '', spacing_above: small, type: text, spacing_below: small,
-          italic: false, background: '', bold: false, underline: false}
+        properties: {role: outlined, align: center, hide_text: false, tooltip: '', placeholder: '', border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null, font: '', spacing_above: small, type: text, spacing_below: small, italic: false, background: '', bold: false, underline: false}
         type: TextBox
         layout_properties: {row: UJISFO, width_xs: 3, col_xs: 6}
         event_bindings: {pressed_enter: text_box_1_pressed_enter}
       - name: marrital_button
-        properties: {role: null, align: full, tooltip: '', border: '', enabled: true,
-          foreground: 'theme:On Primary', visible: true, text: ADD, font_size: null,
-          font: '', spacing_above: small, icon_align: left, spacing_below: small,
-          italic: false, background: '#05264d', bold: true, underline: false, icon: ''}
+        properties: {role: null, align: full, tooltip: '', border: '', enabled: true, foreground: 'theme:On Primary', visible: true, text: ADD, font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false, background: '#05264d', bold: true, underline: false, icon: ''}
         type: Button
         layout_properties: {row: UJISFO, width_xs: 2, col_xs: 9, width: 95.1562}
         event_bindings: {click: marrital_button_click}
@@ -493,44 +424,29 @@ components:
       layout_properties: {grid_position: 'YIRNNS,BDTLAU'}
       components:
       - name: label_11
-        properties: {role: outlined-card, align: center, tooltip: '', border: '',
-          foreground: '', visible: true, text: Add Profession Details, font_size: 18,
-          font: '', spacing_above: small, icon_align: left, spacing_below: small,
-          italic: false, background: 'theme:Disabled Container', bold: true, underline: false,
-          icon: ''}
+        properties: {role: outlined-card, align: center, tooltip: '', border: '', foreground: '', visible: true, text: Add Profession Details, font_size: 18, font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false, background: 'theme:Disabled Container', bold: true, underline: false, icon: ''}
         type: Label
         layout_properties: {row: TQZTXO, width_xs: 12, col_xs: 0}
       - name: label_1_copy_copy_copy_2
-        properties: {text: Add Subcategory, bold: true, align: center, background: 'theme:Secondary
-            Container'}
+        properties: {text: Add Subcategory, bold: true, align: center, background: 'theme:Secondary Container'}
         type: Label
         layout_properties: {row: ZEZCYX, width_xs: 4, col_xs: 1}
       - name: label_2_copy_copy_copy_2
-        properties: {text: Add Points, bold: true, align: center, background: 'theme:Secondary
-            Container'}
+        properties: {text: Add Points, bold: true, align: center, background: 'theme:Secondary Container'}
         type: Label
         layout_properties: {row: ZEZCYX, width_xs: 4, col_xs: 5}
       - name: text_box_7
-        properties: {role: outlined, align: center, hide_text: false, tooltip: '',
-          placeholder: '', border: '', enabled: true, foreground: '', visible: true,
-          text: '', font_size: null, font: '', spacing_above: small, type: text, spacing_below: small,
-          italic: false, background: '', bold: false, underline: false}
+        properties: {role: outlined, align: center, hide_text: false, tooltip: '', placeholder: '', border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null, font: '', spacing_above: small, type: text, spacing_below: small, italic: false, background: '', bold: false, underline: false}
         type: TextBox
         layout_properties: {row: QDOTVC, width_xs: 4, col_xs: 1}
         event_bindings: {pressed_enter: text_box_1_pressed_enter}
       - name: text_box_8
-        properties: {role: outlined, align: center, hide_text: false, tooltip: '',
-          placeholder: '', border: '', enabled: true, foreground: '', visible: true,
-          text: '', font_size: null, font: '', spacing_above: small, type: text, spacing_below: small,
-          italic: false, background: '', bold: false, underline: false}
+        properties: {role: outlined, align: center, hide_text: false, tooltip: '', placeholder: '', border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null, font: '', spacing_above: small, type: text, spacing_below: small, italic: false, background: '', bold: false, underline: false}
         type: TextBox
         layout_properties: {row: QDOTVC, width_xs: 4, col_xs: 5}
         event_bindings: {pressed_enter: text_box_1_pressed_enter}
       - name: profession_button
-        properties: {role: null, align: full, tooltip: '', border: '', enabled: true,
-          foreground: 'theme:On Primary', visible: true, text: ADD, font_size: null,
-          font: '', spacing_above: small, icon_align: left, spacing_below: small,
-          italic: false, background: '#05264d', bold: true, underline: false, icon: ''}
+        properties: {role: null, align: full, tooltip: '', border: '', enabled: true, foreground: 'theme:On Primary', visible: true, text: ADD, font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false, background: '#05264d', bold: true, underline: false, icon: ''}
         type: Button
         layout_properties: {row: QDOTVC, width_xs: 2, col_xs: 9, width: 95.1562}
         event_bindings: {click: profession_button_click}
@@ -548,44 +464,29 @@ components:
       layout_properties: {grid_position: 'IBPRND,VEAKXU'}
       components:
       - name: label_010_copy_2
-        properties: {role: outlined-card, align: center, tooltip: '', border: '',
-          foreground: '', visible: true, text: Add Organization Type Details, font_size: 18,
-          font: '', spacing_above: small, icon_align: left, spacing_below: small,
-          italic: false, background: 'theme:Disabled Container', bold: true, underline: false,
-          icon: ''}
+        properties: {role: outlined-card, align: center, tooltip: '', border: '', foreground: '', visible: true, text: Add Organization Type Details, font_size: 18, font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false, background: 'theme:Disabled Container', bold: true, underline: false, icon: ''}
         type: Label
         layout_properties: {row: TQZTXO, width_xs: 12, col_xs: 0}
       - name: label_1_copy_2
-        properties: {text: Add Subcategory, bold: true, align: center, background: 'theme:Secondary
-            Container'}
+        properties: {text: Add Subcategory, bold: true, align: center, background: 'theme:Secondary Container'}
         type: Label
         layout_properties: {row: ZEZCYX, width_xs: 4, col_xs: 1}
       - name: label_2_copy_2
-        properties: {text: Add Points, bold: true, align: center, background: 'theme:Secondary
-            Container'}
+        properties: {text: Add Points, bold: true, align: center, background: 'theme:Secondary Container'}
         type: Label
         layout_properties: {row: ZEZCYX, width_xs: 4, col_xs: 5}
       - name: text_box_12
-        properties: {role: outlined, align: center, hide_text: false, tooltip: '',
-          placeholder: '', border: '', enabled: true, foreground: '', visible: true,
-          text: '', font_size: null, font: '', spacing_above: small, type: text, spacing_below: small,
-          italic: false, background: '', bold: false, underline: false}
+        properties: {role: outlined, align: center, hide_text: false, tooltip: '', placeholder: '', border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null, font: '', spacing_above: small, type: text, spacing_below: small, italic: false, background: '', bold: false, underline: false}
         type: TextBox
         layout_properties: {row: QDOTVC, width_xs: 4, col_xs: 1}
         event_bindings: {pressed_enter: text_box_1_pressed_enter}
       - name: text_box_13
-        properties: {role: outlined, align: center, hide_text: false, tooltip: '',
-          placeholder: '', border: '', enabled: true, foreground: '', visible: true,
-          text: '', font_size: null, font: '', spacing_above: small, type: text, spacing_below: small,
-          italic: false, background: '', bold: false, underline: false}
+        properties: {role: outlined, align: center, hide_text: false, tooltip: '', placeholder: '', border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null, font: '', spacing_above: small, type: text, spacing_below: small, italic: false, background: '', bold: false, underline: false}
         type: TextBox
         layout_properties: {row: QDOTVC, width_xs: 4, col_xs: 5}
         event_bindings: {pressed_enter: text_box_1_pressed_enter}
       - name: organization_type_button
-        properties: {role: null, align: full, tooltip: '', border: '', enabled: true,
-          foreground: 'theme:On Primary', visible: true, text: ADD, font_size: null,
-          font: '', spacing_above: small, icon_align: left, spacing_below: small,
-          italic: false, background: '#05264d', bold: true, underline: false, icon: ''}
+        properties: {role: null, align: full, tooltip: '', border: '', enabled: true, foreground: 'theme:On Primary', visible: true, text: ADD, font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false, background: '#05264d', bold: true, underline: false, icon: ''}
         type: Button
         layout_properties: {row: QDOTVC, width_xs: 2, col_xs: 9, width: 95.1562}
         event_bindings: {click: organization_type_button_click}
@@ -603,44 +504,29 @@ components:
       layout_properties: {grid_position: 'AKFQYZ,GACLOR'}
       components:
       - name: label_010_copy_2_copy
-        properties: {role: outlined-card, align: center, tooltip: '', border: '',
-          foreground: '', visible: true, text: Add Present Address Details, font_size: 18,
-          font: '', spacing_above: small, icon_align: left, spacing_below: small,
-          italic: false, background: 'theme:Disabled Container', bold: true, underline: false,
-          icon: ''}
+        properties: {role: outlined-card, align: center, tooltip: '', border: '', foreground: '', visible: true, text: Add Present Address Details, font_size: 18, font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false, background: 'theme:Disabled Container', bold: true, underline: false, icon: ''}
         type: Label
         layout_properties: {row: TQZTXO, width_xs: 12, col_xs: 0}
       - name: label_1_copy_2_copy
-        properties: {text: Add Subcategory, bold: true, align: center, background: 'theme:Secondary
-            Container'}
+        properties: {text: Add Subcategory, bold: true, align: center, background: 'theme:Secondary Container'}
         type: Label
         layout_properties: {row: ZEZCYX, width_xs: 4, col_xs: 1}
       - name: label_2_copy_2_copy
-        properties: {text: Add Points, bold: true, align: center, background: 'theme:Secondary
-            Container'}
+        properties: {text: Add Points, bold: true, align: center, background: 'theme:Secondary Container'}
         type: Label
         layout_properties: {row: ZEZCYX, width_xs: 4, col_xs: 5}
       - name: text_box_14
-        properties: {role: outlined, align: center, hide_text: false, tooltip: '',
-          placeholder: '', border: '', enabled: true, foreground: '', visible: true,
-          text: '', font_size: null, font: '', spacing_above: small, type: text, spacing_below: small,
-          italic: false, background: '', bold: false, underline: false}
+        properties: {role: outlined, align: center, hide_text: false, tooltip: '', placeholder: '', border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null, font: '', spacing_above: small, type: text, spacing_below: small, italic: false, background: '', bold: false, underline: false}
         type: TextBox
         layout_properties: {row: QDOTVC, width_xs: 4, col_xs: 1}
         event_bindings: {pressed_enter: text_box_1_pressed_enter}
       - name: text_box_15
-        properties: {role: outlined, align: center, hide_text: false, tooltip: '',
-          placeholder: '', border: '', enabled: true, foreground: '', visible: true,
-          text: '', font_size: null, font: '', spacing_above: small, type: text, spacing_below: small,
-          italic: false, background: '', bold: false, underline: false}
+        properties: {role: outlined, align: center, hide_text: false, tooltip: '', placeholder: '', border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null, font: '', spacing_above: small, type: text, spacing_below: small, italic: false, background: '', bold: false, underline: false}
         type: TextBox
         layout_properties: {row: QDOTVC, width_xs: 4, col_xs: 5}
         event_bindings: {pressed_enter: text_box_1_pressed_enter}
       - name: present_address_button
-        properties: {role: null, align: full, tooltip: '', border: '', enabled: true,
-          foreground: 'theme:On Primary', visible: true, text: ADD, font_size: null,
-          font: '', spacing_above: small, icon_align: left, spacing_below: small,
-          italic: false, background: '#05264d', bold: true, underline: false, icon: ''}
+        properties: {role: null, align: full, tooltip: '', border: '', enabled: true, foreground: 'theme:On Primary', visible: true, text: ADD, font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false, background: '#05264d', bold: true, underline: false, icon: ''}
         type: Button
         layout_properties: {row: QDOTVC, width_xs: 2, col_xs: 9, width: 95.1562}
         event_bindings: {click: present_address_button_click}
@@ -658,44 +544,29 @@ components:
       layout_properties: {grid_position: 'JSQXHO,EXOOLV'}
       components:
       - name: label_010_copy_2_copy_copy
-        properties: {role: outlined-card, align: center, tooltip: '', border: '',
-          foreground: '', visible: true, text: Add Duration At Address Details, font_size: 18,
-          font: '', spacing_above: small, icon_align: left, spacing_below: small,
-          italic: false, background: 'theme:Disabled Container', bold: true, underline: false,
-          icon: ''}
+        properties: {role: outlined-card, align: center, tooltip: '', border: '', foreground: '', visible: true, text: Add Duration At Address Details, font_size: 18, font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false, background: 'theme:Disabled Container', bold: true, underline: false, icon: ''}
         type: Label
         layout_properties: {row: TQZTXO, width_xs: 12, col_xs: 0}
       - name: label_1_copy_2_copy_copy
-        properties: {text: Add Subcategory, bold: true, align: center, background: 'theme:Secondary
-            Container'}
+        properties: {text: Add Subcategory, bold: true, align: center, background: 'theme:Secondary Container'}
         type: Label
         layout_properties: {row: ZEZCYX, width_xs: 4, col_xs: 1}
       - name: label_2_copy_2_copy_copy
-        properties: {text: Add Points, bold: true, align: center, background: 'theme:Secondary
-            Container'}
+        properties: {text: Add Points, bold: true, align: center, background: 'theme:Secondary Container'}
         type: Label
         layout_properties: {row: ZEZCYX, width_xs: 4, col_xs: 5}
       - name: text_box_16
-        properties: {role: outlined, align: center, hide_text: false, tooltip: '',
-          placeholder: '', border: '', enabled: true, foreground: '', visible: true,
-          text: '', font_size: null, font: '', spacing_above: small, type: text, spacing_below: small,
-          italic: false, background: '', bold: false, underline: false}
+        properties: {role: outlined, align: center, hide_text: false, tooltip: '', placeholder: '', border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null, font: '', spacing_above: small, type: text, spacing_below: small, italic: false, background: '', bold: false, underline: false}
         type: TextBox
         layout_properties: {row: QDOTVC, width_xs: 4, col_xs: 1}
         event_bindings: {pressed_enter: text_box_1_pressed_enter}
       - name: text_box_17
-        properties: {role: outlined, align: center, hide_text: false, tooltip: '',
-          placeholder: '', border: '', enabled: true, foreground: '', visible: true,
-          text: '', font_size: null, font: '', spacing_above: small, type: text, spacing_below: small,
-          italic: false, background: '', bold: false, underline: false}
+        properties: {role: outlined, align: center, hide_text: false, tooltip: '', placeholder: '', border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null, font: '', spacing_above: small, type: text, spacing_below: small, italic: false, background: '', bold: false, underline: false}
         type: TextBox
         layout_properties: {row: QDOTVC, width_xs: 4, col_xs: 5}
         event_bindings: {pressed_enter: text_box_1_pressed_enter}
       - name: duration_at_address_button
-        properties: {role: null, align: full, tooltip: '', border: '', enabled: true,
-          foreground: 'theme:On Primary', visible: true, text: ADD, font_size: null,
-          font: '', spacing_above: small, icon_align: left, spacing_below: small,
-          italic: false, background: '#05264d', bold: true, underline: false, icon: ''}
+        properties: {role: null, align: full, tooltip: '', border: '', enabled: true, foreground: 'theme:On Primary', visible: true, text: ADD, font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false, background: '#05264d', bold: true, underline: false, icon: ''}
         type: Button
         layout_properties: {row: QDOTVC, width_xs: 2, col_xs: 9, width: 95.1562}
         event_bindings: {click: duration_at_address_button_click}
@@ -713,44 +584,29 @@ components:
       layout_properties: {grid_position: 'NLZQJL,IXJMEV'}
       components:
       - name: label_11_copy
-        properties: {role: outlined-card, align: center, tooltip: '', border: '',
-          foreground: '', visible: true, text: Add Salary Type Details, font_size: 18,
-          font: '', spacing_above: small, icon_align: left, spacing_below: small,
-          italic: false, background: 'theme:Disabled Container', bold: true, underline: false,
-          icon: ''}
+        properties: {role: outlined-card, align: center, tooltip: '', border: '', foreground: '', visible: true, text: Add Salary Type Details, font_size: 18, font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false, background: 'theme:Disabled Container', bold: true, underline: false, icon: ''}
         type: Label
         layout_properties: {row: TQZTXO, width_xs: 12, col_xs: 0}
       - name: label_1_copy_copy_copy_2_copy
-        properties: {text: Add Subcategory, bold: true, align: center, background: 'theme:Secondary
-            Container'}
+        properties: {text: Add Subcategory, bold: true, align: center, background: 'theme:Secondary Container'}
         type: Label
         layout_properties: {row: ZEZCYX, width_xs: 4, col_xs: 1}
       - name: label_2_copy_copy_copy_2_copy
-        properties: {text: Add Points, bold: true, align: center, background: 'theme:Secondary
-            Container'}
+        properties: {text: Add Points, bold: true, align: center, background: 'theme:Secondary Container'}
         type: Label
         layout_properties: {row: ZEZCYX, width_xs: 4, col_xs: 5}
       - name: text_box_18
-        properties: {role: outlined, align: center, hide_text: false, tooltip: '',
-          placeholder: '', border: '', enabled: true, foreground: '', visible: true,
-          text: '', font_size: null, font: '', spacing_above: small, type: text, spacing_below: small,
-          italic: false, background: '', bold: false, underline: false}
+        properties: {role: outlined, align: center, hide_text: false, tooltip: '', placeholder: '', border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null, font: '', spacing_above: small, type: text, spacing_below: small, italic: false, background: '', bold: false, underline: false}
         type: TextBox
         layout_properties: {row: QDOTVC, width_xs: 4, col_xs: 1}
         event_bindings: {pressed_enter: text_box_1_pressed_enter}
       - name: text_box_19
-        properties: {role: outlined, align: center, hide_text: false, tooltip: '',
-          placeholder: '', border: '', enabled: true, foreground: '', visible: true,
-          text: '', font_size: null, font: '', spacing_above: small, type: text, spacing_below: small,
-          italic: false, background: '', bold: false, underline: false}
+        properties: {role: outlined, align: center, hide_text: false, tooltip: '', placeholder: '', border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null, font: '', spacing_above: small, type: text, spacing_below: small, italic: false, background: '', bold: false, underline: false}
         type: TextBox
         layout_properties: {row: QDOTVC, width_xs: 4, col_xs: 5}
         event_bindings: {pressed_enter: text_box_1_pressed_enter}
       - name: salarytype_button
-        properties: {role: null, align: full, tooltip: '', border: '', enabled: true,
-          foreground: 'theme:On Primary', visible: true, text: ADD, font_size: null,
-          font: '', spacing_above: small, icon_align: left, spacing_below: small,
-          italic: false, background: '#0b2547', bold: true, underline: false, icon: ''}
+        properties: {role: null, align: full, tooltip: '', border: '', enabled: true, foreground: 'theme:On Primary', visible: true, text: ADD, font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false, background: '#0b2547', bold: true, underline: false, icon: ''}
         type: Button
         layout_properties: {row: QDOTVC, width_xs: 2, col_xs: 9}
         event_bindings: {click: salarytype_button_click}
@@ -768,44 +624,29 @@ components:
       layout_properties: {grid_position: 'ELBBIE,ERFOWQ'}
       components:
       - name: label_11_copy_copy
-        properties: {role: outlined-card, align: center, tooltip: '', border: '',
-          foreground: '', visible: true, text: Add Spouse Profession Details, font_size: 18,
-          font: '', spacing_above: small, icon_align: left, spacing_below: small,
-          italic: false, background: 'theme:Disabled Container', bold: true, underline: false,
-          icon: ''}
+        properties: {role: outlined-card, align: center, tooltip: '', border: '', foreground: '', visible: true, text: Add Spouse Profession Details, font_size: 18, font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false, background: 'theme:Disabled Container', bold: true, underline: false, icon: ''}
         type: Label
         layout_properties: {row: TQZTXO, width_xs: 12, col_xs: 0}
       - name: label_1_copy_copy_copy_2_copy_copy
-        properties: {text: Add Subcategory, bold: true, align: center, background: 'theme:Secondary
-            Container'}
+        properties: {text: Add Subcategory, bold: true, align: center, background: 'theme:Secondary Container'}
         type: Label
         layout_properties: {row: ZEZCYX, width_xs: 4, col_xs: 1}
       - name: label_2_copy_copy_copy_2_copy_copy
-        properties: {text: Add Points, bold: true, align: center, background: 'theme:Secondary
-            Container'}
+        properties: {text: Add Points, bold: true, align: center, background: 'theme:Secondary Container'}
         type: Label
         layout_properties: {row: ZEZCYX, width_xs: 4, col_xs: 5}
       - name: text_box_20
-        properties: {role: outlined, align: center, hide_text: false, tooltip: '',
-          placeholder: '', border: '', enabled: true, foreground: '', visible: true,
-          text: '', font_size: null, font: '', spacing_above: small, type: text, spacing_below: small,
-          italic: false, background: '', bold: false, underline: false}
+        properties: {role: outlined, align: center, hide_text: false, tooltip: '', placeholder: '', border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null, font: '', spacing_above: small, type: text, spacing_below: small, italic: false, background: '', bold: false, underline: false}
         type: TextBox
         layout_properties: {row: QDOTVC, width_xs: 4, col_xs: 1}
         event_bindings: {pressed_enter: text_box_1_pressed_enter}
       - name: text_box_21
-        properties: {role: outlined, align: center, hide_text: false, tooltip: '',
-          placeholder: '', border: '', enabled: true, foreground: '', visible: true,
-          text: '', font_size: null, font: '', spacing_above: small, type: text, spacing_below: small,
-          italic: false, background: '', bold: false, underline: false}
+        properties: {role: outlined, align: center, hide_text: false, tooltip: '', placeholder: '', border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null, font: '', spacing_above: small, type: text, spacing_below: small, italic: false, background: '', bold: false, underline: false}
         type: TextBox
         layout_properties: {row: QDOTVC, width_xs: 4, col_xs: 5}
         event_bindings: {pressed_enter: text_box_1_pressed_enter}
       - name: spouse_profession_button
-        properties: {role: null, align: full, tooltip: '', border: '', enabled: true,
-          foreground: 'theme:On Primary', visible: true, text: ADD, font_size: null,
-          font: '', spacing_above: small, icon_align: left, spacing_below: small,
-          italic: false, background: '#0b2547', bold: true, underline: false, icon: ''}
+        properties: {role: null, align: full, tooltip: '', border: '', enabled: true, foreground: 'theme:On Primary', visible: true, text: ADD, font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false, background: '#0b2547', bold: true, underline: false, icon: ''}
         type: Button
         layout_properties: {row: QDOTVC, width_xs: 2, col_xs: 9}
         event_bindings: {click: spouse_profession_button_click}
@@ -823,44 +664,29 @@ components:
       layout_properties: {grid_position: 'CIYCSD,AMXWSN'}
       components:
       - name: label_11_copy_copy_copy
-        properties: {role: outlined-card, align: center, tooltip: '', border: '',
-          foreground: '', visible: true, text: Add Age Of Business Details, font_size: 18,
-          font: '', spacing_above: small, icon_align: left, spacing_below: small,
-          italic: false, background: 'theme:Disabled Container', bold: true, underline: false,
-          icon: ''}
+        properties: {role: outlined-card, align: center, tooltip: '', border: '', foreground: '', visible: true, text: Add Age Of Business Details, font_size: 18, font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false, background: 'theme:Disabled Container', bold: true, underline: false, icon: ''}
         type: Label
         layout_properties: {row: TQZTXO, width_xs: 12, col_xs: 0}
       - name: label_1_copy_copy_copy_2_copy_copy_copy
-        properties: {text: Add Subcategory, bold: true, align: center, background: 'theme:Secondary
-            Container'}
+        properties: {text: Add Subcategory, bold: true, align: center, background: 'theme:Secondary Container'}
         type: Label
         layout_properties: {row: ZEZCYX, width_xs: 4, col_xs: 1}
       - name: label_2_copy_copy_copy_2_copy_copy_copy
-        properties: {text: Add Points, bold: true, align: center, background: 'theme:Secondary
-            Container'}
+        properties: {text: Add Points, bold: true, align: center, background: 'theme:Secondary Container'}
         type: Label
         layout_properties: {row: ZEZCYX, width_xs: 4, col_xs: 5}
       - name: text_box_22
-        properties: {role: outlined, align: center, hide_text: false, tooltip: '',
-          placeholder: '', border: '', enabled: true, foreground: '', visible: true,
-          text: '', font_size: null, font: '', spacing_above: small, type: text, spacing_below: small,
-          italic: false, background: '', bold: false, underline: false}
+        properties: {role: outlined, align: center, hide_text: false, tooltip: '', placeholder: '', border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null, font: '', spacing_above: small, type: text, spacing_below: small, italic: false, background: '', bold: false, underline: false}
         type: TextBox
         layout_properties: {row: QDOTVC, width_xs: 4, col_xs: 1}
         event_bindings: {pressed_enter: text_box_1_pressed_enter}
       - name: text_box_23
-        properties: {role: outlined, align: center, hide_text: false, tooltip: '',
-          placeholder: '', border: '', enabled: true, foreground: '', visible: true,
-          text: '', font_size: null, font: '', spacing_above: small, type: text, spacing_below: small,
-          italic: false, background: '', bold: false, underline: false}
+        properties: {role: outlined, align: center, hide_text: false, tooltip: '', placeholder: '', border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null, font: '', spacing_above: small, type: text, spacing_below: small, italic: false, background: '', bold: false, underline: false}
         type: TextBox
         layout_properties: {row: QDOTVC, width_xs: 4, col_xs: 5}
         event_bindings: {pressed_enter: text_box_1_pressed_enter}
       - name: age_of_business_button
-        properties: {role: null, align: full, tooltip: '', border: '', enabled: true,
-          foreground: 'theme:On Primary', visible: true, text: ADD, font_size: null,
-          font: '', spacing_above: small, icon_align: left, spacing_below: small,
-          italic: false, background: '#0b2547', bold: true, underline: false, icon: ''}
+        properties: {role: null, align: full, tooltip: '', border: '', enabled: true, foreground: 'theme:On Primary', visible: true, text: ADD, font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false, background: '#0b2547', bold: true, underline: false, icon: ''}
         type: Button
         layout_properties: {row: QDOTVC, width_xs: 2, col_xs: 9}
         event_bindings: {click: age_of_business_button_click}
@@ -878,57 +704,38 @@ components:
       layout_properties: {grid_position: 'TEQRDL,POYELL'}
       components:
       - name: label_011
-        properties: {role: outlined-card, align: center, tooltip: '', border: '',
-          foreground: '', visible: true, text: Add All Loan Details, font_size: 18,
-          font: '', spacing_above: small, icon_align: left, spacing_below: small,
-          italic: false, background: 'theme:Disabled Container', bold: true, underline: false,
-          icon: ''}
+        properties: {role: outlined-card, align: center, tooltip: '', border: '', foreground: '', visible: true, text: Add All Loan Details, font_size: 18, font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false, background: 'theme:Disabled Container', bold: true, underline: false, icon: ''}
         type: Label
         layout_properties: {row: TQZTXO, width_xs: 12, col_xs: 0}
       - name: label_1_copy_copy_copy
-        properties: {text: Add Subcategory, bold: true, align: center, background: 'theme:Secondary
-            Container'}
+        properties: {text: Add Subcategory, bold: true, align: center, background: 'theme:Secondary Container'}
         type: Label
         layout_properties: {row: ZEZCYX, width_xs: 4, col_xs: 0}
       - name: label_3
-        properties: {text: Yes/No, bold: true, align: center, background: 'theme:Secondary
-            Container'}
+        properties: {text: Yes/No, bold: true, align: center, background: 'theme:Secondary Container'}
         type: Label
         layout_properties: {row: ZEZCYX, width_xs: 3, col_xs: 4}
       - name: label_2_copy_copy_copy
-        properties: {text: Add Points, bold: true, align: center, background: 'theme:Secondary
-            Container'}
+        properties: {text: Add Points, bold: true, align: center, background: 'theme:Secondary Container'}
         type: Label
         layout_properties: {row: ZEZCYX, width_xs: 3, col_xs: 6}
       - name: text_box_9
-        properties: {role: outlined, align: center, hide_text: false, tooltip: '',
-          placeholder: '', border: '', enabled: true, foreground: '', visible: true,
-          text: '', font_size: null, font: '', spacing_above: small, type: text, spacing_below: small,
-          italic: false, background: '', bold: false, underline: false}
+        properties: {role: outlined, align: center, hide_text: false, tooltip: '', placeholder: '', border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null, font: '', spacing_above: small, type: text, spacing_below: small, italic: false, background: '', bold: false, underline: false}
         type: TextBox
         layout_properties: {row: BMWBRB, width_xs: 4, col_xs: 0}
         event_bindings: {pressed_enter: text_box_1_pressed_enter}
       - name: text_box_10
-        properties: {role: outlined, align: center, hide_text: false, tooltip: '',
-          placeholder: '', border: '', enabled: true, foreground: '', visible: true,
-          text: '', font_size: null, font: '', spacing_above: small, type: text, spacing_below: small,
-          italic: false, background: '', bold: false, underline: false}
+        properties: {role: outlined, align: center, hide_text: false, tooltip: '', placeholder: '', border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null, font: '', spacing_above: small, type: text, spacing_below: small, italic: false, background: '', bold: false, underline: false}
         type: TextBox
         layout_properties: {row: BMWBRB, width_xs: 3, col_xs: 4}
         event_bindings: {pressed_enter: text_box_1_pressed_enter}
       - name: text_box_11
-        properties: {role: outlined, align: center, hide_text: false, tooltip: '',
-          placeholder: '', border: '', enabled: true, foreground: '', visible: true,
-          text: '', font_size: null, font: '', spacing_above: small, type: text, spacing_below: small,
-          italic: false, background: '', bold: false, underline: false}
+        properties: {role: outlined, align: center, hide_text: false, tooltip: '', placeholder: '', border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null, font: '', spacing_above: small, type: text, spacing_below: small, italic: false, background: '', bold: false, underline: false}
         type: TextBox
         layout_properties: {row: BMWBRB, width_xs: 3, col_xs: 7}
         event_bindings: {pressed_enter: text_box_1_pressed_enter}
       - name: all_loan_button
-        properties: {role: null, align: full, tooltip: '', border: '', enabled: true,
-          foreground: 'theme:On Primary', visible: true, text: ADD, font_size: null,
-          font: '', spacing_above: small, icon_align: left, spacing_below: small,
-          italic: false, background: '#05264d', bold: true, underline: false, icon: ''}
+        properties: {role: null, align: full, tooltip: '', border: '', enabled: true, foreground: 'theme:On Primary', visible: true, text: ADD, font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false, background: '#05264d', bold: true, underline: false, icon: ''}
         type: Button
         layout_properties: {row: BMWBRB, width_xs: 2, col_xs: 10, width: 95.1562}
         event_bindings: {click: all_loan_button_click}
@@ -942,44 +749,29 @@ components:
       layout_properties: {grid_position: 'TLNVWH,RSUVYI'}
       components:
       - name: label_010_copy_3
-        properties: {role: outlined-card, align: center, tooltip: '', border: '',
-          foreground: '', visible: true, text: Add Home loan Details, font_size: 18,
-          font: '', spacing_above: small, icon_align: left, spacing_below: small,
-          italic: false, background: 'theme:Disabled Container', bold: true, underline: false,
-          icon: ''}
+        properties: {role: outlined-card, align: center, tooltip: '', border: '', foreground: '', visible: true, text: Add Home loan Details, font_size: 18, font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false, background: 'theme:Disabled Container', bold: true, underline: false, icon: ''}
         type: Label
         layout_properties: {row: TQZTXO, width_xs: 12, col_xs: 0}
       - name: label_1_copy_3
-        properties: {text: Yes/No, bold: true, align: center, background: 'theme:Secondary
-            Container'}
+        properties: {text: Yes/No, bold: true, align: center, background: 'theme:Secondary Container'}
         type: Label
         layout_properties: {row: ZEZCYX, width_xs: 4, col_xs: 1}
       - name: label_2_copy_3
-        properties: {text: Add Points, bold: true, align: center, background: 'theme:Secondary
-            Container'}
+        properties: {text: Add Points, bold: true, align: center, background: 'theme:Secondary Container'}
         type: Label
         layout_properties: {row: ZEZCYX, width_xs: 4, col_xs: 5}
       - name: text_box_24
-        properties: {role: outlined, align: center, hide_text: false, tooltip: '',
-          placeholder: '', border: '', enabled: true, foreground: '', visible: true,
-          text: '', font_size: null, font: '', spacing_above: small, type: text, spacing_below: small,
-          italic: false, background: '', bold: false, underline: false}
+        properties: {role: outlined, align: center, hide_text: false, tooltip: '', placeholder: '', border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null, font: '', spacing_above: small, type: text, spacing_below: small, italic: false, background: '', bold: false, underline: false}
         type: TextBox
         layout_properties: {row: QDOTVC, width_xs: 4, col_xs: 1}
         event_bindings: {pressed_enter: text_box_1_pressed_enter}
       - name: text_box_25
-        properties: {role: outlined, align: center, hide_text: false, tooltip: '',
-          placeholder: '', border: '', enabled: true, foreground: '', visible: true,
-          text: '', font_size: null, font: '', spacing_above: small, type: text, spacing_below: small,
-          italic: false, background: '', bold: false, underline: false}
+        properties: {role: outlined, align: center, hide_text: false, tooltip: '', placeholder: '', border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null, font: '', spacing_above: small, type: text, spacing_below: small, italic: false, background: '', bold: false, underline: false}
         type: TextBox
         layout_properties: {row: QDOTVC, width_xs: 4, col_xs: 5}
         event_bindings: {pressed_enter: text_box_1_pressed_enter}
       - name: home_loan_button
-        properties: {role: null, align: full, tooltip: '', border: '', enabled: true,
-          foreground: 'theme:On Primary', visible: true, text: ADD, font_size: null,
-          font: '', spacing_above: small, icon_align: left, spacing_below: small,
-          italic: false, background: '#05264d', bold: true, underline: false, icon: ''}
+        properties: {role: null, align: full, tooltip: '', border: '', enabled: true, foreground: 'theme:On Primary', visible: true, text: ADD, font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false, background: '#05264d', bold: true, underline: false, icon: ''}
         type: Button
         layout_properties: {row: QDOTVC, width_xs: 2, col_xs: 9, width: 95.1562}
         event_bindings: {click: home_loan_button_click}
@@ -997,44 +789,29 @@ components:
       layout_properties: {grid_position: 'FIRRSP,WCKULD'}
       components:
       - name: label_010_copy_3_copy
-        properties: {role: outlined-card, align: center, tooltip: '', border: '',
-          foreground: '', visible: true, text: Add Other loan Details, font_size: 18,
-          font: '', spacing_above: small, icon_align: left, spacing_below: small,
-          italic: false, background: 'theme:Disabled Container', bold: true, underline: false,
-          icon: ''}
+        properties: {role: outlined-card, align: center, tooltip: '', border: '', foreground: '', visible: true, text: Add Other loan Details, font_size: 18, font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false, background: 'theme:Disabled Container', bold: true, underline: false, icon: ''}
         type: Label
         layout_properties: {row: TQZTXO, width_xs: 12, col_xs: 0}
       - name: label_1_copy_3_copy
-        properties: {text: Yes/No, bold: true, align: center, background: 'theme:Secondary
-            Container'}
+        properties: {text: Yes/No, bold: true, align: center, background: 'theme:Secondary Container'}
         type: Label
         layout_properties: {row: ZEZCYX, width_xs: 4, col_xs: 1}
       - name: label_2_copy_3_copy
-        properties: {text: Add Points, bold: true, align: center, background: 'theme:Secondary
-            Container'}
+        properties: {text: Add Points, bold: true, align: center, background: 'theme:Secondary Container'}
         type: Label
         layout_properties: {row: ZEZCYX, width_xs: 4, col_xs: 5}
       - name: text_box_26
-        properties: {role: outlined, align: center, hide_text: false, tooltip: '',
-          placeholder: '', border: '', enabled: true, foreground: '', visible: true,
-          text: '', font_size: null, font: '', spacing_above: small, type: text, spacing_below: small,
-          italic: false, background: '', bold: false, underline: false}
+        properties: {role: outlined, align: center, hide_text: false, tooltip: '', placeholder: '', border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null, font: '', spacing_above: small, type: text, spacing_below: small, italic: false, background: '', bold: false, underline: false}
         type: TextBox
         layout_properties: {row: QDOTVC, width_xs: 4, col_xs: 1}
         event_bindings: {pressed_enter: text_box_1_pressed_enter}
       - name: text_box_27
-        properties: {role: outlined, align: center, hide_text: false, tooltip: '',
-          placeholder: '', border: '', enabled: true, foreground: '', visible: true,
-          text: '', font_size: null, font: '', spacing_above: small, type: text, spacing_below: small,
-          italic: false, background: '', bold: false, underline: false}
+        properties: {role: outlined, align: center, hide_text: false, tooltip: '', placeholder: '', border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null, font: '', spacing_above: small, type: text, spacing_below: small, italic: false, background: '', bold: false, underline: false}
         type: TextBox
         layout_properties: {row: QDOTVC, width_xs: 4, col_xs: 5}
         event_bindings: {pressed_enter: text_box_1_pressed_enter}
       - name: other_loan_button
-        properties: {role: null, align: full, tooltip: '', border: '', enabled: true,
-          foreground: 'theme:On Primary', visible: true, text: ADD, font_size: null,
-          font: '', spacing_above: small, icon_align: left, spacing_below: small,
-          italic: false, background: '#05264d', bold: true, underline: false, icon: ''}
+        properties: {role: null, align: full, tooltip: '', border: '', enabled: true, foreground: 'theme:On Primary', visible: true, text: ADD, font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false, background: '#05264d', bold: true, underline: false, icon: ''}
         type: Button
         layout_properties: {row: QDOTVC, width_xs: 2, col_xs: 9, width: 95.1562}
         event_bindings: {click: other_loan_button_click}
@@ -1052,44 +829,29 @@ components:
       layout_properties: {grid_position: 'TJCDVI,RWUKHI'}
       components:
       - name: label_010_copy_3_copy_copy
-        properties: {role: outlined-card, align: center, tooltip: '', border: '',
-          foreground: '', visible: true, text: Add Credit Card loan Details, font_size: 18,
-          font: '', spacing_above: small, icon_align: left, spacing_below: small,
-          italic: false, background: 'theme:Disabled Container', bold: true, underline: false,
-          icon: ''}
+        properties: {role: outlined-card, align: center, tooltip: '', border: '', foreground: '', visible: true, text: Add Credit Card loan Details, font_size: 18, font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false, background: 'theme:Disabled Container', bold: true, underline: false, icon: ''}
         type: Label
         layout_properties: {row: TQZTXO, width_xs: 12, col_xs: 0}
       - name: label_1_copy_3_copy_copy
-        properties: {text: Yes/No, bold: true, align: center, background: 'theme:Secondary
-            Container'}
+        properties: {text: Yes/No, bold: true, align: center, background: 'theme:Secondary Container'}
         type: Label
         layout_properties: {row: ZEZCYX, width_xs: 4, col_xs: 1}
       - name: label_2_copy_3_copy_copy
-        properties: {text: Add Points, bold: true, align: center, background: 'theme:Secondary
-            Container'}
+        properties: {text: Add Points, bold: true, align: center, background: 'theme:Secondary Container'}
         type: Label
         layout_properties: {row: ZEZCYX, width_xs: 4, col_xs: 5}
       - name: text_box_28
-        properties: {role: outlined, align: center, hide_text: false, tooltip: '',
-          placeholder: '', border: '', enabled: true, foreground: '', visible: true,
-          text: '', font_size: null, font: '', spacing_above: small, type: text, spacing_below: small,
-          italic: false, background: '', bold: false, underline: false}
+        properties: {role: outlined, align: center, hide_text: false, tooltip: '', placeholder: '', border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null, font: '', spacing_above: small, type: text, spacing_below: small, italic: false, background: '', bold: false, underline: false}
         type: TextBox
         layout_properties: {row: QDOTVC, width_xs: 4, col_xs: 1}
         event_bindings: {pressed_enter: text_box_1_pressed_enter}
       - name: text_box_29
-        properties: {role: outlined, align: center, hide_text: false, tooltip: '',
-          placeholder: '', border: '', enabled: true, foreground: '', visible: true,
-          text: '', font_size: null, font: '', spacing_above: small, type: text, spacing_below: small,
-          italic: false, background: '', bold: false, underline: false}
+        properties: {role: outlined, align: center, hide_text: false, tooltip: '', placeholder: '', border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null, font: '', spacing_above: small, type: text, spacing_below: small, italic: false, background: '', bold: false, underline: false}
         type: TextBox
         layout_properties: {row: QDOTVC, width_xs: 4, col_xs: 5}
         event_bindings: {pressed_enter: text_box_1_pressed_enter}
       - name: credit_card_loan_button
-        properties: {role: null, align: full, tooltip: '', border: '', enabled: true,
-          foreground: 'theme:On Primary', visible: true, text: ADD, font_size: null,
-          font: '', spacing_above: small, icon_align: left, spacing_below: small,
-          italic: false, background: '#05264d', bold: true, underline: false, icon: ''}
+        properties: {role: null, align: full, tooltip: '', border: '', enabled: true, foreground: 'theme:On Primary', visible: true, text: ADD, font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false, background: '#05264d', bold: true, underline: false, icon: ''}
         type: Button
         layout_properties: {row: QDOTVC, width_xs: 2, col_xs: 9, width: 95.1562}
         event_bindings: {click: credit_card_loan_button_click}
@@ -1107,44 +869,29 @@ components:
       layout_properties: {grid_position: 'HUWZAL,NOTHRH'}
       components:
       - name: label_010_copy_3_copy_copy_copy
-        properties: {role: outlined-card, align: center, tooltip: '', border: '',
-          foreground: '', visible: true, text: Add Vehicle loan Details, font_size: 18,
-          font: '', spacing_above: small, icon_align: left, spacing_below: small,
-          italic: false, background: 'theme:Disabled Container', bold: true, underline: false,
-          icon: ''}
+        properties: {role: outlined-card, align: center, tooltip: '', border: '', foreground: '', visible: true, text: Add Vehicle loan Details, font_size: 18, font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false, background: 'theme:Disabled Container', bold: true, underline: false, icon: ''}
         type: Label
         layout_properties: {row: TQZTXO, width_xs: 12, col_xs: 0}
       - name: label_1_copy_3_copy_copy_copy
-        properties: {text: Yes/No, bold: true, align: center, background: 'theme:Secondary
-            Container'}
+        properties: {text: Yes/No, bold: true, align: center, background: 'theme:Secondary Container'}
         type: Label
         layout_properties: {row: ZEZCYX, width_xs: 4, col_xs: 1}
       - name: label_2_copy_3_copy_copy_copy
-        properties: {text: Add Points, bold: true, align: center, background: 'theme:Secondary
-            Container'}
+        properties: {text: Add Points, bold: true, align: center, background: 'theme:Secondary Container'}
         type: Label
         layout_properties: {row: ZEZCYX, width_xs: 4, col_xs: 5}
       - name: text_box_30
-        properties: {role: outlined, align: center, hide_text: false, tooltip: '',
-          placeholder: '', border: '', enabled: true, foreground: '', visible: true,
-          text: '', font_size: null, font: '', spacing_above: small, type: text, spacing_below: small,
-          italic: false, background: '', bold: false, underline: false}
+        properties: {role: outlined, align: center, hide_text: false, tooltip: '', placeholder: '', border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null, font: '', spacing_above: small, type: text, spacing_below: small, italic: false, background: '', bold: false, underline: false}
         type: TextBox
         layout_properties: {row: QDOTVC, width_xs: 4, col_xs: 1}
         event_bindings: {pressed_enter: text_box_1_pressed_enter}
       - name: text_box_31
-        properties: {role: outlined, align: center, hide_text: false, tooltip: '',
-          placeholder: '', border: '', enabled: true, foreground: '', visible: true,
-          text: '', font_size: null, font: '', spacing_above: small, type: text, spacing_below: small,
-          italic: false, background: '', bold: false, underline: false}
+        properties: {role: outlined, align: center, hide_text: false, tooltip: '', placeholder: '', border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null, font: '', spacing_above: small, type: text, spacing_below: small, italic: false, background: '', bold: false, underline: false}
         type: TextBox
         layout_properties: {row: QDOTVC, width_xs: 4, col_xs: 5}
         event_bindings: {pressed_enter: text_box_1_pressed_enter}
       - name: vehicle_loan_button
-        properties: {role: null, align: full, tooltip: '', border: '', enabled: true,
-          foreground: 'theme:On Primary', visible: true, text: ADD, font_size: null,
-          font: '', spacing_above: small, icon_align: left, spacing_below: small,
-          italic: false, background: '#05264d', bold: true, underline: false, icon: ''}
+        properties: {role: null, align: full, tooltip: '', border: '', enabled: true, foreground: 'theme:On Primary', visible: true, text: ADD, font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false, background: '#05264d', bold: true, underline: false, icon: ''}
         type: Button
         layout_properties: {row: QDOTVC, width_xs: 2, col_xs: 9, width: 95.1562}
         event_bindings: {click: vehicle_loan_button_click}
@@ -1161,10 +908,7 @@ components:
     type: Spacer
     layout_properties: {grid_position: 'WKFEWU,UVRHEX'}
   - name: back_btn
-    properties: {role: elevated-button, align: center, tooltip: '', border: '', enabled: true,
-      foreground: 'theme:On Primary', visible: true, text: Back, font_size: null,
-      font: '16', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
-      background: '#05264d', bold: true, underline: false, icon: 'fa:backward'}
+    properties: {role: elevated-button, align: center, tooltip: '', border: '', enabled: true, foreground: 'theme:On Primary', visible: true, text: Back, font_size: null, font: '16', spacing_above: small, icon_align: left, spacing_below: small, italic: false, background: '#05264d', bold: true, underline: false, icon: 'fa:backward'}
     type: Button
     layout_properties: {grid_position: 'BLALBU,SIYHVA'}
     event_bindings: {click: back_btn_click}

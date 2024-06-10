@@ -68,11 +68,7 @@ class risk_pool(risk_poolTemplate):
 
   def button_low_risk_click(self, **event_args):
     """This method is called when the button is clicked"""
-    self.text_box_search.placeholder = 'Enter text to Search Low Risk loans'
-    self.label.visible = True
-    self.label.text = 'Low Risk loans'
-    self.data_grid_1.visible = True
-    self.column_panel_1.visible = True
+    self.text_box_search.text = ""
     filtered_rows = self.get_filtered_rows("lapsed fee")
 
     # Set the filtered rows to the repeating panel
@@ -89,18 +85,20 @@ class risk_pool(risk_poolTemplate):
         result.append(combined_data)
     self.all_items = result
     self.repeating_panel_1.items = result
+    self.text_box_search.placeholder = 'Search low risk loans'
+    self.label.visible = True
+    self.label.text = 'Low Risk loans'
+    self.data_grid_1.visible = True
+    self.column_panel_1.visible = True
+    self.data_grid_2.visible = False
 
     # Update the plot
-    self.aggregate_counts()
-    self.update_plot()
+    # self.aggregate_counts()
+    # self.update_plot()
 
   def button_medium_risk_click(self, **event_args):
     """This method is called when the button is clicked"""
-    self.text_box_search.placeholder = 'Enter text to Search Medium Risk loans'
-    self.label.visible = True
-    self.label.text = 'Medium Risk loans'
-    self.data_grid_1.visible = True
-    self.column_panel_1.visible = True
+    self.text_box_search.text = ""
     filtered_rows = self.get_filtered_rows("default fee")
   
     # Fetch additional details from the loan details table
@@ -117,18 +115,20 @@ class risk_pool(risk_poolTemplate):
         result.append(combined_data)
     self.all_items = result
     self.repeating_panel_1.items = result
+    self.text_box_search.placeholder = ' Search medium risk loans'
+    self.label.visible = True
+    self.label.text = 'Medium Risk loans'
+    self.data_grid_1.visible = True
+    self.column_panel_1.visible = True
+    self.data_grid_2.visible = False
     
     # Update the plot
-    self.aggregate_counts()
-    self.update_plot()
+    # self.aggregate_counts()
+    # self.update_plot()
 
   def button_high_risk_click(self, **event_args):
     """This method is called when the button is clicked"""
-    self.text_box_search.placeholder = 'Enter text to Search High Risk loans'
-    self.label.visible = True
-    self.label.text = 'High Risk loans'
-    self.data_grid_1.visible = True
-    self.column_panel_1.visible = True
+    self.text_box_search.text = ""
     filtered_rows = self.get_filtered_rows("NPA fee")
   
     # Fetch additional details from the loan details table
@@ -145,10 +145,16 @@ class risk_pool(risk_poolTemplate):
         result.append(combined_data)
     self.all_items = result
     self.repeating_panel_1.items = result
+    self.text_box_search.placeholder = 'Search high risk loans'
+    self.label.visible = True
+    self.label.text = 'High Risk loans'
+    self.data_grid_1.visible = True
+    self.column_panel_1.visible = True
+    self.data_grid_2.visible = False
       
     # Update the plot
-    self.aggregate_counts()
-    self.update_plot()
+    # self.aggregate_counts()
+    # self.update_plot()
 
   def search_button_click(self, **event_args):
     """This method is called when the button is clicked"""
@@ -164,6 +170,8 @@ class risk_pool(risk_poolTemplate):
       ]
       self.suggestions_panel.items = filtered_items
       self.data_grid_2.visible = True
+      self.data_grid_1.visible = False
     else:
       self.suggestions_panel.items = []
       self.data_grid_2.visible = False
+      self.data_grid_1.visible = True
