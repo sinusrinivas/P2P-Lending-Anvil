@@ -107,7 +107,8 @@ def add_borrower_step6(bank_id, bank_branch, user_id):
 
         # Search for an existing row with the same email_id in fin_borrower table
         manage_credit_limit_row = app_tables.fin_manage_credit_limit.get()
-        credit_limit_value = manage_credit_limit_row['credit_limit'] if manage_credit_limit_row else 0
+        if manage_credit_limit_row:
+            credit_limit_value = manage_credit_limit_row['credit_limit']
         existing_borrower_row = app_tables.fin_borrower.get(email_id=[0]['email_user'])
         
         if existing_borrower_row:
@@ -139,7 +140,6 @@ def add_borrower_step6(bank_id, bank_branch, user_id):
     else:
         # If user not found in fin_user_profile table
         raise ValueError("User not found in fin_user_profile table")
-
 
 
 @anvil.server.callable
