@@ -10,12 +10,10 @@ from anvil.tables import app_tables
 
 class revenue_share(revenue_shareTemplate):
   def __init__(self, **properties):
-    # Set Form properties and Data Bindings.
     self.init_components(**properties)
     self.load_data()
 
   def load_data(self):
-    # Fetch all the customer details from the fin_lender table
     lenders = app_tables.fin_lender.search()
     customer_details = []
 
@@ -24,7 +22,6 @@ class revenue_share(revenue_shareTemplate):
       loans = app_tables.fin_loan_details.search(lender_customer_id=customer_id)
       loan_count = len(loans)
       
-      # Fetch mobile number from the fin_user_profile table
       user_profile = app_tables.fin_user_profile.get(customer_id=customer_id)
       mobile_no = user_profile['mobile'] if user_profile else None
       email = user_profile['email_user'] if user_profile else None
@@ -41,12 +38,10 @@ class revenue_share(revenue_shareTemplate):
     self.repeating_panel_1.items = customer_details
 
   def link_1_click(self, **event_args):
-    """This method is called when the link is clicked"""
     open_form('admin.dashboard')
 
   def button_1_copy_3_click(self, **event_args):
     open_form('admin.dashboard.manage_settings')
-
 
   def button_1_click(self, **event_args):
     open_form('admin.dashboard')
