@@ -20,7 +20,7 @@ services:
 startup: {type: form, module: admin.dashboard}
 package_name: pip_install_reportlab
 allow_embedding: false
-name: P2P Lending App
+name: P2P Lending App 1
 runtime_options:
   version: 3
   client_version: '3'
