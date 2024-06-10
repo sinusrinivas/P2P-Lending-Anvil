@@ -45,19 +45,19 @@ components:
         type: Label
         layout_properties: {grid_position: 'AJCEBX,TITXTM'}
       - name: button_1_copy
-        properties: {text: Low Risk, foreground: white, role: null, align: full, background: '#007FFF',
-          border: '', bold: true}
+        properties: {text: Low Risk, foreground: white, role: outlined-button, align: full,
+          background: '#007FFF', border: '', bold: true}
         type: Button
         layout_properties: {grid_position: 'CGGLYK,GJEQDY'}
         event_bindings: {click: button_low_risk_click}
       - name: button_2_copy
-        properties: {text: Medium Risk, foreground: white, role: elevated-button,
+        properties: {text: Medium Risk, foreground: white, role: outlined-button,
           background: '#FEBE10', bold: true, align: full}
         type: Button
         layout_properties: {grid_position: 'CGGLYK,FIAVZP'}
         event_bindings: {click: button_medium_risk_click}
       - name: button_5_copy
-        properties: {text: High Risk, foreground: white, align: full, role: elevated-button,
+        properties: {text: High Risk, foreground: white, align: full, role: outlined-button,
           background: '#E52B50', bold: true, enabled: true}
         type: Button
         layout_properties: {grid_position: 'CGGLYK,KKALWF'}
