@@ -1,0 +1,152 @@
+container: {type: ColumnPanel}
+components:
+- name: home_button_admin_1
+  properties: {}
+  type: form:admin.dashboard.home_button_admin
+  layout_properties: {grid_position: 'TXRGXB,QBVHEG', full_width_row: true}
+- name: column_panel_3
+  properties: {}
+  type: ColumnPanel
+  layout_properties: {grid_position: 'NKEOSL,VACBAV', full_width_row: true}
+  components:
+  - name: label_10
+    properties: {}
+    type: Label
+    layout_properties: {grid_position: 'HWYGRQ,DYYGWJ'}
+  - name: label_11
+    properties: {}
+    type: Label
+    layout_properties: {grid_position: 'HWYGRQ,BJSPAV'}
+- name: button_3_copy
+  properties: {text: Back, background: '#05264d', foreground: 'theme:On Primary',
+    role: elevated-button, icon: 'fa:backward', align: right}
+  type: Button
+  layout_properties: {grid_position: 'NKEOSL,MOGGGN'}
+  event_bindings: {click: button_3_copy_click}
+- name: column_panel_1
+  properties: {}
+  type: ColumnPanel
+  layout_properties: {grid_position: 'BLLAHQ,UNFQVO'}
+  components:
+  - name: column_panel_2
+    properties: {}
+    type: ColumnPanel
+    layout_properties: {grid_position: 'WILOJH,YRJFOR'}
+    components:
+    - name: label_1
+      properties: {text: Manage Ascend Score Range, bold: true, align: center, font_size: 18}
+      type: Label
+      layout_properties: {grid_position: 'MUDCMQ,RACMDE'}
+  - name: spacer_1
+    properties: {height: 13}
+    type: Spacer
+    layout_properties: {grid_position: 'WTLQSS,JJSKET'}
+  - name: label_2
+    properties: {font_size: 16, text: '    Ascend Category', bold: true}
+    type: Label
+    layout_properties: {grid_position: 'VDMUQY,WZBYJQ'}
+  - name: label_3
+    properties: {text: '  Min Ascend Score Range', bold: true, font_size: 16, align: left}
+    type: Label
+    layout_properties: {grid_position: 'VDMUQY,NVRGQS'}
+  - name: label_4
+    properties: {font_size: 16, text: '  Max Ascend Score Range', bold: true, align: left}
+    type: Label
+    layout_properties: {grid_position: 'VDMUQY,GHZWTE'}
+  - name: label_5
+    properties: {text: '  Colour', bold: true, align: left, font_size: 16}
+    type: Label
+    layout_properties: {grid_position: 'VDMUQY,WZVJXX'}
+  - name: spacer_2
+    properties: {height: 9}
+    type: Spacer
+    layout_properties: {grid_position: 'LWDRMO,JYSRTO'}
+  - name: label_6
+    properties: {text: '    VeryGood', bold: true}
+    type: Label
+    layout_properties: {grid_position: 'GKLOPW,JEMAVL'}
+  - name: text_box_1
+    properties: {role: outlined, visible: true}
+    type: TextBox
+    layout_properties: {grid_position: 'GKLOPW,YTGQVD'}
+  - name: text_box_2
+    properties: {role: outlined, visible: true}
+    type: TextBox
+    layout_properties: {grid_position: 'GKLOPW,HWPPZT'}
+  - name: text_box_3
+    properties: {role: outlined, visible: true}
+    type: TextBox
+    layout_properties: {grid_position: 'GKLOPW,GBWYOT'}
+  - name: label_7
+    properties: {text: '    Good', bold: true}
+    type: Label
+    layout_properties: {grid_position: 'XUGLVM,ZCACUU'}
+  - name: text_box_4
+    properties: {role: outlined, visible: true}
+    type: TextBox
+    layout_properties: {grid_position: 'XUGLVM,JMXQUZ'}
+  - name: text_box_5
+    properties: {role: outlined, visible: true}
+    type: TextBox
+    layout_properties: {grid_position: 'XUGLVM,QPOWNI'}
+  - name: text_box_6
+    properties: {role: outlined, visible: true}
+    type: TextBox
+    layout_properties: {grid_position: 'XUGLVM,UDVHIT'}
+  - name: label_8
+    properties: {text: '    Average', bold: true}
+    type: Label
+    layout_properties: {grid_position: 'BKFZUA,FEMHFI'}
+  - name: text_box_7
+    properties: {role: outlined, visible: true}
+    type: TextBox
+    layout_properties: {grid_position: 'BKFZUA,IGXLWR'}
+  - name: text_box_8
+    properties: {role: outlined, visible: true}
+    type: TextBox
+    layout_properties: {grid_position: 'BKFZUA,MSKSIM'}
+  - name: text_box_9
+    properties: {role: outlined, visible: true}
+    type: TextBox
+    layout_properties: {grid_position: 'BKFZUA,AMSJXR'}
+  - name: label_9
+    properties: {text: '    Bad', bold: true}
+    type: Label
+    layout_properties: {grid_position: 'HYAGWA,SGJAFM'}
+  - name: text_box_10
+    properties: {role: outlined, visible: true}
+    type: TextBox
+    layout_properties: {grid_position: 'HYAGWA,WRQZQH'}
+  - name: text_box_11
+    properties: {role: outlined, visible: true}
+    type: TextBox
+    layout_properties: {grid_position: 'HYAGWA,KDXNZZ'}
+  - name: text_box_12
+    properties: {role: outlined, visible: true}
+    type: TextBox
+    layout_properties: {grid_position: 'HYAGWA,KGQSTU'}
+  - name: spacer_4
+    properties: {height: 14}
+    type: Spacer
+    layout_properties: {grid_position: 'YYQLQH,QGROZW'}
+  - name: label_12
+    properties: {}
+    type: Label
+    layout_properties: {grid_position: 'BZOCCY,YBIQPD'}
+  - name: button_1
+    properties: {text: Edit, background: '#05264d', bold: true, align: right, font_size: 16,
+      foreground: 'theme:On Primary'}
+    type: Button
+    layout_properties: {grid_position: 'BZOCCY,KKZQHS'}
+    event_bindings: {click: button_1_click}
+  - name: button_2
+    properties: {text: Save, foreground: 'theme:On Primary', background: '#05264d',
+      align: left, font_size: 16}
+    type: Button
+    layout_properties: {grid_position: 'BZOCCY,IPYSTA'}
+    event_bindings: {click: button_2_click}
+  - name: spacer_3
+    properties: {height: -171}
+    type: Spacer
+    layout_properties: {grid_position: 'FPMCLH,EMLBIK'}
+is_package: true

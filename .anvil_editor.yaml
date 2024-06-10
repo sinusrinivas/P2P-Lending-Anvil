@@ -314,6 +314,7 @@ unique_ids:
     lendor.dashboard.dashboard_report_a_problem: '1710908308326765655388880.6415'
     borrower.dashboard.today_dues.check_out: LQBSWBI2ORZIEELJPNA65GFBHWFT376V
     admin.dashboard.manage_loan_details.loan_management.rejected_loans: '1699528958889169021462649.09222'
+    admin.dashboard.manage_settings.manage_ascend_score_range: '1717763950067548096369302.4723'
     admin.dashboard.manage_products.view_products_and_categories.RowTemplate28: '1704172157354836718833767.5173'
     admin.dashboard.manage_cms.add_lender_dropdown_details.edit_organizaton_type: '1706531933047410934362132.85895'
     admin.dashboard.manage_ascend.view_ascend_subcategory: '170953826352922106706788.581844'
@@ -589,6 +590,7 @@ unique_ids:
     bank_users/main_form/choose your product.png: '1711704465672660384570250.994'
     bank_users/personal_loan/education_loan/el4.png: '1714043516829653233481539.4509'
     admin/dashboard/manage_ascend_score/.gitkeep: 72ZXY7IEVRFBJJXFLPNJELOJJUJYSZWL
+    ascend.score.range.jpg: '1717763687736175182003818.69553'
     assigned.png: 5FZATNCCP5ER4TMQDDEY6PMVETJD4T27
     bank_users/main_form/rbi-registered-1.svg: '1711625340182904575401418.6937'
     borrower/dashboard/foreclosure (2).png: '1716813923343898077348034.9633'

@@ -25,7 +25,7 @@ class manage_settings(manage_settingsTemplate):
 
   def button_2_click(self, **event_args):
     """This method is called when the button is clicked"""
-    open_form('admin.dashboard.manage_settings.manage_roi')
+    open_form('admin.dashboard.manage_settings.manage_ascend_score_range')
 
   def button_3_click(self, **event_args):
     """This method is called when the button is clicked"""
@@ -38,3 +38,8 @@ class manage_settings(manage_settingsTemplate):
   def image_4_copy_5_mouse_up(self, x, y, button, **event_args):
     """This method is called when a mouse button is released on this component"""
     open_form('admin.dashboard.manage_settings.manage_membership')
+
+  def image_1_copy_2_mouse_up(self, x, y, button, **event_args):
+    """This method is called when a mouse button is released on this component"""
+    open_form('admin.dashboard.manage_settings.manage_ascend_score_range')
+    
