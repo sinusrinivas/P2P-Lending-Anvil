@@ -109,7 +109,8 @@ def add_borrower_step6(bank_id, bank_branch, user_id):
         manage_credit_limit_row = app_tables.fin_manage_credit_limit.get()
         if manage_credit_limit_row:
             credit_limit_value = manage_credit_limit_row['credit_limit']
-        existing_borrower_row = app_tables.fin_borrower.get(email_id=[0]['email_user'])
+        existing_borrower_row = app_tables.fin_borrower.get(email_id=row[0]['email_user'])
+          
         
         if existing_borrower_row:
             # If a row exists, update the existing row
