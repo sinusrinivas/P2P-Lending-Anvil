@@ -14,10 +14,7 @@ components:
     type: Label
     layout_properties: {grid_position: 'RDESLG,LFHIOP', full_width_row: true}
   - name: button_1_copy
-    properties: {role: elevated-button, align: right, tooltip: '', border: '', enabled: true,
-      foreground: 'theme:On Primary', visible: true, text: Back, font_size: null,
-      font: '16', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
-      background: '#05264d', bold: true, underline: false, icon: 'fa:backward'}
+    properties: {role: elevated-button, align: right, tooltip: '', border: '', enabled: true, foreground: 'theme:On Primary', visible: true, text: Back, font_size: null, font: '16', spacing_above: small, icon_align: left, spacing_below: small, italic: false, background: '#05264d', bold: true, underline: false, icon: 'fa:backward'}
     type: Button
     layout_properties:
       col_widths: {}
@@ -28,38 +25,23 @@ components:
     type: Spacer
     layout_properties: {grid_position: 'NIPFIX,LDPRAL'}
   - name: label_2
-    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-      visible: false, text: '   Full Name', font_size: null, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-      underline: false, icon: ''}
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: false, text: '   Full Name', font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false, background: '', bold: true, underline: false, icon: ''}
     type: Label
     layout_properties: {grid_position: 'NIPFIX,JTFJZJ ILHNJK,XSFIPM'}
   - name: text_box_2
-    properties: {role: outlined, align: left, hide_text: false, tooltip: '', placeholder: ' Enter
-        your Full_name', border: '', enabled: true, foreground: '', visible: false,
-      text: '', font_size: null, font: '', spacing_above: small, type: text, spacing_below: small,
-      italic: false, background: '', bold: false, underline: false}
+    properties: {role: outlined, align: left, hide_text: false, tooltip: '', placeholder: ' Enter your Full_name', border: '', enabled: true, foreground: '', visible: false, text: '', font_size: null, font: '', spacing_above: small, type: text, spacing_below: small, italic: false, background: '', bold: false, underline: false}
     type: TextBox
     layout_properties: {grid_position: 'NIPFIX,JTFJZJ ILHNJK,TZANFN'}
   - name: label_4
-    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-      visible: false, text: '   Profile Status', font_size: null, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-      underline: false, icon: ''}
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: false, text: '   Profile Status', font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false, background: '', bold: true, underline: false, icon: ''}
     type: Label
     layout_properties: {grid_position: 'NIPFIX,JTFJZJ STWGXY,OBPXYF'}
   - name: text_box_3
-    properties: {role: outlined, align: left, hide_text: false, tooltip: '', placeholder: ' Enter
-        your Profile_status', border: '', enabled: true, foreground: '', visible: false,
-      text: '', font_size: null, font: '', spacing_above: small, type: text, spacing_below: small,
-      italic: false, background: '', bold: false, underline: false}
+    properties: {role: outlined, align: left, hide_text: false, tooltip: '', placeholder: ' Enter your Profile_status', border: '', enabled: true, foreground: '', visible: false, text: '', font_size: null, font: '', spacing_above: small, type: text, spacing_below: small, italic: false, background: '', bold: false, underline: false}
     type: TextBox
     layout_properties: {grid_position: 'NIPFIX,JTFJZJ STWGXY,VBTAGX'}
   - name: label_5
-    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-      visible: false, text: '   Gender', font_size: null, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-      underline: false, icon: ''}
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: false, text: '   Gender', font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false, background: '', bold: true, underline: false, icon: ''}
     type: Label
     layout_properties: {grid_position: 'NIPFIX,JTFJZJ GENCVA,YFODNE'}
   - name: drop_down_1
@@ -67,24 +49,15 @@ components:
     type: DropDown
     layout_properties: {grid_position: 'NIPFIX,JTFJZJ GENCVA,OCFNNC'}
   - name: label_6
-    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-      visible: false, text: '   User Age', font_size: null, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-      underline: false, icon: ''}
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: false, text: '   User Age', font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false, background: '', bold: true, underline: false, icon: ''}
     type: Label
     layout_properties: {grid_position: 'NIPFIX,JTFJZJ OOKUYW,JUPKTS'}
   - name: text_box_5
-    properties: {role: outlined, align: left, hide_text: false, tooltip: '', placeholder: ' Enter
-        your User_age', border: '', enabled: true, foreground: '', visible: false,
-      text: '', font_size: null, font: '', spacing_above: small, type: text, spacing_below: small,
-      italic: false, background: '', bold: false, underline: false}
+    properties: {role: outlined, align: left, hide_text: false, tooltip: '', placeholder: ' Enter your User_age', border: '', enabled: true, foreground: '', visible: false, text: '', font_size: null, font: '', spacing_above: small, type: text, spacing_below: small, italic: false, background: '', bold: false, underline: false}
     type: TextBox
     layout_properties: {grid_position: 'NIPFIX,JTFJZJ OOKUYW,ETEJQN'}
   - name: label_7
-    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-      visible: false, text: '   Date Of Birth', font_size: null, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-      underline: false, icon: ''}
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: false, text: '   Date Of Birth', font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false, background: '', bold: true, underline: false, icon: ''}
     type: Label
     layout_properties: {grid_position: 'NIPFIX,JTFJZJ CJLCWH,YIIGZL'}
   - name: text_box
@@ -92,738 +65,424 @@ components:
     type: Label
     layout_properties: {grid_position: 'NIPFIX,JTFJZJ CJLCWH,ZQBYHW'}
   - name: label_10
-    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-      visible: false, text: '   Mobile', font_size: null, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-      underline: false, icon: ''}
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: false, text: '   Mobile', font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false, background: '', bold: true, underline: false, icon: ''}
     type: Label
     layout_properties: {grid_position: 'NIPFIX,JTFJZJ UVDSIR,LNJVVU'}
   - name: text_box_7
-    properties: {role: outlined, align: left, hide_text: false, tooltip: '', placeholder: ' Enter
-        your Mobile', border: '', enabled: true, foreground: '', visible: false, text: '',
-      font_size: null, font: '', spacing_above: small, type: text, spacing_below: small,
-      italic: false, background: '', bold: false, underline: false}
+    properties: {role: outlined, align: left, hide_text: false, tooltip: '', placeholder: ' Enter your Mobile', border: '', enabled: true, foreground: '', visible: false, text: '', font_size: null, font: '', spacing_above: small, type: text, spacing_below: small, italic: false, background: '', bold: false, underline: false}
     type: TextBox
     layout_properties: {grid_position: 'NIPFIX,JTFJZJ UVDSIR,VJUSQH'}
   - name: label_11
-    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-      visible: false, text: '   Aadhaar No', font_size: null, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-      underline: false, icon: ''}
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: false, text: '   Aadhaar No', font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false, background: '', bold: true, underline: false, icon: ''}
     type: Label
     layout_properties: {grid_position: 'NIPFIX,JTFJZJ OFLXSO,PLCNDF'}
   - name: text_box_8
-    properties: {role: outlined, align: left, hide_text: false, tooltip: '', placeholder: ' Enter
-        your Aadhaar_no', border: '', enabled: true, foreground: '', visible: false,
-      text: '', font_size: null, font: '', spacing_above: small, type: text, spacing_below: small,
-      italic: false, background: '', bold: false, underline: false}
+    properties: {role: outlined, align: left, hide_text: false, tooltip: '', placeholder: ' Enter your Aadhaar_no', border: '', enabled: true, foreground: '', visible: false, text: '', font_size: null, font: '', spacing_above: small, type: text, spacing_below: small, italic: false, background: '', bold: false, underline: false}
     type: TextBox
     layout_properties: {grid_position: 'NIPFIX,JTFJZJ OFLXSO,YXEAQM'}
   - name: label_12
-    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-      visible: false, text: '   Pan Number', font_size: null, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-      underline: false, icon: ''}
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: false, text: '   Pan Number', font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false, background: '', bold: true, underline: false, icon: ''}
     type: Label
     layout_properties: {grid_position: 'NIPFIX,JTFJZJ GGAROP,ULVBAH'}
   - name: text_box_9
-    properties: {role: outlined, align: left, hide_text: false, tooltip: '', placeholder: ' Enter
-        your Pan_number', border: '', enabled: true, foreground: '', visible: false,
-      text: '', font_size: null, font: '', spacing_above: small, type: text, spacing_below: small,
-      italic: false, background: '', bold: false, underline: false}
+    properties: {role: outlined, align: left, hide_text: false, tooltip: '', placeholder: ' Enter your Pan_number', border: '', enabled: true, foreground: '', visible: false, text: '', font_size: null, font: '', spacing_above: small, type: text, spacing_below: small, italic: false, background: '', bold: false, underline: false}
     type: TextBox
     layout_properties: {grid_position: 'NIPFIX,JTFJZJ GGAROP,ZIRQGF'}
   - name: label_13
-    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-      visible: false, text: '   City', font_size: null, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-      underline: false, icon: ''}
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: false, text: '   City', font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false, background: '', bold: true, underline: false, icon: ''}
     type: Label
     layout_properties: {grid_position: 'NIPFIX,JTFJZJ QIBJXC,ERTLHG'}
   - name: text_box_10
-    properties: {role: outlined, align: left, hide_text: false, tooltip: '', placeholder: ' Enter
-        your City', border: '', enabled: true, foreground: '', visible: false, text: '',
-      font_size: null, font: '', spacing_above: small, type: text, spacing_below: small,
-      italic: false, background: '', bold: false, underline: false}
+    properties: {role: outlined, align: left, hide_text: false, tooltip: '', placeholder: ' Enter your City', border: '', enabled: true, foreground: '', visible: false, text: '', font_size: null, font: '', spacing_above: small, type: text, spacing_below: small, italic: false, background: '', bold: false, underline: false}
     type: TextBox
     layout_properties: {grid_position: 'NIPFIX,JTFJZJ QIBJXC,FBAKDG'}
   - name: label_15
-    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-      visible: false, text: '   Last Confirm', font_size: null, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-      underline: false, icon: ''}
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: false, text: '   Last Confirm', font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false, background: '', bold: true, underline: false, icon: ''}
     type: Label
     layout_properties: {grid_position: 'NIPFIX,JTFJZJ NHPRVB,VXCGJD'}
   - name: text_box_12
-    properties: {role: outlined, align: left, hide_text: false, tooltip: '', placeholder: ' Enter
-        your Last_confirm', border: '', enabled: true, foreground: '', visible: false,
-      text: '', font_size: null, font: '', spacing_above: small, type: text, spacing_below: small,
-      italic: false, background: '', bold: false, underline: false}
+    properties: {role: outlined, align: left, hide_text: false, tooltip: '', placeholder: ' Enter your Last_confirm', border: '', enabled: true, foreground: '', visible: false, text: '', font_size: null, font: '', spacing_above: small, type: text, spacing_below: small, italic: false, background: '', bold: false, underline: false}
     type: TextBox
     layout_properties: {grid_position: 'NIPFIX,JTFJZJ NHPRVB,MIFFBJ'}
   - name: label_16
-    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-      visible: false, text: '   Mobile Check', font_size: null, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-      underline: false, icon: ''}
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: false, text: '   Mobile Check', font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false, background: '', bold: true, underline: false, icon: ''}
     type: Label
     layout_properties: {grid_position: 'NIPFIX,JTFJZJ FBLBBI,JAKHGU'}
   - name: text_box_13
-    properties: {role: outlined, align: left, hide_text: false, tooltip: '', placeholder: ' Enter
-        your Mobile_check', border: '', enabled: true, foreground: '', visible: false,
-      text: '', font_size: null, font: '', spacing_above: small, type: text, spacing_below: small,
-      italic: false, background: '', bold: false, underline: false}
+    properties: {role: outlined, align: left, hide_text: false, tooltip: '', placeholder: ' Enter your Mobile_check', border: '', enabled: true, foreground: '', visible: false, text: '', font_size: null, font: '', spacing_above: small, type: text, spacing_below: small, italic: false, background: '', bold: false, underline: false}
     type: TextBox
     layout_properties: {grid_position: 'NIPFIX,JTFJZJ FBLBBI,SVQUDD'}
   - name: label_17
-    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-      visible: false, text: '   Mouther Tounge', font_size: null, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-      underline: false, icon: ''}
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: false, text: '   Mouther Tounge', font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false, background: '', bold: true, underline: false, icon: ''}
     type: Label
     layout_properties: {grid_position: 'NIPFIX,JTFJZJ OSLJOX,CVVROX'}
   - name: text_box_14
-    properties: {role: outlined, align: left, hide_text: false, tooltip: '', placeholder: ' Enter
-        your Mouther_tounge', border: '', enabled: true, foreground: '', visible: false,
-      text: '', font_size: null, font: '', spacing_above: small, type: text, spacing_below: small,
-      italic: false, background: '', bold: false, underline: false}
+    properties: {role: outlined, align: left, hide_text: false, tooltip: '', placeholder: ' Enter your Mouther_tounge', border: '', enabled: true, foreground: '', visible: false, text: '', font_size: null, font: '', spacing_above: small, type: text, spacing_below: small, italic: false, background: '', bold: false, underline: false}
     type: TextBox
     layout_properties: {grid_position: 'NIPFIX,JTFJZJ OSLJOX,XEIVTA'}
   - name: label_18
-    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-      visible: false, text: '   Marital Status', font_size: null, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-      underline: false, icon: ''}
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: false, text: '   Marital Status', font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false, background: '', bold: true, underline: false, icon: ''}
     type: Label
     layout_properties: {grid_position: 'NIPFIX,JTFJZJ FIXTFF,BJYFWH'}
   - name: text_box_15
-    properties: {role: outlined, align: left, hide_text: false, tooltip: '', placeholder: ' Enter
-        your Marital_status', border: '', enabled: true, foreground: '', visible: false,
-      text: '', font_size: null, font: '', spacing_above: small, type: text, spacing_below: small,
-      italic: false, background: '', bold: false, underline: false}
+    properties: {role: outlined, align: left, hide_text: false, tooltip: '', placeholder: ' Enter your Marital_status', border: '', enabled: true, foreground: '', visible: false, text: '', font_size: null, font: '', spacing_above: small, type: text, spacing_below: small, italic: false, background: '', bold: false, underline: false}
     type: TextBox
     layout_properties: {grid_position: 'NIPFIX,JTFJZJ FIXTFF,ICUPMU'}
   - name: label_19
-    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-      visible: false, text: '   Marriage Date', font_size: null, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-      underline: false, icon: ''}
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: false, text: '   Marriage Date', font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false, background: '', bold: true, underline: false, icon: ''}
     type: Label
     layout_properties: {grid_position: 'NIPFIX,JTFJZJ UXISUH,VHWMQG'}
   - name: date_picker_2
-    properties: {role: outlined, align: left, max_date: '', pick_time: false, tooltip: '',
-      placeholder: '', border: '', enabled: true, foreground: '', visible: false,
-      font_size: null, font: '', spacing_above: small, spacing_below: small, italic: false,
-      date: '', min_date: '', background: '', bold: false, underline: false, format: ''}
+    properties: {role: outlined, align: left, max_date: '', pick_time: false, tooltip: '', placeholder: '', border: '', enabled: true, foreground: '', visible: false, font_size: null, font: '', spacing_above: small, spacing_below: small, italic: false, date: '', min_date: '', background: '', bold: false, underline: false, format: ''}
     type: DatePicker
     layout_properties: {grid_position: 'NIPFIX,JTFJZJ UXISUH,ULTRSX'}
   - name: label_20
-    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-      visible: false, text: '   Spouse Name', font_size: null, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-      underline: false, icon: ''}
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: false, text: '   Spouse Name', font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false, background: '', bold: true, underline: false, icon: ''}
     type: Label
     layout_properties: {grid_position: 'NIPFIX,JTFJZJ CCMYHW,FMEADQ'}
   - name: text_box_17
-    properties: {role: outlined, align: left, hide_text: false, tooltip: '', placeholder: ' Enter
-        your Spouse_name', border: '', enabled: true, foreground: '', visible: false,
-      text: '', font_size: null, font: '', spacing_above: small, type: text, spacing_below: small,
-      italic: false, background: '', bold: false, underline: false}
+    properties: {role: outlined, align: left, hide_text: false, tooltip: '', placeholder: ' Enter your Spouse_name', border: '', enabled: true, foreground: '', visible: false, text: '', font_size: null, font: '', spacing_above: small, type: text, spacing_below: small, italic: false, background: '', bold: false, underline: false}
     type: TextBox
     layout_properties: {grid_position: 'NIPFIX,JTFJZJ CCMYHW,ZIMSEI'}
   - name: label_21
-    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-      visible: false, text: '   Spouse Mobile', font_size: null, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-      underline: false, icon: ''}
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: false, text: '   Spouse Mobile', font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false, background: '', bold: true, underline: false, icon: ''}
     type: Label
     layout_properties: {grid_position: 'NIPFIX,JTFJZJ LHUATN,FNRJKP'}
   - name: text_box_18
-    properties: {role: outlined, align: left, hide_text: false, tooltip: '', placeholder: ' Enter
-        your Spouse_mobile', border: '', enabled: true, foreground: '', visible: false,
-      text: '', font_size: null, font: '', spacing_above: small, type: text, spacing_below: small,
-      italic: false, background: '', bold: false, underline: false}
+    properties: {role: outlined, align: left, hide_text: false, tooltip: '', placeholder: ' Enter your Spouse_mobile', border: '', enabled: true, foreground: '', visible: false, text: '', font_size: null, font: '', spacing_above: small, type: text, spacing_below: small, italic: false, background: '', bold: false, underline: false}
     type: TextBox
     layout_properties: {grid_position: 'NIPFIX,JTFJZJ LHUATN,QESFAN'}
   - name: label_22
-    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-      visible: false, text: '   Spouse Company Name', font_size: null, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-      underline: false, icon: ''}
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: false, text: '   Spouse Company Name', font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false, background: '', bold: true, underline: false, icon: ''}
     type: Label
     layout_properties: {grid_position: 'NIPFIX,JTFJZJ FDCZNC,UELXZN'}
   - name: text_box_19
-    properties: {role: outlined, align: left, hide_text: false, tooltip: '', placeholder: ' Enter
-        your Spouse_company_name', border: '', enabled: true, foreground: '', visible: false,
-      text: '', font_size: null, font: '', spacing_above: small, type: text, spacing_below: small,
-      italic: false, background: '', bold: false, underline: false}
+    properties: {role: outlined, align: left, hide_text: false, tooltip: '', placeholder: ' Enter your Spouse_company_name', border: '', enabled: true, foreground: '', visible: false, text: '', font_size: null, font: '', spacing_above: small, type: text, spacing_below: small, italic: false, background: '', bold: false, underline: false}
     type: TextBox
     layout_properties: {grid_position: 'NIPFIX,JTFJZJ FDCZNC,LVWKTA'}
   - name: label_23
-    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-      visible: false, text: '   Spouse Company Address', font_size: null, font: '',
-      spacing_above: small, icon_align: left, spacing_below: small, italic: false,
-      background: '', bold: true, underline: false, icon: ''}
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: false, text: '   Spouse Company Address', font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false, background: '', bold: true, underline: false, icon: ''}
     type: Label
     layout_properties: {grid_position: 'NIPFIX,JTFJZJ NKQIAP,VDNKXN'}
   - name: text_box_20
-    properties: {role: outlined, align: left, hide_text: false, tooltip: '', placeholder: ' Enter
-        your Spouse_company_address', border: '', enabled: true, foreground: '', visible: false,
-      text: '', font_size: null, font: '', spacing_above: small, type: text, spacing_below: small,
-      italic: false, background: '', bold: false, underline: false}
+    properties: {role: outlined, align: left, hide_text: false, tooltip: '', placeholder: ' Enter your Spouse_company_address', border: '', enabled: true, foreground: '', visible: false, text: '', font_size: null, font: '', spacing_above: small, type: text, spacing_below: small, italic: false, background: '', bold: false, underline: false}
     type: TextBox
     layout_properties: {grid_position: 'NIPFIX,JTFJZJ NKQIAP,ZKHNNQ'}
   - name: label_24
-    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-      visible: false, text: '   Spouse Profficen', font_size: null, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-      underline: false, icon: ''}
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: false, text: '   Spouse Profficen', font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false, background: '', bold: true, underline: false, icon: ''}
     type: Label
     layout_properties: {grid_position: 'NIPFIX,JTFJZJ VTDXMF,EJYFNT'}
   - name: text_box_21
-    properties: {role: outlined, align: left, hide_text: false, tooltip: '', placeholder: ' Enter
-        your Spouse_profficen', border: '', enabled: true, foreground: '', visible: false,
-      text: '', font_size: null, font: '', spacing_above: small, type: text, spacing_below: small,
-      italic: false, background: '', bold: false, underline: false}
+    properties: {role: outlined, align: left, hide_text: false, tooltip: '', placeholder: ' Enter your Spouse_profficen', border: '', enabled: true, foreground: '', visible: false, text: '', font_size: null, font: '', spacing_above: small, type: text, spacing_below: small, italic: false, background: '', bold: false, underline: false}
     type: TextBox
     layout_properties: {grid_position: 'NIPFIX,JTFJZJ VTDXMF,BBOAAB'}
   - name: label_25
-    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-      visible: false, text: '   Usertype', font_size: null, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-      underline: false, icon: ''}
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: false, text: '   Usertype', font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false, background: '', bold: true, underline: false, icon: ''}
     type: Label
     layout_properties: {grid_position: 'NIPFIX,JTFJZJ INKWIH,EFPJCA'}
   - name: text_box_22
-    properties: {role: outlined, align: left, hide_text: false, tooltip: '', placeholder: ' Enter
-        your Usertype', border: '', enabled: true, foreground: '', visible: false,
-      text: '', font_size: null, font: '', spacing_above: small, type: text, spacing_below: small,
-      italic: false, background: '', bold: false, underline: false}
+    properties: {role: outlined, align: left, hide_text: false, tooltip: '', placeholder: ' Enter your Usertype', border: '', enabled: true, foreground: '', visible: false, text: '', font_size: null, font: '', spacing_above: small, type: text, spacing_below: small, italic: false, background: '', bold: false, underline: false}
     type: TextBox
     layout_properties: {grid_position: 'NIPFIX,JTFJZJ INKWIH,DHABYH'}
   - name: label_26
-    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-      visible: false, text: '   Registration Approve', font_size: null, font: '',
-      spacing_above: small, icon_align: left, spacing_below: small, italic: false,
-      background: '', bold: true, underline: false, icon: ''}
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: false, text: '   Registration Approve', font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false, background: '', bold: true, underline: false, icon: ''}
     type: Label
     layout_properties: {grid_position: 'NIPFIX,JTFJZJ XYZCBL,AOGNNW'}
   - name: text_box_23
-    properties: {role: outlined, align: left, hide_text: false, tooltip: '', placeholder: ' Enter
-        your Registration_approve', border: '', enabled: true, foreground: '', visible: false,
-      text: '', font_size: null, font: '', spacing_above: small, type: text, spacing_below: small,
-      italic: false, background: '', bold: false, underline: false}
+    properties: {role: outlined, align: left, hide_text: false, tooltip: '', placeholder: ' Enter your Registration_approve', border: '', enabled: true, foreground: '', visible: false, text: '', font_size: null, font: '', spacing_above: small, type: text, spacing_below: small, italic: false, background: '', bold: false, underline: false}
     type: TextBox
     layout_properties: {grid_position: 'NIPFIX,JTFJZJ XYZCBL,BOFNGR'}
   - name: label_27
-    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-      visible: false, text: '   About', font_size: null, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-      underline: false, icon: ''}
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: false, text: '   About', font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false, background: '', bold: true, underline: false, icon: ''}
     type: Label
     layout_properties: {grid_position: 'NIPFIX,JTFJZJ IXSSFZ,IGSGRR'}
   - name: text_box_24
-    properties: {role: outlined, align: left, hide_text: false, tooltip: '', placeholder: ' Enter
-        your About', border: '', enabled: true, foreground: '', visible: false, text: '',
-      font_size: null, font: '', spacing_above: small, type: text, spacing_below: small,
-      italic: false, background: '', bold: false, underline: false}
+    properties: {role: outlined, align: left, hide_text: false, tooltip: '', placeholder: ' Enter your About', border: '', enabled: true, foreground: '', visible: false, text: '', font_size: null, font: '', spacing_above: small, type: text, spacing_below: small, italic: false, background: '', bold: false, underline: false}
     type: TextBox
     layout_properties: {grid_position: 'NIPFIX,JTFJZJ IXSSFZ,BSXUPQ'}
   - name: label_28
-    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-      visible: false, text: '   Address Type', font_size: null, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-      underline: false, icon: ''}
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: false, text: '   Address Type', font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false, background: '', bold: true, underline: false, icon: ''}
     type: Label
     layout_properties: {grid_position: 'NIPFIX,JTFJZJ YXXXNI,PGJGSO'}
   - name: text_box_25
-    properties: {role: outlined, align: left, hide_text: false, tooltip: '', placeholder: ' Enter
-        your Address_type', border: '', enabled: true, foreground: '', visible: false,
-      text: '', font_size: null, font: '', spacing_above: small, type: text, spacing_below: small,
-      italic: false, background: '', bold: false, underline: false}
+    properties: {role: outlined, align: left, hide_text: false, tooltip: '', placeholder: ' Enter your Address_type', border: '', enabled: true, foreground: '', visible: false, text: '', font_size: null, font: '', spacing_above: small, type: text, spacing_below: small, italic: false, background: '', bold: false, underline: false}
     type: TextBox
     layout_properties: {grid_position: 'NIPFIX,JTFJZJ YXXXNI,GPYVHG'}
   - name: label_29
-    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-      visible: false, text: '   Alerts', font_size: null, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-      underline: false, icon: ''}
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: false, text: '   Alerts', font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false, background: '', bold: true, underline: false, icon: ''}
     type: Label
     layout_properties: {grid_position: 'NIPFIX,JTFJZJ GCQJIZ,WCWJDY'}
   - name: text_box_26
-    properties: {role: outlined, align: left, hide_text: false, tooltip: '', placeholder: ' Enter
-        your Alerts', border: '', enabled: true, foreground: '', visible: false, text: '',
-      font_size: null, font: '', spacing_above: small, type: text, spacing_below: small,
-      italic: false, background: '', bold: false, underline: false}
+    properties: {role: outlined, align: left, hide_text: false, tooltip: '', placeholder: ' Enter your Alerts', border: '', enabled: true, foreground: '', visible: false, text: '', font_size: null, font: '', spacing_above: small, type: text, spacing_below: small, italic: false, background: '', bold: false, underline: false}
     type: TextBox
     layout_properties: {grid_position: 'NIPFIX,JTFJZJ GCQJIZ,WGAOIO'}
   - name: label_30
-    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-      visible: false, text: '   Building Name', font_size: null, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-      underline: false, icon: ''}
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: false, text: '   Building Name', font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false, background: '', bold: true, underline: false, icon: ''}
     type: Label
     layout_properties: {grid_position: 'NIPFIX,JTFJZJ KWGEKL,LOSGTP'}
   - name: text_box_27
-    properties: {role: outlined, align: left, hide_text: false, tooltip: '', placeholder: ' Enter
-        your Building_name', border: '', enabled: true, foreground: '', visible: false,
-      text: '', font_size: null, font: '', spacing_above: small, type: text, spacing_below: small,
-      italic: false, background: '', bold: false, underline: false}
+    properties: {role: outlined, align: left, hide_text: false, tooltip: '', placeholder: ' Enter your Building_name', border: '', enabled: true, foreground: '', visible: false, text: '', font_size: null, font: '', spacing_above: small, type: text, spacing_below: small, italic: false, background: '', bold: false, underline: false}
     type: TextBox
     layout_properties: {grid_position: 'NIPFIX,JTFJZJ KWGEKL,BOYSMS'}
   - name: label_31
-    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-      visible: false, text: '   House Landmark', font_size: null, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-      underline: false, icon: ''}
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: false, text: '   House Landmark', font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false, background: '', bold: true, underline: false, icon: ''}
     type: Label
     layout_properties: {grid_position: 'NIPFIX,JTFJZJ IPRRDX,MCXWWT'}
   - name: text_box_28
-    properties: {role: outlined, align: left, hide_text: false, tooltip: '', placeholder: ' Enter
-        your House_landmark', border: '', enabled: true, foreground: '', visible: false,
-      text: '', font_size: null, font: '', spacing_above: small, type: text, spacing_below: small,
-      italic: false, background: '', bold: false, underline: false}
+    properties: {role: outlined, align: left, hide_text: false, tooltip: '', placeholder: ' Enter your House_landmark', border: '', enabled: true, foreground: '', visible: false, text: '', font_size: null, font: '', spacing_above: small, type: text, spacing_below: small, italic: false, background: '', bold: false, underline: false}
     type: TextBox
     layout_properties: {grid_position: 'NIPFIX,JTFJZJ IPRRDX,DYLGFJ'}
   - name: label_32
-    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-      visible: false, text: '   House No', font_size: null, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-      underline: false, icon: ''}
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: false, text: '   House No', font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false, background: '', bold: true, underline: false, icon: ''}
     type: Label
     layout_properties: {grid_position: 'NIPFIX,JTFJZJ PIGLBB,FIOHBU'}
   - name: text_box_29
-    properties: {role: outlined, align: left, hide_text: false, tooltip: '', placeholder: ' Enter
-        your House_no', border: '', enabled: true, foreground: '', visible: false,
-      text: '', font_size: null, font: '', spacing_above: small, type: text, spacing_below: small,
-      italic: false, background: '', bold: false, underline: false}
+    properties: {role: outlined, align: left, hide_text: false, tooltip: '', placeholder: ' Enter your House_no', border: '', enabled: true, foreground: '', visible: false, text: '', font_size: null, font: '', spacing_above: small, type: text, spacing_below: small, italic: false, background: '', bold: false, underline: false}
     type: TextBox
     layout_properties: {grid_position: 'NIPFIX,JTFJZJ PIGLBB,VVKALG'}
   - name: label_34
-    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-      visible: false, text: '   Pincode', font_size: null, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-      underline: false, icon: ''}
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: false, text: '   Pincode', font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false, background: '', bold: true, underline: false, icon: ''}
     type: Label
     layout_properties: {grid_position: 'NIPFIX,JTFJZJ KTSKEN,KPSLCN'}
   - name: text_box_30
-    properties: {role: outlined, align: left, hide_text: false, tooltip: '', placeholder: ' Enter
-        your Pincode', border: '', enabled: true, foreground: '', visible: false,
-      text: '', font_size: null, font: '', spacing_above: small, type: text, spacing_below: small,
-      italic: false, background: '', bold: false, underline: false}
+    properties: {role: outlined, align: left, hide_text: false, tooltip: '', placeholder: ' Enter your Pincode', border: '', enabled: true, foreground: '', visible: false, text: '', font_size: null, font: '', spacing_above: small, type: text, spacing_below: small, italic: false, background: '', bold: false, underline: false}
     type: TextBox
     layout_properties: {grid_position: 'NIPFIX,JTFJZJ KTSKEN,YFXORZ'}
   - name: label_35
-    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-      visible: false, text: '   Qualification', font_size: null, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-      underline: false, icon: ''}
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: false, text: '   Qualification', font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false, background: '', bold: true, underline: false, icon: ''}
     type: Label
     layout_properties: {grid_position: 'NIPFIX,JTFJZJ FQGEMN,CVMIEY'}
   - name: text_box_32
-    properties: {role: outlined, align: left, hide_text: false, tooltip: '', placeholder: ' Enter
-        your Qualification', border: '', enabled: true, foreground: '', visible: false,
-      text: '', font_size: null, font: '', spacing_above: small, type: text, spacing_below: small,
-      italic: false, background: '', bold: false, underline: false}
+    properties: {role: outlined, align: left, hide_text: false, tooltip: '', placeholder: ' Enter your Qualification', border: '', enabled: true, foreground: '', visible: false, text: '', font_size: null, font: '', spacing_above: small, type: text, spacing_below: small, italic: false, background: '', bold: false, underline: false}
     type: TextBox
     layout_properties: {grid_position: 'NIPFIX,JTFJZJ FQGEMN,SZCPJM'}
   - name: label_36
-    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-      visible: false, text: '   State', font_size: null, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-      underline: false, icon: ''}
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: false, text: '   State', font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false, background: '', bold: true, underline: false, icon: ''}
     type: Label
     layout_properties: {grid_position: 'NIPFIX,JTFJZJ OVGSBN,EEIVAH'}
   - name: text_box_33
-    properties: {role: outlined, align: left, hide_text: false, tooltip: '', placeholder: ' Enter
-        your State ', border: '', enabled: true, foreground: '', visible: false, text: '',
-      font_size: null, font: '', spacing_above: small, type: text, spacing_below: small,
-      italic: false, background: '', bold: false, underline: false}
+    properties: {role: outlined, align: left, hide_text: false, tooltip: '', placeholder: ' Enter your State ', border: '', enabled: true, foreground: '', visible: false, text: '', font_size: null, font: '', spacing_above: small, type: text, spacing_below: small, italic: false, background: '', bold: false, underline: false}
     type: TextBox
     layout_properties: {grid_position: 'NIPFIX,JTFJZJ OVGSBN,PHMQQA'}
   - name: label_37
-    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-      visible: false, text: '   Street', font_size: null, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-      underline: false, icon: ''}
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: false, text: '   Street', font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false, background: '', bold: true, underline: false, icon: ''}
     type: Label
     layout_properties: {grid_position: 'NIPFIX,JTFJZJ BWYCPS,QWMBWE'}
   - name: text_box_34
-    properties: {role: outlined, align: left, hide_text: false, tooltip: '', placeholder: ' Enter
-        your Street', border: '', enabled: true, foreground: '', visible: false, text: '',
-      font_size: null, font: '', spacing_above: small, type: text, spacing_below: small,
-      italic: false, background: '', bold: false, underline: false}
+    properties: {role: outlined, align: left, hide_text: false, tooltip: '', placeholder: ' Enter your Street', border: '', enabled: true, foreground: '', visible: false, text: '', font_size: null, font: '', spacing_above: small, type: text, spacing_below: small, italic: false, background: '', bold: false, underline: false}
     type: TextBox
     layout_properties: {grid_position: 'NIPFIX,JTFJZJ BWYCPS,GYTBIO'}
   - name: label_38
-    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-      visible: false, text: '   Terms', font_size: null, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-      underline: false, icon: ''}
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: false, text: '   Terms', font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false, background: '', bold: true, underline: false, icon: ''}
     type: Label
     layout_properties: {grid_position: 'NIPFIX,JTFJZJ DPODAL,YDVVVU'}
   - name: text_box_35
-    properties: {role: outlined, align: left, hide_text: false, tooltip: '', placeholder: ' Enter
-        your Terms', border: '', enabled: true, foreground: '', visible: false, text: '',
-      font_size: null, font: '', spacing_above: small, type: text, spacing_below: small,
-      italic: false, background: '', bold: false, underline: false}
+    properties: {role: outlined, align: left, hide_text: false, tooltip: '', placeholder: ' Enter your Terms', border: '', enabled: true, foreground: '', visible: false, text: '', font_size: null, font: '', spacing_above: small, type: text, spacing_below: small, italic: false, background: '', bold: false, underline: false}
     type: TextBox
     layout_properties: {grid_position: 'NIPFIX,JTFJZJ DPODAL,KBPGJM'}
   - name: label_1
-    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-      visible: false, text: '   Another email', font_size: null, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-      underline: false, icon: ''}
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: false, text: '   Another email', font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false, background: '', bold: true, underline: false, icon: ''}
     type: Label
     layout_properties: {grid_position: 'NIPFIX,JTFJZJ JPYUZJ,MMMCLG'}
   - name: text_box_1
-    properties: {role: outlined, align: left, hide_text: false, tooltip: '', placeholder: '',
-      border: '', enabled: true, foreground: '', visible: false, text: '', font_size: null,
-      font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
-      background: '', bold: false, underline: false}
+    properties: {role: outlined, align: left, hide_text: false, tooltip: '', placeholder: '', border: '', enabled: true, foreground: '', visible: false, text: '', font_size: null, font: '', spacing_above: small, type: text, spacing_below: small, italic: false, background: '', bold: false, underline: false}
     type: TextBox
     layout_properties: {grid_position: 'NIPFIX,JTFJZJ JPYUZJ,JIBTHS'}
     event_bindings: {pressed_enter: text_box_1_pressed_enter}
   - name: label_3
-    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-      visible: false, text: '   Company name', font_size: null, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-      underline: false, icon: ''}
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: false, text: '   Company name', font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false, background: '', bold: true, underline: false, icon: ''}
     type: Label
     layout_properties: {grid_position: 'NIPFIX,JTFJZJ MVJHEO,UPXMYQ'}
   - name: text_box_6
-    properties: {role: outlined, align: left, hide_text: false, tooltip: '', placeholder: '',
-      border: '', enabled: true, foreground: '', visible: false, text: '', font_size: null,
-      font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
-      background: '', bold: false, underline: false}
+    properties: {role: outlined, align: left, hide_text: false, tooltip: '', placeholder: '', border: '', enabled: true, foreground: '', visible: false, text: '', font_size: null, font: '', spacing_above: small, type: text, spacing_below: small, italic: false, background: '', bold: false, underline: false}
     type: TextBox
     layout_properties: {grid_position: 'NIPFIX,JTFJZJ MVJHEO,AZRVPL'}
   - name: label_9
-    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-      visible: false, text: '   Organisation type', font_size: null, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-      underline: false, icon: ''}
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: false, text: '   Organisation type', font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false, background: '', bold: true, underline: false, icon: ''}
     type: Label
     layout_properties: {grid_position: 'NIPFIX,JTFJZJ DALOOR,QTOIWN'}
   - name: text_box_11
-    properties: {role: outlined, align: left, hide_text: false, tooltip: '', placeholder: '',
-      border: '', enabled: true, foreground: '', visible: false, text: '', font_size: null,
-      font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
-      background: '', bold: false, underline: false}
+    properties: {role: outlined, align: left, hide_text: false, tooltip: '', placeholder: '', border: '', enabled: true, foreground: '', visible: false, text: '', font_size: null, font: '', spacing_above: small, type: text, spacing_below: small, italic: false, background: '', bold: false, underline: false}
     type: TextBox
     layout_properties: {grid_position: 'NIPFIX,JTFJZJ DALOOR,QXPZAC'}
   - name: label_8
-    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-      visible: false, text: '   Employment type', font_size: null, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-      underline: false, icon: ''}
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: false, text: '   Employment type', font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false, background: '', bold: true, underline: false, icon: ''}
     type: Label
     layout_properties: {grid_position: 'NIPFIX,JTFJZJ UKLWIW,ANVUKV'}
   - name: text_box_16
-    properties: {role: outlined, align: left, hide_text: false, tooltip: '', placeholder: '',
-      border: '', enabled: true, foreground: '', visible: false, text: '', font_size: null,
-      font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
-      background: '', bold: false, underline: false}
+    properties: {role: outlined, align: left, hide_text: false, tooltip: '', placeholder: '', border: '', enabled: true, foreground: '', visible: false, text: '', font_size: null, font: '', spacing_above: small, type: text, spacing_below: small, italic: false, background: '', bold: false, underline: false}
     type: TextBox
     layout_properties: {grid_position: 'NIPFIX,JTFJZJ UKLWIW,HKKUXC'}
   - name: label_14
-    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-      visible: false, text: '   Business no', font_size: null, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-      underline: false, icon: ''}
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: false, text: '   Business no', font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false, background: '', bold: true, underline: false, icon: ''}
     type: Label
     layout_properties: {grid_position: 'NIPFIX,JTFJZJ DGVMAM,ZJFWUG'}
   - name: text_box_31
-    properties: {role: outlined, align: left, hide_text: false, tooltip: '', placeholder: '',
-      border: '', enabled: true, foreground: '', visible: false, text: '', font_size: null,
-      font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
-      background: '', bold: false, underline: false}
+    properties: {role: outlined, align: left, hide_text: false, tooltip: '', placeholder: '', border: '', enabled: true, foreground: '', visible: false, text: '', font_size: null, font: '', spacing_above: small, type: text, spacing_below: small, italic: false, background: '', bold: false, underline: false}
     type: TextBox
     layout_properties: {grid_position: 'NIPFIX,JTFJZJ DGVMAM,FFPGQC'}
   - name: label_33
-    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-      visible: false, text: '   Company landmark', font_size: null, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-      underline: false, icon: ''}
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: false, text: '   Company landmark', font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false, background: '', bold: true, underline: false, icon: ''}
     type: Label
     layout_properties: {grid_position: 'NIPFIX,JTFJZJ WMCFMN,PZKVVI'}
   - name: text_box_36
-    properties: {role: outlined, align: left, hide_text: false, tooltip: '', placeholder: '',
-      border: '', enabled: true, foreground: '', visible: false, text: '', font_size: null,
-      font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
-      background: '', bold: false, underline: false}
+    properties: {role: outlined, align: left, hide_text: false, tooltip: '', placeholder: '', border: '', enabled: true, foreground: '', visible: false, text: '', font_size: null, font: '', spacing_above: small, type: text, spacing_below: small, italic: false, background: '', bold: false, underline: false}
     type: TextBox
     layout_properties: {grid_position: 'NIPFIX,JTFJZJ WMCFMN,JYTWYF'}
   - name: label_39
-    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-      visible: false, text: '   Company address', font_size: null, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-      underline: false, icon: ''}
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: false, text: '   Company address', font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false, background: '', bold: true, underline: false, icon: ''}
     type: Label
     layout_properties: {grid_position: 'NIPFIX,JTFJZJ XIHCZG,QWXYFN'}
   - name: text_box_37
-    properties: {role: outlined, align: left, hide_text: false, tooltip: '', placeholder: '',
-      border: '', enabled: true, foreground: '', visible: false, text: '', font_size: null,
-      font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
-      background: '', bold: false, underline: false}
+    properties: {role: outlined, align: left, hide_text: false, tooltip: '', placeholder: '', border: '', enabled: true, foreground: '', visible: false, text: '', font_size: null, font: '', spacing_above: small, type: text, spacing_below: small, italic: false, background: '', bold: false, underline: false}
     type: TextBox
     layout_properties: {grid_position: 'NIPFIX,JTFJZJ XIHCZG,HPFSGJ'}
   - name: label_40
-    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-      visible: false, text: '   Annual salary', font_size: null, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-      underline: false, icon: ''}
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: false, text: '   Annual salary', font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false, background: '', bold: true, underline: false, icon: ''}
     type: Label
     layout_properties: {grid_position: 'NIPFIX,JTFJZJ DXHLGK,LOZOLE'}
   - name: text_box_38
-    properties: {role: outlined, align: left, hide_text: false, tooltip: '', placeholder: '',
-      border: '', enabled: true, foreground: '', visible: false, text: '', font_size: null,
-      font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
-      background: '', bold: false, underline: false}
+    properties: {role: outlined, align: left, hide_text: false, tooltip: '', placeholder: '', border: '', enabled: true, foreground: '', visible: false, text: '', font_size: null, font: '', spacing_above: small, type: text, spacing_below: small, italic: false, background: '', bold: false, underline: false}
     type: TextBox
     layout_properties: {grid_position: 'NIPFIX,JTFJZJ DXHLGK,QYGSUZ'}
   - name: label_41
-    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-      visible: false, text: '   Designation', font_size: null, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-      underline: false, icon: ''}
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: false, text: '   Designation', font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false, background: '', bold: true, underline: false, icon: ''}
     type: Label
     layout_properties: {grid_position: 'NIPFIX,JTFJZJ XYWXFD,EXHNLS'}
   - name: text_box_39
-    properties: {role: outlined, align: left, hide_text: false, tooltip: '', placeholder: '',
-      border: '', enabled: true, foreground: '', visible: false, text: '', font_size: null,
-      font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
-      background: '', bold: false, underline: false}
+    properties: {role: outlined, align: left, hide_text: false, tooltip: '', placeholder: '', border: '', enabled: true, foreground: '', visible: false, text: '', font_size: null, font: '', spacing_above: small, type: text, spacing_below: small, italic: false, background: '', bold: false, underline: false}
     type: TextBox
     layout_properties: {grid_position: 'NIPFIX,JTFJZJ XYWXFD,SEJBMQ'}
   - name: label_44
-    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-      visible: false, text: '   Account name', font_size: null, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-      underline: false, icon: ''}
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: false, text: '   Account name', font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false, background: '', bold: true, underline: false, icon: ''}
     type: Label
     layout_properties: {grid_position: 'NIPFIX,JTFJZJ KBWQAY,JRZHWL'}
   - name: text_box_40
-    properties: {role: outlined, align: left, hide_text: false, tooltip: '', placeholder: '',
-      border: '', enabled: true, foreground: '', visible: false, text: '', font_size: null,
-      font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
-      background: '', bold: false, underline: false}
+    properties: {role: outlined, align: left, hide_text: false, tooltip: '', placeholder: '', border: '', enabled: true, foreground: '', visible: false, text: '', font_size: null, font: '', spacing_above: small, type: text, spacing_below: small, italic: false, background: '', bold: false, underline: false}
     type: TextBox
     layout_properties: {grid_position: 'NIPFIX,JTFJZJ KBWQAY,VRHXTE'}
   - name: label_45
-    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-      visible: false, text: '   Account type', font_size: null, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-      underline: false, icon: ''}
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: false, text: '   Account type', font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false, background: '', bold: true, underline: false, icon: ''}
     type: Label
     layout_properties: {grid_position: 'NIPFIX,JTFJZJ NBYDDG,IPOCEL'}
   - name: text_box_41
-    properties: {role: outlined, align: left, hide_text: false, tooltip: '', placeholder: '',
-      border: '', enabled: true, foreground: '', visible: false, text: '', font_size: null,
-      font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
-      background: '', bold: false, underline: false}
+    properties: {role: outlined, align: left, hide_text: false, tooltip: '', placeholder: '', border: '', enabled: true, foreground: '', visible: false, text: '', font_size: null, font: '', spacing_above: small, type: text, spacing_below: small, italic: false, background: '', bold: false, underline: false}
     type: TextBox
     layout_properties: {grid_position: 'NIPFIX,JTFJZJ NBYDDG,FZMTBU'}
   - name: label_46
-    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-      visible: false, text: '   Account number', font_size: null, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-      underline: false, icon: ''}
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: false, text: '   Account number', font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false, background: '', bold: true, underline: false, icon: ''}
     type: Label
     layout_properties: {grid_position: 'NIPFIX,JTFJZJ WNEZWP,IBTUXW'}
   - name: text_box_42
-    properties: {role: outlined, align: left, hide_text: false, tooltip: '', placeholder: '',
-      border: '', enabled: true, foreground: '', visible: false, text: '', font_size: null,
-      font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
-      background: '', bold: false, underline: false}
+    properties: {role: outlined, align: left, hide_text: false, tooltip: '', placeholder: '', border: '', enabled: true, foreground: '', visible: false, text: '', font_size: null, font: '', spacing_above: small, type: text, spacing_below: small, italic: false, background: '', bold: false, underline: false}
     type: TextBox
     layout_properties: {grid_position: 'NIPFIX,JTFJZJ WNEZWP,AASUDR'}
   - name: label_47
-    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-      visible: false, text: '   Branch name', font_size: null, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-      underline: false, icon: ''}
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: false, text: '   Branch name', font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false, background: '', bold: true, underline: false, icon: ''}
     type: Label
     layout_properties: {grid_position: 'NIPFIX,JTFJZJ VJRUTO,VDNDKT'}
   - name: text_box_43
-    properties: {role: outlined, align: left, hide_text: false, tooltip: '', placeholder: '',
-      border: '', enabled: true, foreground: '', visible: false, text: '', font_size: null,
-      font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
-      background: '', bold: false, underline: false}
+    properties: {role: outlined, align: left, hide_text: false, tooltip: '', placeholder: '', border: '', enabled: true, foreground: '', visible: false, text: '', font_size: null, font: '', spacing_above: small, type: text, spacing_below: small, italic: false, background: '', bold: false, underline: false}
     type: TextBox
     layout_properties: {grid_position: 'NIPFIX,JTFJZJ VJRUTO,NIVAKA'}
   - name: label_48
-    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-      visible: false, text: '   IFSC code', font_size: null, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-      underline: false, icon: ''}
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: false, text: '   IFSC code', font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false, background: '', bold: true, underline: false, icon: ''}
     type: Label
     layout_properties: {grid_position: 'NIPFIX,JTFJZJ CILVBP,GVGMHE'}
   - name: text_box_44
-    properties: {role: outlined, align: left, hide_text: false, tooltip: '', placeholder: '',
-      border: '', enabled: true, foreground: '', visible: false, text: '', font_size: null,
-      font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
-      background: '', bold: false, underline: false}
+    properties: {role: outlined, align: left, hide_text: false, tooltip: '', placeholder: '', border: '', enabled: true, foreground: '', visible: false, text: '', font_size: null, font: '', spacing_above: small, type: text, spacing_below: small, italic: false, background: '', bold: false, underline: false}
     type: TextBox
     layout_properties: {grid_position: 'NIPFIX,JTFJZJ CILVBP,AOJWHO'}
   - name: label_49
-    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-      visible: false, text: '   Salary type', font_size: null, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-      underline: false, icon: ''}
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: false, text: '   Salary type', font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false, background: '', bold: true, underline: false, icon: ''}
     type: Label
     layout_properties: {grid_position: 'NIPFIX,JTFJZJ QFFCBE,WFEOWK'}
   - name: text_box_45
-    properties: {role: outlined, align: left, hide_text: false, tooltip: '', placeholder: '',
-      border: '', enabled: true, foreground: '', visible: false, text: '', font_size: null,
-      font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
-      background: '', bold: false, underline: false}
+    properties: {role: outlined, align: left, hide_text: false, tooltip: '', placeholder: '', border: '', enabled: true, foreground: '', visible: false, text: '', font_size: null, font: '', spacing_above: small, type: text, spacing_below: small, italic: false, background: '', bold: false, underline: false}
     type: TextBox
     layout_properties: {grid_position: 'NIPFIX,JTFJZJ QFFCBE,WVCTFL'}
   - name: label_50
-    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-      visible: false, text: '   Select bank', font_size: null, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-      underline: false, icon: ''}
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: false, text: '   Select bank', font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false, background: '', bold: true, underline: false, icon: ''}
     type: Label
     layout_properties: {grid_position: 'NIPFIX,JTFJZJ XQZVLK,XMHXBC'}
   - name: text_box_46
-    properties: {role: outlined, align: left, hide_text: false, tooltip: '', placeholder: '',
-      border: '', enabled: true, foreground: '', visible: false, text: '', font_size: null,
-      font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
-      background: '', bold: false, underline: false}
+    properties: {role: outlined, align: left, hide_text: false, tooltip: '', placeholder: '', border: '', enabled: true, foreground: '', visible: false, text: '', font_size: null, font: '', spacing_above: small, type: text, spacing_below: small, italic: false, background: '', bold: false, underline: false}
     type: TextBox
     layout_properties: {grid_position: 'NIPFIX,JTFJZJ XQZVLK,NIYIFF'}
   - name: label_51
-    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-      visible: false, text: '   net bank', font_size: null, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-      underline: false, icon: ''}
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: false, text: '   net bank', font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false, background: '', bold: true, underline: false, icon: ''}
     type: Label
     layout_properties: {grid_position: 'NIPFIX,JTFJZJ BOORBC,MDWZOH'}
   - name: text_box_47
-    properties: {role: outlined, align: left, hide_text: false, tooltip: '', placeholder: '',
-      border: '', enabled: true, foreground: '', visible: false, text: '', font_size: null,
-      font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
-      background: '', bold: false, underline: false}
+    properties: {role: outlined, align: left, hide_text: false, tooltip: '', placeholder: '', border: '', enabled: true, foreground: '', visible: false, text: '', font_size: null, font: '', spacing_above: small, type: text, spacing_below: small, italic: false, background: '', bold: false, underline: false}
     type: TextBox
     layout_properties: {grid_position: 'NIPFIX,JTFJZJ BOORBC,FYFMYM'}
   - name: label_52
-    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-      visible: false, text: '   Father name', font_size: null, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-      underline: false, icon: ''}
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: false, text: '   Father name', font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false, background: '', bold: true, underline: false, icon: ''}
     type: Label
     layout_properties: {grid_position: 'NIPFIX,JTFJZJ USPRKS,BTNWTS'}
   - name: text_box_48
-    properties: {role: outlined, align: left, hide_text: false, tooltip: '', placeholder: '',
-      border: '', enabled: true, foreground: '', visible: false, text: '', font_size: null,
-      font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
-      background: '', bold: false, underline: false}
+    properties: {role: outlined, align: left, hide_text: false, tooltip: '', placeholder: '', border: '', enabled: true, foreground: '', visible: false, text: '', font_size: null, font: '', spacing_above: small, type: text, spacing_below: small, italic: false, background: '', bold: false, underline: false}
     type: TextBox
     layout_properties: {grid_position: 'NIPFIX,JTFJZJ USPRKS,SCDHTZ'}
   - name: label_53
-    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-      visible: false, text: '   Father age', font_size: null, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-      underline: false, icon: ''}
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: false, text: '   Father age', font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false, background: '', bold: true, underline: false, icon: ''}
     type: Label
     layout_properties: {grid_position: 'NIPFIX,JTFJZJ LFIDHT,XXPEBC'}
   - name: text_box_49
-    properties: {role: outlined, align: left, hide_text: false, tooltip: '', placeholder: '',
-      border: '', enabled: true, foreground: '', visible: false, text: '', font_size: null,
-      font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
-      background: '', bold: false, underline: false}
+    properties: {role: outlined, align: left, hide_text: false, tooltip: '', placeholder: '', border: '', enabled: true, foreground: '', visible: false, text: '', font_size: null, font: '', spacing_above: small, type: text, spacing_below: small, italic: false, background: '', bold: false, underline: false}
     type: TextBox
     layout_properties: {grid_position: 'NIPFIX,JTFJZJ LFIDHT,UXPVJT'}
   - name: label_54
-    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-      visible: false, text: '   Mother name', font_size: null, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-      underline: false, icon: ''}
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: false, text: '   Mother name', font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false, background: '', bold: true, underline: false, icon: ''}
     type: Label
     layout_properties: {grid_position: 'NIPFIX,JTFJZJ RGGQYE,RVXDJD'}
   - name: text_box_50
-    properties: {role: outlined, align: left, hide_text: false, tooltip: '', placeholder: '',
-      border: '', enabled: true, foreground: '', visible: false, text: '', font_size: null,
-      font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
-      background: '', bold: false, underline: false}
+    properties: {role: outlined, align: left, hide_text: false, tooltip: '', placeholder: '', border: '', enabled: true, foreground: '', visible: false, text: '', font_size: null, font: '', spacing_above: small, type: text, spacing_below: small, italic: false, background: '', bold: false, underline: false}
     type: TextBox
     layout_properties: {grid_position: 'NIPFIX,JTFJZJ RGGQYE,SJETOZ'}
   - name: label_55
-    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-      visible: false, text: '   Mother age', font_size: null, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-      underline: false, icon: ''}
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: false, text: '   Mother age', font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false, background: '', bold: true, underline: false, icon: ''}
     type: Label
     layout_properties: {grid_position: 'NIPFIX,JTFJZJ YVNHDD,FDVNOI'}
   - name: text_box_51
-    properties: {role: outlined, align: left, hide_text: false, tooltip: '', placeholder: '',
-      border: '', enabled: true, foreground: '', visible: false, text: '', font_size: null,
-      font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
-      background: '', bold: false, underline: false}
+    properties: {role: outlined, align: left, hide_text: false, tooltip: '', placeholder: '', border: '', enabled: true, foreground: '', visible: false, text: '', font_size: null, font: '', spacing_above: small, type: text, spacing_below: small, italic: false, background: '', bold: false, underline: false}
     type: TextBox
     layout_properties: {grid_position: 'NIPFIX,JTFJZJ YVNHDD,YMKXKS'}
   - name: label_56
-    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-      visible: false, text: '   College name', font_size: null, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-      underline: false, icon: ''}
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: false, text: '   College name', font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false, background: '', bold: true, underline: false, icon: ''}
     type: Label
     layout_properties: {grid_position: 'NIPFIX,JTFJZJ HVLING,KWFMBS'}
   - name: text_box_52
-    properties: {role: outlined, align: left, hide_text: false, tooltip: '', placeholder: '',
-      border: '', enabled: true, foreground: '', visible: false, text: '', font_size: null,
-      font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
-      background: '', bold: false, underline: false}
+    properties: {role: outlined, align: left, hide_text: false, tooltip: '', placeholder: '', border: '', enabled: true, foreground: '', visible: false, text: '', font_size: null, font: '', spacing_above: small, type: text, spacing_below: small, italic: false, background: '', bold: false, underline: false}
     type: TextBox
     layout_properties: {grid_position: 'NIPFIX,JTFJZJ HVLING,KPFRRS'}
   - name: label_57
-    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-      visible: false, text: '   College id', font_size: null, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-      underline: false, icon: ''}
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: false, text: '   College id', font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false, background: '', bold: true, underline: false, icon: ''}
     type: Label
     layout_properties: {grid_position: 'NIPFIX,JTFJZJ CMZOHJ,TDLPXG'}
   - name: text_box_53
-    properties: {role: outlined, align: left, hide_text: false, tooltip: '', placeholder: '',
-      border: '', enabled: true, foreground: '', visible: false, text: '', font_size: null,
-      font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
-      background: '', bold: false, underline: false}
+    properties: {role: outlined, align: left, hide_text: false, tooltip: '', placeholder: '', border: '', enabled: true, foreground: '', visible: false, text: '', font_size: null, font: '', spacing_above: small, type: text, spacing_below: small, italic: false, background: '', bold: false, underline: false}
     type: TextBox
     layout_properties: {grid_position: 'NIPFIX,JTFJZJ CMZOHJ,CUUEWN'}
   - name: label_58
-    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-      visible: false, text: '   College address', font_size: null, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-      underline: false, icon: ''}
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: false, text: '   College address', font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false, background: '', bold: true, underline: false, icon: ''}
     type: Label
     layout_properties: {grid_position: 'NIPFIX,JTFJZJ NCEEPA,FWGXLZ'}
   - name: text_box_54
-    properties: {role: outlined, align: left, hide_text: false, tooltip: '', placeholder: '',
-      border: '', enabled: true, foreground: '', visible: false, text: '', font_size: null,
-      font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
-      background: '', bold: false, underline: false}
+    properties: {role: outlined, align: left, hide_text: false, tooltip: '', placeholder: '', border: '', enabled: true, foreground: '', visible: false, text: '', font_size: null, font: '', spacing_above: small, type: text, spacing_below: small, italic: false, background: '', bold: false, underline: false}
     type: TextBox
     layout_properties: {grid_position: 'NIPFIX,JTFJZJ NCEEPA,WCHBFM'}
   - name: label_59
-    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-      visible: false, text: '   Running Home Loan', font_size: null, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-      underline: false, icon: ''}
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: false, text: '   Running Home Loan', font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false, background: '', bold: true, underline: false, icon: ''}
     type: Label
     layout_properties: {grid_position: 'NIPFIX,JTFJZJ TWWDGV,KUGFND'}
   - name: text_box_55
-    properties: {role: outlined, align: left, hide_text: false, tooltip: '', placeholder: '',
-      border: '', enabled: true, foreground: '', visible: false, text: '', font_size: null,
-      font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
-      background: '', bold: false, underline: false}
+    properties: {role: outlined, align: left, hide_text: false, tooltip: '', placeholder: '', border: '', enabled: true, foreground: '', visible: false, text: '', font_size: null, font: '', spacing_above: small, type: text, spacing_below: small, italic: false, background: '', bold: false, underline: false}
     type: TextBox
     layout_properties: {grid_position: 'NIPFIX,JTFJZJ TWWDGV,JHIZER'}
 - type: ColumnPanel
-  properties: {role: null, tooltip: '', border: '', foreground: '', visible: true,
-    wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
-    spacing_below: small, background: ''}
+  properties: {role: null, tooltip: '', border: '', foreground: '', visible: true, wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}', spacing_below: small, background: ''}
   name: content_panel
   layout_properties: {grid_position: 'JDDCQB,SJJVLZ', full_width_row: true}
   components:
@@ -832,10 +491,7 @@ components:
     name: label_42
     layout_properties: {grid_position: 'ECUMIM,KYZYFV'}
   - type: Button
-    properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
-      foreground: 'theme:On Primary', visible: true, text: Save, font_size: null,
-      font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
-      background: '#05264d', bold: false, underline: false, icon: ''}
+    properties: {role: null, align: center, tooltip: '', border: '', enabled: true, foreground: 'theme:On Primary', visible: true, text: Save, font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false, background: '#05264d', bold: false, underline: false, icon: ''}
     name: button_2
     layout_properties: {grid_position: 'PTGTFS,CNTBMU'}
     event_bindings: {click: button_2_click}

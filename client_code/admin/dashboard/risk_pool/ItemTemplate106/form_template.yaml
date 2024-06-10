@@ -1,0 +1,32 @@
+is_package: true
+container: {type: ColumnPanel}
+components:
+- name: label_1
+  properties: {align: center}
+  type: Label
+  layout_properties: {grid_position: 'WJEEEF,GVKXOT'}
+  data_bindings:
+  - {property: text, code: 'self.item[''borrower_customer_id'']', writeback: false}
+- name: label_2
+  properties: {align: center}
+  type: Label
+  layout_properties: {grid_position: 'WJEEEF,CIAJZU'}
+  data_bindings:
+  - {property: text, code: 'self.item[''borrower_full_name'']', writeback: false}
+- name: label_3
+  properties: {align: center}
+  type: Label
+  layout_properties: {grid_position: 'WJEEEF,HJLUMU'}
+  data_bindings:
+  - {property: text, code: 'self.item[''product_name'']', writeback: false}
+- name: label_4
+  properties: {align: center}
+  type: Label
+  layout_properties: {grid_position: 'WJEEEF,KNGKQN'}
+  data_bindings:
+  - {property: text, code: 'self.item[''emi_number'']', writeback: false}
+- name: link_1
+  properties: {text: View Details, align: center}
+  type: Link
+  layout_properties: {grid_position: 'WJEEEF,XDPTBF'}
+  event_bindings: {click: link_1_click}
