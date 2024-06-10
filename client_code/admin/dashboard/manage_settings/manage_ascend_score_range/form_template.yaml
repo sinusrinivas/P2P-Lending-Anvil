@@ -17,12 +17,12 @@ components:
     properties: {}
     type: Label
     layout_properties: {grid_position: 'HWYGRQ,BJSPAV'}
-  - name: button_3_copy
-    properties: {text: Back, background: '#05264d', foreground: 'theme:On Primary',
-      role: elevated-button, icon: 'fa:backward', align: right}
-    type: Button
-    layout_properties: {grid_position: 'HWYGRQ,VHMYSV', full_width_row: true}
-    event_bindings: {click: button_3_copy_click}
+- name: button_3_copy
+  properties: {text: Back, background: '#05264d', foreground: 'theme:On Primary',
+    role: elevated-button, icon: 'fa:backward', align: right}
+  type: Button
+  layout_properties: {grid_position: 'NKEOSL,MOGGGN'}
+  event_bindings: {click: button_3_copy_click}
 - name: column_panel_1
   properties: {}
   type: ColumnPanel
