@@ -206,14 +206,19 @@ components:
   properties: {align: center, text: Lender Return on Investment, bold: true, font_size: 22}
   type: Label
   layout_properties: {grid_position: 'NBZLXZ,PDAICA'}
-- name: spacer_7
-  properties: {height: '10'}
-  type: Spacer
-  layout_properties: {grid_position: 'IEQJCQ,OQGOFW'}
 - name: plot_1
   properties: {}
   type: Plot
   layout_properties: {grid_position: 'TAPWES,DWTLLI'}
+- name: spacer_7
+  properties: {height: '10'}
+  type: Spacer
+  layout_properties: {grid_position: 'WJKNNM,BLYWCT'}
+- name: button_1
+  properties: {text: Download Portfolio, bold: true, foreground: white, background: '#05264d'}
+  type: Button
+  layout_properties: {grid_position: 'NOFFYU,CTQNTH'}
+  event_bindings: {click: button_1_click}
 - name: spacer_11
   properties: {height: 32}
   type: Spacer

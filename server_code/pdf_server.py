@@ -10,10 +10,10 @@ import anvil.server
 import anvil.pdf
 
 @anvil.server.callable
-def create_pdf(name, image_source):
+def create_pdf(name, image_source,selected_row):
     
     # Your PDF creation logic here
-    pdf = anvil.pdf.PDFRenderer(page_size='A4').render_form("bank_users.main_form.about_main_form")  # Replace with your actual PDF creation code
+    pdf = anvil.pdf.PDFRenderer(page_size='A4').render_form("lendor.dashboard.lender_portfolio", selected_row = selected_row)  # Replace with your actual PDF creation code
     return pdf
     
 
