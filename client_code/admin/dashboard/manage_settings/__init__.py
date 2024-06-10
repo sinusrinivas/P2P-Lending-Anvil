@@ -21,8 +21,8 @@ class manage_settings(manage_settingsTemplate):
 
   def button_1_click(self, **event_args):
     """This method is called when the button is clicked"""
-    open_form('admin.dashboard.manage_settings.manage_membership')
-
+    open_form("admin.dashboard.manage_settings.manage_credit_limit")
+    
   def button_2_click(self, **event_args):
     """This method is called when the button is clicked"""
     open_form('admin.dashboard.manage_settings.manage_ascend_score_range')
