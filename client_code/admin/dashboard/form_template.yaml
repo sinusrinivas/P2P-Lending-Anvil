@@ -1,12 +1,9 @@
 is_package: true
 container:
   type: ColumnPanel
-  properties: {role: null, tooltip: '', border: '', foreground: '', visible: true,
-    wrap_on: tablet, col_spacing: medium, spacing_above: small, col_widths: '{}',
-    spacing_below: small, background: ''}
+  properties: {role: null, tooltip: '', border: '', foreground: '', visible: true, wrap_on: tablet, col_spacing: medium, spacing_above: small, col_widths: '{}', spacing_below: small, background: ''}
 components:
-- properties: {col_widths: '{"RAQZHX":20,"HBXSQZ":20,"FQUOWV":20,"TJPHYC":30,"KWEVVW":30}',
-    background: '#Edf0f4', visible: true}
+- properties: {col_widths: '{"RAQZHX":20,"HBXSQZ":20,"FQUOWV":20,"TJPHYC":30,"KWEVVW":30}', background: '#Edf0f4', visible: true}
   type: ColumnPanel
   layout_properties: {grid_position: 'YXSOFH,DLFMGI', full_width_row: true}
   name: content_panel_copy_copy_3_copy_3_copy
@@ -19,8 +16,7 @@ components:
     type: Spacer
     layout_properties: {grid_position: 'ZQVFUD,LMOIPB'}
     name: spacer_1
-  - properties: {text: Admin Dashboard, bold: true, align: center, font_size: 30,
-      visible: true}
+  - properties: {text: Admin Dashboard, bold: true, align: center, font_size: 30, visible: true}
     type: Label
     layout_properties: {grid_position: 'FIIARN,AYRDTA'}
     name: label_1_copy
@@ -36,8 +32,7 @@ components:
     - properties: {source: _/theme/admin/dashboard/manage-admins.png, height: '100'}
       type: Image
       layout_properties: {grid_position: 'GNRRDW,FEOFAR'}
-      event_bindings: {mouse_enter: image_1_mouse_enter, mouse_down: image_1_mouse_down,
-        mouse_up: image_1_mouse_up}
+      event_bindings: {mouse_enter: image_1_mouse_enter, mouse_down: image_1_mouse_down, mouse_up: image_1_mouse_up}
       name: image_1
     - properties: {text: Manage Admins, bold: true, foreground: black, font_size: 16}
       type: Button
@@ -53,8 +48,7 @@ components:
     layout_properties: {grid_position: 'AEVTNB,RAQZHX QOBYGH,TZELPF'}
     name: content_panel_copy_copy_3_copy_3_copy_copy_copy_2
     components:
-    - properties: {source: _/theme/admin/dashboard/loan-management.png, display_mode: shrink_to_fit,
-        height: '100'}
+    - properties: {source: _/theme/admin/dashboard/loan-management.png, display_mode: shrink_to_fit, height: '100'}
       type: Image
       layout_properties: {grid_position: 'QGZTNW,PVJEPO'}
       event_bindings: {mouse_up: image_4_mouse_up}
@@ -73,8 +67,7 @@ components:
     layout_properties: {grid_position: 'AEVTNB,RAQZHX MVYZJL,OBXBRN'}
     name: content_panel_copy_copy_3_copy_3_copy_copy_copy_4
     components:
-    - properties: {source: _/theme/admin/dashboard/manage-revenue-share.png, display_mode: shrink_to_fit,
-        height: '100'}
+    - properties: {source: _/theme/admin/dashboard/manage-revenue-share.png, display_mode: shrink_to_fit, height: '100'}
       type: Image
       layout_properties: {grid_position: 'VUAHMV,NIXMZO'}
       event_bindings: {mouse_up: image_7_mouse_up}
@@ -93,8 +86,7 @@ components:
     layout_properties: {grid_position: 'AEVTNB,RAQZHX VHYXNN,YDNJVV'}
     name: content_panel_copy_copy_3_copy_3_copy_copy_copy_9
     components:
-    - properties: {source: _/theme/admin/dashboard/risk-management.png, display_mode: shrink_to_fit,
-        height: '100'}
+    - properties: {source: _/theme/admin/dashboard/risk-management.png, display_mode: shrink_to_fit, height: '100'}
       type: Image
       layout_properties: {grid_position: 'YGLFNC,ASARUK'}
       event_bindings: {mouse_up: image_10_mouse_up}
@@ -109,8 +101,7 @@ components:
     layout_properties: {grid_position: 'AEVTNB,HBXSQZ XTQZQD,PBZHHY'}
     name: content_panel_copy_copy_3_copy_3_copy_copy_copy_3
     components:
-    - properties: {source: _/theme/admin/dashboard/manage-borrowers.png, display_mode: shrink_to_fit,
-        height: '100'}
+    - properties: {source: _/theme/admin/dashboard/manage-borrowers.png, display_mode: shrink_to_fit, height: '100'}
       type: Image
       layout_properties: {grid_position: 'YBAGYO,PALCTI'}
       event_bindings: {mouse_up: image_2_mouse_up}
@@ -129,8 +120,7 @@ components:
     layout_properties: {grid_position: 'AEVTNB,HBXSQZ WZCZGO,KSZMOL'}
     name: content_panel_copy_copy_3_copy_3_copy_copy_copy_5
     components:
-    - properties: {source: _/theme/admin/dashboard/product-management.png, display_mode: shrink_to_fit,
-        height: '100'}
+    - properties: {source: _/theme/admin/dashboard/product-management.png, display_mode: shrink_to_fit, height: '100'}
       type: Image
       layout_properties: {grid_position: 'JYCCOD,PNTHNW'}
       event_bindings: {mouse_up: image_5_mouse_up}
@@ -149,14 +139,12 @@ components:
     layout_properties: {grid_position: 'AEVTNB,HBXSQZ GMTZDO,OKCFXZ'}
     name: content_panel_copy_copy_3_copy_3_copy_copy_copy_7
     components:
-    - properties: {source: _/theme/admin/dashboard/manage-risk-pool.png, display_mode: shrink_to_fit,
-        height: '100'}
+    - properties: {source: _/theme/admin/dashboard/manage-risk-pool.png, display_mode: shrink_to_fit, height: '100'}
       type: Image
       layout_properties: {grid_position: 'ICIFRL,RFVFAL'}
       event_bindings: {mouse_up: image_8_mouse_up}
       name: image_8
-    - properties: {text: 'Manage Risk Pool(FLDGB)  ', foreground: black, bold: true,
-        font_size: 16}
+    - properties: {text: 'Manage Risk Pool(FLDGB)  ', foreground: black, bold: true, font_size: 16}
       type: Button
       layout_properties: {grid_position: 'GCPECZ,OWFQHQ'}
       event_bindings: {click: button_19_click}
@@ -170,8 +158,7 @@ components:
     layout_properties: {grid_position: 'AEVTNB,HBXSQZ WRZOQP,ZGEQTI'}
     name: content_panel_copy_copy_3_copy_3_copy_copy_copy_12
     components:
-    - properties: {source: _/theme/admin/dashboard/performance-tracker.png, display_mode: shrink_to_fit,
-        height: '100'}
+    - properties: {source: _/theme/admin/dashboard/performance-tracker.png, display_mode: shrink_to_fit, height: '100'}
       type: Image
       layout_properties: {grid_position: 'RBAQZF,WYVSVW'}
       event_bindings: {mouse_up: image_11_mouse_up}
@@ -186,8 +173,7 @@ components:
     layout_properties: {grid_position: 'AEVTNB,FQUOWV VOXZKL,RFFBFH'}
     name: content_panel_copy_copy_3_copy_3_copy_copy_copy_6
     components:
-    - properties: {display_mode: shrink_to_fit, source: _/theme/admin/dashboard/manage-lenders.png,
-        height: '100'}
+    - properties: {display_mode: shrink_to_fit, source: _/theme/admin/dashboard/manage-lenders.png, height: '100'}
       type: Image
       layout_properties: {grid_position: 'YIGLKI,KSUAYJ'}
       event_bindings: {mouse_up: image_3_mouse_up}
@@ -206,8 +192,7 @@ components:
     layout_properties: {grid_position: 'AEVTNB,FQUOWV MZESRE,GYUATW'}
     name: content_panel_copy_copy_3_copy_3_copy_copy_copy_11
     components:
-    - properties: {source: _/theme/admin/dashboard/manage-setting.png, display_mode: shrink_to_fit,
-        height: '100'}
+    - properties: {source: _/theme/admin/dashboard/manage-setting.png, display_mode: shrink_to_fit, height: '100'}
       type: Image
       layout_properties: {grid_position: 'HFFRPH,KRPCBO'}
       event_bindings: {mouse_leave: image_6_mouse_leave, mouse_up: image_6_mouse_up}
@@ -226,8 +211,7 @@ components:
     layout_properties: {grid_position: 'AEVTNB,FQUOWV DLHYJN,RDDUKF'}
     name: content_panel_copy_copy_3_copy_3_copy_copy_copy_8
     components:
-    - properties: {source: _/theme/admin/dashboard/manage-cms.png, display_mode: shrink_to_fit,
-        height: '100'}
+    - properties: {source: _/theme/admin/dashboard/manage-cms.png, display_mode: shrink_to_fit, height: '100'}
       type: Image
       layout_properties: {grid_position: 'HQRYUT,UOATCO'}
       event_bindings: {mouse_up: image_9_mouse_up}

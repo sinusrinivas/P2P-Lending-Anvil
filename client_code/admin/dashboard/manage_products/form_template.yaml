@@ -8,8 +8,7 @@ components:
   layout_properties: {slot: default}
   name: column_panel_1
   components:
-  - properties: {col_widths: '{"LRMGVL":13,"PPLSYB":13,"FPVXBC":13}', background: '#Edf0f4',
-      role: null}
+  - properties: {col_widths: '{"LRMGVL":13,"PPLSYB":13,"FPVXBC":13}', background: '#Edf0f4', role: null}
     type: ColumnPanel
     layout_properties: {grid_position: 'FUTDPM,RBQDJP', full_width_row: true}
     name: content_panel_copy_copy_3_copy_3_copy_copy_copy_copy
@@ -18,10 +17,7 @@ components:
       properties: {}
       layout_properties: {grid_position: 'KPIBYN,GISMLM', full_width_row: true}
       name: home_button_admin_1
-    - properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
-        visible: true, text: Manage Products, font_size: 30, font: '', spacing_above: small,
-        icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-        underline: false, icon: ''}
+    - properties: {role: null, align: center, tooltip: '', border: '', foreground: '', visible: true, text: Manage Products, font_size: 30, font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false, background: '', bold: true, underline: false, icon: ''}
       type: Label
       layout_properties: {grid_position: 'EQXMGV,YVCYTL'}
       name: label_1_copy
@@ -38,15 +34,17 @@ components:
       layout_properties: {grid_position: 'LKTWOF,LRMGVL TFYOZD,THGIQV'}
       name: content_panel_copy_copy_3_copy_3_copy_copy_copy_2_copy
       components:
-      - properties: {source: _/theme/admin/dashboard/manage_products/add-product-gp-categories.png,
-          display_mode: shrink_to_fit, height: '100'}
+      - properties: {source: _/theme/admin/dashboard/manage_products/add-product-gp-categories.png, display_mode: shrink_to_fit, height: '100'}
         type: Image
         layout_properties: {grid_position: 'QGZTNW,PVJEPO'}
         name: image_4_copy
         event_bindings: {mouse_up: image_4_copy_mouse_up}
-      - properties: {text: 'ADD PRODUCT GROUP  & CATEGORIES
-
-            ', font_size: 16, foreground: black, bold: true}
+      - properties:
+          text: |
+            ADD PRODUCT GROUP  & CATEGORIES
+          font_size: 16
+          foreground: black
+          bold: true
         type: Button
         layout_properties: {grid_position: 'GMECOB,ATAMRQ'}
         event_bindings: {click: button_9_click}
@@ -60,13 +58,18 @@ components:
       layout_properties: {grid_position: 'LKTWOF,FPVXBC NYJWVU,OENCYG'}
       name: content_panel_copy_copy_3_copy_3_copy_copy_copy_2_copy_10
       components:
-      - properties: {source: _/theme/admin/dashboard/manage_products/add-product%20(1).png,
-          display_mode: shrink_to_fit, height: '100'}
+      - properties: {source: _/theme/admin/dashboard/manage_products/add-product%20(1).png, display_mode: shrink_to_fit, height: '100'}
         type: Image
         layout_properties: {grid_position: 'QGZTNW,PVJEPO'}
         name: image_4_copy_10
         event_bindings: {mouse_up: image_4_copy_10_mouse_up}
-      - properties: {text: "ADD\n PRODUCTS\n", font_size: 16, foreground: black, bold: true}
+      - properties:
+          text: |
+            ADD
+             PRODUCTS
+          font_size: 16
+          foreground: black
+          bold: true
         type: Button
         layout_properties: {grid_position: 'TFDFVQ,VTCDTE'}
         event_bindings: {click: button_14_click}
@@ -80,14 +83,16 @@ components:
       layout_properties: {grid_position: 'LKTWOF,FPVXBC PKAOTC,KYTUMK'}
       name: content_panel_copy_copy_3_copy_3_copy_copy_copy_2_copy_5
       components:
-      - properties: {source: _/theme/admin/dashboard/manage_products/manage-product.png,
-          display_mode: shrink_to_fit, height: '100'}
+      - properties: {source: _/theme/admin/dashboard/manage_products/manage-product.png, display_mode: shrink_to_fit, height: '100'}
         type: Image
         layout_properties: {grid_position: 'QGZTNW,PVJEPO'}
         name: image_4_copy_5
         event_bindings: {mouse_up: image_4_copy_5_mouse_up}
-      - properties: {text: "MANAGE \nPRODUCTS\n", font_size: 16, foreground: black,
-          bold: true}
+      - properties:
+          text: "MANAGE \nPRODUCTS\n"
+          font_size: 16
+          foreground: black
+          bold: true
         type: Button
         layout_properties: {grid_position: 'TNRHQQ,HOQMDP'}
         event_bindings: {click: button_11_click}
@@ -101,14 +106,12 @@ components:
       layout_properties: {grid_position: 'LKTWOF,LRMGVL QAOVTV,KFLWXM'}
       name: content_panel_copy_copy_3_copy_3_copy_copy_copy_2_copy_3
       components:
-      - properties: {source: _/theme/admin/dashboard/manage_products/manage-product-categories.png,
-          display_mode: shrink_to_fit, height: '100'}
+      - properties: {source: _/theme/admin/dashboard/manage_products/manage-product-categories.png, display_mode: shrink_to_fit, height: '100'}
         type: Image
         layout_properties: {grid_position: 'QGZTNW,PVJEPO'}
         name: image_4_copy_3
         event_bindings: {mouse_up: image_4_copy_3_mouse_up}
-      - properties: {text: MANAGE PRODUCT CATEGORIES, font_size: 16, foreground: black,
-          bold: true}
+      - properties: {text: MANAGE PRODUCT CATEGORIES, font_size: 16, foreground: black, bold: true}
         type: Button
         layout_properties: {grid_position: 'TSDWZF,VCNTGA'}
         event_bindings: {click: button_10_click}
@@ -122,14 +125,17 @@ components:
       layout_properties: {grid_position: 'LKTWOF,PPLSYB UBZAGQ,LIYDGA'}
       name: content_panel_copy_copy_3_copy_3_copy_copy_copy_2_copy_2
       components:
-      - properties: {source: _/theme/admin/dashboard/manage_products/manage-product%20gp.png,
-          display_mode: shrink_to_fit, height: '100'}
+      - properties: {source: _/theme/admin/dashboard/manage_products/manage-product%20gp.png, display_mode: shrink_to_fit, height: '100'}
         type: Image
         layout_properties: {grid_position: 'QGZTNW,PVJEPO'}
         name: image_4_copy_2
         event_bindings: {mouse_up: image_4_copy_2_mouse_up}
-      - properties: {text: "MANAGE PRODUCT \nGROUP\n", align: center, foreground: black,
-          font_size: 16, bold: true}
+      - properties:
+          text: "MANAGE PRODUCT \nGROUP\n"
+          align: center
+          foreground: black
+          font_size: 16
+          bold: true
         type: Button
         layout_properties: {grid_position: 'RVCVIZ,SJZUBG'}
         event_bindings: {click: button_2_click}

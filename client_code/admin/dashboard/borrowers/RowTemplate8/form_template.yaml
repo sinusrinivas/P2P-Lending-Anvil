@@ -2,9 +2,10 @@ is_package: true
 container: {type: DataRowPanel}
 components:
 - name: label_1
-  properties: {text: 'customer_id
-
-      ', align: center}
+  properties:
+    text: |
+      customer_id
+    align: center
   type: Label
   layout_properties: {column: JKSDUP}
   data_bindings:

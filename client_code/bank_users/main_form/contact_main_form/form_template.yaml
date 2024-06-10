@@ -12,14 +12,16 @@ components:
   layout_properties: {grid_position: 'STGUUJ,TXSUSU', full_width_row: false}
   components:
   - name: label_3
-    properties: {text: 'Have a query? We''re 
-
-        here to help!', font_size: 50, bold: true}
+    properties:
+      text: |-
+        Have a query? We're 
+        here to help!
+      font_size: 50
+      bold: true
     type: Label
     layout_properties: {x: 19.050000000745058, y: 63.05000000074506, width: 491.175}
 - name: label_7
-  properties: {text: Registered Office, font_size: 35, bold: true, underline: false,
-    align: center, font: '', background: ''}
+  properties: {text: Registered Office, font_size: 35, bold: true, underline: false, align: center, font: '', background: ''}
   type: Label
   layout_properties: {grid_position: 'YKFKYL,FRAIVW', full_width_row: false}
 - name: xy_panel_1
@@ -35,14 +37,11 @@ components:
     data_bindings:
     - {property: map_type_control_options, code: 'self.item[''satellite'']', writeback: false}
   - name: label_1
-    properties: {text: '10th floor, RMZ Latitude Commercial Building, Bellary Rd,
-        Vinayakanagar, Byatarayanapura, Bengaluru, Karnataka 560024', italic: false,
-      bold: false, font_size: 20}
+    properties: {text: '10th floor, RMZ Latitude Commercial Building, Bellary Rd, Vinayakanagar, Byatarayanapura, Bengaluru, Karnataka 560024', italic: false, bold: false, font_size: 20}
     type: Label
     layout_properties: {x: 593.6375122070312, y: 134.9124984741211, width: 359.5625}
   - name: label_2
-    properties: {align: left, foreground: '#094586', text: P2P Lending Pvt LTD, font_size: 25,
-      icon_align: left_edge, italic: false, bold: true, underline: false, icon: 'fa:map-marker'}
+    properties: {align: left, foreground: '#094586', text: P2P Lending Pvt LTD, font_size: 25, icon_align: left_edge, italic: false, bold: true, underline: false, icon: 'fa:map-marker'}
     type: Label
     layout_properties: {x: 581.6500061042607, y: 82.67500305175781, width: 312.3870244140625}
     data_bindings: []
@@ -56,14 +55,12 @@ components:
   layout_properties: {grid_position: 'EWOSNE,KUAJZT'}
   components:
   - name: button_1
-    properties: {text: For investmet related queries, role: elevated-button, background: '#05264d',
-      foreground: white, bold: true, align: right, font_size: 20}
+    properties: {text: For investmet related queries, role: elevated-button, background: '#05264d', foreground: white, bold: true, align: right, font_size: 20}
     type: Button
     layout_properties: {grid_position: 'TLNRTU,IELCNQ'}
     event_bindings: {click: button_1_click}
   - name: button_2
-    properties: {text: 'For Loan related queries         ', align: left, bold: true,
-      background: '#05264d', foreground: white, font_size: 20}
+    properties: {text: 'For Loan related queries         ', align: left, bold: true, background: '#05264d', foreground: white, font_size: 20}
     type: Button
     layout_properties: {grid_position: 'TLNRTU,BNAWIH'}
     event_bindings: {click: button_2_click}
@@ -73,13 +70,11 @@ components:
   layout_properties: {grid_position: 'DDYZLI,JXPIHK'}
   components:
   - name: label_5_copy
-    properties: {italic: false, icon: 'fa:phone', text: +91-7894132141, align: center,
-      bold: true, font_size: 20}
+    properties: {italic: false, icon: 'fa:phone', text: +91-7894132141, align: center, bold: true, font_size: 20}
     type: Label
     layout_properties: {}
   - name: label_6
-    properties: {icon: 'fa:envelope', text: '  Ascendinvestment@p2p.coom', align: center,
-      bold: true, font_size: 19}
+    properties: {icon: 'fa:envelope', text: '  Ascendinvestment@p2p.coom', align: center, bold: true, font_size: 19}
     type: Label
     layout_properties: {}
 - name: linear_panel_3
@@ -88,13 +83,11 @@ components:
   layout_properties: {grid_position: 'KCGYVG,RFSLXB'}
   components:
   - name: label_5
-    properties: {italic: false, icon: 'fa:phone', text: +91-7894561235, align: center,
-      bold: true, font_size: 20}
+    properties: {italic: false, icon: 'fa:phone', text: +91-7894561235, align: center, bold: true, font_size: 20}
     type: Label
     layout_properties: {}
   - name: label_6_copy
-    properties: {icon: 'fa:envelope', text: Ascendloan@p2p.coom, align: center, bold: true,
-      font_size: 20}
+    properties: {icon: 'fa:envelope', text: Ascendloan@p2p.coom, align: center, bold: true, font_size: 20}
     type: Label
     layout_properties: {}
 - name: xy_panel_2
@@ -111,8 +104,7 @@ components:
   name: spacer_5
   layout_properties: {grid_position: 'BMHMDX,VXLTQN', full_width_row: true}
 - name: grid_panel_2
-  properties: {spacing_above: small, spacing_below: small, background: '#05264d',
-    foreground: '', border: '', visible: true, role: null, tooltip: ''}
+  properties: {spacing_above: small, spacing_below: small, background: '#05264d', foreground: '', border: '', visible: true, role: null, tooltip: ''}
   type: GridPanel
   layout_properties:
     col_widths: {}
@@ -120,49 +112,28 @@ components:
     full_width_row: true
   components:
   - name: flow_panel_3_copy_2
-    properties: {role: null, vertical_align: full, spacing: medium, align: left, tooltip: '',
-      border: '', foreground: '', visible: true, spacing_above: none, spacing_below: none,
-      background: '#05264d'}
+    properties: {role: null, vertical_align: full, spacing: medium, align: left, tooltip: '', border: '', foreground: '', visible: true, spacing_above: none, spacing_below: none, background: '#05264d'}
     type: FlowPanel
     layout_properties: {row: JUWDTC, width_xs: 4, col_xs: 0, width: 198.328}
     components:
     - type: Label
-      properties: {role: null, align: left, tooltip: '', border: '', foreground: white,
-        visible: true, text: '© 2023 - 2024, Ascend - All Rights Reserved', font_size: null,
-        font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
-        background: '#05264d', bold: true, underline: false, icon: ''}
+      properties: {role: null, align: left, tooltip: '', border: '', foreground: white, visible: true, text: '© 2023 - 2024, Ascend - All Rights Reserved', font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false, background: '#05264d', bold: true, underline: false, icon: ''}
       name: label_4
       layout_properties: {}
   - name: link_5
-    properties: {role: null, url: 'https://in.linkedin.com/?src=go-pa&trk=sem-ga_campid.14650114788_asid.151761418307_crid.657403558718_kw.linkedin%20login_d.c_tid.kwd-12704335873_n.g_mt.e_geo.9179915&mcid=6844056167778418689&cid=&gclid=EAIaIQobChMI1pr54ZHVggMVF6dmAh2IxgGNEAAYASAAEgKqevD_BwE&gclsrc=aw.ds',
-      align: left, tooltip: '', border: '', foreground: white, visible: true, text: '',
-      font_size: 30, wrap_on: mobile, font: '', col_spacing: medium, spacing_above: small,
-      icon_align: left, col_widths: '', spacing_below: small, italic: false, background: '',
-      bold: false, underline: false, icon: 'fa:linkedin-square'}
+    properties: {role: null, url: 'https://in.linkedin.com/?src=go-pa&trk=sem-ga_campid.14650114788_asid.151761418307_crid.657403558718_kw.linkedin%20login_d.c_tid.kwd-12704335873_n.g_mt.e_geo.9179915&mcid=6844056167778418689&cid=&gclid=EAIaIQobChMI1pr54ZHVggMVF6dmAh2IxgGNEAAYASAAEgKqevD_BwE&gclsrc=aw.ds', align: left, tooltip: '', border: '', foreground: white, visible: true, text: '', font_size: 30, wrap_on: mobile, font: '', col_spacing: medium, spacing_above: small, icon_align: left, col_widths: '', spacing_below: small, italic: false, background: '', bold: false, underline: false, icon: 'fa:linkedin-square'}
     type: Link
     layout_properties: {row: JUWDTC, width_xs: 1, col_xs: 8, width: 93.6875}
   - name: link_2
-    properties: {role: null, url: 'https://www.facebook.com/', align: left, tooltip: '',
-      border: '', foreground: white, visible: true, text: '', font_size: 30, wrap_on: mobile,
-      font: '', col_spacing: medium, spacing_above: small, icon_align: left, col_widths: '',
-      spacing_below: small, italic: false, background: '', bold: false, underline: false,
-      icon: 'fa:facebook-square'}
+    properties: {role: null, url: 'https://www.facebook.com/', align: left, tooltip: '', border: '', foreground: white, visible: true, text: '', font_size: 30, wrap_on: mobile, font: '', col_spacing: medium, spacing_above: small, icon_align: left, col_widths: '', spacing_below: small, italic: false, background: '', bold: false, underline: false, icon: 'fa:facebook-square'}
     type: Link
     layout_properties: {row: JUWDTC, width_xs: 1, col_xs: 9, width: 93.6875}
   - name: link_4
-    properties: {role: null, url: 'https://www.instagram.com/accounts/login/', align: left,
-      tooltip: '', border: '', foreground: white, visible: true, text: '', font_size: 30,
-      wrap_on: mobile, font: '', col_spacing: medium, spacing_above: small, icon_align: left,
-      col_widths: '', spacing_below: small, italic: false, background: '', bold: false,
-      underline: false, icon: 'fa:instagram'}
+    properties: {role: null, url: 'https://www.instagram.com/accounts/login/', align: left, tooltip: '', border: '', foreground: white, visible: true, text: '', font_size: 30, wrap_on: mobile, font: '', col_spacing: medium, spacing_above: small, icon_align: left, col_widths: '', spacing_below: small, italic: false, background: '', bold: false, underline: false, icon: 'fa:instagram'}
     type: Link
     layout_properties: {row: JUWDTC, width_xs: 1, col_xs: 10, width: 93.6875}
   - name: link_3
-    properties: {role: null, url: 'https://twitter.com/i/flow/login?input_flow_data=%7B%22requested_variant%22%3A%22eyJsYW5nIjoiZW4ifQ%3D%3D%22%7D',
-      align: left, tooltip: '', border: '', foreground: white, visible: true, text: '',
-      font_size: 30, wrap_on: mobile, font: '', col_spacing: medium, spacing_above: small,
-      icon_align: left, col_widths: '', spacing_below: small, italic: false, background: th,
-      bold: false, underline: false, icon: 'fa:twitter'}
+    properties: {role: null, url: 'https://twitter.com/i/flow/login?input_flow_data=%7B%22requested_variant%22%3A%22eyJsYW5nIjoiZW4ifQ%3D%3D%22%7D', align: left, tooltip: '', border: '', foreground: white, visible: true, text: '', font_size: 30, wrap_on: mobile, font: '', col_spacing: medium, spacing_above: small, icon_align: left, col_widths: '', spacing_below: small, italic: false, background: th, bold: false, underline: false, icon: 'fa:twitter'}
     type: Link
     components: []
     layout_properties: {row: JUWDTC, width_xs: 1, col_xs: 11, width: 93.6875}

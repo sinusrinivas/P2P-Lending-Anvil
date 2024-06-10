@@ -8,6 +8,10 @@ import anvil.tables.query as q
 from anvil.tables import app_tables
 import anvil.server
 from anvil import *
+import bcrypt
+
+
+
 
 
 # Define server function to navigate to the Invest Now form
@@ -109,6 +113,7 @@ def generate_admin_id():
     else:
         return 100000
 
+
 def find_highest_customer_id():
     table_data = app_tables.fin_user_profile.search()
     highest_id = 99999
@@ -120,7 +125,7 @@ def find_highest_customer_id():
 
 
 
-import bcrypt
+
 
 @anvil.server.callable
 def hash_password(password):
@@ -199,3 +204,67 @@ def search_lender(query):
       or query in str(x['email_user'])
     ]
   return result
+
+
+import anvil.server
+import datetime
+
+# @anvil.server.background_task
+# def update_ages():
+#     # Get all users
+#     users = tables.app_tables.fin_user_profile.search()
+
+#     # Update each user's age
+#     for user in users:
+#         dob = datetime.datetime.strptime(user['date_of_birth'], '%Y-%m-%d')
+#         today = datetime.datetime.today()
+#         age = today.year - dob.year - ((today.month, today.day) < (dob.month, dob.day))
+
+#         # Update the user's age
+#         user['user_age'] = age
+
+#     # Save the changes
+#     tables.app_tables.fin_user_profile.commit()
+
+from anvil import server, tables
+
+@anvil.server.callable
+def update_user_age(customer_id, new_date_of_birth):
+    # Retrieve the user's profile from the database
+    user_profile = tables.fin_user_profile.get(customer_id=customer_id)
+
+    if user_profile:
+        # Calculate the new age based on the new date of birth
+        new_age = calculate_age(new_date_of_birth)
+
+        # Update the user's profile with the new age
+        user_profile['user_age'] = new_age
+        user_profile['date_of_birth'] = new_date_of_birth
+        user_profile.save()
+
+        return True  # Return True if the update was successful
+    else:
+        return False  # Return False if the user profile was not found
+
+def calculate_age(date_of_birth):
+    # Calculate the age based on the date of birth
+    # You can implement your own logic here
+    # This is just a basic example
+    # Make sure to handle edge cases and validate input appropriately
+    # Here's a simple calculation:
+    today = datetime.date.today()
+    dob = datetime.datetime.strptime(date_of_birth, "%Y-%m-%d").date()
+    age = today.year - dob.year - ((today.month, today.day) < (dob.month, dob.day))
+    return age
+
+# Server module: manage_credit_limit.py
+import anvil.server
+from anvil.tables import app_tables
+
+@anvil.server.callable
+def save_credit_limit(new_value):
+    row = app_tables.fin_manage_credit_limit.get()  # Get the single row in the table
+    if row:
+        row['credit_limit'] = new_value  # Update the existing row
+    else:
+        app_tables.fin_manage_credit_limit.add_row(credit_limit=new_value)  # Add a new row if none exists

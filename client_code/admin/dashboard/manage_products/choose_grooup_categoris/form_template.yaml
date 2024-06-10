@@ -3,8 +3,7 @@ container:
   properties: {col_widths: '{}'}
 components:
 - name: content_panel_copy_copy_3_copy_3_copy_copy_copy_copy
-  properties: {col_widths: '{"LRMGVL":15,"PPLSYB":15,"YGEBXT":15,"TPDZDN":15}', background: '#Edf0f4',
-    role: null}
+  properties: {col_widths: '{"LRMGVL":15,"PPLSYB":15,"YGEBXT":15,"TPDZDN":15}', background: '#Edf0f4', role: null}
   type: ColumnPanel
   layout_properties: {grid_position: 'HWJMVO,BVDAFM', full_width_row: true}
   components:
@@ -26,14 +25,18 @@ components:
     layout_properties: {grid_position: 'LKTWOF,LRMGVL'}
     components:
     - name: image_4_copy
-      properties: {source: _/theme/admin/dashboard/manage_products/add-product%20(1).png,
-        display_mode: shrink_to_fit, height: '120', visible: true}
+      properties: {source: _/theme/admin/dashboard/manage_products/add-product%20(1).png, display_mode: shrink_to_fit, height: '120', visible: true}
       type: Image
       layout_properties: {grid_position: 'QGZTNW,PVJEPO'}
       event_bindings: {mouse_up: image_4_copy_mouse_up}
     - name: add_people
-      properties: {text: "Add Product \nGroup\n", font_size: 16, foreground: black,
-        bold: true, visible: true, font: ''}
+      properties:
+        text: "Add Product \nGroup\n"
+        font_size: 16
+        foreground: black
+        bold: true
+        visible: true
+        font: ''
       type: Button
       layout_properties: {grid_position: 'GMECOB,ATAMRQ'}
       event_bindings: {click: button_9_click}
@@ -43,15 +46,18 @@ components:
     layout_properties: {grid_position: 'LKTWOF,PPLSYB'}
     components:
     - name: image_4_copy_10
-      properties: {source: _/theme/admin/dashboard/interace.png, display_mode: shrink_to_fit,
-        height: '120', visible: true}
+      properties: {source: _/theme/admin/dashboard/interace.png, display_mode: shrink_to_fit, height: '120', visible: true}
       type: Image
       layout_properties: {grid_position: 'QGZTNW,PVJEPO'}
       event_bindings: {mouse_up: image_4_copy_10_mouse_up}
     - name: button_1
-      properties: {text: 'Add Product Categories
-
-          ', font_size: 16, foreground: black, bold: true, visible: true}
+      properties:
+        text: |
+          Add Product Categories
+        font_size: 16
+        foreground: black
+        bold: true
+        visible: true
       type: Button
       layout_properties: {grid_position: 'TFDFVQ,VTCDTE'}
       event_bindings: {click: button_14_click}
@@ -68,10 +74,7 @@ components:
     type: Spacer
     layout_properties: {grid_position: 'GMXCYG,JYPKRB'}
   - type: Button
-    properties: {role: elevated-button, align: center, tooltip: '', border: '', enabled: true,
-      foreground: 'theme:On Primary', visible: true, text: Back, font_size: null,
-      font: '16', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
-      background: '#05264d', bold: true, underline: false, icon: 'fa:backward'}
+    properties: {role: elevated-button, align: center, tooltip: '', border: '', enabled: true, foreground: 'theme:On Primary', visible: true, text: Back, font_size: null, font: '16', spacing_above: small, icon_align: left, spacing_below: small, italic: false, background: '#05264d', bold: true, underline: false, icon: 'fa:backward'}
     name: button_1_copy_3
     layout_properties: {grid_position: 'REMHWJ,IPFDWT'}
     event_bindings: {click: button_1_copy_3_click}

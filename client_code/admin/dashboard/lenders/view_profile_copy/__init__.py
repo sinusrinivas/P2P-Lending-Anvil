@@ -22,28 +22,29 @@ class view_profile_copy(view_profile_copyTemplate):
     self.gender_list = []
     self.age_list = []
     self.dob_list = []
+    self.email_user = []
     self.aadhar_list = []
     self.pan_list = []
     self.city_list = []
-    self.email_user_list = []
     self.last_confirm_list = []
     self.mobile_check_list = []
-    self.mother_tongue_list = []
     self.mother_status_list = []
     self.date_marrige_list = []
     self.space_name_list = []
     self.about_list = []
     self.alets_list = []
     self.terms_list = []
-    self.mail_id_list = []
     self.qualification_list = []
+    self.address = []
     self.address_type_list = []
+    self.profession_type_list = []
     self.street_list = []
     self.build_name_list = []
     self.house_no_list = []
     self.landmark_list = []
     self.pincode_list = []
     self.state_list = []
+    self.country = []
     self.spouse_number_list = []
     self.company_name_list = []
     self.company_adress_list = []
@@ -92,21 +93,21 @@ class view_profile_copy(view_profile_copyTemplate):
       self.gender_list.append(i['gender'])
       self.age_list.append(i['user_age'])
       self.dob_list.append(i['date_of_birth'])
+      self.email_user.append(i['email_user'])
       self.aadhar_list.append(i['aadhaar_no'])
       self.pan_list.append(i['pan_number'])
       self.city_list.append(i['city'])
-      self.email_user_list.append(i['email_user'])
       self.last_confirm_list.append(i['last_confirm'])
       self.mobile_check_list.append(i['mobile_check'])
       self.mother_status_list.append(i['marital_status'])
-      self.mother_tongue_list.append(i['mouther_tounge'])
       # self.date_marrige_list.append(i['Date_mariage'])
       self.space_name_list.append(i['spouse_name'])
       self.about_list.append(i['about'])
       self.alets_list.append(i['alerts'])
       self.terms_list.append(i['terms'])
-      self.mail_id_list.append(i['mail_id'])
       self.qualification_list.append(i['qualification'])
+      self.profession_type_list.append(i['profession'])
+      self.address.append(i['street_adress_1'])
       self.address_type_list.append(i['address_type'])
       self.street_list.append(i['street'])
       self.build_name_list.append(i['building_name'])
@@ -114,6 +115,7 @@ class view_profile_copy(view_profile_copyTemplate):
       self.landmark_list.append(i['house_landmark'])
       self.pincode_list.append(i['pincode'])
       self.state_list.append(i['state'])
+      self.country.append(i['country'])
       self.spouse_number_list.append(i['spouse_mobile'])
       self.company_name_list.append(i['spouse_company_name'])
       self.company_adress_list.append(i['spouse_company_address'])
@@ -134,9 +136,9 @@ class view_profile_copy(view_profile_copyTemplate):
       self.account_type.append(i['account_type'])
       self.account_number.append(i['account_number'])
       self.account_bank_branch.append(i['account_bank_branch'])
-      # self.ifsc_code.append(i['ifsc_code'])
+      # self.ifsc_code.append(i['bank_id'])
       self.salary_type.append(i['salary_type'])
-      # self.select_bank.append(i['select_bank'])
+      # self.select_bank.append(i['bank_name'])
       # self.net_bank.append(i['net_bank'])
       self.father_name.append(i['father_name'])
       self.father_age.append(i['father_age'])
@@ -145,7 +147,7 @@ class view_profile_copy(view_profile_copyTemplate):
       self.college_name.append(i['college_name'])
       self.college_id.append(i['college_id'])
       self.college_address.append(i['college_address'])
-      # self.running_loan.append('running_Home_Loan')
+      # self.running_loan.append('home_loan')
       self.profile.append(i['user_photo'])
       self.aadhaar_photo.append(i['aadhaar_photo'])
       self.pan_photo.append(i['pan_photo'])
@@ -170,16 +172,17 @@ class view_profile_copy(view_profile_copyTemplate):
         self.set_label_visibility(self.label_45,self.label_11, self.aadhar_list[b])
         self.set_label_visibility(self.label_46,self.label_12, self.pan_list[b])
         self.set_label_visibility(self.label_47,self.label_13, self.city_list[b])
-        self.set_label_visibility(self.label_48,self.label_14, self.email_user_list[b])
+        self.set_label_visibility(self.label_130,self.label_129, self.email_user[b])
         self.set_label_visibility(self.label_49, self.label_15,bool(self.last_confirm_list[b]))
         self.set_label_visibility(self.label_50,self.label_16, self.mobile_check_list[b])
-        self.set_label_visibility(self.label_51,self.label_17, self.mother_tongue_list[b])
-        self.set_label_visibility(self.label_52,self.label_18, self.mother_status_list[b])
+        self.set_label_visibility(self.label_53,self.label_18, self.mother_status_list[b])
         self.set_label_visibility(self.label_54,self.label_20, self.space_name_list[b])
         self.set_label_visibility(self.label_61,self.label_27, self.about_list[b])
         self.set_label_visibility(self.label_63,self.label_29, bool(self.alets_list[b]))
         self.set_label_visibility(self.label_72,self.label_38, bool(self.terms_list[b]))
         self.set_label_visibility(self.label_69,self.label_35, self.qualification_list[b])
+        self.set_label_visibility(self.label_136,self.label_135,self.profession_type_list[b])
+        self.set_label_visibility(self.label_132,self.label_131, self.address[b])
         self.set_label_visibility(self.label_62,self.label_28, self.address_type_list[b])
         self.set_label_visibility(self.label_71,self.label_37, self.street_list[b])
         self.set_label_visibility(self.label_64,self.label_30, self.build_name_list[b])
@@ -187,6 +190,7 @@ class view_profile_copy(view_profile_copyTemplate):
         self.set_label_visibility(self.label_65,self.label_31, self.landmark_list[b])
         self.set_label_visibility(self.label_68,self.label_34, self.pincode_list[b])
         self.set_label_visibility(self.label_70,self.label_36, self.state_list[b])
+        self.set_label_visibility(self.label_134,self.label_133,self.country[b])
         self.set_label_visibility(self.label_55,self.label_21, self.spouse_number_list[b])
         self.set_label_visibility(self.label_56,self.label_22, self.company_name_list[b])
         self.set_label_visibility(self.label_57, self.label_23,self.company_adress_list[b])
@@ -194,6 +198,7 @@ class view_profile_copy(view_profile_copyTemplate):
         self.set_label_visibility(self.label_59,self.label_25, self.user_type_list[b])
         self.set_label_visibility(self.label_60,self.label_26, bool(self.approve_list[b]))
         self.set_label_visibility(self.label_74,self.label_73, self.another_email[b])
+        self.set_label_visibility(self.label_57,self.label_24, self.proffic_list[b])
         self.set_label_visibility(self.label_76,self.label_75, self.company_name[b])
         self.set_label_visibility(self.label_77,self.label_42, self.organization_type[b])
         self.set_label_visibility(self.label_79,self.label_78, self.employment_type[b])
@@ -244,7 +249,6 @@ class view_profile_copy(view_profile_copyTemplate):
         # self.label_48.text = self.email_user_list[b]
         # self.label_49.text = bool(self.last_confirm_list[b])
         # self.label_50.text = self.mobile_check_list[b]
-        # self.label_51.text = self.mother_tongue_list[b]
         # self.label_52.text = self.mother_status_list[b]
         # # self.label_53.text = self.date_marrige_list[b]
         # self.label_54.text = self.space_name_list[b]
