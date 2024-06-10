@@ -13,7 +13,7 @@ import anvil.pdf
 def create_pdf(name, image_source,selected_row):
     
     # Your PDF creation logic here
-    pdf = anvil.pdf.PDFRenderer(page_size='A4').render_form("lendor.dashboard.lender_portfolio",selected_row = selected_row)  
+    pdf = anvil.pdf.PDFRenderer(page_size='A4', orientation='landscape').render_form("lendor.dashboard.lender_portfolio",selected_row = selected_row)  
     return pdf
     
 
@@ -21,5 +21,6 @@ def create_pdf(name, image_source,selected_row):
 def create_pdf1(name, image_source, selected_row):
     
     # Your PDF creation logic here
-    pdf = anvil.pdf.PDFRenderer(page_size='A4').render_form("borrower.dashboard.borrower_portfolio",selected_row = selected_row)  
+    pdf = anvil.pdf.PDFRenderer(page_size='A4', orientation='landscape').render_form("borrower.dashboard.borrower_portfolio", selected_row=selected_row)  
     return pdf
+

@@ -48,7 +48,20 @@ class lender_portfolio(lender_portfolioTemplate):
     self.label_9.text = lendor['return_on_investment']
     self.label_5_copy.text = lendor['present_commitments']
 
-    loan = app_tables.fin_loan_details.search(lender_customer_id=self.id)
+    loans = app_tables.fin_loan_details.search(lender_customer_id=self.id)
+
+    # Initialize disbursed loans count to zero
+    disbursed_loans_count = 0
+    
+    if loans:
+        # Count the number of disbursed loans
+        for loan in loans:
+            if loan['loan_updated_status'] == 'disbursed loan':
+                disbursed_loans_count += 1
+    
+    # Display the count in the desired label (assuming you have a label for this)
+    self.label_3_copy.text = str(disbursed_loans_count)
+
     
 
 
