@@ -129,6 +129,10 @@ components:
     properties: {height: 14}
     type: Spacer
     layout_properties: {grid_position: 'YYQLQH,QGROZW'}
+  - name: label_12
+    properties: {}
+    type: Label
+    layout_properties: {grid_position: 'BZOCCY,YBIQPD'}
   - name: button_1
     properties: {text: Edit, background: '#05264d', bold: true, align: right, font_size: 16,
       foreground: 'theme:On Primary'}

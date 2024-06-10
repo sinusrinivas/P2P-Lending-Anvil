@@ -598,7 +598,7 @@ components:
     type: Label
     layout_properties: {grid_position: 'DKVFGO,KYKCVY JAMMJL,HNXMUD'}
   - name: label_134
-    properties: {visible: false}
+    properties: {visible: true}
     type: Label
     layout_properties: {grid_position: 'DKVFGO,KYKCVY TABCQP,KFMHBZ'}
   - name: label_51
