@@ -46,6 +46,7 @@ class lender_portfolio(lender_portfolioTemplate):
     self.label_3.text = lendor['membership']
     self.label_3_copy.text = lendor['lender_total_commitments']
     self.label_9.text = lendor['return_on_investment']
+    self.label_5_copy.text = lendor['present_commitments']
 
 
   def create_user_bar_chart(self):
@@ -117,5 +118,5 @@ class lender_portfolio(lender_portfolioTemplate):
 
   def button_1_click(self, **event_args):
     """This method is called when the button is clicked"""
-    pdf = anvil.server.call('create_pdf',"My Portfolio","self.image_2.source",self.selected_row)
+    pdf = anvil.server.call('create_pdf',"My Portfolio","self.image_1.source",self.selected_row)
     anvil.media.download(pdf)

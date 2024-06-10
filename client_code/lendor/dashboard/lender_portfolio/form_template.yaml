@@ -168,7 +168,7 @@ components:
   layout_properties: {grid_position: 'QHYMRE,HUOAPR'}
   components:
   - name: label_4_copy
-    properties: {text: 'Interest Earned
+    properties: {text: 'Last Commitment
 
         ', bold: true}
     type: Label
