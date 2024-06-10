@@ -78,8 +78,12 @@ class risk_pool(risk_poolTemplate):
       if loan_details:
         combined_data = {
           'emi_number': row['emi_number'],
+          'days_left': row['days_left'],
+          'loan_id': row['loan_id'],
+          'lender_email': row['lender_email'],
           'borrower_customer_id': row['borrower_customer_id'],
           'product_name': loan_details['product_name'],
+          'borrower_email': row['borrower_email'],
           'borrower_full_name': loan_details['borrower_full_name']
         }
         result.append(combined_data)
@@ -108,8 +112,12 @@ class risk_pool(risk_poolTemplate):
       if loan_details:
         combined_data = {
           'emi_number': row['emi_number'],
+          'days_left': row['days_left'],
+          'loan_id': row['loan_id'],
+          'lender_email': row['lender_email'],
           'borrower_customer_id': row['borrower_customer_id'],
           'product_name': loan_details['product_name'],
+          'borrower_email': row['borrower_email'],
           'borrower_full_name': loan_details['borrower_full_name']
         }
         result.append(combined_data)
@@ -138,9 +146,13 @@ class risk_pool(risk_poolTemplate):
       if loan_details:
         combined_data = {
           'emi_number': row['emi_number'],
+          'days_left': row['days_left'],
+          'loan_id': row['loan_id'],
+          'lender_email': row['lender_email'],
           'borrower_customer_id': row['borrower_customer_id'],
           'product_name': loan_details['product_name'],
-          'borrower_full_name': loan_details['borrower_full_name']
+          'borrower_full_name': loan_details['borrower_full_name'],
+          'borrower_email': row['borrower_email'],
         }
         result.append(combined_data)
     self.all_items = result
@@ -166,7 +178,8 @@ class risk_pool(risk_poolTemplate):
         if (search_text in str(item['emi_number']).lower() or
             search_text in str(item['borrower_customer_id']).lower() or
             search_text in item['product_name'].lower() or
-            search_text in item['borrower_full_name'].lower())
+            search_text in item['borrower_full_name'].lower()or
+            search_text in item['borrower_email'].lower())
       ]
       self.suggestions_panel.items = filtered_items
       self.data_grid_2.visible = True
@@ -175,3 +188,7 @@ class risk_pool(risk_poolTemplate):
       self.suggestions_panel.items = []
       self.data_grid_2.visible = False
       self.data_grid_1.visible = True
+
+  def button_1_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    open_form('admin.dashboard')
