@@ -101,7 +101,17 @@ class lender_registration_form_2(lender_registration_form_2Template):
             # If the row doesn't exist, add a new row
             app_tables.fin_lender.add_row(customer_id=user_id, lending_type=lending_type, investment=int(investment),
                                           lending_period=lending_period, membership=membership_type)
-    
+
+        user_profile = app_tables.fin_user_profile.get(customer_id=user_id)   
+        if user_profile:
+          email_user = user_profile['email_user']
+          full_name = user_profile['full_name']
+          lender_data = app_tables.fin_lender.get(customer_id=user_id)
+          if lender_data:
+            lender_data['email_id'] = email_user
+            lender_data['user_name'] = full_name
+            lender_data.update()
+            
         if lending_type == 'Individual':
             open_form('lendor.lendor_registration_forms.lender_registration_form_2.lender_registration_individual_form_1',
                       user_id=user_id)
