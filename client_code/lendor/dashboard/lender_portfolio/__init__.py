@@ -48,6 +48,9 @@ class lender_portfolio(lender_portfolioTemplate):
     self.label_9.text = lendor['return_on_investment']
     self.label_5_copy.text = lendor['present_commitments']
 
+    loan = app_tables.fin_loan_details.search(lender_customer_id=self.id)
+    
+
 
   def create_user_bar_chart(self):
     # Fetch investment data for the specific user
