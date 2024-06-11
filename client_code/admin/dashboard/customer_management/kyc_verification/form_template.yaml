@@ -1,7 +1,18 @@
-container: {type: ColumnPanel}
+container:
+  type: ColumnPanel
+  properties: {col_widths: '{"KCXDPM":50,"UCCXPZ":10}', foreground: 'theme:On Primary'}
 components:
 - name: home_button_admin_1
   properties: {}
   type: form:admin.dashboard.home_button_admin
   layout_properties: {grid_position: 'PJSZRV,VGFAFN', full_width_row: true}
+- name: label_1
+  properties: {}
+  type: Label
+  layout_properties: {grid_position: 'HHCQMG,KCXDPM'}
+- name: button_1
+  properties: {text: back, background: '#070a5f', foreground: 'theme:On Primary', bold: true}
+  type: Button
+  layout_properties: {grid_position: 'HHCQMG,UCCXPZ'}
+  event_bindings: {click: button_1_click}
 is_package: true
