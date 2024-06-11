@@ -87,6 +87,7 @@ def add_borrower_step5(account_name, account_type,account_number,bank_name, user
 
 @anvil.server.callable
 def add_borrower_step6(bank_id, bank_branch, user_id):
+    print('inside add_borrower_step6')
     row = app_tables.fin_user_profile.search(customer_id=user_id)
     _user_type = "borrower"
     if row:
@@ -108,14 +109,24 @@ def add_borrower_step6(bank_id, bank_branch, user_id):
         #     wallet.find_user_update_type(user_id, row[0]['full_name'],_user_type)      
 
         # Search for an existing row with the same email_id in fin_borrower table
+        manage_credit_limit_row = app_tables.fin_manage_credit_limit.get()
+        print("manage credit limit")
+        print(app_tables.fin_manage_credit_limit.get())
+        
+        
+        # if manage_credit_limit_row:
+        
+        credit_limit_value = manage_credit_limit_row['credit_limit']
         existing_borrower_row = app_tables.fin_borrower.get(email_id=row[0]['email_user'])
+        print("existing borrower row")
+        print(existing_borrower_row)
         
         if existing_borrower_row:
             # If a row exists, update the existing row
             existing_borrower_row['user_name'] = row[0]['full_name']
             existing_borrower_row['bank_acc_details'] = row[0]['account_number']
             existing_borrower_row['ascend_score'] = row[0]['ascend_value']
-            existing_borrower_row['credit_limit'] = 1000000
+            existing_borrower_row['credit_limit'] =  credit_limit_value
 
             if row[0]['last_confirm']:
                 existing_borrower_row['borrower_since'] = datetime.now().date()
@@ -129,7 +140,7 @@ def add_borrower_step6(bank_id, bank_branch, user_id):
                 user_name=row[0]['full_name'],
                 bank_acc_details=row[0]['account_number'],
                 ascend_score=row[0]['ascend_value'],
-                credit_limit=1000000
+                credit_limit= credit_limit_value
             )
 
             if row[0]['last_confirm']:
