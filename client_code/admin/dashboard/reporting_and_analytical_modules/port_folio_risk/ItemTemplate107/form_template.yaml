@@ -1,0 +1,33 @@
+is_package: true
+container: {type: ColumnPanel}
+components:
+- name: label_1
+  properties: {align: center}
+  type: Label
+  layout_properties: {grid_position: 'ESDQJC,KNVDEV'}
+  data_bindings:
+  - {property: text, code: 'self.item[''borrower_customer_id'']', writeback: false}
+- name: label_2
+  properties: {align: center}
+  type: Label
+  layout_properties: {grid_position: 'ESDQJC,MXGAOZ'}
+  data_bindings:
+  - {property: text, code: 'self.item[''borrower_full_name'']', writeback: false}
+- name: label_3
+  properties: {align: center}
+  type: Label
+  layout_properties: {grid_position: 'ESDQJC,GTSDZS'}
+  data_bindings:
+  - {property: text, code: 'self.item[''product_name'']', writeback: false}
+- name: label_4
+  properties: {align: center}
+  type: Label
+  layout_properties: {grid_position: 'ESDQJC,XTNKIM'}
+  data_bindings:
+  - {property: text, code: 'self.item[''loan_amount'']', writeback: false}
+- name: link_1
+  properties: {align: center, text: View Flow, icon: ''}
+  type: Link
+  layout_properties: {grid_position: 'ESDQJC,DPZBOG'}
+  data_bindings: []
+  event_bindings: {click: link_1_click}
