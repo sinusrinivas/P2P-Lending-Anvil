@@ -98,10 +98,10 @@ components:
       - name: data_grid_1
         properties:
           columns:
-          - {id: JKSDUP, title: 'Borrwer Id ', data_key: column_1}
-          - {id: VJQQOR, title: Borrower Name, data_key: column_2, width: 162.9998779296875, expand: false}
-          - {id: OJLQEN, title: Product Name, data_key: column_3, width: 249.857177734375, expand: false}
-          - {id: RKPOSI, data_key: column_1, title: EMI Number, width: 222.2857666015625, expand: false}
+          - {id: JKSDUP, title: 'Borrwer Id ', data_key: column_1, width: 154.9998779296875, expand: false}
+          - {id: VJQQOR, title: Borrower Name, data_key: column_2, width: 241.5714111328125, expand: false}
+          - {id: OJLQEN, title: Product Name, data_key: column_3, width: 220.5714111328125, expand: false}
+          - {id: RKPOSI, data_key: column_1, title: EMI Number, width: 175.4283447265625, expand: false}
           - {id: CHTHOV, data_key: column_1, title: ''}
           role: tonal-data-grid
           visible: false
