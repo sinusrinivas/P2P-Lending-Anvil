@@ -1,4 +1,4 @@
-from ._anvil_designer import ItemTemplate105Template
+from ._anvil_designer import ItemTemplate106Template
 from anvil import *
 import anvil.server
 import anvil.google.auth, anvil.google.drive
@@ -9,7 +9,7 @@ import anvil.tables.query as q
 from anvil.tables import app_tables
 
 
-class ItemTemplate105(ItemTemplate105Template):
+class ItemTemplate106(ItemTemplate106Template):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
@@ -19,5 +19,5 @@ class ItemTemplate105(ItemTemplate105Template):
   def link_1_click(self, **event_args):
     """This method is called when the link is clicked"""
     selcted_row=self.item
-    open_form('admin.dashboard.risk_pool.risk_view_details',selected_row=selcted_row)
+    open_form('admin.dashboard.reporting_and_analytical_modules.risk_pool.risk_view_details',selected_row=selcted_row)
     
