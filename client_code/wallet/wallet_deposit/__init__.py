@@ -246,7 +246,7 @@ class wallet_deposit(wallet_depositTemplate):
           wallet_add.update()
           transfer_money(lender_id = self.lender_customer_id, borrower_id=entered_borrower_customer_id, transfer_amount=loan_amount)
           # You may want to update the loan_updated_status here if needed
-          updated_loan_status = 'disbursed loan'
+          updated_loan_status = 'disbursed'
           loan_row['loan_updated_status'] = updated_loan_status
           # Save the changes to the loan_row
           loan_row.update()
