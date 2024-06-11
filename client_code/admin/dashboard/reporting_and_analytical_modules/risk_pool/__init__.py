@@ -191,4 +191,4 @@ class risk_pool(risk_poolTemplate):
 
   def button_1_click(self, **event_args):
     """This method is called when the button is clicked"""
-    open_form('admin.dashboard')
+    open_form('admin.dashboard.reporting_and_analytical_modules')
