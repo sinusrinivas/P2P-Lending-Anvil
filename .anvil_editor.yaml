@@ -379,7 +379,6 @@ unique_ids:
     admin.user_issue.user_buganalysis: '170118773598944323523917.26369'
     admin.dashboard.manage_ascend.add_subcategory.ItemTemplate74: '1709734065080628871844250.8976'
     borrower.dashboard.view_loans.ItemTemplate45: 4JRZRQ7FWWIMPHC7XGTMTEDIFOQNNZ3G
-    admin.dashboard.risk_pool: 3HYB3W7H7HHZ4YF7IEID7P74N4QFCD3K
     borrower.dashboard.borrower_portfolio_first_page: '1717671611958813432017046.4667'
     admin.dashboard.manage_ascend.add_subcategory.ItemTemplate90: '1710783183831809212349578.099'
     admin.dashboard.performance_tracker: '1701242878909114559440962.97266'
@@ -586,6 +585,7 @@ unique_ids:
     bank_users/main_form/manager.png: '1711971264740354330612801.1536'
     bank_users/main_form/icons8-coins-100.png: '1712920415883219966768585.37677'
     borrower/dashboard/application-tracking.png: '1716812389607484015255648.8304'
+    Risk.png: '1718100680312480037790537.1005'
     bank_users/main_form/stats-rupee_bean.58bc41f.png: '1711696413415791942659053.2217'
     lender/dashboard/interest earned.svg: '1717072328168549868925023.0706'
     admin/dashboard/manage_ascend_score/age-of-business.png: S7OD4F4EKABOICCT5FYQDQWIRXSLDHB7
@@ -750,6 +750,7 @@ unique_ids:
     admin/dashboard/manage_cms/spouse-profession.png: '1716463213549831446365083.7039'
     bank_users/personal_loan/online-prsnl-process-icon2.png: '1712749481995208167326546.47073'
     bank_users/main_form/business_loan/interest-rate.png: '1712294718365678752445033.3591'
+    Portfolio Analysis.png: '1718100706372784062475536.4271'
     bank_users/personal_loan/education_loan/.gitkeep: '1715929863534472661618535.68445'
     bank_users/personal_loan/education_loan/EL-eligibility1.png: '1716981865308595757354628.2024'
     borrower/dashboard/borrower_mobile.png: '1716289925232798289409000.5735'
@@ -764,6 +765,7 @@ unique_ids:
     admin/dashboard/manage-cms.png: ZIZSOUIUUGQN5NSCNILBFZAGEGAZ536L
     toggle-switch.css: '1701328631898476412516700.48914'
     bank_users/main_form/login_page/.gitkeep: '1715944545729484465890823.9683'
+    Risk (1).png: '1718100744758408864829765.13916'
     bank_users/personal_loan/education_loan/el_benifits2.png: '1714131907915929111940089.0043'
     money.png: '1712745856223563071869624.0046'
     bank_users/main_form/business_loan/online-pocess.png: '1712312030981544548456713.4125'
@@ -792,6 +794,7 @@ unique_ids:
     borrower/.gitkeep: '1716279022834697001340956.5668'
     admin/dashboard/manage_cms/organization (1).png: WKZJUA57QDOD34KTAKIFXMFSUOZI24RL
     admin/dashboard/interace.png: '1715154128192424877879498.7'
+    Risk (2).png: '171810059987212904143655.497303'
     bank_users/main_form/business_loan/business_loan-office-staff-icon.png: '1712296906532267339826009.12976'
     bank_users/personal_loan/travel_loan/.gitkeep: '1715929994267212935383835.2699'
     bank_users/user_form/Screenshot 2023-11-26 225128.png: '1701019476115898515002114.6549'

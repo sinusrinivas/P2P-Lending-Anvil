@@ -51,8 +51,8 @@ class stack_graph(stack_graphTemplate):
         y=days_left, 
         mode='lines+markers',
         name=f'Loan ID: {loan_id}',
-        marker=dict(color='#17becf'),
-        line=dict(color='#17becf')
+        marker=dict(color='#dc143c'),
+        line=dict(color='#dc143c')
       )
       traces.append(trace)
     
@@ -60,7 +60,7 @@ class stack_graph(stack_graphTemplate):
     fig = {
       'data': traces,
       'layout': go.Layout(
-        title='EMI Tracking',
+        title='Visualizing Portfolio Performance and Risk Trends',
         xaxis={'title': 'EMI Number'},
         yaxis={'title': 'Days passed due date'},
         showlegend=True
