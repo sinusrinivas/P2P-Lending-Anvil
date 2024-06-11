@@ -109,10 +109,14 @@ components:
     type: Label
     layout_properties: {grid_position: 'AEGTVN,LWVPIC MSHMVX,SQRWXI'}
     name: label_21
-  - properties: {}
+  - properties: {align: center}
     type: Label
     layout_properties: {grid_position: 'AEGTVN,LWVPIC TKFFLV,FRLTCS'}
     name: label_3
+  - name: spacer_12
+    properties: {height: 32}
+    type: Spacer
+    layout_properties: {grid_position: 'AEGTVN,LWVPIC TKFFLV,TXJWER'}
 - properties: {height: 32}
   type: Spacer
   layout_properties: {grid_position: 'JZFQMR,LKGPNQ'}
