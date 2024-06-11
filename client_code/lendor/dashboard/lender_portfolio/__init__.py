@@ -72,7 +72,7 @@ class lender_portfolio(lender_portfolioTemplate):
     if loans:
         # Count the number of disbursed loans
         for loan in loans:
-            if loan['loan_updated_status'] == 'disbursed loan':
+            if loan['loan_updated_status'] == 'disbursed':
                 disbursed_loans_count += 1
     
     # Display the count in the desired label (assuming you have a label for this)
