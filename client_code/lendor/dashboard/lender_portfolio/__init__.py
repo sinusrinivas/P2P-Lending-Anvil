@@ -150,5 +150,41 @@ class lender_portfolio(lender_portfolioTemplate):
 
   def button_1_click(self, **event_args):
     """This method is called when the button is clicked"""
-    pdf = anvil.server.call('create_pdf',"My Portfolio","self.image_1.source",self.selected_row)
+    pdf = anvil.server.call('create_pdf',"My Portfolio","self.image_4.source",self.selected_row)
     anvil.media.download(pdf)
+
+  # def check_task_status(self, task):
+  #   result = task.get_status()
+  #   if result == 'complete':
+  #       anvil.media.download(task.get_return_value())
+  #   else:
+  #       # Schedule the check_task_status function to run again after a short delay
+  #       anvil.js.window.setTimeout(lambda: self.check_task_status(task), 1000)
+
+
+  # def button_1_click(self, **event_args):
+  #   """This method is called when the button is clicked"""
+  #   task_id = anvil.server.call('start_create_pdf_background', "My Portfolio", self.image_1.source, self.selected_row)
+  #   self.check_task_status(task_id)
+
+  # def check_task_status(self, task_id):
+  #     task_state = anvil.server.call('get_task_status', task_id)
+      
+  #     status = task_state.get('status', 'unknown')
+      
+  #     if status == 'completed':
+  #         pdf = task_state.get('result')
+  #         if pdf:
+  #             anvil.media.download(pdf)
+  #         else:
+  #             anvil.Notification("PDF generation completed but no file returned.", style='warning').show()
+  #     elif status == 'failed':
+  #         error = task_state.get('error', 'Unknown error')
+  #         anvil.Notification(f"PDF generation failed: {error}", style='danger').show()
+  #     elif status == 'unknown':
+  #         anvil.Notification("Background task not found or in unknown state.", style='danger').show()
+  #     else:
+  #         # Schedule the check_task_status function to run again after a short delay
+  #         anvil.js.window.setTimeout(lambda: self.check_task_status(task_id), 1000)
+  
+  
