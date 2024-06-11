@@ -48,17 +48,16 @@ class lender_portfolio(lender_portfolioTemplate):
     
     # Ensure the membership type is being read correctly
     if self.label_3.text == "Platinum":
-        self.label_3.style.background_color = "#00FF00"
+        self.label_3.background = "#00FF00"
         print("Set background color to green for Platinum")
     elif self.label_3.text == "Gold":
-        self.label_3.style.background_color = "#FFA500"
+        self.label_3.background = "#FFA500"
         print("Set background color to orange for Gold")
     elif self.label_3.text == "Silver":
-        self.label_3.style.background_color = "#F08080"
+        self.label_3.background = "#F08080"
         print("Set background color to #F08080 for Silver")
     else:
         print("Membership type not recognized")
-
 
 
     self.label_3_copy.text = lender['lender_total_commitments']
