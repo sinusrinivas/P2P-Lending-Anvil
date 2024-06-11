@@ -36,7 +36,7 @@ components:
       - name: content_panel_copy_copy_3_copy_3_copy_copy_copy_2_copy_5_copy
         properties: {col_widths: '{}', background: white, role: elevated-card}
         type: ColumnPanel
-        layout_properties: {grid_position: 'LKTWOF,WPTHSG'}
+        layout_properties: {grid_position: 'LKTWOF,WPTHSG HMDFUA,VUZAMK'}
         components:
         - name: image_1
           properties: {source: _/theme/credit-card.png, height: 120.5555419921875}
@@ -48,7 +48,7 @@ components:
           properties: {text: Manage Credit Limit, foreground: black, font_size: 16, bold: true}
           type: Button
           layout_properties: {grid_position: 'ACYJSY,PBMAUO'}
-          event_bindings: {click: button_1_manage_1_click}
+          event_bindings: {click: button_1_click}
       - properties: {col_widths: '{}', background: white, role: elevated-card}
         type: ColumnPanel
         layout_properties: {grid_position: 'LKTWOF,FPVXBC'}
@@ -79,6 +79,10 @@ components:
           type: Button
           layout_properties: {grid_position: 'JFGEHI,VYIDYK'}
           event_bindings: {click: button_2_click}
+      - properties: {height: 32}
+        type: Spacer
+        layout_properties: {grid_position: 'LKTWOF,TKKLJH'}
+        name: spacer_1
       - properties: {height: '3'}
         type: Spacer
         layout_properties: {grid_position: 'LXEPFH,FVTVHC'}

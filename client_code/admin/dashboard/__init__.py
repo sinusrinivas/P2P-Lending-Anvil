@@ -101,7 +101,7 @@ class dashboard(dashboardTemplate):
 
   def button_21_click(self, **event_args):
     """This method is called when the button is clicked"""
-    open_form('admin.dashboard.manage_issues')
+    open_form('admin.dashboard.customer_management')
 
   def button_22_click(self, **event_args):
     """This method is called when the button is clicked"""
