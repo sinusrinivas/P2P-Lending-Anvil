@@ -1,4 +1,4 @@
-from ._anvil_designer import ItemTemplate106Template
+from ._anvil_designer import port_folio_riskTemplate
 from anvil import *
 import anvil.server
 import anvil.google.auth, anvil.google.drive
@@ -9,15 +9,14 @@ import anvil.tables.query as q
 from anvil.tables import app_tables
 
 
-class ItemTemplate106(ItemTemplate106Template):
+class port_folio_risk(port_folio_riskTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
 
     # Any code you write here will run before the form opens.
+    self.repeating_panel_1.items = app_tables.fin_loan_details.search()
 
-  def link_1_click(self, **event_args):
-    """This method is called when the link is clicked"""
-    selcted_row=self.item
-    open_form('admin.dashboard.risk_pool.risk_view_details',selected_row=selcted_row)
-    
+  def button_1_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    open_form('admin.dashboard.reporting_and_analytical_modules')

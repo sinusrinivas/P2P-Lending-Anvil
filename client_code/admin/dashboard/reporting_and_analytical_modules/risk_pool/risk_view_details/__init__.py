@@ -27,4 +27,4 @@ class risk_view_details(risk_view_detailsTemplate):
     
   def button_1_click(self, **event_args):
     """This method is called when the button is clicked"""
-    open_form('admin.dashboard.risk_pool')
+    open_form('admin.dashboard.reporting_and_analytical_modules.risk_pool')
