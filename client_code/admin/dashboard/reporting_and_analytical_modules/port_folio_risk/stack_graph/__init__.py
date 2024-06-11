@@ -59,7 +59,7 @@ class stack_graph(stack_graphTemplate):
       'layout': go.Layout(
         title='EMI Details by Loan ID',
         xaxis={'title': 'EMI Number'},
-        yaxis={'title': 'Days Left'},
+        yaxis={'title': 'Days passed due date'},
         showlegend=True
       )
     }
