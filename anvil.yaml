@@ -275,6 +275,9 @@ db_schema:
     - name: npa_select_percentage_amount
       admin_ui: {width: 200, order: 26.75}
       type: string
+    - name: tds
+      admin_ui: {width: 200, order: 33}
+      type: number
     title: fin_product_details
   fin_admin_ascend_categories:
     client: full

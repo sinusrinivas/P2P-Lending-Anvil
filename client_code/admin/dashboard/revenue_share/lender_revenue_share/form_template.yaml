@@ -28,7 +28,7 @@ components:
       - {id: VJQQOR, title: Amount Deposited, data_key: column_2, width: 165.20001220703125, expand: false}
       - {id: OJLQEN, title: Lender ROI, data_key: column_3, width: 144.39996337890625, expand: false}
       - {id: QARCVI, data_key: column_1, title: Platform ROI, expand: false, width: 145.39996337890625}
-      - {id: WGHMGB, data_key: column_2, title: TDS 10% on (Lender ROI), width: 187.199951171875, expand: false}
+      - {id: WGHMGB, data_key: column_2, title: TDS on (Lender ROI), width: 187.199951171875, expand: false}
       - {id: ZEEWWL, data_key: column_3, title: Lender Commission (Lender ROI-TDS)}
       show_page_controls: false
       role: tonal-data-grid
