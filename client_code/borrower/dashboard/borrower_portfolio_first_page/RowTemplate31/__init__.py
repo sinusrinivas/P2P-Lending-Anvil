@@ -57,7 +57,7 @@ class RowTemplate31(RowTemplate31Template):
       self.status = None
 
     # Set visibility based on the status
-    if self.status == "disbursed loan":
+    if self.status == "disbursed":
       self.link_1.visible = True
     else:
       self.link_1.visible = False

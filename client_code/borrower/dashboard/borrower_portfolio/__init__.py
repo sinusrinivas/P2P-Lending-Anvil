@@ -89,31 +89,26 @@ class borrower_portfolio(borrower_portfolioTemplate):
 
 
     rows = app_tables.fin_loan_details.search(borrower_customer_id=self.id, loan_updated_status=q.any_of(
-          q.like('accept%'),
-          q.like('Approved%'),
+          q.like('accepted%'),          
           q.like('approved%'),
           q.like('foreclosure%'),
-          q.like('disbursed loan%'),
-          q.like('Disbursed loan%'),
+          q.like('disbursed%'),          
         ))
     self.label_5_copy.text = len(rows)
     
     row = app_tables.fin_loan_details.search(borrower_customer_id=self.id, loan_updated_status=q.any_of(
-          q.like('closed%'),
-          q.like('Closed%'),
-          q.like('CLOSED%'),
+          q.like('closed%')
         ))
     self.label_9.text = len(row)
     
     no_of_disbursed_loans = app_tables.fin_loan_details.search(borrower_customer_id=self.id, loan_updated_status=q.any_of(
-          q.like('disbursed loan%'),
-          q.like('Disbursed loan%')
+          q.like('disbursed%')          
         ))
     self.label_3_copy.text = len(no_of_disbursed_loans)
 
     amount_of_disbursed_loans = app_tables.fin_loan_details.search(
     borrower_customer_id=self.id,
-    loan_updated_status="disbursed loan"
+    loan_updated_status="disbursed"
 )
 
     if amount_of_disbursed_loans:
