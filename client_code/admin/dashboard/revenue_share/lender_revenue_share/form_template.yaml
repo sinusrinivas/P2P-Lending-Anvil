@@ -13,28 +13,22 @@ components:
     type: form:admin.dashboard.home_button_admin
     layout_properties: {grid_position: 'DKWYEV,RIBUTL', full_width_row: true}
   - name: button_1
-    properties: {text: Back, foreground: white, role: elevated-button, icon: 'fa:angle-double-left',
-      background: '#05264d', bold: true, font_size: 15, align: right}
+    properties: {text: Back, foreground: white, role: elevated-button, icon: 'fa:angle-double-left', background: '#05264d', bold: true, font_size: 15, align: right}
     type: Button
     layout_properties: {grid_position: 'TZWXTX,JLPBDY', full_width_row: true}
     event_bindings: {click: button_1_click}
   - name: label_1
-    properties: {text: Revenue Share For Each Loan, role: headline, align: center,
-      bold: true, font_size: 26}
+    properties: {text: Revenue Share For Each Loan, role: headline, align: center, bold: true, font_size: 26}
     type: Label
     layout_properties: {grid_position: 'JCOVHJ,ZHECFA', full_width_row: true}
   - name: data_grid_1
     properties:
       columns:
-      - {id: JKSDUP, title: Loan Id, data_key: column_1, width: 140.79998779296875,
-        expand: false}
-      - {id: VJQQOR, title: Amount Deposited, data_key: column_2, width: 165.20001220703125,
-        expand: false}
-      - {id: OJLQEN, title: Lender ROI, data_key: column_3, width: 144.39996337890625,
-        expand: false}
+      - {id: JKSDUP, title: Loan Id, data_key: column_1, width: 140.79998779296875, expand: false}
+      - {id: VJQQOR, title: Amount Deposited, data_key: column_2, width: 165.20001220703125, expand: false}
+      - {id: OJLQEN, title: Lender ROI, data_key: column_3, width: 144.39996337890625, expand: false}
       - {id: QARCVI, data_key: column_1, title: Platform ROI, expand: false, width: 145.39996337890625}
-      - {id: WGHMGB, data_key: column_2, title: TDS 10% on (Lender ROI), width: 187.199951171875,
-        expand: false}
+      - {id: WGHMGB, data_key: column_2, title: TDS 10% on (Lender ROI), width: 187.199951171875, expand: false}
       - {id: ZEEWWL, data_key: column_3, title: Lender Commission (Lender ROI-TDS)}
       show_page_controls: false
       role: tonal-data-grid

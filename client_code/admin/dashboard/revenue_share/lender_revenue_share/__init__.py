@@ -26,7 +26,7 @@ class lender_revenue_share(lender_revenue_shareTemplate):
     self.repeating_panel_1.items = loan_details
 
   def button_1_click(self, **event_args):
-    open_form("admin.dashboard.revenue_share.lender_revenue_share", customer_id=self.item['customer_id'])
+    open_form("admin.dashboard.revenue_share.lender_revenue_share", self.customer_id)
 
 
 
