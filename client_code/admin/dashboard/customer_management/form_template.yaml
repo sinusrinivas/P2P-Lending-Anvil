@@ -10,78 +10,50 @@ components:
   properties: {text: Customer Management, bold: true, align: center, role: title}
   type: Label
   layout_properties: {grid_position: 'FQIMZO,NBUCLD'}
-- name: content_panel_copy_copy_3_copy_3_copy_copy_copy_copy
-  properties: {col_widths: '{"FPVXBC":20,"WPTHSG":20,"YSXYNY":20}', background: '#Edf0f4', role: null}
+- name: content_panel_copy_copy_3_copy_3_copy_copy_copy_2_copy_5_copy
+  properties: {col_widths: '{}', background: white, role: elevated-card}
   type: ColumnPanel
-  layout_properties: {grid_position: 'RLVRKN,XZQKUP'}
+  layout_properties: {grid_position: 'BINOSR,XIECCI'}
   components:
-  - name: spacer_4
-    properties: {height: '3'}
-    type: Spacer
-    layout_properties: {grid_position: 'UEOLFA,AWCGTS'}
-  - name: content_panel_copy_copy_3_copy_3_copy_copy_copy_2_copy_5_copy
-    properties: {col_widths: '{}', background: white, role: elevated-card}
-    type: ColumnPanel
-    layout_properties: {grid_position: 'LKTWOF,WPTHSG CJBXGA,UBMIAN'}
-    components:
-    - name: image_1
-      properties: {source: _/theme/registration.jpg, height: 128.88888549804688}
-      type: Image
-      layout_properties: {grid_position: 'HVSHDS,YCPVXR'}
-      data_bindings: []
-      event_bindings: {mouse_enter: image_1_mouse_enter, mouse_up: image_1_mouse_up}
-    - name: button_1_manage_1
-      properties: {text: Handles Customer Registration, foreground: black, font_size: 16, bold: true}
-      type: Button
-      layout_properties: {grid_position: 'ACYJSY,PBMAUO'}
-      event_bindings: {click: button_1_click}
-  - name: content_panel_copy_copy_3_copy_3_copy_copy_copy_2_copy_2_copy
-    properties: {role: elevated-card, background: 'theme:On Primary'}
-    type: ColumnPanel
-    layout_properties: {grid_position: 'LKTWOF,WPTHSG DMJQFF,MDBXDG'}
-    components:
-    - name: image_4
-      properties: {height: 137.33331298828125, source: _/theme/contact_information.png, display_mode: shrink_to_fit}
-      type: Image
-      layout_properties: {grid_position: 'QUSLIU,IGKDGQ'}
-      event_bindings: {mouse_up: image_1_copy_2_mouse_up}
-    - name: button_4_copy
-      properties: {text: Maintaining Contact Information, bold: true, font_size: 16, foreground: Black, align: full}
-      type: Button
-      layout_properties: {grid_position: 'JFGEHI,VYIDYK'}
-      event_bindings: {click: button_4_copy_click}
-  - name: content_panel_copy_copy_3_copy_3_copy_copy_copy_2_copy_5
-    properties: {col_widths: '{}', background: white, role: elevated-card}
-    type: ColumnPanel
-    layout_properties: {grid_position: 'LKTWOF,FPVXBC'}
-    components:
-    - name: image_2
-      properties: {source: _/theme/kyc.png, display_mode: zoom_to_fill, height: 137.5555419921875, visible: true}
-      type: Image
-      layout_properties: {grid_position: 'QGZTNW,PVJEPO'}
-      event_bindings: {mouse_up: image_4_copy_5_mouse_up}
-    - name: button_2
-      properties: {text: KYC Verification, foreground: black, font_size: 16, bold: true}
-      type: Button
-      layout_properties: {grid_position: 'ACYJSY,PBMAUO'}
-      event_bindings: {click: button_2_click}
-  - name: content_panel_copy_copy_3_copy_3_copy_copy_copy_2_copy_2
-    properties: {role: elevated-card, background: 'theme:On Primary'}
-    type: ColumnPanel
-    layout_properties: {grid_position: 'LKTWOF,YSXYNY'}
-    components:
-    - name: image_3
-      properties: {height: 127.66665649414062, source: _/theme/customer_profile.png, display_mode: shrink_to_fit}
-      type: Image
-      layout_properties: {grid_position: 'QUSLIU,IGKDGQ'}
-      event_bindings: {mouse_up: image_1_copy_2_mouse_up}
-    - name: button_3
-      properties: {text: Managing Customer Profiles, bold: true, font_size: 16, foreground: Black, align: full}
-      type: Button
-      layout_properties: {grid_position: 'JFGEHI,VYIDYK'}
-      event_bindings: {click: button_3_click}
-  - name: spacer_5
-    properties: {height: '3'}
-    type: Spacer
-    layout_properties: {grid_position: 'HCPQBC,UAFOAJ'}
+  - name: image_1
+    properties: {source: _/theme/registration.jpg, height: 128.88888549804688}
+    type: Image
+    layout_properties: {grid_position: 'HVSHDS,YCPVXR'}
+    data_bindings: []
+    event_bindings: {mouse_enter: image_1_mouse_enter, mouse_up: image_1_mouse_up}
+  - name: button_1_manage_1
+    properties: {text: Handles Customer Registration, foreground: black, font_size: 16, bold: true}
+    type: Button
+    layout_properties: {grid_position: 'ACYJSY,PBMAUO'}
+    event_bindings: {click: button_1_click}
+- name: content_panel_copy_copy_3_copy_3_copy_copy_copy_2_copy_5
+  properties: {col_widths: '{}', background: white, role: elevated-card}
+  type: ColumnPanel
+  layout_properties: {grid_position: 'BINOSR,QGLBCU'}
+  components:
+  - name: image_2
+    properties: {source: _/theme/kyc.png, display_mode: zoom_to_fill, height: 150.66668701171875, visible: true}
+    type: Image
+    layout_properties: {grid_position: 'QGZTNW,PVJEPO'}
+    event_bindings: {mouse_up: image_2_mouse_up}
+  - name: button_2
+    properties: {text: KYC Verification, foreground: black, font_size: 16, bold: true}
+    type: Button
+    layout_properties: {grid_position: 'ACYJSY,PBMAUO'}
+    event_bindings: {click: button_2_click}
+- name: content_panel_copy_copy_3_copy_3_copy_copy_copy_2_copy_2
+  properties: {role: elevated-card, background: 'theme:On Primary'}
+  type: ColumnPanel
+  layout_properties: {grid_position: 'BINOSR,GFPUDD'}
+  components:
+  - name: image_3
+    properties: {height: 128.11111450195312, source: _/theme/customer_profile_1.png, display_mode: shrink_to_fit}
+    type: Image
+    layout_properties: {grid_position: 'QUSLIU,IGKDGQ'}
+    event_bindings: {mouse_up: image_3_mouse_up}
+  - name: button_3
+    properties: {text: Managing Customer Profiles & Contact Information, bold: true, font_size: 16, foreground: Black, align: full}
+    type: Button
+    layout_properties: {grid_position: 'JFGEHI,VYIDYK'}
+    event_bindings: {click: button_3_click}
 is_package: true

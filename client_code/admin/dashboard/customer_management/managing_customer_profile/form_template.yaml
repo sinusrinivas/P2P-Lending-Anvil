@@ -11,7 +11,7 @@ components:
   type: Label
   layout_properties: {grid_position: 'ZECITE,AQIQSM'}
 - name: button_1
-  properties: {text: back, bold: true, foreground: 'theme:On Primary', background: '#0d1368'}
+  properties: {text: Back, bold: true, foreground: 'theme:On Primary', background: '#05264d'}
   type: Button
   layout_properties: {grid_position: 'ZECITE,XRTMPH'}
   event_bindings: {click: button_1_click}

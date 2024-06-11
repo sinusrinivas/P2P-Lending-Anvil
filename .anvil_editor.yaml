@@ -312,7 +312,6 @@ unique_ids:
     admin.dashboard.revenue_share.RowTemplate31: '17176618475036133093088.2324'
     lendor.dashboard.view_borrower_loan_request.Borr_loan_request: '1700542763128106365112272.9714'
     lendor.dashboard.view_transaction_history.ItemTemplate100: '1712308244698402395554355.8164'
-    admin.dashboard.customer_management.maintaining_contact_information: '1718088818016156427955426.78134'
     lendor.dashboard.lender_view_loans.RowTemplate20: '1703139972848360547706878.1784'
     admin.dashboard.manage_products.manage_producs1: '1700713086879771707093045.5188'
     admin.dashboard.manage_cms: '1699528617179453409715572.5991'
@@ -605,6 +604,7 @@ unique_ids:
     bank_users/main_form/rbi-registered-1.svg: '1711625340182904575401418.6937'
     borrower/dashboard/foreclosure (2).png: '1716813923343898077348034.9633'
     admin/dashboard/manage_ascend_score/add-sub-category.png: L4G7VDB3AZK66YII6OS4LD26CVPZ5YOC
+    customer_management1.png: '1718111434637656956492746.1533'
     bank_users/personal_loan/credit_card_loan/collateral_2.png: '1713868791723244535937843.04828'
     bank_users/personal_loan/home_renovation_loan/.gitkeep: '1715930129214968902317344.3992'
     bank_users/.gitkeep: '1715927030226563876767231.134'
@@ -619,6 +619,7 @@ unique_ids:
     bank_users/main_form/laptop_icon.png: '1711685551798386670382732.40204'
     bank_users/personal_loan/how_it_works/get amount.png: '1713344741139713966096203.6858'
     admin/dashboard/manage_ascend_score/vehicle-loan.png: 3CGDSVRILC3EXN3BKQOXOSVLNMSGTGOD
+    customer_profile_1.png: '1718110289814665957444626.455'
     bank_users/personal_loan/digital-revolution.png: '1716536694687263160437197.04794'
     borrower/dashboard/ new loan request.png: '1716813544118489005520199.7015'
     bank_users/personal_loan/home_renovation_loan/house-with-one-frontal-window.png: '1716977974447632048773693.9388'
@@ -715,6 +716,7 @@ unique_ids:
     lender_profile.png: '1718093106654298634860249.2883'
     bank_users/personal_loan/education_loan/EL-Prerequisites2.png: '1714132037483660794391753.3354'
     bank_users/main_form/business_loan/funds-icon.png: '1712296807481294146512202.1973'
+    customer management2.png: '1718110062685461979819541.0689'
     bank_users/main_form/vehicle_loan/.gitkeep: '1715929828953373939801265.64874'
     noun-shopping-cart-1723001.png: '1713588083113839668480989.9806'
     bank_users/main_form/vehicle_loan/2wheeler.png: '1714634041112540194222587.55176'

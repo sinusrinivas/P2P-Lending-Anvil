@@ -11,7 +11,7 @@ components:
   type: Label
   layout_properties: {grid_position: 'HHCQMG,KCXDPM'}
 - name: button_1
-  properties: {text: back, background: '#070a5f', foreground: 'theme:On Primary', bold: true}
+  properties: {text: Back, background: '#05264d', foreground: 'theme:On Primary', bold: true}
   type: Button
   layout_properties: {grid_position: 'HHCQMG,UCCXPZ'}
   event_bindings: {click: button_1_click}
