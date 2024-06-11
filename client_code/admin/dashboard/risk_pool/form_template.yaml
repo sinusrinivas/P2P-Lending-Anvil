@@ -5,82 +5,81 @@ container:
 components:
 - type: ColumnPanel
   properties: {}
-  name: content_panel
   layout_properties: {slot: default}
+  name: content_panel
   components:
   - type: ColumnPanel
     properties: {role: null, col_widths: '{}', spacing_above: small, background: '', wrap_on: mobile, col_spacing: medium, foreground: '', spacing_below: small, visible: true, border: '', tooltip: ''}
-    name: content_panel_copy
     layout_properties:
       col_widths: {}
       grid_position: HHAEAE,AMFLWY
       full_width_row: true
+    name: content_panel_copy
     components:
-    - name: content_panel_copy_2
-      properties: {col_widths: '{}'}
+    - properties: {col_widths: '{}'}
       type: ColumnPanel
       layout_properties: {grid_position: 'YQZZYV,ZOWUUO', full_width_row: true}
+      name: content_panel_copy_2
       components:
-      - name: content_panel_copy_copy
-        properties: {role: null, col_widths: '{}', spacing_above: small, background: '', wrap_on: mobile, col_spacing: medium, foreground: '', spacing_below: small, visible: true, border: '', tooltip: ''}
+      - properties: {role: null, col_widths: '{}', spacing_above: small, background: '', wrap_on: mobile, col_spacing: medium, foreground: '', spacing_below: small, visible: true, border: '', tooltip: ''}
         type: ColumnPanel
         layout_properties:
           col_widths: {}
           grid_position: HHAEAE,AMFLWY
           full_width_row: true
+        name: content_panel_copy_copy
         components:
-        - name: home_button_admin_1
-          properties: {}
+        - properties: {}
           type: form:admin.dashboard.home_button_admin
           layout_properties: {grid_position: 'OQPYSO,PEVDGM', full_width_row: true}
-      - name: label_1
-        properties: {role: null, bold: true, align: center, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: 20, tooltip: '', text: Manage Risk Pool}
+          name: home_button_admin_1
+      - properties: {role: null, bold: true, align: center, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: 20, tooltip: '', text: Manage Risk Pool}
         type: Label
         layout_properties: {grid_position: 'AJCEBX,TITXTM'}
-      - name: risk_plot
-        properties: {}
+        name: label_1
+      - properties: {}
         type: Plot
         layout_properties: {grid_position: 'VUPCDZ,OOEQCM'}
-      - name: button_1_copy
-        properties: {text: Low Risk, foreground: white, role: outlined-button, align: full, background: green, border: '', bold: true, font_size: 14}
+        name: risk_plot
+      - properties: {text: Low Risk, foreground: white, role: outlined-button, align: full, background: green, border: '', bold: true, font_size: 14}
         type: Button
         layout_properties: {grid_position: 'CGGLYK,GJEQDY'}
         event_bindings: {click: button_low_risk_click}
-      - name: button_2_copy
-        properties: {text: Medium Risk, foreground: white, role: outlined-button, background: orange, bold: true, align: full, font_size: 14}
+        name: button_1_copy
+      - properties: {text: Medium Risk, foreground: white, role: outlined-button, background: orange, bold: true, align: full, font_size: 14}
         type: Button
         layout_properties: {grid_position: 'CGGLYK,FIAVZP'}
         event_bindings: {click: button_medium_risk_click}
-      - name: button_5_copy
-        properties: {text: High Risk, foreground: white, align: full, role: outlined-button, background: red, bold: true, enabled: true, font_size: 14}
+        name: button_2_copy
+      - properties: {text: High Risk, foreground: white, align: full, role: outlined-button, background: red, bold: true, enabled: true, font_size: 14}
         type: Button
         layout_properties: {grid_position: 'CGGLYK,KKALWF'}
         event_bindings: {click: button_high_risk_click}
-      - name: spacer_1
-        properties: {height: 11.999969482421875}
+        name: button_5_copy
+      - properties: {height: 11.999969482421875}
         type: Spacer
         layout_properties: {grid_position: 'CCVDME,UOQAIO'}
-      - name: label
-        properties: {align: center, visible: false, bold: true, font_size: 20}
+        name: spacer_1
+      - properties: {align: center, visible: false, bold: true, font_size: 20}
         type: Label
         layout_properties: {grid_position: 'RTCBDA,BBKIEE'}
-      - name: column_panel_1
-        properties: {col_widths: '{"XKFLFB":45,"HUEKFC":15}', visible: false}
+        name: label
+      - properties: {col_widths: '{"XKFLFB":45,"HUEKFC":15}', visible: false}
         type: ColumnPanel
         layout_properties: {grid_position: 'LGCAJR,TASNGO'}
+        name: column_panel_1
         components:
-        - name: text_box_search
-          properties: {placeholder: Enter text to Search, role: null, background: white}
+        - properties: {placeholder: Enter text to Search, role: null, background: white}
           type: TextBox
           layout_properties: {grid_position: 'LZCBRJ,XKFLFB'}
           event_bindings: {pressed_enter: text_box_search_change}
-        - name: button_1
-          properties: {text: Search, icon: 'fa:search', bold: true, font_size: 14, role: elevated-button, background: '#05264d', foreground: white}
+          name: text_box_search
+        - properties: {text: Search, icon: 'fa:search', bold: true, font_size: 14, role: elevated-button, background: '#05264d', foreground: white}
           type: Button
           layout_properties: {grid_position: 'LZCBRJ,HUEKFC'}
           event_bindings: {click: search_button_click}
-      - name: data_grid_2
-        properties:
+          name: button_1
+      - properties:
           columns:
           - {id: JKSDUP, title: 'Borrwer Id ', data_key: column_1}
           - {id: VJQQOR, title: Borrower Name, data_key: column_2}
@@ -91,12 +90,12 @@ components:
           role: tonal-data-grid
         type: DataGrid
         layout_properties: {grid_position: 'BWAVOP,UTZZKJ'}
+        name: data_grid_2
         components:
-        - name: suggestions_panel
-          properties: {item_template: admin.dashboard.risk_pool.ItemTemplate106}
+        - properties: {item_template: admin.dashboard.risk_pool.ItemTemplate106}
           type: RepeatingPanel
-      - name: data_grid_1
-        properties:
+          name: suggestions_panel
+      - properties:
           columns:
           - {id: JKSDUP, title: 'Borrwer Id ', data_key: column_1}
           - {id: VJQQOR, title: Borrower Name, data_key: column_2}
@@ -107,16 +106,17 @@ components:
           visible: false
         type: DataGrid
         layout_properties: {grid_position: 'MOUXZE,ZVTREL'}
+        name: data_grid_1
         components:
-        - name: repeating_panel_1
-          properties: {item_template: admin.dashboard.risk_pool.ItemTemplate105}
+        - properties: {item_template: admin.dashboard.risk_pool.ItemTemplate105}
           type: RepeatingPanel
-      - name: back_button
-        properties: {role: outlined-button, bold: true, align: center, spacing_above: small, background: '#05264d', icon: 'fa:angle-double-left', underline: false, font: '', icon_align: left, foreground: white, spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: Back}
+          name: repeating_panel_1
+      - properties: {role: outlined-button, bold: true, align: center, spacing_above: small, background: '#05264d', icon: 'fa:angle-double-left', underline: false, font: '', icon_align: left, foreground: white, spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: Back}
         type: Button
         layout_properties: {grid_position: 'JCCBWY,DFDMKE'}
         event_bindings: {click: button_1_click}
+        name: back_button
 - type: FlowPanel
   properties: {}
-  name: navbar_links
   layout_properties: {slot: nav-right}
+  name: navbar_links
