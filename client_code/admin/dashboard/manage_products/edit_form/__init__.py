@@ -59,6 +59,7 @@ class edit_form(edit_formTemplate):
                     self.business.enabled = False
                     self.student.enabled = False
                     self.employee.enabled = False
+                    self.employee_copy_2.enabled = False
                     self.lapsed.enabled = False
                     self.default.enabled = False
                     self.npa.enabled = False
@@ -90,6 +91,7 @@ class edit_form(edit_formTemplate):
                     self.business.enabled = False
                     self.student.enabled = False
                     self.employee.enabled = False
+                    self.employee_copy_2.enabled = False
                     self.lapsed.enabled = False
                     self.default.enabled = False
                     self.npa.enabled = False
@@ -136,6 +138,5 @@ class edit_form(edit_formTemplate):
       """This method is called when the button is clicked"""
       open_form("admin.dashboard")
 
-    
 
 
