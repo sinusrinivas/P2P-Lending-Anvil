@@ -42,20 +42,28 @@ class lender_portfolio(lender_portfolioTemplate):
     self.label_21.text = ascend['occupation_type']
     
 
-    lendor = app_tables.fin_lender.get(customer_id=self.id)
-    self.label_3.text = lendor['membership']
+    lender = app_tables.fin_lender.get(customer_id=self.id)
+    self.label_3.text = lender['membership']
+    print("Membership Type:", self.label_3.text)
     
-    membership_colors = {
-        "Platinum": "green",
-        "Gold": "orange",
-        "Silver": "#F08080"
-    }   
-    background_color = membership_colors.get(self.label_3.text, "default_color")  # Handle missing types
-    self.label_3.config(background=background_color)
+    # Ensure the membership type is being read correctly
+    if self.label_3.text == "Platinum":
+        self.label_3.style.background_color = "#00FF00"
+        print("Set background color to green for Platinum")
+    elif self.label_3.text == "Gold":
+        self.label_3.style.background_color = "#FFA500"
+        print("Set background color to orange for Gold")
+    elif self.label_3.text == "Silver":
+        self.label_3.style.background_color = "#F08080"
+        print("Set background color to #F08080 for Silver")
+    else:
+        print("Membership type not recognized")
 
-    self.label_3_copy.text = lendor['lender_total_commitments']
-    self.label_9.text = lendor['return_on_investment']
-    self.label_5_copy.text = lendor['present_commitments']
+
+
+    self.label_3_copy.text = lender['lender_total_commitments']
+    self.label_9.text = lender['return_on_investment']
+    self.label_5_copy.text = lender['present_commitments']
 
     loans = app_tables.fin_loan_details.search(lender_customer_id=self.id)
 
