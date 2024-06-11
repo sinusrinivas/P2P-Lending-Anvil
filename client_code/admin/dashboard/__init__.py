@@ -93,7 +93,7 @@ class dashboard(dashboardTemplate):
 
   def button_19_click(self, **event_args):
     """This method is called when the button is clicked"""
-    open_form('admin.dashboard.risk_pool')
+    open_form('admin.dashboard.reporting_and_analytical_modules')
 
   def button_17_click(self, **event_args):
     """This method is called when the button is clicked"""

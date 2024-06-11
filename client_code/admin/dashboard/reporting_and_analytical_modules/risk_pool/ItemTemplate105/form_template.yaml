@@ -1,5 +1,7 @@
 is_package: true
-container: {type: ColumnPanel}
+container:
+  type: ColumnPanel
+  properties: {col_widths: '{"LJDUBZ":10,"MEUAYS":15,"UBMJZK":11,"KLMQOI":14,"AJPPRR":10}'}
 components:
 - name: label_1
   properties: {align: center}
