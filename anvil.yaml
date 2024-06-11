@@ -16,7 +16,7 @@ services:
 - source: /runtime/services/anvil/secrets.yml
   client_config: {}
   server_config: {}
-startup: {type: form, module: admin.dashboard}
+startup: {type: form, module: bank_users.main_form}
 package_name: pip_install_reportlab
 allow_embedding: false
 name: P2P Lending App 1
@@ -1306,9 +1306,6 @@ db_schema:
     - name: present_commitments
       admin_ui: {order: 4.9765625, width: 200}
       type: number
-    - name: wallet_id
-      admin_ui: {width: 200}
-      type: string
   fin_borrower_salary_type:
     client: full
     server: full

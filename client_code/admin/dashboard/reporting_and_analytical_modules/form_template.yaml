@@ -1,0 +1,37 @@
+container: {type: ColumnPanel}
+components:
+- name: home_button_admin_1
+  properties: {}
+  type: form:admin.dashboard.home_button_admin
+  layout_properties: {grid_position: 'RUJLCE,UVZNQK', full_width_row: true}
+- name: content_panel
+  properties: {col_widths: '{}', background: white, role: elevated-card}
+  type: ColumnPanel
+  layout_properties: {grid_position: 'KSJELA,FAUUJL'}
+  components:
+  - name: image_1
+    properties: {source: _/theme/admin/dashboard/manage_ascend_score/business-credit-score (1).png, height: '100'}
+    type: Image
+    layout_properties: {grid_position: 'GNRRDW,FEOFAR'}
+    event_bindings: {mouse_enter: image_1_mouse_enter, mouse_down: image_1_mouse_down, mouse_up: image_1_mouse_up}
+  - name: button_14
+    properties: {text: Risk Pool Analysis, bold: true, foreground: black, font_size: 16}
+    type: Button
+    layout_properties: {grid_position: 'LFNPCJ,OTMDIA'}
+    event_bindings: {click: risk_poolh_click}
+- name: content_panel_copy
+  properties: {col_widths: '{}', background: white, role: elevated-card}
+  type: ColumnPanel
+  layout_properties: {grid_position: 'KSJELA,RDSUBJ'}
+  components:
+  - name: image_1_copy
+    properties: {source: _/theme/ascend.score.range.jpg, height: '100'}
+    type: Image
+    layout_properties: {grid_position: 'GNRRDW,FEOFAR'}
+    event_bindings: {mouse_enter: image_1_mouse_enter, mouse_down: image_1_mouse_down, mouse_up: image_1_mouse_up}
+  - name: button_14_copy
+    properties: {text: Risk Portfolio, bold: true, foreground: black, font_size: 16}
+    type: Button
+    layout_properties: {grid_position: 'LFNPCJ,OTMDIA'}
+    event_bindings: {click: port_polio_risk_click}
+is_package: true
