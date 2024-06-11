@@ -44,8 +44,15 @@ class lender_portfolio(lender_portfolioTemplate):
 
     lendor = app_tables.fin_lender.get(customer_id=self.id)
     self.label_3.text = lendor['membership']
-    if self.label_3.text == "Platinum":
-      self.label_3.background-co
+    
+    membership_colors = {
+        "Platinum": "green",
+        "Gold": "orange",
+        "Silver": "#F08080"
+    }   
+    background_color = membership_colors.get(self.label_3.text, "default_color")  # Handle missing types
+    self.label_3.config(background=background_color)
+
     self.label_3_copy.text = lendor['lender_total_commitments']
     self.label_9.text = lendor['return_on_investment']
     self.label_5_copy.text = lendor['present_commitments']
