@@ -13,6 +13,7 @@ class lender_revenue_share(lender_revenue_shareTemplate):
     self.init_components(**properties)
     self.customer_id = customer_id
     self.load_loan_data()
+    
 
   def load_loan_data(self):
     loans = app_tables.fin_loan_details.search(lender_customer_id=self.customer_id)
