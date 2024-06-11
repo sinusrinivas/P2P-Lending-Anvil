@@ -41,7 +41,8 @@ class stack_graph(stack_graphTemplate):
     
     # Create traces for each unique loan_id
     traces = []
-    for loan_id in set(loan_ids):
+    unique_loan_ids = list(set(loan_ids))
+    for loan_id in unique_loan_ids:
       emi_nums = [emi_numbers[i] for i in range(len(loan_ids)) if loan_ids[i] == loan_id]
       days_left = [days_left_data[i] for i in range(len(loan_ids)) if loan_ids[i] == loan_id]
       
@@ -49,7 +50,9 @@ class stack_graph(stack_graphTemplate):
         x=emi_nums, 
         y=days_left, 
         mode='lines+markers',
-        name=f'Loan ID: {loan_id}'
+        name=f'Loan ID: {loan_id}',
+        marker=dict(color='#17becf'),
+        line=dict(color='#17becf')
       )
       traces.append(trace)
     
@@ -57,7 +60,7 @@ class stack_graph(stack_graphTemplate):
     fig = {
       'data': traces,
       'layout': go.Layout(
-        title='EMI Details by Loan ID',
+        title='EMI Tracking',
         xaxis={'title': 'EMI Number'},
         yaxis={'title': 'Days passed due date'},
         showlegend=True
