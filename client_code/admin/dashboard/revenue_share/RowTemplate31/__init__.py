@@ -15,3 +15,8 @@ class RowTemplate31(RowTemplate31Template):
     self.init_components(**properties)
 
     # Any code you write here will run before the form opens.
+
+  def link_1_click(self, **event_args):
+    # customer_id = self.link_1.text
+    # open_form('admin.dashboard.revenue_share.lender_revenue_share',customer_id)
+    open_form('admin.dashboard.revenue_share.lender_revenue_share', customer_id=self.item['customer_id'])
