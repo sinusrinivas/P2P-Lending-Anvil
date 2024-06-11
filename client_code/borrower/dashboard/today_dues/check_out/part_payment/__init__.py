@@ -132,7 +132,7 @@ class part_payment(part_paymentTemplate):
                       loan_row['total_amount_paid'] = total_paid
                       loan_row['lender_returns'] += float(self.loan_details['i_r']) /2
                       if loan_row['remaining_amount'] <= 0:
-                        loan_row['loan_updated_status'] = 'close'
+                        loan_row['loan_updated_status'] = 'closed'
                         
                         lender_data = app_tables.fin_lender.get(customer_id=self.loan_details['lender_customer_id'])
                         if lender_data:
