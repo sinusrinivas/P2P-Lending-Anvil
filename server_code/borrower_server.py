@@ -237,7 +237,7 @@ def add_fin_emi_details(borrower_customer_id, borrower_email, scheduled_payment,
                      payment_number, payment_date, loan_id, emi_status):
     # Generate a unique loan ID and get the updated counter
     emi_id = generate_emi_id()
-    loan_details = app_tables.fin_loan_details.search(borrower_customer_id = borrower_customer_i)
+    loan_details = app_tables.fin_loan_details.search(borrower_customer_id = borrower_customer_id)
                        
     if loan_details and len(loan_details) > 0:
         loan_details = loan_details[0]
