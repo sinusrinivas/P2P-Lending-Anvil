@@ -14,7 +14,7 @@ class rejected_loans(rejected_loansTemplate):
     self.init_components(**properties)
 
     # Any code you write here will run before the form opens.
-    self.data = app_tables.fin_loan_details.search(loan_updated_status=q.like('reject%'))
+    self.data = app_tables.fin_loan_details.search(loan_updated_status=q.like('rejected%'))
 
     self.result = []
     for loan in self.data:
