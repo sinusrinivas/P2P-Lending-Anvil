@@ -25,8 +25,8 @@ components:
   layout_properties: {column: RBCPXE}
   data_bindings:
   - {property: text, code: 'self.item[''membership'']', writeback: false}
-- name: link_1
-  properties: {text: View Portfolio, visible: false, align: center}
+- name: portfolio
+  properties: {text: View Portfolio, visible: true, align: center}
   type: Link
   layout_properties: {column: GONDTU}
-  event_bindings: {click: link_1_click}
+  event_bindings: {click: portfolio_click}
