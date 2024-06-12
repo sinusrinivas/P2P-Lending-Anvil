@@ -81,7 +81,7 @@ components:
     type: DataGrid
     layout_properties: {grid_position: 'BWAVOP,UTZZKJ'}
     components:
-    - name: repeating_panel_2
+    - name: suggestions_panel
       properties: {item_template: admin.dashboard.reporting_and_analytical_modules.key_metrice.ItemTemplate109}
       type: RepeatingPanel
   - name: data_grid_1
