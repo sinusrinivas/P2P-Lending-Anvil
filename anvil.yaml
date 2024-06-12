@@ -718,7 +718,7 @@ db_schema:
       type: string
     title: fin_gender
   fin_platform_fees:
-    client: none
+    client: full
     server: full
     columns:
     - name: platforn_returns

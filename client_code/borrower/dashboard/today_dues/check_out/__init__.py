@@ -864,6 +864,7 @@ class check_out(check_outTemplate):
                       app_tables.fin_platform_fees.add_row(id=1 ,platforn_returns=total_extra_fee)
                     else:
                       existing_fee_rows['platforn_returns'] +=total_extra_fee
+                      existing_fee_rows.update()
                   
                     if self.selected_row['remaining_amount'] is not None:
                         remaining_amount = self.selected_row['remaining_amount'] - emi_amount_for_remaining_amount#(emi_amount + processing_fee + extra_amount)
