@@ -13,20 +13,20 @@ class ItemTemplate107(ItemTemplate107Template):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
-
+  
     # Any code you write here will run before the form opens.
   # Add a Label component for the name
-    self.name_label = Label(text="Name", align="left", bold=True)
-    self.add_component(self.name_label)
+    self.label_1 = Label(text="Name", align="left", bold=True)
+    self.add_component(self.label_1)
     
     # Add a Label component for the email
-    self.email_label = Label(text="Email", align="left", bold=True)
-    self.add_component(self.email_label)
+    self.label_2 = Label(text="Email", align="left", bold=True)
+    self.add_component(self.label_2)
     
     # Add a Label component for the alternate email
-    self.alt_email_label = Label(text="Alternate Email", align="left", bold=True)
-    self.add_component(self.alt_email_label)
+    self.label_4 = Label(text="Alternate Email", align="left", bold=True)
+    self.add_component(self.label_4)
     
     # Add an Image component for the photo
-    self.photo = Image(source=None)
-    self.add_component(self.photo)
+    self.image_1 = Image(source=None)
+    self.add_component(self.image_1)
