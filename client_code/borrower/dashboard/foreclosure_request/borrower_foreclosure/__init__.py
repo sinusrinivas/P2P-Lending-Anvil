@@ -366,9 +366,9 @@ class borrower_foreclosure(borrower_foreclosureTemplate):
 
                 existing_fee_rows = app_tables.fin_platform_fees.get()
                 if existing_fee_rows is None:
-                  app_tables.fin_platform_fees.add_row(platforn_returns=total_extra_fee)
+                  app_tables.fin_platform_fees.add_row(platform_returns=total_extra_fee)
                 else:
-                  existing_fee_rows['platforn_returns'] +=total_extra_fee
+                  existing_fee_rows['platform_returns'] +=total_extra_fee
                   existing_fee_rows.update()
               
                 app_tables.fin_emi_table.add_row(

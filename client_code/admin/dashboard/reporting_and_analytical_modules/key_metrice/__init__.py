@@ -47,7 +47,7 @@ class key_metrice(key_metriceTemplate):
     fig = go.Figure(data=[
       go.Bar(name='Very Good', x=['Very Good'], y=[self.very_count], marker_color='green'),
       go.Bar(name='Good', x=['Good'], y=[self.good_count], marker_color='orange'),
-      go.Bar(name='Average', x=['Average'], y=[self.average_count], marker_color='orange'),
+      go.Bar(name='Average', x=['Average'], y=[self.average_count], marker_color='#F08080'),
       go.Bar(name='Bad', x=['Bad'], y=[self.bad_count], marker_color='red')
     ])
     
@@ -74,6 +74,10 @@ class key_metrice(key_metriceTemplate):
           'borrower_since': row['borrower_since'],
           'user_name': row['user_name'],
           'ascend_score': row['ascend_score'],
+          'email_id': row['email_id'],
+          'credit_limit': row['credit_limit'],
+          'mobile': user_details['mobile'],
+          # 'ascend_score': row['ascend_score'],
 
         }
         result.append(combined_data)
@@ -105,6 +109,9 @@ class key_metrice(key_metriceTemplate):
           'borrower_since': row['borrower_since'],
           'user_name': row['user_name'],
           'ascend_score': row['ascend_score'],
+          'email_id': row['email_id'],
+          'credit_limit': row['credit_limit'],
+          'mobile': user_details['mobile'],
 
         }
         result.append(combined_data)
@@ -136,6 +143,9 @@ class key_metrice(key_metriceTemplate):
           'borrower_since': row['borrower_since'],
           'user_name': row['user_name'],
           'ascend_score': row['ascend_score'],
+          'email_id': row['email_id'],
+          'credit_limit': row['credit_limit'],
+          'mobile': user_details['mobile'],
 
         }
         result.append(combined_data)
@@ -159,11 +169,11 @@ class key_metrice(key_metriceTemplate):
       # Filter items based on search text
       filtered_items = [
         item for item in self.all_items
-        if (search_text in str(item['emi_number']).lower() or
-            search_text in str(item['borrower_customer_id']).lower() or
-            search_text in item['product_name'].lower() or
-            search_text in item['borrower_full_name'].lower()or
-            search_text in item['borrower_email'].lower())
+        if (search_text in str(item['customer_id']).lower() or
+            search_text in str(item['email_id']).lower() or
+            search_text in item['user_name'].lower())
+            # search_text in item['borrower_full_name'].lower()or
+            # search_text in item['borrower_email'].lower())
       ]
       self.suggestions_panel.items = filtered_items
       self.data_grid_2.visible = True
@@ -192,6 +202,9 @@ class key_metrice(key_metriceTemplate):
           'borrower_since': row['borrower_since'],
           'user_name': row['user_name'],
           'ascend_score': row['ascend_score'],
+          'email_id': row['email_id'],
+          'credit_limit': row['credit_limit'],
+          'mobile': user_details['mobile'],
 
         }
         result.append(combined_data)

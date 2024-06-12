@@ -15,3 +15,9 @@ class ItemTemplate108(ItemTemplate108Template):
     self.init_components(**properties)
 
     # Any code you write here will run before the form opens.
+
+  def link_1_click(self, **event_args):
+    """This method is called when the link is clicked"""
+    selcted_row=self.item
+    open_form('admin.dashboard.reporting_and_analytical_modules.key_metrice.key_metricx_details',selected_row=selcted_row)
+    
