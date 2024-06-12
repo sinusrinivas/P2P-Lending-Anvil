@@ -77,7 +77,7 @@ class key_metrice(key_metriceTemplate):
           'email_id': row['email_id'],
           'credit_limit': row['credit_limit'],
           'mobile': user_details['mobile'],
-          # 'ascend_score': row['ascend_score'],
+          # 'ascend_score': row['ascend_score'a],
 
         }
         result.append(combined_data)
