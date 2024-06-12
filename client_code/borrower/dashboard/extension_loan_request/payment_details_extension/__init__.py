@@ -125,7 +125,7 @@ class payment_details_extension(payment_details_extensionTemplate):
   def calculate_payment_date(self, selected_row, current_month):
     loan_updated_status = selected_row['loan_updated_status'].lower()
 
-    if loan_updated_status in ['close', 'closed loans', 'disbursed loan', 'foreclosure']:
+    if loan_updated_status in ['closed', 'closed loans', 'disbursed', 'foreclosure']:
         loan_id = selected_row['loan_id']
 
         # Search for the row in loan_details_table based on the loan_id
@@ -192,7 +192,7 @@ class payment_details_extension(payment_details_extensionTemplate):
     loan_details_row = app_tables.fin_loan_details.get(loan_id=selected_row['loan_id'])
     if loan_details_row:
         loan_updated_status = loan_details_row['loan_updated_status'].lower()
-        if loan_updated_status in ['close', 'closed loans', 'disbursed loan', 'foreclosure']:
+        if loan_updated_status in ['closed', 'closed loans', 'disbursed', 'foreclosure']:
             loan_disbursed_timestamp = loan_details_row['loan_disbursed_timestamp']
             if loan_disbursed_timestamp:
                 # Calculate the payment date for total tenure

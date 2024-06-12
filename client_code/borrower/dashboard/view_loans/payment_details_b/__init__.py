@@ -106,7 +106,7 @@ class payment_details_b(payment_details_bTemplate):
     def calculate_payment_date(self, selected_row, current_month):
         loan_updated_status = selected_row['loan_updated_status'].lower()
     
-        if loan_updated_status in ['close', 'closed loans', 'disbursed loan', 'foreclosure']:
+        if loan_updated_status in ['closed', 'closed loans', 'disbursed', 'foreclosure']:
             try:
                 loan_disbursed_timestamp = selected_row['loan_disbursed_timestamp']
     

@@ -45,7 +45,7 @@ class dashboard(dashboardTemplate):
     my_returns = app_tables.fin_lender.get(customer_id=self.user_id)
     self.label_7.text = str(my_returns['return_on_investment'] or 0)
 
-    disbursed_loan = app_tables.fin_loan_details.search(loan_updated_status=q.like('disbursed loan%'), lender_customer_id=self.user_id)
+    disbursed_loan = app_tables.fin_loan_details.search(loan_updated_status=q.like('disbursed%'), lender_customer_id=self.user_id)
     lost_opportunities = app_tables.fin_loan_details.search(loan_updated_status=q.like('lost opportunities%'), lender_customer_id=self.user_id)
     closed = app_tables.fin_loan_details.search(loan_updated_status=q.like('close%'), lender_customer_id=self.user_id)
     extended = app_tables.fin_loan_details.search(loan_updated_status=q.like('extension%'), lender_customer_id=self.user_id)
@@ -60,12 +60,12 @@ class dashboard(dashboardTemplate):
     # Any code you write here will run before the form opens.
 
   def load_data(self, status):
-    if status == 'close':
-      closed_loans = app_tables.fin_loan_details.search(loan_updated_status=q.like('close%'), lender_customer_id=self.user_id)
+    if status == 'closed':
+      closed_loans = app_tables.fin_loan_details.search(loan_updated_status=q.like('closed%'), lender_customer_id=self.user_id)
       self.new_loan = len(closed_loans)
       self.repeating_panel_1.items = self.process_data(closed_loans)
-    elif status == 'disbursed loan':
-      disbursed_loans = app_tables.fin_loan_details.search(loan_updated_status=q.like('disbursed loan%'), lender_customer_id=self.user_id)
+    elif status == 'disbursed':
+      disbursed_loans = app_tables.fin_loan_details.search(loan_updated_status=q.like('disbursed%'), lender_customer_id=self.user_id)
       self.repeating_panel_1.items = self.process_data(disbursed_loans)
     elif status == 'under process':
       underprocess_loans = app_tables.fin_loan_details.search(loan_updated_status=q.any_of(q.like('under process%'), q.like('under process')))
