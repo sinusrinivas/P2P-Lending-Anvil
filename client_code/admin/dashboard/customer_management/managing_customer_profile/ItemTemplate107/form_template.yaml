@@ -1,10 +1,30 @@
 is_package: true
-container: {type: ColumnPanel}
+container:
+  type: ColumnPanel
+  properties: {col_widths: '{"GDFDDS":20,"NTAIFP":5,"VHIORD":15,"MOWUML":20}'}
 components:
+- name: spacer_2
+  properties: {height: 13.666656494140625}
+  type: Spacer
+  layout_properties: {grid_position: 'GUHMTH,VXURZI'}
 - name: image_1
   properties: {}
   type: Image
-  layout_properties: {grid_position: 'ABPZFN,GDFDDS'}
+  layout_properties: {grid_position: 'ABPZFN,GDFDDS ZINMKB,LHNIKJ'}
+- name: email_id
+  properties: {foreground: '', role: title}
+  type: Label
+  layout_properties: {grid_position: 'ABPZFN,GDFDDS YNKUHM,YXYXOH'}
+  data_bindings:
+  - {property: text, code: 'self.item['''']', writeback: false}
+- name: label_6
+  properties: {icon: 'fa:window-maximize', align: center}
+  type: Label
+  layout_properties: {grid_position: 'ABPZFN,GDFDDS XXNMYQ,VXFKZJ'}
+- name: spacer_1
+  properties: {height: 404}
+  type: Spacer
+  layout_properties: {grid_position: 'ABPZFN,NTAIFP'}
 - name: label_1
   properties: {role: input-prompt, spacing_below: medium, text: Name}
   type: Label
@@ -18,9 +38,25 @@ components:
   type: Label
   layout_properties: {grid_position: 'ABPZFN,VHIORD SCZQSD,MESJSE'}
 - name: label_4
-  properties: {spacing_below: medium, role: input-prompt}
+  properties: {spacing_below: medium, role: input-prompt, text: 'Alternate_email_Id:'}
   type: Label
   layout_properties: {grid_position: 'ABPZFN,VHIORD NFFCRV,GDLCDN'}
+- name: label_10
+  properties: {text: 'User type :', role: input-prompt}
+  type: Label
+  layout_properties: {grid_position: 'ABPZFN,VHIORD QSSUPD,VKSMRS'}
+- name: label_5
+  properties: {role: input-prompt, spacing_above: medium, text: 'Guarantor_name:', spacing_below: medium}
+  type: Label
+  layout_properties: {grid_position: 'ABPZFN,VHIORD TXTEYE,KFLXVO'}
+- name: label_7
+  properties: {text: Gurantot_relation, bold: false, role: input-prompt, spacing_below: medium}
+  type: Label
+  layout_properties: {grid_position: 'ABPZFN,VHIORD QPNUOL,XFDZVI'}
+- name: label_8
+  properties: {text: Guarantor_Phn_no, bold: false, role: input-prompt, spacing_below: medium}
+  type: Label
+  layout_properties: {grid_position: 'ABPZFN,VHIORD CRZUXX,OLKRJD'}
 - name: text_box_1
   properties: {}
   type: TextBox
@@ -37,3 +73,19 @@ components:
   properties: {}
   type: TextBox
   layout_properties: {grid_position: 'ABPZFN,MOWUML YMBXJT,AQDAUP'}
+- name: text_box_9
+  properties: {}
+  type: TextBox
+  layout_properties: {grid_position: 'ABPZFN,MOWUML GUMDZJ,BXKUPY'}
+- name: text_box_5
+  properties: {}
+  type: TextBox
+  layout_properties: {grid_position: 'ABPZFN,MOWUML UPCUTY,EOBGLG'}
+- name: text_box_7
+  properties: {}
+  type: TextBox
+  layout_properties: {grid_position: 'ABPZFN,MOWUML VCMDCO,CTUILY'}
+- name: text_box_6
+  properties: {}
+  type: TextBox
+  layout_properties: {grid_position: 'ABPZFN,MOWUML JCJLKM,SUFDXT'}
