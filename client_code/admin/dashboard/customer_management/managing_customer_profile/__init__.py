@@ -26,7 +26,7 @@ class managing_customer_profile(managing_customer_profileTemplate):
     if user:
       user_profile = app_tables.fin_user_profile.get(user=user)
       if user_profile:
-        self.label_1.text = user_profile['full_name']
+        self.text_box_1.text = user_profile['full_name']
         self.email_label.text = user_profile['email_user']
         self.alt_email_label.text = user_profile['another_email']
         self.photo.image = user_profile['user_photo']
