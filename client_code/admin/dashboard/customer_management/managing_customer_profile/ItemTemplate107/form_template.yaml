@@ -3,6 +3,10 @@ container:
   type: ColumnPanel
   properties: {col_widths: '{"GDFDDS":20,"NTAIFP":5,"VHIORD":15,"MOWUML":20}'}
 components:
+- name: label_5_copy
+  properties: {text: Customer details and Contact information, bold: true, align: center, role: title}
+  type: Label
+  layout_properties: {grid_position: 'YCXBFB,AQRYJF'}
 - name: spacer_2
   properties: {height: 13.666656494140625}
   type: Spacer
@@ -11,12 +15,14 @@ components:
   properties: {}
   type: Image
   layout_properties: {grid_position: 'ABPZFN,GDFDDS ZINMKB,LHNIKJ'}
+  data_bindings:
+  - {property: display_mode, code: 'self.item[''user_photo'']', writeback: false}
 - name: email_id
   properties: {foreground: '', role: title}
   type: Label
   layout_properties: {grid_position: 'ABPZFN,GDFDDS YNKUHM,YXYXOH'}
   data_bindings:
-  - {property: text, code: 'self.item['''']', writeback: false}
+  - {property: text, code: 'self.item[''email_user'']', writeback: false}
 - name: label_6
   properties: {icon: 'fa:window-maximize', align: center}
   type: Label
@@ -29,22 +35,32 @@ components:
   properties: {role: input-prompt, spacing_below: medium, text: Name}
   type: Label
   layout_properties: {grid_position: 'ABPZFN,VHIORD QFHDOM,ZIHZNB'}
+  data_bindings:
+  - {property: text, code: 'self.item[''full_name'']', writeback: false}
 - name: label_2
   properties: {role: input-prompt, spacing_below: medium, text: 'Email_Id:'}
   type: Label
   layout_properties: {grid_position: 'ABPZFN,VHIORD CGODAV,MAEBXJ'}
+  data_bindings:
+  - {property: text, code: 'self.item[''email_user'']', writeback: false}
 - name: label_3
   properties: {role: input-prompt, spacing_below: medium, text: 'Ph_no:'}
   type: Label
   layout_properties: {grid_position: 'ABPZFN,VHIORD SCZQSD,MESJSE'}
+  data_bindings:
+  - {property: text, code: 'self.item[''mobile'']', writeback: false}
 - name: label_4
   properties: {spacing_below: medium, role: input-prompt, text: 'Alternate_Email_Id:'}
   type: Label
   layout_properties: {grid_position: 'ABPZFN,VHIORD NFFCRV,GDLCDN'}
+  data_bindings:
+  - {property: text, code: 'self.item[''another_email'']', writeback: false}
 - name: label_10
   properties: {text: 'User_Type :', role: input-prompt}
   type: Label
   layout_properties: {grid_position: 'ABPZFN,VHIORD QSSUPD,VKSMRS'}
+  data_bindings:
+  - {property: text, code: 'self.item[''usertype'']', writeback: false}
 - name: label_5
   properties: {role: input-prompt, spacing_above: medium, text: 'Guarantor_name:', spacing_below: medium}
   type: Label
@@ -57,11 +73,6 @@ components:
   properties: {text: Guarantor_Phn_no, bold: false, role: input-prompt, spacing_below: medium}
   type: Label
   layout_properties: {grid_position: 'ABPZFN,VHIORD CRZUXX,OLKRJD'}
-- name: text_box_1
-  properties: {role: outlined, placeholder: ''}
-  type: TextBox
-  layout_properties: {grid_position: 'ABPZFN,MOWUML ZHYYLH,DLMUYT'}
-  data_bindings: []
 - name: text_box_2
   properties: {role: outlined}
   type: TextBox

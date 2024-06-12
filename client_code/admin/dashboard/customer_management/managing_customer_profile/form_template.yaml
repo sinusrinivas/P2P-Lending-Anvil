@@ -15,10 +15,6 @@ components:
   type: Button
   layout_properties: {grid_position: 'ZECITE,XRTMPH'}
   event_bindings: {click: button_1_click}
-- name: label_5
-  properties: {text: Customer details and Contact information, bold: true, align: center, role: title}
-  type: Label
-  layout_properties: {grid_position: 'FTCZDN,ZULYSS'}
 - name: repeating_panel_1
   properties: {item_template: admin.dashboard.customer_management.managing_customer_profile.ItemTemplate107}
   type: RepeatingPanel
