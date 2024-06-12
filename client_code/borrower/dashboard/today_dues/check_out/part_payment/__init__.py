@@ -209,7 +209,14 @@ class part_payment(part_paymentTemplate):
                       new_lender_balance = lender_balance + entered_amount
                       lender_wallet['wallet_amount'] = new_lender_balance
                       lender_wallet.update()
-  
+
+                      total_extra_fee = self.loan_details['total_extra_fee']
+                      existing_fee_rows = app_tables.fin_platform_fees.get(id = 1)
+                      if existing_fee_rows is None:
+                        app_tables.fin_platform_fees.add_row(id=1 ,platforn_returns=total_extra_fee)
+                      else:
+                        existing_fee_rows['platforn_returns'] +=total_extra_fee
+                        
                       # Update remaining amount in loan details table
                       remaining_amount = float(self.loan_details['remainining_amount']) - float(self.loan_details['for_remaining_amount_calculation']) /2
                       loan_id = self.loan_details['loan_id']

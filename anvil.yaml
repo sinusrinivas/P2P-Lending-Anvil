@@ -717,6 +717,17 @@ db_schema:
       admin_ui: {order: 0, width: 200}
       type: string
     title: fin_gender
+  fin_platform_fees:
+    client: none
+    server: full
+    columns:
+    - name: platforn_returns
+      admin_ui: {width: 200, order: 0}
+      type: number
+    - name: id
+      admin_ui: {width: 200, order: 1}
+      type: number
+    title: fin_platform_fees
   fin_lender_spouse_profession:
     title: fin_lender_spouse_profession
     client: full
