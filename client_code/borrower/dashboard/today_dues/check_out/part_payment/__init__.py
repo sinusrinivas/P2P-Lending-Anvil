@@ -145,9 +145,9 @@ class part_payment(part_paymentTemplate):
 
                   additional_fees = self.calculate_additional_fees(emi_row)
 
-                  existing_fee_rows = app_tables.fin_platform_fees.get(id = 1)
+                  existing_fee_rows = app_tables.fin_platform_fees.get()
                   if existing_fee_rows is None:
-                    app_tables.fin_platform_fees.add_row(id=1 ,platforn_returns=additional_fees)
+                    app_tables.fin_platform_fees.add_row(platforn_returns=additional_fees)
                   else:
                     existing_fee_rows['platforn_returns'] +=additional_fees
                     existing_fee_rows.update()
@@ -217,9 +217,9 @@ class part_payment(part_paymentTemplate):
                       lender_wallet.update()
 
                       total_extra_fee = self.loan_details['total_extra_fee']
-                      existing_fee_rows = app_tables.fin_platform_fees.get(id = 1)
+                      existing_fee_rows = app_tables.fin_platform_fees.get()
                       if existing_fee_rows is None:
-                        app_tables.fin_platform_fees.add_row(id=1 ,platforn_returns=total_extra_fee)
+                        app_tables.fin_platform_fees.add_row(platforn_returns=total_extra_fee)
                       else:
                         existing_fee_rows['platforn_returns'] +=total_extra_fee
                         existing_fee_rows.update()
