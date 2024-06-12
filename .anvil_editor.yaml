@@ -84,7 +84,6 @@ unique_ids:
     admin.dashboard.admin_management.view_admins.ItemTemplate91: '1712062627271930406124276.6708'
     admin.dashboard.manage_cms.add_general_dropdowns.ItemTemplate67: '1710398612422247001502472.58334'
     borrower.dashboard.application_tracker.RowTemplate1: G55TKSKHQNKZFMESMX3GICOWWGDJPMOM
-    admin.dashboard.customer_management.managing_customer_profile.ItemTemplate108: '1718169564920777546324051.0745'
     admin.dashboard: '1699523403306752264878574.3744'
     lendor.dashboard.RowTemplate30: '1716268894345241938027492.90372'
     lendor.dashboard.change_password: '1699967346365452645084641.901'
@@ -220,7 +219,6 @@ unique_ids:
     admin.dashboard.manage_cms.add_borrower_dropdown_details.edit_emp_type: '1706120069272161322948438.19217'
     wallet.wallet.RowTemplate25: '1703498985331318465098761.16345'
     lendor.dashboard.view_lost_oppurtunities.view_details_2: '1704969544196875847828406.0798'
-    admin.dashboard.customer_management.managing_customer_profile.ItemTemplate111: '1718169616051227207555874.21838'
     admin.dashboard.borrowers: '1699528468358308523806957.0701'
     borrower.ots_dashboard.my_loans: '1707806512087771651780889.4843'
     admin.dashboard.manage_cms.add_borrower_dropdown_details.ItemTemplate5: '1706093183750571249667783.6285'

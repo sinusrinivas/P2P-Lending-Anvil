@@ -19,41 +19,8 @@ components:
   properties: {text: Customer details and Contact information, bold: true, align: center, role: title}
   type: Label
   layout_properties: {grid_position: 'FTCZDN,ZULYSS'}
-- name: image_1
-  properties: {}
-  type: Image
-  layout_properties: {grid_position: 'TEJXIJ,YFXBIG'}
-- name: label_3
-  properties: {role: input-prompt, spacing_below: medium}
-  type: Label
-  layout_properties: {grid_position: 'TEJXIJ,ZCBTXF EFXKIX,VCKPUP'}
-- name: label_4
-  properties: {role: input-prompt}
-  type: Label
-  layout_properties: {grid_position: 'TEJXIJ,ZCBTXF PYOVSS,AIPGXI'}
-- name: label_2
-  properties: {role: input-prompt, spacing_below: medium}
-  type: Label
-  layout_properties: {grid_position: 'TEJXIJ,ZCBTXF AWCYHN,CQIRAL'}
-- name: text_box_2
-  properties: {}
-  type: TextBox
-  layout_properties: {grid_position: 'TEJXIJ,GFOENX CMFLDS,UUUPBC'}
-- name: text_box_1
-  properties: {}
-  type: TextBox
-  layout_properties: {grid_position: 'TEJXIJ,GFOENX HPKLUU,UIWAEF'}
-- name: text_box_3
-  properties: {}
-  type: TextBox
-  layout_properties: {grid_position: 'TEJXIJ,GFOENX GFSHPJ,JPPXDV'}
-- name: column_panel_1
-  properties: {}
-  type: ColumnPanel
-  layout_properties: {grid_position: 'EGGXFC,YNNBEO'}
-  components:
-  - name: repeating_panel_1
-    properties: {item_template: admin.dashboard.customer_management.managing_customer_profile.ItemTemplate111}
-    type: RepeatingPanel
-    layout_properties: {grid_position: 'NIPRYX,MHOIYH'}
+- name: repeating_panel_1
+  properties: {item_template: admin.dashboard.customer_management.managing_customer_profile.ItemTemplate107}
+  type: RepeatingPanel
+  layout_properties: {grid_position: 'CBKEWA,ETUMCD'}
 is_package: true
