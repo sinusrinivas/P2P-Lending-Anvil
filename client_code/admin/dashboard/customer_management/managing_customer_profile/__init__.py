@@ -14,8 +14,12 @@ class managing_customer_profile(managing_customer_profileTemplate):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
     user = anvil.users.get_user()
+    print("anvil server")
+    print(anvil.users.get_user())
     if user:
       user_profile = app_tables.fin_user_profile.get(user=user)
+      print("print user_profile details")
+      print("app_tables.fin_user_profile.get(user=user)")
       if user_profile:
         self.text_box_1.text = user_profile['full_name']
         self.text_box_2.text = user_profile['email_user']

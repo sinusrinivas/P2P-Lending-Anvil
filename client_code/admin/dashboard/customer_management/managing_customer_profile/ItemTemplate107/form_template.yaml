@@ -30,19 +30,19 @@ components:
   type: Label
   layout_properties: {grid_position: 'ABPZFN,VHIORD QFHDOM,ZIHZNB'}
 - name: label_2
-  properties: {role: input-prompt, spacing_below: medium, text: 'Email Id:'}
+  properties: {role: input-prompt, spacing_below: medium, text: 'Email_Id:'}
   type: Label
   layout_properties: {grid_position: 'ABPZFN,VHIORD CGODAV,MAEBXJ'}
 - name: label_3
-  properties: {role: input-prompt, spacing_below: medium, text: 'Ph no:'}
+  properties: {role: input-prompt, spacing_below: medium, text: 'Ph_no:'}
   type: Label
   layout_properties: {grid_position: 'ABPZFN,VHIORD SCZQSD,MESJSE'}
 - name: label_4
-  properties: {spacing_below: medium, role: input-prompt, text: 'Alternate_email_Id:'}
+  properties: {spacing_below: medium, role: input-prompt, text: 'Alternate_Email_Id:'}
   type: Label
   layout_properties: {grid_position: 'ABPZFN,VHIORD NFFCRV,GDLCDN'}
 - name: label_10
-  properties: {text: 'User type :', role: input-prompt}
+  properties: {text: 'User_Type :', role: input-prompt}
   type: Label
   layout_properties: {grid_position: 'ABPZFN,VHIORD QSSUPD,VKSMRS'}
 - name: label_5
@@ -50,7 +50,7 @@ components:
   type: Label
   layout_properties: {grid_position: 'ABPZFN,VHIORD TXTEYE,KFLXVO'}
 - name: label_7
-  properties: {text: Gurantot_relation, bold: false, role: input-prompt, spacing_below: medium}
+  properties: {text: Gurantot_Relation, bold: false, role: input-prompt, spacing_below: medium}
   type: Label
   layout_properties: {grid_position: 'ABPZFN,VHIORD QPNUOL,XFDZVI'}
 - name: label_8

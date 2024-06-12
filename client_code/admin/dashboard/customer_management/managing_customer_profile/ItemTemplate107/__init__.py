@@ -20,13 +20,14 @@ class ItemTemplate107(ItemTemplate107Template):
     self.add_component(self.label_1)
     
     # Add a Label component for the email
-    self.label_2 = Label(text="Email", align="left", bold=True)
+    self.label_2 = Label(text="Email_Id:", align="left", bold=True)
     self.add_component(self.label_2)
     
     # Add a Label component for the alternate email
-    self.label_4 = Label(text="Alternate Email", align="left", bold=True)
+    self.label_4 = Label(text="Alternate_Email_Id:", align="left", bold=True)
     self.add_component(self.label_4)
-    
+
+    self.label_10 = Label(text="User_Type :")
     # Add an Image component for the photo
     self.image_1 = Image(source=None)
     self.add_component(self.image_1)
