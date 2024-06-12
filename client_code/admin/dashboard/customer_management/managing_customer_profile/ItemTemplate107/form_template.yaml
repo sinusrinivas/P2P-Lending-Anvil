@@ -18,7 +18,7 @@ components:
   data_bindings:
   - {property: source, code: 'self.item[''user_photo'']', writeback: false}
 - name: email_id
-  properties: {foreground: '', role: title}
+  properties: {foreground: '', role: title, align: center}
   type: Label
   layout_properties: {grid_position: 'ABPZFN,GDFDDS YNKUHM,YXYXOH'}
   data_bindings:
