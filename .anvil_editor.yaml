@@ -127,6 +127,7 @@ unique_ids:
     ? borrower.borrower_registration_forms.star_1_borrower_registration_form_2_employment.star_1_borrower_registration_form_2_employment_business_3
     : '17005720020403876226355.3249187'
     lendor.lendor_registration_forms.lender_registration_form_2.lender_registration_Institutional_form_1: '169943001612031275948388.34513'
+    borrower.dashboard.borrower_portfolio.ItemTemplate108: '1718186793018334000590105.44525'
     admin.dashboard.manage_cms.add_lender_dropdown_details.edit_business: '1706531698832276711382247.1159'
     admin.dashboard.manage_cms.add_borrower_dropdown_details.edit_self_employment: '1710486790154325232699221.4916'
     bank_users.main_form.login_page: '1712900867970808840585191.2252'

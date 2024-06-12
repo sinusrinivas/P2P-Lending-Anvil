@@ -20,7 +20,7 @@ components:
   layout_properties: {grid_position: 'DLVVVC,SUFPQK', full_width_row: true}
   name: navigation_form_dashboard_1
 - name: content
-  properties: {role: null, col_widths: '{"MAGBNJ":15,"BFAXDK":10,"RGDCVK":50,"SRGUSZ":50,"OGIWXH":10,"NNVFZT":70,"JIOUKC":2,"NMKPDV":58}'}
+  properties: {role: null, col_widths: '{"MAGBNJ":20,"BFAXDK":15,"RGDCVK":55,"SRGUSZ":50,"OGIWXH":10,"NNVFZT":65,"JIOUKC":2,"NMKPDV":58,"SOEZZV":10}'}
   type: ColumnPanel
   layout_properties: {grid_position: 'NQNCOI,EZAHVH', full_width_row: true}
   components:
@@ -37,7 +37,7 @@ components:
     layout_properties: {grid_position: 'NYVYTO,NMKPDV GWBIHR,OGIWXH'}
     event_bindings: {click: button_1_click}
     name: button_1
-  - properties: {height: 32}
+  - properties: {height: 17.333343505859375}
     type: Spacer
     layout_properties: {grid_position: 'NYVYTO,NMKPDV SZQXND,BFAXDK ZDIIVF,BJCDXS', full_width_row: true}
     name: spacer_1
@@ -122,6 +122,10 @@ components:
       properties: {height: 32}
       type: Spacer
       layout_properties: {grid_position: 'AEGTVN,LWVPIC TKFFLV,TXJWER'}
+  - name: spacer_5
+    properties: {height: 32}
+    type: Spacer
+    layout_properties: {grid_position: 'NYVYTO,NMKPDV SZQXND,SOEZZV', full_width_row: true}
   - properties: {height: '40'}
     type: Spacer
     layout_properties: {grid_position: 'NYVYTO,NMKPDV TZWGFG,NCGYJK'}
@@ -130,9 +134,13 @@ components:
     type: Label
     layout_properties: {grid_position: 'NYVYTO,NMKPDV IOEXCT,MAGBNJ', full_width_row: true}
     name: label_1
+  - name: spacer_2
+    properties: {height: 3.111083984375}
+    type: Spacer
+    layout_properties: {grid_position: 'NYVYTO,NMKPDV IOEXCT,NNVFZT INQGCF,TKHQFH'}
   - properties: {}
     type: Label
-    layout_properties: {grid_position: 'NYVYTO,NMKPDV IOEXCT,NNVFZT'}
+    layout_properties: {grid_position: 'NYVYTO,NMKPDV IOEXCT,NNVFZT LKGGSZ,XHAEPA'}
     name: label_5
 - properties: {height: 0.99993896484375}
   type: Spacer
