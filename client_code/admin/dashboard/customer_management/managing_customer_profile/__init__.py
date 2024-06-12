@@ -13,20 +13,16 @@ class managing_customer_profile(managing_customer_profileTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
-    user = anvil.users.get_user()
-    print("anvil server")
-    print(anvil.users.get_user())
-    if user:
-      user_profile = app_tables.fin_user_profile.get(user=user)
-      print("print user_profile details")
-      print("app_tables.fin_user_profile.get(user=user)")
-      if user_profile:
-        self.text_box_1.text = user_profile['full_name']
-        self.text_box_2.text = user_profile['email_user']
-        self.email_id.text = user_profile['email_user']
-        self.text_box_3.text = user_profile['mobile']
-        self.text_box_4.text = user_profile['another_email']
-        self.image_1 = user_profile['user_photo']
+
+        # Load the customer data from the data tables
+    self.load_customer_data()
+
+  def load_customer_data(self):
+    # Fetch the customer data from the data tables
+    user_profile = app_tables.fin_user_profile.search()
+    # Set the items property of the repeating panel to the fetched data
+    self.repeating_panel_1.items = user_profile
+
   
   def button_1_click(self, **event_args):
     """This method is called when the button is clicked"""
