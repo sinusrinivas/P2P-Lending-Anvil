@@ -18,7 +18,7 @@ class my_returns(my_returnsTemplate):
 
     def create_bar_chart(self):
         # Fetch investment data for the specific user
-        investments = app_tables.fin_loan_details.search(loan_updated_status=q.like('close%'), lender_customer_id=self.user_id)
+        investments = app_tables.fin_loan_details.search(loan_updated_status=q.like('closed%'), lender_customer_id=self.user_id)
         
         # Debugging: Print fetched investments
         print(f"Fetched investments for user {self.user_id}: {list(investments)}")

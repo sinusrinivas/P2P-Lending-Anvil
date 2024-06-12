@@ -885,7 +885,7 @@ class check_out(check_outTemplate):
                           loan_details['remaining_amount'] = round(remaining_amount ,2)
                         loan_details['total_amount_paid'] += round(total_emi_amount ,2)
                         if loan_details['remaining_amount'] <= 0:
-                          loan_details['loan_updated_status'] = 'close'
+                          loan_details['loan_updated_status'] = 'closed'
                           
                           lender_data = app_tables.fin_lender.get(customer_id=self.selected_row['lender_customer_id'])
                           if lender_data:

@@ -14,7 +14,7 @@ class closed_loans(closed_loansTemplate):
     self.init_components(**properties)
 
     # Any code you write here will run before the form opens.
-    self.data = app_tables.fin_loan_details.search(loan_updated_status=q.like('close%'))
+    self.data = app_tables.fin_loan_details.search(loan_updated_status=q.like('closed%'))
 
     self.result = []
     for loan in self.data:

@@ -13,5 +13,29 @@ class RowTemplate32(RowTemplate32Template):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
+    print("id", self.item['customer_id'])
 
-    # Any code you write here will run before the form opens.
+    # Assuming self.item contains the row data
+    disbursed_list = list(app_tables.fin_loan_details.search(lender_customer_id=self.item['customer_id']))
+    disbursed = disbursed_list[0] if disbursed_list else None
+    
+    if disbursed:
+        self.status = disbursed['loan_updated_status']
+        print(f"Status for customer {self.item['customer_id']}: {self.status}")
+    else:
+        self.status = None
+        print(f"No disbursed record found for customer {self.item['customer_id']}")
+    
+    # Set visibility based on the status
+    if self.status == "disbursed ":
+        self.portfolio.visible = True
+        print(f"Link visible for customer {self.item['customer_id']}: {self.portfolio.visible}")
+    else:
+        self.portfolio.visible = False
+        print(f"Link not visible for customer {self.item['customer_id']}: {self.portfolio.visible}")
+    
+  def portfolio_click(self, **event_args):
+      """This method is called when the link is clicked"""
+      selected_row = self.item
+      open_form('lendor.dashboard.lender_portfolio', selected_row=selected_row)
+    

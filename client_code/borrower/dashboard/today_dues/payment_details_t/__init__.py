@@ -200,7 +200,7 @@ class payment_details_t(payment_details_tTemplate):
         
           loan_updated_status = selected_row['loan_updated_status'].lower() if selected_row['loan_updated_status'] else None
           # Checking if loan_updated_status is 'close' before proceeding with date manipulation
-          if loan_updated_status in ['close', 'closed loans', 'disbursed loan', 'foreclosure']:
+          if loan_updated_status in ['closed', 'closed loans', 'disbursed', 'foreclosure']:
               formatted_payment_date_datetime = datetime.strptime(formatted_payment_date, '%Y-%m-%d')
           
               if selected_row['emi_payment_type'] == 'Three Months':
@@ -263,7 +263,7 @@ class payment_details_t(payment_details_tTemplate):
         loan_updated_status = selected_row['loan_updated_status'].lower()
         print("Loan Updated Status:", loan_updated_status)
 
-        if loan_updated_status in ['close', 'closed loans', 'disbursed loan', 'foreclosure']:
+        if loan_updated_status in ['closed', 'closed loans', 'disbursed', 'foreclosure']:
             try:
                 loan_disbursed_timestamp = selected_row['loan_disbursed_timestamp']
                 emi_payment_type = selected_row['emi_payment_type']
