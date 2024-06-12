@@ -16,7 +16,7 @@ class revenue_share(revenue_shareTemplate):
 
   def load_data(self, status):
     if status == 'close':
-      closed_loans = app_tables.fin_loan_details.search(loan_updated_status=q.like('close%'))
+      closed_loans = app_tables.fin_loan_details.search(loan_updated_status=q.like('closed%'))
       self.new_loan = len(closed_loans)
       self.repeating_panel_1.items = self.process_data(closed_loans)
 

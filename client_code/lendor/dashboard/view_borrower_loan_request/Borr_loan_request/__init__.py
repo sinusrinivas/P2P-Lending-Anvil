@@ -441,12 +441,12 @@ class Borr_loan_request(Borr_loan_requestTemplate):
                     q.like('Under Process%'),
                     q.like('Approved%'),
                     q.like('approved%'),
-                    q.like('accept%'),
+                    q.like('accepted%'),
                     q.like('foreclosure%'),
-                    q.like('close%'),
-                    q.like('Close%'),
+                    q.like('closed%'),
+                    q.like('Closed%'),
                     q.like('closed loans%'),
-                    q.like('disbursed loan%'),
+                    q.like('disbursed%'),
                     q.like('Disbursed loan%')
                 )
             )
@@ -457,7 +457,7 @@ class Borr_loan_request(Borr_loan_requestTemplate):
             closed_loans = app_tables.fin_loan_details.search(
                 borrower_customer_id=borrower_customer,
                 loan_updated_status=q.any_of(
-                    q.like('close%'),
+                    q.like('closed%'),
                     q.like('Close%'),
                     q.like('closed loans%')
                 ))
@@ -652,7 +652,7 @@ class Borr_loan_request(Borr_loan_requestTemplate):
             transfer_money(lender_id=self.lender_customer_id, borrower_id=entered_borrower_customer_id, transfer_amount=loan_amount)
             
             # You may want to update the loan_updated_status here if needed
-            updated_loan_status = 'disbursed loan'
+            updated_loan_status = 'disbursed'
             loan_row['loan_updated_status'] = updated_loan_status
             # Save the changes to the loan_row
             loan_row.update()

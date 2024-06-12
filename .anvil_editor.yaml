@@ -127,6 +127,7 @@ unique_ids:
     ? borrower.borrower_registration_forms.star_1_borrower_registration_form_2_employment.star_1_borrower_registration_form_2_employment_business_3
     : '17005720020403876226355.3249187'
     lendor.lendor_registration_forms.lender_registration_form_2.lender_registration_Institutional_form_1: '169943001612031275948388.34513'
+    borrower.dashboard.borrower_portfolio.ItemTemplate108: '1718186793018334000590105.44525'
     admin.dashboard.manage_cms.add_lender_dropdown_details.edit_business: '1706531698832276711382247.1159'
     admin.dashboard.manage_cms.add_borrower_dropdown_details.edit_self_employment: '1710486790154325232699221.4916'
     bank_users.main_form.login_page: '1712900867970808840585191.2252'
@@ -302,7 +303,6 @@ unique_ids:
     borrower.dashboard.today_dues.payment_details_t: Z2HBMIARMVXDAUCI63IT56ARRGJKDSV2
     bank_users.main_form.products_main_form.personal_loan.home_renovation_loan: '1713938826548976634706020.7678'
     borrower.dashboard.new_loan_request: YEMASWKVMGUFBFTK4UDB7RNEIXH4XV64
-    borrower.dashboard.borrower_portfolio_first_page.RowTemplate31: '1717671802810266637024000.58243'
     admin.dashboard.manage_cms.add_general_dropdowns.edit_present_address: '171040037015774293132137.13895'
     borrower.dashboard.extension_loan_request.ItemTemplate75: NKSJCQVDYQAQURMW6GFWGEYLX46WKZG3
     borrower.dashboard.extension_loan_request.payment_details_extension.RowTemplate39: S3VFLC5NDKKOGKHRTN7HZVE4DEZRMQRH
