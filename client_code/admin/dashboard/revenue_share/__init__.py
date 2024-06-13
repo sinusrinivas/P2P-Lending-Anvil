@@ -13,11 +13,11 @@ class revenue_share(revenue_shareTemplate):
     self.init_components(**properties)
     self.load_data()
 
-  def load_data(self, status):
-    if status == 'close':
-      closed_loans = app_tables.fin_loan_details.search(loan_updated_status=q.like('closed%'))
-      self.new_loan = len(closed_loans)
-      self.repeating_panel_1.items = self.process_data(closed_loans)
+  # def load_data(self, status):
+  #   if status == 'close':
+  #     closed_loans = app_tables.fin_loan_details.search(loan_updated_status=q.like('closed%'))
+  #     self.new_loan = len(closed_loans)
+  #     self.repeating_panel_1.items = self.process_data(closed_loans)
   def load_data(self):
     lenders = app_tables.fin_lender.search()
     customer_details = []
