@@ -30,7 +30,7 @@ components:
     - name: add_people
       properties:
         text: |
-          Tracks Loan
+          Track Loan
            Disbursements
         font_size: 16
         foreground: black
@@ -40,10 +40,43 @@ components:
       type: Button
       layout_properties: {grid_position: 'GMECOB,ATAMRQ'}
       event_bindings: {click: button_9_click}
+  - name: content_panel_copy_copy_3_copy_3_copy_copy_copy_2_copy_5_copy
+    properties: {col_widths: '{}', background: white, role: elevated-card}
+    type: ColumnPanel
+    layout_properties: {grid_position: 'LKTWOF,LRMGVL RCKIQE,EPONGI'}
+    components:
+    - name: image_1
+      properties: {height: '100'}
+      type: Image
+      layout_properties: {grid_position: 'SKGFSP,HILRYH'}
+    - name: button_2
+      properties: {text: MIS/Generates financial reports, bold: true, foreground: black, font_size: 16}
+      type: Button
+      layout_properties: {grid_position: 'ILNOUR,HSOMCL'}
+  - name: content_panel_copy_copy_3_copy_3_copy_copy_copy_2_copy_10
+    properties: {col_widths: '{}', background: white, role: elevated-card}
+    type: ColumnPanel
+    layout_properties: {grid_position: 'LKTWOF,PPLSYB'}
+    components:
+    - name: image_4_copy_10
+      properties: {source: _/theme/admin/dashboard/accounting/interest-accruals.png, display_mode: shrink_to_fit, height: '100', visible: true}
+      type: Image
+      layout_properties: {grid_position: 'QGZTNW,PVJEPO'}
+      event_bindings: {mouse_up: image_4_copy_10_mouse_up}
+    - name: button_1
+      properties:
+        text: "Interest \nAccruals\n"
+        font_size: 16
+        foreground: black
+        bold: true
+        visible: true
+      type: Button
+      layout_properties: {grid_position: 'TFDFVQ,VTCDTE'}
+      event_bindings: {click: button_14_click}
   - name: content_panel_copy_copy_3_copy_3_copy_copy_copy_4
     properties: {col_widths: '{}', background: white, role: elevated-card}
     type: ColumnPanel
-    layout_properties: {grid_position: 'LKTWOF,LRMGVL OEYJGQ,ZDMLRN'}
+    layout_properties: {grid_position: 'LKTWOF,PPLSYB PPSSWH,TACSPP'}
     components:
     - name: image_7
       properties: {source: _/theme/admin/dashboard/manage-revenue-share.png, display_mode: shrink_to_fit, height: '100'}
@@ -61,49 +94,10 @@ components:
       type: Button
       layout_properties: {grid_position: 'KZEJQV,HXGEOK'}
       event_bindings: {click: button_20_click}
-  - name: content_panel_copy_copy_3_copy_3_copy_copy_copy_2_copy_10
-    properties: {col_widths: '{}', background: white, role: elevated-card}
-    type: ColumnPanel
-    layout_properties: {grid_position: 'LKTWOF,PPLSYB TJRKPV,YIAZZS'}
-    components:
-    - name: image_4_copy_10
-      properties: {source: _/theme/admin/dashboard/accounting/interest-accruals.png, display_mode: shrink_to_fit, height: '100', visible: true}
-      type: Image
-      layout_properties: {grid_position: 'QGZTNW,PVJEPO'}
-      event_bindings: {mouse_up: image_4_copy_10_mouse_up}
-    - name: button_1
-      properties:
-        text: "Interest \nAccruals\n"
-        font_size: 16
-        foreground: black
-        bold: true
-        visible: true
-      type: Button
-      layout_properties: {grid_position: 'TFDFVQ,VTCDTE'}
-      event_bindings: {click: button_14_click}
-  - name: content_panel_copy_copy_3_copy_3_copy_copy_copy_2_copy_5_copy
-    properties: {col_widths: '{}', background: white, role: elevated-card}
-    type: ColumnPanel
-    layout_properties: {grid_position: 'LKTWOF,PPLSYB NUIVLQ,RRVSWF'}
-    components:
-    - name: image_1
-      properties: {height: '100'}
-      type: Image
-      layout_properties: {grid_position: 'SKGFSP,HILRYH'}
-    - name: button_2
-      properties:
-        text: |-
-          Generates Financial
-           Reports
-        bold: true
-        foreground: black
-        font_size: 16
-      type: Button
-      layout_properties: {grid_position: 'ILNOUR,HSOMCL'}
   - name: content_panel_copy_copy_3_copy_3_copy_copy_copy_2_copy_5
     properties: {col_widths: '{}', background: white, role: elevated-card}
     type: ColumnPanel
-    layout_properties: {grid_position: 'LKTWOF,FPVXBC'}
+    layout_properties: {grid_position: 'LKTWOF,FPVXBC ZULBKL,ZYEODP'}
     components:
     - name: image_4_copy_5
       properties: {source: _/theme/admin/dashboard/accounting/%20payment-receipts.png, display_mode: shrink_to_fit, height: '100', visible: true}
@@ -120,6 +114,25 @@ components:
       type: Button
       layout_properties: {grid_position: 'TNRHQQ,HOQMDP'}
       event_bindings: {click: button_11_click}
+  - name: content_panel_copy_copy_3_copy_3_copy_copy_copy_12
+    properties: {col_widths: '{}', background: white, role: elevated-card}
+    type: ColumnPanel
+    layout_properties: {grid_position: 'LKTWOF,FPVXBC XICDTC,AYUQTU'}
+    components:
+    - name: image_11
+      properties: {source: _/theme/admin/dashboard/performance-tracker.png, display_mode: shrink_to_fit, height: '100'}
+      type: Image
+      layout_properties: {grid_position: 'RBAQZF,WYVSVW'}
+      event_bindings: {mouse_up: image_11_mouse_up}
+    - name: button_22
+      properties:
+        text: "Performance \nTracker"
+        foreground: black
+        bold: true
+        font_size: 15
+      type: Button
+      layout_properties: {grid_position: 'XATRPB,LFKIEK'}
+      event_bindings: {click: button_22_click}
   - name: spacer_5
     properties: {height: '3'}
     type: Spacer

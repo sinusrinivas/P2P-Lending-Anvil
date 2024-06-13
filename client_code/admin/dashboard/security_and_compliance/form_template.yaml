@@ -50,9 +50,9 @@ components:
       event_bindings: {mouse_up: image_4_copy_10_mouse_up}
     - name: button_1
       properties:
-        text: |-
-          Secure Data
-           Vault
+        text: |2-
+           Data
+           Security
         font_size: 16
         foreground: black
         bold: true
@@ -72,7 +72,9 @@ components:
       event_bindings: {mouse_up: image_4_copy_5_mouse_up}
     - name: view_people
       properties:
-        text: "Manage User Access \nand Authorization"
+        text: |-
+          Access
+          Management
         font_size: 16
         foreground: black
         bold: true

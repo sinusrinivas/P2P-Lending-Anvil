@@ -90,7 +90,7 @@ components:
       event_bindings: {mouse_up: image_4_copy_5_mouse_up}
     - name: view_people
       properties:
-        text: "Collection \nHandling"
+        text: " Handle Collection \nProcess"
         font_size: 16
         foreground: black
         bold: true
