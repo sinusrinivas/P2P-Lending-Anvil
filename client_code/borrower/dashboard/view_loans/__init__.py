@@ -20,7 +20,7 @@ class view_loans(view_loansTemplate):
           # Retrieve and display open loans
           open_loans = app_tables.fin_loan_details.search(
               loan_updated_status=q.any_of(
-                  q.like('disbursed loan%'),
+                  q.like('disbursed%'),
                   q.like('foreclosure%'),
                   q.like('extension%')
               ),
@@ -30,12 +30,12 @@ class view_loans(view_loansTemplate):
           self.label_5.text = str(len(self.repeating_panel_6.items))
   
           # Retrieve and display closed loans
-          closed_loans = app_tables.fin_loan_details.search(loan_updated_status=q.like('close%'), borrower_customer_id=self.user_id)
+          closed_loans = app_tables.fin_loan_details.search(loan_updated_status=q.like('closed%'), borrower_customer_id=self.user_id)
           self.repeating_panel_7.items = self.process_data(closed_loans)
           self.label_6.text = str(len(self.repeating_panel_7.items))
   
           # Retrieve and display rejected loans
-          rejected_loans = app_tables.fin_loan_details.search(loan_updated_status=q.like('reject%'), borrower_customer_id=self.user_id)
+          rejected_loans = app_tables.fin_loan_details.search(loan_updated_status=q.like('rejected%'), borrower_customer_id=self.user_id)
           self.repeating_panel_8.items = self.process_data(rejected_loans)
           self.label_7.text = str(len(self.repeating_panel_8.items))
   

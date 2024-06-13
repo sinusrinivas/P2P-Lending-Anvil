@@ -23,7 +23,7 @@ class extension_loan_request(extension_loan_requestTemplate):
             user_id = user_profile['customer_id']
             # Filter loan_details table based on the current user's ID
             try:
-                customer_loans = app_tables.fin_loan_details.search(loan_updated_status=q.any_of("disbursed loan", "extension"), borrower_customer_id=user_id)
+                customer_loans = app_tables.fin_loan_details.search(loan_updated_status=q.any_of("disbursed", "extension"), borrower_customer_id=user_id)
                 loans = []
                 for loan in customer_loans:
                     lender_details = app_tables.fin_user_profile.get(customer_id=loan['lender_customer_id'])
