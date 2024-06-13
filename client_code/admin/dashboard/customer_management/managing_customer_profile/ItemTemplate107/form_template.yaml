@@ -3,10 +3,6 @@ container:
   type: ColumnPanel
   properties: {col_widths: '{"GDFDDS":20,"NTAIFP":5,"VHIORD":15,"MOWUML":20}'}
 components:
-- name: label_5_copy
-  properties: {text: Customer details and Contact information, bold: true, align: center, role: title}
-  type: Label
-  layout_properties: {grid_position: 'UEHIVQ,PRKUHD'}
 - name: spacer_2
   properties: {height: 22.888885498046875}
   type: Spacer
