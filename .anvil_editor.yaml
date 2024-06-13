@@ -491,6 +491,7 @@ unique_ids:
     bank_users/personal_loan/online-prsnl-process-icon1.png: '171274865291374898641856.82738'
     bank_users/personal_loan/medical_loan/.gitkeep: '171593011778866831156652.6747'
     bank_users/personal_loan/home_renovation_loan/wall.png: '1716977951450159227287968.56677'
+    admin/dashboard/collateral_manage/valuation.png: '1718280581512580176000253.5408'
     bank_users/main_form/business_loan/Office-equipment.png: '1712296865172584464655789.9768'
     bank_users/main_form/comunity.svg: '1712231946149404997536751.5215'
     bank_users/personal_loan/home_renovation_loan/home renovation.png: '1713331821371942896792005.2495'
@@ -595,6 +596,7 @@ unique_ids:
     lender/dashboard/withdraw (2).png: '1717072968877377905474369.433'
     bank_users/personal_loan/home_renovation_loan/home loan 4.png: '1713938943738803837298821.44'
     borrower/dashboard/borrower_credit_limit.png: '1716286643090611547656559.6545'
+    admin/dashboard/collateral_manage/.gitkeep: '1718280525760736517742029.9607'
     bank_users/personal_loan/education_loan/EL-eligibility3.png: '1714131852200225274930182.27673'
     admin/dashboard/manage-borrowers.png: MO552AGM5LW2QRRYFB4QKLZQZO4SFJTG
     admin/dashboard/manage_cms/.gitkeep: O5ODCAZ3GJUXRX3TZYNSWRQEL6S3NLCA
@@ -825,6 +827,7 @@ unique_ids:
     bank_users/personal_loan/travel_loan/travel_loan1.jpg: '1713506572381433058503514.6397'
     lender/dashboard/my returns (3).png: '1716375362953386895010598.0775'
     bank_users/personal_loan/personal loan1.jpg: '1713158653431849890589185.7283'
+    admin/dashboard/collateral_manage/collateral-management.png: '1718280559953879036761924.6664'
     bank_users/main_form/about_us/about_ascends.png: '1712288671889400894103928.16595'
     bank_users/user_form/Screenshot 2023-11-26 225141.png: '1701019538756291370690959.91077'
     bank_users/main_form/about_us/3rd1.jpg: '1716186777146571825492134.7399'

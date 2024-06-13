@@ -23,7 +23,7 @@ components:
     layout_properties: {grid_position: 'QXDHSV,BJNKHK'}
     components:
     - name: image_4_copy_5
-      properties: {source: '', display_mode: shrink_to_fit, height: '100', visible: true}
+      properties: {source: _/theme/admin/dashboard/collateral_manage/collateral-management.png, display_mode: shrink_to_fit, height: '100', visible: true}
       type: Image
       layout_properties: {grid_position: 'QGZTNW,PVJEPO'}
       event_bindings: {mouse_up: image_4_copy_5_mouse_up}
@@ -42,7 +42,7 @@ components:
     layout_properties: {grid_position: 'QXDHSV,HYCLFA'}
     components:
     - name: image_1
-      properties: {height: '100'}
+      properties: {height: '100', source: _/theme/admin/dashboard/collateral_manage/valuation.png}
       type: Image
       layout_properties: {grid_position: 'QWEMGI,KCPECG'}
     - name: button_2
