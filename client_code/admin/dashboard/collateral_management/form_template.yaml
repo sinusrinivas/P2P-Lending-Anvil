@@ -1,7 +1,51 @@
 container: {type: ColumnPanel}
 components:
-- name: home_button_admin_1
-  properties: {}
-  type: form:admin.dashboard.home_button_admin
-  layout_properties: {grid_position: 'OMRJDJ,GIJHME', full_width_row: true}
+- name: content_panel_copy_copy_3_copy_3_copy_copy_copy_copy
+  properties: {col_widths: '{"FPVXBC":25,"TKKLJH":18,"WPTHSG":20}', background: '#Edf0f4', role: null}
+  type: ColumnPanel
+  layout_properties: {grid_position: 'ZUOEEB,QEGCPV', full_width_row: true}
+  components:
+  - name: home_button_admin_1
+    properties: {}
+    type: form:admin.dashboard.home_button_admin
+    layout_properties: {grid_position: 'MFYBQV,XRFWTM', full_width_row: true}
+  - name: label_1
+    properties: {role: null, bold: true, align: center, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: 30, tooltip: '', text: Collateral Management}
+    type: Label
+    layout_properties: {grid_position: 'CSBUFF,JYJQNW'}
+  - name: spacer_4
+    properties: {height: '3'}
+    type: Spacer
+    layout_properties: {grid_position: 'UEOLFA,AWCGTS'}
+  - name: spacer_2
+    properties: {height: 32}
+    type: Spacer
+    layout_properties: {grid_position: 'LKTWOF,WPTHSG'}
+  - name: content_panel_copy_copy_3_copy_3_copy_copy_copy_2_copy_5
+    properties: {col_widths: '{}', background: white, role: elevated-card}
+    type: ColumnPanel
+    layout_properties: {grid_position: 'LKTWOF,FPVXBC'}
+    components:
+    - name: image_4_copy_5
+      properties: {source: '', display_mode: shrink_to_fit, height: '140', visible: true}
+      type: Image
+      layout_properties: {grid_position: 'QGZTNW,PVJEPO'}
+      event_bindings: {mouse_up: image_4_copy_5_mouse_up}
+    - name: button_1
+      properties: {text: Collateral Control, foreground: black, font_size: 16, bold: true}
+      type: Button
+      layout_properties: {grid_position: 'KFXNFT,LHUYKF'}
+      event_bindings: {click: button_1_click}
+  - name: spacer_1_copy
+    properties: {height: 32}
+    type: Spacer
+    layout_properties: {grid_position: 'LKTWOF,TKKLJH'}
+  - name: spacer_5
+    properties: {height: '3'}
+    type: Spacer
+    layout_properties: {grid_position: 'LXEPFH,FVTVHC'}
+  - name: spacer_1
+    properties: {height: 283.7332763671875}
+    type: Spacer
+    layout_properties: {grid_position: 'VQWBLX,RMWLVN'}
 is_package: true

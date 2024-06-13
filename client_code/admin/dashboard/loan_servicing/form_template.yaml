@@ -23,7 +23,7 @@ components:
     layout_properties: {grid_position: 'LKTWOF,LRMGVL MHTWYY,HUIAFC', full_width_row: false}
     components:
     - name: image_4_copy
-      properties: {source: _/theme/admin/dashboard/accounting/track-loan-disbursement.png, display_mode: shrink_to_fit, height: '100', visible: true}
+      properties: {source: '', display_mode: shrink_to_fit, height: '100', visible: true}
       type: Image
       layout_properties: {grid_position: 'QGZTNW,PVJEPO'}
       event_bindings: {mouse_up: image_4_copy_mouse_up}
@@ -45,7 +45,7 @@ components:
     layout_properties: {grid_position: 'LKTWOF,PPLSYB TJRKPV,YIAZZS'}
     components:
     - name: image_4_copy_10
-      properties: {source: _/theme/admin/dashboard/accounting/interest-accruals.png, display_mode: shrink_to_fit, height: '100', visible: true}
+      properties: {source: '', display_mode: shrink_to_fit, height: '100', visible: true}
       type: Image
       layout_properties: {grid_position: 'QGZTNW,PVJEPO'}
       event_bindings: {mouse_up: image_4_copy_10_mouse_up}
@@ -84,7 +84,7 @@ components:
     layout_properties: {grid_position: 'LKTWOF,FPVXBC'}
     components:
     - name: image_4_copy_5
-      properties: {source: _/theme/admin/dashboard/accounting/%20payment-receipts.png, display_mode: shrink_to_fit, height: '100', visible: true}
+      properties: {source: '', display_mode: shrink_to_fit, height: '100', visible: true}
       type: Image
       layout_properties: {grid_position: 'QGZTNW,PVJEPO'}
       event_bindings: {mouse_up: image_4_copy_5_mouse_up}
