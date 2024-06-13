@@ -16,7 +16,7 @@ services:
 - source: /runtime/services/anvil/secrets.yml
   client_config: {}
   server_config: {}
-startup: {type: form, module: bank_users.main_form}
+startup: {type: form, module: admin.dashboard}
 package_name: pip_install_reportlab
 allow_embedding: false
 name: P2P Lending App 1
@@ -275,6 +275,9 @@ db_schema:
     - name: npa_select_percentage_amount
       admin_ui: {width: 200, order: 26.75}
       type: string
+    - name: tds
+      admin_ui: {width: 200, order: 33}
+      type: number
     title: fin_product_details
   fin_admin_ascend_categories:
     client: full
@@ -717,14 +720,6 @@ db_schema:
       admin_ui: {order: 0, width: 200}
       type: string
     title: fin_gender
-  fin_platform_fees:
-    client: full
-    server: full
-    columns:
-    - name: platform_returns
-      admin_ui: {order: 0, width: 200}
-      type: number
-    title: fin_platform_fees
   fin_lender_spouse_profession:
     title: fin_lender_spouse_profession
     client: full
@@ -1599,6 +1594,14 @@ db_schema:
       admin_ui: {order: 1.5, width: 200}
       type: string
     title: Users
+  fin_platform_fees:
+    client: full
+    server: full
+    columns:
+    - name: platform_returns
+      admin_ui: {order: 0, width: 200}
+      type: number
+    title: fin_platform_fees
 secrets:
   new_key:
     type: key
