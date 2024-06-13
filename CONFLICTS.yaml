@@ -1,0 +1,11 @@
+merge:
+  parents: [1c3cc4a8afd1b9a838211fcac0458160a3c04ab6, ad4df5712eb2c5d946dc4d5aaeb4907d7798d680]
+  base: c92790aafc42f057b1765a21d434696ceef21378
+conflicting_items:
+- text_chunks:
+  - start: 15
+    alternatives:
+    - {s: E, l: 15, n: 5}
+    - {s: B, l: 20, n: 3}
+  item: [client_code, admin.dashboard.revenue_share]
+  app_path: [CODE, forms/admin.dashboard.revenue_share]
