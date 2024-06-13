@@ -16,13 +16,17 @@ components:
   layout_properties: {grid_position: 'BINOSR,XIECCI'}
   components:
   - name: image_1
-    properties: {source: _/theme/registration.jpg, height: 128.88888549804688}
+    properties: {source: _/theme/admin/dashboard/customer_management/registration.png, height: '100'}
     type: Image
     layout_properties: {grid_position: 'HVSHDS,YCPVXR'}
     data_bindings: []
     event_bindings: {mouse_enter: image_1_mouse_enter, mouse_up: image_1_mouse_up}
   - name: button_1_manage_1
-    properties: {text: Handles Customer Registration, foreground: black, font_size: 16, bold: true}
+    properties:
+      text: "Handle Customer \nRegistration"
+      foreground: black
+      font_size: 16
+      bold: true
     type: Button
     layout_properties: {grid_position: 'ACYJSY,PBMAUO'}
     event_bindings: {click: button_1_click}
@@ -32,12 +36,16 @@ components:
   layout_properties: {grid_position: 'BINOSR,QGLBCU'}
   components:
   - name: image_2
-    properties: {source: _/theme/kyc.png, display_mode: zoom_to_fill, height: 150.66668701171875, visible: true}
+    properties: {source: _/theme/admin/dashboard/customer_management/kyc-verifiction.png, display_mode: shrink_to_fit, height: '100', visible: true}
     type: Image
     layout_properties: {grid_position: 'QGZTNW,PVJEPO'}
     event_bindings: {mouse_up: image_2_mouse_up}
   - name: button_2
-    properties: {text: KYC Verification, foreground: black, font_size: 16, bold: true}
+    properties:
+      text: "KYC \nVerification"
+      foreground: black
+      font_size: 16
+      bold: true
     type: Button
     layout_properties: {grid_position: 'ACYJSY,PBMAUO'}
     event_bindings: {click: button_2_click}
@@ -47,12 +55,12 @@ components:
   layout_properties: {grid_position: 'BINOSR,GFPUDD'}
   components:
   - name: image_3
-    properties: {height: 128.11111450195312, source: _/theme/customer_profile_1.png, display_mode: shrink_to_fit}
+    properties: {height: '100', source: _/theme/admin/dashboard/customer-management.png, display_mode: shrink_to_fit}
     type: Image
     layout_properties: {grid_position: 'QUSLIU,IGKDGQ'}
     event_bindings: {mouse_up: image_3_mouse_up}
   - name: button_3
-    properties: {text: Managing Customer Profiles & Contact Information, bold: true, font_size: 16, foreground: Black, align: full}
+    properties: {text: Manage Customer Profile & Contact Information, bold: true, font_size: 16, foreground: Black, align: full}
     type: Button
     layout_properties: {grid_position: 'JFGEHI,VYIDYK'}
     event_bindings: {click: button_3_click}
