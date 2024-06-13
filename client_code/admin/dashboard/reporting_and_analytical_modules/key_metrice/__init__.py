@@ -19,7 +19,21 @@ class key_metrice(key_metriceTemplate):
         # Aggregate counts for all risk levels and initialize plot
         self.aggregate_counts()
         self.initialize_plot()
-    
+        self.set_button_colors()
+
+    def set_button_colors(self):
+        """Set the colors of the buttons based on the respective risk levels"""
+        risk_level_to_button = {
+            'VeryGood': self.button_1_copy,
+            'Good': self.button_2_copy,
+            'Average': self.button_5_copy,
+            'Bad': self.button_1_copy_copy
+        }
+
+        for risk_level, button in risk_level_to_button.items():
+            _, color = self.get_filtered_rows(risk_level)
+            button.background = color
+              
     def aggregate_counts(self):
         """Aggregate the counts of loans for each risk level"""
         categories = ['VeryGood', 'Good', 'Average', 'Bad']
@@ -114,3 +128,7 @@ class key_metrice(key_metriceTemplate):
         """Update the plot with aggregated counts"""
         self.aggregate_counts()
         self.initialize_plot()
+
+    def button_1_click(self, **event_args):
+      """This method is called when the button is clicked"""
+      open_form('admin.dashboard.reporting_and_analytical_modules')
