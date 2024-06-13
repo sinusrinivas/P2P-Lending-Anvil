@@ -26,7 +26,7 @@ components:
   layout_properties: {slot: nav-right}
   components: []
 - type: ColumnPanel
-  properties: {role: outlined-card, col_widths: '{"EJEVIJ":18,"KVDELN":37,"RWJHGP":20,"EWXFBB":40,"KKRGQQ":20,"QUTBBB":40,"ZFYWQR":20,"THCDRO":40,"ELRYCE":20,"JGHWBK":40,"PDRAWC":35,"TABQGQ":3,"ZCFBEH":22}', wrap_on: mobile}
+  properties: {role: null, col_widths: '{"PDRAWC":35,"TABQGQ":3,"ZCFBEH":22}', wrap_on: mobile}
   name: outlined_card_2_copy
   layout_properties: {grid_position: 'ECKBEK,XFTDMP', row: QBZMKP, width_xs: 12, col_xs: 0}
   components:
@@ -35,84 +35,83 @@ components:
     name: label_1
     layout_properties: {grid_position: 'GVLWCJ,GRXWIJ'}
   - name: spacer_2
-    properties: {height: 32}
+    properties: {height: 11}
     type: Spacer
     layout_properties: {grid_position: 'FKNXLA,PDRAWC WFPFZD,ZICRLY'}
   - name: column_panel_1
     properties: {}
     type: ColumnPanel
     layout_properties: {grid_position: 'FKNXLA,PDRAWC HVCDVF,GFQMNN'}
+    components:
+    - name: image_1_copy_2
+      properties: {display_mode: zoom_to_fill, height: 641, source: _/theme/lender/dashboard/report_a_problem.png}
+      type: Image
+      layout_properties: {grid_position: 'SJFOZW,KKJHVN'}
   - name: spacer_3
-    properties: {height: 23}
+    properties: {height: 12}
     type: Spacer
     layout_properties: {grid_position: 'FKNXLA,TABQGQ'}
   - type: Spacer
-    properties: {height: 32}
+    properties: {height: 9}
     name: spacer_1
     layout_properties: {grid_position: 'FKNXLA,ZCFBEH GCEQKF,IFFCMA'}
-  - type: Label
-    properties: {role: null, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: Name}
-    name: label_4
-    layout_properties: {grid_position: 'FKNXLA,ZCFBEH FIJYQF,ZFYWQR'}
-  - type: TextBox
-    properties: {role: outlined, bold: false, align: left, placeholder: please enter your name here, spacing_above: small, background: 'theme:On Primary', type: text, underline: false, font: '', hide_text: false, foreground: '', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: ''}
-    name: name_box
-    layout_properties: {grid_position: 'FKNXLA,ZCFBEH FIJYQF,THCDRO'}
-  - type: Label
-    properties: {role: null, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: Email}
-    name: label_5
-    layout_properties: {grid_position: 'FKNXLA,ZCFBEH FLYHFD,KKRGQQ'}
-  - type: TextBox
-    properties: {role: outlined, bold: false, align: left, placeholder: please enter your email here, spacing_above: small, background: 'theme:On Primary', type: text, underline: false, font: '', hide_text: false, foreground: '', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: ''}
-    name: email_box
-    layout_properties: {grid_position: 'FKNXLA,ZCFBEH FLYHFD,QUTBBB'}
-  - type: Label
-    properties: {role: null, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: Mobile Number}
-    name: label_6
-    layout_properties: {grid_position: 'FKNXLA,ZCFBEH ZLZTYL,RWJHGP'}
-  - type: TextBox
-    properties: {role: outlined, bold: false, align: left, placeholder: please enter your mobile number here, spacing_above: small, background: 'theme:On Primary', type: text, underline: false, font: '', hide_text: false, foreground: '', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: ''}
-    name: mobile_box
-    layout_properties: {grid_position: 'FKNXLA,ZCFBEH ZLZTYL,EWXFBB'}
-  - type: Label
-    properties: {role: null, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: Upload Your Photo}
-    name: label_8
-    layout_properties: {grid_position: 'FKNXLA,ZCFBEH OJHCCD,ELRYCE'}
-  - type: FileLoader
+  - name: label_4
+    properties: {text: Name, bold: true}
+    type: Label
+    layout_properties: {grid_position: 'FKNXLA,ZCFBEH FIJYQF,AXCWGG'}
+  - name: name_box
+    properties: {placeholder: please enter your name here, role: outlined}
+    type: TextBox
+    layout_properties: {grid_position: 'FKNXLA,ZCFBEH FIJYQF,OLAAOI'}
+  - name: label_5
+    properties: {text: Email, bold: true}
+    type: Label
+    layout_properties: {grid_position: 'FKNXLA,ZCFBEH FLYHFD,XCUGPZ'}
+  - name: email_box
+    properties: {placeholder: please enter your email here, role: outlined}
+    type: TextBox
+    layout_properties: {grid_position: 'FKNXLA,ZCFBEH FLYHFD,SUKDMK'}
+  - name: label_6
+    properties: {text: Mobile Number, bold: true}
+    type: Label
+    layout_properties: {grid_position: 'FKNXLA,ZCFBEH ZLZTYL,RURDNG'}
+  - name: mobile_box
+    properties: {placeholder: please enter your mobile number here, role: outlined}
+    type: TextBox
+    layout_properties: {grid_position: 'FKNXLA,ZCFBEH ZLZTYL,QAKAZF'}
+  - name: label_8
+    properties: {text: Issue Photo, bold: true}
+    type: Label
+    layout_properties: {grid_position: 'FKNXLA,ZCFBEH OJHCCD,FEXWEA'}
+  - name: file_loader_1
+    properties: {}
+    type: FileLoader
+    layout_properties: {grid_position: 'FKNXLA,ZCFBEH OJHCCD,PCKRPU'}
+  - name: label_2
+    properties: {text: Category, bold: true}
+    type: Label
+    layout_properties: {grid_position: 'FKNXLA,ZCFBEH ZNEWXR,SICLPK'}
+  - name: drop_down_1
     properties:
-      role: null
-      bold: false
-      file_types: null
-      align: left
-      spacing_above: small
-      file: null
-      background: ''
-      icon: fa:upload
-      multiple: false
-      underline: false
-      font: ''
-      icon_align: left
-      foreground: ''
-      show_state: true
-      files: []
-      spacing_below: small
-      visible: true
-      border: ''
-      italic: false
-      enabled: true
-      font_size: null
-      tooltip: ''
-      text: Upload
-    name: file_loader_1
-    layout_properties: {grid_position: 'FKNXLA,ZCFBEH OJHCCD,JGHWBK'}
-  - type: Label
-    properties: {role: null, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: 16, tooltip: '', text: 'Title '}
-    name: label_2
-    layout_properties: {grid_position: 'FKNXLA,ZCFBEH RJNGCG,EJEVIJ'}
-  - type: TextBox
-    properties: {role: outlined, bold: false, align: left, placeholder: please enter what is the exact place that issue occurred, spacing_above: small, background: 'theme:On Primary', type: text, underline: false, font: '', hide_text: false, foreground: '', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: ''}
-    name: issue_box
-    layout_properties: {grid_position: 'FKNXLA,ZCFBEH RJNGCG,KVDELN'}
+      placeholder: ''
+      items: [Select Catrgory]
+      role: outlined
+    type: DropDown
+    layout_properties: {grid_position: 'FKNXLA,ZCFBEH ZNEWXR,PUQRDN'}
+  - name: label_9
+    properties: {text: Subcategory, bold: true}
+    type: Label
+    layout_properties: {grid_position: 'FKNXLA,ZCFBEH ACODUD,AHWQFW'}
+  - name: drop_down_2
+    properties:
+      items: [Select Subcategory]
+      role: outlined
+    type: DropDown
+    layout_properties: {grid_position: 'FKNXLA,ZCFBEH ACODUD,YJGDBQ'}
+  - name: check_box_1
+    properties: {text: It is Urgent}
+    type: CheckBox
+    layout_properties: {grid_position: 'FKNXLA,ZCFBEH TBXUXT,ZOKGOI'}
   - type: Label
     properties: {role: null, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: 18, tooltip: '', text: Describe the problem}
     name: label_3
@@ -122,12 +121,12 @@ components:
     name: label_7
     layout_properties: {grid_position: 'FKNXLA,ZCFBEH YIQLID,OMJDMP'}
   - type: TextArea
-    properties: {role: outlined, bold: false, align: left, placeholder: please write your issue here, spacing_above: small, background: 'theme:On Primary', underline: false, font: '', foreground: '', spacing_below: small, visible: true, border: '', italic: false, enabled: true, auto_expand: true, font_size: null, tooltip: '', height: 168, text: ''}
+    properties: {role: outlined, bold: false, align: right, placeholder: '1000', spacing_above: small, background: 'theme:On Primary', underline: false, font: '', foreground: '', spacing_below: small, visible: true, border: '', italic: false, enabled: true, auto_expand: true, font_size: null, tooltip: '', height: 168, text: ''}
     name: description_box
     layout_properties: {grid_position: 'FKNXLA,ZCFBEH AOZFDF,IQFSEY'}
     event_bindings: {change: issue_description_change}
-- type: Button
-  properties: {role: null, bold: false, align: center, spacing_above: small, background: '#05264d', icon: '', underline: false, font: '', icon_align: left, foreground: 'theme:On Primary', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: Submit}
-  name: button_2
-  layout_properties: {grid_position: 'PLYXTI,EDASAL'}
-  event_bindings: {click: button_2_click}
+  - type: Button
+    properties: {role: null, bold: false, align: center, spacing_above: small, background: '#05264d', icon: '', underline: false, font: '', icon_align: left, foreground: 'theme:On Primary', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: Submit Complaint}
+    name: button_2
+    layout_properties: {grid_position: 'FKNXLA,ZCFBEH AGGTCZ,KJCIXK'}
+    event_bindings: {click: button_2_click}
