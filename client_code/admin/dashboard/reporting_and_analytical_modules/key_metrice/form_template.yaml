@@ -17,31 +17,27 @@ components:
       properties: {}
       type: form:admin.dashboard.home_button_admin
       layout_properties: {grid_position: 'OQPYSO,PEVDGM', full_width_row: true}
-  - name: label_1
-    properties: {role: null, bold: true, align: center, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: 20, tooltip: '', text: Key Metrics Analysis}
-    type: Label
-    layout_properties: {grid_position: 'AJCEBX,TITXTM'}
   - name: risk_plot
     properties: {}
     type: Plot
     layout_properties: {grid_position: 'VUPCDZ,OOEQCM'}
   - name: button_1_copy
-    properties: {text: Very Good, foreground: white, role: outlined-button, align: full, background: green, border: '', bold: true, font_size: 14}
+    properties: {role: outlined-button, bold: true, align: full, background: '#05264d', icon: 'fa:adjust', foreground: white, border: '', font_size: 14, text: Very Good}
     type: Button
     layout_properties: {grid_position: 'CGGLYK,GJEQDY'}
     event_bindings: {click: very_click}
   - name: button_2_copy
-    properties: {text: Good, foreground: white, role: outlined-button, background: orange, bold: true, align: full, font_size: 14}
+    properties: {text: Good, foreground: white, role: outlined-button, background: '#05264d', bold: true, align: full, font_size: 14, icon: 'fa:adjust'}
     type: Button
     layout_properties: {grid_position: 'CGGLYK,FIAVZP'}
     event_bindings: {click: good_click}
   - name: button_5_copy
-    properties: {text: Average, foreground: white, align: full, role: outlined-button, background: '#F08080', bold: true, enabled: true, font_size: 14}
+    properties: {role: outlined-button, bold: true, align: full, background: '#05264d', icon: 'fa:adjust', foreground: white, enabled: true, font_size: 14, text: Average}
     type: Button
     layout_properties: {grid_position: 'CGGLYK,KKALWF'}
     event_bindings: {click: average_clik}
   - name: button_1_copy_copy
-    properties: {text: Bad, foreground: white, role: outlined-button, align: full, background: red, border: '', bold: true, font_size: 14}
+    properties: {role: outlined-button, bold: true, align: full, background: '#05264d', icon: 'fa:adjust', foreground: white, border: '', font_size: 14, text: Bad}
     type: Button
     layout_properties: {grid_position: 'CGGLYK,JHMMGH'}
     event_bindings: {click: bad_clidk}
