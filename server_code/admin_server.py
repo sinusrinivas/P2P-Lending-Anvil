@@ -211,3 +211,15 @@ def save_credit_limit(new_value):
         row['credit_limit'] = new_value  # Update the existing row
     else:
         app_tables.fin_manage_credit_limit.add_row(credit_limit=new_value)  # Add a new row if none exists
+
+#manage_customer and contact details server code
+@anvil.server.callable
+def get_customer_data():
+  return app_tables.fin_user_profile.search()
+
+def load_customer_data(self):
+  # Fetch the customer data from the server function
+  user_profile = anvil.server.call('get_customer_data')
+  
+  # Set the items property of the repeating panel to the fetched data
+  self.repeating_panel_1.items = user_profile
