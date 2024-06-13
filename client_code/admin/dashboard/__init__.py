@@ -29,7 +29,7 @@ class dashboard(dashboardTemplate):
 
   def button_5_click(self, **event_args):
     
-    open_form('admin.dashboard.loan_management')
+    open_form('admin.dashboard.integration')
 
   def button_6_click(self, **event_args):
     
@@ -174,6 +174,10 @@ class dashboard(dashboardTemplate):
   def image_2_copy_mouse_up(self, x, y, button, **event_args):
     """This method is called when a mouse button is released on this component"""
     open_form('admin.dashboard.customer_portal')
+
+  def image_14_mouse_up(self, x, y, button, **event_args):
+    """This method is called when a mouse button is released on this component"""
+    open_form('admin.dashboard.integration')
 
  
 

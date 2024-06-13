@@ -1,4 +1,4 @@
-from ._anvil_designer import collateral_managementTemplate
+from ._anvil_designer import collateral_manageTemplate
 from anvil import *
 import anvil.server
 import anvil.google.auth, anvil.google.drive
@@ -9,7 +9,7 @@ import anvil.tables.query as q
 from anvil.tables import app_tables
 
 
-class collateral_management(collateral_managementTemplate):
+class collateral_manage(collateral_manageTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
