@@ -284,6 +284,7 @@ class manage_producs1(manage_producs1Template):
                 self.name.selected_value,
                 self.product_category.selected_value,
                 self.text_box_3.text.strip(),
+                self.text_box_2.text.strip(),
                 self.drop_down_2.selected_value,
                 (self.radio_button_1.selected or self.radio_button_2.selected),
                 self.min_amount.text.strip(),
@@ -306,6 +307,7 @@ class manage_producs1(manage_producs1Template):
         try:
     # Convert input values to float
           processing_fee = float(self.text_box_3.text.strip())
+          tds = float(self.text_box_2.text.strip())
           min_amount = float(self.min_amount.text.strip())
           max_amount = float(self.max_amount.text.strip())
           min_tenure = float(self.min_tenure.text.strip())
@@ -318,7 +320,7 @@ class manage_producs1(manage_producs1Template):
           npa_amount = float(self.text_amount.text.strip()) if self.text_amount.text.strip() else 0
       
           # Check if any of the values are negative
-          if processing_fee < 0 or min_amount < 0 or max_amount < 0 or min_tenure < 0 or max_tenure < 0 or roi < 0 or lapsed_fee < 0 or default_fee_amount < 0 or npa_amount < 0 or default_fee < 0 or npa < 0:
+          if processing_fee < 0 or tds < 0 or min_amount < 0 or max_amount < 0 or min_tenure < 0 or max_tenure < 0 or roi < 0 or lapsed_fee < 0 or default_fee_amount < 0 or npa_amount < 0 or default_fee < 0 or npa < 0:
               raise ValueError("Values cannot be negative")
       
           # # Check if default_fee is not None and less than 0
@@ -379,7 +381,7 @@ class manage_producs1(manage_producs1Template):
     
         # Call the server function to add product details
         anvil.server.call('product_details', self.id, product_name, product_group, product_description,
-                          product_categories, processing_fee, extension_fee, membership_type, interest_type, max_amount,
+                          product_categories, processing_fee,tds, extension_fee, membership_type, interest_type, max_amount,
                           min_amount, min_tenure, max_tenure, roi, foreclose_type, foreclosure_fee, extension_allowed,
                           emi_payment, min_months, lapsed_fee, default_fee, default_fee_amount, npa, npa_amount, occupation,min_extension_month ,default_status , npa_status)
     

@@ -3,9 +3,9 @@ container:
   type: ColumnPanel
   properties: {role: null, tooltip: '', border: '', foreground: '', visible: true, wrap_on: tablet, col_spacing: medium, spacing_above: small, col_widths: '{}', spacing_below: small, background: ''}
 components:
-- properties: {col_widths: '{"RAQZHX":20,"HBXSQZ":20,"FQUOWV":20,"TJPHYC":30,"KWEVVW":30}', background: '#Edf0f4', visible: true}
+- properties: {col_widths: '{"RAQZHX":20,"HBXSQZ":20,"FQUOWV":20,"TJPHYC":40}', background: 'theme:On Primary', visible: true}
   type: ColumnPanel
-  layout_properties: {grid_position: 'YXSOFH,DLFMGI', full_width_row: true}
+  layout_properties: {grid_position: 'ZXYNZP,ARCTST', full_width_row: null}
   name: content_panel_copy_copy_3_copy_3_copy
   components:
   - type: form:admin.dashboard.home_button_admin
@@ -98,19 +98,19 @@ components:
       name: button_21
   - properties: {col_widths: '{}', background: white, role: elevated-card}
     type: ColumnPanel
-    layout_properties: {grid_position: 'AEVTNB,HBXSQZ XTQZQD,PBZHHY'}
-    name: content_panel_copy_copy_3_copy_3_copy_copy_copy_3
+    layout_properties: {grid_position: 'AEVTNB,HBXSQZ GMKTYD,XBPVPE'}
+    name: content_panel_copy_copy_3_copy_3_copy_copy_copy_9_copy
     components:
-    - properties: {source: _/theme/admin/dashboard/manage-borrowers.png, display_mode: shrink_to_fit, height: '100'}
+    - properties: {source: _/theme/customer management.jpg, height: 96.11111450195312, display_mode: shrink_to_fit}
       type: Image
-      layout_properties: {grid_position: 'YBAGYO,PALCTI'}
-      event_bindings: {mouse_up: image_2_mouse_up}
-      name: image_2
-    - properties: {text: Manage Borrowers, foreground: black, bold: true, font_size: 16}
+      layout_properties: {grid_position: 'CJWVAG,PSSGQJ'}
+      event_bindings: {mouse_up: image_13_mouse_up}
+      name: image_13
+    - properties: {text: ' Customer Management ', foreground: black, bold: true, font_size: 16}
       type: Button
-      layout_properties: {grid_position: 'KISNYU,FEDRLJ'}
-      event_bindings: {click: button_12_click}
-      name: button_12
+      layout_properties: {grid_position: 'VXGGJT,QMFGMX'}
+      event_bindings: {click: button_21_click}
+      name: button_21_copy
   - properties: {height: '1.5'}
     type: Spacer
     layout_properties: {grid_position: 'AEVTNB,HBXSQZ DKTIHZ,FSBIQB'}
@@ -168,21 +168,6 @@ components:
       layout_properties: {grid_position: 'XATRPB,LFKIEK'}
       event_bindings: {click: button_22_click}
       name: button_22
-  - properties: {col_widths: '{}', background: white, role: elevated-card}
-    type: ColumnPanel
-    layout_properties: {grid_position: 'AEVTNB,FQUOWV VOXZKL,RFFBFH'}
-    name: content_panel_copy_copy_3_copy_3_copy_copy_copy_6
-    components:
-    - properties: {display_mode: shrink_to_fit, source: _/theme/admin/dashboard/manage-lenders.png, height: '100'}
-      type: Image
-      layout_properties: {grid_position: 'YIGLKI,KSUAYJ'}
-      event_bindings: {mouse_up: image_3_mouse_up}
-      name: image_3
-    - properties: {text: Manage Lenders, foreground: black, bold: true, font_size: 16}
-      type: Button
-      layout_properties: {grid_position: 'HWUTYO,BMGPHA'}
-      event_bindings: {click: manage_lender_click}
-      name: manage_lender
   - properties: {height: '1.5'}
     type: Spacer
     layout_properties: {grid_position: 'AEVTNB,FQUOWV HLTKQL,WLMDWA'}
@@ -244,3 +229,7 @@ components:
     type: Spacer
     layout_properties: {grid_position: 'YCXZUQ,TJPHYC'}
     name: spacer_23
+  - properties: {height: 32}
+    type: Spacer
+    layout_properties: {grid_position: 'YCXZUQ,TJPHYC PDUXKD,GULTQF'}
+    name: spacer_2

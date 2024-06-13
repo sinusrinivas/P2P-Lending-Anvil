@@ -22,13 +22,14 @@ def open_apply_for_loan_form():
 
 
 @anvil.server.callable
-def product_details(product_id, product_name, product_group,product_description, product_categories,processing_fee,  extension_fee, membership_type, interest_type, max_amount, min_amount, min_tenure, max_tenure, roi, foreclose_type, foreclosure_fee, extension_allowed, emi_payment, min_months,lapsed_fee, default_fee, default_fee_amount, npa , npa_amount, occupation,min_extension_month ,default_status, npa_status):
+def product_details(product_id, product_name, product_group,product_description, product_categories,processing_fee,tds,extension_fee, membership_type, interest_type, max_amount, min_amount, min_tenure, max_tenure, roi, foreclose_type, foreclosure_fee, extension_allowed, emi_payment, min_months,lapsed_fee, default_fee, default_fee_amount, npa , npa_amount, occupation,min_extension_month ,default_status, npa_status):
   row = app_tables.fin_product_details.add_row(product_id=product_id,
                                            product_name = product_name,
                                            product_group=product_group,
                                            product_description = product_description,
                                            product_categories = product_categories,
-                                           processing_fee=processing_fee,   
+                                           processing_fee=processing_fee,
+                                           tds = tds,
                                            extension_fee=extension_fee,
                                            membership_type=membership_type,
                                            interest_type= interest_type,
@@ -211,3 +212,15 @@ def save_credit_limit(new_value):
         row['credit_limit'] = new_value  # Update the existing row
     else:
         app_tables.fin_manage_credit_limit.add_row(credit_limit=new_value)  # Add a new row if none exists
+
+#manage_customer and contact details server code
+@anvil.server.callable
+def get_customer_data():
+  return app_tables.fin_user_profile.search()
+
+def load_customer_data(self):
+  # Fetch the customer data from the server function
+  user_profile = anvil.server.call('get_customer_data')
+  
+  # Set the items property of the repeating panel to the fetched data
+  self.repeating_panel_1.items = user_profile
