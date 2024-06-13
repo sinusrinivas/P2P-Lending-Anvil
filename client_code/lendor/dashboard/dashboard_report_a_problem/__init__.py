@@ -29,11 +29,11 @@ class dashboard_report_a_problem(dashboard_report_a_problemTemplate):
   def update_subcategory(self, **event_args):
       selected_category = self.drop_down_1.selected_value
       if selected_category == 'Loan Issue':
-          self.drop_down_2.items = [(sli['subcategory_loan_issue'], sli['subcategory_loan_issue']) for sli in self.subcategory]
+          self.drop_down_2.items = [(sli['lendor_subcategory_loan_issue'], sli['lendor_subcategory_loan_issue']) for sli in self.subcategory]
       elif selected_category == 'Technical Issue':
           self.drop_down_2.items = [(sti['subcategory_technical_issue'], sti['subcategory_technical_issue']) for sti in self.subcategory]
       else:
-          self.drop_down_2.items = [(sli['subcategory_loan_issue'], sli['subcategory_loan_issue']) for sli in self.subcategory]
+          self.drop_down_2.items = [(sli['lendor_subcategory_loan_issue'], sli['lendor_subcategory_loan_issue']) for sli in self.subcategory]
           
 
   def button_2_click(self, **event_args):
