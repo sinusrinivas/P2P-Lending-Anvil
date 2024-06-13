@@ -37,6 +37,6 @@ components:
     layout_properties: {grid_position: 'XBSGTZ,TZGGSV', full_width_row: false}
     name: data_grid_1
     components:
-    - properties: {item_template: admin.dashboard.revenue_share.RowTemplate31}
+    - properties: {item_template: admin.dashboard.accounting.revenue_share.RowTemplate31}
       type: RepeatingPanel
       name: repeating_panel_1
