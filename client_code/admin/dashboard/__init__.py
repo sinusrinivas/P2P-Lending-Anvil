@@ -125,10 +125,7 @@ class dashboard(dashboardTemplate):
   def image_6_mouse_up(self, x, y, button, **event_args):
     """This method is called when a mouse button is released on this component"""
     open_form('admin.dashboard.manage_settings')
-
-  def image_7_mouse_up(self, x, y, button, **event_args):
-    """This method is called when a mouse button is released on this component"""
-    open_form('admin.dashboard.revenue_share')
+    
 
   def image_8_mouse_up(self, x, y, button, **event_args):
     """This method is called when a mouse button is released on this component"""
@@ -149,6 +146,14 @@ class dashboard(dashboardTemplate):
   def image_13_mouse_up(self, x, y, button, **event_args):
     """This method is called when a mouse button is released on this component"""
     open_form('admin.dashboard.customer_management')
+
+  def button_1_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    open_form('admin.dashboard.accounting')
+
+  def image_13_copy_mouse_up(self, x, y, button, **event_args):
+    """This method is called when a mouse button is released on this component"""
+    open_form('admin.dashboard.accounting')
 
  
 
