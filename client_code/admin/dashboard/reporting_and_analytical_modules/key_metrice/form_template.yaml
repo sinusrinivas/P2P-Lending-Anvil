@@ -22,22 +22,22 @@ components:
     type: Plot
     layout_properties: {grid_position: 'VUPCDZ,OOEQCM'}
   - name: button_1_copy
-    properties: {role: outlined-button, bold: true, align: full, background: '#05264d', icon: 'fa:adjust', foreground: white, border: '', font_size: 14, text: Very Good}
+    properties: {role: outlined-button, bold: true, align: full, background: '#05264d', icon: '', foreground: white, border: '', font_size: 14, text: Very Good}
     type: Button
     layout_properties: {grid_position: 'CGGLYK,GJEQDY'}
     event_bindings: {click: very_click}
   - name: button_2_copy
-    properties: {text: Good, foreground: white, role: outlined-button, background: '#05264d', bold: true, align: full, font_size: 14, icon: 'fa:adjust'}
+    properties: {text: Good, foreground: white, role: outlined-button, background: '#05264d', bold: true, align: full, font_size: 14, icon: ''}
     type: Button
     layout_properties: {grid_position: 'CGGLYK,FIAVZP'}
     event_bindings: {click: good_click}
   - name: button_5_copy
-    properties: {role: outlined-button, bold: true, align: full, background: '#05264d', icon: 'fa:adjust', foreground: white, enabled: true, font_size: 14, text: Average}
+    properties: {role: outlined-button, bold: true, align: full, background: '#05264d', icon: '', foreground: white, enabled: true, font_size: 14, text: Average}
     type: Button
     layout_properties: {grid_position: 'CGGLYK,KKALWF'}
     event_bindings: {click: average_clik}
   - name: button_1_copy_copy
-    properties: {role: outlined-button, bold: true, align: full, background: '#05264d', icon: 'fa:adjust', foreground: white, border: '', font_size: 14, text: Bad}
+    properties: {role: outlined-button, bold: true, align: full, background: '#05264d', icon: '', foreground: white, border: '', font_size: 14, text: Bad}
     type: Button
     layout_properties: {grid_position: 'CGGLYK,JHMMGH'}
     event_bindings: {click: bad_clidk}
