@@ -10,7 +10,7 @@ components:
     type: form:admin.dashboard.home_button_admin
     layout_properties: {grid_position: 'KPIBYN,GISMLM', full_width_row: true}
   - name: label_1_copy
-    properties: {role: null, bold: true, align: center, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: 30, tooltip: '', text: Accounting}
+    properties: {role: null, bold: true, align: center, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: 30, tooltip: '', text: Security and Compliance}
     type: Label
     layout_properties: {grid_position: 'EQXMGV,YVCYTL'}
   - name: spacer_4
@@ -23,15 +23,13 @@ components:
     layout_properties: {grid_position: 'LKTWOF,LRMGVL MHTWYY,HUIAFC', full_width_row: false}
     components:
     - name: image_4_copy
-      properties: {source: _/theme/admin/dashboard/accounting/track-loan-disbursement.png, display_mode: shrink_to_fit, height: '100', visible: true}
+      properties: {source: '', display_mode: shrink_to_fit, height: '100', visible: true}
       type: Image
       layout_properties: {grid_position: 'QGZTNW,PVJEPO'}
       event_bindings: {mouse_up: image_4_copy_mouse_up}
     - name: add_people
       properties:
-        text: |
-          Tracks Loan
-           Disbursements
+        text: "Regulatory \nCompliance"
         font_size: 16
         foreground: black
         bold: true
@@ -40,40 +38,21 @@ components:
       type: Button
       layout_properties: {grid_position: 'GMECOB,ATAMRQ'}
       event_bindings: {click: button_9_click}
-  - name: content_panel_copy_copy_3_copy_3_copy_copy_copy_4
-    properties: {col_widths: '{}', background: white, role: elevated-card}
-    type: ColumnPanel
-    layout_properties: {grid_position: 'LKTWOF,LRMGVL OEYJGQ,ZDMLRN'}
-    components:
-    - name: image_7
-      properties: {source: _/theme/admin/dashboard/manage-revenue-share.png, display_mode: shrink_to_fit, height: '100'}
-      type: Image
-      layout_properties: {grid_position: 'VUAHMV,NIXMZO'}
-      event_bindings: {mouse_up: image_7_mouse_up}
-    - name: button_20
-      properties:
-        text: |-
-          Manage Revenue
-           Share
-        foreground: black
-        bold: true
-        font_size: 16
-      type: Button
-      layout_properties: {grid_position: 'KZEJQV,HXGEOK'}
-      event_bindings: {click: button_20_click}
   - name: content_panel_copy_copy_3_copy_3_copy_copy_copy_2_copy_10
     properties: {col_widths: '{}', background: white, role: elevated-card}
     type: ColumnPanel
-    layout_properties: {grid_position: 'LKTWOF,PPLSYB TJRKPV,YIAZZS'}
+    layout_properties: {grid_position: 'LKTWOF,PPLSYB'}
     components:
     - name: image_4_copy_10
-      properties: {source: _/theme/admin/dashboard/accounting/interest-accruals.png, display_mode: shrink_to_fit, height: '100', visible: true}
+      properties: {source: '', display_mode: shrink_to_fit, height: '100', visible: true}
       type: Image
       layout_properties: {grid_position: 'QGZTNW,PVJEPO'}
       event_bindings: {mouse_up: image_4_copy_10_mouse_up}
     - name: button_1
       properties:
-        text: "Interest \nAccruals\n"
+        text: |-
+          Secure Data
+           Vault
         font_size: 16
         foreground: black
         bold: true
@@ -81,38 +60,19 @@ components:
       type: Button
       layout_properties: {grid_position: 'TFDFVQ,VTCDTE'}
       event_bindings: {click: button_14_click}
-  - name: content_panel_copy_copy_3_copy_3_copy_copy_copy_2_copy_5_copy
-    properties: {col_widths: '{}', background: white, role: elevated-card}
-    type: ColumnPanel
-    layout_properties: {grid_position: 'LKTWOF,PPLSYB NUIVLQ,RRVSWF'}
-    components:
-    - name: image_1
-      properties: {height: '100'}
-      type: Image
-      layout_properties: {grid_position: 'SKGFSP,HILRYH'}
-    - name: button_2
-      properties:
-        text: |-
-          Generates Financial
-           Reports
-        bold: true
-        foreground: black
-        font_size: 16
-      type: Button
-      layout_properties: {grid_position: 'ILNOUR,HSOMCL'}
   - name: content_panel_copy_copy_3_copy_3_copy_copy_copy_2_copy_5
     properties: {col_widths: '{}', background: white, role: elevated-card}
     type: ColumnPanel
     layout_properties: {grid_position: 'LKTWOF,FPVXBC'}
     components:
     - name: image_4_copy_5
-      properties: {source: _/theme/admin/dashboard/accounting/%20payment-receipts.png, display_mode: shrink_to_fit, height: '100', visible: true}
+      properties: {source: '', display_mode: shrink_to_fit, height: '100', visible: true}
       type: Image
       layout_properties: {grid_position: 'QGZTNW,PVJEPO'}
       event_bindings: {mouse_up: image_4_copy_5_mouse_up}
     - name: view_people
       properties:
-        text: " Payment \nReceipts"
+        text: "Manage User Access \nand Authorization"
         font_size: 16
         foreground: black
         bold: true
