@@ -83,7 +83,7 @@ components:
     layout_properties: {grid_position: 'DGBMNL,DWGBUW ENSJTW,DABDZO'}
     components:
     - name: image_2
-      properties: {height: '100'}
+      properties: {height: '100', source: _/theme/admin/dashboard/loan-servicing.png}
       type: Image
       layout_properties: {grid_position: 'TGLZHH,IURBMV'}
     - name: button_2
@@ -155,7 +155,7 @@ components:
     layout_properties: {grid_position: 'DGBMNL,NCWVQM BFXQWJ,CXDPXP'}
     components:
     - name: image_3
-      properties: {height: '100'}
+      properties: {height: '100', source: _/theme/admin/dashboard/collateral-management.png}
       type: Image
       layout_properties: {grid_position: 'LTTECY,IGMJHY'}
     - name: button_3
@@ -227,7 +227,7 @@ components:
     layout_properties: {grid_position: 'DGBMNL,CNLKUD TEEDPF,ULCQYX'}
     components:
     - name: image_7
-      properties: {height: '100'}
+      properties: {height: '100', source: _/theme/admin/dashboard/security-compliance.png}
       type: Image
       layout_properties: {grid_position: 'AFFEGL,EOLTXJ'}
     - name: button_4
@@ -246,7 +246,7 @@ components:
     layout_properties: {grid_position: 'DGBMNL,JFOFFM FENXRZ,HKOZHG'}
     components:
     - name: image_2_copy
-      properties: {height: '100'}
+      properties: {height: '100', source: _/theme/admin/dashboard/customer_portal.png}
       type: Image
       layout_properties: {grid_position: 'TGLZHH,IURBMV'}
     - name: button_2_copy

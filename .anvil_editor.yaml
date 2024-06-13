@@ -577,6 +577,7 @@ unique_ids:
     bank_users/main_form/icons8-fund.png: '1712040473720801943413138.333'
     bank_users/personal_loan/debt_consolidation_loan/hourglass (1).png: '1716979612216712108329957.2593'
     bank_users/personal_loan/nbfc.png: '1716536245053292210555106.2064'
+    admin/dashboard/customer_portal.png: '1718267159835679216852642.5984'
     bank_users/personal_loan/marriage_loan/marriage loan pic.png: '1713335041235807448509665.6434'
     bank_users/personal_loan/education_loan/el_benifits5.png: '171413194080430209027921.615837'
     lender/dashboard/.gitkeep: '1716351109325743354591065.5817'
@@ -694,6 +695,7 @@ unique_ids:
     bank_users/main_form/icons8-get-cash.png: '1712035827507960042752507.3192'
     bank_users/main_form/vehicle_loan/application_process1.png: '1712896911270573736316063.2034'
     bank_users/main_form/about_us/au-borrowers-lenders.png: '1712223957516513044110784.64105'
+    admin/dashboard/loan-servicing.png: '1718267135316763491628118.7762'
     lender/dashboard/New Loan Request (2).png: '1716362988157600254349802.7684'
     bank_users/main_form/business_loan/atm.jpg: '1712571395190660012774513.3184'
     admin/dashboard/manage_cms/manage-dropdown.png: NMTXWLWVPZGDWKTVM6XDDXTT53SKGGU2
@@ -729,6 +731,7 @@ unique_ids:
     admin/dashboard/loan_management/default-loans.png: '1716460563006684728931688.2188'
     bank_users/personal_loan/debt_consolidation_loan/fixed-interest-rate.png: '1716979593180118409545371.24037'
     bank_users/personal_loan/education_loan/education loan.png: '1713331894429647621260158.6854'
+    admin/dashboard/security-compliance.png: '1718267123752771871955576.5055'
     bank_users/main_form/icons8-percentage-64.png: '1711615986462172090353631.9742'
     bank_users/main_form/vehicle_loan/application_process2.png: '1712896932603660991496817.8499'
     admin/dashboard/loan_management/closed-loans.png: '1716460422859469504073632.3768'
@@ -808,6 +811,7 @@ unique_ids:
     admin/dashboard/manage_ascend_score/salary_type.png: '1716528280642728625199116.731'
     bank_users/main_form/business_loan/grow.png: '1712296926213803393405346.3762'
     admin/dashboard/accounting/ payment-receipts.png: '1718261905707186706568880.49475'
+    admin/dashboard/collateral-management.png: '1718267147705490695494889.59784'
     lender/dashboard/My returns (2).png: 4FKPWHCS3OYXGWSJCRCT2V7LGVFV3QG6
     bank_users/personal_loan/travel_loan/travel_loan1.jpg: '1713506572381433058503514.6397'
     lender/dashboard/my returns (3).png: '1716375362953386895010598.0775'
