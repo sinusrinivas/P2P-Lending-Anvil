@@ -233,6 +233,7 @@ unique_ids:
     borrower.dashboard.today_dues.ItemTemplate22: 6U65JPVY62F7M4SYZPPQSKSB7OC3P75J
     admin.dashboard.manage_ascend.add_subcategory.edit_qualification: '170973382597126282095202.1523'
     admin.dashboard.manage_products.Form2: '1713580676496850962038134.8893'
+    admin.dashboard.revenue_share.lender_revenue_share.RowTemplate32: HLTYFTXF5M24LJXDNV4YPMQCUADGDMPP
     admin.dashboard.manage_cms.add_borrower_dropdown_details.edit_account_type: '1706191282813671329465946.1777'
     admin.dashboard.manage_cms.add_borrower_dropdown_details.edit_organizaton_type: '1706191310991380077701959.76184'
     lendor.dashboard.view_loan_extension_requests.extension_details: '1706448836532652081977126.0691'
@@ -458,6 +459,7 @@ unique_ids:
     admin.dashboard.manage_products.edit_form: '1700713167379525299380252.5991'
     admin.dashboard.manage_loan_details.loan_management.one_time_settlement.ItemTemplate40: '1709546074344515064318307.5114'
     admin.dashboard.manage_loan_details.loan_management.closed_loans.ItemTemplate39: '1709544056926114633667445.21663'
+    admin.dashboard.revenue_share.lender_revenue_share: MMI7MR7UA6ZKJ45QJJMEXX2YIRWRLRQ7
   modules:
     borrower.borrower_registration_forms: '1715149115354194837313453.96915'
     wallet: '1700205175437199558140953.65286'
