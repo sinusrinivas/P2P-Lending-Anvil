@@ -502,21 +502,27 @@ db_schema:
     - name: mobile_number
       admin_ui: {width: 200, order: 2}
       type: number
-    - name: issue_occured
-      admin_ui: {width: 200, order: 3}
-      type: string
     - name: issue_description
       admin_ui: {width: 200, order: 4}
       type: string
     - name: report_date
       admin_ui: {width: 200, order: 5}
       type: datetime
-    - name: status
-      admin_ui: {width: 200, order: 6}
+    - name: it_is_urgent
+      admin_ui: {order: 6, width: 200}
       type: bool
-    - name: user_photo
-      admin_ui: {width: 200, order: 7}
+    - name: issue_photo
+      admin_ui: {order: 7, width: 200}
       type: media
+    - name: category
+      admin_ui: {width: 200, order: 8}
+      type: string
+    - name: subcategory
+      admin_ui: {width: 200, order: 9}
+      type: string
+    - name: usertype
+      admin_ui: {width: 200, order: 10}
+      type: string
     title: fin_reported_problems
   fin_borrower_qualification:
     title: fin_borrower_qualification
@@ -720,6 +726,14 @@ db_schema:
       admin_ui: {order: 0, width: 200}
       type: string
     title: fin_gender
+  fin_platform_fees:
+    client: full
+    server: full
+    columns:
+    - name: platform_returns
+      admin_ui: {order: 0, width: 200}
+      type: number
+    title: fin_platform_fees
   fin_lender_spouse_profession:
     title: fin_lender_spouse_profession
     client: full
@@ -902,6 +916,14 @@ db_schema:
     - name: name_group
       admin_ui: {width: 200}
       type: string
+  fin_category:
+    client: full
+    server: full
+    columns:
+    - name: category
+      admin_ui: {width: 200, order: 0}
+      type: string
+    title: fin_category
   fin_user_profile:
     client: full
     server: full
@@ -1538,6 +1560,20 @@ db_schema:
       admin_ui: {width: 200, order: 0}
       type: string
     title: fin_borrower_profession
+  fin_report_issue_category:
+    client: full
+    server: full
+    columns:
+    - name: borrower_subcategory_loan_issue
+      admin_ui: {order: 0, width: 280}
+      type: string
+    - name: subcategory_technical_issue
+      admin_ui: {order: 1, width: 243}
+      type: string
+    - name: lendor_subcategory_loan_issue
+      admin_ui: {order: 2, width: 261}
+      type: string
+    title: fin_report_issue_category
   fin_lendor_organization_type:
     client: full
     server: full
@@ -1594,14 +1630,6 @@ db_schema:
       admin_ui: {order: 1.5, width: 200}
       type: string
     title: Users
-  fin_platform_fees:
-    client: full
-    server: full
-    columns:
-    - name: platform_returns
-      admin_ui: {order: 0, width: 200}
-      type: number
-    title: fin_platform_fees
 secrets:
   new_key:
     type: key
