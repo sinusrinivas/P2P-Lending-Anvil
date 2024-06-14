@@ -725,6 +725,7 @@ unique_ids:
     loan completion1.png: '1712901291640257811842569.10117'
     admin/dashboard/manage_products/manage-product-categories.png: '1716458490431278971575358.8582'
     admin/dashboard/performance_tracker/approved-applications.png: '1716531040997845835654522.3098'
+    admin/dashboard/loan_management/loan-aggrements.png: '171834176741897012803000.23352'
     admin/dashboard/manage_cms/choose-role1.png: URA3O6T2WCDWKEDSYW5P46KTDCP3OBMK
     bank_users/main_form/about_us/credit-risk-assesment.png: '171220964259413899497656.246096'
     bank_users/personal_loan/education_loan/el_benifits3.png: '1714131918278897036560733.772'
@@ -751,6 +752,7 @@ unique_ids:
     admin/dashboard/loan_management/closed-loans.png: '1716460422859469504073632.3768'
     admin/dashboard/customer_management/.gitkeep: '1718282082049522769213430.0894'
     lender_profile.png: 5SGFUGRJTLVXC22QA7MGX5ZMKL3ZFXAW
+    admin/dashboard/loan_management/application-intake.png: '1718341756961693698624865.6385'
     bank_users/personal_loan/education_loan/EL-Prerequisites2.png: '1714132037483660794391753.3354'
     bank_users/main_form/business_loan/funds-icon.png: '1712296807481294146512202.1973'
     admin/dashboard/accounting/interest-accruals.png: '1718261894766595435124691.2179'
@@ -813,6 +815,7 @@ unique_ids:
     admin/dashboard/manage-cms.png: ZIZSOUIUUGQN5NSCNILBFZAGEGAZ536L
     toggle-switch.css: '1701328631898476412516700.48914'
     bank_users/main_form/login_page/.gitkeep: '1715944545729484465890823.9683'
+    admin/dashboard/reporting_analytics/key-metrics.png: '171834273375953915310692.66553'
     Risk (1).png: '1718100744758408864829765.13916'
     bank_users/personal_loan/education_loan/el_benifits2.png: '1714131907915929111940089.0043'
     money.png: '1712745856223563071869624.0046'
@@ -823,6 +826,8 @@ unique_ids:
     bank_users/user_form/Screenshot 2023-11-26 151907.png: '1700992501391933332520889.9286'
     bank_users/user_form/Screenshot 2023-11-26 225256.png: '1701019678831231799094647.61584'
     bank_users/personal_loan/travel_loan/personal-travel loan.png: '1713331847735418921395057.45416'
+    admin/dashboard/reporting_analytics/.gitkeep: '1718342686897414068486415.0135'
+    admin/dashboard/reporting_analytics/risk_pool.png: '171834274954824817181778.12464'
     admin/dashboard/manage_ascend_score/salary_type.png: '1716528280642728625199116.731'
     admin/dashboard/accounting/report.png: '1718337747235533008904971.05914'
     bank_users/main_form/business_loan/grow.png: '1712296926213803393405346.3762'
@@ -851,6 +856,7 @@ unique_ids:
     bank_users/main_form/business_loan/business_loan-office-staff-icon.png: '1712296906532267339826009.12976'
     contact_information.png: CJXGOTY2I222IZ5VEXN5RXUPQFNDUOCG
     bank_users/personal_loan/travel_loan/.gitkeep: '1715929994267212935383835.2699'
+    admin/dashboard/reporting_analytics/risk-portfolio.png: '171834274186926990529040.231472'
     bank_users/user_form/Screenshot 2023-11-26 225128.png: '1701019476115898515002114.6549'
     lender/dashboard/View Lost Opportunities (2).png: '1716365305733556687975648.1764'
     admin/dashboard/loan_servicing/collection-process.png: '1718281431972271375063623.91785'
