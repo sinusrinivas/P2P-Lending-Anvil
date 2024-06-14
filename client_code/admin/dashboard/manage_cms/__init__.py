@@ -29,3 +29,11 @@ class manage_cms(manage_cmsTemplate):
     """This method is called when a mouse button is released on this component"""
     open_form('admin.dashboard.manage_cms.manage_dropdowns')
 
+  def button_21_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    open_form('admin.dashboard.manage_cms.manage_issues')
+
+  def image_10_mouse_up(self, x, y, button, **event_args):
+    """This method is called when a mouse button is released on this component"""
+    open_form('admin.dashboard.manage_cms.manage_issues')
+

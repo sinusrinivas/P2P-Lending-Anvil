@@ -1,0 +1,30 @@
+is_package: true
+container:
+  type: HtmlTemplate
+  properties: {html: ''}
+components:
+- type: ColumnPanel
+  properties: {col_widths: '{}'}
+  name: content_panel
+  layout_properties: {slot: default}
+  components:
+  - type: form:admin.dashboard.home_button_admin
+    properties: {}
+    name: home_button_admin_1
+    layout_properties: {grid_position: 'EMFUOQ,KUTSLQ', full_width_row: true}
+  - name: label_1_copy
+    properties: {role: null, bold: true, align: center, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: 18, tooltip: '', text: Manage Issues}
+    type: Label
+    layout_properties: {grid_position: 'FIZXVR,KVJMEQ'}
+  - type: RepeatingPanel
+    properties: {role: null, spacing_above: small, background: '', item_template: admin.dashboard.manage_cms.manage_issues.ItemTemplate82, foreground: '', items: null, spacing_below: small, visible: true, border: '', tooltip: ''}
+    name: repeating_panel_1
+    layout_properties: {grid_position: 'QAUYHV,OAOMUQ'}
+  - type: Label
+    properties: {role: null, bold: false, align: center, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: false, border: '', italic: false, font_size: null, tooltip: '', text: No issues reported}
+    name: label_no_issues
+    layout_properties: {grid_position: 'CSEMIT,VANQTS'}
+- type: FlowPanel
+  properties: {}
+  name: navbar_links
+  layout_properties: {slot: nav-right}

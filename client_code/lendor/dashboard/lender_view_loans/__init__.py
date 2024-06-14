@@ -25,7 +25,8 @@ class lender_view_loans(lender_view_loansTemplate):
             loan_updated_status=q.any_of(
                 q.like('disbursed%'),
                 q.like('foreclosure%'),
-                q.like('extension%')
+                q.like('extension%'),
+                q.like('approved')
             ),
            lender_customer_id=self.user_id
         )

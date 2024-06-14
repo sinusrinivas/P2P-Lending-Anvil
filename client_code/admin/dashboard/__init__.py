@@ -21,7 +21,7 @@ class dashboard(dashboardTemplate):
 
   def button_3_click(self, **event_args):
    
-    open_form('admin.dashboard.collateral_management')
+    open_form('admin.dashboard.collateral_manage')
 
   def button_4_click(self, **event_args):
    
@@ -33,7 +33,7 @@ class dashboard(dashboardTemplate):
 
   def button_6_click(self, **event_args):
     
-    open_form('admin.dashboard.manage_products')
+    open_form('admin.dashboard.customer_management')
 
   def button_7_click(self, **event_args):
     
@@ -71,7 +71,7 @@ class dashboard(dashboardTemplate):
 
   def button_15_click(self, **event_args):
     """This method is called when the button is clicked"""
-    open_form('admin.dashboard.manage_loan_details')
+    open_form('admin.dashboard.loan_management')
 
   def button_16_click(self, **event_args):
     """This method is called when the button is clicked"""
@@ -95,7 +95,7 @@ class dashboard(dashboardTemplate):
 
   def button_21_click(self, **event_args):
     """This method is called when the button is clicked"""
-    open_form('admin.dashboard.customer_management')
+    open_form('admin.dashboard.manage_issues')
 
   def button_22_click(self, **event_args):
     """This method is called when the button is clicked"""
@@ -103,7 +103,7 @@ class dashboard(dashboardTemplate):
 
   def button_23_click(self, **event_args):
     """This method is called when the button is clicked"""
-    open_form('admin.dashboard.manage_ascend')
+    open_form('admin.dashboard.manage_ascend_score')
 
   def image_9_mouse_up(self, x, y, button, **event_args):
     """This method is called when a mouse button is released on this component"""
@@ -116,7 +116,7 @@ class dashboard(dashboardTemplate):
 
   def image_4_mouse_up(self, x, y, button, **event_args):
     """This method is called when a mouse button is released on this component"""
-    open_form('admin.dashboard.manage_loan_details')
+    open_form('admin.dashboard.loan_management')
 
   def image_5_mouse_up(self, x, y, button, **event_args):
     """This method is called when a mouse button is released on this component"""
@@ -141,7 +141,7 @@ class dashboard(dashboardTemplate):
 
   def image_12_mouse_up(self, x, y, button, **event_args):
     """This method is called when a mouse button is released on this component"""
-    open_form('admin.dashboard.manage_ascend')
+    open_form('admin.dashboard.manage_ascend_score')
 
   def image_13_mouse_up(self, x, y, button, **event_args):
     """This method is called when a mouse button is released on this component"""
@@ -157,7 +157,7 @@ class dashboard(dashboardTemplate):
 
   def image_3_mouse_up(self, x, y, button, **event_args):
     """This method is called when a mouse button is released on this component"""
-    open_form('admin.dashboard.collateral_management')
+    open_form('admin.dashboard.collateral_manage')
 
   def image_7_mouse_up(self, x, y, button, **event_args):
     """This method is called when a mouse button is released on this component"""
