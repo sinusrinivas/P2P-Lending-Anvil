@@ -372,6 +372,15 @@ db_schema:
     - name: days_left
       admin_ui: {width: 200, order: 6.1875}
       type: number
+    - name: default_fee
+      admin_ui: {width: 200}
+      type: number
+    - name: lapsed_fee
+      admin_ui: {width: 200}
+      type: number
+    - name: npa_fee
+      admin_ui: {width: 200}
+      type: number
   fin_guarantor_details:
     client: full
     server: full
@@ -523,6 +532,15 @@ db_schema:
     - name: usertype
       admin_ui: {width: 200, order: 10}
       type: string
+    - name: issue_occured
+      admin_ui: {width: 200}
+      type: string
+    - name: status
+      admin_ui: {width: 200}
+      type: bool
+    - name: user_photo
+      admin_ui: {width: 200}
+      type: media
     title: fin_reported_problems
   fin_borrower_qualification:
     title: fin_borrower_qualification

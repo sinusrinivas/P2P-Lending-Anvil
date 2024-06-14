@@ -9,7 +9,6 @@ import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 
-
 class stack_graph(stack_graphTemplate):
   def __init__(self, selected_row, **properties):
     # Set Form properties and Data Bindings.
@@ -43,8 +42,8 @@ class stack_graph(stack_graphTemplate):
     traces = []
     unique_loan_ids = list(set(loan_ids))
     for loan_id in unique_loan_ids:
-      emi_nums = [emi_numbers[i] for i in range(len(loan_ids)) if loan_ids[i] == loan_id]
-      days_left = [days_left_data[i] for i in range(len(loan_ids)) if loan_ids[i] == loan_id]
+      emi_nums = [0] + [emi_numbers[i] for i in range(len(loan_ids)) if loan_ids[i] == loan_id]
+      days_left = [0] + [days_left_data[i] for i in range(len(loan_ids)) if loan_ids[i] == loan_id]
       
       trace = go.Scatter(
         x=emi_nums, 

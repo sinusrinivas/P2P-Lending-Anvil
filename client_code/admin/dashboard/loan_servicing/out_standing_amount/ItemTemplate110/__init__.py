@@ -1,4 +1,4 @@
-from ._anvil_designer import loan_servicingTemplate
+from ._anvil_designer import ItemTemplate110Template
 from anvil import *
 import anvil.server
 import anvil.google.auth, anvil.google.drive
@@ -9,17 +9,15 @@ import anvil.tables.query as q
 from anvil.tables import app_tables
 
 
-class loan_servicing(loan_servicingTemplate):
+class ItemTemplate110(ItemTemplate110Template):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
 
     # Any code you write here will run before the form opens.
 
-  def button_1_copy_3_click(self, **event_args):
-    """This method is called when the button is clicked"""
-    open_form('admin.dashboard')
+  def link_1_click(self, **event_args):
+    """This method is called when the link is clicked"""
+    selcted_row=self.item
+    open_form('admin.dashboard.loan_servicing.out_standing_amount.chart_tracking',selected_row=selcted_row)
 
-  def button_14_click(self, **event_args):
-    """This method is called when the button is clicked"""
-    open_form('admin.dashboard.loan_servicing.out_standing_amount')
