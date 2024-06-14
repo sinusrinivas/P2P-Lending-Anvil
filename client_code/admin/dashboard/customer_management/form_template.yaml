@@ -1,6 +1,6 @@
 container:
   type: ColumnPanel
-  properties: {col_widths: '{}'}
+  properties: {col_widths: '{}', background: '#Edf0f4'}
 components:
 - name: home_button_admin_1
   properties: {}
