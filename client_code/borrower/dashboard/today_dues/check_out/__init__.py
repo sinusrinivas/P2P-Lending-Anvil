@@ -765,45 +765,7 @@ class check_out(check_outTemplate):
         total_repayment_amount = self.selected_row['total_repayment_amount']
         # Retrieve processing fee
         processing_fee = float(self.processing_fee.text)  # Assuming processing fee is shown in label_9
-        # Calculate remaining amount
-        # if self.selected_row['remaining_amount'] is not None:
-        #     remaining_amount = self.selected_row['remaining_amount'] - (emi_amount + processing_fee)
-        # else:
-        #     remaining_amount = total_repayment_amount - (emi_amount + processing_fee)
-
-        # print(remaining_amount)
-        # loan_details = app_tables.fin_loan_details.get(loan_id=self.selected_row['loan_id'])
-        # if loan_details is not None:
-        #     if loan_details['total_amount_paid'] is None :
-        #         loan_details['total_amount_paid'] = 0
-        #     if loan_details['lender_returns'] is None :
-        #         loan_details['lender_returns'] = 0
-        #     loan_details['lender_returns'] += i_r
-        #     loan_details['remaining_amount'] = remaining_amount
-        #     loan_details['total_amount_paid'] += total_emi_amount
-        #     loan_details.update()
  
-        # lender_returns_dict = defaultdict(float)
-        # borrower_loans = app_tables.fin_loan_details.search(borrower_customer_id=self.selected_row['borrower_customer_id'])
-        # for loan in borrower_loans:
-        #     lender_id = loan['lender_customer_id']
-        #     lender_returns = loan['lender_returns']
-        #     # Convert None to 0 for lender returns
-        #     if lender_returns is None:
-        #         lender_returns = 0
-        #     lender_returns_dict[lender_id] += lender_returns
-        # # Update lender returns in the fin_lender table
-        # for lender_id, total_returns in lender_returns_dict.items():
-        #     lender_row = app_tables.fin_lender.get(customer_id=lender_id)
-        #     if lender_row is not None:
-        #         if lender_row['return_on_investment'] is None:
-        #             lender_row['return_on_investment'] = 0
-        #         lender_row['return_on_investment'] = total_returns
-        #         lender_row.update()
-        #     else:
-        #         # Create a new row if lender doesn't exist
-        #         app_tables.fin_lender.add_row(customer_id=lender_id, return_on_investment=total_returns)
-              
         try:
             lapsed_fee = float(self.lapsed.text)
         except ValueError:
@@ -973,6 +935,9 @@ class check_out(check_outTemplate):
                         payment_type='pay now',
                         remaining_tenure=remaining_tenure,
                         days_left=days_left,
+                        npa_fee=npa,
+                        default_fee=default_fee,
+                        lapsed_fee=lapsed_fee,
                         
                         
                     )
@@ -1104,11 +1069,15 @@ class check_out(check_outTemplate):
         'loan_state_status' : self.selected_row['loan_state_status'],
         # 'part_payment_date' : self.selected_row['part_payment_date'],
         # 'payment_type' : self.selected_row['payment_type'],
-        'tenure':self.tenure_label.text,
+        # 'tenure':self.tenure_label.text,
         'lender_full_name' : self.selected_row['lender_full_name'],
         'for_remaining_amount_calculation': self.emi_processing_extension.text,
         # 'remaining_tenure': self.tenure_label.text,
         'remaining_tenure' : self.selected_row['remaining_tenure'],
+        'days_left' : self.selected_row['days_left'],
+        'npa_fee':npa_fee,
+        'default_fee':default_fee,
+        'lapsed_fee':lapsed_fee,
     }
     
     # Open the part_payment form and pass loan_details as a parameter
