@@ -16,6 +16,7 @@ unique_ids:
     admin.dashboard.manage_ascend_score.view_ascend_subcategory.ItemTemplate38: '17095388729813876844709.4927883'
     borrower.borrower_registration_forms.borrower_registration_last_check_out_form: '1699374444060167172815541.79663'
     borrower.dashboard.application_tracker: PJMMW3MYSYWWZP2NRWGPMC74YHK7B7TU
+    admin.dashboard.manage_cms.manage_issues.ItemTemplate82: '1710855913749748810930595.378'
     admin.dashboard.customer_management.handles_customer_registration.lenders: '1699528516670654865261457.5034'
     borrower.dashboard.view_loans.payment_details_b: LBZVQNFJYXVPEYJ4E33NRRLBEJQJDUZ5
     admin.dashboard.manage_settings: '1699528731095179009819656.96207'
@@ -272,7 +273,6 @@ unique_ids:
     admin.dashboard.manage_cms.add_borrower_dropdown_details.edit_marrital: '1706119991782743823560693.275'
     admin.dashboard.manage_ascend_score.add_subcategory.edit_age_of_business: '1710782544983909271197532.8109'
     admin.dashboard.admin_teams.view_profile.edit_form: '1699528319288104807163991.37613'
-    admin.dashboard.manage_issues.ItemTemplate82: '1710855913749748810930595.378'
     admin.dashboard.manage_cms.add_borrower_dropdown_details: '1706089777259168249194386.92175'
     lendor.navigation_bar.Navigation_bar_lender_dashbord: '1706506675442701459967197.9349'
     admin.dashboard.loan_management.view_loans.open_loans: '1699528907914284548214666.92645'
@@ -317,6 +317,7 @@ unique_ids:
     admin.dashboard.collateral_manage: '1718263947712896806883957.2241'
     admin.dashboard.customer_management.handles_customer_registration.lenders.RowTemplate16: '1715939835146740820371474.119'
     admin.dashboard.manage_cms.add_general_dropdowns.edit_present_address: '171040037015774293132137.13895'
+    admin.dashboard.manage_cms.manage_issues: '1710855867401864427474457.7607'
     borrower.dashboard.extension_loan_request.ItemTemplate75: NKSJCQVDYQAQURMW6GFWGEYLX46WKZG3
     borrower.dashboard.extension_loan_request.payment_details_extension.RowTemplate39: S3VFLC5NDKKOGKHRTN7HZVE4DEZRMQRH
     lendor.dashboard.view_loan_foreclosure_Requests.foreclose_details: '1700454637827919052628054.0963'
@@ -345,7 +346,6 @@ unique_ids:
     admin.dashboard.manage_settings.manage_ascend_score_range: '1717763950067548096369302.4723'
     admin.dashboard.manage_products.view_products_and_categories.RowTemplate28: '1704172157354836718833767.5173'
     admin.dashboard.manage_cms.add_lender_dropdown_details.edit_organizaton_type: '1706531933047410934362132.85895'
-    admin.dashboard.manage_issues: '1710855867401864427474457.7607'
     ? borrower.borrower_registration_forms.star_1_borrower_registration_form_2_employment.star_1_borrower_registration_form_2_employment_business_2
     : '1700126739765126145778650.8795'
     admin.dashboard.manage_cms.add_borrower_dropdown_details.edit_profession: '1706191334468156212606877.0564'
@@ -813,6 +813,7 @@ unique_ids:
     bank_users/main_form/business_loan/collateral.png: '1712294753220960879970696.0487'
     bank_users/personal_loan/how_it_works/quick_funding.png: '171334472778416215964591.33401'
     bank_users/personal_loan/loan_repayment.png: '1712901264643778006115198.944'
+    admin/dashboard/field-engineer.png: '1718355791143192345299079.71008'
     bank_users/personal_loan/evaluation.png: '1712746759264804629485563.9542'
     bank_users/personal_loan/debt_consolidation_loan/debt-consolidation-main.png: '1712918554848800782345041.2164'
     bank_users/main_form/icons8-business-goal.png: '1712040389692229159110821.56293'

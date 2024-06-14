@@ -75,25 +75,26 @@ components:
       type: Button
       layout_properties: {grid_position: 'JULBAD,JZEYPC'}
       event_bindings: {click: button_3_click}
-  - properties: {col_widths: '{}', background: white, role: elevated-card}
+  - name: content_panel_copy_copy_3_copy_3_copy_copy_copy_12_copy_copy_3_copy
+    properties: {col_widths: '{}', background: white, role: elevated-card}
     type: ColumnPanel
-    layout_properties: {grid_position: 'DGBMNL,DWGBUW HCUZWB,GFEJCA'}
-    name: content_panel_copy_copy_3_copy_3_copy_copy_copy_9
+    layout_properties: {grid_position: 'DGBMNL,DWGBUW GTLDVB,ISTLBZ'}
     components:
-    - properties: {source: _/theme/admin/dashboard/risk-management.png, display_mode: shrink_to_fit, height: '100'}
+    - name: image_14
+      properties: {height: '100', source: _/theme/admin/dashboard/integration.png}
       type: Image
-      layout_properties: {grid_position: 'YGLFNC,ASARUK'}
-      event_bindings: {mouse_up: image_10_mouse_up}
-      name: image_10
-    - properties:
-        text: "  Manage \nIssues"
-        foreground: black
+      layout_properties: {grid_position: 'FNOORP,FMZUTK'}
+      event_bindings: {mouse_up: image_14_mouse_up}
+    - name: button_5
+      properties:
+        text: |
+          Integration with Third-Party Systems
         bold: true
+        foreground: black
         font_size: 15
       type: Button
-      layout_properties: {grid_position: 'VXGGJT,QMFGMX'}
-      event_bindings: {click: button_21_click}
-      name: button_21
+      layout_properties: {grid_position: 'OXXKBR,UJXJJS'}
+      event_bindings: {click: button_5_click}
   - properties: {col_widths: '{}', background: white, role: elevated-card}
     type: ColumnPanel
     layout_properties: {grid_position: 'DGBMNL,NCWVQM FRNYKC,RLNTPL'}
@@ -153,26 +154,6 @@ components:
       type: Button
       layout_properties: {grid_position: 'LAZFJB,YGFJGK'}
       event_bindings: {click: button_1_click}
-  - name: content_panel_copy_copy_3_copy_3_copy_copy_copy_12_copy_copy_3_copy
-    properties: {col_widths: '{}', background: white, role: elevated-card}
-    type: ColumnPanel
-    layout_properties: {grid_position: 'DGBMNL,NCWVQM IRHICR,YXBDUW'}
-    components:
-    - name: image_14
-      properties: {height: '100', source: _/theme/admin/dashboard/integration.png}
-      type: Image
-      layout_properties: {grid_position: 'FNOORP,FMZUTK'}
-      event_bindings: {mouse_up: image_14_mouse_up}
-    - name: button_5
-      properties:
-        text: |
-          Integration with Third-Party Systems
-        bold: true
-        foreground: black
-        font_size: 15
-      type: Button
-      layout_properties: {grid_position: 'OXXKBR,UJXJJS'}
-      event_bindings: {click: button_5_click}
   - properties: {col_widths: '{}', background: white, role: elevated-card}
     type: ColumnPanel
     layout_properties: {grid_position: 'DGBMNL,CNLKUD CEKMOU,VNDBBM'}
