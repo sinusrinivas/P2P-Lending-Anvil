@@ -30,18 +30,16 @@ class admin_management(admin_managementTemplate):
             self.view_people.visible = True
             self.image_4_copy.visible = True
             self.image_4_copy_5.visible = True
-            self.button_1.visible = False
             self.content_panel_copy_copy_3_copy_3_copy_copy_copy_2_copy.visible = True
             self.content_panel_copy_copy_3_copy_3_copy_copy_copy_2_copy_5.visible = True
-            self.content_panel_copy_copy_3_copy_3_copy_copy_copy_2_copy_10.visible = False
+          
         elif self.user_type == 'admin':
             self.add_people.visible = False
-            self.view_people.visible = False
-            self.button_1.visible = True
-            self.image_4_copy_10.visible = True
+            self.view_people.visible = True
+            self.image_4_copy_5.visible = True
             self.content_panel_copy_copy_3_copy_3_copy_copy_copy_2_copy.visible = False
-            self.content_panel_copy_copy_3_copy_3_copy_copy_copy_2_copy_5.visible = False
-            self.content_panel_copy_copy_3_copy_3_copy_copy_copy_2_copy_10.visible = True
+            self.content_panel_copy_copy_3_copy_3_copy_copy_copy_2_copy_5.visible = True
+            
         else:
             self.add_people.visible = False
             self.view_people.visible = False
@@ -62,13 +60,13 @@ class admin_management(admin_managementTemplate):
         """This method is called when the button is clicked"""
         open_form('admin.dashboard.admin_management.view_admins')
 
-    def button_1_copy_click(self, **event_args):
-      """This method is called when the button is clicked"""
-      open_form('admin.dashboard.admin_management.view_admins')
+    # def button_1_copy_click(self, **event_args):
+    #   """This method is called when the button is clicked"""
+    #   open_form('admin.dashboard.admin_management.view_admins')
 
-    def button_1_click(self, **event_args):
-      """This method is called when the button is clicked"""
-      open_form('admin.dashboard.admin_management.view_admins')
+    # def button_1_click(self, **event_args):
+    #   """This method is called when the button is clicked"""
+    #   open_form('admin.dashboard.admin_management.view_admins')
 
     def button_9_click(self, **event_args):
       """This method is called when the button is clicked"""
@@ -86,9 +84,9 @@ class admin_management(admin_managementTemplate):
       """This method is called when a mouse button is released on this component"""
       open_form('admin.dashboard.admin_management.add_admin')
 
-    def image_4_copy_10_mouse_up(self, x, y, button, **event_args):
-      """This method is called when a mouse button is released on this component"""
-      open_form('admin.dashboard.admin_management.view_admins')
+    # def image_4_copy_10_mouse_up(self, x, y, button, **event_args):
+    #   """This method is called when a mouse button is released on this component"""
+    #   open_form('admin.dashboard.admin_management.view_admins')
 
     def image_4_copy_5_mouse_up(self, x, y, button, **event_args):
       """This method is called when a mouse button is released on this component"""

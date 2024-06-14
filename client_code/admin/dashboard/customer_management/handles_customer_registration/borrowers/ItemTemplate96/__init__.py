@@ -26,4 +26,4 @@ class ItemTemplate96(ItemTemplate96Template):
 
   def outlined_button_1_click(self, **event_args):
     value_to_pass = self.link_1.text
-    open_form('admin.dashboard.borrowers.view_profile', value_to_pass)
+    open_form('admin.dashboard.customer_management.handles_customer_registration.borrowers.view_profile', value_to_pass)

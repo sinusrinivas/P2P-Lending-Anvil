@@ -304,7 +304,7 @@ class view_profile_copy(view_profile_copyTemplate):
   def button_2_click(self, **event_args):
     """This method is called when the button is clicked"""
     customer_id_value = self.label_3.text
-    open_form('admin.dashboard.lenders.view_profile_copy.edit_form_copy', customer_id_value)
+    open_form('admin.dashboard.customer_management.handles_customer_registration.lenders.view_profile_copy.edit_form_copy', customer_id_value)
 
   def button_3_click(self, **event_args):
     """This method is called when the button is clicked"""
@@ -317,4 +317,4 @@ class view_profile_copy(view_profile_copyTemplate):
 
   def button_1_copy_click(self, **event_args):
     """This method is called when the button is clicked"""
-    open_form('admin.dashboard.lenders')
+    open_form('admin.dashboard.customer_management.handles_customer_registration.lenders')

@@ -457,15 +457,15 @@ class edit_form_copy(edit_form_copyTemplate):
                 wallet_bank_accont_table.update()
               
             print(f"Updates user profile, lender, wallet, forclosure, loan_details and extends_loan table for customer_id: {self.get}")
-            open_form('admin.dashboard.lenders.view_profile_copy', self.get)
+            open_form('admin.dashboard.customer_management.handles_customer_registration.lenders.view_profile_copy', self.get)
 
 
     def button_1_click(self, **event_args):
           """This method is called when the button is clicked"""
-          open_form('admin.dashboard.lenders.view_profile_copy', self.get)
+          open_form('admin.dashboard.customer_management.handles_customer_registration.lenders.view_profile_copy', self.get)
       
     def button_1_copy_click(self, **event_args):
           """This method is called when the button is clicked"""
-          open_form('admin.dashboard.lenders.view_profile_copy', self.get)
+          open_form('admin.dashboard.customer_management.handles_customer_registration.lenders.view_profile_copy', self.get)
 
    

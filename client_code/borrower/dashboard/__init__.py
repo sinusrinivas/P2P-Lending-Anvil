@@ -56,7 +56,7 @@ class dashboard(dashboardTemplate):
       existing_loans = app_tables.fin_loan_details.search(
         borrower_customer_id=self.user_Id,
         loan_updated_status=q.any_of(
-          q.like('accept%'),
+          q.like('accepted%'),
           q.like('Approved%'),
           q.like('approved%'),
           q.like('under process%'),

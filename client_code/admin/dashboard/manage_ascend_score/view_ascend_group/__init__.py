@@ -14,7 +14,7 @@ class view_ascend_group(view_ascend_groupTemplate):
     self.fetch_data()
 
   def fetch_data(self):
-    self.data = app_tables.fin.search()
+    self.data = app_tables.fin_admin_ascend_groups.search()
     if not self.data:
       Notification("No Data Available Here!").show()
     else:
@@ -24,4 +24,4 @@ class view_ascend_group(view_ascend_groupTemplate):
       self.repeating_panel_1.items = self.result
 
   def back_btn_click(self, **event_args):
-    open_form('admin.dashboard.manage_ascend')
+    open_form('admin.dashboard.manage_ascend_score')

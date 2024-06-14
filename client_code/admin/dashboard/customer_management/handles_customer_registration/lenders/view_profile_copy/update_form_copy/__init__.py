@@ -86,7 +86,7 @@ class update_form_copy(update_form_copyTemplate):
         data[a]['college_address'] = self.text_box_54.text
         # data[a]['running_Home_Loan'] = self.text_box_55.text
         print(a)
-        open_form('admin.dashboard.lenders.view_profile_copy', self.get)
+        open_form('admin.dashboard.customer_management.handles_customer_registration.lenders.view_profile_copy', self.get)
 
   # def button_1_click(self, **event_args):
   #   """This method is called when the button is clicked"""
