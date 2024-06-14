@@ -30,18 +30,23 @@ class dashboard_report_a_problem(dashboard_report_a_problemTemplate):
             self.drop_down_2.items = [(sti['subcategory_technical_issue'], sti['subcategory_technical_issue']) for sti in self.subcategory]
         else:
             self.drop_down_2.items = [(sli['borrower_subcategory_loan_issue'], sli['borrower_subcategory_loan_issue']) for sli in self.subcategory]
-          
+    def img_file_loader_change(self, file, **event_args):
+        # Function to handle user photo file upload event
+        if file is not None:
+            # Display the image in an Image component 
+          self.image_issue.source =file
     def button_2_click(self, **event_args):
         # Get input values from text boxes
         name = self.name_box.text
         email = self.email_box.text
         mobile = self.mobile_box.text
+        issue_photo =self.img_file_loader.file
         category = self.drop_down_1.selected_value
         subcategory = self.drop_down_2.selected_value
         description = self.description_box.text
 
         # Validate if all required fields are filled
-        if not name or not email or not mobile or not category or not subcategory or not description:
+        if not name or not email or not mobile or not issue_photo or not category or not subcategory or not description:
             alert("Please fill in all required fields.")
             return
   
@@ -53,14 +58,14 @@ class dashboard_report_a_problem(dashboard_report_a_problemTemplate):
             return
 
         # Check if a file is uploaded
-        if not self.file_loader_1.file:
+        if not self.img_file_loader.file:
             alert("Please upload a file.")
             return
 
         current_datetime = datetime.datetime.now()
 
         # Get the file uploaded via file_loader_1
-        file = self.file_loader_1.file
+        Iss = self.imd_file_loader.file
          # Check if the checkbox is checked
         it_is_urgent = self.check_box_1.checked
 
@@ -72,7 +77,7 @@ class dashboard_report_a_problem(dashboard_report_a_problemTemplate):
                                                   subcategory = subcategory ,
                                                   issue_description=description,
                                                   report_date=current_datetime,
-                                                  issue_photo=file,
+                                                  issue_photo=issue_photo,
                                                   it_is_urgent=it_is_urgent,
                                                   usertype=self.usertype)
 

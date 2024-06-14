@@ -39,7 +39,7 @@ components:
       layout_properties: {grid_position: 'JKULIH,FSWDBX ELMOQU,JYVLYZ'}
       components:
       - name: image_1_copy_2
-        properties: {height: 559, display_mode: zoom_to_fill, source: _/theme/borrower/dashboard/borrower_report_a_problem.png}
+        properties: {height: 657, display_mode: zoom_to_fill, source: _/theme/borrower/dashboard/borrower_report_a_problem.png}
         type: Image
         layout_properties: {grid_position: 'ZELBOR,FIUMDM'}
     - name: spacer_3
@@ -74,14 +74,19 @@ components:
       properties: {role: outlined, placeholder: please enter your email here}
       type: TextBox
       layout_properties: {grid_position: 'JKULIH,USORJN PWRUDJ,AKSRCW'}
-    - name: label_8
+    - name: label_8_copy1
       properties: {text: Issue Photo, bold: true}
       type: Label
       layout_properties: {grid_position: 'JKULIH,USORJN OJHCCD,HUICLJ'}
-    - name: file_loader_1
-      properties: {}
+    - name: img_file_loader
+      properties: {text: Upload Your issue}
       type: FileLoader
       layout_properties: {grid_position: 'JKULIH,USORJN OJHCCD,KKVBKF'}
+    - name: image_issue
+      properties: {height: '100'}
+      type: Image
+      layout_properties: {grid_position: 'JKULIH,USORJN OJHCCD,RLWAZX'}
+      event_bindings: {}
     - name: label_2
       properties: {text: Category, bold: true}
       type: Label
@@ -117,7 +122,7 @@ components:
       name: label_7
       layout_properties: {grid_position: 'JKULIH,USORJN YIQLID,OMJDMP'}
     - type: TextArea
-      properties: {role: outlined, bold: false, align: right, placeholder: '1000', spacing_above: small, background: 'theme:On Primary', underline: false, font: '', foreground: '', spacing_below: small, visible: true, border: '', italic: false, enabled: true, auto_expand: true, font_size: null, tooltip: '', height: 168, text: ''}
+      properties: {role: outlined, bold: false, align: left, placeholder: '', spacing_above: small, background: 'theme:On Primary', underline: false, font: '', foreground: '', spacing_below: small, visible: true, border: '', italic: false, enabled: true, auto_expand: true, font_size: null, tooltip: '', height: 168, text: ''}
       name: description_box
       layout_properties: {grid_position: 'JKULIH,USORJN AOZFDF,IQFSEY'}
       event_bindings: {change: issue_description_change}

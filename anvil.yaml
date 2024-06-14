@@ -1565,13 +1565,13 @@ db_schema:
     server: full
     columns:
     - name: borrower_subcategory_loan_issue
-      admin_ui: {order: 0, width: 200}
+      admin_ui: {order: 0, width: 280}
       type: string
     - name: subcategory_technical_issue
-      admin_ui: {width: 200, order: 1}
+      admin_ui: {order: 1, width: 243}
       type: string
     - name: lendor_subcategory_loan_issue
-      admin_ui: {width: 200, order: 2}
+      admin_ui: {order: 2, width: 261}
       type: string
     title: fin_report_issue_category
   fin_lendor_organization_type:
