@@ -109,7 +109,7 @@ class ots_dashboard(ots_dashboardTemplate):
 
         self.result = []
         for loan_detail in self.data:
-            if loan_detail['loan_updated_status'] in ['OTS', 'Approved', 'approved', 'disbursed loan', 'Disbursed loan', 'default loan', 'under process', 'NPA', 'lapsed loan']:
+            if loan_detail['loan_updated_status'] in ['OTS', 'Approved', 'approved', 'disbursed', 'disbursed loan', 'default loan', 'under process', 'NPA', 'lapsed loan']:
                 lender_profile = app_tables.fin_user_profile.get(customer_id=loan_detail['lender_customer_id'])
                 borrower_profile = app_tables.fin_user_profile.get(customer_id=loan_detail['borrower_customer_id'])
                 lender_mobile = lender_profile['mobile'] if lender_profile else None

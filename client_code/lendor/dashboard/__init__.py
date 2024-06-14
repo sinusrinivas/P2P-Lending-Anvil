@@ -47,7 +47,7 @@ class dashboard(dashboardTemplate):
 
     disbursed_loan = app_tables.fin_loan_details.search(loan_updated_status=q.like('disbursed%'), lender_customer_id=self.user_id)
     lost_opportunities = app_tables.fin_loan_details.search(loan_updated_status=q.like('lost opportunities%'), lender_customer_id=self.user_id)
-    closed = app_tables.fin_loan_details.search(loan_updated_status=q.like('close%'), lender_customer_id=self.user_id)
+    closed = app_tables.fin_loan_details.search(loan_updated_status=q.like('closed%'), lender_customer_id=self.user_id)
     extended = app_tables.fin_loan_details.search(loan_updated_status=q.like('extension%'), lender_customer_id=self.user_id)
     
     self.button_1_copy.text = f"New Loan Requests ({len(existing_loans)})"

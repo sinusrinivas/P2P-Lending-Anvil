@@ -44,7 +44,7 @@ components:
     layout_properties: {grid_position: 'LKTWOF,LRMGVL TWLKFI,TMCBGK'}
     components:
     - name: image_4_copy_5_copy
-      properties: {source: _/theme/admin/dashboard/security-compliance/Access-management.png, display_mode: shrink_to_fit, height: '100', visible: true}
+      properties: {source: _/theme/admin/dashboard/accounting-software-synchronization.png, display_mode: shrink_to_fit, height: '100', visible: true}
       type: Image
       layout_properties: {grid_position: 'QGZTNW,PVJEPO'}
       event_bindings: {mouse_up: image_4_copy_5_mouse_up}
@@ -59,7 +59,7 @@ components:
     layout_properties: {grid_position: 'LKTWOF,PPLSYB VDWKON,JSYHFR'}
     components:
     - name: image_4_copy_10
-      properties: {source: _/theme/admin/dashboard/security-compliance/data-security.png, display_mode: shrink_to_fit, height: '100', visible: true}
+      properties: {source: _/theme/admin/dashboard/customer_management/kyc-verifiction.png, display_mode: shrink_to_fit, height: '100', visible: true}
       type: Image
       layout_properties: {grid_position: 'QGZTNW,PVJEPO'}
       event_bindings: {mouse_up: image_4_copy_10_mouse_up}
@@ -99,7 +99,7 @@ components:
     layout_properties: {grid_position: 'LKTWOF,FPVXBC'}
     components:
     - name: image_4_copy_5
-      properties: {source: _/theme/admin/dashboard/security-compliance/Access-management.png, display_mode: shrink_to_fit, height: '100', visible: true}
+      properties: {source: _/theme/admin/dashboard/payment-gateway-integration.png, display_mode: shrink_to_fit, height: '100', visible: true}
       type: Image
       layout_properties: {grid_position: 'QGZTNW,PVJEPO'}
       event_bindings: {mouse_up: image_4_copy_5_mouse_up}
