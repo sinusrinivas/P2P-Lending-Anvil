@@ -56,29 +56,21 @@ components:
     name: spacer_1
     layout_properties: {grid_position: 'FKNXLA,ZCFBEH GCEQKF,IFFCMA'}
   - name: label_4
-    properties: {text: Name, bold: true}
+    properties: {text: Full Name, bold: true}
     type: Label
     layout_properties: {grid_position: 'FKNXLA,ZCFBEH FIJYQF,AXCWGG'}
-  - name: name_box
-    properties: {placeholder: please enter your name here, role: outlined}
-    type: TextBox
-    layout_properties: {grid_position: 'FKNXLA,ZCFBEH FIJYQF,OLAAOI'}
+  - name: label_10
+    properties: {}
+    type: Label
+    layout_properties: {grid_position: 'FKNXLA,ZCFBEH FIJYQF,ULUOWV'}
   - name: label_6
-    properties: {text: Mobile Number, bold: true}
+    properties: {text: 'Mobile ', bold: true}
     type: Label
     layout_properties: {grid_position: 'FKNXLA,ZCFBEH ZLZTYL,RURDNG'}
-  - name: mobile_box
-    properties: {placeholder: please enter your mobile number here, role: outlined}
-    type: TextBox
-    layout_properties: {grid_position: 'FKNXLA,ZCFBEH ZLZTYL,QAKAZF'}
   - name: label_5
-    properties: {text: Email, bold: true}
+    properties: {text: Email User, bold: true}
     type: Label
     layout_properties: {grid_position: 'FKNXLA,ZCFBEH FVMQEM,KLOGYX'}
-  - name: email_box
-    properties: {placeholder: please enter your email here, role: outlined}
-    type: TextBox
-    layout_properties: {grid_position: 'FKNXLA,ZCFBEH FVMQEM,BPVAZL'}
   - name: label_8
     properties: {text: Issue Photo, bold: true}
     type: Label
