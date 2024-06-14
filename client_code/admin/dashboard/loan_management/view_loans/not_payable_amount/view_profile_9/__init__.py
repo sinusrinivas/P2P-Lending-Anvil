@@ -39,7 +39,7 @@ class view_profile_9(view_profile_9Template):
             self.label_32.text = self.loan_data['loan_updated_status']
 
     def button_1_copy_click(self, **event_args):
-      open_form('admin.dashboard.manage_loan_details.loan_management.not_payable_amount')
+      open_form('admin.dashboard.loan_management.view_loans.not_payable_amount')
 
     def button_2_click(self, **event_args):
         if self.loan_data:

@@ -35,4 +35,4 @@ class ItemTemplate40(ItemTemplate40Template):
   def outlined_button_1_click(self, **event_args):
     """This method is called when the button is clicked"""
     value_to_pass = self.loan_id.text
-    open_form('admin.dashboard.manage_loan_details.loan_management.one_time_settlement.view_profile_10', value_to_pass)
+    open_form('admin.dashboard.loan_management.view_loans.one_time_settlement.view_profile_10', value_to_pass)

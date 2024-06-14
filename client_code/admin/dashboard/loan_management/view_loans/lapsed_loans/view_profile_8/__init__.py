@@ -39,5 +39,5 @@ class view_profile_8(view_profile_8Template):
 
 
     def back_click(self, **event_args):
-      open_form('admin.dashboard.manage_loan_details.loan_management.lapsed_loans')
+      open_form('admin.dashboard.loan_management.view_loans.lapsed_loans')
     

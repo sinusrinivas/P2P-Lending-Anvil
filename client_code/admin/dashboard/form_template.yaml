@@ -104,11 +104,15 @@ components:
       layout_properties: {grid_position: 'CJWVAG,PSSGQJ'}
       event_bindings: {mouse_up: image_13_mouse_up}
       name: image_13
-    - properties: {text: ' Customer Management ', foreground: black, bold: true, font_size: 15}
+    - name: button_6
+      properties:
+        text: " Customer \nManagement "
+        foreground: black
+        bold: true
+        font_size: 15
       type: Button
-      layout_properties: {grid_position: 'VXGGJT,QMFGMX'}
-      event_bindings: {click: button_21_click}
-      name: button_21_copy
+      layout_properties: {grid_position: 'CYSPPF,HYARXK'}
+      event_bindings: {click: button_6_click}
   - properties: {col_widths: '{}', background: white, role: elevated-card}
     type: ColumnPanel
     layout_properties: {grid_position: 'DGBMNL,NCWVQM CRQOFC,RRFUFJ'}
@@ -232,11 +236,7 @@ components:
       layout_properties: {grid_position: 'HQRYUT,UOATCO'}
       event_bindings: {mouse_up: image_9_mouse_up}
       name: image_9
-    - properties:
-        text: "Manage \nCMS"
-        foreground: black
-        bold: true
-        font_size: 15
+    - properties: {text: Content Management System, foreground: black, bold: true, font_size: 15}
       type: Button
       layout_properties: {grid_position: 'HTLBLJ,LNMXIO'}
       event_bindings: {click: button_17_click}

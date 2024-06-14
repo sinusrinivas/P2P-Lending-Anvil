@@ -57,4 +57,4 @@ class closed_loans(closed_loansTemplate):
 
   def button_1_copy_click(self, **event_args):
     """This method is called when the button is clicked"""
-    open_form('admin.dashboard.manage_loan_details.loan_management')
+    open_form('admin.dashboard.loan_management.view_loans')

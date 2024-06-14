@@ -43,4 +43,4 @@ class view_profile_6(view_profile_6Template):
         open_form('admin.dashboard.manage_loan_details.loan_management.loan_disbursed')
 
     def button_1_copy_click(self, **event_args):
-      open_form('admin.dashboard.manage_loan_details.loan_management.loan_disbursed')
+      open_form('admin.dashboard.loan_management.view_loans.loan_disbursed')

@@ -21,41 +21,41 @@ class view_loans(view_loansTemplate):
 
   def button_1_click(self, **event_args):
     """This method is called when the button is clicked"""
-    open_form('admin.dashboard.manage_loan_details.loan_management.approved_loans')
+    open_form('admin.dashboard.loan_management.view_loans.approved_loans')
 
   def button_2_click(self, **event_args):
     """This method is called when the button is clicked"""
-    open_form('admin.dashboard.manage_loan_details.loan_management.rejected_loans')
+    open_form('admin.dashboard.loan_management.view_loans.rejected_loans')
 
   def button_3_click(self, **event_args):
     """This method is called when the button is clicked"""
-    open_form('admin.dashboard.manage_loan_details.loan_management.under_process')
+    open_form('admin.dashboard.loan_management.view_loanst.under_process')
 
   def button_4_click(self, **event_args):
     """This method is called when the button is clicked"""
-    open_form('admin.dashboard.manage_loan_details.loan_management.open_loans')
+    open_form('admin.dashboard.loan_management.view_loans.open_loans')
 
   def button_5_click(self, **event_args):
     """This method is called when the button is clicked"""
-    open_form('admin.dashboard.manage_loan_details.loan_management.closed_loans')
+    open_form('admin.dashboard.loan_management.view_loans.closed_loans')
 
   def button_6_click(self, **event_args):
     """This method is called when the button is clicked"""
-    open_form('admin.dashboard.manage_loan_details.loan_management.loan_disbursed')
+    open_form('admin.dashboard.loan_management.view_loans.loan_disbursed')
 
   def button_7_click(self, **event_args):
     """This method is called when the button is clicked"""
-    open_form('admin.dashboard.manage_loan_details.loan_management.lapsed_loans')
+    open_form('admin.dashboard.loan_management.view_loans.lapsed_loans')
 
   def button_8_click(self, **event_args):
     """This method is called when the button is clicked"""
-    open_form('admin.dashboard.manage_loan_details.loan_management.default_loans')
+    open_form('admin.dashboard.loan_management.view_loans.default_loans')
 
   def button_6_copy_click(self, **event_args):
-    open_form('admin.dashboard.manage_loan_details.loan_management.not_payable_amount')
+    open_form('admin.dashboard.loan_management.view_loans.not_payable_amount')
 
   def button_6_copy_2_click(self, **event_args):
-    open_form('admin.dashboard.manage_loan_details.loan_management.one_time_settlement')
+    open_form('admin.dashboard.loan_management.view_loans.one_time_settlement')
 
 
 
@@ -63,87 +63,87 @@ class view_loans(view_loansTemplate):
   # new buttons
   def button_19_click(self, **event_args):
     """This method is called when the button is clicked"""
-    open_form('admin.dashboard.manage_loan_details.loan_management.one_time_settlement')
+    open_form('admin.dashboard.loan_management.view_loans.one_time_settlement')
 
   def button_18_click(self, **event_args):
     """This method is called when the button is clicked"""
-    open_form('admin.dashboard.manage_loan_details.loan_management.not_payable_amount')
+    open_form('admin.dashboard.loan_management.view_loans.not_payable_amount')
 
   def button_9_click(self, **event_args):
     """This method is called when the button is clicked"""
-    open_form('admin.dashboard.manage_loan_details.loan_management.approved_loans')
+    open_form('admin.dashboard.loan_management.view_loans.approved_loans')
 
   def button_10_click(self, **event_args):
     """This method is called when the button is clicked"""
-    open_form('admin.dashboard.manage_loan_details.loan_management.rejected_loans')
+    open_form('admin.dashboard.loan_management.view_loans.rejected_loans')
 
   def button_11_click(self, **event_args):
     """This method is called when the button is clicked"""
-    open_form('admin.dashboard.manage_loan_details.loan_management.under_process')
+    open_form('admin.dashboard.loan_management.view_loans.under_process')
 
   def button_12_click(self, **event_args):
     """This method is called when the button is clicked"""
-    open_form('admin.dashboard.manage_loan_details.loan_management.open_loans')
+    open_form('admin.dashboard.loan_management.view_loans.open_loans')
 
   def button_13_click(self, **event_args):
     """This method is called when the button is clicked"""
-    open_form('admin.dashboard.manage_loan_details.loan_management.loan_disbursed')
+    open_form('admin.dashboard.loan_management.view_loans.loan_disbursed')
 
   def button_14_click(self, **event_args):
     """This method is called when the button is clicked"""
-    open_form('admin.dashboard.manage_loan_details.loan_management.lapsed_loans')
+    open_form('admin.dashboard.loan_management.view_loans.lapsed_loans')
 
   def button_16_click(self, **event_args):
     """This method is called when the button is clicked"""
-    open_form('admin.dashboard.manage_loan_details.loan_management.default_loans')
+    open_form('admin.dashboard.loan_management.view_loans.default_loans')
 
   def button_17_click(self, **event_args):
     """This method is called when the button is clicked"""
-    open_form('admin.dashboard.manage_loan_details.loan_management.closed_loans')
+    open_form('admin.dashboard.loan_management.view_loans.closed_loans')
 
   def image_4_copy_mouse_up(self, x, y, button, **event_args):
     """This method is called when a mouse button is released on this component"""
-    open_form('admin.dashboard.manage_loan_details.loan_management.approved_loans')
+    open_form('admin.dashboard.loan_management.view_loans.approved_loans')
 
   def image_4_copy_3_mouse_up(self, x, y, button, **event_args):
     """This method is called when a mouse button is released on this component"""
-    open_form('admin.dashboard.manage_loan_details.loan_management.rejected_loans')
+    open_form('admin.dashboard.loan_management.view_loans.rejected_loans')
 
   def image_4_copy_5_mouse_up(self, x, y, button, **event_args):
     """This method is called when a mouse button is released on this component"""
-    open_form('admin.dashboard.manage_loan_details.loan_management.under_process')
+    open_form('admin.dashboard.loan_management.view_loans.under_process')
 
   def image_4_copy_7_mouse_up(self, x, y, button, **event_args):
     """This method is called when a mouse button is released on this component"""
-    open_form('admin.dashboard.manage_loan_details.loan_management.open_loans')
+    open_form('admin.dashboard.loan_management.view_loans.open_loans')
 
   def image_4_copy_2_mouse_up(self, x, y, button, **event_args):
     """This method is called when a mouse button is released on this component"""
-    open_form('admin.dashboard.manage_loan_details.loan_management.loan_disbursed')
+    open_form('admin.dashboard.loan_management.view_loans.loan_disbursed')
 
   def image_4_copy_10_mouse_up(self, x, y, button, **event_args):
     """This method is called when a mouse button is released on this component"""
-    open_form('admin.dashboard.manage_loan_details.loan_management.lapsed_loans')
+    open_form('admin.dashboard.loan_management.view_loans.lapsed_loans')
 
   def image_4_copy_6_mouse_up(self, x, y, button, **event_args):
     """This method is called when a mouse button is released on this component"""
-    open_form('admin.dashboard.manage_loan_details.loan_management.default_loans')
+    open_form('admin.dashboard.loan_management.view_loans.default_loans')
 
   def image_4_copy_9_mouse_up(self, x, y, button, **event_args):
     """This method is called when a mouse button is released on this component"""
-    open_form('admin.dashboard.manage_loan_details.loan_management.closed_loans')
+    open_form('admin.dashboard.loan_management.view_loans.closed_loans')
 
   def image_4_copy_8_mouse_up(self, x, y, button, **event_args):
     """This method is called when a mouse button is released on this component"""
-    open_form('admin.dashboard.manage_loan_details.loan_management.not_payable_amount')
+    open_form('admin.dashboard.loan_management.view_loans.not_payable_amount')
 
   def image_4_mouse_up(self, x, y, button, **event_args):
     """This method is called when a mouse button is released on this component"""
-    open_form('admin.dashboard.manage_loan_details.loan_management.one_time_settlement')
+    open_form('admin.dashboard.loan_management.view_loans.one_time_settlement')
 
   def button_1_copy_2_click(self, **event_args):
     """This method is called when the button is clicked"""
-    open_form('admin.dashboard.manage_loan_details')
+    open_form('admin.dashboard.loan_management')
 
 
 

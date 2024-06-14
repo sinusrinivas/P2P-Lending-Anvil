@@ -16,13 +16,9 @@ class loan_management(loan_managementTemplate):
 
     # Any code you write here will run before the form opens.
 
-  def loan_settings(self, **event_args):
-    """This method is called when the button is clicked"""
-    open_form('admin.dashboard.manage_loan_details.loan_settings')
-
   def view_loans(self, **event_args):
     """This method is called when the button is clicked"""
-    open_form('admin.dashboard.manage_loan_details.loan_management')
+    open_form('admin.dashboard.loan_management.view_loans')
 
   def button_1_copy_2_click(self, **event_args):
     """This method is called when the button is clicked"""
@@ -30,13 +26,22 @@ class loan_management(loan_managementTemplate):
 
   def image_4_copy_3_mouse_up(self, x, y, button, **event_args):
     """This method is called when a mouse button is released on this component"""
-    open_form('admin.dashboard.manage_loan_details.loan_management')
+    open_form('admin.dashboard.loan_management.view_loans')
 
-  def image_1_mouse_up(self, x, y, button, **event_args):
-    """This method is called when a mouse button is released on this component"""
-    open_form('admin.dashboard.manage_loan_details.loan_settings')
 
   def day_approval(self, **event_args):
     """This method is called when the button is clicked"""
     open_form('admin.dashboard.manage_loan_details.approval_days')
+
+  def button_1_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    open_form('admin.dashboard.loan_management.application_intake')
+
+  def image_2_mouse_up(self, x, y, button, **event_args):
+    """This method is called when a mouse button is released on this component"""
+    open_form('admin.dashboard.loan_management.application_intake')
+
+  def button_2_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    open_form('admin.dashboard.loan_management.loan_aggrements')
 

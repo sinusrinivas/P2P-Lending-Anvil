@@ -46,4 +46,4 @@ class not_payable_amount(not_payable_amountTemplate):
         self.repeating_panel_1.items = self.result
 
   def button_1_copy_click(self, **event_args):
-    open_form('admin.dashboard.manage_loan_details.loan_management')
+    open_form('admin.dashboard.loan_management.view_loans')

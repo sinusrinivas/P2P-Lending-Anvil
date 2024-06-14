@@ -43,4 +43,4 @@ class view_profile_4(view_profile_4Template):
     #     open_form('admin.dashboard.loan_management.open_loans')
 
     def button_1_copy_click(self, **event_args):
-      open_form('admin.dashboard.manage_loan_details.loan_management.open_loans')
+      open_form('admin.dashboard.loan_management.view_loans.open_loans')

@@ -32,7 +32,7 @@ class view_profile_7(view_profile_7Template):
             self.label_32.text = self.loan_data['loan_updated_status']
 
     def button_1_click(self, **event_args):
-        open_form('admin.dashboard.manage_loan_details.loan_management.default_loans')
+        open_form('admin.dashboard.loan_management.view_loans.default_loans')
 
     def button_2_click(self, **event_args):
         if self.loan_data:
