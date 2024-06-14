@@ -47,6 +47,7 @@ components:
         Intake
       bold: true
       foreground: black
+      font_size: 16
     type: Button
     layout_properties: {grid_position: 'EIIWZM,AUTWGW'}
 - name: content_panel_copy_copy_3_copy_3_copy_copy_copy_2_copy_3_copy_3
