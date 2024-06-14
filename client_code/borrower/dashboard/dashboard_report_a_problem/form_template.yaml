@@ -51,37 +51,38 @@ components:
       name: spacer_1
       layout_properties: {grid_position: 'JKULIH,USORJN GCEQKF,IFFCMA'}
     - name: label_4
-      properties: {text: Name, bold: true}
+      properties: {text: Full Name, bold: true}
       type: Label
       layout_properties: {grid_position: 'JKULIH,USORJN FIJYQF,UZFIIR'}
     - name: name_box
-      properties: {placeholder: please enter your name here, role: outlined}
-      type: TextBox
-      layout_properties: {grid_position: 'JKULIH,USORJN FIJYQF,XZUGKF'}
+      properties: {}
+      type: Label
+      layout_properties: {grid_position: 'JKULIH,USORJN FIJYQF,WLBQDJ'}
     - name: label_6
-      properties: {text: Mobile Number, bold: true}
+      properties: {text: 'Mobile ', bold: true}
       type: Label
       layout_properties: {grid_position: 'JKULIH,USORJN ZLZTYL,XVZWQS'}
-    - name: mobile_box
-      properties: {role: outlined, placeholder: please enter your mobile number here}
-      type: TextBox
-      layout_properties: {grid_position: 'JKULIH,USORJN ZLZTYL,PFMTYJ'}
     - name: label_5
-      properties: {text: Email, bold: true}
+      properties: {text: Email User, bold: true}
       type: Label
       layout_properties: {grid_position: 'JKULIH,USORJN PWRUDJ,MZGOGW'}
     - name: email_box
-      properties: {role: outlined, placeholder: please enter your email here}
-      type: TextBox
-      layout_properties: {grid_position: 'JKULIH,USORJN PWRUDJ,AKSRCW'}
+      properties: {}
+      type: Label
+      layout_properties: {grid_position: 'JKULIH,USORJN PWRUDJ,NNMBXK'}
+    - name: mobile_box
+      properties: {}
+      type: Label
+      layout_properties: {grid_position: 'JKULIH,USORJN ZLZTYL,VDKBMC'}
     - name: label_8_copy1
       properties: {text: Issue Photo, bold: true}
       type: Label
       layout_properties: {grid_position: 'JKULIH,USORJN OJHCCD,HUICLJ'}
-    - name: img_file_loader
-      properties: {text: Upload Your issue}
+    - name: file_loader_1
+      properties: {}
       type: FileLoader
-      layout_properties: {grid_position: 'JKULIH,USORJN OJHCCD,KKVBKF'}
+      layout_properties: {grid_position: 'JKULIH,USORJN OJHCCD,NOQJTR'}
+      event_bindings: {change: file_loader_1_change}
     - name: image_issue
       properties: {height: '100'}
       type: Image

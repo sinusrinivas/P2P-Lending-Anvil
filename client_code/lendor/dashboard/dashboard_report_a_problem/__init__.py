@@ -8,6 +8,8 @@ from anvil.tables import app_tables
 import datetime
 import anvil.google.auth, anvil.google.drive
 from anvil.google.drive import app_files
+from .. import main_form_module as main_form_module
+
 
 
 
@@ -15,6 +17,16 @@ class dashboard_report_a_problem(dashboard_report_a_problemTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
+    self.user_id = main_form_module.userId
+    print(self.user_id)
+    user_profile = app_tables.fin_user_profile.get(customer_id=self.user_id)
+      
+    if user_profile:
+        self.name_box.text = user_profile['full_name']
+        self.mobile_box.text = user_profile['mobile']
+        self.email_box.text = user_profile['email_user']
+
+    
     self.usertype = properties.get('usertype', 'lendor')  # Default value is 'lendor'
     self.subcategory = app_tables.fin_report_issue_category.search()
     self.category = app_tables.fin_category.search()
@@ -38,15 +50,15 @@ class dashboard_report_a_problem(dashboard_report_a_problemTemplate):
 
   def button_2_click(self, **event_args):
     # Get input values from text boxes
-    name = self.name_box.text
-    email = self.email_box.text
+    full_name = self.name_box.text
+    email_user = self.email_box.text
     mobile = self.mobile_box.text
     category = self.drop_down_1.selected_value
     subcategory = self.drop_down_2.selected_value
     description = self.description_box.text
 
     # Validate if all required fields are filled
-    if not name or not email or not mobile or not category or not subcategory or not description:
+    if not full_name or not email_user or not mobile or not category or not subcategory or not description:
       alert("Please fill in all required fields.")
       return
 
@@ -65,20 +77,20 @@ class dashboard_report_a_problem(dashboard_report_a_problemTemplate):
     current_datetime = datetime.datetime.now()
 
     # Get the file uploaded via file_loader_1
-    file = self.file_loader_1.file
+    issue_photo = self.file_loader_1.file
     # Check if the checkbox is checked
     it_is_urgent = self.check_box_1.checked
 
 
     # Add a row to the fin_reported_problems table with file details
-    app_tables.fin_reported_problems.add_row(name=name,
-                                              email=email,
+    app_tables.fin_reported_problems.add_row(name=full_name,
+                                              email=email_user,
                                               mobile_number=mobile,
                                               category = category,
                                               subcategory = subcategory ,
                                               issue_description=description,
                                               report_date=current_datetime,
-                                              issue_photo=file,
+                                              issue_photo=issue_photo,
                                               it_is_urgent=it_is_urgent,
                                               usertype=self.usertype)
 
@@ -91,3 +103,7 @@ class dashboard_report_a_problem(dashboard_report_a_problemTemplate):
   def image_1_copy_2_mouse_up(self, x, y, button, **event_args):
     """This method is called when a mouse button is released on this component"""
     open_form('lendor.dashboard.dashboard_report_a_problem')
+
+  def file_loader_1_change(self, file, **event_args):
+    """This method is called when a new file is loaded into this FileLoader"""
+    self.image_issue.source = file
