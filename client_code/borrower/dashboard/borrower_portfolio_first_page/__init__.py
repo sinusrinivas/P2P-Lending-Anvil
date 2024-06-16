@@ -27,6 +27,6 @@ class borrower_portfolio_first_page(borrower_portfolio_first_pageTemplate):
                            }
                              for i in self.data]
 
-            self.repeating_panel_1.items = self.result
+            self.repeating_panel_2.items = self.result
 
             

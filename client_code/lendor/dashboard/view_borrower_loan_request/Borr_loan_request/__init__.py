@@ -441,12 +441,12 @@ class Borr_loan_request(Borr_loan_requestTemplate):
                     q.like('Under Process%'),
                     q.like('Approved%'),
                     q.like('approved%'),
-                    q.like('accept%'),
+                    q.like('accepted%'),
                     q.like('foreclosure%'),
-                    q.like('close%'),
-                    q.like('Close%'),
+                    q.like('closed%'),
+                    q.like('Closed%'),
                     q.like('closed loans%'),
-                    q.like('disbursed loan%'),
+                    q.like('disbursed%'),
                     q.like('Disbursed loan%')
                 )
             )
@@ -457,7 +457,7 @@ class Borr_loan_request(Borr_loan_requestTemplate):
             closed_loans = app_tables.fin_loan_details.search(
                 borrower_customer_id=borrower_customer,
                 loan_updated_status=q.any_of(
-                    q.like('close%'),
+                    q.like('closed%'),
                     q.like('Close%'),
                     q.like('closed loans%')
                 ))
@@ -488,9 +488,9 @@ class Borr_loan_request(Borr_loan_requestTemplate):
         # Check the value of 'loan_updated_status' in the database
         loan_status = self.selected_row['loan_updated_status']
 
-        if loan_status == 'accepted':
+        if loan_status == 'approved':
             # Set the text of the Output Label with blue color
-            self.output_label1.text = "This Borrower Loan is Accepted"
+            self.output_label1.text = "This Borrower Loan is approved"
             self.output_label1.foreground = '#0000FF'  # Blue color
             self.output_label1.visible = True
             # Disable the "Accept" button
@@ -521,7 +521,7 @@ class Borr_loan_request(Borr_loan_requestTemplate):
         self.output_label1.visible = True
         loan_details = app_tables.fin_loan_details.get(loan_id=str(selected_row['loan_id']))
         if loan_details is not None:
-           loan_details['loan_updated_status'] = 'accepted'
+           loan_details['loan_updated_status'] = 'approved'
            loan_details['lender_accepted_timestamp'] = datetime.now()
            loan_details.update()
         lender_accepted_timestamp = loan_details['lender_accepted_timestamp'] 
@@ -652,7 +652,7 @@ class Borr_loan_request(Borr_loan_requestTemplate):
             transfer_money(lender_id=self.lender_customer_id, borrower_id=entered_borrower_customer_id, transfer_amount=loan_amount)
             
             # You may want to update the loan_updated_status here if needed
-            updated_loan_status = 'disbursed loan'
+            updated_loan_status = 'disbursed'
             loan_row['loan_updated_status'] = updated_loan_status
             # Save the changes to the loan_row
             loan_row.update()

@@ -15,15 +15,14 @@ components:
     layout_properties: {grid_position: 'VFMWUW,LMUGVD', full_width_row: true}
     components:
     - name: label_1
-      properties: {text: Revamp Your Old Home With a Home Renovation Loan and Give it a Fresh New Look.,
-        bold: true, font_size: 35}
+      properties: {text: Revamp Your Old Home With a Home Renovation Loan and Give it a Fresh New Look., bold: true, font_size: 35}
       type: Label
       layout_properties: {grid_position: 'QTNQBN,OPOTBI WUQDPS,DPVFAQ'}
     - name: label_2
-      properties: {text: 'Apply for collateral-free home renovation loans through
-          Ascends and revitalize your house without worrying about budget constraints.
-
-          ', font_size: 22}
+      properties:
+        text: |
+          Apply for collateral-free home renovation loans through Ascends and revitalize your house without worrying about budget constraints.
+        font_size: 22
       type: Label
       layout_properties: {grid_position: 'QTNQBN,OPOTBI YLFEOI,FVWLFL'}
     - name: spacer_1
@@ -31,8 +30,7 @@ components:
       type: Spacer
       layout_properties: {grid_position: 'QTNQBN,OPOTBI SSEHLE,IKLMTS DBHHQV,NPFFKF'}
     - name: button_1
-      properties: {text: Apply Now, foreground: white, font_size: 17, background: '#013065',
-        align: left, role: tonal-button}
+      properties: {text: Apply Now, foreground: white, font_size: 17, background: '#013065', align: left, role: tonal-button}
       type: Button
       layout_properties: {grid_position: 'QTNQBN,OPOTBI TECORI,LIWIMN'}
       event_bindings: {click: button_1_click}
@@ -45,8 +43,7 @@ components:
       type: Spacer
       layout_properties: {grid_position: 'QTNQBN,JBTPFF OJAYXT,BPJSLJ'}
     - name: image_1
-      properties: {height: 371.66668701171875, source: _/theme/bank_users/personal_loan/home_renovation_loan/home%20loan%204.png,
-        display_mode: shrink_to_fit}
+      properties: {height: 371.66668701171875, source: _/theme/bank_users/personal_loan/home_renovation_loan/home%20loan%204.png, display_mode: shrink_to_fit}
       type: Image
       layout_properties: {grid_position: 'QTNQBN,JBTPFF MEKAAK,YRBNLX'}
   - name: spacer_2
@@ -59,26 +56,24 @@ components:
     layout_properties: {grid_position: 'DTGLVR,TDSXYI', full_width_row: true}
     components:
     - name: label_3
-      properties: {text: 'Why Should You Apply for a Home Renovation Loan?
-
-          ', align: center, bold: true, font_size: 30}
+      properties:
+        text: |
+          Why Should You Apply for a Home Renovation Loan?
+        align: center
+        bold: true
+        font_size: 30
       type: Label
       layout_properties: {grid_position: 'MAHCVL,KPERZV'}
     - name: label_4
-      properties: {text: 'Benefit from a collateral-free loan that provides exceptional
-          flexibility and the most competitive interest rates available.
-
-          ', align: center, font_size: 18}
+      properties:
+        text: |
+          Benefit from a collateral-free loan that provides exceptional flexibility and the most competitive interest rates available.
+        align: center
+        font_size: 18
       type: Label
       layout_properties: {grid_position: 'TEGBXJ,PMTTUT'}
     - name: label_5
-      properties: {text: 'Transform your home renovation dreams into reality without
-          delay. While embarking on a renovation project brings excitement, neglecting
-          timely repayment of your home renovation loan could sour the experience.
-          Delaying payment can expose you to accrued interest and fees, complicating
-          your financial situation. Understanding the intricacies of interest rates
-          and repayment terms is crucial to avoid unnecessary stress and financial
-          strain.', align: center, font_size: 18}
+      properties: {text: 'Transform your home renovation dreams into reality without delay. While embarking on a renovation project brings excitement, neglecting timely repayment of your home renovation loan could sour the experience. Delaying payment can expose you to accrued interest and fees, complicating your financial situation. Understanding the intricacies of interest rates and repayment terms is crucial to avoid unnecessary stress and financial strain.', align: center, font_size: 18}
       type: Label
       layout_properties: {grid_position: 'DBAHUC,QGPHTO'}
     - name: spacer_21
@@ -90,19 +85,19 @@ components:
       type: Spacer
       layout_properties: {grid_position: 'JCXBOH,LNZARM GCIUXW,LJZNTF QTHIAD,TWOGUD'}
     - name: image_2
-      properties: {source: _/theme/bank_users/personal_loan/home_renovation_loan/house-with-one-frontal-window.png,
-        height: '80', display_mode: shrink_to_fit}
+      properties: {source: _/theme/bank_users/personal_loan/home_renovation_loan/house-with-one-frontal-window.png, height: '80', display_mode: shrink_to_fit}
       type: Image
       layout_properties: {grid_position: 'JCXBOH,LNZARM GCIUXW,LJZNTF HRUGGH,SEWTQQ'}
     - name: label_6
-      properties: {text: 'Turn your dream home into a reality.
-
-          ', bold: true, font_size: 18}
+      properties:
+        text: |
+          Turn your dream home into a reality.
+        bold: true
+        font_size: 18
       type: Label
       layout_properties: {grid_position: 'JCXBOH,LNZARM GCIUXW,ASIZUQ UCEIZJ,SZEVOS'}
     - name: label_7
-      properties: {text: 'Have you ever envisioned enhancing your living space by
-          renovating your current home rather than purchasing a new one?', font_size: 18}
+      properties: {text: 'Have you ever envisioned enhancing your living space by renovating your current home rather than purchasing a new one?', font_size: 18}
       type: Label
       layout_properties: {grid_position: 'JCXBOH,LNZARM GCIUXW,ASIZUQ JJFYER,BWMLUZ'}
     - name: spacer_3
@@ -110,8 +105,7 @@ components:
       type: Spacer
       layout_properties: {grid_position: 'JCXBOH,LNZARM VTDJNX,CUJPAX SJHBVG,JYWMXU'}
     - name: image_4
-      properties: {source: _/theme/bank_users/personal_loan/home_renovation_loan/repair-tools-cross.png,
-        height: '80', display_mode: shrink_to_fit}
+      properties: {source: _/theme/bank_users/personal_loan/home_renovation_loan/repair-tools-cross.png, height: '80', display_mode: shrink_to_fit}
       type: Image
       layout_properties: {grid_position: 'JCXBOH,LNZARM VTDJNX,CUJPAX JKVOHS,KMYLPS'}
     - name: label_12
@@ -119,15 +113,14 @@ components:
       type: Label
       layout_properties: {grid_position: 'JCXBOH,LNZARM VTDJNX,CACREY VGGMYS,LPIFCI'}
     - name: label_13
-      properties: {text: 'Build a new kitchen, renovate the existing bathroom, and
-          address significant maintenance issues.
-
-          ', font_size: 18}
+      properties:
+        text: |
+          Build a new kitchen, renovate the existing bathroom, and address significant maintenance issues.
+        font_size: 18
       type: Label
       layout_properties: {grid_position: 'JCXBOH,LNZARM VTDJNX,CACREY PRXNIT,GLTKDV'}
     - name: image_3
-      properties: {source: _/theme/bank_users/personal_loan/home_renovation_loan/wall.png,
-        height: '80', display_mode: shrink_to_fit}
+      properties: {source: _/theme/bank_users/personal_loan/home_renovation_loan/wall.png, height: '80', display_mode: shrink_to_fit}
       type: Image
       layout_properties: {grid_position: 'JCXBOH,VIJATW PTZVFW,NGKNGF'}
     - name: label_8
@@ -135,10 +128,10 @@ components:
       type: Label
       layout_properties: {grid_position: 'JCXBOH,VIJATW PTZVFW,ONMGVQ QZUEDN,UBOMPQ'}
     - name: label_9
-      properties: {text: 'Upgrade the flooring in your current home and generate additional
-          rental revenue.
-
-          ', font_size: 18}
+      properties:
+        text: |
+          Upgrade the flooring in your current home and generate additional rental revenue.
+        font_size: 18
       type: Label
       layout_properties: {grid_position: 'JCXBOH,VIJATW PTZVFW,ONMGVQ WVWDTF,UQNYXM'}
     - name: spacer_15
@@ -150,8 +143,7 @@ components:
       type: Spacer
       layout_properties: {grid_position: 'JCXBOH,VIJATW UYOEXC,AZJCAO XZIYMW,IIOTRX'}
     - name: image_5
-      properties: {source: _/theme/bank_users/personal_loan/home_renovation_loan/collateral-free.png,
-        height: '80', display_mode: shrink_to_fit}
+      properties: {source: _/theme/bank_users/personal_loan/home_renovation_loan/collateral-free.png, height: '80', display_mode: shrink_to_fit}
       type: Image
       layout_properties: {grid_position: 'JCXBOH,VIJATW UYOEXC,AZJCAO NYGOWC,JDNPSO'}
     - name: label_10
@@ -159,10 +151,10 @@ components:
       type: Label
       layout_properties: {grid_position: 'JCXBOH,VIJATW UYOEXC,PNHGMR SNLSPR,HHVXDX'}
     - name: label_11
-      properties: {text: 'Home renovation loans offer affordability with a fixed interest
-          rate.
-
-          ', font_size: 18}
+      properties:
+        text: |
+          Home renovation loans offer affordability with a fixed interest rate.
+        font_size: 18
       type: Label
       layout_properties: {grid_position: 'JCXBOH,VIJATW UYOEXC,PNHGMR FWXFFG,RVPVBV'}
   - name: spacer_4
@@ -179,14 +171,7 @@ components:
       type: Spacer
       layout_properties: {grid_position: 'MCVWLG,BTWACI'}
     - name: label_14
-      properties: {text: 'Absolutely! If you''re fond of your current home but feel
-          it needs a fresh look and improved interiors, Ascend''s house renovation
-          loans are tailored just for you. Unlike traditional banks, we prioritize
-          your creditworthiness over collateral, empowering you to utilize the loan
-          according to your preferences. We value your intent and discipline in repayment,
-          which significantly enhances your approval chances with Ascend. So, if you''re
-          an honest borrower seeking to revitalize your home, we''ve got you covered.',
-        align: center, bold: false, font_size: 18, background: '', foreground: white}
+      properties: {text: 'Absolutely! If you''re fond of your current home but feel it needs a fresh look and improved interiors, Ascend''s house renovation loans are tailored just for you. Unlike traditional banks, we prioritize your creditworthiness over collateral, empowering you to utilize the loan according to your preferences. We value your intent and discipline in repayment, which significantly enhances your approval chances with Ascend. So, if you''re an honest borrower seeking to revitalize your home, we''ve got you covered.', align: center, bold: false, font_size: 18, background: '', foreground: white}
       type: Label
       layout_properties: {grid_position: 'GPVPSI,TZKMDD'}
     - name: spacer_6
@@ -207,9 +192,12 @@ components:
       type: Label
       layout_properties: {grid_position: 'RHTNKI,XKOIWT'}
     - name: label_15
-      properties: {text: 'Apply from anywhere through a straightforward online procedure.
-
-          ', align: center, font_size: 20, bold: false}
+      properties:
+        text: |
+          Apply from anywhere through a straightforward online procedure.
+        align: center
+        font_size: 20
+        bold: false
       type: Label
       layout_properties: {grid_position: 'SOTJSA,UEGGGU'}
     - name: spacer_9_copy
@@ -217,69 +205,75 @@ components:
       type: Spacer
       layout_properties: {grid_position: 'XNHMZY,OQOQKV'}
     - name: image_6
-      properties: {source: _/theme/bank_users/personal_loan/how_it_works/creaeate-account.png,
-        display_mode: shrink_to_fit, height: '120'}
+      properties: {source: _/theme/bank_users/personal_loan/how_it_works/creaeate-account.png, display_mode: shrink_to_fit, height: '120'}
       type: Image
       layout_properties: {grid_position: 'YMIKOX,SCWMIP LAUMIK,KASORE'}
     - name: label_16
-      properties: {text: "Create a Borrower \nAccount", align: center, font_size: 18,
-        bold: true}
+      properties:
+        text: "Create a Borrower \nAccount"
+        align: center
+        font_size: 18
+        bold: true
       type: Label
       layout_properties: {grid_position: 'YMIKOX,SCWMIP LBGUDE,WAHABE'}
     - name: label_20
-      properties: {text: 'Simply create a borrower account with us and upload the
-          required documents.
-
-          ', align: center, font_size: 18}
+      properties:
+        text: |
+          Simply create a borrower account with us and upload the required documents.
+        align: center
+        font_size: 18
       type: Label
       layout_properties: {grid_position: 'YMIKOX,SCWMIP CGNPFM,NEGSIX'}
     - name: image_7
-      properties: {source: _/theme/bank_users/personal_loan/how_it_works/loan_assesment.png,
-        display_mode: shrink_to_fit, height: '120'}
+      properties: {source: _/theme/bank_users/personal_loan/how_it_works/loan_assesment.png, display_mode: shrink_to_fit, height: '120'}
       type: Image
       layout_properties: {grid_position: 'YMIKOX,QUZALW ERQTXQ,BEGYNC'}
     - name: label_17
-      properties: {text: "Loan assessment by\n Ascends", align: center, font_size: 18,
-        bold: true}
+      properties:
+        text: |-
+          Loan assessment by
+           Ascends
+        align: center
+        font_size: 18
+        bold: true
       type: Label
       layout_properties: {grid_position: 'YMIKOX,QUZALW KJRHNQ,KOJXZC'}
     - name: label_21
-      properties: {text: 'Our credit evaluation team meticulously reviews your loan
-          proposal, assigning a risk grade and determining an appropriate interest
-          rate.', align: center, font_size: 18}
+      properties: {text: 'Our credit evaluation team meticulously reviews your loan proposal, assigning a risk grade and determining an appropriate interest rate.', align: center, font_size: 18}
       type: Label
       layout_properties: {grid_position: 'YMIKOX,QUZALW ZVAGPN,FVFAJV'}
     - name: image_8
-      properties: {source: _/theme/bank_users/personal_loan/how_it_works/quick_funding.png,
-        display_mode: shrink_to_fit, height: '120'}
+      properties: {source: _/theme/bank_users/personal_loan/how_it_works/quick_funding.png, display_mode: shrink_to_fit, height: '120'}
       type: Image
       layout_properties: {grid_position: 'YMIKOX,OBENAF MSDYBF,KIWYQJ'}
     - name: label_18
-      properties: {text: "Quick funding from\n investors", align: center, font_size: 18,
-        bold: true}
+      properties:
+        text: |-
+          Quick funding from
+           investors
+        align: center
+        font_size: 18
+        bold: true
       type: Label
       layout_properties: {grid_position: 'YMIKOX,OBENAF KAGAJM,BMMJLP'}
     - name: label_22
-      properties: {text: 'Once your proposal is listed on the website for funding,
-          active investors from all over India swiftly facilitate disbursement.',
-        align: center, font_size: 18}
+      properties: {text: 'Once your proposal is listed on the website for funding, active investors from all over India swiftly facilitate disbursement.', align: center, font_size: 18}
       type: Label
       layout_properties: {grid_position: 'YMIKOX,OBENAF ZTCRGA,DPNLAR'}
     - name: image_9
-      properties: {source: _/theme/bank_users/personal_loan/how_it_works/get%20amount.png,
-        display_mode: shrink_to_fit, height: '120'}
+      properties: {source: _/theme/bank_users/personal_loan/how_it_works/get%20amount.png, display_mode: shrink_to_fit, height: '120'}
       type: Image
       layout_properties: {grid_position: 'YMIKOX,HSSJDI FJABFX,HJIIMQ'}
     - name: label_19
-      properties: {text: Get the amount in your bank account directly, align: center,
-        font_size: 18, bold: true}
+      properties: {text: Get the amount in your bank account directly, align: center, font_size: 18, bold: true}
       type: Label
       layout_properties: {grid_position: 'YMIKOX,HSSJDI PXAVTR,GRKZPR'}
     - name: label_23
-      properties: {text: 'Following a successful  verification of your documentation,
-          the loan amount is transferred directly to your bank account.
-
-          ', font_size: 18, align: center}
+      properties:
+        text: |
+          Following a successful  verification of your documentation, the loan amount is transferred directly to your bank account.
+        font_size: 18
+        align: center
       type: Label
       layout_properties: {grid_position: 'YMIKOX,HSSJDI CXNSOB,QOYEKD'}
   - name: spacer_8
@@ -296,43 +290,35 @@ components:
       type: Spacer
       layout_properties: {grid_position: 'NJHMGR,MEORAM'}
     - name: label_24
-      properties: {text: Eligibility Criteria, align: center, font_size: 30, bold: true,
-        background: '', foreground: white}
+      properties: {text: Eligibility Criteria, align: center, font_size: 30, bold: true, background: '', foreground: white}
       type: Label
       layout_properties: {grid_position: 'WIXPBY,ZHAAYA'}
     - name: label_25
-      properties: {text: Salaried Employees, font_size: 22, bold: false, foreground: white,
-        underline: true}
+      properties: {text: Salaried Employees, font_size: 22, bold: false, foreground: white, underline: true}
       type: Label
       layout_properties: {grid_position: 'HPEWPK,EKNROL'}
     - name: label_26
-      properties: {text: ' ✔ Salary :  More than Rs. 20,000 p.m. if living in own
-          home or parental home', bold: false, font_size: 17, foreground: white}
+      properties: {text: ' ✔ Salary :  More than Rs. 20,000 p.m. if living in own home or parental home', bold: false, font_size: 17, foreground: white}
       type: Label
       layout_properties: {grid_position: 'BSTPET,BUGIAU'}
     - name: label_28
-      properties: {text: ' ✔ Salary :  More than Rs. 25,000 p.m. if living at a rented
-          place', bold: false, font_size: 17, foreground: white}
+      properties: {text: ' ✔ Salary :  More than Rs. 25,000 p.m. if living at a rented place', bold: false, font_size: 17, foreground: white}
       type: Label
       layout_properties: {grid_position: 'XIAARY,ICDQOJ'}
     - name: label_30
-      properties: {text: ' ✔ Locations :  All metros and tier 1 cities', bold: false,
-        font_size: 17, foreground: white}
+      properties: {text: ' ✔ Locations :  All metros and tier 1 cities', bold: false, font_size: 17, foreground: white}
       type: Label
       layout_properties: {grid_position: 'FVTKQE,OUERBJ'}
     - name: label_34
-      properties: {text: Self Employed Business Men/Professionals, font_size: 22,
-        bold: false, foreground: white, underline: true}
+      properties: {text: Self Employed Business Men/Professionals, font_size: 22, bold: false, foreground: white, underline: true}
       type: Label
       layout_properties: {grid_position: 'CPZIFE,ANDXQE'}
     - name: label_26_copy
-      properties: {text: ' ✔ Income Tax Return :  More than Rs. 3 Lakhs p.a.', bold: false,
-        font_size: 17, foreground: white}
+      properties: {text: ' ✔ Income Tax Return :  More than Rs. 3 Lakhs p.a.', bold: false, font_size: 17, foreground: white}
       type: Label
       layout_properties: {grid_position: 'TGACCM,JPINZB'}
     - name: label_26_copy_3
-      properties: {text: ' ✔ Business Establishment :  More than 1 years ', bold: false,
-        font_size: 17, foreground: white}
+      properties: {text: ' ✔ Business Establishment :  More than 1 years ', bold: false, font_size: 17, foreground: white}
       type: Label
       layout_properties: {grid_position: ',undefined'}
     - name: spacer_18
@@ -344,21 +330,19 @@ components:
     type: Spacer
     layout_properties: {grid_position: 'EQUOKF,JCACKC'}
   - name: label_27
-    properties: {text: 'How Does it Stand Apart from Home Improvement Loans?
-
-        ', align: center, bold: true, font_size: 30}
+    properties:
+      text: |
+        How Does it Stand Apart from Home Improvement Loans?
+      align: center
+      bold: true
+      font_size: 30
     type: Label
     layout_properties: {grid_position: 'XSEEKM,QMDRMM'}
   - name: label_29
-    properties: {text: 'You''re not bound by the inflexible and unfair terms of traditional
-        Home Improvement Loans. Our process spares you from the extensive paperwork
-        and bureaucracy typically associated with securing such loans from banks and
-        other financial entities. With us, you enjoy greater flexibility in spending
-        your funds. We don''t dictate how you use the borrowed amount; instead, we
-        empower you to decide how much and when to invest in enhancing your home.
-        Plus, we don''t impose any prepayment penalties or concealed fees.
-
-        ', font_size: 18}
+    properties:
+      text: |
+        You're not bound by the inflexible and unfair terms of traditional Home Improvement Loans. Our process spares you from the extensive paperwork and bureaucracy typically associated with securing such loans from banks and other financial entities. With us, you enjoy greater flexibility in spending your funds. We don't dictate how you use the borrowed amount; instead, we empower you to decide how much and when to invest in enhancing your home. Plus, we don't impose any prepayment penalties or concealed fees.
+      font_size: 18
     type: Label
     layout_properties: {grid_position: 'VAUIWL,UYPFGJ'}
   - name: spacer_10
@@ -375,23 +359,20 @@ components:
       type: Spacer
       layout_properties: {grid_position: 'LFHSZT,ZZYTUZ'}
     - name: label_32
-      properties: {text: 'Choose Peer-To-Peer (P2P) loans through Ascend and concentrate
-          solely on what''s essential. Curious to understand why?', font_size: 30,
-        foreground: white}
+      properties: {text: 'Choose Peer-To-Peer (P2P) loans through Ascend and concentrate solely on what''s essential. Curious to understand why?', font_size: 30, foreground: white}
       type: Label
       layout_properties: {grid_position: 'SGOEDR,AKMYBP'}
     - name: label_36
-      properties: {text: 'Why offer an asset valued at Rs 25 lakh as collateral for
-          a loan of Rs 4 lakh? If you find this practice burdensome for borrowers,
-          you don''t need to search elsewhere. Our collateral-free house improvement
-          loans are the solution you''ve been seeking.
-
-          ', foreground: white, font_size: 18, bold: false}
+      properties:
+        text: |
+          Why offer an asset valued at Rs 25 lakh as collateral for a loan of Rs 4 lakh? If you find this practice burdensome for borrowers, you don't need to search elsewhere. Our collateral-free house improvement loans are the solution you've been seeking.
+        foreground: white
+        font_size: 18
+        bold: false
       type: Label
       layout_properties: {grid_position: 'DQAJCV,XZPXSD'}
     - name: label_40
-      properties: {text: '✔ Ascend provides fixed-rate loans of up to Rs 4 lakh, allowing
-          for repayment over a period of up to 2-3 years.', font_size: 18, foreground: white}
+      properties: {text: '✔ Ascend provides fixed-rate loans of up to Rs 4 lakh, allowing for repayment over a period of up to 2-3 years.', font_size: 18, foreground: white}
       type: Label
       layout_properties: {grid_position: 'MNIJKL,ERDTHU'}
     - name: label_41
@@ -399,9 +380,7 @@ components:
       type: Label
       layout_properties: {grid_position: 'RAQVPR,LBJOOU'}
     - name: label_35
-      properties: {text: '✔  Based on your risk category, the interest rate charged
-          on medical loan ranges from 14% to 30% p.a., on reducing balance method.',
-        font_size: 18, foreground: white}
+      properties: {text: '✔  Based on your risk category, the interest rate charged on medical loan ranges from 14% to 30% p.a., on reducing balance method.', font_size: 18, foreground: white}
       type: Label
       layout_properties: {grid_position: 'MDXAZX,CNPZMS'}
     - name: spacer_12
@@ -426,8 +405,7 @@ components:
       type: Label
       layout_properties: {grid_position: 'AXKAJT,JKLQDU'}
     - name: label_43
-      properties: {text: You have questions. We have answers., align: center, font_size: 18,
-        bold: true}
+      properties: {text: You have questions. We have answers., align: center, font_size: 18, bold: true}
       type: Label
       layout_properties: {grid_position: 'UBCVVE,JHVQVP'}
     - name: label_44
@@ -435,76 +413,65 @@ components:
       type: Label
       layout_properties: {grid_position: 'NUSJFG,DJUOPI'}
     - name: label_45
-      properties: {text: 'A Home Renovation loan is a financial product designed to
-          provide funds for renovating, remodeling, or improving residential properties.
-
-          ', font_size: 18}
+      properties:
+        text: |
+          A Home Renovation loan is a financial product designed to provide funds for renovating, remodeling, or improving residential properties.
+        font_size: 18
       type: Label
       layout_properties: {grid_position: 'KGQLIW,GPOOCM'}
     - name: label_44_copy
-      properties: {text: 'Why should I take home renovation loan for my home improvement?',
-        font_size: 18, background: '#E9ECEF'}
+      properties: {text: 'Why should I take home renovation loan for my home improvement?', font_size: 18, background: '#E9ECEF'}
       type: Label
       layout_properties: {grid_position: 'NSZPEZ,IHWRIS'}
     - name: label_45_copy
-      properties: {text: 'Ascend''s house renovation loan process is swift and straightforward,
-          requiring less paperwork compared to a home loan top-up. You won''t need
-          to undergo a property assessment again or pledge your home as collateral
-
-          ', font_size: 18}
+      properties:
+        text: |
+          Ascend's house renovation loan process is swift and straightforward, requiring less paperwork compared to a home loan top-up. You won't need to undergo a property assessment again or pledge your home as collateral
+        font_size: 18
       type: Label
       layout_properties: {grid_position: 'NSOAVV,PHWKJW'}
     - name: label_44_copy_copy
-      properties: {text: 'What would be interest rate for my home renovation loan?',
-        font_size: 18, background: '#E9ECEF'}
+      properties: {text: 'What would be interest rate for my home renovation loan?', font_size: 18, background: '#E9ECEF'}
       type: Label
       layout_properties: {grid_position: 'HKJNAQ,KMDLAL'}
     - name: label_45_copy_copy
-      properties: {text: 'Interest rates for home renovation loan start from 12% per
-          annum and go up to 30%.
-
-          ', font_size: 18}
+      properties:
+        text: |
+          Interest rates for home renovation loan start from 12% per annum and go up to 30%.
+        font_size: 18
       type: Label
       layout_properties: {grid_position: 'AYNVGK,JCKYTR'}
     - name: label_44_copy_copy_copy
-      properties: {text: 'In how many days will I get the Home Renovation loan amount?',
-        font_size: 18, background: '#E9ECEF'}
+      properties: {text: 'In how many days will I get the Home Renovation loan amount?', font_size: 18, background: '#E9ECEF'}
       type: Label
       layout_properties: {grid_position: 'IIFOSQ,XZINOK'}
     - name: label_45_copy_copy_2
-      properties: {text: 'Typically, the process takes no more than 4 days, provided
-          we have all the necessary documents and information from you.
-
-          ', font_size: 18}
+      properties:
+        text: |
+          Typically, the process takes no more than 4 days, provided we have all the necessary documents and information from you.
+        font_size: 18
       type: Label
       layout_properties: {grid_position: 'JNWZSX,ISUVYU'}
     - name: label_44_copy_copy_copy_copy_2
-      properties: {text: 'How will I get house renovation loan through Ascend?', font_size: 18,
-        background: '#E9ECEF'}
+      properties: {text: 'How will I get house renovation loan through Ascend?', font_size: 18, background: '#E9ECEF'}
       type: Label
       layout_properties: {grid_position: 'IOXXRQ,PGMXOO'}
     - name: label_45_copy_copy_2_copy_2
-      properties: {text: 'Once your loan application is approved by our credit team
-          and funded by investors, the loan amount will be swiftly disbursed directly
-          into your bank account.
-
-          ', font_size: 18}
+      properties:
+        text: |
+          Once your loan application is approved by our credit team and funded by investors, the loan amount will be swiftly disbursed directly into your bank account.
+        font_size: 18
       type: Label
       layout_properties: {grid_position: 'RZLCFU,VOGBWP'}
     - name: label_44_copy_copy_copy_copy
-      properties: {text: 'How will I repay the credit card consolidation loan amount?',
-        font_size: 18, background: '#E9ECEF'}
+      properties: {text: 'How will I repay the credit card consolidation loan amount?', font_size: 18, background: '#E9ECEF'}
       type: Label
       layout_properties: {grid_position: 'BJBGAC,ZOATCE'}
     - name: label_45_copy_copy_2_copy
-      properties: {text: 'With a medical emergency loan from Ascend, you can conveniently
-          make monthly repayments automatically from your bank account. Simply sign
-          the NACH mandate to enable automatic deductions. We''ll send you a reminder
-          email every month before each deduction to ensure your account has sufficient
-          funds. Additionally, you have the flexibility to make partial prepayments
-          or repay the entire loan amount hassle-free whenever you wish
-
-          ', font_size: 18}
+      properties:
+        text: |
+          With a medical emergency loan from Ascend, you can conveniently make monthly repayments automatically from your bank account. Simply sign the NACH mandate to enable automatic deductions. We'll send you a reminder email every month before each deduction to ensure your account has sufficient funds. Additionally, you have the flexibility to make partial prepayments or repay the entire loan amount hassle-free whenever you wish
+        font_size: 18
       type: Label
       layout_properties: {grid_position: 'TMDCNH,DRFJWD'}
     - name: spacer_17
@@ -521,9 +488,7 @@ components:
       type: Spacer
       layout_properties: {grid_position: 'MMFQSR,XHAILN GZEMUS,BUIUBY'}
     - name: image_29
-      properties: {vertical_align: center, height: 113, border: '', display_mode: zoom_to_fill,
-        spacing_above: none, source: _/theme/titled-design.jpg, spacing_below: large,
-        background: '', horizontal_align: left}
+      properties: {vertical_align: center, height: 113, border: '', display_mode: zoom_to_fill, spacing_above: none, source: _/theme/titled-design.jpg, spacing_below: large, background: '', horizontal_align: left}
       type: Image
       layout_properties: {grid_position: 'MMFQSR,XHAILN'}
       data_bindings: []
@@ -541,13 +506,11 @@ components:
       layout_properties: {grid_position: 'MMFQSR,WNWVDK'}
       event_bindings: {click: link_7_click}
     - name: link_10
-      properties: {text: Investment, foreground: black, bold: true, font_size: 16,
-        underline: false}
+      properties: {text: Investment, foreground: black, bold: true, font_size: 16, underline: false}
       type: Link
       layout_properties: {grid_position: 'MMFQSR,WNWVDK NYPJXO,GZMCYD'}
     - name: link_13
-      properties: {text: How It Works, foreground: black, bold: true, font_size: 16,
-        underline: false}
+      properties: {text: How It Works, foreground: black, bold: true, font_size: 16, underline: false}
       type: Link
       layout_properties: {grid_position: 'MMFQSR,WNWVDK KEVRNO,FAGUHN'}
     - name: link_11
@@ -555,8 +518,7 @@ components:
       type: Link
       layout_properties: {grid_position: 'MMFQSR,YBBTWP MOYVBC,DMAAWC'}
     - name: link_8
-      properties: {text: Contact Us, foreground: black, underline: false, font_size: 16,
-        bold: true, align: left}
+      properties: {text: Contact Us, foreground: black, underline: false, font_size: 16, bold: true, align: left}
       type: Link
       layout_properties: {grid_position: 'MMFQSR,YBBTWP KKGCYO,GSVXOQ'}
       event_bindings: {click: link_8_click}
@@ -575,55 +537,33 @@ components:
       type: Spacer
       layout_properties: {grid_position: 'EEWYZY,CQBPUE'}
     - name: grid_panel_2_copy
-      properties: {spacing_above: small, spacing_below: small, background: '#05264d',
-        foreground: '', border: '', visible: true, role: null, tooltip: ''}
+      properties: {spacing_above: small, spacing_below: small, background: '#05264d', foreground: '', border: '', visible: true, role: null, tooltip: ''}
       type: GridPanel
       layout_properties: {grid_position: 'RBHEDE,EWADTZ', full_width_row: true}
       components:
       - name: flow_panel_3_copy_1
-        properties: {role: null, vertical_align: full, spacing: medium, align: left,
-          tooltip: '', border: '', foreground: '', visible: true, spacing_above: none,
-          spacing_below: none, background: '#05264d'}
+        properties: {role: null, vertical_align: full, spacing: medium, align: left, tooltip: '', border: '', foreground: '', visible: true, spacing_above: none, spacing_below: none, background: '#05264d'}
         type: FlowPanel
         layout_properties: {row: JUWDTC, width_xs: 5, col_xs: 0, width: 198.328}
         components:
         - name: label_4_copy_2
-          properties: {role: null, align: left, tooltip: '', border: '', foreground: white,
-            visible: true, text: '© 2023 - 2024, Ascend - All Rights    Reserved',
-            font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small,
-            italic: false, background: '#05264d', bold: true, underline: false, icon: ''}
+          properties: {role: null, align: left, tooltip: '', border: '', foreground: white, visible: true, text: '© 2023 - 2024, Ascend - All Rights    Reserved', font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false, background: '#05264d', bold: true, underline: false, icon: ''}
           type: Label
           layout_properties: {}
       - name: link_5_copy
-        properties: {role: null, url: 'https://in.linkedin.com/?src=go-pa&trk=sem-ga_campid.14650114788_asid.151761418307_crid.657403558718_kw.linkedin%20login_d.c_tid.kwd-12704335873_n.g_mt.e_geo.9179915&mcid=6844056167778418689&cid=&gclid=EAIaIQobChMI1pr54ZHVggMVF6dmAh2IxgGNEAAYASAAEgKqevD_BwE&gclsrc=aw.ds',
-          align: left, tooltip: '', border: '', foreground: white, visible: true,
-          text: '', font_size: 30, wrap_on: mobile, font: '', col_spacing: medium,
-          spacing_above: small, icon_align: left, col_widths: '', spacing_below: small,
-          italic: false, background: '', bold: false, underline: false, icon: 'fa:linkedin-square'}
+        properties: {role: null, url: 'https://in.linkedin.com/?src=go-pa&trk=sem-ga_campid.14650114788_asid.151761418307_crid.657403558718_kw.linkedin%20login_d.c_tid.kwd-12704335873_n.g_mt.e_geo.9179915&mcid=6844056167778418689&cid=&gclid=EAIaIQobChMI1pr54ZHVggMVF6dmAh2IxgGNEAAYASAAEgKqevD_BwE&gclsrc=aw.ds', align: left, tooltip: '', border: '', foreground: white, visible: true, text: '', font_size: 30, wrap_on: mobile, font: '', col_spacing: medium, spacing_above: small, icon_align: left, col_widths: '', spacing_below: small, italic: false, background: '', bold: false, underline: false, icon: 'fa:linkedin-square'}
         type: Link
         layout_properties: {row: JUWDTC, width_xs: 1, col_xs: 8, width: 93.6875}
       - name: link_2
-        properties: {role: null, url: 'https://www.facebook.com/', align: left, tooltip: '',
-          border: '', foreground: white, visible: true, text: '', font_size: 30, wrap_on: mobile,
-          font: '', col_spacing: medium, spacing_above: small, icon_align: left, col_widths: '',
-          spacing_below: small, italic: false, background: '', bold: false, underline: false,
-          icon: 'fa:facebook-square'}
+        properties: {role: null, url: 'https://www.facebook.com/', align: left, tooltip: '', border: '', foreground: white, visible: true, text: '', font_size: 30, wrap_on: mobile, font: '', col_spacing: medium, spacing_above: small, icon_align: left, col_widths: '', spacing_below: small, italic: false, background: '', bold: false, underline: false, icon: 'fa:facebook-square'}
         type: Link
         layout_properties: {row: JUWDTC, width_xs: 1, col_xs: 9, width: 93.6875}
       - name: link_4_copy
-        properties: {role: null, url: 'https://www.instagram.com/accounts/login/',
-          align: left, tooltip: '', border: '', foreground: white, visible: true,
-          text: '', font_size: 30, wrap_on: mobile, font: '', col_spacing: medium,
-          spacing_above: small, icon_align: left, col_widths: '', spacing_below: small,
-          italic: false, background: '', bold: false, underline: false, icon: 'fa:instagram'}
+        properties: {role: null, url: 'https://www.instagram.com/accounts/login/', align: left, tooltip: '', border: '', foreground: white, visible: true, text: '', font_size: 30, wrap_on: mobile, font: '', col_spacing: medium, spacing_above: small, icon_align: left, col_widths: '', spacing_below: small, italic: false, background: '', bold: false, underline: false, icon: 'fa:instagram'}
         type: Link
         layout_properties: {row: JUWDTC, width_xs: 1, col_xs: 10, width: 93.6875}
       - name: link_3
-        properties: {role: null, url: 'https://twitter.com/i/flow/login?input_flow_data=%7B%22requested_variant%22%3A%22eyJsYW5nIjoiZW4ifQ%3D%3D%22%7D',
-          align: left, tooltip: '', border: '', foreground: white, visible: true,
-          text: '', font_size: 30, wrap_on: mobile, font: '', col_spacing: medium,
-          spacing_above: small, icon_align: left, col_widths: '', spacing_below: small,
-          italic: false, background: th, bold: false, underline: false, icon: 'fa:twitter'}
+        properties: {role: null, url: 'https://twitter.com/i/flow/login?input_flow_data=%7B%22requested_variant%22%3A%22eyJsYW5nIjoiZW4ifQ%3D%3D%22%7D', align: left, tooltip: '', border: '', foreground: white, visible: true, text: '', font_size: 30, wrap_on: mobile, font: '', col_spacing: medium, spacing_above: small, icon_align: left, col_widths: '', spacing_below: small, italic: false, background: th, bold: false, underline: false, icon: 'fa:twitter'}
         type: Link
         layout_properties: {row: JUWDTC, width_xs: 1, col_xs: 11, width: 93.6875}
 is_package: true

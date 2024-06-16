@@ -19,9 +19,10 @@ class borrower_portfolio(borrower_portfolioTemplate):
   def __init__(self, selected_row, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
+    self.selected_row=selected_row
     self.id= selected_row['customer_id']
-    self.email = main_form_module.email
-    print(self.email)
+    # self.email = main_form_module.email
+    # print(self.email)
     # self.id = main_form_module.userId
     self.create_bar_chart()
 
@@ -88,31 +89,26 @@ class borrower_portfolio(borrower_portfolioTemplate):
 
 
     rows = app_tables.fin_loan_details.search(borrower_customer_id=self.id, loan_updated_status=q.any_of(
-          q.like('accept%'),
-          q.like('Approved%'),
+          q.like('accepted%'),          
           q.like('approved%'),
           q.like('foreclosure%'),
-          q.like('disbursed loan%'),
-          q.like('Disbursed loan%'),
+          q.like('disbursed%'),          
         ))
     self.label_5_copy.text = len(rows)
     
     row = app_tables.fin_loan_details.search(borrower_customer_id=self.id, loan_updated_status=q.any_of(
-          q.like('closed%'),
-          q.like('Closed%'),
-          q.like('CLOSED%'),
+          q.like('closed%')
         ))
     self.label_9.text = len(row)
     
     no_of_disbursed_loans = app_tables.fin_loan_details.search(borrower_customer_id=self.id, loan_updated_status=q.any_of(
-          q.like('disbursed loan%'),
-          q.like('Disbursed loan%')
+          q.like('disbursed%')          
         ))
     self.label_3_copy.text = len(no_of_disbursed_loans)
 
     amount_of_disbursed_loans = app_tables.fin_loan_details.search(
     borrower_customer_id=self.id,
-    loan_updated_status="disbursed loan"
+    loan_updated_status="disbursed"
 )
 
     if amount_of_disbursed_loans:
@@ -207,6 +203,6 @@ class borrower_portfolio(borrower_portfolioTemplate):
 
   def button_1_click(self, **event_args):
     """This method is called when the button is clicked"""
-    media_object = anvil.server.call('create_zaphod_pdf')
-    anvil.media.download(media_object)
+    pdf = anvil.server.call('create_pdf1',"My Portfolio","self.image_2.source",self.selected_row)
+    anvil.media.download(pdf)
     
