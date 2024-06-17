@@ -224,3 +224,50 @@ def load_customer_data(self):
   
   # Set the items property of the repeating panel to the fetched data
   self.repeating_panel_1.items = user_profile
+
+
+# Server code (in a server module)
+import anvil.server
+import anvil.tables as tables
+from anvil.tables import app_tables
+
+@anvil.server.callable
+def get_combined_user_and_guarantor_data():
+    # Fetch user profiles excluding "super admin" and "admin"
+    user_profiles = app_tables.fin_user_profile.search()
+    
+    # Fetch all guarantors
+    guarantors = app_tables.fin_guarantor_details.search()
+
+    # Create a list of customer_ids to exclude (super admin and admin)
+    restricted_customer_ids = [profile['customer_id'] for profile in user_profiles if profile['usertype'] in ['super admin', 'admin']]
+    
+    # Filter user profiles to exclude restricted customer_ids
+    user_profiles_filtered = [profile for profile in user_profiles if profile['customer_id'] not in restricted_customer_ids]
+    
+    # Filter guarantors to exclude restricted customer_ids
+    guarantors_filtered = [guarantor for guarantor in guarantors if guarantor['customer_id'] not in restricted_customer_ids]
+
+    # Combine the data into a single list, interleaving records
+    combined_data = []
+
+    # Determine the maximum length to iterate up to the maximum of both lists
+    max_length = max(len(user_profiles_filtered), len(guarantors_filtered))
+
+    for i in range(max_length):
+        if i < len(user_profiles_filtered) and i < len(guarantors_filtered):
+            user_profile = user_profiles_filtered[i]
+            guarantor = guarantors_filtered[i]
+            combined_data.append({
+                'user_photo': user_profile['user_photo'],  
+                'full_name': user_profile['full_name'],   
+                'email_user': user_profile['email_user'],  
+                'mobile': user_profile['mobile'],  
+                'usertype': user_profile['usertype'],
+                'another_person': guarantor['another_person'],  
+                'guarantor_name': guarantor['guarantor_name'],   
+                'guarantor_mobile_no': guarantor['guarantor_mobile_no']
+            })
+        
+
+    return combined_data
