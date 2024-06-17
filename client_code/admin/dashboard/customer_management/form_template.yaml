@@ -1,7 +1,7 @@
 is_package: true
 container:
   type: ColumnPanel
-  properties: {col_widths: '{}', background: '#Edf0f4'}
+  properties: {col_widths: '{}', background: '#Edf0f4', foreground: ''}
 components:
 - properties: {}
   type: form:admin.dashboard.home_button_admin
