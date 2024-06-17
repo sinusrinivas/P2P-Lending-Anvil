@@ -23,9 +23,11 @@ class track_loan_disbursement(track_loan_disbursementTemplate):
                         'loan_amount': i['loan_amount'],
                         'interest': i['interest_rate'],
                         'loan_status': i['loan_updated_status'],
-                        'loan_id': i['loan_id'],
-                        
+                        'loan_id': i['loan_id']                        
                        }
-                       for i in self.result]
+                       for i in self.result if i['loan_updated_status'] in ["disbursed", "approved"]]
 
-        self.repeating_panel_1.items = self.result
+        if not self.result:
+            Notification("No Loans with status 'disbursed' or 'approved' found!").show()
+        else:
+            self.repeating_panel_1.items = self.result

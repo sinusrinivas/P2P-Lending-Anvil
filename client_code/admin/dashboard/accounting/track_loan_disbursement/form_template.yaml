@@ -1,5 +1,9 @@
 container: {type: ColumnPanel}
 components:
+- name: home_button_admin_1_copy
+  properties: {}
+  type: form:admin.dashboard.home_button_admin
+  layout_properties: {grid_position: 'ICJBWO,HQPHRV', full_width_row: true}
 - name: spacer_1
   properties: {height: '5'}
   type: Spacer
@@ -19,6 +23,7 @@ components:
     - {id: VJQQOR, title: Loan Amount, data_key: column_2}
     - {id: OJLQEN, title: interest Rate, data_key: column_3}
     - {id: CVLTWE, data_key: column_1, title: Loan Status}
+    - {id: BHQPOP, data_key: column_1, title: ''}
     role: tonal-data-grid
   type: DataGrid
   components:

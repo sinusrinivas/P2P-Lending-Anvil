@@ -38,4 +38,4 @@ class accounting(accountingTemplate):
 
   def button_9_click(self, **event_args):
     """This method is called when the button is clicked"""
-    open_form('admin.dashboard.accounting.')
+    open_form('admin.dashboard.accounting.track_loan_disbursement')
