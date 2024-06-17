@@ -43,4 +43,4 @@ class collection_of_repayment(collection_of_repaymentTemplate):
 
   def button_1_click(self, **event_args):
     """This method is called when the button is clicked"""
-    open_form('admin.dashboard.Tracking')
+    open_form('admin.dashboard.loan_servicing')
