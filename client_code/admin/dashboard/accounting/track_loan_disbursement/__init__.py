@@ -53,18 +53,29 @@ class track_loan_disbursement(track_loan_disbursementTemplate):
         self.init_components(**properties)
 
         # Hide the RepeatingPanel initially
-        self.repeating_panel_1.visible = False
+        self.data_grid_1.visible = False
 
     def button_filter_click(self, **event_args):
         # Event handler for filter button click
-        selected_date = self.date_picker.date
-        
+        selected_date = self.date_picker_1.date
+        print(selected_date)  # Debug: Print selected date to check
+
         if selected_date:
-            # Fetch loans for the selected date
+            # Calculate start and end of selected date
+            start_date = selected_date.replace(hour=0, minute=0, second=0, microsecond=0)
+            end_date = selected_date.replace(hour=23, minute=59, second=59, microsecond=999999)
+
+            # Fetch loans for the selected date and matching timestamps
             loans = app_tables.fin_loan_details.search(
                 q.or_(
-                    q.date_equal('loan_disbursed_timestamp', selected_date),
-                    q.date_equal('lender_accepted_timestamp', selected_date)
+                    q.and_(
+                        q.date_equal('loan_disbursed_timestamp', selected_date),
+                        q.date_equal('lender_accepted_timestamp', selected_date)
+                    ),
+                    q.and_(
+                        q.date_between('loan_disbursed_timestamp', start_date, end_date),
+                        q.date_between('lender_accepted_timestamp', start_date, end_date)
+                    )
                 )
             )
 
@@ -88,8 +99,6 @@ class track_loan_disbursement(track_loan_disbursementTemplate):
                 }
                 for loan in loans
                 if loan['loan_updated_status'] in ["disbursed", "approved"]
-                   and (loan['loan_disbursed_timestamp'].date() == selected_date
-                        or loan['lender_accepted_timestamp'].date() == selected_date)
             ]
 
             if not filtered_loans:
@@ -97,8 +106,13 @@ class track_loan_disbursement(track_loan_disbursementTemplate):
             else:
                 # Update RepeatingPanel with filtered results
                 self.repeating_panel_1.items = filtered_loans
-                self.repeating_panel_1.visible = True  # Make the RepeatingPanel visible
+                self.data_grid_1.visible = True  # Make the RepeatingPanel visible
         else:
             # Handle case where date is not selected
             Notification("Please select a date!").show()
-            self.repeating_panel_1.visible = False  # Hide the RepeatingPanel if no date is selected
+            self.data_grid_1.visible = False  # Hide the RepeatingPanel if no date is selected
+
+    def date_picker_1_change(self, **event_args):
+      """This method is called when the selected date changes"""
+      date = self.date_picker_1.date
+      print(date)
