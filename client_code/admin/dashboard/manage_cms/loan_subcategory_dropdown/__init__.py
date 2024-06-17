@@ -17,7 +17,7 @@ class loan_subcategory_dropdown(loan_subcategory_dropdownTemplate):
     # Any code you write here will run before the form opens.
 
   def button_1_click(self, **event_args):
-    open_form('admin.dashboard.manage_cms.manage_dropdowns')
+    open_form('admin.dashboard.manage_cms')
 
   def borrower_loan_issue(self, **event_args):
     self.column_panel_10.visible = True
@@ -36,7 +36,7 @@ class loan_subcategory_dropdown(loan_subcategory_dropdownTemplate):
 
   def refresh(self):
     self.repeating_panel_1.items = app_tables.fin_report_issue_category.search()
-    self.repeating_panel_2_copy.items = app_tables.fin_report_issue_category.search()
+    self.repeating_panel_2.items = app_tables.fin_report_issue_category.search()
     self.repeating_panel_3.items = app_tables.fin_report_issue_category.search()
 
   def borrower_issue(self, **event_args):
@@ -53,8 +53,19 @@ class loan_subcategory_dropdown(loan_subcategory_dropdownTemplate):
     enter_data = self.text_box_9_copy.text
   
     if not enter_data:
-          alert("Please enter a valid Borrower Loan Issues: 'Loan Not Approved', 'Loan declained', 'Other'.")
+          alert("Please enter a valid Technical Issues: 'Button Not Working', 'Page Not Working', 'Other'.")
           return
-    new_row = app_tables.fin_report_issue_category.add_row(borrower_subcategory_loan_issue=enter_data)
-    self.text_box_9.text = ' '
+    new_row = app_tables.fin_report_issue_category.add_row(subcategory_technical_issue=enter_data)
+    self.text_box_9_copy.text = ' '
     self.refresh()
+
+  def lender_issue_click(self, **event_args):
+    enter_data = self.text_box_9_copy_2.text
+  
+    if not enter_data:
+          alert("Please enter a valid Technical Issues: 'Loan Not Approved', 'Amount Not Credited', 'Other'.")
+          return
+    new_row = app_tables.fin_report_issue_category.add_row(lendor_subcategory_loan_issue=enter_data)
+    self.text_box_9_copy_2.text = ' '
+    self.refresh()
+

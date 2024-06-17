@@ -1,4 +1,4 @@
-from ._anvil_designer import ItemTemplate114Template
+from ._anvil_designer import edit_borrower_issueTemplate
 from anvil import *
 import anvil.server
 import anvil.google.auth, anvil.google.drive
@@ -9,16 +9,9 @@ import anvil.tables.query as q
 from anvil.tables import app_tables
 
 
-class ItemTemplate114(ItemTemplate114Template):
+class edit_borrower_issue(edit_borrower_issueTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
 
     # Any code you write here will run before the form opens.
-
-  def link_click_click(self, **event_args):
-    item_data = self.item
-    open_form('admin.dashboard.manage_cms.loan_subcategory_dropdown', selected_row=item_data)
-
-
-    

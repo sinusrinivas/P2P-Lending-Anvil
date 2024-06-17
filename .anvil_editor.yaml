@@ -340,6 +340,7 @@ unique_ids:
     lendor.dashboard.view_borrower_loan_request.Borr_loan_request: '1700542763128106365112272.9714'
     lendor.dashboard.view_transaction_history.ItemTemplate100: '1712308244698402395554355.8164'
     admin.dashboard.manage_ascend_score.add_subcategory.edit_vehicle_loan: '1711089613487221420956518.77835'
+    admin.dashboard.manage_cms.loan_subcategory_dropdown.edit_borrower_issue: '171864498793872486502524.73831'
     admin.dashboard.reporting_and_analytical_modules.key_metrice.ItemTemplate109: '1718183485701894550867272.3522'
     lendor.dashboard.lender_view_loans.RowTemplate20: '1703139972848360547706878.1784'
     admin.dashboard.manage_ascend_score.add_subcategory.edit_present_address: '1710500304962404196637199.6497'
