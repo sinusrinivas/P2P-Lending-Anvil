@@ -1,45 +1,52 @@
 is_package: true
 container:
   type: ColumnPanel
-  properties: {col_widths: '{"OXFCCW":5,"RMWBSZ":10,"VCGKLE":10,"OBVGGI":10,"RAGHYJ":10,"SUTUWH":13,"RQWCXX":10}'}
+  properties: {col_widths: '{}'}
 components:
-- name: image_1
-  properties: {height: 104.71417236328125}
-  type: Image
-  layout_properties: {grid_position: 'OICQEB,OXFCCW', full_width_row: true}
-  data_bindings:
-  - {property: source, code: 'self.item[''image'']', writeback: false}
-- name: label_1
-  properties: {align: center}
-  type: Label
-  layout_properties: {grid_position: 'OICQEB,RMWBSZ'}
-  data_bindings:
-  - {property: text, code: 'self.item[''loan_id'']', writeback: false}
-- name: label_2
-  properties: {align: center}
-  type: Label
-  layout_properties: {grid_position: 'OICQEB,VCGKLE'}
-  data_bindings:
-  - {property: text, code: 'self.item[''borrower_full_name'']', writeback: false}
-- name: label_6
-  properties: {align: center}
-  type: Label
-  layout_properties: {grid_position: 'OICQEB,RQWCXX'}
-- name: label_3
-  properties: {align: center}
-  type: Label
-  layout_properties: {grid_position: 'OICQEB,OBVGGI'}
-  data_bindings:
-  - {property: text, code: 'self.item[''product_name'']', writeback: false}
-- name: label_4
-  properties: {align: center}
-  type: Label
-  layout_properties: {grid_position: 'OICQEB,RAGHYJ'}
-  data_bindings:
-  - {property: text, code: 'self.item[''emi_number'']', writeback: false}
-- name: label_5
-  properties: {align: center}
-  type: Label
-  layout_properties: {grid_position: 'OICQEB,SUTUWH'}
-  data_bindings:
-  - {property: text, code: 'self.item[''total_fees'']', writeback: false}
+- name: column_panel_1
+  properties: {}
+  type: ColumnPanel
+  layout_properties: {grid_position: 'KNXSXT,PQLZDS', full_width_row: true}
+  components:
+  - name: image_1
+    properties: {height: 84.5714111328125}
+    type: Image
+    layout_properties: {grid_position: 'QHVGKQ,VHRPVY'}
+    data_bindings:
+    - {property: source, code: 'self.item[''image'']', writeback: false}
+  - name: label_1
+    properties: {align: center}
+    type: Label
+    layout_properties: {grid_position: 'QHVGKQ,DSWSBW'}
+    data_bindings:
+    - {property: text, code: 'self.item[''loan_id'']', writeback: false}
+  - name: label_2
+    properties: {align: center}
+    type: Label
+    layout_properties: {grid_position: 'QHVGKQ,PZSQFC'}
+    data_bindings:
+    - {property: text, code: 'self.item[''borrower_full_name'']', writeback: false}
+  - name: label_6
+    properties: {align: center}
+    type: Label
+    layout_properties: {grid_position: 'QHVGKQ,JQCVCS'}
+    data_bindings:
+    - {property: text, code: 'self.item[''borrower_email_id'']', writeback: false}
+  - name: label_3
+    properties: {align: center}
+    type: Label
+    layout_properties: {grid_position: 'QHVGKQ,DRSYLJ'}
+    data_bindings:
+    - {property: text, code: 'self.item[''product_name'']', writeback: false}
+  - name: label_4
+    properties: {align: center}
+    type: Label
+    layout_properties: {grid_position: 'QHVGKQ,APPIKY'}
+    data_bindings:
+    - {property: text, code: 'self.item[''emi_number'']', writeback: false}
+  - name: label_5
+    properties: {align: center}
+    type: Label
+    layout_properties: {grid_position: 'QHVGKQ,TESQCC'}
+    data_bindings:
+    - {property: text, code: 'self.item[''total_fees'']', writeback: false}
