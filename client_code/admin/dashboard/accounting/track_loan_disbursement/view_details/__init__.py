@@ -16,7 +16,7 @@ class view_details(view_detailsTemplate):
 
     # Store the selected row
     self.selected_row = selected_row
-    print(self.se)
+    print(self.selected_row)
 
     # Any code you write here will run before the form opens.
     self.borrower_full_name.text = selected_row['borrower_full_name'] if 'borrower_full_name' in selected_row else 'N/A'
