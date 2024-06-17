@@ -57,6 +57,7 @@ class tracking_late_payments(tracking_late_paymentsTemplate):
             data.append({
                 'loan_id': loan_row['loan_id'],
                 'borrower_full_name': loan_row['borrower_full_name'],
+                'borrower_email_id': loan_row['borrower_email_id'],
                 'product_name': loan_row['product_name'],
                 'emi_number': emi_row['emi_number'],
                 'lapsed_fee': emi_row['lapsed_fee'],
