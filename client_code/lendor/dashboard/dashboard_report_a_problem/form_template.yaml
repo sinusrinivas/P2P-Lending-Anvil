@@ -26,7 +26,7 @@ components:
   layout_properties: {slot: nav-right}
   components: []
 - type: ColumnPanel
-  properties: {role: null, col_widths: '{"PDRAWC":35,"TABQGQ":3,"ZCFBEH":22,"RURDNG":20,"AJTPBZ":40,"AXCWGG":20,"ULUOWV":40,"KLOGYX":20,"PBOAZU":40,"SICLPK":20,"PUQRDN":40,"AHWQFW":20,"YJGDBQ":40,"BRSYIJ":20,"ZORWQT":20,"ZQYFWZ":20}', wrap_on: mobile}
+  properties: {role: null, col_widths: '{"ZQYFWZ":20}', wrap_on: mobile}
   name: outlined_card_2_copy
   layout_properties: {grid_position: 'ECKBEK,XFTDMP', row: QBZMKP, width_xs: 12, col_xs: 0}
   components:
@@ -34,105 +34,93 @@ components:
     properties: {role: null, bold: true, align: center, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: 18, tooltip: '', text: Report A Problem}
     name: label_1
     layout_properties: {grid_position: 'GVLWCJ,GRXWIJ'}
-  - name: spacer_2
-    properties: {height: 11}
-    type: Spacer
-    layout_properties: {grid_position: 'FKNXLA,PDRAWC WFPFZD,ZICRLY'}
-  - name: column_panel_1
-    properties: {}
-    type: ColumnPanel
-    layout_properties: {grid_position: 'FKNXLA,PDRAWC HVCDVF,GFQMNN'}
-    components:
-    - name: image_1_copy_2
-      properties: {display_mode: zoom_to_fill, height: 641, source: _/theme/lender/dashboard/report_a_problem.png}
-      type: Image
-      layout_properties: {grid_position: 'SJFOZW,KKJHVN'}
-  - name: spacer_3
-    properties: {height: 12}
-    type: Spacer
-    layout_properties: {grid_position: 'FKNXLA,TABQGQ'}
   - type: Spacer
     properties: {height: 9}
     name: spacer_1
-    layout_properties: {grid_position: 'FKNXLA,ZCFBEH GCEQKF,IFFCMA'}
-  - name: label_4
-    properties: {text: Full Name, bold: true}
-    type: Label
-    layout_properties: {grid_position: 'FKNXLA,ZCFBEH FIJYQF,AXCWGG'}
-  - name: name_box
+    layout_properties: {grid_position: 'GCEQKF,IFFCMA'}
+  - name: column_panel_1
     properties: {}
-    type: Label
-    layout_properties: {grid_position: 'FKNXLA,ZCFBEH FIJYQF,ULUOWV'}
-  - name: label_6
-    properties: {text: 'Mobile ', bold: true}
-    type: Label
-    layout_properties: {grid_position: 'FKNXLA,ZCFBEH ZLZTYL,RURDNG'}
-  - name: mobile_box
-    properties: {}
-    type: Label
-    layout_properties: {grid_position: 'FKNXLA,ZCFBEH ZLZTYL,AJTPBZ'}
-  - name: label_5
-    properties: {text: Email Id, bold: true}
-    type: Label
-    layout_properties: {grid_position: 'FKNXLA,ZCFBEH FVMQEM,KLOGYX'}
-  - name: email_box
-    properties: {}
-    type: Label
-    layout_properties: {grid_position: 'FKNXLA,ZCFBEH FVMQEM,PBOAZU'}
-  - name: label_2
-    properties: {text: Category, bold: true}
-    type: Label
-    layout_properties: {grid_position: 'FKNXLA,ZCFBEH ZNEWXR,SICLPK'}
-  - name: drop_down_1
-    properties:
-      placeholder: ''
-      items: [Select Catrgory]
-      role: outlined
-      align: full
-    type: DropDown
-    layout_properties: {grid_position: 'FKNXLA,ZCFBEH ZNEWXR,PUQRDN', full_width_row: false}
-  - name: label_9
-    properties: {text: Subcategory, bold: true}
-    type: Label
-    layout_properties: {grid_position: 'FKNXLA,ZCFBEH ACODUD,AHWQFW'}
-  - name: drop_down_2
-    properties:
-      items: [Select Subcategory]
-      role: outlined
-    type: DropDown
-    layout_properties: {grid_position: 'FKNXLA,ZCFBEH ACODUD,YJGDBQ'}
-  - name: label_8_copy_1
-    properties: {text: Issue Photo, bold: true}
-    type: Label
-    layout_properties: {grid_position: 'FKNXLA,ZCFBEH LFELYC,BRSYIJ'}
-  - name: file_loader_1
-    properties: {}
-    type: FileLoader
-    layout_properties: {grid_position: 'FKNXLA,ZCFBEH LFELYC,ZORWQT'}
-    event_bindings: {change: file_loader_1_change}
+    type: ColumnPanel
+    layout_properties: {grid_position: 'ZBQSRM,ZJRRGD'}
+    components:
+    - name: label_4
+      properties: {text: Full Name, bold: true}
+      type: Label
+      layout_properties: {grid_position: 'LRORSR,GVFZCG'}
+    - name: name_box
+      properties: {}
+      type: Label
+      layout_properties: {grid_position: 'LRORSR,TYNVMV'}
+    - name: label_6
+      properties: {text: 'Mobile ', bold: true}
+      type: Label
+      layout_properties: {grid_position: 'ENBLDE,XTBCZH'}
+    - name: mobile_box
+      properties: {}
+      type: Label
+      layout_properties: {grid_position: 'ENBLDE,PFYZLC'}
+    - name: label_5
+      properties: {text: Email Id, bold: true}
+      type: Label
+      layout_properties: {grid_position: 'DWOXLJ,ZOPHUW'}
+    - name: email_box
+      properties: {}
+      type: Label
+      layout_properties: {grid_position: 'DWOXLJ,MENSYS'}
+    - name: label_2
+      properties: {text: Category, bold: true}
+      type: Label
+      layout_properties: {grid_position: 'XVOTWJ,PPVAWG NWGTYA,PGWMDX'}
+    - name: drop_down_1
+      properties:
+        placeholder: ''
+        items: [Select Catrgory]
+        role: outlined
+        align: full
+      type: DropDown
+      layout_properties: {grid_position: 'XVOTWJ,PPVAWG GZAZQW,SFCNAO'}
+    - name: label_9
+      properties: {text: Subcategory, bold: true}
+      type: Label
+      layout_properties: {grid_position: 'XVOTWJ,PPVAWG LBBAPS,TXAHNO'}
+    - name: drop_down_2
+      properties:
+        items: [Select Subcategory]
+        role: outlined
+      type: DropDown
+      layout_properties: {grid_position: 'XVOTWJ,PPVAWG RJEXIV,NRILRK'}
+    - name: label_8_copy_1
+      properties: {text: Issue Photo, bold: true}
+      type: Label
+      layout_properties: {grid_position: 'ESNDLC,OEINHO'}
+    - name: file_loader_1
+      properties: {}
+      type: FileLoader
+      layout_properties: {grid_position: 'ESNDLC,BUGFUP'}
+      event_bindings: {change: file_loader_1_change}
   - name: image_issue
     properties: {display_mode: original_size, height: 139}
     type: Image
-    layout_properties: {grid_position: 'FKNXLA,ZCFBEH LFELYC,ZQYFWZ'}
+    layout_properties: {grid_position: 'LFELYC,ZQYFWZ'}
   - name: check_box_1
     properties: {text: It is Urgent}
     type: CheckBox
-    layout_properties: {grid_position: 'FKNXLA,ZCFBEH TBXUXT,ZOKGOI'}
+    layout_properties: {grid_position: 'TBXUXT,ZOKGOI'}
   - type: Label
     properties: {role: null, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: 18, tooltip: '', text: Describe the problem}
     name: label_3
-    layout_properties: {grid_position: 'FKNXLA,ZCFBEH KIVHXT,LEZMVM'}
+    layout_properties: {grid_position: 'KIVHXT,LEZMVM'}
   - type: Label
     properties: {role: null, bold: false, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: Please provide as much detail as possible so we can better identify the problem.}
     name: label_7
-    layout_properties: {grid_position: 'FKNXLA,ZCFBEH YIQLID,OMJDMP'}
+    layout_properties: {grid_position: 'YIQLID,OMJDMP'}
   - type: TextArea
     properties: {role: outlined, bold: false, align: right, placeholder: '', spacing_above: small, background: 'theme:On Primary', underline: false, font: '', foreground: '', spacing_below: small, visible: true, border: '', italic: false, enabled: true, auto_expand: true, font_size: null, tooltip: '', height: 108, text: ''}
     name: description_box
-    layout_properties: {grid_position: 'FKNXLA,ZCFBEH AOZFDF,IQFSEY'}
+    layout_properties: {grid_position: 'AOZFDF,IQFSEY'}
     event_bindings: {change: issue_description_change}
   - type: Button
     properties: {role: null, bold: false, align: center, spacing_above: small, background: '#05264d', icon: '', underline: false, font: '', icon_align: left, foreground: 'theme:On Primary', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: Submit Complaint}
     name: button_2
-    layout_properties: {grid_position: 'FKNXLA,ZCFBEH AGGTCZ,KJCIXK'}
+    layout_properties: {grid_position: 'AGGTCZ,KJCIXK'}
     event_bindings: {click: button_2_click}
