@@ -1,4 +1,6 @@
-container: {type: ColumnPanel}
+container:
+  type: ColumnPanel
+  properties: {background: '#Edf0f4'}
 components:
 - name: home_button_admin_1
   properties: {}
