@@ -15,10 +15,64 @@ components:
   type: DropDown
   layout_properties: {grid_position: 'KYELOO,KVPTRU', full_width_row: false}
   event_bindings: {change: drop_down_1_change}
+- name: data_grid_5
+  properties:
+    columns:
+    - {id: JKSDUP, title: Column 1, data_key: column_1}
+    - {id: VJQQOR, title: Column 2, data_key: column_2}
+    - {id: OJLQEN, title: Column 3, data_key: column_3}
+    - {id: ITWQNQ, data_key: column_4, title: Column 4}
+    - {id: IWDZWO, data_key: column_5, title: Column 5}
+    - {id: YLGCRM, data_key: column_6, title: Column 6}
+    - {id: KNWHIP, data_key: column_7, title: Column 7}
+    - {id: CFJWUA, data_key: column_8, title: Column 8, width: 126.999755859375, expand: false}
+  type: DataGrid
+  components:
+  - name: repeating_panel_1
+    properties: {item_template: admin.dashboard.loan_servicing.tracking_late_payments.RowTemplate42}
+    type: RepeatingPanel
+  layout_properties: {grid_position: 'KILEUK,KKKOQA', full_width_row: true}
 - name: column_panel_1
-  properties: {}
+  properties: {role: outlined-card, col_widths: '{"PHJJYO":10,"RPRQMI":10,"IIPCRT":9,"NCYUEN":9,"ZWALXB":8,"EIAHYR":8,"XYRUTC":8,"KHVQYQ":5}'}
   type: ColumnPanel
-  layout_properties: {grid_position: 'QGSKIU,QKTGSR'}
+  layout_properties: {grid_position: 'QGSKIU,QKTGSR', full_width_row: true}
+  components:
+  - name: label_8
+    properties: {}
+    type: Label
+    layout_properties: {grid_position: 'VFACBY,KHVQYQ', full_width_row: true}
+  - name: label_1
+    properties: {text: Loan Id}
+    type: Label
+    layout_properties: {grid_position: 'VFACBY,PHJJYO', full_width_row: false}
+  - name: label_2
+    properties: {text: Borrower Name}
+    type: Label
+    layout_properties: {grid_position: 'VFACBY,RPRQMI'}
+  - name: label_3
+    properties: {text: Email}
+    type: Label
+    layout_properties: {grid_position: 'VFACBY,IIPCRT'}
+  - name: label_4
+    properties: {text: Product Name}
+    type: Label
+    layout_properties: {grid_position: 'VFACBY,NCYUEN'}
+  - name: label_5
+    properties: {text: Product Name}
+    type: Label
+    layout_properties: {grid_position: 'VFACBY,ZWALXB'}
+  - name: label_6
+    properties: {text: EMI Number}
+    type: Label
+    layout_properties: {grid_position: 'VFACBY,EIAHYR'}
+  - name: label_7
+    properties: {text: Total Late Payment Fees}
+    type: Label
+    layout_properties: {grid_position: 'VFACBY,XYRUTC'}
+- name: repeating_panel_all
+  properties: {item_template: admin.dashboard.loan_servicing.tracking_late_payments.ItemTemplate111}
+  type: RepeatingPanel
+  layout_properties: {grid_position: 'HWJJAF,CBTRYZ', full_width_row: true}
 - name: data_grid_1
   properties:
     columns:
@@ -33,10 +87,7 @@ components:
     visible: true
   type: DataGrid
   layout_properties: {grid_position: '', full_width_row: true}
-  components:
-  - name: repeating_panel_all
-    properties: {item_template: admin.dashboard.loan_servicing.tracking_late_payments.ItemTemplate111}
-    type: RepeatingPanel
+  components: []
 - name: data_grid_2
   properties:
     columns:

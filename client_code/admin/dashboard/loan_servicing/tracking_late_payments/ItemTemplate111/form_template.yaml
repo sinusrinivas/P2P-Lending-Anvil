@@ -4,7 +4,7 @@ container:
   properties: {col_widths: '{}'}
 components:
 - name: column_panel_1
-  properties: {col_widths: '{"POCCJZ":5,"IBADNL":55,"WFXFRU":10,"IVMATD":10,"JOFHSE":10,"RKMJVV":10,"PIITOR":10,"ASMKHV":10}', role: elevated-card}
+  properties: {col_widths: '{"POCCJZ":5,"IBADNL":55,"WFXFRU":10,"IVMATD":10,"JOFHSE":10,"RKMJVV":10,"PIITOR":8,"ASMKHV":10,"GTLKNR":10}', role: elevated-card}
   type: ColumnPanel
   layout_properties: {grid_position: 'KNXSXT,PQLZDS', full_width_row: true}
   components:
@@ -19,13 +19,13 @@ components:
     type: Spacer
     layout_properties: {grid_position: 'UJKDOT,IBADNL MUZHXN,YCSTFO'}
   - name: label_1
-    properties: {align: center}
+    properties: {align: left}
     type: Label
     layout_properties: {grid_position: 'UJKDOT,IBADNL IRYJSM,WFXFRU'}
     data_bindings:
     - {property: text, code: 'self.item[''loan_id'']', writeback: false}
   - name: label_2
-    properties: {align: center}
+    properties: {align: left}
     type: Label
     layout_properties: {grid_position: 'UJKDOT,IBADNL IRYJSM,IVMATD'}
     data_bindings:
@@ -37,19 +37,23 @@ components:
     data_bindings:
     - {property: text, code: 'self.item[''borrower_email_id'']', writeback: false}
   - name: label_3
-    properties: {align: center}
+    properties: {align: left}
     type: Label
     layout_properties: {grid_position: 'UJKDOT,IBADNL IRYJSM,RKMJVV'}
     data_bindings:
     - {property: text, code: 'self.item[''product_name'']', writeback: false}
+  - name: label_7
+    properties: {align: left}
+    type: Label
+    layout_properties: {grid_position: 'UJKDOT,IBADNL IRYJSM,GTLKNR'}
   - name: label_4
-    properties: {align: center}
+    properties: {align: left}
     type: Label
     layout_properties: {grid_position: 'UJKDOT,IBADNL IRYJSM,PIITOR'}
     data_bindings:
     - {property: text, code: 'self.item[''emi_number'']', writeback: false}
   - name: label_5
-    properties: {align: center}
+    properties: {align: left}
     type: Label
     layout_properties: {grid_position: 'UJKDOT,IBADNL IRYJSM,ASMKHV'}
     data_bindings:
