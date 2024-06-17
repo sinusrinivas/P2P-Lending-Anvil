@@ -59,7 +59,7 @@ class out_standing_amount(out_standing_amountTemplate):
 
   def button_1_click(self, **event_args):
     """This method is called when the button is clicked"""
-    open_form('admin.dashboard.Tracking')
+    open_form('admin.dashboard.loan_servicing')
 
 
 
