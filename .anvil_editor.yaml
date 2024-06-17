@@ -333,6 +333,7 @@ unique_ids:
     admin.dashboard.manage_cms.add_general_dropdowns: '1710397494541671512734929.8624'
     admin.dashboard.customer_management.handles_customer_registration.borrowers.view_profile.update_form: '1699967990279922551849592.2898'
     admin.dashboard.loan_management.view_loans.not_payable_amount.ItemTemplate25: '1707202809143429044958655.44635'
+    admin.dashboard.manage_cms.loan_subcategory_dropdown: '1718636754312830982354154.6317'
     lendor.dashboard.lender_view_loans.ItemTemplate49: '1709611089771787997070325.4371'
     admin.dashboard.accounting.performance_tracker: '1701242878909114559440962.97266'
     lendor.dashboard.view_borrower_loan_request.Borr_loan_request: '1700542763128106365112272.9714'

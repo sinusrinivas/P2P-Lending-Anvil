@@ -22,3 +22,6 @@ class manage_issues_dropdown(manage_issues_dropdownTemplate):
   def button_21_copy_copy_click(self, **event_args):
     open_form('admin.dashboard.manage_cms.add_report_issues_dropdown')
 
+  def button_1_click(self, **event_args):
+    open_form('admin.dashboard.manage_cms')
+

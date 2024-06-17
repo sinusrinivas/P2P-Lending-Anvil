@@ -45,5 +45,5 @@ class edit_category(edit_categoryTemplate):
             name = self.selected_row['issue_category']
 
             # Delete the rows from the product_group table
-            self.selected_row.delete()
+            self.name.delete()
             open_form('admin.dashboard.manage_cms.add_report_issues_dropdown.Issues_category_dropdown')
