@@ -17,7 +17,7 @@ components:
     layout_properties: {grid_position: 'EJDZOU,ERVTEG', full_width_row: true}
     event_bindings: {click: button_1_click}
     name: button_1
-  - properties: {role: display, bold: true, align: center, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: 26, tooltip: '', text: Manage Lender Revenue Share}
+  - properties: {role: display, bold: true, align: center, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: 26, tooltip: '', text: Manage Lenders Revenue Share}
     type: Label
     layout_properties: {grid_position: 'KDWCHS,RJCFGW', full_width_row: true}
     name: label_1
@@ -26,7 +26,7 @@ components:
       - {id: JKSDUP, title: Customer ID, data_key: column_1, width: 121.60000610351562, expand: false}
       - {id: VJQQOR, title: Lender Full Name, data_key: column_2, width: 158, expand: false}
       - {id: OJLQEN, title: 'Mobile No ', data_key: column_3, width: 119.20001220703125, expand: false}
-      - {id: PEKWCK, data_key: column_1, title: Email Id, width: 171.5999755859375, expand: false}
+      - {id: PEKWCK, data_key: column_1, title: Email ID, width: 171.5999755859375, expand: false}
       - {id: ELZCXA, data_key: column_2, title: No of Loans on Lender, expand: false, width: 193.199951171875}
       - {id: DORFXB, data_key: column_3, title: Total Lender Returns, expand: false, width: 187.7777099609375}
       show_page_controls: false
