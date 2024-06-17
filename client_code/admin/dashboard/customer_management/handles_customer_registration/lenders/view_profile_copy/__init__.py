@@ -36,7 +36,9 @@ class view_profile_copy(view_profile_copyTemplate):
     self.terms_list = []
     self.qualification_list = []
     self.address = []
+    self.address2_type= []
     self.address_type_list = []
+    self.Duration_at_address_list = []
     self.profession_type_list = []
     self.street_list = []
     self.build_name_list = []
@@ -60,15 +62,8 @@ class view_profile_copy(view_profile_copyTemplate):
     self.company_landmark = []
     self.company_address = []
     self.annual_salary = []
-    self.designation = []
-    self.account_name = []
-    self.account_type = []
-    self.account_number = []
-    self.account_bank_branch = []
-    self.ifsc_code = []
     self.salary_type = []
-    self.select_bank = []
-    self.net_bank = []
+    self.designation = []
     self.father_name = []
     self.father_age = []
     self.mother_name = []
@@ -83,6 +78,10 @@ class view_profile_copy(view_profile_copyTemplate):
     self.emp_id_proof = []
     self.last_six_month_bank_proof = []
     self.college_proof = []
+    self.home_loan = []
+    self.other_loan = []
+    self.personal_loan = []
+    self.vehicle_loan = []
 
     a = -1
     for i in self.data:
@@ -108,7 +107,9 @@ class view_profile_copy(view_profile_copyTemplate):
       self.qualification_list.append(i['qualification'])
       self.profession_type_list.append(i['profession'])
       self.address.append(i['street_adress_1'])
+      self.address2_type.append(i['street_address_2'])
       self.address_type_list.append(i['address_type'])
+      self.Duration_at_address_list.append(i['duration_at_address'])
       self.street_list.append(i['street'])
       self.build_name_list.append(i['building_name'])
       self.house_no_list.append(i['house_no'])
@@ -131,15 +132,8 @@ class view_profile_copy(view_profile_copyTemplate):
       self.company_landmark.append(i['company_landmark'])
       self.company_address.append(i['company_address'])
       self.annual_salary.append(i['annual_salary'])
-      self.designation.append(i['designation'])
-      self.account_name.append(i['account_name'])
-      self.account_type.append(i['account_type'])
-      self.account_number.append(i['account_number'])
-      self.account_bank_branch.append(i['account_bank_branch'])
-      # self.ifsc_code.append(i['bank_id'])
       self.salary_type.append(i['salary_type'])
-      # self.select_bank.append(i['bank_name'])
-      # self.net_bank.append(i['net_bank'])
+      self.designation.append(i['designation'])
       self.father_name.append(i['father_name'])
       self.father_age.append(i['father_age'])
       self.mother_name.append(i['mother_name'])
@@ -147,13 +141,16 @@ class view_profile_copy(view_profile_copyTemplate):
       self.college_name.append(i['college_name'])
       self.college_id.append(i['college_id'])
       self.college_address.append(i['college_address'])
-      # self.running_loan.append('home_loan')
       self.profile.append(i['user_photo'])
       self.aadhaar_photo.append(i['aadhaar_photo'])
       self.pan_photo.append(i['pan_photo'])
       self.emp_id_proof.append(i['emp_id_proof'])
       self.last_six_month_bank_proof.append(i['last_six_month_bank_proof'])
       self.college_proof.append(i['college_proof'])
+      self.home_loan.append(i['home_loan'])
+      self.other_loan.append(i['other_loan'])
+      self.personal_loan.append(i['credit_card_loans'])
+      self.vehicle_loan.append(i['vehicle_loan'])
 
     print(self.company_adress_list)
     if a == -1:
@@ -183,7 +180,9 @@ class view_profile_copy(view_profile_copyTemplate):
         self.set_label_visibility(self.label_69,self.label_35, self.qualification_list[b])
         self.set_label_visibility(self.label_136,self.label_135,self.profession_type_list[b])
         self.set_label_visibility(self.label_132,self.label_131, self.address[b])
+        self.set_label_visibility(self.label_51,self.label_14, self.address2_type[b])
         self.set_label_visibility(self.label_62,self.label_28, self.address_type_list[b])
+        self.set_label_visibility(self.label_138,self.label_67,self.Duration_at_address_list[b])
         self.set_label_visibility(self.label_71,self.label_37, self.street_list[b])
         self.set_label_visibility(self.label_64,self.label_30, self.build_name_list[b])
         self.set_label_visibility(self.label_66,self.label_32, self.house_no_list[b])
@@ -206,12 +205,8 @@ class view_profile_copy(view_profile_copyTemplate):
         self.set_label_visibility(self.label_83,self.label_82, self.company_landmark[b])
         self.set_label_visibility(self.label_85,self.label_84, self.company_address[b])
         self.set_label_visibility(self.label_87,self.label_86, self.annual_salary[b])
+        self.set_label_visibility(self.label_98, self.label_97, self.salary_type[b])
         self.set_label_visibility(self.label_89,self.label_88, self.designation[b])
-        self.set_label_visibility(self.label_91,self.label_90, self.account_name[b])
-        self.set_label_visibility(self.label_93,self.label_92, self.account_type[b])
-        self.set_label_visibility(self.label_95,self.label_94, self.account_number[b])
-        self.set_label_visibility(self.label_97,self.label_96, self.account_bank_branch[b])
-        self.set_label_visibility(self.label_101,self.label_100, self.salary_type[b])
         self.set_label_visibility(self.label_107, self.label_106,self.father_name[b])
         self.set_label_visibility(self.label_109,self.label_108, self.father_age[b])
         self.set_label_visibility(self.label_111,self.label_110, self.mother_name[b])
@@ -219,7 +214,10 @@ class view_profile_copy(view_profile_copyTemplate):
         self.set_label_visibility(self.label_115,self.label_114, self.college_name[b])
         self.set_label_visibility(self.label_117,self.label_116, self.college_id[b])
         self.set_label_visibility(self.label_119,self.label_118, self.college_address[b])
-
+        self.set_label_visibility(self.label_90,self.label_17, self.home_loan[b])
+        self.set_label_visibility(self.label_92,self.label_91, self.other_loan[b])
+        self.set_label_visibility(self.label_94,self.label_93, self.personal_loan[b])
+        self.set_label_visibility(self.label_96,self.label_95, self.vehicle_loan[b])
         # Set image sources
         self.image_2.source = self.profile[b]
         self.image_3.source = self.aadhaar_photo[b]
@@ -237,70 +235,7 @@ class view_profile_copy(view_profile_copyTemplate):
         label.visible = False
         label_1.visible = False
       
-        # self.label_8.text = self.name_list[b]
-        # self.label_9.text = bool(self.status_list[b])
-        # self.label_39.text= self.gender_list[b]
-        # self.label_40.text = (self.age_list[b])
-        # self.label_41.text = self.dob_list[b]
-        # self.label_44.text = self.mobile_list[b]
-        # self.label_45.text = self.aadhar_list[b]
-        # self.label_46.text = self.pan_list[b]
-        # self.label_47.text = self.city_list[b]
-        # self.label_48.text = self.email_user_list[b]
-        # self.label_49.text = bool(self.last_confirm_list[b])
-        # self.label_50.text = self.mobile_check_list[b]
-        # self.label_52.text = self.mother_status_list[b]
-        # # self.label_53.text = self.date_marrige_list[b]
-        # self.label_54.text = self.space_name_list[b]
-        # self.label_61.text = self.about_list[b]
-        # self.label_63.text = bool(self.alets_list[b])
-        # self.label_72.text = bool(self.terms_list[b])
-        # self.label_69.text = self.qualification_list[b]
-        # self.label_62.text = self.address_type_list[b]
-        # self.label_71.text = self.street_list[b]
-        # self.label_64.text = self.build_name_list[b]
-        # self.label_66.text = self.house_no_list[b]
-        # self.label_65.text = self.landmark_list[b]
-        # self.label_68.text = self.pincode_list[b]
-        # self.label_70.text = self.state_list[b]
-        # self.label_55.text = self.spouse_number_list[b]
-        # self.label_56.text = self.company_name_list[b]
-        # self.label_57.text = self.company_adress_list[b]
-        # self.label_58.text =  self.proffic_list[b]
-        # self.label_59.text = self.user_type_list[b]
-        # self.label_60.text = bool(self.approve_list [b])
-        # self.label_74.text = self.another_email[b]
-        # self.label_76.text = self.company_name[b]
-        # self.label_77.text = self.organization_type[b]
-        # self.label_79.text = self.employment_type[b]
-        # self.label_81.text = self.business_no[b]
-        # self.label_83.text = self.company_landmark[b]
-        # self.label_85.text = self.company_address[b]
-        # self.label_87.text = self.annual_salary[b]
-        # self.label_89.text = self.designation[b]
-        # self.label_91.text = self.account_name[b]
-        # self.label_93.text = self.account_type[b]
-        # self.label_95.text = self.account_number[b]
-        # self.label_97.text = self.account_bank_branch[b]
-        # # self.label_99.text = self.ifsc_code[b]
-        # self.label_101.text = self.salary_type[b]
-        # #self.label_103.text = self.select_bank[b]
-        # # self.label_105.text = self.net_bank[b]
-        # self.label_107.text = self.father_name[b]
-        # self.label_109.text = self.father_age[b]
-        # self.label_111.text = self.mother_name[b]
-        # self.label_113.text = self.mother_age[b]
-        # self.label_115.text = self.college_name[b]
-        # self.label_117.text = self.college_id[b]
-        # self.label_119.text = self.college_address[b]
-        # # self.label_121.text = self.running_loan[b]
-        # self.image_2.source = self.profile[b]
-        # self.image_3.source = self.aadhaar_photo[b]
-        # self.image_4.source = self.pan_photo[b]
-        # self.image_5.source = self.emp_id_proof[b]
-        # self.image_6.source = self.last_six_month_bank_proof[b]
-        # self.image_7.source = self.college_proof[b]
-
+  
   def button_2_click(self, **event_args):
     """This method is called when the button is clicked"""
     customer_id_value = self.label_3.text
@@ -318,3 +253,4 @@ class view_profile_copy(view_profile_copyTemplate):
   def button_1_copy_click(self, **event_args):
     """This method is called when the button is clicked"""
     open_form('admin.dashboard.customer_management.handles_customer_registration.lenders')
+
