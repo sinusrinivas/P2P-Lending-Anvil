@@ -18,15 +18,16 @@ components:
 - name: data_grid_1
   properties:
     columns:
-    - {id: JKSDUP, title: Loan Id, data_key: column_1, width: 185.71417236328125, expand: false}
-    - {id: VJQQOR, title: Borrower Name, data_key: column_2, width: 198.142822265625, expand: false}
-    - {id: OJLQEN, title: Product Name, data_key: column_3, width: 210.5714111328125, expand: false}
-    - {id: RKPOSI, data_key: column_1, title: EMI Number, width: 183.7142333984375, expand: false}
-    - {id: CHTHOV, data_key: column_1, title: Total Late Payment Fees, width: 186.5714111328125, expand: false}
+    - {id: JKSDUP, title: '', data_key: column_1, width: 160, expand: false}
+    - {id: VJQQOR, title: Loan Id, data_key: column_2, width: 198.142822265625, expand: false}
+    - {id: OJLQEN, title: Borrower Name, data_key: column_3, width: 210.5714111328125, expand: false}
+    - {id: RKPOSI, data_key: column_1, title: Product Name, width: 183.7142333984375, expand: false}
+    - {id: CHTHOV, data_key: column_1, title: EMI Number, width: 186.5714111328125, expand: false}
+    - {id: ELFWGT, data_key: column_1, title: Total Late Payment Fees}
     role: tonal-data-grid
     visible: true
   type: DataGrid
-  layout_properties: {grid_position: ''}
+  layout_properties: {grid_position: '', full_width_row: true}
   components:
   - name: repeating_panel_all
     properties: {item_template: admin.dashboard.loan_servicing.tracking_late_payments.ItemTemplate111}

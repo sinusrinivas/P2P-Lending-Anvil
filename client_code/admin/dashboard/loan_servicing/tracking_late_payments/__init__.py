@@ -45,18 +45,26 @@ class tracking_late_payments(tracking_late_paymentsTemplate):
   def _fetch_loan_details(self, emi_rows):
     data = []
     for emi_row in emi_rows:
-      loan_row = app_tables.fin_loan_details.get(loan_id=emi_row['loan_id'])
-      if loan_row:
-        data.append({
-          'loan_id': loan_row['loan_id'],
-          'borrower_full_name': loan_row['borrower_full_name'],
-          'product_name': loan_row['product_name'],
-          'emi_number': emi_row['emi_number'],
-          'lapsed_fee': emi_row['lapsed_fee'],
-          'default_fee': emi_row['default_fee'],
-          'npa_fee': emi_row['npa_fee'],
-          'total_fees': emi_row['lapsed_fee'] + emi_row['default_fee'] + emi_row['npa_fee']
-        })
+        loan_row = app_tables.fin_loan_details.get(loan_id=emi_row['loan_id'])
+        if loan_row:
+            # Fetch the corresponding user profile based on borrower_customer_id
+            user_profile_row = app_tables.fin_user_profile.get(customer_id=loan_row['borrower_customer_id'])
+            if user_profile_row:
+                borrower_image = user_profile_row['user_photo']
+            else:
+                borrower_image = None
+            
+            data.append({
+                'loan_id': loan_row['loan_id'],
+                'borrower_full_name': loan_row['borrower_full_name'],
+                'product_name': loan_row['product_name'],
+                'emi_number': emi_row['emi_number'],
+                'lapsed_fee': emi_row['lapsed_fee'],
+                'default_fee': emi_row['default_fee'],
+                'npa_fee': emi_row['npa_fee'],
+                'total_fees': emi_row['lapsed_fee'] + emi_row['default_fee'] + emi_row['npa_fee'],
+                'image': borrower_image  # Include the image
+            })
     return data
 
   def update_lapsed_panel(self):
