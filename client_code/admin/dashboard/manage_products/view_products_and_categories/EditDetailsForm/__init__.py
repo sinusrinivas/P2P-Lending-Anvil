@@ -80,6 +80,8 @@ class EditDetailsForm(EditDetailsFormTemplate):
             for category_row in categories_to_delete:
                 category_row.delete()
 
+            categories_to_delete1 = app_tables.fin_product_details.search(q.any_of(product_group=group_name))
+            for 
             alert("Group and corresponding categories deleted successfully!")
             open_form('admin.dashboard.manage_products.view_products_and_categories')
 
