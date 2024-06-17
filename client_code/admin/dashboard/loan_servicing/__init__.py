@@ -27,3 +27,7 @@ class loan_servicing(loan_servicingTemplate):
   def button_2_click(self, **event_args):
     """This method is called when the button is clicked"""
     open_form('admin.dashboard.loan_servicing.tracking_late_payments')
+
+  def button_9_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    open_form('admin.dashboard.loan_servicing.collection_of_repayment')
