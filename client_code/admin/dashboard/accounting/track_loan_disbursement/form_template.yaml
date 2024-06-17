@@ -1,3 +1,28 @@
 container: {type: ColumnPanel}
-components: []
+components:
+- name: spacer_1
+  properties: {height: 32}
+  type: Spacer
+  layout_properties: {grid_position: 'TUPNSP,EESCJL'}
+- name: label_1
+  properties: {text: Track Loan Disbursement, align: center, bold: true, font_size: 22}
+  type: Label
+  layout_properties: {grid_position: 'SWGYAT,WYXVNM'}
+- name: spacer_2
+  properties: {height: 32}
+  type: Spacer
+  layout_properties: {grid_position: 'IDWTTV,GJHJAK'}
+- name: data_grid_1
+  properties:
+    columns:
+    - {id: JKSDUP, title: Column 1, data_key: column_1}
+    - {id: VJQQOR, title: Column 2, data_key: column_2}
+    - {id: OJLQEN, title: Column 3, data_key: column_3}
+    role: tonal-data-grid
+  type: DataGrid
+  components:
+  - name: repeating_panel_1
+    properties: {item_template: admin.dashboard.accounting.track_loan_disbursement.RowTemplate41}
+    type: RepeatingPanel
+  layout_properties: {grid_position: 'DGVZFJ,ODHQPN'}
 is_package: true
