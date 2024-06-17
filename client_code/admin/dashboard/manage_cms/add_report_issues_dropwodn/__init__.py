@@ -18,3 +18,6 @@ class add_report_issues_dropwodn(add_report_issues_dropwodnTemplate):
 
   def button_1_click(self, **event_args):
     open_form('admin.dashboard.manage_cms')
+
+  def button_21_copy_click(self, **event_args):
+    self.column_panel_3.visible = True
