@@ -39,3 +39,7 @@ class accounting(accountingTemplate):
   def button_9_click(self, **event_args):
     """This method is called when the button is clicked"""
     open_form('admin.dashboard.accounting.track_loan_disbursement')
+
+  def image_4_copy_mouse_up(self, x, y, button, **event_args):
+    """This method is called when a mouse button is released on this component"""
+    open_form('admin.dashboard.accounting.track_loan_disbursement')
