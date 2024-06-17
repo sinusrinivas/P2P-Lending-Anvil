@@ -36,10 +36,10 @@ class edit_category(edit_categoryTemplate):
             title="Confirm Deletion",
             buttons=[("Cancel", False), ("Delete", True)],
         )
-    if confirmation:
+     if confirmation:
             # Get the name of the group to be deleted
-            name = self.selected_row['borrower_salary_type']
+            name = self.selected_row['issue_category']
 
             # Delete the rows from the product_group table
             self.selected_row.delete()
-            open_form('admin.dashboard.manage_cms.add_borrower_dropdown_details'
+            open_form('admin.dashboard.manage_cms.add_report_issues_dropdown.Issues_category_dropdown')
