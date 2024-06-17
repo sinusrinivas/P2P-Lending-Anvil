@@ -35,3 +35,7 @@ class accounting(accountingTemplate):
   def button_1_copy_3_click(self, **event_args):
     """This method is called when the button is clicked"""
     open_form('admin.dashboard')
+
+  def button_9_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    open_form('admin.dashboard.accounting.')

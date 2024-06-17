@@ -29,6 +29,7 @@ unique_ids:
     admin.dashboard.manage_cms.add_lender_dropdown_details.lending_period: '1706532038663220023591352.25104'
     borrower.dashboard.today_dues: 6IMBECB35UCHLAQASX5YGA67APBF6EXE
     admin.user_issue.user_bugreports: '1701187655013301255584153.1781'
+    admin.dashboard.accounting.track_loan_disbursement: '1718598205286595608124939.9398'
     admin.dashboard.manage_ascend_score.add_subcategory.ItemTemplate87: '1710502229577864903127030.588'
     admin.dashboard.loan_management.view_loans.open_loans.ItemTemplate3: '171101040560926993222468.07667'
     admin.dashboard.manage_products: '1699528652319804943541493.6104'
