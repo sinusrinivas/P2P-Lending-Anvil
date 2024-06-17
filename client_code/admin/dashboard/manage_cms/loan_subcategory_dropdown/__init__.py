@@ -15,3 +15,6 @@ class loan_subcategory_dropdown(loan_subcategory_dropdownTemplate):
     self.init_components(**properties)
 
     # Any code you write here will run before the form opens.
+
+  def button_1_click(self, **event_args):
+    open_form('admin.dashboard.manage_cms')
