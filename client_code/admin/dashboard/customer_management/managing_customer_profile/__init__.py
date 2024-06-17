@@ -19,9 +19,12 @@ class managing_customer_profile(managing_customer_profileTemplate):
 
   def load_customer_data(self):
     # Fetch the customer data from the data tables
-    user_profile = app_tables.fin_user_profile.search()
+    # user_profile = app_tables.fin_user_profile.search()
+     combined_data = anvil.server.call('get_combined_user_and_guarantor_data')
+     # user_profile = anvil.server.call('get_filtered_user_profiles')
+     self.repeating_panel_1.items = combined_data
+    # gurantor = app_tables.fin_guarantor_details.search()
     # Set the items property of the repeating panel to the fetched data
-    self.repeating_panel_1.items = user_profile
 
   
   def button_1_click(self, **event_args):
