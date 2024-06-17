@@ -113,7 +113,7 @@ components:
     type: RepeatingPanel
     layout_properties: {grid_position: 'MJHXDQ,UXELTA'}
 - name: column_panel_11_copy
-  properties: {role: null, col_widths: '{"ACRDSD":15,"OXEFAE":35,"OZGSCX":10,"XOPJRZ":15,"FYGSMJ":45}', spacing_above: small, background: '', wrap_on: mobile, col_spacing: medium, foreground: '', spacing_below: small, visible: false, border: '', tooltip: ''}
+  properties: {role: null, col_widths: '{"ACRDSD":15,"OXEFAE":35,"OZGSCX":10,"XOPJRZ":15,"YFSIRX":34}', spacing_above: small, background: '', wrap_on: mobile, col_spacing: medium, foreground: '', spacing_below: small, visible: false, border: '', tooltip: ''}
   type: ColumnPanel
   layout_properties: {grid_position: 'TQIETV,BUFHKP'}
   components:
@@ -129,23 +129,23 @@ components:
     properties: {role: outlined, bold: false, align: left, placeholder: '', spacing_above: small, background: '', type: text, underline: false, font: '', hide_text: false, foreground: '', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: ''}
     type: TextBox
     layout_properties: {grid_position: 'LOSRQA,OXEFAE'}
-  - name: qualification_copy
+  - name: technical_issue
     properties: {role: null, bold: true, align: center, spacing_above: small, background: '#0b2547', icon: '', underline: false, font: '', icon_align: left, foreground: 'theme:On Primary', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: ADD}
     type: Button
     layout_properties:
       col_widths: {}
       grid_position: LOSRQA,OZGSCX
-    event_bindings: {click: qualification}
+    event_bindings: {click: technical_issue_click}
   - name: spacer_10_copy
     properties: {height: 139.5714111328125}
     type: Spacer
     layout_properties: {grid_position: 'VRTHOW,XOPJRZ'}
-  - name: repeating_panel_10_copy
-    properties: {item_template: admin.dashboard.manage_cms.add_borrower_dropdown_details.ItemTemplate11}
+  - name: repeating_panel_2
+    properties: {item_template: admin.dashboard.manage_cms.loan_subcategory_dropdown.ItemTemplate113}
     type: RepeatingPanel
-    layout_properties: {grid_position: 'VRTHOW,FYGSMJ HQVKGP,MUOMXR'}
+    layout_properties: {grid_position: 'VRTHOW,YFSIRX MBOGNU,HPWKWL'}
 - name: column_panel_12_copy_2
-  properties: {role: null, col_widths: '{"ACRDSD":15,"OXEFAE":35,"OZGSCX":10,"XOPJRZ":15,"FYGSMJ":45}', spacing_above: small, background: '', wrap_on: mobile, col_spacing: medium, foreground: '', spacing_below: small, visible: false, border: '', tooltip: ''}
+  properties: {role: null, col_widths: '{"ACRDSD":15,"OXEFAE":35,"OZGSCX":10,"XOPJRZ":15,"PCZMQL":32}', spacing_above: small, background: '', wrap_on: mobile, col_spacing: medium, foreground: '', spacing_below: small, visible: false, border: '', tooltip: ''}
   type: ColumnPanel
   layout_properties: {grid_position: 'LWIXZO,QSQIXV'}
   components:
@@ -172,8 +172,8 @@ components:
     properties: {height: 139.5714111328125}
     type: Spacer
     layout_properties: {grid_position: 'VRTHOW,XOPJRZ'}
-  - name: repeating_panel_11_copy_2
-    properties: {item_template: admin.dashboard.manage_cms.add_borrower_dropdown_details.ItemTemplate11}
+  - name: repeating_panel_3
+    properties: {item_template: admin.dashboard.manage_cms.loan_subcategory_dropdown.ItemTemplate114}
     type: RepeatingPanel
-    layout_properties: {grid_position: 'VRTHOW,FYGSMJ'}
+    layout_properties: {grid_position: 'VRTHOW,PCZMQL'}
 is_package: true
