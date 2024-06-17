@@ -14,6 +14,10 @@ class edit_category(edit_categoryTemplate):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
 
+    self.text_box_1.text = selected_row['issue_category']
+        # Store the selected row for later use
+    self.selected_row = selected_row
+
     # Any code you write here will run before the form opens.
 
   def button_1_click(self, **event_args):

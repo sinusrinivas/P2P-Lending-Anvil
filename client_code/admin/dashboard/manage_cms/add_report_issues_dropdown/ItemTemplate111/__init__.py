@@ -18,5 +18,5 @@ class ItemTemplate111(ItemTemplate111Template):
   def link_1_click(self, **event_args):
     """This method is called when the link is clicked"""
     item_data = self.item
-    open_form('admin.dashboard.manage_cms.add_report_issues_dropdown.issues_category_dropdown.edit_category', selected_row=item_data)
+    open_form('admin.dashboard.manage_cms.add_report_issues_dropdown.edit_category', selected_row=item_data)
     
