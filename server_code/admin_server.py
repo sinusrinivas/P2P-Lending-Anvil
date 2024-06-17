@@ -202,8 +202,7 @@ def search_lender(query):
   return result
 
 # # Server module: manage_credit_limit.py
-# import anvil.server
-# from anvil.tables import app_table
+
 
 @anvil.server.callable
 def save_credit_limit(new_value):
@@ -222,11 +221,6 @@ def load_customer_data(self):
   # Set the items property of the repeating panel to the fetched data
   self.repeating_panel_1.items = user_profile
 
-
-# Server code (in a server module)
-# import anvil.server
-# import anvil.tables as tables
-# from anvil.tables import app_tables
 
 @anvil.server.callable
 def get_combined_user_and_guarantor_data():
@@ -269,11 +263,6 @@ def get_combined_user_and_guarantor_data():
 
     return combined_data
 
-
-#this server code is for KYC form
-# import anvil.server
-# import anvil.tables as tables
-# from anvil.tables import app_tables
 
 @anvil.server.callable
 def get_combined_user_and_guarantor_data_2():
