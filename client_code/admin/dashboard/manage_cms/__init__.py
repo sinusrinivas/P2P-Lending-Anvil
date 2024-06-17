@@ -37,3 +37,8 @@ class manage_cms(manage_cmsTemplate):
     """This method is called when a mouse button is released on this component"""
     open_form('admin.dashboard.manage_cms.manage_issues')
 
+  def button_2_click(self, **event_args):
+    open_form('admin.dashboard')
+
+  def button_21_copy_click(self, **event_args):
+    open_form('admin.dashboard.manage_cms.add_report_issues_dropwodn')

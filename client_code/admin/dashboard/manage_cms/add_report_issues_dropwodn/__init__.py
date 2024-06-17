@@ -1,4 +1,4 @@
-from ._anvil_designer import manage_issuesTemplate
+from ._anvil_designer import add_report_issues_dropwodnTemplate
 from anvil import *
 import anvil.server
 import anvil.google.auth, anvil.google.drive
@@ -9,18 +9,12 @@ import anvil.tables.query as q
 from anvil.tables import app_tables
 
 
-class manage_issues(manage_issuesTemplate):
+class add_report_issues_dropwodn(add_report_issues_dropwodnTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
 
-    items = [row for row in app_tables.fin_reported_problems.search() if not row['status']]
-    self.repeating_panel_1.items = items
-        
-    if not items:
-        self.label_no_issues.visible = True
-    else:
-        self.label_no_issues.visible = False
+    # Any code you write here will run before the form opens.
 
   def button_1_click(self, **event_args):
     open_form('admin.dashboard.manage_cms')
