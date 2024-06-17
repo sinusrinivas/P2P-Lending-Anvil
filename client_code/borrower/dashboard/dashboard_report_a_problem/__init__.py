@@ -25,9 +25,9 @@ class dashboard_report_a_problem(dashboard_report_a_problemTemplate):
         self.usertype = properties.get('usertype', 'borrower')  # Default value is 'borrower'
         # Populate dropdowns or other components here
         self.subcategory = app_tables.fin_report_issue_category.search()
-        self.category = app_tables.fin_category.search()
-        self.drop_down_1.items = [(c['category'], c['category']) for c in self.category]
-        self.drop_down_1.selected_value = self.category[0]['category']  # Set default value
+        self.category = app_tables.fin_issue_category.search()
+        self.drop_down_1.items = [(c['issue_category'], c['issue_category']) for c in self.category]
+        self.drop_down_1.selected_value = self.category[0]['issue_category']  # Set default value
         # Set up event handler for category dropdown change
         self.drop_down_1.set_event_handler('change', self.update_subcategory)
 
