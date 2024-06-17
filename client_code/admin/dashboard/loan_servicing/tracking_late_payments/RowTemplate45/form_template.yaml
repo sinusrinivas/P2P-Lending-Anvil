@@ -2,7 +2,7 @@ is_package: true
 container: {type: DataRowPanel}
 components:
 - name: image_1
-  properties: {height: 44.142822265625}
+  properties: {height: 60.428466796875}
   type: Image
   layout_properties: {column: JKSDUP}
   data_bindings:
