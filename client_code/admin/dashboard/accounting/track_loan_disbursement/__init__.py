@@ -150,18 +150,15 @@ class track_loan_disbursement(track_loan_disbursementTemplate):
             print("Filter button clicked with date:", selected_date)
 
             # Normalize selected_date to remove the time component
-            start_date = selected_date.replace(hour=0, minute=0, second=0, microsecond=0)
-            end_date = selected_date.replace(hour=23, minute=59, second=59, microsecond=999999)
+            start_date = datetime.combine(selected_date, datetime.min.time())
+            end_date = datetime.combine(selected_date, datetime.max.time())
 
             # Fetch loans from the database
-            loans = app_tables.fin_loan_details.search(
-                q.or_(
-                    q.date_between('loan_disbursed_timestamp', start_date, end_date),
-                    q.date_between('lender_accepted_timestamp', start_date, end_date)
-                )
-            )
+            loans = app_tables.fin_loan_details.search()
+            print(loans['loan_disbursed_timestamp'].date())
+            
 
-            # Filter loans with status 'disbursed' or 'approved'
+            # Filter loans with status 'disbursed' or 'approved' and matching date
             filtered_loans = [
                 {
                     'borrower_full_name': loan['borrower_full_name'],
@@ -181,10 +178,12 @@ class track_loan_disbursement(track_loan_disbursementTemplate):
                 }
                 for loan in loans
                 if loan['loan_updated_status'] in ["disbursed", "approved"]
+                and (loan['loan_disbursed_timestamp'].date() == selected_date or
+                     loan['lender_accepted_timestamp'].date() == selected_date)
             ]
 
             if not filtered_loans:
-                Notification(f"No Loans with status 'disbursed' or 'approved' found for {selected_date.date()}!").show()
+                Notification(f"No Loans with status 'disbursed' or 'approved' found for {selected_date}!").show()
                 self.data_grid_1.visible = False  # Hide the DataGrid if no loans found
             else:
                 # Update RepeatingPanel with filtered results
