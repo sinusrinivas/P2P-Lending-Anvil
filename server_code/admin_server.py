@@ -271,3 +271,38 @@ def get_combined_user_and_guarantor_data():
         
 
     return combined_data
+
+
+#this server code is for KYC form
+import anvil.server
+import anvil.tables as tables
+from anvil.tables import app_tables
+
+@anvil.server.callable
+def get_combined_user_and_guarantor_data_2():
+    # Fetch user profiles
+    user_profiles = app_tables.fin_user_profile.search()
+
+    # Create a list of customer_ids to exclude (super admin and admin)
+    restricted_customer_ids = [profile['customer_id'] for profile in user_profiles if profile['usertype'] in ['super admin', 'admin']]
+    
+    # Filter user profiles to exclude restricted customer_ids
+    user_profiles_filtered = [profile for profile in user_profiles if profile['customer_id'] not in restricted_customer_ids]
+
+    # Combine the data into a single list
+    combined_data = []
+    for user_profile in user_profiles_filtered:
+        combined_data.append({
+            'customer_id': user_profile['customer_id'],
+            'full_name': user_profile['full_name'],
+            'email_user': user_profile['email_user'],
+            'usertype': user_profile['usertype'],
+            'account_name': user_profile['account_name'],
+            'account_type': user_profile['account_type'],
+            'account_number': user_profile['account_number'],
+            'bank_name': user_profile['bank_name'],
+            'bank_id': user_profile['bank_id'],
+            'account_bank_branch': user_profile['account_bank_branch']
+        })
+
+    return combined_data

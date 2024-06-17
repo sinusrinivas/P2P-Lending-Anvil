@@ -14,7 +14,7 @@ components:
   data_bindings:
   - {property: text, code: 'self.item[''full_name'']', writeback: false}
 - name: label_2
-  properties: {align: left}
+  properties: {align: center}
   type: Label
   layout_properties: {column: OJLQEN}
   data_bindings:

@@ -9,6 +9,30 @@ components:
 - name: button_1
   properties: {text: Back, background: '#05264d', foreground: 'theme:On Primary', bold: true, role: elevated-button, icon: 'fa:backward', align: right}
   type: Button
-  layout_properties: {grid_position: 'DXGIMF,XJTYZK'}
+  layout_properties: {grid_position: 'DXGIMF,XJTYZK', full_width_row: true}
   event_bindings: {click: button_1_click}
+- name: data_grid_1
+  properties:
+    columns:
+    - {id: JKSDUP, title: Customer Id, data_key: customer id, expand: true}
+    - {id: VJQQOR, title: Full Name, data_key: name, expand: true}
+    - {id: OJLQEN, title: Email Id, data_key: email}
+    - {id: IZCOAA, data_key: user type, title: User type, expand: true}
+    - {id: KQFXIF, data_key: account name, title: Account Name, expand: true}
+    - {id: CRRJPI, data_key: acc type, title: Account Type, expand: true}
+    - {id: JHBAVP, data_key: acc number, title: Account number, expand: true}
+    - {id: FQHLIR, data_key: bank name, title: Bank name, expand: true}
+    - {id: GPXJCZ, data_key: bank id, title: Bank id, expand: false, width: 90.22216796875}
+    - {id: GIYHPM, data_key: acc bank branch, title: Bank Branch, expand: true}
+    foreground: theme:On Primary Container
+    role: tonal-data-grid
+    border: ''
+    background: ''
+  type: DataGrid
+  components:
+  - name: repeating_panel_1
+    properties: {item_template: admin.dashboard.customer_management.kyc_verification.RowTemplate42, foreground: 'theme:On Secondary Container'}
+    type: RepeatingPanel
+    layout_properties: {}
+  layout_properties: {grid_position: 'JCMFRX,MURXSP', full_width_row: true}
 is_package: true

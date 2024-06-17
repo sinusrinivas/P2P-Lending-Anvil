@@ -6,14 +6,10 @@ components:
   properties: {}
   type: form:admin.dashboard.home_button_admin
   layout_properties: {grid_position: 'HSEXSO,GJMQJB', full_width_row: true}
-- name: label_1
-  properties: {}
-  type: Label
-  layout_properties: {grid_position: 'ZECITE,AQIQSM'}
 - name: button_1
-  properties: {text: Back, bold: true, foreground: 'theme:On Primary', background: '#05264d'}
+  properties: {text: Back, bold: true, foreground: 'theme:On Primary', background: '#05264d', align: right, role: elevated-button, icon: 'fa:backward'}
   type: Button
-  layout_properties: {grid_position: 'ZECITE,XRTMPH'}
+  layout_properties: {grid_position: 'ZECITE,XRTMPH', full_width_row: true}
   event_bindings: {click: button_1_click}
 - name: label_5_copy
   properties: {text: Customer details and Contact information, bold: true, align: center, role: title}
@@ -27,11 +23,11 @@ components:
   properties:
     columns:
     - {id: JKSDUP, title: ' Photo  ', data_key: image}
-    - {id: VJQQOR, title: 'FullName  ', data_key: name, expand: true}
+    - {id: VJQQOR, title: '  FullName  ', data_key: name, expand: true}
     - {id: OJLQEN, title: '   Email', data_key: mail_id, expand: true}
     - {id: HWDHRQ, data_key: ph_no, title: '   Mobile   ', expand: false, width: 104.5555419921875}
     - {id: KLWTCJ, data_key: usertype, title: Usertype, expand: true}
-    - {id: KGTTKP, data_key: relation, title: 'Another  Person  Relation ', expand: true}
+    - {id: KGTTKP, data_key: relation, title: 'Another  Person Relation ', expand: true}
     - {id: POAYGK, data_key: G_name, title: 'Another  Person  Name ', expand: true}
     - {id: GWUTQO, data_key: G_ph_no, title: Another  Person  Mobile, expand: true}
     role: tonal-data-grid
