@@ -63,7 +63,7 @@ components:
       type: Label
       layout_properties: {grid_position: 'JKULIH,USORJN ZLZTYL,XVZWQS'}
     - name: label_5
-      properties: {text: Email User, bold: true}
+      properties: {text: Email Id, bold: true}
       type: Label
       layout_properties: {grid_position: 'JKULIH,USORJN PWRUDJ,MZGOGW'}
     - name: email_box
