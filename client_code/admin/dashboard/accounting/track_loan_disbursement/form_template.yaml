@@ -1,7 +1,7 @@
 container: {type: ColumnPanel}
 components:
 - name: spacer_1
-  properties: {height: 32}
+  properties: {height: '5'}
   type: Spacer
   layout_properties: {grid_position: 'TUPNSP,EESCJL'}
 - name: label_1
@@ -9,15 +9,16 @@ components:
   type: Label
   layout_properties: {grid_position: 'SWGYAT,WYXVNM'}
 - name: spacer_2
-  properties: {height: 32}
+  properties: {height: '10'}
   type: Spacer
   layout_properties: {grid_position: 'IDWTTV,GJHJAK'}
 - name: data_grid_1
   properties:
     columns:
-    - {id: JKSDUP, title: Column 1, data_key: column_1}
-    - {id: VJQQOR, title: Column 2, data_key: column_2}
-    - {id: OJLQEN, title: Column 3, data_key: column_3}
+    - {id: JKSDUP, title: Borrower Name, data_key: column_1}
+    - {id: VJQQOR, title: Loan Amount, data_key: column_2}
+    - {id: OJLQEN, title: interest Rate, data_key: column_3}
+    - {id: CVLTWE, data_key: column_1, title: Loan Status}
     role: tonal-data-grid
   type: DataGrid
   components:
