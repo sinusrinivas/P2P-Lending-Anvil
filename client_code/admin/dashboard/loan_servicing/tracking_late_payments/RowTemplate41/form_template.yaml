@@ -1,7 +1,0 @@
-is_package: true
-container: {type: DataRowPanel}
-components:
-- name: image_1
-  properties: {height: 128.99996948242188}
-  type: Image
-  layout_properties: {column: JKSDUP}
