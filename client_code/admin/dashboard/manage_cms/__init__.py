@@ -41,4 +41,4 @@ class manage_cms(manage_cmsTemplate):
     open_form('admin.dashboard')
 
   def button_21_copy_click(self, **event_args):
-    open_form('admin.dashboard.manage_cms.add_report_issues_dropwodn')
+    open_form('admin.dashboard.manage_cms.add_report_issues_dropdown')
