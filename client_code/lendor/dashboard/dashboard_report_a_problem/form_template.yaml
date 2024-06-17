@@ -26,7 +26,7 @@ components:
   layout_properties: {slot: nav-right}
   components: []
 - type: ColumnPanel
-  properties: {role: null, col_widths: '{"PDRAWC":35,"TABQGQ":3,"ZCFBEH":22}', wrap_on: mobile}
+  properties: {role: null, col_widths: '{"PDRAWC":35,"TABQGQ":3,"ZCFBEH":22,"RURDNG":20,"AJTPBZ":40,"AXCWGG":20,"ULUOWV":40,"KLOGYX":20,"PBOAZU":40,"SICLPK":20,"PUQRDN":40,"AHWQFW":20,"YJGDBQ":40,"BRSYIJ":20,"ZORWQT":20,"ZQYFWZ":20}', wrap_on: mobile}
   name: outlined_card_2_copy
   layout_properties: {grid_position: 'ECKBEK,XFTDMP', row: QBZMKP, width_xs: 12, col_xs: 0}
   components:
@@ -79,19 +79,6 @@ components:
     properties: {}
     type: Label
     layout_properties: {grid_position: 'FKNXLA,ZCFBEH FVMQEM,PBOAZU'}
-  - name: label_8_copy_1
-    properties: {text: Issue Photo, bold: true}
-    type: Label
-    layout_properties: {grid_position: 'FKNXLA,ZCFBEH OJHCCD,FEXWEA'}
-  - name: file_loader_1
-    properties: {}
-    type: FileLoader
-    layout_properties: {grid_position: 'FKNXLA,ZCFBEH OJHCCD,PCKRPU'}
-    event_bindings: {change: file_loader_1_change}
-  - name: image_issue
-    properties: {display_mode: original_size, height: 139}
-    type: Image
-    layout_properties: {grid_position: 'FKNXLA,ZCFBEH OJHCCD,FDZFOQ'}
   - name: label_2
     properties: {text: Category, bold: true}
     type: Label
@@ -101,8 +88,9 @@ components:
       placeholder: ''
       items: [Select Catrgory]
       role: outlined
+      align: full
     type: DropDown
-    layout_properties: {grid_position: 'FKNXLA,ZCFBEH ZNEWXR,PUQRDN'}
+    layout_properties: {grid_position: 'FKNXLA,ZCFBEH ZNEWXR,PUQRDN', full_width_row: false}
   - name: label_9
     properties: {text: Subcategory, bold: true}
     type: Label
@@ -113,6 +101,19 @@ components:
       role: outlined
     type: DropDown
     layout_properties: {grid_position: 'FKNXLA,ZCFBEH ACODUD,YJGDBQ'}
+  - name: label_8_copy_1
+    properties: {text: Issue Photo, bold: true}
+    type: Label
+    layout_properties: {grid_position: 'FKNXLA,ZCFBEH LFELYC,BRSYIJ'}
+  - name: file_loader_1
+    properties: {}
+    type: FileLoader
+    layout_properties: {grid_position: 'FKNXLA,ZCFBEH LFELYC,ZORWQT'}
+    event_bindings: {change: file_loader_1_change}
+  - name: image_issue
+    properties: {display_mode: original_size, height: 139}
+    type: Image
+    layout_properties: {grid_position: 'FKNXLA,ZCFBEH LFELYC,ZQYFWZ'}
   - name: check_box_1
     properties: {text: It is Urgent}
     type: CheckBox
