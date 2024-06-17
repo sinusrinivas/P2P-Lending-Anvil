@@ -127,7 +127,7 @@ components:
     name: label_7
     layout_properties: {grid_position: 'FKNXLA,ZCFBEH YIQLID,OMJDMP'}
   - type: TextArea
-    properties: {role: outlined, bold: false, align: right, placeholder: '', spacing_above: small, background: 'theme:On Primary', underline: false, font: '', foreground: '', spacing_below: small, visible: true, border: '', italic: false, enabled: true, auto_expand: true, font_size: null, tooltip: '', height: 168, text: ''}
+    properties: {role: outlined, bold: false, align: right, placeholder: '', spacing_above: small, background: 'theme:On Primary', underline: false, font: '', foreground: '', spacing_below: small, visible: true, border: '', italic: false, enabled: true, auto_expand: true, font_size: null, tooltip: '', height: 108, text: ''}
     name: description_box
     layout_properties: {grid_position: 'FKNXLA,ZCFBEH AOZFDF,IQFSEY'}
     event_bindings: {change: issue_description_change}
