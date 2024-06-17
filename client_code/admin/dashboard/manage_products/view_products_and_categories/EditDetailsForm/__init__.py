@@ -47,7 +47,7 @@ class EditDetailsForm(EditDetailsFormTemplate):
                   category_row.update()
                   
 
-                # Update the existing row in the product_group table
+                # Update the existing row in the product_group tabl
                 self.selected_row['name'] = updated_group
 
                 # Save changes to the database
