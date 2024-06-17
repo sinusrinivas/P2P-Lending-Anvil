@@ -35,7 +35,7 @@ components:
     type: Image
     layout_properties: {grid_position: 'YGLFNC,ASARUK'}
     event_bindings: {mouse_up: image_10_mouse_up}
-  - name: button_21_copy_copy
+  - name: subcategory_dropdown
     properties:
       text: |
         Loan
@@ -45,7 +45,7 @@ components:
       font_size: 16
     type: Button
     layout_properties: {grid_position: 'TYJFSG,AJKNWC'}
-    event_bindings: {click: button_21_copy_copy_click}
+    event_bindings: {click: subcategory_dropdown_click}
 - name: button_1
   properties: {text: Back, background: '#05264d', foreground: white, role: elevated-button, icon: 'fa:backward'}
   type: Button

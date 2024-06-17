@@ -22,6 +22,6 @@ class add_report_issues_dropdown(add_report_issues_dropdownTemplate):
   def button_21_copy_click(self, **event_args):
     open_form('admin.dashboard.manage_cms.add_report_issues_dropdown.Issues_category_dropdown')
 
-  def button_21_copy_copy_click(self, **event_args):
-    open_form('admin.dashboard.loan_subcategory_dropdown')
+  def subcategory_dropdown_click(self, **event_args):
+    open_form('admin.dashboard.manage_cms.loan_subcategory_dropdown')
 
