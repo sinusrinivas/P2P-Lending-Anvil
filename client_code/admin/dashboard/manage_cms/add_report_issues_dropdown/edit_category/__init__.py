@@ -10,9 +10,9 @@ from anvil.tables import app_tables
 
 
 class edit_category(edit_categoryTemplate):
-  def __init__(self, **properties):
+  def __init__(self,selected_row, **properties):
     # Set Form properties and Data Bindings.
-    #self.init_components( **properties)
+    self.init_components( **properties)
     self.selected_row = selected_row 
 
     self.text_box_1.text = selected_row['issue_category']
@@ -43,8 +43,9 @@ class edit_category(edit_categoryTemplate):
         )
      if confirmation:
             # Get the name of the group to be deleted
-            name = self.selected_row['issue_category']
-
+            # name = self.selected_row['issue_category']
             # Delete the rows from the product_group table
-            self.name.delete()
+            # self.name.delete()
+            self.selected_row.delete()
+            alert('Data Deleted Successfully!')
             open_form('admin.dashboard.manage_cms.add_report_issues_dropdown.Issues_category_dropdown')
