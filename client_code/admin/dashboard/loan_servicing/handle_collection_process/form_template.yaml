@@ -22,10 +22,11 @@ components:
     - {id: DZDXAO, data_key: column_5, title: Product Name}
     - {id: WXNVGZ, data_key: column_6, title: Loan Status}
     - {id: KGPDJR, data_key: column_7, title: Remaining Amount}
-    - {id: XZJSGN, data_key: column_1, title: Relative Contact Person}
-    - {id: FCQPXK, data_key: column_1, title: 'Relative''s Contact No '}
-    - {id: XLWQWO, data_key: column_1, title: Address}
-    - {id: TEHFPP, data_key: column_1, title: Relative Address}
+    - {id: XZJSGN, data_key: column_1, title: Relative Person Relation}
+    - {id: FCQPXK, data_key: column_1, title: Relative Contact Person}
+    - {id: XLWQWO, data_key: column_1, title: 'Relative''s Contact No '}
+    - {id: TEHFPP, data_key: column_1, title: Address}
+    - {id: WVSIFK, data_key: column_1, title: Relative Address}
     role: tonal-data-grid
   type: DataGrid
   components:

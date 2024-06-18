@@ -40,6 +40,7 @@ class handle_collection_process(handle_collection_processTemplate):
           guarantor_name = guarantor_row['guarantor_name']
           guarantor_mobile_no = guarantor_row['guarantor_mobile_no']
           guarantor_address = guarantor_row['guarantor_address']
+          another_person = guarantor_row['another_person']
 
         
         # Combine all the required data
@@ -58,6 +59,7 @@ class handle_collection_process(handle_collection_processTemplate):
           'another_email': another_email,
           'street_adress_1': street_adress_1,
           'guarantor_address': guarantor_address,
+          'another_person' : another_person,
           
         })
     return data
