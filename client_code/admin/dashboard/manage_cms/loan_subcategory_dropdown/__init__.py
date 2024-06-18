@@ -20,19 +20,19 @@ class loan_subcategory_dropdown(loan_subcategory_dropdownTemplate):
     open_form('admin.dashboard.manage_cms')
 
   def borrower_loan_issue(self, **event_args):
-    self.refresh()
+    self.repeating_panel_1.items = app_tables.fin_report_issue_category.search()
     self.column_panel_10.visible = True
     self.column_panel_11_copy.visible = False
     self.column_panel_12_copy_2.visible = False
 
   def lender_loan_issue(self, **event_args):
-    self.refresh()
+    self.repeating_panel_3.items = app_tables.fin_report_issue_category.search()
     self.column_panel_10.visible = False
     self.column_panel_11_copy.visible = False
     self.column_panel_12_copy_2.visible = True
 
   def technical_issue(self, **event_args):
-    self.refresh()
+    self.repeating_panel_2.items = app_tables.fin_report_issue_category.search()
     self.column_panel_10.visible = False
     self.column_panel_11_copy.visible = True
     self.column_panel_12_copy_2.visible = False
