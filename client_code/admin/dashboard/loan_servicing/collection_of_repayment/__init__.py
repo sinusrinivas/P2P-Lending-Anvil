@@ -14,7 +14,8 @@ class collection_of_repayment(collection_of_repaymentTemplate):
     self.init_components(**properties)
 
     # Any code you write here will run before the form opens.
-    self.repeating_panel_1.items = self.fetch_repayment_data()
+    self.all_data = self.fetch_repayment_data()
+    self.repeating_panel_1.items = self.all_data
 
   def fetch_repayment_data(self):
     emi_rows = app_tables.fin_emi_table.search()
@@ -44,3 +45,15 @@ class collection_of_repayment(collection_of_repaymentTemplate):
   def button_1_click(self, **event_args):
     """This method is called when the button is clicked"""
     open_form('admin.dashboard.loan_servicing')
+
+  def search_data(self, search_text):
+    """Filter the data based on the search text"""
+    filtered_data = [item for item in self.all_data if search_text.lower() in item['borrower_full_name'].lower() or
+                                                     search_text.lower() in item['product_name'].lower() or 
+                                                    search_text.lower() in item['borrower_email_id'].lower()]
+    return filtered_data
+
+  def button_2_click(self, **event_args):
+    """This method is called when the search button is clicked"""
+    search_text = self.text_box_1.text
+    self.repeating_panel_1.items = self.search_data(search_text)
