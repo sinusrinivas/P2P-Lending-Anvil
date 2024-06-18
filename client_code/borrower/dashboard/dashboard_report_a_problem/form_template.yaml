@@ -21,116 +21,120 @@ components:
     name: navigation_form_dashboard_1
     layout_properties: {grid_position: 'BJJQVM,LWRTNM', full_width_row: true}
   - type: ColumnPanel
-    properties: {role: null, col_widths: '{"FSWDBX":32,"NHPBXK":3,"USORJN":25}', wrap_on: mobile}
+    properties: {role: null, col_widths: '{"OXACOG":10,"undefined":40,"BDDXKO":10}', wrap_on: mobile}
     name: outlined_card_2_copy
-    layout_properties: {grid_position: 'RIQNFU,FKBJMA'}
+    layout_properties: {grid_position: 'YHZEWC,ODXHXR'}
     components:
     - type: Label
       properties: {role: null, bold: true, align: center, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: 18, tooltip: '', text: Report A Problem}
       name: label_1
       layout_properties: {grid_position: 'NHFHTN,WGSFZK'}
-    - name: spacer_2
-      properties: {height: 6}
-      type: Spacer
-      layout_properties: {grid_position: 'JKULIH,FSWDBX IIVHOV,PJLDHA'}
-    - name: column_panel_1
-      properties: {}
-      type: ColumnPanel
-      layout_properties: {grid_position: 'JKULIH,FSWDBX ELMOQU,JYVLYZ'}
-      components:
-      - name: image_1_copy_2
-        properties: {height: 657, display_mode: zoom_to_fill, source: _/theme/borrower/dashboard/borrower_report_a_problem.png}
-        type: Image
-        layout_properties: {grid_position: 'ZELBOR,FIUMDM'}
-    - name: spacer_3
-      properties: {height: 9}
-      type: Spacer
-      layout_properties: {grid_position: 'JKULIH,NHPBXK'}
     - type: Spacer
       properties: {height: 11}
       name: spacer_1
-      layout_properties: {grid_position: 'JKULIH,USORJN GCEQKF,IFFCMA'}
-    - name: label_4
-      properties: {text: Full Name, bold: true}
-      type: Label
-      layout_properties: {grid_position: 'JKULIH,USORJN FIJYQF,UZFIIR'}
-    - name: name_box
-      properties: {}
-      type: Label
-      layout_properties: {grid_position: 'JKULIH,USORJN FIJYQF,WLBQDJ'}
-    - name: label_6
-      properties: {text: 'Mobile ', bold: true}
-      type: Label
-      layout_properties: {grid_position: 'JKULIH,USORJN ZLZTYL,XVZWQS'}
-    - name: label_5
-      properties: {text: Email User, bold: true}
-      type: Label
-      layout_properties: {grid_position: 'JKULIH,USORJN PWRUDJ,MZGOGW'}
-    - name: email_box
-      properties: {}
-      type: Label
-      layout_properties: {grid_position: 'JKULIH,USORJN PWRUDJ,NNMBXK'}
-    - name: mobile_box
-      properties: {}
-      type: Label
-      layout_properties: {grid_position: 'JKULIH,USORJN ZLZTYL,VDKBMC'}
-    - name: label_8_copy1
-      properties: {text: Issue Photo, bold: true}
-      type: Label
-      layout_properties: {grid_position: 'JKULIH,USORJN OJHCCD,HUICLJ'}
-    - name: file_loader_1
-      properties: {}
-      type: FileLoader
-      layout_properties: {grid_position: 'JKULIH,USORJN OJHCCD,NOQJTR'}
-      event_bindings: {change: file_loader_1_change}
-    - name: image_issue
-      properties: {height: '100'}
-      type: Image
-      layout_properties: {grid_position: 'JKULIH,USORJN OJHCCD,RLWAZX'}
-      event_bindings: {}
-    - name: label_2
-      properties: {text: Category, bold: true}
-      type: Label
-      layout_properties: {grid_position: 'JKULIH,USORJN RJNGCG,HUPKGN'}
-    - name: drop_down_1
-      properties:
-        items: [Select Category]
-        placeholder: Select Category
-        role: outlined
-      type: DropDown
-      layout_properties: {grid_position: 'JKULIH,USORJN RJNGCG,CWYUZB'}
-    - name: label_9
-      properties: {text: Subcategory, bold: true}
-      type: Label
-      layout_properties: {grid_position: 'JKULIH,USORJN AMGDQY,LELVZJ'}
-    - name: drop_down_2
-      properties:
-        items: [Select Subcategory]
-        placeholder: Select Subcategory
-        role: outlined
-      type: DropDown
-      layout_properties: {grid_position: 'JKULIH,USORJN AMGDQY,DAOYNB'}
-    - name: check_box_1
-      properties: {text: It is Urgent}
-      type: CheckBox
-      layout_properties: {grid_position: 'JKULIH,USORJN UQBNJH,VZEDKF'}
-    - type: Label
-      properties: {role: null, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: 18, tooltip: '', text: Describe the problem}
-      name: label_3
-      layout_properties: {grid_position: 'JKULIH,USORJN KIVHXT,LEZMVM'}
-    - type: Label
-      properties: {role: null, bold: false, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: Please provide as much detail as possible so we can better identify the problem.}
-      name: label_7
-      layout_properties: {grid_position: 'JKULIH,USORJN YIQLID,OMJDMP'}
-    - type: TextArea
-      properties: {role: outlined, bold: false, align: left, placeholder: '', spacing_above: small, background: 'theme:On Primary', underline: false, font: '', foreground: '', spacing_below: small, visible: true, border: '', italic: false, enabled: true, auto_expand: true, font_size: null, tooltip: '', height: 168, text: ''}
-      name: description_box
-      layout_properties: {grid_position: 'JKULIH,USORJN AOZFDF,IQFSEY'}
-      event_bindings: {change: issue_description_change}
+      layout_properties: {grid_position: 'GCEQKF,IFFCMA'}
+    - name: spacer_5
+      properties: {height: 32}
+      type: Spacer
+      layout_properties: {grid_position: ',OXACOG'}
+    - name: column_panel_1
+      properties: {role: elevated-card}
+      type: ColumnPanel
+      layout_properties: {grid_position: ''}
+      components:
+      - name: label_4
+        properties: {text: Full Name, bold: true}
+        type: Label
+        layout_properties: {grid_position: 'UEJJSW,ZELKHZ'}
+      - name: name_box
+        properties: {}
+        type: Label
+        layout_properties: {grid_position: 'UEJJSW,THDOTF'}
+      - name: label_6
+        properties: {text: 'Mobile ', bold: true}
+        type: Label
+        layout_properties: {grid_position: 'YFDROF,OKCWNW'}
+      - name: mobile_box
+        properties: {}
+        type: Label
+        layout_properties: {grid_position: 'YFDROF,EANGNG'}
+      - name: label_5
+        properties: {text: Email Id, bold: true}
+        type: Label
+        layout_properties: {grid_position: 'BOISSE,GUAMSS'}
+      - name: email_box
+        properties: {}
+        type: Label
+        layout_properties: {grid_position: 'BOISSE,CVKUCB'}
+      - name: label_2
+        properties: {text: Category, bold: true}
+        type: Label
+        layout_properties: {grid_position: 'WSLKTL,KFHMDV'}
+      - name: drop_down_1
+        properties:
+          items: [Select Category]
+          placeholder: Select Category
+          role: outlined
+        type: DropDown
+        layout_properties: {grid_position: 'LCXXPK,RUJZNA'}
+      - name: label_9
+        properties: {text: Subcategory, bold: true}
+        type: Label
+        layout_properties: {grid_position: 'ULXGCH,VGCYDP'}
+      - name: drop_down_2
+        properties:
+          items: [Select Subcategory]
+          placeholder: Select Subcategory
+          role: outlined
+        type: DropDown
+        layout_properties: {grid_position: 'PAVJMC,GSZRQI'}
+      - name: label_8_copy1
+        properties: {text: Issue Photo, bold: true}
+        type: Label
+        layout_properties: {grid_position: 'WUPJNO,BQNVRQ'}
+      - name: file_loader_1
+        properties: {}
+        type: FileLoader
+        layout_properties: {grid_position: 'WUPJNO,PPRTMK'}
+        event_bindings: {change: file_loader_1_change}
+      - name: image_issue
+        properties: {height: 51}
+        type: Image
+        layout_properties: {grid_position: 'WUPJNO,BMDHYG'}
+        event_bindings: {}
+      - name: check_box_1
+        properties: {text: It is Urgent}
+        type: CheckBox
+        layout_properties: {grid_position: 'ZBIFNC,RONRJO'}
+      - name: spacer_2
+        properties: {height: 32}
+        type: Spacer
+        layout_properties: {grid_position: 'ZBIFNC,HSNVPC'}
+      - type: Label
+        properties: {role: null, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: 18, tooltip: '', text: Describe the problem}
+        name: label_3
+        layout_properties: {grid_position: 'VATGLS,IEPYLI'}
+      - type: Label
+        properties: {role: null, bold: false, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: Please provide as much detail as possible so we can better identify the problem.}
+        name: label_7
+        layout_properties: {grid_position: 'RSRJFT,SXBBOC'}
+      - type: TextArea
+        properties: {role: outlined, bold: false, align: left, placeholder: '', spacing_above: small, background: 'theme:On Primary', underline: false, font: '', foreground: '', spacing_below: small, visible: true, border: '', italic: false, enabled: true, auto_expand: true, font_size: null, tooltip: '', height: 77, text: ''}
+        name: description_box
+        layout_properties: {grid_position: 'XKZIEZ,ZBAKSE'}
+        event_bindings: {change: issue_description_change}
+    - name: spacer_4
+      properties: {height: 32}
+      type: Spacer
+      layout_properties: {grid_position: ',BDDXKO'}
+    - name: spacer_3
+      properties: {height: 13}
+      type: Spacer
+      layout_properties: {grid_position: 'CNGLLF,QGOPMP'}
     - type: Button
       properties: {role: null, bold: true, align: center, spacing_above: small, background: '#05264d', icon: '', underline: false, font: '', icon_align: left, foreground: 'theme:On Primary', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: Submit Complaint}
       name: button_2
-      layout_properties: {grid_position: 'JKULIH,USORJN UMRIAL,FSPAMH'}
+      layout_properties: {grid_position: 'UMRIAL,FSPAMH'}
       event_bindings: {click: button_2_click}
 - type: FlowPanel
   properties: {}
