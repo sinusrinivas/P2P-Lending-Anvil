@@ -37,7 +37,7 @@ components:
     data_bindings:
     - {property: text, code: 'self.item[''product_description'']', writeback: false}
   - name: delete
-    properties: {text: Delete, foreground: white, background: red, role: elevated-button, icon: '', align: full}
+    properties: {text: Delete, foreground: red, background: white, role: null, icon: '', align: full}
     type: Button
     layout_properties: {grid_position: 'FIZNWO,KELSWG'}
     event_bindings: {click: delete_click}
