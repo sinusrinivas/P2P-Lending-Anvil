@@ -1,18 +1,44 @@
-container: {type: ColumnPanel}
+container:
+  type: ColumnPanel
+  properties: {col_widths: '{"XSGWAK":15,"CWVTOM":45}'}
 components:
 - name: home_button_admin_1_copy
   properties: {}
   type: form:admin.dashboard.home_button_admin
   layout_properties: {grid_position: 'ICJBWO,HQPHRV', full_width_row: true}
+- name: spacer_5
+  properties: {height: '15'}
+  type: Spacer
+  layout_properties: {grid_position: 'GXQZDT,XHPDDV'}
 - name: date_picker_1
-  properties: {pick_time: false, placeholder: 'Enter Date You Want ', background: white}
+  properties: {pick_time: false, placeholder: 'Enter Date You Want ', background: white, font_size: 18}
   type: DatePicker
   layout_properties: {grid_position: 'ZOCOJO,WCPNFE'}
   event_bindings: {change: date_picker_1_change}
 - name: spacer_1
-  properties: {height: '5'}
+  properties: {height: '15'}
   type: Spacer
   layout_properties: {grid_position: 'TUPNSP,EESCJL'}
+- name: label_2
+  properties: {text: 'Disbursed Loans Count :', bold: true, font_size: 16}
+  type: Label
+  layout_properties: {grid_position: 'DZOUHS,XSGWAK SZUHGW,PGIMBQ'}
+- name: label_3
+  properties: {text: 'Approved Loans Count :', bold: true, font_size: 16}
+  type: Label
+  layout_properties: {grid_position: 'DZOUHS,XSGWAK SZZQOB,QMYHCL'}
+- name: label_disbursed_count
+  properties: {font_size: 16}
+  type: Label
+  layout_properties: {grid_position: 'DZOUHS,CWVTOM QZOEMG,SQFACL'}
+- name: label_approved_count
+  properties: {font_size: 16}
+  type: Label
+  layout_properties: {grid_position: 'DZOUHS,CWVTOM TTQUCX,KPFGNI'}
+- name: spacer_4
+  properties: {height: 32}
+  type: Spacer
+  layout_properties: {grid_position: 'ADXVKF,FVFCWF'}
 - name: label_1
   properties: {text: Track Loan Disbursement, align: center, bold: true, font_size: 22}
   type: Label
@@ -39,7 +65,7 @@ components:
   - name: repeating_panel_1
     properties: {item_template: admin.dashboard.accounting.track_loan_disbursement.RowTemplate41}
     type: RepeatingPanel
-  layout_properties: {grid_position: 'DGVZFJ,ODHQPN'}
+  layout_properties: {grid_position: 'DGVZFJ,ODHQPN', full_width_row: true}
 - name: spacer_3
   properties: {height: 32}
   type: Spacer
