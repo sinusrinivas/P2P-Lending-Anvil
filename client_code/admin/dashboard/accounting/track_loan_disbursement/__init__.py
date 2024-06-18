@@ -1,124 +1,3 @@
-# from ._anvil_designer import track_loan_disbursementTemplate
-# from anvil import *
-# import anvil.server
-# import anvil.google.auth, anvil.google.drive
-# from anvil.google.drive import app_files
-# import anvil.users
-# import anvil.tables as tables
-# import anvil.tables.query as q
-# from anvil.tables import app_tables
-
-
-# class track_loan_disbursement(track_loan_disbursementTemplate):
-#   def __init__(self, **properties):
-#     # Set Form properties and Data Bindings.
-#     self.init_components(**properties)
-
-#     # Any code you write here will run before the form opens.
-#     self.result = app_tables.fin_loan_details.search()
-#     if not self.result:
-#         Notification("No Data Available Here!").show()
-#     else:
-#         self.result = [{'borrower_full_name': i['borrower_full_name'],
-#                         'borrower_email_id': i['borrower_email_id'] ,
-#                         'lender_full_name': i['lender_full_name'], 
-#                         'lender_email_id': i['lender_email_id'] ,
-#                         'interest_rate': i['interest_rate'],
-#                         'loan_amount': i['loan_amount'],
-#                         'loan_updated_status': i['loan_updated_status'],
-#                         'loan_id': i['loan_id'],
-#                         'total_repayment_amount': i['total_repayment_amount'] ,
-#                         'membership_type': i['membership_type'], 
-#                         'emi_payment_type': i['emi_payment_type'], 
-#                         'product_name': i['product_name'] 
-#                        }
-#                        for i in self.result if i['loan_updated_status'] in ["disbursed", "approved"]]
-
-#         if not self.result:
-#             Notification("No Loans with status 'disbursed' or 'approved' found!").show()
-#         else:
-#             self.repeating_panel_1.items = self.result
-
-
-# # Import necessary modules
-# from ._anvil_designer import track_loan_disbursementTemplate
-# from anvil import *
-# import anvil.tables as tables
-# import anvil.tables.query as q
-# from anvil.tables import app_tables
-
-# class track_loan_disbursement(track_loan_disbursementTemplate):
-#     def __init__(self, **properties):
-#         # Set Form properties and Data Bindings.
-#         self.init_components(**properties)
-
-#         # Hide the RepeatingPanel initially
-#         self.data_grid_1.visible = False
-#     def date_picker_1_change(self, **event_args):
-#       """This method is called when the selected date changes"""
-#       self.date = self.date_picker_1.date
-#       print("dateeeeeeeee", self.date)
-      
-#     def button_filter_click(self, **event_args):
-#         # Event handler for filter button click
-#           # Debug: Print selected date to check
-
-#         if self.date:
-#             # Calculate start and end of selected date
-#             start_date = self.date.replace(hour=0, minute=0, second=0, microsecond=0)
-#             end_date = self.date.replace(hour=23, minute=59, second=59, microsecond=999999)
-
-#             # Fetch loans for the selected date and matching timestamps
-#             loans = app_tables.fin_loan_details.search(
-#                 q.or_(
-#                     q.and_(
-#                         q.date_equal('loan_disbursed_timestamp', self.date),
-#                         q.date_equal('lender_accepted_timestamp', self.date)
-#                     ),
-#                     q.and_(
-#                         q.date_between('loan_disbursed_timestamp', start_date, end_date),
-#                         q.date_between('lender_accepted_timestamp', start_date, end_date)
-#                     )
-#                 )
-#             )
-
-#             # Filter loans with status 'disbursed' or 'approved'
-#             filtered_loans = [
-#                 {
-#                     'borrower_full_name': loan['borrower_full_name'],
-#                     'borrower_email_id': loan['borrower_email_id'],
-#                     'lender_full_name': loan['lender_full_name'],
-#                     'lender_email_id': loan['lender_email_id'],
-#                     'interest_rate': loan['interest_rate'],
-#                     'loan_amount': loan['loan_amount'],
-#                     'loan_updated_status': loan['loan_updated_status'],
-#                     'loan_id': loan['loan_id'],
-#                     'total_repayment_amount': loan['total_repayment_amount'],
-#                     'membership_type': loan['membership_type'],
-#                     'emi_payment_type': loan['emi_payment_type'],
-#                     'product_name': loan['product_name'],
-#                     'loan_disbursed_timestamp': loan['loan_disbursed_timestamp'],
-#                     'lender_accepted_timestamp': loan['lender_accepted_timestamp']
-#                 }
-#                 for loan in loans
-#                 if loan['loan_updated_status'] in ["disbursed", "approved"]
-#             ]
-
-#             if not filtered_loans:
-#                 Notification(f"No Loans with status 'disbursed' or 'approved' found for {self.date}!").show()
-#             else:
-#                 # Update RepeatingPanel with filtered results
-#                 self.repeating_panel_1.items = filtered_loans
-#                 self.data_grid_1.visible = True  # Make the RepeatingPanel visible
-#         else:
-#             # Handle case where date is not selected
-#             Notification("Please select a date!").show()
-#             self.data_grid_1.visible = False  # Hide the RepeatingPanel if no date is selected
-
-    
-
-
-# Import necessary modules
 from ._anvil_designer import track_loan_disbursementTemplate
 from anvil import *
 import anvil.tables as tables
@@ -131,65 +10,143 @@ class track_loan_disbursement(track_loan_disbursementTemplate):
         # Set Form properties and Data Bindings.
         self.init_components(**properties)
 
-        # Initialize instance variable to store the selected date
+        # Initialize instance variables
         self.selected_date = None
+        self.disbursed_loan_count = 0
+        self.approved_loan_count = 0
 
         # Hide the DataGrid initially
         self.data_grid_1.visible = False
-        self.button_filter_click()
 
     def date_picker_1_change(self, **event_args):
         """This method is called when the selected date changes"""
         self.selected_date = self.date_picker_1.date
         print("Selected date:", self.selected_date)
 
-    def button_filter_click(self, **event_args):
-        # Event handler for filter button click
         if self.selected_date:
-            selected_date = self.selected_date
-            print("Filter button clicked with date:", selected_date)
-
-            # Normalize selected_date to remove the time component
-            start_date = datetime.combine(selected_date, datetime.min.time())
-            end_date = datetime.combine(selected_date, datetime.max.time())
-
             # Fetch loans from the database
             loans = app_tables.fin_loan_details.search()
-            print(loans['loan_disbursed_timestamp'].date())
             
+            # Initialize an empty list to store filtered loans
+            filtered_loans = []
+            self.disbursed_loan_count = 0  # Reset count
+            self.approved_loan_count = 0  # Reset count
 
-            # Filter loans with status 'disbursed' or 'approved' and matching date
-            filtered_loans = [
-                {
-                    'borrower_full_name': loan['borrower_full_name'],
-                    'borrower_email_id': loan['borrower_email_id'],
-                    'lender_full_name': loan['lender_full_name'],
-                    'lender_email_id': loan['lender_email_id'],
-                    'interest_rate': loan['interest_rate'],
-                    'loan_amount': loan['loan_amount'],
-                    'loan_updated_status': loan['loan_updated_status'],
-                    'loan_id': loan['loan_id'],
-                    'total_repayment_amount': loan['total_repayment_amount'],
-                    'membership_type': loan['membership_type'],
-                    'emi_payment_type': loan['emi_payment_type'],
-                    'product_name': loan['product_name'],
-                    'loan_disbursed_timestamp': loan['loan_disbursed_timestamp'],
-                    'lender_accepted_timestamp': loan['lender_accepted_timestamp']
-                }
-                for loan in loans
-                if loan['loan_updated_status'] in ["disbursed", "approved"]
-                and (loan['loan_disbursed_timestamp'].date() == selected_date or
-                     loan['lender_accepted_timestamp'].date() == selected_date)
-            ]
-
+            for loan in loans:
+                user_profile = app_tables.fin_user_profile.get(customer_id=loan['borrower_customer_id'])
+                
+                if user_profile is not None and loan['loan_updated_status'] in ["disbursed", "approved"]:
+                    if (loan['loan_disbursed_timestamp'] and loan['loan_disbursed_timestamp'].date() == self.selected_date) or \
+                       (loan['lender_accepted_timestamp'] and loan['lender_accepted_timestamp'].date() == self.selected_date):
+                        filtered_loans.append({
+                            'user_photo': user_profile['user_photo'],
+                            'borrower_full_name': loan['borrower_full_name'],
+                            'borrower_email_id': loan['borrower_email_id'],
+                            'lender_full_name': loan['lender_full_name'],
+                            'lender_email_id': loan['lender_email_id'],
+                            'ascend_score': user_profile['ascend_value'],
+                            'loan_amount': loan['loan_amount'],
+                            'loan_updated_status': loan['loan_updated_status'],
+                            'loan_id': loan['loan_id'],
+                            'total_repayment_amount': loan['total_repayment_amount'],
+                            'membership_type': loan['membership_type'],
+                            'emi_payment_type': loan['emi_payment_type'],
+                            'product_name': loan['product_name'],
+                            'loan_disbursed_timestamp': loan['loan_disbursed_timestamp'],
+                            'lender_accepted_timestamp': loan['lender_accepted_timestamp']
+                        })
+                        # Increment the respective count
+                        if loan['loan_updated_status'] == 'disbursed':
+                            self.disbursed_loan_count += 1
+                        elif loan['loan_updated_status'] == 'approved':
+                            self.approved_loan_count += 1
+            
             if not filtered_loans:
-                Notification(f"No Loans with status 'disbursed' or 'approved' found for {selected_date}!").show()
+                Notification(f"No Loans with status 'disbursed' or 'approved' found for {self.selected_date}!").show()
                 self.data_grid_1.visible = False  # Hide the DataGrid if no loans found
             else:
                 # Update RepeatingPanel with filtered results
                 self.repeating_panel_1.items = filtered_loans
                 self.data_grid_1.visible = True  # Make the DataGrid visible
+            
+            # Display the counts
+            self.label_disbursed_count.text = self.disbursed_loan_count
+            self.label_approved_count.text =  self.approved_loan_count
         else:
-            # Handle case where date is not selected
             Notification("Please select a date!").show()
             self.data_grid_1.visible = False  # Hide the DataGrid if no date is selected
+
+    def button_1_click(self, **event_args):
+        """This method is called when the button is clicked"""
+        open_form('admin.dashboard.accounting')
+
+
+
+# from ._anvil_designer import track_loan_disbursementTemplate
+# from anvil import *
+# import anvil.tables as tables
+# import anvil.tables.query as q
+# from anvil.tables import app_tables
+# from datetime import datetime
+
+# class track_loan_disbursement(track_loan_disbursementTemplate):
+#     def __init__(self, **properties):
+#         # Set Form properties and Data Bindings.
+#         self.init_components(**properties)
+
+#         # Initialize instance variable to store the selected date
+#         self.selected_date = None
+
+#         # Hide the DataGrid initially
+#         self.data_grid_1.visible = False
+
+#     def date_picker_1_change(self, **event_args):
+#         """This method is called when the selected date changes"""
+#         self.selected_date = self.date_picker_1.date
+#         print("Selected date:", self.selected_date)
+
+#         if self.selected_date:
+#             # Fetch loans from the database
+#             loans = app_tables.fin_loan_details.search()
+            
+#             # Initialize an empty list to store filtered loans
+#             filtered_loans = []
+
+#             for loan in loans:
+#                 user_profile = app_tables.fin_user_profile.get(customer_id=loan['borrower_customer_id'])
+                
+#                 if user_profile is not None and loan['loan_updated_status'] in ["disbursed", "approved"]:
+#                     if (loan['loan_disbursed_timestamp'] and loan['loan_disbursed_timestamp'].date() == self.selected_date) or \
+#                        (loan['lender_accepted_timestamp'] and loan['lender_accepted_timestamp'].date() == self.selected_date):
+#                         filtered_loans.append({
+#                             'user_photo': user_profile['user_photo'],
+#                             'borrower_full_name': loan['borrower_full_name'],
+#                             'borrower_email_id': loan['borrower_email_id'],
+#                             'lender_full_name': loan['lender_full_name'],
+#                             'lender_email_id': loan['lender_email_id'],
+#                             'ascend_score': user_profile['ascend_value'],
+#                             'loan_amount': loan['loan_amount'],
+#                             'loan_updated_status': loan['loan_updated_status'],
+#                             'loan_id': loan['loan_id'],
+#                             'total_repayment_amount': loan['total_repayment_amount'],
+#                             'membership_type': loan['membership_type'],
+#                             'emi_payment_type': loan['emi_payment_type'],
+#                             'product_name': loan['product_name'],
+#                             'loan_disbursed_timestamp': loan['loan_disbursed_timestamp'],
+#                             'lender_accepted_timestamp': loan['lender_accepted_timestamp']
+#                         })
+            
+#             if not filtered_loans:
+#                 Notification(f"No Loans with status 'disbursed' or 'approved' found for {self.selected_date}!").show()
+#                 self.data_grid_1.visible = False  # Hide the DataGrid if no loans found
+#             else:
+#                 # Update RepeatingPanel with filtered results
+#                 self.repeating_panel_1.items = filtered_loans
+#                 self.data_grid_1.visible = True  # Make the DataGrid visible
+#         else:
+#             Notification("Please select a date!").show()
+#             self.data_grid_1.visible = False  # Hide the DataGrid if no date is selected
+
+#     def button_1_click(self, **event_args):
+#       """This method is called when the button is clicked"""
+#       open_form('admin.dashboard.accounting')

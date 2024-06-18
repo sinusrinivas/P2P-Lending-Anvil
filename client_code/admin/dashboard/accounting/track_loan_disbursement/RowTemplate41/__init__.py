@@ -17,8 +17,13 @@ class RowTemplate41(RowTemplate41Template):
 
     # Any code you write here will run before the form opens.
 
-  def link_1_click(self, **event_args):
+  # def link_1_click(self, **event_args):
+  #   """This method is called when the link is clicked"""
+  #   selected_row = self.item
+  #   open_form('admin.dashboard.accounting.track_loan_disbursement.view_details', selected_row = selected_row)
+
+  def link_2_click(self, **event_args):
     """This method is called when the link is clicked"""
     selected_row = self.item
-    open_form('admin.dashboard.accounting.track_loan_disbursement.view_details', selected_row = selected_row)
+    open_form('admin.dashboard.accounting.track_loan_disbursement.trace_chart', selected_row = selected_row)
     

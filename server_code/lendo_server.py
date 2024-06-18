@@ -8,11 +8,16 @@ import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 import anvil.server
-from datetime import datetime
 from datetime import datetime, timezone
 from . import wallet
+import anvil.pdf
 
-
+@anvil.server.callable
+def create_pdf(name, image_source,selected_row):    
+    # Your PDF creation logic here
+    pdf = anvil.pdf.PDFRenderer(landscape=True).render_form("lendor.dashboard.lender_portfolio",selected_row = selected_row)  
+    return pdf
+  
 @anvil.server.callable
 def add_lender_step1(qualification,user_id):
   row = app_tables.fin_user_profile.search(customer_id=user_id)
