@@ -1,0 +1,33 @@
+container: {type: ColumnPanel}
+components:
+- name: home_button_admin_1
+  properties: {}
+  type: form:admin.dashboard.home_button_admin
+  layout_properties: {grid_position: 'KOPBZL,UIKVQO', full_width_row: true}
+- name: label_1
+  properties: {align: center, text: Handle Collection Process, bold: true, font_size: 18}
+  type: Label
+  layout_properties: {grid_position: 'CIVCQR,VCPLGD'}
+- name: spacer_1
+  properties: {height: 15.5714111328125}
+  type: Spacer
+  layout_properties: {grid_position: 'IXAYVN,LBMFXG'}
+- name: data_grid_1
+  properties:
+    columns:
+    - {id: JKSDUP, title: User Photo, data_key: column_1}
+    - {id: VJQQOR, title: Customer Id, data_key: column_2}
+    - {id: OJLQEN, title: Customer Name, data_key: column_3}
+    - {id: DZHTTI, data_key: column_4, title: Product Name}
+    - {id: DZDXAO, data_key: column_5, title: Loan Status}
+    - {id: WXNVGZ, data_key: column_6, title: Remaining Amount}
+    - {id: KGPDJR, data_key: column_7, title: Alternate Mobile}
+    - {id: XZJSGN, data_key: column_1, title: Address}
+    role: tonal-data-grid
+  type: DataGrid
+  components:
+  - name: repeating_panel_1
+    properties: {item_template: admin.dashboard.loan_servicing.handle_collection_process.RowTemplate49}
+    type: RepeatingPanel
+  layout_properties: {grid_position: 'VBKWJV,IWZSUS', full_width_row: true}
+is_package: true
