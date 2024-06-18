@@ -41,7 +41,13 @@ class EditDetailsForm(EditDetailsFormTemplate):
                     category_row['name_group'] = updated_group
                     category_row.update()
 
-                # Update the existing row in the product_group table
+                categories_to_update1 = app_tables.fin_product_details.search(q.any_of(product_group=group_name))
+                for category_row in categories_to_update1:
+                  category_row['product_group'] = updated_group
+                  category_row.update()
+                  
+
+                # Update the existing row in the product_group tabl
                 self.selected_row['name'] = updated_group
 
                 # Save changes to the database
@@ -80,6 +86,9 @@ class EditDetailsForm(EditDetailsFormTemplate):
             for category_row in categories_to_delete:
                 category_row.delete()
 
+            categories_to_delete1 = app_tables.fin_product_details.search(q.any_of(product_group=group_name))
+            for category_row in categories_to_delete1:
+              category_row.delete()
             alert("Group and corresponding categories deleted successfully!")
             open_form('admin.dashboard.manage_products.view_products_and_categories')
 
