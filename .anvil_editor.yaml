@@ -78,6 +78,7 @@ unique_ids:
     admin.user_issue.user_buganalysis.RowTemplate17: '1701189107287981500115093.1753'
     borrower.ots_dashboard: '1707465922694896334564412.1901'
     borrower.dashboard.borrower_view_profile: '1716954028565590462435483.8744'
+    admin.dashboard.manage_cms.loan_subcategory_dropdown.edit_technical_issue: '1718714527415989719808115.6094'
     ? borrower.borrower_registration_forms.star_1_borrower_registration_form_2_employment.star_1_borrower_registration_form_2_employment_business_1
     : '1700570064478378100736204.996'
     bank_users.main_form.products_main_form.personal_loan.credit_card_loan: '1713872914654662428552963.6232'
@@ -340,6 +341,7 @@ unique_ids:
     lendor.dashboard.view_borrower_loan_request.Borr_loan_request: '1700542763128106365112272.9714'
     lendor.dashboard.view_transaction_history.ItemTemplate100: '1712308244698402395554355.8164'
     admin.dashboard.manage_ascend_score.add_subcategory.edit_vehicle_loan: '1711089613487221420956518.77835'
+    admin.dashboard.manage_cms.loan_subcategory_dropdown.edit_lender_issue: '1718714499875133904492536.82114'
     admin.dashboard.manage_cms.loan_subcategory_dropdown.edit_borrower_issue: '171864498793872486502524.73831'
     admin.dashboard.reporting_and_analytical_modules.key_metrice.ItemTemplate109: '1718183485701894550867272.3522'
     lendor.dashboard.lender_view_loans.RowTemplate20: '1703139972848360547706878.1784'

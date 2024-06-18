@@ -1,4 +1,4 @@
-from ._anvil_designer import edit_borrower_issueTemplate
+from ._anvil_designer import edit_lender_issueTemplate
 from anvil import *
 import anvil.server
 import anvil.google.auth, anvil.google.drive
@@ -9,12 +9,12 @@ import anvil.tables.query as q
 from anvil.tables import app_tables
 
 
-class edit_borrower_issue(edit_borrower_issueTemplate):
+class edit_lender_issue(edit_lender_issueTemplate):
   def __init__(self,selected_row, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
 
-    self.text_box_1.text = selected_row['borrower_subcategory_loan_issue']
+    self.text_box_1.text = selected_row['lendor_subcategory_loan_issue']
         # Store the selected row for later use
     self.selected_row = selected_row
 
@@ -25,7 +25,7 @@ class edit_borrower_issue(edit_borrower_issueTemplate):
     if not update:
         alert("Please enter a valid data.")
         return
-    self.selected_row['borrower_subcategory_loan_issue'] = update
+    self.selected_row['lendor_subcategory_loan_issue'] = update
     self.selected_row.update()
     alert("Changes saved successfully!")
     open_form('admin.dashboard.manage_cms.manage_issues_dropdown')
