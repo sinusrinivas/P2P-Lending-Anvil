@@ -1,4 +1,4 @@
-from ._anvil_designer import view_detailsTemplate
+from ._anvil_designer import trace_chartTemplate
 from anvil import *
 import plotly.graph_objects as go
 import anvil.server
@@ -10,7 +10,7 @@ import anvil.tables.query as q
 from anvil.tables import app_tables
 import plotly.graph_objects as go
 
-class view_details(view_detailsTemplate):
+class trace_chart(trace_chartTemplate):
   def __init__(self, selected_row, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
@@ -31,3 +31,7 @@ class view_details(view_detailsTemplate):
         
         # Update Plotly component with the retrieved figure
         self.plot_1.figure = fig
+
+  def button_1_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    open_form('admin.dashboard.accounting.track_loan_disbursement')

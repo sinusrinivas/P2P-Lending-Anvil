@@ -9,6 +9,7 @@ from anvil.tables import app_tables
 import anvil.server
 from anvil import *
 import plotly.graph_objects as go
+from datetime import datetime
 
 # Define server function to navigate to the Invest Now form
 @anvil.server.callable
@@ -292,24 +293,75 @@ def get_combined_user_and_guarantor_data_2():
         })
 
     return combined_data
+# @anvil.server.callable
+# def create_loan_disbursement_graph(loan_created, lender_accepted, loan_disbursed):
+#     # Create scatter plot traces directly
+#     loan_created_trace = go.Scatter(x=[loan_created], y=['Loan Created'], mode='markers', name='Loan Created', marker=dict(color='blue'))
+#     lender_accepted_trace = go.Scatter(x=[lender_accepted], y=['Lender Accepted'], mode='markers', name='Lender Accepted', marker=dict(color='orange'))
+#     loan_disbursed_trace = go.Scatter(x=[loan_disbursed], y=['Loan Disbursed'], mode='markers', name='Loan Disbursed', marker=dict(color='green'))
+
+#     # Create the figure with traces
+#     fig = go.Figure(data=[loan_created_trace, lender_accepted_trace, loan_disbursed_trace])
+
+#     # Update layout
+#     fig.update_layout(
+#         title='Loan Disbursement Timeline',
+#         xaxis_title='Timestamp',
+#         yaxis_title='Event',
+#         yaxis=dict(showticklabels=False),
+#         showlegend=True
+#     )
+
+#     # Return the figure object directly
+#     return fig
+
+
 @anvil.server.callable
 def create_loan_disbursement_graph(loan_created, lender_accepted, loan_disbursed):
-    # Create scatter plot traces directly
-    loan_created_trace = go.Scatter(x=[loan_created], y=['Loan Created'], mode='markers', name='Loan Created', marker=dict(color='blue'))
-    lender_accepted_trace = go.Scatter(x=[lender_accepted], y=['Lender Accepted'], mode='markers', name='Lender Accepted', marker=dict(color='orange'))
-    loan_disbursed_trace = go.Scatter(x=[loan_disbursed], y=['Loan Disbursed'], mode='markers', name='Loan Disbursed', marker=dict(color='green'))
-
-    # Create the figure with traces
-    fig = go.Figure(data=[loan_created_trace, lender_accepted_trace, loan_disbursed_trace])
-
+    # Convert timestamps to datetime objects if necessary
+    dates = []
+    if loan_created:
+        dates.append(('Loan Created', convert_to_datetime(loan_created)))
+    if lender_accepted:
+        dates.append(('Lender Accepted', convert_to_datetime(lender_accepted)))
+    if loan_disbursed:
+        dates.append(('Loan Disbursed', convert_to_datetime(loan_disbursed)))
+    
+    # Sort dates by timestamp
+    dates.sort(key=lambda x: x[1])
+    
+    # Extract labels and timestamps
+    labels = [label for label, _ in dates]
+    timestamps = [timestamp for _, timestamp in dates]
+    
+    # Create a Plotly figure
+    fig = go.Figure()
+    
+    # Add a scatter trace with lines
+    fig.add_trace(go.Scatter(
+        x=timestamps,
+        y=labels,
+        mode='lines+markers',
+        line=dict(shape='linear'),
+        marker=dict(size=10),
+        text=labels,
+        textposition='top center'
+    ))
+    
     # Update layout
     fig.update_layout(
         title='Loan Disbursement Timeline',
         xaxis_title='Timestamp',
-        yaxis_title='Event',
-        yaxis=dict(showticklabels=False),
-        showlegend=True
+        yaxis_title='Stage',
+        xaxis=dict(type='date')
     )
-
-    # Return the figure object directly
+    
     return fig
+
+def convert_to_datetime(dt):
+    if isinstance(dt, datetime):
+        return dt
+    elif isinstance(dt, datetime):
+        return datetime.combine(dt, datetime.min.time())
+    else:
+        raise TypeError(f"Expected datetime or date object, got {type(dt)}")

@@ -129,3 +129,7 @@ class track_loan_disbursement(track_loan_disbursementTemplate):
         else:
             Notification("Please select a date!").show()
             self.data_grid_1.visible = False  # Hide the DataGrid if no date is selected
+
+    def button_1_click(self, **event_args):
+      """This method is called when the button is clicked"""
+      open_form('admin.dashboard.accounting')
