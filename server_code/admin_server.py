@@ -8,7 +8,7 @@ import anvil.tables.query as q
 from anvil.tables import app_tables
 import anvil.server
 from anvil import *
-
+import plotly.graph_objects as go
 
 # Define server function to navigate to the Invest Now form
 @anvil.server.callable
@@ -201,9 +201,8 @@ def search_lender(query):
     ]
   return result
 
-# Server module: manage_credit_limit.py
-import anvil.server
-from anvil.tables import app_tables
+# # Server module: manage_credit_limit.py
+
 
 @anvil.server.callable
 def save_credit_limit(new_value):
@@ -214,9 +213,6 @@ def save_credit_limit(new_value):
         app_tables.fin_manage_credit_limit.add_row(credit_limit=new_value)  # Add a new row if none exists
 
 #manage_customer and contact details server code
-@anvil.server.callable
-def get_customer_data():
-  return app_tables.fin_user_profile.search()
 
 def load_customer_data(self):
   # Fetch the customer data from the server function
@@ -224,3 +220,96 @@ def load_customer_data(self):
   
   # Set the items property of the repeating panel to the fetched data
   self.repeating_panel_1.items = user_profile
+
+
+@anvil.server.callable
+def get_combined_user_and_guarantor_data():
+    # Fetch user profiles excluding "super admin" and "admin"
+    user_profiles = app_tables.fin_user_profile.search()
+    
+    # Fetch all guarantors
+    guarantors = app_tables.fin_guarantor_details.search()
+
+    # Create a list of customer_ids to exclude (super admin and admin)
+    restricted_customer_ids = [profile['customer_id'] for profile in user_profiles if profile['usertype'] in ['super admin', 'admin']]
+    
+    # Filter user profiles to exclude restricted customer_ids
+    user_profiles_filtered = [profile for profile in user_profiles if profile['customer_id'] not in restricted_customer_ids]
+    
+    # Filter guarantors to exclude restricted customer_ids
+    guarantors_filtered = [guarantor for guarantor in guarantors if guarantor['customer_id'] not in restricted_customer_ids]
+
+    # Combine the data into a single list, interleaving records
+    combined_data = []
+
+    # Determine the maximum length to iterate up to the maximum of both lists
+    max_length = max(len(user_profiles_filtered), len(guarantors_filtered))
+
+    for i in range(max_length):
+        if i < len(user_profiles_filtered) and i < len(guarantors_filtered):
+            user_profile = user_profiles_filtered[i]
+            guarantor = guarantors_filtered[i]
+            combined_data.append({
+                'user_photo': user_profile['user_photo'],  
+                'full_name': user_profile['full_name'],   
+                'email_user': user_profile['email_user'],  
+                'mobile': user_profile['mobile'],  
+                'usertype': user_profile['usertype'],
+                'another_person': guarantor['another_person'],  
+                'guarantor_name': guarantor['guarantor_name'],   
+                'guarantor_mobile_no': guarantor['guarantor_mobile_no']
+            })
+        
+
+    return combined_data
+
+
+@anvil.server.callable
+def get_combined_user_and_guarantor_data_2():
+    # Fetch user profiles
+    user_profiles = app_tables.fin_user_profile.search()
+
+    # Create a list of customer_ids to exclude (super admin and admin)
+    restricted_customer_ids = [profile['customer_id'] for profile in user_profiles if profile['usertype'] in ['super admin', 'admin']]
+    
+    # Filter user profiles to exclude restricted customer_ids
+    user_profiles_filtered = [profile for profile in user_profiles if profile['customer_id'] not in restricted_customer_ids]
+
+    # Combine the data into a single list
+    combined_data = []
+    for user_profile in user_profiles_filtered:
+        combined_data.append({
+            'customer_id': user_profile['customer_id'],
+            'full_name': user_profile['full_name'],
+            'email_user': user_profile['email_user'],
+            'usertype': user_profile['usertype'],
+            'account_name': user_profile['account_name'],
+            'account_type': user_profile['account_type'],
+            'account_number': user_profile['account_number'],
+            'bank_name': user_profile['bank_name'],
+            'bank_id': user_profile['bank_id'],
+            'account_bank_branch': user_profile['account_bank_branch']
+        })
+
+    return combined_data
+@anvil.server.callable
+def create_loan_disbursement_graph(loan_created, lender_accepted, loan_disbursed):
+    # Create scatter plot traces directly
+    loan_created_trace = go.Scatter(x=[loan_created], y=['Loan Created'], mode='markers', name='Loan Created', marker=dict(color='blue'))
+    lender_accepted_trace = go.Scatter(x=[lender_accepted], y=['Lender Accepted'], mode='markers', name='Lender Accepted', marker=dict(color='orange'))
+    loan_disbursed_trace = go.Scatter(x=[loan_disbursed], y=['Loan Disbursed'], mode='markers', name='Loan Disbursed', marker=dict(color='green'))
+
+    # Create the figure with traces
+    fig = go.Figure(data=[loan_created_trace, lender_accepted_trace, loan_disbursed_trace])
+
+    # Update layout
+    fig.update_layout(
+        title='Loan Disbursement Timeline',
+        xaxis_title='Timestamp',
+        yaxis_title='Event',
+        yaxis=dict(showticklabels=False),
+        showlegend=True
+    )
+
+    # Return the figure object directly
+    return fig

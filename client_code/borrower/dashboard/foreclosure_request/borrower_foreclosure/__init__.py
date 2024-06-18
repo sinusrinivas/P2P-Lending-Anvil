@@ -357,6 +357,8 @@ class borrower_foreclosure(borrower_foreclosureTemplate):
                     loan_row['total_amount_paid'] += total_amount
                     loan_row['lender_returns'] += foreclosure_amount
                     loan_row['loan_updated_status'] = 'closed'
+
+                    remaining_amount = 0
                     lender_data = app_tables.fin_lender.get(customer_id=loan_row['lender_customer_id'])
                     if lender_data:
                             lender_data['present_commitments'] -= loan_row['loan_amount']
@@ -382,6 +384,7 @@ class borrower_foreclosure(borrower_foreclosureTemplate):
                     payment_type='Foreclosure',
                     lender_email= lender_email_id,
                     borrower_email= borrower_email_id,
+                    total_remaining_amount=remaining_amount,
            
                 )
                 Notification("Foreclosure payment completed successfully.").show()

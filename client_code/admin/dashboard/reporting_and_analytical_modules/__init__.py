@@ -27,3 +27,7 @@ class reporting_and_analytical_modules(reporting_and_analytical_modulesTemplate)
   def kay_metrics_click(self, **event_args):
     """This method is called when the button is clicked"""
     open_form('admin.dashboard.reporting_and_analytical_modules.key_metrice')
+
+  def button_1_copy_3_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    open_form('admin.dashboard')

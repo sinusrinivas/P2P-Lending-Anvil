@@ -3,7 +3,7 @@ container:
   type: ColumnPanel
   properties: {role: null, col_widths: '{}', spacing_above: small, background: '', wrap_on: tablet, col_spacing: medium, foreground: '', spacing_below: small, visible: true, border: '', tooltip: ''}
 components:
-- properties: {col_widths: '{}', background: 'theme:On Primary', visible: true}
+- properties: {col_widths: '{}', background: '#Edf0f4', visible: true}
   type: ColumnPanel
   layout_properties: {grid_position: 'JGBRON,LLVFHZ', full_width_row: true}
   name: content_panel_copy_copy_3_copy_3_copy
@@ -56,18 +56,17 @@ components:
       layout_properties: {grid_position: 'CMCGJO,QEJJZP'}
       event_bindings: {click: button_23_click}
       name: button_23
-  - name: content_panel_copy_copy_3_copy_3_copy_copy_copy_12_copy_copy_2
-    properties: {col_widths: '{}', background: white, role: elevated-card}
+  - properties: {col_widths: '{}', background: white, role: elevated-card}
     type: ColumnPanel
     layout_properties: {grid_position: 'DGBMNL,DWGBUW AIRTTR,QVPWKK'}
+    name: content_panel_copy_copy_3_copy_3_copy_copy_copy_12_copy_copy_2
     components:
-    - name: image_3
-      properties: {height: '100', source: _/theme/admin/dashboard/collateral-management.png}
+    - properties: {height: '100', source: _/theme/admin/dashboard/collateral-management.png}
       type: Image
       layout_properties: {grid_position: 'LTTECY,IGMJHY'}
       event_bindings: {mouse_up: image_3_mouse_up}
-    - name: button_3
-      properties:
+      name: image_3
+    - properties:
         text: "Collateral \nManage"
         bold: true
         font_size: 15
@@ -75,25 +74,27 @@ components:
       type: Button
       layout_properties: {grid_position: 'JULBAD,JZEYPC'}
       event_bindings: {click: button_3_click}
+      name: button_3
   - properties: {col_widths: '{}', background: white, role: elevated-card}
     type: ColumnPanel
-    layout_properties: {grid_position: 'DGBMNL,DWGBUW HCUZWB,GFEJCA'}
-    name: content_panel_copy_copy_3_copy_3_copy_copy_copy_9
+    layout_properties: {grid_position: 'DGBMNL,DWGBUW GTLDVB,ISTLBZ'}
+    name: content_panel_copy_copy_3_copy_3_copy_copy_copy_12_copy_copy_3_copy
     components:
-    - properties: {source: _/theme/admin/dashboard/risk-management.png, display_mode: shrink_to_fit, height: '100'}
+    - properties: {height: '100', source: _/theme/admin/dashboard/integration.png}
       type: Image
-      layout_properties: {grid_position: 'YGLFNC,ASARUK'}
-      event_bindings: {mouse_up: image_10_mouse_up}
-      name: image_10
+      layout_properties: {grid_position: 'FNOORP,FMZUTK'}
+      event_bindings: {mouse_up: image_14_mouse_up}
+      name: image_14
     - properties:
-        text: "  Manage \nIssues"
-        foreground: black
+        text: |
+          Integration with Third-Party Systems
         bold: true
+        foreground: black
         font_size: 15
       type: Button
-      layout_properties: {grid_position: 'VXGGJT,QMFGMX'}
-      event_bindings: {click: button_21_click}
-      name: button_21
+      layout_properties: {grid_position: 'OXXKBR,UJXJJS'}
+      event_bindings: {click: button_5_click}
+      name: button_5
   - properties: {col_widths: '{}', background: white, role: elevated-card}
     type: ColumnPanel
     layout_properties: {grid_position: 'DGBMNL,NCWVQM FRNYKC,RLNTPL'}
@@ -104,11 +105,15 @@ components:
       layout_properties: {grid_position: 'CJWVAG,PSSGQJ'}
       event_bindings: {mouse_up: image_13_mouse_up}
       name: image_13
-    - properties: {text: ' Customer Management ', foreground: black, bold: true, font_size: 15}
+    - properties:
+        text: " Customer \nManagement "
+        foreground: black
+        bold: true
+        font_size: 15
       type: Button
-      layout_properties: {grid_position: 'VXGGJT,QMFGMX'}
-      event_bindings: {click: button_21_click}
-      name: button_21_copy
+      layout_properties: {grid_position: 'CYSPPF,HYARXK'}
+      event_bindings: {click: button_6_click}
+      name: button_6
   - properties: {col_widths: '{}', background: white, role: elevated-card}
     type: ColumnPanel
     layout_properties: {grid_position: 'DGBMNL,NCWVQM CRQOFC,RRFUFJ'}
@@ -128,18 +133,17 @@ components:
       layout_properties: {grid_position: 'QNOGIE,OOAQVF'}
       event_bindings: {click: button_18_click}
       name: button_18
-  - name: content_panel_copy_copy_3_copy_3_copy_copy_copy_10_copy
-    properties: {col_widths: '{}', background: white, role: elevated-card}
+  - properties: {col_widths: '{}', background: white, role: elevated-card}
     type: ColumnPanel
     layout_properties: {grid_position: 'DGBMNL,NCWVQM NOYOFO,TTQMSE'}
+    name: content_panel_copy_copy_3_copy_3_copy_copy_copy_10_copy
     components:
-    - name: image_13_copy
-      properties: {height: '100', source: _/theme/admin/dashboard/accounting/accounting.png}
+    - properties: {height: '100', source: _/theme/admin/dashboard/accounting/accounting.png}
       type: Image
       layout_properties: {grid_position: 'LCUQKR,NEICXT'}
       event_bindings: {mouse_up: image_13_copy_mouse_up}
-    - name: button_1
-      properties:
+      name: image_13_copy
+    - properties:
         text: |-
           Accounting
           Module
@@ -149,26 +153,7 @@ components:
       type: Button
       layout_properties: {grid_position: 'LAZFJB,YGFJGK'}
       event_bindings: {click: button_1_click}
-  - name: content_panel_copy_copy_3_copy_3_copy_copy_copy_12_copy_copy_3_copy
-    properties: {col_widths: '{}', background: white, role: elevated-card}
-    type: ColumnPanel
-    layout_properties: {grid_position: 'DGBMNL,NCWVQM IRHICR,YXBDUW'}
-    components:
-    - name: image_14
-      properties: {height: '100', source: _/theme/admin/dashboard/integration.png}
-      type: Image
-      layout_properties: {grid_position: 'FNOORP,FMZUTK'}
-      event_bindings: {mouse_up: image_14_mouse_up}
-    - name: button_5
-      properties:
-        text: |
-          Integration with Third-Party Systems
-        bold: true
-        foreground: black
-        font_size: 15
-      type: Button
-      layout_properties: {grid_position: 'OXXKBR,UJXJJS'}
-      event_bindings: {click: button_5_click}
+      name: button_1
   - properties: {col_widths: '{}', background: white, role: elevated-card}
     type: ColumnPanel
     layout_properties: {grid_position: 'DGBMNL,CNLKUD CEKMOU,VNDBBM'}
@@ -232,27 +217,22 @@ components:
       layout_properties: {grid_position: 'HQRYUT,UOATCO'}
       event_bindings: {mouse_up: image_9_mouse_up}
       name: image_9
-    - properties:
-        text: "Manage \nCMS"
-        foreground: black
-        bold: true
-        font_size: 15
+    - properties: {text: Content Management System, foreground: black, bold: true, font_size: 15}
       type: Button
       layout_properties: {grid_position: 'HTLBLJ,LNMXIO'}
       event_bindings: {click: button_17_click}
       name: button_17
-  - name: content_panel_copy_copy_3_copy_3_copy_copy_copy_12_copy
-    properties: {col_widths: '{}', background: white, role: elevated-card}
+  - properties: {col_widths: '{}', background: white, role: elevated-card}
     type: ColumnPanel
     layout_properties: {grid_position: 'DGBMNL,JFOFFM OOLFCG,OWOMTI'}
+    name: content_panel_copy_copy_3_copy_3_copy_copy_copy_12_copy
     components:
-    - name: image_2
-      properties: {height: '100', source: _/theme/admin/dashboard/loan-servicing.png}
+    - properties: {height: '100', source: _/theme/admin/dashboard/loan-servicing.png}
       type: Image
       layout_properties: {grid_position: 'TGLZHH,IURBMV'}
       event_bindings: {mouse_up: image_2_mouse_up}
-    - name: button_2
-      properties:
+      name: image_2
+    - properties:
         text: |-
           Loan
           Servicing
@@ -262,18 +242,18 @@ components:
       type: Button
       layout_properties: {grid_position: 'YBNHLZ,OJMZVW'}
       event_bindings: {click: button_2_click}
-  - name: content_panel_copy_copy_3_copy_3_copy_copy_copy_12_copy_copy_3
-    properties: {col_widths: '{}', background: white, role: elevated-card}
+      name: button_2
+  - properties: {col_widths: '{}', background: white, role: elevated-card}
     type: ColumnPanel
     layout_properties: {grid_position: 'DGBMNL,JFOFFM SMATTB,KHKWNI'}
+    name: content_panel_copy_copy_3_copy_3_copy_copy_copy_12_copy_copy_3
     components:
-    - name: image_7
-      properties: {height: '100', source: _/theme/admin/dashboard/security-compliance.png}
+    - properties: {height: '100', source: _/theme/admin/dashboard/security-compliance.png}
       type: Image
       layout_properties: {grid_position: 'AFFEGL,EOLTXJ'}
       event_bindings: {mouse_up: image_7_mouse_up}
-    - name: button_4
-      properties:
+      name: image_7
+    - properties:
         text: "Security &\nCompliance "
         font_size: 15
         bold: true
@@ -281,6 +261,7 @@ components:
       type: Button
       layout_properties: {grid_position: 'RQDORM,VFLVJG'}
       event_bindings: {click: button_4_click}
+      name: button_4
   - properties: {height: 32}
     type: Spacer
     layout_properties: {grid_position: ''}

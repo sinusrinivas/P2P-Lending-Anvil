@@ -14,8 +14,21 @@ class kyc_verification(kyc_verificationTemplate):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
 
-    # Any code you write here will run before the form opens.
+    self.load_kyc_data()
 
+  def load_kyc_data(self):
+    
+     # Fetch data from the server
+    combined_data = anvil.server.call('get_combined_user_and_guarantor_data_2')
+
+    # Debug: Print the fetched data
+    print("Fetched user profiles:", combined_data)
+    
+    # Bind the data to the DataGrid
+    self.repeating_panel_1.items = combined_data
+    #combined_data
+
+  
   def button_1_click(self, **event_args):
     """This method is called when the button is clicked"""
     open_form('admin.dashboard.customer_management')

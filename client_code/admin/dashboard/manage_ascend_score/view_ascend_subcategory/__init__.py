@@ -26,4 +26,4 @@ class view_ascend_subcategory(view_ascend_subcategoryTemplate):
         self.repeating_panel_1.items = self.result
 
   def back_btn_click(self, **event_args):
-    open_form('admin.dashboard.manage_ascend')
+    open_form('admin.dashboard.manage_ascend_score')

@@ -16,7 +16,7 @@ services:
 - source: /runtime/services/anvil/secrets.yml
   client_config: {}
   server_config: {}
-startup: {type: form, module: admin.dashboard}
+startup: {type: form, module: bank_users.main_form}
 package_name: pip_install_reportlab
 allow_embedding: false
 name: P2P Lending App 1
@@ -372,6 +372,18 @@ db_schema:
     - name: days_left
       admin_ui: {width: 200, order: 6.1875}
       type: number
+    - name: default_fee
+      admin_ui: {width: 200}
+      type: number
+    - name: lapsed_fee
+      admin_ui: {width: 200}
+      type: number
+    - name: npa_fee
+      admin_ui: {width: 200}
+      type: number
+    - name: total_remaining_amount
+      admin_ui: {width: 200}
+      type: number
   fin_guarantor_details:
     client: full
     server: full
@@ -523,6 +535,15 @@ db_schema:
     - name: usertype
       admin_ui: {width: 200, order: 10}
       type: string
+    - name: issue_occured
+      admin_ui: {width: 200}
+      type: string
+    - name: status
+      admin_ui: {width: 200}
+      type: bool
+    - name: user_photo
+      admin_ui: {width: 200}
+      type: media
     title: fin_reported_problems
   fin_borrower_qualification:
     title: fin_borrower_qualification
@@ -878,6 +899,14 @@ db_schema:
       admin_ui: {width: 200, order: 10.5}
       type: number
     title: fin_extends_loan
+  fin_issue_category:
+    client: full
+    server: full
+    columns:
+    - name: issue_category
+      admin_ui: {order: 0, width: 200}
+      type: string
+    title: fin_issue_category
   fin_manage_credit_limit:
     title: fin_manage_credit_limit
     client: none
@@ -917,13 +946,13 @@ db_schema:
       admin_ui: {width: 200}
       type: string
   fin_category:
+    title: fin_category
     client: full
     server: full
     columns:
     - name: category
-      admin_ui: {width: 200, order: 0}
+      admin_ui: {width: 200}
       type: string
-    title: fin_category
   fin_user_profile:
     client: full
     server: full
@@ -1331,6 +1360,9 @@ db_schema:
     - name: present_commitments
       admin_ui: {order: 4.9765625, width: 200}
       type: number
+    - name: wallet_id
+      admin_ui: {width: 200}
+      type: string
   fin_borrower_salary_type:
     client: full
     server: full
