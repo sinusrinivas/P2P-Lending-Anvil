@@ -34,6 +34,8 @@ class collection_of_repayment(collection_of_repaymentTemplate):
           'borrower_email_id': loan_row['borrower_email_id'],
           'emi_number': emi_row['emi_number'],
           'amount_paid': emi_row['amount_paid'],
+          'remaining_amount': emi_row['total_remaining_amount'],
+          'extra_fee': emi_row['extra_fee'],
           # 'lapsed_fee': emi_row['lapsed_fee'],
           # 'default_fee': emi_row['default_fee'],
           # 'npa_fee': emi_row['npa_fee'],

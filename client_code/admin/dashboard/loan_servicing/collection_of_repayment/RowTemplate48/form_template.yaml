@@ -43,3 +43,15 @@ components:
   layout_properties: {column: OMWGJK}
   data_bindings:
   - {property: text, code: 'self.item[''amount_paid'']', writeback: false}
+- name: label_7
+  properties: {align: center}
+  type: Label
+  layout_properties: {column: OBYVJU}
+  data_bindings:
+  - {property: text, code: 'self.item[''extra_fee'']', writeback: false}
+- name: label_8
+  properties: {align: center}
+  type: Label
+  layout_properties: {column: ORKGPJ}
+  data_bindings:
+  - {property: text, code: 'self.item[''remaining_amount'']', writeback: false}

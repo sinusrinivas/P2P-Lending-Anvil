@@ -26,13 +26,15 @@ components:
 - name: data_grid_1
   properties:
     columns:
-    - {id: JKSDUP, title: User Photo, data_key: column_1}
-    - {id: VJQQOR, title: Loan Id, data_key: column_2}
-    - {id: OJLQEN, title: Borrower Name, data_key: column_3}
-    - {id: UTXKSD, data_key: column_4, title: Email}
+    - {id: JKSDUP, title: User Photo, data_key: column_1, width: 109.5714111328125, expand: false}
+    - {id: VJQQOR, title: Loan Id, data_key: column_2, width: 127.428466796875, expand: false}
+    - {id: OJLQEN, title: Borrower Name, data_key: column_3, width: 181.714111328125, expand: false}
+    - {id: UTXKSD, data_key: column_4, title: Email, expand: false, width: 210.8570556640625}
     - {id: AYZROF, data_key: column_5, title: Product Name}
     - {id: CATXVQ, data_key: column_6, title: EMI Number}
     - {id: OMWGJK, data_key: column_7, title: Total Repayments}
+    - {id: OBYVJU, data_key: column_1, title: Extra Fees}
+    - {id: ORKGPJ, data_key: column_1, title: Remaining Amount}
     role: tonal-data-grid
   type: DataGrid
   components:
