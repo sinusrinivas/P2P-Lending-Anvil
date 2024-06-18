@@ -8,8 +8,16 @@ import anvil.tables.query as q
 from anvil.tables import app_tables
 import anvil.server
 from anvil import *
-import plotly.graph_objects as go
-from datetime import datetime
+# import plotly.graph_objects as go
+# from datetime import datetime, date
+# import matplotlib.pyplot as plt
+# # from datetime import datetime, date
+import anvil.mpl_util
+import numpy as np
+import matplotlib.pyplot as plt
+from datetime import datetime, date
+import io
+import anvil.media
 
 # Define server function to navigate to the Invest Now form
 @anvil.server.callable
@@ -316,16 +324,70 @@ def get_combined_user_and_guarantor_data_2():
 #     return fig
 
 
+# @anvil.server.callable
+# def create_loan_disbursement_graph(loan_created, lender_accepted, loan_disbursed):
+#     # Convert timestamps to datetime objects if necessary
+#     dates = []
+#     if loan_created:
+#         dates.append(('Loan Created', convert_to_naive_datetime(loan_created)))
+#     if lender_accepted:
+#         dates.append(('Lender Accepted', convert_to_naive_datetime(lender_accepted)))
+#     if loan_disbursed:
+#         dates.append(('Loan Disbursed', convert_to_naive_datetime(loan_disbursed)))
+    
+#     # Sort dates by timestamp
+#     dates.sort(key=lambda x: x[1])
+    
+#     # Extract labels and timestamps
+#     labels = [label for label, _ in dates]
+#     timestamps = [timestamp for _, timestamp in dates]
+    
+#     # Create a Plotly figure
+#     fig = go.Figure()
+    
+#     # Add a scatter trace with lines
+#     fig.add_trace(go.Scatter(
+#         x=timestamps,
+#         y=labels,
+#         mode='lines+markers',
+#         line=dict(shape='linear'),
+#         marker=dict(size=10),
+#         text=labels,
+#         textposition='top center'
+#     ))
+    
+#     # Update layout
+#     fig.update_layout(
+#         title='Loan Disbursement Timeline',
+#         xaxis_title='Timestamp',
+#         yaxis_title='Stage',
+#         xaxis=dict(type='date')
+#     )
+    
+#     return fig
+
+# def convert_to_naive_datetime(dt):
+#     if isinstance(dt, datetime):
+#         # Convert aware datetime to naive datetime by removing timezone info
+#         return dt.replace(tzinfo=None)
+#     elif isinstance(dt, date):
+#         # Convert date to datetime and make it naive
+#         return datetime.combine(dt, datetime.min.time())
+#     else:
+#         raise TypeError(f"Expected datetime or date object, got {type(dt)}")
+
+
+
 @anvil.server.callable
 def create_loan_disbursement_graph(loan_created, lender_accepted, loan_disbursed):
     # Convert timestamps to datetime objects if necessary
     dates = []
     if loan_created:
-        dates.append(('Loan Created', convert_to_datetime(loan_created)))
+        dates.append(('Loan Created', convert_to_naive_datetime(loan_created)))
     if lender_accepted:
-        dates.append(('Lender Accepted', convert_to_datetime(lender_accepted)))
+        dates.append(('Lender Accepted', convert_to_naive_datetime(lender_accepted)))
     if loan_disbursed:
-        dates.append(('Loan Disbursed', convert_to_datetime(loan_disbursed)))
+        dates.append(('Loan Disbursed', convert_to_naive_datetime(loan_disbursed)))
     
     # Sort dates by timestamp
     dates.sort(key=lambda x: x[1])
@@ -334,34 +396,40 @@ def create_loan_disbursement_graph(loan_created, lender_accepted, loan_disbursed
     labels = [label for label, _ in dates]
     timestamps = [timestamp for _, timestamp in dates]
     
-    # Create a Plotly figure
-    fig = go.Figure()
+    # Create the plot
+    fig, ax = plt.subplots()
+    ax.plot(timestamps, labels, marker='o', linestyle='-', color='b')
     
-    # Add a scatter trace with lines
-    fig.add_trace(go.Scatter(
-        x=timestamps,
-        y=labels,
-        mode='lines+markers',
-        line=dict(shape='linear'),
-        marker=dict(size=10),
-        text=labels,
-        textposition='top center'
-    ))
+    # Annotate points with their labels
+    for i, label in enumerate(labels):
+        ax.annotate(label, (timestamps[i], labels[i]), textcoords="offset points", xytext=(0,10), ha='center')
     
-    # Update layout
-    fig.update_layout(
-        title='Loan Disbursement Timeline',
-        xaxis_title='Timestamp',
-        yaxis_title='Stage',
-        xaxis=dict(type='date')
-    )
+    # Set titles and labels
+    ax.set_title('Loan Disbursement Timeline')
+    ax.set_xlabel('Timestamp')
+    ax.set_ylabel('Stage')
     
-    return fig
+    # Rotate dates on x-axis for better readability
+    plt.xticks(rotation=45)
+    
+    # Adjust layout for better fit
+    plt.tight_layout()
+    
+    # Save plot to a BytesIO object
+    buf = io.BytesIO()
+    plt.savefig(buf, format='png')
+    buf.seek(0)
+    
+    # Create a Media object and return it
+    media = anvil.media.from_file(buf, 'image/png')
+    return media
 
-def convert_to_datetime(dt):
+def convert_to_naive_datetime(dt):
     if isinstance(dt, datetime):
-        return dt
-    elif isinstance(dt, datetime):
+        # Convert aware datetime to naive datetime by removing timezone info
+        return dt.replace(tzinfo=None)
+    elif isinstance(dt, date):
+        # Convert date to datetime and make it naive
         return datetime.combine(dt, datetime.min.time())
     else:
         raise TypeError(f"Expected datetime or date object, got {type(dt)}")
