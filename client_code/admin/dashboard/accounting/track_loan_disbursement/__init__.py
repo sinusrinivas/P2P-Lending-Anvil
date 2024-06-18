@@ -118,7 +118,6 @@
     
 
 
-# Import necessary modules
 from ._anvil_designer import track_loan_disbursementTemplate
 from anvil import *
 import anvil.tables as tables
@@ -136,27 +135,15 @@ class track_loan_disbursement(track_loan_disbursementTemplate):
 
         # Hide the DataGrid initially
         self.data_grid_1.visible = False
-        self.button_filter_click()
 
     def date_picker_1_change(self, **event_args):
         """This method is called when the selected date changes"""
         self.selected_date = self.date_picker_1.date
         print("Selected date:", self.selected_date)
 
-    def button_filter_click(self, **event_args):
-        # Event handler for filter button click
         if self.selected_date:
-            selected_date = self.selected_date
-            print("Filter button clicked with date:", selected_date)
-
-            # Normalize selected_date to remove the time component
-            start_date = datetime.combine(selected_date, datetime.min.time())
-            end_date = datetime.combine(selected_date, datetime.max.time())
-
             # Fetch loans from the database
             loans = app_tables.fin_loan_details.search()
-            print(loans['loan_disbursed_timestamp'].date())
-            
 
             # Filter loans with status 'disbursed' or 'approved' and matching date
             filtered_loans = [
@@ -178,18 +165,19 @@ class track_loan_disbursement(track_loan_disbursementTemplate):
                 }
                 for loan in loans
                 if loan['loan_updated_status'] in ["disbursed", "approved"]
-                and (loan['loan_disbursed_timestamp'].date() == selected_date or
-                     loan['lender_accepted_timestamp'].date() == selected_date)
+                and (
+                    (loan['loan_disbursed_timestamp'] and loan['loan_disbursed_timestamp'].date() == self.selected_date) or
+                    (loan['lender_accepted_timestamp'] and loan['lender_accepted_timestamp'].date() == self.selected_date)
+                )
             ]
 
             if not filtered_loans:
-                Notification(f"No Loans with status 'disbursed' or 'approved' found for {selected_date}!").show()
+                Notification(f"No Loans with status 'disbursed' or 'approved' found for {self.selected_date}!").show()
                 self.data_grid_1.visible = False  # Hide the DataGrid if no loans found
             else:
                 # Update RepeatingPanel with filtered results
                 self.repeating_panel_1.items = filtered_loans
                 self.data_grid_1.visible = True  # Make the DataGrid visible
         else:
-            # Handle case where date is not selected
             Notification("Please select a date!").show()
             self.data_grid_1.visible = False  # Hide the DataGrid if no date is selected
