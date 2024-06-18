@@ -20,21 +20,35 @@ components:
   type: Label
   layout_properties: {column: OJLQEN}
   data_bindings:
-  - {property: text, code: 'self.item[''interest_rate'']', writeback: false}
+  - {property: text, code: 'self.item[''ascend_score'']', writeback: false}
 - name: label_4
   properties: {align: center}
   type: Label
   layout_properties: {column: CVLTWE}
   data_bindings:
   - {property: text, code: 'self.item[''loan_updated_status'']', writeback: false}
-- name: link_1
-  properties: {text: View Details, align: center}
-  type: Link
-  layout_properties: {column: BHQPOP}
-  event_bindings: {click: link_1_click}
 - name: link_2
-  properties: {}
+  properties: {align: center}
   type: Link
   layout_properties: {column: YFTYVF}
   data_bindings:
   - {property: text, code: 'self.item[''loan_id'']', writeback: false}
+  event_bindings: {click: link_2_click}
+- name: image_1
+  properties: {}
+  type: Image
+  layout_properties: {column: BHQPOP}
+  data_bindings:
+  - {property: source, code: 'self.item[''user_photo'']', writeback: false}
+- name: label_5
+  properties: {align: center}
+  type: Label
+  layout_properties: {column: FRXVBZ}
+  data_bindings:
+  - {property: text, code: 'self.item[''lender_accepted_timestamp'']', writeback: false}
+- name: label_6
+  properties: {align: center}
+  type: Label
+  layout_properties: {column: YNDCBJ}
+  data_bindings:
+  - {property: text, code: 'self.item[''loan_disbursed_timestamp'']', writeback: false}
