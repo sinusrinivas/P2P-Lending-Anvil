@@ -35,7 +35,7 @@ components:
   - {property: text, code: 'self.item[''loan_id'']', writeback: false}
   event_bindings: {click: link_2_click}
 - name: image_1
-  properties: {}
+  properties: {height: 54}
   type: Image
   layout_properties: {column: BHQPOP}
   data_bindings:
