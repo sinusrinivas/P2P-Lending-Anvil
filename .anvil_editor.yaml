@@ -12,6 +12,7 @@ unique_ids:
     admin.dashboard.accounting.track_loan_disbursement.RowTemplate41: V4SUJRVM7BKQHVGPYRVCXXDAGPG3SZDS
     admin.dashboard.reporting_and_analytical_modules.key_metrice.key_metricx_details: '1718189786072469496446880.90173'
     admin.dashboard.manage_ascend_score.add_subcategory.ItemTemplate85: '171050004147884384375844.5273'
+    admin.dashboard.loan_servicing.collection_of_repayment.RowTemplate48: '1718621815398652009751098.9735'
     ? borrower.borrower_registration_forms.star_1_borrower_registration_form_1_education.star_1_borrower_registration_form_education_10th_class
     : '1706674255415664927025189.0149'
     admin.dashboard.manage_ascend_score.view_ascend_subcategory.ItemTemplate38: '17095388729813876844709.4927883'
@@ -79,6 +80,7 @@ unique_ids:
     admin.user_issue.user_buganalysis.RowTemplate17: '1701189107287981500115093.1753'
     borrower.ots_dashboard: '1707465922694896334564412.1901'
     borrower.dashboard.borrower_view_profile: '1716954028565590462435483.8744'
+    admin.dashboard.loan_servicing.collection_of_repayment: '1718621746546177924039900.2011'
     ? borrower.borrower_registration_forms.star_1_borrower_registration_form_2_employment.star_1_borrower_registration_form_2_employment_business_1
     : '1700570064478378100736204.996'
     bank_users.main_form.products_main_form.personal_loan.credit_card_loan: '1713872914654662428552963.6232'

@@ -381,6 +381,9 @@ db_schema:
     - name: npa_fee
       admin_ui: {width: 200}
       type: number
+    - name: total_remaining_amount
+      admin_ui: {width: 200}
+      type: number
   fin_guarantor_details:
     client: full
     server: full
@@ -896,6 +899,14 @@ db_schema:
       admin_ui: {width: 200, order: 10.5}
       type: number
     title: fin_extends_loan
+  fin_issue_category:
+    client: full
+    server: full
+    columns:
+    - name: issue_category
+      admin_ui: {order: 0, width: 200}
+      type: string
+    title: fin_issue_category
   fin_manage_credit_limit:
     title: fin_manage_credit_limit
     client: none
@@ -935,13 +946,13 @@ db_schema:
       admin_ui: {width: 200}
       type: string
   fin_category:
+    title: fin_category
     client: full
     server: full
     columns:
     - name: category
-      admin_ui: {width: 200, order: 0}
+      admin_ui: {width: 200}
       type: string
-    title: fin_category
   fin_user_profile:
     client: full
     server: full
