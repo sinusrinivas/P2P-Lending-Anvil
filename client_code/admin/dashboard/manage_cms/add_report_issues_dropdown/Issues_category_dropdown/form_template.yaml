@@ -25,7 +25,7 @@ components:
   layout_properties: {grid_position: 'UIUSFV,EEMXNP'}
   components:
   - name: image_4_copy
-    properties: {source: _/theme/admin/dashboard/manage_cms/qualification.png, display_mode: shrink_to_fit, height: '100'}
+    properties: {source: _/theme/manage_issues/loan%20(7).png, display_mode: shrink_to_fit, height: '100'}
     type: Image
     layout_properties: {grid_position: 'QGZTNW,PVJEPO'}
     event_bindings: {mouse_up: image_4_copy_mouse_up}
