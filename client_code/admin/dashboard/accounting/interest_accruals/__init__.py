@@ -1,4 +1,4 @@
-from ._anvil_designer import intersest_accrualsTemplate
+from ._anvil_designer import interest_accrualsTemplate
 from anvil import *
 import anvil.server
 import anvil.google.auth, anvil.google.drive
@@ -9,7 +9,7 @@ import anvil.tables.query as q
 from anvil.tables import app_tables
 
 
-class intersest_accruals(intersest_accrualsTemplate):
+class interest_accruals(interest_accrualsTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
@@ -60,8 +60,8 @@ class intersest_accruals(intersest_accrualsTemplate):
     # Display the filtered lenders in a repeating panel or similar component
     self.repeating_panel_1.items = filtered_lenders
     
-    # Display the total interest amount for closed loans
-    self.label_total_interest_amount.text = total_interest_amount
+    # # Display the total interest amount for closed loans
+    # self.label_total_interest_amount.text = total_interest_amount
 
 
 
