@@ -18,5 +18,5 @@ class ItemTemplate113(ItemTemplate113Template):
 
   def link_1_click(self, **event_args):
     item_data = self.item
-    open_form('admin.dashboard.manage_cms.loan_subcategory_dropdown', selected_row=item_data)
+    open_form('admin.dashboard.manage_cms.loan_subcategory_dropdown.edit_technical_issue', selected_row=item_data)
     

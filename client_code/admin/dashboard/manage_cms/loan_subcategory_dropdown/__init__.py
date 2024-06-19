@@ -17,30 +17,31 @@ class loan_subcategory_dropdown(loan_subcategory_dropdownTemplate):
   def button_1_click(self, **event_args):
     open_form('admin.dashboard.manage_cms')
 
-  def borrower_loan_issue(self, **event_args): 
+  def borrower_loan_issue(self, **event_args):
     self.column_panel_10.visible = True
     self.column_panel_11_copy.visible = False
     self.column_panel_12_copy_2.visible = False
     self.refresh()
 
+
   def lender_loan_issue(self, **event_args):
-    
     self.column_panel_10.visible = False
     self.column_panel_11_copy.visible = False
     self.column_panel_12_copy_2.visible = True
     self.refresh()
 
+
   def technical_issue(self, **event_args):
-   
     self.column_panel_10.visible = False
     self.column_panel_11_copy.visible = True
     self.column_panel_12_copy_2.visible = False
     self.refresh()
 
+
   def refresh(self):
-    self.repeating_panel_1.items = app_tables.fin_subcategory_technical_issue.search()
-    self.repeating_panel_2.items = app_tables.fin_lender_subcategory_loan_issue.search()
-    self.repeating_panel_3.items = app_tables.fin_borrower_subcategory_loan_issue.search()
+    self.repeating_panel_1.items = app_tables.fin_borrower_subcategory_loan_issue.search()
+    self.repeating_panel_2.items = app_tables.fin_subcategory_technical_issue.search()
+    self.repeating_panel_3.items = app_tables.fin_lender_subcategory_loan_issue.search()
 
   def borrower_issue(self, **event_args):
     enter_data = self.text_box_9.text
