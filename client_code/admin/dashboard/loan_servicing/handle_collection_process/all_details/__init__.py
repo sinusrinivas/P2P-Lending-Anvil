@@ -10,8 +10,28 @@ from anvil.tables import app_tables
 
 
 class all_details(all_detailsTemplate):
-  def __init__(self, **properties):
+  def __init__(self,selected_row, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
+    self.selected_row = selected_row
 
-    # Any code you write here will run before the form opens.
+
+    self.borrower_id.text = f"{selected_row['borrower_customer_id']}"
+    self.loan_id.text = f"{selected_row['loan_id']}"
+    self.borrower_full_name.text = f"{selected_row['borrower_full_name']}"
+    self.borrower_email.text = f"{selected_row['borrower_email_id']}"
+    self.customer_address.text = f"{selected_row['street_adress_1']}"
+    self.product_name.text = f"{selected_row['product_name']}"
+    self.relative_name.text = f"{selected_row['guarantor_name']}"
+    self.relative_relation.text = f"{selected_row['another_person']}"
+    self.relative_number.text = f"{selected_row['guarantor_mobile_no']}"
+    self.another_email.text = f"{selected_row['another_email']}"
+    self.relative_address.text = f"{selected_row['guarantor_address']}"
+    self.emi_number.text = f"{selected_row['emi_number']}"
+    self.remaining_amount.text = f"{selected_row['total_remaining_amount']}"
+
+
+
+  def button_1_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    open_form('admin.dashboard.loan_servicing.handle_collection_process')
