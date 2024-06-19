@@ -35,7 +35,7 @@ class Issues_category_dropdown(Issues_category_dropdownTemplate):
     if enter_data not in valid_statuses:
       alert("Please enter a valid Loan Issue Category: 'Loan Issues', 'Technical Issue', 'Other'.")
       return
-    new_row = app_tables.fin_issue_category.add_row(issue_category=enter_data)
+    app_tables.fin_issue_category.add_row(issue_category=enter_data)
     self.text_box_2.text = ' '
     self.refresh()
 

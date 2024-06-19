@@ -96,7 +96,7 @@ components:
     type: TextBox
     layout_properties: {grid_position: 'LOSRQA,OXEFAE'}
     data_bindings:
-    - {property: placeholder, code: 'self.item[''borrower_subcategory_loan_issue'']', writeback: false}
+    - {property: text, code: 'self.item[''borrower_subcategory_loan_issue'']', writeback: false}
   - name: borrower_issue
     properties: {role: null, bold: true, align: center, spacing_above: small, background: '#0b2547', icon: '', underline: false, font: '', icon_align: left, foreground: 'theme:On Primary', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: ADD}
     type: Button
@@ -129,6 +129,8 @@ components:
     properties: {role: outlined, bold: false, align: left, placeholder: '', spacing_above: small, background: '', type: text, underline: false, font: '', hide_text: false, foreground: '', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: ''}
     type: TextBox
     layout_properties: {grid_position: 'LOSRQA,OXEFAE'}
+    data_bindings:
+    - {property: placeholder, code: 'self.item[''lender_subcategory_loan_issue'']', writeback: false}
   - name: technical_issue
     properties: {role: null, bold: true, align: center, spacing_above: small, background: '#0b2547', icon: '', underline: false, font: '', icon_align: left, foreground: 'theme:On Primary', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: ADD}
     type: Button
@@ -176,6 +178,5 @@ components:
     properties: {item_template: admin.dashboard.manage_cms.loan_subcategory_dropdown.ItemTemplate114}
     type: RepeatingPanel
     layout_properties: {grid_position: 'VRTHOW,PCZMQL'}
-    data_bindings:
-    - {property: item_template, code: 'self.item['''']', writeback: false}
+    data_bindings: []
 is_package: true
