@@ -65,6 +65,10 @@ components:
     properties: {role: input-prompt, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '#000337', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: 'EMI Number :'}
     type: Label
     layout_properties: {grid_position: 'NESHTV,LQZNUS DVHWDH,IJKAEY'}
+  - name: label_8
+    properties: {text: 'Status :', bold: true, role: input-prompt}
+    type: Label
+    layout_properties: {grid_position: 'NESHTV,LQZNUS PJBMWU,VDKXDM'}
   - name: label_3
     properties: {text: 'Remaining Amount :', bold: true, role: input-prompt}
     type: Label
@@ -117,6 +121,10 @@ components:
     properties: {role: input-prompt}
     type: Label
     layout_properties: {grid_position: 'NESHTV,RGKGXI RDUIWD,UTLNMR'}
+  - name: status
+    properties: {role: input-prompt}
+    type: Label
+    layout_properties: {grid_position: 'NESHTV,RGKGXI SSQWOI,OONFXT'}
   - name: remaining_amount
     properties: {role: input-prompt}
     type: Label

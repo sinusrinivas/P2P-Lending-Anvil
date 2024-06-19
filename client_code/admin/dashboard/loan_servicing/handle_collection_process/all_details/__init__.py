@@ -29,6 +29,7 @@ class all_details(all_detailsTemplate):
     self.relative_address.text = f"{selected_row['guarantor_address']}"
     self.emi_number.text = f"{selected_row['emi_number']}"
     self.remaining_amount.text = f"{selected_row['total_remaining_amount']}"
+    self.status.text = f"{selected_row['status']}"
 
   #   self.populate_field_engineer_dropdown()
   
