@@ -5,7 +5,7 @@ components:
   type: form:admin.dashboard.home_button_admin
   layout_properties: {grid_position: 'VZCAAT,BYLRIM', full_width_row: true}
 - name: column_panel_1
-  properties: {col_widths: '{"MBWJOT":15,"LQZNUS":25,"RGKGXI":15,"DCDWDF":5}'}
+  properties: {col_widths: '{"MBWJOT":15,"LQZNUS":25,"RGKGXI":15,"DCDWDF":5}', role: outlined-card}
   type: ColumnPanel
   layout_properties: {grid_position: 'VSPAHF,XZUAUU'}
   components:
@@ -18,7 +18,7 @@ components:
     type: Spacer
     layout_properties: {grid_position: 'NESHTV,MBWJOT'}
   - name: label_20
-    properties: {text: 'Borrower Customer Id :', bold: true}
+    properties: {text: 'Borrower Customer Id :', bold: true, role: null}
     type: Label
     layout_properties: {grid_position: 'NESHTV,LQZNUS OUSBMA,DLAZHX'}
   - name: label_5
@@ -93,26 +93,26 @@ components:
     properties: {}
     type: Label
     layout_properties: {grid_position: 'NESHTV,RGKGXI YZGOLG,OODLRU'}
-  - name: label_7
+  - name: relative_name
     properties: {}
     type: Label
     layout_properties: {grid_position: 'NESHTV,RGKGXI FDJCSV,NJSHFS'}
-  - name: label_8
+  - name: relative_number
     properties: {}
     type: Label
     layout_properties: {grid_position: 'NESHTV,RGKGXI EACGHZ,DYMUCV'}
-  - name: lender_email
+  - name: relative_address
     properties: {}
     type: Label
     layout_properties: {grid_position: 'NESHTV,RGKGXI VLZGKA,KYEFRL'}
-  - name: days_left
-    properties: {}
-    type: Label
-    layout_properties: {grid_position: 'NESHTV,RGKGXI SQFKKP,OYFPCU'}
   - name: emi_number
     properties: {}
     type: Label
-    layout_properties: {grid_position: 'NESHTV,RGKGXI RPCOGG,UPYMNA'}
+    layout_properties: {grid_position: 'NESHTV,RGKGXI RDUIWD,UTLNMR'}
+  - name: remaining_amount
+    properties: {}
+    type: Label
+    layout_properties: {grid_position: 'NESHTV,RGKGXI SQFKKP,OYFPCU'}
   - name: spacer_2
     properties: {height: 263.142822265625}
     type: Spacer
