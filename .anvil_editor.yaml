@@ -49,6 +49,7 @@ unique_ids:
     admin.dashboard.loan_management.view_loans.default_loans.view_profile_7: '1707111678276505013469002.38684'
     borrower.dashboard.view_loans.payment_details_b.RowTemplate36: IW7M6TGHE4BSCPC74JZ3OILIU2SA4P7S
     borrower.navigation_bar_main: '1706170177428524969843705.30896'
+    admin.dashboard.accounting.intersest_accruals.achart: '171879220094867135852410.70708'
     admin.dashboard.manage_cms.add_borrower_dropdown_details.ItemTemplate84: '171048618250937922955685.79185'
     borrower.dashboard.new_loan_request.check.RowTemplate27: 6PXNCRPFP2YLJNMMK5J6VCSRINAZI4SS
     lendor.lendor_registration_forms.dasboard_about_lendor_registration_form: '1710756945155550991066248.7977'
