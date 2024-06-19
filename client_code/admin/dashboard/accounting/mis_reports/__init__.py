@@ -54,7 +54,7 @@ class mis_reports(mis_reportsTemplate):
     
     # Convert to DataFrame if needed (assuming fetching as dictionary)
     loan_details_df = pd.DataFrame(list(loan_details))
-    lenders_df = pd.DataFrame(list(lenders))
+    lenders_df = pd.DataFrame(list(user))
     borrowers_df = pd.DataFrame(list(borrowers))
 
     # Calculate metrics
@@ -63,8 +63,8 @@ class mis_reports(mis_reportsTemplate):
     no_of_loans_foreclosed = loan_details_df[loan_details_df['loan_updated_status'] == 'foreclosure'].shape[0]
     no_of_loans_extended = loan_details_df[loan_details_df['loan_updated_status'] == 'extension'].shape[0]
     amount_disbursed = loan_details_df[loan_details_df['loan_updated_status'] == 'disbursed loan']['amount'].sum()
-    no_of_borrowers = user[borrowers_df['usertype']]
-    no_of_lenders = lenders_df.shape[0]
+    no_of_borrowers = user[borrowers_df['usertype'] == 'borrower'].shape[0]
+    no_of_lenders = user[lenders_df['usertype'] == 'lender'].shape[0]
     lenders_commitment = lenders_df['commitment'].sum()
 
     # Data for the pie chart
