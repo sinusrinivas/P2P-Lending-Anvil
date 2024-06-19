@@ -9,7 +9,7 @@ from anvil.tables import app_tables
 import anvil.server
 from anvil import *
 import math
-from anvil.google.maps import geocode
+# from anvil.google.maps import geocode
 
 
 

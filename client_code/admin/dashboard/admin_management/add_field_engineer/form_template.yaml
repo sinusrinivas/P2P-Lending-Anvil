@@ -15,7 +15,7 @@ components:
   layout_properties: {grid_position: 'BSPSIY,SJBAFG'}
   components:
   - name: label_1
-    properties: {text: 'Enter Admin Details ', bold: true, align: center, font_size: 18, foreground: 'theme:On Primary'}
+    properties: {text: 'Enter Field Engineer Details ', bold: true, align: center, font_size: 18, foreground: 'theme:On Primary'}
     type: Label
     layout_properties: {}
 - name: label_2

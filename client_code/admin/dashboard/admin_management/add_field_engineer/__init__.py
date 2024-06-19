@@ -108,6 +108,7 @@ class add_field_engineer(add_field_engineerTemplate):
         self.role.selected_value = None
         self.create_password_text.text = ""
         self.re_enter_password.text = ""
+        self.address_text_box.text = ""
 
   def button_1_click(self, **event_args):
       """This method is called when the button is clicked"""
