@@ -1,12 +1,6 @@
 is_package: true
 container: {type: DataRowPanel}
 components:
-- name: label_1
-  properties: {align: center}
-  type: Label
-  layout_properties: {column: JKSDUP}
-  data_bindings:
-  - {property: text, code: 'self.item[''user_photo'']', writeback: false}
 - name: label_2
   properties: {align: center}
   type: Label
@@ -44,3 +38,7 @@ components:
   data_bindings:
   - {property: text, code: 'self.item[''customer_id'']', writeback: false}
   event_bindings: {click: link_1_click}
+- name: image_1
+  properties: {height: 51.333251953125}
+  type: Image
+  layout_properties: {column: JKSDUP}

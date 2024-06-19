@@ -50,8 +50,8 @@ class accounting(accountingTemplate):
 
   def button_14_click(self, **event_args):
     """This method is called when the button is clicked"""
-    open_form('admin.dashboard.accounting.intersest_accruals')
+    open_form('admin.dashboard.accounting.interest_accruals')
 
   def image_4_copy_10_mouse_up(self, x, y, button, **event_args):
     """This method is called when a mouse button is released on this component"""
-    open_form('admin.dashboard.accounting.intersest_accruals')
+    open_form('admin.dashboard.accounting.interest_accruals')
