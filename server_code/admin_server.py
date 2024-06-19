@@ -119,7 +119,23 @@ def find_highest_customer_id():
             highest_id = customer_id
     return highest_id
 
+@anvil.server.callable
+def generate_field_engineer_id():
+    full_table = app_tables.fin_user_profile.search()
+    if full_table:
+        highest_customer_id = find_highest_customer_id()
+        return highest_customer_id + 1
+    else:
+        return 100000
 
+# def find_highest_customer_id():
+#     table_data = app_tables.fin_user_profile.search()
+#     highest_id = 99999
+#     for row in table_data:
+#         customer_id = row['customer_id']
+#         if customer_id > highest_id:
+#             highest_id = customer_id
+#     return highest_id
 
 import bcrypt
 
