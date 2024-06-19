@@ -53,7 +53,7 @@ components:
     layout_properties: {grid_position: 'AEPNUT,OMVPMJ'}
     event_bindings: {click: link_10_click}
     name: link_10
-  - properties: {height: 146.25}
+  - properties: {height: 207.800048828125}
     type: Spacer
     layout_properties: {grid_position: 'YAJAFA,RLWNPJ'}
     name: spacer_12

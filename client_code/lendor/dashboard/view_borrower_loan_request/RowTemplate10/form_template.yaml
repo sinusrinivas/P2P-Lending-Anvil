@@ -1,4 +1,6 @@
-container: {type: DataRowPanel}
+container:
+  type: DataRowPanel
+  event_bindings: {refreshing_data_bindings: form_refreshing_data_bindings}
 components:
 - type: Label
   properties: {}
@@ -19,7 +21,7 @@ components:
   data_bindings:
   - {property: text, code: 'self.item[''borrower_full_name'']', writeback: false}
 - type: Button
-  properties: {role: null, align: center, tooltip: '', border: '', enabled: true, foreground: '#0876e8', visible: true, text: view details, font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false, background: '', bold: true, underline: false, icon: ''}
+  properties: {role: null, bold: true, align: center, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '#0876e8', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: view details}
   name: button_1
   layout_properties: {column: IZHOQY}
   event_bindings: {click: button_1_click}
