@@ -16,7 +16,7 @@ services:
 - source: /runtime/services/anvil/secrets.yml
   client_config: {}
   server_config: {}
-startup: {type: form, module: admin.dashboard}
+startup: {type: form, module: admin.dashboard.admin_management.add_field_engineer.view_field_engineer}
 package_name: pip_install_reportlab
 allow_embedding: false
 name: P2P Lending App 1
@@ -289,9 +289,6 @@ db_schema:
     - name: full_name
       admin_ui: {width: 200, order: 1}
       type: string
-    - name: mobile_no
-      admin_ui: {width: 200, order: 2}
-      type: string
     - name: photo
       admin_ui: {width: 200, order: 3}
       type: media
@@ -319,6 +316,12 @@ db_schema:
     - name: field_engineer_id
       admin_ui: {order: 11, width: 200}
       type: number
+    - name: mobile_no
+      admin_ui: {width: 200, order: 0.5}
+      type: number
+    - name: address
+      admin_ui: {width: 200, order: 12}
+      type: string
     title: fin_field_engineers
   fin_admin_ascend_categories:
     client: full

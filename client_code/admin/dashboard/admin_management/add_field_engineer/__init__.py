@@ -46,6 +46,7 @@ class add_field_engineer(add_field_engineerTemplate):
         email = self.admin_email.text 
         name = self.admin_name.text
         mobile_no = self.mobile_number.text
+        address = self.address_text_box.text
         dob = self.dob.date
         gender = self.gender.selected_value
         role = self.role.selected_value
@@ -58,7 +59,7 @@ class add_field_engineer(add_field_engineerTemplate):
         customer_id = self.customer_id
         
         # Validation
-        if not all([email, name, mobile_no, dob, gender, role, password]):
+        if not all([email, name, mobile_no, dob, gender, role, password ,address]):
             alert("Fill all the fields")
             return
 
@@ -92,7 +93,7 @@ class add_field_engineer(add_field_engineerTemplate):
 
         hashed_password = anvil.server.call('hash_password', password)
 
-        result = admin.add_admin_details(email, name, mobile_no, dob, gender, role, hashed_password, created_date, status, ref_admin_name, ref_admin_email, customer_id)
+        result = admin.add_engineers_details(email, name, mobile_no, dob, gender, role, hashed_password, created_date, status, ref_admin_name, ref_admin_email, customer_id,address)
 
         alert("data added succesfully!")
         open_form('admin.dashboard.admin_management')
