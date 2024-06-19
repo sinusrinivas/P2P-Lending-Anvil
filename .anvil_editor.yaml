@@ -12,6 +12,7 @@ unique_ids:
     admin.dashboard.accounting.track_loan_disbursement.RowTemplate41: V4SUJRVM7BKQHVGPYRVCXXDAGPG3SZDS
     admin.dashboard.reporting_and_analytical_modules.key_metrice.key_metricx_details: '1718189786072469496446880.90173'
     admin.dashboard.manage_ascend_score.add_subcategory.ItemTemplate85: '171050004147884384375844.5273'
+    admin.dashboard.accounting.interest_accruals.RowTemplate50: '1718777004070883146434297.1198'
     admin.dashboard.loan_servicing.collection_of_repayment.RowTemplate48: '1718621815398652009751098.9735'
     ? borrower.borrower_registration_forms.star_1_borrower_registration_form_1_education.star_1_borrower_registration_form_education_10th_class
     : '1706674255415664927025189.0149'
@@ -39,6 +40,7 @@ unique_ids:
     lendor.dashboard.lender_view_loans.RowTemplate24: '1703182023237906200953522.0261'
     admin.dashboard.manage_cms.add_borrower_dropdown_details.ItemTemplate8: '1706093214277747565915590.0005'
     admin.dashboard.manage_ascend_score.add_subcategory: '1709540917057950225264241.7568'
+    admin.dashboard.accounting.interest_accruals.accruals_chart: '171879220094867135852410.70708'
     lendor.dashboard.today_dues.View_Details: '170356566713748309638072.5887'
     admin.dashboard.manage_ascend_score.view_ascend_group.ItemTemplate76: '1709796398278162864431750.42664'
     lendor.dashboard.lender_portfolio_first_page.RowTemplate32: '1717855347011920897652934.3423'
@@ -340,6 +342,7 @@ unique_ids:
     admin.dashboard.manage_cms.add_general_dropdowns: '1710397494541671512734929.8624'
     admin.dashboard.customer_management.handles_customer_registration.borrowers.view_profile.update_form: '1699967990279922551849592.2898'
     admin.dashboard.loan_management.view_loans.not_payable_amount.ItemTemplate25: '1707202809143429044958655.44635'
+    admin.dashboard.accounting.interest_accruals: '1718773357148755763180389.2222'
     lendor.dashboard.lender_view_loans.ItemTemplate49: '1709611089771787997070325.4371'
     admin.dashboard.accounting.performance_tracker: '1701242878909114559440962.97266'
     lendor.dashboard.view_borrower_loan_request.Borr_loan_request: '1700542763128106365112272.9714'
