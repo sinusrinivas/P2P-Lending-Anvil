@@ -778,7 +778,7 @@ db_schema:
       admin_ui: {width: 200}
       type: string
   fin_lender_subcategory_loan_issue:
-    client: none
+    client: full
     server: full
     columns:
     - name: lender_subcategory_loan_issue
@@ -1411,7 +1411,7 @@ db_schema:
       type: bool
     title: fin_wallet
   fin_subcategory_technical_issue:
-    client: none
+    client: full
     server: full
     columns:
     - name: subcategory_technical_issue

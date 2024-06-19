@@ -25,7 +25,7 @@ class edit_lender_issue(edit_lender_issueTemplate):
     if not update:
         alert("Please enter a valid data.")
         return
-    self.selected_row['lendor_subcategory_loan_issue'] = update
+    self.selected_row['lender_subcategory_loan_issue'] = update
     self.selected_row.update()
     alert("Changes saved successfully!")
     open_form('admin.dashboard.manage_cms.manage_issues_dropdown')
