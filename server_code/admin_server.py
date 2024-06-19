@@ -12,6 +12,7 @@ import math
 from anvil.google.maps import geocode
 
 
+
 def haversine(lat1, lon1, lat2, lon2):
     R = 6371  # Radius of the Earth in km
     dLat = math.radians(lat2 - lat1)
