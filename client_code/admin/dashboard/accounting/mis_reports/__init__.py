@@ -24,6 +24,7 @@
 
 
 
+
 from ._anvil_designer import mis_reportsTemplate
 from anvil import *
 import plotly.graph_objects as go
@@ -34,7 +35,6 @@ import anvil.users
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
-import pandas as pd
 
 
 class mis_reports(mis_reportsTemplate):
@@ -47,32 +47,26 @@ class mis_reports(mis_reportsTemplate):
 
   def plot_data(self):
     # Fetch data from tables
-    loan_details = app_tables.fin_loan_details.search(loan_updated_status=q.any_of(q.like('closed loan'), q.like('foreclosure'), q.like('extension'), q.like('disbursed loan')))
+    loan_details = app_tables.fin_loan_details.search(loan_updated_status=q.any_of('closed loan', 'rejected', 'disbursed loan'))
     lenders = app_tables.fin_lender.search()
-    borrowers = app_tables.fin_borrower.search()
-    user = app_tables.fin_user_profile.search(usertype=q.any_of(q.any_of('lender'),q.any_of('borrower')))
-    
-    # Convert to DataFrame if needed (assuming fetching as dictionary)
-    loan_details_df = pd.DataFrame(list(loan_details))
-    lenders_df = pd.DataFrame(list(user))
-    borrowers_df = pd.DataFrame(list(borrowers))
+    users = app_tables.fin_user_profile.search(usertype=q.any_of('lender', 'borrower'))
 
     # Calculate metrics
-    no_of_loans_disbursed = loan_details_df[loan_details_df['loan_updated_status'] == 'disbursed loan'].shape[0]
-    no_of_loans_closed = loan_details_df[loan_details_df['loan_updated_status'] == 'closed loan'].shape[0]
-    no_of_loans_foreclosed = loan_details_df[loan_details_df['loan_updated_status'] == 'foreclosure'].shape[0]
-    no_of_loans_extended = loan_details_df[loan_details_df['loan_updated_status'] == 'extension'].shape[0]
-    amount_disbursed = loan_details_df[loan_details_df['loan_updated_status'] == 'disbursed loan']['amount'].sum()
-    no_of_borrowers = user[borrowers_df['usertype'] == 'borrower'].shape[0]
-    no_of_lenders = user[lenders_df['usertype'] == 'lender'].shape[0]
-    lenders_commitment = lenders_df['commitment'].sum()
+    no_of_loans_disbursed = len([loan for loan in loan_details if loan['loan_updated_status'] == 'disbursed loan'])
+    no_of_loans_closed = len([loan for loan in loan_details if loan['loan_updated_status'] == 'closed loan'])
+    no_of_loans_rejected = len([loan for loan in loan_details if loan['loan_updated_status'] == 'rejected'])
+    # no_of_loans_extended = len([loan for loan in loan_details if loan['loan_updated_status'] == 'extension'])
+    amount_disbursed = sum([loan['lender_returns'] for loan in loan_details])
+    no_of_borrowers = len([user for user in users if user['usertype'] == 'borrower'])
+    no_of_lenders = len([user for user in users if user['usertype'] == 'lender'])
+    lenders_commitment = sum([lender['return_on_investment'] for lender in lenders])
 
     # Data for the pie chart
     values = [
         no_of_loans_disbursed,
         no_of_loans_closed,
-        no_of_loans_foreclosed,
-        no_of_loans_extended,
+        no_of_loans_rejected,
+        # no_of_loans_extended,
         amount_disbursed,
         no_of_borrowers,
         no_of_lenders,
@@ -81,8 +75,8 @@ class mis_reports(mis_reportsTemplate):
     labels = [
         'No of Loans Disbursed: {}'.format(no_of_loans_disbursed),
         'No of Loans Closed: {}'.format(no_of_loans_closed),
-        'No of Loans Foreclosed: {}'.format(no_of_loans_foreclosed),
-        'No of Loans Extended: {}'.format(no_of_loans_extended),
+        'No of Loans Rejected: {}'.format(no_of_loans_rejected),
+        # 'No of Loans Extended: {}'.format(no_of_loans_extended),
         'Amount Disbursed: {}'.format(amount_disbursed),
         'No of Borrowers: {}'.format(no_of_borrowers),
         'No of Lenders: {}'.format(no_of_lenders),
@@ -96,8 +90,7 @@ class mis_reports(mis_reportsTemplate):
     fig.update_layout(title_text='Financial Loan Details')
 
     # Embed the plot in the Anvil app
-    self.plot_pane.clear()
-    self.plot_pane.add_component(go.FigureWidget(fig))
+    self.plot_1.figure = fig
 
   def button_1_click(self, **event_args):
     """This method is called when the button is clicked"""
