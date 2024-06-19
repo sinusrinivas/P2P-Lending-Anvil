@@ -8,7 +8,7 @@ import anvil.tables.query as q
 from anvil.tables import app_tables
 import anvil.server
 from anvil import *
-import plotly.graph_objects as go
+
 
 # Define server function to navigate to the Invest Now form
 @anvil.server.callable
@@ -292,24 +292,3 @@ def get_combined_user_and_guarantor_data_2():
         })
 
     return combined_data
-@anvil.server.callable
-def create_loan_disbursement_graph(loan_created, lender_accepted, loan_disbursed):
-    # Create scatter plot traces directly
-    loan_created_trace = go.Scatter(x=[loan_created], y=['Loan Created'], mode='markers', name='Loan Created', marker=dict(color='blue'))
-    lender_accepted_trace = go.Scatter(x=[lender_accepted], y=['Lender Accepted'], mode='markers', name='Lender Accepted', marker=dict(color='orange'))
-    loan_disbursed_trace = go.Scatter(x=[loan_disbursed], y=['Loan Disbursed'], mode='markers', name='Loan Disbursed', marker=dict(color='green'))
-
-    # Create the figure with traces
-    fig = go.Figure(data=[loan_created_trace, lender_accepted_trace, loan_disbursed_trace])
-
-    # Update layout
-    fig.update_layout(
-        title='Loan Disbursement Timeline',
-        xaxis_title='Timestamp',
-        yaxis_title='Event',
-        yaxis=dict(showticklabels=False),
-        showlegend=True
-    )
-
-    # Return the figure object directly
-    return fig
