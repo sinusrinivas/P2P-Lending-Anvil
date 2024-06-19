@@ -42,5 +42,5 @@ components:
   - name: repeating_panel_1
     properties: {item_template: admin.dashboard.accounting.intersest_accruals.RowTemplate50}
     type: RepeatingPanel
-  layout_properties: {grid_position: 'OLYJZC,NRKSJC'}
+  layout_properties: {grid_position: 'OLYJZC,NRKSJC', full_width_row: true}
 is_package: true
