@@ -15,11 +15,52 @@ class intersest_accruals(intersest_accrualsTemplate):
     self.init_components(**properties)
 
     # Any code you write here will run before the form opens.
-    lenders = app_tables.fin_lender.search()
+    self.fetch_and_display_data()
 
-    filtered_loans = []
-    for lender in lenders:
-      user_profile = app_tables.fin_user_profile.get(customer_id=lender['customer_id'])
-      loans = app_tables.fin_loan_details.get(lender_customer_id=lender['customer_id'])
-      if loans['loan_updated_status']
+  def fetch_and_display_data(self):
+    # Fetch all lenders from the database
+    lenders = app_tables.fin_lender.search()
     
+    filtered_loans = []
+    total_interest_amount = 0
+    
+    # Iterate through each lender
+    for lender in lenders:
+      # Fetch user profile based on lender's customer_id
+      user_profile = app_tables.fin_user_profile.get(customer_id=lender['customer_id'])
+      
+      # Fetch all loans associated with this lender
+      loans = app_tables.fin_loan_details.search(lender_customer_id=lender['customer_id'])
+      
+      # Iterate through each loan
+      for loan in loans:
+        # Check if the loan status is "closed"
+        if loan['loan_updated_status'] == "closed":
+          # Calculate the total interest amount for closed loans
+          total_interest_amount += loan['total_interest_amount']
+          
+          # Append the loan details to the filtered loans list
+          filtered_loans.append({
+            'user_photo': user_profile['user_photo'] if user_profile else None,
+            'borrower_full_name': loan['borrower_full_name'],
+            'borrower_email_id': loan['borrower_email_id'],
+            'lender_full_name': lender['lender_full_name'],
+            'lender_email_id': lender['lender_email_id'],
+            'ascend_score': user_profile['ascend_value'] if user_profile else None,
+            'loan_amount': loan['loan_amount'],
+            'loan_updated_status': loan['loan_updated_status'],
+            'loan_id': loan['loan_id'],
+            'total_repayment_amount': loan['total_repayment_amount'],
+            'membership_type': loan['membership_type'],
+            'emi_payment_type': loan['emi_payment_type'],
+            'product_name': loan['product_name'],
+            'loan_disbursed_timestamp': loan['loan_disbursed_timestamp'],
+            'lender_accepted_timestamp': loan['lender_accepted_timestamp']
+          })
+    
+    # Display the filtered loans in a repeating panel or similar component
+    self.repeating_panel_loans.items = filtered_loans
+    
+    # Display the total interest amount for closed loans
+    self.label_total_interest_amount.text = f"Total Interest Amount for Closed Loans: {total_interest_amount}"
+
