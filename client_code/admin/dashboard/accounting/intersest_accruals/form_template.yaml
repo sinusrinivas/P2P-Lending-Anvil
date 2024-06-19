@@ -24,7 +24,8 @@ components:
     - {id: ZCXZLK, data_key: column_1, title: 'Lender Name '}
     - {id: OJLQEN, title: Membership Type, data_key: column_3}
     - {id: WJZUDX, data_key: column_2, title: Lending Type}
-    - {id: PSRGKR, data_key: column_3, title: Column 3}
+    - {id: PSRGKR, data_key: column_3, title: lender total commitsment, width: 159.7777099609375, expand: false}
+    - {id: PVDJJD, data_key: column_1, title: Interest Accruals}
     role: tonal-data-grid
   type: DataGrid
   components:

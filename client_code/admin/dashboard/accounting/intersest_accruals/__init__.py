@@ -15,3 +15,11 @@ class intersest_accruals(intersest_accrualsTemplate):
     self.init_components(**properties)
 
     # Any code you write here will run before the form opens.
+    lenders = app_tables.fin_lender.search()
+
+    filtered_loans = []
+    for lender in lenders:
+      user_profile = app_tables.fin_user_profile.get(customer_id=lender['customer_id'])
+      loans = app_tables.fin_loan_details.get(lender_customer_id=lender['customer_id'])
+      if loans['loan_updated_status']
+    
