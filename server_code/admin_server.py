@@ -8,9 +8,18 @@ import anvil.tables.query as q
 from anvil.tables import app_tables
 import anvil.server
 from anvil import *
-
+import math
 from anvil.google.maps import geocode
 
+
+def haversine(lat1, lon1, lat2, lon2):
+    R = 6371  # Radius of the Earth in km
+    dLat = math.radians(lat2 - lat1)
+    dLon = math.radians(lon2 - lon1)
+    a = math.sin(dLat / 2) ** 2 + math.cos(math.radians(lat1)) * math.cos(math.radians(lat2)) * math.sin(dLon / 2) ** 2
+    c = 2 * math.atan2(math.sqrt(a), math.sqrt(1 - a))
+    distance = R * c  # Distance in km
+    return distance
 
 @anvil.server.callable
 def get_coordinates(address):
@@ -21,49 +30,26 @@ def get_coordinates(address):
     else:
         raise ValueError(f"Address '{address}' could not be geocoded.")
 
-
-@anvil.server.callable
-def update_field_engineers():
-    field_engineers = app_tables.field_engineers.search()
-    for engineer in field_engineers:
-        if not engineer['latitude'] or not engineer['longitude']:
-            try:
-                coords = get_coordinates(engineer['address'])
-                app_tables.field_engineers.update_row(engineer['id'], latitude=coords['lat'], longitude=coords['lng'])
-                print(f"Updated {engineer['name']} with coordinates {coords}")
-            except Exception as e:
-                print(f"Failed to geocode {engineer['address']}: {str(e)}")
-
-
-
 @anvil.server.callable
 def find_nearby_field_engineers(customer_address, radius=50):  # radius in km
     customer_coords = get_coordinates(customer_address)
     lat, lng = customer_coords['lat'], customer_coords['lng']
     
-    field_engineers = app_tables.field_engineers.search()
+    field_engineers = app_tables.fin_field_engineers.search()
     nearby_engineers = []
 
     for fe in field_engineers:
-        distance = haversine(lat, lng, fe['latitude'], fe['longitude'])
+        fe_coords = get_coordinates(fe['address'])
+        distance = haversine(lat, lng, fe_coords['lat'], fe_coords['lng'])
         if distance <= radius:
             nearby_engineers.append({
-                "name": fe['name'],
-                "location": f"{fe['latitude']}, {fe['longitude']}",
+                "name": fe['full_name'],
+                "location": f"{fe_coords['lat']}, {fe_coords['lng']}",
                 "distance": distance
             })
 
     nearby_engineers.sort(key=lambda x: x['distance'])
     return nearby_engineers
-
-def haversine(lat1, lon1, lat2, lon2):
-    R = 6371  # Radius of the Earth in km
-    dLat = math.radians(lat2 - lat1)
-    dLon = math.radians(lon2 - lon1)
-    a = math.sin(dLat / 2) ** 2 + math.cos(math.radians(lat1)) * math.cos(math.radians(lat2)) * math.sin(dLon / 2) ** 2
-    c = 2 * math.atan2(math.sqrt(a), math.sqrt(1 - a))
-    distance = R * c  # Distance in km
-    return distance
 
 
 
