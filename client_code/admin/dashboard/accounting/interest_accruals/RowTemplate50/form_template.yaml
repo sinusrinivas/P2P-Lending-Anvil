@@ -1,0 +1,46 @@
+is_package: true
+container: {type: DataRowPanel}
+components:
+- name: label_2
+  properties: {align: center}
+  type: Label
+  layout_properties: {column: OJLQEN}
+  data_bindings:
+  - {property: text, code: 'self.item[''membership_type'']', writeback: false}
+- name: label_3
+  properties: {align: center}
+  type: Label
+  layout_properties: {column: ZCXZLK}
+  data_bindings:
+  - {property: text, code: 'self.item[''lender_full_name'']', writeback: false}
+- name: label_4
+  properties: {align: center}
+  type: Label
+  layout_properties: {column: WJZUDX}
+  data_bindings:
+  - {property: text, code: 'self.item[''lending_type'']', writeback: false}
+- name: label_5
+  properties: {align: center}
+  type: Label
+  layout_properties: {column: PSRGKR}
+  data_bindings:
+  - {property: text, code: 'self.item[''total_commitment'']', writeback: false}
+- name: label_6
+  properties: {align: center}
+  type: Label
+  layout_properties: {column: PVDJJD}
+  data_bindings:
+  - {property: text, code: 'self.item[''total_interest_amount'']', writeback: false}
+- name: link_1
+  properties: {align: center}
+  type: Link
+  layout_properties: {column: VJQQOR}
+  data_bindings:
+  - {property: text, code: 'self.item[''customer_id'']', writeback: false}
+  event_bindings: {click: link_1_click}
+- name: image_1
+  properties: {height: 51.333251953125}
+  type: Image
+  layout_properties: {column: JKSDUP}
+  data_bindings:
+  - {property: source, code: 'self.item[''user_photo'']', writeback: false}
