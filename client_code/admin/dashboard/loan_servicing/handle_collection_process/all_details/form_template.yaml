@@ -21,10 +21,6 @@ components:
     properties: {text: 'Borrower Customer Id :', bold: true}
     type: Label
     layout_properties: {grid_position: 'NESHTV,LQZNUS OUSBMA,DLAZHX'}
-  - name: label_1
-    properties: {role: null, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '#000337', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: Loan ID}
-    type: Label
-    layout_properties: {grid_position: 'NESHTV,LQZNUS LFGBLW,BKUKJP'}
   - name: label_5
     properties: {role: null, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '#000337', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: 'Borrower Name :'}
     type: Label
@@ -33,30 +29,46 @@ components:
     properties: {role: null, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '#000337', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: 'Borrower Email :'}
     type: Label
     layout_properties: {grid_position: 'NESHTV,LQZNUS DNXVEO,QQYGMA'}
-  - name: label_29
-    properties: {role: null, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '#000337', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: 'Lender Email :'}
+  - name: label_1
+    properties: {role: null, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '#000337', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: Loan ID}
     type: Label
-    layout_properties: {grid_position: 'NESHTV,LQZNUS QOCMRW,JPJJEA'}
+    layout_properties: {grid_position: 'NESHTV,LQZNUS ZYXEGO,WLEMIU'}
   - name: label_17
     properties: {role: null, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '#000337', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: 'Product Name :'}
     type: Label
-    layout_properties: {grid_position: 'NESHTV,LQZNUS NNRGMP,LPMEGV'}
+    layout_properties: {grid_position: 'NESHTV,LQZNUS EYCTNA,CGRATG'}
+  - name: label_6
+    properties: {text: 'Customer Address :', bold: true}
+    type: Label
+    layout_properties: {grid_position: 'NESHTV,LQZNUS VTEIHY,DEUDJR'}
+  - name: label_29
+    properties: {role: null, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '#000337', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: 'Relative Relation :'}
+    type: Label
+    layout_properties: {grid_position: 'NESHTV,LQZNUS MERYPH,GESMWQ'}
+  - name: label_28
+    properties: {text: 'Relative Name :', bold: true}
+    type: Label
+    layout_properties: {grid_position: 'NESHTV,LQZNUS XPAYBT,VMNMQQ'}
+  - name: label_2
+    properties: {text: 'Relative''s  Number :', bold: true}
+    type: Label
+    layout_properties: {grid_position: 'NESHTV,LQZNUS LWEALO,ANGYQN'}
+  - name: label_4
+    properties: {text: 'Relative''s Address :', bold: true}
+    type: Label
+    layout_properties: {grid_position: 'NESHTV,LQZNUS YFIOHY,ECETIN'}
   - name: label_19
     properties: {role: null, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '#000337', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: 'EMI Number :'}
     type: Label
-    layout_properties: {grid_position: 'NESHTV,LQZNUS HMLXYG,LLMCOU'}
-  - name: label_28
-    properties: {text: 'Days Passed  Due Date :', bold: true}
+    layout_properties: {grid_position: 'NESHTV,LQZNUS DVHWDH,IJKAEY'}
+  - name: label_3
+    properties: {text: 'Remaining Amount :', bold: true}
     type: Label
-    layout_properties: {grid_position: 'NESHTV,LQZNUS XPAYBT,VMNMQQ'}
+    layout_properties: {grid_position: 'NESHTV,LQZNUS OXXBGX,FWIRRG'}
   - name: borrower_id
     properties: {}
     type: Label
     layout_properties: {grid_position: 'NESHTV,RGKGXI QDBJZE,VJCEJQ'}
-  - name: loan_id
-    properties: {}
-    type: Label
-    layout_properties: {grid_position: 'NESHTV,RGKGXI PRCTJN,QWDHOV'}
   - name: borrower_full_name
     properties: {}
     type: Label
@@ -65,22 +77,42 @@ components:
     properties: {}
     type: Label
     layout_properties: {grid_position: 'NESHTV,RGKGXI IGYVSF,VVGHVR'}
-  - name: lender_email
+  - name: loan_id
     properties: {}
     type: Label
-    layout_properties: {grid_position: 'NESHTV,RGKGXI JMYEGT,MUREYL'}
+    layout_properties: {grid_position: 'NESHTV,RGKGXI YSXOLG,DPOKVF'}
   - name: product_name
     properties: {}
     type: Label
-    layout_properties: {grid_position: 'NESHTV,RGKGXI LDGUTK,SHUTET'}
-  - name: emi_number
+    layout_properties: {grid_position: 'NESHTV,RGKGXI IGBWWJ,NBBZMN'}
+  - name: customer_address
     properties: {}
     type: Label
-    layout_properties: {grid_position: 'NESHTV,RGKGXI NNGXTW,CDPWVJ'}
+    layout_properties: {grid_position: 'NESHTV,RGKGXI EGBDFZ,NHLESH'}
+  - name: relative_relation
+    properties: {}
+    type: Label
+    layout_properties: {grid_position: 'NESHTV,RGKGXI YZGOLG,OODLRU'}
+  - name: label_7
+    properties: {}
+    type: Label
+    layout_properties: {grid_position: 'NESHTV,RGKGXI FDJCSV,NJSHFS'}
+  - name: label_8
+    properties: {}
+    type: Label
+    layout_properties: {grid_position: 'NESHTV,RGKGXI EACGHZ,DYMUCV'}
+  - name: lender_email
+    properties: {}
+    type: Label
+    layout_properties: {grid_position: 'NESHTV,RGKGXI VLZGKA,KYEFRL'}
   - name: days_left
     properties: {}
     type: Label
     layout_properties: {grid_position: 'NESHTV,RGKGXI SQFKKP,OYFPCU'}
+  - name: emi_number
+    properties: {}
+    type: Label
+    layout_properties: {grid_position: 'NESHTV,RGKGXI RPCOGG,UPYMNA'}
   - name: spacer_2
     properties: {height: 263.142822265625}
     type: Spacer
