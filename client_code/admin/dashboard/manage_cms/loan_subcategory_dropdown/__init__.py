@@ -14,7 +14,7 @@ class loan_subcategory_dropdown(loan_subcategory_dropdownTemplate):
     self.init_components(**properties)
 
   def button_1_click(self, **event_args):
-    open_form('admin.dashboard.manage_cms')
+    open_form('admin.dashboard.manage_cms.add_report_issues_dropdown')
 
   def borrower_loan_issue(self, **event_args):
     self.column_panel_10.visible = True

@@ -14,7 +14,7 @@ class edit_lender_issue(edit_lender_issueTemplate):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
 
-    self.text_box_1.text = selected_row['lendor_subcategory_loan_issue']
+    self.text_box_1.text = selected_row['lender_subcategory_loan_issue']
         # Store the selected row for later use
     self.selected_row = selected_row
 

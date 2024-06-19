@@ -113,7 +113,7 @@ components:
     type: RepeatingPanel
     layout_properties: {grid_position: 'MJHXDQ,UXELTA'}
 - name: column_panel_11_copy
-  properties: {role: null, col_widths: '{"ACRDSD":15,"OXEFAE":35,"OZGSCX":10,"XOPJRZ":15,"YFSIRX":34}', spacing_above: small, background: '', wrap_on: mobile, col_spacing: medium, foreground: '', spacing_below: small, visible: false, border: '', tooltip: ''}
+  properties: {role: null, col_widths: '{"ACRDSD":15,"OXEFAE":35,"OZGSCX":10,"XOPJRZ":15,"YFSIRX":45}', spacing_above: small, background: '', wrap_on: mobile, col_spacing: medium, foreground: '', spacing_below: small, visible: false, border: '', tooltip: ''}
   type: ColumnPanel
   layout_properties: {grid_position: 'TQIETV,BUFHKP'}
   components:
@@ -126,7 +126,7 @@ components:
     type: Label
     layout_properties: {grid_position: 'LOSRQA,ACRDSD'}
   - name: text_box_9_copy
-    properties: {role: outlined, bold: false, align: left, placeholder: '', spacing_above: small, background: '', type: text, underline: false, font: '', hide_text: false, foreground: '', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: ''}
+    properties: {role: outlined, bold: false, align: left, placeholder: '', spacing_above: none, background: '', type: text, underline: false, font: '', hide_text: false, foreground: '', spacing_below: none, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: ''}
     type: TextBox
     layout_properties: {grid_position: 'LOSRQA,OXEFAE'}
     data_bindings:
@@ -147,7 +147,7 @@ components:
     type: RepeatingPanel
     layout_properties: {grid_position: 'VRTHOW,YFSIRX MBOGNU,HPWKWL'}
 - name: column_panel_12_copy_2
-  properties: {role: null, col_widths: '{"ACRDSD":15,"OXEFAE":35,"OZGSCX":10,"XOPJRZ":15,"PCZMQL":32}', spacing_above: small, background: '', wrap_on: mobile, col_spacing: medium, foreground: '', spacing_below: small, visible: false, border: '', tooltip: ''}
+  properties: {role: null, col_widths: '{"ACRDSD":15,"OXEFAE":35,"OZGSCX":10,"XOPJRZ":15,"PCZMQL":45}', spacing_above: small, background: '', wrap_on: mobile, col_spacing: medium, foreground: '', spacing_below: small, visible: false, border: '', tooltip: ''}
   type: ColumnPanel
   layout_properties: {grid_position: 'LWIXZO,QSQIXV'}
   components:
@@ -156,15 +156,15 @@ components:
     type: Label
     layout_properties: {grid_position: 'TPHGGJ,ZEPRGQ'}
   - name: label_9_copy_2
-    properties: {text: Issue, align: center, background: 'theme:Secondary Container'}
+    properties: {text: Issue, align: center, background: 'theme:Secondary Container', spacing_above: none, spacing_below: none}
     type: Label
     layout_properties: {grid_position: 'LOSRQA,ACRDSD'}
   - name: text_box_9_copy_2
-    properties: {role: outlined, bold: false, align: left, placeholder: '', spacing_above: small, background: '', type: text, underline: false, font: '', hide_text: false, foreground: '', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: ''}
+    properties: {role: outlined, bold: false, align: left, placeholder: '', spacing_above: none, background: '', type: text, underline: false, font: '', hide_text: false, foreground: '', spacing_below: none, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: ''}
     type: TextBox
     layout_properties: {grid_position: 'LOSRQA,OXEFAE'}
   - name: lender_issue
-    properties: {role: null, bold: true, align: center, spacing_above: small, background: '#0b2547', icon: '', underline: false, font: '', icon_align: left, foreground: 'theme:On Primary', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: ADD}
+    properties: {role: null, bold: true, align: center, spacing_above: none, background: '#0b2547', icon: '', underline: false, font: '', icon_align: left, foreground: 'theme:On Primary', spacing_below: none, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: ADD}
     type: Button
     layout_properties:
       col_widths: {}
