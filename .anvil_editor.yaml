@@ -192,6 +192,7 @@ unique_ids:
     borrower.dashboard.today_dues.ItemTemplate71: 6XRAUIQGWJSUISEXTEYG7WGZH6VKO3O2
     admin.dashboard.loan_management.loan_aggrements: '1718346458767692582292605.4009'
     lendor.dashboard.view_lost_oppurtunities.RowTemplate34: '1704968592298956121945816.4596'
+    admin.dashboard.accounting.mis_reports: '171877405384637568003103.99866'
     lendor.dashboard.view_loan_extension_requests.ItemTemplate78: '170979552945950654853738.55006'
     bank_users.main_form.products_main_form.personal_loan.medical_loan: '1713932648213367619462010.7378'
     admin.dashboard.manage_cms.add_lender_dropdown_details.edit_account_type: '1706531522383955942257997.2303'
