@@ -1,5 +1,6 @@
 from ._anvil_designer import mis_reportsTemplate
 from anvil import *
+import plotly.graph_objects as go
 import anvil.server
 import anvil.google.auth, anvil.google.drive
 from anvil.google.drive import app_files
@@ -15,3 +16,7 @@ class mis_reports(mis_reportsTemplate):
     self.init_components(**properties)
 
     # Any code you write here will run before the form opens.
+
+  def button_1_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    open_form('admin.dashboard.accounting')
