@@ -53,5 +53,9 @@ class manage_credit_limit(manage_credit_limitTemplate):
         # Disable text box after saving
         self.text_box_1.enabled = False
         alert("Data saved successfully!")
+
+    def button_1_click(self, **event_args):
+      """This method is called when the button is clicked"""
+      pass
     
    
