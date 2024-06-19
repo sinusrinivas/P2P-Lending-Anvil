@@ -148,3 +148,7 @@ class interest_accruals(interest_accrualsTemplate):
 #     # Display the total interest amount for closed loans
 #     self.label_total_interest_amount.text = total_interest_amount
 
+  def button_1_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    open_form('admin.dashboard.accounting')
+

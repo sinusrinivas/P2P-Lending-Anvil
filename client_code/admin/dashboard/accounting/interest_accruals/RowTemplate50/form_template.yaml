@@ -42,3 +42,5 @@ components:
   properties: {height: 51.333251953125}
   type: Image
   layout_properties: {column: JKSDUP}
+  data_bindings:
+  - {property: source, code: 'self.item[''user_photo'']', writeback: false}
