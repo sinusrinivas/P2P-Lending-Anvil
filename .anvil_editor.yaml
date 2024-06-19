@@ -72,6 +72,7 @@ unique_ids:
     admin.dashboard.loan_management.view_loans.lapsed_loans: '1701265825793676423241044.7284'
     admin.dashboard.reporting_and_analytical_modules: '1718085257433366553514130.2303'
     admin.dashboard.security_and_compliance: '1718263981064273294901409.05756'
+    admin.dashboard.accounting.intersest_accruals: '1718773357148755763180389.2222'
     bank_users.main_form.investNow_applyForLoan: '1714366810236923651939721.386'
     lendor.dashboard.view_loan_foreclosure_Requests.ItemTemplate59: '1709797526719604321418306.3726'
     lendor.dashboard.lender_portfolio_first_page: '1717737755235602939757176.6377'
