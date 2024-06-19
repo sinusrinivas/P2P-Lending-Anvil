@@ -24,7 +24,6 @@
 
 
 
-
 from ._anvil_designer import mis_reportsTemplate
 from anvil import *
 import plotly.graph_objects as go
@@ -35,7 +34,6 @@ import anvil.users
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
-import plotly.graph_objects as go
 import pandas as pd
 
 
@@ -49,9 +47,10 @@ class mis_reports(mis_reportsTemplate):
 
   def plot_data(self):
     # Fetch data from tables
-    loan_details = app_tables.fin_loan_details.search()
+    loan_details = app_tables.fin_loan_details.search(loan_updated_status=q.any_of(q.like('closed loan'), q.like('foreclosure'), q.like('extension'), q.like('disbursed loan')))
     lenders = app_tables.fin_lender.search()
     borrowers = app_tables.fin_borrower.search()
+    user = app_tables.fin_user_profile.search(usertype=q.any_of(q.any_of('lender'),q.any_of('borrower')))
     
     # Convert to DataFrame if needed (assuming fetching as dictionary)
     loan_details_df = pd.DataFrame(list(loan_details))
@@ -59,11 +58,12 @@ class mis_reports(mis_reportsTemplate):
     borrowers_df = pd.DataFrame(list(borrowers))
 
     # Calculate metrics
-    no_of_loans_disbursed = loan_details_df[loan_details_df['l'] == 'disbursed loan'].shape[0]
-    no_of_loans_closed = loan_details_df[loan_details_df['status'] == 'closed'].shape[0]
-    no_of_loans_rejected = loan_details_df[loan_details_df['status'] == 'rejected'].shape[0]
-    amount_disbursed = loan_details_df[loan_details_df['status'] == 'disbursed']['amount'].sum()
-    no_of_borrowers = borrowers_df.shape[0]
+    no_of_loans_disbursed = loan_details_df[loan_details_df['loan_updated_status'] == 'disbursed loan'].shape[0]
+    no_of_loans_closed = loan_details_df[loan_details_df['loan_updated_status'] == 'closed loan'].shape[0]
+    no_of_loans_foreclosed = loan_details_df[loan_details_df['loan_updated_status'] == 'foreclosure'].shape[0]
+    no_of_loans_extended = loan_details_df[loan_details_df['loan_updated_status'] == 'extension'].shape[0]
+    amount_disbursed = loan_details_df[loan_details_df['loan_updated_status'] == 'disbursed loan']['amount'].sum()
+    no_of_borrowers = user[borrowers_df['usertype']]
     no_of_lenders = lenders_df.shape[0]
     lenders_commitment = lenders_df['commitment'].sum()
 
@@ -71,7 +71,8 @@ class mis_reports(mis_reportsTemplate):
     values = [
         no_of_loans_disbursed,
         no_of_loans_closed,
-        no_of_loans_rejected,
+        no_of_loans_foreclosed,
+        no_of_loans_extended,
         amount_disbursed,
         no_of_borrowers,
         no_of_lenders,
@@ -80,7 +81,8 @@ class mis_reports(mis_reportsTemplate):
     labels = [
         'No of Loans Disbursed: {}'.format(no_of_loans_disbursed),
         'No of Loans Closed: {}'.format(no_of_loans_closed),
-        'No of Loans Rejected: {}'.format(no_of_loans_rejected),
+        'No of Loans Foreclosed: {}'.format(no_of_loans_foreclosed),
+        'No of Loans Extended: {}'.format(no_of_loans_extended),
         'Amount Disbursed: {}'.format(amount_disbursed),
         'No of Borrowers: {}'.format(no_of_borrowers),
         'No of Lenders: {}'.format(no_of_lenders),
