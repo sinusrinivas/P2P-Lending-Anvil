@@ -1602,6 +1602,32 @@ db_schema:
     - name: borrower_email_id
       admin_ui: {width: 200, order: 21}
       type: string
+  fin_user_issues_bugreports:
+    title: fin_user_issues_bugreports
+    client: full
+    server: full
+    columns:
+    - name: user_issues
+      admin_ui: {width: 200}
+      type: string
+    - name: specific_issue
+      admin_ui: {width: 200}
+      type: string
+    - name: user_discription
+      admin_ui: {width: 200}
+      type: string
+    - name: image
+      admin_ui: {width: 200}
+      type: media
+    - name: feedback_form
+      admin_ui: {width: 200}
+      type: string
+    - name: customer_id
+      admin_ui: {width: 200}
+      type: string
+    - name: email_user
+      admin_ui: {width: 200}
+      type: string
   fin_borrower_profession:
     client: full
     server: full
