@@ -29,3 +29,7 @@ class RowTemplate10(RowTemplate10Template):
 
         # Open the Borr_loan_request form with the selected row data
       open_form("lendor.dashboard.view_borrower_loan_request.Borr_loan_request", selected_row=selected_row)
+
+    def form_refreshing_data_bindings(self, **event_args):
+      """This method is called when refresh_data_bindings is called"""
+      pass
