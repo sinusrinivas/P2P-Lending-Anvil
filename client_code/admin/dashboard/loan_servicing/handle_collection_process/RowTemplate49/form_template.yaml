@@ -7,13 +7,6 @@ components:
   layout_properties: {column: JKSDUP}
   data_bindings:
   - {property: source, code: 'self.item[''image'']', writeback: false}
-- name: label_1
-  properties: {align: center}
-  type: Label
-  layout_properties: {column: VJQQOR}
-  data_bindings:
-  - {property: visible, code: 'self.item[''borrower_customer_id'']', writeback: false}
-  - {property: text, code: 'self.item[''borrower_customer_id'']', writeback: false}
 - name: label_2
   properties: {align: center}
   type: Label
@@ -46,33 +39,10 @@ components:
   layout_properties: {column: DZHTTI}
   data_bindings:
   - {property: text, code: 'self.item[''borrower_email_id'']', writeback: false}
-- name: label_9
+- name: link_1
   properties: {align: center}
-  type: Label
-  layout_properties: {column: WVSIFK}
+  type: Link
+  layout_properties: {column: VJQQOR}
   data_bindings:
-  - {property: text, code: 'self.item[''guarantor_address'']', writeback: false}
-- name: label_7
-  properties: {align: center}
-  type: Label
-  layout_properties: {column: TEHFPP}
-  data_bindings:
-  - {property: text, code: 'self.item[''street_adress_1'']', writeback: false}
-- name: label_6
-  properties: {align: center}
-  type: Label
-  layout_properties: {column: XLWQWO}
-  data_bindings:
-  - {property: text, code: 'self.item[''guarantor_mobile_no'']', writeback: false}
-- name: label_8
-  properties: {align: center}
-  type: Label
-  layout_properties: {column: FCQPXK}
-  data_bindings:
-  - {property: text, code: 'self.item[''guarantor_name'']', writeback: false}
-- name: label_11
-  properties: {align: center}
-  type: Label
-  layout_properties: {column: XZJSGN}
-  data_bindings:
-  - {property: text, code: 'self.item[''another_person'']', writeback: false}
+  - {property: text, code: 'self.item[''borrower_customer_id'']', writeback: false}
+  event_bindings: {click: link_1_click}

@@ -75,6 +75,7 @@ components:
       properties: {text: Field Engineer, bold: true, foreground: black, font_size: 16}
       type: Button
       layout_properties: {grid_position: 'EPLEQI,XCMPWT'}
+      event_bindings: {click: button_2_click}
   - name: spacer_5
     properties: {height: '350'}
     type: Spacer

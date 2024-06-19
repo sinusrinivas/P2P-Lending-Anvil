@@ -279,6 +279,50 @@ db_schema:
       admin_ui: {width: 200, order: 33}
       type: number
     title: fin_product_details
+  fin_field_engineers:
+    client: full
+    server: full
+    columns:
+    - name: field_engineer_email
+      admin_ui: {width: 200, order: 0}
+      type: string
+    - name: full_name
+      admin_ui: {width: 200, order: 1}
+      type: string
+    - name: photo
+      admin_ui: {width: 200, order: 3}
+      type: media
+    - name: gender
+      admin_ui: {width: 200, order: 4}
+      type: string
+    - name: engineer_role
+      admin_ui: {width: 200, order: 5}
+      type: string
+    - name: join_date
+      admin_ui: {width: 200, order: 6}
+      type: date
+    - name: status
+      admin_ui: {width: 200, order: 7}
+      type: bool
+    - name: last_login
+      admin_ui: {width: 200, order: 8}
+      type: date
+    - name: ref_admin_email
+      admin_ui: {width: 200, order: 9}
+      type: string
+    - name: ref_admin_name
+      admin_ui: {width: 200, order: 10}
+      type: string
+    - name: field_engineer_id
+      admin_ui: {order: 11, width: 200}
+      type: number
+    - name: mobile_no
+      admin_ui: {width: 200, order: 0.5}
+      type: number
+    - name: address
+      admin_ui: {width: 200, order: 12}
+      type: string
+    title: fin_field_engineers
   fin_admin_ascend_categories:
     client: full
     server: full
