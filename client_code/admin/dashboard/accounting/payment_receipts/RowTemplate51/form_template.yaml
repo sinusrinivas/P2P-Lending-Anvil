@@ -8,18 +8,18 @@ components:
   type: Label
   layout_properties: {column: JKSDUP}
 - name: label_2
-  properties: {}
+  properties: {align: center}
   type: Label
   layout_properties: {column: VJQQOR}
 - name: label_3
-  properties: {}
+  properties: {align: center}
   type: Label
   layout_properties: {column: OJLQEN}
 - name: label_4
-  properties: {}
+  properties: {align: center}
   type: Label
   layout_properties: {column: SFKZZA}
 - name: label_5
-  properties: {}
+  properties: {align: center}
   type: Label
   layout_properties: {column: JSCKAF}
