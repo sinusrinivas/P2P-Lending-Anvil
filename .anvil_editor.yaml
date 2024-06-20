@@ -184,6 +184,7 @@ unique_ids:
     borrower.dashboard.notification: DXJ3XDXDFQJLYIFUACEPVV47VHWKVTLU
     lendor.dashboard.today_dues.View_Details.part_payment_copy: OSMJLIDI46YODBDWEA7WKC3XREUKDPBQ
     admin.dashboard.loan_servicing: '1718263896510230358249952.67352'
+    admin.dashboard.accounting.payment_receipts: MT62J37545ZKTSZWR7WYB65KAQ2L5ABD
     lendor.dashboard.view_loan_extension_requests.ItemTemplate79: '1709795534095955316024149.9836'
     admin.dashboard.manage_ascend_score.add_subcategory.ItemTemplate86: '1710501688800355680302234.22766'
     bank_users.main_form.products_main_form.vehicle_loan: '1714373140105534036320579.5613'
@@ -385,6 +386,7 @@ unique_ids:
     borrower.dashboard.today_dues.ItemTemplate64: EKA2P2MA76OKMBDGOREGCT7WX6ZIJIGD
     lendor.dashboard.dasboard_contact: '1700826923997328713650135.2759'
     admin.dashboard.manage_cms.manage_issues.field_engineer: JERXIIAV5MVTGDHTOYRE3GL5NZBUHCOZ
+    admin.dashboard.accounting.payment_receipts.RowTemplate51: V63Q7TXIVQUUNYY5DRYWXL7ZJOBMI7PE
     admin.dashboard.accounting.revenue_share.lender_revenue_share: MMI7MR7UA6ZKJ45QJJMEXX2YIRWRLRQ7
     borrower.borrower_registration_forms.star_1_borrower_registration_form_2_employment: '1699373440164759513719499.4375'
     bank_users.main_form.basic_registration_form: '1706530260736283711618019.2678'
