@@ -33,10 +33,28 @@ class all_details(all_detailsTemplate):
         self.status.text = f"{selected_row['status']}"
         self.customer_address_2.text = f"{selected_row['street_adress_2']}"
 
-
+        # Print all details to the console
+        print("Borrower ID:", self.borrower_id.text)
+        print("Loan ID:", self.loan_id.text)
+        print("Borrower Full Name:", self.borrower_full_name.text)
+        print("Borrower Email:", self.borrower_email.text)
+        print("Customer Address:", self.customer_address.text)
+        print("Product Name:", self.product_name.text)
+        print("Relative Name:", self.relative_name.text)
+        print("Relative Relation:", self.relative_relation.text)
+        print("Relative Number:", self.relative_number.text)
+        print("Another Email:", self.another_email.text)
+        print("Relative Address:", self.relative_address.text)
+        print("EMI Number:", self.emi_number.text)
+        print("Remaining Amount:", self.remaining_amount.text)
+        print("Status:", self.status.text)
+        print("Customer Address 2:", self.customer_address_2.text)
 
         # Find nearest field engineer and populate dropdown
         self.find_nearest_field_engineer()
+
+        # # Set the event handler for the dropdown
+        # self.nearest_engineer_dropdown.set_event_handler('change', self.dropdown_change)
 
     def get_coordinates(self, address):
         # Call Nominatim API to get coordinates
@@ -89,8 +107,26 @@ class all_details(all_detailsTemplate):
 
         if nearest_engineer:
             print(f"Nearest Engineer: {nearest_engineer['full_name']}, Distance: {shortest_distance} km")
-            self.nearest_engineer_dropdown.items = [(nearest_engineer['full_name'], nearest_engineer['address'])]
+            self.nearest_engineer_dropdown.items = [(nearest_engineer['full_name'], nearest_engineer['field_engineer_id'])]
+
+    # def nearest_engineer_dropdown_change(self, **event_args):
+    #     """This method is called when the dropdown selection changes"""
+    #     selected_id = self.nearest_engineer_dropdown.selected_value
+    #     if selected_id:
+    #         engineer = app_tables.fin_field_engineers.get_by_id(selected_id)
+    #         if engineer:
+    #             engineer_address = engineer['address']
+    #             engineer_coordinates = self.get_coordinates(engineer_address)
+    #             self.show_location_on_map(engineer_coordinates)
+
+    # def show_location_on_map(self, coordinates):
+    #     """Show the selected location on the map"""
+    #     lat, lon = coordinates
+    #     self.map_1.center = [lat, lon]
+    #     self.map_1.zoom = 15  # Set appropriate zoom level
+    #     self.map_1.add_component(MapMarker(lat, lon))
 
     def button_1_click(self, **event_args):
         """This method is called when the button is clicked"""
         open_form('admin.dashboard.loan_servicing.handle_collection_process')
+
