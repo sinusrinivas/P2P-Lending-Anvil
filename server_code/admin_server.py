@@ -9,9 +9,10 @@ from anvil.tables import app_tables
 import anvil.server
 from anvil import *
 import math
+import requests
 # from anvil.google.maps import geocode
 
-
+API_KEY = "AIzaSyA4tqdDU6W_lbykTWJ3RM1HTsA8HcRXilE"
 
 def haversine(lat1, lon1, lat2, lon2):
     R = 6371  # Radius of the Earth in km
@@ -24,9 +25,12 @@ def haversine(lat1, lon1, lat2, lon2):
 
 @anvil.server.callable
 def get_coordinates(address):
-    result = geocode(address)
-    if result:
-        location = result['results'][0]['geometry']['location']
+    url = f"https://maps.googleapis.com/maps/api/geocode/json?address={address}&key={API_KEY}"
+    response = requests.get(url)
+    data = response.json()
+    
+    if data['results']:
+        location = data['results'][0]['geometry']['location']
         return {"lat": location['lat'], "lng": location['lng']}
     else:
         raise ValueError(f"Address '{address}' could not be geocoded.")
@@ -36,7 +40,7 @@ def find_nearby_field_engineers(customer_address, radius=50):  # radius in km
     customer_coords = get_coordinates(customer_address)
     lat, lng = customer_coords['lat'], customer_coords['lng']
     
-    field_engineers = app_tables.fin_field_engineers.search()
+    field_engineers = app_tables.field_engineers.search()
     nearby_engineers = []
 
     for fe in field_engineers:
@@ -44,13 +48,52 @@ def find_nearby_field_engineers(customer_address, radius=50):  # radius in km
         distance = haversine(lat, lng, fe_coords['lat'], fe_coords['lng'])
         if distance <= radius:
             nearby_engineers.append({
-                "name": fe['full_name'],
+                "name": fe['name'],
                 "location": f"{fe_coords['lat']}, {fe_coords['lng']}",
                 "distance": distance
             })
 
     nearby_engineers.sort(key=lambda x: x['distance'])
     return nearby_engineers
+
+# def haversine(lat1, lon1, lat2, lon2):
+#     R = 6371  # Radius of the Earth in km
+#     dLat = math.radians(lat2 - lat1)
+#     dLon = math.radians(lon2 - lon1)
+#     a = math.sin(dLat / 2) ** 2 + math.cos(math.radians(lat1)) * math.cos(math.radians(lat2)) * math.sin(dLon / 2) ** 2
+#     c = 2 * math.atan2(math.sqrt(a), math.sqrt(1 - a))
+#     distance = R * c  # Distance in km
+#     return distance
+
+# @anvil.server.callable
+# def get_coordinates(address):
+#     result = geocode(address)
+#     if result:
+#         location = result['results'][0]['geometry']['location']
+#         return {"lat": location['lat'], "lng": location['lng']}
+#     else:
+#         raise ValueError(f"Address '{address}' could not be geocoded.")
+
+# @anvil.server.callable
+# def find_nearby_field_engineers(customer_address, radius=50):  # radius in km
+#     customer_coords = get_coordinates(customer_address)
+#     lat, lng = customer_coords['lat'], customer_coords['lng']
+    
+#     field_engineers = app_tables.fin_field_engineers.search()
+#     nearby_engineers = []
+
+#     for fe in field_engineers:
+#         fe_coords = get_coordinates(fe['address'])
+#         distance = haversine(lat, lng, fe_coords['lat'], fe_coords['lng'])
+#         if distance <= radius:
+#             nearby_engineers.append({
+#                 "name": fe['full_name'],
+#                 "location": f"{fe_coords['lat']}, {fe_coords['lng']}",
+#                 "distance": distance
+#             })
+
+#     nearby_engineers.sort(key=lambda x: x['distance'])
+#     return nearby_engineers
 
 
 
