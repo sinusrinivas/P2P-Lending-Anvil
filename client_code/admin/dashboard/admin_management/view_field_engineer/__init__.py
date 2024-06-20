@@ -19,4 +19,4 @@ class view_field_engineer(view_field_engineerTemplate):
 
   def button_1_click(self, **event_args):
     """This method is called when the button is clicked"""
-    open_form('admin.dashboard.admin_management.view_field_engineer')
+    open_form('admin.dashboard.admin_management')
