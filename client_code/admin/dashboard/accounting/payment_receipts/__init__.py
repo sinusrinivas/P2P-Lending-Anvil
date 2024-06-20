@@ -41,27 +41,24 @@ class payment_receipts(payment_receiptsTemplate):
       filtered_emis.append({
         'borrower_photo': borrower_profile['user_photo'] if borrower_profile else None,
         'borrower_full_name': borrower_profile['full_name'] if borrower_profile else None,
-        'borrower_email_id': borrower_profile['email_id'] if borrower_profile else None,
+        'borrower_email_id': borrower_profile['email_user'] if borrower_profile else None,
         'borrower_mobile': borrower_profile['mobile'] if borrower_profile else None,
         'borrower_address': borrower_profile['present_address'] if borrower_profile else None,
         'lender_photo': lender_profile['user_photo'] if lender_profile else None,
         'lender_full_name': lender_profile['full_name'] if lender_profile else None,
-        'lender_email_id': lender_profile['email_id'] if lender_profile else None,
+        'lender_email_id': lender_profile['email_user'] if lender_profile else None,
         'lender_mobile': lender_profile['mobile'] if lender_profile else None,
         'lender_address': lender_profile['present_address'] if lender_profile else None,
-        'emi_amount': emi['emi_amount'],
-        'interest_amount': emi['interest_amount'],
-        'emi_due_date': emi['emi_due_date'],
+        'amount_paid': emi['amount_paid'],
+        
+       
         'loan_id': emi['loan_id'],
         'payment_date': emi['scheduled_payment_made'],
         'next_payment_date': emi['next_payment'],
-        'total_remaining_amount': emi['total_remaining_amount'],
-        
-        'payment_type': emi['payment_type'],
-        # 'loan_amount': loan_details['loan_amount'] if loan_details else None,
-        # 'loan_updated_status': loan_details['loan_updated_status'] if loan_details else None,
-        # 'membership_type': borrower_profile['membership'] if borrower_profile else None,
-        # 'lending_type': lender_profile['lending_type'] if lender_profile else None
+        'total_remaining_amount': emi['total_remaining_amount'],        
+        'payment_type': "Online",
+        'loan_amount': loan_details['loan_amount'] if loan_details else None,
+        'total_repayment_amount': loan_details['total_repayment_amount'] if loan_details else None
       })
     
     # Display the filtered EMIs in a repeating panel or similar component
