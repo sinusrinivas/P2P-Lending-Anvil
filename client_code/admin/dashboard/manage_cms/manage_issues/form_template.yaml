@@ -21,10 +21,10 @@ components:
     properties: {role: null, bold: true, align: center, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: 18, tooltip: '', text: Manage Issues}
     type: Label
     layout_properties: {grid_position: 'FIZXVR,KVJMEQ'}
-  - type: Label
-    properties: {role: null, bold: false, align: center, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: false, border: '', italic: false, font_size: null, tooltip: '', text: No issues reported}
-    name: label_no_issues
-    layout_properties: {grid_position: 'CSEMIT,VANQTS'}
+  - name: spacer_1
+    properties: {height: 21.466644287109375}
+    type: Spacer
+    layout_properties: {grid_position: 'JYOXEC,WIPIDP'}
   - name: data_grid_1
     properties:
       columns:
@@ -50,3 +50,7 @@ components:
       type: RepeatingPanel
       layout_properties: {}
     layout_properties: {grid_position: 'QIEQNR,NUDAYC', full_width_row: true}
+  - type: Label
+    properties: {role: null, bold: false, align: center, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: false, border: '', italic: false, font_size: null, tooltip: '', text: No issues reported}
+    name: label_no_issues
+    layout_properties: {grid_position: 'XUYLLM,XNRFIU'}

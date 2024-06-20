@@ -2,6 +2,7 @@ is_package: true
 container:
   type: DataRowPanel
   data_bindings: []
+  properties: {spacing_above: small, spacing_below: small}
 components:
 - name: image_1
   properties: {height: 56.99998474121094, role: null, display_mode: original_size}
@@ -70,7 +71,7 @@ components:
   data_bindings:
   - {property: text, code: 'self.item[''it_is_urgent'']', writeback: false}
 - name: button_1
-  properties: {text: Solve, background: '#05264d', foreground: white, role: elevated-button}
+  properties: {text: Solve, background: '#05264d', foreground: white, role: elevated-button, icon: '', icon_align: right}
   type: Button
   layout_properties: {column: OLVPRS}
   event_bindings: {click: button_1_click}

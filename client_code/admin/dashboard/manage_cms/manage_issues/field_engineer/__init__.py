@@ -18,3 +18,4 @@ class field_engineer(field_engineerTemplate):
 
   def button_1_click(self, **event_args):
     open_form('admin.dashboard.manage_cms.manage_issues')
+
