@@ -1,0 +1,25 @@
+is_package: true
+container:
+  type: DataRowPanel
+  properties: {align: center}
+components:
+- name: label_1
+  properties: {align: center}
+  type: Label
+  layout_properties: {column: JKSDUP}
+- name: label_2
+  properties: {align: center}
+  type: Label
+  layout_properties: {column: VJQQOR}
+- name: label_3
+  properties: {align: center}
+  type: Label
+  layout_properties: {column: OJLQEN}
+- name: label_4
+  properties: {align: center}
+  type: Label
+  layout_properties: {column: SFKZZA}
+- name: label_5
+  properties: {align: center}
+  type: Label
+  layout_properties: {column: JSCKAF}
