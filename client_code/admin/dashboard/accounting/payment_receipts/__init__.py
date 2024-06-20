@@ -37,22 +37,20 @@ class payment_receipts(payment_receiptsTemplate):
       else:
         lender_profile = None
 
-      # 'borrower_photo': borrower_profile['user_photo'] ,
-      self.label_7.text = borrower_profile['full_name'] ,
-      # 'borrower_email_id': borrower_profile['email_user'] if borrower_profile else None,
-      self.label_8.text = borrower_profile['mobile'] if borrower_profile else None,
-      self.label_19.text= borrower_profile['present_address'] if borrower_profile else None,
-      # 'lender_photo': lender_profile['user_photo'] if lender_profile else None,
-      self.la: lender_profile['full_name'] if lender_profile else None,
-      'lender_email_id': lender_profile['email_user'] if lender_profile else None,
-      'lender_mobile': lender_profile['mobile'] if lender_profile else None,
-      'lender_address': lender_profile['present_address'] if lender_profile else None,
-      # Append the EMI details to the filtered EMIs list
+      
+      self.label_7.text = borrower_profile['full_name']       
+      self.label_8.text = borrower_profile['mobile'] if borrower_profile else None
+      self.label_19.text= borrower_profile['street_adress_1'] if borrower_profile else None
+      self.label_13.text = lender_profile['full_name'] if lender_profile else None
+      self.label_14.text= lender_profile['mobile'] if lender_profile else None
+      self.label_21.text= lender_profile['street_adress_1'] if lender_profile else None
+      self.label_27.text =  emi['scheduled_payment_made'] if emi else None
+      self.label_29.text = "Online"
+      self.label_30.text = emi['amount_paid'] if emi else None
+      # # Append the EMI details to the filtered EMIs list
       filtered_emis.append({
        
         'amount_paid': emi['amount_paid'],
-        
-       
         'loan_id': emi['loan_id'],
         'payment_date': emi['scheduled_payment_made'],
         'next_payment_date': emi['next_payment'],
