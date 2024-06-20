@@ -532,12 +532,6 @@ db_schema:
     - name: usertype
       admin_ui: {width: 200, order: 10}
       type: string
-    - name: issue_occured
-      admin_ui: {width: 200}
-      type: string
-    - name: status
-      admin_ui: {width: 200}
-      type: bool
     - name: user_photo
       admin_ui: {width: 200}
       type: media

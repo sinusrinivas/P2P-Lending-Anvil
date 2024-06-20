@@ -1,0 +1,78 @@
+is_package: true
+container:
+  type: DataRowPanel
+  data_bindings:
+  - {property: auto_display_data, code: 'self.item['''']', writeback: false}
+  - {property: item, code: 'self.item['''']', writeback: false}
+components:
+- name: image_1
+  properties: {height: 75.066650390625, role: outlined-card}
+  type: Image
+  layout_properties: {column: JKSDUP}
+  data_bindings:
+  - {property: source, code: 'self.item[''user_photo'']', writeback: false}
+- name: label_1
+  properties: {}
+  type: Label
+  layout_properties: {column: VJQQOR}
+  data_bindings:
+  - {property: text, code: 'self.item[''name'']', writeback: false}
+- name: label_2
+  properties: {}
+  type: Label
+  layout_properties: {column: OJLQEN}
+  data_bindings:
+  - {property: text, code: 'self.item[''email'']', writeback: false}
+- name: label_3
+  properties: {}
+  type: Label
+  layout_properties: {column: WVMRQI}
+  data_bindings:
+  - {property: text, code: 'self.item[''mobile_number'']', writeback: false}
+- name: label_4
+  properties: {}
+  type: Label
+  layout_properties: {column: JZYYGB}
+  data_bindings:
+  - {property: text, code: 'self.item[''issue_description'']', writeback: false}
+- name: label_5
+  properties: {}
+  type: Label
+  layout_properties: {column: YYWHWZ}
+  data_bindings:
+  - {property: text, code: 'self.item[''report_date'']', writeback: false}
+- name: image_2
+  properties: {height: 74.33331298828125, role: outlined-card}
+  type: Image
+  layout_properties: {column: RMEGPH}
+  data_bindings:
+  - {property: source, code: 'self.item[''issue_photo'']', writeback: false}
+- name: label_6
+  properties: {}
+  type: Label
+  layout_properties: {column: UDGJCC}
+  data_bindings:
+  - {property: text, code: 'self.item[''category'']', writeback: false}
+- name: label_7
+  properties: {}
+  type: Label
+  layout_properties: {column: TYMPQJ}
+  data_bindings:
+  - {property: text, code: 'self.item[''subcategory'']', writeback: false}
+- name: label_8
+  properties: {}
+  type: Label
+  layout_properties: {column: SSBISO}
+  data_bindings:
+  - {property: text, code: 'self.item[''usertype'']', writeback: false}
+- name: label_9
+  properties: {}
+  type: Label
+  layout_properties: {column: YCWJHX}
+  data_bindings:
+  - {property: text, code: 'self.item[''it_is_urgent'']', writeback: false}
+- name: Solve
+  properties: {}
+  type: Link
+  layout_properties: {column: OLVPRS}
+  event_bindings: {click: Solve_click}
