@@ -47,14 +47,21 @@ class payment_receipts(payment_receiptsTemplate):
         'lender_photo': lender_profile['user_photo'] if lender_profile else None,
         'lender_full_name': lender_profile['full_name'] if lender_profile else None,
         'lender_email_id': lender_profile['email_id'] if lender_profile else None,
+        'lender_mobile': lender_profile['mobile'] if lender_profile else None,
+        'lender_address': lender_profile['present_address'] if lender_profile else None,
         'emi_amount': emi['emi_amount'],
         'interest_amount': emi['interest_amount'],
         'emi_due_date': emi['emi_due_date'],
         'loan_id': emi['loan_id'],
-        'loan_amount': loan_details['loan_amount'] if loan_details else None,
-        'loan_updated_status': loan_details['loan_updated_status'] if loan_details else None,
-        'membership_type': borrower_profile['membership'] if borrower_profile else None,
-        'lending_type': lender_profile['lending_type'] if lender_profile else None
+        'payment_date': emi['scheduled_payment_made'],
+        'next_payment_date': emi['next_payment'],
+        'total_remaining_amount': emi['total_remaining_amount'],
+        
+        'payment_type': emi['payment_type'],
+        # 'loan_amount': loan_details['loan_amount'] if loan_details else None,
+        # 'loan_updated_status': loan_details['loan_updated_status'] if loan_details else None,
+        # 'membership_type': borrower_profile['membership'] if borrower_profile else None,
+        # 'lending_type': lender_profile['lending_type'] if lender_profile else None
       })
     
     # Display the filtered EMIs in a repeating panel or similar component
