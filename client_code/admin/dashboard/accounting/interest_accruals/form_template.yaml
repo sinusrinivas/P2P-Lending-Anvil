@@ -35,11 +35,11 @@ components:
   - name: repeating_panel_1
     properties: {item_template: admin.dashboard.accounting.interest_accruals.RowTemplate50}
     type: RepeatingPanel
-  layout_properties: {grid_position: 'BVYUBB,EEVVXP', full_width_row: true}
+  layout_properties: {grid_position: 'SDGLJB,YFUOMK'}
 - name: spacer_3
   properties: {height: '15'}
   type: Spacer
-  layout_properties: {grid_position: 'OLYJZC,NRKSJC YERBQE,FEDIOE'}
+  layout_properties: {grid_position: ''}
 - name: button_1
   properties: {text: Back, bold: true, foreground: white, role: filled-button, icon: 'fa:angle-double-left', background: '#05264d'}
   type: Button
