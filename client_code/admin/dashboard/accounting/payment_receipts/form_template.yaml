@@ -5,14 +5,14 @@ components:
   type: form:admin.dashboard.home_button_admin
   layout_properties: {grid_position: 'BCXLPU,ZUFIQR', full_width_row: true}
 - name: content_panel_copy_copy_3_copy_3_copy_copy_copy_2_copy
-  properties: {col_widths: '{"POFYXO":15,"SNDWTP":50,"IAIFRG":30,"WUQMZW":20,"BRFFZC":20,"RQPLFM":20,"IAISIX":10,"JJVLAS":10,"LEEPZH":17}', background: white, role: elevated-card}
+  properties: {col_widths: '{"POFYXO":30,"SNDWTP":35,"WUQMZW":15,"BRFFZC":15,"RQPLFM":15,"IAISIX":15,"JJVLAS":15,"LEEPZH":22}', background: white, role: elevated-card}
   type: ColumnPanel
   layout_properties: {grid_position: 'KUXIFK,BDBYIC', full_width_row: true}
   components:
   - name: label_1
-    properties: {text: Loan Payment Receipt, align: center, bold: true, font_size: 30}
+    properties: {text: Loan Payment Receipt, align: center, bold: true, font_size: 30, background: '#ADC4CE'}
     type: Label
-    layout_properties: {grid_position: 'VCIGMD,OJLLNN'}
+    layout_properties: {grid_position: 'VCIGMD,OJLLNN', full_width_row: true}
   - name: spacer_4
     properties: {height: 32}
     type: Spacer
@@ -32,7 +32,7 @@ components:
     type: Spacer
     layout_properties: {grid_position: 'YFNHGB,YBBEES'}
   - name: label_2
-    properties: {text: ' Received From :', bold: true, font_size: 16, align: left, background: 'theme:Primary Container', role: null}
+    properties: {text: ' Received From :', bold: true, font_size: 16, align: left, background: '#FFF8C9', role: null}
     type: Label
     layout_properties: {grid_position: 'ZBHJBL,RQPLFM WBAHXB,PSYKHU'}
   - name: label_4
@@ -70,7 +70,7 @@ components:
     data_bindings:
     - {property: text, code: 'self.item[''borrower_address'']', writeback: false}
   - name: label_3
-    properties: {text: ' Received By :', bold: true, font_size: 16, align: left, background: 'theme:Primary Container'}
+    properties: {text: ' Received By :', bold: true, font_size: 16, align: left, background: '#FFF8C9'}
     type: Label
     layout_properties: {grid_position: 'ZBHJBL,WUQMZW VTIAHY,MVZDDM'}
   - name: label_10
@@ -108,11 +108,11 @@ components:
     data_bindings:
     - {property: text, code: 'self.item[''lender_address'']', writeback: false}
   - name: label_22
-    properties: {text: ' Payment Details :', bold: true, font_size: 16, align: left, background: 'theme:Primary Container'}
+    properties: {text: ' Payment Details :', bold: true, font_size: 15.5, align: left, background: '#FFF8C9'}
     type: Label
     layout_properties: {grid_position: 'ZBHJBL,BRFFZC PFLSTW,BWOOZN'}
   - name: label_25
-    properties: {text: 'Payment Type :', bold: true}
+    properties: {text: 'Payment Type :', bold: true, align: left}
     type: Label
     layout_properties: {grid_position: 'ZBHJBL,BRFFZC CHRYDK,DNUZIV'}
   - name: label_26
@@ -132,7 +132,7 @@ components:
   - name: label_30
     properties: {}
     type: Label
-    layout_properties: {grid_position: 'JOWZHH,IAIFRG'}
+    layout_properties: {grid_position: 'ZBHJBL,LEEPZH CAVEIQ,MOBHQT'}
     data_bindings:
     - {property: text, code: 'self.item[''amount_paid'']', writeback: false}
   - name: spacer_1
@@ -162,5 +162,5 @@ components:
     - name: repeating_panel_1
       properties: {item_template: admin.dashboard.accounting.payment_receipts.RowTemplate51}
       type: RepeatingPanel
-    layout_properties: {grid_position: 'XLGRCU,CSJVWO'}
+    layout_properties: {grid_position: 'XLGRCU,CSJVWO', full_width_row: true}
 is_package: true
