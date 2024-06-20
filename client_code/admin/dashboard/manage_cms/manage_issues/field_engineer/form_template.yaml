@@ -11,4 +11,52 @@ components:
   type: Button
   layout_properties: {grid_position: 'DFQNOE,JUAMND', full_width_row: true}
   event_bindings: {click: button_1_click}
+- name: column_panel_1
+  properties: {}
+  type: ColumnPanel
+  layout_properties: {grid_position: 'KXNVQZ,ZYGEHR'}
+  components:
+  - name: label_1
+    properties:
+      text: |
+        Name
+      bold: true
+    type: Label
+    layout_properties: {grid_position: 'VKYQTM,MWGUOA LMSNHA,GXOZQW'}
+  - name: label_3
+    properties: {text: Phone Number, bold: true}
+    type: Label
+    layout_properties: {grid_position: 'VKYQTM,MWGUOA IOBWQT,SFTZFE'}
+  - name: label_5
+    properties: {bold: true, text: Description}
+    type: Label
+    layout_properties: {grid_position: 'VKYQTM,MWGUOA HFRRLV,JXRNSE'}
+  - name: label_7
+    properties: {text: Address, bold: true}
+    type: Label
+    layout_properties: {grid_position: 'VKYQTM,MWGUOA YYJCXM,YZHVBM'}
+  - name: label_9
+    properties: {text: Assign, bold: true}
+    type: Label
+    layout_properties: {grid_position: 'VKYQTM,MWGUOA YMYKUK,TMRBZZ'}
+  - name: label_2
+    properties: {}
+    type: Label
+    layout_properties: {grid_position: 'VKYQTM,DKZUGS NARJLM,YWJWAE'}
+  - name: label_4
+    properties: {}
+    type: Label
+    layout_properties: {grid_position: 'VKYQTM,DKZUGS MUMKSA,NTZENK'}
+  - name: label_6
+    properties: {}
+    type: Label
+    layout_properties: {grid_position: 'VKYQTM,DKZUGS MCJPBP,GUASHC'}
+  - name: label_8
+    properties: {}
+    type: Label
+    layout_properties: {grid_position: 'VKYQTM,DKZUGS WEAAIA,ZQAUWR'}
+  - name: label_10
+    properties: {}
+    type: Label
+    layout_properties: {grid_position: 'VKYQTM,DKZUGS VZAEDJ,OILLDU'}
 is_package: true

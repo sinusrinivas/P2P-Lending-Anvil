@@ -16,6 +16,5 @@ class RowTemplate41(RowTemplate41Template):
 
    
   def button_1_click_click(self, **event_args):
-    selcted_row=self.item
+    selcted_row=self.label_2.text
     open_form('admin.dashboard.manage_cms.manage_issues.field_engineer', selected_row=selcted_row)
-
