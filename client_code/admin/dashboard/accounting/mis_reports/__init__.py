@@ -95,7 +95,7 @@ class mis_reports(mis_reportsTemplate):
 
   def plot_loan_data(self):
     # Fetch data from tables
-    loan_details = app_tables.fin_loan_details.search(loan_updated_status=q.any_of('closed loan', 'rejected', 'disbursed loan', 'foreclosure', 'lost opportunities', 'accepted', 'under process', 'extension'))
+    loan_details = app_tables.fin_loan_details.search(loan_updated_status=q.any_of('closed loan', 'rejected', 'disbursed loan', 'foreclosure', 'lost opportunities', 'approved', 'under process', 'extension'))
 
     # Calculate metrics
     no_of_loans_disbursed = len([loan for loan in loan_details if loan['loan_updated_status'] == 'disbursed loan'])
@@ -103,7 +103,7 @@ class mis_reports(mis_reportsTemplate):
     no_of_loans_rejected = len([loan for loan in loan_details if loan['loan_updated_status'] == 'rejected'])
     no_of_loans_foreclosed = len([loan for loan in loan_details if loan['loan_updated_status'] == 'foreclosure'])
     no_of_loans_lost_opportunity = len([loan for loan in loan_details if loan['loan_updated_status'] == 'lost opportunities'])
-    no_of_loans_accepted = len([loan for loan in loan_details if loan['loan_updated_status'] == 'accepted'])
+    no_of_loans_approved = len([loan for loan in loan_details if loan['loan_updated_status'] == 'approved'])
     no_of_loans_under_process = len([loan for loan in loan_details if loan['loan_updated_status'] == 'under process'])
     no_of_extension_loans = len([loan for loan in loan_details if loan['loan_updated_status'] == 'extension'])
     # Data for the pie chart
@@ -113,8 +113,9 @@ class mis_reports(mis_reportsTemplate):
         no_of_loans_rejected,
         no_of_loans_foreclosed,
         no_of_loans_lost_opportunity,
-        no_of_loans_accepted,
-        no_of_loans_under_process
+        no_of_loans_approved,
+        no_of_loans_under_process,
+        no_of_extension_loans
 
     ]
     labels = [
@@ -123,8 +124,9 @@ class mis_reports(mis_reportsTemplate):
         'No of Loans Rejected: {}'.format(no_of_loans_rejected),
         'No of Loans Foreclosed: {}'.format(no_of_loans_foreclosed),
         'No of Loans Lost Opportunity: {}'.format(no_of_loans_lost_opportunity),
-        'No of Loans Accepted: {}'.format(no_of_loans_accepted),
-        'No of Loans Under Process: {}'.format(no_of_loans_under_process)
+        'No of Loans Approved: {}'.format(no_of_loans_approved),
+        'No of Loans Under Process: {}'.format(no_of_loans_under_process),
+        'No of Extension Loans: {}'.format(no_of_extension_loans)
 
     ]
 

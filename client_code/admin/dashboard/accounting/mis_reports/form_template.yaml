@@ -1,6 +1,6 @@
 container:
   type: ColumnPanel
-  properties: {col_widths: '{"YIHWIE":30,"MUQNXZ":30}'}
+  properties: {col_widths: '{"YIHWIE":30}'}
 components:
 - name: home_button_admin_1
   properties: {}
@@ -18,11 +18,23 @@ components:
 - name: plot_1
   properties: {height: '600', spacing_above: medium, spacing_below: medium}
   type: Plot
-  layout_properties: {grid_position: 'DDQBYV,YIHWIE', full_width_row: true}
+  layout_properties: {grid_position: 'DDQBYV,YIHWIE', full_width_row: false}
+- name: spacer_3
+  properties: {height: 32}
+  type: Spacer
+  layout_properties: {grid_position: 'QHCVTU,LYMIAL'}
 - name: plot_2
   properties: {height: '600', spacing_above: medium, spacing_below: medium}
   type: Plot
-  layout_properties: {grid_position: 'DDQBYV,MUQNXZ', full_width_row: true}
+  layout_properties: {grid_position: 'VHMFSP,NHOFUQ'}
+- name: spacer_4
+  properties: {height: 32}
+  type: Spacer
+  layout_properties: {grid_position: 'SDGEUN,NNWKRC'}
+- name: plot_3
+  properties: {}
+  type: Plot
+  layout_properties: {grid_position: 'HJABIG,LDPYPX'}
 - name: column_panel_1
   properties: {}
   type: ColumnPanel
