@@ -24,8 +24,7 @@ components:
     properties: {height: 102.6666259765625}
     type: Image
     layout_properties: {grid_position: 'NAWUEV,NUIKOM'}
-    data_bindings:
-    - {property: source, code: 'self.item[''user_photo'']', writeback: false}
+    data_bindings: []
   - name: spacer_1
     properties: {height: 32}
     type: Spacer
@@ -72,6 +71,8 @@ components:
     properties: {align: center}
     type: Label
     layout_properties: {grid_position: 'VKYQTM,DKZUGS MUMKSA,NTZENK'}
+    data_bindings:
+    - {property: text, code: 'self.item[''mobile'']', writeback: false}
   - name: label_6
     properties: {align: center}
     type: Label
