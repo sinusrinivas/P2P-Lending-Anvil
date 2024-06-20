@@ -10,8 +10,9 @@ import anvil.server
 from anvil import *
 import math
 import requests
-# from anvil.google.maps import geocode
 
+
+# Replace with your OpenCage Geocoding API key
 API_KEY = "AIzaSyA4tqdDU6W_lbykTWJ3RM1HTsA8HcRXilE"
 
 def haversine(lat1, lon1, lat2, lon2):
@@ -25,36 +26,46 @@ def haversine(lat1, lon1, lat2, lon2):
 
 @anvil.server.callable
 def get_coordinates(address):
-    url = f"https://maps.googleapis.com/maps/api/geocode/json?address={address}&key={API_KEY}"
+    url = f"https://api.opencagedata.com/geocode/v1/json?q={address}&key={API_KEY}"
     response = requests.get(url)
     data = response.json()
     
-    if data['results']:
+    if 'results' in data and data['results']:
         location = data['results'][0]['geometry']['location']
         return {"lat": location['lat'], "lng": location['lng']}
     else:
-        raise ValueError(f"Address '{address}' could not be geocoded.")
+        raise ValueError(f"Address '{address}' could not be geocoded. Response: {data}")
 
 @anvil.server.callable
 def find_nearby_field_engineers(customer_address, radius=50):  # radius in km
-    customer_coords = get_coordinates(customer_address)
+    try:
+        customer_coords = get_coordinates(customer_address)
+    except ValueError as e:
+        raise ValueError(f"Failed to get coordinates for customer address: {e}")
+    
     lat, lng = customer_coords['lat'], customer_coords['lng']
     
-    field_engineers = app_tables.field_engineers.search()
+    field_engineers = app_tables.fin_field_engineers.search()
     nearby_engineers = []
 
     for fe in field_engineers:
-        fe_coords = get_coordinates(fe['address'])
+        try:
+            fe_coords = get_coordinates(fe['address'])
+        except ValueError as e:
+            print(f"Failed to get coordinates for field engineer address '{fe['address']}': {e}")
+            continue
+        
         distance = haversine(lat, lng, fe_coords['lat'], fe_coords['lng'])
         if distance <= radius:
             nearby_engineers.append({
-                "name": fe['name'],
+                "name": fe['full_name'],
                 "location": f"{fe_coords['lat']}, {fe_coords['lng']}",
                 "distance": distance
             })
 
     nearby_engineers.sort(key=lambda x: x['distance'])
     return nearby_engineers
+
 
 # def haversine(lat1, lon1, lat2, lon2):
 #     R = 6371  # Radius of the Earth in km
