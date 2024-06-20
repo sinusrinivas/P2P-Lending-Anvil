@@ -33,11 +33,12 @@ class all_details(all_detailsTemplate):
         self.status.text = f"{selected_row['status']}"
         self.customer_address_2.text = f"{selected_row['street_adress_2']}"
 
+        self.selected_engineer = None
 
         # Find nearest field engineer and populate dropdown
         self.find_nearest_field_engineer()
 
-
+        self.nearest_engineer_dropdown.set_event_handler('change', self.nearest_engineer_dropdown_change)
     def get_coordinates(self, address):
         # Call Nominatim API to get coordinates
         response = anvil.http.request(
@@ -90,13 +91,13 @@ class all_details(all_detailsTemplate):
         if nearest_engineer:
             print(f"Nearest Engineer: {nearest_engineer['full_name']}, Distance: {shortest_distance} km")
             self.nearest_engineer_dropdown.items = [(nearest_engineer['full_name'], nearest_engineer['field_engineer_id'])]
-
+            self.nearest_engineer_dropdown.selected_value = nearest_engineer['field_engineer_id']
 
     def nearest_engineer_dropdown_change(self, **event_args):
         """This method is called when the dropdown selection changes"""
         selected_id = self.nearest_engineer_dropdown.selected_value
         if selected_id:
-            self.selected_engineer = app_tables.fin_field_engineers.get(full_name=selected_id)
+            self.selected_engineer = app_tables.fin_field_engineers.get(field_engineer_id=selected_id)
 
 
     def button_1_click(self, **event_args):
