@@ -14,9 +14,6 @@ import requests
 
 
 
-
-
-
 # Define server function to navigate to the Invest Now form
 @anvil.server.callable
 def open_invest_now_form():
