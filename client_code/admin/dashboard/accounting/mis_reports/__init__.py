@@ -75,6 +75,7 @@ class mis_reports(mis_reportsTemplate):
         no_of_loans_approved = len([loan for loan in loan_details if loan['loan_updated_status'] == 'approved'])
         no_of_loans_under_process = len([loan for loan in loan_details if loan['loan_updated_status'] == 'under process'])
         no_of_extension_loans = len([loan for loan in loan_details if loan['loan_updated_status'] == 'extension'])
+        
         # Data for the pie chart
         values = [
             no_of_loans_disbursed,
@@ -85,7 +86,6 @@ class mis_reports(mis_reportsTemplate):
             no_of_loans_approved,
             no_of_loans_under_process,
             no_of_extension_loans
-
         ]
         labels = [
             'No of Loans Disbursed: {}'.format(no_of_loans_disbursed),
@@ -96,7 +96,6 @@ class mis_reports(mis_reportsTemplate):
             'No of Loans Approved: {}'.format(no_of_loans_approved),
             'No of Loans Under Process: {}'.format(no_of_loans_under_process),
             'No of Extension Loans: {}'.format(no_of_extension_loans)
-
         ]
 
         # Create the pie chart
@@ -124,8 +123,8 @@ class mis_reports(mis_reportsTemplate):
                 customer_returns[customer_id] = 0
             customer_returns[customer_id] += investment['return_on_investment']
         
-        # Convert the dictionary to a list of tuples and sort by return_on_investment in ascending order
-        sorted_returns = sorted(customer_returns.items(), key=lambda x: x[1])
+        # Convert the dictionary to a list of tuples and sort by return_on_investment in descending order
+        sorted_returns = sorted(customer_returns.items(), key=lambda x: x[1], reverse=True)
         
         # Prepare data for the bar chart
         categories = [str(item[0]) for item in sorted_returns]  # customer_ids
@@ -137,7 +136,12 @@ class mis_reports(mis_reportsTemplate):
         # Create a layout
         layout = go.Layout(
             title=dict(text='Return on Investment by Customer', font=dict(size=16, weight='bold')),
-            xaxis=dict(title='Customer ID', tickfont=dict(size=10, weight='bold'), tickangle=45),
+            xaxis=dict(
+                title='Customer ID',
+                tickfont=dict(size=10, weight='bold'),
+                tickangle=45,
+                type='category'  # Ensures the x-axis is treated as categorical
+            ),
             yaxis=dict(title='Return on Investment'),
             barmode='group'
         )
