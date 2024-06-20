@@ -1,6 +1,6 @@
 container:
   type: ColumnPanel
-  properties: {col_widths: '{}'}
+  properties: {col_widths: '{"IRIUPR":25,"TXNYFH":10,"UJZHMM":25}'}
 components:
 - name: home_button_admin_1
   properties: {}
@@ -11,6 +11,18 @@ components:
   type: Button
   layout_properties: {grid_position: 'DFQNOE,JUAMND', full_width_row: true}
   event_bindings: {click: button_1_click}
+- name: spacer_2
+  properties: {height: 32}
+  type: Spacer
+  layout_properties: {grid_position: 'UYLAPM,IRIUPR'}
+- name: image_1
+  properties: {height: 102.6666259765625}
+  type: Image
+  layout_properties: {grid_position: 'UYLAPM,TXNYFH'}
+- name: spacer_1
+  properties: {height: 32}
+  type: Spacer
+  layout_properties: {grid_position: 'UYLAPM,UJZHMM'}
 - name: column_panel_1
   properties: {}
   type: ColumnPanel
@@ -28,11 +40,19 @@ components:
     type: Label
     layout_properties: {grid_position: 'VKYQTM,MWGUOA IOBWQT,SFTZFE'}
   - name: label_5
-    properties: {bold: true, text: Description}
+    properties: {bold: true, text: Address}
     type: Label
     layout_properties: {grid_position: 'VKYQTM,MWGUOA HFRRLV,JXRNSE'}
+  - name: label_11
+    properties: {text: Issue Category, bold: true}
+    type: Label
+    layout_properties: {grid_position: 'VKYQTM,MWGUOA KUIHPD,JRVZJC'}
+  - name: label_12
+    properties: {text: Issue SubCategory, bold: true}
+    type: Label
+    layout_properties: {grid_position: 'VKYQTM,MWGUOA FCNHSX,ZCFWPQ'}
   - name: label_7
-    properties: {text: Address, bold: true}
+    properties: {text: Description, bold: true}
     type: Label
     layout_properties: {grid_position: 'VKYQTM,MWGUOA YYJCXM,YZHVBM'}
   - name: label_9
@@ -43,6 +63,8 @@ components:
     properties: {}
     type: Label
     layout_properties: {grid_position: 'VKYQTM,DKZUGS NARJLM,YWJWAE'}
+    data_bindings:
+    - {property: text, code: 'self.item[''name'']', writeback: false}
   - name: label_4
     properties: {}
     type: Label
@@ -59,4 +81,12 @@ components:
     properties: {}
     type: Label
     layout_properties: {grid_position: 'VKYQTM,DKZUGS VZAEDJ,OILLDU'}
+  - name: label_13
+    properties: {}
+    type: Label
+    layout_properties: {grid_position: 'VKYQTM,DKZUGS ETTRMC,JHJZAB'}
+  - name: label_14
+    properties: {}
+    type: Label
+    layout_properties: {grid_position: 'VKYQTM,DKZUGS GKKAAB,XKXOTA'}
 is_package: true
