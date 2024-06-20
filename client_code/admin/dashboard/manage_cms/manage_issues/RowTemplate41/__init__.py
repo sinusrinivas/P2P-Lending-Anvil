@@ -11,8 +11,8 @@ from anvil.tables import app_tables
 
 class RowTemplate41(RowTemplate41Template):
   def __init__(self, **properties):
-    # Set Form properties and Data Bindings.
     self.init_components(**properties)
+   
 
    
   def button_1_click_click(self, **event_args):

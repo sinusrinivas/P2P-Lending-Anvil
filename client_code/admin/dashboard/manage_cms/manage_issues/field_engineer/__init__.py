@@ -17,20 +17,16 @@ class field_engineer(field_engineerTemplate):
     self.id = selected_row['customer_id']
 
     user_profile=app_tables.fin_user_profile.get(customer_id=self.id)
-    self.image_1.source = user_profile['user_photo']
+    #self.image_1.source = user_profile['user_photo']
     self.label_6.text=user_profile['present_address']
     customer_details=app_tables.fin_reported_problems.get(customer_id=self.id)
+    self.image_1.source = customer_details['user_photo']
     self.label_2.text=customer_details['name']
     self.label_4.text=customer_details['mobile_number']
     self.label_8.text=customer_details['category']
     self.label_10.text=customer_details['subcategory']
-    self.label_13.text=customer_details['']
+    self.label_13.text=customer_details['issue_description']
     
-    
-    
-   
-    
-
   def button_1_click(self, **event_args):
     open_form('admin.dashboard.manage_cms.manage_issues')
 
