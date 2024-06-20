@@ -39,7 +39,7 @@ components:
       - {id: UDGJCC, data_key: column_9, title: Category, width: 118.13330078125, expand: false}
       - {id: TYMPQJ, data_key: column_10, title: Subcategory, width: 129.13330078125, expand: false}
       - {id: SSBISO, data_key: column_11, title: User type, width: 114.733154296875, expand: false}
-      - {id: OLVPRS, data_key: column_1, title: Field}
+      - {id: OLVPRS, data_key: column_1, title: ''}
       role: tonal-data-grid
       rows_per_page: 10
       wrap_on: never

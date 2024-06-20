@@ -14,8 +14,8 @@ class RowTemplate41(RowTemplate41Template):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
 
-    # Any code you write here will run before the form opens.
-
-  def button_1_click(self, **event_args):
+   
+  def button_1_click_click(self, **event_args):
     selcted_row=self.item
     open_form('admin.dashboard.manage_cms.manage_issues.field_engineer', selected_row=selcted_row)
+

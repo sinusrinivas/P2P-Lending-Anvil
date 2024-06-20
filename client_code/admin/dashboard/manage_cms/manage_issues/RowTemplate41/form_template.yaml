@@ -70,8 +70,8 @@ components:
   layout_properties: {column: YCWJHX}
   data_bindings:
   - {property: text, code: 'self.item[''it_is_urgent'']', writeback: false}
-- name: button_1
-  properties: {text: Solve, background: '#05264d', foreground: white, role: elevated-button, icon: '', icon_align: right}
-  type: Button
+- name: button_1_click
+  properties: {align: center, text: Resolve Issue}
+  type: Link
   layout_properties: {column: OLVPRS}
-  event_bindings: {click: button_1_click}
+  event_bindings: {click: button_1_click_click}

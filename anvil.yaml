@@ -279,14 +279,6 @@ db_schema:
       admin_ui: {width: 200, order: 33}
       type: number
     title: fin_product_details
-  fin_field_engineers:
-    client: full
-    server: full
-    columns:
-    - name: field_engineers
-      admin_ui: {width: 200, order: 0}
-      type: string
-    title: fin_field_engineers
   fin_admin_ascend_categories:
     client: full
     server: full
