@@ -92,7 +92,43 @@ class all_details(all_detailsTemplate):
             self.nearest_engineer_dropdown.items = [(nearest_engineer['full_name'], nearest_engineer['field_engineer_id'])]
 
 
+    def nearest_engineer_dropdown_change(self, **event_args):
+        """This method is called when the dropdown selection changes"""
+        selected_id = self.nearest_engineer_dropdown.selected_value
+        if selected_id:
+            self.selected_engineer = app_tables.fin_field_engineers.get(full_name=selected_id)
+
+
     def button_1_click(self, **event_args):
         """This method is called when the button is clicked"""
         open_form('admin.dashboard.loan_servicing.handle_collection_process')
+
+    def save_click(self, **event_args):
+      """This method is called when the button is clicked"""
+      if self.selected_engineer:
+            app_tables.fin_handling_collection_process.add_row(
+                borrower_customer_id=self.selected_row['borrower_customer_id'],
+                loan_id=self.selected_row['loan_id'],
+                borrower_name=self.selected_row['borrower_full_name'],
+                borrower_email=self.selected_row['borrower_email_id'],
+                customer_address_1=self.selected_row['street_adress_1'],
+                customer_addres_2=self.selected_row['street_adress_2'],
+                product_name=self.selected_row['product_name'],
+                relatives_name=self.selected_row['guarantor_name'],
+                relatives_relation=self.selected_row['another_person'],
+                relatives_mobile_no=self.selected_row['guarantor_mobile_no'],
+                # another_email=self.selected_row['another_email'],
+                relatives_address=self.selected_row['guarantor_address'],
+                # emi_number=self.selected_row['emi_number'],
+                remaining_amount=self.selected_row['total_remaining_amount'],
+                loan_status=self.selected_row['status'],
+                engineer_id=self.selected_engineer['field_engineer_id'],
+                engineer_name=self.selected_engineer['full_name'],
+                engineer_location=self.selected_engineer['address'],
+                engineer_mbl_no=self.selected_engineer['mobile'],
+                engineer_email_id=self.selected_engineer['field_engineer_email']
+            )
+            alert("Data saved successfully!")
+      else:
+            alert("Please select a field engineer.")
 

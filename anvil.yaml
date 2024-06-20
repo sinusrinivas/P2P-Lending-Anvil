@@ -582,6 +582,12 @@ db_schema:
     - name: user_photo
       admin_ui: {width: 200}
       type: media
+    - name: issue_occured
+      admin_ui: {width: 200}
+      type: string
+    - name: status
+      admin_ui: {width: 200}
+      type: bool
     title: fin_reported_problems
   fin_borrower_qualification:
     title: fin_borrower_qualification
@@ -1541,6 +1547,71 @@ db_schema:
     - name: max_amount
       admin_ui: {width: 200}
       type: number
+  fin_handling_collection_process:
+    title: fin_handling_collection_process
+    client: full
+    server: full
+    columns:
+    - name: engineer_id
+      admin_ui: {width: 200}
+      type: number
+    - name: engineer_name
+      admin_ui: {width: 200}
+      type: string
+    - name: engineer_location
+      admin_ui: {width: 200}
+      type: string
+    - name: borrower_customer_id
+      admin_ui: {width: 200}
+      type: number
+    - name: borrower_email
+      admin_ui: {width: 200}
+      type: string
+    - name: borrower_name
+      admin_ui: {width: 200}
+      type: string
+    - name: loan_id
+      admin_ui: {width: 200}
+      type: string
+    - name: product_name
+      admin_ui: {width: 200}
+      type: string
+    - name: loan_status
+      admin_ui: {width: 200}
+      type: string
+    - name: remaining_amount
+      admin_ui: {width: 200}
+      type: number
+    - name: customer_address_1
+      admin_ui: {width: 200}
+      type: string
+    - name: customer_addres_2
+      admin_ui: {width: 200}
+      type: string
+    - name: relatives_name
+      admin_ui: {width: 200}
+      type: string
+    - name: relatives_mobile_no
+      admin_ui: {width: 200}
+      type: number
+    - name: relatives_email
+      admin_ui: {width: 200}
+      type: string
+    - name: relatives_address
+      admin_ui: {width: 200}
+      type: string
+    - name: engineer_mbl_no
+      admin_ui: {width: 200, order: 1.5}
+      type: number
+    - name: engineer_email_id
+      admin_ui: {width: 200, order: 0.5}
+      type: string
+    - name: relatives_relation
+      admin_ui: {width: 200, order: 10.5}
+      type: string
+    - name: borrower_another_email
+      admin_ui: {width: 200, order: 3.75}
+      type: string
   fin_borrower_employee_type:
     client: full
     server: full
