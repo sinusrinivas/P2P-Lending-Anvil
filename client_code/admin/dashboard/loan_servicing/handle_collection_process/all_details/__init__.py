@@ -35,10 +35,9 @@ class all_details(all_detailsTemplate):
 
         self.selected_engineer = None
 
-        # Find nearest field engineer and populate dropdown
+        # Find nearest field engineer and populate label
         self.find_nearest_field_engineer()
-
-        self.nearest_engineer_dropdown.set_event_handler('change', self.nearest_engineer_dropdown_change)
+        
     def get_coordinates(self, address):
         # Call Nominatim API to get coordinates
         response = anvil.http.request(
@@ -90,23 +89,17 @@ class all_details(all_detailsTemplate):
 
         if nearest_engineer:
             print(f"Nearest Engineer: {nearest_engineer['full_name']}, Distance: {shortest_distance} km")
-            self.nearest_engineer_dropdown.items = [(nearest_engineer['full_name'], nearest_engineer['field_engineer_id'])]
-            self.nearest_engineer_dropdown.selected_value = nearest_engineer['field_engineer_id']
-
-    def nearest_engineer_dropdown_change(self, **event_args):
-        """This method is called when the dropdown selection changes"""
-        selected_id = self.nearest_engineer_dropdown.selected_value
-        if selected_id:
-            self.selected_engineer = app_tables.fin_field_engineers.get(field_engineer_id=selected_id)
-
+            self.nearest_engineer_label.text = nearest_engineer['full_name']
+            self.selected_engineer = nearest_engineer
 
     def button_1_click(self, **event_args):
         """This method is called when the button is clicked"""
         open_form('admin.dashboard.loan_servicing.handle_collection_process')
 
     def save_click(self, **event_args):
-      """This method is called when the button is clicked"""
-      if self.selected_engineer:
+        """This method is called when the button is clicked"""
+        if self.selected_engineer:
+            print(f"Saving data for Engineer: {self.selected_engineer}")  # Debug print
             app_tables.fin_handling_collection_process.add_row(
                 borrower_customer_id=self.selected_row['borrower_customer_id'],
                 loan_id=self.selected_row['loan_id'],
@@ -126,10 +119,10 @@ class all_details(all_detailsTemplate):
                 engineer_id=self.selected_engineer['field_engineer_id'],
                 engineer_name=self.selected_engineer['full_name'],
                 engineer_location=self.selected_engineer['address'],
-                engineer_mbl_no=self.selected_engineer['mobile'],
+                engineer_mbl_no=self.selected_engineer['mobile_no'],
                 engineer_email_id=self.selected_engineer['field_engineer_email']
             )
             alert("Data saved successfully!")
-      else:
+        else:
+            print("No field engineer selected")  # Debug print
             alert("Please select a field engineer.")
-
