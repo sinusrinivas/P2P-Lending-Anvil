@@ -95,7 +95,7 @@ class mis_reports(mis_reportsTemplate):
 
   def plot_loan_data(self):
     # Fetch data from tables
-    loan_details = app_tables.fin_loan_details.search(loan_updated_status=q.any_of('closed loan', 'rejected', 'disbursed loan', 'foreclosure', 'lost opportunities', 'accepted', 'under process'))
+    loan_details = app_tables.fin_loan_details.search(loan_updated_status=q.any_of('closed loan', 'rejected', 'disbursed loan', 'foreclosure', 'lost opportunities', 'accepted', 'under process', 'extension'))
 
     # Calculate metrics
     no_of_loans_disbursed = len([loan for loan in loan_details if loan['loan_updated_status'] == 'disbursed loan'])
@@ -105,6 +105,7 @@ class mis_reports(mis_reportsTemplate):
     no_of_loans_lost_opportunity = len([loan for loan in loan_details if loan['loan_updated_status'] == 'lost opportunities'])
     no_of_loans_accepted = len([loan for loan in loan_details if loan['loan_updated_status'] == 'accepted'])
     no_of_loans_under_process = len([loan for loan in loan_details if loan['loan_updated_status'] == 'under process'])
+    no_of_extension_loans = len([loan for loan in loan_details if loan['loan_updated_status'] == 'extension'])
     # Data for the pie chart
     values = [
         no_of_loans_disbursed,
@@ -131,7 +132,7 @@ class mis_reports(mis_reportsTemplate):
     fig = go.Figure(data=[go.Pie(labels=labels, values=values, textinfo='label+percent')])
 
     # Update layout for better appearance
-    fig.update_layout(title={'text': 'Financial Details on Loans', 'font': {'size': 24, 'color': 'black', 'family': 'Arial', 'bold': True}})
+    fig.update_layout(title={'text': 'Different types of Loans', 'font': {'size': 24, 'color': 'black', 'family': 'Arial', 'bold': True}})
 
     # Embed the plot in the Anvil app
     self.plot_2.figure = fig

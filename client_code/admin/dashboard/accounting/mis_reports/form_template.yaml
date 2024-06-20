@@ -1,4 +1,6 @@
-container: {type: ColumnPanel}
+container:
+  type: ColumnPanel
+  properties: {col_widths: '{"YIHWIE":30,"MUQNXZ":30}'}
 components:
 - name: home_button_admin_1
   properties: {}
