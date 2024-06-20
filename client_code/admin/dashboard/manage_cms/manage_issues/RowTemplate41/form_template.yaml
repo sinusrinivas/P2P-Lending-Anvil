@@ -58,19 +58,19 @@ components:
   data_bindings:
   - {property: text, code: 'self.item[''subcategory'']', writeback: false}
 - name: label_8
-  properties: {}
+  properties: {align: center}
   type: Label
   layout_properties: {column: SSBISO}
   data_bindings:
   - {property: text, code: 'self.item[''usertype'']', writeback: false}
 - name: label_9
-  properties: {}
+  properties: {align: center}
   type: Label
   layout_properties: {column: YCWJHX}
   data_bindings:
   - {property: text, code: 'self.item[''it_is_urgent'']', writeback: false}
-- name: Solve
-  properties: {text: Solve Issue!, role: outlined-card, icon: ''}
-  type: Link
+- name: button_1
+  properties: {text: Solve, background: '#05264d', foreground: white, role: elevated-button}
+  type: Button
   layout_properties: {column: OLVPRS}
-  event_bindings: {click: Solve_click}
+  event_bindings: {click: button_1_click}
