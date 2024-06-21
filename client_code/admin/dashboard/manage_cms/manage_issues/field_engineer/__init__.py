@@ -19,8 +19,8 @@ class field_engineer(field_engineerTemplate):
     self.id = selected_row['customer_id']
     self.label_17.text=self.id
 
-    user_profile=app_tables.fin_user_profile.get(customer_id=self.id)
-    self.label_6.text=user_profile['street_adress_1']
+    self.user_profile=app_tables.fin_user_profile.get(customer_id=self.id)
+    self.label_6.text=self.user_profile['street_adress_1']
     customer_details=app_tables.fin_reported_problems.get(customer_id=self.id)
     self.image_1.source = customer_details['user_photo']
     self.label_2.text=customer_details['name']
@@ -29,11 +29,11 @@ class field_engineer(field_engineerTemplate):
     self.label_10.text=customer_details['subcategory']
     self.label_13.text=customer_details['issue_description']
     self.label_14.text=customer_details['usertype']
-    self.address = user_profile['street_adress_1']
+    self.address = self.user_profile['street_adress_1']
     self.selected_engineer = None
     self.find_nearest_field_engineer()
       
-  def get_coordinates(self):
+  def get_coordinates(self, address):
       # Call Nominatim API to get coordinate
       response = anvil.http.request(
           f"https://nominatim.openstreetmap.org/search?format=json&q={address}",
@@ -66,7 +66,7 @@ class field_engineer(field_engineerTemplate):
       return distance
 
   def find_nearest_field_engineer(self):
-      customer_address = self.address
+      customer_address = self.user_profile['street_adress_1']
       customer_coordinates = self.get_coordinates(customer_address)
 
       field_engineers = app_tables.fin_field_engineers.search()
