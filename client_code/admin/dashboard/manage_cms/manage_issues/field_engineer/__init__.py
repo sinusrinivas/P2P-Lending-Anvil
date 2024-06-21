@@ -33,8 +33,8 @@ class field_engineer(field_engineerTemplate):
     self.category=customer_details['category']
     self.selected_engineer = None
     if self.category == 'Lone Issue':
-      
       self.find_nearest_field_engineer()
+      self.save_button()
     else:
       self.label_18.text = 'This Issue Checked By Technical Team'
       
@@ -95,7 +95,7 @@ class field_engineer(field_engineerTemplate):
   def button_1_click(self, **event_args):
     open_form('admin.dashboard.manage_cms.manage_issues')
 
-  def borrower_loan_issue(self, **event_args):
+  def save_button(self, **event_args):
     self.column_panel_2.visible = True
 
   def button_2_click(self, **event_args):
