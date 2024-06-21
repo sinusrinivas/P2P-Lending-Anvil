@@ -36,33 +36,37 @@ components:
   - name: label_1
     properties:
       text: |
-        Name
+        Name:
       bold: true
       align: left
     type: Label
     layout_properties: {grid_position: 'VKYQTM,MWGUOA LMSNHA,GXOZQW'}
   - name: label_3
-    properties: {text: Phone Number, bold: true, align: left}
+    properties: {text: 'Phone Number:', bold: true, align: left}
     type: Label
     layout_properties: {grid_position: 'VKYQTM,MWGUOA IOBWQT,SFTZFE'}
   - name: label_5
-    properties: {bold: true, text: Address, align: left}
+    properties: {bold: true, text: 'Address:', align: left}
     type: Label
     layout_properties: {grid_position: 'VKYQTM,MWGUOA HFRRLV,JXRNSE'}
   - name: label_11
-    properties: {text: Issue Category, bold: true, align: left}
+    properties: {text: 'Issue Category:', bold: true, align: left}
     type: Label
     layout_properties: {grid_position: 'VKYQTM,MWGUOA KUIHPD,JRVZJC'}
   - name: label_12
-    properties: {text: Issue SubCategory, bold: true, align: left}
+    properties: {text: 'Issue SubCategory:', bold: true, align: left}
     type: Label
     layout_properties: {grid_position: 'VKYQTM,MWGUOA FCNHSX,ZCFWPQ'}
   - name: label_7
-    properties: {text: Description, bold: true, align: left}
+    properties: {text: 'Description:', bold: true, align: left}
     type: Label
     layout_properties: {grid_position: 'VKYQTM,MWGUOA YYJCXM,YZHVBM'}
+  - name: label_15
+    properties: {text: 'User Type:', bold: true}
+    type: Label
+    layout_properties: {grid_position: 'VKYQTM,MWGUOA XDBAEI,BMVAPQ'}
   - name: label_9
-    properties: {text: Assign, bold: true, align: left}
+    properties: {text: 'Assign:', bold: true, align: left}
     type: Label
     layout_properties: {grid_position: 'VKYQTM,MWGUOA YMYKUK,TMRBZZ'}
   - name: label_2

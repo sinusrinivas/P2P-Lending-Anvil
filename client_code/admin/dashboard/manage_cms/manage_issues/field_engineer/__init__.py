@@ -26,6 +26,7 @@ class field_engineer(field_engineerTemplate):
     self.label_8.text=customer_details['category']
     self.label_10.text=customer_details['subcategory']
     self.label_13.text=customer_details['issue_description']
+    self.label_14.text=customer_details['usertype']
     
   def button_1_click(self, **event_args):
     open_form('admin.dashboard.manage_cms.manage_issues')
