@@ -19,6 +19,8 @@ class dashboard(dashboardTemplate):
       # Call the server function to update the fees
       result = anvil.server.call('update_fin_platform_fees')
       alert(result)
+
+  
   def button_2_click(self, **event_args):
    
     open_form('admin.dashboard.loan_servicing')
