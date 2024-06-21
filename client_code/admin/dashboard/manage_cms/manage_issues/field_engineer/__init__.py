@@ -30,8 +30,12 @@ class field_engineer(field_engineerTemplate):
     self.label_13.text=customer_details['issue_description']
     self.label_14.text=customer_details['usertype']
     self.address = self.user_profile['street_adress_1']
+    self.category=customer_details['category']
     self.selected_engineer = None
-    self.find_nearest_field_engineer()
+    if self.category == ('Loan Issue' or 'Loan Issues' or'loan issue'or'loan issues'):
+      self.find_nearest_field_engineer()
+    else:
+      self.label_18.text = 'This Issue Checked By Technical Team'
       
   def get_coordinates(self, address):
       # Call Nominatim API to get coordinate
