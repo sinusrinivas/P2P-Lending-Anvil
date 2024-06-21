@@ -88,13 +88,9 @@ components:
     type: Label
     layout_properties: {grid_position: 'WJWNQB,ZJBHAN DTWTHP,VWHOAF NWGYTJ,OZIKSY'}
   - name: role
-    properties:
-      role: outlined
-      items: ['']
-      include_placeholder: true
-      placeholder: Chose Role
-    type: DropDown
-    layout_properties: {grid_position: 'WJWNQB,ZJBHAN DTWTHP,VWHOAF NWGYTJ,EWKRJN'}
+    properties: {role: outlined, enabled: false}
+    type: TextBox
+    layout_properties: {grid_position: 'WJWNQB,ZJBHAN DTWTHP,VWHOAF NWGYTJ,NRCKBD'}
   - name: label_7
     properties: {text: '    Address :', bold: true}
     type: Label
