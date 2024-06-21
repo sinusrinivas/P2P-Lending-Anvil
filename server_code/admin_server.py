@@ -342,8 +342,8 @@ def update_fin_platform_fees():
             product_usage[product_name] = 1
     
     # If no loans found, handle it gracefully
-    # if not product_usage:
-    #     return "No loans found to determine the most used product."
+    if not product_usage:
+        return "No loans found to determine the most used product."
     
     # Find the product name with the highest count
     most_used_product_name = max(product_usage, key=product_usage.get)
@@ -361,5 +361,4 @@ def update_fin_platform_fees():
         total_products_count=num_products,
         most_used_product=most_used_product_name
     )
-    # return "Updated successfully" 
 

@@ -18,8 +18,8 @@ class dashboard(dashboardTemplate):
   def update_platform_fees(self, **event_args):
       # Call the server function to update the fees
       result = anvil.server.call('update_fin_platform_fees')
-      alert(result)
-
+      if result is not None:
+          alert(result)
   
   def button_2_click(self, **event_args):
    
