@@ -1,3 +1,35 @@
 is_package: true
 container: {type: DataRowPanel}
-components: []
+components:
+- name: link_1
+  properties: {align: center}
+  type: Link
+  layout_properties: {column: JKSDUP}
+- name: label_1
+  properties: {align: center}
+  type: Label
+  layout_properties: {column: VJQQOR}
+- name: label_2
+  properties: {align: center}
+  type: Label
+  layout_properties: {column: OJLQEN}
+- name: label_3
+  properties: {align: center}
+  type: Label
+  layout_properties: {column: FAZZTW}
+- name: label_4
+  properties: {align: center}
+  type: Label
+  layout_properties: {column: WHHXJX}
+- name: label_5
+  properties: {align: center}
+  type: Label
+  layout_properties: {column: OHSDZW}
+- name: label_6
+  properties: {align: center}
+  type: Label
+  layout_properties: {column: ZBXGXP}
+- name: label_7
+  properties: {align: center}
+  type: Label
+  layout_properties: {column: ZORGFT}
