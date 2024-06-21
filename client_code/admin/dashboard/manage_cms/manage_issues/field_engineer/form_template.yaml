@@ -1,6 +1,6 @@
 container:
   type: ColumnPanel
-  properties: {col_widths: '{}'}
+  properties: {col_widths: '{}', background: ''}
 components:
 - name: home_button_admin_1
   properties: {}
@@ -12,7 +12,7 @@ components:
   layout_properties: {grid_position: 'DFQNOE,JUAMND', full_width_row: true}
   event_bindings: {click: button_1_click}
 - name: column_panel_1
-  properties: {col_widths: '{"SYXQQG":25,"NUIKOM":10,"GLGBZK":25,"JJLEUL":15,"MWGUOA":25,"DKZUGS":20}'}
+  properties: {col_widths: '{"SYXQQG":25,"NUIKOM":10,"GLGBZK":25,"JJLEUL":20,"MWGUOA":15,"DKZUGS":25}', background: '', role: null}
   type: ColumnPanel
   layout_properties: {grid_position: 'KXNVQZ,ZYGEHR'}
   components:
