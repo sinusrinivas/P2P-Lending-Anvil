@@ -70,7 +70,7 @@ components:
     type: Label
     layout_properties: {grid_position: 'VKYQTM,MWGUOA XDBAEI,BMVAPQ'}
   - name: label_9
-    properties: {text: 'Field Engineer:', bold: true, align: left}
+    properties: {text: 'Assign:', bold: true, align: left}
     type: Label
     layout_properties: {grid_position: 'VKYQTM,MWGUOA YMYKUK,TMRBZZ'}
   - name: label_2
@@ -113,4 +113,8 @@ components:
     properties: {}
     type: Label
     layout_properties: {grid_position: 'VKYQTM,DKZUGS RODUVR,KWHPUQ'}
+  - name: button_2
+    properties: {text: Save, background: '#05264d', foreground: white, role: elevated-button}
+    type: Button
+    layout_properties: {grid_position: 'BQCEGI,YDBLQV'}
 is_package: true
