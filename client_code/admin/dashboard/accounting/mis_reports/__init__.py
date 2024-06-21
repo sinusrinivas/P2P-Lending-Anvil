@@ -18,6 +18,7 @@ class mis_reports(mis_reportsTemplate):
         self.plot_data()
         self.plot_loan_data()
         self.create_user_bar_chart()
+        self.create_risk_bar_chart()
 
     def plot_data(self):
         # Fetch data from tables
@@ -108,6 +109,58 @@ class mis_reports(mis_reportsTemplate):
         self.plot_2.figure = fig
 
     def create_user_bar_chart(self):
+        # Fetch investment data
+        investments = app_tables.fin_lender.search()
+        
+        # Debugging: Print fetched investments
+        print(f"Fetched investments: {list(investments)}")
+        
+        # Initialize a dictionary to store total return_on_investment for each customer_id
+        customer_returns = {}
+        
+        for investment in investments:
+            customer_id = investment['customer_id']
+            if customer_id not in customer_returns:
+                customer_returns[customer_id] = 0
+            customer_returns[customer_id] += investment['return_on_investment']
+        
+        # Convert the dictionary to a list of tuples and sort by return_on_investment in descending order
+        sorted_returns = sorted(customer_returns.items(), key=lambda x: x[1], reverse=True)
+        
+        # Prepare data for the bar chart
+        categories = [str(item[0]) for item in sorted_returns]  # customer_ids
+        values = [item[1] for item in sorted_returns]  # return_on_investments
+        
+        # Create bar chart trace
+        trace = go.Bar(x=categories, y=values, marker_color='green')
+        
+        # Create a layout
+        layout = go.Layout(
+            title=dict(text='Return on Investment by Customer', font=dict(size=16, weight='bold')),
+            xaxis=dict(
+                title='Customer ID',
+                tickfont=dict(size=10, weight='bold'),
+                tickangle=45,
+                type='category'  # Ensures the x-axis is treated as categorical
+            ),
+            yaxis=dict(title='Return on Investment'),
+            barmode='group'
+        )
+        
+        # Create a figure
+        fig = go.Figure(data=[trace], layout=layout)
+        
+        # Debugging: Print the figure to ensure it's created
+        print(f"Created figure: {fig}")
+        
+        # Set the plot in the Plot component
+        self.plot_3.figure = fig
+        
+        # Debugging: Check if the plot is assigned correctly
+        print(f"Assigned figure to plot_3: {self.plot_3.figure}")
+
+
+    def create_risk_bar_chart(self):
         # Fetch investment data
         investments = app_tables.fin_lender.search()
         
