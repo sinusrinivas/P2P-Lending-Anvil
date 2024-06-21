@@ -25,7 +25,7 @@ class payment_receipts(payment_receiptsTemplate):
 
     def fetch_and_display_data(self):
         # Fetch EMI record from the database based on the emi_number
-        emi_record = app_tables.fin_emi_table.get(emi_number=self.emi_number)
+        emi_record = app_tables.fin_emi_table.get(emi_number=self.emi_number,loan_id=self.loan_id)
         
         if not emi_record:
             # Handle case where EMI record is not found
