@@ -1609,8 +1609,8 @@ db_schema:
     - name: relatives_relation
       admin_ui: {width: 200, order: 10.5}
       type: string
-    - name: borrower_another_email
-      admin_ui: {width: 200, order: 3.75}
+    - name: borrower_alternate_email
+      admin_ui: {order: 3.75, width: 200}
       type: string
   fin_borrower_employee_type:
     client: full

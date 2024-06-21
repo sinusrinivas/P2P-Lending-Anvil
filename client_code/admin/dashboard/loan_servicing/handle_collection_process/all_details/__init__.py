@@ -111,7 +111,7 @@ class all_details(all_detailsTemplate):
                 relatives_name=self.selected_row['guarantor_name'],
                 relatives_relation=self.selected_row['another_person'],
                 relatives_mobile_no=self.selected_row['guarantor_mobile_no'],
-                # another_email=self.selected_row['another_email'],
+                borrower_alternate_email=self.selected_row['another_email'],
                 relatives_address=self.selected_row['guarantor_address'],
                 # emi_number=self.selected_row['emi_number'],
                 remaining_amount=self.selected_row['total_remaining_amount'],
@@ -123,6 +123,7 @@ class all_details(all_detailsTemplate):
                 engineer_email_id=self.selected_engineer['field_engineer_email']
             )
             alert("Data saved successfully!")
+            open_form('admin.dashboard.loan_servicing.handle_collection_process')
         else:
             print("No field engineer selected")  # Debug print
             alert("Please select a field engineer.")
