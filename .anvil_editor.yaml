@@ -380,6 +380,7 @@ unique_ids:
     admin.dashboard.manage_cms: '1699528617179453409715572.5991'
     lendor.dashboard.dashboard_report_a_problem: '1710908308326765655388880.6415'
     borrower.dashboard.today_dues.check_out: LQBSWBI2ORZIEELJPNA65GFBHWFT376V
+    lendor.dashboard.lender_commitments_chart: '1718966973494969506175364.6885'
     admin.dashboard.loan_management.view_loans.approved_loans.RowTemplate2: '1700739710762570959395619.5336'
     admin.dashboard.manage_settings.manage_ascend_score_range: '1717763950067548096369302.4723'
     admin.dashboard.manage_products.view_products_and_categories.RowTemplate28: '1704172157354836718833767.5173'
