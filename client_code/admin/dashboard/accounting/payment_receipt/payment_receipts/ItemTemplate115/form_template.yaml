@@ -1,13 +1,10 @@
+is_package: true
 container: {type: ColumnPanel}
 components:
-- name: home_button_admin_1_copy
-  properties: {}
-  type: form:admin.dashboard.home_button_admin
-  layout_properties: {grid_position: 'BCXLPU,ZUFIQR', full_width_row: true}
 - name: content_panel_copy_copy_3_copy_3_copy_copy_copy_2_copy
   properties: {col_widths: '{"POFYXO":30,"SNDWTP":35,"WUQMZW":15,"BRFFZC":15,"RQPLFM":15,"IAISIX":15,"JJVLAS":15,"LEEPZH":22}', background: white, role: elevated-card}
   type: ColumnPanel
-  layout_properties: {grid_position: 'KUXIFK,BDBYIC', full_width_row: true}
+  layout_properties: {grid_position: 'TRWMGG,DOAOSO'}
   components:
   - name: label_1
     properties: {text: Loan Payment Receipt, align: center, bold: true, font_size: 30, background: '#ADC4CE'}
@@ -24,7 +21,7 @@ components:
     data_bindings:
     - {property: text, code: 'self.item[''Payment_date'']', writeback: false}
   - name: label_28
-    properties: {}
+    properties: {text: Receipt Number}
     type: Label
     layout_properties: {grid_position: 'MNNLSV,POFYXO DTHSEX,SCPFRW'}
   - name: spacer_3
@@ -140,9 +137,9 @@ components:
     type: Spacer
     layout_properties: {grid_position: 'CAVBCB,ZTYZYV'}
   - name: label_16
-    properties: {text: Loan Information, align: left, bold: true, font_size: 25}
+    properties: {text: Loan Information, align: left, bold: true, font_size: 25, role: outlined-card}
     type: Label
-    layout_properties: {grid_position: 'LOCRZT,YGNYVL'}
+    layout_properties: {grid_position: 'LOCRZT,YGNYVL', full_width_row: true}
   - name: spacer_2
     properties: {height: '10'}
     type: Spacer
@@ -158,9 +155,8 @@ components:
       - {id: CGNDJQ, data_key: column_1, title: Payment Date}
       role: tonal-data-grid
     type: DataGrid
+    layout_properties: {grid_position: 'XLGRCU,CSJVWO', full_width_row: true}
     components:
     - name: repeating_panel_1
-      properties: {item_template: admin.dashboard.accounting.payment_receipts.RowTemplate51}
+      properties: {item_template: admin.dashboard.accounting.payment_receipt.payment_receipts.RowTemplate51}
       type: RepeatingPanel
-    layout_properties: {grid_position: 'XLGRCU,CSJVWO', full_width_row: true}
-is_package: true
