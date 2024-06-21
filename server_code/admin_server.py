@@ -312,3 +312,43 @@ def get_combined_user_and_guarantor_data_2():
         })
 
     return combined_data
+
+
+
+
+anvil.server.connect("your-anvil-uplink-key")
+
+@anvil.server.callable
+def update_fin_platform_fees():
+    # Step 1: Calculate the number of lenders
+    num_lenders = app_tables.fin_user_profile.search(usertype='lender').count()
+    
+    # Step 2: Calculate the number of borrowers
+    num_borrowers = app_tables.fin_user_profile.search(usertype= 'borrower').count()
+    
+    # Step 3: Calculate the number of products
+    num_products = app_tables.fin_product_details.search().count()
+    
+    # Step 4: Determine the most used product
+    product_usage = {}
+    for loan in app_tables.fin_loan_details.search():
+        product_id = loan['product_id']
+        if product_id in product_usage:
+            product_usage[product_id] += 1
+        else:
+            product_usage[product_id] = 1
+    
+    most_used_product_id = max(product_usage, key=product_usage.get)
+    most_used_product_name = app_tables.fin_product_details.get_by_id(most_used_product_id)['product_name']
+    
+    # Step 5: Update the fin_platform_fees table
+    fee_record = app_tables.fin_platform_fees.get()  # Assuming there's only one record, or adapt as needed
+    fee_record.update(
+        total_lenders=num_lenders,
+        total_borrowers=num_borrowers,
+        total_products_count=num_products,
+        most_used_product=most_used_product_name
+    )
+    return "Updated successfully"
+
+anvil.server.wait_forever()
