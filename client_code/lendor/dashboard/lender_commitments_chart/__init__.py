@@ -18,9 +18,7 @@ import anvil.media
 class lender_commitments_chart(lender_commitments_chartTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
-    self.init_components(**properties)
-    
-    
+    self.init_components(**properties)   
     self.email = main_form_module.email
     print(self.email)
     self.id = main_form_module.userId
@@ -34,7 +32,7 @@ class lender_commitments_chart(lender_commitments_chartTemplate):
     fig = go.Figure(data=[go.Pie(labels=labels, values=values, 
                                  textinfo='label+percent', insidetextorientation='radial', hole=.3)])
     
-    fig.update_layout(title_text='Loans Distribution')
+    fig.update_layout(title_text='Lender Commitments')
     
     # Bind the plotly figure to the Plot component
     self.plot_1.figure = fig
