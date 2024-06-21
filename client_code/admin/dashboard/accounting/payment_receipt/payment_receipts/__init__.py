@@ -126,6 +126,7 @@ class payment_receipts(payment_receiptsTemplate):
             # Append the EMI details to the filtered EMIs list
             filtered_emis.append({
                 'borrower_name':borrower_profile['full_name'] if borrower_profile else None,
+                'borrower_mobile':borrower_profile['mobile'] if borrower_profile else None,
                 'amount_paid': emi['amount_paid'],
                 'loan_id': emi['loan_id'],
                 'payment_date': emi['scheduled_payment_made'],
@@ -137,4 +138,5 @@ class payment_receipts(payment_receiptsTemplate):
             })
         
         # Display the filtered EMIs in a repeating panel or similar component
+        self.repeating_panel_1.items = filtered_emis
         self.repeating_panel_2.items = filtered_emis

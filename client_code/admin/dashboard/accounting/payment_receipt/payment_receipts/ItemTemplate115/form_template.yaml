@@ -53,7 +53,7 @@ components:
     type: Label
     layout_properties: {grid_position: 'ZBHJBL,IAISIX BBYKHT,VABYGV'}
     data_bindings:
-    - {property: text, code: 'self.item[''borrower_full_name'']', writeback: false}
+    - {property: text, code: 'self.item[''borrower_name'']', writeback: false}
   - name: label_8
     properties: {}
     type: Label
