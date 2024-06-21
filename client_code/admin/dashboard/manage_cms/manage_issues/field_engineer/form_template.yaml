@@ -11,127 +11,135 @@ components:
   type: Button
   layout_properties: {grid_position: 'DFQNOE,JUAMND', full_width_row: true}
   event_bindings: {click: button_1_click}
-- name: column_panel_2
-  properties: {visible: false}
+- name: column_panel_3
+  properties: {col_widths: '{"YODQFR":5,"FOKLZX":70,"ZYOEWD":5}'}
   type: ColumnPanel
-  layout_properties: {grid_position: 'LCNZRX,HIYJFF'}
+  layout_properties: {grid_position: 'LCNZRX,OVJGSG'}
   components:
-  - name: column_panel_3
-    properties: {col_widths: '{"YODQFR":10,"FOKLZX":60,"ZYOEWD":10}'}
+  - name: spacer_3
+    properties: {height: 527.7332763671875}
+    type: Spacer
+    layout_properties: {grid_position: 'HJUHRG,YODQFR'}
+  - name: column_panel_1
+    properties: {col_widths: '{"SYXQQG":25,"NUIKOM":10,"GLGBZK":25,"MWGUOA":25,"DKZUGS":25}', background: '', role: outlined-card}
     type: ColumnPanel
-    layout_properties: {grid_position: 'OAQAQI,KWSJON'}
+    layout_properties: {grid_position: 'HJUHRG,FOKLZX'}
     components:
-    - name: spacer_3
-      properties: {height: 527.7332763671875}
+    - name: spacer_2
+      properties: {height: 32}
       type: Spacer
-      layout_properties: {grid_position: 'HJUHRG,YODQFR'}
-    - name: column_panel_1
-      properties: {col_widths: '{"SYXQQG":25,"NUIKOM":10,"GLGBZK":25,"MWGUOA":25,"DKZUGS":25}', background: '', role: outlined-card}
-      type: ColumnPanel
-      layout_properties: {grid_position: 'HJUHRG,FOKLZX'}
-      components:
-      - name: spacer_2
-        properties: {height: 32}
-        type: Spacer
-        layout_properties: {grid_position: 'NAWUEV,SYXQQG'}
-      - name: image_1
-        properties: {height: 102.6666259765625, role: outlined-card}
-        type: Image
-        layout_properties: {grid_position: 'NAWUEV,NUIKOM'}
-        data_bindings: []
-      - name: spacer_1
-        properties: {height: 32}
-        type: Spacer
-        layout_properties: {grid_position: 'NAWUEV,GLGBZK'}
-      - name: label_1
-        properties:
-          text: |
-            Name:
-          bold: true
-          align: left
-          role: outlined-card
-        type: Label
-        layout_properties: {grid_position: 'VKYQTM,MWGUOA UIWSRF,WHTGGF'}
-      - name: label_16
-        properties: {text: 'Customer ID:', align: left, bold: true, role: outlined-card}
-        type: Label
-        layout_properties: {grid_position: 'VKYQTM,MWGUOA VMGFHV,FPZYCF'}
-      - name: label_3
-        properties: {text: 'Phone Number:', bold: true, align: left, role: outlined-card}
-        type: Label
-        layout_properties: {grid_position: 'VKYQTM,MWGUOA IOBWQT,SFTZFE'}
-      - name: label_5
-        properties: {bold: true, text: 'Address:', align: left, role: outlined-card}
-        type: Label
-        layout_properties: {grid_position: 'VKYQTM,MWGUOA HFRRLV,JXRNSE'}
-      - name: label_11
-        properties: {text: 'Issue Category:', bold: true, align: left, role: outlined-card}
-        type: Label
-        layout_properties: {grid_position: 'VKYQTM,MWGUOA KUIHPD,JRVZJC'}
-      - name: label_12
-        properties: {text: 'Issue SubCategory:', bold: true, align: left, role: outlined-card}
-        type: Label
-        layout_properties: {grid_position: 'VKYQTM,MWGUOA FCNHSX,ZCFWPQ'}
-      - name: label_7
-        properties: {text: 'Description:', bold: true, align: left, role: outlined-card}
-        type: Label
-        layout_properties: {grid_position: 'VKYQTM,MWGUOA YYJCXM,YZHVBM'}
-      - name: label_15
-        properties: {text: 'User Type:', bold: true, role: outlined-card}
-        type: Label
-        layout_properties: {grid_position: 'VKYQTM,MWGUOA XDBAEI,BMVAPQ'}
-      - name: label_9
-        properties: {text: 'Assign:', bold: true, align: left, role: outlined-card}
-        type: Label
-        layout_properties: {grid_position: 'VKYQTM,MWGUOA YMYKUK,TMRBZZ'}
-      - name: label_2
-        properties: {align: left, role: outlined-card}
-        type: Label
-        layout_properties: {grid_position: 'VKYQTM,DKZUGS NARJLM,YWJWAE'}
-        data_bindings:
-        - {property: text, code: 'self.item[''name'']', writeback: false}
-      - name: label_17
-        properties: {role: outlined-card}
-        type: Label
-        layout_properties: {grid_position: 'VKYQTM,DKZUGS QJRRBB,WNUKFR'}
-      - name: label_4
-        properties: {align: left, role: outlined-card}
-        type: Label
-        layout_properties: {grid_position: 'VKYQTM,DKZUGS MUMKSA,NTZENK'}
-        data_bindings:
-        - {property: text, code: 'self.item[''mobile'']', writeback: false}
-      - name: label_6
-        properties: {align: left, role: outlined-card}
-        type: Label
-        layout_properties: {grid_position: 'VKYQTM,DKZUGS YYFCXR,THBWUF'}
-      - name: label_8
-        properties: {align: left, role: outlined-card}
-        type: Label
-        layout_properties: {grid_position: 'VKYQTM,DKZUGS WEAAIA,ZQAUWR'}
-      - name: label_10
-        properties: {align: left, role: outlined-card}
-        type: Label
-        layout_properties: {grid_position: 'VKYQTM,DKZUGS VZAEDJ,OILLDU'}
-      - name: label_13
-        properties: {align: left, role: outlined-card}
-        type: Label
-        layout_properties: {grid_position: 'VKYQTM,DKZUGS ETTRMC,JHJZAB'}
-      - name: label_14
-        properties: {align: left, visible: true, role: outlined-card}
-        type: Label
-        layout_properties: {grid_position: 'VKYQTM,DKZUGS GKKAAB,XKXOTA'}
-      - name: label_18
-        properties: {role: outlined-card}
-        type: Label
-        layout_properties: {grid_position: 'VKYQTM,DKZUGS RODUVR,KWHPUQ'}
-    - name: spacer_4
-      properties: {height: 524.13330078125}
+      layout_properties: {grid_position: 'NAWUEV,SYXQQG'}
+    - name: image_1
+      properties: {height: 102.6666259765625, role: outlined-card}
+      type: Image
+      layout_properties: {grid_position: 'NAWUEV,NUIKOM'}
+      data_bindings: []
+    - name: spacer_1
+      properties: {height: 32}
       type: Spacer
-      layout_properties: {grid_position: 'HJUHRG,ZYOEWD'}
+      layout_properties: {grid_position: 'NAWUEV,GLGBZK'}
+    - name: label_1
+      properties:
+        text: |
+          Name:
+        bold: true
+        align: left
+        role: outlined-card
+      type: Label
+      layout_properties: {grid_position: 'VKYQTM,MWGUOA UIWSRF,WHTGGF'}
+    - name: label_16
+      properties: {text: 'Customer ID:', align: left, bold: true, role: outlined-card}
+      type: Label
+      layout_properties: {grid_position: 'VKYQTM,MWGUOA VMGFHV,FPZYCF'}
+    - name: label_3
+      properties: {text: 'Phone Number:', bold: true, align: left, role: outlined-card}
+      type: Label
+      layout_properties: {grid_position: 'VKYQTM,MWGUOA IOBWQT,SFTZFE'}
+    - name: label_5
+      properties: {bold: true, text: 'Address:', align: left, role: outlined-card}
+      type: Label
+      layout_properties: {grid_position: 'VKYQTM,MWGUOA HFRRLV,JXRNSE'}
+    - name: label_11
+      properties: {text: 'Issue Category:', bold: true, align: left, role: outlined-card}
+      type: Label
+      layout_properties: {grid_position: 'VKYQTM,MWGUOA KUIHPD,JRVZJC'}
+    - name: label_12
+      properties: {text: 'Issue SubCategory:', bold: true, align: left, role: outlined-card}
+      type: Label
+      layout_properties: {grid_position: 'VKYQTM,MWGUOA FCNHSX,ZCFWPQ'}
+    - name: label_7
+      properties: {text: 'Description:', bold: true, align: left, role: outlined-card}
+      type: Label
+      layout_properties: {grid_position: 'VKYQTM,MWGUOA YYJCXM,YZHVBM'}
+    - name: label_15
+      properties: {text: 'User Type:', bold: true, role: outlined-card}
+      type: Label
+      layout_properties: {grid_position: 'VKYQTM,MWGUOA XDBAEI,BMVAPQ'}
+    - name: label_9
+      properties: {text: 'Assign:', bold: true, align: left, role: outlined-card}
+      type: Label
+      layout_properties: {grid_position: 'VKYQTM,MWGUOA YMYKUK,TMRBZZ'}
+    - name: label_2
+      properties: {align: left, role: outlined-card}
+      type: Label
+      layout_properties: {grid_position: 'VKYQTM,DKZUGS NARJLM,YWJWAE'}
+      data_bindings:
+      - {property: text, code: 'self.item[''name'']', writeback: false}
+    - name: label_17
+      properties: {role: outlined-card}
+      type: Label
+      layout_properties: {grid_position: 'VKYQTM,DKZUGS QJRRBB,WNUKFR'}
+    - name: label_4
+      properties: {align: left, role: outlined-card}
+      type: Label
+      layout_properties: {grid_position: 'VKYQTM,DKZUGS MUMKSA,NTZENK'}
+      data_bindings:
+      - {property: text, code: 'self.item[''mobile'']', writeback: false}
+    - name: label_6
+      properties: {align: left, role: outlined-card}
+      type: Label
+      layout_properties: {grid_position: 'VKYQTM,DKZUGS YYFCXR,THBWUF'}
+    - name: label_8
+      properties: {align: left, role: outlined-card}
+      type: Label
+      layout_properties: {grid_position: 'VKYQTM,DKZUGS WEAAIA,ZQAUWR'}
+    - name: label_10
+      properties: {align: left, role: outlined-card}
+      type: Label
+      layout_properties: {grid_position: 'VKYQTM,DKZUGS VZAEDJ,OILLDU'}
+    - name: label_13
+      properties: {align: left, role: outlined-card}
+      type: Label
+      layout_properties: {grid_position: 'VKYQTM,DKZUGS ETTRMC,JHJZAB'}
+    - name: label_14
+      properties: {align: left, visible: true, role: outlined-card}
+      type: Label
+      layout_properties: {grid_position: 'VKYQTM,DKZUGS GKKAAB,XKXOTA'}
+    - name: label_18
+      properties: {role: outlined-card}
+      type: Label
+      layout_properties: {grid_position: 'VKYQTM,DKZUGS RODUVR,KWHPUQ'}
+  - name: spacer_4
+    properties: {height: 524.13330078125}
+    type: Spacer
+    layout_properties: {grid_position: 'HJUHRG,ZYOEWD'}
+- name: column_panel_2
+  properties: {visible: false, col_widths: '{"FKUIOX":70,"BYXYGD":5,"AVZLGT":5}'}
+  type: ColumnPanel
+  layout_properties: {grid_position: 'JMJPIE,OVGTEE'}
+  components:
+  - name: spacer_6
+    properties: {height: 54.2666015625}
+    type: Spacer
+    layout_properties: {grid_position: 'DMPHKR,AVZLGT'}
   - name: button_2
-    properties: {text: Save, background: '#05264d', foreground: white, role: elevated-button, visible: false}
+    properties: {text: Save, background: '#05264d', foreground: white, role: outlined-card, visible: true}
     type: Button
     layout_properties: {grid_position: 'DMPHKR,FKUIOX'}
     event_bindings: {click: button_2_click}
     data_bindings: []
+  - name: spacer_5
+    properties: {height: 52.6666259765625}
+    type: Spacer
+    layout_properties: {grid_position: 'DMPHKR,BYXYGD'}
 is_package: true
