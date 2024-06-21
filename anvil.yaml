@@ -585,9 +585,6 @@ db_schema:
     - name: customer_id
       admin_ui: {width: 200}
       type: number
-    - name: technical_engineer
-      admin_ui: {width: 200, order: 14}
-      type: string
     - name: field_engineer
       admin_ui: {width: 200, order: 15}
       type: string

@@ -32,7 +32,8 @@ class field_engineer(field_engineerTemplate):
     self.address = self.user_profile['street_adress_1']
     self.category=customer_details['category']
     self.selected_engineer = None
-    if self.category == ('Loan Issue' or 'Loan Issues' or'loan issue'or'loan issues'):
+    if self.category == 'Lone Issue':
+      
       self.find_nearest_field_engineer()
     else:
       self.label_18.text = 'This Issue Checked By Technical Team'
@@ -93,4 +94,16 @@ class field_engineer(field_engineerTemplate):
     
   def button_1_click(self, **event_args):
     open_form('admin.dashboard.manage_cms.manage_issues')
+
+  def borrower_loan_issue(self, **event_args):
+    self.column_panel_2.visible = True
+
+  def button_2_click(self, **event_args):
+    print(self.label_18.text)
+    update = self.label_18.text.strip()
+    self.selected_row['field_engineer'] = update
+    self.selected_row.update()
+    alert("Issue Assigned")
+    open_form('admin.dashboard.manage_cms.manage_issues')
+    
 
