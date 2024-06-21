@@ -188,6 +188,7 @@ unique_ids:
     borrower.dashboard.foreclosure_request.borrower_foreclosure.foreclose: PMVVCYTZE6QBTBFEQENUEV5GHZ6O5R23
     borrower.dashboard.notification: DXJ3XDXDFQJLYIFUACEPVV47VHWKVTLU
     lendor.dashboard.today_dues.View_Details.part_payment_copy: OSMJLIDI46YODBDWEA7WKC3XREUKDPBQ
+    admin.dashboard.accounting.payment_receipt.emi_details.RowTemplate58: '1718955383191747396793751.7843'
     admin.dashboard.loan_servicing: '1718263896510230358249952.67352'
     lendor.dashboard.view_loan_extension_requests.ItemTemplate79: '1709795534095955316024149.9836'
     admin.dashboard.manage_ascend_score.add_subcategory.ItemTemplate86: '1710501688800355680302234.22766'
