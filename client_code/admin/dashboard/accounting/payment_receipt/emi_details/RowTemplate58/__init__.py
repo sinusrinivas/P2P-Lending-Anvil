@@ -20,3 +20,8 @@ class RowTemplate58(RowTemplate58Template):
     """This method is called when the link is clicked"""
     selected_row = self.item
     open_form('admin.dashboard.accounting.payment_receipt.emi_details.payment_receipts', selected_row=selected_row)
+
+  def link_2_click(self, **event_args):
+    """This method is called when the link is clicked"""
+    selected_row = self.item
+    open_form('admin.dashboard.accounting.payment_receipt.emi_details.payment_receipts', selected_row=selected_row)
