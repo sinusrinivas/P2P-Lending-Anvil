@@ -14,7 +14,7 @@ components:
   data_bindings:
   - {property: text, code: 'self.item[''borrower_name'']', writeback: false}
 - name: link_1
-  properties: {align: center, font_size: 16}
+  properties: {align: center, font_size: 16, bold: true}
   type: Link
   layout_properties: {column: JKSDUP}
   data_bindings:
@@ -45,7 +45,7 @@ components:
   data_bindings:
   - {property: text, code: 'self.item[''remaining_tenure'']', writeback: false}
 - name: link_2
-  properties: {text: View Receipt, align: center, font_size: 16}
+  properties: {text: View Receipt, align: center, font_size: 16, bold: true}
   type: Link
   layout_properties: {column: AGDOUA}
   event_bindings: {click: link_2_click}
