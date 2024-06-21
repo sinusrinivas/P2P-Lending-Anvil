@@ -5,12 +5,12 @@ components:
   type: form:admin.dashboard.home_button_admin
   layout_properties: {grid_position: 'BCXLPU,ZUFIQR', full_width_row: true}
 - name: content_panel_copy_copy_3_copy_3_copy_copy_copy_2_copy
-  properties: {col_widths: '{"POFYXO":30,"SNDWTP":35,"WUQMZW":15,"BRFFZC":15,"RQPLFM":15,"IAISIX":15,"JJVLAS":15,"LEEPZH":22}', background: white, role: elevated-card, visible: false}
+  properties: {col_widths: '{"POFYXO":30,"SNDWTP":35,"WUQMZW":15,"BRFFZC":15,"RQPLFM":15,"IAISIX":15,"JJVLAS":15,"LEEPZH":22}', background: white, role: elevated-card, visible: true}
   type: ColumnPanel
   layout_properties: {grid_position: 'KUXIFK,BDBYIC', full_width_row: true}
   components:
   - name: label_1
-    properties: {text: Loan Payment Receipt, align: center, bold: true, font_size: 30, background: '#ADC4CE'}
+    properties: {text: Loan Payment Receipt, align: center, bold: true, font_size: 30, background: '#ADC4CE', role: outlined-card}
     type: Label
     layout_properties: {grid_position: 'VCIGMD,OJLLNN', full_width_row: true}
   - name: spacer_4

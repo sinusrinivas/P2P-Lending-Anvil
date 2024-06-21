@@ -18,9 +18,7 @@ components:
     - {id: JKSDUP, title: 'Loan Id ', data_key: column_1}
     - {id: VJQQOR, title: 'Loan Amount ', data_key: column_2}
     - {id: OJLQEN, title: Borrower Name, data_key: column_3}
-    - {id: FAZZTW, data_key: column_2, title: Borrower Customer Id, width: 166.77777099609375, expand: false}
     - {id: WHHXJX, data_key: column_1, title: Lender Name}
-    - {id: OHSDZW, data_key: column_3, title: Lender Customer Id}
     - {id: ZBXGXP, data_key: column_4, title: Total Repayment Amount}
     - {id: ZORGFT, data_key: column_5, title: Outstanding  Amount}
     role: tonal-data-grid
