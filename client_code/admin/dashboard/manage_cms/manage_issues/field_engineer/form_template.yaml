@@ -41,6 +41,10 @@ components:
       align: left
     type: Label
     layout_properties: {grid_position: 'VKYQTM,MWGUOA LMSNHA,GXOZQW'}
+  - name: label_16
+    properties: {text: 'Customer ID:', align: left, bold: true}
+    type: Label
+    layout_properties: {grid_position: 'VKYQTM,MWGUOA VMGFHV,FPZYCF'}
   - name: label_3
     properties: {text: 'Phone Number:', bold: true, align: left}
     type: Label
@@ -66,7 +70,7 @@ components:
     type: Label
     layout_properties: {grid_position: 'VKYQTM,MWGUOA XDBAEI,BMVAPQ'}
   - name: label_9
-    properties: {text: 'Assign:', bold: true, align: left}
+    properties: {text: 'Field Engineer:', bold: true, align: left}
     type: Label
     layout_properties: {grid_position: 'VKYQTM,MWGUOA YMYKUK,TMRBZZ'}
   - name: label_2
@@ -75,6 +79,10 @@ components:
     layout_properties: {grid_position: 'VKYQTM,DKZUGS NARJLM,YWJWAE'}
     data_bindings:
     - {property: text, code: 'self.item[''name'']', writeback: false}
+  - name: label_17
+    properties: {}
+    type: Label
+    layout_properties: {grid_position: 'VKYQTM,DKZUGS QJRRBB,WNUKFR'}
   - name: label_4
     properties: {align: left}
     type: Label
@@ -101,4 +109,8 @@ components:
     properties: {align: left, visible: true}
     type: Label
     layout_properties: {grid_position: 'VKYQTM,DKZUGS GKKAAB,XKXOTA'}
+  - name: label_18
+    properties: {}
+    type: Label
+    layout_properties: {grid_position: 'VKYQTM,DKZUGS RODUVR,KWHPUQ'}
 is_package: true
