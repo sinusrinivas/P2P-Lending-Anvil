@@ -18,6 +18,7 @@ class payment_receipts(payment_receiptsTemplate):
         
         # Store the selected emi_number
         self.emi_number = selected_row['emi_number']
+        self.loan_id  = selected_row['loan_id']
         
         # Fetch and display EMI details based on the emi_number
         self.fetch_and_display_data()
