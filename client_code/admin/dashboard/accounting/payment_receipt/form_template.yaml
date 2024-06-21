@@ -20,7 +20,8 @@ components:
     - {id: OJLQEN, title: Borrower Name, data_key: column_3}
     - {id: WHHXJX, data_key: column_1, title: Lender Name}
     - {id: ZBXGXP, data_key: column_4, title: Total Repayment Amount}
-    - {id: ZORGFT, data_key: column_5, title: Outstanding  Amount}
+    - {id: ZORGFT, data_key: column_5, title: 'Interest Rate '}
+    - {id: RYTBYV, data_key: column_1, title: Tenure}
     role: tonal-data-grid
   type: DataGrid
   components:

@@ -469,6 +469,7 @@ unique_ids:
     admin.dashboard.manage_cms.add_lender_dropdown_details.ItemTemplate14: '1706531052467138557514786.08957'
     admin.dashboard.manage_ascend_score.add_subcategory.ItemTemplate29: '1711087179900905562609747.8762'
     admin.dashboard.manage_products.add_group: '1703758557054939760657519.5975'
+    admin.dashboard.accounting.payment_receipt.emi_details: '1718954992160995662609810.3116'
     admin.dashboard.loan_servicing.handle_collection_process: '1718690237176880365310107.053'
     admin.dashboard.customer_management: RWWMVJ4POVSWBQDQGNMASKU4BBST36QB
     borrower.ots_dashboard.ItemTemplate97: '1712122358046587469434273.9945'
