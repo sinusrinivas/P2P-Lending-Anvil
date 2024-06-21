@@ -1,0 +1,174 @@
+container: {type: ColumnPanel}
+components:
+- name: home_button_admin_1_copy
+  properties: {}
+  type: form:admin.dashboard.home_button_admin
+  layout_properties: {grid_position: 'BCXLPU,ZUFIQR', full_width_row: true}
+- name: content_panel_copy_copy_3_copy_3_copy_copy_copy_2_copy
+  properties: {col_widths: '{"POFYXO":30,"SNDWTP":35,"WUQMZW":15,"BRFFZC":15,"RQPLFM":15,"IAISIX":20,"JJVLAS":20,"LEEPZH":12,"KIYNYR":2,"QMAVRI":58,"AQHKEA":58,"CPVVFU":2}', background: white, role: elevated-card, visible: true}
+  type: ColumnPanel
+  layout_properties: {grid_position: 'KUXIFK,BDBYIC', full_width_row: true}
+  components:
+  - name: spacer_8
+    properties: {height: 32}
+    type: Spacer
+    layout_properties: {grid_position: 'AQMHSO,AQHKEA CYICAL,KIYNYR', full_width_row: true}
+  - name: label_1
+    properties: {text: Loan Payment Receipt, align: center, bold: true, font_size: 30, background: '#ADC4CE', role: outlined-card}
+    type: Label
+    layout_properties: {grid_position: 'AQMHSO,AQHKEA CYICAL,QMAVRI VCIGMD,OJLLNN', full_width_row: true}
+  - name: spacer_4
+    properties: {height: 32}
+    type: Spacer
+    layout_properties: {grid_position: 'AQMHSO,AQHKEA CYICAL,QMAVRI MNNLSV,SNDWTP', full_width_row: true}
+  - name: label_27
+    properties: {align: right, font_size: 16, bold: true}
+    type: Label
+    layout_properties: {grid_position: 'AQMHSO,AQHKEA CYICAL,QMAVRI MNNLSV,POFYXO VDYSEO,WVWRPI', full_width_row: true}
+    data_bindings:
+    - {property: text, code: 'self.item[''Payment_date'']', writeback: false}
+  - name: label_28
+    properties: {text: Receipt Number, align: right, font_size: 16, bold: true}
+    type: Label
+    layout_properties: {grid_position: 'AQMHSO,AQHKEA CYICAL,QMAVRI MNNLSV,POFYXO DTHSEX,SCPFRW', full_width_row: true}
+  - name: spacer_3
+    properties: {height: '10'}
+    type: Spacer
+    layout_properties: {grid_position: 'AQMHSO,AQHKEA CYICAL,QMAVRI YFNHGB,YBBEES'}
+  - name: label_2
+    properties: {text: ' Received From :', bold: true, font_size: 18, align: left, background: '#FFF8C9', role: null}
+    type: Label
+    layout_properties: {grid_position: 'AQMHSO,AQHKEA CYICAL,QMAVRI ZBHJBL,RQPLFM WBAHXB,PSYKHU', full_width_row: true}
+  - name: label_4
+    properties: {text: 'Name :', bold: true, font_size: 16}
+    type: Label
+    layout_properties: {grid_position: 'AQMHSO,AQHKEA CYICAL,QMAVRI ZBHJBL,RQPLFM EJYBSV,NHFXHQ'}
+  - name: label_5
+    properties: {text: 'Mobile No :', bold: true, font_size: 16}
+    type: Label
+    layout_properties: {grid_position: 'AQMHSO,AQHKEA CYICAL,QMAVRI ZBHJBL,RQPLFM SPSZTK,YBSQVW'}
+  - name: label_18
+    properties: {text: 'Address :', bold: true, font_size: 16}
+    type: Label
+    layout_properties: {grid_position: 'AQMHSO,AQHKEA CYICAL,QMAVRI ZBHJBL,RQPLFM FVKIAZ,DMPKXE'}
+  - name: spacer_5
+    properties: {height: 42.25}
+    type: Spacer
+    layout_properties: {grid_position: 'AQMHSO,AQHKEA CYICAL,QMAVRI ZBHJBL,IAISIX SYKNCM,PIAHGL'}
+  - name: label_7
+    properties: {font_size: 16}
+    type: Label
+    layout_properties: {grid_position: 'AQMHSO,AQHKEA CYICAL,QMAVRI ZBHJBL,IAISIX BBYKHT,VABYGV'}
+    data_bindings:
+    - {property: text, code: 'self.item[''borrower_full_name'']', writeback: false}
+  - name: label_8
+    properties: {font_size: 16}
+    type: Label
+    layout_properties: {grid_position: 'AQMHSO,AQHKEA CYICAL,QMAVRI ZBHJBL,IAISIX EYWYWJ,CYTEUS'}
+    data_bindings:
+    - {property: text, code: 'self.item[''borrower_mobile'']', writeback: false}
+  - name: label_19
+    properties: {font_size: 16}
+    type: Label
+    layout_properties: {grid_position: 'AQMHSO,AQHKEA CYICAL,QMAVRI ZBHJBL,IAISIX ZIOKBC,TLWTXF'}
+    data_bindings:
+    - {property: text, code: 'self.item[''borrower_address'']', writeback: false}
+  - name: label_3
+    properties: {text: ' Received By :', bold: true, font_size: 18, align: left, background: '#FFF8C9'}
+    type: Label
+    layout_properties: {grid_position: 'AQMHSO,AQHKEA CYICAL,QMAVRI ZBHJBL,WUQMZW VTIAHY,MVZDDM', full_width_row: true}
+  - name: label_10
+    properties: {text: 'Name :', bold: true, font_size: 16}
+    type: Label
+    layout_properties: {grid_position: 'AQMHSO,AQHKEA CYICAL,QMAVRI ZBHJBL,WUQMZW PQFFCT,XOXKMZ'}
+  - name: label_12
+    properties: {text: 'Mobile No :', bold: true, font_size: 16}
+    type: Label
+    layout_properties: {grid_position: 'AQMHSO,AQHKEA CYICAL,QMAVRI ZBHJBL,WUQMZW FDIZTE,GBDJDJ'}
+  - name: label_20
+    properties: {text: 'Address :', bold: true, font_size: 16}
+    type: Label
+    layout_properties: {grid_position: 'AQMHSO,AQHKEA CYICAL,QMAVRI ZBHJBL,WUQMZW CTCQWY,OOYFPP'}
+  - name: spacer_6
+    properties: {height: 39.25}
+    type: Spacer
+    layout_properties: {grid_position: 'AQMHSO,AQHKEA CYICAL,QMAVRI ZBHJBL,JJVLAS UHTMJL,DTJDCE'}
+  - name: label_13
+    properties: {font_size: 16}
+    type: Label
+    layout_properties: {grid_position: 'AQMHSO,AQHKEA CYICAL,QMAVRI ZBHJBL,JJVLAS LCEQIZ,WPVDMO'}
+    data_bindings:
+    - {property: text, code: 'self.item[''lender_full_name'']', writeback: false}
+  - name: label_14
+    properties: {font_size: 16}
+    type: Label
+    layout_properties: {grid_position: 'AQMHSO,AQHKEA CYICAL,QMAVRI ZBHJBL,JJVLAS IGBXOJ,EIEIGE'}
+    data_bindings:
+    - {property: text, code: 'self.item[''lender_mobile'']', writeback: false}
+  - name: label_21
+    properties: {font_size: 16}
+    type: Label
+    layout_properties: {grid_position: 'AQMHSO,AQHKEA CYICAL,QMAVRI ZBHJBL,JJVLAS FERPVW,OQUPRD'}
+    data_bindings:
+    - {property: text, code: 'self.item[''lender_address'']', writeback: false}
+  - name: label_22
+    properties: {text: ' Payment Details :', bold: true, font_size: 18, align: left, background: '#FFF8C9'}
+    type: Label
+    layout_properties: {grid_position: 'AQMHSO,AQHKEA CYICAL,QMAVRI ZBHJBL,BRFFZC PFLSTW,BWOOZN', full_width_row: true}
+  - name: label_25
+    properties: {text: 'Payment Type :', bold: true, align: left, font_size: 16}
+    type: Label
+    layout_properties: {grid_position: 'AQMHSO,AQHKEA CYICAL,QMAVRI ZBHJBL,BRFFZC CHRYDK,DNUZIV'}
+  - name: label_26
+    properties: {text: 'Payment Amount :', bold: true, font_size: 16}
+    type: Label
+    layout_properties: {grid_position: 'AQMHSO,AQHKEA CYICAL,QMAVRI ZBHJBL,BRFFZC IPOKYZ,OVTKDL'}
+  - name: spacer_7
+    properties: {height: 39.25}
+    type: Spacer
+    layout_properties: {grid_position: 'AQMHSO,AQHKEA CYICAL,QMAVRI ZBHJBL,LEEPZH WFEDQX,NKGEPD'}
+  - name: label_29
+    properties: {font_size: 16}
+    type: Label
+    layout_properties: {grid_position: 'AQMHSO,AQHKEA CYICAL,QMAVRI ZBHJBL,LEEPZH LLIEPV,YOANYF'}
+    data_bindings:
+    - {property: text, code: 'self.item[''payment_type'']', writeback: false}
+  - name: label_30
+    properties: {font_size: 16}
+    type: Label
+    layout_properties: {grid_position: 'AQMHSO,AQHKEA CYICAL,QMAVRI ZBHJBL,LEEPZH CAVEIQ,MOBHQT'}
+    data_bindings:
+    - {property: text, code: 'self.item[''amount_paid'']', writeback: false}
+  - name: spacer_1
+    properties: {height: '32'}
+    type: Spacer
+    layout_properties: {grid_position: 'AQMHSO,AQHKEA CYICAL,QMAVRI CAVBCB,ZTYZYV'}
+  - name: label_16
+    properties: {text: Loan Information, align: left, bold: true, font_size: 25, role: outlined-card}
+    type: Label
+    layout_properties: {grid_position: 'AQMHSO,AQHKEA CYICAL,QMAVRI LOCRZT,YGNYVL', full_width_row: true}
+  - name: spacer_2
+    properties: {height: '10'}
+    type: Spacer
+    layout_properties: {grid_position: 'AQMHSO,AQHKEA CYICAL,QMAVRI MPSJGG,GNHUWL'}
+  - name: spacer_9
+    properties: {height: 32}
+    type: Spacer
+    layout_properties: {grid_position: 'AQMHSO,CPVVFU'}
+  - name: data_grid_1
+    properties:
+      columns:
+      - {id: JKSDUP, title: Loan ID, data_key: column_1}
+      - {id: VJQQOR, title: Loan Amount, data_key: column_2}
+      - {id: OJLQEN, title: Total Repayment Amount, data_key: column_3}
+      - {id: JSCKAF, data_key: column_5, title: Paid Amount}
+      - {id: SFKZZA, data_key: column_4, title: Outstanding Amount}
+      - {id: CGNDJQ, data_key: column_1, title: Payment Date}
+      role: tonal-data-grid
+    type: DataGrid
+    components:
+    - name: repeating_panel_1
+      properties: {item_template: admin.dashboard.accounting.payment_receipt.emi_details.payment_receipts.RowTemplate51}
+      type: RepeatingPanel
+    layout_properties: {grid_position: 'AQMHSO,AQHKEA CYICAL,QMAVRI XLGRCU,CSJVWO', full_width_row: true}
+is_package: true
