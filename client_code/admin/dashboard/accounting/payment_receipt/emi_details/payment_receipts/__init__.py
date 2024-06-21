@@ -139,4 +139,4 @@ class payment_receipts(payment_receiptsTemplate):
         
         # Display the filtered EMIs in a repeating panel or similar component
         self.repeating_panel_1.items = filtered_emis
-        self.repeating_panel_2.items = filtered_emis
+        

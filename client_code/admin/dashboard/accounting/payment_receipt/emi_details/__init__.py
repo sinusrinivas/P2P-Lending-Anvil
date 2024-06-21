@@ -10,14 +10,19 @@ from anvil.tables import app_tables
 
 
 class emi_details(emi_detailsTemplate):
-  def __init__(self,selected_row, **properties):
+  def __init__(self, selected_row, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
-
-   
+    
+    # Store the selected loan_id
+    self.selected_loan_id = selected_row['loan_id']
+    
+    # Fetch and display data for the selected loan_id
+    self.fetch_and_display_data()
+    
   def fetch_and_display_data(self):
-    # Fetch all EMI records from the database
-    emi_records = app_tables.fin_emi_table.search()
+    # Fetch all EMI records for the selected loan_id from the database
+    emi_records = app_tables.fin_emi_table.search(loan_id=self.selected_loan_id)
     
     filtered_emis = []
     
@@ -37,18 +42,18 @@ class emi_details(emi_detailsTemplate):
       
       # Collect EMI details and borrower/lender information
       filtered_emis.append({
-        'borrower_name' : borrower_profile['full_name'] if borrower_profile else None,
-        'lender_name' : lender_profile['full_name'] if lender_profile else None,
-        'amount_paid': f"{emi['amount_paid']:.2f}" if emi else None,
+        'borrower_name': borrower_profile['full_name'] if borrower_profile else None,
+        'lender_name': lender_profile['full_name'] if lender_profile else None,
+        'amount_paid': f"{emi['amount_paid']:.2f}" if emi['amount_paid'] is not None else None,
         'loan_id': emi['loan_id'],
+        'emi_number': emi['emi_number'],
         'payment_date': emi['scheduled_payment_made'],
         'next_payment_date': emi['next_payment'],
-        'total_remaining_amount': f"{emi['total_remaining_amount']:.2f}" if emi else None,        
-        'payment_type': "Online",
-        'loan_amount': f"{loan_details['loan_amount']:.2f}" if loan_details else None,
-        'total_repayment_amount': f"{loan_details['total_repayment_amount']:.2f}" if loan_details else None
+        'total_remaining_amount': f"{emi['total_remaining_amount']:.2f}" if emi['total_remaining_amount'] is not None else None,
+        'remaining_tenure': emi['remaining_tenure'],
+        'loan_amount': f"{loan_details['loan_amount']:.2f}" if loan_details and loan_details['loan_amount'] is not None else None,
+        'total_repayment_amount': f"{loan_details['total_repayment_amount']:.2f}" if loan_details and loan_details['total_repayment_amount'] is not None else None
       })
     
     # Display the filtered EMIs in a repeating panel or similar component
     self.repeating_panel_1.items = filtered_emis
-
