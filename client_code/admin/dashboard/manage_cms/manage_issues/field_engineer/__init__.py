@@ -17,20 +17,20 @@ class field_engineer(field_engineerTemplate):
 
     self.selected_row = selected_row
     self.id = selected_row['customer_id']
-    self.label_17.text=self.id
+    self.label_17.text = self.id
 
-    self.user_profile=app_tables.fin_user_profile.get(customer_id=self.id)
-    self.label_6.text=self.user_profile['street_adress_1']
-    customer_details=app_tables.fin_reported_problems.get(customer_id=self.id)
+    self.user_profile = app_tables.fin_user_profile.get(customer_id=self.id)
+    self.label_6.text = self.user_profile['street_adress_1']
+    customer_details = app_tables.fin_reported_problems.get(customer_id=self.id)
     self.image_1.source = customer_details['user_photo']
-    self.label_2.text=customer_details['name']
-    self.label_4.text=customer_details['mobile_number']
-    self.label_8.text=customer_details['category']
-    self.label_10.text=customer_details['subcategory']
-    self.label_13.text=customer_details['issue_description']
-    self.label_14.text=customer_details['usertype']
+    self.label_2.text = customer_details['name']
+    self.label_4.text = customer_details['mobile_number']
+    self.label_8.text = customer_details['category']
+    self.label_10.text = customer_details['subcategory']
+    self.label_13.text = customer_details['issue_description']
+    self.label_14.text = customer_details['usertype']
     self.address = self.user_profile['street_adress_1']
-    self.category=customer_details['category']
+    self.category = customer_details['category']
     self.selected_engineer = None
     if self.category == 'Lone Issue':
       self.find_nearest_field_engineer()
@@ -75,22 +75,29 @@ class field_engineer(field_engineerTemplate):
       customer_coordinates = self.get_coordinates(customer_address)
 
       field_engineers = app_tables.fin_field_engineers.search()
-      nearest_engineer = None
-      shortest_distance = float('inf')
+      distances = []
 
       for engineer in field_engineers:
           engineer_address = engineer['address']
           engineer_coordinates = self.get_coordinates(engineer_address)
 
           distance = self.calculate_distance(customer_coordinates, engineer_coordinates)
-          if distance < shortest_distance:
-              shortest_distance = distance
-              nearest_engineer = engineer
+          distances.append((distance, engineer))
 
-      if nearest_engineer:
-          print(f"Nearest Engineer: {nearest_engineer['full_name']}, Distance: {shortest_distance} km")
+      # Sort field engineers by distance
+      distances.sort(key=lambda x: x[0])
+
+      # Store sorted field engineers with nearest ones at the top
+      sorted_field_engineers = [engineer for distance, engineer in distances]
+
+      if sorted_field_engineers:
+          nearest_engineer = sorted_field_engineers[0]
+          print(f"Nearest Engineer: {nearest_engineer['full_name']}, Distance: {distances[0][0]} km")
           self.label_18.text = nearest_engineer['full_name']
           self.selected_engineer = nearest_engineer
+
+      for i in distance:
+        print(i)
     
   def button_1_click(self, **event_args):
     open_form('admin.dashboard.manage_cms.manage_issues')
@@ -105,5 +112,5 @@ class field_engineer(field_engineerTemplate):
     self.selected_row.update()
     alert("Issue Assigned")
     open_form('admin.dashboard.manage_cms.manage_issues')
-    
+
 
