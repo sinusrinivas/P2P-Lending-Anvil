@@ -34,11 +34,18 @@ class field_engineer(field_engineerTemplate):
     self.status=customer_details['status']
     self.selected_engineer = None
     
-    if self.category == 'Lone Issue' and self.status == False:
-      self.find_nearest_field_engineer()
-      self.save_button()
+    if self.category == 'Lone Issue' :
+      if self.status == False:
+        self.find_nearest_field_engineer()
+        self.save_button()
+      else:
+        self.find_nearest_field_engineer()
+        self.drop_down_1.visible= True
+        self.drop_down_1.text = customer_details['']
+        self.label_18.visible = True
     else:
       self.drop_down_1.visible= False
+      self.label_18.visible = True
 
   def get_coordinates(self, address):
     # Call Nominatim API to get coordinates

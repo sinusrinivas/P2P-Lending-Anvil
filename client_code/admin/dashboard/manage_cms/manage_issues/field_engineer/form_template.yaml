@@ -115,13 +115,17 @@ components:
       properties: {include_placeholder: false, placeholder: '', background: white, role: outlined, align: full}
       type: DropDown
       layout_properties: {grid_position: 'FIYWVR,ULWCCJ'}
+    - name: label_18
+      properties: {role: outlined-card, bold: true, align: center, background: '#05264d', underline: false, foreground: white, visible: false, italic: false, font_size: 20, text: Assigned to Field engineer}
+      type: Label
+      layout_properties: {grid_position: 'SYWHTH,LLXQPN'}
 - name: column_panel_2
   properties: {visible: false, col_widths: '{"FKUIOX":70}'}
   type: ColumnPanel
   layout_properties: {grid_position: 'JMJPIE,OVGTEE'}
   components:
   - name: button_2
-    properties: {text: Save, background: '#05264d', foreground: white, role: outlined-card, visible: false}
+    properties: {text: Save, background: '#05264d', foreground: white, role: outlined-card, visible: true}
     type: Button
     layout_properties: {grid_position: 'DMPHKR,FKUIOX'}
     event_bindings: {click: button_2_click}
