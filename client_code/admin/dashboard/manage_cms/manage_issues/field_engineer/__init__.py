@@ -67,37 +67,48 @@ class field_engineer(field_engineerTemplate):
       c = 2 * math.atan2(math.sqrt(a), math.sqrt(1 - a))
       distance = R * c
 
-      print(f"Distance between {coord1} and {coord2}: {distance} km")
-      return distance
+      rounded_distance = round(distance)
+
+      print(f"Distance between {coord1} and {coord2}: {rounded_distance} km")
+      return rounded_distance
 
   def find_nearest_field_engineer(self):
+      self.selected_value = self.drop_down_1.selected_value
       customer_address = self.user_profile['street_adress_1']
+    # Customers Coordinates
       customer_coordinates = self.get_coordinates(customer_address)
 
+    # list of field engineers
       field_engineers = app_tables.fin_field_engineers.search()
+      # field_engineers.sort(key=lambda x: x[0])
+
+    
       distances = []
 
       for engineer in field_engineers:
           engineer_address = engineer['address']
+        # engineer coordinates
           engineer_coordinates = self.get_coordinates(engineer_address)
 
           distance = self.calculate_distance(customer_coordinates, engineer_coordinates)
           distances.append((distance, engineer))
+          self.drop_down_1.
+          print(distances)
 
       # Sort field engineers by distance
-      distances.sort(key=lambda x: x[0])
+      # distances.sort(key=lambda x: x[0])
 
-      # Store sorted field engineers with nearest ones at the top
-      sorted_field_engineers = [engineer for distance, engineer in distances]
+      # # Store sorted field engineers with nearest ones at the top
+      # self.drop_down_1.items = [
+      # f"{engineer['full_name']} ({distance} km)" for distance, engineer in distances
+      # ]
 
-      if sorted_field_engineers:
-          nearest_engineer = sorted_field_engineers[0]
-          print(f"Nearest Engineer: {nearest_engineer['full_name']}, Distance: {distances[0][0]} km")
-          self.label_18.text = nearest_engineer['full_name']
-          self.selected_engineer = nearest_engineer
+    # Select the nearest engineer
+      # if distances:
+      #   nearest_engineer = distances[0][1]
+      #   print(f"Nearest Engineer: {nearest_engineer['full_name']}, Distance: {distances[0][0]} km")
+      #   self.selected_engineer = nearest_engineer
 
-      for i in distance:
-        print(i)
     
   def button_1_click(self, **event_args):
     open_form('admin.dashboard.manage_cms.manage_issues')
