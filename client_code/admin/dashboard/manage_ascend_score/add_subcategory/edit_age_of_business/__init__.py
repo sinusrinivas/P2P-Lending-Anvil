@@ -76,4 +76,4 @@ class edit_age_of_business(edit_age_of_businessTemplate):
   def button_1_copy_3_click(self, **event_args):
     """Cancel button click event"""
     # Close the form without saving changes
-    open_form('admin.dashboard.manage_ascend.add_subcategory')
+    open_form('admin.dashboard.manage_ascend_score.add_subcategory')
