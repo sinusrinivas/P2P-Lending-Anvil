@@ -12,7 +12,7 @@ from anvil.tables import app_tables
 
 
 class field_engineer(field_engineerTemplate):
-  def __init__(self,selected_row, **properties):
+  def __init__(self, selected_row, **properties):
     self.init_components(**properties)
 
     self.selected_row = selected_row
@@ -31,85 +31,77 @@ class field_engineer(field_engineerTemplate):
     self.label_14.text = customer_details['usertype']
     self.address = self.user_profile['street_adress_1']
     self.category = customer_details['category']
+    self.status=customer_details['status']
     self.selected_engineer = None
+    
     if self.category == 'Lone Issue':
       self.find_nearest_field_engineer()
       self.save_button()
     else:
       self.label_18.text = 'This Issue Checked By Technical Team'
-      
+
   def get_coordinates(self, address):
-      # Call Nominatim API to get coordinate
-      response = anvil.http.request(
-          f"https://nominatim.openstreetmap.org/search?format=json&q={address}",
-          method="GET",
-          json=True  # Ensures the response is parsed as JSON
-      )
-      if response:
-          location = response[0]
-          print(f"Address: {address}, Coordinates: ({location['lat']}, {location['lon']})")
-          return (float(location['lat']), float(location['lon']))
-      else:
-          print(f"Address: {address}, Coordinates: Not Found")
-          return (0, 0)  # Default to (0, 0) if no results found
+    # Call Nominatim API to get coordinates
+    response = anvil.http.request(
+        f"https://nominatim.openstreetmap.org/search?format=json&q={address}",
+        method="GET",
+        json=True  # Ensures the response is parsed as JSON
+    )
+    if response:
+        location = response[0]
+        print(f"Address: {address}, Coordinates: ({location['lat']}, {location['lon']})")
+        return (float(location['lat']), float(location['lon']))
+    else:
+        print(f"Address: {address}, Coordinates: Not Found")
+        return (0, 0)  # Default to (0, 0) if no results found
 
   def calculate_distance(self, coord1, coord2):
-      # Function to calculate distance between two coordinates using Haversine formula
-      lat1, lon1 = coord1
-      lat2, lon2 = coord2
+    # Function to calculate distance between two coordinates using Haversine formula
+    lat1, lon1 = coord1
+    lat2, lon2 = coord2
 
-      # Haversine formula
-      R = 6371  # Radius of the Earth in kilometers
-      dlat = math.radians(lat2 - lat1)
-      dlon = math.radians(lon2 - lon1)
-      a = math.sin(dlat / 2) * math.sin(dlat / 2) + math.cos(math.radians(lat1)) \
-          * math.cos(math.radians(lat2)) * math.sin(dlon / 2) * math.sin(dlon / 2)
-      c = 2 * math.atan2(math.sqrt(a), math.sqrt(1 - a))
-      distance = R * c
+    # Haversine formula
+    R = 6371  # Radius of the Earth in kilometers
+    dlat = math.radians(lat2 - lat1)
+    dlon = math.radians(lon2 - lon1)
+    a = math.sin(dlat / 2) * math.sin(dlat / 2) + math.cos(math.radians(lat1)) \
+        * math.cos(math.radians(lat2)) * math.sin(dlon / 2) * math.sin(dlon / 2)
+    c = 2 * math.atan2(math.sqrt(a), math.sqrt(1 - a))
+    distance = R * c
 
-      rounded_distance = round(distance)
+    rounded_distance = round(distance)
 
-      print(f"Distance between {coord1} and {coord2}: {rounded_distance} km")
-      return rounded_distance
+    print(f"Distance between {coord1} and {coord2}: {rounded_distance} km")
+    return rounded_distance
 
   def find_nearest_field_engineer(self):
-      self.selected_value = self.drop_down_1.selected_value
-      customer_address = self.user_profile['street_adress_1']
-    # Customers Coordinates
-      customer_coordinates = self.get_coordinates(customer_address)
+    customer_address = self.user_profile['street_adress_1']
+    customer_coordinates = self.get_coordinates(customer_address)
 
-    # list of field engineers
-      field_engineers = app_tables.fin_field_engineers.search()
-      # field_engineers.sort(key=lambda x: x[0])
+    field_engineers = app_tables.fin_field_engineers.search()
+    distances = []
 
-    
-      distances = []
+    for engineer in field_engineers:
+      engineer_address = engineer['address']
+      engineer_coordinates = self.get_coordinates(engineer_address)
 
-      for engineer in field_engineers:
-          engineer_address = engineer['address']
-        # engineer coordinates
-          engineer_coordinates = self.get_coordinates(engineer_address)
+      distance = self.calculate_distance(customer_coordinates, engineer_coordinates)
+      distances.append((distance, engineer))
 
-          distance = self.calculate_distance(customer_coordinates, engineer_coordinates)
-          distances.append((distance, engineer))
-          self.drop_down_1.
-          print(distances)
+    # Sort field engineers by distance
+    distances.sort(key=lambda x: x[0])
 
-      # Sort field engineers by distance
-      # distances.sort(key=lambda x: x[0])
-
-      # # Store sorted field engineers with nearest ones at the top
-      # self.drop_down_1.items = [
-      # f"{engineer['full_name']} ({distance} km)" for distance, engineer in distances
-      # ]
+    # Populate dropdown with sorted field engineers
+    self.drop_down_1.items = [
+      f"{engineer['full_name']} ({distance} km)" for distance, engineer in distances
+    ]
 
     # Select the nearest engineer
-      # if distances:
-      #   nearest_engineer = distances[0][1]
-      #   print(f"Nearest Engineer: {nearest_engineer['full_name']}, Distance: {distances[0][0]} km")
-      #   self.selected_engineer = nearest_engineer
+    if distances:
+      nearest_engineer = distances[0][1]
+      print(f"Nearest Engineer: {nearest_engineer['full_name']}, Distance: {distances[0][0]} km")
+      self.selected_engineer = nearest_engineer
 
-    
   def button_1_click(self, **event_args):
     open_form('admin.dashboard.manage_cms.manage_issues')
 
@@ -117,11 +109,9 @@ class field_engineer(field_engineerTemplate):
     self.column_panel_2.visible = True
 
   def button_2_click(self, **event_args):
-    print(self.label_18.text)
-    update = self.label_18.text.strip()
+    update = self.drop_down_1.selected_value
     self.selected_row['field_engineer'] = update
+    self.selected_row['status'] = True
     self.selected_row.update()
     alert("Issue Assigned")
     open_form('admin.dashboard.manage_cms.manage_issues')
-
-
