@@ -50,7 +50,11 @@ class payment_receipts(payment_receiptsTemplate):
         self.label_13.text = lender_profile['full_name'] if lender_profile else None
         self.label_14.text = lender_profile['mobile'] if lender_profile else None
         self.label_21.text = lender_profile['street_adress_1'] if lender_profile else None
-        self.label_27.text = emi_record['scheduled_payment_made'] if emi_record else None
+        # self.label_27.text = emi_record['scheduled_payment_made'] if emi_record else None
+        date_only = emi_record['scheduled_payment_made'].date() if emi_record else None
+
+        # Convert to string if needed
+        self.label_27.text = date_only.strftime('%Y-%m-%d') if date_only else None
         self.label_29.text = "Online"
         self.label_30.text = emi_record['amount_paid'] if emi_record else None
 
