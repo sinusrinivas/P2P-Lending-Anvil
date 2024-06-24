@@ -260,6 +260,7 @@ class mis_reports(mis_reportsTemplate):
             self.label_14.text = first_row['most_used_product']
             self.label_12.text = first_row['total_products_count']
             self.label_8.text = first_row['total_lenders_invested']
+            self.label_16.text =first_row['platform_returns']
 
   
     def plot_data(self):

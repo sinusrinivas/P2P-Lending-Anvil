@@ -20,7 +20,7 @@ components:
   type: Label
   layout_properties: {grid_position: 'WXCTJG,VADUMI'}
 - name: column_panel_3
-  properties: {col_widths: '{"GOAUFZ":25,"CROXTR":35,"TISSDH":25,"DZSCDQ":35,"LQENWC":25,"IKPNTR":35,"EJSYYR":25,"IBXIMK":35,"HLDXZV":25,"VZSHEO":35,"DKMZEM":25,"NUENCT":35,"FFHTOW":20,"XSWMWC":40}'}
+  properties: {col_widths: '{"GOAUFZ":25,"CROXTR":35,"TISSDH":25,"DZSCDQ":35,"LQENWC":25,"IKPNTR":35,"EJSYYR":25,"IBXIMK":35,"HLDXZV":25,"VZSHEO":35,"DKMZEM":25,"NUENCT":35,"FFHTOW":20,"XSWMWC":40,"CHXAAW":25,"DAAYQI":35,"NQVRUU":25,"FEKLJM":35}'}
   type: ColumnPanel
   layout_properties: {grid_position: 'DOSDSC,CBOFSO'}
   components:
@@ -76,6 +76,22 @@ components:
     properties: {bold: true}
     type: Label
     layout_properties: {grid_position: 'OIUKHQ,XSWMWC ARQOOQ,NUENCT'}
+  - name: label_15
+    properties: {text: 'Platform Fee :', bold: true, font_size: 16}
+    type: Label
+    layout_properties: {grid_position: 'OIUKHQ,XSWMWC HUDGNI,CHXAAW'}
+  - name: label_16
+    properties: {}
+    type: Label
+    layout_properties: {grid_position: 'OIUKHQ,XSWMWC HUDGNI,DAAYQI'}
+  - name: label_17
+    properties: {text: 'Lender Share :', bold: true, font_size: 16}
+    type: Label
+    layout_properties: {grid_position: 'OIUKHQ,XSWMWC HAMYDJ,NQVRUU'}
+  - name: label_18
+    properties: {}
+    type: Label
+    layout_properties: {grid_position: 'OIUKHQ,XSWMWC HAMYDJ,FEKLJM'}
 - name: column_panel_1
   properties: {}
   type: ColumnPanel
@@ -94,7 +110,7 @@ components:
     - name: add_people_copy
       properties:
         text: |
-          Lender share
+          Lender Share
         font_size: 16
         foreground: black
         bold: true
