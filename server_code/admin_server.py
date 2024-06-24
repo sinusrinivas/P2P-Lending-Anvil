@@ -13,6 +13,7 @@ import requests
 import random
 from email.message import EmailMessage
 import bcrypt
+import anvil.pdf
 
 @anvil.server.callable
 def check_user_profile(email):
@@ -41,6 +42,10 @@ def update_user_status(email, email_verified):
         # If user does not exist, create a new row
         user = app_tables.users.add_row(email=email, email_verified=email_verified)
     return True
+def create_receipt_pdf(name, image_source,selected_row):    
+    # Your PDF creation logic here
+    pdf = anvil.pdf.PDFRenderer(landscape=True).render_form("admin.dashboard.accounting.payment_receipt.emi_details.payment_receipts",selected_row = selected_row)  
+    return pdf
 
 
 # Define server function to navigate to the Invest Now form

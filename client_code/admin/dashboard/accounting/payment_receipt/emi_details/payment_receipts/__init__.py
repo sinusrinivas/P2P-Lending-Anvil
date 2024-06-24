@@ -12,7 +12,7 @@ class payment_receipts(payment_receiptsTemplate):
     def __init__(self, selected_row, **properties):
         # Set Form properties and Data Bindings.
         self.init_components(**properties)
-        
+        self.selected_row = selected_row
         # Print selected emi_number for debugging
         print(selected_row['emi_number'])
         
@@ -50,9 +50,15 @@ class payment_receipts(payment_receiptsTemplate):
         self.label_13.text = lender_profile['full_name'] if lender_profile else None
         self.label_14.text = lender_profile['mobile'] if lender_profile else None
         self.label_21.text = lender_profile['street_adress_1'] if lender_profile else None
-        self.label_27.text = emi_record['scheduled_payment_made'] if emi_record else None
+        # self.label_27.text = emi_record['scheduled_payment_made'] if emi_record else None
+        date_only = emi_record['scheduled_payment_made'].date() if emi_record else None
+
+        # Convert to string if needed
+        self.label_27.text = date_only.strftime('%Y-%m-%d') if date_only else None
         self.label_29.text = "Online"
         self.label_30.text = emi_record['amount_paid'] if emi_record else None
+
+        
 
         # Prepare the EMI details for the repeating panel
         filtered_emis = [{
@@ -70,3 +76,12 @@ class payment_receipts(payment_receiptsTemplate):
         
         # Display the filtered EMIs in a repeating panel or similar component
         self.repeating_panel_1.items = filtered_emis
+
+    def button_1_click(self, **event_args):
+      """This method is called when the button is clicked"""
+      pdf = anvil.server.call('create_receipt_pdf',"Payment Receipt","self.image_1.source",self.selected_row)
+      anvil.media.download(pdf)
+
+    def button_2_click(self, **event_args):
+      """This method is called when the button is clicked"""
+      open_form('admin.dashboard.accounting.payment_receipt.emi_details')
