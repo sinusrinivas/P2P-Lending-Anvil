@@ -217,3 +217,7 @@ class login_page(login_pageTemplate):
     """This method is called when the button is clicked"""
     open_form('bank_users.main_form.investNow_applyForLoan')
 
+  def send_otp_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    pass
+
