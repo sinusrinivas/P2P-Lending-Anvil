@@ -149,7 +149,7 @@ components:
       event_bindings: {click: rejected_btn_click}
       name: rejected_btn
     - type: Button
-      properties: {role: null, bold: true, align: left, spacing_above: small, background: '#0b2547', icon: '', underline: false, font: '', icon_align: left, foreground: 'theme:On Primary', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: 16, tooltip: '', text: Accepted}
+      properties: {role: null, bold: true, align: left, spacing_above: small, background: '#0b2547', icon: '', underline: false, font: '', icon_align: left, foreground: 'theme:On Primary', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: 16, tooltip: '', text: Approved}
       layout_properties: {grid_position: 'TISPBT,ONLKVG'}
       event_bindings: {click: accepted_btn_click}
       name: accepted_btn

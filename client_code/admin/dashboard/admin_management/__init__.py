@@ -92,5 +92,13 @@ class admin_management(admin_managementTemplate):
       """This method is called when a mouse button is released on this component"""
       open_form('admin.dashboard.admin_management.view_admins')
 
+    def button_2_click(self, **event_args):
+      """This method is called when the button is clicked"""
+      open_form('admin.dashboard.admin_management.add_field_engineer')
+
+    def view_engineer_click(self, **event_args):
+      """This method is called when the button is clicked"""
+      open_form('admin.dashboard.admin_management.view_field_engineer')
+
 
 

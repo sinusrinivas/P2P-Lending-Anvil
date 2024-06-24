@@ -8,6 +8,39 @@ import anvil.tables.query as q
 from anvil.tables import app_tables
 import anvil.server
 from anvil import *
+import math
+import requests
+import random
+from email.message import EmailMessage
+import bcrypt
+
+@anvil.server.callable
+def check_user_profile(email):
+    return app_tables.users.get(email=email)
+
+@anvil.server.callable
+def send_email_otp(email):
+    otp = random.randint(100000, 999999)
+
+    from_email = "gtpltechnologies@gmail.com"  # Use your verified email address
+    subject = "OTP Verification"
+    content = f"Your OTP is: {otp}"
+
+    try:
+        anvil.email.send(to=email, from_address=from_email, subject=subject, text=content)
+        return otp  # If successful, return OTP
+    except Exception as e:
+        print(f"Error sending email: {e}")
+        return str(e)  # Return error message
+@anvil.server.callable
+def update_user_status(email, email_verified):
+    user = app_tables.users.get(email=email)
+    if user:
+        user['email_verified'] = email_verified
+    else:
+        # If user does not exist, create a new row
+        user = app_tables.users.add_row(email=email, email_verified=email_verified)
+    return True
 
 
 # Define server function to navigate to the Invest Now form
@@ -18,7 +51,6 @@ def open_invest_now_form():
 @anvil.server.callable
 def open_apply_for_loan_form():
     open_form("bank_users.main_form.basic_registration_form")
-
 
 
 @anvil.server.callable
@@ -119,7 +151,23 @@ def find_highest_customer_id():
             highest_id = customer_id
     return highest_id
 
+@anvil.server.callable
+def generate_field_engineer_id():
+    full_table = app_tables.fin_user_profile.search()
+    if full_table:
+        highest_customer_id = find_highest_customer_id()
+        return highest_customer_id + 1
+    else:
+        return 100000
 
+# def find_highest_customer_id():
+#     table_data = app_tables.fin_user_profile.search()
+#     highest_id = 99999
+#     for row in table_data:
+#         customer_id = row['customer_id']
+#         if customer_id > highest_id:
+#             highest_id = customer_id
+#     return highest_id
 
 import bcrypt
 
@@ -201,9 +249,8 @@ def search_lender(query):
     ]
   return result
 
-# Server module: manage_credit_limit.py
-import anvil.server
-from anvil.tables import app_tables
+# # Server module: manage_credit_limit.py
+
 
 @anvil.server.callable
 def save_credit_limit(new_value):
@@ -214,9 +261,6 @@ def save_credit_limit(new_value):
         app_tables.fin_manage_credit_limit.add_row(credit_limit=new_value)  # Add a new row if none exists
 
 #manage_customer and contact details server code
-@anvil.server.callable
-def get_customer_data():
-  return app_tables.fin_user_profile.search()
 
 def load_customer_data(self):
   # Fetch the customer data from the server function
@@ -224,3 +268,125 @@ def load_customer_data(self):
   
   # Set the items property of the repeating panel to the fetched data
   self.repeating_panel_1.items = user_profile
+
+
+@anvil.server.callable
+def get_combined_user_and_guarantor_data():
+    # Fetch user profiles excluding "super admin" and "admin"
+    user_profiles = app_tables.fin_user_profile.search()
+    
+    # Fetch all guarantors
+    guarantors = app_tables.fin_guarantor_details.search()
+
+    # Create a list of customer_ids to exclude (super admin and admin)
+    restricted_customer_ids = [profile['customer_id'] for profile in user_profiles if profile['usertype'] in ['super admin', 'admin']]
+    
+    # Filter user profiles to exclude restricted customer_ids
+    user_profiles_filtered = [profile for profile in user_profiles if profile['customer_id'] not in restricted_customer_ids]
+    
+    # Filter guarantors to exclude restricted customer_ids
+    guarantors_filtered = [guarantor for guarantor in guarantors if guarantor['customer_id'] not in restricted_customer_ids]
+
+    # Combine the data into a single list, interleaving records
+    combined_data = []
+
+    # Determine the maximum length to iterate up to the maximum of both lists
+    max_length = max(len(user_profiles_filtered), len(guarantors_filtered))
+
+    for i in range(max_length):
+        if i < len(user_profiles_filtered) and i < len(guarantors_filtered):
+            user_profile = user_profiles_filtered[i]
+            guarantor = guarantors_filtered[i]
+            combined_data.append({
+                'user_photo': user_profile['user_photo'],  
+                'full_name': user_profile['full_name'],   
+                'email_user': user_profile['email_user'],  
+                'mobile': user_profile['mobile'],  
+                'usertype': user_profile['usertype'],
+                'another_person': guarantor['another_person'],  
+                'guarantor_name': guarantor['guarantor_name'],   
+                'guarantor_mobile_no': guarantor['guarantor_mobile_no']
+            })
+        
+
+    return combined_data
+
+
+@anvil.server.callable
+def get_combined_user_and_guarantor_data_2():
+    # Fetch user profiles
+    user_profiles = app_tables.fin_user_profile.search()
+
+    # Create a list of customer_ids to exclude (super admin and admin)
+    restricted_customer_ids = [profile['customer_id'] for profile in user_profiles if profile['usertype'] in ['super admin', 'admin']]
+    
+    # Filter user profiles to exclude restricted customer_ids
+    user_profiles_filtered = [profile for profile in user_profiles if profile['customer_id'] not in restricted_customer_ids]
+
+    # Combine the data into a single list
+    combined_data = []
+    for user_profile in user_profiles_filtered:
+        combined_data.append({
+            'customer_id': user_profile['customer_id'],
+            'full_name': user_profile['full_name'],
+            'email_user': user_profile['email_user'],
+            'usertype': user_profile['usertype'],
+            'account_name': user_profile['account_name'],
+            'account_type': user_profile['account_type'],
+            'account_number': user_profile['account_number'],
+            'bank_name': user_profile['bank_name'],
+            'bank_id': user_profile['bank_id'],
+            'account_bank_branch': user_profile['account_bank_branch']
+        })
+
+    return combined_data
+
+
+
+
+
+
+
+
+
+@anvil.server.callable
+def update_fin_platform_fees():
+    # Step 1: Calculate the number of lenders
+    num_lenders = len(app_tables.fin_user_profile.search(usertype='lender'))
+    
+    # Step 2: Calculate the number of borrowers
+    num_borrowers = len(app_tables.fin_user_profile.search(usertype='borrower'))
+    
+    # Step 3: Calculate the number of products
+    num_products = len(app_tables.fin_product_details.search())
+    
+    # Step 4: Determine the most used product name
+    product_usage = {}
+    for loan in app_tables.fin_loan_details.search():
+        product_name = loan['product_name']
+        if product_name in product_usage:
+            product_usage[product_name] += 1
+        else:
+            product_usage[product_name] = 1
+    
+    # If no loans found, handle it gracefully
+    if not product_usage:
+        return "No loans found to determine the most used product."
+    
+    # Find the product name with the highest count
+    most_used_product_name = max(product_usage, key=product_usage.get)
+    
+    # Step 5: Update the fin_platform_fees table
+    fee_record = app_tables.fin_platform_fees.get()  # Assuming there's only one record, or adapt as needed
+
+    # If no fee record exists, add a new row
+    if fee_record is None:
+        fee_record = app_tables.fin_platform_fees.add_row()
+    
+    fee_record.update(
+        total_lenders=num_lenders,
+        total_borrowers=num_borrowers,
+        total_products_count=num_products,
+        most_used_product=most_used_product_name
+    )
+

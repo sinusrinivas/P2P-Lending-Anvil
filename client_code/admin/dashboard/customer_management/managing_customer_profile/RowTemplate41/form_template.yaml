@@ -1,0 +1,51 @@
+is_package: true
+container: {type: DataRowPanel}
+components:
+- name: image_1
+  properties: {height: 78.22222900390625, role: outlined-card}
+  type: Image
+  layout_properties: {column: JKSDUP}
+  data_bindings:
+  - {property: source, code: 'self.item[''user_photo'']', writeback: false}
+- name: label_1
+  properties: {align: center}
+  type: Label
+  layout_properties: {column: VJQQOR}
+  data_bindings:
+  - {property: text, code: 'self.item[''full_name'']', writeback: false}
+- name: label_2
+  properties: {align: center}
+  type: Label
+  layout_properties: {column: OJLQEN}
+  data_bindings:
+  - {property: text, code: 'self.item[''email_user'']', writeback: false}
+- name: label_3
+  properties: {align: center}
+  type: Label
+  layout_properties: {column: HWDHRQ}
+  data_bindings:
+  - {property: text, code: 'self.item[''mobile'']', writeback: false}
+- name: label_4
+  properties: {align: center}
+  type: Label
+  layout_properties: {column: KLWTCJ}
+  data_bindings:
+  - {property: text, code: 'self.item[''usertype'']', writeback: false}
+- name: label_5
+  properties: {align: center}
+  type: Label
+  layout_properties: {column: KGTTKP}
+  data_bindings:
+  - {property: text, code: 'self.item[''another_person'']', writeback: false}
+- name: label_6
+  properties: {align: center}
+  type: Label
+  layout_properties: {column: POAYGK}
+  data_bindings:
+  - {property: text, code: 'self.item[''guarantor_name'']', writeback: false}
+- name: label_7
+  properties: {align: center}
+  type: Label
+  layout_properties: {column: GWUTQO}
+  data_bindings:
+  - {property: text, code: 'self.item[''guarantor_mobile_no'']', writeback: false}

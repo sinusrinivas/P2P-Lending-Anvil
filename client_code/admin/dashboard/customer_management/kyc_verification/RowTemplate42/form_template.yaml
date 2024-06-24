@@ -1,0 +1,63 @@
+is_package: true
+container: {type: DataRowPanel}
+components:
+- name: label_1
+  properties: {align: center}
+  type: Label
+  layout_properties: {column: JKSDUP}
+  data_bindings:
+  - {property: text, code: 'self.item[''customer_id'']', writeback: false}
+- name: label_2
+  properties: {align: center}
+  type: Label
+  layout_properties: {column: VJQQOR}
+  data_bindings:
+  - {property: text, code: 'self.item[''full_name'']', writeback: false}
+- name: label_3
+  properties: {align: center}
+  type: Label
+  layout_properties: {column: OJLQEN}
+  data_bindings:
+  - {property: text, code: 'self.item[''email_user'']', writeback: false}
+- name: label_4
+  properties: {align: center}
+  type: Label
+  layout_properties: {column: IZCOAA}
+  data_bindings:
+  - {property: text, code: 'self.item[''usertype'']', writeback: false}
+- name: label_5
+  properties: {align: center}
+  type: Label
+  layout_properties: {column: KQFXIF}
+  data_bindings:
+  - {property: text, code: 'self.item[''account_name'']', writeback: false}
+- name: label_6
+  properties: {align: center}
+  type: Label
+  layout_properties: {column: CRRJPI}
+  data_bindings:
+  - {property: text, code: 'self.item[''account_type'']', writeback: false}
+- name: label_7
+  properties: {align: center}
+  type: Label
+  layout_properties: {column: JHBAVP}
+  data_bindings:
+  - {property: text, code: 'self.item[''account_number'']', writeback: false}
+- name: label_8
+  properties: {align: center}
+  type: Label
+  layout_properties: {column: FQHLIR}
+  data_bindings:
+  - {property: text, code: 'self.item[''bank_name'']', writeback: false}
+- name: label_9
+  properties: {align: center}
+  type: Label
+  layout_properties: {column: GPXJCZ}
+  data_bindings:
+  - {property: text, code: 'self.item[''bank_id'']', writeback: false}
+- name: label_10
+  properties: {align: center}
+  type: Label
+  layout_properties: {column: GIYHPM}
+  data_bindings:
+  - {property: text, code: 'self.item[''account_bank_branch'']', writeback: false}
