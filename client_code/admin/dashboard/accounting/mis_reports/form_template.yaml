@@ -15,6 +15,67 @@ components:
   type: Button
   layout_properties: {grid_position: 'STOWQU,GMGRBH', full_width_row: true}
   event_bindings: {click: button_1_click}
+- name: label_2
+  properties: {text: Platform Details, align: center, bold: true, role: outlined-card, foreground: '', background: 'theme:Secondary Container', font_size: 23}
+  type: Label
+  layout_properties: {grid_position: 'WXCTJG,VADUMI'}
+- name: column_panel_3
+  properties: {col_widths: '{"GOAUFZ":25,"CROXTR":35,"TISSDH":25,"DZSCDQ":35,"LQENWC":25,"IKPNTR":35,"EJSYYR":25,"IBXIMK":35,"HLDXZV":25,"VZSHEO":35,"DKMZEM":25,"NUENCT":35,"FFHTOW":20,"XSWMWC":40}'}
+  type: ColumnPanel
+  layout_properties: {grid_position: 'DOSDSC,CBOFSO'}
+  components:
+  - name: spacer_1
+    properties: {height: 32}
+    type: Spacer
+    layout_properties: {grid_position: 'OIUKHQ,FFHTOW'}
+  - name: label_3
+    properties: {text: 'Total Lenders:', bold: true, font_size: 16}
+    type: Label
+    layout_properties: {grid_position: 'OIUKHQ,XSWMWC SCMBGF,GOAUFZ'}
+  - name: label_4
+    properties: {bold: true}
+    type: Label
+    layout_properties: {grid_position: 'OIUKHQ,XSWMWC SCMBGF,CROXTR'}
+  - name: label_5
+    properties: {text: 'Total Borrowers :', bold: true, font_size: 16}
+    type: Label
+    layout_properties: {grid_position: 'OIUKHQ,XSWMWC LRYRVO,TISSDH'}
+  - name: label_6
+    properties: {bold: true}
+    type: Label
+    layout_properties: {grid_position: 'OIUKHQ,XSWMWC LRYRVO,DZSCDQ'}
+  - name: label_7
+    properties: {text: 'Total Lenders Investment :', bold: true, font_size: 16}
+    type: Label
+    layout_properties: {grid_position: 'OIUKHQ,XSWMWC ZJLHCZ,LQENWC FRSSKQ,EHUCQH'}
+  - name: label_8
+    properties: {bold: true}
+    type: Label
+    layout_properties: {grid_position: 'OIUKHQ,XSWMWC ZJLHCZ,IKPNTR'}
+  - name: label_9
+    properties: {text: 'Total Borrowers taken Loans :', bold: true, font_size: 16}
+    type: Label
+    layout_properties: {grid_position: 'OIUKHQ,XSWMWC KFLGBS,EJSYYR'}
+  - name: label_10
+    properties: {bold: true}
+    type: Label
+    layout_properties: {grid_position: 'OIUKHQ,XSWMWC KFLGBS,IBXIMK'}
+  - name: label_11
+    properties: {text: 'Total Products :', bold: true, font_size: 16}
+    type: Label
+    layout_properties: {grid_position: 'OIUKHQ,XSWMWC AVAVVK,HLDXZV'}
+  - name: label_12
+    properties: {bold: true}
+    type: Label
+    layout_properties: {grid_position: 'OIUKHQ,XSWMWC AVAVVK,VZSHEO'}
+  - name: label_13
+    properties: {text: 'Most Used Product :', bold: true, font_size: 16}
+    type: Label
+    layout_properties: {grid_position: 'OIUKHQ,XSWMWC ARQOOQ,DKMZEM'}
+  - name: label_14
+    properties: {bold: true}
+    type: Label
+    layout_properties: {grid_position: 'OIUKHQ,XSWMWC ARQOOQ,NUENCT'}
 - name: column_panel_1
   properties: {}
   type: ColumnPanel
@@ -162,11 +223,11 @@ components:
   layout_properties: {grid_position: 'RSKQWA,SKIHKI', full_width_row: true}
   components:
   - name: plot_1
-    properties: {height: '650', spacing_above: medium, spacing_below: medium}
+    properties: {height: '800', spacing_above: medium, spacing_below: medium}
     type: Plot
     layout_properties: {grid_position: 'GCAILA,MBFSBH', full_width_row: true}
   - name: plot_2
-    properties: {height: '650', spacing_above: medium, spacing_below: medium}
+    properties: {height: '800', spacing_above: medium, spacing_below: medium}
     type: Plot
     layout_properties: {grid_position: 'GCAILA,RTYBEJ', full_width_row: true}
 - name: spacer_4

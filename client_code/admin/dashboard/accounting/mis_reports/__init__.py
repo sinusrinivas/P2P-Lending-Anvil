@@ -242,7 +242,26 @@ class mis_reports(mis_reportsTemplate):
         self.plot_loan_data()
         self.create_user_bar_chart()
         # self.create_risk_bar_chart()
+        self.update_labels()
 
+
+    def update_labels(self):
+        # Fetch the first row from the 'fin_platform_details' table
+        platform_data = app_tables.fin_platform_details.search()
+        
+        # Convert to list and access the first item
+        platform_data_list = list(platform_data)
+        
+        if platform_data_list:
+            first_row = platform_data_list[0]
+            self.label_4.text = first_row['total_lenders']
+            self.label_6.text = first_row['total_borrowers']
+            self.label_10.text = first_row['total_borrowers_loan_taken']
+            self.label_14.text = first_row['most_used_product']
+            self.label_12.text = first_row['total_products_count']
+            self.label_8.text = first_row['total_lenders_invested']
+
+  
     def plot_data(self):
         # Fetch data from tables
         loan_details = app_tables.fin_loan_details.search(loan_updated_status=q.any_of('closed loan', 'rejected', 'disbursed loan'))
@@ -253,7 +272,7 @@ class mis_reports(mis_reportsTemplate):
         no_of_loans_disbursed = len([loan for loan in loan_details if loan['loan_updated_status'] == 'disbursed loan'])
         no_of_loans_closed = len([loan for loan in loan_details if loan['loan_updated_status'] == 'closed loan'])
         no_of_loans_rejected = len([loan for loan in loan_details if loan['loan_updated_status'] == 'rejected'])
-        amount_disbursed = sum([loan['lender_returns'] for loan in loan_details])
+        # amount_disbursed = sum([loan['lender_returns'] for loan in loan_details])
         no_of_borrowers = len([user for user in users if user['usertype'] == 'borrower'])
         no_of_lenders = len([user for user in users if user['usertype'] == 'lender'])
         lenders_commitment = sum([lender['return_on_investment'] for lender in lenders])
@@ -263,7 +282,7 @@ class mis_reports(mis_reportsTemplate):
             no_of_loans_disbursed,
             no_of_loans_closed,
             no_of_loans_rejected,
-            amount_disbursed,
+            # amount_disbursed,
             no_of_borrowers,
             no_of_lenders,
             lenders_commitment
@@ -272,7 +291,7 @@ class mis_reports(mis_reportsTemplate):
             'No of Loans Disbursed: {}'.format(no_of_loans_disbursed),
             'No of Loans Closed: {}'.format(no_of_loans_closed),
             'No of Loans Rejected: {}'.format(no_of_loans_rejected),
-            'Amount Disbursed: {}'.format(amount_disbursed),
+            # 'Amount Disbursed: {}'.format(amount_disbursed),
             'No of Borrowers: {}'.format(no_of_borrowers),
             'No of Lenders: {}'.format(no_of_lenders),
             'Lenders Commitment: {}'.format(lenders_commitment)
@@ -291,19 +310,19 @@ class mis_reports(mis_reportsTemplate):
                     'family': 'Arial',
                     'bold': True
                 }
-            },
-            autosize=False,
-            width=780,
-            height=650,
-            margin=dict(l=100, r=10, t=90, b=20)
+            }
+            # autosize=False,
+            # width=780,
+            # height=650,
+            # margin=dict(l=100, r=10, t=90, b=20)
         )
     
         # Embed the plot in the Anvil app
         self.plot_1.figure = fig
     
         # Explicitly set the size of the Plot component
-        self.plot_1.width = 780
-        self.plot_1.height = 650
+        # self.plot_1.width = 780
+        # self.plot_1.height = 650
 
     def plot_loan_data(self):
         # Fetch data from tables
