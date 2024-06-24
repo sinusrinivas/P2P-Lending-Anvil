@@ -1,4 +1,4 @@
-from ._anvil_designer import ItemTemplate89Template
+from ._anvil_designer import RowTemplate52Template
 from anvil import *
 import anvil.server
 import anvil.google.auth, anvil.google.drive
@@ -8,7 +8,8 @@ import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 
-class ItemTemplate89(ItemTemplate89Template):
+
+class RowTemplate52(RowTemplate52Template):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
@@ -17,5 +18,5 @@ class ItemTemplate89(ItemTemplate89Template):
 
   def link_1_click(self, **event_args):
     """This method is called when the link is clicked"""
-    item_data = self.item
-    open_form('admin.dashboard.manage_ascend_score.add_subcategory.edit_spouse_profession',selected_row=item_data)
+    selected_row = self.item
+    open_form('admin.dashboard.accounting.payment_receipt.emi_details', selected_row = selected_row)
