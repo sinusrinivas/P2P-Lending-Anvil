@@ -243,6 +243,7 @@ class mis_reports(mis_reportsTemplate):
         self.create_user_bar_chart()
         # self.create_risk_bar_chart()
 
+
     def plot_data(self):
         # Fetch data from tables
         loan_details = app_tables.fin_loan_details.search(loan_updated_status=q.any_of('closed loan', 'rejected', 'disbursed loan'))
@@ -282,6 +283,7 @@ class mis_reports(mis_reportsTemplate):
         fig = go.Figure(data=[go.Pie(labels=labels, values=values, textinfo='label+percent')])
 
         fig.update_layout(title={'text': 'Financial Loan Details', 'font': {'size': 24, 'color': 'black', 'family': 'Arial', 'bold': True}})
+        fig.update_layout(autosize=False,width=400,height=650)
 
         # Embed the plot in the Anvil app
         self.plot_1.figure = fig
@@ -365,11 +367,11 @@ class mis_reports(mis_reportsTemplate):
         
         # Create a layout
         layout = go.Layout(
-            title=dict(text='Highet Returnearner by Customer', font=dict(size=16, weight='bold')),
+            title=dict(text='Highet Return earner by Customer', font=dict(size=16, weight='bold')),
             xaxis=dict(
                 title='Customer ID',
                 tickfont=dict(size=10, weight='bold'),
-                tickangle=45,
+                tickangle=0,
                 type='category'  # Ensures the x-axis is treated as categorical
             ),
             yaxis=dict(title='Return on Investment'),

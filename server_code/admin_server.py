@@ -328,14 +328,17 @@ def update_fin_platform_fees():
     
     # Step 3: Calculate the number of products
     num_products = len(app_tables.fin_product_details.search())
-    
-    # Step 4: Calculate the number of unique borrowers who have taken a loan
+
+    # Step 4: Calculate the total amount invested by lenders
+    total_lenders_invested = sum(lender['lender_total_commitments'] for lender in app_tables.fin_lender.search())
+
+    # Step 5: Calculate the number of unique borrowers who have taken a loan
     borrower_ids = set()
     for loan in app_tables.fin_loan_details.search():
         borrower_ids.add(loan['borrower_customer_id'])
     total_borrowers_loan_taken = len(borrower_ids)
     
-    # Step 5: Determine the most used product name
+    # Step 6: Determine the most used product name
     product_usage = {}
     for loan in app_tables.fin_loan_details.search():
         product_name = loan['product_name']
@@ -351,7 +354,7 @@ def update_fin_platform_fees():
     # Find the product name with the highest count
     most_used_product_name = max(product_usage, key=product_usage.get)
     
-    # Step 6: Update the fin_platform_fees table
+    # Step 7: Update the fin_platform_fees table
     fee_record = app_tables.fin_platform_details.get()  # Assuming there's only one record, or adapt as needed
 
     # If no fee record exists, add a new row
@@ -363,11 +366,11 @@ def update_fin_platform_fees():
         total_borrowers=num_borrowers,
         total_products_count=num_products,
         most_used_product=most_used_product_name,
-        total_borrowers_loan_taken=total_borrowers_loan_taken
+        total_borrowers_loan_taken=total_borrowers_loan_taken,
+        total_lenders_invested=total_lenders_invested
     )
 
     # return "Platform fees updated successfully."
-
 
 
 
