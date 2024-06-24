@@ -97,6 +97,10 @@ components:
       type: Button
       layout_properties: {grid_position: 'EPLEQI,XCMPWT'}
       event_bindings: {click: button_2_click}
+  - name: button_1
+    properties: {text: ''}
+    type: Button
+    layout_properties: {grid_position: 'LKXCTS,KFXTBF'}
   - name: spacer_5
     properties: {height: '350'}
     type: Spacer
