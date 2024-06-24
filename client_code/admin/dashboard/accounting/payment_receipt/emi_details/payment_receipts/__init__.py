@@ -58,6 +58,8 @@ class payment_receipts(payment_receiptsTemplate):
         self.label_29.text = "Online"
         self.label_30.text = emi_record['amount_paid'] if emi_record else None
 
+        
+
         # Prepare the EMI details for the repeating panel
         filtered_emis = [{
             'borrower_name': borrower_profile['full_name'] if borrower_profile else None,
