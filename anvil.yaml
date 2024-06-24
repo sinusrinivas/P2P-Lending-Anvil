@@ -16,7 +16,7 @@ services:
 - source: /runtime/services/anvil/secrets.yml
   client_config: {}
   server_config: {}
-startup: {type: form, module: bank_users.main_form}
+startup: {type: form, module: admin.dashboard.accounting.mis_reports}
 package_name: pip_install_reportlab
 allow_embedding: false
 name: P2P Lending App 1
@@ -340,6 +340,32 @@ db_schema:
       admin_ui: {order: 2.5, width: 200}
       type: string
     title: fin_admin_ascend_categories
+  fin_platform_details:
+    client: full
+    server: full
+    columns:
+    - name: platform_returns
+      admin_ui: {order: 0, width: 200}
+      type: number
+    - name: total_lenders
+      admin_ui: {width: 200, order: 1}
+      type: number
+    - name: total_borrowers
+      admin_ui: {width: 200, order: 2}
+      type: number
+    - name: total_lenders_invested
+      admin_ui: {width: 200, order: 3}
+      type: number
+    - name: total_borrowers_loan_taken
+      admin_ui: {order: 4, width: 250}
+      type: number
+    - name: total_products_count
+      admin_ui: {width: 200, order: 5}
+      type: number
+    - name: most_used_product
+      admin_ui: {width: 200, order: 6}
+      type: string
+    title: fin_platform_details
   fin_lendor_employee_type:
     client: full
     server: full
@@ -791,32 +817,6 @@ db_schema:
       admin_ui: {order: 0, width: 200}
       type: string
     title: fin_gender
-  fin_platform_fees:
-    client: full
-    server: full
-    columns:
-    - name: platform_returns
-      admin_ui: {order: 0, width: 200}
-      type: number
-    - name: total_lenders
-      admin_ui: {width: 200, order: 1}
-      type: number
-    - name: total_borrowers
-      admin_ui: {width: 200, order: 2}
-      type: number
-    - name: total_lenders_invested
-      admin_ui: {width: 200, order: 3}
-      type: number
-    - name: total_borrowers_loan_taken
-      admin_ui: {order: 4, width: 250}
-      type: number
-    - name: total_products_count
-      admin_ui: {width: 200, order: 5}
-      type: number
-    - name: most_used_product
-      admin_ui: {width: 200, order: 6}
-      type: string
-    title: fin_platform_fees
   fin_lender_spouse_profession:
     title: fin_lender_spouse_profession
     client: full
