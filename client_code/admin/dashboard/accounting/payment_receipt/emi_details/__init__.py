@@ -19,7 +19,7 @@ class emi_details(emi_detailsTemplate):
     
     # Fetch and display data for the selected loan_id
     self.fetch_and_display_data()
-    self.button_1.text = "On"
+    self.button_1.text = "Each EMI"
     
   def fetch_and_display_data(self):
     # Fetch all EMI records for the selected loan_id from the database
@@ -40,6 +40,13 @@ class emi_details(emi_detailsTemplate):
         lender_profile = app_tables.fin_user_profile.get(customer_id=loan_details['lender_customer_id'])
       else:
         lender_profile = None
+
+      self.label_7.text = borrower_profile['full_name'] if borrower_profile else None
+      self.label_8.text = borrower_profile['mobile'] if borrower_profile else None
+      self.label_19.text = borrower_profile['street_adress_1'] if borrower_profile else None
+      self.label_13.text = lender_profile['full_name'] if lender_profile else None
+      self.label_14.text = lender_profile['mobile'] if lender_profile else None
+      self.label_21.text = lender_profile['street_adress_1'] if lender_profile else None
       
       # Collect EMI details and borrower/lender information
       filtered_emis.append({
@@ -60,12 +67,14 @@ class emi_details(emi_detailsTemplate):
     self.repeating_panel_1.items = filtered_emis
 
   def button_1_click(self, **event_args):
-    """This method is called when the button is clicked"""
-    if self.button_1.text == "On":
-        self.button_1.text = "Off"
-        self.data_grid_1.visible=True
-        self.content.visible = False
-    else:
-        self.button_1.text = "On"
-        self.content.visible = True
-        self.data_grid_1.visible=False
+        """This method is called when the button is clicked"""
+        if self.button_1.text == "Each EMI":
+            self.button_1.text = "Overall EMI's"
+            self.data_grid_1.visible = True
+            self.content.visible = False
+            self.label_1.visible = True
+        else:
+            self.button_1.text = "Each EMI"
+            self.data_grid_1.visible = False
+            self.content.visible = True
+            self.label_1.visible = False

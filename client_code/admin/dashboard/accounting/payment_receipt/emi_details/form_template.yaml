@@ -11,7 +11,7 @@ components:
   type: Spacer
   layout_properties: {grid_position: 'UFDRXJ,ESLPYT'}
 - name: label_1
-  properties: {text: EMI Details, align: center, bold: true, font_size: 30}
+  properties: {text: EMI Details, align: center, bold: true, font_size: 30, visible: false}
   type: Label
   layout_properties: {grid_position: 'RYFVYR,KTBJAT', full_width_row: true}
 - name: button_1
@@ -39,12 +39,101 @@ components:
     type: RepeatingPanel
   layout_properties: {grid_position: 'NLCDGA,EZQHJI', full_width_row: true}
 - name: content
-  properties: {col_widths: '{}', background: white, role: null, visible: false}
+  properties: {col_widths: '{}', background: white, role: null, visible: true}
   type: ColumnPanel
   layout_properties: {grid_position: 'NTHLQJ,OAVHWD', full_width_row: true}
   components:
-  - name: label_2
-    properties: {text: RAhul}
+  - name: label_1_copy
+    properties: {text: Loan Payment Receipt, align: center, bold: true, font_size: 30, background: '#ADC4CE', role: outlined-card}
     type: Label
-    layout_properties: {grid_position: 'CBLEFA,GRPQIC'}
+    layout_properties: {grid_position: 'PYOZKS,OFZDDK', full_width_row: true}
+  - name: spacer_2
+    properties: {height: 32}
+    type: Spacer
+    layout_properties: {grid_position: 'CTKWVD,YYXOES'}
+  - name: label_2
+    properties: {text: ' Received From :', bold: true, font_size: 18, align: left, background: '#FFF8C9', role: null}
+    type: Label
+    layout_properties: {grid_position: 'TDJUKE,FOUHFO DCFOYY,XMRQPE'}
+  - name: label_4
+    properties: {text: 'Name :', bold: true, font_size: 16}
+    type: Label
+    layout_properties: {grid_position: 'TDJUKE,FOUHFO DCTUAE,GZSAPV'}
+  - name: label_6
+    properties: {}
+    type: Label
+    layout_properties: {grid_position: 'TDJUKE,FOUHFO DCTUAE,MTZSEC'}
+  - name: label_5
+    properties: {text: 'Mobile No :', bold: true, font_size: 16}
+    type: Label
+    layout_properties: {grid_position: 'TDJUKE,FOUHFO LBRJHQ,LJGSIP'}
+  - name: label_7
+    properties: {}
+    type: Label
+    layout_properties: {grid_position: 'TDJUKE,FOUHFO LBRJHQ,BCKBSF'}
+  - name: label_18
+    properties: {text: 'Address :', bold: true, font_size: 16}
+    type: Label
+    layout_properties: {grid_position: 'TDJUKE,FOUHFO LOAAUK,NZXLIM'}
+  - name: label_8
+    properties: {}
+    type: Label
+    layout_properties: {grid_position: 'TDJUKE,FOUHFO LOAAUK,RGUVOV'}
+  - name: label_3
+    properties: {text: ' Received By :', bold: true, font_size: 18, align: left, background: '#FFF8C9'}
+    type: Label
+    layout_properties: {grid_position: 'TDJUKE,EJWJTQ YBQACA,DDSZNG'}
+  - name: label_4_copy
+    properties: {text: 'Name :', bold: true, font_size: 16}
+    type: Label
+    layout_properties: {grid_position: 'TDJUKE,EJWJTQ PHQCGY,NDXAEL'}
+  - name: label_9
+    properties: {}
+    type: Label
+    layout_properties: {grid_position: 'TDJUKE,EJWJTQ PHQCGY,YVCIET'}
+  - name: label_5_copy
+    properties: {text: 'Mobile No :', bold: true, font_size: 16}
+    type: Label
+    layout_properties: {grid_position: 'TDJUKE,EJWJTQ HEFWXN,XWJKOE'}
+  - name: label_10
+    properties: {}
+    type: Label
+    layout_properties: {grid_position: 'TDJUKE,EJWJTQ HEFWXN,KPBOSJ'}
+  - name: label_18_copy
+    properties: {text: 'Address :', bold: true, font_size: 16}
+    type: Label
+    layout_properties: {grid_position: 'TDJUKE,EJWJTQ STCHJT,KFFGDV'}
+  - name: label_11
+    properties: {}
+    type: Label
+    layout_properties: {grid_position: 'TDJUKE,EJWJTQ STCHJT,PJIPTT'}
+  - name: spacer_3
+    properties: {height: 32}
+    type: Spacer
+    layout_properties: {grid_position: 'CYQRQS,FGNCBJ'}
+  - name: label_16
+    properties: {text: Loan Information, align: left, bold: true, font_size: 25, role: outlined-card}
+    type: Label
+    layout_properties: {grid_position: 'LGHNDX,YGDCXK'}
+  - name: spacer_4
+    properties: {height: '15'}
+    type: Spacer
+    layout_properties: {grid_position: 'ZWZEUE,ZESJDQ'}
+  - name: data_grid_2
+    properties:
+      columns:
+      - {id: JKSDUP, title: EMI Number, data_key: column_1}
+      - {id: VJQQOR, title: Loan ID, data_key: column_2}
+      - {id: OJLQEN, title: Borrower Name, data_key: column_3}
+      - {id: XJKXIA, data_key: column_1, title: Lender Name}
+      - {id: WDVPOR, data_key: column_3, title: Outstanding Amount}
+      - {id: UTMXUU, data_key: column_4, title: Remaining Tenure}
+      - {id: UCBVXJ, data_key: column_2, title: Amount Paid}
+      role: tonal-data-grid
+    type: DataGrid
+    components:
+    - name: repeating_panel_2
+      properties: {item_template: admin.dashboard.accounting.payment_receipt.emi_details.RowTemplate59}
+      type: RepeatingPanel
+    layout_properties: {grid_position: 'BBDPKD,IKUYCT', full_width_row: false}
 is_package: true
