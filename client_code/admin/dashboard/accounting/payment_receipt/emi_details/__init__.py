@@ -63,5 +63,9 @@ class emi_details(emi_detailsTemplate):
     """This method is called when the button is clicked"""
     if self.button_1.text == "On":
         self.button_1.text = "Off"
+        self.data_grid_1.visible=True
+        self.content.visible = False
     else:
         self.button_1.text = "On"
+        self.content.visible = True
+        self.data_grid_1.visible=False
