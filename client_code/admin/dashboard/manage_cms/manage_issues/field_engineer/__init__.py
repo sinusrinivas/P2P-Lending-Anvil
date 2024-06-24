@@ -41,6 +41,7 @@ class field_engineer(field_engineerTemplate):
       else:
         self.find_nearest_field_engineer()
         self.drop_down_1.visible= True
+        # self.drop_down_1.items = customer_details['field_engineer']
         self.label_18.visible = True
     else:
       self.drop_down_1.visible= False
