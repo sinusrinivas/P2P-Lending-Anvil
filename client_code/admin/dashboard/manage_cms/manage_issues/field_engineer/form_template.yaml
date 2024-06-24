@@ -117,7 +117,7 @@ components:
       layout_properties: {grid_position: 'FIYWVR,ULWCCJ'}
       event_bindings: {change: drop_down_1_change}
     - name: label_18
-      properties: {role: outlined-card, bold: true, align: center, background: '#05264d', underline: false, foreground: white, visible: false, italic: false, font_size: 20, text: Issue Assigned to Field Engineer}
+      properties: {role: outlined-card, bold: true, align: center, background: '#05264d', underline: false, foreground: white, visible: false, italic: false, font_size: 20, text: ''}
       type: Label
       layout_properties: {grid_position: 'SYWHTH,LLXQPN'}
 - name: column_panel_2

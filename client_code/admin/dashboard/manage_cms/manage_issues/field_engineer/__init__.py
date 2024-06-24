@@ -43,9 +43,11 @@ class field_engineer(field_engineerTemplate):
         self.drop_down_1.visible= True
         # self.drop_down_1.items = customer_details['field_engineer']
         self.label_18.visible = True
+        self.label_18.text = "Issue Assigned to Field Engineer"
     else:
       self.drop_down_1.visible= False
       self.label_18.visible = True
+      self.label_18.text = "Issue Assigned to Technical Team"
 
   def get_coordinates(self, address):
     # Call Nominatim API to get coordinates
