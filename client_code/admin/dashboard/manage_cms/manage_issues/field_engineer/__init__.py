@@ -35,17 +35,17 @@ class field_engineer(field_engineerTemplate):
     self.selected_engineer = None
     
     if self.category == 'Lone Issue' :
+      selected_field_engineer = app_tables.fin_reported_problems.get(customer_id=self.id)
       if self.status == False:
         self.find_nearest_field_engineer()
         self.save_button()
       else:
-        self.find_nearest_field_engineer()
-        self.drop_down_1.visible= True
-        # self.drop_down_1.items = customer_details['field_engineer']
+        # self.find_nearest_field_engineer()
+        # self.column_panel_6.visible= False
         self.label_18.visible = True
-        self.label_18.text = "Issue Assigned to Field Engineer"
+        self.label_18.text = f"Issue Assigned to {selected_field_engineer['field_engineer']}"
     else:
-      self.drop_down_1.visible= False
+      self.column_panel_2.visible= False
       self.label_18.visible = True
       self.label_18.text = "Issue Assigned to Technical Team"
 
