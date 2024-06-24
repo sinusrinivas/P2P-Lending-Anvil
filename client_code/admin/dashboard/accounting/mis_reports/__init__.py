@@ -329,6 +329,8 @@ class mis_reports(mis_reportsTemplate):
 
         # Update layout for better appearance
         fig.update_layout(title={'text': 'Different types of Loans', 'font': {'size': 24, 'color': 'black', 'family': 'Arial', 'bold': True}})
+        fig.update_layout(autosize=False,width=400,height=650)
+        
 
         # Embed the plot in the Anvil app
         self.plot_2.figure = fig
