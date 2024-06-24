@@ -1812,6 +1812,9 @@ db_schema:
     - name: email_confirmation_key
       admin_ui: {order: 1.5, width: 200}
       type: string
+    - name: email_verified
+      admin_ui: {width: 200, order: 8}
+      type: bool
     title: Users
 secrets:
   new_key:

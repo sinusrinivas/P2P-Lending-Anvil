@@ -10,8 +10,37 @@ import anvil.server
 from anvil import *
 import math
 import requests
+import random
+from email.message import EmailMessage
+import bcrypt
 
+@anvil.server.callable
+def check_user_profile(email):
+    return app_tables.users.get(email=email)
 
+@anvil.server.callable
+def send_email_otp(email):
+    otp = random.randint(100000, 999999)
+
+    from_email = "gtpltechnologies@gmail.com"  # Use your verified email address
+    subject = "OTP Verification"
+    content = f"Your OTP is: {otp}"
+
+    try:
+        anvil.email.send(to=email, from_address=from_email, subject=subject, text=content)
+        return otp  # If successful, return OTP
+    except Exception as e:
+        print(f"Error sending email: {e}")
+        return str(e)  # Return error message
+@anvil.server.callable
+def update_user_status(email, email_verified):
+    user = app_tables.users.get(email=email)
+    if user:
+        user['email_verified'] = email_verified
+    else:
+        # If user does not exist, create a new row
+        user = app_tables.users.add_row(email=email, email_verified=email_verified)
+    return True
 
 
 # Define server function to navigate to the Invest Now form
@@ -22,7 +51,6 @@ def open_invest_now_form():
 @anvil.server.callable
 def open_apply_for_loan_form():
     open_form("bank_users.main_form.basic_registration_form")
-
 
 
 @anvil.server.callable
