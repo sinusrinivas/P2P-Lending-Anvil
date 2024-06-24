@@ -316,6 +316,7 @@ unique_ids:
     : '1706674264490661669917930.6699'
     lendor.dashboard.lender_view_loans.ItemTemplate50: '170961202737241645814155.91906'
     borrower.dashboard.today_dues.ItemTemplate73: SD47FPFVONCOEVKLQ4NWQEYQI6F6RO7P
+    admin.dashboard.accounting.payment_receipt.emi_details.RowTemplate59: '1719221609677299238243367.0895'
     admin.user_issue.user_viewprofile: '1701187753190491873666760.6118'
     borrower.dashboard.new_loan_request.check.ItemTemplate93: T6LV3N574LZYMIFJ6FE5TG7VF7RZENGB
     admin.dashboard.loan_servicing.handle_collection_process.all_details: '1718771218061201087514069.7903'
