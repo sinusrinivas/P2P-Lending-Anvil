@@ -10,8 +10,13 @@ import anvil.server
 from anvil import *
 import math
 import requests
+import anvil.pdf
 
-
+@anvil.server.callable
+def create_receipt_pdf(name, image_source,selected_row):    
+    # Your PDF creation logic here
+    pdf = anvil.pdf.PDFRenderer(landscape=True).render_form("admin.dashboard.accounting.payment_receipt.emi_details.payment_receipts",selected_row = selected_row)  
+    return pdf
 
 
 # Define server function to navigate to the Invest Now form

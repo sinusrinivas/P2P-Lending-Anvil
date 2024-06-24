@@ -12,7 +12,7 @@ class payment_receipts(payment_receiptsTemplate):
     def __init__(self, selected_row, **properties):
         # Set Form properties and Data Bindings.
         self.init_components(**properties)
-        
+        self.selected_row = selected_row
         # Print selected emi_number for debugging
         print(selected_row['emi_number'])
         
@@ -76,3 +76,12 @@ class payment_receipts(payment_receiptsTemplate):
         
         # Display the filtered EMIs in a repeating panel or similar component
         self.repeating_panel_1.items = filtered_emis
+
+    def button_1_click(self, **event_args):
+      """This method is called when the button is clicked"""
+      pdf = anvil.server.call('create_receipt_pdf',"Payment Receipt","self.image_1.source",self.selected_row)
+      anvil.media.download(pdf)
+
+    def button_2_click(self, **event_args):
+      """This method is called when the button is clicked"""
+      open_form('admin.dashboard.accounting.payment_receipt.emi_details')

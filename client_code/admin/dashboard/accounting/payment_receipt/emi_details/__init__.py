@@ -26,6 +26,9 @@ class emi_details(emi_detailsTemplate):
         
         filtered_emis = []
         filtered_emis1 = []
+
+        # Initialize total amount paid
+        total_amount_paid = 0.0
         
         # Iterate through each EMI record
         for emi in emi_records:
@@ -47,6 +50,10 @@ class emi_details(emi_detailsTemplate):
             self.label_9.text = lender_profile['full_name'] if lender_profile else None
             self.label_10.text = lender_profile['mobile'] if lender_profile else None
             self.label_11.text = lender_profile['street_adress_1'] if lender_profile else None
+
+            amount_paid = emi['amount_paid'] if emi['amount_paid'] is not None else 0.0
+            total_amount_paid += amount_paid
+            self.label_13.text = total_amount_paid
             
             filtered_emis1.append({
                 'borrower_name': borrower_profile['full_name'] if borrower_profile else None,
@@ -93,3 +100,7 @@ class emi_details(emi_detailsTemplate):
             self.data_grid_1.visible = False
             self.content.visible = True
             self.label_1.visible = False
+
+    def button_2_click(self, **event_args):
+      """This method is called when the button is clicked"""
+      open_form('admin.dashboard.accounting.payment_receipt')
