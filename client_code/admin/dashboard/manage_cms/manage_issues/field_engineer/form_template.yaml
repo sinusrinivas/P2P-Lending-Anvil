@@ -26,7 +26,7 @@ components:
       type: Spacer
       layout_properties: {grid_position: 'NAWUEV,SYXQQG'}
     - name: image_1
-      properties: {height: 102.6666259765625, role: outlined-card}
+      properties: {height: 102.6666259765625, role: null}
       type: Image
       layout_properties: {grid_position: 'NAWUEV,NUIKOM'}
       data_bindings: []
@@ -38,60 +38,55 @@ components:
       properties: {role: outlined-card, text: 'Basic Details:', bold: true, font_size: 20, background: '#98c1d9'}
       type: Label
       layout_properties: {grid_position: 'OKYPTF,QIGWBD'}
-    - name: column_panel_4
-      properties: {role: outlined-card}
-      type: ColumnPanel
-      layout_properties: {grid_position: 'RZQEVB,UWVSTV'}
-      components:
-      - name: label_16
-        properties: {text: 'Customer ID:', align: left, bold: true, role: null}
-        type: Label
-        layout_properties: {grid_position: 'JTAHDY,QLCZUE YRYMIV,FJYKEE'}
-      - name: label_1
-        properties:
-          text: |
-            Name:
-          bold: true
-          align: left
-          role: null
-        type: Label
-        layout_properties: {grid_position: 'JTAHDY,QLCZUE BUGYIG,ATDCKK'}
-      - name: label_3
-        properties: {text: 'Phone Number:', bold: true, align: left, role: null}
-        type: Label
-        layout_properties: {grid_position: 'JTAHDY,QLCZUE MNUMOZ,HSOPZT'}
-      - name: label_15
-        properties: {text: 'User Type:', bold: true, role: null}
-        type: Label
-        layout_properties: {grid_position: 'JTAHDY,QLCZUE QKIEWD,BVYVDN'}
-      - name: label_5
-        properties: {bold: true, text: 'Address:', align: left, role: null}
-        type: Label
-        layout_properties: {grid_position: 'JTAHDY,QLCZUE KSHMQM,CZGAEH'}
-      - name: label_17
-        properties: {role: null}
-        type: Label
-        layout_properties: {grid_position: 'JTAHDY,NWYTME GFDBBN,YWYPQL'}
-      - name: label_2
-        properties: {align: left, role: null}
-        type: Label
-        layout_properties: {grid_position: 'JTAHDY,NWYTME UJQVMF,PEXIIA'}
-        data_bindings:
-        - {property: text, code: 'self.item[''name'']', writeback: false}
-      - name: label_4
-        properties: {align: left, role: null}
-        type: Label
-        layout_properties: {grid_position: 'JTAHDY,NWYTME CIKFRS,JXWFAZ'}
-        data_bindings:
-        - {property: text, code: 'self.item[''mobile'']', writeback: false}
-      - name: label_14
-        properties: {align: left, visible: true, role: null}
-        type: Label
-        layout_properties: {grid_position: 'JTAHDY,NWYTME YGXIDP,IEBELW'}
-      - name: label_6
-        properties: {align: left, role: null}
-        type: Label
-        layout_properties: {grid_position: 'JTAHDY,NWYTME JLJHMN,CPSZKJ'}
+    - name: label_16
+      properties: {text: 'Customer ID:', align: left, bold: true, role: null}
+      type: Label
+      layout_properties: {grid_position: 'OISPJY,HFQQMV LZWIFE,GWLLPN'}
+    - name: label_1
+      properties:
+        text: |
+          Name:
+        bold: true
+        align: left
+        role: null
+      type: Label
+      layout_properties: {grid_position: 'OISPJY,HFQQMV FUKAAC,XGTPQU'}
+    - name: label_3
+      properties: {text: 'Phone Number:', bold: true, align: left, role: null}
+      type: Label
+      layout_properties: {grid_position: 'OISPJY,HFQQMV CUQKJE,XVYBJV'}
+    - name: label_15
+      properties: {text: 'User Type:', bold: true, role: null}
+      type: Label
+      layout_properties: {grid_position: 'OISPJY,HFQQMV GYXHCS,DPGMMU'}
+    - name: label_5
+      properties: {bold: true, text: 'Address:', align: left, role: null}
+      type: Label
+      layout_properties: {grid_position: 'OISPJY,HFQQMV UOHWOC,WDTSKY'}
+    - name: label_17
+      properties: {role: null}
+      type: Label
+      layout_properties: {grid_position: 'OISPJY,WQLCQK CSHTHD,OIKNDF'}
+    - name: label_2
+      properties: {align: left, role: null}
+      type: Label
+      layout_properties: {grid_position: 'OISPJY,WQLCQK CCNXKS,ZVBFFY'}
+      data_bindings:
+      - {property: text, code: 'self.item[''name'']', writeback: false}
+    - name: label_4
+      properties: {align: left, role: null}
+      type: Label
+      layout_properties: {grid_position: 'OISPJY,WQLCQK QYDLDI,ETVCUN'}
+      data_bindings:
+      - {property: text, code: 'self.item[''mobile'']', writeback: false}
+    - name: label_14
+      properties: {align: left, visible: true, role: null}
+      type: Label
+      layout_properties: {grid_position: 'OISPJY,WQLCQK GDZXFB,YWYESZ'}
+    - name: label_6
+      properties: {align: left, role: null}
+      type: Label
+      layout_properties: {grid_position: 'OISPJY,WQLCQK YKPSBN,BDZMDH'}
     - name: spacer_4
       properties: {height: 13.75}
       type: Spacer
@@ -100,43 +95,43 @@ components:
       properties: {role: outlined-card, text: 'Issue Details:', bold: true, font_size: 20, background: '#98c1d9'}
       type: Label
       layout_properties: {grid_position: 'ABISVX,SDJBGM'}
-    - name: column_panel_5
-      properties: {role: outlined-card}
-      type: ColumnPanel
-      layout_properties: {grid_position: 'UBJRSZ,MRHLIH'}
-      components:
-      - name: label_11
-        properties: {text: 'Issue Category:', bold: true, align: left, role: null}
-        type: Label
-        layout_properties: {grid_position: 'LUXSGS,EBZUZW HNXRPI,HHHJVK'}
-      - name: label_12
-        properties: {text: 'Issue SubCategory:', bold: true, align: left, role: null}
-        type: Label
-        layout_properties: {grid_position: 'LUXSGS,EBZUZW LHDVJR,DMKDUH'}
-      - name: label_7
-        properties: {text: 'Description:', bold: true, align: left, role: null}
-        type: Label
-        layout_properties: {grid_position: 'LUXSGS,EBZUZW ITYKAE,ESALZT'}
-      - name: label_8
-        properties: {align: left, role: null}
-        type: Label
-        layout_properties: {grid_position: 'LUXSGS,CBUDYH GBVRRC,KTNWTV'}
-      - name: label_10
-        properties: {align: left, role: null}
-        type: Label
-        layout_properties: {grid_position: 'LUXSGS,CBUDYH SNDYWZ,IOHIXB'}
-      - name: label_13
-        properties: {align: left, role: null}
-        type: Label
-        layout_properties: {grid_position: 'LUXSGS,CBUDYH SCLGOU,FMBUDY'}
+    - name: label_11
+      properties: {text: 'Issue Category:', bold: true, align: left, role: null}
+      type: Label
+      layout_properties: {grid_position: 'HMYQAN,LCHOUB SHQMNU,FJMDTO'}
+    - name: label_12
+      properties: {text: 'Issue SubCategory:', bold: true, align: left, role: null}
+      type: Label
+      layout_properties: {grid_position: 'HMYQAN,LCHOUB OKIVVJ,RYCFTM'}
+    - name: label_7
+      properties: {text: 'Description:', bold: true, align: left, role: null}
+      type: Label
+      layout_properties: {grid_position: 'HMYQAN,LCHOUB EJQJEG,TNGCUL'}
+    - name: label_8
+      properties: {align: left, role: null}
+      type: Label
+      layout_properties: {grid_position: 'HMYQAN,VVIEIC PFNTJK,IUNUVD'}
+    - name: label_10
+      properties: {align: left, role: null}
+      type: Label
+      layout_properties: {grid_position: 'HMYQAN,VVIEIC GEXWMT,VVWBSW'}
+    - name: label_13
+      properties: {align: left, role: null}
+      type: Label
+      layout_properties: {grid_position: 'HMYQAN,VVIEIC SHGWED,VBISPU'}
     - name: spacer_3
       properties: {height: 18.74993896484375}
       type: Spacer
       layout_properties: {grid_position: 'GCRQVG,WDYZLI'}
     - name: label_18
-      properties: {role: outlined-card, bold: true, align: center, background: white, underline: false, foreground: green, visible: false, italic: false, font_size: 20, text: ''}
+      properties: {role: null, bold: true, align: center, background: white, underline: false, foreground: green, visible: false, italic: false, font_size: 20, text: ''}
       type: Label
       layout_properties: {grid_position: 'SYWHTH,LLXQPN'}
+    - name: button_3
+      properties: {text: Check Issue, role: null, bold: true, background: '#05264d', foreground: white, visible: false}
+      type: Button
+      layout_properties: {grid_position: 'YTLWQQ,SPCFHC'}
+      event_bindings: {click: button_3_click}
 - name: column_panel_2
   properties: {visible: false, col_widths: '{"FKUIOX":70}'}
   type: ColumnPanel
