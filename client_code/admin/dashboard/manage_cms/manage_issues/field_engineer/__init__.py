@@ -22,8 +22,6 @@ class field_engineer(field_engineerTemplate):
     self.user_profile = app_tables.fin_user_profile.get(customer_id=self.id)
     self.label_6.text = self.user_profile['street_adress_1']
     customer_details = app_tables.fin_reported_problems.get(customer_id=self.id)
-    # if customer_details['customer_id']>1:
-    #   alert('Resolve first Issue then go for Second')
     self.image_1.source = customer_details['user_photo']
     self.label_2.text = customer_details['name']
     self.label_4.text = customer_details['mobile_number']
@@ -62,10 +60,10 @@ class field_engineer(field_engineerTemplate):
     )
     if response:
         location = response[0]
-        print(f"Address: {address}, Coordinates: ({location['lat']}, {location['lon']})")
+        # print(f"Address: {address}, Coordinates: ({location['lat']}, {location['lon']})")
         return (float(location['lat']), float(location['lon']))
     else:
-        print(f"Address: {address}, Coordinates: Not Found")
+        # print(f"Address: {address}, Coordinates: Not Found")
         return (0, 0)  # Default to (0, 0) if no results found
 
   def calculate_distance(self, coord1, coord2):
@@ -84,7 +82,7 @@ class field_engineer(field_engineerTemplate):
 
     rounded_distance = round(distance)
 
-    print(f"Distance between {coord1} and {coord2}: {rounded_distance} km")
+    # print(f"Distance between {coord1} and {coord2}: {rounded_distance} km")
     return rounded_distance
 
   def find_nearest_field_engineer(self):
@@ -106,13 +104,13 @@ class field_engineer(field_engineerTemplate):
 
     # Populate dropdown with sorted field engineers
     self.drop_down_1.items = [
-      f"{engineer['full_name']} ({distance} km)" for distance, engineer in distances
+      f"{engineer['full_name']}" for distance, engineer in distances
     ]
 
     # Select the nearest engineer
     if distances:
       nearest_engineer = distances[0][1]
-      print(f"Nearest Engineer: {nearest_engineer['full_name']}, Distance: {distances[0][0]} km")
+      # print(f"Nearest Engineer: {nearest_engineer['full_name']}, Distance: {distances[0][0]} km")
       self.selected_engineer = nearest_engineer
 
   def button_1_click(self, **event_args):

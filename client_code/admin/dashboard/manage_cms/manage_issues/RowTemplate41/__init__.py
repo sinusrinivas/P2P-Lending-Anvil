@@ -31,4 +31,4 @@ class RowTemplate41(RowTemplate41Template):
     # if duplicate_ids:
     #   alert('Duplicate customer IDs found: ' + ', '.join(map(str, duplicate_ids)))
     # else:
-      open_form('admin.dashboard.manage_cms.manage_issues.field_engineer', selected_row=selected_row)
+    open_form('admin.dashboard.manage_cms.manage_issues.field_engineer', selected_row=selected_row)
