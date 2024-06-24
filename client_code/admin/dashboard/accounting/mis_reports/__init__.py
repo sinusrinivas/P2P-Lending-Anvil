@@ -293,12 +293,17 @@ class mis_reports(mis_reportsTemplate):
                 }
             },
             autosize=False,
-            width=600,
-            height=650
+            width=780,
+            height=650,
+            margin=dict(l=100, r=10, t=90, b=20)
         )
     
         # Embed the plot in the Anvil app
         self.plot_1.figure = fig
+    
+        # Explicitly set the size of the Plot component
+        self.plot_1.width = 780
+        self.plot_1.height = 650
 
     def plot_loan_data(self):
         # Fetch data from tables
