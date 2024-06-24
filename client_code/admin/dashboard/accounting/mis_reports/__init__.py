@@ -107,7 +107,7 @@ class mis_reports(mis_reportsTemplate):
 
         # Embed the plot in the Anvil app
         self.plot_2.figure = fig
-
+    
     def create_user_bar_chart(self):
         # Fetch investment data
         investments = app_tables.fin_lender.search()
@@ -157,9 +157,10 @@ class mis_reports(mis_reportsTemplate):
         self.plot_3.figure = fig
         
         # Debugging: Check if the plot is assigned correctly
-        print(f"Assigned figure to plot_3: {self.plot_3.figure}")
+        print(f"Assigned figure to plot_3: {self.plot_3.figure}") 
 
 
+    
     def create_risk_bar_chart(self):
         # Fetch investment data
         investments = app_tables.fin_lender.search()

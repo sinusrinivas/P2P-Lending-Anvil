@@ -349,11 +349,11 @@ def update_fin_platform_fees():
     most_used_product_name = max(product_usage, key=product_usage.get)
     
     # Step 5: Update the fin_platform_fees table
-    fee_record = app_tables.fin_platform_fees.get()  # Assuming there's only one record, or adapt as needed
+    fee_record = app_tables.fin_platform_details.get()  # Assuming there's only one record, or adapt as needed
 
     # If no fee record exists, add a new row
     if fee_record is None:
-        fee_record = app_tables.fin_platform_fees.add_row()
+        fee_record = app_tables.fin_platform_details.add_row()
     
     fee_record.update(
         total_lenders=num_lenders,
