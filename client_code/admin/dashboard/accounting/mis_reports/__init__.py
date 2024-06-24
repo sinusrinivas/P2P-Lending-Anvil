@@ -243,13 +243,12 @@ class mis_reports(mis_reportsTemplate):
         self.create_user_bar_chart()
         # self.create_risk_bar_chart()
 
-
     def plot_data(self):
         # Fetch data from tables
         loan_details = app_tables.fin_loan_details.search(loan_updated_status=q.any_of('closed loan', 'rejected', 'disbursed loan'))
         lenders = app_tables.fin_lender.search()
         users = app_tables.fin_user_profile.search(usertype=q.any_of('lender', 'borrower'))
-
+    
         # Calculate metrics
         no_of_loans_disbursed = len([loan for loan in loan_details if loan['loan_updated_status'] == 'disbursed loan'])
         no_of_loans_closed = len([loan for loan in loan_details if loan['loan_updated_status'] == 'closed loan'])
@@ -258,7 +257,7 @@ class mis_reports(mis_reportsTemplate):
         no_of_borrowers = len([user for user in users if user['usertype'] == 'borrower'])
         no_of_lenders = len([user for user in users if user['usertype'] == 'lender'])
         lenders_commitment = sum([lender['return_on_investment'] for lender in lenders])
-
+    
         # Data for the pie chart
         values = [
             no_of_loans_disbursed,
@@ -278,13 +277,26 @@ class mis_reports(mis_reportsTemplate):
             'No of Lenders: {}'.format(no_of_lenders),
             'Lenders Commitment: {}'.format(lenders_commitment)
         ]
-
+    
         # Create the pie chart
         fig = go.Figure(data=[go.Pie(labels=labels, values=values, textinfo='label+percent')])
-
-        fig.update_layout(title={'text': 'Financial Loan Details', 'font': {'size': 24, 'color': 'black', 'family': 'Arial', 'bold': True}})
-        fig.update_layout(autosize=False,width=400,height=650)
-
+    
+        # Update the layout to set the size
+        fig.update_layout(
+            title={
+                'text': 'Financial Loan Details',
+                'font': {
+                    'size': 24,
+                    'color': 'black',
+                    'family': 'Arial',
+                    'bold': True
+                }
+            },
+            autosize=False,
+            width=600,
+            height=650
+        )
+    
         # Embed the plot in the Anvil app
         self.plot_1.figure = fig
 
@@ -329,7 +341,7 @@ class mis_reports(mis_reportsTemplate):
 
         # Update layout for better appearance
         fig.update_layout(title={'text': 'Different types of Loans', 'font': {'size': 24, 'color': 'black', 'family': 'Arial', 'bold': True}})
-        fig.update_layout(autosize=False,width=400,height=650)
+        fig.update_layout(autosize=False,width=600,height=650)
         
 
         # Embed the plot in the Anvil app
