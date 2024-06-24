@@ -591,9 +591,6 @@ db_schema:
     - name: status
       admin_ui: {width: 200, order: 16}
       type: bool
-    - name: engineer
-      admin_ui: {order: 17, width: 200}
-      type: string
     title: fin_reported_problems
   fin_borrower_qualification:
     title: fin_borrower_qualification

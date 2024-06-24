@@ -104,7 +104,7 @@ class field_engineer(field_engineerTemplate):
 
     # Populate dropdown with sorted field engineers
     self.drop_down_1.items = [
-      f"{engineer['full_name']}" for distance, engineer in distances
+      f"{engineer['full_name']} ({distance} km)" for distance, engineer in distances
     ]
 
     # Select the nearest engineer
@@ -121,7 +121,12 @@ class field_engineer(field_engineerTemplate):
 
   def button_2_click(self, **event_args):
     update = self.drop_down_1.selected_value
-    self.selected_row['field_engineer'] = update
+    position = update.find('(')
+    if position != -1:
+        result_string = update[:position].strip()
+    else:
+        result_string = update
+    self.selected_row['field_engineer'] = result_string
     self.selected_row['status'] = True
     self.selected_row.update()
     alert("Issue Assigned")

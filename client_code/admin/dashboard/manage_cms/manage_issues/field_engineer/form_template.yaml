@@ -38,55 +38,60 @@ components:
       properties: {role: outlined-card, text: 'Basic Details:', bold: true, font_size: 20, background: '#98c1d9'}
       type: Label
       layout_properties: {grid_position: 'OKYPTF,QIGWBD'}
-    - name: label_16
-      properties: {text: 'Customer ID:', align: left, bold: true, role: null}
-      type: Label
-      layout_properties: {grid_position: 'OISPJY,HFQQMV LZWIFE,GWLLPN'}
-    - name: label_1
-      properties:
-        text: |
-          Name:
-        bold: true
-        align: left
-        role: null
-      type: Label
-      layout_properties: {grid_position: 'OISPJY,HFQQMV FUKAAC,XGTPQU'}
-    - name: label_3
-      properties: {text: 'Phone Number:', bold: true, align: left, role: null}
-      type: Label
-      layout_properties: {grid_position: 'OISPJY,HFQQMV CUQKJE,XVYBJV'}
-    - name: label_15
-      properties: {text: 'User Type:', bold: true, role: null}
-      type: Label
-      layout_properties: {grid_position: 'OISPJY,HFQQMV GYXHCS,DPGMMU'}
-    - name: label_5
-      properties: {bold: true, text: 'Address:', align: left, role: null}
-      type: Label
-      layout_properties: {grid_position: 'OISPJY,HFQQMV UOHWOC,WDTSKY'}
-    - name: label_17
-      properties: {role: null}
-      type: Label
-      layout_properties: {grid_position: 'OISPJY,WQLCQK CSHTHD,OIKNDF'}
-    - name: label_2
-      properties: {align: left, role: null}
-      type: Label
-      layout_properties: {grid_position: 'OISPJY,WQLCQK CCNXKS,ZVBFFY'}
-      data_bindings:
-      - {property: text, code: 'self.item[''name'']', writeback: false}
-    - name: label_4
-      properties: {align: left, role: null}
-      type: Label
-      layout_properties: {grid_position: 'OISPJY,WQLCQK QYDLDI,ETVCUN'}
-      data_bindings:
-      - {property: text, code: 'self.item[''mobile'']', writeback: false}
-    - name: label_14
-      properties: {align: left, visible: true, role: null}
-      type: Label
-      layout_properties: {grid_position: 'OISPJY,WQLCQK GDZXFB,YWYESZ'}
-    - name: label_6
-      properties: {align: left, role: null}
-      type: Label
-      layout_properties: {grid_position: 'OISPJY,WQLCQK YKPSBN,BDZMDH'}
+    - name: column_panel_4
+      properties: {role: outlined-card}
+      type: ColumnPanel
+      layout_properties: {grid_position: 'HTYMVR,LKNDNN'}
+      components:
+      - name: label_16
+        properties: {text: 'Customer ID:', align: left, bold: true, role: null}
+        type: Label
+        layout_properties: {grid_position: 'VYMDTL,XJRDMI MECGBI,UHGGTG'}
+      - name: label_1
+        properties:
+          text: |
+            Name:
+          bold: true
+          align: left
+          role: null
+        type: Label
+        layout_properties: {grid_position: 'VYMDTL,XJRDMI ROAVSR,VEXHBN'}
+      - name: label_3
+        properties: {text: 'Phone Number:', bold: true, align: left, role: null}
+        type: Label
+        layout_properties: {grid_position: 'VYMDTL,XJRDMI ECECEH,OTSJHV'}
+      - name: label_15
+        properties: {text: 'User Type:', bold: true, role: null}
+        type: Label
+        layout_properties: {grid_position: 'VYMDTL,XJRDMI MXWUTH,ZZVBQV'}
+      - name: label_5
+        properties: {bold: true, text: 'Address:', align: left, role: null}
+        type: Label
+        layout_properties: {grid_position: 'VYMDTL,XJRDMI RCXHTJ,HFTQMG'}
+      - name: label_17
+        properties: {role: null}
+        type: Label
+        layout_properties: {grid_position: 'VYMDTL,YOKMDH KCZNFZ,WRIUEO'}
+      - name: label_2
+        properties: {align: left, role: null}
+        type: Label
+        layout_properties: {grid_position: 'VYMDTL,YOKMDH FYYADO,GVUDME'}
+        data_bindings:
+        - {property: text, code: 'self.item[''name'']', writeback: false}
+      - name: label_4
+        properties: {align: left, role: null}
+        type: Label
+        layout_properties: {grid_position: 'VYMDTL,YOKMDH DHERJF,NWLTQL'}
+        data_bindings:
+        - {property: text, code: 'self.item[''mobile'']', writeback: false}
+      - name: label_14
+        properties: {align: left, visible: true, role: null}
+        type: Label
+        layout_properties: {grid_position: 'VYMDTL,YOKMDH NOHYOX,GZSBMM'}
+      - name: label_6
+        properties: {align: left, role: null}
+        type: Label
+        layout_properties: {grid_position: 'VYMDTL,YOKMDH GDAXDV,ZYOSJA'}
     - name: spacer_4
       properties: {height: 13.75}
       type: Spacer
@@ -95,30 +100,35 @@ components:
       properties: {role: outlined-card, text: 'Issue Details:', bold: true, font_size: 20, background: '#98c1d9'}
       type: Label
       layout_properties: {grid_position: 'ABISVX,SDJBGM'}
-    - name: label_11
-      properties: {text: 'Issue Category:', bold: true, align: left, role: null}
-      type: Label
-      layout_properties: {grid_position: 'HMYQAN,LCHOUB SHQMNU,FJMDTO'}
-    - name: label_12
-      properties: {text: 'Issue SubCategory:', bold: true, align: left, role: null}
-      type: Label
-      layout_properties: {grid_position: 'HMYQAN,LCHOUB OKIVVJ,RYCFTM'}
-    - name: label_7
-      properties: {text: 'Description:', bold: true, align: left, role: null}
-      type: Label
-      layout_properties: {grid_position: 'HMYQAN,LCHOUB EJQJEG,TNGCUL'}
-    - name: label_8
-      properties: {align: left, role: null}
-      type: Label
-      layout_properties: {grid_position: 'HMYQAN,VVIEIC PFNTJK,IUNUVD'}
-    - name: label_10
-      properties: {align: left, role: null}
-      type: Label
-      layout_properties: {grid_position: 'HMYQAN,VVIEIC GEXWMT,VVWBSW'}
-    - name: label_13
-      properties: {align: left, role: null}
-      type: Label
-      layout_properties: {grid_position: 'HMYQAN,VVIEIC SHGWED,VBISPU'}
+    - name: column_panel_5
+      properties: {role: outlined-card}
+      type: ColumnPanel
+      layout_properties: {grid_position: 'XOPPYZ,UTEDEL'}
+      components:
+      - name: label_11
+        properties: {text: 'Issue Category:', bold: true, align: left, role: null}
+        type: Label
+        layout_properties: {grid_position: 'BHAPZP,PDTPDO SGTRBE,LOQTHZ'}
+      - name: label_12
+        properties: {text: 'Issue SubCategory:', bold: true, align: left, role: null}
+        type: Label
+        layout_properties: {grid_position: 'BHAPZP,PDTPDO UGXRTG,GHVVGI'}
+      - name: label_7
+        properties: {text: 'Description:', bold: true, align: left, role: null}
+        type: Label
+        layout_properties: {grid_position: 'BHAPZP,PDTPDO BBLNQZ,VGQCLC'}
+      - name: label_8
+        properties: {align: left, role: null}
+        type: Label
+        layout_properties: {grid_position: 'BHAPZP,XWCHHG VPBVWW,GBEFJD'}
+      - name: label_10
+        properties: {align: left, role: null}
+        type: Label
+        layout_properties: {grid_position: 'BHAPZP,XWCHHG BWMUBI,FLTCVM'}
+      - name: label_13
+        properties: {align: left, role: null}
+        type: Label
+        layout_properties: {grid_position: 'BHAPZP,XWCHHG GOSWHR,CECIRD'}
     - name: spacer_3
       properties: {height: 18.74993896484375}
       type: Spacer
