@@ -22,6 +22,8 @@ class field_engineer(field_engineerTemplate):
     self.user_profile = app_tables.fin_user_profile.get(customer_id=self.id)
     self.label_6.text = self.user_profile['street_adress_1']
     customer_details = app_tables.fin_reported_problems.get(customer_id=self.id)
+    # if customer_details['customer_id']>1:
+    #   alert('Resolve first Issue then go for Second')
     self.image_1.source = customer_details['user_photo']
     self.label_2.text = customer_details['name']
     self.label_4.text = customer_details['mobile_number']
