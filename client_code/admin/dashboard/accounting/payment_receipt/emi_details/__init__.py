@@ -19,6 +19,7 @@ class emi_details(emi_detailsTemplate):
     
     # Fetch and display data for the selected loan_id
     self.fetch_and_display_data()
+    self.button_1.text = "On"
     
   def fetch_and_display_data(self):
     # Fetch all EMI records for the selected loan_id from the database
@@ -57,3 +58,10 @@ class emi_details(emi_detailsTemplate):
     
     # Display the filtered EMIs in a repeating panel or similar component
     self.repeating_panel_1.items = filtered_emis
+
+  def button_1_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    if self.button_1.text == "On":
+        self.button_1.text = "Off"
+    else:
+        self.button_1.text = "On"
