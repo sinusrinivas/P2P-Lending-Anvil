@@ -8,12 +8,13 @@ import anvil.tables.query as q
 from anvil.tables import app_tables
 import anvil.server
 import anvil.pdf
-
+import anvil.media
+# from weasyprint import HTML
 
 @anvil.server.callable
-def create_pdf_from_html(html_content):
-    # Render the HTML content to a PDF
-    pdf = anvil.pdf.PDFRenderer().render_html(html_content)
+def create_pdf_from_panel(content_panel):
+    # Render the panel to a PDF
+    pdf = anvil.pdf.render_form(content_panel)
     
     return pdf
   

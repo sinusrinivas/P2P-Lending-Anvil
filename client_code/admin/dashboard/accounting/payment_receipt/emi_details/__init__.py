@@ -113,14 +113,11 @@ class emi_details(emi_detailsTemplate):
       self.convert_panel_to_pdf()
 
     def convert_panel_to_pdf(self):
-        # Assuming 'content_panel' is the panel containing your data
-        content_panel = self.content
-        
-        # Extract HTML content
-        html_content = anvil.js.window.jQuery(content_panel).html()
-        
-        # Call the server function to create the PDF
-        pdf = anvil.server.call('create_pdf_from_html', html_content)
-        
-        # Prompt the user to download the PDF
-        anvil.media.download(pdf)
+      # Assuming 'content_panel' is the panel containing your data
+      content_panel = self.content
+      
+      # Call the server function to create the PDF from the content panel
+      pdf = anvil.server.call('create_pdf_from_panel', content_panel)
+      
+      # Prompt the user to download the PDF
+      anvil.media.download(pdf)
