@@ -29,4 +29,9 @@ components:
     properties: {item_template: admin.dashboard.accounting.payment_receipt.RowTemplate52}
     type: RepeatingPanel
   layout_properties: {grid_position: 'YWVYKG,FIZYBH', full_width_row: true}
+- name: button_1
+  properties: {text: Back, background: '#05264d', foreground: white, icon: 'fa:backward'}
+  type: Button
+  layout_properties: {grid_position: 'NPHMZP,JWBFLV'}
+  event_bindings: {click: button_1_click}
 is_package: true
