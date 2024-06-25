@@ -8,7 +8,25 @@ import anvil.tables.query as q
 from anvil.tables import app_tables
 import anvil.server
 import anvil.pdf
+import anvil.media
+# from weasyprint import HTML
 
+# all emi receipt
+@anvil.server.callable
+def create_pdf_from_panel(content_panel):
+    # Render the panel to a PDF
+    pdf = anvil.pdf.render_form(content_panel)
+    
+    return pdf
+
+# each emi receipt
+@anvil.server.callable
+def create_pdf_of_payment_receipt(content_panel):
+    # Render the panel to a PDF
+    pdf = anvil.pdf.render_form(content_panel)
+    
+    return pdf
+  
 # @anvil.server.callable
 # def create_pdf(name, image_source,selected_row):    
 #     # Your PDF creation logic here

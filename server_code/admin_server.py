@@ -42,12 +42,19 @@ def update_user_status(email, email_verified):
         # If user does not exist, create a new row
         user = app_tables.users.add_row(email=email, email_verified=email_verified)
     return True
+
+@anvil.server.callable
 def create_receipt_pdf(name, image_source,selected_row):    
     # Your PDF creation logic here
     pdf = anvil.pdf.PDFRenderer(landscape=True).render_form("admin.dashboard.accounting.payment_receipt.emi_details.payment_receipts",selected_row = selected_row)  
     return pdf
 
-
+@anvil.server.callable
+def create_receipt_pdf1(name, image_source,selected_row):    
+    # Your PDF creation logic here
+    pdf = anvil.pdf.PDFRenderer(landscape=True).render_form("admin.dashboard.accounting.payment_receipt.emi_details")  
+    return pdf
+  
 # Define server function to navigate to the Invest Now form
 @anvil.server.callable
 def open_invest_now_form():
