@@ -99,50 +99,6 @@ components:
   type: ColumnPanel
   layout_properties: {grid_position: 'KYNVUW,LOMIKA', full_width_row: true}
   components:
-  - name: content_panel_1
-    properties: {col_widths: '{}', background: white, role: elevated-card}
-    type: ColumnPanel
-    layout_properties: {grid_position: 'XYXMAS,XOABRT', full_width_row: true}
-    components:
-    - name: image_4_copy_copy
-      properties: {source: _/theme/admin/dashboard/accounting/mis-reports/Lender%20share.png, display_mode: shrink_to_fit, height: '100', visible: true}
-      type: Image
-      layout_properties: {grid_position: 'QGZTNW,PVJEPO'}
-      event_bindings: {mouse_up: image_4_copy_mouse_up}
-    - name: add_people_copy
-      properties:
-        text: |
-          Lender Share
-        font_size: 16
-        foreground: black
-        bold: true
-        visible: true
-        font: ''
-      type: Button
-      layout_properties: {grid_position: 'GMECOB,ATAMRQ'}
-      event_bindings: {click: button_9_click}
-  - name: content_panel_3
-    properties: {col_widths: '{}', background: white, role: elevated-card}
-    type: ColumnPanel
-    layout_properties: {grid_position: 'XYXMAS,KPCUUT'}
-    components:
-    - name: image_4_copy_copy_3
-      properties: {source: _/theme/admin/dashboard/accounting/mis-reports/Platform%20Revenue.png, display_mode: shrink_to_fit, height: '100', visible: true}
-      type: Image
-      layout_properties: {grid_position: 'QGZTNW,PVJEPO'}
-      event_bindings: {mouse_up: image_4_copy_mouse_up}
-    - name: add_people_copy_3
-      properties:
-        text: |
-          Platform Revenue
-        font_size: 16
-        foreground: black
-        bold: true
-        visible: true
-        font: ''
-      type: Button
-      layout_properties: {grid_position: 'GMECOB,ATAMRQ'}
-      event_bindings: {click: button_9_click}
   - name: content_panel_4
     properties: {col_widths: '{}', background: white, role: elevated-card}
     type: ColumnPanel
@@ -212,7 +168,7 @@ components:
   - name: content_panel_6
     properties: {col_widths: '{}', background: white, role: elevated-card}
     type: ColumnPanel
-    layout_properties: {grid_position: 'XYXMAS,PLLEUZ', full_width_row: true}
+    layout_properties: {grid_position: 'XYXMAS,PLLEUZ', full_width_row: false}
     components:
     - name: image_4_copy_copy_6
       properties: {source: _/theme/admin/dashboard/accounting/mis-reports/liability%20on%20company%20report.png, display_mode: shrink_to_fit, height: 78.39996337890625, visible: true}

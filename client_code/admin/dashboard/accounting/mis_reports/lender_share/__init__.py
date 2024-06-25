@@ -44,3 +44,7 @@ class lender_share(lender_shareTemplate):
         })
     
     self.repeating_panel_1.items = customer_details
+
+  def button_1_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    open_form('admin.dashboard.accounting.mis_reports')
