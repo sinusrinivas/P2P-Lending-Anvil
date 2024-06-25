@@ -19,7 +19,7 @@ services:
 startup: {type: form, module: bank_users.main_form}
 package_name: pip_install_reportlab
 allow_embedding: false
-name: P2P Lending App 1
+name: P2P Lending App clone 25/06/2024
 runtime_options:
   version: 3
   client_version: '3'
