@@ -48,9 +48,10 @@ components:
     type: Label
     layout_properties: {grid_position: 'PYOZKS,OFZDDK', full_width_row: true}
   - name: button_3
-    properties: {text: '', background: '#05264d', icon: 'fa:download'}
+    properties: {text: '', background: '#05264d', icon: 'fa:download', foreground: white}
     type: Button
     layout_properties: {grid_position: 'PYOZKS,HHHOTL'}
+    event_bindings: {click: button_3_click}
   - name: spacer_2
     properties: {height: 32}
     type: Spacer

@@ -104,3 +104,8 @@ class emi_details(emi_detailsTemplate):
     def button_2_click(self, **event_args):
       """This method is called when the button is clicked"""
       open_form('admin.dashboard.accounting.payment_receipt')
+
+    def button_3_click(self, **event_args):
+      """This method is called when the button is clicked"""
+      pdf = anvil.server.call('create_receipt_pdf1',"Payment Receipt","self.image_1.source",self.selected_row)
+      anvil.media.download(pdf)
