@@ -7,12 +7,13 @@ import anvil.users
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
+import anvil.js
 
 class emi_details(emi_detailsTemplate):
     def __init__(self, selected_row, **properties):
         # Set Form properties and Data Bindings.
         self.init_components(**properties)
-        
+        self.selected_row = selected_row
         # Store the selected loan_id
         self.selected_loan_id = selected_row['loan_id']
         
@@ -107,5 +108,19 @@ class emi_details(emi_detailsTemplate):
 
     def button_3_click(self, **event_args):
       """This method is called when the button is clicked"""
-      pdf = anvil.server.call('create_receipt_pdf1',"Payment Receipt","self.image_1.source",self.selected_row)
-      anvil.media.download(pdf)
+      # pdf = anvil.server.call('create_receipt_pdf1')
+      # anvil.media.download(pdf)
+      self.convert_panel_to_pdf()
+
+    def convert_panel_to_pdf(self):
+        # Assuming 'content_panel' is the panel containing your data
+        content_panel = self.content
+        
+        # Extract HTML content
+        html_content = anvil.js.window.jQuery(content_panel).html()
+        
+        # Call the server function to create the PDF
+        pdf = anvil.server.call('create_pdf_from_html', html_content)
+        
+        # Prompt the user to download the PDF
+        anvil.media.download(pdf)

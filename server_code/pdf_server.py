@@ -9,6 +9,14 @@ from anvil.tables import app_tables
 import anvil.server
 import anvil.pdf
 
+
+@anvil.server.callable
+def create_pdf_from_html(html_content):
+    # Render the HTML content to a PDF
+    pdf = anvil.pdf.PDFRenderer().render_html(html_content)
+    
+    return pdf
+  
 # @anvil.server.callable
 # def create_pdf(name, image_source,selected_row):    
 #     # Your PDF creation logic here

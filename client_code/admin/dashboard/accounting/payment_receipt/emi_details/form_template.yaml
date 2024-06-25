@@ -134,7 +134,8 @@ components:
       - {id: WDVPOR, data_key: column_3, title: Outstanding Amount}
       - {id: UTMXUU, data_key: column_4, title: Remaining Tenure}
       - {id: UCBVXJ, data_key: column_2, title: Amount Paid}
-      role: tonal-data-grid
+      role: [tonal-data-grid]
+      show_page_controls: false
     type: DataGrid
     components:
     - name: repeating_panel_2
@@ -153,9 +154,9 @@ components:
     properties: {font_size: 16}
     type: Label
     layout_properties: {grid_position: 'BBDPKD,IKUYCT UPFLVQ,SQXOYR'}
-  - name: button_2
-    properties: {text: Back, background: '#05264d', role: filled-button, foreground: white, icon: 'fa:angle-double-left', bold: true}
-    type: Button
-    layout_properties: {grid_position: 'XTIRMV,KNIIWJ'}
-    event_bindings: {click: button_2_click}
+- name: button_2
+  properties: {text: Back, background: '#05264d', role: filled-button, foreground: white, icon: 'fa:angle-double-left', bold: true}
+  type: Button
+  layout_properties: {grid_position: 'BSMPDY,YVDDNN'}
+  event_bindings: {click: button_2_click}
 is_package: true
