@@ -481,6 +481,7 @@ unique_ids:
     lendor.dashboard.my_returns: 4IEF7M5W2HNGQTDKZOOF4RFXFAGAJB5S
     admin.dashboard.loan_servicing.tracking_late_payments.RowTemplate45: '1718615883950918347490650.2042'
     borrower.dashboard.RowTemplate7: T3FUXLYGRAVXJ3IHK72RQZ2D33FIBR42
+    admin.dashboard.accounting.mis_reports.RowTemplate61: '1719292252960979205305381.834'
     admin.dashboard.manage_cms.add_lender_dropdown_details.lending_type: '1706532092749385411492768.6154'
     lendor.dashboard.view_loan_extension_requests: '1699962962727731721010167.028'
     admin.dashboard.home_button_admin: '1706595991042717143199814.3754'

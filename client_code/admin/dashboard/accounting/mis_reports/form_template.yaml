@@ -216,6 +216,27 @@ components:
   properties: {height: '650'}
   type: Plot
   layout_properties: {grid_position: 'ZHVEGZ,OWIBDI'}
+  event_bindings: {click: plot_4_click}
+- name: risk_level_label
+  properties: {align: center, visible: false, text: Loan Risk Distribution, bold: true}
+  type: Label
+  layout_properties: {grid_position: 'AMPXZS,TMMMUQ'}
+- name: data_grid_1
+  properties:
+    columns:
+    - {id: JKSDUP, title: Loan Id, data_key: column_1}
+    - {id: VJQQOR, title: Product Name, data_key: column_2}
+    - {id: OJLQEN, title: Borrower Id, data_key: column_3}
+    - {id: QKLUMJ, data_key: column_1, title: Borrower Name}
+    - {id: JKEGYV, data_key: column_2, title: Loan Amount}
+    role: tonal-data-grid
+    visible: false
+  type: DataGrid
+  components:
+  - name: repeating_panel_loan_details
+    properties: {item_template: admin.dashboard.accounting.mis_reports.RowTemplate61}
+    type: RepeatingPanel
+  layout_properties: {grid_position: 'VQEYRC,MHKVTK'}
 - name: spacer_5
   properties: {height: 32}
   type: Spacer
