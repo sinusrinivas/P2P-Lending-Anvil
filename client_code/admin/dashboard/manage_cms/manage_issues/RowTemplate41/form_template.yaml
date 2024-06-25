@@ -5,7 +5,7 @@ container:
   properties: {spacing_above: small, spacing_below: small}
 components:
 - name: image_1
-  properties: {height: 56.99998474121094, role: null, display_mode: original_size}
+  properties: {height: 38.79998779296875, role: outlined-card, display_mode: original_size}
   type: Image
   layout_properties: {column: JKSDUP}
   data_bindings:
@@ -41,7 +41,7 @@ components:
   data_bindings:
   - {property: text, code: 'self.item[''report_date'']', writeback: false}
 - name: image_2
-  properties: {height: 55.99998474121094, role: null, display_mode: original_size}
+  properties: {height: 55.99998474121094, role: outlined-card, display_mode: original_size}
   type: Image
   layout_properties: {column: RMEGPH}
   data_bindings:
