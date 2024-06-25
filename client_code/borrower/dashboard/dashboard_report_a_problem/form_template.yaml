@@ -20,6 +20,11 @@ components:
     properties: {}
     layout_properties: {grid_position: 'BJJQVM,LWRTNM', full_width_row: true}
     name: navigation_form_dashboard_1
+  - name: button_1
+    properties: {text: Back, align: right, background: '#05264d', foreground: white, icon: 'fa:backward'}
+    type: Button
+    layout_properties: {grid_position: 'IWGTOC,QNUEJX', full_width_row: true}
+    event_bindings: {click: button_1_click}
   - type: ColumnPanel
     properties: {role: null, col_widths: '{"OXACOG":10,"undefined":40,"BDDXKO":10}', wrap_on: mobile}
     layout_properties: {grid_position: 'YHZEWC,ODXHXR'}

@@ -128,10 +128,10 @@ class my_returns(my_returnsTemplate):
       print(f"Created figure: {fig}")
       
       # Set the plot in the Plot component
-      self.plot_3.figure = fig
+      self.plot_2.figure = fig
       
       # Debugging: Check if the plot is assigned correctly
-      print(f"Assigned figure to plot_3: {self.plot_3.figure}")
+      print(f"Assigned figure to plot_3: {self.plot_2.figure}")
 
     def button_1_click(self, **event_args):
         """This method is called when the button is clicked"""

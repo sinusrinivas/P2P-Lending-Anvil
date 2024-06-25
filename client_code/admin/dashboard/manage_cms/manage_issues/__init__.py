@@ -15,6 +15,9 @@ class manage_issues(manage_issuesTemplate):
     self.init_components(**properties)
 
     self.repeating_panel_1.items = app_tables.fin_reported_problems.search()
+    if not self.repeating_panel_1:
+      self.label_no_issues.visible = True
+      
 
   def button_1_click(self, **event_args):
     open_form('admin.dashboard.manage_cms')
