@@ -31,7 +31,7 @@ components:
   - name: button_2
     properties: {text: Back, align: right, background: '#05264d', foreground: white, icon: 'fa:backward'}
     type: Button
-    layout_properties: {grid_position: 'NYVYTO,NMKPDV AOXBSN,MTNEQP'}
+    layout_properties: {grid_position: 'NYVYTO,NMKPDV AOXBSN,MTNEQP', full_width_row: true}
     event_bindings: {click: button_2_click}
   - properties: {align: center, text: Profile Overview, bold: true, font_size: 22}
     type: Label

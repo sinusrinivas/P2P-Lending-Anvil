@@ -32,7 +32,7 @@ components:
   - name: button_1
     properties: {role: filled-button, bold: false, align: right, spacing_above: small, background: '#0b2547', icon: 'fa:backward', underline: false, font: '', icon_align: left, foreground: 'theme:On Primary', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: 15, tooltip: '', text: Back}
     type: Button
-    layout_properties: {grid_position: 'AUUAZJ,FQVZON'}
+    layout_properties: {grid_position: 'AUUAZJ,FQVZON', full_width_row: true}
     event_bindings: {click: button_1_click}
   - name: column_panel_1_copy
     properties: {role: outlined-card, col_widths: '{"IXANMI":15,"XUVOGG":45}'}
