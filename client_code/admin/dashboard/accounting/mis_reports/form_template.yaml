@@ -20,7 +20,7 @@ components:
   type: Label
   layout_properties: {grid_position: 'WXCTJG,VADUMI'}
 - name: column_panel_3
-  properties: {col_widths: '{"GOAUFZ":25,"CROXTR":35,"TISSDH":25,"DZSCDQ":35,"LQENWC":25,"IKPNTR":35,"EJSYYR":25,"IBXIMK":35,"HLDXZV":25,"VZSHEO":35,"DKMZEM":25,"NUENCT":35,"FFHTOW":20,"XSWMWC":40,"CHXAAW":25,"DAAYQI":35,"NQVRUU":25,"FEKLJM":35}'}
+  properties: {col_widths: '{"GOAUFZ":25,"CROXTR":35,"TISSDH":25,"DZSCDQ":35,"LQENWC":25,"IKPNTR":35,"EJSYYR":25,"IBXIMK":35,"HLDXZV":25,"VZSHEO":35,"DKMZEM":25,"NUENCT":35,"FFHTOW":20,"XSWMWC":40,"CHXAAW":25,"DAAYQI":35,"NQVRUU":25,"LUGAQT":35}'}
   type: ColumnPanel
   layout_properties: {grid_position: 'DOSDSC,CBOFSO'}
   components:
@@ -47,7 +47,7 @@ components:
   - name: label_7
     properties: {text: 'Total Lenders Investment :', bold: true, font_size: 16}
     type: Label
-    layout_properties: {grid_position: 'OIUKHQ,XSWMWC ZJLHCZ,LQENWC FRSSKQ,EHUCQH'}
+    layout_properties: {grid_position: 'OIUKHQ,XSWMWC ZJLHCZ,LQENWC'}
   - name: label_8
     properties: {bold: true}
     type: Label
@@ -81,66 +81,24 @@ components:
     type: Label
     layout_properties: {grid_position: 'OIUKHQ,XSWMWC HUDGNI,CHXAAW'}
   - name: label_16
-    properties: {}
+    properties: {bold: true}
     type: Label
     layout_properties: {grid_position: 'OIUKHQ,XSWMWC HUDGNI,DAAYQI'}
   - name: label_17
     properties: {text: 'Lender Share :', bold: true, font_size: 16}
     type: Label
     layout_properties: {grid_position: 'OIUKHQ,XSWMWC HAMYDJ,NQVRUU'}
-  - name: label_18
-    properties: {}
-    type: Label
-    layout_properties: {grid_position: 'OIUKHQ,XSWMWC HAMYDJ,FEKLJM'}
+  - name: link_1
+    properties: {bold: true, foreground: green, tooltip: Click for more Details, underline: true, italic: true}
+    type: Link
+    layout_properties: {grid_position: 'OIUKHQ,XSWMWC HAMYDJ,LUGAQT'}
+    data_bindings: []
+    event_bindings: {click: link_1_click}
 - name: column_panel_1
   properties: {}
   type: ColumnPanel
   layout_properties: {grid_position: 'KYNVUW,LOMIKA', full_width_row: true}
   components:
-  - name: content_panel_1
-    properties: {col_widths: '{}', background: white, role: elevated-card}
-    type: ColumnPanel
-    layout_properties: {grid_position: 'XYXMAS,XOABRT', full_width_row: true}
-    components:
-    - name: image_4_copy_copy
-      properties: {source: _/theme/admin/dashboard/accounting/mis-reports/Lender%20share.png, display_mode: shrink_to_fit, height: '100', visible: true}
-      type: Image
-      layout_properties: {grid_position: 'QGZTNW,PVJEPO'}
-      event_bindings: {mouse_up: image_4_copy_mouse_up}
-    - name: add_people_copy
-      properties:
-        text: |
-          Lender Share
-        font_size: 16
-        foreground: black
-        bold: true
-        visible: true
-        font: ''
-      type: Button
-      layout_properties: {grid_position: 'GMECOB,ATAMRQ'}
-      event_bindings: {click: button_9_click}
-  - name: content_panel_3
-    properties: {col_widths: '{}', background: white, role: elevated-card}
-    type: ColumnPanel
-    layout_properties: {grid_position: 'XYXMAS,KPCUUT'}
-    components:
-    - name: image_4_copy_copy_3
-      properties: {source: _/theme/admin/dashboard/accounting/mis-reports/Platform%20Revenue.png, display_mode: shrink_to_fit, height: '100', visible: true}
-      type: Image
-      layout_properties: {grid_position: 'QGZTNW,PVJEPO'}
-      event_bindings: {mouse_up: image_4_copy_mouse_up}
-    - name: add_people_copy_3
-      properties:
-        text: |
-          Platform Revenue
-        font_size: 16
-        foreground: black
-        bold: true
-        visible: true
-        font: ''
-      type: Button
-      layout_properties: {grid_position: 'GMECOB,ATAMRQ'}
-      event_bindings: {click: button_9_click}
   - name: content_panel_4
     properties: {col_widths: '{}', background: white, role: elevated-card}
     type: ColumnPanel
@@ -210,7 +168,7 @@ components:
   - name: content_panel_6
     properties: {col_widths: '{}', background: white, role: elevated-card}
     type: ColumnPanel
-    layout_properties: {grid_position: 'XYXMAS,PLLEUZ', full_width_row: true}
+    layout_properties: {grid_position: 'XYXMAS,PLLEUZ', full_width_row: false}
     components:
     - name: image_4_copy_copy_6
       properties: {source: _/theme/admin/dashboard/accounting/mis-reports/liability%20on%20company%20report.png, display_mode: shrink_to_fit, height: 78.39996337890625, visible: true}
