@@ -11,8 +11,17 @@ import anvil.pdf
 import anvil.media
 # from weasyprint import HTML
 
+# all emi receipt
 @anvil.server.callable
 def create_pdf_from_panel(content_panel):
+    # Render the panel to a PDF
+    pdf = anvil.pdf.render_form(content_panel)
+    
+    return pdf
+
+# each emi receipt
+@anvil.server.callable
+def create_pdf_of_payment_receipt(content_panel):
     # Render the panel to a PDF
     pdf = anvil.pdf.render_form(content_panel)
     

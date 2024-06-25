@@ -38,8 +38,13 @@ components:
     properties: {item_template: admin.dashboard.accounting.payment_receipt.emi_details.RowTemplate58}
     type: RepeatingPanel
   layout_properties: {grid_position: 'NLCDGA,EZQHJI', full_width_row: true}
+- name: button_3
+  properties: {text: '', background: '#05264d', icon: 'fa:download', foreground: white, align: right}
+  type: Button
+  layout_properties: {grid_position: 'WOLHSZ,WLBJIP', full_width_row: true}
+  event_bindings: {click: button_3_click}
 - name: content
-  properties: {col_widths: '{"CFXWTY":35,"SQXOYR":25,"YLGQNC":40,"IKUYCT":20,"OFZDDK":55,"HHHOTL":5}', background: white, role: null, visible: true}
+  properties: {col_widths: '{"CFXWTY":40,"SQXOYR":20,"YLGQNC":40,"IKUYCT":20,"OFZDDK":55}', background: white, role: null, visible: true}
   type: ColumnPanel
   layout_properties: {grid_position: 'NTHLQJ,OAVHWD', full_width_row: true}
   components:
@@ -47,11 +52,6 @@ components:
     properties: {text: Loan Payment Receipt, align: center, bold: true, font_size: 30, background: '#ADC4CE', role: outlined-card}
     type: Label
     layout_properties: {grid_position: 'PYOZKS,OFZDDK', full_width_row: true}
-  - name: button_3
-    properties: {text: '', background: '#05264d', icon: 'fa:download', foreground: white}
-    type: Button
-    layout_properties: {grid_position: 'PYOZKS,HHHOTL'}
-    event_bindings: {click: button_3_click}
   - name: spacer_2
     properties: {height: 32}
     type: Spacer
@@ -147,11 +147,11 @@ components:
     type: Spacer
     layout_properties: {grid_position: 'BBDPKD,YLGQNC'}
   - name: label_12
-    properties: {align: right, text: 'Total Paid Amount :', bold: true, font_size: 16}
+    properties: {align: right, text: 'Total Paid Amount :', bold: true, font_size: 14}
     type: Label
     layout_properties: {grid_position: 'BBDPKD,IKUYCT UPFLVQ,CFXWTY'}
   - name: label_13
-    properties: {font_size: 16}
+    properties: {font_size: 16, align: left}
     type: Label
     layout_properties: {grid_position: 'BBDPKD,IKUYCT UPFLVQ,SQXOYR'}
 - name: button_2
