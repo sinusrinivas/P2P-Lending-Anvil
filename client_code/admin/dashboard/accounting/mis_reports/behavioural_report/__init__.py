@@ -20,7 +20,18 @@ class behavioural_report(behavioural_reportTemplate):
     """This method is called when the button is clicked"""
     open_form('admin.dashboard.accounting.mis_reports')
 
-  # def button_9_click(self, **event_args):
-  #   """This method is called when the button is clicked"""
-  #   open_form('admin.dashboard.accounting.mis_reports.behavioural_report.foreclosure')
+  def button_6_click(self, **event_args):
+    open_form('admin.dashboard.accounting.mis_reports.behavioural_report.foreclosure')
+
+  def button_7_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    open_form('admin.dashboard.accounting.mis_reports.behavioural_report.extension')
+
+  def button_8_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    open_form('admin.dashboard.accounting.mis_reports.behavioural_report.defaulters')
+
+  def button_9_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    open_form('admin.dashboard.accounting.mis_reports.behavioural_report.due_date')
 
