@@ -186,5 +186,9 @@ class lender_portfolio(lender_portfolioTemplate):
   #     else:
   #         # Schedule the check_task_status function to run again after a short delay
   #         anvil.js.window.setTimeout(lambda: self.check_task_status(task_id), 1000)
+
+  def button_2_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    open_form('lendor.dashboard')
   
   
