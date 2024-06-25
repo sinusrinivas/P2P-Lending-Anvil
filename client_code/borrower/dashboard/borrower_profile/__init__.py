@@ -48,3 +48,7 @@ class borrower_profile(borrower_profileTemplate):
     """This method is called when the button is clicked"""
     open_form('borrower.dashboard.edit_profile')
 
+  def button_2_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    open_form('borrower.dashboard')
+

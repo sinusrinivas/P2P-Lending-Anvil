@@ -205,4 +205,8 @@ class borrower_portfolio(borrower_portfolioTemplate):
     """This method is called when the button is clicked"""
     pdf = anvil.server.call('create_pdf1',"My Portfolio","self.image_2.source",self.selected_row)
     anvil.media.download(pdf)
+
+  def button_2_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    open_form('borrower.dashboard')
     

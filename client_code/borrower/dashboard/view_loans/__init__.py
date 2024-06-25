@@ -155,3 +155,7 @@ class view_loans(view_loansTemplate):
         self.repeating_panel_8.visible = False
         self.repeating_panel_9.visible = False
         self.repeating_panel_10.visible = True  
+
+    def button_6_click(self, **event_args):
+      """This method is called when the button is clicked"""
+      open_form('borrower.dashboard')

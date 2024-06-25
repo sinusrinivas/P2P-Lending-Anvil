@@ -1022,3 +1022,7 @@ class borrower_view_profile(borrower_view_profileTemplate):
               if photo:
                 user_profile['user_photo'] = photo
               user_profile.update()
+
+  def button_1_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    open_form('borrower.dashboard')

@@ -169,3 +169,7 @@ class ots_dashboard(ots_dashboardTemplate):
 
     def button_4_click(self, **event_args):
         open_form('borrower.ots_dashboard.my_loans')
+
+    def button_1_click(self, **event_args):
+      """This method is called when the button is clicked"""
+      open_form('borrower')
