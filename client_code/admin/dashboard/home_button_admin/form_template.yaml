@@ -68,11 +68,6 @@ components:
     name: Settings
     layout_properties: {}
     event_bindings: {click: Settings_click}
-- name: button_2
-  properties: {text: Back, background: '#05264d', foreground: white, icon: 'fa:backward', align: right}
-  type: Button
-  layout_properties: {grid_position: 'UVEKOW,OSOVHH'}
-  event_bindings: {click: button_2_click}
 is_package: true
 custom_component: true
 toolbox_item: {title: Home}
