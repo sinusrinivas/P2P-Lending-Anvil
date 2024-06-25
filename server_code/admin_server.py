@@ -363,7 +363,7 @@ def update_fin_platform_fees():
     num_products = len(app_tables.fin_product_details.search())
 
     # Step 4: Calculate the total amount invested by lenders
-    total_lenders_invested = sum(lender['lender_total_commitments'] for lender in app_tables.fin_lender.search())
+    total_lenders_invested = sum(lender['lender_total_commitments'] or 0 for lender in app_tables.fin_lender.search())
 
     # Step 5: Calculate the number of unique borrowers who have taken a loan
     borrower_ids = set()
