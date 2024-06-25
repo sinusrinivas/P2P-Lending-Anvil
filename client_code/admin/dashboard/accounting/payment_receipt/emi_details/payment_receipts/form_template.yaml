@@ -45,7 +45,7 @@ components:
     type: Label
     layout_properties: {grid_position: 'CYICAL,QMAVRI ZBHJBL,RQPLFM WBAHXB,PSYKHU', full_width_row: true}
   - name: label_4
-    properties: {text: 'Name :', bold: true, font_size: 16}
+    properties: {text: 'Sender Name :', bold: true, font_size: 16}
     type: Label
     layout_properties: {grid_position: 'CYICAL,QMAVRI ZBHJBL,RQPLFM EJYBSV,NHFXHQ'}
   - name: label_5
@@ -83,7 +83,7 @@ components:
     type: Label
     layout_properties: {grid_position: 'CYICAL,QMAVRI ZBHJBL,WUQMZW VTIAHY,MVZDDM', full_width_row: true}
   - name: label_10
-    properties: {text: 'Name :', bold: true, font_size: 16}
+    properties: {text: 'Receiver Name :', bold: true, font_size: 16}
     type: Label
     layout_properties: {grid_position: 'CYICAL,QMAVRI ZBHJBL,WUQMZW PQFFCT,XOXKMZ'}
   - name: label_12
