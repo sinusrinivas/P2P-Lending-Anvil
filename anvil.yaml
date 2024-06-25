@@ -19,7 +19,7 @@ services:
 startup: {type: form, module: admin.dashboard.accounting.mis_reports}
 package_name: pip_install_reportlab
 allow_embedding: false
-name: P2P Lending App 1
+name: P2P Lending App clone 25/06/2024
 runtime_options:
   version: 3
   client_version: '3'
@@ -608,11 +608,14 @@ db_schema:
     - name: user_photo
       admin_ui: {width: 200}
       type: media
-    - name: issue_occured
+    - name: customer_id
       admin_ui: {width: 200}
+      type: number
+    - name: field_engineer
+      admin_ui: {width: 200, order: 15}
       type: string
     - name: status
-      admin_ui: {width: 200}
+      admin_ui: {width: 200, order: 16}
       type: bool
     title: fin_reported_problems
   fin_borrower_qualification:
