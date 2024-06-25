@@ -26,6 +26,14 @@ def create_pdf_of_payment_receipt(content_panel):
     pdf = anvil.pdf.render_form(content_panel)
     
     return pdf
+
+# code to generate pdf of borrower portfolio
+@anvil.server.callable
+def create_pdf_of_borrower_portfolio(content_panel):
+    # Render the panel to a PDF
+    pdf = anvil.pdf.PDFRenderer(landscape=True).render_form(content_panel)
+    
+    return pdf
   
 # @anvil.server.callable
 # def create_pdf(name, image_source,selected_row):    
