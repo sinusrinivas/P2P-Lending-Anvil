@@ -29,4 +29,8 @@ class borrower_portfolio_first_page(borrower_portfolio_first_pageTemplate):
 
             self.repeating_panel_2.items = self.result
 
+    def button_1_click(self, **event_args):
+      """This method is called when the button is clicked"""
+      open_form('borrower.dashboard')
+
             
