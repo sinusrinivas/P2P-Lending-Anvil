@@ -27,7 +27,7 @@ class RowTemplate32(RowTemplate32Template):
         print(f"No disbursed record found for customer {self.item['customer_id']}")
     
     # Set visibility based on the status
-    if self.status == "disbursed ":
+    if self.status == "disbursed":
         self.portfolio.visible = True
         print(f"Link visible for customer {self.item['customer_id']}: {self.portfolio.visible}")
     else:
