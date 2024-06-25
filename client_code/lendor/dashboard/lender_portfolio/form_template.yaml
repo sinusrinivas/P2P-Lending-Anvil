@@ -30,7 +30,7 @@ components:
   event_bindings: {click: button_1_click}
   name: button_1
 - name: content
-  properties: {role: null, col_widths: '{"MAGBNJ":20,"NNVFZT":65,"JIOUKC":2,"NMKPDV":58,"QVUJAA":3,"IIFAVP":17,"PYXIWB":17}'}
+  properties: {role: null, col_widths: '{"MAGBNJ":20,"NNVFZT":65,"JIOUKC":2,"NMKPDV":58,"QVUJAA":3,"IIFAVP":17,"PYXIWB":17,"MMDNKS":18,"JYTREP":73,"RVEYQF":2,"IRBPLC":2}'}
   type: ColumnPanel
   layout_properties: {grid_position: 'NQNCOI,EZAHVH', full_width_row: true}
   components:
@@ -38,7 +38,19 @@ components:
     type: Label
     layout_properties: {grid_position: 'YAXBRX,TVQTYI', full_width_row: true}
     name: label_23
-  - properties: {role: elevated-card, col_widths: '{"OQHHFK":10,"SHLPAC":20,"FSQEUT":10,"GBOCYP":20,"RRXPEA":10,"HJSBQR":20,"HCVUZC":10,"CTZOTA":20,"ZYKKAZ":10,"LURHMG":20,"CSQSCZ":10,"LWVPIC":20,"TDQGBK":13,"IFJKTP":65,"SGOOEA":2}'}
+  - name: spacer_5
+    properties: {height: 32}
+    type: Spacer
+    layout_properties: {grid_position: 'GGJRNN,RVEYQF', full_width_row: true}
+  - name: spacer_7
+    properties: {height: 24.93328857421875}
+    type: Spacer
+    layout_properties: {grid_position: 'GGJRNN,MMDNKS WASLRW,SHAEKB'}
+  - properties: {}
+    type: Image
+    layout_properties: {grid_position: 'GGJRNN,MMDNKS GNFDVD,EBIPQJ', full_width_row: true}
+    name: image_4
+  - properties: {role: elevated-card, col_widths: '{"OQHHFK":10,"SHLPAC":20,"FSQEUT":10,"GBOCYP":20,"RRXPEA":10,"HJSBQR":20,"HCVUZC":10,"CTZOTA":20,"ZYKKAZ":10,"LURHMG":20,"CSQSCZ":10,"LWVPIC":20,"IFJKTP":65,"SGOOEA":2}'}
     type: ColumnPanel
     layout_properties: {grid_position: 'GGJRNN,JYTREP', full_width_row: true}
     name: column_panel_7_copy_copy_2_copy_2
@@ -47,10 +59,6 @@ components:
       properties: {height: 32}
       type: Spacer
       layout_properties: {grid_position: 'LLBVGY,SGOOEA', full_width_row: true}
-    - properties: {}
-      type: Image
-      layout_properties: {grid_position: 'LLBVGY,TDQGBK', full_width_row: true}
-      name: image_4
     - properties: {font: '', font_size: 22, bold: true}
       type: Label
       layout_properties: {grid_position: 'LLBVGY,IFJKTP GJUXUE,OKMYVT'}
@@ -123,6 +131,10 @@ components:
       properties: {height: 32}
       type: Spacer
       layout_properties: {grid_position: 'LLBVGY,IFJKTP AEGTVN,LWVPIC TKFFLV,TXJWER'}
+  - name: spacer_8
+    properties: {height: 32}
+    type: Spacer
+    layout_properties: {grid_position: 'GGJRNN,IRBPLC'}
   - name: content_panel
     properties: {role: null, col_widths: '{}'}
     type: ColumnPanel
