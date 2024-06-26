@@ -42,6 +42,4 @@ class dashboard_contact_borrower_registration_form(dashboard_contact_borrower_re
     """This method is called when the link is clicked"""
     open_form('wallet.wallet')
 
-  def button_1_click(self, **event_args):
-    """This method is called when the button is clicked"""
-    open_form('borrower.dashboard')
+
