@@ -271,6 +271,7 @@ unique_ids:
     admin.dashboard.manage_cms.add_borrower_dropdown_details.edit_organizaton_type: '1706191310991380077701959.76184'
     lendor.dashboard.view_loan_extension_requests.extension_details: '1706448836532652081977126.0691'
     admin.dashboard.reporting_and_analytical_modules.port_folio_risk.stack_graph: '1718087492777163376156182.8584'
+    admin.dashboard.security_and_compliance.access_management: '1719383595431520406782249.1851'
     admin.dashboard.manage_cms.add_lender_dropdown_details.ItemTemplate15: '1706531093919318495904081.8403'
     admin.dashboard.accounting.payment_receipt: '1718943553999880149348962.8176'
     admin.dashboard.manage_cms.add_lender_dropdown_details.ItemTemplate13: '1706531037115138590863812.6314'
