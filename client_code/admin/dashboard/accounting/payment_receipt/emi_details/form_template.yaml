@@ -159,7 +159,7 @@ components:
     type: Label
     layout_properties: {grid_position: 'BBDPKD,IKUYCT UPFLVQ,SQXOYR'}
 - name: button_2
-  properties: {text: Back, background: '#05264d', role: filled-button, foreground: white, icon: 'fa:angle-double-left', bold: true}
+  properties: {text: Back, background: '#05264d', role: filled-button, foreground: white, icon: 'fa:backward', bold: true}
   type: Button
   layout_properties: {grid_position: 'BSMPDY,YVDDNN'}
   event_bindings: {click: button_2_click}
