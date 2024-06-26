@@ -22,7 +22,7 @@ components:
       type: Button
       event_bindings: {click: button_1_copy_click}
   - name: label_1
-    properties: {text: Approved View loans, align: center, bold: true, role: title}
+    properties: {text: View Approved loans, align: center, bold: true, role: title}
     type: Label
     layout_properties: {grid_position: 'JXHFMX,VPZZRO', full_width_row: true}
   - name: spacer_1

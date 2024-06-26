@@ -1,6 +1,6 @@
 container:
   type: ColumnPanel
-  properties: {col_widths: '{"QGUDGC":10,"SAJJYJ":15,"OAJFIE":15,"DCWVKZ":15,"OIHWYC":5}'}
+  properties: {col_widths: '{"SAJJYJ":20,"OAJFIE":25,"DCWVKZ":20,"KRXAYP":12,"KFYOPD":10}'}
 components:
 - name: home_button_admin_1
   properties: {}
@@ -32,14 +32,17 @@ components:
   properties: {role: outlined}
   type: DatePicker
   layout_properties: {grid_position: 'EPGWVR,URVOSJ'}
+  event_bindings: {change: date_picker_1_change}
 - name: month_button_click
   properties: {text: Month, role: null, background: '#05264d', foreground: 'theme:On Secondary', bold: true}
   type: Button
   layout_properties: {grid_position: 'EPGWVR,ECRNRY'}
+  event_bindings: {click: month_button_click_click}
 - name: year_button_click
   properties: {text: Year, background: '#05264d', foreground: 'theme:On Secondary', bold: true}
   type: Button
   layout_properties: {grid_position: 'EPGWVR,RYNTMQ'}
+  event_bindings: {click: year_button_click_click}
 - name: spacer_1
   properties: {height: 32}
   type: Spacer
@@ -48,10 +51,10 @@ components:
   properties: {height: 32}
   type: Spacer
   layout_properties: {grid_position: 'JRZPER,XIKECK'}
-- name: spacer_2
+- name: spacer_6
   properties: {height: 32}
   type: Spacer
-  layout_properties: {grid_position: 'DEZIEF,QGUDGC'}
+  layout_properties: {grid_position: 'DEZIEF,KFYOPD'}
 - name: content_panel_1
   properties: {col_widths: '{"LYADWO":20,"PDBJTN":40}', background: white, role: elevated-card}
   type: ColumnPanel
@@ -116,10 +119,10 @@ components:
     properties: {align: center, bold: true}
     type: Label
     layout_properties: {grid_position: 'SAKSPH,PDBJTN OBBAFS,DSLKVS'}
-- name: spacer_6
+- name: spacer_2
   properties: {height: 32}
   type: Spacer
-  layout_properties: {grid_position: 'DEZIEF,OIHWYC'}
+  layout_properties: {grid_position: 'DEZIEF,KRXAYP'}
 - name: spacer_5
   properties: {height: 32}
   type: Spacer

@@ -134,13 +134,13 @@ class application_intake(application_intakeTemplate):
 
 
 
-    def month_button_click(self, **event_args):
+    def month_button_click_click(self, **event_args):
         """This method is called when the Month button is clicked"""
         self.display_loan_status_graph(time_period='month')
-
-    def year_button_click(self, **event_args):
+        
+    def year_button_click_click(self, **event_args):
         """This method is called when the Year button is clicked"""
-        self.display_loan_status_graph(time_period='year')
+        self.display_loan_status_graph(time_period='year')        
 
     def button_1_click(self, **event_args):
         """This method is called when the button is clicked"""
@@ -169,4 +169,12 @@ class application_intake(application_intakeTemplate):
     def image_1_copy_mouse_up(self, x, y, button, **event_args):
         """This method is called when a mouse button is released on this component"""
         open_form('admin.dashboard.loan_management.application_intake.Rejected_loans')
+
+    
+
+    
+
+
+
+    
 

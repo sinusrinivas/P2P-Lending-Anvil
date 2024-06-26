@@ -27,6 +27,7 @@ components:
     - {id: MQABFH, data_key: p name, title: 'Product name     ', expand: true}
     - {id: ESTQZR, data_key: l amt, title: Loan amount, expand: true}
     - {id: CNPWVU, data_key: l status, title: Loan status, expand: true}
+    role: tonal-data-grid
   type: DataGrid
   components:
   - name: repeating_panel_1
