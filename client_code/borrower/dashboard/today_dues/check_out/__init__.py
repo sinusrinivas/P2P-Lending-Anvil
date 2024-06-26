@@ -126,7 +126,7 @@ class check_out(check_outTemplate):
         self.processing_fee.text = "{:.2f}".format(processing_fee)
         self.i_r.text = "{:.2f}".format(interest_amount)
         self.emi.text = "{:.2f}".format(emi)
-        self.emi_processing_extension.text = "{:.2f}".format(total_emi)
+        self.emi_processing_extension.text = "{:.2f}".format( emi + processing_fee)
         print(float(self.emi.text))
         self.remaining_tenure.text = remaining_tenure
       
