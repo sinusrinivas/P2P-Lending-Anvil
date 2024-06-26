@@ -32,6 +32,12 @@ class performance_tracker(performance_trackerTemplate):
     self.label_12.text = str(closed_count)
     self.label_13.text = str(under_process)
     self.label_4.text = str(loan_updated_status_count)
+
+  # Search product details
+    self.data = tables.app_tables.fin_product_details.search()
+    product_name_count = len([record for record in self.data if record['product_name']])
+    self.label_1.text = str(product_name_count)
+    
     # self.name_list = []
     
     # a = 0
@@ -137,6 +143,14 @@ class performance_tracker(performance_trackerTemplate):
   def button_3_click(self, **event_args):
         """This method is called when the button is clicked"""
         pass
+
+  def button_4_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    open_form('admin.dashboard.accounting.performance_tracker.product_performance_chart')
+
+  def image_1_copy_1_mouse_up(self, x, y, button, **event_args):
+    """This method is called when a mouse button is released on this component"""
+    open_form('admin.dashboard.accounting.performance_tracker.product_performance_chart')
 
 
 
