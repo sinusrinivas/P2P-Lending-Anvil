@@ -221,8 +221,10 @@ class loan_type(loan_typeTemplate):
                 # monthly_interest_rate = float(int(self.roi) / 100) / 12
                 print("Monthly Interest Rate:", monthly_interest_rate)
               
-                emi_denominator = ((1 + monthly_interest_rate) ** t) - 1
+                emi_denominator = round(((1 + monthly_interest_rate) ** t) - 1,
+                print('denominatio' , emi_denominator)
                 emi_numerator = p * monthly_interest_rate * ((1 + monthly_interest_rate) ** t)
+                print('numerator' , emi_numerator)
                 Monthly_EMI = emi_numerator / emi_denominator
                 print('monthly emi' , Monthly_EMI)
               
