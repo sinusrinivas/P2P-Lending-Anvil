@@ -121,6 +121,7 @@ unique_ids:
     lendor.dashboard.lender_view_loans.RowTemplate23: '1703141182461211155517631.55914'
     admin.dashboard.loan_servicing.tracking_late_payments.RowTemplate46: '1718617175384786473964450.4426'
     lendor.dashboard.view_borrower_loan_request.RowTemplate10: '1700542200026541460267637.76886'
+    admin.dashboard.accounting.performance_tracker.product_performance: '1719399325410704963147514.5516'
     lendor.dashboard.RowTemplate13: '1715227710043217201182815.06174'
     borrower.dashboard.view_loans.RowTemplate15: 2HZLIPF4L4CRJLKCYZEVH2IQUPPWUUVF
     wallet.wallet.all_transaction.ItemTemplate99: '1712210109572218685580049.6752'
@@ -162,6 +163,7 @@ unique_ids:
     admin.dashboard.accounting.performance_tracker.under_process_loans.RowTemplate57: '1718938935043842433158358.9808'
     bank_users.main_form.RowTemplate12: '1700563368307555313567841.8457'
     admin.dashboard.loan_servicing.out_standing_amount.ItemTemplate110: '1718370185852430567688981.4576'
+    admin.dashboard.accounting.performance_tracker.product_performance.product_count_chart: '1719399365442363547062686.82446'
     admin.dashboard.manage_ascend_score.add_subcategory.edit_spouse_profession: '1710782192849747305070211.4034'
     ? borrower.borrower_registration_forms.star_1_borrower_registration_form_2_employment.star_1_borrower_registration_form_2_employment_student
     : '1700126702884606423685481.6467'
@@ -289,6 +291,7 @@ unique_ids:
     bank_users.repeating_panels.borrower: '1709109885364260908712663.55365'
     admin.dashboard.customer_management.handles_customer_registration.lenders.RowTemplate4: '1700737487916312936831844.4892'
     lendor.dashboard.lender_view_loans.ItemTemplate52: '1709612227020162730100778.72473'
+    admin.dashboard.accounting.performance_tracker.RowTemplate66: '1719399437258991821333409.2635'
     admin.dashboard.manage_cms.add_lender_dropdown_details.ItemTemplate18: '1706531161313890698385999.5632'
     admin.dashboard.manage_cms.manage_issues.field_engineer.ItemTemplate82: '171916319605271408159758.4233'
     admin.dashboard.reporting_and_analytical_modules.key_metrice: '171818336735622964860510.2053'
