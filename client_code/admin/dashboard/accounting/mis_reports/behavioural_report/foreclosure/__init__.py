@@ -33,9 +33,11 @@ class foreclosure(foreclosureTemplate):
                     'borrower_full_name': loan['borrower_full_name'],
                     'borrower_email_id': loan['borrower_email_id'],
                     'mobile_no': mobile_no,
-                    'loans': []
+                    'loans': [],
+                    'product_names': set()  # Initialize a set for product names
                 }
             borrower_loans[borrower_id]['loans'].append(loan)
+            borrower_loans[borrower_id]['product_names'].add(loan['product_name'])  # Add product name to the set
         
         # Filter borrowers with two or more foreclosure loans
         result = []
@@ -46,7 +48,8 @@ class foreclosure(foreclosureTemplate):
                     'borrower_full_name': details['borrower_full_name'],
                     'borrower_email_id': details['borrower_email_id'],
                     'mobile_no': details['mobile_no'],
-                    'loans_count': len(details['loans'])
+                    'loans_count': len(details['loans']),
+                    'product_names': ", ".join(details['product_names'])  # Convert set to a comma-separated string
                 })
         
         # Set the filtered data to the repeating panel

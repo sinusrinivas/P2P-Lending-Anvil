@@ -31,3 +31,9 @@ components:
   layout_properties: {column: CIIYJA}
   data_bindings:
   - {property: text, code: 'self.item[''loans_count'']', writeback: false}
+- name: label_6
+  properties: {align: center}
+  type: Label
+  layout_properties: {column: PLCAZF}
+  data_bindings:
+  - {property: text, code: 'self.item[''product_names'']', writeback: false}
