@@ -48,7 +48,7 @@ def create_pdf_of_lender_portfolio(content_panel):
 @anvil.server.callable
 def create_pdf_of_mis_reports(content_panel):
     # Render the panel to a PDF
-    pdf = anvil.pdf.PDFRenderer(landscape=True).render_form(content_panel)
+    pdf = anvil.pdf.PDFRenderer(landscape=True, page_size='A4').render_form(content_panel)
     
     return pdf
   
