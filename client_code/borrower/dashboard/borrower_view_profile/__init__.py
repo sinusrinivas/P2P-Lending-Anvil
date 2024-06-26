@@ -1,6 +1,7 @@
 
 from ._anvil_designer import borrower_view_profileTemplate
 from anvil import *
+import stripe.checkout
 import anvil.server
 import anvil.google.auth, anvil.google.drive
 from anvil.google.drive import app_files

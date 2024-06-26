@@ -64,6 +64,7 @@
 
 from ._anvil_designer import foreclosure_requestTemplate
 from anvil import *
+import stripe.checkout
 import anvil.server
 import anvil.users
 import anvil.tables as tables

@@ -1,3 +1,4 @@
+import anvil.stripe
 import anvil
 import anvil.secrets
 import anvil.email

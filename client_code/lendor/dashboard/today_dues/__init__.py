@@ -1,5 +1,6 @@
 from ._anvil_designer import today_duesTemplate
 from anvil import *
+import stripe.checkout
 import anvil.server
 import anvil.tables as tables
 import anvil.tables.query as q

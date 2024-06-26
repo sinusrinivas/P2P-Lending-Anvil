@@ -1,5 +1,6 @@
 from ._anvil_designer import all_detailsTemplate
 from anvil import *
+import stripe.checkout
 import anvil.server
 import anvil.http  # Importing anvil.http for making HTTP requests
 import anvil.google.auth, anvil.google.drive

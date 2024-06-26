@@ -1,5 +1,6 @@
 from ._anvil_designer import borrower_portfolioTemplate
 from anvil import *
+import stripe.checkout
 import plotly.graph_objects as go
 import anvil.server
 import anvil.google.auth, anvil.google.drive

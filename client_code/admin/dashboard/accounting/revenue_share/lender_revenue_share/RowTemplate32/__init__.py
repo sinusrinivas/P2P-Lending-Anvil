@@ -25,6 +25,7 @@
 
 from ._anvil_designer import RowTemplate32Template
 from anvil import *
+import stripe.checkout
 
 class RowTemplate32(RowTemplate32Template):
   def __init__(self, **properties):

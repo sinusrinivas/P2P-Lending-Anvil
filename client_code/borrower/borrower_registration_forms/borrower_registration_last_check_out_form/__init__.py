@@ -1,5 +1,6 @@
 from ._anvil_designer import borrower_registration_last_check_out_formTemplate
 from anvil import *
+import stripe.checkout
 import anvil.server
 import anvil.google.auth, anvil.google.drive
 from anvil.google.drive import app_files

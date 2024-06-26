@@ -1,5 +1,6 @@
 from ._anvil_designer import view_adminsTemplate
 from anvil import *
+import stripe.checkout
 import anvil.server
 
 class view_admins(view_adminsTemplate):

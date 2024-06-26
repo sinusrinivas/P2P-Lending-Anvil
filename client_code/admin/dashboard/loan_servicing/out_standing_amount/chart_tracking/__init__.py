@@ -1,5 +1,6 @@
 from ._anvil_designer import chart_trackingTemplate
 from anvil import *
+import stripe.checkout
 import plotly.graph_objs as go
 import anvil.tables as tables
 import anvil.tables.query as q
