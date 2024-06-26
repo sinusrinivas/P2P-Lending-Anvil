@@ -42,12 +42,19 @@ def update_user_status(email, email_verified):
         # If user does not exist, create a new row
         user = app_tables.users.add_row(email=email, email_verified=email_verified)
     return True
+
+@anvil.server.callable
 def create_receipt_pdf(name, image_source,selected_row):    
     # Your PDF creation logic here
     pdf = anvil.pdf.PDFRenderer(landscape=True).render_form("admin.dashboard.accounting.payment_receipt.emi_details.payment_receipts",selected_row = selected_row)  
     return pdf
 
-
+@anvil.server.callable
+def create_receipt_pdf1(name, image_source,selected_row):    
+    # Your PDF creation logic here
+    pdf = anvil.pdf.PDFRenderer(landscape=True).render_form("admin.dashboard.accounting.payment_receipt.emi_details")  
+    return pdf
+  
 # Define server function to navigate to the Invest Now form
 @anvil.server.callable
 def open_invest_now_form():
@@ -363,7 +370,7 @@ def update_fin_platform_fees():
     num_products = len(app_tables.fin_product_details.search())
 
     # Step 4: Calculate the total amount invested by lenders
-    total_lenders_invested = sum(lender['lender_total_commitments'] for lender in app_tables.fin_lender.search())
+    total_lenders_invested = sum(lender['lender_total_commitments'] or 0 for lender in app_tables.fin_lender.search())
 
     # Step 5: Calculate the number of unique borrowers who have taken a loan
     borrower_ids = set()
