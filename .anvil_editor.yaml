@@ -105,6 +105,7 @@ unique_ids:
     admin.dashboard.loan_management.view_loans.lapsed_loans.ItemTemplate23: '170712932240636529702505.68765'
     admin.dashboard.manage_cms.add_lender_dropdown_details.edit_no_of_emp: '1706531881285776983025492.1349'
     admin.dashboard.manage_cms.add_borrower_dropdown_details.edit_spouse_profession: '1710495428888891993954718.6715'
+    admin.dashboard.accounting.mis_reports.behavioural_report.foreclosure.RowTemplate63: '1719374126260582311890267.8333'
     lendor.dashboard.view_loan_extension_requests.ItemTemplate76: '1709795514432851964860166.374'
     lendor.dashboard.view_borrower_loan_request.Borr_loan_request.RowTemplate11: '1700543062684858008325535.9921'
     bank_users.main_form.products_main_form.business_loan: '1713872535273312835846132.24066'
@@ -367,6 +368,7 @@ unique_ids:
     admin.dashboard.accounting.mis_reports.lender_share: '1719287606968527798460591.9259'
     admin.dashboard.customer_management.handles_customer_registration.borrowers: '1699528468358308523806957.0701'
     admin.dashboard.manage_cms.add_general_dropdowns: '1710397494541671512734929.8624'
+    admin.dashboard.accounting.mis_reports.behavioural_report.foreclosure.RowTemplate64: '1719374126692533499313175.9183'
     admin.dashboard.customer_management.handles_customer_registration.borrowers.view_profile.update_form: '1699967990279922551849592.2898'
     admin.dashboard.loan_management.view_loans.not_payable_amount.ItemTemplate25: '1707202809143429044958655.44635'
     admin.dashboard.accounting.interest_accruals: '1718773357148755763180389.2222'
@@ -393,6 +395,7 @@ unique_ids:
     admin.dashboard.manage_settings.manage_ascend_score_range: '1717763950067548096369302.4723'
     admin.dashboard.manage_products.view_products_and_categories.RowTemplate28: '1704172157354836718833767.5173'
     admin.dashboard.manage_cms.add_lender_dropdown_details.edit_organizaton_type: '1706531933047410934362132.85895'
+    admin.dashboard.accounting.mis_reports.behavioural_report.foreclosure.RowTemplate62: '171937411406826732320707.57403'
     admin.dashboard.loan_servicing.handle_collection_process.RowTemplate49: '1718690311616829731488078.9144'
     ? borrower.borrower_registration_forms.star_1_borrower_registration_form_2_employment.star_1_borrower_registration_form_2_employment_business_2
     : '1700126739765126145778650.8795'

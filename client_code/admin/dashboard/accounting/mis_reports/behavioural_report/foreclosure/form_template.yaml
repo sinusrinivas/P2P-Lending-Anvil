@@ -9,4 +9,24 @@ components:
   type: Button
   layout_properties: {grid_position: '', full_width_row: true}
   event_bindings: {click: button_1_click}
+- name: label_1
+  properties: {align: center, text: Foreclosure Loans, bold: true, role: outlined-card, background: 'theme:Secondary Container', font_size: 20}
+  type: Label
+  layout_properties: {grid_position: 'VNOANC,UCOGJG'}
+- name: data_grid_1
+  properties:
+    columns:
+    - {id: JKSDUP, title: Borrower Customer ID, data_key: column_1}
+    - {id: IVHIEO, data_key: column_2, title: Borrower Full Name}
+    - {id: VJQQOR, title: Mobile No, data_key: column_2}
+    - {id: OJLQEN, title: Email ID, data_key: column_3}
+    - {id: CIIYJA, data_key: column_1, title: Number of loans}
+    show_page_controls: false
+    role: tonal-data-grid
+  type: DataGrid
+  components:
+  - name: repeating_panel_1
+    properties: {item_template: admin.dashboard.accounting.mis_reports.behavioural_report.foreclosure.RowTemplate64}
+    type: RepeatingPanel
+  layout_properties: {grid_position: 'JHLNGI,RPDURF'}
 is_package: true
