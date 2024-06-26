@@ -27,7 +27,7 @@ components:
   type: Plot
   layout_properties: {grid_position: 'EVCFZN,CRIDEU'}
 - name: button_1
-  properties: {text: Back, bold: true, foreground: white, role: filled-button, icon: 'fa:angle-double-left', background: '#05264d'}
+  properties: {text: Back, bold: true, foreground: white, role: filled-button, icon: 'fa:backward', background: '#05264d'}
   type: Button
   layout_properties: {grid_position: 'PFITLY,GBSYDB'}
   event_bindings: {click: button_1_click}
