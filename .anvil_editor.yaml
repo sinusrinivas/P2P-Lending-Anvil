@@ -42,6 +42,7 @@ unique_ids:
     admin.dashboard.manage_cms.manage_issues.RowTemplate41: UM5I3SHDZFAST65YTYFITTBHWCJMMGTW
     admin.dashboard.accounting.interest_accruals.accruals_chart: '171879220094867135852410.70708'
     lendor.dashboard.today_dues.View_Details: '170356566713748309638072.5887'
+    admin.dashboard.accounting.mis_reports.behavioural_report.extension.RowTemplate62: '1719384168816343689498804.4141'
     admin.dashboard.manage_ascend_score.view_ascend_group.ItemTemplate76: '1709796398278162864431750.42664'
     lendor.dashboard.lender_portfolio_first_page.RowTemplate32: '1717855347011920897652934.3423'
     borrower.dashboard.foreclosure_request.RowTemplate6: YBFSJTOFTEGFT4ZJPHFUWUB2XZGJCGFO
@@ -371,6 +372,7 @@ unique_ids:
     admin.dashboard.accounting.mis_reports.lender_share: '1719287606968527798460591.9259'
     admin.dashboard.customer_management.handles_customer_registration.borrowers: '1699528468358308523806957.0701'
     admin.dashboard.manage_cms.add_general_dropdowns: '1710397494541671512734929.8624'
+    admin.dashboard.accounting.mis_reports.behavioural_report.foreclosure.RowTemplate64: '1719374126692533499313175.9183'
     admin.dashboard.customer_management.handles_customer_registration.borrowers.view_profile.update_form: '1699967990279922551849592.2898'
     admin.dashboard.loan_management.view_loans.not_payable_amount.ItemTemplate25: '1707202809143429044958655.44635'
     admin.dashboard.accounting.interest_accruals: '1718773357148755763180389.2222'
