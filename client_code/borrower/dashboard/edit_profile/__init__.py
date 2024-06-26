@@ -97,6 +97,4 @@ class edit_profile(edit_profileTemplate):
         pattern = r'^\d{10}$'
         return re.match(pattern, mobile)
 
-  def button_2_click(self, **event_args):
-    """This method is called when the button is clicked"""
-    open_form('borrower.dashboard')
+  
