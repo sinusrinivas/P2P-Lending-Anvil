@@ -14,11 +14,6 @@ components:
   properties: {}
   name: navigation_form_dashboard_1
   layout_properties: {grid_position: 'FUSCTY,GVBCHB', full_width_row: true}
-- name: button_1
-  properties: {text: Back, background: '#05264d', foreground: white, icon: 'fa:backward', align: right}
-  type: Button
-  layout_properties: {grid_position: 'GYMPGD,WOWXNZ', full_width_row: true}
-  event_bindings: {click: button_1_click}
 - name: outlined_card_1
   properties: {role: outlined-card, col_widths: '{"SIADQG":44,"OFTKKD":3,"JWNWTM":6}', spacing_above: small, background: '#0b2547', wrap_on: mobile, col_spacing: medium, foreground: '', spacing_below: small, visible: true, border: '', tooltip: ''}
   type: ColumnPanel
