@@ -35,3 +35,18 @@ class behavioural_report(behavioural_reportTemplate):
     """This method is called when the button is clicked"""
     open_form('admin.dashboard.accounting.mis_reports.behavioural_report.due_date')
 
+  def image_4_mouse_up(self, x, y, button, **event_args):
+    open_form('admin.dashboard.accounting.mis_reports.behavioural_report.foreclosure')
+
+  def image_5_mouse_up(self, x, y, button, **event_args):
+    """This method is called when a mouse button is released on this component"""
+    open_form('admin.dashboard.accounting.mis_reports.behavioural_report.extension')
+
+  def image_4_copy_mouse_up(self, x, y, button, **event_args):
+    """This method is called when a mouse button is released on this component"""
+    open_form('admin.dashboard.accounting.mis_reports.behavioural_report.defaulters')
+
+  def image_6_mouse_up(self, x, y, button, **event_args):
+    """This method is called when a mouse button is released on this component"""
+    open_form('admin.dashboard.accounting.mis_reports.behavioural_report.due_date')
+

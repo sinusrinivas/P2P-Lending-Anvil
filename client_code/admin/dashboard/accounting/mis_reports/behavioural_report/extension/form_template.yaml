@@ -16,18 +16,18 @@ components:
 - name: data_grid_1
   properties:
     columns:
-    - {id: JKSDUP, title: Borrower Customer ID, data_key: column_1, width: 127.19998168945312, expand: false}
-    - {id: IVHIEO, data_key: column_2, title: Borrower Full Name, width: 135.79998779296875, expand: false}
-    - {id: VJQQOR, title: Mobile No, data_key: column_2, width: 125.39996337890625, expand: false}
-    - {id: OJLQEN, title: Email ID, data_key: column_3, width: 207.5999755859375, expand: false}
-    - {id: PLCAZF, data_key: column_1, title: Products, width: 250.199951171875, expand: false}
-    - {id: CIIYJA, data_key: column_1, title: Number of loans}
-    show_page_controls: false
+    - {id: JKSDUP, title: Borrower Customer ID, data_key: column_1, width: 151.60000610351562, expand: false}
+    - {id: VJQQOR, title: Borrower Full Name, data_key: column_2, width: 131.60000610351562, expand: false}
+    - {id: OJLQEN, title: Mobile No, data_key: column_3, width: 122.39996337890625, expand: false}
+    - {id: LXYSWI, data_key: column_1, title: Email ID, width: 190.79998779296875, expand: false}
+    - {id: WUQSWU, data_key: column_1, title: Used Products, width: 254, expand: false}
+    - {id: HFBEDO, data_key: column_2, title: Number of loans}
     role: tonal-data-grid
+    show_page_controls: false
   type: DataGrid
-  layout_properties: {grid_position: 'CUQVBI,JOFNXU'}
   components:
   - name: repeating_panel_1
-    properties: {item_template: admin.dashboard.accounting.mis_reports.behavioural_report.foreclosure.RowTemplate64}
+    properties: {item_template: admin.dashboard.accounting.mis_reports.behavioural_report.extension.RowTemplate62}
     type: RepeatingPanel
+  layout_properties: {grid_position: 'CCAGCF,ZNYYSZ'}
 is_package: true

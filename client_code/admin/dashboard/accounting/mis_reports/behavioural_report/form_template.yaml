@@ -20,10 +20,10 @@ components:
     layout_properties: {grid_position: 'XYXMAS,DVWPUB'}
     components:
     - name: image_4
-      properties: {source: '', display_mode: shrink_to_fit, height: '100', visible: true}
+      properties: {source: '', display_mode: shrink_to_fit, height: 99.79998779296875, visible: true}
       type: Image
       layout_properties: {grid_position: 'QGZTNW,PVJEPO'}
-      event_bindings: {mouse_up: image_4_copy_mouse_up}
+      event_bindings: {mouse_up: image_4_mouse_up}
     - name: button_6
       properties:
         text: |
@@ -45,7 +45,7 @@ components:
       properties: {source: '', display_mode: shrink_to_fit, height: 99.20001220703125, visible: true}
       type: Image
       layout_properties: {grid_position: 'CGQKOF,RHYSHW'}
-      event_bindings: {mouse_up: image_4_copy_mouse_up}
+      event_bindings: {mouse_up: image_5_mouse_up}
     - name: button_7
       properties:
         text: |
@@ -61,7 +61,7 @@ components:
   - name: content_panel_5
     properties: {col_widths: '{}', background: white, role: elevated-card}
     type: ColumnPanel
-    layout_properties: {grid_position: 'XYXMAS,NRBLTP', full_width_row: true}
+    layout_properties: {grid_position: 'XYXMAS,NRBLTP'}
     components:
     - name: image_4_copy
       properties: {source: _/theme/admin/dashboard/loan_management/default-loans.png, display_mode: shrink_to_fit, height: '100', visible: true}
@@ -89,7 +89,7 @@ components:
       properties: {source: '', display_mode: shrink_to_fit, height: 100.39999389648438, visible: true}
       type: Image
       layout_properties: {grid_position: 'QGZTNW,PVJEPO'}
-      event_bindings: {mouse_up: image_4_copy_mouse_up}
+      event_bindings: {mouse_up: image_6_mouse_up}
     - name: button_9
       properties:
         text: |

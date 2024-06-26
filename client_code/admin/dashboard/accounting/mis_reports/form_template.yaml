@@ -130,7 +130,7 @@ components:
       properties: {source: _/theme/admin/dashboard/accounting/mis-reports/Behavioural%20Report.png, display_mode: shrink_to_fit, height: 99.20001220703125, visible: true}
       type: Image
       layout_properties: {grid_position: 'CGQKOF,RHYSHW'}
-      event_bindings: {mouse_up: image_4_copy_mouse_up}
+      event_bindings: {mouse_up: image_4_copy_copy_5_mouse_up}
     - name: add_people_copy_5
       properties:
         text: |
