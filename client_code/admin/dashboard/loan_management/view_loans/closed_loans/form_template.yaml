@@ -20,11 +20,11 @@ components:
   - name: label_1
     properties: {text: View Closed loans, align: center, bold: true, role: title}
     type: Label
-    layout_properties: {grid_position: 'SMEYAG,YVLYSA'}
+    layout_properties: {grid_position: 'SMEYAG,YVLYSA', full_width_row: true}
   - name: spacer_1
     properties: {height: 32}
     type: Spacer
-    layout_properties: {grid_position: 'IWLSNH,SEOENY'}
+    layout_properties: {grid_position: 'IWLSNH,SEOENY', full_width_row: true}
   - type: RepeatingPanel
     properties: {item_template: admin.dashboard.loan_management.view_loans.closed_loans.ItemTemplate39}
     name: repeating_panel_2

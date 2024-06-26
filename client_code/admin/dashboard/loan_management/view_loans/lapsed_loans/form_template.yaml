@@ -28,13 +28,13 @@ components:
   layout_properties: {grid_position: 'NBUVPO,PNOEPP', full_width_row: true}
   event_bindings: {click: button_1_copy_click}
 - name: label_1
-  properties: {text: View Approved loans, align: center, bold: true, role: title}
+  properties: {text: View Lapsed loans, align: center, bold: true, role: title}
   type: Label
-  layout_properties: {grid_position: 'ANBIZW,YRHIGA'}
+  layout_properties: {grid_position: 'ANBIZW,YRHIGA', full_width_row: true}
 - name: spacer_1
   properties: {height: 32}
   type: Spacer
-  layout_properties: {grid_position: 'PZFNMH,ZGDWVD'}
+  layout_properties: {grid_position: 'PZFNMH,ZGDWVD', full_width_row: true}
 - name: repeating_panel_1
   properties: {item_template: admin.dashboard.loan_management.view_loans.lapsed_loans.ItemTemplate23}
   type: RepeatingPanel
