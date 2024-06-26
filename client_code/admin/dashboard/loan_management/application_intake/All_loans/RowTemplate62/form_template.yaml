@@ -29,11 +29,17 @@ components:
   properties: {align: center}
   type: Label
   layout_properties: {column: PWGDPE}
+  data_bindings:
+  - {property: text, code: 'self.item[''product_name'']', writeback: false}
 - name: label_6
   properties: {align: center}
   type: Label
   layout_properties: {column: ABJLSN}
+  data_bindings:
+  - {property: text, code: 'self.item[''loan_amount'']', writeback: false}
 - name: label_7
   properties: {align: center}
   type: Label
   layout_properties: {column: ZZSLWZ}
+  data_bindings:
+  - {property: text, code: 'self.item[''loan_updated_status'']', writeback: false}
