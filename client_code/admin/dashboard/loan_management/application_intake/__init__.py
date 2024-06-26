@@ -148,11 +148,11 @@ class application_intake(application_intakeTemplate):
 
     def button_3_click(self, **event_args):
         """This method is called when the button is clicked"""
-        open_form('admin.dashboard.loan_management.application_intake.total_loans')
+        open_form('admin.dashboard.loan_management.application_intake.All_loans')
 
     def button_4_click(self, **event_args):
         """This method is called when the button is clicked"""
-        open_form('admin.dashboard.loan_management.application_intake.Accepted_loans')
+        open_form('admin.dashboard.loan_management.application_intake.Approved_loans')
 
     def button_5_click(self, **event_args):
         """This method is called when the button is clicked"""
@@ -160,11 +160,11 @@ class application_intake(application_intakeTemplate):
 
     def image_1_mouse_up(self, x, y, button, **event_args):
         """This method is called when a mouse button is released on this component"""
-        open_form('admin.dashboard.loan_management.application_intake.total_loans')
+        open_form('admin.dashboard.loan_management.application_intake.All_loans')
 
     def image_1_copy_3_mouse_up(self, x, y, button, **event_args):
         """This method is called when a mouse button is released on this component"""
-        open_form('admin.dashboard.loan_management.application_intake.Accepted_loans')
+        open_form('admin.dashboard.loan_management.application_intake.Approved_loans')
 
     def image_1_copy_mouse_up(self, x, y, button, **event_args):
         """This method is called when a mouse button is released on this component"""
