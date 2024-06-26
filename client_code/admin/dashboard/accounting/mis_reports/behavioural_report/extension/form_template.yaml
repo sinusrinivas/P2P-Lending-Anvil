@@ -9,4 +9,25 @@ components:
   type: Button
   layout_properties: {grid_position: 'PMEQRF,YWQREN', full_width_row: true}
   event_bindings: {click: button_1_click}
+- name: label_1
+  properties: {align: center, text: Extension Loans, bold: true, role: outlined-card, background: 'theme:Secondary Container', font_size: 20}
+  type: Label
+  layout_properties: {grid_position: 'FZKEUD,NDUHFE'}
+- name: data_grid_1
+  properties:
+    columns:
+    - {id: JKSDUP, title: Borrower Customer ID, data_key: column_1, width: 127.19998168945312, expand: false}
+    - {id: IVHIEO, data_key: column_2, title: Borrower Full Name, width: 135.79998779296875, expand: false}
+    - {id: VJQQOR, title: Mobile No, data_key: column_2, width: 125.39996337890625, expand: false}
+    - {id: OJLQEN, title: Email ID, data_key: column_3, width: 207.5999755859375, expand: false}
+    - {id: PLCAZF, data_key: column_1, title: Products, width: 250.199951171875, expand: false}
+    - {id: CIIYJA, data_key: column_1, title: Number of loans}
+    show_page_controls: false
+    role: tonal-data-grid
+  type: DataGrid
+  layout_properties: {grid_position: 'CUQVBI,JOFNXU'}
+  components:
+  - name: repeating_panel_1
+    properties: {item_template: admin.dashboard.accounting.mis_reports.behavioural_report.foreclosure.RowTemplate64}
+    type: RepeatingPanel
 is_package: true
