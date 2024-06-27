@@ -23,7 +23,7 @@ def create_pdf_from_panel(content_panel):
 @anvil.server.callable
 def create_pdf_of_payment_receipt(content_panel):
     # Render the panel to a PDF
-    pdf = anvil.pdf.render_form(content_panel)
+    pdf = anvil.pdf.PDFRenderer(landscape=True, page_size='A4', scale = 0.85).render_form(content_panel)
     
     return pdf
 
@@ -40,6 +40,16 @@ def create_pdf_of_borrower_portfolio(content_panel):
 def create_pdf_of_lender_portfolio(content_panel):
     # Render the panel to a PDF
     pdf = anvil.pdf.PDFRenderer(landscape=True).render_form(content_panel)
+    
+    return pdf
+  
+
+# code to generate pdf of MIS reports
+@anvil.server.callable
+def create_pdf_of_mis_reports(content_panel):
+    # Render the panel to a PDF
+    custom_page_size = (28, 35)
+    pdf = anvil.pdf.PDFRenderer(landscape=True, page_size='A4', scale = 0.85).render_form(content_panel)
     
     return pdf
   

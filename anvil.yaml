@@ -16,7 +16,7 @@ services:
 - source: /runtime/services/anvil/secrets.yml
   client_config: {}
   server_config: {}
-startup: {type: form, module: bank_users.main_form}
+startup: {type: form, module: admin.dashboard}
 package_name: pip_install_reportlab
 allow_embedding: false
 name: P2P Lending App clone 25/06/2024
@@ -155,14 +155,17 @@ db_schema:
       admin_ui: {width: 200, order: 39}
       type: string
     - name: total_amount_paid
-      admin_ui: {order: 22.96875, width: 200}
+      admin_ui: {order: 22.5, width: 200}
       type: number
     - name: remaining_amount
-      admin_ui: {order: 15.5, width: 200}
+      admin_ui: {order: 9.5, width: 200}
       type: number
     - name: lender_returns
       admin_ui: {width: 200, order: 8.875}
       type: number
+    - name: lender_rejected_timestamp
+      admin_ui: {width: 200, order: 41}
+      type: datetime
     title: fin_loan_details
   fin_lendor_salary_type:
     client: full

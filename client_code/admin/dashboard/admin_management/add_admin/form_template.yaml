@@ -7,16 +7,16 @@ components:
   properties: {}
   layout_properties: {grid_position: 'PTBVNJ,JJXPMO', full_width_row: true}
   name: home_button_admin_1
+- properties: {text: Back, foreground: 'theme:On Primary', icon: 'fa:backward', background: '#05264d', bold: true, align: right}
+  type: Button
+  layout_properties: {grid_position: 'WFVLLE,YSDAIU', full_width_row: true}
+  name: button_1
+  event_bindings: {click: button_1_click}
 - properties: {spacing_above: none, spacing_below: none, role: null}
   type: ColumnPanel
   layout_properties: {grid_position: 'UACKEM,NTBJDA', full_width_row: true}
   name: column_panel_1
   components:
-  - properties: {text: Back, foreground: 'theme:On Primary', icon: 'fa:angle-double-left', background: '#05264d', bold: true, align: right}
-    type: Button
-    layout_properties: {grid_position: 'FSSYHS,RKKUNA', full_width_row: true}
-    name: button_1
-    event_bindings: {click: button_1_click}
   - properties: {role: outlined-card, spacing: huge, align: center, background: '#05264d', foreground: 'theme:On Primary'}
     type: FlowPanel
     layout_properties: {grid_position: 'WVVNBA,JKXLQZ', full_width_row: false}

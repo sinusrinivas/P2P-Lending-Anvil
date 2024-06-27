@@ -308,7 +308,7 @@ class mis_reports(mis_reportsTemplate):
             title={
                 'text': 'Financial Loan Details',
                 'font': {
-                    'size': 24,
+                    'size': 20,
                     'color': 'black',
                     'family': 'Arial',
                     'bold': True
@@ -528,10 +528,10 @@ class mis_reports(mis_reportsTemplate):
     def initialize_plot(self):
         """Initialize the plot with aggregated counts"""
         fig = go.Figure(data=[
-            go.Bar(name='No Risk', x=['No Risk'], y=[self.no_risk_count], marker_color='green', text=[self.no_risk_count], textposition='auto'),
-            go.Bar(name='Low Risk', x=['Low Risk'], y=[self.low_risk_count], marker_color='yellow', text=[self.low_risk_count], textposition='auto'),
-            go.Bar(name='Medium Risk', x=['Medium Risk'], y=[self.medium_risk_count], marker_color='orange', text=[self.medium_risk_count], textposition='auto'),
-            go.Bar(name='High Risk', x=['High Risk'], y=[self.high_risk_count], marker_color='red', text=[self.high_risk_count], textposition='auto')
+            go.Bar(name='No Risk', x=['No Risk'], y=[self.no_risk_count], marker_color='green', text=[f'{self.no_risk_count} Loans'], textposition='outside'),
+            go.Bar(name='Low Risk', x=['Low Risk'], y=[self.low_risk_count], marker_color='yellow', text=[f'{self.low_risk_count} Loans'], textposition='outside'),
+            go.Bar(name='Medium Risk', x=['Medium Risk'], y=[self.medium_risk_count], marker_color='orange', text=[f'{self.medium_risk_count} Loans'], textposition='outside'),
+            go.Bar(name='High Risk', x=['High Risk'], y=[self.high_risk_count], marker_color='red', text=[f'{self.high_risk_count} Loans'], textposition='outside')
         ])
 
         fig.update_layout(
@@ -576,3 +576,21 @@ class mis_reports(mis_reportsTemplate):
     def button_9_click(self, **event_args):
       """This method is called when the button is clicked"""
       open_form('admin.dashboard.accounting.mis_reports.behavioural_report')
+
+    def image_4_copy_copy_5_mouse_up(self, x, y, button, **event_args):
+      """This method is called when a mouse button is released on this component"""
+      open_form('admin.dashboard.accounting.mis_reports.behavioural_report')
+
+    def button_2_click(self, **event_args):
+      """This method is called when the button is clicked"""
+      self.convert_panel_to_pdf()
+
+    def convert_panel_to_pdf(self):
+      # Assuming 'content_panel' is the panel containing your data
+      content_panel = self.content_panel
+      
+      # Call the server function to create the PDF from the content panel
+      pdf = anvil.server.call('create_pdf_of_mis_reports', content_panel)
+      
+      # Prompt the user to download the PDF
+      anvil.media.download(pdf)
