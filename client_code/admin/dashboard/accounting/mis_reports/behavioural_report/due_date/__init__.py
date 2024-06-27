@@ -31,7 +31,7 @@ class due_date(due_dateTemplate):
                 'borrower_full_name': user_profile['full_name'],
                 'borrower_email_id': user_profile['email_user'],
                 'mobile_no': mobile_no,
-                'days_left': emi['default_fee']
+                'days_left': emi['days_left']
             })
         
         # Debug: Print the final result before setting it to the repeating panel
