@@ -17,6 +17,14 @@ components:
     type: Button
     layout_properties: {grid_position: 'POSMNZ,RUJDJI', full_width_row: true}
     event_bindings: {click: button_1_copy_click}
+  - name: label_1
+    properties: {text: View Open loans, align: center, bold: true, role: title}
+    type: Label
+    layout_properties: {grid_position: 'FJIGHC,XHSWZV', full_width_row: true}
+  - name: spacer_1
+    properties: {height: 32}
+    type: Spacer
+    layout_properties: {grid_position: 'EZTBDV,AGMJUT', full_width_row: true}
   - name: repeating_panel_1
     properties: {item_template: admin.dashboard.loan_management.view_loans.open_loans.ItemTemplate3}
     type: RepeatingPanel
