@@ -1001,14 +1001,6 @@ db_schema:
       admin_ui: {width: 200, order: 10.5}
       type: number
     title: fin_extends_loan
-  fin_borrower_subcategory_loan_issue:
-    client: full
-    server: full
-    columns:
-    - name: borrower_subcategory_loan_issue
-      admin_ui: {order: 0, width: 280}
-      type: string
-    title: fin_borrower_subcategory_loan_issue
   fin_issue_category:
     client: full
     server: full
