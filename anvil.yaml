@@ -937,18 +937,12 @@ db_schema:
     - name: loan_id
       admin_ui: {order: -1, width: 200}
       type: string
-    - name: repayment_starting_date
-      admin_ui: {width: 200, order: 9}
-      type: date
     - name: extend_fee
       admin_ui: {width: 200, order: 10}
       type: number
     - name: final_repayment_amount
       admin_ui: {order: -1.25, width: 200}
       type: number
-    - name: final_repayment_date
-      admin_ui: {order: -1.125, width: 200}
-      type: date
     - name: status
       admin_ui: {width: 200}
       type: string
@@ -973,9 +967,6 @@ db_schema:
     - name: borrower_email_id
       admin_ui: {width: 200}
       type: string
-    - name: final_emi
-      admin_ui: {width: 200}
-      type: number
     - name: lender_email_id
       admin_ui: {width: 200}
       type: string
