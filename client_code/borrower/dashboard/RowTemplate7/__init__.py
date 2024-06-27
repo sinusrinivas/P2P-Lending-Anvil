@@ -1,6 +1,5 @@
 from ._anvil_designer import RowTemplate7Template
 from anvil import *
-import stripe.checkout
 import anvil.server
 import anvil.google.auth
 import anvil.google.drive

@@ -1,6 +1,5 @@
 from ._anvil_designer import stack_graphTemplate
 from anvil import *
-import stripe.checkout
 import plotly.graph_objs as go
 import anvil.server
 import anvil.google.auth, anvil.google.drive

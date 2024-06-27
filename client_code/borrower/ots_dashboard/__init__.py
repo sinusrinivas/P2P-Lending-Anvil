@@ -93,7 +93,6 @@
 
 from ._anvil_designer import ots_dashboardTemplate
 from anvil import *
-import stripe.checkout
 import anvil.server
 import anvil.google.auth, anvil.google.drive
 from anvil.google.drive import app_files

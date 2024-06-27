@@ -1,4 +1,3 @@
-import stripe.checkout
 import anvil.google.auth
 import anvil.google.drive
 from anvil.google.drive import app_files

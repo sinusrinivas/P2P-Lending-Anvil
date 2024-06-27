@@ -89,7 +89,7 @@ components:
     name: image_11
   - properties: {role: null, bold: false, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: white, spacing_below: small, visible: true, border: '', italic: false, font_size: 25, tooltip: '', text: Now invest with the largest Ascend's P2P Lending platform in India. Go with the most preferred non-market linked investment instrument that gives you risk adjusted returns.}
     type: Label
-    layout_properties: {x: 279, y: 122.390625, width: 616}
+    layout_properties: {x: 737.4088745117188, y: 151.65365600585938, width: 615.9895629882812}
     name: label_4_copy_1_copy
 - properties: {height: 32}
   type: Spacer

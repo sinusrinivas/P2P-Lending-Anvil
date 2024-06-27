@@ -1,6 +1,5 @@
 from ._anvil_designer import dashboard_report_a_problemTemplate
 from anvil import *
-import stripe.checkout
 import anvil.server
 import anvil.users
 import anvil.tables as tables

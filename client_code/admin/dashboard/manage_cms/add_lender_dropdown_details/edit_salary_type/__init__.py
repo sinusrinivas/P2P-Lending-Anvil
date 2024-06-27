@@ -1,6 +1,5 @@
 from ._anvil_designer import edit_salary_typeTemplate
 from anvil import *
-import stripe.checkout
 import anvil.server
 import anvil.google.auth, anvil.google.drive
 from anvil.google.drive import app_files

@@ -1,4 +1,3 @@
-import anvil.stripe
 import anvil.secrets
 import anvil.email
 import anvil.google.auth, anvil.google.drive, anvil.google.mail

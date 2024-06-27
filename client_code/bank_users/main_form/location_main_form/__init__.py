@@ -1,6 +1,5 @@
 from ._anvil_designer import location_main_formTemplate
 from anvil import *
-import stripe.checkout
 import anvil.server
 import anvil.google.auth, anvil.google.drive
 from anvil.google.drive import app_files

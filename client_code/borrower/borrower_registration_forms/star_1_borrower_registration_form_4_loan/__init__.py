@@ -1,6 +1,5 @@
 from ._anvil_designer import star_1_borrower_registration_form_4_loanTemplate
 from anvil import *
-import stripe.checkout
 import anvil.server
 import anvil.google.auth, anvil.google.drive
 from anvil.google.drive import app_files

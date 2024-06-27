@@ -11,7 +11,6 @@ import anvil.tables.query as q
 import base64
 import os  # Import the os module for file existence che
 from anvil import *
-import anvil.stripe
 import anvil.media
 from anvil import Media
 

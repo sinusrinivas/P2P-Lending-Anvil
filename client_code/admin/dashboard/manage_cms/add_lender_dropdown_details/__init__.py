@@ -1,6 +1,5 @@
 from ._anvil_designer import add_lender_dropdown_detailsTemplate
 from anvil import *
-import stripe.checkout
 import anvil.server
 import anvil.google.auth, anvil.google.drive
 from anvil.google.drive import app_files

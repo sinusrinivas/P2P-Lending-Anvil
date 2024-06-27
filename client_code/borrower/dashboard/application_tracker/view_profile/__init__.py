@@ -1,6 +1,5 @@
 from ._anvil_designer import view_profileTemplate
 from anvil import *
-import stripe.checkout
 import anvil.server
 import anvil.tables as tables
 import anvil.tables.query as q
