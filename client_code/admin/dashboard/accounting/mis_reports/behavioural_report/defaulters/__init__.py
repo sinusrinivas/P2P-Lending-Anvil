@@ -27,7 +27,7 @@ class defaulters(defaultersTemplate):
             result.append({
                 'loan_id': emi['loan_id'],
                 'borrower_customer_id': borrower_id,
-                'borrower_full_name': emi['borrower_full_name'],
+                'borrower_full_name': user_profile['borrower_full_name'],
                 'borrower_email_id': user_profile['borrower_email_id'],
                 'mobile_no': mobile_no,
                 'default_fee': emi['default_fee']
