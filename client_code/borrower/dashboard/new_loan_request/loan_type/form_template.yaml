@@ -140,7 +140,7 @@ components:
   name: spacer_11
   layout_properties: {grid_position: 'CRAANJ,RTLKRB'}
 - type: GridPanel
-  properties: {spacing_above: small, spacing_below: small, background: '', foreground: '', border: '', visible: false, role: outlined-card, tooltip: ''}
+  properties: {spacing_above: small, spacing_below: small, background: '', foreground: '', border: '', visible: true, role: outlined-card, tooltip: ''}
   name: grid_panel_2
   layout_properties: {grid_position: 'XJJRJH,QVERCH'}
   components:
@@ -189,7 +189,7 @@ components:
     name: label_34
     layout_properties: {row: ZRTKDP, width_xs: 3, col_xs: 6, width: 157.1}
   - name: label_5
-    properties: {align: left, text: The processing fees are added when you pay the total amount via EMI, foreground: 'theme:Error', font_size: 13}
+    properties: {align: left, text: The processing fees are added when you pay the total amount via EMI, foreground: 'theme:Error', font_size: 13, bold: false, italic: true, icon: 'fa:info-circle'}
     type: Label
     layout_properties: {row: DAWCPT, width_xs: 6, col_xs: 3}
     data_bindings: []
