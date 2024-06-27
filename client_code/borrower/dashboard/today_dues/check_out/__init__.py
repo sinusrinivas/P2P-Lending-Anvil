@@ -126,7 +126,7 @@ class check_out(check_outTemplate):
         self.processing_fee.text = "{:.2f}".format(processing_fee)
         self.i_r.text = "{:.2f}".format(interest_amount)
         self.emi.text = "{:.2f}".format(emi)
-        self.emi_processing_extension.text = "{:.2f}".format(total_emi)
+        self.emi_processing_extension.text = "{:.2f}".format( emi + processing_fee)
         print(float(self.emi.text))
         self.remaining_tenure.text = remaining_tenure
       
@@ -821,9 +821,9 @@ class check_out(check_outTemplate):
                     lender_wallet.update()
 
 
-                    existing_fee_rows = app_tables.fin_platform_fees.get()
+                    existing_fee_rows = app_tables.fin_platform_details.get()
                     if existing_fee_rows is None:
-                      app_tables.fin_platform_fees.add_row(platform_returns=total_extra_fee)
+                      app_tables.fin_platform_details.add_row(platform_returns=total_extra_fee)
                     else:
                       existing_fee_rows['platform_returns'] +=total_extra_fee
                       existing_fee_rows.update()
