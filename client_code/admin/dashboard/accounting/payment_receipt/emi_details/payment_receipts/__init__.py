@@ -89,7 +89,7 @@ class payment_receipts(payment_receiptsTemplate):
 
     def button_2_click(self, **event_args):
       """This method is called when the button is clicked"""
-      open_form('admin.dashboard.accounting.payment_receipt.emi_details')
+      open_form('admin.dashboard.accounting.payment_receipt.emi_details', selected_row = self.selected_row)
 
     def button_1_click(self, **event_args):
       """This method is called when the button is clicked"""
