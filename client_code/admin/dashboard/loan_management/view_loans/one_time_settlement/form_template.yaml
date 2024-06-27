@@ -19,6 +19,14 @@ components:
     type: Button
     layout_properties: {grid_position: 'BRRUUQ,PQCVPA', full_width_row: true}
     event_bindings: {click: button_1_copy_click}
+- name: label_1
+  properties: {text: View One Time Settlement loans, align: center, bold: true, role: title}
+  type: Label
+  layout_properties: {grid_position: 'FMBVQZ,GZWUYN', full_width_row: true}
+- name: spacer_1
+  properties: {height: 32}
+  type: Spacer
+  layout_properties: {grid_position: 'AHTVBZ,OHWRAZ', full_width_row: true}
 - name: repeating_panel_2
   properties: {item_template: admin.dashboard.loan_management.view_loans.one_time_settlement.ItemTemplate40}
   type: RepeatingPanel
