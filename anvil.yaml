@@ -1041,7 +1041,7 @@ db_schema:
       admin_ui: {width: 200, order: 0}
       type: number
     - name: loans
-      admin_ui: {width: 200, order: 1}
+      admin_ui: {order: -1, width: 200}
       type: string
     title: fin_approval_days
   fin_product_categories:
