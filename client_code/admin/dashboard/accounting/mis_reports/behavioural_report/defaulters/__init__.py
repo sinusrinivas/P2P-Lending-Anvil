@@ -16,7 +16,7 @@ class defaulters(defaultersTemplate):
 
     def defaulters_data(self):
         # Fetch data from the fin_emi_table where default_fee is greater than or equal to 3
-        emi_details = app_tables.fin_emi_table.search(default_fee=q.gte(3))
+        emi_details = app_tables.fin_emi_table.search(default_fee=q.greater_than_or_equal_to(3))
         
         result = []
         for emi in emi_details:
@@ -27,8 +27,8 @@ class defaulters(defaultersTemplate):
             result.append({
                 'loan_id': emi['loan_id'],
                 'borrower_customer_id': borrower_id,
-                'borrower_full_name': user_profile['borrower_full_name'],
-                'borrower_email_id': user_profile['borrower_email_id'],
+                'borrower_full_name': user_profile['full_name'],
+                'borrower_email_id': user_profile['email_user'],
                 'mobile_no': mobile_no,
                 'default_fee': emi['default_fee']
             })
