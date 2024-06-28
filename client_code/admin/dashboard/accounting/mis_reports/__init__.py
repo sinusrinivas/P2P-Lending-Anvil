@@ -615,3 +615,7 @@ class mis_reports(mis_reportsTemplate):
       
       # Prompt the user to download the PDF
       anvil.media.download(pdf)
+
+    def eod_report_click(self, **event_args):
+      """This method is called when the button is clicked"""
+      open_form('admin.dashboard.accounting.mis_reports.eod_reports')
