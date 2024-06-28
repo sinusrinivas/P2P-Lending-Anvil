@@ -14,6 +14,9 @@ import random
 from email.message import EmailMessage
 import bcrypt
 import anvil.pdf
+from datetime import datetime, time ,timedelta
+
+
 
 @anvil.server.callable
 def check_user_profile(email):
@@ -458,4 +461,42 @@ def update_fin_platform_fees():
 #         most_used_product=most_used_product_name,
 #         total_borrowers_loan_taken = total_borrowers_loan_taken
 #     )
+@anvil.server.callable
+def update_eod_report():
+    today_date = datetime.now().date()
+    all_payments = app_tables.fin_emi_table.search()
+    
+    payments_today = [payment for payment in all_payments if payment['scheduled_payment_made'].date() == today_date]
+    
+    total_amount_received = sum(payment['amount_paid'] for payment in payments_today)
+    total_platform_amount = sum(payment['total_platform_fee'] for payment in payments_today)
+    total_lender_share = sum(payment['lender_returns'] for payment in payments_today)
+    
+    eod_report = app_tables.fin_eod_reports.get(date=today_date)
+    if eod_report is None:
+        eod_report = app_tables.fin_eod_reports.add_row(date=today_date, total_amount_received=0, total_platform_share=0, total_lender_share=0)
+    
+    eod_report['total_amount_received'] = total_amount_received
+    eod_report['total_platform_share'] = total_platform_amount
+    eod_report['total_lender_share'] = total_lender_share
+    eod_report.update()
 
+@anvil.server.background_task
+def update_eod_report_1():
+    today_date = datetime.now().date()
+    all_payments = app_tables.fin_emi_table.search()
+    
+    payments_today = [payment for payment in all_payments if payment['scheduled_payment_made'].date() == today_date]
+    
+    total_amount_received = sum(payment['amount_paid'] for payment in payments_today)
+    total_platform_amount = sum(payment['total_platform_fee'] for payment in payments_today)
+    total_lender_share = sum(payment['lender_returns'] for payment in payments_today)
+    
+    eod_report = app_tables.fin_eod_reports.get(date=today_date)
+    if eod_report is None:
+        eod_report = app_tables.fin_eod_reports.add_row(date=today_date, total_amount_received=0, total_platform_share=0, total_lender_share=0)
+    
+    eod_report['total_amount_received'] = total_amount_received
+    eod_report['total_platform_share'] = total_platform_amount
+    eod_report['total_lender_share'] = total_lender_share
+    eod_report.update()

@@ -183,7 +183,7 @@ class part_payment(part_paymentTemplate):
                       # emi_row['next_payment'] = next_next_payment
                       emi_row['extra_fee'] += additional_fees
                       emi_row['part_payment_done'] = 2
-                      emi_row['part_lender_returns'] += part_lender_returns
+                      emi_row['lender_returns'] += part_lender_returns
                       emi_row['part_remaining_amount'] += part_remaining_amount
                       emi_row['days_left'] = days_elapsed
                       emi_row['lapsed_fee'] += lapsed_fee_amount
@@ -324,7 +324,7 @@ class part_payment(part_paymentTemplate):
                               part_payment_done= 1,
                               total_amount_pay= float(self.loan_details['total_emi_amount']),
                               remaining_tenure=remaining_tenure,
-                              part_lender_returns=lender_returns_in_emi_table,
+                              lender_returns=lender_returns_in_emi_table,
                               part_remaining_amount=remaining_amount_in_emi_table,
                               days_left=days_left,
                               npa_fee=npa,

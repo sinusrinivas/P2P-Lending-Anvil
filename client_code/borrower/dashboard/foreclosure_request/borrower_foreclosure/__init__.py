@@ -386,6 +386,7 @@ class borrower_foreclosure(borrower_foreclosureTemplate):
                     borrower_email= borrower_email_id,
                     total_remaining_amount=remaining_amount,
                     total_platform_fee=total_extra_fee,
+                    lender_returns=foreclosure_amount,
            
                 )
                 Notification("Foreclosure payment completed successfully.").show()
