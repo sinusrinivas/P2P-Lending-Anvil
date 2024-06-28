@@ -262,6 +262,7 @@ unique_ids:
     wallet.wallet.RowTemplate25: '1703498985331318465098761.16345'
     lendor.dashboard.view_lost_oppurtunities.view_details_2: '1704969544196875847828406.0798'
     admin.dashboard.loan_management.view_loans: '1699528569921998135077477.3452'
+    admin.dashboard.accounting.performance_tracker.applications_recieved.RowTemplate70: '1719569571440987016217475.8141'
     admin.dashboard.loan_management.view_loans.not_payable_amount: '1707202505340461905881878.67584'
     admin.dashboard.loan_management.view_loans.closed_loans: '1699528886441906086843573.9337'
     admin.dashboard.accounting.performance_tracker.applications_recieved.RowTemplate69: '1719567771190915653157903.2356'
