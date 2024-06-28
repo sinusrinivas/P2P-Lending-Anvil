@@ -331,12 +331,12 @@ class mis_reports(mis_reportsTemplate):
 
     def plot_loan_data(self):
         # Fetch data from tables
-        loan_details = app_tables.fin_loan_details.search(loan_updated_status=q.any_of('closed loan', 'rejected', 'disbursed', 'foreclosure', 'lost opportunities', 'approved', 'under process', 'extension'))
+        loan_details = app_tables.fin_loan_details.search(loan_updated_status=q.any_of('closed', 'rejected', 'disbursed', 'foreclosure', 'lost opportunities', 'approved', 'under process', 'extension'))
         loan_details = app_tables.fin_loan_details.search(loan_updated_status=q.any_of('closed', 'rejected', 'disbursed', 'foreclosure', 'lost opportunities', 'approved', 'under process', 'extension'))
 
         # Calculate metrics
         no_of_loans_disbursed = len([loan for loan in loan_details if loan['loan_updated_status'] == 'disbursed'])
-        no_of_loans_closed = len([loan for loan in loan_details if loan['loan_updated_status'] == 'closed loan'])
+        no_of_loans_closed = len([loan for loan in loan_details if loan['loan_updated_status'] == 'closed'])
         no_of_loans_closed = len([loan for loan in loan_details if loan['loan_updated_status'] == 'closed'])
         no_of_loans_rejected = len([loan for loan in loan_details if loan['loan_updated_status'] == 'rejected'])
         no_of_loans_foreclosed = len([loan for loan in loan_details if loan['loan_updated_status'] == 'foreclosure'])
