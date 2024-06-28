@@ -30,7 +30,7 @@ components:
   components:
   - type: DataGrid
     properties:
-      role: null
+      role: tonal-data-grid
       spacing_above: large
       columns:
       - {id: EPCWQG, title: Loan ID, data_key: column_1, $$hashKey: 'object:53723'}
@@ -42,7 +42,7 @@ components:
       rows_per_page: 20
       wrap_on: never
       foreground: ''
-      show_page_controls: true
+      show_page_controls: false
       auto_header: true
       spacing_below: small
       visible: true
