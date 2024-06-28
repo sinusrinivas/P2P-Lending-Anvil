@@ -330,11 +330,11 @@ class mis_reports(mis_reportsTemplate):
 
     def plot_loan_data(self):
         # Fetch data from tables
-        loan_details = app_tables.fin_loan_details.search(loan_updated_status=q.any_of('closed loan', 'rejected', 'disbursed loan', 'foreclosure', 'lost opportunities', 'approved', 'under process', 'extension'))
+        loan_details = app_tables.fin_loan_details.search(loan_updated_status=q.any_of('closed', 'rejected', 'disbursed', 'foreclosure', 'lost opportunities', 'approved', 'under process', 'extension'))
 
         # Calculate metrics
-        no_of_loans_disbursed = len([loan for loan in loan_details if loan['loan_updated_status'] == 'disbursed loan'])
-        no_of_loans_closed = len([loan for loan in loan_details if loan['loan_updated_status'] == 'closed loan'])
+        no_of_loans_disbursed = len([loan for loan in loan_details if loan['loan_updated_status'] == 'disbursed'])
+        no_of_loans_closed = len([loan for loan in loan_details if loan['loan_updated_status'] == 'closed'])
         no_of_loans_rejected = len([loan for loan in loan_details if loan['loan_updated_status'] == 'rejected'])
         no_of_loans_foreclosed = len([loan for loan in loan_details if loan['loan_updated_status'] == 'foreclosure'])
         no_of_loans_lost_opportunity = len([loan for loan in loan_details if loan['loan_updated_status'] == 'lost opportunities'])
@@ -542,12 +542,24 @@ class mis_reports(mis_reportsTemplate):
             barmode='group'
         )
         self.plot_4.figure = fig
+      
+    def show_loans(self, loans):
+      """Method to show the loans list."""
+      self.data_grid_1.visible = True
+      self.display_loan_details(loans)  # Display loan details when showing loans
+      self.risk_level_label.visible = True
 
+    def hide_loans(self):
+        """Method to hide the loans list."""
+        self.data_grid_1.visible = False
+        self.risk_level_label.visible = False
+    
     def plot_4_click(self, points, **event_args):
         """This method is called when a data point is clicked."""
         if points:
             point = points[0]
             risk_level = point['x']
+            
             if risk_level == 'No Risk':
                 loans = self.no_risk_loans
             elif risk_level == 'Low Risk':
@@ -556,20 +568,16 @@ class mis_reports(mis_reportsTemplate):
                 loans = self.medium_risk_loans
             elif risk_level == 'High Risk':
                 loans = self.high_risk_loans
-              
-            # Toggle the loans list visibility based on the current selection
+            
             if self.selected_risk_level == risk_level:
                 # If the same risk level is clicked again, hide the loans list
-                self.hide_loans(loans)
+                self.hide_loans()
                 self.selected_risk_level = None
             else:
                 # If a different risk level is clicked, show the loans list
                 self.show_loans(loans)
                 self.selected_risk_level = risk_level
-            # Display loan details
-            self.display_loan_details(loans)
-            self.data_grid_1.visible = True
-            self.risk_level_label.visible = True
+
 
     def display_loan_details(self, loans):
         """Display loan details in the repeating panel"""
