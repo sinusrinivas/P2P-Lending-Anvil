@@ -234,6 +234,7 @@ unique_ids:
     admin.dashboard.customer_management.kyc_verification: HLDVU2KEUPOI3RJXW3VKZPIQGBBBU5A4
     lendor.dashboard.RowTemplate9: '1715159663259330073006305.8728'
     lendor.dashboard.view_lost_oppurtunities.ItemTemplate53: '1709713876840119677681353.71126'
+    admin.dashboard.accounting.mis_reports.eod_reports: '1719578585554829732701185.7445'
     admin.dashboard.manage_cms.add_lender_dropdown_details: '1706498596425173377770038.75598'
     borrower.dashboard.application_tracker.ItemTemplate69: OQQDVJLI45TJ4AP2IU5QCPHDZYDWG6HJ
     bank_users.user_form.user_form_copy: '1700712538416515803210372.55963'
@@ -355,6 +356,7 @@ unique_ids:
     lendor.dashboard.view_loan_foreclosure_Requests.ItemTemplate56: '1709797512187353599372144.2636'
     ? borrower.borrower_registration_forms.star_1_borrower_registration_form_2_employment.star_1_borrower_registration_form_2_employment_emp_detail_2
     : '1700037622301754064674185.6132'
+    admin.dashboard.accounting.mis_reports.eod_reports.RowTemplate69: '1719578620854488993035011.0145'
     admin.dashboard.loan_management.view_loans.rejected_loans: '1699528958889169021462649.09222'
     admin.dashboard.manage_settings.manage_credit_limit: '1718079980785105538971809.37022'
     lendor.dashboard.notification: '1703490554376987971542588.1244'

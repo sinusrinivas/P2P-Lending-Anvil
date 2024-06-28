@@ -940,6 +940,7 @@ class check_out(check_outTemplate):
                         lapsed_fee=lapsed_fee,
                         total_remaining_amount= round(remaining_amount,2),
                         total_platform_fee=total_extra_fee,
+                        lender_returns=round(i_r,2),
                         
                         
                     )
