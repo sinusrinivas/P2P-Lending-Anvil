@@ -245,6 +245,7 @@ class mis_reports(mis_reportsTemplate):
 
         self.aggregate_counts()
         self.initialize_plot()
+        self.selected_risk_level = None
 
     def update_labels(self):
         # Fetch the first row from the 'fin_platform_details' table
