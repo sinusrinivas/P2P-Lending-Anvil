@@ -120,7 +120,7 @@ components:
       type: Link
       layout_properties: {row: RHOAGV, width_xs: 4, col_xs: 8, grid_position: 'BCRPXA,UNBDGB'}
     - name: button_2
-      properties: {role: null, bold: false, align: center, spacing_above: small, background: '#0b2547', icon: 'fa:angle-double-left', underline: false, font: '', icon_align: left, foreground: 'theme:On Primary', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: Back}
+      properties: {role: null, bold: false, align: center, spacing_above: small, background: '#0b2547', icon: 'fa:backward', underline: false, font: '', icon_align: left, foreground: 'theme:On Primary', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: Back}
       type: Button
       layout_properties: {grid_position: 'IIDEAB,JRZZAN'}
       event_bindings: {click: button_2_click}
