@@ -135,9 +135,6 @@ class application_intake(application_intakeTemplate):
         # Display the graph in the Plot component
         self.plot_1.figure = fig
 
-
-
-
     def month_button_click_click(self, **event_args):
         """This method is called when the Month button is clicked"""
         self.display_loan_status_graph(time_period='month')
