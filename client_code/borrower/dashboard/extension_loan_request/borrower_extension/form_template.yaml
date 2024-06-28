@@ -125,7 +125,7 @@ components:
       type: Label
       layout_properties: {grid_position: 'CPMMWP,EXMXEH'}
   - type: Button
-    properties: {role: filled-button, bold: false, align: center, spacing_above: small, background: '#0b2547', icon: 'fa:angle-double-left', underline: false, font: '', icon_align: left, foreground: 'theme:On Primary', spacing_below: small, visible: false, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: Back}
+    properties: {role: filled-button, bold: false, align: center, spacing_above: small, background: '#0b2547', icon: 'fa:backward', underline: false, font: '', icon_align: left, foreground: 'theme:On Primary', spacing_below: small, visible: false, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: Back}
     name: button_1_copy
     layout_properties:
       col_widths: {}
@@ -139,14 +139,14 @@ components:
       grid_position: EWQSXE,SOWOUY
     event_bindings: {click: button_2_click}
   - type: Button
-    properties: {role: filled-button, bold: false, align: center, spacing_above: small, background: '#0b2547', icon: 'fa:angle-double-left', underline: false, font: '', icon_align: left, foreground: 'theme:On Primary', spacing_below: small, visible: false, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: Back}
+    properties: {role: filled-button, bold: false, align: center, spacing_above: small, background: '#0b2547', icon: 'fa:backward', underline: false, font: '', icon_align: left, foreground: 'theme:On Primary', spacing_below: small, visible: false, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: Back}
     name: button_1
     layout_properties:
       col_widths: {}
       grid_position: JEKRTE,WGLIEW
     event_bindings: {click: button_1_click}
   - name: button_s
-    properties: {text: Back, background: '#0b2547', foreground: 'theme:On Primary', role: filled-button, icon: 'fa:angle-double-left', visible: false}
+    properties: {text: Back, background: '#0b2547', foreground: 'theme:On Primary', role: filled-button, icon: 'fa:backward', visible: false}
     type: Button
     layout_properties: {grid_position: 'HIKEJU,RMLXLS', full_width_row: true}
     event_bindings: {click: button_s_click}

@@ -1,20 +1,29 @@
 container:
   type: ColumnPanel
-  properties: {col_widths: '{"TJAXKR":55,"CSQMPJ":5}'}
+  properties: {col_widths: '{}'}
 components:
 - name: home_button_admin_1
   properties: {}
   type: form:admin.dashboard.home_button_admin
   layout_properties: {grid_position: 'LJXGKG,XUBYGB', full_width_row: true}
-- name: label_1
-  properties: {align: center, text: Applications Received, bold: true, font_size: 20}
-  type: Label
-  layout_properties: {grid_position: 'LPSWCP,TJAXKR'}
-- name: drop_down_1
-  properties: {role: outlined}
-  type: DropDown
-  layout_properties: {grid_position: 'LPSWCP,CSQMPJ'}
-  event_bindings: {change: drop_down_1_change}
+- name: column_panel_3
+  properties: {col_widths: '{"CDSLMK":55,"TPJOZO":10}'}
+  type: ColumnPanel
+  layout_properties: {grid_position: 'UCYDFM,HACKKT', full_width_row: true}
+  components:
+  - name: label_1
+    properties: {align: center, text: '               Applications Received', bold: true, font_size: 20}
+    type: Label
+    layout_properties: {grid_position: 'CTUHOG,CDSLMK'}
+  - name: drop_down_1
+    properties: {role: outlined, font_size: 20}
+    type: DropDown
+    layout_properties: {grid_position: 'CTUHOG,TPJOZO'}
+    event_bindings: {change: drop_down_1_change}
+  - name: spacer_1
+    properties: {height: 12}
+    type: Spacer
+    layout_properties: {grid_position: 'SCXOTD,LWCYGW'}
 - name: column_panel_1
   properties: {col_widths: '{"VZFFLE":5,"EXIIAQ":37}'}
   type: ColumnPanel
@@ -45,7 +54,7 @@ components:
     - name: repeating_panel_1
       properties: {item_template: admin.dashboard.accounting.performance_tracker.applications_recieved.RowTemplate69}
       type: RepeatingPanel
-    layout_properties: {grid_position: 'TNAVNM,MABAHO'}
+    layout_properties: {grid_position: 'TNAVNM,MABAHO', full_width_row: true}
 - name: column_panel_2
   properties: {col_widths: '{"KZUZAP":10,"OBLKQM":50}'}
   type: ColumnPanel
@@ -76,7 +85,7 @@ components:
     - name: repeating_panel_2
       properties: {item_template: admin.dashboard.accounting.performance_tracker.applications_recieved.RowTemplate70}
       type: RepeatingPanel
-    layout_properties: {grid_position: 'UOCRSJ,JTDYMW'}
+    layout_properties: {grid_position: 'UOCRSJ,JTDYMW', full_width_row: true}
 - name: button_1
   properties: {text: Back, icon: 'fa:backward', background: '#05264d', foreground: white}
   type: Button

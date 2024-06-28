@@ -117,7 +117,7 @@ components:
     type: RepeatingPanel
     layout_properties: {grid_position: 'OXLBQQ,CGNAXH', full_width_row: true}
   - type: Button
-    properties: {role: null, bold: false, align: right, spacing_above: small, background: '#05264d', icon: 'fa:angle-double-left', underline: false, font: '', icon_align: left, foreground: 'theme:On Primary', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: Back}
+    properties: {role: null, bold: false, align: right, spacing_above: small, background: '#05264d', icon: 'fa:backward', underline: false, font: '', icon_align: left, foreground: 'theme:On Primary', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: Back}
     name: button_2
     layout_properties: {grid_position: 'ZJSLXK,WDKOQC'}
     event_bindings: {click: button_2_click}

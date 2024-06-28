@@ -118,7 +118,7 @@ class performance_tracker(performance_trackerTemplate):
 
   def link_6_click(self, **event_args):
       """This method is called when the link is clicked"""
-      open_form('admin.dashboard.accounting.')
+      open_form('admin.dashboard.accounting.performance_tracker.applications_recieved')
 
   def image_4_copy_mouse_up(self, x, y, button, **event_args):
       """This method is called when a mouse button is released on this component"""
@@ -142,7 +142,7 @@ class performance_tracker(performance_trackerTemplate):
 
   def button_3_click(self, **event_args):
         """This method is called when the button is clicked"""
-        pass
+        open_form('admin.dashboard.accounting.performance_tracker.applications_recieved')
 
   def button_4_click(self, **event_args):
     """This method is called when the button is clicked"""
@@ -151,6 +151,10 @@ class performance_tracker(performance_trackerTemplate):
   def image_1_copy_1_mouse_up(self, x, y, button, **event_args):
     """This method is called when a mouse button is released on this component"""
     open_form('admin.dashboard.accounting.performance_tracker.product_performance_chart')
+
+  def image_4_copy_3_copy_mouse_up(self, x, y, button, **event_args):
+    """This method is called when a mouse button is released on this component"""
+    open_form('admin.dashboard.accounting.performance_tracker.applications_recieved')
 
 
 
