@@ -75,7 +75,7 @@ class lender_revenue_share(lender_revenue_shareTemplate):
     self.load_loan_data()
 
   def load_loan_data(self):
-    loans = app_tables.fin_loan_details.search(loan_updated_status= q.any_of(q.like('closed loan'),q.like('foreclosure'),q.like('extension'),q.like('disbursed loan')),lender_customer_id=self.customer_id)
+    loans = app_tables.fin_loan_details.search(loan_updated_status= q.any_of(q.like('closed loan'),q.like('foreclosure'),q.like('extension'),q.like('disbursed')),lender_customer_id=self.customer_id)
 
     # Fetch loans based on desired statuses and customer_id
     # loans = app_tables.fin_loan_details.search(
