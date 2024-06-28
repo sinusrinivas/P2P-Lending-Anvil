@@ -69,6 +69,9 @@ class application_intake(application_intakeTemplate):
             if status is not None:
                 total_status_count += 1
     
+        # Initialize the graph_title with a default value
+        graph_title = 'Loan Status Count'
+    
         # Count statuses by the specified time period
         for loan in loans:
             status = loan['loan_updated_status']
@@ -131,6 +134,7 @@ class application_intake(application_intakeTemplate):
     
         # Display the graph in the Plot component
         self.plot_1.figure = fig
+
 
 
 
