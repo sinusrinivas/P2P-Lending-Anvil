@@ -29,7 +29,7 @@ class borrower_view_profile(borrower_view_profileTemplate):
     self.load_user_profile()
     self.disable_company_employment_fields()
 
-    
+    # self.get = get_customer_id_value
 
     # Any code you write here will run before the form opens.
   def load_user_profile(self):
@@ -450,7 +450,7 @@ class borrower_view_profile(borrower_view_profileTemplate):
         if photo:
             user_profile["pan_photo"] = photo
 
-    ascend_value = anvil.server.call('final_points_update_ascend_table', self.get)
+    ascend_value = anvil.server.call('final_points_update_ascend_table', self.user_id)
     if ascend_value is not None:
       user_profile['ascend_value'] = float(ascend_value)
       user_profile.update()
