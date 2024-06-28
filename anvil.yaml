@@ -460,6 +460,9 @@ db_schema:
     - name: total_platform_fee
       admin_ui: {width: 200, order: 10.96875}
       type: number
+    - name: lender_returns
+      admin_ui: {width: 200, order: 9.5}
+      type: number
   fin_guarantor_details:
     client: full
     server: full
