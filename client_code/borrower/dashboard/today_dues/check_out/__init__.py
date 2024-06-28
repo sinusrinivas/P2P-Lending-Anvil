@@ -938,7 +938,8 @@ class check_out(check_outTemplate):
                         npa_fee=npa,
                         default_fee=default_fee,
                         lapsed_fee=lapsed_fee,
-                        total_remaining_amount= round(remaining_amount,2)
+                        total_remaining_amount= round(remaining_amount,2),
+                        total_platform_fee=total_extra_fee,
                         
                         
                     )
