@@ -42,7 +42,7 @@ class defaulters(defaultersTemplate):
                     'borrower_full_name': user_profile['full_name'] if user_profile else None,
                     'borrower_email_id': user_profile['email_user'] if user_profile else None,
                     'mobile_no': mobile_no,
-                    'default_fee': 'Failure to Repay'
+                    'default_fee': 'Defaulter'
                     # 'default_fee': emi['default_fee']
                 })
                 unique_loans.add(loan_id)  # Mark this loan ID as added
