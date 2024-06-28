@@ -68,7 +68,7 @@ components:
     data_bindings:
     - {property: text, code: 'self.item[''ascend_score'']', writeback: false}
   - name: label_3
-    properties: {role: null, bold: false, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: grey, spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: '--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------'}
+    properties: {role: null, bold: false, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: grey, spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: '---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------'}
     type: Label
     layout_properties: {x: 3.050018310546875, y: 87.1500244140625, width: 938.4}
   - type: TextArea
