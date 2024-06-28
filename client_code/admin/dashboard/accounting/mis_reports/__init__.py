@@ -266,28 +266,27 @@ class mis_reports(mis_reportsTemplate):
     #         self.link_1.text = sum(lender['return_on_investment'] for lender in app_tables.fin_lender.search())
 
     def update_labels(self):
-    # Fetch the first row from the 'fin_platform_details' table
-    platform_data = app_tables.fin_platform_details.search()
-    
-    # Convert to list and access the first item
-    platform_data_list = list(platform_data)
-    
-    if platform_data_list:
-        first_row = platform_data_list[0]
-        self.label_4.text = first_row['total_lenders']
-        self.label_6.text = first_row['total_borrowers']
-        self.label_10.text = first_row['total_borrowers_loan_taken']
-        self.label_14.text = first_row['most_used_product']
-        self.label_12.text = first_row['total_products_count']
-        self.label_8.text = first_row['total_lenders_invested']
-        self.label_16.text = first_row['platform_returns']
+        # Fetch the first row from the 'fin_platform_details' table
+        platform_data = app_tables.fin_platform_details.search()
         
-        # Calculate sum of return_on_investment for all lenders
-        total_roi = sum(lender['return_on_investment'] or 0 for lender in app_tables.fin_lender.search())
-        self.link_1.text = f"Rs {total_roi}"  # Assuming link_1 is where you display the total ROI
-    else:
-        # Handle case where platform_data_list is empty or platform_data is None
-        pass  # You can log an error or handle this case as per your application's requirements
+        # Convert to list and access the first item
+        platform_data_list = list(platform_data)
+        
+        if platform_data_list:
+            first_row = platform_data_list[0]
+            self.label_4.text = first_row['total_lenders']
+            self.label_6.text = first_row['total_borrowers']
+            self.label_10.text = first_row['total_borrowers_loan_taken']
+            self.label_14.text = first_row['most_used_product']
+            self.label_12.text = first_row['total_products_count']
+            self.label_8.text = first_row['total_lenders_invested']
+            self.label_16.text = first_row['platform_returns']
+            
+            # Calculate sum of return_on_investment for all lenders
+            total_roi = sum(lender['return_on_investment'] or 0 for lender in app_tables.fin_lender.search())
+            self.link_1.text = f"Rs {total_roi}"  # Assuming link_1 is where you display the total ROI
+        else:
+        
 
   
     def plot_data(self):
