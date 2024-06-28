@@ -556,7 +556,16 @@ class mis_reports(mis_reportsTemplate):
                 loans = self.medium_risk_loans
             elif risk_level == 'High Risk':
                 loans = self.high_risk_loans
-
+              
+            # Toggle the loans list visibility based on the current selection
+            if self.selected_risk_level == risk_level:
+                # If the same risk level is clicked again, hide the loans list
+                self.hide_loans(loans)
+                self.selected_risk_level = None
+            else:
+                # If a different risk level is clicked, show the loans list
+                self.show_loans(loans)
+                self.selected_risk_level = risk_level
             # Display loan details
             self.display_loan_details(loans)
             self.data_grid_1.visible = True
