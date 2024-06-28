@@ -16,7 +16,6 @@ class foreclosure(foreclosureTemplate):
         # Any code you write here will run before the form opens.
         self.load_foreclosure_data()
 
-  
     def load_foreclosure_data(self):
         # Fetch data from the fin_loan_details table where loan_updated_status is 'foreclosure'
         loan_details = app_tables.fin_loan_details.search(loan_updated_status="foreclosure")
