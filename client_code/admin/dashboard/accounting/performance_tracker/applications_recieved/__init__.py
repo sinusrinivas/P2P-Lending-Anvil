@@ -127,8 +127,12 @@ class applications_recieved(applications_recievedTemplate):
       pass
 
   def update_monthly_panel(self):
-        # Your implementation for updating the monthly panel
-        pass
+      # Your implementation for updating the monthly panel
+      pass
+
+  def button_1_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    open_form('admin.dashboard.accounting.performance_tracker')
 
               
 

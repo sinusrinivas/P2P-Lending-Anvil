@@ -118,7 +118,7 @@ class performance_tracker(performance_trackerTemplate):
 
   def link_6_click(self, **event_args):
       """This method is called when the link is clicked"""
-      pass
+      open_form('admin.dashboard.accounting.')
 
   def image_4_copy_mouse_up(self, x, y, button, **event_args):
       """This method is called when a mouse button is released on this component"""
