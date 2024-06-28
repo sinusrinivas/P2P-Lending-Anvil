@@ -69,6 +69,8 @@ components:
     type: DatePicker
     layout_properties: {grid_position: 'YVRLRC,OBLKQM'}
     event_bindings: {change: date_picker_2_change}
+    data_bindings:
+    - {property: format, code: 'self.item['''']', writeback: false}
   - name: data_grid_2
     properties:
       columns:
