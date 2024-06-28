@@ -16,7 +16,7 @@ services:
 - source: /runtime/services/anvil/secrets.yml
   client_config: {}
   server_config: {}
-startup: {type: form, module: admin.dashboard}
+startup: {type: form, module: bank_users.main_form}
 package_name: pip_install_reportlab
 allow_embedding: false
 name: P2P Lending App clone 25/06/2024
@@ -435,9 +435,6 @@ db_schema:
       type: number
     - name: remaining_tenure
       admin_ui: {width: 200, order: 6.125}
-      type: number
-    - name: part_lender_returns
-      admin_ui: {width: 200, order: 17}
       type: number
     - name: part_remaining_amount
       admin_ui: {width: 200, order: 18}
@@ -1013,6 +1010,23 @@ db_schema:
       admin_ui: {width: 200, order: 0}
       type: string
     title: fin_borrower_marrital_status
+  fin_eod_reports:
+    client: full
+    server: full
+    columns:
+    - name: date
+      admin_ui: {width: 200, order: 0}
+      type: date
+    - name: total_amount_received
+      admin_ui: {width: 200, order: 1}
+      type: number
+    - name: total_platform_share
+      admin_ui: {width: 200, order: 2}
+      type: number
+    - name: total_lender_share
+      admin_ui: {width: 200, order: 3}
+      type: number
+    title: fin_eod_reports
   fin_approval_days:
     client: full
     server: full
@@ -1837,3 +1851,10 @@ secrets:
     value: {LKJSUIQBLUZBMSE6: ''}
 uplink_visible: true
 renamed: true
+scheduled_tasks:
+- task_name: update_eod_report_1
+  time_spec:
+    n: 1
+    every: minute
+    at: {}
+  job_id: ENFJOUKU
