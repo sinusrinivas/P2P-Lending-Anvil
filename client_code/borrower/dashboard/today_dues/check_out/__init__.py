@@ -606,7 +606,7 @@ class check_out(check_outTemplate):
       
           self.emi_amount_label.text = "{:.2f}".format(foreclosure_emi_amount)
           self.extension_amount_label.text = "{:.2f}".format(foreclosure_amount)
-          self.total_emi_amount_label.text = "{:.2f}".format(total_due_amount + foreclosure_amount)
+          self.total_emi_amount_label.text = "{:.2f}".format(total_due_amount)
           self.total_emi_amount_label.visible = True
           self.label_3.visible = True
 
@@ -789,7 +789,7 @@ class check_out(check_outTemplate):
 
        # extra_amount = float(self.extension_amount_label.text)
         extra_fee = lapsed_fee + default_fee + extra_amount + npa
-        total_extra_fee = lapsed_fee + default_fee + extra_amount + processing_fee
+        total_extra_fee = lapsed_fee + default_fee + extra_amount + processing_fee + npa
       
         # total_emi_amount = float(self.total_emi_amount_label.text)  # Fetch total EMI amount including extra payment
         borrower_wallet = app_tables.fin_wallet.get(customer_id=self.user_id)
@@ -938,7 +938,8 @@ class check_out(check_outTemplate):
                         npa_fee=npa,
                         default_fee=default_fee,
                         lapsed_fee=lapsed_fee,
-                        total_remaining_amount= round(remaining_amount,2)
+                        total_remaining_amount= round(remaining_amount,2),
+                        total_platform_fee=total_extra_fee,
                         
                         
                     )

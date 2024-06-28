@@ -457,6 +457,9 @@ db_schema:
     - name: total_remaining_amount
       admin_ui: {width: 200}
       type: number
+    - name: total_platform_fee
+      admin_ui: {width: 200, order: 10.96875}
+      type: number
   fin_guarantor_details:
     client: full
     server: full
@@ -967,13 +970,13 @@ db_schema:
       type: number
     title: fin_extends_loan
   fin_borrower_subcategory_loan_issue:
+    title: fin_borrower_subcategory_loan_issue
     client: full
     server: full
     columns:
     - name: borrower_subcategory_loan_issue
-      admin_ui: {order: 0, width: 280}
+      admin_ui: {width: 280}
       type: string
-    title: fin_borrower_subcategory_loan_issue
   fin_issue_category:
     client: full
     server: full

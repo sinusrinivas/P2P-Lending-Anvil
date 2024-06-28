@@ -308,7 +308,7 @@ class mis_reports(mis_reportsTemplate):
             title={
                 'text': 'Financial Loan Details',
                 'font': {
-                    'size': 24,
+                    'size': 20,
                     'color': 'black',
                     'family': 'Arial',
                     'bold': True
