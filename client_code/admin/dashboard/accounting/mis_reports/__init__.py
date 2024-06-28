@@ -272,8 +272,8 @@ class mis_reports(mis_reportsTemplate):
         users = app_tables.fin_user_profile.search(usertype=q.any_of('lender', 'borrower'))
     
         # Calculate metrics
-        no_of_loans_disbursed = len([loan for loan in loan_details if loan['loan_updated_status'] == 'disbursed loan'])
-        no_of_loans_closed = len([loan for loan in loan_details if loan['loan_updated_status'] == 'closed loan'])
+        no_of_loans_disbursed = len([loan for loan in loan_details if loan['loan_updated_status'] == 'disbursed'])
+        no_of_loans_closed = len([loan for loan in loan_details if loan['loan_updated_status'] == 'closed'])
         no_of_loans_rejected = len([loan for loan in loan_details if loan['loan_updated_status'] == 'rejected'])
         lender_share = sum([loan['lender_returns'] for loan in loan_details])
         no_of_borrowers = len([user for user in users if user['usertype'] == 'borrower'])
