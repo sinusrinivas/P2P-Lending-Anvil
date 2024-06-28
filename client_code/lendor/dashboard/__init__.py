@@ -34,8 +34,14 @@ class dashboard(dashboardTemplate):
                           q.like('under process')))
     self.label_9.text = str(len(existing_loans) or 0)
 
+    # investment = app_tables.fin_lender.get(customer_id=self.user_id)
     investment = app_tables.fin_lender.get(customer_id=self.user_id)
-    self.label_3.text = investment['present_commitments'] or 0
+    if investment is not None:
+        self.label_3.text = investment['present_commitments'] or 0
+        # Continue with other attributes
+    else:
+        self.label_3.text = "No data"  # or handle as appropriate
+    # self.label_3.text = investment['present_commitments'] or 0
     self.label_13.text = str(investment['membership'])
     self.label_15.text = str(investment['member_since'])
 
