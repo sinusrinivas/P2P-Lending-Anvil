@@ -282,7 +282,7 @@ class borrower_view_profile(borrower_view_profileTemplate):
         "State": self.state_tx.text,
         "Present Address": self.present_addres_dropdown.selected_value,
         "Street Address 1": self.address_1_tx.text,
-        "Street Address 2": self.address_2_tx.text,
+        # "Street Address 2": self.address_2_tx.text,
         "Duration at Address": self.how_long_drop_down.selected_value,
         "Pincode": self.pincode_tx.text,
         # "Age": self.age_tx.text,
