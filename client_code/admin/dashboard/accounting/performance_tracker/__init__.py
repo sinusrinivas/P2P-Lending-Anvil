@@ -21,7 +21,7 @@ class performance_tracker(performance_trackerTemplate):
     opened_count = len([record for record in self.data if record['loan_updated_status'] in ['disbursed', 'extension' , 'foreclosure']])
     closed_count = len([record for record in self.data if record['loan_updated_status'] == 'closed'])
     under_process = len([record for record in self.data if record['loan_updated_status'] == 'under process'])
-    loan_updated_status_count = len([record for record in self.data if record['loan_updated_status']])
+
 
             
 
@@ -31,7 +31,7 @@ class performance_tracker(performance_trackerTemplate):
     self.label_14.text = str(opened_count)
     self.label_12.text = str(closed_count)
     self.label_13.text = str(under_process)
-    self.label_4.text = str(loan_updated_status_count)
+    self.label_4.text = str(under_process)
 
   # Search product details
     self.data = tables.app_tables.fin_product_details.search()
