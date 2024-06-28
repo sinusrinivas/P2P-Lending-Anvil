@@ -16,8 +16,7 @@ class due_date(due_dateTemplate):
       self.due_date_data()
 
     def due_date_data(self):
-        # Fetch data from the fin_emi_table where default_fee is greater than or equal to 3
-        emi_details = app_tables.fin_emi_table.search(default_fee=q.greater_than_or_equal_to(3))
+        emi_details = app_tables.fin_emi_table.search(days_left=q.greater_than_or_equal_to(2))
         
         loan_emi_count = {}
         
@@ -43,7 +42,7 @@ class due_date(due_dateTemplate):
                     'borrower_full_name': user_profile['full_name'] if user_profile else None,
                     'borrower_email_id': user_profile['email_user'] if user_profile else None,
                     'mobile_no': mobile_no,
-                    'days_left': emi['days_left']
+                    'days_left': 'Late Payment'
                     # 'days_left': emi['days_left']
                 })
                 unique_loans.add(loan_id)  # Mark this loan ID as added

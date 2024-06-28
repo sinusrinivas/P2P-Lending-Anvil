@@ -16,12 +16,12 @@ components:
 - name: data_grid_1
   properties:
     columns:
-    - {id: JKSDUP, title: Borrower Customer ID, data_key: column_1, width: 153, expand: false}
+    - {id: JKSDUP, title: Borrower Customer ID, data_key: column_1, width: 154.79998779296875, expand: false}
     - {id: VJQQOR, title: Loan ID, data_key: column_2, width: 137.60000610351562, expand: false}
     - {id: OJLQEN, title: Borrower Full Name, data_key: column_3, width: 173.79998779296875, expand: false}
-    - {id: DZCEOC, data_key: column_4, title: Mobile No, width: 151.79998779296875, expand: false}
-    - {id: ZMQASZ, data_key: column_5, title: Email ID, width: 244.79998779296875, expand: false}
-    - {id: HMLYYJ, data_key: column_6, title: Days Left}
+    - {id: DZCEOC, data_key: column_4, title: Mobile No, width: 134.199951171875, expand: false}
+    - {id: ZMQASZ, data_key: column_5, title: Email ID, width: 220, expand: false}
+    - {id: HMLYYJ, data_key: column_6, title: Payment Status}
     role: tonal-data-grid
     show_page_controls: false
   type: DataGrid

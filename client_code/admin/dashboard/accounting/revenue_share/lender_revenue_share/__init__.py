@@ -124,7 +124,7 @@ class lender_revenue_share(lender_revenue_shareTemplate):
   def calculate_total_extra_fee(self, loan_id):
     # Fetch all records from fin_emi table based on loan_id and sum the extra_fee
     emis = app_tables.fin_emi_table.search(loan_id=loan_id)
-    total_extra_fee = sum(emi['extra_fee'] or 0 for emi in emis)  # Ensure extra_fee is not None
+    total_extra_fee = sum(emi['total_platform_fee'] or 0 for emi in emis)  # Ensure extra_fee is not None
     return total_extra_fee
 
   def button_1_click(self, **event_args):
