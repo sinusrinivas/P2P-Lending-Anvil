@@ -66,4 +66,8 @@ class regulatory_compliance(regulatory_complianceTemplate):
             self.label_2.visible = True
             self.label_1.visible = False
 
+    def back_button_click(self, **event_args):
+      """This method is called when the button is clicked"""
+      open_form('admin.dashboard.security_and_compliance')
+
 

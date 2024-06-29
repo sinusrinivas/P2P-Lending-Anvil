@@ -1,4 +1,4 @@
-from ._anvil_designer import access_managementTemplate
+from ._anvil_designer import payment_gateway_integrationTemplate
 from anvil import *
 import anvil.server
 import anvil.google.auth, anvil.google.drive
@@ -9,7 +9,7 @@ import anvil.tables.query as q
 from anvil.tables import app_tables
 
 
-class access_management(access_managementTemplate):
+class payment_gateway_integration(payment_gateway_integrationTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
@@ -18,4 +18,4 @@ class access_management(access_managementTemplate):
 
   def button_1_click(self, **event_args):
     """This method is called when the button is clicked"""
-    open_form('admin.dashboard.security_and_compliance')
+    open_form('admin.dashboard.integration')
