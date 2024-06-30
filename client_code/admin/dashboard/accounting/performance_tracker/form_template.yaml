@@ -153,6 +153,7 @@ components:
       properties: {source: _/theme/admin/dashboard/performance_tracker/assigned-application.png, display_mode: shrink_to_fit, height: '100'}
       type: Image
       layout_properties: {grid_position: 'QGZTNW,PVJEPO'}
+      event_bindings: {mouse_up: image_4_copy_3_copy_mouse_up}
     - name: button_3
       properties:
         text: "Total applications \nassigned "

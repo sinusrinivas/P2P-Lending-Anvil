@@ -16,7 +16,7 @@ services:
 - source: /runtime/services/anvil/secrets.yml
   client_config: {}
   server_config: {}
-startup: {type: form, module: admin.dashboard}
+startup: {type: form, module: bank_users.main_form}
 package_name: pip_install_reportlab
 allow_embedding: false
 name: P2P Lending App clone 25/06/2024
@@ -436,9 +436,6 @@ db_schema:
     - name: remaining_tenure
       admin_ui: {width: 200, order: 6.125}
       type: number
-    - name: part_lender_returns
-      admin_ui: {width: 200, order: 17}
-      type: number
     - name: part_remaining_amount
       admin_ui: {width: 200, order: 18}
       type: number
@@ -455,6 +452,15 @@ db_schema:
       admin_ui: {width: 200}
       type: number
     - name: total_remaining_amount
+      admin_ui: {width: 200}
+      type: number
+    - name: total_platform_fee
+      admin_ui: {width: 200, order: 10.96875}
+      type: number
+    - name: lender_returns
+      admin_ui: {width: 200, order: 9.5}
+      type: number
+    - name: part_lender_returns
       admin_ui: {width: 200}
       type: number
   fin_guarantor_details:
@@ -823,32 +829,6 @@ db_schema:
       admin_ui: {order: 0, width: 200}
       type: string
     title: fin_gender
-  fin_platform_fees:
-    title: fin_platform_fees
-    client: full
-    server: full
-    columns:
-    - name: platform_returns
-      admin_ui: {width: 200}
-      type: number
-    - name: most_used_product
-      admin_ui: {width: 200}
-      type: string
-    - name: total_borrowers
-      admin_ui: {width: 200}
-      type: number
-    - name: total_borrowers_loan_taken
-      admin_ui: {width: 250}
-      type: number
-    - name: total_lenders
-      admin_ui: {width: 200}
-      type: number
-    - name: total_lenders_invested
-      admin_ui: {width: 200}
-      type: number
-    - name: total_products_count
-      admin_ui: {width: 200}
-      type: number
   fin_lender_spouse_profession:
     title: fin_lender_spouse_profession
     client: full
@@ -1001,6 +981,14 @@ db_schema:
       admin_ui: {width: 200, order: 10.5}
       type: number
     title: fin_extends_loan
+  fin_borrower_subcategory_loan_issue:
+    title: fin_borrower_subcategory_loan_issue
+    client: full
+    server: full
+    columns:
+    - name: borrower_subcategory_loan_issue
+      admin_ui: {width: 280}
+      type: string
   fin_issue_category:
     client: full
     server: full
@@ -1025,6 +1013,23 @@ db_schema:
       admin_ui: {width: 200, order: 0}
       type: string
     title: fin_borrower_marrital_status
+  fin_eod_reports:
+    client: full
+    server: full
+    columns:
+    - name: date
+      admin_ui: {width: 200, order: 0}
+      type: date
+    - name: total_amount_received
+      admin_ui: {width: 200, order: 1}
+      type: number
+    - name: total_platform_share
+      admin_ui: {width: 200, order: 2}
+      type: number
+    - name: total_lender_share
+      admin_ui: {width: 200, order: 3}
+      type: number
+    title: fin_eod_reports
   fin_approval_days:
     client: full
     server: full
@@ -1849,3 +1854,10 @@ secrets:
     value: {LKJSUIQBLUZBMSE6: ''}
 uplink_visible: true
 renamed: true
+scheduled_tasks:
+- task_name: update_eod_report_1
+  time_spec:
+    n: 1
+    every: minute
+    at: {}
+  job_id: ENFJOUKU
