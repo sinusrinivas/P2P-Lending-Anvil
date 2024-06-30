@@ -21,7 +21,7 @@ components:
     - {id: OJLQEN, title: Borrower Full Name, data_key: column_3, width: 154.39996337890625, expand: false}
     - {id: UWECMD, data_key: column_4, title: Mobile No, width: 120, expand: false}
     - {id: NFTURO, data_key: column_5, title: Email ID}
-    - {id: BHCAGF, data_key: column_1, title: Default Fee}
+    - {id: BHCAGF, data_key: column_1, title: Payment Status}
     role: tonal-data-grid
     show_page_controls: false
   type: DataGrid
