@@ -46,8 +46,8 @@ class lender_commitments_chart(lender_commitments_chartTemplate):
     fig.update_layout(
       title_text="Lender Commitments",
       annotations=[
-        dict(text=f'Total Commitments\n{lender_total_commitments}', x=0.82, y=0.5, font_size=12, showarrow=False),
-        dict(text=f'Present Commitments\n{present_commitments}', x=0.18, y=0.5, font_size=12, showarrow=False)
+        dict(text='Total Commitments', x=0.82, y=0.5, font_size=12, showarrow=False),
+        dict(text='Present Commitments', x=0.18, y=0.5, font_size=12, showarrow=False)
       ]
     )
     
