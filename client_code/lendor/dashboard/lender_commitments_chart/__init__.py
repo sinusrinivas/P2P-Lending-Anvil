@@ -22,15 +22,14 @@ class lender_commitments_chart(lender_commitments_chartTemplate):
     # Fetch email and userId from main_form_module
     self.email = main_form_module.email
     print(self.email)
-    self.id = main_form_module.userId
+    self.user_id = main_form_module.userId
     
     # Create the charts
-    self.create_bar_chart()
     self.create_pie_chart()
 
   def create_pie_chart(self):
     # Fetch data from the fin_lnder table
-    lender_data = app_tables.fin_lnder.search()
+    lender_data = app_tables.fin_lender.search(customer_id=self.user_id)
     
     # Calculate total commitments and present commitments
     lender_total_commitments = sum(row['lender_total_commitments'] for row in lender_data)
@@ -46,11 +45,14 @@ class lender_commitments_chart(lender_commitments_chartTemplate):
     # Update the layout of the chart
     fig.update_layout(
       title_text="Lender Commitments",
-      annotations=[dict(text='Commitments', x=0.5, y=0.5, font_size=20, showarrow=False)]
+      annotations=[
+        dict(text=f'Total Commitments\n{lender_total_commitments}', x=0.82, y=0.5, font_size=12, showarrow=False),
+        dict(text=f'Present Commitments\n{present_commitments}', x=0.18, y=0.5, font_size=12, showarrow=False)
+      ]
     )
     
     # Display the chart in the form
-    self.plot_1.plotly_chart(fig)
+    self.plot_1.figure = fig
 
 # You can remove or comment out this part if it was auto-generated and you don't use it
 # The rest of your code should remain unchanged
