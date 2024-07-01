@@ -45,11 +45,6 @@ components:
     layout_properties: {}
     event_bindings: {click: wallet_dashboard_link_click}
     data_bindings: []
-- name: button_1
-  properties: {text: Back, align: right, background: '#05264d', foreground: white, icon: 'fa:backward'}
-  type: Button
-  layout_properties: {grid_position: 'XHMDLE,SAEVHA', full_width_row: true}
-  event_bindings: {click: button_1_click}
 - name: label_1
   properties: {text: Balance, bold: true, font: a, font_size: 24}
   type: Label

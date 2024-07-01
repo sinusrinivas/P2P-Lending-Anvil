@@ -4,11 +4,20 @@ components:
   properties: {}
   type: form:admin.dashboard.home_button_admin
   layout_properties: {grid_position: 'NPEZCL,TDNDHW', full_width_row: true}
+- name: back_button
+  properties: {role: outlined-button, bold: true, align: right, spacing_above: small, background: '#05264d', icon: 'fa:backward', underline: false, font: '', icon_align: left, foreground: white, spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: Back}
+  type: Button
+  layout_properties: {grid_position: 'RYUMIM,YZFCFF', full_width_row: true}
+  event_bindings: {click: back_button_click}
 - name: content
   properties: {col_widths: '{"OFZDDK":55,"YYXOES":50,"VHZVDS":10}', background: white, role: null, visible: true}
   type: ColumnPanel
   layout_properties: {grid_position: 'JDMCUY,LHNVBC', full_width_row: true}
   components:
+  - name: spacer_1
+    properties: {height: 32}
+    type: Spacer
+    layout_properties: {grid_position: 'UNVAHX,HWVYTW', full_width_row: true}
   - name: label_1_copy
     properties: {text: Security Compliance, align: center, bold: true, font_size: 30, background: '#ADC4CE', role: outlined-card}
     type: Label
@@ -65,5 +74,5 @@ components:
     - name: repeating_panel_unverified
       properties: {item_template: admin.dashboard.security_and_compliance.regulatory_compliance.RowTemplate63}
       type: RepeatingPanel
-    layout_properties: {grid_position: 'RTRDVB,BXRZBX', full_width_row: true}
+    layout_properties: {grid_position: 'LGPIBD,SPMVQX', full_width_row: true}
 is_package: true
