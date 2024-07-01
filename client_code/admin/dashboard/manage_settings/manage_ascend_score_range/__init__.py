@@ -267,12 +267,6 @@ class manage_ascend_score_range(manage_ascend_score_rangeTemplate):
     self.disable_save_button(ascend_category)
     self.enable_edit_button(ascend_category)
     self.disable_text_boxes(ascend_category)
-    
-  def button_1_click(self, **event_args):
-    """This method is called when the button is clicked"""
-    self.home_button_admin_1.visible = False
-    for ascend_category in ['VeryGood', 'Good', 'Average', 'Bad']:
-        self.edit_ascend_score_range(ascend_category)   
 
   def edit_ascend_score_range(self, ascend_category):
     print("Editing ascend score range for:", ascend_category)
@@ -282,13 +276,21 @@ class manage_ascend_score_range(manage_ascend_score_rangeTemplate):
     self.disable_edit_button(ascend_category)
     self.enable_save_button(ascend_category)
 
-  def button_2_click(self, **event_args):
-    """This method is called when the button is clicked"""
-    for ascend_category in ['VeryGood', 'Good', 'Average', 'Bad']:
-        self.save_ascend_score_range(ascend_category)
-    open_form('admin.dashboard.manage_settings.manage_ascend_score_range')
 
   def button_3_copy_click(self, **event_args):
     """This method is called when the button is clicked"""
     open_form('admin.dashboard.manage_settings')
+
+  def button_3_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    self.home_button_admin_1.visible = False
+    for ascend_category in ['VeryGood', 'Good', 'Average', 'Bad']:
+        self.edit_ascend_score_range(ascend_category)
+
+  def button_1_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    for ascend_category in ['VeryGood', 'Good', 'Average', 'Bad']:
+        self.save_ascend_score_range(ascend_category)
+    open_form('admin.dashboard.manage_settings.manage_ascend_score_range')
+    
 
