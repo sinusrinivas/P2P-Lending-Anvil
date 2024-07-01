@@ -21,6 +21,7 @@ class editing_detabase_details(editing_detabase_detailsTemplate):
         borrower_profile = app_tables.fin_user_profile.get(customer_id=loan['borrower_customer_id'])
         lender_profile = app_tables.fin_user_profile.get(customer_id=loan['lender_customer_id'])
         if borrower_profile is not None and lender_profile is not None:
+            loan_disbursed_date = loan['loan_disbursed_timestamp'].date() if loan['loan_disbursed_timestamp'] else None
             self.result.append({
                 'loan_id': loan['loan_id'],
                 'customer_id': loan['borrower_customer_id'],
@@ -32,14 +33,15 @@ class editing_detabase_details(editing_detabase_detailsTemplate):
                 'interest_rate': loan['interest_rate'],
                 'tenure': loan['tenure'],
                 'loan_amount': loan['loan_amount'],
-                'lender_timestamp': loan['lender_accepted_timestamp'],
+                'first_emi_payment_due_date': loan['first_emi_payment_due_date'],
                 'borrower_mobile': borrower_profile['mobile'],  # Include additional profile details here
                 'lender_mobile': lender_profile['mobile']  ,
                 'product_name':loan['product_name'],
                 'product_description':loan['product_description'],
-                'loan_disbursed_timestamp':loan['loan_disbursed_timestamp'],
+                'loan_disbursed_timestamp': loan_disbursed_date,
                 'borrower_photo':borrower_profile['user_photo'],
-                'lender_photo':lender_profile['user_photo']
+                'lender_photo':lender_profile['user_photo'],
+              
             })
 
     if not self.result:

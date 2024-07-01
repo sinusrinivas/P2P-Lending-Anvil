@@ -16,16 +16,20 @@ components:
   properties:
     columns:
     - {id: JKSDUP, title: Loan id, data_key: column_1}
-    - {id: VJQQOR, title: First Emi Date, data_key: column_2}
-    - {id: OJLQEN, title: Updated Status, data_key: column_3}
-    - {id: NNUANN, data_key: column_1, title: Edit Details}
+    - {id: VJQQOR, title: Borrower Name, data_key: column_2}
+    - {id: OJLQEN, title: Product Name, data_key: column_3}
+    - {id: NNUANN, data_key: column_1, title: Updated Status}
+    - {id: YYMYOY, data_key: column_1, title: Disbursed date}
+    - {id: OIMIZA, data_key: column_2, title: First Emi Date}
+    - {id: NCNXNH, data_key: column_3, title: ''}
+    - {id: DTAUMF, data_key: column_4, title: ''}
     role: tonal-data-grid
   type: DataGrid
   components:
   - name: repeating_panel_1
     properties: {item_template: admin.dashboard.loan_management.editing_detabase_details.RowTemplate66}
     type: RepeatingPanel
-  layout_properties: {grid_position: 'BDUZLK,UELFSZ'}
+  layout_properties: {grid_position: 'BDUZLK,UELFSZ', full_width_row: true}
 - name: button_1_copy_3
   properties: {role: elevated-button, bold: true, align: center, spacing_above: small, background: '#05264d', icon: 'fa:backward', underline: false, font: '16', icon_align: left, foreground: 'theme:On Primary', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: Back}
   type: Button
