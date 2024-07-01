@@ -301,17 +301,36 @@ components:
       type: Label
       layout_properties: {grid_position: 'BYBCEN,ISZLJC'}
     - name: column_panel_3
-      properties: {}
+      properties: {col_widths: '{"ZNHDYQ":20,"PBHBJH":15,"NRTAHK":15,"KRYFTV":10}'}
       type: ColumnPanel
       layout_properties: {grid_position: 'BYBCEN,APHHWE'}
       components:
       - name: business
-        properties: {role: null, bold: false, align: full, spacing_above: small, background: '#939191', icon: '', underline: false, font: '', icon_align: left, foreground: 'theme:On Primary', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: 16, tooltip: '', text: Business}
+        properties: {role: null, bold: false, align: full, spacing_above: small, background: '#939191', icon: '', underline: false, font: '', icon_align: left, foreground: 'theme:On Primary', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: 16, tooltip: '', text: Self Employment}
         type: Button
         layout_properties: {grid_position: 'UNLDSP,ZNHDYQ'}
         event_bindings: {click: business_click}
       - name: student
-        properties: {role: null, bold: false, align: full, spacing_above: small, background: '#939191', icon: '', underline: false, font: '', icon_align: left, foreground: 'theme:On Primary', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: 16, tooltip: '', text: Student}
+        properties:
+          role: null
+          bold: false
+          align: full
+          spacing_above: small
+          background: '#939191'
+          icon: ''
+          underline: false
+          font: ''
+          icon_align: left
+          foreground: theme:On Primary
+          spacing_below: small
+          visible: true
+          border: ''
+          italic: false
+          enabled: true
+          font_size: 16
+          tooltip: ''
+          text: |
+            Student
         type: Button
         layout_properties: {grid_position: 'UNLDSP,PBHBJH'}
         event_bindings: {click: student_click}
@@ -520,27 +539,27 @@ components:
     - name: spacer_8
       properties: {height: -5}
       type: Spacer
-      layout_properties: {grid_position: 'VJYOJJ,KGORIJ NLOQQZ,QAIPXH'}
+      layout_properties: {grid_position: 'NLOQQZ,QAIPXH'}
     - name: spacer_12
       properties: {height: -5}
       type: Spacer
-      layout_properties: {grid_position: 'VJYOJJ,KGORIJ TTZYQN,IEYPYX'}
+      layout_properties: {grid_position: 'TTZYQN,IEYPYX'}
     - name: spacer_15
       properties: {height: -6}
       type: Spacer
-      layout_properties: {grid_position: 'VJYOJJ,KGORIJ VEVXRJ,XKJJJM'}
+      layout_properties: {grid_position: 'VEVXRJ,XKJJJM'}
     - name: spacer_14
       properties: {height: -1}
       type: Spacer
-      layout_properties: {grid_position: 'VJYOJJ,KGORIJ ZMBYTG,KNIPKE'}
+      layout_properties: {grid_position: 'ZMBYTG,KNIPKE'}
     - name: spacer_17
       properties: {height: -1}
       type: Spacer
-      layout_properties: {grid_position: 'VJYOJJ,KGORIJ DNDLNK,TTTZXS'}
+      layout_properties: {grid_position: 'DNDLNK,TTTZXS'}
     - name: spacer_16
       properties: {height: -40}
       type: Spacer
-      layout_properties: {grid_position: 'VJYOJJ,KGORIJ MOVBIS,LAJNUK'}
+      layout_properties: {grid_position: 'MOVBIS,LAJNUK'}
     - name: button_1_copy_3
       properties: {role: elevated-button, bold: false, align: right, spacing_above: small, background: '#05264d', icon: 'fa:backward', underline: false, font: '', icon_align: left, foreground: 'theme:On Primary', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: 17, tooltip: '', text: 'Back  '}
       type: Button
