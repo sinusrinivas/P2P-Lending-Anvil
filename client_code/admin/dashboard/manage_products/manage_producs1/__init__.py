@@ -451,12 +451,12 @@ class manage_producs1(manage_producs1Template):
   
     def business_click(self, **event_args):
         """This method is called when the button is clicked"""
-        if "Business" in self.occupation:
+        if "Self employment" in self.occupation:
             self.business.background = "#939191"
-            self.occupation.remove("Business")
+            self.occupation.remove("Self employment")
         else:
             self.business.background = "#0a2346"
-            self.occupation.append("Business")
+            self.occupation.append("Self employment")
     
     def student_click(self, **event_args):
         """This method is called when the button is clicked"""
