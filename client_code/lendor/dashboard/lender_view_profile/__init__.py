@@ -438,7 +438,8 @@ class lender_view_profile(lender_view_profileTemplate):
       # if wallet:
       #   wallet['user_email'] = self.email_tx.text
       #   wallet.update()
-
+    
+      
     self.disable_personal_fields()
     self.save_personal_details_button.visible = False
     self.edit_personal_details_button.visible = True

@@ -8,10 +8,10 @@ components:
   properties: {}
   type: form:borrower.logout
   layout_properties: {grid_position: 'KBGNZB,SBDROR'}
-- name: navigation_form_dashboard_1
+- name: navigation_bar_lender_dashbord_1
   properties: {}
-  type: form:borrower.dashboard.Navigation_form_dashboard
-  layout_properties: {grid_position: ',undefined', full_width_row: true}
+  type: form:lendor.navigation_bar.Navigation_bar_lender_dashbord
+  layout_properties: {grid_position: 'XARKAT,ZWJNXI', full_width_row: true}
 - name: spacer_1
   properties: {height: 32}
   type: Spacer
