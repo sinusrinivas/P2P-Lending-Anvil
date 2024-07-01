@@ -1,0 +1,44 @@
+is_package: true
+container: {type: DataRowPanel}
+components:
+- name: text_box_1
+  properties: {align: center, role: outlined, enabled: false}
+  type: TextBox
+  layout_properties: {column: JKSDUP}
+  data_bindings:
+  - {property: text, code: 'self.item[''loan_id'']', writeback: false}
+- name: text_box_2
+  properties: {align: center, role: outlined, enabled: false}
+  type: TextBox
+  layout_properties: {column: VJQQOR}
+  data_bindings:
+  - {property: text, code: 'self.item[''borrower_full_name'']', writeback: false}
+- name: text_box_3
+  properties: {align: center, role: outlined, enabled: true}
+  type: TextBox
+  layout_properties: {column: OJLQEN}
+  data_bindings:
+  - {property: text, code: 'self.item[''emi_number'']', writeback: false}
+- name: text_box_4
+  properties: {role: outlined, align: center, enabled: false}
+  type: TextBox
+  layout_properties: {column: DOSJXL}
+  data_bindings:
+  - {property: text, code: 'self.item[''extension_amount'']', writeback: false}
+- name: text_box_6
+  properties: {align: center, role: outlined, enabled: false}
+  type: TextBox
+  layout_properties: {column: UARLLF}
+  data_bindings:
+  - {property: text, code: 'self.item[''status'']', writeback: false}
+- name: link_1
+  properties: {align: center, text: Save, bold: true}
+  type: Link
+  layout_properties: {column: WUTRAU}
+  event_bindings: {click: link_1_click}
+- name: date_picker_1
+  properties: {role: outlined, pick_time: true}
+  type: DatePicker
+  layout_properties: {column: QFLUNJ}
+  data_bindings:
+  - {property: date, code: 'self.item[''extension_request_date'']', writeback: false}
