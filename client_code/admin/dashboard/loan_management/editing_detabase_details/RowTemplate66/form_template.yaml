@@ -7,11 +7,6 @@ components:
   layout_properties: {column: JKSDUP}
   data_bindings:
   - {property: text, code: 'self.item[''loan_id'']', writeback: false}
-- name: link_1
-  properties: {align: center, text: Save, bold: true}
-  type: Link
-  layout_properties: {column: NNUANN}
-  event_bindings: {click: save_button_click}
 - name: date_picker_1
   properties: {role: outlined}
   type: DatePicker
@@ -24,3 +19,8 @@ components:
   layout_properties: {column: OJLQEN}
   data_bindings:
   - {property: date, code: 'self.item[''loan_disbursed_timestamp'']', writeback: false}
+- name: link_1
+  properties: {align: center, text: Save, bold: true}
+  type: Link
+  layout_properties: {column: NNUANN}
+  event_bindings: {click: save_button_click}

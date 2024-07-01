@@ -15,9 +15,6 @@ class RowTemplate66(RowTemplate66Template):
     self.init_components(**properties)
 
     # Any code you write here will run before the form opens.
-    self.editing = False
-
-    # Any code you write here will run before the form opens.
     self.refresh_data_bindings()
 
 
@@ -26,6 +23,6 @@ class RowTemplate66(RowTemplate66Template):
     self.item['first_emi_payment_due_date'] = self.date_picker_1.date
     self.item['loan_disbursed_timestamp'] = self.date_picker_2.date
     self.item.update()
-    self.editing = False
+
     self.refresh_data_bindings()
 
