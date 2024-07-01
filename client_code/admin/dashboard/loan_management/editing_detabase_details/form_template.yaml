@@ -1,0 +1,29 @@
+container: {type: ColumnPanel}
+components:
+- name: home_button_admin_1
+  properties: {}
+  type: form:admin.dashboard.home_button_admin
+  layout_properties: {grid_position: 'EFNLPU,BKJXOE', full_width_row: true}
+- name: label_1
+  properties: {align: center, text: Edit All Details, role: title}
+  type: Label
+  layout_properties: {grid_position: 'XWPQIX,EHUUWV'}
+- name: spacer_1
+  properties: {height: 32}
+  type: Spacer
+  layout_properties: {grid_position: 'RTWMQQ,DTDMFE'}
+- name: data_grid_1
+  properties:
+    columns:
+    - {id: JKSDUP, title: Loan id, data_key: column_1}
+    - {id: VJQQOR, title: First Emi Date, data_key: column_2}
+    - {id: OJLQEN, title: Updated Status, data_key: column_3}
+    - {id: NNUANN, data_key: column_1, title: Edit Details}
+    role: tonal-data-grid
+  type: DataGrid
+  components:
+  - name: repeating_panel_1
+    properties: {item_template: admin.dashboard.loan_management.editing_detabase_details.RowTemplate66}
+    type: RepeatingPanel
+  layout_properties: {grid_position: 'BDUZLK,UELFSZ'}
+is_package: true
