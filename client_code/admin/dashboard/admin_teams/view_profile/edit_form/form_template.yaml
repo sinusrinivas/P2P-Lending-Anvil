@@ -27,7 +27,7 @@ components:
         grid_position: KIQFII,WRQGTB
       components:
       - type: ColumnPanel
-        properties: {col_widths: '{"YHCYVB":25,"BHYDMK":45,"UCFXSF":30,"OEHQRW":30,"KQXGWV":10}'}
+        properties: {col_widths: '{"YHCYVB":20,"BHYDMK":50,"UCFXSF":30,"OEHQRW":30,"KQXGWV":10}'}
         name: content_panel_copy_3
         layout_properties:
           col_widths: {}
