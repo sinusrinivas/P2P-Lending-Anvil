@@ -7,6 +7,7 @@ import anvil.users
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
+from datetime import datetime
 
 
 class applications_recieved(applications_recievedTemplate):
@@ -18,6 +19,13 @@ class applications_recieved(applications_recievedTemplate):
     self.drop_down_1.items = ['', 'daily', 'monthly']
     self.column_panel_1.visible = False  # Ensure column_panel_1 is initially hidden
     self.column_panel_2.visible = False  # Ensure column_panel_2 is initially hidden
+
+    # Initialize month and year dropdowns
+    self.drop_down_month.items = [(month, i+1) for i, month in enumerate(
+            ["January", "February", "March", "April", "May", "June", 
+             "July", "August", "September", "October", "November", "December"]
+    )]
+    self.text_box_year.text = str(datetime.now().year)
 
   def date_picker_1_change(self, **event_args):
     """This method is called when the selected date changes"""
@@ -62,48 +70,6 @@ class applications_recieved(applications_recievedTemplate):
             self.repeating_panel_1.items = filtered_loans
             self.data_grid_1.visible = True  # Make the DataGrid visible
 
-  def date_picker_2_change(self, **event_args):
-    """This method is called when the selected date changes"""
-    self.selected_month = self.date_picker_2.date
-    print("Selected month:", self.selected_month)
-
-    if self.selected_month:
-        # Fetch loans from the database
-        loans = app_tables.fin_loan_details.search()
-                
-        # Initialize an empty list to store filtered loans
-        filtered_loans = []
-
-        for loan in loans:
-            user_profile = app_tables.fin_user_profile.get(customer_id=loan['borrower_customer_id'])
-                    
-            if user_profile is not None and loan['loan_updated_status'] in ["under process"]:
-                # Compare the month and year of loan['borrower_loan_created_timestamp'] with self.selected_month
-                if loan['borrower_loan_created_timestamp'].month == self.selected_month.month and loan['borrower_loan_created_timestamp'].year == self.selected_month.year: 
-                    filtered_loans.append({
-                            'user_photo': user_profile['user_photo'],
-                            'borrower_full_name': loan['borrower_full_name'],
-                            'borrower_email_id': loan['borrower_email_id'],
-                            'lender_full_name': loan['lender_full_name'],
-                            'lender_email_id': loan['lender_email_id'],
-                            'ascend_score': user_profile['ascend_value'],
-                            'loan_amount': loan['loan_amount'],
-                            'loan_updated_status': loan['loan_updated_status'],
-                            'loan_id': loan['loan_id'],
-                            'total_repayment_amount': loan['total_repayment_amount'],
-                            'membership_type': loan['membership_type'],
-                            'product_name': loan['product_name'],
-                            'borrower_loan_created_timestamp': loan['borrower_loan_created_timestamp'],
-                    })
-                         
-                
-        if not filtered_loans:
-            Notification(f"No Loans with status 'under process' found for {self.selected_month}!").show()
-            self.data_grid_2.visible = False  # Hide the DataGrid if no loans found
-        else:
-            # Update RepeatingPanel with filtered results
-            self.repeating_panel_2.items = filtered_loans
-            self.data_grid_2.visible = True  # Make the DataGrid visible
 
   def drop_down_1_change(self, **event_args):
     """This method is called when an item is selected"""
@@ -128,7 +94,57 @@ class applications_recieved(applications_recievedTemplate):
 
   def update_monthly_panel(self):
       # Your implementation for updating the monthly panel
-      pass
+      selected_month = self.drop_down_month.selected_value
+      selected_year = self.text_box_year.text
+
+      if selected_month and selected_year:
+          try:
+              selected_year = int(selected_year)
+          except ValueError:
+              Notification("Please enter a valid year!").show()
+              return
+
+          loans = app_tables.fin_loan_details.search()
+
+          filtered_loans = []
+
+          for loan in loans:
+              user_profile = app_tables.fin_user_profile.get(customer_id=loan['borrower_customer_id'])
+
+              if user_profile is not None and loan['loan_updated_status'] in ["under process"]:
+                  if loan['borrower_loan_created_timestamp'].month == selected_month and loan['borrower_loan_created_timestamp'].year == selected_year:
+                      filtered_loans.append({
+                            'user_photo': user_profile['user_photo'],
+                            'borrower_full_name': loan['borrower_full_name'],
+                            'borrower_email_id': loan['borrower_email_id'],
+                            'lender_full_name': loan['lender_full_name'],
+                            'lender_email_id': loan['lender_email_id'],
+                            'ascend_score': user_profile['ascend_value'],
+                            'loan_amount': loan['loan_amount'],
+                            'loan_updated_status': loan['loan_updated_status'],
+                            'loan_id': loan['loan_id'],
+                            'total_repayment_amount': loan['total_repayment_amount'],
+                            'membership_type': loan['membership_type'],
+                            'product_name': loan['product_name'],
+                            'borrower_loan_created_timestamp': loan['borrower_loan_created_timestamp'],
+                      })
+
+          if not filtered_loans:
+              Notification(f"No Loans with status 'under process' found for {self.drop_down_month.items[selected_month-1][0]} {selected_year}!").show()
+              self.data_grid_2.visible = False
+          else:
+              self.repeating_panel_2.items = filtered_loans
+              self.data_grid_2.visible = True
+
+  
+
+  def drop_down_month_change(self, **event_args):
+    """This method is called when an item is selected"""
+    self.update_monthly_panel()
+    
+  def text_box_year_change(self, **event_args):
+      """This method is called when the text is changed"""
+      self.update_monthly_panel()
 
   def button_1_click(self, **event_args):
     """This method is called when the button is clicked"""
