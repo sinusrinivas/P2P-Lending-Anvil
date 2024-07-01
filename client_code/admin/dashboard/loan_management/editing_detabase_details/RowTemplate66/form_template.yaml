@@ -13,13 +13,13 @@ components:
   layout_properties: {column: NCNXNH}
   event_bindings: {click: save_button_click}
 - name: date_picker_2
-  properties: {role: outlined}
+  properties: {role: outlined, pick_time: true, align: center}
   type: DatePicker
   layout_properties: {column: YYMYOY}
   data_bindings:
   - {property: date, code: 'self.item[''loan_disbursed_timestamp'']', writeback: false}
 - name: date_picker_1
-  properties: {role: outlined}
+  properties: {role: outlined, align: center}
   type: DatePicker
   layout_properties: {column: OIMIZA}
   data_bindings:
@@ -40,10 +40,10 @@ components:
   type: TextBox
   layout_properties: {column: OJLQEN}
   data_bindings:
-  - {property: text, code: 'self.item[''product_name'']', writeback: false}
+  - {property: text, code: 'self.item[''borrower_customer_id'']', writeback: false}
 - name: text_box_4
   properties: {role: outlined, enabled: false, visible: true}
   type: TextBox
   layout_properties: {column: NNUANN}
   data_bindings:
-  - {property: text, code: 'self.item[''loan_status'']', writeback: false}
+  - {property: text, code: 'self.item[''loan_updated_status'']', writeback: false}

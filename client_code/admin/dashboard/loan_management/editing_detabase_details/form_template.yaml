@@ -5,19 +5,23 @@ components:
   type: form:admin.dashboard.home_button_admin
   layout_properties: {grid_position: 'EFNLPU,BKJXOE', full_width_row: true}
 - name: label_1
-  properties: {align: center, text: Edit All Details, role: title}
+  properties: {align: center, text: Edit Details, role: title}
   type: Label
   layout_properties: {grid_position: 'XWPQIX,EHUUWV'}
 - name: spacer_1
   properties: {height: 32}
   type: Spacer
   layout_properties: {grid_position: 'RTWMQQ,DTDMFE'}
+- name: label_3
+  properties: {align: center, text: 'Loan details ', bold: true}
+  type: Label
+  layout_properties: {grid_position: 'TISCMS,JIOBCG'}
 - name: data_grid_1
   properties:
     columns:
     - {id: JKSDUP, title: Loan id, data_key: column_1}
     - {id: VJQQOR, title: Borrower Name, data_key: column_2}
-    - {id: OJLQEN, title: Product Name, data_key: column_3}
+    - {id: OJLQEN, title: Borrower Id, data_key: column_3}
     - {id: NNUANN, data_key: column_1, title: Updated Status}
     - {id: YYMYOY, data_key: column_1, title: Disbursed date}
     - {id: OIMIZA, data_key: column_2, title: First Emi Date}
@@ -30,6 +34,49 @@ components:
     properties: {item_template: admin.dashboard.loan_management.editing_detabase_details.RowTemplate66}
     type: RepeatingPanel
   layout_properties: {grid_position: 'BDUZLK,UELFSZ', full_width_row: true}
+- name: label_2
+  properties: {align: center, text: EMI Details, bold: true}
+  type: Label
+  layout_properties: {grid_position: 'ZUUZWQ,HPZVRW'}
+- name: data_grid_2
+  properties:
+    columns:
+    - {id: JKSDUP, title: Loan id, data_key: column_1}
+    - {id: VJQQOR, title: Borrower Id, data_key: column_2}
+    - {id: OJLQEN, title: EMI Number, data_key: column_3}
+    - {id: ILYKBG, data_key: column_4, title: Payment Made}
+    - {id: NPPJWD, data_key: column_5, title: Schedule  Paymet date}
+    - {id: FCEOND, data_key: column_6, title: Next Payment Date}
+    - {id: IVKBTG, data_key: column_7, title: ''}
+    - {id: AMIBQP, data_key: column_8, title: ''}
+    role: tonal-data-grid
+  type: DataGrid
+  components:
+  - name: repeating_panel_2
+    properties: {item_template: admin.dashboard.loan_management.editing_detabase_details.RowTemplate71}
+    type: RepeatingPanel
+  layout_properties: {grid_position: 'CPVSVE,MVFWOJ', full_width_row: true}
+- name: label_4
+  properties: {align: center, text: Extension Details, bold: true}
+  type: Label
+  layout_properties: {grid_position: 'SRUIDO,WHOCKR'}
+- name: data_grid_3
+  properties:
+    columns:
+    - {id: JKSDUP, title: Loan Id, data_key: column_1}
+    - {id: VJQQOR, title: borrower Id, data_key: column_2}
+    - {id: OJLQEN, title: EMI Number, data_key: column_3, width: 216.99993896484375, expand: false}
+    - {id: ISIUDC, data_key: column_4, title: Total Due Amount}
+    - {id: LLCVMT, data_key: column_5, title: Requested date}
+    - {id: PAQFZY, data_key: column_6, title: Status, width: 208, expand: false}
+    - {id: WZUWMP, data_key: column_1, title: Save}
+    role: tonal-data-grid
+  type: DataGrid
+  components:
+  - name: repeating_panel_3
+    properties: {item_template: admin.dashboard.loan_management.editing_detabase_details.RowTemplate72}
+    type: RepeatingPanel
+  layout_properties: {grid_position: 'JUPVKK,ODYNMS', full_width_row: true}
 - name: button_1_copy_3
   properties: {role: elevated-button, bold: true, align: center, spacing_above: small, background: '#05264d', icon: 'fa:backward', underline: false, font: '16', icon_align: left, foreground: 'theme:On Primary', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: Back}
   type: Button

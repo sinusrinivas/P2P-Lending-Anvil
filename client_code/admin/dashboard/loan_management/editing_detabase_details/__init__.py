@@ -14,41 +14,9 @@ class editing_detabase_details(editing_detabase_detailsTemplate):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
 
-    # Any code you write here will run before the form opens.
-    self.data = app_tables.fin_loan_details.search()
-    self.result = []
-    for loan in self.data:
-        borrower_profile = app_tables.fin_user_profile.get(customer_id=loan['borrower_customer_id'])
-        lender_profile = app_tables.fin_user_profile.get(customer_id=loan['lender_customer_id'])
-        if borrower_profile is not None and lender_profile is not None:
-            loan_disbursed_date = loan['loan_disbursed_timestamp'].date() if loan['loan_disbursed_timestamp'] else None
-            self.result.append({
-                'loan_id': loan['loan_id'],
-                'customer_id': loan['borrower_customer_id'],
-                'full_name': loan['borrower_full_name'],
-                'loan_status': loan['loan_updated_status'],
-                'lender_full_name': loan['lender_full_name'],
-                'borrower_full_name': loan['borrower_full_name'],
-                'lender_customer_id': loan['lender_customer_id'],
-                'interest_rate': loan['interest_rate'],
-                'tenure': loan['tenure'],
-                'loan_amount': loan['loan_amount'],
-                'first_emi_payment_due_date': loan['first_emi_payment_due_date'],
-                'borrower_mobile': borrower_profile['mobile'],  # Include additional profile details here
-                'lender_mobile': lender_profile['mobile']  ,
-                'product_name':loan['product_name'],
-                'product_description':loan['product_description'],
-                'loan_disbursed_timestamp': loan_disbursed_date,
-                'borrower_photo':borrower_profile['user_photo'],
-                'lender_photo':lender_profile['user_photo'],
-              
-            })
-
-    if not self.result:
-        alert("No Loans Available!")
-    else:
-        self.repeating_panel_1.items = self.result
-
+    self.repeating_panel_1.items = app_tables.fin_loan_details.search()
+    self.repeating_panel_2.items = app_tables.fin_emi_table.search()
+  
   def button_1_copy_3_click(self, **event_args):
     """This method is called when the button is clicked"""
     open_form('admin.dashboard.loan_management')
