@@ -16,6 +16,7 @@ class editing_detabase_details(editing_detabase_detailsTemplate):
 
     self.repeating_panel_1.items = app_tables.fin_loan_details.search()
     self.repeating_panel_2.items = app_tables.fin_emi_table.search()
+    self.repeating_panel_3.items = app_tables.fin_foreclosure.search()
   
   def button_1_copy_3_click(self, **event_args):
     """This method is called when the button is clicked"""
