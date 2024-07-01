@@ -1,0 +1,48 @@
+is_package: true
+container: {type: DataRowPanel}
+components:
+- name: text_box_1
+  properties: {role: outlined, align: center, enabled: false}
+  type: TextBox
+  layout_properties: {column: JKSDUP}
+  data_bindings:
+  - {property: text, code: 'self.item[''loan_id'']', writeback: false}
+- name: text_box_2
+  properties: {role: outlined, align: center, bold: false, enabled: false}
+  type: TextBox
+  layout_properties: {column: VJQQOR}
+  data_bindings:
+  - {property: text, code: 'self.item[''borrower_customer_id'']', writeback: false}
+- name: text_box_3
+  properties: {role: outlined, align: center, enabled: false}
+  type: TextBox
+  layout_properties: {column: OJLQEN}
+  data_bindings:
+  - {property: text, code: 'self.item[''emi_number'']', writeback: false}
+- name: date_picker_1
+  properties: {role: outlined, align: center}
+  type: DatePicker
+  layout_properties: {column: NPPJWD}
+  data_bindings:
+  - {property: date, code: 'self.item[''scheduled_payment'']', writeback: false}
+- name: date_picker_2
+  properties: {role: outlined, align: center}
+  type: DatePicker
+  layout_properties: {column: FCEOND}
+  data_bindings:
+  - {property: date, code: 'self.item[''next_payment'']', writeback: false}
+- name: link_1
+  properties: {align: center, text: Save, bold: true}
+  type: Link
+  layout_properties: {column: IVKBTG}
+  event_bindings: {click: link_1_click}
+- name: link_2
+  properties: {align: center, text: Delete, bold: true}
+  type: Link
+  layout_properties: {column: AMIBQP}
+- name: date_picker_3
+  properties: {role: outlined, pick_time: true, align: center, enabled: false}
+  type: DatePicker
+  layout_properties: {column: ILYKBG}
+  data_bindings:
+  - {property: date, code: 'self.item[''scheduled_payment_made'']', writeback: false}
