@@ -268,19 +268,23 @@ class mis_reports(mis_reportsTemplate):
   
     def plot_data(self):
         # Fetch data from tables
-        loan_details = app_tables.fin_loan_details.search(loan_updated_status=q.any_of('closed loan', 'rejected', 'disbursed'))
+        loan_details = app_tables.fin_loan_details.search(loan_updated_status=q.any_of('closed loan', 'rejected', 'disbursed loan'))
         lenders = app_tables.fin_lender.search()
         users = app_tables.fin_user_profile.search(usertype=q.any_of('lender', 'borrower'))
     
         # Calculate metrics
-        no_of_loans_disbursed = len([loan for loan in loan_details if loan['loan_updated_status'] == 'disbursed'])
+        no_of_loans_disbursed = len([loan for loan in loan_details if loan['loan_updated_status'] == 'disbursed loan'])
         no_of_loans_closed = len([loan for loan in loan_details if loan['loan_updated_status'] == 'closed loan'])
-        no_of_loans_closed = len([loan for loan in loan_details if loan['loan_updated_status'] == 'closed'])
         no_of_loans_rejected = len([loan for loan in loan_details if loan['loan_updated_status'] == 'rejected'])
-        lender_share = sum([loan['lender_returns'] for loan in loan_details])
+        
+        # Filter out None values for lender_share
+        lender_share = sum(loan['lender_returns'] for loan in loan_details if loan['lender_returns'] is not None)
+        
         no_of_borrowers = len([user for user in users if user['usertype'] == 'borrower'])
         no_of_lenders = len([user for user in users if user['usertype'] == 'lender'])
-        lenders_commitment = sum([lender['return_on_investment'] for lender in lenders])
+        
+        # Filter out None values for lenders_commitment
+        lenders_commitment = sum(lender['return_on_investment'] for lender in lenders if lender['return_on_investment'] is not None)
     
         # Data for the pie chart
         values = [
@@ -296,7 +300,7 @@ class mis_reports(mis_reportsTemplate):
             'No of Loans Disbursed: {}'.format(no_of_loans_disbursed),
             'No of Loans Closed: {}'.format(no_of_loans_closed),
             'No of Loans Rejected: {}'.format(no_of_loans_rejected),
-            'Lender_hare: {}'.format(lender_share),
+            'Lender Share: {}'.format(lender_share),
             'No of Borrowers: {}'.format(no_of_borrowers),
             'No of Lenders: {}'.format(no_of_lenders),
             'Lenders Commitment: {}'.format(lenders_commitment)
@@ -316,18 +320,10 @@ class mis_reports(mis_reportsTemplate):
                     'bold': True
                 }
             }
-            # autosize=False,
-            # width=780,
-            # height=650,
-            # margin=dict(l=100, r=10, t=90, b=20)
         )
     
         # Embed the plot in the Anvil app
         self.plot_1.figure = fig
-    
-        # Explicitly set the size of the Plot component
-        # self.plot_1.width = 780
-        # self.plot_1.height = 650
 
     def plot_loan_data(self):
         # Fetch data from tables
@@ -392,7 +388,9 @@ class mis_reports(mis_reportsTemplate):
             customer_id = investment['customer_id']
             if customer_id not in customer_returns:
                 customer_returns[customer_id] = 0
-            customer_returns[customer_id] += investment['return_on_investment']
+            # Add the return_on_investment if it is not None
+            if investment['return_on_investment'] is not None:
+                customer_returns[customer_id] += investment['return_on_investment']
         
         # Convert the dictionary to a list of tuples and sort by return_on_investment in descending order
         sorted_returns = sorted(customer_returns.items(), key=lambda x: x[1], reverse=True)
@@ -412,7 +410,7 @@ class mis_reports(mis_reportsTemplate):
         
         # Create a layout
         layout = go.Layout(
-            title=dict(text='Highet Return earner by Customer', font=dict(size=16, weight='bold')),
+            title=dict(text='Highest Return Earner by Customer', font=dict(size=16, weight='bold')),
             xaxis=dict(
                 title='Customer ID',
                 tickfont=dict(size=10, weight='bold'),
@@ -435,7 +433,7 @@ class mis_reports(mis_reportsTemplate):
         # Debugging: Check if the plot is assigned correctly
         print(f"Assigned figure to plot_3: {self.plot_3.figure}")
 
-
+    
     
     def aggregate_counts(self):
         """Aggregate the counts of loans for each risk level"""
