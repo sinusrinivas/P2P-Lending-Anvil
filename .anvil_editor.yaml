@@ -538,6 +538,7 @@ unique_ids:
     admin.dashboard.loan_servicing.tracking_late_payments.RowTemplate42: '171860942103480366564693.99194'
     wallet.wallet_deposit: '1707193556464697641891614.515'
     lendor.dashboard.view_loan_foreclosure_Requests.ItemTemplate58: '1709797522420632232023938.6527'
+    admin.dashboard.loan_management.editing_detabase_details.RowTemplate73: '1719829994334639456984180.3829'
     borrower.dashboard.view_transaction_history: FAWCKHALOJPAQM476OEPLZQO7IR73LGY
     admin.dashboard.manage_settings.loan_settings: '1716187237329321150784189.6111'
     admin.dashboard.reporting_and_analytical_modules.risk_pool: '1699529482874413597143832.6982'
