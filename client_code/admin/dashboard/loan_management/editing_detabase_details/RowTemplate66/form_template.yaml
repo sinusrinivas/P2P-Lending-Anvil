@@ -7,12 +7,8 @@ components:
   layout_properties: {column: JKSDUP}
   data_bindings:
   - {property: text, code: 'self.item[''loan_id'']', writeback: false}
-- name: text_box_3
-  properties: {align: center, role: outlined}
-  type: TextBox
-  layout_properties: {column: OJLQEN}
 - name: link_1
-  properties: {align: center, text: 'Edit '}
+  properties: {align: center, text: Save, bold: true}
   type: Link
   layout_properties: {column: NNUANN}
   event_bindings: {click: save_button_click}
@@ -22,3 +18,9 @@ components:
   layout_properties: {column: VJQQOR}
   data_bindings:
   - {property: date, code: 'self.item[''first_emi_payment_due_date'']', writeback: false}
+- name: date_picker_2
+  properties: {role: outlined}
+  type: DatePicker
+  layout_properties: {column: OJLQEN}
+  data_bindings:
+  - {property: date, code: 'self.item[''loan_disbursed_timestamp'']', writeback: false}

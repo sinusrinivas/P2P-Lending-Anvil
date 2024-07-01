@@ -16,4 +16,8 @@ class editing_detabase_details(editing_detabase_detailsTemplate):
 
     # Any code you write here will run before the form opens.
     self.repeating_panel_1.items = app_tables.fin_loan_details.search()
+
+  def button_1_copy_3_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    open_form('admin.dashboard.loan_management')
     
