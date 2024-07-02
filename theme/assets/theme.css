@@ -1132,7 +1132,10 @@ span.btn-text{
 
 
 
-
+.scrollable-data-grid {
+    overflow-x: auto;
+    white-space: nowrap;
+}
 
 
 
