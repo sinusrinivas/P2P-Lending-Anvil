@@ -160,3 +160,7 @@ class dashboard(dashboardTemplate):
     email = self.email
     anvil.server.call('fetch_profile_data_and_insert', email, customer_id)
     open_form("wallet.wallet")
+
+  def notifications_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    pass
