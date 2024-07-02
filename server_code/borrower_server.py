@@ -560,6 +560,7 @@ def create_zaphod_pdf():
 
 
 
+import datetime
 
 @anvil.server.callable
 def get_notifications(user_id):
@@ -571,7 +572,7 @@ def get_notifications(user_id):
         'message': f"Your loan for {loan['product_name']} is {loan['loan_updated_status']}",
         'loan_updated_status': loan['loan_updated_status'],
         'read': False,
-        'date': loan['updated_at'] if 'updated_at' in loan else datetime.datetime.now()
+        'date': loan.get('updated_at', datetime.datetime.now())
       })
   return notifications
 
