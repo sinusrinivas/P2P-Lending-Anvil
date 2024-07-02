@@ -52,24 +52,6 @@ components:
   properties: {height: 257.21429443359375}
   type: Spacer
   layout_properties: {grid_position: 'NHMAGI,LJGCZG'}
-- name: label_7
-  properties: {text: 'Borrower Full Name:', bold: true}
-  type: Label
-  layout_properties:
-    col_widths: {}
-    grid_position: NHMAGI,WHWYTV ZOAVNO,DMXNWO
-- name: label_8
-  properties: {bold: true, text: 'Loan Amount:'}
-  type: Label
-  layout_properties: {grid_position: 'NHMAGI,WHWYTV SSJPBU,FRLWVZ'}
-- name: label_11
-  properties: {bold: true, text: 'Intrest Rate:'}
-  type: Label
-  layout_properties: {grid_position: 'NHMAGI,WHWYTV BAYRIP,OKXJZM'}
-- name: label_10
-  properties: {bold: true, text: 'Tenure:'}
-  type: Label
-  layout_properties: {grid_position: 'NHMAGI,WHWYTV WGNOWR,ROFIPJ'}
 - name: label_12
   properties: {bold: true, text: 'Date Of Apply:'}
   type: Label
@@ -82,24 +64,6 @@ components:
   properties: {role: null, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: 'Payment Details:'}
   name: label_1
   layout_properties: {grid_position: 'NHMAGI,WHWYTV CIKOVI,DKQJEZ'}
-- name: loan_id_label
-  properties: {}
-  type: Label
-  layout_properties:
-    col_widths: {}
-    grid_position: NHMAGI,PBOQZF ZEHYPF,DKYIEK
-- name: loan_amount_label
-  properties: {}
-  type: Label
-  layout_properties: {grid_position: 'NHMAGI,PBOQZF YYUJQH,IBCUHK'}
-- name: interest_rate_label
-  properties: {}
-  type: Label
-  layout_properties: {grid_position: 'NHMAGI,PBOQZF TJFSFD,NASFLZ'}
-- name: tenure_label
-  properties: {}
-  type: Label
-  layout_properties: {grid_position: 'NHMAGI,PBOQZF QEMNYJ,HVVNDN'}
 - name: date_of_apply_label
   properties: {}
   type: Label
@@ -123,4 +87,45 @@ components:
     col_widths: {}
     grid_position: IRKLOA,CQUSQM
   event_bindings: {click: button_1_click}
+- name: column_panel_1
+  properties: {background: '#Edf0f4'}
+  type: ColumnPanel
+  layout_properties: {grid_position: 'NJQNVU,RIMCNG', full_width_row: true}
+  components:
+  - name: label_3
+    properties: {text: View Details, bold: true, font_size: 30, align: center}
+    type: Label
+    layout_properties: {grid_position: 'YSBCDH,HOTHOD'}
+  - name: label_7
+    properties: {text: 'Borrower Full Name:', bold: true, role: input-prompt}
+    type: Label
+    layout_properties: {grid_position: 'UCREEW,ZUOPMO'}
+  - name: label_8
+    properties: {bold: true, text: 'Loan Amount:', role: input-prompt}
+    type: Label
+    layout_properties: {grid_position: 'UCREEW,WGCIGK'}
+  - name: loan_id_label
+    properties: {role: outlined-card}
+    type: Label
+    layout_properties: {grid_position: 'DPPCNI,FPJRJI CUHSTS,NUNQBH'}
+  - name: label_11
+    properties: {bold: true, text: 'Intrest Rate:'}
+    type: Label
+    layout_properties: {grid_position: 'DPPCNI,FPJRJI ZGGUQU,ULUMGC'}
+  - name: interest_rate_label
+    properties: {role: outlined-card}
+    type: Label
+    layout_properties: {grid_position: 'DPPCNI,FPJRJI QCISCA,RNSBBF'}
+  - name: loan_amount_label
+    properties: {role: outlined-card}
+    type: Label
+    layout_properties: {grid_position: 'DPPCNI,CDNBJI NPUKNU,ELOCDT'}
+  - name: label_10
+    properties: {bold: true, text: 'Tenure:'}
+    type: Label
+    layout_properties: {grid_position: 'DPPCNI,CDNBJI ZIRVXD,OGJFQW'}
+  - name: tenure_label
+    properties: {}
+    type: Label
+    layout_properties: {grid_position: 'DPPCNI,CDNBJI AQXULH,YAVQDV'}
 is_package: true
