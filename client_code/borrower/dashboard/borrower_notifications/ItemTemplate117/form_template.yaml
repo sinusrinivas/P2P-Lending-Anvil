@@ -1,7 +1,7 @@
 is_package: true
 container:
   type: ColumnPanel
-  properties: {col_widths: '{"EYCZSQ":10,"DSEOCD":50}'}
+  properties: {col_widths: '{"EYCZSQ":10,"DSEOCD":50}', role: outlined-card}
 components:
 - name: label_2
   properties: {}
