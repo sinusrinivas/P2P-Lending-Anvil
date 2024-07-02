@@ -93,46 +93,46 @@ class manage_ascend_score_range(manage_ascend_score_rangeTemplate):
   def enable_edit_button(self, ascend_category):
     # Enable the corresponding edit button
     if ascend_category == 'VeryGood':
-      self.button_1.visible = True
+      self.button_3.visible = True
     elif ascend_category == 'Good':
-      self.button_1.visible = True
+      self.button_3.visible = True
     elif ascend_category == 'Average':
-      self.button_1.visible = True
+      self.button_3.visible = True
     elif ascend_category == 'Bad':
-      self.button_1.visible = True  
+      self.button_3.visible = True  
 
   def disable_edit_button(self, ascend_category):
     # Disable the corresponding edit button
     if ascend_category == 'VeryGood':
-      self.button_1.visible = False
+      self.button_3.visible = False
     elif ascend_category == 'Good':
-      self.button_1.visible = False
+      self.button_3.visible = False
     elif ascend_category == 'Average':
-      self.button_1.visible = False
+      self.button_3.visible = False
     elif ascend_category == 'Bad':
-      self.button_1.visible = False 
+      self.button_3.visible = False 
       
   def enable_save_button(self, ascend_category):
     # Enable the corresponding edit button
     if ascend_category == 'VeryGood':
-      self.button_2.visible = True
+      self.button_1.visible = True
     elif ascend_category == 'Good':
-      self.button_2.visible = True
+      self.button_1.visible = True
     elif ascend_category == 'Average':
-      self.button_2.visible = True
+      self.button_1.visible = True
     elif ascend_category == 'Bad':
-      self.button_2.visible = True
+      self.button_1.visible = True
 
   def disable_save_button(self, ascend_category):
     # Disable the corresponding edit button
     if ascend_category == 'VeryGood':
-      self.button_2.visible = False
+      self.button_1.visible = False
     elif ascend_category == 'Good':
-      self.button_2.visible = False
+      self.button_1.visible = False
     elif ascend_category == 'Bad':
-      self.button_2.visible = False
+      self.button_1.visible = False
     elif ascend_category == 'Bad':
-      self.button_2.visible = False
+      self.button_1.visible = False
 
   
   def save_ascend_score_range(self, ascend_category):
