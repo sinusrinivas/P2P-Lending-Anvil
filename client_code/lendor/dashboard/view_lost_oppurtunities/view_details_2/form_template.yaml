@@ -19,115 +19,81 @@ components:
   properties: {}
   name: navigation_bar_lender_dashbord_1
   layout_properties: {grid_position: 'XEPGMG,ADUDJW', full_width_row: true}
-- name: column_panel_1
-  properties: {col_widths: '{"CENTDB":15,"QXNPVA":25,"FRULLM":15,"JYCSUH":5}'}
+- name: column_panel_1_copy
+  properties: {background: '#Edf0f4', col_widths: '{}'}
   type: ColumnPanel
-  layout_properties: {grid_position: 'CZGZUZ,FSHQZE', full_width_row: true}
+  layout_properties: {grid_position: 'EVLGKZ,YQPPEQ', full_width_row: true}
   components:
-  - name: spacer_1
-    properties: {height: 32}
+  - name: label_3_copy
+    properties: {text: View Details, bold: true, font_size: 30, align: center}
+    type: Label
+    layout_properties: {grid_position: 'YSBCDH,HOTHOD'}
+  - name: spacer_4_copy
+    properties: {height: '15'}
     type: Spacer
-    layout_properties:
-      col_widths: {}
-      grid_position: NNDEBI,KYBXVH
-      full_width_row: true
-  - name: label_1_copy_1_copy_1
-    properties:
-      role: outlined-card
-      bold: true
-      align: center
-      spacing_above: small
-      background: '#05264d'
-      icon: ''
-      underline: false
-      font: ''
-      icon_align: left
-      foreground: theme:On Primary
-      spacing_below: small
-      visible: true
-      border: ''
-      italic: false
-      font_size: 18
-      tooltip: ''
-      text: |
-        View Details
+    layout_properties: {grid_position: 'LACDGY,HHVTXF'}
+  - name: label_7_copy
+    properties: {text: '  Borrower Name:', bold: true, role: input-prompt}
     type: Label
-    layout_properties:
-      col_widths: {}
-      grid_position: ZQPTBI,SXCCMK
-      full_width_row: true
-  - name: spacer_2
-    properties: {height: 256.64288330078125}
-    type: Spacer
-    layout_properties: {grid_position: 'YAYLYA,CENTDB'}
-  - name: label_7
-    properties: {text: 'Borrower Full Name:', bold: true}
-    type: Label
-    layout_properties:
-      col_widths: {}
-      grid_position: YAYLYA,QXNPVA SNPLNX,RXHKXB
-  - name: label_8
-    properties: {bold: true, text: 'Loan Amount:'}
-    type: Label
-    layout_properties: {grid_position: 'YAYLYA,QXNPVA MCKIQE,YKCJYA'}
-  - name: label_11
-    properties: {bold: true, text: 'Intrest Rate:'}
-    type: Label
-    layout_properties: {grid_position: 'YAYLYA,QXNPVA TTTIRF,GPWQQC'}
-  - name: label_10
-    properties: {bold: true, text: 'Tenure:'}
-    type: Label
-    layout_properties: {grid_position: 'YAYLYA,QXNPVA JBUDOW,JOAIEM'}
-  - name: label_12
-    properties: {bold: true, text: 'Date Of Apply:'}
-    type: Label
-    layout_properties: {grid_position: 'YAYLYA,QXNPVA LIGBRV,THEOSR'}
-  - name: label_2
-    properties: {bold: true, text: 'Loan Updated Status:'}
-    type: Label
-    layout_properties: {grid_position: 'YAYLYA,QXNPVA FDWRZH,QQCFKR'}
+    layout_properties: {grid_position: 'UCREEW,ZUOPMO HNCMEL,ZKFVSV'}
   - name: loan_id_label
-    properties: {}
+    properties: {role: outlined-card, border: 2px solid lightgrey}
     type: Label
-    layout_properties:
-      col_widths: {}
-      grid_position: YAYLYA,FRULLM OKKCVC,URKXGY
-  - name: loan_amount_label
-    properties: {}
+    layout_properties: {grid_position: 'UCREEW,ZUOPMO IHQTPL,SGYNFV'}
+  - name: label_8_copy
+    properties: {role: input-prompt, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: 'Interest Rate(%) :'}
     type: Label
-    layout_properties: {grid_position: 'YAYLYA,FRULLM CFEJGI,ZQIUXI'}
+    layout_properties: {grid_position: 'UCREEW,ZUOPMO GVDKEO,QBZCNT'}
   - name: intrest_rate_label
-    properties: {}
+    properties: {role: outlined-card, border: 2px solid lightgrey}
     type: Label
-    layout_properties: {grid_position: 'YAYLYA,FRULLM PTGHFV,QTDLVF'}
-  - name: tenure_label
-    properties: {}
+    layout_properties: {grid_position: 'UCREEW,ZUOPMO LLFRVG,FFGYBC'}
+  - name: label_12
+    properties: {bold: true, text: 'Date Of Apply:', role: input-prompt}
     type: Label
-    layout_properties: {grid_position: 'YAYLYA,FRULLM POOJNP,CKESYK'}
+    layout_properties: {grid_position: 'UCREEW,ZUOPMO TVHWPR,ULPYTY'}
   - name: date_of_apply_label
-    properties: {}
+    properties: {role: outlined-card, border: 2px solid lightgrey}
     type: Label
-    layout_properties: {grid_position: 'YAYLYA,FRULLM XINAWE,GDIPNH'}
+    layout_properties: {grid_position: 'UCREEW,ZUOPMO SCBLIO,YKBDBX'}
     data_bindings: []
-  - name: loan_updated_status_label
-    properties: {}
+  - name: label_8_copy_copy
+    properties: {bold: true, text: '  Loan Amount:', role: input-prompt}
     type: Label
-    layout_properties: {grid_position: 'YAYLYA,FRULLM MIAPII,DJKJKN'}
+    layout_properties: {grid_position: 'UCREEW,WGCIGK BBKZST,TJPFAW'}
+  - name: loan_amount_label
+    properties: {role: outlined-card, border: 2px solid lightgrey}
+    type: Label
+    layout_properties: {grid_position: 'UCREEW,WGCIGK PTLYZX,DKFDFM'}
+  - name: label_10
+    properties: {bold: true, text: 'Tenure:', role: input-prompt}
+    type: Label
+    layout_properties: {grid_position: 'UCREEW,WGCIGK YFJLVW,QZXPFV'}
+  - name: tenure_label
+    properties: {role: outlined-card, border: 2px solid lightgrey}
+    type: Label
+    layout_properties: {grid_position: 'UCREEW,WGCIGK BNKVMB,QENBKE'}
+  - name: label_2
+    properties: {bold: true, text: 'Loan Updated Status:', role: input-prompt}
+    type: Label
+    layout_properties: {grid_position: 'UCREEW,WGCIGK BFOSDQ,DKGNGM'}
+  - name: loan_updated_status_label
+    properties: {role: outlined-card, border: 2px solid lightgrey}
+    type: Label
+    layout_properties: {grid_position: 'UCREEW,WGCIGK KFHPGG,HELMFP'}
     data_bindings:
     - {property: text, code: 'self.item[''loan_updated_status'']', writeback: false}
-  - name: spacer_3
-    properties: {height: 248.78567504882812}
-    type: Spacer
-    layout_properties: {grid_position: 'YAYLYA,JYCSUH'}
-  - name: spacer_4
+  - name: spacer_2
     properties: {height: 32}
     type: Spacer
-    layout_properties: {grid_position: 'XIRMDP,BLLXJO'}
-- name: button_1
-  properties: {role: elevated-button, bold: true, align: center, spacing_above: small, background: '#0b2547', icon: 'fa:angle-double-left', underline: false, font: '', icon_align: left, foreground: 'theme:On Primary', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: Back}
-  type: Button
-  layout_properties:
-    col_widths: {}
-    grid_position: GRJPSI,ZHLVYT
-  event_bindings: {click: button_1_click}
+    layout_properties: {grid_position: 'BFPWOP,IYAEYF'}
+  - name: button_1
+    properties: {role: elevated-button, bold: true, align: center, spacing_above: small, background: '#0b2547', icon: 'fa:angle-double-left', underline: false, font: '', icon_align: left, foreground: 'theme:On Primary', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: Back}
+    type: Button
+    layout_properties: {grid_position: 'MKGBDO,EZVKQO'}
+    event_bindings: {click: button_1_click}
+  - name: spacer_6
+    properties: {height: 409.199951171875}
+    type: Spacer
+    layout_properties: {grid_position: 'UAVJTK,AOQVMV'}
 is_package: true

@@ -1,7 +1,7 @@
 is_package: true
 container:
   type: HtmlTemplate
-  properties: {html: '@theme:standard-page.html'}
+  properties: {html: ''}
 components:
 - type: ColumnPanel
   properties: {col_widths: '{}'}
@@ -27,7 +27,7 @@ components:
         grid_position: KIQFII,WRQGTB
       components:
       - type: ColumnPanel
-        properties: {col_widths: '{"YHCYVB":25,"BHYDMK":45,"UCFXSF":30,"OEHQRW":30,"KQXGWV":10}'}
+        properties: {col_widths: '{"YHCYVB":20,"BHYDMK":50,"UCFXSF":30,"OEHQRW":30,"KQXGWV":10}'}
         name: content_panel_copy_3
         layout_properties:
           col_widths: {}
@@ -38,12 +38,20 @@ components:
           name: button_1_copy
           layout_properties: {grid_position: 'OIGLNV,VTBLUS', full_width_row: true}
           event_bindings: {click: button_1_copy_click}
+        - name: label_7
+          properties: {align: center, text: Edit Details, role: outlined-card, bold: true, font_size: 30}
+          type: Label
+          layout_properties: {grid_position: 'USMHYY,GVJVPF'}
+        - name: spacer_3
+          properties: {height: 32}
+          type: Spacer
+          layout_properties: {grid_position: 'TSCCCQ,VNYZCU'}
         - name: spacer_1
           properties: {height: 269.0714416503906}
           type: Spacer
           layout_properties: {grid_position: 'WZNCPP,YHCYVB'}
         - type: Label
-          properties: {role: null, bold: false, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: '   Name'}
+          properties: {role: null, bold: false, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: '   Name :'}
           name: label_1
           layout_properties: {grid_position: 'WZNCPP,BHYDMK ZQCHPM,ELLQUG'}
         - type: TextBox
@@ -52,7 +60,7 @@ components:
           layout_properties: {grid_position: 'WZNCPP,BHYDMK ZQCHPM,NXTETA'}
           event_bindings: {pressed_enter: text_box_1_pressed_enter}
         - type: Label
-          properties: {role: null, bold: false, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: '   Email ID'}
+          properties: {role: null, bold: false, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: '   Email ID :'}
           name: label_2
           layout_properties: {grid_position: 'WZNCPP,BHYDMK KQKSKY,RIRTUQ'}
         - type: TextBox
@@ -61,7 +69,7 @@ components:
           layout_properties: {grid_position: 'WZNCPP,BHYDMK KQKSKY,CTBEXH'}
           event_bindings: {pressed_enter: text_box_2_pressed_enter}
         - type: Label
-          properties: {role: null, bold: false, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: '   Mobile No'}
+          properties: {role: null, bold: false, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: '   Mobile No :'}
           name: label_3
           layout_properties: {grid_position: 'WZNCPP,BHYDMK BJZPVN,UCFXSF'}
         - type: TextBox
@@ -70,7 +78,7 @@ components:
           layout_properties: {grid_position: 'WZNCPP,BHYDMK BJZPVN,OEHQRW'}
           event_bindings: {pressed_enter: text_box_3_pressed_enter}
         - type: Label
-          properties: {role: null, bold: false, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: '   Joined Date'}
+          properties: {role: null, bold: false, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: '   Joined Date :'}
           name: label_4
           layout_properties: {grid_position: 'WZNCPP,BHYDMK TYWJKH,MQOQUL'}
         - type: DatePicker
@@ -79,7 +87,7 @@ components:
           layout_properties: {grid_position: 'WZNCPP,BHYDMK TYWJKH,AWVJEN'}
           event_bindings: {change: date_picker_1_change}
         - type: Label
-          properties: {role: null, bold: false, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: '   Role'}
+          properties: {role: null, bold: false, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: '   Role :'}
           name: label_5
           layout_properties: {grid_position: 'WZNCPP,BHYDMK ZGNHNP,JEMXLX'}
         - type: DropDown
@@ -106,7 +114,7 @@ components:
           layout_properties: {grid_position: 'WZNCPP,BHYDMK ZGNHNP,VBLIXY'}
           event_bindings: {change: drop_down_1_change}
         - type: Label
-          properties: {role: null, bold: false, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: '   Permission'}
+          properties: {role: null, bold: false, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: '   Permission :'}
           name: label_6
           layout_properties: {grid_position: 'WZNCPP,BHYDMK SHNOUY,RNBDAW'}
         - type: DropDown
@@ -137,7 +145,7 @@ components:
           type: Spacer
           layout_properties: {grid_position: 'WZNCPP,KQXGWV'}
         - type: Button
-          properties: {role: outlined-button, bold: false, align: center, spacing_above: small, background: '#05264d', icon: '', underline: false, font: '', icon_align: left, foreground: 'theme:On Primary', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: Save}
+          properties: {role: outlined-button, bold: false, align: center, spacing_above: small, background: '#05264d', icon: 'fa:save', underline: false, font: '', icon_align: left, foreground: 'theme:On Primary', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: Save}
           name: button_1
           layout_properties: {grid_position: 'VXIUVB,PJXVIE'}
           event_bindings: {click: button_1_click}

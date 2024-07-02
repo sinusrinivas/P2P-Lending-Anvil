@@ -20,114 +20,116 @@ components:
     properties: {}
     name: navigation_bar_lender_dashbord_1
     layout_properties: {grid_position: 'EIXJZX,TSGGUX', full_width_row: true}
-  - name: outlined_card_1
-    properties: {role: outlined-card, col_widths: '{"XQMRDA":15,"WFAWEW":25,"UHNZLC":15,"QGNKYK":5}'}
+  - name: column_panel_1_copy
+    properties: {background: '#Edf0f4', col_widths: '{}'}
     type: ColumnPanel
-    layout_properties: {grid_position: 'MGGYRL,KIZSHF'}
+    layout_properties: {grid_position: 'UMEWEU,DTUSPW', full_width_row: true}
     components:
-    - name: label_6
-      properties: {role: outlined-card, bold: true, align: center, spacing_above: small, background: '#05264d', icon: '', underline: false, font: '', icon_align: left, foreground: 'theme:On Primary', spacing_below: small, visible: true, border: '', italic: false, font_size: 18, tooltip: '', text: Loan Extension details}
+    - name: label_3_copy
+      properties: {text: Loan Extension Details, bold: true, font_size: 30, align: center}
       type: Label
-      layout_properties: {grid_position: 'YODFXO,RPXPIW', full_width_row: true}
-    - name: spacer_1
-      properties: {height: 349.21429443359375}
+      layout_properties: {grid_position: 'YSBCDH,HOTHOD'}
+    - name: spacer_4_copy
+      properties: {height: '15'}
       type: Spacer
-      layout_properties: {grid_position: 'XIHJVG,XQMRDA'}
-    - name: label_1
-      properties: {role: null, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: 'Borrower Name :'}
+      layout_properties: {grid_position: 'LACDGY,HHVTXF'}
+    - name: label_7_copy
+      properties: {text: '  Borrower Name:', bold: true, role: input-prompt}
       type: Label
-      layout_properties: {grid_position: 'XIHJVG,WFAWEW HDKHRV,GVPWZH'}
-    - name: label_2
-      properties: {role: null, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: 'Loan Amount :'}
-      type: Label
-      layout_properties: {grid_position: 'XIHJVG,WFAWEW CXEZZW,XILIBR'}
-    - name: label_7
-      properties: {role: null, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: 'Extension Fee(%) :'}
-      type: Label
-      layout_properties: {grid_position: 'XIHJVG,WFAWEW VFGCBA,ULNQYH'}
-    - name: label_9
-      properties: {role: null, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: 'Extension  Amount :'}
-      type: Label
-      layout_properties: {grid_position: 'XIHJVG,WFAWEW GGWFGZ,FGWCCS'}
-    - name: label_5
-      properties: {role: null, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: 'Total Extension Months :'}
-      type: Label
-      layout_properties: {grid_position: 'XIHJVG,WFAWEW BDITBO,QGRMOS'}
-    - name: label_4
-      properties: {role: null, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: 'Remaining Amount :'}
-      type: Label
-      layout_properties: {grid_position: 'XIHJVG,WFAWEW CRDDAL,BZTSNH'}
-    - name: label_3
-      properties: {role: null, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: 'Reason for Extension :'}
-      type: Label
-      layout_properties: {grid_position: 'XIHJVG,WFAWEW KYXYTW,PUXOJK'}
-    - name: label_10
-      properties: {role: null, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: 'New Emi   :'}
-      type: Label
-      layout_properties: {grid_position: 'XIHJVG,WFAWEW NOEENQ,QLPLOT'}
+      layout_properties: {grid_position: 'UCREEW,ZUOPMO'}
     - name: name
-      properties: {}
+      properties: {role: outlined-card, border: 2px solid lightgrey}
       type: Label
-      layout_properties: {grid_position: 'XIHJVG,UHNZLC IDXKRF,AIFHVM'}
+      layout_properties: {grid_position: 'UCREEW,ZUOPMO ZVZIMV,CTRVKN'}
       data_bindings:
       - {property: text, code: 'self.item[''borrower_name'']'}
-    - name: loan
-      properties: {}
+    - name: label_7
+      properties: {role: input-prompt, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: '  Extension Fee(%) :'}
       type: Label
-      layout_properties: {grid_position: 'XIHJVG,UHNZLC MYEROS,CXLERS'}
-      data_bindings:
-      - {property: text, code: 'self.item[''loan_amount'']'}
+      layout_properties: {grid_position: 'UCREEW,ZUOPMO ZJRJGS,SCFDBS'}
     - name: exten_fee
-      properties: {}
+      properties: {role: outlined-card, border: 2px solid lightgrey}
       type: Label
-      layout_properties: {grid_position: 'XIHJVG,UHNZLC GVKHIT,CQBDHP'}
-    - name: extension_amount
-      properties: {}
+      layout_properties: {grid_position: 'UCREEW,ZUOPMO FDSGYV,DBTPIV'}
+    - name: label_5
+      properties: {role: input-prompt, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: '  Total Extension Months :'}
       type: Label
-      layout_properties: {grid_position: 'XIHJVG,UHNZLC RBJHHJ,KHJGHN'}
+      layout_properties: {grid_position: 'UCREEW,ZUOPMO NLGUWE,MBTXSD'}
     - name: total
-      properties: {}
+      properties: {role: outlined-card, border: 2px solid lightgrey}
       type: Label
-      layout_properties: {grid_position: 'XIHJVG,UHNZLC ZYSXJC,UUYSXI'}
+      layout_properties: {grid_position: 'UCREEW,ZUOPMO AUJFOG,TPBTBK'}
       data_bindings:
       - {property: text, code: 'self.item[''paid_amont'']'}
-    - name: ra
-      properties: {}
+    - name: label_3
+      properties: {role: input-prompt, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: '  Reason for Extension :'}
       type: Label
-      layout_properties: {grid_position: 'XIHJVG,UHNZLC SEMPCI,YLZIYP'}
-      data_bindings:
-      - {property: text, code: 'self.item[''outstanding_amount'']'}
+      layout_properties: {grid_position: 'UCREEW,ZUOPMO ABROXK,NOYMEW'}
     - name: reason
-      properties: {}
+      properties: {role: outlined-card, border: 2px solid lightgrey}
       type: Label
-      layout_properties: {grid_position: 'XIHJVG,UHNZLC MLYBQT,EJCBUG'}
+      layout_properties: {grid_position: 'UCREEW,ZUOPMO QQXFLN,OVCXLA'}
       data_bindings:
       - {property: text, code: 'self.item[''reason'']'}
-    - name: new_emi
-      properties: {}
+    - name: label_8_copy
+      properties: {bold: true, text: '  Loan Amount:', role: input-prompt}
       type: Label
-      layout_properties: {grid_position: 'XIHJVG,UHNZLC GPEOQF,ACGZCX'}
-    - name: spacer_2
-      properties: {height: 306.9285888671875}
+      layout_properties: {grid_position: 'UCREEW,WGCIGK BBKZST,TJPFAW'}
+    - name: loan
+      properties: {role: outlined-card, border: 2px solid lightgrey}
+      type: Label
+      layout_properties: {grid_position: 'UCREEW,WGCIGK VBTUHN,LGVFUQ'}
+      data_bindings:
+      - {property: text, code: 'self.item[''loan_amount'']'}
+    - name: label_9
+      properties: {role: input-prompt, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: '  Extension  Amount :'}
+      type: Label
+      layout_properties: {grid_position: 'UCREEW,WGCIGK GSCAML,ZDFTYO'}
+    - name: extension_amount
+      properties: {role: outlined-card, border: 2px solid lightgrey}
+      type: Label
+      layout_properties: {grid_position: 'UCREEW,WGCIGK QJJLTA,LGMJHH'}
+    - name: label_4
+      properties: {role: input-prompt, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: '  Remaining Amount :'}
+      type: Label
+      layout_properties: {grid_position: 'UCREEW,WGCIGK UFKUBJ,XHIKPG'}
+    - name: ra
+      properties: {role: outlined-card, border: 2px solid lightgrey}
+      type: Label
+      layout_properties: {grid_position: 'UCREEW,WGCIGK FZFSNB,SEQBZQ'}
+      data_bindings:
+      - {property: text, code: 'self.item[''outstanding_amount'']'}
+    - name: label_10
+      properties: {role: input-prompt, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: '  New Emi   :'}
+      type: Label
+      layout_properties: {grid_position: 'UCREEW,WGCIGK BNVXPR,ESABGQ'}
+    - name: new_emi
+      properties: {role: outlined-card, border: 2px solid lightgrey}
+      type: Label
+      layout_properties: {grid_position: 'UCREEW,WGCIGK YSYBZM,GHQPGR'}
+    - name: spacer_3_copy
+      properties: {height: 32}
       type: Spacer
-      layout_properties: {grid_position: 'XIHJVG,QGNKYK'}
+      layout_properties: {grid_position: 'SCBTDV,DIZRLM'}
     - name: approve
       properties: {role: filled-button, bold: false, align: right, spacing_above: small, background: '#0b2547', icon: '', underline: false, font: '', icon_align: left, foreground: 'theme:On Primary', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: Approve}
       type: Button
-      layout_properties: {grid_position: 'BDOFIL,QGGIPT'}
+      layout_properties: {grid_position: 'DDIODX,CKVWIT'}
       event_bindings: {click: approve_click}
     - name: decline
       properties: {text: 'Decline   ', role: filled-button, background: '#d62531', align: left, icon: '', foreground: 'theme:On Primary'}
       type: Button
-      layout_properties: {grid_position: 'BDOFIL,JJIDRT'}
+      layout_properties: {grid_position: 'DDIODX,MZLSEQ'}
       event_bindings: {click: decline_click}
-  - name: approve_copy
-    properties: {role: filled-button, bold: false, align: center, spacing_above: small, background: '#0b2547', icon: 'fa:angle-double-left', underline: false, font: '', icon_align: left, foreground: 'theme:On Primary', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: Back}
-    type: Button
-    layout_properties:
-      col_widths: {}
-      grid_position: YVDCAB,ZAMDSD
-    event_bindings: {click: approve_copy_click}
+    - name: approve_copy
+      properties: {role: filled-button, bold: false, align: center, spacing_above: small, background: '#0b2547', icon: 'fa:angle-double-left', underline: false, font: '', icon_align: left, foreground: 'theme:On Primary', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: Back}
+      type: Button
+      layout_properties: {grid_position: 'EFTSCE,AAPNSX'}
+      event_bindings: {click: approve_copy_click}
+    - name: spacer_6
+      properties: {height: 137.39996337890625}
+      type: Spacer
+      layout_properties: {grid_position: 'UAVJTK,AOQVMV'}
 - type: FlowPanel
   properties: {}
   name: navbar_links

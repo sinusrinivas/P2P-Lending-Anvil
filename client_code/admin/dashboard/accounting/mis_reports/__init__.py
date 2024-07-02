@@ -609,6 +609,9 @@ class mis_reports(mis_reportsTemplate):
     def convert_panel_to_pdf(self):
       # Assuming 'content_panel' is the panel containing your data
       content_panel = self.content_panel
+
+      # Ensure all graphs and dynamic content are fully loaded
+      self.wait_for_graphs_to_load(content_panel)
       
       # Call the server function to create the PDF from the content panel
       pdf = anvil.server.call('create_pdf_of_mis_reports', content_panel)
@@ -619,3 +622,12 @@ class mis_reports(mis_reportsTemplate):
     def eod_report_click(self, **event_args):
       """This method is called when the button is clicked"""
       open_form('admin.dashboard.accounting.mis_reports.eod_reports')
+
+    def wait_for_graphs_to_load(self, content_panel):
+      # Implement a way to ensure all graphs are fully loaded.
+      # This can involve checking if specific elements are loaded or using a delay.
+      import time
+  
+      # Example: wait for a fixed amount of time (e.g., 2 seconds)
+      # Adjust this as necessary for your use case.
+      time.sleep(1)

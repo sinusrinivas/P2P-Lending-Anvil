@@ -672,3 +672,7 @@ class Borr_loan_request(Borr_loan_requestTemplate):
 
     def link_1_click(self, **event_args):
       open_form('lendor.dashboard.view_borrower_loan_request.payment_details_view_loan_request', selected_row=self.selected_row)
+
+    def button_1_copy_2_click(self, **event_args):
+        """This method is called when the button is clicked"""
+        pass
