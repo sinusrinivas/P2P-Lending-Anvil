@@ -17,6 +17,7 @@ components:
   properties: {align: center, text: Delete, bold: true}
   type: Link
   layout_properties: {column: VFNTND}
+  event_bindings: {click: link_2_click}
 - name: link_1
   properties: {align: center, text: Save, bold: true}
   type: Link
@@ -47,43 +48,43 @@ components:
   data_bindings:
   - {property: text, code: 'self.item[''emi_number'']', writeback: false}
 - name: text_box_4
-  properties: {role: outlined}
+  properties: {role: outlined, enabled: false}
   type: TextBox
   layout_properties: {column: OJLQEN}
   data_bindings:
   - {property: text, code: 'self.item[''borrower_email'']', writeback: false}
 - name: text_box_5
-  properties: {role: outlined}
+  properties: {role: outlined, enabled: false}
   type: TextBox
   layout_properties: {column: ILYKBG}
   data_bindings:
   - {property: text, code: 'self.item[''lender_email'']', writeback: false}
 - name: text_box_6
-  properties: {role: outlined}
+  properties: {role: outlined, enabled: false}
   type: TextBox
   layout_properties: {column: NPPJWD}
   data_bindings:
   - {property: text, code: 'self.item[''lender_customer_id'']', writeback: false}
 - name: text_box_7
-  properties: {role: outlined}
+  properties: {role: outlined, enabled: false}
   type: TextBox
   layout_properties: {column: FCEOND}
   data_bindings:
   - {property: text, code: 'self.item[''total_remaining_amount'']', writeback: false}
 - name: text_box_8
-  properties: {role: outlined}
+  properties: {role: outlined, enabled: false}
   type: TextBox
   layout_properties: {column: IVKBTG}
   data_bindings:
   - {property: text, code: 'self.item[''remaining_tenure'']', writeback: false}
 - name: text_box_9
-  properties: {role: outlined}
+  properties: {role: outlined, enabled: false}
   type: TextBox
   layout_properties: {column: DAXDLF}
   data_bindings:
   - {property: text, code: 'self.item[''extra_fee'']', writeback: false}
 - name: text_box_10
-  properties: {role: outlined}
+  properties: {role: outlined, enabled: false}
   type: TextBox
   layout_properties: {column: UZTMTH}
   data_bindings:

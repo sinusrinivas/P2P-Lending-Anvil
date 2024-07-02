@@ -67,7 +67,7 @@ components:
   data_bindings:
   - {property: text, code: 'self.item[''reason'']', writeback: false}
 - name: text_box_10
-  properties: {role: outlined}
+  properties: {role: outlined, enabled: false}
   type: TextBox
   layout_properties: {column: IRNUSH}
   data_bindings:

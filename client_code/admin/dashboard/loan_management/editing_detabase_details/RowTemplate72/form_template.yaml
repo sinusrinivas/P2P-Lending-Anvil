@@ -37,7 +37,7 @@ components:
   data_bindings:
   - {property: text, code: 'self.item[''lender_email_id'']', writeback: false}
 - name: text_box_6
-  properties: {role: outlined, enabled: false}
+  properties: {role: outlined, enabled: true}
   type: TextBox
   layout_properties: {column: YTOJWQ}
   data_bindings:

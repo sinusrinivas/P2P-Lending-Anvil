@@ -21,6 +21,7 @@ class RowTemplate73(RowTemplate73Template):
     """This method is called when the link is clicked"""
 
     self.item['foreclosure_emi_num'] = int(self.text_box_3.text)
+    self.item['status'] = self.text_box_6.text
     self.item['requested_on'] = self.date_picker_1.date
     self.item.update()
     self.refresh_data_bindings()

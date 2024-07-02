@@ -35,7 +35,6 @@ components:
     - {id: IDOSNA, data_key: column_6, title: Remaining Amount}
     - {id: PKEKOT, data_key: column_7, title: Membership Type}
     - {id: CWDKTB, data_key: column_8, title: '', width: 39.5, expand: false}
-    - {id: LXEWVA, data_key: column_9, title: ''}
     role: tonal-data-grid
     show_page_controls: true
   type: DataGrid
@@ -62,7 +61,7 @@ components:
     - {id: AMIBQP, data_key: column_8, title: EMI Number}
     - {id: POFFSI, data_key: column_1, title: Payment  Made}
     - {id: HEOULS, data_key: column_2, title: Schedule  Paymet date}
-    - {id: KYNONL, data_key: column_3, title: Next Payment Date, width: 69.3333740234375, expand: false}
+    - {id: KYNONL, data_key: column_3, title: Next Payment Date, width: 126.22216796875, expand: false}
     - {id: DAXDLF, data_key: column_4, title: Extra Fee}
     - {id: UZTMTH, data_key: column_5, title: Payment Type}
     - {id: CCRGRD, data_key: column_7, title: ''}
