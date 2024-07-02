@@ -124,7 +124,6 @@ unique_ids:
     lendor.dashboard.lender_view_loans.RowTemplate23: '1703141182461211155517631.55914'
     admin.dashboard.loan_servicing.tracking_late_payments.RowTemplate46: '1718617175384786473964450.4426'
     lendor.dashboard.view_borrower_loan_request.RowTemplate10: '1700542200026541460267637.76886'
-    borrower.dashboard.borrower_notifications.ItemTemplate116: '1719897801418721168734541.5226'
     lendor.dashboard.RowTemplate13: '1715227710043217201182815.06174'
     borrower.dashboard.view_loans.RowTemplate15: 2HZLIPF4L4CRJLKCYZEVH2IQUPPWUUVF
     wallet.wallet.all_transaction.ItemTemplate99: '1712210109572218685580049.6752'
