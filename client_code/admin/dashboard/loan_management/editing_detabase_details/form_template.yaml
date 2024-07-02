@@ -40,7 +40,7 @@ components:
     wrap_on: mobile
     spacing_above: small
     auto_header: true
-    rows_per_page: -2
+    rows_per_page: null
   type: DataGrid
   components:
   - name: repeating_panel_1

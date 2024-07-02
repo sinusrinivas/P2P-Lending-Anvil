@@ -14,7 +14,7 @@ class editing_detabase_details(editing_detabase_detailsTemplate):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
 
-    self.repeating_panel_1.role = 'scrollable-datagrid'
+    # self.repeating_panel_1.role = 'scrollable-datagrid'
     # self.data_grid_1.role = 'scrollable-datagrid'
     self.repeating_panel_1.items = app_tables.fin_loan_details.search()
     self.repeating_panel_2.items = app_tables.fin_emi_table.search()
