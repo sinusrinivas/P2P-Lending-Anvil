@@ -18,14 +18,6 @@ components:
     properties: {}
     type: form:lendor.navigation_bar.Navigation_bar_lender_dashbord
     layout_properties: {grid_position: 'JRUAYF,XPBLLL', full_width_row: true}
-  - properties: {height: 32, visible: false}
-    type: Spacer
-    layout_properties: {grid_position: 'QFKYAM,KWIXII'}
-    name: spacer_1
-  - properties: {role: outlined-card, bold: true, align: center, spacing_above: small, background: '#0b2547', icon: '', underline: false, font: '', icon_align: left, foreground: 'theme:On Primary', spacing_below: small, visible: false, border: '', italic: false, font_size: 18, tooltip: '', text: Loan  Details}
-    type: Label
-    layout_properties: {grid_position: 'UWSCBP,TJHWVT'}
-    name: label_2
   - name: column_panel_1_copy
     properties: {background: '#Edf0f4'}
     type: ColumnPanel
