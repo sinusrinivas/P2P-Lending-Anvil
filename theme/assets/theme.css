@@ -3,6 +3,12 @@
  **/
 
 /* Stop panel-cols cutting off drop shadows */
+.scrollable-data-grid {
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+
 .anvil-panel-col {
   padding-bottom: 10px;
   margin-bottom: -10px;
@@ -1129,10 +1135,5 @@ button.btn.btn-default.to-disable{
 span.btn-text{
   text-align: center;
 }
-
-
-
-
-
 
 

@@ -19,8 +19,10 @@ class RowTemplate72(RowTemplate72Template):
   def link_1_click(self, **event_args):
     """This method is called when the link is clicked"""
     # self.item['next_payment'] = self.date_picker_2.date
-    self.item['foreclosure_emi_num'] = int(self.text_box_3.text)
-    self.item['requested_on'] = self.date_picker_1.date
+    self.item['emi_number'] = int(self.text_box_3.text)
+    self.item['extension_request_date'] = self.date_picker_1.date
+    self.item['status'] = self.text_box_6.text
+    self.item['total_extension_months'] = int(self.text_box_7.text)
     self.item.update()
     self.refresh_data_bindings()
     alert('data saved')

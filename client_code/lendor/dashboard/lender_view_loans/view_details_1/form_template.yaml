@@ -1,6 +1,6 @@
 container:
   type: ColumnPanel
-  properties: {col_widths: '{"LJGCZG":15,"WHWYTV":25,"PBOQZF":20}'}
+  properties: {col_widths: '{"LJGCZG":15,"WHWYTV":25}'}
 components:
 - type: FlowPanel
   properties: {}
@@ -20,107 +20,102 @@ components:
   name: navigation_bar_lender_dashbord_1
   layout_properties: {grid_position: 'DCFHLM,SASGAN', full_width_row: true}
 - name: spacer_1
-  properties: {height: 32}
+  properties: {height: 32, visible: false}
   type: Spacer
   layout_properties: {grid_position: 'HCMAGJ,ONDGJJ'}
-- name: label_1_copy_1_copy_1
-  properties:
-    role: outlined-card
-    bold: true
-    align: center
-    spacing_above: small
-    background: '#05264d'
-    icon: ''
-    underline: false
-    font: ''
-    icon_align: left
-    foreground: theme:On Primary
-    spacing_below: small
-    visible: true
-    border: ''
-    italic: false
-    font_size: 18
-    tooltip: ''
-    text: |
-      View Details
-  type: Label
-  layout_properties:
-    col_widths: {}
-    grid_position: ZLTRFL,RNDIRN
-    full_width_row: true
 - name: spacer_2
-  properties: {height: 257.21429443359375}
+  properties: {height: 257.21429443359375, visible: false}
   type: Spacer
   layout_properties: {grid_position: 'NHMAGI,LJGCZG'}
-- name: label_7
-  properties: {text: 'Borrower Full Name:', bold: true}
-  type: Label
-  layout_properties:
-    col_widths: {}
-    grid_position: NHMAGI,WHWYTV ZOAVNO,DMXNWO
-- name: label_8
-  properties: {bold: true, text: 'Loan Amount:'}
-  type: Label
-  layout_properties: {grid_position: 'NHMAGI,WHWYTV SSJPBU,FRLWVZ'}
-- name: label_11
-  properties: {bold: true, text: 'Intrest Rate:'}
-  type: Label
-  layout_properties: {grid_position: 'NHMAGI,WHWYTV BAYRIP,OKXJZM'}
-- name: label_10
-  properties: {bold: true, text: 'Tenure:'}
-  type: Label
-  layout_properties: {grid_position: 'NHMAGI,WHWYTV WGNOWR,ROFIPJ'}
-- name: label_12
-  properties: {bold: true, text: 'Date Of Apply:'}
-  type: Label
-  layout_properties: {grid_position: 'NHMAGI,WHWYTV TJZFFT,AHXPPQ'}
-- name: label_2
-  properties: {bold: true, text: 'Loan Updated Status:'}
-  type: Label
-  layout_properties: {grid_position: 'NHMAGI,WHWYTV MRPOLS,JEDARR'}
 - type: Label
-  properties: {role: null, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: 'Payment Details:'}
+  properties: {role: null, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: false, border: '', italic: false, font_size: null, tooltip: '', text: 'Payment Details:'}
   name: label_1
-  layout_properties: {grid_position: 'NHMAGI,WHWYTV CIKOVI,DKQJEZ'}
-- name: loan_id_label
-  properties: {}
-  type: Label
-  layout_properties:
-    col_widths: {}
-    grid_position: NHMAGI,PBOQZF ZEHYPF,DKYIEK
-- name: loan_amount_label
-  properties: {}
-  type: Label
-  layout_properties: {grid_position: 'NHMAGI,PBOQZF YYUJQH,IBCUHK'}
-- name: interest_rate_label
-  properties: {}
-  type: Label
-  layout_properties: {grid_position: 'NHMAGI,PBOQZF TJFSFD,NASFLZ'}
-- name: tenure_label
-  properties: {}
-  type: Label
-  layout_properties: {grid_position: 'NHMAGI,PBOQZF QEMNYJ,HVVNDN'}
-- name: date_of_apply_label
-  properties: {}
-  type: Label
-  layout_properties: {grid_position: 'NHMAGI,PBOQZF GQJZKW,EGWBNL'}
-  data_bindings: []
-- name: loan_updated_status_label
-  properties: {}
-  type: Label
-  layout_properties: {grid_position: 'NHMAGI,PBOQZF FVGDBN,RQVJCL'}
-  data_bindings:
-  - {property: text, code: 'self.item[''loan_updated_status'']', writeback: false}
-- type: Link
-  properties: {role: null, bold: false, align: left, col_widths: '', spacing_above: small, background: '', icon: '', wrap_on: mobile, underline: false, font: '', col_spacing: medium, icon_align: left, foreground: blue, url: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: view payment details here}
-  name: link_1
-  layout_properties: {grid_position: 'NHMAGI,PBOQZF GARTHA,IOPZMT'}
-  event_bindings: {click: link_1_click}
-- name: button_1
-  properties: {role: elevated-button, bold: true, align: center, spacing_above: small, background: '#0b2547', icon: 'fa:angle-double-left', underline: false, font: '', icon_align: left, foreground: 'theme:On Primary', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: Back}
-  type: Button
-  layout_properties:
-    col_widths: {}
-    grid_position: IRKLOA,CQUSQM
-  event_bindings: {click: button_1_click}
+  layout_properties: {grid_position: 'NHMAGI,WHWYTV'}
+- name: column_panel_1
+  properties: {background: '#Edf0f4'}
+  type: ColumnPanel
+  layout_properties: {grid_position: 'RTDDHL,PVYXWZ', full_width_row: true}
+  components:
+  - name: label_3
+    properties: {text: View Details, bold: true, font_size: 30, align: center}
+    type: Label
+    layout_properties: {grid_position: 'YSBCDH,HOTHOD'}
+  - name: spacer_4
+    properties: {height: '15'}
+    type: Spacer
+    layout_properties: {grid_position: 'LACDGY,HHVTXF'}
+  - name: label_7_copy
+    properties: {text: '  Borrower Full Name:', bold: true, role: input-prompt}
+    type: Label
+    layout_properties: {grid_position: 'UCREEW,ZUOPMO OPTOJA,VIXESI'}
+  - name: loan_id_label
+    properties: {role: outlined-card, border: 2px solid lightgrey}
+    type: Label
+    layout_properties: {grid_position: 'UCREEW,ZUOPMO RUNRBM,KBLXTF'}
+  - name: label_8_copy
+    properties: {bold: true, text: '  Loan Amount:', role: input-prompt}
+    type: Label
+    layout_properties: {grid_position: 'UCREEW,WGCIGK NOZGBV,DESUPD'}
+  - name: loan_amount_label
+    properties: {role: outlined-card, border: 2px solid lightgrey}
+    type: Label
+    layout_properties: {grid_position: 'UCREEW,WGCIGK PFZVPX,WKSTRM'}
+  - name: label_11_copy
+    properties: {bold: true, text: '  Intrest Rate:', role: input-prompt}
+    type: Label
+    layout_properties: {grid_position: 'DPPCNI,FPJRJI ZGGUQU,ULUMGC'}
+  - name: interest_rate_label
+    properties: {role: outlined-card, border: 2px solid lightgrey}
+    type: Label
+    layout_properties: {grid_position: 'DPPCNI,FPJRJI OPPQRR,VCLKXS'}
+  - name: label_12_copy
+    properties: {bold: true, text: '  Date Of Apply:', font_size: null, role: input-prompt}
+    type: Label
+    layout_properties: {grid_position: 'DPPCNI,FPJRJI HPDTEB,HHMVLV'}
+  - name: date_of_apply_label
+    properties: {role: outlined-card, border: 2px solid lightgrey}
+    type: Label
+    layout_properties: {grid_position: 'DPPCNI,FPJRJI CLAKAX,VSQIZK'}
+    data_bindings: []
+  - name: label_10_copy
+    properties: {bold: true, text: '  Tenure:', role: input-prompt}
+    type: Label
+    layout_properties: {grid_position: 'DPPCNI,CDNBJI ZIRVXD,OGJFQW'}
+  - name: tenure_label
+    properties: {role: outlined-card, border: 2px solid lightgrey}
+    type: Label
+    layout_properties: {grid_position: 'DPPCNI,CDNBJI HQWSOH,KEBZKB'}
+  - name: label_2_copy
+    properties: {bold: true, text: '  Loan Updated Status:', role: input-prompt}
+    type: Label
+    layout_properties: {grid_position: 'DPPCNI,CDNBJI RNXUAO,SPPTVU'}
+  - name: loan_updated_status_label
+    properties: {role: outlined-card, border: 2px solid lightgrey}
+    type: Label
+    layout_properties: {grid_position: 'DPPCNI,CDNBJI AULZQH,XSBCTK'}
+    data_bindings:
+    - {property: text, code: 'self.item[''loan_updated_status'']', writeback: false}
+  - name: spacer_3
+    properties: {height: 32}
+    type: Spacer
+    layout_properties: {grid_position: 'SCBTDV,DIZRLM'}
+  - type: Link
+    properties: {role: null, bold: false, align: center, col_widths: '', spacing_above: small, background: '', icon: '', wrap_on: mobile, underline: false, font: '', col_spacing: medium, icon_align: left, foreground: blue, url: '', spacing_below: small, visible: true, border: '', italic: false, font_size: 22, tooltip: '', text: View Payment Detail Here}
+    name: link_1
+    layout_properties: {grid_position: 'LJAJHH,FDBRJD'}
+    event_bindings: {click: link_1_click}
+    components: []
+  - name: spacer_5
+    properties: {height: 32}
+    type: Spacer
+    layout_properties: {grid_position: 'ICEFVE,TQYGDK'}
+  - name: button_1_copy
+    properties: {role: elevated-button, bold: true, align: center, spacing_above: small, background: '#0b2547', icon: 'fa:backward', underline: false, font: '', icon_align: left, foreground: 'theme:On Primary', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: Back}
+    type: Button
+    layout_properties: {grid_position: 'FPCHMK,VVBMBZ'}
+    event_bindings: {click: button_1_click}
+  - name: spacer_6
+    properties: {height: '350'}
+    type: Spacer
+    layout_properties: {grid_position: 'UAVJTK,AOQVMV'}
 is_package: true

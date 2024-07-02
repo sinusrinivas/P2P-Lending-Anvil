@@ -20,7 +20,7 @@ components:
       grid_position: DHOVAP,SWQFIS
     components:
     - type: ColumnPanel
-      properties: {col_widths: '{"KRLZSH":15,"HLNDUJ":40,"IPXQDT":5,"PYVLVK":35,"TVFUUB":25,"HKCYNP":35,"ZXAXZP":25,"YEZOLE":35,"IJBLZH":25,"UTHZRD":35,"LQMQNJ":25,"RWZBBQ":35,"SYRXRM":25,"WZFPPT":35,"GGADRT":25}'}
+      properties: {col_widths: '{"KRLZSH":15,"HLNDUJ":35,"IPXQDT":10,"PYVLVK":35,"TVFUUB":25,"HKCYNP":35,"ZXAXZP":25,"YEZOLE":35,"IJBLZH":25,"UTHZRD":35,"LQMQNJ":25,"RWZBBQ":35,"SYRXRM":25,"WZFPPT":35,"GGADRT":25}'}
       name: content_panel_copy_2
       layout_properties:
         col_widths: {}
@@ -31,12 +31,20 @@ components:
         name: button_1_copy
         layout_properties: {grid_position: 'JHTLOW,RJVCQC', full_width_row: true}
         event_bindings: {click: button_1_copy_click}
+      - name: label_7
+        properties: {align: center, text: Update Details, role: outlined-card, bold: true, font_size: 30}
+        type: Label
+        layout_properties: {grid_position: 'HNRMWF,EAMDNN'}
+      - name: spacer_3
+        properties: {height: 32}
+        type: Spacer
+        layout_properties: {grid_position: 'ZPOPTK,YAGENM'}
       - name: spacer_1
         properties: {height: 247.9285888671875}
         type: Spacer
         layout_properties: {grid_position: 'EPTIXA,KRLZSH'}
       - type: Label
-        properties: {role: null, bold: false, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: '   Name'}
+        properties: {role: null, bold: false, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: '   Name :'}
         name: label_1
         layout_properties: {grid_position: 'EPTIXA,HLNDUJ SFYFAT,PYVLVK'}
       - type: TextBox
@@ -45,7 +53,7 @@ components:
         layout_properties: {grid_position: 'EPTIXA,HLNDUJ SFYFAT,TVFUUB'}
         event_bindings: {pressed_enter: text_box_1_pressed_enter}
       - type: Label
-        properties: {role: null, bold: false, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: '   Email ID'}
+        properties: {role: null, bold: false, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: '   Email ID :'}
         name: label_2
         layout_properties: {grid_position: 'EPTIXA,HLNDUJ GNFANM,HKCYNP'}
       - type: TextBox
@@ -54,7 +62,7 @@ components:
         layout_properties: {grid_position: 'EPTIXA,HLNDUJ GNFANM,ZXAXZP'}
         event_bindings: {pressed_enter: text_box_2_pressed_enter}
       - type: Label
-        properties: {role: null, bold: false, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: '   Mobile No'}
+        properties: {role: null, bold: false, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: '   Mobile No :'}
         name: label_3
         layout_properties: {grid_position: 'EPTIXA,HLNDUJ POZDHH,YEZOLE'}
       - type: TextBox
@@ -63,7 +71,7 @@ components:
         layout_properties: {grid_position: 'EPTIXA,HLNDUJ POZDHH,IJBLZH'}
         event_bindings: {pressed_enter: text_box_3_pressed_enter}
       - type: Label
-        properties: {role: null, bold: false, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: '   Joined Date'}
+        properties: {role: null, bold: false, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: '   Joined Date :'}
         name: label_4
         layout_properties: {grid_position: 'EPTIXA,HLNDUJ HCLGUL,UTHZRD'}
       - type: DatePicker
@@ -72,7 +80,7 @@ components:
         layout_properties: {grid_position: 'EPTIXA,HLNDUJ HCLGUL,LQMQNJ'}
         event_bindings: {change: date_picker_1_change}
       - type: Label
-        properties: {role: null, bold: false, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: '   Role'}
+        properties: {role: null, bold: false, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: '   Role :'}
         name: label_5
         layout_properties: {grid_position: 'EPTIXA,HLNDUJ GBMTGX,RWZBBQ'}
       - type: DropDown
@@ -99,7 +107,7 @@ components:
         layout_properties: {grid_position: 'EPTIXA,HLNDUJ GBMTGX,SYRXRM'}
         event_bindings: {change: drop_down_1_change}
       - type: Label
-        properties: {role: null, bold: false, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: '   Permission'}
+        properties: {role: null, bold: false, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: '   Permission :'}
         name: label_6
         layout_properties: {grid_position: 'EPTIXA,HLNDUJ NFWKAY,WZFPPT'}
       - type: DropDown
@@ -129,8 +137,12 @@ components:
         properties: {height: 32}
         type: Spacer
         layout_properties: {grid_position: 'EPTIXA,IPXQDT'}
+      - name: spacer_4
+        properties: {height: 32}
+        type: Spacer
+        layout_properties: {grid_position: 'IOOXFS,KQHVGW'}
       - type: Button
-        properties: {role: outlined-button, bold: false, align: center, spacing_above: small, background: '#05264d', icon: '', underline: false, font: '', icon_align: left, foreground: 'theme:On Primary', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: Save}
+        properties: {role: outlined-button, bold: false, align: center, spacing_above: small, background: '#05264d', icon: 'fa:save', underline: false, font: '', icon_align: left, foreground: 'theme:On Primary', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: Save}
         name: button_1
         layout_properties: {grid_position: 'AGFVPI,EVAXDK'}
         event_bindings: {click: button_1_click}
