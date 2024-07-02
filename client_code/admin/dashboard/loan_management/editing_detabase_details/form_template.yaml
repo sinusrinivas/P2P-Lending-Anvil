@@ -19,22 +19,22 @@ components:
 - name: data_grid_1
   properties:
     columns:
-    - {id: JKSDUP, title: Loan id, data_key: column_1, width: '120', expand: false}
-    - {id: VJQQOR, title: Borrower Name, data_key: column_2, width: 117.44442749023438, expand: false}
-    - {id: OJLQEN, title: Borrower Id, data_key: column_3, width: '120'}
-    - {id: NNUANN, data_key: column_1, title: Product Name, width: '120'}
-    - {id: YYMYOY, data_key: column_1, title: Borrwer Email}
-    - {id: OIMIZA, data_key: column_2, title: Lender Email, width: '120'}
-    - {id: NCNXNH, data_key: column_3, title: Updated Status, width: '120'}
-    - {id: DTAUMF, data_key: column_4, title: Lender accepted date, width: '120'}
-    - {id: RMMXRQ, data_key: column_1, title: Disbursed date, width: '120'}
-    - {id: JBAEAG, data_key: column_2, title: First Emi Date, width: '120'}
-    - {id: MHGEVA, data_key: column_3, title: Tenure, width: '120'}
-    - {id: CLNKGP, data_key: column_4, title: Loan Amount, width: '120'}
-    - {id: JVQFYQ, data_key: column_5, title: Total Repayment Amount, width: '120'}
-    - {id: IDOSNA, data_key: column_6, title: Remaining Amount, width: '120'}
-    - {id: PKEKOT, data_key: column_7, title: Membership Type, width: '120'}
-    - {id: CWDKTB, data_key: column_8, title: '', width: '120', expand: false}
+    - {id: JKSDUP, title: Loan id, data_key: column_1, width: '', expand: false}
+    - {id: VJQQOR, title: Borrower Name, data_key: column_2, width: '', expand: false}
+    - {id: OJLQEN, title: Borrower Id, data_key: column_3, width: ''}
+    - {id: NNUANN, data_key: column_1, title: Product Name, width: ''}
+    - {id: YYMYOY, data_key: column_1, title: Borrwer Email, width: ''}
+    - {id: OIMIZA, data_key: column_2, title: Lender Email, width: ''}
+    - {id: NCNXNH, data_key: column_3, title: Updated Status, width: ''}
+    - {id: DTAUMF, data_key: column_4, title: Lender accepted date, width: ''}
+    - {id: RMMXRQ, data_key: column_1, title: Disbursed date, width: ''}
+    - {id: JBAEAG, data_key: column_2, title: First Emi Date, width: ''}
+    - {id: MHGEVA, data_key: column_3, title: Tenure, width: 76.111083984375, expand: false}
+    - {id: CLNKGP, data_key: column_4, title: Loan Amount, width: ''}
+    - {id: JVQFYQ, data_key: column_5, title: Total Repayment Amount, width: ''}
+    - {id: IDOSNA, data_key: column_6, title: Remaining Amount, width: ''}
+    - {id: PKEKOT, data_key: column_7, title: Membership Type, width: ''}
+    - {id: CWDKTB, data_key: column_8, title: '', width: '', expand: false}
     role: tonal-data-grid
     show_page_controls: true
     wrap_on: never
