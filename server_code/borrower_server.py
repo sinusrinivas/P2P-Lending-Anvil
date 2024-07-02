@@ -555,6 +555,42 @@ def create_zaphod_pdf():
   media_object = anvil.pdf.render_form('borrower.dashboard.borrower_portfolio')
   return media_object
 
+
+
+
+
+
+
+@anvil.server.callable
+def get_notifications(user_id):
+  notifications = []
+  loans = app_tables.fin_loan_details.search(borrower_customer_id=user_id)
+  for loan in loans:
+    if loan['loan_updated_status']:
+      notifications.append({
+        'message': f"Your loan for {loan['product_name']} is {loan['loan_updated_status']}",
+        'loan_updated_status': loan['loan_updated_status'],
+        'read': False,
+        'date': loan['updated_at'] if 'updated_at' in loan else datetime.datetime.now()
+      })
+  return notifications
+
+@anvil.server.callable
+def mark_notifications_as_read(user_id):
+  loans = app_tables.fin_loan_details.search(borrower_customer_id=user_id)
+  for loan in loans:
+    if loan['loan_updated_status']:
+      loan['notification_read'] = True  # This line will not affect the table since there's no notification_read column
+
+
+
+
+
+
+
+
+
+
 # second
 # def get_user_points(id):
 #     users = app_tables.fin_user_profile.search(customer_id=id)
