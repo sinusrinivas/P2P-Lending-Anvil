@@ -16,7 +16,7 @@ services:
 - source: /runtime/services/anvil/secrets.yml
   client_config: {}
   server_config: {}
-startup: {type: form, module: lendor.dashboard.lender_view_loans.view_details_1}
+startup: {type: form, module: lendor.dashboard.today_dues.View_Details.part_payment_copy}
 package_name: pip_install_reportlab
 allow_embedding: false
 name: P2P Lending App clone 25/06/2024
