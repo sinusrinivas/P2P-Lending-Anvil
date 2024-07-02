@@ -200,7 +200,7 @@ class dashboard(dashboardTemplate):
     self.user_Id = main_form_module.userId
 
     self.populate_loan_history()
-    # self.update_platform_fees()
+    self.update_platform_fees()
     self.update_wallet_info()
     self.update_user_profile()
     self.update_notification_count()
