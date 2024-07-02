@@ -11,6 +11,7 @@ from datetime import datetime
 # from . import bessem as bessemfunctions
 from . import wallet
 import anvil.pdf
+# import datetime
 
 @anvil.server.callable()
 def create_pdf1(name, image_source, selected_row):
@@ -561,6 +562,7 @@ def create_zaphod_pdf():
 
 
 
+
 @anvil.server.callable
 def get_notifications(user_id):
   notifications = []
@@ -571,7 +573,7 @@ def get_notifications(user_id):
         'message': f"Your loan for {loan['product_name']} is {loan['loan_updated_status']}",
         'loan_updated_status': loan['loan_updated_status'],
         'read': False,
-        'date': loan['updated_at'] if 'updated_at' in loan else datetime.datetime.now()
+        'date': loan.get('updated_at', datetime.datetime.now())
       })
   return notifications
 
