@@ -42,7 +42,7 @@ components:
         properties: {text: '  Borrower Name:', bold: true, role: input-prompt}
         type: Label
         layout_properties: {grid_position: 'UCREEW,ZUOPMO HNCMEL,ZKFVSV'}
-      - properties: {role: outlined-card}
+      - properties: {role: outlined-card, border: 2px solid lightgrey}
         type: Label
         layout_properties: {grid_position: 'UCREEW,ZUOPMO UWEMXA,GBTEJN'}
         data_bindings:
@@ -52,7 +52,7 @@ components:
         type: Label
         layout_properties: {grid_position: 'UCREEW,ZUOPMO GVDKEO,QBZCNT'}
         name: label_8
-      - properties: {role: outlined-card}
+      - properties: {role: outlined-card, border: 2px solid lightgrey}
         type: Label
         layout_properties: {grid_position: 'UCREEW,ZUOPMO POWJSD,JHIXZT'}
         name: interest_rate
@@ -60,7 +60,7 @@ components:
         type: Label
         layout_properties: {grid_position: 'UCREEW,ZUOPMO RIPLEY,TATFRK'}
         name: label_9
-      - properties: {role: outlined-card}
+      - properties: {role: outlined-card, border: 2px solid lightgrey}
         type: Label
         layout_properties: {grid_position: 'UCREEW,ZUOPMO HQRSIC,AFLEUF'}
         name: foreclose_amount
@@ -68,7 +68,7 @@ components:
         type: Label
         layout_properties: {grid_position: 'UCREEW,ZUOPMO ZQTPXF,ELLOSX'}
         name: label_4
-      - properties: {role: outlined-card}
+      - properties: {role: outlined-card, border: 2px solid lightgrey}
         type: Label
         layout_properties: {grid_position: 'UCREEW,ZUOPMO FULGQS,WRJZXY'}
         data_bindings:
@@ -78,7 +78,7 @@ components:
         properties: {bold: true, text: '  Loan Amount:', role: input-prompt}
         type: Label
         layout_properties: {grid_position: 'UCREEW,WGCIGK BBKZST,TJPFAW'}
-      - properties: {role: outlined-card}
+      - properties: {role: outlined-card, border: 2px solid lightgrey}
         type: Label
         layout_properties: {grid_position: 'UCREEW,WGCIGK AYZGQY,MBMPLR'}
         data_bindings:
@@ -88,7 +88,7 @@ components:
         type: Label
         layout_properties: {grid_position: 'UCREEW,WGCIGK SAAJWE,HLDWMS'}
         name: label_7
-      - properties: {role: outlined-card}
+      - properties: {role: outlined-card, border: 2px solid lightgrey}
         type: Label
         layout_properties: {grid_position: 'UCREEW,WGCIGK QUYSVX,HYOPFF'}
         name: foreclose_fee
@@ -96,7 +96,7 @@ components:
         type: Label
         layout_properties: {grid_position: 'UCREEW,WGCIGK PBLJDV,YTDTUI'}
         name: label_5
-      - properties: {role: outlined-card}
+      - properties: {role: outlined-card, border: 2px solid lightgrey}
         type: Label
         layout_properties: {grid_position: 'UCREEW,WGCIGK EDLUBU,HDOQVP'}
         data_bindings:
@@ -106,7 +106,7 @@ components:
         type: Label
         layout_properties: {grid_position: 'UCREEW,WGCIGK SMDVYE,CDGQJO'}
         name: label_3
-      - properties: {role: outlined-card}
+      - properties: {role: outlined-card, border: 2px solid lightgrey}
         type: Label
         layout_properties: {grid_position: 'UCREEW,WGCIGK OWFQVF,LYFHWX'}
         data_bindings:
@@ -128,7 +128,7 @@ components:
         properties: {height: 32}
         type: Spacer
         layout_properties: {grid_position: 'BPCDFN,YOQYNJ'}
-      - properties: {role: outlined-card}
+      - properties: {role: outlined-card, border: 2px solid lightgrey}
         type: Label
         layout_properties: {grid_position: 'BPCDFN,TLXZGD'}
         name: due_amount
