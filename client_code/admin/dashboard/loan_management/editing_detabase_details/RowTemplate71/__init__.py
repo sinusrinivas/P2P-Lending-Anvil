@@ -24,3 +24,9 @@ class RowTemplate71(RowTemplate71Template):
     self.item.update()
     self.refresh_data_bindings()
     alert('data saved')
+
+  def link_2_click(self, **event_args):
+    """This method is called when the link is clicked"""
+    self.item.delete()
+    
+    alert('data deleted')
