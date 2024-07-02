@@ -14,17 +14,7 @@ class editing_detabase_details(editing_detabase_detailsTemplate):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
 
-    # self.data_grid_1.role = "scrollable-grid-container"
-
-    # # Create a grid panel with 20 columns
-    # grid_panel = GridPanel(role="grid-panel")
-    # for _ in range(20):
-    #     column = ColumnPanel()
-    #     grid_panel.add_component(column)
-
-    # # Add the grid panel to the scrollable container
-    # self.data_grid_1.add_component(grid_panel)
-    
+    self.data_grid_1.wrap_on =  'tablet'
     self.repeating_panel_1.items = app_tables.fin_loan_details.search()
     self.repeating_panel_2.items = app_tables.fin_emi_table.search()
     self.repeating_panel_3.items = app_tables.fin_extends_loan.search()

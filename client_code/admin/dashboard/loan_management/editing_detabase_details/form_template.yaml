@@ -19,24 +19,25 @@ components:
 - name: data_grid_1
   properties:
     columns:
-    - {id: JKSDUP, title: Loan id, data_key: column_1}
-    - {id: VJQQOR, title: Borrower Name, data_key: column_2}
-    - {id: OJLQEN, title: Borrower Id, data_key: column_3}
-    - {id: NNUANN, data_key: column_1, title: Product Name}
+    - {id: JKSDUP, title: Loan id, data_key: column_1, width: '120', expand: false}
+    - {id: VJQQOR, title: Borrower Name, data_key: column_2, width: 117.44442749023438, expand: false}
+    - {id: OJLQEN, title: Borrower Id, data_key: column_3, width: '120'}
+    - {id: NNUANN, data_key: column_1, title: Product Name, width: '120'}
     - {id: YYMYOY, data_key: column_1, title: Borrwer Email}
-    - {id: OIMIZA, data_key: column_2, title: Lender Email}
-    - {id: NCNXNH, data_key: column_3, title: Updated Status}
-    - {id: DTAUMF, data_key: column_4, title: Lender accepted date}
-    - {id: RMMXRQ, data_key: column_1, title: Disbursed date}
-    - {id: JBAEAG, data_key: column_2, title: First Emi Date}
-    - {id: MHGEVA, data_key: column_3, title: Tenure}
-    - {id: CLNKGP, data_key: column_4, title: Loan Amount}
-    - {id: JVQFYQ, data_key: column_5, title: Total Repayment Amount}
-    - {id: IDOSNA, data_key: column_6, title: Remaining Amount}
-    - {id: PKEKOT, data_key: column_7, title: Membership Type}
-    - {id: CWDKTB, data_key: column_8, title: '', width: 39.5, expand: false}
+    - {id: OIMIZA, data_key: column_2, title: Lender Email, width: '120'}
+    - {id: NCNXNH, data_key: column_3, title: Updated Status, width: '120'}
+    - {id: DTAUMF, data_key: column_4, title: Lender accepted date, width: '120'}
+    - {id: RMMXRQ, data_key: column_1, title: Disbursed date, width: '120'}
+    - {id: JBAEAG, data_key: column_2, title: First Emi Date, width: '120'}
+    - {id: MHGEVA, data_key: column_3, title: Tenure, width: '120'}
+    - {id: CLNKGP, data_key: column_4, title: Loan Amount, width: '120'}
+    - {id: JVQFYQ, data_key: column_5, title: Total Repayment Amount, width: '120'}
+    - {id: IDOSNA, data_key: column_6, title: Remaining Amount, width: '120'}
+    - {id: PKEKOT, data_key: column_7, title: Membership Type, width: '120'}
+    - {id: CWDKTB, data_key: column_8, title: '', width: '120', expand: false}
     role: tonal-data-grid
     show_page_controls: true
+    wrap_on: never
   type: DataGrid
   components:
   - name: repeating_panel_1
