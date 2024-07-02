@@ -66,52 +66,52 @@ components:
     type: Spacer
     layout_properties: {grid_position: 'LACDGY,HHVTXF'}
   - name: label_7
-    properties: {text: 'Borrower Full Name:', bold: true, role: input-prompt}
+    properties: {text: '  Borrower Full Name:', bold: true, role: input-prompt}
     type: Label
     layout_properties: {grid_position: 'UCREEW,ZUOPMO'}
   - name: label_8
-    properties: {bold: true, text: 'Loan Amount:', role: input-prompt}
+    properties: {bold: true, text: '  Loan Amount:', role: input-prompt}
     type: Label
     layout_properties: {grid_position: 'UCREEW,WGCIGK'}
   - name: loan_id_label
-    properties: {role: outlined-card}
+    properties: {role: outlined-card, border: 3px solid grey}
     type: Label
     layout_properties: {grid_position: 'DPPCNI,FPJRJI CUHSTS,NUNQBH'}
   - name: label_11
-    properties: {bold: true, text: 'Intrest Rate:', role: input-prompt}
+    properties: {bold: true, text: '  Intrest Rate:', role: input-prompt}
     type: Label
     layout_properties: {grid_position: 'DPPCNI,FPJRJI ZGGUQU,ULUMGC'}
   - name: interest_rate_label
-    properties: {role: outlined-card}
+    properties: {role: outlined-card, border: 3px solid grey}
     type: Label
     layout_properties: {grid_position: 'DPPCNI,FPJRJI QCISCA,RNSBBF'}
   - name: label_12
-    properties: {bold: true, text: 'Date Of Apply:', font_size: null, role: input-prompt}
+    properties: {bold: true, text: '  Date Of Apply:', font_size: null, role: input-prompt}
     type: Label
     layout_properties: {grid_position: 'DPPCNI,FPJRJI HPDTEB,HHMVLV'}
   - name: date_of_apply_label
-    properties: {role: outlined-card}
+    properties: {role: outlined-card, border: 3px solid grey}
     type: Label
     layout_properties: {grid_position: 'DPPCNI,FPJRJI NYUVID,PEAPOV'}
     data_bindings: []
   - name: loan_amount_label
-    properties: {role: outlined-card}
+    properties: {role: outlined-card, border: 3px solid grey}
     type: Label
     layout_properties: {grid_position: 'DPPCNI,CDNBJI NPUKNU,ELOCDT'}
   - name: label_10
-    properties: {bold: true, text: 'Tenure:', role: input-prompt}
+    properties: {bold: true, text: '  Tenure:', role: input-prompt}
     type: Label
     layout_properties: {grid_position: 'DPPCNI,CDNBJI ZIRVXD,OGJFQW'}
   - name: tenure_label
-    properties: {role: outlined-card}
+    properties: {role: outlined-card, border: 3px solid grey}
     type: Label
     layout_properties: {grid_position: 'DPPCNI,CDNBJI AQXULH,YAVQDV'}
   - name: label_2
-    properties: {bold: true, text: 'Loan Updated Status:', role: input-prompt}
+    properties: {bold: true, text: '  Loan Updated Status:', role: input-prompt}
     type: Label
     layout_properties: {grid_position: 'DPPCNI,CDNBJI RNXUAO,SPPTVU'}
   - name: loan_updated_status_label
-    properties: {role: outlined-card}
+    properties: {role: outlined-card, background: '', border: 3px solid grey}
     type: Label
     layout_properties: {grid_position: 'DPPCNI,CDNBJI OGUOEV,MDMFST'}
     data_bindings:
