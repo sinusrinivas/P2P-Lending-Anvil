@@ -182,7 +182,6 @@
 
 
 # ######################################################################################################################################################################
-
 from ._anvil_designer import dashboardTemplate
 from anvil import *
 import anvil.server
@@ -240,7 +239,7 @@ class dashboard(dashboardTemplate):
   def update_notification_count(self):
     notifications = anvil.server.call('get_notifications', self.user_Id)
     unread_count = len([n for n in notifications if not n['read']])
-    self.notifications_button.text = f"Notifications ({unread_count})"
+    self.notifications.text = f"Notifications ({unread_count})"
 
   def notifications_click(self, **event_args):
     open_form('borrower.dashboard.borrower_notifications', self.user_Id)

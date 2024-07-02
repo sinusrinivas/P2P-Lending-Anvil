@@ -16,9 +16,9 @@ class ItemTemplate117(ItemTemplate117Template):
     self.update_display()
 
   def update_display(self):
-    self.label_message.text = self.item['message']
-    self.label_date.text = self.item['date'].strftime('%Y-%m-%d, %A')
-    self.label_message.bold = not self.item['read']
+    self.label_1.text = self.item['message']
+    self.label_2.text = self.item['date'].strftime('%Y-%m-%d, %A')
+    self.label_1.bold = not self.item['read']
 
   def button_pay_now_click(self, **event_args):
     if 'pay_now' in self.item:
