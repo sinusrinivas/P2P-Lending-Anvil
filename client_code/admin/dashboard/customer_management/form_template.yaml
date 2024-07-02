@@ -64,3 +64,7 @@ components:
     layout_properties: {grid_position: 'JFGEHI,VYIDYK'}
     event_bindings: {click: button_3_click}
     name: button_3
+- name: spacer_1
+  properties: {height: '300'}
+  type: Spacer
+  layout_properties: {grid_position: 'QAVSZO,JTYTIU'}

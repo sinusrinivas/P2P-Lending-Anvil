@@ -219,6 +219,7 @@ unique_ids:
     bank_users.main_form.products_main_form.personal_loan.medical_loan: '1713932648213367619462010.7378'
     admin.dashboard.manage_cms.add_lender_dropdown_details.edit_account_type: '1706531522383955942257997.2303'
     admin.dashboard.manage_cms.add_borrower_dropdown_details.edit_gender: '1706116919205605080192138.0746'
+    admin.dashboard.accounting.interest_accruals.Form1.RowTemplate74: '1719895257914344756687203.97955'
     lendor.dashboard: NG3HCRHYC4LZM65T2DCV2WECDSQFIYVI
     admin.dashboard.manage_settings.manage_membership: '1699529102487124802777625.46121'
     admin.dashboard.manage_ascend_score.add_subcategory.ItemTemplate61: '1709809594197903989799556.9601'
@@ -430,6 +431,7 @@ unique_ids:
     admin.dashboard.manage_cms.manage_issues.field_engineer: JERXIIAV5MVTGDHTOYRE3GL5NZBUHCOZ
     admin.dashboard.accounting.revenue_share.lender_revenue_share: MMI7MR7UA6ZKJ45QJJMEXX2YIRWRLRQ7
     admin.dashboard.accounting.payment_receipt.emi_details.payment_receipts: MT62J37545ZKTSZWR7WYB65KAQ2L5ABD
+    admin.dashboard.accounting.interest_accruals.Form1: '1719895246817552088872938.6846'
     borrower.borrower_registration_forms.star_1_borrower_registration_form_2_employment: '1699373440164759513719499.4375'
     admin.dashboard.integration.KYC_provider_integration: '171960456581871893345027.09177'
     bank_users.main_form.basic_registration_form: '1706530260736283711618019.2678'
