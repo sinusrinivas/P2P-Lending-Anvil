@@ -284,7 +284,7 @@ components:
       layout_properties: {}
       event_bindings: {click: link_9_click}
       name: link_9
-    - properties: {text: '', icon: 'fa:bell', icon_align: left_edge, role: null}
+    - properties: {text: '', icon: 'fa:bell', icon_align: left, role: null, font_size: 20}
       type: Button
       layout_properties: {}
       event_bindings: {click: notifications_click}
