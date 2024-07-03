@@ -1,6 +1,6 @@
 container:
   type: ColumnPanel
-  properties: {col_widths: '{"LJGCZG":15,"WHWYTV":25}'}
+  properties: {col_widths: '{}'}
 components:
 - type: FlowPanel
   properties: {}
@@ -15,27 +15,15 @@ components:
     properties: {}
     name: logout_1
     layout_properties: {width: 185.025, grid_position: 'ASDWEI,YREKHQ', expand: true}
-- type: form:lendor.navigation_bar.Navigation_bar_lender_dashbord
-  properties: {}
-  name: navigation_bar_lender_dashbord_1
-  layout_properties: {grid_position: 'DCFHLM,SASGAN', full_width_row: true}
-- name: spacer_1
-  properties: {height: 32, visible: false}
-  type: Spacer
-  layout_properties: {grid_position: 'HCMAGJ,ONDGJJ'}
-- name: spacer_2
-  properties: {height: 257.21429443359375, visible: false}
-  type: Spacer
-  layout_properties: {grid_position: 'NHMAGI,LJGCZG'}
-- type: Label
-  properties: {role: null, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: false, border: '', italic: false, font_size: null, tooltip: '', text: 'Payment Details:'}
-  name: label_1
-  layout_properties: {grid_position: 'NHMAGI,WHWYTV'}
 - name: column_panel_1
   properties: {background: '#Edf0f4'}
   type: ColumnPanel
   layout_properties: {grid_position: 'RTDDHL,PVYXWZ', full_width_row: true}
   components:
+  - type: form:lendor.navigation_bar.Navigation_bar_lender_dashbord
+    properties: {}
+    name: navigation_bar_lender_dashbord_1
+    layout_properties: {grid_position: 'PLRKFA,FMRMAV'}
   - name: label_3
     properties: {text: View Details, bold: true, font_size: 30, align: center}
     type: Label
