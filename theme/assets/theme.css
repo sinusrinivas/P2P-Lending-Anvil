@@ -1137,3 +1137,12 @@ span.btn-text{
 }
 
 
+.my-scrollable-container {  /* Replace with your container's class name */
+  display: flex;
+  overflow-x: auto;  /* Enable horizontal scrolling */
+  white-space: nowrap;  /* Prevent wrapping of items */
+}
+
+.my-scrollable-container .repeating-panel {
+  flex: 0 0 auto;  /* Set individual panel width to fit container */
+}

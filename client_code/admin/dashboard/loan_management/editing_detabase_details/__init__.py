@@ -14,6 +14,12 @@ class editing_detabase_details(editing_detabase_detailsTemplate):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
 
+    self.scrollable_container = Panel(name='scrollable_container', layout='flex')
+    self.add_component(self.scrollable_container)
+
+    self.repeating_panel_1 = RepeatingPanel(items=[], name='repeating_panel_1')
+    self.scrollable_container.add_component(self.repeating_panel_1)
+
     # self.repeating_panel_1.role = 'scrollable-datagrid'
     # self.data_grid_1.role = 'scrollable-datagrid'
     self.repeating_panel_1.items = app_tables.fin_loan_details.search()
