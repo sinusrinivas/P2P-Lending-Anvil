@@ -16,13 +16,10 @@ class editing_detabase_details(editing_detabase_detailsTemplate):
 
   
     self.repeating_panel_5.items = app_tables.fin_loan_details.search()
-    items = []
-    for row in range(100):
-      item = {}
-      for col in range(1, 22):
-         item.update({'column_{}'.format(col): 'col{}_{}'.format(col, row)})
-      items.append(item)
-    self.repeating_panel_1.items = items
+    for i in range(min(100, len(self.data_grid_5.columns))):
+      self.data_grid_5.columns[i]['width'] = 250
+
+    self.data_grid_5.columns = self.data_grid_5.columns
     self.data_grid_5.role = 'wide'
     
 

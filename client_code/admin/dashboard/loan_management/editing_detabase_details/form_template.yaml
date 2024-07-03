@@ -13,9 +13,6 @@ components:
 - name: data_grid_5
   properties:
     columns:
-    - {id: JKSDUP, title: Column 1, data_key: column_1}
-    - {id: VJQQOR, title: Column 2, data_key: column_2}
-    - {id: OJLQEN, title: Column 3, data_key: column_3}
     - {id: GEDMBK, data_key: total_processing_fee_amount, title: total_processing_fee_amount}
     - {id: TTCRTX, data_key: loan_id, title: loan_id}
     - {id: AAKFCD, data_key: borrower_customer_id, title: borrower_customer_id}
@@ -65,7 +62,7 @@ components:
   - name: repeating_panel_5
     properties: {item_template: admin.dashboard.loan_management.editing_detabase_details.RowTemplate77}
     type: RepeatingPanel
-  layout_properties: {grid_position: 'HRQFUB,FHPFPE'}
+  layout_properties: {grid_position: 'HRQFUB,FHPFPE', full_width_row: true}
 - name: spacer_1
   properties: {height: 32}
   type: Spacer
