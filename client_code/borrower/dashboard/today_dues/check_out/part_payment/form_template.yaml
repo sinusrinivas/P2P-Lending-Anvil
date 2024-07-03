@@ -35,7 +35,7 @@ components:
     type: Label
     layout_properties: {grid_position: 'UGHHEK,AFVUGX UMBLIJ,AQRVCA'}
   - name: loan_id_label
-    properties: {align: left, role: outlined-card}
+    properties: {align: left, role: outlined-card, border: 2px solid lightgrey}
     type: Label
     layout_properties: {grid_position: 'UGHHEK,AFVUGX DMXLTO,DQFFXV'}
   - name: label_10_copy
@@ -43,7 +43,7 @@ components:
     type: Label
     layout_properties: {grid_position: 'UGHHEK,AFVUGX PDENSN,YEFACP'}
   - name: tenure_label
-    properties: {align: left, role: outlined-card}
+    properties: {align: left, role: outlined-card, border: 2px solid lightgrey}
     type: Label
     layout_properties: {grid_position: 'UGHHEK,AFVUGX SRYZGE,YONRDJ'}
   - name: label_1_copy
@@ -51,7 +51,7 @@ components:
     type: Label
     layout_properties: {grid_position: 'UGHHEK,AFVUGX ILWNHT,TBHCEF'}
   - name: account_no_label
-    properties: {align: left, role: outlined-card}
+    properties: {align: left, role: outlined-card, border: 2px solid lightgrey}
     type: Label
     layout_properties: {grid_position: 'UGHHEK,AFVUGX MKCFLZ,VAJAPW'}
   - name: label_4_copy
@@ -59,7 +59,7 @@ components:
     type: Label
     layout_properties: {grid_position: 'UGHHEK,AFVUGX GWILSJ,ZXROVR'}
   - name: emi_amount_label
-    properties: {role: outlined-card, bold: false, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: ''}
+    properties: {role: outlined-card, bold: false, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: 2px solid lightgrey, italic: false, font_size: null, tooltip: '', text: ''}
     type: Label
     layout_properties: {grid_position: 'UGHHEK,AFVUGX KWCRHI,LMDRBD'}
   - name: label_3
@@ -67,7 +67,7 @@ components:
     type: Label
     layout_properties: {grid_position: 'UGHHEK,AFVUGX HLTYNG,BKOBLO'}
   - name: total_emi_amount_label
-    properties: {role: outlined-card, bold: false, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: ''}
+    properties: {role: outlined-card, bold: false, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: 2px solid lightgrey, italic: false, font_size: null, tooltip: '', text: ''}
     type: Label
     layout_properties: {grid_position: 'UGHHEK,AFVUGX GEAQBR,EAORNH'}
   - name: label_8_copy
@@ -75,7 +75,7 @@ components:
     type: Label
     layout_properties: {grid_position: 'UGHHEK,VDNRXY CMZXKQ,RIWUYZ'}
   - name: loan_amount_label
-    properties: {align: left, role: outlined-card}
+    properties: {align: left, role: outlined-card, border: 2px solid lightgrey}
     type: Label
     layout_properties: {grid_position: 'UGHHEK,VDNRXY UNEPQI,AMSXMY'}
   - name: label_11_copy
@@ -83,7 +83,7 @@ components:
     type: Label
     layout_properties: {grid_position: 'UGHHEK,VDNRXY PWHHIP,ESMQWM'}
   - name: interest_label
-    properties: {align: left, role: outlined-card}
+    properties: {align: left, role: outlined-card, border: 2px solid lightgrey}
     type: Label
     layout_properties: {grid_position: 'UGHHEK,VDNRXY FZDSCP,EQTGIT'}
   - name: label_13_copy
@@ -91,7 +91,7 @@ components:
     type: Label
     layout_properties: {grid_position: 'UGHHEK,VDNRXY LPGMCQ,DWHKPK'}
   - name: remainining_amount
-    properties: {role: outlined-card}
+    properties: {role: outlined-card, border: 2px solid lightgrey}
     type: Label
     layout_properties: {grid_position: 'UGHHEK,VDNRXY DMTFNV,QVCHCN'}
   - name: additional_fee_label
@@ -99,7 +99,7 @@ components:
     type: Label
     layout_properties: {grid_position: 'UGHHEK,VDNRXY ELRRTI,STEHUH'}
   - name: additional_fee
-    properties: {visible: false, role: outlined-card}
+    properties: {visible: false, role: outlined-card, border: 2px solid lightgrey}
     type: Label
     layout_properties: {grid_position: 'UGHHEK,VDNRXY ETFASH,KDAEGN'}
   - name: label_5
@@ -107,7 +107,7 @@ components:
     type: Label
     layout_properties: {grid_position: 'UGHHEK,VDNRXY IGEMBF,HYPUOG'}
   - name: label_6
-    properties: {bold: true, role: outlined-card}
+    properties: {bold: true, role: outlined-card, border: 2px solid lightgrey}
     type: Label
     layout_properties: {grid_position: 'UGHHEK,VDNRXY OVPTCG,GZKXXG'}
   - name: spacer_1_copy

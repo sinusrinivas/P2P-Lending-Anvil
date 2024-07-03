@@ -45,7 +45,7 @@ components:
     type: Label
     layout_properties: {grid_position: 'UGHHEK,AFVUGX UMBLIJ,AQRVCA'}
   - name: name_label
-    properties: {role: outlined-card}
+    properties: {role: outlined-card, border: 2px solid lightgrey}
     type: Label
     layout_properties: {grid_position: 'UGHHEK,AFVUGX JUZWCS,EPRQHR'}
   - name: label_10_copy
@@ -53,7 +53,7 @@ components:
     type: Label
     layout_properties: {grid_position: 'UGHHEK,AFVUGX PDENSN,YEFACP'}
   - name: tenure_label
-    properties: {role: outlined-card}
+    properties: {role: outlined-card, border: 2px solid lightgrey}
     type: Label
     layout_properties: {grid_position: 'UGHHEK,AFVUGX OWQJDE,DOPMSM'}
   - name: label_12
@@ -61,7 +61,7 @@ components:
     type: Label
     layout_properties: {grid_position: 'UGHHEK,AFVUGX KGLWYG,QOIEVZ'}
   - name: date_of_apply_label
-    properties: {role: outlined-card}
+    properties: {role: outlined-card, border: 2px solid lightgrey}
     type: Label
     layout_properties: {grid_position: 'UGHHEK,AFVUGX LZONUM,IVFICR'}
   - name: label_8_copy
@@ -69,7 +69,7 @@ components:
     type: Label
     layout_properties: {grid_position: 'UGHHEK,VDNRXY CMZXKQ,RIWUYZ'}
   - name: loan_amount_label
-    properties: {role: outlined-card}
+    properties: {role: outlined-card, border: 2px solid lightgrey}
     type: Label
     layout_properties: {grid_position: 'UGHHEK,VDNRXY OPAZQN,JEGAMH'}
   - name: label_11_copy
@@ -77,7 +77,7 @@ components:
     type: Label
     layout_properties: {grid_position: 'UGHHEK,VDNRXY PWHHIP,ESMQWM'}
   - name: intrest_rate_label
-    properties: {role: outlined-card}
+    properties: {role: outlined-card, border: 2px solid lightgrey}
     type: Label
     layout_properties: {grid_position: 'UGHHEK,VDNRXY XXVBAL,QOSCDT'}
   - name: label_2
@@ -85,7 +85,7 @@ components:
     type: Label
     layout_properties: {grid_position: 'UGHHEK,VDNRXY XOXZJV,EIFEDN'}
   - name: loan_updated_status_label
-    properties: {role: outlined-card, bold: false, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: green, spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: ''}
+    properties: {role: outlined-card, bold: false, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: green, spacing_below: small, visible: true, border: 2px solid lightgrey, italic: false, font_size: null, tooltip: '', text: ''}
     type: Label
     layout_properties: {grid_position: 'UGHHEK,VDNRXY PILJIM,CAHQYM'}
     data_bindings:

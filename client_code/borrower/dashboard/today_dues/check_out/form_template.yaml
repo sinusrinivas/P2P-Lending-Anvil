@@ -35,7 +35,7 @@ components:
       type: Label
       layout_properties: {grid_position: 'UGHHEK,AFVUGX UMBLIJ,AQRVCA'}
       name: label_7
-    - properties: {align: left, role: outlined-card}
+    - properties: {align: left, role: outlined-card, border: 2px solid lightgrey}
       type: Label
       layout_properties: {grid_position: 'UGHHEK,AFVUGX MCFNDM,INPQUJ'}
       name: loan_id_label
@@ -43,7 +43,7 @@ components:
       type: Label
       layout_properties: {grid_position: 'UGHHEK,AFVUGX PDENSN,YEFACP'}
       name: label_10
-    - properties: {align: left, role: outlined-card}
+    - properties: {align: left, role: outlined-card, border: 2px solid lightgrey}
       type: Label
       layout_properties: {grid_position: 'UGHHEK,AFVUGX KMEGEF,TILOMZ'}
       name: tenure_label
@@ -95,7 +95,7 @@ components:
       type: Label
       layout_properties: {grid_position: 'UGHHEK,VDNRXY CMZXKQ,RIWUYZ'}
       name: label_8
-    - properties: {align: left, role: outlined-card}
+    - properties: {align: left, role: outlined-card, border: 2px solid lightgrey}
       type: Label
       layout_properties: {grid_position: 'UGHHEK,VDNRXY VVEQMB,BISMOK'}
       name: loan_amount_label
@@ -103,7 +103,7 @@ components:
       type: Label
       layout_properties: {grid_position: 'UGHHEK,VDNRXY PWHHIP,ESMQWM'}
       name: label_11
-    - properties: {align: left, role: outlined-card}
+    - properties: {align: left, role: outlined-card, border: 2px solid lightgrey}
       type: Label
       layout_properties: {grid_position: 'UGHHEK,VDNRXY QNEGPV,QCGNTO'}
       name: interest_label

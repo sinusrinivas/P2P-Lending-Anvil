@@ -33,7 +33,7 @@ components:
     type: Label
     layout_properties: {grid_position: 'KPFVNL,DPOYQA TVTDON,YHYJLP'}
   - name: label_4
-    properties: {role: outlined-card}
+    properties: {role: outlined-card, border: 2px solid lightgrey}
     type: Label
     layout_properties: {grid_position: 'KPFVNL,DPOYQA HDZWKU,HQXHIH'}
   - name: label_7
@@ -41,7 +41,7 @@ components:
     type: Label
     layout_properties: {grid_position: 'KPFVNL,DPOYQA VBSKBP,HNEKPQ'}
   - name: label_8
-    properties: {role: outlined-card}
+    properties: {role: outlined-card, border: 2px solid lightgrey}
     type: Label
     layout_properties: {grid_position: 'KPFVNL,DPOYQA NKUVLC,JTHZHS'}
   - name: label_15
@@ -49,7 +49,7 @@ components:
     type: Label
     layout_properties: {grid_position: 'KPFVNL,DPOYQA AFBPZP,TNLFWY'}
   - name: label_16
-    properties: {role: outlined-card}
+    properties: {role: outlined-card, border: 2px solid lightgrey}
     type: Label
     layout_properties: {grid_position: 'KPFVNL,DPOYQA ZTJVOO,FEZNGJ'}
   - name: label_19
@@ -57,7 +57,7 @@ components:
     type: Label
     layout_properties: {grid_position: 'KPFVNL,DPOYQA WLHTFH,JBQDFF'}
   - name: label_20
-    properties: {role: outlined-card}
+    properties: {role: outlined-card, border: 2px solid lightgrey}
     type: Label
     layout_properties: {grid_position: 'KPFVNL,DPOYQA EOOJWV,YEWJMM'}
   - name: label_25
@@ -65,7 +65,7 @@ components:
     type: Label
     layout_properties: {grid_position: 'KPFVNL,DPOYQA WRSZHS,JGFSYB'}
   - name: label_26
-    properties: {role: outlined-card}
+    properties: {role: outlined-card, border: 2px solid lightgrey}
     type: Label
     layout_properties: {grid_position: 'KPFVNL,DPOYQA MCCLXA,WSIYML'}
   - name: label_29
@@ -73,7 +73,7 @@ components:
     type: Label
     layout_properties: {grid_position: 'KPFVNL,DPOYQA FCPKUW,EQVUDU'}
   - name: label_30
-    properties: {role: outlined-card}
+    properties: {role: outlined-card, border: 2px solid lightgrey}
     type: Label
     layout_properties: {grid_position: 'KPFVNL,DPOYQA ZNTDEF,STDBZA'}
   - name: label_33
@@ -81,7 +81,7 @@ components:
     type: Label
     layout_properties: {grid_position: 'KPFVNL,DPOYQA EZYTRT,DCYNZT'}
   - name: label_34
-    properties: {role: outlined-card}
+    properties: {role: outlined-card, border: 2px solid lightgrey}
     type: Label
     layout_properties: {grid_position: 'KPFVNL,DPOYQA PHYYCC,TJMBKU'}
   - name: label_5
@@ -89,7 +89,7 @@ components:
     type: Label
     layout_properties: {grid_position: 'KPFVNL,CVNLKY MUFWGA,TNSUJJ'}
   - name: label_6
-    properties: {role: outlined-card}
+    properties: {role: outlined-card, border: 2px solid lightgrey}
     type: Label
     layout_properties: {grid_position: 'KPFVNL,CVNLKY XCJYWL,UKYAKX'}
   - name: label_9
@@ -97,7 +97,7 @@ components:
     type: Label
     layout_properties: {grid_position: 'KPFVNL,CVNLKY QJEDYI,LSWKVC'}
   - name: label_10
-    properties: {role: outlined-card}
+    properties: {role: outlined-card, border: 2px solid lightgrey}
     type: Label
     layout_properties: {grid_position: 'KPFVNL,CVNLKY VSKCCJ,MMGONS'}
   - name: label_17
@@ -105,7 +105,7 @@ components:
     type: Label
     layout_properties: {grid_position: 'KPFVNL,CVNLKY TGWVME,LXFZEM'}
   - name: label_18
-    properties: {role: outlined-card}
+    properties: {role: outlined-card, border: 2px solid lightgrey}
     type: Label
     layout_properties: {grid_position: 'KPFVNL,CVNLKY GOXHCB,APJCAD'}
   - name: label_21
@@ -113,7 +113,7 @@ components:
     type: Label
     layout_properties: {grid_position: 'KPFVNL,CVNLKY MFGJKV,CPZMFQ'}
   - name: label_22
-    properties: {role: outlined-card}
+    properties: {role: outlined-card, border: 2px solid lightgrey}
     type: Label
     layout_properties: {grid_position: 'KPFVNL,CVNLKY UQYMNE,NXJXID'}
   - name: label_27
@@ -121,7 +121,7 @@ components:
     type: Label
     layout_properties: {grid_position: 'KPFVNL,CVNLKY FRUMSD,KKAEVA'}
   - name: label_28
-    properties: {role: outlined-card}
+    properties: {role: outlined-card, border: 2px solid lightgrey}
     type: Label
     layout_properties: {grid_position: 'KPFVNL,CVNLKY TTQKJY,DAPLOU'}
   - name: label_31
@@ -129,7 +129,7 @@ components:
     type: Label
     layout_properties: {grid_position: 'KPFVNL,CVNLKY EBXAMR,GNMOPO'}
   - name: label_32
-    properties: {role: outlined-card, bold: false, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: ''}
+    properties: {role: outlined-card, bold: false, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: 2px solid lightgrey, italic: false, font_size: null, tooltip: '', text: ''}
     type: Label
     layout_properties: {grid_position: 'KPFVNL,CVNLKY BQNAMN,EMIXDK'}
   - name: spacer_1_copy

@@ -38,7 +38,7 @@ components:
       type: Label
       layout_properties: {grid_position: 'UCREEW,ZUOPMO IZDDSE,KCQKAH'}
     - name: label_23
-      properties: {role: outlined-card}
+      properties: {role: outlined-card, border: 2px solid lightgrey}
       type: Label
       layout_properties: {grid_position: 'UCREEW,ZUOPMO QRLRWC,JOUNBO'}
     - name: label_8_copy
@@ -46,7 +46,7 @@ components:
       type: Label
       layout_properties: {grid_position: 'UCREEW,WGCIGK XXUZZN,LFWOSQ'}
     - name: mi_label
-      properties: {role: outlined-card, bold: false, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: ''}
+      properties: {role: outlined-card, bold: false, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: 2px solid lightgrey, italic: false, font_size: null, tooltip: '', text: ''}
       type: Label
       layout_properties: {grid_position: 'UCREEW,WGCIGK PZYGGX,LBWCJJ'}
     - name: label_7
@@ -54,7 +54,7 @@ components:
       type: Label
       layout_properties: {grid_position: 'DPPCNI,FPJRJI RWROEW,NAEMGE'}
     - name: extension_amountt
-      properties: {role: outlined-card, bold: false, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: ''}
+      properties: {role: outlined-card, bold: false, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: 2px solid lightgrey, italic: false, font_size: null, tooltip: '', text: ''}
       type: Label
       layout_properties: {grid_position: 'DPPCNI,FPJRJI FYUVMC,XIVZJV'}
     - name: label_3
@@ -62,7 +62,7 @@ components:
       type: Label
       layout_properties: {grid_position: 'DPPCNI,FPJRJI ZVWWKJ,PJFLUD'}
     - name: new_emii
-      properties: {role: outlined-card}
+      properties: {role: outlined-card, border: 2px solid lightgrey}
       type: Label
       layout_properties: {grid_position: 'DPPCNI,FPJRJI JHWVWU,GBAOPT'}
     - name: label_16
@@ -70,7 +70,7 @@ components:
       type: Label
       layout_properties: {grid_position: 'DPPCNI,CDNBJI OJHTJJ,PKQFQG'}
     - name: extension_fee
-      properties: {role: outlined-card}
+      properties: {role: outlined-card, border: 2px solid lightgrey}
       type: Label
       layout_properties: {grid_position: 'DPPCNI,CDNBJI DPMUVX,HOAHBS'}
     - name: label_2
@@ -78,7 +78,7 @@ components:
       type: Label
       layout_properties: {grid_position: 'DPPCNI,CDNBJI DEKBLG,RIVMJA'}
     - name: final_repayment
-      properties: {role: outlined-card}
+      properties: {role: outlined-card, border: 2px solid lightgrey}
       type: Label
       layout_properties: {grid_position: 'DPPCNI,CDNBJI ZYZEWO,QYZLPL'}
     - name: spacer_1
@@ -94,7 +94,7 @@ components:
       type: Spacer
       layout_properties: {grid_position: 'VHQRIT,ANMYFK'}
     - name: reason_textbox
-      properties: {role: outlined, bold: false, align: left, placeholder: mention a reason here for loan extension, spacing_above: small, background: 'theme:On Primary', type: text, underline: false, font: '', hide_text: false, foreground: '', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: ''}
+      properties: {role: outlined, bold: false, align: left, placeholder: mention a reason here for loan extension, spacing_above: small, background: 'theme:On Primary', type: text, underline: false, font: '', hide_text: false, foreground: '', spacing_below: small, visible: true, border: 2px solid lightgrey, italic: false, enabled: true, font_size: null, tooltip: '', text: ''}
       type: TextBox
       layout_properties: {grid_position: 'OFZXCH,UXQAJN'}
     - name: spacer_6
