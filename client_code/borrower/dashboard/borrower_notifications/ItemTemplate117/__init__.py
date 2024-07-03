@@ -23,3 +23,7 @@ class ItemTemplate117(ItemTemplate117Template):
     def button_pay_now_click(self, **event_args):
         if 'pay_now' in self.item:
             alert(self.item['pay_now'])
+
+    def label_1_click(self, **event_args):
+      """This method is called when the link is clicked"""
+      open_form('borrower.dashboard.borrower_notifications.notifications_view_profile')
