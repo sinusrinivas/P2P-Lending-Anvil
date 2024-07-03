@@ -6,20 +6,20 @@ class borrower_notifications(borrower_notificationsTemplate):
     def __init__(self, user_Id, **properties):
         self.init_components(**properties)
         self.user_Id = user_Id
-        self.read_notifications = set()  # Store read notifications
         self.load_notifications()
 
     def load_notifications(self):
-        notifications = anvil.server.call('get_notifications', self.user_Id)
-        for notification in notifications:
-            notification['read'] = (notification['date'], notification['message']) in self.read_notifications
-        self.repeating_panel_1.items = notifications
-        self.mark_notifications_as_read()
+        self.notifications = anvil.server.call('get_notifications', self.user_Id)
+        self.repeating_panel_1.items = self.notifications
+        self.update_notification_count()
 
-    def mark_notifications_as_read(self):
-        for item in self.repeating_panel_1.items:
-            self.read_notifications.add((item['date'], item['message']))
-        # No need to call server function since we are not updating the database
+    def update_notification_count(self):
+        unread_count = len([n for n in self.notifications if not n['read']])
+        get_open_form().update_notification_count(unread_count)
+
+    def mark_notification_as_read(self, loan_id):
+        anvil.server.call('mark_notification_as_read', loan_id)
+        self.load_notifications()
 
     def button_refresh_click(self, **event_args):
         self.load_notifications()

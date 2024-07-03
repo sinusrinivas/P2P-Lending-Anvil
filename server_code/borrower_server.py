@@ -574,15 +574,20 @@ def get_notifications(user_id):
             notifications.append({
                 'message': f"Your loan for {loan['product_name']} is {loan['loan_updated_status']}",
                 'loan_updated_status': loan['loan_updated_status'],
-                'read': False,
-                'date': datetime.now().date()
+                'read': loan['notification_read'],
+                'date': loan['notification_date'],
+                'customer_id': loan['borrower_customer_id'],
+                'loan_id': loan['loan_id']
             })
     return notifications
 
 @anvil.server.callable
-def mark_notifications_as_read(user_id):
-    # This function won't update the table as there's no notification_read column
-    pass
+def mark_notification_as_read(loan_id):
+    loan = app_tables.fin_loan_details.get(loan_id=loan_id)
+    if loan:
+        loan['notification_read'] = True
+
+
 
 
 

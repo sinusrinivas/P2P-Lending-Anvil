@@ -7,7 +7,6 @@ import anvil.tables.query as q
 from anvil.tables import app_tables
 from ...bank_users.main_form import main_form_module
 
-# Define a dictionary for superscript characters
 SUPERSCRIPT_DIGITS = {
     '0': '⁰', '1': '¹', '2': '²', '3': '³', '4': '⁴',
     '5': '⁵', '6': '⁶', '7': '⁷', '8': '⁸', '9': '⁹'
@@ -19,12 +18,9 @@ def to_superscript(number):
 class dashboard(dashboardTemplate):
     def __init__(self, **properties):
         self.init_components(**properties)
-        
         self.email = main_form_module.email
         self.user_Id = main_form_module.userId
-
         self.populate_loan_history()
-        # self.update_platform_fees()
         self.update_wallet_info()
         self.update_user_profile()
         self.update_notification_count()
@@ -65,7 +61,7 @@ class dashboard(dashboardTemplate):
         notifications = anvil.server.call('get_notifications', self.user_Id)
         unread_count = len([n for n in notifications if not n['read']])
         superscript_unread_count = to_superscript(unread_count)
-        self.notifications.text = f"{self.notifications.text} {superscript_unread_count}"
+        self.notifications.text = f"Notifications {superscript_unread_count}"
 
     def notifications_click(self, **event_args):
         open_form('borrower.dashboard.borrower_notifications', self.user_Id)
