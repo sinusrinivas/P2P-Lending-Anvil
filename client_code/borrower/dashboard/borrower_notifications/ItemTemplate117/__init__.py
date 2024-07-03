@@ -20,10 +20,11 @@ class ItemTemplate117(ItemTemplate117Template):
         self.label_1.text = f"{message} - {date}"
         self.label_1.bold = not self.item['read']
 
+    def button_pay_now_click(self, **event_args):
+        if 'pay_now' in self.item:
+            alert(self.item['pay_now'])
+
     def label_1_click(self, **event_args):
         self.item['read'] = True
         self.update_display()
-        get_open_form().mark_notification_as_read(self.item['loan_id'])
-        # open_form('borrower.dashboard.borrower_notifications.notifications_view_profile', self.item['customer_id'], self.item['loan_id'])
-
         open_form('borrower.dashboard.borrower_notifications.notifications_view_profile', self.item['customer_id'], self.item['loan_id'],self.label_1.text)
