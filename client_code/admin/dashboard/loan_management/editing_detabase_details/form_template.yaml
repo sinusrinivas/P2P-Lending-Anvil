@@ -40,7 +40,7 @@ components:
   layout_properties: {grid_position: 'URNFCH,MTRUXG'}
   components: []
 - name: loan_details_label
-  properties: {align: center, text: 'Loan details ', bold: true, font_size: 18, visible: false}
+  properties: {align: center, text: 'Loan details ', bold: true, font_size: 18, visible: true}
   type: Label
   layout_properties: {grid_position: 'KDCEAI,KVVCTT'}
 - name: data_grid_1
@@ -68,7 +68,7 @@ components:
     spacing_above: small
     auto_header: true
     rows_per_page: null
-    visible: false
+    visible: true
   type: DataGrid
   components:
   - name: repeating_panel_1
