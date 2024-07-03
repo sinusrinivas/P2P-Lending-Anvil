@@ -14,16 +14,26 @@ class editing_detabase_details(editing_detabase_detailsTemplate):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
 
-    self.data_grid_1.role = 'anvil-role-tonal-data-grid.anvil-data-grid'
-    self.data_grid_2.role = 'scrollable-data-grid'
-    self.data_grid_3.role = 'scrollable-data-grid'
-    self.data_grid_4.role = 'scrollable-data-grid'
+  
+    self.repeating_panel_5.items = app_tables.fin_loan_details.search()
+    items = []
+    for row in range(100):
+      item = {}
+      for col in range(1, 22):
+         item.update({'column_{}'.format(col): 'col{}_{}'.format(col, row)})
+      items.append(item)
+    self.repeating_panel_1.items = items
+    self.data_grid_5.role = 'wide'
     
-    self.repeating_panel_1.items = app_tables.fin_loan_details.search()
-    self.repeating_panel_2.items = app_tables.fin_emi_table.search()
-    self.repeating_panel_3.items = app_tables.fin_extends_loan.search()
-    self.repeating_panel_4.items = app_tables.fin_foreclosure.search()
 
+    self.repeating_panel_1.items = app_tables.fin_loan_details.search()
+    self.data_grid_1.role = 'wide'
+    self.repeating_panel_2.items = app_tables.fin_emi_table.search()
+    self.data_grid_2.role = 'wide'
+    self.repeating_panel_3.items = app_tables.fin_extends_loan.search()
+    self.data_grid_3.role = 'wide'
+    self.repeating_panel_4.items = app_tables.fin_foreclosure.search()
+    self.data_grid_4.role = 'wide'
 
   
   def button_1_copy_3_click(self, **event_args):

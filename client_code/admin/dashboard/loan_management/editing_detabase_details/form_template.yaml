@@ -10,6 +10,62 @@ components:
   properties: {align: center, text: Edit Details, role: title, bold: true}
   type: Label
   layout_properties: {grid_position: 'XWPQIX,EHUUWV'}
+- name: data_grid_5
+  properties:
+    columns:
+    - {id: JKSDUP, title: Column 1, data_key: column_1}
+    - {id: VJQQOR, title: Column 2, data_key: column_2}
+    - {id: OJLQEN, title: Column 3, data_key: column_3}
+    - {id: GEDMBK, data_key: total_processing_fee_amount, title: total_processing_fee_amount}
+    - {id: TTCRTX, data_key: loan_id, title: loan_id}
+    - {id: AAKFCD, data_key: borrower_customer_id, title: borrower_customer_id}
+    - {id: LOVKIF, data_key: borrower_email_id, title: borrower_email_id}
+    - {id: KCJWYY, data_key: borrower_full_name, title: borrower_full_name}
+    - {id: CXUPOR, data_key: product_id, title: product_id}
+    - {id: TSGPFW, data_key: monthly_emi, title: monthly_emi}
+    - {id: DSHQUK, data_key: loan_updated_status, title: loan_updated_status}
+    - {id: IGIOOH, data_key: total_interest_amount, title: total_interest_amount}
+    - {id: DLSPWS, data_key: total_repayment_amount, title: total_repayment_amount}
+    - {id: ETVNSZ, data_key: remaining_amount, title: remaining_amount}
+    - {id: HKMMBG, data_key: loan_amount, title: loan_amount}
+    - {id: IVBZSW, data_key: product_name, title: product_name}
+    - {id: KLOHNV, data_key: membership_type, title: membership_type}
+    - {id: WLDFKG, data_key: interest_rate, title: interest_rate}
+    - {id: ZMGCAZ, data_key: tenure, title: tenure}
+    - {id: QCGFWM, data_key: lender_customer_id, title: lender_customer_id}
+    - {id: SHUREQ, data_key: lender_full_name, title: lender_full_name}
+    - {id: IUDKLQ, data_key: borrower_loan_created_timestamp, title: borrower_loan_created_timestamp}
+    - {id: SOVXQK, data_key: lender_returns, title: lender_returns}
+    - {id: VYSRBA, data_key: lender_email_id, title: lender_email_id}
+    - {id: LPOMTX, data_key: loan_disbursed_timestamp, title: loan_disbursed_timestamp}
+    - {id: YVVFWM, data_key: emi_payment_type, title: emi_payment_type}
+    - {id: WVGMDC, data_key: first_emi_payment_due_date, title: first_emi_payment_due_date}
+    - {id: XWXAPE, data_key: total_amount_paid, title: total_amount_paid}
+    - {id: HXXFLY, data_key: member_rom, title: member_rom}
+    - {id: LMZOHW, data_key: member_since, title: member_since}
+    - {id: VZVYUI, data_key: borrower_last_payment_done, title: borrower_last_payment_done}
+    - {id: KAVEIF, data_key: application_status, title: application_status}
+    - {id: QZUSKB, data_key: lender_accepted_timestamp, title: lender_accepted_timestamp}
+    - {id: ZRRSSB, data_key: product_description, title: product_description}
+    - {id: LTDKLL, data_key: credit_limit, title: credit_limit}
+    - {id: UZKDSW, data_key: total_payments_made, title: total_payments_made}
+    - {id: GUSQGK, data_key: foreclosure_type, title: foreclosure_type}
+    - {id: GEPNQU, data_key: loan_closed_date, title: loan_closed_date}
+    - {id: ZJXLEM, data_key: ascend_score, title: ascend_score}
+    - {id: WCNZTR, data_key: emi_due_date, title: emi_due_date}
+    - {id: RPVFAH, data_key: loan_status, title: loan_status}
+    - {id: IOVZOH, data_key: borrower_compLeted_monthly_emi, title: borrower_compLeted_monthly_emi}
+    - {id: RBAKFF, data_key: borrower_first_payment_done, title: borrower_first_payment_done}
+    - {id: MJYPYV, data_key: days_left, title: days_left}
+    - {id: HCWWLB, data_key: loan_extension_months, title: loan_extension_months}
+    - {id: XAJTPC, data_key: loan_state_status, title: loan_state_status}
+    - {id: SIFNCX, data_key: lender_rejected_timestamp, title: lender_rejected_timestamp}
+  type: DataGrid
+  components:
+  - name: repeating_panel_5
+    properties: {item_template: admin.dashboard.loan_management.editing_detabase_details.RowTemplate77}
+    type: RepeatingPanel
+  layout_properties: {grid_position: 'HRQFUB,FHPFPE'}
 - name: spacer_1
   properties: {height: 32}
   type: Spacer
@@ -62,9 +118,9 @@ components:
     - {id: IDOSNA, data_key: column_6, title: Remaining Amount, width: '', expand: false}
     - {id: PKEKOT, data_key: column_7, title: Membership Type, width: '', expand: false}
     - {id: CWDKTB, data_key: column_8, title: '', width: '', expand: false}
-    role: tonal-data-grid
+    role: null
     show_page_controls: true
-    wrap_on: mobile
+    wrap_on: never
     spacing_above: small
     auto_header: true
     rows_per_page: null

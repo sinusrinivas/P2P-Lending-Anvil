@@ -91,11 +91,6 @@ components:
     type: Button
     layout_properties: {grid_position: 'EIIWZM,AUTWGW'}
     event_bindings: {click: edit_details_click}
-- name: button_3
-  properties: {text: button_3}
-  type: Button
-  layout_properties: {grid_position: 'ASCOCD,CEHQBZ RXTABW,WSWOSU'}
-  event_bindings: {click: button_3_click}
 - name: spacer_3
   properties: {height: 32}
   type: Spacer
