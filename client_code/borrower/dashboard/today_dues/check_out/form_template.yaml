@@ -99,7 +99,7 @@ components:
       type: Label
       layout_properties: {grid_position: 'UGHHEK,VDNRXY VVEQMB,BISMOK'}
       name: loan_amount_label
-    - properties: {bold: true, text: '  Interest Amount :', align: left, role: input-prompt}
+    - properties: {bold: true, text: '  Interest Amount ', align: left, role: input-prompt}
       type: Label
       layout_properties: {grid_position: 'UGHHEK,VDNRXY PWHHIP,ESMQWM'}
       name: label_11
