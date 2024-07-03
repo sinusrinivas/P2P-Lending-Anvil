@@ -8,18 +8,18 @@ import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 
-
 class ItemTemplate117(ItemTemplate117Template):
-  def __init__(self, **properties):
-    self.init_components(**properties)
-    self.item = properties.get('item', {})
-    self.update_display()
+    def __init__(self, **properties):
+        self.init_components(**properties)
+        self.item = properties.get('item', {})
+        self.update_display()
 
-  def update_display(self):
-    self.label_1.text = self.item['message']
-    self.label_2.text = self.item['date'].strftime('%Y-%m-%d, %A')
-    self.label_1.bold = not self.item['read']
+    def update_display(self):
+        message = self.item['message']
+        date = self.item['date'].strftime('%Y-%m-%d, %A')
+        self.label_1.text = f"{message} - {date}"
+        self.label_1.bold = not self.item['read']
 
-  def button_pay_now_click(self, **event_args):
-    if 'pay_now' in self.item:
-      alert(self.item['pay_now'])
+    def button_pay_now_click(self, **event_args):
+        if 'pay_now' in self.item:
+            alert(self.item['pay_now'])

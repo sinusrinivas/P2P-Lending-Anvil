@@ -567,23 +567,22 @@ def create_zaphod_pdf():
 
 @anvil.server.callable
 def get_notifications(user_id):
-  notifications = []
-  loans = app_tables.fin_loan_details.search(borrower_customer_id=user_id)
-  for loan in loans:
-    if loan['loan_updated_status']:
-      notifications.append({
-        'message': f"Your loan for {loan['product_name']} is {loan['loan_updated_status']}",
-        'loan_updated_status': loan['loan_updated_status'],
-        'read': False,
-        'date': datetime.now().date()
-      })
-  return notifications
+    notifications = []
+    loans = app_tables.fin_loan_details.search(borrower_customer_id=user_id)
+    for loan in loans:
+        if loan['loan_updated_status']:
+            notifications.append({
+                'message': f"Your loan for {loan['product_name']} is {loan['loan_updated_status']}",
+                'loan_updated_status': loan['loan_updated_status'],
+                'read': False,
+                'date': datetime.now().date()
+            })
+    return notifications
 
 @anvil.server.callable
 def mark_notifications_as_read(user_id):
-  # This function won't update the table as there's no notification_read column
-  pass
-
+    # This function won't update the table as there's no notification_read column
+    pass
 
 
 
