@@ -14,19 +14,16 @@ class editing_detabase_details(editing_detabase_detailsTemplate):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
 
-    self.set_data_grid_properties()
+    self.data_grid_1.role = 'anvil-role-tonal-data-grid.anvil-data-grid'
+    self.data_grid_2.role = 'scrollable-data-grid'
+    self.data_grid_3.role = 'scrollable-data-grid'
+    self.data_grid_4.role = 'scrollable-data-grid'
+    
     self.repeating_panel_1.items = app_tables.fin_loan_details.search()
     self.repeating_panel_2.items = app_tables.fin_emi_table.search()
     self.repeating_panel_3.items = app_tables.fin_extends_loan.search()
     self.repeating_panel_4.items = app_tables.fin_foreclosure.search()
 
-    # self.set_data_grid_properties()
-
-  def set_data_grid_properties(self):
-    for data_grid in [self.data_grid_1, self.data_grid_2, self.data_grid_3, self.data_grid_4]:
-      data_grid.role = 'my-scrollable-container'
-      for col in data_grid.columns:
-        col['width'] = '500px'
 
   
   def button_1_copy_3_click(self, **event_args):
