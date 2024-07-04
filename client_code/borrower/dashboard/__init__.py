@@ -58,16 +58,14 @@ class dashboard(dashboardTemplate):
             self.image_1_copy_copy.source = user_profile['user_photo']
             self.label_2_copy.text = "Welcome " + user_profile['full_name']
 
-    # def update_notification_count(self, count=None):
-    #     if count is None:
-    #         notifications = anvil.server.call('get_notifications', self.user_Id)
-    #         unread_count = len([n for n in notifications if not n['read']])
-    #     else:
-    #         unread_count = count
-    #     self.notifications.text = f"Notifications {unread_count}"
+    def update_notification_count(self, count=None):
+        if count is None:
+            notifications = anvil.server.call('get_notifications', self.user_Id)
+            unread_count = len([n for n in notifications if not n['read']])
+        else:
+            unread_count = count
+        self.notifications.text = f"Notifications {unread_count}"
 
-    def update_notification_count(self, count):
-        self.notifications.text = str(count)
 
 
   

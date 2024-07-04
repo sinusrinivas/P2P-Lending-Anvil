@@ -565,6 +565,7 @@ def create_zaphod_pdf():
 
 
 
+
 @anvil.server.callable
 def get_notifications(user_id):
     notifications = []
@@ -587,6 +588,12 @@ def mark_notification_as_read(loan_id):
     if loan:
         loan['notification_read'] = True
         loan['notification_date'] = datetime.now().date()
+
+
+
+
+
+
 
 
 
