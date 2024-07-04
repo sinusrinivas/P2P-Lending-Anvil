@@ -2,10 +2,6 @@ container:
   type: ColumnPanel
   properties: {col_widths: '{}'}
 components:
-- type: form:admin.dashboard.home_button_admin
-  properties: {}
-  name: home_button_admin_1
-  layout_properties: {grid_position: 'CGGMYR,HOMCTJ', full_width_row: true}
 - name: column_panel_1_copy
   properties: {background: '#Edf0f4', col_widths: '{"YOQYNJ":15,"YMQFBG":15}'}
   type: ColumnPanel
@@ -52,7 +48,7 @@ components:
     type: Label
     layout_properties: {grid_position: 'TWAMKL,ADCDTR DDQYQU,FHJFRT'}
   - name: label_18
-    properties: {}
+    properties: {role: outlined-card}
     type: Label
     layout_properties: {grid_position: 'TWAMKL,ADCDTR AINZYE,BSQAZG'}
   - name: label_21_copy
@@ -60,7 +56,7 @@ components:
     type: Label
     layout_properties: {grid_position: 'TWAMKL,ADCDTR GFQEPB,PUVFYS'}
   - name: label_22
-    properties: {visible: false}
+    properties: {visible: false, role: outlined-card}
     type: Label
     layout_properties: {grid_position: 'TWAMKL,ADCDTR RPRBZC,GZSLKS'}
   - name: label_27_copy
@@ -68,7 +64,7 @@ components:
     type: Label
     layout_properties: {grid_position: 'TWAMKL,ADCDTR CLTKJI,RWACQP'}
   - name: label_28
-    properties: {}
+    properties: {role: outlined-card}
     type: Label
     layout_properties: {grid_position: 'TWAMKL,ADCDTR IVOMPI,MZJAEI'}
   - name: label_31_copy
@@ -76,7 +72,7 @@ components:
     type: Label
     layout_properties: {grid_position: 'TWAMKL,ADCDTR VYVRJN,RWJPMI'}
   - name: label_32
-    properties: {role: null, bold: false, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: ''}
+    properties: {role: outlined-card, bold: false, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: ''}
     type: Label
     layout_properties: {grid_position: 'TWAMKL,ADCDTR TFZZEL,RVUAMH'}
   - name: label_3_copy_2
@@ -116,7 +112,7 @@ components:
     type: Label
     layout_properties: {grid_position: 'TWAMKL,SPBCDK HXPANN,BBBAOL'}
   - name: label_26
-    properties: {}
+    properties: {role: outlined-card}
     type: Label
     layout_properties: {grid_position: 'TWAMKL,SPBCDK TAAGKD,KXZIHN'}
   - name: label_29_copy
@@ -124,7 +120,7 @@ components:
     type: Label
     layout_properties: {grid_position: 'TWAMKL,SPBCDK OMZVPU,NTZUPY'}
   - name: label_30
-    properties: {}
+    properties: {role: outlined-card}
     type: Label
     layout_properties: {grid_position: 'TWAMKL,SPBCDK JAAOFV,IVGZFQ'}
   - name: label_33_copy
@@ -132,7 +128,7 @@ components:
     type: Label
     layout_properties: {grid_position: 'TWAMKL,SPBCDK XGNJCF,JNFXZP'}
   - name: label_34
-    properties: {}
+    properties: {role: outlined-card}
     type: Label
     layout_properties: {grid_position: 'TWAMKL,SPBCDK QRXZWR,BLZFTR'}
   - name: spacer_4
