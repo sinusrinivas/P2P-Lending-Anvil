@@ -13,6 +13,7 @@ class edit(editTemplate):
   def __init__(self,loan_details,emi_details,extension_details,foreclosure_details, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
+    self.loan_details = loan_details
 
     if loan_details:
       self.loan_details_column_panel_1.visible = True
@@ -26,21 +27,19 @@ class edit(editTemplate):
       self.updated_status.text = loan_details['loan_updated_status']
       self.interest_amount.text = loan_details['total_interest_amount']
       self.total_repayment_amount.text = loan_details['total_repayment_amount']
-      self.remaining_amount = loan_details['remaining_amount']
-      self.loan_amount = loan_details['loan_amount']
-      self.product_name = loan_details['product_name']
-      self.membership_type = loan_details['membership_type']
-      tenure = loan_details['interest_rate']
-      interest_rate = loan_details['tenure']
-      emi_payment_type = loan_details['lender_customer_id']
-      total_interest_amount = loan_details['lender_full_name']
-      total_processing_fee_amount = loan_details['lender_returns']
-      total_processing_fee_amount = loan_details['lender_email_id']
-      loan_amount = loan_details['loan_disbursed_timestamp']
-      tenure = loan_details['emi_payment_type']
-      interest_rate = loan_details['first_emi_payment_due_date']
-      emi_payment_type = loan_details['total_amount_paid']
-      total_interest_amount = loan_details['lender_accepted_timestamp']
+      self.remaining_amount.text = loan_details['remaining_amount']
+      self.loan_amount.text = loan_details['loan_amount']
+      self.product_name.text = loan_details['product_name']
+      self.membership_type.text = loan_details['membership_type']
+      self.interest_rate.text = loan_details['interest_rate']
+      self.tenure.text = loan_details['tenure']
+      self.leneder_id.text = loan_details['lender_customer_id']
+      self.lender_returnss.text = loan_details['lender_returns']
+      self.lender_email.text = loan_details['lender_email_id']
+      self.disbursed_date_picker_2.date = loan_details['loan_disbursed_timestamp']
+      self.emi_payment_type.text = loan_details['emi_payment_type']
+      self.first_date_picker_1.date = loan_details['first_emi_payment_due_date']
+      self.total_amount.text = loan_details['total_amount_paid']
 
 
     
@@ -55,3 +54,11 @@ class edit(editTemplate):
   def button_1_copy_3_click(self, **event_args):
     """This method is called when the button is clicked"""
     open_form('admin.dashboard.loan_management.editing_detabase_details')
+
+  def loan_details_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    loan = app_tables.fin_loan_details.get(loan_id=self.loan_details['loan_id'])
+    if loan:
+      loan['first_emi_payment_due_date'] = self.first_date_picker_1.date
+      loan['loan_disbursed_timestamp'] = self.disbursed_date_picker_2.date
+      loan.update()
