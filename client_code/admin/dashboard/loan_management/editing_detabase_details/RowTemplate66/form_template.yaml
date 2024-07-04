@@ -30,30 +30,12 @@ components:
   layout_properties: {column: NNUANN}
   data_bindings:
   - {property: text, code: 'self.item[''product_name'']', writeback: false}
-- name: label_5
-  properties: {align: center}
-  type: Label
-  layout_properties: {column: YYMYOY}
-  data_bindings:
-  - {property: text, code: 'self.item[''borrower_email_id'']', writeback: false}
 - name: label_7
   properties: {align: center}
   type: Label
   layout_properties: {column: NCNXNH}
   data_bindings:
   - {property: text, code: 'self.item[''loan_updated_status'']', writeback: false}
-- name: label_8
-  properties: {align: center}
-  type: Label
-  layout_properties: {column: RMMXRQ}
-  data_bindings:
-  - {property: text, code: 'self.item[''loan_disbursed_timestamp'']', writeback: false}
-- name: label_9
-  properties: {align: center}
-  type: Label
-  layout_properties: {column: JBAEAG}
-  data_bindings:
-  - {property: text, code: 'self.item[''first_emi_payment_due_date'']', writeback: false}
 - name: label_10
   properties: {align: center}
   type: Label

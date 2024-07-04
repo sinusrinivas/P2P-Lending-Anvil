@@ -18,18 +18,6 @@ components:
   layout_properties: {column: VJQQOR}
   data_bindings:
   - {property: text, code: 'self.item[''borrower_customer_id'']', writeback: false}
-- name: label_3
-  properties: {align: center}
-  type: Label
-  layout_properties: {column: OJLQEN}
-  data_bindings:
-  - {property: text, code: 'self.item[''borrower_email'']', writeback: false}
-- name: label_4
-  properties: {align: center}
-  type: Label
-  layout_properties: {column: ILYKBG}
-  data_bindings:
-  - {property: text, code: 'self.item[''lender_email'']', writeback: false}
 - name: label_5
   properties: {align: center}
   type: Label

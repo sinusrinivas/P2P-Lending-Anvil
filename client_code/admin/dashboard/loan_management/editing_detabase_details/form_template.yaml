@@ -46,19 +46,16 @@ components:
 - name: data_grid_1
   properties:
     columns:
-    - {id: JKSDUP, title: Loan id, data_key: column_1, width: '', expand: false}
-    - {id: VJQQOR, title: Borrower Name, data_key: column_2, width: '', expand: false}
-    - {id: OJLQEN, title: Borrower Id, data_key: column_3, width: ''}
-    - {id: NNUANN, data_key: column_1, title: Product Name, expand: false, width: 79.66668701171875}
-    - {id: YYMYOY, data_key: column_1, title: Borrwer Email, width: ''}
+    - {id: JKSDUP, title: Loan id, data_key: column_1, width: 167.33331298828125, expand: false}
+    - {id: VJQQOR, title: Borrower Name, data_key: column_2, width: 194.33331298828125, expand: false}
+    - {id: OJLQEN, title: Borrower Id, data_key: column_3, width: 179, expand: false}
+    - {id: NNUANN, data_key: column_1, title: Product Name, expand: false, width: 186.6666259765625}
     - {id: NCNXNH, data_key: column_3, title: Updated Status, width: ''}
-    - {id: RMMXRQ, data_key: column_1, title: Disbursed date, width: ''}
-    - {id: JBAEAG, data_key: column_2, title: First Emi Date, width: ''}
-    - {id: MHGEVA, data_key: column_3, title: Tenure, width: 76.111083984375, expand: false}
+    - {id: MHGEVA, data_key: column_3, title: Tenure, width: 168.6666259765625, expand: false}
     - {id: CLNKGP, data_key: column_4, title: Loan Amount, width: ''}
     - {id: JVQFYQ, data_key: column_5, title: Total Repayment Amount, width: '', expand: false}
     - {id: CWDKTB, data_key: column_8, title: '', width: '', expand: false}
-    role: null
+    role: tonal-data-grid
     show_page_controls: true
     wrap_on: never
     spacing_above: small
@@ -81,8 +78,6 @@ components:
     columns:
     - {id: JKSDUP, title: Loan id, data_key: column_1}
     - {id: VJQQOR, title: Borrower Id, data_key: column_2}
-    - {id: OJLQEN, title: Borrower Email, data_key: column_3}
-    - {id: ILYKBG, data_key: column_4, title: 'Lender Email '}
     - {id: NPPJWD, data_key: column_5, title: Lender customer Id}
     - {id: AMIBQP, data_key: column_8, title: EMI Number}
     - {id: POFFSI, data_key: column_1, title: Payment  Made}
@@ -104,14 +99,12 @@ components:
 - name: data_grid_3
   properties:
     columns:
-    - {id: JKSDUP, title: Loan Id, data_key: column_1, width: 82.88888549804688, expand: false}
-    - {id: VJQQOR, title: borrower Id, data_key: column_2, width: 104.44444274902344, expand: false}
-    - {id: XYILLG, data_key: column_3, title: Borrower Name}
-    - {id: OJLQEN, title: Lender Id, data_key: column_3, width: 92, expand: false}
-    - {id: PAQFZY, data_key: column_6, title: Requested date, width: 103, expand: false}
+    - {id: JKSDUP, title: Loan Id, data_key: column_1, width: 185.33331298828125, expand: false}
+    - {id: VJQQOR, title: borrower Id, data_key: column_2, width: 187.6666259765625, expand: false}
+    - {id: XYILLG, data_key: column_3, title: Borrower Name, width: 201.33331298828125, expand: false}
+    - {id: OJLQEN, title: Lender Id, data_key: column_3, width: 219.6666259765625, expand: false}
     - {id: WZUWMP, data_key: column_1, title: EMI Number}
     - {id: URWWZV, data_key: column_1, title: Extension Amount}
-    - {id: NHEKMU, data_key: column_2, title: Extension Months}
     - {id: YTOJWQ, data_key: column_4, title: Status}
     - {id: GRGCWD, data_key: column_7, title: ''}
     role: tonal-data-grid
@@ -133,9 +126,7 @@ components:
     - {id: VJQQOR, title: Borrower Name, data_key: column_2}
     - {id: OJLQEN, title: Borrower Id, data_key: column_3}
     - {id: DOSJXL, data_key: column_4, title: Lender Id}
-    - {id: QFLUNJ, data_key: column_5, title: Requested date}
     - {id: UARLLF, data_key: column_6, title: Emi Number}
-    - {id: WUTRAU, data_key: column_7, title: Foreclosure Amount}
     - {id: PQMFNL, data_key: column_1, title: Total Due Amount}
     - {id: MWGBYZ, data_key: column_3, title: Status}
     - {id: SLKGWJ, data_key: column_5, title: ''}

@@ -30,12 +30,6 @@ components:
   layout_properties: {column: DOSJXL}
   data_bindings:
   - {property: text, code: 'self.item[''lender_customer_id'']', writeback: false}
-- name: label_5
-  properties: {align: center}
-  type: Label
-  layout_properties: {column: QFLUNJ}
-  data_bindings:
-  - {property: text, code: 'self.item[''requested_on'']', writeback: false}
 - name: label_6
   properties: {align: center}
   type: Label
@@ -54,9 +48,3 @@ components:
   layout_properties: {column: MWGBYZ}
   data_bindings:
   - {property: text, code: 'self.item[''status'']', writeback: false}
-- name: label_9
-  properties: {align: center}
-  type: Label
-  layout_properties: {column: WUTRAU}
-  data_bindings:
-  - {property: text, code: 'self.item[''foreclose_amount'']', writeback: false}

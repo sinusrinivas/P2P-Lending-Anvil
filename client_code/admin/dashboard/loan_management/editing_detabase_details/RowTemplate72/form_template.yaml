@@ -30,12 +30,6 @@ components:
   layout_properties: {column: OJLQEN}
   data_bindings:
   - {property: text, code: 'self.item[''lender_customer_id'']', writeback: false}
-- name: label_5
-  properties: {align: center}
-  type: Label
-  layout_properties: {column: PAQFZY}
-  data_bindings:
-  - {property: text, code: 'self.item[''extension_request_date'']', writeback: false}
 - name: label_6
   properties: {align: center}
   type: Label
@@ -48,12 +42,6 @@ components:
   layout_properties: {column: URWWZV}
   data_bindings:
   - {property: text, code: 'self.item[''extension_amount'']', writeback: false}
-- name: label_8
-  properties: {align: center}
-  type: Label
-  layout_properties: {column: NHEKMU}
-  data_bindings:
-  - {property: text, code: 'self.item[''total_extension_months'']', writeback: false}
 - name: label_9
   properties: {align: center}
   type: Label
