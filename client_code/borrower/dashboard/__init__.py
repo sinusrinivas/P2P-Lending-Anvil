@@ -20,6 +20,7 @@ class dashboard(dashboardTemplate):
         self.init_components(**properties)
         self.email = main_form_module.email
         self.user_Id = main_form_module.userId
+        self.notifications.text = "0"
         self.populate_loan_history()
         self.update_wallet_info()
         self.update_user_profile()
@@ -57,13 +58,17 @@ class dashboard(dashboardTemplate):
             self.image_1_copy_copy.source = user_profile['user_photo']
             self.label_2_copy.text = "Welcome " + user_profile['full_name']
 
-    def update_notification_count(self, count=None):
-        if count is None:
-            notifications = anvil.server.call('get_notifications', self.user_Id)
-            unread_count = len([n for n in notifications if not n['read']])
-        else:
-            unread_count = count
-        self.notifications.text = f"Notifications {unread_count}"
+    # def update_notification_count(self, count=None):
+    #     if count is None:
+    #         notifications = anvil.server.call('get_notifications', self.user_Id)
+    #         unread_count = len([n for n in notifications if not n['read']])
+    #     else:
+    #         unread_count = count
+    #     self.notifications.text = f"Notifications {unread_count}"
+
+    def update_notification_count(self, count):
+        self.notifications.text = str(count)
+
 
   
     def notifications_click(self, **event_args):

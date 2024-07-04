@@ -574,8 +574,8 @@ def get_notifications(user_id):
             notifications.append({
                 'message': f"Your loan for {loan['product_name']} is {loan['loan_updated_status']}",
                 'loan_updated_status': loan['loan_updated_status'],
-                'read': loan['notification_read'] if 'notification_read' in loan else False,
-                'date': loan['notification_date'] if 'notification_date' in loan else datetime.now().date(),
+                'read': loan.get('notification_read', False),
+                'date': loan.get('notification_date', datetime.now().date()),
                 'customer_id': loan['borrower_customer_id'],
                 'loan_id': loan['loan_id']
             })
@@ -587,7 +587,6 @@ def mark_notification_as_read(loan_id):
     if loan:
         loan['notification_read'] = True
         loan['notification_date'] = datetime.now().date()
-
 
 
 
