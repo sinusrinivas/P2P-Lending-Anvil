@@ -15,22 +15,18 @@ class editing_detabase_details(editing_detabase_detailsTemplate):
     self.init_components(**properties)
 
   
-    self.repeating_panel_5.items = app_tables.fin_loan_details.search()
-    for i in range(min(100, len(self.data_grid_5.columns))):
-      self.data_grid_5.columns[i]['width'] = 250
+    # self.repeating_panel_5.items = app_tables.fin_loan_details.search()
+    # for i in range(min(100, len(self.data_grid_5.columns))):
+    #   self.data_grid_5.columns[i]['width'] = 250
 
-    self.data_grid_5.columns = self.data_grid_5.columns
-    self.data_grid_5.role = 'wide'
+    # self.data_grid_5.columns = self.data_grid_5.columns
+    # self.data_grid_5.role = 'wide'
     
 
     self.repeating_panel_1.items = app_tables.fin_loan_details.search()
-    self.data_grid_1.role = 'wide'
     self.repeating_panel_2.items = app_tables.fin_emi_table.search()
-    self.data_grid_2.role = 'wide'
     self.repeating_panel_3.items = app_tables.fin_extends_loan.search()
-    self.data_grid_3.role = 'wide'
     self.repeating_panel_4.items = app_tables.fin_foreclosure.search()
-    self.data_grid_4.role = 'wide'
 
   
   def button_1_copy_3_click(self, **event_args):
