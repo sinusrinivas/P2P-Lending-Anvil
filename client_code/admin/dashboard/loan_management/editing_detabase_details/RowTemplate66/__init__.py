@@ -22,7 +22,7 @@ class RowTemplate66(RowTemplate66Template):
   def save_button_click(self, **event_args):
     """This method is called when the save button is clicked"""
     loan_details = self.item
-    open_form('')
+    open_form('admin.dashboard.loan_management.editing_detabase_details.edit',loan_details = loan_details,emi_details = None,extension_details = None,foreclosure_details=None)
     # self.item['first_emi_payment_due_date'] = self.date_picker_1.date
     # self.item['loan_disbursed_timestamp'] = self.date_picker_2.date
     # self.item.update()
