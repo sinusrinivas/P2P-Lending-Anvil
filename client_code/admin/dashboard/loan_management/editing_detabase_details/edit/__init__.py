@@ -95,6 +95,26 @@ class edit(editTemplate):
     
     elif foreclosure_details:
       self.forelosure_panel.visible = True
+
+      self.foreclosure_fee.text = foreclosure_details['foreclose_fee']
+      self.F_interest_rate_copy_3.text = foreclosure_details['interest_rate']
+      self.F_borrower_name_copy_3.text = foreclosure_details['borrower_name']
+      self._Floan_id_label_copy_3.text = foreclosure_details['loan_id']
+      self.F_reason.text = foreclosure_details['reason']
+      self.foreclosure_amount.text = foreclosure_details['foreclose_amount']
+      self.F_loan_amount.text = foreclosure_details['loan_amount']
+      self.F_requested_on.date = foreclosure_details['requested_on']
+      self.total_due_amount.text = foreclosure_details['total_due_amount']
+      self.F_status.text = foreclosure_details['status']
+      self.F_emi_number.text = foreclosure_details['foreclosure_emi_num']
+      self.F_leneder_id_copy_3.text = foreclosure_details['lender_customer_id']
+      self.F_lender_email_copy_3.text = foreclosure_details['lender_email_id']
+      self.F_product_name_copy_3.text = foreclosure_details['product_name']
+      self.F_borrower_id_copy_3.text = foreclosure_details['borrower_customer_id']
+      self.F_borrower_email_copy_3.text = foreclosure_details['borrower_email_id']
+      self.F_status_timestamp.text = foreclosure_details['status_timestamp ']
+
+  
     # Any code you write here will run before the form opens.
 
   def button_1_copy_3_click(self, **event_args):
@@ -115,10 +135,22 @@ class edit(editTemplate):
     """This method is called when the button is clicked"""
     self.emi_details['scheduled_payment'] = self.schedule_date_picker_1_copy.date
     self.emi_details['next_payment'] = self.next_date_picker_2_copy.date
+    alert('details saved successfully')
+    open_form('admin.dashboard.loan_management.editing_detabase_details')
 
   def emi_details_click(self, **event_args):
     """This method is called when the button is clicked"""
     self.extension_details['extension_request_date'] = self.Extesnion_request_datepicker.date
     self.extension_details['emi_number'] = int(self.E_emi_number.text)
     self.extension_details['status'] = self.E_status.text
+    alert('details saved successfully')
+    open_form('admin.dashboard.loan_management.editing_detabase_details')
+
+  def foreclosure_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    self.foreclosure_details['requested_on'] = self.F_requested_on.date
+    self.foreclosure_details['foreclosure_emi_num'] = int(self.F_emi_number.text)
+    self.foreclosure_details['status'] = self.F_status.text
+    alert('details saved successfully')
+    open_form('admin.dashboard.loan_management.editing_detabase_details')
 
