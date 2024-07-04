@@ -21,7 +21,7 @@ class RowTemplate73(RowTemplate73Template):
     """This method is called when the link is clicked"""
 
     loan_details = self.item
-    open_form('admin.dashboard.loan_management.editing_detabase_details.edit',foreclosure_details = loan_details)
+    open_form('admin.dashboard.loan_management.editing_detabase_details.edit',loan_details = None,emi_details = None,extension_details = None,foreclosure_details=loan_details)
     # self.item['foreclosure_emi_num'] = int(self.text_box_3.text)
     # self.item['status'] = self.text_box_6.text
     # self.item['requested_on'] = self.date_picker_1.date
