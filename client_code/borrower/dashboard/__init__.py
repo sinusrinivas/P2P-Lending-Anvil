@@ -25,11 +25,12 @@ class dashboard(dashboardTemplate):
         self.update_wallet_info()
         self.update_user_profile()
         self.load_notifications()
+        self.update_platform_fees()
 
     def update_platform_fees(self, **event_args):
         result = anvil.server.call('update_fin_platform_fees')
-        if result is not None:
-            alert(result)
+        # if result is not None:
+        #     alert(result)
 
     def populate_loan_history(self):
         try:
