@@ -6,10 +6,13 @@ class borrower_notifications(borrower_notificationsTemplate):
     def __init__(self, user_Id, **properties):
         self.init_components(**properties)
         self.user_Id = user_Id
+        self.read_notifications = set()  # Initialize the read notifications set
         self.load_notifications()
 
     def load_notifications(self):
         self.notifications = anvil.server.call('get_notifications', self.user_Id)
+        for notification in self.notifications:
+            notification['read'] = (notification['date'], notification['message']) in self.read_notifications
         self.repeating_panel_1.items = self.notifications
         self.update_notification_count()
 

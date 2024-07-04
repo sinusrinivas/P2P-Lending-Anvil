@@ -166,6 +166,12 @@ db_schema:
     - name: lender_rejected_timestamp
       admin_ui: {width: 200, order: 41}
       type: datetime
+    - name: notification_read
+      admin_ui: {width: 200, order: 45}
+      type: bool
+    - name: notification_date
+      admin_ui: {width: 200, order: 46}
+      type: date
     title: fin_loan_details
   fin_lendor_salary_type:
     client: full

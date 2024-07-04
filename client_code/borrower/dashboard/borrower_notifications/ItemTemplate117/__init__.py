@@ -16,15 +16,13 @@ class ItemTemplate117(ItemTemplate117Template):
 
     def update_display(self):
         message = self.item['message']
-        date = self.item['date'].strftime('%Y-%m-%d, %A')
-        self.label_1.text = f"{message} - {date}"
+        date = self.item.get('date')
+        date_str = date.strftime('%Y-%m-%d, %A') if date else 'Date not available'
+        self.label_1.text = f"{message} - {date_str}"
         self.label_1.bold = not self.item['read']
-
-    def button_pay_now_click(self, **event_args):
-        if 'pay_now' in self.item:
-            alert(self.item['pay_now'])
 
     def label_1_click(self, **event_args):
         self.item['read'] = True
         self.update_display()
-        open_form('borrower.dashboard.borrower_notifications.notifications_view_profile', self.item['customer_id'], self.item['loan_id'],self.label_1.text)
+        anvil.server.call('mark_notification_as_read', self.item['loan_id'])
+        open_form('borrower.dashboard.borrower_notifications.notifications_view_profile', self.item['customer_id'], self.item['loan_id'], self.label_1.text)
