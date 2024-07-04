@@ -11,7 +11,7 @@ class borrower_notifications(borrower_notificationsTemplate):
     def load_notifications(self):
         self.notifications = anvil.server.call('get_notifications', self.user_Id)
         self.repeating_panel_1.items = self.notifications
-        self.update_notification_count()
+        self.update_notification_count()  # Initial update of notification count
 
     def update_notification_count(self):
         unread_count = len([n for n in self.notifications if not n['read']])
@@ -27,7 +27,7 @@ class borrower_notifications(borrower_notificationsTemplate):
             if notification['loan_id'] == loan_id:
                 notification['read'] = True
         self.repeating_panel_1.items = self.notifications
-        self.update_notification_count()  # Call this only once to update the count
+        self.update_notification_count()  # Update the notification count after marking as read
 
     def button_refresh_click(self, **event_args):
         self.load_notifications()
@@ -37,8 +37,6 @@ class borrower_notifications(borrower_notificationsTemplate):
 
     def button_2_click(self, **event_args):
         open_form('borrower.dashboard')  # Ensure it opens the correct main form
-
-
 
 
 
