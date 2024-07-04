@@ -119,6 +119,6 @@ class edit(editTemplate):
   def emi_details_click(self, **event_args):
     """This method is called when the button is clicked"""
     self.extension_details['extension_request_date'] = self.Extesnion_request_datepicker.date
-    self.extension_details['emi_number'] = self.E_emi_number.text
+    self.extension_details['emi_number'] = int(self.E_emi_number.text)
     self.extension_details['status'] = self.E_status.text
 
