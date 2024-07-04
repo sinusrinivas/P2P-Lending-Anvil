@@ -10,59 +10,6 @@ components:
   properties: {align: center, text: Edit Details, role: title, bold: true}
   type: Label
   layout_properties: {grid_position: 'XWPQIX,EHUUWV'}
-- name: data_grid_5
-  properties:
-    columns:
-    - {id: GEDMBK, data_key: total_processing_fee_amount, title: total_processing_fee_amount}
-    - {id: TTCRTX, data_key: loan_id, title: loan_id}
-    - {id: AAKFCD, data_key: borrower_customer_id, title: borrower_customer_id}
-    - {id: LOVKIF, data_key: borrower_email_id, title: borrower_email_id}
-    - {id: KCJWYY, data_key: borrower_full_name, title: borrower_full_name}
-    - {id: CXUPOR, data_key: product_id, title: product_id}
-    - {id: TSGPFW, data_key: monthly_emi, title: monthly_emi}
-    - {id: DSHQUK, data_key: loan_updated_status, title: loan_updated_status}
-    - {id: IGIOOH, data_key: total_interest_amount, title: total_interest_amount}
-    - {id: DLSPWS, data_key: total_repayment_amount, title: total_repayment_amount}
-    - {id: ETVNSZ, data_key: remaining_amount, title: remaining_amount}
-    - {id: HKMMBG, data_key: loan_amount, title: loan_amount}
-    - {id: IVBZSW, data_key: product_name, title: product_name}
-    - {id: KLOHNV, data_key: membership_type, title: membership_type}
-    - {id: WLDFKG, data_key: interest_rate, title: interest_rate}
-    - {id: ZMGCAZ, data_key: tenure, title: tenure}
-    - {id: QCGFWM, data_key: lender_customer_id, title: lender_customer_id}
-    - {id: SHUREQ, data_key: lender_full_name, title: lender_full_name}
-    - {id: IUDKLQ, data_key: borrower_loan_created_timestamp, title: borrower_loan_created_timestamp}
-    - {id: SOVXQK, data_key: lender_returns, title: lender_returns}
-    - {id: VYSRBA, data_key: lender_email_id, title: lender_email_id}
-    - {id: LPOMTX, data_key: loan_disbursed_timestamp, title: loan_disbursed_timestamp}
-    - {id: YVVFWM, data_key: emi_payment_type, title: emi_payment_type}
-    - {id: WVGMDC, data_key: first_emi_payment_due_date, title: first_emi_payment_due_date}
-    - {id: XWXAPE, data_key: total_amount_paid, title: total_amount_paid}
-    - {id: HXXFLY, data_key: member_rom, title: member_rom}
-    - {id: LMZOHW, data_key: member_since, title: member_since}
-    - {id: VZVYUI, data_key: borrower_last_payment_done, title: borrower_last_payment_done}
-    - {id: KAVEIF, data_key: application_status, title: application_status}
-    - {id: QZUSKB, data_key: lender_accepted_timestamp, title: lender_accepted_timestamp}
-    - {id: ZRRSSB, data_key: product_description, title: product_description}
-    - {id: LTDKLL, data_key: credit_limit, title: credit_limit}
-    - {id: UZKDSW, data_key: total_payments_made, title: total_payments_made}
-    - {id: GUSQGK, data_key: foreclosure_type, title: foreclosure_type}
-    - {id: GEPNQU, data_key: loan_closed_date, title: loan_closed_date}
-    - {id: ZJXLEM, data_key: ascend_score, title: ascend_score}
-    - {id: WCNZTR, data_key: emi_due_date, title: emi_due_date}
-    - {id: RPVFAH, data_key: loan_status, title: loan_status}
-    - {id: IOVZOH, data_key: borrower_compLeted_monthly_emi, title: borrower_compLeted_monthly_emi}
-    - {id: RBAKFF, data_key: borrower_first_payment_done, title: borrower_first_payment_done}
-    - {id: MJYPYV, data_key: days_left, title: days_left}
-    - {id: HCWWLB, data_key: loan_extension_months, title: loan_extension_months}
-    - {id: XAJTPC, data_key: loan_state_status, title: loan_state_status}
-    - {id: SIFNCX, data_key: lender_rejected_timestamp, title: lender_rejected_timestamp}
-  type: DataGrid
-  components:
-  - name: repeating_panel_5
-    properties: {item_template: admin.dashboard.loan_management.editing_detabase_details.RowTemplate77}
-    type: RepeatingPanel
-  layout_properties: {grid_position: 'HRQFUB,FHPFPE', full_width_row: true}
 - name: spacer_1
   properties: {height: 32}
   type: Spacer
@@ -104,16 +51,12 @@ components:
     - {id: OJLQEN, title: Borrower Id, data_key: column_3, width: ''}
     - {id: NNUANN, data_key: column_1, title: Product Name, expand: false, width: 79.66668701171875}
     - {id: YYMYOY, data_key: column_1, title: Borrwer Email, width: ''}
-    - {id: OIMIZA, data_key: column_2, title: Lender Email, width: ''}
     - {id: NCNXNH, data_key: column_3, title: Updated Status, width: ''}
-    - {id: DTAUMF, data_key: column_4, title: Lender accepted date, width: ''}
     - {id: RMMXRQ, data_key: column_1, title: Disbursed date, width: ''}
     - {id: JBAEAG, data_key: column_2, title: First Emi Date, width: ''}
     - {id: MHGEVA, data_key: column_3, title: Tenure, width: 76.111083984375, expand: false}
     - {id: CLNKGP, data_key: column_4, title: Loan Amount, width: ''}
     - {id: JVQFYQ, data_key: column_5, title: Total Repayment Amount, width: '', expand: false}
-    - {id: IDOSNA, data_key: column_6, title: Remaining Amount, width: '', expand: false}
-    - {id: PKEKOT, data_key: column_7, title: Membership Type, width: '', expand: false}
     - {id: CWDKTB, data_key: column_8, title: '', width: '', expand: false}
     role: null
     show_page_controls: true
@@ -130,7 +73,7 @@ components:
   layout_properties: {grid_position: 'BDUZLK,UELFSZ', full_width_row: true, row_background: ''}
   data_bindings: []
 - name: emi_details_label
-  properties: {align: center, text: EMI Details, bold: true, font_size: 18, visible: false}
+  properties: {align: center, text: EMI Details, bold: true, font_size: 18, visible: true}
   type: Label
   layout_properties: {grid_position: 'ZUUZWQ,HPZVRW'}
 - name: data_grid_2
@@ -141,18 +84,13 @@ components:
     - {id: OJLQEN, title: Borrower Email, data_key: column_3}
     - {id: ILYKBG, data_key: column_4, title: 'Lender Email '}
     - {id: NPPJWD, data_key: column_5, title: Lender customer Id}
-    - {id: FCEOND, data_key: column_6, title: Total Repayment Amount}
-    - {id: IVKBTG, data_key: column_7, title: Remaining Tenure}
     - {id: AMIBQP, data_key: column_8, title: EMI Number}
     - {id: POFFSI, data_key: column_1, title: Payment  Made}
     - {id: HEOULS, data_key: column_2, title: Schedule  Paymet date}
     - {id: KYNONL, data_key: column_3, title: Next Payment Date, width: 126.22216796875, expand: false}
-    - {id: DAXDLF, data_key: column_4, title: Extra Fee}
-    - {id: UZTMTH, data_key: column_5, title: Payment Type}
     - {id: CCRGRD, data_key: column_7, title: ''}
-    - {id: VFNTND, data_key: column_8, title: ''}
     role: tonal-data-grid
-    visible: false
+    visible: true
   type: DataGrid
   components:
   - name: repeating_panel_2
@@ -160,7 +98,7 @@ components:
     type: RepeatingPanel
   layout_properties: {grid_position: 'CPVSVE,MVFWOJ', full_width_row: true}
 - name: extension_details_label
-  properties: {align: center, text: Extension Details, bold: true, font_size: 18, visible: false}
+  properties: {align: center, text: Extension Details, bold: true, font_size: 18, visible: true}
   type: Label
   layout_properties: {grid_position: 'SRUIDO,WHOCKR'}
 - name: data_grid_3
@@ -170,18 +108,14 @@ components:
     - {id: VJQQOR, title: borrower Id, data_key: column_2, width: 104.44444274902344, expand: false}
     - {id: XYILLG, data_key: column_3, title: Borrower Name}
     - {id: OJLQEN, title: Lender Id, data_key: column_3, width: 92, expand: false}
-    - {id: ISIUDC, data_key: column_4, title: Borrower Email, width: 94.44442749023438, expand: false}
-    - {id: LLCVMT, data_key: column_5, title: Lender Email, width: 101.4444580078125, expand: false}
     - {id: PAQFZY, data_key: column_6, title: Requested date, width: 103, expand: false}
     - {id: WZUWMP, data_key: column_1, title: EMI Number}
-    - {id: XBVABN, data_key: column_6, title: New Emi}
     - {id: URWWZV, data_key: column_1, title: Extension Amount}
     - {id: NHEKMU, data_key: column_2, title: Extension Months}
     - {id: YTOJWQ, data_key: column_4, title: Status}
-    - {id: DPKDTF, data_key: column_5, title: 'status timestamp '}
     - {id: GRGCWD, data_key: column_7, title: ''}
     role: tonal-data-grid
-    visible: false
+    visible: true
   type: DataGrid
   components:
   - name: repeating_panel_3
@@ -189,7 +123,7 @@ components:
     type: RepeatingPanel
   layout_properties: {grid_position: 'JUPVKK,ODYNMS', full_width_row: true}
 - name: foreclosure_details_label
-  properties: {align: center, text: Foreclosure Details, bold: true, font_size: 18, visible: false}
+  properties: {align: center, text: Foreclosure Details, bold: true, font_size: 18, visible: true}
   type: Label
   layout_properties: {grid_position: 'FYYHXX,SKKDNS'}
 - name: data_grid_4
@@ -203,12 +137,10 @@ components:
     - {id: UARLLF, data_key: column_6, title: Emi Number}
     - {id: WUTRAU, data_key: column_7, title: Foreclosure Amount}
     - {id: PQMFNL, data_key: column_1, title: Total Due Amount}
-    - {id: YDCRJU, data_key: column_2, title: Reason}
     - {id: MWGBYZ, data_key: column_3, title: Status}
-    - {id: IRNUSH, data_key: column_4, title: Status Time Stamp}
     - {id: SLKGWJ, data_key: column_5, title: ''}
     role: tonal-data-grid
-    visible: false
+    visible: true
   type: DataGrid
   components:
   - name: repeating_panel_4
