@@ -288,16 +288,16 @@ class mis_reports(mis_reportsTemplate):
         # Filter out None values for lenders_commitment
         lenders_commitment = sum(lender['return_on_investment'] for lender in lenders if lender['return_on_investment'] is not None)
     
-        # Data for the pie chart
-        values = [
-            no_of_loans_disbursed,
-            no_of_loans_closed,
-            no_of_loans_rejected,
-            lender_share,
-            no_of_borrowers,
-            no_of_lenders,
-            lenders_commitment
-        ]
+        # # Data for the pie chart
+        # values = [
+        #     no_of_loans_disbursed,
+        #     no_of_loans_closed,
+        #     no_of_loans_rejected,
+        #     lender_share,
+        #     no_of_borrowers,
+        #     no_of_lenders,
+        #     lenders_commitment
+        # ]
         labels = [
             'No of Loans Disbursed: {}'.format(no_of_loans_disbursed),
             'No of Loans Closed: {}'.format(no_of_loans_closed),
@@ -309,7 +309,7 @@ class mis_reports(mis_reportsTemplate):
         ]
     
         # Create the pie chart
-        fig = go.Figure(data=[go.Pie(labels=labels, values=values, textinfo='label+percent')])
+        fig = go.Figure(data=[go.Pie(labels=labels, textinfo='label+percent')])
     
         # Update the layout to set the size
         fig.update_layout(
