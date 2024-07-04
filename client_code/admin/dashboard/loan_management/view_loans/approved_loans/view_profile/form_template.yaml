@@ -135,11 +135,105 @@ components:
     properties: {height: 418.47613525390625}
     type: Spacer
     layout_properties: {grid_position: 'NESHTV,DCDWDF'}
-- type: Button
-  properties: {role: elevated-button, bold: true, align: center, spacing_above: small, background: '#05264d', icon: 'fa:backward', underline: false, font: '16', icon_align: left, foreground: 'theme:On Primary', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: Back}
-  name: button_1_copy
-  layout_properties:
-    col_widths: {}
-    grid_position: PRAAFS,NILYFU
-  event_bindings: {click: button_1_copy_click}
+- name: column_panel_1_copy
+  properties: {background: '#Edf0f4', col_widths: '{"VZPOSS":30,"YOQYNJ":15,"YMQFBG":15}'}
+  type: ColumnPanel
+  layout_properties: {grid_position: 'PRAAFS,JJTROY'}
+  components:
+  - type: Button
+    properties: {role: elevated-button, bold: true, align: center, spacing_above: small, background: '#05264d', icon: 'fa:backward', underline: false, font: '16', icon_align: left, foreground: 'theme:On Primary', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: Back}
+    name: button_1_copy
+    layout_properties: {grid_position: 'NLXGKW,ITTIVU'}
+    event_bindings: {click: button_1_copy_click}
+  - name: label_3_copy
+    properties: {text: Loan Details, bold: true, font_size: 30, align: center}
+    type: Label
+    layout_properties: {grid_position: 'YSBCDH,HOTHOD'}
+  - name: spacer_4_copy
+    properties: {height: '15'}
+    type: Spacer
+    layout_properties: {grid_position: 'LACDGY,HHVTXF'}
+  - name: label_7_copy
+    properties: {text: '  Borrower Name:', bold: true, role: input-prompt}
+    type: Label
+    layout_properties: {grid_position: 'UCREEW,ZUOPMO HNCMEL,ZKFVSV'}
+  - name: name
+    properties: {role: outlined-card, border: 2px solid lightgrey}
+    type: Label
+    layout_properties: {grid_position: 'UCREEW,ZUOPMO UWEMXA,GBTEJN'}
+    data_bindings:
+    - {code: 'self.item[''borrower_name'']', property: text}
+  - name: label_8_copy
+    properties: {role: input-prompt, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: 'Interest Rate(%) :'}
+    type: Label
+    layout_properties: {grid_position: 'UCREEW,ZUOPMO GVDKEO,QBZCNT'}
+  - name: interest_rate
+    properties: {role: outlined-card, border: 2px solid lightgrey}
+    type: Label
+    layout_properties: {grid_position: 'UCREEW,ZUOPMO POWJSD,JHIXZT'}
+  - name: label_9_copy
+    properties: {role: input-prompt, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: 'Foreclosure Amount :'}
+    type: Label
+    layout_properties: {grid_position: 'UCREEW,ZUOPMO RIPLEY,TATFRK'}
+  - name: foreclose_amount
+    properties: {role: outlined-card, border: 2px solid lightgrey}
+    type: Label
+    layout_properties: {grid_position: 'UCREEW,ZUOPMO HQRSIC,AFLEUF'}
+  - name: label_4_copy
+    properties: {role: input-prompt, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: 'Outstanding Amount :'}
+    type: Label
+    layout_properties: {grid_position: 'UCREEW,ZUOPMO ZQTPXF,ELLOSX'}
+  - name: label_8_copy_copy
+    properties: {bold: true, text: '  Loan Amount:', role: input-prompt}
+    type: Label
+    layout_properties: {grid_position: 'UCREEW,WGCIGK BBKZST,TJPFAW'}
+  - name: loan
+    properties: {role: outlined-card, border: 2px solid lightgrey}
+    type: Label
+    layout_properties: {grid_position: 'UCREEW,WGCIGK AYZGQY,MBMPLR'}
+    data_bindings:
+    - {code: 'self.item[''loan_amount'']', property: text}
+  - name: label_7_copy_2
+    properties: {role: input-prompt, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: 'Foreclosure Fee(%) :'}
+    type: Label
+    layout_properties: {grid_position: 'UCREEW,WGCIGK SAAJWE,HLDWMS'}
+  - name: foreclose_fee
+    properties: {role: outlined-card, border: 2px solid lightgrey}
+    type: Label
+    layout_properties: {grid_position: 'UCREEW,WGCIGK QUYSVX,HYOPFF'}
+  - name: label_5_copy
+    properties: {role: input-prompt, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: 'Total Paid Amount :'}
+    type: Label
+    layout_properties: {grid_position: 'UCREEW,WGCIGK PBLJDV,YTDTUI'}
+  - name: total
+    properties: {role: outlined-card, border: 2px solid lightgrey}
+    type: Label
+    layout_properties: {grid_position: 'UCREEW,WGCIGK EDLUBU,HDOQVP'}
+    data_bindings:
+    - {code: 'self.item[''paid_amont'']', property: text}
+  - name: label_3_copy_2
+    properties: {role: input-prompt, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: 'Reason for Foreclosure :'}
+    type: Label
+    layout_properties: {grid_position: 'UCREEW,WGCIGK SMDVYE,CDGQJO'}
+  - name: label_10_copy
+    properties: {role: input-prompt, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: 'Total Due Amount :'}
+    type: Label
+    layout_properties: {grid_position: 'LFDKGM,VZPOSS'}
+  - name: spacer_4
+    properties: {height: 32}
+    type: Spacer
+    layout_properties: {grid_position: 'BPCDFN,YOQYNJ'}
+  - name: spacer_1_copy
+    properties: {height: 32}
+    type: Spacer
+    layout_properties: {grid_position: 'BPCDFN,YMQFBG'}
+  - name: button_1
+    properties: {role: elevated-button, bold: true, align: center, spacing_above: small, background: '#0b2547', icon: 'fa:angle-double-left', underline: false, font: '', icon_align: left, foreground: white, spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: 'Back   '}
+    type: Button
+    layout_properties: {grid_position: 'CPEPLH,EFPJJT'}
+    event_bindings: {click: button_1_click}
+  - name: spacer_6
+    properties: {height: 88.0999755859375}
+    type: Spacer
+    layout_properties: {grid_position: 'UAVJTK,AOQVMV'}
 is_package: true
