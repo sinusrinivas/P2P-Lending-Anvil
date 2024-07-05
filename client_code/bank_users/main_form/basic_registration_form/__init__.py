@@ -572,11 +572,11 @@ class basic_registration_form(basic_registration_formTemplate):
 
     def trigger_aadhaar_upload(self, **event_args):
         if self.govt_id1_text_box.text:
-            self.show_upload_popup("Upload Govt id1 Image", self.upload_aadhaar_image)
+            self.show_upload_popup("Upload Govt id1 Image", self.upload_aadhaar_image())
 
     def trigger_pan_upload(self, **event_args):
         if self.govt_id2_text_box.text:
-            self.show_upload_popup("Upload Govt id2 Image", self.upload_pan_image)
+            self.show_upload_popup("Upload Govt id2 Image", self.upload_pan_image())
 
     def show_upload_popup(self, title, callback):
         popup = upload_image_popup()
