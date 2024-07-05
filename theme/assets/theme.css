@@ -24,6 +24,7 @@
   outline: 1px dotted;
   padding: 16px;
   text-align: center;
+  
 }
 
 /* Put things on a 4px grid (none of this 7px nonsense) */
@@ -871,12 +872,15 @@ input.anvil-component.anvil-spacing-below-large { margin-bottom: 20px; }
 
 input.anvil-component::-webkit-input-placeholder, textarea.anvil-component::-webkit-input-placeholder {
   color: %color:On Surface%;
+  
 }
 input.anvil-component::-moz-placeholder, textarea.anvil-component::-moz-placeholder {
   color: %color:On Surface%;
+  
 }
 input.anvil-component::placeholder, textarea.anvil-component::placeholder  {
   color: %color:On Surface%;
+  opacity: 0.5;
 }
 
 .app-bar input.anvil-component::-webkit-input-placeholder, .app-bar textarea.anvil-component::-webkit-input-placeholder {
