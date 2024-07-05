@@ -1,4 +1,6 @@
-container: {type: ColumnPanel}
+container:
+  type: ColumnPanel
+  data_bindings: []
 components:
 - name: flow_panel_2
   properties: {align: justify}
@@ -168,7 +170,7 @@ components:
         layout_properties: {grid_position: 'BCREGJ,LGHLJP GASAMI,BJDXSL MPSRUO,XLAMBF', row_background: 'theme:Primary Container'}
         event_bindings: {click: button_1_click}
       - name: link_2
-        properties: {text: 'Already have an account ?  Login', foreground: blue, font_size: null}
+        properties: {text: 'Already have an account ?  Sign In', foreground: blue, font_size: null}
         type: Link
         layout_properties: {grid_position: 'BCREGJ,LGHLJP GASAMI,BJDXSL ETWHQH,VXLYLN'}
         event_bindings: {click: link_2_click}
