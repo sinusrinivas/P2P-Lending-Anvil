@@ -168,7 +168,7 @@ components:
   properties: {text: '*', foreground: red}
   type: Label
   layout_properties: {grid_position: 'WFKZOV,XCETPN OJPPCS,GHBQRH'}
-- name: file_loader_1
+- name: registration_img_file_loader
   properties: {align: center}
   type: FileLoader
   layout_properties: {grid_position: 'WFKZOV,XCETPN BQISFD,DTEQWY'}
@@ -202,7 +202,7 @@ components:
   properties: {text: '*', foreground: red}
   type: Label
   layout_properties: {grid_position: 'WFKZOV,XCETPN YRYMEE,YZWYKW'}
-- name: file_loader_2
+- name: registration_img_aadhar_file_loader
   properties: {}
   type: FileLoader
   layout_properties: {grid_position: 'WFKZOV,XCETPN LHZWHC,LBHHUP'}
@@ -235,7 +235,7 @@ components:
   properties: {foreground: red, text: '*'}
   type: Label
   layout_properties: {grid_position: 'WFKZOV,XCETPN PQQRLU,STNMEU'}
-- name: file_loader_3
+- name: registration_img_pan_file_loader
   properties: {}
   type: FileLoader
   layout_properties: {grid_position: 'WFKZOV,XCETPN DLUWFA,YHTNZD'}
