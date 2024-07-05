@@ -7,6 +7,8 @@ import anvil.users
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
+import re
+from datetime import datetime, timedelta
 
 class lender_registration_form_3_marital_details(lender_registration_form_3_marital_detailsTemplate):
   def __init__(self,user_id, **properties):
@@ -24,9 +26,33 @@ class lender_registration_form_3_marital_details(lender_registration_form_3_mari
     self.marital_status_lender_registration_dropdown.items = options_string
     self.init_components(**properties)
 
+    options = app_tables.fin_lender_spouse_profession.search()
+    option_strings = [str(option['spouse_profession']) for option in options]
+    self.drop_down_1_copy.items = option_strings
+
     user_data=app_tables.fin_guarantor_details.get(customer_id=user_id)
     if user_data:
       self.drop_down_1.selected_value = user_data['another_person']
+
+    user_data=app_tables.fin_guarantor_details.get(customer_id=user_id)
+    if user_data:
+           # self.drop_down_1.selected_value = user_data['another_person']
+           self.father_name_text.text=user_data['guarantor_name']
+           self.date_picker_1.date =user_data['guarantor_date_of_birth']
+           self.father_mbl_no_text.text=user_data['guarantor_mobile_no']
+           self.father_profession_text.text = user_data['guarantor_profession']
+           self.father_address_text.text = user_data['guarantor_address']
+
+           # self.drop_down_1.selected_value = user_data['another_person']
+           self.spouse_name_text.text=user_data['guarantor_name']
+           self.date_picker_3.date =user_data['guarantor_marriage_date']
+           self.spouse_mbl_no_text.text=user_data['guarantor_mobile_no']
+           self.drop_down_1.selected_value = user_data['guarantor_profession']
+           self.spouse_companyname_text.text = user_data['guarantor_company_name']
+           self.annual_earning_text.text = user_data['guarantor_annual_earning']
+
+    
+    self.drop_down_1.items = ['Father','Mother','Spouse','Others']
 
   def button_next_click(self, **event_args):
       marital_status = self.marital_status_lender_registration_dropdown.selected_value
@@ -97,8 +123,8 @@ class lender_registration_form_3_marital_details(lender_registration_form_3_mari
                                     another_person, father_name, father_dob, 
                                     father_mbl_no, father_profession, 
                                     father_address, self.userId)
-                  open_form('borrower.borrower_registration_forms.star_1_borrower_registration_form_4_loan', 
-                            user_id=self.userId)
+                  open_form('lendor.lendor_registration_forms.lender_registration_form_4_bank_form_1', 
+                      user_id=self.userId)
           else:
             Notification("Please fill all the required fields").show()
 
@@ -167,7 +193,8 @@ class lender_registration_form_3_marital_details(lender_registration_form_3_mari
                                   another_person, spouse_name, spouse_mob, 
                                   spouse_mbl_no, spouse_profession, 
                                   spouse_company, annual_earning, self.userId)
-                open_form('borrower.borrower_registration_forms.star_1_borrower_registration_form_4_loan', user_id=self.userId)
+                open_form('lendor.lendor_registration_forms.lender_registration_form_4_bank_form_1', 
+                      user_id=self.userId)
         else:
             Notification("Please fill all the required fields").show()
       
