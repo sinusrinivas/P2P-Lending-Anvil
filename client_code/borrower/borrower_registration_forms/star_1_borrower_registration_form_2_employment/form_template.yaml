@@ -215,15 +215,19 @@ components:
     properties: {role: null, bold: false, align: left, placeholder: '', spacing_above: small, background: 'theme:On Primary', type: text, underline: false, font: '', hide_text: false, foreground: '', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: ''}
     type: TextBox
     layout_properties: {row: PHNGLI, width_xs: 6, col_xs: 6}
-  - name: file_loader_1_copy
-    properties: {text: Upload Verification proof}
-    type: FileLoader
-    layout_properties: {row: NCBJAC, width_xs: 4, col_xs: 6}
-    event_bindings: {change: file_loader_1_change}
   - name: label_1_copy_1_copy
     properties: {role: null, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: Provide Proof of Verification(recent electricity bill)}
     type: Label
-    layout_properties: {row: UDLKBH, width_xs: 4, col_xs: 0}
+    layout_properties: {row: OAOVHS, width_xs: 4, col_xs: 0}
+  - name: file_loader_1_copy
+    properties: {text: Upload Verification proof}
+    type: FileLoader
+    layout_properties: {row: OAOVHS, width_xs: 4, col_xs: 6}
+    event_bindings: {change: file_loader_1_change}
+  - name: image_1_copy
+    properties: {height: 90.77777099609375}
+    type: Image
+    layout_properties: {row: OAOVHS, width_xs: 2, col_xs: 10}
 - name: spacer_2
   properties: {height: 32}
   type: Spacer
