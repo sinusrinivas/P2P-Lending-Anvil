@@ -16,6 +16,7 @@ class login_page(login_pageTemplate):
   def __init__(self,  **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
+    self.role = "no-scroll"
     # login_date = datetime.now()
 
     # Any code you write here will run before the form opens.

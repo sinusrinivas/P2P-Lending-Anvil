@@ -16,6 +16,7 @@ class signup_page(signup_pageTemplate):
   def __init__(self, user_type = None,  **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
+    self.role = "no-scroll"
     self.user_type = user_type
 
     # Any code you write here will run before the form opens.
