@@ -32,8 +32,8 @@ class star_1_borrower_registration_form_2_employment(star_1_borrower_registratio
         user_data = app_tables.fin_user_profile.get(customer_id=user_id)
         if user_data is not None:
             # Set properties directly from user_data
-            self.text_box_1.text = user_data['business_name']
-            self.text_box_2.text = user_data['business_add']
+            self.text_box_1.text = user_data['business_add']
+            self.text_box_2.text = user_data['business_name']
             self.drop_down_1.selected_value=user_data['business_type']
             self.date_picker_1.date = user_data['year_estd']
             self.text_box_3.text = user_data['industry_type']
