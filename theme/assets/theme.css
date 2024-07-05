@@ -11,6 +11,28 @@
   min-width: min-content;
 }
 
+/* Add this to theme.css */
+
+.anvil-role-no-scroll {
+  overflow: hidden; /* Hide the horizontal scrollbar */
+}
+
+.container {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+img, video {
+  max-width: 100%;
+  height: auto;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
 
 .anvil-panel-col {
   padding-bottom: 10px;
