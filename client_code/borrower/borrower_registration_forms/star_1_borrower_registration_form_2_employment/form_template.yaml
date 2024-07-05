@@ -257,12 +257,12 @@ components:
     properties: {text: 'Provide College Proof:', align: left, bold: true}
     type: Label
     layout_properties: {row: GQEZEG, width_xs: 3, col_xs: 2}
-  - name: borrower_college_proof_img
+  - name: student_img
     properties: {text: Upload Proof}
     type: FileLoader
     layout_properties: {row: GQEZEG, width_xs: 3, col_xs: 6}
     event_bindings: {change: borrower_college_proof_img_change}
-  - name: image_1_copy_2
+  - name: image_3
     properties: {height: 128.77777099609375}
     type: Image
     layout_properties: {row: GQEZEG, width_xs: 3, col_xs: 9}
