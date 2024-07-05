@@ -564,6 +564,47 @@ def create_zaphod_pdf():
 
 
 
+# @anvil.server.callable
+# def get_notifications(user_id):
+#     notifications = []
+#     loans = app_tables.fin_loan_details.search(borrower_customer_id=user_id)
+#     for loan in loans:
+#         loan_status = loan['loan_updated_status']
+#         if loan_status in ['rejected', 'approved', 'disbursed']:
+#             if loan_status == 'rejected':
+#                 notification_date = loan['lender_rejected_timestamp']
+#             elif loan_status == 'approved':
+#                 notification_date = loan['lender_accepted_timestamp']
+#             elif loan_status == 'disbursed':
+#                 notification_date = loan['loan_disbursed_timestamp']
+            
+#             notifications.append({
+#                 'message': f"Your loan for {loan['product_name']} is {loan_status}",
+#                 'loan_updated_status': loan_status,
+#                 'read': loan['notification_read'] if 'notification_read' in loan else False,
+#                 'date': notification_date,
+#                 'customer_id': loan['borrower_customer_id'],
+#                 'loan_id': loan['loan_id']
+#             })
+#     return notifications
+
+# @anvil.server.callable
+# def mark_notification_as_read(loan_id):
+#     loan = app_tables.fin_loan_details.get(loan_id=loan_id)
+#     if loan:
+#         loan['notification_read'] = True  # Directly update the field
+
+# @anvil.server.callable
+# def update_notifications(user_id):
+#     loans = app_tables.fin_loan_details.search(borrower_customer_id=user_id)
+#     for loan in loans:
+#         loan_status = loan['loan_updated_status']
+#         if loan_status in ['rejected', 'approved', 'disbursed']:
+#             loan['notification_read'] = False
+#         else:
+#             loan['notification_read'] = True
+
+
 @anvil.server.callable
 def get_notifications(user_id):
     notifications = []
@@ -593,6 +634,7 @@ def mark_notification_as_read(loan_id):
     loan = app_tables.fin_loan_details.get(loan_id=loan_id)
     if loan:
         loan['notification_read'] = True  # Directly update the field
+        loan.update()
 
 @anvil.server.callable
 def update_notifications(user_id):
@@ -603,6 +645,14 @@ def update_notifications(user_id):
             loan['notification_read'] = False
         else:
             loan['notification_read'] = True
+        loan.update()
+
+
+
+
+
+
+
 
 
 
