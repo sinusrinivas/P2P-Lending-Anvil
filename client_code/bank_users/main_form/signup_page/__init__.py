@@ -51,7 +51,7 @@ class signup_page(signup_pageTemplate):
                 user_module.add_email_and_user_id(email ,password, self.user_type)
                 main_form_module.email = email
                 main_form_module.flag = True
-                open_form('bank_users.main_form.basic_registration_form')
+                open_form('bank_users.main_form.login_page')
       else:
         self.retype_password_error_label.text = 'Email is already exists'
         self.retype_password_error_label.visible = True

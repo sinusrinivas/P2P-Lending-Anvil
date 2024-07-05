@@ -51,7 +51,7 @@ components:
     type: Spacer
     layout_properties: {grid_position: 'FOQTZU,ZSUIVO', full_width_row: true}
   - name: column_panel_3
-    properties: {col_widths: '{"QSUOUY":10,"RTKSOW":50}'}
+    properties: {col_widths: '{"QSUOUY":5,"RTKSOW":55}'}
     type: ColumnPanel
     layout_properties: {grid_position: 'AUEKVR,QCZGCQ', full_width_row: true}
     components:
@@ -68,7 +68,7 @@ components:
       type: Label
       layout_properties: {grid_position: 'LOUJDS,RTKSOW XGLERH,EVCEYC'}
     - name: image_1
-      properties: {source: _/theme/bank_users/main_form/sign_up%20image.webp, display_mode: shrink_to_fit, height: 388.57135009765625, background: '#00555'}
+      properties: {source: _/theme/bank_users/main_form/sign_up%20image.webp, display_mode: shrink_to_fit, height: '300', background: '#00555'}
       type: Image
       layout_properties: {grid_position: 'LOUJDS,RTKSOW IYLGEA,XVBVAK'}
   - name: column_panel_1
@@ -94,7 +94,7 @@ components:
         type: Spacer
         layout_properties: {grid_position: 'BCREGJ,LGHLJP GASAMI,BJDXSL MPYCNK,IKUFXQ'}
       - name: label_7
-        properties: {role: headline, text: Sign Up, background: '', foreground: '#094586', bold: true, underline: false, italic: false}
+        properties: {role: headline, text: Sign Up, background: '', foreground: '#094586', bold: true, underline: false, italic: false, font_size: 40}
         type: Label
         layout_properties: {grid_position: 'BCREGJ,LGHLJP GASAMI,BJDXSL MPYCNK,UXCVZV'}
       - name: spacer_6
@@ -162,19 +162,11 @@ components:
         type: CheckBox
         layout_properties: {grid_position: 'BCREGJ,LGHLJP GASAMI,BJDXSL OOCTFV,JDAMWY'}
         event_bindings: {change: check_box_1_change}
-      - name: spacer_8
-        properties: {height: 14.428466796875}
-        type: Spacer
-        layout_properties: {grid_position: 'BCREGJ,LGHLJP GASAMI,BJDXSL OEDXIR,ERUJBC'}
       - name: button_1
         properties: {text: Sign up, background: '#094586', foreground: white, align: full}
         type: Button
         layout_properties: {grid_position: 'BCREGJ,LGHLJP GASAMI,BJDXSL MPSRUO,XLAMBF', row_background: 'theme:Primary Container'}
         event_bindings: {click: button_1_click}
-      - name: spacer_9
-        properties: {height: 8.85711669921875}
-        type: Spacer
-        layout_properties: {grid_position: 'BCREGJ,LGHLJP GASAMI,BJDXSL PRAHQB,TEAATI'}
       - name: link_2
         properties: {text: 'Already have an account ?  Login', foreground: blue, font_size: null}
         type: Link
@@ -185,7 +177,7 @@ components:
       type: Spacer
       layout_properties: {grid_position: 'WUAZDP,TSUFAE'}
   - name: spacer_3
-    properties: {height: 74.28558349609375}
+    properties: {height: -93.25006103515625}
     type: Spacer
     layout_properties: {grid_position: 'AUEKVR,AGIDMN IEYSKI,WLUTYA'}
 is_package: true
