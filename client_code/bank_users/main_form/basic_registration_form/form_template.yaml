@@ -1,6 +1,6 @@
 container:
   type: ColumnPanel
-  properties: {col_widths: '{"ITCBYF":10,"ALTBGH":25,"UIAQLG":30,"PCHZDG":30,"ZGHNQO":25,"AEVSVW":25,"CTQQUB":11,"VIHTOP":20,"CNAXMB":40,"LLARTM":20,"WWPENI":40,"XCETPN":27,"NQRPOW":30,"OMXXGK":30,"IJCBFD":20,"UWVSUV":40,"BFMXGH":30,"CIDAYR":25,"DULEQR":30,"LQMOMB":30,"FUSOJN":25,"IYHKUV":20,"GVCSUW":40,"OHHRNC":20,"FYCFNP":40,"VIRIRJ":20,"XWXVLL":40,"LUUNEQ":25,"LTGTNW":35,"ZDWSIY":25,"LKHQGR":35,"OXHZIK":25,"NYJWAN":35,"AQNXIE":25,"OQCTKE":35,"NDPMKI":25,"VJENBU":35}'}
+  properties: {col_widths: '{"ITCBYF":10,"ALTBGH":25,"UIAQLG":30,"PCHZDG":30,"ZGHNQO":25,"AEVSVW":25,"CTQQUB":11,"VIHTOP":20,"CNAXMB":40,"LLARTM":25,"XCETPN":27,"NQRPOW":30,"OMXXGK":30,"IJCBFD":20,"UWVSUV":40,"BFMXGH":30,"CIDAYR":25,"DULEQR":30,"LQMOMB":30,"FUSOJN":25,"IYHKUV":20,"GVCSUW":40,"OHHRNC":20,"FYCFNP":40,"VIRIRJ":20,"XWXVLL":40,"LUUNEQ":25,"LTGTNW":35,"ZDWSIY":25,"LKHQGR":35,"OXHZIK":25,"NYJWAN":35,"AQNXIE":25,"OQCTKE":35,"NDPMKI":25,"VJENBU":35,"GDDLHY":53,"EUQSEO":30,"YMIFML":30}'}
 components:
 - name: spacer_2
   properties: {height: 10.399993896484375}
@@ -33,16 +33,12 @@ components:
 - name: label_5
   properties: {text: '* ', bold: true, foreground: red, role: input-prompt, spacing_above: none, spacing_below: none}
   type: Label
-  layout_properties: {grid_position: 'VWRDWZ,ITCBYF CIMICU,WWPENI'}
+  layout_properties: {grid_position: 'VWRDWZ,ITCBYF CIMICU,GDDLHY'}
 - name: full_name_text_box
   properties: {role: outlined, bold: false, align: left, placeholder: Enter your full name, spacing_above: small, background: 'theme:On Primary', type: text, underline: false, font: '', hide_text: false, foreground: '', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: ''}
   type: TextBox
   layout_properties: {grid_position: 'VWRDWZ,ITCBYF BFMBDW,MLFOJA'}
   event_bindings: {show: borrower_full_name_test_show, pressed_enter: full_name_text_box_pressed_enter}
-- name: full_name_label
-  properties: {visible: true, foreground: Red, font_size: 12, bold: true}
-  type: Label
-  layout_properties: {grid_position: 'VWRDWZ,ITCBYF BPKUZN,NZZKEG'}
 - name: label_03
   properties: {role: input-prompt, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: 16, tooltip: '', text: 'Enter Your Gender '}
   type: Label
@@ -87,10 +83,6 @@ components:
   properties: {role: outlined, bold: false, format: '', align: left, date: '', placeholder: Pick the Date, pick_time: false, spacing_above: small, background: white, underline: false, font: '', max_date: '', foreground: '', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', min_date: ''}
   type: DatePicker
   layout_properties: {grid_position: 'WFKZOV,ALTBGH ENRVAI,HJYKKY'}
-- name: dob_label
-  properties: {foreground: red, font_size: 12, bold: true, visible: true}
-  type: Label
-  layout_properties: {grid_position: 'WFKZOV,ALTBGH ENHHLG,BEHQTO'}
 - name: spacer_4
   properties: {height: -5.75}
   type: Spacer
@@ -104,12 +96,8 @@ components:
   type: TextBox
   layout_properties: {grid_position: 'WFKZOV,ALTBGH VBHTMT,ARIPWR'}
   event_bindings: {pressed_enter: borrower_alternate_email_pressed_enter}
-- name: email_label
-  properties: {foreground: red, font_size: 12, bold: true, visible: false}
-  type: Label
-  layout_properties: {grid_position: 'WFKZOV,ALTBGH CDMCPB,PWUOFP'}
 - name: spacer_5
-  properties: {height: '8'}
+  properties: {height: 18.25}
   type: Spacer
   layout_properties: {grid_position: 'WFKZOV,ALTBGH LIQZOR,ZAWKNQ'}
 - name: label_06
@@ -125,10 +113,6 @@ components:
   type: TextBox
   layout_properties: {grid_position: 'WFKZOV,ALTBGH NGJOBY,IEDAPN'}
   event_bindings: {pressed_enter: adhar_card_text_box_pressed_enter}
-- name: label_1
-  properties: {foreground: red, font_size: 12, bold: true, visible: false}
-  type: Label
-  layout_properties: {grid_position: 'WFKZOV,ALTBGH FWXPXF,NSSRYI'}
 - name: spacer_6
   properties: {height: 5.24993896484375}
   type: Spacer
@@ -162,10 +146,6 @@ components:
   type: TextBox
   layout_properties: {grid_position: 'WFKZOV,XCETPN GWMYOR,NPAMDO'}
   data_bindings: []
-- name: mobile_label
-  properties: {foreground: red, bold: true, font_size: 12, visible: true}
-  type: Label
-  layout_properties: {grid_position: 'WFKZOV,XCETPN EZKQDR,RVLMFA'}
 - name: label_3_copy_1
   properties:
     role: input-prompt
@@ -202,7 +182,7 @@ components:
   layout_properties: {grid_position: 'WFKZOV,XCETPN GNSBYC,VJENBU PNUFSH,GGBAKS'}
   event_bindings: {change: registration_img_file_loader_change}
 - name: image_profile
-  properties: {height: '80', display_mode: shrink_to_fit}
+  properties: {height: '60', display_mode: shrink_to_fit}
   type: Image
   layout_properties: {grid_position: 'WFKZOV,XCETPN GNSBYC,VJENBU PNUFSH,DKRSUM'}
 - name: label_3_copy_1_copy_2
@@ -241,7 +221,7 @@ components:
   layout_properties: {grid_position: 'WFKZOV,XCETPN EEEXUF,NYJWAN ONIYLT,KUJIAW'}
   event_bindings: {change: registration_img_aadhar_file_loader_change}
 - name: image_aadhar
-  properties: {height: '80'}
+  properties: {height: '60'}
   type: Image
   layout_properties: {grid_position: 'WFKZOV,XCETPN EEEXUF,NYJWAN ONIYLT,DEWIPV'}
 - name: label_3_copy_1_copy_4
@@ -280,7 +260,7 @@ components:
   layout_properties: {grid_position: 'WFKZOV,XCETPN AJFIDY,OQCTKE RGRBRF,RSRLSY'}
   event_bindings: {change: registration_img_pan_file_loader_change}
 - name: image_pan
-  properties: {height: '80'}
+  properties: {height: '60'}
   type: Image
   layout_properties: {grid_position: 'WFKZOV,XCETPN AJFIDY,OQCTKE RGRBRF,PCQNUZ'}
 - name: spacer_1_copy_copy
