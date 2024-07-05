@@ -69,7 +69,7 @@ components:
       type: Label
       layout_properties: {grid_position: 'LOUJDS,RTKSOW SJSTRL,ROCLRP'}
     - name: image_1
-      properties: {source: _/theme/bank_users/main_form/login_page/login-image.webp, display_mode: shrink_to_fit, height: '300'}
+      properties: {source: _/theme/bank_users/main_form/login_page/login-image.webp, display_mode: shrink_to_fit, height: '350'}
       type: Image
       layout_properties: {grid_position: 'LOUJDS,RTKSOW IYLGEA,XVBVAK'}
   - name: column_panel_1
