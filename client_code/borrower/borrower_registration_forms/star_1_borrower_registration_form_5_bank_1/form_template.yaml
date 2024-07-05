@@ -15,11 +15,11 @@ components:
   name: navigation_bar_1
   layout_properties: {grid_position: 'GJLMKG,ZNSMLH', full_width_row: true}
 - name: label_1_copy_1
-  properties: {role: null, bold: true, align: center, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: 16, tooltip: '', text: Applicant Bank Details}
+  properties: {role: null, bold: true, align: center, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: 18, tooltip: '', text: Applicant Bank Details}
   type: Label
   layout_properties: {grid_position: ',undefined'}
 - name: label_2_copy_1
-  properties: {role: null, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: Enter Your Account Holder Name}
+  properties: {role: input-prompt, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: Enter Your Account Holder Name}
   type: Label
   layout_properties: {grid_position: 'VHSZJW,LKSYXZ WHYFXU,UQXQXR'}
 - name: text_box_1
@@ -27,7 +27,7 @@ components:
   type: TextBox
   layout_properties: {grid_position: 'VHSZJW,LKSYXZ WENBUH,DINXGF'}
 - name: label_3_copy_1
-  properties: {role: null, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: Select Your Account Type}
+  properties: {role: input-prompt, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: Select Your Account Type}
   type: Label
   layout_properties: {grid_position: 'VHSZJW,FXZJPO QZATDF,BJTSXM'}
 - name: drop_down_1
@@ -48,13 +48,13 @@ components:
     border: ''
     italic: false
     enabled: true
-    font_size: null
+    font_size: 19
     tooltip: ''
   type: DropDown
   layout_properties: {grid_position: 'VHSZJW,FXZJPO TQMPEW,XHOGMS'}
   event_bindings: {change: drop_down_1_change}
 - name: label_1
-  properties: {role: null, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: Enter Your Account Number}
+  properties: {role: input-prompt, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: Enter Your Account Number}
   type: Label
   layout_properties: {grid_position: 'EWTJUY,IPVNYO TRBFTP,FWEPAJ'}
 - name: text_box_3
@@ -62,7 +62,7 @@ components:
   type: TextBox
   layout_properties: {grid_position: 'EWTJUY,IPVNYO DDYTOE,VWNFHK'}
 - name: label_2
-  properties: {role: null, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: Enter Your Bank Name}
+  properties: {role: input-prompt, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: Enter Your Bank Name}
   type: Label
   layout_properties: {grid_position: 'EWTJUY,ZEXIPS UYYYSA,SZDNXL'}
 - name: text_box_4
@@ -70,7 +70,7 @@ components:
   type: TextBox
   layout_properties: {grid_position: 'EWTJUY,ZEXIPS YCSFHQ,YUNYEI'}
 - name: label_2_copy_1_copy
-  properties: {role: null, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: Enter Your Bank Id}
+  properties: {role: input-prompt, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: Enter Your Bank Id}
   type: Label
   layout_properties: {grid_position: 'LBWVEM,UJUSJL ZMWQVE,VZONPB'}
 - name: bank_id
@@ -78,7 +78,7 @@ components:
   type: TextBox
   layout_properties: {grid_position: 'LBWVEM,UJUSJL OGUWNI,BKOWUG'}
 - name: label_1_copy
-  properties: {role: null, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: Enter Your Branch Name}
+  properties: {role: input-prompt, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: Enter Your Branch Name}
   type: Label
   layout_properties: {grid_position: 'LBWVEM,JGQUUA QOERUV,PXJYWY'}
 - name: branch_name
