@@ -459,7 +459,7 @@ from .. import main_form
 from .. import main_form_module
 from ...user_form import user_module
 import re
-from .upload_image_popup import upload_image_popup
+
 
 class basic_registration_form(basic_registration_formTemplate):
     def __init__(self, **properties):
@@ -511,8 +511,7 @@ class basic_registration_form(basic_registration_formTemplate):
         self.text_box_5.add_event_handler('change', self.validate_state)
         self.text_box_6.add_event_handler('change', self.validate_country)
         self.text_box_4.add_event_handler('change',self.validate_zip)
-        self.govt_id1_text_box.set_event_handler('change', self.trigger_aadhaar_upload)
-        self.govt_id2_text_box.set_event_handler('change', self.trigger_pan_upload)
+        
 
     def validate_full_name(self, **event_args):
         full_name = self.full_name_text_box.text
@@ -570,27 +569,7 @@ class basic_registration_form(basic_registration_formTemplate):
         else:
             self.text_box_6.background = '#FF0000 ' # Red background for invalid 
 
-    def trigger_aadhaar_upload(self, **event_args):
-        if self.govt_id1_text_box.text:
-            self.show_upload_popup("Upload Govt id1 Image", self.upload_aadhaar_image)
-
-    def trigger_pan_upload(self, **event_args):
-        if self.govt_id2_text_box.text:
-            self.show_upload_popup("Upload Govt id2 Image", self.upload_pan_image)
-
-    def show_upload_popup(self, title, callback):
-        popup = upload_image_popup()
-        popup.title = title
-        popup.set_event_handler('x-upload-image', callback)
-        popup.visible = True
-
-    def upload_aadhaar_image(self, image_file, **event_args):
-        self.aadhaar_image_file = image_file
-        self.image_aadhar.source = image_file
-
-    def upload_pan_image(self, image_file, **event_args):
-        self.pan_image_file = image_file
-        self.image_pan.source = image_file
+    
 
     def submit_btn_click(self, **event_args):
         """This method is called when the button is clicked"""
