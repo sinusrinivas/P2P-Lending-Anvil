@@ -91,6 +91,7 @@ class star_1_borrower_registration_form_2_employment(star_1_borrower_registratio
             self.grid_panel_1.visible = False
 
     def button_2_click(self, **event_args):
+        
         din = self.text_box_5.text
         cin = self.text_box_6.text
         reg_off_add = self.text_box_7.text

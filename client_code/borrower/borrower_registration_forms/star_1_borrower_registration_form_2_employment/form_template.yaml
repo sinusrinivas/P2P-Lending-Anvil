@@ -67,7 +67,7 @@ components:
     type: Label
     layout_properties: {row: TCEIYE, width_xs: 3, col_xs: 2}
   - name: text_box_2
-    properties: {role: outlined-card, background: 'theme:On Primary', placeholder: '', visible: true}
+    properties: {role: null, background: 'theme:On Primary', placeholder: '', visible: true}
     type: TextBox
     layout_properties: {row: TCEIYE, width_xs: 6, col_xs: 6}
   - name: label_1
@@ -224,6 +224,52 @@ components:
     properties: {height: 118.55548095703125}
     type: Image
     layout_properties: {row: ZCPIJA, width_xs: 3, col_xs: 9}
+- name: spacer_4
+  properties: {height: 32}
+  type: Spacer
+  layout_properties: {grid_position: 'CRFYRZ,RXMOPC'}
+- name: grid_panel_2
+  properties: {}
+  type: GridPanel
+  layout_properties: {grid_position: 'XZQGQN,XPSUBT'}
+  components:
+  - name: label_1_copy_2
+    properties: {text: 'Enter Your College Name:', align: left, bold: true}
+    type: Label
+    layout_properties: {row: EGMDFS, width_xs: 4, col_xs: 2}
+  - name: borrower_college_name_text
+    properties: {background: 'theme:On Primary', role: null}
+    type: TextBox
+    layout_properties: {row: EGMDFS, width_xs: 6, col_xs: 6}
+  - name: label_2_copy_2
+    properties: {text: 'Enter Your College Id:', align: left, bold: true}
+    type: Label
+    layout_properties: {row: BZJDPT, width_xs: 3, col_xs: 2}
+  - name: borrower_college_id_text
+    properties: {background: 'theme:On Primary', role: null}
+    type: TextBox
+    layout_properties: {row: BZJDPT, width_xs: 6, col_xs: 6}
+  - name: label_3
+    properties: {text: 'Provide College Proof:', align: left, bold: true}
+    type: Label
+    layout_properties: {row: GQEZEG, width_xs: 3, col_xs: 2}
+  - name: borrower_college_proof_img
+    properties: {text: Upload Proof}
+    type: FileLoader
+    layout_properties: {row: GQEZEG, width_xs: 3, col_xs: 6}
+    event_bindings: {change: borrower_college_proof_img_change}
+  - name: image_1_copy_2
+    properties: {height: 128.77777099609375}
+    type: Image
+    layout_properties: {row: GQEZEG, width_xs: 3, col_xs: 9}
+  - name: label_4
+    properties: {text: 'Enter Your College Address:', align: left, bold: true}
+    type: Label
+    layout_properties: {row: WYMORN, width_xs: 3, col_xs: 2}
+  - name: borrower_college_address_text
+    properties: {background: 'theme:On Primary', height: 68.85711669921875, role: null}
+    type: TextArea
+    layout_properties: {row: WYMORN, width_xs: 6, col_xs: 6}
 - name: spacer_2
   properties: {height: 32}
   type: Spacer
