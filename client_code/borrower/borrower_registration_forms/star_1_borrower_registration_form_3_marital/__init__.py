@@ -20,7 +20,107 @@ class star_1_borrower_registration_form_3_marital(star_1_borrower_registration_f
     options = app_tables.fin_borrower_marrital_status.search()
     options_string = [str(option['borrower_marrital_status']) for option in options]
     self.marital_status_borrower_registration_dropdown.items = options_string
+
+    self.drop_down_1.items = ['Father','Mother','Spouse','Others']
     self.init_components(**properties)
+
+    options = app_tables.fin_spouse_profession.search()
+    option_strings = [str(option['spouse_profession']) for option in options]
+    self.drop_down_1.items = option_strings
+
+    user_data=app_tables.fin_guarantor_details.get(customer_id=user_id)
+    if user_data:
+           self.selected_radio_button = user_data['another_person']
+           self.father_name_text.text=user_data['guarantor_name']
+           self.date_picker_1.date =user_data['guarantor_date_of_birth']
+           self.father_mbl_no_text.text=user_data['guarantor_mobile_no']
+           self.father_profession_text.text = user_data['guarantor_profession']
+           self.father_address_text.text = user_data['guarantor_address']
+
+           self.selected_radio_button = user_data['another_person']
+           self.mother_name_text_copy.text=user_data['guarantor_name']
+           self.date_picker_2.date =user_data['guarantor_date_of_birth']
+           self.mother_mbl_no_text.text=user_data['guarantor_mobile_no']
+           self.mother_profession_text.text = user_data['guarantor_profession']
+           self.mother_address_text.text = user_data['guarantor_address']
+
+           self.selected_radio_button = user_data['another_person']
+           self.spouse_name_text.text=user_data['guarantor_name']
+           self.date_picker_3.date =user_data['guarantor_marriage_date']
+           self.spouse_mbl_no_text.text=user_data['guarantor_mobile_no']
+           self.drop_down_1.selected_value = user_data['guarantor_profession']
+           self.spouse_companyname_text.text = user_data['guarantor_company_name']
+           self.annual_earning_text.text = user_data['guarantor_annual_earning']
+
+           self.selected_radio_button = user_data['another_person']
+           self.related_person_text.text = user_data['guarantor_person_relation']
+           self.name_text_copy.text=user_data['guarantor_name']
+           self.date_picker_3_copy.date =user_data['guarantor_date_of_birth']
+           self.mbl_no_text_copy.text=user_data['guarantor_mobile_no']
+           self.profession_text_copy.text = user_data['guarantor_profession']
+
+  def collect_details(self):
+        # Collect details from the form
+        father_name = self.father_name_text.text
+        father_dob = self.date_picker_1.date
+        father_mbl_no_text = self.father_mbl_no_text.text
+        father_mbl_no = int(father_mbl_no_text) if father_mbl_no_text.strip().isdigit() else None
+        father_profession = self.father_profession_text.text
+        father_address = self.father_address_text.text
+
+        # Mother details
+        mother_name = self.mother_name_text_copy.text
+        mother_dob = self.date_picker_2.date
+        mother_mbl_no_text = self.mother_mbl_no_text.text
+        mother_mbl_no = int(mother_mbl_no_text) if mother_mbl_no_text.strip().isdigit() else None
+        mother_profession = self.mother_profession_text.text
+        mother_address = self.mother_address_text.text
+
+        # Spouse details
+        spouse_name = self.spouse_name_text.text
+        spouse_mob = self.date_picker_3.date
+        spouse_mbl_no_text = self.spouse_mbl_no_text.text
+        spouse_mbl_no = int(spouse_mbl_no_text) if spouse_mbl_no_text.strip().isdigit() else None
+        spouse_profession = self.drop_down_1.selected_value
+        spouse_company = self.spouse_companyname_text.text
+        anual_earning = self.annual_earning_text.text
+
+        # Related person details
+        person_relation = self.related_person_text.text
+        related_dob = self.date_picker_3_copy.date
+        related_name = self.name_text_copy.text
+        related_mob_text = self.mbl_no_text_copy.text
+        related_mob = int(related_mob_text) if related_mob_text.strip().isdigit() else None
+        related_profession = self.profession_text_copy.text
+
+        # Return the collected details as a dictionary
+        return {
+            'father_name': father_name,
+            'father_dob': father_dob,
+            'father_mbl_no': father_mbl_no,
+            'father_profession': father_profession,
+            'father_address': father_address,
+
+            'mother_name': mother_name,
+            'mother_dob': mother_dob,
+            'mother_mbl_no': mother_mbl_no,
+            'mother_profession': mother_profession,
+            'mother_address': mother_address,
+
+            'spouse_name': spouse_name,
+            'spouse_mob': spouse_mob,
+            'spouse_mbl_no': spouse_mbl_no,
+            'spouse_profession': spouse_profession,
+            'spouse_company': spouse_company,
+            'annual_earning': anual_earning,
+
+            'related_person_relation': person_relation,
+            'related_person_dob': related_dob,
+            'related_person_name': related_name,
+            'related_person_mob': related_mob,
+            'related_person_profession': related_profession,
+            'another_person': self.selected_radio_button 
+        }
 
     # Any code you write here will run before the form opens.
 
@@ -47,6 +147,16 @@ class star_1_borrower_registration_form_3_marital(star_1_borrower_registration_f
   
   def button_1_click(self, **event_args):
     open_form('borrower.borrower_registration_forms.star_1_borrower_registration_form_2_employment',user_id=self.userId)
+
+  def drop_down_1_change(self, **event_args):
+    """This method is called when an item is selected"""
+    selected_value = self.drop_down_1.selected_value
+    
+    # Set the visibility of grid panels based on the selected value
+    self.grid_panel_1.visible = (selected_value == 'Father')
+    self.grid_panel_2.visible = (selected_value == 'Mother')
+    self.grid_panel_3.visible = (selected_value == 'Spouse')
+    self.grid_panel_4.visible = (selected_value == 'Others')
 
 
     
