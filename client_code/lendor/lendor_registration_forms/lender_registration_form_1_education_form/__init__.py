@@ -36,30 +36,36 @@ class lender_registration_form_1_education_form(lender_registration_form_1_educa
     """This method is called when the button is clicked"""
     qualification = self.drop_down_1.selected_value
     user_id = self.userId
-    qualification = self.drop_down_1.selected_value
-    user_id = self.userId
+    
 
     # Get the uploaded files
     tenth_class_files = [self.file_loader_1.file, self.file_loader_2.file, self.file_loader_4.file, self.file_loader_7.file, self.file_loader_11.file]
     intermediate_files = [self.file_loader_3.file, self.file_loader_5.file, self.file_loader_8.file, self.file_loader_12.file]
     btech_files = [self.file_loader_6.file, self.file_loader_9.file, self.file_loader_13.file]
     mtech_files = [self.file_loader_10.file, self.file_loader_14.file]
-    phd_file = self.file_loader_15.file
+    PhD_file = self.file_loader_15.file
 
-    # Call the appropriate server function based on the qualification
-    if qualification == '10th standard':
-        anvil.server.call('add_education_tenth', tenth_class_files, user_id)
+    if not tenth_class_files or not intermediate_files or not btech_files or not mtech_files  or not PhD_file:
+      Notification('Please fill all details').show()
+    elif qualification == '10th standard':
+      anvil.server.call('add_education_tenth',tenth_class_files,user_id)
+      open_form('lendor.lendor_registration_forms.lender_registration_form_2', user_id=user_id) 
     elif qualification == '12th standard':
-        anvil.server.call('add_education_int', tenth_class_files, intermediate_files, user_id)
+      anvil.server.call('add_education_btech',tenth_class_files,intermediate_files,user_id)
+      open_form('lendor.lendor_registration_forms.lender_registration_form_2', user_id=user_id) 
     elif qualification == "Bachelor's degree":
-        anvil.server.call('add_education_btech', tenth_class_files, intermediate_files, btech_files, user_id)
+      anvil.server.call('add_education_btech',tenth_class_files,intermediate_files,btech_files,user_id)
+      open_form('lendor.lendor_registration_forms.lender_registration_form_2', user_id=user_id) 
     elif qualification == "Master's degree":
-        anvil.server.call('add_education_mtech', tenth_class_files, intermediate_files, btech_files, mtech_files, user_id)
+      anvil.server.call('add_education_mtech',tenth_class_files,intermediate_files,btech_files,mtech_files,user_id)
+      open_form('lendor.lendor_registration_forms.lender_registration_form_2', user_id=user_id) 
     elif qualification == 'PhD':
-        anvil.server.call('add_education_phd', tenth_class_files, intermediate_files, btech_files, mtech_files, phd_file, user_id)
+      anvil.server.call('add_education_phd',tenth_class_files,intermediate_files,btech_files,mtech_files,PhD_files,user_id)
+      open_form('lendor.lendor_registration_forms.lender_registration_form_2', user_id=user_id) 
     else:
         Notification("Please select a valid qualification status").show()
-    
+        return 
+
     if qualification not in  ['10th standard', '12th standard', "Bachelor's degree", "Master's degree", 'PhD']:
       Notification("Please select a valid qualification status").show()
     elif not user_id:
@@ -67,9 +73,8 @@ class lender_registration_form_1_education_form(lender_registration_form_1_educa
     else:
       anvil.server.call('add_lender_step1',qualification,user_id)
       
-    # If all checks pass, proceed with server call and form navigation
-    # anvil.server.call('add_education_phd', 'add_education_tenth', 'add_education_int', 'add_education_btech', 'add_education_mtech', 'add_education_phd', user_id)
-    open_form('lendor.lendor_registration_forms.lender_registration_form_2', user_id=user_id)  
+    
+    
 
   def button_3_click(self, **event_args):
     """This method is called when the button is clicked"""
