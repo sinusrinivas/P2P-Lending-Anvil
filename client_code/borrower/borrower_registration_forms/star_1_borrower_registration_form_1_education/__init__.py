@@ -131,24 +131,6 @@ class star_1_borrower_registration_form_1_education(star_1_borrower_registration
 
     # if not tenth_class or not intermediate or not btech or not mtech or not phd:
     #    Notification('Please upload all five files before proceed.').show()
-    if qualification == '10th standard':
-      anvil.server.call('add_education_tenth', tenth_class, user_id)
-      open_form('borrower.borrower_registration_forms.star_1_borrower_registration_form_2_employment', user_id=user_id) 
-    elif qualification == '12th standard':
-      anvil.server.call('add_education_int', tenth_class, intermediate, user_id)
-      open_form('borrower.borrower_registration_forms.star_1_borrower_registration_form_2_employment', user_id=user_id) 
-    elif qualification == "Bachelor's degree":
-      anvil.server.call('add_education_btech', tenth_class, intermediate, btech, user_id)
-      open_form('borrower.borrower_registration_forms.star_1_borrower_registration_form_2_employment', user_id=user_id) 
-    elif qualification == "Master's degree":
-      anvil.server.call('add_education_mtech', tenth_class, intermediate, btech, mtech, user_id)
-      open_form('borrower.borrower_registration_forms.star_1_borrower_registration_form_2_employment', user_id=user_id) 
-    elif qualification == 'PhD':
-      anvil.server.call('add_education_phd', tenth_class, intermediate, btech, mtech, phd, user_id)
-      open_form('borrower.borrower_registration_forms.star_1_borrower_registration_form_2_employment', user_id=user_id) 
-    else:
-      Notification("Please select a valid qualification status").show()
-      return 
     
     if qualification not in  ['10th standard', '12th standard', "Bachelor's degree", "Master's degree", 'PhD']:
       Notification("Please select a valid qualification status").show()
@@ -158,19 +140,7 @@ class star_1_borrower_registration_form_1_education(star_1_borrower_registration
       anvil.server.call('add_borrower_step1',qualification,user_id)
     
     
-    # if qualification == '10th standard':
-    #   open_form('borrower.borrower_registration_forms.star_1_borrower_registration_form_1_education.star_1_borrower_registration_form_education_10th_class',user_id=user_id)
-    # elif qualification == '12th standard':
-    #   open_form('borrower.borrower_registration_forms.star_1_borrower_registration_form_1_education.star_1_borrower_registration_form_education_intermediate',user_id = user_id)
-    # elif qualification == "Bachelor's degree":
-    #   open_form('borrower.borrower_registration_forms.star_1_borrower_registration_form_1_education.star_1_borrower_registration_form_education_btech',user_id=user_id)
-    # elif qualification == "Master's degree":
-    #   open_form('borrower.borrower_registration_forms.star_1_borrower_registration_form_1_education.star_1_borrower_registration_form_education_mtech',user_id = user_id)
-    # elif qualification == 'PhD':
-    #   open_form('borrower.borrower_registration_forms.star_1_borrower_registration_form_1_education.star_1_borrower_registration_form_education_phd',user_id=user_id)
-    # else:
-    #   open_form('borrower.borrower_registration_forms.star_1_borrower_registration_form_1_education',user_id=user_id)
-
+   
   def button_3_click(self, **event_args):
     """This method is called when the button is clicked"""
     open_form("bank_users.user_form")
