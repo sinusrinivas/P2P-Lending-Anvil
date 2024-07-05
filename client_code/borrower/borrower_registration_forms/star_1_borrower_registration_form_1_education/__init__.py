@@ -30,79 +30,22 @@ class star_1_borrower_registration_form_1_education(star_1_borrower_registration
     self.column_panel_4.visible = False
     self.column_panel_5.visible = False
 
+  def validate_file(self, file):
+    """Validate file type and size."""
+    if file is None:
+      return False, "No file uploaded."
 
-    # Any code you write here will run before the form opens.
-  # def validate_file(self, file):
-  #   """Validate file type and size."""
-  #   if file is None:
-  #     return False, "No file uploaded."
+    file_type = file.content_type
+    file_size = len(file.get_bytes())  # Use len to get size in bytes
 
-  #   file_type = file.content_type
-  #   file_size = file.get_bytes()
+    if file_type not in ['image/jpeg', 'application/pdf']:
+      return False, "Only JPG images and PDF files are allowed."
 
-  #   if file_type not in ['image/jpeg', 'application/pdf']:
-  #     return False, "Only JPEG images and PDF files are allowed."
+    if file_size > 2 * 1024 * 1024:  # 2MB limit
+      return False, "File size must be less than 2MB."
 
-  #   if len(file_size) > 2 * 1024 * 1024:  # 2MB limit
-  #     return False, "File size must be less than 2MB."
-
-  #   return True, ""
-
-  # def handle_file_upload(self, file_loader, image_component):
-  #   file = file_loader.file
-  #   is_valid, message = self.validate_file(file)
-  #   if not is_valid:
-  #     Notification(message).show()
-  #     file_loader.file = None  # Reset the file loader
-  #   else:
-  #     image_component.source = file
-
-  # def file_loader_1_change(self, file, **event_args):
-  #   self.handle_file_upload(self.file_loader_1, self.image_1)
-
-  # def file_loader_2_change(self, file, **event_args):
-  #   self.handle_file_upload(self.file_loader_2, self.image_2)
-
-  # def file_loader_3_change(self, file, **event_args):
-  #   self.handle_file_upload(self.file_loader_3, self.image_3)
-
-  # def file_loader_4_change(self, file, **event_args):
-  #   self.handle_file_upload(self.file_loader_4, self.image_4)
-
-  # def file_loader_5_change(self, file, **event_args):
-  #   self.handle_file_upload(self.file_loader_5, self.image_5)
-
-  # def file_loader_6_change(self, file, **event_args):
-  #   self.handle_file_upload(self.file_loader_6, self.image_6)
-
-  # def file_loader_7_change(self, file, **event_args):
-  #   self.handle_file_upload(self.file_loader_7, self.image_7)
-
-  # def file_loader_8_change(self, file, **event_args):
-  #   self.handle_file_upload(self.file_loader_8, self.image_8)
-
-  # def file_loader_9_change(self, file, **event_args):
-  #   self.handle_file_upload(self.file_loader_9, self.image_9)
-
-  # def file_loader_10_change(self, file, **event_args):
-  #   self.handle_file_upload(self.file_loader_10, self.image_10)
-
-  # def file_loader_11_change(self, file, **event_args):
-  #   self.handle_file_upload(self.file_loader_11, self.image_11)
-
-  # def file_loader_12_change(self, file, **event_args):
-  #   self.handle_file_upload(self.file_loader_12, self.image_12)
-
-  # def file_loader_13_change(self, file, **event_args):
-  #   self.handle_file_upload(self.file_loader_13, self.image_13)
-
-  # def file_loader_14_change(self, file, **event_args):
-  #   self.handle_file_upload(self.file_loader_14, self.image_14)
-
-  # def file_loader_15_change(self, file, **event_args):
-  #   self.handle_file_upload(self.file_loader_15, self.image_15)
+    return True, ""
   
-
   def button_1_click(self, **event_args):
     user_id = self.userId
     # open_form('lendor_registration_form.Lender_reg_form_2',user_id=user_id)
@@ -149,7 +92,7 @@ class star_1_borrower_registration_form_1_education(star_1_borrower_registration
     else:
       Notification("Please select a valid qualification status").show()
       return 
-    
+
     if qualification not in  ['10th standard', '12th standard', "Bachelor's degree", "Master's degree", 'PhD']:
       Notification("Please select a valid qualification status").show()
     elif not user_id:
@@ -188,76 +131,132 @@ class star_1_borrower_registration_form_1_education(star_1_borrower_registration
 
   def file_loader_1_change(self, file, **event_args):
     """This method is called when a new file is loaded into this FileLoader"""
-    if file:
-      self.image_1.source = self.file_loader_1.file
-
+    valid, message = self.validate_file(file)
+    if valid:
+      self.image_1.source = file
+    else:
+      Notification(message).show()
+      self.file_loader_1.clear()
+      
   def file_loader_2_change(self, file, **event_args):
     """This method is called when a new file is loaded into this FileLoader"""
-    if file:
-      self.image_2.source = self.file_loader_2.file
-
+    valid, message = self.validate_file(file)
+    if valid:
+      self.image_2.source = file
+    else:
+      Notification(message).show()
+      self.file_loader_2.clear()
+      
   def file_loader_3_change(self, file, **event_args):
     """This method is called when a new file is loaded into this FileLoader"""
-    if file:
-      self.image_3.source = self.file_loader_3.file
-
+    valid, message = self.validate_file(file)
+    if valid:
+      self.image_3.source = file
+    else:
+      Notification(message).show()
+      self.file_loader_3.clear()
+      
   def file_loader_4_change(self, file, **event_args):
     """This method is called when a new file is loaded into this FileLoader"""
-    if file:
-      self.image_4.source = self.file_loader_4.file
-
+    valid, message = self.validate_file(file)
+    if valid:
+      self.image_4.source = file
+    else:
+      Notification(message).show()
+      self.file_loader_4.clear()
   def file_loader_5_change(self, file, **event_args):
     """This method is called when a new file is loaded into this FileLoader"""
-    if file:
-      self.image_5.source = self.file_loader_5.file
-
+    valid, message = self.validate_file(file)
+    if valid:
+      self.image_5.source = file
+    else:
+      Notification(message).show()
+      self.file_loader_5.clear()
+      
   def file_loader_6_change(self, file, **event_args):
     """This method is called when a new file is loaded into this FileLoader"""
-    if file:
-      self.image_6.source = self.file_loader_6.file
-
+    valid, message = self.validate_file(file)
+    if valid:
+      self.image_6.source = file
+    else:
+      Notification(message).show()
+      self.file_loader_6.clear()
+      
   def file_loader_7_change(self, file, **event_args):
     """This method is called when a new file is loaded into this FileLoader"""
-    if file:
-      self.image_7.source = self.file_loader_7.file
-
+    valid, message = self.validate_file(file)
+    if valid:
+      self.image_7.source = file
+    else:
+      Notification(message).show()
+      self.file_loader_7.clear()
+      
   def file_loader_8_change(self, file, **event_args):
     """This method is called when a new file is loaded into this FileLoader"""
-    if file:
-      self.image_8.source = self.file_loader_8.file
-
+    valid, message = self.validate_file(file)
+    if valid:
+      self.image_8.source = file
+    else:
+      Notification(message).show()
+      self.file_loader_8.clear()
+      
   def file_loader_9_change(self, file, **event_args):
     """This method is called when a new file is loaded into this FileLoader"""
-    if file:
-      self.image_9.source = self.file_loader_9.file
-
+    valid, message = self.validate_file(file)
+    if valid:
+      self.image_9.source = file
+    else:
+      Notification(message).show()
+      self.file_loader_9.clear()
+      
   def file_loader_10_change(self, file, **event_args):
     """This method is called when a new file is loaded into this FileLoader"""
-    if file:
-      self.image_10.source = self.file_loader_10.file
-
+    valid, message = self.validate_file(file)
+    if valid:
+      self.image_10.source = file
+    else:
+      Notification(message).show()
+      self.file_loader_10.clear()
+      
   def file_loader_11_change(self, file, **event_args):
     """This method is called when a new file is loaded into this FileLoader"""
-    if file:
-      self.image_11.source = self.file_loader_11.file
-
+    valid, message = self.validate_file(file)
+    if valid:
+      self.image_11.source = file
+    else:
+      Notification(message).show()
+      self.file_loader_11.clear()
   def file_loader_12_change(self, file, **event_args):
     """This method is called when a new file is loaded into this FileLoader"""
-    if file:
-      self.image_12.source = self.file_loader_12.file
-
+    valid, message = self.validate_file(file)
+    if valid:
+      self.image_12.source = file
+    else:
+      Notification(message).show()
+      self.file_loader_12.clear()
+      
   def file_loader_13_change(self, file, **event_args):
     """This method is called when a new file is loaded into this FileLoader"""
-    if file:
-      self.image_13.source = self.file_loader_13.file
-
+    valid, message = self.validate_file(file)
+    if valid:
+      self.image_13.source = file
+    else:
+      Notification(message).show()
+      self.file_loader_13.clear()
   def file_loader_14_change(self, file, **event_args):
     """This method is called when a new file is loaded into this FileLoader"""
-    if file:
-      self.image_14.source = self.file_loader_14.file
-
+    valid, message = self.validate_file(file)
+    if valid:
+      self.image_14.source = file
+    else:
+      Notification(message).show()
+      self.file_loader_14.clear()
+      
   def file_loader_15_change(self, file, **event_args):
     """This method is called when a new file is loaded into this FileLoader"""
-    if file:
-      self.image_15.source = self.file_loader_15.file
-
+    valid, message = self.validate_file(file)
+    if valid:
+      self.image_15.source = file
+    else:
+      Notification(message).show()
+      self.file_loader_15.clear()
