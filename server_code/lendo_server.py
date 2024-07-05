@@ -30,7 +30,7 @@ def add_education_tenth(tenth_class,user_id):
   row = app_tables.fin_user_profile.search(customer_id=user_id)
   if row:
     row[0]['tenth_class']=tenth_class
-    row[0]['form_count']=1
+    row[0]['form_count']=1.1
 
 @anvil.server.callable
 def add_education_int(tenth_class,intermediate,user_id):
@@ -38,7 +38,7 @@ def add_education_int(tenth_class,intermediate,user_id):
   if row:
     row[0]['tenth_class']=tenth_class
     row[0]['intermediate']=intermediate
-    row[0]['form_count']=1
+    row[0]['form_count']=1.2
 
 @anvil.server.callable
 def add_education_btech(tenth_class,intermediate,btech,user_id):
@@ -47,7 +47,7 @@ def add_education_btech(tenth_class,intermediate,btech,user_id):
     row[0]['tenth_class']=tenth_class
     row[0]['intermediate']=intermediate
     row[0]['btech']=btech
-    row[0]['form_count']=1
+    row[0]['form_count']=1.3
 
 @anvil.server.callable
 def add_education_mtech(tenth_class,intermediate,btech,mtech,user_id):
@@ -57,7 +57,7 @@ def add_education_mtech(tenth_class,intermediate,btech,mtech,user_id):
     row[0]['intermediate']=intermediate
     row[0]['btech']=btech
     row[0]['mtech']=mtech
-    row[0]['form_count']=1
+    row[0]['form_count']=1.4
 
 @anvil.server.callable
 def add_education_phd(tenth_class,intermediate,btech,mtech,phd,user_id):
@@ -68,7 +68,7 @@ def add_education_phd(tenth_class,intermediate,btech,mtech,phd,user_id):
     row[0]['btech']=btech
     row[0]['mtech']=mtech
     row[0]['phd']=phd
-    row[0]['form_count']=1
+    row[0]['form_count']=1.5
 
 @anvil.server.callable
 def add_lender_step2(lending_type,investment,lending_period,user_id):
