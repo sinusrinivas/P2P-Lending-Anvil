@@ -13,6 +13,7 @@ class borrower_notifications(borrower_notificationsTemplate):
         self.repeating_panel_1.items = self.notifications
         self.update_notification_count()  # Initial update of notification count
 
+  
     def update_notification_count(self):
         unread_count = len([n for n in self.notifications if not n['read']])
         if hasattr(get_open_form(), 'update_notification_count'):
