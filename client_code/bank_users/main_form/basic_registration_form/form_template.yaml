@@ -176,13 +176,8 @@ components:
   properties: {text: '*', foreground: red}
   type: Label
   layout_properties: {grid_position: 'WFKZOV,XCETPN GNSBYC,VJENBU KUXDQN,HZIBPI'}
-- name: registration_img_file_loader
-  properties: {text: Upload Profile Photo}
-  type: FileLoader
-  layout_properties: {grid_position: 'WFKZOV,XCETPN GNSBYC,VJENBU PNUFSH,GGBAKS'}
-  event_bindings: {change: registration_img_file_loader_change}
 - name: image_profile
-  properties: {height: '60', display_mode: shrink_to_fit}
+  properties: {height: '60', display_mode: shrink_to_fit, role: outlined-card}
   type: Image
   layout_properties: {grid_position: 'WFKZOV,XCETPN GNSBYC,VJENBU PNUFSH,DKRSUM'}
 - name: label_3_copy_1_copy_2
@@ -215,13 +210,8 @@ components:
   properties: {text: '*', foreground: red}
   type: Label
   layout_properties: {grid_position: 'WFKZOV,XCETPN EEEXUF,NYJWAN NAKEME,DLKDAN'}
-- name: registration_img_aadhar_file_loader
-  properties: {text: Upload Your Govt ID1}
-  type: FileLoader
-  layout_properties: {grid_position: 'WFKZOV,XCETPN EEEXUF,NYJWAN ONIYLT,KUJIAW'}
-  event_bindings: {change: registration_img_aadhar_file_loader_change}
 - name: image_aadhar
-  properties: {height: '60'}
+  properties: {height: '60', role: outlined-card}
   type: Image
   layout_properties: {grid_position: 'WFKZOV,XCETPN EEEXUF,NYJWAN ONIYLT,DEWIPV'}
 - name: label_3_copy_1_copy_4
