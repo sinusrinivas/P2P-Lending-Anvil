@@ -8,11 +8,8 @@
 # import anvil.tables.query as q
 # from anvil.tables import app_tables
 # from datetime import datetime, timedelta
-# # bank_users.main_form.basic_registration_form
 # from .. import main_form
 # from .. import main_form_module
-# # from . import main_form_module
-# # from ..user_form import user_module
 # from ...user_form import user_module
 # import re
 
@@ -45,170 +42,153 @@
 #             self.drop_down_2.selected_value = user_data['duration_at_address']
 #             user_data.update()
 
-#             options = app_tables.fin_gender.search()
-#             option_strings = [str(option['gender']) for option in options]
-#             self.gender_dd.items = option_strings
+#         options = app_tables.fin_gender.search()
+#         option_strings = [str(option['gender']) for option in options]
+#         self.gender_dd.items = option_strings
 
-#             options = app_tables.fin_present_address.search()
-#             option_strings = [str(option['present_address']) for option in options]
-#             self.drop_down_1.items = option_strings
+#         options = app_tables.fin_present_address.search()
+#         option_strings = [str(option['present_address']) for option in options]
+#         self.drop_down_1.items = option_strings
 
-#             options = app_tables.fin_duration_at_address.search()
-#             option_strings = [str(option['duration_at_address']) for option in options]
-#             self.drop_down_2.items = option_strings
+#         options = app_tables.fin_duration_at_address.search()
+#         option_strings = [str(option['duration_at_address']) for option in options]
+#         self.drop_down_2.items = option_strings
 
-#    def submit_btn_click(self, **event_args):
-#     """This method is called when the button is clicked"""
-#     full_name = self.full_name_text_box.text
-#     gender = self.gender_dd.selected_value
-#     dob = self.date_picker_1.date.strftime('%Y-%m-%d') if self.date_picker_1.date else None
-#     mobile_no = self.mobile_number_box.text
-#     user_photo = self.registration_img_file_loader.file
-#     alternate_email = self.alternate_email_text_box.text
-#     aadhar = self.govt_id1_text_box.text
-#     aadhar_card = self.registration_img_aadhar_file_loader.file
-#     pan = self.govt_id2_text_box.text
-#     pan_card = self.registration_img_pan_file_loader.file
-#     street_adress_1 = self.text_box_1.text
-#     street_address_2 = self.text_box_2.text
-#     city = self.text_box_3.text
-#     pincode = self.text_box_4.text
-#     state = self.text_box_5.text
-#     country = self.text_box_6.text
-#     present = self.drop_down_1.selected_value
-#     duration = self.drop_down_2.selected_value
-
-#     user_id = self.user_id
-
-#     # Clear previous error messages
-#     self.full_name_label.text = ''
-#     self.dob_label.text = ''
-#     self.mobile_label.text = ''
-#     self.email_label.text = ''
-
-#     # Validate country
-#     if not re.match(r'^[A-Za-z]+$', country):
-#         alert('Enter a valid country name')
-#         return
-
-#     # Validate state
-#     if not re.match(r'^[A-Za-z]+$', state):
-#         alert('Enter a valid state name')
-#         return
-
-#     # Validate city
-#     if not re.match(r'^[A-Za-z]+$', city):
-#         alert('Enter a valid city name')
-#         return
-
-#     # Validate full name
-#     if not re.match(r'^[A-Za-z\s]+$', full_name):
-#         self.full_name_label.text = 'Enter a valid full name'
-#         return
-
-#     # Validate date of birth
-#     if not dob or datetime.strptime(dob, '%Y-%m-%d').date() > datetime.now().date():
-#         alert('Enter a valid date of birth')
-#         return
-
-#     # Validate age (must be 18 or older)
-#     if datetime.now().date() - datetime.strptime(dob, '%Y-%m-%d').date() < timedelta(days=365 * 18):
-#         self.dob_label.text = 'You must be at least 18 years old'
-#         return
-
-#     # Validate mobile number
-#     if not re.match(r'^\d{10}$', mobile_no):
-#         self.mobile_label.text = 'Enter valid mobile no'
-#         return
-
-#     # Validate alternate email
-#     if not re.match(r'^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$', alternate_email):
-#         self.email_label.text = 'Enter a valid email address'
-#         return
-
-#     # Check if all fields are filled
-#     if not (full_name and gender and dob and mobile_no and alternate_email and user_photo and aadhar and aadhar_card and pan and pan_card and (street_adress_1 or street_address_2) and city and pincode and state and country and present and duration):
-#         Notification('Please fill all details').show()
-#         return
-
-#     # Check if the entered alternate email matches the existing alternate email for the user
-#     user_data = app_tables.fin_user_profile.get(customer_id=user_id)
-#     if user_data and alternate_email == user_data['email_user']:
-#         alert('Alternate email already exists')
-#         return
-
-#     # Calculate user age
-#     user_age = datetime.now().year - datetime.strptime(dob, '%Y-%m-%d').year - ((datetime.now().month, datetime.now().day) < (datetime.strptime(dob, '%Y-%m-%d').month, datetime.strptime(dob, '%Y-%m-%d').day))
-    
-#     # Call server function to add basic details
-#     anvil.server.call('add_basic_details', full_name, gender, dob, mobile_no, user_photo, alternate_email,
-#                       aadhar, aadhar_card, pan, pan_card, street_adress_1, street_address_2, city, pincode,
-#                       state, country, user_id, user_age, present, duration)
-#     Notification("Basic details form filled up submitted successfully").show()
-    
-#     # Navigate to the appropriate form based on user type
-#     if user_data['usertype'] == 'lender':
-#         open_form('lendor.lendor_registration_forms.lender_registration_form_1_education_form', user_id=user_id)
-#     elif user_data['usertype'] == 'borrower':
-#         open_form('borrower.borrower_registration_forms.star_1_borrower_registration_form_1_education', user_id=user_id)
-#     else:
-#         open_form('bank_users.user_form')
-
-              
-#             # user_age = datetime.now().year - datetime.strptime(dob, '%Y-%m-%d').year - ((datetime.now().month, datetime.now().day) < (datetime.strptime(dob, '%Y-%m-%d').month, datetime.strptime(dob, '%Y-%m-%d').day))
-#             # anvil.server.call('add_basic_details', full_name, gender, dob, mobile_no, user_photo, alternate_email,
-#             #                   aadhar, aadhar_card, pan, pan_card, street_adress_1, street_address_2, city, pincode,
-#             #                   state, country, user_id, user_age ,present, duration)
-#             # Notification("Basic details form filled up submitted successfully").show()
-#             # open_form('bank_users.user_form')
-
-#     # def full_name_text_box_change(self, **event_args):
-#     #     full_name = self.full_name_text_box.text
-#     #     if re.match(r'^[A-Za-z\s]+$', full_name):
-#     #         self.full_name_label.text = ''
-    
-#     # def date_picker_1_change(self, **event_args):
-#     #     # This event is triggered when the date in the date picker changes.
-#     #     # Check if the date is valid and hide the error label if it is correct.
-#     #     dob = self.date_picker_1.date.strftime('%Y-%m-%d') if self.date_picker_1.date else None
-#     #     if not dob or datetime.strptime(dob, '%Y-%m-%d').date() > datetime.now().date():
-#     #         self.dob_label.text = ''
-#     #     else:
-#     #         # Calculate user's age based on the selected date of birth
-#     #         user_age = datetime.now().year - datetime.strptime(dob, '%Y-%m-%d').year - ((datetime.now().month, datetime.now().day) < (datetime.strptime(dob, '%Y-%m-%d').month, datetime.strptime(dob, '%Y-%m-%d').day))
-#     #         self.label_user_age.text = f'Age: {user_age} years'
-
-#     def registration_img_aadhar_file_loader_change(self, file, **event_args):
-#         # Function to handle aadhar card file upload event
-#         if file is not None:
-#             # Display the image in an Image component
-#             self.image_aadhar.source = self.registration_img_aadhar_file_loader.file
-#             # self.image_aadhar.visible = True
-
-#     def registration_img_pan_file_loader_change(self, file, **event_args):
-#         # Function to handle pan card file upload event
-#         if file is not None:
-#             # Display the image in an Image component
-#             self.image_pan.source = self.registration_img_pan_file_loader.file
-#             # self.image_pan.visible = True
-
-#     def registration_img_file_loader_change(self, file, **event_args):
-#         # Function to handle user photo file upload event
-#         if file is not None:
-#             # Display the image in an Image component
-#             # self.image_profile.display_mode = file
-#             # self.image_profile.visible = True  
-#           self.image_profile.source = self.registration_img_file_loader.file
-
-#     def gender_dd_change(self, **event_args):
-#         """This method is called when an item is selected"""
-#         pass
-
-#     def logout_click(self, **event_args):
+#     def submit_btn_click(self, **event_args):
 #         """This method is called when the button is clicked"""
-#         alert("Logged out successfully")
-#         anvil.users.logout()
-#         open_form('bank_users.main_form')
+#         full_name = self.full_name_text_box.text
+#         gender = self.gender_dd.selected_value
+#         dob = self.date_picker_1.date.strftime('%Y-%m-%d') if self.date_picker_1.date else None
+#         mobile_no = self.mobile_number_box.text
+#         user_photo = self.registration_img_file_loader.file
+#         alternate_email = self.alternate_email_text_box.text
+#         aadhar = self.govt_id1_text_box.text
+#         aadhar_card = self.registration_img_aadhar_file_loader.file
+#         pan = self.govt_id2_text_box.text
+#         pan_card = self.registration_img_pan_file_loader.file
+#         street_adress_1 = self.text_box_1.text
+#         street_address_2 = self.text_box_2.text
+#         city = self.text_box_3.text
+#         pincode = self.text_box_4.text
+#         state = self.text_box_5.text
+#         country = self.text_box_6.text
+#         present = self.drop_down_1.selected_value
+#         duration = self.drop_down_2.selected_value
+
+#         user_id = self.user_id
+
+#         # Clear previous error messages
+#         self.full_name_label.text = ''
+#         self.dob_label.text = ''
+#         self.mobile_label.text = ''
+#         self.email_label.text = ''
+
+#         # Check if all fields are filled
+#         if not (full_name and gender and dob and mobile_no and alternate_email and user_photo and aadhar and aadhar_card and pan and pan_card and (street_adress_1 or street_address_2) and city and pincode and state and country and present and duration):
+#             Notification('Please fill all details').show()
+#             return
+            
+#         # Validate country
+#         if not re.match(r'^[A-Za-z]+$', country):
+#             alert('Enter a valid country name')
+#             self.text_box_6.focus()
+#             return
+
+#         # Validate state
+#         if not re.match(r'^[A-Za-z]+$', state):
+#             alert('Enter a valid state name')
+#             self.text_box_5.focus()
+#             return
+
+#         # Validate city
+#         if not re.match(r'^[A-Za-z]+$', city):
+#             alert('Enter a valid city name')
+#             self.text_box_3.focus()
+#             return
+
+#         # Validate full name
+#         if not re.match(r'^[A-Za-z\s]+$', full_name):
+#             self.full_name_label.text = 'Enter a valid full name'
+#             self.full_name_text_box.focus()
+#             return
+
+#         # Validate date of birth
+#         if not dob or datetime.strptime(dob, '%Y-%m-%d').date() > datetime.now().date():
+#             alert('Enter a valid date of birth')
+#             self.date_picker_1.focus()
+#             return
+
+#         # Validate age (must be 18 or older)
+#         if datetime.now().date() - datetime.strptime(dob, '%Y-%m-%d').date() < timedelta(days=365 * 18):
+#             self.dob_label.text = 'You must be at least 18 years old'
+#             self.date_picker_1.focus()
+#             return
+
+#         # Validate mobile number
+#         if not re.match(r'^\d{10}$', mobile_no):
+#             self.mobile_label.text = 'Enter valid mobile no'
+#             self.mobile_number_box.focus()
+#             return
+
+#         # Validate alternate email
+#         if not re.match(r'^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$', alternate_email):
+#             self.email_label.text = 'Enter a valid email address'
+#             self.alternate_email_text_box.focus()
+#             return
+
+        
+
+#         # Check if the entered alternate email matches the existing alternate email for the user
+#         user_data = app_tables.fin_user_profile.get(customer_id=user_id)
+#         if user_data and alternate_email == user_data['email_user']:
+#             alert('Alternate email already exists')
+#             self.alternate_email_text_box.focus()
+#             return
+
+#         # Calculate user age
+#         user_age = datetime.now().year - datetime.strptime(dob, '%Y-%m-%d').year - ((datetime.now().month, datetime.now().day) < (datetime.strptime(dob, '%Y-%m-%d').month, datetime.strptime(dob, '%Y-%m-%d').day))
+
+#         # Call server function to add basic details
+#         anvil.server.call('add_basic_details', full_name, gender, dob, mobile_no, user_photo, alternate_email,
+#                           aadhar, aadhar_card, pan, pan_card, street_adress_1, street_address_2, city, pincode,
+#                           state, country, user_id, user_age, present, duration)
+#         Notification("Basic details form filled up submitted successfully").show()
+
+#         # Navigate to the appropriate form based on user type
+#         if user_data['usertype'] == 'lender':
+#             open_form('lendor.lendor_registration_forms.lender_registration_form_1_education_form', user_id=user_id)
+#         elif user_data['usertype'] == 'borrower':
+#             open_form('borrower.borrower_registration_forms.star_1_borrower_registration_form_1_education', user_id=user_id)
+#         else:
+#             open_form('bank_users.user_form')
+
+    # def registration_img_aadhar_file_loader_change(self, file, **event_args):
+    #     # Function to handle aadhar card file upload event
+    #     if file is not None:
+    #         # Display the image in an Image component
+    #         self.image_aadhar.source = self.registration_img_aadhar_file_loader.file
+
+    # def registration_img_pan_file_loader_change(self, file, **event_args):
+    #     # Function to handle pan card file upload event
+    #     if file is not None:
+    #         # Display the image in an Image component
+    #         self.image_pan.source = self.registration_img_pan_file_loader.file
+
+    # def registration_img_file_loader_change(self, file, **event_args):
+    #     # Function to handle user photo file upload event
+    #     if file is not None:
+    #         # Display the image in an Image component
+    #         self.image_profile.source = self.registration_img_file_loader.file
+
+    # def gender_dd_change(self, **event_args):
+    #     """This method is called when an item is selected"""
+    #     pass
+
+    # def logout_click(self, **event_args):
+    #     """This method is called when the button is clicked"""
+    #     alert("Logged out successfully")
+    #     anvil.users.logout()
+    #     open_form('bank_users.main_form')
 
 
 from ._anvil_designer import basic_registration_formTemplate
@@ -267,6 +247,60 @@ class basic_registration_form(basic_registration_formTemplate):
         option_strings = [str(option['duration_at_address']) for option in options]
         self.drop_down_2.items = option_strings
 
+        # Add event handlers for real-time validation
+        self.full_name_text_box.add_event_handler('change', self.validate_full_name)
+        self.date_picker_1.add_event_handler('change', self.validate_dob)
+        self.mobile_number_box.add_event_handler('change', self.validate_mobile_no)
+        self.alternate_email_text_box.add_event_handler('change', self.validate_alternate_email)
+        self.text_box_3.add_event_handler('change', self.validate_city)
+        self.text_box_5.add_event_handler('change', self.validate_state)
+        self.text_box_6.add_event_handler('change', self.validate_country)
+
+    def validate_full_name(self, **event_args):
+        full_name = self.full_name_text_box.text
+        if re.match(r'^[A-Za-z\s]+$', full_name):
+            self.full_name_label.text = ''
+        else:
+            self.full_name_label.text = 'Enter a valid full name'
+
+    def validate_dob(self, **event_args):
+        dob = self.date_picker_1.date.strftime('%Y-%m-%d') if self.date_picker_1.date else None
+        if dob and datetime.strptime(dob, '%Y-%m-%d').date() <= datetime.now().date():
+            self.dob_label.text = ''
+            if datetime.now().date() - datetime.strptime(dob, '%Y-%m-%d').date() < timedelta(days=365 * 18):
+                self.dob_label.text = 'You must be at least 18 years old'
+        else:
+            self.dob_label.text = 'Enter a valid date of birth'
+
+    def validate_mobile_no(self, **event_args):
+        mobile_no = self.mobile_number_box.text
+        if re.match(r'^\d{10}$', mobile_no):
+            self.mobile_label.text = ''
+        else:
+            self.mobile_label.text = 'Enter valid mobile no'
+
+    def validate_alternate_email(self, **event_args):
+        alternate_email = self.alternate_email_text_box.text
+        if re.match(r'^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$', alternate_email):
+            self.email_label.text = ''
+        else:
+            self.email_label.text = 'Enter a valid email address'
+
+    def validate_city(self, **event_args):
+        city = self.text_box_3.text
+        if re.match(r'^[A-Za-z]+$', city):
+            alert('Enter a valid city name')
+
+    def validate_state(self, **event_args):
+        state = self.text_box_5.text
+        if re.match(r'^[A-Za-z]+$', state):
+            alert('Enter a valid state name')
+
+    def validate_country(self, **event_args):
+        country = self.text_box_6.text
+        if re.match(r'^[A-Za-z]+$', country):
+            alert('Enter a valid country name')
+
     def submit_btn_click(self, **event_args):
         """This method is called when the button is clicked"""
         full_name = self.full_name_text_box.text
@@ -296,11 +330,6 @@ class basic_registration_form(basic_registration_formTemplate):
         self.mobile_label.text = ''
         self.email_label.text = ''
 
-        # Check if all fields are filled
-        if not (full_name and gender and dob and mobile_no and alternate_email and user_photo and aadhar and aadhar_card and pan and pan_card and (street_adress_1 or street_address_2) and city and pincode and state and country and present and duration):
-            Notification('Please fill all details').show()
-            return
-            
         # Validate country
         if not re.match(r'^[A-Za-z]+$', country):
             alert('Enter a valid country name')
@@ -349,7 +378,10 @@ class basic_registration_form(basic_registration_formTemplate):
             self.alternate_email_text_box.focus()
             return
 
-        
+        # Check if all fields are filled
+        if not (full_name and gender and dob and mobile_no and user_photo and aadhar and aadhar_card and pan and pan_card and (street_adress_1 or street_address_2) and city and pincode and state and country and present and duration):
+            Notification('Please fill all details').show()
+            return
 
         # Check if the entered alternate email matches the existing alternate email for the user
         user_data = app_tables.fin_user_profile.get(customer_id=user_id)
