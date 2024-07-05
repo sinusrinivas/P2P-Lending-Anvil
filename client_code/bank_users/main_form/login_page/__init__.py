@@ -404,3 +404,4 @@ class login_page(login_pageTemplate):
     """This method is called when the user presses Enter in this text box"""
     pass
 
+

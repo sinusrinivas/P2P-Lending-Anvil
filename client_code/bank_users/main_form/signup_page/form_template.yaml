@@ -47,7 +47,7 @@ components:
   layout_properties: {grid_position: 'TDFRMW,FABQUJ', full_width_row: true}
   components:
   - name: spacer_1
-    properties: {height: 58.428558349609375}
+    properties: {height: 0.75}
     type: Spacer
     layout_properties: {grid_position: 'FOQTZU,ZSUIVO', full_width_row: true}
   - name: column_panel_3
@@ -64,7 +64,7 @@ components:
       type: Label
       layout_properties: {grid_position: 'LOUJDS,RTKSOW XFQEHB,XJKBDX'}
     - name: label_1
-      properties: {text: 'Peer_to_pee (P2P) lending, also known as crowdfunding or marketplace lending , is financial model that allows individuals or businesses to lend and borrow money directly from one another through online platforms, bypassing  traditional financial institutions like banks.', foreground: white, font_size: 20}
+      properties: {text: 'Peer_to_peer (P2P) lending, also known as crowdfunding or marketplace lending , is financial model that allows individuals or businesses to lend and borrow money directly from one another through online platforms, bypassing  traditional financial institutions like banks.', foreground: white, font_size: 20}
       type: Label
       layout_properties: {grid_position: 'LOUJDS,RTKSOW XGLERH,EVCEYC'}
     - name: image_1
@@ -94,7 +94,7 @@ components:
         type: Spacer
         layout_properties: {grid_position: 'BCREGJ,LGHLJP GASAMI,BJDXSL MPYCNK,IKUFXQ'}
       - name: label_7
-        properties: {role: display, text: Sign Up, background: '', foreground: '#094586', bold: true, underline: false, italic: false}
+        properties: {role: headline, text: Sign Up, background: '', foreground: '#094586', bold: true, underline: false, italic: false}
         type: Label
         layout_properties: {grid_position: 'BCREGJ,LGHLJP GASAMI,BJDXSL MPYCNK,UXCVZV'}
       - name: spacer_6
@@ -105,10 +105,6 @@ components:
         properties: {height: 478.28558349609375}
         type: Spacer
         layout_properties: {grid_position: 'BCREGJ,OTWMDU'}
-      - name: spacer_2
-        properties: {height: 12.28570556640625}
-        type: Spacer
-        layout_properties: {grid_position: 'BCREGJ,LGHLJP GASAMI,BJDXSL LQLIWA,YEFPHW'}
       - name: label_4
         properties: {text: Email, bold: true}
         type: Label

@@ -43,16 +43,16 @@ components:
       type: Button
       event_bindings: {click: button_10_copy_click}
 - name: column_panel_2
-  properties: {col_widths: '{"QCZGCQ":35,"AGIDMN":25}', background: '#094586'}
+  properties: {col_widths: '{"QCZGCQ":40,"AGIDMN":20}', background: '#094586'}
   type: ColumnPanel
   layout_properties: {grid_position: 'DPFEDX,NQLMWD', full_width_row: true}
   components:
   - name: spacer_1
-    properties: {height: 58.428558349609375}
+    properties: {height: -0.25}
     type: Spacer
     layout_properties: {grid_position: 'FOQTZU,ZSUIVO', full_width_row: true}
   - name: column_panel_3
-    properties: {col_widths: '{"QSUOUY":10,"RTKSOW":50}'}
+    properties: {col_widths: '{"QSUOUY":5,"RTKSOW":55}'}
     type: ColumnPanel
     layout_properties: {grid_position: 'AUEKVR,QCZGCQ', full_width_row: true}
     components:
@@ -73,7 +73,7 @@ components:
       type: Image
       layout_properties: {grid_position: 'LOUJDS,RTKSOW IYLGEA,XVBVAK'}
   - name: column_panel_1
-    properties: {background: '#094586', col_widths: '{"LLBEDS":34,"FZHHNU":10,"TSUFAE":16}'}
+    properties: {background: '#094586', col_widths: '{"LLBEDS":40,"FZHHNU":5,"TSUFAE":15}'}
     type: ColumnPanel
     layout_properties: {grid_position: 'AUEKVR,AGIDMN UVWPRW,XZEJHL', full_width_row: false}
     components:
@@ -91,11 +91,11 @@ components:
         type: Spacer
         layout_properties: {grid_position: 'BCREGJ,LGHLJP GASAMI,WLTEQM'}
       - name: spacer_13
-        properties: {height: 55.857147216796875}
+        properties: {height: 38.75}
         type: Spacer
         layout_properties: {grid_position: 'BCREGJ,LGHLJP GASAMI,BJDXSL MPYCNK,IKUFXQ'}
       - name: label_7
-        properties: {role: display, text: Login, background: '', foreground: '#094586', bold: true, underline: false, italic: false}
+        properties: {role: title, text: Sign In, background: '', foreground: '#094586', bold: true, underline: false, italic: false, font_size: 40}
         type: Label
         layout_properties: {grid_position: 'BCREGJ,LGHLJP GASAMI,BJDXSL MPYCNK,UXCVZV'}
       - name: spacer_6
@@ -106,10 +106,6 @@ components:
         properties: {height: 478.28558349609375}
         type: Spacer
         layout_properties: {grid_position: 'BCREGJ,OTWMDU'}
-      - name: label_1
-        properties: {text: To keep connected with us please login with your personal info...., italic: true}
-        type: Label
-        layout_properties: {grid_position: 'BCREGJ,LGHLJP GASAMI,BJDXSL DKYHUW,NVBTUB'}
       - name: label_4
         properties: {text: Email, bold: true}
         type: Label
@@ -145,6 +141,11 @@ components:
         properties: {visible: false, foreground: red}
         type: Label
         layout_properties: {grid_position: 'BCREGJ,LGHLJP GASAMI,BJDXSL JHGYMR,PKGYXY VPELKX,RRRHGT'}
+      - name: send_otp
+        properties: {text: 'Forgot password?', foreground: blue, font_size: 8}
+        type: Link
+        layout_properties: {grid_position: 'BCREGJ,LGHLJP GASAMI,BJDXSL JHGYMR,PKGYXY UYYCFQ,QNIWOU'}
+        event_bindings: {click: send_otp_click}
       - name: label_2
         properties: {icon: 'fa:lock', font_size: 20}
         type: Label
@@ -154,10 +155,6 @@ components:
         type: CheckBox
         layout_properties: {grid_position: 'BCREGJ,LGHLJP GASAMI,BJDXSL OOCTFV,JDAMWY'}
         event_bindings: {change: check_box_1_change}
-      - name: spacer_8
-        properties: {height: 14.428466796875}
-        type: Spacer
-        layout_properties: {grid_position: 'BCREGJ,LGHLJP GASAMI,BJDXSL OEDXIR,ERUJBC'}
       - name: button_1
         properties: {text: Login, background: '#094586', foreground: white, align: full}
         type: Button
@@ -167,15 +164,6 @@ components:
         properties: {text: OR, align: center, bold: true, spacing_below: none, spacing_above: none}
         type: Label
         layout_properties: {grid_position: 'BCREGJ,LGHLJP GASAMI,BJDXSL TTMYKF,BAXKBL'}
-      - name: send_otp
-        properties: {text: Login with otp, role: outlined-button, foreground: 'theme:On Primary', background: 'theme:On Background', align: full}
-        type: Button
-        layout_properties: {grid_position: 'BCREGJ,LGHLJP GASAMI,BJDXSL IRWMDS,RFCANZ'}
-        event_bindings: {click: send_otp_click}
-      - name: spacer_9
-        properties: {height: 15.28558349609375}
-        type: Spacer
-        layout_properties: {grid_position: 'BCREGJ,LGHLJP GASAMI,BJDXSL PRAHQB,TEAATI'}
       - name: link_2
         properties: {text: 'New user ?  Click here to SignUp', foreground: blue, font_size: null}
         type: Link
@@ -186,7 +174,7 @@ components:
       type: Spacer
       layout_properties: {grid_position: 'WUAZDP,TSUFAE'}
   - name: spacer_3
-    properties: {height: 74.28558349609375}
+    properties: {height: -16.25}
     type: Spacer
     layout_properties: {grid_position: 'AUEKVR,AGIDMN IEYSKI,WLUTYA'}
 is_package: true
