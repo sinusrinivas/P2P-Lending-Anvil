@@ -278,58 +278,65 @@ class star_1_borrower_registration_form_3_marital(star_1_borrower_registration_f
             spouse_company = details.get('spouse_company', '')
             annual_earning = details.get('annual_earning', '')
             another_person = 'Spouse'
-          
-        existing_row = app_tables.fin_guarantor_details.get(customer_id=self.userId)
-        
-        if existing_row is None:
-            try:
-                new_row = app_tables.fin_guarantor_details.add_row(
-                    customer_id=self.userId,
-                    guarantor_name=details.get('spouse_name', ''),
-                    guarantor_marriage_date=details.get('spouse_mob', ''),
-                    guarantor_mobile_no=details.get('spouse_mbl_no', ''),
-                    guarantor_profession=details.get('spouse_profession', ''),
-                    guarantor_company_name=details.get('spouse_company', ''),
-                    guarantor_annual_earning=details.get('annual_earning', ''),
-                    another_person=details.get('another_person', '')
-                )
-            except Exception as e:
-                Notification(f"Failed to submit form: {e}").show()
-                return
-        else:
-            existing_row['guarantor_name'] = details.get('spouse_name', '')
-            existing_row['guarantor_marriage_date'] = details.get('spouse_mob', '')
-            existing_row['guarantor_mobile_no'] = details.get('spouse_mbl_no', '')
-            existing_row['guarantor_profession'] = details.get('spouse_profession', '')
-            existing_row['guarantor_company_name'] = details.get('spouse_company', '')
-            existing_row['guarantor_annual_earning'] = details.get('annual_earning', '')
-            existing_row['another_person'] = details.get('another_person', '')
             
-            try:
-                existing_row.update()
-            except Exception as e:
-                Notification(f"Failed to update form: {e}").show()
+            # Checking for empty fields
+            if not spouse_name or not spouse_mob or not spouse_mbl_no or not spouse_profession or not spouse_company or not annual_earning:
+                Notification("Please fill all the required fields").show()
                 return
+            
+            existing_row = app_tables.fin_guarantor_details.get(customer_id=self.userId)
+            
+            if existing_row is None:
+                try:
+                    new_row = app_tables.fin_guarantor_details.add_row(
+                        customer_id=self.userId,
+                        guarantor_name=spouse_name,
+                        guarantor_marriage_date=spouse_mob,
+                        guarantor_mobile_no=spouse_mbl_no,
+                        guarantor_profession=spouse_profession,
+                        guarantor_company_name=spouse_company,
+                        guarantor_annual_earning=annual_earning,
+                        another_person=another_person
+                    )
+                except Exception as e:
+                    Notification(f"Failed to submit form: {e}").show()
+                    return
+            else:
+                existing_row['guarantor_name'] = spouse_name
+                existing_row['guarantor_marriage_date'] = spouse_mob
+                existing_row['guarantor_mobile_no'] = spouse_mbl_no
+                existing_row['guarantor_profession'] = spouse_profession
+                existing_row['guarantor_company_name'] = spouse_company
+                existing_row['guarantor_annual_earning'] = annual_earning
+                existing_row['another_person'] = another_person
+                
+                try:
+                    existing_row.update()
+                except Exception as e:
+                    Notification(f"Failed to update form: {e}").show()
+                    return
+            
+            # Validations...
+            errors = []
+            if not re.match(r'^[A-Za-z\s]+$', spouse_name):
+                errors.append("Enter a valid full name!")
+            if spouse_mob > datetime.now().date():
+                errors.append("Enter a valid date of marriage!")
+            if not re.match(r'^\d{10}$', str(spouse_mbl_no)):
+                errors.append("Enter a valid mobile no!")
         
-        # Validations...
-        errors = []
-        if not re.match(r'^[A-Za-z\s]+$', details.get('spouse_name', '')):
-            errors.append("Enter a valid full name!")
-        if details.get('spouse_mob', '') > datetime.now().date():
-            errors.append("Enter a valid date of marriage!")
-        if not re.match(r'^\d{10}$', str(details.get('spouse_mbl_no', ''))):
-            errors.append("Enter a valid mobile no!")
-    
-        if errors:
-            Notification("\n".join(errors)).show()
-        else:
-            anvil.server.call('add_borrower_step3', marital_status, user_id)
-            anvil.server.call('add_lendor_spouse_details', 
+            if errors:
+                Notification("\n".join(errors)).show()
+            else:
+                anvil.server.call('add_borrower_step3', marital_status, self.userId)
+                anvil.server.call('add_lendor_spouse_details', 
                                   another_person, spouse_name, spouse_mob, 
                                   spouse_mbl_no, spouse_profession, 
                                   spouse_company, annual_earning, self.userId)
-            open_form('borrower.borrower_registration_forms.star_1_borrower_registration_form_4_loan', user_id=self.userId)
-
+                open_form('borrower.borrower_registration_forms.star_1_borrower_registration_form_4_loan', user_id=self.userId)
+        else:
+            Notification("Please fill all the required fields").show()
+      
       elif selected_value == 'Others':
         details = self.collect_details()
         if details:
