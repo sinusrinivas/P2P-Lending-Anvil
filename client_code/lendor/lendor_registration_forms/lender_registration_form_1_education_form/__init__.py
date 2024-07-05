@@ -110,17 +110,29 @@ class lender_registration_form_1_education_form(lender_registration_form_1_educa
 
 
     # Get the uploaded files
-    tenth_class = [self.file_loader_1.file, self.file_loader_2.file, self.file_loader_4.file, self.file_loader_7.file, self.file_loader_11.file]
-    intermediate = [self.file_loader_3.file, self.file_loader_5.file, self.file_loader_8.file, self.file_loader_12.file]
-    btech = [self.file_loader_6.file, self.file_loader_9.file, self.file_loader_13.file]
-    mtech = [self.file_loader_10.file, self.file_loader_14.file]
-    PhD = self.file_loader_15.file
+    tenth_class = self.file_loader_1.file 
+    tenth_class = self.file_loader_2.file
+    tenth_class = self.file_loader_4.file
+    tenth_class = self.file_loader_7.file
+    tenth_class = self.file_loader_11.file
+    intermediate = self.file_loader_3.file
+    intermediate = self.file_loader_5.file 
+    intermediate = self.file_loader_8.file
+    intermediate = self.file_loader_12.file
+    btech = self.file_loader_6.file
+    btech = self.file_loader_9.file
+    btech = self.file_loader_13.file 
+    mtech = self.file_loader_10.file
+    mtech = self.file_loader_14.file
+    phd = self.file_loader_15.file
 
+    # if not tenth_class or not intermediate or not btech or not mtech or not phd:
+    #    Notification('Please upload all five files before proceed.').show()
     if qualification == '10th standard':
       anvil.server.call('add_education_tenth', tenth_class, user_id)
       open_form('lendor.lendor_registration_forms.lender_registration_form_2', user_id=user_id) 
     elif qualification == '12th standard':
-      anvil.server.call('add_education_btech', tenth_class, intermediate, user_id)
+      anvil.server.call('add_education_int', tenth_class, intermediate, user_id)
       open_form('lendor.lendor_registration_forms.lender_registration_form_2', user_id=user_id) 
     elif qualification == "Bachelor's degree":
       anvil.server.call('add_education_btech', tenth_class, intermediate, btech, user_id)
@@ -129,7 +141,7 @@ class lender_registration_form_1_education_form(lender_registration_form_1_educa
       anvil.server.call('add_education_mtech', tenth_class, intermediate, btech, mtech, user_id)
       open_form('lendor.lendor_registration_forms.lender_registration_form_2', user_id=user_id) 
     elif qualification == 'PhD':
-      anvil.server.call('add_education_phd', tenth_class, intermediate, btech, mtech, PhD, user_id)
+      anvil.server.call('add_education_phd', tenth_class, intermediate, btech, mtech, phd, user_id)
       open_form('lendor.lendor_registration_forms.lender_registration_form_2', user_id=user_id) 
     else:
       Notification("Please select a valid qualification status").show()
