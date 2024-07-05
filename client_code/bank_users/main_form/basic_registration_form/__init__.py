@@ -296,6 +296,11 @@ class basic_registration_form(basic_registration_formTemplate):
         self.mobile_label.text = ''
         self.email_label.text = ''
 
+        # Check if all fields are filled
+        if not (full_name and gender and dob and mobile_no and alternate_email and user_photo and aadhar and aadhar_card and pan and pan_card and (street_adress_1 or street_address_2) and city and pincode and state and country and present and duration):
+            Notification('Please fill all details').show()
+            return
+            
         # Validate country
         if not re.match(r'^[A-Za-z]+$', country):
             alert('Enter a valid country name')
@@ -344,10 +349,7 @@ class basic_registration_form(basic_registration_formTemplate):
             self.alternate_email_text_box.focus()
             return
 
-        # Check if all fields are filled
-        if not (full_name and gender and dob and mobile_no and alternate_email and user_photo and aadhar and aadhar_card and pan and pan_card and (street_adress_1 or street_address_2) and city and pincode and state and country and present and duration):
-            Notification('Please fill all details').show()
-            return
+        
 
         # Check if the entered alternate email matches the existing alternate email for the user
         user_data = app_tables.fin_user_profile.get(customer_id=user_id)
