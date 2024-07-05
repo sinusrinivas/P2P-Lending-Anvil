@@ -18,7 +18,6 @@ class borrower_notifications(borrower_notificationsTemplate):
         if hasattr(get_open_form(), 'update_notification_count'):
             get_open_form().update_notification_count(unread_count)
 
-  
     def mark_notification_as_read(self, loan_id):
         anvil.server.call('mark_notification_as_read', loan_id)
         self.update_read_status(loan_id)
@@ -38,6 +37,7 @@ class borrower_notifications(borrower_notificationsTemplate):
 
     def button_2_click(self, **event_args):
         open_form('borrower.dashboard')  # Ensure it opens the correct main form
+
 
 
 

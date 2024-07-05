@@ -30,7 +30,6 @@
 
 
 
-
 from ._anvil_designer import ItemTemplate117Template
 from anvil import *
 import anvil.server
