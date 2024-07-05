@@ -254,6 +254,8 @@ from datetime import date, datetime
 #         if file:
 #             self.image_1.source = self.file_loader_1.file
 
+
+
 class star_1_borrower_registration_form_2_employment(star_1_borrower_registration_form_2_employmentTemplate):
     def __init__(self, user_id, **properties):
         super().__init__(**properties)
@@ -275,18 +277,22 @@ class star_1_borrower_registration_form_2_employment(star_1_borrower_registratio
     def load_user_data(self, user_id):
         user_data = app_tables.fin_user_profile.get(customer_id=user_id)
         if user_data:
-            self.date_picker_1.date = user_data.get('year_estd')
-            self.text_box_1.text = user_data.get('industry_type')
-            self.text_box_2.text = user_data.get('six_month_turnover')
+            self.date_picker_1.date = user_data['year_estd']
+            self.text_box_1.text = user_data['industry_type']
+            self.text_box_2.text = user_data['six_month_turnover']
             # Uncomment below if file_loader_1 is used for bank proof
-            # self.file_loader_1.file = user_data.get('last_six_month_bank_proof')
-
+            self.file_loader_1.file = user_data['last_six_month_bank_proof']
+    
             # Additional user data fields
-            self.text_box_3.text = user_data.get('din', '').replace(' ', '')
-            self.text_box_4.text = user_data.get('cin', '').replace(' ', '')
-            self.text_box_1_copy_2.text = user_data.get('registered_off_add')
+            self.text_box_3.text = user_data['din'].replace(' ', '') if 'din' in user_data else ''
+            self.text_box_4.text = user_data['cin'].replace(' ', '') if 'cin' in user_data else ''
+            self.text_box_1_copy_2.text = user_data['registered_off_add'] if 'registered_off_add' in user_data else ''
             # Uncomment below if file_loader_1 is used for proof verification
-            # self.file_loader_1.url = anvil.media.get_url(user_data.get('proof_verification'))
+            self.file_loader_1.url = anvil.media.get_url(user_data['proof_verification'])
+        else:
+            # Handle case where user_data is None
+            print("User data not found for user_id:", user_id)
+
 
     def load_business_types(self):
         options = app_tables.fin_borrower_business_type.search()
