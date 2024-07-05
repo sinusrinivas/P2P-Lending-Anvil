@@ -1,7 +1,7 @@
 /**
  This CSS implements the Material Design 3 look and feel for Anvil apps.
  **/
-.anvil-role-wide .data-grid-child-panel {
+/* .anvil-role-wide .data-grid-child-panel {
   overflow-x: auto;
 }
 
@@ -9,6 +9,28 @@
   flex-wrap: nowrap;
   min-width: -moz-min-content;
   min-width: min-content;
+} */
+
+/* Add this to theme.css */
+
+.anvil-role-no-scroll {
+  overflow: hidden; /* Hide the horizontal scrollbar */
+}
+
+.container {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+img, video {
+  max-width: 100%;
+  height: auto;
+}
+
+body {
+  margin: 0;
+  padding: 0;
 }
 
 
