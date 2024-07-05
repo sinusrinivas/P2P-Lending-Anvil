@@ -1,6 +1,6 @@
 container:
   type: ColumnPanel
-  properties: {col_widths: '{"QSHKVI":15,"JJEMAQ":30,"MYIECQ":10,"WFLRZP":15,"ZYIAJQ":30,"YBEUGO":10,"LEXOMW":15,"OGRIDF":30,"YKXHZL":10,"ITCBYF":5,"AHQKFA":29,"ALTBGH":10,"SIKVWS":50,"HQZYXX":10,"SJJJBT":50,"TCMEOZ":15,"TUMBCM":45,"JMVNAW":15,"RJWXXK":45,"LRNCEU":20,"PTFBBX":20,"RZRXZL":15,"IIEAHL":45,"SWIFRM":15,"YKBIAS":45,"IEQJBQ":20,"UIAQLG":15,"TDMYDI":45,"PCHZDG":15,"WZPPQR":45,"JKFVJR":15,"FCQQGF":45,"ZGHNQO":10,"XADAQA":50,"NFRLFE":15,"VZIVRE":45,"AEVSVW":10,"YPMEAM":50,"IAKWII":10,"PJRPCO":50}'}
+  properties: {col_widths: '{"QSHKVI":15,"JJEMAQ":30,"MYIECQ":10,"WFLRZP":15,"ZYIAJQ":30,"YBEUGO":10,"LEXOMW":15,"OGRIDF":30,"YKXHZL":10,"ITCBYF":10,"ALTBGH":25,"LRNCEU":20,"PTFBBX":20,"RZRXZL":15,"IIEAHL":45,"SWIFRM":15,"YKBIAS":45,"IEQJBQ":20,"UIAQLG":20,"PCHZDG":20,"ZGHNQO":20,"AEVSVW":20,"CTQQUB":11,"VIHTOP":20,"CNAXMB":40,"LLARTM":20,"WWPENI":40,"XCETPN":27,"NQRPOW":30,"OMXXGK":30,"IJCBFD":20,"UWVSUV":40,"BFMXGH":30,"NNZUWK":30,"CIDAYR":26,"DULEQR":27,"LQMOMB":27,"FUSOJN":26}'}
 components:
 - name: spacer_2
   properties: {height: 10.399993896484375}
@@ -29,31 +29,31 @@ components:
 - name: label_2
   properties: {role: input-prompt, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: 'theme:On Secondary Container', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: 'Enter Your  Name  '}
   type: Label
-  layout_properties: {grid_position: 'VWRDWZ,ITCBYF'}
+  layout_properties: {grid_position: 'VWRDWZ,ITCBYF CIMICU,LLARTM'}
 - name: label_5
-  properties: {text: '* ', bold: true, foreground: red, role: input-prompt}
+  properties: {text: '* ', bold: true, foreground: red, role: input-prompt, spacing_above: none, spacing_below: none}
   type: Label
-  layout_properties: {grid_position: 'VWRDWZ,AHQKFA'}
+  layout_properties: {grid_position: 'VWRDWZ,ITCBYF CIMICU,WWPENI'}
 - name: full_name_text_box
-  properties: {role: null, bold: false, align: left, placeholder: Enter your full name, spacing_above: small, background: 'theme:On Primary', type: text, underline: false, font: '', hide_text: false, foreground: '', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: ''}
+  properties: {role: outlined, bold: false, align: left, placeholder: Enter your full name, spacing_above: small, background: 'theme:On Primary', type: text, underline: false, font: '', hide_text: false, foreground: '', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: ''}
   type: TextBox
-  layout_properties: {grid_position: 'KHWGMR,WKPNAR'}
+  layout_properties: {grid_position: 'VWRDWZ,ITCBYF BFMBDW,MLFOJA'}
   event_bindings: {show: borrower_full_name_test_show, pressed_enter: full_name_text_box_pressed_enter}
 - name: full_name_label
   properties: {visible: true, foreground: Red, font_size: 12, bold: true}
   type: Label
-  layout_properties: {grid_position: 'QOVKKB,XAWTRB'}
+  layout_properties: {grid_position: 'VWRDWZ,ITCBYF BPKUZN,NZZKEG'}
 - name: label_03
   properties: {role: input-prompt, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: 16, tooltip: '', text: 'Enter Your Gender '}
   type: Label
-  layout_properties: {grid_position: 'WLLZNT,HQZYXX'}
+  layout_properties: {grid_position: 'VWRDWZ,CTQQUB YPUHWS,VIHTOP'}
 - name: label_6
   properties: {text: '*', role: input-prompt, icon: '', foreground: red}
   type: Label
-  layout_properties: {grid_position: 'WLLZNT,SJJJBT'}
+  layout_properties: {grid_position: 'VWRDWZ,CTQQUB YPUHWS,CNAXMB'}
 - name: gender_dd
   properties:
-    role: null
+    role: outlined
     include_placeholder: true
     bold: false
     align: full
@@ -72,58 +72,58 @@ components:
     font_size: null
     tooltip: ''
   type: DropDown
-  layout_properties: {grid_position: 'SYABHF,BTNLGZ'}
+  layout_properties: {grid_position: 'VWRDWZ,CTQQUB MESVCT,JNTGGY'}
   event_bindings: {change: gender_dd_change}
 - name: label_04
   properties: {role: input-prompt, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: 16, tooltip: '', text: 'Select Your DOB '}
   type: Label
-  layout_properties: {grid_position: 'WFKZOV,ALTBGH'}
-- name: label_7
-  properties: {text: '*', foreground: red}
-  type: Label
-  layout_properties: {grid_position: 'WFKZOV,SIKVWS'}
-- name: date_picker_1
-  properties: {role: null, bold: false, format: '', align: left, date: '', placeholder: Pick the Date, pick_time: false, spacing_above: small, background: white, underline: false, font: '', max_date: '', foreground: '', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', min_date: ''}
-  type: DatePicker
-  layout_properties: {grid_position: 'GTPXBH,ABVHWH'}
-- name: dob_label
-  properties: {foreground: red, font_size: 12, bold: true}
-  type: Label
-  layout_properties: {grid_position: 'JHDYVA,SAWXCX'}
-- name: label_05
-  properties: {role: input-prompt, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: 16, tooltip: '', text: 'Enter Your Mobile Number '}
-  type: Label
-  layout_properties: {grid_position: 'SSZGLJ,TCMEOZ'}
-- name: label_8
-  properties: {foreground: red, text: '*'}
-  type: Label
-  layout_properties: {grid_position: 'SSZGLJ,TUMBCM'}
-- name: mobile_number_box
-  properties: {role: null, bold: false, align: left, placeholder: Enter your mobile number, spacing_above: small, background: 'theme:On Primary', type: text, underline: false, font: '', hide_text: false, foreground: '', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: ''}
-  type: TextBox
-  layout_properties: {grid_position: 'INOHDH,GOPFOY'}
-  data_bindings: []
-- name: mobile_label
-  properties: {foreground: red, bold: true, font_size: 12}
-  type: Label
-  layout_properties: {grid_position: 'FIPBJZ,VKDKIG'}
-- name: label_2_copy_1
-  properties: {role: input-prompt, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: 16, tooltip: '', text: 'Enter Your Alternate Email '}
-  type: Label
-  layout_properties: {grid_position: 'VNNNRT,JMVNAW'}
+  layout_properties: {grid_position: 'WFKZOV,ALTBGH KCLTLJ,IJCBFD'}
 - name: label_9
   properties: {text: '*', foreground: red, role: input-prompt}
   type: Label
-  layout_properties: {grid_position: 'VNNNRT,RJWXXK'}
+  layout_properties: {grid_position: 'WFKZOV,ALTBGH KCLTLJ,UWVSUV'}
+- name: date_picker_1
+  properties: {role: null, bold: false, format: '', align: left, date: '', placeholder: Pick the Date, pick_time: false, spacing_above: small, background: white, underline: false, font: '', max_date: '', foreground: '', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', min_date: ''}
+  type: DatePicker
+  layout_properties: {grid_position: 'WFKZOV,ALTBGH ENRVAI,HJYKKY'}
+- name: dob_label
+  properties: {foreground: red, font_size: 12, bold: true}
+  type: Label
+  layout_properties: {grid_position: 'WFKZOV,ALTBGH ENHHLG,BEHQTO'}
+- name: label_2_copy_1
+  properties: {role: input-prompt, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: 16, tooltip: '', text: 'Enter Your Alternate Email '}
+  type: Label
+  layout_properties: {grid_position: 'WFKZOV,ALTBGH VFAXLN,BFMXGH'}
+- name: label_8
+  properties: {foreground: red, text: '*'}
+  type: Label
+  layout_properties: {grid_position: 'WFKZOV,ALTBGH VFAXLN,NNZUWK'}
 - name: alternate_email_text_box
   properties: {role: null, bold: false, align: left, placeholder: Enter alternative email, spacing_above: small, background: 'theme:On Primary', type: email, underline: false, font: '', hide_text: false, foreground: '', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: ''}
   type: TextBox
-  layout_properties: {grid_position: 'NTKWUX,MKKBAU'}
+  layout_properties: {grid_position: 'WFKZOV,ALTBGH VBHTMT,ARIPWR'}
   event_bindings: {pressed_enter: borrower_alternate_email_pressed_enter}
 - name: email_label
   properties: {foreground: red, font_size: 12, bold: true}
   type: Label
-  layout_properties: {grid_position: 'SBLUSU,BXGQUP'}
+  layout_properties: {grid_position: 'WFKZOV,ALTBGH CDMCPB,PWUOFP'}
+- name: label_05
+  properties: {role: input-prompt, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: 16, tooltip: '', text: 'Enter Your Mobile Number '}
+  type: Label
+  layout_properties: {grid_position: 'WFKZOV,XCETPN QJNSKL,NQRPOW'}
+- name: label_7
+  properties: {text: '*', foreground: red}
+  type: Label
+  layout_properties: {grid_position: 'WFKZOV,XCETPN QJNSKL,OMXXGK'}
+- name: mobile_number_box
+  properties: {role: null, bold: false, align: left, placeholder: Enter your mobile number, spacing_above: small, background: 'theme:On Primary', type: text, underline: false, font: '', hide_text: false, foreground: '', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: ''}
+  type: TextBox
+  layout_properties: {grid_position: 'WFKZOV,XCETPN GWMYOR,NPAMDO'}
+  data_bindings: []
+- name: mobile_label
+  properties: {foreground: red, bold: true, font_size: 12}
+  type: Label
+  layout_properties: {grid_position: 'WFKZOV,XCETPN EZKQDR,RVLMFA'}
 - name: label_3_copy_1
   properties:
     role: input-prompt
@@ -282,6 +282,26 @@ components:
   properties: {role: null, bold: true, align: center, spacing_above: small, background: '#05264d', icon: '', underline: false, font: '', icon_align: left, foreground: white, spacing_below: small, visible: true, border: '', italic: false, font_size: 20, tooltip: '', text: Address Details}
   type: Label
   layout_properties: {grid_position: 'ZOOVBO,RRBJJI', full_width_row: true}
+- name: label_19
+  properties: {text: '*', foreground: red, role: input-prompt}
+  type: Label
+  layout_properties: {grid_position: 'ZWXTFA,RBXHIK'}
+- name: label_20
+  properties: {role: input-prompt, foreground: red, text: '*'}
+  type: Label
+  layout_properties: {grid_position: 'YJQVEY,UIUAEJ'}
+- name: label_21
+  properties: {text: '*', foreground: red, role: input-prompt}
+  type: Label
+  layout_properties: {grid_position: 'EVSXVS,EOBQWI'}
+- name: label_22
+  properties: {role: input-prompt, foreground: red, text: '*'}
+  type: Label
+  layout_properties: {grid_position: 'UJSKPF,XKYLZX'}
+- name: label_23
+  properties: {text: '*', foreground: red, role: input-prompt}
+  type: Label
+  layout_properties: {grid_position: 'QEUCFP,SFBRNE'}
 - name: spacer_1_copy
   properties: {height: 6.4444580078125}
   type: Spacer
@@ -290,18 +310,14 @@ components:
   properties: {role: input-prompt, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: 16, tooltip: '', text: Enter Your Street Address 1}
   type: Label
   layout_properties: {grid_position: 'TMVQGS,UIAQLG'}
-- name: label_19
-  properties: {text: '*', foreground: red, role: input-prompt}
+- name: label_3_copy_1_copy_1
+  properties: {role: input-prompt, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: 16, tooltip: '', text: Enter Your Street Address 2}
   type: Label
-  layout_properties: {grid_position: 'TMVQGS,TDMYDI'}
+  layout_properties: {grid_position: 'TMVQGS,LQMOMB'}
 - name: text_box_1
   properties: {role: null, bold: false, align: left, placeholder: Enter address 1, spacing_above: small, background: 'theme:On Primary', type: text, underline: false, font: '', hide_text: false, foreground: '', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: ''}
   type: TextBox
   layout_properties: {grid_position: 'WBWCTM,LRSMIM'}
-- name: label_3_copy_1_copy_1
-  properties: {role: input-prompt, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: 16, tooltip: '', text: Enter Your Street Address 2}
-  type: Label
-  layout_properties: {grid_position: 'CZIQSY,QSKHRS'}
 - name: text_box_2
   properties: {role: null, bold: false, align: left, placeholder: Enter address 2, spacing_above: small, background: 'theme:On Primary', type: text, underline: false, font: '', hide_text: false, foreground: '', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: ''}
   type: TextBox
@@ -310,10 +326,10 @@ components:
   properties: {role: input-prompt, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: 16, tooltip: '', text: Select Type of Address}
   name: label_3
   layout_properties: {grid_position: 'WCDFPH,PCHZDG'}
-- name: label_20
-  properties: {role: input-prompt, foreground: red, text: '*'}
-  type: Label
-  layout_properties: {grid_position: 'WCDFPH,WZPPQR'}
+- type: Label
+  properties: {role: input-prompt, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: 16, tooltip: '', text: How long will you be here}
+  name: label_4
+  layout_properties: {grid_position: 'WCDFPH,DULEQR'}
 - type: DropDown
   properties:
     role: null
@@ -336,14 +352,6 @@ components:
     tooltip: ''
   name: drop_down_1
   layout_properties: {grid_position: 'OUCAXJ,MMSJYL'}
-- type: Label
-  properties: {role: input-prompt, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: 16, tooltip: '', text: How long will you be here}
-  name: label_4
-  layout_properties: {grid_position: 'MERVPW,JKFVJR'}
-- name: label_21
-  properties: {text: '*', foreground: red, role: input-prompt}
-  type: Label
-  layout_properties: {grid_position: 'MERVPW,FCQQGF'}
 - type: DropDown
   properties:
     role: null
@@ -370,50 +378,42 @@ components:
   properties: {role: input-prompt, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: 16, tooltip: '', text: Enter Your City}
   type: Label
   layout_properties: {grid_position: 'CCPYZE,ZGHNQO'}
-- name: label_22
-  properties: {role: input-prompt, foreground: red, text: '*'}
+- name: label_1_copy
+  properties: {role: input-prompt, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: 16, tooltip: '', text: Enter Your Postal/Zip Code}
   type: Label
-  layout_properties: {grid_position: 'CCPYZE,XADAQA'}
+  layout_properties: {grid_position: 'CCPYZE,CIDAYR'}
 - name: text_box_3
   properties: {role: null, bold: false, align: left, placeholder: Enter your city name, spacing_above: small, background: 'theme:On Primary', type: text, underline: false, font: '', hide_text: false, foreground: '', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: ''}
   type: TextBox
   layout_properties: {grid_position: 'EGXISF,MDCJWI'}
-- name: label_1_copy
-  properties: {role: input-prompt, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: 16, tooltip: '', text: Enter Your Postal/Zip Code}
-  type: Label
-  layout_properties: {grid_position: 'MQYEUG,NFRLFE'}
-- name: label_23
-  properties: {text: '*', foreground: red, role: input-prompt}
-  type: Label
-  layout_properties: {grid_position: 'MQYEUG,VZIVRE'}
 - name: text_box_4
   properties: {role: null, bold: false, align: left, placeholder: Enter postal/zip code, spacing_above: small, background: 'theme:On Primary', type: text, underline: false, font: '', hide_text: false, foreground: '', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: ''}
   type: TextBox
   layout_properties: {grid_position: 'TMLBZY,EWIFFG'}
-- name: label_3_copy_1_copy
-  properties: {role: input-prompt, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: 16, tooltip: '', text: Enter Your State}
-  type: Label
-  layout_properties: {grid_position: 'KGBRPV,AEVSVW'}
 - name: label_24
   properties: {role: input-prompt, foreground: red, text: '*'}
   type: Label
-  layout_properties: {grid_position: 'KGBRPV,YPMEAM'}
-- name: text_box_5
-  properties: {role: null, bold: false, align: left, placeholder: Enter your state, spacing_above: small, background: 'theme:On Primary', type: text, underline: false, font: '', hide_text: false, foreground: '', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: ''}
-  type: TextBox
-  layout_properties: {grid_position: 'HWFOTX,GNNIVE'}
-- name: label_3_copy_1_copy_1_copy
-  properties: {role: input-prompt, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: 16, tooltip: '', text: Enter Your Country}
-  type: Label
-  layout_properties: {grid_position: 'YVYBCT,IAKWII'}
+  layout_properties: {grid_position: 'ZIUANB,LJYVFT'}
 - name: label_25
   properties: {text: '*', foreground: red, role: input-prompt}
   type: Label
-  layout_properties: {grid_position: 'YVYBCT,PJRPCO'}
+  layout_properties: {grid_position: 'BZHQZZ,JLPSLT'}
+- name: label_3_copy_1_copy
+  properties: {role: input-prompt, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: 16, tooltip: '', text: Enter Your State}
+  type: Label
+  layout_properties: {grid_position: 'KGBRPV,AEVSVW JMWVRP,OHHRNC'}
+- name: text_box_5
+  properties: {role: null, bold: false, align: left, placeholder: Enter your state, spacing_above: small, background: 'theme:On Primary', type: text, underline: false, font: '', hide_text: false, foreground: '', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: ''}
+  type: TextBox
+  layout_properties: {grid_position: 'KGBRPV,AEVSVW CQIUPS,WIVBMK'}
+- name: label_3_copy_1_copy_1_copy
+  properties: {role: input-prompt, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: 16, tooltip: '', text: Enter Your Country}
+  type: Label
+  layout_properties: {grid_position: 'KGBRPV,FUSOJN NQNNEW,IYHKUV'}
 - name: text_box_6
   properties: {role: null, bold: false, align: left, placeholder: Enter your country, spacing_above: small, background: 'theme:On Primary', type: text, underline: false, font: '', hide_text: false, foreground: '', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: ''}
   type: TextBox
-  layout_properties: {grid_position: 'XVISWC,TTVSWB'}
+  layout_properties: {grid_position: 'KGBRPV,FUSOJN YXFBOR,EXXMMU'}
 - name: submit_btn
   properties: {role: elevated-button, bold: true, align: center, spacing_above: small, background: '#012146', icon: 'fa:save', underline: false, font: '', icon_align: left, foreground: 'theme:On Primary', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: 14, tooltip: '', text: Submit}
   type: Button
