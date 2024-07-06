@@ -1,0 +1,50 @@
+is_package: true
+container: {type: DataRowPanel}
+components:
+- name: link_1
+  properties: {align: center, text: Edit Details, bold: true}
+  type: Link
+  layout_properties: {column: CCRGRD}
+  event_bindings: {click: link_1_click}
+- name: label_1
+  properties: {align: center}
+  type: Label
+  layout_properties: {column: JKSDUP}
+  data_bindings:
+  - {property: text, code: 'self.item[''loan_id'']', writeback: false}
+- name: label_2
+  properties: {align: center}
+  type: Label
+  layout_properties: {column: VJQQOR}
+  data_bindings:
+  - {property: text, code: 'self.item[''borrower_customer_id'']', writeback: false}
+- name: label_5
+  properties: {align: center}
+  type: Label
+  layout_properties: {column: NPPJWD}
+  data_bindings:
+  - {property: text, code: 'self.item[''lender_customer_id'']', writeback: false}
+- name: label_7
+  properties: {align: center}
+  type: Label
+  layout_properties: {column: AMIBQP}
+  data_bindings:
+  - {property: text, code: 'self.item[''emi_number'']', writeback: false}
+- name: label_8
+  properties: {align: center}
+  type: Label
+  layout_properties: {column: POFFSI}
+  data_bindings:
+  - {property: text, code: 'self.item[''scheduled_payment_made'']', writeback: false}
+- name: label_9
+  properties: {align: center}
+  type: Label
+  layout_properties: {column: HEOULS}
+  data_bindings:
+  - {property: text, code: 'self.item[''scheduled_payment'']', writeback: false}
+- name: label_10
+  properties: {align: center}
+  type: Label
+  layout_properties: {column: KYNONL}
+  data_bindings:
+  - {property: text, code: 'self.item[''next_payment'']', writeback: false}

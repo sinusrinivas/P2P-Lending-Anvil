@@ -16,6 +16,8 @@ class lender_registration_form_4_bank_form_1(lender_registration_form_4_bank_for
     self.init_components(**properties)
     user_data=app_tables.fin_user_profile.get(customer_id=user_id)
     if user_data:
+      self.bank_id.text=user_data['bank_id']
+      self.branch_name.text=user_data['account_bank_branch']
       self.text_box_1.text=user_data['account_name']
       self.drop_down_1.selected_value=user_data['account_type']
       self.text_box_2.text=user_data['account_number']
@@ -51,12 +53,16 @@ class lender_registration_form_4_bank_form_1(lender_registration_form_4_bank_for
     # Any code you write here will run before the form opens.
 
   def button_2_click(self, **event_args):
+    bank_id = self.bank_id.text
+    branch_name = self.branch_name.text
     account_name = self.text_box_1.text
     account_type = self.drop_down_1.selected_value
     account_number = self.text_box_2.text
     bank_name = self.text_box_3.text
+    t_and_c = self.check_box_1_copy_3 
+    
     user_id = self.userId
-    if not account_name or not account_type or not account_number or not bank_name:
+    if not account_name or not account_type or not account_number or not bank_name or not bank_id  or not branch_name or not t_and_c:
       Notification("please fill the all required fields").show()
     elif not re.match(r'^[A-Za-z\s]+$', account_name):
         Notification("Account name should be valid").show()
@@ -65,8 +71,9 @@ class lender_registration_form_4_bank_form_1(lender_registration_form_4_bank_for
     elif not account_number.isdigit():
         Notification("Account number should be valid").show()
     else:
+      anvil.server.call('add_lendor_bank_details_form_2', bank_id,branch_name, user_id)
       anvil.server.call('add_lendor_bank_details_form_1', account_name, account_type,account_number,bank_name, user_id)
-      open_form('lendor.lendor_registration_forms.lender_registration_form_4_bank_form_2',user_id=self.userId)
+      open_form('lendor.dashboard')
 
   def button_1_click(self, **event_args):
     user_id = self.userId
@@ -75,5 +82,12 @@ class lender_registration_form_4_bank_form_1(lender_registration_form_4_bank_for
   def button_3_click(self, **event_args):
     open_form("bank_users.user_form")
 
-  
+  def link_1_copy_3_click(self, **event_args):
+    """This method is called when the link is clicked"""
+    alert('Agreements, Privacy Policy and Applicant should accept following:Please note that any information concealed (as what we ask for), would be construed as illegitimate action on your part and an intentional attempt to hide material information which if found in future, would attract necessary action (s) at your sole cost. Hence, request to be truthful to your best knowledge while sharing your details)')
+
+  def check_box_1_copy_3_change(self, **event_args):
+    """This method is called when this checkbox is checked or unchecked"""
+    self.accepted_terms = self.check_box_1_copy_3.checked
+    self.button_2.enabled = self.accepted_terms
     

@@ -263,8 +263,10 @@ class mis_reports(mis_reportsTemplate):
             self.label_12.text = first_row['total_products_count']
             self.label_8.text = first_row['total_lenders_invested']
             self.label_16.text =first_row['platform_returns']
-            self.link_1.text = sum(lender['return_on_investment'] for lender in app_tables.fin_lender.search())
-
+            # self.link_1.text = sum(lender['return_on_investment'] for lender in app_tables.fin_lender.search())
+            lender_rois = [lender['return_on_investment'] if lender['return_on_investment'] is not None else 0 for lender in app_tables.fin_lender.search()]
+            self.link_1.text = sum(lender_rois)
+      
   
     def plot_data(self):
         # Fetch data from tables
@@ -341,17 +343,17 @@ class mis_reports(mis_reportsTemplate):
         no_of_loans_under_process = len([loan for loan in loan_details if loan['loan_updated_status'] == 'under process'])
         no_of_extension_loans = len([loan for loan in loan_details if loan['loan_updated_status'] == 'extension'])
         
-        # Data for the pie chart
-        values = [
-            no_of_loans_disbursed,
-            no_of_loans_closed,
-            no_of_loans_rejected,
-            no_of_loans_foreclosed,
-            no_of_loans_lost_opportunity,
-            no_of_loans_approved,
-            no_of_loans_under_process,
-            no_of_extension_loans
-        ]
+        # # Data for the pie chart
+        # values = [
+        #     no_of_loans_disbursed,
+        #     no_of_loans_closed,
+        #     no_of_loans_rejected,
+        #     no_of_loans_foreclosed,
+        #     no_of_loans_lost_opportunity,
+        #     no_of_loans_approved,
+        #     no_of_loans_under_process,
+        #     no_of_extension_loans
+        # ]
         labels = [
             'No of Loans Disbursed: {}'.format(no_of_loans_disbursed),
             'No of Loans Closed: {}'.format(no_of_loans_closed),
@@ -364,7 +366,7 @@ class mis_reports(mis_reportsTemplate):
         ]
 
         # Create the pie chart
-        fig = go.Figure(data=[go.Pie(labels=labels, values=values, textinfo='label+percent')])
+        fig = go.Figure(data=[go.Pie(labels=labels, textinfo='label+percent')])
 
         # Update layout for better appearance
         fig.update_layout(title={'text': 'Different types of Loans', 'font': {'size': 24, 'color': 'black', 'family': 'Arial', 'bold': True}})
@@ -607,6 +609,9 @@ class mis_reports(mis_reportsTemplate):
     def convert_panel_to_pdf(self):
       # Assuming 'content_panel' is the panel containing your data
       content_panel = self.content_panel
+
+      # Ensure all graphs and dynamic content are fully loaded
+      self.wait_for_graphs_to_load(content_panel)
       
       # Call the server function to create the PDF from the content panel
       pdf = anvil.server.call('create_pdf_of_mis_reports', content_panel)
@@ -617,3 +622,12 @@ class mis_reports(mis_reportsTemplate):
     def eod_report_click(self, **event_args):
       """This method is called when the button is clicked"""
       open_form('admin.dashboard.accounting.mis_reports.eod_reports')
+
+    def wait_for_graphs_to_load(self, content_panel):
+      # Implement a way to ensure all graphs are fully loaded.
+      # This can involve checking if specific elements are loaded or using a delay.
+      import time
+  
+      # Example: wait for a fixed amount of time (e.g., 2 seconds)
+      # Adjust this as necessary for your use case.
+      time.sleep(1)
