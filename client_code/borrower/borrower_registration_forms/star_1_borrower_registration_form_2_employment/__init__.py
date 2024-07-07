@@ -166,3 +166,25 @@ class star_1_borrower_registration_form_2_employment(star_1_borrower_registratio
           user_data.update()
         # Set Form properties and Data Bindings.
         self.init_components(**properties)
+        
+        # Set up event handler for dropdown change
+        self.Profesion_borrower_registration_form_drop_down.set_event_handler('change', self.Profesion_borrower_registration_form_drop_down_change_handler)
+    
+    def update_visibility(self, user_type):
+        if user_type == 'student':
+            self.grid_panel_1.visible = False
+            self.grid_panel_2.visible = True
+            # Additional logic to populate grid_panel_2 components if needed
+        elif user_type == 'business':
+            self.grid_panel_1.visible = True
+            self.grid_panel_2.visible = False
+            # Additional logic to populate grid_panel_1 components if needed
+        else:
+            # Handle other user types or default case
+            self.grid_panel_1.visible = False
+            self.grid_panel_2.visible = False
+            
+
+    def Profesion_borrower_registration_form_drop_down_change(self, **event_args):
+            selected_value = self.Profesion_borrower_registration_form_drop_down.selected_value
+            self.update_visibility(selected_value)
