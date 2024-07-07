@@ -109,16 +109,16 @@ class star_1_borrower_registration_form_1_education(star_1_borrower_registration
       anvil.server.call('add_education_tenth', tenth_class, user_id)
       open_form('borrower.borrower_registration_forms.star_1_borrower_registration_form_2_employment', user_id=user_id) 
     elif qualification == '12th standard':
-      anvil.server.call('add_education_int', tenth_class, intermediate, user_id)
+      anvil.server.call('add_education_int', tenth_class_1, intermediate, user_id)
       open_form('borrower.borrower_registration_forms.star_1_borrower_registration_form_2_employment', user_id=user_id) 
     elif qualification == "Bachelor's degree":
-      anvil.server.call('add_education_btech', tenth_class, intermediate, btech, user_id)
+      anvil.server.call('add_education_btech', tenth_class_2, intermediate_1, btech, user_id)
       open_form('borrower.borrower_registration_forms.star_1_borrower_registration_form_2_employment', user_id=user_id) 
     elif qualification == "Master's degree":
-      anvil.server.call('add_education_mtech', tenth_class, intermediate, btech, mtech, user_id)
+      anvil.server.call('add_education_mtech', tenth_class_3, intermediate_2, btech_1, mtech, user_id)
       open_form('borrower.borrower_registration_forms.star_1_borrower_registration_form_2_employment', user_id=user_id) 
     elif qualification == 'PhD':
-      anvil.server.call('add_education_phd', tenth_class, intermediate, btech, mtech, phd, user_id)
+      anvil.server.call('add_education_phd', tenth_class_4, intermediate_3, btech_2, mtech_1, phd, user_id)
       open_form('borrower.borrower_registration_forms.star_1_borrower_registration_form_2_employment', user_id=user_id) 
     else:
       Notification("Please select a valid qualification status").show()
