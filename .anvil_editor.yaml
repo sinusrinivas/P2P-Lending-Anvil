@@ -15,15 +15,12 @@ unique_ids:
     admin.dashboard.manage_ascend_score.add_subcategory.ItemTemplate85: '171050004147884384375844.5273'
     admin.dashboard.accounting.interest_accruals.RowTemplate50: '1718777004070883146434297.1198'
     admin.dashboard.loan_servicing.collection_of_repayment.RowTemplate48: '1718621815398652009751098.9735'
-    ? borrower.borrower_registration_forms.star_1_borrower_registration_form_1_education.star_1_borrower_registration_form_education_10th_class
-    : '1706674255415664927025189.0149'
     admin.dashboard.manage_ascend_score.view_ascend_subcategory.ItemTemplate38: '17095388729813876844709.4927883'
     borrower.borrower_registration_forms.borrower_registration_last_check_out_form: '1699374444060167172815541.79663'
     borrower.dashboard.application_tracker: PJMMW3MYSYWWZP2NRWGPMC74YHK7B7TU
     admin.dashboard.customer_management.handles_customer_registration.lenders: '1699528516670654865261457.5034'
     borrower.dashboard.view_loans.payment_details_b: LBZVQNFJYXVPEYJ4E33NRRLBEJQJDUZ5
     admin.dashboard.manage_settings: '1699528731095179009819656.96207'
-    lendor.lendor_registration_forms.lender_registration_form_1_education_form.lender_registration_education_Mtech: '1700756951276419563635826.77423'
     borrower.dashboard.dashboard_about: MNIDLQ4JJ7SZ477LFWWSHPKUBXZKTNF5
     lendor.lendor_registration_forms.lender_registration_form_2: '1699427555218683419054191.9775'
     admin.dashboard.manage_ascend_score.add_subcategory.ItemTemplate36: '17110873489172627637088.8769217'
@@ -137,7 +134,6 @@ unique_ids:
     admin.dashboard.manage_cms.manage_dropdowns: '1707480870698599841411410.4065'
     admin.dashboard.manage_cms.add_borrower_dropdown_details.ItemTemplate10: '170609322323619064730786.667816'
     lendor.Toggleswitch: '1701335189405602120940903.774'
-    lendor.lendor_registration_forms.lender_registration_form_1_education_form.lender_registration_education_Btech: '1700756844264138134483091.40665'
     lendor.dashboard.lender_view_profile: '1716954161353339663406185.9878'
     lendor.dashboard.lender_view_loans.ItemTemplate54: '17096122726791648839396.907853'
     admin.dashboard.manage_cms.add_lender_dropdown_details.edit_salary_type: '1707910221918394773491459.60974'
@@ -180,7 +176,6 @@ unique_ids:
     borrower.dashboard.foreclosure_request: NSTHITAYUUWSXBJKK5RVW4OD4LDYZDWR
     borrower.dashboard.edit_profile: 6NE5B3XPBSQHXJ5GMY77XFDUZ6U6SKJF
     admin.dashboard.manage_cms.add_borrower_dropdown_details.ItemTemplate12: '1706093168840918172459238.2472'
-    lendor.lendor_registration_forms.lender_registration_form_1_education_form.lender_registration_education_Phd: '1700756992368717264040829.352'
     borrower.dashboard.Navigation_form_dashboard: '1706174230033146161169005.9419'
     ? borrower.borrower_registration_forms.star_1_borrower_registration_form_2_employment.star_1_borrower_registration_form_2_employment_farmer
     : '1713758768936643850890613.9849'
@@ -207,7 +202,6 @@ unique_ids:
     bank_users.main_form.products_main_form.vehicle_loan: '1714373140105534036320579.5613'
     admin.dashboard.manage_cms.add_general_dropdowns.edit_role: '1714630291881120023489371.63876'
     admin.dashboard.loan_management.view_loans.under_process.ItemTemplate34: '1710995292835497433832012.46826'
-    lendor.lendor_registration_forms.lender_registration_form_1_education_form.lender_registration_education_10th_class: '1700756647393597319323171.6338'
     bank_users.main_form.products_main_form: '1700563558734712481921773.0997'
     borrower.borrower_registration_forms.star_1_borrower_registration_form_5_bank_1: '1700161372617325052945266.5503'
     lendor.lendor_registration_forms.lender_registration_form_4_bank_form_1: '1699429435323170866799491.21808'
@@ -246,8 +240,6 @@ unique_ids:
     borrower.dashboard.application_tracker.ItemTemplate69: OQQDVJLI45TJ4AP2IU5QCPHDZYDWG6HJ
     bank_users.user_form.user_form_copy: '1700712538416515803210372.55963'
     borrower.dashboard_contact_borrower_registration_form: '1710758127618293217802786.12274'
-    ? borrower.borrower_registration_forms.star_1_borrower_registration_form_1_education.star_1_borrower_registration_form_education_phd
-    : '17066742790462903583176.3175592'
     borrower.dashboard.view_transaction_history.transaction_details: KHVVL6CJNVUQICQPUHOA2EWSTLJ6OEMV
     lendor.dashboard.view_borrower_loan_request.ItemTemplate47: '1709707485877189164303013.9718'
     borrower.dashboard.application_tracker.RowTemplate26: YBTVYQAENHGVH4YGE6BF2V5WFOGFHJI3
@@ -333,8 +325,6 @@ unique_ids:
     borrower.borrower_registration_forms.dashboard_about_borrower_registration_form: '1710758076230153367761627.2733'
     borrower.dashboard.dashboard_report_a_problem: HAL4WWSVLQIB47GS6BF6JAHIWPHTCDQK
     lendor.dashboard.view_borrower_loan_request: '1699960229158369964369354.56226'
-    ? borrower.borrower_registration_forms.star_1_borrower_registration_form_1_education.star_1_borrower_registration_form_education_intermediate
-    : '1706674264490661669917930.6699'
     lendor.dashboard.lender_view_loans.ItemTemplate50: '170961202737241645814155.91906'
     borrower.dashboard.today_dues.ItemTemplate73: SD47FPFVONCOEVKLQ4NWQEYQI6F6RO7P
     admin.dashboard.accounting.payment_receipt.emi_details.RowTemplate59: '1719221609677299238243367.0895'
@@ -345,8 +335,6 @@ unique_ids:
     bank_users.repeating_panels: '1709016242855472268200759.52313'
     admin.dashboard.manage_ascend_score.add_subcategory.edit_salarytype: '171077252423755774820284.87712'
     bank_users.main_form.main_header: '1713522331935966728818236.9513'
-    ? borrower.borrower_registration_forms.star_1_borrower_registration_form_1_education.star_1_borrower_registration_form_education_btech
-    : '1706674259391248612457294.9111'
     admin.dashboard.admin_management.add_field_engineer: '1718788298405117832261891.16425'
     borrower.dashboard.foreclosure_request.borrower_foreclosure: SOICRYQQ3CENC4V6TEC3Y3UVH5JRO73X
     admin.dashboard.manage_cms.add_report_issues_dropdown: TTLLQ253CCCYUMLM2QX43NK5O6CO2FJM
@@ -446,7 +434,6 @@ unique_ids:
     lendor.dashboard.view_or_send_notifications: '1699967294797596075787674.3921'
     lendor.lendor_registration_forms.lender_registration_form_2.lender_registration_Institutional_form_2: '1699430137541808903451295.2183'
     admin.dashboard.loan_management.view_loans.rejected_loans.view_profile_2: '1700812221243295088415002.8101'
-    lendor.lendor_registration_forms.lender_registration_form_1_education_form.lender_registration_education_Intermediate: '1700756697390552428798704.9375'
     admin.dashboard.loan_servicing.tracking_late_payments: '1718598639121116339000483.79852'
     admin.dashboard.loan_management.view_loans.under_process: '1699528976374246220307697.87708'
     borrower.dashboard.extension_loan_request.payment_details_extension: W7WJHG5G5P5DQMWAIM3ARFAZWBOBKVAN
@@ -525,8 +512,6 @@ unique_ids:
     lendor.dashboard.view_loan_extension_requests: '1699962962727731721010167.028'
     admin.dashboard.home_button_admin: '1706595991042717143199814.3754'
     borrower.dashboard.extension_loan_request.borrower_extension.extension2: 67DZ62CHXP367RUOSM3I2TL7Z3VSPW6U
-    ? borrower.borrower_registration_forms.star_1_borrower_registration_form_1_education.star_1_borrower_registration_form_education_mtech
-    : '1706674270701675999290307.5544'
     borrower.dashboard.application_tracker.ItemTemplate68: HO4U4IQNK233SJRG3SRARJ5YCV3T2AJI
     admin.dashboard.manage_cms.add_general_dropdowns.edit_gender: '1710400343827117328751050.61603'
     wallet.wallet.all_transaction: '1704884604578852863514289.3086'

@@ -26,6 +26,7 @@ runtime_options:
   server_version: python3-sandbox
   server_spec: null
   legacy_features: {class_names: true, bootstrap3: true, __dict__: true, root_container: true}
+  server_persist: true
 metadata: {title: 'P2P Bank ', description: this app provide services to person who are ready to invest and ready to give loan}
 startup_form: null
 native_deps: null
@@ -711,7 +712,7 @@ db_schema:
       admin_ui: {order: 2.375, width: 200}
       type: number
     - name: ascend_score
-      admin_ui: {order: 3, width: 200}
+      admin_ui: {order: 8.5, width: 200}
       type: number
     - name: total_loan_amount
       admin_ui: {width: 200, order: 9}
@@ -1046,20 +1047,12 @@ db_schema:
     - name: name_group
       admin_ui: {width: 200}
       type: string
-  fin_category:
-    client: full
-    server: full
-    columns:
-    - name: category
-      admin_ui: {width: 200}
-      type: string
-    title: fin_category
   fin_user_profile:
     client: full
     server: full
     columns:
     - name: customer_id
-      admin_ui: {order: -2, width: 200}
+      admin_ui: {order: 13, width: 200}
       type: number
     - name: full_name
       admin_ui: {order: -3, width: 200}
@@ -1083,7 +1076,7 @@ db_schema:
       admin_ui: {order: 6.9677734375, width: 200}
       type: string
     - name: email_user
-      admin_ui: {order: -2.5, width: 200}
+      admin_ui: {order: 12, width: 200}
       type: string
     - name: last_confirm
       admin_ui: {order: -1.625, width: 200}
@@ -1329,10 +1322,10 @@ db_schema:
       admin_ui: {width: 200}
       type: string
     - name: spouse_mobile
-      admin_ui: {width: 200}
+      admin_ui: {order: 6.25, width: 200}
       type: string
     - name: spouse_name
-      admin_ui: {width: 200}
+      admin_ui: {order: 6.5, width: 200}
       type: string
     - name: spouse_office_no
       admin_ui: {width: 200}
@@ -1763,20 +1756,6 @@ db_schema:
       admin_ui: {width: 200, order: 0}
       type: string
     title: fin_borrower_profession
-  fin_report_issue_category:
-    client: full
-    server: full
-    columns:
-    - name: borrower_subcategory_loan_issue
-      admin_ui: {order: 0, width: 280}
-      type: string
-    - name: subcategory_technical_issue
-      admin_ui: {order: -1, width: 243}
-      type: string
-    - name: lendor_subcategory_loan_issue
-      admin_ui: {order: 2, width: 261}
-      type: string
-    title: fin_report_issue_category
   fin_lendor_organization_type:
     client: full
     server: full
