@@ -144,45 +144,125 @@ from datetime import date, datetime
 class star_1_borrower_registration_form_2_employment(star_1_borrower_registration_form_2_employmentTemplate):
     def __init__(self, user_id, **properties):
         super().__init__(**properties)        
-        self.user_id=user_id
-        user_data=app_tables.fin_user_profile.get(customer_id=user_id)
+        self.user_id = user_id
+        user_data = app_tables.fin_user_profile.get(customer_id=user_id)
+
+        # Initialize all grid panels as invisible
+        self.grid_panel_1.visible = False
+        self.grid_panel_2.visible = False
+        self.grid_panel_3.visible = False
+        self.grid_panel_4.visible = False
+        
         if user_data:
-          self.text_box_1.text = user_data['business_add']
-          self.text_box_2.text = user_data['business_name']
-          self.drop_down_1.selected_value=user_data['business_type']
-          self.date_picker_1.date = user_data['year_estd']
-          self.text_box_3.text = user_data['industry_type']
-          self.text_box_4.text = user_data['six_month_turnover']          
-          self.text_box_5.text = user_data['din'].replace(' ', '') if 'din' in user_data else ''
-          self.text_box_6.text = user_data['cin'].replace(' ', '') if 'cin' in user_data else ''
-          self.text_box_7.text = user_data['registered_off_add'] if 'registered_off_add' in user_data else ''            
+            self.text_box_1.text = user_data['business_add']
+            self.text_box_2.text = user_data['business_name']
+            self.drop_down_1.selected_value = user_data['business_type']
+            self.date_picker_1.date = user_data['year_estd']
+            self.text_box_3.text = user_data['industry_type']
+            self.text_box_4.text = user_data['six_month_turnover']
+            self.text_box_5.text = user_data['din'].replace(' ', '') if 'din' in user_data else ''
+            self.text_box_6.text = user_data['cin'].replace(' ', '') if 'cin' in user_data else ''
+            self.text_box_7.text = user_data['registered_off_add'] if 'registered_off_add' in user_data else ''            
             # Uncomment below if file_loader_1 is used for proof verification
             # self.file_loader_1.url = anvil.media.get_url(user_data['proof_verification'])
+            # Handle initial visibility based on user type
+            user_type = user_data['user_type'] if 'user_type' in user_data else ''
+            self.update_visibility(user_type)
+            
         else:
+            print(f"No user data found for user_id: {user_id}")
             # Handle case where user_data is None or not found
-          print(f"No user data found for user_id: {user_id}")
-          self.borrower_college_name_text.text=user_data['college_name']
-          self.borrower_college_id_text.text=user_data['college_id']
-          self.borrower_college_address_text.text=user_data['college_address']
-          user_data.update()
+        
         # Set Form properties and Data Bindings.
-        self.init_components(**properties)# Set up event handler for dropdown change
+        self.init_components(**properties)
+        
+        # Set up event handler for dropdown change
         self.drop_down_1.set_event_handler('change', self.drop_down_1_change_handler)
+        
+        # Initialize visibility of components (assuming drop_down_2 is standalone)
+        self.drop_down_2.visible = True
+        self.grid_panel_4.visible = False
+        self.grid_panel_5.visible = False
+        
+        # Set up event handler for drop_down_2 change
+        self.drop_down_2.set_event_handler('change', self.drop_down_2_change_handler)
     
     def update_visibility(self, user_type):
         if user_type == 'Student':
             self.grid_panel_1.visible = True
             self.grid_panel_2.visible = False
+            self.grid_panel_3.visible = False
+            self.grid_panel_4.visible = False
             # Additional logic to populate grid_panel_2 components if needed
-        elif user_type == 'Business':
+        elif user_type == 'Employee':
             self.grid_panel_1.visible = False
             self.grid_panel_2.visible = True
+            self.grid_panel_3.visible = False
+            self.grid_panel_4.visible = False        
+        elif user_type == 'Self Employement':
+            self.grid_panel_1.visible = False
+            self.grid_panel_3.visible = True
+            self.grid_panel_2.visible = False
+            self.grid_panel_4.visible = False
             # Additional logic to populate grid_panel_1 components if needed
         else:
             # Handle other user types or default case
             self.grid_panel_1.visible = False
             self.grid_panel_2.visible = False
+            self.grid_panel_3.visible = False
+            self.grid_panel_4.visible = False
     
     def drop_down_1_change_handler(self, **event_args):
         selected_value = self.drop_down_1.selected_value
         self.update_visibility(selected_value)
+        # Reset grid_panel_4 and grid_panel_5 based on selection
+        self.reset_grid_panel_4_5(selected_value)
+    
+    def reset_grid_panel_4_5(self, selected_value):
+        if selected_value == 'Business':
+            self.drop_down_2.visible = True
+            self.grid_panel_4.visible = True
+            self.grid_panel_5.visible = False
+        elif selected_value == 'Farmer':
+            self.drop_down_2.visible = True
+            self.grid_panel_4.visible = False
+            self.grid_panel_5.visible = True
+        else:
+            self.drop_down_2.visible = True
+            self.grid_panel_4.visible = False
+            self.grid_panel_5.visible = False
+    
+    def drop_down_2_change_handler(self, **event_args):
+        selected_value = self.drop_down_2.selected_value
+        # Implement logic based on selected_value if needed
+        pass
+
+    
+    # def update_visibility(self, user_type):
+    #     if user_type == 'Student':
+    #         self.grid_panel_1.visible = True
+    #         self.grid_panel_2.visible = False
+    #         self.grid_panel_3.visible = False
+    #         self.grid_panel_4.visible = False
+    #         # Additional logic to populate grid_panel_2 components if needed
+    #     elif user_type == 'Employee':
+    #         self.grid_panel_1.visible = False
+    #         self.grid_panel_2.visible = True
+    #         self.grid_panel_3.visible = False
+    #         self.grid_panel_4.visible = False        
+    #     elif user_type == 'Self Employement':
+    #         self.grid_panel_1.visible = False
+    #         self.grid_panel_3.visible = True
+    #         self.grid_panel_2.visible = False
+    #         self.grid_panel_4.visible = False
+    #         # Additional logic to populate grid_panel_1 components if needed
+    #     else:
+    #         # Handle other user types or default case
+    #         self.grid_panel_1.visible = False
+    #         self.grid_panel_2.visible = False
+    #         self.grid_panel_3.visible = False
+    #         self.grid_panel_4.visible = False
+    
+    # def drop_down_1_change_handler(self, **event_args):
+    #     selected_value = self.drop_down_1.selected_value
+    #     self.update_visibility(selected_value)
