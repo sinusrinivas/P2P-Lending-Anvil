@@ -240,7 +240,7 @@ components:
   - name: label_1_copy_2
     properties: {text: 'Enter Your College Name:', align: left, bold: true}
     type: Label
-    layout_properties: {row: EGMDFS, width_xs: 4, col_xs: 2}
+    layout_properties: {row: EGMDFS, width_xs: 3, col_xs: 2}
   - name: borrower_college_name_text
     properties: {background: 'theme:On Primary', role: null}
     type: TextBox
