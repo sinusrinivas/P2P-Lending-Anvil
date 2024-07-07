@@ -49,55 +49,68 @@ class lender_registration_form_1_education_form(lender_registration_form_1_educa
 
 
   def button_2_click(self, **event_args):
-    """This method is called when the button is clicked"""
-    qualification = self.drop_down_1.selected_value
-    user_id = self.userId
+        """This method is called when the button is clicked"""
+        qualification = self.drop_down_1.selected_value
+        user_id = self.userId
+
+        # Get the uploaded files
+        tenth_class = self.file_loader_1.file #,self.file_loader_2.file]
+        tenth_class_1 = self.file_loader_2.file
+        tenth_class_2 = self.file_loader_4.file
+        tenth_class_3 = self.file_loader_7.file
+        tenth_class_4 = self.file_loader_11.file
+        intermediate = self.file_loader_3.file
+        intermediate_1 = self.file_loader_5.file 
+        intermediate_2 = self.file_loader_8.file
+        intermediate_3 = self.file_loader_12.file
+        btech = self.file_loader_6.file
+        btech_1 = self.file_loader_9.file
+        btech_2 = self.file_loader_13.file 
+        mtech = self.file_loader_10.file
+        mtech_1 = self.file_loader_14.file
+        phd = self.file_loader_15.file
+      
+        # Validate files based on qualification
+        if qualification == '10th standard' and not tenth_class:
+            Notification('Please upload All document before proceeding.').show()
+            return
+        if qualification == '12th standard' and (not tenth_class_1 or not intermediate):
+            Notification('Please upload All documents before proceeding.').show()
+            return
+        elif qualification == "Bachelor's degree" and (not tenth_class_2 or not intermediate_1 or not btech):
+            Notification("Please upload All documents before proceeding.").show()
+            return
+        elif qualification == "Master's degree" and (not tenth_class_3 or not intermediate_2 or not btech_1 or not mtech):
+            Notification("Please upload All documents before proceeding.").show()
+            return
+        elif qualification == 'PhD' and (not tenth_class_4 or not intermediate_3 or not btech_2 or not mtech_1 or not phd):
+            Notification('Please upload all documents before proceeding.').show()
+            return
 
 
-    # Get the uploaded files
-    tenth_class = self.file_loader_1.file 
-    tenth_class = self.file_loader_2.file
-    tenth_class = self.file_loader_4.file
-    tenth_class = self.file_loader_7.file
-    tenth_class = self.file_loader_11.file
-    intermediate = self.file_loader_3.file
-    intermediate = self.file_loader_5.file 
-    intermediate = self.file_loader_8.file
-    intermediate = self.file_loader_12.file
-    btech = self.file_loader_6.file
-    btech = self.file_loader_9.file
-    btech = self.file_loader_13.file 
-    mtech = self.file_loader_10.file
-    mtech = self.file_loader_14.file
-    phd = self.file_loader_15.file
+        # Proceed with server call and form navigation
+        if qualification == '10th standard':
+            anvil.server.call('add_education_tenth', tenth_class, user_id)
+        elif qualification == '12th standard':
+            anvil.server.call('add_education_int', tenth_class_1, intermediate, user_id)
+        elif qualification == "Bachelor's degree":
+            anvil.server.call('add_education_btech', tenth_class_2, intermediate_1, btech, user_id)
+        elif qualification == "Master's degree":
+            anvil.server.call('add_education_mtech', tenth_class_3, intermediate_2, btech_1, mtech, user_id)
+        elif qualification == 'PhD':
+            anvil.server.call('add_education_phd', tenth_class_4, intermediate_3, btech_2, mtech_1, phd, user_id)
+        else:
+            Notification("Please select a valid qualification status").show()
+            return
 
-    # if not tenth_class or not intermediate or not btech or not mtech or not phd:
-    #    Notification('Please upload all five files before proceed.').show()
-    if qualification == '10th standard':
-      anvil.server.call('add_education_tenth', tenth_class, user_id)
-      open_form('lendor.lendor_registration_forms.lender_registration_form_2', user_id=user_id) 
-    elif qualification == '12th standard':
-      anvil.server.call('add_education_int', tenth_class, intermediate, user_id)
-      open_form('lendor.lendor_registration_forms.lender_registration_form_2', user_id=user_id) 
-    elif qualification == "Bachelor's degree":
-      anvil.server.call('add_education_btech', tenth_class, intermediate, btech, user_id)
-      open_form('lendor.lendor_registration_forms.lender_registration_form_2', user_id=user_id) 
-    elif qualification == "Master's degree":
-      anvil.server.call('add_education_mtech', tenth_class, intermediate, btech, mtech, user_id)
-      open_form('lendor.lendor_registration_forms.lender_registration_form_2', user_id=user_id) 
-    elif qualification == 'PhD':
-      anvil.server.call('add_education_phd', tenth_class, intermediate, btech, mtech, phd, user_id)
-      open_form('lendor.lendor_registration_forms.lender_registration_form_2', user_id=user_id) 
-    else:
-      Notification("Please select a valid qualification status").show()
-      return 
+        open_form('lendor.lendor_registration_forms.lender_registration_form_2', user_id=user_id)
 
-    if qualification not in ['10th standard', '12th standard', "Bachelor's degree", "Master's degree", 'PhD']:
-      Notification("Please select a valid qualification status").show()
-    elif not user_id:
-      Notification("User ID is missing").show()
-    else:
-      anvil.server.call('add_lender_step1', qualification, user_id)
+        if qualification not in ['10th standard', '12th standard', "Bachelor's degree", "Master's degree", 'PhD']:
+           Notification("Please select a valid qualification status").show()
+        elif not user_id:
+            Notification("User ID is missing").show()
+        else:
+          anvil.server.call('add_lender_step1', qualification, user_id)
 
 
   def button_3_click(self, **event_args):

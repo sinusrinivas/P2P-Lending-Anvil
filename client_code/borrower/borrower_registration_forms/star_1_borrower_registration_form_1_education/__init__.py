@@ -72,8 +72,39 @@ class star_1_borrower_registration_form_1_education(star_1_borrower_registration
     mtech = self.file_loader_14.file
     phd = self.file_loader_15.file
 
-    # if not tenth_class or not intermediate or not btech or not mtech or not phd:
-    #    Notification('Please upload all five files before proceed.').show()
+    tenth_class = self.file_loader_1.file #,self.file_loader_2.file]
+    tenth_class_1 = self.file_loader_2.file
+    tenth_class_2 = self.file_loader_4.file
+    tenth_class_3 = self.file_loader_7.file
+    tenth_class_4 = self.file_loader_11.file
+    intermediate = self.file_loader_3.file
+    intermediate_1 = self.file_loader_5.file 
+    intermediate_2 = self.file_loader_8.file
+    intermediate_3 = self.file_loader_12.file
+    btech = self.file_loader_6.file
+    btech_1 = self.file_loader_9.file
+    btech_2 = self.file_loader_13.file 
+    mtech = self.file_loader_10.file
+    mtech_1 = self.file_loader_14.file
+    phd = self.file_loader_15.file
+      
+    # Validate files based on qualification
+    if qualification == '10th standard' and not tenth_class:
+        Notification('Please upload All document before proceeding.').show()
+        return
+    if qualification == '12th standard' and (not tenth_class_1 or not intermediate):
+        Notification('Please upload All documents before proceeding.').show()
+        return
+    elif qualification == "Bachelor's degree" and (not tenth_class_2 or not intermediate_1 or not btech):
+        Notification("Please upload All documents before proceeding.").show()
+        return
+    elif qualification == "Master's degree" and (not tenth_class_3 or not intermediate_2 or not btech_1 or not mtech):
+        Notification("Please upload All documents before proceeding.").show()
+        return
+    elif qualification == 'PhD' and (not tenth_class_4 or not intermediate_3 or not btech_2 or not mtech_1 or not phd):
+        Notification('Please upload all documents before proceeding.').show()
+        return
+   
     if qualification == '10th standard':
       anvil.server.call('add_education_tenth', tenth_class, user_id)
       open_form('borrower.borrower_registration_forms.star_1_borrower_registration_form_2_employment', user_id=user_id) 
