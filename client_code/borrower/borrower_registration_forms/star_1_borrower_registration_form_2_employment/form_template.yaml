@@ -30,7 +30,7 @@ components:
   properties: {role: null, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: '                                             Choose your Profession : '}
   type: Label
   layout_properties: {grid_position: 'CJDOQG,OEJRUX'}
-- name: Profesion_borrower_registration_form_drop_down
+- name: drop_down_1
   properties:
     role: outlined
     include_placeholder: true
@@ -42,7 +42,7 @@ components:
     underline: false
     font: ''
     foreground: ''
-    items: [Student, Business, Employee]
+    items: [Student, Business, Employee, Self Employement]
     spacing_below: small
     visible: true
     border: ''
@@ -57,7 +57,7 @@ components:
   properties: {height: 32}
   type: Spacer
   layout_properties: {grid_position: 'IYWLGO,DQSZNK'}
-- name: grid_panel_1
+- name: grid_panel_2
   properties: {}
   type: GridPanel
   layout_properties: {grid_position: 'XYNXYE,WBCSDO'}
@@ -82,7 +82,7 @@ components:
     properties: {role: null, bold: true, align: left, spacing_above: medium, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: medium, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: Select Your Business Type}
     type: Label
     layout_properties: {row: SALHYU, width_xs: 3, col_xs: 2}
-  - name: drop_down_1
+  - name: drop_down_12
     properties:
       role: null
       include_placeholder: true
@@ -228,7 +228,7 @@ components:
   properties: {height: 32}
   type: Spacer
   layout_properties: {grid_position: 'CRFYRZ,RXMOPC'}
-- name: grid_panel_2
+- name: grid_panel_1
   properties: {}
   type: GridPanel
   layout_properties: {grid_position: 'XZQGQN,XPSUBT'}
@@ -269,7 +269,7 @@ components:
   - name: label_4
     properties: {text: 'Enter Your College Address:', align: left, bold: true}
     type: Label
-    layout_properties: {row: WYMORN, width_xs: 3, col_xs: 2}
+    layout_properties: {row: WYMORN, width_xs: 4, col_xs: 2}
   - name: borrower_college_address_text
     properties: {background: 'theme:On Primary', height: 68.85711669921875, role: null}
     type: TextArea

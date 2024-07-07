@@ -127,6 +127,7 @@
 #       if file:
 #             self.image_1_copy.source = self.file_loader_1_copy.file
 
+# Profesion_borrower_registration_form_drop_down
 
 
 
@@ -165,26 +166,23 @@ class star_1_borrower_registration_form_2_employment(star_1_borrower_registratio
           self.borrower_college_address_text.text=user_data['college_address']
           user_data.update()
         # Set Form properties and Data Bindings.
-        self.init_components(**properties)
-        
-        # Set up event handler for dropdown change
-        self.Profesion_borrower_registration_form_drop_down.set_event_handler('change', self.Profesion_borrower_registration_form_drop_down_change_handler)
+        self.init_components(**properties)# Set up event handler for dropdown change
+        self.drop_down_1.set_event_handler('change', self.drop_down_1_change_handler)
     
     def update_visibility(self, user_type):
-        if user_type == 'student':
-            self.grid_panel_1.visible = False
-            self.grid_panel_2.visible = True
-            # Additional logic to populate grid_panel_2 components if needed
-        elif user_type == 'business':
+        if user_type == 'Student':
             self.grid_panel_1.visible = True
             self.grid_panel_2.visible = False
+            # Additional logic to populate grid_panel_2 components if needed
+        elif user_type == 'Business':
+            self.grid_panel_1.visible = False
+            self.grid_panel_2.visible = True
             # Additional logic to populate grid_panel_1 components if needed
         else:
             # Handle other user types or default case
             self.grid_panel_1.visible = False
             self.grid_panel_2.visible = False
-            
-
-    def Profesion_borrower_registration_form_drop_down_change(self, **event_args):
-            selected_value = self.Profesion_borrower_registration_form_drop_down.selected_value
-            self.update_visibility(selected_value)
+    
+    def drop_down_1_change_handler(self, **event_args):
+        selected_value = self.drop_down_1.selected_value
+        self.update_visibility(selected_value)
