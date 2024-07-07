@@ -145,41 +145,51 @@ class star_1_borrower_registration_form_2_employment(star_1_borrower_registratio
     def __init__(self, user_id, **properties):
         super().__init__(**properties)        
         self.user_id = user_id
-        user_data = app_tables.fin_user_profile.get(customer_id=user_id)
-
+        
         # Initialize all grid panels as invisible
         self.grid_panel_1.visible = False
         self.grid_panel_2.visible = False
         self.grid_panel_3.visible = False
         self.grid_panel_4.visible = False
+        self.grid_panel_5.visible = False
+        
+        # Fetch user data from the database
+        user_data = app_tables.fin_user_profile.get(customer_id=user_id)
         
         if user_data:
+            # Populate form fields if user data exists
             self.text_box_1.text = user_data['business_add']
             self.text_box_2.text = user_data['business_name']
             self.drop_down_1.selected_value = user_data['business_type']
             self.date_picker_1.date = user_data['year_estd']
             self.text_box_3.text = user_data['industry_type']
-            self.text_box_4.text = user_data['six_month_turnover']
+            self.text_box_4.text = user_data['six_month_turnover']          
             self.text_box_5.text = user_data['din'].replace(' ', '') if 'din' in user_data else ''
             self.text_box_6.text = user_data['cin'].replace(' ', '') if 'cin' in user_data else ''
-            self.text_box_7.text = user_data['registered_off_add'] if 'registered_off_add' in user_data else ''            
-            # Uncomment below if file_loader_1 is used for proof verification
-            # self.file_loader_1.url = anvil.media.get_url(user_data['proof_verification'])
+            self.text_box_7.text = user_data['registered_off_add'] if 'registered_off_add' in user_data else ''
+            self.borrower_college_name_text.text = user_data['college_name']
+            self.borrower_college_id_text.text=user_data['college_id']
+            self.borrower_college_address_text.text=user_data['college_address']
+            self.drop_down_1_copy_3.selected_value = user_data['land_type']
+            self.text_box_1_copy_4.text = str(user_data['total_acres'])  # Convert to string
+            self.text_box_2_copy_3.text = user_data['crop_name']
+            self.text_box_3_copy_2.text = user_data['farmer_earnings']
+
+            options_2 = app_tables.fin_borrower_land_type.search()
+            option_strings_2 = [str(option['land_type']) for option in options_2]
+            self.drop_down_1_copy_3.items = option_strings_2
+            
             # Handle initial visibility based on user type
             user_type = user_data['user_type'] if 'user_type' in user_data else ''
             self.update_visibility(user_type)
-            
         else:
             print(f"No user data found for user_id: {user_id}")
             # Handle case where user_data is None or not found
         
-        # Set Form properties and Data Bindings.
-        self.init_components(**properties)
-        
         # Set up event handler for dropdown change
         self.drop_down_1.set_event_handler('change', self.drop_down_1_change_handler)
         
-        # Initialize visibility of components (assuming drop_down_2 is standalone)
+        # Initialize visibility of components inside grid_panel_3
         self.drop_down_2.visible = True
         self.grid_panel_4.visible = False
         self.grid_panel_5.visible = False
@@ -188,54 +198,103 @@ class star_1_borrower_registration_form_2_employment(star_1_borrower_registratio
         self.drop_down_2.set_event_handler('change', self.drop_down_2_change_handler)
     
     def update_visibility(self, user_type):
+        # Reset all grid panel visibilities
+        self.grid_panel_1.visible = False
+        self.grid_panel_2.visible = False
+        self.grid_panel_3.visible = False
+        self.grid_panel_4.visible = False
+        self.grid_panel_5.visible = False
+        
+        # Set visibility based on user_type
         if user_type == 'Student':
             self.grid_panel_1.visible = True
-            self.grid_panel_2.visible = False
-            self.grid_panel_3.visible = False
-            self.grid_panel_4.visible = False
-            # Additional logic to populate grid_panel_2 components if needed
         elif user_type == 'Employee':
-            self.grid_panel_1.visible = False
             self.grid_panel_2.visible = True
-            self.grid_panel_3.visible = False
-            self.grid_panel_4.visible = False        
         elif user_type == 'Self Employement':
-            self.grid_panel_1.visible = False
             self.grid_panel_3.visible = True
-            self.grid_panel_2.visible = False
-            self.grid_panel_4.visible = False
-            # Additional logic to populate grid_panel_1 components if needed
         else:
             # Handle other user types or default case
-            self.grid_panel_1.visible = False
-            self.grid_panel_2.visible = False
-            self.grid_panel_3.visible = False
-            self.grid_panel_4.visible = False
+            pass
     
     def drop_down_1_change_handler(self, **event_args):
         selected_value = self.drop_down_1.selected_value
         self.update_visibility(selected_value)
-        # Reset grid_panel_4 and grid_panel_5 based on selection
-        self.reset_grid_panel_4_5(selected_value)
-    
-    def reset_grid_panel_4_5(self, selected_value):
-        if selected_value == 'Business':
-            self.drop_down_2.visible = True
-            self.grid_panel_4.visible = True
-            self.grid_panel_5.visible = False
-        elif selected_value == 'Farmer':
-            self.drop_down_2.visible = True
-            self.grid_panel_4.visible = False
-            self.grid_panel_5.visible = True
-        else:
-            self.drop_down_2.visible = True
-            self.grid_panel_4.visible = False
-            self.grid_panel_5.visible = False
     
     def drop_down_2_change_handler(self, **event_args):
         selected_value = self.drop_down_2.selected_value
-        # Implement logic based on selected_value if needed
-        pass
+        
+        if selected_value == 'Business':  # Replace with your actual dropdown values
+            self.grid_panel_4.visible = True
+            self.grid_panel_5.visible = False
+        elif selected_value == 'Farmer':  # Replace with your actual dropdown values
+            self.grid_panel_4.visible = False
+            self.grid_panel_5.visible = True
+        else:
+            self.grid_panel_4.visible = False
+            self.grid_panel_5.visible = False
+
+    def button_1_next_click(self, **event_args):
+        college_name=self.borrower_college_name_text.text
+        college_id=self.borrower_college_id_text.text
+        college_proof=self.borrower_college_proof_img.file
+        college_address=self.borrower_college_address_text.text
+        land_type = self.drop_down_1_copy_3.selected_value
+        total_acres = self.text_box_1_copy_4.text
+        crop_name = self.text_box_2_copy_3.text
+        farmer_earnings = self.text_box_3_copy_2.text
+        user_id=self.user_id
+      
+        selected_value_drop_down_1 = self.drop_down_1.selected_value
+        selected_value_drop_down_2 = self.drop_down_2.selected_value
+        if selected_value_drop_down_1 == 'Student':
+          if not re.match(r'^[A-Za-z\s]+$', college_name):
+              alert('enter valid college name')
+              
+          elif not college_name or not college_id or not college_proof or not college_address:
+              Notification("please fill all requrired fields").show()
+          else:
+              anvil.server.call('add_borrower_student',college_name,college_id,college_proof,college_address,user_id)
+              open_form('borrower.borrower_registration_forms.star_1_borrower_registration_form_3_marital',user_id=user_id)
+
+        elif selected_value_drop_down_1 == 'Employee':
+              # Validation for Employee
+              # Implement validation logic for Employee if needed
+              pass
+    
+        elif selected_value_drop_down_1 == 'Self Employement':
+            # Validation for Self Employement
+            # Implement validation logic for Self Employement if needed
+            pass
+
+        if selected_value_drop_down_2 == 'Business':
+            # Validation for Business
+            if not re.match(r'^[A-Za-z\s]+$', land_type):
+                alert('Enter valid land type')
+            elif not land_type or not total_acres:
+                Notification("Please fill all required fields").show()
+            else:
+                anvil.server.call('add_business_details', land_type, total_acres, crop_name, farmer_earnings, user_id)
+                open_form('borrower.borrower_registration_forms.star_1_borrower_registration_form_3_marital', user_id=user_id)
+        
+        elif selected_value_drop_down_2 == 'Farmer':
+        # Validation for Farmer
+            if not re.match(r'^[A-Za-z\s]+$', crop_name):
+                alert('Enter valid crop name')
+            elif not total_acres.isdigit():
+                Notification("Acres of Land should be valid").show()
+            elif not farmer_earnings.isdigit():
+                Notification("Yearly Income should be valid").show()
+            elif not crop_name or not total_acres or not farmer_earnings:
+                Notification("Please fill all the fields").show()
+            else:
+                anvil.server.call('add_farmer_details', land_type, total_acres, crop_name, farmer_earnings, user_id)
+                open_form('borrower.borrower_registration_forms.star_1_borrower_registration_form_3_marital', user_id=user_id)
+
+  
+    def borrower_college_proof_img_change(self, file, **event_args):
+      """This method is called when a new file is loaded into this FileLoader"""
+      if file:
+            self.image_1_copy_2.source = self.borrower_college_proof_img.file
 
     
     # def update_visibility(self, user_type):
@@ -266,3 +325,11 @@ class star_1_borrower_registration_form_2_employment(star_1_borrower_registratio
     # def drop_down_1_change_handler(self, **event_args):
     #     selected_value = self.drop_down_1.selected_value
     #     self.update_visibility(selected_value)
+
+    def button_1_click(self, **event_args):
+      """This method is called when the button is clicked"""
+      open_form('bank_users.user_form')
+
+    
+
+    
