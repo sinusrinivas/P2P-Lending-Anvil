@@ -41,7 +41,7 @@ components:
   layout_properties: {grid_position: 'VWRDWZ,ITCBYF BFMBDW,MLFOJA'}
   event_bindings: {show: borrower_full_name_test_show, pressed_enter: full_name_text_box_pressed_enter}
 - name: label_03
-  properties: {role: input-prompt, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: 16, tooltip: '', text: 'Enter Your Gender  * '}
+  properties: {role: input-prompt, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: 'Enter Your Gender  * '}
   type: Label
   layout_properties: {grid_position: 'VWRDWZ,CTQQUB YPUHWS,VIHTOP'}
 - name: gender_dd
@@ -68,7 +68,7 @@ components:
   layout_properties: {grid_position: 'VWRDWZ,CTQQUB MESVCT,JNTGGY'}
   event_bindings: {change: gender_dd_change}
 - name: label_04
-  properties: {role: input-prompt, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: right, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: 16, tooltip: '', text: 'Select Your DOB  * '}
+  properties: {role: input-prompt, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: right, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: 'Select Your DOB  * '}
   type: Label
   layout_properties: {grid_position: 'WFKZOV,ALTBGH KCLTLJ,IJCBFD', full_width_row: false}
   event_bindings: {show: label_04_show}
@@ -111,7 +111,7 @@ components:
   type: TextBox
   layout_properties: {grid_position: 'WFKZOV,ALTBGH ULUZMZ,WJCNNQ'}
 - name: label_05
-  properties: {role: input-prompt, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: 16, tooltip: '', text: Enter Your Mobile Number  *}
+  properties: {role: input-prompt, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: Enter Your Mobile Number  *}
   type: Label
   layout_properties: {grid_position: 'WFKZOV,XCETPN QJNSKL,NQRPOW'}
 - name: mobile_number_box
@@ -135,7 +135,7 @@ components:
     visible: true
     border: ''
     italic: false
-    font_size: 16
+    font_size: null
     tooltip: ''
     text: |
       Upload Profile Photo *
