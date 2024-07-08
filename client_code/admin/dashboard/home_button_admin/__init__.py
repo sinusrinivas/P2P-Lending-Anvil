@@ -36,8 +36,8 @@ class home_button_admin(home_button_adminTemplate):
   def CMS_click(self, **event_args):
     open_form('admin.dashboard.manage_cms')
 
-  def Bessem_click(self, **event_args):
-    open_form('admin.dashboard.manage_bessem')
+  def ascend_click(self, **event_args):
+    open_form('admin.dashboard.manage_ascend')
 
   def Settings_click(self, **event_args):
     open_form('admin.dashboard.manage_settings')
@@ -45,4 +45,8 @@ class home_button_admin(home_button_adminTemplate):
   def logout__click(self, **event_args):
     anvil.users.logout()
     open_form('bank_users.main_form')
+
+  def button_2_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    open_form('admin.dashboard')
 

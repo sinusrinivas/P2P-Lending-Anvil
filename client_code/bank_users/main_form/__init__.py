@@ -8,16 +8,17 @@ import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 from anvil.js.window import navigator
-from ..user_form import user_module
+from ..user_form import user_module 
 from . import main_form_module
 # from ..borrower_dashboard import borrower_main_form_module
-from ...borrower_registration_form.dashboard import main_form_module
-
+# from ...borrower_registration_form.dashboard import main_form_module
+from ...borrower.dashboard import main_form_module
 
 class main_form(main_formTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
+    self.role = "no-scroll"
     # Any code you write here will run before the form opens.
     # Set up event handlers
     # self.button_1_click_event = self.button_1_click
@@ -33,7 +34,7 @@ class main_form(main_formTemplate):
     #     self.button_2_click_event = self.button_2_click
   
   def login_signup_button_click(self, **event_args):
-    open_form('bank_users.main_form.login_page')
+    open_form('bank_users.main_form.signin_page')
         # anvil.users.login_with_form()
         # current_user = anvil.users.get_user()
         # if current_user:
@@ -246,9 +247,29 @@ class main_form(main_formTemplate):
 
   def button_10_click(self, **event_args):
     """This method is called when the button is clicked"""
-    open_form('bank_users.main_form.investNow_applyForLoan')
+    open_form('bank_users.main_form.signup_page', user_type='borrower')
 
   def button_10_copy_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    open_form('bank_users.main_form.investNow_applyForLoan')
+
+  def button_9_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    open_form('bank_users.main_form.signup_page', user_type='borrower')
+
+  def button_3_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    open_form('bank_users.main_form.signup_page', user_type='lender')
+
+  def button_11_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    open_form('bank_users.main_form.signup_page', user_type='lender')
+
+  def button_5_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    open_form('bank_users.main_form.investNow_applyForLoan')
+
+  def button_2_click(self, **event_args):
     """This method is called when the button is clicked"""
     open_form('bank_users.main_form.investNow_applyForLoan')
 

@@ -1,0 +1,50 @@
+is_package: true
+container: {type: DataRowPanel}
+components:
+- name: link_1
+  properties: {align: center, text: Edit Details, bold: true}
+  type: Link
+  layout_properties: {column: GRGCWD}
+  event_bindings: {click: link_1_click}
+- name: label_1
+  properties: {align: center}
+  type: Label
+  layout_properties: {column: JKSDUP}
+  data_bindings:
+  - {property: text, code: 'self.item[''loan_id'']', writeback: false}
+- name: label_2
+  properties: {align: center}
+  type: Label
+  layout_properties: {column: VJQQOR}
+  data_bindings:
+  - {property: text, code: 'self.item[''borrower_customer_id'']', writeback: false}
+- name: label_3
+  properties: {align: center}
+  type: Label
+  layout_properties: {column: XYILLG}
+  data_bindings:
+  - {property: text, code: 'self.item[''borrower_full_name'']', writeback: false}
+- name: label_4
+  properties: {align: center}
+  type: Label
+  layout_properties: {column: OJLQEN}
+  data_bindings:
+  - {property: text, code: 'self.item[''lender_customer_id'']', writeback: false}
+- name: label_6
+  properties: {align: center}
+  type: Label
+  layout_properties: {column: WZUWMP}
+  data_bindings:
+  - {property: text, code: 'self.item[''emi_number'']', writeback: false}
+- name: label_7
+  properties: {align: center}
+  type: Label
+  layout_properties: {column: URWWZV}
+  data_bindings:
+  - {property: text, code: 'self.item[''extension_amount'']', writeback: false}
+- name: label_9
+  properties: {align: center}
+  type: Label
+  layout_properties: {column: YTOJWQ}
+  data_bindings:
+  - {property: text, code: 'self.item[''status'']', writeback: false}

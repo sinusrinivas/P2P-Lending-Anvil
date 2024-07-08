@@ -1,0 +1,70 @@
+is_package: true
+container:
+  type: ColumnPanel
+  properties: {background: '#Edf0f4'}
+components:
+- properties: {}
+  type: form:admin.dashboard.home_button_admin
+  layout_properties: {grid_position: 'RUJLCE,UVZNQK', full_width_row: true}
+  name: home_button_admin_1
+- properties: {text: 'Reporting & Analytics ', align: center, bold: true, font_size: 22}
+  type: Label
+  layout_properties: {grid_position: 'MZKOVG,EKIHDQ'}
+  name: label_1
+- properties: {col_widths: '{}', background: white, role: elevated-card}
+  type: ColumnPanel
+  layout_properties: {grid_position: 'KSJELA,FAUUJL'}
+  name: content_panel
+  components:
+  - properties: {source: _/theme/admin/dashboard/reporting_analytics/risk_pool.png, height: '100'}
+    type: Image
+    layout_properties: {grid_position: 'GNRRDW,FEOFAR'}
+    event_bindings: {mouse_enter: image_1_mouse_enter, mouse_down: image_1_mouse_down, mouse_up: image_1_mouse_up}
+    name: image_1
+  - properties: {text: Risk Pool Analysis, bold: true, foreground: black, font_size: 16}
+    type: Button
+    layout_properties: {grid_position: 'LFNPCJ,OTMDIA'}
+    event_bindings: {click: risk_poolh_click}
+    name: button_14
+- properties: {col_widths: '{}', background: white, role: elevated-card}
+  type: ColumnPanel
+  layout_properties: {grid_position: 'KSJELA,RDSUBJ'}
+  name: content_panel_copy
+  components:
+  - properties: {source: _/theme/admin/dashboard/reporting_analytics/risk-portfolio.png, height: '100'}
+    type: Image
+    layout_properties: {grid_position: 'GNRRDW,FEOFAR'}
+    event_bindings: {mouse_enter: image_1_mouse_enter, mouse_down: image_1_mouse_down, mouse_up: image_1_mouse_up}
+    name: image_1_copy
+  - properties: {text: Risk Portfolio, bold: true, foreground: black, font_size: 16}
+    type: Button
+    layout_properties: {grid_position: 'LFNPCJ,OTMDIA'}
+    event_bindings: {click: port_polio_risk_click}
+    name: button_14_copy
+- properties: {col_widths: '{}', background: white, role: elevated-card}
+  type: ColumnPanel
+  layout_properties: {grid_position: 'KSJELA,WTPQQU'}
+  name: content_panel_copy_2
+  components:
+  - properties: {source: _/theme/admin/dashboard/reporting_analytics/key-metrics.png, height: '100'}
+    type: Image
+    layout_properties: {grid_position: 'GNRRDW,FEOFAR'}
+    event_bindings: {mouse_enter: image_1_mouse_enter, mouse_down: image_1_mouse_down, mouse_up: image_1_mouse_up}
+    name: image_1_copy_2
+  - properties: {text: Key Metrics, bold: true, foreground: black, font_size: 16}
+    type: Button
+    layout_properties: {grid_position: 'LFNPCJ,OTMDIA'}
+    event_bindings: {click: kay_metrics_click}
+    name: button_14_copy_2
+- properties: {height: 32}
+  type: Spacer
+  layout_properties: {grid_position: 'FSBWYC,YDQLON'}
+  name: spacer_1
+- name: button_1
+  properties: {text: Back, bold: true, icon: 'fa:backward', role: filled-button, background: '#05264d'}
+  type: Button
+  layout_properties: {grid_position: 'TVZDHP,PQORRJ'}
+- name: spacer_2
+  properties: {height: 226.39996337890625}
+  type: Spacer
+  layout_properties: {grid_position: 'KBJXQJ,XROYRN'}

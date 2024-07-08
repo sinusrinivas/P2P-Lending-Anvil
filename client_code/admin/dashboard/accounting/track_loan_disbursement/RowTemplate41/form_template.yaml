@@ -1,0 +1,54 @@
+is_package: true
+container:
+  type: DataRowPanel
+  properties: {align: center}
+components:
+- name: label_1
+  properties: {align: center}
+  type: Label
+  layout_properties: {column: JKSDUP}
+  data_bindings:
+  - {property: text, code: 'self.item[''borrower_full_name'']', writeback: false}
+- name: label_2
+  properties: {align: center}
+  type: Label
+  layout_properties: {column: VJQQOR}
+  data_bindings:
+  - {property: text, code: 'self.item[''loan_amount'']', writeback: false}
+- name: label_3
+  properties: {align: center}
+  type: Label
+  layout_properties: {column: OJLQEN}
+  data_bindings:
+  - {property: text, code: 'self.item[''ascend_score'']', writeback: false}
+- name: label_4
+  properties: {align: center}
+  type: Label
+  layout_properties: {column: CVLTWE}
+  data_bindings:
+  - {property: text, code: 'self.item[''loan_updated_status'']', writeback: false}
+- name: link_2
+  properties: {align: center}
+  type: Link
+  layout_properties: {column: YFTYVF}
+  data_bindings:
+  - {property: text, code: 'self.item[''loan_id'']', writeback: false}
+  event_bindings: {click: link_2_click}
+- name: image_1
+  properties: {height: 54}
+  type: Image
+  layout_properties: {column: BHQPOP}
+  data_bindings:
+  - {property: source, code: 'self.item[''user_photo'']', writeback: false}
+- name: label_5
+  properties: {align: center}
+  type: Label
+  layout_properties: {column: FRXVBZ}
+  data_bindings:
+  - {property: text, code: 'self.item[''lender_accepted_timestamp'']', writeback: false}
+- name: label_6
+  properties: {align: center}
+  type: Label
+  layout_properties: {column: YNDCBJ}
+  data_bindings:
+  - {property: text, code: 'self.item[''loan_disbursed_timestamp'']', writeback: false}
