@@ -8,11 +8,16 @@ import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 import anvil.server
-from datetime import datetime
 from datetime import datetime, timezone
 from . import wallet
+import anvil.pdf
 
-
+@anvil.server.callable
+def create_pdf(name, image_source,selected_row):    
+    # Your PDF creation logic here
+    pdf = anvil.pdf.PDFRenderer(landscape=True).render_form("lendor.dashboard.lender_portfolio",selected_row = selected_row)  
+    return pdf
+  
 @anvil.server.callable
 def add_lender_step1(qualification,user_id):
   row = app_tables.fin_user_profile.search(customer_id=user_id)
@@ -28,40 +33,40 @@ def add_education_tenth(tenth_class,user_id):
     row[0]['form_count']=1.1
 
 @anvil.server.callable
-def add_education_int(tenth_class,intermediate,user_id):
+def add_education_int(tenth_class_1,intermediate,user_id):
   row = app_tables.fin_user_profile.search(customer_id=user_id)
   if row:
-    row[0]['tenth_class']=tenth_class
+    row[0]['tenth_class']=tenth_class_1
     row[0]['intermediate']=intermediate
     row[0]['form_count']=1.2
 
 @anvil.server.callable
-def add_education_btech(tenth_class,intermediate,btech,user_id):
+def add_education_btech(tenth_class_2,intermediate_1,btech,user_id):
   row = app_tables.fin_user_profile.search(customer_id=user_id)
   if row:
-    row[0]['tenth_class']=tenth_class
-    row[0]['intermediate']=intermediate
+    row[0]['tenth_class']=tenth_class_2
+    row[0]['intermediate']=intermediate_1
     row[0]['btech']=btech
     row[0]['form_count']=1.3
 
 @anvil.server.callable
-def add_education_mtech(tenth_class,intermediate,btech,mtech,user_id):
+def add_education_mtech(tenth_class_3,intermediate_2,btech_1,mtech,user_id):
   row = app_tables.fin_user_profile.search(customer_id=user_id)
   if row:
-    row[0]['tenth_class']=tenth_class
-    row[0]['intermediate']=intermediate
-    row[0]['btech']=btech
+    row[0]['tenth_class']=tenth_class_3
+    row[0]['intermediate']=intermediate_2
+    row[0]['btech']=btech_1
     row[0]['mtech']=mtech
     row[0]['form_count']=1.4
 
 @anvil.server.callable
-def add_education_phd(tenth_class,intermediate,btech,mtech,phd,user_id):
+def add_education_phd(tenth_class_4,intermediate_3,btech_2,mtech_1,phd,user_id):
   row = app_tables.fin_user_profile.search(customer_id=user_id)
   if row:
-    row[0]['tenth_class']=tenth_class
-    row[0]['intermediate']=intermediate
-    row[0]['btech']=btech
-    row[0]['mtech']=mtech
+    row[0]['tenth_class']=tenth_class_4
+    row[0]['intermediate']=intermediate_3
+    row[0]['btech']=btech_2
+    row[0]['mtech']=mtech_1
     row[0]['phd']=phd
     row[0]['form_count']=1.5
 
@@ -207,8 +212,8 @@ def add_lendor_anotherperson_details(another_person, related_person_name, relate
     row = app_tables.fin_guarantor_details.search(customer_id=user_id)
     if row:
         row[0]['another_person'] = another_person
-        row[0]['related_person_name'] = related_person_name
-        row[0]['related_person_dob'] = related_person_dob
+        row[0]['guarantor_name'] = related_person_name
+        row[0]['guarantor_date_of_birth'] = related_person_dob
         row[0]['guarantor_mobile_no'] = related_person_mob
         row[0]['guarantor_profession'] = related_person_profession
         row[0]['guarantor_person_relation'] = related_person_relation
@@ -239,6 +244,14 @@ def add_lendor_bank_details_form_2(bank_id,branch_name, user_id):
     row[0]['last_confirm'] = True
     row[0]['form_count'] = 5
     wallet.find_user_update_type(user_id,row[0]['full_name'],_user_type)
+    
+    lender_row = app_tables.fin_lender.get(customer_id = user_id)
+    if lender_row:
+      if row[0]['last_confirm']:
+        lender_row['member_since'] = datetime.now().date()
+        lender_row.update()
+      else:
+        print("No matching lender record found for the provided email.")
     
     
 
