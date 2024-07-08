@@ -63,25 +63,28 @@ components:
   type: Spacer
   layout_properties: {grid_position: 'RVXRNM,ICOZLH'}
 - name: column_panel_1
-  properties: {}
+  properties: {role: null}
   type: ColumnPanel
   layout_properties: {grid_position: 'FLCWRL,GNNQUZ', full_width_row: true}
   components:
   - name: label_2
     properties:
-      text: |-
+      text: |
         10th Standard
-        (Size less than 2MB)
       bold: true
     type: Label
-    layout_properties: {grid_position: 'SZUYIW,PKULNJ'}
+    layout_properties: {grid_position: 'SZUYIW,PKULNJ DLFCQY,GQCKFF'}
+  - name: label_17
+    properties: {text: (Size less than 2MB), font_size: 12}
+    type: Label
+    layout_properties: {grid_position: 'SZUYIW,PKULNJ FFACBB,QBFMDQ'}
   - name: file_loader_1
     properties: {text: Upload Certificate}
     type: FileLoader
     layout_properties: {grid_position: 'SZUYIW,XTGZFO'}
     event_bindings: {change: file_loader_1_change}
   - name: image_1
-    properties: {height: 113}
+    properties: {height: 65}
     type: Image
     layout_properties: {grid_position: 'SZUYIW,WNKCAH'}
 - name: column_panel_2
@@ -104,7 +107,7 @@ components:
     layout_properties: {grid_position: 'VDAXFM,IHIUWL'}
     event_bindings: {change: file_loader_2_change}
   - name: image_2
-    properties: {height: 113}
+    properties: {height: 66}
     type: Image
     layout_properties: {grid_position: 'VDAXFM,DBMQIU'}
   - name: label_4
@@ -121,7 +124,7 @@ components:
     layout_properties: {grid_position: 'KJGFWU,QXDVUH'}
     event_bindings: {change: file_loader_3_change}
   - name: image_3
-    properties: {height: 122}
+    properties: {height: 64}
     type: Image
     layout_properties: {grid_position: 'KJGFWU,KHDJRY'}
 - name: column_panel_3
@@ -143,7 +146,7 @@ components:
     layout_properties: {grid_position: 'PHBJJT,KSHQAY'}
     event_bindings: {change: file_loader_4_change}
   - name: image_4
-    properties: {height: 115}
+    properties: {height: 68}
     type: Image
     layout_properties: {grid_position: 'PHBJJT,WDDZZF'}
   - name: label_6
@@ -160,7 +163,7 @@ components:
     layout_properties: {grid_position: 'XIMEIW,TDNZHH'}
     event_bindings: {change: file_loader_5_change}
   - name: image_5
-    properties: {height: 124}
+    properties: {height: 73}
     type: Image
     layout_properties: {grid_position: 'XIMEIW,XOWDHT'}
   - name: label_7
@@ -177,7 +180,7 @@ components:
     layout_properties: {grid_position: 'ZFLWES,PKJGOH'}
     event_bindings: {change: file_loader_6_change}
   - name: image_6
-    properties: {height: 124}
+    properties: {height: 73}
     type: Image
     layout_properties: {grid_position: 'ZFLWES,IMEHRK'}
 - name: column_panel_4
@@ -199,7 +202,7 @@ components:
     layout_properties: {grid_position: 'RFZOKM,PSIFJZ'}
     event_bindings: {change: file_loader_7_change}
   - name: image_7
-    properties: {height: 125}
+    properties: {height: 77}
     type: Image
     layout_properties: {grid_position: 'RFZOKM,RFZDNZ'}
   - name: label_9
@@ -216,7 +219,7 @@ components:
     layout_properties: {grid_position: 'AIHUMB,CPRGGH'}
     event_bindings: {change: file_loader_8_change}
   - name: image_8
-    properties: {height: 130}
+    properties: {height: 78}
     type: Image
     layout_properties: {grid_position: 'AIHUMB,RHVMHZ'}
   - name: label_10
@@ -233,7 +236,7 @@ components:
     layout_properties: {grid_position: 'MXUBDZ,MLHUII'}
     event_bindings: {change: file_loader_9_change}
   - name: image_9
-    properties: {height: 133}
+    properties: {height: 77}
     type: Image
     layout_properties: {grid_position: 'MXUBDZ,BATSLF'}
   - name: label_11
@@ -250,7 +253,7 @@ components:
     layout_properties: {grid_position: 'DGNKRP,JLHFTI'}
     event_bindings: {change: file_loader_10_change}
   - name: image_10
-    properties: {height: 133}
+    properties: {height: 78}
     type: Image
     layout_properties: {grid_position: 'DGNKRP,IBUATX'}
 - name: column_panel_5
@@ -272,7 +275,7 @@ components:
     layout_properties: {grid_position: 'PBBXNX,WDMHAA'}
     event_bindings: {change: file_loader_11_change}
   - name: image_11
-    properties: {height: 118}
+    properties: {height: 76}
     type: Image
     layout_properties: {grid_position: 'PBBXNX,RCSZEV'}
   - name: label_13
@@ -289,7 +292,7 @@ components:
     layout_properties: {grid_position: 'YVCWVP,HVSUQY'}
     event_bindings: {change: file_loader_12_change}
   - name: image_12
-    properties: {height: 117}
+    properties: {height: 78}
     type: Image
     layout_properties: {grid_position: 'YVCWVP,AQDNIZ'}
   - name: label_14
@@ -306,7 +309,7 @@ components:
     layout_properties: {grid_position: 'XJAOHR,ANOUAX'}
     event_bindings: {change: file_loader_13_change}
   - name: image_13
-    properties: {height: 111}
+    properties: {height: 75}
     type: Image
     layout_properties: {grid_position: 'XJAOHR,LDVRGD'}
   - name: label_15
@@ -323,7 +326,7 @@ components:
     layout_properties: {grid_position: 'DKLBUK,BCZDXX'}
     event_bindings: {change: file_loader_14_change}
   - name: image_14
-    properties: {height: 110}
+    properties: {height: 78}
     type: Image
     layout_properties: {grid_position: 'DKLBUK,OXNTEY'}
   - name: label_16
@@ -340,7 +343,7 @@ components:
     layout_properties: {grid_position: 'OTCFMR,RAZDXW'}
     event_bindings: {change: file_loader_15_change}
   - name: image_15
-    properties: {height: 115}
+    properties: {height: 82}
     type: Image
     layout_properties: {grid_position: 'OTCFMR,IQRBLV'}
 - name: button_2

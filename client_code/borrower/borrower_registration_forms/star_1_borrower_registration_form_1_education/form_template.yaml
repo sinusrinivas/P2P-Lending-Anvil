@@ -77,7 +77,7 @@ components:
     layout_properties: {grid_position: 'XACTFH,NKBLRP'}
     event_bindings: {change: file_loader_1_change}
   - name: image_1
-    properties: {height: 106, role: outlined-card}
+    properties: {height: 106, role: null}
     type: Image
     layout_properties: {grid_position: 'XACTFH,YZIIRN'}
 - name: column_panel_2
@@ -99,7 +99,7 @@ components:
     layout_properties: {grid_position: 'RPRENY,IESMBO'}
     event_bindings: {change: file_loader_2_change}
   - name: image_2
-    properties: {height: 112, role: outlined-card}
+    properties: {height: 112, role: null}
     type: Image
     layout_properties: {grid_position: 'RPRENY,ETTJZD'}
   - name: label_4
