@@ -241,7 +241,7 @@ class star_1_borrower_registration_form_2_employment(star_1_borrower_registratio
         file_type = file.content_type
         file_size = len(file.get_bytes())  # Use len to get size in bytes
     
-        if file_type not in ['image/jpeg', 'application/pdf']:
+        if file_type not in ['image/jpeg','image/png','image/jpg', 'application/pdf']:
           return False, "Only JPG images and PDF files are allowed."
     
         if file_size > 2 * 1024 * 1024:  # 2MB limit

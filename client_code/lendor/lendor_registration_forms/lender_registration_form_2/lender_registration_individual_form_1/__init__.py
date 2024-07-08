@@ -22,7 +22,7 @@ class lender_registration_individual_form_1(lender_registration_individual_form_
       # self.drop_down_1.selected_value=user_data['employment_type']
       # self.drop_down_2.selected_value=user_data['organization_type']
       self.text_box_1_copy.text=user_data['company_name']
-      self.drop_down_3.selected_value=user_data['organization_type']
+      self.drop_down_3_copy.selected_value=user_data['organization_type']
       self.drop_down_1_copy.selected_value=user_data['employment_type']
       self.drop_down_2_copy.selected_value = user_data['occupation_type']
       self.text_box_1_copy_2.text=user_data['company_address']
@@ -41,7 +41,7 @@ class lender_registration_individual_form_1(lender_registration_individual_form_
         file_type = file.content_type
         file_size = len(file.get_bytes())  # Use len to get size in bytes
     
-        if file_type not in ['image/jpeg','image/jpg','image/png', 'application/pdf']:
+        if file_type not in ['image/jpeg','image/png','image/jpg', 'application/pdf']:
           return False, "Only JPG images and PDF files are allowed."
     
         if file_size > 2 * 1024 * 1024:  # 2MB limit

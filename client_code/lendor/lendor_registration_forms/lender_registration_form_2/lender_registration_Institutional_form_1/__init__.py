@@ -10,6 +10,7 @@ from anvil.tables import app_tables
 from datetime import datetime
 import re
 
+
 class lender_registration_Institutional_form_1(lender_registration_Institutional_form_1Template):
   def __init__(self, user_id,**properties):
     self.userId = user_id
@@ -72,7 +73,7 @@ class lender_registration_Institutional_form_1(lender_registration_Institutional
         file_type = file.content_type
         file_size = len(file.get_bytes())  # Use len to get size in bytes
     
-        if file_type not in ['image/jpeg/jpg/png', 'application/pdf']:
+        if file_type not in ['image/jpeg','image/png','image/jpg', 'application/pdf']:
           return False, "Only JPG images and PDF files are allowed."
     
         if file_size > 2 * 1024 * 1024:  # 2MB limit
@@ -99,7 +100,7 @@ class lender_registration_Institutional_form_1(lender_registration_Institutional
 
     
      # Get today's date
-    today = date.today()
+    today = datetime.today()
     
     # Validation for Business
     if not re.match(r'^[A-Za-z\s]+$', business_name):
