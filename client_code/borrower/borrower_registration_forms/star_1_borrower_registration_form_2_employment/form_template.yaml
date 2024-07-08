@@ -85,7 +85,7 @@ components:
     layout_properties: {row: RHJDHL, width_xs: 3, col_xs: 2}
   - name: drop_down_1_copy_3
     properties:
-      role: null
+      role: outlined
       include_placeholder: true
       bold: false
       align: full
@@ -110,7 +110,7 @@ components:
     type: Label
     layout_properties: {row: PYGXXS, width_xs: 3, col_xs: 2}
   - name: text_box_1_copy_4
-    properties: {role: null, bold: false, align: left, placeholder: '', spacing_above: small, background: 'theme:On Primary', type: text, underline: false, font: '', hide_text: false, foreground: '', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: ''}
+    properties: {role: outlined, bold: false, align: left, placeholder: Enter the Number of Acres of Land, spacing_above: small, background: 'theme:On Primary', type: text, underline: false, font: '', hide_text: false, foreground: '', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: ''}
     type: TextBox
     layout_properties: {row: PYGXXS, width_xs: 6, col_xs: 6}
   - name: label_3_copy_1_copy_4
@@ -118,7 +118,7 @@ components:
     type: Label
     layout_properties: {row: ICUEML, width_xs: 2, col_xs: 2}
   - name: text_box_2_copy_3
-    properties: {role: null, bold: false, align: left, placeholder: '', spacing_above: small, background: 'theme:On Primary', type: text, underline: false, font: '', hide_text: false, foreground: '', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: ''}
+    properties: {role: outlined, bold: false, align: left, placeholder: Enter Crop Name, spacing_above: small, background: 'theme:On Primary', type: text, underline: false, font: '', hide_text: false, foreground: '', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: ''}
     type: TextBox
     layout_properties: {row: ICUEML, width_xs: 6, col_xs: 6}
   - name: label_1_copy_copy
@@ -126,7 +126,7 @@ components:
     type: Label
     layout_properties: {row: RGHVJU, width_xs: 3, col_xs: 2}
   - name: text_box_3_copy_2
-    properties: {role: null, bold: false, align: left, placeholder: '', spacing_above: small, background: 'theme:On Primary', type: text, underline: false, font: '', hide_text: false, foreground: '', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: ''}
+    properties: {role: outlined, bold: false, align: left, placeholder: Enter Your Yearly Income, spacing_above: small, background: 'theme:On Primary', type: text, underline: false, font: '', hide_text: false, foreground: '', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: ''}
     type: TextBox
     layout_properties: {row: RGHVJU, width_xs: 6, col_xs: 6}
 - name: grid_panel_4
@@ -143,28 +143,28 @@ components:
     type: Label
     layout_properties: {row: FLPZXV, width_xs: 4, col_xs: 4}
   - name: label_2
-    properties: {text: Enter Your Business Name, bold: true, spacing_above: medium}
+    properties: {text: 'Enter Your Business Name:', bold: true, spacing_above: medium}
     type: Label
     layout_properties: {row: TCEIYE, width_xs: 3, col_xs: 2}
   - name: text_box_2
-    properties: {role: null, background: 'theme:On Primary', placeholder: '', visible: true}
+    properties: {role: outlined, background: 'theme:On Primary', placeholder: Enter Your Business Name, visible: true}
     type: TextBox
     layout_properties: {row: TCEIYE, width_xs: 6, col_xs: 6}
   - name: label_1
-    properties: {role: null, bold: true, align: left, spacing_above: medium, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: Enter Your Business Address}
+    properties: {role: null, bold: true, align: left, spacing_above: medium, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: 'Enter Your Business Address:'}
     type: Label
     layout_properties: {row: XLGIZN, width_xs: 3, col_xs: 2}
   - name: text_box_1
-    properties: {role: null, bold: false, align: left, placeholder: '', spacing_above: small, background: 'theme:On Primary', type: text, underline: false, font: '', hide_text: false, foreground: '', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: ''}
+    properties: {role: outlined, bold: false, align: left, placeholder: Enter Your Business Address, spacing_above: small, background: 'theme:On Primary', type: text, underline: false, font: '', hide_text: false, foreground: '', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: ''}
     type: TextBox
     layout_properties: {row: XLGIZN, width_xs: 6, col_xs: 6}
   - name: label_3_copy_1
-    properties: {role: null, bold: true, align: left, spacing_above: medium, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: medium, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: Select Your Business Type}
+    properties: {role: null, bold: true, align: left, spacing_above: medium, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: medium, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: 'Select Your Business Type:'}
     type: Label
     layout_properties: {row: SALHYU, width_xs: 3, col_xs: 2}
   - name: drop_down_12
     properties:
-      role: null
+      role: outlined
       include_placeholder: true
       bold: false
       align: full
@@ -185,12 +185,12 @@ components:
     type: DropDown
     layout_properties: {row: SALHYU, width_xs: 6, col_xs: 6}
   - name: label_1_copy
-    properties: {role: null, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: medium, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: Select No of Employees Working}
+    properties: {role: null, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: medium, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: 'Select No of Employees Working:'}
     type: Label
     layout_properties: {row: LTEVKU, width_xs: 3, col_xs: 2}
   - name: drop_down_4
     properties:
-      role: null
+      role: outlined
       include_placeholder: true
       bold: false
       align: full
@@ -211,27 +211,27 @@ components:
     type: DropDown
     layout_properties: {row: LTEVKU, width_xs: 6, col_xs: 6}
   - name: label_2_copy
-    properties: {role: null, bold: true, align: left, spacing_above: medium, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: medium, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: Select Year of Establishment}
+    properties: {role: null, bold: true, align: left, spacing_above: medium, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: medium, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: 'Select Year of Establishment:'}
     type: Label
     layout_properties: {row: KMCUWH, width_xs: 3, col_xs: 2}
   - name: date_picker_1
-    properties: {role: null, bold: false, format: '', align: left, date: '', placeholder: Select Date, pick_time: false, spacing_above: small, background: 'theme:On Primary', underline: false, font: '', max_date: '', foreground: '', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', min_date: ''}
+    properties: {role: outlined, bold: false, format: '', align: left, date: '', placeholder: Select Date, pick_time: false, spacing_above: small, background: 'theme:On Primary', underline: false, font: '', max_date: '', foreground: '', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', min_date: ''}
     type: DatePicker
     layout_properties: {row: KMCUWH, width_xs: 6, col_xs: 6}
   - name: label_2_copy_1_copy_1
-    properties: {role: null, bold: true, align: left, spacing_above: medium, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: medium, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: Enter Your Industry Type}
+    properties: {role: null, bold: true, align: left, spacing_above: medium, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: medium, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: 'Enter Your Industry Type:'}
     type: Label
     layout_properties: {row: CIBTIC, width_xs: 3, col_xs: 2}
   - name: text_box_3
-    properties: {role: null, bold: false, align: left, placeholder: '', spacing_above: small, background: 'theme:On Primary', type: text, underline: false, font: '', hide_text: false, foreground: '', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: ''}
+    properties: {role: outlined, bold: false, align: left, placeholder: Enter Your Industry Type, spacing_above: small, background: 'theme:On Primary', type: text, underline: false, font: '', hide_text: false, foreground: '', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: ''}
     type: TextBox
     layout_properties: {row: CIBTIC, width_xs: 6, col_xs: 6}
   - name: label_3_copy_1_copy_1_copy
-    properties: {role: null, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: Enter Your Last Six Month's Turnover}
+    properties: {role: null, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: 'Enter Your Last Six Month''s Turnover:'}
     type: Label
     layout_properties: {row: DSUCCI, width_xs: 3, col_xs: 2}
   - name: text_box_4
-    properties: {role: null, bold: false, align: left, placeholder: '', spacing_above: small, background: 'theme:On Primary', type: text, underline: false, font: '', hide_text: false, foreground: '', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: ''}
+    properties: {role: outlined, bold: false, align: left, placeholder: Enter Your Last Six Month's Turnover, spacing_above: small, background: 'theme:On Primary', type: text, underline: false, font: '', hide_text: false, foreground: '', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: ''}
     type: TextBox
     layout_properties: {row: DSUCCI, width_xs: 6, col_xs: 6}
   - name: label_1_copy_1
@@ -254,7 +254,7 @@ components:
       tooltip: ''
       text: |-
         Last 6 Month's Bank Statements
-        (Less Than 2MB)
+        (Less Than 2MB):
     type: Label
     layout_properties: {row: YKLTNH, width_xs: 3, col_xs: 2}
   - name: file_loader_1
@@ -267,32 +267,32 @@ components:
     type: Image
     layout_properties: {row: YKLTNH, width_xs: 3, col_xs: 9}
   - name: label_1_copy_1_copy_1_copy
-    properties: {role: null, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: Enter DIN}
+    properties: {role: null, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: 'Enter DIN:'}
     type: Label
     layout_properties: {row: SFKRLZ, width_xs: 2, col_xs: 2}
   - name: text_box_5
-    properties: {role: null, bold: false, align: left, placeholder: '', spacing_above: small, background: 'theme:On Primary', type: text, underline: false, font: '', hide_text: false, foreground: '', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: ''}
+    properties: {role: outlined, bold: false, align: left, placeholder: Enter DIN, spacing_above: small, background: 'theme:On Primary', type: text, underline: false, font: '', hide_text: false, foreground: '', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: ''}
     type: TextBox
     layout_properties: {row: SFKRLZ, width_xs: 6, col_xs: 6}
     event_bindings: {pressed_enter: text_box_3_pressed_enter}
   - name: label_2_copy_1_copy_1_copy
-    properties: {role: null, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: Enter CIN}
+    properties: {role: null, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: 'Enter CIN:'}
     type: Label
     layout_properties: {row: NGDDYV, width_xs: 2, col_xs: 2}
   - name: text_box_6
-    properties: {role: null, bold: false, align: left, placeholder: '', spacing_above: small, background: 'theme:On Primary', type: text, underline: false, font: '', hide_text: false, foreground: '', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: ''}
+    properties: {role: outlined, bold: false, align: left, placeholder: Enter CIN, spacing_above: small, background: 'theme:On Primary', type: text, underline: false, font: '', hide_text: false, foreground: '', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: ''}
     type: TextBox
     layout_properties: {row: NGDDYV, width_xs: 6, col_xs: 6}
   - name: label_2_copy_1_copy_1_copy_2
-    properties: {role: null, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: Enter Your Registered Office Address}
+    properties: {role: null, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: 'Enter Your Registered Office Address:'}
     type: Label
     layout_properties: {row: SQJSWJ, width_xs: 2, col_xs: 2}
   - name: text_box_7
-    properties: {role: outlined, bold: false, align: left, placeholder: text_box_7, spacing_above: small, background: 'theme:On Primary', type: text, underline: false, font: '', hide_text: false, foreground: '', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: ''}
+    properties: {role: outlined, bold: false, align: left, placeholder: Enter Your Registered Office Address, spacing_above: small, background: 'theme:On Primary', type: text, underline: false, font: '', hide_text: false, foreground: '', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: ''}
     type: TextBox
     layout_properties: {row: SQJSWJ, width_xs: 6, col_xs: 6}
   - name: label_1_copy_1_copy
-    properties: {role: null, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: Provide Proof of Verification(recent electricity bill)}
+    properties: {role: null, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: 'Provide Proof of Verification(recent electricity bill):'}
     type: Label
     layout_properties: {row: ZCPIJA, width_xs: 3, col_xs: 2}
   - name: file_loader_1_copy
@@ -322,7 +322,7 @@ components:
     type: Label
     layout_properties: {row: EGMDFS, width_xs: 3, col_xs: 2}
   - name: borrower_college_name_text
-    properties: {background: 'theme:On Primary', role: null}
+    properties: {background: 'theme:On Primary', role: outlined, placeholder: Enter Your College Name}
     type: TextBox
     layout_properties: {row: EGMDFS, width_xs: 6, col_xs: 6}
   - name: label_2_copy_2
@@ -330,7 +330,7 @@ components:
     type: Label
     layout_properties: {row: BZJDPT, width_xs: 3, col_xs: 2}
   - name: borrower_college_id_text
-    properties: {background: 'theme:On Primary', role: null}
+    properties: {background: 'theme:On Primary', role: outlined, placeholder: Enter Your College Id}
     type: TextBox
     layout_properties: {row: BZJDPT, width_xs: 6, col_xs: 6}
   - name: label_3
@@ -351,7 +351,7 @@ components:
     type: Label
     layout_properties: {row: WYMORN, width_xs: 4, col_xs: 2}
   - name: borrower_college_address_text
-    properties: {background: 'theme:On Primary', height: 68.85711669921875, role: null}
+    properties: {background: 'theme:On Primary', height: 68.85711669921875, role: outlined, placeholder: Enter Your College Address}
     type: TextArea
     layout_properties: {row: WYMORN, width_xs: 6, col_xs: 6}
 - name: grid_panel_2
@@ -364,20 +364,20 @@ components:
     type: Label
     layout_properties: {row: RLFGIS, width_xs: 3, col_xs: 5}
   - name: label_1_copy_3
-    properties: {role: null, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: Enter Your Company Name}
+    properties: {role: null, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: 'Enter Your Company Name:'}
     type: Label
     layout_properties: {row: FGGBLT, width_xs: 4, col_xs: 2}
   - name: text_box_1_copy
-    properties: {role: null, bold: false, align: left, placeholder: '', spacing_above: small, background: 'theme:On Primary', type: text, underline: false, font: '', hide_text: false, foreground: '', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: ''}
+    properties: {role: outlined, bold: false, align: left, placeholder: Enter Your Company Name, spacing_above: small, background: 'theme:On Primary', type: text, underline: false, font: '', hide_text: false, foreground: '', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: ''}
     type: TextBox
     layout_properties: {row: FGGBLT, width_xs: 6, col_xs: 6}
   - name: label_2_copy_3
-    properties: {role: null, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: Select Your Occupation Type}
+    properties: {role: null, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: 'Select Your Occupation Type:'}
     type: Label
     layout_properties: {row: MSVYPD, width_xs: 4, col_xs: 2}
   - name: drop_down_2_copy
     properties:
-      role: null
+      role: outlined
       include_placeholder: true
       bold: false
       align: full
@@ -398,12 +398,12 @@ components:
     type: DropDown
     layout_properties: {row: MSVYPD, width_xs: 6, col_xs: 6}
   - name: label_2_copy_1
-    properties: {role: null, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: Select Your Empolyment Type}
+    properties: {role: null, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: 'Select Your Empolyment Type:'}
     type: Label
     layout_properties: {row: PNKYQL, width_xs: 4, col_xs: 2}
   - name: drop_down_1_copy
     properties:
-      role: null
+      role: outlined
       include_placeholder: true
       bold: false
       align: full
@@ -425,12 +425,12 @@ components:
     layout_properties: {row: PNKYQL, width_xs: 6, col_xs: 6}
     event_bindings: {change: drop_down_1_change}
   - name: label_3_copy_1_copy
-    properties: {role: null, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: Select Your Organization Type}
+    properties: {role: null, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: 'Select Your Organization Type:'}
     type: Label
     layout_properties: {row: AWCKZG, width_xs: 4, col_xs: 2}
   - name: drop_down_3
     properties:
-      role: null
+      role: outlined
       include_placeholder: true
       bold: false
       align: full
@@ -451,44 +451,44 @@ components:
     type: DropDown
     layout_properties: {row: AWCKZG, width_xs: 6, col_xs: 6}
   - name: label_2_copy_1_copy
-    properties: {role: null, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: Enter Your Company Address}
+    properties: {role: null, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: 'Enter Your Company Address:'}
     type: Label
     layout_properties: {row: TJPSJE, width_xs: 4, col_xs: 2}
   - name: text_box_1_copy_2
-    properties: {role: null, bold: false, align: left, placeholder: '', spacing_above: small, background: 'theme:On Primary', type: text, underline: false, font: '', hide_text: false, foreground: '', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: ''}
+    properties: {role: outlined, bold: false, align: left, placeholder: Enter Your Company Address, spacing_above: small, background: 'theme:On Primary', type: text, underline: false, font: '', hide_text: false, foreground: '', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: ''}
     type: TextBox
     layout_properties: {row: TJPSJE, width_xs: 6, col_xs: 6}
   - name: label_1_copy_4
-    properties: {role: null, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: Enter Company Phone Number}
+    properties: {role: null, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: 'Enter Company Phone Number:'}
     type: Label
     layout_properties: {row: GUBUNC, width_xs: 4, col_xs: 2}
   - name: text_box_2_copy
-    properties: {role: null, bold: false, align: left, placeholder: '', spacing_above: small, background: 'theme:On Primary', type: text, underline: false, font: '', hide_text: false, foreground: '', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: ''}
+    properties: {role: outlined, bold: false, align: left, placeholder: Enter Company Phone Number, spacing_above: small, background: 'theme:On Primary', type: text, underline: false, font: '', hide_text: false, foreground: '', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: ''}
     type: TextBox
     layout_properties: {row: GUBUNC, width_xs: 6, col_xs: 6}
   - name: label_3_copy_1_copy_2
-    properties: {role: null, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: Enter Your Landmark}
+    properties: {role: null, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: 'Enter Your Landmark:'}
     type: Label
     layout_properties: {row: WHUDDN, width_xs: 4, col_xs: 2}
   - name: text_box_3_copy
-    properties: {role: null, bold: false, align: left, placeholder: '', spacing_above: small, background: 'theme:On Primary', type: text, underline: false, font: '', hide_text: false, foreground: '', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: ''}
+    properties: {role: outlined, bold: false, align: left, placeholder: Enter Your Landmark, spacing_above: small, background: 'theme:On Primary', type: text, underline: false, font: '', hide_text: false, foreground: '', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: ''}
     type: TextBox
     layout_properties: {row: WHUDDN, width_xs: 6, col_xs: 6}
   - name: label_2_copy_1_copy_2
-    properties: {role: null, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: Enter Your Annual Salary}
+    properties: {role: null, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: 'Enter Your Annual Salary:'}
     type: Label
     layout_properties: {row: FLRCJF, width_xs: 4, col_xs: 2}
   - name: text_box_1_copy_3
-    properties: {role: null, bold: false, align: left, placeholder: '', spacing_above: small, background: 'theme:On Primary', type: text, underline: false, font: '', hide_text: false, foreground: '', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: ''}
+    properties: {role: outlined, bold: false, align: left, placeholder: Enter Your Annual Salary, spacing_above: small, background: 'theme:On Primary', type: text, underline: false, font: '', hide_text: false, foreground: '', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: ''}
     type: TextBox
     layout_properties: {row: FLRCJF, width_xs: 6, col_xs: 6}
   - name: label_3_copy
-    properties: {role: null, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: Select Your Salary type}
+    properties: {role: null, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: 'Select Your Salary type:'}
     type: Label
     layout_properties: {row: UUZFQU, width_xs: 4, col_xs: 2}
   - name: drop_down_1_copy_2
     properties:
-      role: null
+      role: outlined
       include_placeholder: true
       bold: false
       align: full
@@ -509,11 +509,11 @@ components:
     type: DropDown
     layout_properties: {row: UUZFQU, width_xs: 6, col_xs: 6}
   - name: label_3_copy_1_copy_3
-    properties: {role: null, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: Enter Your Designation}
+    properties: {role: null, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: 'Enter Your Designation:'}
     type: Label
     layout_properties: {row: QSIPLY, width_xs: 4, col_xs: 2}
   - name: text_box_2_copy_2
-    properties: {role: null, bold: false, align: left, placeholder: '', spacing_above: small, background: 'theme:On Primary', type: text, underline: false, font: '', hide_text: false, foreground: '', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: ''}
+    properties: {role: outlined, bold: false, align: left, placeholder: Enter Your Designation, spacing_above: small, background: 'theme:On Primary', type: text, underline: false, font: '', hide_text: false, foreground: '', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: ''}
     type: TextBox
     layout_properties: {row: QSIPLY, width_xs: 6, col_xs: 6}
   - name: label_1_copy_5
@@ -536,7 +536,7 @@ components:
       tooltip: ''
       text: |-
         Upload Employee Id
-        (Image Size less-than 2MB)
+        (Image Size less-than 2MB):
     type: Label
     layout_properties: {row: NSCZER, width_xs: 4, col_xs: 2}
   - name: file_loader_1_copy_2
@@ -568,11 +568,11 @@ components:
       tooltip: ''
       text: |-
         Upload Last Six Months Bank Statements
-        (Image size less-than 2MB)
+        (Image size less-than 2MB):
     type: Label
     layout_properties: {row: RTUPSU, width_xs: 4, col_xs: 2}
   - name: file_loader_2
-    properties: {text: Upload Bank Statements}
+    properties: {text: Upload Bank Statements, align: center}
     type: FileLoader
     layout_properties: {row: RTUPSU, width_xs: 3, col_xs: 6}
     event_bindings: {change: file_loader_2_change}

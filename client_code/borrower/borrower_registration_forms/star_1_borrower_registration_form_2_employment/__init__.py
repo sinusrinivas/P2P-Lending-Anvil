@@ -232,6 +232,22 @@ class star_1_borrower_registration_form_2_employment(star_1_borrower_registratio
         
         # Set up event handler for drop_down_2 change
         self.drop_down_2.set_event_handler('change', self.drop_down_2_change_handler)
+
+    def validate_file(self, file):
+        """Validate file type and size."""
+        if file is None:
+          return False, "No file uploaded."
+    
+        file_type = file.content_type
+        file_size = len(file.get_bytes())  # Use len to get size in bytes
+    
+        if file_type not in ['image/jpeg', 'application/pdf']:
+          return False, "Only JPG images and PDF files are allowed."
+    
+        if file_size > 2 * 1024 * 1024:  # 2MB limit
+          return False, "File size must be less than 2MB."
+    
+        return True, ""
     
     def update_visibility(self, user_type):
         # Reset all grid panel visibilities
@@ -405,29 +421,49 @@ class star_1_borrower_registration_form_2_employment(star_1_borrower_registratio
 
   
     def borrower_college_proof_img_change(self, file, **event_args):
-      """This method is called when a new file is loaded into this FileLoader"""
-      if file:
-            self.image_1_copy_2.source = self.borrower_college_proof_img.file
+        """This method is called when a new file is loaded into this FileLoader"""
+        valid, message = self.validate_file(file)
+        if valid:
+          self.image_1_copy_2.source = file
+        else:
+          Notification(message).show()
+          self.borrower_college_proof_img.clear()
 
     def file_loader_1_change(self, file, **event_args):
-      """This method is called when a new file is loaded into this FileLoader"""
-      if file:
-        self.image_1_copy_3.source = self.file_loader_1_copy_2.file
+        """This method is called when a new file is loaded into this FileLoader"""
+        valid, message = self.validate_file(file)
+        if valid:
+          self.image_1_copy_3.source = file
+        else:
+          Notification(message).show()
+          self.file_loader_1_copy_2.clear()
 
     def file_loader_2_change(self, file, **event_args):
-      """This method is called when a new file is loaded into this FileLoader"""
-      if file :
-        self.image_2.source = self.file_loader_2.file
+        """This method is called when a new file is loaded into this FileLoader"""
+        valid, message = self.validate_file(file)
+        if valid:
+          self.image_2.source = file
+        else:
+          Notification(message).show()
+          self.file_loader_2.clear()
 
     def file_loader_1(self, file, **event_args):
-      """This method is called when a new file is loaded into this FileLoader"""
-      if file:
-        self.image_1.source = self.file_loader_1.file
+        """This method is called when a new file is loaded into this FileLoader"""
+        valid, message = self.validate_file(file)
+        if valid:
+          self.image_1.source = file
+        else:
+          Notification(message).show()
+          self.file_loader_1.clear()
 
     def file_loader_1_copy(self, file, **event_args):
-      """This method is called when a new file is loaded into this FileLoader"""
-      if file:
-            self.image_1_copy.source = self.file_loader_1_copy.file
+        """This method is called when a new file is loaded into this FileLoader"""
+        valid, message = self.validate_file(file)
+        if valid:
+          self.image_1_copy.source = file
+        else:
+          Notification(message).show()
+          self.file_loader_1_copy.clear()
         
     # def update_visibility(self, user_type):
     #     if user_type == 'Student':
