@@ -28,7 +28,7 @@ components:
   type: Spacer
   layout_properties: {grid_position: 'YAYKWZ,MBTVQJ'}
 - name: column_panel_8
-  properties: {col_widths: '{"FABDPR":25,"ZKVJAQ":35}'}
+  properties: {col_widths: '{"FABDPR":15,"ZKVJAQ":45}'}
   type: ColumnPanel
   layout_properties: {grid_position: 'NPUSMS,WZCSNP'}
   components:
@@ -72,7 +72,7 @@ components:
     type: Spacer
     layout_properties: {grid_position: 'HQBFXO,WKCDBP'}
   - name: column_panel_1
-    properties: {role: null}
+    properties: {role: null, col_widths: '{"PKULNJ":15,"XTGZFO":15,"WNKCAH":20,"JBNZWM":10}'}
     type: ColumnPanel
     layout_properties: {grid_position: 'NLYKHL,QLPYZZ'}
     components:
@@ -103,8 +103,12 @@ components:
       properties: {height: 65}
       type: Image
       layout_properties: {grid_position: 'SZUYIW,WNKCAH'}
+    - name: file_name
+      properties: {}
+      type: Label
+      layout_properties: {grid_position: 'SZUYIW,JBNZWM'}
   - name: column_panel_2
-    properties: {}
+    properties: {col_widths: '{"IBECMM":15,"QXDVUH":15,"KHDJRY":20,"FDPDKU":10,"DKFTZY":15,"IHIUWL":15,"DBMQIU":20,"QPFDXQ":10}'}
     type: ColumnPanel
     layout_properties: {grid_position: 'UMKONO,MDOKLS'}
     components:
@@ -125,6 +129,10 @@ components:
       properties: {height: 66}
       type: Image
       layout_properties: {grid_position: 'VDAXFM,DBMQIU'}
+    - name: label_23
+      properties: {}
+      type: Label
+      layout_properties: {grid_position: 'VDAXFM,QPFDXQ'}
     - name: label_4
       properties: {text: 12th Standard *, bold: true, spacing_below: none, font_size: 14}
       type: Label
@@ -142,8 +150,12 @@ components:
       properties: {height: 64}
       type: Image
       layout_properties: {grid_position: 'KJGFWU,KHDJRY'}
+    - name: label_24
+      properties: {}
+      type: Label
+      layout_properties: {grid_position: 'KJGFWU,FDPDKU'}
   - name: column_panel_3
-    properties: {}
+    properties: {col_widths: '{"HWBZHY":15,"PKJGOH":15,"IMEHRK":20,"QEXNXI":10,"OCRTVG":15,"TDNZHH":15,"XOWDHT":20,"ABKWMC":10,"ITPTGJ":15,"KSHQAY":15,"WDDZZF":20,"GHICOK":10}'}
     type: ColumnPanel
     layout_properties: {grid_position: 'WXXSQX,YCEAZL'}
     components:
@@ -164,6 +176,10 @@ components:
       properties: {height: 68}
       type: Image
       layout_properties: {grid_position: 'PHBJJT,WDDZZF'}
+    - name: label_25
+      properties: {}
+      type: Label
+      layout_properties: {grid_position: 'PHBJJT,GHICOK'}
     - name: label_6
       properties: {text: 12th Standard *, bold: true, spacing_below: none, font_size: 14}
       type: Label
@@ -181,6 +197,10 @@ components:
       properties: {height: 73}
       type: Image
       layout_properties: {grid_position: 'XIMEIW,XOWDHT'}
+    - name: label_26
+      properties: {}
+      type: Label
+      layout_properties: {grid_position: 'XIMEIW,ABKWMC'}
     - name: label_7
       properties: {text: Bachelor's degree *, bold: true, spacing_below: none, font_size: 14}
       type: Label
@@ -198,8 +218,12 @@ components:
       properties: {height: 73}
       type: Image
       layout_properties: {grid_position: 'ZFLWES,IMEHRK'}
+    - name: label_27
+      properties: {}
+      type: Label
+      layout_properties: {grid_position: 'ZFLWES,QEXNXI'}
   - name: column_panel_4
-    properties: {}
+    properties: {col_widths: '{"WXAWRZ":15,"JLHFTI":15,"IBUATX":20,"JNTJQV":10,"CRXPQV":15,"MLHUII":15,"BATSLF":20,"BGOXKN":10,"YYYAVI":15,"CPRGGH":15,"RHVMHZ":20,"MDQZFO":10,"NTVWYP":15,"PSIFJZ":15,"RFZDNZ":20,"SMGKNM":10}'}
     type: ColumnPanel
     layout_properties: {grid_position: 'YVZCKH,WIIDNT'}
     components:
@@ -225,6 +249,10 @@ components:
       properties: {height: 77}
       type: Image
       layout_properties: {grid_position: 'RFZOKM,RFZDNZ'}
+    - name: label_28
+      properties: {}
+      type: Label
+      layout_properties: {grid_position: 'RFZOKM,SMGKNM'}
     - name: label_9
       properties: {text: 12th Standard *, bold: true, spacing_below: none, font_size: 14}
       type: Label
@@ -242,6 +270,10 @@ components:
       properties: {height: 78}
       type: Image
       layout_properties: {grid_position: 'AIHUMB,RHVMHZ'}
+    - name: label_29
+      properties: {}
+      type: Label
+      layout_properties: {grid_position: 'AIHUMB,MDQZFO'}
     - name: label_10
       properties: {text: Bachelor's degree *, bold: true, spacing_below: none, font_size: 14}
       type: Label
@@ -259,6 +291,10 @@ components:
       properties: {height: 77}
       type: Image
       layout_properties: {grid_position: 'MXUBDZ,BATSLF'}
+    - name: label_30
+      properties: {}
+      type: Label
+      layout_properties: {grid_position: 'MXUBDZ,BGOXKN'}
     - name: label_11
       properties: {text: Master's degree *, bold: true, spacing_below: none, font_size: 14}
       type: Label
@@ -276,8 +312,12 @@ components:
       properties: {height: 78}
       type: Image
       layout_properties: {grid_position: 'DGNKRP,IBUATX'}
+    - name: label_31
+      properties: {}
+      type: Label
+      layout_properties: {grid_position: 'DGNKRP,JNTJQV'}
   - name: column_panel_5
-    properties: {}
+    properties: {col_widths: '{"FYGVYF":15,"RAZDXW":15,"IQRBLV":20,"JJAKFO":10,"FWHFZE":15,"BCZDXX":15,"OXNTEY":20,"CGFTKG":10,"FRBHSE":15,"ANOUAX":15,"LDVRGD":20,"RMCUTZ":10,"OIBVPE":15,"WDMHAA":15,"RCSZEV":20,"IVTYZV":10,"VNCPKR":15,"CUONWG":15,"QFWGCI":20,"EHEZDI":10}'}
     type: ColumnPanel
     layout_properties: {grid_position: 'CINIAY,PZEWGR'}
     components:
@@ -298,23 +338,31 @@ components:
       properties: {height: 76}
       type: Image
       layout_properties: {grid_position: 'PBBXNX,RCSZEV'}
+    - name: label_32
+      properties: {}
+      type: Label
+      layout_properties: {grid_position: 'PBBXNX,IVTYZV'}
     - name: label_13
       properties: {text: 12th Standard *, bold: true, spacing_below: none, font_size: 14}
       type: Label
-      layout_properties: {grid_position: 'YVCWVP,ERBVKR HUVOOX,PMCULH'}
+      layout_properties: {grid_position: 'VBMJMB,VNCPKR XACJWD,KBRCZQ'}
     - name: label_22_copy_9
       properties: {text: (Size less than 2MB), spacing_above: none, font_size: 12}
       type: Label
-      layout_properties: {grid_position: 'YVCWVP,ERBVKR JRNAYC,UODTSB'}
+      layout_properties: {grid_position: 'VBMJMB,VNCPKR DZYCQA,NFEJUR'}
     - name: file_loader_12
       properties: {text: Upload Certificate}
       type: FileLoader
-      layout_properties: {grid_position: 'YVCWVP,HVSUQY'}
+      layout_properties: {grid_position: 'VBMJMB,CUONWG'}
       event_bindings: {change: file_loader_12_change}
     - name: image_12
       properties: {height: 78}
       type: Image
-      layout_properties: {grid_position: 'YVCWVP,AQDNIZ'}
+      layout_properties: {grid_position: 'VBMJMB,QFWGCI'}
+    - name: label_33
+      properties: {}
+      type: Label
+      layout_properties: {grid_position: 'VBMJMB,EHEZDI'}
     - name: label_14
       properties: {text: Bachelor's degree *, bold: true, spacing_below: none, font_size: 14}
       type: Label
@@ -332,6 +380,10 @@ components:
       properties: {height: 75}
       type: Image
       layout_properties: {grid_position: 'XJAOHR,LDVRGD'}
+    - name: label_34
+      properties: {}
+      type: Label
+      layout_properties: {grid_position: 'XJAOHR,RMCUTZ'}
     - name: label_15
       properties: {text: Master's degree *, bold: true, spacing_below: none, font_size: 14}
       type: Label
@@ -349,6 +401,10 @@ components:
       properties: {height: 78}
       type: Image
       layout_properties: {grid_position: 'DKLBUK,OXNTEY'}
+    - name: label_35
+      properties: {}
+      type: Label
+      layout_properties: {grid_position: 'DKLBUK,CGFTKG'}
     - name: label_16
       properties:
         text: |
@@ -371,6 +427,10 @@ components:
       properties: {height: 82}
       type: Image
       layout_properties: {grid_position: 'OTCFMR,IQRBLV'}
+    - name: label_36
+      properties: {}
+      type: Label
+      layout_properties: {grid_position: 'OTCFMR,JJAKFO'}
 - name: button_1
   properties: {text: Prev, align: right, background: '#0b2547', foreground: white, icon: 'fa:angle-double-left', bold: true}
   type: Button
