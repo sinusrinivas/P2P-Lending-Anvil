@@ -1,4 +1,4 @@
-from ._anvil_designer import login_pageTemplate
+from ._anvil_designer import signin_pageTemplate
 from anvil import *
 import anvil.server
 import anvil.google.auth, anvil.google.drive
@@ -12,7 +12,7 @@ from .. import main_form_module
 from datetime import datetime
 
 
-class login_page(login_pageTemplate):
+class signin_page(signin_pageTemplate):
   def __init__(self,  **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
@@ -278,7 +278,7 @@ class login_page(login_pageTemplate):
                 user_module.add_email_and_user_id(user_email)
                 main_form_module.email = user_email
                 main_form_module.flag = True
-                open_form('bank_users.main_form.basic_registration_form')
+                open_form('bank_users.main_form.forgot_password',email)
             else:
                 check_user_registration = user_module.check_user_registration_form_done_or_not_engine(user_email)
                 print("main else statement was executed")
