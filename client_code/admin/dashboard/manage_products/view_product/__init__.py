@@ -13,6 +13,7 @@ class view_product(view_productTemplate):
     def __init__(self, **properties):
         self.init_components(**properties)
         self.fetch_and_populate_data()
+        self.repeating_panel_1.set_event_handler('x-refresh', self.refresh_repeating_panel)
 
     def fetch_and_populate_data(self):
         self.data = tables.app_tables.fin_product_details.search()
@@ -43,5 +44,9 @@ class view_product(view_productTemplate):
 
     def button_1_copy_3_click(self, **event_args):
       open_form('admin.dashboard.manage_products')
-      
+
+
+    def refresh_repeating_panel(self, **event_args):
+      self.repeating_panel_1.items = app_tables.fin_product_details.search()
         
+          

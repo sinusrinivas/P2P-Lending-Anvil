@@ -1,0 +1,44 @@
+is_package: true
+container: {type: DataRowPanel}
+components:
+- name: label_2
+  properties: {align: center}
+  type: Label
+  layout_properties: {column: JKSDUP}
+  data_bindings:
+  - {property: text, code: 'self.item[''loan_amount'']', writeback: false}
+- name: label_3
+  properties: {align: center}
+  type: Label
+  layout_properties: {column: OJLQEN}
+  data_bindings:
+  - {property: text, code: 'self.item[''loan_updated_status'']', writeback: false}
+- name: link_1
+  properties: {text: View Details, align: center}
+  type: Link
+  layout_properties: {column: NFYNZM}
+  event_bindings: {click: link_1_click}
+- name: label_4
+  properties: {align: center}
+  type: Label
+  layout_properties: {column: JNEVFU}
+  data_bindings:
+  - {property: text, code: 'self.item[''borrower_full_name'']', writeback: false}
+- name: label_5
+  properties: {align: center}
+  type: Label
+  layout_properties: {column: RFMHCZ}
+  data_bindings:
+  - {property: text, code: 'self.item[''ascend_value'']', writeback: false}
+- name: label_6
+  properties: {align: center}
+  type: Label
+  layout_properties: {column: GUBYWD}
+  data_bindings:
+  - {property: text, code: 'self.item[''tenure'']', writeback: false}
+- name: label_1
+  properties: {align: center}
+  type: Label
+  layout_properties: {column: OOZQUT}
+  data_bindings:
+  - {property: text, code: 'self.item[''product_name'']', writeback: false}

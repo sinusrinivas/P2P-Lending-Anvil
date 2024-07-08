@@ -16,6 +16,7 @@ class signup_page(signup_pageTemplate):
   def __init__(self, user_type = None,  **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
+    self.role = "no-scroll"
     self.user_type = user_type
 
     # Any code you write here will run before the form opens.
@@ -51,7 +52,7 @@ class signup_page(signup_pageTemplate):
                 user_module.add_email_and_user_id(email ,password, self.user_type)
                 main_form_module.email = email
                 main_form_module.flag = True
-                open_form('bank_users.main_form.basic_registration_form')
+                open_form('bank_users.main_form.signin_page')
       else:
         self.retype_password_error_label.text = 'Email is already exists'
         self.retype_password_error_label.visible = True
@@ -68,7 +69,7 @@ class signup_page(signup_pageTemplate):
 
   def link_2_click(self, **event_args):
     """This method is called when the link is clicked"""
-    open_form('bank_users.main_form.login_page')
+    open_form('bank_users.main_form.signin_page')
 
   def home_main_form_link_click(self, **event_args):
     """This method is called when the link is clicked"""
@@ -85,3 +86,52 @@ class signup_page(signup_pageTemplate):
   def contact_main_form_link_click(self, **event_args):
     """This method is called when the link is clicked"""
     open_form('bank_users.main_form.contact_main_form')
+
+  def login_signup_button_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    open_form('bank_users.main_form.signin_page')
+
+  def send_otp_click(self, **event_args):
+    email = self.text_box_1.text.strip()
+    if not email:
+        alert("Please fill the email")
+        return
+
+    check_user_already_exist = anvil.server.call('check_user_profile', email)
+    if check_user_already_exist is None:
+      self.otp = anvil.server.call('send_email_otp', email)
+      if self.otp:
+        alert(f"OTP has been sent to {email}")
+        self.show_otp_input()
+      else:
+        self.retype_password_error_label.text = 'Failed to send OTP. Please try again later.'
+        self.retype_password_error_label.visible = True
+    else:
+      self.retype_password_error_label.text = 'Email already exists'
+      self.retype_password_error_label.visible = True
+
+  def show_otp_input(self):
+    self.text_box_otp.visible = True
+    self.verify_otp_button.visible = True
+    self.send_otp.text = "Resend"  # Change text of send_otp link
+    self.send_otp.visible = True
+
+  def verify_otp_button_click(self, **event_args):
+    entered_otp = self.text_box_otp.text.strip()
+    if str(self.otp) == entered_otp:
+        self.retype_password_error_label.text = 'OTP verified successfully'
+        
+        self.retype_password_error_label.visible = True
+        # Update email verified status in user table
+        email = self.text_box_1.text.strip()
+        # open_form('bank_users.main_form.forgot_password',email)
+        anvil.server.call('update_user_status', email, email_verified=True)
+    else:
+        self.retype_password_error_label.text = 'Invalid OTP. Please try again.'
+        self.retype_password_error_label.visible = True
+        self.send_otp.visible = True
+
+  def text_box_otp_pressed_enter(self, **event_args):
+    """This method is called when the user presses Enter in this text box"""
+    pass
+

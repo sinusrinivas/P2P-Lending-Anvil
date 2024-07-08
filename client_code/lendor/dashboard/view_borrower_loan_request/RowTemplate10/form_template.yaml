@@ -1,0 +1,34 @@
+container:
+  type: DataRowPanel
+  event_bindings: {refreshing_data_bindings: form_refreshing_data_bindings}
+components:
+- type: Label
+  properties: {}
+  name: label_1
+  layout_properties: {column: QLOWGE}
+  data_bindings:
+  - {property: text, code: 'self.item[''product_name'']', writeback: false}
+- type: Label
+  properties: {}
+  name: label_2
+  layout_properties: {column: FIZMCQ}
+  data_bindings:
+  - {property: text, code: 'self.item[''loan_amount'']'}
+- type: Label
+  properties: {}
+  name: label_3
+  layout_properties: {column: GYGCMD}
+  data_bindings:
+  - {property: text, code: 'self.item[''borrower_full_name'']', writeback: false}
+- type: Button
+  properties: {role: null, bold: true, align: center, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '#0876e8', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: view details}
+  name: button_1
+  layout_properties: {column: IZHOQY}
+  event_bindings: {click: button_1_click}
+- type: Label
+  properties: {}
+  name: label_4
+  layout_properties: {column: XQSISW}
+  data_bindings:
+  - {property: text, code: 'self.item[''beseem_score'']', writeback: false}
+is_package: true

@@ -39,3 +39,7 @@ class home_renovation_loan(home_renovation_loanTemplate):
     """This method is called when the button is clicked"""
     open_form('bank_users.main_form.investNow_applyForLoan')
 
+  def button_1_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    open_form('bank_users.main_form.signup_page', user_type='borrower')
+

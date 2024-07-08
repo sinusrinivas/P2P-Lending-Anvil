@@ -21,3 +21,7 @@ class update_form(update_formTemplate):
 
   def button_1_copy_click(self, **event_args):
     open_form('admin.dashboard.admin_teams.view_profile')
+
+  def button_1_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    pass
