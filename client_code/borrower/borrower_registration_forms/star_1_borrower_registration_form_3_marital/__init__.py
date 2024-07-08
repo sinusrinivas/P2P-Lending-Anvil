@@ -67,8 +67,8 @@ class star_1_borrower_registration_form_3_marital(star_1_borrower_registration_f
     self.date_picker_3.add_event_handler("change", self.validate_spouse_dob)
     self.spouse_mbl_no_text.add_event_handler("change", self.validate_spouse_mbl_no)
     self.drop_down_1_copy.add_event_handler("change", self.validate_spouse_profession)
-    self.spouse_companyname_text.add_event_handler("change", self.validate_spouse_company)
-    self.annual_earning_text.add_event_handler("change", self.validate_annual_earning)
+    # self.spouse_companyname_text.add_event_handler("change", self.validate_spouse_company)
+    # self.annual_earning_text.add_event_handler("change", self.validate_annual_earning)
 
   def collect_details(self):
         # Collect details from the form
@@ -214,40 +214,28 @@ class star_1_borrower_registration_form_3_marital(star_1_borrower_registration_f
           errors = []
           if not spouse_name:
             errors.append("Enter a valid full name!")
-            self.spouse_name_text.background = 'red'
+            self.spouse_name_text.focus()
           elif not re.match(r'^[A-Za-z\s]+$', spouse_name):
             errors.append("Enter a valid full name!")
-            self.spouse_name_text.background = 'red'
-          else:
-            self.spouse_name_text.background = 'white'
-          if not spouse_mob or spouse_mob > datetime.now().date():
+            self.spouse_name_text.focus()
+          elif not spouse_mob or spouse_mob > datetime.now().date():
             errors.append("Enter a valid date of marriage!")
-            self.date_picker_3.background = 'red'
-          else:
-            self.date_picker_3.background = 'white'
-          if not spouse_mbl_no:
+            self.date_picker_3.focus()
+          elif not spouse_mbl_no:
             errors.append("Enter a valid mobile no!")
-            self.spouse_mbl_no_text.background = 'red'
+            self.spouse_mbl_no_text.focus()
           elif not re.match(r'^\d{10}$', str(spouse_mbl_no)):
             errors.append("Enter a valid mobile no!")
-            self.spouse_mbl_no_text.background = 'red'
-          else:
-            self.spouse_mbl_no_text.background = 'white'
-          if not spouse_profession:
+            self.spouse_mbl_no_text.focus()
+          elif not spouse_profession:
             errors.append("Select a valid profession!")
-            self.drop_down_1_copy.background = 'red'
-          else:
-            self.drop_down_1_copy.background = 'white'
-          if not spouse_company:
-            errors.append("Enter a valid company name!")
-            self.spouse_companyname_text.background = 'red'
-          else:
-            self.spouse_companyname_text.background = 'white'
-          if not annual_earning:
-            errors.append("Enter a valid annual earning!")
-            self.annual_earning_text.background = 'red'
-          else:
-            self.annual_earning_text.background = 'white'
+            self.drop_down_1_copy.focus()
+          # elif not spouse_company:
+          #   errors.append("Enter a valid company name!")
+          #   self.spouse_companyname_text.focus()
+          # elif not annual_earning:
+          #   errors.append("Enter a valid annual earning!")
+          #   self.annual_earning_text.focus()
     
           if errors:
             Notification("\n".join(errors)).show()
@@ -377,16 +365,16 @@ class star_1_borrower_registration_form_3_marital(star_1_borrower_registration_f
     else:
         self.drop_down_1_copy.background = 'white'
 
-  def validate_spouse_company(self, **event_args):
-    spouse_company = self.spouse_companyname_text.text
-    if not spouse_company:
-        self.spouse_companyname_text.background = 'red'
-    else:
-        self.spouse_companyname_text.background = 'white'
+  # def validate_spouse_company(self, **event_args):
+  #   spouse_company = self.spouse_companyname_text.text
+  #   if not spouse_company:
+  #       self.spouse_companyname_text.background = 'red'
+  #   else:
+  #       self.spouse_companyname_text.background = 'white'
         
-  def validate_annual_earning(self, **event_args):
-    annual_earning = self.annual_earning_text.text
-    if not annual_earning:
-        self.annual_earning_text.background = 'red'
-    else:
-        self.annual_earning_text.background = 'white'
+  # def validate_annual_earning(self, **event_args):
+  #   annual_earning = self.annual_earning_text.text
+  #   if not annual_earning:
+  #       self.annual_earning_text.background = 'red'
+  #   else:
+  #       self.annual_earning_text.background = 'white'

@@ -26,9 +26,7 @@ class lender_registration_form_3_marital_details(lender_registration_form_3_mari
     self.marital_status_lender_registration_dropdown.items = options_string
     self.init_components(**properties)
 
-    options = app_tables.fin_lender_spouse_profession.search()
-    option_strings = [str(option['spouse_profession']) for option in options]
-    self.drop_down_1_copy.items = option_strings
+    
 
     user_data=app_tables.fin_guarantor_details.get(customer_id=user_id)
     if user_data:
@@ -53,6 +51,9 @@ class lender_registration_form_3_marital_details(lender_registration_form_3_mari
 
     
     self.drop_down_1.items = ['Father','Mother','Spouse','Others']
+    options = app_tables.fin_lender_spouse_profession.search()
+    option_strings = [str(option['spouse_profession']) for option in options]
+    self.drop_down_1_copy.items = option_strings
 
     self.father_name_text.add_event_handler("change", self.validate_father_name)
     self.date_picker_1.add_event_handler("change", self.validate_father_dob)
@@ -65,8 +66,8 @@ class lender_registration_form_3_marital_details(lender_registration_form_3_mari
     self.date_picker_3.add_event_handler("change", self.validate_spouse_dob)
     self.spouse_mbl_no_text.add_event_handler("change", self.validate_spouse_mbl_no)
     self.drop_down_1_copy.add_event_handler("change", self.validate_spouse_profession)
-    self.spouse_companyname_text.add_event_handler("change", self.validate_spouse_company)
-    self.annual_earning_text.add_event_handler("change", self.validate_annual_earning)
+    # self.spouse_companyname_text.add_event_handler("change", self.validate_spouse_company)
+    # self.annual_earning_text.add_event_handler("change", self.validate_annual_earning)
 
   def button_next_click(self, **event_args):
       marital_status = self.marital_status_lender_registration_dropdown.selected_value
