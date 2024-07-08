@@ -28,12 +28,12 @@ components:
   type: Spacer
   layout_properties: {grid_position: 'PJTSFN,EQNIDZ'}
 - name: column_panel_6
-  properties: {role: null}
+  properties: {role: outlined-card}
   type: ColumnPanel
   layout_properties: {grid_position: 'BFHGNX,HWGFHG'}
   components:
   - name: label_18
-    properties: {text: Education Details, align: center, background: '#05264d', foreground: white, font_size: 18, role: outlined-card}
+    properties: {text: Education Details, align: center, background: '#05264d', foreground: white, font_size: 18, role: null}
     type: Label
     layout_properties: {grid_position: 'YMPCBX,ZVINPD', full_width_row: true}
 - name: label_1
