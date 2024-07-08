@@ -32,7 +32,7 @@ class lender_registration_form_4_bank_form_1(lender_registration_form_4_bank_for
     self.accepted_terms = False
     self.button_2.enabled = False
     # Any code you write here will run before the form opens.
-    def setup_event_handlers(self):
+  def setup_event_handlers(self):
     # Attach event handlers for real-time validation
       self.text_box_1.set_event_handler('change', self.validate_account_name)
       self.text_box_1.set_event_handler('lost_focus', self.validate_account_name)

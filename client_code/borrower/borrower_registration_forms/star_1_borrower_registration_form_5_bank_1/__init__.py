@@ -123,10 +123,10 @@ class star_1_borrower_registration_form_5_bank_1(star_1_borrower_registration_fo
       self.text_box_1.focus()
     elif ' ' in account_number:
       Notification("Account number should not contain spaces").show()
-      self.text_box_2.focus()
+      self.text_box_3.focus()
     elif not account_number.isdigit():
       Notification("Account number should be valid").show()
-      self.text_box_2.focus()
+      self.text_box_3.focus()
     else:
       anvil.server.call('add_lendor_bank_details_form_2', bank_id, bank_branch, user_id)
       anvil.server.call('add_lendor_bank_details_form_1', account_name, account_type, account_number, bank_name, user_id)
