@@ -419,6 +419,9 @@ class star_1_borrower_registration_form_2_employment(star_1_borrower_registratio
                 anvil.server.call('add_borrower_farmer', land_type, total_acres, crop_name, farmer_earnings, user_id)
                 open_form('borrower.borrower_registration_forms.star_1_borrower_registration_form_3_marital', user_id=user_id)
 
+    def button_1_click(self, **event_args):
+      """This method is called when the button is clicked"""
+      open_form('borrower.borrower_registration_forms.borrower_registration_form_1_education', user_id=user_id)
   
     def borrower_college_proof_img_change(self, file, **event_args):
         """This method is called when a new file is loaded into this FileLoader"""
@@ -494,9 +497,7 @@ class star_1_borrower_registration_form_2_employment(star_1_borrower_registratio
     #     selected_value = self.drop_down_1.selected_value
     #     self.update_visibility(selected_value)
 
-    def button_1_click(self, **event_args):
-      """This method is called when the button is clicked"""
-      open_form('bank_users.user_form')
+    
 
     
 

@@ -19,7 +19,7 @@ components:
   type: Spacer
   layout_properties: {grid_position: 'EJPCLL,ONCBAK'}
 - name: column_panel_1
-  properties: {role: outlined-card, background: '', foreground: white}
+  properties: {role: outlined-card, background: '', foreground: white, col_widths: '{}'}
   type: ColumnPanel
   layout_properties: {grid_position: 'DARNYT,PYPWCT'}
   components:
@@ -27,35 +27,40 @@ components:
     properties: {role: null, bold: true, align: center, spacing_above: small, background: '#05264d', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: 16, tooltip: '', text: Professional Details}
     type: Label
     layout_properties: {grid_position: 'WCQMEN,ZTBAPM'}
-  - name: label_3_copy_1_copy_1
-    properties: {role: null, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: black, spacing_below: small, visible: true, border: '', italic: false, font_size: 12, tooltip: '', text: '                                      Choose your Profession : '}
-    type: Label
-    layout_properties: {grid_position: 'KYBPKH,AOQYLC'}
-  - name: drop_down_1
-    properties:
-      role: outlined
-      include_placeholder: true
-      bold: false
-      align: full
-      placeholder: Select One
-      spacing_above: small
-      background: theme:On Primary
-      underline: false
-      font: ''
-      foreground: ''
-      items: [Student, Employee, Self Employement]
-      spacing_below: small
-      visible: true
-      border: ''
-      italic: false
-      enabled: true
-      font_size: 12
-      tooltip: ''
-    type: DropDown
-    layout_properties: {grid_position: 'KYBPKH,CYJIHE'}
-    event_bindings: {change: Profesion_borrower_registration_form_drop_down_change}
-  - name: grid_panel_3
+  - name: grid_panel_6
     properties: {}
+    type: GridPanel
+    layout_properties: {grid_position: 'ZORYIH,JNPWQV'}
+    components:
+    - name: label_3_copy_1_copy_1
+      properties: {role: null, bold: true, align: center, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: black, spacing_below: small, visible: true, border: '', italic: false, font_size: 12, tooltip: '', text: 'Choose your Profession : '}
+      type: Label
+      layout_properties: {row: UXFTAM, width_xs: 3, col_xs: 2}
+    - name: drop_down_1
+      properties:
+        role: outlined
+        include_placeholder: true
+        bold: false
+        align: full
+        placeholder: Select One
+        spacing_above: small
+        background: theme:On Primary
+        underline: false
+        font: ''
+        foreground: ''
+        items: [Student, Employee, Self Employement]
+        spacing_below: small
+        visible: true
+        border: ''
+        italic: false
+        enabled: true
+        font_size: 12
+        tooltip: ''
+      type: DropDown
+      layout_properties: {row: UXFTAM, width_xs: 6, col_xs: 6}
+      event_bindings: {change: Profesion_borrower_registration_form_drop_down_change}
+  - name: grid_panel_3
+    properties: {foreground: black}
     type: GridPanel
     layout_properties: {grid_position: 'ZJESUZ,UGQWHW'}
     components:
@@ -72,22 +77,13 @@ components:
         font_size: 12
       type: DropDown
       layout_properties: {row: HQRUDU, width_xs: 6, col_xs: 6}
-- name: spacer_1
-  properties: {height: 32}
-  type: Spacer
-  layout_properties: {grid_position: 'EZHUHG,ERHLQM', full_width_row: true}
-- name: column_panel_2
-  properties: {col_widths: '{}'}
-  type: ColumnPanel
-  layout_properties: {grid_position: 'GXJWJX,JVTBCZ'}
-  components:
   - name: grid_panel_5
-    properties: {}
+    properties: {foreground: black}
     type: GridPanel
-    layout_properties: {grid_position: 'QVJTLX,TJRBII'}
+    layout_properties: {grid_position: 'OUVOED,XCUREG'}
     components:
     - name: label_2_copy_1_copy_3
-      properties: {role: null, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: 12, tooltip: '', text: 'Enter Type of Land (Owned/Rented):'}
+      properties: {role: null, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: black, spacing_below: small, visible: true, border: '', italic: false, font_size: 12, tooltip: '', text: 'Enter Type of Land (Owned/Rented):'}
       type: Label
       layout_properties: {row: RHJDHL, width_xs: 3, col_xs: 2}
     - name: drop_down_1_copy_3
@@ -113,7 +109,7 @@ components:
       type: DropDown
       layout_properties: {row: RHJDHL, width_xs: 6, col_xs: 6}
     - name: label_1_copy_6
-      properties: {role: null, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: 12, tooltip: '', text: 'Enter the Number of Acres of Land:'}
+      properties: {role: null, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: black, spacing_below: small, visible: true, border: '', italic: false, font_size: 12, tooltip: '', text: 'Enter the Number of Acres of Land:'}
       type: Label
       layout_properties: {row: PYGXXS, width_xs: 3, col_xs: 2}
     - name: text_box_1_copy_4
@@ -121,7 +117,7 @@ components:
       type: TextBox
       layout_properties: {row: PYGXXS, width_xs: 6, col_xs: 6}
     - name: label_3_copy_1_copy_4
-      properties: {role: null, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: 12, tooltip: '', text: 'Enter Crop Name:'}
+      properties: {role: null, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: black, spacing_below: small, visible: true, border: '', italic: false, font_size: 12, tooltip: '', text: 'Enter Crop Name:'}
       type: Label
       layout_properties: {row: ICUEML, width_xs: 3, col_xs: 2}
     - name: text_box_2_copy_3
@@ -129,7 +125,7 @@ components:
       type: TextBox
       layout_properties: {row: ICUEML, width_xs: 6, col_xs: 6}
     - name: label_1_copy_copy
-      properties: {role: null, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: 12, tooltip: '', text: 'Enter Your Yearly Income:'}
+      properties: {role: null, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: black, spacing_below: small, visible: true, border: '', italic: false, font_size: 12, tooltip: '', text: 'Enter Your Yearly Income:'}
       type: Label
       layout_properties: {row: RGHVJU, width_xs: 3, col_xs: 2}
     - name: text_box_3_copy_2
@@ -137,9 +133,9 @@ components:
       type: TextBox
       layout_properties: {row: RGHVJU, width_xs: 6, col_xs: 6}
   - name: grid_panel_4
-    properties: {}
+    properties: {foreground: black}
     type: GridPanel
-    layout_properties: {grid_position: 'NWRVWI,AGCWRS'}
+    layout_properties: {grid_position: 'LFMDNW,QYRSVU'}
     components:
     - name: label_2
       properties: {text: 'Enter Your Business Name:', bold: true, spacing_above: medium, font_size: 12}
@@ -304,9 +300,9 @@ components:
       type: Image
       layout_properties: {row: ZCPIJA, width_xs: 3, col_xs: 9}
   - name: grid_panel_1
-    properties: {}
+    properties: {foreground: black}
     type: GridPanel
-    layout_properties: {grid_position: 'YMMNVU,UKWIIJ'}
+    layout_properties: {grid_position: 'NFOYYV,JXALZA'}
     components:
     - name: label_1_copy_2
       properties: {text: 'Enter Your College Name:', align: left, bold: true, font_size: 12}
@@ -347,9 +343,9 @@ components:
       type: TextArea
       layout_properties: {row: WYMORN, width_xs: 6, col_xs: 6}
   - name: grid_panel_2
-    properties: {}
+    properties: {foreground: black}
     type: GridPanel
-    layout_properties: {grid_position: 'LOWZDA,QVYCWF'}
+    layout_properties: {grid_position: 'RSTKJA,YFVUKP'}
     components:
     - name: label_1_copy_3
       properties: {role: null, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: 12, tooltip: '', text: 'Enter Your Company Name:'}
@@ -571,15 +567,20 @@ components:
   - name: spacer_2
     properties: {height: 32}
     type: Spacer
-    layout_properties: {grid_position: 'AAGQBS,KWCBAO'}
+    layout_properties: {grid_position: 'CALDAC,YFDHHN'}
   - name: button_1
     properties: {role: elevated-button, bold: true, align: right, spacing_above: small, background: '#0b2547', icon: 'fa:angle-double-left', underline: false, font: '', icon_align: left, foreground: 'theme:On Primary', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: Prev}
     type: Button
-    layout_properties: {grid_position: 'ERLTHQ,HHKPLU'}
+    layout_properties: {grid_position: 'ZPTEUC,QKUGWF'}
     event_bindings: {click: button_1_click}
   - name: button_1_next
     properties: {role: elevated-button, bold: true, align: left, spacing_above: small, background: '#0b2547', icon: 'fa:angle-double-right', underline: false, font: '', icon_align: right, foreground: 'theme:On Primary', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: Next}
     type: Button
-    layout_properties: {grid_position: 'ERLTHQ,IMBDZQ'}
+    layout_properties: {grid_position: 'ZPTEUC,QQSFYK'}
     event_bindings: {click: button_1_next_click}
+- name: column_panel_2
+  properties: {col_widths: '{}'}
+  type: ColumnPanel
+  layout_properties: {grid_position: 'GXJWJX,JVTBCZ'}
+  components: []
 is_package: true
