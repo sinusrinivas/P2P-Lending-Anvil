@@ -1,0 +1,32 @@
+is_package: true
+container: {type: DataRowPanel}
+components:
+- name: label_1
+  properties: {align: center}
+  type: Label
+  layout_properties: {column: JKSDUP}
+  data_bindings:
+  - {property: text, code: 'self.item[''name'']', writeback: false}
+- name: label_2
+  properties: {align: center}
+  type: Label
+  layout_properties: {column: VJQQOR}
+  data_bindings:
+  - {property: text, code: 'self.item[''email'']', writeback: false}
+- name: label_3
+  properties: {align: center}
+  type: Label
+  layout_properties: {column: OJLQEN}
+  data_bindings:
+  - {property: text, code: 'self.item[''lending_type'']', writeback: false}
+- name: label_4
+  properties: {align: center}
+  type: Label
+  layout_properties: {column: RBCPXE}
+  data_bindings:
+  - {property: text, code: 'self.item[''membership'']', writeback: false}
+- name: portfolio
+  properties: {text: View Portfolio, visible: true, align: center}
+  type: Link
+  layout_properties: {column: GONDTU}
+  event_bindings: {click: portfolio_click}

@@ -44,4 +44,16 @@ class investNow_applyForLoan(investNow_applyForLoanTemplate):
     """This method is called when the link is clicked"""
     open_form('admin.user_issue.user_bugreports')
 
+  def image_1_mouse_up(self, x, y, button, **event_args):
+    """This method is called when a mouse button is released on this component"""
+    open_form('bank_users.main_form.signup_page', user_type='lender')
+
+  def image_2_mouse_up(self, x, y, button, **event_args):
+    """This method is called when a mouse button is released on this component"""
+    open_form('bank_users.main_form.signup_page', user_type='borrower')
+
+  def login_signup_button_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    open_form('bank_users.main_form.login_page')
+
   

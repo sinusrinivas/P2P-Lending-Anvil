@@ -7,11 +7,14 @@ import anvil.users
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
+from ...borrower.dashboard import main_form_module
+
 
 class transaction_details(transaction_detailsTemplate):
   def __init__(self,selected_row, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
+    self.user_id = main_form_module.user_Id
 
     # Any code you write here will run before the form opens.
     self.label_3.text = selected_row['transaction_id']
@@ -34,21 +37,42 @@ class transaction_details(transaction_detailsTemplate):
       self.user_type = user_request['usertype']
 
     if self.user_type == "lender":
-        open_form("lendor_registration_form.dashboard")
+        open_form("lendor.dashboard")
     else:
-        open_form("borrower_registration_form.dashboard")
+        open_form("borrower.dashboard")
 
   def about_main_form_link_click(self, **event_args):
     """This method is called when the link is clicked"""
-    open_form("lendor_registration_form.dashboard.dasboard_about")
+    user_request = app_tables.fin_user_profile.get(customer_id=self.user_id)
+    if user_request:
+      self.user_type = user_request['usertype']
+
+    if self.user_type == "lender":
+      open_form("lendor.dashboard.dasboard_about")
+    else:
+      open_form("borrower.dashboard.dashboard_about")
 
   def contact_main_form_link_click(self, **event_args):
     """This method is called when the link is clicked"""
-    open_form("lendor_registration_form.dashboard.dasboard_contact")
+    user_request = app_tables.fin_user_profile.get(customer_id=self.user_id)
+    if user_request:
+      self.user_type = user_request['usertype']
+
+    if self.user_type == "lender":
+      open_form("lendor.dashboard.dasboard_contact")
+    else:
+      open_form("borrower.dashboard.dashboard_contact")
 
   def notification_link_click(self, **event_args):
     """This method is called when the link is clicked"""
-    open_form('lendor_registration_form.dashboard.notification')
+    user_request = app_tables.fin_user_profile.get(customer_id=self.user_id)
+    if user_request:
+      self.user_type = user_request['usertype']
+
+    if self.user_type == "lender":
+      open_form('lendor.dashboard.notification')
+    else:
+      open_form('borrower.dashboard.notification')
 
   def wallet_dashboard_link_click(self, **event_args):
     """This method is called when the link is clicked"""

@@ -48,117 +48,28 @@ class add_lender_dropdown_details(add_lender_dropdown_detailsTemplate):
 
   def business_click(self, **event_args):
     """This method is called when the button is clicked"""
-    self.column_panel_7.visible = False
-    self.column_panel_8.visible = False
-    self.column_panel_9.visible = False
-    self.column_panel_10.visible = False
-    self.column_panel_6.visible = False
-    self.column_panel_5.visible = False   
-    self.column_panel_4.visible = True
-    self.column_panel_3.visible = False
-    # self.column_panel_2.visible = False
-    self.column_panel_10_copy.visible = False
-    self.column_panel_11.visible = False
-    self.column_panel_12.visible = False
-
+   
   def professioon_click(self, **event_args):
     """This method is called when the button is clicked"""
-    self.column_panel_7.visible = False
-    self.column_panel_8.visible = False
-    self.column_panel_9.visible = False
-    self.column_panel_10.visible = False
-    self.column_panel_6.visible = True
-    self.column_panel_5.visible = False   
-    self.column_panel_4.visible = False
-    self.column_panel_3.visible = False
-    self.column_panel_10_copy.visible = False
-    self.column_panel_12.visible = False
-    # self.column_panel_2.visible = False   
-    self.column_panel_11.visible = False
+    
   def No_of_emp_click(self, **event_args):
     """This method is called when the button is clicked"""
-    self.column_panel_7.visible = False
-    self.column_panel_8.visible = False
-    self.column_panel_9.visible = False
-    self.column_panel_10.visible = False
-    self.column_panel_6.visible = False
-    self.column_panel_5.visible = True   
-    self.column_panel_4.visible = False
-    self.column_panel_3.visible = False
-    # self.column_panel_2.visible = False
-    self.column_panel_10_copy.visible = False
-    self.column_panel_11.visible = False
-    self.column_panel_12.visible = False
+    s
   def emp_type_button(self, **event_args):
     """This method is called when the button is clicked"""
-    self.column_panel_7.visible = True
-    self.column_panel_8.visible = False
-    self.column_panel_9.visible = False
-    self.column_panel_10.visible = False
-    self.column_panel_6.visible = False
-    self.column_panel_5.visible = False   
-    self.column_panel_4.visible = False
-    self.column_panel_3.visible = False
-    # self.column_panel_2.visible = False
-    self.column_panel_10_copy.visible = False
-    self.column_panel_11.visible = False
-    self.column_panel_12.visible = False
+   
   def organization_click(self, **event_args):
     """This method is called when the button is clicked"""
-    self.column_panel_7.visible = False
-    self.column_panel_8.visible = True
-    self.column_panel_9.visible = False
-    self.column_panel_10.visible = False
-    self.column_panel_6.visible = False
-    self.column_panel_5.visible = False   
-    self.column_panel_4.visible = False
-    self.column_panel_3.visible = False
-    # self.column_panel_2.visible = False
-    self.column_panel_11.visible = False
-    self.column_panel_10_copy.visible = False
-    self.column_panel_12.visible = False
+    
   def account_click(self, **event_args):
     """This method is called when the button is clicked"""
-    self.column_panel_7.visible = False
-    self.column_panel_8.visible = False
-    self.column_panel_9.visible = True
-    self.column_panel_10.visible = False
-    self.column_panel_6.visible = False
-    self.column_panel_5.visible = False   
-    self.column_panel_4.visible = False
-    self.column_panel_3.visible = False
-    # self.column_panel_2.visible = False
-    self.column_panel_11.visible = False
-    self.column_panel_10_copy.visible = False
-    self.column_panel_12.visible = False
+    
   def marital_click(self, **event_args):
     """This method is called when the button is clicked"""
-    self.column_panel_7.visible = False
-    self.column_panel_8.visible = False
-    self.column_panel_9.visible = False
-    self.column_panel_10.visible = True
-    self.column_panel_6.visible = False
-    self.column_panel_5.visible = False   
-    self.column_panel_4.visible = False
-    self.column_panel_3.visible = False
-    # self.column_panel_2.visible = False
-    self.column_panel_11.visible = False
-    self.column_panel_10_copy.visible = False
-    self.column_panel_12.visible = False
+    
   def lending_period_button(self, **event_args):
     """This method is called when the button is clicked"""
-    self.column_panel_11.visible = True
-    self.column_panel_7.visible = False
-    self.column_panel_8.visible = False
-    self.column_panel_9.visible = False
-    self.column_panel_10.visible = False
-    self.column_panel_6.visible = False
-    self.column_panel_5.visible = False   
-    self.column_panel_4.visible = False
-    self.column_panel_3.visible = False
-    # self.column_panel_2.visible = False
-    self.column_panel_10_copy.visible = False
-    self.column_panel_12.visible = False
+    
     
   def qualification(self, **event_args):
     """This method is called when the button is clicked"""
@@ -253,18 +164,7 @@ class add_lender_dropdown_details(add_lender_dropdown_detailsTemplate):
 
   def qualification_click(self, **event_args):
     """This method is called when the button is clicked"""
-    self.column_panel_7.visible = False
-    self.column_panel_8.visible = False
-    self.column_panel_9.visible = False
-    self.column_panel_10.visible = False
-    self.column_panel_6.visible = False
-    self.column_panel_5.visible = False   
-    self.column_panel_4.visible = False
-    self.column_panel_3.visible = True
-    # self.column_panel_2.visible = False
-    self.column_panel_11.visible = False
-    self.column_panel_10_copy.visible = False
-    self.column_panel_12.visible = False
+    
 
   def lending_period_button_click(self, **event_args):
     """This method is called when the button is clicked"""
@@ -292,33 +192,11 @@ class add_lender_dropdown_details(add_lender_dropdown_detailsTemplate):
 
   def salary_click(self, **event_args):
     """This method is called when the button is clicked"""
-    self.column_panel_7.visible = False
-    self.column_panel_8.visible = False
-    self.column_panel_9.visible = False
-    self.column_panel_10.visible = False
-    self.column_panel_6.visible = False
-    self.column_panel_5.visible = False   
-    self.column_panel_4.visible = False
-    self.column_panel_3.visible = False
-    #self.column_panel_2.visible = False
-    self.column_panel_11.visible = False
-    self.column_panel_10_copy.visible = True
-    self.column_panel_12.visible = False
+    s
 
   def spouse(self, **event_args):
     """This method is called when the button is clicked"""
-    self.column_panel_7.visible = False
-    self.column_panel_8.visible = False
-    self.column_panel_9.visible = False
-    self.column_panel_10.visible = False
-    self.column_panel_6.visible = False
-    self.column_panel_5.visible = False   
-    self.column_panel_4.visible = False
-    self.column_panel_3.visible = False
-    #self.column_panel_2.visible = False
-    self.column_panel_11.visible = False
-    self.column_panel_10_copy.visible = False
-    self.column_panel_12.visible = True
+    
 
   # def gender_button_click(self, **event_args):
   #   """This method is called when the button is clicked"""
@@ -339,3 +217,334 @@ class add_lender_dropdown_details(add_lender_dropdown_detailsTemplate):
     new_row = app_tables.fin_lender_spouse_profession.add_row(spouse_profession=entered_data)
     self.text_box_01.text = ' '
     self.refresh()
+
+  def button_9_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    self.column_panel_7.visible = False
+    self.column_panel_8.visible = False
+    self.column_panel_9.visible = False
+    self.column_panel_10.visible = False
+    self.column_panel_6.visible = False
+    self.column_panel_5.visible = False   
+    self.column_panel_4.visible = False
+    self.column_panel_3.visible = True
+    # self.column_panel_2.visible = False
+    self.column_panel_11.visible = False
+    self.column_panel_10_copy.visible = False
+    self.column_panel_12.visible = False
+
+  def button_10_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    self.column_panel_7.visible = False
+    self.column_panel_8.visible = False
+    self.column_panel_9.visible = False
+    self.column_panel_10.visible = False
+    self.column_panel_6.visible = False
+    self.column_panel_5.visible = False   
+    self.column_panel_4.visible = True
+    self.column_panel_3.visible = False
+    # self.column_panel_2.visible = False
+    self.column_panel_10_copy.visible = False
+    self.column_panel_11.visible = False
+    self.column_panel_12.visible = False
+
+  def button_11_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    self.column_panel_7.visible = False
+    self.column_panel_8.visible = False
+    self.column_panel_9.visible = False
+    self.column_panel_10.visible = True
+    self.column_panel_6.visible = False
+    self.column_panel_5.visible = False   
+    self.column_panel_4.visible = False
+    self.column_panel_3.visible = False
+    # self.column_panel_2.visible = False
+    self.column_panel_11.visible = False
+    self.column_panel_10_copy.visible = False
+    self.column_panel_12.visible = False
+
+  def button_12_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    self.column_panel_7.visible = False
+    self.column_panel_8.visible = False
+    self.column_panel_9.visible = False
+    self.column_panel_10.visible = False
+    self.column_panel_6.visible = False
+    self.column_panel_5.visible = True   
+    self.column_panel_4.visible = False
+    self.column_panel_3.visible = False
+    # self.column_panel_2.visible = False
+    self.column_panel_10_copy.visible = False
+    self.column_panel_11.visible = False
+    self.column_panel_12.visible = False
+
+  def button_13_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    self.column_panel_7.visible = False
+    self.column_panel_8.visible = False
+    self.column_panel_9.visible = False
+    self.column_panel_10.visible = False
+    self.column_panel_6.visible = True
+    self.column_panel_5.visible = False   
+    self.column_panel_4.visible = False
+    self.column_panel_3.visible = False
+    self.column_panel_10_copy.visible = False
+    self.column_panel_12.visible = False
+    # self.column_panel_2.visible = False   
+    self.column_panel_11.visible = False
+
+  def button_14_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    self.column_panel_7.visible = True
+    self.column_panel_8.visible = False
+    self.column_panel_9.visible = False
+    self.column_panel_10.visible = False
+    self.column_panel_6.visible = False
+    self.column_panel_5.visible = False   
+    self.column_panel_4.visible = False
+    self.column_panel_3.visible = False
+    # self.column_panel_2.visible = False
+    self.column_panel_10_copy.visible = False
+    self.column_panel_11.visible = False
+    self.column_panel_12.visible = False
+
+  def button_16_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    self.column_panel_7.visible = False
+    self.column_panel_8.visible = True
+    self.column_panel_9.visible = False
+    self.column_panel_10.visible = False
+    self.column_panel_6.visible = False
+    self.column_panel_5.visible = False   
+    self.column_panel_4.visible = False
+    self.column_panel_3.visible = False
+    # self.column_panel_2.visible = False
+    self.column_panel_11.visible = False
+    self.column_panel_10_copy.visible = False
+    self.column_panel_12.visible = False
+
+  def button_17_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    self.column_panel_7.visible = False
+    self.column_panel_8.visible = False
+    self.column_panel_9.visible = True
+    self.column_panel_10.visible = False
+    self.column_panel_6.visible = False
+    self.column_panel_5.visible = False   
+    self.column_panel_4.visible = False
+    self.column_panel_3.visible = False
+    # self.column_panel_2.visible = False
+    self.column_panel_11.visible = False
+    self.column_panel_10_copy.visible = False
+    self.column_panel_12.visible = False
+
+  def button_18_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    self.column_panel_11.visible = True
+    self.column_panel_7.visible = False
+    self.column_panel_8.visible = False
+    self.column_panel_9.visible = False
+    self.column_panel_10.visible = False
+    self.column_panel_6.visible = False
+    self.column_panel_5.visible = False   
+    self.column_panel_4.visible = False
+    self.column_panel_3.visible = False
+    # self.column_panel_2.visible = False
+    self.column_panel_10_copy.visible = False
+    self.column_panel_12.visible = False
+
+  def button_19_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    self.column_panel_7.visible = False
+    self.column_panel_8.visible = False
+    self.column_panel_9.visible = False
+    self.column_panel_10.visible = False
+    self.column_panel_6.visible = False
+    self.column_panel_5.visible = False   
+    self.column_panel_4.visible = False
+    self.column_panel_3.visible = False
+    #self.column_panel_2.visible = False
+    self.column_panel_11.visible = False
+    self.column_panel_10_copy.visible = True
+    self.column_panel_12.visible = False
+
+  def button_3_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    self.column_panel_7.visible = False
+    self.column_panel_8.visible = False
+    self.column_panel_9.visible = False
+    self.column_panel_10.visible = False
+    self.column_panel_6.visible = False
+    self.column_panel_5.visible = False   
+    self.column_panel_4.visible = False
+    self.column_panel_3.visible = False
+    #self.column_panel_2.visible = False
+    self.column_panel_11.visible = False
+    self.column_panel_10_copy.visible = False
+    self.column_panel_12.visible = True
+
+  def image_4_copy_mouse_up(self, x, y, button, **event_args):
+    """This method is called when a mouse button is released on this component"""
+    self.column_panel_7.visible = False
+    self.column_panel_8.visible = False
+    self.column_panel_9.visible = False
+    self.column_panel_10.visible = False
+    self.column_panel_6.visible = False
+    self.column_panel_5.visible = False   
+    self.column_panel_4.visible = False
+    self.column_panel_3.visible = True
+    # self.column_panel_2.visible = False
+    self.column_panel_11.visible = False
+    self.column_panel_10_copy.visible = False
+    self.column_panel_12.visible = False
+
+  def image_4_copy_3_mouse_up(self, x, y, button, **event_args):
+    """This method is called when a mouse button is released on this component"""
+    self.column_panel_7.visible = False
+    self.column_panel_8.visible = False
+    self.column_panel_9.visible = False
+    self.column_panel_10.visible = False
+    self.column_panel_6.visible = False
+    self.column_panel_5.visible = False   
+    self.column_panel_4.visible = True
+    self.column_panel_3.visible = False
+    # self.column_panel_2.visible = False
+    self.column_panel_10_copy.visible = False
+    self.column_panel_11.visible = False
+    self.column_panel_12.visible = False
+
+  def image_4_copy_5_mouse_up(self, x, y, button, **event_args):
+    """This method is called when a mouse button is released on this component"""
+    self.column_panel_7.visible = False
+    self.column_panel_8.visible = False
+    self.column_panel_9.visible = False
+    self.column_panel_10.visible = True
+    self.column_panel_6.visible = False
+    self.column_panel_5.visible = False   
+    self.column_panel_4.visible = False
+    self.column_panel_3.visible = False
+    # self.column_panel_2.visible = False
+    self.column_panel_11.visible = False
+    self.column_panel_10_copy.visible = False
+    self.column_panel_12.visible = False
+
+  def image_4_copy_7_mouse_up(self, x, y, button, **event_args):
+    """This method is called when a mouse button is released on this component"""
+    self.column_panel_7.visible = False
+    self.column_panel_8.visible = False
+    self.column_panel_9.visible = False
+    self.column_panel_10.visible = False
+    self.column_panel_6.visible = False
+    self.column_panel_5.visible = True   
+    self.column_panel_4.visible = False
+    self.column_panel_3.visible = False
+    # self.column_panel_2.visible = False
+    self.column_panel_10_copy.visible = False
+    self.column_panel_11.visible = False
+    self.column_panel_12.visible = False
+
+  def image_4_copy_2_mouse_up(self, x, y, button, **event_args):
+    """This method is called when a mouse button is released on this component"""
+    self.column_panel_7.visible = False
+    self.column_panel_8.visible = False
+    self.column_panel_9.visible = False
+    self.column_panel_10.visible = False
+    self.column_panel_6.visible = True
+    self.column_panel_5.visible = False   
+    self.column_panel_4.visible = False
+    self.column_panel_3.visible = False
+    self.column_panel_10_copy.visible = False
+    self.column_panel_12.visible = False
+    # self.column_panel_2.visible = False   
+    self.column_panel_11.visible = False
+
+  def image_4_copy_10_mouse_up(self, x, y, button, **event_args):
+    """This method is called when a mouse button is released on this component"""
+    self.column_panel_7.visible = True
+    self.column_panel_8.visible = False
+    self.column_panel_9.visible = False
+    self.column_panel_10.visible = False
+    self.column_panel_6.visible = False
+    self.column_panel_5.visible = False   
+    self.column_panel_4.visible = False
+    self.column_panel_3.visible = False
+    # self.column_panel_2.visible = False
+    self.column_panel_10_copy.visible = False
+    self.column_panel_11.visible = False
+    self.column_panel_12.visible = False
+
+  def image_4_copy_6_mouse_up(self, x, y, button, **event_args):
+    """This method is called when a mouse button is released on this component"""
+    self.column_panel_7.visible = False
+    self.column_panel_8.visible = True
+    self.column_panel_9.visible = False
+    self.column_panel_10.visible = False
+    self.column_panel_6.visible = False
+    self.column_panel_5.visible = False   
+    self.column_panel_4.visible = False
+    self.column_panel_3.visible = False
+    # self.column_panel_2.visible = False
+    self.column_panel_11.visible = False
+    self.column_panel_10_copy.visible = False
+    self.column_panel_12.visible = False
+
+  def image_4_copy_9_mouse_up(self, x, y, button, **event_args):
+    """This method is called when a mouse button is released on this component"""
+    self.column_panel_7.visible = False
+    self.column_panel_8.visible = False
+    self.column_panel_9.visible = True
+    self.column_panel_10.visible = False
+    self.column_panel_6.visible = False
+    self.column_panel_5.visible = False   
+    self.column_panel_4.visible = False
+    self.column_panel_3.visible = False
+    # self.column_panel_2.visible = False
+    self.column_panel_11.visible = False
+    self.column_panel_10_copy.visible = False
+    self.column_panel_12.visible = False
+
+  def image_4_copy_8_mouse_up(self, x, y, button, **event_args):
+    """This method is called when a mouse button is released on this component"""
+    self.column_panel_11.visible = True
+    self.column_panel_7.visible = False
+    self.column_panel_8.visible = False
+    self.column_panel_9.visible = False
+    self.column_panel_10.visible = False
+    self.column_panel_6.visible = False
+    self.column_panel_5.visible = False   
+    self.column_panel_4.visible = False
+    self.column_panel_3.visible = False
+    # self.column_panel_2.visible = False
+    self.column_panel_10_copy.visible = False
+    self.column_panel_12.visible = False
+
+  def image_4_mouse_up(self, x, y, button, **event_args):
+    """This method is called when a mouse button is released on this component"""
+    self.column_panel_7.visible = False
+    self.column_panel_8.visible = False
+    self.column_panel_9.visible = False
+    self.column_panel_10.visible = False
+    self.column_panel_6.visible = False
+    self.column_panel_5.visible = False   
+    self.column_panel_4.visible = False
+    self.column_panel_3.visible = False
+    #self.column_panel_2.visible = False
+    self.column_panel_11.visible = False
+    self.column_panel_10_copy.visible = True
+    self.column_panel_12.visible = False
+
+  def image_4_copy_4_mouse_up(self, x, y, button, **event_args):
+    """This method is called when a mouse button is released on this component"""
+    self.column_panel_7.visible = False
+    self.column_panel_8.visible = False
+    self.column_panel_9.visible = False
+    self.column_panel_10.visible = False
+    self.column_panel_6.visible = False
+    self.column_panel_5.visible = False   
+    self.column_panel_4.visible = False
+    self.column_panel_3.visible = False
+    #self.column_panel_2.visible = False
+    self.column_panel_11.visible = False
+    self.column_panel_10_copy.visible = False
+    self.column_panel_12.visible = True
+

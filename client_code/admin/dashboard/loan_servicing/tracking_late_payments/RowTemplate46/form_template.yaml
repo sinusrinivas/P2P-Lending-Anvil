@@ -1,0 +1,45 @@
+is_package: true
+container: {type: DataRowPanel}
+components:
+- name: image_1
+  properties: {height: 61.5714111328125}
+  type: Image
+  layout_properties: {column: JKSDUP}
+  data_bindings:
+  - {property: source, code: 'self.item[''image'']', writeback: false}
+- name: label_1
+  properties: {align: center}
+  type: Label
+  layout_properties: {column: VJQQOR}
+  data_bindings:
+  - {property: text, code: 'self.item[''loan_id'']', writeback: false}
+- name: label_2
+  properties: {align: center}
+  type: Label
+  layout_properties: {column: OJLQEN}
+  data_bindings:
+  - {property: text, code: 'self.item[''borrower_full_name'']', writeback: false}
+- name: label_3
+  properties: {align: center}
+  type: Label
+  layout_properties: {column: RBIYRX}
+  data_bindings:
+  - {property: text, code: 'self.item[''borrower_email_id'']', writeback: false}
+- name: label_4
+  properties: {align: center}
+  type: Label
+  layout_properties: {column: SMBAKA}
+  data_bindings:
+  - {property: text, code: 'self.item[''product_name'']', writeback: false}
+- name: label_5
+  properties: {align: center}
+  type: Label
+  layout_properties: {column: OHKSFC}
+  data_bindings:
+  - {property: text, code: 'self.item[''emi_number'']', writeback: false}
+- name: label_6
+  properties: {align: center}
+  type: Label
+  layout_properties: {column: QNKLHA}
+  data_bindings:
+  - {property: text, code: 'self.item[''default_fee'']', writeback: false}

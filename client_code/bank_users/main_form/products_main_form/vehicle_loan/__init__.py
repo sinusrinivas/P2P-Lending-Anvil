@@ -39,3 +39,23 @@ class vehicle_loan(vehicle_loanTemplate):
   def button_10_copy_click(self, **event_args):
     """This method is called when the button is clicked"""
     open_form('bank_users.main_form.investNow_applyForLoan')
+
+  def button_1_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    open_form('bank_users.main_form.signup_page', user_type='borrower')
+
+  def button_2_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    open_form('bank_users.main_form.signup_page', user_type='borrower')
+
+  def button_2_copy_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    open_form('bank_users.main_form.signup_page', user_type='borrower')
+
+  def button_2_copy_copy_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    open_form('bank_users.main_form.signup_page', user_type='borrower')
+
+  def button_4_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    open_form('bank_users.main_form.signup_page', user_type='borrower')
