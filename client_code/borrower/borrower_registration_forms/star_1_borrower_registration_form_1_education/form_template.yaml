@@ -73,13 +73,13 @@ components:
   layout_properties: {grid_position: 'TDVAJP,EOLKRB', full_width_row: true}
   components:
   - name: label_2
-    properties:
-      text: |-
-        10th Standard
-        (Size less than 2MB)
-      bold: true
+    properties: {text: 10th Standard, bold: true, spacing_below: none}
     type: Label
-    layout_properties: {grid_position: 'XACTFH,XFDPZE'}
+    layout_properties: {grid_position: 'XACTFH,XFDPZE NAGWHN,ZQJSSR'}
+  - name: label_22_copy_8
+    properties: {text: (Size less than 2MB), spacing_above: none, font_size: 12}
+    type: Label
+    layout_properties: {grid_position: 'XACTFH,XFDPZE TZTJOG,IASVPF'}
   - name: file_loader_1
     properties: {text: Upload Certificate}
     type: FileLoader
@@ -95,13 +95,13 @@ components:
   layout_properties: {grid_position: 'DXYMXQ,EKYTRZ', full_width_row: true}
   components:
   - name: label_3
-    properties:
-      text: |-
-        10th Standard
-        (Size less than 2MB)
-      bold: true
+    properties: {text: 10th Standard, bold: true, spacing_below: none}
     type: Label
-    layout_properties: {grid_position: 'RPRENY,UJXMIR'}
+    layout_properties: {grid_position: 'RPRENY,UJXMIR YSNLGH,RXBMTU'}
+  - name: label_22_copy_8_copy
+    properties: {text: (Size less than 2MB), spacing_above: none, font_size: 12}
+    type: Label
+    layout_properties: {grid_position: 'RPRENY,UJXMIR AFCLZG,FCJSVV'}
   - name: file_loader_2
     properties: {text: Upload Certificate}
     type: FileLoader
@@ -112,13 +112,13 @@ components:
     type: Image
     layout_properties: {grid_position: 'RPRENY,ETTJZD'}
   - name: label_4
-    properties:
-      text: |-
-        12th Standard
-        (Size less than 2MB)
-      bold: true
+    properties: {text: 12th Standard, bold: true, spacing_below: none}
     type: Label
-    layout_properties: {grid_position: 'OBGZRV,KKLNYY'}
+    layout_properties: {grid_position: 'OBGZRV,KKLNYY OTDEEK,IVTNOO'}
+  - name: label_22_copy_8_copy_2
+    properties: {text: (Size less than 2MB), spacing_above: none, font_size: 12}
+    type: Label
+    layout_properties: {grid_position: 'OBGZRV,KKLNYY RODQIW,AYNNRJ'}
   - name: file_loader_3
     properties: {text: Upload Certificate}
     type: FileLoader
@@ -134,13 +134,13 @@ components:
   layout_properties: {grid_position: 'TUXFDX,XBCDGW', full_width_row: true}
   components:
   - name: label_5
-    properties:
-      text: |-
-        10th Standard
-        (Size less than 2MB)
-      bold: true
+    properties: {text: 10th Standard, bold: true, spacing_below: none}
     type: Label
-    layout_properties: {grid_position: 'YJJRSX,XKKDTQ'}
+    layout_properties: {grid_position: 'YJJRSX,XKKDTQ MLIHAU,FESNNS'}
+  - name: label_22_copy_8_copy_3
+    properties: {text: (Size less than 2MB), spacing_above: none, font_size: 12}
+    type: Label
+    layout_properties: {grid_position: 'YJJRSX,XKKDTQ DNBKQV,PTMKTQ'}
   - name: file_loader_4
     properties: {text: Upload Certificate}
     type: FileLoader
@@ -151,13 +151,13 @@ components:
     type: Image
     layout_properties: {grid_position: 'YJJRSX,GBEBHT'}
   - name: label_6
-    properties:
-      text: |-
-        12th Standard
-        (Size less than 2MB)
-      bold: true
+    properties: {text: 12th Standard, bold: true, spacing_below: none}
     type: Label
-    layout_properties: {grid_position: 'EVSYED,SCDHNU'}
+    layout_properties: {grid_position: 'EVSYED,SCDHNU DQWTTO,VIBGHB'}
+  - name: label_22_copy_8_copy_4
+    properties: {text: (Size less than 2MB), spacing_above: none, font_size: 12}
+    type: Label
+    layout_properties: {grid_position: 'EVSYED,SCDHNU IQDSLD,MFQTMG'}
   - name: file_loader_5
     properties: {text: Upload Certificate}
     type: FileLoader
@@ -168,13 +168,13 @@ components:
     type: Image
     layout_properties: {grid_position: 'EVSYED,CWNRNC'}
   - name: label_7
-    properties:
-      text: |-
-        Bachelor's degree
-        (Size less than 2MB)
-      bold: true
+    properties: {text: Bachelor's degree, bold: true, spacing_below: none}
     type: Label
-    layout_properties: {grid_position: 'EKITQV,VLRAHO'}
+    layout_properties: {grid_position: 'EKITQV,VLRAHO GZIDCQ,NYCPQA'}
+  - name: label_22_copy_8_copy_5
+    properties: {text: (Size less than 2MB), spacing_above: none, font_size: 12}
+    type: Label
+    layout_properties: {grid_position: 'EKITQV,VLRAHO BMWWXJ,EIBBXE'}
   - name: file_loader_6
     properties: {text: Upload Certificate}
     type: FileLoader
@@ -190,13 +190,13 @@ components:
   layout_properties: {grid_position: 'BNJRZJ,SMLUEI', full_width_row: true}
   components:
   - name: label_8
-    properties:
-      text: |-
-        10th Standard
-        (Size less than 2MB)
-      bold: true
+    properties: {text: 10th Standard, bold: true, spacing_below: none}
     type: Label
-    layout_properties: {grid_position: 'HFOCKI,VGHZUW'}
+    layout_properties: {grid_position: 'HFOCKI,VGHZUW NSWLOI,MMBBZI'}
+  - name: label_22_copy_8_copy_6
+    properties: {text: (Size less than 2MB), spacing_above: none, font_size: 12}
+    type: Label
+    layout_properties: {grid_position: 'HFOCKI,VGHZUW NYRIZN,MJHSVQ'}
   - name: file_loader_7
     properties: {text: Upload Certificate}
     type: FileLoader
@@ -207,13 +207,13 @@ components:
     type: Image
     layout_properties: {grid_position: 'HFOCKI,SICYTW'}
   - name: label_9
-    properties:
-      text: |-
-        12th Standard
-        (Size less than 2MB)
-      bold: true
+    properties: {text: 12th Standard, bold: true, spacing_below: none}
     type: Label
-    layout_properties: {grid_position: 'BEBUZS,DOTCTU'}
+    layout_properties: {grid_position: 'BEBUZS,DOTCTU OMHXIC,MGATTO'}
+  - name: label_22_copy_8_copy_7
+    properties: {text: (Size less than 2MB), spacing_above: none, font_size: 12}
+    type: Label
+    layout_properties: {grid_position: 'BEBUZS,DOTCTU BATIGG,QNYFGH'}
   - name: file_loader_8
     properties: {text: Upload Certificate}
     type: FileLoader
@@ -224,13 +224,13 @@ components:
     type: Image
     layout_properties: {grid_position: 'BEBUZS,ZMHVFD'}
   - name: label_10
-    properties:
-      text: |-
-        Bachelor's degree
-        (Size less than 2MB)
-      bold: true
+    properties: {text: Bachelor's degree, bold: true, spacing_below: none}
     type: Label
-    layout_properties: {grid_position: 'TUJLGY,BORLWP'}
+    layout_properties: {grid_position: 'TUJLGY,BORLWP LEWHXV,HPSLVA'}
+  - name: label_22_copy_8_copy_8
+    properties: {text: (Size less than 2MB), spacing_above: none, font_size: 12}
+    type: Label
+    layout_properties: {grid_position: 'TUJLGY,BORLWP VRAOBS,MIHEWY'}
   - name: file_loader_9
     properties: {text: Upload Certificate}
     type: FileLoader
@@ -242,12 +242,16 @@ components:
     layout_properties: {grid_position: 'TUJLGY,TDOOVK'}
   - name: label_11
     properties:
-      text: |-
+      text: |
         Master's degree
-        (Size less than 2MB)
       bold: true
+      spacing_below: none
     type: Label
-    layout_properties: {grid_position: 'SBSEXD,YUACIC'}
+    layout_properties: {grid_position: 'SBSEXD,YUACIC RKBQQS,OZAGNK'}
+  - name: label_22_copy_8_copy_9
+    properties: {text: (Size less than 2MB), spacing_above: none, font_size: 12}
+    type: Label
+    layout_properties: {grid_position: 'SBSEXD,YUACIC WVEKAB,DSLAQJ'}
   - name: file_loader_10
     properties: {text: Upload Certificate}
     type: FileLoader
@@ -264,12 +268,16 @@ components:
   components:
   - name: label_12
     properties:
-      text: |-
+      text: |
         10th Standard
-        (Size less than 2MB)
       bold: true
+      spacing_below: none
     type: Label
-    layout_properties: {grid_position: 'RMKYLB,ZKSKPU'}
+    layout_properties: {grid_position: 'RMKYLB,ZKSKPU IGBPXQ,JUWXUR'}
+  - name: label_22_copy_8_copy_9_copy
+    properties: {text: (Size less than 2MB), spacing_above: none, font_size: 12}
+    type: Label
+    layout_properties: {grid_position: 'RMKYLB,ZKSKPU OVYMUW,UEWWZF'}
   - name: file_loader_11
     properties: {text: Upload Certificate}
     type: FileLoader
@@ -280,13 +288,13 @@ components:
     type: Image
     layout_properties: {grid_position: 'RMKYLB,BEDWQY'}
   - name: label_13
-    properties:
-      text: |-
-        12th Standard
-        (Size less than 2MB)
-      bold: true
+    properties: {text: 12th Standard, bold: true, spacing_below: none}
     type: Label
-    layout_properties: {grid_position: 'QMDENK,RXIGSE'}
+    layout_properties: {grid_position: 'QMDENK,RXIGSE BXILYC,XYXXIW'}
+  - name: label_22_copy_8_copy_9_copy_2
+    properties: {text: (Size less than 2MB), spacing_above: none, font_size: 12}
+    type: Label
+    layout_properties: {grid_position: 'QMDENK,RXIGSE KLHQUE,PPZPRV'}
   - name: file_loader_12
     properties: {text: Upload Certificate}
     type: FileLoader
@@ -297,13 +305,13 @@ components:
     type: Image
     layout_properties: {grid_position: 'QMDENK,AWZQUX'}
   - name: label_14
-    properties:
-      text: |-
-        Bachelor's degree
-        (Size less than 2MB)
-      bold: true
+    properties: {text: Bachelor's degree, bold: true, spacing_below: none}
     type: Label
-    layout_properties: {grid_position: 'NPDMKI,LITEWB'}
+    layout_properties: {grid_position: 'NPDMKI,LITEWB DWZWIA,WFTCDY'}
+  - name: label_22_copy_8_copy_9_copy_3
+    properties: {text: (Size less than 2MB), spacing_above: none, font_size: 12}
+    type: Label
+    layout_properties: {grid_position: 'NPDMKI,LITEWB KDOQJK,NBUMRR'}
   - name: file_loader_13
     properties: {text: Upload Certificate}
     type: FileLoader
@@ -314,13 +322,13 @@ components:
     type: Image
     layout_properties: {grid_position: 'NPDMKI,AZBJAN'}
   - name: label_15
-    properties:
-      text: |-
-        Master's degree
-        (Size less than 2MB)
-      bold: true
+    properties: {text: Master's degree, bold: true, spacing_below: none}
     type: Label
-    layout_properties: {grid_position: 'SKRTZF,NDKPQJ'}
+    layout_properties: {grid_position: 'SKRTZF,NDKPQJ STHAXB,UIIGBJ'}
+  - name: label_22_copy_8_copy_9_copy_4
+    properties: {text: (Size less than 2MB), spacing_above: none, font_size: 12}
+    type: Label
+    layout_properties: {grid_position: 'SKRTZF,NDKPQJ GAFMOV,BYDLRF'}
   - name: file_loader_14
     properties: {text: Upload Certificate}
     type: FileLoader
@@ -331,13 +339,13 @@ components:
     type: Image
     layout_properties: {grid_position: 'SKRTZF,QXEPWI'}
   - name: label_16
-    properties:
-      text: |-
-        PhD
-        (Size less than 2MB)
-      bold: true
+    properties: {text: PhD, bold: true, spacing_below: none}
     type: Label
-    layout_properties: {grid_position: 'ECLNCD,BZYNVW'}
+    layout_properties: {grid_position: 'ECLNCD,BZYNVW SPRMOO,FFQWNU'}
+  - name: label_22_copy_8_copy_9_copy_5
+    properties: {text: (Size less than 2MB), spacing_above: none, font_size: 12}
+    type: Label
+    layout_properties: {grid_position: 'ECLNCD,BZYNVW EHVKBL,ZKTYHB'}
   - name: file_loader_15
     properties: {text: Upload Certificate}
     type: FileLoader
