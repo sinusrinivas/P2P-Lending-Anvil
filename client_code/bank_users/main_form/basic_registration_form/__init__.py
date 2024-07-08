@@ -363,13 +363,13 @@ class basic_registration_form(basic_registration_formTemplate):
             if content_type in ['image/jpeg', 'image/png','image/jpg']:
                 # Display the image in an Image component
                 self.image_aadhar.source = self.registration_img_aadhar_file_loader.file
-            # elif content_type == 'application/pdf':
-            #     # Convert PDF to image on the server
-            #     # img_byte_arr = anvil.server.call('convert_pdf_to_image', file)
-            #     # self.image_aadhar.source = anvil.BlobMedia('image/png', img_byte_arr)
-            # else:
-            #     alert('Invalid file type. Only JPEG, PNG, and PDF are allowed')
-            #     self.registration_img_aadhar_file_loader.clear()
+            elif content_type == 'application/pdf':
+                # Convert PDF to image on the server
+                img_byte_arr = anvil.server.call('convert_pdf_to_image', file)
+                self.image_aadhar.source = anvil.BlobMedia('image/png', img_byte_arr)
+            else:
+                alert('Invalid file type. Only JPEG, PNG, and PDF are allowed')
+                self.registration_img_aadhar_file_loader.clear()
 
 
     def registration_img_pan_file_loader_change(self, file, **event_args):
