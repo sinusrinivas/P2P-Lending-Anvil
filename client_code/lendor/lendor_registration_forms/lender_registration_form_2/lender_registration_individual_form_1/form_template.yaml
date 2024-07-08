@@ -23,23 +23,23 @@ components:
   name: navigation_bar_main_lender_1
   layout_properties: {grid_position: 'ILVKDA,XCOYIX', full_width_row: true}
 - name: column_panel_1
-  properties: {}
+  properties: {role: outlined-card}
   type: ColumnPanel
   layout_properties: {grid_position: 'HXDSWQ,VZLTIF'}
   components:
   - name: label_1_copy_1
-    properties: {role: outlined-card, bold: true, align: center, spacing_above: small, background: '#05264d', icon: '', underline: false, font: '', icon_align: left, foreground: white, spacing_below: small, visible: true, border: '', italic: false, font_size: 18, tooltip: '', text: Individual Type}
+    properties: {role: null, bold: true, align: center, spacing_above: small, background: '#05264d', icon: '', underline: false, font: '', icon_align: left, foreground: white, spacing_below: small, visible: true, border: '', italic: false, font_size: 18, tooltip: '', text: Individual Type}
     type: Label
     layout_properties: {grid_position: 'RGDOPH,TMZKOQ'}
-- name: label_5_copy_1
-  properties: {role: null, bold: true, align: center, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: 16, tooltip: '', text: 'Empolyment  Details '}
-  type: Label
-  layout_properties: {grid_position: 'XLEJAO,RTQWUR'}
 - name: column_panel_2
   properties: {}
   type: ColumnPanel
   layout_properties: {grid_position: 'NVWEXL,TPRTDX'}
   components:
+  - name: label_5_copy_1
+    properties: {role: null, bold: true, align: center, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: 16, tooltip: '', text: 'Empolyment  Details '}
+    type: Label
+    layout_properties: {grid_position: 'LBHJPL,ISOYTY'}
   - name: grid_panel_2
     properties: {}
     type: GridPanel
