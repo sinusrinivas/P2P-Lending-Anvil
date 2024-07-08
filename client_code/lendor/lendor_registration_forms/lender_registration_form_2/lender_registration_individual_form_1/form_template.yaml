@@ -225,7 +225,7 @@ components:
       properties: {text: Upload Employee Id, font_size: 12}
       type: FileLoader
       layout_properties: {row: NSCZER, width_xs: 3, col_xs: 6}
-      event_bindings: {change: file_loader_1_change}
+      event_bindings: {change: file_loader_1_copy_2_change}
     - name: image_1_copy_3
       properties: {height: 118}
       type: Image

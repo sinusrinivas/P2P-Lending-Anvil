@@ -122,12 +122,18 @@ class lender_registration_individual_form_1(lender_registration_individual_form_
             anvil.server.call('add_lendor_individual_form_3', annual_salary, designation, emp_id_proof, last_six_month, user_id,salary_type )
             open_form('lendor.lendor_registration_forms.lender_registration_form_3_marital_details', user_id=self.userId)
     
+  def button_1_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    user_id = self.userId
+    open_form('lendor.lendor_registration_forms.lender_registration_form_2',user_id = user_id)
 
+
+  
   def button_3_click(self, **event_args):
     """This method is called when the button is clicked"""
     open_form("bank_users.user_form")
 
-  def file_loader_1_change(self, file, **event_args):
+  def file_loader_1_copy_2_change(self, file, **event_args):
     """This method is called when a new file is loaded into this FileLoader"""
     valid, message = self.validate_file(file)
     if valid:
@@ -135,6 +141,7 @@ class lender_registration_individual_form_1(lender_registration_individual_form_
     else:
       Notification(message).show()
       self.file_loader_1_copy_2.clear()
+    
 
   def file_loader_2_change(self, file, **event_args):
     """This method is called when a new file is loaded into this FileLoader"""
@@ -144,6 +151,8 @@ class lender_registration_individual_form_1(lender_registration_individual_form_
     else:
       Notification(message).show()
       self.file_loader_2.clear()
+
+  
 
 
 
