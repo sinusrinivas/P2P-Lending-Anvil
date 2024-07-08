@@ -342,13 +342,13 @@ class basic_registration_form(basic_registration_formTemplate):
         anvil.server.call('add_basic_details', full_name, gender, dob, mobile_no, user_photo, alternate_email,
                         aadhar, aadhar_card, pan, pan_card, street_adress_1, street_address_2, city, pincode,
                         state, country, user_id, user_age, present, duration)
-        Notification("Basic details form filled up submitted successfully").show()
+        
     
         # Navigate to the appropriate form based on user type
         if user_data['usertype'] == 'lender':
             open_form('lendor.lendor_registration_forms.lender_registration_form_1_education_form', user_id=user_id)
         elif user_data['usertype'] == 'borrower':
-            open_form('borrower.borrower_registration_forms.star_1_borrower_registration_form_1_education', user_id=user_id)
+            open_form('borrower.borrower_registration_forms.borrower_registration_form_1_education', user_id=user_id)
         else:
             open_form('bank_users.user_form')
 
