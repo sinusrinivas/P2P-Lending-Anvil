@@ -17,9 +17,19 @@ class signin_page(signin_pageTemplate):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
     self.role = "no-scroll"
+    self.eye_icon_1.source = '_/theme/eye_closed.png'
     # login_date = datetime.now()
 
     # Any code you write here will run before the form opens.
+  def eye_icon_1_click(self, **event_args):
+    """This method is called when the eye icon next to text_box_2 is clicked"""
+    if self.text_box_2.hide_text:
+      self.text_box_2.hide_text = False  # Show the password
+      self.eye_icon_1.source = '_/theme/eye_open.png'  # Change to open eye icon
+    else:
+      self.text_box_2.hide_text = True  # Hide the password
+      self.eye_icon_1.source = '_/theme/eye_closed.png'  # Change to closed eye icon
+
 
   def button_1_click(self, **event_args):
     email = self.text_box_1.text.strip()
@@ -250,6 +260,7 @@ class signin_page(signin_pageTemplate):
     self.text_box_2.visible = False
     self.send_otp.text = "Resend"  # Change text of send_otp link
     self.label_2.visible = False
+    self.eye_icon_1.visible = False
     self.check_box_1.visible = False
     self.button_1.visible = False
     self.label_8.visible = False

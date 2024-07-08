@@ -82,7 +82,7 @@ components:
       type: Spacer
       layout_properties: {grid_position: 'WUAZDP,FZHHNU'}
     - name: column_panel_1_copy_copy
-      properties: {role: elevated-card, col_widths: '{"CQYWXR":10,"EKYSFD":50,"EOHAME":10,"PKGYXY":54,"VXLYLN":40,"IKUFXQ":10,"UXCVZV":40,"BHDWCQ":50,"QBCPGR":10}'}
+      properties: {role: elevated-card, col_widths: '{"CQYWXR":10,"EKYSFD":54,"EOHAME":6,"VXLYLN":40,"IKUFXQ":10,"UXCVZV":40,"BHDWCQ":64,"MUTVVT":6}'}
       type: ColumnPanel
       layout_properties: {grid_position: 'WUAZDP,LLBEDS', full_width_row: true}
       components:
@@ -120,10 +120,11 @@ components:
         type: TextBox
         layout_properties: {grid_position: 'WIGVMQ,BHDWCQ'}
         event_bindings: {pressed_enter: text_box_2_pressed_enter}
-      - name: label_2
-        properties: {icon: 'fa:lock', font_size: 20}
-        type: Label
-        layout_properties: {grid_position: 'WIGVMQ,QBCPGR'}
+      - name: eye_icon_1
+        properties: {height: '30', visible: true, horizontal_align: left}
+        type: Image
+        layout_properties: {grid_position: 'WIGVMQ,MUTVVT'}
+        event_bindings: {mouse_up: eye_icon_1_click}
       - name: error_label
         properties: {visible: false, foreground: red}
         type: Label
