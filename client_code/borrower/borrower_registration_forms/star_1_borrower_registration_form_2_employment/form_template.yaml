@@ -138,6 +138,10 @@ components:
     properties: {height: 32}
     type: Spacer
     layout_properties: {row: LXQHYI, width_xs: 12, col_xs: 0}
+  - name: label_1_copy_1_copy_2_copy
+    properties: {role: null, bold: true, align: center, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: 16, tooltip: '', text: Business Details}
+    type: Label
+    layout_properties: {row: FLPZXV, width_xs: 4, col_xs: 4}
   - name: label_2
     properties: {text: Enter Your Business Name, bold: true, spacing_above: medium}
     type: Label
