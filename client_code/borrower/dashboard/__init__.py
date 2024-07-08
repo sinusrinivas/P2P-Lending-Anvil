@@ -210,7 +210,7 @@ class dashboard(dashboardTemplate):
     def update_wallet_info(self):
         wallet = app_tables.fin_wallet.get(customer_id=self.user_Id)
         if wallet:
-            self.label_9.text = "{:.2f}".format((wallet['wallet_amount'] or 0))
+            # self.label_9.text = "{:.2f}".format((wallet['wallet_amount'] or 0))
             self.label_2_copy_copy.text = "{:.2f}".format((wallet['wallet_amount'] or 0))
 
     def update_user_profile(self):
