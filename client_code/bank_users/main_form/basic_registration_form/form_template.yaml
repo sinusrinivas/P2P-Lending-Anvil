@@ -55,7 +55,7 @@ components:
     type: DatePicker
     layout_properties: {grid_position: 'RKZEYY,BNYXUD XIYMFS,WHWXXS'}
   - name: label_2_copy_1
-    properties: {role: input-prompt, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: 16, tooltip: '', text: 'Enter Your Alternate Email  '}
+    properties: {role: input-prompt, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: 'Enter Your Alternate Email  '}
     type: Label
     layout_properties: {grid_position: 'RKZEYY,BNYXUD ADBWRZ,ADLMMX'}
   - name: alternate_email_text_box
@@ -68,7 +68,7 @@ components:
     type: Spacer
     layout_properties: {grid_position: 'RKZEYY,BNYXUD ZDTCZM,LEAILP'}
   - name: label_06
-    properties: {role: input-prompt, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: right, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: 16, tooltip: '', text: Enter Your Government ID1  *}
+    properties: {role: input-prompt, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: right, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: Enter Your Government ID1  *}
     type: Label
     layout_properties: {grid_position: 'RKZEYY,BNYXUD OOLZXH,FAPUXC'}
   - name: govt_id1_text_box
@@ -77,7 +77,7 @@ components:
     layout_properties: {grid_position: 'RKZEYY,BNYXUD WGHMMX,NFZJTH'}
     event_bindings: {pressed_enter: adhar_card_text_box_pressed_enter}
   - name: label_08
-    properties: {role: input-prompt, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: 16, tooltip: '', text: Enter Your Government ID2  *}
+    properties: {role: input-prompt, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: Enter Your Government ID2  *}
     type: Label
     layout_properties: {grid_position: 'RKZEYY,BNYXUD CBHTRB,NOANKG'}
   - name: govt_id2_text_box
@@ -167,7 +167,7 @@ components:
       visible: false
       border: ''
       italic: false
-      font_size: 16
+      font_size: null
       tooltip: ''
       text: |
         Upload Your Govt ID1  *
@@ -198,7 +198,7 @@ components:
       visible: false
       border: ''
       italic: false
-      font_size: 16
+      font_size: null
       tooltip: ''
       text: |
         Upload Your Govt ID2  *
