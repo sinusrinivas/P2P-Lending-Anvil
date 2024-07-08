@@ -64,7 +64,11 @@ components:
   layout_properties: {grid_position: 'TDVAJP,EOLKRB', full_width_row: true}
   components:
   - name: label_2
-    properties: {text: 10th Standard, bold: true}
+    properties:
+      text: |-
+        10th Standard
+        (Size less than 2MB)
+      bold: true
     type: Label
     layout_properties: {grid_position: 'XACTFH,XFDPZE'}
   - name: file_loader_1
@@ -82,7 +86,11 @@ components:
   layout_properties: {grid_position: 'DXYMXQ,EKYTRZ', full_width_row: true}
   components:
   - name: label_3
-    properties: {text: 10th Standard, bold: true}
+    properties:
+      text: |-
+        10th Standard
+        (Size less than 2MB)
+      bold: true
     type: Label
     layout_properties: {grid_position: 'RPRENY,UJXMIR'}
   - name: file_loader_2
@@ -95,7 +103,11 @@ components:
     type: Image
     layout_properties: {grid_position: 'RPRENY,ETTJZD'}
   - name: label_4
-    properties: {text: 12th Standard, bold: true}
+    properties:
+      text: |-
+        12th Standard
+        (Size less than 2MB)
+      bold: true
     type: Label
     layout_properties: {grid_position: 'OBGZRV,KKLNYY'}
   - name: file_loader_3
@@ -113,7 +125,11 @@ components:
   layout_properties: {grid_position: 'TUXFDX,XBCDGW', full_width_row: true}
   components:
   - name: label_5
-    properties: {text: 10th Standard, bold: true}
+    properties:
+      text: |-
+        10th Standard
+        (Size less than 2MB)
+      bold: true
     type: Label
     layout_properties: {grid_position: 'YJJRSX,XKKDTQ'}
   - name: file_loader_4
@@ -126,7 +142,11 @@ components:
     type: Image
     layout_properties: {grid_position: 'YJJRSX,GBEBHT'}
   - name: label_6
-    properties: {text: 12th Standard, bold: true}
+    properties:
+      text: |-
+        12th Standard
+        (Size less than 2MB)
+      bold: true
     type: Label
     layout_properties: {grid_position: 'EVSYED,SCDHNU'}
   - name: file_loader_5
@@ -140,8 +160,9 @@ components:
     layout_properties: {grid_position: 'EVSYED,CWNRNC'}
   - name: label_7
     properties:
-      text: |
+      text: |-
         Bachelor's degree
+        (Size less than 2MB)
       bold: true
     type: Label
     layout_properties: {grid_position: 'EKITQV,VLRAHO'}
@@ -160,7 +181,11 @@ components:
   layout_properties: {grid_position: 'BNJRZJ,SMLUEI', full_width_row: true}
   components:
   - name: label_8
-    properties: {text: 10th Standard, bold: true}
+    properties:
+      text: |-
+        10th Standard
+        (Size less than 2MB)
+      bold: true
     type: Label
     layout_properties: {grid_position: 'HFOCKI,VGHZUW'}
   - name: file_loader_7
@@ -173,7 +198,11 @@ components:
     type: Image
     layout_properties: {grid_position: 'HFOCKI,SICYTW'}
   - name: label_9
-    properties: {text: 12th Standard, bold: true}
+    properties:
+      text: |-
+        12th Standard
+        (Size less than 2MB)
+      bold: true
     type: Label
     layout_properties: {grid_position: 'BEBUZS,DOTCTU'}
   - name: file_loader_8
@@ -186,7 +215,11 @@ components:
     type: Image
     layout_properties: {grid_position: 'BEBUZS,ZMHVFD'}
   - name: label_10
-    properties: {text: Bachelor's degree, bold: true}
+    properties:
+      text: |-
+        Bachelor's degree
+        (Size less than 2MB)
+      bold: true
     type: Label
     layout_properties: {grid_position: 'TUJLGY,BORLWP'}
   - name: file_loader_9
@@ -199,7 +232,11 @@ components:
     type: Image
     layout_properties: {grid_position: 'TUJLGY,TDOOVK'}
   - name: label_11
-    properties: {text: Master's degree, bold: true}
+    properties:
+      text: |-
+        Master's degree
+        (Size less than 2MB)
+      bold: true
     type: Label
     layout_properties: {grid_position: 'SBSEXD,YUACIC'}
   - name: file_loader_10
@@ -217,7 +254,11 @@ components:
   layout_properties: {grid_position: 'ULAROS,TCBOHH', full_width_row: true}
   components:
   - name: label_12
-    properties: {text: 10th Standard, bold: true}
+    properties:
+      text: |-
+        10th Standard
+        (Size less than 2MB)
+      bold: true
     type: Label
     layout_properties: {grid_position: 'RMKYLB,ZKSKPU'}
   - name: file_loader_11
@@ -230,7 +271,11 @@ components:
     type: Image
     layout_properties: {grid_position: 'RMKYLB,BEDWQY'}
   - name: label_13
-    properties: {text: 12th Standard, bold: true}
+    properties:
+      text: |-
+        12th Standard
+        (Size less than 2MB)
+      bold: true
     type: Label
     layout_properties: {grid_position: 'QMDENK,RXIGSE'}
   - name: file_loader_12
@@ -243,7 +288,11 @@ components:
     type: Image
     layout_properties: {grid_position: 'QMDENK,AWZQUX'}
   - name: label_14
-    properties: {text: Bachelor's degree, bold: true}
+    properties:
+      text: |-
+        Bachelor's degree
+        (Size less than 2MB)
+      bold: true
     type: Label
     layout_properties: {grid_position: 'NPDMKI,LITEWB'}
   - name: file_loader_13
@@ -256,7 +305,11 @@ components:
     type: Image
     layout_properties: {grid_position: 'NPDMKI,AZBJAN'}
   - name: label_15
-    properties: {text: Master's degree, bold: true}
+    properties:
+      text: |-
+        Master's degree
+        (Size less than 2MB)
+      bold: true
     type: Label
     layout_properties: {grid_position: 'SKRTZF,NDKPQJ'}
   - name: file_loader_14
@@ -269,7 +322,11 @@ components:
     type: Image
     layout_properties: {grid_position: 'SKRTZF,QXEPWI'}
   - name: label_16
-    properties: {text: PhD, bold: true}
+    properties:
+      text: |-
+        PhD
+        (Size less than 2MB)
+      bold: true
     type: Label
     layout_properties: {grid_position: 'ECLNCD,BZYNVW'}
   - name: file_loader_15
