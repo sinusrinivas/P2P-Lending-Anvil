@@ -17,8 +17,8 @@ class lender_registration_Institutional_form_1(lender_registration_Institutional
     self.init_components(**properties)
     user_data=app_tables.fin_user_profile.get(customer_id=user_id)
     if user_data:
-            self.text_box_1.text = user_data['business_add']
-            self.text_box_2.text = user_data['business_name']
+            self.text_box_1_copy.text = user_data['business_add']
+            self.text_box_2_copy.text = user_data['business_name']
             self.drop_down_12.selected_value = user_data['business_type']
             self.date_picker_1.date = user_data['year_estd']
             self.text_box_3.text = user_data['industry_type']
@@ -64,10 +64,6 @@ class lender_registration_Institutional_form_1(lender_registration_Institutional
     options_string = [str(option['lendor_business_type']) for option in options]
     self.drop_down_12.items = options_string
 
-    options = app_tables.fin_lendor_no_of_employees.search()
-    options_string = [str(option['lendor_no_of_employees']) for option in options]
-    self.drop_down_2.items = options_string
-
   def validate_file(self, file):
         """Validate file type and size."""
         if file is None:
@@ -85,8 +81,8 @@ class lender_registration_Institutional_form_1(lender_registration_Institutional
         return True, ""
 
   def button_2_click(self, **event_args):
-    business_name = self.text_box_2.text
-    business_add = self.text_box_1.text
+    business_name = self.text_box_2_copy.text
+    business_add = self.text_box_1_copy.text
     business_type = self.drop_down_12.selected_value        
     empolyees_working = self.drop_down_4.selected_value
     year = self.date_picker_1.date
@@ -105,43 +101,41 @@ class lender_registration_Institutional_form_1(lender_registration_Institutional
      # Get today's date
     today = date.today()
     
-            # Validation for Business
-            if not re.match(r'^[A-Za-z\s]+$', business_name):
-              alert('Enter valid business name')
-            elif not business_name or not business_add or not business_type or not empolyees_working:
-                Notification("Please fill all the fields").show()
+    # Validation for Business
+    if not re.match(r'^[A-Za-z\s]+$', business_name):
+      alert('Enter valid business name')
+    elif not business_name or not business_add or not business_type or not empolyees_working:
+      Notification("Please fill all the fields").show()
 
-            elif year and year.year > today.year:
-              alert("The year cannot be in the future. Please select a valid year.", title="Invalid Year")
-              return
-            elif year and year.year == today.year and year.month > today.month:
-              alert("The month cannot be in the future. Please select a valid month.", title="Invalid Month")
-              return
-            elif year and year.year == today.year and year.month == today.month and year.day > today.day:
-              alert("The date cannot be in the future. Please select a valid date.", title="Invalid Date")
-              return              
-            elif not year or not industry_type or not turn_over or not last_six_statements:
-              alert("Please fill all the fields", title="Missing Information")
-            elif ' ' in cin:
-                Notification("Spaces are not allowed in the CIN input").show()
-                return    
-            # DIN Validation
-            elif ' ' in din:
-                Notification("Spaces are not allowed in the DIN input").show()
-                return
-            # Other field validations
-            elif not din or not cin or not reg_off_add or not proof_verification:
-                Notification("Please fill all the fields").show()
-            else:
-              anvil.server.call('add_lendor_institutional_form_1',business_name,business_add,business_type,empolyees_working,user_id)
-              months = (datetime.now().year - year.year) * 12 + (datetime.now().month - year.month)
-              anvil.server.call('add_lendor_institutional_form_2', year, months, industry_type, turn_over, last_six_statements, user_id)
-              anvil.server.call('add_lendor_institutional_form_3', din, cin, reg_off_add, proof_verification, user_id)
-              open_form('borrower.borrower_registration_forms.star_1_borrower_registration_form_3_marital', user_id=user_id)
-
+    elif year and year.year > today.year:
+      alert("The year cannot be in the future. Please select a valid year.", title="Invalid Year")
+      return
+    elif year and year.year == today.year and year.month > today.month:
+      alert("The month cannot be in the future. Please select a valid month.", title="Invalid Month")
+      return
+    elif year and year.year == today.year and year.month == today.month and year.day > today.day:
+      alert("The date cannot be in the future. Please select a valid date.", title="Invalid Date")
+      return              
+    elif not year or not industry_type or not turn_over or not last_six_statements:
+      alert("Please fill all the fields", title="Missing Information")
+    elif ' ' in cin:
+      Notification("Spaces are not allowed in the CIN input").show()
+      return    
+    # DIN Validation
+    elif ' ' in din:
+      Notification("Spaces are not allowed in the DIN input").show()
+      return
+    # Other field validations
+    elif not din or not cin or not reg_off_add or not proof_verification:
+      Notification("Please fill all the fields").show()
     else:
-       anvil.server.call('add_lendor_institutional_form_1',business_name,business_add,business_type,empolyees_working,user_id)
-       open_form('lendor.lendor_registration_forms.lender_registration_form_2.lender_registration_Institutional_form_2',user_id = user_id)
+      anvil.server.call('add_lendor_institutional_form_1',business_name,business_add,business_type,empolyees_working,user_id)
+      months = (datetime.now().year - year.year) * 12 + (datetime.now().month - year.month)
+      anvil.server.call('add_lendor_institutional_form_2', year, months, industry_type, turn_over, last_six_statements, user_id)
+      anvil.server.call('add_lendor_institutional_form_3', din, cin, reg_off_add, proof_verification, user_id)
+      open_form('lendor.lendor_registration_forms.lender_registration_form_3_marital_details',user_id=user_id)
+
+
    
 
   def button_1_click(self, **event_args):
