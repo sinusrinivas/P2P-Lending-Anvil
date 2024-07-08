@@ -543,10 +543,16 @@ class basic_registration_form(basic_registration_formTemplate):
 
     def validate_alternate_email(self, **event_args):
         alternate_email = self.alternate_email_text_box.text
-        if re.match(r'^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$', alternate_email):
-            self.alternate_email_text_box.background = None
+        if alternate_email:  # Check if the field is not empty
+            if re.match(r'^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$', alternate_email):
+                self.alternate_email_text_box.background = None  # Reset background for valid input
+            else:
+                self.alternate_email_text_box.background = '#FF0000'  # Red background for invalid input
         else:
-            self.alternate_email_text_box.background = '#FF0000'  # Red background for invalid input
+            self.alternate_email_text_box.background = None  # Reset background if the field is empty
+
+
+
 
     def validate_city(self, **event_args):
         city = self.text_box_3.text
@@ -651,18 +657,15 @@ class basic_registration_form(basic_registration_formTemplate):
             self.mobile_number_box.focus()
             return
 
-        # Validate alternate email
-        if not re.match(r'^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$', alternate_email):
-            alert('Enter a valid email address')
-            self.alternate_email_text_box.background = '#FF0000 '
-            self.alternate_email_text_box.focus()
-            return
+        
 
         # Check if all fields are filled
-        if not (full_name and gender and dob and mobile_no and alternate_email and user_photo and aadhar and aadhar_card and pan and pan_card and (street_adress_1 or street_address_2) and city and pincode and state and country and present and duration):
+        if not (full_name and gender and dob and mobile_no and user_photo and aadhar and aadhar_card and pan and pan_card and (street_adress_1 or street_address_2) and city and pincode and state and country and present and duration):
             Notification('Please fill all details').show()
             return
 
+        
+            
         # Check if the entered alternate email matches the existing alternate email for the user
         user_data = app_tables.fin_user_profile.get(customer_id=user_id)
         if user_data and alternate_email == user_data['email_user']:
@@ -670,7 +673,7 @@ class basic_registration_form(basic_registration_formTemplate):
             self.alternate_email_text_box.background = '#ffb3b3'
             self.alternate_email_text_box.focus()
             return
-
+            
         # Calculate user age
         user_age = datetime.now().year - datetime.strptime(dob, '%Y-%m-%d').year - ((datetime.now().month, datetime.now().day) < (datetime.strptime(dob, '%Y-%m-%d').month, datetime.strptime(dob, '%Y-%m-%d').day))
 
