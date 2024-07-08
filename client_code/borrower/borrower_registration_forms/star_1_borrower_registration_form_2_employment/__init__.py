@@ -167,9 +167,11 @@ class star_1_borrower_registration_form_2_employment(star_1_borrower_registratio
             self.text_box_5.text = user_data['din'].replace(' ', '') if 'din' in user_data else ''
             self.text_box_6.text = user_data['cin'].replace(' ', '') if 'cin' in user_data else ''
             self.text_box_7.text = user_data['registered_off_add'] if 'registered_off_add' in user_data else ''
+          
             self.borrower_college_name_text.text = user_data['college_name']
             self.borrower_college_id_text.text=user_data['college_id']
             self.borrower_college_address_text.text=user_data['college_address']
+          
             self.drop_down_1_copy_3.selected_value = user_data['land_type']
             self.text_box_1_copy_4.text = str(user_data['total_acres'])  # Convert to string
             self.text_box_2_copy_3.text = user_data['crop_name']
@@ -287,7 +289,7 @@ class star_1_borrower_registration_form_2_employment(star_1_borrower_registratio
             elif not crop_name or not total_acres or not farmer_earnings:
                 Notification("Please fill all the fields").show()
             else:
-                anvil.server.call('add_farmer_details', land_type, total_acres, crop_name, farmer_earnings, user_id)
+                anvil.server.call('add_borrower_farmer', land_type, total_acres, crop_name, farmer_earnings, user_id)
                 open_form('borrower.borrower_registration_forms.star_1_borrower_registration_form_3_marital', user_id=user_id)
 
   
