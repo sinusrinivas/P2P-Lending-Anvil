@@ -278,7 +278,7 @@ class signin_page(signin_pageTemplate):
                 user_module.add_email_and_user_id(user_email)
                 main_form_module.email = user_email
                 main_form_module.flag = True
-                open_form('bank_users.main_form.forgot_password',email)
+                open_form('bank_users.main_form.forgot_password',e)
             else:
                 check_user_registration = user_module.check_user_registration_form_done_or_not_engine(user_email)
                 print("main else statement was executed")
