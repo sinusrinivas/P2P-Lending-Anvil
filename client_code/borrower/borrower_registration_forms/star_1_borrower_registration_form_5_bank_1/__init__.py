@@ -128,9 +128,9 @@ class star_1_borrower_registration_form_5_bank_1(star_1_borrower_registration_fo
       Notification("Account number should be valid").show()
       self.text_box_3.focus()
     else:
-      anvil.server.call('add_lendor_bank_details_form_2', bank_id, bank_branch, user_id)
-      anvil.server.call('add_lendor_bank_details_form_1', account_name, account_type, account_number, bank_name, user_id)
-      open_form('lendor.dashboard')
+      anvil.server.call('add_borrower_step5', account_name, account_type, account_number, bank_name, user_id)
+      anvil.server.call('add_borrower_step6', bank_id, bank_branch, user_id)
+      open_form('borrower.dashboard')
 
   def button_1_click(self, **event_args):
     open_form('borrower.borrower_registration_forms.star_1_borrower_registration_form_4_loan',user_id=self.userId)
