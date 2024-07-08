@@ -88,7 +88,8 @@ def add_lendor_institutional_form_1(business_name,business_add,business_type,emp
   if row:
     row[0]['business_name'] = business_name
     row[0]['business_add'] = business_add
-    row[0]['business_type'] = business_type
+    row[0]['business_type'] = business_type    
+    row[0]['employees_working'] = empolyees_working
     row[0]['form_count'] = 2
 
 @anvil.server.callable

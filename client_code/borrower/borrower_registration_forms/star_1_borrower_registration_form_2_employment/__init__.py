@@ -297,7 +297,8 @@ class star_1_borrower_registration_form_2_employment(star_1_borrower_registratio
 
         business_name = self.text_box_2.text
         business_add = self.text_box_1.text
-        business_type = self.drop_down_12.selected_value
+        business_type = self.drop_down_12.selected_value        
+        empolyees_working = self.drop_down_4.selected_value
         year = self.date_picker_1.date
         industry_type = self.text_box_3.text
         turn_over = self.text_box_4.text
@@ -354,7 +355,7 @@ class star_1_borrower_registration_form_2_employment(star_1_borrower_registratio
             # Validation for Business
             if not re.match(r'^[A-Za-z\s]+$', business_name):
               alert('Enter valid business name')
-            elif not business_name or not business_add or not business_type :
+            elif not business_name or not business_add or not business_type or not empolyees_working:
                 Notification("Please fill all the fields").show()
 
             elif year and year.year > today.year:
@@ -365,25 +366,21 @@ class star_1_borrower_registration_form_2_employment(star_1_borrower_registratio
               return
             elif year and year.year == today.year and year.month == today.month and year.day > today.day:
               alert("The date cannot be in the future. Please select a valid date.", title="Invalid Date")
-              return
-              
+              return              
             elif not year or not industry_type or not turn_over or not last_six_statements:
               alert("Please fill all the fields", title="Missing Information")
-
             elif ' ' in cin:
                 Notification("Spaces are not allowed in the CIN input").show()
-                return
-    
+                return    
             # DIN Validation
             elif ' ' in din:
                 Notification("Spaces are not allowed in the DIN input").show()
                 return
-    
             # Other field validations
             elif not din or not cin or not reg_off_add or not proof_verification:
                 Notification("Please fill all the fields").show()
             else:
-              anvil.server.call('add_lendor_institutional_form_1',business_name,business_add,business_type,user_id)
+              anvil.server.call('add_lendor_institutional_form_1',business_name,business_add,business_type,empolyees_working,user_id)
               months = (datetime.now().year - year.year) * 12 + (datetime.now().month - year.month)
               anvil.server.call('add_lendor_institutional_form_2', year, months, industry_type, turn_over, last_six_statements, user_id)
               anvil.server.call('add_lendor_institutional_form_3', din, cin, reg_off_add, proof_verification, user_id)
