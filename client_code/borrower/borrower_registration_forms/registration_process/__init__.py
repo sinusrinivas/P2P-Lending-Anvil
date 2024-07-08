@@ -1,4 +1,4 @@
-from ._anvil_designer import Form3Template
+from ._anvil_designer import registration_processTemplate
 from anvil import *
 import anvil.server
 import anvil.google.auth, anvil.google.drive
@@ -9,7 +9,7 @@ import anvil.tables.query as q
 from anvil.tables import app_tables
 
 
-class Form3(Form3Template):
+class registration_process(registration_processTemplate):
     def __init__(self, **properties):
         # Set Form properties and Data Bindings.
         self.init_components(**properties)
