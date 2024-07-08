@@ -187,86 +187,86 @@ class star_1_borrower_registration_form_3_marital(star_1_borrower_registration_f
             Notification("Please fill all the required fields").show()
 
       elif selected_value == 'Spouse':
-    details = self.collect_details()
-    if details:
-      spouse_name = details.get('spouse_name', '')
-      spouse_mob = details.get('spouse_mob', '')
-      spouse_mbl_no = details.get('spouse_mbl_no', '')
-      spouse_profession = details.get('spouse_profession', '')
-      spouse_company = details.get('spouse_company', '')
-      annual_earning = details.get('annual_earning', '')
-      another_person = details.get('another_person', '')
-
-      # Validations
-      errors = []
-      if not spouse_name:
-        errors.append("Enter a valid full name!")
-        self.spouse_name_text.focus()
-      elif not re.match(r'^[A-Za-z\s]+$', spouse_name):
-        errors.append("Enter a valid full name!")
-        self.spouse_name_text.focus()
-      elif not spouse_mob or spouse_mob > datetime.now().date():
-        errors.append("Enter a valid date of marriage!")
-        self.date_picker_3.focus()
-      elif not spouse_mbl_no:
-        errors.append("Enter a valid mobile no!")
-        self.spouse_mbl_no_text.focus()
-      elif not re.match(r'^\d{10}$', str(spouse_mbl_no)):
-        errors.append("Enter a valid mobile no!")
-        self.spouse_mbl_no_text.focus()
-      elif not spouse_profession:
-        errors.append("Select a valid profession!")
-        self.drop_down_1_copy.focus()
-      elif not spouse_company:
-        errors.append("Enter a valid company name!")
-        self.spouse_companyname_text.focus()
-      elif not annual_earning:
-        errors.append("Enter a valid annual earning!")
-        self.annual_earning_text.focus()
-
-      if errors:
-        Notification("\n".join(errors)).show()
-        return
-
-      existing_row = app_tables.fin_guarantor_details.get(customer_id=self.userId)
-      
-      try:
-        if existing_row is None:
-          new_row = app_tables.fin_guarantor_details.add_row(
-            customer_id=self.userId,
-            guarantor_name=spouse_name,
-            guarantor_marriage_date=spouse_mob,
-            guarantor_mobile_no=spouse_mbl_no,
-            guarantor_profession=spouse_profession,
-            guarantor_company_name=spouse_company,
-            guarantor_annual_earning=annual_earning,
-            another_person=another_person
-          )
+        details = self.collect_details()
+        if details:
+          spouse_name = details.get('spouse_name', '')
+          spouse_mob = details.get('spouse_mob', '')
+          spouse_mbl_no = details.get('spouse_mbl_no', '')
+          spouse_profession = details.get('spouse_profession', '')
+          spouse_company = details.get('spouse_company', '')
+          annual_earning = details.get('annual_earning', '')
+          another_person = details.get('another_person', '')
+    
+          # Validations
+          errors = []
+          if not spouse_name:
+            errors.append("Enter a valid full name!")
+            self.spouse_name_text.focus()
+          elif not re.match(r'^[A-Za-z\s]+$', spouse_name):
+            errors.append("Enter a valid full name!")
+            self.spouse_name_text.focus()
+          elif not spouse_mob or spouse_mob > datetime.now().date():
+            errors.append("Enter a valid date of marriage!")
+            self.date_picker_3.focus()
+          elif not spouse_mbl_no:
+            errors.append("Enter a valid mobile no!")
+            self.spouse_mbl_no_text.focus()
+          elif not re.match(r'^\d{10}$', str(spouse_mbl_no)):
+            errors.append("Enter a valid mobile no!")
+            self.spouse_mbl_no_text.focus()
+          elif not spouse_profession:
+            errors.append("Select a valid profession!")
+            self.drop_down_1_copy.focus()
+          elif not spouse_company:
+            errors.append("Enter a valid company name!")
+            self.spouse_companyname_text.focus()
+          elif not annual_earning:
+            errors.append("Enter a valid annual earning!")
+            self.annual_earning_text.focus()
+    
+          if errors:
+            Notification("\n".join(errors)).show()
+            return
+    
+          existing_row = app_tables.fin_guarantor_details.get(customer_id=self.userId)
+          
+          try:
+            if existing_row is None:
+              new_row = app_tables.fin_guarantor_details.add_row(
+                customer_id=self.userId,
+                guarantor_name=spouse_name,
+                guarantor_marriage_date=spouse_mob,
+                guarantor_mobile_no=spouse_mbl_no,
+                guarantor_profession=spouse_profession,
+                guarantor_company_name=spouse_company,
+                guarantor_annual_earning=annual_earning,
+                another_person=another_person
+              )
+            else:
+              existing_row.update(
+                guarantor_name=spouse_name,
+                guarantor_marriage_date=spouse_mob,
+                guarantor_mobile_no=spouse_mbl_no,
+                guarantor_profession=spouse_profession,
+                guarantor_company_name=spouse_company,
+                guarantor_annual_earning=annual_earning,
+                another_person=another_person
+              )
+          except Exception as e:
+            Notification(f"Failed to submit form: {e}").show()
+            return
+    
+          anvil.server.call('add_borrower_step3', marital_status, self.userId)
+          anvil.server.call('add_lendor_spouse_details',
+                            another_person, spouse_name, spouse_mob,
+                            spouse_mbl_no, spouse_profession,
+                            spouse_company, annual_earning, self.userId)
+          open_form('borrower.borrower_registration_forms.star_1_borrower_registration_form_4_loan', user_id=self.userId)
         else:
-          existing_row.update(
-            guarantor_name=spouse_name,
-            guarantor_marriage_date=spouse_mob,
-            guarantor_mobile_no=spouse_mbl_no,
-            guarantor_profession=spouse_profession,
-            guarantor_company_name=spouse_company,
-            guarantor_annual_earning=annual_earning,
-            another_person=another_person
-          )
-      except Exception as e:
-        Notification(f"Failed to submit form: {e}").show()
-        return
-
-      anvil.server.call('add_borrower_step3', marital_status, self.userId)
-      anvil.server.call('add_lendor_spouse_details',
-                        another_person, spouse_name, spouse_mob,
-                        spouse_mbl_no, spouse_profession,
-                        spouse_company, annual_earning, self.userId)
-      open_form('borrower.borrower_registration_forms.star_1_borrower_registration_form_4_loan', user_id=self.userId)
-    else:
-      Notification("Please fill all the required fields").show()
-  else:
-    alert('Please select a specific preference')
-  
+          Notification("Please fill all the required fields").show()
+      else:
+        alert('Please select a specific preference')
+      
   
   def button_1_click(self, **event_args):
     open_form('borrower.borrower_registration_forms.star_1_borrower_registration_form_2_employment',user_id=self.userId)
