@@ -30,7 +30,6 @@ class lender_registration_form_1_education_form(lender_registration_form_1_educa
     self.column_panel_3.visible = False
     self.column_panel_4.visible = False
     self.column_panel_5.visible = False
-    
   def validate_file(self, file):
     """Validate file type and size."""
     if file is None:
@@ -39,7 +38,7 @@ class lender_registration_form_1_education_form(lender_registration_form_1_educa
     file_type = file.content_type
     file_size = len(file.get_bytes())  # Use len to get size in bytes
 
-    if file_type not in ['image/jpeg', 'application/pdf']:
+    if file_type not in ['image/jpeg', 'image/jpg', 'image/png', 'application/pdf']:
       return False, "Only JPG images and PDF files are allowed."
 
     if file_size > 2 * 1024 * 1024:  # 2MB limit
@@ -260,6 +259,10 @@ class lender_registration_form_1_education_form(lender_registration_form_1_educa
     else:
       Notification(message).show()
       self.file_loader_15.clear()
+
+  def button_1_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    open_form('bank_users.main_form.basic_registration_form')
     
 
   
