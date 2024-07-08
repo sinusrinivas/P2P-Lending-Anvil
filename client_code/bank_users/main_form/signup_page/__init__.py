@@ -120,9 +120,11 @@ class signup_page(signup_pageTemplate):
     entered_otp = self.text_box_otp.text.strip()
     if str(self.otp) == entered_otp:
         self.retype_password_error_label.text = 'OTP verified successfully'
+        
         self.retype_password_error_label.visible = True
         # Update email verified status in user table
         email = self.text_box_1.text.strip()
+        # open_form('bank_users.main_form.forgot_password',email)
         anvil.server.call('update_user_status', email, email_verified=True)
     else:
         self.retype_password_error_label.text = 'Invalid OTP. Please try again.'

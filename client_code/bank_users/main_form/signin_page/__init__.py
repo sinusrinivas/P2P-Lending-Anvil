@@ -219,26 +219,28 @@ class signin_page(signin_pageTemplate):
     open_form('bank_users.main_form.investNow_applyForLoan')
 
   def send_otp_click(self, **event_args):
-    self.label_5.visible = False
-    self.text_box_2.visible = False
-    self.check_box_1.visible = False
-    self.label_2.visible = False
-    self.check_box_1.visible = False
-    self.button_1.visible = False
-    self.label_8.visible = False
-    self.send_otp.text = "Send otp"
     email = self.text_box_1.text.strip()
-    if not email:
-        alert("Please fill the email")
-        return
-    if email is not None:  # This check seems redundant
-      self.otp = anvil.server.call('send_email_otp', email)
-      if self.otp:
-        alert(f"OTP has been sent to {email}")
-        self.show_otp_input()
-      else:
-        self.retype_password_error_label.text = 'Failed to send OTP. Please try again later.'
-        self.retype_password_error_label.visible = True
+    open_form('bank_users.main_form.forgot_password',email)
+    # self.label_5.visible = False
+    # self.text_box_2.visible = False
+    # self.check_box_1.visible = False
+    # self.label_2.visible = False
+    # self.check_box_1.visible = False
+    # self.button_1.visible = False
+    # self.label_8.visible = False
+    # self.send_otp.text = "Send otp"
+    # email = self.text_box_1.text.strip()
+    # if not email:
+    #     alert("Please fill the email")
+    #     return
+    # if email is not None:  # This check seems redundant
+    #   self.otp = anvil.server.call('send_email_otp', email)
+    #   if self.otp:
+    #     alert(f"OTP has been sent to {email}")
+    #     self.show_otp_input()
+    #   else:
+    #     self.retype_password_error_label.text = 'Failed to send OTP. Please try again later.'
+    #     self.retype_password_error_label.visible = True
 
   def show_otp_input(self):
     self.text_box_otp.visible = True
@@ -260,6 +262,7 @@ class signin_page(signin_pageTemplate):
         return
     if str(self.otp) == entered_otp:
         self.error_label.text = 'OTP verified successfully'
+        # open_form('bank_users.main_form.forgot_password',email)
         self.error_label.visible = True
         user_row = app_tables.users.get(email=email)
         # Update the login date for the user

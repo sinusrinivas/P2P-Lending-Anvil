@@ -44,74 +44,80 @@ components:
       type: Spacer
       layout_properties: {grid_position: 'WUAZDP,FZHHNU'}
     - name: column_panel_1_copy_copy
-      properties: {role: elevated-card, col_widths: '{"WLTEQM":5,"BJDXSL":55,"LGHLJP":55,"OTWMDU":5,"EKYSFD":54,"EOHAME":6,"PKGYXY":54,"EBNTMA":6,"UXCVZV":40,"ETLXBH":54,"ZBDEDZ":6}'}
+      properties: {role: elevated-card, col_widths: '{"BJDXSL":55,"LGHLJP":55,"EKYSFD":54,"EOHAME":6,"PKGYXY":54,"EBNTMA":6,"UXCVZV":40,"ETLXBH":54,"ZBDEDZ":6}'}
       type: ColumnPanel
       layout_properties: {grid_position: 'WUAZDP,LLBEDS', full_width_row: false}
       components:
-      - name: spacer_4
-        properties: {height: 526.8570556640625}
-        type: Spacer
-        layout_properties: {grid_position: 'BCREGJ,LGHLJP GASAMI,WLTEQM'}
       - name: label_7
-        properties: {role: title, text: Change Password, background: '', foreground: '#094586', bold: true, underline: false, italic: false, font_size: 35}
+        properties: {role: title, text: Change Password, background: '', foreground: '#094586', bold: true, underline: false, italic: false, font_size: 30}
         type: Label
-        layout_properties: {grid_position: 'BCREGJ,LGHLJP GASAMI,BJDXSL MPYCNK,UXCVZV'}
-      - name: spacer_7
-        properties: {height: 478.28558349609375}
-        type: Spacer
-        layout_properties: {grid_position: 'BCREGJ,OTWMDU'}
+        layout_properties: {grid_position: 'MPYCNK,UXCVZV'}
       - name: label_4
         properties: {text: Email, bold: true}
         type: Label
-        layout_properties: {grid_position: 'BCREGJ,LGHLJP GASAMI,BJDXSL SSSREI,FEIKYR'}
+        layout_properties: {grid_position: 'SSSREI,FEIKYR'}
       - name: text_box_1
         properties: {role: outlined, background: white, placeholder: '', visible: true, foreground: '', bold: false}
         type: TextBox
-        layout_properties: {grid_position: 'BCREGJ,LGHLJP GASAMI,BJDXSL XRBTUN,EKYSFD'}
+        layout_properties: {grid_position: 'XRBTUN,EKYSFD'}
         event_bindings: {}
       - name: label_3
         properties: {icon: 'fa:address-book', font_size: 20}
         type: Label
-        layout_properties: {grid_position: 'BCREGJ,LGHLJP GASAMI,BJDXSL XRBTUN,EOHAME'}
-      - name: label_5
-        properties: {text: Password, bold: true}
-        type: Label
-        layout_properties: {grid_position: 'BCREGJ,LGHLJP GASAMI,BJDXSL VLFKXH,ZGCZXK'}
-      - name: text_box_2
-        properties: {placeholder: '', background: white, visible: true, enabled: true, role: outlined, hide_text: true}
+        layout_properties: {grid_position: 'XRBTUN,EOHAME'}
+      - name: send_otp
+        properties: {text: Send otp, bold: false, underline: true}
+        type: Link
+        layout_properties: {grid_position: 'VPBQKH,QPGSCE'}
+        event_bindings: {click: send_otp_click}
+      - name: text_box_otp
+        properties: {visible: false, background: white}
         type: TextBox
-        layout_properties: {grid_position: 'BCREGJ,LGHLJP GASAMI,BJDXSL JHGYMR,PKGYXY'}
+        layout_properties: {grid_position: 'KADOWN,ZRHWCT'}
+      - name: verify_otp_button
+        properties: {text: verify otp, background: '#094586', foreground: 'theme:On Primary', visible: false}
+        type: Button
+        layout_properties: {grid_position: 'KADOWN,YTCZOS'}
+        event_bindings: {click: verify_otp_button_click}
+      - name: label_5
+        properties: {text: Password, bold: true, visible: false}
+        type: Label
+        layout_properties: {grid_position: 'VLFKXH,ZGCZXK'}
+      - name: text_box_2
+        properties: {placeholder: '', background: white, visible: false, enabled: true, role: outlined, hide_text: true}
+        type: TextBox
+        layout_properties: {grid_position: 'JHGYMR,PKGYXY'}
         event_bindings: {}
       - name: label_2
-        properties: {icon: 'fa:lock', font_size: 20}
+        properties: {icon: 'fa:lock', font_size: 20, visible: false}
         type: Label
-        layout_properties: {grid_position: 'BCREGJ,LGHLJP GASAMI,BJDXSL JHGYMR,EBNTMA'}
+        layout_properties: {grid_position: 'JHGYMR,EBNTMA'}
       - name: label_5_copy
-        properties: {text: Retype Password, bold: true}
+        properties: {text: Retype Password, bold: true, visible: false}
         type: Label
-        layout_properties: {grid_position: 'BCREGJ,LGHLJP GASAMI,BJDXSL TQRJYE,ETLXBH WVMLLN,IZRJJU'}
+        layout_properties: {grid_position: 'TQRJYE,ETLXBH WVMLLN,IZRJJU'}
       - name: text_box_2_copy
-        properties: {placeholder: '', background: white, visible: true, enabled: true, role: outlined, hide_text: true}
+        properties: {placeholder: '', background: white, visible: false, enabled: true, role: outlined, hide_text: true}
         type: TextBox
-        layout_properties: {grid_position: 'BCREGJ,LGHLJP GASAMI,BJDXSL TQRJYE,ETLXBH DMDHVP,DOATLH'}
+        layout_properties: {grid_position: 'TQRJYE,ETLXBH DMDHVP,DOATLH'}
         event_bindings: {pressed_enter: text_box_2_pressed_enter}
       - name: label_2_copy
-        properties: {icon: 'fa:lock', font_size: 20}
+        properties: {icon: 'fa:lock', font_size: 20, visible: false}
         type: Label
-        layout_properties: {grid_position: 'BCREGJ,LGHLJP GASAMI,BJDXSL TQRJYE,ZBDEDZ'}
+        layout_properties: {grid_position: 'TQRJYE,ZBDEDZ'}
       - name: error_label
         properties: {visible: false, foreground: red}
         type: Label
-        layout_properties: {grid_position: 'BCREGJ,LGHLJP GASAMI,BJDXSL RKOJPP,GPUIFR'}
+        layout_properties: {grid_position: 'RKOJPP,GPUIFR'}
       - name: check_box_1
-        properties: {text: Show Password}
+        properties: {text: Show Password, visible: false}
         type: CheckBox
-        layout_properties: {grid_position: 'BCREGJ,LGHLJP GASAMI,BJDXSL OOCTFV,JDAMWY'}
+        layout_properties: {grid_position: 'OOCTFV,JDAMWY'}
         event_bindings: {change: check_box_1_change}
       - name: button_1
-        properties: {text: Sign In, background: '#094586', foreground: white, align: full}
+        properties: {text: Sign In, background: '#094586', foreground: white, align: full, visible: false}
         type: Button
-        layout_properties: {grid_position: 'BCREGJ,LGHLJP GASAMI,BJDXSL MPSRUO,XLAMBF', row_background: 'theme:Primary Container'}
+        layout_properties: {grid_position: 'MPSRUO,XLAMBF', row_background: 'theme:Primary Container'}
         event_bindings: {click: button_1_click}
     - name: spacer_10
       properties: {height: 458.75}
