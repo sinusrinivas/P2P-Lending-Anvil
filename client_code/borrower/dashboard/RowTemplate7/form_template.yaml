@@ -1,0 +1,41 @@
+is_package: true
+container:
+  type: DataRowPanel
+  properties: {border: '', background: '', align: center}
+components:
+- name: id
+  properties: {text: '', align: center}
+  type: Label
+  layout_properties: {column: JKSDUP}
+  data_bindings:
+  - {property: text, code: 'self.item[''product_name'']', writeback: false}
+- name: amount
+  properties: {text: '', align: center}
+  type: Label
+  layout_properties: {column: VJQQOR}
+  data_bindings:
+  - {property: text, code: 'self.item[''loan_amount'']', writeback: false}
+- name: tenure
+  properties: {text: '', align: center}
+  type: Label
+  layout_properties: {column: OJLQEN}
+  data_bindings:
+  - {property: text, code: 'self.item[''tenure'']', writeback: false}
+- name: interest
+  properties: {text: '', align: center}
+  type: Label
+  layout_properties: {column: GAVKHZ}
+  data_bindings:
+  - {property: text, code: 'self.item[''interest_rate'']', writeback: false}
+- name: repayment_amount
+  properties: {text: '', align: center}
+  type: Label
+  layout_properties: {column: NJWOLU}
+  data_bindings:
+  - {property: text, code: 'self.item[''total_repayment_amount'']', writeback: false}
+- name: actions
+  properties: {text: '', align: center}
+  type: Label
+  layout_properties: {column: RNOHUR}
+  data_bindings:
+  - {property: text, code: 'self.item[''loan_updated_status'']', writeback: false}

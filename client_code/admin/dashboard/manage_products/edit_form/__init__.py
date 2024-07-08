@@ -23,6 +23,7 @@ class edit_form(edit_formTemplate):
         else:
             # Populate form fields with product details
             self.label_1.text = str(product['product_id'])
+            self.text_box_6.text = str(product['tds'])
             self.product_name.text = product['product_name']
             self.text_box_1.text = product['product_group']
             self.text_area_1.text = str(product['product_description'])
@@ -45,6 +46,7 @@ class edit_form(edit_formTemplate):
                     self.product_name.enabled = False
                     self.min_amount.enabled = False
                     self.text_box_1.enabled = False
+                    self.text_box_6.enabled = False
                     self.max_amount.enabled = False
                     self.min_tenure.enabled = False
                     self.max_tenure.enabled = False
@@ -59,6 +61,7 @@ class edit_form(edit_formTemplate):
                     self.business.enabled = False
                     self.student.enabled = False
                     self.employee.enabled = False
+                    self.employee_copy_2.enabled = False
                     self.lapsed.enabled = False
                     self.default.enabled = False
                     self.npa.enabled = False
@@ -87,9 +90,11 @@ class edit_form(edit_formTemplate):
                     self.text_box_2.enabled = False
                     self.text_box_3.enabled = False
                     self.text_box_4.enabled = False
+                    self.text_box_6.enabled =False
                     self.business.enabled = False
                     self.student.enabled = False
                     self.employee.enabled = False
+                    self.employee_copy_2.enabled = False
                     self.lapsed.enabled = False
                     self.default.enabled = False
                     self.npa.enabled = False
@@ -136,6 +141,5 @@ class edit_form(edit_formTemplate):
       """This method is called when the button is clicked"""
       open_form("admin.dashboard")
 
-    
 
 
