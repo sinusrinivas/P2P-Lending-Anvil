@@ -14,14 +14,19 @@ components:
   properties: {}
   type: form:borrower.logout
   layout_properties: {grid_position: ',BTFLQT', full_width_row: true}
-- name: label_01
-  properties: {role: null, bold: true, align: center, spacing_above: small, background: '#05264d', icon: '', underline: false, font: '', icon_align: left, foreground: white, spacing_below: small, visible: true, border: '', italic: false, font_size: 20, tooltip: '', text: Basic Registration Details}
-  type: Label
-  layout_properties: {grid_position: 'MXUAFJ,ACPFZJ', full_width_row: true}
-- name: label_18
-  properties: {text: '*  Required', foreground: ''}
-  type: Label
-  layout_properties: {grid_position: 'SZNUDL,AIPPDG'}
+- name: navigation_bar_main_1
+  properties: {}
+  type: form:borrower.navigation_bar_main
+  layout_properties: {grid_position: 'TYVRRC,VZKFLC'}
+- name: column_panel_1
+  properties: {role: outlined-card}
+  type: ColumnPanel
+  layout_properties: {grid_position: 'YEGIEW,YQLQYI'}
+  components:
+  - name: label_01
+    properties: {role: null, bold: true, align: center, spacing_above: small, background: '#05264d', icon: '', underline: false, font: '', icon_align: left, foreground: white, spacing_below: small, visible: true, border: '', italic: false, font_size: 18, tooltip: '', text: Basic Registration Details}
+    type: Label
+    layout_properties: {grid_position: 'OHXERP,ESTTBR'}
 - name: spacer_1
   properties: {height: '10'}
   type: Spacer
@@ -57,7 +62,7 @@ components:
     border: ''
     italic: false
     enabled: true
-    font_size: 20
+    font_size: 19
     tooltip: ''
   type: DropDown
   layout_properties: {grid_position: 'VWRDWZ,CTQQUB MESVCT,JNTGGY'}
@@ -105,10 +110,6 @@ components:
   properties: {role: outlined, bold: false, align: left, placeholder: 'Enter government id2 ex: adhar, driving licence, pan card etc..', spacing_above: small, background: 'theme:On Primary', type: text, underline: false, font: '', hide_text: false, foreground: '', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: ''}
   type: TextBox
   layout_properties: {grid_position: 'WFKZOV,ALTBGH ULUZMZ,WJCNNQ'}
-- name: label_2_copy
-  properties: {foreground: red, font_size: 12, bold: true, visible: false}
-  type: Label
-  layout_properties: {grid_position: 'WFKZOV,ALTBGH SMNMXC,CBMHBY'}
 - name: label_05
   properties: {role: input-prompt, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: 16, tooltip: '', text: Enter Your Mobile Number  *}
   type: Label
@@ -146,7 +147,7 @@ components:
   layout_properties: {grid_position: 'WFKZOV,XCETPN BQISFD,DTEQWY'}
   event_bindings: {change: registration_img_file_loader_change}
 - name: image_profile
-  properties: {height: '50', display_mode: shrink_to_fit, role: outlined-card}
+  properties: {height: '50', display_mode: shrink_to_fit, role: null}
   type: Image
   layout_properties: {grid_position: 'WFKZOV,XCETPN BQISFD,JHIBGY'}
 - name: label_3_copy_1_copy_2
@@ -177,7 +178,7 @@ components:
   layout_properties: {grid_position: 'WFKZOV,XCETPN LHZWHC,LBHHUP'}
   event_bindings: {change: registration_img_aadhar_file_loader_change}
 - name: image_aadhar
-  properties: {height: '50', role: outlined-card, visible: false}
+  properties: {height: '50', role: null, visible: false}
   type: Image
   layout_properties: {grid_position: 'WFKZOV,XCETPN LHZWHC,XBHCRO'}
 - name: label_3_copy_1_copy_4
@@ -208,17 +209,22 @@ components:
   layout_properties: {grid_position: 'WFKZOV,XCETPN DLUWFA,YHTNZD'}
   event_bindings: {change: registration_img_pan_file_loader_change}
 - name: image_pan
-  properties: {height: '50', visible: false, role: outlined-card}
+  properties: {height: '50', visible: false, role: null}
   type: Image
   layout_properties: {grid_position: 'WFKZOV,XCETPN DLUWFA,KPOMER'}
 - name: spacer_1_copy_copy
   properties: {height: 6.4444580078125}
   type: Spacer
   layout_properties: {grid_position: 'ECTRLG,NVNZEZ'}
-- name: label_1_copy_1_copy_1
-  properties: {role: null, bold: true, align: center, spacing_above: small, background: '#05264d', icon: '', underline: false, font: '', icon_align: left, foreground: white, spacing_below: small, visible: true, border: '', italic: false, font_size: 20, tooltip: '', text: Address Details}
-  type: Label
-  layout_properties: {grid_position: 'ZOOVBO,RRBJJI', full_width_row: true}
+- name: column_panel_2
+  properties: {role: outlined-card}
+  type: ColumnPanel
+  layout_properties: {grid_position: 'BMSWXW,BHLUQN'}
+  components:
+  - name: label_1_copy_1_copy_1
+    properties: {role: null, bold: true, align: center, spacing_above: small, background: '#05264d', icon: '', underline: false, font: '', icon_align: left, foreground: white, spacing_below: small, visible: true, border: '', italic: false, font_size: 20, tooltip: '', text: Address Details}
+    type: Label
+    layout_properties: {grid_position: 'JXVKRV,KXEGDJ'}
 - name: spacer_1_copy
   properties: {height: 6.4444580078125}
   type: Spacer

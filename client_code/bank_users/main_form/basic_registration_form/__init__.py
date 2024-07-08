@@ -66,6 +66,10 @@ class basic_registration_form(basic_registration_formTemplate):
         self.text_box_4.add_event_handler('change',self.validate_zip)
         self.govt_id1_text_box.add_event_handler('change', self.toggle_upload_buttons)
         self.govt_id2_text_box.add_event_handler('change', self.toggle_upload_buttons1)
+        # Add event handlers for file upload validation
+        self.registration_img_file_loader.add_event_handler('change',self.validate_file_upload)
+        self.registration_img_aadhar_file_loader.add_event_handler('change', self.validate_file_upload)
+        self.registration_img_pan_file_loader.add_event_handler('change', self.validate_file_upload)
 
     def validate_full_name(self, **event_args):
         full_name = self.full_name_text_box.text
@@ -106,7 +110,23 @@ class basic_registration_form(basic_registration_formTemplate):
             self.alternate_email_text_box.background = None  # Reset background if the field is empty
 
 
-
+    def validate_file_upload(self, **event_args):
+        file_loader = event_args['sender']
+        file = file_loader.file
+        max_size = 2 * 1024 * 1024  # 2MB in bytes
+        allowed_types = ['image/jpeg', 'image/png', 'application/pdf']
+    
+        if file:
+            file_size = len(file.get_bytes())
+            if file_size > max_size:
+                alert('File size should be less than 2MB')
+                file_loader.clear()
+                return
+    
+            if file.content_type not in allowed_types:
+                alert('Invalid file type. Only JPEG, PNG, and PDF are allowed')
+                file_loader.clear()
+                return
 
     def validate_city(self, **event_args):
         city = self.text_box_3.text
@@ -257,10 +277,20 @@ class basic_registration_form(basic_registration_formTemplate):
 
 
     def registration_img_aadhar_file_loader_change(self, file, **event_args):
-        # Function to handle aadhar card file upload event
-        if file is not None:
-            # Display the image in an Image component
-            self.image_aadhar.source = self.registration_img_aadhar_file_loader.file
+        if file:
+            content_type = file.content_type
+            
+            if content_type in ['image/jpeg', 'image/png']:
+                # Display the image in an Image component
+                self.image_aadhar.source = self.registration_img_aadhar_file_loader.file
+            # elif content_type == 'application/pdf':
+            #     # Convert PDF to image on the server
+            #     # img_byte_arr = anvil.server.call('convert_pdf_to_image', file)
+            #     # self.image_aadhar.source = anvil.BlobMedia('image/png', img_byte_arr)
+            # else:
+            #     alert('Invalid file type. Only JPEG, PNG, and PDF are allowed')
+            #     self.registration_img_aadhar_file_loader.clear()
+
 
     def registration_img_pan_file_loader_change(self, file, **event_args):
         # Function to handle pan card file upload event
