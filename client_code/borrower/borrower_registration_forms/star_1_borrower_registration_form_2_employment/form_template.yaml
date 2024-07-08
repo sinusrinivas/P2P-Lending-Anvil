@@ -32,7 +32,7 @@ components:
   type: Spacer
   layout_properties: {grid_position: 'EZHUHG,ERHLQM', full_width_row: true}
 - name: label_3_copy_1_copy_1
-  properties: {role: null, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: 12, tooltip: '', text: '                                             Choose your Profession : '}
+  properties: {role: null, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: 12, tooltip: '', text: '                                               Choose your Profession : '}
   type: Label
   layout_properties: {grid_position: 'CJDOQG,OEJRUX'}
 - name: drop_down_1
@@ -61,7 +61,7 @@ components:
 - name: grid_panel_3
   properties: {}
   type: GridPanel
-  layout_properties: {grid_position: 'WVECOZ,GGXYTJ'}
+  layout_properties: {grid_position: 'TULBUY,JSBKJB'}
   components:
   - name: label_5
     properties: {align: left, text: Choose your Self Employment Profession, bold: true, font_size: 12}
@@ -136,10 +136,6 @@ components:
   type: GridPanel
   layout_properties: {grid_position: 'YGOUMV,ZBDUEX'}
   components:
-  - name: spacer_4
-    properties: {height: 32}
-    type: Spacer
-    layout_properties: {row: LXQHYI, width_xs: 12, col_xs: 0}
   - name: label_1_copy_1_copy_2_copy
     properties: {role: null, bold: true, align: center, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: 16, tooltip: '', text: Business Details}
     type: Label
