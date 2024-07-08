@@ -47,7 +47,7 @@ class lender_registration_form_3_marital_details(lender_registration_form_3_mari
            self.spouse_name_text.text=user_data['guarantor_name']
            self.date_picker_3.date =user_data['guarantor_marriage_date']
            self.spouse_mbl_no_text.text=user_data['guarantor_mobile_no']
-           self.drop_down_1.selected_value = user_data['guarantor_profession']
+           self.drop_down_1_copy.selected_value = user_data['guarantor_profession']
            self.spouse_companyname_text.text = user_data['guarantor_company_name']
            self.annual_earning_text.text = user_data['guarantor_annual_earning']
 
