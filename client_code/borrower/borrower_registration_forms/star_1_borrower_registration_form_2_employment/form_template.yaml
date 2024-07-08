@@ -288,7 +288,7 @@ components:
     type: Label
     layout_properties: {row: SQJSWJ, width_xs: 2, col_xs: 2}
   - name: text_box_7
-    properties: {role: null, bold: false, align: left, placeholder: '', spacing_above: small, background: 'theme:On Primary', type: text, underline: false, font: '', hide_text: false, foreground: '', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: ''}
+    properties: {role: outlined, bold: false, align: left, placeholder: text_box_7, spacing_above: small, background: 'theme:On Primary', type: text, underline: false, font: '', hide_text: false, foreground: '', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: ''}
     type: TextBox
     layout_properties: {row: SQJSWJ, width_xs: 6, col_xs: 6}
   - name: label_1_copy_1_copy
