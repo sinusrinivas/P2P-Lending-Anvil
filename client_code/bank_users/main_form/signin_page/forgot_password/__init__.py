@@ -14,7 +14,7 @@ class forgot_password(forgot_passwordTemplate):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
     self.role = "no-scroll"
-    self.text_box_1 = email
+    self.text_box_1.text = email  # Set the email in text_box_1
 
     # Any code you write here will run before the form opens.
 
@@ -98,3 +98,7 @@ class forgot_password(forgot_passwordTemplate):
       self.retype_password_error_label.foreground = 'red'
       self.retype_password_error_label.visible = True
       self.send_otp.visible = True
+
+  def label_2_show(self, **event_args):
+    """This method is called when the Label is shown on the screen"""
+    self.text_box_2.hide_text = True

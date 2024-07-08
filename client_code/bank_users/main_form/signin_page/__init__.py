@@ -220,7 +220,7 @@ class signin_page(signin_pageTemplate):
 
   def send_otp_click(self, **event_args):
     email = self.text_box_1.text.strip()
-    open_form('bank_users.main_form.signin_page.forgot_password',email = )
+    open_form('bank_users.main_form.signin_page.forgot_password',email = email)
     # self.label_5.visible = False
     # self.text_box_2.visible = False
     # self.check_box_1.visible = False
