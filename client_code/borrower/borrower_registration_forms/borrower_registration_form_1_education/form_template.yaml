@@ -115,6 +115,10 @@ components:
       properties: {height: 68, role: null}
       type: Image
       layout_properties: {grid_position: 'RPRENY,ETTJZD'}
+    - name: label_17
+      properties: {}
+      type: Label
+      layout_properties: {grid_position: 'RPRENY,MVCDUQ'}
     - name: label_4
       properties: {text: 12th Standard *, bold: true, spacing_below: none, font_size: 14}
       type: Label
@@ -132,6 +136,10 @@ components:
       properties: {height: 61}
       type: Image
       layout_properties: {grid_position: 'OBGZRV,WCZOVB'}
+    - name: label_19
+      properties: {}
+      type: Label
+      layout_properties: {grid_position: 'OBGZRV,JYUFHY'}
   - name: column_panel_3
     properties: {}
     type: ColumnPanel
@@ -154,6 +162,10 @@ components:
       properties: {height: 70}
       type: Image
       layout_properties: {grid_position: 'YJJRSX,GBEBHT'}
+    - name: label_20
+      properties: {}
+      type: Label
+      layout_properties: {grid_position: 'YJJRSX,UXLLGJ'}
     - name: label_6
       properties: {text: 12th Standard *, bold: true, spacing_below: none, font_size: 14}
       type: Label
@@ -171,6 +183,10 @@ components:
       properties: {height: 71}
       type: Image
       layout_properties: {grid_position: 'EVSYED,CWNRNC'}
+    - name: label_21
+      properties: {}
+      type: Label
+      layout_properties: {grid_position: 'EVSYED,JGYWUD'}
     - name: label_7
       properties: {text: Bachelor's degree  *, bold: true, spacing_below: none, font_size: 14}
       type: Label
@@ -188,6 +204,10 @@ components:
       properties: {height: 74}
       type: Image
       layout_properties: {grid_position: 'EKITQV,QJCVUQ'}
+    - name: label_22
+      properties: {}
+      type: Label
+      layout_properties: {grid_position: 'EKITQV,YJMQRA'}
   - name: column_panel_4
     properties: {}
     type: ColumnPanel
@@ -210,6 +230,10 @@ components:
       properties: {height: 69}
       type: Image
       layout_properties: {grid_position: 'HFOCKI,SICYTW'}
+    - name: label_23
+      properties: {}
+      type: Label
+      layout_properties: {grid_position: 'HFOCKI,ESEIAR'}
     - name: label_9
       properties: {text: 12th Standard *, bold: true, spacing_below: none, font_size: 14}
       type: Label
@@ -227,6 +251,10 @@ components:
       properties: {height: 71}
       type: Image
       layout_properties: {grid_position: 'BEBUZS,ZMHVFD'}
+    - name: label_24
+      properties: {}
+      type: Label
+      layout_properties: {grid_position: 'BEBUZS,SBJYQE'}
     - name: label_10
       properties: {text: Bachelor's degree *, bold: true, spacing_below: none, font_size: 14}
       type: Label
@@ -244,6 +272,10 @@ components:
       properties: {height: 78}
       type: Image
       layout_properties: {grid_position: 'TUJLGY,TDOOVK'}
+    - name: label_25
+      properties: {}
+      type: Label
+      layout_properties: {grid_position: 'TUJLGY,QQCYVR'}
     - name: label_11
       properties:
         text: |
@@ -266,6 +298,10 @@ components:
       properties: {height: 78}
       type: Image
       layout_properties: {grid_position: 'SBSEXD,FORUFY'}
+    - name: label_26
+      properties: {}
+      type: Label
+      layout_properties: {grid_position: 'SBSEXD,EVEMWJ'}
   - name: column_panel_5
     properties: {}
     type: ColumnPanel
@@ -293,6 +329,10 @@ components:
       properties: {height: 78}
       type: Image
       layout_properties: {grid_position: 'RMKYLB,BEDWQY'}
+    - name: label_27
+      properties: {}
+      type: Label
+      layout_properties: {grid_position: 'RMKYLB,XYRIRA'}
     - name: label_13
       properties: {text: 12th Standard *, bold: true, spacing_below: none, font_size: 14}
       type: Label
@@ -310,6 +350,10 @@ components:
       properties: {height: 80}
       type: Image
       layout_properties: {grid_position: 'QMDENK,AWZQUX'}
+    - name: label_28
+      properties: {}
+      type: Label
+      layout_properties: {grid_position: 'QMDENK,EYNZTD'}
     - name: label_14
       properties: {text: Bachelor's degree *, bold: true, spacing_below: none, font_size: 14}
       type: Label
@@ -327,6 +371,10 @@ components:
       properties: {height: 79}
       type: Image
       layout_properties: {grid_position: 'NPDMKI,AZBJAN'}
+    - name: label_29
+      properties: {}
+      type: Label
+      layout_properties: {grid_position: 'NPDMKI,BBWVNC'}
     - name: label_15
       properties: {text: Master's degree *, bold: true, spacing_below: none, font_size: 14}
       type: Label
@@ -344,6 +392,10 @@ components:
       properties: {height: 80}
       type: Image
       layout_properties: {grid_position: 'SKRTZF,QXEPWI'}
+    - name: label_30
+      properties: {}
+      type: Label
+      layout_properties: {grid_position: 'SKRTZF,TNAKLE'}
     - name: label_16
       properties: {text: PhD *, bold: true, spacing_below: none, font_size: 14}
       type: Label
@@ -361,6 +413,10 @@ components:
       properties: {height: 84}
       type: Image
       layout_properties: {grid_position: 'ECLNCD,IJYYNW'}
+    - name: label_31
+      properties: {}
+      type: Label
+      layout_properties: {grid_position: 'ECLNCD,VVUYYY'}
 - name: button_1
   properties: {text: Prev, align: right, background: '#0b2547', foreground: white, icon: 'fa:angle-double-left', bold: true}
   type: Button
