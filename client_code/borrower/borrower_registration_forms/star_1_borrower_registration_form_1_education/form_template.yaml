@@ -23,10 +23,20 @@ components:
   properties: {prop: ''}
   type: form:borrower.navigation_bar_main
   layout_properties: {grid_position: 'YHEWVG,TBMJEQ', full_width_row: true}
-- name: label_1_copy_1
-  properties: {role: null, bold: true, align: center, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: 16, tooltip: '', text: Education Details}
-  type: Label
-  layout_properties: {grid_position: ''}
+- name: column_panel_7
+  properties: {}
+  type: ColumnPanel
+  layout_properties: {grid_position: 'VUQOCR,CWSEFZ'}
+  components:
+  - name: label_1_copy_1
+    properties: {role: null, bold: true, align: center, spacing_above: small, background: '#05264d', icon: '', underline: false, font: '', icon_align: left, foreground: white, spacing_below: small, visible: true, border: '', italic: false, font_size: 16, tooltip: '', text: Education Details}
+    type: Label
+    layout_properties: {grid_position: 'HCUIJD,OHCAHE'}
+- name: column_panel_6
+  properties: {}
+  type: ColumnPanel
+  layout_properties: {grid_position: 'WGHICI,XYKHUN'}
+  components: []
 - name: label_1
   properties: {role: null, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: Choose the Qualification}
   type: Label
@@ -77,7 +87,7 @@ components:
     layout_properties: {grid_position: 'XACTFH,NKBLRP'}
     event_bindings: {change: file_loader_1_change}
   - name: image_1
-    properties: {height: 106, role: null}
+    properties: {height: 66, role: null}
     type: Image
     layout_properties: {grid_position: 'XACTFH,YZIIRN'}
 - name: column_panel_2
@@ -99,7 +109,7 @@ components:
     layout_properties: {grid_position: 'RPRENY,IESMBO'}
     event_bindings: {change: file_loader_2_change}
   - name: image_2
-    properties: {height: 112, role: null}
+    properties: {height: 68, role: null}
     type: Image
     layout_properties: {grid_position: 'RPRENY,ETTJZD'}
   - name: label_4
@@ -116,7 +126,7 @@ components:
     layout_properties: {grid_position: 'OBGZRV,HZYWZN'}
     event_bindings: {change: file_loader_3_change}
   - name: image_3
-    properties: {height: 111}
+    properties: {height: 61}
     type: Image
     layout_properties: {grid_position: 'OBGZRV,WCZOVB'}
 - name: column_panel_3
@@ -138,7 +148,7 @@ components:
     layout_properties: {grid_position: 'YJJRSX,NWNFZT'}
     event_bindings: {change: file_loader_4_change}
   - name: image_4
-    properties: {height: 99}
+    properties: {height: 70}
     type: Image
     layout_properties: {grid_position: 'YJJRSX,GBEBHT'}
   - name: label_6
@@ -155,7 +165,7 @@ components:
     layout_properties: {grid_position: 'EVSYED,ONXROL'}
     event_bindings: {change: file_loader_5_change}
   - name: image_5
-    properties: {height: 102}
+    properties: {height: 71}
     type: Image
     layout_properties: {grid_position: 'EVSYED,CWNRNC'}
   - name: label_7
@@ -172,7 +182,7 @@ components:
     layout_properties: {grid_position: 'EKITQV,TUZECI'}
     event_bindings: {change: file_loader_6_change}
   - name: image_6
-    properties: {height: 109}
+    properties: {height: 74}
     type: Image
     layout_properties: {grid_position: 'EKITQV,QJCVUQ'}
 - name: column_panel_4
@@ -194,7 +204,7 @@ components:
     layout_properties: {grid_position: 'HFOCKI,HUJEDC'}
     event_bindings: {change: file_loader_7_change}
   - name: image_7
-    properties: {height: 111}
+    properties: {height: 69}
     type: Image
     layout_properties: {grid_position: 'HFOCKI,SICYTW'}
   - name: label_9
@@ -211,7 +221,7 @@ components:
     layout_properties: {grid_position: 'BEBUZS,TFFHGQ'}
     event_bindings: {change: file_loader_8_change}
   - name: image_8
-    properties: {height: 122}
+    properties: {height: 71}
     type: Image
     layout_properties: {grid_position: 'BEBUZS,ZMHVFD'}
   - name: label_10
@@ -228,7 +238,7 @@ components:
     layout_properties: {grid_position: 'TUJLGY,GSGMUL'}
     event_bindings: {change: file_loader_9_change}
   - name: image_9
-    properties: {height: 120}
+    properties: {height: 78}
     type: Image
     layout_properties: {grid_position: 'TUJLGY,TDOOVK'}
   - name: label_11
@@ -245,7 +255,7 @@ components:
     layout_properties: {grid_position: 'SBSEXD,VBWGTS'}
     event_bindings: {change: file_loader_10_change}
   - name: image_10
-    properties: {height: 126}
+    properties: {height: 78}
     type: Image
     layout_properties: {grid_position: 'SBSEXD,FORUFY'}
 - name: column_panel_5
@@ -267,7 +277,7 @@ components:
     layout_properties: {grid_position: 'RMKYLB,BNTFBL'}
     event_bindings: {change: file_loader_11_change}
   - name: image_11
-    properties: {height: 118}
+    properties: {height: 78}
     type: Image
     layout_properties: {grid_position: 'RMKYLB,BEDWQY'}
   - name: label_13
@@ -284,7 +294,7 @@ components:
     layout_properties: {grid_position: 'QMDENK,HQUTUB'}
     event_bindings: {change: file_loader_12_change}
   - name: image_12
-    properties: {height: 123}
+    properties: {height: 80}
     type: Image
     layout_properties: {grid_position: 'QMDENK,AWZQUX'}
   - name: label_14
@@ -301,7 +311,7 @@ components:
     layout_properties: {grid_position: 'NPDMKI,PTPBYQ'}
     event_bindings: {change: file_loader_13_change}
   - name: image_13
-    properties: {height: 122}
+    properties: {height: 79}
     type: Image
     layout_properties: {grid_position: 'NPDMKI,AZBJAN'}
   - name: label_15
@@ -318,7 +328,7 @@ components:
     layout_properties: {grid_position: 'SKRTZF,HOLJXH'}
     event_bindings: {change: file_loader_14_change}
   - name: image_14
-    properties: {height: 122}
+    properties: {height: 80}
     type: Image
     layout_properties: {grid_position: 'SKRTZF,QXEPWI'}
   - name: label_16
@@ -335,7 +345,7 @@ components:
     layout_properties: {grid_position: 'ECLNCD,JLTMNX'}
     event_bindings: {change: file_loader_15_change}
   - name: image_15
-    properties: {height: 118}
+    properties: {height: 84}
     type: Image
     layout_properties: {grid_position: 'ECLNCD,IJYYNW'}
 - name: button_2
