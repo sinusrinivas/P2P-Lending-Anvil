@@ -388,11 +388,20 @@ class basic_registration_form(basic_registration_formTemplate):
 
 
     def registration_img_file_loader_change(self, file, **event_args):
-        # Function to handle user photo file upload event
-        if file is not None:
-            # Display the image in an Image component
+        if file:
             self.user_photo_file_name.text = file.name if file else ''
-            self.image_profile.source = self.registration_img_file_loader.file
+            content_type = file.content_type
+            
+            if content_type in ['image/jpeg', 'image/png', 'image/jpg']:
+                # Display the image directly
+                self.image_profile.source = self.registration_img_file_loader.file
+            elif content_type == 'application/pdf':
+                # Display a default PDF image temporarily
+                self.image_profile.source = '_/theme/bank_users/default%20pdf.png'
+            else:
+                alert('Invalid file type. Only JPEG, PNG, and PDF are allowed')
+                self.registration_img_file_loader.clear()
+
 
     def gender_dd_change(self, **event_args):
         """This method is called when an item is selected"""
@@ -404,9 +413,7 @@ class basic_registration_form(basic_registration_formTemplate):
         anvil.users.logout()
         open_form('bank_users.main_form') 
 
-    def label_04_show(self, **event_args):
-        """This method is called when the Label is shown on the screen"""
-        pass
+   
 
 
 
