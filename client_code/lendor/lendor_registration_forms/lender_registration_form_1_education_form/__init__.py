@@ -260,6 +260,10 @@ class lender_registration_form_1_education_form(lender_registration_form_1_educa
     else:
       Notification(message).show()
       self.file_loader_15.clear()
+
+  def button_1_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    open_form('bank_users.main_form.basic_registration_form')
     
 
   
