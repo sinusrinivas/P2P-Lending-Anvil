@@ -189,6 +189,12 @@ class dashboard(dashboardTemplate):
         self.update_user_profile()
         self.load_notifications()
         self.update_platform_fees()
+         # Search for loans taken by the current user
+        self.data= app_tables.fin_loan_details.search(borrower_customer_id=self.user_Id)
+        loan_count = len(self.data)
+
+        # Update the UI with the count of loans
+        self.label_9.text = str(loan_count)
 
     def update_platform_fees(self, **event_args):
         result = anvil.server.call('update_fin_platform_fees')
