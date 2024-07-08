@@ -221,12 +221,12 @@ components:
           (Image Size less-than 2MB):
       type: Label
       layout_properties: {row: NSCZER, width_xs: 4, col_xs: 2}
-    - name: file_loader_1_copy_2
+    - name: file_loader_1
       properties: {text: Upload Employee Id, font_size: 12}
       type: FileLoader
       layout_properties: {row: NSCZER, width_xs: 3, col_xs: 6}
-      event_bindings: {change: file_loader_1_copy_2_change}
-    - name: image_1_copy_3
+      event_bindings: {change: file_loader_1_change}
+    - name: image_1
       properties: {height: 118}
       type: Image
       layout_properties: {row: NSCZER, width_xs: 3, col_xs: 9}
