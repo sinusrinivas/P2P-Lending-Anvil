@@ -92,7 +92,7 @@ components:
     type: Label
     layout_properties: {grid_position: 'DVAXOA,BMHVNJ'}
 - name: button_1
-  properties: {text: Report a Problem, role: null, background: '#05264d', foreground: white}
+  properties: {text: Report a Problem, role: null, background: '#05264d', foreground: white, bold: true}
   type: Button
   layout_properties: {grid_position: 'RQDMKB,ETOMNF'}
   event_bindings: {click: button_1_click}

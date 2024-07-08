@@ -1,4 +1,4 @@
-from ._anvil_designer import lender_registration_form_1_educationTemplate
+from ._anvil_designer import lender_registration_form_1_education_formTemplate
 from anvil import *
 import anvil.server
 import anvil.google.auth, anvil.google.drive
@@ -8,7 +8,7 @@ import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 
-class lender_registration_form_1_education(lender_registration_form_1_educationTemplate):
+class lender_registration_form_1_education_form(lender_registration_form_1_education_formTemplate):
   def __init__(self,user_id, **properties):
     self.userId = user_id
     # Set Form properties and Data Bindings.
@@ -38,7 +38,7 @@ class lender_registration_form_1_education(lender_registration_form_1_educationT
     file_type = file.content_type
     file_size = len(file.get_bytes())  # Use len to get size in bytes
 
-    if file_type not in ['image/jpeg', 'image/jpg', 'image/png' 'application/pdf']:
+    if file_type not in ['image/jpeg', 'image/jpg', 'image/png', 'application/pdf']:
       return False, "Only JPG images and PDF files are allowed."
 
     if file_size > 2 * 1024 * 1024:  # 2MB limit

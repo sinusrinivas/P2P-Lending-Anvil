@@ -38,7 +38,7 @@ class borrower_registration_form_1_education(borrower_registration_form_1_educat
     file_type = file.content_type
     file_size = len(file.get_bytes())  # Use len to get size in bytes
 
-    if file_type not in ['image/jpeg', 'image/jpg','images/png', 'application/pdf']:
+    if file_type not in ['image/jpeg', 'image/jpg','image/png', 'application/pdf']:
       return False, "Only JPG images and PDF files are allowed."
 
     if file_size > 2 * 1024 * 1024:  # 2MB limit
