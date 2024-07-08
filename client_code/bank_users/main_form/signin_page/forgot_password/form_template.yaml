@@ -31,11 +31,11 @@ components:
       type: Label
       layout_properties: {grid_position: 'LOUJDS,RTKSOW SJSTRL,ROCLRP'}
     - name: image_1
-      properties: {source: _/theme/bank_users/main_form/login_page/login-image.webp, display_mode: shrink_to_fit, height: '340'}
+      properties: {source: _/theme/bank_users/main_form/login_page/login-image.webp, display_mode: shrink_to_fit, height: '300'}
       type: Image
       layout_properties: {grid_position: 'LOUJDS,RTKSOW IYLGEA,XVBVAK'}
   - name: column_panel_1
-    properties: {background: '#094586', col_widths: '{"LLBEDS":40,"FZHHNU":5,"TSUFAE":15}'}
+    properties: {background: '#094586', col_widths: '{"LLBEDS":45,"FZHHNU":5,"TSUFAE":10}'}
     type: ColumnPanel
     layout_properties: {grid_position: 'AUEKVR,AGIDMN UVWPRW,XZEJHL', full_width_row: false}
     components:
@@ -44,12 +44,12 @@ components:
       type: Spacer
       layout_properties: {grid_position: 'WUAZDP,FZHHNU'}
     - name: column_panel_1_copy_copy
-      properties: {role: elevated-card, col_widths: '{"BJDXSL":55,"LGHLJP":55,"EKYSFD":54,"EOHAME":6,"PKGYXY":54,"EBNTMA":6,"UXCVZV":40,"ETLXBH":54,"ZBDEDZ":6}'}
+      properties: {role: elevated-card, col_widths: '{"EKYSFD":54,"EOHAME":6,"PKGYXY":50,"EBNTMA":10,"UXCVZV":40,"ETLXBH":54,"DOATLH":50,"NDBNKO":10}'}
       type: ColumnPanel
       layout_properties: {grid_position: 'WUAZDP,LLBEDS', full_width_row: false}
       components:
       - name: label_7
-        properties: {role: title, text: Change Password, background: '', foreground: '#094586', bold: true, underline: false, italic: false, font_size: 30}
+        properties: {role: title, text: Reset Your  Password, background: '', foreground: '#094586', bold: true, underline: false, italic: false, font_size: 25}
         type: Label
         layout_properties: {grid_position: 'MPYCNK,UXCVZV'}
       - name: label_4
@@ -59,19 +59,19 @@ components:
       - name: text_box_1
         properties: {role: outlined, background: white, placeholder: '', visible: true, foreground: '', bold: false}
         type: TextBox
-        layout_properties: {grid_position: 'XRBTUN,EKYSFD'}
+        layout_properties: {grid_position: 'XRBTUN,EKYSFD NXFGVC,PGDDKR'}
         event_bindings: {}
+      - name: send_otp
+        properties: {text: Send otp, bold: false, underline: true}
+        type: Link
+        layout_properties: {grid_position: 'XRBTUN,EKYSFD CHTSZK,EYZZSJ'}
+        event_bindings: {click: send_otp_click}
       - name: label_3
         properties: {icon: 'fa:address-book', font_size: 20}
         type: Label
         layout_properties: {grid_position: 'XRBTUN,EOHAME'}
-      - name: send_otp
-        properties: {text: Send otp, bold: false, underline: true}
-        type: Link
-        layout_properties: {grid_position: 'VPBQKH,QPGSCE'}
-        event_bindings: {click: send_otp_click}
       - name: text_box_otp
-        properties: {visible: false, background: white, type: number, role: outlined}
+        properties: {visible: false, background: white, type: text, role: outlined}
         type: TextBox
         layout_properties: {grid_position: 'KADOWN,ZRHWCT'}
         data_bindings: []
@@ -98,16 +98,16 @@ components:
       - name: label_5_copy
         properties: {text: Retype Password, bold: true, visible: false}
         type: Label
-        layout_properties: {grid_position: 'TQRJYE,ETLXBH WVMLLN,IZRJJU'}
+        layout_properties: {grid_position: 'WVMLLN,IZRJJU'}
       - name: text_box_2_copy
         properties: {placeholder: '', background: white, visible: false, enabled: true, role: outlined, hide_text: true}
         type: TextBox
-        layout_properties: {grid_position: 'TQRJYE,ETLXBH DMDHVP,DOATLH'}
+        layout_properties: {grid_position: 'DMDHVP,DOATLH'}
         event_bindings: {pressed_enter: text_box_2_pressed_enter}
       - name: label_2_copy
         properties: {icon: 'fa:lock', font_size: 20, visible: false}
         type: Label
-        layout_properties: {grid_position: 'TQRJYE,ZBDEDZ'}
+        layout_properties: {grid_position: 'DMDHVP,NDBNKO'}
       - name: error_label
         properties: {visible: false, foreground: red}
         type: Label

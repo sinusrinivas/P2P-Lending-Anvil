@@ -69,7 +69,7 @@ components:
       type: Label
       layout_properties: {grid_position: 'LOUJDS,RTKSOW SJSTRL,ROCLRP'}
     - name: image_1
-      properties: {source: _/theme/bank_users/main_form/login_page/login-image.webp, display_mode: shrink_to_fit, height: '340'}
+      properties: {source: _/theme/bank_users/main_form/login_page/login-image.webp, display_mode: shrink_to_fit, height: '300'}
       type: Image
       layout_properties: {grid_position: 'LOUJDS,RTKSOW IYLGEA,XVBVAK'}
   - name: column_panel_1
@@ -82,9 +82,9 @@ components:
       type: Spacer
       layout_properties: {grid_position: 'WUAZDP,FZHHNU'}
     - name: column_panel_1_copy_copy
-      properties: {role: elevated-card, col_widths: '{"CQYWXR":10,"BJDXSL":55,"LGHLJP":53,"EKYSFD":54,"EOHAME":6,"PKGYXY":54,"EBNTMA":6,"VXLYLN":40,"IKUFXQ":10,"UXCVZV":40}'}
+      properties: {role: elevated-card, col_widths: '{"CQYWXR":10,"EKYSFD":50,"EOHAME":10,"PKGYXY":54,"EBNTMA":6,"VXLYLN":40,"IKUFXQ":10,"UXCVZV":40}'}
       type: ColumnPanel
-      layout_properties: {grid_position: 'WUAZDP,LLBEDS', full_width_row: false}
+      layout_properties: {grid_position: 'WUAZDP,LLBEDS', full_width_row: true}
       components:
       - name: spacer_13
         properties: {height: 38.75}
@@ -111,15 +111,6 @@ components:
         properties: {icon: 'fa:address-book', font_size: 20}
         type: Label
         layout_properties: {grid_position: 'XRBTUN,EOHAME'}
-      - name: text_box_otp
-        properties: {visible: false, background: white}
-        type: TextBox
-        layout_properties: {grid_position: 'FWSRRR,INBJRK'}
-      - name: verify_otp_button
-        properties: {text: verify otp, background: '#094586', foreground: 'theme:On Primary', visible: false}
-        type: Button
-        layout_properties: {grid_position: 'FWSRRR,GDJEHG'}
-        event_bindings: {click: verify_otp_button_click}
       - name: label_5
         properties: {text: Password, bold: true}
         type: Label
@@ -148,9 +139,9 @@ components:
         layout_properties: {grid_position: 'OOCTFV,JDAMWY'}
         event_bindings: {change: check_box_1_change}
       - name: button_1
-        properties: {text: Sign In, background: '#094586', foreground: white, align: full}
+        properties: {text: Sign In, background: '#094586', foreground: white, align: full, enabled: true, visible: true}
         type: Button
-        layout_properties: {grid_position: 'MPSRUO,XLAMBF', row_background: 'theme:Primary Container'}
+        layout_properties: {grid_position: 'MPSRUO,XLAMBF', row_background: '', full_width_row: true}
         event_bindings: {click: button_1_click}
       - name: label_8
         properties: {text: OR, align: center, bold: true, spacing_below: none, spacing_above: none}
