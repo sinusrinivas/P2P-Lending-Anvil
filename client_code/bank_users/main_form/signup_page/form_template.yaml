@@ -83,96 +83,92 @@ components:
       type: Spacer
       layout_properties: {grid_position: 'WUAZDP,FZHHNU'}
     - name: column_panel_1_copy_copy
-      properties: {role: elevated-card, col_widths: '{"CQYWXR":10,"WLTEQM":5,"BJDXSL":55,"LGHLJP":55,"OTWMDU":5,"EKYSFD":54,"EOHAME":6,"PKGYXY":54,"EBNTMA":6,"VXLYLN":40,"IKUFXQ":10,"UXCVZV":40}'}
+      properties: {role: elevated-card, col_widths: '{"CQYWXR":10,"WLTEQM":5,"BJDXSL":55,"LGHLJP":55,"EKYSFD":54,"EOHAME":6,"PKGYXY":54,"EBNTMA":6,"VXLYLN":40,"IKUFXQ":10,"UXCVZV":40}'}
       type: ColumnPanel
-      layout_properties: {grid_position: 'WUAZDP,LLBEDS', full_width_row: false}
+      layout_properties: {grid_position: 'WUAZDP,LLBEDS', full_width_row: true}
       components:
       - name: spacer_4
         properties: {height: 526.8570556640625}
         type: Spacer
-        layout_properties: {grid_position: 'BCREGJ,LGHLJP GASAMI,WLTEQM'}
+        layout_properties: {grid_position: 'GASAMI,WLTEQM'}
       - name: spacer_13
         properties: {height: 55.857147216796875}
         type: Spacer
-        layout_properties: {grid_position: 'BCREGJ,LGHLJP GASAMI,BJDXSL MPYCNK,IKUFXQ'}
+        layout_properties: {grid_position: 'GASAMI,BJDXSL MPYCNK,IKUFXQ'}
       - name: label_7
         properties: {role: headline, text: Sign Up, background: '', foreground: '#094586', bold: true, underline: false, italic: false, font_size: 40}
         type: Label
-        layout_properties: {grid_position: 'BCREGJ,LGHLJP GASAMI,BJDXSL MPYCNK,UXCVZV'}
+        layout_properties: {grid_position: 'GASAMI,BJDXSL MPYCNK,UXCVZV'}
       - name: spacer_6
         properties: {height: 32}
         type: Spacer
-        layout_properties: {grid_position: 'BCREGJ,LGHLJP GASAMI,BJDXSL MPYCNK,CQYWXR'}
-      - name: spacer_7
-        properties: {height: 478.28558349609375}
-        type: Spacer
-        layout_properties: {grid_position: 'BCREGJ,OTWMDU'}
+        layout_properties: {grid_position: 'GASAMI,BJDXSL MPYCNK,CQYWXR'}
       - name: label_4
         properties: {text: Email, bold: true}
         type: Label
-        layout_properties: {grid_position: 'BCREGJ,LGHLJP GASAMI,BJDXSL SSSREI,FEIKYR'}
+        layout_properties: {grid_position: 'GASAMI,BJDXSL SSSREI,FEIKYR'}
       - name: text_box_1
         properties: {role: outlined, background: white, placeholder: '', visible: true, foreground: '', bold: false}
         type: TextBox
-        layout_properties: {grid_position: 'BCREGJ,LGHLJP GASAMI,BJDXSL XRBTUN,EKYSFD FRCCHG,YGVXGR'}
+        layout_properties: {grid_position: 'GASAMI,BJDXSL XRBTUN,EKYSFD FRCCHG,YGVXGR'}
       - name: send_otp
         properties: {text: verify your email now, bold: false, underline: true}
         type: Link
-        layout_properties: {grid_position: 'BCREGJ,LGHLJP GASAMI,BJDXSL XRBTUN,EKYSFD EFVQHJ,JBOXRD'}
+        layout_properties: {grid_position: 'GASAMI,BJDXSL XRBTUN,EKYSFD EFVQHJ,JBOXRD'}
         event_bindings: {click: send_otp_click}
       - name: text_box_otp
         properties: {role: outlined, visible: false, background: white}
         type: TextBox
-        layout_properties: {grid_position: 'BCREGJ,LGHLJP GASAMI,BJDXSL XRBTUN,EKYSFD UUBCUK,OZITPM'}
+        layout_properties: {grid_position: 'GASAMI,BJDXSL XRBTUN,EKYSFD UUBCUK,OZITPM'}
         event_bindings: {pressed_enter: text_box_otp_pressed_enter}
       - name: verify_otp_button
         properties: {text: verify otp, foreground: 'theme:On Primary', background: '#094586', bold: false, visible: false}
         type: Button
-        layout_properties: {grid_position: 'BCREGJ,LGHLJP GASAMI,BJDXSL XRBTUN,EKYSFD UUBCUK,WRBDZH'}
+        layout_properties: {grid_position: 'GASAMI,BJDXSL XRBTUN,EKYSFD UUBCUK,WRBDZH'}
         event_bindings: {click: verify_otp_button_click}
       - name: label_3
         properties: {icon: 'fa:address-book', font_size: 20}
         type: Label
-        layout_properties: {grid_position: 'BCREGJ,LGHLJP GASAMI,BJDXSL XRBTUN,EOHAME'}
+        layout_properties: {grid_position: 'GASAMI,BJDXSL XRBTUN,EOHAME'}
       - name: label_5
         properties: {text: Password, bold: true}
         type: Label
-        layout_properties: {grid_position: 'BCREGJ,LGHLJP GASAMI,BJDXSL VLFKXH,ZGCZXK'}
+        layout_properties: {grid_position: 'GASAMI,BJDXSL VLFKXH,ZGCZXK'}
       - name: text_box_2
         properties: {placeholder: '', background: white, visible: true, enabled: true, role: outlined, hide_text: true}
         type: TextBox
-        layout_properties: {grid_position: 'BCREGJ,LGHLJP GASAMI,BJDXSL JHGYMR,PKGYXY ASCLYG,SZRTGJ'}
+        layout_properties: {grid_position: 'GASAMI,BJDXSL JHGYMR,PKGYXY ASCLYG,SZRTGJ'}
         event_bindings: {pressed_enter: text_box_2_pressed_enter}
       - name: label_8
         properties: {text: Retype Password, bold: true}
         type: Label
-        layout_properties: {grid_position: 'BCREGJ,LGHLJP GASAMI,BJDXSL JHGYMR,PKGYXY BYLVEX,WNZMNP'}
+        layout_properties: {grid_position: 'GASAMI,BJDXSL JHGYMR,PKGYXY BYLVEX,WNZMNP'}
       - name: text_box_3
         properties: {background: white, role: outlined, hide_text: true}
         type: TextBox
-        layout_properties: {grid_position: 'BCREGJ,LGHLJP GASAMI,BJDXSL JHGYMR,PKGYXY YXZUAX,WGGXMI'}
+        layout_properties: {grid_position: 'GASAMI,BJDXSL JHGYMR,PKGYXY YXZUAX,WGGXMI'}
       - name: label_2
         properties: {icon: 'fa:lock', font_size: 20}
         type: Label
-        layout_properties: {grid_position: 'BCREGJ,LGHLJP GASAMI,BJDXSL JHGYMR,EBNTMA'}
+        layout_properties: {grid_position: 'GASAMI,BJDXSL JHGYMR,EBNTMA'}
       - name: retype_password_error_label
         properties: {foreground: red, visible: false}
         type: Label
-        layout_properties: {grid_position: 'BCREGJ,LGHLJP GASAMI,BJDXSL RYMQXB,VAMNYR'}
+        layout_properties: {grid_position: 'GASAMI,BJDXSL RYMQXB,VAMNYR'}
       - name: check_box_1
         properties: {text: Show Password}
         type: CheckBox
-        layout_properties: {grid_position: 'BCREGJ,LGHLJP GASAMI,BJDXSL OOCTFV,JDAMWY'}
+        layout_properties: {grid_position: 'GASAMI,BJDXSL OOCTFV,JDAMWY'}
         event_bindings: {change: check_box_1_change}
       - name: button_1
         properties: {text: Sign up, background: '#094586', foreground: white, align: full}
         type: Button
-        layout_properties: {grid_position: 'BCREGJ,LGHLJP GASAMI,BJDXSL MPSRUO,XLAMBF', row_background: 'theme:Primary Container'}
+        layout_properties: {grid_position: 'GASAMI,BJDXSL MPSRUO,XLAMBF', row_background: 'theme:Primary Container'}
         event_bindings: {click: button_1_click}
       - name: link_2
         properties: {text: 'Already have an account ?  Sign In', foreground: blue, font_size: null}
         type: Link
-        layout_properties: {grid_position: 'BCREGJ,LGHLJP GASAMI,BJDXSL ETWHQH,VXLYLN'}
+        layout_properties: {grid_position: 'GASAMI,BJDXSL ETWHQH,VXLYLN'}
         event_bindings: {click: link_2_click}
     - name: spacer_10
       properties: {height: 463.7142028808594}

@@ -104,3 +104,4 @@ class forgot_password(forgot_passwordTemplate):
   def label_2_show(self, **event_args):
     """This method is called when the Label is shown on the screen"""
     self.text_box_2.hide_text = True
+
