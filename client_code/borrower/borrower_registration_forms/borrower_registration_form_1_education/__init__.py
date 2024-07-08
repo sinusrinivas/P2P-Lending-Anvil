@@ -163,12 +163,20 @@ class borrower_registration_form_1_education(borrower_registration_form_1_educat
 
   def file_loader_1_change(self, file, **event_args):
     """This method is called when a new file is loaded into this FileLoader"""
-    valid, message = self.validate_file(file)
-    if valid:
-      self.image_1.source = file
-    else:
-      Notification(message).show()
-      self.file_loader_1.clear()
+    if file:
+            self.file_name.text = file.name if file else ''
+            content_type = file.content_type
+            
+            if content_type in ['image/jpeg', 'image/png', 'image/jpg']:
+                # Display the image directly
+                self.image_1.source = self.file_loader_1.file
+            elif content_type == 'application/pdf':
+                # Display a default PDF image temporarily
+                self.image_1.source = '_/theme/bank_users/default%20pdf.png'
+            else:
+                alert('Invalid file type. Only JPEG, PNG, and PDF are allowed')
+                self.file_loader_1.clear()
+
       
   def file_loader_2_change(self, file, **event_args):
     """This method is called when a new file is loaded into this FileLoader"""
