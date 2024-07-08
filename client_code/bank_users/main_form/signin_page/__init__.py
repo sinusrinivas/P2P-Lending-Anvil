@@ -192,13 +192,13 @@ class signin_page(signin_pageTemplate):
       self.error_label.visible = True
 
 
-  def check_box_1_change(self, **event_args):
-   #  """This method is called when this checkbox is checked or unchecked"""
-        self.password_visible = self.check_box_1.checked
-        if self.password_visible:
-            self.text_box_2.hide_text = False  # Show decrypted password
-        else:
-            self.text_box_2.hide_text = True
+  # def check_box_1_change(self, **event_args):
+  #  #  """This method is called when this checkbox is checked or unchecked"""
+  #       self.password_visible = self.check_box_1.checked
+  #       if self.password_visible:
+  #           self.text_box_2.hide_text = False  # Show decrypted password
+  #       else:
+  #           self.text_box_2.hide_text = True
 
   def link_2_click(self, **event_args):
     """This method is called when the link is clicked"""
@@ -261,7 +261,7 @@ class signin_page(signin_pageTemplate):
     self.send_otp.text = "Resend"  # Change text of send_otp link
     self.label_2.visible = False
     self.eye_icon_1.visible = False
-    self.check_box_1.visible = False
+    # self.check_box_1.visible = False
     self.button_1.visible = False
     self.label_8.visible = False
 

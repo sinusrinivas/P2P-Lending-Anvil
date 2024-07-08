@@ -121,7 +121,7 @@ components:
         layout_properties: {grid_position: 'WIGVMQ,BHDWCQ'}
         event_bindings: {pressed_enter: text_box_2_pressed_enter}
       - name: eye_icon_1
-        properties: {height: '30', visible: true, horizontal_align: left}
+        properties: {height: '33', visible: true, horizontal_align: left}
         type: Image
         layout_properties: {grid_position: 'WIGVMQ,MUTVVT'}
         event_bindings: {mouse_up: eye_icon_1_click}
@@ -134,11 +134,6 @@ components:
         type: Link
         layout_properties: {grid_position: 'UYYCFQ,QNIWOU'}
         event_bindings: {click: send_otp_click}
-      - name: check_box_1
-        properties: {text: Show Password}
-        type: CheckBox
-        layout_properties: {grid_position: 'OOCTFV,JDAMWY'}
-        event_bindings: {change: check_box_1_change}
       - name: button_1
         properties: {text: Sign In, background: '#094586', foreground: white, align: full, enabled: true, visible: true}
         type: Button

@@ -83,7 +83,7 @@ components:
       type: Spacer
       layout_properties: {grid_position: 'WUAZDP,FZHHNU'}
     - name: column_panel_1_copy_copy
-      properties: {role: elevated-card, col_widths: '{"CQYWXR":10,"WLTEQM":5,"BJDXSL":55,"LGHLJP":55,"EKYSFD":54,"EOHAME":6,"PKGYXY":54,"EBNTMA":6,"VXLYLN":40,"IKUFXQ":10,"UXCVZV":40}'}
+      properties: {role: elevated-card, col_widths: '{"CQYWXR":10,"WLTEQM":5,"BJDXSL":55,"EKYSFD":54,"EOHAME":6,"PKGYXY":54,"VXLYLN":40,"IKUFXQ":10,"UXCVZV":40,"SZRTGJ":53,"FRRNTM":7}'}
       type: ColumnPanel
       layout_properties: {grid_position: 'WUAZDP,LLBEDS', full_width_row: true}
       components:
@@ -137,29 +137,25 @@ components:
       - name: text_box_2
         properties: {placeholder: '', background: white, visible: true, enabled: true, role: outlined, hide_text: true}
         type: TextBox
-        layout_properties: {grid_position: 'GASAMI,BJDXSL JHGYMR,PKGYXY ASCLYG,SZRTGJ'}
+        layout_properties: {grid_position: 'GASAMI,BJDXSL ASCLYG,SZRTGJ'}
         event_bindings: {pressed_enter: text_box_2_pressed_enter}
+      - name: eye_icon_1
+        properties: {height: '33'}
+        type: Image
+        layout_properties: {grid_position: 'GASAMI,BJDXSL ASCLYG,FRRNTM'}
+        event_bindings: {mouse_up: eye_icon_1_click}
       - name: label_8
         properties: {text: Retype Password, bold: true}
         type: Label
-        layout_properties: {grid_position: 'GASAMI,BJDXSL JHGYMR,PKGYXY BYLVEX,WNZMNP'}
+        layout_properties: {grid_position: 'GASAMI,BJDXSL BYLVEX,WNZMNP'}
       - name: text_box_3
         properties: {background: white, role: outlined, hide_text: true}
         type: TextBox
-        layout_properties: {grid_position: 'GASAMI,BJDXSL JHGYMR,PKGYXY YXZUAX,WGGXMI'}
-      - name: label_2
-        properties: {icon: 'fa:lock', font_size: 20}
-        type: Label
-        layout_properties: {grid_position: 'GASAMI,BJDXSL JHGYMR,EBNTMA'}
+        layout_properties: {grid_position: 'GASAMI,BJDXSL YXZUAX,WGGXMI'}
       - name: retype_password_error_label
         properties: {foreground: red, visible: false}
         type: Label
         layout_properties: {grid_position: 'GASAMI,BJDXSL RYMQXB,VAMNYR'}
-      - name: check_box_1
-        properties: {text: Show Password}
-        type: CheckBox
-        layout_properties: {grid_position: 'GASAMI,BJDXSL OOCTFV,JDAMWY'}
-        event_bindings: {change: check_box_1_change}
       - name: button_1
         properties: {text: Sign up, background: '#094586', foreground: white, align: full}
         type: Button

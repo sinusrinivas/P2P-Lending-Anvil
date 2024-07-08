@@ -62,7 +62,7 @@ components:
         layout_properties: {grid_position: 'XRBTUN,EKYSFD NXFGVC,PGDDKR'}
         event_bindings: {}
       - name: send_otp
-        properties: {text: Send otp, bold: false, underline: true}
+        properties: {text: Send otp, bold: false, underline: true, align: left}
         type: Link
         layout_properties: {grid_position: 'XRBTUN,EKYSFD CHTSZK,EYZZSJ'}
         event_bindings: {click: send_otp_click}
