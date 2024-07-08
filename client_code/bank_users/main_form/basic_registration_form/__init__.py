@@ -133,8 +133,14 @@ class basic_registration_form(basic_registration_formTemplate):
         # Show the upload buttons if govt_id1_text_box is not empty
         self.label_3_copy_1_copy_2.visible = bool(self.govt_id1_text_box.text)
         self.registration_img_aadhar_file_loader.visible = bool(self.govt_id1_text_box.text)
+        self.image_aadhar.visible = bool(self.govt_id1_text_box.text)
         
-
+    def toggle_upload_buttons1(self, **event_args):
+        # Show the upload buttons if govt_id2_text_box is not empty
+        self.label_3_copy_1_copy_4.visible = bool(self.govt_id1_text_box.text)
+        self.registration_img_pan_file_loader.visible = bool(self.govt_id1_text_box.text)
+        self.image_pan.visible = bool(self.govt_id1_text_box.text)
+        
     def submit_btn_click(self, **event_args):
         """This method is called when the button is clicked"""
         full_name = self.full_name_text_box.text
