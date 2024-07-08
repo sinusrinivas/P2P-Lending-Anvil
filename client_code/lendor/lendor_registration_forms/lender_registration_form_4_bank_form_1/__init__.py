@@ -40,17 +40,39 @@ class lender_registration_form_4_bank_form_1(lender_registration_form_4_bank_for
     t_and_c = self.check_box_1_copy_3 
     
     user_id = self.userId
-    if not account_name or not account_type or not account_number or not bank_name or not bank_id  or not branch_name or not t_and_c:
-      Notification("please fill the all required fields").show()
+    if not account_name:
+      Notification("Please fill in the Account Name").show()
+      self.text_box_1.focus()
+    elif not account_type:
+      Notification("Please select the Account Type").show()
+      self.drop_down_1.focus()
+    elif not account_number:
+      Notification("Please fill in the Account Number").show()
+      self.text_box_2.focus()
+    elif not bank_name:
+      Notification("Please fill in the Bank Name").show()
+      self.text_box_3.focus()
+    elif not bank_id:
+      Notification("Please fill in the Bank ID").show()
+      self.bank_id.focus()
+    elif not branch_name:
+      Notification("Please fill in the Branch Name").show()
+      self.branch_name.focus()
+    elif not t_and_c:
+      Notification("Please accept the terms and conditions").show()
+      self.check_box_1_copy_3.focus()
     elif not re.match(r'^[A-Za-z\s]+$', account_name):
-        Notification("Account name should be valid").show()
+      Notification("Account name should be valid").show()
+      self.text_box_1.focus()
     elif ' ' in account_number:
-        Notification("Account number should not contain spaces").show()  
+      Notification("Account number should not contain spaces").show()
+      self.text_box_2.focus()
     elif not account_number.isdigit():
-        Notification("Account number should be valid").show()
+      Notification("Account number should be valid").show()
+      self.text_box_2.focus()
     else:
-      anvil.server.call('add_lendor_bank_details_form_2', bank_id,branch_name, user_id)
-      anvil.server.call('add_lendor_bank_details_form_1', account_name, account_type,account_number,bank_name, user_id)
+      anvil.server.call('add_lendor_bank_details_form_2', bank_id, branch_name, user_id)
+      anvil.server.call('add_lendor_bank_details_form_1', account_name, account_type, account_number, bank_name, user_id)
       open_form('lendor.dashboard')
 
   def button_1_click(self, **event_args):
