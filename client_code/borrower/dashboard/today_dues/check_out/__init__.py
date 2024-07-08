@@ -467,7 +467,7 @@ class check_out(check_outTemplate):
         )
         if adding_remaining_part_payment:
           part_pay = adding_remaining_part_payment['payment_type']
-          part_lender_returns = adding_remaining_part_payment['part_lender_returns']
+          part_lender_returns = adding_remaining_part_payment['lender_returns']
           part_remaining_amount = adding_remaining_part_payment['part_remaining_amount']
           if part_pay == 'part payment':
             
