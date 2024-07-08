@@ -1,16 +1,17 @@
-from ._anvil_designer import dashboard_contactTemplate
+from ._anvil_designer import dashboard_report_a_problemTemplate
 from anvil import *
 import anvil.server
 import anvil.google.auth, anvil.google.drive
 from anvil.google.drive import app_files
 import anvil.users
+import datetime
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
-import datetime
 from .. import main_form_module as main_form_module
 
-class dashboard_contact(dashboard_contactTemplate):
+
+class dashboard_report_a_problem(dashboard_report_a_problemTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
@@ -39,44 +40,17 @@ class dashboard_contact(dashboard_contactTemplate):
     self.update_subcategory()
 
   def update_subcategory(self, **event_args):
-    selected_category = self.drop_down_1.selected_value
-    if selected_category == 'Loan Issue':
-        self.drop_down_2.items = [(sli['borrower_subcategory_loan_issue'], sli['borrower_subcategory_loan_issue']) for sli in self.subcategory]
-    elif selected_category == 'Technical Issue':
-        self.drop_down_2.items = [(sti['subcategory_technical_issue'], sti['subcategory_technical_issue']) for sti in self.subcategory]
-    else:
-        self.drop_down_2.items = [(sli['lendor_subcategory_loan_issue'], sli['lendor_subcategory_loan_issue']) for sli in self.subcategory]
+        selected_category = self.drop_down_1.selected_value
+        if selected_category == 'Loan Issue':
+            self.drop_down_2.items = [(sli['borrower_subcategory_loan_issue'], sli['borrower_subcategory_loan_issue']) for sli in self.subcategory]
+        elif selected_category == 'Technical Issue':
+            self.drop_down_2.items = [(sti['subcategory_technical_issue'], sti['subcategory_technical_issue']) for sti in self.subcategory]
+        else:
+            self.drop_down_2.items = [(sli['lendor_subcategory_loan_issue'], sli['lendor_subcategory_loan_issue']) for sli in self.subcategory]
 
 
-  def home_main_form_link_click(self, **event_args):
-    """This method is called when the link is clicked"""
-    open_form("borrower.dashboard")
-
-  def login_signup_button_click(self, **event_args):
-    """This method is called when the button is clicked"""
-    alert("Logged out sucessfully")
-    anvil.users.logout()
-    open_form('bank_users.main_form')
-
-
-  def about_main_form_link_click(self, **event_args):
-    """This method is called when the link is clicked"""
-    open_form('borrower.dashboard.borrower_dashboard_about')
-
-  def contact_main_form_link_click(self, **event_args):
-    """This method is called when the link is clicked"""
-    pass
-
-  def notification_link_click(self, **event_args):
-    """This method is called when the link is clicked"""
-    open_form('lendor.dashboard.notification')
-
-  def wallet_dashboard_link_click(self, **event_args):
-    """This method is called when the link is clicked"""
-    open_form('wallet.wallet')
 
   def button_2_click(self, **event_args):
-        """This method is called when the button is clicked"""
         # Get input values from text boxes
         full_name = self.name_box.text
         mobile = self.mobile_box.text
@@ -128,13 +102,13 @@ class dashboard_contact(dashboard_contactTemplate):
         # customer_id = self.user_id
         open_form('borrower.dashboard' if self.usertype == 'borrower' else 'lender.dashboard')
 
+  def image_1_copy_2_mouse_up(self, x, y, button, **event_args):
+        """This method is called when a mouse button is released on this component"""
+        open_form('borrower.dashboard.dashboard_report_a_problem')
+
+
+
   def file_loader_1_change(self, file, **event_args):
     """This method is called when a new file is loaded into this FileLoader"""
     self.image_issue.source = file
-
-  def button_1_click(self, **event_args):
-    """This method is called when the button is clicked"""
-    open_form('borrower.dashboard.dashboard_report_a_problem')
-
-
-
+    
