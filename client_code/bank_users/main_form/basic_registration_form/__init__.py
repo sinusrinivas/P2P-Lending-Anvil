@@ -114,7 +114,7 @@ class basic_registration_form(basic_registration_formTemplate):
         file_loader = event_args['sender']
         file = file_loader.file
         max_size = 2 * 1024 * 1024  # 2MB in bytes
-        allowed_types = ['image/jpeg', 'image/png', 'application/pdf']
+        allowed_types = ['image/jpeg', 'image/png', 'image/jpg', 'application/pdf']
     
         if file:
             file_size = len(file.get_bytes())
@@ -124,7 +124,7 @@ class basic_registration_form(basic_registration_formTemplate):
                 return
     
             if file.content_type not in allowed_types:
-                alert('Invalid file type. Only JPEG, PNG, and PDF are allowed')
+                alert('Invalid file type. Only JPEG, PNG, jpg and PDF are allowed')
                 file_loader.clear()
                 return
 
@@ -181,9 +181,9 @@ class basic_registration_form(basic_registration_formTemplate):
         country = self.text_box_6.text
         present = self.drop_down_1.selected_value
         duration = self.drop_down_2.selected_value
-
+    
         user_id = self.user_id
-
+    
         # Clear previous error backgrounds
         self.full_name_text_box.background = None
         self.date_picker_1.background = None
@@ -192,64 +192,141 @@ class basic_registration_form(basic_registration_formTemplate):
         self.text_box_3.background = None
         self.text_box_5.background = None
         self.text_box_6.background = None
-
+    
+        # Validate each field and set focus if not filled
+        if not full_name:
+            self.full_name_text_box.background = '#FF0000'
+            self.full_name_text_box.focus()
+            Notification('Please fill all details').show()
+            return
+        if not gender:
+            self.gender_dd.background = '#FF0000'
+            self.gender_dd.focus()
+            Notification('Please fill all details').show()
+            return
+        if not dob:
+            self.date_picker_1.background = '#FF0000'
+            self.date_picker_1.focus()
+            Notification('Please fill all details').show()
+            return
+        if not mobile_no:
+            self.mobile_number_box.background = '#FF0000'
+            self.mobile_number_box.focus()
+            Notification('Please fill all details').show()
+            return
+        if not user_photo:
+            self.registration_img_file_loader.background = '#FF0000'
+            self.registration_img_file_loader.focus()
+            Notification('Please fill all details').show()
+            return
+        if not aadhar:
+            self.govt_id1_text_box.background = '#FF0000'
+            self.govt_id1_text_box.focus()
+            Notification('Please fill all details').show()
+            return
+        if not aadhar_card:
+            self.registration_img_aadhar_file_loader.background = '#FF0000'
+            self.registration_img_aadhar_file_loader.focus()
+            Notification('Please fill all details').show()
+            return
+        if not pan:
+            self.govt_id2_text_box.background = '#FF0000'
+            self.govt_id2_text_box.focus()
+            Notification('Please fill all details').show()
+            return
+        if not pan_card:
+            self.registration_img_pan_file_loader.background = '#FF0000'
+            self.registration_img_pan_file_loader.focus()
+            Notification('Please fill all details').show()
+            return
+        if not (street_adress_1 or street_address_2):
+            if not street_adress_1:
+                self.text_box_1.background = '#FF0000'
+                self.text_box_1.focus()
+            else:
+                self.text_box_2.background = '#FF0000'
+                self.text_box_2.focus()
+            Notification('Please fill all details').show()
+            return
+        if not city:
+            self.text_box_3.background = '#FF0000'
+            self.text_box_3.focus()
+            Notification('Please fill all details').show()
+            return
+        if not pincode:
+            self.text_box_4.background = '#FF0000'
+            self.text_box_4.focus()
+            Notification('Please fill all details').show()
+            return
+        if not state:
+            self.text_box_5.background = '#FF0000'
+            self.text_box_5.focus()
+            Notification('Please fill all details').show()
+            return
+        if not country:
+            self.text_box_6.background = '#FF0000'
+            self.text_box_6.focus()
+            Notification('Please fill all details').show()
+            return
+        if not present:
+            self.drop_down_1.background = '#FF0000'
+            self.drop_down_1.focus()
+            Notification('Please fill all details').show()
+            return
+        if not duration:
+            self.drop_down_2.background = '#FF0000'
+            self.drop_down_2.focus()
+            Notification('Please fill all details').show()
+            return
+    
         # Validate country
         if not re.match(r'^[A-Za-z]+$', country):
             alert('Enter a valid country name')
             self.text_box_6.background = '#FF0000 '  # Highlight input field with red background
             self.text_box_6.focus()
             return
-
+    
         # Validate state
         if not re.match(r'^[A-Za-z]+$', state):
             alert('Enter a valid state name')
             self.text_box_5.background = '#FF0000 '
             self.text_box_5.focus()
             return
-
+    
         # Validate city
         if not re.match(r'^[A-Za-z]+$', city):
             alert('Enter a valid city name')
             self.text_box_3.background = '#FF0000 '
             self.text_box_3.focus()
             return
-
+    
         # Validate full name
         if not re.match(r'^[A-Za-z\s]+$', full_name):
             self.full_name_text_box.background = '#FF0000 '
             self.full_name_text_box.focus()
             return
-
+    
         # Validate date of birth
         if not dob or datetime.strptime(dob, '%Y-%m-%d').date() > datetime.now().date():
             alert('Enter a valid date of birth')
             self.date_picker_1.background = '#FF0000 '
             self.date_picker_1.focus()
             return
-
+    
         # Validate age (must be 18 or older)
         if datetime.now().date() - datetime.strptime(dob, '%Y-%m-%d').date() < timedelta(days=365 * 18):
             alert('You must be at least 18 years old')
             self.date_picker_1.background = '#FF0000 '
             self.date_picker_1.focus()
             return
-
+    
         # Validate mobile number
         if not re.match(r'^\d{10}$', mobile_no):
             alert('Enter valid mobile no')
             self.mobile_number_box.background = '#FF0000 '
             self.mobile_number_box.focus()
             return
-
-        
-
-        # Check if all fields are filled
-        if not (full_name and gender and dob and mobile_no and user_photo and aadhar and aadhar_card and pan and pan_card and (street_adress_1 or street_address_2) and city and pincode and state and country and present and duration):
-            Notification('Please fill all details').show()
-            return
-
-        
-            
+    
         # Check if the entered alternate email matches the existing alternate email for the user
         user_data = app_tables.fin_user_profile.get(customer_id=user_id)
         if user_data and alternate_email == user_data['email_user']:
@@ -257,16 +334,16 @@ class basic_registration_form(basic_registration_formTemplate):
             self.alternate_email_text_box.background = '#ffb3b3'
             self.alternate_email_text_box.focus()
             return
-            
+                
         # Calculate user age
         user_age = datetime.now().year - datetime.strptime(dob, '%Y-%m-%d').year - ((datetime.now().month, datetime.now().day) < (datetime.strptime(dob, '%Y-%m-%d').month, datetime.strptime(dob, '%Y-%m-%d').day))
-
+    
         # Call server function to add basic details
         anvil.server.call('add_basic_details', full_name, gender, dob, mobile_no, user_photo, alternate_email,
-                          aadhar, aadhar_card, pan, pan_card, street_adress_1, street_address_2, city, pincode,
-                          state, country, user_id, user_age, present, duration)
+                        aadhar, aadhar_card, pan, pan_card, street_adress_1, street_address_2, city, pincode,
+                        state, country, user_id, user_age, present, duration)
         Notification("Basic details form filled up submitted successfully").show()
-
+    
         # Navigate to the appropriate form based on user type
         if user_data['usertype'] == 'lender':
             open_form('lendor.lendor_registration_forms.lender_registration_form_1_education_form', user_id=user_id)
@@ -276,11 +353,14 @@ class basic_registration_form(basic_registration_formTemplate):
             open_form('bank_users.user_form')
 
 
+
     def registration_img_aadhar_file_loader_change(self, file, **event_args):
         if file:
+            
+            self.govt_id1_file_name.text = file.name if file else ''
             content_type = file.content_type
             
-            if content_type in ['image/jpeg', 'image/png']:
+            if content_type in ['image/jpeg', 'image/png','image/jpg']:
                 # Display the image in an Image component
                 self.image_aadhar.source = self.registration_img_aadhar_file_loader.file
             # elif content_type == 'application/pdf':
@@ -296,12 +376,14 @@ class basic_registration_form(basic_registration_formTemplate):
         # Function to handle pan card file upload event
         if file is not None:
             # Display the image in an Image component
+            self.govt_id2_file_name.text = file.name if file else ''
             self.image_pan.source = self.registration_img_pan_file_loader.file
 
     def registration_img_file_loader_change(self, file, **event_args):
         # Function to handle user photo file upload event
         if file is not None:
             # Display the image in an Image component
+            self.user_photo_file_name.text = file.name if file else ''
             self.image_profile.source = self.registration_img_file_loader.file
 
     def gender_dd_change(self, **event_args):

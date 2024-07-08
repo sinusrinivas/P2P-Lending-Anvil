@@ -24,7 +24,7 @@ runtime_options:
   version: 3
   client_version: '3'
   server_version: python3-sandbox
-  server_spec: null
+  server_spec: {base: python310-minimal}
   legacy_features: {class_names: true, bootstrap3: true, __dict__: true, root_container: true}
   server_persist: true
 metadata: {title: 'P2P Bank ', description: this app provide services to person who are ready to invest and ready to give loan}

@@ -10,9 +10,9 @@ import anvil.server
 import anvil.pdf
 import anvil.media
 # from weasyprint import HTML
-# from pdf2image import convert_from_bytes
-# import io
-# from PIL import Image
+from pdf2image import convert_from_bytes
+import io
+from PIL import Image
 
 # all emi receipt
 @anvil.server.callable
@@ -56,14 +56,14 @@ def create_pdf_of_mis_reports(content_panel):
     
     return pdf
   
-# @anvil.server.callable
-# def convert_pdf_to_image(file):
-#     pdf_bytes = file.get_bytes()
-#     images = convert_from_bytes(pdf_bytes)
+@anvil.server.callable
+def convert_pdf_to_image(file):
+    pdf_bytes = file.get_bytes()
+    images = convert_from_bytes(pdf_bytes)
     
-#     # Convert the first page to PNG
-#     img_byte_arr = io.BytesIO()
-#     images[0].save(img_byte_arr, format='PNG')
-#     img_byte_arr = img_byte_arr.getvalue()
+    # Convert the first page to PNG
+    img_byte_arr = io.BytesIO()
+    images[0].save(img_byte_arr, format='PNG')
+    img_byte_arr = img_byte_arr.getvalue()
     
-#     return img_byte_arr
+    return img_byte_arr
