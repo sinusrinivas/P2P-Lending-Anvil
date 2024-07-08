@@ -356,28 +356,36 @@ class basic_registration_form(basic_registration_formTemplate):
 
     def registration_img_aadhar_file_loader_change(self, file, **event_args):
         if file:
-            
             self.govt_id1_file_name.text = file.name if file else ''
             content_type = file.content_type
             
-            if content_type in ['image/jpeg', 'image/png','image/jpg']:
-                # Display the image in an Image component
+            if content_type in ['image/jpeg', 'image/png', 'image/jpg']:
+                # Display the image directly
                 self.image_aadhar.source = self.registration_img_aadhar_file_loader.file
             elif content_type == 'application/pdf':
-                # Convert PDF to image on the server
-                img_byte_arr = anvil.server.call('convert_pdf_to_image', file)
-                self.image_aadhar.source = anvil.BlobMedia('image/png', img_byte_arr)
+                # Display a default PDF image temporarily
+                self.image_aadhar.source = '_/theme/bank_users/default%20pdf.png'
             else:
                 alert('Invalid file type. Only JPEG, PNG, and PDF are allowed')
                 self.registration_img_aadhar_file_loader.clear()
 
 
+
     def registration_img_pan_file_loader_change(self, file, **event_args):
-        # Function to handle pan card file upload event
-        if file is not None:
-            # Display the image in an Image component
+        if file:
             self.govt_id2_file_name.text = file.name if file else ''
-            self.image_pan.source = self.registration_img_pan_file_loader.file
+            content_type = file.content_type
+            
+            if content_type in ['image/jpeg', 'image/png', 'image/jpg']:
+                # Display the image directly
+                self.image_pan.source = self.registration_img_pan_file_loader.file
+            elif content_type == 'application/pdf':
+                # Display a default PDF image temporarily
+                self.image_pan.source = '_/theme/bank_users/default%20pdf.png'
+            else:
+                alert('Invalid file type. Only JPEG, PNG, and PDF are allowed')
+                self.registration_img_pan_file_loader.clear()
+
 
     def registration_img_file_loader_change(self, file, **event_args):
         # Function to handle user photo file upload event
