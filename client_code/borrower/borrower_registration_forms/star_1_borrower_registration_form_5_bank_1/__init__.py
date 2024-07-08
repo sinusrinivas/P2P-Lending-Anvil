@@ -30,6 +30,61 @@ class star_1_borrower_registration_form_5_bank_1(star_1_borrower_registration_fo
     self.accepted_terms = False
     self.button_2.enabled = False
 
+    self.setup_event_handlers()
+
+  def setup_event_handlers(self):
+    # Attach event handlers for real-time validation
+    self.text_box_1.set_event_handler('change', self.validate_account_name)
+    self.text_box_1.set_event_handler('lost_focus', self.validate_account_name)
+    self.text_box_3.set_event_handler('change', self.validate_account_number)
+    self.text_box_3.set_event_handler('lost_focus', self.validate_account_number)
+    self.text_box_4.set_event_handler('change', self.validate_bank_name)
+    self.text_box_4.set_event_handler('lost_focus', self.validate_bank_name)
+    self.bank_id.set_event_handler('change', self.validate_bank_id)
+    self.bank_id.set_event_handler('lost_focus', self.validate_bank_id)
+    self.branch_name.set_event_handler('change', self.validate_bank_branch)
+    self.branch_name.set_event_handler('lost_focus', self.validate_bank_branch)
+    self.check_box_1_copy_2.set_event_handler('change', self.check_terms)
+
+  def validate_account_name(self, **event_args):
+    account_name = self.text_box_1.text
+    if not account_name or not re.match(r'^[A-Za-z\s]+$', account_name):
+      self.text_box_1.background = 'red'
+    else:
+      self.text_box_1.background = 'white'
+
+  def validate_account_number(self, **event_args):
+    account_number = self.text_box_3.text
+    if ' ' in account_number or not account_number.isdigit():
+      self.text_box_3.background = 'red'
+    else:
+      self.text_box_3.background = 'white'
+
+  def validate_bank_name(self, **event_args):
+    bank_name = self.text_box_4.text
+    if not bank_name:
+      self.text_box_4.background = 'red'
+    else:
+      self.text_box_4.background = 'white'
+
+  def validate_bank_id(self, **event_args):
+    bank_id = self.bank_id.text
+    if not bank_id:
+      self.bank_id.background = 'red'
+    else:
+      self.bank_id.background = 'white'
+
+  def validate_bank_branch(self, **event_args):
+    bank_branch = self.branch_name.text
+    if not bank_branch:
+      self.branch_name.background = 'red'
+    else:
+      self.branch_name.background = 'white'
+
+  def check_terms(self, **event_args):
+    self.accepted_terms = self.check_box_1_copy_2.checked
+    self.button_2.enabled = self.accepted_terms
+
     # Any code you write here will run before the form opens.
 
   def button_2_click(self, **event_args):
