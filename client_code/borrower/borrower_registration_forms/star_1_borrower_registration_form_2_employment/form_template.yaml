@@ -27,19 +27,10 @@ components:
     properties: {role: null, bold: true, align: center, spacing_above: small, background: '#05264d', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: 16, tooltip: '', text: Professional Details}
     type: Label
     layout_properties: {grid_position: 'WCQMEN,ZTBAPM'}
-- name: spacer_1
-  properties: {height: 32}
-  type: Spacer
-  layout_properties: {grid_position: 'EZHUHG,ERHLQM', full_width_row: true}
-- name: column_panel_2
-  properties: {}
-  type: ColumnPanel
-  layout_properties: {grid_position: 'GXJWJX,JVTBCZ'}
-  components:
   - name: label_3_copy_1_copy_1
-    properties: {role: null, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: 12, tooltip: '', text: '                                                    Choose your Profession : '}
+    properties: {role: null, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: black, spacing_below: small, visible: true, border: '', italic: false, font_size: 12, tooltip: '', text: '                                      Choose your Profession : '}
     type: Label
-    layout_properties: {grid_position: 'VBUKDA,ZWSIKK'}
+    layout_properties: {grid_position: 'KYBPKH,AOQYLC'}
   - name: drop_down_1
     properties:
       role: outlined
@@ -61,17 +52,17 @@ components:
       font_size: 12
       tooltip: ''
     type: DropDown
-    layout_properties: {grid_position: 'VBUKDA,SEIQQZ'}
+    layout_properties: {grid_position: 'KYBPKH,CYJIHE'}
     event_bindings: {change: Profesion_borrower_registration_form_drop_down_change}
   - name: grid_panel_3
     properties: {}
     type: GridPanel
-    layout_properties: {grid_position: 'NFUDUZ,ROLMAM'}
+    layout_properties: {grid_position: 'ZJESUZ,UGQWHW'}
     components:
     - name: label_5
-      properties: {align: left, text: Choose your Self Employment Profession, bold: true, font_size: 12}
+      properties: {align: left, text: Choose your Self Employment Profession, bold: true, font_size: 12, foreground: black, background: ''}
       type: Label
-      layout_properties: {row: QVVKVN, width_xs: 4, col_xs: 2}
+      layout_properties: {row: HQRUDU, width_xs: 3, col_xs: 2}
     - name: drop_down_2
       properties:
         placeholder: Select One
@@ -80,7 +71,16 @@ components:
         items: [Business, Farmer]
         font_size: 12
       type: DropDown
-      layout_properties: {row: QVVKVN, width_xs: 6, col_xs: 6}
+      layout_properties: {row: HQRUDU, width_xs: 6, col_xs: 6}
+- name: spacer_1
+  properties: {height: 32}
+  type: Spacer
+  layout_properties: {grid_position: 'EZHUHG,ERHLQM', full_width_row: true}
+- name: column_panel_2
+  properties: {col_widths: '{}'}
+  type: ColumnPanel
+  layout_properties: {grid_position: 'GXJWJX,JVTBCZ'}
+  components:
   - name: grid_panel_5
     properties: {}
     type: GridPanel
