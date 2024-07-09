@@ -135,8 +135,8 @@ class star_1_borrower_registration_form_5_bank_1(star_1_borrower_registration_fo
   def button_1_click(self, **event_args):
     open_form('borrower.borrower_registration_forms.star_1_borrower_registration_form_4_loan',user_id=self.userId)
 
-  # def button_3_click(self, **event_args):
-  #   open_form("bank_users.user_form")
+  def button_3_click(self, **event_args):
+    open_form("bank_users.main_form.investNow_applyForLoan")
 
   def link_1_click(self, **event_args):
     """This method is called when the link is clicked"""

@@ -182,7 +182,7 @@ class borrower_registration_form_1_education(borrower_registration_form_1_educat
    
   def button_3_click(self, **event_args):
     """This method is called when the button is clicked"""
-    open_form("bank_users.user_form")
+    open_form("bank_users.main_form.investNow_applyForLoan")
 
   def drop_down_1_change(self, **event_args):
     """This method is called when an item is selected"""
