@@ -4,7 +4,7 @@ container:
   properties: {col_widths: '{}'}
 components:
 - name: column_panel_1
-  properties: {role: outlined-card, col_widths: '{"EFEWVM":15,"TORDCN":59,"HWSBHL":15,"DVASSU":15,"XKERXO":15,"XRWTFT":15,"SKHAVM":15,"FWGUWG":15,"NBVYAG":5}'}
+  properties: {role: outlined-card, col_widths: '{"EFEWVM":15,"TORDCN":59,"HWSBHL":30,"DVASSU":15,"XKERXO":15,"XRWTFT":15,"SKHAVM":15,"FWGUWG":15,"NBVYAG":5,"IENGFQ":15,"MTKUXH":30,"PVBPXK":30,"FDFNDQ":30,"CFMXEL":30,"CQQRLQ":55,"QLTUTN":5}'}
   type: ColumnPanel
   layout_properties: {grid_position: 'RQIITZ,PKNCIT', full_width_row: true}
   components:
@@ -14,12 +14,8 @@ components:
     layout_properties: {grid_position: 'OGKHLI,EFEWVM MRLZHQ,ZGMVBT', full_width_row: true}
     data_bindings:
     - {property: source, code: 'self.item[''user_photo'']', writeback: false}
-  - name: label_8
-    properties: {align: center}
-    type: Label
-    layout_properties: {grid_position: 'OGKHLI,EFEWVM OAJBPH,YZTWQB'}
   - name: label_9
-    properties: {role: outlined-card, align: center, font_size: 14, bold: true}
+    properties: {role: null, align: center, font_size: 14, bold: true}
     type: Label
     layout_properties: {grid_position: 'OGKHLI,EFEWVM XPFPSH,BGOQPS'}
     data_bindings:
@@ -33,9 +29,9 @@ components:
     type: Label
     layout_properties: {grid_position: 'OGKHLI,TORDCN BTQEIH,XKERXO XEURDC,FDFNDQ'}
   - name: link_3
-    properties: {align: left, bold: true, font_size: 14, role: outlined-card, border: ''}
+    properties: {align: left, bold: false, font_size: 14, role: null, border: '', icon: 'fa:info-circle'}
     type: Link
-    layout_properties: {grid_position: 'OGKHLI,TORDCN BTQEIH,XKERXO IEYWYZ,EHYKWI'}
+    layout_properties: {grid_position: 'OGKHLI,TORDCN BTQEIH,XKERXO XEURDC,CFMXEL'}
     data_bindings:
     - {property: text, code: 'self.item[''product_name'']', writeback: false}
     event_bindings: {click: link_3_click}
@@ -44,9 +40,9 @@ components:
     type: Label
     layout_properties: {grid_position: 'OGKHLI,TORDCN BTQEIH,XRWTFT RJBPJC,VTLTLV'}
   - type: Label
-    properties: {role: outlined-card, font_size: 14}
+    properties: {role: null, font_size: 14, icon: ''}
     name: label_1
-    layout_properties: {grid_position: 'OGKHLI,TORDCN BTQEIH,XRWTFT YQFLAN,YEMSBJ'}
+    layout_properties: {grid_position: 'OGKHLI,TORDCN BTQEIH,XRWTFT RJBPJC,DUIXUI'}
     data_bindings:
     - {property: text, code: 'self.item[''loan_amount'']', writeback: false}
   - name: label_6
@@ -54,19 +50,19 @@ components:
     type: Label
     layout_properties: {grid_position: 'OGKHLI,TORDCN CRBWLH,HWSBHL BWGTEY,MTKUXH'}
   - type: Label
-    properties: {role: outlined-card, bold: false, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: 14, tooltip: '', text: ''}
+    properties: {role: null, bold: false, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: 14, tooltip: '', text: ''}
     name: label_2
-    layout_properties: {grid_position: 'OGKHLI,TORDCN CRBWLH,HWSBHL LJRCQL,PSUHQX'}
+    layout_properties: {grid_position: 'OGKHLI,TORDCN CRBWLH,HWSBHL BWGTEY,PVBPXK'}
     data_bindings:
     - {property: text, code: 'self.item[''tenure'']', writeback: false}
   - name: label_7
     properties: {role: input-prompt, text: 'Interest Rate :', align: left, bold: true, font_size: 14}
     type: Label
-    layout_properties: {grid_position: 'OGKHLI,TORDCN CRBWLH,DVASSU BOTQIE,ERCJMF'}
+    layout_properties: {grid_position: 'OGKHLI,TORDCN CRBWLH,DVASSU'}
   - type: Label
-    properties: {role: outlined-card, font_size: 14}
+    properties: {role: null, font_size: 14}
     name: label_3
-    layout_properties: {grid_position: 'OGKHLI,TORDCN CRBWLH,DVASSU BGAZOJ,KKKHLS'}
+    layout_properties: {grid_position: 'OGKHLI,TORDCN CRBWLH,IENGFQ'}
     data_bindings:
     - {property: text, code: 'self.item[''interest_rate'']', writeback: false}
   - name: label_10
@@ -74,9 +70,9 @@ components:
     type: Label
     layout_properties: {grid_position: 'OGKHLI,TORDCN YOUOSF,SKHAVM MRYBHK,ARVWKU'}
   - name: label_11
-    properties: {role: outlined-card, font_size: 14}
+    properties: {role: null, font_size: 14}
     type: Label
-    layout_properties: {grid_position: 'OGKHLI,TORDCN YOUOSF,SKHAVM ORACRK,CJTONZ'}
+    layout_properties: {grid_position: 'OGKHLI,TORDCN YOUOSF,SKHAVM MRYBHK,ZQJBAM'}
     data_bindings:
     - {property: text, code: 'self.item[''days_left'']', writeback: false}
   - name: label_12
@@ -84,14 +80,18 @@ components:
     type: Label
     layout_properties: {grid_position: 'OGKHLI,TORDCN YOUOSF,FWGUWG RQHOUF,FOKKWM'}
   - name: label_13
-    properties: {role: outlined-card, font_size: 14}
+    properties: {role: null, font_size: 14}
     type: Label
-    layout_properties: {grid_position: 'OGKHLI,TORDCN YOUOSF,FWGUWG QSCTLL,AAFQEP'}
+    layout_properties: {grid_position: 'OGKHLI,TORDCN YOUOSF,FWGUWG RQHOUF,ZXBSHK'}
     data_bindings:
     - {property: text, code: 'self.item[''Scheduled_date'']', writeback: false}
   - name: button_1
     properties: {role: outlined-button, bold: true, align: center, spacing_above: small, background: '#05264d', icon: '', underline: false, font: '', icon_align: left, foreground: 'theme:On Primary', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: '      Pay      '}
     type: Button
-    layout_properties: {grid_position: 'WBGZIZ,UCELYF'}
+    layout_properties: {grid_position: 'OGKHLI,TORDCN YTCZRZ,CQQRLQ'}
     event_bindings: {click: button_1_click}
     data_bindings: []
+  - name: spacer_1
+    properties: {height: 32}
+    type: Spacer
+    layout_properties: {grid_position: 'OGKHLI,TORDCN YTCZRZ,QLTUTN'}
