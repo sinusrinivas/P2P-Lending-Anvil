@@ -57,3 +57,8 @@ class ItemTemplate22(ItemTemplate22Template):
         )
     else:
         Notification("Product details not found.").show()
+
+  def button_1_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    selected_row = self.item
+    open_form('borrower.dashboard.today_dues.check_out', selected_row = selected_row)

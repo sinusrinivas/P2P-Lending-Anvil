@@ -4,12 +4,12 @@ container:
   properties: {col_widths: '{}'}
 components:
 - name: column_panel_1
-  properties: {role: outlined-card, col_widths: '{"EFEWVM":10,"TORDCN":47,"HWSBHL":15,"DVASSU":15,"XKERXO":15,"XRWTFT":15,"SKHAVM":15,"FWGUWG":15,"VARWOF":31,"DWQGJD":15}'}
+  properties: {role: outlined-card, col_widths: '{"EFEWVM":15,"TORDCN":59,"HWSBHL":15,"DVASSU":15,"XKERXO":15,"XRWTFT":15,"SKHAVM":15,"FWGUWG":15,"NBVYAG":5}'}
   type: ColumnPanel
   layout_properties: {grid_position: 'RQIITZ,PKNCIT', full_width_row: true}
   components:
   - name: image_1
-    properties: {height: 122, display_mode: shrink_to_fit}
+    properties: {height: 137.49996948242188, display_mode: zoom_to_fill}
     type: Image
     layout_properties: {grid_position: 'OGKHLI,EFEWVM MRLZHQ,ZGMVBT', full_width_row: true}
     data_bindings:
@@ -24,6 +24,10 @@ components:
     layout_properties: {grid_position: 'OGKHLI,EFEWVM XPFPSH,BGOQPS'}
     data_bindings:
     - {property: text, code: 'self.item[''lender_full_name'']', writeback: false}
+  - name: spacer_2
+    properties: {height: 32}
+    type: Spacer
+    layout_properties: {grid_position: 'OGKHLI,NBVYAG'}
   - name: label_4
     properties: {role: input-prompt, text: 'Product Name :', bold: true, font_size: 14}
     type: Label
@@ -85,13 +89,9 @@ components:
     layout_properties: {grid_position: 'OGKHLI,TORDCN YOUOSF,FWGUWG QSCTLL,AAFQEP'}
     data_bindings:
     - {property: text, code: 'self.item[''Scheduled_date'']', writeback: false}
-  - name: spacer_2
-    properties: {height: 32}
-    type: Spacer
-    layout_properties: {grid_position: 'OGKHLI,TORDCN MSRRJV,VARWOF', full_width_row: true}
-  - type: Link
-    properties: {role: outlined-card, bold: true, align: center, col_widths: '{}', spacing_above: small, background: '', icon: '', wrap_on: mobile, underline: false, font: '', col_spacing: medium, icon_align: left, foreground: '', url: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: ' Pay'}
-    name: link_1
-    layout_properties: {grid_position: 'OGKHLI,TORDCN MSRRJV,DWQGJD', full_width_row: false}
-    components: []
-    event_bindings: {click: link_1_click}
+  - name: button_1
+    properties: {role: outlined-button, bold: true, align: center, spacing_above: small, background: '#05264d', icon: '', underline: false, font: '', icon_align: left, foreground: 'theme:On Primary', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: '      Pay      '}
+    type: Button
+    layout_properties: {grid_position: 'WBGZIZ,UCELYF'}
+    event_bindings: {click: button_1_click}
+    data_bindings: []
