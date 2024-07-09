@@ -284,21 +284,23 @@ class lender_registration_individual_form_1(lender_registration_individual_form_
         option_strings = [str(option['lendor_salary_type']) for option in options_5]
         self.drop_down_1_copy_2.items = option_strings
 
-    def validate_file(self, file):
-        """Validate file type and size."""
-        if file is None:
-            return False, "No file uploaded."
+    def validate_file_upload(self, **event_args):
+        file_loader = event_args['sender']
+        file = file_loader.file
+        max_size = 2 * 1024 * 1024  # 2MB in bytes
+        allowed_types = ['image/jpeg', 'image/png', 'image/jpg', 'application/pdf']
     
-        file_type = file.content_type
-        file_size = len(file.get_bytes())  # Use len to get size in bytes
+        if file:
+            file_size = len(file.get_bytes())
+            if file_size > max_size:
+                alert('File size should be less than 2MB')
+                file_loader.clear()
+                return
     
-        if file_type not in ['image/jpeg','image/png','image/jpg', 'application/pdf']:
-            return False, "Only JPG images and PDF files are allowed."
-    
-        if file_size > 2 * 1024 * 1024:  # 2MB limit
-            return False, "File size must be less than 2MB."
-    
-        return True, ""
+            if file.content_type not in allowed_types:
+                alert('Invalid file type. Only JPEG, PNG, jpg and PDF are allowed')
+                file_loader.clear()
+                return
 
     def button_2_click(self, **event_args):      
         company_name = self.text_box_1_copy.text    
@@ -331,32 +333,46 @@ class lender_registration_individual_form_1(lender_registration_individual_form_
             anvil.server.call('add_lendor_individual_form_3', annual_salary, designation, emp_id_proof, last_six_month, self.userId, salary_type)
             open_form('lendor.lendor_registration_forms.lender_registration_form_3_marital_details', user_id=self.userId)
     
-    def button_1_click(self, **event_args):
-        """This method is called when the button is clicked"""
-        open_form('lendor.lendor_registration_forms.lender_registration_form_2', user_id=self.userId)
-
+    
     def button_3_click(self, **event_args):
         """This method is called when the button is clicked"""
         open_form("bank_users.user_form")
 
     def file_loader_1_change(self, file, **event_args):
         """This method is called when a new file is loaded into this FileLoader"""
-        valid, message = self.validate_file(file)
-        if valid:
-            self.image_1.source = file
-        else:
-            Notification(message).show()
-            self.file_loader_1.clear()
+        if file:
+            self.label_1.text = file.name if file else ''
+            content_type = file.content_type
+            
+            if content_type in ['image/jpeg', 'image/png', 'image/jpg']:
+                # Display the image directly
+                self.image_1.source = self.file_loader_1.file
+            elif content_type == 'application/pdf':
+                # Display a default PDF image temporarily
+                self.image_1.source = '_/theme/bank_users/default%20pdf.png'
+            else:
+                alert('Invalid file type. Only JPEG, PNG, and PDF are allowed')
+                self.image_1.clear()
 
     def file_loader_2_change(self, file, **event_args):
         """This method is called when a new file is loaded into this FileLoader"""
-        valid, message = self.validate_file(file)
-        if valid:
-            self.image_2.source = file
-        else:
-            Notification(message).show()
-            self.file_loader_2.clear()
+        if file:
+            self.label_2.text = file.name if file else ''
+            content_type = file.content_type
+            
+            if content_type in ['image/jpeg', 'image/png', 'image/jpg']:
+                # Display the image directly
+                self.image_2.source = self.file_loader_2.file
+            elif content_type == 'application/pdf':
+                # Display a default PDF image temporarily
+                self.image_2.source = '_/theme/bank_users/default%20pdf.png'
+            else:
+                alert('Invalid file type. Only JPEG, PNG, and PDF are allowed')
+                self.image_2.clear()
 
+    def button_1_click(self, **event_args):
+        """This method is called when the button is clicked"""
+        open_form('lendor.lendor_registration_forms.lender_registration_form_2', user_id=self.userId)
 
 
 

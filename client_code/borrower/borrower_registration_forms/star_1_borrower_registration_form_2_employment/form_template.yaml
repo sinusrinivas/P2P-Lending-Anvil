@@ -34,7 +34,7 @@ components:
   - name: column_panel_6
     properties: {foreground: black}
     type: ColumnPanel
-    layout_properties: {grid_position: 'PSPGCF,LFJIKE'}
+    layout_properties: {grid_position: 'YVYXMZ,IWBITH'}
     components:
     - name: label_3_copy_1_copy_1
       properties: {role: null, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: black, spacing_below: small, visible: true, border: '', italic: false, font_size: 14, tooltip: '', text: 'Choose your Profession : '}
@@ -58,18 +58,18 @@ components:
         border: ''
         italic: false
         enabled: true
-        font_size: 12
+        font_size: 14
         tooltip: ''
       type: DropDown
-      layout_properties: {grid_position: 'EWCSWV,DISRYP'}
+      layout_properties: {grid_position: 'BCZEOV,BCRPNR'}
       event_bindings: {change: Profesion_borrower_registration_form_drop_down_change}
   - name: column_panel_3
     properties: {}
     type: ColumnPanel
-    layout_properties: {grid_position: 'PSPGCF,IWQKYL'}
+    layout_properties: {grid_position: 'KFZIHE,HAQJTV'}
     components:
     - name: label_5
-      properties: {align: left, text: Choose your Self Employment Profession, bold: true, font_size: 14, foreground: black, background: ''}
+      properties: {align: left, text: 'Choose your Self Employment Profession:', bold: true, font_size: 14, foreground: black, background: ''}
       type: Label
       layout_properties: {grid_position: 'WRMSEZ,IRLYOA'}
     - name: drop_down_2
@@ -80,7 +80,7 @@ components:
         items: [Business, Farmer]
         font_size: 14
       type: DropDown
-      layout_properties: {grid_position: 'OGVUJV,AZXUIL'}
+      layout_properties: {grid_position: 'WRMSEZ,REKAGE'}
   - name: column_panel_5
     properties: {col_widths: '{"TWEFYX":30,"CDDNXM":30}'}
     type: ColumnPanel
@@ -156,9 +156,9 @@ components:
       type: TextBox
       layout_properties: {grid_position: 'ZEMIKU,QDQUIE'}
   - name: column_panel_4
-    properties: {foreground: black, col_widths: '{"HSOLNA":30,"QPXLMR":15,"ENLPMB":15,"PSQWIA":30,"CPPCXH":15,"GBTGRL":15}'}
+    properties: {foreground: black, col_widths: '{"JXTWAO":30,"SLOTZD":30,"HAERAR":25,"VBSWMU":15,"POPJZB":20,"EUGURR":25,"EZHDIH":15,"JADJVU":20}'}
     type: ColumnPanel
-    layout_properties: {grid_position: 'MEAFMN,SCJCES'}
+    layout_properties: {grid_position: 'TZCQCK,BODDNI'}
     components:
     - name: label_2
       properties: {text: Enter Your Business Name  *, bold: true, spacing_above: medium, font_size: 12}
@@ -248,6 +248,10 @@ components:
       properties: {role: null, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: 14, tooltip: '', text: Enter Your Last Six Month's Turnover  *}
       type: Label
       layout_properties: {grid_position: 'CTJBJI,JXTWAO'}
+    - name: text_box_4
+      properties: {role: outlined, bold: false, align: left, placeholder: Enter Your Last Six Month's Turnover, spacing_above: small, background: 'theme:On Primary', type: text, underline: false, font: '', hide_text: false, foreground: '', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: 14, tooltip: '', text: ''}
+      type: TextBox
+      layout_properties: {grid_position: 'CTJBJI,JXTWAO IVHIFV,YLUNLN'}
     - name: label_1_copy_1
       properties:
         role: null
@@ -268,20 +272,20 @@ components:
         tooltip: ''
         text: "Last 6 Month's Bank Statements  *\n(Image Size less-than 2MB)  "
       type: Label
-      layout_properties: {grid_position: 'CTJBJI,SLOTZD'}
-    - name: text_box_4
-      properties: {role: outlined, bold: false, align: left, placeholder: Enter Your Last Six Month's Turnover, spacing_above: small, background: 'theme:On Primary', type: text, underline: false, font: '', hide_text: false, foreground: '', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: 14, tooltip: '', text: ''}
-      type: TextBox
-      layout_properties: {grid_position: 'BTPNVA,HSOLNA'}
+      layout_properties: {grid_position: 'CTJBJI,SLOTZD UREDGD,VXDQWF'}
     - name: file_loader_1
-      properties: {text: Upload Bank Statement, font_size: 14}
+      properties: {text: 'Upload ', font_size: 14}
       type: FileLoader
-      layout_properties: {grid_position: 'BTPNVA,QPXLMR'}
+      layout_properties: {grid_position: 'CTJBJI,SLOTZD SISIJX,HAERAR'}
       event_bindings: {change: file_loader_1}
     - name: image_1
       properties: {height: 61.666656494140625}
       type: Image
-      layout_properties: {grid_position: 'BTPNVA,ENLPMB'}
+      layout_properties: {grid_position: 'CTJBJI,SLOTZD SISIJX,VBSWMU'}
+    - name: label_6
+      properties: {}
+      type: Label
+      layout_properties: {grid_position: 'CTJBJI,SLOTZD SISIJX,POPJZB'}
     - name: label_1_copy_1_copy_1_copy
       properties: {role: null, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: 14, tooltip: '', text: Enter DIN  *}
       type: Label
@@ -302,7 +306,11 @@ components:
     - name: label_2_copy_1_copy_1_copy_2
       properties: {role: null, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: 14, tooltip: '', text: Enter Your Registered Office Address  *}
       type: Label
-      layout_properties: {grid_position: 'DADSFU,BPDTKC'}
+      layout_properties: {grid_position: 'DADSFU,BPDTKC QAKWGW,REKXBD'}
+    - name: text_box_7
+      properties: {role: outlined, bold: false, align: left, placeholder: Enter Your Registered Office Address, spacing_above: small, background: 'theme:On Primary', type: text, underline: false, font: '', hide_text: false, foreground: '', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: 14, tooltip: '', text: ''}
+      type: TextBox
+      layout_properties: {grid_position: 'DADSFU,BPDTKC NIUELI,LBYKLU'}
     - name: label_1_copy_1_copy
       properties:
         role: null
@@ -323,22 +331,22 @@ components:
         tooltip: ''
         text: "Provide Proof of  * Verification  * \n(recent electricity bill)"
       type: Label
-      layout_properties: {grid_position: 'DADSFU,EHVNRL'}
-    - name: text_box_7
-      properties: {role: outlined, bold: false, align: left, placeholder: Enter Your Registered Office Address, spacing_above: small, background: 'theme:On Primary', type: text, underline: false, font: '', hide_text: false, foreground: '', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: 14, tooltip: '', text: ''}
-      type: TextBox
-      layout_properties: {grid_position: 'MQCYFE,PSQWIA'}
+      layout_properties: {grid_position: 'DADSFU,EHVNRL RHQANL,IYDGFM'}
     - name: file_loader_1_copy
-      properties: {text: Upload Verification proof, font_size: 14}
+      properties: {text: 'Upload ', font_size: 14, enabled: true}
       type: FileLoader
-      layout_properties: {grid_position: 'MQCYFE,CPPCXH'}
+      layout_properties: {grid_position: 'DADSFU,EHVNRL KDJBIA,EUGURR'}
       event_bindings: {change: file_loader_1_copy}
     - name: image_1_copy
-      properties: {height: 43.583343505859375}
+      properties: {height: 40.416656494140625}
       type: Image
-      layout_properties: {grid_position: 'MQCYFE,GBTGRL'}
+      layout_properties: {grid_position: 'DADSFU,EHVNRL KDJBIA,EZHDIH'}
+    - name: label_7
+      properties: {}
+      type: Label
+      layout_properties: {grid_position: 'DADSFU,EHVNRL KDJBIA,JADJVU'}
   - name: column_panel_1
-    properties: {foreground: black, col_widths: '{"WXOIDW":30,"CXOOJU":15,"ZZKUDF":15}'}
+    properties: {foreground: black, col_widths: '{"XCOQHA":30,"BUBPLU":30,"JZFYZY":25,"HEBFXH":15,"CMRFEE":20}'}
     type: ColumnPanel
     layout_properties: {grid_position: 'LHLCHV,SUMXUW'}
     components:
@@ -360,29 +368,33 @@ components:
       type: TextBox
       layout_properties: {grid_position: 'GJXWEN,MPPEOP'}
     - name: label_4
-      properties: {text: 'Enter Your College Address: *', align: left, bold: true, font_size: 14}
+      properties: {text: Enter Your College Address *, align: left, bold: true, font_size: 14}
       type: Label
-      layout_properties: {grid_position: 'EVJWYK,XCOQHA'}
-    - name: label_3
-      properties: {text: Provide College Proof  *, align: left, bold: true, font_size: 14}
-      type: Label
-      layout_properties: {grid_position: 'EVJWYK,BUBPLU'}
+      layout_properties: {grid_position: 'EVJWYK,XCOQHA FGUWZH,XRZJNS'}
     - name: borrower_college_address_text
       properties: {background: 'theme:On Primary', height: 40.6666259765625, role: outlined, placeholder: Enter Your College Address, font_size: 14, auto_expand: false}
       type: TextArea
-      layout_properties: {grid_position: 'QDVYUX,WXOIDW'}
+      layout_properties: {grid_position: 'EVJWYK,XCOQHA TGDQID,BSKBKX'}
       data_bindings: []
+    - name: label_3
+      properties: {text: Provide College Proof  *, align: left, bold: true, font_size: 14}
+      type: Label
+      layout_properties: {grid_position: 'EVJWYK,BUBPLU GHGVUU,ULZWYJ'}
     - name: borrower_college_proof_img
-      properties: {text: Upload Proof, font_size: 14}
+      properties: {text: Upload, font_size: 14}
       type: FileLoader
-      layout_properties: {grid_position: 'QDVYUX,CXOOJU'}
+      layout_properties: {grid_position: 'EVJWYK,BUBPLU QZQBMR,JZFYZY'}
       event_bindings: {change: borrower_college_proof_img_change}
     - name: image_1_copy_2
-      properties: {height: 68}
+      properties: {height: 47.416656494140625}
       type: Image
-      layout_properties: {grid_position: 'QDVYUX,ZZKUDF'}
+      layout_properties: {grid_position: 'EVJWYK,BUBPLU QZQBMR,HEBFXH'}
+    - name: label_8
+      properties: {}
+      type: Label
+      layout_properties: {grid_position: 'EVJWYK,BUBPLU QZQBMR,CMRFEE'}
   - name: column_panel_22
-    properties: {foreground: black}
+    properties: {foreground: black, col_widths: '{"LRZWGH":10,"JRWZKX":10,"EPUQYQ":10,"KPOAPE":10,"FXLFIZ":10,"WELHHY":10}'}
     type: ColumnPanel
     layout_properties: {grid_position: 'YAAYAP,NBKHEO'}
     components:
@@ -506,7 +518,7 @@ components:
       type: TextBox
       layout_properties: {grid_position: 'MRDHLS,JITEEH'}
     - name: label_3_copy
-      properties: {role: null, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: 14, tooltip: '', text: Select Your Salary type  *}
+      properties: {role: null, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: 14, tooltip: '', text: Select Your Salary Type  *}
       type: Label
       layout_properties: {grid_position: 'HOOSGM,BRZLIY'}
     - name: label_3_copy_1_copy_3
@@ -558,7 +570,7 @@ components:
         font_size: 14
         tooltip: ''
         text: |-
-          Upload Employee Id  *
+          Upload Employee ID  *
           (Image Size less-than 2MB)
       type: Label
       layout_properties: {grid_position: 'RDWTZD,ONHSOL'}
@@ -586,7 +598,7 @@ components:
       type: Label
       layout_properties: {grid_position: 'RDWTZD,IVUJYU'}
     - name: file_loader_1_copy_2
-      properties: {text: Upload Employee Id, font_size: 14}
+      properties: {text: 'Upload ', font_size: 14}
       type: FileLoader
       layout_properties: {grid_position: 'JOLEZQ,LRZWGH'}
       event_bindings: {change: file_loader_1_change}
@@ -594,8 +606,12 @@ components:
       properties: {height: 62.33331298828125}
       type: Image
       layout_properties: {grid_position: 'JOLEZQ,JRWZKX'}
+    - name: label_9
+      properties: {font_size: 14}
+      type: Label
+      layout_properties: {grid_position: 'JOLEZQ,EPUQYQ'}
     - name: file_loader_2
-      properties: {text: Upload Bank Statements, align: center, font_size: 14}
+      properties: {text: 'Upload ', align: center, font_size: 14}
       type: FileLoader
       layout_properties: {grid_position: 'JOLEZQ,KPOAPE'}
       event_bindings: {change: file_loader_2_change}
@@ -603,6 +619,10 @@ components:
       properties: {height: 54.583282470703125}
       type: Image
       layout_properties: {grid_position: 'JOLEZQ,FXLFIZ'}
+    - name: label_10
+      properties: {font_size: 14}
+      type: Label
+      layout_properties: {grid_position: 'JOLEZQ,WELHHY'}
   - name: button_1
     properties: {role: elevated-button, bold: true, align: right, spacing_above: small, background: '#0b2547', icon: 'fa:angle-double-left', underline: false, font: '', icon_align: left, foreground: 'theme:On Primary', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: Prev}
     type: Button

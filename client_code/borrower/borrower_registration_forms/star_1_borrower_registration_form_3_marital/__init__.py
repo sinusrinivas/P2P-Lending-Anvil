@@ -281,7 +281,7 @@ class star_1_borrower_registration_form_3_marital(star_1_borrower_registration_f
         alert('Please select a specific preference')
       
   
-  def button_1_click(self, **event_args):
+  def button_1_click(self, **event_args): 
     open_form('borrower.borrower_registration_forms.star_1_borrower_registration_form_2_employment',user_id=self.userId)
 
   def drop_down_1_change(self, **event_args):
