@@ -32,7 +32,7 @@ components:
       type: Spacer
       layout_properties: {grid_position: 'XQEDZC,ZWJJCA'}
     - name: image_1
-      properties: {height: 192.42852783203125}
+      properties: {height: 192.42852783203125, display_mode: original_size}
       type: Image
       layout_properties: {grid_position: 'XQEDZC,EUCVVS'}
     - name: spacer_3
