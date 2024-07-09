@@ -202,30 +202,32 @@ class signup_page(signup_pageTemplate):
     def validate_password(self):
         password = self.text_box_2.text.strip()
         retype_password = self.text_box_3.text.strip()
-
-        error_messages = []
-
+    
+        # Clear previous error messages
+        self.password_error_label.text = ''
+        self.retype_password_error_label.text = ''
+        self.password_error_label.visible = False
+        self.retype_password_error_label.visible = False
+    
         # Validate password length
         if len(password) < 8:
-            error_messages.append('Password must be at least 8 characters long.')
-
+            self.password_error_label.text = 'Password must be at least 8 characters long.'
+            # self.password_error_label.visible = True
+    
         # Validate matching passwords
         if password != retype_password:
-            error_messages.append('Passwords do not match.')
-
-        if error_messages:
-            self.retype_password_error_label.text = ' '.join(error_messages)
-            self.retype_password_error_label.visible = True
-        else:
-            self.retype_password_error_label.visible = False
+            self.retype_password_error_label.text = 'Passwords do not match.'
+            # self.retype_password_error_label.visible = True
 
     def text_box_2_change(self, **event_args):
         """This method is called when the text in text_box_2 changes"""
         self.validate_password()
+        self.password_error_label.visible = True
 
     def text_box_3_change(self, **event_args):
         """This method is called when the text in text_box_3 changes"""
         self.validate_password()
+        self.retype_password_error_label.visible = True
 
     def button_1_click(self, **event_args):
         email = self.text_box_1.text.strip()

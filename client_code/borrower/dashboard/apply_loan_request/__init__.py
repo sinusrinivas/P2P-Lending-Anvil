@@ -150,11 +150,87 @@ class apply_loan_request(apply_loan_requestTemplate):
                   self.product_description_label.text = "Product description not available"
 
     def link_1_click(self, **event_args):
-      self.link_1.visible = False
-      self.column_panel_3.visible = True
-      self.submit.visible = True
-      self.label_28.text = self.loan_amount_tb.text
-      self.label_32.text = self.label_21.text
+        self.link_1.visible = False
+        self.column_panel_3.visible = True
+        self.submit.visible = True
+        loan_amount = self.loan_amount_tb.text
+        tenure = self.text_box_1.text
+        one_time = self.button_1_1.background == '#0a2346'
+        monthly_emi = self.button_2_1.background == '#0a2346'
+        three_months = self.button_3_1.background == '#0a2346'
+        six_months = self.button_4_1.background == '#0a2346'
+
+        if not loan_amount:
+            self.label_22.text = "Please fill the loan amount"
+            self.label_22.foreground = '#FF0000'
+        elif not loan_amount.isdigit():
+            self.label_22.text = "Please enter only numeric values (0-9) for loan amount"
+            self.label_22.foreground = '#FF0000'
+        else:
+            min_amount, max_amount = self.get_min_max_amount()
+            loan_amount = int(loan_amount)
+
+            if min_amount <= loan_amount <= max_amount:
+                self.label_22.text = ""
+            else:
+                self.label_22.text = f"Loan amount should be between {min_amount} and {max_amount}"
+                self.label_22.foreground = '#FF0000'
+
+        if not tenure:
+            self.label_23.text = "Please select tenure"
+            self.label_23.foreground = '#FF0000'
+        elif not tenure.isdigit():
+            self.label_23.text = "Please enter only numeric values (0-9) for tenure"
+            self.label_23.foreground = '#FF0000'
+        else:
+            min_tenure, max_tenure = self.get_min_max_tenure()
+            tenure = int(tenure)
+
+            if min_tenure <= tenure <= max_tenure:
+                self.label_23.text = ""
+            else:
+                self.label_23.text = f"Tenure should be between {min_tenure} and {max_tenure}"
+                self.label_23.foreground = '#FF0000'
+
+        if not (one_time or monthly_emi or three_months or six_months):
+            self.label_24.text = "Please select the EMI Payment Type"
+            self.label_24.foreground = '#FF0000'
+        else:
+            self.label_24.text = ""
+
+            if not any([self.label_22.text, self.label_23.text, self.label_24.text]):
+                self.grid_panel_2.visible = True
+                self.button_2.visible = True
+                self.button_3.visible = True
+                self.button_5.visible = True
+                self.button_4.visible = False
+
+                self.label_28.text = f"₹ {loan_amount}"
+                p = loan_amount
+                t = tenure
+                monthly_interest_rate = float(self.roi / 100) / 12
+              
+                print("ROI:", self.roi)
+                # monthly_interest_rate = float(int(self.roi) / 100) / 12
+                print("Monthly Interest Rate:", monthly_interest_rate)
+              
+                emi_denominator = ((1 + monthly_interest_rate) ** t) - 1
+                print('denominatio' , emi_denominator)
+                emi_numerator = p * monthly_interest_rate * ((1 + monthly_interest_rate) ** t)
+                print('numerator' , emi_numerator)
+                Monthly_EMI = emi_numerator / emi_denominator
+                print('monthly emi' , Monthly_EMI)
+              
+                self.label_36.text = f"₹ {Monthly_EMI:.2f}"
+                interest_amount = Monthly_EMI * t - p
+                self.label_30.text = f"₹ {interest_amount:.2f}"
+                processing_fee_amount = (self.processing_fee / 100) * p
+                self.label_32.text = f"₹ {processing_fee_amount:.2f}"
+                self.Total_Repayment_Amount = round(p + interest_amount + processing_fee_amount ,2)
+                self.label_34.text = f"₹ {self.Total_Repayment_Amount:.2f}"
+
+                # Pass monthly EMI value as well
+                self.emi = Monthly_EMI
 
     def link_3_click(self, **event_args):
       self.link_3.visible = False
