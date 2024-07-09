@@ -183,7 +183,7 @@ class dashboard(dashboardTemplate):
     self.repeating_panel_2.visible = False
     self.data_grid_new_loan_request.visible = True
     self.repeating_panel_1.visible = True
-    self.load_data('disbursed loan')
+    self.load_data('disbursed')
 
   def button_3_copy_click(self, **event_args):
     """This method is called when the button is clicked"""
@@ -199,7 +199,7 @@ class dashboard(dashboardTemplate):
     self.repeating_panel_2.visible = False
     self.data_grid_new_loan_request.visible = True
     self.repeating_panel_1.visible = True
-    self.load_data('close')
+    self.load_data('closed')
 
   def button_5_copy_click(self, **event_args):
     """This method is called when the button is clicked"""
@@ -245,5 +245,9 @@ class dashboard(dashboardTemplate):
   def link_16_click(self, **event_args):
     """This method is called when the link is clicked"""
     open_form('borrower.dashboard.borrower_portfolio_first_page')
+
+  def image_5_mouse_up(self, x, y, button, **event_args):
+    """This method is called when a mouse button is released on this component"""
+    open_form('lendor.dashboard.lender_view_profile')
 
 
