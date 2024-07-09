@@ -426,17 +426,10 @@ class star_1_borrower_registration_form_2_employment(star_1_borrower_registratio
             print(f"No user data found for user_id: {user_id}")
             # Handle case where user_data is None or not found
 
-            self.text_box_1_copy.add_event_handler('change', self.validate_full_name)
+    
       
         # Set up event handler for dropdown change
         self.drop_down_1.set_event_handler('change', self.drop_down_1_change_handler)
-
-    def validate_full_name(self, **event_args):
-        full_name = self.text_box_1_copy.text
-        if re.match(r'^[A-Za-z\s]+$', full_name):
-            self.text_box_1_copy.background = None
-        else:
-            self.text_box_1_copy.background = '#FF0000'  # Red background for invalid input
         
         # Initialize visibility of components inside grid_panel_3
         self.drop_down_2.visible = True
@@ -596,14 +589,6 @@ class star_1_borrower_registration_form_2_employment(star_1_borrower_registratio
 
     def button_1_next_click(self, **event_args):
       """This method is called when the button is clicked"""
-      fullname = self.text_box_1_copy.text
-
-      if not full_name:
-            self.text_box_1_copy.background = '#FF0000'
-            self.text_box_1_copy.focus()
-            Notification('Please fill all details').show()
-            return
-        
       open_form('borrower.borrower_registration_forms.star_1_borrower_registration_form_3_marital',user_id = self.user_id)
         
 
