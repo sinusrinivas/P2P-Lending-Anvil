@@ -301,27 +301,27 @@ components:
       properties: {item_template: borrower.dashboard.apply_loan_request.ItemTemplate116}
       type: RepeatingPanel
       layout_properties: {grid_position: 'YMQNGY,DNMOKM'}
-  - name: submit
-    properties:
-      role: null
-      bold: false
-      align: center
-      spacing_above: small
-      background: '#05264d'
-      icon: fa:angle-double-right
-      underline: false
-      font: ''
-      icon_align: left
-      foreground: theme:On Primary
-      spacing_below: small
-      visible: true
-      border: ''
-      italic: false
-      enabled: true
-      font_size: null
-      tooltip: ''
-      text: "Send Request \n"
-    type: Button
-    layout_properties: {grid_position: 'FEGKSB,MJQAII'}
-    event_bindings: {click: submit_click}
+- name: submit
+  properties:
+    role: null
+    bold: false
+    align: center
+    spacing_above: small
+    background: '#05264d'
+    icon: fa:angle-double-right
+    underline: false
+    font: ''
+    icon_align: left
+    foreground: theme:On Primary
+    spacing_below: small
+    visible: false
+    border: ''
+    italic: false
+    enabled: true
+    font_size: null
+    tooltip: ''
+    text: "Send Request \n"
+  type: Button
+  layout_properties: {grid_position: 'EHMRGI,ODGGIJ'}
+  event_bindings: {click: submit_click}
 is_package: true
