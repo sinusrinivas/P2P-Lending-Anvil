@@ -29,14 +29,14 @@ class registration_process(registration_processTemplate):
                 self.label_7.bold = True  
                 self.label_1.bold = True
             elif form_count == 1:
-                self.label_7.font_weight = 'Bold'  
-                self.label_1.font_weight = 'Bold'
+                self.label_7.bold = True  
+                self.label_1.bold = True
                 self.label_13.font_weight = 'Bold'
                 self.label_2.font_weight = 'Bold'
                 self.label_8.font_weight = 'Bold'
             elif form_count == 2:
-                self.label_7.font_weight = 'Bold'  
-                self.label_1.font_weight = 'Bold'
+                self.label_7.bold = True  
+                self.label_1.bold = True
                 self.label_13.font_weight = 'Bold'
                 self.label_2.font_weight = 'Bold'
                 self.label_8.font_weight = 'Bold'
@@ -44,8 +44,8 @@ class registration_process(registration_processTemplate):
                 self.label_9.font_weight = 'Bold'
                 self.label_14.font_weight = 'Bold'
             elif form_count == 3:
-                self.label_7.font_weight = 'bold'  
-                self.label_1.font_weight = 'bold'
+                self.label_7.bold = True  
+                self.label_1.bold = True
                 self.label_13.font_weight = 'bold'
                 self.label_2.font_weight = 'bold'
                 self.label_8.font_weight = 'bold'
@@ -56,8 +56,8 @@ class registration_process(registration_processTemplate):
                 self.label_15.font_weight = 'bold'
                 self.label_10.font_weight = 'bold'
             elif form_count == 4:
-                self.label_7.font_weight = 'bold'  
-                self.label_1.font_weight = 'bold'
+                self.label_7.bold = True  
+                self.label_1.bold = True
                 self.label_13.font_weight = 'bold'
                 self.label_2.font_weight = 'bold'
                 self.label_8.font_weight = 'bold'
@@ -72,8 +72,8 @@ class registration_process(registration_processTemplate):
                 self.label_16.font_weight = 'bold'
                 self.label_11.font_weight = 'bold'
             elif form_count == 5:
-                self.label_7.font_weight = 'bold'  
-                self.label_1.font_weight = 'bold'
+                self.label_7.bold = True  
+                self.label_1.bold = True
                 self.label_13.font_weight = 'bold'
                 self.label_2.font_weight = 'bold'
                 self.label_8.font_weight = 'bold'
