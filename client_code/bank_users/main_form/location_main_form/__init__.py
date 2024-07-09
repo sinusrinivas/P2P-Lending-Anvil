@@ -50,12 +50,12 @@ class location_main_form(location_main_formTemplate):
               open_form('bank_users.borrower_rgistration_form')
             elif user_type == 'admin':
               open_form('admin.dashboard')
-            else:
-              open_form('bank_users.user_form')
-        else:
-          main_form_module.email = user_email
-          main_form_module.flag = False
-          open_form('bank_users.user_form')
+              return
+              # open_form('bank_users.user_form')
+        # else:
+        #   main_form_module.email = user_email
+        #   main_form_module.flag = False
+        #   open_form('bank_users.user_form')
 
 #-- imp logic dont go up--#
 

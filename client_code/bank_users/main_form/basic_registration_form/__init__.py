@@ -351,7 +351,7 @@ class basic_registration_form(basic_registration_formTemplate):
             open_form('borrower.borrower_registration_forms.borrower_registration_form_1_education', user_id=user_id)
         else:
             open_form('bank_users.user_form')
-
+        
 
 
     def registration_img_aadhar_file_loader_change(self, file, **event_args):
