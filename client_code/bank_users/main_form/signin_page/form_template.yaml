@@ -82,22 +82,14 @@ components:
       type: Spacer
       layout_properties: {grid_position: 'WUAZDP,FZHHNU'}
     - name: column_panel_1_copy_copy
-      properties: {role: elevated-card, col_widths: '{"CQYWXR":10,"EKYSFD":54,"EOHAME":6,"VXLYLN":40,"IKUFXQ":10,"UXCVZV":40,"BHDWCQ":64,"MUTVVT":6}'}
+      properties: {role: elevated-card, col_widths: '{"EKYSFD":54,"EOHAME":6,"VXLYLN":40,"UXCVZV":40,"BHDWCQ":64,"MUTVVT":6}'}
       type: ColumnPanel
       layout_properties: {grid_position: 'WUAZDP,LLBEDS', full_width_row: true}
       components:
-      - name: spacer_13
-        properties: {height: 38.75}
-        type: Spacer
-        layout_properties: {grid_position: 'MPYCNK,IKUFXQ'}
       - name: label_7
-        properties: {role: title, text: Sign In, background: '', foreground: '#094586', bold: true, underline: false, italic: false, font_size: 40}
+        properties: {role: title, bold: true, align: center, background: '', underline: false, foreground: '#094586', italic: false, font_size: 40, text: Sign In}
         type: Label
         layout_properties: {grid_position: 'MPYCNK,UXCVZV'}
-      - name: spacer_6
-        properties: {height: 32}
-        type: Spacer
-        layout_properties: {grid_position: 'MPYCNK,CQYWXR'}
       - name: label_4
         properties: {text: Email, bold: true}
         type: Label
