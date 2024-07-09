@@ -522,8 +522,8 @@ color: %color:On Primary Container%;
 .app-bar .sidebar-toggle .fa-bars {
   width: 30px;
   text-align: center;
-  color:#013065;
-  visibility: visible;
+  /* color:#013065; */
+  /* visibility: visible; */
 }
 
 
