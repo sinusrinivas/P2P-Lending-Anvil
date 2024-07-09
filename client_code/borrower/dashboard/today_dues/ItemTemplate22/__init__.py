@@ -31,4 +31,8 @@ class ItemTemplate22(ItemTemplate22Template):
   def link_1_click(self, **event_args):
     """This method is called when the link is clicked"""
     selected_row = self.item
-    open_form('borrower_registration_form.dashboard.today_dues.check_out', selected_row = selected_row)
+    open_form('borrower.dashboard.today_dues.check_out', selected_row = selected_row)
+
+  def link_3_click(self, **event_args):
+    """This method is called when the link is clicked"""
+    pass
