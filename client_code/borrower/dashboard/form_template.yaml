@@ -225,6 +225,7 @@ components:
       - {id: RNOHUR, data_key: column_7, title: Actions, expand: false}
       role: tonal-data-grid
       border: ''
+      visible: true
     type: DataGrid
     layout_properties: {grid_position: 'ZSVLWJ,FTSZNU', full_width_row: true}
     name: data_grid_1_copy
@@ -274,7 +275,6 @@ components:
       layout_properties: {}
       event_bindings: {click: notifications_click}
       name: notifications
-      data_bindings: []
     - properties: {}
       type: form:borrower.logout
       name: logout_1
