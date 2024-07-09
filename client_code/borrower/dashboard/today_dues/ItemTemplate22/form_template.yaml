@@ -12,24 +12,26 @@ components:
     properties: {height: 122}
     type: Image
     layout_properties: {grid_position: 'OGKHLI,EFEWVM YZOWXK,XUINSS'}
-  - name: label_8
-    properties: {align: center, text: Product name, role: null}
-    type: Label
-    layout_properties: {grid_position: 'OGKHLI,EFEWVM HIRNFU,LQIPUJ'}
+    data_bindings:
+    - {property: source, code: 'self.item[''user_photo'']', writeback: false}
   - name: link_3
-    properties: {align: center, bold: true}
+    properties: {align: center, bold: true, font_size: 10}
     type: Link
     layout_properties: {grid_position: 'OGKHLI,EFEWVM TDDXPC,JZVSJX'}
+    data_bindings:
+    - {property: text, code: 'self.item[''product_name'']', writeback: false}
   - name: label_4
-    properties: {role: null, text: 'Lender Name :'}
+    properties: {role: null, text: 'Lender Name :', bold: true}
     type: Label
     layout_properties: {grid_position: 'OGKHLI,TORDCN BTQEIH,XKERXO'}
   - name: label_9
     properties: {role: outlined-card}
     type: Label
     layout_properties: {grid_position: 'OGKHLI,TORDCN BTQEIH,ZJWSLZ'}
+    data_bindings:
+    - {property: text, code: 'self.item[''lender_full_name'']', writeback: false}
   - name: label_5
-    properties: {role: null, text: 'Borrower Id :'}
+    properties: {role: null, text: 'Loan Amount :', bold: true}
     type: Label
     layout_properties: {grid_position: 'OGKHLI,TORDCN BTQEIH,XRWTFT'}
   - type: Label
@@ -37,9 +39,9 @@ components:
     name: label_1
     layout_properties: {grid_position: 'OGKHLI,TORDCN BTQEIH,JBNZKD'}
     data_bindings:
-    - {property: text, code: 'self.item[''loan_id'']'}
+    - {property: text, code: 'self.item[''loan_amount'']', writeback: false}
   - name: label_6
-    properties: {role: null, text: 'Loan Amount :'}
+    properties: {role: null, text: 'Tenure :', bold: true}
     type: Label
     layout_properties: {grid_position: 'OGKHLI,TORDCN CRBWLH,HWSBHL'}
   - type: Label
@@ -47,9 +49,9 @@ components:
     name: label_2
     layout_properties: {grid_position: 'OGKHLI,TORDCN CRBWLH,KRDJCC'}
     data_bindings:
-    - {property: text, code: 'self.item[''loan_amount'']'}
+    - {property: text, code: 'self.item[''tenure'']', writeback: false}
   - name: label_7
-    properties: {role: null, text: 'Interest Rate :'}
+    properties: {role: null, text: 'Interest Rate :', align: left, bold: true}
     type: Label
     layout_properties: {grid_position: 'OGKHLI,TORDCN CRBWLH,DVASSU'}
   - type: Label
@@ -57,23 +59,27 @@ components:
     name: label_3
     layout_properties: {grid_position: 'OGKHLI,TORDCN CRBWLH,JCHCYJ'}
     data_bindings:
-    - {property: text, code: 'self.item[''scheduled_payment'']'}
+    - {property: text, code: 'self.item[''interest_rate'']', writeback: false}
   - name: label_10
-    properties: {role: null, text: Due By}
+    properties: {role: null, text: Due By, bold: true}
     type: Label
     layout_properties: {grid_position: 'OGKHLI,TORDCN YOUOSF,SKHAVM'}
   - name: label_11
     properties: {role: outlined-card}
     type: Label
     layout_properties: {grid_position: 'OGKHLI,TORDCN YOUOSF,NDUACB'}
+    data_bindings:
+    - {property: text, code: 'self.item[''days_left'']', writeback: false}
   - name: label_12
-    properties: {text: 'Schedule Date :'}
+    properties: {text: 'Schedule Date :', bold: true}
     type: Label
     layout_properties: {grid_position: 'OGKHLI,TORDCN YOUOSF,FWGUWG'}
   - name: label_13
     properties: {role: outlined-card}
     type: Label
     layout_properties: {grid_position: 'OGKHLI,TORDCN YOUOSF,TZJUIM'}
+    data_bindings:
+    - {property: text, code: 'self.item[''Scheduled_date'']', writeback: false}
   - name: spacer_2
     properties: {height: 32}
     type: Spacer
