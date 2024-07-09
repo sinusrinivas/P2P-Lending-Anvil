@@ -1165,3 +1165,9 @@ span.btn-text{
   text-align: center;
 }
 
+.anvil-role-circular-image img {
+  width: 200px; /* Adjust the size as needed */
+  height: 200px; /* Adjust the size as needed */
+  border-radius: 50%;
+  object-fit: cover;
+}

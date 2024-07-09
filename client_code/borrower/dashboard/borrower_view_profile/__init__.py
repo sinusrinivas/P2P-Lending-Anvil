@@ -28,6 +28,9 @@ class borrower_view_profile(borrower_view_profileTemplate):
     self.disable_bank_details_fields()
     self.load_user_profile()
     self.disable_company_employment_fields()
+    # self.user_id = "example_user_id"
+
+    self.image_1.role = 'circular-image'
 
     # self.get = get_customer_id_value
 
@@ -1021,6 +1024,7 @@ class borrower_view_profile(borrower_view_profileTemplate):
     if file:
             # Update Image_1 with the uploaded image
             self.image_1.source = self.user_photo.file
+            # self.image_1.role = 'circular-image'
             user_profile=app_tables.fin_user_profile.get(customer_id=self.user_id)
             if user_profile:
               photo = self.user_photo.file
