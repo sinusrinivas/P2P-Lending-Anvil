@@ -44,11 +44,11 @@ components:
       layout_properties: {grid_position: 'AUAHNV,FWOJUW'}
       event_bindings: {change: user_photo_change}
     - name: name_label
-      properties: {align: center, role: title, text: '', foreground: ''}
+      properties: {align: center, role: title, text: '', foreground: '', font_size: 18, spacing_below: none}
       type: Label
       layout_properties: {grid_position: 'NQCTGU,DUYLPU'}
     - name: email_id_label
-      properties: {text: '', bold: false, font_size: 16, icon: 'fa:window-maximize', align: center}
+      properties: {text: '', bold: false, font_size: 16, icon: 'fa:window-maximize', align: center, spacing_above: none}
       type: Label
       layout_properties: {grid_position: 'AQPMDH,XPUZFG'}
     - name: button_1_copy_6
@@ -96,7 +96,7 @@ components:
       layout_properties: {grid_position: 'VNYQWZ,XCYJCJ', full_width_row: true}
       components:
       - name: personal_details
-        properties: {role: title, bold: true, text: '                                                    Personal Information', align: left, font_size: 18, background: '#0b2547', foreground: white}
+        properties: {role: title, bold: true, text: '                                                        Personal Information', align: left, font_size: 18, background: '#0b2547', foreground: white}
         type: Label
         layout_properties: {grid_position: 'ROTWLU,EFDKWR'}
       - name: spacer_2
