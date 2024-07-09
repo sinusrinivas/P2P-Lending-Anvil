@@ -108,7 +108,11 @@ components:
           Enter Type of Land  *
           (Owned/Rented)
       type: Label
-      layout_properties: {row: RHJDHL, width_xs: 3, col_xs: 2}
+      layout_properties: {row: IKBWIR, width_xs: 2, col_xs: 1}
+    - name: label_1_copy_6
+      properties: {role: null, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: black, spacing_below: small, visible: true, border: '', italic: false, font_size: 12, tooltip: '', text: 'Enter the Number of Acres of Land:   '}
+      type: Label
+      layout_properties: {row: IKBWIR, width_xs: 4, col_xs: 6}
     - name: drop_down_1_copy_3
       properties:
         role: outlined
@@ -130,32 +134,11 @@ components:
         font_size: 12
         tooltip: ''
       type: DropDown
-      layout_properties: {row: RHJDHL, width_xs: 6, col_xs: 6}
-    - name: label_1_copy_6
-      properties:
-        role: null
-        bold: true
-        align: left
-        spacing_above: small
-        background: ''
-        icon: ''
-        underline: false
-        font: ''
-        icon_align: left
-        foreground: black
-        spacing_below: small
-        visible: true
-        border: ''
-        italic: false
-        font_size: 12
-        tooltip: ''
-        text: "Enter the Number of Acres  *\nof Land:   "
-      type: Label
-      layout_properties: {row: PYGXXS, width_xs: 4, col_xs: 2}
+      layout_properties: {row: NLDXWT, width_xs: 3, col_xs: 1}
     - name: text_box_1_copy_4
       properties: {role: outlined, bold: false, align: left, placeholder: Enter the Number of Acres of Land, spacing_above: small, background: 'theme:On Primary', type: text, underline: false, font: '', hide_text: false, foreground: '', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: 12, tooltip: '', text: ''}
       type: TextBox
-      layout_properties: {row: PYGXXS, width_xs: 6, col_xs: 6}
+      layout_properties: {row: NLDXWT, width_xs: 6, col_xs: 6}
     - name: label_3_copy_1_copy_4
       properties: {role: null, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: black, spacing_below: small, visible: true, border: '', italic: false, font_size: 12, tooltip: '', text: 'Enter Crop Name:  *'}
       type: Label
