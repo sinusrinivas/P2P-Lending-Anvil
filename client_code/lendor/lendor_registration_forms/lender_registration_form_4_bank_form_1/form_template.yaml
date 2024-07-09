@@ -62,47 +62,42 @@ components:
     name: drop_down_1
     layout_properties: {grid_position: 'FXHGDA,CWCNOY'}
     event_bindings: {change: drop_down_1_change}
-- name: column_panel_2
-  properties: {}
-  type: ColumnPanel
-  layout_properties: {grid_position: 'QHCLAL,YUISYP'}
-  components:
   - name: label_1
     properties: {role: input-prompt, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: Enter Your Account Number}
     type: Label
-    layout_properties: {grid_position: 'LMNPYL,CJSQFK'}
+    layout_properties: {grid_position: 'TLHLGJ,DUEEPE'}
   - name: label_2
     properties: {role: input-prompt, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: Enter Your Bank Name}
     type: Label
-    layout_properties: {grid_position: 'LMNPYL,WFBNRP'}
+    layout_properties: {grid_position: 'TLHLGJ,KZMDTH'}
   - type: TextBox
     properties: {role: outlined, bold: false, align: left, placeholder: '', spacing_above: small, background: 'theme:On Primary', type: text, underline: false, font: '', hide_text: false, foreground: '', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: ''}
     name: text_box_2
-    layout_properties: {grid_position: 'FKHILM,MPBWES'}
+    layout_properties: {grid_position: 'GPXQNI,VNXOUJ'}
   - type: TextBox
     properties: {role: outlined, bold: false, align: left, placeholder: '', spacing_above: small, background: 'theme:On Primary', type: text, underline: false, font: '', hide_text: false, foreground: '', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: ''}
     name: text_box_3
-    layout_properties: {grid_position: 'FKHILM,LYLAZT'}
+    layout_properties: {grid_position: 'GPXQNI,TQEJIL'}
   - name: label_2_copy_1_copy
     properties: {role: input-prompt, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: Enter Your Bank Id}
     type: Label
-    layout_properties: {grid_position: 'HOZZAY,DVZVNL'}
+    layout_properties: {grid_position: 'QTJGTV,AYTNMC'}
   - name: label_1_copy
     properties: {role: input-prompt, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: Enter Your Branch Name}
     type: Label
-    layout_properties: {grid_position: 'HOZZAY,FZKOYR'}
+    layout_properties: {grid_position: 'QTJGTV,DDCTJG'}
   - name: bank_id
     properties: {role: outlined}
     type: TextBox
-    layout_properties: {grid_position: 'MHKTKE,PGNYZS'}
+    layout_properties: {grid_position: 'WJEDOO,YLVBVZ'}
   - name: branch_name
     properties: {role: outlined}
     type: TextBox
-    layout_properties: {grid_position: 'MHKTKE,SCNTWH'}
+    layout_properties: {grid_position: 'WJEDOO,ZXESMS'}
   - name: flow_panel_1_copy_1
     properties: {}
     type: FlowPanel
-    layout_properties: {grid_position: 'UFYOBX,HOAQPV'}
+    layout_properties: {grid_position: 'ONRVGQ,REGQUC'}
     components:
     - name: check_box_1_copy_3
       properties: {text: I have read and agree to the, background: ''}
