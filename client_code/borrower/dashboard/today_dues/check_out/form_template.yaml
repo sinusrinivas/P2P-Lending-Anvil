@@ -24,7 +24,7 @@ components:
       layout_properties: {grid_position: 'IKFBYS,YHMOXG', full_width_row: true}
       name: navigation_form_dashboard_1
     - name: label_3_copy
-      properties: {text: Loan  Details, bold: true, font_size: 30, align: center}
+      properties: {text: Loan  Details, bold: true, font_size: 18, align: center}
       type: Label
       layout_properties: {grid_position: 'YSBCDH,HOTHOD', full_width_row: true}
     - name: spacer_4_copy
