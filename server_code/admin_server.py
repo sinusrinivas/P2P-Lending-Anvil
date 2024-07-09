@@ -410,7 +410,8 @@ def update_fin_platform_fees():
         total_products_count=num_products,
         most_used_product=most_used_product_name,
         total_borrowers_loan_taken=total_borrowers_loan_taken,
-        total_lenders_invested=total_lenders_invested
+        total_lenders_invested=total_lenders_invested,
+        platform_returns=0
     )
 
     # return "Platform fees updated successfully."
