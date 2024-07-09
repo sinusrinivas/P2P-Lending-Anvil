@@ -91,7 +91,7 @@ components:
     layout_properties: {grid_position: 'DXTZII,WCIGSN'}
     components:
     - name: personal_information_panel
-      properties: {col_widths: '{"JMWRZL":25,"JNUESH":35,"XQSWFO":25,"QJAPZN":25,"IXDCZJ":25,"TLNBEN":25,"EGSFLR":25,"KGQXHY":5,"KLESAL":55,"ZCPZRF":35,"DATHWX":35,"LVJSXW":25,"HYVXAC":35,"NFSLAK":25,"JFBSNP":35,"DUACGL":25,"ZFULZJ":35,"VAVODZ":25,"NCNLMF":25,"BEMUDH":35,"SPMTQD":25,"YYVQHV":35,"LPGPDR":25,"DLXMPU":25,"KTXPQT":35,"JRYIFF":25,"FFEKIU":35,"KHSZQT":25,"USYQIB":25,"RUGPEC":35,"UICXOL":25,"GIEGUE":35,"BZAMHW":25,"ESNGXI":35,"SSGVTB":35,"IMHPVD":35,"ORARGK":35,"LBAQLI":20,"GJDUAS":35,"HFIOKG":20,"FBVMCM":35,"VGTTOU":35,"RNPDXV":35,"HRBWNJ":25,"KYREAQ":25,"JLUSNR":35,"GVGWOM":25,"HDCVSC":35,"CJVNVS":25,"RDAFQC":35,"BZKPPS":25,"PZSLTG":35}', role: elevated-card, visible: true}
+      properties: {col_widths: '{"KGQXHY":5,"KLESAL":55,"NFSLAK":25,"DUACGL":25,"UICXOL":25,"GIEGUE":35,"BZAMHW":25,"ESNGXI":35,"ORARGK":30,"HRBWNJ":30,"GVGWOM":25,"HDCVSC":35,"CJVNVS":25,"RDAFQC":35}', role: elevated-card, visible: true}
       type: ColumnPanel
       layout_properties: {grid_position: 'VNYQWZ,XCYJCJ', full_width_row: true}
       components:
@@ -111,181 +111,173 @@ components:
         properties: {text: 'Name :', bold: true, font_size: 16, icon: ''}
         type: Label
         layout_properties: {grid_position: 'NQDUFW,KLESAL SJNJMR,NFSLAK'}
-      - name: name_text_box
-        properties: {background: 'theme:On Primary', role: outlined, text: ''}
-        type: TextBox
-        layout_properties: {grid_position: 'NQDUFW,KLESAL SJNJMR,JFBSNP'}
       - name: label_1_copy
         properties: {text: 'Date Of Birth :', bold: true, font_size: 16, icon: ''}
         type: Label
-        layout_properties: {grid_position: 'NQDUFW,KLESAL YCJUMM,JMWRZL'}
+        layout_properties: {grid_position: 'NQDUFW,KLESAL SJNJMR,AVOVWN'}
+      - name: name_text_box
+        properties: {background: 'theme:On Primary', role: outlined, text: ''}
+        type: TextBox
+        layout_properties: {grid_position: 'NQDUFW,KLESAL MOYPKG,XBNFEB'}
       - name: d_o_b_text_box
         properties: {background: 'theme:On Primary', role: outlined, text: ''}
         type: TextBox
-        layout_properties: {grid_position: 'NQDUFW,KLESAL YCJUMM,JNUESH'}
+        layout_properties: {grid_position: 'NQDUFW,KLESAL MOYPKG,CXEMMO'}
       - name: label_4_copy_3
         properties: {text: 'Email :', bold: true, font_size: 16, icon: ''}
         type: Label
-        layout_properties: {grid_position: 'NQDUFW,KLESAL SQBAVF,XQSWFO'}
-      - name: email_tx
-        properties: {background: 'theme:On Primary', role: outlined, text: ''}
-        type: TextBox
-        layout_properties: {grid_position: 'NQDUFW,KLESAL SQBAVF,ZCPZRF'}
-        event_bindings: {pressed_enter: text_box_1_copy_2_pressed_enter}
+        layout_properties: {grid_position: 'NQDUFW,KLESAL MYCVUF,KLRIYO'}
       - name: label_23
         properties: {font_size: 16, text: 'Alternate Email :', bold: true}
         type: Label
-        layout_properties: {grid_position: 'NQDUFW,KLESAL BRIMAJ,BZKPPS'}
+        layout_properties: {grid_position: 'NQDUFW,KLESAL MYCVUF,ULEUEM'}
+      - name: email_tx
+        properties: {background: 'theme:On Primary', role: outlined, text: ''}
+        type: TextBox
+        layout_properties: {grid_position: 'NQDUFW,KLESAL GRQTHE,CEIMYY'}
+        event_bindings: {pressed_enter: text_box_1_copy_2_pressed_enter}
       - name: alternate_email
         properties: {role: outlined}
         type: TextBox
-        layout_properties: {grid_position: 'NQDUFW,KLESAL BRIMAJ,PZSLTG'}
+        layout_properties: {grid_position: 'NQDUFW,KLESAL GRQTHE,XMTIAK'}
       - name: label_4_copy
         properties: {text: 'Mobile No :', bold: true, font_size: 16, icon: ''}
         type: Label
         layout_properties: {grid_position: 'NQDUFW,KLESAL VCIULX,DUACGL'}
-      - name: mobile_tx
-        properties: {background: 'theme:On Primary', role: outlined, text: ''}
-        type: TextBox
-        layout_properties: {grid_position: 'NQDUFW,KLESAL VCIULX,ZFULZJ'}
       - name: label_4_copy_4
         properties: {text: 'Gender :', bold: true, font_size: 16, icon: ''}
         type: Label
-        layout_properties: {grid_position: 'NQDUFW,KLESAL WHIKUG,QJAPZN'}
+        layout_properties: {grid_position: 'NQDUFW,KLESAL VCIULX,SOBBHL'}
+      - name: mobile_tx
+        properties: {background: 'theme:On Primary', role: outlined, text: ''}
+        type: TextBox
+        layout_properties: {grid_position: 'NQDUFW,KLESAL FXPLNN,PHGLNV'}
       - name: gender_dropdown
         properties: {role: outlined}
         type: DropDown
-        layout_properties: {grid_position: 'NQDUFW,KLESAL WHIKUG,IMHPVD'}
+        layout_properties: {grid_position: 'NQDUFW,KLESAL FXPLNN,HODWXZ'}
       - name: label_1_copy_copy
         properties: {text: 'Marrital Status :', bold: true, font_size: 16, icon: ''}
         type: Label
-        layout_properties: {grid_position: 'NQDUFW,KLESAL TKAGKT,KHSZQT'}
-      - name: marrital_dropdown
-        properties: {role: outlined}
-        type: DropDown
-        layout_properties: {grid_position: 'NQDUFW,KLESAL TKAGKT,RNPDXV'}
-      - name: label_4_copy_5
-        properties: {text: 'Govt Id 1 :', bold: true, font_size: 16, icon: ''}
-        type: Label
-        layout_properties: {grid_position: 'NQDUFW,KLESAL HJFUYQ,IXDCZJ'}
-      - name: g_i_1_tx
-        properties: {background: 'theme:On Primary', role: outlined, text: ''}
-        type: TextBox
-        layout_properties: {grid_position: 'NQDUFW,KLESAL HJFUYQ,VGTTOU'}
-      - name: label_17
-        properties: {text: 'Govt Id 1 Image :', bold: true, font_size: 16}
-        type: Label
-        layout_properties: {grid_position: 'NQDUFW,KLESAL NKNCPO,ORARGK'}
-      - name: govt_id_1_image
-        properties: {height: 157.71420288085938}
-        type: Image
-        layout_properties: {grid_position: 'NQDUFW,KLESAL NKNCPO,LBAQLI SUJBVO,MKJSAG'}
-      - name: govt_1_file_loader_1
-        properties: {visible: false}
-        type: FileLoader
-        layout_properties: {grid_position: 'NQDUFW,KLESAL NKNCPO,LBAQLI ZMECWG,QUPXSJ'}
-        event_bindings: {change: govt_1_file_loader_1_change}
-      - name: spacer_7
-        properties: {height: 183.28570556640625}
-        type: Spacer
-        layout_properties: {grid_position: 'NQDUFW,KLESAL NKNCPO,HRBWNJ'}
-      - name: label_2
-        properties: {text: 'Govt Id 2 :', bold: true, font_size: 16}
-        type: Label
-        layout_properties: {grid_position: 'NQDUFW,KLESAL VTZCTS,EGSFLR'}
-      - name: g_i_2_tx
-        properties: {background: 'theme:On Primary', role: outlined, text: ''}
-        type: TextBox
-        layout_properties: {grid_position: 'NQDUFW,KLESAL VTZCTS,FBVMCM'}
-      - name: label_18
-        properties: {text: 'Govt Id 2 Image :', font_size: 16, bold: true}
-        type: Label
-        layout_properties: {grid_position: 'NQDUFW,KLESAL CVMOXV,GJDUAS'}
-      - name: govt_id_2_image
-        properties: {height: 145.85711669921875}
-        type: Image
-        layout_properties: {grid_position: 'NQDUFW,KLESAL CVMOXV,HFIOKG UKEVYA,AVYUUC'}
-      - name: govt_2_file_loader_2
-        properties: {visible: false}
-        type: FileLoader
-        layout_properties: {grid_position: 'NQDUFW,KLESAL CVMOXV,HFIOKG BCTRAA,MUUUGL'}
-        event_bindings: {change: govt_2_file_loader_2_change}
-      - name: spacer_8
-        properties: {height: 109.42852783203125}
-        type: Spacer
-        layout_properties: {grid_position: 'NQDUFW,KLESAL CVMOXV,KYREAQ'}
-      - name: label_3
-        properties: {text: 'City :', bold: true, font_size: 16}
-        type: Label
-        layout_properties: {grid_position: 'NQDUFW,KLESAL OCPHXI,TLNBEN'}
-      - name: city_tx
-        properties: {background: 'theme:On Primary', role: outlined, text: ''}
-        type: TextBox
-        layout_properties: {grid_position: 'NQDUFW,KLESAL OCPHXI,DATHWX'}
-      - name: label_6
-        properties: {text: 'State :', bold: true, font_size: 16}
-        type: Label
-        layout_properties: {grid_position: 'NQDUFW,KLESAL XAKUGP,LVJSXW'}
-      - name: state_tx
-        properties: {background: 'theme:On Primary', role: outlined, text: ''}
-        type: TextBox
-        layout_properties: {grid_position: 'NQDUFW,KLESAL XAKUGP,HYVXAC'}
+        layout_properties: {grid_position: 'NQDUFW,KLESAL TOYZAI,DGEVDA'}
       - name: label_4_copy_3_copy
         properties: {text: Type of Addres, bold: true, font_size: 16, icon: ''}
         type: Label
-        layout_properties: {grid_position: 'NQDUFW,KLESAL AUCDTK,VAVODZ'}
+        layout_properties: {grid_position: 'NQDUFW,KLESAL TOYZAI,DTFURG'}
+      - name: marrital_dropdown
+        properties: {role: outlined}
+        type: DropDown
+        layout_properties: {grid_position: 'NQDUFW,KLESAL FGSIWN,HHBQOH'}
       - name: present_addres_dropdown
         properties: {role: outlined}
         type: DropDown
-        layout_properties: {grid_position: 'NQDUFW,KLESAL AUCDTK,SSGVTB'}
+        layout_properties: {grid_position: 'NQDUFW,KLESAL FGSIWN,HZOGCH'}
+      - name: label_4_copy_5
+        properties: {text: 'Govt Id 1 :', bold: true, font_size: 16, icon: ''}
+        type: Label
+        layout_properties: {grid_position: 'NQDUFW,KLESAL LPQTBU,ISXWOZ'}
+      - name: label_2
+        properties: {text: 'Govt Id 2 :', bold: true, font_size: 16}
+        type: Label
+        layout_properties: {grid_position: 'NQDUFW,KLESAL LPQTBU,VYAROO'}
+      - name: g_i_1_tx
+        properties: {background: 'theme:On Primary', role: outlined, text: ''}
+        type: TextBox
+        layout_properties: {grid_position: 'NQDUFW,KLESAL IXRCJL,LZBISF'}
+      - name: g_i_2_tx
+        properties: {background: 'theme:On Primary', role: outlined, text: ''}
+        type: TextBox
+        layout_properties: {grid_position: 'NQDUFW,KLESAL IXRCJL,JBBSTA'}
+      - name: label_17
+        properties: {text: 'Govt Id 1 Image :', bold: true, font_size: 16}
+        type: Label
+        layout_properties: {grid_position: 'NQDUFW,KLESAL NKNCPO,ORARGK TNWJQD,KYQWTJ'}
+      - name: govt_1_file_loader_1
+        properties: {visible: false}
+        type: FileLoader
+        layout_properties: {grid_position: 'NQDUFW,KLESAL NKNCPO,ORARGK RHMSHX,OIRSIM'}
+        event_bindings: {change: govt_1_file_loader_1_change}
+      - name: govt_id_1_image
+        properties: {height: 157.71420288085938}
+        type: Image
+        layout_properties: {grid_position: 'NQDUFW,KLESAL NKNCPO,ORARGK RHMSHX,JDCCNN'}
+      - name: label_18
+        properties: {text: 'Govt Id 2 Image :', font_size: 16, bold: true}
+        type: Label
+        layout_properties: {grid_position: 'NQDUFW,KLESAL NKNCPO,HRBWNJ'}
+      - name: govt_2_file_loader_2
+        properties: {visible: false}
+        type: FileLoader
+        layout_properties: {grid_position: 'NQDUFW,KLESAL NKNCPO,HRBWNJ FQRSHT,OEYUYX'}
+        event_bindings: {change: govt_2_file_loader_2_change}
+      - name: govt_id_2_image
+        properties: {height: 145.85711669921875}
+        type: Image
+        layout_properties: {grid_position: 'NQDUFW,KLESAL NKNCPO,HRBWNJ FQRSHT,OBZHRT'}
+      - name: label_3
+        properties: {text: 'City :', bold: true, font_size: 16}
+        type: Label
+        layout_properties: {grid_position: 'NQDUFW,KLESAL DUGCYY,JDYQXE'}
+      - name: label_6
+        properties: {text: 'State :', bold: true, font_size: 16}
+        type: Label
+        layout_properties: {grid_position: 'NQDUFW,KLESAL DUGCYY,QXEXYH'}
+      - name: city_tx
+        properties: {background: 'theme:On Primary', role: outlined, text: ''}
+        type: TextBox
+        layout_properties: {grid_position: 'NQDUFW,KLESAL CXWGQX,PDFUCW'}
+      - name: state_tx
+        properties: {background: 'theme:On Primary', role: outlined, text: ''}
+        type: TextBox
+        layout_properties: {grid_position: 'NQDUFW,KLESAL CXWGQX,QKTBDK'}
       - name: label_4_copy_4_copy
         properties: {text: 'Address 2 :', bold: true, font_size: 16, icon: ''}
         type: Label
-        layout_properties: {grid_position: 'NQDUFW,KLESAL GMJQFG,NCNLMF'}
-      - name: address_1_tx
-        properties: {background: 'theme:On Primary', role: outlined, text: '', bold: false}
-        type: TextBox
-        layout_properties: {grid_position: 'NQDUFW,KLESAL GMJQFG,BEMUDH'}
+        layout_properties: {grid_position: 'NQDUFW,KLESAL YRLKAG,QXJCIZ'}
       - name: label_4_copy_5_copy
         properties: {text: 'Address 2 :', bold: true, font_size: 16, icon: ''}
         type: Label
-        layout_properties: {grid_position: 'NQDUFW,KLESAL TRNDKU,SPMTQD'}
+        layout_properties: {grid_position: 'NQDUFW,KLESAL YRLKAG,QHPRAV'}
+      - name: address_1_tx
+        properties: {background: 'theme:On Primary', role: outlined, text: '', bold: false}
+        type: TextBox
+        layout_properties: {grid_position: 'NQDUFW,KLESAL IDWQMP,DORUTX'}
       - name: address_2_tx
         properties: {background: 'theme:On Primary', role: outlined, text: ''}
         type: TextBox
-        layout_properties: {grid_position: 'NQDUFW,KLESAL TRNDKU,YYVQHV'}
+        layout_properties: {grid_position: 'NQDUFW,KLESAL IDWQMP,MJDHHL'}
       - name: label_2_copy
         properties: {text: 'How long you are staying at this address :', bold: true, font_size: 16}
         type: Label
-        layout_properties: {grid_position: 'NQDUFW,KLESAL UMFKMW,LPGPDR'}
-      - name: how_long_drop_down
-        properties: {role: outlined}
-        type: DropDown
-        layout_properties: {grid_position: 'NQDUFW,KLESAL UMFKMW,JLUSNR'}
-      - name: label_3_copy
-        properties: {text: 'Profession :', bold: true, font_size: 16}
-        type: Label
-        layout_properties: {grid_position: 'NQDUFW,KLESAL MLFVJH,DLXMPU'}
-      - name: profession_dropdown
-        properties: {role: outlined}
-        type: DropDown
-        layout_properties: {grid_position: 'NQDUFW,KLESAL MLFVJH,KTXPQT'}
-      - name: label_3_copy_copy
-        properties: {text: 'Qualification :', bold: true, font_size: 16}
-        type: Label
-        layout_properties: {grid_position: 'NQDUFW,KLESAL RIBNXC,JRYIFF'}
-      - name: qualification_dropdown
-        properties: {role: outlined}
-        type: DropDown
-        layout_properties: {grid_position: 'NQDUFW,KLESAL RIBNXC,FFEKIU'}
+        layout_properties: {grid_position: 'NQDUFW,KLESAL NNZMDZ,KNMQKA'}
       - name: label_3_copy_copy_copy
         properties: {text: 'Zip code :', bold: true, font_size: 16}
         type: Label
-        layout_properties: {grid_position: 'NQDUFW,KLESAL VVTFJI,USYQIB'}
+        layout_properties: {grid_position: 'NQDUFW,KLESAL NNZMDZ,RJFQZA'}
+      - name: how_long_drop_down
+        properties: {role: outlined}
+        type: DropDown
+        layout_properties: {grid_position: 'NQDUFW,KLESAL KJFLYK,COEKKK'}
       - name: pincode_tx
         properties: {background: 'theme:On Primary', role: outlined, text: ''}
         type: TextBox
-        layout_properties: {grid_position: 'NQDUFW,KLESAL VVTFJI,RUGPEC'}
+        layout_properties: {grid_position: 'NQDUFW,KLESAL KJFLYK,FJYFQG'}
+      - name: label_3_copy
+        properties: {text: 'Profession :', bold: true, font_size: 16}
+        type: Label
+        layout_properties: {grid_position: 'NQDUFW,KLESAL SSOJGY,KWVLYO'}
+      - name: label_3_copy_copy
+        properties: {text: 'Qualification :', bold: true, font_size: 16}
+        type: Label
+        layout_properties: {grid_position: 'NQDUFW,KLESAL SSOJGY,KZVISV'}
+      - name: profession_dropdown
+        properties: {role: outlined}
+        type: DropDown
+        layout_properties: {grid_position: 'NQDUFW,KLESAL SPJCHK,MNFAKN'}
+      - name: qualification_dropdown
+        properties: {role: outlined}
+        type: DropDown
+        layout_properties: {grid_position: 'NQDUFW,KLESAL SPJCHK,ZDXQJP'}
       - name: label_3_copy_copy_copy_2
         properties: {text: 'Vehicle Loans :', bold: true, font_size: 16}
         type: Label

@@ -110,4 +110,4 @@ class dashboard_report_a_problem(dashboard_report_a_problemTemplate):
 
   def button_1_click(self, **event_args):
     """This method is called when the button is clicked"""
-    open_form('lendor.dashboard.d')
+    open_form('lendor.dashboard.dasboard_contact')

@@ -97,15 +97,57 @@ class borrower_registration_form_1_education(borrower_registration_form_1_educat
         Notification('Please upload All document before proceeding.').show()
         return
     if qualification == '12th standard' and (not tenth_class_1 or not intermediate):
+        if not tenth_class_1:
+          self.file_loader_2.background = '#FF0000'
+          self.file_loader_2.focus()
+        if not intermediate:
+          self.file_loader_3.background = '#FF0000'
+          self.file_loader_3.focus()
         Notification('Please upload All documents before proceeding.').show()
         return
     elif qualification == "Bachelor's degree" and (not tenth_class_2 or not intermediate_1 or not btech):
+        if not tenth_class_2:
+          self.file_loader_4.background = '#FF0000'
+          self.file_loader_4.focus()
+        if not intermediate_1:
+          self.file_loader_5.background = '#FF0000'
+          self.file_loader_5.focus()
+        if not btech:
+          self.file_loader_6.background = '#FF0000'
+          self.file_loader_6.focus()
         Notification("Please upload All documents before proceeding.").show()
         return
     elif qualification == "Master's degree" and (not tenth_class_3 or not intermediate_2 or not btech_1 or not mtech):
+        if not tenth_class_3:
+          self.file_loader_7.background = '#FF0000'
+          self.file_loader_7.focus()
+        if not intermediate_2:
+          self.file_loader_8.background = '#FF0000'
+          self.file_loader_8.focus()
+        if not btech_1:
+          self.file_loader_9.background = '#FF0000'
+          self.file_loader_9.focus()
+        if not mtech:
+          self.file_loader_10.background = '#FF0000'
+          self.file_loader_10.focus()
         Notification("Please upload All documents before proceeding.").show()
         return
     elif qualification == 'PhD' and (not tenth_class_4 or not intermediate_3 or not btech_2 or not mtech_1 or not phd):
+        if not tenth_class_4:
+          self.file_loader_11.background = '#FF0000'
+          self.file_loader_11.focus()
+        if not intermediate_3:
+          self.file_loader_12.background = '#FF0000'
+          self.file_loader_12.focus()
+        if not btech_2:
+          self.file_loader_13.background = '#FF0000'
+          self.file_loader_13.focus()
+        if not mtech_1:
+          self.file_loader_14.background = '#FF0000'
+          self.file_loader_14.focus()
+        if not phd:
+          self.file_loader_15.background = '#FF0000'
+          self.file_loader_15.focus()
         Notification('Please upload all documents before proceeding.').show()
         return
    
@@ -129,7 +171,6 @@ class borrower_registration_form_1_education(borrower_registration_form_1_educat
       self.drop_down_1.focus()
       Notification("Please select a valid qualification status").show()
       return 
-
     if qualification not in  ['10th standard', '12th standard', "Bachelor's degree", "Master's degree", 'PhD']:
       Notification("Please select a valid qualification status").show()
     elif not user_id:
