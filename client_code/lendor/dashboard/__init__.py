@@ -246,4 +246,8 @@ class dashboard(dashboardTemplate):
     """This method is called when the link is clicked"""
     open_form('borrower.dashboard.borrower_portfolio_first_page')
 
+  def image_5_mouse_up(self, x, y, button, **event_args):
+    """This method is called when a mouse button is released on this component"""
+    open_form('lendor.dashboard.lender_view_profile')
+
 

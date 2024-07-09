@@ -82,4 +82,8 @@ components:
     properties: {icon: 'fa:envelope', text: '  Ascendsfunding@p2p.coom', align: center}
     type: Label
     layout_properties: {grid_position: 'DVAXOA,BMHVNJ'}
+- name: button_1
+  properties: {text: ''}
+  type: Button
+  layout_properties: {grid_position: 'UPEHVJ,PEVKCZ'}
 is_package: true
