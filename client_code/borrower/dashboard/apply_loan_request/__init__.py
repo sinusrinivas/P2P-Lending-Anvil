@@ -163,7 +163,6 @@
 
 
 
-
 from ._anvil_designer import apply_loan_requestTemplate
 from anvil import *
 import anvil.server
@@ -230,6 +229,45 @@ class apply_loan_request(apply_loan_requestTemplate):
                 self.drop_down_1.items = product_name_list
                 self.drop_down_1.selected_value = None
 
+    def drop_down_1_change(self, **event_args):
+        selected_product_name = self.drop_down_1.selected_value
+        self.link_2.visible = True
+        if selected_product_name:
+            product_details = app_tables.fin_product_details.get(product_name=selected_product_name)
+
+            if product_details:
+                self.label_8.visible = True
+                self.product_description_label.visible = True
+                self.product_description_label.text = product_details['product_description']
+            else:
+                self.label_8.visible = True
+                self.product_description_label.visible = True
+                self.product_description_label.text = "Product description not available"
+        else:
+            self.label_8.visible = False
+            self.product_description_label.visible = True
+            self.product_description_label.text = ""
+
+    def drop_down_3_change(self, **event_args):
+        # This method is called when an item is selected in drop_down_3
+        product_group = self.name.selected_value
+        product_category = self.drop_down_2.selected_value
+        product_name = self.drop_down_1.selected_value
+
+        if product_group and product_category and product_name:
+            # Fetch the data from fin_product_details based on the product_group, product_category, and product_name
+            product_details = app_tables.fin_product_details.search(
+                product_group=product_group,
+                product_categories=product_category,
+                product_name=product_name
+            )
+
+            # Extract relevant values to populate drop_down_3
+            drop_down_3_items = [detail['emi_payment'] for detail in product_details if 'emi_payment' in detail and detail['emi_payment'].strip()]
+
+            # Update drop_down_3 with the fetched values
+            self.drop_down_3.items = drop_down_3_items
+            self.drop_down_3.selected_value = None  # Reset selected value
 
     def button_1_copy_click(self, **event_args):
         name = self.name.selected_value
@@ -276,30 +314,6 @@ class apply_loan_request(apply_loan_requestTemplate):
                     self.label_8.visible = True
                     self.product_description_label.text = "Product description not available"
 
-    def max_amount_lb_show(self, **event_args):
-        data = app_tables.fin_borrower.search()
-        data1_strings = [str(data['credit_limit']) for data in data if str(data['credit_limit']).strip()]
-        self.max_amount_lb.text = data1_strings[0] if data1_strings else None
-
-    def button_1_click(self, **event_args):
-        open_form("borrower.dashboard")
-
-    def drop_down_1_change(self, **event_args):
-        selected_product_name = self.drop_down_1.selected_value
-
-        if selected_product_name:
-            product_details = app_tables.fin_product_details.get(product_name=selected_product_name)
-
-            if product_details:
-                self.label_8.visible = True
-                self.product_description_label.text = product_details['product_description']
-            else:
-                self.label_8.visible = True
-                self.product_description_label.text = "Product description not available"
-        else:
-            self.label_8.visible = False
-            self.product_description_label.text = ""
-
     def calculate_and_display_payment_details(self):
         if self.entered_payment_type == "One Time":
             self.display_one_time_payment_details()
@@ -317,13 +331,10 @@ class apply_loan_request(apply_loan_requestTemplate):
 
         payment_details = [{
             'PaymentNumber': '1',
-            'PaymentDate': 'Awaiting update',
-            'ScheduledPayment': f"₹ {total_repayment_amount:.2f}",
             'Principal': f"₹ {self.loan_amount:.2f}",
             'Interest': f"₹ {total_interest:.2f}",
             'ProcessingFee': f"₹ {processing_fee_amount:.2f}",
             'BeginningBalance': f"₹ {total_repayment_amount:.2f}",
-            'ExtraPayment': f"₹ 0.00",
             'TotalPayment': f"₹ {total_repayment_amount:.2f}",
             'EndingBalance': '₹ 0.00',
             'LoanAmountBeginningBalance': f"₹ {self.loan_amount:.2f}",
@@ -357,15 +368,12 @@ class apply_loan_request(apply_loan_requestTemplate):
 
             payment_schedule.append({
                 'PaymentNumber': month,
-                'PaymentDate': "Awaiting update",
-                'ScheduledPayment': f"₹ {emi:.2f}",
                 'Principal': f"₹ {principal_amount:.2f}",
                 'Interest': f"₹ {interest_amount:.2f}",
                 'ProcessingFee': f"₹ {processing_fee_per_month:.2f}",
                 'LoanAmountBeginningBalance': f"₹ {loan_amount_beginning_balance:.2f}",
                 'LoanAmountEndingBalance': f"₹ {loan_amount_ending_balance:.2f}",
                 'BeginningBalance': f"₹ {beginning_balance:.2f}",
-                'ExtraPayment': "₹ 0.00",
                 'TotalPayment': f"₹ {total_payment:.2f}",
                 'EndingBalance': f"₹ {max(0, beginning_balance - total_payment):.2f}"
             })
@@ -398,15 +406,12 @@ class apply_loan_request(apply_loan_requestTemplate):
 
             payment_schedule.append({
                 'PaymentNumber': f"{month}-{month+2}",
-                'PaymentDate': "Awaiting update",
-                'ScheduledPayment': f"₹ {emi * 3:.2f}",
                 'Principal': f"₹ {emi * 3 - interest_for_3_months:.2f}",
                 'Interest': f"₹ {interest_for_3_months:.2f}",
                 'ProcessingFee': f"₹ {total_processing_fee_for_3_months:.2f}",
                 'LoanAmountBeginningBalance': f"₹ {loan_amount_beginning_balance:.2f}",
                 'LoanAmountEndingBalance': f"₹ {loan_amount_beginning_balance - (emi * 3 - interest_for_3_months)::.2f}",
                 'BeginningBalance': f"₹ {beginning_balance:.2f}",
-                'ExtraPayment': "₹ 0.00",
                 'TotalPayment': f"₹ {total_payment:.2f}",
                 'EndingBalance': f"₹ {max(0, beginning_balance - total_payment):.2f}"
             })
@@ -439,15 +444,12 @@ class apply_loan_request(apply_loan_requestTemplate):
 
             payment_schedule.append({
                 'PaymentNumber': f"{month}-{month+5}",
-                'PaymentDate': "Awaiting update",
-                'ScheduledPayment': f"₹ {emi * 6:.2f}",
                 'Principal': f"₹ {emi * 6 - interest_for_6_months:.2f}",
                 'Interest': f"₹ {interest_for_6_months:.2f}",
                 'ProcessingFee': f"₹ {total_processing_fee_for_6_months:.2f}",
                 'LoanAmountBeginningBalance': f"₹ {loan_amount_beginning_balance:.2f}",
                 'LoanAmountEndingBalance': f"₹ {loan_amount_beginning_balance - (emi * 6 - interest_for_6_months):.2f}",
                 'BeginningBalance': f"₹ {beginning_balance:.2f}",
-                'ExtraPayment': "₹ 0.00",
                 'TotalPayment': f"₹ {total_payment:.2f}",
                 'EndingBalance': f"₹ {max(0, beginning_balance - total_payment):.2f}"
             })
@@ -465,4 +467,58 @@ class apply_loan_request(apply_loan_requestTemplate):
             total_interest += interest_amount
         return total_interest
 
+    def submit_click(self, **event_args):
+        # Call the server function to add loan details
+        result = anvil.server.call('add_loan_details',
+                                   self.loan_amount,
+                                   self.tenure_months,
+                                   self.user_id,
+                                   self.interest_rate,
+                                   self.total_repayment_amount,
+                                   self.product_id,
+                                   self.membership_type,
+                                   self.credit_limt,
+                                   self.product_name,
+                                   self.entered_payment_type,
+                                   self.processing_fee_amount,
+                                   self.total_interest,
+                                   self.product_discription,
+                                   self.emi)
 
+        # Log the result for debugging
+        print(result)
+
+        # Show alert and navigate to the borrower dashboard
+        alert("Request Submitted")
+        open_form('borrower.dashboard')
+
+    def link_1_click(self, **event_args):
+      self.link_1.visible = False
+      self.column_panel_3.visible = True
+
+    def link_2_click(self, **event_args):
+      self.link_2.visible = False
+      self.label_2_copy.visible = True
+      self.loan_amount_tb.visible = True
+      self.label_22.visible = True
+      self.label_4_copy.visible = True
+      self.label_7_copy.visible = True
+      self.label_20.visible = True
+      self.label_21.visible = True
+      self.label_23.visible = True
+      self.label_3_copy.visible = True
+      self.text_box_1.visible = True
+      self.label_39.visible = True
+      self.drop_down_3.visible = True
+      self.link_1.visible = True
+      self.product_name = self.drop_down_1.selected_value
+      user_request = app_tables.fin_product_details.get(product_name=self.product_name)
+      if user_request:
+        self.label_7_copy.text = user_request['roi']
+        self.label_21.text = user_request['processing_fee']
+
+    def link_3_click(self, **event_args):
+      self.column_panel_1.visible = True
+      self.link_3.visible = False
+      
+      
