@@ -59,6 +59,10 @@ components:
       properties: {text: For investmet related queries, bold: true, underline: true, font_size: 15}
       type: Label
       layout_properties: {grid_position: 'MKXRPZ,AUSYRM'}
+    - name: spacer_2
+      properties: {height: 32}
+      type: Spacer
+      layout_properties: {grid_position: 'MKXRPZ,HMYCWW'}
     - name: label_3_copy
       properties: {text: For Loan related queries, bold: true, underline: true, font_size: 15}
       type: Label
@@ -67,6 +71,10 @@ components:
       properties: {italic: false, icon: 'fa:phone', text: +91-7894561235}
       type: Label
       layout_properties: {grid_position: 'DAWCOK,EIHQOO'}
+    - name: spacer_4
+      properties: {height: 32}
+      type: Spacer
+      layout_properties: {grid_position: 'DAWCOK,DRRUSR'}
     - name: label_5_copy
       properties: {italic: false, icon: 'fa:phone', text: +91-7894132141}
       type: Label
@@ -75,6 +83,10 @@ components:
       properties: {icon: 'fa:envelope', text: '  Ascendsinvestment@p2p.coom'}
       type: Label
       layout_properties: {grid_position: 'SUJZDZ,BCJVPR'}
+    - name: spacer_5
+      properties: {height: 32}
+      type: Spacer
+      layout_properties: {grid_position: 'SUJZDZ,ZXAQAH'}
     - name: label_6_copy
       properties: {icon: 'fa:envelope', text: '  Ascendsloan@p2p.coom'}
       type: Label

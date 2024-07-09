@@ -30,21 +30,21 @@ class lender_registration_form_1_education_form(lender_registration_form_1_educa
     self.column_panel_3.visible = False
     self.column_panel_4.visible = False
     self.column_panel_5.visible = False
-  def validate_file(self, file):
-    """Validate file type and size."""
-    if file is None:
-      return False, "No file uploaded."
+  # def validate_file(self, file):
+  #   """Validate file type and size."""
+  #   if file is None:
+  #     return False, "No file uploaded."
 
-    file_type = file.content_type
-    file_size = len(file.get_bytes())  # Use len to get size in bytes
+  #   file_type = file.content_type
+  #   file_size = len(file.get_bytes())  # Use len to get size in bytes
 
-    if file_type not in ['image/jpeg', 'image/jpg', 'image/png', 'application/pdf']:
-      return False, "Only JPG images and PDF files are allowed."
+  #   if file_type not in ['image/jpeg', 'image/jpg', 'image/png', 'application/pdf']:
+  #     return False, "Only JPG images and PDF files are allowed."
 
-    if file_size > 2 * 1024 * 1024:  # 2MB limit
-      return False, "File size must be less than 2MB."
+  #   if file_size > 2 * 1024 * 1024:  # 2MB limit
+  #     return False, "File size must be less than 2MB."
 
-    return True, ""
+  #   return True, ""
 
 
   def button_2_click(self, **event_args):
@@ -140,130 +140,239 @@ class lender_registration_form_1_education_form(lender_registration_form_1_educa
 
   def file_loader_1_change(self, file, **event_args):
     """This method is called when a new file is loaded into this FileLoader"""
-    valid, message = self.validate_file(file)
-    if valid:
-      self.image_1.source = file
-    else:
-      Notification(message).show()
-      self.file_loader_1.clear()
+    if file:
+            self.file_name.text = file.name if file else ''
+            content_type = file.content_type
+            
+            if content_type in ['image/jpeg', 'image/png', 'image/jpg']:
+                # Display the image directly
+                self.image_1.source = self.file_loader_1.file
+            elif content_type == 'application/pdf':
+                # Display a default PDF image temporarily
+                self.image_1.source = '_/theme/bank_users/default%20pdf.png'
+            else:
+                alert('Invalid file type. Only JPEG, PNG, and PDF are allowed')
+                self.file_loader_1.clear()
 
+      
   def file_loader_2_change(self, file, **event_args):
     """This method is called when a new file is loaded into this FileLoader"""
-    valid, message = self.validate_file(file)
-    if valid:
-      self.image_2.source = file
-    else:
-      Notification(message).show()
-      self.file_loader_2.clear()
+    if file:
+            self.label_23.text = file.name if file else ''
+            content_type = file.content_type
+            
+            if content_type in ['image/jpeg', 'image/png', 'image/jpg']:
+                # Display the image directly
+                self.image_2.source = self.file_loader_2.file
+            elif content_type == 'application/pdf':
+                # Display a default PDF image temporarily
+                self.image_2.source = '_/theme/bank_users/default%20pdf.png'
+            else:
+                alert('Invalid file type. Only JPEG, PNG, and PDF are allowed')
+                self.file_loader_2.clear()
+      
   def file_loader_3_change(self, file, **event_args):
     """This method is called when a new file is loaded into this FileLoader"""
-    valid, message = self.validate_file(file)
-    if valid:
-      self.image_3.source = file
-    else:
-      Notification(message).show()
-      self.file_loader_3.clear()
+    if file:
+            self.label_24.text = file.name if file else ''
+            content_type = file.content_type
+            
+            if content_type in ['image/jpeg', 'image/png', 'image/jpg']:
+                # Display the image directly
+                self.image_3.source = self.file_loader_3.file
+            elif content_type == 'application/pdf':
+                # Display a default PDF image temporarily
+                self.image_3.source = '_/theme/bank_users/default%20pdf.png'
+            else:
+                alert('Invalid file type. Only JPEG, PNG, and PDF are allowed')
+                self.file_loader_3.clear()
+      
   def file_loader_4_change(self, file, **event_args):
     """This method is called when a new file is loaded into this FileLoader"""
-    valid, message = self.validate_file(file)
-    if valid:
-      self.image_4.source = file
-    else:
-      Notification(message).show()
-      self.file_loader_4.clear()
-  def file_loader_5_change(self, file, **event_args):
+    if file:
+            self.label_25.text = file.name if file else ''
+            content_type = file.content_type
+            
+            if content_type in ['image/jpeg', 'image/png', 'image/jpg']:
+                # Display the image directly
+                self.image_4.source = self.file_loader_4.file
+            elif content_type == 'application/pdf':
+                # Display a default PDF image temporarily
+                self.image_4.source = '_/theme/bank_users/default%20pdf.png'
+            else:
+                alert('Invalid file type. Only JPEG, PNG, and PDF are allowed')
+                self.file_loader_4.clear()
     """This method is called when a new file is loaded into this FileLoader"""
-    valid, message = self.validate_file(file)
-    if valid:
-      self.image_5.source = file
-    else:
-      Notification(message).show()
-      self.file_loader_5.clear()
+    if file:
+            self.label_26.text = file.name if file else ''
+            content_type = file.content_type
+            
+            if content_type in ['image/jpeg', 'image/png', 'image/jpg']:
+                # Display the image directly
+                self.image_5.source = self.file_loader_5.file
+            elif content_type == 'application/pdf':
+                # Display a default PDF image temporarily
+                self.image_5.source = '_/theme/bank_users/default%20pdf.png'
+            else:
+                alert('Invalid file type. Only JPEG, PNG, and PDF are allowed')
+                self.file_loader_5.clear()
+      
   def file_loader_6_change(self, file, **event_args):
     """This method is called when a new file is loaded into this FileLoader"""
-    valid, message = self.validate_file(file)
-    if valid:
-      self.image_6.source = file
-    else:
-      Notification(message).show()
-      self.file_loader_6.clear()
+    if file:
+            self.label_27.text = file.name if file else ''
+            content_type = file.content_type
+            
+            if content_type in ['image/jpeg', 'image/png', 'image/jpg']:
+                # Display the image directly
+                self.image_6.source = self.file_loader_6.file
+            elif content_type == 'application/pdf':
+                # Display a default PDF image temporarily
+                self.image_6.source = '_/theme/bank_users/default%20pdf.png'
+            else:
+                alert('Invalid file type. Only JPEG, PNG, and PDF are allowed')
+                self.file_loader_6.clear()
+      
   def file_loader_7_change(self, file, **event_args):
     """This method is called when a new file is loaded into this FileLoader"""
-    valid, message = self.validate_file(file)
-    if valid:
-      self.image_7.source = file
-    else:
-      Notification(message).show()
-      self.file_loader_7.clear()
+    if file:
+            self.label_28.text = file.name if file else ''
+            content_type = file.content_type
+            
+            if content_type in ['image/jpeg', 'image/png', 'image/jpg']:
+                # Display the image directly
+                self.image_7.source = self.file_loader_7.file
+            elif content_type == 'application/pdf':
+                # Display a default PDF image temporarily
+                self.image_7.source = '_/theme/bank_users/default%20pdf.png'
+            else:
+                alert('Invalid file type. Only JPEG, PNG, and PDF are allowed')
+                self.file_loader_7.clear()
+      
   def file_loader_8_change(self, file, **event_args):
     """This method is called when a new file is loaded into this FileLoader"""
-    valid, message = self.validate_file(file)
-    if valid:
-      self.image_8.source = file
-    else:
-      Notification(message).show()
-      self.file_loader_8.clear()
+    if file:
+            self.label_29.text = file.name if file else ''
+            content_type = file.content_type
+            
+            if content_type in ['image/jpeg', 'image/png', 'image/jpg']:
+                # Display the image directly
+                self.image_8.source = self.file_loader_8.file
+            elif content_type == 'application/pdf':
+                # Display a default PDF image temporarily
+                self.image_8.source = '_/theme/bank_users/default%20pdf.png'
+            else:
+                alert('Invalid file type. Only JPEG, PNG, and PDF are allowed')
+                self.file_loader_8.clear()
+      
   def file_loader_9_change(self, file, **event_args):
     """This method is called when a new file is loaded into this FileLoader"""
-    valid, message = self.validate_file(file)
-    if valid:
-      self.image_9.source = file
-    else:
-      Notification(message).show()
-      self.file_loader_9.clear()
+    if file:
+            self.label_30.text = file.name if file else ''
+            content_type = file.content_type
+            
+            if content_type in ['image/jpeg', 'image/png', 'image/jpg']:
+                # Display the image directly
+                self.image_9.source = self.file_loader_9.file
+            elif content_type == 'application/pdf':
+                # Display a default PDF image temporarily
+                self.image_9.source = '_/theme/bank_users/default%20pdf.png'
+            else:
+                alert('Invalid file type. Only JPEG, PNG, and PDF are allowed')
+                self.file_loader_9.clear()
+      
   def file_loader_10_change(self, file, **event_args):
     """This method is called when a new file is loaded into this FileLoader"""
-    valid, message = self.validate_file(file)
-    if valid:
-      self.image_10.source = file
-    else:
-      Notification(message).show()
-      self.file_loader_10.clear()
+    if file:
+            self.label_31.text = file.name if file else ''
+            content_type = file.content_type
+            
+            if content_type in ['image/jpeg', 'image/png', 'image/jpg']:
+                # Display the image directly
+                self.image_10.source = self.file_loader_10.file
+            elif content_type == 'application/pdf':
+                # Display a default PDF image temporarily
+                self.image_10.source = '_/theme/bank_users/default%20pdf.png'
+            else:
+                alert('Invalid file type. Only JPEG, PNG, and PDF are allowed')
+                self.file_loader_10.clear()
+      
   def file_loader_11_change(self, file, **event_args):
     """This method is called when a new file is loaded into this FileLoader"""
-    valid, message = self.validate_file(file)
-    if valid:
-      self.image_11.source = file
-    else:
-      Notification(message).show()
-      self.file_loader_11.clear()
+    if file:
+            self.label_32.text = file.name if file else ''
+            content_type = file.content_type
+            
+            if content_type in ['image/jpeg', 'image/png', 'image/jpg']:
+                # Display the image directly
+                self.image_11.source = self.file_loader_11.file
+            elif content_type == 'application/pdf':
+                # Display a default PDF image temporarily
+                self.image_11.source = '_/theme/bank_users/default%20pdf.png'
+            else:
+                alert('Invalid file type. Only JPEG, PNG, and PDF are allowed')
+                self.file_loader_11.clear()
   def file_loader_12_change(self, file, **event_args):
     """This method is called when a new file is loaded into this FileLoader"""
-    valid, message = self.validate_file(file)
-    if valid:
-      self.image_12.source = file
-    else:
-      Notification(message).show()
-      self.file_loader_12.clear()
+    if file:
+            self.label_33.text = file.name if file else ''
+            content_type = file.content_type
+            
+            if content_type in ['image/jpeg', 'image/png', 'image/jpg']:
+                # Display the image directly
+                self.image_12.source = self.file_loader_12.file
+            elif content_type == 'application/pdf':
+                # Display a default PDF image temporarily
+                self.image_12.source = '_/theme/bank_users/default%20pdf.png'
+            else:
+                alert('Invalid file type. Only JPEG, PNG, and PDF are allowed')
+                self.file_loader_12.clear()
+      
   def file_loader_13_change(self, file, **event_args):
     """This method is called when a new file is loaded into this FileLoader"""
-    valid, message = self.validate_file(file)
-    if valid:
-      self.image_13.source = file
-    else:
-      Notification(message).show()
-      self.file_loader_13.clear()
+    if file:
+            self.label_34.text = file.name if file else ''
+            content_type = file.content_type
+            
+            if content_type in ['image/jpeg', 'image/png', 'image/jpg']:
+                # Display the image directly
+                self.image_13.source = self.file_loader_13.file
+            elif content_type == 'application/pdf':
+                # Display a default PDF image temporarily
+                self.image_13.source = '_/theme/bank_users/default%20pdf.png'
+            else:
+                alert('Invalid file type. Only JPEG, PNG, and PDF are allowed')
+                self.file_loader_13.clear()
   def file_loader_14_change(self, file, **event_args):
     """This method is called when a new file is loaded into this FileLoader"""
-    valid, message = self.validate_file(file)
-    if valid:
-      self.image_14.source = file
-    else:
-      Notification(message).show()
-      self.file_loader_14.clear()
+    if file:
+            self.label_35.text = file.name if file else ''
+            content_type = file.content_type
+            
+            if content_type in ['image/jpeg', 'image/png', 'image/jpg']:
+                # Display the image directly
+                self.image_14.source = self.file_loader_14.file
+            elif content_type == 'application/pdf':
+                # Display a default PDF image temporarily
+                self.image_14.source = '_/theme/bank_users/default%20pdf.png'
+            else:
+                alert('Invalid file type. Only JPEG, PNG, and PDF are allowed')
+                self.file_loader_14.clear()
+      
   def file_loader_15_change(self, file, **event_args):
     """This method is called when a new file is loaded into this FileLoader"""
-    valid, message = self.validate_file(file)
-    if valid:
-      self.image_15.source = file
-    else:
-      Notification(message).show()
-      self.file_loader_15.clear()
-
-  def button_1_click(self, **event_args):
-    """This method is called when the button is clicked"""
-    open_form('bank_users.main_form.basic_registration_form')
-    
-
+    if file:
+            self.label_36.text = file.name if file else ''
+            content_type = file.content_type
+            
+            if content_type in ['image/jpeg', 'image/png', 'image/jpg']:
+                # Display the image directly
+                self.image_15.source = self.file_loader_15.file
+            elif content_type == 'application/pdf':
+                # Display a default PDF image temporarily
+                self.image_15.source = '_/theme/bank_users/default%20pdf.png'
+            else:
+                alert('Invalid file type. Only JPEG, PNG, and PDF are allowed')
+                self.file_loader_15.clear()
   
    
