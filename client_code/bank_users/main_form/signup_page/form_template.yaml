@@ -62,15 +62,15 @@ components:
       type: Spacer
       layout_properties: {grid_position: 'LOUJDS,QSUOUY'}
     - name: label_6
-      properties: {role: display, text: Welcome to Ascend's P2P, foreground: white, font_size: 40}
+      properties: {role: display, text: Welcome to Ascend's P2P, foreground: white, font_size: 36}
       type: Label
       layout_properties: {grid_position: 'LOUJDS,RTKSOW XFQEHB,XJKBDX'}
     - name: label_1
-      properties: {text: 'Peer_to_peer (P2P) lending, also known as crowdfunding or marketplace lending , is financial model that allows individuals or businesses to lend and borrow money directly from one another through online platforms, bypassing  traditional financial institutions like banks.', foreground: white, font_size: 20}
+      properties: {text: 'Peer_to_peer (P2P) lending, also known as crowdfunding or marketplace lending , is financial model that allows individuals or businesses to lend and borrow money directly from one another through online platforms, bypassing  traditional financial institutions like banks.', foreground: white, font_size: 16}
       type: Label
       layout_properties: {grid_position: 'LOUJDS,RTKSOW XGLERH,EVCEYC'}
     - name: image_1
-      properties: {source: _/theme/bank_users/main_form/sign_up%20image.webp, display_mode: shrink_to_fit, height: '320', background: '#00555'}
+      properties: {source: _/theme/bank_users/main_form/sign_up%20image.webp, display_mode: shrink_to_fit, height: '280', background: '#00555'}
       type: Image
       layout_properties: {grid_position: 'LOUJDS,RTKSOW IYLGEA,XVBVAK'}
   - name: column_panel_1
@@ -88,56 +88,56 @@ components:
       layout_properties: {grid_position: 'WUAZDP,LLBEDS', full_width_row: true}
       components:
       - name: label_7
-        properties: {role: headline, bold: true, align: center, background: '', underline: false, foreground: '#094586', italic: false, font_size: 40, text: Sign Up}
+        properties: {role: headline, bold: true, align: center, spacing_above: none, background: '', underline: false, foreground: '#094586', spacing_below: none, italic: false, font_size: 40, text: Sign Up}
         type: Label
         layout_properties: {grid_position: 'MPYCNK,UXCVZV'}
       - name: label_4
-        properties: {text: Email, bold: true}
+        properties: {text: Email, bold: true, font_size: 14, spacing_above: none, spacing_below: none}
         type: Label
         layout_properties: {grid_position: 'SSSREI,FEIKYR'}
       - name: text_box_1
-        properties: {role: outlined, background: white, placeholder: '', visible: true, foreground: '', bold: false}
+        properties: {role: outlined, bold: false, placeholder: '', spacing_above: none, background: white, foreground: '', spacing_below: none, visible: true, font_size: 14}
         type: TextBox
         layout_properties: {grid_position: 'XRBTUN,EKYSFD FRCCHG,YGVXGR'}
       - name: send_otp
-        properties: {text: verify your email now, bold: false, underline: true}
+        properties: {text: verify your email now, bold: false, underline: true, font_size: 14}
         type: Link
         layout_properties: {grid_position: 'XRBTUN,EKYSFD EFVQHJ,JBOXRD'}
         event_bindings: {click: send_otp_click}
       - name: text_box_otp
-        properties: {role: outlined, visible: false, background: white}
+        properties: {role: outlined, visible: false, background: white, font_size: 14, spacing_above: none, spacing_below: none}
         type: TextBox
         layout_properties: {grid_position: 'XRBTUN,EKYSFD UUBCUK,OZITPM'}
         event_bindings: {pressed_enter: text_box_otp_pressed_enter}
       - name: verify_otp_button
-        properties: {text: verify otp, foreground: 'theme:On Primary', background: '#094586', bold: false, visible: false}
+        properties: {text: verify otp, foreground: 'theme:On Primary', background: '#094586', bold: false, visible: false, font_size: 14, spacing_above: none, spacing_below: none}
         type: Button
         layout_properties: {grid_position: 'XRBTUN,EKYSFD UUBCUK,WRBDZH'}
         event_bindings: {click: verify_otp_button_click}
       - name: label_3
-        properties: {icon: 'fa:address-book', font_size: 20}
+        properties: {icon: 'fa:address-book', font_size: 16, spacing_above: none, spacing_below: none}
         type: Label
         layout_properties: {grid_position: 'XRBTUN,EOHAME'}
       - name: label_5
-        properties: {text: Password, bold: true}
+        properties: {text: Password, bold: true, font_size: 14, spacing_above: none, spacing_below: none}
         type: Label
         layout_properties: {grid_position: 'VLFKXH,ZGCZXK'}
       - name: text_box_2
-        properties: {placeholder: '', background: white, visible: true, enabled: true, role: outlined, hide_text: true}
+        properties: {role: outlined, placeholder: '', spacing_above: none, background: white, hide_text: true, spacing_below: none, visible: true, enabled: true, font_size: 14}
         type: TextBox
         layout_properties: {grid_position: 'ASCLYG,SZRTGJ'}
         event_bindings: {pressed_enter: text_box_2_pressed_enter}
       - name: eye_icon_1
-        properties: {height: '33'}
+        properties: {height: 32.79998779296875, spacing_above: none, spacing_below: none}
         type: Image
         layout_properties: {grid_position: 'ASCLYG,FRRNTM'}
         event_bindings: {mouse_up: eye_icon_1_click}
       - name: label_8
-        properties: {text: Retype Password, bold: true}
+        properties: {text: Retype Password, bold: true, font_size: 14}
         type: Label
         layout_properties: {grid_position: 'BYLVEX,WNZMNP'}
       - name: text_box_3
-        properties: {background: white, role: outlined, hide_text: true}
+        properties: {background: white, role: outlined, hide_text: true, font_size: 14}
         type: TextBox
         layout_properties: {grid_position: 'YXZUAX,WGGXMI'}
       - name: eye_icon_2
@@ -146,16 +146,16 @@ components:
         layout_properties: {grid_position: 'GASAMI,BJDXSL YXZUAX,DMUERP'}
         event_bindings: {mouse_up: eye_icon_2_click}
       - name: retype_password_error_label
-        properties: {foreground: red, visible: false}
+        properties: {foreground: red, visible: false, font_size: 14}
         type: Label
         layout_properties: {grid_position: 'RYMQXB,VAMNYR'}
       - name: button_1
-        properties: {text: Sign up, background: '#094586', foreground: white, align: full}
+        properties: {text: Sign up, background: '#094586', foreground: white, align: full, font_size: 14}
         type: Button
         layout_properties: {grid_position: 'MPSRUO,XLAMBF', row_background: ''}
         event_bindings: {click: button_1_click}
       - name: link_2
-        properties: {text: 'Already have an account ?  Sign In', foreground: blue, font_size: null}
+        properties: {text: 'Already have an account ?  Sign In', foreground: blue, font_size: 14}
         type: Link
         layout_properties: {grid_position: 'ETWHQH,VXLYLN'}
         event_bindings: {click: link_2_click}
