@@ -363,8 +363,8 @@ color: %color:On Primary Container%;
 }
 
 .left-nav .anvil-component-icon.left-icon {
-  width: 0;
-  margin-right: 56px;
+  width: 24px;
+  margin-right: 10px;
   position: relative;
   top: 0.15em;
 }
@@ -372,7 +372,7 @@ color: %color:On Primary Container%;
 .left-nav .anvil-component-icon.left_edge-icon, .left-nav .anvil-component-icon.right_edge-icon {
   left: 16px;
   padding-top: 2px;
-  width: 0;
+  width: 24px;
 }
 
 .left-nav .anvil-component-icon.right_edge-icon {
@@ -435,8 +435,8 @@ color: %color:On Primary Container%;
 
 /* Components: App Bar */
 .app-bar {
-  min-height: 65px;
-  padding: 0 16px 0 72px;
+  min-height: 50px;
+  /* padding: 0 16px 0 72px; */
   position: fixed;
   width: 100%;
   
@@ -1170,4 +1170,12 @@ span.btn-text{
   height: 200px; /* Adjust the size as needed */
   border-radius: 50%;
   object-fit: cover;
+}
+
+
+.anvil-role-circular-image{
+    width: 100px; /* Adjust the size as needed */
+    height: 100px; /* Adjust the size as needed */
+    border-radius: 50%;
+    object-fit: cover;
 }
