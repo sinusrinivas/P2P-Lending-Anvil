@@ -260,6 +260,7 @@ class apply_loan_request(apply_loan_requestTemplate):
                 self.submit.visible = False
 
     def calculate_and_display_payment_details(self):
+        self.entered_payment_type = self.d
         if self.entered_payment_type == "One Time":
             self.display_one_time_payment_details()
         elif self.entered_payment_type == "Monthly":
