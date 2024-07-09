@@ -480,7 +480,7 @@ class dashboard(dashboardTemplate):
             else:
                 wallet_row = app_tables.fin_wallet.get(customer_id=self.user_Id)
                 if wallet_row and wallet_row['wallet_id'] is not None:
-                    open_form('borrower.dashboard.new_loan_request')
+                    open_form('borrower.dashboard.apply_loan_request')
                 else:
                     alert("Wallet not found. Please create a wallet.")
         except anvil.tables.TableError as e:

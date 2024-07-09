@@ -1,0 +1,50 @@
+is_package: true
+container: {type: ColumnPanel}
+components:
+- name: column_panel_1
+  properties: {role: elevated-card, col_widths: '{"IBTIQB":5,"TBCIVY":6,"RVDMTK":6,"MGPIUH":6,"SPYBIU":6,"PDSXPT":6}'}
+  type: ColumnPanel
+  layout_properties: {grid_position: 'NGOYES,FCRCUO'}
+  components:
+  - name: label_1
+    properties: {font_size: 14}
+    type: Label
+    layout_properties: {grid_position: 'XOJUUE,IBTIQB', full_width_row: true}
+    data_bindings:
+    - {property: text, code: 'self.item[''PaymentNumber'']'}
+  - name: label_3
+    properties: {font_size: 14}
+    type: Label
+    layout_properties: {grid_position: 'XOJUUE,TBCIVY'}
+    data_bindings:
+    - {property: text, code: 'self.item[''BeginningBalance'']'}
+  - name: label_6
+    properties: {font_size: 14}
+    type: Label
+    layout_properties: {grid_position: 'XOJUUE,RVDMTK'}
+    data_bindings:
+    - {property: text, code: 'self.item[''TotalPayment'']'}
+  - name: label_7
+    properties: {font_size: 14}
+    type: Label
+    layout_properties: {grid_position: 'XOJUUE,MGPIUH'}
+    data_bindings:
+    - {property: text, code: 'self.item[''Principal'']'}
+  - name: label_8
+    properties: {font_size: 14}
+    type: Label
+    layout_properties: {grid_position: 'XOJUUE,SPYBIU'}
+    data_bindings:
+    - {property: text, code: 'self.item[''Interest'']'}
+  - name: label_9
+    properties: {font_size: 14}
+    type: Label
+    layout_properties: {grid_position: 'XOJUUE,GQYFSJ'}
+    data_bindings:
+    - {property: text, code: 'self.item[''EndingBalance'']'}
+  - name: label_10
+    properties: {font_size: 14}
+    type: Label
+    layout_properties: {grid_position: 'XOJUUE,PDSXPT'}
+    data_bindings:
+    - {property: text, code: 'self.item[''ProcessingFee'']'}
