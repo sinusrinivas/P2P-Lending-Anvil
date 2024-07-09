@@ -248,28 +248,37 @@ class apply_loan_request(apply_loan_requestTemplate):
             self.product_description_label.visible = True
             self.product_description_label.text = ""
 
-    def drop_down_3_change(self, **event_args):
-        # This method is called when an item is selected in drop_down_3
-        product_group = self.name.selected_value
-        product_category = self.drop_down_2.selected_value
-        product_name = self.drop_down_1.selected_value
+    # def link_2_click(self, **event_args):
+    #   """This method is called when the link is clicked"""
+    #   self.drop_down_3_change()
 
-        if product_group and product_category and product_name:
-            # Fetch the data from fin_product_details based on the product_group, product_category, and product_name
-            product_details = app_tables.fin_product_details.search(
-                product_group=product_group,
-                product_categories=product_category,
-                product_name=product_name
-            )
+ 
 
+
+def drop_down_3_change(self, **event_args):
+    # This method is called when an item is selected in drop_down_3
+    product_group = self.name.selected_value
+    product_category = self.drop_down_2.selected_value
+    product_name = self.drop_down_1.selected_value
+    self.link_1.visible = True
+
+    if product_group and product_category and product_name:
+        # Fetch the data from fin_product_details based on the product_group, product_category, and product_name
+        product_details = app_tables.fin_product_details.get(
+            product_group=product_group,
+            product_categories=product_category,
+            product_name=product_name
+        )
+
+        if product_details:
             # Extract relevant values to populate drop_down_3
-            drop_down_3_items = [detail['emi_payment'] for detail in product_details if 'emi_payment' in detail and detail['emi_payment'].strip()]
-
+            emi_payment_options = product_details.get('emi_payment', [])
+            
             # Update drop_down_3 with the fetched values
-            self.drop_down_3.items = drop_down_3_items
+            self.drop_down_3.items = emi_payment_options
             self.drop_down_3.selected_value = None  # Reset selected value
 
-    def button_1_copy_click(self, **event_args):
+    def link_2_click(self, **event_args):
         name = self.name.selected_value
         category = self.drop_down_2.selected_value
         product_name = self.drop_down_1.selected_value
@@ -308,7 +317,7 @@ class apply_loan_request(apply_loan_requestTemplate):
                     self.processing_fee = product_details['processing_fee']
                     self.tenure_months = product_details['tenure_months']
                     self.loan_amount = product_details['loan_amount']
-                    self.credit_limit = product_details['credit_limit']
+                    # self.credit_limit = product_details['credit_limit']
                     self.calculate_and_display_payment_details()
                 else:
                     self.label_8.visible = True
@@ -510,7 +519,7 @@ class apply_loan_request(apply_loan_requestTemplate):
       self.text_box_1.visible = True
       self.label_39.visible = True
       self.drop_down_3.visible = True
-      self.link_1.visible = True
+      # self.link_1.visible = True
       self.product_name = self.drop_down_1.selected_value
       user_request = app_tables.fin_product_details.get(product_name=self.product_name)
       if user_request:
