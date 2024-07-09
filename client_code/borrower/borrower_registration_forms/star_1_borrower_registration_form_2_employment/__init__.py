@@ -25,8 +25,8 @@ class star_1_borrower_registration_form_2_employment(star_1_borrower_registratio
 
     # Any code you write here will run before the form opens.
 
-  def home_borrower_registration_form_copy_1_click(self, **event_args):
-    open_form('bank_users.user_form')
+  # def home_borrower_registration_form_copy_1_click(self, **event_args):
+  #   open_form('bank_users.user_form')
 
   def button_1_click(self, **event_args):
     open_form('borrower.borrower_registration_forms.star_1_borrower_registration_form_1_education',user_id=self.userId)

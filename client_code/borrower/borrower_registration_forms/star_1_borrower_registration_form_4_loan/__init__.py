@@ -121,5 +121,5 @@ class star_1_borrower_registration_form_4_loan(star_1_borrower_registration_form
   def button_1_click(self, **event_args):
     open_form('borrower.borrower_registration_forms.star_1_borrower_registration_form_3_marital',user_id = self.user_id)
 
-  def home_borrower_registration_form_click(self, **event_args):
-    open_form('bank_users.user_form')
+  # def home_borrower_registration_form_click(self, **event_args):
+  #   open_form('bank_users.user_form')
