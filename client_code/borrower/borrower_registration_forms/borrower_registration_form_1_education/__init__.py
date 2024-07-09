@@ -30,22 +30,23 @@ class borrower_registration_form_1_education(borrower_registration_form_1_educat
     self.column_panel_4.visible = False
     self.column_panel_5.visible = False
 
-  # def validate_file(self, file):
-  #   """Validate file type and size."""
-  #   if file is None:
-  #     return False, "No file uploaded."
-
-  #   file_type = file.content_type
-  #   file_size = len(file.get_bytes())  # Use len to get size in bytes
-
-  #   if file_type not in ['image/jpeg', 'image/jpg', 'image/png', 'application/pdf']:
-  #     return False, "Only JPG images and PDF files are allowed."
-
-  #   if file_size > 2 * 1024 * 1024:  # 2MB limit
-  #     return False, "File size must be less than 2MB."
-
-  #   return True, ""
-  
+  def validate_file_upload(self, **event_args):
+        file_loader = event_args['sender']
+        file = file_loader.file
+        max_size = 2 * 1024 * 1024  # 2MB in bytes
+        allowed_types = ['image/jpeg', 'image/png', 'image/jpg', 'application/pdf']
+    
+        if file:
+            file_size = len(file.get_bytes())
+            if file_size > max_size:
+                alert('File size should be less than 2MB')
+                file_loader.clear()
+                return
+    
+            if file.content_type not in allowed_types:
+                alert('Invalid file type. Only JPEG, PNG, jpg and PDF are allowed')
+                file_loader.clear()
+                return
   def button_1_click(self, **event_args):
     # user_id = self.userId
     # open_form('lendor_registration_form.Lender_reg_form_2',user_id=user_id)
@@ -91,6 +92,8 @@ class borrower_registration_form_1_education(borrower_registration_form_1_educat
       
     # Validate files based on qualification
     if qualification == '10th standard' and not tenth_class:
+        self.file_loader_1.background = '#FF0000'
+        self.file_loader_1.focus()
         Notification('Please upload All document before proceeding.').show()
         return
     if qualification == '12th standard' and (not tenth_class_1 or not intermediate):
