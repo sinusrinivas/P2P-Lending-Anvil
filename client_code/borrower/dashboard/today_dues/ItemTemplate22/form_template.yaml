@@ -4,79 +4,83 @@ container:
   properties: {col_widths: '{}'}
 components:
 - name: column_panel_1
-  properties: {role: outlined-card, col_widths: '{"EFEWVM":10,"TORDCN":50,"HWSBHL":10,"KRDJCC":20,"DVASSU":10,"JCHCYJ":20,"XKERXO":10,"XRWTFT":10,"JBNZKD":20,"SKHAVM":10,"NDUACB":20,"FWGUWG":10,"TZJUIM":20,"VARWOF":31,"DWQGJD":15,"MXFLDM":20}'}
+  properties: {role: outlined-card, col_widths: '{"EFEWVM":10,"TORDCN":47,"HWSBHL":15,"KRDJCC":15,"DVASSU":15,"JCHCYJ":15,"XKERXO":15,"XRWTFT":15,"JBNZKD":15,"SKHAVM":15,"NDUACB":15,"FWGUWG":15,"TZJUIM":15,"VARWOF":31,"DWQGJD":15,"MXFLDM":15,"XUINSS":45,"HVJMOX":15}'}
   type: ColumnPanel
   layout_properties: {grid_position: 'RQIITZ,PKNCIT', full_width_row: true}
   components:
   - name: image_1
     properties: {height: 122}
     type: Image
-    layout_properties: {grid_position: 'OGKHLI,EFEWVM YZOWXK,XUINSS', full_width_row: true}
+    layout_properties: {grid_position: 'OGKHLI,EFEWVM YZOWXK,XUINSS MRLZHQ,ZGMVBT', full_width_row: true}
     data_bindings:
     - {property: source, code: 'self.item[''user_photo'']', writeback: false}
   - name: label_9
-    properties: {role: null, align: center}
+    properties: {role: null, align: center, font_size: 14}
     type: Label
-    layout_properties: {grid_position: 'OGKHLI,EFEWVM LTVXVV,FTLTIQ', full_width_row: true}
+    layout_properties: {grid_position: 'OGKHLI,EFEWVM YZOWXK,XUINSS XPFPSH,BGOQPS'}
     data_bindings:
     - {property: text, code: 'self.item[''lender_full_name'']', writeback: false}
+  - name: spacer_1
+    properties: {height: 32}
+    type: Spacer
+    layout_properties: {grid_position: 'OGKHLI,EFEWVM YZOWXK,HVJMOX'}
   - name: label_4
-    properties: {role: input-prompt, text: 'Product Name :', bold: true}
+    properties: {role: input-prompt, text: 'Product Name :', bold: true, font_size: 14}
     type: Label
     layout_properties: {grid_position: 'OGKHLI,TORDCN BTQEIH,XKERXO'}
   - name: link_3
-    properties: {align: left, bold: true, font_size: 10, role: outlined-card}
+    properties: {align: left, bold: true, font_size: 14, role: null, border: ''}
     type: Link
     layout_properties: {grid_position: 'OGKHLI,TORDCN BTQEIH,MXFLDM'}
     data_bindings:
     - {property: text, code: 'self.item[''product_name'']', writeback: false}
     event_bindings: {click: link_3_click}
   - name: label_5
-    properties: {role: input-prompt, text: 'Loan Amount :', bold: true}
+    properties: {role: input-prompt, text: 'Loan Amount :', bold: true, font_size: 14}
     type: Label
     layout_properties: {grid_position: 'OGKHLI,TORDCN BTQEIH,XRWTFT'}
   - type: Label
-    properties: {role: outlined-card}
+    properties: {role: null, font_size: 14}
     name: label_1
     layout_properties: {grid_position: 'OGKHLI,TORDCN BTQEIH,JBNZKD'}
     data_bindings:
     - {property: text, code: 'self.item[''loan_amount'']', writeback: false}
   - name: label_6
-    properties: {role: input-prompt, text: 'Tenure :', bold: true}
+    properties: {role: input-prompt, text: 'Tenure :', bold: true, font_size: 14}
     type: Label
     layout_properties: {grid_position: 'OGKHLI,TORDCN CRBWLH,HWSBHL'}
   - type: Label
-    properties: {role: outlined-card, bold: false, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: ''}
+    properties: {role: null, bold: false, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: 14, tooltip: '', text: ''}
     name: label_2
     layout_properties: {grid_position: 'OGKHLI,TORDCN CRBWLH,KRDJCC'}
     data_bindings:
     - {property: text, code: 'self.item[''tenure'']', writeback: false}
   - name: label_7
-    properties: {role: input-prompt, text: 'Interest Rate :', align: left, bold: true}
+    properties: {role: input-prompt, text: 'Interest Rate :', align: left, bold: true, font_size: 14}
     type: Label
     layout_properties: {grid_position: 'OGKHLI,TORDCN CRBWLH,DVASSU'}
   - type: Label
-    properties: {role: outlined-card}
+    properties: {role: null, font_size: 14}
     name: label_3
     layout_properties: {grid_position: 'OGKHLI,TORDCN CRBWLH,JCHCYJ'}
     data_bindings:
     - {property: text, code: 'self.item[''interest_rate'']', writeback: false}
   - name: label_10
-    properties: {role: input-prompt, text: Due By, bold: true}
+    properties: {role: input-prompt, text: Due By, bold: true, font_size: 14}
     type: Label
     layout_properties: {grid_position: 'OGKHLI,TORDCN YOUOSF,SKHAVM'}
   - name: label_11
-    properties: {role: outlined-card}
+    properties: {role: null, font_size: 14}
     type: Label
     layout_properties: {grid_position: 'OGKHLI,TORDCN YOUOSF,NDUACB'}
     data_bindings:
     - {property: text, code: 'self.item[''days_left'']', writeback: false}
   - name: label_12
-    properties: {text: 'Schedule Date :', bold: true, role: input-prompt}
+    properties: {text: 'Schedule Date :', bold: true, role: input-prompt, font_size: 14}
     type: Label
     layout_properties: {grid_position: 'OGKHLI,TORDCN YOUOSF,FWGUWG'}
   - name: label_13
-    properties: {role: outlined-card}
+    properties: {role: null, font_size: 14}
     type: Label
     layout_properties: {grid_position: 'OGKHLI,TORDCN YOUOSF,TZJUIM'}
     data_bindings:
