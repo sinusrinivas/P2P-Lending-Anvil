@@ -64,7 +64,7 @@ components:
     type: Label
     layout_properties: {grid_position: 'OGKHLI,TORDCN BTQEIH,XRWTFT RJBPJC,VTLTLV'}
   - type: Label
-    properties: {role: null, font_size: 14, icon: ''}
+    properties: {role: null, font_size: 14, icon: '', foreground: 'theme:Error'}
     name: label_1
     layout_properties: {grid_position: 'OGKHLI,TORDCN BTQEIH,XRWTFT RJBPJC,DUIXUI'}
     data_bindings:
