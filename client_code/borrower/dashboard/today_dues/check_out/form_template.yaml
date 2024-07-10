@@ -144,6 +144,11 @@ components:
         properties: {visible: false, font_size: 14}
         type: Label
         layout_properties: {grid_position: 'LZNRZA,HFRXTF SAEBUM,ULUZRZ'}
+      - name: link_1
+        properties: {text: view details}
+        type: Link
+        layout_properties: {grid_position: 'LZNRZA,HFRXTF CRELSP,SBQRHQ'}
+        event_bindings: {click: link_1_click}
       - name: spacer_2
         properties: {height: 32}
         type: Spacer

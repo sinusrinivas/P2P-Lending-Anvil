@@ -351,7 +351,7 @@ class lender_registration_form_3_marital_details(lender_registration_form_3_mari
   def validate_father_name(self, **event_args):
     father_name = self.father_name_text.text
     if not father_name or not re.match(r'^[A-Za-z\s]+$', father_name):
-        self.father_name_text.background = 'red'
+        self.father_name_text.role = 'outlined-error'
     else:
         self.father_name_text.background = 'white'
 

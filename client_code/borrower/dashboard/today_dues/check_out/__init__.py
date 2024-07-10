@@ -1089,3 +1089,8 @@ class check_out(check_outTemplate):
     def button_1_click(self, **event_args):
       """This method is called when the button is clicked"""
       open_form('borrower.dashboard.today_dues')
+
+    def link_1_click(self, **event_args):
+      """This method is called when the link is clicked"""
+      selected_row = self.selected_row
+      open_form('borrower.dashboard.today_dues.payment_details_t', selected_row = selected_row)
