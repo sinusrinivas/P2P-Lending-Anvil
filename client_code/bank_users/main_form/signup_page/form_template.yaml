@@ -83,12 +83,12 @@ components:
       type: Spacer
       layout_properties: {grid_position: 'WUAZDP,FZHHNU', full_width_row: true}
     - name: column_panel_1_copy_copy
-      properties: {role: elevated-card, col_widths: '{"BJDXSL":55,"EKYSFD":54,"EOHAME":6,"VXLYLN":40,"UXCVZV":40,"SZRTGJ":53,"FRRNTM":7,"WGGXMI":53,"DMUERP":7}'}
+      properties: {role: elevated-card, col_widths: '{"BJDXSL":55,"EKYSFD":54,"EOHAME":6,"VXLYLN":35,"UXCVZV":40,"SZRTGJ":53,"FRRNTM":7,"WGGXMI":53,"DMUERP":7,"PHOVHO":35}'}
       type: ColumnPanel
       layout_properties: {grid_position: 'WUAZDP,LLBEDS', full_width_row: true}
       components:
       - name: label_7
-        properties: {role: headline, bold: true, align: center, spacing_above: none, background: '', underline: false, foreground: '#094586', spacing_below: none, italic: false, font_size: 40, text: Sign Up}
+        properties: {role: headline, bold: true, align: center, spacing_above: none, background: '', underline: false, foreground: '#094586', spacing_below: none, italic: false, font_size: 35, text: Sign Up}
         type: Label
         layout_properties: {grid_position: 'MPYCNK,UXCVZV'}
       - name: label_4
@@ -100,7 +100,7 @@ components:
         type: TextBox
         layout_properties: {grid_position: 'XRBTUN,EKYSFD FRCCHG,YGVXGR'}
       - name: send_otp
-        properties: {text: verify your email now, bold: false, underline: true, font_size: 14}
+        properties: {text: verify your email now, bold: false, underline: true, font_size: 14, spacing_above: none, spacing_below: none}
         type: Link
         layout_properties: {grid_position: 'XRBTUN,EKYSFD EFVQHJ,JBOXRD'}
         event_bindings: {click: send_otp_click}
@@ -125,37 +125,46 @@ components:
       - name: text_box_2
         properties: {role: outlined, placeholder: '', spacing_above: none, background: white, hide_text: true, spacing_below: none, visible: true, enabled: true, font_size: 14}
         type: TextBox
-        layout_properties: {grid_position: 'ASCLYG,SZRTGJ'}
-        event_bindings: {pressed_enter: text_box_2_pressed_enter}
+        layout_properties: {grid_position: 'ASCLYG,SZRTGJ CTMZWB,QPNPFJ'}
+        event_bindings: {pressed_enter: text_box_2_pressed_enter, change: text_box_2_change}
+      - name: password_error_label
+        properties: {visible: false, spacing_above: none, spacing_below: none, foreground: red}
+        type: Label
+        layout_properties: {grid_position: 'ASCLYG,SZRTGJ HXODAW,FDIQCA'}
       - name: eye_icon_1
         properties: {height: 32.79998779296875, spacing_above: none, spacing_below: none}
         type: Image
         layout_properties: {grid_position: 'ASCLYG,FRRNTM'}
         event_bindings: {mouse_up: eye_icon_1_click}
       - name: label_8
-        properties: {text: Retype Password, bold: true, font_size: 14}
+        properties: {text: Retype Password, bold: true, font_size: 14, spacing_above: none, spacing_below: none}
         type: Label
         layout_properties: {grid_position: 'BYLVEX,WNZMNP'}
       - name: text_box_3
-        properties: {background: white, role: outlined, hide_text: true, font_size: 14}
+        properties: {background: white, role: outlined, hide_text: true, font_size: 14, spacing_above: none, spacing_below: none}
         type: TextBox
         layout_properties: {grid_position: 'YXZUAX,WGGXMI'}
+        event_bindings: {change: text_box_3_change}
       - name: eye_icon_2
-        properties: {height: '33'}
+        properties: {height: '33', spacing_above: none, spacing_below: none}
         type: Image
         layout_properties: {grid_position: 'GASAMI,BJDXSL YXZUAX,DMUERP'}
         event_bindings: {mouse_up: eye_icon_2_click}
       - name: retype_password_error_label
-        properties: {foreground: red, visible: false, font_size: 14}
+        properties: {foreground: red, visible: false, font_size: 14, spacing_above: none, spacing_below: none}
         type: Label
         layout_properties: {grid_position: 'RYMQXB,VAMNYR'}
       - name: button_1
-        properties: {text: Sign up, background: '#094586', foreground: white, align: full, font_size: 14}
+        properties: {text: Sign up, background: '#094586', foreground: white, align: full, font_size: 14, spacing_above: none, spacing_below: none}
         type: Button
         layout_properties: {grid_position: 'MPSRUO,XLAMBF', row_background: ''}
         event_bindings: {click: button_1_click}
+      - name: label_2
+        properties: {text: 'Already have an account ?', foreground: black, font_size: 12, spacing_above: none, spacing_below: none}
+        type: Label
+        layout_properties: {grid_position: 'ETWHQH,PHOVHO'}
       - name: link_2
-        properties: {text: 'Already have an account ?  Sign In', foreground: blue, font_size: 14}
+        properties: {text: '  Sign In', foreground: blue, font_size: 14, spacing_below: none, spacing_above: none, col_spacing: none}
         type: Link
         layout_properties: {grid_position: 'ETWHQH,VXLYLN'}
         event_bindings: {click: link_2_click}
