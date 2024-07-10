@@ -152,11 +152,13 @@ class borrower_registration_form_1_education(borrower_registration_form_1_educat
       anvil.server.call('add_education_phd', tenth_class_4, intermediate_3, btech_2, mtech_1, phd, user_id)
       open_form('borrower.borrower_registration_forms.star_1_borrower_registration_form_2_employment', user_id=user_id) 
     else:
-      self.drop_down_1.background = '#FF0000'
+      self.drop_down_1.role= 'outlined-error'
       # self.drop_down_1.role = out
       self.drop_down_1.focus()
       Notification("Please select a valid qualification status").show()
       return 
+    # else:
+    #     self.drop_down_1.role = 'outlined'
     if qualification not in  ['10th standard', '12th standard', "Bachelor's degree", "Master's degree", 'PhD']:
       Notification("Please select a valid qualification status").show()
     elif not user_id:
