@@ -260,7 +260,8 @@ class apply_loan_request(apply_loan_requestTemplate):
                 self.submit.visible = False
 
     def calculate_and_display_payment_details(self):
-        self.entered_payment_type = self.d
+        self.entered_payment_type = self.drop_down_3.selected_value
+        self.total_interest = self.label_30.text
         if self.entered_payment_type == "One Time":
             self.display_one_time_payment_details()
         elif self.entered_payment_type == "Monthly":
@@ -271,12 +272,16 @@ class apply_loan_request(apply_loan_requestTemplate):
             self.display_six_month_payment_details(total_interest_amount=self.total_interest)
 
     def display_one_time_payment_details(self):
+        self.total_repayment_amount = self.label_34.text
+        self.total_interest = self.label_30.text
+        self.processing_fee_amount = self.label_32.text
         total_repayment_amount = float(str(self.total_repayment_amount).replace('₹ ', ''))
         total_interest = float(str(self.total_interest).replace('₹ ', ''))
         processing_fee_amount = float(str(self.processing_fee_amount).replace('₹ ', ''))
+        self.loan_amount = self.label_28.text
 
         payment_details = [{
-            'PaymentNumber': '1',
+            'PaymentNumber': 'EMI 1',
             'Principal': f"₹ {self.loan_amount:.2f}",
             'Interest': f"₹ {total_interest:.2f}",
             'ProcessingFee': f"₹ {processing_fee_amount:.2f}",
@@ -289,6 +294,10 @@ class apply_loan_request(apply_loan_requestTemplate):
         self.repeating_panel_1.items = payment_details
 
     def display_monthly_payment_details(self):
+        self.total_repayment_amount = self.label_34.text
+        self.interest_rate =self.label_7_copy.text
+        self.tenure_months = self.text_box_1.text
+        self.loan_amount = self.label_28.text
         monthly_interest_rate = float(self.interest_rate / 100) / 12
         emi_denominator = ((1 + monthly_interest_rate) ** self.tenure_months) - 1
         emi_numerator = self.loan_amount * monthly_interest_rate * ((1 + monthly_interest_rate) ** self.tenure_months)
@@ -297,6 +306,9 @@ class apply_loan_request(apply_loan_requestTemplate):
         self.repeating_panel_1.items = payment_details
 
     def calculate_payment_schedule(self, total_repayment_amount, emi, monthly_interest_rate):
+        self.tenure_months = self.text_box_1.text
+        self.loan_amount = self.label_28.text
+        self.processing_fee = self.label_21.text
         payment_schedule = []
         processing_fee_per_month = (self.processing_fee / 100) * self.loan_amount / self.tenure_months
         beginning_balance = total_repayment_amount
@@ -322,6 +334,8 @@ class apply_loan_request(apply_loan_requestTemplate):
         return payment_schedule
 
     def display_three_month_payment_details(self, total_interest_amount):
+        self.interest_rate =self.label_7_copy.text
+        self.tenure_months = self.text_box_1.text
         monthly_interest_rate = self.interest_rate / 100 / 12
         emi_denominator = ((1 + monthly_interest_rate) ** self.tenure_months) - 1
         emi_numerator = self.loan_amount * monthly_interest_rate * ((1 + monthly_interest_rate) ** self.tenure_months)
