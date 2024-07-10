@@ -3,7 +3,7 @@ container:
   type: HtmlTemplate
   properties: {html: '@theme:standard-page.html', visible: true, background: white, role: null}
 components:
-- properties: {background: white, col_widths: '{}'}
+- properties: {background: white, col_widths: '{"KALHMU":19,"EICWEE":41,"CMEGRW":20,"XRFKCC":40}'}
   type: ColumnPanel
   layout_properties: {slot: left-nav}
   name: column_panel_1
