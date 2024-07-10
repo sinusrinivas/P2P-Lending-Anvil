@@ -14,23 +14,21 @@ class lender_registration_form_3_marital_details(lender_registration_form_3_mari
   def __init__(self,user_id, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
+    self.spouse_companyname_text.visible = False
+    self.annual_earning_text.visible = False
+    self.company_name.visible = False
+    self.anual_ctc.visible = False
+    # self.column_panel_1.visible = False
+    # self.column_panel_2.visible = False
+    
 
     self.userId = user_id
-    user_data=app_tables.fin_user_profile.get(customer_id=user_id)
-    if user_data:
-      self.marital_status_lender_registration_dropdown.selected_value=user_data['marital_status']
-      user_data.update()
 
-    options = app_tables.fin_lendor_marrital_status.search()
-    options_string = [str(option['lendor_marrital_status']) for option in options]
-    self.marital_status_lender_registration_dropdown.items = options_string
     self.init_components(**properties)
 
     
 
-    user_data=app_tables.fin_guarantor_details.get(customer_id=user_id)
-    if user_data:
-      self.drop_down_1.selected_value = user_data['another_person']
+    
 
     user_data=app_tables.fin_guarantor_details.get(customer_id=user_id)
     if user_data:
@@ -67,8 +65,20 @@ class lender_registration_form_3_marital_details(lender_registration_form_3_mari
     self.spouse_mbl_no_text.add_event_handler("change", self.validate_spouse_mbl_no)
     self.drop_down_1_copy.add_event_handler("change", self.toggle_spouse_fields_visibility)
     self.drop_down_1.add_event_handler("change", self.toggle_father_spouse_fields_visibility)
+    self.drop_down_1_copy.add_event_handler("change", self.validate_spouse_profession)
     # self.spouse_companyname_text.add_event_handler("change", self.validate_spouse_company)
     # self.annual_earning_text.add_event_handler("change", self.validate_annual_earning)
+
+    self.update_column_panel_visibility()
+
+  def update_column_panel_visibility(self):
+      selected_person = self.drop_down_1.selected_value
+      if selected_person == "Spouse":
+        self.column_panel_1.visible = False
+        self.column_panel_2.visible = True
+      else:
+        self.column_panel_1.visible = True
+        self.column_panel_2.visible = False
 
   def toggle_father_spouse_fields_visibility(self, **event_args):
     selected_person = self.drop_down_1.selected_value
@@ -93,12 +103,12 @@ class lender_registration_form_3_marital_details(lender_registration_form_3_mari
             self.anual_ctc.visible = True
 
   def button_next_click(self, **event_args):
-      marital_status = self.marital_status_lender_registration_dropdown.selected_value
+      # marital_status = self.marital_status_lender_registration_dropdown.selected_value
       user_id = self.userId
 
-      if not marital_status or marital_status not in ['Not Married', 'Married', 'Other']:
-        Notification("Please select a valid marital status").show()
-        return
+      # if not marital_status or marital_status not in ['Not Married', 'Married', 'Other']:
+      #   Notification("Please select a valid marital status").show()
+      #   return
 
       selected_value = self.drop_down_1.selected_value
     
@@ -172,7 +182,7 @@ class lender_registration_form_3_marital_details(lender_registration_form_3_mari
               Notification(f"Failed to submit form: {e}").show()
               return
   
-            anvil.server.call('add_borrower_step3', marital_status, user_id)
+            # anvil.server.call('add_borrower_step3', marital_status, user_id)
             anvil.server.call('add_lendor_father_details',
                               another_person, father_name, father_dob,
                               father_mbl_no, father_profession,
@@ -252,7 +262,7 @@ class lender_registration_form_3_marital_details(lender_registration_form_3_mari
             Notification(f"Failed to submit form: {e}").show()
             return
     
-          anvil.server.call('add_borrower_step3', marital_status, self.userId)
+          # anvil.server.call('add_borrower_step3', marital_status, self.userId)
           anvil.server.call('add_lendor_spouse_details',
                             another_person, spouse_name, spouse_mob,
                             spouse_mbl_no, spouse_profession,
