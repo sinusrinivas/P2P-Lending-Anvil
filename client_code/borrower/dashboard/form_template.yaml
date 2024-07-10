@@ -3,50 +3,42 @@ container:
   type: HtmlTemplate
   properties: {html: '@theme:standard-page.html', visible: true, background: white, role: null}
 components:
-- properties: {background: white, col_widths: '{"DTVNUA":40,"DWURFW":20,"GVENNV":40,"AMAGUJ":20}'}
+- properties: {background: white, col_widths: '{}'}
   type: ColumnPanel
   layout_properties: {slot: left-nav}
   name: column_panel_1
   components:
-  - name: spacer_12
-    properties: {height: 32}
-    type: Spacer
-    layout_properties: {grid_position: 'YNBKYN,PYHNXI'}
   - properties: {height: '140', source: '', horizontal_align: center, role: null, display_mode: original_size}
     type: Image
     layout_properties: {grid_position: 'YNBKYN,YGPYRN'}
     event_bindings: {mouse_up: image_1_copy_copy_mouse_up}
     name: image_1_copy_copy
-  - name: spacer_13
-    properties: {height: 32}
-    type: Spacer
-    layout_properties: {grid_position: 'YNBKYN,IOTFZH'}
-  - properties: {text: '', align: center, bold: true, font_size: null}
+  - properties: {text: '', bold: true, font_size: 12, icon: _/theme/borrower/dashboard/credit-limit.png}
     type: Label
-    layout_properties: {grid_position: 'ATJQKL,FCDUDL'}
-    name: label_2_copy
-  - properties: {text: 'Credit Limit :', bold: true, font_size: null, icon: _/theme/borrower/dashboard/borrower_credit_limit.png}
-    type: Label
-    layout_properties: {grid_position: 'GZJIEQ,DTVNUA'}
+    layout_properties: {grid_position: 'YNBKYN,PGAWDS UDDGWS,KALHMU'}
     name: label_4
-  - properties: {text: '500000', align: left}
+  - properties: {text: '500000', align: left, font_size: 12}
     type: Label
-    layout_properties: {grid_position: 'GZJIEQ,DWURFW'}
+    layout_properties: {grid_position: 'YNBKYN,PGAWDS UDDGWS,EICWEE'}
     name: label_5
-  - properties: {text: 'Member Since:', bold: true, font_size: null, icon: _/theme/borrower/dashboard/borrower_member_since.png}
+  - properties: {text: '', bold: true, font_size: 12, icon: 'fa:user', foreground: '#013065'}
     type: Label
-    layout_properties: {grid_position: 'QOXZDA,GVENNV'}
+    layout_properties: {grid_position: 'YNBKYN,PGAWDS RDZVAY,CMEGRW'}
     name: label_6
-  - properties: {text: 1 aug 2022, align: left}
+  - properties: {text: 1 aug 2022, align: left, font_size: 12}
     type: Label
-    layout_properties: {grid_position: 'QOXZDA,AMAGUJ'}
+    layout_properties: {grid_position: 'YNBKYN,PGAWDS RDZVAY,XRFKCC'}
     name: label_7
+  - properties: {text: '', align: left, bold: true, font_size: null}
+    type: Label
+    layout_properties: {grid_position: 'YAOIHJ,GKOUMC'}
+    name: label_2_copy
   - properties: {text: New Loan Request, icon: _/theme/borrower/dashboard/%20new%20loan%20request.png, foreground: '#013065'}
     type: Link
     layout_properties: {grid_position: 'BZNSXQ,TUEPQZ'}
     event_bindings: {click: link_1_click}
     name: link_1
-  - properties: {align: left, text: Today's  Due, foreground: '#013065', icon: 'fa:calendar'}
+  - properties: {align: left, text: Upcoming Payments, foreground: '#013065', icon: 'fa:calendar'}
     type: Link
     layout_properties: {grid_position: 'NTKYDV,NZWJWC'}
     event_bindings: {click: link_2_click}
