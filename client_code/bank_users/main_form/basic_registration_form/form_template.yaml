@@ -169,7 +169,7 @@ components:
       type: Label
       layout_properties: {grid_position: 'RKZEYY,OQQCFW JGYSLP,CIHZUT'}
       name: label_3_copy_1
-    - properties: {align: center}
+    - properties: {align: center, role: null}
       type: FileLoader
       layout_properties: {grid_position: 'RKZEYY,OQQCFW FXZZIP,BXKQTN'}
       event_bindings: {change: registration_img_file_loader_change}

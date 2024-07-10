@@ -205,46 +205,73 @@ class basic_registration_form(basic_registration_formTemplate):
             self.full_name_text_box.focus()
             Notification('Please fill all details').show()
             return
+        else:
+            self.full_name_text_box.role = 'outlined'
+        
         if not gender:
             self.gender_dd.role = 'outlined-error'
             self.gender_dd.focus()
             Notification('Please fill all details').show()
             return
+        else:
+            self.gender_dd.role = 'outlined'
+        
         if not dob:
             self.date_picker_1.role = 'outlined-error'
             self.date_picker_1.focus()
             Notification('Please fill all details').show()
             return
+        else:
+            self.date_picker_1.role = 'outlined'
+        
         if not mobile_no:
             self.mobile_number_box.role = 'outlined-error'
             self.mobile_number_box.focus()
             Notification('Please fill all details').show()
             return
+        else:
+            self.mobile_number_box.role = 'outlined'
+        
         if not user_photo:
             self.registration_img_file_loader.role = 'outlined-error'
             self.registration_img_file_loader.focus()
             Notification('Please fill all details').show()
             return
+        else:
+            self.registration_img_file_loader.role = 'outlined'
+        
         if not aadhar:
             self.govt_id1_text_box.role = 'outlined-error'
             self.govt_id1_text_box.focus()
             Notification('Please fill all details').show()
             return
+        else:
+            self.govt_id1_text_box.role = 'outlined'
+        
         if not aadhar_card:
-            self.registration_img_aadhar_file_loader.role = 'outlined-error'
+            self.registration_img_aadhar_file_loader.background = 'red'
             self.registration_img_aadhar_file_loader.focus()
             Notification('Please fill all details').show()
             return
+        else:
+            self.registration_img_aadhar_file_loader.background = ''
+        
         if not pan:
             self.govt_id2_text_box.role = 'outlined-error'
             self.govt_id2_text_box.focus()
             Notification('Please fill all details').show()
             return
+        else:
+            self.govt_id2_text_box.role = 'outlined'
+        
         if not pan_card:
-            self.registration_img_pan_file_loader.role = 'outlined-error'
+            self.registration_img_pan_file_loader.background = 'red'
             self.registration_img_pan_file_loader.focus()
             Notification('Please fill all details').show()
             return
+        else:
+            self.registration_img_pan_file_loader.background = ''
+        
         if not (street_adress_1 or street_address_2):
             if not street_adress_1:
                 self.text_box_1.role = 'outlined-error'
@@ -254,40 +281,66 @@ class basic_registration_form(basic_registration_formTemplate):
                 self.text_box_2.focus()
             Notification('Please fill all details').show()
             return
+        else:
+            self.text_box_1.role = 'outlined'
+            self.text_box_2.role = 'outlined'
+        
         if not city:
             self.text_box_3.role = 'outlined-error'
             self.text_box_3.focus()
             Notification('Please fill all details').show()
             return
+        else:
+            self.text_box_3.role = 'outlined'
+        
         if not pincode:
             self.text_box_4.role = 'outlined-error'
             self.text_box_4.focus()
             Notification('Please fill all details').show()
             return
+        else:
+            self.text_box_4.role = 'outlined'
+        
         if not state:
             self.text_box_5.role = 'outlined-error'
             self.text_box_5.focus()
             Notification('Please fill all details').show()
             return
+        else:
+            self.text_box_5.role = 'outlined'
+        
         if not country:
             self.text_box_6.role = 'outlined-error'
             self.text_box_6.focus()
             Notification('Please fill all details').show()
             return
+        else:
+            self.text_box_6.role = 'outlined'
+        
         if not present:
             self.drop_down_1.role = 'outlined-error'
             self.drop_down_1.focus()
             Notification('Please fill all details').show()
             return
+        else:
+            self.drop_down_1.role = 'outlined'
+        
         if not duration:
             self.drop_down_2.role = 'outlined-error'
             self.drop_down_2.focus()
             Notification('Please fill all details').show()
             return
+        else:
+            self.drop_down_2.role = 'outlined'
+        
         if not marital_status:
             self.marital_status_borrower_registration_dropdown.role = 'outlined-error'
             self.marital_status_borrower_registration_dropdown.focus()
-            return()
+            Notification('Please fill all details').show()
+            return
+        else:
+            self.marital_status_borrower_registration_dropdown.role = 'outlined'
+
     
         # Validate country
         if not re.match(r'^[A-Za-z]+$', country):
