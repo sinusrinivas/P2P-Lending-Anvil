@@ -246,36 +246,40 @@ components:
     - properties: {}
       type: form:borrower.logout
       name: logout_1
-- properties: {background: '#fff'}
+- properties: {background: '#fff', col_widths: '{"RYITEI":20,"SIFMBU":40,"UYDLPQ":20,"GVKYIO":40}'}
   type: ColumnPanel
   layout_properties: {slot: left-nav}
   name: column_panel_1
   components:
   - properties: {height: '100', display_mode: zoom_to_fill}
     type: Image
-    layout_properties: {grid_position: 'TOAYPK,LOMFLS ROOIKD,LRUHFZ'}
+    layout_properties: {grid_position: 'TOAYPK,LOMFLS'}
     name: image_5
     event_bindings: {mouse_up: image_5_mouse_up}
-  - properties: {bold: true, font_size: null, align: left}
-    type: Label
-    layout_properties: {grid_position: 'TOAYPK,LOMFLS SDGCNE,SYTZZO'}
-    name: label_11
-  - properties: {text: 'Membership Type :', bold: true, font_size: null}
+  - name: spacer_2
+    properties: {height: '10'}
+    type: Spacer
+    layout_properties: {grid_position: 'TOAYPK,NNLPCM BWOIXR,BNPCHK'}
+  - properties: {text: '', bold: true, font_size: 12, icon: 'fa:address-book'}
     type: Label
     layout_properties: {grid_position: 'TOAYPK,NNLPCM WYYBYE,UYDLPQ'}
     name: label_12
-  - properties: {font_size: 16, bold: false}
+  - properties: {font_size: 12, bold: false}
     type: Label
     layout_properties: {grid_position: 'TOAYPK,NNLPCM WYYBYE,GVKYIO'}
     name: label_13
-  - properties: {text: 'Joined  Date :', bold: true, font_size: null}
+  - properties: {text: '', bold: true, font_size: 12, icon: 'fa:500px'}
     type: Label
     layout_properties: {grid_position: 'TOAYPK,NNLPCM ESHMKX,RYITEI'}
     name: label_14
-  - properties: {font_size: 16}
+  - properties: {font_size: 12}
     type: Label
     layout_properties: {grid_position: 'TOAYPK,NNLPCM ESHMKX,SIFMBU'}
     name: label_15
+  - properties: {bold: true, font_size: null, align: left}
+    type: Label
+    layout_properties: {grid_position: 'AHYSPT,SQSJCS'}
+    name: label_11
   - properties: {text: View/Edit Profile, foreground: '#013065', icon: 'fa:edit'}
     type: Link
     layout_properties: {grid_position: 'AXOFMU,UNAMIA'}

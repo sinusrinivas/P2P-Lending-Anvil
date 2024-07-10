@@ -1,6 +1,6 @@
 /**
  This CSS implements the Material Design 3 look and feel for Anvil apps.
- **/
+ **
 /* .anvil-role-wide .data-grid-child-panel {
   overflow-x: auto;
 }
@@ -37,6 +37,7 @@ body {
 .anvil-panel-col {
   padding-bottom: 10px;
   margin-bottom: -10px;
+  flex-grow:inherit;
 }
 
 .content > .placeholder {
@@ -392,7 +393,10 @@ color: %color:On Primary Container%;
   padding: 4px 16px;
   
 }
-
+.left-nav .anvil-label{
+    padding: 4px 10px;
+    
+}
 .left-nav .anvil-component.left_edge-icon {
   padding-left: 72px;
 }
