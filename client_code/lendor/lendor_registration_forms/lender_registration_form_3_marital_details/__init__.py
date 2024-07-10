@@ -20,29 +20,15 @@ class lender_registration_form_3_marital_details(lender_registration_form_3_mari
     self.anual_ctc.visible = False
     # self.column_panel_1.visible = False
     # self.column_panel_2.visible = False
+    
 
     self.userId = user_id
-    # user_data=app_tables.fin_user_profile.get(customer_id=user_id)
-    # if user_data:
-    #   self.marital_status_lender_registration_dropdown.selected_value=user_data['marital_status']
-    #   user_data.update()
 
-    # options = app_tables.fin_lendor_marrital_status.search()
-    # options_string = [str(option['lendor_marrital_status']) for option in options]
-    # self.marital_status_lender_registration_dropdown.items = options_string
     self.init_components(**properties)
 
     
 
-    user_data=app_tables.fin_guarantor_details.get(customer_id=user_id)
-    if user_data:
-      self.drop_down_1.selected_value = user_data['another_person']
-      if user_data['another_person'] == 'Spouse':
-        self.column_panel_2.visible = True
-        self.column_panel_2.visible = False
-      else:
-        self.column_panel_2.visible = False
-        self.column_panel_2.visible = True
+    
 
     user_data=app_tables.fin_guarantor_details.get(customer_id=user_id)
     if user_data:
