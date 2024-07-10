@@ -24,7 +24,7 @@ class part_payment(part_paymentTemplate):
     self.loan_amount_label.text = loan_details['loan_amount']
     self.total_emi_amount_label.text = loan_details['total_emi_amount']
     self.emi_amount_label.text = loan_details['emi_amount']
-    self.account_no_label.text = loan_details['account_no']
+    # self.account_no_label.text = loan_details['account_no']
     self.tenure_label.text = loan_details['tenure']
     self.interest_label.text = loan_details['interest_amount']
     self.remainining_amount.text = loan_details['remainining_amount']
