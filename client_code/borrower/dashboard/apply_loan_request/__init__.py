@@ -74,7 +74,9 @@ class apply_loan_request(apply_loan_requestTemplate):
                 self.label_8.visible = True
                 self.product_description_label.visible = True
                 self.product_description_label.text = product_details['product_description']
+                self.drop_down_3_change()
                 self.link_2_click()
+                self.link_1.visible = True
             else:
                 self.label_8.visible = True
                 self.product_description_label.visible = True
@@ -246,7 +248,7 @@ class apply_loan_request(apply_loan_requestTemplate):
         product_group = self.name.selected_value
         product_category = self.drop_down_2.selected_value
         product_name = self.drop_down_1.selected_value
-        self.link_1.visible = True
+        # self.link_1.visible = True
     
         if product_group and product_category and product_name:
             # Fetch the data from fin_product_details based on the product_group, product_category, and product_name
@@ -261,7 +263,7 @@ class apply_loan_request(apply_loan_requestTemplate):
                 emi_payment_options = product_detail['emi_payment']
                 emi_payment_options = emi_payment_options.split(", ") if emi_payment_options else []
                 self.drop_down_3.items = emi_payment_options
-                self.link_1.visible = True
+                # self.link_1.visible = True
                 self.column_panel_3.visible = False
                 self.submit.visible = False
 
@@ -302,8 +304,10 @@ class apply_loan_request(apply_loan_requestTemplate):
 
     def display_monthly_payment_details(self):
         # Convert the necessary text values to float or int
+        user_request = app_tables.fin_product_details.get(product_name=self.product_name)
         total_repayment_amount = float(self.label_34.text.replace('₹ ', '').replace(',', '').strip())
-        interest_rate = float(self.label_7_copy.text.replace('%', '').strip())
+        # interest_rate = float(self.label_7_copy.text.replace('%', '').strip())
+        interest_rate = user_request['roi']
         tenure_months = int(self.text_box_1.text.strip())
         loan_amount = float(self.label_28.text.replace('₹ ', '').replace(',', '').strip())
     
@@ -322,9 +326,11 @@ class apply_loan_request(apply_loan_requestTemplate):
         self.repeating_panel_1.items = payment_details
 
     def calculate_payment_schedule(self, total_repayment_amount, emi, monthly_interest_rate):
+        user_request = app_tables.fin_product_details.get(product_name=self.product_name)
+        self.processing_fee = user_request['processing_fee']
         self.tenure_months = self.text_box_1.text
         self.loan_amount = self.label_28.text
-        self.processing_fee = self.label_21.text
+        # self.processing_fee = self.label_21.text
         payment_schedule = []
         processing_fee_per_month = (self.processing_fee / 100) * self.loan_amount / self.tenure_months
         beginning_balance = total_repayment_amount
@@ -351,8 +357,10 @@ class apply_loan_request(apply_loan_requestTemplate):
 
     def display_three_month_payment_details(self, total_interest_amount):
         # Convert the necessary text values to float or int
-        interest_rate = float(self.label_7_copy.text.replace('%', '').strip())
-        tenure_months = int(self.text_box_1.text.strip())
+        user_request = app_tables.fin_product_details.get(product_name=self.product_name)
+        interest_rate = user_request['roi']
+        # interest_rate = float(self.label_7_copy.text.replace('%', '').strip())
+        tenure_months = int(str(self.text_box_1.text).strip())  # Ensure this is treated as a string first, then convert to int
         loan_amount = float(self.label_28.text.replace('₹ ', '').replace(',', '').strip())
         processing_fee = float(self.label_21.text.replace('%', '').strip())
         
@@ -408,16 +416,30 @@ class apply_loan_request(apply_loan_requestTemplate):
         return payment_schedule
 
     def display_six_month_payment_details(self, total_interest_amount):
-        self.interest_rate =self.label_7_copy.text
-        self.tenure_months = self.text_box_1.text
-        self.loan_amount = self.label_28.text
-        self.processing_fee = self.label_21.text
-        monthly_interest_rate = self.interest_rate / 100 / 12
-        emi_denominator = ((1 + monthly_interest_rate) ** self.tenure_months) - 1
-        emi_numerator = self.loan_amount * monthly_interest_rate * ((1 + monthly_interest_rate) ** self.tenure_months)
+        # Convert the necessary text values to float or int
+        user_request = app_tables.fin_product_details.get(product_name=self.product_name)
+        interest_rate = user_request['roi']
+        processing_fee = user_request['processing_fee']
+        # interest_rate = float(self.label_7_copy.text.replace('%', '').strip())
+        tenure_months = int(self.text_box_1.text.strip())
+        loan_amount = float(self.label_28.text.replace('₹ ', '').replace(',', '').strip())
+        # processing_fee = float(self.label_21.text.replace('%', '').strip())
+    
+        # Calculate monthly interest rate
+        monthly_interest_rate = interest_rate / 100 / 12
+    
+        # Calculate EMI
+        emi_denominator = ((1 + monthly_interest_rate) ** tenure_months) - 1
+        emi_numerator = loan_amount * monthly_interest_rate * ((1 + monthly_interest_rate) ** tenure_months)
         emi = emi_numerator / emi_denominator
-        processing_fee_per_month = (self.processing_fee / 100) * self.loan_amount / self.tenure_months
+    
+        # Calculate processing fee per month
+        processing_fee_per_month = (processing_fee / 100) * loan_amount / tenure_months
+    
+        # Generate the payment schedule
         payment_schedule = self.calculate_six_month_payment_schedule(emi, monthly_interest_rate, processing_fee_per_month, total_interest_amount)
+        
+        # Set the items for the repeating panel
         self.repeating_panel_1.items = payment_schedule
 
     def calculate_six_month_payment_schedule(self, emi, monthly_interest_rate, processing_fee_per_month, total_interest_amount):
@@ -459,10 +481,10 @@ class apply_loan_request(apply_loan_requestTemplate):
         return total_interest
 
     def submit_click(self, **event_args):
-        self.interest_rate = float(self.label_7_copy.text.replace('%', '').strip())
-        self.tenure_months = int(self.text_box_1.text.strip())
-        self.loan_amount = float(self.label_28.text.replace('₹ ', '').replace(',', '').strip())
-        self.total_repayment_amount = float(self.label_34.text.replace('₹ ', '').replace(',', '').strip())
+        self.interest_rate = float(str(self.label_7_copy.text).replace('%', '').strip())
+        self.tenure_months = int(str(self.text_box_1.text).strip())
+        self.loan_amount = float(str(self.label_28.text).replace('₹ ', '').replace(',', '').strip())
+        self.total_repayment_amount = float(str(self.label_34.text).replace('₹ ', '').replace(',', '').strip())
         # processing_fee = float(self.label_21.text.replace('%', '').strip())
         self.product_group = self.name.selected_value
         self.product_category = self.drop_down_2.selected_value
@@ -476,22 +498,26 @@ class apply_loan_request(apply_loan_requestTemplate):
         self.product_id = user_request['product_id']
         self.membership_type = user_request['membership_type']
         self.credit_limt = user_request['max_amount']
+        self.entered_payment_type = self.drop_down_3.selected_value
+        self.processing_fee_amount = float(str(self.label_32.text).replace('₹ ', '').replace(',', ''))
+        self.total_interest = float(str(self.label_30.text).replace('₹ ', '').replace(',', ''))
+        self.product_discription = self.product_description_label.text
         result = anvil.server.call('add_loan_details',
-                                   self.loan_amount,
-                                   self.tenure_months,
-                                   self.user_id,
-                                   self.interest_rate,
-                                   self.total_repayment_amount,
-                                   self.product_id,
-                                   self.membership_type,
-                                   self.credit_limt,
-                                   self.product_name,
-                                   self.entered_payment_type,
-                                   self.processing_fee_amount,
-                                   self.total_interest,
-                                   self.product_discription,
-                                   self.emi)
-
+                                  self.loan_amount,
+                                  self.tenure_months,
+                                  self.user_id,
+                                  self.interest_rate,
+                                  self.total_repayment_amount,
+                                  self.product_id,
+                                  self.membership_type,
+                                  self.credit_limt,
+                                  self.product_name,
+                                  self.entered_payment_type,
+                                  self.processing_fee_amount,
+                                  self.total_interest,
+                                  self.product_discription,
+                                  self.emi)
+    
         print(result)
         alert("Request Submitted")
         open_form('borrower.dashboard')

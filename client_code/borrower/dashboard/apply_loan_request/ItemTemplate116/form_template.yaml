@@ -2,7 +2,7 @@ is_package: true
 container: {type: ColumnPanel}
 components:
 - name: column_panel_1
-  properties: {role: elevated-card, col_widths: '{"IBTIQB":5,"TBCIVY":6,"RVDMTK":6,"MGPIUH":6,"SPYBIU":6,"PDSXPT":6}'}
+  properties: {role: elevated-card, col_widths: '{"IBTIQB":8,"TBCIVY":8,"RVDMTK":8,"XTEERS":10,"GQYFSJ":10,"DQGCKL":8,"XNSOID":8}'}
   type: ColumnPanel
   layout_properties: {grid_position: 'NGOYES,FCRCUO'}
   components:
@@ -18,33 +18,33 @@ components:
     layout_properties: {grid_position: 'XOJUUE,TBCIVY'}
     data_bindings:
     - {property: text, code: 'self.item[''BeginningBalance'']'}
-  - name: label_6
+  - name: label_7
     properties: {font_size: 14}
+    type: Label
+    layout_properties: {grid_position: 'XOJUUE,XTEERS'}
+    data_bindings:
+    - {property: text, code: 'self.item[''Principal'']'}
+  - name: label_8
+    properties: {font_size: 14, align: left}
+    type: Label
+    layout_properties: {grid_position: 'XOJUUE,DQGCKL'}
+    data_bindings:
+    - {property: text, code: 'self.item[''Interest'']'}
+  - name: label_10
+    properties: {font_size: 14, align: center}
+    type: Label
+    layout_properties: {grid_position: 'XOJUUE,XNSOID'}
+    data_bindings:
+    - {property: text, code: 'self.item[''ProcessingFee'']'}
+  - name: label_6
+    properties: {font_size: 14, align: center}
     type: Label
     layout_properties: {grid_position: 'XOJUUE,RVDMTK'}
     data_bindings:
     - {property: text, code: 'self.item[''TotalPayment'']'}
-  - name: label_7
-    properties: {font_size: 14}
-    type: Label
-    layout_properties: {grid_position: 'XOJUUE,MGPIUH'}
-    data_bindings:
-    - {property: text, code: 'self.item[''Principal'']'}
-  - name: label_8
-    properties: {font_size: 14}
-    type: Label
-    layout_properties: {grid_position: 'XOJUUE,SPYBIU'}
-    data_bindings:
-    - {property: text, code: 'self.item[''Interest'']'}
   - name: label_9
-    properties: {font_size: 14}
+    properties: {font_size: 14, align: center}
     type: Label
     layout_properties: {grid_position: 'XOJUUE,GQYFSJ'}
     data_bindings:
     - {property: text, code: 'self.item[''EndingBalance'']'}
-  - name: label_10
-    properties: {font_size: 14}
-    type: Label
-    layout_properties: {grid_position: 'XOJUUE,PDSXPT'}
-    data_bindings:
-    - {property: text, code: 'self.item[''ProcessingFee'']'}
