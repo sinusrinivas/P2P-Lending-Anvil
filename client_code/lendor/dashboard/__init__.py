@@ -21,12 +21,13 @@ class dashboard(dashboardTemplate):
     self.user_id = self.user_id
     self.load_data(None)
     self.update_platform_fees()
+    self.image_5.role = 'circular-image'
 
 
     user_profile = app_tables.fin_user_profile.get(customer_id=self.user_id)
     if user_profile:
       self.image_5.source = user_profile['user_photo']
-      self.label_11.text = "Welcome " + user_profile['full_name']
+      self.label_11.text =  user_profile['full_name']
       
     existing_loans = app_tables.fin_loan_details.search(loan_updated_status=q.any_of(
                           q.like('under process%'),
@@ -41,7 +42,7 @@ class dashboard(dashboardTemplate):
 
     opening_bal = app_tables.fin_wallet.get(customer_id=self.user_id)   
     self.label_2_copy.text = "{:.2f}".format((opening_bal['wallet_amount'] or 0))
-    self.label_4_copy.text =  "{:.2f}".format((opening_bal['wallet_amount'] or 0))
+    # self.label_4_copy.text =  "{:.2f}".format((opening_bal['wallet_amount'] or 0))
 
     my_returns = app_tables.fin_lender.get(customer_id=self.user_id)
     self.label_7.text = str(my_returns['return_on_investment'] or 0)

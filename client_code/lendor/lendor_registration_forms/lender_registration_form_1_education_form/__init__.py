@@ -30,22 +30,23 @@ class lender_registration_form_1_education_form(lender_registration_form_1_educa
     self.column_panel_3.visible = False
     self.column_panel_4.visible = False
     self.column_panel_5.visible = False
-  # def validate_file(self, file):
-  #   """Validate file type and size."""
-  #   if file is None:
-  #     return False, "No file uploaded."
-
-  #   file_type = file.content_type
-  #   file_size = len(file.get_bytes())  # Use len to get size in bytes
-
-  #   if file_type not in ['image/jpeg', 'image/jpg', 'image/png', 'application/pdf']:
-  #     return False, "Only JPG images and PDF files are allowed."
-
-  #   if file_size > 2 * 1024 * 1024:  # 2MB limit
-  #     return False, "File size must be less than 2MB."
-
-  #   return True, ""
-
+  def validate_file_upload(self, **event_args):
+        file_loader = event_args['sender']
+        file = file_loader.file
+        max_size = 2 * 1024 * 1024  # 2MB in bytes
+        allowed_types = ['image/jpeg', 'image/png', 'image/jpg', 'application/pdf']
+    
+        if file:
+            file_size = len(file.get_bytes())
+            if file_size > max_size:
+                alert('File size should be less than 2MB')
+                file_loader.clear()
+                return
+    
+            if file.content_type not in allowed_types:
+                alert('Invalid file type. Only JPEG, PNG, jpg and PDF are allowed')
+                file_loader.clear()
+                return
 
   def button_2_click(self, **event_args):
         """This method is called when the button is clicked"""
@@ -71,22 +72,64 @@ class lender_registration_form_1_education_form(lender_registration_form_1_educa
       
         # Validate files based on qualification
         if qualification == '10th standard' and not tenth_class:
+            self.file_loader_1.background = '#FF0000'
+            self.file_loader_1.focus()
             Notification('Please upload All document before proceeding.').show()
             return
         if qualification == '12th standard' and (not tenth_class_1 or not intermediate):
+            if not tenth_class_1:
+              self.file_loader_2.background = '#FF0000'
+              self.file_loader_2.focus()
+            if not intermediate:
+              self.file_loader_3.background = '#FF0000'
+              self.file_loader_3.focus()
             Notification('Please upload All documents before proceeding.').show()
             return
         elif qualification == "Bachelor's degree" and (not tenth_class_2 or not intermediate_1 or not btech):
+            if not tenth_class_2:
+              self.file_loader_4.background = '#FF0000'
+              self.file_loader_4.focus()
+            if not intermediate_1:
+              self.file_loader_5.background = '#FF0000'
+              self.file_loader_5.focus()
+            if not btech:
+              self.file_loader_6.background = '#FF0000'
+              self.file_loader_6.focus()
             Notification("Please upload All documents before proceeding.").show()
             return
         elif qualification == "Master's degree" and (not tenth_class_3 or not intermediate_2 or not btech_1 or not mtech):
+            if not tenth_class_3:
+              self.file_loader_7.background = '#FF0000'
+              self.file_loader_7.focus()
+            if not intermediate_2:
+              self.file_loader_8.background = '#FF0000'
+              self.file_loader_8.focus()
+            if not btech_1:
+              self.file_loader_9.background = '#FF0000'
+              self.file_loader_9.focus()
+            if not mtech:
+              self.file_loader_10.background = '#FF0000'
+              self.file_loader_10.focus()
             Notification("Please upload All documents before proceeding.").show()
             return
         elif qualification == 'PhD' and (not tenth_class_4 or not intermediate_3 or not btech_2 or not mtech_1 or not phd):
+            if not tenth_class_4:
+              self.file_loader_11.background = '#FF0000'
+              self.file_loader_11.focus()
+            if not intermediate_3:
+              self.file_loader_12.background = '#FF0000'
+              self.file_loader_12.focus()
+            if not btech_2:
+              self.file_loader_13.background = '#FF0000'
+              self.file_loader_13.focus()
+            if not mtech_1:
+              self.file_loader_14.background = '#FF0000'
+              self.file_loader_14.focus()
+            if not phd:
+              self.file_loader_15.background = '#FF0000'
+              self.file_loader_15.focus()
             Notification('Please upload all documents before proceeding.').show()
             return
-
-
         # Proceed with server call and form navigation
         if qualification == '10th standard':
             anvil.server.call('add_education_tenth', tenth_class, user_id)
@@ -99,6 +142,8 @@ class lender_registration_form_1_education_form(lender_registration_form_1_educa
         elif qualification == 'PhD':
             anvil.server.call('add_education_phd', tenth_class_4, intermediate_3, btech_2, mtech_1, phd, user_id)
         else:
+            self.drop_down_1.background = '#FF0000'
+            self.drop_down_1.focus()
             Notification("Please select a valid qualification status").show()
             return
 

@@ -191,6 +191,7 @@ class dashboard(dashboardTemplate):
         self.update_user_profile()
         self.load_notifications()
         self.update_platform_fees()
+        self.image_1_copy_copy.role = 'circular-image'
          # Search for loans taken by the current user
         self.data= app_tables.fin_loan_details.search(borrower_customer_id=self.user_Id)
         loan_count = len(self.data)
@@ -480,7 +481,7 @@ class dashboard(dashboardTemplate):
             else:
                 wallet_row = app_tables.fin_wallet.get(customer_id=self.user_Id)
                 if wallet_row and wallet_row['wallet_id'] is not None:
-                    open_form('borrower.dashboard.new_loan_request')
+                    open_form('borrower.dashboard.apply_loan_request')
                 else:
                     alert("Wallet not found. Please create a wallet.")
         except anvil.tables.TableError as e:
