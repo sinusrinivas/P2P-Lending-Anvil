@@ -52,7 +52,8 @@ class lender_registration_Institutional_form_1(lender_registration_Institutional
         if re.match(r'^[A-Za-z\s]+$', Business_add):
             self.text_box_1_copy.background = None
         else:
-            self.text_box_1_copy.background = '#FF0000'  # Red background for invalid input
+            text_box = anvil.js.get_dom_node(self.text_box_1_copy)
+            text_box.style.border = "2px solid red"  # Example: 2 pixel wide solid red border
             alert('please enter a valid business address')
 
   def validate_business_name(self, **event_args):
@@ -89,7 +90,8 @@ class lender_registration_Institutional_form_1(lender_registration_Institutional
         if re.match(r'^[A-Za-z\s]+$', industry_type):
             self.text_box_3.background = None
         else:
-            self.text_box_3.background = '#FF0000'  # Red background for invalid input
+            text_box = anvil.js.get_dom_node(self.text_box_3)
+            text_box.style.border = "2px solid red"  # Example: 2 pixel wide solid red border
             alert('please enter a valid industry type')
 
   def validate_six_month_turnover(self, **event_args):
@@ -99,7 +101,8 @@ class lender_registration_Institutional_form_1(lender_registration_Institutional
         elif ' 'in six_month_turnover:
             alert('Spaces are not allowed ')
         else:
-            self.text_box_4.background = '#FF0000'  # Red background for invalid input
+            text_box = anvil.js.get_dom_node(self.text_box_1_copy)
+            text_box.style.border = "2px solid red"  # Example: 2 pixel wide solid red border
             alert('please enter a valid six month turn over')
   
   def validate_din(self, **event_args):
