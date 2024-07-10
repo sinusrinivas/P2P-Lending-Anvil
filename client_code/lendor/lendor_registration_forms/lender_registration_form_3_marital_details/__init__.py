@@ -65,9 +65,32 @@ class lender_registration_form_3_marital_details(lender_registration_form_3_mari
     self.spouse_name_text.add_event_handler("change", self.validate_spouse_name)
     self.date_picker_3.add_event_handler("change", self.validate_spouse_dob)
     self.spouse_mbl_no_text.add_event_handler("change", self.validate_spouse_mbl_no)
-    self.drop_down_1_copy.add_event_handler("change", self.validate_spouse_profession)
+    self.drop_down_1_copy.add_event_handler("change", self.toggle_spouse_fields_visibility)
+    self.drop_down_1.add_event_handler("change", self.toggle_father_spouse_fields_visibility)
     # self.spouse_companyname_text.add_event_handler("change", self.validate_spouse_company)
     # self.annual_earning_text.add_event_handler("change", self.validate_annual_earning)
+
+  def toggle_father_spouse_fields_visibility(self, **event_args):
+    selected_person = self.drop_down_1.selected_value
+    if selected_person == "Spouse":
+            self.spouse_companyname_text.visible = False
+            self.annual_earning_text.visible = False
+            self.company_name.visible = False
+            self.anual_ctc.visible = False
+
+  def toggle_spouse_fields_visibility(self, **event_args):
+        selected_profession = self.drop_down_1_copy.selected_value
+        if selected_profession == "Home Maker":
+            self.spouse_companyname_text.visible = False
+            self.annual_earning_text.visible = False
+            self.company_name.visible = False
+            self.anual_ctc.visible = False
+            
+        else:
+            self.spouse_companyname_text.visible = True
+            self.annual_earning_text.visible = True
+            self.company_name.visible = True
+            self.anual_ctc.visible = True
 
   def button_next_click(self, **event_args):
       marital_status = self.marital_status_lender_registration_dropdown.selected_value
