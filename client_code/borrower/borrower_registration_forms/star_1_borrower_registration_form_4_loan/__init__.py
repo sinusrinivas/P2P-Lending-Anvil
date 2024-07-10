@@ -109,7 +109,7 @@ class star_1_borrower_registration_form_4_loan(star_1_borrower_registration_form
         # if not self.toggleswitch_1.checked or not self.toggleswitch_2.checked or not self.toggleswitch_3.checked or not self.toggleswitch_4.checked or not self.toggleswitch_1.unchecked or not self.toggleswitch_2.unchecked or not self.toggleswitch_3.unchecked or not self.toggleswitch_4.unchecked:
         #     alert("Please select  loan status before proceeding.")
         if not (self.toggleswitch_1_interacted and self.toggleswitch_2_interacted and self.toggleswitch_3_interacted and self.toggleswitch_4_interacted):
-            alert("Please select all loan status toggle switches before proceeding.")
+            alert("Please select all loan status toggle switches Yes or No before proceeding.")
         else:
             anvil.server.call('add_borrower_step4', self.home_loan_status, 
                               self.other_loan_status, self.user_id,

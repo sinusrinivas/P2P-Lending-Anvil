@@ -36,7 +36,7 @@ components:
     name: label_3
     layout_properties: {grid_position: 'NPXVTB,DLVCWG'}
   - name: column_panel_1
-    properties: {col_widths: '{"BLZNWK":20,"SWRPTG":40}'}
+    properties: {col_widths: '{"BLZNWK":15,"SWRPTG":45}'}
     type: ColumnPanel
     layout_properties: {grid_position: 'NPXVTB,CVLZJM'}
     components:
@@ -54,7 +54,7 @@ components:
     name: label_4
     layout_properties: {grid_position: 'UGDOUC,BDLSWX'}
   - name: column_panel_1_copy
-    properties: {col_widths: '{"BUHPYU":20,"WSOAPN":40}'}
+    properties: {col_widths: '{"BUHPYU":15,"WSOAPN":45}'}
     type: ColumnPanel
     layout_properties: {grid_position: 'UGDOUC,CJYIIB'}
     components:
@@ -72,7 +72,7 @@ components:
     name: label_5
     layout_properties: {grid_position: 'PBJUZL,LQRQMQ'}
   - name: column_panel_1_copy_2
-    properties: {col_widths: '{"ZWIMBJ":20,"DHLMME":40}'}
+    properties: {col_widths: '{"ZWIMBJ":15,"DHLMME":45}'}
     type: ColumnPanel
     layout_properties: {grid_position: 'PBJUZL,QODYWJ'}
     components:
@@ -90,7 +90,7 @@ components:
     name: label_6
     layout_properties: {grid_position: 'ODLHSX,WFCYQG'}
   - name: column_panel_1_copy_2_copy
-    properties: {col_widths: '{"IEGZJQ":20,"BSFXVE":40}'}
+    properties: {col_widths: '{"IEGZJQ":15,"BSFXVE":45}'}
     type: ColumnPanel
     layout_properties: {grid_position: 'ODLHSX,FHUDUV'}
     components:
