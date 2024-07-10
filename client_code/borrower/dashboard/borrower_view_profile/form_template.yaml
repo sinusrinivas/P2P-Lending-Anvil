@@ -22,7 +22,7 @@ components:
     type: form:borrower.dashboard.Navigation_form_dashboard
     layout_properties: {grid_position: 'RLXWVO,WWMZKT', full_width_row: true}
   - name: column_panel_2
-    properties: {role: elevated-card, col_widths: '{"ZWJJCA":25,"YAUNIP":15,"EUCVVS":20}', background: ''}
+    properties: {role: elevated-card, col_widths: '{"ZWJJCA":20,"YAUNIP":20,"EUCVVS":20,"LEIVEF":15,"EMNACM":30,"RPKRXA":20,"ZWZBDO":15,"NLBRAB":30,"XZNZGG":20,"IBXPZY":10,"YLMXVT":10}', background: ''}
     type: ColumnPanel
     layout_properties: {grid_position: 'DXTZII,XHHUAF', full_width_row: true}
     components:
@@ -51,6 +51,38 @@ components:
       properties: {text: '', bold: false, font_size: 16, icon: 'fa:window-maximize', align: center, spacing_above: none}
       type: Label
       layout_properties: {grid_position: 'AQPMDH,XPUZFG'}
+    - name: spacer_2
+      properties: {height: 32}
+      type: Spacer
+      layout_properties: {grid_position: 'IKVWMJ,LEIVEF'}
+    - name: label_19
+      properties: {text: Credit limit  -, bold: true, font_size: 14, icon: 'fa:sort-amount-asc', align: center}
+      type: Label
+      layout_properties: {grid_position: 'IKVWMJ,EMNACM'}
+    - name: credit_label
+      properties: {}
+      type: Label
+      layout_properties: {grid_position: 'IKVWMJ,RPKRXA'}
+    - name: spacer_6
+      properties: {height: 32}
+      type: Spacer
+      layout_properties: {grid_position: 'IKVWMJ,IBXPZY'}
+    - name: spacer_5
+      properties: {height: 32}
+      type: Spacer
+      layout_properties: {grid_position: 'LPRKAE,ZWZBDO'}
+    - name: label_20
+      properties: {text: Joined Date -, bold: true, font_size: 14, icon: 'fa:address-card', align: center}
+      type: Label
+      layout_properties: {grid_position: 'LPRKAE,NLBRAB'}
+    - name: joined_date_label
+      properties: {}
+      type: Label
+      layout_properties: {grid_position: 'LPRKAE,XZNZGG'}
+    - name: spacer_7
+      properties: {height: 32}
+      type: Spacer
+      layout_properties: {grid_position: 'LPRKAE,YLMXVT'}
     - name: button_1_copy_6
       properties: {text: Personal Information, align: full, background: '#0b2547', border: '', foreground: 'theme:On Primary'}
       type: Button
