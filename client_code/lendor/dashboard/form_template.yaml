@@ -260,27 +260,27 @@ components:
     properties: {height: '10'}
     type: Spacer
     layout_properties: {grid_position: 'TOAYPK,NNLPCM BWOIXR,BNPCHK'}
-  - properties: {text: '', bold: true, font_size: 12, icon: 'fa:address-book'}
+  - properties: {text: '', bold: true, font_size: 12, icon: _/theme/lender/dashboard/membership-type.png, icon_align: left}
     type: Label
     layout_properties: {grid_position: 'TOAYPK,NNLPCM WYYBYE,UYDLPQ'}
     name: label_12
-  - properties: {font_size: 12, bold: false}
+  - properties: {font_size: 12, bold: false, foreground: '#013065'}
     type: Label
     layout_properties: {grid_position: 'TOAYPK,NNLPCM WYYBYE,GVKYIO'}
     name: label_13
-  - properties: {text: '', bold: true, font_size: 12, icon: 'fa:500px'}
+  - properties: {text: '', bold: true, font_size: 12, icon: 'fa:user', foreground: '#013065'}
     type: Label
     layout_properties: {grid_position: 'TOAYPK,NNLPCM ESHMKX,RYITEI'}
     name: label_14
-  - properties: {font_size: 12}
+  - properties: {font_size: 12, foreground: '#013065'}
     type: Label
     layout_properties: {grid_position: 'TOAYPK,NNLPCM ESHMKX,SIFMBU'}
     name: label_15
-  - properties: {bold: true, font_size: null, align: left}
+  - properties: {bold: true, font_size: null, align: left, foreground: '#013065'}
     type: Label
     layout_properties: {grid_position: 'AHYSPT,SQSJCS'}
     name: label_11
-  - properties: {text: View/Edit Profile, foreground: '#013065', icon: 'fa:edit'}
+  - properties: {text: ' Profile', foreground: '#013065', icon: 'fa:edit'}
     type: Link
     layout_properties: {grid_position: 'AXOFMU,UNAMIA'}
     event_bindings: {click: link_9_click}
