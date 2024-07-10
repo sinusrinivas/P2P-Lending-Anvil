@@ -56,14 +56,6 @@ components:
         type: Label
         layout_properties: {grid_position: 'LZNRZA,HFRXTF DNIXMM,DOKLOE'}
         name: interest_label
-      - properties: {role: input-prompt, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: 14, tooltip: '', text: 'Account Number :'}
-        type: Label
-        layout_properties: {grid_position: 'LZNRZA,HFRXTF UCACJZ,BZVCTV'}
-        name: label_1
-      - properties: {align: left, role: null, border: '', font_size: 14}
-        type: Label
-        layout_properties: {grid_position: 'LZNRZA,HFRXTF UCACJZ,UHGKJZ'}
-        name: account_no_label
       - properties: {text: 'Remaining Amount :', bold: true, role: input-prompt, font_size: 14}
         type: Label
         layout_properties: {grid_position: 'LZNRZA,HFRXTF XKIJFT,INRMOH'}
@@ -80,14 +72,6 @@ components:
         type: Label
         layout_properties: {grid_position: 'LZNRZA,HFRXTF SKACED,JBSXOE'}
         name: emi_amount_label
-      - properties: {role: input-prompt, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: 14, tooltip: '', text: 'Total  Amount :'}
-        type: Label
-        layout_properties: {grid_position: 'LZNRZA,HFRXTF QDASMO,JTNDHW'}
-        name: label_3
-      - properties: {role: null, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: 14, tooltip: '', text: ''}
-        type: Label
-        layout_properties: {grid_position: 'LZNRZA,HFRXTF QDASMO,JFJMQT'}
-        name: total_emi_amount_label
       - name: label_2
         properties: {font_size: 14, text: 'Processing Fee : ', bold: true}
         type: Label
@@ -136,6 +120,14 @@ components:
         properties: {align: left, visible: false, role: null, border: '', font_size: 14}
         type: Label
         layout_properties: {grid_position: 'LZNRZA,HFRXTF JYJBYU,JWXTVY'}
+      - properties: {role: null, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: 16, tooltip: '', text: 'Total  Amount :'}
+        type: Label
+        layout_properties: {grid_position: 'LZNRZA,HFRXTF MYLCHH,ZOYTAT'}
+        name: label_3
+      - properties: {role: null, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: 16, tooltip: '', text: ''}
+        type: Label
+        layout_properties: {grid_position: 'LZNRZA,HFRXTF MYLCHH,CIOEVR'}
+        name: total_emi_amount_label
       - properties: {visible: false, bold: false, role: null, font_size: 14}
         type: Label
         layout_properties: {grid_position: 'LZNRZA,HFRXTF SFPKPN,YFBOIX'}
