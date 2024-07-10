@@ -4,7 +4,7 @@ container:
   properties: {html: '@theme:standard-page.html'}
 components:
 - type: ColumnPanel
-  properties: {col_widths: '{"SPBVNP":60,"NAIERL":17,"NGTYLL":3}'}
+  properties: {col_widths: '{"SPBVNP":60,"NAIERL":17}'}
   layout_properties: {slot: default}
   name: content_panel
   components:
@@ -12,7 +12,7 @@ components:
     type: Spacer
     layout_properties: {grid_position: 'JNKTYE,SPBVNP HHHSYY,MICZHI', full_width_row: true}
     name: spacer_10
-  - properties: {col_widths: '{"NETDIR":15,"IXNAVP":15}'}
+  - properties: {col_widths: '{"NETDIR":15}'}
     type: ColumnPanel
     layout_properties: {grid_position: 'JNKTYE,SPBVNP TYTHKD,NPBFAN', full_width_row: true}
     name: column_panel_2
@@ -41,7 +41,7 @@ components:
         name: label_3
     - properties: {role: elevated-card, col_widths: '{"UKYYYV":20,"UPASZV":40,"NTQYEL":6,"ZBZGBO":54}', background: '#Edf0f4'}
       type: ColumnPanel
-      layout_properties: {grid_position: 'ERCHQY,IXNAVP'}
+      layout_properties: {grid_position: 'ERCHQY,DTSEQU'}
       name: column_panel_5
       components:
       - properties: {height: '45', source: _/theme/lender/dashboard/interest%20earned.svg}
@@ -69,7 +69,7 @@ components:
         name: label_7
     - properties: {role: elevated-card, col_widths: '{"CUOOLO":20,"ZYDTNB":40}', background: '#Edf0f4'}
       type: ColumnPanel
-      layout_properties: {grid_position: 'ERCHQY,XIALYZ'}
+      layout_properties: {grid_position: 'ERCHQY,YLLOPG'}
       name: column_panel_6
       components:
       - properties: {height: '45', source: _/theme/lender/dashboard/net%20asset%20value.svg}
@@ -77,9 +77,10 @@ components:
         layout_properties: {grid_position: 'QAERLY,CUOOLO'}
         name: image_4
       - properties:
-          text: "New Loan \n  Request"
+          text: "New Loan \nRequest"
           bold: true
           font_size: 15
+          align: center
         type: Label
         layout_properties: {grid_position: 'QAERLY,ZYDTNB IFVDXW,KISYOU'}
         name: label_8
@@ -263,7 +264,7 @@ components:
     type: Label
     layout_properties: {grid_position: 'TOAYPK,NNLPCM WYYBYE,UYDLPQ'}
     name: label_12
-  - properties: {font_size: 16}
+  - properties: {font_size: 16, bold: false}
     type: Label
     layout_properties: {grid_position: 'TOAYPK,NNLPCM WYYBYE,GVKYIO'}
     name: label_13
@@ -275,11 +276,27 @@ components:
     type: Label
     layout_properties: {grid_position: 'TOAYPK,NNLPCM ESHMKX,SIFMBU'}
     name: label_15
+  - properties: {text: View/Edit Profile, foreground: '#013065', icon: 'fa:edit'}
+    type: Link
+    layout_properties: {grid_position: 'AXOFMU,UNAMIA'}
+    event_bindings: {click: link_9_click}
+    name: link_9
   - properties: {text: View Loan Requests, foreground: '#013065', icon: _/theme/borrower/dashboard/%20new%20loan%20request.png, bold: false}
     type: Link
     layout_properties: {grid_position: 'IVSPJZ,CGCMKH'}
     event_bindings: {click: link_1_click}
     name: link_1
+    components: []
+  - properties: {text: View Loans, foreground: '#013065', icon: _/theme/borrower/dashboard/view%20loans.png}
+    type: Link
+    layout_properties: {grid_position: 'FYLIJE,GBXRLW'}
+    event_bindings: {click: link_5_click}
+    name: link_5
+  - properties: {text: Today's Due, foreground: '#013065', icon: 'fa:calendar', bold: false}
+    type: Link
+    layout_properties: {grid_position: 'YFTUTZ,OMBGSG'}
+    event_bindings: {click: link_4_click}
+    name: link_4
   - properties: {text: View Loan Extension, foreground: '#013065', icon: _/theme/borrower/dashboard/loan-extension.png}
     type: Link
     layout_properties: {grid_position: 'KHYFFC,KZXOQH'}
@@ -290,46 +307,26 @@ components:
     layout_properties: {grid_position: 'VREEBW,MZTWLG'}
     event_bindings: {click: link_3_click}
     name: link_3
-  - properties: {text: Today's Due, foreground: '#013065', icon: 'fa:calendar', bold: false}
-    type: Link
-    layout_properties: {grid_position: 'LUOUJT,THQHKK'}
-    event_bindings: {click: link_4_click}
-    name: link_4
-  - properties: {text: View Loans, foreground: '#013065', icon: _/theme/borrower/dashboard/view%20loans.png}
-    type: Link
-    layout_properties: {grid_position: 'MVZQCY,AGOEAE'}
-    event_bindings: {click: link_5_click}
-    name: link_5
   - properties: {text: 'View Lost Opportunities ', foreground: '#013065', icon: _/theme/lender/dashboard/lost%20opportunity.png}
     type: Link
     layout_properties: {grid_position: 'VMHQGO,XPSZVU'}
     event_bindings: {click: link_6_click}
     name: link_6
-  - properties: {text: Change Password, foreground: '#013065', icon: _/theme/lender/dashboard/change-password.png}
+  - properties: {text: Portfolio, icon: _/theme/borrower/dashboard/portfolio.png, foreground: '#013065'}
     type: Link
-    layout_properties: {grid_position: 'ITKRMA,TYEGCL'}
-    event_bindings: {click: link_7_click}
-    name: link_7
+    layout_properties: {grid_position: 'ZCMILC,ENKRNF'}
+    event_bindings: {click: link_16_click}
+    name: link_16
   - properties: {text: View Transaction History, foreground: '#013065', icon: 'fa:history'}
     type: Link
     layout_properties: {grid_position: 'PLPJSN,CVKLEM'}
     event_bindings: {click: link_8_click}
     name: link_8
-  - properties: {text: View/Edit Profile, foreground: '#013065', icon: 'fa:edit'}
+  - properties: {text: Change Password, foreground: '#013065', icon: _/theme/lender/dashboard/change-password.png}
     type: Link
-    layout_properties: {grid_position: 'PKJUSV,HEVUDX'}
-    event_bindings: {click: link_9_click}
-    name: link_9
-  - properties: {text: View/Send Notifications, foreground: '#013065', icon: _/theme/lender/dashboard/send-notification.png}
-    type: Link
-    layout_properties: {grid_position: 'NHSQFL,VRYRNY'}
-    event_bindings: {click: link_10_click}
-    name: link_10
-  - properties: {text: Portfolio, icon: _/theme/borrower/dashboard/portfolio.png, foreground: '#013065'}
-    type: Link
-    layout_properties: {grid_position: 'AMEFUQ,ARGBGO'}
-    event_bindings: {click: link_16_click}
-    name: link_16
+    layout_properties: {grid_position: 'LBPBJN,HBEFXI'}
+    event_bindings: {click: link_7_click}
+    name: link_7
   - properties: {height: 87.19989013671875}
     type: Spacer
     layout_properties: {grid_position: 'OYUVDZ,AROLIJ'}

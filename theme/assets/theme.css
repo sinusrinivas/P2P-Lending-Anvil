@@ -261,8 +261,8 @@ color: %color:On Primary Container%;
 /*   top: 0; */
   left: 0;
   flex-shrink: 0;
-  min-width: 240px;
-  max-width: 400px;
+  min-width: 300px;
+  max-width: 500px;
 }
 
 .nav-shield {
@@ -313,7 +313,7 @@ color: %color:On Primary Container%;
   font-size: 14px;
   font-weight: 500;
   color: %color:On Surface Variant%;
-  overflow-x: hidden;
+  overflow-x: auto;
   overflow-y: auto;
   position: fixed;
 /*   top: 54px; */
@@ -341,7 +341,7 @@ color: %color:On Primary Container%;
 }
 
 .left-nav > .column-panel {
-  padding: 24px 0;
+  padding: 2px 0;
 }
 .left-nav > .column-panel > .anvil-panel-section > .anvil-panel-section-container:not(.full-width-row) {
   margin: 0 16px;

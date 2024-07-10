@@ -778,7 +778,7 @@ class basic_registration_form(basic_registration_formTemplate):
         elif user_data['usertype'] == 'borrower':
             open_form('borrower.borrower_registration_forms.borrower_registration_form_1_education', user_id=user_id)
         else:
-            open_form('bank_users.user_form')
+            None
 
 
 

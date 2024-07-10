@@ -3,11 +3,44 @@ container:
   type: HtmlTemplate
   properties: {html: '@theme:standard-page.html', visible: true, background: white, role: null}
 components:
-- properties: {background: white}
+- properties: {background: white, col_widths: '{"DTVNUA":40,"DWURFW":20,"GVENNV":40,"AMAGUJ":20}'}
   type: ColumnPanel
   layout_properties: {slot: left-nav}
   name: column_panel_1
   components:
+  - name: spacer_12
+    properties: {height: 32}
+    type: Spacer
+    layout_properties: {grid_position: 'YNBKYN,PYHNXI'}
+  - properties: {height: '140', source: '', horizontal_align: center, role: null, display_mode: original_size}
+    type: Image
+    layout_properties: {grid_position: 'YNBKYN,YGPYRN'}
+    event_bindings: {mouse_up: image_1_copy_copy_mouse_up}
+    name: image_1_copy_copy
+  - name: spacer_13
+    properties: {height: 32}
+    type: Spacer
+    layout_properties: {grid_position: 'YNBKYN,IOTFZH'}
+  - properties: {text: '', align: center, bold: true, font_size: null}
+    type: Label
+    layout_properties: {grid_position: 'ATJQKL,FCDUDL'}
+    name: label_2_copy
+  - properties: {text: 'Credit Limit :', bold: true, font_size: null, icon: _/theme/borrower/dashboard/borrower_credit_limit.png}
+    type: Label
+    layout_properties: {grid_position: 'GZJIEQ,DTVNUA'}
+    name: label_4
+  - properties: {text: '500000', align: left}
+    type: Label
+    layout_properties: {grid_position: 'GZJIEQ,DWURFW'}
+    name: label_5
+  - properties: {text: 'Member Since:', bold: true, font_size: null, icon: _/theme/borrower/dashboard/borrower_member_since.png}
+    type: Label
+    layout_properties: {grid_position: 'QOXZDA,GVENNV'}
+    name: label_6
+  - properties: {text: 1 aug 2022, align: left}
+    type: Label
+    layout_properties: {grid_position: 'QOXZDA,AMAGUJ'}
+    name: label_7
   - properties: {text: New Loan Request, icon: _/theme/borrower/dashboard/%20new%20loan%20request.png, foreground: '#013065'}
     type: Link
     layout_properties: {grid_position: 'BZNSXQ,TUEPQZ'}
@@ -48,33 +81,15 @@ components:
     layout_properties: {grid_position: 'KGQFZZ,ZWOTRZ'}
     event_bindings: {click: link_8_click}
     name: link_8
-  - properties: {text: Portfolio, foreground: '#013065', icon: _/theme/borrower/dashboard/portfolio.png}
-    type: Link
-    layout_properties: {grid_position: 'AEPNUT,OMVPMJ'}
-    event_bindings: {click: link_10_click}
-    name: link_10
-  - properties: {height: 207.800048828125}
-    type: Spacer
-    layout_properties: {grid_position: 'YAJAFA,RLWNPJ'}
-    name: spacer_12
-- properties: {col_widths: '{"ICHEBR":15,"ZBHZPI":50,"GFOSTO":3,"KRZPIS":12,"QIOHZF":15,"TMHEQE":3,"RWRETV":12,"DCSWXM":15,"XTGGQT":25,"OKJARZ":5}'}
+- properties: {col_widths: '{"ZBHZPI":50,"GFOSTO":3,"KRZPIS":12,"QIOHZF":15,"TMHEQE":3,"RWRETV":12,"DCSWXM":15,"XTGGQT":25,"OKJARZ":5}'}
   type: ColumnPanel
   layout_properties: {slot: default}
   name: column_panel_2
   components:
-  - properties: {text: '     Account Overview :', bold: true, font_size: 20, align: left}
+  - properties: {text: '     Account Overview :', bold: true, font_size: 20, align: left, visible: false}
     type: Label
     layout_properties: {grid_position: 'HQTFXG,HHCUBH', full_width_row: true}
     name: label_1
-  - properties: {height: '140', source: '', horizontal_align: center, role: null, display_mode: original_size}
-    type: Image
-    layout_properties: {grid_position: 'BRLAXK,ICHEBR', full_width_row: true}
-    event_bindings: {mouse_up: image_1_copy_copy_mouse_up}
-    name: image_1_copy_copy
-  - properties: {text: '', align: left, bold: true, font_size: 26}
-    type: Label
-    layout_properties: {grid_position: 'BRLAXK,ZBHZPI OWJNKD,RUADLG', full_width_row: true}
-    name: label_2_copy
   - properties: {height: -0.77777099609375}
     type: Spacer
     layout_properties: {grid_position: 'BRLAXK,ZBHZPI CFFCZA,GFOSTO FNBIKW,JKAJZA'}
@@ -83,7 +98,7 @@ components:
     type: Spacer
     layout_properties: {grid_position: 'BRLAXK,ZBHZPI CFFCZA,GFOSTO HEQOJZ,QTPDEO'}
     name: spacer_2
-  - properties: {height: '25', source: _/theme/borrower/dashboard/borrower_mobile.png, display_mode: zoom_to_fill}
+  - properties: {height: '25', source: _/theme/borrower/dashboard/borrower_mobile.png, display_mode: zoom_to_fill, visible: false}
     type: Image
     layout_properties: {grid_position: 'BRLAXK,ZBHZPI CFFCZA,GFOSTO DEPNHD,BLURTD'}
     name: image_1
@@ -91,11 +106,11 @@ components:
     type: Spacer
     layout_properties: {grid_position: 'BRLAXK,ZBHZPI CFFCZA,GFOSTO QRIROO,UZBYBJ'}
     name: spacer_8
-  - properties: {height: '25', source: _/theme/borrower/dashboard/borrower_member_since.png, display_mode: zoom_to_fill}
+  - properties: {height: '25', source: _/theme/borrower/dashboard/borrower_member_since.png, display_mode: zoom_to_fill, visible: false}
     type: Image
     layout_properties: {grid_position: 'BRLAXK,ZBHZPI CFFCZA,GFOSTO LKRUOZ,OPRCLQ'}
     name: image_3
-  - properties: {text: 'Mobile No:', bold: true, font_size: 16}
+  - properties: {text: 'Mobile No:', bold: true, font_size: 16, visible: false}
     type: Label
     layout_properties: {grid_position: 'BRLAXK,ZBHZPI CFFCZA,KRZPIS AWTOFC,IMAGKM'}
     name: label_2
@@ -103,11 +118,7 @@ components:
     type: Spacer
     layout_properties: {grid_position: 'BRLAXK,ZBHZPI CFFCZA,KRZPIS EOMMKQ,VMBXGC'}
     name: spacer_3
-  - properties: {text: 'Member Since:', bold: true, font_size: 16}
-    type: Label
-    layout_properties: {grid_position: 'BRLAXK,ZBHZPI CFFCZA,KRZPIS GEPGCZ,GXENVG'}
-    name: label_6
-  - properties: {text: '7026542951', align: left}
+  - properties: {text: '7026542951', align: left, visible: false}
     type: Label
     layout_properties: {grid_position: 'BRLAXK,ZBHZPI CFFCZA,QIOHZF JVPHLH,BZAZHQ'}
     name: label_3
@@ -115,15 +126,11 @@ components:
     type: Spacer
     layout_properties: {grid_position: 'BRLAXK,ZBHZPI CFFCZA,QIOHZF REMARR,DBLYMQ'}
     name: spacer_4
-  - properties: {text: 1 aug 2022, align: left}
-    type: Label
-    layout_properties: {grid_position: 'BRLAXK,ZBHZPI CFFCZA,QIOHZF IFJRZE,FPUVFR'}
-    name: label_7
   - properties: {height: 0.22222900390625}
     type: Spacer
     layout_properties: {grid_position: 'BRLAXK,ZBHZPI CFFCZA,TMHEQE MHNBNA,AGWURC'}
     name: spacer_9
-  - properties: {height: '25', source: _/theme/borrower/dashboard/borrower_credit_limit.png, display_mode: zoom_to_fill}
+  - properties: {height: '25', source: _/theme/borrower/dashboard/borrower_credit_limit.png, display_mode: zoom_to_fill, visible: false}
     type: Image
     layout_properties: {grid_position: 'BRLAXK,ZBHZPI CFFCZA,TMHEQE KQQHIE,WXRJKU'}
     name: image_2
@@ -131,26 +138,18 @@ components:
     type: Spacer
     layout_properties: {grid_position: 'BRLAXK,ZBHZPI CFFCZA,TMHEQE KRNUBY,YTDWCD'}
     name: spacer_10
-  - properties: {height: '25', source: _/theme/loan-icon-6.jpg, display_mode: zoom_to_fill}
+  - properties: {height: '25', source: _/theme/loan-icon-6.jpg, display_mode: zoom_to_fill, visible: false}
     type: Image
     layout_properties: {grid_position: 'BRLAXK,ZBHZPI CFFCZA,TMHEQE WHMPOF,PQMFHZ'}
     name: image_4
-  - properties: {text: 'Credit Limit :', bold: true, font_size: 16}
-    type: Label
-    layout_properties: {grid_position: 'BRLAXK,ZBHZPI CFFCZA,RWRETV URBVWU,OOQVBO'}
-    name: label_4
   - properties: {height: '10'}
     type: Spacer
     layout_properties: {grid_position: 'BRLAXK,ZBHZPI CFFCZA,RWRETV RYUAOR,RDNBOC'}
     name: spacer_6
-  - properties: {text: 'No Of Loan Taken:', bold: true, font_size: 16}
+  - properties: {text: 'No Of Loan Taken:', bold: true, font_size: 16, visible: false}
     type: Label
     layout_properties: {grid_position: 'BRLAXK,ZBHZPI CFFCZA,RWRETV ZOQKOU,VBJGJM'}
     name: label_8
-  - properties: {text: '500000'}
-    type: Label
-    layout_properties: {grid_position: 'BRLAXK,ZBHZPI CFFCZA,DCSWXM RBAIUE,TBHGTF'}
-    name: label_5
   - properties: {height: 15.25}
     type: Spacer
     layout_properties: {grid_position: 'BRLAXK,ZBHZPI CFFCZA,DCSWXM WBGNLE,DVSVUB'}
