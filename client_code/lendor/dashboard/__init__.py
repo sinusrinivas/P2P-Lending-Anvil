@@ -21,12 +21,13 @@ class dashboard(dashboardTemplate):
     self.user_id = self.user_id
     self.load_data(None)
     self.update_platform_fees()
+    self.image_5.role = 'circular-image'
 
 
     user_profile = app_tables.fin_user_profile.get(customer_id=self.user_id)
     if user_profile:
       self.image_5.source = user_profile['user_photo']
-      self.label_11.text = "Welcome " + user_profile['full_name']
+      self.label_11.text =  user_profile['full_name']
       
     existing_loans = app_tables.fin_loan_details.search(loan_updated_status=q.any_of(
                           q.like('under process%'),
@@ -41,7 +42,7 @@ class dashboard(dashboardTemplate):
 
     opening_bal = app_tables.fin_wallet.get(customer_id=self.user_id)   
     self.label_2_copy.text = "{:.2f}".format((opening_bal['wallet_amount'] or 0))
-    self.label_4_copy.text =  "{:.2f}".format((opening_bal['wallet_amount'] or 0))
+    # self.label_4_copy.text =  "{:.2f}".format((opening_bal['wallet_amount'] or 0))
 
     my_returns = app_tables.fin_lender.get(customer_id=self.user_id)
     self.label_7.text = str(my_returns['return_on_investment'] or 0)
@@ -245,9 +246,5 @@ class dashboard(dashboardTemplate):
   def link_16_click(self, **event_args):
     """This method is called when the link is clicked"""
     open_form('borrower.dashboard.borrower_portfolio_first_page')
-
-  def image_5_mouse_up(self, x, y, button, **event_args):
-    """This method is called when a mouse button is released on this component"""
-    open_form('lendor.dashboard.lender_view_profile')
 
 
