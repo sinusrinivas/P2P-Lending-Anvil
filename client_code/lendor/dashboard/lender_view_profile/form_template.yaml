@@ -100,11 +100,11 @@ components:
         type: Spacer
         layout_properties: {grid_position: 'YCAEKK,OVVUQA'}
       - name: label_4
-        properties: {text: 'Name :', bold: true, font_size: 14, icon: ''}
+        properties: {text: ' Name :', bold: true, font_size: 14, icon: ''}
         type: Label
         layout_properties: {grid_position: 'SJNJMR,NFSLAK'}
       - name: label_1_copy
-        properties: {text: 'Date Of Birth :', bold: true, font_size: 14, icon: ''}
+        properties: {text: ' Date Of Birth :', bold: true, font_size: 14, icon: ''}
         type: Label
         layout_properties: {grid_position: 'SJNJMR,AFZYEN'}
       - name: name_text_box
@@ -116,11 +116,11 @@ components:
         type: TextBox
         layout_properties: {grid_position: 'IBZMNP,UTJOIS'}
       - name: label_4_copy_3
-        properties: {text: 'Email :', bold: true, font_size: 14, icon: ''}
+        properties: {text: ' Email :', bold: true, font_size: 14, icon: ''}
         type: Label
         layout_properties: {grid_position: 'SQBAVF,XQSWFO'}
       - name: label_19
-        properties: {text: 'Alternate Email :', bold: true, font_size: 14}
+        properties: {text: ' Alternate Email :', bold: true, font_size: 14}
         type: Label
         layout_properties: {grid_position: 'SQBAVF,ULAOID'}
       - name: email_tx
@@ -133,11 +133,11 @@ components:
         type: TextBox
         layout_properties: {grid_position: 'RATMNO,LOPMHP'}
       - name: label_4_copy
-        properties: {text: 'Mobile No :', bold: true, font_size: 14, icon: ''}
+        properties: {text: ' Mobile No :', bold: true, font_size: 14, icon: ''}
         type: Label
         layout_properties: {grid_position: 'VCIULX,DUACGL'}
       - name: label_4_copy_4
-        properties: {text: 'Gender :', bold: true, font_size: 14, icon: ''}
+        properties: {text: ' Gender :', bold: true, font_size: 14, icon: ''}
         type: Label
         layout_properties: {grid_position: 'VCIULX,MEIDWI'}
       - name: mobile_tx
@@ -149,11 +149,11 @@ components:
         type: DropDown
         layout_properties: {grid_position: 'ZUKVHE,MORQFD'}
       - name: label_1_copy_copy
-        properties: {text: 'Marrital Status :', bold: true, font_size: 14, icon: ''}
+        properties: {text: ' Marrital Status :', bold: true, font_size: 14, icon: ''}
         type: Label
         layout_properties: {grid_position: 'TKAGKT,KHSZQT'}
       - name: label_4_copy_3_copy
-        properties: {text: Type of Addres, bold: true, font_size: 14, icon: ''}
+        properties: {text: ' Type of Addres', bold: true, font_size: 14, icon: ''}
         type: Label
         layout_properties: {grid_position: 'TKAGKT,PJCODL'}
       - name: marrital_status_dropdown
@@ -165,11 +165,11 @@ components:
         type: DropDown
         layout_properties: {grid_position: 'YMBYNG,RZHNAW'}
       - name: label_4_copy_5
-        properties: {text: 'Govt Id 1 :', bold: true, font_size: 14, icon: ''}
+        properties: {text: ' Govt Id 1 :', bold: true, font_size: 14, icon: ''}
         type: Label
         layout_properties: {grid_position: 'NXWNOT,YORCPF'}
       - name: label_2
-        properties: {text: 'Govt Id 2 :', bold: true, font_size: 14}
+        properties: {text: ' Govt Id 2 :', bold: true, font_size: 14}
         type: Label
         layout_properties: {grid_position: 'NXWNOT,FQUEKP'}
       - name: g_i_1_tx
@@ -181,37 +181,37 @@ components:
         type: TextBox
         layout_properties: {grid_position: 'YPSPKV,AIKPON'}
       - name: label_17
-        properties: {text: 'Govt Id 1 Image :', bold: true, font_size: 14}
+        properties: {text: ' Govt Id 1 Image :', bold: true, font_size: 14}
         type: Label
         layout_properties: {grid_position: 'VHNRLY,OPKQJR'}
-      - name: label_18
-        properties: {text: 'Govt Id 2 Image :', font_size: 14, bold: true}
-        type: Label
-        layout_properties: {grid_position: 'VHNRLY,LFTTPK'}
       - name: govt_1_file_loader_1
         properties: {visible: false}
         type: FileLoader
-        layout_properties: {grid_position: 'FAFDEV,DTOCBM'}
+        layout_properties: {grid_position: 'VHNRLY,EJXKAT'}
         event_bindings: {change: govt_1_file_loader_1_change}
+      - name: label_18
+        properties: {text: ' Govt Id 2 Image :', font_size: 14, bold: true}
+        type: Label
+        layout_properties: {grid_position: 'VHNRLY,LFTTPK'}
+      - name: govt_2_file_loader_2
+        properties: {visible: false}
+        type: FileLoader
+        layout_properties: {grid_position: 'VHNRLY,FCDNYA'}
+        event_bindings: {change: govt_2_file_loader_2_change}
       - name: govt_id_1_image
         properties: {height: 69}
         type: Image
         layout_properties: {grid_position: 'FAFDEV,XPVHXO'}
-      - name: govt_2_file_loader_2
-        properties: {visible: false}
-        type: FileLoader
-        layout_properties: {grid_position: 'FAFDEV,KIXGRT'}
-        event_bindings: {change: govt_2_file_loader_2_change}
       - name: govt_id_2_image
         properties: {height: 63}
         type: Image
         layout_properties: {grid_position: 'FAFDEV,IRJKTE'}
       - name: label_3
-        properties: {text: 'City :', bold: true, font_size: 14}
+        properties: {text: ' City :', bold: true, font_size: 14}
         type: Label
         layout_properties: {grid_position: 'ATHGZK,CDZNPD'}
       - name: label_6
-        properties: {text: 'State :', bold: true, font_size: 14}
+        properties: {text: ' State :', bold: true, font_size: 14}
         type: Label
         layout_properties: {grid_position: 'ATHGZK,FDOLLS'}
       - name: city_tx
@@ -223,11 +223,11 @@ components:
         type: TextBox
         layout_properties: {grid_position: 'FBDSZE,LCAJTS'}
       - name: label_4_copy_4_copy
-        properties: {text: 'Address 1 :', bold: true, font_size: 14, icon: ''}
+        properties: {text: ' Address 1 :', bold: true, font_size: 14, icon: ''}
         type: Label
         layout_properties: {grid_position: 'ZWRNXY,LIGTXI'}
       - name: label_4_copy_5_copy
-        properties: {text: 'Address 2 :', bold: true, font_size: 14, icon: ''}
+        properties: {text: ' Address 2 :', bold: true, font_size: 14, icon: ''}
         type: Label
         layout_properties: {grid_position: 'ZWRNXY,QZSOAH'}
       - name: address_1_tx
@@ -239,11 +239,11 @@ components:
         type: TextBox
         layout_properties: {grid_position: 'ILLVRG,GSFXFS'}
       - name: label_2_copy
-        properties: {text: 'How long you are staying at this address :', bold: true, font_size: 14}
+        properties: {text: ' How long you are staying at this address :', bold: true, font_size: 14}
         type: Label
         layout_properties: {grid_position: 'USLLAA,GJAXDY'}
       - name: label_3_copy_copy
-        properties: {text: 'Qualification :', bold: true, font_size: 14}
+        properties: {text: ' Qualification :', bold: true, font_size: 14}
         type: Label
         layout_properties: {grid_position: 'USLLAA,EZOQQN'}
       - name: how_long_dropdown
@@ -255,7 +255,7 @@ components:
         type: DropDown
         layout_properties: {grid_position: 'XVXXWF,SAQXTK'}
       - name: label_3_copy_copy_copy
-        properties: {text: 'Zip code :', bold: true, font_size: 14}
+        properties: {text: ' Zip code :', bold: true, font_size: 14}
         type: Label
         layout_properties: {grid_position: 'VVTFJI,USYQIB'}
       - name: pincode_tx
@@ -332,7 +332,7 @@ components:
         layout_properties: {grid_position: 'NZWJRN,FXVVXE'}
         event_bindings: {click: save_lender_details_click}
     - name: institutional_panel
-      properties: {col_widths: '{}', role: elevated-card, visible: false}
+      properties: {col_widths: '{"SVWTJK":30,"IQOQBV":15,"KGEWTE":15,"VEGDUM":30,"UODRXN":20,"KJVJGL":10}', role: elevated-card, visible: false}
       type: ColumnPanel
       layout_properties: {grid_position: 'YGOATC,BDOYYL'}
       components:
@@ -345,11 +345,11 @@ components:
         type: Spacer
         layout_properties: {grid_position: 'YCAEKK,OVVUQA'}
       - name: label_1
-        properties: {text: 'Business name :', bold: true, font_size: 14}
+        properties: {text: ' Business name :', bold: true, font_size: 14}
         type: Label
         layout_properties: {grid_position: 'NGTOCT,VQILIQ'}
       - name: label_5
-        properties: {text: 'Business address :', bold: true, font_size: 14}
+        properties: {text: ' Business address :', bold: true, font_size: 14}
         type: Label
         layout_properties: {grid_position: 'NGTOCT,UHFCCS'}
       - name: business_name_tex
@@ -361,11 +361,11 @@ components:
         type: TextBox
         layout_properties: {grid_position: 'KLFXYJ,XLYHPW'}
       - name: label_7
-        properties: {text: 'Business Type :', bold: true, font_size: 14}
+        properties: {text: ' Business Type :', bold: true, font_size: 14}
         type: Label
         layout_properties: {grid_position: 'SQBAVF,VALCHL'}
       - name: label_8
-        properties: {text: 'No of Employees Working :', bold: true, font_size: 14}
+        properties: {text: ' No of Employees Working :', bold: true, font_size: 14}
         type: Label
         layout_properties: {grid_position: 'SQBAVF,NACBNZ'}
       - name: business_type_dropdown
@@ -377,11 +377,11 @@ components:
         type: DropDown
         layout_properties: {grid_position: 'PDMXQD,TZXHXE'}
       - name: label_9
-        properties: {text: 'Year of Establishment :', bold: true, font_size: 14}
+        properties: {text: ' Year of Establishment :', bold: true, font_size: 14}
         type: Label
         layout_properties: {grid_position: 'HJFUYQ,BARDJM'}
       - name: label_10
-        properties: {text: 'Industry Type :', bold: true, font_size: 14}
+        properties: {text: ' Industry Type :', bold: true, font_size: 14}
         type: Label
         layout_properties: {grid_position: 'HJFUYQ,YMOBLS'}
       - name: year_estimate_date_picker
@@ -393,32 +393,32 @@ components:
         type: TextBox
         layout_properties: {grid_position: 'NHVZKQ,VITKSC'}
       - name: label_11
-        properties: {text: 'Last six months turnover  :', bold: true, font_size: 14}
+        properties: {text: ' Last six months turnover  :', bold: true, font_size: 14}
         type: Label
         layout_properties: {grid_position: 'JPZOWK,VEGDUM'}
       - name: label_12
-        properties: {text: 'last six month''s bank statements :', bold: true, font_size: 14}
+        properties: {text: ' last six month''s bank statements :', bold: true, font_size: 14}
         type: Label
         layout_properties: {grid_position: 'JPZOWK,UODRXN'}
+      - name: business_bank_st_image
+        properties: {visible: false}
+        type: FileLoader
+        layout_properties: {grid_position: 'JPZOWK,KJVJGL'}
+        event_bindings: {change: business_bank_st_image_change}
       - name: last_six_turnover_tx
         properties: {background: 'theme:On Primary', role: outlined, text: '', font_size: 14}
         type: TextBox
         layout_properties: {grid_position: 'PZHEGB,BAUGWR'}
-      - name: business_bank_st_image
-        properties: {visible: false}
-        type: FileLoader
-        layout_properties: {grid_position: 'PZHEGB,OCTFLW WCFOGF,JEJCEE'}
-        event_bindings: {change: business_bank_st_image_change}
       - name: last_six_month_for_business
         properties: {height: 44}
         type: Image
-        layout_properties: {grid_position: 'PZHEGB,OCTFLW WCFOGF,OQVNXT'}
+        layout_properties: {grid_position: 'PZHEGB,OCTFLW'}
       - name: label_13
-        properties: {text: 'DIN :', bold: true, font_size: 14}
+        properties: {text: ' DIN :', bold: true, font_size: 14}
         type: Label
         layout_properties: {grid_position: 'SKNZJG,TZGVDL'}
       - name: label_14
-        properties: {text: 'CIN :', bold: true, font_size: 14}
+        properties: {text: ' CIN :', bold: true, font_size: 14}
         type: Label
         layout_properties: {grid_position: 'SKNZJG,KHOJPW'}
       - name: din_tx
@@ -430,26 +430,26 @@ components:
         type: TextBox
         layout_properties: {grid_position: 'EXUWOA,FLQKCH'}
       - name: label_15
-        properties: {text: 'Office address :', bold: true, font_size: 14}
+        properties: {text: ' Office address :', bold: true, font_size: 14}
         type: Label
         layout_properties: {grid_position: 'WPTRNL,SVWTJK'}
       - name: label_16
-        properties: {text: 'Proof verification :', bold: true, font_size: 14}
+        properties: {text: ' Proof verification :', bold: true, font_size: 14}
         type: Label
         layout_properties: {grid_position: 'WPTRNL,IQOQBV'}
+      - name: business_proof_varificaions_image
+        properties: {visible: false}
+        type: FileLoader
+        layout_properties: {grid_position: 'WPTRNL,KGEWTE'}
+        event_bindings: {change: business_proof_varificaions_image_change}
       - name: office_address_tx
         properties: {background: 'theme:On Primary', role: outlined, text: '', font_size: 14}
         type: TextBox
         layout_properties: {grid_position: 'ZBNFHH,AZFLLC'}
-      - name: business_proof_varificaions_image
-        properties: {visible: false}
-        type: FileLoader
-        layout_properties: {grid_position: 'ZBNFHH,FEYXQE YPZBWY,AXSFHB'}
-        event_bindings: {change: business_proof_varificaions_image_change}
       - name: proof_varification
         properties: {height: 71}
         type: Image
-        layout_properties: {grid_position: 'ZBNFHH,FEYXQE YPZBWY,NAQXMC'}
+        layout_properties: {grid_position: 'ZBNFHH,FEYXQE'}
       - name: edit_business_details_button
         properties: {text: Edit Details, background: '#0b2547', align: center, foreground: 'theme:On Primary'}
         type: Button
@@ -474,11 +474,11 @@ components:
         type: Spacer
         layout_properties: {grid_position: 'YCAEKK,OVVUQA'}
       - name: label_4_copy_copy_copy_copy_3
-        properties: {text: 'Type of land :', bold: true, font_size: 14, icon: ''}
+        properties: {text: ' Type of land :', bold: true, font_size: 14, icon: ''}
         type: Label
         layout_properties: {grid_position: 'MIRMHQ,GYEUAS'}
       - name: label_1_copy_copy_copy_copy_copy_3
-        properties: {text: 'Number of acres of land :', bold: true, font_size: 14, icon: ''}
+        properties: {text: ' Number of acres of land :', bold: true, font_size: 14, icon: ''}
         type: Label
         layout_properties: {grid_position: 'MIRMHQ,DATWIQ'}
       - name: type_of_land_dropdown
@@ -490,11 +490,11 @@ components:
         type: TextBox
         layout_properties: {grid_position: 'WQSJVJ,TYHMTP'}
       - name: label_4_copy_4_copy_copy_copy_copy_2
-        properties: {text: 'Crop name :', bold: true, font_size: 14, icon: ''}
+        properties: {text: ' Crop name :', bold: true, font_size: 14, icon: ''}
         type: Label
         layout_properties: {grid_position: 'QPBOGU,BGUZEE'}
       - name: label_4_copy_3_copy_copy_copy_copy_2
-        properties: {text: 'Yearly income :', bold: true, font_size: 14, icon: ''}
+        properties: {text: ' Yearly income :', bold: true, font_size: 14, icon: ''}
         type: Label
         layout_properties: {grid_position: 'QPBOGU,TNXGBM'}
       - name: crop_name
@@ -529,11 +529,11 @@ components:
         type: Spacer
         layout_properties: {grid_position: 'YCAEKK,OVVUQA'}
       - name: label_4_copy_copy_copy_copy_copy
-        properties: {text: 'Company name :', bold: true, font_size: 14, icon: ''}
+        properties: {text: ' Company name :', bold: true, font_size: 14, icon: ''}
         type: Label
         layout_properties: {grid_position: 'NGTOCT,EYUVDS'}
       - name: label_1_copy_copy_copy_copy_copy_copy
-        properties: {text: 'Occupation type :', bold: true, font_size: 14, icon: ''}
+        properties: {text: ' Occupation type :', bold: true, font_size: 14, icon: ''}
         type: Label
         layout_properties: {grid_position: 'NGTOCT,HSYQLG'}
       - name: company_name_tx
@@ -545,11 +545,11 @@ components:
         type: DropDown
         layout_properties: {grid_position: 'MIQSDT,GEJNIM'}
       - name: label_4_copy_3_copy_copy_copy_copy_copy
-        properties: {text: 'Employment type :', bold: true, font_size: 14, icon: ''}
+        properties: {text: ' Employment type :', bold: true, font_size: 14, icon: ''}
         type: Label
         layout_properties: {grid_position: 'SQBAVF,XQSWFO'}
       - name: label_4_copy_4_copy_copy_copy_copy_copy
-        properties: {text: 'Organization type :', bold: true, font_size: 14, icon: ''}
+        properties: {text: ' Organization type :', bold: true, font_size: 14, icon: ''}
         type: Label
         layout_properties: {grid_position: 'SQBAVF,UMECJQ'}
       - name: employee_dropdown
@@ -561,11 +561,11 @@ components:
         type: DropDown
         layout_properties: {grid_position: 'GBYOYA,NAMYMC'}
       - name: label_4_copy_5_copy_copy_copy_copy_copy
-        properties: {text: Company address, bold: true, font_size: 14, icon: ''}
+        properties: {text: ' Company address', bold: true, font_size: 14, icon: ''}
         type: Label
         layout_properties: {grid_position: 'HJFUYQ,IXDCZJ'}
       - name: label_2_copy_copy_copy_copy_copy
-        properties: {text: 'Landmark :', bold: true, font_size: 14}
+        properties: {text: ' Landmark :', bold: true, font_size: 14}
         type: Label
         layout_properties: {grid_position: 'HJFUYQ,BJTDTO'}
       - name: company_address_tx
@@ -577,11 +577,11 @@ components:
         type: TextBox
         layout_properties: {grid_position: 'RYRBGE,VTOTEJ'}
       - name: label_4_copy_5_copy_copy_copy_copy_copy_copy
-        properties: {text: Company phone number, bold: true, font_size: 14, icon: ''}
+        properties: {text: ' Company phone number', bold: true, font_size: 14, icon: ''}
         type: Label
         layout_properties: {grid_position: 'LPZUYW,MNSTRU'}
       - name: label_4_copy_5_copy_copy_copy_copy_copy_copy_3
-        properties: {text: 'Annual salary :', bold: true, font_size: 14, icon: ''}
+        properties: {text: ' Annual salary :', bold: true, font_size: 14, icon: ''}
         type: Label
         layout_properties: {grid_position: 'LPZUYW,LAQFZZ'}
       - name: company_no_tx
@@ -593,11 +593,11 @@ components:
         type: TextBox
         layout_properties: {grid_position: 'QIWGKK,HRGPPY'}
       - name: label_4_copy_5_copy_copy_copy_copy_copy_copy_2
-        properties: {text: 'Salary type :', bold: true, font_size: 14, icon: ''}
+        properties: {text: ' Salary type :', bold: true, font_size: 14, icon: ''}
         type: Label
         layout_properties: {grid_position: 'VHUBMX,UKTHSS'}
       - name: label_4_copy_5_copy_copy_copy_copy_copy_copy_2_copy
-        properties: {text: 'Designation :', bold: true, font_size: 14, icon: ''}
+        properties: {text: ' Designation :', bold: true, font_size: 14, icon: ''}
         type: Label
         layout_properties: {grid_position: 'VHUBMX,QVDHDR'}
       - name: salary_type_dropdown
@@ -609,27 +609,27 @@ components:
         type: TextBox
         layout_properties: {grid_position: 'PDYUFA,IBFXYX'}
       - name: label_4_copy_5_copy_copy_copy_copy_copy_copy_2_copy_3
-        properties: {text: 'Employee id :', bold: true, font_size: 14, icon: ''}
+        properties: {text: ' Employee id :', bold: true, font_size: 14, icon: ''}
         type: Label
         layout_properties: {grid_position: 'VXXFKZ,GNCCQW'}
-      - name: label_4_copy_5_copy_copy_copy_copy_copy_copy_2_copy_2
-        properties: {text: 'Last six months bank statement :', bold: true, font_size: 14, icon: ''}
-        type: Label
-        layout_properties: {grid_position: 'VXXFKZ,UUHJZI'}
       - name: employee_id_image
         properties: {visible: false}
         type: FileLoader
-        layout_properties: {grid_position: 'VHKKBX,TPMIZU'}
+        layout_properties: {grid_position: 'VXXFKZ,NRDMPJ'}
         event_bindings: {change: employee_id_image_change}
+      - name: label_4_copy_5_copy_copy_copy_copy_copy_copy_2_copy_2
+        properties: {text: ' Last six months bank statement :', bold: true, font_size: 14, icon: ''}
+        type: Label
+        layout_properties: {grid_position: 'VXXFKZ,UUHJZI'}
+      - name: employee_last_six_bank_state_image
+        properties: {visible: false}
+        type: FileLoader
+        layout_properties: {grid_position: 'VXXFKZ,OXBJNB'}
+        event_bindings: {change: employee_last_six_bank_state_image_change}
       - name: emp_id_proof
         properties: {height: 56}
         type: Image
         layout_properties: {grid_position: 'VHKKBX,IGWGHV'}
-      - name: employee_last_six_bank_state_image
-        properties: {visible: false}
-        type: FileLoader
-        layout_properties: {grid_position: 'VHKKBX,HUBGUC'}
-        event_bindings: {change: employee_last_six_bank_state_image_change}
       - name: last_six_month_proof
         properties: {height: 52}
         type: Image
@@ -658,11 +658,11 @@ components:
         type: Spacer
         layout_properties: {grid_position: 'YCAEKK,OVVUQA'}
       - name: label_4_copy_copy_copy_copy
-        properties: {text: 'Account holder name :', bold: true, font_size: 14, icon: ''}
+        properties: {text: ' Account holder name :', bold: true, font_size: 14, icon: ''}
         type: Label
         layout_properties: {grid_position: 'NGTOCT,EYUVDS'}
       - name: label_1_copy_copy_copy_copy_copy
-        properties: {text: 'Account type Account :', bold: true, font_size: 14, icon: ''}
+        properties: {text: ' Account type Account :', bold: true, font_size: 14, icon: ''}
         type: Label
         layout_properties: {grid_position: 'NGTOCT,PLJLSS'}
       - name: holder_name_tx
@@ -674,11 +674,11 @@ components:
         type: DropDown
         layout_properties: {grid_position: 'AQFDUO,WORDMO'}
       - name: label_4_copy_3_copy_copy_copy_copy
-        properties: {text: 'Account number :', bold: true, font_size: 14, icon: ''}
+        properties: {text: ' Account number :', bold: true, font_size: 14, icon: ''}
         type: Label
         layout_properties: {grid_position: 'ZEVLQP,ZAQNOA'}
       - name: label_4_copy_4_copy_copy_copy_copy
-        properties: {text: 'Bank name :', bold: true, font_size: 14, icon: ''}
+        properties: {text: ' Bank name :', bold: true, font_size: 14, icon: ''}
         type: Label
         layout_properties: {grid_position: 'ZEVLQP,XQOJYL'}
       - name: account_no_tx
@@ -690,11 +690,11 @@ components:
         type: TextBox
         layout_properties: {grid_position: 'KUNYNG,DLJSRZ'}
       - name: label_4_copy_5_copy_copy_copy_copy
-        properties: {text: 'Bank id :', bold: true, font_size: 14, icon: ''}
+        properties: {text: ' Bank id :', bold: true, font_size: 14, icon: ''}
         type: Label
         layout_properties: {grid_position: 'HJFUYQ,IXDCZJ'}
       - name: label_2_copy_copy_copy_copy
-        properties: {text: 'Branch name :', bold: true, font_size: 14}
+        properties: {text: ' Branch name :', bold: true, font_size: 14}
         type: Label
         layout_properties: {grid_position: 'HJFUYQ,XTGDWF'}
       - name: bank_id_tx
