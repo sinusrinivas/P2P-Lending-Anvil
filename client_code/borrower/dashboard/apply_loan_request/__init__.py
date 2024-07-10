@@ -447,39 +447,45 @@ class apply_loan_request(apply_loan_requestTemplate):
         self.repeating_panel_1.items = payment_schedule
 
     def calculate_six_month_payment_schedule(self, emi, monthly_interest_rate, processing_fee_per_month, total_interest_amount):
-        self.loan_amount = self.label_28.text
-        self.total_repayment_amount = self.label_34.text
+        # Convert loan_amount and total_repayment_amount to floats after cleaning the text
+        self.loan_amount = float(self.label_28.text.replace('₹ ', '').replace(',', '').strip())
+        self.total_repayment_amount = float(self.label_34.text.replace('₹ ', '').replace(',', '').strip())
         self.tenure_months = int(str(self.text_box_1.text).strip())
-        # self.tenure_months = self.text_box_1.text
+    
         payment_schedule = []
         beginning_balance = self.total_repayment_amount
         loan_amount_beginning_balance = self.loan_amount
+    
         for month in range(1, self.tenure_months + 1, 6):
             interest_for_6_months = self.calculate_interest_for_months(emi, loan_amount_beginning_balance, monthly_interest_rate, month, month + 5)
             total_processing_fee_for_6_months = processing_fee_per_month * 6
-
             total_payment = emi * 6 + total_processing_fee_for_6_months
-
+    
+            principal_payment = emi * 6 - interest_for_6_months
+            loan_amount_ending_balance = loan_amount_beginning_balance - principal_payment
+            ending_balance = max(0, beginning_balance - total_payment)
+    
             payment_schedule.append({
                 'PaymentNumber': f"EMI {month}-{month+5}",
-                'Principal': f"₹ {emi * 6 - interest_for_6_months:.2f}",
+                'Principal': f"₹ {principal_payment:.2f}",
                 'Interest': f"₹ {interest_for_6_months:.2f}",
                 'ProcessingFee': f"₹ {total_processing_fee_for_6_months:.2f}",
                 'LoanAmountBeginningBalance': f"₹ {loan_amount_beginning_balance:.2f}",
-                'LoanAmountEndingBalance': f"₹ {loan_amount_beginning_balance - (emi * 6 - interest_for_6_months):.2f}",
+                'LoanAmountEndingBalance': f"₹ {loan_amount_ending_balance:.2f}",
                 'BeginningBalance': f"₹ {beginning_balance:.2f}",
                 'TotalPayment': f"₹ {total_payment:.2f}",
-                'EndingBalance': f"₹ {max(0, beginning_balance - total_payment):.2f}"
+                'EndingBalance': f"₹ {ending_balance:.2f}"
             })
-
-            beginning_balance -= total_payment
-            loan_amount_beginning_balance -= (emi * 6 - interest_for_6_months)
-
+    
+            beginning_balance = ending_balance
+            loan_amount_beginning_balance = loan_amount_ending_balance
+    
         return payment_schedule
 
     def calculate_interest_for_months(self, emi, loan_amount_beginning_balance, monthly_interest_rate, start_month, end_month):
-        # Clean and convert loan_amount_beginning_balance to float
-        loan_amount_beginning_balance = float(loan_amount_beginning_balance.replace('₹ ', '').replace(',', '').strip())
+        # Check if loan_amount_beginning_balance is a string and clean it if necessary
+        if isinstance(loan_amount_beginning_balance, str):
+            loan_amount_beginning_balance = float(loan_amount_beginning_balance.replace('₹ ', '').replace(',', '').strip())
     
         total_interest = 0
         for month in range(start_month, end_month + 1):
