@@ -12,7 +12,7 @@ components:
     type: Spacer
     layout_properties: {grid_position: 'JNKTYE,SPBVNP HHHSYY,MICZHI', full_width_row: true}
     name: spacer_10
-  - properties: {col_widths: '{"NETDIR":15,"IXNAVP":15,"KVCNSJ":15}'}
+  - properties: {col_widths: '{"NETDIR":15,"IXNAVP":15}'}
     type: ColumnPanel
     layout_properties: {grid_position: 'JNKTYE,SPBVNP TYTHKD,NPBFAN', full_width_row: true}
     name: column_panel_2
@@ -22,7 +22,7 @@ components:
       layout_properties: {grid_position: 'ERCHQY,NETDIR', full_width_row: true}
       name: column_panel_7
       components:
-      - properties: {height: 48.199981689453125, display_mode: shrink_to_fit, source: _/theme/lender/dashboard/total%20funds%20deposited.svg}
+      - properties: {height: '45', display_mode: shrink_to_fit, source: _/theme/lender/dashboard/total%20funds%20deposited.svg}
         type: Image
         layout_properties: {grid_position: 'BJUXXD,EITWZQ'}
         name: image_1
@@ -44,12 +44,17 @@ components:
       layout_properties: {grid_position: 'ERCHQY,IXNAVP'}
       name: column_panel_5
       components:
-      - properties: {height: 52, source: _/theme/lender/dashboard/interest%20earned.svg}
+      - properties: {height: '45', source: _/theme/lender/dashboard/interest%20earned.svg}
         type: Image
         layout_properties: {grid_position: 'HVNINY,UKYYYV'}
         event_bindings: {mouse_up: image_3_mouse_up}
         name: image_3
-      - properties: {text: My Returns, align: left, background: '', foreground: black, bold: true}
+      - properties:
+          text: "My \nReturns"
+          align: left
+          background: ''
+          foreground: black
+          bold: true
         type: Button
         layout_properties: {grid_position: 'HVNINY,UPASZV BFGCWY,XUTGCC'}
         event_bindings: {click: label_6_click}
@@ -64,14 +69,17 @@ components:
         name: label_7
     - properties: {role: elevated-card, col_widths: '{"CUOOLO":20,"ZYDTNB":40}', background: '#Edf0f4'}
       type: ColumnPanel
-      layout_properties: {grid_position: 'ERCHQY,KVCNSJ'}
+      layout_properties: {grid_position: 'ERCHQY,XIALYZ'}
       name: column_panel_6
       components:
-      - properties: {height: 61.399993896484375, source: _/theme/lender/dashboard/net%20asset%20value.svg}
+      - properties: {height: '45', source: _/theme/lender/dashboard/net%20asset%20value.svg}
         type: Image
         layout_properties: {grid_position: 'QAERLY,CUOOLO'}
         name: image_4
-      - properties: {text: New Loan Request, bold: true}
+      - properties:
+          text: "New Loan \n  Request"
+          bold: true
+          font_size: 15
         type: Label
         layout_properties: {grid_position: 'QAERLY,ZYDTNB IFVDXW,KISYOU'}
         name: label_8
@@ -88,7 +96,7 @@ components:
       type: Spacer
       layout_properties: {grid_position: 'VNQVSA,PBZDAB'}
       name: spacer_5_copy
-    - properties: {text: 'Ascend Wallet Balance                                                                                     ', bold: true, foreground: white, font_size: 14}
+    - properties: {text: 'Ascend Wallet Balance                                                                                     ', bold: true, foreground: white, font_size: null}
       type: Link
       layout_properties: {grid_position: 'VNQVSA,LGBPSD', full_width_row: true}
       event_bindings: {click: link_1_copy_click}
@@ -102,7 +110,7 @@ components:
       type: Spacer
       layout_properties: {grid_position: 'IFNKBM,XBQUGG'}
       name: spacer_6
-    - properties: {icon: 'fa:rupee', text: '0', foreground: white, font_size: 14}
+    - properties: {icon: 'fa:rupee', text: '0', foreground: white, font_size: null}
       type: Label
       layout_properties: {grid_position: 'IFNKBM,AMNWCP', full_width_row: true}
       name: label_2_copy
@@ -123,10 +131,6 @@ components:
       type: Spacer
       layout_properties: {grid_position: 'AOORRV,QXGKNE'}
       name: spacer_3_copy
-  - properties: {height: 32}
-    type: Spacer
-    layout_properties: {grid_position: 'JNKTYE,NGTYLL', full_width_row: true}
-    name: spacer_13
   - properties: {text: Loan History, bold: true, foreground: black, font_size: 20}
     type: Label
     layout_properties: {grid_position: 'ZFKXTT,RIITMI', full_width_row: true}
