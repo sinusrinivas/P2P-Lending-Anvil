@@ -18,8 +18,8 @@ class wallet(walletTemplate):
     
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
-    self.deposit_placeholder = "5000"
-    self.withdraw_placeholder = "0.00"
+    # self.deposit_placeholder = "5000"
+    # self.withdraw_placeholder = "0.00"
     
     self.email=main_form_module.email
     email = self.email  
@@ -81,20 +81,20 @@ class wallet(walletTemplate):
     """This method is called when the button is clicked"""
     pass
 
-  def deposit_btn_click(self, **event_args):
-    """This method is called when the button is clicked"""
+  # def deposit_btn_click(self, **event_args):
+  #   """This method is called when the button is clicked"""
     
-    self.amount_text_box.placeholder = self.deposit_placeholder
-    self.deposit_money_btn.visible = True
-    self.withdraw_money_btn.visible = False
+  #   self.amount_text_box.placeholder = self.deposit_placeholder
+  #   self.deposit_money_btn.visible = True
+  #   self.withdraw_money_btn.visible = True
 
 
-  def withdraw_btn_click(self, **event_args):
-    """This method is called when the button is clicked"""
-    self.amount_text_box.placeholder = self.withdraw_placeholder
-    self.deposit_money_btn.visible = False
-    self.withdraw_money_btn.visible = True
-    self.deposit_btn.visible = True
+  # def withdraw_btn_click(self, **event_args):
+  #   """This method is called when the button is clicked"""
+  #   self.amount_text_box.placeholder = self.withdraw_placeholder
+  #   self.deposit_money_btn.visible = False
+  #   self.withdraw_money_btn.visible = True
+  #   self.deposit_btn.visible = True
 
   def wallet_dashboard_link_click(self, **event_args):
     """This method is called when the link is clicked"""

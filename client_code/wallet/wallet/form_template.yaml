@@ -113,9 +113,9 @@ components:
       type: Label
       layout_properties: {}
     - name: amount_text_box
-      properties: {placeholder: '', background: 'theme:On Tertiary', type: number, spacing_above: medium, role: outlined-error}
+      properties: {placeholder: '', background: 'theme:On Tertiary', type: number, spacing_above: medium, role: outlined-card}
       type: TextBox
-      layout_properties: {width: 121.8129755859375}
+      layout_properties: {width: 229.47668701171875}
   - name: deposit_money_btn
     properties: {role: null, bold: false, align: center, spacing_above: small, background: '#0b2547', icon: '', underline: false, font: '', icon_align: left, foreground: 'theme:On Primary', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: 'DEPOSIT '}
     type: Button
@@ -127,7 +127,7 @@ components:
     layout_properties: {grid_position: 'HFWAKM,PJDSTX'}
     event_bindings: {click: withdraw_money_btn_click}
 - name: outlined_card_3
-  properties: {role: outlined-card, col_widths: '{"XKSLOU":20,"NWDEAB":25,"ZFTXOO":15,"BRHTGJ":20}', spacing_above: small, background: 'theme:On Tertiary', wrap_on: mobile, col_spacing: medium, foreground: '', spacing_below: small, visible: true, border: '', tooltip: ''}
+  properties: {role: outlined-card, col_widths: '{"XKSLOU":20,"NWDEAB":25}', spacing_above: small, background: 'theme:On Tertiary', wrap_on: mobile, col_spacing: medium, foreground: '', spacing_below: small, visible: true, border: '', tooltip: ''}
   type: ColumnPanel
   layout_properties: {grid_position: 'YMJQIZ,FFLGKA', row_background: 'theme:On Tertiary'}
   components:
@@ -141,16 +141,4 @@ components:
     type: Button
     layout_properties: {grid_position: 'MDXWZU,NWDEAB'}
     event_bindings: {click: withdraw_btn_click}
-  - name: spacer_9
-    properties: {height: 32}
-    type: Spacer
-    layout_properties: {grid_position: 'MDXWZU,ZFTXOO'}
-  - name: spacer_6
-    properties: {height: 40.79998779296875}
-    type: Spacer
-    layout_properties: {grid_position: 'OGEYCO,BRHTGJ'}
-  - name: spacer_4
-    properties: {height: 19}
-    type: Spacer
-    layout_properties: {grid_position: 'YBJOJP,RQITTG'}
 is_package: true
