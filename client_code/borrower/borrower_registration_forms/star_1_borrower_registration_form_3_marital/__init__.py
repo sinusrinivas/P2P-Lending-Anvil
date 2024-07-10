@@ -346,9 +346,9 @@ class star_1_borrower_registration_form_3_marital(star_1_borrower_registration_f
   def validate_father_name(self, **event_args):
     father_name = self.father_name_text.text
     if not father_name or not re.match(r'^[A-Za-z\s]+$', father_name):
-        self.father_name_text.role =  'outlined-error'
+        self.father_name_text.role =  'red'
     else:
-        self.father_name_text.background = 'outlined'
+        self.father_name_text.background = 'white'
 
   def validate_father_dob(self, **event_args):
     father_dob = self.date_picker_1.date

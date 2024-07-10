@@ -32,7 +32,7 @@ components:
     type: Label
     layout_properties: {grid_position: 'UVUDUV,IARGJF'}
   - name: text_box_1
-    properties: {role: outlined, bold: false, align: left, placeholder: '', spacing_above: small, background: 'theme:On Primary', type: text, underline: false, font: '', hide_text: false, foreground: '', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: ''}
+    properties: {role: outlined, bold: false, align: left, placeholder: '', spacing_above: small, background: 'theme:On Primary', type: text, underline: false, font: '', hide_text: false, foreground: '', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: 14, tooltip: '', text: ''}
     type: TextBox
     layout_properties: {grid_position: 'AXBOXF,HYMKQL'}
   - name: drop_down_1
@@ -53,7 +53,7 @@ components:
       border: ''
       italic: false
       enabled: true
-      font_size: 19
+      font_size: 17
       tooltip: ''
     type: DropDown
     layout_properties: {grid_position: 'AXBOXF,EPMKYN'}
@@ -67,11 +67,11 @@ components:
     type: Label
     layout_properties: {grid_position: 'WMIETA,ZVTITB'}
   - name: text_box_3
-    properties: {role: outlined, bold: false, align: left, placeholder: '', spacing_above: small, background: 'theme:On Primary', type: text, underline: false, font: '', hide_text: false, foreground: '', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: ''}
+    properties: {role: outlined, bold: false, align: left, placeholder: '', spacing_above: small, background: 'theme:On Primary', type: text, underline: false, font: '', hide_text: false, foreground: '', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: 14, tooltip: '', text: ''}
     type: TextBox
     layout_properties: {grid_position: 'XXVPRP,NVUMZC'}
   - name: text_box_4
-    properties: {role: outlined, bold: false, align: left, placeholder: '', spacing_above: small, background: 'theme:On Primary', type: text, underline: false, font: '', hide_text: false, foreground: '', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: ''}
+    properties: {role: outlined, bold: false, align: left, placeholder: '', spacing_above: small, background: 'theme:On Primary', type: text, underline: false, font: '', hide_text: false, foreground: '', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: 14, tooltip: '', text: ''}
     type: TextBox
     layout_properties: {grid_position: 'XXVPRP,DJHEWX'}
   - name: label_2_copy_1_copy
@@ -83,11 +83,11 @@ components:
     type: Label
     layout_properties: {grid_position: 'WZUCTQ,JNYUTV'}
   - name: bank_id
-    properties: {role: outlined}
+    properties: {role: outlined, font_size: 14}
     type: TextBox
     layout_properties: {grid_position: 'WBTDTW,PPOTIX'}
   - name: branch_name
-    properties: {role: outlined}
+    properties: {role: outlined, font_size: 14}
     type: TextBox
     layout_properties: {grid_position: 'WBTDTW,ETYTJY'}
   - name: flow_panel_1_copy_1
