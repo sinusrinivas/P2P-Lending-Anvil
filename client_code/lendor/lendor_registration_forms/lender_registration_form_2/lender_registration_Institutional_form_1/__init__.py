@@ -141,7 +141,8 @@ class lender_registration_Institutional_form_1(lender_registration_Institutional
             self.text_box_2_copy.focus()
             Notification('Please fill all details').show()
         elif not re.match(r'^[A-Za-z\s]+$', business_name):
-            Notification('Enter a valid Business name')
+            alert('Enter a valid Business name')
+            # Notification('Enter a valid Business name')
             self.text_box_2_copy.background = '#FF0000 '
             self.text_box_2_copy.focus()
             return
@@ -210,11 +211,7 @@ class lender_registration_Institutional_form_1(lender_registration_Institutional
       reg_off_add = self.text_box_7.text
       proof_verification = self.file_loader_1_copy.file
         
-      user_id = self.userId
-  
-  
-      
-     
+      user_id = self.userId     
 
       # Validation for Business
       if not re.match(r'^[A-Za-z\s]+$', business_name):
@@ -282,16 +279,7 @@ class lender_registration_Institutional_form_1(lender_registration_Institutional
                     self.image_1.source = '_/theme/bank_users/default%20pdf.png'
                 else:
                     alert('Invalid file type. Only JPEG, PNG, and PDF are allowed')
-                    self.file_loader_1.clear()  
-
-  def button_3_click(self, **event_args):
-        """This method is called when the button is clicked"""
-        open_form("bank_users.user_form")
-    
-  def button_1_click(self, **event_args):
-        user_id = self.userId
-        open_form('lendor.lendor_registration_forms.lender_registration_form_2',user_id = user_id)
-        """This method is called when the button is clicked"""
+                    self.file_loader_1.clear()
 
   def file_loader_1_copy(self, file, **event_args):
         """This method is called when a new file is loaded into this FileLoader"""
@@ -307,7 +295,18 @@ class lender_registration_Institutional_form_1(lender_registration_Institutional
                       self.image_1_copy.source = '_/theme/bank_users/default%20pdf.png'
                   else:
                       alert('Invalid file type. Only JPEG, PNG, and PDF are allowed')
-                      self.file_loader_1_copy.clear()  
+                      self.file_loader_1_copy.clear()
+
+  def button_3_click(self, **event_args):
+        """This method is called when the button is clicked"""
+        open_form("bank_users.user_form")
+    
+  def button_1_click(self, **event_args):
+        user_id = self.userId
+        open_form('lendor.lendor_registration_forms.lender_registration_form_2',user_id = user_id)
+        """This method is called when the button is clicked"""
+
+    
 
 
 
