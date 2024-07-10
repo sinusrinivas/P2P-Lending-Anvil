@@ -36,77 +36,73 @@ components:
     name: label_3
     layout_properties: {grid_position: 'NPXVTB,DLVCWG'}
   - name: column_panel_1
-    properties: {}
+    properties: {col_widths: '{"BLZNWK":15,"SWRPTG":45}'}
     type: ColumnPanel
     layout_properties: {grid_position: 'NPXVTB,CVLZJM'}
     components:
-    - name: button_1_1
-      properties: {role: null, bold: true, align: full, spacing_above: small, background: '#05264d', icon: '', underline: false, font: '', icon_align: left, foreground: 'theme:On Primary', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: 'Yes'}
-      type: Button
-      layout_properties: {grid_position: 'ZRUQLM,TDXXXS'}
-      event_bindings: {click: button_1_1_click}
-    - name: button_2_1
-      properties: {role: null, bold: true, align: full, spacing_above: small, background: '#05264d', icon: '', underline: false, font: '', icon_align: left, foreground: 'theme:On Primary', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: 'No'}
-      type: Button
-      layout_properties: {grid_position: 'ZRUQLM,GRFUGM'}
-      event_bindings: {click: button_2_1_click}
+    - name: toggleswitch_1
+      properties: {}
+      type: form:lendor.Toggleswitch
+      layout_properties: {grid_position: 'KSKJRX,BLZNWK'}
+      event_bindings: {x_change: toggleswitch_1_x_change}
+    - name: label_1
+      properties: {}
+      type: Label
+      layout_properties: {grid_position: 'KSKJRX,SWRPTG'}
   - type: Label
     properties: {role: null, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: 'Do you have any other loan against your name '}
     name: label_4
     layout_properties: {grid_position: 'UGDOUC,BDLSWX'}
   - name: column_panel_1_copy
-    properties: {}
+    properties: {col_widths: '{"BUHPYU":15,"WSOAPN":45}'}
     type: ColumnPanel
     layout_properties: {grid_position: 'UGDOUC,CJYIIB'}
     components:
-    - name: button_1_2
-      properties: {role: null, bold: true, align: full, spacing_above: small, background: '#05264d', icon: '', underline: false, font: '', icon_align: left, foreground: 'theme:On Primary', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: 'Yes'}
-      type: Button
-      layout_properties: {grid_position: 'ZRUQLM,TDXXXS'}
-      event_bindings: {click: button_1_2_click}
-    - name: button_2_2
-      properties: {role: null, bold: true, align: full, spacing_above: small, background: '#05264d', icon: '', underline: false, font: '', icon_align: left, foreground: 'theme:On Primary', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: 'No'}
-      type: Button
-      layout_properties: {grid_position: 'ZRUQLM,GRFUGM'}
-      event_bindings: {click: button_2_2_click}
+    - name: toggleswitch_2
+      properties: {}
+      type: form:lendor.Toggleswitch
+      layout_properties: {grid_position: 'FIJPMR,BUHPYU'}
+      event_bindings: {x_change: toggleswitch_2_x_change}
+    - name: label_2
+      properties: {}
+      type: Label
+      layout_properties: {grid_position: 'FIJPMR,WSOAPN'}
   - type: Label
     properties: {text: Do you have any Personal Credit Card Loans, bold: true}
     name: label_5
     layout_properties: {grid_position: 'PBJUZL,LQRQMQ'}
   - name: column_panel_1_copy_2
-    properties: {}
+    properties: {col_widths: '{"ZWIMBJ":15,"DHLMME":45}'}
     type: ColumnPanel
     layout_properties: {grid_position: 'PBJUZL,QODYWJ'}
     components:
-    - name: button_1_3
-      properties: {role: null, bold: true, align: full, spacing_above: small, background: '#05264d', icon: '', underline: false, font: '', icon_align: left, foreground: 'theme:On Primary', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: 'Yes'}
-      type: Button
-      layout_properties: {grid_position: 'ZRUQLM,TDXXXS'}
-      event_bindings: {click: button_1_3_click}
-    - name: button_2_3
-      properties: {role: null, bold: true, align: full, spacing_above: small, background: '#05264d', icon: '', underline: false, font: '', icon_align: left, foreground: 'theme:On Primary', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: 'No'}
-      type: Button
-      layout_properties: {grid_position: 'ZRUQLM,GRFUGM'}
-      event_bindings: {click: button_2_3_click}
+    - name: toggleswitch_3
+      properties: {}
+      type: form:lendor.Toggleswitch
+      layout_properties: {grid_position: 'GIMOVB,ZWIMBJ'}
+      event_bindings: {x_change: toggleswitch_3_x_change}
+    - name: label_7
+      properties: {}
+      type: Label
+      layout_properties: {grid_position: 'GIMOVB,DHLMME'}
   - type: Label
     properties: {text: Do you have any Two Wheeler / Four Wheeler Loans, bold: true}
     name: label_6
     layout_properties: {grid_position: 'ODLHSX,WFCYQG'}
   - name: column_panel_1_copy_2_copy
-    properties: {}
+    properties: {col_widths: '{"IEGZJQ":15,"BSFXVE":45}'}
     type: ColumnPanel
     layout_properties: {grid_position: 'ODLHSX,FHUDUV'}
     components:
-    - name: button_1_4
-      properties: {role: null, bold: true, align: full, spacing_above: small, background: '#05264d', icon: '', underline: false, font: '', icon_align: left, foreground: 'theme:On Primary', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: 'Yes'}
-      type: Button
-      layout_properties: {grid_position: 'ZRUQLM,TDXXXS'}
-      event_bindings: {click: button_1_4_click}
-    - name: button_2_4
-      properties: {role: null, bold: true, align: full, spacing_above: small, background: '#05264d', icon: '', underline: false, font: '', icon_align: left, foreground: 'theme:On Primary', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: 'No'}
-      type: Button
-      layout_properties: {grid_position: 'ZRUQLM,GRFUGM'}
-      event_bindings: {click: button_2_4_click}
+    - name: toggleswitch_4
+      properties: {}
+      type: form:lendor.Toggleswitch
+      layout_properties: {grid_position: 'KPNGQP,IEGZJQ'}
+      event_bindings: {x_change: toggleswitch_4_x_change}
+    - name: label_8
+      properties: {}
+      type: Label
+      layout_properties: {grid_position: 'KPNGQP,BSFXVE'}
 - type: Button
   properties: {role: elevated-button, bold: true, align: right, spacing_above: small, background: '#0b2547', icon: 'fa:angle-double-left', underline: false, font: '', icon_align: left, foreground: 'theme:On Primary', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: Prev}
   name: button_1

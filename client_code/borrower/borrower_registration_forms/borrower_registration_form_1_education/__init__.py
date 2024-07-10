@@ -58,21 +58,6 @@ class borrower_registration_form_1_education(borrower_registration_form_1_educat
     qualification = self.drop_down_1.selected_value
     user_id = self.userId
     # Get the uploaded files
-    tenth_class = self.file_loader_1.file 
-    tenth_class = self.file_loader_2.file
-    tenth_class = self.file_loader_4.file
-    tenth_class = self.file_loader_7.file
-    tenth_class = self.file_loader_11.file
-    intermediate = self.file_loader_3.file
-    intermediate = self.file_loader_5.file 
-    intermediate = self.file_loader_8.file
-    intermediate = self.file_loader_12.file
-    btech = self.file_loader_6.file
-    btech = self.file_loader_9.file
-    btech = self.file_loader_13.file 
-    mtech = self.file_loader_10.file
-    mtech = self.file_loader_14.file
-    phd = self.file_loader_15.file
 
     tenth_class = self.file_loader_1.file #,self.file_loader_2.file]
     tenth_class_1 = self.file_loader_2.file
@@ -168,6 +153,7 @@ class borrower_registration_form_1_education(borrower_registration_form_1_educat
       open_form('borrower.borrower_registration_forms.star_1_borrower_registration_form_2_employment', user_id=user_id) 
     else:
       self.drop_down_1.background = '#FF0000'
+      # self.drop_down_1.role = out
       self.drop_down_1.focus()
       Notification("Please select a valid qualification status").show()
       return 
@@ -182,7 +168,7 @@ class borrower_registration_form_1_education(borrower_registration_form_1_educat
    
   def button_3_click(self, **event_args):
     """This method is called when the button is clicked"""
-    open_form("bank_users.user_form")
+    open_form("bank_users.main_form.investNow_applyForLoan")
 
   def drop_down_1_change(self, **event_args):
     """This method is called when an item is selected"""
