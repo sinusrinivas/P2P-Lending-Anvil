@@ -230,8 +230,14 @@ class apply_loan_request(apply_loan_requestTemplate):
                 self.submit.visible = True
 
     def link_3_click(self, **event_args):
-      self.link_3.visible = False
-      self.column_panel_1.visible = True
+        # Toggle the visibility of the column_panel_1
+        if self.column_panel_1.visible:
+            self.column_panel_1.visible = False
+            self.link_3.text = "Show Details"
+        else:
+            self.column_panel_1.visible = True
+            self.link_3.text = "Hide Details"
+            self.calculate_and_display_payment_details()
       
 
     def drop_down_3_change(self, **event_args):
@@ -272,25 +278,24 @@ class apply_loan_request(apply_loan_requestTemplate):
             self.display_six_month_payment_details(total_interest_amount=self.total_interest)
 
     def display_one_time_payment_details(self):
-        self.total_repayment_amount = self.label_34.text
-        self.total_interest = self.label_30.text
-        self.processing_fee_amount = self.label_32.text
-        total_repayment_amount = float(str(self.total_repayment_amount).replace('₹ ', ''))
-        total_interest = float(str(self.total_interest).replace('₹ ', ''))
-        processing_fee_amount = float(str(self.processing_fee_amount).replace('₹ ', ''))
-        self.loan_amount = self.label_28.text
-
+        # Remove currency symbols and convert text to float
+        total_repayment_amount = float(self.label_34.text.replace('₹ ', '').replace(',', ''))
+        total_interest = float(self.label_30.text.replace('₹ ', '').replace(',', ''))
+        processing_fee_amount = float(self.label_32.text.replace('₹ ', '').replace(',', ''))
+        loan_amount = float(self.label_28.text.replace('₹ ', '').replace(',', ''))
+    
         payment_details = [{
             'PaymentNumber': 'EMI 1',
-            'Principal': f"₹ {self.loan_amount:.2f}",
-            'Interest': f"₹ {total_interest:.2f}",
-            'ProcessingFee': f"₹ {processing_fee_amount:.2f}",
-            'BeginningBalance': f"₹ {total_repayment_amount:.2f}",
-            'TotalPayment': f"₹ {total_repayment_amount:.2f}",
+            'Principal': f"₹ {loan_amount:,.2f}",
+            'Interest': f"₹ {total_interest:,.2f}",
+            'ProcessingFee': f"₹ {processing_fee_amount:,.2f}",
+            'BeginningBalance': f"₹ {total_repayment_amount:,.2f}",
+            'TotalPayment': f"₹ {total_repayment_amount:,.2f}",
             'EndingBalance': '₹ 0.00',
-            'LoanAmountBeginningBalance': f"₹ {self.loan_amount:.2f}",
-            'LoanAmountEndingBalance': f"₹ 0.00"
+            'LoanAmountBeginningBalance': f"₹ {loan_amount:,.2f}",
+            'LoanAmountEndingBalance': '₹ 0.00'
         }]
+        
         self.repeating_panel_1.items = payment_details
 
     def display_monthly_payment_details(self):
@@ -319,7 +324,7 @@ class apply_loan_request(apply_loan_requestTemplate):
             total_payment = emi + processing_fee_per_month
             loan_amount_ending_balance = loan_amount_beginning_balance - principal_amount
             payment_schedule.append({
-                'PaymentNumber': month,
+                'PaymentNumber':f"EMI {month}",
                 'Principal': f"₹ {principal_amount:.2f}",
                 'Interest': f"₹ {interest_amount:.2f}",
                 'ProcessingFee': f"₹ {processing_fee_per_month:.2f}",
@@ -358,7 +363,7 @@ class apply_loan_request(apply_loan_requestTemplate):
             total_processing_fee_for_3_months = processing_fee_per_month * 3
             total_payment = emi * 3 + total_processing_fee_for_3_months
             payment_schedule.append({
-                'PaymentNumber': f"{month}-{month+2}",
+                'PaymentNumber': f"EMI {month}-{month+2}",
                 'Principal': f"₹ {emi * 3 - interest_for_3_months:.2f}",
                 'Interest': f"₹ {interest_for_3_months:.2f}",
                 'ProcessingFee': f"₹ {total_processing_fee_for_3_months:.2f}",
@@ -387,6 +392,9 @@ class apply_loan_request(apply_loan_requestTemplate):
         self.repeating_panel_1.items = payment_schedule
 
     def calculate_six_month_payment_schedule(self, emi, monthly_interest_rate, processing_fee_per_month, total_interest_amount):
+        self.loan_amount = self.label_28.text
+        self.total_repayment_amount = self.label_34.text
+        self.tenure_months = self.text_box_1.text
         payment_schedule = []
         beginning_balance = self.total_repayment_amount
         loan_amount_beginning_balance = self.loan_amount
@@ -397,7 +405,7 @@ class apply_loan_request(apply_loan_requestTemplate):
             total_payment = emi * 6 + total_processing_fee_for_6_months
 
             payment_schedule.append({
-                'PaymentNumber': f"{month}-{month+5}",
+                'PaymentNumber': f"EMI {month}-{month+5}",
                 'Principal': f"₹ {emi * 6 - interest_for_6_months:.2f}",
                 'Interest': f"₹ {interest_for_6_months:.2f}",
                 'ProcessingFee': f"₹ {total_processing_fee_for_6_months:.2f}",
@@ -465,3 +473,40 @@ class apply_loan_request(apply_loan_requestTemplate):
             max_tenure = product_data[0]['max_tenure']
             return min_tenure, max_tenure
         return 0, 0
+
+    def loan_amount_tb_change(self, **event_args):
+        """This method is called when the text in this text box is edited"""
+        loan_amount = self.loan_amount_tb.text
+        if not loan_amount:
+            self.label_22.text = "Please fill the loan amount"
+            self.label_22.foreground = '#FF0000'
+        elif not loan_amount.isdigit():
+            self.label_22.text = "Please enter only numeric values (0-9) for loan amount"
+            self.label_22.foreground = '#FF0000'
+        else:
+            min_amount, max_amount = self.get_min_max_amount()
+            loan_amount = int(loan_amount)
+
+            if min_amount <= loan_amount <= max_amount:
+                self.label_22.text = ""
+            else:
+                self.label_22.text = f"Loan amount should be between {min_amount} and {max_amount}"
+                self.label_22.foreground = '#FF0000'
+
+    def text_box_1_change(self, **event_args):
+        tenure = self.text_box_1.text
+        if not tenure:
+            self.label_23.text = "Please select tenure"
+            self.label_23.foreground = '#FF0000'
+        elif not tenure.isdigit():
+            self.label_23.text = "Please enter only numeric values (0-9) for tenure"
+            self.label_23.foreground = '#FF0000'
+        else:
+            min_tenure, max_tenure = self.get_min_max_tenure()
+            tenure = int(tenure)
+
+            if min_tenure <= tenure <= max_tenure:
+                self.label_23.text = ""
+            else:
+                self.label_23.text = f"Tenure should be between {min_tenure} and {max_tenure}"
+                self.label_23.foreground = '#FF0000'
