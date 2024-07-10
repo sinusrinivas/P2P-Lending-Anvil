@@ -22,7 +22,8 @@ class lender_registration_Institutional_form_1(lender_registration_Institutional
   cin_is_valid = False
   din_is_valid = False
   registered_off_add_is_valid = False
-  lendor_business_type_is_valid = False
+  lendor_business_type_is_valid = False  
+  employees_working_is_valid = False
   
   def __init__(self, user_id,**properties):
         self.userId = user_id
@@ -37,10 +38,10 @@ class lender_registration_Institutional_form_1(lender_registration_Institutional
               self.date_picker_1.date = user_data['year_estd']
               self.text_box_3.text = user_data['industry_type']
               self.text_box_4.text = user_data['six_month_turnover']      
-            
-              self.text_box_5.text = user_data['din'].replace(' ', '') if 'din' in user_data else ''
-              self.text_box_6.text = user_data['cin'].replace(' ', '') if 'cin' in user_data else ''
-              self.text_box_7.text = user_data['registered_off_add'] if 'registered_off_add' in user_data else ''
+              self.drop_down_4.selected_value = user_data['employees_working']
+              self.text_box_5.text = user_data['din'] 
+              self.text_box_6.text = user_data['cin']
+              self.text_box_7.text = user_data['registered_off_add']
         
         
               options = app_tables.fin_lendor_business_type.search()
@@ -49,13 +50,14 @@ class lender_registration_Institutional_form_1(lender_registration_Institutional
 
               self.text_box_1_copy.add_event_handler('change', self.validate_business_add)
               self.text_box_2_copy.add_event_handler('change', self.validate_business_name)
-              self.drop_down_12.add_event_handler('change', self.validate_business_type)
               self.date_picker_1.add_event_handler('change', self.validate_year_estd)
               self.text_box_3.add_event_handler('change', self.validate_industry_type)
               self.text_box_4.add_event_handler('change', self.validate_six_month_turnover)
               self.text_box_5.add_event_handler('change', self.validate_din)
               self.text_box_6.add_event_handler('change', self.validate_cin)
               self.text_box_7.add_event_handler('change', self.validate_registered_off_add)
+              self.drop_down_4.add_event_handler('change', self.validate_no_of_employes)
+              self.drop_down_12.add_event_handler('change', self.validate_business_type)
               self.file_loader_1.add_event_handler('change', self.validate_file_upload)
               self.file_loader_1_copy.add_event_handler('change', self.validate_file_upload)
 
@@ -65,11 +67,10 @@ class lender_registration_Institutional_form_1(lender_registration_Institutional
         Business_add = self.text_box_1_copy.text
         global business_add_is_valid
         if re.match(r'^[A-Za-z\d][A-Za-z\d\s]*$', Business_add):
-            self.text_box_1_copy.background = None
+            self.text_box_1_copy.role = 'outlined'
             business_add_is_valid = True
         else:
-            text_box = anvil.js.get_dom_node(self.text_box_1_copy)
-            text_box.style.border = "2px solid red"  # Example: 2 pixel wide solid red border
+            self.text_box_1_copy.role = 'outlined-error'
             business_add_is_valid = False
             alert('please enter a valid business address')
 
@@ -77,28 +78,13 @@ class lender_registration_Institutional_form_1(lender_registration_Institutional
         global business_name_is_valid
         business_name = self.text_box_2_copy.text        
         if re.match(r'^[A-Za-z][A-Za-z\s]*$', business_name):
-            self.text_box_2_copy.background = None            
+            self.text_box_2_copy.role = 'outlined'            
             business_name_is_valid = True
         else:
-            text_box = anvil.js.get_dom_node(self.text_box_2_copy)
-            text_box.style.border = "2px solid red"  # Example: 2 pixel wide solid red border  # Red background for invalid input
+            self.text_box_2_copy.role = 'outlined-error'
             business_name_is_valid = False
             alert('please enter a valid business name')
         # Get today's date
-
-  def validate_business_type(self, dropdown_component):
-    selected_value = self.drop_down_12.selected_value
-    global business_type_is_valid
-    
-    if selected_value:
-        self.drop_down_12.background = None
-        business_type_is_valid = True
-    else:
-        text_box = anvil.js.get_dom_node(self.drop_down_12)
-        text_box.style.border = "2px solid red"
-        business_type_is_valid = False
-        alert('Please select a valid option from the dropdown')
-
             
   def validate_year_estd(self, **event_args):
     year = self.date_picker_1.date  # Ensure self.date_picker_1.date is returning a datetime object
@@ -106,33 +92,28 @@ class lender_registration_Institutional_form_1(lender_registration_Institutional
     global year_estd_is_valid
     
     if not year:
-        text_box = anvil.js.get_dom_node(self.date_picker_1)
-        text_box.style.border = "2px solid red"
+        self.date_picker_1.role = 'outlined-error'
         year_estd_is_valid = False
         alert('Please enter a valid year of establishment')
         return
     
     if year.year > today.year:
         alert("The year cannot be in the future. Please select a valid year.", title="Invalid Year")
-        text_box = anvil.js.get_dom_node(self.date_picker_1)
-        text_box.style.border = "2px solid red"
+        self.date_picker_1.role = 'outlined-error'
         year_estd_is_valid = False
         return
     elif year.year == today.year and year.month > today.month:
         alert("The month cannot be in the future. Please select a valid month.", title="Invalid Month")
-        text_box = anvil.js.get_dom_node(self.date_picker_1)
-        text_box.style.border = "2px solid red"
+        self.date_picker_1.role = 'outlined-error'
         year_estd_is_valid = False
         return
     elif year.year == today.year and year.month == today.month and year.day > today.day:
         alert("The date cannot be in the future. Please select a valid date.", title="Invalid Date")
-        text_box = anvil.js.get_dom_node(self.date_picker_1)
-        text_box.style.border = "2px solid red"
+        self.date_picker_1.role = 'outlined-error'
         year_estd_is_valid = False
         return
-    
-    text_box = anvil.js.get_dom_node(self.date_picker_1)
-    text_box.style.border = "1px solid black"  # Red border for invalid input
+
+    self.date_picker_1.role = 'outlined'
     year_estd_is_valid = True
 
   
@@ -140,11 +121,10 @@ class lender_registration_Institutional_form_1(lender_registration_Institutional
         industry_type = self.text_box_3.text
         global industry_type_is_valid 
         if re.match(r'^[A-Za-z][A-Za-z\s]*$', industry_type):
-            self.text_box_3.background = None
+            self.text_box_3.role = 'outlined'
             industry_type_is_valid = True
         else:
-            text_box = anvil.js.get_dom_node(self.text_box_3)
-            text_box.style.border = "2px solid red"  # Example: 2 pixel wide solid red border
+            self.text_box_3.role = 'outlined-error'
             industry_type_is_valid = False
             alert('please enter a valid industry type')
 
@@ -152,13 +132,12 @@ class lender_registration_Institutional_form_1(lender_registration_Institutional
         six_month_turnover = self.text_box_4.text
         global six_month_turn_over_is_valid
         if re.match(r'^\d+$', six_month_turnover):
-            self.text_box_4.background = None
+            self.text_box_4.role = 'outlined'
             six_month_turn_over_is_valid = True
         elif ' 'in six_month_turnover:
             alert('Spaces are not allowed ')
         else:
-            text_box = anvil.js.get_dom_node(self.text_box_4)
-            text_box.style.border = "2px solid red"  # Example: 2 pixel wide solid red border
+            self.text_box_4.role = 'outlined-error'
             six_month_turn_over_is_valid = False
             alert('please enter a valid six month turn over')
   
@@ -166,13 +145,12 @@ class lender_registration_Institutional_form_1(lender_registration_Institutional
         din = self.text_box_5.text
         global din_is_valid
         if re.match(r'^\d+$', din):
-            self.text_box_5.background = None
+            self.text_box_5.role = 'outlined'
             din_is_valid = True
         elif ' ' in din:
             alert('Spaces are not valid in din')
         else:
-            text_box = anvil.js.get_dom_node(self.text_box_5)
-            text_box.style.border = "2px solid red"  # Example: 2 pixel wide solid red border
+            self.text_box_5.role = 'outlined-error'
             din_is_valid = False
             alert("enter a valid din number")
             
@@ -181,13 +159,12 @@ class lender_registration_Institutional_form_1(lender_registration_Institutional
         cin = self.text_box_6.text
         global cin_is_valid
         if re.match(r'^\d+$', cin):
-            self.text_box_6.background = None   
+            self.text_box_6.role = 'outlined'   
             cin_is_valid = True
         elif ' 'in cin:
             alert('Spaces are not allowed in cin')
         else:
-            text_box = anvil.js.get_dom_node(self.text_box_6)
-            text_box.style.border = "2px solid red"  # Example: 2 pixel wide solid red border
+            self.text_box_6.role = 'outlined-error'
             cin_is_valid = False
             alert('please enter a valid cin number')
 
@@ -195,113 +172,43 @@ class lender_registration_Institutional_form_1(lender_registration_Institutional
         registered_off_add = self.text_box_7.text
         global registered_off_add_is_valid
         if re.match(r'^[A-Za-z\s]+$', registered_off_add):
-            self.text_box_7.background = None
+            self.text_box_7.role = 'outlined'
             registered_off_add_is_valid = True
         else:
-            text_box = anvil.js.get_dom_node(self.text_box_7)
-            text_box.style.border = "2px solid red"  # Example: 2 pixel wide solid red border  # Red background for invalid input
+            self.text_box_7.role = 'outlined-error'
             registered_off_add_is_valid = False
             alert('please enter a valid registered office address')
-            
-        # business_name = self.text_box_2_copy.text
-        # business_add = self.text_box_1_copy.text
-        # business_type = self.drop_down_12.selected_value        
-        # empolyees_working = self.drop_down_4.selected_value
-        # year = self.date_picker_1.date
-        # industry_type = self.text_box_3.text
-        # six_month_turnover = self.text_box_4.text
-        # last_six_statements = self.file_loader_1.file
-        # din = self.text_box_5.text
-        # cin = self.text_box_6.text
-        # registered_off_add = self.text_box_7.text
-        # proof_verification = self.file_loader_1_copy.file
-       
 
-        # if not business_add:
-        #     self.text_box_1_copy.background = '#FF0000'
-        #     self.text_box_1_copy.focus()
-        #     Notification('Please fill all details').show()
-        # elif not re.match(r'^[A-Za-z\s]+$', business_add):
-        #     Notification('Enter a valid Business address')
-        #     text_box = anvil.js.get_dom_node(self.text_box_1_copy)
-        #     text_box.style.border = "2px solid red"  # Example: 2 pixel wide solid red border
-        #     self.text_box_1_copy.focus()
-        #     return
-          
-        # if not business_name:
-        #     text_box = anvil.js.get_dom_node(self.text_box_2_copy)
-        #     text_box.style.border = "2px solid red"  # Example: 2 pixel wide solid red border
-        #     self.text_box_2_copy.focus()
-        #     Notification('Please fill all details').show()
-        # elif not re.match(r'^[A-Za-z\s]+$', business_name):
-        #     alert('Enter a valid Business name')
-        #     # Notification('Enter a valid Business name')
-        #     text_box = anvil.js.get_dom_node(self.text_box_2_copy)
-        #     text_box.style.border = "2px solid red"  # Example: 2 pixel wide solid red border
-        #     self.text_box_2_copy.focus()
-        #     return
+  def validate_business_type(self, **event_args):
+        Business_type = self.drop_down_12.selected_value
+        global business_type_is_valid
+        if Business_type is not None:
+            self.drop_down_12.role = 'outlined'
+            business_type_is_valid = True
+        else:
+            self.drop_down_12.role = 'outlined-error'
+            business_type_is_valid = False
+            alert('please enter a valid business address')
 
-        # if not industry_type:
-        #     text_box = anvil.js.get_dom_node(self.text_box_3)
-        #     text_box.style.border = "2px solid red"  # Example: 2 pixel wide solid red border
-        #     self.text_box_3.focus()
-        #     Notification('Please fill all details').show()
-        # elif not re.match(r'^[A-Za-z\s]+$', industry_type):
-        #     Notification('Enter a valid industry type')
-        #     text_box = anvil.js.get_dom_node(self.text_box_3)
-        #     text_box.style.border = "2px solid red"  # Example: 2 pixel wide solid red border
-        #     self.text_box_3.focus()
-        #     return
-          
-        # if not six_month_turnover:
-        #     text_box = anvil.js.get_dom_node(self.text_box_4)
-        #     text_box.style.border = "2px solid red"  # Example: 2 pixel wide solid red border
-        #     self.text_box_4.focus()
-        #     Notification('Please fill all details').show()
-        # elif not re.match(r'^[A-Za-z\s]+$', six_month_turnover):
-        #     Notification('Enter a valid six month turn over')
-        #     text_box = anvil.js.get_dom_node(self.text_box_4)
-        #     text_box.style.border = "2px solid red"  # Example: 2 pixel wide solid red border
-        #     self.text_box_4.focus()
-        #     return
-
-        # if not din:
-        #     text_box = anvil.js.get_dom_node(self.text_box_5)
-        #     text_box.style.border = "2px solid red"  # Example: 2 pixel wide solid red border
-        #     self.text_box_5.focus()
-        #     Notification('Please fill all details').show()
-        # elif not re.match(r'^[A-Za-z\s]+$', din):
-        #     Notification('Enter a valid din number')
-        #     text_box = anvil.js.get_dom_node(self.text_box_5)
-        #     text_box.style.border = "2px solid red"  # Example: 2 pixel wide solid red border
-        #     self.text_box_5.focus()
-        #     return
-
-        # if not cin:
-        #     text_box = anvil.js.get_dom_node(self.text_box_6)
-        #     text_box.style.border = "2px solid red"  # Example: 2 pixel wide solid red border
-        #     self.text_box_6.focus()
-        #     Notification('Please fill all details').show()
-        # elif not re.match(r'^[A-Za-z\s]+$', cin):
-        #     Notification('Enter a valid din number')
-        #     text_box = anvil.js.get_dom_node(self.text_box_6)
-        #     text_box.style.border = "2px solid red"  # Example: 2 pixel wide solid red border
-        #     self.text_box_6.focus()
-        #     return
-
-        # if not registered_off_add:
-        #     text_box = anvil.js.get_dom_node(self.text_box_7)
-        #     text_box.style.border = "2px solid red"  # Example: 2 pixel wide solid red border
-        #     self.text_box_7.focus()
-        #     Notification('Please fill all details').show()
-        # elif not re.match(r'^[A-Za-z\s]+$', registered_off_add):
-        #     Notification('Enter a valid din number')
-        #     text_box = anvil.js.get_dom_node(self.text_box_7)
-        #     text_box.style.border = "2px solid red"  # Example: 2 pixel wide solid red border
-        #     self.text_box_7.focus()
-        #     return
+  def validate_no_of_employes(self, **event_args):
+        No_of_employes = self.drop_down_4.selected_value
+        global business_type_is_valid
+        if No_of_employes is not None:
+            self.drop_down_4.role = 'outlined'
+            business_type_is_valid = True
+        else:
+            self.drop_down_4.role = 'outlined-error'
+            business_type_is_valid = False
+            alert('please enter a valid business address')
           
   def button_2_click(self, **event_args):
+      self.validate_business_name()
+      self.validate_business_add()
+      self.validate_industry_type()
+      self.validate_six_month_turnover()
+      self.validate_cin()
+      self.validate_din()
+      self.validate_registered_off_add()
       business_name = self.text_box_2_copy.text
       business_add = self.text_box_1_copy.text
       business_type = self.drop_down_12.selected_value        
@@ -314,12 +221,45 @@ class lender_registration_Institutional_form_1(lender_registration_Institutional
       cin = self.text_box_6.text
       reg_off_add = self.text_box_7.text
       proof_verification = self.file_loader_1_copy.file
+      global business_type_is_valid
+      global employees_working_is_valid
 
-      if not user_photo:
-            self.registration_img_file_loader.role = 'outlined-error'
-            self.registration_img_file_loader.focus()
+      # if not user_photo:
+      #       self.registration_img_file_loader.role = 'outlined-error'
+      #       self.registration_img_file_loader.focus()
+      #       Notification('Please fill all details').show()
+      #       return
+      if not empolyees_working :
+        employees_working_is_valid = False
+        self.drop_down_4.role = 'outlined-error'
+        self.drop_down_4.focus()
+        Notification('please fill all details')
+      else:
+        employees_working_is_valid = True
+
+      if not business_type:
+        business_type_is_valid = False
+        self.drop_down_12.role = 'outlined-error'
+        self.drop_down_12.focus()
+        Notification('please fill all details')
+      else:
+        business_type_is_valid = True
+
+      if not last_six_statements:
+            self.file_loader_1.role = 'outlined-error'
+            self.file_loader_1.focus()
             Notification('Please fill all details').show()
             return
+      else:
+            self.file_loader_1.role = 'outlined'
+
+      if not proof_verification:
+            self.file_loader_1_copy.role = 'outlined-error'
+            self.file_loader_1_copy.focus()
+            Notification('Please fill all details').show()
+            return
+      else:
+            self.file_loader_1_copy.role = 'outlined'
         
       user_id = self.userId 
       global business_name_is_valid
@@ -329,7 +269,7 @@ class lender_registration_Institutional_form_1(lender_registration_Institutional
       global din_is_valid
       global cin_is_valid
       global registered_off_add_is_valid
-      if business_name_is_valid and business_add_is_valid and industry_type_is_valid and six_month_turn_over_is_valid and din_is_valid and cin_is_valid and registered_off_add_is_valid:
+      if business_name_is_valid and business_add_is_valid and industry_type_is_valid and six_month_turn_over_is_valid and din_is_valid and cin_is_valid and registered_off_add_is_valid and business_type_is_valid and employees_working_is_valid:
         anvil.server.call('add_lendor_institutional_form_1',business_name,business_add,business_type,empolyees_working,user_id)
         months = (datetime.now().year - year.year) * 12 + (datetime.now().month - year.month)
         anvil.server.call('add_lendor_institutional_form_2', year, months, industry_type, turn_over, last_six_statements, user_id)
@@ -434,3 +374,4 @@ class lender_registration_Institutional_form_1(lender_registration_Institutional
 
 
 
+ 

@@ -25,7 +25,7 @@ components:
 - name: column_panel_1
   properties: {role: outlined-card, background: '', foreground: black}
   type: ColumnPanel
-  layout_properties: {grid_position: 'VOLHGX,ULFWPP'}
+  layout_properties: {grid_position: 'JNTBJK,MUYGOJ'}
   components:
   - name: label_1_copy_1
     properties: {role: null, bold: true, align: center, spacing_above: small, background: '#05264d', icon: '', underline: false, font: '', icon_align: left, foreground: white, spacing_below: small, visible: true, border: '', italic: false, font_size: 18, tooltip: '', text: Institutional Type}
@@ -40,7 +40,7 @@ components:
     type: Label
     layout_properties: {grid_position: 'LKGHIL,VIJLQU'}
   - name: label_1_copy_2
-    properties: {role: null, bold: true, align: left, spacing_above: medium, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: 14, tooltip: '', text: 'Enter Your Business  * Address:'}
+    properties: {role: null, bold: true, align: left, spacing_above: medium, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: 14, tooltip: '', text: Enter Your Business Address  *}
     type: Label
     layout_properties: {grid_position: 'LKGHIL,BVXFNE'}
   - name: text_box_2_copy
@@ -126,7 +126,7 @@ components:
   - name: text_box_4
     properties: {role: outlined, bold: false, align: left, placeholder: Enter Your Last Six Month's Turnover, spacing_above: small, background: 'theme:On Primary', type: text, underline: false, font: '', hide_text: false, foreground: '', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: 12, tooltip: '', text: ''}
     type: TextBox
-    layout_properties: {grid_position: 'FNFHAS,HMQKGI WDYIHI,BZGIVC'}
+    layout_properties: {grid_position: 'FNFHAS,HMQKGI SCCEFK,BYPZRI'}
   - name: label_1_copy_1_copy_2
     properties:
       role: null
@@ -151,7 +151,7 @@ components:
     type: Label
     layout_properties: {grid_position: 'FNFHAS,ALPWBN XLIDYW,TJEIKW'}
   - name: file_loader_1
-    properties: {text: Upload, font_size: 14}
+    properties: {text: Upload, font_size: 14, border: ''}
     type: FileLoader
     layout_properties: {grid_position: 'FNFHAS,ALPWBN FONHPR,NRLHMM'}
     event_bindings: {change: file_loader_1}
@@ -160,7 +160,7 @@ components:
     type: Image
     layout_properties: {grid_position: 'FNFHAS,ALPWBN FONHPR,GIVPGH'}
   - name: label_3
-    properties: {font_size: 14}
+    properties: {font_size: 12}
     type: Label
     layout_properties: {grid_position: 'FNFHAS,ALPWBN FONHPR,FJXRTS'}
   - name: label_1_copy_1_copy_1_copy
@@ -207,7 +207,7 @@ components:
       font_size: 14
       tooltip: ''
       text: |-
-        Provide Proof of Verification:  *
+        Provide Proof of Verification  *
         (recent electricity bill)
     type: Label
     layout_properties: {grid_position: 'OFWFAD,EGUDKD MBTXDR,MAOOQB'}
@@ -221,7 +221,7 @@ components:
     type: Image
     layout_properties: {grid_position: 'OFWFAD,EGUDKD HQKZGG,WLXMJZ'}
   - name: label_1
-    properties: {}
+    properties: {font_size: 12}
     type: Label
     layout_properties: {grid_position: 'OFWFAD,EGUDKD HQKZGG,SFZKAE'}
 - name: spacer_1
