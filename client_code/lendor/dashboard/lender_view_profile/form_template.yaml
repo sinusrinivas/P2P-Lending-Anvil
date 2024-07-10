@@ -251,7 +251,7 @@ components:
         type: DropDown
         layout_properties: {grid_position: 'XVXXWF,CAGBRY'}
       - name: qualification_dropdown
-        properties: {role: outlined, font_size: 14}
+        properties: {role: outlined, font_size: 17}
         type: DropDown
         layout_properties: {grid_position: 'XVXXWF,SAQXTK'}
       - name: label_3_copy_copy_copy
@@ -670,7 +670,7 @@ components:
         type: TextBox
         layout_properties: {grid_position: 'AQFDUO,ONAXKY'}
       - name: acccount_type_dropdown
-        properties: {role: outlined, font_size: 14}
+        properties: {role: outlined, font_size: 17}
         type: DropDown
         layout_properties: {grid_position: 'AQFDUO,WORDMO'}
       - name: label_4_copy_3_copy_copy_copy_copy

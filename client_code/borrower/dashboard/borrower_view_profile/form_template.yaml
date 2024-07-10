@@ -191,7 +191,7 @@ components:
       - name: govt_1_file_loader_1
         properties: {visible: false, font_size: 14}
         type: FileLoader
-        layout_properties: {grid_position: 'NKNCPO,ORARGK RHMSHX,OIRSIM'}
+        layout_properties: {grid_position: 'NKNCPO,ORARGK TNWJQD,GVLHSD'}
         event_bindings: {change: govt_1_file_loader_1_change}
       - name: govt_id_1_image
         properties: {height: 71}
@@ -200,11 +200,11 @@ components:
       - name: label_18
         properties: {text: 'Govt Id 2 Image :', font_size: 14, bold: true}
         type: Label
-        layout_properties: {grid_position: 'NKNCPO,HRBWNJ'}
+        layout_properties: {grid_position: 'NKNCPO,HRBWNJ HSQMJG,ZGBZWF'}
       - name: govt_2_file_loader_2
         properties: {visible: false}
         type: FileLoader
-        layout_properties: {grid_position: 'NKNCPO,HRBWNJ FQRSHT,OEYUYX'}
+        layout_properties: {grid_position: 'NKNCPO,HRBWNJ HSQMJG,BDWKRP'}
         event_bindings: {change: govt_2_file_loader_2_change}
       - name: govt_id_2_image
         properties: {height: 70}
@@ -501,7 +501,7 @@ components:
         layout_properties: {grid_position: 'AURCIS,DDHVMK'}
         event_bindings: {click: save_land_farming_details_click}
     - name: employee_information_panel
-      properties: {col_widths: '{"KLESAL":55,"MNSTRU":30,"QANZQS":35,"EQHLLL":35}', role: elevated-card, visible: false}
+      properties: {col_widths: '{"MNSTRU":30,"QANZQS":30,"EQHLLL":30,"FMYVBK":20,"RPZEWI":20}', role: elevated-card, visible: false}
       type: ColumnPanel
       layout_properties: {grid_position: 'JNOBDG,XWGBKV', full_width_row: true}
       components:
@@ -597,24 +597,24 @@ components:
         properties: {text: 'Employee id :', bold: true, font_size: 14, icon: ''}
         type: Label
         layout_properties: {grid_position: 'FVHFPC,QANZQS'}
+      - name: employee_id_image
+        properties: {visible: false}
+        type: FileLoader
+        layout_properties: {grid_position: 'FVHFPC,FMYVBK'}
+        event_bindings: {change: employee_id_image_change}
       - name: label_4_copy_5_copy_copy_copy_copy_copy_copy_2_copy_2
         properties: {text: 'Last six months bank statement :', bold: true, font_size: 14, icon: ''}
         type: Label
         layout_properties: {grid_position: 'FVHFPC,EQHLLL'}
-      - name: employee_id_image
+      - name: employee_last_six_bank_state_image
         properties: {visible: false}
         type: FileLoader
-        layout_properties: {grid_position: 'XCOAMO,QBSTZS'}
-        event_bindings: {change: employee_id_image_change}
+        layout_properties: {grid_position: 'FVHFPC,RPZEWI'}
+        event_bindings: {change: employee_last_six_bank_state_image_change}
       - name: emp_id_proof
         properties: {height: 56}
         type: Image
         layout_properties: {grid_position: 'XCOAMO,BHKNES'}
-      - name: employee_last_six_bank_state_image
-        properties: {visible: false}
-        type: FileLoader
-        layout_properties: {grid_position: 'XCOAMO,WYYLKJ'}
-        event_bindings: {change: employee_last_six_bank_state_image_change}
       - name: last_six_month_proof
         properties: {height: 56}
         type: Image
@@ -701,7 +701,7 @@ components:
         layout_properties: {grid_position: 'WWAWKU,OCOBKP'}
         event_bindings: {click: save_bank_details_click}
     - name: professional_information_paenl
-      properties: {col_widths: '{}', role: elevated-card, visible: false}
+      properties: {col_widths: '{"PCDMVM":30,"CMNHZD":15,"FLEOXT":15}', role: elevated-card, visible: false}
       type: ColumnPanel
       layout_properties: {grid_position: 'VJEFFN,KKSDKE', full_width_row: true}
       components:
@@ -737,19 +737,19 @@ components:
         properties: {text: College Proof, bold: true, font_size: 14, icon: ''}
         type: Label
         layout_properties: {grid_position: 'CUPFUR,CMNHZD'}
+      - name: college_proof_image
+        properties: {visible: false}
+        type: FileLoader
+        layout_properties: {grid_position: 'CUPFUR,FLEOXT'}
+        event_bindings: {change: college_proof_image_change}
       - name: college_address_tx
         properties: {background: 'theme:On Primary', role: outlined, text: '', font_size: 14}
         type: TextBox
         layout_properties: {grid_position: 'ETHKGO,GSVPFT'}
-      - name: college_proof_image
-        properties: {visible: false}
-        type: FileLoader
-        layout_properties: {grid_position: 'ETHKGO,CCTTYB TGTOJF,JRUDDZ'}
-        event_bindings: {change: college_proof_image_change}
       - name: college_proof
         properties: {height: 62}
         type: Image
-        layout_properties: {grid_position: 'ETHKGO,CCTTYB TGTOJF,URLMFZ'}
+        layout_properties: {grid_position: 'ETHKGO,CCTTYB'}
       - name: edit_college_details_button
         properties: {text: Edit Details, background: '#0b2547', align: center, foreground: 'theme:On Primary'}
         type: Button
