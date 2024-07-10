@@ -123,7 +123,7 @@ components:
       type: Label
       layout_properties: {grid_position: 'OBSQRX,EBAWOR XFIVCE,YQUZVQ'}
     - name: spouse_mbl_no_text
-      properties: {role: outlined, bold: false, align: left, placeholder: '', spacing_above: small, background: 'theme:On Primary', type: text, underline: false, font: '', hide_text: false, foreground: '', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: 14, tooltip: '', text: ''}
+      properties: {role: outlined-error, bold: false, align: left, placeholder: '', spacing_above: small, background: 'theme:On Primary', type: text, underline: false, font: '', hide_text: false, foreground: '', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: 14, tooltip: '', text: ''}
       type: TextBox
       layout_properties: {grid_position: 'OBSQRX,EBAWOR NXHNGT,KGWDTX'}
       event_bindings: {pressed_enter: spouse_mbl_no_text_pressed_enter}
