@@ -29,6 +29,23 @@ class lender_registration_form_3_marital_details(lender_registration_form_3_mari
     
 
     
+    user_data=app_tables.fin_guarantor_details.get(customer_id=user_id)
+    if user_data:
+      self.drop_down_1.selected_value = user_data['another_person']
+      if user_data['another_person'] == 'Spouse':
+        self.column_panel_2.visible = True
+        self.column_panel_2.visible = False
+      else:
+        self.column_panel_2.visible = False
+        self.column_panel_2.visible = True
+
+    self.userId = user_id
+
+    self.init_components(**properties)
+
+    
+
+    
 
     user_data=app_tables.fin_guarantor_details.get(customer_id=user_id)
     if user_data:
