@@ -235,7 +235,7 @@ class apply_loan_request(apply_loan_requestTemplate):
         # Toggle the visibility of the column_panel_1
         if self.column_panel_1.visible:
             self.column_panel_1.visible = False
-            self.link_3.text = "Show Details"
+            self.link_3.text = "View Payment details"
         else:
             self.column_panel_1.visible = True
             self.link_3.text = "Hide Details"
