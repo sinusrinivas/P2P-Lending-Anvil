@@ -499,14 +499,14 @@ class basic_registration_form(basic_registration_formTemplate):
         if re.match(r'^[A-Za-z\s]+$', full_name):
             self.full_name_text_box.background = None
         else:
-            self.full_name_text_box.background = '#FF0000'  # Red background for invalid input
+            self.full_name_text_box.role = 'outlined-error'  
             
     def validate_zip(self, **event_args):
         zip = self.text_box_4.text
         if re.match(r'^\d+$', zip):
             self.text_box_4.background = None
         else:
-            self.text_box_4.background = '#FF0000'
+            self.text_box_4.role = 'outlined-error'
         
     def validate_dob(self, **event_args):
         dob = self.date_picker_1.date.strftime('%Y-%m-%d') if self.date_picker_1.date else None
@@ -781,6 +781,8 @@ class basic_registration_form(basic_registration_formTemplate):
             return
         # else:
         #     open_form('bank_users.user_form')
+        else:
+            None
 
 
 
