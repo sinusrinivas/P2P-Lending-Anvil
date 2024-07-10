@@ -14,6 +14,10 @@ class star_1_borrower_registration_form_3_marital(star_1_borrower_registration_f
   def __init__(self,user_id, **properties):
     # Set Form properties and Data Bindings.
     self.userId = user_id
+    self.spouse_companyname_text.visible = False
+    self.annual_earning_text.visible = False
+    self.company_name.visible = False
+    self.anual_ctc.visible = False
     # user_data=app_tables.fin_user_profile.get(customer_id=user_id)
     # if user_data:
     #   self.marital_status_borrower_registration_dropdown.selected_value=user_data['marital_status']

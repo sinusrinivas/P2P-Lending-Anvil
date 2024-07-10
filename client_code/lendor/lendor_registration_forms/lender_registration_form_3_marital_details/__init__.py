@@ -79,6 +79,7 @@ class lender_registration_form_3_marital_details(lender_registration_form_3_mari
     self.spouse_mbl_no_text.add_event_handler("change", self.validate_spouse_mbl_no)
     self.drop_down_1_copy.add_event_handler("change", self.toggle_spouse_fields_visibility)
     self.drop_down_1.add_event_handler("change", self.toggle_father_spouse_fields_visibility)
+    self.drop_down_1_copy.add_event_handler("change", self.validate_spouse_profession)
     # self.spouse_companyname_text.add_event_handler("change", self.validate_spouse_company)
     # self.annual_earning_text.add_event_handler("change", self.validate_annual_earning)
 
