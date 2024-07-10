@@ -19,7 +19,7 @@ components:
   name: spacer_1
   layout_properties: {grid_position: 'GAQDQF,NOUIYL', full_width_row: true}
 - name: column_panel_2
-  properties: {col_widths: '{"KUGKXP":10,"KALRBF":20,"RXBWZS":10,"OWAXPD":20,"XOGALD":10,"NNZQOO":20,"LHYLYO":10,"NVWVDR":20,"DQDPDF":10,"ZNDFAT":20,"POLCSO":15,"SPUPWO":45,"YOVGXH":10,"RVCDPS":20,"PTZDAZ":10,"GYLSZA":20,"WOSPEI":10,"XZXZPO":20}', role: outlined-card}
+  properties: {col_widths: '{"KUGKXP":10,"KALRBF":20,"RXBWZS":10,"OWAXPD":20,"XOGALD":10,"NNZQOO":20,"LHYLYO":10,"NVWVDR":20,"DQDPDF":10,"ZNDFAT":20,"POLCSO":15,"SPUPWO":30,"YOVGXH":10,"RVCDPS":20,"PTZDAZ":10,"GYLSZA":20,"WOSPEI":10,"XZXZPO":20,"UHZRVE":15,"ODCITM":30}', role: outlined-card}
   type: ColumnPanel
   layout_properties: {grid_position: 'JUBBHB,UXXWQH'}
   components:
@@ -192,6 +192,14 @@ components:
     properties: {role: null, bold: false, align: left, spacing_above: none, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: ''}
     type: Label
     layout_properties: {grid_position: 'IWGMLE,SPUPWO WFGFWO,TSCTBB'}
+  - name: spacer_2
+    properties: {height: 32}
+    type: Spacer
+    layout_properties: {grid_position: 'IWGMLE,UHZRVE'}
+  - name: spacer_3
+    properties: {height: 32}
+    type: Spacer
+    layout_properties: {grid_position: 'IWGMLE,ODCITM'}
   - name: link_1
     properties: {text: View Loan Summary, align: center, bold: true, visible: false}
     type: Link

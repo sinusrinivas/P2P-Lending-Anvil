@@ -327,21 +327,22 @@ class apply_loan_request(apply_loan_requestTemplate):
 
     def calculate_payment_schedule(self, total_repayment_amount, emi, monthly_interest_rate):
         user_request = app_tables.fin_product_details.get(product_name=self.product_name)
-        self.processing_fee = user_request['processing_fee']
-        self.tenure_months = self.text_box_1.text
-        self.loan_amount = self.label_28.text
-        # self.processing_fee = self.label_21.text
+        self.processing_fee = float(user_request['processing_fee'])
+        self.tenure_months = int(self.text_box_1.text)
+        self.loan_amount = float(self.label_28.text.replace('₹ ', '').replace(',', '').strip())
+    
         payment_schedule = []
         processing_fee_per_month = (self.processing_fee / 100) * self.loan_amount / self.tenure_months
         beginning_balance = total_repayment_amount
         loan_amount_beginning_balance = self.loan_amount
+    
         for month in range(1, self.tenure_months + 1):
             interest_amount = loan_amount_beginning_balance * monthly_interest_rate
             principal_amount = emi - interest_amount
             total_payment = emi + processing_fee_per_month
             loan_amount_ending_balance = loan_amount_beginning_balance - principal_amount
             payment_schedule.append({
-                'PaymentNumber':f"EMI {month}",
+                'PaymentNumber': f"EMI {month}",
                 'Principal': f"₹ {principal_amount:.2f}",
                 'Interest': f"₹ {interest_amount:.2f}",
                 'ProcessingFee': f"₹ {processing_fee_per_month:.2f}",
@@ -353,6 +354,7 @@ class apply_loan_request(apply_loan_requestTemplate):
             })
             beginning_balance -= total_payment
             loan_amount_beginning_balance = loan_amount_ending_balance
+    
         return payment_schedule
 
     def display_three_month_payment_details(self, total_interest_amount):
@@ -362,7 +364,8 @@ class apply_loan_request(apply_loan_requestTemplate):
         # interest_rate = float(self.label_7_copy.text.replace('%', '').strip())
         tenure_months = int(str(self.text_box_1.text).strip())  # Ensure this is treated as a string first, then convert to int
         loan_amount = float(self.label_28.text.replace('₹ ', '').replace(',', '').strip())
-        processing_fee = float(self.label_21.text.replace('%', '').strip())
+        # processing_fee = float(self.label_21.text.replace('%', '').strip())
+        processing_fee = user_request['processing_fee']
         
         # Calculate monthly interest rate
         monthly_interest_rate = interest_rate / 100 / 12
@@ -385,7 +388,8 @@ class apply_loan_request(apply_loan_requestTemplate):
         # Convert the necessary text values to float
         loan_amount = float(self.label_28.text.replace('₹ ', '').replace(',', '').strip())
         total_repayment_amount = float(self.label_34.text.replace('₹ ', '').replace(',', '').strip())
-        tenure_months = int(self.tenure_months)  # Ensure tenure_months is an integer
+        tenure_months = int(str(self.text_box_1.text).strip())
+        # tenure_months = int(self.tenure_months)  # Ensure tenure_months is an integer
     
         payment_schedule = []
         beginning_balance = total_repayment_amount
@@ -445,7 +449,8 @@ class apply_loan_request(apply_loan_requestTemplate):
     def calculate_six_month_payment_schedule(self, emi, monthly_interest_rate, processing_fee_per_month, total_interest_amount):
         self.loan_amount = self.label_28.text
         self.total_repayment_amount = self.label_34.text
-        self.tenure_months = self.text_box_1.text
+        self.tenure_months = int(str(self.text_box_1.text).strip())
+        # self.tenure_months = self.text_box_1.text
         payment_schedule = []
         beginning_balance = self.total_repayment_amount
         loan_amount_beginning_balance = self.loan_amount
@@ -473,13 +478,18 @@ class apply_loan_request(apply_loan_requestTemplate):
         return payment_schedule
 
     def calculate_interest_for_months(self, emi, loan_amount_beginning_balance, monthly_interest_rate, start_month, end_month):
+        # Clean and convert loan_amount_beginning_balance to float
+        loan_amount_beginning_balance = float(loan_amount_beginning_balance.replace('₹ ', '').replace(',', '').strip())
+    
         total_interest = 0
         for month in range(start_month, end_month + 1):
             interest_amount = loan_amount_beginning_balance * monthly_interest_rate
             loan_amount_beginning_balance -= (emi - interest_amount)
             total_interest += interest_amount
+    
         return total_interest
 
+  
     def submit_click(self, **event_args):
         self.interest_rate = float(str(self.label_7_copy.text).replace('%', '').strip())
         self.tenure_months = int(str(self.text_box_1.text).strip())
