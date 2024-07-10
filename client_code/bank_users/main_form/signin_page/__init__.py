@@ -112,17 +112,17 @@ class signin_page(signin_pageTemplate):
                           open_form('bank_users.user_form')
                         # For Borrower Registration Form  
                         elif user_type == 'borrower' and actual_count==1:
-                          open_form('borrower.borrower_registration_forms.star_1_borrower_registration_form_1_education',user_id=userid)
+                          open_form('borrower.borrower_registration_forms.borrower_registration_form_1_education',user_id=userid)
                         elif user_type == 'borrower' and actual_count==1.1:
-                          open_form('borrower.borrower_registration_forms.star_1_borrower_registration_form_1_education.star_1_borrower_registration_form_education_10th_class',user_id=userid) 
+                          open_form('borrower.borrower_registration_forms.borrower_registration_form_1_education',user_id=userid) 
                         elif user_type == 'borrower' and actual_count==1.2:
-                          open_form('borrower.borrower_registration_forms.star_1_borrower_registration_form_1_education.star_1_borrower_registration_form_education_intermediate',user_id=userid) 
+                          open_form('borrower.borrower_registration_forms.borrower_registration_form_1_education',user_id=userid) 
                         elif user_type == 'borrower' and actual_count==1.3:
-                          open_form('borrower.borrower_registration_forms.star_1_borrower_registration_form_1_education.star_1_borrower_registration_form_education_btech',user_id=userid)   
+                          open_form('borrower.borrower_registration_forms.borrower_registration_form_1_education',user_id=userid)   
                         elif user_type == 'borrower' and actual_count==1.4:
-                          open_form('borrower.borrower_registration_forms.star_1_borrower_registration_form_1_education.star_1_borrower_registration_form_education_mtech',user_id=userid)
+                          open_form('borrower.borrower_registration_forms.borrower_registration_form_1_education',user_id=userid)
                         elif user_type == 'borrower' and actual_count==1.5:
-                          open_form('borrower.borrower_registration_forms.star_1_borrower_registration_form_1_education.star_1_borrower_registration_form_education_phd',user_id=userid)
+                          open_form('borrower.borrower_registration_forms.borrower_registration_form_1_education',user_id=userid)
                         elif user_type == 'borrower' and actual_count==2:
                           open_form('borrower.borrower_registration_forms.star_1_borrower_registration_form_2_employment',user_id=userid)
                         elif user_type == 'borrower' and actual_count==2.1:
@@ -194,10 +194,10 @@ class signin_page(signin_pageTemplate):
 
                     else:
                         # Handle the case when user_profile_e is None
-                        open_form('bank_users.user_form')
+                        open_form('bank_users.main_form.investNow_applyForLoan')
             else:
                 # Handle the case when current_user is None
-                open_form('bank_users.user_form')
+                open_form('bank_users.main_form.investNow_applyForLoan')
 
 
     else:
@@ -335,17 +335,17 @@ class signin_page(signin_pageTemplate):
                       open_form('bank_users.user_form')
                     # For Borrower Registration Form  
                     elif user_type == 'borrower' and actual_count==1:
-                      open_form('borrower.borrower_registration_forms.star_1_borrower_registration_form_1_education',user_id=userid)
+                      open_form('borrower.borrower_registration_forms.borrower_registration_form_1_education',user_id=userid)
                     elif user_type == 'borrower' and actual_count==1.1:
-                      open_form('borrower.borrower_registration_forms.star_1_borrower_registration_form_1_education.star_1_borrower_registration_form_education_10th_class',user_id=userid) 
+                      open_form('borrower.borrower_registration_forms.borrower_registration_form_1_education',user_id=userid) 
                     elif user_type == 'borrower' and actual_count==1.2:
-                      open_form('borrower.borrower_registration_forms.star_1_borrower_registration_form_1_education.star_1_borrower_registration_form_education_intermediate',user_id=userid) 
+                      open_form('borrower.borrower_registration_forms.borrower_registration_form_1_education',user_id=userid) 
                     elif user_type == 'borrower' and actual_count==1.3:
-                      open_form('borrower.borrower_registration_forms.star_1_borrower_registration_form_1_education.star_1_borrower_registration_form_education_btech',user_id=userid)   
+                      open_form('borrower.borrower_registration_forms.borrower_registration_form_1_education',user_id=userid)   
                     elif user_type == 'borrower' and actual_count==1.4:
-                      open_form('borrower.borrower_registration_forms.star_1_borrower_registration_form_1_education.star_1_borrower_registration_form_education_mtech',user_id=userid)
+                      open_form('borrower.borrower_registration_forms.borrower_registration_form_1_education',user_id=userid)
                     elif user_type == 'borrower' and actual_count==1.5:
-                      open_form('borrower.borrower_registration_forms.star_1_borrower_registration_form_1_education.star_1_borrower_registration_form_education_phd',user_id=userid)
+                      open_form('borrower.borrower_registration_forms.borrower_registration_form_1_education',user_id=userid)
                     elif user_type == 'borrower' and actual_count==2:
                       open_form('borrower.borrower_registration_forms.star_1_borrower_registration_form_2_employment',user_id=userid)
                     elif user_type == 'borrower' and actual_count==2.1:
@@ -417,10 +417,10 @@ class signin_page(signin_pageTemplate):
 
                 else:
                     # Handle the case when user_profile_e is None
-                    open_form('bank_users.user_form')
+                    open_form('bank_users.main_form.investNow_applyForLoan')
         else:
             # Handle the case when current_user is None
-            open_form('bank_users.user_form')
+            open_form('bank_users.main_form.investNow_applyForLoan')
 
         
     else:

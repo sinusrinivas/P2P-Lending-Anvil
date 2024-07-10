@@ -898,3 +898,7 @@ class lender_view_profile(lender_view_profileTemplate):
   def button_1_click(self, **event_args):
     """This method is called when the button is clicked"""
     open_form('lendor.dashboard')
+
+  def edit_land_farming_details_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    pass
