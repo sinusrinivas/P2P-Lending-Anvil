@@ -12,10 +12,12 @@ import re
 
 
 class lender_registration_Institutional_form_1(lender_registration_Institutional_form_1Template):
+  
   def __init__(self, user_id,**properties):
         self.userId = user_id
         # Set Form properties and Data Bindings.
         self.init_components(**properties)
+        
         user_data=app_tables.fin_user_profile.get(customer_id=user_id)
         if user_data:
               self.text_box_1_copy.text = user_data['business_add']
@@ -42,6 +44,8 @@ class lender_registration_Institutional_form_1(lender_registration_Institutional
               self.text_box_5.add_event_handler('change',self.validate_din)
               self.text_box_6.add_event_handler('change',self.validate_cin)
               self.text_box_7.add_event_handler('change',self.validate_registered_off_add)
+
+        
         
   def validate_business_add(self, **event_args):
         Business_add = self.text_box_1_copy.text
@@ -49,13 +53,16 @@ class lender_registration_Institutional_form_1(lender_registration_Institutional
             self.text_box_1_copy.background = None
         else:
             self.text_box_1_copy.background = '#FF0000'  # Red background for invalid input
+            alert('please enter a valid business address')
 
   def validate_business_name(self, **event_args):
         business_name = self.text_box_2_copy.text
         if re.match(r'^[A-Za-z\s]+$', business_name):
             self.text_box_2_copy.background = None
         else:
-            self.text_box_2_copy.background = '#FF0000'  # Red background for invalid input
+            text_box = anvil.js.get_dom_node(self.text_box_2_copy)
+            text_box.style.border = "2px solid red"  # Example: 2 pixel wide solid red border  # Red background for invalid input
+            alert('please enter a valid business name')
         # Get today's date
         today = datetime.today()
     
@@ -74,45 +81,56 @@ class lender_registration_Institutional_form_1(lender_registration_Institutional
           alert("The date cannot be in the future. Please select a valid date.", title="Invalid Date")
           self.text_box_1_copy.background = '#FF0000'
         else:
-            self.text_box_1_copy.background = '#FF0000'  # Red background for invalid input
-            
+          self.text_box_1_copy.background = '#FF0000'  # Red background for invalid input
+          alert('please enter a valid year of establishment')
+  
   def validate_industry_type(self, **event_args):
         industry_type = self.text_box_3.text
         if re.match(r'^[A-Za-z\s]+$', industry_type):
             self.text_box_3.background = None
         else:
             self.text_box_3.background = '#FF0000'  # Red background for invalid input
+            alert('please enter a valid industry type')
 
   def validate_six_month_turnover(self, **event_args):
         six_month_turnover = self.text_box_4.text
         if re.match(r'^\d+$', six_month_turnover):
             self.text_box_4.background = None
+        elif ' 'in six_month_turnover:
+            alert('Spaces are not allowed ')
         else:
             self.text_box_4.background = '#FF0000'  # Red background for invalid input
-
+            alert('please enter a valid six month turn over')
+  
   def validate_din(self, **event_args):
         din = self.text_box_5.text
         if re.match(r'^\d+$', din):
             self.text_box_5.background = None
+        elif ' ' in din:
+            alert('Spaces are not valid in din')
         else:
-            Notification("Spaces are not allowed in the DIN input").show()
             self.text_box_5.background = '#FF0000'  # Red background for invalid input
+            alert("enter a valid din number")
+            
 
   def validate_cin(self, **event_args):
         cin = self.text_box_6.text
         if re.match(r'^\d+$', cin):
-            self.text_box_6.background = None
+            self.text_box_6.background = None        
+        elif ' 'in cin:
+            alert('Spaces are not allowed in cin')
         else:
             self.text_box_6.background = '#FF0000'  # Red background for invalid input
+            alert('please enter a valid cin number')
 
   def validate_registered_off_add(self, **event_args):
         registered_off_add = self.text_box_7.text
         if re.match(r'^[A-Za-z\s]+$', registered_off_add):
             self.text_box_7.background = None
         else:
-            Notification("Spaces are not allowed in the DIN input").show()
             self.text_box_7.background = '#FF0000'  # Red background for invalid input
-
+            alert('please enter a valid registered office address')
+            
         business_name = self.text_box_2_copy.text
         business_add = self.text_box_1_copy.text
         # business_type = self.drop_down_12.selected_value        
@@ -125,6 +143,7 @@ class lender_registration_Institutional_form_1(lender_registration_Institutional
         cin = self.text_box_6.text
         registered_off_add = self.text_box_7.text
         # proof_verification = self.file_loader_1_copy.file
+       
 
         if not business_add:
             self.text_box_1_copy.background = '#FF0000'
