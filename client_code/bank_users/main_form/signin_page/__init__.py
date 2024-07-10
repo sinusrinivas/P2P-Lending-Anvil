@@ -10,6 +10,7 @@ from anvil.tables import app_tables
 from ...user_form import user_module
 from .. import main_form_module
 from datetime import datetime
+import re
 
 
 class signin_page(signin_pageTemplate):
@@ -30,7 +31,19 @@ class signin_page(signin_pageTemplate):
       self.text_box_2.hide_text = True  # Hide the password
       self.eye_icon_1.source = '_/theme/eye_closed.png'  # Change to closed eye icon
 
+  def validate_password(self):
+      password = self.text_box_2.text.strip()
+      if not password:
+          self.error_label.text='Password cannot be empty.'
+      elif len(password) < 8:
+          self.error_label.text = 'Password must be at least 8 characters long.'
+      elif not re.match(r'^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()_+=-])[A-Za-z\d!@#$%^&*()_+=-]+$', password):
+          self.error_label.text = 'Password must include (a-z), (A-Z), (0-9), and (!@#$%^&*()_+=-).'
+      else:
+          self.error_label.text = ""
+          self.error_label.visible = False
 
+  
   def button_1_click(self, **event_args):
     email = self.text_box_1.text.strip()
         # Get the password
@@ -418,5 +431,10 @@ class signin_page(signin_pageTemplate):
   def text_box_1_pressed_enter(self, **event_args):
     """This method is called when the user presses Enter in this text box"""
     pass
+
+  def text_box_2_change(self, **event_args):
+    """This method is called when the text in this text box is edited"""
+    self.error_label.visible = True
+    self.validate_password()
 
 
