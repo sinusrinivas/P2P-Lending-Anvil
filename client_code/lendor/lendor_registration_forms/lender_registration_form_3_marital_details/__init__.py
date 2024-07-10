@@ -29,6 +29,23 @@ class lender_registration_form_3_marital_details(lender_registration_form_3_mari
     
 
     
+    user_data=app_tables.fin_guarantor_details.get(customer_id=user_id)
+    if user_data:
+      self.drop_down_1.selected_value = user_data['another_person']
+      if user_data['another_person'] == 'Spouse':
+        self.column_panel_2.visible = True
+        self.column_panel_2.visible = False
+      else:
+        self.column_panel_2.visible = False
+        self.column_panel_2.visible = True
+
+    self.userId = user_id
+
+    self.init_components(**properties)
+
+    
+
+    
 
     user_data=app_tables.fin_guarantor_details.get(customer_id=user_id)
     if user_data:
@@ -334,7 +351,7 @@ class lender_registration_form_3_marital_details(lender_registration_form_3_mari
   def validate_father_name(self, **event_args):
     father_name = self.father_name_text.text
     if not father_name or not re.match(r'^[A-Za-z\s]+$', father_name):
-        self.father_name_text.background = 'red'
+        self.father_name_text.role = 'outlined-error'
     else:
         self.father_name_text.background = 'white'
 

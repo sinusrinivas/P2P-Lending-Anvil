@@ -336,7 +336,7 @@ class check_out(check_outTemplate):
         self.loan_amount_label.text = str(total_repayment_amount)
         self.interest_label.text = "{:.2f}".format(total_interest_amount)
         # self.tenure_label.text = str(tenure)
-        self.account_no_label.text = str(selected_row['account_number'])
+        # self.account_no_label.text = str(selected_row['account_number'])
       
         # Display total EMI amount including extension amount
         self.update_total_emi_amount(total_emi)
@@ -1089,3 +1089,8 @@ class check_out(check_outTemplate):
     def button_1_click(self, **event_args):
       """This method is called when the button is clicked"""
       open_form('borrower.dashboard.today_dues')
+
+    def link_1_click(self, **event_args):
+      """This method is called when the link is clicked"""
+      selected_row = self.selected_row
+      open_form('borrower.dashboard.today_dues.payment_details_t', selected_row = selected_row)
