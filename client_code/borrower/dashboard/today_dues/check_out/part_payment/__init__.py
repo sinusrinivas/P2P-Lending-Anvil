@@ -28,6 +28,7 @@ class part_payment(part_paymentTemplate):
     # self.tenure_label.text = loan_details['tenure']
     self.interest_label.text = loan_details['interest_amount']
     self.remainining_amount.text = loan_details['remainining_amount']
+    self.emi_number.text = loan_details['current_emi_number'] + 1
     current_emi_number = loan_details['current_emi_number']
     extra_fee = loan_details['extra_fee']
     prev_next_payment = loan_details['prev_next_payment']

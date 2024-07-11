@@ -23,6 +23,7 @@ class check_out(check_outTemplate):
   
         loan_id = selected_row['loan_id']
         remaining_amount = selected_row['remaining_amount']
+        # self.emi_number.text = selected_row['emi_number'] + 1
         
         total_paid_amount = selected_row['total_amount_paid']
         extension_months = self.get_extension_details(loan_id, selected_row['emi_number'])

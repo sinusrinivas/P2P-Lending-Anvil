@@ -44,19 +44,27 @@ components:
       type: Label
       layout_properties: {grid_position: 'DHMOIB,PUVUZS CDPTCC,ROFPOG'}
     - name: loan_amount_label
-      properties: {align: left, role: null, border: ''}
+      properties: {align: left, role: null, border: '', font_size: 14}
       type: Label
       layout_properties: {grid_position: 'DHMOIB,PUVUZS CDPTCC,EXRNTE'}
     - name: label_13_copy
-      properties: {text: '  Remaining Amount :', bold: true, role: null, font_size: 14}
+      properties: {text: 'Remaining Amount :', bold: true, role: null, font_size: 14}
       type: Label
       layout_properties: {grid_position: 'DHMOIB,PUVUZS CDPTCC,EGTQLK'}
     - name: remainining_amount
       properties: {role: null, border: '', font_size: 14}
       type: Label
       layout_properties: {grid_position: 'DHMOIB,PUVUZS CDPTCC,FKHNZE'}
+    - name: label_1
+      properties: {text: 'EMI Number :', bold: true, font_size: 14}
+      type: Label
+      layout_properties: {grid_position: 'DHMOIB,PUVUZS SJZZMN,QRBZJD'}
+    - name: emi_number
+      properties: {font_size: 14}
+      type: Label
+      layout_properties: {grid_position: 'DHMOIB,PUVUZS SJZZMN,XPHDVB'}
     - name: label_11_copy
-      properties: {bold: true, text: '  Interest Amount :', align: left, role: null, font_size: 14}
+      properties: {bold: true, text: 'Interest Amount :', align: left, role: null, font_size: 14}
       type: Label
       layout_properties: {grid_position: 'DHMOIB,PUVUZS SJZZMN,GIJHRM'}
     - name: interest_label
@@ -64,41 +72,41 @@ components:
       type: Label
       layout_properties: {grid_position: 'DHMOIB,PUVUZS SJZZMN,RJBXNX'}
     - name: label_4_copy
-      properties: {role: null, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: 14, tooltip: '', text: '  Emi Amount :'}
+      properties: {role: null, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: 14, tooltip: '', text: 'Emi Amount :'}
       type: Label
       layout_properties: {grid_position: 'DHMOIB,PUVUZS EHWBPL,RNZDXV'}
     - name: emi_amount_label
       properties: {role: null, bold: false, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: 14, tooltip: '', text: ''}
       type: Label
       layout_properties: {grid_position: 'DHMOIB,PUVUZS EHWBPL,RRKPWP'}
+    - name: additional_fee_label
+      properties: {text: Extra fee, bold: true, visible: false, role: null, font_size: 14}
+      type: Label
+      layout_properties: {grid_position: 'DHMOIB,PUVUZS EHWBPL,YQJKSM'}
+    - name: additional_fee
+      properties: {visible: false, role: null, border: '', font_size: 14}
+      type: Label
+      layout_properties: {grid_position: 'DHMOIB,PUVUZS EHWBPL,QFRZGR'}
+    - name: label_5
+      properties: {text: 'Part Payment Amount :', bold: true, visible: true, role: null, font_size: 16}
+      type: Label
+      layout_properties: {grid_position: 'DHMOIB,PUVUZS MMYLJP,SVUYBX'}
+    - name: label_6
+      properties: {bold: true, role: null, border: '', font_size: 16}
+      type: Label
+      layout_properties: {grid_position: 'DHMOIB,PUVUZS MMYLJP,CMQFTC'}
     - name: label_3
-      properties: {role: null, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: 14, tooltip: '', text: '  Total  Amount :'}
+      properties: {role: null, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: 14, tooltip: '', text: 'Total  Amount :'}
       type: Label
       layout_properties: {grid_position: 'DHMOIB,PUVUZS MMYLJP,ORCRYR'}
     - name: total_emi_amount_label
       properties: {role: null, bold: false, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: 14, tooltip: '', text: ''}
       type: Label
       layout_properties: {grid_position: 'DHMOIB,PUVUZS MMYLJP,MSWPHI'}
-    - name: additional_fee_label
-      properties: {text: '  Extra fee', bold: true, visible: false, role: null, font_size: 14}
-      type: Label
-      layout_properties: {grid_position: 'DHMOIB,PUVUZS EYGMCM,COUMMO'}
     - name: spacer_3
       properties: {height: 32}
       type: Spacer
       layout_properties: {grid_position: 'DHMOIB,OPGBMS'}
-    - name: additional_fee
-      properties: {visible: false, role: null, border: '', font_size: 14}
-      type: Label
-      layout_properties: {grid_position: 'DHMOIB,PUVUZS EYGMCM,GKKQZW'}
-    - name: label_5
-      properties: {text: '  Part Payment Amount :', bold: true, visible: true, role: null, font_size: 16}
-      type: Label
-      layout_properties: {grid_position: 'DHMOIB,PUVUZS NOIPEA,QBPIKV'}
-    - name: label_6
-      properties: {bold: true, role: null, border: '', font_size: 16}
-      type: Label
-      layout_properties: {grid_position: 'DHMOIB,PUVUZS NOIPEA,UZSGTI'}
   - name: button_1_copy_2
     properties: {role: null, bold: true, align: right, spacing_above: small, background: '#0b2547', icon: 'fa:backward', underline: false, font: '', icon_align: left, foreground: 'theme:On Primary', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: Back}
     type: Button
