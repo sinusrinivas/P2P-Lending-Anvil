@@ -23,14 +23,12 @@ class borrower_portfolio(borrower_portfolioTemplate):
     # self.email = main_form_module.email
     # print(self.email)
     # self.id = main_form_module.userId
-    self.no_risk_count = 0
-    self.low_risk_count = 0
-    self.medium_risk_count = 0
-    self.high_risk_count = 0
-    self.no_risk_loans = []
-    self.low_risk_loans = []
-    self.medium_risk_loans = []
-    self.high_risk_loans = []
+    self.risk_categories = {
+            'no_risk': 0,
+            'low_risk': 0,
+            'medium_risk': 0,
+            'high_risk': 0
+        }
 
     self.create_bar_chart()
 
@@ -138,7 +136,56 @@ class borrower_portfolio(borrower_portfolioTemplate):
     
     # Create the pie chart with the fetched data
     self.create_pie_chart(loan_status_data)
-    
+
+  def analyze_borrower_risk(self, borrower_customer_id):
+        loan_details = list(app_tables.fin_loan_details.search(borrower_customer_id=borrower_customer_id))
+        
+        for loan in loan_details:
+            risk_level = self.calculate_risk_level_based_on_emi(loan)
+            if risk_level == 'no_risk':
+                self.risk_categories['no_risk'] += 1
+            elif risk_level == 'low_risk':
+                self.risk_categories['low_risk'] += 1
+            elif risk_level == 'medium_risk':
+                self.risk_categories['medium_risk'] += 1
+            elif risk_level == 'high_risk':
+                self.risk_categories['high_risk'] += 1
+
+        return self.risk_categories
+
+  def calculate_risk_level_based_on_emi(self, loan):
+        """Calculate risk level based on days_left in emi_table"""
+        loan_id = loan['loan_id']
+        emi_details = app_tables.fin_emi_table.search(loan_id=loan_id)
+        days_left_values = [emi['days_left'] for emi in emi_details]
+
+        lapsed_settings = app_tables.fin_loan_settings.get(loans='lapsed fee')
+        default_settings = app_tables.fin_loan_settings.get(loans='default fee')
+        npa_settings = app_tables.fin_loan_settings.get(loans='NPA fee')
+
+        if all(days_left == 0 for days_left in days_left_values):
+            return 'no_risk'
+        
+        if lapsed_settings:
+            lapsed_min_days = lapsed_settings['minimum_days']
+            lapsed_max_days = lapsed_settings['maximum_days']
+            if any(lapsed_min_days <= days_left <= lapsed_max_days for days_left in days_left_values):
+                return 'low_risk'
+        
+        if default_settings:
+            default_min_days = default_settings['minimum_days']
+            default_max_days = default_settings['maximum_days']
+            if any(default_min_days <= days_left <= default_max_days for days_left in days_left_values):
+                return 'medium_risk'
+        
+        if npa_settings:
+            npa_min_days = npa_settings['minimum_days']
+            npa_max_days = npa_settings['maximum_days']
+            if any(npa_min_days <= days_left <= npa_max_days for days_left in days_left_values):
+                return 'high_risk'
+        
+        return 'medium_risk'  # Default to medium risk if no specific conditions are met
+      
   def get_loan_status_data(self, borrower_customer_id):
     # Query the database to get loan status data for the given customer_id
     rows = app_tables.fin_loan_details.search(borrower_customer_id=borrower_customer_id)
