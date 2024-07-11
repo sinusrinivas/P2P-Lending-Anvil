@@ -23,6 +23,10 @@ class check_out(check_outTemplate):
   
         loan_id = selected_row['loan_id']
         remaining_amount = selected_row['remaining_amount']
+        self.emi_number.text = selected_row['emi_number']
+        if selected_row['emi_number'] ==0:
+          self.emi_number.visible = False
+          self.label_1.visible = False
         
         total_paid_amount = selected_row['total_amount_paid']
         extension_months = self.get_extension_details(loan_id, selected_row['emi_number'])
@@ -335,8 +339,8 @@ class check_out(check_outTemplate):
         # self.loan_id_label.text = str(selected_row['lender_full_name'])
         self.loan_amount_label.text = str(total_repayment_amount)
         self.interest_label.text = "{:.2f}".format(total_interest_amount)
-        # self.tenure_label.text = str(tenure)
-        # self.account_no_label.text = str(selected_row['account_number'])
+        self.tenure_label = str(tenure)
+        self.account_no_label = str(selected_row['account_number'])
       
         # Display total EMI amount including extension amount
         self.update_total_emi_amount(total_emi)
@@ -1050,12 +1054,13 @@ class check_out(check_outTemplate):
       loan_details = {
         'i_r': self.i_r.text,
         'emi': self.emi.text,
+        # 'total_repayment_amount': self.loan_amount_label.text ,
         'total_emi_amount': self.total_emi_amount_label.text,
         'emi_amount': self.emi_amount_label.text,
         'loan_id': self.selected_row['loan_id'],
         'loan_amount': self.loan_amount_label.text,
-        'tenure': self.tenure_label.text,
-        'account_no': self.account_no_label.text,
+        'tenure': self.tenure_label,
+        'account_no': self.account_no_label,
         'interest_amount': self.interest_label.text,
         'remainining_amount': self.remainining_amount.text,
         'borrower_customer_id': self.selected_row['borrower_customer_id'],
