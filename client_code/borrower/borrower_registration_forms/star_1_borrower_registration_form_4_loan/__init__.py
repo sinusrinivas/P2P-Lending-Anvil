@@ -13,10 +13,10 @@ class star_1_borrower_registration_form_4_loan(star_1_borrower_registration_form
         self.init_components(**properties)
         self.user_id = user_id
         
-        self.home_loan_status = ''
-        self.other_loan_status = ''
-        self.credit_card_loan_status = ''
-        self.vehicle_loan_status = ''
+        self.home_loan_status = 'no'
+        self.other_loan_status = 'no'
+        self.credit_card_loan_status = 'no'
+        self.vehicle_loan_status = 'no'
         # Initialize interaction flags for the toggle switches
         self.toggleswitch_1_interacted = False
         self.toggleswitch_2_interacted = False
@@ -115,6 +115,16 @@ class star_1_borrower_registration_form_4_loan(star_1_borrower_registration_form
     
     def next_click(self, **event_args):
             """This method is called when the button is clicked"""
+            if not (self.toggleswitch_1_interacted and self.toggleswitch_2_interacted and self.toggleswitch_3_interacted and self.toggleswitch_4_interacted):
+            # Set loan statuses to 'no' if the toggle switches haven't been interacted with
+                if not self.toggleswitch_1_interacted:
+                    self.update_loan_status('home_loan', 'no')
+                if not self.toggleswitch_2_interacted:
+                    self.update_loan_status('other_loan', 'no')
+                if not self.toggleswitch_3_interacted:
+                    self.update_loan_status('credit_card_loans', 'no')
+                if not self.toggleswitch_4_interacted:
+                    self.update_loan_status('vehicle_loan', 'no')
         # # if not self.toggleswitch_1.checked or not self.toggleswitch_2.checked or not self.toggleswitch_3.checked or not self.toggleswitch_4.checked or not self.toggleswitch_1.unchecked or not self.toggleswitch_2.unchecked or not self.toggleswitch_3.unchecked or not self.toggleswitch_4.unchecked:
         # #     alert("Please select  loan status before proceeding.")
         # if not (self.toggleswitch_1_interacted and self.toggleswitch_2_interacted and self.toggleswitch_3_interacted and self.toggleswitch_4_interacted):
