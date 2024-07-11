@@ -428,9 +428,6 @@ class signin_page(signin_pageTemplate):
         self.error_label.text = True
         self.send_otp.visible = True
 
-  def text_box_1_pressed_enter(self, **event_args):
-    """This method is called when the user presses Enter in this text box"""
-    pass
 
   def text_box_2_change(self, **event_args):
     """This method is called when the text in this text box is edited"""
