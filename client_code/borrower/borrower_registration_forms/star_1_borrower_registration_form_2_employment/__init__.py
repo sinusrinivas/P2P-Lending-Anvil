@@ -86,13 +86,14 @@ class star_1_borrower_registration_form_2_employment(star_1_borrower_registratio
             user_type = user_data['user_type'] if 'user_type' in user_data else ''
             self.update_visibility(user_type)
             self.text_box_1_copy.add_event_handler('change', self.validate_company_name)
-            self.company_add_text_box.add_event_handler('change', self.validate_company_add)
-            self.company_ph_no_text_box.add_event_handler('change', self.validate_company_ph_no)
-            self.landmark_text_box.add_event_handler('change', self.validate_company_landmark)
-            self.designation_textbox.add_event_handler('change', self.validate_employee_designation)
-            self.annual_salary_text_box.add_event_handler('change', self.validate_annual_salary)
-            self.employee_ID_file_loader.add_event_handler('change', self.validate_file_upload)
-            self.six_month_bank_statement_file_loader.add_event_handler('change', self.validate_file_upload)
+            self.text_box_1_copy_2.add_event_handler('change', self.validate_company_add)
+            self.text_box_2_copy.add_event_handler('change', self.validate_company_ph_no)
+            self.text_box_3_copy.add_event_handler('change', self.validate_company_landmark)
+            self.text_box_2_copy_2.add_event_handler('change', self.validate_employee_designation)
+            self.text_box_1_copy_3.add_event_handler('change', self.validate_annual_salary)
+            self.file_loader_1_copy_2.add_event_handler('change', self.employee_ID_file_loader_change)
+            self.file_loader_2.add_event_handler('change', self.six_month_bank_statement_file_loader_change)
+          
             self.text_box_1.add_event_handler('change', self.validate_business_add)
             self.text_box_2.add_event_handler('change', self.validate_business_name)
             self.date_picker_1.add_event_handler('change', self.validate_year_estd)
@@ -105,6 +106,8 @@ class star_1_borrower_registration_form_2_employment(star_1_borrower_registratio
             self.drop_down_12.add_event_handler('change', self.validate_business_type)
             self.file_loader_1.add_event_handler('change', self.validate_file_upload)
             self.file_loader_1_copy.add_event_handler('change', self.validate_file_upload)
+
+            self.text_box_1_copy_4.add_event_handler('change', self.acres_of_land)
 
             
         else:
@@ -122,23 +125,23 @@ class star_1_borrower_registration_form_2_employment(star_1_borrower_registratio
         # Set up event handler for drop_down_2 change
         self.drop_down_2.set_event_handler('change', self.drop_down_2_change_handler)
 
-    def validate_file_upload(self, **event_args):
-        file_loader = event_args['sender']
-        file = file_loader.file
-        max_size = 2 * 1024 * 1024  # 2MB in bytes
-        allowed_types = ['image/jpeg', 'image/png', 'image/jpg', 'application/pdf']
+    # def validate_file_upload(self, **event_args):
+    #     file_loader = event_args['sender']
+    #     file = file_loader.file
+    #     max_size = 2 * 1024 * 1024  # 2MB in bytes
+    #     allowed_types = ['image/jpeg', 'image/png', 'image/jpg', 'application/pdf']
     
-        if file:
-            file_size = len(file.get_bytes())
-            if file_size > max_size:
-                alert('File size should be less than 2MB')
-                file_loader.clear()
-                return
+    #     if file:
+    #         file_size = len(file.get_bytes())
+    #         if file_size > max_size:
+    #             alert('File size should be less than 2MB')
+    #             file_loader.clear()
+    #             return
     
-            if file.content_type not in allowed_types:
-                alert('Invalid file type. Only JPEG, PNG, jpg and PDF are allowed')
-                file_loader.clear()
-                return
+    #         if file.content_type not in allowed_types:
+    #             alert('Invalid file type. Only JPEG, PNG, jpg and PDF are allowed')
+    #             file_loader.clear()
+    #             return
     
     def update_visibility(self, user_type):
         # Reset all grid panel visibilities
@@ -446,3 +449,133 @@ class star_1_borrower_registration_form_2_employment(star_1_borrower_registratio
               self.text_box_1_copy_4.role = 'outlined-error'
               six_month_turn_over_is_valid = False
               alert('please enter a valid acres of land')
+
+########
+    def employee_ID_file_loader_change(self, file, **event_args):
+        """This method is called when a new file is loaded into this FileLoader"""
+        if file:
+            self.label_8.text = file.name if file else ''
+            content_type = file.content_type
+            
+            if content_type in ['image/jpeg', 'image/png', 'image/jpg']:
+                # Display the image directly
+                self.image_1_copy_3.source = self.file_loader_1_copy_2.file
+            elif content_type == 'application/pdf':
+                # Display a default PDF image temporarily
+                self.image_1_copy_3.source = '_/theme/bank_users/default%20pdf.png'
+            else:
+                alert('Invalid file type. Only JPEG, PNG, and PDF are allowed')
+                self.image_1_copy_3.background = 'red'
+                self.image_1_copy_3.clear()
+
+    def six_month_bank_statement_file_loader_change(self, file, **event_args):
+        """This method is called when a new file is loaded into this FileLoader"""
+        if file:
+            self.label_9.text = file.name if file else ''
+            content_type = file.content_type
+            
+            if content_type in ['image/jpeg', 'image/png', 'image/jpg']:
+                # Display the image directly
+                self.image_2.source = self.file_loader_2.file
+            elif content_type == 'application/pdf':
+                # Display a default PDF image temporarily
+                self.image_2.source = '_/theme/bank_users/default%20pdf.png'
+            else:
+                alert('Invalid file type. Only JPEG, PNG, and PDF are allowed')
+                self.image_2.background = 'red'
+                self.image_2.clear()
+
+
+          
+    def validate_company_ph_no(self, **event_args):
+        mobile_no = self.text_box_2_copy.text
+        global company_ph_no_is_valid
+        if re.match(r'^\d{10}$', mobile_no):
+            self.text_box_2_copy.role = 'outlined'
+            company_ph_no_is_valid = True
+        elif  ' ' in mobile_no:
+            alert('spaces are not allowed')
+        else:
+            self.text_box_2_copy.role = 'outlined-error'  # Red role for invalid input
+            company_ph_no_is_valid = False
+            alert('please fill total 10 digit correct phnone number')
+
+    def validate_company_add(self, **event_args):
+          comp_add = self.text_box_1_copy_2.text
+          global company_address_is_valid
+          if re.match(r'^[A-Za-z\d][A-Za-z\d\s]*$', comp_add):
+              self.text_box_1_copy_2.role = 'outlined'
+              company_address_is_valid = True
+          else:
+              self.text_box_1_copy_2.role = 'outlined-error'
+              alert('please enter a valid business address')
+              company_address_is_valid = False
+              
+
+    def validate_company_landmark(self, **event_args):
+          company_landmark = self.text_box_3_copy.text
+          global company_landmark_is_valid
+          if re.match(r'^[A-Za-z\d][A-Za-z\d\s]*$', company_landmark):
+              self.text_box_3_copy.role = 'outlined'
+              company_landmark_is_valid = True
+          else:
+              self.text_box_3_copy.role = 'outlined-error'
+              alert('please enter a valid business address')
+              company_landmark_is_valid = False
+
+    def validate_employee_designation(self, **event_args):
+          employee_designation = self.text_box_2_copy_2.text
+          global designation_is_valid
+          if re.match(r'^[A-Za-z\d][A-Za-z\d\s]*$', employee_designation):
+              self.text_box_2_copy_2.role = 'outlined'
+              designation_is_valid = True
+          else:
+              self.text_box_2_copy_2.role = 'outlined-error'
+              alert('please enter a valid business address')
+              designation_is_valid = False
+
+    def validate_annual_salary(self, **event_args):
+          Annual_salary = self.text_box_1_copy_3.text
+          global annual_salary_is_valid
+          if re.match(r'^[A-Za-z\d][A-Za-z\d\s]*$', Annual_salary):
+              self.text_box_1_copy_3.role = 'outlined'
+              annual_salary_is_valid = True
+          elif ' ' in Annual_salary:
+              alert('Spaces are not allowed')
+          else:
+              self.text_box_1_copy_3.role = 'outlined-error'
+              alert('please enter a valid business address')    
+              annual_salary_is_valid = False
+    
+    def validate_file_upload(self, **event_args):
+        file_loader = event_args['sender']
+        file = file_loader.file
+        max_size = 2 * 1024 * 1024  # 2MB in bytes
+        allowed_types = ['image/jpeg', 'image/png', 'image/jpg', 'application/pdf']
+    
+        if file:
+            file_size = len(file.get_bytes())
+            if file_size > max_size:
+                alert('File size should be less than 2MB')
+                file_loader.clear()
+                return
+    
+            if file.content_type not in allowed_types:
+                alert('Invalid file type. Only JPEG, PNG, jpg and PDF are allowed')
+                file_loader.clear()
+                return
+
+
+    def yearly_income(self, **event_args):
+          Annual_salary = self.text_box_1_copy_3.text
+          global annual_salary_is_valid
+          if re.match(r'^[A-Za-z\d][A-Za-z\d\s]*$', Annual_salary):
+              self.text_box_1_copy_3.role = 'outlined'
+              annual_salary_is_valid = True
+          elif ' ' in Annual_salary:
+              alert('Spaces are not allowed')
+          else:
+              self.text_box_1_copy_3.role = 'outlined-error'
+              alert('please enter a valid business address')    
+              annual_salary_is_valid = False
+    
