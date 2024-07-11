@@ -1050,6 +1050,7 @@ class check_out(check_outTemplate):
       loan_details = {
         'i_r': self.i_r.text,
         'emi': self.emi.text,
+        # 'total_repayment_amount': self.loan_amount_label.text ,
         'total_emi_amount': self.total_emi_amount_label.text,
         'emi_amount': self.emi_amount_label.text,
         'loan_id': self.selected_row['loan_id'],
