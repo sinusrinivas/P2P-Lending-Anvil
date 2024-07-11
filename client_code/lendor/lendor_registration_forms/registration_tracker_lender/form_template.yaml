@@ -79,3 +79,4 @@ components:
       type: Label
       layout_properties: {grid_position: 'WKAFME,UTNBGP OKNYKC,FHFJZG'}
 is_package: true
+custom_component: true

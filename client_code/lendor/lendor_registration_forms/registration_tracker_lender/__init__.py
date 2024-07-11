@@ -7,6 +7,9 @@ import anvil.users
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
+from .....bank_users.main_form import main_form_module
+from .....bank_users.main_form import main_form
+from .....bank_users.user_form import user_module
 
 
 class registration_tracker_lender(registration_tracker_lenderTemplate):
@@ -23,12 +26,11 @@ class registration_tracker_lender(registration_tracker_lenderTemplate):
         
         # List of labels to be highlighted based on form count
         labels = [
-            (self.label_7, self.label_1),
+            (self.label_1),
             (self.label_13, self.label_2),
-            (self.label_8, self.label_3),
-            (self.label_9, self.label_4),
-            (self.label_14, self.label_5),
-            (self.label_15, self.label_6)
+            (self.label_14, self.label_3),
+            (self.label_15, self.label_4),
+            (self.label_16, self.label_6)
         ]
         
         # Set initial opacity for all labels
