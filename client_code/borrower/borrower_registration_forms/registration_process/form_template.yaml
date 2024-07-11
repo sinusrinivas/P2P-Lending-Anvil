@@ -46,7 +46,7 @@ components:
     type: Label
     layout_properties: {grid_position: 'WKAFME,SBGITH ZMAMTD,WOHVTR'}
   - name: label_4
-    properties: {text: Marital Details, bold: false, align: center}
+    properties: {text: Gurantor Details, bold: false, align: center}
     type: Label
     layout_properties: {grid_position: 'WKAFME,SBGITH IKAPPF,TKELVD'}
   - name: label_16
