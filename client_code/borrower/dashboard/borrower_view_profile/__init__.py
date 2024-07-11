@@ -981,7 +981,7 @@ class borrower_view_profile(borrower_view_profileTemplate):
     self.employee_information_panel.visible = False
     self.business_information_panel.visible = False
     self.professional_information_paenl.visible = True
-    self.profile_information_paenl.visible = False
+    # self.profile_information_paenl.visible = False
     self.farmer_information_panel.visible = False
     self.bank_details_panel.visible = False
     self.column_panel_1.visible = False
