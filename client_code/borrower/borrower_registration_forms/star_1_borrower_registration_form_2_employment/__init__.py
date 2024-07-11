@@ -111,6 +111,9 @@ class star_1_borrower_registration_form_2_employment(star_1_borrower_registratio
             self.text_box_3_copy_2.add_event_handler('change',self.yearly_income)
             self.text_box_2_copy_3.add_event_handler('change',self.validate_crop_name)
 
+            self.borrower_college_address_text.add_event_handler('change',self.validate_borrower_college_address)
+            self.borrower_college_id_text.add_event_handler('change', self.validate_borrower_college_id)
+
             
         else:
             print(f"No user data found for user_id: {user_id}")
@@ -202,7 +205,8 @@ class star_1_borrower_registration_form_2_employment(star_1_borrower_registratio
         """This method is called when the button is clicked"""
         
         if self.drop_down_1.selected_value == 'Student':
-
+          self.validate_borrower_college_address()
+          self.validate_borrower_college_id()
           open_form('borrower.borrower_registration_forms.star_1_borrower_registration_form_3_marital',self.user_id)
         elif self.drop_down_1.selected_value == 'Employee':
           self.validate_company_name()
@@ -648,4 +652,27 @@ class star_1_borrower_registration_form_2_employment(star_1_borrower_registratio
             din_is_valid = False
             alert("Please enter a valid crop name")
       
+
+    def validate_borrower_college_address(self, **event_args):
+      address = self.borrower_college_address_text.text.strip()
     
+      # Regex to validate that the address contains only alphanumeric characters and spaces
+      if re.match(r'^[A-Za-z0-9\s]+$', address):
+          self.borrower_college_address_text.role = 'outlined'  # Valid address
+      else:
+          self.borrower_college_address_text.role = 'outlined-error'  # Invalid address
+          alert('Invalid address format. Please enter a valid address with only letters, numbers, and spaces.')
+
+
+
+    def validate_borrower_college_id(self, **event_args):
+        address = self.borrower_college_id_text.text.strip()
+    
+        # Regex to validate that the address contains only alphanumeric characters and spaces
+        if re.match(r'^[A-Za-z0-9\s]+$', address):
+            self.borrower_college_id_text.role = 'outlined'  # Valid address
+        else:
+            self.borrower_college_id_text.role = 'outlined-error'  # Invalid address
+            alert('Invalid ID format. Please enter a valid ID with only letters, numbers, and spaces.')
+
+
