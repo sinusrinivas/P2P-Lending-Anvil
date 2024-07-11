@@ -41,12 +41,12 @@ class lender_view_profile(lender_view_profileTemplate):
         self.relation_text.text = guarantor_details["another_person"] 
         self.text_box_1.text = guarantor_details['guarantor_marriage_date']
         self.text_box_2.text = guarantor_details['guarantor_company_name']
-        self.te
+        self.text_box_3.text =guarantor_details['guarantor_annual_earning']
          # Check if relation is "father" or "mother"
-        if guarantor_details["another_person"].lower() in ["father", "mother"]:
+        if guarantor_details["another_person"].lower() in ["father", "Mother" ,"Other"]:
             self.column_panel_1.visible = True
             self.column_panel_3.visible = False
-        else:
+        elif guarantor_details["another_person"].lower() == "Spouse":
             self.column_panel_1.visible = False
             self.column_panel_3.visible = True
     else:
@@ -233,6 +233,9 @@ class lender_view_profile(lender_view_profileTemplate):
     self.profession_text.enabled = False
     self.address_text.enabled = False
     self.relation_text.enabled = False
+    self.text_box_1.enabled=False
+    self.text_box_2.enabled=False
+    self.text_box_3.enabled = False
 
   def enable_personal_fields(self):
     self.name_text_box.enabled = True
@@ -262,6 +265,8 @@ class lender_view_profile(lender_view_profileTemplate):
     self.profession_text.enabled = True
     self.address_text.enabled = True
     self.relation_text.enabled = True
+    self.text_box_2.enabled= True
+    self.text_box_3.enabled = True
 
   def edit_personal_details_click(self, **event_args):
     self.enable_personal_fields()
@@ -315,11 +320,14 @@ class lender_view_profile(lender_view_profileTemplate):
         # "Profession": self.profession_dropdown.selected_value,
         # "Other Loan": self.Language_tx.text,
         "guarantor_name": self.gurentor_name_text.text,
-        "guarantor_date_of_birth": self.date_of_birth.text,
+        # "guarantor_date_of_birth": self.date_of_birth.text,
         "guarantor_mobile_no": self.mbl_no_text.text,
         "guarantor_profession": self.profession_text.text,
-        "guarantor_address": self.address_text.text,
-        "another_person": self.relation_text.text
+        # "guarantor_address": self.address_text.text,
+        "another_person": self.relation_text,
+        # 'guarantor_marriage_date':self.text_box_1.text , 
+        # 'guarantor_company_name': self.text_box_2.text ,
+        # 'guarantor_annual_earning':self.text_box_3.text 
     }
 
     for field_name, field_value in required_fields.items():
@@ -440,6 +448,10 @@ class lender_view_profile(lender_view_profileTemplate):
             guarantor_details["guarantor_profession"] = self.profession_text.text
             guarantor_details["guarantor_address"] = self.address_text.text
             guarantor_details["another_person"] = self.relation_text.text
+            guarantor_details['guarantor_marriage_date'] =self.text_box_1.text 
+            guarantor_details['guarantor_company_name'] =  self.text_box_2.text 
+            guarantor_details['guarantor_annual_earning'] =  self.text_box_3.text 
+            
         
     # If no validation errors, proceed with saving
     user_profile = app_tables.fin_user_profile.get(customer_id=self.user_id)

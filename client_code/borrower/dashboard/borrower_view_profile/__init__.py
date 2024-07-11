@@ -46,10 +46,13 @@ class borrower_view_profile(borrower_view_profileTemplate):
         self.profession_text.text = guarantor_details["guarantor_profession"]
         self.address_text.text = guarantor_details["guarantor_address"]
         self.relation_text.text = guarantor_details["another_person"] 
-        if guarantor_details["another_person"].lower() in ["father", "mother"]:
+        self.text_box_1.text = guarantor_details['guarantor_marriage_date']
+        self.text_box_2.text = guarantor_details['guarantor_company_name']
+        self.text_box_3.text =guarantor_details['guarantor_annual_earning']
+        if guarantor_details["another_person"].lower() in ["father", "Mother", 'Others']:
             self.column_panel_1.visible = True
             self.column_panel_3.visible = False
-        else:
+        elif guarantor_details["another_person"].lower() == "Spouse":
             self.column_panel_1.visible = False
             self.column_panel_3.visible = True
     else:
@@ -245,6 +248,9 @@ class borrower_view_profile(borrower_view_profileTemplate):
       self.profession_text.enabled = False
       self.address_text.enabled = False
       self.relation_text.enabled = False
+      self.text_box_1.enabled=False
+      self.text_box_2.enabled=False
+      self.text_box_3.enabled = False
 
   def enable_personal_fields(self):
       self.name_text_box.enabled = True
@@ -277,6 +283,8 @@ class borrower_view_profile(borrower_view_profileTemplate):
       self.profession_text.enabled = True
       self.address_text.enabled = True
       self.relation_text.enabled = True
+      self.text_box_2.enabled= True
+      self.text_box_3.enabled = True
 
   def edit_personal_details_click(self, **event_args):
       self.enable_personal_fields()
@@ -332,11 +340,14 @@ class borrower_view_profile(borrower_view_profileTemplate):
         "Alternate email": self.alternate_email.text,
         # "other Loans": self.other_loans_tx.text,
         "guarantor_name": self.gurentor_name_text.text,
-        "guarantor_date_of_birth": self.date_of_birth.text,
+        # "guarantor_date_of_birth": self.date_of_birth.text,
         "guarantor_mobile_no": self.mbl_no_text.text,
         "guarantor_profession": self.profession_text.text,
-        "guarantor_address": self.address_text.text,
-        "another_person": self.relation_text.text
+        # "guarantor_address": self.address_text.text,
+        "another_person": self.relation_text.text,
+        # 'guarantor_marriage_date':self.text_box_1.text , 
+        # 'guarantor_company_name': self.text_box_2.text ,
+        # 'guarantor_annual_earning':self.text_box_3.text 
     }
 
     for field_name, field_value in required_fields.items():
@@ -440,7 +451,7 @@ class borrower_view_profile(borrower_view_profileTemplate):
             for loans in report_problem:
               loans['email'] = new_email
               loans['name'] = new_full_name
-              loans['mobile_number'] = self.mobile_tx.text
+              loans['mobile_number'] = int(self.mobile_tx.text)
               loans.update()
   
       ascend_score = app_tables.fin_user_ascend_score.get(borrower_customer_id=self.user_id)
@@ -455,18 +466,21 @@ class borrower_view_profile(borrower_view_profileTemplate):
     guarantor_details = app_tables.fin_guarantor_details.get(customer_id=self.user_id)
     if guarantor_details:
             guarantor_details["guarantor_name"] = self.gurentor_name_text.text
-            guarantor_details["guarantor_date_of_birth"] = self.date_of_birth.text
-            guarantor_details["guarantor_mobile_no"] = self.mbl_no_text.text
+            guarantor_details["guarantor_date_of_birth"] =int(self.date_of_birth.text)
+            guarantor_details["guarantor_mobile_no"] = int(self.mbl_no_text.text)
             guarantor_details["guarantor_profession"] = self.profession_text.text
             guarantor_details["guarantor_address"] = self.address_text.text
             guarantor_details["another_person"] = self.relation_text.text
+            guarantor_details['guarantor_marriage_date'] =int(self.text_box_1.text) 
+            guarantor_details['guarantor_company_name'] =  self.text_box_2.text 
+            guarantor_details['guarantor_annual_earning'] =  self.text_box_3.text 
     # If no validation errors, proceed with saving
     user_profile = app_tables.fin_user_profile.get(customer_id=self.user_id)
     if user_profile:
         user_profile["full_name"] = self.name_text_box.text
         user_profile['email_user'] = self.email_tx.text
-        user_profile["mobile"] = self.mobile_tx.text
-        user_profile["date_of_birth"] = self.d_o_b_text_box.text
+        user_profile["mobile"] = int(self.mobile_tx.text)
+        user_profile["date_of_birth"] =self.d_o_b_text_box.text
         user_profile["city"] = self.city_tx.text
         user_profile["aadhaar_no"] = self.g_i_1_tx.text
         user_profile["pan_number"] = self.g_i_2_tx.text
