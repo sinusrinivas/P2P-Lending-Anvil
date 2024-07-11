@@ -567,7 +567,7 @@ class star_1_borrower_registration_form_2_employment(star_1_borrower_registratio
 
 
     def yearly_income(self, **event_args):
-          Annual_salary = self.text_box_1_copy_3.text
+          Annual_salary = self.text_box_3_copy_2.text
           global annual_salary_is_valid
           if re.match(r'^[A-Za-z\d][A-Za-z\d\s]*$', Annual_salary):
               self.text_box_1_copy_3.role = 'outlined'
