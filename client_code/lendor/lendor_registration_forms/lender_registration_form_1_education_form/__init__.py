@@ -72,7 +72,7 @@ class lender_registration_form_1_education_form(lender_registration_form_1_educa
       
         # Validate files based on qualification
         if qualification == '10th standard' and not tenth_class:
-            self.file_loader_1.role = 'outlined-error'
+            self.file_loader_1.background='#FF0000'
             self.file_loader_1.focus()
             Notification('Please upload All document before proceeding.').show()
             return
