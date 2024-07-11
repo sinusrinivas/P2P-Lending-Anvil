@@ -605,7 +605,7 @@ components:
       - properties: {text: Upload, font_size: 14}
         type: FileLoader
         layout_properties: {grid_position: 'JOLEZQ,LRZWGH'}
-        event_bindings: {change: file_loader_1_change}
+        event_bindings: {change: employee_ID_file_loader_change}
         name: file_loader_1_copy_2
       - properties: {height: 62.33331298828125}
         type: Image
