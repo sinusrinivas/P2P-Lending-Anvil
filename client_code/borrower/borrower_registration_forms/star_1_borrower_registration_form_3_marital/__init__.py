@@ -56,6 +56,18 @@ class star_1_borrower_registration_form_3_marital(star_1_borrower_registration_f
            self.date_picker_3.date =user_data['guarantor_marriage_date']
            self.spouse_mbl_no_text.text=user_data['guarantor_mobile_no']
            self.drop_down_1_copy.selected_value = user_data['guarantor_profession']
+           if user_data['guarantor_profession'] is not None:
+             if user_data['guarantor_profession'] =='Home Maker':
+               self.spouse_companyname_text.visible = False
+               self.annual_earning_text.visible = False
+               self.company_name.visible = False
+               self.anual_ctc.visible = False
+             else:
+               self.spouse_companyname_text.visible = True
+               self.annual_earning_text.visible = True
+               self.company_name.visible = True
+               self.anual_ctc.visible = True
+               
            self.spouse_companyname_text.text = user_data['guarantor_company_name']
            self.annual_earning_text.text = user_data['guarantor_annual_earning']
 
@@ -103,6 +115,9 @@ class star_1_borrower_registration_form_3_marital(star_1_borrower_registration_f
             self.annual_earning_text.visible = True
             self.company_name.visible = True
             self.anual_ctc.visible = True
+
+        # if selected_profession == "Salaried":
+        #   self.validate_annual_earning()
 
   def toggle_father_spouse_fields_visibility(self, **event_args):
     selected_person = self.drop_down_1.selected_value
@@ -152,12 +167,12 @@ class star_1_borrower_registration_form_3_marital(star_1_borrower_registration_f
     open_form('bank_users.user_form')
 
   def button_next_click(self, **event_args):
-      # marital_status = self.marital_status_borrower_registration_dropdown.selected_value
+      guarato_details = self.drop_down_1_copy.selected_value
       user_id = self.userId
 
-      # if not marital_status or marital_status not in ['Not Married', 'Married', 'Other']:
-      #   Notification("Please select a valid marital status").show()
-      #   return
+      if not guarato_details :
+        Notification("Please select a valid marital status").show()
+        return
 
       selected_value = self.drop_down_1.selected_value
     
@@ -171,6 +186,7 @@ class star_1_borrower_registration_form_3_marital(star_1_borrower_registration_f
               father_profession = details.get('father_profession', '')
               father_address = details.get('father_address', '')
               another_person = details.get('another_person', '')
+              anual_earning = details.get('annual_earning', '')
       
               # Checking if the user already has data in the table
               existing_row = app_tables.fin_guarantor_details.get(customer_id=self.userId)
@@ -227,6 +243,14 @@ class star_1_borrower_registration_form_3_marital(star_1_borrower_registration_f
               elif not father_address:
                 errors.append("Enter a valid address!")
                 self.father_address_text.focus()
+
+              # if self.drop_down_1_copy.selected_value == "Salaried":
+              #   annual_earning = self.annual_earning_text.text
+              #   if not annual_earning:
+              #     errors.append("Enter a valid annual earning!")
+              #     self.annual_earning_text.focus()
+              
+                  
       
               if errors:
                 Notification("\n".join(errors)).show()
@@ -272,6 +296,12 @@ class star_1_borrower_registration_form_3_marital(star_1_borrower_registration_f
           elif not spouse_profession:
             errors.append("Select a valid profession!")
             self.drop_down_1_copy.focus()
+
+          elif self.drop_down_1_copy.selected_value == 'Salaried':
+                annual_earning = self.annual_earning_text.text
+                if not annual_earning:
+                  errors.append("Enter a valid annual earning!")
+                  self.annual_earning_text.focus()
           # elif not spouse_company:
           #   errors.append("Enter a valid company name!")
           #   self.spouse_companyname_text.focus()
