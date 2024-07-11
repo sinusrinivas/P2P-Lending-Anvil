@@ -104,8 +104,8 @@ class star_1_borrower_registration_form_2_employment(star_1_borrower_registratio
             self.text_box_7.add_event_handler('change', self.validate_registered_off_add)
             self.drop_down_4.add_event_handler('change', self.validate_no_of_employes)
             self.drop_down_12.add_event_handler('change', self.validate_business_type)
-            self.file_loader_1.add_event_handler('change', self.file_loader_1)
-            self.file_loader_1_copy.add_event_handler('change', self.file_loader_1_copy)
+            # self.file_loader_1.add_event_handler('change', self.file_loader_1())
+            # self.file_loader_1_copy.add_event_handler('change', self.file_loader_1_copy)
 
             self.text_box_1_copy_4.add_event_handler('change', self.acres_of_land)
             self.text_box_3_copy_2.add_event_handler('change',self.yearly_income)
@@ -232,6 +232,8 @@ class star_1_borrower_registration_form_2_employment(star_1_borrower_registratio
             self.validate_no_of_employes()
             self.validate_business_type()
             self.validate_file_upload()
+            self.file_loader_1()
+            self.file_loader_1_copy()
             open_form('borrower.borrower_registration_forms.star_1_borrower_registration_form_3_marital',self.user_id)
         else:
             pass
