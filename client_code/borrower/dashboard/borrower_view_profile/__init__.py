@@ -49,16 +49,16 @@ class borrower_view_profile(borrower_view_profileTemplate):
         self.text_box_1.text = guarantor_details['guarantor_marriage_date']
         self.text_box_2.text = guarantor_details['guarantor_company_name']
         self.text_box_3.text =guarantor_details['guarantor_annual_earning']
-        if guarantor_details["another_person"].lower() in ["ather", "Mother", 'Others']:
+        if guarantor_details["another_person"].lower() in ["Father", "Mother", 'Others']:
             self.column_panel_1.visible = True
             self.column_panel_3.visible = False
-        elif guarantor_details["another_person"].lower() == "Spouse":
+        elif guarantor_details["another_person"].lower() in "Spouse":
             self.column_panel_1.visible = False
             self.column_panel_3.visible = True
-    else:
-        # Handle case where guarantor details are not found
-        self.column_panel_1.visible = False
-        self.column_panel_3.visible = False
+        else:
+            # Handle case where guarantor details are not found
+            self.column_panel_1.visible = False
+            self.column_panel_3.visible = False
 
   def load_user_profile(self):
     user_profile = app_tables.fin_user_profile.get(customer_id=self.user_id)
