@@ -248,7 +248,7 @@ class lender_registration_form_3_marital_details(lender_registration_form_3_mari
           elif not re.match(r'^\d{10}$', str(spouse_mbl_no)):
             errors.append("Enter a valid mobile no!")
             self.spouse_mbl_no_text.focus()
-          elif not spouse_profession:
+          elif not sel:
             errors.append("Select a valid profession!")
             self.drop_down_1_copy.focus()
 
