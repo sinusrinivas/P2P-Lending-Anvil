@@ -49,37 +49,37 @@ class star_1_borrower_registration_form_5_bank_1(star_1_borrower_registration_fo
   def validate_account_name(self, **event_args):
     account_name = self.text_box_1.text
     if not account_name or not re.match(r'^[A-Za-z\s]+$', account_name):
-      self.text_box_1.background = 'red'
+      self.text_box_1.background = 'outlined-error'
     else:
-      self.text_box_1.background = 'white'
+      self.text_box_1.background = 'outlined'
 
   def validate_account_number(self, **event_args):
     account_number = self.text_box_3.text
     if ' ' in account_number or not account_number.isdigit():
-      self.text_box_3.background = 'red'
+      self.text_box_3.background = 'outlined-error'
     else:
-      self.text_box_3.background = 'white'
+      self.text_box_3.background = 'outlined'
 
   def validate_bank_name(self, **event_args):
     bank_name = self.text_box_4.text
     if not bank_name:
-      self.text_box_4.background = 'red'
+      self.text_box_4.role = 'outlined-error'
     else:
-      self.text_box_4.background = 'white'
+      self.text_box_4.role = 'outlined'
 
   def validate_bank_id(self, **event_args):
     bank_id = self.bank_id.text
     if not bank_id:
-      self.bank_id.background = 'red'
+      self.bank_id.role = 'outlined-error'
     else:
-      self.bank_id.background = 'white'
+      self.bank_id.role = 'outlined'
 
   def validate_bank_branch(self, **event_args):
     bank_branch = self.branch_name.text
     if not bank_branch:
-      self.branch_name.background = 'red'
+      self.branch_name.role = 'outlined-error'
     else:
-      self.branch_name.background = 'white'
+      self.branch_name.role = 'outlined'
 
   def check_terms(self, **event_args):
     self.accepted_terms = self.check_box_1_copy_2.checked
