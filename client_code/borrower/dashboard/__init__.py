@@ -34,7 +34,7 @@ class dashboard(dashboardTemplate):
         loan_count = len(self.data)
 
         # Update the UI with the count of loans
-        self.label_9.text = str(loan_count)
+        # self.label_9.text = str(loan_count)
 
         self.notification_displayed = False
         self.set_event_handler("show", self.form_show)
@@ -353,7 +353,6 @@ class dashboard(dashboardTemplate):
     def update_user_profile(self):
         user_profile = app_tables.fin_user_profile.get(customer_id=self.user_Id)
         if user_profile:
-            self.label_3.text = user_profile['mobile']
             self.image_1_copy_copy.source = user_profile['user_photo']
             self.label_2_copy.text =  user_profile['full_name']
 
