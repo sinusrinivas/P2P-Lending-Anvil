@@ -171,6 +171,7 @@ class star_1_borrower_registration_form_2_employment(star_1_borrower_registratio
         self.file_loader_1()
         self.file_loader_1_copy()
         self.validate_business_add()
+        self.validate_company_name()
         """This method is called when the button is clicked"""
         open_form('borrower.borrower_registration_forms.star_1_borrower_registration_form_3_marital')
 
@@ -286,7 +287,7 @@ class star_1_borrower_registration_form_2_employment(star_1_borrower_registratio
 
     def validate_business_name(self, **event_args):
           global business_name_is_valid
-          business_name = self.text_box_2_copy.text        
+          business_name = self.text_box_2.text        
           if re.match(r'^[A-Za-z][A-Za-z\s]*$', business_name):
               self.text_box_2.role = 'outlined'            
               business_name_is_valid = True
