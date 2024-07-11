@@ -75,5 +75,4 @@ components:
     type: Label
     layout_properties: {grid_position: 'WKAFME,WZVXXY LHEPRL,SBRKGO'}
 is_package: true
-slots: {}
 custom_component: true
