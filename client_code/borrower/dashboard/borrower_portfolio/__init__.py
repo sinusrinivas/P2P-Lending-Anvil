@@ -23,6 +23,15 @@ class borrower_portfolio(borrower_portfolioTemplate):
     # self.email = main_form_module.email
     # print(self.email)
     # self.id = main_form_module.userId
+    self.no_risk_count = 0
+    self.low_risk_count = 0
+    self.medium_risk_count = 0
+    self.high_risk_count = 0
+    self.no_risk_loans = []
+    self.low_risk_loans = []
+    self.medium_risk_loans = []
+    self.high_risk_loans = []
+
     self.create_bar_chart()
 
     # Set the label text with today's date
