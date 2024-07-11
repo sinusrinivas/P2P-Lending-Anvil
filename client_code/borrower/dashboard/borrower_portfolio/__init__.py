@@ -13,7 +13,6 @@ from ....bank_users.user_form import user_form
 from ....bank_users.user_form import user_module
 import datetime
 import anvil.media
-# from kivy.utils import get_color_from_hex
 
 class borrower_portfolio(borrower_portfolioTemplate):
   def __init__(self, selected_row, **properties):
@@ -30,11 +29,16 @@ class borrower_portfolio(borrower_portfolioTemplate):
     today_date = datetime.datetime.now().strftime("%Y-%m-%d")
     self.label_2.text = "As on " + today_date
 
-
+    details  = app_tables.fin_guarantor_details.get(customer_id=self.id)
+    if details:
+        self.label_26.text = details['guarantor_name']
+        self.label_28.text = details['guarantor_profession']
+        
+        
     # Retrieve user profile based on user_Id
     ascend = app_tables.fin_user_profile.get(customer_id=self.id)
     self.image_4.source = ascend['user_photo']
-    self.label_4.text = "Hello" " " + ascend['full_name']
+    self.label_4.text = ascend['full_name']
     self.name = ascend['full_name']
     self.label_15.text = ascend['mobile']
     self.label_16.text = ascend['date_of_birth']
