@@ -22,12 +22,23 @@ class lender_view_profile(lender_view_profileTemplate):
     self.disable_business_details_fields()
     self.disable_bank_details_fields()
     self.load_user_profile()
+    self.load_guarantor_details()
     self.disable_company_employment_fields()
     self.disable_lender_details_fields()
     self.image_1.role = 'circular-image'
 
 
     # Any code you write here will run before the form opens.
+  def load_guarantor_details(self):
+    guarantor_details = app_tables.fin_guarantor_details.get(customer_id=self.user_id)
+
+    if guarantor_details:
+        self.gurentor_name_text.text = guarantor_details["guarantor_name"] 
+        self.date_of_birth.text = guarantor_details["guarantor_date_of_birth"] 
+        self.mbl_no_text.text = guarantor_details["guarantor_mobile_no"] 
+        self.profession_text.text = guarantor_details["guarantor_profession"]
+        self.address_text.text = guarantor_details["guarantor_address"]
+        self.relation_text.text = guarantor_details["another_person"] 
 
   def load_user_profile(self):
     user_profile = app_tables.fin_user_profile.get(customer_id=self.user_id)
@@ -902,3 +913,92 @@ class lender_view_profile(lender_view_profileTemplate):
   def edit_land_farming_details_click(self, **event_args):
     """This method is called when the button is clicked"""
     pass
+
+
+
+  def disable_guarantor_details_fields(self):
+        self.gurentor_name_text.enabled = False
+        self.date_of_birth.enabled = False
+        self.mbl_no_text.enabled = False
+        self.profession_text.enabled = False
+        self.address_text.enabled = False
+        self.relation_text.enabled = False
+
+  def enable_guarantor_details_fields(self):
+        self.gurentor_name_text.enabled = True
+        self.date_of_birth.enabled = True
+        self.mbl_no_text.enabled = True
+        self.profession_text.enabled = True
+        self.address_text.enabled = True
+        self.relation_text.enabled = True
+
+  def edit_guarantor_details_button_click(self, **event_args):
+        """This method is called when the button is clicked"""
+        self.enable_guarantor_details_fields()
+        self.save_guarantor_details_button.visible = True
+        self.edit_guarantor_details_button.visible = False
+
+  def save_guarantor_details_button_click(self, **event_args):
+        """This method is called when the button is clicked"""
+        def is_valid(value):
+            return value and not value.isspace()
+
+        def is_numeric(value):
+            return value.isdigit()
+
+        def is_alpha(value):
+            return all(char.isalpha() or char.isspace() for char in value)
+
+        # Collect error messages
+        error_messages = []
+
+        # Validate each field
+        required_fields = {
+            "guarantor_name": self.gurentor_name_text.text,
+            "guarantor_date_of_birth": self.date_of_birth.text,
+            "guarantor_mobile_no": self.mbl_no_text.text,
+            "guarantor_profession": self.profession_text.text,
+            "guarantor_address": self.address_text.text,
+            "another_person": self.relation_text.text
+        }
+
+        for field_name, field_value in required_fields.items():
+            if not is_valid(field_value):
+                error_messages.append(f"{field_name} is required and cannot be empty or contain only spaces.")
+
+        # Check if there are any validation errors
+        if error_messages:
+            alert("\n".join(error_messages))
+            return
+        # Convert date_of_birth to date object
+        try:
+            date_of_birth = datetime.strptime(self.date_of_birth.text, "%Y-%m-%d").date()
+        except ValueError:
+            alert("Invalid date format. Please use YYYY-MM-DD.")
+            return
+        # If no validation errors, proceed with saving
+        guarantor_details = app_tables.fin_guarantor_details.get(customer_id=self.user_id)
+        if guarantor_details:
+            guarantor_details["guarantor_name"] = self.gurentor_name_text.text
+            guarantor_details["guarantor_date_of_birth"] = self.date_of_birth.text
+            guarantor_details["guarantor_mobile_no"] = self.mbl_no_text.text
+            guarantor_details["guarantor_profession"] = self.profession_text.text
+            guarantor_details["guarantor_address"] = self.address_text.text
+            guarantor_details["another_person"] = self.relation_text.text
+        
+        self.disable_guarantor_details_fields()
+        self.save_guarantor_details_button.visible = False
+        self.edit_guarantor_details_button.visible = True
+
+  def button_2_click(self, **event_args):
+    """This method is called when the button is clicked"""
+      self.personal_information_panel.visible = False
+    # self.profile_information_paenl.visible = False
+    self.business_information_panel.visible = False
+    self.professional_information_paenl.visible = False
+    self.column_panel_1.visible = True
+    self.employee_information_panel.visible = False
+    self.farmer_information_panel.visible = False
+    self.bank_details_panel.visible = False
+
+

@@ -108,6 +108,11 @@ components:
       type: Button
       layout_properties: {grid_position: 'RJDASP,JFFAES'}
       event_bindings: {click: Business_Information_click}
+    - name: button_1
+      properties: {text: Guarantor Details, background: '#0b2547', foreground: white, align: full}
+      type: Button
+      layout_properties: {grid_position: 'CBZHSX,RDMCQV'}
+      event_bindings: {click: button_1_click}
     - name: bank_button
       properties: {text: Bank Details, align: full, background: '#0b2547', foreground: 'theme:On Primary'}
       type: Button
@@ -477,8 +482,75 @@ components:
         type: Button
         layout_properties: {grid_position: 'YKIUEW,YVOKHJ'}
         event_bindings: {click: save_business_details_click}
+    - name: column_panel_1
+      properties: {col_widths: '{}', visible: false, role: outlined-card}
+      type: ColumnPanel
+      layout_properties: {grid_position: 'QKCNSX,YTVGVH'}
+      components:
+      - name: label_2_copy_2
+        properties: {align: center, text: Guarantor Details, bold: true, font_size: 18, background: '#05264d', foreground: white}
+        type: Label
+        layout_properties: {grid_position: 'NRFPFU,YYXWCM'}
+      - name: label_3_copy_1_copy_1
+        properties: {role: input-prompt, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: 14, tooltip: '', text: 'Guarantor name:'}
+        type: Label
+        layout_properties: {grid_position: 'IZWJZG,TLVAKY URJEQE,CQXSKM'}
+      - name: gurentor_name_text
+        properties: {role: outlined, bold: false, align: left, placeholder: '', spacing_above: small, background: 'theme:On Primary', type: text, underline: false, font: '', hide_text: false, foreground: '', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: 14, tooltip: '', text: ''}
+        type: TextBox
+        layout_properties: {grid_position: 'IZWJZG,TLVAKY WOSAZC,NVAMWO'}
+      - name: label_2_copy_1_copy_1
+        properties: {role: input-prompt, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: 14, tooltip: '', text: 'Guarantor Mobile No:'}
+        type: Label
+        layout_properties: {grid_position: 'IZWJZG,TLVAKY UQRSWK,IYLFJA'}
+      - name: mbl_no_text
+        properties: {role: outlined, bold: false, align: left, placeholder: '', spacing_above: small, background: 'theme:On Primary', type: text, underline: false, font: '', hide_text: false, foreground: '', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: 14, tooltip: '', text: ''}
+        type: TextBox
+        layout_properties: {grid_position: 'IZWJZG,TLVAKY JMNBYD,ZMKVJM'}
+      - name: label_3_copy_1_copy_1_copy_1
+        properties: {role: input-prompt, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: 14, tooltip: '', text: 'Guarantor date of birth:'}
+        type: Label
+        layout_properties: {grid_position: 'IZWJZG,PGYLRZ YNICTA,XFOGXX'}
+      - name: date_of_birth
+        properties: {role: outlined, background: white, font_size: 14}
+        type: TextBox
+        layout_properties: {grid_position: 'IZWJZG,PGYLRZ YNBTAC,ZUBGCE'}
+      - name: label_3_copy_1
+        properties: {role: input-prompt, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: 14, tooltip: '', text: 'Guarantor profession:'}
+        type: Label
+        layout_properties: {grid_position: 'IZWJZG,PGYLRZ CFCQTJ,ISZTGD'}
+      - name: profession_text
+        properties: {role: outlined, bold: false, align: left, placeholder: '', spacing_above: small, background: 'theme:On Primary', type: text, underline: false, font: '', hide_text: false, foreground: '', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: 14, tooltip: '', text: ''}
+        type: TextBox
+        layout_properties: {grid_position: 'IZWJZG,PGYLRZ PVXYAP,PPEOWO'}
+      - name: label_3_copy_1_copy_2
+        properties: {role: input-prompt, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: 14, tooltip: '', text: 'Guarantor address:'}
+        type: Label
+        layout_properties: {grid_position: 'IPNQBV,NYXVBT'}
+      - name: label_19_copy
+        properties: {text: 'Guarenter Relation:', font_size: 14, bold: true}
+        type: Label
+        layout_properties: {grid_position: 'IPNQBV,IDDLUP'}
+      - name: address_text
+        properties: {role: outlined, bold: false, align: left, placeholder: '', spacing_above: small, background: 'theme:On Primary', type: text, underline: false, font: '', hide_text: false, foreground: '', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: 14, tooltip: '', text: ''}
+        type: TextBox
+        layout_properties: {grid_position: 'RBXUDK,HIPHUB'}
+      - name: relation_text
+        properties: {role: outlined, background: white, font_size: 14}
+        type: TextBox
+        layout_properties: {grid_position: 'RBXUDK,TYLXOY'}
+      - name: edit_guarantor_details_button
+        properties: {text: Edit Details, background: '#05264d', foreground: white}
+        type: Button
+        layout_properties: {grid_position: 'HOTZQQ,LXFLGD'}
+        event_bindings: {click: edit_guarantor_details_button_click}
+      - name: save_guarantor_details_button
+        properties: {text: save, background: '#05264d', foreground: white}
+        type: Button
+        layout_properties: {grid_position: 'GAFCTS,JLOZZP'}
+        event_bindings: {click: save_guarantor_details_button_click}
     - name: farmer_information_panel
-      properties: {col_widths: '{"EYUVDS":30,"KLESAL":55}', role: elevated-card, visible: false}
+      properties: {col_widths: '{"EYUVDS":30}', role: elevated-card, visible: false}
       type: ColumnPanel
       layout_properties: {grid_position: 'IIFALV,RLEAZA'}
       components:

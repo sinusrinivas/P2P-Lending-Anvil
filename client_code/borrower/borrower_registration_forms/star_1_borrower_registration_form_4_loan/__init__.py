@@ -114,7 +114,7 @@ class star_1_borrower_registration_form_4_loan(star_1_borrower_registration_form
             self.update_loan_status('vehicle_loan', 'no')
     
     def next_click(self, **event_args):
-           """This method is called when the button is clicked"""
+            """This method is called when the button is clicked"""
         # # if not self.toggleswitch_1.checked or not self.toggleswitch_2.checked or not self.toggleswitch_3.checked or not self.toggleswitch_4.checked or not self.toggleswitch_1.unchecked or not self.toggleswitch_2.unchecked or not self.toggleswitch_3.unchecked or not self.toggleswitch_4.unchecked:
         # #     alert("Please select  loan status before proceeding.")
         # if not (self.toggleswitch_1_interacted and self.toggleswitch_2_interacted and self.toggleswitch_3_interacted and self.toggleswitch_4_interacted):
