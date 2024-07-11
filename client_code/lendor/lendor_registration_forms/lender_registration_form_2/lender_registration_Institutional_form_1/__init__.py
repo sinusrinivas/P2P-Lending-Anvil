@@ -140,33 +140,65 @@ class lender_registration_Institutional_form_1(lender_registration_Institutional
             self.text_box_4.role = 'outlined-error'
             six_month_turn_over_is_valid = False
             alert('please enter a valid six month turn over')
-  
+
   def validate_din(self, **event_args):
-        din = self.text_box_5.text
-        global din_is_valid
-        if re.match(r'^\d+$', din):
-            self.text_box_5.role = 'outlined'
-            din_is_valid = True
-        elif ' ' in din:
-            alert('Spaces are not valid in din')
-        else:
-            self.text_box_5.role = 'outlined-error'
-            din_is_valid = False
-            alert("enter a valid din number")
+      din = self.text_box_5.text.strip()
+      global din_is_valid
+  
+      # Validate DIN to contain only alphanumeric characters
+      if re.match(r'^[a-zA-Z0-9]+$', din):
+          self.text_box_5.role = 'outlined'
+          din_is_valid = True
+      elif ' ' in din:
+          alert('Spaces are not valid in DIN')
+      else:
+          self.text_box_5.role = 'outlined-error'
+          din_is_valid = False
+          alert("Please enter a valid DIN number containing only letters and numbers")
+    
+  
+  # def validate_din(self, **event_args):
+  #       din = self.text_box_5.text
+  #       global din_is_valid
+  #       if re.match(r'^\d+$', din):
+  #           self.text_box_5.role = 'outlined'
+  #           din_is_valid = True
+  #       elif ' ' in din:
+  #           alert('Spaces are not valid in din')
+  #       else:
+  #           self.text_box_5.role = 'outlined-error'
+  #           din_is_valid = False
+  #           alert("enter a valid din number")
             
 
+  # def validate_cin(self, **event_args):
+  #       cin = self.text_box_6.text
+  #       global cin_is_valid
+  #       if re.match(r'^\d+$', cin):
+  #           self.text_box_6.role = 'outlined'   
+  #           cin_is_valid = True
+  #       elif ' 'in cin:
+  #           alert('Spaces are not allowed in cin')
+  #       else:
+  #           self.text_box_6.role = 'outlined-error'
+  #           cin_is_valid = False
+  #           alert('please enter a valid cin number')
+
   def validate_cin(self, **event_args):
-        cin = self.text_box_6.text
-        global cin_is_valid
-        if re.match(r'^\d+$', cin):
-            self.text_box_6.role = 'outlined'   
-            cin_is_valid = True
-        elif ' 'in cin:
-            alert('Spaces are not allowed in cin')
-        else:
-            self.text_box_6.role = 'outlined-error'
-            cin_is_valid = False
-            alert('please enter a valid cin number')
+      cin = self.text_box_6.text.strip()
+      global cin_is_valid
+  
+      # Validate CIN to contain only alphanumeric characters
+      if re.match(r'^[a-zA-Z0-9]+$', cin):
+          self.text_box_6.role = 'outlined'
+          cin_is_valid = True
+      elif ' ' in cin:
+          alert('Spaces are not allowed in CIN')
+      else:
+          self.text_box_6.role = 'outlined-error'
+          cin_is_valid = False
+          alert('Please enter a valid CIN number containing only letters and numbers')
+    
 
   def validate_registered_off_add(self, **event_args):
         registered_off_add = self.text_box_7.text
@@ -246,7 +278,7 @@ class lender_registration_Institutional_form_1(lender_registration_Institutional
         business_type_is_valid = True
 
       if not last_six_statements:
-            self.file_loader_1.role = 'outlined-error'
+            self.file_loader_1.background = 'red'
             self.file_loader_1.focus()
             Notification('Please fill all details').show()
             return
@@ -254,7 +286,7 @@ class lender_registration_Institutional_form_1(lender_registration_Institutional
             self.file_loader_1.role = 'outlined'
 
       if not proof_verification:
-            self.file_loader_1_copy.role = 'outlined-error'
+            self.file_loader_1_copy.background = 'red'
             self.file_loader_1_copy.focus()
             Notification('Please fill all details').show()
             return
