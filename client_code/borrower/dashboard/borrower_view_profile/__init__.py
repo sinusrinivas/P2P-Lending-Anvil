@@ -49,7 +49,7 @@ class borrower_view_profile(borrower_view_profileTemplate):
         self.text_box_1.text = guarantor_details['guarantor_marriage_date']
         self.text_box_2.text = guarantor_details['guarantor_company_name']
         self.text_box_3.text =guarantor_details['guarantor_annual_earning']
-        if guarantor_details["another_person"].lower() in ["father", "Mother", 'Others']:
+        if guarantor_details["another_person"].lower() in ["ather", "Mother", 'Others']:
             self.column_panel_1.visible = True
             self.column_panel_3.visible = False
         elif guarantor_details["another_person"].lower() == "Spouse":
@@ -58,7 +58,7 @@ class borrower_view_profile(borrower_view_profileTemplate):
     else:
         # Handle case where guarantor details are not found
         self.column_panel_1.visible = False
-        self.column_panel_3.visible = True
+        self.column_panel_3.visible = False
 
   def load_user_profile(self):
     user_profile = app_tables.fin_user_profile.get(customer_id=self.user_id)
@@ -309,18 +309,6 @@ class borrower_view_profile(borrower_view_profileTemplate):
 
     def is_valid_mobile(value):
         return value.isdigit() and len(value) == 10
-    def is_valid_date(value):
-        try:
-            datetime.strptime(value, "%Y-%m-%d")
-            return True
-        except ValueError:
-            return False
-
-    def to_date(value):
-        try:
-            return datetime.strptime(value, "%Y-%m-%d").date()
-        except ValueError:
-            return None
 
     # Collect error messages
     error_messages = []
@@ -478,11 +466,11 @@ class borrower_view_profile(borrower_view_profileTemplate):
     if guarantor_details:
             guarantor_details["guarantor_name"] = self.gurentor_name_text.text
             guarantor_details["guarantor_date_of_birth"] =self.date_of_birth.text
-            guarantor_details["guarantor_mobile_no"] = strself.mbl_no_text.text)
+            guarantor_details["guarantor_mobile_no"] = self.mbl_no_text.text
             guarantor_details["guarantor_profession"] = self.profession_text.text
             guarantor_details["guarantor_address"] = self.address_text.text
             guarantor_details["another_person"] = self.relation_text.text
-            guarantor_details['guarantor_marriage_date'] =to_date(self.text_box_1.text)
+            guarantor_details['guarantor_marriage_date'] =self.text_box_1.text
             guarantor_details['guarantor_company_name'] =  self.text_box_2.text 
             guarantor_details['guarantor_annual_earning'] =  self.text_box_3.text 
     # If no validation errors, proceed with saving
@@ -490,7 +478,7 @@ class borrower_view_profile(borrower_view_profileTemplate):
     if user_profile:
         user_profile["full_name"] = self.name_text_box.text
         user_profile['email_user'] = self.email_tx.text
-        user_profile["mobile"] = str(self.mobile_tx.text)
+        user_profile["mobile"] = self.mobile_tx.text
         user_profile["date_of_birth"] =self.d_o_b_text_box.text
         user_profile["city"] = self.city_tx.text
         user_profile["aadhaar_no"] = self.g_i_1_tx.text
