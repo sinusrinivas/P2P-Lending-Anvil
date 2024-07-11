@@ -617,7 +617,7 @@ components:
         name: label_8
       - properties: {text: 'Upload ', align: center, font_size: 14}
         type: FileLoader
-        layout_properties: {grid_position: 'JOLEZQ,KPOAPE'}
+        layout_properties: {grid_position: 'JOLEZQ,CLPEHH'}
         event_bindings: {change: six_month_bank_statement_file_loader_change}
         name: file_loader_2
       - properties: {height: 59.39996337890625}
