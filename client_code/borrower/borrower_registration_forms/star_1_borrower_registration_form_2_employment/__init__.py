@@ -211,8 +211,24 @@ class star_1_borrower_registration_form_2_employment(star_1_borrower_registratio
           self.validate_company_landmark()
           self.validate_employee_designation()
           self.validate_annual_salary()
-          self.employee_ID_file_loader_change()
-          self.six_month_bank_statement_file_loader_change()
+          # self.employee_ID_file_loader_change()
+          if not self.file_loader_1_copy_2:
+            self.file_loader_1_copy_2.background = 'red'
+            self.file_loader_1_copy_2.focus()
+            Notification('Please fill all details').show()
+            return
+          else:
+            self.file_loader_1_copy_2.background = ''
+
+          if not self.file_loader_2:
+            self.file_loader_2.background = 'red'
+            self.file_loader_2.focus()
+            Notification('Please fill all details').show()
+            return
+          else:
+            self.file_loader_2.background = ''
+        
+          # self.six_month_bank_statement_file_loader_change()
           open_form('borrower.borrower_registration_forms.star_1_borrower_registration_form_3_marital',self.user_id)
         elif self.drop_down_1.selected_value == 'Self Employement':
           if self.drop_down_2.selected_value == 'Farmer':
