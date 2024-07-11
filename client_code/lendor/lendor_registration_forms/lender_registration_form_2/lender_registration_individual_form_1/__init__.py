@@ -216,7 +216,7 @@ class lender_registration_individual_form_1(lender_registration_individual_form_
           salary_type_is_valid = True
 
         if not emp_id_proof:
-          self.employee_ID_file_loader.role = 'outlined-error'
+          self.employee_ID_file_loader.role = 'outlined-button'
           self.employee_ID_file_loader.focus()
           Notification('please fill all the details')
           return
@@ -224,7 +224,7 @@ class lender_registration_individual_form_1(lender_registration_individual_form_
           self.employee_ID_file_loader.role = 'outlined'
 
         if not last_six_month:
-          self.six_month_bank_statement_file_loader.role = 'outlined-error'
+          self.six_month_bank_statement_file_loader.role = 'outlined-button'
           self.six_month_bank_statement_file_loader.focus()
           Notification('please fill all the details')
           return

@@ -248,7 +248,7 @@ components:
     type: Label
     layout_properties: {grid_position: 'RPIMZX,HUMSOA'}
   - name: six_month_bank_statement_file_loader
-    properties: {text: Upload, align: center, font_size: 12}
+    properties: {text: Upload, align: center, font_size: 12, role: null, background: '', foreground: ''}
     type: FileLoader
     layout_properties: {grid_position: 'RPIMZX,JIJADG'}
     event_bindings: {change: six_month_bank_statement_file_loader_change}

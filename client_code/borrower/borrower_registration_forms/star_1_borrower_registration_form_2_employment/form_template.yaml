@@ -602,7 +602,7 @@ components:
         type: Label
         layout_properties: {grid_position: 'RDWTZD,IVUJYU'}
         name: label_2_copy_4
-      - properties: {text: Upload, font_size: 14}
+      - properties: {text: Upload, font_size: 14, role: null}
         type: FileLoader
         layout_properties: {grid_position: 'JOLEZQ,LRZWGH'}
         event_bindings: {change: file_loader_1_change}
