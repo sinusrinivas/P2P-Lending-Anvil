@@ -62,9 +62,10 @@ class lender_registration_individual_form_1(lender_registration_individual_form_
             self.landmark_text_box.add_event_handler('change', self.validate_company_landmark)
             self.designation_textbox.add_event_handler('change', self.validate_employee_designation)
             self.annual_salary_text_box.add_event_handler('change', self.validate_annual_salary)
-            self.employee_ID_file_loader.add_event_handler('change', self.validate_file_upload)
+            self.employee_ID_file_loader.add_event_handler('change', self.validate_file_upload) 
+            self.image_1.background = '#FFFFFF'
             self.six_month_bank_statement_file_loader.add_event_handler('change', self.validate_file_upload)
-            
+            self.image_2.background = '#FFFFFF'
 
     def validate_company_name(self, **event_args):
         company_name = self.company_name_text_box.text
@@ -216,20 +217,22 @@ class lender_registration_individual_form_1(lender_registration_individual_form_
           salary_type_is_valid = True
 
         if not emp_id_proof:
-          self.employee_ID_file_loader.role = 'outlined-error'
+          self.employee_ID_file_loader.background = 'red'
           self.employee_ID_file_loader.focus()
           Notification('please fill all the details')
           return
         else:
           self.employee_ID_file_loader.role = 'outlined'
+          self.image_1.background = '#FFFFFF'
 
         if not last_six_month:
-          self.six_month_bank_statement_file_loader.role = 'outlined-error'
+          self.six_month_bank_statement_file_loader.background = 'red'
           self.six_month_bank_statement_file_loader.focus()
           Notification('please fill all the details')
           return
         else:
           self.six_month_bank_statement_file_loader.role = 'outlined'
+          self.image_2.background = '#FFFFFF'
           
         user_id = self.userId 
       
@@ -263,11 +266,14 @@ class lender_registration_individual_form_1(lender_registration_individual_form_
             if content_type in ['image/jpeg', 'image/png', 'image/jpg']:
                 # Display the image directly
                 self.image_1.source = self.employee_ID_file_loader.file
+                self.image_1.background = '#FFFFFF'
             elif content_type == 'application/pdf':
                 # Display a default PDF image temporarily
                 self.image_1.source = '_/theme/bank_users/default%20pdf.png'
+                self.image_1.background = '#FFFFFF'
             else:
                 alert('Invalid file type. Only JPEG, PNG, and PDF are allowed')
+                
                 self.image_1.clear()
 
     def six_month_bank_statement_file_loader_change(self, file, **event_args):
@@ -279,11 +285,14 @@ class lender_registration_individual_form_1(lender_registration_individual_form_
             if content_type in ['image/jpeg', 'image/png', 'image/jpg']:
                 # Display the image directly
                 self.image_2.source = self.six_month_bank_statement_file_loader.file
+                self.image_2.background = '#FFFFFF'
             elif content_type == 'application/pdf':
                 # Display a default PDF image temporarily
                 self.image_2.source = '_/theme/bank_users/default%20pdf.png'
+                self.image_2.background = '#FFFFFF'
             else:
                 alert('Invalid file type. Only JPEG, PNG, and PDF are allowed')
+                
                 self.image_2.clear()
 
     def prev_click(self, **event_args):
