@@ -161,11 +161,11 @@ components:
     layout_properties: {grid_position: 'MEAFMN,SCJCES'}
     components:
     - name: label_2
-      properties: {text: Enter Your Business Name  *, bold: true, spacing_above: medium, font_size: 12}
+      properties: {text: Enter Your Business Name  *, bold: true, spacing_above: medium, font_size: 14}
       type: Label
       layout_properties: {grid_position: 'RADGWR,ARWPKW'}
     - name: label_1
-      properties: {role: null, bold: true, align: left, spacing_above: medium, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: 12, tooltip: '', text: Enter Your Business Address  *}
+      properties: {role: null, bold: true, align: left, spacing_above: medium, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: 14, tooltip: '', text: Enter Your Business Address  *}
       type: Label
       layout_properties: {grid_position: 'RADGWR,AJWMAU'}
     - name: text_box_2
@@ -604,7 +604,7 @@ components:
       layout_properties: {grid_position: 'JOLEZQ,KPOAPE'}
       event_bindings: {change: file_loader_2_change}
     - name: image_2
-      properties: {height: 54.583282470703125}
+      properties: {height: 59.39996337890625}
       type: Image
       layout_properties: {grid_position: 'JOLEZQ,FXLFIZ'}
   - name: button_1

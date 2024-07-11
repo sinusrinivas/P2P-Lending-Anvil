@@ -357,3 +357,4 @@ class signup_page(signup_pageTemplate):
             self.retype_password_error_label.visible = True
             self.send_otp.visible = True
 
+
