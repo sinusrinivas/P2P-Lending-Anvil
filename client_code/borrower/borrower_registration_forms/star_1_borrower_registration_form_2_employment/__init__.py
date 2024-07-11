@@ -173,35 +173,35 @@ class star_1_borrower_registration_form_2_employment(star_1_borrower_registratio
         self.validate_business_add()
         self.validate_company_name()
         """This method is called when the button is clicked"""
-        open_form('borrower.borrower_registration_forms.star_1_borrower_registration_form_3_marital')
+        open_form('borrower.borrower_registration_forms.star_1_borrower_registration_form_3_marital',self.user_id)
 
   
-    def borrower_college_proof_img_change(self, file, **event_args):
-        """This method is called when a new file is loaded into this FileLoader"""
-        valid, message = self.validate_file(file)
-        if valid:
-          self.image_1_copy_2.source = file
-        else:
-          Notification(message).show()
-          self.borrower_college_proof_img.clear()
+    # def borrower_college_proof_img_change(self, file, **event_args):
+    #     """This method is called when a new file is loaded into this FileLoader"""
+    #     valid, message = self.validate_file(file)
+    #     if valid:
+    #       self.image_1_copy_2.source = file
+    #     else:
+    #       Notification(message).show()
+    #       self.borrower_college_proof_img.clear()
 
-    def file_loader_1_change(self, file, **event_args):
-        """This method is called when a new file is loaded into this FileLoader"""
-        valid, message = self.validate_file(file)
-        if valid:
-          self.image_1_copy_3.source = file
-        else:
-          Notification(message).show()
-          self.file_loader_1_copy_2.clear()
+    # def file_loader_1_change(self, file, **event_args):
+    #     """This method is called when a new file is loaded into this FileLoader"""
+    #     valid, message = self.validate_file(file)
+    #     if valid:
+    #       self.image_1_copy_3.source = file
+    #     else:
+    #       Notification(message).show()
+    #       self.file_loader_1_copy_2.clear()
 
-    def file_loader_2_change(self, file, **event_args):
-        """This method is called when a new file is loaded into this FileLoader"""
-        valid, message = self.validate_file(file)
-        if valid:
-          self.image_2.source = file
-        else:
-          Notification(message).show()
-          self.file_loader_2.clear()
+    # def file_loader_2_change(self, file, **event_args):
+    #     """This method is called when a new file is loaded into this FileLoader"""
+    #     valid, message = self.validate_file(file)
+    #     if valid:
+    #       self.image_2.source = file
+    #     else:
+    #       Notification(message).show()
+    #       self.file_loader_2.clear()
 
     # def file_loader_1(self, file, **event_args):
     #     """This method is called when a new file is loaded into this FileLoader"""
