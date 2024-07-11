@@ -346,66 +346,68 @@ class star_1_borrower_registration_form_3_marital(star_1_borrower_registration_f
   def validate_father_name(self, **event_args):
     father_name = self.father_name_text.text
     if not father_name or not re.match(r'^[A-Za-z\s]+$', father_name):
-        self.father_name_text.role =  'red'
+        self.father_name_text.role =  'outlined-error'
     else:
-        self.father_name_text.background = 'white'
+        self.father_name_text.role = 'outlined'
+
+    
 
   def validate_father_dob(self, **event_args):
     father_dob = self.date_picker_1.date
     if not father_dob or father_dob > datetime.now().date() or (datetime.now().date() - father_dob).days < 365 * 18:
-        self.date_picker_1.background = 'red'
+        self.date_picker_1.role = 'outlined-error'
     else:
-        self.date_picker_1.background = 'white'
+        self.date_picker_1.role = 'outlined'
 
   def validate_father_mbl_no(self, **event_args):
     father_mbl_no = self.father_mbl_no_text.text
     if not father_mbl_no or not re.match(r'^\d{10}$', str(father_mbl_no)):
-        self.father_mbl_no_text.background = 'red'
+        self.father_mbl_no_text.role = 'outlined-error'
     else:
-        self.father_mbl_no_text.background = 'white'
+        self.father_mbl_no_text.role = 'outlined'
 
   def validate_father_profession(self, **event_args):
     father_profession = self.father_profession_text.text
     if not father_profession:
-        self.father_profession_text.background = 'red'
+        self.father_profession_text.role = 'outlined-error'
     else:
-        self.father_profession_text.background = 'white'
+        self.father_profession_text.role = 'outlined'
 
   def validate_father_address(self, **event_args):
     father_address = self.father_address_text.text
     if not father_address:
-        self.father_address_text.background = 'red'
+        self.father_address_text.role = 'outlined-error'
     else:
-        self.father_address_text.background = 'white'
+        self.father_address_text.role = 'outlined'
     
 
   def validate_spouse_name(self, **event_args):
     spouse_name = self.spouse_name_text.text
     if not spouse_name or not re.match(r'^[A-Za-z\s]+$', spouse_name):
-        self.spouse_name_text.background = 'red'
+        self.spouse_name_text.role = 'outlined-error'
     else:
-        self.spouse_name_text.background = 'white'
+        self.spouse_name_text.role = 'outlined'
 
   def validate_spouse_dob(self, **event_args):
     spouse_mob = self.date_picker_3.date
     if not spouse_mob or spouse_mob > datetime.now().date():
-        self.date_picker_3.background = 'red'
+        self.date_picker_3.role = 'outlined-error'
     else:
-        self.date_picker_3.background = 'white'
+        self.date_picker_3.role = 'outlined'
 
   def validate_spouse_mbl_no(self, **event_args):
     spouse_mbl_no = self.spouse_mbl_no_text.text
     if not spouse_mbl_no or not re.match(r'^\d{10}$', str(spouse_mbl_no)):
-        self.spouse_mbl_no_text.background = 'red'
+        self.spouse_mbl_no_text.role = 'outlined-error'
     else:
-        self.spouse_mbl_no_text.background = 'white'
+        self.spouse_mbl_no_text.role = 'outlined'
 
   def validate_spouse_profession(self, **event_args):
     spouse_profession = self.drop_down_1_copy.selected_value
     if not spouse_profession:
-        self.drop_down_1_copy.background = 'red'
+        self.drop_down_1_copy.role = 'outlined-error'
     else:
-        self.drop_down_1_copy.background = 'white'
+        self.drop_down_1_copy.role = 'outlined'
 
   # def validate_spouse_company(self, **event_args):
   #   spouse_company = self.spouse_companyname_text.text
