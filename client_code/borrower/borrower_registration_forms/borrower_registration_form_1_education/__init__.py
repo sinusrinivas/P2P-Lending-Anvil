@@ -259,20 +259,7 @@ class borrower_registration_form_1_education(borrower_registration_form_1_educat
             else:
                 alert('Invalid file type. Only JPEG, PNG, and PDF are allowed')
                 self.file_loader_4.clear()
-    """This method is called when a new file is loaded into this FileLoader"""
-    if file:
-            self.label_21.text = file.name if file else ''
-            content_type = file.content_type
-            
-            if content_type in ['image/jpeg', 'image/png', 'image/jpg']:
-                # Display the image directly
-                self.image_5.source = self.file_loader_5.file
-            elif content_type == 'application/pdf':
-                # Display a default PDF image temporarily
-                self.image_5.source = '_/theme/bank_users/default%20pdf.png'
-            else:
-                alert('Invalid file type. Only JPEG, PNG, and PDF are allowed')
-                self.file_loader_5.clear()
+    
       
   def file_loader_6_change(self, file, **event_args):
     """This method is called when a new file is loaded into this FileLoader"""
@@ -431,3 +418,19 @@ class borrower_registration_form_1_education(borrower_registration_form_1_educat
             else:
                 alert('Invalid file type. Only JPEG, PNG, and PDF are allowed')
                 self.file_loader_15.clear()
+
+  def file_loader_5_change(self, file, **event_args):
+    """This method is called when a new file is loaded into this FileLoader"""
+    if file:
+            self.label_21.text = file.name if file else ''
+            content_type = file.content_type
+            
+            if content_type in ['image/jpeg', 'image/png', 'image/jpg']:
+                # Display the image directly
+                self.image_5.source = self.file_loader_5.file
+            elif content_type == 'application/pdf':
+                # Display a default PDF image temporarily
+                self.image_5.source = '_/theme/bank_users/default%20pdf.png'
+            else:
+                alert('Invalid file type. Only JPEG, PNG, and PDF are allowed')
+                self.file_loader_5.clear()
