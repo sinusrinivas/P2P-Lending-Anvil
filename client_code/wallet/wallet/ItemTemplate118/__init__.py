@@ -15,3 +15,7 @@ class ItemTemplate118(ItemTemplate118Template):
     self.init_components(**properties)
 
     # Any code you write here will run before the form opens.
+
+  def form_refreshing_data_bindings(self, **event_args):
+    """This method is called when refresh_data_bindings is called"""
+    pass

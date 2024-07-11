@@ -24,6 +24,9 @@ class wallet(walletTemplate):
     self.email=main_form_module.email
     email = self.email  
 
+    self.repeating_panel_1.items = app_tables.fin_wallet_transactions.search(
+    customer_id=self.user_id)
+    
     wallet_row =app_tables.fin_wallet.get(user_email=email)
     if wallet_row:
       # wallet_amount = wallet_row['wallet_amount']
