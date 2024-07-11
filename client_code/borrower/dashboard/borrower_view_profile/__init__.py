@@ -466,12 +466,12 @@ class borrower_view_profile(borrower_view_profileTemplate):
     guarantor_details = app_tables.fin_guarantor_details.get(customer_id=self.user_id)
     if guarantor_details:
             guarantor_details["guarantor_name"] = self.gurentor_name_text.text
-            guarantor_details["guarantor_date_of_birth"] =int(self.date_of_birth.text)
+            guarantor_details["guarantor_date_of_birth"] =self.date_of_birth.text
             guarantor_details["guarantor_mobile_no"] = int(self.mbl_no_text.text)
             guarantor_details["guarantor_profession"] = self.profession_text.text
             guarantor_details["guarantor_address"] = self.address_text.text
             guarantor_details["another_person"] = self.relation_text.text
-            guarantor_details['guarantor_marriage_date'] =int(self.text_box_1.text) 
+            guarantor_details['guarantor_marriage_date'] =self.text_box_1.text
             guarantor_details['guarantor_company_name'] =  self.text_box_2.text 
             guarantor_details['guarantor_annual_earning'] =  self.text_box_3.text 
     # If no validation errors, proceed with saving
