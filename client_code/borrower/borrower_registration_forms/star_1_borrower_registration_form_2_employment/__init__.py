@@ -85,6 +85,28 @@ class star_1_borrower_registration_form_2_employment(star_1_borrower_registratio
             # Handle initial visibility based on user type
             user_type = user_data['user_type'] if 'user_type' in user_data else ''
             self.update_visibility(user_type)
+            self.text_box_1_copy.add_event_handler('change', self.validate_company_name)
+            self.company_add_text_box.add_event_handler('change', self.validate_company_add)
+            self.company_ph_no_text_box.add_event_handler('change', self.validate_company_ph_no)
+            self.landmark_text_box.add_event_handler('change', self.validate_company_landmark)
+            self.designation_textbox.add_event_handler('change', self.validate_employee_designation)
+            self.annual_salary_text_box.add_event_handler('change', self.validate_annual_salary)
+            self.employee_ID_file_loader.add_event_handler('change', self.validate_file_upload)
+            self.six_month_bank_statement_file_loader.add_event_handler('change', self.validate_file_upload)
+            self.text_box_1.add_event_handler('change', self.validate_business_add)
+            self.text_box_2.add_event_handler('change', self.validate_business_name)
+            self.date_picker_1.add_event_handler('change', self.validate_year_estd)
+            self.text_box_3.add_event_handler('change', self.validate_industry_type)
+            self.text_box_4.add_event_handler('change', self.validate_six_month_turnover)
+            self.text_box_5.add_event_handler('change', self.validate_din)
+            self.text_box_6.add_event_handler('change', self.validate_cin)
+            self.text_box_7.add_event_handler('change', self.validate_registered_off_add)
+            self.drop_down_4.add_event_handler('change', self.validate_no_of_employes)
+            self.drop_down_12.add_event_handler('change', self.validate_business_type)
+            self.file_loader_1.add_event_handler('change', self.validate_file_upload)
+            self.file_loader_1_copy.add_event_handler('change', self.validate_file_upload)
+
+            
         else:
             print(f"No user data found for user_id: {user_id}")
             # Handle case where user_data is None or not found
@@ -410,4 +432,17 @@ class star_1_borrower_registration_form_2_employment(star_1_borrower_registratio
             self.text_box_1_copy.role = 'outlined-error'
             company_name_is_valid = False
             alert('please enter a valid company name')
-        
+
+
+    def acres_of_land(self, **event_args):
+          six_month_turnover = self.text_box_1_copy_4.text
+          global six_month_turn_over_is_valid
+          if re.match(r'^\d+$', six_month_turnover):
+              self.text_box_1_copy_4.role = 'outlined'
+              six_month_turn_over_is_valid = True
+          elif ' 'in six_month_turnover:
+              alert('Spaces are not allowed ')
+          else:
+              self.text_box_1_copy_4.role = 'outlined-error'
+              six_month_turn_over_is_valid = False
+              alert('please enter a valid acres of land')
