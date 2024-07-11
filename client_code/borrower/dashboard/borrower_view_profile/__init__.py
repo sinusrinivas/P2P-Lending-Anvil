@@ -56,7 +56,6 @@ class borrower_view_profile(borrower_view_profileTemplate):
             self.column_panel_1.visible = False
             self.column_panel_3.visible = True
         else:
-            # Handle case where guarantor details are not found
             self.column_panel_1.visible = False
             self.column_panel_3.visible = False
 
