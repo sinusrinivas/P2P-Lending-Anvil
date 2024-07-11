@@ -104,10 +104,12 @@ class star_1_borrower_registration_form_2_employment(star_1_borrower_registratio
             self.text_box_7.add_event_handler('change', self.validate_registered_off_add)
             self.drop_down_4.add_event_handler('change', self.validate_no_of_employes)
             self.drop_down_12.add_event_handler('change', self.validate_business_type)
-            self.file_loader_1.add_event_handler('change', self.validate_file_upload)
+            self.file_loader_1.add_event_handler('change', self.file_loader_1)
             self.file_loader_1_copy.add_event_handler('change', self.validate_file_upload)
 
             self.text_box_1_copy_4.add_event_handler('change', self.acres_of_land)
+            self.text_box_3_copy_2.add_event_handler('change',self.yearly_income)
+            self.text_box_2_copy_3.add_event_handler('change',self.validate_crop_name)
 
             
         else:
@@ -184,21 +186,56 @@ class star_1_borrower_registration_form_2_employment(star_1_borrower_registratio
         open_form('borrower.borrower_registration_forms.borrower_registration_form_1_education')
 
     def button_1_next_click(self, **event_args):
-        self.validate_cin()
-        self.validate_din()
-        self.validate_registered_off_add()
-        self.validate_six_month_turnover()
-        self.validate_industry_type()
-        self.validate_business_name()
-        self.validate_year_estd()
-        self.validate_business_type()
-        self.validate_no_of_employes()
-        self.file_loader_1()
-        self.file_loader_1_copy()
-        self.validate_business_add()
-        self.validate_company_name()
+        # self.validate_cin()
+        # self.validate_din()
+        # self.validate_registered_off_add()
+        # self.validate_six_month_turnover()
+        # self.validate_industry_type()
+        # self.validate_business_name()
+        # self.validate_year_estd()
+        # self.validate_business_type()
+        # self.validate_no_of_employes()
+        # self.file_loader_1()
+        # self.file_loader_1_copy()
+        # self.validate_business_add()
+        # self.validate_company_name()
         """This method is called when the button is clicked"""
-        open_form('borrower.borrower_registration_forms.star_1_borrower_registration_form_3_marital',self.user_id)
+        
+        if self.drop_down_1.selected_value == 'Student':
+
+          open_form('borrower.borrower_registration_forms.star_1_borrower_registration_form_3_marital',self.user_id)
+        elif self.drop_down_1.selected_value == 'Employee':
+          self.validate_company_name()
+          self.validate_company_add()
+          self.validate_company_ph_no()
+          self.validate_company_landmark()
+          self.validate_employee_designation()
+          self.validate_annual_salary()
+          self.employee_ID_file_loader_change()
+          self.six_month_bank_statement_file_loader_change()
+          open_form('borrower.borrower_registration_forms.star_1_borrower_registration_form_3_marital',self.user_id)
+        elif self.drop_down_1.selected_value == 'Self Employement':
+          if self.drop_down_2.selected_value == 'Farmer':
+            self.acres_of_land()
+            self.yearly_income()
+            self.validate_crop_name()
+            open_form('borrower.borrower_registration_forms.star_1_borrower_registration_form_3_marital',self.user_id)
+          elif self.drop_down_2.selected_value == 'Business':
+            self.validate_business_add()
+            self.validate_business_name()
+            self.validate_year_estd()
+            self.validate_industry_type()
+            self.validate_six_month_turnover()
+            self.validate_din()
+            self.validate_cin()
+            self.validate_registered_off_add()
+            self.validate_no_of_employes()
+            self.validate_business_type()
+            self.validate_file_upload()
+            open_form('borrower.borrower_registration_forms.star_1_borrower_registration_form_3_marital',self.user_id)
+        else:
+            pass
+        
 
   
     # def borrower_college_proof_img_change(self, file, **event_args):
@@ -364,7 +401,7 @@ class star_1_borrower_registration_form_2_employment(star_1_borrower_registratio
           else:
               self.drop_down_12.role = 'outlined-error'
               business_type_is_valid = False
-              alert('please enter a valid business address')
+              alert('please enter a valid business type')
 
 
     def validate_no_of_employes(self, **event_args):
@@ -376,7 +413,7 @@ class star_1_borrower_registration_form_2_employment(star_1_borrower_registratio
           else:
               self.drop_down_4.role = 'outlined-error'
               business_type_is_valid = False
-              alert('please enter a valid business address')
+              alert('please enter a valid employes count')
 
 
 
@@ -508,7 +545,7 @@ class star_1_borrower_registration_form_2_employment(star_1_borrower_registratio
               company_address_is_valid = True
           else:
               self.text_box_1_copy_2.role = 'outlined-error'
-              alert('please enter a valid business address')
+              alert('please enter a valid company address')
               company_address_is_valid = False
               
 
@@ -520,7 +557,7 @@ class star_1_borrower_registration_form_2_employment(star_1_borrower_registratio
               company_landmark_is_valid = True
           else:
               self.text_box_3_copy.role = 'outlined-error'
-              alert('please enter a valid business address')
+              alert('please enter a valid company landmark')
               company_landmark_is_valid = False
 
     def validate_employee_designation(self, **event_args):
@@ -531,7 +568,7 @@ class star_1_borrower_registration_form_2_employment(star_1_borrower_registratio
               designation_is_valid = True
           else:
               self.text_box_2_copy_2.role = 'outlined-error'
-              alert('please enter a valid business address')
+              alert('please enter a valid designation')
               designation_is_valid = False
 
     def validate_annual_salary(self, **event_args):
@@ -544,7 +581,7 @@ class star_1_borrower_registration_form_2_employment(star_1_borrower_registratio
               alert('Spaces are not allowed')
           else:
               self.text_box_1_copy_3.role = 'outlined-error'
-              alert('please enter a valid business address')    
+              alert('please enter a valid annual salary')    
               annual_salary_is_valid = False
     
     def validate_file_upload(self, **event_args):
@@ -570,12 +607,27 @@ class star_1_borrower_registration_form_2_employment(star_1_borrower_registratio
           Annual_salary = self.text_box_3_copy_2.text
           global annual_salary_is_valid
           if re.match(r'^[A-Za-z\d][A-Za-z\d\s]*$', Annual_salary):
-              self.text_box_1_copy_3.role = 'outlined'
+              self.text_box_3_copy_2.role = 'outlined'
               annual_salary_is_valid = True
           elif ' ' in Annual_salary:
               alert('Spaces are not allowed')
           else:
-              self.text_box_1_copy_3.role = 'outlined-error'
-              alert('please enter a valid business address')    
+              self.text_box_2_copy_2.role = 'outlined-error'
+              alert('please enter a valid annual income')    
               annual_salary_is_valid = False
+
+
+    def validate_crop_name(self, **event_args):
+        din = self.text_box_2_copy_3.strip()
+        global din_is_valid
+    
+        # Validate DIN to contain only alphanumeric characters
+        if re.match(r'^[a-zA-Z0-9]+$', din):
+            self.text_box_2_copy_3.role = 'outlined'
+            din_is_valid = True
+        else:
+            self.text_box_2_copy_3.role = 'outlined-error'
+            din_is_valid = False
+            alert("Please enter a valid crop name")
+      
     
