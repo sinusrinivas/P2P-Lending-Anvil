@@ -23,77 +23,82 @@ components:
   properties: {}
   name: navigation_bar_main_lender_1
   layout_properties: {grid_position: 'WTGSNR,YLBPOO', full_width_row: true}
-- name: label_1_copy_1
-  properties: {role: null, bold: true, align: center, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: 16, tooltip: '', text: Lender Registration}
-  type: Label
-  layout_properties: {grid_position: ',undefined'}
-- name: spacer_2
-  properties: {height: 20.42852783203125}
-  type: Spacer
-  layout_properties: {grid_position: 'HEZNOI,KHGDQN'}
-- name: label_2_copy_1
-  properties: {role: null, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: Select Your Lending Type}
-  type: Label
-  layout_properties: {grid_position: 'JWWMUR,JVXVFN'}
-- name: lending_type_dropdown
-  properties:
-    role: null
-    include_placeholder: true
-    bold: false
-    align: full
-    placeholder: Select one
-    spacing_above: small
-    background: theme:On Primary
-    underline: false
-    font: ''
-    foreground: ''
-    items: [Institutional, Individual]
-    spacing_below: small
-    visible: true
-    border: ''
-    italic: false
-    enabled: true
-    font_size: null
-    tooltip: ''
-  type: DropDown
-  layout_properties: {grid_position: 'JWWMUR,ZJEQIT'}
-- name: label_3_copy_1
-  properties: {role: null, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: Enter Your Investment}
-  type: Label
-  layout_properties: {grid_position: 'GJGPBZ,ZPBBNS'}
-- type: TextBox
-  properties: {role: null, bold: false, align: left, placeholder: '', spacing_above: small, background: white, type: text, underline: false, font: '', hide_text: false, foreground: '', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: ''}
-  name: text_box_1
-  layout_properties: {grid_position: 'GJGPBZ,RPHNXL'}
-  event_bindings: {pressed_enter: text_box_1_pressed_enter}
-- name: label_1
-  properties: {role: null, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: Select Your Lending Period}
-  type: Label
-  layout_properties: {grid_position: 'HULYYQ,TLJPZE'}
-- type: DropDown
-  properties:
-    role: null
-    include_placeholder: true
-    bold: false
-    align: full
-    placeholder: Select one
-    spacing_above: small
-    background: theme:On Primary
-    underline: false
-    font: ''
-    foreground: ''
-    items: [1 year, 2-3 Years, 4-5 years, 5 above years, '']
-    spacing_below: small
-    visible: true
-    border: ''
-    italic: false
-    enabled: true
-    font_size: null
-    tooltip: ''
-  name: drop_down_2
-  layout_properties: {grid_position: 'HULYYQ,FYJUTX'}
+- name: column_panel_1_copy
+  properties: {role: outlined-card}
+  type: ColumnPanel
+  layout_properties: {grid_position: 'IGCQEZ,MZUQXE'}
+  components:
+  - name: label_1_copy_1
+    properties: {role: null, bold: true, align: center, spacing_above: small, background: '#05264d', icon: '', underline: false, font: '', icon_align: left, foreground: white, spacing_below: small, visible: true, border: '', italic: false, font_size: 16, tooltip: '', text: Lender Registration}
+    type: Label
+    layout_properties: {grid_position: 'BRTTNW,RJJMOJ'}
+  - name: spacer_3
+    properties: {height: 11.083343505859375}
+    type: Spacer
+    layout_properties: {grid_position: 'LFZPTS,EQSAEV'}
+  - name: label_2_copy_1
+    properties: {role: null, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: 14, tooltip: '', text: Select Your Lending Type}
+    type: Label
+    layout_properties: {grid_position: 'OIBQJH,MRWMOF'}
+  - name: lending_type_dropdown
+    properties:
+      role: null
+      include_placeholder: true
+      bold: false
+      align: full
+      placeholder: Select one
+      spacing_above: small
+      background: theme:On Primary
+      underline: false
+      font: ''
+      foreground: ''
+      items: [Institutional, Individual]
+      spacing_below: small
+      visible: true
+      border: ''
+      italic: false
+      enabled: true
+      font_size: 14
+      tooltip: ''
+    type: DropDown
+    layout_properties: {grid_position: 'OIBQJH,BKXLGG'}
+  - name: label_3_copy_1
+    properties: {role: null, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: 14, tooltip: '', text: Enter Your Investment}
+    type: Label
+    layout_properties: {grid_position: 'ANDJGC,VRYEAA'}
+  - name: text_box_1
+    properties: {role: null, bold: false, align: left, placeholder: '', spacing_above: small, background: white, type: text, underline: false, font: '', hide_text: false, foreground: '', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: 14, tooltip: '', text: ''}
+    type: TextBox
+    layout_properties: {grid_position: 'ANDJGC,AYCCYN'}
+    event_bindings: {pressed_enter: text_box_1_pressed_enter}
+  - name: label_1
+    properties: {role: null, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: 14, tooltip: '', text: Select Your Lending Period}
+    type: Label
+    layout_properties: {grid_position: 'IAHUEO,RTTGXN'}
+  - name: drop_down_2
+    properties:
+      role: null
+      include_placeholder: true
+      bold: false
+      align: full
+      placeholder: Select one
+      spacing_above: small
+      background: theme:On Primary
+      underline: false
+      font: ''
+      foreground: ''
+      items: [1 year, 2-3 Years, 4-5 years, 5 above years, '']
+      spacing_below: small
+      visible: true
+      border: ''
+      italic: false
+      enabled: true
+      font_size: 14
+      tooltip: ''
+    type: DropDown
+    layout_properties: {grid_position: 'IAHUEO,SHETHM'}
 - name: spacer_1
-  properties: {height: 21.42852783203125}
+  properties: {height: 11.75}
   type: Spacer
   layout_properties: {grid_position: 'WDHSZT,FSOLXB'}
 - name: button_1
