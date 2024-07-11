@@ -23,9 +23,9 @@ components:
   name: navigation_bar_main_lender_1
   layout_properties: {grid_position: 'EXCZML,VSXRMI', full_width_row: true}
 - name: column_panel_1
-  properties: {role: outlined-card, background: '', foreground: black}
+  properties: {role: outlined-card, background: '', foreground: black, col_widths: '{"WNIXDM":30,"MIOWCS":10,"KNEKHC":10,"ZPQIOA":10,"MYCISS":30,"XJDPZH":10,"DGNPSU":10,"PJXJHS":10}'}
   type: ColumnPanel
-  layout_properties: {grid_position: 'JNTBJK,MUYGOJ'}
+  layout_properties: {grid_position: 'KDDGPC,KCRFMS'}
   components:
   - name: label_1_copy_1
     properties: {role: null, bold: true, align: center, spacing_above: small, background: '#05264d', icon: '', underline: false, font: '', icon_align: left, foreground: white, spacing_below: small, visible: true, border: '', italic: false, font_size: 18, tooltip: '', text: Institutional Type}
@@ -122,11 +122,7 @@ components:
   - name: label_3_copy_1_copy_1_copy
     properties: {role: null, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: 14, tooltip: '', text: Enter Your Last Six Month's Turnover  *}
     type: Label
-    layout_properties: {grid_position: 'FNFHAS,HMQKGI NMZPOX,BNHAXT'}
-  - name: text_box_4
-    properties: {role: outlined, bold: false, align: left, placeholder: Enter Your Last Six Month's Turnover, spacing_above: small, background: 'theme:On Primary', type: text, underline: false, font: '', hide_text: false, foreground: '', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: 12, tooltip: '', text: ''}
-    type: TextBox
-    layout_properties: {grid_position: 'FNFHAS,HMQKGI SCCEFK,BYPZRI'}
+    layout_properties: {grid_position: 'FNFHAS,HMQKGI'}
   - name: label_1_copy_1_copy_2
     properties:
       role: null
@@ -149,20 +145,24 @@ components:
         Last 6 Month's Bank Statements  *
         (Image Size less-than 2MB)
     type: Label
-    layout_properties: {grid_position: 'FNFHAS,ALPWBN XLIDYW,TJEIKW'}
+    layout_properties: {grid_position: 'FNFHAS,ALPWBN'}
+  - name: text_box_4
+    properties: {role: outlined, bold: false, align: left, placeholder: Enter Your Last Six Month's Turnover, spacing_above: small, background: 'theme:On Primary', type: text, underline: false, font: '', hide_text: false, foreground: '', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: 12, tooltip: '', text: ''}
+    type: TextBox
+    layout_properties: {grid_position: 'JKIGOS,WNIXDM'}
   - name: file_loader_1
     properties: {text: Upload, font_size: 14, border: ''}
     type: FileLoader
-    layout_properties: {grid_position: 'FNFHAS,ALPWBN FONHPR,NRLHMM'}
+    layout_properties: {grid_position: 'JKIGOS,MIOWCS'}
     event_bindings: {change: file_loader_1}
   - name: image_1
     properties: {height: 46.916656494140625}
     type: Image
-    layout_properties: {grid_position: 'FNFHAS,ALPWBN FONHPR,GIVPGH'}
+    layout_properties: {grid_position: 'JKIGOS,KNEKHC'}
   - name: label_3
     properties: {font_size: 12}
     type: Label
-    layout_properties: {grid_position: 'FNFHAS,ALPWBN FONHPR,FJXRTS'}
+    layout_properties: {grid_position: 'JKIGOS,ZPQIOA'}
   - name: label_1_copy_1_copy_1_copy
     properties: {role: null, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: none, visible: true, border: '', italic: false, font_size: 14, tooltip: '', text: Enter DIN  *}
     type: Label
@@ -183,11 +183,7 @@ components:
   - name: label_2_copy_1_copy_1_copy_2
     properties: {role: null, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: 14, tooltip: '', text: Enter Your Registered Office Address  *}
     type: Label
-    layout_properties: {grid_position: 'OFWFAD,ZKAGXH MCGVVF,VJQPSM'}
-  - name: text_box_7
-    properties: {role: outlined, bold: false, align: left, placeholder: Enter Your Registered Office Address, spacing_above: small, background: 'theme:On Primary', type: text, underline: false, font: '', hide_text: false, foreground: '', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: 14, tooltip: '', text: ''}
-    type: TextBox
-    layout_properties: {grid_position: 'OFWFAD,ZKAGXH UZVJJA,FECIOM'}
+    layout_properties: {grid_position: 'OFWFAD,ZKAGXH'}
   - name: label_1_copy_1_copy_copy
     properties:
       role: null
@@ -210,20 +206,24 @@ components:
         Provide Proof of Verification  *
         (recent electricity bill)
     type: Label
-    layout_properties: {grid_position: 'OFWFAD,EGUDKD MBTXDR,MAOOQB'}
+    layout_properties: {grid_position: 'OFWFAD,EGUDKD'}
+  - name: text_box_7
+    properties: {role: outlined, bold: false, align: left, placeholder: Enter Your Registered Office Address, spacing_above: small, background: 'theme:On Primary', type: text, underline: false, font: '', hide_text: false, foreground: '', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: 14, tooltip: '', text: ''}
+    type: TextBox
+    layout_properties: {grid_position: 'BJAFVW,MYCISS'}
   - name: file_loader_1_copy
     properties: {text: Upload, font_size: 14}
     type: FileLoader
-    layout_properties: {grid_position: 'OFWFAD,EGUDKD HQKZGG,TVBSYZ'}
+    layout_properties: {grid_position: 'BJAFVW,XJDPZH'}
     event_bindings: {change: file_loader_1_copy}
   - name: image_1_copy
     properties: {height: 48.91668701171875}
     type: Image
-    layout_properties: {grid_position: 'OFWFAD,EGUDKD HQKZGG,WLXMJZ'}
+    layout_properties: {grid_position: 'BJAFVW,DGNPSU'}
   - name: label_1
     properties: {font_size: 12}
     type: Label
-    layout_properties: {grid_position: 'OFWFAD,EGUDKD HQKZGG,SFZKAE'}
+    layout_properties: {grid_position: 'BJAFVW,PJXJHS'}
 - name: spacer_1
   properties: {height: 10.857086181640625}
   type: Spacer
