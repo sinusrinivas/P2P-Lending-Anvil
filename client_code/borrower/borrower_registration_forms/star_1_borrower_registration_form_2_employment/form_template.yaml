@@ -638,7 +638,3 @@ components:
       layout_properties: {grid_position: 'ZPTEUC,QQSFYK'}
       event_bindings: {click: button_1_next_click}
       name: button_1_next
-  - properties: {}
-    type: Label
-    layout_properties: {grid_position: 'ZOSPIG,TIZSQG'}
-    name: label_10

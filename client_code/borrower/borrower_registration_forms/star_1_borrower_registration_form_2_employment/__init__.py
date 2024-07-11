@@ -163,6 +163,14 @@ class star_1_borrower_registration_form_2_employment(star_1_borrower_registratio
         self.validate_din()
         self.validate_registered_off_add()
         self.validate_six_month_turnover()
+        self.validate_industry_type()
+        self.validate_business_name()
+        self.validate_year_estd()
+        self.validate_business_type()
+        self.validate_no_of_employes()
+        self.file_loader_1()
+        self.file_loader_1_copy()
+        self.validate_business_add()
         """This method is called when the button is clicked"""
         open_form('borrower.borrower_registration_forms.star_1_borrower_registration_form_3_marital')
 
@@ -194,21 +202,21 @@ class star_1_borrower_registration_form_2_employment(star_1_borrower_registratio
           Notification(message).show()
           self.file_loader_2.clear()
 
-    def file_loader_1(self, file, **event_args):
-        """This method is called when a new file is loaded into this FileLoader"""
-        if file:
-            self.user_photo_file_name.text = file.name if file else ''
-            content_type = file.content_type
+    # def file_loader_1(self, file, **event_args):
+    #     """This method is called when a new file is loaded into this FileLoader"""
+    #     if file:
+    #         self.user_photo_file_name.text = file.name if file else ''
+    #         content_type = file.content_type
             
-            if content_type in ['image/jpeg', 'image/png', 'image/jpg']:
-                # Display the image directly
-                self.image_profile.source = self.registration_img_file_loader.file
-            elif content_type == 'application/pdf':
-                # Display a default PDF image temporarily
-                self.image_profile.source = '_/theme/bank_users/default%20pdf.png'
-            else:
-                alert('Invalid file type. Only JPEG, PNG, and PDF are allowed')
-                self.registration_img_file_loader.clear()
+    #         if content_type in ['image/jpeg', 'image/png', 'image/jpg']:
+    #             # Display the image directly
+    #             self.image_profile.source = self.registration_img_file_loader.file
+    #         elif content_type == 'application/pdf':
+    #             # Display a default PDF image temporarily
+    #             self.image_profile.source = '_/theme/bank_users/default%20pdf.png'
+    #         else:
+    #             alert('Invalid file type. Only JPEG, PNG, and PDF are allowed')
+    #             self.registration_img_file_loader.clear()
 
     def validate_cin(self, **event_args):
         cin = self.text_box_6.text.strip()
@@ -275,3 +283,130 @@ class star_1_borrower_registration_form_2_employment(star_1_borrower_registratio
               self.text_box_3.role = 'outlined-error'
               industry_type_is_valid = False
               alert('please enter a valid industry type')
+
+    def validate_business_name(self, **event_args):
+          global business_name_is_valid
+          business_name = self.text_box_2_copy.text        
+          if re.match(r'^[A-Za-z][A-Za-z\s]*$', business_name):
+              self.text_box_2.role = 'outlined'            
+              business_name_is_valid = True
+          else:
+              self.text_box_2.role = 'outlined-error'
+              business_name_is_valid = False
+              alert('please enter a valid business name')
+          # Get today's date
+
+
+              
+    def validate_year_estd(self, **event_args):
+      year = self.date_picker_1.date  # Ensure self.date_picker_1.date is returning a datetime object
+      today = datetime.today()
+      global year_estd_is_valid
+      
+      if not year:
+          self.date_picker_1.role = 'outlined-error'
+          year_estd_is_valid = False
+          alert('Please enter a valid year of establishment')
+          return
+      
+      if year.year > today.year:
+          alert("The year cannot be in the future. Please select a valid year.", title="Invalid Year")
+          self.date_picker_1.role = 'outlined-error'
+          year_estd_is_valid = False
+          return
+      elif year.year == today.year and year.month > today.month:
+          alert("The month cannot be in the future. Please select a valid month.", title="Invalid Month")
+          self.date_picker_1.role = 'outlined-error'
+          year_estd_is_valid = False
+          return
+      elif year.year == today.year and year.month == today.month and year.day > today.day:
+          alert("The date cannot be in the future. Please select a valid date.", title="Invalid Date")
+          self.date_picker_1.role = 'outlined-error'
+          year_estd_is_valid = False
+          return
+  
+      self.date_picker_1.role = 'outlined'
+      year_estd_is_valid = True
+
+
+    def validate_business_type(self, **event_args):
+          Business_type = self.drop_down_12.selected_value
+          global business_type_is_valid
+          if Business_type is not None:
+              self.drop_down_12.role = 'outlined'
+              business_type_is_valid = True
+          else:
+              self.drop_down_12.role = 'outlined-error'
+              business_type_is_valid = False
+              alert('please enter a valid business address')
+
+
+    def validate_no_of_employes(self, **event_args):
+          No_of_employes = self.drop_down_4.selected_value
+          global business_type_is_valid
+          if No_of_employes is not None:
+              self.drop_down_4.role = 'outlined'
+              business_type_is_valid = True
+          else:
+              self.drop_down_4.role = 'outlined-error'
+              business_type_is_valid = False
+              alert('please enter a valid business address')
+
+
+
+    def file_loader_1(self, file, **event_args):
+          """This method is called when a new file is loaded into this FileLoader"""
+          if file:
+                  self.label_6.text = file.name if file else ''
+                  content_type = file.content_type
+                  
+                  if content_type in ['image/jpeg', 'image/png', 'image/jpg']:
+                      # Display the image directly
+                      self.image_1.source = self.file_loader_1.file
+                  elif content_type == 'application/pdf':
+                      # Display a default PDF image temporarily
+                      self.image_1.source = '_/theme/bank_users/default%20pdf.png'
+                  else:
+                      alert('Invalid file type. Only JPEG, PNG, and PDF are allowed')
+                      self.file_loader_1.clear()
+  
+    def file_loader_1_copy(self, file, **event_args):
+          """This method is called when a new file is loaded into this FileLoader"""
+          if file:
+                    self.label_7.text = file.name if file else ''
+                    content_type = file.content_type
+                    
+                    if content_type in ['image/jpeg', 'image/png', 'image/jpg']:
+                        # Display the image directly
+                        self.image_1_copy.source = self.file_loader_1_copy.file
+                    elif content_type == 'application/pdf':
+                        # Display a default PDF image temporarily
+                        self.image_1_copy.source = '_/theme/bank_users/default%20pdf.png'
+                    else:
+                        alert('Invalid file type. Only JPEG, PNG, and PDF are allowed')
+                        self.file_loader_1_copy.clear()
+
+
+    def validate_business_add(self, **event_args):
+          Business_add = self.text_box_1.text
+          global business_add_is_valid
+          if re.match(r'^[A-Za-z\d][A-Za-z\d\s]*$', Business_add):
+              self.text_box_1.role = 'outlined'
+              business_add_is_valid = True
+          else:
+              self.text_box_1.role = 'outlined-error'
+              business_add_is_valid = False
+              alert('please enter a valid business address')
+
+
+    def validate_company_name(self, **event_args):
+        company_name = self.text_box_1_copy.text
+        global company_name_is_valid
+        if re.match(r'^[A-Za-z][A-Za-z\s]*$', company_name):
+            self.text_box_1_copy.role = 'outlined'
+            company_name_is_valid = True
+        else:
+            self.text_box_1_copy.role = 'outlined-error'
+            company_name_is_valid = False
+            alert('please enter a valid company name')
+        
