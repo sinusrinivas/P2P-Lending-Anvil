@@ -20,6 +20,7 @@ class borrower_portfolio(borrower_portfolioTemplate):
     self.init_components(**properties)
     self.selected_row=selected_row
     self.id= selected_row['customer_id']
+    self.borrower_customer_id = self.id
     # self.email = main_form_module.email
     # print(self.email)
     # self.id = main_form_module.userId
@@ -29,6 +30,14 @@ class borrower_portfolio(borrower_portfolioTemplate):
             'medium_risk': 0,
             'high_risk': 0
         }
+    self.analyze_borrower_risk(self.borrower_customer_id)
+    self.risk_label.text = (
+    f"No Risk: {self.risk_categories['no_risk']}\n"
+    f"Low Risk: {self.risk_categories['low_risk']}\n"
+    f"Medium Risk: {self.risk_categories['medium_risk']}\n"
+    f"High Risk: {self.risk_categories['high_risk']}"
+)
+
 
     self.create_bar_chart()
 
@@ -184,7 +193,7 @@ class borrower_portfolio(borrower_portfolioTemplate):
             if any(npa_min_days <= days_left <= npa_max_days for days_left in days_left_values):
                 return 'high_risk'
         
-        return 'medium_risk'  # Default to medium risk if no specific conditions are met
+        return 'medium_risk'
       
   def get_loan_status_data(self, borrower_customer_id):
     # Query the database to get loan status data for the given customer_id
