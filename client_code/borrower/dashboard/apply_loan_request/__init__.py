@@ -153,7 +153,8 @@ class apply_loan_request(apply_loan_requestTemplate):
                   self.product_description_label.text = "Product description not available"
 
     def link_1_click(self, **event_args):
-
+        self.label_29.text = f"Total Interest Amount({self.label_7_copy.text}%)"
+        self.label_31.text = f"Processing fee Amount({self.label_21.text}%)"
         loan_amount = self.loan_amount_tb.text
         tenure = self.text_box_1.text
         emi_type = self.drop_down_3.selected_value
