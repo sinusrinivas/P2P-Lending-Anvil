@@ -314,10 +314,10 @@ class star_1_borrower_registration_form_2_employment(star_1_borrower_registratio
                 months = (datetime.now().year - year.year) * 12 + (datetime.now().month - year.month)
                 anvil.server.call('add_lendor_institutional_form_2', year, months, industry_type, turn_over, last_six_statements, user_id)
                 anvil.server.call('add_lendor_institutional_form_3', din, cin, reg_off_add, proof_verification, user_id)
-                open_form('lendor.lendor_registration_forms.lender_registration_form_3_marital_details',user_id=user_id)
+                open_form('borrower.borrower_registration_forms.star_1_borrower_registration_form_3_marital', self.user_id)
               else :
                   alert('please fill all the details')
-                    open_form('borrower.borrower_registration_forms.star_1_borrower_registration_form_3_marital', self.user_id)
+                    
         else:
             pass
 
