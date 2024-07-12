@@ -17,13 +17,13 @@ class star_1_borrower_registration_form_2_employment(star_1_borrower_registratio
     registered_off_add_is_valid = False
     crop_name_is_valid = False
     annual_income_is_valid = False
-    annual_salary_is_valid = False
-    designation_is_valid = False
-    company_landmark_is_valid = False
-    company_address_is_valid = False
-    company_ph_no_is_valid = False
+    # annual_salary_is_valid = False
+    # designation_is_valid = False
+    # company_landmark_is_valid = False
+    # company_address_is_valid = False
+    # company_ph_no_is_valid = False
     company_name_is_valid = False
-    occupation_type_is_valid = False
+    # occupation_type_is_valid = False
     business_name_is_valid = False
     business_add_is_valid = False
     business_type_is_valid = False
@@ -36,6 +36,16 @@ class star_1_borrower_registration_form_2_employment(star_1_borrower_registratio
     # lendor_business_type_is_valid = False  
     employees_working_is_valid = False
 
+    company_name_is_valid = False
+    organization_type_is_valid = False
+    employment_type_is_valid = False
+    occupation_type_is_valid = False
+    company_address_is_valid = False
+    company_landmark_is_valid = False
+    company_ph_no_is_valid = False
+    annual_salary_is_valid = False
+    designation_is_valid = False
+    salary_type_is_valid = False
   
     def __init__(self, user_id, **properties):
         
@@ -341,29 +351,29 @@ class star_1_borrower_registration_form_2_employment(star_1_borrower_registratio
 
 
               if not last_six_statements:
-                    self.file_loader_1.role = 'outlined-error'
+                    self.file_loader_1.role = 'red'
                     self.file_loader_1.focus()
                     Notification('Please fill all details')
                     return
               else:
                     self.file_loader_1.role = 'outlined'
               
-                    if not proof_verification:
-                          self.file_loader_1_copy.role = 'outlined-error'
-                          self.file_loader_1_copy.focus()
-                          Notification('Please fill all details')
-                          return
-                    else:
-                        self.file_loader_1_copy.role = 'outlined'
+              if not proof_verification:
+                    self.file_loader_1_copy.role = 'red'
+                    self.file_loader_1_copy.focus()
+                    Notification('Please fill all details')
+                    return
+              else:
+                  self.file_loader_1_copy.role = 'outlined'
 
-                        if business_name_is_valid and last_six_statements and empolyees_working and proof_verification and business_add_is_valid and industry_type_is_valid and six_month_turn_over_is_valid and din_is_valid and cin_is_valid and registered_off_add_is_valid and business_type_is_valid and employees_working_is_valid:
-                          anvil.server.call('add_lendor_institutional_form_1',business_name,business_add,business_type,empolyees_working,user_id)
-                          anvil.server.call('add_lendor_institutional_form_3', din, cin, reg_off_add, proof_verification, user_id)
-                          anvil.server.call('add_lendor_institutional_form_2', year, months, industry_type, turn_over, last_six_statements, user_id)
-                          open_form('borrower.borrower_registration_forms.star_1_borrower_registration_form_3_marital', self.user_id)
-                        else :
-                            alert('please fill all the details')
-                              
+              if business_name_is_valid and last_six_statements and empolyees_working and proof_verification and business_add_is_valid and industry_type_is_valid and six_month_turn_over_is_valid and din_is_valid and cin_is_valid and registered_off_add_is_valid and business_type_is_valid and employees_working_is_valid:
+                anvil.server.call('add_lendor_institutional_form_1',business_name,business_add,business_type,empolyees_working,user_id)
+                anvil.server.call('add_lendor_institutional_form_3', din, cin, reg_off_add, proof_verification, user_id)
+                anvil.server.call('add_lendor_institutional_form_2', year, months, industry_type, turn_over, last_six_statements, user_id)
+                open_form('borrower.borrower_registration_forms.star_1_borrower_registration_form_3_marital', self.user_id)
+              else :
+                  alert('please fill all the details')
+                    
         else:
             pass
 
@@ -539,10 +549,10 @@ class star_1_borrower_registration_form_2_employment(star_1_borrower_registratio
           global no_of_employes_type_is_valid
           if No_of_employes is not None:
               self.drop_down_4.role = 'outlined'
-              business_type_is_valid = True
+              no_of_employes_type_is_valid = True
           else:
               self.drop_down_4.role = 'outlined-error'
-              business_type_is_valid = False
+              no_of_employes_type_is_valid = False
               alert('please enter a valid employes count')
 
     def validate_occupation_type(self, **event_args):
