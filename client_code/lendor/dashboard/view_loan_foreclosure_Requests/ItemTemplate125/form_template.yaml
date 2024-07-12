@@ -4,7 +4,7 @@ components:
 - name: column_panel_1
   properties: {role: outlined-card, col_widths: '{"EFEWVM":20,"TORDCN":55,"MTKUXH":30,"PVBPXK":30,"FDFNDQ":30,"CFMXEL":30,"CQQRLQ":50,"QLTUTN":10,"JYYQFO":10,"BGOQPS":50,"WQNEZH":25,"VXTIHH":35}'}
   type: ColumnPanel
-  layout_properties: {grid_position: 'ALYXAL,AVYGAJ'}
+  layout_properties: {grid_position: 'JMEYPI,NQOVRE'}
   components:
   - name: image_1
     properties: {height: 137.49996948242188, display_mode: original_size}
@@ -22,26 +22,6 @@ components:
     layout_properties: {grid_position: 'OGKHLI,EFEWVM XPFPSH,BGOQPS'}
     data_bindings:
     - {property: text, code: 'self.item[''borrower_full_name'']', writeback: false}
-  - name: label_12
-    properties: {text: 'Due Date :', bold: true, role: input-prompt, font_size: 14}
-    type: Label
-    layout_properties: {grid_position: 'OGKHLI,TORDCN OLCVBR,CUIZYN'}
-  - name: label_13
-    properties: {role: null, font_size: 14, foreground: 'theme:Error'}
-    type: Label
-    layout_properties: {grid_position: 'OGKHLI,TORDCN OLCVBR,HLAKFY'}
-    data_bindings:
-    - {property: text, code: 'self.item[''Scheduled_date'']', writeback: false}
-  - name: label_10
-    properties: {role: input-prompt, text: 'Due By :', bold: true, font_size: 14}
-    type: Label
-    layout_properties: {grid_position: 'OGKHLI,TORDCN ZWNDNK,VXVCIT'}
-  - name: label_11
-    properties: {role: null, font_size: 14, foreground: 'theme:Error'}
-    type: Label
-    layout_properties: {grid_position: 'OGKHLI,TORDCN ZWNDNK,IGJFTT'}
-    data_bindings:
-    - {property: text, code: 'self.item[''days_left'']', writeback: false}
   - name: label_4
     properties: {role: input-prompt, text: 'Product Name :', bold: true, font_size: 14}
     type: Label
