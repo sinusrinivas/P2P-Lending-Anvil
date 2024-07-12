@@ -10,6 +10,7 @@ from anvil.tables import app_tables
 from anvil import open_form, server
 from ...borrower.dashboard import main_form_module
 from datetime import datetime
+from operator import itemgetter
 
 
 class wallet(walletTemplate):
@@ -26,6 +27,15 @@ class wallet(walletTemplate):
 
     self.repeating_panel_1.items = app_tables.fin_wallet_transactions.search(
     customer_id=self.user_id)
+ 
+    # transactions = app_tables.fin_wallet_transactions.search(customer_id=self.user_id)
+
+    # # Sort transactions by a specific field, e.g., 'transaction_date', in descending order
+    # sorted_transactions = sorted(transactions, key=itemgetter('transaction_date'), reverse=True)
+
+    # # Limit to top 5 transactions
+    # top_5_transactions = sorted_transactions[:5]
+    # self.repeating_panel_1.items = top_5_transactions
     
     wallet_row =app_tables.fin_wallet.get(user_email=email)
     if wallet_row:

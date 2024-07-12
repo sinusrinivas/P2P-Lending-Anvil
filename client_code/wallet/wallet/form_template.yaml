@@ -1,6 +1,6 @@
 container:
   type: ColumnPanel
-  properties: {role: outlined-card, col_widths: '{"KXQLST":20,"FFLGKA":40}', spacing_above: small, background: 'theme:On Tertiary', wrap_on: mobile, col_spacing: medium, foreground: '', spacing_below: small, visible: true, border: '', tooltip: ''}
+  properties: {role: outlined-card, col_widths: '{"KXQLST":25,"FFLGKA":35}', spacing_above: small, background: 'theme:On Tertiary', wrap_on: mobile, col_spacing: medium, foreground: '', spacing_below: small, visible: true, border: '', tooltip: ''}
 components:
 - name: flow_panel_1
   properties: {align: left}
