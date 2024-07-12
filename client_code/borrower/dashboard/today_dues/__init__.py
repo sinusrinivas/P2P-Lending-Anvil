@@ -229,7 +229,13 @@ class today_dues(today_duesTemplate):
                       'remaining_tenure':remaining_tenure
                       
                   })
-            self.repeating_panel_1.items = loan_details
+            panel1_data = loan_details[::2]  # Every second item starting from index 0
+            panel2_data = loan_details[1::2]  # Every second item starting from index 1
+            
+            # Bind data to the repeating panels
+            self.repeating_panel_1.items = panel1_data
+            self.repeating_panel_3.items = panel2_data
+          
             # for loan_detail_1 in loan_details:
             #   print("Processing loan:", loan_detail_1)
             #   if loan_detail_1['days_left'] > 6 and loan_detail_1['days_left'] <= 16:
