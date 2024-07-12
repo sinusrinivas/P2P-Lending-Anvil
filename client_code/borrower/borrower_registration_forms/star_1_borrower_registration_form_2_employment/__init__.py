@@ -9,7 +9,13 @@ import re
 from datetime import date, datetime
 
 class star_1_borrower_registration_form_2_employment(star_1_borrower_registration_form_2_employmentTemplate):
+    student_college_name = False
+    student_id = False
+    student_address = False
+    student_proof = False
+    
     def __init__(self, user_id, **properties):
+        
         # super().__init__(**properties)        
         self.user_id = user_id
         
@@ -93,6 +99,8 @@ class star_1_borrower_registration_form_2_employment(star_1_borrower_registratio
             self.text_box_1_copy_3.add_event_handler('change', self.validate_annual_salary)
             self.file_loader_1_copy_2.add_event_handler('change', self.employee_ID_file_loader_change)
             self.file_loader_2.add_event_handler('change', self.six_month_bank_statement_file_loader_change)
+            self.drop_down_2_copy.add_event_handler('change', self.validate_occupation_type)
+            self.drop_down_3.add_event_handler('change', self.validate_organization_type)
           
             self.text_box_1.add_event_handler('change', self.validate_business_add)
             self.text_box_2.add_event_handler('change', self.validate_business_name)
@@ -104,8 +112,8 @@ class star_1_borrower_registration_form_2_employment(star_1_borrower_registratio
             self.text_box_7.add_event_handler('change', self.validate_registered_off_add)
             self.drop_down_4.add_event_handler('change', self.validate_no_of_employes)
             self.drop_down_12.add_event_handler('change', self.validate_business_type)
-            # self.file_loader_1.add_event_handler('change', self.file_loader_1())
-            # self.file_loader_1_copy.add_event_handler('change', self.file_loader_1_copy)
+            self.file_loader_1.add_event_handler('change', self.validate_file_upload)
+            self.file_loader_1_copy.add_event_handler('change', self.validate_file_upload)
 
             self.text_box_1_copy_4.add_event_handler('change', self.acres_of_land)
             self.text_box_3_copy_2.add_event_handler('change',self.yearly_income)
@@ -113,6 +121,8 @@ class star_1_borrower_registration_form_2_employment(star_1_borrower_registratio
 
             self.borrower_college_address_text.add_event_handler('change',self.validate_borrower_college_address)
             self.borrower_college_id_text.add_event_handler('change', self.validate_borrower_college_id)
+            self.borrower_college_name_text.add_event_handler('change', self.validate_borrower_college_name)
+            self.borrower_college_proof_img.add_event_handler('change', self.borrower_college_proof_img_change)
 
             
         else:
@@ -130,23 +140,23 @@ class star_1_borrower_registration_form_2_employment(star_1_borrower_registratio
         # Set up event handler for drop_down_2 change
         self.drop_down_2.set_event_handler('change', self.drop_down_2_change_handler)
 
-    # def validate_file_upload(self, **event_args):
-    #     file_loader = event_args['sender']
-    #     file = file_loader.file
-    #     max_size = 2 * 1024 * 1024  # 2MB in bytes
-    #     allowed_types = ['image/jpeg', 'image/png', 'image/jpg', 'application/pdf']
+    def validate_file_upload(self, **event_args):
+        file_loader = event_args['sender']
+        file = file_loader.file
+        max_size = 2 * 1024 * 1024  # 2MB in bytes
+        allowed_types = ['image/jpeg', 'image/png', 'image/jpg', 'application/pdf']
     
-    #     if file:
-    #         file_size = len(file.get_bytes())
-    #         if file_size > max_size:
-    #             alert('File size should be less than 2MB')
-    #             file_loader.clear()
-    #             return
+        if file:
+            file_size = len(file.get_bytes())
+            if file_size > max_size:
+                alert('File size should be less than 2MB')
+                file_loader.clear()
+                return
     
-    #         if file.content_type not in allowed_types:
-    #             alert('Invalid file type. Only JPEG, PNG, jpg and PDF are allowed')
-    #             file_loader.clear()
-    #             return
+            if file.content_type not in allowed_types:
+                alert('Invalid file type. Only JPEG, PNG, jpg and PDF are allowed')
+                file_loader.clear()
+                return
     
     def update_visibility(self, user_type):
         # Reset all grid panel visibilities
@@ -158,6 +168,7 @@ class star_1_borrower_registration_form_2_employment(star_1_borrower_registratio
         
         # Set visibility based on user_type
         if user_type == 'Student':
+            
             self.column_panel_1.visible = True
         elif user_type == 'Employee':
             self.column_panel_22.visible = True
@@ -186,78 +197,107 @@ class star_1_borrower_registration_form_2_employment(star_1_borrower_registratio
 
     def button_1_click(self, **event_args):
         """This method is called when the button is clicked"""
-        open_form('borrower.borrower_registration_forms.borrower_registration_form_1_education')
+        open_form('borrower.borrower_registration_forms.borrower_registration_form_1_education',self.user_id)
 
     def button_1_next_click(self, **event_args):
-        # self.validate_cin()
-        # self.validate_din()
-        # self.validate_registered_off_add()
-        # self.validate_six_month_turnover()
-        # self.validate_industry_type()
-        # self.validate_business_name()
-        # self.validate_year_estd()
-        # self.validate_business_type()
-        # self.validate_no_of_employes()
-        # self.file_loader_1()
-        # self.file_loader_1_copy()
-        # self.validate_business_add()
-        # self.validate_company_name()
-        """This method is called when the button is clicked"""
-        
-        if self.drop_down_1.selected_value == 'Student':
-          self.validate_borrower_college_address()
-          self.validate_borrower_college_id()
-          open_form('borrower.borrower_registration_forms.star_1_borrower_registration_form_3_marital',self.user_id)
-        elif self.drop_down_1.selected_value == 'Employee':
-          self.validate_company_name()
-          self.validate_company_add()
-          self.validate_company_ph_no()
-          self.validate_company_landmark()
-          self.validate_employee_designation()
-          self.validate_annual_salary()
-          # self.employee_ID_file_loader_change()
-          if not self.file_loader_1_copy_2:
-            self.file_loader_1_copy_2.background = 'red'
-            self.file_loader_1_copy_2.focus()
-            Notification('Please fill all details').show()
-            return
-          else:
-            self.file_loader_1_copy_2.background = ''
 
-          if not self.file_loader_2:
-            self.file_loader_2.background = 'red'
-            self.file_loader_2.focus()
-            Notification('Please fill all details').show()
-            return
-          else:
-            self.file_loader_2.background = ''
+        """This method is called when the button is clicked"""
+    
+        # Centralized validation check function
+        def validate_all(validations):
+            for validation in validations:
+                if not validation():
+                    return False
+            return True
         
-          # self.six_month_bank_statement_file_loader_change()
-          open_form('borrower.borrower_registration_forms.star_1_borrower_registration_form_3_marital',self.user_id)
+        # Validations for different selections
+        if self.drop_down_1.selected_value == 'Student':
+          global student_college_name 
+          global student_id
+          global student_address
+          global student_proof
+          
+          college_name = self.borrower_college_name_text.text
+          college_id = self.borrower_college_id_text.text
+          college_address = self.borrower_college_address_text.text
+          college_proof = self.borrower_college_proof_img.file
+          user_id = self.user_id
+          
+          if not college_proof:
+            self.borrower_college_proof_img.background = 'red'
+            self.borrower_college_proof_img.focus()
+            alert('please fill all the details.')
+            # student_proof = False
+          else:
+            self.borrower_college_proof_img.background = 'outlined'
+            # student_proof = True
+            if student_college_name and student_id and student_address:
+              anvil.server.call('add_borrower_student',college_name,college_id,college_proof,college_address,user_id)
+              open_form('borrower.borrower_registration_forms.star_1_borrower_registration_form_3_marital', self.user_id)
+            else:
+              alert('Please fill all the details')
+        
+        elif self.drop_down_1.selected_value == 'Employee':
+            validations = [
+                self.validate_company_name,
+                self.validate_company_add,
+                self.validate_company_ph_no,
+                self.validate_company_landmark,
+                self.validate_employee_designation,
+                self.validate_annual_salary
+            ]
+            
+            if not self.file_loader_1_copy_2:
+                self.file_loader_1_copy_2.background = 'red'
+                self.file_loader_1_copy_2.focus()
+                Notification('Please fill all details').show()
+                return
+            else:
+                self.file_loader_1_copy_2.background = ''
+            
+            if not self.file_loader_2:
+                self.file_loader_2.background = 'red'
+                self.file_loader_2.focus()
+                Notification('Please fill all details').show()
+                return
+            else:
+                self.file_loader_2.background = ''
+            
+            if validate_all(validations):
+                open_form('borrower.borrower_registration_forms.star_1_borrower_registration_form_3_marital', self.user_id)
+        
         elif self.drop_down_1.selected_value == 'Self Employement':
-          if self.drop_down_2.selected_value == 'Farmer':
-            self.acres_of_land()
-            self.yearly_income()
-            self.validate_crop_name()
-            open_form('borrower.borrower_registration_forms.star_1_borrower_registration_form_3_marital',self.user_id)
-          elif self.drop_down_2.selected_value == 'Business':
-            self.validate_business_add()
-            self.validate_business_name()
-            self.validate_year_estd()
-            self.validate_industry_type()
-            self.validate_six_month_turnover()
-            self.validate_din()
-            self.validate_cin()
-            self.validate_registered_off_add()
-            self.validate_no_of_employes()
-            self.validate_business_type()
-            self.validate_file_upload()
-            self.file_loader_1()
-            self.file_loader_1_copy()
-            open_form('borrower.borrower_registration_forms.star_1_borrower_registration_form_3_marital',self.user_id)
+            if self.drop_down_2.selected_value == 'Farmer':
+                validations = [
+                    self.acres_of_land,
+                    self.yearly_income,
+                    self.validate_crop_name
+                ]
+                
+                if validate_all(validations):
+                    open_form('borrower.borrower_registration_forms.star_1_borrower_registration_form_3_marital', self.user_id)
+            
+            elif self.drop_down_2.selected_value == 'Business':
+                validations = [
+                    self.validate_business_add,
+                    self.validate_business_name,
+                    self.validate_year_estd,
+                    self.validate_industry_type,
+                    self.validate_six_month_turnover,
+                    self.validate_din,
+                    self.validate_cin,
+                    self.validate_registered_off_add,
+                    self.validate_no_of_employes,
+                    self.validate_business_type,
+                    self.validate_file_upload,
+                    self.file_loader_1,
+                    self.file_loader_1_copy
+                ]
+                
+                if validate_all(validations):
+                    open_form('borrower.borrower_registration_forms.star_1_borrower_registration_form_3_marital', self.user_id)
         else:
             pass
-        
 
   
     # def borrower_college_proof_img_change(self, file, **event_args):
@@ -437,7 +477,29 @@ class star_1_borrower_registration_form_2_employment(star_1_borrower_registratio
               business_type_is_valid = False
               alert('please enter a valid employes count')
 
+    def validate_occupation_type(self, **event_args):
+          No_of_employes = self.drop_down_2_copy.selected_value
+          # global business_type_is_valid
+          if No_of_employes is not None:
+              self.drop_down_2_copy.role = 'outlined'
+              # business_type_is_valid = True
+          else:
+              self.drop_down_2_copy.role = 'outlined-error'
+              # business_type_is_valid = False
+              alert('please enter a valid occupation type')
 
+    def validate_organization_type(self, **event_args):
+          No_of_employes = self.drop_down_3.selected_value
+          # global business_type_is_valid
+          if No_of_employes is not None:
+              self.drop_down_3.role = 'outlined'
+              # business_type_is_valid = True
+          else:
+              self.drop_down_3.role = 'outlined-error'
+              # business_type_is_valid = False
+              alert('please enter a valid organization type')
+
+  
 
     def file_loader_1(self, file, **event_args):
           """This method is called when a new file is loaded into this FileLoader"""
@@ -594,18 +656,18 @@ class star_1_borrower_registration_form_2_employment(star_1_borrower_registratio
               designation_is_valid = False
 
     def validate_annual_salary(self, **event_args):
-          Annual_salary = self.text_box_1_copy_3.text
-          global annual_salary_is_valid
-          if re.match(r'^[A-Za-z\d][A-Za-z\d\s]*$', Annual_salary):
-              self.text_box_1_copy_3.role = 'outlined'
-              annual_salary_is_valid = True
-          elif ' ' in Annual_salary:
-              alert('Spaces are not allowed')
-          else:
-              self.text_box_1_copy_3.role = 'outlined-error'
-              alert('please enter a valid annual salary')    
-              annual_salary_is_valid = False
-    
+        annual_salary = self.text_box_1_copy_3.text.strip()
+        global annual_salary_is_valid
+        
+        # Regex to validate that the annual salary contains only numeric characters
+        if re.match(r'^\d+$', annual_salary):
+            self.text_box_1_copy_3.role = 'outlined'
+            annual_salary_is_valid = True
+        else:
+            self.text_box_1_copy_3.role = 'outlined-error'
+            alert('Please enter a valid annual salary with only numeric characters.')
+            annual_salary_is_valid = False
+
     def validate_file_upload(self, **event_args):
         file_loader = event_args['sender']
         file = file_loader.file
@@ -626,17 +688,17 @@ class star_1_borrower_registration_form_2_employment(star_1_borrower_registratio
 
 
     def yearly_income(self, **event_args):
-          Annual_salary = self.text_box_3_copy_2.text
-          global annual_salary_is_valid
-          if re.match(r'^[A-Za-z\d][A-Za-z\d\s]*$', Annual_salary):
-              self.text_box_3_copy_2.role = 'outlined'
-              annual_salary_is_valid = True
-          elif ' ' in Annual_salary:
-              alert('Spaces are not allowed')
-          else:
-              self.text_box_2_copy_2.role = 'outlined-error'
-              alert('please enter a valid annual income')    
-              annual_salary_is_valid = False
+        annual_salary = self.text_box_3_copy_2.text.strip()
+        global annual_salary_is_valid
+        
+        # Regex to validate that the annual salary contains only numeric characters
+        if re.match(r'^\d+$', annual_salary):
+            self.text_box_3_copy_2.role = 'outlined'
+            annual_salary_is_valid = True
+        else:
+            self.text_box_3_copy_2.role = 'outlined-error'
+            alert('Please enter a valid annual income with only numeric characters.')
+            annual_salary_is_valid = False
 
 
     def validate_crop_name(self, **event_args):
@@ -654,25 +716,60 @@ class star_1_borrower_registration_form_2_employment(star_1_borrower_registratio
       
 
     def validate_borrower_college_address(self, **event_args):
-      address = self.borrower_college_address_text.text.strip()
+        address = self.borrower_college_address_text.text.strip()
+        global student_address
     
-      # Regex to validate that the address contains only alphanumeric characters and spaces
-      if re.match(r'^[A-Za-z0-9\s]+$', address):
-          self.borrower_college_address_text.role = 'outlined'  # Valid address
-      else:
-          self.borrower_college_address_text.role = 'outlined-error'  # Invalid address
-          alert('Invalid address format. Please enter a valid address with only letters, numbers, and spaces.')
+        # Regex to validate that the address contains only alphanumeric characters, spaces, and specific punctuation marks
+        if re.match(r'^[A-Za-z0-9\s,().?]+$', address):
+            self.borrower_college_address_text.role = 'outlined'  # Valid address
+            student_address = True
+        else:
+            self.borrower_college_address_text.role = 'outlined-error'  # Invalid address
+            student_address = False
+            alert('Invalid address format. Please enter a valid address with only letters, numbers, spaces, and these punctuation marks: , ( ) ? .')
 
 
 
     def validate_borrower_college_id(self, **event_args):
         address = self.borrower_college_id_text.text.strip()
+        global student_id
     
         # Regex to validate that the address contains only alphanumeric characters and spaces
         if re.match(r'^[A-Za-z0-9\s]+$', address):
-            self.borrower_college_id_text.role = 'outlined'  # Valid address
+            self.borrower_college_id_text.role = 'outlined'
+            student_id = True# Valid address
         else:
-            self.borrower_college_id_text.role = 'outlined-error'  # Invalid address
+            self.borrower_college_id_text.role = 'outlined-error'
+            student_id = False# Invalid address
             alert('Invalid ID format. Please enter a valid ID with only letters, numbers, and spaces.')
 
+
+    def validate_borrower_college_name(self, **event_args):
+        college_name = self.borrower_college_name_text.text.strip()
+        global student_college_name 
+        
+        if re.match(r'^[A-Za-z0-9\s]+$', college_name):
+            self.borrower_college_name_text.role = 'outlined'  # Valid college name
+            student_college_name = True
+        else:
+            self.borrower_college_name_text.role = 'outlined-error'
+            student_college_name = False
+            alert('Invalid college name format. Please enter a valid college name with only letters, numbers, and spaces.')
+
+    def borrower_college_proof_img_change(self, file, **event_args):
+        """This method is called when a new file is loaded into this FileLoader"""
+        if file:
+            self.college_label.text = file.name if file else ''
+            content_type = file.content_type
+            
+            if content_type in ['image/jpeg', 'image/png', 'image/jpg']:
+                # Display the image directly
+                self.college_img.source = self.borrower_college_proof_img.file
+            elif content_type == 'application/pdf':
+                # Display a default PDF image temporarily
+                self.college_img.source = '_/theme/bank_users/default%20pdf.png'
+            else:
+                alert('Invalid file type. Only JPEG, PNG, and PDF are allowed')
+                self.college_img.background = 'red'
+                self.college_img.clear()
 
