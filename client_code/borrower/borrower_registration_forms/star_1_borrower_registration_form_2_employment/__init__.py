@@ -271,33 +271,100 @@ class star_1_borrower_registration_form_2_employment(star_1_borrower_registratio
               alert('Please fill all the details')
         
         elif self.drop_down_1.selected_value == 'Employee':
-            validations = [
-                self.validate_company_name,
-                self.validate_company_add,
-                self.validate_company_ph_no,
-                self.validate_company_landmark,
-                self.validate_employee_designation,
-                self.validate_annual_salary
-            ]
+          user_id = self.user_id
+          self.validate_company_name()
+          self.validate_company_add()
+          self.validate_annual_salary()
+          self.validate_company_landmark()
+          self.validate_employee_designation()
+          self.validate_company_ph_no()
+          company_name = self.text_box_1_copy.text    
+          org_type = self.drop_down_3.selected_value
+          emp_type = self.drop_down_1_copy.selected_value
+          occupation_type = self.drop_down_2_copy.selected_value
+          comp_address = self.text_box_1_copy_2.text
+          landmark = self.text_box_3_copy.text
+          business_phone_number = self.text_box_2_copy.text
+          annual_salary = self.text_box_1_copy_3.text
+          designation = self.text_box_2_copy_2.text
+          emp_id_proof = self.file_loader_1_copy_2.file
+          last_six_month = self.file_loader_2.file
+          salary_type = self.drop_down_1_copy_2.selected_value
+          global organization_type_is_valid
+          global employment_type_is_valid
+          global occupation_type_is_valid
+          global salary_type_is_valid
+  
+          if not org_type:
+            organization_type_is_valid = False
+            self.drop_down_3.role = 'outlined-error'
+            self.drop_down_3.focus()
+          else:
+            organization_type_is_valid = True
+            self.drop_down_3.role = 'outlined'
             
-            if not self.file_loader_1_copy_2:
-                self.file_loader_1_copy_2.background = 'red'
-                self.file_loader_1_copy_2.focus()
-                Notification('Please fill all details').show()
-                return
-            else:
-                self.file_loader_1_copy_2.background = ''
+          if not emp_type:
+            employment_type_is_valid = False
+            self.drop_down_1_copy.role = 'outlined-error'
+            self.drop_down_1_copy.focus()
+            Notification('please fill all details')
+          else:
+            employment_type_is_valid = True
+            self.drop_down_1_copy.role = 'outlined'
             
-            if not self.file_loader_2:
-                self.file_loader_2.background = 'red'
-                self.file_loader_2.focus()
-                Notification('Please fill all details').show()
-                return
-            else:
-                self.file_loader_2.background = ''
+  
+          if not occupation_type:
+            Occupation_type_is_valid = False
+            self.drop_down_2_copy.role = 'outlined-error'
+            self.drop_down_2_copy.focus()
+            Notification('please fill all details')
+          else:
+            self.drop_down_2_copy.role = 'outlined'
+            Occupation_type_is_valid = True
+  
+          if not salary_type:
+            salary_type_is_valid = False
+            self.drop_down_1_copy_2.role = 'outlined-error'
+            self.drop_down_1_copy_2.focus()
+            Notification('please fill all details')
+          else:
+            self.drop_down_1_copy_2.role = 'outlined'
+            salary_type_is_valid = True
+  
+          if not emp_id_proof:
+            self.file_loader_1_copy_2.background = 'red'
+            self.file_loader_1_copy_2.focus()
+            Notification('please fill all the details')
+            return
+          else:
+            self.file_loader_1_copy_2.role = 'outlined'
+  
+          if not last_six_month:
+            self.file_loader_2.background = 'red'
+            self.file_loader_2.focus()
+            Notification('please fill all the details')
+            return
+          else:
+            self.file_loader_2.role = 'outlined'
             
-            if validate_all(validations):
-                open_form('borrower.borrower_registration_forms.star_1_borrower_registration_form_3_marital', self.user_id)
+        
+          global company_name_is_valid
+          global company_address_is_valid
+          global company_landmark_is_valid
+          global company_ph_no_is_valid
+          global annual_salary_is_valid
+          global designation_is_valid
+      
+          if company_name_is_valid and company_name_is_valid and company_landmark_is_valid and company_ph_no_is_valid and annual_salary_is_valid and designation_is_valid and organization_type_is_valid and employment_type_is_valid and Occupation_type_is_valid and salary_type_is_valid:
+            anvil.server.call('add_lendor_individual_form_1', company_name,org_type,emp_type,occupation_type,user_id)
+            anvil.server.call('add_lendor_individual_form_2',comp_address,landmark,business_phone_number,user_id)
+            anvil.server.call('add_lendor_individual_form_3', annual_salary, designation, emp_id_proof, last_six_month, user_id,salary_type )
+            open_form('borrower.borrower_registration_forms.star_1_borrower_registration_form_3_marital', self.user_id)
+          
+          else:
+            alert('please fill all the details')
+              
+                  
         
         elif self.drop_down_1.selected_value == 'Self Employement':
             if self.drop_down_2.selected_value == 'Farmer':
@@ -326,11 +393,11 @@ class star_1_borrower_registration_form_2_employment(star_1_borrower_registratio
               business_type = self.drop_down_12.selected_value
               empolyees_working = self.drop_down_4.selected_value
               din_is_valid = self.text_box_5.text
-              cin = self.text_box_6.text
-              reg_off_add = self.text_box_7.text
+              cin_is_valid = self.text_box_6.text
+              registered_off_add_is_valid = self.text_box_7.text
               proof_verification = self.file_loader_1_copy.file
               year = self.date_picker_1.date
-              last_six_statements = self.file_loader_1.file
+              six_month_turn_over_is_valid = self.file_loader_1.file
               industry_type_is_valid = self.text_box_3.text
               turn_over = self.text_box_4.text
               months = None
@@ -350,7 +417,7 @@ class star_1_borrower_registration_form_2_employment(star_1_borrower_registratio
                 business_type_is_valid = True
 
 
-              if not last_six_statements:
+              if not six_month_turn_over_is_valid:
                     self.file_loader_1.role = 'red'
                     self.file_loader_1.focus()
                     Notification('Please fill all details')
@@ -366,10 +433,10 @@ class star_1_borrower_registration_form_2_employment(star_1_borrower_registratio
               else:
                   self.file_loader_1_copy.role = 'outlined'
 
-              if business_name_is_valid and last_six_statements and empolyees_working and proof_verification and business_add_is_valid and industry_type_is_valid and six_month_turn_over_is_valid and din_is_valid and cin_is_valid and registered_off_add_is_valid and business_type_is_valid and employees_working_is_valid:
+              if business_name_is_valid and six_month_turn_over_is_valid and empolyees_working and proof_verification and business_add_is_valid and industry_type_is_valid and six_month_turn_over_is_valid and din_is_valid and cin_is_valid and registered_off_add_is_valid and business_type_is_valid and employees_working_is_valid:
                 anvil.server.call('add_lendor_institutional_form_1',business_name_is_valid,business_add_is_valid,business_type,empolyees_working,user_id)
-                anvil.server.call('add_lendor_institutional_form_3', din_is_valid, cin, reg_off_add, proof_verification, user_id)
-                anvil.server.call('add_lendor_institutional_form_2', year, months, industry_type_is_valid, turn_over, last_six_statements, user_id)
+                anvil.server.call('add_lendor_institutional_form_3', din_is_valid, cin_is_valid, registered_off_add_is_valid, proof_verification, user_id)
+                anvil.server.call('add_lendor_institutional_form_2', year, months, industry_type_is_valid, turn_over, six_month_turn_over_is_valid, user_id)
                 open_form('borrower.borrower_registration_forms.star_1_borrower_registration_form_3_marital', self.user_id)
               else :
                   alert('please fill all the details')
