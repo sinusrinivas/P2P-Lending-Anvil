@@ -76,7 +76,7 @@ class view_loan_foreclosure_Requests(view_loan_foreclosure_RequestsTemplate):
                 user_profile = app_tables.fin_user_profile.get(customer_id=loan_details['borrower_customer_id'])
                 if user_profile is not None:
                     profiles_with_foreclosure.append({
-                        'mobile': user_profile['mobile'],
+                        'user_photo': user_profile['user_photo'],
                         'status': foreclosure['status'],
                         'loan_id': foreclosure['loan_id'],
                         'interest_rate': foreclosure['interest_rate'],
