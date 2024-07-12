@@ -13,6 +13,7 @@ class ItemTemplate124(ItemTemplate124Template):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
+    self.image_1.role = 'circular-image'
 
     # Any code you write here will run before the form opens.
 
