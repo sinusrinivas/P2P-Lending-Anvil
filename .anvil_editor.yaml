@@ -437,6 +437,7 @@ unique_ids:
     admin.dashboard.manage_cms.add_lender_dropdown_details.ItemTemplate17: '1706531151384463353076695.9948'
     admin.dashboard.loan_management.editing_detabase_details.RowTemplate72: '1719828201368875279834287.5485'
     lendor.dashboard.view_or_send_notifications: '1699967294797596075787674.3921'
+    lendor.dashboard.view_loan_foreclosure_Requests.ItemTemplate126: '1720783488075809327691203.303'
     lendor.lendor_registration_forms.lender_registration_form_2.lender_registration_Institutional_form_2: '1699430137541808903451295.2183'
     admin.dashboard.loan_management.view_loans.rejected_loans.view_profile_2: '1700812221243295088415002.8101'
     admin.dashboard.loan_servicing.tracking_late_payments: '1718598639121116339000483.79852'
@@ -479,6 +480,7 @@ unique_ids:
     admin.dashboard.accounting.revenue_share.lender_revenue_share.RowTemplate32: HLTYFTXF5M24LJXDNV4YPMQCUADGDMPP
     borrower.dashboard.borrower_portfolio_first_page: '1717671611958813432017046.4667'
     admin.dashboard.customer_management.handles_customer_registration.borrowers.RowTemplate3: '1700662180254721391598758.9972'
+    lendor.dashboard.view_loan_foreclosure_Requests.ItemTemplate125: '1720783476480394211048012.5456'
     admin.dashboard.loan_management.view_loans.not_payable_amount.view_profile_9: '1707203080661303272266486.02234'
     admin.dashboard.reporting_and_analytical_modules.risk_pool.ItemTemplate105: '1717991579652406460291230.8766'
     bank_users.user_form: '1700630694974484249170019.45953'
