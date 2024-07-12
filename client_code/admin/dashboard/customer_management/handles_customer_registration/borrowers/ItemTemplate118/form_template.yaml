@@ -37,7 +37,7 @@ components:
     type: Label
     layout_properties: {grid_position: 'OGKHLI,TORDCN ZWNDNK,VXVCIT'}
   - name: Email_label
-    properties: {role: null, font_size: 14, foreground: 'theme:Error'}
+    properties: {role: null, font_size: 14, foreground: ''}
     type: Label
     layout_properties: {grid_position: 'OGKHLI,TORDCN ZWNDNK,IGJFTT'}
     data_bindings:
