@@ -51,9 +51,9 @@ class borrowers(borrowersTemplate):
                     'mobile': user_profile['mobile'],
                     'registration_approve': user_profile['registration_approve'],
                     'adhar': user_profile['aadhaar_no'],
-                    'credit_limit': credit_limit,
-                    'ascend' : ascend,
-                    'loan_details_count': loan_details_count,
+                    'credit_limit': credit_limit['credit_limit'],
+                    'ascend_score' : ascend['ascend_score'],
+                    'loan_details_count': loan_details_count['loan_details_count'],
                     'user_photo':user_profile['user_photo']
                 })
 
