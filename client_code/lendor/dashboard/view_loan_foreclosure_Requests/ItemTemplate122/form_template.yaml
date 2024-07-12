@@ -21,7 +21,7 @@ components:
     type: Label
     layout_properties: {grid_position: 'OGKHLI,EFEWVM XPFPSH,BGOQPS'}
     data_bindings:
-    - {property: text, code: 'self.item[''lender_full_name'']', writeback: false}
+    - {property: text, code: 'self.item[''borrower_full_name'']', writeback: false}
   - name: label_4
     properties: {role: input-prompt, text: 'Product Name :', bold: true, font_size: 14}
     type: Label
