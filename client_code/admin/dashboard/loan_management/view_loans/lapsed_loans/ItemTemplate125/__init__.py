@@ -1,4 +1,4 @@
-from ._anvil_designer import ItemTemplate121Template
+from ._anvil_designer import ItemTemplate125Template
 from anvil import *
 import anvil.server
 import anvil.google.auth, anvil.google.drive
@@ -9,7 +9,7 @@ import anvil.tables.query as q
 from anvil.tables import app_tables
 
 
-class ItemTemplate121(ItemTemplate121Template):
+class ItemTemplate125(ItemTemplate125Template):
     def __init__(self, **properties):
         # Set Form properties and Data Bindings.
         self.init_components(**properties)
@@ -18,6 +18,6 @@ class ItemTemplate121(ItemTemplate121Template):
 
     def outlined_button_1_click(self, **event_args):
         """This method is called when the button is clicked"""
-        loan_id_to_display = self.loan_id.text
-        open_form('admin.dashboard.loan_management.view_loans.approved_loans.view_profile', loan_id_to_display)
-
+        value_to_pass = self.loan_id.text
+        open_form('admin.dashboard.loan_management.view_loans.lapsed_loans.view_profile_8', value_to_pass)
+        

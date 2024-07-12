@@ -15,3 +15,9 @@ class ItemTemplate122(ItemTemplate122Template):
         self.init_components(**properties)
 
         # Any code you write here will run before the form opens.
+
+    def outlined_button_1_click(self, **event_args):
+        """This method is called when the button is clicked"""
+        loan_id_to_display = self.loan_id.text
+        open_form('admin.dashboard.loan_management.view_loans.approved_loans.view_profile', loan_id_to_display)
+

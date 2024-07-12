@@ -40,18 +40,6 @@ components:
     properties: {text: 'Interest Rate :'}
     type: Label
     layout_properties: {x: 20.795455932617188, y: 204.1591796875, width: 200}
-  - name: lendor_name
-    properties: {bold: true, align: right}
-    type: Label
-    layout_properties: {x: 644.9285212941468, y: 17.12502397969365, width: 178.96429443359375}
-    data_bindings:
-    - {property: text, code: 'self.item[''lender_full_name'']', writeback: false}
-  - name: lendor_mobile
-    properties: {align: right}
-    type: Label
-    layout_properties: {x: 629.6072322316468, y: 59.9821406789124, width: 200.00001525878906}
-    data_bindings:
-    - {property: text, code: 'self.item[''lender_mobile'']', writeback: false}
   - name: label_3
     properties: {text: '---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------', foreground: grey, align: center}
     type: Label
@@ -134,3 +122,21 @@ components:
     type: Button
     layout_properties: {x: 0, y: 398.86669540405273, width: 726.933349609375}
     event_bindings: {click: outlined_button_1_click}
+  - name: lendor_name
+    properties: {bold: true, align: right}
+    type: Label
+    layout_properties: {x: 403.84998893737793, y: 5.6500091552734375, width: 178.95001220703125}
+    data_bindings:
+    - {property: text, code: 'self.item[''lender_full_name'']', writeback: false}
+  - name: lendor_mobile
+    properties: {align: right}
+    type: Label
+    layout_properties: {x: 376.78333854675293, y: 46.63334655761719, width: 200.00001525878906}
+    data_bindings:
+    - {property: text, code: 'self.item[''lender_mobile'']', writeback: false}
+  - name: image_2
+    properties: {height: '70'}
+    type: Image
+    layout_properties: {x: 627.1999950408936, y: 6.850006103515625, width: 84.70000457763672}
+    data_bindings:
+    - {property: source, code: 'self.item[''lender_photo'']', writeback: false}
