@@ -25,17 +25,17 @@ class wallet(walletTemplate):
     self.email=main_form_module.email
     email = self.email  
 
-    self.repeating_panel_1.items = app_tables.fin_wallet_transactions.search(
-    customer_id=self.user_id)
+    # self.repeating_panel_1.items = app_tables.fin_wallet_transactions.search(
+    # customer_id=self.user_id)
  
-    # transactions = app_tables.fin_wallet_transactions.search(customer_id=self.user_id)
+    transactions = app_tables.fin_wallet_transactions.search(customer_id=self.user_id)
 
-    # # Sort transactions by a specific field, e.g., 'transaction_date', in descending order
-    # sorted_transactions = sorted(transactions, key=itemgetter('transaction_date'), reverse=True)
+    # Sort transactions by a specific field, e.g., 'transaction_date', in descending order
+    sorted_transactions = sorted(transactions, key=itemgetter('transaction_time_stamp'), reverse=True)
 
-    # # Limit to top 5 transactions
-    # top_5_transactions = sorted_transactions[:5]
-    # self.repeating_panel_1.items = top_5_transactions
+    # Limit to top 5 transactions
+    top_5_transactions = sorted_transactions[:5]
+    self.repeating_panel_1.items = top_5_transactions
     
     wallet_row =app_tables.fin_wallet.get(user_email=email)
     if wallet_row:
