@@ -439,32 +439,39 @@ class borrower_portfolio(borrower_portfolioTemplate):
     emi_details = app_tables.fin_emi_table.search(loan_id=loan_id)
     days_left_values = [emi['days_left'] for emi in emi_details]
 
+    # Fetch settings from the fin_loan_settings table
     lapsed_settings = app_tables.fin_loan_settings.get(loans='lapsed fee')
     default_settings = app_tables.fin_loan_settings.get(loans='default fee')
     npa_settings = app_tables.fin_loan_settings.get(loans='NPA fee')
 
-    if all(days_left == 0 for days_left in days_left_values):
-      return 'no_risk'
-    
-    if lapsed_settings:
-      lapsed_min_days = lapsed_settings['minimum_days']
-      lapsed_max_days = lapsed_settings['maximum_days']
-      if any(lapsed_min_days <= days_left <= lapsed_max_days for days_left in days_left_values):
-        return 'low_risk'
-    
-    if default_settings:
-      default_min_days = default_settings['minimum_days']
-      default_max_days = default_settings['maximum_days']
-      if any(default_min_days <= days_left <= default_max_days for days_left in days_left_values):
-        return 'medium_risk'
-    
-    if npa_settings:
-      npa_min_days = npa_settings['minimum_days']
-      npa_max_days = npa_settings['maximum_days']
-      if any(npa_min_days <= days_left <= npa_max_days for days_left in days_left_values):
-        return 'high_risk'
-    
-    return 'medium_risk'
+    # Ensure the settings are fetched correctly
+    if not all([lapsed_settings, default_settings, npa_settings]):
+        print("Error: Missing loan settings.")
+        return 'no_risk'  # Default to 'no_risk' if settings are not available
+
+    # Extract min and max days for each risk category
+    lapsed_min_days = lapsed_settings['minimum_days']
+    lapsed_max_days = lapsed_settings['maximum_days']
+    default_min_days = default_settings['minimum_days']
+    default_max_days = default_settings['maximum_days']
+    npa_min_days = npa_settings['minimum_days']
+    npa_max_days = npa_settings['maximum_days']
+
+    # Determine the risk level based on days_left values
+    if all(days_left == 0 for days_left in days_left_values) and lapsed_min_days > 0:
+        return 'no_risk'
+
+    for days_left in days_left_values:
+        if lapsed_min_days <= days_left <= lapsed_max_days:
+            return 'low_risk'
+        elif default_min_days <= days_left <= default_max_days:
+            return 'medium_risk'
+        elif npa_min_days <= days_left <= npa_max_days:
+            return 'high_risk'
+
+    # If no days_left value falls within the risk ranges, classify as 'no_risk'
+    return 'no_risk'
+
   
   def get_loan_status_data(self, borrower_customer_id):
     # Query the database to get loan status data for the given customer_id
