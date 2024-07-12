@@ -1,82 +1,25 @@
-from ._anvil_designer import dashboardTemplate
+from ._anvil_designer import upcoming_paymentsTemplate
 from anvil import *
 import anvil.server
-import anvil.users
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
-from ...bank_users.main_form import main_form_module
 from datetime import datetime, timezone, timedelta
+from .. import main_form_module as main_form_module
 
-
-SUPERSCRIPT_DIGITS = {
-    '0': '⁰', '1': '¹', '2': '²', '3': '³', '4': '⁴',
-    '5': '⁵', '6': '⁶', '7': '⁷', '8': '⁸', '9': '⁹'
-}
-
-def to_superscript(number):
-    return ''.join(SUPERSCRIPT_DIGITS.get(digit, '') for digit in str(number))
-
-class dashboard(dashboardTemplate):
+class upcoming_payments(upcoming_paymentsTemplate):
     def __init__(self, **properties):
+        # Set Form properties and Data Bindings.
+        self.user_id = main_form_module.userId
         self.init_components(**properties)
-        self.email = main_form_module.email
-        self.user_Id = main_form_module.userId
-        self.notifications.text = "0"
-        self.populate_loan_history()
-        self.update_wallet_info()
-        self.update_user_profile()
-        self.load_notifications()
-        self.update_platform_fees()
-        self.image_1_copy_copy.role = 'circular-image'
-         # Search for loans taken by the current user
-        self.data= app_tables.fin_loan_details.search(borrower_customer_id=self.user_Id)
-        loan_count = len(self.data)
-
-        # Update the UI with the count of loans
-        # self.label_9.text = str(loan_count)
-
-        self.notification_displayed = False
-        self.set_event_handler("show", self.form_show)
-
-        today_date = datetime.now(timezone.utc).date()
-
-        data = app_tables.fin_borrower.get(customer_id=self.user_Id)
-        if data:
-            self.label_5.text = data['credit_limit']
-            self.label_7.text = data['borrower_since']
-
-
-    def form_show(self, **event_args):
-        print("Form is shown!")  # Check if this message appears in the output
-        today_date = datetime.now(timezone.utc).date()
-        print('Todays date -',today_date)
         
-        # Get the user's profile
-        user_profile = app_tables.fin_user_profile.get(customer_id=self.user_Id)
-        
-        if user_profile is not None:
-            last_notification_date = user_profile['last_notification_date']
-            print('last notification', last_notification_date)
-            
-            # Check if the last notification date is today
-            if last_notification_date is None or last_notification_date!=today_date:
-                self.show_due_loans_notification()
-                self.notification_displayed = True
-                
-                # Update the last notification date to today
-                user_profile['last_notification_date'] = today_date
-                user_profile.update()
-                print(today_date)
-
-    def show_due_loans_notification(self):
         today_date = datetime.now(timezone.utc).date()
-        self.loan_details = []
+        loan_details = []
 
         all_loans_disbursed = app_tables.fin_loan_details.search(
             loan_updated_status=q.any_of("disbursed", "extension", "foreclosure"),
             first_emi_payment_due_date=q.less_than_or_equal_to(today_date),
-            borrower_customer_id=self.user_Id
+            borrower_customer_id=self.user_id
         )
     
         for loan in all_loans_disbursed:
@@ -142,7 +85,7 @@ class dashboard(dashboardTemplate):
                     part_payment_date = latest_loan['part_payment_date']
                     remaining_tenure = latest_loan['remaining_tenure']
                   
-                    self.loan_details.append({
+                    loan_details.append({
                         'loan_id': loan_id,
                         'loan_amount': loan_amount,
                         'scheduled_payment': scheduled_payment,
@@ -251,7 +194,7 @@ class dashboard(dashboardTemplate):
                       # Default to monthly calculation if emi_payment_type is not recognized
                       next_payment = loan_disbursed_timestamp.date() + timedelta(days=30)
                   
-                  self.loan_details.append({
+                  loan_details.append({
                       'loan_id': loan_id,
                       'loan_amount': loan_amount,
                       'scheduled_payment': scheduled_payment,   # Set scheduled_payment to first_payment_due_date first_emi_payment_due_date
@@ -286,169 +229,38 @@ class dashboard(dashboardTemplate):
                       'remaining_tenure':remaining_tenure
                       
                   })
+            panel1_data = loan_details[::2]  # Every second item starting from index 0
+            panel2_data = loan_details[1::2]  # Every second item starting from index 1
+            
+            # Bind data to the repeating panels
+            self.repeating_panel_1.items = panel1_data
+            self.repeating_panel_3.items = panel2_data
+          
+            # for loan_detail_1 in loan_details:
+            #   print("Processing loan:", loan_detail_1)
+            #   if loan_detail_1['days_left'] > 6 and loan_detail_1['days_left'] <= 16:
+            #       print("Updating status to 'lapsed loan'")
+            #       loan_detail_1['loan_state_status'] = 'lapsed loan'
+            #       loan_row = app_tables.fin_loan_details.get(loan_id=loan_detail_1['loan_id'])
+            #       if loan_row is not None:
+            #           loan_row['loan_state_status'] = 'lapsed loan'
+            #           loan_row.update()
+            #   elif loan_detail_1['days_left'] > 16 and loan_detail_1['days_left'] <= 106:
+            #       print("Updating status to 'default loan'")
+            #       loan_detail_1['loan_state_status'] = 'default loan'
+            #       loan_row = app_tables.fin_loan_details.get(loan_id=loan_detail_1['loan_id'])
+            #       if loan_row is not None:
+            #           loan_row['loan_state_status'] = 'default loan'
+            #           loan_row.update()
+            #   elif loan_detail_1['days_left'] > 106:
+            #       print("Updating status to 'default loan'")
+            #       loan_detail_1['loan_state_status'] = 'NPA'
+            #       loan_row = app_tables.fin_loan_details.get(loan_id=loan_detail_1['loan_id'])
+            #       if loan_row is not None:
+            #           loan_row['loan_state_status'] = 'NPA'
+            #           loan_row.update()
 
-        if self.loan_details:
-          loan = self.loan_details[0]  # Taking the first due loan for the notification
-          message = (
-              f"Dear Borrower,\n\n"
-              f"You have a due loan that requires your attention:\n\n"
-              f"Loan ID: {loan['loan_id']}\n"
-              f"Loan Amount: {loan['loan_amount']}\n"
-              f"Due Date: {loan['Scheduled_date']}\n"
-              # f"Next Payment: {loan['next_payment']}\n"
-              f"Days Left: {loan['days_left']}\n\n"
-              f"Please click Pay Now to proceed with checkout or Cancel to go back to the dashboard."
-          )
-          while True:
-                response = alert(message, buttons=[("Pay Now", True), ("Cancel", False)])
-                print(response)
-                if response is True:
-                    user = app_tables.fin_user_profile.get(customer_id=self.user_Id)
-                    if user:
-                      user['last_notification_date'] = today_date
-                      user.update()
-                    open_form('borrower.dashboard.today_dues.check_out', selected_row=self.loan_details[0])
-                    break
-                elif response is False:
-                    user = app_tables.fin_user_profile.get(customer_id=self.user_Id)
-                    if user:
-                      user['last_notification_date'] = today_date
-                      user.update()
-                      open_form('borrower.dashboard')
-                  
-                    break
-                else:
-                    # Handle case where alert is dismissed without clicking a button
-                    user = app_tables.fin_user_profile.get(customer_id=self.user_Id)
-                    if user:
-                      user['last_notification_date'] = today_date
-                      user.update()
-                      open_form('borrower.dashboard')
-
-       
-
-    def update_platform_fees(self, **event_args):
-        result = anvil.server.call('update_fin_platform_fees')
-
-    def populate_loan_history(self):
-        try:
-            customer_loans = app_tables.fin_loan_details.search(borrower_customer_id=self.user_Id)
-            if customer_loans:
-                self.data = [{'product_name': loan['product_name'], 'loan_amount': loan['loan_amount'],
-                              'tenure': loan['tenure'], 'interest_rate': loan['interest_rate'],
-                              'total_repayment_amount': round(loan['total_repayment_amount'], 2),
-                              'loan_updated_status': loan['loan_updated_status']} for loan in customer_loans]
-                self.repeating_panel_1.items = self.data
-            else:
-                Notification("No Data Available Here!").show()
-        except anvil.tables.TableError:
-            alert("No data found")
-
-    def update_wallet_info(self):
-        wallet = app_tables.fin_wallet.get(customer_id=self.user_Id)
-        if wallet:
-            # self.label_9.text = "{:.2f}".format((wallet['wallet_amount'] or 0))
-            self.label_2_copy_copy.text = "{:.2f}".format((wallet['wallet_amount'] or 0))
-
-    def update_user_profile(self):
-        user_profile = app_tables.fin_user_profile.get(customer_id=self.user_Id)
-        if user_profile:
-            self.image_1_copy_copy.source = user_profile['user_photo']
-            self.label_2_copy.text =  user_profile['full_name']
-
-    def update_notification_count(self, count):
-        self.notifications.text = str(count)
-
-    def load_notifications(self):
-        notifications = anvil.server.call('get_notifications', self.user_Id)
-        unread_count = len([n for n in notifications if not n['read']])
-        self.update_notification_count(unread_count)
-
-    def notifications_click(self, **event_args):
-        open_form('borrower.dashboard.borrower_notifications', user_Id=self.user_Id)
-
-    def link_1_click(self, **event_args):
-        try:
-            existing_loans = app_tables.fin_loan_details.search(
-                borrower_customer_id=self.user_Id,
-                loan_updated_status=q.any_of(
-                    q.like('accepted%'),
-                    q.like('Approved%'),
-                    q.like('approved%'),
-                    q.like('under process%'),
-                    q.like('foreclosure%'),
-                    q.like('extension'),
-                    q.like('disbursed%'),
-                    q.like('Disbursed%'),
-                    q.like('Under Process%'),
-                    q.like('rejected')
-                )
-            )
-            num_existing_loans = len(existing_loans)
-            if num_existing_loans >= 5:
-                alert("You already have 5 loans. Cannot open a new loan request.")
-            else:
-                wallet_row = app_tables.fin_wallet.get(customer_id=self.user_Id)
-                if wallet_row and wallet_row['wallet_id'] is not None:
-                    open_form('borrower.dashboard.apply_loan_request')
-                else:
-                    alert("Wallet not found. Please create a wallet.")
-        except anvil.tables.TableError as e:
-            alert("Error fetching existing loans.")
-
-    def link_2_click(self, **event_args):
-        open_form('borrower.dashboard.upcoming_payments')
-
-    def link_3_click(self, **event_args):
-        open_form('borrower.dashboard.view_loans')
-
-    def link_4_click(self, **event_args):
-        open_form('borrower.dashboard.foreclosure_request')
-
-    def link_5_click(self, **event_args):
-        open_form('borrower.dashboard.application_tracker')
-
-    def link_6_click(self, **event_args):
-        open_form('borrower.dashboard.extension_loan_request')
-
-    def link_7_click(self, **event_args):
-        open_form('borrower.dashboard.view_transaction_history')
-
-    def link_8_click(self, **event_args):
-        open_form('borrower.dashboard.discount_coupons')
-
-    def link_10_click(self, **event_args):
-        open_form('lendor.dashboard.lender_portfolio_first_page')
-
-    def button_12_click(self, **event_args):
-        open_form('borrower.dashboard.borrower_view_profile')
-
-    def image_1_copy_copy_mouse_up(self, x, y, button, **event_args):
-        open_form('borrower.dashboard.borrower_view_profile')
-
-    def link_9_click(self, **event_args):
-        customer_id = self.user_Id
-        email = self.email
-        anvil.server.call('fetch_profile_data_and_insert', email, customer_id)
-        open_form("wallet.wallet")
-
-    def home_main_form_link_click(self, **event_args):
+    def home_borrower_registration_form_copy_1_click(self, **event_args):
+        """This method is called when the button is clicked"""
         open_form('borrower.dashboard')
 
-    def about_main_form_link_click(self, **event_args):
-        open_form("borrower.dashboard.dashboard_about")
-
-    def contact_main_form_link_click(self, **event_args):
-        open_form("borrower.dashboard.dashboard_contact")
-
-    def link_11_click(self, **event_args):
-        open_form('borrower.dashboard.dashboard_report_a_problem')
-
-    def link_12_click(self, **event_args):
-        pass
-
-    def button_1_click(self, **event_args):
-        customer_id = self.user_Id
-        email = self.email
-        anvil.server.call('fetch_profile_data_and_insert', email, customer_id)
-        open_form("wallet.wallet")
