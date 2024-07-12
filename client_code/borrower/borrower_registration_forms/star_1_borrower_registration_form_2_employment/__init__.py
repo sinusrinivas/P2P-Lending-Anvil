@@ -381,11 +381,11 @@ class star_1_borrower_registration_form_2_employment(star_1_borrower_registratio
 
               land_type = self.drop_down_1_copy_3.selected_value
               total_acres = self.text_box_1_copy_4.text
-              crop_name = self.text_box_2_copy_3.text
+              crop_name_is_valid = self.text_box_2_copy_3.text
               farmer_earnings = self.text_box_3_copy_2.text
               user_id = self.user_id
               if yearly_income_is_valid and crop_name_is_valid and acres_of_land_is_valid and type_of_land_valid:
-                anvil.server.call('add_borrower_farmer', land_type, total_acres, crop_name, farmer_earnings, user_id)            
+                anvil.server.call('add_borrower_farmer', land_type, total_acres, crop_name_is_valid, farmer_earnings, user_id)            
                 open_form('borrower.borrower_registration_forms.star_1_borrower_registration_form_3_marital', self.user_id)
               else:
                 alert('Please fill all the details')
@@ -856,21 +856,20 @@ class star_1_borrower_registration_form_2_employment(star_1_borrower_registratio
             self.text_box_3_copy_2.role = 'outlined-error'
             alert('Please enter a valid annual income with only numeric characters.')
             yearly_income_is_valid = False
-
-
+    
     def validate_crop_name(self, **event_args):
-        din = self.text_box_2_copy_3.strip()
+        crop_name = self.text_box_2_copy_3.text.strip()
         global crop_name_is_valid
     
-        # Validate DIN to contain only alphanumeric characters
-        if re.match(r'^[a-zA-Z0-9]+$', din):
+        # Validate crop name to contain only alphanumeric characters
+        if re.match(r'^[a-zA-Z0-9]+$', crop_name):
             self.text_box_2_copy_3.role = 'outlined'
             crop_name_is_valid = True
         else:
             self.text_box_2_copy_3.role = 'outlined-error'
             crop_name_is_valid = False
             alert("Please enter a valid crop name")
-      
+
 
     def validate_borrower_college_address(self, **event_args):
         address = self.borrower_college_address_text.text.strip()
