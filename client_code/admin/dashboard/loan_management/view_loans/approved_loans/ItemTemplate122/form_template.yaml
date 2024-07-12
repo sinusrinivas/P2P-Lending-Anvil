@@ -17,14 +17,6 @@ components:
     layout_properties: {x: 10, y: 343.261474609375, width: 200}
     data_bindings:
     - {property: text, code: 'self.item[''loan_disbursed_timestamp'']', writeback: false}
-  - name: total
-    properties: {align: right}
-    type: Label
-    layout_properties: {x: 737.9090440673829, y: 343.261474609375, width: 94.5455}
-  - name: label_4
-    properties: {text: Rs, bold: true}
-    type: Label
-    layout_properties: {x: 858.7383677978515, y: 343.261474609375, width: 22.3864}
   - name: label_9
     properties: {text: 'Invested on : ', bold: true}
     type: Label
@@ -134,3 +126,11 @@ components:
     properties: {text: 'Overall Return :', bold: true}
     type: Label
     layout_properties: {x: 737.3061828613281, y: 298.4625337123871, width: 199.98748779296875}
+  - name: total
+    properties: {align: right}
+    type: Label
+    layout_properties: {x: 716.3062133789062, y: 340.4625642299652, width: 94.53749084472656}
+  - name: label_4
+    properties: {text: Rs, bold: true}
+    type: Label
+    layout_properties: {x: 820.3309936523438, y: 339.2624909877777, width: 22.368749618530273}

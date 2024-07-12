@@ -29,11 +29,11 @@ components:
     properties: {item_template: admin.dashboard.loan_management.view_loans.approved_loans.ItemTemplate121}
     type: RepeatingPanel
     layout_properties: {grid_position: 'JGDNVA,FWRPUC', full_width_row: true}
-  - name: repeating_panel_3
+  - name: repeating_panel_2
     properties: {item_template: admin.dashboard.loan_management.view_loans.approved_loans.ItemTemplate122}
     type: RepeatingPanel
     layout_properties: {grid_position: 'JGDNVA,JLHIEB'}
-  - name: repeating_panel_2
-    properties: {item_template: admin.dashboard.loan_management.view_loans.approved_loans.ItemTemplate31}
+  - name: repeating_panel_4
+    properties: {item_template: admin.dashboard.loan_management.view_loans.approved_loans.ItemTemplate31, visible: false}
     type: RepeatingPanel
     layout_properties: {grid_position: 'VYNPNW,VQTUOB'}
