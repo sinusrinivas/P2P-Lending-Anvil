@@ -13,5 +13,11 @@ class ItemTemplate118(ItemTemplate118Template):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
+    self.image_1.role = 'circular-image'
 
-    # Any code you write here will run before the form opens.
+  def view_details_click(self, **event_args):
+    """This method is called when the button is clicked"""    
+    selected_row = self.Customer_id_label.text
+    open_form('admin.dashboard.customer_management.handles_customer_registration.borrowers.view_profile', selected_row)
+
+        
