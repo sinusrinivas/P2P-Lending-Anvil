@@ -20,6 +20,10 @@ class View_Details(View_DetailsTemplate):
         self.init_components(**properties)
   
         loan_id = selected_row['loan_id']
+        self.emi_number.text = selected_row['emi_number']
+        if selected_row['emi_number'] ==0:
+          self.emi_number.visible = False
+          self.label_2.visible = False
         remaining_amount = selected_row['remaining_amount']
         total_paid_amount = selected_row['total_amount_paid']
         extension_months = self.get_extension_details(loan_id, selected_row['emi_number'])
@@ -190,11 +194,11 @@ class View_Details(View_DetailsTemplate):
             self.label_3.visible = True
   
         # Update other labels
-        self.loan_id_label.text = str(selected_row['borrower_full_name'])
-        self.loan_amount_label.text = str(loan_amount)
+        # self.loan_id_label.text = str(selected_row['borrower_full_name'])
+        self.loan_amount_label.text = str(total_repayment_amount)
         self.interest_label.text = "{:.2f}".format(total_interest_amount)
-        self.tenure_label.text = str(tenure)
-        self.account_no_label.text = str(selected_row['account_number'])
+        self.tenure_label = str(tenure)
+        self.account_no_label= str(selected_row['account_number'])
       
         # Display total EMI amount including extension amount
         self.update_total_emi_amount(total_emi)
@@ -503,7 +507,7 @@ class View_Details(View_DetailsTemplate):
 
     def back_click(self, **event_args):
       """This method is called when the button is clicked"""
-      open_form('lendor.dashboard.today_dues')
+      open_form('lendor.dashboard.upcoming_payments')
 
 
 
@@ -583,8 +587,8 @@ class View_Details(View_DetailsTemplate):
         'emi_amount': self.emi_amount_label.text,
         'loan_id': self.selected_row['loan_id'],
         'loan_amount': self.loan_amount_label.text,
-        'tenure': self.tenure_label.text,
-        'account_no': self.account_no_label.text,
+        'tenure': self.tenure_label,
+        'account_no': self.account_no_label,
         'interest_amount': self.interest_label.text,
         'remainining_amount': self.remainining_amount.text,
         'borrower_customer_id': self.selected_row['borrower_customer_id'],
@@ -600,7 +604,7 @@ class View_Details(View_DetailsTemplate):
         'loan_state_status' : self.selected_row['loan_state_status'],
         # 'part_payment_date' : self.selected_row['part_payment_date'],
         # 'payment_type' : self.selected_row['payment_type'],
-        'tenure':self.tenure_label.text,
+        # 'tenure':self.tenure_label.text,
         'borrower_full_name':  self.selected_row['borrower_full_name']
     }
     

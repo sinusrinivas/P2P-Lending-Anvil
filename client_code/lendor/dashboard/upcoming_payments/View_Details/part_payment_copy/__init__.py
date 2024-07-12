@@ -20,12 +20,17 @@ class part_payment_copy(part_payment_copyTemplate):
     self.init_components(**properties)
 
     # Any code you write here will run before the form opens.
-    self.loan_id_label.text = loan_details["borrower_full_name"]
+    # self.loan_id_label.text = loan_details["borrower_full_name"]
     self.loan_amount_label.text = loan_details["loan_amount"]
     self.total_emi_amount_label.text = loan_details["total_emi_amount"]
     self.emi_amount_label.text = loan_details["emi_amount"]
-    self.account_no_label.text = loan_details["account_no"]
-    self.tenure_label.text = loan_details["tenure"]
+    self.emi_number.text = loan_details['current_emi_number']
+    
+    if loan_details['current_emi_number'] == 0:
+      self.label_2.visible = False
+      self.emi_number.visible = False
+    # self.account_no_label.text = loan_details["account_no"]
+    # self.tenure_label.text = loan_details["tenure"]
     self.interest_label.text = loan_details["interest_amount"]
     self.remainining_amount.text = loan_details["remainining_amount"]
     current_emi_number = loan_details["current_emi_number"]
@@ -394,5 +399,5 @@ class part_payment_copy(part_payment_copyTemplate):
 
   def button_1_copy_2_click(self, **event_args):
     """This method is called when the button is clicked"""
-    open_form('lendor.dashboard.today_dues.View_Details',self.selected_row)
+    open_form('lendor.dashboard.upcoming_payments.View_Details',self.selected_row)
 
