@@ -35,10 +35,10 @@ class signin_page(signin_pageTemplate):
       password = self.text_box_2.text.strip()
       if not password:
           self.error_label.text='Password cannot be empty.'
-      elif len(password) < 8:
-          self.error_label.text = 'Password must be at least 8 characters long.'
-      elif not re.match(r'^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()_+=-])[A-Za-z\d!@#$%^&*()_+=-]+$', password):
-          self.error_label.text = 'Password must include (a-z), (A-Z), (0-9), and (!@#$%^&*()_+=-).'
+      # elif len(password) < 8:
+      #     self.error_label.text = 'Password must be at least 8 characters long.'
+      # elif not re.match(r'^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()_+=-])[A-Za-z\d!@#$%^&*()_+=-]+$', password):
+      #     self.error_label.text = 'Password must include (a-z), (A-Z), (0-9), and (!@#$%^&*()_+=-).'
       else:
           self.error_label.text = ""
           self.error_label.visible = False
