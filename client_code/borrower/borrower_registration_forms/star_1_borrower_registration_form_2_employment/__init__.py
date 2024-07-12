@@ -13,7 +13,30 @@ class star_1_borrower_registration_form_2_employment(star_1_borrower_registratio
     student_id = False
     student_address = False
     student_proof = False
-    
+    no_of_employes_type_is_valid = False
+    registered_off_add_is_valid = False
+    crop_name_is_valid = False
+    annual_income_is_valid = False
+    annual_salary_is_valid = False
+    designation_is_valid = False
+    company_landmark_is_valid = False
+    company_address_is_valid = False
+    company_ph_no_is_valid = False
+    company_name_is_valid = False
+    occupation_type_is_valid = False
+    business_name_is_valid = False
+    business_add_is_valid = False
+    business_type_is_valid = False
+    year_estd_is_valid = False
+    industry_type_is_valid = False
+    six_month_turn_over_is_valid = False
+    cin_is_valid = False
+    din_is_valid = False
+    registered_off_add_is_valid = False
+    # lendor_business_type_is_valid = False  
+    employees_working_is_valid = False
+
+  
     def __init__(self, user_id, **properties):
         
         # super().__init__(**properties)        
@@ -278,23 +301,22 @@ class star_1_borrower_registration_form_2_employment(star_1_borrower_registratio
                     open_form('borrower.borrower_registration_forms.star_1_borrower_registration_form_3_marital', self.user_id)
             
             elif self.drop_down_2.selected_value == 'Business':
-                validations = [
-                    self.validate_business_add,
-                    self.validate_business_name,
-                    self.validate_year_estd,
-                    self.validate_industry_type,
-                    self.validate_six_month_turnover,
-                    self.validate_din,
-                    self.validate_cin,
-                    self.validate_registered_off_add,
-                    self.validate_no_of_employes,
-                    self.validate_business_type,
-                    self.validate_file_upload,
-                    self.file_loader_1,
-                    self.file_loader_1_copy
-                ]
-                
-                if validate_all(validations):
+              user_id = self.userId 
+              global business_name_is_valid
+              global business_add_is_valid
+              global industry_type_is_valid
+              global six_month_turn_over_is_valid
+              global din_is_valid
+              global cin_is_valid
+              global registered_off_add_is_valid
+              if business_name_is_valid and business_add_is_valid and industry_type_is_valid and six_month_turn_over_is_valid and din_is_valid and cin_is_valid and registered_off_add_is_valid and business_type_is_valid and employees_working_is_valid:
+                anvil.server.call('add_lendor_institutional_form_1',business_name,business_add,business_type,empolyees_working,user_id)
+                months = (datetime.now().year - year.year) * 12 + (datetime.now().month - year.month)
+                anvil.server.call('add_lendor_institutional_form_2', year, months, industry_type, turn_over, last_six_statements, user_id)
+                anvil.server.call('add_lendor_institutional_form_3', din, cin, reg_off_add, proof_verification, user_id)
+                open_form('lendor.lendor_registration_forms.lender_registration_form_3_marital_details',user_id=user_id)
+              else :
+                  alert('please fill all the details')
                     open_form('borrower.borrower_registration_forms.star_1_borrower_registration_form_3_marital', self.user_id)
         else:
             pass
@@ -468,7 +490,7 @@ class star_1_borrower_registration_form_2_employment(star_1_borrower_registratio
 
     def validate_no_of_employes(self, **event_args):
           No_of_employes = self.drop_down_4.selected_value
-          global business_type_is_valid
+          global no_of_employes_type_is_valid
           if No_of_employes is not None:
               self.drop_down_4.role = 'outlined'
               business_type_is_valid = True
@@ -479,24 +501,24 @@ class star_1_borrower_registration_form_2_employment(star_1_borrower_registratio
 
     def validate_occupation_type(self, **event_args):
           No_of_employes = self.drop_down_2_copy.selected_value
-          # global business_type_is_valid
+          global occupation_type_is_valid
           if No_of_employes is not None:
               self.drop_down_2_copy.role = 'outlined'
-              # business_type_is_valid = True
+              occupation_type_is_valid = True
           else:
               self.drop_down_2_copy.role = 'outlined-error'
-              # business_type_is_valid = False
+              occupation_type_is_valid = False
               alert('please enter a valid occupation type')
 
     def validate_organization_type(self, **event_args):
           No_of_employes = self.drop_down_3.selected_value
-          # global business_type_is_valid
+          global organization_type_is_valid
           if No_of_employes is not None:
               self.drop_down_3.role = 'outlined'
-              # business_type_is_valid = True
+              organization_type_is_valid = True
           else:
               self.drop_down_3.role = 'outlined-error'
-              # business_type_is_valid = False
+              organization_type_is_valid = False
               alert('please enter a valid organization type')
 
   
@@ -668,50 +690,50 @@ class star_1_borrower_registration_form_2_employment(star_1_borrower_registratio
             alert('Please enter a valid annual salary with only numeric characters.')
             annual_salary_is_valid = False
 
-    def validate_file_upload(self, **event_args):
-        file_loader = event_args['sender']
-        file = file_loader.file
-        max_size = 2 * 1024 * 1024  # 2MB in bytes
-        allowed_types = ['image/jpeg', 'image/png', 'image/jpg', 'application/pdf']
+    # def validate_file_upload(self, **event_args):
+    #     file_loader = event_args['sender']
+    #     file = file_loader.file
+    #     max_size = 2 * 1024 * 1024  # 2MB in bytes
+    #     allowed_types = ['image/jpeg', 'image/png', 'image/jpg', 'application/pdf']
     
-        if file:
-            file_size = len(file.get_bytes())
-            if file_size > max_size:
-                alert('File size should be less than 2MB')
-                file_loader.clear()
-                return
+    #     if file:
+    #         file_size = len(file.get_bytes())
+    #         if file_size > max_size:
+    #             alert('File size should be less than 2MB')
+    #             file_loader.clear()
+    #             return
     
-            if file.content_type not in allowed_types:
-                alert('Invalid file type. Only JPEG, PNG, jpg and PDF are allowed')
-                file_loader.clear()
-                return
+    #         if file.content_type not in allowed_types:
+    #             alert('Invalid file type. Only JPEG, PNG, jpg and PDF are allowed')
+    #             file_loader.clear()
+    #             return
 
 
     def yearly_income(self, **event_args):
         annual_salary = self.text_box_3_copy_2.text.strip()
-        global annual_salary_is_valid
+        global annual_income_is_valid
         
         # Regex to validate that the annual salary contains only numeric characters
         if re.match(r'^\d+$', annual_salary):
             self.text_box_3_copy_2.role = 'outlined'
-            annual_salary_is_valid = True
+            annual_income_is_valid = True
         else:
             self.text_box_3_copy_2.role = 'outlined-error'
             alert('Please enter a valid annual income with only numeric characters.')
-            annual_salary_is_valid = False
+            annual_income_is_valid = False
 
 
     def validate_crop_name(self, **event_args):
         din = self.text_box_2_copy_3.strip()
-        global din_is_valid
+        global crop_name_is_valid
     
         # Validate DIN to contain only alphanumeric characters
         if re.match(r'^[a-zA-Z0-9]+$', din):
             self.text_box_2_copy_3.role = 'outlined'
-            din_is_valid = True
+            crop_name_is_valid = True
         else:
             self.text_box_2_copy_3.role = 'outlined-error'
-            din_is_valid = False
+            crop_name_is_valid = False
             alert("Please enter a valid crop name")
       
 
