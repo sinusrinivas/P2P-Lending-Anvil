@@ -46,7 +46,7 @@ components:
       type: Label
       layout_properties: {grid_position: 'UCREEW,WGCIGK XXUZZN,LFWOSQ'}
     - name: mi_label
-      properties: {role: outlined-card, bold: false, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: 2px solid lightgrey, italic: false, font_size: null, tooltip: '', text: ''}
+      properties: {role: null, bold: false, align: left, spacing_above: small, background: white, icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: ''}
       type: Label
       layout_properties: {grid_position: 'UCREEW,WGCIGK PZYGGX,LBWCJJ'}
     - name: label_7
