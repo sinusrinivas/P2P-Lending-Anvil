@@ -13,7 +13,6 @@ from ....bank_users.user_form import user_form
 from ....bank_users.user_form import user_module
 import datetime
 import anvil.media
-# from kivy.utils import get_color_from_hex
 
 class borrower_portfolio(borrower_portfolioTemplate):
   def __init__(self, selected_row, **properties):
@@ -21,20 +20,41 @@ class borrower_portfolio(borrower_portfolioTemplate):
     self.init_components(**properties)
     self.selected_row=selected_row
     self.id= selected_row['customer_id']
+    self.borrower_customer_id = self.id
     # self.email = main_form_module.email
     # print(self.email)
     # self.id = main_form_module.userId
+    self.risk_categories = {
+            'no_risk': 0,
+            'low_risk': 0,
+            'medium_risk': 0,
+            'high_risk': 0
+        }
+    self.analyze_borrower_risk(self.borrower_customer_id)
+    self.risk_label.text = (
+    f"No Risk: {self.risk_categories['no_risk']}\n"
+    f"Low Risk: {self.risk_categories['low_risk']}\n"
+    f"Medium Risk: {self.risk_categories['medium_risk']}\n"
+    f"High Risk: {self.risk_categories['high_risk']}"
+)
+
+
     self.create_bar_chart()
 
     # Set the label text with today's date
     today_date = datetime.datetime.now().strftime("%Y-%m-%d")
     self.label_2.text = "As on " + today_date
 
-
+    details  = app_tables.fin_guarantor_details.get(customer_id=self.id)
+    if details:
+        self.label_26.text = details['guarantor_name']
+        self.label_28.text = details['guarantor_profession']
+        
+        
     # Retrieve user profile based on user_Id
     ascend = app_tables.fin_user_profile.get(customer_id=self.id)
     self.image_4.source = ascend['user_photo']
-    self.label_4.text = "Hello" " " + ascend['full_name']
+    self.label_4.text = ascend['full_name']
     self.name = ascend['full_name']
     self.label_15.text = ascend['mobile']
     self.label_16.text = ascend['date_of_birth']
@@ -125,7 +145,56 @@ class borrower_portfolio(borrower_portfolioTemplate):
     
     # Create the pie chart with the fetched data
     self.create_pie_chart(loan_status_data)
-    
+
+  def analyze_borrower_risk(self, borrower_customer_id):
+        loan_details = list(app_tables.fin_loan_details.search(borrower_customer_id=borrower_customer_id))
+        
+        for loan in loan_details:
+            risk_level = self.calculate_risk_level_based_on_emi(loan)
+            if risk_level == 'no_risk':
+                self.risk_categories['no_risk'] += 1
+            elif risk_level == 'low_risk':
+                self.risk_categories['low_risk'] += 1
+            elif risk_level == 'medium_risk':
+                self.risk_categories['medium_risk'] += 1
+            elif risk_level == 'high_risk':
+                self.risk_categories['high_risk'] += 1
+
+        return self.risk_categories
+
+  def calculate_risk_level_based_on_emi(self, loan):
+        """Calculate risk level based on days_left in emi_table"""
+        loan_id = loan['loan_id']
+        emi_details = app_tables.fin_emi_table.search(loan_id=loan_id)
+        days_left_values = [emi['days_left'] for emi in emi_details]
+
+        lapsed_settings = app_tables.fin_loan_settings.get(loans='lapsed fee')
+        default_settings = app_tables.fin_loan_settings.get(loans='default fee')
+        npa_settings = app_tables.fin_loan_settings.get(loans='NPA fee')
+
+        if all(days_left == 0 for days_left in days_left_values):
+            return 'no_risk'
+        
+        if lapsed_settings:
+            lapsed_min_days = lapsed_settings['minimum_days']
+            lapsed_max_days = lapsed_settings['maximum_days']
+            if any(lapsed_min_days <= days_left <= lapsed_max_days for days_left in days_left_values):
+                return 'low_risk'
+        
+        if default_settings:
+            default_min_days = default_settings['minimum_days']
+            default_max_days = default_settings['maximum_days']
+            if any(default_min_days <= days_left <= default_max_days for days_left in days_left_values):
+                return 'medium_risk'
+        
+        if npa_settings:
+            npa_min_days = npa_settings['minimum_days']
+            npa_max_days = npa_settings['maximum_days']
+            if any(npa_min_days <= days_left <= npa_max_days for days_left in days_left_values):
+                return 'high_risk'
+        
+        return 'medium_risk'
+      
   def get_loan_status_data(self, borrower_customer_id):
     # Query the database to get loan status data for the given customer_id
     rows = app_tables.fin_loan_details.search(borrower_customer_id=borrower_customer_id)
