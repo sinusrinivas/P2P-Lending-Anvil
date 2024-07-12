@@ -48,7 +48,7 @@ components:
           type: Label
           layout_properties: {row: HGHRTF, width_xs: 6, col_xs: 0}
         - name: label_23
-          properties: {role: outlined-card, border: 2px solid lightgrey}
+          properties: {role: null, border: ''}
           type: Label
           layout_properties: {row: HGHRTF, width_xs: 6, col_xs: 6}
         - name: label_8_copy
@@ -56,7 +56,7 @@ components:
           type: Label
           layout_properties: {row: ZWFOMI, width_xs: 6, col_xs: 0}
         - name: mi_label
-          properties: {role: null, bold: false, align: left, spacing_above: small, background: white, icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: ''}
+          properties: {role: null, bold: false, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: ''}
           type: Label
           layout_properties: {row: ZWFOMI, width_xs: 6, col_xs: 6}
         - name: label_7
@@ -64,7 +64,7 @@ components:
           type: Label
           layout_properties: {row: ILNBRK, width_xs: 6, col_xs: 0}
         - name: extension_amountt
-          properties: {role: outlined-card, bold: false, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: 2px solid lightgrey, italic: false, font_size: null, tooltip: '', text: ''}
+          properties: {role: null, bold: false, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: ''}
           type: Label
           layout_properties: {row: ILNBRK, width_xs: 6, col_xs: 6}
         - name: label_3
@@ -79,57 +79,45 @@ components:
           properties: {role: input-prompt, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: '  Extension Fee(%) :'}
           type: Label
           layout_properties: {row: CXLQEF, width_xs: 6, col_xs: 0}
-      - name: extension_fee
-        properties: {role: outlined-card, border: 2px solid lightgrey}
-        type: Label
-        layout_properties: {grid_position: 'ZABCKK,UXGTQE'}
-    - name: label_2
-      properties: {role: input-prompt, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: '  Final Repayment Amount'}
-      type: Label
-      layout_properties: {grid_position: 'DEKBLG,RIVMJA'}
-    - name: final_repayment
-      properties: {role: outlined-card, border: 2px solid lightgrey}
-      type: Label
-      layout_properties: {grid_position: 'ZYZEWO,QYZLPL'}
+        - name: extension_fee
+          properties: {role: outlined-card, border: 2px solid lightgrey}
+          type: Label
+          layout_properties: {row: CXLQEF, width_xs: 6, col_xs: 6}
+        - name: label_2
+          properties: {role: input-prompt, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: '  Final Repayment Amount'}
+          type: Label
+          layout_properties: {row: CBAWXE, width_xs: 6, col_xs: 0}
+        - name: final_repayment
+          properties: {role: outlined-card, border: 2px solid lightgrey}
+          type: Label
+          layout_properties: {row: CBAWXE, width_xs: 6, col_xs: 6}
+        - name: label_6
+          properties: {role: input-prompt, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: '  Reason for Loan Extension'}
+          type: Label
+          layout_properties: {row: TKDVLH, width_xs: 12, col_xs: 0}
+        - name: reason_textbox
+          properties: {role: outlined, bold: false, align: left, placeholder: mention a reason here for loan extension, spacing_above: small, background: 'theme:On Primary', type: text, underline: false, font: '', hide_text: false, foreground: '', spacing_below: small, visible: true, border: 2px solid lightgrey, italic: false, enabled: true, font_size: null, tooltip: '', text: ''}
+          type: TextBox
+          layout_properties: {row: BPTHNB, width_xs: 12, col_xs: 0}
+      - name: f_checkbox
+        properties: {role: null, bold: false, align: left, spacing_above: small, background: '', allow_indeterminate: false, underline: false, font: '', foreground: '', checked: false, spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: I  agree to proceed with the Loan Extension process}
+        type: CheckBox
+        layout_properties: {grid_position: 'MCLOXU,UUQRWS'}
+      - name: link_1
+        properties: {role: null, bold: false, align: left, col_widths: '', spacing_above: small, background: '', icon: 'fa:info-circle', wrap_on: mobile, underline: false, font: '', col_spacing: medium, icon_align: left, foreground: '#0876E8', url: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: Terms and Conditions}
+        type: Link
+        layout_properties: {grid_position: 'JRWMSV,ZPNFFU'}
     - name: spacer_1
       properties: {height: '5'}
       type: Spacer
       layout_properties: {grid_position: 'WVUEMA,CQAHLK'}
-    - name: label_6
-      properties: {role: input-prompt, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: '  Reason for Loan Extension'}
-      type: Label
-      layout_properties: {grid_position: 'CEWTMG,JIWTYM'}
-    - name: spacer_2
-      properties: {height: '5'}
-      type: Spacer
-      layout_properties: {grid_position: 'VHQRIT,ANMYFK'}
-    - name: reason_textbox
-      properties: {role: outlined, bold: false, align: left, placeholder: mention a reason here for loan extension, spacing_above: small, background: 'theme:On Primary', type: text, underline: false, font: '', hide_text: false, foreground: '', spacing_below: small, visible: true, border: 2px solid lightgrey, italic: false, enabled: true, font_size: null, tooltip: '', text: ''}
-      type: TextBox
-      layout_properties: {grid_position: 'OFZXCH,UXQAJN'}
-    - name: spacer_6
-      properties: {height: '5'}
-      type: Spacer
-      layout_properties: {grid_position: 'AQXOVX,YDEHUB'}
-    - name: f_checkbox
-      properties: {role: null, bold: false, align: left, spacing_above: small, background: '', allow_indeterminate: false, underline: false, font: '', foreground: '', checked: false, spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: I  agree to proceed with the Loan Extension process}
-      type: CheckBox
-      layout_properties: {grid_position: 'RNLULP,MQGBLE'}
-    - name: link_1
-      properties: {role: null, bold: false, align: left, col_widths: '', spacing_above: small, background: '', icon: 'fa:info-circle', wrap_on: mobile, underline: false, font: '', col_spacing: medium, icon_align: left, foreground: '#0876E8', url: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: Terms and Conditions}
-      type: Link
-      layout_properties: {grid_position: 'RNLULP,MMVTCL'}
-    - name: spacer_3
-      properties: {height: 32}
-      type: Spacer
-      layout_properties: {grid_position: 'SCBTDV,DIZRLM'}
     - name: button_2
-      properties: {role: null, bold: false, align: center, spacing_above: small, background: '#0b2547', icon: 'fa:backward', underline: false, font: '', icon_align: left, foreground: 'theme:On Primary', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: Back}
+      properties: {role: null, bold: false, align: full, spacing_above: small, background: '#0b2547', icon: 'fa:backward', underline: false, font: '', icon_align: left, foreground: 'theme:On Primary', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: Back}
       type: Button
       layout_properties: {grid_position: 'YAZEWT,XFYIIG'}
       event_bindings: {click: button_2_click}
     - name: button_3
-      properties: {role: elevated-button, bold: true, align: center, spacing_above: small, background: '#0b2547', icon: 'fa:save', underline: false, font: '', icon_align: left, foreground: 'theme:On Primary', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: Submit}
+      properties: {role: elevated-button, bold: true, align: full, spacing_above: small, background: '#0b2547', icon: 'fa:save', underline: false, font: '', icon_align: left, foreground: 'theme:On Primary', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: Submit}
       type: Button
       layout_properties: {grid_position: 'YAZEWT,BXDOXG'}
       event_bindings: {click: button_3_click}
