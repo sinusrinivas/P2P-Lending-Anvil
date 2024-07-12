@@ -174,3 +174,4 @@ components:
     data_bindings: []
     event_bindings: {click: all_transaction_btn_click}
 is_package: true
+custom_component: false

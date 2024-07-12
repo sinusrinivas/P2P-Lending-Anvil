@@ -40,3 +40,9 @@ class Navigation_form_dashboard(Navigation_form_dashboardTemplate):
 
   def Report_A_Problem_click(self, **event_args):
     open_form('borrower.dashboard.dashboard_report_a_problem')
+
+  def button_1_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    alert("Logged out sucessfully")
+    anvil.users.logout()
+    open_form('bank_users.main_form')
