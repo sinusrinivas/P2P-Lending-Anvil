@@ -256,13 +256,13 @@ class star_1_borrower_registration_form_2_employment(star_1_borrower_registratio
           global student_address
           global student_proof
           
-          college_name = self.borrower_college_name_text.text
-          college_id = self.borrower_college_id_text.text
-          college_address = self.borrower_college_address_text.text
-          college_proof = self.borrower_college_proof_img.file
+          student_college_name = self.borrower_college_name_text.text
+          student_id = self.borrower_college_id_text.text
+          student_address = self.borrower_college_address_text.text
+          student_proof = self.borrower_college_proof_img.file
           user_id = self.user_id
           
-          if not college_proof:
+          if not student_proof:
             self.borrower_college_proof_img.background = 'red'
             self.borrower_college_proof_img.focus()
             alert('please fill all the details.')
@@ -271,7 +271,7 @@ class star_1_borrower_registration_form_2_employment(star_1_borrower_registratio
             self.borrower_college_proof_img.background = 'outlined'
             # student_proof = True
             if student_college_name and student_id and student_address:
-              anvil.server.call('add_borrower_student',college_name,college_id,college_proof,college_address,user_id)
+              anvil.server.call('add_borrower_student',student_college_name,student_id,student_proof,student_address,user_id)
               open_form('borrower.borrower_registration_forms.star_1_borrower_registration_form_3_marital', self.user_id)
             else:
               alert('Please fill all the details')
@@ -374,10 +374,21 @@ class star_1_borrower_registration_form_2_employment(star_1_borrower_registratio
         
         elif self.drop_down_1.selected_value == 'Self Employement':
             if self.drop_down_2.selected_value == 'Farmer':
-              
+              global yearly_income_is_valid
+              global crop_name_is_valid
+              global acres_of_land_is_valid
+              global type_of_land_valid
 
-                    open_form('borrower.borrower_registration_forms.star_1_borrower_registration_form_3_marital', self.user_id)
-            
+              land_type = self.drop_down_1_copy_3.selected_value
+              total_acres = self.text_box_1_copy_4.text
+              crop_name = self.text_box_2_copy_3.text
+              farmer_earnings = self.text_box_3_copy_2.text
+              user_id = self.user_id
+              if yearly_income_is_valid and crop_name_is_valid and acres_of_land_is_valid and type_of_land_valid:
+                anvil.server.call('add_borrower_farmer', land_type, total_acres, crop_name, farmer_earnings, user_id)            
+                open_form('borrower.borrower_registration_forms.star_1_borrower_registration_form_3_marital', self.user_id)
+              else:
+                alert('Please fill all the details')
             elif self.drop_down_2.selected_value == 'Business':
 
               user_id = self.user_id 
