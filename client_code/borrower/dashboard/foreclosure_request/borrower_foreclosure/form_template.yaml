@@ -8,123 +8,136 @@ components:
   layout_properties: {slot: default}
   name: content_panel
   components:
-  - name: column_panel_1_copy
-    properties: {background: '#Edf0f4'}
+  - properties: {background: '#Edf0f4'}
     type: ColumnPanel
     layout_properties: {grid_position: 'WWXYAW,OYTHVV', full_width_row: true}
+    name: column_panel_1_copy
     components:
     - type: form:borrower.dashboard.Navigation_form_dashboard
       properties: {}
       layout_properties: {grid_position: 'GJBUQP,ETRMFG', full_width_row: true}
       name: navigation_form_dashboard_1
-    - name: label_3_copy
-      properties: {text: Loan Details, bold: true, font_size: 30, align: center}
-      type: Label
-      layout_properties: {grid_position: 'YSBCDH,HOTHOD'}
-    - name: spacer_4
-      properties: {height: '15'}
-      type: Spacer
-      layout_properties: {grid_position: 'LACDGY,HHVTXF'}
-    - properties: {role: input-prompt, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: '  Borrower Name :'}
-      type: Label
-      layout_properties: {grid_position: 'ZBAFLN,OOLRES MGCTKB,UWGTWY'}
-      name: label_4
-    - properties: {role: outlined-card, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: 2px solid lightgrey, italic: false, font_size: null, tooltip: '', text: ''}
-      type: Label
-      layout_properties: {grid_position: 'ZBAFLN,OOLRES WCZNZO,XMHXKL'}
-      name: label_name
-    - properties: {role: input-prompt, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: '  Credit Limit :'}
-      type: Label
-      layout_properties: {grid_position: 'ZBAFLN,OOLRES OQBBAI,JLQWBA'}
-      name: label_6
-    - properties: {role: outlined-card, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: 2px solid lightgrey, italic: false, font_size: null, tooltip: '', text: ''}
-      type: Label
-      layout_properties: {grid_position: 'ZBAFLN,OOLRES BXPECN,ZJOIQJ'}
-      name: label_credit_limit
-    - properties: {role: input-prompt, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: '  Interest Rate :'}
-      type: Label
-      layout_properties: {grid_position: 'ZBAFLN,OOLRES BMSJSI,NCXXNU'}
-      name: label_12
-    - properties: {role: outlined-card, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: 2px solid lightgrey, italic: false, font_size: null, tooltip: '', text: ''}
-      type: Label
-      layout_properties: {grid_position: 'ZBAFLN,OOLRES QTERDP,KOECXH'}
-      name: label_interest_rate
-    - properties: {role: input-prompt, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: '  Total payments Made :'}
-      type: Label
-      layout_properties: {grid_position: 'ZBAFLN,OOLRES HGQISQ,HJZXCB'}
-      name: label_16
-    - properties: {role: outlined-card, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: 2px solid lightgrey, italic: false, font_size: null, tooltip: '', text: ''}
-      type: Label
-      layout_properties: {grid_position: 'ZBAFLN,OOLRES KXYVQO,DVFHCY'}
-      name: label_tpm
-    - properties: {text: '  Due amount :', bold: true, visible: false, role: input-prompt}
-      type: Label
-      layout_properties: {grid_position: 'ZBAFLN,OOLRES TPMMCU,HFNOST'}
-      name: label_14
-    - properties: {visible: false, role: outlined-card, border: 2px solid lightgrey}
-      type: Label
-      layout_properties: {grid_position: 'ZBAFLN,OOLRES BPSRVW,DSOLUM'}
-      name: due_amount
-    - name: label_8_copy
-      properties: {bold: true, text: '  Loan Amount :', role: input-prompt}
-      type: Label
-      layout_properties: {grid_position: 'ZBAFLN,XJBITR SESCEA,QBOUGJ'}
-    - properties: {role: outlined-card, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: 2px solid lightgrey, italic: false, font_size: null, tooltip: '', text: ''}
-      type: Label
-      layout_properties: {grid_position: 'ZBAFLN,XJBITR ADRLHW,WVCQXR'}
-      name: label_loan_amount
-    - properties: {role: input-prompt, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: '  Loan Tenure :'}
-      type: Label
-      layout_properties: {grid_position: 'ZBAFLN,XJBITR JQRJBD,XLFQRK'}
-      name: label_10
-    - properties: {role: outlined-card, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: 2px solid lightgrey, italic: false, font_size: null, tooltip: '', text: ''}
-      type: Label
-      layout_properties: {grid_position: 'ZBAFLN,XJBITR KPHAZF,ZRSJCO'}
-      name: label_loan_tenure
-    - properties: {role: input-prompt, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: '  Foreclosure Type :'}
-      type: Label
-      layout_properties: {grid_position: 'ZBAFLN,XJBITR NPPDGG,KLCABW'}
-      name: label_7
-    - properties: {role: outlined-card, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: 2px solid lightgrey, italic: false, font_size: null, tooltip: '', text: ''}
-      type: Label
-      layout_properties: {grid_position: 'ZBAFLN,XJBITR TIESWK,GRLMMZ'}
-      name: foreclose_type
-    - properties: {text: '  Foreclose Amount :', bold: true, visible: false, role: input-prompt}
-      type: Label
-      layout_properties: {grid_position: 'ZBAFLN,XJBITR IVMPKI,UWYJMN'}
-      name: label_11
-    - properties: {visible: false, role: outlined-card, border: 2px solid lightgrey}
-      type: Label
-      layout_properties: {grid_position: 'ZBAFLN,XJBITR MCBMZH,UCYRBC'}
-      name: foreclose_amount
-    - properties: {text: '  Total Amount :', bold: true, visible: false, role: input-prompt}
-      type: Label
-      layout_properties: {grid_position: 'ZBAFLN,XJBITR HASXOO,ZFVNUK'}
-      name: label_17
-    - properties: {visible: false, role: outlined-card, border: 2px solid lightgrey}
-      type: Label
-      layout_properties: {grid_position: 'ZBAFLN,XJBITR FJQOQP,WVISBP'}
-      name: total_amount
-    - properties: {text: '  Extra Fee :', bold: true, visible: false, role: input-prompt}
-      type: Label
-      layout_properties: {grid_position: 'NHSCML,ONEBGE'}
-      name: label_13
-    - properties: {visible: false, role: outlined-card}
-      type: Label
-      layout_properties: {grid_position: 'FLQNQH,DAGXAT'}
-      name: extra_fee
-    - properties: {visible: false, align: center, font_size: 20}
-      type: Label
-      layout_properties: {grid_position: 'ZVRQIR,PNJSTP'}
-      name: label_3
-    - properties: {visible: false, background: '', foreground: 'theme:Error', align: center, font_size: 20}
-      type: Label
-      layout_properties: {grid_position: 'ANPIIA,WCZREM'}
-      name: label_5
-    - properties: {role: null, bold: false, align: center, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: red, spacing_below: small, visible: false, border: '', italic: false, font_size: 20, tooltip: '', text: ''}
-      type: Label
-      layout_properties: {grid_position: 'MGVTYV,HEKCUN'}
-      name: label_8
+    - properties: {role: outlined-card, col_widths: '{"IKATUC":10,"VWBPJV":10,"VXAIFV":15,"SRUYAE":10,"XQPSIB":13,"HSKQIN":2}'}
+      type: ColumnPanel
+      layout_properties: {grid_position: 'IANOVU,EZAXUC'}
+      name: column_panel_1
+      components:
+      - properties: {text: Loan Details, bold: true, font_size: 18, align: center, background: '#05264d', foreground: white}
+        type: Label
+        layout_properties: {grid_position: 'BNRSTM,PKYUFI'}
+        name: label_3_copy
+      - properties: {height: '15'}
+        type: Spacer
+        layout_properties: {grid_position: 'HWEJQA,GIMJYJ'}
+        name: spacer_4
+      - properties: {height: 32}
+        type: Spacer
+        layout_properties: {grid_position: 'DNDFLV,IKATUC'}
+        name: spacer_1
+      - properties: {role: null, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: '  Lender Name :'}
+        type: Label
+        layout_properties: {grid_position: 'DNDFLV,VWBPJV LSWZJD,QOPLDR'}
+        name: label_4
+      - properties: {role: null, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: '  Loan Tenure :'}
+        type: Label
+        layout_properties: {grid_position: 'DNDFLV,VWBPJV GBQOKC,ESOJVA'}
+        name: label_10
+      - properties: {role: null, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: '  Credit Limit :'}
+        type: Label
+        layout_properties: {grid_position: 'DNDFLV,VWBPJV REPNLS,EWBMUH'}
+        name: label_6
+      - properties: {height: 32}
+        type: Spacer
+        layout_properties: {grid_position: 'DNDFLV,HSKQIN'}
+        name: spacer_2
+      - properties: {role: null, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: '  Foreclosure Type :'}
+        type: Label
+        layout_properties: {grid_position: 'DNDFLV,VWBPJV VQLSZG,PRIGPA'}
+        name: label_7
+      - properties: {text: '  Total Amount :', bold: true, visible: false, role: null}
+        type: Label
+        layout_properties: {grid_position: 'DNDFLV,VWBPJV QLMVLT,MZLUDY'}
+        name: label_17
+      - properties: {text: '  Extra Fee :', bold: true, visible: false, role: null}
+        type: Label
+        layout_properties: {grid_position: 'DNDFLV,VWBPJV NOFGGF,IQONSO'}
+        name: label_13
+      - properties: {role: null, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: ''}
+        type: Label
+        layout_properties: {grid_position: 'DNDFLV,VXAIFV LHCGPZ,OYIXWI'}
+        name: label_name
+      - properties: {role: null, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: ''}
+        type: Label
+        layout_properties: {grid_position: 'DNDFLV,VXAIFV SOKOFG,MFIASR'}
+        name: label_loan_tenure
+      - properties: {role: null, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: ''}
+        type: Label
+        layout_properties: {grid_position: 'DNDFLV,VXAIFV GXFOEE,DHKXHG'}
+        name: foreclose_type
+      - properties: {role: null, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: ''}
+        type: Label
+        layout_properties: {grid_position: 'DNDFLV,VXAIFV DQBQHM,CJPKOL'}
+        name: label_credit_limit
+      - properties: {visible: false, role: null, border: ''}
+        type: Label
+        layout_properties: {grid_position: 'DNDFLV,VXAIFV AMATOK,WTIDMR'}
+        name: total_amount
+      - properties: {visible: false, role: null}
+        type: Label
+        layout_properties: {grid_position: 'DNDFLV,VXAIFV DRIGOE,HREOGO'}
+        name: extra_fee
+      - properties: {bold: true, text: '  Loan Amount :', role: null}
+        type: Label
+        layout_properties: {grid_position: 'DNDFLV,SRUYAE EVTCNF,DRGFDH'}
+        name: label_8_copy
+      - properties: {role: null, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: '  Interest Rate :'}
+        type: Label
+        layout_properties: {grid_position: 'DNDFLV,SRUYAE ORTCST,KIAITU'}
+        name: label_12
+      - properties: {text: '  Foreclose Amount :', bold: true, visible: false, role: null}
+        type: Label
+        layout_properties: {grid_position: 'DNDFLV,SRUYAE LOHIZP,AFILBM'}
+        name: label_11
+      - properties: {role: null, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: '  Total payments Made :'}
+        type: Label
+        layout_properties: {grid_position: 'DNDFLV,SRUYAE FWKPUQ,WUZKTG'}
+        name: label_16
+      - properties: {text: '  Due amount :', bold: true, visible: false, role: null}
+        type: Label
+        layout_properties: {grid_position: 'DNDFLV,SRUYAE IDADXC,YNKTKE'}
+        name: label_14
+      - properties: {role: null, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: ''}
+        type: Label
+        layout_properties: {grid_position: 'DNDFLV,XQPSIB THEESI,QQMAYE'}
+        name: label_loan_amount
+      - properties: {role: null, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: ''}
+        type: Label
+        layout_properties: {grid_position: 'DNDFLV,XQPSIB OTTUNA,GFUMEC'}
+        name: label_interest_rate
+      - properties: {visible: false, role: null, border: ''}
+        type: Label
+        layout_properties: {grid_position: 'DNDFLV,XQPSIB QZPOAP,NKZHSS'}
+        name: foreclose_amount
+      - properties: {role: null, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: ''}
+        type: Label
+        layout_properties: {grid_position: 'DNDFLV,XQPSIB RAHPHO,BJUKYF'}
+        name: label_tpm
+      - properties: {visible: false, role: null, border: ''}
+        type: Label
+        layout_properties: {grid_position: 'DNDFLV,XQPSIB MIBNSV,GUWECD'}
+        name: due_amount
+      - properties: {visible: false, align: center, font_size: 20}
+        type: Label
+        layout_properties: {grid_position: 'ONTLVA,QKRZPC'}
+        name: label_3
+      - properties: {visible: false, background: '', foreground: 'theme:Error', align: center, font_size: 20}
+        type: Label
+        layout_properties: {grid_position: 'FLZECR,EHQZMK'}
+        name: label_5
+      - properties: {role: null, bold: false, align: center, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: red, spacing_below: small, visible: false, border: '', italic: false, font_size: 20, tooltip: '', text: ''}
+        type: Label
+        layout_properties: {grid_position: 'OPQAZL,SHEYLR'}
+        name: label_8
     - type: Button
       properties: {role: null, bold: true, align: center, spacing_above: small, background: '#0b2547', icon: 'fa:backward', underline: false, font: '', icon_align: left, foreground: 'theme:On Primary', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: Back}
       layout_properties: {grid_position: 'GSLLRF,GQTUPT'}
@@ -168,14 +181,14 @@ components:
       type: Label
       layout_properties: {grid_position: 'RNXWGO,PWNPWQ'}
       name: label_loan_id
-    - name: spacer_5
-      properties: {height: 32}
+    - properties: {height: 32}
       type: Spacer
       layout_properties: {grid_position: 'ICEFVE,TQYGDK'}
-    - name: spacer_1_copy_copy
-      properties: {height: 104.50006103515625}
+      name: spacer_5
+    - properties: {height: 104.50006103515625}
       type: Spacer
       layout_properties: {grid_position: 'WHICQD,YXRYBK'}
+      name: spacer_1_copy_copy
 - type: FlowPanel
   properties: {}
   layout_properties: {slot: nav-right}
