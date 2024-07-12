@@ -43,10 +43,13 @@ components:
       layout_properties: {}
       event_bindings: {click: wallet_dashboard_link_click}
       data_bindings: []
+    - name: logout_1
+      properties: {}
+      type: form:borrower.logout
   - name: back_btn
     properties: {role: filled-button, bold: false, align: right, spacing_above: small, background: '#0b2547', icon: 'fa:angle-double-left', underline: false, font: '', icon_align: left, foreground: 'theme:On Primary', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: 15, tooltip: '', text: Back}
     type: Button
-    layout_properties: {grid_position: 'YVZIQE,WTIFQA'}
+    layout_properties: {grid_position: 'SXLNAB,QLZVXO', full_width_row: true}
     event_bindings: {click: back_btn_click}
 - name: label_1
   properties: {text: Transaction Details, background: 'theme:Secondary Container', role: outlined-card, font_size: 25}
