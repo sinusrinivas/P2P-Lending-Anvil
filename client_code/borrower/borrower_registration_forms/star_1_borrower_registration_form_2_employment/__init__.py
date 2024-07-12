@@ -321,17 +321,17 @@ class star_1_borrower_registration_form_2_employment(star_1_borrower_registratio
               global cin_is_valid
               global registered_off_add_is_valid
 
-              business_name = self.text_box_2.text
-              business_add = self.text_box_1.text
+              business_name_is_valid = self.text_box_2.text
+              business_add_is_valid = self.text_box_1.text
               business_type = self.drop_down_12.selected_value
               empolyees_working = self.drop_down_4.selected_value
-              din = self.text_box_5.text
+              din_is_valid = self.text_box_5.text
               cin = self.text_box_6.text
               reg_off_add = self.text_box_7.text
               proof_verification = self.file_loader_1_copy.file
               year = self.date_picker_1.date
               last_six_statements = self.file_loader_1.file
-              industry_type = self.text_box_3.text
+              industry_type_is_valid = self.text_box_3.text
               turn_over = self.text_box_4.text
               months = None
               if not empolyees_working :
@@ -367,9 +367,9 @@ class star_1_borrower_registration_form_2_employment(star_1_borrower_registratio
                   self.file_loader_1_copy.role = 'outlined'
 
               if business_name_is_valid and last_six_statements and empolyees_working and proof_verification and business_add_is_valid and industry_type_is_valid and six_month_turn_over_is_valid and din_is_valid and cin_is_valid and registered_off_add_is_valid and business_type_is_valid and employees_working_is_valid:
-                anvil.server.call('add_lendor_institutional_form_1',business_name,business_add,business_type,empolyees_working,user_id)
-                anvil.server.call('add_lendor_institutional_form_3', din, cin, reg_off_add, proof_verification, user_id)
-                anvil.server.call('add_lendor_institutional_form_2', year, months, industry_type, turn_over, last_six_statements, user_id)
+                anvil.server.call('add_lendor_institutional_form_1',business_name_is_valid,business_add_is_valid,business_type,empolyees_working,user_id)
+                anvil.server.call('add_lendor_institutional_form_3', din_is_valid, cin, reg_off_add, proof_verification, user_id)
+                anvil.server.call('add_lendor_institutional_form_2', year, months, industry_type_is_valid, turn_over, last_six_statements, user_id)
                 open_form('borrower.borrower_registration_forms.star_1_borrower_registration_form_3_marital', self.user_id)
               else :
                   alert('please fill all the details')
