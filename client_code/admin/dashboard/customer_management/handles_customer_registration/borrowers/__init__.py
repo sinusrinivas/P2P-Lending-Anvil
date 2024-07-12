@@ -7,7 +7,7 @@ import anvil.users
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
-        
+
 class borrowers(borrowersTemplate):
     def __init__(self, **properties):
         # Set Form properties and Data Bindings.
@@ -27,7 +27,7 @@ class borrowers(borrowersTemplate):
                 else:
                     credit_limit = None
                     ascend = None
-                  
+
                 guarantor_record = app_tables.fin_guarantor_details.get(customer_id=user_profile['customer_id'])
                 if guarantor_record is not None:
                     guarantor_name = guarantor_record['guarantor_name']
@@ -37,7 +37,7 @@ class borrowers(borrowersTemplate):
                     guarantor_name = None
                     guarantor_ph_no = None
                     guarantor = None
-                
+
                 loan_details_count = len(
                     app_tables.fin_loan_details.search(
                         q.all_of(
@@ -50,7 +50,7 @@ class borrowers(borrowersTemplate):
                         borrower_customer_id=user_profile['customer_id']
                     )
                 )
-                
+
                 self.result.append({
                     'customer_id': user_profile['customer_id'],
                     'full_name': user_profile['full_name'],
@@ -65,21 +65,26 @@ class borrowers(borrowersTemplate):
                     'ascend_score': ascend,
                     'guarantor_name': guarantor_name,
                     'guarantor_mobile_no': guarantor_ph_no,
-                    'another_person' : guarantor,                  
+                    'another_person': guarantor,
                     'loan_updated_status': loan_details_count,
                     'user_photo': user_profile['user_photo']
                 })
-        
-            panel1_data = self.result[::2]  # Every second item starting from index 0
-            panel2_data = self.result[1::2]  # Every second item starting from index 1
-            
-            # Assuming ItemTemplate94 requires 'value_to_display'
-            self.repeating_panel_1.items = panel1_data
-            self.repeating_panel_3.items = panel2_data
+
         if not self.result:
             alert("No Borrowers Available!")
         else:
-            self.repeating_panel_1.items = self.result
+            panel1_data = self.result[::2]  # Every second item starting from index 0
+            panel2_data = self.result[1::2]  # Every second item starting from index 1
+
+            self.repeating_panel_1.items = panel1_data
+            self.repeating_panel_3.items = panel2_data
+
+            # Set total loan count labels for each borrower
+            for item in self.repeating_panel_1.items:
+                item['total_open_loan'] = f"Total Loans: {item['loan_updated_status']}"
+
+            for item in self.repeating_panel_3.items:
+                item['total_open_loan'] = f"Total Loans: {item['loan_updated_status']}"
 
     def link_1_click(self, **event_args):
         """This method is called when the link is clicked"""
