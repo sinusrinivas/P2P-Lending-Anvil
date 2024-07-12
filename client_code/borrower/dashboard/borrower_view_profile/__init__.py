@@ -28,7 +28,6 @@ class borrower_view_profile(borrower_view_profileTemplate):
     self.disable_bank_details_fields()
     self.load_user_profile()
     self.load_guarantor_details()
-    self.disable_guarantor_details_fields()
     # self.user_id = "example_user_id"
 
     self.image_1.role = 'circular-image'
