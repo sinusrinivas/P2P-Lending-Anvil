@@ -170,6 +170,7 @@ unique_ids:
     : '1700126702884606423685481.6467'
     admin.dashboard.loan_management.editing_detabase_details: '1719813993624203729241179.09363'
     admin.dashboard.loan_management.application_intake.All_loans.RowTemplate62: '1719379110700569732677031.942'
+    admin.dashboard.customer_management.handles_customer_registration.borrowers.ItemTemplate95: '1720779644820139260932278.05936'
     admin.dashboard.loan_management.view_loans.approved_loans: '1699528799869373096001113.10925'
     borrower.dashboard.borrower_portfolio: '1717040406764475919330947.1772'
     admin.dashboard.manage_ascend_score.view_ascend_group: '1709796304196496012609333.1965'
@@ -185,6 +186,7 @@ unique_ids:
     admin.dashboard.manage_settings.approval_days: '171738656206145864182938.08747'
     borrower.dashboard.application_tracker.view_profile: P5NXTQOFPOXB24AC7BIY6NNQYVHMF6W5
     wallet.wallet.all_transaction.RowTemplate29: '1704884931461492157927200.2286'
+    admin.dashboard.customer_management.handles_customer_registration.borrowers.ItemTemplate118: '1720779652798608998360277.5754'
     admin.dashboard.reporting_and_analytical_modules.risk_pool.risk_view_details: '1718021128801365023897480.50354'
     admin.dashboard.loan_management.view_loans.one_time_settlement: '1707378247720454790240248.4296'
     borrower.ots_dashboard.RowTemplate40: '1707824718203149163284237.14175'
