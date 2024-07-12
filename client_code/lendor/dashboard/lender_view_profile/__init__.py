@@ -460,7 +460,7 @@ class lender_view_profile(lender_view_profileTemplate):
         user_profile["full_name"] = self.name_text_box.text
         user_profile['email_user'] = self.email_tx.text
         user_profile["mobile"] = self.mobile_tx.text
-        user_profile["date_of_birth"] = self.d_o_b_text_box.text
+        user_profile["date_of_birth"] = self.d.text
         user_profile["city"] = self.city_tx.text
         user_profile["aadhaar_no"] = self.g_i_1_tx.text
         user_profile["pan_number"] = self.g_i_2_tx.text
