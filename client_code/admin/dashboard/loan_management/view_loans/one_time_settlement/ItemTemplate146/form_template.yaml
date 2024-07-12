@@ -4,7 +4,7 @@ components:
 - name: column_panel_1
   properties: {col_widths: '{"VIIMBB":30,"XEPUOC":30,"IQSQGN":30,"UGXJFT":15,"DDJPTC":15,"LNBHOR":40,"EOHOQT":20}', role: outlined-card}
   type: ColumnPanel
-  layout_properties: {grid_position: 'IDBVIO,WITEGN'}
+  layout_properties: {grid_position: 'VHTNNQ,FGUVAX'}
   components:
   - name: image_1
     properties: {height: '70'}
