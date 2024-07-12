@@ -15,7 +15,7 @@ class borrower_foreclosure(borrower_foreclosureTemplate):
         # Set Form properties and Data Bindings.
         self.init_components(**properties)
         # self.label_loan_id.text = f"{selected_row['loan_id']}"
-        self.label_name.text = f"{selected_row['borrower_full_name']}"
+        self.label_name.text = f"{selected_row['lender_full_name']}"
         self.label_loan_amount.text = f"{selected_row['loan_amount']}"
         self.label_loan_tenure.text = f"{selected_row['tenure']} Months"
         self.label_interest_rate.text = f"{selected_row['interest_rate']} % pa"
@@ -236,6 +236,7 @@ class borrower_foreclosure(borrower_foreclosureTemplate):
                                           if additional_fees > 0:
                                               self.label_13.visible = True
                                               self.extra_fee.visible = True
+                                              self.button_5.visible = False
                                               self.extra_fee.text = "{:.2f}".format(additional_fees)
                                               self.total_amount.text = "{:.2f}".format(total_amount)
                                           else:
@@ -324,7 +325,7 @@ class borrower_foreclosure(borrower_foreclosureTemplate):
             return
 
       
-        extra_fee = (self.extra_fee.text)
+        extra_fee = float(self.extra_fee.text)
         if extra_fee  is None:
           extra_fee = 0.0
         
