@@ -36,20 +36,20 @@ components:
       type: Spacer
       layout_properties: {grid_position: 'LACDGY,HHVTXF'}
     - name: label_7_copy
-      properties: {text: '  Borrower Name:', bold: true, role: input-prompt}
+      properties: {text: '  Borrower Name:', bold: true, role: null}
       type: Label
       layout_properties: {grid_position: 'UCREEW,ZUOPMO BQLWOD,EHECKD'}
-    - properties: {align: left, role: outlined-card, border: 2px solid lightgrey}
+    - properties: {align: left, role: null, border: 2px solid lightgrey}
       type: Label
-      layout_properties: {grid_position: 'UCREEW,ZUOPMO TSLXIE,PGBZAJ'}
+      layout_properties: {grid_position: 'UCREEW,ZUOPMO BQLWOD,LEPACS'}
       name: loan_id_label
     - name: label_8_copy
-      properties: {bold: true, text: '  Loan Amount:', role: input-prompt}
+      properties: {bold: true, text: '  Loan Amount:', role: null}
       type: Label
       layout_properties: {grid_position: 'UCREEW,WGCIGK VACRBK,APEOHF'}
-    - properties: {align: left, role: outlined-card, border: 2px solid lightgrey}
+    - properties: {align: left, role: null, border: 2px solid lightgrey}
       type: Label
-      layout_properties: {grid_position: 'UCREEW,WGCIGK HEWNKV,BGHCCZ'}
+      layout_properties: {grid_position: 'UCREEW,WGCIGK VACRBK,ZSSYYT'}
       name: loan_amount_label
     - name: label_11_copy
       properties: {bold: true, text: '  Intrest Amount:', role: input-prompt}

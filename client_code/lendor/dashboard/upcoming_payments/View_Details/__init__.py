@@ -503,7 +503,7 @@ class View_Details(View_DetailsTemplate):
 
     def back_click(self, **event_args):
       """This method is called when the button is clicked"""
-      open_form('lendor.dashboard.today_dues')
+      open_form('lendor.dashboard.upcoming_payments')
 
 
 
