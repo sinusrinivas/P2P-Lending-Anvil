@@ -31,24 +31,24 @@ components:
       properties: {height: '15'}
       type: Spacer
       layout_properties: {grid_position: 'LACDGY,HHVTXF'}
-    - name: label_7_copy
-      properties: {text: '  Borrower Name:', bold: true, role: input-prompt}
-      type: Label
-      layout_properties: {grid_position: 'UCREEW,ZUOPMO'}
-    - properties: {align: left, role: outlined-card}
-      type: Label
-      layout_properties: {grid_position: 'UCREEW,ZUOPMO ZKAJQL,XIRLSD'}
-      name: loan_id_label
     - name: label_8_copy
-      properties: {bold: true, text: '  Loan Amount:', role: input-prompt}
+      properties: {bold: true, text: 'Total Repayment Amount :', role: input-prompt}
       type: Label
-      layout_properties: {grid_position: 'UCREEW,WGCIGK NOZGBV,DESUPD'}
+      layout_properties: {grid_position: 'NOZGBV,DESUPD'}
     - properties: {align: left, role: outlined-card}
       type: Label
-      layout_properties: {grid_position: 'UCREEW,WGCIGK FXSSEJ,UTODTH'}
+      layout_properties: {grid_position: 'NOZGBV,WQQRAO'}
       name: loan_amount_label
+    - name: label_2
+      properties: {text: 'EMi Number :', bold: true}
+      type: Label
+      layout_properties: {grid_position: 'YEOOTV,TXNKGD'}
+    - name: emi_number
+      properties: {}
+      type: Label
+      layout_properties: {grid_position: 'YEOOTV,IGMRQZ'}
     - name: label_11_copy
-      properties: {bold: true, text: '  Intrest Rate:', role: input-prompt}
+      properties: {bold: true, text: '  Intrest Amount :', role: input-prompt}
       type: Label
       layout_properties: {grid_position: 'DPPCNI,FPJRJI ZGGUQU,ULUMGC'}
     - properties: {align: left, role: outlined-card}
@@ -79,14 +79,6 @@ components:
       type: Label
       layout_properties: {grid_position: 'DPPCNI,FPJRJI VICURL,LUBAPP'}
       name: total_emi_amount_label
-    - name: label_10_copy
-      properties: {bold: true, text: '  Tenure:', role: input-prompt}
-      type: Label
-      layout_properties: {grid_position: 'DPPCNI,CDNBJI ZIRVXD,OGJFQW'}
-    - properties: {align: left, role: outlined-card}
-      type: Label
-      layout_properties: {grid_position: 'DPPCNI,CDNBJI WTHHPA,WBOJZB'}
-      name: tenure_label
     - properties: {text: Remaining Amount, bold: true}
       type: Label
       layout_properties: {grid_position: 'DPPCNI,CDNBJI JANNIA,LMFQGJ'}
