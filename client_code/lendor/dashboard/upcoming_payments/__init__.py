@@ -1,4 +1,4 @@
-from ._anvil_designer import today_duesTemplate
+from ._anvil_designer import upcoming_paymentsTemplate
 from anvil import *
 import anvil.server
 import anvil.tables as tables
@@ -7,7 +7,7 @@ from anvil.tables import app_tables
 from datetime import datetime, timezone, timedelta
 from .. import main_form_module as main_form_module
 
-class today_dues(today_duesTemplate):
+class upcoming_payments(upcoming_paymentsTemplate):
     def __init__(self, **properties):
         # Set Form properties and Data Bindings.
         self.user_id = main_form_module.userId
@@ -219,8 +219,12 @@ class today_dues(today_duesTemplate):
                       'remaining_amount':remaining_amount
                       
                   })
-            self.repeating_panel_2.items = loan_details
-      
+            panel1_data = loan_details[::2]  # Every second item starting from index 0
+            panel2_data = loan_details[1::2]  # Every second item starting from index 1
+            
+            # Bind data to the repeating panels
+            self.repeating_panel_1.items = panel1_data
+            self.repeating_panel_3.items = panel2_data
         # for loan_detail in loan_details:
         #     print("Processing loan:", loan_detail)
         #     if loan_detail['days_left'] >= 6 and loan_detail['days_left'] < 8:
