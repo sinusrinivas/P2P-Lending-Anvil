@@ -978,7 +978,7 @@ class check_out(check_outTemplate):
 
     def button_1_copy_2_click(self, **event_args):
         """This method is called when the button is clicked"""
-        open_form('borrower.dashboard.today_dues')
+        open_form('borrower.dashboard.upcoming_payments')
 
     def update_loan_status(self, loan_id, new_status):
     # Update loan status in the loan details table for the given loan ID

@@ -1,4 +1,4 @@
-from ._anvil_designer import today_duesTemplate
+from ._anvil_designer import upcoming_paymentsTemplate
 from anvil import *
 import anvil.server
 import anvil.tables as tables
@@ -7,7 +7,7 @@ from anvil.tables import app_tables
 from datetime import datetime, timezone, timedelta
 from .. import main_form_module as main_form_module
 
-class today_dues(today_duesTemplate):
+class upcoming_payments(upcoming_paymentsTemplate):
     def __init__(self, **properties):
         # Set Form properties and Data Bindings.
         self.user_id = main_form_module.userId
@@ -19,37 +19,31 @@ class today_dues(today_duesTemplate):
         all_loans_disbursed = app_tables.fin_loan_details.search(
             loan_updated_status=q.any_of("disbursed", "extension", "foreclosure"),
             first_emi_payment_due_date=q.less_than_or_equal_to(today_date),
-            borrower_customer_id=self.user_id
+            lender_customer_id=self.user_id
         )
-    
+        
         for loan in all_loans_disbursed:
             loan_id = loan['loan_id']
-            borrower_customer_id = loan['borrower_customer_id']
-
-            payment_done = list(app_tables.fin_emi_table.search(
-                loan_id=loan_id,
-                next_payment=q.greater_than(today_date),
-                payment_type ='pay now',
-                borrower_customer_id=borrower_customer_id
-            ))
-            if payment_done:
-              payment_done.sort(key=lambda x: x['next_payment'], reverse=True)
-              latest_payment_done = payment_done[0]
-              if latest_payment_done:
-                continue
-              
+            lender_customer_id = loan['lender_customer_id']
+            # payment_done = list(app_tables.fin_emi_table.search(
+            #     loan_id=loan_id,
+            #     next_payment=q.greater_than(today_date),
+            #     lender_customer_id=lender_customer_id
+            # ))
+            # if payment_done:
+            #   continue
             all_loans = list(app_tables.fin_emi_table.search(
                 loan_id=loan_id,
                 next_payment=q.less_than_or_equal_to(today_date),
-                borrower_customer_id=borrower_customer_id
+                lender_customer_id=lender_customer_id
             ))
             
             if all_loans:
                 all_loans.sort(key=lambda x: x['next_payment'], reverse=True)
                 latest_loan = all_loans[0]
                 loan_detail = app_tables.fin_loan_details.get(loan_id=latest_loan['loan_id'])
-                user_profile = app_tables.fin_user_profile.get(customer_id=loan_detail['lender_customer_id'])
-                if loan_detail is not None and user_profile is not None  and (loan_detail['remaining_amount'] is  None or loan_detail['remaining_amount'] > 0):        
+                user_profile = app_tables.fin_user_profile.get(customer_id=loan_detail['borrower_customer_id'])
+                if loan_detail is not None and user_profile is not None and (loan_detail['remaining_amount'] is  None or loan_detail['remaining_amount'] > 0):
                     loan_amount = loan_detail['loan_amount']
                     scheduled_payment = latest_loan['scheduled_payment']
                     next_payment = latest_loan['next_payment']
@@ -72,7 +66,7 @@ class today_dues(today_duesTemplate):
                     user_photo = user_profile['user_photo']
                     product_name = loan_detail['product_name']
                     product_description = loan_detail['product_description']
-                    lender_full_name = loan_detail['lender_full_name']
+                    borrower_full_name = loan_detail['borrower_full_name']
                     loan_state_status = loan_detail['loan_state_status']
                     product_id = loan_detail['product_id']
                     total_interest_amount = loan_detail['total_interest_amount']
@@ -83,7 +77,6 @@ class today_dues(today_duesTemplate):
                     remaining_amount = loan_detail['remaining_amount']
                     payment_type = latest_loan['payment_type']
                     part_payment_date = latest_loan['part_payment_date']
-                    remaining_tenure = latest_loan['remaining_tenure']
                   
                     loan_details.append({
                         'loan_id': loan_id,
@@ -106,7 +99,7 @@ class today_dues(today_duesTemplate):
                         'mobile': mobile,
                         'product_description': product_description,
                         'product_name': product_name,
-                        'lender_full_name': lender_full_name,
+                        'borrower_full_name': borrower_full_name,
                         'borrower_customer_id': borrower_customer_id,
                         'loan_state_status': loan_state_status,
                         'product_id':product_id,
@@ -119,22 +112,23 @@ class today_dues(today_duesTemplate):
                         'remaining_amount':remaining_amount,
                         'payment_type': payment_type,
                         'part_payment_date':part_payment_date,
-                        'remaining_tenure':remaining_tenure,
                     })
             else:
-                pay_now_loan = app_tables.fin_emi_table.search(
-                    loan_id=loan_id,
-                    payment_type="pay now"
-                )
-                if any(pay_now_loan):
-                    continue
-
+                # for loan in all_loans_disbursed:
+                #   loan_id = loan['loan_id']
+                #   lender_customer_id = loan['lender_customer_id']
+                #   loan_detail = app_tables.fin_loan_details.get(loan_id=loan_id)
+                #   payment_done_1 = list(app_tables.fin_emi_table.search(
+                #       loan_id=loan_id,
+                #       next_payment=q.greater_than(today_date),
+                #       lender_customer_id=lender_customer_id
+                #   ))
+                #   if payment_done_1:
+                #       continue
+                # If there are no emi records, append loan details without checking next payment date
                 loan_detail = app_tables.fin_loan_details.get(loan_id=loan_id)
-
-                  
-                user_profile = app_tables.fin_user_profile.get(customer_id=loan_detail['lender_customer_id'])
-
-                if loan_detail is not None and user_profile is not None and (loan_detail['remaining_amount'] is  None or loan_detail['remaining_amount'] > 0):
+                user_profile = app_tables.fin_user_profile.get(customer_id=loan_detail['borrower_customer_id'])
+                if loan_detail is not None and user_profile is not None  and (loan_detail['remaining_amount'] is  None or loan_detail['remaining_amount'] > 0):
                   user_photo = user_profile['user_photo']
                   loan_amount = loan_detail['loan_amount']
                   first_emi_payment_due_date = loan_detail['first_emi_payment_due_date']
@@ -147,11 +141,8 @@ class today_dues(today_duesTemplate):
                       account_number = "N/A"
                   
                   # Set emi_number to 0
-                
-                    
-                  
                   emi_number = 0
-                  remaining_tenure = 0
+                  
                   tenure = loan_detail['tenure']
                   interest_rate = loan_detail['interest_rate']
                   borrower_loan_created_timestamp = loan_detail['borrower_loan_created_timestamp']
@@ -161,11 +152,11 @@ class today_dues(today_duesTemplate):
                   lender_customer_id = loan_detail['lender_customer_id']
                   total_repayment_amount = loan_detail['total_repayment_amount']
                   total_processing_fee_amount = loan_detail['total_processing_fee_amount']
-                  mobile = user_profile['mobile']
+                  mobile = user_profile_1['mobile']
                   product_name = loan_detail['product_name']
                   product_description = loan_detail['product_description']
                   borrower_customer_id = loan_detail['borrower_customer_id']
-                  lender_full_name = loan_detail['lender_full_name']
+                  borrower_full_name = loan_detail['borrower_full_name']
                   scheduled_payment = loan_disbursed_timestamp.date()
                   loan_state_status = loan_detail['loan_state_status']
                   product_id =loan_detail['product_id']
@@ -175,7 +166,7 @@ class today_dues(today_duesTemplate):
                   borrower_email_id = loan_detail['borrower_email_id']
                   total_amount_paid = loan_detail['total_amount_paid']
                   remaining_amount = loan_detail['remaining_amount']
-
+                  
                   
                   # Calculate next_payment based on first_payment_due_date
                   if emi_payment_type == 'One Time':
@@ -215,18 +206,17 @@ class today_dues(today_duesTemplate):
                       'mobile': mobile,
                       'product_description': product_description,
                       'product_name': product_name,
-                      'lender_full_name': lender_full_name,  
+                      'borrower_full_name': borrower_full_name,  
                       'borrower_customer_id': borrower_customer_id,
                       'loan_state_status':loan_state_status,
                       'product_id':product_id,
                       'total_interest_amount':total_interest_amount,
                       'Scheduled_date':Scheduled_date,
-                      'user_photo' : user_photo,
+                      'user_photo': user_photo,
                       'lender_email_id':lender_email_id,
                       'borrower_email_id':borrower_email_id,
                       'total_amount_paid':total_amount_paid,
-                      'remaining_amount':remaining_amount,
-                      'remaining_tenure':remaining_tenure
+                      'remaining_amount':remaining_amount
                       
                   })
             panel1_data = loan_details[::2]  # Every second item starting from index 0
@@ -235,32 +225,35 @@ class today_dues(today_duesTemplate):
             # Bind data to the repeating panels
             self.repeating_panel_1.items = panel1_data
             self.repeating_panel_3.items = panel2_data
-          
-            # for loan_detail_1 in loan_details:
-            #   print("Processing loan:", loan_detail_1)
-            #   if loan_detail_1['days_left'] > 6 and loan_detail_1['days_left'] <= 16:
-            #       print("Updating status to 'lapsed loan'")
-            #       loan_detail_1['loan_state_status'] = 'lapsed loan'
-            #       loan_row = app_tables.fin_loan_details.get(loan_id=loan_detail_1['loan_id'])
-            #       if loan_row is not None:
-            #           loan_row['loan_state_status'] = 'lapsed loan'
-            #           loan_row.update()
-            #   elif loan_detail_1['days_left'] > 16 and loan_detail_1['days_left'] <= 106:
-            #       print("Updating status to 'default loan'")
-            #       loan_detail_1['loan_state_status'] = 'default loan'
-            #       loan_row = app_tables.fin_loan_details.get(loan_id=loan_detail_1['loan_id'])
-            #       if loan_row is not None:
-            #           loan_row['loan_state_status'] = 'default loan'
-            #           loan_row.update()
-            #   elif loan_detail_1['days_left'] > 106:
-            #       print("Updating status to 'default loan'")
-            #       loan_detail_1['loan_state_status'] = 'NPA'
-            #       loan_row = app_tables.fin_loan_details.get(loan_id=loan_detail_1['loan_id'])
-            #       if loan_row is not None:
-            #           loan_row['loan_state_status'] = 'NPA'
-            #           loan_row.update()
+        # for loan_detail in loan_details:
+        #     print("Processing loan:", loan_detail)
+        #     if loan_detail['days_left'] >= 6 and loan_detail['days_left'] < 8:
+        #         print("Updating status to 'lapsed loan'")
+        #         loan_detail['loan_updated_status'] = 'lapsed loan'
+        #         loan_row = app_tables.fin_loan_details.get(loan_id=loan_detail['loan_id'])
+        #         if loan_row is not None:
+        #             loan_row['loan_updated_status'] = 'lapsed loan'
+        #             loan_row.update()
+        #     elif loan_detail['days_left'] >= 8 and loan_detail['days_left'] < 98:
+        #         print("Updating status to 'default loan'")
+        #         loan_detail['loan_updated_status'] = 'default loan'
+        #         loan_row = app_tables.fin_loan_details.get(loan_id=loan_detail['loan_id'])
+        #         if loan_row is not None:
+        #             loan_row['loan_updated_status'] = 'default loan'
+        #             loan_row.update()
+        #     elif loan_detail['days_left'] >= 98:
+        #         print("Updating status to 'default loan'")
+        #         loan_detail['loan_updated_status'] = 'NPA'
+        #         loan_row = app_tables.fin_loan_details.get(loan_id=loan_detail['loan_id'])
+        #         if loan_row is not None:
+        #             loan_row['loan_updated_status'] = 'NPA'
+        #             loan_row.update()
 
+                  
     def home_borrower_registration_form_copy_1_click(self, **event_args):
         """This method is called when the button is clicked"""
-        open_form('borrower.dashboard')
+        open_form('lendor.dashboard')
 
+    def button_1_click(self, **event_args):
+      """This method is called when the button is clicked"""
+      open_form('lendor.dashboard')
