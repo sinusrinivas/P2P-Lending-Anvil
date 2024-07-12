@@ -301,7 +301,8 @@ class star_1_borrower_registration_form_2_employment(star_1_borrower_registratio
                     open_form('borrower.borrower_registration_forms.star_1_borrower_registration_form_3_marital', self.user_id)
             
             elif self.drop_down_2.selected_value == 'Business':
-              user_id = self.userId 
+
+              user_id = self.user_id 
               global business_name_is_valid
               global business_add_is_valid
               global industry_type_is_valid
@@ -309,15 +310,60 @@ class star_1_borrower_registration_form_2_employment(star_1_borrower_registratio
               global din_is_valid
               global cin_is_valid
               global registered_off_add_is_valid
-              if business_name_is_valid and business_add_is_valid and industry_type_is_valid and six_month_turn_over_is_valid and din_is_valid and cin_is_valid and registered_off_add_is_valid and business_type_is_valid and employees_working_is_valid:
-                anvil.server.call('add_lendor_institutional_form_1',business_name,business_add,business_type,empolyees_working,user_id)
-                months = (datetime.now().year - year.year) * 12 + (datetime.now().month - year.month)
-                anvil.server.call('add_lendor_institutional_form_2', year, months, industry_type, turn_over, last_six_statements, user_id)
-                anvil.server.call('add_lendor_institutional_form_3', din, cin, reg_off_add, proof_verification, user_id)
-                open_form('borrower.borrower_registration_forms.star_1_borrower_registration_form_3_marital', self.user_id)
-              else :
-                  alert('please fill all the details')
-                    
+
+              business_name = self.text_box_2.text
+              business_add = self.text_box_1.text
+              business_type = self.drop_down_12.selected_value
+              empolyees_working = self.drop_down_4.selected_value
+              din = self.text_box_5.text
+              cin = self.text_box_6.text
+              reg_off_add = self.text_box_7.text
+              proof_verification = self.file_loader_1_copy.file
+              year = self.date_picker_1.date
+              last_six_statements = self.file_loader_1.file
+              industry_type = self.text_box_3.text
+              turn_over = self.text_box_4.text
+              months = None
+              if not empolyees_working :
+                employees_working_is_valid = False
+                self.drop_down_4.role = 'outlined-error'
+                self.drop_down_4.focus()
+                Notification('please fill all details')
+              else:
+                employees_working_is_valid = True
+              if not business_type:
+                business_type_is_valid = False
+                self.drop_down_12.role = 'outlined-error'
+                self.drop_down_12.focus()
+                Notification('please fill all details')
+              else:
+                business_type_is_valid = True
+
+
+              if not last_six_statements:
+                    self.file_loader_1.role = 'outlined-error'
+                    self.file_loader_1.focus()
+                    Notification('Please fill all details')
+                    return
+              else:
+                    self.file_loader_1.role = 'outlined'
+              
+                    if not proof_verification:
+                          self.file_loader_1_copy.role = 'outlined-error'
+                          self.file_loader_1_copy.focus()
+                          Notification('Please fill all details')
+                          return
+                    else:
+                        self.file_loader_1_copy.role = 'outlined'
+
+                        if business_name_is_valid and last_six_statements and empolyees_working and proof_verification and business_add_is_valid and industry_type_is_valid and six_month_turn_over_is_valid and din_is_valid and cin_is_valid and registered_off_add_is_valid and business_type_is_valid and employees_working_is_valid:
+                          anvil.server.call('add_lendor_institutional_form_1',business_name,business_add,business_type,empolyees_working,user_id)
+                          anvil.server.call('add_lendor_institutional_form_3', din, cin, reg_off_add, proof_verification, user_id)
+                          anvil.server.call('add_lendor_institutional_form_2', year, months, industry_type, turn_over, last_six_statements, user_id)
+                          open_form('borrower.borrower_registration_forms.star_1_borrower_registration_form_3_marital', self.user_id)
+                        else :
+                            alert('please fill all the details')
+                              
         else:
             pass
 
