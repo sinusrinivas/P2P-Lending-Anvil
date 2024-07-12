@@ -96,11 +96,6 @@ components:
       type: Button
       layout_properties: {grid_position: 'RJDASP,JFFAES'}
       event_bindings: {click: Business_Information_click}
-    - name: button_1
-      properties: {text: Guarantor Details, background: '#0b2547', foreground: white, align: full}
-      type: Button
-      layout_properties: {grid_position: 'CBZHSX,RDMCQV'}
-      event_bindings: {click: button_1_click}
     - name: bank_button
       properties: {text: Bank Details, align: full, background: '#0b2547', foreground: 'theme:On Primary'}
       type: Button
@@ -140,10 +135,10 @@ components:
         properties: {background: 'theme:On Primary', role: outlined, text: '', font_size: 14}
         type: TextBox
         layout_properties: {grid_position: 'MOYPKG,XBNFEB'}
-      - name: d_o_b_text_box
-        properties: {background: 'theme:On Primary', role: outlined, text: '', font_size: 14}
-        type: TextBox
-        layout_properties: {grid_position: 'MOYPKG,CXEMMO'}
+      - name: date_picker_1
+        properties: {background: white, role: outlined, font_size: 14}
+        type: DatePicker
+        layout_properties: {grid_position: 'MOYPKG,XZEBTF'}
       - name: label_4_copy_3
         properties: {text: ' Email :', bold: true, font_size: 14, icon: ''}
         type: Label
@@ -376,10 +371,10 @@ components:
           properties: {role: input-prompt, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: 14, tooltip: '', text: 'Guarantor address:'}
           type: Label
           layout_properties: {grid_position: 'UCVKZJ,GPKOLB'}
-        - name: date_of_birth
-          properties: {role: outlined, background: white, font_size: 14}
-          type: TextBox
-          layout_properties: {grid_position: 'KJQNEU,JLYAWA'}
+        - name: date_picker_2
+          properties: {background: white, role: outlined, font_size: 14}
+          type: DatePicker
+          layout_properties: {grid_position: 'KJQNEU,GOEOYJ'}
         - name: address_text
           properties: {role: outlined, bold: false, align: left, placeholder: '', spacing_above: small, background: 'theme:On Primary', type: text, underline: false, font: '', hide_text: false, foreground: '', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: 14, tooltip: '', text: ''}
           type: TextBox
@@ -397,10 +392,10 @@ components:
           properties: {text: 'Spouse Company Name:', bold: true, font_size: 14}
           type: Label
           layout_properties: {grid_position: 'HBUNSR,MIUQCZ'}
-        - name: text_box_1
+        - name: date_picker_3
           properties: {background: white, role: outlined, font_size: 14}
-          type: TextBox
-          layout_properties: {grid_position: 'GEVVPK,VGULHN'}
+          type: DatePicker
+          layout_properties: {grid_position: 'GEVVPK,NJIQYX'}
         - name: text_box_2
           properties: {role: outlined, background: white, font_size: 14}
           type: TextBox
