@@ -170,9 +170,9 @@ class star_1_borrower_registration_form_3_marital(star_1_borrower_registration_f
       guarato_details = self.drop_down_1_copy.selected_value
       user_id = self.userId
 
-      if not guarato_details :
-        Notification("Please select a valid marital status").show()
-        return
+      # if not guarato_details :
+      #   Notification("Please select a valid marital status").show()
+      #   return
 
       selected_value = self.drop_down_1.selected_value
     
