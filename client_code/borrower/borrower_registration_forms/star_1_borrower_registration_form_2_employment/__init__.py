@@ -9,6 +9,11 @@ import re
 from datetime import date, datetime
 
 class star_1_borrower_registration_form_2_employment(star_1_borrower_registration_form_2_employmentTemplate):
+    yearly_income_is_valid = False
+    crop_name_is_valid = False
+    acres_of_land_is_valid = False
+    type_of_land_valid = False
+  
     student_college_name = False
     student_id = False
     student_address = False
@@ -151,6 +156,7 @@ class star_1_borrower_registration_form_2_employment(star_1_borrower_registratio
             self.text_box_1_copy_4.add_event_handler('change', self.acres_of_land)
             self.text_box_3_copy_2.add_event_handler('change',self.yearly_income)
             self.text_box_2_copy_3.add_event_handler('change',self.validate_crop_name)
+            self.drop_down_1_copy_3.add_event_handler('change', self.validate_type_of_land)
 
             self.borrower_college_address_text.add_event_handler('change',self.validate_borrower_college_address)
             self.borrower_college_id_text.add_event_handler('change', self.validate_borrower_college_id)
@@ -368,13 +374,8 @@ class star_1_borrower_registration_form_2_employment(star_1_borrower_registratio
         
         elif self.drop_down_1.selected_value == 'Self Employement':
             if self.drop_down_2.selected_value == 'Farmer':
-                validations = [
-                    self.acres_of_land,
-                    self.yearly_income,
-                    self.validate_crop_name
-                ]
-                
-                if validate_all(validations):
+              
+
                     open_form('borrower.borrower_registration_forms.star_1_borrower_registration_form_3_marital', self.user_id)
             
             elif self.drop_down_2.selected_value == 'Business':
@@ -705,15 +706,15 @@ class star_1_borrower_registration_form_2_employment(star_1_borrower_registratio
 
     def acres_of_land(self, **event_args):
           six_month_turnover = self.text_box_1_copy_4.text
-          global six_month_turn_over_is_valid
+          global acres_of_land_is_valid
           if re.match(r'^\d+$', six_month_turnover):
               self.text_box_1_copy_4.role = 'outlined'
-              six_month_turn_over_is_valid = True
+              acres_of_land_is_valid = True
           elif ' 'in six_month_turnover:
               alert('Spaces are not allowed ')
           else:
               self.text_box_1_copy_4.role = 'outlined-error'
-              six_month_turn_over_is_valid = False
+              acres_of_land_is_valid = False
               alert('please enter a valid acres of land')
 
 ########
@@ -834,16 +835,16 @@ class star_1_borrower_registration_form_2_employment(star_1_borrower_registratio
 
     def yearly_income(self, **event_args):
         annual_salary = self.text_box_3_copy_2.text.strip()
-        global annual_income_is_valid
+        global yearly_income_is_valid
         
         # Regex to validate that the annual salary contains only numeric characters
         if re.match(r'^\d+$', annual_salary):
             self.text_box_3_copy_2.role = 'outlined'
-            annual_income_is_valid = True
+            yearly_income_is_valid = True
         else:
             self.text_box_3_copy_2.role = 'outlined-error'
             alert('Please enter a valid annual income with only numeric characters.')
-            annual_income_is_valid = False
+            yearly_income_is_valid = False
 
 
     def validate_crop_name(self, **event_args):
@@ -918,3 +919,13 @@ class star_1_borrower_registration_form_2_employment(star_1_borrower_registratio
                 self.college_img.background = 'red'
                 self.college_img.clear()
 
+    def validate_type_of_land(self, **event_args):
+          Business_type = self.drop_down_1_copy_3.selected_value
+          global type_of_land_valid
+          if Business_type is not None:
+              self.drop_down_1_copy_3.role = 'outlined'
+              type_of_land_valid = True
+          else:
+              self.drop_down_1_copy_3.role = 'outlined-error'
+              type_of_land_valid = False
+              alert('please enter a valid business type')
