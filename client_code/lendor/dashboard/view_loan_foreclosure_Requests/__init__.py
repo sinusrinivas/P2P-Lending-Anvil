@@ -67,7 +67,7 @@ class view_loan_foreclosure_Requests(view_loan_foreclosure_RequestsTemplate):
                         'total_due_amount': foreclosure['total_due_amount'],
                         'borrower_name': foreclosure['borrower_name'],
                         'paid_amount': foreclosure['paid_amount'],
-                        'penalty_amount': foreclosure['penalty_amount'],
+                        # 'penalty_amount': foreclosure['penalty_amount'],
                         # Include other relevant details from the foreclosure request
                     })
         return profiles_with_foreclosure

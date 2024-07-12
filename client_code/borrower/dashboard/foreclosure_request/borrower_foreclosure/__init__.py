@@ -75,6 +75,7 @@ class borrower_foreclosure(borrower_foreclosureTemplate):
             self.button_2.visible = False
             self.button_3.visible = True
             self.button_4.visible = True
+            self.button_5.visible = False
 
             self.foreclose_amount.visible = True
             self.label_11.visible = True
@@ -205,12 +206,12 @@ class borrower_foreclosure(borrower_foreclosureTemplate):
                     self.button_5.visible = True
                     # self.label_tpm.text = 0
                     alert("No EMIs found for this loan.") 
-                    open_form('borrower.dashboard')
+                    open_form('borrower.dashboard.foreclosure_request')
             else:
                 total_payments_made = 0
                 # self.label_tpm.text = 0
                 alert("No EMIs found for this loan.")   
-                # open_form('borrower.dashboard')
+                open_form('borrower.dashboard.foreclosure_request')
         except ValueError as e:
             alert(str(e))
             
@@ -322,7 +323,8 @@ class borrower_foreclosure(borrower_foreclosureTemplate):
             alert("Foreclosure details not found.")
             return
 
-        extra_fee = float(self.extra_fee.text)
+      
+        extra_fee = (self.extra_fee.text)
         if extra_fee  is None:
           extra_fee = 0.0
         
