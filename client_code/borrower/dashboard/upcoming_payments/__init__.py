@@ -1,4 +1,4 @@
-from ._anvil_designer import today_duesTemplate
+from ._anvil_designer import upcoming_paymentsTemplate
 from anvil import *
 import anvil.server
 import anvil.tables as tables
@@ -7,7 +7,7 @@ from anvil.tables import app_tables
 from datetime import datetime, timezone, timedelta
 from .. import main_form_module as main_form_module
 
-class today_dues(today_duesTemplate):
+class upcoming_payments(upcoming_paymentsTemplate):
     def __init__(self, **properties):
         # Set Form properties and Data Bindings.
         self.user_id = main_form_module.userId

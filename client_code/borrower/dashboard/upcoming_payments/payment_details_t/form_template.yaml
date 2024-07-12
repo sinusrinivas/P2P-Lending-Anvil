@@ -93,7 +93,7 @@ components:
       type: Label
       layout_properties: {grid_position: 'QRXJTS,OWEZII'}
   - type: RepeatingPanel
-    properties: {spacing_above: none, spacing_below: none, item_template: borrower.dashboard.today_dues.payment_details_t.RowTemplate18}
+    properties: {spacing_above: none, spacing_below: none, item_template: borrower.dashboard.upcoming_payments.payment_details_t.RowTemplate18}
     name: repeating_panel_1
     layout_properties: {grid_position: 'GFBJND,BAQFAQ', full_width_row: true}
   - type: Spacer

@@ -198,7 +198,7 @@ class View_Details(View_DetailsTemplate):
         self.loan_amount_label.text = str(total_repayment_amount)
         self.interest_label.text = "{:.2f}".format(total_interest_amount)
         self.tenure_label = str(tenure)
-        self.account_no_label. = str(selected_row['account_number'])
+        self.account_no_label= str(selected_row['account_number'])
       
         # Display total EMI amount including extension amount
         self.update_total_emi_amount(total_emi)

@@ -13,10 +13,11 @@ class ItemTemplate94(ItemTemplate94Template):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
+    self.image_1.role = 'circular-image'
 
     # Any code you write here will run before the form opens.
 
   def button_1_click(self, **event_args):
     """This method is called when the button is clicked"""
     selected_row=self.item
-    open_form('lendor.dashboard.today_dues.View_Details',selected_row=selected_row)
+    open_form('lendor.dashboard.upcoming_payments.View_Details',selected_row=selected_row)

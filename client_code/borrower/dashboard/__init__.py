@@ -397,7 +397,7 @@ class dashboard(dashboardTemplate):
             alert("Error fetching existing loans.")
 
     def link_2_click(self, **event_args):
-        open_form('borrower.dashboard.today_dues')
+        open_form('borrower.dashboard.upcoming_payments')
 
     def link_3_click(self, **event_args):
         open_form('borrower.dashboard.view_loans')
