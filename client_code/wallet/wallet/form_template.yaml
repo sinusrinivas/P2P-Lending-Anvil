@@ -72,6 +72,7 @@ components:
         properties: {text: '     ₹', align: center, bold: true}
         type: Label
         layout_properties: {}
+      layout_properties: {width: 62.833343505859375}
     - name: balance_lable
       properties: {bold: true, font_size: 14}
       type: Label

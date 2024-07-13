@@ -24,7 +24,7 @@ class wallet(walletTemplate):
     
     self.email=main_form_module.email
     email = self.email  
-
+    self.refresh()
     # self.repeating_panel_1.items = app_tables.fin_wallet_transactions.search(
     # customer_id=self.user_id)
  
@@ -49,6 +49,11 @@ class wallet(walletTemplate):
 
     # self.user_id = main_form_module.userId
     # user_id = self.user_id
+
+  def refresh(self):
+    """R efresh repeating panels with the latest data"""
+    self.repeating_panel_1.items = app_tables.fin_wallet_transactions.search()
+    
   def home_main_form_link_click(self, **event_args):
     """This method is called when the link is clicked"""
     user_request = app_tables.fin_user_profile.get(customer_id=self.user_id)
@@ -132,11 +137,14 @@ class wallet(walletTemplate):
 
     if anvil.server.call('deposit_money', email=email, deposit_amount=deposit_amount, customer_id=customer_id):
         alert("Deposit successful!")
+        self.refresh()
 
         # Update the balance label with the new balance value
         wallet_row = app_tables.fin_wallet.get(user_email=email)
         if wallet_row:
             self.balance_lable.text = f"{wallet_row['wallet_amount']}"  
+
+        
     else:  
       alert("Deposit failed!")  
  
@@ -159,12 +167,14 @@ class wallet(walletTemplate):
     
     if anvil.server.call('withdraw_money', email=email, withdraw_amount=withdraw_amount, customer_id=customer_id):
         alert("Withdrawal successful!")
+        self.refresh()
         # Update the balance label with the new balance value
         wallet_row = app_tables.fin_wallet.get(user_email=email)
         if wallet_row:
             self.balance_lable.text = f"{wallet_row['wallet_amount']}"
     elif wallet_row is not None and withdraw_amount > wallet_row['wallet_amount']:
         alert("Insufficient funds for withdrawal.")
+
     else:
         alert("Withdrawal failed!")
 
