@@ -1,4 +1,4 @@
-from ._anvil_designer import star_1_borrower_registration_form_4_loanTemplate
+from ._anvil_designer import borrower_registration_form_4_loanTemplate
 from anvil import *
 import anvil.server
 import anvil.google.auth, anvil.google.drive
@@ -8,7 +8,7 @@ import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 
-class star_1_borrower_registration_form_4_loan(star_1_borrower_registration_form_4_loanTemplate):
+class borrower_registration_form_4_loan(borrower_registration_form_4_loanTemplate):
     def __init__(self, user_id, **properties):
         self.init_components(**properties)
         self.user_id = user_id
@@ -133,10 +133,10 @@ class star_1_borrower_registration_form_4_loan(star_1_borrower_registration_form
             anvil.server.call('add_borrower_step4', self.home_loan_status, 
                               self.other_loan_status, self.user_id,
                               self.credit_card_loan_status, self.vehicle_loan_status)
-            open_form('borrower.borrower_registration_forms.star_1_borrower_registration_form_5_bank_1', user_id=self.user_id)
+            open_form('borrower.borrower_registration_forms.borrower_registration_form_5_bank', user_id=self.user_id)
 
     def button_1_click(self, **event_args):
-        open_form('borrower.borrower_registration_forms.star_1_borrower_registration_form_3_marital', user_id=self.user_id)
+        open_form('borrower.borrower_registration_forms.borrower_registration_form_3_marital', user_id=self.user_id)
 
     def home_borrower_registration_form_click(self, **event_args):
         open_form('bank_users.main_form.investNow_applyForLoan')

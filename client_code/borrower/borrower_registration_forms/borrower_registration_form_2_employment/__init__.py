@@ -1,4 +1,4 @@
-from ._anvil_designer import star_1_borrower_registration_form_2_employmentTemplate
+from ._anvil_designer import borrower_registration_form_2_employmentTemplate
 from anvil import *
 import anvil.server
 import anvil.users
@@ -8,7 +8,7 @@ from anvil.tables import app_tables
 import re
 from datetime import date, datetime
 
-class star_1_borrower_registration_form_2_employment(star_1_borrower_registration_form_2_employmentTemplate):
+class borrower_registration_form_2_employment(borrower_registration_form_2_employmentTemplate):
     yearly_income_is_valid = False
     crop_name_is_valid = False
     acres_of_land_is_valid = False
@@ -272,7 +272,7 @@ class star_1_borrower_registration_form_2_employment(star_1_borrower_registratio
             # student_proof = True
             if student_college_name and student_id and student_address:
               anvil.server.call('add_borrower_student',student_college_name,student_id,student_proof,student_address,user_id)
-              open_form('borrower.borrower_registration_forms.star_1_borrower_registration_form_3_marital', self.user_id)
+              open_form('borrower.borrower_registration_forms.borrower_registration_form_3_marital', self.user_id)
             else:
               alert('Please fill all the details')
         
@@ -365,7 +365,7 @@ class star_1_borrower_registration_form_2_employment(star_1_borrower_registratio
             anvil.server.call('add_lendor_individual_form_1', company_name,org_type,emp_type,occupation_type,user_id)
             anvil.server.call('add_lendor_individual_form_2',comp_address,landmark,business_phone_number,user_id)
             anvil.server.call('add_lendor_individual_form_3', annual_salary, designation, emp_id_proof, last_six_month, user_id,salary_type )
-            open_form('borrower.borrower_registration_forms.star_1_borrower_registration_form_3_marital', self.user_id)
+            open_form('borrower.borrower_registration_forms.borrower_registration_form_3_marital', self.user_id)
           
           else:
             alert('please fill all the details')
@@ -386,7 +386,7 @@ class star_1_borrower_registration_form_2_employment(star_1_borrower_registratio
               user_id = self.user_id
               if yearly_income_is_valid and crop_name_is_valid and acres_of_land_is_valid and type_of_land_valid:
                 anvil.server.call('add_borrower_farmer', type_of_land_valid, acres_of_land_is_valid, crop_name_is_valid, yearly_income_is_valid, user_id)            
-                open_form('borrower.borrower_registration_forms.star_1_borrower_registration_form_3_marital', self.user_id)
+                open_form('borrower.borrower_registration_forms.borrower_registration_form_3_marital', self.user_id)
               else:
                 alert('Please fill all the details')
             elif self.drop_down_2.selected_value == 'Business':
@@ -449,7 +449,7 @@ class star_1_borrower_registration_form_2_employment(star_1_borrower_registratio
                 anvil.server.call('add_lendor_institutional_form_1',business_name_is_valid,business_add_is_valid,business_type,empolyees_working,user_id)
                 anvil.server.call('add_lendor_institutional_form_3', din_is_valid, cin_is_valid, registered_off_add_is_valid, proof_verification, user_id)
                 anvil.server.call('add_lendor_institutional_form_2', year, months, industry_type_is_valid, turn_over, six_month_turn_over_is_valid, user_id)
-                open_form('borrower.borrower_registration_forms.star_1_borrower_registration_form_3_marital', self.user_id)
+                open_form('borrower.borrower_registration_forms.borrower_registration_form_3_marital', self.user_id)
               else :
                   alert('please fill all the details')
                     
