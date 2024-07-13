@@ -52,7 +52,8 @@ class wallet(walletTemplate):
 
   def refresh(self):
     """R efresh repeating panels with the latest data"""
-    self.repeating_panel_1.items = app_tables.fin_wallet_transactions.search()
+    
+    self.repeating_panel_1.items = top_5_transactions
     
   def home_main_form_link_click(self, **event_args):
     """This method is called when the link is clicked"""
