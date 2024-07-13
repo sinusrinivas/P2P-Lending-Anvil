@@ -150,8 +150,8 @@ class star_1_borrower_registration_form_2_employment(star_1_borrower_registratio
             self.text_box_7.add_event_handler('change', self.validate_registered_off_add)
             self.drop_down_4.add_event_handler('change', self.validate_no_of_employes)
             self.drop_down_12.add_event_handler('change', self.validate_business_type)
-            self.file_loader_1.add_event_handler('change', self.validate_file_upload)
-            self.file_loader_1_copy.add_event_handler('change', self.validate_file_upload)
+            self.file_loader_1.add_event_handler('change', self.file_loader)
+            self.file_loader_1_copy.add_event_handler('change', self.file_loader_1_copy1)
 
             self.text_box_1_copy_4.add_event_handler('change', self.acres_of_land)
             self.text_box_3_copy_2.add_event_handler('change',self.yearly_income)
@@ -379,13 +379,13 @@ class star_1_borrower_registration_form_2_employment(star_1_borrower_registratio
               global acres_of_land_is_valid
               global type_of_land_valid
 
-              land_type = self.drop_down_1_copy_3.selected_value
-              total_acres = self.text_box_1_copy_4.text
+              type_of_land_valid = self.drop_down_1_copy_3.selected_value
+              acres_of_land_is_valid = self.text_box_1_copy_4.text
               crop_name_is_valid = self.text_box_2_copy_3.text
-              farmer_earnings = self.text_box_3_copy_2.text
+              yearly_income_is_valid = self.text_box_3_copy_2.text
               user_id = self.user_id
               if yearly_income_is_valid and crop_name_is_valid and acres_of_land_is_valid and type_of_land_valid:
-                anvil.server.call('add_borrower_farmer', land_type, total_acres, crop_name_is_valid, farmer_earnings, user_id)            
+                anvil.server.call('add_borrower_farmer', type_of_land_valid, acres_of_land_is_valid, crop_name_is_valid, yearly_income_is_valid, user_id)            
                 open_form('borrower.borrower_registration_forms.star_1_borrower_registration_form_3_marital', self.user_id)
               else:
                 alert('Please fill all the details')
@@ -430,17 +430,17 @@ class star_1_borrower_registration_form_2_employment(star_1_borrower_registratio
 
 
               if not six_month_turn_over_is_valid:
-                    self.file_loader_1.role = 'red'
+                    self.file_loader_1.background = 'red'
                     self.file_loader_1.focus()
-                    Notification('Please fill all details')
+                    Notification('Please fill all details').show()
                     return
               else:
                     self.file_loader_1.role = 'outlined'
               
               if not proof_verification:
-                    self.file_loader_1_copy.role = 'red'
+                    self.file_loader_1_copy.background = 'red'
                     self.file_loader_1_copy.focus()
-                    Notification('Please fill all details')
+                    Notification('Please fill all details').show()
                     return
               else:
                   self.file_loader_1_copy.role = 'outlined'
@@ -658,7 +658,7 @@ class star_1_borrower_registration_form_2_employment(star_1_borrower_registratio
 
   
 
-    def file_loader_1(self, file, **event_args):
+    def file_loader(self, file, **event_args):
           """This method is called when a new file is loaded into this FileLoader"""
           if file:
                   self.label_6.text = file.name if file else ''
@@ -674,7 +674,7 @@ class star_1_borrower_registration_form_2_employment(star_1_borrower_registratio
                       alert('Invalid file type. Only JPEG, PNG, and PDF are allowed')
                       self.file_loader_1.clear()
   
-    def file_loader_1_copy(self, file, **event_args):
+    def file_loader_1_copy1(self, file, **event_args):
           """This method is called when a new file is loaded into this FileLoader"""
           if file:
                     self.label_7.text = file.name if file else ''

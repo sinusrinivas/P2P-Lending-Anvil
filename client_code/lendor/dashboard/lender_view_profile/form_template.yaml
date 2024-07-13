@@ -103,10 +103,10 @@ components:
         properties: {background: 'theme:On Primary', role: outlined, text: '', font_size: 14}
         type: TextBox
         layout_properties: {grid_position: 'IBZMNP,AQASLI'}
-      - name: d_o_b_text_box
-        properties: {background: 'theme:On Primary', role: outlined, text: '', font_size: 14}
-        type: TextBox
-        layout_properties: {grid_position: 'IBZMNP,UTJOIS'}
+      - name: date_picker_1
+        properties: {background: white, role: outlined, font_size: 14}
+        type: DatePicker
+        layout_properties: {grid_position: 'IBZMNP,VHAVBJ'}
       - name: label_4_copy_3
         properties: {text: ' Email :', bold: true, font_size: 14, icon: ''}
         type: Label
@@ -291,10 +291,6 @@ components:
           properties: {role: input-prompt, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: 14, tooltip: '', text: 'Guarantor address:'}
           type: Label
           layout_properties: {grid_position: 'RJWTAD,CEGBHR'}
-        - name: date_of_birth
-          properties: {role: outlined, background: white, font_size: 14}
-          type: TextBox
-          layout_properties: {grid_position: 'FZHMOQ,ONWKJG'}
         - name: address_text
           properties: {role: outlined, bold: false, align: left, placeholder: '', spacing_above: small, background: 'theme:On Primary', type: text, underline: false, font: '14', hide_text: false, foreground: '', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: ''}
           type: TextBox
@@ -303,6 +299,10 @@ components:
         properties: {role: input-prompt, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: 14, tooltip: '', text: 'Guarantor profession:'}
         type: Label
         layout_properties: {grid_position: 'QUJISZ,WJGWVR'}
+      - name: date_picker_2
+        properties: {background: white, role: outlined, font_size: 14}
+        type: DatePicker
+        layout_properties: {grid_position: 'MVWICP,OIPQDD'}
       - name: profession_text
         properties: {role: outlined, bold: false, align: left, placeholder: '', spacing_above: small, background: 'theme:On Primary', type: text, underline: false, font: '', hide_text: false, foreground: '', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: 14, tooltip: '', text: ''}
         type: TextBox
@@ -316,10 +316,10 @@ components:
           properties: {text: 'Spouse Marriage Date:', font_size: 14, bold: true}
           type: Label
           layout_properties: {grid_position: 'OZJSCR,OBDXXK IYMOYH,BWMSTX'}
-        - name: text_box_1
-          properties: {role: outlined, background: white, font_size: 14}
-          type: TextBox
-          layout_properties: {grid_position: 'OZJSCR,OBDXXK NKNBXC,ZGNPNX'}
+        - name: date_picker_3
+          properties: {background: white, role: outlined, font_size: 14}
+          type: DatePicker
+          layout_properties: {grid_position: 'OZJSCR,OBDXXK KIDDIL,ICRWGK'}
         - name: label_22
           properties: {text: 'Spouse Annual Earning:', bold: true, font_size: 14}
           type: Label
