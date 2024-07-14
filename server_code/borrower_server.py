@@ -372,7 +372,7 @@ def get_user_points(id):
                     user_points += category_points
                     break
 
-        if profession.lower() == 'self employment' or profession.lower() == 'employee':
+        if profession and (profession.lower() == 'self employment' or profession.lower() == 'employee'):
            self_employment_search = app_tables.fin_admin_ascend_categories.search(group_name='profession')
            print(f"Size of self_employment_search: {len(self_employment_search)}")
            for row in self_employment_search:

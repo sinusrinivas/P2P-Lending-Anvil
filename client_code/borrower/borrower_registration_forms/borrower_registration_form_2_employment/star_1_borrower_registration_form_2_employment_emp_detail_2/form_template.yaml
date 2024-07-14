@@ -1,0 +1,51 @@
+container:
+  type: ColumnPanel
+  properties: {col_widths: '{}'}
+components:
+- type: form:borrower.navigation_bar_main
+  properties: {prop: ''}
+  name: navigation_bar_1
+  layout_properties: {grid_position: 'FQDZKV,YMPKPB', full_width_row: true}
+- name: registration_process_1
+  properties: {}
+  type: form:borrower.borrower_registration_forms.registration_process
+  layout_properties: {grid_position: 'RHWKGO,IKUWXW'}
+- name: label_1_copy_1
+  properties: {role: null, bold: true, align: center, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: 16, tooltip: '', text: 'Employment Information:'}
+  type: Label
+  layout_properties: {grid_position: ',undefined'}
+- name: label_2_copy_1
+  properties: {role: null, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: Enter Your Company Address}
+  type: Label
+  layout_properties: {grid_position: 'KVOWYF,HIRSFZ'}
+- name: text_box_1
+  properties: {role: null, bold: false, align: left, placeholder: '', spacing_above: small, background: 'theme:On Primary', type: text, underline: false, font: '', hide_text: false, foreground: '', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: ''}
+  type: TextBox
+  layout_properties: {grid_position: 'KVOWYF,LAIQNE'}
+- name: label_3_copy_1
+  properties: {role: null, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: Enter Your Landmark}
+  type: Label
+  layout_properties: {grid_position: 'TCPQDD,OOXJGT'}
+- name: text_box_2
+  properties: {role: null, bold: false, align: left, placeholder: '', spacing_above: small, background: 'theme:On Primary', type: text, underline: false, font: '', hide_text: false, foreground: '', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: ''}
+  type: TextBox
+  layout_properties: {grid_position: 'TCPQDD,AIRHIA'}
+- name: label_1
+  properties: {role: null, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: Enter Company Phone Number}
+  type: Label
+  layout_properties: {grid_position: 'WAEDTG,RWVGNG'}
+- name: text_box_3
+  properties: {role: null, bold: false, align: left, placeholder: '', spacing_above: small, background: 'theme:On Primary', type: text, underline: false, font: '', hide_text: false, foreground: '', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: ''}
+  type: TextBox
+  layout_properties: {grid_position: 'WAEDTG,RXMYGB'}
+- name: button_1
+  properties: {role: elevated-button, bold: true, align: right, spacing_above: small, background: '#0b2547', icon: 'fa:angle-double-left', underline: false, font: '', icon_align: left, foreground: 'theme:On Primary', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: Prev}
+  type: Button
+  layout_properties: {grid_position: 'LBYUWM,EUSTZA'}
+  event_bindings: {click: button_1_click}
+- name: button_2
+  properties: {role: elevated-button, bold: true, align: left, spacing_above: small, background: '#0b2547', icon: 'fa:angle-double-right', underline: false, font: '', icon_align: right, foreground: 'theme:On Primary', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: Next}
+  type: Button
+  layout_properties: {grid_position: 'LBYUWM,HTCSEC'}
+  event_bindings: {click: button_2_click}
+is_package: true
