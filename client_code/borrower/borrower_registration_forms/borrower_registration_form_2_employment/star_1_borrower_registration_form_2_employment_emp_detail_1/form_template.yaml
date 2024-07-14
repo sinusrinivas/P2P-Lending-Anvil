@@ -1,0 +1,114 @@
+container:
+  type: ColumnPanel
+  properties: {col_widths: '{}'}
+components:
+- type: form:borrower.navigation_bar_main
+  properties: {prop: ''}
+  name: navigation_bar_1
+  layout_properties: {grid_position: 'BMGCMT,XXTAAJ', full_width_row: true}
+- name: registration_process_1
+  properties: {}
+  type: form:borrower.borrower_registration_forms.registration_process
+  layout_properties: {grid_position: 'GHCBOH,VWQLXU'}
+- name: label_1_copy_1
+  properties: {role: null, bold: true, align: center, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: 16, tooltip: '', text: Employment Information}
+  type: Label
+  layout_properties: {grid_position: ''}
+- name: label_1
+  properties: {role: null, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: Enter Your Company Name}
+  type: Label
+  layout_properties: {grid_position: 'RFQKPD,YCGTCW SNTDJV,NMYZAM'}
+- type: Label
+  properties: {role: null, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: Select Your Occupation Type}
+  name: label_2
+  layout_properties: {grid_position: 'RFQKPD,YCGTCW APZVDX,TIHZNM'}
+- name: text_box_1
+  properties: {role: null, bold: false, align: left, placeholder: '', spacing_above: small, background: 'theme:On Primary', type: text, underline: false, font: '', hide_text: false, foreground: '', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: ''}
+  type: TextBox
+  layout_properties: {grid_position: 'RFQKPD,MMVUIG RSIMIE,CDSCEW'}
+- type: DropDown
+  properties:
+    role: null
+    include_placeholder: true
+    bold: false
+    align: full
+    placeholder: Select One
+    spacing_above: small
+    background: theme:On Primary
+    underline: false
+    font: ''
+    foreground: ''
+    items: []
+    spacing_below: small
+    visible: true
+    border: ''
+    italic: false
+    enabled: true
+    font_size: null
+    tooltip: ''
+  name: drop_down_3
+  layout_properties: {grid_position: 'RFQKPD,MMVUIG EGMTEN,ERZCIH'}
+- name: label_2_copy_1
+  properties: {role: null, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: Select Your Empolyment Type}
+  type: Label
+  layout_properties: {grid_position: 'QKYRLJ,EXYCYS'}
+- name: drop_down_1
+  properties:
+    role: null
+    include_placeholder: true
+    bold: false
+    align: full
+    placeholder: Select One
+    spacing_above: small
+    background: theme:On Primary
+    underline: false
+    font: ''
+    foreground: ''
+    items: [Part-Time, Full-Time, Contractual]
+    spacing_below: small
+    visible: true
+    border: ''
+    italic: false
+    enabled: true
+    font_size: null
+    tooltip: ''
+  type: DropDown
+  layout_properties: {grid_position: 'QKYRLJ,YPCIEN'}
+  event_bindings: {change: drop_down_1_change}
+- name: label_3_copy_1
+  properties: {role: null, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: Select Your Organization Type}
+  type: Label
+  layout_properties: {grid_position: 'FICAMQ,CRBEPF'}
+- name: drop_down_2
+  properties:
+    role: null
+    include_placeholder: true
+    bold: false
+    align: full
+    placeholder: Select One
+    spacing_above: small
+    background: theme:On Primary
+    underline: false
+    font: ''
+    foreground: ''
+    items: [Partnership, cooperation, sole proprietorship, cooperative limited liability company]
+    spacing_below: small
+    visible: true
+    border: ''
+    italic: false
+    enabled: true
+    font_size: null
+    tooltip: ''
+  type: DropDown
+  layout_properties: {grid_position: 'FICAMQ,ABLINR'}
+- name: button_1
+  properties: {role: elevated-button, bold: true, align: right, spacing_above: small, background: '#0b2547', icon: 'fa:angle-double-left', underline: false, font: '', icon_align: left, foreground: 'theme:On Primary', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: Prev}
+  type: Button
+  layout_properties: {grid_position: 'XIIJHI,OQIWKI'}
+  event_bindings: {click: button_1_click}
+- name: button_2
+  properties: {role: elevated-button, bold: true, align: left, spacing_above: small, background: '#0b2547', icon: 'fa:angle-double-right', underline: false, font: '', icon_align: right, foreground: 'theme:On Primary', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: Next}
+  type: Button
+  layout_properties: {grid_position: 'XIIJHI,ATVQJE'}
+  event_bindings: {click: button_2_click}
+is_package: true

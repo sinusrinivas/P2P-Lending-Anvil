@@ -98,7 +98,7 @@ components:
         border: ''
         italic: false
         enabled: true
-        font_size: 19
+        font_size: null
         tooltip: ''
       type: DropDown
       layout_properties: {grid_position: 'RKZEYY,BNYXUD TKROYC,YANHQE'}

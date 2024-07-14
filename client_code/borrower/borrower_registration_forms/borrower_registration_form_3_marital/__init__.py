@@ -1,4 +1,4 @@
-from ._anvil_designer import star_1_borrower_registration_form_3_maritalTemplate
+from ._anvil_designer import borrower_registration_form_3_maritalTemplate
 from anvil import *
 import anvil.server
 import anvil.google.auth, anvil.google.drive
@@ -10,7 +10,7 @@ from anvil.tables import app_tables
 import re
 from datetime import datetime, timedelta
 
-class star_1_borrower_registration_form_3_marital(star_1_borrower_registration_form_3_maritalTemplate):
+class borrower_registration_form_3_marital(borrower_registration_form_3_maritalTemplate):
   def __init__(self,user_id, **properties):
     # Set Form properties and Data Bindings.
     self.userId = user_id
@@ -170,9 +170,9 @@ class star_1_borrower_registration_form_3_marital(star_1_borrower_registration_f
       guarato_details = self.drop_down_1_copy.selected_value
       user_id = self.userId
 
-      if not guarato_details :
-        Notification("Please select a valid marital status").show()
-        return
+      # if not guarato_details :
+      #   Notification("Please select a valid marital status").show()
+      #   return
 
       selected_value = self.drop_down_1.selected_value
     
@@ -260,7 +260,7 @@ class star_1_borrower_registration_form_3_marital(star_1_borrower_registration_f
                                     another_person, father_name, father_dob, 
                                     father_mbl_no, father_profession, 
                                     father_address, self.userId)
-                  open_form('borrower.borrower_registration_forms.star_1_borrower_registration_form_4_loan', 
+                  open_form('borrower.borrower_registration_forms.borrower_registration_form_4_loan', 
                             user_id=self.userId)
           else:
             Notification("Please fill all the required fields").show()
@@ -346,7 +346,7 @@ class star_1_borrower_registration_form_3_marital(star_1_borrower_registration_f
                             another_person, spouse_name, spouse_mob,
                             spouse_mbl_no, spouse_profession,
                             spouse_company, annual_earning, self.userId)
-          open_form('borrower.borrower_registration_forms.star_1_borrower_registration_form_4_loan', user_id=self.userId)
+          open_form('borrower.borrower_registration_forms.borrower_registration_form_4_loan', user_id=self.userId)
         else:
           Notification("Please fill all the required fields").show()
       else:
@@ -354,7 +354,7 @@ class star_1_borrower_registration_form_3_marital(star_1_borrower_registration_f
       
   
   def button_1_click(self, **event_args):
-    open_form('borrower.borrower_registration_forms.star_1_borrower_registration_form_2_employment',user_id=self.userId)
+    open_form('borrower.borrower_registration_forms.borrower_registration_form_2_employment',user_id=self.userId)
 
   def drop_down_1_change(self, **event_args):
     """This method is called when an item is selected"""
