@@ -6,6 +6,10 @@ components:
   properties: {}
   name: navigation_bar_main_lender_1
   layout_properties: {grid_position: 'EXCZML,VSXRMI', full_width_row: true}
+- name: registration_tracker_lender_1
+  properties: {}
+  type: form:lendor.lendor_registration_forms.registration_tracker_lender
+  layout_properties: {grid_position: 'RASRQC,WXXWIR'}
 - name: column_panel_1
   properties: {role: outlined-card, background: '', foreground: black, col_widths: '{"WNIXDM":30,"MIOWCS":10,"KNEKHC":10,"ZPQIOA":10,"MYCISS":30,"XJDPZH":10,"DGNPSU":10,"PJXJHS":10}'}
   type: ColumnPanel

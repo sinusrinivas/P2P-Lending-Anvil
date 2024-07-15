@@ -6,7 +6,7 @@ components:
 - name: borrwer_registration_navigation_bar_1
   properties: {}
   type: form:borrower.borrower_registration_forms.borrwer_registration_navigation_bar
-  layout_properties: {grid_position: 'SSMITU,TBHJOS'}
+  layout_properties: {grid_position: 'SSMITU,TBHJOS', full_width_row: true}
 - properties: {}
   type: form:borrower.borrower_registration_forms.registration_process
   layout_properties: {grid_position: 'IXQBED,QRWAJN'}

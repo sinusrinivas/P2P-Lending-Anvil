@@ -6,10 +6,10 @@ components:
   properties: {}
   name: navigation_bar_main_lender_1
   layout_properties: {grid_position: 'XCTKMQ,YDSKRS', full_width_row: true}
-- name: spacer_2
-  properties: {height: 15.428466796875}
-  type: Spacer
-  layout_properties: {grid_position: 'KPMCJT,BZRYNM'}
+- name: registration_tracker_lender_1
+  properties: {}
+  type: form:lendor.lendor_registration_forms.registration_tracker_lender
+  layout_properties: {grid_position: 'KDYCAX,KNFVBO'}
 - name: column_panel_1
   properties: {role: outlined-card}
   type: ColumnPanel

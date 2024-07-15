@@ -134,9 +134,9 @@ class lender_registration_form_3_marital_details(lender_registration_form_3_mari
       guarato_details = self.drop_down_1_copy.selected_value
       user_id = self.userId
 
-      if not guarato_details :
-        Notification("Please select a valid marital status").show()
-        return
+      # if not guarato_details :
+      #   Notification("Please select a valid marital status").show()
+      #   return
 
       selected_value = self.drop_down_1.selected_value
     
@@ -215,8 +215,9 @@ class lender_registration_form_3_marital_details(lender_registration_form_3_mari
                               another_person, father_name, father_dob,
                               father_mbl_no, father_profession,
                               father_address, self.userId)
-            open_form('borrower.borrower_registration_forms.star_1_borrower_registration_form_4_loan',
-                      user_id=self.userId)
+            open_form('lendor.lendor_registration_forms.lender_registration_form_4_bank_form_1',user_id=self.userId)
+
+
         else:
           Notification("Please fill all the required fields").show()
 
@@ -248,7 +249,7 @@ class lender_registration_form_3_marital_details(lender_registration_form_3_mari
           elif not re.match(r'^\d{10}$', str(spouse_mbl_no)):
             errors.append("Enter a valid mobile no!")
             self.spouse_mbl_no_text.focus()
-          elif not sel:
+          elif not self.drop_down_1_copy:
             errors.append("Select a valid profession!")
             self.drop_down_1_copy.focus()
 
@@ -301,7 +302,7 @@ class lender_registration_form_3_marital_details(lender_registration_form_3_mari
                             another_person, spouse_name, spouse_mob,
                             spouse_mbl_no, spouse_profession,
                             spouse_company, annual_earning, self.userId)
-          open_form('borrower.borrower_registration_forms.star_1_borrower_registration_form_4_loan', user_id=self.userId)
+          open_form('lendor.lendor_registration_forms.lender_registration_form_4_bank_form_1',user_id=self.userId)
         else:
           Notification("Please fill all the required fields").show()
       else:
@@ -309,7 +310,7 @@ class lender_registration_form_3_marital_details(lender_registration_form_3_mari
   
 
   def button_1_click(self, **event_args):
-    open_form('lendor.lendor_registration_forms.lender_registration_form_2',user_id=self.userId)
+    open_form('lendor.lendor_registration_forms.lender_registration_form_2.',user_id=self.userId)
     # Any code you write here will run before the form opens.
 
   def marital_status_borrower_registration_dropdown_change(self, **event_args):
