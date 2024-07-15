@@ -51,7 +51,7 @@ class borrower_registration_form_5_bank(borrower_registration_form_5_bankTemplat
     if not account_name or not re.match(r'^[A-Za-z\s]+$', account_name):
       self.text_box_1.role = 'outlined-error'
     else:
-      self.text_box_1.background = 'outlined'
+      self.text_box_1.role = 'outlined'
 
   def validate_account_number(self, **event_args):
     account_number = self.text_box_3.text
