@@ -134,11 +134,14 @@ class registration_process(registration_processTemplate):
             for label in label_pair:
                 label.foreground = "rgba(0, 0, 0, 0.5)"  # Set to semi-transparent
 
+        if user_data is None:
+            form_count  = None
+        
         if user_data is not None:
             form_count = user_data['form_count']
             print(form_count)
             
-            for i in range(form_count + 1):
+            for i in range(form_count ):
                 if i < len(labels):
                     for label in labels[i]:
                         label.bold = True
